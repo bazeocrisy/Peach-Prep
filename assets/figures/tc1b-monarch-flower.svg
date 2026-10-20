@@ -11,7 +11,7 @@
   </g>
   <circle cx="150" cy="150" r="20" fill="#E9C46A" stroke="#111" stroke-width="2.5"/>
   <!-- monarch, wings open, resting on the flower -->
-  <g transform="translate(150 96)">
+  <g transform="translate(150 114)">
     <g stroke="#111" stroke-width="2.5" fill="#F4A340">
       <path d="M-4 -6 Q-52 -62 -72 -34 Q-80 -2 -4 0 Z"/><path d="M4 -6 Q52 -62 72 -34 Q80 -2 4 0 Z"/>
       <path d="M-4 4 Q-58 10 -50 42 Q-28 54 -4 10 Z"/><path d="M4 4 Q58 10 50 42 Q28 54 4 10 Z"/>

@@ -218,7 +218,7 @@ A Practice Test is one set file with several passages and a mixed set of items, 
 
 ## 8. Skill lessons (`js/data/lessons/*.js`)
 
-The home page lists every Georgia standard (`js/data/standards.js`) under its GaDOE heading. Tapping one opens its skill page with four steps: **Teach → Learn → Practice → Test**. A lesson file holds the lessons for one standard group and calls `PP.addLesson({...})` once per standard. A file is listed in `manifest.lessons` only after it passes the checker and two reviews.
+*(Partly superseded: since 2.1 the home page is the category catalog in `js/data/catalog.js`, and lessons have five steps, or four for hands-on skills; see §8b.)* The home page lists every Georgia standard (`js/data/standards.js`) under its GaDOE heading. Tapping one opens its skill page with four steps: **Teach → Learn → Practice → Test**. A lesson file holds the lessons for one standard group and calls `PP.addLesson({...})` once per standard. A file is listed in `manifest.lessons` only after it passes the checker and two reviews.
 
 ```js
 PP.addLesson({
