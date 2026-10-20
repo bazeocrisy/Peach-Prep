@@ -30,7 +30,7 @@ PP.addSet({
       std: ["3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"],
       dok: 2,
       prompt: "Choose the words that correctly complete the sentence.",
-      text: "{0} going to help in {1} garden this weekend.",
+      text: "{0} ready to help in {1} garden this weekend.",
       slots: [
         { options: ["Were", "We're", "Wer'e"], answer: 1 },
         { options: ["Grandmas", "Grandma", "Grandma's"], answer: 2 }
@@ -65,13 +65,13 @@ PP.addSet({
       dok: 2,
       prompt: "Which sentence is written correctly?",
       choices: [
-        { text: "Our class wrote letters to a pen pal in Ohio.", correct: true },
+        { text: "Our class wrote a letter to a pen pal in Ohio.", correct: true },
         { text: "My Teacher showed us a map of the Chattahoochee River." },
         { text: "We will go to the beach in july." },
         { text: "Uncle Ray lives on oak Street in Macon." }
       ],
       clue: "Check every word. Does each name have a capital? Does any plain word have a capital it should not have?",
-      why: "The answer is \"Our class wrote letters to a pen pal in Ohio.\" Ohio is a name, and it has a capital. The others should say teacher (not a name), July (a month), and Oak Street (the name of a street)."
+      why: "The answer is \"Our class wrote a letter to a pen pal in Ohio.\" Ohio is a name, and it has a capital. The others should say teacher (not a name), July (a month), and Oak Street (the name of a street)."
     },
     {
       id: "L-GRM-02-5",
@@ -88,8 +88,8 @@ PP.addSet({
         { text: "Our new address is 12 Pine Road Valdosta, Georgia." }
       ],
       pick: 2,
-      clue: "In a list, a comma goes after each item, before the word and. In a date, a comma goes between the day and the year. In an address, commas go between the street, the city and the state.",
-      why: "The answers are \"We packed sandwiches, apples, and juice for the picnic.\" and \"My grandmother lives in Albany, Georgia.\" The list has commas after sandwiches and apples, and the city and state are split by a comma. The others should say \"brushes, and paper,\" \"June 14, 2027,\" and \"12 Pine Road, Valdosta, Georgia.\""
+      clue: "In a list, commas separate the items. In a date, a comma goes between the day and the year. In an address, a comma goes after the street and after the city.",
+      why: "The answers are \"We packed sandwiches, apples, and juice for the picnic.\" and \"My grandmother lives in Albany, Georgia.\" Commas separate the items in the list, and a comma splits the city and the state. In the paint sentence, the comma comes right after and, which is never correct in a list. It could say \"paint, brushes, and paper.\" The date needs no comma between June and 14: \"June 14, 2027.\" The address needs a comma after the street: \"12 Pine Road, Valdosta, Georgia.\""
     },
     {
       id: "L-GRM-02-6",
@@ -97,14 +97,14 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"],
       dok: 1,
-      prompt: "Nia is writing a letter to her aunt. Which greeting is written correctly?",
+      prompt: "Nia wants to write a letter to her aunt. Which greeting is written correctly?",
       choices: [
         { text: "Dear Aunt Lena,", correct: true },
         { text: "Dear, Aunt Lena" },
         { text: "Dear Aunt Lena." },
         { text: "dear Aunt Lena," }
       ],
-      clue: "A letter greeting starts with a capital letter. The comma comes at the very end of the greeting, after the name.",
+      clue: "A letter greeting starts with a capital letter. Think about where a comma belongs in a greeting, and whether a greeting ever ends with a period.",
       why: "The answer is \"Dear Aunt Lena,\" with a capital D and a comma after the name. A greeting does not end with a period, and there is no comma between Dear and the name."
     },
     {
@@ -113,15 +113,19 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"],
       dok: 2,
-      prompt: "Read the two sentences: \"The storm knocked out the power in our neighborhood. We read books by flashlight all evening.\" Which is the best way to combine these sentences?",
+      prompt: "Read the two sentences. Which is the best way to combine them?",
+      stem: [
+        "The storm knocked out the power in our neighborhood.",
+        "We read books by flashlight all evening."
+      ],
       choices: [
         { text: "The storm knocked out the power in our neighborhood, so we read books by flashlight all evening.", correct: true },
         { text: "The storm knocked out the power in our neighborhood so, we read books by flashlight all evening." },
         { text: "The storm knocked out the power in our neighborhood, we read books by flashlight all evening." },
         { text: "The storm knocked out the power, in our neighborhood so we read books by flashlight all evening." }
       ],
-      clue: "When you join two complete sentences, you need a joining word, and the comma goes right before that word.",
-      why: "The answer is \"The storm knocked out the power in our neighborhood, so we read books by flashlight all evening.\" The joining word so tells why they used flashlights, and the comma goes before so. A comma alone cannot join two sentences."
+      clue: "When you join two complete sentences, you need a joining word like and, but or so. Then look closely at where the comma sits in each choice.",
+      why: "The answer is \"The storm knocked out the power in our neighborhood, so we read books by flashlight all evening.\" The joining word so tells why they used flashlights, and the comma goes right before so. A comma alone cannot join two sentences."
     },
     {
       id: "L-GRM-02-8",

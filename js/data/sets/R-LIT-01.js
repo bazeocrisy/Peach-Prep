@@ -42,7 +42,7 @@ PP.addSet({
       why: "The answer is that Deja's kite will not stay up in the air. It spins and crashes every time she tries, and the rest of the story is about fixing it. Other kites fly fine, so the wind is not the problem."
     },
     {
-      id: "R-LIT-01-q2", type: "dropdown", points: 1, std: ["3.L.V.3.a"], dok: 1,
+      id: "R-LIT-01-q2", type: "dropdown", points: 1, std: ["3.L.V.3.a"], dok: 2,
       prompt: "Read this sentence from paragraph 4: \"The kite looked bright and sturdy, strong enough to last through a windy day.\" Choose the meaning of sturdy.",
       text: "In paragraph 4, the word sturdy means {0}.",
       slots: [
@@ -79,10 +79,10 @@ PP.addSet({
       prompt: "What does each action show about Deja? Match each action to the trait it shows. Use each trait once.",
       cols: ["proud", "rude", "willing to admit a mistake", "generous"],
       rows: [
-        { text: "Deja wants everyone to know she made the kite on her own.", answer: 0 },
+        { text: "Deja hands Theo the string so he can fly the kite first.", answer: 3 },
         { text: "Deja snaps, \"What do you know about kites?\"", answer: 1 },
-        { text: "Deja tells Theo, \"You noticed something I missed.\"", answer: 2 },
-        { text: "Deja hands Theo the string so he can fly the kite first.", answer: 3 }
+        { text: "Deja wants everyone to know she made the kite on her own.", answer: 0 },
+        { text: "Deja tells Theo, \"You noticed something I missed.\"", answer: 2 }
       ],
       clue: "Think about what each action tells you about Deja. Is she showing off, being unkind, owning up, or sharing?",
       why: "Wanting credit for doing it alone shows she is proud. Snapping at Theo is rude. Saying Theo noticed something she missed shows she is willing to admit a mistake. Letting Theo fly the kite first is generous."
@@ -100,16 +100,16 @@ PP.addSet({
         ]
       },
       partB: {
-        prompt: "Which sentence from the end of the story best supports the answer to Part A?",
+        prompt: "Which sentence from the story best supports the answer to Part A?",
         choices: [
           { text: "\"It's our kite now.\"", correct: true },
-          { text: "Theo grinned." },
-          { text: "It did not spin." },
-          { text: "Theo let go." }
+          { text: "\"Now!\" she called." },
+          { text: "She looked down at her own kite with its tiny ribbon." },
+          { text: "Deja's cheeks felt hot." }
         ]
       },
-      clue: "Compare what Deja says in paragraph 3 with what she says in the last paragraph. For Part B, find the words Deja says that show her new way of thinking.",
-      why: "Part A: Deja changes from wanting to do it alone to sharing the kite with Theo. Part B: \"It's our kite now\" shows she now thinks of the kite as belonging to both of them, not just to her."
+      clue: "Think about what Deja wants at the beginning of the story and what she does at the end. For Part B, rule out sentences that only tell what Deja sees, feels for a moment, or does to fly the kite. Keep the one that shows her new way of thinking.",
+      why: "Part A: Deja changes from wanting to do it alone to sharing the kite with Theo. Part B: \"It's our kite now\" shows she now thinks of the kite as belonging to both of them, not just to her. \"Now!\" she called is only a signal to let go, her hot cheeks show she is upset for a moment, and looking at the tiny ribbon shows her noticing the problem. None of those shows her sharing."
     },
     {
       id: "R-LIT-01-q7", type: "mc", points: 1, std: ["3.T.T.1.a"], dok: 3,
@@ -118,14 +118,14 @@ PP.addSet({
         { text: "They give a clue about how to fix Deja's kite.", correct: true },
         { text: "They show that Deja wishes she had a fish kite." },
         { text: "They show that the park is too crowded for Deja." },
-        { text: "They show that Theo likes fish more than dragons." }
+        { text: "They show that Deja's kite is too small to fly well." }
       ],
       clue: "Look at paragraphs 7 and 10. What do Theo and Deja notice about the fish kites, and how does it help?",
-      why: "The fish kites give a clue about how to fix Deja's kite. Their long tails keep them from spinning, which helps Theo, and then Deja, figure out that her kite needs a longer tail."
+      why: "The fish kites give a clue about how to fix Deja's kite. Their long tails keep them from spinning, which helps Theo, and then Deja, figure out that her kite needs a longer tail. The problem is the short tail, not the size of the kite."
     },
     {
       id: "R-LIT-01-q8", type: "ms", points: 2, std: ["3.T.T.1.c"], dok: 2,
-      prompt: "Which TWO lessons does Deja learn in the story? Choose two answers.",
+      prompt: "Which TWO lessons does the story teach? Choose two answers.",
       pick: 2,
       choices: [
         { text: "Other people's ideas can help you solve a problem.", correct: true },
@@ -136,7 +136,7 @@ PP.addSet({
         { text: "Winning a prize is the best part of Kite Day." }
       ],
       clue: "Think about what Deja does at the end that she would not do at the beginning. Then check each choice against the story.",
-      why: "Deja learns that other people's ideas can help solve a problem, because Theo's idea fixes the kite. She also learns to say sorry when she hurts someone, which she does in paragraph 11. The story shows the opposite of the other choices, and it never mentions a prize."
+      why: "The answers are \"Other people's ideas can help you solve a problem\" and \"It is important to say sorry when you hurt someone.\" Theo's idea fixes the kite. The story also shows that saying sorry when you hurt someone can fix things, which Deja does in paragraph 11, and then Theo happily helps her. The story shows the opposite of the other choices, and it never mentions a prize."
     }
   ]
 });

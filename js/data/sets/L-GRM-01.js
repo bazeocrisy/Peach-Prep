@@ -4,7 +4,7 @@ PP.addSet({
   section: "language",
   kind: "grammar",
   title: "Words that change",
-  blurb: "Special plurals, special past-tense verbs, -s/-es/-ies, and pronouns like myself and us.",
+  blurb: "Special plurals, special past-tense verbs, -s/-es/-ies, group and idea nouns, and pronouns like me and myself.",
   passages: [],
   items: [
     {
@@ -18,7 +18,7 @@ PP.addSet({
       slots: [
         { options: ["gooses", "geese", "geeses", "goose"], answer: 1 }
       ],
-      clue: "Some nouns do not add -s to mean more than one. They change their spelling inside the word, like one foot and two feet.",
+      clue: "Some nouns do not add -s to mean more than one. They change their spelling instead, like one man and two men, or one child and two children.",
       why: "The answer is geese. Goose is a special noun. To mean more than one, it changes to geese. We never add -s or -es to it."
     },
     {
@@ -34,7 +34,7 @@ PP.addSet({
         { options: ["catched", "caught", "catch", "caughted"], answer: 1 }
       ],
       clue: "Last Saturday already happened, so both verbs must tell about the past. Some verbs do not add -ed in the past. Say each choice aloud in the sentence and listen.",
-      why: "The answers are took and caught. Take and catch are special verbs. In the past, take becomes took and catch becomes caught. Taked and catched are not real words."
+      why: "The answers are took and caught. Take and catch are special verbs. In the past, take becomes took and catch becomes caught. Taked and catched are not correct in school writing."
     },
     {
       id: "L-GRM-01-3",
@@ -82,7 +82,7 @@ PP.addSet({
       slots: [
         { options: ["studys", "study", "studyes", "studies"], answer: 3 }
       ],
-      clue: "The sentence tells about one person, so the verb needs an ending. When a verb ends in a consonant and then y, change the y to i before you add -es.",
+      clue: "The sentence tells about one person, so the verb needs an ending. Look closely at the last letter of study. What happens to a y at the end of a word when you add an ending?",
       why: "The answer is studies. My sister is one person, so the verb needs an ending. Study ends in d and then y, so the y changes to i and we add -es."
     },
     {
@@ -101,8 +101,8 @@ PP.addSet({
       ],
       answer: [3],
       pick: 1,
-      clue: "Words that end in -self or -selves point back to the person who did the action. Check that each one is a real word that matches its person.",
-      why: "The error is in \"Marcus taught hisself how to juggle three balls.\" Hisself is not a word. It should say \"Marcus taught himself.\""
+      clue: "Words that end in -self or -selves point back to the person who did the action. Check that each one is the right form for its person.",
+      why: "The error is in \"Marcus taught hisself how to juggle three balls.\" Hisself is not correct in school writing. Use himself: \"Marcus taught himself how to juggle three balls.\""
     },
     {
       id: "L-GRM-01-7",
@@ -150,7 +150,7 @@ PP.addSet({
         { options: ["I", "me", "myself", "mine"], answer: 1 }
       ],
       clue: "Cover up \"Jada and.\" Then try each word by itself after \"gave.\"",
-      why: "The answer is me. Without Jada, the sentence says \"The librarian gave me new bookmarks.\" Me is the word to use after an action word like gave."
+      why: "The answer is me. Without Jada, the sentence says \"The librarian gave me new bookmarks.\" Me is the word to use after an action word like gave. Myself is used only when the same person does the action and gets it, like \"I helped myself.\" Here the librarian does the giving, so myself does not fit."
     },
     {
       id: "L-GRM-01-10",
@@ -158,15 +158,15 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"],
       dok: 2,
-      prompt: "Read the sentence: \"The wind BLOWED the leaves across our yard.\" How should the word in capital letters be written?",
+      prompt: "Read the sentence: \"The wind BLOWED the leaves across our yard.\" How should the word in ALL capital letters be written?",
       choices: [
         { text: "blew", correct: true },
         { text: "blown" },
         { text: "blewed" },
         { text: "No change" }
       ],
-      clue: "Blow is a special verb. It does not add -ed to tell about the past. Think of how grow changes.",
-      why: "The answer is blew. Blow is a special verb, so the past tense is blew, not blowed. Try each word in the sentence: \"The wind blew the leaves\" is the only one that sounds right."
+      clue: "Blow is a special verb. It does not add -ed to tell about the past. Say \"Yesterday the wind ___ the leaves\" with each choice.",
+      why: "The answer is blew. Blow is a special verb, so the past tense is blew, not blowed. Blew already tells about the past, so it never gets an -ed ending, and blown does not fit by itself after \"The wind.\" \"The wind blew the leaves\" is correct."
     }
   ]
 });

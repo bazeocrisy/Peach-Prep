@@ -9,8 +9,8 @@ PP.addSet({
       genre: "Literary text", lexile: "about 600L (estimate)",
       paragraphs: [
         ["Every fall, my family visits Grandmother in her small village in South Korea for Chuseok.", "Chuseok is a harvest holiday, a time to give thanks for the food that grows in the fields.", "On the night before, the whole family sits on the floor around a low table to make songpyeon."],
-        ["Songpyeon are little rice cakes shaped like half-moons.", "Each one has a sweet filling of sesame seeds and honey tucked inside.", "Grandmother says that making them together is the best part of the holiday.", "I used to think it was the slowest part."],
-        ["This year, my cousin Joon and I sat side by side.", "Outside, the full moon was rising, and I could hear other kids laughing in the lane.", "I wanted to finish my cakes quickly so I could go out and play."],
+        ["Songpyeon are little rice cakes shaped like half-moons.", "Grandmother fills ours with sweet sesame seeds and honey.", "Grandmother says that making them together is the best part of the holiday.", "I used to think it was the slowest part."],
+        ["This year, my cousin Joon and I sat side by side.", "Outside, the nearly full moon was rising, and I could hear other kids laughing in the lane.", "I wanted to finish my cakes quickly so I could go out and play."],
         ["I grabbed a ball of dough, poked a hole in it, and stuffed in a big spoonful of filling.", "I squeezed it shut and plopped it on the tray.", "Then I made another, and another.", "My pile grew like a mountain."],
         ["Joon worked slowly.", "He rolled each ball until it was smooth.", "He pressed a small dent with his thumb, added just a little filling, and pinched the edges closed bit by bit.", "His pile was tiny."],
         ["\"Look how many I made!\" I said, holding up my tray."],
@@ -50,13 +50,13 @@ PP.addSet({
     },
     {
       id: "R-LIT-02-q3", type: "hottext", points: 1, std: ["3.T.T.1.c", "3.T.RA.2.a"], dok: 2,
-      prompt: "Select the sentence in paragraph 8 that shows how Min-ji feels when she first sees her steamed cakes.",
+      prompt: "Select the sentence that shows how Min-ji feels when she first sees her steamed cakes.",
       source: "p1",
-      targets: ["p1:8:1", "p1:8:2", "p1:8:3", "p1:8:4"],
+      targets: ["p1:7:1", "p1:7:3", "p1:8:1", "p1:8:2", "p1:8:3", "p1:8:4", "p1:10:2"],
       answer: ["p1:8:1"],
       pick: 1,
       clue: "Some sentences tell what Min-ji sees. Look for the one that tells what is happening inside her.",
-      why: "The answer is \"When Grandmother lifted the lid, my heart sank.\" When your heart sinks, you feel suddenly sad or let down. The other sentences describe the cakes, not Min-ji's feelings."
+      why: "The answer is \"When Grandmother lifted the lid, my heart sank.\" When your heart sinks, you feel suddenly sad or let down. The other sentences describe the cakes, the kitchen, or what Grandmother does and says, not Min-ji's feelings."
     },
     {
       id: "R-LIT-02-q4", type: "ms", points: 2, std: ["3.T.T.1.d"], dok: 2,
@@ -78,13 +78,13 @@ PP.addSet({
       prompt: "Put these events from the story in the order they happen.",
       steps: [
         "Min-ji hurries to make a big pile of cakes.",
-        "Grandmother steams the cakes on pine needles.",
+        "Grandmother steams Min-ji's first batch of cakes.",
         "Min-ji sees that many of her cakes split open.",
         "Grandmother tells Min-ji to take her time.",
         "Min-ji's second batch of cakes comes out whole."
       ],
       clue: "Find each event in the story. The problem has to happen before Grandmother can give advice about it.",
-      why: "Min-ji first hurries to make a big pile. Grandmother steams the cakes, and Min-ji sees many have split. Then Grandmother tells her to take her time. Last, her second batch comes out whole."
+      why: "Min-ji first hurries to make a big pile. Grandmother steams that first batch, and Min-ji sees many have split. Then Grandmother tells her to take her time. Last, her second batch comes out whole."
     },
     {
       id: "R-LIT-02-q6", type: "dropdown", points: 2, std: ["3.T.T.1.b"], dok: 2,
@@ -104,22 +104,22 @@ PP.addSet({
         prompt: "What is the central message of the story?",
         choices: [
           { text: "Doing a job carefully matters more than doing it fast.", correct: true },
-          { text: "Holidays are the most fun when the moon is full." },
+          { text: "Making the most cakes shows that you worked the hardest." },
           { text: "Making many things is better than making a few." },
-          { text: "Kids should play outside instead of cooking." }
+          { text: "The oldest person in a family should do the cooking." }
         ]
       },
       partB: {
         prompt: "Which sentence from the story best supports the answer to Part A?",
         choices: [
           { text: "\"Take your time, and it will hold together.\"", correct: true },
-          { text: "Grandmother smiled but said nothing." },
-          { text: "My pile grew like a mountain." },
+          { text: "\"Look how many I made!\" I said, holding up my tray." },
+          { text: "She laid the cakes on a bed of pine needles and steamed them." },
           { text: "The kitchen filled with a clean, piney smell." }
         ]
       },
-      clue: "The central message is the big lesson Min-ji learns. Look at what Grandmother tells her and how things turn out after Min-ji listens.",
-      why: "Part A: The central message is that doing a job carefully matters more than doing it fast. Part B: Grandmother says, \"Take your time, and it will hold together,\" and when Min-ji slows down, her cakes come out whole."
+      clue: "The central message is the big lesson Min-ji learns. Compare how her cakes turn out the first time and the second time, and ask what made the difference. For Part B, choose the sentence that best explains that difference.",
+      why: "Part A: The central message is that doing a job carefully matters more than doing it fast. Part B: Grandmother says, \"Take your time, and it will hold together,\" and when Min-ji slows down, her cakes come out whole. Min-ji's big pile is the batch that split, so making the most cakes was not the lesson, and Grandmother steaming the cakes does not show who should cook."
     }
   ]
 });
