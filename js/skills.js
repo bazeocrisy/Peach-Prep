@@ -459,10 +459,17 @@
     render();
     setHashFor(true);
     window.PP_APP.track();
-    /* land at the top of the new step, not wherever the last one ended */
-    const top = el("sk-steps").getBoundingClientRect().top + window.scrollY - 4;
-    if (window.scrollY > top) window.scrollTo(0, top);
+    landOnStep();
     el("sk-panel").focus({ preventScroll: true });
+  }
+  /* Land with the new step's heading just below the sticky step bar (PP-003 D1).
+     Measured from #sk-panel, which never sticks: the bar's own rect top is 0
+     once it is stuck, so it cannot say where the page is. */
+  function landOnStep() {
+    const bar = el("sk-steps"), panel = el("sk-panel");
+    const barH = bar.hidden ? 0 : bar.getBoundingClientRect().height;
+    const top = Math.max(0, Math.round(panel.getBoundingClientRect().top + window.scrollY - barH - 8));
+    if (window.scrollY > top) window.scrollTo(0, top);
   }
 
   function renderSteps() {

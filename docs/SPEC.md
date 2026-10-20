@@ -281,7 +281,7 @@ Rules on top of §5 and §6:
 - Item `std` defaults to the lesson code. If given, it must include the lesson code. Lesson items may practice standards that are not assessed (Foundations, GUM Introduce/Continue rows); the page says so.
 - The test uses different passages and sentences than Practice and Learn, so mastery is not memory.
 - Item ids start with `SK-` and are unique across the whole site.
-- Mastered = at least 80% of the test's points. Progress is saved on the device only.
+- Passed the skill check = at least ceil(80%) of the check's points, stored as `mastered`. Progress is saved on the device only.
 - Writing standards are tested on the Milestones through revising and editing questions. Their Practice and Test use those formats (choose the best sentence to add, the best transition, the best ending, and so on), and the lesson adds a `write` activity scored by a grown-up with the checklist.
 
 ### 8b. Lesson keys, multiple codes, clue words, coaching (2.1)
