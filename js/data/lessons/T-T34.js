@@ -198,7 +198,7 @@ PP.addLesson({
     big: "A strong opinion piece states your opinion, explains each reason with facts or examples, links ideas with words like because, and ends by saying your opinion again.",
     points: [
       "Begin by introducing the topic. Then state your opinion clearly in one sentence, like \"I think our class should start a garden.\"",
-      "Give reasons. On the Milestones writing task, you are given the reasons. Your job is to explain each one with facts and examples from the passages, in your own words.",
+      "Give reasons. The Milestones rubric calls them the provided reasons, so the writing task usually gives you the reasons. Your job is to explain each one with facts and examples from the passages, in your own words.",
       "Link your ideas with words like because, therefore, also, for example and in addition. Because joins your opinion or a reason to the facts that explain it.",
       "End with a conclusion. Say your opinion again and sum up your reasons. Do not start a new idea at the end."
     ],
@@ -453,7 +453,7 @@ PP.addLesson({
       ],
       clue: "Pick one stanza. Read the last word of each line out loud. Which two end words sound alike? Then check the other stanzas.",
       why: "The answer is \"In each stanza, lines 2 and 4 rhyme.\" In stanza 1, night rhymes with tight. In stanza 2, yard rhymes with hard. In stanza 3, sound rhymes with ground. Lines 1 and 3 do not rhyme." },
-    { id: "SK-TT4a-P2", type: "hottext", points: 1, dok: 1, passages: ["p1"],
+    { id: "SK-TT4a-P2", type: "hottext", points: 2, dok: 1, passages: ["p1"],
       prompt: "Which TWO lines in stanza 2 rhyme with each other? Choose two lines in the poem.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4"],
       answer: ["p1:2:2", "p1:2:4"], pick: 2,
@@ -596,7 +596,8 @@ PP.addLesson({
       steps: [
         "Find the rhyme pattern. Lines 2 and 4 rhyme, so line 4 must rhyme with small.",
         "Check each choice. Tall rhymes with small. Tonight does not.",
-        "Make sure the rhyming line makes sense. \"I find the one that's round and smooth and tall\" fits a pumpkin."
+        "Make sure the rhyming line makes sense. \"I find the one that's round and smooth and tall\" fits a pumpkin.",
+        "Some questions name a feeling, and then every choice may rhyme. Listen to the words. If the poet wants a cozy feeling, soft, warm and snug sound cozy, but crash and bang do not."
       ],
       answer: "The best line is \"That's round and smooth and tall.\" It rhymes with small and makes sense."
     },

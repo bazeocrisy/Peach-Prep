@@ -614,7 +614,7 @@ PP.addLesson({
 PP.addLesson({
   key: "TS-CC",
   code: "3.T.SS.1.a",
-  codes: ["3.T.SS.1.a", "3.T.T.2.c"],
+  codes: ["3.T.SS.1.a"],
   title: "Compare and contrast: alike and different",
   clues: {
     words: ["both", "alike", "same", "but", "however", "unlike", "different", "while"],
@@ -719,7 +719,7 @@ PP.addLesson({
       answer: ["p1:2:1"], pick: 1,
       clue: "Paragraph 1 tells how they are alike. Look for the first clue word that turns toward differences.",
       why: "The answer is \"However, they are different in some ways.\" The clue word However marks the switch. Before it, the author tells how frogs and toads are alike. After it, the author tells how they are different." },
-    { id: "SK-TSCC-P3", type: "match", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-P3", type: "match", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Sort each fact into the right column.",
       cols: ["Frog only", "Both", "Toad only"],
       rows: [
@@ -749,7 +749,7 @@ PP.addLesson({
       ],
       clue: "This sentence tells how two animals live in different places. Pick the clue word that shows a difference.",
       why: "The answer is Unlike. Unlike most frogs, many toads live far from ponds. Unlike is a contrast clue word. Because tells why, and finally tells order." },
-    { id: "SK-TSCC-P6", type: "ms", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-P6", type: "ms", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Which TWO sentences tell how frogs and toads are ALIKE?",
       pick: 2,
       choices: [
@@ -769,7 +769,7 @@ PP.addLesson({
       answer: ["p2:2:1"], pick: 1,
       clue: "Find where the author stops telling what the animals share. Look for the clue word that starts the turn.",
       why: "The answer is \"However, these two animals are different in some ways.\" The clue word However marks the switch. Paragraph 1 tells how the animals are alike, and the rest of the passage tells how they are different." },
-    { id: "SK-TSCC-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How is an alligator's snout different from a crocodile's snout?",
         choices: [
@@ -808,7 +808,7 @@ PP.addLesson({
       ],
       clue: "Find the clue word in paragraph 1 that tells how two things are alike. Check each choice against that paragraph.",
       why: "The answer is \"Both lay eggs in nests on land.\" Paragraph 1 says this with the clue word Both. They are reptiles, not fish, and their skin is thick and scaly." },
-    { id: "SK-TSCC-T5", type: "mc", points: 1, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-T5", type: "mc", points: 1, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
       prompt: "What can you see when a crocodile shuts its mouth?",
       choices: [
         { text: "top and bottom teeth", correct: true },

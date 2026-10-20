@@ -45,16 +45,16 @@ PP.addLesson({
       answer: "Sturdy means strong and solid, not likely to break or fall."
     },
     {
-      show: ["Our class measured the rainfall in our garden each month. June had the most rainfall."],
+      show: ["Our class kept a graph all spring. June had the most precipitation."],
       figure: { src: "assets/figures/v3a-rainfall-graph.svg", label: "Figure 1", caption: "Our class kept track of the rain.",
-        alt: "Bar graph titled Rainfall in Our Garden. The side of the graph says inches of rain. The bars show March 4 inches, April 3 inches, May 2 inches and June 5 inches. June has the tallest bar." },
-      ask: "What does rainfall mean? Use the graph.",
+        alt: "Bar graph titled Rain in Our Garden. The side of the graph says inches of rain. The bars show March 4 inches, April 3 inches, May 2 inches and June 5 inches. June has the tallest bar." },
+      ask: "What does precipitation mean? Use the graph.",
       steps: [
-        "Read the title of the graph: Rainfall in Our Garden. The graph is about the word.",
-        "Read the words on the side: inches of rain. Each bar shows how much rain came down in one month.",
-        "Check the sentence. June had the most rainfall, and June has the tallest bar: 5 inches of rain. So rainfall is the amount of rain that falls."
+        "Read the title. It tells what the graph measures: Rain in Our Garden.",
+        "Read the words on the side: inches of rain. Each bar shows how much rain came down in one month. June has the tallest bar, 5 inches.",
+        "Check the sentence. It says June had the most precipitation, and the graph shows June had the most rain. So precipitation must mean rain, or other water that falls from the sky."
       ],
-      answer: "Rainfall means the amount of rain that falls in a place."
+      answer: "Precipitation means rain, or other water like snow, that falls from the sky."
     },
     {
       show: ["At the picnic, Aunt Rosa poured cold lemonade from a glass pitcher into our cups."],
@@ -149,15 +149,15 @@ PP.addLesson({
       prompt: "Trunk has more than one meaning. Use the sentence and the picture. What does trunk mean here?",
       stem: ["Grandpa leaned the ladder against the trunk."],
       figure: { src: "assets/figures/v3a-tree-ladder.svg",
-        alt: "A drawing of a ladder leaning against an apple tree. Labels point to a branch, the trunk and the roots. The trunk label points to the thick wooden part of the tree that the ladder rests on." },
+        alt: "A drawing of a ladder leaning against a tree. The top of the ladder rests on the thick wooden part of the tree, between the roots and the branches. Labels point to a branch and the roots." },
       choices: [
         { text: "the thick main stem of a tree", correct: true },
         { text: "the back part of a car used for storage" },
         { text: "the long nose of an elephant" },
         { text: "a pair of shorts worn for swimming" }
       ],
-      clue: "The sentence alone could fit more than one meaning. Look at the picture: find the label that says trunk and follow its line.",
-      why: "The answer is \"the thick main stem of a tree.\" The sentence does not say what kind of trunk it is, but the picture does. The ladder leans on the tree, and the label trunk points to the thick part that holds the tree up. A car, an elephant and swim shorts are not in the picture." },
+      clue: "The sentence alone could fit more than one meaning. Look at the picture. What is the ladder leaning on? Which meaning matches that?",
+      why: "The answer is \"the thick main stem of a tree.\" The sentence does not say what kind of trunk it is, but the picture does. The ladder leans on the thick wooden part of the tree, between the roots and the branches. That part is the trunk, and it holds the tree up. A car, an elephant and swim shorts are not in the picture." },
     { id: "SK-V3a-P7", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 2. Choose the meaning of the phrase set everything out.",
       text: "In paragraph 2, set everything out means {0}.",
@@ -168,16 +168,19 @@ PP.addLesson({
       why: "The answer is \"put it where people could see it.\" The class put the treats on two long tables in the front hall so buyers could see them and pick some. Read together, the words set everything out mean to lay things out for people to see." }
   ],
   test: [
-    { id: "SK-V3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
-      prompt: "What is a wetland, as used in paragraph 1?",
+    { id: "SK-V3a-T8", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence and look at the graph. What does attendance mean?",
+      stem: ["Attendance at the swamp's nature center was highest in spring."],
+      figure: { src: "assets/figures/v3a-visitors-graph.svg",
+        alt: "Bar graph titled People Who Came to the Nature Center. The words at the bottom say number of people. The bars show winter 20, spring 50, summer 40 and fall 30. Spring has the longest bar." },
       choices: [
-        { text: "land covered by water for much of the year", correct: true },
-        { text: "a deep lake with no trees or plants near it" },
-        { text: "a river that flows all the way to the sea" },
-        { text: "dry land in the southeast corner of a state" }
+        { text: "the number of people who come to a place", correct: true },
+        { text: "the kind of weather a place has each season" },
+        { text: "the price of a ticket to get into a place" },
+        { text: "the number of animals that live in a place" }
       ],
-      clue: "Look for the signal words \"which is\" in paragraph 1. Read what comes after them.",
-      why: "The answer is \"land covered by water for much of the year.\" Paragraph 1 says a wetland \"is land that is covered by water for much of the year.\" The words \"which is\" give a definition clue." },
+      clue: "Read the title of the graph and the words at the bottom. What does the graph count?",
+      why: "The answer is \"the number of people who come to a place.\" The title is People Who Came to the Nature Center, and the bottom says number of people. Spring has the longest bar, 50 people, and the sentence says attendance was highest in spring. So attendance is how many people come. The graph does not show weather, ticket prices or animals." },
     { id: "SK-V3a-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What does dwell mean in paragraph 3?",
@@ -201,10 +204,10 @@ PP.addLesson({
       prompt: "Paragraph 3 names herons, but the words do not tell what a heron is. Use Figure 1 to choose the meaning.",
       text: "In paragraph 3, a heron is {0}.",
       slots: [
-        { options: ["a long fish that swims in dark water", "a tall bird that wades in water", "a plant that floats on top of the water"], answer: 1 }
+        { options: ["a long fish that swims in dark water", "a tall bird that hunts in shallow water", "a plant that floats on top of the water"], answer: 1 }
       ],
-      clue: "Look at the picture and read its labels and caption. What kind of animal has those body parts?",
-      why: "The answer is \"a tall bird that wades in water.\" Figure 1 shows a heron with a sharp beak, a long neck and long legs, standing in shallow water. The caption says it hunts for fish, so it is not a fish itself, and a plant does not have legs or a beak." },
+      clue: "Look at the picture and read its labels and caption. What kind of living thing has those body parts?",
+      why: "The answer is \"a tall bird that hunts in shallow water.\" Figure 1 shows a sharp beak, a long neck and two long legs standing in shallow water. Fish and plants do not have beaks or legs, so a heron is a tall bird. The caption tells what the bird does: it hunts for fish in the shallow water." },
     { id: "SK-V3a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Pen has more than one meaning. What does pen mean in this sentence?",
       stem: ["The farmer opened the pen and let the pigs run out into the muddy field."],

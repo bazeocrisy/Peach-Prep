@@ -39,11 +39,9 @@ PP.addLesson({
         note: "Topic: camels. Main idea: a camel's body helps it live in the desert. Key details: wide feet for soft sand, long eyelashes against blowing sand, and going a long time without water. Each detail shows one way the body helps."
       },
       {
-        label: "Example: how the article is designed",
-        lines: ["Heading: Built for the Desert", "Text box: Did You Know? A camel's hump stores fat, not water. Its body can use the fat when food is hard to find.", "A diagram with a caption:"],
-        figure: { src: "assets/figures/tt2a-camel.svg", label: "Figure 1", caption: "Body parts that help a camel live in the desert",
-          alt: "Diagram of a camel standing on sand. Labels point to its hump, its long eyelashes, and its wide, flat feet." },
-        note: "The heading names the section. The text box sets apart an extra fact about the hump. The caption tells what the whole diagram shows, and the labels point to the feet and eyelashes the paragraph talks about. The diagram lets you see the key details."
+        label: "Example: a detail that is not a key detail",
+        lines: ["Earthworms help gardens grow. As they tunnel through the dirt, they make spaces where air and water can reach plant roots. Worms also eat bits of dead leaves. What they leave behind makes the soil richer. Earthworms do not have any eyes."],
+        note: "Main idea: earthworms help gardens grow. Tunnels for air and water and richer soil are key details, because they show how worms help. Having no eyes is a fun fact, but it does not show how worms help a garden, so it is not a key detail."
       }
     ],
     tip: "On the test, a main idea question may ask what a text is \"mostly about.\" A second part may ask which detail supports it. Pick a detail that proves the main idea, not just any true fact from the text. You may also be asked how a heading, caption or diagram helps the reader."
@@ -60,14 +58,16 @@ PP.addLesson({
       answer: "The main idea is that penguins are excellent swimmers. Two key details are that their flipper wings push them through the water and their smooth bodies slide easily."
     },
     {
-      show: ["Earthworms help gardens grow. As they tunnel through the dirt, they make spaces where air and water can reach plant roots. Worms also eat bits of dead leaves. What they leave behind makes the soil richer. Earthworms do not have any eyes."],
-      ask: "Which detail is NOT a key detail for the main idea?",
+      show: ["Heading: Built for the Desert", "A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes.", "Text box: Did You Know? A camel's hump stores fat, not water. Its body can use the fat when food is hard to find."],
+      figure: { src: "assets/figures/tt2a-camel.svg", label: "Figure 1", caption: "Body parts that help a camel live in the desert",
+        alt: "Diagram of a camel standing on sand. Labels point to its hump, its long eyelashes, and its wide, flat feet." },
+      ask: "How do the heading, the diagram and the text box help the reader?",
       steps: [
-        "Find the main idea. The first sentence says earthworms help gardens grow.",
-        "Test each detail. Ask, \"Does this show how worms help gardens?\"",
-        "Tunnels let in air and water, so yes. Richer soil, yes. Having no eyes is interesting, but it does not show how worms help a garden."
+        "Read the heading. It names what the section is about: how a camel is built for the desert.",
+        "Read the caption under Figure 1. It tells what the whole diagram shows. Then follow each label's line. The feet and eyelashes labels point to the same key details the paragraph tells about, so now I can see them.",
+        "Read the text box. It sets apart an extra fact about the hump. It is interesting, but the paragraph does not need it to make its point."
       ],
-      answer: "\"Earthworms do not have any eyes\" is not a key detail. It is a fun fact, but it does not show how worms help gardens grow."
+      answer: "The heading names the section. The caption tells what the diagram shows, and its labels let me see the key details from the paragraph. The text box adds an extra fact."
     },
     {
       show: ["A spider makes silk inside its body. Some spiders spin sticky webs to catch insects. Others use silk to wrap up their eggs and keep them safe. Baby spiders may even let out a long silk thread and float away on the wind."],
@@ -119,7 +119,7 @@ PP.addLesson({
         { text: "Some worker bees guard the hive from bees of other hives." }
       ],
       clue: "The main idea fits the whole article, not just one paragraph. Read the first and last paragraphs, then ask which choice covers every part.",
-      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraph 1 says this, paragraphs 2 to 5 each tell about a different job, and paragraph 6 says it again. The other choices are true, but each one is a detail from only one paragraph." },
+      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraphs 2 to 5 each tell about a different job, and the first and last paragraphs tie the jobs together. The other choices are true, but each one is a detail from only one paragraph." },
     { id: "SK-TT2a-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the sentence that best states the main idea of the whole article.",
       targets: ["p1:1:1", "p1:1:2", "p1:1:3", "p1:2:1", "p1:3:1"],
@@ -132,21 +132,21 @@ PP.addLesson({
         { text: "Young workers clean the hive and feed the baby bees.", correct: true },
         { text: "Older workers gather nectar and pollen from flowers.", correct: true },
         { text: "The queen is bigger than the other bees in the hive." },
-        { text: "A honeybee has five eyes." },
+        { text: "The queen lays hundreds of eggs in one day." },
         { text: "A hive can be home to thousands of bees." }
       ],
       clue: "The idea is about the jobs of worker bees. Cross out any detail about the queen, or any detail that does not name a job.",
-      why: "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\" Both name jobs that workers do. The queen detail is not about workers. Five eyes and thousands of bees are true, but they are not jobs." },
+      why: "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\" Both name jobs that workers do. The queen details are not about workers, and thousands of bees is not a job." },
     { id: "SK-TT2a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1. How does the diagram help the reader understand paragraphs 3 and 4?",
       choices: [
-        { text: "It shows what the wax cells look like and what bees keep in them.", correct: true },
+        { text: "It shows the six-sided shape of the wax cells that the workers build.", correct: true },
         { text: "It shows how older worker bees find their way to the flowers." },
         { text: "It shows how the guard bees keep other bees out of the hive." },
         { text: "It shows how much bigger the queen is than the worker bees." }
       ],
-      clue: "Paragraphs 3 and 4 tell about something the bees build and use. Find that thing in the diagram, then read its labels.",
-      why: "The answer is \"It shows what the wax cells look like and what bees keep in them.\" Paragraphs 3 and 4 say workers build wax cells and store honey in them. Figure 1 shows the six-sided cells, and its labels point to an egg, honey and pollen. The diagram does not show flowers, guards or the queen." },
+      clue: "Read the caption. Then find the paragraph that talks about the same thing.",
+      why: "The answer is \"It shows the six-sided shape of the wax cells that the workers build.\" Paragraph 3 says young workers build little wax rooms called cells, but the words do not say what the cells look like. Figure 1 lets you see them. The diagram does not show flowers, guards or the queen." },
     { id: "SK-TT2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "The main idea is that honeybees each have a job and work together. Decide whether each detail is a key detail or not a key detail.",
       cols: ["Key detail", "Not a key detail"],
@@ -176,7 +176,7 @@ PP.addLesson({
           { text: "\"Every hive has one queen.\"" }
         ] },
       clue: "Read only paragraph 4. Ask what most of its sentences are about. Then find the sentences that prove it.",
-      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." },
+      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 does say a honeybee has five eyes, but that one fact is not about gathering food or making honey, so it does not support the main idea. Paragraph 4 also says the honey is saved for winter, not eaten in summer. Young workers are in paragraph 3." },
     { id: "SK-TT2a-P7", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1 again. Choose the words that best complete the sentences.",
       text: "The caption tells {0}. The labels tell {1}.",
@@ -185,7 +185,7 @@ PP.addLesson({
         { options: ["how many bees live in one hive", "when the queen lays her eggs", "what is inside some of the cells"], answer: 2 }
       ],
       clue: "Read the words under Figure 1. Then read each word that has a line pointing into the picture. Ask what job each kind of words does.",
-      why: "The answers are \"what the whole diagram shows\" and \"what is inside some of the cells.\" The caption, \"Wax cells in a honeycomb,\" names the whole picture. The labels egg, honey and pollen each point to what is inside some of the cells." }
+      why: "The answers are \"what the whole diagram shows\" and \"what is inside some of the cells.\" The caption, \"Wax cells in a honeycomb,\" names the whole picture. The labels \"cell with an egg,\" \"honey\" and \"pollen\" each point to what is inside some of the cells." },
   ],
   test: [
     { id: "SK-TT2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -684,7 +684,7 @@ PP.addLesson({
     big: "A good informational piece names the topic at the start, teaches facts in the middle, and wraps up at the end.",
     points: [
       "The introduction tells the reader what the topic is. It can start with something interesting, but it must make the topic clear.",
-      "The middle gives facts, details and definitions. A picture or diagram can also help explain a fact. Every sentence should be about the topic.",
+      "The middle gives facts, details and definitions. A picture or diagram with a caption can also help explain a fact. Choose one that shows the facts in that part of your writing. Every sentence should be about the topic.",
       "A definition tells what a word means, like \"A burrow is a hole an animal digs for its home.\"",
       "If a sentence is about something else, like your own pet or your lunch, it does not belong. Take it out.",
       "The conclusion wraps up. It reminds the reader of the topic or the most important idea. It does not start a new topic."
@@ -752,6 +752,7 @@ PP.addLesson({
       "I named my topic in my first sentence.",
       "I gave at least three true facts or details.",
       "I explained what one word means.",
+      "If a picture would help explain a fact, I drew it and labeled it.",
       "Every sentence is about my topic.",
       "My last sentence wraps up my topic."
     ],
@@ -821,7 +822,17 @@ PP.addLesson({
         { text: "Now you know why peanuts are such a special plant.", answer: 2 }
       ],
       clue: "Ask what job each sentence does. Does it open the topic, teach a fact, or wrap up what the reader learned?",
-      why: "\"Have you ever wondered how peanuts grow? Read on to find out\" opens the topic, so it is the introduction. The sentences about warm weather and sandy soil and about roasting and boiling are facts for the middle. \"Now you know why peanuts are such a special plant\" wraps up, so it is the conclusion." }
+      why: "\"Have you ever wondered how peanuts grow? Read on to find out\" opens the topic, so it is the introduction. The sentences about warm weather and sandy soil and about roasting and boiling are facts for the middle. \"Now you know why peanuts are such a special plant\" wraps up, so it is the conclusion." },
+    { id: "SK-TT2d-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Rosa wants to add a picture with a caption next to sentences 4 and 5. Which one would best help readers understand those sentences?",
+      choices: [
+        { text: "a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\"", correct: true },
+        { text: "a photo of a jar of peanut butter on a kitchen table, with the caption \"Peanut butter is made from peanuts\"" },
+        { text: "a drawing of a farmer on a tractor in a peanut field, with the caption \"Farmers dig up peanuts in the fall\"" },
+        { text: "a drawing of a bowl of popcorn next to a movie ticket, with the caption \"My favorite movie snack\"" }
+      ],
+      clue: "Reread sentences 4 and 5. What happens there that is hard to picture? Which picture would let the reader see it?",
+      why: "The answer is a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\". Sentences 4 and 5 tell how a peg pushes into the soil and grows a shell under the ground, and the diagram lets readers see that. The peanut butter photo is about peanuts but not about how they grow. The farmer drawing goes with sentence 6, not 4 and 5. The popcorn drawing is not about peanuts at all." }
   ],
   test: [
     { id: "SK-TT2d-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],

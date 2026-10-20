@@ -206,7 +206,7 @@ PP.addLesson({
       "A text box is set apart from the paragraphs. It often gives an extra fact, like a \"Did You Know?\" box.",
       "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
       "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it.",
-      "On a screen, links, play buttons and videos are features too. A link takes you to more facts or a word's meaning. A video or sound shows or tells what words cannot."
+      "Features are not only on paper. On a screen, a link takes you to more facts, and a video or sound shows or tells what words cannot. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -222,9 +222,9 @@ PP.addLesson({
         "Text box: Did You Know? Frogs can jump far for their size.",
         "A picture with a caption:"
       ],
-      figure: { src: "assets/figures/tc1b-frog.svg", label: "Figure 1", caption: "A green frog waits on a lily pad.",
+      figure: { src: "assets/figures/tc1b-frog.svg", label: "Figure 1", caption: "A green frog waits on a lily pad in a Georgia pond at night.",
         alt: "A drawing of a frog sitting on a round lily pad in a pond." },
-      note: "The heading tells what the section is about. The word tongue is in bold because it is important. The caption under Figure 1 tells what the picture shows. The text box adds a fun extra fact."
+      note: "The heading tells what the section is about. The word tongue is in bold because it is important. The text box adds a fun extra fact. The picture shows the frog and the lily pad. The caption adds two things the picture cannot show: where (a Georgia pond) and when (at night)."
     },
     tip: "On the test, you may be asked which heading to read to find a fact, which caption fits a picture, or how a text box, bold word, caption or diagram helps the reader. Think about the job each feature does."
   },
@@ -323,16 +323,17 @@ PP.addLesson({
       ],
       clue: "A caption tells what the picture shows. Look at the picture first: what is the beaver doing, and where is it? Cross out captions about things you cannot see.",
       why: "The answer is \"A beaver chews through a small tree with its strong front teeth.\" The picture shows the beaver's teeth on a deep notch in a tree, with wood chips on the ground. There is no water in the picture, so the captions about the tail, the lodge and the dam do not fit it." },
-    { id: "SK-TC1b-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Why did the author put the facts about teeth in a text box?",
+    { id: "SK-TC1b-P9", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["A park ranger gives a talk about beavers at a Georgia state park. Here is part of what she says:", "\"Beavers build dams with sticks and mud. Now, listen closely. This next part is important. A beaver's dam can make a whole new pond!\""],
+      prompt: "Why does the ranger say, \"Listen closely. This next part is important\"?",
       choices: [
-        { text: "to share an extra fact that is fun to know", correct: true },
-        { text: "to tell the main idea of the whole article" },
-        { text: "to explain the steps for building a dam" },
-        { text: "to warn readers to stay away from beavers" }
+        { text: "to tell listeners that the next fact matters a lot", correct: true },
+        { text: "to tell listeners that her talk is almost over" },
+        { text: "to ask listeners a question about beavers" },
+        { text: "to tell listeners where the beavers live" }
       ],
-      clue: "A text box sits apart from the paragraphs. Read it, then ask: would the article still make sense without it?",
-      why: "The answer is to share an extra fact that is fun to know. The box sits under \"Did You Know?\" and adds a surprising fact. The main idea is that beavers are great builders." },
+      clue: "People who listen to a talk cannot see bold print. What can a speaker say to do the same job?",
+      why: "The answer is \"to tell listeners that the next fact matters a lot.\" Listeners cannot see bold print or headings, so a speaker uses spoken signals, like \"Listen closely,\" to point out an important part. She keeps talking after it, so her talk is not over. She does not ask a question, and those words do not name a place." },
     { id: "SK-TC1b-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       stem: ["In the section \"A Home with a Secret Door,\" the word **lodge** is printed in dark, bold letters.", "The glossary at the back of the book says: lodge: a beaver's home made of sticks and mud"],
       prompt: "How does the bold print help the reader?",
@@ -343,8 +344,8 @@ PP.addLesson({
         { text: "It shows the word should be read in a loud voice." }
       ],
       clue: "Think about why an author makes a word stand out, and where else the word shows up.",
-      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print points out key words, and the glossary tells what they mean." },
-    { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 3, passages: ["p1"],
+      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print points out key words, and the glossary tells what they mean. Bold does not mark a book title, a new spelling or a loud voice." },
+    { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1. Which two sentences in the article tell about the parts that its labels point to? Choose two sentences.",
       targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],
       answer: ["p1:5:3", "p1:5:4"], pick: 2,
@@ -394,7 +395,7 @@ PP.addLesson({
       ],
       clue: "Read only the words in the box. What new fact does it give that the paragraphs do not?",
       why: "The answer is \"It gives a surprising fact about how monarchs find milkweed.\" The box says a monarch can taste with its feet to tell if a plant is milkweed. That fact is not in the paragraphs." },
-    { id: "SK-TC1b-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
+    { id: "SK-TC1b-T3", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "Look at Figure 1 next to the section \"From Egg to Wing.\" This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What does the diagram in Figure 1 help the reader understand?",
         choices: [
@@ -958,12 +959,12 @@ PP.addLesson({
       prompt: "Why are Dr. Ruiz's notes full of numbers and short facts?",
       choices: [
         { text: "She is a scientist, so she writes exact counts to keep track of the frogs.", correct: true },
-        { text: "She wrote long ago, before people wrote in full sentences." },
+        { text: "She was writing to a friend, so she kept her note short and fun." },
         { text: "She was in a hurry because a big storm was coming." },
         { text: "She wanted to tell her friends a funny story about frogs." }
       ],
       clue: "Read the note in the box. Who is the writer, and what is her job? How would a person with that job write?",
-      why: "The answer is \"She is a scientist, so she writes exact counts to keep track of the frogs.\" The box tells you who the writer is. Scientists count and record facts so they can compare them later. The notes give no clue about long ago or a storm, and they are not a funny story." }
+      why: "The answer is \"She is a scientist, so she writes exact counts to keep track of the frogs.\" The box tells you who the writer is. Scientists count and record facts so they can compare them later. The notes are not written to a friend, they give no clue about a storm, and they are not a funny story." },
   ],
   test: [
     { id: "SK-TC2c-T1", type: "dropdown", points: 2, dok: 1, passages: ["p2"],
@@ -1025,15 +1026,15 @@ PP.addLesson({
       clue: "Ask of each detail: Is it in the diary? If not, is it something you see now?",
       why: "Neighbors coming to see a new TV and having only a few channels are details from the 1954 diary. Full-color TVs and watching shows on phones and tablets are part of life today." },
     { id: "SK-TC2c-T6", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["Note in a box: Marcus wrote this note on the morning his family moved from Georgia to Ohio. The moving truck had just left.", "Dear Ms. Hall, Thank you for being my teacher. I will miss our class reading corner. Please ask everyone to write to me at my new house!"],
-      prompt: "How does knowing Marcus's situation help you understand his note?",
+      stem: ["Note in a box: Imani wrote this note to her neighbor in September. A hurricane was heading for the Georgia coast, and families near the beach were told to leave right away. Her neighbor lived farther from the beach and could stay.", "Dear Mr. Ortiz, We have to leave tonight. Please feed my fish, Goldie, until we get back!"],
+      prompt: "How does knowing Imani's situation help you understand her note?",
       choices: [
-        { text: "He is moving away, so he is saying goodbye and asking his class to keep in touch.", correct: true },
-        { text: "He is new at the school, so he is asking if he can join the reading corner." },
-        { text: "He wrote it long ago, so he had to send a paper note to his teacher." },
-        { text: "He is a teacher, so he is giving his class a new reading job to do." }
+        { text: "A storm was coming, so her family had to leave fast and could not stay to feed Goldie.", correct: true },
+        { text: "Her family was going on a fun trip, so she planned ahead and asked for help with Goldie." },
+        { text: "Her family was moving to a new town, so she was giving Goldie to Mr. Ortiz to keep." },
+        { text: "Goldie was sick, so Imani wanted Mr. Ortiz to take her fish to a doctor for animals." }
       ],
-      clue: "Read the note in the box first. What was happening to Marcus that morning? Then reread his note with that in mind.",
-      why: "The answer is \"He is moving away, so he is saying goodbye and asking his class to keep in touch.\" The box says his family was moving to Ohio that day. That is why he thanks his teacher, says he will miss the reading corner, and asks the class to write to his new house. The note gives no date from long ago, Marcus is leaving the school, not joining it, and Ms. Hall is the teacher, not Marcus." }
+      clue: "Read the note in the box first. What was happening in Imani's town? Then reread her note with that in mind.",
+      why: "The answer is \"A storm was coming, so her family had to leave fast and could not stay to feed Goldie.\" The note alone could sound like a trip. The box tells the real reason: a hurricane was coming, and families near the beach had to leave right away. That is why Imani writes \"tonight\" and asks for help so suddenly. She says \"until we get back,\" so she is not giving Goldie away, and nothing says Goldie is sick." }
   ]
 });

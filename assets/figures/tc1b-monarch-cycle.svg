@@ -8,8 +8,11 @@
     <path d="M58 112 Q72 56 112 46"/>
   </g>
   <!-- 1 egg on a leaf -->
-  <path d="M120 44 Q160 8 200 44 Q160 72 120 44 Z" fill="#DCEFD3" stroke="#2F5A2A" stroke-width="2.5"/>
-  <ellipse cx="160" cy="38" rx="7" ry="10" fill="#FFFBEA" stroke="#111" stroke-width="2"/>
+  <path d="M118 58 Q146 10 206 26 Q184 72 118 58 Z" fill="#DCEFD3" stroke="#2F5A2A" stroke-width="2.5"/>
+  <path d="M118 58 Q160 46 206 26" fill="none" stroke="#2F5A2A" stroke-width="2"/>
+  <path d="M118 58 l-12 8" stroke="#2F5A2A" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="166" cy="30" rx="5" ry="7" fill="#FFF0A0" stroke="#8A6D00" stroke-width="1.5"/>
+  <path d="M164 74 L166 41" stroke="#111" stroke-width="1.5"/>
   <!-- 2 caterpillar: striped segments -->
   <g fill="#FFF3C4" stroke="#111" stroke-width="2">
     <circle cx="214" cy="158" r="10"/><circle cx="231" cy="156" r="10"/><circle cx="248" cy="154" r="10"/><circle cx="265" cy="156" r="10"/><circle cx="282" cy="158" r="10"/>

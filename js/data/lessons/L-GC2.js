@@ -395,7 +395,7 @@ PP.addLesson({
       "In the present tense, a verb for one person or thing usually ends in s: The bird sings. A verb for more than one does not: The birds sing.",
       "Some verbs change in other ways. For one person or thing (he, she, it, Dad, the dog), use is, was, has and does. For more than one, use are, were, have and do.",
       "Two subjects joined by and count as more than one: Ella and Sam are friends. With I and you, use the verb with no s: I run, you run. Be is special: I am, I was, you are, you were.",
-      "Words can come between the subject and the verb. Skip over them and match the verb to the real subject: The box of crayons is on the table."
+      "Words can come between the subject and the verb. Skip over them and match the verb to the real subject: The box of crayons is on the table. A long sentence can have two parts, joined by a word like when or because. Each part has its own subject and verb, and each pair must agree: When the bell rings, the students line up."
     ],
     words: [
       { term: "subject", means: "who or what the sentence is about" },
@@ -512,7 +512,16 @@ PP.addLesson({
         { text: "These bikes has no bells." }
       ],
       clue: "Doesn't and has go with one. Don't and have go with more than one. Check each subject.",
-      why: "The answer is \"The bike doesn't have a bell.\" Bike is one, so doesn't is correct. Bikes needs don't, that bike needs doesn't, and these bikes needs have." }
+      why: "The answer is \"The bike doesn't have a bell.\" Bike is one, so doesn't is correct. Bikes needs don't, that bike needs doesn't, and these bikes needs have." },
+    { id: "SK-GC2c-P7", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the verbs that agree with their subjects.",
+      text: "When the twins {0} home from school, their dog {1} to the door.",
+      slots: [
+        { options: ["get", "gets", "getting"], answer: 0 },
+        { options: ["run", "runs", "running"], answer: 1 }
+      ],
+      clue: "This sentence has two parts, and each part has its own subject. Find each subject and ask: one or more than one?",
+      why: "The answers are get and runs. In the first part, the subject is twins, which is more than one, so get has no s. In the second part, the subject is dog, which is one, so runs ends in s. The word when joins the two parts, but each part still needs a subject and verb that agree." }
   ],
   test: [
     { id: "SK-GC2c-T1", type: "mc", points: 1, dok: 2, passages: [],

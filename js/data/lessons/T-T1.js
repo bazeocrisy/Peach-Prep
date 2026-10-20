@@ -205,7 +205,6 @@ PP.addLesson({
 });
 PP.addLesson({
   code: "3.T.T.1.b",
-  codes: ["3.T.T.1.b", "3.T.SS.1.a"],
   title: "Story elements: characters, setting, problem and solution",
   clues: {
     words: ["one day", "but", "then", "so", "finally", "in the end"],
@@ -228,9 +227,8 @@ PP.addLesson({
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet.",
       "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
-      "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution.",
-      "Sum up any story with five words: Somebody, Wanted, But, So, Then. Somebody is the main character. Wanted is what that character wants. But is the problem. So is what the character does about it. Then is how it ends.",
-      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or a deadline can cause the trouble or make it harder to fix."
+      "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution. To sum up any story, say: Somebody (the main character) Wanted something, But (the problem), So (what the character does), Then (how it ends).",
+      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -343,7 +341,7 @@ PP.addLesson({
         { text: "The rabbits are easy to catch in the dark, so Jada waits by the gate to grab them." },
         { text: "Grandma Bea is asleep, so Jada has to take care of the whole garden alone." }
       ],
-      clue: "Think about what Jada and Grandma Bea are doing at night. Could they stop the rabbits themselves? Then look at what kind of fix Jada makes.",
+      clue: "Read paragraph 3 again. When do the rabbits come? Then look at the kind of fix Jada makes in paragraph 4. Why would that kind of fix be a good idea at that time?",
       why: "The answer is \"No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.\" The rabbits come at night, when no one is in the garden to stop them. That is why Jada makes something that blocks the gate all night long instead of trying to chase them. Jada waters the garden in the morning, she never waits by the gate, and Grandma Bea helps her." },
     { id: "SK-TT1b-P4", type: "order", points: 2, dok: 2, passages: ["p1"],
       prompt: "Put the events of the story in order.",

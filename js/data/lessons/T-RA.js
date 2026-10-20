@@ -455,7 +455,7 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: "Reread the two monarch butterfly sources from Practice, \"A Monarch Grows Up\" and \"Monarchs Fly to Mexico.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources.",
+    prompt: "Reread the two monarch butterfly sources from Practice, \"A Monarch Grows Up\" and \"Monarchs Fly to Mexico.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources. Or choose your own topic, find two sources about it with a grown-up, and summarize those.",
     checklist: [
       "I told the big idea of both sources.",
       "I used my own words instead of copying sentences.",

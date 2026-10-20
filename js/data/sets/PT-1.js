@@ -31,7 +31,7 @@ PP.addSet({
   section: "test",
   kind: "form",
   title: "Practice Test 1 (shortened)",
-  blurb: "A SHORTENED practice test shaped like the real one: 24 reading, revising and language questions worth 31 points, with no essay. The real Grade 3 test has 60 points, including an 8-point essay. Practice the essay in Writing.",
+  blurb: "A shortened practice test shaped like the real one: 24 reading, revising and language questions worth 31 points, with no essay. The real Grade 3 test has 60 points, including an 8-point essay. Practice the essay in Writing.",
   passages: [
     {
       id: "p1",

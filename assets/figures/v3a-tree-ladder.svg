@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="t">
-  <title id="t">A ladder leans against the trunk of an apple tree. Labels name the branch, the trunk and the roots.</title>
+  <title id="t">A ladder leans against the thick wooden part of a tree. Labels name a branch and the roots.</title>
   <path d="M0 252 H300" stroke="#4A3A22" stroke-width="3"/>
   <!-- roots above the ground line -->
   <g fill="none" stroke="#4A2E16" stroke-width="4" stroke-linecap="round"><path d="M128 252 Q112 258 96 270"/><path d="M168 252 Q186 258 204 270"/><path d="M146 254 V276"/></g>
@@ -9,12 +9,10 @@
   <!-- branches and leafy top -->
   <path d="M60 86 Q52 30 110 30 Q130 4 168 18 Q226 6 240 54 Q262 96 214 104 Q180 118 150 104 Q110 120 82 108 Q56 106 60 86 Z" fill="#DCEFD3" stroke="#2F5A2A" stroke-width="3"/>
   <path d="M140 126 L90 78 M158 124 L204 76" stroke="#4A2E16" stroke-width="7" stroke-linecap="round"/>
-  <g fill="#fff" stroke="#111" stroke-width="2"><circle cx="100" cy="60" r="7"/><circle cx="168" cy="44" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="132" cy="84" r="7"/></g>
   <!-- ladder leaning on the trunk -->
   <g stroke="#333" stroke-width="4" stroke-linecap="round"><path d="M182 252 L138 140"/><path d="M206 252 L160 138"/></g>
   <g stroke="#333" stroke-width="3"><path d="M176 236 L199 234 M166 210 L189 208 M156 184 L179 182 M146 158 L169 156"/></g>
   <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
-    <text x="230" y="150">trunk</text><path d="M228 144 L166 168" stroke="#111" stroke-width="2"/>
     <text x="4" y="150">branch</text><path d="M40 132 L112 106" stroke="#111" stroke-width="2"/>
     <text x="20" y="292">roots</text><path d="M74 284 L98 270" stroke="#111" stroke-width="2"/>
   </g>

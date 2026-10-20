@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 345" role="img" aria-labelledby="t">
+  <title id="t">Map of Georgia with an arrow that points north. A striped area in the south and southwest part of the state is marked peanut farms. A dot shows Atlanta in the north.</title>
+  <defs>
+    <pattern id="f" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#E4F1D8"/><path d="M0 0 V10" stroke="#3F6B2A" stroke-width="3"/></pattern>
+    <marker id="n" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#111"/></marker>
+  </defs>
+  <polygon points="40.0,40.0 156.2,40.0 145.1,56.8 166.0,69.1 180.0,90.4 196.2,110.0 210.2,126.8 221.8,146.4 231.1,163.2 240.4,182.8 248.8,202.4 259.9,206.3 249.7,219.2 245.1,236.0 240.4,252.8 235.8,266.8 233.4,279.7 221.8,278.0 207.9,288.6 198.1,288.1 74.9,280.8 68.4,264.0 63.7,236.0 66.0,208.0 68.4,191.2 60.0,159.3" fill="#FBF3E4" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="68.4,191.2 120,186 168,198 196,222 214,252 207.9,288.6 198.1,288.1 74.9,280.8 68.4,264.0 63.7,236.0 66.0,208.0" fill="url(#f)" stroke="#3F6B2A" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="96.7" cy="110.0" r="7" fill="#111" stroke="#fff" stroke-width="2"/>
+  <path d="M30 92 V50" stroke="#111" stroke-width="3" marker-end="url(#n)"/>
+  <rect x="196" y="52" width="26" height="26" fill="url(#f)" stroke="#3F6B2A" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <text x="30" y="34" font-weight="bold" text-anchor="middle">N</text>
+    <text x="230" y="64">peanut</text><text x="230" y="88">farms</text>
+    <text x="108.7" y="130.0">Atlanta</text>
+    <text x="150" y="168" font-size="24" font-weight="bold" text-anchor="middle">GEORGIA</text>
+    <text transform="translate(22 200) rotate(-90)" text-anchor="middle">ALABAMA</text>
+    <text x="150" y="334" text-anchor="middle">FLORIDA</text>
+  </g>
+</svg>

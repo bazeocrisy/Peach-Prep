@@ -43,7 +43,7 @@ PP.addLesson({
       "Compare tells how things are alike and different. Look for both, alike, same, but, however, unlike, different and while.",
       "Problem and solution tells about a trouble and how it gets fixed. Look for problem, tried, but, decided, solved and finally.",
       "Description tells about one topic with details. Look for for example, such as, also, in addition, has and looks like. Stories have clue words too: one day, but, then, so, finally and in the end.",
-      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact."
+      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact. In a book, the table of contents lists the chapters and the page where each one starts, so you know where to look."
     ],
     words: [
       { term: "section", means: "one part of a text, often with its own heading" },
@@ -83,11 +83,11 @@ PP.addLesson({
     {
       show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is this map."],
       figure: { src: "assets/figures/ss1a-georgia-river.svg", label: "Figure 1", caption: "The Chattahoochee River in Georgia",
-        alt: "Map of Georgia. Alabama is to the west and Florida is to the south. The Chattahoochee River is drawn as a thick striped line. It starts in the mountains in the north, flows southwest past a dot for Atlanta, then runs south along the border between Georgia and Alabama." },
+        alt: "Map of Georgia, with an arrow that points north. Alabama is to the west and Florida is to the south. The Chattahoochee River is drawn as a thick striped line. It starts in the mountains in the north, flows southwest past a dot for Atlanta, then runs south along the border between Georgia and Alabama." },
       ask: "How does the map help the reader?",
       steps: [
         "Think about what the words tell. They name places the river passes.",
-        "Look at the map. Find the mountains at the top, the dot for Atlanta, and the striped line for the river.",
+        "Look at the map. The arrow shows that the top of the map is north. Find the mountains at the top, the dot for Atlanta, and the striped line for the river.",
         "Put them together. Follow the river from the mountains, past Atlanta, and down the edge of Georgia next to Alabama. The map lets you see the river's path and where those places are."
       ],
       answer: "The map shows the path of the river, so the reader can see where it starts, where Atlanta is, and where it runs along the Alabama border."
@@ -163,15 +163,28 @@ PP.addLesson({
       clue: "A text box sits apart from the main sections. Read it, then ask what kind of information it gives that the sections do not.",
       why: "The answer is to add an interesting fact about peanuts in Georgia. The box gives one extra fact: Georgia grows more peanuts than any other state. It does not tell steps or reasons." },
     { id: "SK-SS1a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "The author wants to add a map of Georgia that shows where most of the peanut farms are. How would the map help readers?",
+      prompt: "The author added this map to the article. What does the map show that the words in the article do not?",
+      figure: { src: "assets/figures/ss1a-peanut-map.svg",
+        alt: "Map of Georgia with an arrow that points north. A striped area in the south and southwest part of the state matches the key, which says peanut farms. A dot shows Atlanta in the north." },
       choices: [
-        { text: "It would show which parts of the state have peanut farms.", correct: true },
-        { text: "It would show the steps for growing a peanut plant." },
-        { text: "It would explain why peanut roots help the soil." },
-        { text: "It would tell how many days the peanuts dry in the sun." }
+        { text: "which part of Georgia the peanut farms are in", correct: true },
+        { text: "the steps for growing a peanut plant" },
+        { text: "why peanut roots help the soil" },
+        { text: "how many days the peanuts dry in the sun" }
       ],
-      clue: "Think about what a map is good at showing. Is it steps, reasons, or places?",
-      why: "The answer is \"It would show which parts of the state have peanut farms.\" A map shows where places are. Steps and reasons are told by the words in the sections, not by a map." }
+      clue: "Look at the key and the striped area on the map. Then check the sections: do the words already tell you each choice?",
+      why: "The answer is \"which part of Georgia the peanut farms are in.\" The striped area and the key show that the farms are in the south part of the state. The article says many Georgia farmers grow peanuts, but it never says where. The steps, the soil and the drying time are told by the words in the sections, not shown on the map." },
+    { id: "SK-SS1a-P7", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Here is the table of contents from a book called Georgia's Sea Turtles.", "Chapter 1: Meet the Sea Turtles, page 2", "Chapter 2: Nests in the Sand, page 8", "Chapter 3: The Race to the Ocean, page 14", "Chapter 4: How People Help, page 20"],
+      prompt: "In which chapter would you look to find out how baby sea turtles get from their nest to the water?",
+      choices: [
+        { text: "Chapter 3: The Race to the Ocean", correct: true },
+        { text: "Chapter 2: Nests in the Sand" },
+        { text: "Chapter 1: Meet the Sea Turtles" },
+        { text: "Chapter 4: How People Help" }
+      ],
+      clue: "Think about where the babies start and where they are going. Then read each chapter title.",
+      why: "The answer is \"Chapter 3: The Race to the Ocean.\" The babies hatch in a nest and must get to the water, and this chapter title names that trip to the ocean. Chapter 2 is about the nests themselves, Chapter 1 is an introduction, and Chapter 4 is about people." }
   ],
   test: [
     { id: "SK-SS1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -209,15 +222,17 @@ PP.addLesson({
       clue: "Find the sentence that tells what happened because people cut down the forests.",
       why: "The answer is \"As a result, the tortoises lost much of their home.\" Cutting down the forests is the cause. The tortoises losing their home is the effect, and the clue words are as a result." },
     { id: "SK-SS1a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "The author wants to add a photo of a gopher tortoise sitting at the opening of its tunnel. Which caption would best fit the photo?",
+      prompt: "The author wants to add this picture to the article. Which caption would best fit the picture?",
+      figure: { src: "assets/figures/ss1a-tortoise-burrow.svg",
+        alt: "A drawing of a gopher tortoise sitting on sandy ground, right in front of the dark, round opening of a tunnel dug into a mound of sand. There are no people, fires, trees or roads in the picture." },
       choices: [
         { text: "A gopher tortoise rests at the door of the burrow it dug.", correct: true },
         { text: "Workers set a small fire to clear away thick bushes." },
         { text: "Pine forests once covered much of south Georgia." },
         { text: "Many towns and roads were built over the years." }
       ],
-      clue: "A caption tells what the picture shows. Picture the photo in your mind, then find the words that describe it.",
-      why: "The answer is \"A gopher tortoise rests at the door of the burrow it dug.\" The photo shows a tortoise at its tunnel, so the caption must tell about that. The other captions tell about things that are not in the photo." },
+      clue: "A caption tells what the picture shows. Look at the picture first, then find the words that describe it.",
+      why: "The answer is \"A gopher tortoise rests at the door of the burrow it dug.\" The picture shows a tortoise at the opening of its tunnel, and the article says that kind of tunnel is called a burrow. The other captions tell about workers, forests and towns, which are not in the picture." },
     { id: "SK-SS1a-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
       prompt: "Choose the words that best complete the sentence.",
       text: "Another good heading for the section \"A Home for Many Animals\" would be {0}.",
@@ -367,12 +382,16 @@ PP.addLesson({
       why: "Folding a boat is a how-to, so it needs steps in order. Frogs and toads are two things side by side, so that is compare. Why a pond dried up asks for a reason, so that is cause and effect." }
   ],
   test: [
-    { id: "SK-SS1b-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read the paragraph that begins with sentence 6. Select the sentence that belongs in a different paragraph of Priya's draft.",
-      targets: ["p2:3:1", "p2:3:2", "p2:3:3", "p2:3:4"],
-      answer: ["p2:3:3"], pick: 1,
-      clue: "Name what most of the sentences in that paragraph tell about. Then find the one sentence that tells about something else, and check which other paragraph it matches.",
-      why: "The answer is sentence 8, \"Kids can also borrow audiobooks to listen to in the car.\" The other sentences in that paragraph tell about activities at the library: story time and a reading contest. Audiobooks are something kids borrow, so this sentence belongs in the paragraph about borrowing, sentences 3 to 5." },
+    { id: "SK-SS1b-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Priya wants to add a paragraph to help readers choose between the Pine Hill Library and their school library. Which plan fits that job best?",
+      choices: [
+        { text: "Compare them: tell what both libraries have, then what only one of them has.", correct: true },
+        { text: "List the steps for walking from the school to the town library, in order." },
+        { text: "Explain what caused the town to build its library many years ago." },
+        { text: "Tell a story about a day when Priya lost a book at her school." }
+      ],
+      clue: "Think about what a reader needs to know to choose between two places.",
+      why: "The answer is \"Compare them: tell what both libraries have, then what only one of them has.\" To choose between two places, readers need to see how they are alike and different, so a compare plan fits. Steps in order fit a how-to, a cause-and-effect plan tells why something happened, and a story about a lost book does not help readers choose." },
     { id: "SK-SS1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a heading above sentences 6 through 9. Which heading fits best?",
       choices: [

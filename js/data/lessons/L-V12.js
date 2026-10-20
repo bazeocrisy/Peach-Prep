@@ -372,15 +372,15 @@ PP.addLesson({
   teach: {
     big: "Many long words are built from parts, like a base word or a root with a part added to the front or the end, so I find each part and put the meanings together.",
     points: [
-      "The base word is the main word. In unkind, the base word is kind.",
+      "The base word (also called the root word) is a whole English word you know. In unkind, the base word is kind.",
       "A prefix is a part added to the front. Un- and dis- mean not or the opposite of. Re- means again. Pre- means before. Mis- means wrongly, so misspell means spell wrongly.",
       "A suffix is a part added to the end. -ful means full of. -less means without. -able means can be. -ly means in a ___ way.",
-      "Some words are built on a common root. A root is a word part that came from Latin or Greek and has its own meaning. Port means carry. Graph means write. Tele means far. Phon means sound. Rupt means break. Spect means look.",
+      "Some words are built on a common root instead. A common root is an old word part from Latin or Greek with its own meaning, like spect (look). Some roots are also words, like port, but in a long word, use the root's meaning. The roots to know are in the second example below.",
       "Put the meanings together and check the sentence. Watch out for look-alikes. Uncle and ready start with un and re, but nothing is left that is a word, so they have no prefix."
     ],
     words: [
-      { term: "base word", means: "the main word that a prefix or suffix is added to (also called a root word)" },
-      { term: "common root", means: "a word part from Latin or Greek that has its own meaning and shows up in many words, like port (carry) in transport" },
+      { term: "base word", means: "a whole English word you know that a prefix or suffix is added to, like kind in unkind (also called a root word)" },
+      { term: "common root", means: "an old word part from Latin or Greek that has its own meaning and shows up in many words, like graph (write) in autograph" },
       { term: "prefix", means: "a word part added to the front of a base word or root" },
       { term: "suffix", means: "a word part added to the end of a base word or root" }
     ],
@@ -391,8 +391,8 @@ PP.addLesson({
         note: "Cover the suffix and read the base word. Then put the two meanings together."
       },
       {
-        label: "Example: two roots",
-        lines: ["telephone = tele + phone", "Tele means far. Phon means sound.", "So a telephone brings sound from far away."],
+        label: "Example: roots to know",
+        lines: ["port = carry, as in portable", "graph = write, as in autograph", "tele = far, as in television", "phon = sound, as in phonics", "rupt = break, as in rupture", "spect = look, as in spectacles", "telephone = tele + phone. Tele means far. Phone comes from phon, which means sound.", "So a telephone brings sound from far away."],
         note: "Find each root you know and say its meaning. Then put the meanings together."
       }
     ],
@@ -430,7 +430,7 @@ PP.addLesson({
       answer: "A telescope is a tool for looking at things that are far away."
     }
   ],
-  parent: "Make a word-part hunt out of cereal boxes, signs and mail. When you spot a word like refill, unlocked or helpful, ask your child to cover the prefix or suffix, read the base word, and tell you what the whole word means. For roots, hunt for words with port (carry), graph (write) or phon (sound), like report, autograph or headphones.",
+  parent: "Make a word-part hunt out of cereal boxes, signs and mail. When you spot a word like refill, unlocked or helpful, ask your child to cover the prefix or suffix, read the base word, and tell you what the whole word means. For roots, hunt for words with port (carry), graph (write) or phon (sound), like report, autograph or phonics. Not every word with the letters port uses this root: in airport, port means a harbor for planes, not carry. If carry does not fit the meaning, it is a look-alike, just like uncle and ready.",
   passages: [
     { id: "p1", title: "Nia's Kite", genre: "Literary text",
       paragraphs: [
@@ -787,7 +787,7 @@ PP.addLesson({
       "Start with a base word, like help, or a common root, like port, which means carry.",
       "Add a prefix to the front to change the meaning: un + fair = unfair (not fair). Re + build = rebuild (build again). Mis + spell = misspell (spell wrongly).",
       "Add a suffix to the end to make a new word: help + ful = helpful. Help + less = helpless. Help + er = helper. Choose the part that matches the meaning you want.",
-      "You can build on a root, too. Add a part that has its own meaning, then put the meanings together. Phon means sound, so tele (far) + phone = telephone, and head + phones = headphones.",
+      "You can build on a root, too. Add a part that has its own meaning, then put the meanings together. Phon means sound, so tele (far) + phone = telephone, a tool that brings sound from far away.",
       "Sometimes the spelling changes. In most words that end in a consonant and y, change the y to i before adding -ly or -ness: happy + ness = happiness."
     ],
     words: [
@@ -804,22 +804,22 @@ PP.addLesson({
       },
       {
         label: "Example: one root",
-        lines: ["Port means carry.", "port + able = portable (can be carried)", "re + port = report (to carry news back)", "ex + port = export (to carry goods out to another country)"],
-        note: "Every word built on port has something to do with carrying."
+        lines: ["Port means carry.", "port + able = portable (can be carried)", "re + port = report (to carry news back)", "ex + port = export (to carry things out to sell in another country)", "Look-alike: airport. Here port means a harbor for planes, not carry."],
+        note: "Every word built on the root port has something to do with carrying. If carry does not fit the meaning, the letters port are a look-alike."
       }
     ],
     tip: "On the test, you may need to choose the word that best completes a sentence, like hopeful or hopeless, or the word that was built from the right root. Read the whole sentence, decide what meaning fits, then pick the word with the right parts."
   },
   learn: [
     {
-      show: ["Root: graph means write.", "Prefix: auto- means self.", "Meaning you want: a name that a person writes themself"],
+      show: ["Root: graph means write.", "Prefix: auto- means self.", "Meaning you want: a person's own name, written by that person"],
       ask: "What new word can you build?",
       steps: [
         "Find the part that means self. That is the prefix auto-.",
         "Find the part that means write. That is the root graph.",
         "Put them together: auto + graph. Try it in a sentence: The baseball player signed his autograph on my cap."
       ],
-      answer: "The new word is autograph. It means a name that a person writes themself."
+      answer: "The new word is autograph. An autograph is a person's own name, written by that person."
     },
     {
       show: ["Ava had to ___ her story because she left out the ending.", "Base word: write"],
@@ -843,16 +843,16 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: "Pick one base word: help, care or hope. Build at least three new words by adding a prefix or a suffix. Write what each new word means. Then write a sentence that uses each new word.",
+    prompt: "Pick one base word (help, care or hope) or one root (port means carry, graph means write). Build at least three new words by adding a prefix, a suffix or another word part. Write what each new word means. Then write a sentence that uses each new word.",
     checklist: [
-      "I built at least three new words from one base word.",
+      "I built at least three new words from one base word or root.",
       "I wrote what each new word means.",
       "I used each new word in a sentence that makes sense.",
       "I checked the spelling of each new word."
     ],
     rows: 8
   },
-  parent: "Pick a base word at breakfast, like kind, play or use, and take turns building new words from it (kindness, unkind, kindly). Each person has to use their new word in a sentence. Try it with a root too: how many words can you build with port (carry) or phon (sound)?",
+  parent: "Pick a base word at breakfast, like kind, play or use, and take turns building new words from it (kindness, unkind, kindly). Each person has to use their new word in a sentence. Try it with a root too: how many words can you build with port (carry) or phon (sound)? If a word only looks like it has port, like airport, talk about why carry does not fit.",
   passages: [],
   practice: [
     { id: "SK-V2c-P2", type: "mc", points: 1, dok: 1, passages: [],
@@ -935,17 +935,16 @@ PP.addLesson({
       clue: "You need one part that means small and one part that means sound.",
       why: "The answer is \"microphone.\" Micro- (small) + phon (sound) = microphone. Microscope has micro-, but scope means a tool for looking, not sound. Telephone and megaphone have phon, but tele means far and mega means big, not small." },
     { id: "SK-V2c-T8", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
-      prompt: "Lin is building words on the root port, which means \"carry.\" Which TWO words did she build that have to do with carrying?",
+      prompt: "Every word below has the letters port. The root port means \"carry.\" In which TWO words is port the root that means carry?",
       choices: [
         { text: "transport", correct: true },
         { text: "porter", correct: true },
-        { text: "autograph" },
-        { text: "telescope" },
-        { text: "erupt" },
-        { text: "spectator" }
+        { text: "portion" },
+        { text: "portrait" },
+        { text: "passport" }
       ],
-      clue: "Find the word part port in each word. Then check that the whole word has to do with carrying.",
-      why: "The answers are \"transport\" and \"porter.\" Transport means to carry from one place to another. Port + er makes porter, a person who carries bags or boxes. Autograph is built on graph (write), telescope on tele (far), erupt on rupt (break), and spectator on spect (look)." },
+      clue: "Think about what each whole word means. Does carry fit that meaning?",
+      why: "The answers are \"transport\" and \"porter.\" Transport means to carry from one place to another. Port + er makes porter, a person who carries bags at a hotel or a train station. In the other words, carry does not fit the meaning. A portion is a part or share of something, like a portion of a pie. A portrait is a picture of a person. In passport, port means a harbor or gate, the place where a traveler comes into a country." },
     { id: "SK-V2c-T4", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Add the suffix -ness to the base word lazy. Which new word is spelled correctly?",
       choices: [

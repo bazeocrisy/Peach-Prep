@@ -4,7 +4,7 @@
 (function () {
   const FLUENCY = {
     kind: "fluency",
-    how: ["Pick a passage the reader has not read before. The reader reads out loud for one minute. A grown-up follows along on the screen and taps any word that is skipped or read wrong. A word the reader fixes right away counts as correct."],
+    how: ["Pick a passage the reader has not read before. The reader reads out loud for one minute. A grown-up follows along on the screen and taps any word that is skipped or read wrong. If the reader fixes a word on their own, tap it a second time: it counts as correct and as a self-correction. When the minute is over, ask, \"What was it mostly about?\""],
     goal: { fall: 83, winter: 97, spring: 112 },
     goalSource: "the 50th percentile, or median, of national grade 3 norms for a first reading of a new passage: Hasbrouck and Tindal, 2017",
     passages: [
@@ -70,13 +70,13 @@
         answer: "Yes. 97 out of 100 words correct is 97% accuracy, so this page is a good fit for reading alone."
       }
     ],
-    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and look at the national middle numbers the timer shows (83 in fall, 97 in winter, 112 in spring) as a rough guide only: library pages differ in difficulty, and this is home practice, not a test. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
+    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and look at the typical grade 3 scores the timer shows (83 in fall, 97 in winter, 112 in spring) as a rough guide only: library pages differ in difficulty, and this is home practice, not a test. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
     activity: FLUENCY,
     check: {
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
       items: [
         "Read two new passages of different kinds (a story and a fact passage) at about 95% accuracy or better. The timer works this out.",
-        "When a word came out wrong, noticed it and fixed it without help. (If there were no mistakes, listen again on another passage before checking this.)",
+        "When a word came out wrong, noticed it and fixed it without help. (If there were no mistakes, try a harder passage or a page of a chapter book. If there are still none, check this line.)",
         "Told in their own words what each passage was mostly about.",
         "Read long or new words by breaking them into parts, not by guessing."
       ]
