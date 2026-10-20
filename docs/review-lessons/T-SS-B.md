@@ -1,0 +1,33 @@
+# Review T-SS (B)
+Lessons reviewed: 3.T.SS.1.a, 3.T.SS.1.b, 3.T.SS.1.c, 3.T.SS.1.d, 3.T.SS.2.a, 3.T.SS.2.b
+MUST: 1  SHOULD: 7  NIT: 4
+
+I solved all 63 Practice and Test items before checking the keys. All keys match my answers. Every hottext ref resolves to the intended sentence (refs are 1-based raw paragraph indexes, per `js/pp.js`; headings counted). Every paragraph number in a prompt matches the number the child sees. Every ebsr Part B quote is word-for-word in its passage.
+
+Facts I checked and found correct:
+- Peanuts: the peg grows into the soil after the flower fades. Harvest digs the plants and turns them upside down, they dry for a few days, and then a combine picks the peanuts. The roots work with soil bacteria to add nitrogen, which helps the next crop in a rotation such as cotton or corn. Georgia is the top peanut state.
+- Gopher tortoise: it is Georgia's state reptile. Its burrow keeps a steady temperature and is shared by snakes, frogs and mice. It lost habitat when the pine forests were cleared, and controlled burns help it.
+- Chattahoochee River: it starts in the north Georgia mountains, flows past Atlanta and forms part of the Georgia–Alabama border.
+- Alligator and crocodile snouts are described correctly.
+- Hummingbirds: ruby-throats are in Georgia in spring and summer. They hover and fly backward, eat nectar and insects, and eat many times a day. They build nests of plant down and spider silk and usually lay two white eggs.
+- Bees pollinate apples, blueberries and peaches.
+- Squirrels bury acorns in the fall and dig them up in winter.
+- Bats spend the winter in caves.
+
+## MUST
+- [SK-SS1a-P2] The prompt "Select the sentence that tells an effect" has more than one defensible answer. In "Why Peanuts Help the Soil" the sentences form a chain. Sentence 2 ("Their roots work with tiny living things to add plant food to the soil.") tells an effect: the soil gains plant food because of the roots. That added plant food is then the cause in sentence 3. A careful adult could pick sentence 2. Sentence 1 ("Peanut plants are good for the soil") can also be read as an effect. The clue ("look for a clue word that signals a reason") then leads straight to the only sentence that has "Because". Fix: name the cause in the prompt, for example "Select the sentence that tells the effect of the soil having more plant food." Change the clue to "First find the cause the prompt names. Then find the sentence that tells what happens because of it."
+
+## SHOULD
+- [3.T.SS.1.a / Teach] Point 4 puts Compare and Problem and solution into one point, and it gives no clue words for problem and solution. P4 then tests "the trouble was, to fix it", and T1 tests problem and solution. Teach also never mentions a text box or "Did You Know?" feature, but P5 asks why the author includes one. Fix: split point 4 into two points. Give problem and solution its own clue words (problem, trouble, solve, to fix). Add a short line to the features point: "A text box sets apart an extra fact."
+- [SK-SS1a-T2 Part B] The prompt says "Which sentence from that section...". Two of the three distractors are not from that section: "The gopher tortoise is Georgia's state reptile." comes from the opening, and "Some land is now kept safe..." comes from "Working Together". A child can rule them out by location without knowing the pattern, so only one real distractor is left. Fix: use sentences from "A Home for Many Animals", for example "A gopher tortoise uses its strong front legs to dig a long tunnel in the sand." and "A burrow stays cool on hot days and warmer on cold nights." The second one is a strong lure because it is the cause.
+- [SK-SS1b-P3] This item nearly repeats Learn example 3: first-grade readers, directions, and the answer "a numbered list". Its distractors ("a story about Marcus's favorite bird", "a chart of bird sizes and colors") are clearly wrong. Fix: change the feature question. For example, ask which feature would best help readers who do not know what a pinecone feeder looks like (key: a photo with a caption). Use plausible distractors such as a numbered list of supplies or a heading.
+- [SK-SS1c-P4] "Biking is {0} fun to do with my friends." "Biking is although fun" and "Biking is because fun" are not grammatical, so a child can pick "also" by sound alone, without knowing what the word does. Fix: use a slot where all options form a sentence, for example "{0}, biking is fun to do with my friends." with options Also / Although / Because. Then "Because, biking…" and "Although, biking…" are wrong for meaning, not just grammar.
+- [SK-SS1c-T3] This item has the same template as P2. Both ask for the best way to join sentences 8 and 9, and the four choices start Although / Because / Since / For example in both. The answer is also "Although" in both. Brief §8 says the test should not be a near-copy of practice. Fix: change the target relationship or the format. For example, use a dropdown that asks for the linking word to start sentence 9, or make the test item's answer a different word.
+- [SK-SS1c-T5] The key "Bees also make honey, a sweet food that people enjoy." stands alone, so "also" has no earlier idea to add to. An adult may hesitate over whether it uses the linking word "correctly". Fix: give it context, for example "Bees help flowers make fruit, and they also make honey."
+- [SK-SS1b-T4] The order item is fully cued by "First", "Next" and "Last", plus one topic sentence. It needs no thinking about purpose or reader, and it is easier than the practice items. Fix: take out one or two order words so that the logic of the steps decides the order. For example, change "Next, fill out a short form..." to "Then the librarian gives you a short form to fill out...", or add a closing sentence that has to go last.
+
+## NIT
+- [SK-SS2a-P5 why] "Windmill blades turn in big, fast circles." Many windmills turn fairly slowly. The key rests on "spinning round and round" and on "She kicked hard". Suggest: "Windmill blades keep turning in big circles, round and round."
+- [SK-SS1d-P4] This item uses the same paragraph as P1, and the same sentence (6) does not belong. Consider using the paragraph that begins with sentence 7, or another paragraph, to give fresh practice.
+- [3.T.SS.1.b / Teach point 1] It names "giving your opinion" as a job, but the lesson never shows a plan for opinion writing. Drop the phrase or add a short line on how to plan an opinion piece.
+- [SK-SS1a-T3 clue] "Look for a clue word that signals a result" points straight to "As a result". The test shows no hints, but the clue may appear in review. Consider "Find the sentence that tells what happened because people cut down the forests."
