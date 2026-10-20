@@ -466,7 +466,7 @@ PP.addLesson({
         { text: "to show that the speaker is afraid of the storm and cannot sleep" },
         { text: "to tell the reader that the garden needs much more water to grow" }
       ],
-      clue: "Say the line out loud. What sound does it make you think of? Why might a poet want you to hear it more than once?",
+      clue: "Say the line out loud. Why might a poet start every stanza with the very same line?",
       why: "The answer is \"to help the reader hear the steady sound of the rain again and again.\" Tap, tap, tap sounds like rain on a roof, and repeating it makes the rain feel steady. The rain keeps falling in stanza 2, the speaker is snug, not afraid, and the garden is drinking, not needing more." },
     { id: "SK-TT4a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Each stanza has its own job in the poem. Match each sentence to the stanza it describes.",

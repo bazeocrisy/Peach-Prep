@@ -319,7 +319,7 @@ PP.addLesson({
         { text: "On Saturday, Jun planted beans and waters them with a hose." }
       ],
       pick: 2,
-      clue: "Find every verb in each sentence. Are they all past, or all present? Look for time words like yesterday or every day too.",
+      clue: "Find every verb in each sentence. Are they all past, or all present? Time words can help you decide.",
       why: "The answers are \"Yesterday, Ana lost her mitten, and she looked for it everywhere.\" (lost and looked are both past) and \"Every day after school, Marcus walks his dog and feeds the cat.\" (walks and feeds are both present). The other three mix tenses: watched and points, laughs and licked, planted and waters." },
     { id: "SK-GC2b-P5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "What is the best way to combine these two sentences?",

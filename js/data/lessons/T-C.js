@@ -118,7 +118,7 @@ PP.addLesson({
           { text: "\"My name is Rosa Delgado, and I am in Ms. Hart's third-grade class.\"" },
           { text: "\"Come visit our class on Friday, and we will show you our drawings.\"" }
         ] },
-      clue: "A persuasive writer gives reasons. Look at how paragraphs 3 and 4 begin.",
+      clue: "Think about what a persuasive writer does to change a reader's mind. Then look at how paragraphs 3 and 4 begin.",
       why: "Part A: She gives reasons a garden would help students. Part B: \"A garden would help us learn.\" That sentence states a reason. The rest of paragraph 3 explains it." },
     { id: "SK-TC1a-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Read each short text. Match it to the author's main purpose.",
@@ -303,7 +303,7 @@ PP.addLesson({
         { text: "to explain the steps for building a dam" },
         { text: "to warn readers to stay away from beavers" }
       ],
-      clue: "A text box sits apart from the paragraphs. Is the fact in it the main idea, or something added?",
+      clue: "A text box sits apart from the paragraphs. Read it, then ask: would the article still make sense without it?",
       why: "The answer is to share an extra fact that is fun to know. The box sits under \"Did You Know?\" and adds a surprising fact. The main idea is that beavers are great builders." },
     { id: "SK-TC1b-P4", type: "mc", points: 1, dok: 2, passages: [],
       stem: ["In a book about beavers, the word lodge is printed in dark, bold letters.", "The glossary at the back says: lodge: a beaver's home made of sticks and mud"],
@@ -905,7 +905,7 @@ PP.addLesson({
           { text: "\"Papa and my brother Walter are getting the mule ready to plow the cotton field.\"" },
           { text: "\"Please write back soon.\"" }
         ] },
-      clue: "Think about what Ella does not have on her farm. Then find what Hattie has in the city.",
+      clue: "Think about what Ella does not have on her farm. Then look for what Hattie has that Ella wishes for.",
       why: "Part A: Hattie lives in a city with electric lights and streetcars. Part B: \"You wrote that your house has electric lights and that you can ride a streetcar downtown.\" In 1928, Ella's farm had no electricity, so city lights seemed special to her." },
     { id: "SK-TC2c-P5", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "Why does it help to know when Ella wrote this letter?",
@@ -915,7 +915,7 @@ PP.addLesson({
         { text: "It shows that Ella did not like living on her farm." },
         { text: "It proves that Ella read a new book every single night." }
       ],
-      clue: "Think about electric lights. Are they special to you? Why are they special to Ella?",
+      clue: "Think about electric lights. Do you notice them every day? Would Ella, in 1928, notice them?",
       why: "The answer is \"It explains why things that seem normal today were special to Ella.\" Most homes today have electric lights, but in 1928 many farms did not. Knowing the year helps you understand why Ella thinks Hattie is lucky." }
   ],
   test: [

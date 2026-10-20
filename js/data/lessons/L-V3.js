@@ -513,7 +513,7 @@ PP.addLesson({
         { text: "He walked with even steps to a drum beat." },
         { text: "He walked quietly on the tips of his toes." }
       ],
-      clue: "Look at the other words in the same sentence. How did Dev's legs feel, and how fast were his steps?",
+      clue: "Look at the other words in the same sentence. What do they tell you about how Dev felt and how fast he moved?",
       why: "The answer is \"He walked slowly, as if his legs were tired.\" The sentence says Dev's legs felt heavy and he went one slow step at a time. To trudge is to walk slowly with heavy, tired steps." },
     { id: "SK-V3c-P3", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -531,7 +531,7 @@ PP.addLesson({
           { text: "\"The leaves were turning red and gold.\"" },
           { text: "\"The air was chilly, so Dev zipped up his jacket.\"" }
         ] },
-      clue: "Happy and overjoyed are close in meaning. Find the place where the author compares them. Which one is stronger?",
+      clue: "Find the place where the author puts happy and overjoyed side by side. What does that tell you about the two words?",
       why: "Part A: to show Dev's feeling was much stronger than happy. Part B: \"He was not just happy.\" The author says Dev was not just happy, then picks overjoyed, a stronger word that means very, very happy." },
     { id: "SK-V3c-P4", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the word that best completes each sentence.",

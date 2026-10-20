@@ -61,3 +61,18 @@ The relative-pronoun lesson now uses one rule everywhere: who for people; that o
 - **SHOULD: the SK-GUM4-3-P3 clue settled the answer, and the why was hard to follow.** Fixed. The clue is now "Ask two questions about the noun: one or more than one? A person or a thing?" The why now ends: "Mr. Hill and the science project each mean one. The project cannot own itself, and Mr. Hill did not make it, so their does not stand for them together."
 
 Declined: none.
+
+## Round 3 (response to L-GUM4-verify2.md)
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures). None of the warnings point at L-GUM4. No keys changed. "In that place" and "at that time" no longer appear anywhere in the file.
+
+- **MUST: the "only if 'in that place' fits" test was false (it rejected "the beach where we went").** Fixed. I replaced it everywhere with the verifier's test: use where or when only if the words after the blank make a whole sentence when you add *there* or *then*. Otherwise use that or which, just as for a thing. The change covers:
+  - Teach point 3: "(We fly kites there.)" and "(\"Has a slide there\" is not a whole sentence, because it does not say who or what has a slide.)"
+  - The tip
+  - The example note: "my cousins live there" is a whole sentence; "has many old trees there" is not.
+  - Learn 1 steps 2 and 3: "Grandpa grew up there." That is a whole sentence, so where.
+  - The shared strategy clue on P2–P5 and T2–T4, and the T5 clue, worded to match.
+  - Every item-specific why in the lesson (P2–P5, T2, T3, T5), switched to the "there / then … whole sentence" wording for consistency.
+- **SHOULD: the SK-GUM4-5-T5 correct choice repeated P2's "X is the season when …" frame.** Fixed. It is now "Saturday is the day when we go to the library." The why says "We go to the library then" is a whole sentence.
+
+Declined: none.
