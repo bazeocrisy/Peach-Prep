@@ -27,7 +27,7 @@
      A practiced reading is not compared with the first-reading norms. */
   const FLUENCY_PRACTICED = Object.assign({}, FLUENCY, {
     practiced: true,
-    how: ["For expression, pick one passage and read it together a few times this week. Then the reader reads it out loud for one minute while a grown-up follows along and taps any word that is skipped or read wrong. Passages 1, 5 and 6 have characters talking, which is great for practicing voices."]
+    how: ["For expression, pick one passage and read it together a few times this week. Then the reader reads it out loud for one minute while a grown-up follows along and taps any word that is skipped or read wrong. Use passage 5 or 6. Both have characters talking, which is great for practicing voices, and it leaves passages 1 to 4 new for the speed check."]
   });
 
   PP.addLesson({
@@ -70,7 +70,7 @@
         answer: "Yes. 97 out of 100 words correct is 97% accuracy, so this page is a good fit for reading alone."
       }
     ],
-    parent: "Use the read-aloud timer on a new passage once or twice a week. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
+    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and compare with the same numbers. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
     activity: FLUENCY,
     check: {
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
@@ -126,7 +126,7 @@
     parent: "Model it: read a page aloud with lots of expression, then have your child read the same page. Repeated reading of one short passage, three or four times over a week, builds smoothness fast. For a fair speed check against the national numbers, use the Reading accurately skill with a passage your child has not read before.",
     activity: FLUENCY_PRACTICED,
     check: {
-      intro: "Grown-up: listen to your child read a passage they have practiced (passage 1, 5 or 6 has characters talking), then check each line that is true.",
+      intro: "Grown-up: listen to your child read a passage they have practiced (passage 5 or 6, which have characters talking), then check each line that is true.",
       items: [
         "Read at a talking pace: not rushed, and not word by word.",
         "Paused at commas and stopped at periods.",
@@ -150,7 +150,7 @@
       ],
       examples: [
         { label: "Print and cursive", lines: ["Print: I like to read.", "Cursive: I like to read."], note: "Same words, same letters. In cursive the letters in each word are joined." },
-        { label: "Tricky letters", lines: ["Cursive: r s z f", "Cursive: G Q Z"], note: "These are r, s, z, f and the capitals G, Q, Z. They look the least like print, so practice them first." }
+        { label: "Tricky letters", lines: ["Cursive: r s z f", "Cursive: G Q S T Z"], note: "These are r, s, z, f and the capitals G, Q, S, T, Z. They look the least like print, so practice them first." }
       ],
       tip: "Not on the Milestones, but handwritten notes, cards and old letters are often in cursive."
     },
@@ -198,8 +198,8 @@
           { text: "from" },
           { text: "fog" }
         ],
-        clue: "Count the letters first. Then look closely at the second letter.",
-        why: "The answer is frog: f-r-o-g. There are four letters, and the second one is the cursive r." },
+        clue: "Count the letters first. Then look closely at the second letter and the last letter.",
+        why: "The answer is frog: f-r-o-g. The second letter is the cursive r, and the last letter is g with a loop below the line. From ends in m, which has humps and stays on the line, and flag has an l." },
       { id: "SK-FH3a-P3", type: "mc", points: 1, dok: 2, passages: [],
         prompt: "Read the cursive note. What does it ask you to do?",
         stem: "Cursive: Please feed the fish.",
@@ -335,7 +335,7 @@
         steps: [
           "The g starts like a c, closes, then loops below the bottom line.",
           "The loop crosses at the bottom line and keeps swinging up to the middle line, where the o begins.",
-          "The o ends with a little swing at the top, ready to join another letter."
+          "The o ends with a little swing at the middle line, ready to join another letter."
         ],
         answer: "The tail loop of the g swings up to the middle line and leads straight into the o, so the pencil never leaves the paper."
       },
