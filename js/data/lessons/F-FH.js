@@ -76,7 +76,7 @@
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
       items: [
         "Read two new passages of different kinds (a story and a fact passage) at about 95% accuracy or better. The timer works this out.",
-        "When a word came out wrong, noticed and fixed it. Check this if there were no mistakes.",
+        "Noticed and fixed a word that came out wrong (or made no mistakes to fix).",
         "Told in their own words what each passage was mostly about.",
         "Read long or new words by breaking them into parts, not by guessing. Check this if every long word was read correctly."
       ]

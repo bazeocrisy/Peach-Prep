@@ -21,19 +21,23 @@
       <div class="hero-inner">
         <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
         <h1 id="home-title" class="hero-title" tabindex="-1">Georgia Milestones · Grade 3 ELA</h1>
-        <p class="hero-sub">Every Georgia standard is listed below. Tap one to learn it, practice it and test it.</p>
-        <div class="hero-actions">
-          <button type="button" class="btn btn-primary" id="hero-mixed">Practice tests and mixed practice</button>
-          <button type="button" class="btn btn-ghost" id="hero-parents">Parent guide</button>
-        </div>
+        <p class="hero-sub">Every skill on Georgia's standards, in learning order. Each one: Learn It, Watch Me, Practice Together, Try It Yourself, Test.</p>
+        <div class="up-next" id="up-next"></div>
       </div>
     </header>
 
     <div class="wrap">
+      <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
+      <div class="home-links">
+        <button type="button" class="hl-btn" id="hero-mixed">Practice tests and mixed practice</button>
+        <button type="button" class="hl-btn" id="hero-clues">Clue Word Cheat Sheet</button>
+        <button type="button" class="hl-btn" id="hero-habits">Everyday habits</button>
+        <button type="button" class="hl-btn" id="hero-parents">Parent guide</button>
+      </div>
       <div class="home-progress" id="home-progress"></div>
       <div class="skill-tools">
         <label class="sr" for="skill-search">Find a skill</label>
-        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: try pronoun or 3.T.T.1" autocomplete="off">
+        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: try pronoun, B3 or 3.T.T.1" autocomplete="off">
         <div class="seg" role="group" aria-label="Which skills to show">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="test" aria-pressed="false">On the test</button>
@@ -53,7 +57,7 @@
     </footer>
   </section>
 
-  <!-- ===================== SKILL: Teach, Learn, Practice, Test ===================== -->
+  <!-- ===================== SKILL: five steps ===================== -->
   <section class="screen" id="screen-skill" aria-labelledby="sk-title" hidden>
     <header class="bar">
       <button type="button" class="nav-btn" id="skill-back"><span aria-hidden="true">&larr;</span> All skills</button>
@@ -68,6 +72,34 @@
       <div class="steps" id="sk-steps" role="tablist" aria-label="Steps"></div>
       <div class="sk-panel" id="sk-panel" tabindex="-1"></div>
       <details class="sk-official" id="sk-official"></details>
+    </div>
+  </section>
+
+  <!-- ===================== CLUE WORD CHEAT SHEET ===================== -->
+  <section class="screen" id="screen-clues" aria-labelledby="clues-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> All skills</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" id="clues-print">Print</button>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="clues-title" tabindex="-1">Clue Word Cheat Sheet</h1>
+      <p class="page-sub">When you see a clue word, stop and ask its question.<span class="clue-tap-hint"> Tap a kind of text to open that skill.</span></p>
+      <div id="clue-sheet" class="clue-sheet"></div>
+    </div>
+  </section>
+
+  <!-- ===================== EVERYDAY HABITS ===================== -->
+  <section class="screen" id="screen-habits" aria-labelledby="habits-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> All skills</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="habits-title" tabindex="-1">Everyday habits</h1>
+      <p class="page-sub">Georgia's K-12 ELA Practices: habits good readers and writers use in every skill. Not tested on their own. Each has ideas to try at home.</p>
+      <div id="habit-list" class="cat-groups"></div>
     </div>
   </section>
 
@@ -117,6 +149,7 @@
     <div class="player-grid" id="player-grid" data-pane="passage">
       <div class="passage-pane" id="passage-pane" aria-label="Passage">
         <p class="passage-note" id="passage-note" tabindex="-1" role="status" hidden></p>
+        <button type="button" class="clue-toggle" id="clue-toggle" aria-pressed="false" hidden>Show clue words</button>
         <div id="passage-pane-body"></div>
       </div>
       <div class="item-pane">
@@ -129,7 +162,7 @@
           <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
           <div id="q-feedback" class="feedback" aria-live="polite" hidden></div>
           <div class="q-controls">
-            <button type="button" class="btn btn-soft" id="q-prev">Back</button>
+            <button type="button" class="btn btn-soft" id="q-prev">Previous question</button>
             <button type="button" class="btn btn-help" id="q-help">Help me</button>
             <button type="button" class="btn btn-primary" id="q-check">Check</button>
             <button type="button" class="btn btn-primary" id="q-next">Next</button>
@@ -231,6 +264,7 @@
   <script src="js/data/alds.js" onerror="window.PP_ALDS=null"></script>
   <script src="js/data/habits.js" onerror="window.PP_HABITS=null"></script>
   <script src="js/data/manifest.js"></script>
+  <script src="js/data/catalog.js"></script>
   <script src="js/engine/items.js"></script>
   <script src="js/engine/player.js"></script>
   <script src="js/skills.js"></script>

@@ -2,12 +2,26 @@
 PP.addLesson({
   code: "3.T.T.2.a",
   title: "Main idea and key details",
+  clues: {
+    words: ["for example", "such as", "also", "in addition", "has", "looks like"],
+    ask: "What is this mostly about?",
+    draw: "A web: the topic in a circle in the middle, with a line out to each detail."
+  },
+  coach: {
+    mixup: "Main idea versus detail. A detail is one fact. The main idea is what all the details have in common. Test it: \"Does every paragraph tell more about this?\"",
+    strong: "\"It's mostly about how a camel's body helps it live in the desert: its wide feet, its long eyelashes and going a long time without water.\"",
+    notyet: "Picking one fun fact as the main idea: \"Camels have long eyelashes.\" Ask: \"Is the WHOLE thing about that, or just one sentence?\"",
+    ido: "Describe your home with three details, then say: \"My main idea is our home is small but cozy. Every detail I gave tells more about that.\"",
+    wedo: "Read a short nonfiction paragraph together. Underline each detail and its clue word, like also or for example, and ask, \"What do all these tell us about the topic?\"",
+    youdo: "Your child picks a topic they know well, like a favorite animal or game, and gives you the main idea plus three details.",
+    everyday: "Play \"Main Idea\": your child describes something with three clues and you guess what it is. Then switch."
+  },
   teach: {
     big: "The main idea is what a whole text is mostly about, and the key details are the facts that prove it.",
     points: [
       "The topic is what the text is about in a word or two, like \"sharks.\" The main idea tells something important about the topic, like \"Sharks have lived on Earth for a very long time.\"",
       "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
-      "Key details are facts that explain or prove the main idea. Ask, \"Does this fact help show the main idea?\"",
+      "Key details are facts that explain or prove the main idea. Clue words like for example, such as, also, in addition, has and looks like often point to a detail. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
       "Check your main idea. It should fit the whole text, not just one paragraph."
     ],
@@ -197,12 +211,26 @@ PP.addLesson({
 PP.addLesson({
   code: "3.T.T.2.b",
   title: "How ideas connect: order of steps and cause and effect",
+  clues: {
+    words: ["first", "next", "then", "after that", "later", "finally", "because", "so", "since", "as a result", "that is why", "this caused"],
+    ask: "What happened first? What happened because of it?",
+    draw: "For steps, a row of boxes connected by arrows: First, Next, Then, Last. For cause and effect, boxes with arrows between them: Cause, then Effect. For a chain, keep adding boxes."
+  },
+  coach: {
+    mixup: "Children often flip the cause and the effect, especially when the sentence puts the effect first: \"The game was canceled because it rained.\" Ask: \"Which one happened FIRST? The cause always happens first in time, even if the sentence says it second.\"",
+    strong: "Steps in the right order with time words: \"First you fill the cup with soil, next you push the seed in, then you water it.\" Or a cause tied to its effect: \"Because the sawdust kept warm air away, the ice lasted for months.\"",
+    notyet: "Steps out of order, or a fact with no cause: \"The ice was cold.\" Ask: \"Which one has to happen first? What made this happen?\"",
+    ido: "Drop a ball. Say, \"I let go. That's the cause. The ball fell. That's the effect. The cause happens first.\" Then tell how to make a sandwich out of order on purpose (\"I eat it, then I get the bread\") and fix it together.",
+    wedo: "Read a short how-to or science paragraph together. Your child finds each time word and each because or so. At each one, ask, \"What happened first? What happened because of it?\"",
+    youdo: "Your child tells you how to do something they know well, using first, next, then and finally. Then they fill in a cause-and-effect chain for something that happened today.",
+    everyday: "Ask your child to tell you how to do something step by step, like brushing teeth, and listen for time words. Use why talk all day: \"Why do you think the street is wet?\" Ask for an answer with because or so."
+  },
   teach: {
     big: "Facts in a text are connected: some happen in order, one after another, and some happen because of something else.",
     points: [
-      "Sequence is the order in which things happen. Words like first, next, then, after that and finally help you follow the order.",
+      "Sequence is the order in which things happen. Words like first, next, then, after that, later and finally help you follow the order.",
       "A cause is why something happens. An effect is what happens because of it.",
-      "Words like because, so, since and as a result often point to a cause and an effect.",
+      "Words like because, so, since, as a result, that is why and this caused often point to a cause and an effect.",
       "One effect can cause the next thing to happen, like a chain.",
       "Not every text uses signal words. Ask yourself, \"What happened first?\" and \"What made this happen?\""
     ],
@@ -391,12 +419,26 @@ PP.addLesson({
 PP.addLesson({
   code: "3.T.T.2.c",
   title: "Putting together information from two texts",
+  clues: {
+    words: ["both", "alike", "same", "but", "however", "unlike", "different", "while"],
+    ask: "How are they the same? How are they different?",
+    draw: "Three columns: Text 1 only | Both | Text 2 only. Or a Venn diagram, two overlapping circles."
+  },
+  coach: {
+    mixup: "Children often use facts from only one text, or forget which text a fact came from. Ask: \"Which text told us that? What did the other one add?\"",
+    strong: "\"Both texts are about beavers. Text 1 tells how they cut wood with their teeth, and Text 2 tells what they build with it.\" One way alike, one way different, with a clue word.",
+    notyet: "Facts about only one text, or only differences. Ask: \"What do they BOTH tell us?\"",
+    ido: "Hold up two things, like a fork and a spoon. Say, \"Both are for eating. But a fork has points and a spoon is round.\"",
+    wedo: "Read two short articles on the same topic together. Sort each fact into Text 1 only, Both, or Text 2 only.",
+    youdo: "Your child answers a question that needs facts from both texts and says which text each fact came from. Check it afterward, not while they work.",
+    everyday: "Read two short things about the same subject, like a library book and a kids' magazine article. Ask for one thing both tell and one thing only one tells."
+  },
   teach: {
     big: "When two texts are about the same topic, each one teaches you something, and putting them together teaches you even more.",
     points: [
       "First, read each text and find what it is mostly about.",
-      "Next, look for information that both texts give. That is how they are alike.",
-      "Then look for information that only one text gives. That is how they are different, and it adds to what you know.",
+      "Next, look for information that both texts give. That is how they are alike. Clue words like both, alike and same show this.",
+      "Then look for information that only one text gives. That is how they are different, and it adds to what you know. Clue words like but, however, unlike, different and while show a difference.",
       "Last, put the facts from both texts together to answer a question that one text alone cannot answer.",
       "Always check which text a fact came from. Test questions often ask about one text or the other."
     ],
