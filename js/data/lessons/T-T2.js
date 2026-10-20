@@ -23,19 +23,30 @@ PP.addLesson({
       "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
       "Key details are facts that explain or prove the main idea. Clue words like for example, such as, also, in addition, has and looks like often point to a detail. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
-      "Check your main idea. It should fit the whole text, not just one paragraph."
+      "Check your main idea. It should fit the whole text, not just one paragraph.",
+      "Authors also design an article to help you find and understand the facts. A heading names a section. A text box sets apart an extra fact. A photo or drawing has a caption that tells what it shows. A diagram uses labels to name the parts. Ask, \"What does this part of the page help me understand?\""
     ],
     words: [
       { term: "topic", means: "what a text is about, in a word or two" },
       { term: "main idea", means: "the most important point the author makes about the topic" },
-      { term: "key detail", means: "a fact that helps prove or explain the main idea" }
+      { term: "key detail", means: "a fact that helps prove or explain the main idea" },
+      { term: "diagram", means: "a drawing with labels that name its parts" }
     ],
-    example: {
-      label: "Example",
-      lines: ["A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes. A camel can also go a long time without drinking water."],
-      note: "Topic: camels. Main idea: a camel's body helps it live in the desert. Key details: wide feet for soft sand, long eyelashes against blowing sand, and going a long time without water. Each detail shows one way the body helps."
-    },
-    tip: "On the test, a main idea question may ask what a text is \"mostly about.\" A second part may ask which detail supports it. Pick a detail that proves the main idea, not just any true fact from the text."
+    examples: [
+      {
+        label: "Example: main idea and key details",
+        lines: ["A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes. A camel can also go a long time without drinking water."],
+        note: "Topic: camels. Main idea: a camel's body helps it live in the desert. Key details: wide feet for soft sand, long eyelashes against blowing sand, and going a long time without water. Each detail shows one way the body helps."
+      },
+      {
+        label: "Example: how the article is designed",
+        lines: ["Heading: Built for the Desert", "Text box: Did You Know? A camel's hump stores fat, not water. Its body can use the fat when food is hard to find.", "A diagram with a caption:"],
+        figure: { src: "assets/figures/tt2a-camel.svg", label: "Figure 1", caption: "Body parts that help a camel live in the desert",
+          alt: "Diagram of a camel standing on sand. Labels point to its hump, its long eyelashes, and its wide, flat feet." },
+        note: "The heading names the section. The text box sets apart an extra fact about the hump. The caption tells what the whole diagram shows, and the labels point to the feet and eyelashes the paragraph talks about. The diagram lets you see the key details."
+      }
+    ],
+    tip: "On the test, a main idea question may ask what a text is \"mostly about.\" A second part may ask which detail supports it. Pick a detail that proves the main idea, not just any true fact from the text. You may also be asked how a heading, caption or diagram helps the reader."
   },
   learn: [
     {
@@ -79,6 +90,10 @@ PP.addLesson({
         ["Older workers fly outside to look for flowers.", "The workers gather a sweet liquid called nectar and a yellow powder called pollen.", "Back at the hive, the bees turn the nectar into honey.", "They store the honey in the wax cells so the hive has food in winter.", "A honeybee has five eyes."],
         ["Some workers guard the door of the hive.", "They keep out bees from other hives.", "On hot days, other workers stand near the door and fan their wings to cool the hive down."],
         ["No bee could keep a hive going alone.", "Together, the queen and the workers make the hive a busy, healthy home."]
+      ],
+      figures: [
+        { after: 4, src: "assets/figures/tt2a-honeycomb.svg", label: "Figure 1", caption: "Wax cells in a honeycomb",
+          alt: "Diagram of wax cells in a honeycomb. Each cell has six sides. Labels point to a cell with an egg, a cell full of honey and a cell with pollen." }
       ] },
     { id: "p2", title: "The Armored Digger", genre: "Informational text",
       paragraphs: [
@@ -88,6 +103,10 @@ PP.addLesson({
         ["When an armadillo is scared, it may jump straight up into the air.", "This can surprise an enemy and give the armadillo time to run away.", "It hurries to its burrow, a hole it has dug in the ground."],
         ["A mother armadillo usually has four babies at a time.", "All four babies look exactly alike."],
         ["Strong claws, a good nose, and a tough shell all help the armadillo find food and stay safe."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/tt2a-armadillo.svg", label: "Figure 1", caption: "The parts of an armadillo",
+          alt: "Diagram of an armadillo seen from the side. Labels point to its long nose, its sharp claws, the bony plates of its shell, and the bands across the middle of its shell. The bands label says: bands that let the shell bend." }
       ] }
   ],
   practice: [
@@ -118,6 +137,16 @@ PP.addLesson({
       ],
       clue: "The idea is about the jobs of worker bees. Cross out any detail about the queen, or any detail that does not name a job.",
       why: "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\" Both name jobs that workers do. The queen detail is not about workers. Five eyes and thousands of bees are true, but they are not jobs." },
+    { id: "SK-TT2a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Look at Figure 1. How does the diagram help the reader understand paragraphs 3 and 4?",
+      choices: [
+        { text: "It shows what the wax cells look like and what bees keep in them.", correct: true },
+        { text: "It shows how older worker bees find their way to the flowers." },
+        { text: "It shows how the guard bees keep other bees out of the hive." },
+        { text: "It shows how much bigger the queen is than the worker bees." }
+      ],
+      clue: "Paragraphs 3 and 4 tell about something the bees build and use. Find that thing in the diagram, then read its labels.",
+      why: "The answer is \"It shows what the wax cells look like and what bees keep in them.\" Paragraphs 3 and 4 say workers build wax cells and store honey in them. Figure 1 shows the six-sided cells, and its labels point to an egg, honey and pollen. The diagram does not show flowers, guards or the queen." },
     { id: "SK-TT2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "The main idea is that honeybees each have a job and work together. Decide whether each detail is a key detail or not a key detail.",
       cols: ["Key detail", "Not a key detail"],
@@ -147,7 +176,16 @@ PP.addLesson({
           { text: "\"Every hive has one queen.\"" }
         ] },
       clue: "Read only paragraph 4. Ask what most of its sentences are about. Then find the sentences that prove it.",
-      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." }
+      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." },
+    { id: "SK-TT2a-P7", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
+      prompt: "Look at Figure 1 again. Choose the words that best complete the sentences.",
+      text: "The caption tells {0}. The labels tell {1}.",
+      slots: [
+        { options: ["what the whole diagram shows", "who wrote the article", "the main idea of paragraph 2"], answer: 0 },
+        { options: ["how many bees live in one hive", "when the queen lays her eggs", "what is inside some of the cells"], answer: 2 }
+      ],
+      clue: "Read the words under Figure 1. Then read each word that has a line pointing into the picture. Ask what job each kind of words does.",
+      why: "The answers are \"what the whole diagram shows\" and \"what is inside some of the cells.\" The caption, \"Wax cells in a honeycomb,\" names the whole picture. The labels egg, honey and pollen each point to what is inside some of the cells." }
   ],
   test: [
     { id: "SK-TT2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -204,7 +242,17 @@ PP.addLesson({
       targets: ["p2:1:2", "p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1"],
       answer: ["p2:3:3"], pick: 1,
       clue: "Some sentences only describe the shell. Find the one that tells what the shell does for the armadillo.",
-      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells what the shell does for the armadillo. The other shell sentences only describe what the shell is made of and what it covers. The jump and the size sentences are not about the shell." }
+      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells what the shell does for the armadillo. The other shell sentences only describe what the shell is made of and what it covers. The jump and the size sentences are not about the shell." },
+    { id: "SK-TT2a-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Look at Figure 1. Which fact does the reader learn ONLY from the diagram, not from the paragraphs?",
+      choices: [
+        { text: "Bands across the middle of the shell let it bend.", correct: true },
+        { text: "The shell is made of hard, bony plates." },
+        { text: "The shell covers the top of the head." },
+        { text: "An armadillo has short, strong legs." }
+      ],
+      clue: "Read every label in Figure 1. Then check each choice: can you also find it in the paragraphs?",
+      why: "The answer is \"Bands across the middle of the shell let it bend.\" Only the label in Figure 1 tells what the bands do. The bony plates, the shell on the head and the short, strong legs are all told about in paragraphs 2 and 3." }
   ]
 });
 

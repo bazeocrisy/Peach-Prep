@@ -136,7 +136,7 @@ Fields every item has:
 
 Paragraph and sentence references:
 - **Paragraph** numbers start at 1, matching the numbers the child sees.
-- A paragraph whose first sentence starts with `"Box: "` is a text box (a sidebar such as "Did You Know?"). It is shown set apart and is not numbered. The site shows no images, so use a text box rather than a caption that describes a picture.
+- A paragraph whose first sentence starts with `"Box: "` is a text box (a sidebar such as "Did You Know?"). It is shown set apart and is not numbered. To show a real picture, diagram, map or graph, use a figure (§5e) rather than words that describe one.
 - **Sentence** references use `"p1:3:2"`, meaning passage p1, paragraph 3, sentence 2 (both counted from 1).
 
 | type | Fields | Scoring |
@@ -191,6 +191,40 @@ A Practice Test is one set file with several passages and a mixed set of items, 
 - Each item carries `passages: ["p1"]` to name the passage or passages shown beside it, or `passages: []` for standalone language items.
 - Group the items by passage, in the order a child would meet them on the real test.
 - A form uses only **new** passages and items. It never reuses sets the child has already practiced.
+
+### 5e. Figures and bold words (PP-003)
+
+Some standards are about what the eye sees: text features (3.T.C.1.b), page design (3.T.T.2.a), maps and captions (3.T.SS.1.a), and pictures and graphs as context clues (3.L.V.3.a). For these, a passage, a question or a lesson example can show an original figure.
+
+```js
+{ src: "assets/figures/tc1b-beaver-lodge.svg",   // required: an original file in assets/figures/
+  alt: "Diagram of a beaver lodge cut in half ...", // required: says what the picture shows
+  label: "Figure 1",                               // optional: shown in bold before the caption
+  caption: "Inside a beaver lodge",                // optional: shown under the picture; **bold** works
+  width: 320 }                                     // optional: largest width in px (default 380)
+```
+
+Where a figure can go:
+
+| Place | Field | Shown |
+|---|---|---|
+| Passage (prose only) | `figures: [{ after: k, ... }]` on the passage | after raw block `k` (the same 1-based count refs use; `0` = before the first block). A figure is not a paragraph: paragraph numbers and refs do not change |
+| Item | `figure: {...}` (or an array) | in the stem box, after the `stem` text |
+| Learn It example | `teach.example(s)[i].figure` | inside the example box, after `lines` |
+| Watch Me example | `learn[i].figure` | inside the example box, after `show` |
+
+**Bold words.** Write `**word**` inside a passage sentence, a `stem` line, a teach example line or a Watch Me `show` line, and it is printed in bold. Do not put bold in a sentence that a `hottext` item targets (the review screen prints those sentences as plain text), in `prompt`, choices, `clue`, `why` or `note`. Clue-word highlighting skips a sentence that has a bold word.
+
+**Rules for figures.**
+- Original, simple line-art SVG drawn for the site. No GaDOE art, no copied or traced pictures, no photos of real children. If people appear, include Black children naturally.
+- Educationally necessary: the figure is what the item or example is about. No decorative pictures.
+- Text in the SVG is at least 14px on a 320px phone. The checker computes this from the smallest `font-size` and the `viewBox` width, at 198px wide for a Learn It example and 220px elsewhere. In practice: a 300–320-unit-wide viewBox with text of 21–22 units.
+- Meaning is never carried by color alone: use labels, numbers, patterns and line styles too.
+- Alt text lets a screen-reader user answer the item. It names every label and every value a question depends on. If the skill is purely visual, still describe it fully.
+- An item that uses a figure must have one answer that is plain from the figure, and its distractors must be clearly wrong from the figure (or from the text, when the item says to use both).
+- Figures sit in a white box, scale to the width of their column with no sideways scroll, and print without breaking across pages.
+- `verification/check-content.js` fails a figure whose file is missing, whose `src` is not `assets/figures/<name>.svg|png`, whose alt text is under 5 words, whose `after` is out of range, or whose SVG has a script or outside link; it warns when SVG text would be under 14px. It fails unmatched `**` and bold inside hot-text targets.
+- The local harness server must serve `.svg` as `image/svg+xml` (GitHub Pages does).
 
 ## 6. Content rules
 

@@ -81,12 +81,14 @@ PP.addLesson({
       answer: "It is organized to compare. It tells how alligators and crocodiles are alike and different."
     },
     {
-      show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is a map of Georgia with the river drawn in blue."],
+      show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is this map."],
+      figure: { src: "assets/figures/ss1a-georgia-river.svg", label: "Figure 1", caption: "The Chattahoochee River in Georgia",
+        alt: "Map of Georgia. Alabama is to the west and Florida is to the south. The Chattahoochee River is drawn as a thick striped line. It starts in the mountains in the north, flows southwest past a dot for Atlanta, then runs south along the border between Georgia and Alabama." },
       ask: "How does the map help the reader?",
       steps: [
         "Think about what the words tell. They name places the river passes.",
-        "Think about what a map does. A map shows where places are.",
-        "Put them together. The map lets you see the river's path and where those places are."
+        "Look at the map. Find the mountains at the top, the dot for Atlanta, and the striped line for the river.",
+        "Put them together. Follow the river from the mountains, past Atlanta, and down the edge of Georgia next to Alabama. The map lets you see the river's path and where those places are."
       ],
       answer: "The map shows the path of the river, so the reader can see where it starts, where Atlanta is, and where it runs along the Alabama border."
     }

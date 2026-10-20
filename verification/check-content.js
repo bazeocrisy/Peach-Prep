@@ -35,7 +35,35 @@ const STOP = ["that","this","with","from","they","them","their","there","what","
 const wc = t => (String(t).match(/\S+/g) || []).length;
 const norm = t => String(t).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim();
 
-function passageText(p) { return (p.lines || p.paragraphs || []).map(b => b.join(" ")).join(" "); }
+function passageText(p) { return (p.lines || p.paragraphs || []).map(b => b.join(" ")).join(" ").replace(/\*\*/g, ""); }
+/* Figures and bold words (SPEC §5e). A figure's file must exist under
+   assets/figures/, its alt text must say what the picture shows, and SVG
+   text must stay readable: at least 14px at the width the figure is drawn on
+   a 320px phone (about 198px in a Learn It example, 220px or more in a
+   passage, a question or a Watch Me example). */
+const FIG_W = { teach: 198, other: 220 }, figSeen = {};
+function checkFigures(where, list, blocks, minW) {
+  [].concat(list || []).forEach((f, i) => {
+    const w = where + " figure " + (i + 1);
+    if (!f || typeof f !== "object") { F(w, "is not an object"); return; }
+    if (!/^assets\/figures\/[a-z0-9-]+\.(svg|png)$/.test(f.src || "")) F(w, "src must be assets/figures/<name>.svg or .png");
+    else if (!fs.existsSync(path.join(ROOT, f.src))) F(w, "file not found: " + f.src);
+    else if (/\.svg$/.test(f.src) && !figSeen[f.src + minW]) { figSeen[f.src + minW] = 1; checkSvg(w, f.src, minW || FIG_W.other); }
+    if (typeof f.alt !== "string" || wc(f.alt) < 5) F(w, "needs alt text that says what the picture shows (5+ words)");
+    if (blocks) { if (!Number.isInteger(f.after) || f.after < 0 || f.after > blocks.length) F(w, "after must be a whole number from 0 to " + blocks.length); }
+    else if (f.after !== undefined) W(w, "after is only used on passage figures");
+  });
+}
+function checkSvg(w, src, minW) {
+  const t = fs.readFileSync(path.join(ROOT, src), "utf8");
+  if (/<script|\son[a-z]+=|href="(https?:)?\/\//i.test(t)) F(w, src + " has a script or an outside link");
+  const vb = /viewBox="[\d.-]+ [\d.-]+ ([\d.]+) [\d.]+"/.exec(t);
+  if (!vb) { F(w, src + " needs a viewBox"); return; }
+  const sizes = (t.match(/font-size="[\d.]+"/g) || []).map(x => Number(/[\d.]+/.exec(x)[0]));
+  const px = sizes.length ? Math.min.apply(null, sizes) * minW / Number(vb[1]) : 99;
+  if (px < 14) W(w, src + ": smallest text is " + px.toFixed(1) + "px on a 320px phone (need 14+)");
+}
+const badBold = s => (String(s).match(/\*\*/g) || []).length % 2 === 1;
 function sentenceAt(set, ref) {
   const m = /^([a-z0-9]+):(\d+):(\d+)$/i.exec(ref || ""); if (!m) return null;
   const p = (set.passages || set.sources || []).find(x => x.id === m[1]); if (!p) return null;
@@ -50,8 +78,10 @@ function checkPassages(where, list, kind) {
     if (!Array.isArray(blocks) || !blocks.length) { F(where, p.id + " has no paragraphs/lines"); return; }
     blocks.forEach((b, i) => {
       if (!Array.isArray(b) || !b.length) F(where, p.id + " block " + (i + 1) + " is not a non-empty array");
-      (b || []).forEach(s => { if (typeof s !== "string" || !s.trim()) F(where, p.id + " empty sentence in block " + (i + 1)); });
+      (b || []).forEach(s => { if (typeof s !== "string" || !s.trim()) F(where, p.id + " empty sentence in block " + (i + 1)); else if (badBold(s)) F(where, p.id + " unmatched ** in block " + (i + 1)); });
     });
+    if (p.figures && p.lines) F(where, p.id + ": figures are for prose passages only");
+    checkFigures(where + " " + p.id, p.figures, p.lines ? null : blocks);
     const n = wc(passageText(p));
     if (!p.lines && kind !== "revising" && n < 100) W(where, p.id + " is short (" + n + " words)");
     if (n > 650) W(where, p.id + " is long (" + n + " words)");
@@ -103,6 +133,10 @@ function checkItem(set, it, S, lessonCode) {
     ["id", "type", "prompt", "clue", "why"].forEach(k => { if (!it[k]) F(w, "missing " + k); });
     if (String(it.prompt || "").length > 220 && !it.stem) W(w, "long prompt: move the reading text into stem");
     if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
+    if (it.figure) checkFigures(w, it.figure);
+    [].concat(it.stem || []).forEach(s => { if (badBold(s)) F(w, "unmatched ** in stem"); });
+    /* the review screen prints hot-text sentences as plain text, so keep **bold** out of them */
+    if (it.type === "hottext") [].concat(it.targets || [], it.answer || []).forEach(r => { const s = sentenceAt(set, r); if (s && /\*\*/.test(s)) F(w, "hottext target " + r + " has **bold** markup"); });
     if ([1, 2, 3, 4].indexOf(it.dok) < 0) F(w, "dok must be 1-4");
     if (lessonCode) {
       /* a lesson question practices the lesson's own standard, tested or not */
@@ -206,11 +240,12 @@ lessons.forEach(L => {
   const T = L.teach || {};
   if (!T.big) F(S, "teach.big missing");
   if (!Array.isArray(T.points) || T.points.length < 3) F(S, "teach.points needs 3+");
-  (T.examples || (T.example ? [T.example] : [])).forEach((ex, i) => { if (!ex.lines || !ex.note) F(S, "teach example " + (i + 1) + " needs lines and note"); });
+  (T.examples || (T.example ? [T.example] : [])).forEach((ex, i) => { if (!ex.lines || !ex.note) F(S, "teach example " + (i + 1) + " needs lines and note"); checkFigures(S + " teach example " + (i + 1), ex.figure, null, FIG_W.teach); });
   if (!(T.examples || T.example)) F(S, "teach needs an example");
   if (!Array.isArray(L.learn) || L.learn.length < 2 || L.learn.length > 3) F(S, "learn needs 2-3 worked examples");
   (L.learn || []).forEach((ex, i) => {
     if (!ex.ask || !ex.answer) F(S, "learn " + (i + 1) + " needs ask and answer");
+    checkFigures(S + " learn " + (i + 1), ex.figure);
     if (!Array.isArray(ex.steps) || ex.steps.length < 2 || ex.steps.length > 4) F(S, "learn " + (i + 1) + " needs 2-4 steps");
   });
   if (!L.parent) F(S, "parent note missing");

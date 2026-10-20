@@ -9,7 +9,8 @@ PP.addLesson({
       "An example clue gives examples of the word. Look for \"such as\" or \"like.\"",
       "A synonym clue is a nearby word that means the same thing. An antonym clue is a nearby word that means the opposite. Words like \"but\" and \"not\" often point to an antonym.",
       "Clues work for phrases too. A phrase is a small group of words, like \"make up your mind,\" that has its own meaning. Use the clues around it to figure out what the whole group of words means.",
-      "Some words have more than one meaning, like bark or pitcher. Choose the meaning that fits. Then check: put your meaning in place of the word or phrase. If the sentence still makes sense, you are probably right."
+      "Some words have more than one meaning, like bark or pitcher. Choose the meaning that fits. Then check: put your meaning in place of the word or phrase. If the sentence still makes sense, you are probably right.",
+      "Pictures, captions, charts and graphs can show what a word means. Read the caption and the labels on a picture. On a chart or graph, read the title and the words on the side and bottom. Then check the meaning in the sentence."
     ],
     words: [
       { term: "context clue", means: "a hint in the words around a word that helps you know what it means" },
@@ -18,11 +19,18 @@ PP.addLesson({
       { term: "phrase", means: "a small group of words that go together" },
       { term: "multiple-meaning word", means: "a word that is spelled the same but has more than one meaning" }
     ],
-    example: {
-      label: "Example",
-      lines: ["Our class garden needs compost, which is a mix of rotted leaves and food scraps that helps plants grow."],
-      note: "The words \"which is\" are a signal. Everything after them tells you what compost means. This is a definition clue."
-    },
+    examples: [
+      {
+        label: "Example: a definition clue",
+        lines: ["Our class garden needs compost, which is a mix of rotted leaves and food scraps that helps plants grow."],
+        note: "The words \"which is\" are a signal. Everything after them tells you what compost means. This is a definition clue."
+      },
+      {
+        label: "Example: an example clue",
+        lines: ["Mom keeps utensils such as forks, spoons and ladles in the top kitchen drawer."],
+        note: "The words \"such as\" are a signal that examples are coming. Forks, spoons and ladles are all tools for cooking and eating, so utensils are tools for cooking and eating."
+      }
+    ],
     tip: "On the test, a question may ask what a word means in a paragraph. Then Part B asks which sentence helps you know. The clue is often in the same sentence or the one right before or after it."
   },
   learn: [
@@ -37,14 +45,16 @@ PP.addLesson({
       answer: "Sturdy means strong and solid, not likely to break or fall."
     },
     {
-      show: ["Mom keeps utensils such as forks, spoons and ladles in the top kitchen drawer."],
-      ask: "What are utensils?",
+      show: ["Our class measured the rainfall in our garden each month. June had the most rainfall."],
+      figure: { src: "assets/figures/v3a-rainfall-graph.svg", label: "Figure 1", caption: "Our class kept track of the rain.",
+        alt: "Bar graph titled Rainfall in Our Garden. The side of the graph says inches of rain. The bars show March 4 inches, April 3 inches, May 2 inches and June 5 inches. June has the tallest bar." },
+      ask: "What does rainfall mean? Use the graph.",
       steps: [
-        "Look for a signal. The words \"such as\" tell you examples are coming.",
-        "List the examples: forks, spoons and ladles.",
-        "Ask what the examples have in common. They are all tools you use to cook or eat."
+        "Read the title of the graph: Rainfall in Our Garden. The graph is about the word.",
+        "Read the words on the side: inches of rain. Each bar shows how much rain came down in one month.",
+        "Check the sentence. June had the most rainfall, and June has the tallest bar: 5 inches of rain. So rainfall is the amount of rain that falls."
       ],
-      answer: "Utensils are tools used for cooking and eating."
+      answer: "Rainfall means the amount of rain that falls in a place."
     },
     {
       show: ["At the picnic, Aunt Rosa poured cold lemonade from a glass pitcher into our cups."],
@@ -75,6 +85,10 @@ PP.addLesson({
         ["Many animals dwell in the swamp.", "They find food, build nests and raise their young there.", "Alligators, turtles, frogs and herons all make their homes in the Okefenokee."],
         ["Visitors can paddle canoes along the swamp's narrow waterways.", "Guides tell them to keep an eye out for alligators.", "Alligators often rest along the edges of the water, and they can be hard to see.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
         ["If you visit, be cautious.", "Stay in your boat, keep your hands out of the water and never feed the alligators."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/v3a-heron.svg", label: "Figure 1", caption: "A heron hunts for fish in the shallow water.",
+          alt: "A drawing of a heron, a tall bird, standing in shallow water. Labels point to its long neck, its sharp beak and its long legs." }
       ] }
   ],
   practice: [
@@ -132,16 +146,18 @@ PP.addLesson({
       clue: "For each sentence, find the words that help you know the meaning. Do they tell the meaning, give examples, mean the same thing or mean the opposite?",
       why: "Arid has a definition clue (\"which are very dry places\"). Legumes has an example clue (\"such as peas, beans and peanuts\"). Drowsy has a synonym clue (sleepy). Tidy has an antonym clue (\"but ... a big mess\")." },
     { id: "SK-V3a-P6", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Trunk has more than one meaning. What does trunk mean in these sentences?",
-      stem: ["Dad put our bags in the trunk. Then we drove to the zoo to see the elephants."],
+      prompt: "Trunk has more than one meaning. Use the sentence and the picture. What does trunk mean here?",
+      stem: ["Grandpa leaned the ladder against the trunk."],
+      figure: { src: "assets/figures/v3a-tree-ladder.svg",
+        alt: "A drawing of a ladder leaning against an apple tree. Labels point to a branch, the trunk and the roots. The trunk label points to the thick wooden part of the tree that the ladder rests on." },
       choices: [
-        { text: "the back part of a car used for storage", correct: true },
+        { text: "the thick main stem of a tree", correct: true },
+        { text: "the back part of a car used for storage" },
         { text: "the long nose of an elephant" },
-        { text: "the thick main stem of a tree" },
         { text: "a pair of shorts worn for swimming" }
       ],
-      clue: "Elephants show up later, so be careful. What did Dad put in the trunk, and what did the family do right after?",
-      why: "The answer is \"the back part of a car used for storage.\" Dad put bags in the trunk, and then the family drove. You put bags in the back of a car before a drive. The elephants are at the zoo, not part of this trunk." },
+      clue: "The sentence alone could fit more than one meaning. Look at the picture: find the label that says trunk and follow its line.",
+      why: "The answer is \"the thick main stem of a tree.\" The sentence does not say what kind of trunk it is, but the picture does. The ladder leans on the tree, and the label trunk points to the thick part that holds the tree up. A car, an elephant and swim shorts are not in the picture." },
     { id: "SK-V3a-P7", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 2. Choose the meaning of the phrase set everything out.",
       text: "In paragraph 2, set everything out means {0}.",
@@ -181,14 +197,14 @@ PP.addLesson({
         ] },
       clue: "Read the sentences right after the word dwell. What do the animals do in the swamp, day after day?",
       why: "Part A: to live in a place. Part B: \"They find food, build nests and raise their young there.\" and \"Alligators, turtles, frogs and herons all make their homes in the Okefenokee.\" Animals that eat, nest, raise babies and make homes in a place live there." },
-    { id: "SK-V3a-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read paragraph 5. Choose the meaning of cautious.",
-      text: "In paragraph 5, cautious means {0}.",
+    { id: "SK-V3a-T7", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Paragraph 3 names herons, but the words do not tell what a heron is. Use Figure 1 to choose the meaning.",
+      text: "In paragraph 3, a heron is {0}.",
       slots: [
-        { options: ["excited and loud", "careful to stay safe", "slow and sleepy"], answer: 1 }
+        { options: ["a long fish that swims in dark water", "a tall bird that wades in water", "a plant that floats on top of the water"], answer: 1 }
       ],
-      clue: "Read the sentence after cautious. What kinds of things does it tell visitors to do?",
-      why: "The answer is \"careful to stay safe.\" The next sentence tells visitors to stay in the boat, keep their hands out of the water and never feed the alligators. Those are all ways to be careful, so cautious means careful to stay safe." },
+      clue: "Look at the picture and read its labels and caption. What kind of animal has those body parts?",
+      why: "The answer is \"a tall bird that wades in water.\" Figure 1 shows a heron with a sharp beak, a long neck and long legs, standing in shallow water. The caption says it hunts for fish, so it is not a fish itself, and a plant does not have legs or a beak." },
     { id: "SK-V3a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Pen has more than one meaning. What does pen mean in this sentence?",
       stem: ["The farmer opened the pen and let the pigs run out into the muddy field."],
@@ -358,7 +374,7 @@ PP.addLesson({
       ],
       clue: "For each pair, ask: Do these words mean the same thing, or the opposite?",
       why: "Calm and still both mean quiet and not moving, so they are synonyms. Huge and enormous both mean very big, so they are synonyms. Tight and loose are opposites, and so are early and late, so they are antonyms." },
-    { id: "SK-V3b-P6", type: "ms", points: 1, dok: 1, passages: [],
+    { id: "SK-V3b-P6", type: "ms", points: 2, dok: 1, passages: [],
       prompt: "Which TWO pairs of words are homophones?",
       pick: 2,
       choices: [
@@ -542,7 +558,7 @@ PP.addLesson({
       ],
       clue: "Mia added cold water to fix the first problem. What was wrong? Then pick the word for water that is comfortable to sit in.",
       why: "The answers are hot and warm. Mia added cold water because the water was too hot. A little cold water made it warm, a step down from hot on the ladder. It is not hot anymore, because it is just right, and only a little cold water was added, so it did not get all the way to cool." },
-    { id: "SK-V3c-P5", type: "ms", points: 1, dok: 2, passages: [],
+    { id: "SK-V3c-P5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Which TWO words mean to run very fast?",
       pick: 2,
       choices: [

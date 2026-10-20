@@ -204,7 +204,8 @@ PP.addLesson({
       "A heading is a small title over a section. It tells what that section is about.",
       "A bold word is printed in dark letters because it is important. You can often find what it means in a glossary at the back.",
       "A text box is set apart from the paragraphs. It often gives an extra fact, like a \"Did You Know?\" box.",
-      "A picture, a caption or a diagram with labels shows what the words describe. A caption tells what a picture shows. Labels name the parts.",
+      "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
+      "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it.",
       "On a screen, links, play buttons and videos are features too. A link takes you to more facts or a word's meaning. A video or sound shows or tells what words cannot."
     ],
     words: [
@@ -217,13 +218,15 @@ PP.addLesson({
       label: "Text features in an article about frogs",
       lines: [
         "Heading: What Frogs Eat",
-        "Bold word: Frogs catch insects with a sticky tongue. (The word tongue is in bold.)",
-        "Caption under a picture: A green frog waits on a lily pad.",
-        "Text box: Did You Know? Frogs can jump far for their size."
+        "Bold word: Frogs catch insects with a sticky **tongue**.",
+        "Text box: Did You Know? Frogs can jump far for their size.",
+        "A picture with a caption:"
       ],
-      note: "The heading tells what the section is about. The bold word is important. The caption explains the picture. The text box adds a fun extra fact."
+      figure: { src: "assets/figures/tc1b-frog.svg", label: "Figure 1", caption: "A green frog waits on a lily pad.",
+        alt: "A drawing of a frog sitting on a round lily pad in a pond." },
+      note: "The heading tells what the section is about. The word tongue is in bold because it is important. The caption under Figure 1 tells what the picture shows. The text box adds a fun extra fact."
     },
-    tip: "On the test, you may be asked which heading to read to find a fact, or how a text box, bold word or diagram helps the reader. Think about the job each feature does."
+    tip: "On the test, you may be asked which heading to read to find a fact, which caption fits a picture, or how a text box, bold word, caption or diagram helps the reader. Think about the job each feature does."
   },
   learn: [
     {
@@ -237,7 +240,7 @@ PP.addLesson({
       answer: "The heading tells you the section explains how owls hunt at night."
     },
     {
-      show: ["From a book: A cactus stores water in its thick stem. (The word stem is in bold.)", "From the glossary: stem: the main part of a plant that holds up the leaves or flowers"],
+      show: ["From a book: A cactus stores water in its thick **stem**.", "From the glossary: stem: the main part of a plant that holds up the leaves or flowers"],
       ask: "Why is stem in bold, and where can you find what it means?",
       steps: [
         "Bold print tells you the word is important to the topic.",
@@ -245,6 +248,18 @@ PP.addLesson({
         "Read the glossary meaning, then read the sentence again. Now it makes sense."
       ],
       answer: "Stem is in bold because it is an important word. You can find its meaning in the glossary."
+    },
+    {
+      show: ["From a book about plants: The **roots** grow under the ground and take in water for the plant."],
+      figure: { src: "assets/figures/tc1b-plant-parts.svg", label: "Figure 1", caption: "The parts of a plant",
+        alt: "Diagram of a plant. A flower is at the top, two leaves grow from the stem, and roots spread out under the ground. Four labels with lines name the flower, leaf, stem and roots." },
+      ask: "How do the caption and the labels in Figure 1 help the reader?",
+      steps: [
+        "Read the caption first. It tells what the whole diagram shows: the parts of a plant.",
+        "Follow each label's line. The labels name the flower, a leaf, the stem and the roots.",
+        "Put the diagram with the words. The sentence says roots are under the ground. The roots label points below the ground line, so you can see what roots look like and where they are."
+      ],
+      answer: "The caption tells what the whole diagram shows. The labels name each part, so the reader can see the roots the sentence tells about."
     }
   ],
   parent: "Pick up a nonfiction book or a kids' magazine. Before reading, flip through it together and ask: What do the headings tell us? Which words are in bold? What does this picture or box add?",
@@ -255,11 +270,15 @@ PP.addLesson({
         ["## Busy Builders"],
         ["Beavers cut down small trees with their strong front teeth.", "They push sticks, rocks and mud into a stream to build a wall called a dam.", "The dam slows the water and makes a pond."],
         ["## A Home with a Secret Door"],
-        ["In the pond, beavers build a home called a lodge.", "A lodge is a dome made of sticks and mud.", "Its doors are under the water, so foxes and other hunters cannot easily get inside.", "The room inside stays dry above the water."],
+        ["In the pond, beavers build a home called a **lodge**.", "A lodge is a dome made of sticks and mud.", "Its doors are under the water, so foxes and other hunters cannot easily get inside.", "The room inside stays dry above the water."],
         ["## Did You Know?"],
         ["Box: A beaver's front teeth never stop growing.", "Chewing on wood keeps them from getting too long."],
         ["## Tail Talk"],
         ["A beaver has a wide, flat tail.", "When a beaver senses danger, it slaps its tail on the water.", "The loud smack warns other beavers to dive and hide."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tc1b-beaver-lodge.svg", label: "Figure 1", caption: "Inside a beaver lodge",
+          alt: "Diagram of a beaver lodge cut in half so you can see inside. The lodge is a dome of sticks and mud in a pond. Inside the lodge, above the top of the water, is a room labeled dry room. A tunnel goes down from the room to an opening below the top of the water, labeled door under water." }
       ] },
     { id: "p2", title: "The Monarch's Long Trip", genre: "Informational text",
       paragraphs: [
@@ -272,6 +291,12 @@ PP.addLesson({
         ["In the fall, many monarchs fly south to stay warm.", "Some fly all the way to Mexico.", "On the way, they stop to rest and to drink nectar from flowers.", "Some of them pass through Georgia."],
         ["## Did You Know?"],
         ["Box: A monarch can taste with its feet.", "When it lands on a leaf, its feet can tell if the plant is milkweed."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/tc1b-monarch-cycle.svg", label: "Figure 1", caption: "The life cycle of a monarch",
+          alt: "Diagram of the life cycle of a monarch. Four drawings sit in a circle, with an arrow from each one to the next: 1 egg on a leaf, 2 caterpillar, 3 chrysalis hanging from a twig, 4 butterfly. An arrow goes from the butterfly back to the egg." },
+        { after: 7, src: "assets/figures/tc1b-monarch-flower.svg", label: "Figure 2", caption: "A monarch rests in a Georgia garden on its long trip south.",
+          alt: "A drawing of a monarch butterfly with its wings open, sitting on top of a flower." }
       ] }
   ],
   practice: [
@@ -285,16 +310,19 @@ PP.addLesson({
       ],
       clue: "Think about how one animal could tell others about danger. Read each heading and ask which section would explain that.",
       why: "The answer is Tail Talk. That section tells how a beaver slaps its tail on the water to warn other beavers. \"Talk\" in the heading is a clue that the section is about how beavers share a message." },
-    { id: "SK-TC1b-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "What does the heading \"A Home with a Secret Door\" tell the reader?",
+    { id: "SK-TC1b-P8", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      stem: ["The author wants to add this picture to the section \"Busy Builders.\""],
+      figure: { src: "assets/figures/tc1b-beaver-tree.svg",
+        alt: "A drawing of a beaver sitting up next to a small tree. The beaver's front teeth are on a deep notch it has chewed into the tree trunk. Labels point to the beaver, the tree and the wood chips on the ground. There is no water in the picture." },
+      prompt: "Which caption best fits the picture?",
       choices: [
-        { text: "The section is about a beaver home with a hidden way in.", correct: true },
-        { text: "The section is about how beavers cut down trees." },
-        { text: "The section is about a door that people built for beavers." },
-        { text: "The section is about the sounds beavers make in danger." }
+        { text: "A beaver chews through a small tree with its strong front teeth.", correct: true },
+        { text: "A beaver slaps its wide, flat tail on the water to warn others." },
+        { text: "A beaver swims into its lodge through a door under the water." },
+        { text: "A beaver pushes sticks and mud into a stream to build a dam." }
       ],
-      clue: "Think about what \"home\" and \"secret door\" mean. Then check the section under that heading.",
-      why: "The answer is \"The section is about a beaver home with a hidden way in.\" The section tells about the lodge, and its doors are under the water where hunters cannot easily get in." },
+      clue: "A caption tells what the picture shows. Look at the picture first: what is the beaver doing, and where is it? Cross out captions about things you cannot see.",
+      why: "The answer is \"A beaver chews through a small tree with its strong front teeth.\" The picture shows the beaver's teeth on a deep notch in a tree, with wood chips on the ground. There is no water in the picture, so the captions about the tail, the lodge and the dam do not fit it." },
     { id: "SK-TC1b-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Why did the author put the facts about teeth in a text box?",
       choices: [
@@ -305,8 +333,8 @@ PP.addLesson({
       ],
       clue: "A text box sits apart from the paragraphs. Read it, then ask: would the article still make sense without it?",
       why: "The answer is to share an extra fact that is fun to know. The box sits under \"Did You Know?\" and adds a surprising fact. The main idea is that beavers are great builders." },
-    { id: "SK-TC1b-P4", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["In a book about beavers, the word lodge is printed in dark, bold letters.", "The glossary at the back says: lodge: a beaver's home made of sticks and mud"],
+    { id: "SK-TC1b-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      stem: ["In the section \"A Home with a Secret Door,\" the word **lodge** is printed in dark, bold letters.", "The glossary at the back of the book says: lodge: a beaver's home made of sticks and mud"],
       prompt: "How does the bold print help the reader?",
       choices: [
         { text: "It shows the word is important and is explained in the glossary.", correct: true },
@@ -317,12 +345,11 @@ PP.addLesson({
       clue: "Think about why an author makes a word stand out, and where else the word shows up.",
       why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print points out key words, and the glossary tells what they mean." },
     { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 3, passages: ["p1"],
-      stem: ["Imagine a diagram next to the article.", "It shows a lodge cut in half so you can see inside.", "One label points to a door under the water.", "Another label points to a dry room above the water."],
-      prompt: "Which two sentences in the article tell about the parts the diagram's labels point to? Choose two sentences.",
-      targets: ["p1:3:2", "p1:5:1", "p1:5:3", "p1:5:4", "p1:9:2"],
+      prompt: "Look at Figure 1. Which two sentences in the article tell about the parts that its labels point to? Choose two sentences.",
+      targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],
       answer: ["p1:5:3", "p1:5:4"], pick: 2,
-      clue: "Read the two labels again. Find the sentences that describe those same two parts of the lodge.",
-      why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The diagram's labels show the underwater door and the dry room, so it helps readers picture those sentences." },
+      clue: "Read the two labels in Figure 1 and follow their lines. Then find the sentences that tell about those same two parts of the lodge.",
+      why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The labels in Figure 1 point to a door under the water and a dry room. The diagram helps readers see where those two parts are inside the lodge." },
     { id: "SK-TC1b-P6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each text feature to the job it does.",
       cols: ["Heading", "Text box", "Bold word", "Diagram"],
@@ -368,9 +395,8 @@ PP.addLesson({
       clue: "Read only the words in the box. What new fact does it give that the paragraphs do not?",
       why: "The answer is \"It gives a surprising fact about how monarchs find milkweed.\" The box says a monarch can taste with its feet to tell if a plant is milkweed. That fact is not in the paragraphs." },
     { id: "SK-TC1b-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
-      stem: ["Imagine a diagram next to the section \"From Egg to Wing.\"", "It shows four pictures in a circle with arrows from one to the next.", "The pictures show an egg, a caterpillar, a chrysalis and a butterfly."],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "What does the diagram help the reader understand?",
+      prompt: "Look at Figure 1 next to the section \"From Egg to Wing.\" This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What does the diagram in Figure 1 help the reader understand?",
         choices: [
           { text: "the order of the stages in a monarch's life", correct: true },
           { text: "the path monarchs take to fly to Mexico" },
@@ -384,8 +410,8 @@ PP.addLesson({
           { text: "\"Many birds will not eat monarchs.\"" },
           { text: "\"On the way, they stop to rest and to drink nectar from flowers.\"" }
         ] },
-      clue: "Arrows from one picture to the next show what comes after what. Which section tells things in that order?",
-      why: "Part A: the order of the stages in a monarch's life. Part B: \"Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.\" The diagram shows egg, caterpillar, chrysalis and butterfly in order, which matches the steps in \"From Egg to Wing.\"" },
+      clue: "Follow the arrows and the numbers from one drawing to the next. Then find the section of the article that tells about the same four things.",
+      why: "Part A: the order of the stages in a monarch's life. Part B: \"Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.\" Figure 1 shows 1 egg, 2 caterpillar, 3 chrysalis and 4 butterfly, with arrows from each one to the next. That matches the steps in \"From Egg to Wing.\"" },
     { id: "SK-TC1b-T4", type: "dropdown", points: 2, dok: 2, passages: ["p2"],
       stem: ["This article is also on a website.", "Under the heading \"A Long Trip South\" is a link that says \"See a map of the monarchs' path.\"", "Under the heading \"From Egg to Wing\" is a play button that says \"Watch a caterpillar change.\""],
       prompt: "Choose the words that best complete the sentences.",
@@ -405,7 +431,17 @@ PP.addLesson({
         { text: "How Milkweed Grows" }
       ],
       clue: "A heading tells what its own section is about. Read only the first paragraph.",
-      why: "The answer is Meet the Monarch. The first paragraph introduces monarchs and tells what they look like. The other headings fit other parts of the article or none of it." }
+      why: "The answer is Meet the Monarch. The first paragraph introduces monarchs and tells what they look like. The other headings fit other parts of the article or none of it." },
+    { id: "SK-TC1b-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Look at Figure 2 and read its caption. What does the caption tell the reader that the picture alone does not show?",
+      choices: [
+        { text: "where the monarch is and where it is going", correct: true },
+        { text: "that the monarch is sitting on top of a flower" },
+        { text: "that the monarch has four wings with spots" },
+        { text: "why birds stay away from the bright monarch" }
+      ],
+      clue: "First, say what you can see in the picture by itself. Then read the caption and find the words that tell something you cannot see.",
+      why: "The answer is \"where the monarch is and where it is going.\" The caption says the monarch is in a Georgia garden on its long trip south. You cannot tell the place or the trip just by looking at the picture. The picture already shows the flower and the wings, and the caption says nothing about birds." }
   ]
 });
 
