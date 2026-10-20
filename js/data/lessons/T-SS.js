@@ -695,17 +695,17 @@ PP.addLesson({
       ],
       clue: "Name the main idea of that paragraph first. Then pick the detail that tells more about that idea, not just about hummingbirds in general.",
       why: "The answer is \"Their wings beat so fast that they make a humming sound.\" That paragraph is about how hummingbirds fly, and fast wings are part of flying. Nests, feeders and eggs are true but are not about flying." },
-    { id: "SK-SS1d-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
-      prompt: "Match each sentence from the paragraph that begins with sentence 3 to the job it does.",
+    { id: "SK-SS1d-P4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "These four sentences come from one paragraph. Match each sentence to the job it does.",
       cols: ["Topic sentence", "Detail", "Does not belong"],
       rows: [
-        { text: "(3) Hummingbirds can fly in ways that most birds cannot.", answer: 0 },
-        { text: "(4) They can hover in one spot like a tiny helicopter.", answer: 1 },
-        { text: "(5) They can even fly backward.", answer: 1 },
-        { text: "(6) My grandma has a pretty red bird feeder on her porch.", answer: 2 }
+        { text: "The Saturday farmers market is a busy place.", answer: 0 },
+        { text: "Farmers sell peaches, beans and fresh eggs.", answer: 1 },
+        { text: "A man plays the banjo near the fountain.", answer: 1 },
+        { text: "My cousin just got a new puppy.", answer: 2 }
       ],
-      clue: "One sentence tells the main idea. Some sentences tell more about it. Ask which sentence is about something else.",
-      why: "Sentence 3 is the topic sentence: hummingbirds fly in special ways. Sentences 4 and 5 are details that show those ways. Sentence 6 does not belong because it is about a feeder, not flying." },
+      clue: "Find the sentence that names the big idea the others can tell about. Then ask which sentence is about something else.",
+      why: "\"The Saturday farmers market is a busy place\" is the topic sentence. The farmers selling food and the man playing the banjo are details that show how busy the market is. The cousin's puppy does not belong because it is not about the market." },
     { id: "SK-SS1d-P5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Read the paragraph. Which TWO sentences do not belong?",
       stem: "Our class garden is busy in the spring. We plant bean and squash seeds in long rows. My favorite food is spaghetti with meatballs. Every morning, two students water the plants. The new swings on the playground are fast. By May, the first green beans are ready to pick.",
@@ -738,22 +738,22 @@ PP.addLesson({
       why: "The answer is \"Some kids ran through a sprinkler set up by the gym.\" That paragraph is about water games after lunch, and a sprinkler is a water game. The sack race belongs with the races, and lunch is not a water game." },
     { id: "SK-SS1d-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "What is the paragraph that begins with sentence 7 mostly about?",
+      partA: { prompt: "What is Carlos's whole draft mostly about?",
         choices: [
-          { text: "the water games after lunch", correct: true },
-          { text: "the races in the morning" },
-          { text: "what the class ate for lunch" },
-          { text: "how the teachers planned the day" }
+          { text: "the fun things that happened on Field Day", correct: true },
+          { text: "the races Carlos ran in the morning" },
+          { text: "the water games the class played after lunch" },
+          { text: "how Carlos's brother is learning to drive" }
         ] },
-      partB: { prompt: "Which sentence from that paragraph is its topic sentence?",
+      partB: { prompt: "Which sentence from the draft best tells the main idea of the whole draft?",
         choices: [
-          { text: "\"After lunch, we cooled off with water games.\"", correct: true },
-          { text: "\"We tossed water balloons back and forth with partners.\"" },
-          { text: "\"The teachers sprayed us with garden hoses.\"" },
-          { text: "\"Everyone was soaked and laughing.\"" }
+          { text: "\"Field Day at Maple Creek Elementary was the best day of the whole school year.\"", correct: true },
+          { text: "\"The morning was full of races.\"" },
+          { text: "\"After lunch, we cooled off with water games.\"" },
+          { text: "\"I can't wait for next year's Field Day!\"" }
         ] },
-      clue: "Read all four sentences of that paragraph. What do they share? Then find the sentence that names that shared idea, not one detail.",
-      why: "Part A: the water games after lunch. Part B: \"After lunch, we cooled off with water games.\" That sentence names the main idea. The balloons, the hoses and everyone being soaked are details about it." },
+      clue: "A whole draft has a main idea too, and each paragraph tells one part of it. Look for the sentence that covers every paragraph, not just one.",
+      why: "Part A: the fun things that happened on Field Day. Part B: \"Field Day at Maple Creek Elementary was the best day of the whole school year.\" The races and the water games are each the topic of one paragraph. The opening sentence covers the whole day, so it tells the main idea of the draft." },
     { id: "SK-SS1d-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the paragraph. It is missing a topic sentence. Which sentence would be the best topic sentence?",
       stem: "____ Some of them eat seeds from our feeder. Others peck at bugs on the old oak tree. A few even splash in the birdbath.",
@@ -766,15 +766,15 @@ PP.addLesson({
       clue: "Who is \"them\" in the paragraph? The topic sentence must cover every detail, not just one place in the yard.",
       why: "The answer is \"Many kinds of birds visit our backyard.\" Every detail tells something birds do in the backyard. The oak tree is only one detail, and feathers and the dog are not what the paragraph is about." },
     { id: "SK-SS1d-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Carlos wants to add a new paragraph about the awards at the end of the day. Which sentence would be the best topic sentence for it?",
+      prompt: "Carlos wants to add a new paragraph that tells what happened at the end of the day. Which sentence would be the best topic sentence for it?",
       choices: [
         { text: "At the end of the day, everyone met in the gym for awards.", correct: true },
         { text: "We were all tired from running in the hot sun all day." },
-        { text: "The water balloons were red, blue, green and yellow." },
+        { text: "My friend Eli won a blue ribbon at the awards." },
         { text: "My best friend Eli forgot to bring his water bottle." }
       ],
       clue: "A topic sentence for a new paragraph names the new idea. Which sentence tells what the whole new paragraph will be about?",
-      why: "The answer is \"At the end of the day, everyone met in the gym for awards.\" It tells the reader the new paragraph is about the awards. The other sentences are small details that do not name the awards at all." }
+      why: "The answer is \"At the end of the day, everyone met in the gym for awards.\" It names the big idea of the new paragraph, the awards at the end of the day. Eli's blue ribbon is one detail that could go inside that paragraph, and the other two sentences are small details." }
   ]
 });
 
@@ -887,7 +887,7 @@ PP.addLesson({
           { text: "\"She had come in third place!\"" },
           { text: "\"She did not look at the other swimmers.\"" }
         ] },
-      clue: "There are no real butterflies at the pool. Look for a clue that tells how Rosa feels just before Ms. Ellis speaks.",
+      clue: "There are no real butterflies at the pool. Look in paragraph 2 for words that tell how Rosa looks or feels.",
       why: "Part A: Rosa feels nervous about the race. Part B: \"Her coach, Ms. Ellis, saw Rosa's worried face.\" Ms. Ellis says this right after she sees Rosa looking worried, and she adds that everyone feels that way before a race." },
     { id: "SK-SS2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each phrase from the story to the kind of figurative language it is.",
@@ -909,7 +909,7 @@ PP.addLesson({
         { text: "Her arms get tired and stop moving." }
       ],
       clue: "Picture the blades of a windmill turning in the wind. Which choice moves the same way?",
-      why: "The answer is \"Her arms move around quickly and strongly.\" Windmill blades turn in big, fast circles. The metaphor shows Rosa's arms circling hard through the water." }
+      why: "The answer is \"Her arms move around quickly and strongly.\" Windmill blades keep turning in big circles, round and round. Since Rosa also kicks hard, the metaphor shows her arms circling strongly through the water." }
   ],
   test: [
     { id: "SK-SS2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -980,7 +980,7 @@ PP.addLesson({
       "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\"",
       "Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
       "Use an idiom only when its meaning matches. \"A piece of cake\" means easy, so it fits an easy test, not a hard one.",
-      "One or two strong comparisons are plenty. Too many can make writing confusing."
+      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know."
     ],
     words: [
       { term: "simile", means: "a comparison that uses like or as" },
@@ -1142,7 +1142,7 @@ PP.addLesson({
         { text: "after sentence 12" }
       ],
       clue: "The new sentence is about the stage lights. Find where Andre is on the stage, and look for a sentence that the bright lights would help explain.",
-      why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5, and in sentence 6 he can hardly see the crowd. Bright lights explain why. In sentences 2, 9 and 12 he is not walking onto the stage." },
+      why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5, and in sentence 6 he can hardly see the crowd. Only after sentence 5 does the bright light explain sentence 6, where Andre can hardly see the crowd. In the other places, the lights would not explain anything nearby." },
     { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
       prompt: "Andre wants to revise sentence 11 with a simile that shows how proud he felt. Choose the simile that fits best.",
       text: "I felt {0}.",
