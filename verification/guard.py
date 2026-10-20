@@ -617,10 +617,13 @@ with sync_playwright() as p:
     for bad in ('{"draft":null,"plan":null,"checks":null,"scores":null}', '{"draft":5,"plan":"x","checks":{"a":1},"scores":[1]}', '"hello"', '[1,2]'):
         q.evaluate("([k,v])=>localStorage.setItem(k,v)", ["pp.task." + tid, bad])
         goto12(q, "#write/" + tid)
-        for t in ("plan", "write", "check", "score", "sources"):
-            q.click("[data-wtab=%s]" % t); q.wait_for_timeout(20)
-        q.click("[data-wtab=plan]"); q.fill("#pl-opinion", "Yes."); q.wait_for_timeout(20)
-        d8.append([q.evaluate("document.getElementById('write-grid').dataset.tab"), q.evaluate("JSON.parse(localStorage.getItem('pp.task.%s')).plan.opinion" % tid)])
+        try:
+            for t in ("plan", "write", "check", "score", "sources"):
+                q.click("[data-wtab=%s]" % t, timeout=3000); q.wait_for_timeout(20)
+            q.click("[data-wtab=plan]", timeout=3000); q.fill("#pl-opinion", "Yes.", timeout=3000); q.wait_for_timeout(20)
+            d8.append([q.evaluate("document.getElementById('write-grid').dataset.tab"), q.evaluate("JSON.parse(localStorage.getItem('pp.task.%s')).plan.opinion" % tid)])
+        except Exception as ex:
+            d8.append([bad, "essay screen not usable: " + str(ex)[:60]])
     q.evaluate("localStorage.clear()")
     ok("12.5 D8: damaged essay storage (null, wrong types, not an object) loads without errors and the essay still works",
        len(errors) == n_err and all(x == ["plan", "Yes."] for x in d8), (d8, errors[n_err:n_err + 2]))
