@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 345" role="img" aria-labelledby="t">
+  <title id="t">Map of Georgia. The Chattahoochee River starts in the mountains in the north, flows southwest past Atlanta, then runs south along the border between Georgia and Alabama.</title>
+  <polygon points="40.0,40.0 156.2,40.0 145.1,56.8 166.0,69.1 180.0,90.4 196.2,110.0 210.2,126.8 221.8,146.4 231.1,163.2 240.4,182.8 248.8,202.4 259.9,206.3 249.7,219.2 245.1,236.0 240.4,252.8 235.8,266.8 233.4,279.7 221.8,278.0 207.9,288.6 198.1,288.1 74.9,280.8 68.4,264.0 63.7,236.0 66.0,208.0 68.4,191.2 60.0,159.3" fill="#FBF3E4" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#E3D6C0" stroke="#4A3A22" stroke-width="2"><path d="M78.0 51.2 l9 -14 l9 14 Z"/><path d="M94.2 47.8 l9 -14 l9 14 Z"/><path d="M108.2 55.7 l9 -14 l9 14 Z"/><path d="M87.3 61.3 l9 -14 l9 14 Z"/></g>
+  <polyline points="125.1,49.5 126.5,62.4 117.2,82.0 105.6,96.0 95.3,106.1 84.6,118.4 73.0,129.6 63.7,146.4 60.0,159.3 68.4,191.2 66.0,208.0 63.7,236.0 68.4,264.0 74.9,280.8" fill="none" stroke="#1B4FA8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="125.1,49.5 126.5,62.4 117.2,82.0 105.6,96.0 95.3,106.1 84.6,118.4 73.0,129.6 63.7,146.4 60.0,159.3 68.4,191.2 66.0,208.0 63.7,236.0 68.4,264.0 74.9,280.8" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 5"/>
+  <circle cx="96.7" cy="110.0" r="7" fill="#111" stroke="#fff" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <text x="56" y="22">mountains</text>
+    <text x="108.7" y="130.0">Atlanta</text>
+    <text x="180" y="185" font-size="24" font-weight="bold" text-anchor="middle">GEORGIA</text>
+    <text x="86" y="236">Chattahoochee</text><text x="86" y="260">River</text>
+    <path d="M84 230 L72.5 213.6" stroke="#111" stroke-width="2"/>
+    <text transform="translate(22 170) rotate(-90)" text-anchor="middle">ALABAMA</text>
+    <text x="150" y="334" text-anchor="middle">FLORIDA</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="t">
+  <title id="t">Diagram of wax cells in a honeycomb. Each cell has six sides. Labels show a cell with an egg, a cell full of honey, and a cell with pollen.</title>
+  <defs>
+    <pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#F6D27A"/><path d="M0 5 q2.5 -3 5 0 t5 0" fill="none" stroke="#8A5A00" stroke-width="1.2"/></pattern>
+    <pattern id="p" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#FFF3C4"/><circle cx="4.5" cy="4.5" r="1.8" fill="#8A5A00"/></pattern>
+    <path id="c" d="M0 -30 L26 -15 L26 15 L0 30 L-26 15 L-26 -15 Z"/>
+  </defs>
+  <g stroke="#6B4A10" stroke-width="3" fill="#FFF8E6">
+    <use href="#c" x="108" y="90"/><use href="#c" x="160" y="90" fill="url(#h)"/><use href="#c" x="212" y="90" fill="url(#h)"/>
+    <use href="#c" x="82" y="135"/><use href="#c" x="134" y="135"/><use href="#c" x="186" y="135" fill="url(#h)"/><use href="#c" x="238" y="135" fill="url(#p)"/>
+    <use href="#c" x="108" y="180"/><use href="#c" x="160" y="180" fill="url(#p)"/><use href="#c" x="212" y="180"/>
+  </g>
+  <!-- eggs: one small egg standing in some empty cells -->
+  <g fill="#FFFFFF" stroke="#111" stroke-width="2"><ellipse cx="108" cy="90" rx="4" ry="9"/><ellipse cx="82" cy="135" rx="4" ry="9"/><ellipse cx="134" cy="135" rx="4" ry="9"/><ellipse cx="108" cy="180" rx="4" ry="9"/><ellipse cx="212" cy="180" rx="4" ry="9"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="10" y="40">cell with an egg</text><path d="M60 46 L104 82" stroke="#111" stroke-width="2"/><circle cx="104" cy="82" r="3.5"/>
+    <text x="196" y="40">honey</text><path d="M224 46 L214 78" stroke="#111" stroke-width="2"/><circle cx="214" cy="78" r="3.5"/>
+    <text x="196" y="262">pollen</text><path d="M226 244 L240 150" stroke="#111" stroke-width="2"/><circle cx="240" cy="150" r="3.5"/>
+  </g>
+</svg>
