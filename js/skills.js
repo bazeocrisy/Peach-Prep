@@ -107,7 +107,7 @@
       groups.forEach(g => {
         const rows = g.recs.filter(s => {
           if (filter === "test" && !onTest(s)) return false;
-          if (filter === "todo" && status(s.code) === "mastered") return false;
+          if (filter === "todo" && (status(s.code) === "mastered" || s.tested === "embedded")) return false;
           if (!q) return true;
           return [s.code, s.display, s.plain, s.text, s.gum || "", titleOf(s)].join(" ").toLowerCase().indexOf(q) >= 0;
         });
@@ -143,14 +143,19 @@
       if (st.key === "Practices") {
         const d = make("details", "habits");
         if (q || filter !== "all") d.open = true;
-        const sum = make("summary", "habits-sum", "Show the " + recs.length + " everyday habits");
+        const label = () => (d.open ? "Hide" : "Show") + " the " + recs.length + " everyday habits";
+        const sum = make("summary", "habits-sum", "");
         d.appendChild(sum);
+        d.addEventListener("toggle", () => { sum.textContent = label(); });
+        setTimeout(() => { sum.textContent = label(); }, 0);
         Array.from(block.children).slice(1).forEach(c => d.appendChild(c));
         block.appendChild(d);
       }
       host.appendChild(block);
     });
     el("skill-empty").hidden = shown > 0;
+    const cnt = el("skill-count");
+    cnt.textContent = (q || filter !== "all") && shown ? shown + " skill" + (shown > 1 ? "s" : "") + " match" + (shown > 1 ? "" : "es") + "." : "";
     buildProgress();
   }
 
@@ -212,13 +217,15 @@
   function setHashFor(replace) { window.PP_APP.setHash("#skill/" + encodeURIComponent(cur) + (step !== "teach" ? "/" + step : ""), replace); }
 
   function go(which) {
+    if (step === "teach" && which !== "teach") { mark(cur, "taught"); }
     step = which;
     render();
     setHashFor(true);
     window.PP_APP.track();
-    const tab = el("sk-steps").querySelector('[data-step="' + which + '"]');
-    el("sk-panel").focus();
-    if (tab) tab.scrollIntoView({ block: "nearest" });
+    /* land at the top of the new step, not wherever the last one ended */
+    const top = el("sk-steps").getBoundingClientRect().top + window.scrollY - 4;
+    if (window.scrollY > top) window.scrollTo(0, top);
+    el("sk-panel").focus({ preventScroll: true });
   }
 
   function renderSteps() {
@@ -290,8 +297,6 @@
     });
     if (T.tip) { const tip = make("p", "teach-tip"); tip.appendChild(make("strong", "", "Test tip: ")); tip.appendChild(document.createTextNode(T.tip)); card.appendChild(tip); }
     host.appendChild(card);
-    mark(cur, "taught");
-    renderSteps();
     host.appendChild(nextBtn("Next: Learn with examples", "learn"));
   }
 
@@ -498,6 +503,7 @@
     startB.addEventListener("click", () => {
       if (phase !== "ready") { load(which); return; }
       phase = "reading"; t0 = Date.now(); secs = 60;
+      card.classList.add("is-reading");
       timer = setInterval(tick, 250);
       startB.hidden = true; stopB.hidden = false;
       say.textContent = "Reading. Grown-up: tap any word that is skipped or read wrong. Tap it again to undo.";
@@ -506,12 +512,13 @@
     function stop() {
       if (phase !== "reading") return;
       clearInterval(timer);
+      card.classList.remove("is-reading");
       secs = Math.max(10, Math.min(60, Math.round((Date.now() - t0) / 1000)));
       phase = "last"; stopB.hidden = true;
       clock.textContent = "Time!";
       say.textContent = "Grown-up: now tap the last word the reader read.";
       text.classList.add("pick-last");
-      const first = words[0]; if (first) first.focus();
+      const first = words[0]; if (first) first.focus({ preventScroll: true });
     }
     function finish(k) {
       if (secs < 30) {
@@ -547,7 +554,7 @@
       out.appendChild(make("p", "note", "Recent readings on this device: " + hist));
       startB.hidden = false; startB.textContent = "Read again";
     }
-    load(0);
+    load(A.practiced ? Math.min(4, A.passages.length - 1) : 0);
   }
 
   /* Cursive tracing sheet: grey letters on handwriting guide lines, printable. */

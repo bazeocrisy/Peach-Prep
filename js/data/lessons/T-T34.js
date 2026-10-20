@@ -149,11 +149,11 @@ PP.addLesson({
       rows: [
         { text: "Trees would make recess more fun.", answer: 1 },
         { text: "Birds build nests in tree branches.", answer: 0 },
-        { text: "The school should plant trees.", answer: 1 },
+        { text: "A playground is better with trees.", answer: 1 },
         { text: "The playground has swings and a slide.", answer: 0 }
       ],
       clue: "For each sentence, ask: Could I check this and prove it? Or is it what someone thinks, so other people could disagree?",
-      why: "Facts: birds build nests in tree branches, and the playground has swings and a slide. Both can be checked. Opinions: trees would make recess more fun, and the school should plant trees. Fun and should tell what Mateo thinks, and other people could disagree." },
+      why: "Facts: birds build nests in tree branches, and the playground has swings and a slide. Both can be checked. Opinions: trees would make recess more fun, and a playground is better with trees. Fun and better tell what Mateo thinks, and other people could disagree." },
     { id: "SK-TT3a-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does the author support the reason that trees make shade?",
@@ -179,15 +179,15 @@ PP.addLesson({
       clue: "A reason tells why the author holds the opinion. Evidence gives facts about a reason. Which sentence tells a new why?",
       why: "The answer is \"Trees would also bring wildlife to our school.\" The word also shows that a new reason is starting. The sentences about birds, squirrels and journals are evidence for it, and paragraph 4 answers people who disagree." },
     { id: "SK-TT3a-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "The author wants to add one more piece of evidence to paragraph 3. Which sentence would best support the reason in that paragraph?",
+      prompt: "The author wants to add one more piece of evidence. Which sentence would best support one of the author's reasons?",
       choices: [
         { text: "Last spring, a robin built a nest in a tree across the street from our school.", correct: true },
         { text: "Last spring, the slide on our playground was painted bright red." },
         { text: "Many students in my class like to play kickball in the big field." },
         { text: "Our parent club meets in the school library on Tuesday nights." }
       ],
-      clue: "First, find the reason that paragraph 3 is about. Then choose the fact that proves that reason.",
-      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" Paragraph 3 says trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings have nothing to do with wildlife." }
+      clue: "First, find each of the author's reasons. Then choose the fact that proves one of them.",
+      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" One reason is that trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings do not support either reason: they are not about shade or about wildlife." }
   ]
 });
 
@@ -346,15 +346,15 @@ PP.addLesson({
       clue: "For the first blank, ask: Is the new sentence a result of the one before it? For the second blank, ask: Is sentence 7 an example, an ending, or one more reason?",
       why: "The first blank needs \"Therefore\": staying healthy is the result of drinking whenever we are thirsty. However shows something different, For example gives an example, and Before that tells time. The second blank needs \"In addition\": sentence 7 adds a second reason. It is not an example, an ending, or a change of plan." },
     { id: "SK-TT3c-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Malik wants to add a sentence after sentence 9 to support the reason in sentence 7. Which sentence is best?",
+      prompt: "Malik wants to add one more sentence to the paragraph about saving class time. Which sentence is best?",
       choices: [
         { text: "With bottles at our desks, nobody would need to leave the room to get a drink.", correct: true },
         { text: "Some water bottles are made of metal, and others are made of hard plastic." },
         { text: "Our teacher says that math is the most important subject of the whole day." },
         { text: "My water bottle at home has stickers of planets and stars all over it." }
       ],
-      clue: "Read sentence 7 to find the reason. Which choice helps show how water bottles would save class time?",
-      why: "The answer is \"With bottles at our desks, nobody would need to leave the room to get a drink.\" Sentence 7 says water bottles would save class time, and this explains how: no one would wait in line at the fountain. What bottles are made of, which subject matters most and stickers on a bottle do not show time being saved." },
+      clue: "Find the paragraph about saving class time. Which choice helps show how water bottles would save time?",
+      why: "The answer is \"With bottles at our desks, nobody would need to leave the room to get a drink.\" That paragraph says water bottles would save class time, and this explains how: no one would wait in line at the fountain. What bottles are made of, which subject matters most and stickers on a bottle do not show time being saved." },
     { id: "SK-TT3c-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Sentence 10 is a weak conclusion. Which sentence should replace sentence 10?",
       choices: [
@@ -365,17 +365,18 @@ PP.addLesson({
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. Which choice wraps up the whole piece?",
       why: "The answer is \"Water bottles would keep us healthy and save time, so Room 8 should allow them.\" It sums up both reasons and repeats the opinion. The First sentence starts a reason over, and the juice and pencil sentences bring in new ideas." },
-    { id: "SK-TT3c-T5", type: "ms", points: 2, pick: 2, dok: 2, passages: ["p2"],
-      prompt: "Which TWO sentences from Malik's draft are evidence that supports one of his reasons?",
+    { id: "SK-TT3c-T5", type: "ms", points: 2, pick: 2, dok: 2, passages: [],
+      stem: ["(1) Our school should start a music club. (2) Music helps kids learn to work together. (3) In a band, each player has to listen to the others to stay on the beat. (4) Last year, our chorus practiced as a team for weeks to sing at the town fair. (5) Music is the best subject in school. (6) I hope our principal says yes!"],
+      prompt: "Lena wrote this paragraph. Which TWO sentences are evidence that supports the reason in sentence 2?",
       choices: [
-        { text: "(5) When we play hard at recess, we sweat and lose water.", correct: true },
-        { text: "(9) We waited ten minutes before math could start.", correct: true },
-        { text: "(1) In Room 8, students are not allowed to keep water bottles at their desks." },
-        { text: "(7) Water bottles would save class time." },
-        { text: "(10) I like water." }
+        { text: "(3) In a band, each player has to listen to the others to stay on the beat.", correct: true },
+        { text: "(4) Last year, our chorus practiced as a team for weeks to sing at the town fair.", correct: true },
+        { text: "(1) Our school should start a music club." },
+        { text: "(5) Music is the best subject in school." },
+        { text: "(6) I hope our principal says yes!" }
       ],
-      clue: "First find Malik's two reasons. Then look for sentences with facts or examples that prove one of them. A reason itself is not evidence.",
-      why: "The answers are sentence 5, \"When we play hard at recess, we sweat and lose water,\" and sentence 9, \"We waited ten minutes before math could start.\" Sentence 5 backs up the reason that our bodies need water, and sentence 9 backs up the reason about saving class time. Sentence 1 explains the rule, sentence 7 is a reason, and sentence 10 is a weak ending." }
+      clue: "Read sentence 2 to find the reason. Then look for sentences with facts or examples that show music helps kids work together.",
+      why: "The answers are sentence 3, \"In a band, each player has to listen to the others to stay on the beat,\" and sentence 4, \"Last year, our chorus practiced as a team for weeks to sing at the town fair.\" Both show kids working together through music. Sentence 1 is Lena's opinion, sentence 5 is another opinion, and sentence 6 is a wish, not evidence." }
   ]
 });
 
@@ -511,12 +512,12 @@ PP.addLesson({
       prompt: "Which sentence best describes how the poem is built?",
       choices: [
         { text: "It has three stanzas with four lines in each one.", correct: true },
-        { text: "It has four stanzas with three lines in each one." },
-        { text: "It has two stanzas with six lines in each one." },
-        { text: "It has one stanza with twelve lines in it." }
+        { text: "It has three stanzas with three lines in each one." },
+        { text: "It has three stanzas with six lines in each one." },
+        { text: "It has four stanzas with three lines in each one." }
       ],
       clue: "Count the groups of lines first. Then count the lines in one group.",
-      why: "The answer is \"It has three stanzas with four lines in each one.\" There are three groups of lines with spaces between them, and each group has four lines." },
+      why: "The answer is \"It has three stanzas with four lines in each one.\" There are three groups of lines with spaces between them, and each group has four lines. The other choices count the lines in each stanza wrong, or count four stanzas." },
     { id: "SK-TT4a-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Why does the poet repeat the words \"Higher, higher\" at the start of stanzas 2 and 3?",
       choices: [
@@ -732,7 +733,7 @@ PP.addLesson({
         { text: "The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.", correct: true },
         { text: "The night is dark, the pond is calm, / The crickets chirp and hum. / The frog curls up beside a rock / And sleeps until it's day." }
       ],
-      clue: "Rosa's pattern is: lines 2 and 4 rhyme. Check the end words of lines 2 and 4 in each choice.",
+      clue: "First find which lines rhyme in Rosa's stanzas. Then check those same lines in each choice.",
       why: "The answers are \"The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.\" and \"The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.\" Glow rhymes with below, and sing rhymes with spring, so lines 2 and 4 rhyme, just like Rosa's other stanzas. In the other choices, lines 2 and 4 do not rhyme: night and glad, glow and sleep, shine and mud, hum and day." }
   ]
 });

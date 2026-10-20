@@ -27,3 +27,19 @@ The checker (`node verification/check-content.js --all`) reports nothing for T-T
 - **Not changed, for the lead to decide:** in Practice, SK-TT4b-P2 ("replace stanza 3, line 2") still names P1's answer. The verify rule is about Test items, and Practice gives hints anyway, so I left it. If the same rule should apply to Practice, P2 can get its own stem the same way T2 did.
 
 Checker: `node verification/check-content.js --all` gives PASS (0 failures, 0 warnings).
+
+## Round 3 (docs/review-lessons/T-T34-final.md)
+- **MUST SK-TT4a-T4 columns reveal T2:** fixed. The T2 wrong choices are now "three stanzas with three lines", "three stanzas with six lines" and "four stanzas with three lines". The stanza count from T4's columns (and from T3's "stanzas 2 and 3") no longer isolates the key, so the child still has to count the lines. I updated `why`.
+- **SHOULD SK-TT3c-T3/T4 help T5:** fixed. The T3 prompt is now "Malik wants to add one more sentence to the paragraph about saving class time. Which sentence is best?" I updated the clue and `why` so they no longer name sentence 7 or 9. The T2 dropdown and the T4 key also show Malik's reasons, which no rewording of T3 can hide. So T5 no longer uses Malik's draft. It is now an `ms` item with its own `stem` (Lena's music-club paragraph, `passages: []`). It asks for the TWO sentences that are evidence for the reason in sentence 2. Keys: (3) "In a band, each player has to listen to the others…" and (4) "Last year, our chorus practiced as a team…". Wrong choices: (1) the opinion, (5) "Music is the best subject in school." and (6) "I hope our principal says yes!". It is DOK 2 and 2 points.
+- **SHOULD SK-TT3a-T5 points T4 to paragraph 3:** fixed. The prompt is now "…Which sentence would best support one of the author's reasons?" The clue and `why` no longer name paragraph 3. Only the robin choice supports either reason (shade or wildlife).
+- **NIT SK-TT3a-T2 row repeats the T1 key:** fixed. The row is now "A playground is better with trees." (opinion). I updated `why`.
+- **NIT SK-TT4b-P2 names P1's line:** left as is (Practice), as in Round 2.
+- **Extra (scan):** the SK-TT4b-T5 clue said "Rosa's pattern is: lines 2 and 4 rhyme", which would give away T1's pattern if hints or explanations are shown during the test. It now says "First find which lines rhyme in Rosa's stanzas. Then check those same lines in each choice."
+
+### Full Test scan (every prompt, stem, choice, column and dropdown text)
+- **3.T.T.3.a:** T3 Part A names "trees make shade" as a reason. That does not narrow T4, whose targets are all in paragraphs 3–4 and whose answer is the second reason. No other reveals.
+- **3.T.T.3.c:** T1 (opinion), T2 (linking words), T3 (class-time evidence) and T4 (conclusion) all use Malik's draft. None of their answers appears in another item's prompt, choices or dropdown text. T5 now uses its own paragraph.
+- **3.T.T.4.a:** T1 (rhyme pairs), T2 (structure), T3 (repetition), T4 (stanza jobs) and T5 (rhyme with "breeze"). After the T2 fix, nothing gives an answer away. T5's prompt quotes one line but not its rhyme partner.
+- **3.T.T.4.b:** T1 and T5 use Rosa's poem. T2, T3 and T4 use their own stems. The T3 prompt says "In this poem, lines 2 and 4 rhyme" about the porch stanza, not about Rosa's poem. No reveals.
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures). None of its 9 warnings is in T-T34.

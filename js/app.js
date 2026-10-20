@@ -30,6 +30,7 @@
   /* ---------- navigation: every screen has an address, so the phone's
      Back button and a reload both land in the right place ---------- */
   let routing = false;
+  let pendingStep = null;
   let replaceNext = false;
   function setHash(hash, replace) {
     if (routing || replaceNext || replace) { replaceNext = false; history.replaceState(null, "", location.pathname + location.search + hash); return; }
@@ -186,7 +187,12 @@
       if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : "practice"); return; }
       if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
       if (parts[0] === "parents") { window.PP_PARENTS.open(parts[1]); return; }
-      if (parts[0] === "skill" && window.PP_SKILLS.open(decodeURIComponent(parts[1] || ""), parts[2])) return;
+      if (parts[0] === "skill") {
+        let st = pendingStep || parts[2]; pendingStep = null;
+        const ps = window.PP_PLAYER.state();
+        if (current === "player" && ps.setId === "SK:" + decodeURIComponent(parts[1] || "") + ":t") st = "test";
+        if (window.PP_SKILLS.open(decodeURIComponent(parts[1] || ""), st)) return;
+      }
       if (h === "mixed") { show("mixed"); return; }
       if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
       show("home");
@@ -241,7 +247,7 @@
   let returnTo = null;
   function rememberReturn() {
     returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot() } :
-               current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step() } :
+               current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), pushed: true } :
                current === "section" ? { kind: "section", key: sectionKey } : returnTo;
   }
   function back() {
@@ -250,7 +256,18 @@
     replaceNext = true;
     const r = returnTo;
     if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
-    if (r && r.kind === "skill") { window.PP_SKILLS.open(r.code, r.step); return; }
+    if (r && r.kind === "skill") {
+      /* after a skill test, show the Test step with the result */
+      const ps = window.PP_PLAYER.state();
+      const st = current === "player" && ps.setId === "SK:" + r.code + ":t" ? "test" : r.step;
+      if (r.pushed && current === "player") {
+        /* the skill page is the entry just before the player: go back to it
+           so the phone's Back button does not land on the same page twice */
+        replaceNext = false; r.pushed = false; pendingStep = st;
+        history.back(); return;
+      }
+      window.PP_SKILLS.open(r.code, st); return;
+    }
     if (current === "player" && window.PP_PLAYER.state().section === "skill") { window.PP_SKILLS.open(PP.byId[window.PP_PLAYER.state().setId].code); return; }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));

@@ -394,7 +394,8 @@
   function start(setId, mode) {
     const set = PP.byId[setId];
     if (!set) return;
-    if (window.PP_APP.current() !== "player") window.PP_APP.rememberReturn();
+    const switching = window.PP_APP.current() === "player";
+    if (!switching) window.PP_APP.rememberReturn();
     else if (!window.PP_APP.canLeave()) return;
     run.submitted = false;
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
@@ -412,7 +413,9 @@
     el("passage-note").hidden = true;
     renderItem();
     window.PP_APP.show("player");
-    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode);
+    /* practice -> test inside the player replaces the history entry, so Back
+       returns to where the activity was opened from in one press */
+    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode, switching);
     window.PP_APP.track();
     el("player-title").focus();
   }

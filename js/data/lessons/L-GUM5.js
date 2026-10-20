@@ -111,7 +111,7 @@ PP.addLesson({
       choices: [
         { text: "We bought Greek olives at the market.", correct: true },
         { text: "My sister has a checkup with dr. Kim today." },
-        { text: "Parade route: Main st. to Pine Ave." },
+        { text: "Parade route: Main st. to the park." },
         { text: "Grandpa told us about his trip to the irish coast." }
       ],
       clue: "Check every title, every short form and every word made from the name of a place.",
@@ -473,7 +473,7 @@ PP.addLesson({
       prompt: "Select the sentence that has an error.",
       options: [
         "The farmers' trucks lined up at the market.",
-        "The children's laughter filled the gym.",
+        "The painters' brushes soaked in a jar of water.",
         "Our neighbors' yards are full of leaves.",
         "The two friend's tents were set up by the lake.",
         "The girls' relay team won first place."

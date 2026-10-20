@@ -47,3 +47,9 @@ Checker: `node verification/check-content.js --all` reports PASS (0 failures, 0 
 - [NIT] SK-GUM5-5-T4: the clue pointed to the only time word. **fixed:** The clue now reads "Read the sentence with each word in each blank. Which words make the ideas fit together?"
 
 Checker after round 2: PASS (0 failures, 0 warnings).
+
+## Final (docs/review-lessons/L-GUM5-final.md)
+- [SHOULD] SK-GUM5-3-T5: the correct line "The children's laughter filled the gym." gave away the irregular-plural answers in T1 and T2. **fixed:** That line is now "The painters' brushes soaked in a jar of water.", a regular plural possessive. Its index in the hottext options is unchanged, so the answer stays [3].
+- [NIT] SK-GUM5-1-T1: the distractor showed its own error next to "Pine Ave.". **fixed:** It now reads "Parade route: Main st. to the park."
+
+Checker after the final fixes: PASS (0 failures, 0 warnings for L-GUM5).
