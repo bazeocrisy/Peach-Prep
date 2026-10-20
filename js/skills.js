@@ -179,7 +179,7 @@
           const st = entryStatus(k);
           const b = make("button", "skill-line is-" + st);
           b.type = "button"; b.dataset.code = k;
-          b.appendChild(make("span", "sl-num", String(g.skills.indexOf(k) + 1)));
+          b.appendChild(make("span", "sl-num", ids[k] || String(g.skills.indexOf(k) + 1)));
           const body = make("span", "sl-body");
           const t = make("span", "sl-title", entryTitle(k));
           body.appendChild(t);
@@ -268,8 +268,9 @@
     const groups = [];
     recs.forEach(s => { let g = groups.find(x => x.name === s.group); if (!g) { g = { name: s.group, recs: [] }; groups.push(g); } g.recs.push(s); });
     groups.forEach(g => {
-      const grp = make("div", "cat-group");
-      grp.appendChild(make("h3", "group-title", groupName(g.name)));
+      const grp = make("details", "cat-group habit-group");
+      if (!groups.indexOf(g)) grp.open = true;
+      grp.appendChild(make("summary", "group-title", groupName(g.name).replace(/^[A-Z0-9.\-]+(\s*[·:\-–]\s*|\s+)/, "") + " (" + g.recs.length + ")"));
       const ol = make("ol", "skill-lines");
       g.recs.forEach((s, i) => {
         const li = make("li");
@@ -299,7 +300,9 @@
     const body = make("tbody");
     (window.PP_STRUCTURES || []).forEach(S => {
       const tr = make("tr");
-      const n = make("td"); n.appendChild(make("strong", "", S.name)); n.appendChild(make("span", "ct-what", S.what)); tr.appendChild(n);
+      const n = make("td");
+      if (lessons[S.key]) { const nb = make("button", "linkish ct-open", S.name); nb.type = "button"; nb.addEventListener("click", ev => { ev.stopPropagation(); open(S.key); }); n.appendChild(nb); }
+      else n.appendChild(make("strong", "", S.name)); n.appendChild(make("span", "ct-what", S.what)); tr.appendChild(n);
       const w = make("td"); S.words.forEach(x => w.appendChild(make("span", "clue-chip", x))); tr.appendChild(w);
       const a = make("td"); a.appendChild(make("span", "", S.ask)); tr.appendChild(a);
       if (lessons[S.key]) {
@@ -341,7 +344,8 @@
     el("sk-code").textContent = L ? (sid ? sid + " · " : "") + (CAT.find(c => c.id === catOf[k]) || {}).name : codeLabel(s);
     el("sk-title").textContent = L ? L.title : titleOf(s);
     const codes = L ? codesOf(L) : [s.code];
-    el("sk-plain").textContent = byCode[codes[0]].plain;
+    const STR = L && (window.PP_STRUCTURES || []).find(x => x.key === k && k !== L.code);
+    el("sk-plain").textContent = STR ? STR.what + " Clue words help you spot it." : byCode[codes[0]].plain;
     el("sk-plain").hidden = !L && titleOf(s) === s.plain;
     const tags = el("sk-tags"); clear(tags);
     codes.forEach(c => {
@@ -410,7 +414,8 @@
       b.setAttribute("aria-selected", k === step ? "true" : "false");
       b.appendChild(make("span", "step-n", done[k] ? "✓" : String(i + 1)));
       b.appendChild(make("span", "step-name", name));
-      if (done[k]) b.setAttribute("aria-label", name + ", done");
+      b.appendChild(make("span", "step-short", ({ teach: "Learn", learn: "Watch", practice: "Practice", "try": "Try", test: name === "Check" ? "Check" : "Test" })[k]));
+      b.setAttribute("aria-label", name + (done[k] ? ", done" : ""));
       b.addEventListener("click", () => go(k));
       host.appendChild(b);
     });
@@ -432,7 +437,7 @@
   function nextBtn(label) {
     const n = nextStep();
     if (!n) return document.createTextNode("");
-    const b = make("button", "btn btn-primary step-next", label || ("Next: " + n[1]));
+    const b = make("button", "btn " + (["practice", "try", "test"].indexOf(step) >= 0 ? "btn-soft" : "btn-primary") + " step-next", label || ("Next: " + n[1]));
     b.type = "button"; b.addEventListener("click", () => go(n[0]));
     return b;
   }
@@ -483,7 +488,7 @@
       if (ex.note) box.appendChild(make("p", "ex-note", ex.note));
       card.appendChild(box);
     });
-    if (T.tip) { const tip = make("p", "teach-tip"); tip.appendChild(make("strong", "", "Test tip: ")); tip.appendChild(document.createTextNode(T.tip)); card.appendChild(tip); }
+    if (T.tip) { const tip = make("p", "teach-tip"); tip.appendChild(make("strong", "", lessonOnTest(lessons[cur]) ? "Test tip: " : "Tip: ")); tip.appendChild(document.createTextNode(T.tip)); card.appendChild(tip); }
     host.appendChild(card);
     host.appendChild(nextBtn());
   }

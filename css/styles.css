@@ -491,8 +491,8 @@ fieldset.trait{margin:0 0 12px;}
 .up-next{margin-top:14px;}
 .un-label{margin:0 0 6px;color:#E7EEF8;font-weight:700;font-size:.92rem;}
 .un-done{color:#fff;font-weight:700;}
-.hero .un-btn{background:var(--peach);border-color:var(--peach);max-width:100%;white-space:normal;text-align:left;}
-.hero .un-btn:hover{background:var(--peach-deep);}
+.hero .un-btn{background:var(--peach-deep);border-color:var(--peach-deep);max-width:100%;white-space:normal;text-align:left;}
+.hero .un-btn:hover{background:var(--navy);border-color:var(--navy);}
 .cat-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0;}
 .cat-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:#fff;border:1px solid var(--line);
   border-top:6px solid var(--c,var(--navy));border-radius:var(--radius);padding:12px;cursor:pointer;box-shadow:var(--shadow);min-height:112px;}
@@ -537,8 +537,8 @@ fieldset.trait{margin:0 0 12px;}
 .clue-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;}
 .clue-chip{display:inline-block;background:#fff;border:1px solid var(--peach-edge);border-radius:var(--pill);padding:2px 10px;font-weight:800;text-decoration:underline;text-underline-offset:3px;color:var(--navy-deep);margin:2px 4px 2px 0;}
 .clue-ask,.clue-draw{margin:0 0 6px;}
-.clue-toggle{min-height:40px;border-radius:var(--pill);border:1px solid var(--peach-edge);background:var(--peach-tint);color:var(--peach-deep);font-family:var(--head);font-weight:700;padding:6px 14px;margin:0 0 10px;cursor:pointer;}
-.clue-toggle[aria-pressed="true"]{background:var(--peach);color:#fff;border-color:var(--peach);}
+.clue-toggle{min-height:40px;border-radius:var(--pill);border:1px solid var(--peach-edge);background:var(--peach-tint);color:var(--navy-deep);font-family:var(--head);font-weight:700;padding:6px 14px;margin:0 0 10px;cursor:pointer;}
+.clue-toggle[aria-pressed="true"]{background:var(--peach-deep);color:#fff;border-color:var(--peach-deep);}
 mark.clue-w{background:none;color:inherit;}
 .show-clues mark.clue-w{background:#FFE58A;font-weight:800;text-decoration:underline;border-radius:3px;padding:0 1px;}
 .clue-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
@@ -577,3 +577,33 @@ mark.clue-w{background:none;color:inherit;}
 }
 
 @media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important;}}
+
+/* ---------- 2.1 audit polish ---------- */
+.five-min summary::before,.sk-official summary::before,.habit-group>summary::before{content:"▸";display:inline-block;width:1.1em;color:var(--peach-deep);}
+.five-min[open]>summary::before,.sk-official[open]>summary::before,.habit-group[open]>summary::before{content:"▾";}
+.habit-group>summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;}
+.habit-group>summary::-webkit-details-marker,.five-min summary::-webkit-details-marker,.sk-official summary::-webkit-details-marker{display:none;}
+#habit-list .sl-code{display:none;}
+.step-short{display:none;}
+@media (max-width:420px){
+  .step-btn .step-name{display:none;}
+  .step-btn .step-short{display:inline;font-size:.8rem;font-weight:700;}
+  .step-btn{min-height:48px;padding:4px 1px;}
+  .bar-brand{display:none;}
+  .filter-btn{flex:1 1 auto;}
+}
+.filter-btn{white-space:nowrap;}
+.sk-clue .linkish,.clue-box .linkish,.ct-open{min-height:44px;display:inline-flex;align-items:center;text-align:left;}
+.ct-open{font-weight:800;font-family:var(--head);color:var(--navy-deep);}
+.tool-link{display:inline-flex;align-items:center;min-height:44px;}
+.flu-text{text-align:left;}
+.hero .un-btn{border-radius:16px;}
+@media print{
+  .clue-chip{text-decoration:none;}
+  .clue-tap-hint{display:none !important;}
+  .ct-open{text-decoration:none;color:#000;}
+  #screen-clues::after{content:"Peach Prep · Clue Word Cheat Sheet";display:block;margin-top:12px;font-size:.8rem;color:#555;}
+}
+#habit-list{display:block;max-width:760px;columns:auto;}
+#habit-list .habit-group{break-inside:avoid;border-bottom:1px solid var(--line);margin:0;padding:2px 0;}
+.habit-group>summary{font-family:var(--head);font-weight:800;color:var(--navy);font-size:1.05rem;}
