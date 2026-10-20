@@ -246,3 +246,18 @@ Rules on top of §5 and §6:
 - Item ids start with `SK-` and are unique across the whole site.
 - Mastered = at least 80% of the test's points. Progress is saved on the device only.
 - Writing standards are tested on the Milestones through revising and editing questions. Their Practice and Test use those formats (choose the best sentence to add, the best transition, the best ending, and so on), and the lesson adds a `write` activity scored by a grown-up with the checklist.
+
+### 8b. Lesson keys, multiple codes, clue words, coaching (2.1)
+- `key` (optional): a unique id when one standard has more than one lesson, for example the six text-structure lessons. Defaults to `code`.
+- `codes` (optional): every Georgia code the lesson targets. It must include `code`. Each code is shown on the skill line and the skill page.
+- `clues: { words: [...], ask: "the one question to ask", draw: "the organizer to draw" }`: shown as a clue-word box in Learn It. In practice, the words can be highlighted in the passage.
+- `coach: { mixup, strong, notyet, ido, wedo, youdo, everyday }`: shown in the grown-up box as "Common mix-up", "What to listen for" and "Teach it in 5 minutes".
+- **Steps (2.1):**
+  1. Learn It (`teach`)
+  2. Watch Me (`learn`)
+  3. Practice Together (`practice`): the first half of `practice`, with Help me.
+  4. Try It Yourself (`try`): the second half of `practice`. Help unlocks after one wrong try.
+  5. Test Your Knowledge (`test`)
+
+  Lessons with an `activity` keep: Learn It, Watch Me, Practice, Check.
+- `clues.groups` (optional): the clue words sorted by structure, used by the "which structure is it?" lesson. When it is present, clue words are not highlighted in passages. Highlighting is also off in Test mode, which stays unaided.

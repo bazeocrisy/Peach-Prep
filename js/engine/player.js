@@ -75,6 +75,30 @@
       }
       host.appendChild(art);
     });
+    const tg = el("clue-toggle");
+    if (tg && !hostEl) {
+      /* clue words help in practice; the test stays unaided */
+      const n = set.clueWords && run.mode !== "test" ? addClueMarks(host, set.clueWords) : 0;
+      tg.hidden = !n;
+      el("passage-pane").classList.remove("show-clues");
+      tg.setAttribute("aria-pressed", "false");
+      tg.textContent = "Show clue words";
+    }
+  }
+  /* Clue words (text structure): wrap each clue word in the passage so the
+     "Show clue words" button can highlight them. Matching is whole-word and
+     ignores case; longer phrases are matched first. */
+  function esc(t) { return String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]); }
+  function addClueMarks(host, words) {
+    const list = words.slice().sort((a, b) => b.length - a.length).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const re = new RegExp("\\b(" + list.join("|") + ")\\b", "gi");
+    let found = 0;
+    Array.from(host.querySelectorAll(".sent")).forEach(sp => {
+      const t = sp.textContent;
+      if (!re.test(t)) return; re.lastIndex = 0;
+      sp.innerHTML = esc(t).replace(re, m => { found++; return '<mark class="clue-w">' + m + "</mark>"; });
+    });
+    return found;
   }
   function markSelected(refs) {
     Array.from(document.querySelectorAll("#passage-pane-body .sent")).forEach(s => {
@@ -198,7 +222,7 @@
     el("q-prev").hidden = run.mode === "practice";
     el("q-prev").disabled = i === 0;
     if (run.mode === "practice") {
-      el("q-help").hidden = st.solved;
+      el("q-help").hidden = st.solved || (run.tryMode && st.wrong < 1 && st.help < 1);
       el("q-help").disabled = st.help >= 3;
       el("q-help").textContent = st.help === 0 ? "Help me" : st.help < 3 ? "Help me (next step)" : "Help me";
       el("q-check").hidden = st.solved;
@@ -246,7 +270,7 @@
         while (st.help < 3) help();
         setFeedback({ kind: "try", label: "Let's find it together", text: part + "Read the walk-through above, then try again." });
       } else {
-        setFeedback({ kind: "try", label: "Not quite", text: part + "Try again, or press Help me for a hint." });
+        setFeedback({ kind: "try", label: "Not quite", text: part + (run.tryMode && st.wrong === 1 ? "Try again. Help me is now on if you need a hint." : "Try again, or press Help me for a hint.") });
       }
     }
     syncControls();
@@ -288,12 +312,13 @@
     const n = run.set.items.length;
     const first = run.state.filter(s => s && s.firstTry).length;
     const skill = run.set.kind === "skill";
-    if (skill) window.PP_SKILLS.recordPractice(run.set.code);
+    if (skill) window.PP_SKILLS.recordPractice(run.set.code, run.set.part);
+    const nx = skill && run.set.next;
     el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
       " right on your first try without help. Asking for help is never a mistake; it is how you learn." +
-      (skill && PP.byId[run.set.pair] ? " When you are ready, take the skill test." : "");
-    el("done-test").hidden = skill && !PP.byId[run.set.pair];
-    el("done-test").textContent = skill ? "Take the skill test" : "Try it as a test";
+      (nx ? (nx.mode === "test" ? " When you are ready, take the skill test." : " Next, try some on your own.") : "");
+    el("done-test").hidden = skill && !nx;
+    el("done-test").textContent = nx ? nx.label : "Try it as a test";
     el("done-back").textContent = skill ? "Back to the skill" : "Back to the list";
     showStage("done");
     el("done-title").focus();
@@ -347,7 +372,7 @@
       : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
     el("res-skills").hidden = run.set.kind === "skill";
     buildReview(rows);
-    el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !PP.byId[run.set.pair]);
+    el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !run.set.practiceId);
     el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
     showStage("results");
     el("res-title").focus();
@@ -399,9 +424,10 @@
     else if (!window.PP_APP.canLeave()) return;
     run.submitted = false;
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
+    run.tryMode = mode === "try";
     run.pos = 0; run.ctxs = []; run.state = [];
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? "Test" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? "Test" : run.tryMode ? "Try it yourself" : "Practice";
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     renderPassages(set);
@@ -415,7 +441,7 @@
     window.PP_APP.show("player");
     /* practice -> test inside the player replaces the history entry, so Back
        returns to where the activity was opened from in one press */
-    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode, switching);
+    window.PP_APP.setHash("#play/" + set.id + "/" + (run.tryMode ? "try" : run.mode), switching);
     window.PP_APP.track();
     el("player-title").focus();
   }
@@ -434,6 +460,11 @@
     el("q-prev").addEventListener("click", prev);
     el("tab-passage").addEventListener("click", () => showPane("passage"));
     el("tab-question").addEventListener("click", () => showPane("question"));
+    el("clue-toggle").addEventListener("click", () => {
+      const on = el("passage-pane").classList.toggle("show-clues");
+      el("clue-toggle").setAttribute("aria-pressed", on ? "true" : "false");
+      el("clue-toggle").textContent = on ? "Hide clue words" : "Show clue words";
+    });
     el("confirm-back").addEventListener("click", () => { showStage("work"); renderItem(); });
     el("confirm-submit").addEventListener("click", submit);
     el("res-review-btn").addEventListener("click", () => {
@@ -442,9 +473,11 @@
     });
     el("res-again").addEventListener("click", () => start(run.set.id, "test"));
     /* a skill's practice and test are two different question sets */
-    const other = () => (run.set.kind === "skill" && run.set.pair) || run.set.id;
-    el("res-practice").addEventListener("click", () => start(other(), "practice"));
-    el("done-test").addEventListener("click", () => start(other(), "test"));
+    el("res-practice").addEventListener("click", () => start((run.set.kind === "skill" && run.set.practiceId) || run.set.id, "practice"));
+    el("done-test").addEventListener("click", () => {
+      const nx = run.set.kind === "skill" && run.set.next;
+      if (nx) start(nx.id, nx.mode); else start(run.set.id, "test");
+    });
     ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 

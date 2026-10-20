@@ -6,7 +6,7 @@ Serve first:  node verification/serve.js . 8350
 Exit code 1 on any failure. Font CDN requests are blocked on purpose
 (the build sandbox cannot reach them), so they are not counted.
 """
-import sys, json
+import sys, json, re
 from playwright.sync_api import sync_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8350/"
@@ -49,10 +49,13 @@ with sync_playwright() as p:
 
     # ---------- 1. Home ----------
     h = pg.evaluate("""({title:document.title, cards:document.querySelectorAll('#section-grid .section-card').length,
-      rows:document.querySelectorAll('#skill-list .skill-row-btn').length, std:PP_STANDARDS.length,
+      rows:document.querySelectorAll('#skill-list .skill-line').length, want:PP_CATALOG.reduce((a,c)=>a+c.groups.reduce((b,g)=>b+g.skills.filter(k=>PP.lessons[k]||k.indexOf('task:')===0).length,0),0),
+      std:PP_STANDARDS.length, cards:document.querySelectorAll('#cat-cards .cat-card').length,
+      covered:PP_STANDARDS.filter(s=>s.tested!=='embedded').every(s=>PP_SKILLS.lessonFor(s.code)),
       foot:document.querySelector('.site-foot').textContent, build:document.getElementById('build-badge').textContent,
       sets:PP.sets.filter(s=>s.section!=='skill').length, tasks:PP.tasks.length, manifest:PP_MANIFEST})""")
-    ok("1.1 home lists every Georgia standard as a tappable row", h["rows"] == h["std"] and h["std"] > 140, (h["rows"], h["std"]))
+    ok("1.1 home: five category cards and every catalog skill as a tappable line", h["cards"] == 5 and h["rows"] == h["want"] and h["rows"] > 90, (h["cards"], h["rows"], h["want"]))
+    ok("1.1c every non-habit Georgia standard has a lesson", h["covered"])
     ok("1.1b mixed practice screen has the four section cards", h["cards"] == 4, h["cards"])
     ok("1.2 every manifest set loaded", h["sets"] == len(h["manifest"]["sets"]), h)
     lc = pg.evaluate("({n:Object.keys(PP.lessons).length})")
@@ -231,28 +234,33 @@ with sync_playwright() as p:
     # ---------- 9. Skills: home list, Teach / Learn / Practice / Test ----------
     pg.evaluate("localStorage.clear()"); pg.goto(BASE); pg.wait_for_timeout(700)
     pg.fill("#skill-search", "pronoun"); pg.wait_for_timeout(60)
-    srch = pg.evaluate("""[...document.querySelectorAll('#skill-list .skill-row-btn')].map(b=>{const s=PP_STANDARDS.find(x=>x.code===b.dataset.code);
-       return [s.code,s.display,s.plain,s.text,s.gum||'',b.textContent].join(' ').toLowerCase();})""")
+    srch = pg.evaluate("""[...document.querySelectorAll('#skill-list .skill-line')].map(b=>{const L=PP.lessons[b.dataset.code];
+       return [b.textContent].concat((L.codes||[L.code]).map(c=>{const s=PP_STANDARDS.find(x=>x.code===c);return [s.code,s.display,s.plain,s.text,s.gum||''].join(' ')})).join(' ').toLowerCase();})""")
     ok("9.1 search narrows the list to matching skills", 0 < len(srch) < 20 and all("pronoun" in t for t in srch), len(srch))
     pg.fill("#skill-search", ""); pg.click("[data-filter=test]"); pg.wait_for_timeout(60)
-    ft = pg.evaluate("""({n:document.querySelectorAll('#skill-list .skill-row-btn').length,
-       want:PP_STANDARDS.filter(s=>['reading','writing','both'].indexOf(s.tested)>=0).length})""")
-    ok("9.2 'On the test' shows exactly the assessed standards", ft["n"] == ft["want"], ft)
+    ft = pg.evaluate("""(()=>{const lines=[...document.querySelectorAll('#skill-list .skill-line')];
+       const T=c=>{const s=PP_STANDARDS.find(x=>x.code===c);return s&&['reading','writing','both'].indexOf(s.tested)>=0};
+       const bad=lines.filter(b=>{const k=b.dataset.code;if(k.indexOf('task:')===0)return false;const L=PP.lessons[k];return !(L.codes||[L.code]).some(T)}).map(b=>b.dataset.code);
+       const covered=PP_STANDARDS.filter(s=>T(s.code)).every(s=>lines.some(b=>{const L=PP.lessons[b.dataset.code];return L&&(L.codes||[L.code]).indexOf(s.code)>=0}));
+       return {n:lines.length,bad,covered};})()""")
+    ok("9.2 'On the test' shows only tested skills, and every tested standard is there", not ft["bad"] and ft["covered"] and ft["n"] > 60, ft)
     pg.click("[data-filter=all]")
     lessons = pg.evaluate("Object.keys(PP.lessons)")
     ok("9.3 lessons are loaded", len(lessons) >= 1, len(lessons))
     # every lesson, every step renders
     step_fail = []
     for code in lessons:
-        for st in ("teach", "learn", "practice", "test"):
+        sts = pg.evaluate("(c=>{PP_SKILLS.open(c);return [...document.querySelectorAll('#sk-steps .step-btn')].map(b=>b.dataset.step)})(%s)" % json.dumps(code))
+        if len(sts) < 4: step_fail.append(code + " only %d steps" % len(sts))
+        for st in sts:
             r = pg.evaluate("""(c=>{PP_SKILLS.open(c,'%s');const p=document.getElementById('sk-panel');
               return {cur:PP_APP.current(), sel:(document.querySelector('#sk-steps [aria-selected=true]')||{}).dataset, len:p.textContent.length,
-                      btn:!!p.querySelector('#sk-start-practice,#sk-start-test,.flu-w,.trace-sheet,.write-checklist,.learn-next')||'%s'=='teach'};})('%s')""" % (st, st, code.replace("'", "\\'")))
+                      btn:!!p.querySelector('#sk-start-practice,#sk-start-try,#sk-start-test,.flu-w,.trace-sheet,.write-checklist,.learn-next')||'%s'=='teach'};})('%s')""" % (st, st, code.replace("'", "\\'")))
             if r["cur"] != "skill" or not r["sel"] or r["sel"].get("step") != st or r["len"] < 80 or not r["btn"]:
                 step_fail.append(code + " " + st + " " + json.dumps(r))
-    ok("9.4 every lesson renders all four steps", not step_fail, step_fail[:4])
+    ok("9.4 every lesson renders every step (five for quiz skills)", not step_fail, step_fail[:4])
     # one full journey on a quiz lesson
-    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t']" % c)), None)
+    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.byId['SK:%s:y']" % (c, c))), None)
     if qcode:
         pg.evaluate("PP_SKILLS.open('%s')" % qcode); pg.wait_for_timeout(60)
         pg.click("[data-step=learn]"); pg.wait_for_timeout(40)
@@ -265,8 +273,17 @@ with sync_playwright() as p:
             pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
         dn = pg.evaluate("({done:!document.getElementById('stage-done').hidden, t:document.getElementById('done-test').textContent})")
         pg.click("#done-test"); pg.wait_for_timeout(80)
+        intry = pg.evaluate("({s:PP_PLAYER.state(), help:!document.getElementById('q-help').hidden})")
+        ok("9.5a Practice Together leads to Try It Yourself, where Help me starts hidden", dn["done"] and "yourself" in dn["t"].lower() and intry["s"]["setId"] == "SK:%s:y" % qcode and not intry["help"], (dn, intry))
+        pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
+        ok("9.5b in Try It Yourself, Help me unlocks after one wrong try", pg.evaluate("!document.getElementById('q-help').hidden"))
+        pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
+        for i in range(1, intry["s"]["total"]):
+            pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
+        dn2 = pg.evaluate("document.getElementById('done-test').textContent")
+        pg.click("#done-test"); pg.wait_for_timeout(80)
         intest = pg.evaluate("PP_PLAYER.state()")
-        ok("9.5 practice finishes and 'Take the skill test' opens the separate test set", dn["done"] and "skill test" in dn["t"] and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn, intest["setId"]))
+        ok("9.5 Try It Yourself finishes and 'Take the skill test' opens the separate test set", "skill test" in dn2 and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn2, intest["setId"]))
         for i in range(intest["total"]):
             pg.evaluate(WRONG); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
@@ -279,14 +296,14 @@ with sync_playwright() as p:
         ok("9.6 a failed test says how many points master it; a passing test masters the skill", "To master" in g1 and "mastered this skill" in g2, (g1, g2))
         pg.click("#res-back"); pg.wait_for_timeout(80)
         bk = pg.evaluate("({cur:PP_APP.current(), code:PP_SKILLS.current(), step:PP_SKILLS.step(), done:document.querySelectorAll('#sk-steps .step-btn.is-done').length})")
-        ok("9.7 Back from a skill test returns to the skill's Test step, with all four steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 4, bk)
+        ok("9.7 Back from a skill test returns to the skill's Test step, with all five steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 5, bk)
         h0 = pg.evaluate("location.hash"); pg.go_back(); pg.wait_for_timeout(250)
         h1 = pg.evaluate("[PP_APP.current(), location.hash]")
         same = h1[0] == "skill" and pg.evaluate("PP_SKILLS.current()") == qcode
         ok("9.7b one phone Back from there leaves that skill (no duplicate history entry)", not same, (h0, h1))
         pg.go_forward(); pg.wait_for_timeout(250)
         pg.click("#skill-back"); pg.wait_for_timeout(80)
-        hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.textContent}))('%s')""" % qcode)
+        hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.getAttribute('aria-label')||''}))('%s')""" % qcode)
         ok("9.8 All skills returns home on that skill's row, now marked Mastered", hm["cur"] == "home" and hm["focus"] == qcode and "Mastered" in hm["txt"], hm)
         pg.reload(); pg.wait_for_timeout(700)
         kept = pg.evaluate("PP_SKILLS.status('%s')" % qcode)
@@ -294,7 +311,7 @@ with sync_playwright() as p:
         pg.goto(BASE + "#skill/" + qcode + "/learn"); pg.wait_for_timeout(700)
         ok("9.10 a skill page address opens that skill and step", pg.evaluate("PP_APP.current()=='skill' && PP_SKILLS.step()=='learn'"))
     # pending and habit pages
-    pend = pg.evaluate("PP_STANDARDS.filter(s=>!PP.lessons[s.code]).map(s=>s.code)")
+    pend = pg.evaluate("PP_STANDARDS.filter(s=>!PP_SKILLS.lessonFor(s.code)).map(s=>s.code)")
     pf = []
     for c in pend:
         r = pg.evaluate("""(c=>{PP_SKILLS.open(c);return {cur:PP_APP.current(), steps:!document.getElementById('sk-steps').hidden, t:document.getElementById('sk-panel').textContent}})('%s')""" % c)
@@ -323,6 +340,30 @@ with sync_playwright() as p:
     ok("9.14 the cursive font loads from the site itself", curs)
     pg.evaluate("localStorage.clear()")
 
+    # ---------- 10. 2.1: clue words, cheat sheet, habits ----------
+    ck = next((c for c in lessons if pg.evaluate("(k=>!!(PP.byId['SK:'+k+':p']&&PP.byId['SK:'+k+':p'].clueWords&&PP.byId['SK:'+k+':p'].passages.length))(%s)" % json.dumps(c))), None)
+    if ck:
+        pg.evaluate("PP_PLAYER.start(%s,'practice')" % json.dumps("SK:" + ck + ":p")); pg.wait_for_timeout(80)
+        c0 = pg.evaluate("({vis:!document.getElementById('clue-toggle').hidden, marks:document.querySelectorAll('#passage-pane-body mark.clue-w').length})")
+        pg.evaluate("document.getElementById('player-grid').dataset.pane='passage'")
+        pg.click("#clue-toggle"); pg.wait_for_timeout(30)
+        c1 = pg.evaluate("document.getElementById('passage-pane').classList.contains('show-clues')")
+        ok("10.1 Show clue words highlights the clue words in a practice passage", c0["vis"] and c0["marks"] > 0 and c1, (ck, c0, c1))
+        pg.evaluate("PP_PLAYER.abandon()")
+        if pg.evaluate("!!PP.byId[%s]" % json.dumps("SK:" + ck + ":t")):
+            pg.evaluate("PP_PLAYER.start(%s,'test')" % json.dumps("SK:" + ck + ":t")); pg.wait_for_timeout(80)
+            ok("10.2 the clue-word button is off in tests", pg.evaluate("document.getElementById('clue-toggle').hidden"))
+            pg.evaluate("PP_PLAYER.abandon()")
+    pg.evaluate("PP_APP.openClues()"); pg.wait_for_timeout(80)
+    cs = pg.evaluate("({rows:document.querySelectorAll('#clue-sheet tbody tr').length, scr:PP_APP.current()})")
+    ok("10.3 the Clue Word Cheat Sheet shows the six structures", cs["scr"] == "clues" and cs["rows"] == 6, cs)
+    pg.evaluate("PP_APP.openHabits()"); pg.wait_for_timeout(80)
+    hb = pg.evaluate("({n:document.querySelectorAll('#habit-list .skill-line').length, want:PP_STANDARDS.filter(s=>s.tested==='embedded').length})")
+    ok("10.4 Everyday habits lists every K-12 practice", hb["n"] == hb["want"] and hb["n"] > 50, hb)
+    pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(80)
+    un = pg.evaluate("({t:(document.getElementById('up-next-btn')||{}).textContent||''})")
+    ok("10.5 Up next names a skill with its id", bool(re.match(r"^[A-Z]{1,2}\d+ · ", un["t"])), un)
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------
@@ -334,11 +375,11 @@ with sync_playwright() as p:
             o = q.evaluate("document.documentElement.scrollWidth-document.documentElement.clientWidth")
             if o > 0: over.append("%d %s +%dpx" % (w, tag, o))
         chk("home")
-        for code in q.evaluate("PP_STANDARDS.map(s=>s.code)"):
-            if not q.evaluate("!!PP.lessons['%s']" % code):
-                continue
-            for st in ("teach", "learn", "practice", "test"):
-                q.evaluate("PP_SKILLS.open('%s','%s')" % (code, st)); chk("skill %s %s" % (code, st))
+        for scr in ("PP_APP.openClues()", "PP_APP.openHabits()", "PP_APP.goHome()"):
+            q.evaluate(scr); q.wait_for_timeout(60); chk(scr)
+        for code in q.evaluate("Object.keys(PP.lessons)"):
+            for st in ("teach", "learn", "practice", "try", "test"):
+                q.evaluate("PP_SKILLS.open(%s,'%s')" % (json.dumps(code), st)); chk("skill %s %s" % (code, st))
         for sec in ("reading", "writing", "language"):
             if q.evaluate("PP.sets.some(s=>s.section=='%s')||('%s'=='writing'&&PP.tasks.length)" % (sec, sec)):
                 q.evaluate("PP_APP.openSection('%s')" % sec); q.wait_for_timeout(60); chk(sec)

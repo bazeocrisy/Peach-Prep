@@ -107,8 +107,7 @@ function checkItem(set, it, S, lessonCode) {
     if (lessonCode) {
       /* a lesson question practices the lesson's own standard, tested or not */
       const std = it.std || [lessonCode];
-      if (std.indexOf(lessonCode) < 0) F(w, "std does not include the lesson code " + lessonCode);
-      std.filter(c => c !== lessonCode).forEach(c => { if (!codes.has(c)) F(w, "unknown std code " + c); });
+      std.forEach(c => { if (!codes.has(c)) F(w, "unknown std code " + c); });
     } else checkStd(w, it.std);
     const why = norm(it.why || ""), clue = norm(it.clue || "");
     /* choices are shuffled on screen, so never refer to a choice by position */
@@ -191,9 +190,17 @@ function checkItem(set, it, S, lessonCode) {
 /* ---------- skill lessons (SPEC §8) ---------- */
 const seenLesson = new Set();
 lessons.forEach(L => {
-  const S = "lesson " + (L.code || "(no code)");
+  const key = L.key || L.code;
+  const S = "lesson " + key;
   if (!codes.has(L.code)) F(S, "unknown standard code");
-  if (seenLesson.has(L.code)) F(S, "duplicate lesson"); seenLesson.add(L.code);
+  (L.codes || []).forEach(c => { if (!codes.has(c)) F(S, "unknown code in codes: " + c); });
+  if (L.codes && L.codes.indexOf(L.code) < 0) F(S, "codes must include the main code");
+  if (seenLesson.has(key)) F(S, "duplicate lesson key"); seenLesson.add(key);
+  if (L.clues) {
+    if (!Array.isArray(L.clues.words) || !L.clues.words.length) F(S, "clues.words missing");
+    if (!L.clues.ask) F(S, "clues.ask missing");
+  }
+  if (L.coach) ["mixup", "ido", "wedo", "youdo"].forEach(k => { if (!L.coach[k]) F(S, "coach." + k + " missing"); });
   const rec = STD.find(x => x.code === L.code) || {};
   if (!L.title) F(S, "missing title");
   const T = L.teach || {};
@@ -226,6 +233,7 @@ lessons.forEach(L => {
       if (!Array.isArray(it.passages)) F(S + " " + it.id, "needs passages: [...] (use [] for none)");
       else it.passages.forEach(pid => { if (!set.passages.some(p => p.id === pid)) F(S + " " + it.id, "unknown passage " + pid); });
       checkItem({ passages: (L.passages || []).filter(p => (it.passages || []).indexOf(p.id) >= 0) }, it, S + " " + k, L.code);
+      if (it.std && !it.std.some(c => (L.codes || [L.code]).indexOf(c) >= 0)) F(S + " " + it.id, "std must include one of the lesson's codes");
     });
   });
   const pp = new Set([].concat(...(L.practice || []).map(i => i.passages || [])));

@@ -205,7 +205,22 @@ PP.addLesson({
 });
 PP.addLesson({
   code: "3.T.T.1.b",
+  codes: ["3.T.T.1.b", "3.T.SS.1.a"],
   title: "Story elements: characters, setting, problem and solution",
+  clues: {
+    words: ["one day", "but", "then", "so", "finally", "in the end"],
+    ask: "Who is the story about, and where are they?",
+    draw: "A story map: six boxes down the page for Character, Setting, Problem, Events, Solution and Lesson."
+  },
+  coach: {
+    mixup: "Children often name the first thing that happens as the problem. The problem is what the rest of the story is about fixing. Test it: \"Is the whole story about fixing that?\"",
+    strong: "\"Leo's kite is stuck in a tree, but he can't reach it, so his sister lifts him up and he pulls it free.\" The answer names the problem and how it gets fixed.",
+    notyet: "\"Leo is at the park.\" That is the setting, not the problem. Ask: \"What goes wrong for Leo?\"",
+    ido: "Read a short story aloud. When you reach the word but, stop and say: \"But is my clue. What comes after it is the problem. Now I know the rest of the story will be about fixing this.\"",
+    wedo: "Read the next part together. Ask, \"What did the character try? Did that try work? How do you know?\" Your child points to the clue word that shows it, like but, so or finally.",
+    youdo: "Your child fills in a story map on their own: Character, Setting, Problem, Events, Solution and Lesson. Check it afterward, not while they work.",
+    everyday: "After any movie or TV show, ask: \"What was the problem? What did they try first? How did it end?\" Sports work too: a close game has a problem (losing) and a solution (the comeback)."
+  },
   teach: {
     big: "Most stories have four parts: who it is about, where and when it happens, the problem, and how the problem gets solved.",
     points: [
@@ -213,7 +228,8 @@ PP.addLesson({
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet.",
       "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
-      "The parts work together. The problem gets the story moving, the middle shows the character trying to fix it, and the solution brings the story to an end."
+      "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution.",
+      "Sum up any story with five words: Somebody, Wanted, But, So, Then. Somebody is the main character. Wanted is what that character wants. But is the problem. So is what the character does about it. Then is how it ends."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -223,21 +239,22 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["On Saturday morning at the park, Leo's kite got stuck high in an oak tree. He could not reach it. His sister held him up on her shoulders, and Leo pulled the kite free."],
-      note: "Character: Leo (and his sister). Setting: the park on Saturday morning. Problem: the kite is stuck in a tree. Solution: his sister lifts him up so he can reach it."
+      lines: ["On Saturday morning at the park, Leo's kite got stuck high in an oak tree. Leo jumped, but he could not reach it. Then his sister held him up on her shoulders. In the end, Leo pulled the kite free."],
+      note: "Character: Leo (and his sister). Setting: the park on Saturday morning. Problem: the kite is stuck in a tree, and the clue word but shows it. Solution: his sister lifts him up so he can reach it. The clue words then and in the end lead you to it."
     },
     tip: "On the test, a question about the problem often asks what a character wants or what goes wrong. Find the part of the story where things change."
   },
   learn: [
     {
-      show: ["Maya wanted to win the school spelling bee, but she kept missing long words. Every night that week, she practiced ten hard words with her grandpa at the kitchen table. On Friday, she spelled every word right and won a blue ribbon."],
-      ask: "What is Maya's problem, and how is it solved?",
+      show: ["Maya wanted to win the school spelling bee, but she kept missing long words. So every night that week, she practiced ten hard words with her grandpa. Then on Friday, she spelled every word right. In the end, she won a blue ribbon."],
+      ask: "Sum up the story with Somebody, Wanted, But, So, Then.",
       steps: [
-        "Find what Maya wants. She wants to win the spelling bee.",
-        "Find what is in her way. She keeps missing long words. That is the problem.",
-        "Look near the end for what changes. She practices every night and spells every word right on Friday."
+        "Somebody: who is the story about? Maya. Wanted: what does she want? To win the spelling bee.",
+        "But: find the clue word but. What comes after it is the problem. She keeps missing long words.",
+        "So: what does Maya do about the problem? She practices ten hard words every night with her grandpa.",
+        "Then: how does it end? Look for then and in the end. She spells every word right and wins a blue ribbon."
       ],
-      answer: "The problem is that Maya misses long words. It is solved when she practices every night and then spells every word right."
+      answer: "Maya wanted to win the spelling bee, but she kept missing long words, so she practiced every night with her grandpa. Then she spelled every word right and won."
     },
     {
       show: ["The snow was so deep on the mountain road that the bus could not move. Inside, Mr. Diaz handed out crackers while the children sang songs. Two hours later, a snowplow cleared the road, and the bus rolled on to the ski lodge."],
@@ -290,6 +307,16 @@ PP.addLesson({
       ],
       clue: "The problem is what goes wrong. Find the part where Jada stops and looks surprised.",
       why: "The answer is \"Rabbits are eating the tomatoes at night.\" In paragraphs 2 and 3, half the tomatoes are gone and Grandma Bea says rabbits squeeze under the gate at night." },
+    { id: "SK-TT1b-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Read this sentence from paragraph 4. \"Then she had an idea.\" What does the clue word Then tell the reader?",
+      choices: [
+        { text: "Jada is about to try a way to fix the problem.", correct: true },
+        { text: "The problem in the story is just starting now." },
+        { text: "The problem has already been fixed for good." },
+        { text: "A new character is about to join the story." }
+      ],
+      clue: "Read what comes right before this sentence and right after it. Has the trouble already started? What happens next?",
+      why: "The answer is \"Jada is about to try a way to fix the problem.\" Then is a clue word that moves the story to the next event. Before it, the rabbits have already eaten half the tomatoes, so the problem has started. Right after it, Jada finds wire to block the gate. That is her try to fix the problem." },
     { id: "SK-TT1b-P3", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence tells how Jada solves the problem? Choose the sentence in the passage.",
       targets: ["p1:4:1", "p1:4:2", "p1:4:3", "p1:5:1", "p1:5:2"],
@@ -373,22 +400,27 @@ PP.addLesson({
       rows: [
         { text: "Omar's dad", answer: 0 },
         { text: "The book is not anywhere.", answer: 1 },
-        { text: "Omar finds the book under the swing's cushion.", answer: 2 }
+        { text: "Omar finds the book, and it is not ruined.", answer: 2 }
       ],
       clue: "Ask three questions: Who is in the story? What goes wrong? How is it fixed?",
-      why: "Omar's dad is a character. The book not being anywhere is the problem. Finding it under the swing's cushion is the solution, because it fixes the problem." }
+      why: "Omar's dad is a character. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
   ]
 });
 PP.addLesson({
   code: "3.T.T.1.c",
   title: "Characters and the story's lesson",
+  clues: {
+    words: ["so", "but", "in the end"],
+    ask: "Why did the character do that, and what did they learn in the end?",
+    draw: "A story map: six boxes down the page for Character, Setting, Problem, Events, Solution and Lesson. Fill in the Lesson box last."
+  },
   teach: {
     big: "What characters are like, what they want and how they change can teach me the lesson of the story.",
     points: [
       "A trait is what a character is like on the inside, such as kind, bossy, brave or honest. You figure it out from what the character says and does.",
       "Feelings and thoughts can change during a story. Look for clues like a red face or a big grin, and notice what a character thinks about. Thoughts can explain why a character makes a choice.",
-      "A motive is the reason a character does something. Ask: Why did they do that? What do they want?",
-      "The lesson, or central message, is what the character learns and what the story teaches you. Look at how the character changes and what happens because of their choices.",
+      "A motive is the reason a character does something. Ask: Why did they do that? What do they want? The clue word so often links a reason to a choice, and but often shows a feeling or a plan starting to change.",
+      "The lesson, or central message, is what the character learns and what the story teaches you. Look at how the character changes and what happens because of their choices. Words like in the end often lead you to it.",
       "A lesson works for anyone, like \"Telling the truth is better than hiding a mistake.\" It is not just what happened in the story."
     ],
     words: [
@@ -591,10 +623,24 @@ PP.addLesson({
 PP.addLesson({
   code: "3.T.T.1.d",
   title: "Compare two stories",
+  clues: {
+    words: ["both", "alike", "same", "but", "however", "unlike", "different", "while"],
+    ask: "How are they the same? How are they different?",
+    draw: "Three columns: Story 1 only | Both | Story 2 only. Or a Venn diagram, two overlapping circles."
+  },
+  coach: {
+    mixup: "\"But\" is used for many things. When you compare two stories, it signals a difference between them. Inside one story, it often signals a try that didn't work. Ask: \"Is this 'but' showing something that's different, or something that didn't work?\"",
+    strong: "\"Both Kai and Greta keep trying after their work gets knocked down, but Kai is on a sunny beach and Greta is in a snowy yard.\" One way alike, one way different, with a clue word.",
+    notyet: "Facts about only one of the stories, or only differences. Ask: \"What do they BOTH have?\"",
+    ido: "Hold up two things, like a fork and a spoon. Say, \"Both are for eating. But a fork has points and a spoon is round.\"",
+    wedo: "Read two short stories together. Sort what you notice about the characters, settings and lessons into Alike or Different, and point to the clue words as you go.",
+    youdo: "Your child fills in the three columns (Story 1 only, Both, Story 2 only) on their own. Check it afterward, not while they work.",
+    everyday: "Compare anything: two teams, two games, two movies, two pets. Ask for one way they're alike and one way they're different."
+  },
   teach: {
     big: "When I compare two stories, I look at the same parts in both, like the characters, settings and lessons, and tell how they are alike and how they are different.",
     points: [
-      "Compare means tell how things are alike. Contrast means tell how they are different.",
+      "Compare means tell how things are alike. Contrast means tell how they are different. Clue words like both, alike and same show how things are alike. Words like but, however, unlike, different and while show how they are different.",
       "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
       "Stories from different places and cultures can show people who feel and learn the same things.",

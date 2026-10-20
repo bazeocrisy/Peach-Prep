@@ -1,5 +1,5 @@
 /* Peach Prep — skills: the home list of every Georgia standard, and the
-   skill page with four steps: Teach, Learn, Practice, Test.
+   skill page with five steps: Learn It, Watch Me, Practice Together, Try It Yourself, Test Your Knowledge.
 
    Lessons are registered by js/data/lessons/*.js with PP.addLesson({...}).
    Each lesson's practice and test questions become two ordinary sets
@@ -15,37 +15,58 @@
   const STD = window.PP_STANDARDS || [];
   const byCode = {}; STD.forEach(s => { byCode[s.code] = s; });
 
-  /* ---------- lessons ---------- */
+  /* ---------- lessons ----------
+     A lesson is keyed by L.key (default: its Georgia code). L.codes lists every
+     Georgia code it targets. Its practice questions are split in two sets:
+     "Practice Together" (first half, with Help me) and "Try It Yourself"
+     (second half, help unlocks after a wrong try). */
   const lessons = {};
+  const keyOf = L => L.key || L.code;
+  const codesOf = L => L.codes || [L.code];
   function addLesson(L) {
-    if (!L || !L.code || lessons[L.code]) return;
-    lessons[L.code] = L;
-    const mk = (k, list) => {
-      const set = {
-        id: "SK:" + L.code + ":" + k, section: "skill", kind: "skill", code: L.code,
-        pair: "SK:" + L.code + ":" + (k === "p" ? "t" : "p"),
-        title: L.title + (k === "p" ? " · Practice" : " · Test"),
+    if (!L || !L.code || lessons[keyOf(L)]) return;
+    const K = keyOf(L);
+    lessons[K] = L;
+    const items = l => (l || []).map(it => Object.assign({ std: [L.code] }, it, { passages: it.passages || [] }));
+    const P = L.practice || [];
+    const half = P.length >= 4 ? Math.ceil(P.length / 2) : P.length;
+    const defs = [];
+    if (P.length) defs.push(["p", "Practice Together", P.slice(0, half)]);
+    if (P.length > half) defs.push(["y", "Try It Yourself", P.slice(half)]);
+    if ((L.test || []).length) defs.push(["t", "Test", L.test]);
+    defs.forEach(([k, label, list], i) => {
+      const nx = defs[i + 1];
+      PP.addSet({
+        id: "SK:" + K + ":" + k, section: "skill", kind: "skill", code: K, part: k,
+        next: nx ? { id: "SK:" + K + ":" + nx[0], mode: nx[0] === "t" ? "test" : nx[0] === "y" ? "try" : "practice",
+                     label: nx[0] === "t" ? "Take the skill test" : "Try it yourself" } : null,
+        practiceId: P.length ? "SK:" + K + ":p" : null,
+        title: L.title + " · " + label,
+        clueWords: L.clues && !L.clues.groups && L.clues.highlight !== false ? L.clues.words : null,
         passages: L.passages || [],
-        items: (list || []).map(it => Object.assign({ std: [L.code] }, it, { passages: it.passages || [] }))
-      };
-      PP.addSet(set);
-    };
-    if ((L.practice || []).length) mk("p", L.practice);
-    if ((L.test || []).length) mk("t", L.test);
+        items: items(list)
+      });
+    });
   }
   PP.addLesson = addLesson;
   PP.lessons = lessons;
+  /* the lesson for a Georgia code: the one whose main code it is, else the first that targets it */
+  function lessonFor(code) {
+    if (lessons[code]) return code;
+    const all = Object.keys(lessons);
+    return all.find(k => lessons[k].code === code) || all.find(k => codesOf(lessons[k]).indexOf(code) >= 0) || null;
+  }
 
   /* ---------- progress (this device only) ---------- */
   const KEY = "pp.progress.v1";
   function load() { try { return JSON.parse(window.localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
   let prog = load();
   function save() { try { window.localStorage.setItem(KEY, JSON.stringify(prog)); } catch (e) { /* private mode: progress lasts this visit */ } }
-  function rec(code) { prog[code] = prog[code] || {}; return prog[code]; }
-  function mark(code, step) { const r = rec(code); if (!r[step]) { r[step] = true; save(); } }
+  function rec(k) { prog[k] = prog[k] || {}; return prog[k]; }
+  function mark(k, step) { const r = rec(k); if (!r[step]) { r[step] = true; save(); } }
   function passMark(max) { return Math.ceil(max * 0.8); }
-  function recordTest(code, got, max) {
-    const r = rec(code);
+  function recordTest(k, got, max) {
+    const r = rec(k);
     r.tries = (r.tries || 0) + 1;
     if (!r.best || got / max > r.best.got / r.best.max) r.best = { got, max };
     const pass = got >= passMark(max);
@@ -53,12 +74,12 @@
     save();
     return pass;
   }
-  function recordPractice(code) { mark(code, "practiced"); }
-  function status(code) {
-    if (!lessons[code]) return habit(code) ? "habit" : "none";
-    const r = prog[code] || {};
+  function recordPractice(k, part) { mark(k, part === "y" ? "tried" : "practiced"); }
+  function status(k) {
+    if (!lessons[k]) { const lk = lessonFor(k); if (lk) return status(lk); return habit(k) ? "habit" : "none"; }
+    const r = prog[k] || {};
     if (r.mastered) return "mastered";
-    if (r.taught || r.learned || r.practiced || r.tries) return "started";
+    if (r.taught || r.learned || r.practiced || r.tried || r.tries) return "started";
     return "new";
   }
   function resetProgress() { prog = {}; save(); }
@@ -72,86 +93,114 @@
     no: ["Not on the test", "On Georgia's grade 3 grammar chart as a skill being introduced. Not on the Milestones yet."],
     embedded: ["Everyday habit", "A reading and writing habit used in every skill. Not tested on its own."]
   };
-  const onTest = s => ["reading", "writing", "both"].indexOf(s.tested) >= 0;
+  const onTest = s => !!s && ["reading", "writing", "both"].indexOf(s.tested) >= 0;
   const groupName = g => String(g || "").replace(/\s*\(K-12 GUM chart, grade 3 rows\)/, " (grammar chart)");
-  function codeLabel(s) { return s.gum ? "3-5.L.GC.1 · " + (s.level === "M" ? "Master" : s.level === "R" ? "Reinforce" : s.level === "I" ? "Introduce" : "Continue") : s.display; }
+  function codeLabel(s) { return s.gum ? "3.L.GC.1 · " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] : s.display; }
+  function shortCode(c) { const s = byCode[c]; return s ? (s.gum ? "3.L.GC.1" : s.display) : c; }
   const habit = code => (window.PP_HABITS || {})[code];
-  function titleOf(s) { const L = lessons[s.code], H = habit(s.code); return L ? L.title : H ? H.title : (s.gum ? cap(s.gum) : s.plain); }
+  function titleOf(s) { const lk = lessonFor(s.code), H = habit(s.code); return lk ? lessons[lk].title : H ? H.title : (s.gum ? cap(s.gum) : s.plain); }
   function cap(t) { t = String(t || ""); return t.charAt(0).toUpperCase() + t.slice(1); }
   const STATUS = { mastered: "Mastered", started: "Started", "new": "Not started", none: "Lesson coming", habit: "Tips for home" };
+  const lessonOnTest = L => codesOf(L).some(c => onTest(byCode[c]));
 
-  /* ---------- home list ---------- */
-  const STRANDS = [
-    { key: "Texts", name: "Reading and writing", line: "Stories, informational texts, opinion pieces, poems and research." },
-    { key: "Language", name: "Language", line: "Grammar, sentences and vocabulary." },
-    { key: "Foundations", name: "Foundations", line: "Phonics, fluency and cursive. Taught in class, not on the Milestones." },
-    { key: "Practices", name: "Everyday habits", line: "Georgia's K-12 practices: habits good readers and writers use in every skill." }
-  ];
+  /* ---------- the catalog (IXL-style): categories, lettered groups, numbered skills ---------- */
+  const CAT = window.PP_CATALOG || [];
+  const ids = {};         /* lesson key -> "D2" */
+  const catOf = {};       /* lesson key -> category id */
+  (function () {
+    let n = 0;
+    CAT.forEach(c => c.groups.forEach(g => {
+      g.letter = letters(n++);
+      g.skills.forEach((k, i) => { ids[k] = g.letter + (i + 1); catOf[k] = c.id; });
+    }));
+    function letters(i) { const A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; return i < 26 ? A[i] : A[Math.floor(i / 26) - 1] + A[i % 26]; }
+  })();
+  const isTask = k => /^task:/.test(k);
+  function entryTitle(k) {
+    if (isTask(k)) { const t = PP.taskById[k.slice(5)]; return t ? "Essay: " + t.title : k; }
+    return lessons[k] ? lessons[k].title : k;
+  }
+  function entryCodes(k) {
+    if (isTask(k)) { const t = PP.taskById[k.slice(5)]; return t ? (t.std || []).slice(0, 2) : []; }
+    return lessons[k] ? codesOf(lessons[k]) : [];
+  }
+  function entryOnTest(k) { return isTask(k) || (lessons[k] ? lessonOnTest(lessons[k]) : false); }
+  function entryStatus(k) {
+    if (isTask(k)) { let d = null; try { d = JSON.parse(window.localStorage.getItem("pp.task." + k.slice(5))); } catch (e) { d = null; } return d && d.draft ? "started" : "new"; }
+    return lessons[k] ? status(k) : "none";
+  }
+  function openEntry(k) {
+    if (isTask(k)) { window.PP_WRITING.start(k.slice(5)); return; }
+    open(k);
+  }
+  function nextIn(c) {
+    for (const g of c.groups) for (const k of g.skills) if (!isTask(k) && lessons[k] && status(k) !== "mastered") return k;
+    return null;
+  }
+  function catStats(c) {
+    const ks = [].concat(...c.groups.map(g => g.skills)).filter(k => lessons[k]);
+    return { total: ks.length, done: ks.filter(k => status(k) === "mastered").length };
+  }
+
   let filter = "all", query = "", lastCode = null;
 
   function buildList() {
+    buildCards();
     const host = el("skill-list"); clear(host);
     const q = query.trim().toLowerCase();
     let shown = 0;
-    STRANDS.forEach(st => {
-      const recs = STD.filter(s => s.strand === st.key);
-      if (!recs.length) return;
-      const groups = [];
-      recs.forEach(s => { let g = groups.find(x => x.name === s.group); if (!g) { g = { name: s.group, recs: [] }; groups.push(g); } g.recs.push(s); });
-      const block = make("section", "strand strand-" + st.key.toLowerCase());
-      const head = make("div", "strand-head");
-      head.appendChild(make("h2", "strand-title", st.name));
-      head.appendChild(make("p", "strand-line", st.line));
-      block.appendChild(head);
+    CAT.forEach(c => {
+      const sec = make("section", "cat-sec cat-" + c.id);
+      sec.id = "cat-" + c.id;
+      const head = make("div", "cat-head");
+      head.appendChild(make("h2", "cat-title", c.name));
+      head.appendChild(make("p", "cat-line", c.line));
+      sec.appendChild(head);
+      const grid = make("div", "cat-groups");
       let any = 0;
-      groups.forEach(g => {
-        const rows = g.recs.filter(s => {
-          if (filter === "test" && !onTest(s)) return false;
-          if (filter === "todo" && (status(s.code) === "mastered" || s.tested === "embedded")) return false;
+      c.groups.forEach(g => {
+        const rows = g.skills.filter(k => {
+          if (!isTask(k) && !lessons[k]) return false;
+          if (filter === "test" && !entryOnTest(k)) return false;
+          if (filter === "todo" && (isTask(k) || entryStatus(k) === "mastered")) return false;
           if (!q) return true;
-          return [s.code, s.display, s.plain, s.text, s.gum || "", titleOf(s)].join(" ").toLowerCase().indexOf(q) >= 0;
+          const text = [ids[k], entryTitle(k)].concat(entryCodes(k).map(x => x + " " + shortCode(x) + " " + ((byCode[x] || {}).plain || "") + " " + ((byCode[x] || {}).gum || ""))).join(" ").toLowerCase();
+          return text.indexOf(q) >= 0;
         });
         if (!rows.length) return;
-        const grp = make("div", "skill-group");
-        grp.appendChild(make("h3", "group-title", groupName(g.name)));
-        const ul = make("ul", "skill-rows-list");
-        rows.forEach(s => {
+        const grp = make("div", "cat-group");
+        const gh = make("h3", "group-title");
+        gh.appendChild(make("span", "group-letter", g.letter + "."));
+        gh.appendChild(document.createTextNode(" " + g.name));
+        grp.appendChild(gh);
+        const ol = make("ol", "skill-lines");
+        rows.forEach(k => {
           const li = make("li");
-          const b = make("button", "skill-row-btn is-" + status(s.code));
-          b.type = "button"; b.dataset.code = s.code;
-          const top = make("span", "srow-top");
-          top.appendChild(make("span", "srow-code", codeLabel(s)));
-          const tag = make("span", "srow-tag tag-" + (onTest(s) ? "test" : s.tested), TESTED[s.tested] ? TESTED[s.tested][0] : "");
-          top.appendChild(tag);
-          b.appendChild(top);
-          b.appendChild(make("span", "srow-title", titleOf(s)));
-          if (titleOf(s) !== s.plain) b.appendChild(make("span", "srow-plain", s.plain));
-          const stat = status(s.code);
-          const sp = make("span", "srow-status st-" + stat);
-          sp.appendChild(make("span", "st-mark", stat === "mastered" ? "✓" : stat === "started" ? "◐" : stat === "new" ? "○" : stat === "habit" ? "★" : "…"));
-          sp.appendChild(document.createTextNode(" " + STATUS[stat]));
-          b.appendChild(sp);
-          b.setAttribute("aria-label", codeLabel(s) + ". " + titleOf(s) + ". " + STATUS[stat] + ".");
-          b.addEventListener("click", () => open(s.code));
-          li.appendChild(b); ul.appendChild(li);
+          const st = entryStatus(k);
+          const b = make("button", "skill-line is-" + st);
+          b.type = "button"; b.dataset.code = k;
+          b.appendChild(make("span", "sl-num", String(g.skills.indexOf(k) + 1)));
+          const body = make("span", "sl-body");
+          const t = make("span", "sl-title", entryTitle(k));
+          body.appendChild(t);
+          const meta = make("span", "sl-meta");
+          entryCodes(k).forEach(x => meta.appendChild(make("span", "sl-code", shortCode(x))));
+          if (entryOnTest(k)) meta.appendChild(make("span", "sl-test", "On test"));
+          body.appendChild(meta);
+          b.appendChild(body);
+          if (st === "mastered") b.appendChild(make("span", "sl-done", "✓"));
+          else if (st === "started") b.appendChild(make("span", "sl-started", "◐"));
+          b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " + (st === "mastered" ? "Mastered." : st === "started" ? "Started." : ""));
+          b.addEventListener("click", () => openEntry(k));
+          li.appendChild(b); ol.appendChild(li);
           any++; shown++;
         });
-        grp.appendChild(ul);
-        block.appendChild(grp);
+        grp.appendChild(ol);
+        grid.appendChild(grp);
       });
       if (!any) return;
-      if (st.key === "Practices") {
-        const d = make("details", "habits");
-        if (q || filter !== "all") d.open = true;
-        const label = () => (d.open ? "Hide" : "Show") + " the " + recs.length + " everyday habits";
-        const sum = make("summary", "habits-sum", "");
-        d.appendChild(sum);
-        d.addEventListener("toggle", () => { sum.textContent = label(); });
-        setTimeout(() => { sum.textContent = label(); }, 0);
-        Array.from(block.children).slice(1).forEach(c => d.appendChild(c));
-        block.appendChild(d);
-      }
-      host.appendChild(block);
+      sec.appendChild(grid);
+      host.appendChild(sec);
     });
     el("skill-empty").hidden = shown > 0;
     const cnt = el("skill-count");
@@ -159,52 +208,171 @@
     buildProgress();
   }
 
-  function buildProgress() {
-    const host = el("home-progress"); clear(host);
-    const tested = STD.filter(onTest);
-    const ready = tested.filter(s => lessons[s.code]).length;
-    const done = tested.filter(s => status(s.code) === "mastered").length;
-    const p = make("p", "prog-line");
-    p.appendChild(make("strong", "", done + " of " + tested.length));
-    p.appendChild(document.createTextNode(" skills on the test mastered on this device."));
-    host.appendChild(p);
-    const bar = make("span", "prog-bar"); const fill = make("span", "prog-fill");
-    fill.style.width = (tested.length ? Math.round(100 * done / tested.length) : 0) + "%";
-    bar.appendChild(fill); host.appendChild(bar);
-    if (ready < tested.length) host.appendChild(make("p", "prog-note", ready + " of " + tested.length + " test skills have full lessons so far. More are added every week."));
+  function buildCards() {
+    const host = el("cat-cards"); if (!host) return;
+    clear(host);
+    CAT.forEach(c => {
+      const st = catStats(c);
+      const b = make("button", "cat-card cat-" + c.id);
+      b.type = "button"; b.dataset.cat = c.id;
+      b.appendChild(make("span", "cc-name", c.name));
+      const ring = make("span", "cc-ring");
+      ring.style.setProperty("--p", (st.total ? Math.round(100 * st.done / st.total) : 0) + "%");
+      ring.appendChild(make("span", "cc-ring-n", st.done + "/" + st.total));
+      b.appendChild(ring);
+      const nx = nextIn(c);
+      b.appendChild(make("span", "cc-next", nx ? "Next: " + ids[nx] + " " + lessons[nx].title.split(":")[0] : "All mastered!"));
+      b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " mastered." + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
+      b.addEventListener("click", () => {
+        rec("_ui").lastCat = c.id; save();
+        const t = el("cat-" + c.id); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+        buildUpNext();
+      });
+      host.appendChild(b);
+    });
+    buildUpNext();
+  }
+  function buildUpNext() {
+    const host = el("up-next"); if (!host) return;
+    clear(host);
+    const pref = (prog._ui || {}).lastCat || "reading";
+    const order = [pref].concat(CAT.map(c => c.id).filter(x => x !== pref));
+    let k = null, cat = null;
+    for (const id of order) { const c = CAT.find(x => x.id === id); k = c && nextIn(c); if (k) { cat = c; break; } }
+    if (!k) { host.appendChild(make("p", "un-done", "Every skill is mastered on this device. Amazing work!")); return; }
+    host.appendChild(make("p", "un-label", "Up next in " + cat.name));
+    const b = make("button", "btn btn-primary un-btn", ids[k] + " · " + lessons[k].title);
+    b.type = "button"; b.id = "up-next-btn";
+    b.addEventListener("click", () => open(k));
+    host.appendChild(b);
   }
 
-  /* ---------- the skill page ---------- */
-  const STEPS = [["teach", "Teach"], ["learn", "Learn"], ["practice", "Practice"], ["test", "Test"]];
-  let cur = null, step = "teach";
+  function buildProgress() {
+    const host = el("home-progress"); clear(host);
+    const testedKeys = Object.keys(lessons).filter(k => lessonOnTest(lessons[k]));
+    const done = testedKeys.filter(k => status(k) === "mastered").length;
+    const p = make("p", "prog-line");
+    p.appendChild(make("strong", "", done + " of " + testedKeys.length));
+    p.appendChild(document.createTextNode(" skills that are on the test are mastered on this device."));
+    host.appendChild(p);
+    const bar = make("span", "prog-bar"); const fill = make("span", "prog-fill");
+    fill.style.width = (testedKeys.length ? Math.round(100 * done / testedKeys.length) : 0) + "%";
+    bar.appendChild(fill); host.appendChild(bar);
+  }
 
-  function open(code, which, opts) {
-    const s = byCode[code];
+  /* Everyday habits: Georgia's K-12 Practices, on their own page. */
+  function buildHabits() {
+    const host = el("habit-list"); if (!host) return;
+    clear(host);
+    const recs = STD.filter(s => s.tested === "embedded");
+    const groups = [];
+    recs.forEach(s => { let g = groups.find(x => x.name === s.group); if (!g) { g = { name: s.group, recs: [] }; groups.push(g); } g.recs.push(s); });
+    groups.forEach(g => {
+      const grp = make("div", "cat-group");
+      grp.appendChild(make("h3", "group-title", groupName(g.name)));
+      const ol = make("ol", "skill-lines");
+      g.recs.forEach((s, i) => {
+        const li = make("li");
+        const b = make("button", "skill-line");
+        b.type = "button"; b.dataset.code = s.code;
+        b.appendChild(make("span", "sl-num", String(i + 1)));
+        const body = make("span", "sl-body");
+        body.appendChild(make("span", "sl-title", titleOf(s)));
+        const meta = make("span", "sl-meta"); meta.appendChild(make("span", "sl-code", s.display)); body.appendChild(meta);
+        b.appendChild(body);
+        b.addEventListener("click", () => open(s.code));
+        li.appendChild(b); ol.appendChild(li);
+      });
+      grp.appendChild(ol);
+      host.appendChild(grp);
+    });
+  }
+
+  /* Clue Word Cheat Sheet (the six text structures). */
+  function buildClues() {
+    const host = el("clue-sheet"); if (!host) return;
+    clear(host);
+    const tb = make("table", "clue-table");
+    const hr = make("tr");
+    ["Kind of text", "Clue words", "Ask yourself"].forEach(h => hr.appendChild(make("th", "", h)));
+    const th = make("thead"); th.appendChild(hr); tb.appendChild(th);
+    const body = make("tbody");
+    (window.PP_STRUCTURES || []).forEach(S => {
+      const tr = make("tr");
+      const n = make("td"); n.appendChild(make("strong", "", S.name)); n.appendChild(make("span", "ct-what", S.what)); tr.appendChild(n);
+      const w = make("td"); S.words.forEach(x => w.appendChild(make("span", "clue-chip", x))); tr.appendChild(w);
+      const a = make("td"); a.appendChild(make("span", "", S.ask)); tr.appendChild(a);
+      if (lessons[S.key]) {
+        tr.classList.add("has-link");
+        tr.addEventListener("click", () => open(S.key));
+        tr.title = "Open the " + S.name + " skill";
+      }
+      body.appendChild(tr);
+    });
+    tb.appendChild(body);
+    host.appendChild(tb);
+    const t = make("p", "teach-tip"); t.appendChild(make("strong", "", "Tricky words: ")); t.appendChild(document.createTextNode(window.PP_STRUCTURES_TRICKY || "")); host.appendChild(t);
+  }
+
+  /* ---------- the skill page ----------
+     Five steps, like Study Scoop: Learn It, Watch Me, Practice Together,
+     Try It Yourself, Test Your Knowledge. Hands-on skills (fluency, cursive
+     writing) have Learn It, Watch Me, Practice and a grown-up Check. */
+  let cur = null, step = "teach";
+  function stepsFor(L) {
+    const K = keyOf(L);
+    const hasTry = !!PP.byId["SK:" + K + ":y"];
+    const handsOn = !!L.activity && !PP.byId["SK:" + K + ":p"];
+    const out = [["teach", "Learn It"], ["learn", "Watch Me"], ["practice", handsOn ? "Practice" : "Practice Together"]];
+    if (hasTry) out.push(["try", "Try It Yourself"]);
+    out.push(["test", PP.byId["SK:" + K + ":t"] ? "Test Your Knowledge" : "Check"]);
+    return out;
+  }
+
+  function open(id, which, opts) {
+    let k = lessons[id] ? id : lessonFor(id);
+    const s = k ? byCode[lessons[k].code] : byCode[id];
     if (!s) return false;
     if (!window.PP_APP.canLeave()) return false;
-    cur = code; lastCode = code;
-    const L = lessons[code];
-    step = L && STEPS.some(x => x[0] === which) ? which : "teach";
-    el("sk-code").textContent = codeLabel(s);
-    el("sk-title").textContent = titleOf(s);
-    el("sk-plain").textContent = s.plain;
-    el("sk-plain").hidden = titleOf(s) === s.plain;
+    cur = k || id; lastCode = cur;
+    const L = k ? lessons[k] : null;
+    step = L && stepsFor(L).some(x => x[0] === which) ? which : "teach";
+    const sid = k && ids[k];
+    el("sk-code").textContent = L ? (sid ? sid + " · " : "") + (CAT.find(c => c.id === catOf[k]) || {}).name : codeLabel(s);
+    el("sk-title").textContent = L ? L.title : titleOf(s);
+    const codes = L ? codesOf(L) : [s.code];
+    el("sk-plain").textContent = byCode[codes[0]].plain;
+    el("sk-plain").hidden = !L && titleOf(s) === s.plain;
     const tags = el("sk-tags"); clear(tags);
-    const t = TESTED[s.tested] || ["", ""];
-    tags.appendChild(make("span", "srow-tag tag-" + (onTest(s) ? "test" : s.tested), t[0]));
-    tags.appendChild(make("span", "sk-tagline", t[1]));
+    codes.forEach(c => {
+      const x = byCode[c]; if (!x) return;
+      const chip = make("span", "sk-chip"); chip.appendChild(make("span", "sk-chip-code", codeLabel(x)));
+      chip.title = x.plain; tags.appendChild(chip);
+    });
+    const anyTest = codes.some(c => onTest(byCode[c]));
+    const t0 = anyTest ? TESTED.both : (TESTED[s.tested] || ["", ""]);
+    tags.appendChild(make("span", "srow-tag tag-" + (anyTest ? "test" : s.tested), anyTest ? "On the test" : t0[0]));
+    tags.appendChild(make("span", "sk-tagline", anyTest ? "This exercise targets the Georgia standard" + (codes.length > 1 ? "s" : "") + " above." : t0[1]));
     const off = el("sk-official"); clear(off);
-    off.appendChild(make("summary", "", "Georgia's wording" + (onTest(s) ? " and what Proficient looks like" : "")));
-    off.appendChild(make("p", "sk-off-text", "“" + s.text + "”"));
-    off.appendChild(make("p", "note", "Georgia's K-12 English Language Arts Standards, grades 3-5" + (s.gum ? ", Grammar, Usage and Mechanics chart (grade 3 row: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] + ")" : "") + ". Code " + s.display + "."));
-    const m = /^(3\.[TL]\.[A-Z]+\.\d)/.exec(code);
-    const ald = m && onTest(s) && window.PP_ALDS && window.PP_ALDS.standards[m[1]];
-    if (ald && ald.Proficient && ald.Proficient.length) {
-      off.appendChild(make("p", "fg-label", "What Proficient work looks like (GaDOE Achievement Level Descriptors, for all of " + m[1] + ")"));
-      const ul = make("ul", "plist ald");
-      ald.Proficient.forEach(t => ul.appendChild(make("li", "", t)));
-      off.appendChild(ul);
-    }
+    off.appendChild(make("summary", "", "Georgia's wording" + (anyTest ? " and what Proficient looks like" : "")));
+    codes.forEach(c => {
+      const x = byCode[c]; if (!x) return;
+      const p = make("p", "sk-off-text"); p.appendChild(make("strong", "", codeLabel(x) + ": ")); p.appendChild(document.createTextNode("“" + x.text + "”"));
+      off.appendChild(p);
+    });
+    off.appendChild(make("p", "note", "Georgia's K-12 English Language Arts Standards, grades 3-5" + (s.gum ? ", Grammar, Usage and Mechanics chart (grade 3 row: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] + ")" : "") + "."));
+    const seen = {};
+    codes.forEach(c => {
+      const m = /^(3\.[TL]\.[A-Z]+\.\d)/.exec(c);
+      const ald = m && !seen[m[1]] && onTest(byCode[c]) && window.PP_ALDS && window.PP_ALDS.standards[m[1]];
+      if (m) seen[m[1]] = 1;
+      if (ald && ald.Proficient && ald.Proficient.length) {
+        off.appendChild(make("p", "fg-label", "What Proficient work looks like (GaDOE Achievement Level Descriptors, for all of " + m[1] + ")"));
+        const ul = make("ul", "plist ald");
+        ald.Proficient.forEach(t => ul.appendChild(make("li", "", t)));
+        off.appendChild(ul);
+      }
+    });
     el("sk-steps").hidden = !L;
     render();
     if (!(opts && opts.keepScroll)) window.scrollTo(0, 0);
@@ -230,9 +398,12 @@
 
   function renderSteps() {
     const host = el("sk-steps"); clear(host);
+    const L = lessons[cur];
     const r = prog[cur] || {};
-    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, test: r.mastered };
-    STEPS.forEach(([k, name], i) => {
+    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": r.tried, test: r.mastered };
+    const S = stepsFor(L);
+    host.style.setProperty("--steps", S.length);
+    S.forEach(([k, name], i) => {
       const b = make("button", "step-btn" + (done[k] ? " is-done" : ""));
       b.type = "button"; b.dataset.step = k;
       b.setAttribute("role", "tab");
@@ -244,24 +415,25 @@
       host.appendChild(b);
     });
   }
-
-  function render() {
-    const L = lessons[cur], s = byCode[cur];
-    const host = el("sk-panel"); clear(host);
-    if (!L) { renderPending(host, s); return; }
-    renderSteps();
-    ({ teach: renderTeach, learn: renderLearn, practice: renderPractice, test: renderTest })[step](host, L, s);
-    if (L.parent) {
-      const box = make("aside", "for-grownups");
-      box.appendChild(make("p", "fg-label", "For grown-ups"));
-      box.appendChild(make("p", "", L.parent));
-      host.appendChild(box);
-    }
+  function nextStep() {
+    const S = stepsFor(lessons[cur]); const i = S.findIndex(x => x[0] === step);
+    return S[i + 1] || null;
   }
 
-  function nextBtn(label, to) {
-    const b = make("button", "btn btn-primary step-next", label);
-    b.type = "button"; b.addEventListener("click", () => go(to));
+  function render() {
+    const L = lessons[cur];
+    const host = el("sk-panel"); clear(host);
+    if (!L) { renderPending(host, byCode[cur]); return; }
+    renderSteps();
+    ({ teach: renderTeach, learn: renderLearn, practice: renderPractice, "try": renderTry, test: renderTest })[step](host, L);
+    renderGrownups(host, L);
+  }
+
+  function nextBtn(label) {
+    const n = nextStep();
+    if (!n) return document.createTextNode("");
+    const b = make("button", "btn btn-primary step-next", label || ("Next: " + n[1]));
+    b.type = "button"; b.addEventListener("click", () => go(n[0]));
     return b;
   }
   /* "Cursive: text" is shown in a US school cursive font (3.F.H.3). */
@@ -273,16 +445,32 @@
   }
   PP.cursiveLines = lines;
 
+  function clueBox(L) {
+    const C = L.clues;
+    const box = make("div", "clue-box");
+    box.appendChild(make("p", "clue-h", "Clue words"));
+    const row = make("p", "clue-row");
+    C.words.forEach(w => row.appendChild(make("span", "clue-chip", w)));
+    box.appendChild(row);
+    const a = make("p", "clue-ask"); a.appendChild(make("strong", "", "Ask yourself: ")); a.appendChild(document.createTextNode(C.ask)); box.appendChild(a);
+    if (C.draw) { const d = make("p", "clue-draw"); d.appendChild(make("strong", "", "Draw it: ")); d.appendChild(document.createTextNode(C.draw)); box.appendChild(d); }
+    const link = make("button", "linkish", "Open the Clue Word Cheat Sheet"); link.type = "button";
+    link.addEventListener("click", () => window.PP_APP.openClues());
+    box.appendChild(link);
+    return box;
+  }
+
   function renderTeach(host, L) {
     const T = L.teach || {};
     const card = make("div", "teach-card");
-    card.appendChild(make("h2", "panel-h", "Teach: the big idea"));
+    card.appendChild(make("h2", "panel-h", "Learn It"));
     if (T.big) card.appendChild(make("p", "big-idea", T.big));
     if ((T.points || []).length) {
       const ul = make("ul", "teach-points");
       T.points.forEach(p => ul.appendChild(make("li", "", p)));
       card.appendChild(ul);
     }
+    if (L.clues) card.appendChild(clueBox(L));
     if (T.words && T.words.length) {
       const dl = make("dl", "teach-words");
       T.words.forEach(w => { dl.appendChild(make("dt", "", w.term)); dl.appendChild(make("dd", "", w.means)); });
@@ -297,12 +485,12 @@
     });
     if (T.tip) { const tip = make("p", "teach-tip"); tip.appendChild(make("strong", "", "Test tip: ")); tip.appendChild(document.createTextNode(T.tip)); card.appendChild(tip); }
     host.appendChild(card);
-    host.appendChild(nextBtn("Next: Learn with examples", "learn"));
+    host.appendChild(nextBtn());
   }
 
   function renderLearn(host, L) {
-    host.appendChild(make("h2", "panel-h", "Learn: let's do it together"));
-    host.appendChild(make("p", "panel-sub", "Read each example. Think about the answer, then tap Show the next step to see how to work it out."));
+    host.appendChild(make("h2", "panel-h", "Watch Me"));
+    host.appendChild(make("p", "panel-sub", "Watch how a good reader thinks. Read each example, guess the answer, then tap Show the next step."));
     const exs = L.learn || [];
     let finished = 0;
     exs.forEach((ex, i) => {
@@ -333,39 +521,60 @@
       card.appendChild(b);
       host.appendChild(card);
     });
-    host.appendChild(nextBtn("Next: Practice", "practice"));
+    host.appendChild(nextBtn());
+  }
+
+  function goCard(set, opts) {
+    const card = make("div", "go-card");
+    lines(card, opts.intro, "");
+    if (opts.done) card.appendChild(make("p", "go-done", opts.done));
+    const b = make("button", "btn btn-primary", opts.button);
+    b.type = "button"; b.id = opts.id;
+    b.addEventListener("click", () => window.PP_PLAYER.start(set.id, opts.mode));
+    card.appendChild(b);
+    return card;
   }
 
   function renderPractice(host, L) {
-    const set = PP.byId["SK:" + L.code + ":p"];
-    host.appendChild(make("h2", "panel-h", "Practice: you try, with help"));
-    const card = make("div", "go-card");
-    if (set) {
-      card.appendChild(make("p", "", set.items.length + " questions. Press Help me any time for a hint, one step at a time. Practice is never scored."));
-      if ((prog[cur] || {}).practiced) card.appendChild(make("p", "go-done", "✓ You finished this practice. You can do it again any time."));
-      const b = make("button", "btn btn-primary", (prog[cur] || {}).practiced ? "Practice again" : "Start practice");
-      b.type = "button"; b.id = "sk-start-practice";
-      b.addEventListener("click", () => window.PP_PLAYER.start(set.id, "practice"));
-      card.appendChild(b);
-    }
-    if (set || !L.activity) host.appendChild(card);
+    const K = keyOf(L);
+    const set = PP.byId["SK:" + K + ":p"];
+    host.appendChild(make("h2", "panel-h", set ? "Practice Together" : "Practice"));
+    const r = prog[cur] || {};
+    if (set) host.appendChild(goCard(set, {
+      intro: set.items.length + " questions to do together. Press Help me any time: one hint at a time, then a walk-through. Practice is never scored." +
+        (L.clues ? " Stuck? Tap Show clue words above the passage." : ""),
+      done: r.practiced ? "✓ Finished. You can do it again any time." : "",
+      button: r.practiced ? "Practice again" : "Start practice", id: "sk-start-practice", mode: "practice" }));
     if (L.activity) renderActivity(host, L);
+    if (L.write && !PP.byId["SK:" + K + ":y"]) renderWrite(host, L);
+    host.appendChild(nextBtn());
+  }
+
+  function renderTry(host, L) {
+    const K = keyOf(L);
+    const set = PP.byId["SK:" + K + ":y"];
+    host.appendChild(make("h2", "panel-h", "Try It Yourself"));
+    const r = prog[cur] || {};
+    if (set) host.appendChild(goCard(set, {
+      intro: set.items.length + " new questions on your own. Press Check to see if you are right. Help me unlocks after one try.",
+      done: r.tried ? "✓ Finished. Ready for the test!" : "",
+      button: r.tried ? "Try again" : "Start", id: "sk-start-try", mode: "try" }));
     if (L.write) renderWrite(host, L);
-    host.appendChild(nextBtn("Next: Test", "test"));
+    host.appendChild(nextBtn());
   }
 
   /* A short writing activity (writing standards). The draft is kept on this
      device. A grown-up reads it with the checklist; nothing is scored. */
   function renderWrite(host, L) {
     const W = L.write;
-    const k = "pp.skwrite." + L.code;
+    const k = "pp.skwrite." + keyOf(L);
     let saved = {};
     try { saved = JSON.parse(window.localStorage.getItem(k)) || {}; } catch (e) { saved = {}; }
     const store = () => { try { window.localStorage.setItem(k, JSON.stringify(saved)); } catch (e) { /* ok */ } };
     const card = make("div", "write-card");
     card.appendChild(make("h3", "write-h", "Your turn to write"));
     lines(card, W.prompt, "write-prompt");
-    const id = "skw-" + L.code.replace(/[^a-z0-9]/gi, "-");
+    const id = "skw-" + keyOf(L).replace(/[^a-z0-9]/gi, "-");
     const lab = make("label", "sr", "Your writing"); lab.htmlFor = id; card.appendChild(lab);
     const ta = make("textarea", "write-box"); ta.id = id; ta.rows = W.rows || 6; ta.value = saved.text || "";
     ta.addEventListener("input", () => { saved.text = ta.value; store(); });
@@ -388,8 +597,8 @@
   }
 
   function renderTest(host, L) {
-    const set = PP.byId["SK:" + L.code + ":t"];
-    host.appendChild(make("h2", "panel-h", set ? "Test: show what you know" : "Check: show a grown-up"));
+    const set = PP.byId["SK:" + keyOf(L) + ":t"];
+    host.appendChild(make("h2", "panel-h", set ? "Test Your Knowledge" : "Check: show a grown-up"));
     const card = make("div", "go-card");
     if (set) {
       const max = set.items.reduce((a, it) => a + it.points, 0);
@@ -425,7 +634,7 @@
       }
     } else {
       card.appendChild(make("h2", "panel-h", "Lesson coming"));
-      card.appendChild(make("p", "", "The Teach, Learn, Practice and Test lesson for this standard is being written and checked. It will appear here when it is ready."));
+      card.appendChild(make("p", "", "The lesson for this standard is being written and checked. It will appear here when it is ready."));
     }
     const related = PP.sets.filter(x => x.section !== "skill" && x.items.some(it => (it.std || []).indexOf(s.code) >= 0));
     if (related.length) {
@@ -604,11 +813,40 @@
     host.appendChild(card);
   }
 
+  /* For grown-ups: the parent note, and for some skills the coaching notes
+     from the parent's guide (mix-up, what to listen for, a 5-minute lesson). */
+  function renderGrownups(host, L) {
+    if (!L.parent && !L.coach) return;
+    const box = make("aside", "for-grownups");
+    box.appendChild(make("p", "fg-label", "For grown-ups"));
+    if (L.parent) box.appendChild(make("p", "", L.parent));
+    const C = L.coach;
+    if (C) {
+      if (C.mixup) { const p = make("p", ""); p.appendChild(make("strong", "", "Common mix-up: ")); p.appendChild(document.createTextNode(C.mixup)); box.appendChild(p); }
+      if (C.strong || C.notyet) {
+        const d = make("div", "listen");
+        d.appendChild(make("p", "fg-sub", "What to listen for"));
+        if (C.strong) { const p = make("p", "listen-strong"); p.appendChild(make("strong", "", "Strong: ")); p.appendChild(document.createTextNode(C.strong)); d.appendChild(p); }
+        if (C.notyet) { const p = make("p", "listen-not"); p.appendChild(make("strong", "", "Not yet: ")); p.appendChild(document.createTextNode(C.notyet)); d.appendChild(p); }
+        box.appendChild(d);
+      }
+      if (C.ido || C.wedo || C.youdo) {
+        const det = make("details", "five-min");
+        det.appendChild(make("summary", "", "Teach it in 5 minutes (I do, We do, You do)"));
+        [["I do", C.ido], ["We do", C.wedo], ["You do", C.youdo], ["Everyday practice", C.everyday]].forEach(([h, t]) => {
+          if (!t) return; const p = make("p", ""); p.appendChild(make("strong", "", h + ": ")); p.appendChild(document.createTextNode(t)); det.appendChild(p);
+        });
+        box.appendChild(det);
+      }
+    }
+    host.appendChild(box);
+  }
+
   /* ---------- player hooks ---------- */
   function afterTest(set, got, max) {
     const pass = recordTest(set.code, got, max);
     return pass ? "You mastered this skill! It now shows a check mark on the skill list."
-      : "To master this skill, score " + passMark(max) + " or more. Go back to Learn or Practice, then try the test again.";
+      : "To master this skill, score " + passMark(max) + " or more. Go back to Watch Me or Practice Together, then try the test again another day.";
   }
 
   function init() {
@@ -623,7 +861,7 @@
   }
 
   window.PP_SKILLS = {
-    init, open, buildList, afterTest, recordPractice, status, resetProgress,
+    init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
     current: () => cur, step: () => step, lastCode: () => lastCode,
     lessonCount: () => Object.keys(lessons).length
   };

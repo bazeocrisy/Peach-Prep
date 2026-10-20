@@ -2,11 +2,11 @@
    and calls PP.addSet(). A set is listed here only after it has passed the
    content checker, two independent reviews and the screen audit. */
 window.PP_MANIFEST = {
-  build: "Peach Prep 2.0.0",
+  build: "Peach Prep 2.1.0",
   tasks: ["W-TASK-01", "W-TASK-02"],
-  /* Skill lessons (Teach, Learn, Practice, Test), one file per standard group.
+  /* Skill lessons (Learn It, Watch Me, Practice Together, Try It Yourself, Test), one file per standard group.
      A file is listed only after it has passed the checker and two reviews. */
-  lessons: ["T-C", "T-SS", "T-T1", "T-T2", "T-T34", "T-RA", "L-GC2", "L-GUM1", "L-GUM2", "L-GUM3", "L-GUM4", "L-GUM5", "L-V12", "L-V3", "F-PF", "F-FH"],
+  lessons: ["T-C", "T-SS", "T-T1", "T-TS", "T-T2", "T-T34", "T-RA", "L-GC2", "L-GUM1", "L-GUM2", "L-GUM3", "L-GUM4", "L-GUM5", "L-V12", "L-V3", "F-PF", "F-FH"],
   sets: ["R-LIT-01", "R-LIT-02", "R-POE-01", "R-INF-01", "R-INF-02", "R-OPN-01",
          "W-REV-01", "W-REV-02",
          "L-GRM-01", "L-GRM-02", "L-GRM-03", "L-VOC-01", "L-VOC-02", "L-VOC-03",

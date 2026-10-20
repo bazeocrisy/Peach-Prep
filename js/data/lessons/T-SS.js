@@ -8,13 +8,41 @@
 PP.addLesson({
   code: "3.T.SS.1.a",
   title: "How a text is put together: sections, patterns and features",
+  clues: {
+    words: ["one day", "but", "then", "so", "finally", "in the end",
+      "first", "next", "after that", "later",
+      "because", "since", "as a result", "that is why", "this caused",
+      "problem", "tried", "decided", "solved",
+      "both", "alike", "same", "however", "unlike", "different", "while",
+      "for example", "such as", "also", "in addition", "has", "looks like"],
+    groups: [
+      { name: "Story elements", words: ["one day", "but", "then", "so", "finally", "in the end"] },
+      { name: "Sequence", words: ["first", "next", "then", "after that", "later", "finally"] },
+      { name: "Cause and effect", words: ["because", "so", "since", "as a result", "that is why", "this caused"] },
+      { name: "Problem and solution", words: ["problem", "tried", "but", "decided", "solved", "finally"] },
+      { name: "Compare and contrast", words: ["both", "alike", "same", "but", "however", "unlike", "different", "while"] },
+      { name: "Description", words: ["for example", "such as", "also", "in addition", "has", "looks like"] }
+    ],
+    ask: "Which kind of text is this, and what clue word told you?",
+    draw: "Draw the organizer that fits: a story map, a row of boxes with arrows, cause-and-effect boxes, a problem with a box for each try, three columns, or a web."
+  },
+  coach: {
+    mixup: "Some clue words are tricky: but, so, then and finally show up in lots of kinds of text. Read the whole sentence to see what job the word is doing. Ask: \"Is the author showing what goes wrong, the steps in order, or how two things are different?\"",
+    strong: "\"It's cause and effect. It says as a result, and it tells why the puddle dried up.\" The answer names the kind of text and the clue word that proves it.",
+    notyet: "Naming the topic instead of the kind of text: \"It's about butterflies.\" Ask: \"How did the author put the ideas together? What clue word told you?\"",
+    ido: "Read a paragraph aloud and think out loud: \"I see because. That tells me the author is about to explain why. This part is cause and effect.\"",
+    wedo: "Read the next paragraph together. Your child finds the clue word, and you ask, \"What clue word helped you? Which kind of text does it point to?\"",
+    youdo: "Your child reads a short section alone, names the kind of text and draws its organizer. Check it afterward, not while they work.",
+    everyday: "When you read a sign, a recipe or a news story together, ask, \"Which kind of text is this, and what clue word told you?\""
+  },
   teach: {
     big: "Authors build a text with a plan: headings split it into sections, a pattern links the ideas, and features like captions and maps help you understand.",
     points: [
-      "Sequence tells steps or events in order. Look for clue words like first, next, then and finally.",
-      "Cause and effect tells what happened and why. Look for because, so and as a result.",
-      "Compare tells how things are alike and different. Look for both, alike, but and while.",
-      "Problem and solution tells about a trouble and how it gets fixed. Look for problem, trouble, solve and fix.",
+      "Sequence tells steps or events in order. Look for clue words like first, next, then, after that, later and finally.",
+      "Cause and effect tells what happened and why. Look for because, so, since, as a result, that is why and this caused.",
+      "Compare tells how things are alike and different. Look for both, alike, same, but, however, unlike, different and while.",
+      "Problem and solution tells about a trouble and how it gets fixed. Look for problem, tried, but, decided, solved and finally.",
+      "Description tells about one topic with details. Look for for example, such as, also, in addition, has and looks like. Stories have clue words too: one day, but, then, so, finally and in the end.",
       "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact."
     ],
     words: [

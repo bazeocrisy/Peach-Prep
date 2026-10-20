@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["home", "skill", "mixed", "section", "player", "parents", "write"];
+  const SCREENS = ["home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -59,6 +59,16 @@
     if (row) { row.focus(); row.scrollIntoView({ block: "center" }); }
     else el("home-title").focus();
   }
+  function openSimple(name, hash, build, focusId) {
+    if (!canLeave()) return;
+    if (current === "player" || current === "write") replaceNext = true;
+    build && build();
+    setHash(hash);
+    show(name);
+    el(focusId).focus();
+  }
+  const openClues = () => openSimple("clues", "#clues", window.PP_SKILLS.buildClues, "clues-title");
+  const openHabits = () => openSimple("habits", "#habits", window.PP_SKILLS.buildHabits, "habits-title");
   function openMixed() {
     if (!canLeave()) return;
     if (current === "section") replaceNext = true;
@@ -184,7 +194,9 @@
     try {
       const h = location.hash.replace("#", "");
       const parts = h.split("/");
-      if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : "practice"); return; }
+      if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : parts[2] === "try" ? "try" : "practice"); return; }
+      if (h === "clues") { window.PP_SKILLS.buildClues(); show("clues"); return; }
+      if (h === "habits") { window.PP_SKILLS.buildHabits(); show("habits"); return; }
       if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
       if (parts[0] === "parents") { window.PP_PARENTS.open(parts[1]); return; }
       if (parts[0] === "skill") {
@@ -224,6 +236,9 @@
     }));
     window.PP_SKILLS.init();
     el("hero-mixed").addEventListener("click", openMixed);
+    el("hero-clues").addEventListener("click", openClues);
+    el("hero-habits").addEventListener("click", openHabits);
+    el("clues-print").addEventListener("click", () => window.print());
     el("hero-parents").addEventListener("click", () => window.PP_PARENTS.open());
     el("player-back").addEventListener("click", back);
     el("write-back") && el("write-back").addEventListener("click", back);
@@ -248,7 +263,8 @@
   function rememberReturn() {
     returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot() } :
                current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), pushed: true } :
-               current === "section" ? { kind: "section", key: sectionKey } : returnTo;
+               current === "section" ? { kind: "section", key: sectionKey } :
+               current === "home" || current === "clues" || current === "habits" ? { kind: current } : returnTo;
   }
   function back() {
     if (!canLeave()) return;
@@ -256,6 +272,9 @@
     replaceNext = true;
     const r = returnTo;
     if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
+    if (r && r.kind === "home") { replaceNext = true; setHash(""); window.PP_SKILLS.buildList(); show("home"); el("home-title").focus(); return; }
+    if (r && r.kind === "clues") { window.PP_SKILLS.buildClues(); setHash("#clues"); show("clues"); el("clues-title").focus(); return; }
+    if (r && r.kind === "habits") { window.PP_SKILLS.buildHabits(); setHash("#habits"); show("habits"); el("habits-title").focus(); return; }
     if (r && r.kind === "skill") {
       /* after a skill test, show the Test step with the result */
       const ps = window.PP_PLAYER.state();
@@ -275,6 +294,6 @@
   }
   function track() { lastHash = location.hash; }
 
-  window.PP_APP = { show, openSection, openMixed, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
+  window.PP_APP = { show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();

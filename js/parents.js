@@ -161,10 +161,10 @@
       prac.appendChild(make("p", "std-ald-head", "Where to practice"));
       const pu = make("ul", "plist");
       {
-        /* the skill page for this standard: Teach, Learn, Practice, Test */
+        /* the skill page for this standard (five steps) */
         const li = make("li");
-        const has = PP.lessons && PP.lessons[s.code];
-        const b = make("button", "linkish", has ? "Peach Prep skill lesson: Teach, Learn, Practice, Test" : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
+        const has = window.PP_SKILLS && window.PP_SKILLS.lessonFor ? window.PP_SKILLS.lessonFor(s.code) : (PP.lessons && PP.lessons[s.code]);
+        const b = make("button", "linkish", has ? "Peach Prep skill lesson: Learn It, Watch Me, Practice, Try It, Test" : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
         b.type = "button"; b.addEventListener("click", () => window.PP_SKILLS.open(s.code));
         li.appendChild(b); pu.appendChild(li);
       }
