@@ -455,7 +455,7 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: "Reread the two monarch butterfly sources from Practice, \"From Egg to Butterfly\" and \"The Long Trip South.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources.",
+    prompt: "Reread the two monarch butterfly sources from Practice, \"A Monarch Grows Up\" and \"Monarchs Fly to Mexico.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources.",
     checklist: [
       "I told the big idea of both sources.",
       "I used my own words instead of copying sentences.",
@@ -467,21 +467,21 @@ PP.addLesson({
   },
   parent: "After you and your child watch a short nature video and read a library book on the same animal, ask them to tell you three sentences that sum up both. Listen for facts from each one and no opinions.",
   passages: [
-    { id: "p1", title: "From Egg to Butterfly", byline: "Source 1", genre: "Informational text",
+    { id: "p1", title: "A Monarch Grows Up", byline: "Source 1", genre: "Informational text",
       paragraphs: [
         ["A monarch butterfly starts life as a tiny egg.", "The mother lays each egg on a milkweed plant."],
         ["When the caterpillar hatches, it eats milkweed leaves.", "In fact, milkweed is the only plant a monarch caterpillar eats.", "It eats and grows for about two weeks."],
         ["Then it hangs upside down and makes a green case called a chrysalis.", "Inside, its body changes.", "After a week or two, an orange and black butterfly comes out of the case."],
         ["Milkweed has a juice that tastes bad to birds.", "Monarchs keep some of it in their bodies, even as grown butterflies.", "So many birds learn to leave them alone."]
       ] },
-    { id: "p2", title: "The Long Trip South", byline: "Source 2", genre: "Informational text",
+    { id: "p2", title: "Monarchs Fly to Mexico", byline: "Source 2", genre: "Informational text",
       paragraphs: [
         ["Each fall, many monarchs in the eastern United States begin a long trip.", "They fly south to the mountains of Mexico."],
         ["None of these butterflies has made the trip before.", "Still, they find their way to the same forests year after year.", "Scientists think the monarchs use the sun to help them find the way."],
         ["In Mexico, the monarchs rest in tall trees for the winter.", "So many butterflies cover the branches that the trees look orange."],
         ["In spring, the monarchs fly north again.", "They stop to lay eggs on milkweed along the way.", "Their children and grandchildren finish the trip north."]
       ] },
-    { id: "p3", title: "Tiny Flyers", byline: "Source 1", genre: "Informational text",
+    { id: "p3", title: "Hummingbirds Up Close", byline: "Source 1", genre: "Informational text",
       paragraphs: [
         ["Hummingbirds are some of the smallest birds in the world.", "Many weigh less than a nickel.", "They are named for the humming sound their wings make."],
         ["A hummingbird's wings beat so fast that they look like a blur.", "These birds can hover in one spot, like a helicopter.", "They can even fly backward."],
@@ -571,17 +571,18 @@ PP.addLesson({
       clue: "Read the heading again. Find the fact from Source 2 that gives another reason hummingbirds need so much food.",
       why: "The answer is \"In late summer, they eat and eat to get ready for a long trip.\" It gives one more reason hummingbirds eat so much. The feeders are about people, and the nest and summer home are not about why the birds eat so much." },
     { id: "SK-RA1c-T3", type: "ms", points: 2, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kayla checks her summary sentences against the sources. Which TWO sentences are true to the sources and belong in her summary? Choose two answers.",
+      prompt: "Kayla checks her summary sentences. Which TWO sentences are true to the sources, tell an important idea, and use her own words? Choose two answers.",
       pick: 2,
       choices: [
-        { text: "Their wings beat so fast that they look like a blur.", correct: true },
-        { text: "Many of them cross a wide sea without stopping to rest.", correct: true },
+        { text: "Hummingbirds are very small birds that fly in amazing ways, like hovering in place.", correct: true },
+        { text: "A mother hummingbird builds a small, soft nest where she lays her eggs.", correct: true },
+        { text: "Many weigh less than a nickel." },
         { text: "I think hummingbirds are the cutest birds of all." },
-        { text: "Hummingbirds can only fly forward, like most birds." },
-        { text: "The mother builds her nest out of mud and sticks." }
+        { text: "Hummingbirds stay in Georgia all year long." },
+        { text: "Hummingbirds eat only seeds that they find on the ground." }
       ],
-      clue: "A summary sentence must be a fact, and it must match what the sources really say. Check each choice against the sources.",
-      why: "\"Their wings beat so fast that they look like a blur\" matches Source 1, and \"Many of them cross a wide sea without stopping to rest\" matches Source 2. The cutest-birds sentence is an opinion. Source 1 says hummingbirds can fly backward, and Source 2 says the nest is made of soft bits of plants and spider silk, so the other two sentences are wrong." },
+      clue: "Check three things for each sentence. Is it a fact the sources really give? Is it a big idea, not a tiny detail? Is it said in a new way, not copied?",
+      why: "The answers are \"Hummingbirds are very small birds that fly in amazing ways, like hovering in place\" and \"A mother hummingbird builds a small, soft nest where she lays her eggs.\" Each one sums up a big idea from one source in new words. \"Many weigh less than a nickel\" is true, but it is a tiny detail copied word for word from Source 1. The cutest-birds sentence is an opinion. Source 2 says the birds fly south for the winter, and Source 1 says they drink nectar and eat insects, so the last two sentences are wrong." },
     { id: "SK-RA1c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Here is Kayla's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [

@@ -411,7 +411,17 @@ PP.addLesson({
         { text: "so every paragraph would be the very same length" }
       ],
       clue: "Look at the middle of the draft. What is each paragraph mostly about?",
-      why: "The answer is so each paragraph tells about one part of the library. One paragraph tells what kids can borrow, and another tells about events. That makes the draft easy for a reader to follow." }
+      why: "The answer is so each paragraph tells about one part of the library. One paragraph tells what kids can borrow, and another tells about events. That makes the draft easy for a reader to follow." },
+    { id: "SK-SS1b-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Priya will turn her draft into a poster for kindergarten children who are just learning to read. Which change would help THESE readers most?",
+      choices: [
+        { text: "a big picture for each thing kids can do there, with one or two easy words under it", correct: true },
+        { text: "a chart that lists the hours the library is open on each day of the week" },
+        { text: "a long paragraph that tells how and when the library was first built" },
+        { text: "a map that shows which shelves hold which kinds of books" }
+      ],
+      clue: "Think about who will read the poster. What can a child who is just learning to read use without help?",
+      why: "The answer is a big picture for each thing kids can do there, with one or two easy words under it. Children who are just learning to read can understand pictures and a few easy words. A chart of hours could help a grown-up plan a visit, and a long paragraph or a shelf map could help older readers, but those need too much reading for these young readers." }
   ]
 });
 

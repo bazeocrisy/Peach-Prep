@@ -6,7 +6,7 @@
    builds on the ones before it. The Georgia standards themselves set no order. */
 window.PP_CATALOG = [
   { id: "foundations", name: "Reading Foundations", short: "Foundations", icon: "abc",
-    line: "Phonics, reading fluency and cursive. Taught in class; not on the Milestones.",
+    line: "Phonics, reading fluency and cursive. Taught in class; no Milestones questions, but spelling still counts in the essay.",
     groups: [
       { name: "Phonics and word parts", skills: ["3.F.P.4.a", "3.F.P.4.b", "3.F.P.4.c"] },
       { name: "Reading words smoothly", skills: ["3.F.F.1.a", "3.F.F.1.d", "3.F.F.1.b", "3.F.F.1.c"] },

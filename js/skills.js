@@ -7,8 +7,8 @@
    every question format, the Help me ladder and Show me how work the same.
 
    Progress is saved on this device only (localStorage, guarded): which steps
-   are done and the best test score. Mastered = at least 80% of the test's
-   points. Nothing leaves the device. */
+   are done and the best test score. Passed = at least ceil(80%) of the check's
+   points (stored as `mastered` for compatibility). Nothing leaves the device. */
 (function () {
   "use strict";
   const { make, clear, el } = PP;
@@ -65,16 +65,70 @@
   function rec(k) { prog[k] = prog[k] || {}; return prog[k]; }
   function mark(k, step) { const r = rec(k); if (!r[step]) { r[step] = true; save(); } }
   function passMark(max) { return Math.ceil(max * 0.8); }
+  /* Local calendar date (not UTC, which is a day ahead on Georgia evenings). */
+  const pad2 = n => String(n).padStart(2, "0");
+  function today() { const d = new Date(); return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate()); }
+  function daysSince(ymd) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(ymd || ""); if (!m) return null;
+    const a = new Date(+m[1], +m[2] - 1, +m[3]), n = new Date(), b = new Date(n.getFullYear(), n.getMonth(), n.getDate());
+    return Math.round((b - a) / 86400000);
+  }
+  function niceDate(ymd) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(ymd || ""); if (!m) return "";
+    return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  }
+  /* PP-003 migration (additive only). A pass saved before dates were kept is
+     flagged legacyUndated, and firstSeenPassedAt notes when this version first
+     saw it (not the pass date). passedAt is never invented; mastered, best and
+     tries are never changed or removed. */
+  (function migrate() {
+    let changed = false;
+    Object.keys(prog).forEach(k => {
+      const r = prog[k];
+      if (k.charAt(0) === "_" || !r || typeof r !== "object") return;
+      if (r.mastered && !r.passedAt && !r.legacyUndated) { r.legacyUndated = true; r.firstSeenPassedAt = today(); changed = true; }
+    });
+    if (changed) save();
+  })();
   function recordTest(k, got, max) {
     const r = rec(k);
     r.tries = (r.tries || 0) + 1;
     if (!r.best || got / max > r.best.got / r.best.max) r.best = { got, max };
     const pass = got >= passMark(max);
     if (pass) r.mastered = true;
+    /* new in PP-003: a dated log of each submitted check (last 20) */
+    const n = r.tries;
+    const after = !!(r.answersSeenAt && n > 1);   /* the answers to these same questions were shown on an earlier try */
+    r.attempts = (r.attempts || []).concat({ d: today(), got, max, ok: pass, n, afterAnswers: after }).slice(-20);
+    if (pass) {
+      if (!r.passedAt && !r.legacyUndated) { r.passedAt = today(); r.passTry = n; r.passBy = "test"; }
+      r.lastPassAt = today();
+    }
     save();
     return pass;
   }
-  function recordPractice(k, part) { mark(k, part === "y" ? "tried" : "practiced"); }
+  /* The child opened See my answers after a skill check. */
+  function answersSeen(k) { if (!lessons[k]) return; rec(k).answersSeenAt = new Date().toISOString(); save(); }
+  /* Test items are never practice: the player runs them in test mode only. */
+  function recordPractice(k, part) { if (part === "t") return; mark(k, part === "y" ? "tried" : "practiced"); }
+  /* How a pass was earned: "grownup" (hands-on Check) or "test" (scored check).
+     Older grown-up passes have no passBy; a lesson with a Check and no test can only be passed that way. */
+  function passKind(k) {
+    const r = prog[k] || {};
+    if (!r.mastered) return null;
+    if (r.passBy) return r.passBy;
+    return lessons[k] && lessons[k].check && !PP.byId["SK:" + k + ":t"] ? "grownup" : "test";
+  }
+  function passLabel(k) { return passKind(k) === "grownup" ? "Checked by a grown-up" : "Passed the skill check"; }
+  /* Review suggested (display only, never stored): a scored pass 7+ days old, or the last try did not pass. */
+  function reviewDue(k) {
+    const r = prog[k] || {};
+    if (!r.mastered || passKind(k) !== "test") return false;
+    const last = (r.attempts || [])[(r.attempts || []).length - 1];
+    if (last && !last.ok) return true;
+    const ds = daysSince(r.lastPassAt || r.passedAt || r.firstSeenPassedAt);
+    return ds !== null && ds >= 7;
+  }
   function status(k) {
     if (!lessons[k]) { const lk = lessonFor(k); if (lk) return status(lk); return habit(k) ? "habit" : "none"; }
     const r = prog[k] || {};
@@ -90,17 +144,17 @@
     writing: ["On the test", "On the Milestones: Writing and revising questions"],
     both: ["On the test", "On the Milestones: Reading and Writing questions"],
     classroom: ["Classroom skill", "Taught and checked in class. Not on the Milestones."],
-    no: ["Not on the test", "On Georgia's grade 3 grammar chart as a skill being introduced. Not on the Milestones yet."],
-    embedded: ["Everyday habit", "A reading and writing habit used in every skill. Not tested on its own."]
+    no: ["Not on the test", "On Georgia's grade 3 grammar chart as an Introduce or Continue skill. Not on the Grade 3 Milestones."],
+    embedded: ["Everyday habit", "A reading and writing habit. GaDOE builds the practices into other questions; it is not tested on its own."]
   };
   const onTest = s => !!s && ["reading", "writing", "both"].indexOf(s.tested) >= 0;
   const groupName = g => String(g || "").replace(/\s*\(K-12 GUM chart, grade 3 rows\)/, " (grammar chart)");
   function codeLabel(s) { return s.gum ? "3.L.GC.1 · " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] : s.display; }
-  function shortCode(c) { const s = byCode[c]; return s ? (s.gum ? "3.L.GC.1" : s.display) : c; }
+  /* GUM rows all share 3.L.GC.1, so the list shows the row's grade 3 level instead of repeating the code */
+  function shortCode(c) { const s = byCode[c]; return s ? (s.gum ? "Grammar chart: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] : s.display) : c; }
   const habit = code => (window.PP_HABITS || {})[code];
   function titleOf(s) { const lk = lessonFor(s.code), H = habit(s.code); return lk ? lessons[lk].title : H ? H.title : (s.gum ? cap(s.gum) : s.plain); }
   function cap(t) { t = String(t || ""); return t.charAt(0).toUpperCase() + t.slice(1); }
-  const STATUS = { mastered: "Mastered", started: "Started", "new": "Not started", none: "Lesson coming", habit: "Tips for home" };
   const lessonOnTest = L => codesOf(L).some(c => onTest(byCode[c]));
 
   /* ---------- the catalog (IXL-style): categories, lettered groups, numbered skills ---------- */
@@ -138,8 +192,10 @@
     return null;
   }
   function catStats(c) {
-    const ks = [].concat(...c.groups.map(g => g.skills)).filter(k => lessons[k]);
-    return { total: ks.length, done: ks.filter(k => status(k) === "mastered").length };
+    const all = [].concat(...c.groups.map(g => g.skills));
+    const ks = all.filter(k => lessons[k]);
+    /* essay tasks are scored by a grown-up, not mastered, so they are counted beside the ring, not in it */
+    return { total: ks.length, done: ks.filter(k => status(k) === "mastered").length, essays: all.filter(k => isTask(k) && PP.taskById[k.slice(5)]).length };
   }
 
   let filter = "all", query = "", lastCode = null;
@@ -188,9 +244,13 @@
           if (entryOnTest(k)) meta.appendChild(make("span", "sl-test", "On test"));
           body.appendChild(meta);
           b.appendChild(body);
-          if (st === "mastered") b.appendChild(make("span", "sl-done", "✓"));
+          const due = st === "mastered" && !isTask(k) && reviewDue(k);
+          const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
+          if (st === "mastered") { const ck = make("span", "sl-done" + (byG ? " by-grownup" : ""), "✓"); ck.title = passLabel(k); b.appendChild(ck); }
           else if (st === "started") b.appendChild(make("span", "sl-started", "◐"));
-          b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " + (st === "mastered" ? "Mastered." : st === "started" ? "Started." : ""));
+          if (due) b.appendChild(make("span", "sl-review", "review"));
+          b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " +
+            (st === "mastered" ? passLabel(k) + "." + (due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
           b.addEventListener("click", () => openEntry(k));
           li.appendChild(b); ol.appendChild(li);
           any++; shown++;
@@ -221,8 +281,9 @@
       ring.appendChild(make("span", "cc-ring-n", st.done + "/" + st.total));
       b.appendChild(ring);
       const nx = nextIn(c);
-      b.appendChild(make("span", "cc-next", nx ? "Next: " + ids[nx] + " " + lessons[nx].title.split(":")[0] : "All mastered!"));
-      b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " mastered." + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
+      const ess = st.essays ? "+" + st.essays + " essay" + (st.essays > 1 ? "s" : "") : "";
+      b.appendChild(make("span", "cc-next", (nx ? "Next: " + ids[nx] + " " + lessons[nx].title.split(":")[0] : "All checks passed") + (ess ? " · " + ess : "")));
+      b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " checks passed." + (ess ? " Plus " + st.essays + " essay task" + (st.essays > 1 ? "s" : "") + ", scored by a grown-up." : "") + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
       b.addEventListener("click", () => {
         rec("_ui").lastCat = c.id; save();
         const t = el("cat-" + c.id); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -239,7 +300,7 @@
     const order = [pref].concat(CAT.map(c => c.id).filter(x => x !== pref));
     let k = null, cat = null;
     for (const id of order) { const c = CAT.find(x => x.id === id); k = c && nextIn(c); if (k) { cat = c; break; } }
-    if (!k) { host.appendChild(make("p", "un-done", "Every skill is mastered on this device. Amazing work!")); return; }
+    if (!k) { host.appendChild(make("p", "un-done", "Your child has passed every check on this device. Come back to skills over the next weeks to make sure they stick.")); return; }
     host.appendChild(make("p", "un-label", "Up next in " + cat.name));
     const b = make("button", "btn btn-primary un-btn", ids[k] + " · " + lessons[k].title);
     b.type = "button"; b.id = "up-next-btn";
@@ -253,7 +314,9 @@
     const done = testedKeys.filter(k => status(k) === "mastered").length;
     const p = make("p", "prog-line");
     p.appendChild(make("strong", "", done + " of " + testedKeys.length));
-    p.appendChild(document.createTextNode(" skills that are on the test are mastered on this device."));
+    p.appendChild(document.createTextNode(" skills that are on the test have a passed skill check on this device."));
+    const due = Object.keys(lessons).filter(reviewDue).length;
+    if (due) p.appendChild(document.createTextNode(" " + due + " passed skill" + (due > 1 ? "s are" : " is") + " due for a review."));
     host.appendChild(p);
     const bar = make("span", "prog-bar"); const fill = make("span", "prog-fill");
     fill.style.width = (testedKeys.length ? Math.round(100 * done / testedKeys.length) : 0) + "%";
@@ -358,10 +421,11 @@
     tags.appendChild(make("span", "srow-tag tag-" + (anyTest ? "test" : s.tested), anyTest ? "On the test" : t0[0]));
     tags.appendChild(make("span", "sk-tagline", anyTest ? "This exercise targets the Georgia standard" + (codes.length > 1 ? "s" : "") + " above." : t0[1]));
     const off = el("sk-official"); clear(off);
-    off.appendChild(make("summary", "", "Georgia's wording" + (anyTest ? " and what Proficient looks like" : "")));
+    off.appendChild(make("summary", "", "Georgia's standard" + (anyTest ? " and what Proficient looks like" : "")));
     codes.forEach(c => {
       const x = byCode[c]; if (!x) return;
-      const p = make("p", "sk-off-text"); p.appendChild(make("strong", "", codeLabel(x) + ": ")); p.appendChild(document.createTextNode("“" + x.text + "”"));
+      /* standards.js text is paraphrased, so it is not shown in quotation marks */
+      const p = make("p", "sk-off-text"); p.appendChild(make("strong", "", codeLabel(x) + " (paraphrased): ")); p.appendChild(document.createTextNode(x.text));
       off.appendChild(p);
     });
     off.appendChild(make("p", "note", "Georgia's K-12 English Language Arts Standards, grades 3-5" + (s.gum ? ", Grammar, Usage and Mechanics chart (grade 3 row: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] + ")" : "") + "."));
@@ -371,12 +435,13 @@
       const ald = m && !seen[m[1]] && onTest(byCode[c]) && window.PP_ALDS && window.PP_ALDS.standards[m[1]];
       if (m) seen[m[1]] = 1;
       if (ald && ald.Proficient && ald.Proficient.length) {
-        off.appendChild(make("p", "fg-label", "What Proficient work looks like (GaDOE Achievement Level Descriptors, for all of " + m[1] + ")"));
+        off.appendChild(make("p", "fg-label", "What Proficient work looks like (GaDOE's DRAFT Achievement Level Descriptors, October 2025, for all of " + m[1] + "; GaDOE may revise them after standard setting in late fall 2026)"));
         const ul = make("ul", "plist ald");
         ald.Proficient.forEach(t => ul.appendChild(make("li", "", t)));
         off.appendChild(ul);
       }
     });
+    if (off.querySelector(".plist.ald")) off.appendChild(make("p", "note ald-note", "Passing a Peach Prep skill check is not a Milestones score or achievement level."));
     el("sk-steps").hidden = !L;
     render();
     if (!(opts && opts.keepScroll)) window.scrollTo(0, 0);
@@ -445,7 +510,7 @@
   function lines(host, list, cls) {
     (Array.isArray(list) ? list : [list]).forEach(t => {
       const c = /^Cursive: /.test(t);
-      host.appendChild(make("p", (cls || "") + (c ? " cursive" : ""), c ? t.replace(/^Cursive: /, "") : t));
+      host.appendChild(c ? make("p", (cls || "") + " cursive", t.replace(/^Cursive: /, "")) : PP.rich(make("p", cls || ""), t));   /* **bold** words: SPEC §5e */
     });
   }
   PP.cursiveLines = lines;
@@ -484,7 +549,7 @@
     (T.examples || (T.example ? [T.example] : [])).forEach(ex => {
       const box = make("div", "teach-example");
       box.appendChild(make("p", "ex-label", ex.label || "Example"));
-      const body = make("div", "ex-body"); lines(body, ex.lines); box.appendChild(body);
+      const body = make("div", "ex-body"); lines(body, ex.lines); PP.figures(body, ex.figure); box.appendChild(body);
       if (ex.note) box.appendChild(make("p", "ex-note", ex.note));
       card.appendChild(box);
     });
@@ -501,7 +566,7 @@
     exs.forEach((ex, i) => {
       const card = make("div", "learn-card");
       card.appendChild(make("p", "ex-label", "Example " + (i + 1) + " of " + exs.length));
-      if (ex.show && ex.show.length) { const b = make("div", "ex-body"); lines(b, ex.show); card.appendChild(b); }
+      if ((ex.show && ex.show.length) || ex.figure) { const b = make("div", "ex-body"); lines(b, ex.show || []); PP.figures(b, ex.figure); card.appendChild(b); }
       card.appendChild(make("p", "learn-ask", ex.ask));
       const ol = make("ol", "learn-steps");
       ol.setAttribute("aria-live", "polite");
@@ -562,7 +627,7 @@
     const r = prog[cur] || {};
     if (set) host.appendChild(goCard(set, {
       intro: set.items.length + " new questions on your own. Press Check to see if you are right. Help me unlocks after one try.",
-      done: r.tried ? "✓ Finished. Ready for the test!" : "",
+      done: r.tried ? "✓ Finished. Next: the skill check." : "",
       button: r.tried ? "Try again" : "Start", id: "sk-start-try", mode: "try" }));
     if (L.write) renderWrite(host, L);
     host.appendChild(nextBtn());
@@ -608,9 +673,24 @@
     if (set) {
       const max = set.items.reduce((a, it) => a + it.points, 0);
       const r = prog[cur] || {};
-      card.appendChild(make("p", "", set.items.length + " questions, " + max + " points, no hints, like the real test. Score " + passMark(max) + " or more to master this skill."));
-      if (r.mastered) card.appendChild(make("p", "go-done", "✓ Mastered!" + (r.best ? " Best score: " + r.best.got + " of " + r.best.max + "." : "")));
-      else if (r.best) card.appendChild(make("p", "go-best", "Best score so far: " + r.best.got + " of " + r.best.max + ". Need " + passMark(max) + " to master it."));
+      card.appendChild(make("p", "", set.items.length + " questions, " + max + " points, no hints. Score " + passMark(max) + " or more to pass the skill check."));
+      if (r.mastered) {
+        card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + "." + (r.best ? " Best score: " + r.best.got + " of " + r.best.max + "." : "")));
+        /* for grown-ups: how the pass was earned (display only, from the dated attempt log) */
+        const att = r.attempts || [];
+        const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
+        if (r.passTry) card.appendChild(make("p", "go-note pass-try", "Passed on try " + r.passTry + "." + (r.passTry > 1 ? " The check uses the same questions each time." : "")));
+        if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", "Passed after seeing the answers on an earlier try."));
+        if (r.legacyUndated) card.appendChild(make("p", "go-note", "This pass was saved before the site kept dates, so its date is not known."));
+        if (reviewDue(cur)) {
+          const last = att[att.length - 1];
+          const ds = daysSince(r.lastPassAt || r.passedAt || r.firstSeenPassedAt);
+          card.appendChild(make("p", "go-best review-due", "Review suggested. " + (last && !last.ok
+            ? "The last try did not pass. A little more practice is a good idea."
+            : "It has been " + ds + " days since this check was passed" + (r.lastPassAt || r.passedAt ? "" : " (or since this device first noticed the pass)") + ". Take it again to see if it stuck.")));
+        }
+      }
+      else if (r.best) card.appendChild(make("p", "go-best", "Best score so far: " + r.best.got + " of " + r.best.max + ". Need " + passMark(max) + " to pass."));
       const b = make("button", "btn btn-primary", r.tries ? "Take the test again" : "Take the test");
       b.type = "button"; b.id = "sk-start-test";
       b.addEventListener("click", () => window.PP_PLAYER.start(set.id, "test"));
@@ -628,7 +708,7 @@
     const H = habit(s.code);
     if (s.tested === "embedded") {
       card.appendChild(make("h2", "panel-h", "An everyday habit"));
-      card.appendChild(make("p", "", "This is one of Georgia's K-12 practices. It is not a separate test skill. Good readers and writers use it inside every skill on this site."));
+      card.appendChild(make("p", "", "This is one of Georgia's K-12 practices. It is not a separate test skill. Many skills on this site use this habit; the ideas below practice it at home."));
       if (H) {
         card.appendChild(make("p", "big-idea", H.looks));
         card.appendChild(make("p", "write-check-h", "Try it at home"));
@@ -670,6 +750,7 @@
   function renderFluency(host, L, A) {
     const card = make("div", "go-card fluency");
     card.appendChild(make("h3", "write-h", "Read aloud for one minute"));
+    card.appendChild(make("p", "flu-tool-note", "A home practice tool, not a formal test or screener. Teachers use calibrated passages and more than one reading for that, so treat these numbers as a rough guide."));
     lines(card, A.how, "");
     const pick = make("div", "seg flu-pick"); pick.setAttribute("role", "group"); pick.setAttribute("aria-label", "Choose a passage");
     card.appendChild(pick);
@@ -684,9 +765,9 @@
     const out = make("div", "flu-out"); out.setAttribute("aria-live", "polite"); card.appendChild(out);
     host.appendChild(card);
 
-    let which = 0, phase = "ready", t0 = 0, timer = null, secs = 60, words = [], miss = new Set();
+    let which = 0, phase = "ready", t0 = 0, timer = null, secs = 60, words = [], miss = new Set(), fixed = new Set();
     function load(i) {
-      which = i; phase = "ready"; miss = new Set(); clearInterval(timer);
+      which = i; phase = "ready"; miss = new Set(); fixed = new Set(); clearInterval(timer);
       Array.from(pick.children).forEach((b, k) => b.setAttribute("aria-pressed", k === i ? "true" : "false"));
       clear(text); clear(out);
       const P = A.passages[i];
@@ -706,7 +787,8 @@
       b.addEventListener("click", () => load(i)); pick.appendChild(b);
     });
     function tap(k, b) {
-      if (phase === "reading") { if (miss.has(k)) miss.delete(k); else miss.add(k); b.classList.toggle("is-miss", miss.has(k)); return; }
+      /* a second tap undoes the mark: the reader fixed the word, so it counts as correct and as a self-correction */
+      if (phase === "reading") { if (miss.has(k)) { miss.delete(k); fixed.add(k); } else { miss.add(k); fixed.delete(k); } b.classList.toggle("is-miss", miss.has(k)); return; }
       if (phase === "last") finish(k);
     }
     function tick() {
@@ -720,7 +802,7 @@
       card.classList.add("is-reading");
       timer = setInterval(tick, 250);
       startB.hidden = true; stopB.hidden = false;
-      say.textContent = "Reading. Grown-up: tap any word that is skipped or read wrong. Tap it again to undo.";
+      say.textContent = "Reading. Grown-up: tap any word that is skipped or read wrong. If the reader fixes it on their own, tap it again: it counts as correct and as a self-correction.";
     });
     stopB.addEventListener("click", stop);
     function stop() {
@@ -757,16 +839,82 @@
       const goal = A.goal[season];
       if (A.practiced) out.appendChild(make("p", "", "This was a practiced passage, so the speed is higher than on a first reading. Use it to see your own progress from one reading to the next."));
       else out.appendChild(make("p", "", "A typical third grader in the " + season + " reads about " + goal +
-        " words correct per minute on a first reading (" + A.goalSource + "). " + (wcpm >= goal ? "Right on track or better!" : wcpm >= goal - 10 ? "Close to typical. Keep practicing." : "Rereading the same passage a few times a week builds speed. Try it again tomorrow.")));
+        " words correct per minute on a first reading (" + A.goalSource + "). " +
+        (wcpm >= goal ? "For this one reading, that is at or above the grade 3 middle." : wcpm >= goal - 10 ? "For this one reading, that is close to the grade 3 middle. Keep practicing." : "For this one reading, that is below the grade 3 middle. Rereading the same passage a few times a week builds speed. Try it again tomorrow.") +
+        " Passages differ in difficulty, so one reading is a rough guide only."));
       out.appendChild(make("p", "", ratio >= 0.95 ? "Accuracy of 95% or higher means this passage is a good level for reading on your own." :
         ratio >= 0.90 ? "Accuracy of 90-94%: a good level for reading with a grown-up nearby." : "Accuracy under 90% means this passage is hard right now. Read it together first, then try again."));
       const r = rec(cur); r.fluency = r.fluency || [];
-      r.fluency.push({ d: new Date().toISOString().slice(0, 10), wcpm, acc, p: which + 1 });
+      const entry = { d: today(), wcpm, acc, p: which + 1 };
+      const fixes = Array.from(fixed).filter(i => i <= k).length;
+      if (fixes) entry.obs = { selfFix: fixes };   /* counted from the grown-up's second taps */
+      r.fluency.push(entry);
       r.fluency = r.fluency.slice(-12); save();
       mark(cur, "practiced"); renderSteps();
-      const hist = r.fluency.slice(-5).map(x => x.d + ": " + x.wcpm + " wcpm, " + x.acc + "%").join(" · ");
-      out.appendChild(make("p", "note", "Recent readings on this device: " + hist));
+      out.appendChild(observeForm(r, entry));
+      histRedraw();
       startB.hidden = false; startB.textContent = "Read again";
+    }
+    /* Reading history: shown whenever there are saved readings (reading only, never writes). */
+    const histP = make("div", "note flu-hist-box"); card.appendChild(histP);
+    function histRedraw() {
+      clear(histP);
+      const F = (prog[cur] || {}).fluency || [];
+      if (!F.length) return;
+      histP.appendChild(make("p", "", "Recent readings on this device:"));
+      const ul = make("ul", "flu-hist");
+      F.slice(-5).forEach(x => {
+        const li = make("li", "", (niceDate(x.d) || x.d) + ": " + x.wcpm + " words correct per minute, " + x.acc + "% accuracy");
+        const o = obsText(x.obs);
+        if (o) { li.appendChild(document.createTextNode(" · ")); li.appendChild(make("span", "flu-obs-tag", "Grown-up observed: ")); li.appendChild(document.createTextNode(o)); }
+        ul.appendChild(li);
+      });
+      histP.appendChild(ul);
+    }
+    histRedraw();
+    /* Optional notes a grown-up adds after a reading. Saved with that reading as
+       reading.obs = { expr: 1-3, pauses: "yes"|"sometimes"|"notyet", selfFix: n, retell: "yes"|"partly"|"notyet" }. */
+    function observeForm(r, entry) {
+      const box = make("div", "flu-obs");
+      box.appendChild(make("p", "fo-h", "Grown-up observed (optional)"));
+      box.appendChild(make("p", "note", "Add what you heard. These notes are saved with this reading on this device. They are your observations, not a score."));
+      const store = (key, val) => {
+        entry.obs = entry.obs || {};
+        if (val === null || val === "" || (typeof val === "number" && isNaN(val))) delete entry.obs[key]; else entry.obs[key] = val;
+        if (!Object.keys(entry.obs).length) delete entry.obs;
+        save(); if (histRedraw) histRedraw();
+      };
+      const uid = "fo" + Date.now().toString(36);
+      const radios = (key, q, opts) => {
+        const fs = make("fieldset", "fo-" + key); fs.appendChild(make("legend", "", q));
+        opts.forEach(([v, lab]) => {
+          const l = make("label"); const i = make("input"); i.type = "radio"; i.name = uid + key; i.value = String(v);
+          i.checked = !!entry.obs && entry.obs[key] === v;
+          i.addEventListener("change", () => { if (i.checked) store(key, v); });
+          l.appendChild(i); l.appendChild(document.createTextNode(lab)); fs.appendChild(l);
+        });
+        box.appendChild(fs);
+      };
+      radios("expr", "Expression and phrasing", [[1, "1: mostly word by word"], [2, "2: some phrases, some expression"], [3, "3: smooth phrases, expression that fits"]]);
+      radios("pauses", "Paused at periods and commas?", [["yes", "Yes"], ["sometimes", "Sometimes"], ["notyet", "Not yet"]]);
+      const fs = make("fieldset", "fo-selfFix"); fs.appendChild(make("legend", "", "Self-corrections (words the reader fixed on their own)"));
+      const l = make("label"); const n = make("input"); n.type = "number"; n.min = "0"; n.max = "99"; n.step = "1"; n.id = uid + "sf";
+      n.value = entry.obs && entry.obs.selfFix ? String(entry.obs.selfFix) : "";
+      n.addEventListener("input", () => { const v = n.value === "" ? null : Math.max(0, Math.min(99, Math.round(+n.value))); store("selfFix", v); });
+      l.appendChild(n); l.appendChild(document.createTextNode("counted from your second taps; change it if needed"));
+      fs.appendChild(l); box.appendChild(fs);
+      radios("retell", "Could your child tell what it was mostly about?", [["yes", "Yes"], ["partly", "Partly"], ["notyet", "Not yet"]]);
+      return box;
+    }
+    function obsText(o) {
+      if (!o) return "";
+      const W = { yes: "yes", sometimes: "sometimes", partly: "partly", notyet: "not yet" };
+      const out = [];
+      if (o.expr) out.push("expression and phrasing " + o.expr + " of 3");
+      if (o.pauses) out.push("paused at punctuation: " + W[o.pauses]);
+      if (typeof o.selfFix === "number") out.push(o.selfFix + " self-correction" + (o.selfFix === 1 ? "" : "s"));
+      if (o.retell) out.push("told what it was mostly about: " + W[o.retell]);
+      return out.join(", ");
     }
     load(A.practiced ? Math.min(4, A.passages.length - 1) : 0);
   }
@@ -794,25 +942,38 @@
   }
 
   /* Grown-up check: for skills shown out loud or on paper. When every line is
-     checked, the grown-up can mark the skill mastered. */
+     checked, the grown-up can mark it "Checked by a grown-up". This is a
+     grown-up's observation, shown apart from a machine-scored skill check. It
+     still sets `mastered` (so counts keep working) plus passBy: "grownup". */
   function renderCheck(host, L) {
     const C = L.check;
     const card = make("div", "go-card");
     lines(card, C.intro, "");
-    const r = rec(cur); r.checks = r.checks || [];
+    const r0 = prog[cur] || {};          /* rendering never writes; the record is created on the first tick */
+    const checks = () => (prog[cur] && prog[cur].checks) || [];
     const ul = make("ul", "write-checklist");
-    const btn = make("button", "btn btn-primary", "Mark this skill mastered"); btn.type = "button";
-    const sync = () => { btn.disabled = !C.items.every((x, i) => r.checks[i]) || !!r.mastered; };
+    const btn = make("button", "btn btn-primary", "Mark as checked by a grown-up"); btn.type = "button"; btn.id = "sk-grownup-check";
+    const sync = () => { btn.disabled = !C.items.every((x, i) => checks()[i]) || !!(prog[cur] || {}).mastered; };
     C.items.forEach((c, i) => {
       const li = make("li");
-      const cb = make("input"); cb.type = "checkbox"; cb.id = "skc-" + i; cb.checked = !!r.checks[i];
-      cb.addEventListener("change", () => { r.checks[i] = cb.checked; save(); sync(); });
+      const cb = make("input"); cb.type = "checkbox"; cb.id = "skc-" + i; cb.checked = !!checks()[i];
+      cb.addEventListener("change", () => { const r = rec(cur); r.checks = r.checks || []; r.checks[i] = cb.checked; save(); sync(); });
       const lb = make("label", "", c); lb.htmlFor = cb.id;
       li.appendChild(cb); li.appendChild(lb); ul.appendChild(li);
     });
     card.appendChild(ul);
-    if (r.mastered) card.appendChild(make("p", "go-done", "✓ Mastered!"));
-    btn.addEventListener("click", () => { r.mastered = true; save(); render(); });
+    if (r0.mastered) {
+      card.appendChild(make("p", "go-done", "✓ Checked by a grown-up" + (r0.passedAt ? " on " + niceDate(r0.passedAt) : "") + "."));
+      card.appendChild(make("p", "go-note", "This is a grown-up's observation, not a scored skill check." + (r0.legacyUndated ? " It was saved before the site kept dates." : "")));
+    }
+    btn.addEventListener("click", () => {
+      const r = rec(cur);
+      r.mastered = true;
+      if (!r.passBy) r.passBy = "grownup";
+      if (!r.passedAt && !r.legacyUndated) r.passedAt = today();
+      r.lastPassAt = today();
+      save(); render();
+    });
     sync();
     card.appendChild(btn);
     host.appendChild(card);
@@ -850,8 +1011,8 @@
   /* ---------- player hooks ---------- */
   function afterTest(set, got, max) {
     const pass = recordTest(set.code, got, max);
-    return pass ? "You mastered this skill! It now shows a check mark on the skill list."
-      : "To master this skill, score " + passMark(max) + " or more. Go back to Watch Me or Practice Together, then try the test again another day.";
+    return pass ? "✓ Passed! You passed the skill check. It now shows a check mark on the skill list. Come back in about a week and try it again to see if it stuck."
+      : "To pass the skill check, score " + passMark(max) + " or more. Go back to Watch Me or Practice Together, then try the check again another day.";
   }
 
   function init() {
@@ -867,7 +1028,9 @@
 
   window.PP_SKILLS = {
     init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
+    answersSeen, reviewDue, passKind, passLabel,
     current: () => cur, step: () => step, lastCode: () => lastCode,
+    stepNames: k => (lessons[k] ? stepsFor(lessons[k]).map(x => x[1]) : []),
     lessonCount: () => Object.keys(lessons).length
   };
 })();

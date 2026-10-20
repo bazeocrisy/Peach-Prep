@@ -823,6 +823,16 @@ PP.addLesson({
         { text: "My favorite animal at the zoo is the tall giraffe." }
       ],
       clue: "A conclusion wraps up the most important ideas of the whole draft. It does not add one small fact or start a new topic.",
-      why: "The answer is \"Bats are amazing flyers with a special way to find food.\" It reminds the reader of the big ideas: bats fly, and they find food with echoes. The cave and tree sentence is one small fact, the ocean sentence starts a new topic, and the giraffe sentence is off topic." }
+      why: "The answer is \"Bats are amazing flyers with a special way to find food.\" It reminds the reader of the big ideas: bats fly, and they find food with echoes. The cave and tree sentence is one small fact, the ocean sentence starts a new topic, and the giraffe sentence is off topic." },
+    { id: "SK-TT2d-T6", type: "mc", points: 1, dok: 3, passages: ["p2"],
+      prompt: "Kenji can add only ONE more sentence to his draft. Which choice would best develop his topic, and why?",
+      choices: [
+        { text: "Add \"A mammal is an animal that has hair and feeds its babies milk\" after sentence 1, because it tells what a key word means.", correct: true },
+        { text: "Add \"Bats come in many sizes and colors\" after sentence 12, because any new fact about bats makes a draft better." },
+        { text: "Add \"Owls also hunt for food at night\" after sentence 6, because it tells about another animal that is awake at night." },
+        { text: "Add \"I think bats are the best animals ever\" after sentence 3, because a strong feeling makes the reader care." }
+      ],
+      clue: "Check two things in each choice. Does the sentence teach about bats and fit the sentences around it? Is the reason a good reason for adding it?",
+      why: "The answer is to add \"A mammal is an animal that has hair and feeds its babies milk\" after sentence 1, because it tells what a key word means. Sentence 1 uses the word mammals, and the definition helps the reader understand why bats belong with dogs, horses and people. The sizes fact is about bats, but sentences 9 to 12 explain how bats find food, so it does not fit there, and not every fact makes a draft better. The owl sentence is about owls, not bats. The last sentence is an opinion, not a fact." }
   ]
 });

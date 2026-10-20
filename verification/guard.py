@@ -98,7 +98,8 @@ with sync_playwright() as p:
 
     # ---------- 3. Practice mode on every item ----------
     hint_fail, right_fail, wrong_fail, leak_fail = [], [], [], []
-    for s in pg.evaluate("PP.sets.map(s=>s.id)"):
+    # a skill's check set (SK:<k>:t) never runs in practice mode (PP-003 A3); it is covered in section 4 and 11.2
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&s.part=='t')).map(s=>s.id)"):
         pg.evaluate("PP_PLAYER.start('%s','practice')" % s); pg.wait_for_timeout(80)
         n = pg.evaluate("PP_PLAYER.state().total")
         for i in range(n):
@@ -204,8 +205,8 @@ with sync_playwright() as p:
     ald = pg.evaluate("""(()=>{const d=document.querySelector('#std-list details.std[data-code="3.T.T.1.c"]'); if(!d) return null; d.open=true;
        return {proficient:d.textContent.indexOf('What Proficient work looks like')>=0, bullet:(PP_ALDS.standards['3.T.T.1'].Proficient[0]||'').slice(0,30), txt:d.textContent};})()""")
     ok("5.5 a tested standard shows GaDOE's Proficient descriptors verbatim", ald and ald["proficient"] and ald["bullet"] in ald["txt"], (ald or {}).get("bullet"))
-    gum = pg.evaluate("""PP_STANDARDS.filter(s=>s.gum).every(s=>(s.level==='M'||s.level==='R')===(s.tested==='both'))""")
-    ok("5.6 grammar-chart rows: Master/Reinforce on the test, Introduce/Continue not", gum)
+    gum = pg.evaluate("""PP_STANDARDS.filter(s=>s.gum).every(s=>(s.level==='M'||s.level==='R')?s.tested==='writing':s.tested==='no')""")
+    ok("5.6 grammar-chart rows: Master/Reinforce on the test (writing part only, per the blueprint), Introduce/Continue not", gum)
     pg.uncheck(".filter-check input")
     pg.click("[data-ptab=essay]"); pg.wait_for_timeout(60)
     es = pg.evaluate("({items:document.querySelectorAll('#ptab-essay .check-ul li').length, traits:document.querySelectorAll('#ptab-essay .trait').length})")
@@ -293,7 +294,7 @@ with sync_playwright() as p:
             pg.evaluate(CORRECT); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
         g2 = pg.text_content("#res-guidance")
-        ok("9.6 a failed test says how many points master it; a passing test masters the skill", "To master" in g1 and "mastered this skill" in g2, (g1, g2))
+        ok("9.6 a failed check says how many points pass it; a passing check says it passed", "To pass the skill check" in g1 and "passed the skill check" in g2, (g1, g2))
         pg.click("#res-back"); pg.wait_for_timeout(80)
         bk = pg.evaluate("({cur:PP_APP.current(), code:PP_SKILLS.current(), step:PP_SKILLS.step(), done:document.querySelectorAll('#sk-steps .step-btn.is-done').length})")
         ok("9.7 Back from a skill test returns to the skill's Test step, with all five steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 5, bk)
@@ -304,7 +305,7 @@ with sync_playwright() as p:
         pg.go_forward(); pg.wait_for_timeout(250)
         pg.click("#skill-back"); pg.wait_for_timeout(80)
         hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.getAttribute('aria-label')||''}))('%s')""" % qcode)
-        ok("9.8 All skills returns home on that skill's row, now marked Mastered", hm["cur"] == "home" and hm["focus"] == qcode and "Mastered" in hm["txt"], hm)
+        ok("9.8 All skills returns home on that skill's row, now marked Passed the skill check", hm["cur"] == "home" and hm["focus"] == qcode and "Passed the skill check" in hm["txt"], hm)
         pg.reload(); pg.wait_for_timeout(700)
         kept = pg.evaluate("PP_SKILLS.status('%s')" % qcode)
         ok("9.9 progress is kept on the device after a reload", kept == "mastered", kept)
@@ -334,8 +335,9 @@ with sync_playwright() as p:
         d0 = pg.evaluate("document.querySelector('#sk-panel .btn-primary').disabled")
         for cb in pg.query_selector_all("#sk-panel input[type=checkbox]"): cb.check()
         d1 = pg.evaluate("document.querySelector('#sk-panel .btn-primary').disabled")
-        pg.click("text=Mark this skill mastered"); pg.wait_for_timeout(40)
-        ok("9.13 grown-up check: mastered only after every line is checked", d0 and not d1 and pg.evaluate("PP_SKILLS.status('%s')" % chk_code) == "mastered", (d0, d1))
+        pg.click("text=Mark as checked by a grown-up"); pg.wait_for_timeout(40)
+        ok("9.13 grown-up check: 'Checked by a grown-up' only after every line is checked", d0 and not d1 and pg.evaluate("PP_SKILLS.status('%s')" % chk_code) == "mastered"
+           and "Checked by a grown-up" in pg.text_content("#sk-panel"), (d0, d1))
     curs = pg.evaluate("document.fonts.load('20px \"PP Cursive\"').then(f=>f.length>0)")
     ok("9.14 the cursive font loads from the site itself", curs)
     pg.evaluate("localStorage.clear()")
@@ -385,6 +387,13 @@ with sync_playwright() as p:
                 q.evaluate("PP_APP.openSection('%s')" % sec); q.wait_for_timeout(60); chk(sec)
         for s in q.evaluate("PP.sets.map(s=>s.id)"):
             q.evaluate("PP_PLAYER.start('%s','practice')" % s); q.wait_for_timeout(60); chk(s + " passage")
+            if q.evaluate("PP_PLAYER.state().mode") == "test":
+                # a skill's check set always runs as a check (PP-003 A3): no hints to open, just walk the questions
+                for i in range(q.evaluate("PP_PLAYER.state().total")):
+                    if q.is_visible("#tab-question"): q.click("#tab-question")
+                    chk("%s q%d" % (s, i + 1)); q.click("#q-next")
+                q.evaluate("PP_PLAYER.abandon()")
+                continue
             for i in range(q.evaluate("PP_PLAYER.state().total")):
                 if q.is_visible("#tab-question"): q.click("#tab-question")
                 chk("%s q%d" % (s, i + 1))

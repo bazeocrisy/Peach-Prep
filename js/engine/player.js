@@ -15,6 +15,34 @@
 
   const run = { set: null, mode: "practice", pos: 0, ctxs: [], state: [], done: false };
 
+  /* ---------- figures and bold words (docs/SPEC.md §5e) ----------
+     rich(): "**word**" in passage, stem and lesson text shows as bold.
+     figure(): an original image (SVG under assets/figures/) with required
+     alt text, an optional "Figure 1" label and an optional caption. */
+  function rich(node, text) {
+    String(text).split(/\*\*([^*]+)\*\*/).forEach((part, i) => {
+      if (!part) return;
+      node.appendChild(i % 2 ? make("strong", "pp-bold", part) : document.createTextNode(part));
+    });
+    return node;
+  }
+  function figure(f) {
+    const fig = make("figure", "pp-figure");
+    const img = make("img", "pp-fig-img");
+    img.src = f.src; img.alt = f.alt || "";
+    if (f.width) img.style.maxWidth = f.width + "px";
+    fig.appendChild(img);
+    if (f.label || f.caption) {
+      const cap = make("figcaption", "pp-fig-cap");
+      if (f.label) cap.appendChild(make("strong", "pp-fig-label", f.label + (f.caption ? ". " : "")));
+      if (f.caption) rich(cap, f.caption);
+      fig.appendChild(cap);
+    }
+    return fig;
+  }
+  function figures(host, list) { [].concat(list || []).forEach(f => host.appendChild(figure(f))); }
+  PP.rich = rich; PP.figure = figure; PP.figures = figures;
+
   /* ---------- passage pane ---------- */
   function renderPassages(set, hostEl) {
     const host = hostEl || el("passage-pane-body");
@@ -43,7 +71,11 @@
         });
       } else {
         let n = 0;
+        /* p.figures: [{ after: k, ... }] sits after raw block k (0 = before the
+           first block). Figures are not paragraphs, so refs and numbers stay put. */
+        const figsAfter = k => figures(art, (p.figures || []).filter(f => (f.after || 0) === k));
         p.paragraphs.forEach((para, k) => {
+          figsAfter(k);
           const first = para[0] || "";
           if (isHeading(first)) { art.appendChild(make("h4", "passage-heading", first.replace(/^## /, ""))); return; }
           if (isCaption(first)) { art.appendChild(make("p", "passage-caption", first.replace(/^Caption: /, ""))); return; }
@@ -52,7 +84,7 @@
             const box = make("aside", "passage-box");
             const body = make("p", "para-body");
             para.forEach((sx, si) => {
-              const span = make("span", "sent", si === 0 ? sx.replace(/^Box: /, "") : sx);
+              const span = rich(make("span", "sent"), si === 0 ? sx.replace(/^Box: /, "") : sx);
               span.dataset.ref = p.id + ":" + (k + 1) + ":" + (si + 1);
               body.appendChild(span);
               if (si < para.length - 1) body.appendChild(document.createTextNode(" "));
@@ -64,7 +96,7 @@
           if (!p.draft) row.appendChild(make("span", "para-no", String(n)));
           const body = make("p", "para-body");
           para.forEach((s, si) => {
-            const span = make("span", "sent", s);
+            const span = rich(make("span", "sent"), s);
             span.dataset.ref = p.id + ":" + (k + 1) + ":" + (si + 1);
             body.appendChild(span);
             if (si < para.length - 1) body.appendChild(document.createTextNode(" "));
@@ -72,6 +104,7 @@
           row.appendChild(body);
           art.appendChild(row);
         });
+        figsAfter(p.paragraphs.length);
       }
       host.appendChild(art);
     });
@@ -94,6 +127,7 @@
     const re = new RegExp("\\b(" + list.join("|") + ")\\b", "gi");
     let found = 0;
     Array.from(host.querySelectorAll(".sent")).forEach(sp => {
+      if (sp.children.length) return;   /* keep bold words intact (no clue marks in that sentence) */
       const t = sp.textContent;
       if (!re.test(t)) return; re.lastIndex = 0;
       sp.innerHTML = esc(t).replace(re, m => { found++; return '<mark class="clue-w">' + m + "</mark>"; });
@@ -142,12 +176,13 @@
     /* item.stem: a short text the child reads for this question (a
        mini-passage, a dictionary entry, sentences to compare). Shown in
        its own box so it never runs into the question. */
-    if (item.stem) {
+    if (item.stem || item.figure) {
       const box = make("div", "q-stem");
-      (Array.isArray(item.stem) ? item.stem : [item.stem]).forEach(t => {
+      [].concat(item.stem || []).forEach(t => {
         const c = /^Cursive: /.test(t);   /* reading cursive (3.F.H.3) */
-        box.appendChild(make("p", c ? "cursive" : "", c ? t.replace(/^Cursive: /, "") : t));
+        box.appendChild(c ? make("p", "cursive", t.replace(/^Cursive: /, "")) : rich(make("p", ""), t));
       });
+      figures(box, item.figure);   /* item.figure: a picture this question is about */
       host.appendChild(box);
     }
     ctx.host = host;
@@ -350,12 +385,24 @@
     el("res-score").textContent = String(got);
     el("res-of").textContent = "of " + max + " points";
     el("res-score-box").setAttribute("aria-label", "You scored " + got + " of " + max + " points.");
+    /* An item counts under every area its codes belong to (once per area), so a
+       question that is also tagged for evidence (3.T.RA) shows up under
+       "Using evidence and sources" too. Areas can therefore overlap. */
     const by = {};
+    let multi = false;
     rows.forEach(r => {
-      const k = skillOf((r.item.std || [])[0]);
-      by[k] = by[k] || { got: 0, max: 0 }; by[k].got += r.sc.points; by[k].max += r.sc.max;
+      const areas = (r.item.std || []).map(skillOf).filter((k, i, a) => a.indexOf(k) === i);
+      if (!areas.length) areas.push("Other");
+      if (areas.length > 1) multi = true;
+      areas.forEach(k => { by[k] = by[k] || { got: 0, max: 0 }; by[k].got += r.sc.points; by[k].max += r.sc.max; });
     });
     const host = el("res-skills"); clear(host);
+    if (run.set.kind === "form") {
+      const n = rows.length;
+      host.appendChild(make("p", "note", "This was a SHORTENED practice test: " + n + " questions and " + max + " points, with no essay. " +
+        "The real Grade 3 test has 60 points, including an 8-point essay. This is a practice score, not a Georgia Milestones score."));
+    }
+    if (multi) host.appendChild(make("p", "note", "Some questions check two areas, so they count in each one. The area scores add up to more than the total."));
     Object.keys(by).forEach(k => {
       const row = make("div", "skill-row");
       row.appendChild(make("span", "skill-name", k));
@@ -423,6 +470,9 @@
     if (!switching) window.PP_APP.rememberReturn();
     else if (!window.PP_APP.canLeave()) return;
     run.submitted = false;
+    /* a skill's check items only ever run as a check: no hints, never recorded as practice
+       (closes #play/SK:<k>:t/practice, PP-003) */
+    if (set.kind === "skill" && set.part === "t") mode = "test";
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.tryMode = mode === "try";
     run.pos = 0; run.ctxs = []; run.state = [];
@@ -470,6 +520,8 @@
     el("res-review-btn").addEventListener("click", () => {
       const r = el("res-review"); r.hidden = !r.hidden;
       el("res-review-btn").textContent = r.hidden ? "See my answers" : "Hide my answers";
+      /* the review shows these check questions' answers: note it, so a later pass can say so (PP-003) */
+      if (!r.hidden && run.set && run.set.kind === "skill" && run.mode === "test") window.PP_SKILLS.answersSeen(run.set.code);
     });
     el("res-again").addEventListener("click", () => start(run.set.id, "test"));
     /* a skill's practice and test are two different question sets */

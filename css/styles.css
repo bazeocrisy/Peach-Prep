@@ -607,3 +607,38 @@ mark.clue-w{background:none;color:inherit;}
 #habit-list{display:block;max-width:760px;columns:auto;}
 #habit-list .habit-group{break-inside:avoid;border-bottom:1px solid var(--line);margin:0;padding:2px 0;}
 .habit-group>summary{font-family:var(--head);font-weight:800;color:var(--navy);font-size:1.05rem;}
+
+/* ---------- PP-003 mastery/fluency fixes ---------- */
+/* 3.F.H.4.b: the lesson says leave about one lowercase o between cursive words.
+   Measured in Chromium: a plain space is ~0.3em and an o ~0.6em in both cursive fonts,
+   so .3em of extra word spacing makes the gap about one o wide. */
+.cursive,.trace-row{word-spacing:.3em;}
+.sl-review{flex:0 0 auto;font-size:.72rem;font-weight:800;color:var(--plum);border:1px solid var(--plum);border-radius:999px;padding:1px 7px;margin-left:4px;}
+.sl-done.by-grownup{background:var(--plum);}
+.go-note{margin:4px 0;color:var(--muted);font-size:.95rem;}
+.flu-tool-note{font-size:.95rem;color:var(--muted);border-left:4px solid var(--line);padding:2px 0 2px 10px;}
+.flu-obs{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:12px 0;}
+.flu-obs legend,.flu-obs .fo-h{font-family:var(--head);font-weight:800;color:var(--navy-deep);}
+.flu-obs fieldset{border:0;padding:0;margin:8px 0;min-width:0;}
+.flu-obs fieldset legend{font-size:1rem;font-weight:700;margin-bottom:4px;}
+.flu-obs label{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-right:14px;}
+.flu-obs input[type=number]{width:4.5em;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;}
+.flu-hist{margin:6px 0 0;padding-left:1.2em;}
+.flu-hist li{margin:2px 0;}
+.flu-obs-tag{font-weight:700;color:var(--plum);}
+.ald-note{font-weight:700;}
+/* the wider word gaps make the longest trace row ~10% longer: shrink it a little on the narrowest phones so it fits */
+@media (max-width:380px){ .trace-sheet .trace-row{font-size:clamp(1.12rem,5.6vw,2.1rem) !important;} }
+
+/* ---------- PP-003: figures and bold words (SPEC §5e) ---------- */
+.pp-figure{margin:4px 0 14px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px;break-inside:avoid;page-break-inside:avoid;}
+.pp-fig-img{display:block;width:100%;max-width:380px;height:auto;margin:0 auto;}
+.pp-fig-cap{margin:8px 0 0;font-size:.95rem;line-height:1.4;color:var(--text);text-align:left;}
+.pp-fig-label{color:var(--navy-deep);}
+.pp-bold{font-weight:800;}
+.q-stem .pp-figure,.ex-body .pp-figure{margin:8px 0 4px;padding:6px;}
+@media (max-width:420px){.pp-figure{padding:6px;}.ex-body .pp-figure,.q-stem .pp-figure{padding:0;border:0;}}
+@media print{
+  .pp-figure{border:1px solid #999;}
+  .pp-fig-img{max-width:9cm;}
+}

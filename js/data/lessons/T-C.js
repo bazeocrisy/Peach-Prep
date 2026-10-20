@@ -916,7 +916,18 @@ PP.addLesson({
         { text: "It proves that Ella read a new book every single night." }
       ],
       clue: "Think about electric lights. Do you notice them every day? Would Ella, in 1928, notice them?",
-      why: "The answer is \"It explains why things that seem normal today were special to Ella.\" Most homes today have electric lights, but in 1928 many farms did not. Knowing the year helps you understand why Ella thinks Hattie is lucky." }
+      why: "The answer is \"It explains why things that seem normal today were special to Ella.\" Most homes today have electric lights, but in 1928 many farms did not. Knowing the year helps you understand why Ella thinks Hattie is lucky." },
+    { id: "SK-TC2c-P6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Note in a box: Dr. Ruiz is a scientist who studies frogs. She wrote this in her field notebook.", "June 12. Pond 3. Counted 14 green frogs and 2 bullfrogs. Water is low. Frogs stay near the deep end."],
+      prompt: "Why are Dr. Ruiz's notes full of numbers and short facts?",
+      choices: [
+        { text: "She is a scientist, so she writes exact counts to keep track of the frogs.", correct: true },
+        { text: "She wrote long ago, before people wrote in full sentences." },
+        { text: "She was in a hurry because a big storm was coming." },
+        { text: "She wanted to tell her friends a funny story about frogs." }
+      ],
+      clue: "Read the note in the box. Who is the writer, and what is her job? How would a person with that job write?",
+      why: "The answer is \"She is a scientist, so she writes exact counts to keep track of the frogs.\" The box tells you who the writer is. Scientists count and record facts so they can compare them later. The notes give no clue about long ago or a storm, and they are not a funny story." }
   ],
   test: [
     { id: "SK-TC2c-T1", type: "dropdown", points: 2, dok: 1, passages: ["p2"],
@@ -976,6 +987,17 @@ PP.addLesson({
         { text: "Many people watch shows on phones and tablets.", answer: 1 }
       ],
       clue: "Ask of each detail: Is it in the diary? If not, is it something you see now?",
-      why: "Neighbors coming to see a new TV and having only a few channels are details from the 1954 diary. Full-color TVs and watching shows on phones and tablets are part of life today." }
+      why: "Neighbors coming to see a new TV and having only a few channels are details from the 1954 diary. Full-color TVs and watching shows on phones and tablets are part of life today." },
+    { id: "SK-TC2c-T6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Note in a box: Marcus wrote this note on the morning his family moved from Georgia to Ohio. The moving truck had just left.", "Dear Ms. Hall, Thank you for being my teacher. I will miss our class reading corner. Please ask everyone to write to me at my new house!"],
+      prompt: "How does knowing Marcus's situation help you understand his note?",
+      choices: [
+        { text: "He is moving away, so he is saying goodbye and asking his class to keep in touch.", correct: true },
+        { text: "He is new at the school, so he is asking if he can join the reading corner." },
+        { text: "He wrote it long ago, so he had to send a paper note to his teacher." },
+        { text: "He is a teacher, so he is giving his class a new reading job to do." }
+      ],
+      clue: "Read the note in the box first. What was happening to Marcus that morning? Then reread his note with that in mind.",
+      why: "The answer is \"He is moving away, so he is saying goodbye and asking his class to keep in touch.\" The box says his family was moving to Ohio that day. That is why he thanks his teacher, says he will miss the reading corner, and asks the class to write to his new house. The note gives no date from long ago, Marcus is leaving the school, not joining it, and Ms. Hall is the teacher, not Marcus." }
   ]
 });

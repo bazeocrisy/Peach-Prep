@@ -3,17 +3,19 @@
 *Georgia Milestones practice · Grade 3 English Language Arts.*
 Peach Prep is an independent practice site. It is **not affiliated with or endorsed by the Georgia Department of Education (GaDOE)**. "Georgia Milestones" is used only to describe what the site prepares for.
 
-## 1. Sources (all official, all current)
+## 1. Sources (official; currency as of the dates shown)
 
 | Document | Date | What we take from it |
 |---|---|---|
 | GaDOE *Georgia Milestones ELA Grade 3 Assessment Blueprint* | August 2025 | Claims, targets, the expectations assessed, points, item types, DOK |
-| GaDOE *Draft Achievement Level Descriptors, Grade 3 ELA* | October 2025 (effective 2025-26) | What Beginning, Developing, Proficient and Distinguished look like for each standard |
+| GaDOE *DRAFT Achievement Level Descriptors, Grade 3 ELA* | October 2025, marked DRAFT, printed "effective 2025-2026" | What Beginning, Developing, Proficient and Distinguished look like for each standard. Every page that shows ALD text must label it as GaDOE's draft |
 | GaDOE *Writer's Checklist, Grade 3* | 2026 | Shown to students during the test, and may be printed for instruction. Peach Prep shows it word for word |
 | GaDOE *Eight-Point, Three-Trait Writing Rubric, Grade 3* | August 2026 | The writing scoring guide (summarized in our own words, with a link to the official PDF) |
 | Georgia's K-12 ELA Standards, Grades 3–5, with the GUM chart | 2025-26 | Standard codes and wording (paraphrased) |
 
 The official PDFs are **not** committed to this public repository. Peach Prep links to GaDOE for them.
+
+**Standard setting (re-check date).** The 2025-26 school year was the first administration of the new ELA test. GaDOE Insights (https://georgiainsights.gadoe.org/dashboards/georgia-milestones/, checked 2026-10-20) says 2025-26 ELA results come "in late fall 2026 following standard setting", and the ALD document says the draft ALDs "are subject to revisions during the standard setting process". Re-check for final ALDs (and any 2026-27 blueprint change) in December 2026. Until then the site labels the ALDs as a draft. None of the lor2.gadoe.org PDF links could be fetched automatically on 2026-10-20 (robots-blocked); see docs/audits/PP-003-SOURCE-VERIFICATION.md.
 
 ## 2. The test, per the blueprint
 
@@ -29,8 +31,8 @@ The official PDFs are **not** committed to this public repository. Peach Prep li
 | Claim | Interpreting | Constructing |
 |---|---|---|
 | Context + Structure & Style | 6 | 6 |
-| Techniques (narrative, expository, opinion, poetic) | 16 | 8 |
-| Research & Analysis | 6 | (inside the writing task) |
+| Techniques (narrative, expository, opinion, poetic) | 16 | 8 (one merged cell covering Techniques **and** Research & Analysis) |
+| Research & Analysis | 6 | (inside the 8 above) |
 | Language: Grammar Conventions + Vocabulary | 6 | 12 |
 
 **Expectations assessed.**
@@ -39,14 +41,14 @@ The official PDFs are **not** committed to this public repository. Peach Prep li
   - 3.T.SS.1 (a) and 3.T.SS.2 (a)
   - 3.T.T.1 (a, b, c, d), 3.T.T.2 (a, b, c), 3.T.T.3 (a) and 3.T.T.4 (a)
   - 3.T.RA.1 (a, b) and 3.T.RA.2 (a, b)
-  - 3.L.GC.1 and 3.L.GC.2 (a)
+  - 3.L.GC.2 (a). (3.L.GC.1 GUM is **not** listed under Interpreting Texts.)
   - 3.L.V.1 (a), 3.L.V.2 (a, b) and 3.L.V.3 (a, b, c, d)
 - **Constructing Texts:**
   - 3.T.C.1 (c)
   - 3.T.SS.1 (b, c, d) and 3.T.SS.2 (b)
   - 3.T.T.1 (e), 3.T.T.2 (d), 3.T.T.3 (c) and 3.T.T.4 (b)
   - 3.T.RA.1 (c)
-  - 3.L.GC.1 and 3.L.GC.2 (b, c, d)
+  - 3.L.GC.1 (GUM) and 3.L.GC.2 (b, c, d). The blueprint lists 3.L.GC.1 **only** here, so its Master/Reinforce rows are `tested: "writing"` in standards.js.
   - 3.L.V.1 (b), 3.L.V.2 (c) and 3.L.V.3 (e). The blueprint prints this last one as "5.L.V.3 (e)", which reads as a typo.
 - **3.L.GC.1** is assessed **only from the Master and Reinforce rows** of the GUM chart. Introduce and Continue rows are not tested.
 - **Foundations** is "appropriate for classroom assessment only". It is not on the test.
@@ -63,7 +65,7 @@ The official PDFs are **not** committed to this public repository. Peach Prep li
 | DOK 1 | 5–10% |
 | DOK 2 | 40–60% |
 | DOK 3 | 20–35% |
-| DOK 4 | about 13%: the writing task |
+| DOK 4 | about 13% (8 points; most likely the writing task, which is our inference) |
 
 The **Lexile measure and reading status** come from the Interpreting Texts items.
 
@@ -71,8 +73,9 @@ The **Lexile measure and reading status** come from the Interpreting Texts items
 - **Purpose and Organization (0–3):** an introduction that states the opinion, logical grouping, linking words and transitions, and a conclusion.
 - **Evidence and Elaboration (0–3):** reasons that support the opinion; the **provided** reasons are supported with relevant information from the sources, in the student's own words; elaboration uses opinion and expository techniques.
 - **Language Usage and Conventions (0–2):** mostly complete and varied sentences, correct verb tense and subject-verb agreement, and few errors. A very brief response can't show adequate command.
-- **Condition codes** (blank, copied, too limited, off topic, and so on) score 0.
-- The rubric speaks of "**the provided reasons**", so practice prompts give the student reasons to develop with evidence.
+- **Condition codes** sit in the rubric's 0 column. The rubric lists seven reasons: Blank, Copied, Too Limited to Score, Non-English/Foreign Language, Off Topic, Offensive, and Illegible/Incomprehensible.
+- **Spelling** has no test items (Foundations), but the Trait 3 footnote points to the Foundations phonics standards for spelling expectations, and the checklist tells students to correct spelling. So spelling can affect the conventions score.
+- The rubric's score-point descriptions speak of "**the provided reasons**", while its bullets say the student "Provides reasons" and the checklist says "provide reasons that support my opinion". Practice prompts give the student two reasons to develop with evidence; parent text says "the prompt may give the reasons".
 
 ## 3. Site structure
 
@@ -80,8 +83,8 @@ The **Lexile measure and reading status** come from the Interpreting Texts items
 |---|---|---|
 | Reading | 34 | Text sets: one passage, or a pair, with 6–8 items in test formats. Literary, informational, opinion and poetry |
 | Writing | 26 | (a) Writing Task: two sources, a prompt with provided reasons, a planner, a draft box, the Writer's Checklist and a parent scoring guide. (b) Revising items: transitions, conjunctions, introductions and conclusions, best evidence, paragraph order |
-| Language | inside both | Grammar (GUM Master and Reinforce rows) and Vocabulary (3.L.V), in test formats |
-| Practice Test | — | Blueprint-shaped, no hints, scored in points, Show me how afterwards |
+| Language | inside both | Grammar (GUM Master and Reinforce rows, writing part only; 3.L.GC.2) and Vocabulary (3.L.V), in test formats |
+| Practice Test | — | Blueprint-shaped, no hints, scored in points, Show me how afterwards. PT-1 is **shortened** (24 items, 31 points, no essay) and must say so on its card, in the player title and on its results |
 | For Parents | — | Every grade 3 ELA standard: tested or classroom-only, the area's points, where to practice (Peach Prep, Sentence Sense, Word Workshop) |
 
 The everyday tools stay separate and are linked: **Sentence Sense** (grammar), **Word Workshop** (spelling and vocabulary lists), **Study Scoop** (class weekly work).
@@ -125,7 +128,7 @@ Optional on any item: `stem` (a string or array of strings). It is a short text 
 
 Fields every item has:
 - `id`, `type` and `points` (1 or 2).
-- `std`: an array of exact codes, for example `["3.T.T.1.c"]`, or `["3.L.GC.1:M:irregular-past"]` for a GUM row (G = grammar, U = usage, M = mechanics).
+- `std`: an array of exact codes, for example `["3.T.T.1.c"]`, or `["3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"]` for a GUM row. GUM codes are `3.L.GC.1:<level>:<slug>`, where level is M (Master), R (Reinforce), I (Introduce) or C (Continue) and the slug is made from the chart row by `verification/gen-standards.py`. Copy the exact code from standards.js.
 - `dok`: 1, 2 or 3.
 - `prompt`: shown to the child.
 - `clue`: the strategy, which never contains the answer.
@@ -209,7 +212,7 @@ A Practice Test is one set file with several passages and a mixed set of items, 
 
 - The automated content checker (`verification/check-content.js`) passes.
 - Two independent grammar and content reviewers pass every new item: no MUST findings left.
-- The browser harness (`verification/guard.js`) passes.
+- The browser harness (`verification/guard.py`) passes.
 - A phone check at 320, 375 and 390px shows no sideways scroll.
 - An independent screen audit passes.
 

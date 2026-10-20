@@ -38,12 +38,14 @@
     host.appendChild(h(2, "The test at a glance"));
     host.appendChild(p("The Grade 3 English Language Arts test is worth " + d.totalPoints + " points. It has " + d.totalItems +
       " questions; " + d.scoredItems + " count toward the score and " + d.fieldTest + " are tryout questions that do not count. " +
-      "It has two parts: Interpreting Texts (reading, " + d.totals.it[1] + " points) and Constructing Texts (writing, " + d.totals.ct[1] + " points)."));
+      "It is scored in two parts (domains): Interpreting Texts (reading, " + d.totals.it[1] + " points) and Constructing Texts (writing, " + d.totals.ct[1] + " points)."));
     host.appendChild(table(["Kind of question", "Questions", "Points", "Reading part", "Writing part"],
       d.rows.map(r => [r.type, String(r.items), String(r.points), r.it[0] + " (" + r.it[1] + " pts)", r.ct[0] + " (" + r.ct[1] + " pts)"])
         .concat([["Total", String(d.totals.items), String(d.totals.points), d.totals.it[0] + " (" + d.totals.it[1] + " pts)", d.totals.ct[0] + " (" + d.totals.ct[1] + " pts)"]])));
-    host.appendChild(p("The 2-point questions are worth " + (d.rows[1].points) + " of the 60 points, so the question formats matter. They include: " +
-      d.teTypes.join(", ") + ". Peach Prep practices each of these."));
+    host.appendChild(p("The 2-point questions are worth " + (d.rows[1].points) + " of the 60 points, so the question formats matter. " +
+      "Technology-enhanced questions (1- and 2-point) include: " + d.teTypes.join(", ") + "."));
+    host.appendChild(p("Peach Prep practices drop-down, evidence-based (Part A / Part B), match, reorder, hot text (choosing sentences) and multiple-select questions, plus regular multiple choice. " +
+      "It does not have drag-and-drop or other multiple-part questions yet. GaDOE's free Experience Online shows those formats and the real testing tools.", "note"));
 
     host.appendChild(h(2, "What each part covers"));
     host.appendChild(table(["Area", "What it means", "Reading part (codes)", "Writing part (codes)"],
@@ -51,19 +53,19 @@
     host.appendChild(p(S.claimPoints, "note"));
 
     host.appendChild(h(2, "Kinds of thinking"));
-    host.appendChild(p("Most points ask a child to use a skill or explain with evidence, not just recall."));
+    host.appendChild(p("Most points ask a child to use a skill or explain with evidence, not just recall. The short descriptions after each level are ours; the points and shares are the blueprint's."));
     host.appendChild(table(["Depth of Knowledge", "Points", "Share of the test"], d.dok.map(r => [r.level, r.points, r.pct])));
 
     host.appendChild(h(2, "What is not on the test"));
     host.appendChild(ul([
-      "Foundations (phonics, spelling, fluency, handwriting) is assessed in the classroom only.",
-      "On the grammar chart, only Master and Reinforce skills are tested. Skills marked Introduce or Continue in Grade 3 are not.",
+      "Foundations (phonics, spelling, fluency, handwriting) has no test questions; it is assessed in the classroom. Spelling still counts in the essay's Language Usage and Conventions trait.",
+      "On the grammar chart, only Master and Reinforce skills are tested, in the writing part. Skills marked Introduce or Continue in Grade 3 are not.",
       "The ELA Practices are built into the reading and writing questions and are not scored on their own."
     ]));
 
     if (window.PP_ALDS && window.PP_ALDS.policy) {
       host.appendChild(h(2, "The four achievement levels"));
-      host.appendChild(p("Scores are reported in four levels. GaDOE's descriptions:"));
+      host.appendChild(p("Scores are reported in four levels. GaDOE's descriptions, from its DRAFT Achievement Level Descriptors (October 2025, for 2025-26). GaDOE may revise them after standard setting in late fall 2026."));
       const pol = window.PP_ALDS.policy;
       host.appendChild(table(["Level", "What it means"], window.PP_ALDS.levels.map(l => [l + " Learner", pol[l] || ""])));
       host.appendChild(p("The Every standard tab shows what each level looks like for each standard.", "note"));
@@ -142,18 +144,18 @@
       const body = make("div", "std-body");
       if (s.plain) body.appendChild(make("p", "std-plain", s.plain));
       if (s.gum) body.appendChild(make("p", "", "Grade 3 level: " + ({ M: "Master by the end of grade 3", R: "Reinforce (learned earlier)", I: "Introduce this year", C: "Continue (not yet mastered)" })[s.level] + ". " + (s.testedNote || "")));
-      else body.appendChild(make("p", "", "Standard: " + s.text));
+      else body.appendChild(make("p", "", "Georgia's standard, paraphrased: " + s.text));
       body.appendChild(make("p", "std-tested", tb[1] + "."));
       const k = aldKey(s.code.split(":")[0]);
       const ald = k && window.PP_ALDS && window.PP_ALDS.standards[k];
       if (ald && ["reading", "writing", "both"].indexOf(s.tested) >= 0) {
         const lv = ald.Proficient && ald.Proficient.length ? "Proficient" : null;
         if (lv) {
-          body.appendChild(make("p", "std-ald-head", "What Proficient work looks like (GaDOE, for all of " + k + "):"));
+          body.appendChild(make("p", "std-ald-head", "What Proficient work looks like (GaDOE's DRAFT descriptors, October 2025, for all of " + k + "; they may change after standard setting in late fall 2026):"));
           body.appendChild(ul(ald.Proficient, "plist ald"));
         }
         if (ald.Distinguished && ald.Distinguished.length) {
-          body.appendChild(make("p", "std-ald-head", "Distinguished:"));
+          body.appendChild(make("p", "std-ald-head", "Distinguished (same draft):"));
           body.appendChild(ul(ald.Distinguished, "plist ald"));
         }
       }
@@ -161,10 +163,14 @@
       prac.appendChild(make("p", "std-ald-head", "Where to practice"));
       const pu = make("ul", "plist");
       {
-        /* the skill page for this standard (five steps) */
+        /* the skill page for this standard: a lesson (its real steps), a habit page, or neither */
         const li = make("li");
-        const has = window.PP_SKILLS && window.PP_SKILLS.lessonFor ? window.PP_SKILLS.lessonFor(s.code) : (PP.lessons && PP.lessons[s.code]);
-        const b = make("button", "linkish", has ? "Peach Prep skill lesson: Learn It, Watch Me, Practice, Try It, Test" : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
+        const has = window.PP_SKILLS && window.PP_SKILLS.lessonFor ? window.PP_SKILLS.lessonFor(s.code) : (PP.lessons && PP.lessons[s.code] ? s.code : null);
+        const steps = has && window.PP_SKILLS && window.PP_SKILLS.stepNames ? window.PP_SKILLS.stepNames(has) : [];
+        const hab = !has && (window.PP_HABITS || {})[s.code];
+        const b = make("button", "linkish", has ? "Peach Prep skill lesson" + (steps.length ? ": " + steps.join(", ") : "")
+          : hab ? "Peach Prep habit page: what it looks like and ideas to try at home"
+          : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
         b.type = "button"; b.addEventListener("click", () => window.PP_SKILLS.open(s.code));
         li.appendChild(b); pu.appendChild(li);
       }
@@ -180,8 +186,10 @@
         const a = make("a", "", w.app + ": " + w.place); a.href = w.url; a.target = "_blank"; a.rel = "noopener";
         li.appendChild(a); pu.appendChild(li);
       });
-      if (pu.children.length < 2) pu.appendChild(make("li", "muted", s.tested === "classroom" || s.tested === "embedded" || s.tested === "no"
-        ? "Not practiced on Peach Prep." : "Practice for this standard is being added."));
+      /* say only what is true: a habit page has home ideas but no questions; a code with neither a lesson nor a habit page has nothing here yet */
+      const hasLesson = window.PP_SKILLS && window.PP_SKILLS.lessonFor && window.PP_SKILLS.lessonFor(s.code);
+      if (!hasLesson && (window.PP_HABITS || {})[s.code]) pu.appendChild(make("li", "muted", "Home activities only. Peach Prep has no questions for this practice; GaDOE builds the practices into other questions."));
+      else if (!hasLesson && pu.children.length < 2) pu.appendChild(make("li", "muted", "No Peach Prep lesson for this yet."));
       prac.appendChild(pu); body.appendChild(prac);
       det.appendChild(body);
       list.appendChild(det);
@@ -224,8 +232,14 @@
     host.appendChild(h(2, "Practice and Test modes"));
     host.appendChild(ul([
       "Practice: one question at a time. Help me gives a hint, then narrows the choices, then walks through the answer. Your child still picks it. Asking for help is never counted as a mistake.",
-      "Test: no hints, like the real test. Results are in points, by skill, and each missed question has Show me how."
+      "Test: no hints. Results are in points, by skill, and each missed question has Show me how."
     ]));
+    host.appendChild(h(2, "What \u201cPassed the skill check\u201d means"));
+    host.appendChild(p("A skill check is 4 to 6 questions on one skill, with no hints. Passing means your child scored at least 80% of the points on their own, one time, on this device. It is a good sign, not proof the skill is secure."));
+    host.appendChild(p("The check uses the same questions each time, and after a try your child can see the answers, so a quick retake can be passed from memory. The skill page shows when a check was passed, on which try, and whether the answers had been seen on an earlier try."));
+    host.appendChild(p("A Peach Prep skill check is not a Georgia Milestones score and does not predict an achievement level. The real test mixes skills across longer passages."));
+    host.appendChild(p("Come back to a passed skill about a week later, and again a few weeks after that. If your child still gets it right, it has stuck. The skill list marks a passed skill \u201creview\u201d after 7 days, or when the last try did not pass."));
+    host.appendChild(p("Hands-on skills (reading aloud and cursive) have no scored check. A grown-up ticks a checklist instead, and the site shows these as \u201cChecked by a grown-up\u201d, kept apart from passed skill checks. The read-aloud timer is a home practice tool, not a formal test or screener."));
     const l = make("p"); l.appendChild(document.createTextNode("Official practice: ")); l.appendChild(link(S.sources.experience));
     host.appendChild(l);
   }

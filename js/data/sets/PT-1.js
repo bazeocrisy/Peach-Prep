@@ -30,8 +30,8 @@ PP.addSet({
   id: "PT-1",
   section: "test",
   kind: "form",
-  title: "Practice Test 1",
-  blurb: "A shorter practice test shaped like the real one: reading, revising and language questions. (It does not include the essay. Practice that in Writing.)",
+  title: "Practice Test 1 (shortened)",
+  blurb: "A SHORTENED practice test shaped like the real one: 24 reading, revising and language questions worth 31 points, with no essay. The real Grade 3 test has 60 points, including an 8-point essay. Practice the essay in Writing.",
   passages: [
     {
       id: "p1",
@@ -429,7 +429,7 @@ PP.addSet({
         { text: "It tells the reader that the section is about why people rake up fallen leaves." }
       ],
       clue: "A heading names the big idea of the section under it. Read the whole section. What is it mostly about?",
-      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. Letting go means the tree lets its leaves fall.How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
+      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. Letting go means the tree lets its leaves fall. How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
     },
     {
       id: "PT-1-13",

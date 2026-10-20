@@ -229,7 +229,8 @@ PP.addLesson({
       "The problem is what goes wrong or what a character wants but cannot get yet.",
       "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
       "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution.",
-      "Sum up any story with five words: Somebody, Wanted, But, So, Then. Somebody is the main character. Wanted is what that character wants. But is the problem. So is what the character does about it. Then is how it ends."
+      "Sum up any story with five words: Somebody, Wanted, But, So, Then. Somebody is the main character. Wanted is what that character wants. But is the problem. So is what the character does about it. Then is how it ends.",
+      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or a deadline can cause the trouble or make it harder to fix."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -265,6 +266,17 @@ PP.addLesson({
         "Put the where and the when together."
       ],
       answer: "A bus on a snowy mountain road in winter."
+    },
+    {
+      show: ["The Ruiz family set up their tent at a lake deep in the woods. The nearest store was an hour away. At supper, Ben opened the cooler and groaned. He had forgotten the hot dog buns! So Ben looked in the food box and found a pack of tortillas. The family wrapped their hot dogs in tortillas, and everyone said it was the best supper of the trip."],
+      ask: "How do the setting and the problem change what happens in this story?",
+      steps: [
+        "Find the setting: a campsite at a lake deep in the woods, an hour from a store.",
+        "Ask how the setting changes things. If a store were next door, Ben could just buy buns. Because the store is far away, he cannot.",
+        "Ask how the problem makes the character act. With no buns and no store, Ben has to find another way, so he looks in the food box.",
+        "Put it together. The faraway setting makes the problem harder, and that leads Ben to the tortillas, which solve it."
+      ],
+      answer: "The campsite is far from any store, so Ben cannot buy new buns. That makes him look for another way, and the tortillas solve the problem."
     }
   ],
   parent: "After any story you read together, ask four quick questions: Who is it about? Where and when does it happen? What goes wrong? How does it get fixed? Let your child point to the sentences that show each answer.",
@@ -323,6 +335,16 @@ PP.addLesson({
       answer: ["p1:4:3"], pick: 1,
       clue: "The solution is the action that fixes the problem. Find what Jada does, not what she thinks or sees.",
       why: "The answer is \"She found an old piece of wire fence in the shed and asked Grandma to help her bend it along the bottom of the gate.\" The wire blocks the rabbits, so the tomatoes are safe." },
+    { id: "SK-TT1b-P7", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "The rabbits come into the garden at night. How does that part of the setting affect what Jada does?",
+      choices: [
+        { text: "No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.", correct: true },
+        { text: "The garden is too dark to see in, so Jada has to water the tomatoes at night." },
+        { text: "The rabbits are easy to catch in the dark, so Jada waits by the gate to grab them." },
+        { text: "Grandma Bea is asleep, so Jada has to take care of the whole garden alone." }
+      ],
+      clue: "Think about what Jada and Grandma Bea are doing at night. Could they stop the rabbits themselves? Then look at what kind of fix Jada makes.",
+      why: "The answer is \"No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.\" The rabbits come at night, when no one is in the garden to stop them. That is why Jada makes something that blocks the gate all night long instead of trying to chase them. Jada waters the garden in the morning, she never waits by the gate, and Grandma Bea helps her." },
     { id: "SK-TT1b-P4", type: "order", points: 2, dok: 2, passages: ["p1"],
       prompt: "Put the events of the story in order.",
       steps: [
@@ -357,15 +379,15 @@ PP.addLesson({
       clue: "The main character is the one the story is mostly about. Who has the problem?",
       why: "The answer is Omar. The story follows Omar as he looks for his book, finds it and returns it. His dad, his sister Lina and Ms. Park appear only for a moment." },
     { id: "SK-TT1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "What problem does Omar have?",
+      prompt: "The story begins on a Thursday afternoon. Why does this time matter to the plot?",
       choices: [
-        { text: "He cannot find a library book that is due the next day.", correct: true },
-        { text: "He does not want to finish reading his library book." },
-        { text: "Rain on the porch has ruined his library book." },
-        { text: "The library will be closed when the book is due." }
+        { text: "The book is due on Friday, so Omar has very little time to find it.", correct: true },
+        { text: "It rains every Thursday, so Omar has to stay inside and read." },
+        { text: "The library is closed on Thursdays, so Omar cannot go there." },
+        { text: "Omar's dad gets home early on Thursdays, so he can help search." }
       ],
-      clue: "Look at paragraph 1. What is wrong, and why does it matter now?",
-      why: "The answer is \"He cannot find a library book that is due the next day.\" Paragraph 1 says the book is due the next day and is not anywhere. The book gets damp but is not ruined." },
+      clue: "Read the first sentence again. What else does it tell you besides the day? Think about why Omar searches so hard.",
+      why: "The answer is \"The book is due on Friday, so Omar has very little time to find it.\" Paragraph 1 says it is Thursday afternoon and the book is due the next day. That short time is what makes Omar hurry to look everywhere. The story says it rained on Tuesday, not every Thursday, and it never says when the library is closed or when Dad gets home." },
     { id: "SK-TT1b-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does Omar solve his problem?",
@@ -385,15 +407,15 @@ PP.addLesson({
       clue: "Part A asks how the problem gets fixed. Find what Omar does that leads him to the book. Then choose the sentence that shows that step.",
       why: "Part A: He remembers where he last read the book and looks there. Part B: \"He had read it on the porch swing while it rained on Tuesday.\" Remembering the porch swing sends him outside, where he finds the book under the cushion." },
     { id: "SK-TT1b-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Which words best describe the setting at the start of the story?",
+      prompt: "In paragraph 4, Omar sets the book on top of his shoes. How does this event affect the end of the story?",
       choices: [
-        { text: "Omar's home on a Thursday afternoon", correct: true },
-        { text: "the school library on a Friday morning" },
-        { text: "a porch swing on a rainy Tuesday" },
-        { text: "Ms. Park's desk after school" }
+        { text: "He cannot leave without seeing it, so he returns the book on time.", correct: true },
+        { text: "It keeps the book dry, so the rain does not ruin it." },
+        { text: "It shows Lina where the book is, so she can read it next." },
+        { text: "It makes him late, so Ms. Park has to wait for the book." }
       ],
-      clue: "The question says \"at the start.\" Read the first paragraph for when and where.",
-      why: "The answer is Omar's home on a Thursday afternoon. Paragraph 1 says it is Thursday afternoon, and Omar searches his backpack and under his bed at home. The porch swing on Tuesday is only something he remembers." },
+      clue: "Think about what Omar does every morning before he leaves the house. Then read the last sentence of the story.",
+      why: "The answer is \"He cannot leave without seeing it, so he returns the book on time.\" Omar puts the book on his shoes so he will not forget it. The last sentence shows it worked: on Friday morning he hands the book to Ms. Park right on time. He dries the book with a towel, not with his shoes, and the story never says Lina reads it or that Omar is late." },
     { id: "SK-TT1b-T5", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each detail to the story part it shows.",
       cols: ["Character", "Problem", "Solution"],

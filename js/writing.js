@@ -141,6 +141,27 @@
         card.appendChild(make("p", "std-ald-head", "For this prompt, look for:"));
         const u2 = make("ul", "plist"); lk[k].forEach(x => u2.appendChild(make("li", "", x))); card.appendChild(u2);
       }
+      /* the authored evidence key: where each provided reason is supported in the sources */
+      if (k === "evidence" && (task.evidence || []).length) {
+        const ev = make("details", "evidence-key");
+        ev.appendChild(make("summary", "std-ald-head", "Where the support is in the sources"));
+        (task.reasons || []).forEach((reason, ri) => {
+          const refs = task.evidence.filter(e => e.reason === ri);
+          if (!refs.length) return;
+          ev.appendChild(make("p", "", "Reason " + (ri + 1) + ": " + reason));
+          const u3 = make("ul", "plist");
+          refs.forEach(e => {
+            const parts = String(e.ref || "").split(":");
+            const si = (task.sources || []).findIndex(p => p.id === (e.source || parts[0]));
+            const src = si >= 0 ? task.sources[si] : null;
+            const where = (src ? "Source " + (si + 1) + (src.title ? ", “" + src.title + "”" : "") : (e.source || parts[0])) +
+              (parts[1] ? ", paragraph " + parts[1] : "") + (parts[2] ? ", sentence " + parts[2] : "");
+            u3.appendChild(make("li", "", where + ": " + e.note));
+          });
+          ev.appendChild(u3);
+        });
+        card.appendChild(ev);
+      }
       const opts = make("div", "score-opts");
       for (let v = 0; v <= r.max; v++) {
         const lab = make("label", "score-opt");
@@ -154,6 +175,7 @@
       host.appendChild(card);
     });
     host.appendChild(total); sum();
+    host.appendChild(make("p", "note", "This is a home score for practice, not an official Georgia Milestones score."));
     host.appendChild(make("p", "note", S.rubricNote));
 
     if (task.model) {
