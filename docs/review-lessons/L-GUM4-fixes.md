@@ -39,3 +39,25 @@ Checker: `node verification/check-content.js --all` gives PASS (0 failures, 0 wa
 - **B: SK-GUM4-2-T3 illness context.** Fixed by the SHOULD change above.
 
 Declined: none.
+
+## Round 2 (response to L-GUM4-verify.md)
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures, 0 warnings). The word "doer" no longer appears anywhere in the file.
+
+The relative-pronoun lesson now uses one rule everywhere: who for people; that or which for things and animals; where or when only if "in that place" or "at that time" fits, and otherwise that or which, just as for a thing.
+
+- **MUST: SK-GUM4-5-P3 why made a false "needs a doer" claim.** Fixed. The why now reads: "Which does not fit, because the words after the blank are already complete: we found the seashells there. Who is for people, and when is for times." I also removed the "doer" wording from:
+  - Teach point 2, point 3, the example note and the tip
+  - Learn 1 and Learn 2
+  - the clues and whys of P3, P4, P5, T3, T4 and T5
+
+  Those clues now share one strategy line: person / thing or animal / place / time, then try "in that place" or "at that time".
+- **SHOULD: Teach point 2 put a condition on things that the tip did not.** Fixed:
+  - Point 2 is now unconditional: "Use that or which to tell more about a thing or an animal."
+  - Point 3 covers places and times: use where or when only if "in that place" or "at that time" fits; if it does not, use that or which as for a thing ("The park that has a slide is near us.").
+  - The tip matches.
+  - The P5 why explains the park row the same way: "has a slide in that place" does not fit.
+- **SHOULD: the SK-GUM4-5-T5 distractor repeated the Teach and P5 "park ___ has a slide" frame.** Fixed. It is now "The bus who takes us to school is yellow." The why says it should use that, because a bus is a thing.
+- **SHOULD: the SK-GUM4-3-P3 clue settled the answer, and the why was hard to follow.** Fixed. The clue is now "Ask two questions about the noun: one or more than one? A person or a thing?" The why now ends: "Mr. Hill and the science project each mean one. The project cannot own itself, and Mr. Hill did not make it, so their does not stand for them together."
+
+Declined: none.

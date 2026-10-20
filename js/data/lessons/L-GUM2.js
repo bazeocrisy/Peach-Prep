@@ -894,7 +894,7 @@ PP.addLesson({
   code: "3.L.GC.1:R:use-frequently-occurring-prepositions",
   title: "Prepositions: words that tell where and when",
   teach: {
-    big: "A preposition is a small word that shows where something is or when something happens, like in, on, under, before and after.",
+    big: "A preposition is a small word that starts a group of words and links it to the rest of the sentence. Many show where or when, like in, on, under, before and after.",
     points: [
       "Some prepositions tell where: in, on, under, over, behind, beside, between, across, through and near.",
       "Some prepositions tell when: before, after, during and until. Some, like through, can tell where or when: through the woods, through the night.",
