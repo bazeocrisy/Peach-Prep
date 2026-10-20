@@ -172,7 +172,7 @@ PP.addLesson({
         "The cobbler bakes until it is golden brown."
       ],
       clue: "Use the time clue words in paragraphs 2 through 5 to follow each step.",
-      why: "The order is: butter in the pan, stir the batter, pour the batter into the pan, spoon the peaches on top, and bake until golden brown. The time clue words in paragraphs 2 through 4 show this order." },
+      why: "The order is: butter in the pan, stir the batter, pour the batter into the pan, spoon the peaches on top, and bake until golden brown. The time clue words in paragraphs 2 through 5 show this order." },
     { id: "SK-TSSEQ-T3", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence uses a clue word to show that time has passed while the cobbler bakes? Choose the sentence in the passage.",
       targets: ["p2:3:1", "p2:4:1", "p2:5:1", "p2:5:3", "p2:6:1"],
@@ -191,7 +191,7 @@ PP.addLesson({
       why: "The answer is \"to show the order of the steps for making the cobbler.\" These are time clue words. Nothing goes wrong in the story, and the author does not compare two fruits." },
     { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 3, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "Why does Grandpa put the pan in the oven before Keisha makes the batter?",
+      partA: { prompt: "Why does Grandpa put the pan in the oven when it has only butter in it?",
         choices: [
           { text: "so the butter will melt in the pan first", correct: true },
           { text: "so the peaches will get soft and sweet" },
@@ -527,7 +527,7 @@ PP.addLesson({
       text: "Jamal {0} moving the bowl, {1} the ants found it again.",
       slots: [
         { options: ["tried", "solved", "finally"], answer: 0 },
-        { options: ["but", "because", "for example"], answer: 0 }
+        { options: ["but", "so", "for example"], answer: 0 }
       ],
       clue: "Read the sentence with each choice. One blank tells about an attempt. The other blank tells how that attempt turned out.",
       why: "The answers are tried and but. Jamal tried moving the bowl, but the ants found it again. Tried shows an attempt, and but shows that this attempt did not work." },
@@ -599,7 +599,7 @@ PP.addLesson({
         ] },
       clue: "Look for the clue words decided and finally. Then find the part where the class checks the path after a storm.",
       why: "Part A: They fill the low spot and add wood chips. Part B: \"The path was dry enough to walk on.\" The class decided on this plan, and after the next storm the path was dry." },
-    { id: "SK-TSPS-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
+    { id: "SK-TSPS-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Why does the author include paragraph 4?",
       choices: [
         { text: "It shows what was really causing the mud.", correct: true },
@@ -698,7 +698,7 @@ PP.addLesson({
         ["Alligators and crocodiles are both big reptiles.", "They have thick, scaly skin and strong jaws.", "They both have long tails.", "Both lay eggs in nests on land."],
         ["However, these two animals are different in some ways.", "The easy way to tell them apart is to look at the snout.", "An alligator has a wide snout.", "It is shaped like the letter U.", "Unlike an alligator, a crocodile has a thin, pointed snout like a V."],
         ["Look at their teeth, too.", "When an alligator shuts its mouth, you see mostly its top teeth.", "When a crocodile shuts its mouth, you can see top and bottom teeth.", "It looks like it is grinning!"],
-        ["Alligators live in fresh water, such as swamps and lakes, but crocodiles can live in salty water, too.", "Georgia has lots of alligators.", "In the United States, wild crocodiles live only at the south tip of Florida."],
+        ["Alligators live in fresh water, such as swamps and lakes, but crocodiles can live in salty water, too.", "Georgia has lots of alligators.", "In the United States, wild crocodiles live only in south Florida."],
         ["The next time you see a big reptile on TV, check its snout and its smile!"]
       ] }
   ],
@@ -712,7 +712,7 @@ PP.addLesson({
         { text: "Both live far from ponds." }
       ],
       clue: "Look for the clue word that tells how two things are alike. Then check each choice against the passage.",
-      why: "The answer is \"Both hatch as tadpoles.\" Paragraph 1 says both lay eggs and both hatch as tadpoles. Dry, bumpy skin and living far from ponds are true of toads, and long back legs are true of frogs." },
+      why: "The answer is \"Both hatch as tadpoles.\" Paragraph 1 uses the clue word both to tell this. Each of the other choices is true of only one of the animals." },
     { id: "SK-TSCC-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence uses a clue word to show that the author is switching from how frogs and toads are alike to how they are different? Choose the sentence in the passage.",
       targets: ["p1:1:1", "p1:1:2", "p1:1:4", "p1:2:1", "p1:2:2"],
@@ -724,12 +724,12 @@ PP.addLesson({
       cols: ["Frog only", "Both", "Toad only"],
       rows: [
         { text: "has smooth, wet skin", answer: 0 },
-        { text: "starts life as a tadpole", answer: 1 },
+        { text: "lays eggs", answer: 1 },
         { text: "has dry, bumpy skin", answer: 2 },
-        { text: "eats insects", answer: 1 }
+        { text: "has long back legs for big jumps", answer: 0 }
       ],
       clue: "Use the clue words. Both and alike point to the middle column. Unlike and but point to a difference.",
-      why: "Smooth, wet skin is a frog fact, and dry, bumpy skin is a toad fact. Starting as a tadpole and eating insects are true of both animals." },
+      why: "Smooth, wet skin and long back legs for big jumps are frog facts. Dry, bumpy skin is a toad fact. Laying eggs is true of both animals." },
     { id: "SK-TSCC-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read the sentence from paragraph 3 in the box. What does the word \"but\" show here?",
       stem: ["Most frogs have long back legs for big jumps, but toads have shorter legs."],
@@ -757,10 +757,10 @@ PP.addLesson({
         { text: "They eat lots of insects, such as flies and mosquitoes.", correct: true },
         { text: "A frog has smooth, wet skin." },
         { text: "Toads usually walk or take small hops." },
-        { text: "Most frogs stay close to water." }
+        { text: "Their legs are not the same, either." }
       ],
       clue: "A sentence about only one animal cannot tell how they are alike. Check whether each sentence is about frogs, toads or both.",
-      why: "The answers are \"Both are amphibians.\" and \"They eat lots of insects, such as flies and mosquitoes.\" The second one comes right after \"Both animals are helpful to people,\" so \"they\" means both. The other sentences tell about only frogs or only toads." }
+      why: "The answers are \"Both are amphibians.\" and \"They eat lots of insects, such as flies and mosquitoes.\" The second one comes right after \"Both animals are helpful to people,\" so \"they\" means both. \"Their legs are not the same, either\" is about both animals, but it tells a difference. The other sentences tell about only frogs or only toads." }
   ],
   test: [
     { id: "SK-TSCC-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
@@ -922,12 +922,12 @@ PP.addLesson({
       prompt: "What is this passage mostly about?",
       choices: [
         { text: "how a brown pelican's body helps it catch fish", correct: true },
-        { text: "how a pelican's pouch drains out the water" },
+        { text: "how a pelican's feet work like paddles" },
         { text: "why Georgia's coast is a fun place to visit" },
         { text: "how pelicans build nests for their eggs" }
       ],
       clue: "Ask: What is this mostly about? Pick the answer that fits every paragraph, not just one sentence.",
-      why: "The answer is \"how a brown pelican's body helps it catch fish.\" The bill, pouch, eyes and feet are all details that tell more about this. Draining water is only one detail from paragraph 4, and the passage never talks about nests." },
+      why: "The answer is \"how a brown pelican's body helps it catch fish.\" Paragraph 1 says its whole body is built for catching fish, and the bill, the pouch and the sharp eyes tell more about this. The feet are only one detail, and the passage never talks about nests." },
     { id: "SK-TSDESC-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Why does a pelican tip its bill down after it scoops up a fish?",
       choices: [
@@ -937,7 +937,7 @@ PP.addLesson({
         { text: "to dry its feathers in the warm sun" }
       ],
       clue: "Read paragraph 4. Find the sentence that tells what the pelican does with its bill and what that is for.",
-      why: "The answer is \"to drain out the water before it swallows.\" Paragraph 4 says the pouch scoops up water and fish, so the pelican tips its bill to drain the water before it swallows the fish." },
+      why: "The answer is \"to drain out the water before it swallows.\" Paragraph 4 says the pelican tips its bill down to drain out the water before it swallows the fish." },
     { id: "SK-TSDESC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the clue word that best completes the sentences.",
       text: "A pelican has sharp eyes. It {0} has webbed feet.",
@@ -977,17 +977,17 @@ PP.addLesson({
       clue: "Each describing clue word has a job. Look for the one whose job is to give an example.",
       why: "The answer is \"For example, squirrels, deer and birds eat its small acorns.\" For example shows how live oaks are good for living things. Has, looks like, also and In addition describe or add details." },
     { id: "SK-TSDESC-T3", type: "ms", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Which TWO details describe how a live oak LOOKS?",
+      prompt: "Which TWO details help you picture the SHAPE of a live oak?",
       pick: 2,
       choices: [
-        { text: "Its long branches can spread out wider than the tree is tall.", correct: true },
+        { text: "A live oak has a short, thick trunk.", correct: true },
         { text: "From far away, the tree looks like a giant green umbrella.", correct: true },
         { text: "Most oaks drop their leaves in the fall." },
         { text: "Live oaks can live for hundreds of years." },
         { text: "Some of the oldest ones grow near Savannah." }
       ],
       clue: "Picture it in your mind. Which details help you see its shape?",
-      why: "The answers are \"Its long branches can spread out wider than the tree is tall.\" and \"From far away, the tree looks like a giant green umbrella.\" Both tell about its shape. The others tell about other oaks, how long live oaks live and where they grow." },
+      why: "The answers are \"A live oak has a short, thick trunk.\" and \"From far away, the tree looks like a giant green umbrella.\" Both help you see its shape. The others tell about other oaks, how long live oaks live and where they grow." },
     { id: "SK-TSDESC-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "According to paragraph 3, how did the live oak get its name?",
       choices: [
