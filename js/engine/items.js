@@ -83,7 +83,12 @@
   function placeLabel(set, ref) {
     const r = PP.parseRef(ref); const p = r && PP.passageOf(set, r.pid);
     if (p && p.lines) return ((set.passages || []).length > 1 && p.title ? "\u201c" + p.title + "\u201d, " : "") + "stanza " + r.para;
-    return visibleLabel(set, ref);
+    if (p && p.draft) {
+      /* drafts number sentences in the text, "(4) ..."; name the paragraph by its sentence numbers */
+      const nums = (p.paragraphs[r.para - 1] || []).map(x => (/^\((\d+)\)/.exec(x) || [])[1]).filter(Boolean);
+      return nums.length ? "sentences " + nums[0] + " to " + nums[nums.length - 1] : "the draft";
+    }
+    return visibleLabel(set, ref) || "the passage";
   }
   function placeHint(it, set) {
     const ans = hotAnswer(it), targets = hotTargets(it);
@@ -226,22 +231,32 @@
   /* ===== dropdown: choose a word for each blank in a sentence ===== */
   T.dropdown = {
     blank: it => ({ v: it.slots.map(() => null) }),
+    /* Short options: a drop-down inside the sentence. Long options (over
+       28 characters) would be cut off in a phone's menu, so that blank is
+       shown in the sentence and answered with buttons underneath. */
     render(ctx) {
       const { item, host } = ctx;
       const p = make("p", "dd-sentence");
       const parts = item.text.split(/(\{\d+\})/);
-      ctx.ui.selects = [];
+      ctx.ui.selects = []; ctx.ui.lists = []; ctx.ui.blanks = [];
+      ctx.ddOrder = ctx.ddOrder || item.slots.map(sl => shuffled(sl.options.map((o, oi) => oi)));
+      const isLong = k => Math.max.apply(null, item.slots[k].options.map(o => o.length)) > 28;
+      const below = [];
       parts.forEach(part => {
         const m = /^\{(\d+)\}$/.exec(part);
         if (!m) { p.appendChild(document.createTextNode(part)); return; }
         const k = Number(m[1]);
+        if (isLong(k)) {
+          const bl = make("span", "dd-blank");
+          ctx.ui.blanks[k] = bl;
+          p.appendChild(bl);
+          below.push(k);
+          return;
+        }
         const sel = make("select", "dd-select");
         sel.setAttribute("aria-label", "Blank " + (k + 1));
-        const ph = make("option", "", "Choose…"); ph.value = ""; sel.appendChild(ph);
-        /* options shown in a shuffled order (once per sitting); value keeps the content index */
-        ctx.ddOrder = ctx.ddOrder || item.slots.map(sl => shuffled(sl.options.map((o, oi) => oi)));
+        const ph = make("option", "", "Choose\u2026"); ph.value = ""; sel.appendChild(ph);
         ctx.ddOrder[k].forEach(oi => { const op = make("option", "", item.slots[k].options[oi]); op.value = String(oi); sel.appendChild(op); });
-        if (Math.max.apply(null, item.slots[k].options.map(o => o.length)) > 28) sel.classList.add("is-long");
         sel.value = ctx.resp.v[k] === null ? "" : String(ctx.resp.v[k]);
         sel.disabled = !!ctx.locked;
         sel.addEventListener("change", () => {
@@ -252,6 +267,20 @@
         p.appendChild(sel);
       });
       host.appendChild(p);
+      const syncBlank = k => {
+        const v = ctx.resp.v[k];
+        ctx.ui.blanks[k].textContent = v === null ? "  (blank " + (k + 1) + ")  " : item.slots[k].options[v];
+        ctx.ui.blanks[k].classList.toggle("is-filled", v !== null);
+      };
+      below.forEach(k => {
+        if (item.slots.length > 1) host.appendChild(make("p", "pick-note", "Blank " + (k + 1) + ":"));
+        ctx.ui.lists[k] = choiceList(host, item.slots[k].options.map(o => ({ text: o })), {
+          order: ctx.ddOrder[k], label: "Blank " + (k + 1), isLocked: () => ctx.locked,
+          onPick: i => { ctx.resp.v[k] = i; syncChoices(ctx.ui.lists[k], [i]); syncBlank(k); ctx.onChange(); }
+        });
+        syncChoices(ctx.ui.lists[k], ctx.resp.v[k] === null ? [] : [ctx.resp.v[k]]);
+        syncBlank(k);
+      });
     },
     answered: (it, r) => r.v.every(x => x !== null),
     score(it, r) {
@@ -266,6 +295,11 @@
         const sel = ctx.ui.selects[k];
         const wrong = shuffled(s.options.map((o, i) => i).filter(i => i !== s.answer));
         const drop = wrong.slice(0, Math.max(0, s.options.length - 2));
+        if (!sel) {
+          ruleOut(ctx.ui.lists[k], drop);
+          if (drop.indexOf(ctx.resp.v[k]) >= 0) { ctx.resp.v[k] = null; syncChoices(ctx.ui.lists[k], []); ctx.ui.blanks[k].textContent = "  (blank " + (k + 1) + ")  "; }
+          return;
+        }
         Array.from(sel.options).forEach(op => {
           if (op.value !== "" && drop.indexOf(Number(op.value)) >= 0) { op.disabled = true; op.textContent = op.textContent + " (ruled out)"; }
         });
@@ -274,7 +308,12 @@
       ctx.onChange();
       return "Some wrong words are ruled out in each blank.";
     },
-    outline(ctx) { ctx.ui.selects.forEach(s => s.classList.add("is-hint")); },
+    outline(ctx) {
+      ctx.item.slots.forEach((s, k) => {
+        if (ctx.ui.selects[k]) ctx.ui.selects[k].classList.add("is-hint");
+        else outlineChoices(ctx.ui.lists[k], [s.answer]);
+      });
+    },
     answerText: it => it.slots.map(s => s.options[s.answer]).join(", ")
   };
 

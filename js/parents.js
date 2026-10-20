@@ -229,17 +229,26 @@
     document.querySelectorAll("[data-ptab]").forEach(b => b.setAttribute("aria-selected", b.dataset.ptab === tab ? "true" : "false"));
     ["test", "standards", "essay", "plan"].forEach(t => { el("ptab-" + t).hidden = t !== tab; });
   }
-  function open(tab) {
+  /* Where the parent was: open standards and scroll position, so Back
+     from a practice set returns to the same spot. */
+  function snapshot() {
+    return { open: Array.from(document.querySelectorAll("#std-list details.std[open]")).map(d => d.dataset.code), y: window.scrollY };
+  }
+  function open(tab, restore) {
     tab = ["test", "standards", "essay", "plan"].indexOf(tab) >= 0 ? tab : "test";
     buildTest(); buildStandards(); buildEssay(); buildPlan();
     window.PP_APP.show("parents");
     select(tab);
     window.PP_APP.setHash("#parents" + (tab !== "test" ? "/" + tab : ""));
     window.PP_APP.track();
-    el("parents-title").focus();
+    if (restore) {
+      (restore.open || []).forEach(c => { const d = document.querySelector('#std-list details.std[data-code="' + c + '"]'); if (d) d.open = true; });
+      window.scrollTo(0, restore.y || 0);
+      el("parents-title").focus({ preventScroll: true });
+    } else el("parents-title").focus();
   }
   function init() {
     document.querySelectorAll("[data-ptab]").forEach(b => b.addEventListener("click", () => select(b.dataset.ptab)));
   }
-  window.PP_PARENTS = { init, open, select, tab: () => curTab };
+  window.PP_PARENTS = { init, open, select, snapshot, tab: () => curTab };
 })();

@@ -148,13 +148,17 @@
         /* a new passage starts: show it first, with a note, so a phone user doesn't miss it */
         showPane("passage");
         el("passage-note").hidden = false;
-        el("passage-note").textContent = "New passage. Read it, then tap Question.";
+        el("passage-note").textContent = window.matchMedia("(min-width: 980px)").matches
+          ? "New passage. Read it before you answer." : "New passage. Read it, then tap Question.";
+        el("passage-pane").scrollTop = 0;
+        run.focusNote = true;
       } else el("passage-note").hidden = true;
       run.lastPassages = key;
     }
     setFeedback(st.fb || null);
     syncControls();
-    el("q-prompt").focus();
+    if (run.focusNote) { run.focusNote = false; el("passage-note").focus(); }
+    else el("q-prompt").focus();
     window.scrollTo(0, 0);
   }
 

@@ -30,8 +30,9 @@
   /* ---------- navigation: every screen has an address, so the phone's
      Back button and a reload both land in the right place ---------- */
   let routing = false;
+  let replaceNext = false;
   function setHash(hash) {
-    if (routing) { history.replaceState(null, "", location.pathname + location.search + hash); return; }
+    if (routing || replaceNext) { replaceNext = false; history.replaceState(null, "", location.pathname + location.search + hash); return; }
     if (location.hash === hash || (!location.hash && !hash)) return;
     history.pushState(null, "", location.pathname + location.search + hash);
   }
@@ -45,6 +46,9 @@
   }
   function goHome() {
     if (!canLeave()) return;
+    /* leaving an activity replaces its history entry, so the phone's Back
+       button does not reopen the activity the child just left */
+    if (current === "player" || current === "write") replaceNext = true;
     setHash("");
     show("home");
     el("home-title").focus();
@@ -218,14 +222,15 @@
      the section list, or the parent guide. */
   let returnTo = null;
   function rememberReturn() {
-    returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab() } :
+    returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot() } :
                current === "section" ? { kind: "section", key: sectionKey } : returnTo;
   }
   function back() {
     if (!canLeave()) return;
     if (current === "player") window.PP_PLAYER.abandon();
+    replaceNext = true;
     const r = returnTo;
-    if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab); return; }
+    if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));
     openSection(key);

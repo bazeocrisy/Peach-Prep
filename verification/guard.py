@@ -84,6 +84,10 @@ with sync_playwright() as p:
     ok("2.3 two-part items give 1 point for Part A only", not bad, bad[:5])
     bad = [x["id"] for x in sc if not (x["ans"] and x["desc"] and x["nt"])]
     ok("2.4 every item can describe its answer, the child's answer and a review hint", not bad, bad[:5])
+    blank_place = pg.evaluate("""(()=>{const T=PP_ITEMS,out=[];PP.sets.forEach(s=>s.items.forEach(it=>{
+        const r=T[it.type].blank(it); const t=T[it.type].narrowText(it,r,s);
+        if(/Look in\\s*[.,]|Look in\\s+and|\\(\\s*\\)/.test(t)) out.push(s.id+' '+it.id+': '+t);}));return out;})()""")
+    ok("2.5 no review hint has an empty place name", not blank_place, blank_place[:3])
 
     # ---------- 3. Practice mode on every item ----------
     hint_fail, right_fail, wrong_fail, leak_fail = [], [], [], []
@@ -111,10 +115,11 @@ with sync_playwright() as p:
                const tooNarrow = need>0 && left.length<=need;
                const reviewLeak = (()=>{const t=PP_ITEMS[it.type].narrowText(it,c.resp,c.set);const a=PP_ITEMS[it.type].answerText(it,c.set);
                   return it.type=='hottext' && a && t.indexOf(a.replace(/^\u201c|\u201d$/g,''))>=0;})();
-               return {steps:document.querySelectorAll('#q-help-steps .help-step').length, rightRuled, tooNarrow, reviewLeak};})()""")
+               const emptyPlace=/Look in\\s*[.,]/.test(document.getElementById('q-help-steps').textContent);
+               return {steps:document.querySelectorAll('#q-help-steps .help-step').length, rightRuled, tooNarrow, reviewLeak, emptyPlace};})()""")
             pg.click("#q-help"); pg.wait_for_timeout(20)
             h3 = pg.evaluate("({steps:document.querySelectorAll('#q-help-steps .help-step').length, hints:document.querySelectorAll('#q-body .is-hint').length, dis:document.getElementById('q-help').disabled, check:!document.getElementById('q-check').hidden})")
-            if not (h1["steps"] == 1 and h1["clue"] in h1["txt"] and h2["steps"] == 2 and not h2["rightRuled"] and not h2["tooNarrow"] and not h2["reviewLeak"]
+            if not (h1["steps"] == 1 and h1["clue"] in h1["txt"] and h2["steps"] == 2 and not h2["rightRuled"] and not h2["tooNarrow"] and not h2["reviewLeak"] and not h2["emptyPlace"]
                     and h3["steps"] == 3 and h3["hints"] > 0 and h3["dis"] and h3["check"]):
                 hint_fail.append(s + " " + iid + " " + json.dumps([h1["steps"], h2, h3]))
             # the child still enters it
