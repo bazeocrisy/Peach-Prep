@@ -25,26 +25,31 @@ PP.addSet({
       lexile: "about 620L (estimate)",
       paragraphs: [
         [
-          "Every summer, something special happens on Georgia's barrier islands, the long, sandy islands along the coast.",
+          "Each summer, something special happens on Georgia's barrier islands.",
+          "These are the long, sandy islands along the coast.",
           "Loggerhead sea turtles come ashore to lay their eggs on the sandy beaches.",
-          "These large turtles spend almost their whole lives swimming in the ocean.",
-          "Only the females return to land, and they come back only to build nests."
+          "These big turtles spend almost their whole lives swimming in the ocean.",
+          "Only the females return to land.",
+          "They come back only to build nests."
         ],
         ["## A Mother Turtle's Night"],
         [
           "Nesting begins after dark, usually between May and August.",
           "First, the female crawls slowly up the beach, past the line where the waves stop.",
           "Next, she uses her back flippers to dig a deep hole in the sand.",
-          "Then she lays about 120 eggs, each one about the size of a golf ball.",
+          "Then she lays about 120 eggs.",
+          "Each egg is about the size of a golf ball.",
           "After that, she covers the eggs with sand and crawls back to the sea.",
           "She does not stay to guard her nest."
         ],
         ["## Waiting in Warm Sand"],
         [
           "The eggs stay buried in the nest for about two months.",
-          "During that time, the sun heats the sand, and the sand keeps the eggs warm.",
+          "During that time, the sun heats the sand.",
+          "The sand keeps the eggs warm.",
           "The temperature of the sand also does something surprising.",
-          "Warmer sand causes more of the babies to be female, while cooler sand causes more of them to be male."
+          "Warmer sand makes more of the babies female.",
+          "Cooler sand makes more of them male."
         ],
         ["## Did You Know?"],
         [
@@ -53,14 +58,17 @@ PP.addSet({
         ],
         ["## Racing to the Sea"],
         [
-          "When the baby turtles, called hatchlings, are ready, they break out of their shells.",
-          "They usually climb out of the nest together at night, when the sand is cooler.",
+          "Baby turtles are called hatchlings.",
+          "When they are ready, they break out of their shells.",
+          "They usually climb out of the nest together at night.",
+          "The sand is cooler then.",
           "Hatchlings find the ocean by crawling toward the brightest part of the sky, which is usually above the water."
         ],
         [
-          "However, bright lights from houses and streets can confuse them.",
+          "But bright lights from houses and streets can confuse them.",
           "As a result, some hatchlings crawl the wrong way, away from the water.",
-          "To help, many people who live near Georgia beaches turn off outdoor lights or close their curtains at night during nesting season.",
+          "To help, many people who live near Georgia beaches block their light at night during nesting season.",
+          "They turn off outdoor lights or close their curtains.",
           "Volunteers also walk the beaches early each morning to look for new turtle tracks and mark the nests."
         ],
         [
@@ -96,8 +104,8 @@ PP.addSet({
       dok: 2,
       prompt: "Read the section \"Racing to the Sea.\" Select the sentence that explains how hatchlings find their way to the ocean.",
       source: "p1",
-      targets: ["p1:9:1", "p1:9:2", "p1:9:3", "p1:10:1", "p1:10:2", "p1:10:3", "p1:10:4"],
-      answer: ["p1:9:3"],
+      targets: ["p1:9:1", "p1:9:2", "p1:9:3", "p1:9:4", "p1:9:5", "p1:10:1", "p1:10:2", "p1:10:3", "p1:10:4", "p1:10:5"],
+      answer: ["p1:9:5"],
       pick: 1,
       clue: "Ask yourself: what do the hatchlings use as a guide to get to the water? A sentence about getting lost is not the same as a sentence about finding the way.",
       why: "The answer is \"Hatchlings find the ocean by crawling toward the brightest part of the sky, which is usually above the water.\" It tells exactly how they find the ocean: they follow the light. The sentence about bright lights tells how hatchlings get confused, not how they find their way."
@@ -157,9 +165,9 @@ PP.addSet({
         pick: 2,
         choices: [
           { text: "Nesting begins after dark, usually between May and August.", correct: true },
-          { text: "Then she lays about 120 eggs, each one about the size of a golf ball." },
-          { text: "During that time, the sun heats the sand, and the sand keeps the eggs warm." },
-          { text: "They usually climb out of the nest together at night, when the sand is cooler." },
+          { text: "Then she lays about 120 eggs." },
+          { text: "During that time, the sun heats the sand." },
+          { text: "They usually climb out of the nest together at night." },
           { text: "Volunteers also walk the beaches early each morning to look for new turtle tracks and mark the nests.", correct: true }
         ]
       },
