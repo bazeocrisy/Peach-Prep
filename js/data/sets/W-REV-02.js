@@ -23,7 +23,7 @@ PP.addSet({
       paragraphs: [
         [
           "(1) On Saturday morning, Tasha and her grandpa carried a box of wood into his garage.",
-          "(2) They were going to build a birdhouse for the backyard."
+          "(2) They planned to build a birdhouse for the backyard."
         ],
         [
           "(3) Grandpa showed Tasha how to hold the hammer near the end of the handle.",
@@ -163,7 +163,7 @@ PP.addSet({
       points: 1,
       std: ["3.T.SS.1.b"],
       dok: 2,
-      prompt: "Tasha's class is making a book of stories to share with families. Tasha wants readers to see what her finished birdhouse looked like. Which feature should she add to her story?",
+      prompt: "Tasha's class will put their stories in a book to share with families. Tasha wants readers to see what her finished birdhouse looked like. Which feature should she add to her story?",
       choices: [
         { text: "a drawing of the blue birdhouse on the oak branch, with a caption", correct: true },
         { text: "a chart that lists the prices of different kinds of hammers" },

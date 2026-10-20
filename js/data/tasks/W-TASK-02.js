@@ -21,7 +21,7 @@ PP.addTask({
         [
           "A skate park is an outdoor space that is built for riding.",
           "It has ramps, rails, steps, and curved bowls made of smooth concrete.",
-          "Many skate parks are open to skateboards, scooters, and inline skates, and some allow small bikes, too."
+          "Many skate parks are open to skateboards, scooters, and inline skates, and some allow bikes, too."
         ],
         [
           "One big reason towns build skate parks is safety.",
@@ -103,14 +103,14 @@ PP.addTask({
   model: {
     paragraphs: [
       "Picture the empty lot on Maple Street full of kids rolling down ramps and cheering for each other. Some people want a garden there, but I believe the town should build a skate park. A skate park would keep kids safe, and it would help them stay healthy.",
-      "First, a skate park would give kids a safe place to ride. The first source explains that kids who ride in streets have to watch for cars. Sidewalks are risky too, because a crack or a rock can make a rider crash. A skate park is made of smooth concrete and is far from traffic. The second source adds that helmets, pads, and taking tricks slowly protect riders. Many skate parks even post helmet rules.",
-      "Second, a skate park would help kids stay active and healthy. According to the second source, kids need to move for about an hour each day, but many of them do not. Riding is a great way to fix that. The first source says that pushing a scooter works a rider's legs, and balancing works the muscles around a rider's middle. Since riding feels like play, kids will want to keep practicing tricks instead of sitting inside.",
+      "First, a skate park would give kids a safe place to ride. The first source explains that kids who ride in streets have to watch for cars. Sidewalks are risky too, because a crack or a rock can make a rider crash. A skate park is made of smooth concrete and is far from traffic. The second source adds that helmets, pads, and learning tricks one step at a time keep riders safe. Many skate parks even post helmet rules.",
+      "Second, a skate park would help kids stay active and healthy. According to the second source, kids need to move for about an hour each day, but many of them do not. Riding is a great way to fix that. The first source says that pushing a scooter works a rider's legs, and balancing works the muscles around a rider's middle. Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.",
       "For these reasons, the town council should turn the empty lot into a skate park. It would be a safe, healthy place where kids from all over town could have fun together for years."
     ],
     notes: [
       "Purpose and Organization (3 of 3): The introduction paints a picture to hook the town council, names the other side (a garden) in one phrase, and then states the opinion clearly (\"I believe the town should build a skate park\") and previews both reasons. Each body paragraph covers one provided reason, in order. Transitions (First, Second, According to, For these reasons) and conjunctions (but, because, and, Since) link the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, speaks directly to the council and leaves a final thought.",
-      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. Safety: watching for cars in streets, cracks and rocks on sidewalks, smooth concrete away from traffic, helmets, pads and helmet rules. Health: the one-hour guideline, many kids not getting it, leg and balance muscles. All of it is in the writer's own words, and the writer tells which source each fact came from. Elaboration explains why facts matter: \"Riding is a great way to fix that\" and \"Since riding feels like play, kids will want to keep practicing tricks instead of sitting inside.\"",
-      "Language Usage and Conventions (2 of 2): The response is long enough to show command. Sentences are complete and varied: simple, compound (joined with but and and) and complex (with because, who, where and since). Verb tense is consistent: present tense for facts and would for what the skate park would do. Subjects and verbs agree (\"kids who ride ... have\", \"a crack or a rock can\", \"a skate park is\"). There are no spelling, capitalization or punctuation errors."
+      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. Safety: watching for cars in streets, cracks and rocks on sidewalks, smooth concrete away from traffic, helmets, pads and helmet rules. Health: the one-hour guideline, many kids not getting it, leg and balance muscles. All of it is in the writer's own words, and the writer tells which source each fact came from. Elaboration explains why facts matter: \"Riding is a great way to fix that\" and \"Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.\"",
+      "Language Usage and Conventions (2 of 2): The response is long enough to show command. Sentences are complete and varied: simple, compound (joined with but and and) and complex (with because, who, where and since). Verb tense is consistent: present tense for facts and would for what the skate park would do. Subjects and verbs agree (\"kids who ride in streets have\", \"a crack or a rock can\", \"a skate park is\"). There are no spelling, capitalization or punctuation errors."
     ]
   },
   lookFors: {

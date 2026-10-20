@@ -33,7 +33,7 @@ PP.addSet({
         ],
         [
           "(7) A class fish would help us learn about science.",
-          "(8) The students in our class is learning about what animals need to live.",
+          "(8) In science, the students in our class studies what animals need to live.",
           "(9) Last week, we watch a video about how fish use gills to breathe."
         ],
         [
@@ -118,7 +118,7 @@ PP.addSet({
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4", "p1:2:5", "p1:3:1", "p1:3:2", "p1:3:3"],
       answer: ["p1:2:5"],
       pick: 1,
-      clue: "Every sentence in a paragraph should be about the same idea. Read each paragraph and ask: is this sentence about a class fish?",
+      clue: "Every sentence should help explain why the class should get a fish. Read each paragraph and ask: does this sentence stay on that idea?",
       why: "The answer is sentence 6, \"My cousin has a dog named Biscuit that can catch a ball.\" Paragraph 2 is about how a class fish would teach responsibility. A cousin's dog is not a class fish and is not about the class taking care of a pet, so the sentence does not belong."
     },
     {
@@ -146,13 +146,13 @@ PP.addSet({
       std: ["3.L.GC.2.c", "3.L.GC.2.b"],
       dok: 2,
       prompt: "Sentences 8 and 9 each have one mistake with a verb. Choose the correct verb for each blank.",
-      text: "(8) The students in our class {0} learning about what animals need to live. (9) Last week, we {1} a video about how fish use gills to breathe.",
+      text: "(8) In science, the students in our class {0} what animals need to live. (9) Last week, we {1} a video about how fish use gills to breathe.",
       slots: [
-        { options: ["is", "are", "was"], answer: 1 },
+        { options: ["studies", "study", "studying"], answer: 1 },
         { options: ["watch", "watches", "watched"], answer: 2 }
       ],
-      clue: "For sentence 8, find who is doing the learning: one person or more than one? For sentence 9, look at the words that tell when it happened.",
-      why: "Sentence 8 needs \"are\": the subject is students, which means more than one, so the verb is are (the words in our class do not change that). Sentence 9 needs \"watched\": the words Last week tell that it already happened, so the verb must be in the past tense."
+      clue: "For sentence 8, find the subject. Is it one person or more than one? For sentence 9, look at the words that tell when it happened.",
+      why: "Sentence 8 needs \"study\": the subject is students, which means more than one, so the verb is study, not studies. The words in our class come between the subject and the verb, but they do not change the subject. Studying cannot be the only verb in a sentence. Sentence 9 needs \"watched\": the words Last week tell that it already happened, so the verb must be in the past tense."
     },
     {
       id: "W-REV-01-8",

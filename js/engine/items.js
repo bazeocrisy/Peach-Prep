@@ -72,6 +72,27 @@
   const hotLabel = (it, set, ref) => /^opt:/.test(ref) ? "Sentence " + (Number(ref.slice(4)) + 1) : visibleLabel(set, ref);
 
   const lbl = n => ["", "ONE", "TWO", "THREE", "FOUR"][n] || String(n);
+  /* A "look in paragraph N" hint is only safe when that paragraph (or
+     stanza) also holds at least one wrong option; otherwise naming it
+     names the answer. Poems are grouped by stanza, never by line. */
+  function placeOf(set, ref) {
+    const r = PP.parseRef(ref); if (!r) return ref;
+    return r.pid + ":" + r.para;
+  }
+  function placeLabel(set, ref) {
+    const r = PP.parseRef(ref); const p = r && PP.passageOf(set, r.pid);
+    if (p && p.lines) return ((set.passages || []).length > 1 && p.title ? "\u201c" + p.title + "\u201d, " : "") + "stanza " + r.para;
+    return visibleLabel(set, ref);
+  }
+  function placeHint(it, set) {
+    const ans = hotAnswer(it), targets = hotTargets(it);
+    const places = ans.map(r => placeOf(set, r)).filter((x, i, a) => a.indexOf(x) === i);
+    const safe = places.every(pl => targets.some(t => ans.indexOf(t) < 0 && placeOf(set, t) === pl));
+    if (!safe) return null;
+    const labels = places.map(pl => placeLabel(set, ans.find(a => placeOf(set, a) === pl)));
+    return { places, labels };
+  }
+
   const T = {};
 
   /* ===== mc: one answer ===== */
@@ -216,7 +237,9 @@
         const sel = make("select", "dd-select");
         sel.setAttribute("aria-label", "Blank " + (k + 1));
         const ph = make("option", "", "Choose…"); ph.value = ""; sel.appendChild(ph);
-        item.slots[k].options.forEach((o, oi) => { const op = make("option", "", o); op.value = String(oi); sel.appendChild(op); });
+        /* options shown in a shuffled order (once per sitting); value keeps the content index */
+        ctx.ddOrder = ctx.ddOrder || item.slots.map(sl => shuffled(sl.options.map((o, oi) => oi)));
+        ctx.ddOrder[k].forEach(oi => { const op = make("option", "", item.slots[k].options[oi]); op.value = String(oi); sel.appendChild(op); });
         sel.value = ctx.resp.v[k] === null ? "" : String(ctx.resp.v[k]);
         sel.disabled = !!ctx.locked;
         sel.addEventListener("change", () => {
@@ -304,10 +327,14 @@
         rule = shuffled(out).slice(0, Math.max(1, Math.ceil(out.length / 2)));
         msg = "Some sentences are crossed out. The answer is one of the others.";
       } else {
-        const lbl = ans.map(ref => visibleLabel(ctx.set, ref));
-        const uniq = lbl.filter((x, i) => lbl.indexOf(x) === i);
-        rule = out.filter(r => uniq.indexOf(visibleLabel(ctx.set, r)) < 0);
-        msg = "Look in " + uniq.join(" and ") + ".";
+        const where = placeHint(it, ctx.set);
+        if (where) {
+          rule = out.filter(r => where.places.indexOf(placeOf(ctx.set, r)) < 0);
+          msg = "Look in " + where.labels.join(" and ") + ".";
+        } else {
+          rule = shuffled(out).slice(0, Math.max(1, Math.ceil(out.length / 2)));
+          msg = "Some sentences are crossed out. The answer is one of the others.";
+        }
       }
       Array.from(ctx.ui.list.children).forEach(b => {
         if (rule.indexOf(b.dataset.ref) >= 0) { b.classList.add("is-ruled-out"); b.disabled = true; }
@@ -395,8 +422,11 @@
       const { item, host } = ctx;
       const wrap = make("div", "match-list");
       ctx.ui.cells = [];
+      ctx.rowOrder = ctx.rowOrder || shuffled(item.rows.map((x, i) => i));
+      const cardsByRow = [];
       item.rows.forEach((row, r) => {
         const card = make("div", "match-card");
+        cardsByRow[r] = card;
         card.appendChild(make("p", "match-row", row.text));
         const opts = make("div", "match-opts" + (item.cols.length > 2 ? " is-many" : ""));
         opts.setAttribute("role", "group"); opts.setAttribute("aria-label", row.text);
@@ -410,8 +440,9 @@
           });
           opts.appendChild(b); ctx.ui.cells[r][k] = b;
         });
-        card.appendChild(opts); wrap.appendChild(card);
+        card.appendChild(opts);
       });
+      ctx.rowOrder.forEach(r => wrap.appendChild(cardsByRow[r]));
       function sync() {
         ctx.ui.cells.forEach((row, r) => row.forEach((b, k) => {
           const on = ctx.resp.v[r] === k;
@@ -434,7 +465,7 @@
       return { points: 0, max: it.points };
     },
     narrow(ctx) {
-      const r = 0;
+      const r = (ctx.rowOrder || [0])[0];
       ctx.resp.v[r] = ctx.item.rows[r].answer; ctx.ui.fixedRow = r;
       ctx.ui.cells[r].forEach(b => { b.disabled = true; });
       ctx.ui.sync(); ctx.onChange();
@@ -471,8 +502,10 @@
         it.slots[0].options.find((o, i) => i !== it.slots[0].answer)].sort().join("  /  ");
   T.hottext.describe = (it, r, set) => r.v.length ? r.v.map(x => "\u201c" + hotText(it, set, x) + "\u201d").join(" AND ") : "No answer";
   T.hottext.narrowText = (it, r, set) => {
-    if (it.options) return "It is not " + hotTargets(it).filter(x => hotAnswer(it).indexOf(x) < 0).slice(0, 2).map(x => hotLabel(it, set, x)).join(" or ") + ".";
-    const l = it.answer.map(x => visibleLabel(set, x)); return "Look in " + l.filter((x, i) => l.indexOf(x) === i).join(" and ") + ".";
+    const where = it.options ? null : placeHint(it, set);
+    if (where) return "Look in " + where.labels.join(" and ") + ".";
+    return "It is not " + hotTargets(it).filter(x => hotAnswer(it).indexOf(x) < 0).slice(0, 2)
+      .map(x => it.options ? hotLabel(it, set, x) : "\u201c" + hotText(it, set, x) + "\u201d").join(" or ") + ".";
   };
   T.order.describe = (it, r) => r.v.length ? r.v.map((i, k) => (k + 1) + ". " + it.steps[i]).join("  ") : "No answer";
   T.order.narrowText = it => "The first one is: " + it.steps[0];

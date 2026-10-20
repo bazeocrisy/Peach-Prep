@@ -103,6 +103,14 @@
     el("q-prompt").textContent = item.prompt;
     const host = el("q-body");
     clear(host);
+    /* item.stem: a short text the child reads for this question (a
+       mini-passage, a dictionary entry, sentences to compare). Shown in
+       its own box so it never runs into the question. */
+    if (item.stem) {
+      const box = make("div", "q-stem");
+      (Array.isArray(item.stem) ? item.stem : [item.stem]).forEach(t => box.appendChild(make("p", "", t)));
+      host.appendChild(box);
+    }
     ctx.host = host;
     ctx.ui = Object.assign({}, { fixed: ctx.ui.fixed, fixedRow: ctx.ui.fixedRow, aLocked: ctx.ui.aLocked });
     ctx.locked = run.mode === "practice" && st.solved;

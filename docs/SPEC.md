@@ -121,6 +121,8 @@ PP.addSet({
 });
 ```
 
+Optional on any item: `stem` (a string or array of strings). It is a short text the child reads for this question, such as a mini-passage, a dictionary entry or sentences to compare, and is shown in a box above the answer controls. Use it instead of packing that text into `prompt`.
+
 Fields every item has:
 - `id`, `type` and `points` (1 or 2).
 - `std`: an array of exact codes, for example `["3.T.T.1.c"]`, or `["3.L.GC.1:M:irregular-past"]` for a GUM row (G = grammar, U = usage, M = mechanics).

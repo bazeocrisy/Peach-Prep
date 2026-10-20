@@ -84,6 +84,7 @@ sets.forEach(set => {
     const w = S + " " + (it.id || "?");
     if (seenItem.has(S + it.id)) F(w, "duplicate item id"); seenItem.add(S + it.id);
     ["id", "type", "prompt", "clue", "why"].forEach(k => { if (!it[k]) F(w, "missing " + k); });
+    if (String(it.prompt || "").length > 220 && !it.stem) W(w, "long prompt: move the reading text into stem");
     if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
     if ([1, 2, 3, 4].indexOf(it.dok) < 0) F(w, "dok must be 1-4");
     checkStd(w, it.std);
