@@ -130,4 +130,4 @@ Screenshots and print previews: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-8
 
 - **check-content:** `node verification/check-content.js --all` gives PASS (0 failures, 8 warnings, none from my items).
 - **readability:** `python3 verification/readability.py` runs; no passage is flagged.
-- **guard:** `python3 verification/guard.py http://localhost:8451/` was run against the Python static server; the result is in the report to the lead.
+- **guard:** `python3 verification/guard.py http://localhost:8451/` was run against `python3 -m http.server 8451`, which serves `.svg` correctly. Result: 81 passed, 0 failed (includes 7.1 no page errors and 8.1 no sideways scroll at 320/375/390). Log: `scratchpad/guard8451.log`. The guard was not run through serve.js, because serve.js cannot serve SVG yet (see V-1). The server has been stopped.
