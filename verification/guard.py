@@ -49,10 +49,14 @@ with sync_playwright() as p:
 
     # ---------- 1. Home ----------
     h = pg.evaluate("""({title:document.title, cards:document.querySelectorAll('#section-grid .section-card').length,
+      rows:document.querySelectorAll('#skill-list .skill-row-btn').length, std:PP_STANDARDS.length,
       foot:document.querySelector('.site-foot').textContent, build:document.getElementById('build-badge').textContent,
-      sets:PP.sets.length, tasks:PP.tasks.length, manifest:PP_MANIFEST})""")
-    ok("1.1 home renders four section cards", h["cards"] == 4, h["cards"])
+      sets:PP.sets.filter(s=>s.section!=='skill').length, tasks:PP.tasks.length, manifest:PP_MANIFEST})""")
+    ok("1.1 home lists every Georgia standard as a tappable row", h["rows"] == h["std"] and h["std"] > 140, (h["rows"], h["std"]))
+    ok("1.1b mixed practice screen has the four section cards", h["cards"] == 4, h["cards"])
     ok("1.2 every manifest set loaded", h["sets"] == len(h["manifest"]["sets"]), h)
+    lc = pg.evaluate("({n:Object.keys(PP.lessons).length})")
+    ok("1.2b every manifest lesson file loaded", lc["n"] > 0, lc)
     ok("1.3 every manifest task loaded", h["tasks"] == len(h["manifest"].get("tasks", [])), h)
     ok("1.4 not-affiliated disclaimer on Home", "not affiliated" in h["foot"] and "Georgia Department of Education" in h["foot"])
     ok("1.5 build badge shown", h["build"].startswith("Peach Prep"), h["build"])
@@ -224,6 +228,101 @@ with sync_playwright() as p:
         ok("6.5 %s: a model essay is available to parents" % tid, pg.evaluate("!!document.querySelector('#w-score details.model')"))
     pg.evaluate("localStorage.clear()")
 
+    # ---------- 9. Skills: home list, Teach / Learn / Practice / Test ----------
+    pg.evaluate("localStorage.clear()"); pg.goto(BASE); pg.wait_for_timeout(700)
+    pg.fill("#skill-search", "pronoun"); pg.wait_for_timeout(60)
+    srch = pg.evaluate("""[...document.querySelectorAll('#skill-list .skill-row-btn')].map(b=>{const s=PP_STANDARDS.find(x=>x.code===b.dataset.code);
+       return [s.code,s.display,s.plain,s.text,s.gum||'',b.textContent].join(' ').toLowerCase();})""")
+    ok("9.1 search narrows the list to matching skills", 0 < len(srch) < 20 and all("pronoun" in t for t in srch), len(srch))
+    pg.fill("#skill-search", ""); pg.click("[data-filter=test]"); pg.wait_for_timeout(60)
+    ft = pg.evaluate("""({n:document.querySelectorAll('#skill-list .skill-row-btn').length,
+       want:PP_STANDARDS.filter(s=>['reading','writing','both'].indexOf(s.tested)>=0).length})""")
+    ok("9.2 'On the test' shows exactly the assessed standards", ft["n"] == ft["want"], ft)
+    pg.click("[data-filter=all]")
+    lessons = pg.evaluate("Object.keys(PP.lessons)")
+    ok("9.3 lessons are loaded", len(lessons) >= 1, len(lessons))
+    # every lesson, every step renders
+    step_fail = []
+    for code in lessons:
+        for st in ("teach", "learn", "practice", "test"):
+            r = pg.evaluate("""(c=>{PP_SKILLS.open(c,'%s');const p=document.getElementById('sk-panel');
+              return {cur:PP_APP.current(), sel:(document.querySelector('#sk-steps [aria-selected=true]')||{}).dataset, len:p.textContent.length,
+                      btn:!!p.querySelector('#sk-start-practice,#sk-start-test,.flu-w,.trace-sheet,.write-checklist,.learn-next')||'%s'=='teach'};})('%s')""" % (st, st, code.replace("'", "\\'")))
+            if r["cur"] != "skill" or not r["sel"] or r["sel"].get("step") != st or r["len"] < 80 or not r["btn"]:
+                step_fail.append(code + " " + st + " " + json.dumps(r))
+    ok("9.4 every lesson renders all four steps", not step_fail, step_fail[:4])
+    # one full journey on a quiz lesson
+    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t']" % c)), None)
+    if qcode:
+        pg.evaluate("PP_SKILLS.open('%s')" % qcode); pg.wait_for_timeout(60)
+        pg.click("[data-step=learn]"); pg.wait_for_timeout(40)
+        for _ in range(12):
+            bs = pg.query_selector_all(".learn-next:not([hidden])")
+            if not bs: break
+            bs[0].click()
+        pg.click("[data-step=practice]"); pg.click("#sk-start-practice"); pg.wait_for_timeout(80)
+        for i in range(pg.evaluate("PP_PLAYER.state().total")):
+            pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
+        dn = pg.evaluate("({done:!document.getElementById('stage-done').hidden, t:document.getElementById('done-test').textContent})")
+        pg.click("#done-test"); pg.wait_for_timeout(80)
+        intest = pg.evaluate("PP_PLAYER.state()")
+        ok("9.5 practice finishes and 'Take the skill test' opens the separate test set", dn["done"] and "skill test" in dn["t"] and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn, intest["setId"]))
+        for i in range(intest["total"]):
+            pg.evaluate(WRONG); pg.click("#q-next"); pg.wait_for_timeout(20)
+        pg.click("#confirm-submit"); pg.wait_for_timeout(60)
+        g1 = pg.text_content("#res-guidance")
+        pg.click("#res-again"); pg.wait_for_timeout(60)
+        for i in range(pg.evaluate("PP_PLAYER.state().total")):
+            pg.evaluate(CORRECT); pg.click("#q-next"); pg.wait_for_timeout(20)
+        pg.click("#confirm-submit"); pg.wait_for_timeout(60)
+        g2 = pg.text_content("#res-guidance")
+        ok("9.6 a failed test says how many points master it; a passing test masters the skill", "To master" in g1 and "mastered this skill" in g2, (g1, g2))
+        pg.click("#res-back"); pg.wait_for_timeout(80)
+        bk = pg.evaluate("({cur:PP_APP.current(), code:PP_SKILLS.current(), step:PP_SKILLS.step(), done:document.querySelectorAll('#sk-steps .step-btn.is-done').length})")
+        ok("9.7 Back from a skill test returns to the skill's Test step, with all four steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 4, bk)
+        h0 = pg.evaluate("location.hash"); pg.go_back(); pg.wait_for_timeout(250)
+        h1 = pg.evaluate("[PP_APP.current(), location.hash]")
+        same = h1[0] == "skill" and pg.evaluate("PP_SKILLS.current()") == qcode
+        ok("9.7b one phone Back from there leaves that skill (no duplicate history entry)", not same, (h0, h1))
+        pg.go_forward(); pg.wait_for_timeout(250)
+        pg.click("#skill-back"); pg.wait_for_timeout(80)
+        hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.textContent}))('%s')""" % qcode)
+        ok("9.8 All skills returns home on that skill's row, now marked Mastered", hm["cur"] == "home" and hm["focus"] == qcode and "Mastered" in hm["txt"], hm)
+        pg.reload(); pg.wait_for_timeout(700)
+        kept = pg.evaluate("PP_SKILLS.status('%s')" % qcode)
+        ok("9.9 progress is kept on the device after a reload", kept == "mastered", kept)
+        pg.goto(BASE + "#skill/" + qcode + "/learn"); pg.wait_for_timeout(700)
+        ok("9.10 a skill page address opens that skill and step", pg.evaluate("PP_APP.current()=='skill' && PP_SKILLS.step()=='learn'"))
+    # pending and habit pages
+    pend = pg.evaluate("PP_STANDARDS.filter(s=>!PP.lessons[s.code]).map(s=>s.code)")
+    pf = []
+    for c in pend:
+        r = pg.evaluate("""(c=>{PP_SKILLS.open(c);return {cur:PP_APP.current(), steps:!document.getElementById('sk-steps').hidden, t:document.getElementById('sk-panel').textContent}})('%s')""" % c)
+        if r["cur"] != "skill" or r["steps"] or len(r["t"]) < 60: pf.append(c)
+    ok("9.11 standards without a lesson open an honest page (no empty steps)", not pf, pf[:4])
+    # fluency timer
+    flu = next((c for c in lessons if pg.evaluate("!!(PP.lessons['%s'].activity&&PP.lessons['%s'].activity.kind=='fluency')" % (c, c))), None)
+    if flu:
+        pg.evaluate("PP_SKILLS.open('%s','practice')" % flu); pg.wait_for_timeout(60)
+        pg.click("text=Start the minute")
+        ws = pg.query_selector_all(".flu-w"); ws[2].click(); ws[5].click(); ws[5].click()
+        pg.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()+61000;})()"); pg.wait_for_timeout(500)
+        pg.query_selector_all(".flu-w")[99].click(); pg.wait_for_timeout(60)
+        fr = pg.text_content(".flu-out")
+        ok("9.12 fluency timer: one minute, 100 words read, 1 missed = 99 words correct per minute, 99% accuracy", "99 words correct per minute" in fr and "99% accuracy" in fr, fr[:120])
+        pg.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()-61000;})()")
+    chk_code = next((c for c in lessons if pg.evaluate("!!PP.lessons['%s'].check" % c)), None)
+    if chk_code:
+        pg.evaluate("PP_SKILLS.open('%s','test')" % chk_code); pg.wait_for_timeout(60)
+        d0 = pg.evaluate("document.querySelector('#sk-panel .btn-primary').disabled")
+        for cb in pg.query_selector_all("#sk-panel input[type=checkbox]"): cb.check()
+        d1 = pg.evaluate("document.querySelector('#sk-panel .btn-primary').disabled")
+        pg.click("text=Mark this skill mastered"); pg.wait_for_timeout(40)
+        ok("9.13 grown-up check: mastered only after every line is checked", d0 and not d1 and pg.evaluate("PP_SKILLS.status('%s')" % chk_code) == "mastered", (d0, d1))
+    curs = pg.evaluate("document.fonts.load('20px \"PP Cursive\"').then(f=>f.length>0)")
+    ok("9.14 the cursive font loads from the site itself", curs)
+    pg.evaluate("localStorage.clear()")
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------
@@ -235,6 +334,11 @@ with sync_playwright() as p:
             o = q.evaluate("document.documentElement.scrollWidth-document.documentElement.clientWidth")
             if o > 0: over.append("%d %s +%dpx" % (w, tag, o))
         chk("home")
+        for code in q.evaluate("PP_STANDARDS.map(s=>s.code)"):
+            if not q.evaluate("!!PP.lessons['%s']" % code):
+                continue
+            for st in ("teach", "learn", "practice", "test"):
+                q.evaluate("PP_SKILLS.open('%s','%s')" % (code, st)); chk("skill %s %s" % (code, st))
         for sec in ("reading", "writing", "language"):
             if q.evaluate("PP.sets.some(s=>s.section=='%s')||('%s'=='writing'&&PP.tasks.length)" % (sec, sec)):
                 q.evaluate("PP_APP.openSection('%s')" % sec); q.wait_for_timeout(60); chk(sec)

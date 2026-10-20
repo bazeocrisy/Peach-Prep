@@ -212,3 +212,37 @@ A Practice Test is one set file with several passages and a mixed set of items, 
 - The browser harness (`verification/guard.js`) passes.
 - A phone check at 320, 375 and 390px shows no sideways scroll.
 - An independent screen audit passes.
+
+## 8. Skill lessons (`js/data/lessons/*.js`)
+
+The home page lists every Georgia standard (`js/data/standards.js`) under its GaDOE heading. Tapping one opens its skill page with four steps: **Teach → Learn → Practice → Test**. A lesson file holds the lessons for one standard group and calls `PP.addLesson({...})` once per standard. A file is listed in `manifest.lessons` only after it passes the checker and two reviews.
+
+```js
+PP.addLesson({
+  code: "3.T.T.1.b",                // exact code from standards.js (GUM rows: "3.L.GC.1:R:...")
+  title: "Story elements: characters, setting, problem and solution",   // kid-friendly skill name
+  teach: {                          // I do: the lesson
+    big: "One sentence: the big idea, in a child's words.",
+    points: ["3-5 short teaching sentences"],
+    words: [{ term, means }],       // optional key words
+    example: { label, lines: [..], note: "what to notice" },   // or examples: [ ... ] (1-2)
+    tip: "One test tip (how this shows up on the Milestones)."   // optional
+  },
+  learn: [                          // we do: 2-3 worked examples, revealed one step at a time
+    { show: ["text the child reads"], ask: "the question", steps: ["2-4 thinking steps"], answer: "the answer, as a sentence" }
+  ],
+  write: { prompt: "...", checklist: ["I ..."], rows: 6 },  // optional; expected for writing (Constructing Texts) standards
+  parent: "1-2 sentences: how a grown-up can practice this at home.",
+  passages: [ /* same shape as §5; short (100-300 words) */ ],
+  practice: [ /* 4-7 items, §5 item schema */ ],    // you do, with Help me
+  test: [ /* 4-6 items, 5+ points, no hints */ ]
+});
+```
+
+Rules on top of §5 and §6:
+- Every item has `passages: [...]` naming the passage(s) shown beside it, or `[]` for none (then put the reading text in `stem`).
+- Item `std` defaults to the lesson code. If given, it must include the lesson code. Lesson items may practice standards that are not assessed (Foundations, GUM Introduce/Continue rows); the page says so.
+- The test uses different passages and sentences than Practice and Learn, so mastery is not memory.
+- Item ids start with `SK-` and are unique across the whole site.
+- Mastered = at least 80% of the test's points. Progress is saved on the device only.
+- Writing standards are tested on the Milestones through revising and editing questions. Their Practice and Test use those formats (choose the best sentence to add, the best transition, the best ending, and so on), and the lesson adds a `write` activity scored by a grown-up with the checklist.

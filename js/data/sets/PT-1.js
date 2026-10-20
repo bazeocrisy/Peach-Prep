@@ -310,7 +310,7 @@ PP.addSet({
         { text: "Malik hopes he can keep helping in the shop, but Aunt Bea decides that he cannot help her anymore." },
         { text: "Malik thinks Mrs. Greene will be angry about the chip, but Aunt Bea knows she will not care." }
       ],
-      clue: "Find what Malik is afraid of in paragraph 6. Then read what Aunt Bea says and does after Malik tells the truth. Compare the two.",
+      clue: "Find what Malik is afraid of in paragraph 6. Then read what Aunt Bea says and does after Malik tells her what happened. Compare the two.",
       why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. In paragraph 11, Aunt Bea thanks him for telling her and says, \"A chipped pitcher is a small problem, but broken trust is a much bigger one.\" Malik does think the chip matters, or he would not hide it, and Aunt Bea calls the chip a small problem. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
     },
     {

@@ -84,7 +84,7 @@
   const filt = { domain: "all", tested: false, q: "" };
   function setsFor(code) {
     const base = code.split(":")[0];
-    return PP.sets.map(s => {
+    return PP.sets.filter(s => s.section !== "skill").map(s => {
       const n = s.items.filter(it => (it.std || []).some(c => c === code || (code.indexOf(":") < 0 && c === base))).length;
       return n ? { set: s, n } : null;
     }).filter(Boolean);
@@ -160,6 +160,14 @@
       const prac = make("div", "std-practice");
       prac.appendChild(make("p", "std-ald-head", "Where to practice"));
       const pu = make("ul", "plist");
+      {
+        /* the skill page for this standard: Teach, Learn, Practice, Test */
+        const li = make("li");
+        const has = PP.lessons && PP.lessons[s.code];
+        const b = make("button", "linkish", has ? "Peach Prep skill lesson: Teach, Learn, Practice, Test" : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
+        b.type = "button"; b.addEventListener("click", () => window.PP_SKILLS.open(s.code));
+        li.appendChild(b); pu.appendChild(li);
+      }
       setsFor(s.code).forEach(x => {
         const li = make("li");
         const b = make("button", "linkish", "Peach Prep: " + x.set.title);
@@ -172,7 +180,7 @@
         const a = make("a", "", w.app + ": " + w.place); a.href = w.url; a.target = "_blank"; a.rel = "noopener";
         li.appendChild(a); pu.appendChild(li);
       });
-      if (!pu.children.length) pu.appendChild(make("li", "muted", s.tested === "classroom" || s.tested === "embedded" || s.tested === "no"
+      if (pu.children.length < 2) pu.appendChild(make("li", "muted", s.tested === "classroom" || s.tested === "embedded" || s.tested === "no"
         ? "Not practiced on Peach Prep." : "Practice for this standard is being added."));
       prac.appendChild(pu); body.appendChild(prac);
       det.appendChild(body);

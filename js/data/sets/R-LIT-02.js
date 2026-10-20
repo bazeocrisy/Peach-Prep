@@ -35,7 +35,7 @@ PP.addSet({
         { text: "She thinks Joon should do all of the work." },
         { text: "She thinks the cakes are too sweet to eat." }
       ],
-      clue: "The narrator tells the story using I. Read paragraphs 2 and 3 and look for what Min-ji says she thinks and wants, not what someone else thinks.",
+      clue: "The narrator tells the story using I. Read paragraphs 2 and 3 and look for what Min-ji says about the work, not what someone else says.",
       why: "The answer is that she thinks it is slow and wants to be done fast. She says, \"I used to think it was the slowest part,\" and she wants to finish so she can play. It is Grandmother, not Min-ji, who calls it the best part."
     },
     {

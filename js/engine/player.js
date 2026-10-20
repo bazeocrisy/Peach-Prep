@@ -120,7 +120,10 @@
        its own box so it never runs into the question. */
     if (item.stem) {
       const box = make("div", "q-stem");
-      (Array.isArray(item.stem) ? item.stem : [item.stem]).forEach(t => box.appendChild(make("p", "", t)));
+      (Array.isArray(item.stem) ? item.stem : [item.stem]).forEach(t => {
+        const c = /^Cursive: /.test(t);   /* reading cursive (3.F.H.3) */
+        box.appendChild(make("p", c ? "cursive" : "", c ? t.replace(/^Cursive: /, "") : t));
+      });
       host.appendChild(box);
     }
     ctx.host = host;
@@ -284,8 +287,14 @@
   function practiceDone() {
     const n = run.set.items.length;
     const first = run.state.filter(s => s && s.firstTry).length;
+    const skill = run.set.kind === "skill";
+    if (skill) window.PP_SKILLS.recordPractice(run.set.code);
     el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
-      " right on your first try without help. Asking for help is never a mistake; it is how you learn.";
+      " right on your first try without help. Asking for help is never a mistake; it is how you learn." +
+      (skill && PP.byId[run.set.pair] ? " When you are ready, take the skill test." : "");
+    el("done-test").hidden = skill && !PP.byId[run.set.pair];
+    el("done-test").textContent = skill ? "Take the skill test" : "Try it as a test";
+    el("done-back").textContent = skill ? "Back to the skill" : "Back to the list";
     showStage("done");
     el("done-title").focus();
   }
@@ -295,7 +304,7 @@
     "3.T.C": "Purpose, audience and perspective", "3.T.SS": "Structure, text features and figurative language",
     "3.T.T.1": "Stories: characters, plot and message", "3.T.T.2": "Informational texts: main idea and details",
     "3.T.T.3": "Opinion texts", "3.T.T.4": "Poetry", "3.T.RA": "Using evidence and sources",
-    "3.L.GC": "Grammar and conventions", "3.L.V": "Vocabulary"
+    "3.L.GC": "Grammar and conventions", "3.L.V": "Vocabulary", "3.F": "Foundations"
   };
   function skillOf(code) {
     const c = String(code || "");
@@ -332,11 +341,14 @@
       host.appendChild(row);
     });
     const pct = max ? got / max : 0;
-    el("res-guidance").textContent = pct >= 0.85 ? "Excellent work. You are ready for harder sets."
+    el("res-guidance").textContent = run.set.kind === "skill" ? window.PP_SKILLS.afterTest(run.set, got, max)
+      : pct >= 0.85 ? "Excellent work. You are ready for harder sets."
       : pct >= 0.6 ? "Good work. Practice the questions you missed, then try again."
       : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
+    el("res-skills").hidden = run.set.kind === "skill";
     buildReview(rows);
-    el("res-practice").hidden = run.set.kind === "form";
+    el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !PP.byId[run.set.pair]);
+    el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
     showStage("results");
     el("res-title").focus();
   }
@@ -382,7 +394,8 @@
   function start(setId, mode) {
     const set = PP.byId[setId];
     if (!set) return;
-    if (window.PP_APP.current() !== "player") window.PP_APP.rememberReturn();
+    const switching = window.PP_APP.current() === "player";
+    if (!switching) window.PP_APP.rememberReturn();
     else if (!window.PP_APP.canLeave()) return;
     run.submitted = false;
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
@@ -400,7 +413,9 @@
     el("passage-note").hidden = true;
     renderItem();
     window.PP_APP.show("player");
-    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode);
+    /* practice -> test inside the player replaces the history entry, so Back
+       returns to where the activity was opened from in one press */
+    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode, switching);
     window.PP_APP.track();
     el("player-title").focus();
   }
@@ -426,8 +441,10 @@
       el("res-review-btn").textContent = r.hidden ? "See my answers" : "Hide my answers";
     });
     el("res-again").addEventListener("click", () => start(run.set.id, "test"));
-    el("res-practice").addEventListener("click", () => start(run.set.id, "practice"));
-    el("done-test").addEventListener("click", () => start(run.set.id, "test"));
+    /* a skill's practice and test are two different question sets */
+    const other = () => (run.set.kind === "skill" && run.set.pair) || run.set.id;
+    el("res-practice").addEventListener("click", () => start(other(), "practice"));
+    el("done-test").addEventListener("click", () => start(other(), "test"));
     ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 

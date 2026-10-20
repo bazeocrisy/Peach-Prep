@@ -18,16 +18,20 @@ const MAN = ctx.window.PP_MANIFEST;
 const codes = new Set(STD.map(s => s.code));
 const gumLevel = {}; STD.forEach(s => { if (s.gum) gumLevel[s.code] = s.level; });
 
-const sets = [], tasks = [];
-ctx.PP = { addSet: s => sets.push(s), addTask: t => tasks.push(t) };
+const sets = [], tasks = [], lessons = [];
+ctx.PP = { addSet: s => sets.push(s), addTask: t => tasks.push(t), addLesson: l => lessons.push(l) };
 const setFiles = all ? fs.readdirSync(path.join(ROOT, "js/data/sets")).filter(f => f.endsWith(".js")).map(f => f.slice(0, -3)) : MAN.sets;
 const taskFiles = all ? (fs.existsSync(path.join(ROOT, "js/data/tasks")) ? fs.readdirSync(path.join(ROOT, "js/data/tasks")).filter(f => f.endsWith(".js")).map(f => f.slice(0, -3)) : []) : (MAN.tasks || []);
 setFiles.forEach(id => run("js/data/sets/" + id + ".js"));
 taskFiles.forEach(id => run("js/data/tasks/" + id + ".js"));
+const LDIR = path.join(ROOT, "js/data/lessons");
+const lessonFiles = all ? (fs.existsSync(LDIR) ? fs.readdirSync(LDIR).filter(f => f.endsWith(".js")).map(f => f.slice(0, -3)) : []) : (MAN.lessons || []);
+lessonFiles.forEach(id => run("js/data/lessons/" + id + ".js"));
 
 const fails = [], warns = [];
 const F = (where, msg) => fails.push(where + ": " + msg);
 const W = (where, msg) => warns.push(where + ": " + msg);
+const STOP = ["that","this","with","from","they","them","their","there","what","when","where","which","who","whom","your","have","about","into","each","word","words","sentence","sentences","choice","choices","answer","read","paragraph","part","does","tell","tells","then","than","only","also","most","more","some","like","just","because","would","could","should","will","were","been","being","make","makes","same","other","both","look","think","find","story","passage","text","line","lines"];
 const wc = t => (String(t).match(/\S+/g) || []).length;
 const norm = t => String(t).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim();
 
@@ -90,22 +94,44 @@ sets.forEach(set => {
     else it.passages.forEach(pid => { if (!(set.passages || []).some(p => p.id === pid)) F(S + " " + it.id, "unknown passage " + pid); });
   });
   checkPassages(S, set.passages, set.kind);
-  (set.items || []).forEach(it => {
+  (set.items || []).forEach(it => checkItem(set, it, S));
+});
+
+function checkItem(set, it, S, lessonCode) {
     const w = S + " " + (it.id || "?");
     if (seenItem.has(S + it.id)) F(w, "duplicate item id"); seenItem.add(S + it.id);
     ["id", "type", "prompt", "clue", "why"].forEach(k => { if (!it[k]) F(w, "missing " + k); });
     if (String(it.prompt || "").length > 220 && !it.stem) W(w, "long prompt: move the reading text into stem");
     if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
     if ([1, 2, 3, 4].indexOf(it.dok) < 0) F(w, "dok must be 1-4");
-    checkStd(w, it.std);
+    if (lessonCode) {
+      /* a lesson question practices the lesson's own standard, tested or not */
+      const std = it.std || [lessonCode];
+      if (std.indexOf(lessonCode) < 0) F(w, "std does not include the lesson code " + lessonCode);
+      std.filter(c => c !== lessonCode).forEach(c => { if (!codes.has(c)) F(w, "unknown std code " + c); });
+    } else checkStd(w, it.std);
     const why = norm(it.why || ""), clue = norm(it.clue || "");
     /* choices are shuffled on screen, so never refer to a choice by position */
     if (/\b(first|second|third|fourth|last|top|bottom) (choice|option)\b|\b(choice|option) [A-D]\b/i.test(why + " " + clue))
       F(w, "why/clue refers to a choice by position, but choices are shuffled");
     const mustName = t => { if (t && why.toLowerCase().indexOf(norm(t).toLowerCase().replace(/[.!?]$/, "")) < 0) W(w, "why does not quote the answer “" + t + "”"); };
     const noLeak = t => { const x = norm(t).toLowerCase().replace(/[.!?]$/, ""); if (x.split(" ").length >= 2 && clue.toLowerCase().indexOf(x) >= 0) F(w, "clue contains the answer “" + t + "”"); };
+    /* Clue giveaway: a distinctive word in the clue that appears in the key
+       but in no wrong choice (and not in the prompt or stem) singles out the key. */
+    const words = t => new Set((norm(t).toLowerCase().match(/[a-z']{4,}/g) || []).filter(x => STOP.indexOf(x) < 0));
+    const giveaway = (ch, label) => {
+      const key = (ch || []).filter(c => c.correct), wrong = (ch || []).filter(c => !c.correct);
+      if (!key.length || !wrong.length) return;
+      const cw = words(clue), ctx = words((it.prompt || "") + " " + [].concat(it.stem || []).join(" "));
+      const wrongW = new Set([].concat(...wrong.map(c => [...words(c.text)])));
+      const hit = [...new Set([].concat(...key.map(c => [...words(c.text)])))].filter(x => cw.has(x) && !wrongW.has(x) && !ctx.has(x));
+      if (hit.length) W(w, (label || "choices") + ": clue shares “" + hit.join(", ") + "” only with the key");
+    };
+    if (it.type === "mc" || it.type === "ms") giveaway(it.choices);
+    if (it.type === "ebsr" && it.partA) giveaway(it.partA.choices, "Part A");
+    if (it.type === "dropdown") (it.slots || []).forEach((sl, k) => giveaway(sl.options.map((o, i) => ({ text: o, correct: i === sl.answer })), "slot " + k));
     switch (it.type) {
-      case "mc": oneCorrect(w, it.choices); { const a = (it.choices || []).find(c => c.correct); if (a) { mustName(a.text); noLeak(a.text); } } break;
+      case "mc": if ((it.choices || []).length !== 4) F(w, "mc needs exactly 4 choices (SPEC §5)"); oneCorrect(w, it.choices); { const a = (it.choices || []).find(c => c.correct); if (a) { mustName(a.text); noLeak(a.text); } } break;
       case "ms": {
         const n = (it.choices || []).filter(c => c.correct).length;
         if ((it.choices || []).length < 4) F(w, "ms needs 4+ choices");
@@ -160,7 +186,52 @@ sets.forEach(set => {
         break;
       default: F(w, "unknown type " + it.type);
     }
+}
+
+/* ---------- skill lessons (SPEC §8) ---------- */
+const seenLesson = new Set();
+lessons.forEach(L => {
+  const S = "lesson " + (L.code || "(no code)");
+  if (!codes.has(L.code)) F(S, "unknown standard code");
+  if (seenLesson.has(L.code)) F(S, "duplicate lesson"); seenLesson.add(L.code);
+  const rec = STD.find(x => x.code === L.code) || {};
+  if (!L.title) F(S, "missing title");
+  const T = L.teach || {};
+  if (!T.big) F(S, "teach.big missing");
+  if (!Array.isArray(T.points) || T.points.length < 3) F(S, "teach.points needs 3+");
+  (T.examples || (T.example ? [T.example] : [])).forEach((ex, i) => { if (!ex.lines || !ex.note) F(S, "teach example " + (i + 1) + " needs lines and note"); });
+  if (!(T.examples || T.example)) F(S, "teach needs an example");
+  if (!Array.isArray(L.learn) || L.learn.length < 2 || L.learn.length > 3) F(S, "learn needs 2-3 worked examples");
+  (L.learn || []).forEach((ex, i) => {
+    if (!ex.ask || !ex.answer) F(S, "learn " + (i + 1) + " needs ask and answer");
+    if (!Array.isArray(ex.steps) || ex.steps.length < 2 || ex.steps.length > 4) F(S, "learn " + (i + 1) + " needs 2-4 steps");
   });
+  if (!L.parent) F(S, "parent note missing");
+  if (L.write && (!L.write.prompt || !(L.write.checklist || []).length)) F(S, "write needs prompt and checklist");
+  if (rec.tested === "writing" && !L.write) W(S, "writing standard without a write activity");
+  checkPassages(S, L.passages, "lesson");
+  const set = { passages: L.passages || [] };
+  const ids = new Set();
+  /* hands-on skills: an activity can stand in for practice items, a grown-up check for the test */
+  if (L.activity && ["fluency", "trace"].indexOf(L.activity.kind) < 0) F(S, "unknown activity kind " + L.activity.kind);
+  if (L.activity && L.activity.kind === "fluency") (L.activity.passages || []).forEach((P, i) => { const n = wc(P.text); if (n < 180) F(S, "fluency passage " + (i + 1) + " is only " + n + " words (a fast reader needs 180+)"); });
+  if (L.check && (!L.check.intro || !(L.check.items || []).length)) F(S, "check needs intro and items");
+  [["practice", 4, 7], ["test", 4, 6]].forEach(([k, lo, hi]) => {
+    const list = L[k] || [];
+    if (!list.length && ((k === "practice" && L.activity) || (k === "test" && L.check))) return;
+    if (list.length < lo || list.length > hi) F(S, k + " needs " + lo + "-" + hi + " questions (has " + list.length + ")");
+    list.forEach(it => {
+      if (ids.has(it.id)) F(S + " " + it.id, "duplicate item id"); ids.add(it.id);
+      if (seenItem.has(it.id)) F(S + " " + it.id, "item id used elsewhere"); seenItem.add(it.id);
+      if (!Array.isArray(it.passages)) F(S + " " + it.id, "needs passages: [...] (use [] for none)");
+      else it.passages.forEach(pid => { if (!set.passages.some(p => p.id === pid)) F(S + " " + it.id, "unknown passage " + pid); });
+      checkItem({ passages: (L.passages || []).filter(p => (it.passages || []).indexOf(p.id) >= 0) }, it, S + " " + k, L.code);
+    });
+  });
+  const pp = new Set([].concat(...(L.practice || []).map(i => i.passages || [])));
+  (L.test || []).forEach(it => (it.passages || []).forEach(pid => { if (pp.has(pid)) W(S + " " + it.id, "test reuses practice passage " + pid); }));
+  const max = (L.test || []).reduce((a, i) => a + (i.points || 0), 0);
+  if (max < 5 && !L.check) W(S, "test is only " + max + " points");
 });
 
 tasks.forEach(t => {
@@ -179,7 +250,8 @@ tasks.forEach(t => {
 });
 
 const items = sets.reduce((a, s) => a + s.items.length, 0);
-console.log("Checked " + sets.length + " sets (" + items + " items) and " + tasks.length + " tasks" + (all ? " [all files]" : " [manifest]"));
+const litems = lessons.reduce((a, l) => a + (l.practice || []).length + (l.test || []).length, 0);
+console.log("Checked " + sets.length + " sets (" + items + " items), " + tasks.length + " tasks and " + lessons.length + " lessons (" + litems + " items)" + (all ? " [all files]" : " [manifest]"));
 warns.forEach(x => console.log("  warn  " + x));
 fails.forEach(x => console.log("  FAIL  " + x));
 console.log(fails.length ? fails.length + " FAILURES" : "PASS (0 failures, " + warns.length + " warnings)");

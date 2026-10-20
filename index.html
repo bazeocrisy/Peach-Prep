@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peach Prep · Georgia Milestones practice, Grade 3 ELA</title>
-  <meta name="description" content="Free practice for the Georgia Milestones Grade 3 English Language Arts test, mapped to every standard, with a parent guide.">
+  <meta name="description" content="Every Georgia Grade 3 English Language Arts standard, each with a lesson, practice and a test, for the Georgia Milestones. Free, with a parent guide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -15,46 +15,80 @@
   <a class="skip" href="#main">Skip to content</a>
   <main id="main">
 
-  <!-- ===================== HOME ===================== -->
+  <!-- ===================== HOME: every standard ===================== -->
   <section class="screen" id="screen-home" aria-labelledby="home-title">
-    <header class="hero">
+    <header class="hero hero-compact">
       <div class="hero-inner">
         <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
-        <h1 id="home-title" class="hero-title" tabindex="-1">Get ready for the Georgia Milestones</h1>
-        <p class="hero-sub">Grade 3 English Language Arts practice, built from the official test blueprint and mapped to every standard.</p>
+        <h1 id="home-title" class="hero-title" tabindex="-1">Georgia Milestones · Grade 3 ELA</h1>
+        <p class="hero-sub">Every Georgia standard is listed below. Tap one to learn it, practice it and test it.</p>
         <div class="hero-actions">
-          <button type="button" class="btn btn-primary" id="hero-start">Start practicing</button>
+          <button type="button" class="btn btn-primary" id="hero-mixed">Practice tests and mixed practice</button>
           <button type="button" class="btn btn-ghost" id="hero-parents">Parent guide</button>
         </div>
       </div>
     </header>
 
     <div class="wrap">
-      <h2 class="section-title">The test has two parts, worth 60 points</h2>
-      <p class="section-sub">Practice is grouped the same way. Points come from GaDOE's August 2025 blueprint.</p>
-      <ul class="section-grid" id="section-grid"></ul>
-
-      <div class="parent-band">
-        <div>
-          <h2 class="band-title">For parents</h2>
-          <p>What is on the test, every Grade 3 ELA standard in plain words, what "Proficient" looks like, and how to use Peach Prep with GaDOE's official practice.</p>
+      <div class="home-progress" id="home-progress"></div>
+      <div class="skill-tools">
+        <label class="sr" for="skill-search">Find a skill</label>
+        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: try pronoun or 3.T.T.1" autocomplete="off">
+        <div class="seg" role="group" aria-label="Which skills to show">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="test" aria-pressed="false">On the test</button>
+          <button type="button" data-filter="todo" aria-pressed="false">Not mastered</button>
         </div>
-        <button type="button" class="btn btn-primary" id="band-parents">Open the parent guide</button>
       </div>
+      <p class="skill-count" id="skill-count" role="status"></p>
+      <div id="skill-list" class="skill-list"></div>
+      <p class="muted" id="skill-empty" hidden>No skills match. Try a different word or code.</p>
 
       <h2 class="section-title small">Everyday tools</h2>
       <ul class="tool-list" id="tool-list"></ul>
     </div>
     <footer class="site-foot">
-      <p>Peach Prep is a free, independent practice site. It is not affiliated with or endorsed by the Georgia Department of Education. All passages and questions are original practice material, not actual test items.</p>
+      <p>Peach Prep is a free, independent practice site. It is not affiliated with or endorsed by the Georgia Department of Education. All passages and questions are original practice material, not actual test items. Progress is saved only on this device.</p>
       <p class="build" id="build-badge"></p>
     </footer>
+  </section>
+
+  <!-- ===================== SKILL: Teach, Learn, Practice, Test ===================== -->
+  <section class="screen" id="screen-skill" aria-labelledby="sk-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="skill-back"><span aria-hidden="true">&larr;</span> All skills</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap skill-wrap">
+      <p class="sk-code" id="sk-code"></p>
+      <h1 class="page-title" id="sk-title" tabindex="-1"></h1>
+      <p class="page-sub" id="sk-plain"></p>
+      <p class="sk-tags" id="sk-tags"></p>
+      <div class="steps" id="sk-steps" role="tablist" aria-label="Steps"></div>
+      <div class="sk-panel" id="sk-panel" tabindex="-1"></div>
+      <details class="sk-official" id="sk-official"></details>
+    </div>
+  </section>
+
+  <!-- ===================== MIXED PRACTICE ===================== -->
+  <section class="screen" id="screen-mixed" aria-labelledby="mixed-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> All skills</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="mixed-title" tabindex="-1">Put it all together</h1>
+      <p class="page-sub">The real test mixes skills: one passage, many kinds of questions. Use these after the skill lessons. Points come from GaDOE's August 2025 blueprint.</p>
+      <ul class="section-grid" id="section-grid"></ul>
+    </div>
   </section>
 
   <!-- ===================== SECTION ===================== -->
   <section class="screen" id="screen-section" aria-labelledby="section-title" hidden>
     <header class="bar">
-      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> Home</button>
+      <button type="button" class="nav-btn" data-go="mixed"><span aria-hidden="true">&larr;</span> Back</button>
       <p class="bar-brand">Peach Prep</p>
       <button type="button" class="nav-btn" data-go="parents">Parents</button>
     </header>
@@ -195,9 +229,11 @@
   <script src="js/data/site.js"></script>
   <script src="js/data/standards.js"></script>
   <script src="js/data/alds.js" onerror="window.PP_ALDS=null"></script>
+  <script src="js/data/habits.js" onerror="window.PP_HABITS=null"></script>
   <script src="js/data/manifest.js"></script>
   <script src="js/engine/items.js"></script>
   <script src="js/engine/player.js"></script>
+  <script src="js/skills.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/parents.js"></script>
   <script src="js/app.js"></script>

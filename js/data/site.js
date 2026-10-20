@@ -105,10 +105,11 @@ window.PP_SITE = {
   ],
 
   plan: [
-    { step: "Find the starting point", text: "Have your child do one Reading set in Test mode. The results show points by skill." },
-    { step: "Build the weak skills", text: "Redo that set in Practice mode. Help me gives one hint at a time and a walk-through. Use Sentence Sense for grammar lessons and Word Workshop for word lists." },
-    { step: "Write every week", text: "One opinion essay from sources each week, checked against the Writer's Checklist and scored with the parent guide." },
+    { step: "Start with the skill list", text: "The home page lists every Georgia standard. Use the On the test filter to see the skills the Milestones checks." },
+    { step: "Work one skill at a time", text: "Open a skill and go in order: Teach, Learn, Practice, Test. Help me gives one hint at a time in Practice. Score 80% on the Test to mark it mastered." },
+    { step: "Write every week", text: "Do the writing skills, then one opinion essay from sources each week (Practice tests and mixed practice, then Writing), checked with the Writer's Checklist and scored with the parent guide." },
+    { step: "Put it together", text: "Once several skills are mastered, try the mixed reading sets and the practice test. The real test mixes skills in one passage." },
     { step: "Rehearse on the real screens", text: "Use GaDOE's free Experience Online practice (Test Practice → Study Guide → ELA → Grade 3). It uses the real testing tools: highlighter, cross-off, line guide and more." },
-    { step: "Check progress", text: "Repeat a Test-mode set every week or two. Peach Prep does not save scores, so write them down if you want to track them." }
+    { step: "Check progress", text: "Progress and mastered skills are saved on this device only. If your child uses two devices, pick one for Peach Prep." }
   ]
 };
