@@ -22,6 +22,7 @@
     if (!set.passages.length) { host.appendChild(make("p", "muted", "This set has no passage.")); return; }
     set.passages.forEach((p, pi) => {
       const art = make("article", "passage");
+      art.dataset.pid = p.id;
       if (set.passages.length > 1) art.appendChild(make("p", "passage-tag", "Passage " + (pi + 1)));
       if (p.title) art.appendChild(make("h3", "passage-title", p.title));
       if (p.byline) art.appendChild(make("p", "passage-byline", p.byline));
@@ -113,6 +114,16 @@
       if (st.help >= 3) T[item.type].outline(ctx);
     } else clear(el("q-help-steps"));
     if (item.type !== "hottext") markSelected([]);
+    /* Multi-passage forms (the Practice Test): show only the passage(s)
+       this question is about. item.passages = ["p2"] or [] for none. */
+    if (Array.isArray(item.passages)) {
+      Array.from(document.querySelectorAll("#passage-pane-body .passage")).forEach(a => {
+        a.hidden = item.passages.indexOf(a.dataset.pid) < 0;
+      });
+      el("player-grid").classList.toggle("no-passage", !item.passages.length);
+      el("tab-passage").hidden = !item.passages.length;
+      if (!item.passages.length) showPane("question");
+    }
     setFeedback(st.fb || null);
     syncControls();
     el("q-prompt").focus();
@@ -339,6 +350,7 @@
     showStage("work");
     showPane(set.passages.length ? "passage" : "question");
     el("player-grid").classList.toggle("no-passage", !set.passages.length);
+    el("tab-passage").hidden = !set.passages.length;
     renderItem();
     window.PP_APP.show("player");
     el("player-title").focus();

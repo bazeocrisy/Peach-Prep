@@ -332,17 +332,17 @@
         let o; do { o = shuffled(item.steps.map((s, i) => i)); } while (o.every((x, i) => x === i));
         return o;
       })();
-      host.appendChild(make("p", "pick-note", "Tap the events in order, first to last. Tap a placed event to take it back."));
+      host.appendChild(make("p", "pick-note", item.orderNote || "Tap the choices in order, first to last. Tap a placed choice to take it back."));
       const slots = make("ol", "order-slots");
       const pool = make("div", "order-pool");
-      pool.setAttribute("role", "group"); pool.setAttribute("aria-label", "Events to place");
+      pool.setAttribute("role", "group"); pool.setAttribute("aria-label", "Choices to place");
       ctx.ui.slots = slots; ctx.ui.pool = pool;
       function draw() {
         clear(slots); clear(pool);
         item.steps.forEach((s, k) => {
           const li = make("li", "order-slot");
           const i = ctx.resp.v[k];
-          if (i === undefined) { li.appendChild(make("span", "order-empty", "Tap an event to place it here")); li.classList.add("is-empty"); }
+          if (i === undefined) { li.appendChild(make("span", "order-empty", "Tap a choice to place it here")); li.classList.add("is-empty"); }
           else {
             const b = make("button", "order-card is-placed", item.steps[i]);
             b.type = "button";
@@ -380,7 +380,7 @@
     narrow(ctx) {
       ctx.resp.v = [0].concat(ctx.resp.v.filter(x => x !== 0));
       ctx.ui.fixed = 0; ctx.ui.draw(); ctx.onChange();
-      return "The first event is placed for you. What happens next?";
+      return "The first one is placed for you. What comes next?";
     },
     outline(ctx) { ctx.ui.hint = true; ctx.ui.draw(); },
     answerText: it => it.steps.map((s, i) => (i + 1) + ". " + s).join("  ")
@@ -463,7 +463,7 @@
   };
   T.ebsr.describe = (it, r) => "Part A: " + (r.a === null ? "no answer" : it.partA.choices[r.a].text) +
     "  Part B: " + (r.b.length ? r.b.map(i => it.partB.choices[i].text).join(" AND ") : "no answer");
-  T.ebsr.narrowText = it => "Part A is: " + it.partA.choices.find(c => c.correct).text + " Now find the sentence that proves it.";
+  T.ebsr.narrowText = it => "Part A is: " + it.partA.choices.find(c => c.correct).text + " Now use Part A to answer Part B.";
   T.dropdown.describe = (it, r) => r.v.map((x, k) => x === null ? "(blank)" : it.slots[k].options[x]).join(", ");
   T.dropdown.narrowText = it => it.slots.length > 1
     ? "The first blank is: " + it.slots[0].options[it.slots[0].answer] + "."
@@ -475,7 +475,7 @@
     const l = it.answer.map(x => visibleLabel(set, x)); return "Look in " + l.filter((x, i) => l.indexOf(x) === i).join(" and ") + ".";
   };
   T.order.describe = (it, r) => r.v.length ? r.v.map((i, k) => (k + 1) + ". " + it.steps[i]).join("  ") : "No answer";
-  T.order.narrowText = it => "The first event is: " + it.steps[0];
+  T.order.narrowText = it => "The first one is: " + it.steps[0];
   T.match.describe = (it, r) => it.rows.map((row, i) => row.text + " \u2192 " + (r.v[i] === null ? "(none)" : it.cols[r.v[i]])).join(";  ");
   T.match.narrowText = it => "First row: " + it.rows[0].text + " \u2192 " + it.cols[it.rows[0].answer] + ".";
 

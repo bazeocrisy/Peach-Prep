@@ -93,8 +93,8 @@ PP.addSet({
         { text: "kindness" },
         { text: "replay" }
       ],
-      clue: "Some suffixes make describing words, some make words that tell how, and some make words that name a person or thing. Try each word in the blank: “a ___ dog.”",
-      why: "The answers are careful and fearless. The suffixes -ful and -less make adjectives: a careful dog, a fearless dog. Quickly ends in -ly, which makes an adverb. Teacher (-er) names a person, and kindness (-ness) names an idea. Replay has a prefix, not a suffix."
+      clue: "Some suffixes make describing words, some make words that tell how, and some make words that name a person or thing. Try each word in this blank: The dog was very ___.",
+      why: "The answers are careful and fearless. The suffixes -ful and -less make adjectives: the dog was very careful, the dog was very fearless. Quickly ends in -ly, which makes an adverb. Teacher (-er) names a person, and kindness (-ness) names an idea. Replay has a prefix, not a suffix."
     },
     {
       id: "L-VOC-02-6",

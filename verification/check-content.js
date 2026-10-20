@@ -74,7 +74,11 @@ sets.forEach(set => {
   const S = set.id || "(no id)";
   if (seenSet.has(S)) F(S, "duplicate set id"); seenSet.add(S);
   ["id", "section", "kind", "title", "items"].forEach(k => { if (!set[k]) F(S, "missing " + k); });
-  if (["reading", "writing", "language"].indexOf(set.section) < 0) F(S, "bad section " + set.section);
+  if (["reading", "writing", "language", "test"].indexOf(set.section) < 0) F(S, "bad section " + set.section);
+  if (set.kind === "form") (set.items || []).forEach(it => {
+    if (!Array.isArray(it.passages)) F(S + " " + it.id, "form items need passages: [...]");
+    else it.passages.forEach(pid => { if (!(set.passages || []).some(p => p.id === pid)) F(S + " " + it.id, "unknown passage " + pid); });
+  });
   checkPassages(S, set.passages, set.kind);
   (set.items || []).forEach(it => {
     const w = S + " " + (it.id || "?");

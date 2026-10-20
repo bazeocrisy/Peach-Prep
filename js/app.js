@@ -70,7 +70,7 @@
   }
 
   /* ---------- Section ---------- */
-  const KIND = { literary: "Story", informational: "Informational", opinion: "Opinion", poetry: "Poetry",
+  const KIND = { form: "Practice test", literary: "Story", informational: "Informational", opinion: "Opinion", poetry: "Poetry",
                  paired: "Paired texts", grammar: "Grammar", vocabulary: "Vocabulary", revising: "Revising" };
   function openSection(key) {
     sectionKey = key;
@@ -100,7 +100,9 @@
       const pts = set.items.reduce((a, it) => a + it.points, 0);
       li.appendChild(make("p", "set-meta", set.items.length + " questions · " + pts + " points"));
       const acts = make("div", "set-actions");
-      [["practice", "Practice", "btn-primary"], ["test", "Test", "btn-soft"]].forEach(([m, label, cls]) => {
+      const modes = set.kind === "form" ? [["test", "Start the test", "btn-primary"]]
+        : [["practice", "Practice", "btn-primary"], ["test", "Test", "btn-soft"]];
+      modes.forEach(([m, label, cls]) => {
         const b = make("button", "btn " + cls, label);
         b.type = "button"; b.dataset.set = set.id; b.dataset.mode = m;
         b.setAttribute("aria-label", label + ": " + set.title);

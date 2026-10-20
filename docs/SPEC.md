@@ -140,7 +140,7 @@ Paragraph and sentence references:
 | `ebsr` | `partA: {prompt, choices}`, `partB: {prompt, choices, pick?}` | 2 = both right; 1 = Part A right only; 0 if Part A is wrong |
 | `dropdown` | `text: "The cat {0} the yarn {1}."`, `slots: [{options:[...], answer:index}]` | One slot: 1 point. Two slots on a 2-point item: 1 point each |
 | `hottext` | `source: "p1"` or `options: [...]`; `targets: ["p1:2:1", ...]` (selectable sentences); `answer: [ref...]`; `pick: n` | Exact match; on a 2-point item with 2 answers, 1 point each |
-| `order` | `steps: ["first", "second", ...]` (correct order, 3–5) | 2 = all in place; 1 = all but one pair adjacent-swapped, or half or more in place. 1-point item: exact only |
+| `order` | `steps: ["first", "second", ...]` (correct order, 3–5); optional `orderNote` replaces the default instruction | 2 = all in place; 1 = all but one pair adjacent-swapped, or half or more in place. 1-point item: exact only |
 | `match` | `rows: [{text, answer: colIndex}]`, `cols: ["Fact", "Opinion"]` | 2-point item: 2 = all rows right, 1 = all but one (all but two when each column is used exactly once, because one mix-up breaks two rows). 1-point item: exact only |
 
 The narrowing step (Help 2) for each format:
@@ -178,6 +178,13 @@ PP.addTask({
   lookFors: { purpose: ["..."], evidence: ["..."], conventions: ["..."] }          // prompt-specific scoring notes per trait
 });
 ```
+
+### 5d. Practice Test forms (`section: "test"`, `kind: "form"`)
+
+A Practice Test is one set file with several passages and a mixed set of items, built to the blueprint's proportions.
+- Each item carries `passages: ["p1"]` to name the passage or passages shown beside it, or `passages: []` for standalone language items.
+- Group the items by passage, in the order a child would meet them on the real test.
+- A form uses only **new** passages and items. It never reuses sets the child has already practiced.
 
 ## 6. Content rules
 
