@@ -203,7 +203,7 @@ PP.addSet({
         { text: "by telling about a problem and then a way to solve it" },
         { text: "by giving reasons that support the author's opinion" }
       ],
-      clue: "Look at the first word of each sentence in that section. What kind of words are they?",
+      clue: "Look at the words that begin most of the sentences in that section. What kind of words are they?",
       why: "The answer is \"in time order, telling the steps the mother turtle follows.\" The words First, Next, Then and After that show the steps the mother turtle follows. The problem-and-solution part (bright lights and turning them off) comes later, in \"Racing to the Sea.\""
     },
     {

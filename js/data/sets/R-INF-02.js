@@ -23,28 +23,34 @@ PP.addSet({
       lexile: "about 700L (estimate)",
       paragraphs: [
         [
-          "The Okefenokee Swamp covers a huge area of southeast Georgia and stretches into northern Florida.",
+          "The Okefenokee Swamp is a huge swamp in southeast Georgia.",
+          "Part of it stretches into northern Florida.",
           "It is one of the largest swamps in North America.",
-          "Over thousands of years, many different groups of people have lived in the swamp or used it."
+          "For thousands of years, many groups of people have lived in the swamp or used it."
         ],
         [
-          "Long ago, Native American people lived on the swamp's islands and along its edges.",
+          "Long ago, Native American people lived on the swamp's islands.",
+          "They also lived along its edges.",
           "They fished, hunted, and gathered plants for food.",
-          "Much later, in the 1800s, settler families moved onto some of the islands.",
-          "These families were known as swampers.",
-          "They grew vegetables, raised animals, and traveled through the swamp in small boats."
+          "Later, in the 1800s, settler families moved onto some of the islands.",
+          "These families were called swampers.",
+          "They grew vegetables and raised animals.",
+          "They traveled through the swamp in small boats."
         ],
         [
-          "In the late 1800s, a company tried to drain the water out of the swamp by digging a long canal.",
+          "In the late 1800s, a company tried to drain the swamp.",
+          "Workers dug a long canal to carry the water out.",
           "The company wanted to cut the trees and turn the swamp into farmland.",
           "The plan did not work, and the company gave up after a few years."
         ],
         [
           "In the early 1900s, loggers built railroad tracks into the swamp.",
-          "They cut down many of the swamp's giant old cypress trees and sold the wood."
+          "Loggers are workers who cut down trees.",
+          "They cut down many of the swamp's giant old cypress trees.",
+          "Then they sold the wood."
         ],
         [
-          "As the giant trees disappeared, people began to worry that the swamp and its animals could be lost.",
+          "As the giant trees disappeared, people worried that the swamp and its animals could be lost.",
           "In 1937, the United States government made most of the swamp a national wildlife refuge.",
           "A refuge is a place where plants and animals are protected."
         ]
@@ -62,10 +68,11 @@ PP.addSet({
           "The name Okefenokee comes from a Native American word.",
           "It is often said to mean \"land of trembling earth.\"",
           "Some language experts think the word may have meant \"bubbling water\" instead.",
-          "Either way, visitors who explore the swamp soon see why \"trembling earth\" is a good fit."
+          "Either way, visitors soon see why \"trembling earth\" is a good name."
         ],
         [
-          "Much of the swamp is covered by peat, a thick layer of old, wet plant matter.",
+          "Much of the swamp is covered by peat.",
+          "Peat is a thick layer of old, wet plant matter.",
           "In some places, the peat floats on top of the water.",
           "Plants and even small trees grow on these floating islands.",
           "When a person steps on one, the unsteady ground and the trees around it shake."
@@ -73,16 +80,19 @@ PP.addSet({
         [
           "The swamp's water is another surprise.",
           "It looks dark brown, almost like a cup of tea.",
-          "This happens because fallen leaves and plants soak in the water and color it, the way a tea bag colors hot water.",
+          "Fallen leaves and plants soak in the water and color it.",
+          "A tea bag colors hot water in the same way.",
           "On a calm day, the dark water reflects the trees and clouds like a mirror."
         ],
         [
           "The Okefenokee is home to many animals.",
-          "Alligators rest on logs in the sun, and turtles swim in the quiet water.",
-          "More than two hundred kinds of birds, including tall sandhill cranes, can be seen there."
+          "Alligators rest on logs in the sun.",
+          "Turtles swim in the quiet water.",
+          "People can see more than two hundred kinds of birds there, such as tall sandhill cranes."
         ],
         [
-          "Today, most of the swamp is a national wildlife refuge, so its plants and animals are protected.",
+          "Today, most of the swamp is a national wildlife refuge.",
+          "Its plants and animals are protected.",
           "Visitors can paddle canoes along water trails or walk on long wooden boardwalks.",
           "In these ways, people can see the swamp up close without harming it."
         ]
@@ -146,11 +156,11 @@ PP.addSet({
       dok: 2,
       prompt: "Read paragraphs 3, 4 and 5 of \"People of the Okefenokee.\" Select the sentence that best explains WHY the swamp was made a wildlife refuge.",
       source: "p1",
-      targets: ["p1:3:3", "p1:4:1", "p1:5:1", "p1:5:2"],
+      targets: ["p1:3:4", "p1:4:1", "p1:5:1", "p1:5:2"],
       answer: ["p1:5:1"],
       pick: 1,
       clue: "One sentence tells WHAT happened in 1937. Look for the sentence that tells the reason it happened.",
-      why: "The answer is \"As the giant trees disappeared, people began to worry that the swamp and its animals could be lost.\" It tells what was happening and the worry it caused, and that worry is the reason. The sentence about 1937 tells what the government did, but not why. The sentences about the canal and the railroad tracks tell earlier events, not the reason for the refuge."
+      why: "The answer is \"As the giant trees disappeared, people worried that the swamp and its animals could be lost.\" It tells what was happening and the worry it caused, and that worry is the reason. The sentence about 1937 tells what the government did, but not why. The sentences about the company's plan and the railroad tracks tell earlier events, not the reason for the refuge."
     },
     {
       id: "R-INF-02-5",
@@ -173,7 +183,7 @@ PP.addSet({
         choices: [
           { text: "It is often said to mean \"land of trembling earth.\"" },
           { text: "In some places, the peat floats on top of the water.", correct: true },
-          { text: "This happens because fallen leaves and plants soak in the water and color it, the way a tea bag colors hot water." },
+          { text: "Fallen leaves and plants soak in the water and color it." },
           { text: "Visitors can paddle canoes along water trails or walk on long wooden boardwalks." }
         ]
       },

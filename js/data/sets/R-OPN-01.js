@@ -22,7 +22,7 @@ PP.addSet({
       lexile: "about 600L (estimate)",
       paragraphs: [
         [
-          "Every day at recess, I look at the empty patch of grass behind our cafeteria.",
+          "Each day at recess, I look at the empty patch of grass behind our cafeteria.",
           "It gets plenty of sun, but nobody uses it.",
           "I think our school should turn that space into a vegetable garden.",
           "Here are three reasons why."
@@ -30,14 +30,15 @@ PP.addSet({
         [
           "First, a garden would help us learn science.",
           "Right now, we mostly read about seeds in our science books.",
-          "In a garden, we could watch a bean seed sprout, grow leaves, and make new seeds of its own.",
+          "In a garden, we could watch a bean seed sprout and grow leaves.",
+          "Then the plant would make new seeds of its own.",
           "Our science teacher, Mr. Lane, says that students remember more when they see things for themselves."
         ],
         [
           "Another reason is that a garden could help us eat healthier food.",
-          "Our school nurse, Ms. Ortiz, told me that children are often more willing to taste vegetables they have grown themselves.",
+          "Our school nurse, Ms. Ortiz, told me that children are often more willing to taste vegetables they grew themselves.",
           "For example, my class could grow lettuce and carrots for a salad day.",
-          "Fresh vegetables have vitamins that help our bodies stay strong."
+          "Fresh vegetables have vitamins that keep our bodies strong."
         ],
         [
           "Finally, a garden would teach us to work as a team.",
@@ -47,7 +48,7 @@ PP.addSet({
         ],
         [
           "Some people may disagree because a garden would be too much work for the teachers.",
-          "However, my mom and three other parents have already offered to help on weekends, so the teachers would not have to do all the work."
+          "However, my mom and three other parents have offered to help on weekends, so the teachers would not have to do all the work."
         ],
         [
           "A garden would make our school a better place to learn and grow.",
@@ -130,10 +131,10 @@ PP.addSet({
         pick: 2,
         choices: [
           { text: "Our science teacher, Mr. Lane, says that students remember more when they see things for themselves.", correct: true },
-          { text: "Our school nurse, Ms. Ortiz, told me that children are often more willing to taste vegetables they have grown themselves.", correct: true },
+          { text: "Our school nurse, Ms. Ortiz, told me that children are often more willing to taste vegetables they grew themselves.", correct: true },
           { text: "For example, my class could grow lettuce and carrots for a salad day." },
           { text: "Each class could take turns watering, pulling weeds, and picking vegetables." },
-          { text: "However, my mom and three other parents have already offered to help on weekends, so the teachers would not have to do all the work." }
+          { text: "However, my mom and three other parents have offered to help on weekends, so the teachers would not have to do all the work." }
         ]
       },
       clue: "Think about each adult's job. Why would a reader trust what a science teacher says about learning, or what a nurse says about food?",
@@ -181,7 +182,7 @@ PP.addSet({
       answer: ["p1:5:2"],
       pick: 1,
       clue: "First find the sentence that tells what these people think. Then look for the sentence that gives Maya's answer to them.",
-      why: "The answer is \"However, my mom and three other parents have already offered to help on weekends, so the teachers would not have to do all the work.\" The sentence before it only tells what some people think. The word However shows that Maya is answering them."
+      why: "The answer is \"However, my mom and three other parents have offered to help on weekends, so the teachers would not have to do all the work.\" The sentence before it only tells what some people think. The word However shows that Maya is answering them."
     },
     {
       id: "R-OPN-01-8",
