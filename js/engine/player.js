@@ -230,17 +230,29 @@
     syncControls();
   }
 
+  /* PP-003 RD-6: #q-feedback is the visible box only. The words are spoken from
+     #q-say, a polite live region that is always in the page, filled a moment
+     after the box appears (and after any focus move to Next), so the verdict is
+     not lost when the region and its text appear in the same tick. */
+  let sayTimer = null;
+  function say(text) {
+    const live = el("q-say"); if (!live) return;
+    clearTimeout(sayTimer); live.textContent = "";
+    if (text) sayTimer = setTimeout(() => { live.textContent = text; }, 150);
+  }
   function setFeedback(fb) {
     const st = run.state[run.pos];
+    const same = st.fb === fb;
     st.fb = fb;
     const box = el("q-feedback");
     clear(box);
     box.className = "feedback";
-    if (!fb) { box.hidden = true; return; }
+    if (!fb) { box.hidden = true; say(""); return; }
     box.hidden = false;
     box.classList.add("is-" + fb.kind);
     box.appendChild(make("span", "fb-label", fb.label));
     box.appendChild(make("span", "fb-text", fb.text));
+    if (!same) say(fb.label + " " + fb.text);
   }
 
   function addHelp(label, text) {
@@ -338,10 +350,12 @@
 
   function finish() {
     if (run.mode === "practice") return practiceDone();
+    const noun = run.set.kind === "skill" ? "skill check" : "test";
     const blank = run.set.items.map((it, i) => ctxFor(i)).filter(c => !T[c.item.type].answered(c.item, c.resp)).length;
     el("confirm-line").textContent = blank
-      ? "You left " + blank + " question" + (blank > 1 ? "s" : "") + " blank or not finished. You can go back and check, or turn in your test."
-      : "You answered every question. You can go back and check, or turn in your test.";
+      ? "You left " + blank + " question" + (blank > 1 ? "s" : "") + " blank or not finished. You can go back and check, or turn in your " + noun + "."
+      : "You answered every question. You can go back and check, or turn in your " + noun + ".";
+    el("confirm-submit").textContent = "Turn in my " + noun;
     showStage("confirm");
     el("confirm-title").focus();
   }
@@ -362,7 +376,7 @@
     const nx = skill && run.set.next;
     el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
       " right on your first try without help. Asking for help is never a mistake; it is how you learn." +
-      (nx ? (nx.mode === "test" ? " When you are ready, take the skill test." : " Next, try some on your own.") : "");
+      (nx ? (nx.mode === "test" ? " When you are ready, take the skill check." : " Next, try some on your own.") : "");
     el("done-test").hidden = skill && !nx;
     el("done-test").textContent = nx ? nx.label : "Try it as a test";
     el("done-back").textContent = skill ? "Back to the skill" : "Back to the list";
@@ -432,6 +446,9 @@
     el("res-skills").hidden = run.set.kind === "skill";
     buildReview(rows);
     el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !run.set.practiceId);
+    /* PP-003 RD-10: a skill's button opens Practice Together, so it says so; the lesson check is a "skill check" */
+    el("res-practice").textContent = run.set.kind === "skill" ? "Practice Together" : "Practice this set";
+    el("res-again").textContent = run.set.kind === "skill" ? "Take the skill check again" : "Take the test again";
     el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
     /* PP-003 D17: after a passed skill check, lead with Back to the skill, not more practice */
     const passed = run.set.kind === "skill" && got >= Math.ceil(max * 0.8);
@@ -472,7 +489,12 @@
           p.appendChild(make("span", "fb-label", step < 3 ? "Hint " + step + " of 3" : "The walk-through"));
           p.appendChild(make("span", "help-text", txt));
           out.appendChild(p);
-          if (step >= 3) { b.disabled = true; ans.hidden = false; }
+          if (step >= 3) {
+            /* PP-003 RD-3: the button is now disabled; move focus to the answer it revealed */
+            const had = document.activeElement === b;
+            b.disabled = true; ans.hidden = false;
+            if (had) { ans.tabIndex = -1; ans.focus(); }
+          }
           else b.textContent = "Show me how (next step)";
         });
         box.appendChild(b); box.appendChild(out); box.appendChild(ans);
@@ -482,6 +504,16 @@
   }
 
   /* ---------- start ---------- */
+  /* A skill's sets run only in their own mode. The check (:t) is always a test
+     (closes #play/SK:<k>:t/practice). Practice Together (:p) and Try It Yourself (:y)
+     are never a test (PP-003 RD-4: #play/SK:<k>:p/test ran practice items as a scored
+     check and stored a pass), so a "test" address runs them as practice or try. */
+  function skillMode(set, mode) {
+    if (set.kind !== "skill") return mode;
+    if (set.part === "t") return "test";
+    if (mode === "test") return set.part === "y" ? "try" : "practice";
+    return mode;
+  }
   function start(setId, mode) {
     const set = PP.byId[setId];
     if (!set) return;
@@ -491,12 +523,12 @@
     run.submitted = false;
     /* a skill's check items only ever run as a check: no hints, never recorded as practice
        (closes #play/SK:<k>:t/practice, PP-003) */
-    if (set.kind === "skill" && set.part === "t") mode = "test";
+    mode = skillMode(set, mode);
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.tryMode = mode === "try";
     run.pos = 0; run.ctxs = []; run.state = [];
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? "Test" : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     renderPassages(set);
@@ -521,22 +553,24 @@
     const set = PP.byId[setId];
     if (!set) return;
     if (window.PP_APP.current() !== "player") window.PP_APP.rememberReturn();
-    if (set.kind === "skill" && set.part === "t") mode = "test";
+    mode = skillMode(set, mode);
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.tryMode = mode === "try";
     run.pos = 0; run.ctxs = []; run.state = []; run.submitted = true;
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? "Test" : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     const skill = set.kind === "skill";
     const test = run.mode === "test";
-    el("again-title").textContent = test ? "You already turned in this test" : "You already finished this practice";
+    const scored = typeof info.got === "number" && typeof info.max === "number";
+    el("again-title").textContent = test ? (skill ? "You already turned in this skill check" : "You already turned in this test") : "You already finished this practice";
     el("again-line").textContent = test
-      ? (typeof info.got === "number" ? "Your score was " + info.got + " of " + info.max + " points. " : "") +
-        (skill ? "Your skill page keeps your best score. " : "") + "Starting again begins a new test at question 1."
+      ? (scored ? "Your score was " + info.got + " of " + info.max + " points. " : "") +
+        (skill && scored ? (info.got >= Math.ceil(info.max * 0.8) ? "That was a pass. " : "That was not a pass yet. Practice first, then try again. ") : "") +
+        (skill ? "Your skill page keeps your best score. " : "") + "Starting again begins a new " + (skill ? "skill check" : "test") + " at question 1."
       : "Starting again begins at question 1." + (skill ? " Your skill page shows that you finished it." : "");
-    el("again-start").textContent = test ? "Take the test again" : "Start the practice again";
+    el("again-start").textContent = test ? (skill ? "Take the skill check again" : "Take the test again") : "Start the practice again";
     el("again-back").textContent = skill ? "Back to the skill" : "Back to the list";
     showStage("again");
     window.PP_APP.show("player");

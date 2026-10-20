@@ -39,7 +39,7 @@
       PP.addSet({
         id: "SK:" + K + ":" + k, section: "skill", kind: "skill", code: K, part: k,
         next: nx ? { id: "SK:" + K + ":" + nx[0], mode: nx[0] === "t" ? "test" : nx[0] === "y" ? "try" : "practice",
-                     label: nx[0] === "t" ? "Take the skill test" : "Try it yourself" } : null,
+                     label: nx[0] === "t" ? "Take the skill check" : "Try it yourself" } : null,
         practiceId: P.length ? "SK:" + K + ":p" : null,
         title: L.title + " · " + label,
         clueWords: L.clues && !L.clues.groups && L.clues.highlight !== false ? L.clues.words : null,
@@ -94,7 +94,9 @@
   function recordTest(k, got, max) {
     const r = rec(k);
     r.tries = (r.tries || 0) + 1;
-    if (!r.best || got / max > r.best.got / r.best.max) r.best = { got, max };
+    /* bestMax (PP-003 RE-3): the check's point total when this best was set. Older
+       records have no bestMax; their best may be from a smaller version of the check. */
+    if (!r.best || got / max > r.best.got / r.best.max) { r.best = { got, max }; r.bestMax = max; }
     const pass = got >= passMark(max);
     if (pass) r.mastered = true;
     /* new in PP-003: a dated log of each submitted check (last 20) */
@@ -127,7 +129,10 @@
     if (!r.mastered || passKind(k) !== "test") return false;
     const last = (r.attempts || [])[(r.attempts || []).length - 1];
     if (last && !last.ok) return true;
-    const ds = daysSince(r.lastPassAt || r.passedAt || r.firstSeenPassedAt);
+    /* PP-003 RE-11: only a real pass date starts the clock. An undated 2.1 pass
+       (legacyUndated) never shows a review by date, so old passes do not all turn
+       "review" on the same day; it does show one after a dated try that did not pass. */
+    const ds = daysSince(r.lastPassAt || r.passedAt);
     return ds !== null && ds >= 7;
   }
   function status(k) {
@@ -247,7 +252,7 @@
           b.appendChild(body);
           const due = st === "mastered" && !isTask(k) && reviewDue(k);
           const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
-          if (st === "mastered") { const ck = make("span", "sl-done" + (byG ? " by-grownup" : ""), "✓"); ck.title = passLabel(k); b.appendChild(ck); }
+          if (st === "mastered") { const ck = make("span", "sl-done" + (byG ? " by-grownup" : ""), byG ? "✓ grown-up" : "✓"); ck.title = passLabel(k); b.appendChild(ck); }
           else if (st === "started") b.appendChild(make("span", "sl-started", "◐"));
           if (due) b.appendChild(make("span", "sl-review", "review"));
           b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " +
@@ -694,6 +699,19 @@
     host.appendChild(card);
   }
 
+  /* The best score, shown honestly against today's check (display only; nothing stored changes).
+     - bestMax matches today's total: "Best score: 6 of 8."
+     - bestMax is set but the check has changed since: "Best score: 6 of 7 (on an earlier version of this check)."
+     - no bestMax (saved before PP-003) and best does not fit today's total: no score, just
+       "(on an older version of this check)", so "6 of 7" never sits next to an 8-point check. */
+  function bestText(r, max, lead) {
+    const b = r.best;
+    if (!b || typeof b.got !== "number" || typeof b.max !== "number") return ".";
+    const fits = b.max === max && b.got <= max;
+    if (typeof r.bestMax === "number" ? r.bestMax === max && fits : fits) return ". " + lead + b.got + " of " + b.max + ".";
+    if (typeof r.bestMax === "number") return ". " + lead + b.got + " of " + b.max + " (on an earlier version of this check).";
+    return " (on an older version of this check).";
+  }
   function renderTest(host, L) {
     const set = PP.byId["SK:" + keyOf(L) + ":t"];
     host.appendChild(make("h2", "panel-h", set ? "Test Your Knowledge (the skill check)" : "Check: show a grown-up"));
@@ -703,7 +721,7 @@
       const r = prog[cur] || {};
       card.appendChild(make("p", "", set.items.length + " questions, " + max + " points, no hints. Score " + passMark(max) + " or more to pass the skill check."));
       if (r.mastered) {
-        card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + "." + (r.best ? " Best score: " + r.best.got + " of " + r.best.max + "." : "")));
+        card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + bestText(r, max, "Best score: ")));
         /* for grown-ups: how the pass was earned (display only, from the dated attempt log) */
         const att = r.attempts || [];
         const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
@@ -712,14 +730,17 @@
         if (r.legacyUndated) card.appendChild(make("p", "go-note", "This pass was saved before the site kept dates, so its date is not known."));
         if (reviewDue(cur)) {
           const last = att[att.length - 1];
-          const ds = daysSince(r.lastPassAt || r.passedAt || r.firstSeenPassedAt);
+          const ds = daysSince(r.lastPassAt || r.passedAt);
           card.appendChild(make("p", "go-best review-due", "Review suggested. " + (last && !last.ok
             ? "The last try did not pass. A little more practice is a good idea."
-            : "It has been " + ds + " days since this check was passed" + (r.lastPassAt || r.passedAt ? "" : " (or since this device first noticed the pass)") + ". Take it again to see if it stuck.")));
+            : "It has been " + ds + " days since this check was passed. Take it again to see if it stuck.")));
         }
       }
-      else if (r.best) card.appendChild(make("p", "go-best", "Best score so far: " + r.best.got + " of " + r.best.max + ". Need " + passMark(max) + " to pass."));
-      const b = make("button", "btn btn-primary", r.tries ? "Take the test again" : "Take the test");
+      else if (r.best) {
+        const bt = bestText(r, max, "Best score so far: ");
+        card.appendChild(make("p", "go-best", (bt.indexOf(". ") === 0 ? bt.slice(2) : "Your best score so far was on an older version of this check.") + " Need " + passMark(max) + " of " + max + " to pass."));
+      }
+      const b = make("button", "btn btn-primary", r.tries ? "Take the skill check again" : "Take the skill check");
       b.type = "button"; b.id = "sk-start-test";
       b.addEventListener("click", () => window.PP_PLAYER.start(set.id, "test"));
       card.appendChild(b);
@@ -792,7 +813,9 @@
     card.appendChild(ctl);
     const say = make("p", "flu-say"); say.setAttribute("aria-live", "polite"); card.appendChild(say);
     const text = make("div", "flu-text"); card.appendChild(text);
-    const out = make("div", "flu-out"); out.setAttribute("aria-live", "polite"); card.appendChild(out);
+    /* PP-003 RD-7: not a live region. The result is announced once, by moving focus
+       to its one-line headline; the norms text and the form are read only on request. */
+    const out = make("div", "flu-out"); card.appendChild(out);
     host.appendChild(card);
 
     let which = 0, phase = "ready", t0 = 0, timer = null, secs = 60, words = [], miss = new Set(), fixed = new Set();
@@ -806,6 +829,7 @@
       words = [];
       P.text.split(/\s+/).forEach((w, k) => {
         const b = make("button", "flu-w", w); b.type = "button"; b.dataset.k = k;
+        b.setAttribute("aria-pressed", "false");   /* PP-003 RD-8: "pressed" = marked as missed */
         b.addEventListener("click", () => tap(k, b));
         words.push(b); text.appendChild(b); text.appendChild(document.createTextNode(" "));
       });
@@ -819,7 +843,7 @@
     });
     function tap(k, b) {
       /* a second tap undoes the mark: the reader fixed the word, so it counts as correct and as a self-correction */
-      if (phase === "reading") { if (miss.has(k)) { miss.delete(k); fixed.add(k); } else { miss.add(k); fixed.delete(k); } b.classList.toggle("is-miss", miss.has(k)); return; }
+      if (phase === "reading") { if (miss.has(k)) { miss.delete(k); fixed.add(k); } else { miss.add(k); fixed.delete(k); } b.classList.toggle("is-miss", miss.has(k)); b.setAttribute("aria-pressed", miss.has(k) ? "true" : "false"); return; }
       if (phase === "last") finish(k);
     }
     function tick() {
@@ -890,9 +914,11 @@
       out.appendChild(observeForm(r, entry));
       histRedraw();
       startB.hidden = false; startB.textContent = "Read again";
-      /* PP-003 D10: show the result and put focus on it */
+      /* PP-003 D10 + RD-1: show the result just below the sticky step bar and put focus on it */
       big.tabIndex = -1;
-      big.scrollIntoView({ block: "start" });
+      const bar = el("sk-steps");
+      const barH = bar && !bar.hidden && getComputedStyle(bar).position === "sticky" ? bar.getBoundingClientRect().height : 0;
+      window.scrollTo(0, Math.max(0, big.getBoundingClientRect().top + window.scrollY - barH - 8));
       big.focus({ preventScroll: true });
     }
     /* Reading history: shown whenever there are saved readings (reading only, never writes). */
@@ -1014,6 +1040,9 @@
       if (!r.passedAt && !r.legacyUndated) r.passedAt = today();
       r.lastPassAt = today();
       save(); render();
+      /* PP-003 RD-2: the button is gone, so put focus on the new "Checked by a grown-up" line */
+      const done = el("sk-panel").querySelector(".go-done");
+      if (done) { done.tabIndex = -1; done.focus(); }
     });
     sync();
     btn.hidden = !!r0.mastered;      /* the "✓ Checked by a grown-up" line replaces the button */
@@ -1054,17 +1083,22 @@
   function afterTest(set, got, max) {
     const pass = recordTest(set.code, got, max);
     return pass ? "✓ Passed! You passed the skill check. It now shows a check mark on the skill list. Come back in about a week and try it again to see if it stuck."
-      : "Not yet, and that's OK. Learning takes a few tries. Go back to Watch Me or Practice Together, then try the skill check again on another day. (You need " + passMark(max) + " or more points to pass.)";
+      : "Not yet, and that's OK. Learning takes a few tries. Go back to Watch Me or Practice Together, then try the skill check again after you practice. (You need " + passMark(max) + " or more points to pass.)";
   }
 
   function init() {
     const inp = el("skill-search");
     inp.addEventListener("input", () => {
       query = inp.value; buildList();
-      /* PP-003 D3: on a phone, bring the search box to the top so the results show under it */
-      if (query.trim() && window.matchMedia("(max-width: 639px)").matches) {
-        const top = inp.getBoundingClientRect().top;
-        if (top > 12 || top < 0) window.scrollTo(0, Math.max(0, window.scrollY + top - 8));
+      /* PP-003 D3 + RD-5: bring the search box to the top so the results show under it.
+         On a phone, whenever it is not already at the top. From 640px the search bar is
+         sticky, so move it only when it sits low (below 40% of the screen) or is off the top. */
+      if (query.trim()) {
+        const phone = window.matchMedia("(max-width: 639px)").matches;
+        const tools = phone ? inp : (document.querySelector(".skill-tools") || inp);
+        const top = tools.getBoundingClientRect().top;
+        if (phone ? (top > 12 || top < 0) : (top > window.innerHeight * 0.4 || top < 0))
+          window.scrollTo(0, Math.max(0, window.scrollY + top - (phone ? 8 : 0)));
       }
     });
     document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => {

@@ -149,7 +149,7 @@ PP.addLesson({
       prompt: "Trunk has more than one meaning. Use the sentence and the picture. What does trunk mean here?",
       stem: ["Grandpa leaned the ladder against the trunk."],
       figure: { src: "assets/figures/v3a-tree-ladder.svg",
-        alt: "A drawing of a ladder leaning against a tree. The top of the ladder rests on the thick wooden part of the tree, between the roots and the branches. Labels point to a branch and the roots." },
+        alt: "A drawing of a ladder leaning against a tree. The top of the ladder touches the tree a little below its lowest branch. Labels point to a branch and the roots." },
       choices: [
         { text: "the thick main stem of a tree", correct: true },
         { text: "the back part of a car used for storage" },

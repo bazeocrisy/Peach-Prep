@@ -256,7 +256,11 @@
       if (h) {
         history.replaceState(null, "", location.pathname + location.search);
         lastHash = "";
-        if (h !== "main") el("home-notfound").hidden = false;
+        if (h !== "main") {
+          /* PP-003 RD-11: focus the note, so it is read out and keyboard users start from it */
+          const nf = el("home-notfound");
+          nf.hidden = false; nf.tabIndex = -1; nf.focus();
+        }
       }
     } finally {
       routing = false;

@@ -313,7 +313,7 @@ PP.addLesson({
     { id: "SK-TC1b-P8", type: "mc", points: 1, dok: 2, passages: ["p1"],
       stem: ["The author wants to add this picture to the section \"Busy Builders.\""],
       figure: { src: "assets/figures/tc1b-beaver-tree.svg",
-        alt: "A drawing of a beaver sitting up next to a small tree. The beaver's front teeth are on a deep notch it has chewed into the tree trunk. Labels point to the beaver, the tree and the wood chips on the ground. There is no water in the picture." },
+        alt: "A drawing of a beaver sitting up next to a small tree. The beaver's front teeth are on a deep notch it has chewed into the tree trunk. Labels point to the beaver, the tree and the wood chips on the ground." },
       prompt: "Which caption best fits the picture?",
       choices: [
         { text: "A beaver chews through a small tree with its strong front teeth.", correct: true },

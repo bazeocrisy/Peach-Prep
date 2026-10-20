@@ -144,7 +144,9 @@ with sync_playwright() as p:
 
     # ---------- 4. Test mode ----------
     t_fail = []
-    for s in pg.evaluate("PP.sets.map(s=>s.id)"):
+    # a skill's Practice Together (:p) and Try It Yourself (:y) sets never run as a test (PP-003 RD-4, 13.2);
+    # their items are scored in section 3. Every set that can be a test is run here.
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&s.part!=='t')).map(s=>s.id)"):
         for mode in ("right", "wrong"):
             pg.evaluate("PP_PLAYER.start('%s','test')" % s); pg.wait_for_timeout(80)
             n = pg.evaluate("PP_PLAYER.state().total")
@@ -166,12 +168,14 @@ with sync_playwright() as p:
                 if not (v["h0"] and v["h1"] and not v["h3"] and v["steps"] == 3 and v["dis"]): t_fail.append(s + " show-me-how " + json.dumps(v))
     # leaving a test in progress asks first
     s0 = pg.evaluate("PP.sets[0].id")
-    pg.evaluate("PP_PLAYER.start('%s','test')" % s0); pg.wait_for_timeout(80)
+    # the first set that can run as a test (a skill's :p/:y sets cannot, PP-003 RD-4)
+    s0t = pg.evaluate("PP.sets.find(s=>!(s.kind=='skill'&&s.part!=='t')).id")
+    pg.evaluate("PP_PLAYER.start('%s','test')" % s0t); pg.wait_for_timeout(80)
     pg.evaluate(CORRECT); pg.wait_for_timeout(20)
     n0 = len(dialogs)
     pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(60)
     ok("4.2 leaving a test in progress asks first", len(dialogs) == n0 + 1 and "Leave this test" in dialogs[-1], dialogs[-1:] )
-    pg.evaluate("PP_PLAYER.start('%s','test')" % s0); pg.wait_for_timeout(80)
+    pg.evaluate("PP_PLAYER.start('%s','test')" % s0t); pg.wait_for_timeout(80)
     skip = pg.evaluate("!document.getElementById('q-next').disabled")
     ok("4.3 a test question can be skipped, like the real test", skip)
     pg.evaluate("PP_PLAYER.abandon()")
@@ -284,7 +288,7 @@ with sync_playwright() as p:
         dn2 = pg.evaluate("document.getElementById('done-test').textContent")
         pg.click("#done-test"); pg.wait_for_timeout(80)
         intest = pg.evaluate("PP_PLAYER.state()")
-        ok("9.5 Try It Yourself finishes and 'Take the skill test' opens the separate test set", "skill test" in dn2 and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn2, intest["setId"]))
+        ok("9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set", "skill check" in dn2 and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn2, intest["setId"]))
         for i in range(intest["total"]):
             pg.evaluate(WRONG); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
@@ -653,6 +657,100 @@ with sync_playwright() as p:
         goto12(q, hs)
         d16.append([q.evaluate("PP_APP.current()"), H(), q.evaluate("!!document.getElementById('home-notfound')&&!document.getElementById('home-notfound').hidden")])
     ok("12.8 D16: a bad address shows Home with a 'not found' note and a clean address", all(x == ["home", "", True] for x in d16), d16)
+    q.close()
+
+    # ---------- 13. PP-003 final fixes (docs/audits/work/fix-final.md: RD-1, RD-2, RD-3, RD-4, RD-9, RD-11, RE-3 bestMax, RE-11) ----------
+    # 13.1 RD-1: the fluency result lands fully below the sticky step bar, with focus on it, at 320, 390, 768 and 1366
+    flu13 = "3.F.F.1.b"
+    r1 = []
+    for w, hgt, phone in ((320, 640, True), (390, 844, True), (768, 1024, True), (1366, 900, False)):
+        q = page12(w, hgt, phone)
+        goto12(q, "#skill/%s/practice" % flu13)
+        if q.evaluate("PP_APP.current()") != "skill": r1.append("%d no fluency page" % w); q.close(); continue
+        q.click("text=Start the minute")
+        q.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()+61000;})()"); q.wait_for_timeout(500)
+        q.query_selector_all(".flu-w")[100].click(); q.wait_for_timeout(150)
+        v = q.evaluate("""(()=>{const r=document.querySelector('.flu-result').getBoundingClientRect(),s=document.getElementById('sk-steps').getBoundingClientRect();
+            return {top:Math.round(r.top),bottom:Math.round(r.bottom),bar:Math.round(s.bottom),vh:innerHeight,focus:document.activeElement.classList.contains('flu-result'),
+                    live:document.querySelector('.flu-out').hasAttribute('aria-live'),pressed:document.querySelectorAll('.flu-w[aria-pressed]').length}})()""")
+        if not (v["top"] >= v["bar"] and v["bottom"] <= v["vh"] and v["focus"] and not v["live"] and v["pressed"] > 100): r1.append("%d %s" % (w, json.dumps(v)))
+        q.close()
+    ok("13.1 RD-1/RD-7/RD-8: the fluency result sits fully below the sticky step bar with focus on it (320/390/768/1366); no long live region; words carry aria-pressed", not r1, r1[:3])
+    # 13.2 RD-4: a practice or try set opened as a "test" runs as practice/try and can never record a pass
+    q = page12(1366, 900, False)
+    goto12(q)
+    k4 = q.evaluate("Object.keys(PP.lessons).find(k=>PP.byId['SK:'+k+':y']&&PP.byId['SK:'+k+':t'])")
+    r4 = []
+    for part, want in (("p", "practice"), ("y", "practice")):
+        q.evaluate("localStorage.clear()")
+        goto12(q, "#play/SK:%s:%s/test" % (k4, part)); q.reload(); q.wait_for_timeout(500)
+        st4 = q.evaluate("({s:PP_PLAYER.state(), hash:location.hash, tag:document.getElementById('player-mode').textContent})")
+        for i in range(st4["s"]["total"]):
+            q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(20)
+        rec4 = (q.evaluate(PROG) or {}).get(k4, {})
+        if not (st4["s"]["mode"] == want and st4["hash"].endswith("/" + ("try" if part == "y" else "practice")) and st4["tag"] != "Test"
+                and not rec4.get("mastered") and not rec4.get("tries") and not rec4.get("best")): r4.append([part, st4, rec4])
+    q.evaluate("localStorage.clear()")
+    ok("13.2 RD-4: #play/SK:<k>:p/test and :y/test run as practice or try, and finishing them stores no pass, try or best score", k4 and not r4, (k4, r4))
+    # 13.3 RD-9: item-figure alt text (and SVG titles) describe the picture; no "there is no ..." lists that rule out wrong answers
+    NOLIST = re.compile(r"\bthere (is|are) no\b|\bnot (in|shown in) the (picture|drawing)\b|\bno \w+(, \w+)*,? (or|and) \w+ in the\b", re.I)
+    alts = q.evaluate("""(()=>{const out=[],seen=new Set();
+        const walk=(where,o)=>{if(!o||typeof o!=='object'||seen.has(o))return;seen.add(o);
+          if(typeof o.src==='string'&&/assets\\/figures\\//.test(o.src))out.push([where,o.src,o.alt||'']);
+          Object.keys(o).forEach(k=>walk(o.id||where,o[k]));};
+        Object.values(PP.lessons).forEach(L=>walk(L.code,L)); PP.sets.forEach(s=>walk(s.id,s));
+        return out;})()""")
+    import glob, os
+    here = os.path.dirname(os.path.abspath(__file__))
+    titles = [[os.path.basename(fn), (re.search(r"<title[^>]*>(.*?)</title>", open(fn).read(), re.S) or [None, ""])[1]] for fn in glob.glob(os.path.join(here, "..", "assets", "figures", "*.svg"))]
+    bad9 = [a_ for a_ in alts if NOLIST.search(a_[2])] + [t_ for t_ in titles if NOLIST.search(t_[1])]
+    ok("13.3 RD-9: no figure alt text or SVG title lists what is NOT in the picture (%d alts, %d titles)" % (len(alts), len(titles)), len(set(a_[1] for a_ in alts)) >= 16 and not bad9, bad9[:3])
+    # 13.4 RE-3 bestMax: a new best stores bestMax; an old best from a smaller check is not shown against today's total; nothing stored changes on render
+    kb = q.evaluate("Object.keys(PP.lessons).find(k=>{const t=PP.byId['SK:'+k+':t'];return t&&t.items.reduce((a,i)=>a+i.points,0)>=6;})")
+    mx = q.evaluate("PP.byId['SK:%s:t'].items.reduce((a,i)=>a+i.points,0)" % kb)
+    seed = {kb: {"tries": 1, "best": {"got": mx - 2, "max": mx - 1}, "mastered": True}}
+    q.evaluate("s=>localStorage.setItem('pp.progress.v1',s)", json.dumps(seed)); goto12(q, "#skill/%s/test" % kb); q.reload(); q.wait_for_timeout(500)
+    s0 = q.evaluate("JSON.parse(localStorage.getItem('pp.progress.v1'))")[kb]
+    c_old = q.text_content("#sk-panel .go-card")
+    s1 = q.evaluate("JSON.parse(localStorage.getItem('pp.progress.v1'))")[kb]
+    q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % kb); q.wait_for_timeout(80)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(CORRECT); q.evaluate("document.getElementById('q-next').click()"); q.wait_for_timeout(15)
+    q.click("#confirm-submit"); q.wait_for_timeout(80)
+    s2 = q.evaluate("JSON.parse(localStorage.getItem('pp.progress.v1'))")[kb]
+    q.evaluate("PP_SKILLS.open('%s','test')" % kb); q.wait_for_timeout(80)
+    c_new = q.text_content("#sk-panel .go-card")
+    ok("13.4 RE-3 bestMax: an old best (%d of %d) is not shown next to a %d-point check; a new best stores bestMax and shows 'of %d'; render writes nothing" % (mx - 2, mx - 1, mx, mx),
+       "%d of %d" % (mx - 2, mx - 1) not in c_old and "older version of this check" in c_old and s0 == s1 and "bestMax" not in s1
+       and s2.get("bestMax") == mx and s2["best"] == {"got": mx, "max": mx} and "Best score: %d of %d." % (mx, mx) in c_new, (c_old[:220], s1, s2.get("bestMax"), c_new[:160]))
+    # 13.5 RE-11: an undated 2.1 pass first seen 10 days ago shows no 'review' by date
+    old10 = (date.today() - timedelta(days=10)).isoformat()
+    q.evaluate("s=>localStorage.setItem('pp.progress.v1',s)", json.dumps({kb: {"tries": 1, "best": {"got": mx, "max": mx}, "mastered": True, "legacyUndated": True, "firstSeenPassedAt": old10}}))
+    goto12(q, "#"); q.reload(); q.wait_for_timeout(500)
+    rv = q.evaluate("(c=>{const b=document.querySelector('#skill-list .skill-line[data-code=\"'+c+'\"]');return {row:!!b.querySelector('.sl-review'),due:PP_SKILLS.reviewDue(c)}})(%s)" % json.dumps(kb))
+    ok("13.5 RE-11: undated legacy passes do not all turn 'review' a week after the update", rv == {"row": False, "due": False}, rv)
+    # 13.6 RD-2, RD-3, RD-11: focus lands on a visible element, never <body>
+    f6 = {}
+    q.evaluate("localStorage.clear()")
+    chk6 = q.evaluate("Object.keys(PP.lessons).find(k=>PP.lessons[k].check&&!PP.byId['SK:'+k+':t'])")
+    if chk6:
+        goto12(q, "#skill/%s/test" % chk6)
+        for cb in q.query_selector_all("#sk-panel input[type=checkbox]"): cb.check()
+        q.focus("#sk-grownup-check"); q.keyboard.press("Enter"); q.wait_for_timeout(80)
+        f6["grownup"] = q.evaluate("document.activeElement.classList.contains('go-done')")
+    q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % kb); q.wait_for_timeout(80)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(WRONG); q.evaluate("document.getElementById('q-next').click()"); q.wait_for_timeout(15)
+    q.click("#confirm-submit"); q.wait_for_timeout(80)
+    f6["notyet"] = [q.text_content("#res-practice"), q.text_content("#res-again"), "another day" not in q.text_content("#res-guidance")]
+    q.click("#res-review-btn"); sh = q.query_selector("#res-review .show-how")
+    for i in range(3): sh.focus(); q.keyboard.press("Enter"); q.wait_for_timeout(30)
+    f6["showhow"] = q.evaluate("document.activeElement.classList.contains('review-answer')&&!document.activeElement.hidden")
+    q.goto("about:blank"); goto12(q, "#nope-page")
+    f6["notfound"] = q.evaluate("document.activeElement.id")
+    q.evaluate("localStorage.clear()")
+    ok("13.6 RD-2/RD-3/RD-10/RD-11: focus after the grown-up check, the third Show me how and a bad address; 'Not yet' wording and labels",
+       f6.get("grownup", True) and f6["showhow"] and f6["notfound"] == "home-notfound" and f6["notyet"] == ["Practice Together", "Take the skill check again", True], f6)
     q.close()
 
     ok("7.1 no page errors", not errors, errors[:3])

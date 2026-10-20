@@ -174,7 +174,7 @@ PP.addLesson({
       ],
       clue: "Look at the key and the striped area on the map. Then check the sections: do the words already tell you each choice?",
       why: "The answer is \"which part of Georgia the peanut farms are in.\" The striped area and the key show that the farms are in the south part of the state. The article says many Georgia farmers grow peanuts, but it never says where. The steps, the soil and the drying time are told by the words in the sections, not shown on the map." },
-    { id: "SK-SS1a-P7", type: "mc", points: 1, dok: 2, passages: [],
+    { id: "SK-SS1a-P7", type: "mc", points: 1, dok: 1, passages: [],
       stem: ["Here is the table of contents from a book called Georgia's Sea Turtles.", "Chapter 1: Meet the Sea Turtles, page 2", "Chapter 2: Nests in the Sand, page 8", "Chapter 3: The Race to the Ocean, page 14", "Chapter 4: How People Help, page 20"],
       prompt: "In which chapter would you look to find out how baby sea turtles get from their nest to the water?",
       choices: [
@@ -224,7 +224,7 @@ PP.addLesson({
     { id: "SK-SS1a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add this picture to the article. Which caption would best fit the picture?",
       figure: { src: "assets/figures/ss1a-tortoise-burrow.svg",
-        alt: "A drawing of a gopher tortoise sitting on sandy ground, right in front of the dark, round opening of a tunnel dug into a mound of sand. There are no people, fires, trees or roads in the picture." },
+        alt: "A drawing of a gopher tortoise sitting on sandy ground, right in front of the dark, round opening of a tunnel in a mound of sand." },
       choices: [
         { text: "A gopher tortoise rests at the door of the burrow it dug.", correct: true },
         { text: "Workers set a small fire to clear away thick bushes." },

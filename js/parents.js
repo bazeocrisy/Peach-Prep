@@ -238,7 +238,7 @@
     host.appendChild(p("A skill check is 4 to 6 questions on one skill, with no hints. Passing means your child scored at least 80% of the points with no hints, one time, on this device. It is a good sign, not proof the skill is secure."));
     host.appendChild(p("The check uses the same questions each time, and after a try your child can see the answers, so a quick retake can be passed from memory. The skill page shows when a check was passed, on which try, and whether the answers had been seen on an earlier try."));
     host.appendChild(p("A Peach Prep skill check is not a Georgia Milestones score and does not predict an achievement level. The real test mixes skills across longer passages."));
-    host.appendChild(p("Come back to a passed skill about a week later, and again a few weeks after that. If your child still gets it right, it has stuck. The skill list marks a passed skill \u201creview\u201d after 7 days, or when the last try did not pass."));
+    host.appendChild(p("Come back to a passed skill about a week later, and again a few weeks after that. If your child still gets it right, it has stuck. The skill list marks a passed skill \u201creview\u201d 7 days after a dated pass, or when the last try did not pass."));
     host.appendChild(p("Hands-on skills (reading aloud and cursive) have no scored check. A grown-up ticks a checklist instead, and the site shows these as \u201cChecked by a grown-up\u201d, kept apart from passed skill checks. The read-aloud timer is a home practice tool, not a formal test or screener."));
     const l = make("p"); l.appendChild(document.createTextNode("Official practice: ")); l.appendChild(link(S.sources.experience));
     host.appendChild(l);

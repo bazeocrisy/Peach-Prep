@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="t">
-  <title id="t">A ladder leans against the thick wooden part of a tree. Labels name a branch and the roots.</title>
+  <title id="t">A ladder leans against a tree, a little below its lowest branch. Labels name a branch and the roots.</title>
   <path d="M0 252 H300" stroke="#4A3A22" stroke-width="3"/>
   <!-- roots above the ground line -->
   <g fill="none" stroke="#4A2E16" stroke-width="4" stroke-linecap="round"><path d="M128 252 Q112 258 96 270"/><path d="M168 252 Q186 258 204 270"/><path d="M146 254 V276"/></g>

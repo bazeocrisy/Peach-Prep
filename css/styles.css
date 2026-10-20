@@ -622,7 +622,7 @@ mark.clue-w{background:none;color:inherit;}
    so .3em of extra word spacing makes the gap about one o wide. */
 .cursive,.trace-row{word-spacing:.3em;}
 .sl-review{flex:0 0 auto;font-size:.72rem;font-weight:800;color:var(--plum);border:1px solid var(--plum);border-radius:999px;padding:1px 7px;margin-left:4px;}
-.sl-done.by-grownup{background:var(--plum);}
+.sl-done.by-grownup{background:var(--plum);width:auto;border-radius:11px;padding:0 8px;white-space:nowrap;font-size:.75rem;}
 .go-note{margin:4px 0;color:var(--muted);font-size:.95rem;}
 .flu-tool-note{font-size:.95rem;color:var(--muted);border-left:4px solid var(--line);padding:2px 0 2px 10px;}
 .flu-obs{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:12px 0;}

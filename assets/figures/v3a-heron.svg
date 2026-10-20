@@ -14,7 +14,8 @@
   <ellipse cx="116" cy="44" rx="16" ry="12" fill="#C9D3DE" stroke="#111" stroke-width="3"/>
   <path d="M104 40 L50 50 L104 50 Z" fill="#E9C46A" stroke="#111" stroke-width="2.5"/>
   <circle cx="114" cy="40" r="3.5" fill="#111"/>
-  <path d="M120 34 L150 26" stroke="#111" stroke-width="2.5"/>
+  <!-- head plume: a thin feather that tapers back from the head -->
+  <path d="M128 36 Q150 38 168 54 Q148 45 129 42 Z" fill="#111"/>
   <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
     <text x="6" y="22">sharp beak</text><path d="M56 28 L66 46" stroke="#111" stroke-width="2"/>
     <text x="180" y="86">long neck</text><path d="M178 92 L128 108" stroke="#111" stroke-width="2"/>

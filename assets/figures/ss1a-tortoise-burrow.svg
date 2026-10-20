@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" role="img" aria-labelledby="t">
-  <title id="t">A gopher tortoise sits on sandy ground right in front of the dark, round opening of a tunnel it dug in a mound of sand.</title>
+  <title id="t">A gopher tortoise sits on sandy ground right in front of the dark, round opening of a tunnel in a mound of sand.</title>
   <defs><pattern id="s" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#F3E3BF"/><circle cx="3" cy="4" r="1.2" fill="#B89A5E"/><circle cx="9" cy="9" r="1.2" fill="#B89A5E"/></pattern></defs>
   <rect x="0" y="160" width="320" height="50" fill="url(#s)"/>
   <path d="M150 162 Q215 64 312 162 Z" fill="url(#s)" stroke="#7A5C2E" stroke-width="3"/>
