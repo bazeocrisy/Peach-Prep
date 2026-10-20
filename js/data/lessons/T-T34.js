@@ -181,13 +181,13 @@ PP.addLesson({
     { id: "SK-TT3a-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add one more piece of evidence to paragraph 3. Which sentence would best support the reason in that paragraph?",
       choices: [
-        { text: "Last spring, a robin built a nest in the tree by our parking lot.", correct: true },
+        { text: "Last spring, a robin built a nest in a tree across the street from our school.", correct: true },
         { text: "Last spring, the slide on our playground was painted bright red." },
         { text: "Many students in my class like to play kickball in the big field." },
         { text: "Our parent club meets in the school library on Tuesday nights." }
       ],
       clue: "First, find the reason that paragraph 3 is about. Then choose the fact that proves that reason.",
-      why: "The answer is \"Last spring, a robin built a nest in the tree by our parking lot.\" Paragraph 3 says trees would bring wildlife to the school, and a robin nesting in a nearby tree proves that. The slide, kickball and parent club meetings have nothing to do with wildlife." }
+      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" Paragraph 3 says trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings have nothing to do with wildlife." }
   ]
 });
 
@@ -199,7 +199,7 @@ PP.addLesson({
     points: [
       "Begin by introducing the topic. Then state your opinion clearly in one sentence, like \"I think our class should start a garden.\"",
       "Give reasons. On the Milestones writing task, you are given the reasons. Your job is to explain each one with facts and examples from the passages, in your own words.",
-      "Link your ideas with words like because, therefore, also, for example and in addition. Because joins a reason to the why behind it.",
+      "Link your ideas with words like because, therefore, also, for example and in addition. Because joins your opinion or a reason to the facts that explain it.",
       "End with a conclusion. Say your opinion again and sum up your reasons. Do not start a new idea at the end."
     ],
     words: [
@@ -209,8 +209,8 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["Should kids help cook dinner? I think kids should help cook dinner at home. One reason is that cooking teaches math, because you measure with cups and spoons. Also, cooking is a fun way to spend time with your family. Therefore, every family should invite kids into the kitchen."],
-      note: "The first sentence introduces the topic. The second states the opinion. Because explains the first reason with an example. Also adds a second reason. Therefore starts the conclusion, which says the opinion again."
+      lines: ["Should kids help cook dinner? I think kids should help cook dinner at home. One reason is that cooking teaches math, because you measure with cups and spoons. Also, cooking is a fun way to spend time with your family. Therefore, because cooking teaches math and brings families together, every family should invite kids into the kitchen."],
+      note: "The first sentence introduces the topic. The second states the opinion. Because explains the first reason with an example. Also adds a second reason. Therefore starts the conclusion, which sums up both reasons and says the opinion again."
     },
     tip: "On the test, you will fix a student's draft. You may pick the best opinion sentence, the best linking word, the best evidence for a reason, or the best ending."
   },
@@ -302,7 +302,7 @@ PP.addLesson({
         { options: ["instead", "also", "never"], answer: 1 }
       ],
       clue: "For the first blank, ask: Does the second part tell why, show something different, or give a choice? For the second blank, ask: Is sentence 6 a new reason added to the first one?",
-      why: "The first blank needs \"because\": running and climbing making us stronger is why recess is good for our bodies. But shows something different, or gives a choice, and until tells time. The second blank needs \"also\": sentence 6 adds a second reason. Instead would replace the first reason, and never would change Ava's meaning." },
+      why: "The first blank needs \"because\": running and climbing making us stronger is why recess is good for our bodies. \"But\" shows something different, \"or\" gives a choice, and \"until\" tells time. The second blank needs \"also\": sentence 6 adds a second reason. Instead would replace the first reason, and never would change Ava's meaning." },
     { id: "SK-TT3c-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Sentence 10 is a weak conclusion. Which sentence should replace sentence 10?",
       choices: [
@@ -365,7 +365,7 @@ PP.addLesson({
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. Which choice wraps up the whole piece?",
       why: "The answer is \"Water bottles would keep us healthy and save time, so Room 8 should allow them.\" It sums up both reasons and repeats the opinion. The First sentence starts a reason over, and the juice and pencil sentences bring in new ideas." },
-    { id: "SK-TT3c-T5", type: "ms", points: 2, pick: 2, dok: 3, passages: ["p2"],
+    { id: "SK-TT3c-T5", type: "ms", points: 2, pick: 2, dok: 2, passages: ["p2"],
       prompt: "Which TWO sentences from Malik's draft are evidence that supports one of his reasons?",
       choices: [
         { text: "(5) When we play hard at recess, we sweat and lose water.", correct: true },
@@ -456,7 +456,7 @@ PP.addLesson({
       prompt: "Which TWO lines in stanza 2 rhyme with each other? Choose two lines in the poem.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4"],
       answer: ["p1:2:2", "p1:2:4"], pick: 2,
-      clue: "Read the last word of each line in stanza 2 out loud: rain, yard, up, hard. Which two sound alike at the end?",
+      clue: "Read only the last word of each line in stanza 2 out loud. Listen for two that end with the same sound.",
       why: "The answer is \"Puddles growing in the yard.\" and \"And still the rain falls hard.\" Yard and hard rhyme. That matches the pattern in the rest of the poem: lines 2 and 4 rhyme." },
     { id: "SK-TT4a-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Why does the poet begin every stanza with the line \"Tap, tap, tap goes the rain\"?",
@@ -571,8 +571,8 @@ PP.addLesson({
       },
       {
         label: "Example: stanza 2",
-        lines: ["When Mom calls out, \"It's time to eat!\"", "I clomp inside on soggy feet.", "My boots go thumping up the stair.", "I leave a puddle on my chair!"],
-        note: "Stanza 2 keeps the same pattern: eat and feet rhyme, and stair and chair rhyme. The silly ending gives the poem a smile."
+        lines: ["When Mom calls out, \"It's time to eat!\"", "I clomp inside on soggy feet.", "My boots go squishing everywhere.", "I leave a puddle on my chair!"],
+        note: "Stanza 2 keeps the same pattern: eat and feet rhyme, and everywhere and chair rhyme. The silly ending gives the poem a smile."
       }
     ],
     tip: "On the test, you may choose the line that best finishes a stanza or that keeps the rhyme pattern. The best line has to rhyme in the right place AND make sense with the rest of the poem."
@@ -638,8 +638,8 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-TT4b-P1", type: "hottext", points: 1, dok: 2, passages: ["p1"],
-      prompt: "One line in Jaylen's poem does not follow his rhyme pattern. Which line is it? Choose the line in the poem.",
-      targets: ["p1:2:3", "p1:2:4", "p1:3:1", "p1:3:2", "p1:3:3", "p1:3:4"],
+      prompt: "In one pair of lines in Jaylen's poem, the second line does not rhyme with the line before it. Which line is it? Choose the line in the poem.",
+      targets: ["p1:2:3", "p1:2:4", "p1:3:2", "p1:3:3", "p1:3:4"],
       answer: ["p1:3:2"], pick: 1,
       clue: "Find Jaylen's pattern in stanza 1 first. Then read the end words in each pair of lines. Which pair does not sound alike?",
       why: "The answer is \"My cheeks are pink, my nose is red.\" In Jaylen's poem, lines 1 and 2 rhyme and lines 3 and 4 rhyme. In stanza 3, line 1 ends with cold, but line 2 ends with red, which does not rhyme with cold." },
@@ -686,21 +686,21 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TT4b-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "One line in Rosa's poem does not follow her rhyme pattern. Which line is it? Choose the line in the poem.",
-      targets: ["p2:1:4", "p2:2:1", "p2:2:2", "p2:2:3", "p2:2:4", "p2:3:2"],
+      prompt: "In Rosa's poem, line 4 of each stanza should rhyme with line 2. In one stanza, line 4 does not rhyme with line 2. Which line is it? Choose the line in the poem.",
+      targets: ["p2:1:4", "p2:2:1", "p2:2:3", "p2:2:4", "p2:3:2"],
       answer: ["p2:2:4"], pick: 1,
-      clue: "Find Rosa's pattern in stanza 1: which two lines rhyme? Then check that same pair of lines in each stanza.",
+      clue: "In each stanza, read the last word of line 2 and the last word of line 4 out loud. In which stanza do they not sound alike?",
       why: "The answer is \"But the dragonfly gets away.\" In Rosa's poem, lines 2 and 4 rhyme: be and me, then gray and day. In stanza 2, line 2 ends with blue, but line 4 ends with away, which does not rhyme with blue." },
     { id: "SK-TT4b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which line should replace stanza 2, line 4 to keep Rosa's rhyme pattern?",
       choices: [
-        { text: "But misses! Off it flew.", correct: true },
+        { text: "It zips right out of view.", correct: true },
         { text: "And gives his tongue a chew." },
         { text: "It flies off to the shore." },
         { text: "And catches it! Hooray!" }
       ],
       clue: "Line 4 must rhyme with the end of line 2. It must also make sense with the frog's long tongue shooting out.",
-      why: "The answer is \"But misses! Off it flew.\" Flew rhymes with blue, and it keeps Rosa's meaning that the dragonfly gets away. Chew rhymes too, but chewing his own tongue does not make sense. Shore and Hooray do not rhyme with blue." },
+      why: "The answer is \"It zips right out of view.\" View rhymes with blue, and it keeps Rosa's meaning that the dragonfly gets away. Chew rhymes too, but chewing his own tongue does not make sense. Shore and Hooray do not rhyme with blue." },
     { id: "SK-TT4b-T3", type: "mc", points: 1, dok: 2, passages: [],
       stem: ["My grandma's porch has a rocking chair.", "It creaks a squeaky tune.", "We sip cold lemonade and watch", "______________________"],
       prompt: "In this poem, lines 2 and 4 rhyme. Which line best finishes the stanza?",
@@ -721,15 +721,17 @@ PP.addLesson({
       ],
       clue: "Read each pair of lines. The blank must rhyme with the end of the line before it, and it must make sense.",
       why: "The first blank needs \"fall\": fall rhymes with wall, and a ball can fall after you let it go. Drop and roll make sense but do not rhyme. The second blank needs \"by\": by rhymes with sky. Past and up do not rhyme with sky." },
-    { id: "SK-TT4b-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
-      prompt: "Rosa wants to add a fourth stanza to her poem. Which stanza keeps the same rhyme pattern as the rest of her poem?",
+    { id: "SK-TT4b-T5", type: "ms", points: 2, pick: 2, dok: 3, passages: ["p2"],
+      prompt: "Rosa wants to add a fourth stanza to her poem. Which TWO stanzas keep the same rhyme pattern as the rest of her poem?",
       choices: [
         { text: "The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.", correct: true },
         { text: "The moon comes out, so round and bright, / The stars all twinkle in the night. / The frog hops off his lily pad / And swims away, so very glad." },
         { text: "The moon comes out, the night is near, / The stars begin to glow. / The frog hops off and swims from here, / Down to the mud to sleep." },
-        { text: "The moon comes out above the pond, / The stars begin to shine. / The frog hops off his lily pad / And swims down to the mud." }
+        { text: "The moon comes out above the pond, / The stars begin to shine. / The frog hops off his lily pad / And swims down to the mud." },
+        { text: "The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.", correct: true },
+        { text: "The night is dark, the pond is calm, / The crickets chirp and hum. / The frog curls up beside a rock / And sleeps until it's day." }
       ],
       clue: "Rosa's pattern is: lines 2 and 4 rhyme. Check the end words of lines 2 and 4 in each choice.",
-      why: "The answer is \"The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.\" Glow rhymes with below, so lines 2 and 4 rhyme, just like Rosa's other stanzas. In the other choices, lines 2 and 4 do not rhyme: night and glad, glow and sleep, shine and mud." }
+      why: "The answers are \"The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.\" and \"The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.\" Glow rhymes with below, and sing rhymes with spring, so lines 2 and 4 rhyme, just like Rosa's other stanzas. In the other choices, lines 2 and 4 do not rhyme: night and glad, glow and sleep, shine and mud, hum and day." }
   ]
 });

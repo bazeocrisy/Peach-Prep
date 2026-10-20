@@ -116,7 +116,7 @@ function checkItem(set, it, S, lessonCode) {
     const mustName = t => { if (t && why.toLowerCase().indexOf(norm(t).toLowerCase().replace(/[.!?]$/, "")) < 0) W(w, "why does not quote the answer “" + t + "”"); };
     const noLeak = t => { const x = norm(t).toLowerCase().replace(/[.!?]$/, ""); if (x.split(" ").length >= 2 && clue.toLowerCase().indexOf(x) >= 0) F(w, "clue contains the answer “" + t + "”"); };
     switch (it.type) {
-      case "mc": oneCorrect(w, it.choices); { const a = (it.choices || []).find(c => c.correct); if (a) { mustName(a.text); noLeak(a.text); } } break;
+      case "mc": if ((it.choices || []).length !== 4) F(w, "mc needs exactly 4 choices (SPEC §5)"); oneCorrect(w, it.choices); { const a = (it.choices || []).find(c => c.correct); if (a) { mustName(a.text); noLeak(a.text); } } break;
       case "ms": {
         const n = (it.choices || []).filter(c => c.correct).length;
         if ((it.choices || []).length < 4) F(w, "ms needs 4+ choices");

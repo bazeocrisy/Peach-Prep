@@ -8,8 +8,8 @@ PP.addLesson({
       "A complete sentence tells who or what it is about (the subject) and what they do or are (the verb). It makes sense all by itself.",
       "A fragment is only a piece of a sentence. It is missing a who or a does-what, or it leaves you waiting for more, like \"When the bell rang.\"",
       "A run-on is two sentences crammed together with nothing between them, or with only a comma between them.",
-      "A simple sentence has one whole thought. A compound sentence joins two whole thoughts with a comma and a joining word: and, but, or or so.",
-      "A complex sentence has one whole thought plus a part that cannot stand alone. That part starts with a word like because, when, after, before or if."
+      "A simple sentence has one whole thought. A compound sentence joins two whole thoughts with a comma and a joining word: and, but, or, so.",
+      "A complex sentence has one whole thought plus a part that cannot stand alone. That part has its own who and does-what, and it starts with a word like because, when, after, before or if."
     ],
     words: [
       { term: "subject", means: "who or what the sentence is about" },
@@ -35,7 +35,7 @@ PP.addLesson({
       show: ["After the storm passed over Columbus."],
       ask: "Is this a complete sentence or a fragment?",
       steps: [
-        "Find the who: the storm.",
+        "Find the who or what: the storm.",
         "Find the does-what: passed. So it has a subject and a verb.",
         "Now check for a whole thought. The word After makes you wait. After the storm passed, what happened?",
         "It leaves you waiting, so it is not complete."
@@ -47,7 +47,7 @@ PP.addLesson({
       ask: "Which sentence is simple, and which is compound?",
       steps: [
         "Both sentences use the word and, so look at what and joins.",
-        "In the first sentence, and joins two names: Kofi and his cousin. There is only one does-what, fished.",
+        "In the first sentence, and joins two people: Kofi and his cousin. There is only one does-what, fished.",
         "In the second sentence, check each side. \"Kofi fished in the creek\" can stand alone. \"His cousin read a book\" can stand alone too.",
         "Two whole thoughts joined with a comma and and make a compound sentence."
       ],
@@ -170,7 +170,7 @@ PP.addLesson({
         { text: "The fort fell down after the dog ran into it.", answer: 2 },
         { text: "We fixed the fort the next morning.", answer: 0 }
       ],
-      clue: "Count the whole thoughts. One whole thought is simple. Two whole thoughts joined with and, but, or or so is compound. A whole thought plus a part that starts with a word like because or after is complex.",
+      clue: "Count the whole thoughts. One whole thought is simple. Two whole thoughts joined with and, but, or, so is compound. A whole thought plus a part that starts with a word like because or after is complex.",
       why: "\"My brother and I built a fort out of boxes.\" and \"We fixed the fort the next morning.\" are simple; the and in the first one only joins two people. \"We built a fort, and Dad helped us tape the roof.\" is compound. \"Because the fort had no door, we crawled in through a window.\" and \"The fort fell down after the dog ran into it.\" are complex." },
     { id: "SK-GC2a-T4", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that is a fragment.",
@@ -193,7 +193,7 @@ PP.addLesson({
         { text: "Dad burned the toast so, he made more." },
         { text: "Because Dad burned the toast." }
       ],
-      clue: "Two whole thoughts need a comma before the joining word. Also make sure the fix still has both whole thoughts.",
+      clue: "Read each fix. Does it still have both whole thoughts? Are they joined in a way you learned?",
       why: "The answer is \"Dad burned the toast, so he made more.\" The comma goes before so, and so joins the two whole thoughts. A comma alone still makes a run-on, the comma after so is in the wrong place, and the because choice is a fragment." }
   ]
 });
@@ -204,16 +204,16 @@ PP.addLesson({
   teach: {
     big: "Good writers mix short and long sentences, and they keep their verbs in the same time, past or present, unless the time really changes.",
     points: [
-      "Too many short sentences in a row sound choppy. Join two short sentences that go together with a comma and and, but, or or so.",
+      "Too many short sentences in a row sound choppy. Join two short sentences that go together with a comma and one of these words: and, but, or, so.",
       "You can also join them with a word like because, when, after or if. Pick the joining word that shows how the two ideas go together.",
-      "Verb tense tells when something happens. Past tense tells what already happened: jumped, ran. Present tense tells what happens now or always: jumps, runs.",
+      "Verb tense tells when something happens. Past tense tells what already happened: jumped, ran. Present tense tells what happens now or always: jumps, runs, I jump, they run.",
       "Once you start telling about something in the past, keep your verbs in the past. Do not slip into the present by accident.",
       "Change the tense only when the time really changes: \"Yesterday I lost my hat, but today I have a new one.\""
     ],
     words: [
       { term: "verb tense", means: "the form of a verb that shows when something happens" },
       { term: "past tense", means: "already happened (walked, sang)" },
-      { term: "present tense", means: "happens now or always (walks, sings)" },
+      { term: "present tense", means: "happens now or always (walks, we walk)" },
       { term: "combine", means: "to join two sentences into one" }
     ],
     example: {
@@ -252,7 +252,7 @@ PP.addLesson({
       ask: "How can you join these two short sentences?",
       steps: [
         "Ask how the ideas connect. The power went out first, and that is why we lit candles.",
-        "Words like so, when and because can show that one thing led to another.",
+        "So and because show that one thing caused another. When tells the time something happened.",
         "Keep both verbs in the past: went and lit."
       ],
       answer: "The power went out, so we lit candles. (When the power went out, we lit candles. works too.)"
@@ -358,10 +358,10 @@ PP.addLesson({
       why: "The answer is \"The peaches are sweet and juicy.\" Both words describe the peaches, so and can join them in one smooth sentence. But would mean juicy is a surprise. One choice is a run-on, and were switches to the past tense." },
     { id: "SK-GC2b-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
       prompt: "Diego wants to join sentences 10 and 11. Choose the words that best complete the new sentence.",
-      text: "{0} it rains on Saturday, we go to the market anyway.",
-      slots: [{ options: ["Even when", "Because", "So"], answer: 0 }],
+      text: "{0} it rains on Saturday, we go to the market.",
+      slots: [{ options: ["Even if", "Only because", "So that"], answer: 0 }],
       clue: "Does the rain make the family go to the market, or do they go in spite of the rain?",
-      why: "The answer is Even when: \"Even when it rains on Saturday, we go to the market anyway.\" The family goes in spite of the rain. Because would mean the rain is the reason they go, and So cannot start this part of the sentence." },
+      why: "The answer is Even if: \"Even if it rains on Saturday, we go to the market.\" The family goes in spite of the rain. Only because would mean the rain is the reason they go, and So that would mean they go to make it rain." },
     { id: "SK-GC2b-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Does the verb tense stay the same in each sentence, or does it shift? Match each sentence.",
       cols: ["Tense stays the same", "Tense shifts"],
@@ -381,7 +381,7 @@ PP.addLesson({
         { options: ["carried", "carries", "carry"], answer: 0 }
       ],
       clue: "Find the time word at the start of the sentence. Then pick verbs that both tell about that time.",
-      why: "The answers are flew and carried. Yesterday tells you this already happened, so both verbs must be past tense. Flies and carries are present, and fly and carry do not fit at all." }
+      why: "The answers are flew and carried. Yesterday tells you this already happened, so both verbs must be past tense. Flies and carries are present tense. Fly and carry are present-tense forms too, and they do not go with Priya or the wind." }
   ]
 });
 
@@ -393,8 +393,8 @@ PP.addLesson({
     points: [
       "The subject is who or what the sentence is about. The verb tells what the subject does or is.",
       "In the present tense, a verb for one person or thing usually ends in s: The bird sings. A verb for more than one does not: The birds sing.",
-      "Some verbs change in other ways. Use is, was, has and does for one. Use are, were, have and do for more than one.",
-      "Two subjects joined by and count as more than one: Ella and Sam are friends. With I and you, use the verb with no s: I run, you run.",
+      "Some verbs change in other ways. For one person or thing (he, she, it, Dad, the dog), use is, was, has and does. For more than one, use are, were, have and do.",
+      "Two subjects joined by and count as more than one: Ella and Sam are friends. With I and you, use the verb with no s: I run, you run. Be is special: I am, I was, you are, you were.",
       "Words can come between the subject and the verb. Skip over them and match the verb to the real subject: The box of crayons is on the table."
     ],
     words: [
@@ -405,7 +405,7 @@ PP.addLesson({
     example: {
       label: "Example",
       lines: ["The puppy chews the rope.", "The puppies chew the rope.", "The bag of apples is heavy."],
-      note: "One puppy chews, with an s on the verb. More than one puppy chew, with no s. In the last sentence, the real subject is bag, not apples, so the verb is is."
+      note: "One puppy chews, with an s on the verb. Two or more puppies chew, with no s. In the last sentence, the real subject is bag, not apples, so the verb is is."
     },
     tip: "On the test, you might fix a verb in a student's writing or pick the verb that matches. Find the real subject first, then ask: one or more than one?"
   },
@@ -457,9 +457,9 @@ PP.addLesson({
     { id: "SK-GC2c-P1", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the verb that agrees with the subject.",
       text: "The ducks on the pond {0} hungry.",
-      slots: [{ options: ["is", "are", "am"], answer: 1 }],
+      slots: [{ options: ["is", "are", "was"], answer: 1 }],
       clue: "Who is hungry: the pond, or the ducks? Skip the words in between and ask whether the real subject is one or more than one.",
-      why: "The answer is are: \"The ducks on the pond are hungry.\" The subject is ducks, which means more than one, so the verb is are. \"On the pond\" only tells where the ducks are." },
+      why: "The answer is are: \"The ducks on the pond are hungry.\" The subject is ducks, which means more than one, so the verb is are. \"On the pond\" only tells where the ducks are. Is and was go with one." },
     { id: "SK-GC2c-P2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses the correct verb?",
       choices: [
@@ -562,11 +562,11 @@ PP.addLesson({
         { text: "The kittens", answer: 1 },
         { text: "My shoe", answer: 0 },
         { text: "Grace and Amir", answer: 1 },
-        { text: "The box of crayons", answer: 0 },
+        { text: "The jar of buttons", answer: 0 },
         { text: "It", answer: 0 }
       ],
       clue: "Use is for one and are for more than one. For a group of words, find the main word that the subject is about.",
-      why: "My shoe, The box of crayons and It are each one, so they go with is. The box is the subject, not the crayons. The kittens and Grace and Amir are more than one, so they go with are." }
+      why: "My shoe, The jar of buttons and It are each one, so they go with is. The jar is the subject, not the buttons. The kittens and Grace and Amir are more than one, so they go with are." }
   ]
 });
 
@@ -672,12 +672,12 @@ PP.addLesson({
       prompt: "Which sentence gives the most exact details?",
       choices: [
         { text: "The tiny kitten purred softly in my lap.", correct: true },
-        { text: "The cat was nice and sat in my lap." },
-        { text: "The kitten did something in my lap." },
-        { text: "A good pet sat on me for a while." }
+        { text: "The little cat was nice and sat in my lap." },
+        { text: "The kitten did something cute in my lap today." },
+        { text: "A good pet sat on me for a long, long time." }
       ],
       clue: "Look for describing words that help you picture exactly what happened. Plain words like nice and good do not help much.",
-      why: "The answer is \"The tiny kitten purred softly in my lap.\" Tiny tells what the kitten looked like, and softly tells how it purred. The other sentences use plain words like nice, something and good, so you cannot picture them as well." },
+      why: "The answer is \"The tiny kitten purred softly in my lap.\" Tiny tells what the kitten looked like, and softly tells how it purred. The other sentences mix in plain words like nice, something, cute and good, so you cannot picture exactly what happened." },
     { id: "SK-GC2d-P5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Sam wrote, \"We ate good pancakes.\" Choose the TWO words that could replace good to tell exactly what the pancakes were like.",
       choices: [
@@ -707,20 +707,20 @@ PP.addLesson({
     { id: "SK-GC2d-T1", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the adjective that best fits the sentence.",
       text: "The ice on the sidewalk was {0}, so Grandpa held the rail as he walked.",
-      slots: [{ options: ["slippery", "pretty", "melted"], answer: 0 }],
+      slots: [{ options: ["slippery", "pretty", "cold"], answer: 0 }],
       clue: "Why would Grandpa need to hold the rail? Pick the word that explains it.",
-      why: "The answer is slippery. Ice that is slippery is easy to fall on, so Grandpa holds the rail. Pretty does not explain why he holds on, and melted ice would not be ice anymore." },
+      why: "The answer is slippery. Ice that is slippery is easy to fall on, so Grandpa holds the rail. Pretty does not explain why he holds on, and cold does not either, because all ice is cold." },
     { id: "SK-GC2d-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which adverb best completes the sentence?",
-      stem: "The firefighters had to reach the fire fast, so they ____ climbed onto the truck.",
+      stem: ["The fire alarm rang, and the firefighters ____ climbed onto the truck.", "In less than a minute, the truck roared out of the station."],
       choices: [
         { text: "quickly", correct: true },
-        { text: "slowly" },
-        { text: "lazily" },
-        { text: "sleepily" }
+        { text: "proudly" },
+        { text: "quietly" },
+        { text: "slowly" }
       ],
-      clue: "Look at the first part of the sentence. What did the firefighters need to do?",
-      why: "The answer is quickly. The firefighters had to reach the fire fast, so they climbed on quickly. Slowly, lazily and sleepily all go against needing to hurry." },
+      clue: "Read both sentences. How much time passed before the truck left? What does that tell you about how the firefighters climbed on?",
+      why: "The answer is quickly. The truck left in less than a minute, so the firefighters must have climbed on quickly. Proudly and quietly do not explain how they got going so soon, and slowly means the opposite." },
     { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 3, passages: [],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: "Lily wrote: \"My grandma has a nice garden.\"",
@@ -747,21 +747,21 @@ PP.addLesson({
         { text: "The cat's claws were very ____.", answer: 0 },
         { text: "The fresh carrots were ____.", answer: 1 },
         { text: "Dad rocked the baby ____ in his arms.", answer: 2 },
-        { text: "The thunder boomed ____ and shook the windows.", answer: 3 }
+        { text: "The thunder crashed ____ and shook the windows.", answer: 3 }
       ],
       clue: "Picture each sentence. Which word matches what you see, hear or feel?",
-      why: "Claws can be sharp. Fresh carrots are crunchy when you bite them. Dad rocks a baby gently so the baby stays calm. Thunder that shakes the windows booms loudly." },
+      why: "Claws can be sharp. Fresh carrots are crunchy when you bite them. Dad rocks a baby gently so the baby stays calm. Thunder that shakes the windows crashes loudly." },
     { id: "SK-GC2d-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence with the most exact describing words.",
       options: [
-        "We saw a big animal at the zoo.",
-        "The zoo had some nice animals.",
+        "A huge elephant did something nice by the muddy pond.",
+        "The zoo had some nice animals that were fun to see.",
         "An enormous gray elephant sprayed cool water on its back.",
-        "The animals at the zoo were fun to see.",
-        "We had a good day at the zoo."
+        "We saw a big animal do a good thing at the zoo today.",
+        "The animals at the zoo were great, and we had fun."
       ],
       answer: [2], pick: 1,
       clue: "Try to picture each sentence. Which one lets you see exactly what happened?",
-      why: "The answer is \"An enormous gray elephant sprayed cool water on its back.\" Enormous, gray and cool are exact adjectives that help you picture the elephant and the water. The others use plain words like big, nice, fun and good." }
+      why: "The answer is \"An enormous gray elephant sprayed cool water on its back.\" Enormous, gray and cool are exact adjectives that help you picture the elephant and the water. Each of the others uses at least one plain word, like nice, good, great or fun, or says \"did something\" instead of telling what happened." }
   ]
 });

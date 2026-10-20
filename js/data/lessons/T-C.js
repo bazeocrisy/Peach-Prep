@@ -6,7 +6,8 @@ PP.addLesson({
     big: "Every author writes for a reason and for someone: to inform, to persuade or to entertain, and for a certain reader.",
     points: [
       "To inform means to teach facts. The text tells you true things about a topic.",
-      "To persuade means to get you to do something or to agree. Look for words like should, please and let's.",
+      "To persuade means to get you to do something or to agree. Look for words like should and let's, and for reasons that try to change your mind.",
+      "Check what the whole text mostly does. Directions like \"Bring a water bottle\" or \"Please come early\" tell you how to do something. They inform; they are not trying to change your mind.",
       "To entertain means to give you a fun story, a joke or a poem to enjoy.",
       "The audience is who the text is for. Look for names, the word you, and what the reader is asked to know or do.",
       "Ask two questions: Why did the author write this? Who did the author write it for?"
