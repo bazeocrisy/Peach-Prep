@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 330" role="img" aria-labelledby="t">
+  <title id="t">A heron, a tall bird, stands in shallow water. Labels point to its long neck, sharp beak and long legs.</title>
+  <defs><pattern id="w" width="24" height="14" patternUnits="userSpaceOnUse"><rect width="24" height="14" fill="#DDEEFA"/><path d="M2 8 q4 -4 8 0 t8 0" fill="none" stroke="#5D8DB8" stroke-width="1.4"/></pattern></defs>
+  <rect x="0" y="262" width="320" height="68" fill="url(#w)"/>
+  <path d="M0 262 q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2F5F8A" stroke-width="2.5"/>
+  <!-- legs -->
+  <g stroke="#333" stroke-width="4" stroke-linecap="round"><path d="M150 186 L144 236 L148 300"/><path d="M166 186 L174 236 L170 300"/></g>
+  <!-- body and tail -->
+  <path d="M110 160 Q130 128 180 136 Q214 146 226 184 Q190 196 150 190 Q118 186 110 160 Z" fill="#C9D3DE" stroke="#111" stroke-width="3"/>
+  <path d="M178 152 Q198 162 214 180" fill="none" stroke="#111" stroke-width="2"/>
+  <!-- long neck and head -->
+  <path d="M122 156 Q96 120 118 92 Q138 70 120 48" fill="none" stroke="#111" stroke-width="14" stroke-linecap="round"/>
+  <path d="M122 156 Q96 120 118 92 Q138 70 120 48" fill="none" stroke="#C9D3DE" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="116" cy="44" rx="16" ry="12" fill="#C9D3DE" stroke="#111" stroke-width="3"/>
+  <path d="M104 40 L50 50 L104 50 Z" fill="#E9C46A" stroke="#111" stroke-width="2.5"/>
+  <circle cx="114" cy="40" r="3.5" fill="#111"/>
+  <path d="M120 34 L150 26" stroke="#111" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="6" y="22">sharp beak</text><path d="M56 28 L66 46" stroke="#111" stroke-width="2"/>
+    <text x="180" y="86">long neck</text><path d="M178 92 L128 108" stroke="#111" stroke-width="2"/>
+    <text x="210" y="240">long legs</text><path d="M208 236 L178 246" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>
