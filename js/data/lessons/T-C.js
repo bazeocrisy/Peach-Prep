@@ -9,8 +9,7 @@ PP.addLesson({
       "To persuade means to get you to do something or to agree. Look for words like should and let's, and for reasons that try to change your mind.",
       "Check what the whole text mostly does. Directions like \"Bring a water bottle\" or \"Please come early\" tell you how to do something. They inform; they are not trying to change your mind.",
       "To entertain means to give you a fun story, a joke or a poem to enjoy.",
-      "The audience is who the text is for. Look for names, the word you, and what the reader is asked to know or do.",
-      "Ask two questions: Why did the author write this? Who did the author write it for?"
+      "The audience is who the text is for. Look for names, the word you, and what the reader is asked to know or do."
     ],
     words: [
       { term: "purpose", means: "the reason an author writes" },
@@ -37,7 +36,8 @@ PP.addLesson({
       steps: [
         "Ask what the author wants. The author wants readers to bring a can of food.",
         "Asking the reader to do something is persuading. Notice the words should and let's.",
-        "Look for who is being asked. The text says everyone in Room 9."
+        "Look for who is being asked. The text says everyone in Room 9.",
+        "Room 9 is a classroom, so everyone in Room 9 means the students in that class."
       ],
       answer: "The purpose is to persuade. The audience is the students in Room 9."
     },
@@ -136,13 +136,13 @@ PP.addLesson({
     { id: "SK-TC1a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
       prompt: "What is the main purpose of this page?",
       choices: [
-        { text: "to tell new players what they need to know", correct: true },
+        { text: "to help new players get ready for practice", correct: true },
         { text: "to get kids to sign up for a soccer team" },
         { text: "to tell a story about an exciting game" },
         { text: "to explain the rules of how soccer is played" }
       ],
       clue: "Look at the headings. What kind of information does each part give?",
-      why: "The answer is to tell new players what they need to know. The page gives facts about when, where, what to bring and what happens if it rains. The players have already joined, so the page is not trying to get them to sign up." },
+      why: "The answer is to help new players get ready for practice. The page gives facts about when, where, what to bring and what happens if it rains. The players have already joined, so the page is not trying to get them to sign up." },
     { id: "SK-TC1a-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Who is the audience for this page?",
@@ -205,7 +205,7 @@ PP.addLesson({
       "A bold word is printed in dark letters because it is important. You can often find what it means in a glossary at the back.",
       "A text box is set apart from the paragraphs. It often gives an extra fact, like a \"Did You Know?\" box.",
       "A picture, a caption or a diagram with labels shows what the words describe. A caption tells what a picture shows. Labels name the parts.",
-      "Use the features to find facts fast. Read the headings first to decide where to look."
+      "On a screen, links, play buttons and videos are features too. A link takes you to more facts or a word's meaning. A video or sound shows or tells what words cannot."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -265,7 +265,7 @@ PP.addLesson({
       paragraphs: [
         ["Monarch butterflies are easy to spot.", "Their wings are bright orange with black lines and white dots."],
         ["## From Egg to Wing"],
-        ["A monarch starts life as a tiny egg on a milkweed leaf.", "A caterpillar hatches and eats the milkweed leaves.", "Milkweed is the only plant a monarch caterpillar eats.", "Then the caterpillar makes a hard case called a chrysalis.", "Inside, its body changes.", "At last, an adult butterfly comes out."],
+        ["A monarch starts life as a tiny egg on a milkweed leaf.", "A caterpillar hatches and eats the milkweed leaves.", "Milkweed is the only plant a monarch caterpillar eats.", "Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.", "Inside, its body changes.", "At last, an adult butterfly comes out."],
         ["## Bright Colors Send a Message"],
         ["Many birds will not eat monarchs.", "The milkweed the caterpillars eat makes monarchs taste bad.", "Their bright orange color warns birds to stay away."],
         ["## A Long Trip South"],
@@ -283,8 +283,8 @@ PP.addLesson({
         { text: "A Home with a Secret Door" },
         { text: "Did You Know?" }
       ],
-      clue: "A warning is a kind of message. Read each heading and ask which one is about a beaver sending a message.",
-      why: "The answer is Tail Talk. That section tells how a beaver slaps its tail on the water to warn other beavers. \"Talk\" in the heading is a clue that the section is about sending a message." },
+      clue: "Think about how one animal could tell others about danger. Read each heading and ask which section would explain that.",
+      why: "The answer is Tail Talk. That section tells how a beaver slaps its tail on the water to warn other beavers. \"Talk\" in the heading is a clue that the section is about how beavers share a message." },
     { id: "SK-TC1b-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What does the heading \"A Home with a Secret Door\" tell the reader?",
       choices: [
@@ -317,12 +317,12 @@ PP.addLesson({
       clue: "Think about why an author makes a word stand out, and where else the word shows up.",
       why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print points out key words, and the glossary tells what they mean." },
     { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 3, passages: ["p1"],
-      stem: ["Imagine a diagram next to the article.", "It shows a lodge cut in half so you can see inside.", "One label points to a tunnel under the water.", "Another label points to a dry room above the water."],
+      stem: ["Imagine a diagram next to the article.", "It shows a lodge cut in half so you can see inside.", "One label points to a door under the water.", "Another label points to a dry room above the water."],
       prompt: "Which two sentences in the article tell about the parts the diagram's labels point to? Choose two sentences.",
       targets: ["p1:3:2", "p1:5:1", "p1:5:3", "p1:5:4", "p1:9:2"],
       answer: ["p1:5:3", "p1:5:4"], pick: 2,
       clue: "Read the two labels again. Find the sentences that describe those same two parts of the lodge.",
-      why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The diagram's labels show the underwater tunnel and the dry room, so it helps readers picture those sentences." },
+      why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The diagram's labels show the underwater door and the dry room, so it helps readers picture those sentences." },
     { id: "SK-TC1b-P6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each text feature to the job it does.",
       cols: ["Heading", "Text box", "Bold word", "Diagram"],
@@ -344,7 +344,7 @@ PP.addLesson({
         { text: "A Long Trip South" },
         { text: "Did You Know?" }
       ],
-      clue: "Birds staying away is about what the birds see. Which heading is about something a bird could see?",
+      clue: "Read each heading. Which section would explain why one animal stays away from another?",
       why: "The answer is Bright Colors Send a Message. That section says monarchs taste bad and their bright orange color warns birds to stay away." },
     { id: "SK-TC1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "How does the text box add to the article?",
@@ -368,13 +368,13 @@ PP.addLesson({
         ] },
       partB: { prompt: "Which sentence from the article does the diagram help explain?",
         choices: [
-          { text: "\"Then the caterpillar makes a hard case called a chrysalis.\"", correct: true },
+          { text: "\"Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.\"", correct: true },
           { text: "\"Some fly all the way to Mexico.\"" },
           { text: "\"Many birds will not eat monarchs.\"" },
           { text: "\"On the way, they stop to rest and to drink nectar from flowers.\"" }
         ] },
       clue: "Arrows from one picture to the next show what comes after what. Which section tells things in that order?",
-      why: "Part A: the order of the stages in a monarch's life. Part B: \"Then the caterpillar makes a hard case called a chrysalis.\" The diagram shows egg, caterpillar, chrysalis and butterfly in order, which matches the steps in \"From Egg to Wing.\"" },
+      why: "Part A: the order of the stages in a monarch's life. Part B: \"Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.\" The diagram shows egg, caterpillar, chrysalis and butterfly in order, which matches the steps in \"From Egg to Wing.\"" },
     { id: "SK-TC1b-T4", type: "dropdown", points: 2, dok: 2, passages: ["p2"],
       stem: ["Suppose the word chrysalis is printed in bold in the article.", "The glossary says: chrysalis: the hard case a caterpillar makes before it becomes a butterfly"],
       prompt: "Choose the words that best complete the sentences.",

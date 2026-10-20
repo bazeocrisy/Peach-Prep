@@ -5,15 +5,15 @@ PP.addLesson({
   code: "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in",
   title: "Complete sentences: a who and a did what",
   teach: {
-    big: "A complete sentence tells who or what, and what they do, so it makes a whole thought.",
+    big: "A complete sentence has a part that tells who or what, and a verb, so it makes a whole thought.",
     points: [
-      "A noun is a naming word. It tells who or what the sentence is about, like Maria or the dog.",
-      "A verb is an action word. It tells what the who or what does, like splashed or runs.",
-      "If a group of words has no noun telling who or what, or no verb telling what they do, the thought is not complete. Add the missing part."
+      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they.",
+      "Every sentence has a verb. Most verbs tell an action, like splashed or runs. Some verbs, like is and was, tell what someone or something is like.",
+      "If a group of words has nothing that tells who or what, or has no verb, the thought is not complete. Add the missing part."
     ],
     words: [
       { term: "noun", means: "a word that names a person, place, animal or thing" },
-      { term: "verb", means: "a word that tells an action" },
+      { term: "verb", means: "a word that tells an action, or tells what someone or something is like" },
       { term: "complete sentence", means: "a group of words that tells a whole thought" }
     ],
     example: {
@@ -21,15 +21,15 @@ PP.addLesson({
       lines: ["Not complete: Splashed in the puddle.", "Complete: Maria splashed in the puddle."],
       note: "The first group of words has an action (splashed) but does not say who splashed. Adding the noun Maria makes a whole thought."
     },
-    tip: "On the test, you may be asked which group of words is a complete sentence. Check each one for a who or what and an action."
+    tip: "On the test, you may be asked which group of words is a complete sentence. Check each one for a who or what and a verb."
   },
   learn: [
     {
       show: ["The red kite."],
       ask: "Is this a complete sentence? If not, how can you fix it?",
       steps: [
-        "Look for the who or what. The red kite names a thing, so there is a noun.",
-        "Look for the action. Ask: what did the kite do? No word tells an action.",
+        "Look for the who or what. The red kite names a thing, so there is a naming part.",
+        "Look for the verb. Ask: what did the kite do? No word tells that.",
         "Add a verb that tells what the kite did."
       ],
       answer: "It is not complete because it has no verb. A fix is: The red kite flew over the beach."
@@ -56,11 +56,11 @@ PP.addLesson({
         { text: "Jumped over the big puddle." },
         { text: "After lunch on a rainy Saturday." }
       ],
-      clue: "Check each group of words for two things: a who or what, and an action word.",
-      why: "The answer is \"The kids splashed in the creek.\" It tells who (the kids) and what they did (splashed). The muddy boots and After lunch have no action word, and Jumped over the big puddle does not tell who jumped." },
+      clue: "Check each group of words for two things: a who or what, and a verb.",
+      why: "The answer is \"The kids splashed in the creek.\" It tells who (the kids) and what they did (splashed). The muddy boots and After lunch have no verb, and Jumped over the big puddle does not tell who jumped." },
     { id: "SK-GUM1-1-P2", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Is each group of words complete? If not, what does it need? Sort each one.",
-      cols: ["Complete sentence", "Needs a who or what", "Needs an action"],
+      cols: ["Complete sentence", "Needs a who or what", "Needs a verb"],
       rows: [
         { text: "Hopped onto a lily pad.", answer: 1 },
         { text: "The tiny green frog.", answer: 2 },
@@ -68,13 +68,13 @@ PP.addLesson({
         { text: "Swam to the bottom of the pond.", answer: 1 }
       ],
       clue: "For each one, ask: Who or what is it about? What did they do? If one question has no answer, that part is missing.",
-      why: "The frog croaked at the moon is complete. Hopped onto a lily pad and Swam to the bottom of the pond need a who or what, because they do not say who hopped or swam. The tiny green frog needs an action, because it does not say what the frog did." },
+      why: "The frog croaked at the moon is complete. Hopped onto a lily pad and Swam to the bottom of the pond need a who or what, because they do not say who hopped or swam. The tiny green frog needs a verb, because it does not say what the frog did." },
     { id: "SK-GUM1-1-P3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that makes this a complete sentence.",
       text: "Every morning, my grandmother {0} in the garden.",
       slots: [ { options: ["works", "tomatoes", "early"], answer: 0 } ],
       clue: "The sentence already tells who. What is missing is what she does.",
-      why: "The answer is works. My grandmother tells who, and works tells what she does. Tomatoes is a noun and early tells when, so neither one is an action." },
+      why: "The answer is works. My grandmother tells who, and works tells what she does. Tomatoes is a noun and early tells when, so neither one is a verb." },
     { id: "SK-GUM1-1-P4", type: "hottext", points: 2, dok: 2, passages: [],
       prompt: "Select the TWO groups of words that are complete sentences.",
       options: [
@@ -85,8 +85,8 @@ PP.addLesson({
         "Next to the sunny window."
       ],
       answer: [0, 2], pick: 2,
-      clue: "A complete sentence has both a naming part and an action. Cover each one with your finger and ask: who did what?",
-      why: "The answers are \"Our class planted bean seeds.\" and \"The seeds sprouted in a week.\" Each tells who or what and what they did. Watered them every single day does not say who watered. The other two have no action word." },
+      clue: "A complete sentence has both a naming part and a verb. Cover each one with your finger and ask: who did what?",
+      why: "The answers are \"Our class planted bean seeds.\" and \"The seeds sprouted in a week.\" Each tells who or what and what they did. Watered them every single day does not say who watered. The other two have no verb." },
     { id: "SK-GUM1-1-P5", type: "mc", points: 1, dok: 2, passages: [],
       stem: "The big yellow school bus.",
       prompt: "What does this group of words need to be a complete sentence?",
@@ -97,7 +97,7 @@ PP.addLesson({
         { text: "a question mark at the end" }
       ],
       clue: "Find the who or what. Then look for a word that tells what it did.",
-      why: "The answer is a verb that tells what the bus did. The bus is the who or what, but no word tells an action. A fix is: The big yellow school bus stopped at the corner." }
+      why: "The answer is a verb that tells what the bus did. The bus is the who or what, but no verb tells what it did. A fix is: The big yellow school bus stopped at the corner." }
   ],
   test: [
     { id: "SK-GUM1-1-T1", type: "mc", points: 1, dok: 1, passages: [],
@@ -108,7 +108,7 @@ PP.addLesson({
         { text: "Fixed it with a hammer and nails." },
         { text: "On a sunny afternoon last week." }
       ],
-      clue: "Look for a who or what and an action word in the same group.",
+      clue: "Look for a who or what and a verb in the same group.",
       why: "The answer is \"Grandpa fixed the broken swing.\" Grandpa tells who, and fixed tells what he did. The other groups are each missing a who or an action." },
     { id: "SK-GUM1-1-T2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the words that make this a complete sentence.",
@@ -126,8 +126,8 @@ PP.addLesson({
         { text: "Under the kitchen table." }
       ],
       pick: 2,
-      clue: "A sentence can be short and still be complete. Look for a who or what plus an action.",
-      why: "The answers are \"The baby giggled.\" and \"Lena kicked the ball.\" Each tells who and what they did. A soft wool blanket and Under the kitchen table have no action. Rolled down the hill does not say who rolled." },
+      clue: "A sentence can be short and still be complete. Look for a who or what plus a verb.",
+      why: "The answers are \"The baby giggled.\" and \"Lena kicked the ball.\" Each tells who and what they did. A soft wool blanket and Under the kitchen table have no verb. Rolled down the hill does not say who rolled." },
     { id: "SK-GUM1-1-T4", type: "mc", points: 1, dok: 2, passages: [],
       stem: "Ran all the way to the bus stop.",
       prompt: "Which change makes this a complete sentence?",
@@ -137,19 +137,19 @@ PP.addLesson({
         { text: "Change the period to a question mark." },
         { text: "Take out the word all." }
       ],
-      clue: "Find the action word. Then ask what the group of words does not tell you.",
+      clue: "Find the verb. Then ask what the group of words does not tell you.",
       why: "The answer is \"Add Tomas to the beginning.\" Ran is the action, but the words do not say who ran. Tomas ran all the way to the bus stop is a whole thought." },
     { id: "SK-GUM1-1-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the group of words that is NOT a complete sentence.",
       options: [
         "Mom baked bread.",
-        "The bread smelled good.",
+        "The bread cooled on the rack.",
         "Warm butter on top.",
         "We ate two slices."
       ],
       answer: [2], pick: 1,
-      clue: "Check each one for an action word. One of them names things but never tells what anyone did.",
-      why: "The answer is \"Warm butter on top.\" It names butter but has no verb, so it is not a whole thought. The others each tell who or what and an action." }
+      clue: "Check each one for a verb. One of them names things but never tells what anyone did.",
+      why: "The answer is \"Warm butter on top.\" It names butter but has no verb, so it is not a whole thought. The others each tell who or what and have a verb that tells what they did." }
   ]
 });
 
@@ -162,7 +162,7 @@ PP.addLesson({
     points: [
       "A singular noun names one thing, like one cat.",
       "A plural noun names more than one thing. Most nouns add -s to make the plural, like two cats.",
-      "Clue words help you choose. A, an, one and each go with one thing. Two, three, many, several and a few go with more than one.",
+      "Clue words help you choose. A, an, one, each and every go with one thing. Two, three, many, several and a few go with more than one.",
       "When you talk, listen for the -s sound at the end of the word when you mean more than one."
     ],
     words: [
@@ -296,7 +296,7 @@ PP.addLesson({
         "My sister has two cats.",
         "We planted six tree in the yard.",
         "A bee landed on the flower.",
-        "The farmer sold a dozen eggs."
+        "The farmer sold ten eggs."
       ],
       answer: [1], pick: 1,
       clue: "Look for a number word. Is the noun after it the right form?",
@@ -313,7 +313,7 @@ PP.addLesson({
     points: [
       "Who, what, where, when, why and how are question words. A question often starts with one of them.",
       "Each question word asks for a different kind of answer. Who asks about a person. Where asks about a place. When asks about a time.",
-      "Why asks for a reason. How asks about the way something happens. What asks about a thing or an action.",
+      "Why asks for a reason. How asks about the way something happens, and how many or how much asks about an amount. What asks about a thing or an action.",
       "A written question ends with a question mark."
     ],
     words: [
@@ -445,11 +445,11 @@ PP.addLesson({
       choices: [
         { text: "What does your dog eat?", correct: true },
         { text: "When does your dog eat?" },
-        { text: "Where does your dog sleep?" },
-        { text: "Why does your dog bark?" }
+        { text: "Where does your dog eat?" },
+        { text: "Why does your dog eat so fast?" }
       ],
       clue: "Mia wants to know about a thing, the food. Which question word asks about a thing?",
-      why: "The answer is \"What does your dog eat?\" What asks about a thing. When would ask about a time, not the kind of food." }
+      why: "The answer is \"What does your dog eat?\" What asks about a thing. When would ask about a time, where about a place and why about a reason, not the kind of food." }
   ]
 });
 
@@ -537,7 +537,7 @@ PP.addLesson({
         { text: "cousin" },
         { text: "fishing" }
       ],
-      clue: "Which word starts the sentence?",
+      clue: "Think about the two capital-letter rules. Which word breaks one of them?",
       why: "The answer is on. It is the first word of the sentence, so it should be On. My, cousin and fishing are in the middle of the sentence and are not names." },
     { id: "SK-GUM1-4-P5", type: "hottext", points: 2, dok: 2, passages: [],
       prompt: "Select the TWO sentences that are written correctly.",
@@ -588,7 +588,7 @@ PP.addLesson({
       why: "Can I come too and Mr. Lee and I painted a sign are correct. The river felt cold needs a capital T. We think I should go first needs a capital I. Every morning I make my bed needs a capital E." },
     { id: "SK-GUM1-4-T4", type: "mc", points: 1, dok: 1, passages: [],
       stem: "Ty and i planted carrots in the garden.",
-      prompt: "Which word should be a capital letter?",
+      prompt: "Which word should begin with a capital letter?",
       choices: [
         { text: "i", correct: true },
         { text: "planted" },
@@ -649,7 +649,7 @@ PP.addLesson({
       answer: "The kids sat on three benches at the park."
     }
   ],
-  parent: "Make a quick sorting game with things in the kitchen: say a noun (cup, glass, dish, spoon) and have your child say and spell the plural, then tell you whether it took -s or -es.",
+  parent: "Make a quick sorting game with things in the kitchen: say a noun (cup, glass, dish, spoon) and have your child say and spell the plural, then tell you whether it took -s or -es. A few words break the pattern (quiz becomes quizzes, stomach becomes stomachs), so check a dictionary together if your child asks.",
   passages: [],
   practice: [
     { id: "SK-GUM1-5-P1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -760,9 +760,9 @@ PP.addLesson({
   code: "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s",
   title: "Verb endings: -s, -ed and -ing",
   teach: {
-    big: "The ending on a verb tells when the action happens or who does it.",
+    big: "The ending on a verb has to fit the sentence: -s, -ed or -ing.",
     points: [
-      "Add -s when one person or thing does the action now: Ben kicks the ball.",
+      "Add -s when one person or thing does the action now or again and again: Ben kicks the ball every day.",
       "Do not add -s after I, you, we, they, or a noun that means more than one: I kick. The boys kick.",
       "Add -ed when the action already happened: Yesterday, Ben kicked the ball.",
       "Add -ing to make words like kicking. You often use them after words like love, start, stop and keep: Ben loves kicking the ball.",
@@ -795,7 +795,7 @@ PP.addLesson({
       ask: "Which verb form fits the blank?",
       steps: [
         "The sentence already has an action word with an ending: started.",
-        "After words like start, stop, keep and love, we use the -ing form.",
+        "After words like start, keep and love, we can use the -ing form.",
         "Read it back: My little brother started laughing at the clown."
       ],
       answer: "Laughing is correct."
@@ -814,7 +814,7 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Every morning, our rooster {0} before the sun comes up.",
       slots: [ { options: ["crowing", "crows", "crowed"], answer: 1 } ],
-      clue: "The sentence says the sun comes up, which tells about now. How many roosters are there?",
+      clue: "Look at the first words. Does this happen once, or every morning? Then think about how many roosters there are.",
       why: "The answer is crows. It happens every morning, and the rooster is one animal, so the verb gets -s. Crowed tells about the past, so it does not match comes. Crowing cannot be the only verb in this sentence." },
     { id: "SK-GUM1-6-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Which ending does the verb in ( ) need? Sort each sentence.",
@@ -967,7 +967,7 @@ PP.addLesson({
       text: "The hungry rabbit {0} the carrot in two bites.",
       slots: [ { options: ["ate", "orange", "slowly"], answer: 0 } ],
       clue: "The sentence tells who. The missing word should tell what the rabbit did.",
-      why: "The answer is ate. It tells what the rabbit did. Orange describes a color, and slowly tells how, so neither one is an action." },
+      why: "The answer is ate. It tells what the rabbit did. Orange is a color word that describes things, and slowly tells how, so neither one is an action." },
     { id: "SK-GUM1-7-P4", type: "match", points: 2, dok: 2, passages: [],
       stem: "Grandma hummed a song and stirred the soup.",
       prompt: "Sort the words from the sentence.",
@@ -1102,7 +1102,7 @@ PP.addLesson({
         { text: "napped" },
         { text: "sun" }
       ],
-      clue: "An adjective describes a noun. Which word tells what kind of kitten?",
+      clue: "An adjective describes a noun. Find the nouns, then look for a word that tells more about one of them.",
       why: "The answer is fluffy. It describes the noun kitten and tells what kind. Kitten and sun are nouns, and napped is a verb." },
     { id: "SK-GUM1-8-P2", type: "mc", points: 1, dok: 1, passages: [],
       stem: "The turtle crawled slowly across the road.",
@@ -1158,7 +1158,7 @@ PP.addLesson({
         { text: "wore" },
         { text: "game" }
       ],
-      clue: "Which word tells what kind of jacket?",
+      clue: "Find the nouns in the sentence. Which word tells more about one of them?",
       why: "The answer is bright. It describes the noun jacket. Jacket and game are nouns, and wore is a verb." },
     { id: "SK-GUM1-8-T2", type: "mc", points: 1, dok: 1, passages: [],
       stem: "The children whispered quietly in the library.",
@@ -1238,7 +1238,7 @@ PP.addLesson({
       steps: [
         "Lake is a common noun. It could be any lake.",
         "Swap in the name of one special lake, like Lake Lanier in Georgia.",
-        "Give each word in the name a capital letter."
+        "Give each important word in the name a capital letter."
       ],
       answer: "We swam in Lake Lanier."
     }
@@ -1271,11 +1271,11 @@ PP.addLesson({
       clue: "Ask: is it the special name of one person, place, day or thing? Special names start with capital letters.",
       why: "River, school and teacher are common nouns. They are general words. Chattahoochee River, Monday and Ms. Patel are proper nouns. They name one special river, day and person." },
     { id: "SK-GUM1-9-P3", type: "dropdown", points: 1, dok: 2, passages: [],
-      prompt: "Choose the proper noun, written correctly, that completes the sentence.",
+      prompt: "The sentence needs the name of one special mountain. Choose the proper noun that fits.",
       text: "Our class took a trip to {0} last spring.",
-      slots: [ { options: ["Stone Mountain", "stone mountain", "Stone mountain"], answer: 0 } ],
-      clue: "This is the name of one special place. Every word in the name needs the same kind of first letter.",
-      why: "The answer is Stone Mountain. It is the name of one special place in Georgia, so each word in the name starts with a capital letter." },
+      slots: [ { options: ["Stone Mountain", "Savannah", "a mountain"], answer: 0 } ],
+      clue: "You need a special name, not a general word. Then check that the name is for a mountain.",
+      why: "The answer is Stone Mountain. It is a proper noun that names one special mountain in Georgia. Savannah is a proper noun too, but it names a city. A mountain is a common noun." },
     { id: "SK-GUM1-9-P4", type: "hottext", points: 2, dok: 2, passages: [],
       stem: "On Saturday, Keisha took her dog to the park.",
       prompt: "Select the TWO proper nouns in the sentence.",
@@ -1284,16 +1284,16 @@ PP.addLesson({
       clue: "Look for the special name of a day and the special name of a person.",
       why: "The answers are Saturday and Keisha. Saturday names one special day, and Keisha names one special person. Dog and park are common nouns." },
     { id: "SK-GUM1-9-P5", type: "mc", points: 1, dok: 2, passages: [],
-      stem: "Our dog chased a cat down Elm Street.",
+      stem: "Our dog Max chased a cat down Elm Street.",
       prompt: "Which is a proper noun that names a place?",
       choices: [
         { text: "Elm Street", correct: true },
+        { text: "Max" },
         { text: "dog" },
-        { text: "cat" },
-        { text: "Our" }
+        { text: "cat" }
       ],
-      clue: "Look for a special name that starts with capital letters but is not the first word of the sentence.",
-      why: "The answer is Elm Street. It is the name of one special street, so it is a proper noun. Dog and cat are common nouns. Our starts with a capital only because it is the first word." }
+      clue: "First find the special names in the sentence. Then ask which one names a place.",
+      why: "The answer is Elm Street. It is the name of one special street, so it is a proper noun that names a place. Max is a proper noun too, but it names a pet. Dog and cat are common nouns." }
   ],
   test: [
     { id: "SK-GUM1-9-T1", type: "mc", points: 1, dok: 1, passages: [],
@@ -1320,11 +1320,11 @@ PP.addLesson({
       clue: "Ask: is it a general word, or the special name of one thing?",
       why: "Holiday, ocean and girl are common nouns. Thanksgiving and Atlantic Ocean are proper nouns, because they name one special holiday and one special ocean." },
     { id: "SK-GUM1-9-T3", type: "dropdown", points: 1, dok: 2, passages: [],
-      prompt: "Choose the proper noun, written correctly, that completes the sentence.",
-      text: "We visited my aunt in {0} during the summer.",
-      slots: [ { options: ["Augusta", "augusta", "AUGUSTA"], answer: 0 } ],
-      clue: "This is the name of one city. How does a proper noun begin?",
-      why: "The answer is Augusta. It is the name of a city in Georgia, so it is a proper noun. A proper noun starts with a capital letter, and the other letters are small." },
+      prompt: "Choose the word that correctly completes the sentence.",
+      text: "We visited my aunt in a big {0} near the coast.",
+      slots: [ { options: ["city", "City", "Augusta"], answer: 0 } ],
+      clue: "Look at the words a big before the blank. Do they go with a general word or with a special name?",
+      why: "The answer is city. A big goes with a general word, so the sentence needs a common noun. A common noun in the middle of a sentence starts with a small letter, so City is wrong. Augusta is a proper noun, and we do not say a big Augusta." },
     { id: "SK-GUM1-9-T4", type: "hottext", points: 2, dok: 2, passages: [],
       stem: "In July, Pedro swam in the lake with his brother.",
       prompt: "Select the TWO common nouns in the sentence.",
