@@ -61,7 +61,17 @@ function checkStd(where, std) {
     else { const s = STD.find(x => x.code === c); if (s && ["no", "classroom"].indexOf(s.tested) >= 0) F(where, c + " is not assessed on the Milestones"); }
   });
 }
+/* Test-wise giveaway: the key is clearly the longest choice. */
+const longKey = (where, ch, label) => {
+  const lens = (ch || []).map(c => norm(c.text).length);
+  const k = (ch || []).findIndex(c => c.correct);
+  if (k < 0 || lens.length < 3) return;
+  const others = lens.filter((x, i) => i !== k);
+  const next = Math.max.apply(null, others);
+  if (lens[k] > next * 1.3 && lens[k] - next >= 12) W(where, (label || "choices") + ": key is much longer than every other choice (" + lens[k] + " vs " + next + " chars)");
+};
 const oneCorrect = (where, ch, label) => {
+  longKey(where, ch, label);
   if (!Array.isArray(ch) || ch.length < 3) F(where, (label || "choices") + ": fewer than 3 choices");
   const n = (ch || []).filter(c => c.correct).length;
   if (n !== 1) F(where, (label || "choices") + ": " + n + " correct (need exactly 1)");

@@ -174,14 +174,14 @@
       const { item, host } = ctx;
       const nB = item.partB.pick || correctIdx(item.partB.choices).length;
       const pa = make("div", "part"); pa.appendChild(make("p", "part-label", "Part A"));
-      pa.appendChild(make("p", "part-prompt", item.partA.prompt));
+      pa.appendChild(make("p", "part-prompt", item.partA.prompt.replace(/^Part A[:.]?\s*/i, "")));
       ctx.orderA = ctx.orderA || shuffled(item.partA.choices.map((c, i) => i));
       ctx.ui.listA = choiceList(pa, item.partA.choices, {
         order: ctx.orderA, label: "Part A", isLocked: () => ctx.locked || ctx.ui.aLocked,
         onPick: i => { ctx.resp.a = i; syncChoices(ctx.ui.listA, [i]); ctx.onChange(); }
       });
       const pb = make("div", "part"); pb.appendChild(make("p", "part-label", "Part B"));
-      pb.appendChild(make("p", "part-prompt", item.partB.prompt));
+      pb.appendChild(make("p", "part-prompt", item.partB.prompt.replace(/^Part B[:.]?\s*/i, "")));
       if (nB > 1) pickNote(pb, nB);
       ctx.orderB = ctx.orderB || shuffled(item.partB.choices.map((c, i) => i));
       ctx.ui.listB = choiceList(pb, item.partB.choices, {
