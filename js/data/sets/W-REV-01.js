@@ -4,7 +4,8 @@
  * The draft is numbered by sentence: each sentence string starts with "(n) ". The draft
  * deliberately has a missing opinion statement, missing transitions, a vague word, two
  * short choppy sentences, an off-topic sentence, one subject-verb agreement error, one
- * verb tense error and a weak conclusion. Each item fixes one of these.
+ * verb tense error and a weak conclusion. Items 1-5, 7 and 8 fix one of these; item 6 adds
+ * evidence for the reason in sentence 7.
  * Sentence references ("p1:<paragraph>:<sentence>") are 1-based; there are no headings.
  */
 PP.addSet({
@@ -57,7 +58,7 @@ PP.addSet({
         { text: "Fish can live in lakes, in rivers, and even in the ocean." },
         { text: "Have you ever watched a fish blow tiny bubbles in the water?" }
       ],
-      clue: "An opinion tells what the writer wants or believes. It is not just a fact or a question. Which choice tells the reader what Jordan wants for Room 12's tank?",
+      clue: "An opinion tells what the writer wants or believes. It is not just a fact or a question. Which choice tells the reader what Jordan wants to happen?",
       why: "The answer is \"I think our class should get a pet fish to live in that tank.\" The words I think and should tell the reader Jordan's opinion, and the sentence connects to the empty tank in sentence 1. The sentence about other classes and the sentence about where fish live are facts, not opinions. The question about bubbles could grab a reader's attention, but it does not say what Jordan wants."
     },
     {
