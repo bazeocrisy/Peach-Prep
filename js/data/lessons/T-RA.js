@@ -356,44 +356,44 @@ PP.addLesson({
       prompt: "Kofi is making a note card with the heading \"Why footprints last on the moon.\" Which fact belongs on this card?",
       choices: [
         { text: "The moon has no wind or rain to wipe things away.", correct: true },
-        { text: "Astronauts wore space suits so they could breathe." },
+        { text: "The moon is much smaller than Earth is." },
         { text: "The moon seems to change shape during the month." },
         { text: "Scientists still study the moon rocks today." }
       ],
       clue: "The heading asks why. Find the fact that explains what keeps the footprints from going away.",
-      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about space suits, phases and rocks, not footprints." },
+      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and rocks, not footprints." },
     { id: "SK-RA1b-T3", type: "ms", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi has a note card with the heading \"People on the moon.\" Which TWO facts belong on this card? Choose two answers.",
       pick: 2,
       choices: [
         { text: "Astronauts first walked on the moon in 1969.", correct: true },
-        { text: "Astronauts wore space suits because there is no air.", correct: true },
+        { text: "Astronauts wore space suits on the moon.", correct: true },
         { text: "The moon travels around Earth again and again." },
         { text: "Moonlight is sunlight bouncing off the moon." },
         { text: "The moon has many round holes called craters." }
       ],
       clue: "Each fact on this card must be about people going to the moon. Facts about the moon by itself go on a different card.",
-      why: "\"Astronauts first walked on the moon in 1969\" and \"Astronauts wore space suits because there is no air\" are about people on the moon. The other three facts tell what the moon itself is like, so they belong on a different card." },
+      why: "\"Astronauts first walked on the moon in 1969\" and \"Astronauts wore space suits on the moon\" are about people on the moon. The other three facts tell what the moon itself is like, so they belong on a different card." },
     { id: "SK-RA1b-T4", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Which fact can be found in BOTH sources?",
       choices: [
-        { text: "The moon has no wind or rain.", correct: true },
+        { text: "The moon has no air.", correct: true },
         { text: "The moon travels around Earth." },
         { text: "The moon's shape seems to change." },
-        { text: "Moon rocks help scientists learn." }
+        { text: "Mr. Okafor works at a science center." }
       ],
       clue: "Find each fact in one source, then check the other source for the same idea.",
-      why: "The answer is \"The moon has no wind or rain.\" Source 1 says the moon has no wind and no rain, and Source 2 says the moon has no wind or rain to wipe the footprints away. The other facts appear in only one source." },
+      why: "The answer is \"The moon has no air.\" Source 1 says the moon has no air, and Source 2 says the astronauts wore space suits because the moon has no air to breathe. The other facts appear in only one source." },
     { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kofi's note from Source 1 says, \"The moon's ground is covered with gray dust and rocks.\" Which fact from Source 2 adds the MOST to this note?",
+      prompt: "Kofi's note from Source 1 says, \"There are rocks on the moon's ground.\" Which fact from Source 2 adds the MOST to this note?",
       choices: [
         { text: "Astronauts brought moon rocks back for scientists to study.", correct: true },
-        { text: "Astronauts first walked on the moon in the year 1969." },
+        { text: "The moon is Earth's closest neighbor in space." },
         { text: "Only a few people have ever walked on the moon." },
         { text: "Mr. Okafor talked to the class at the science center." }
       ],
-      clue: "Kofi's note is about what covers the moon's ground. Look in Source 2 for a fact that tells more about one of those things.",
-      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The other facts are about when and how many people went to the moon, or about the talk, not the moon's ground." }
+      clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from Source 2 and tell more about the same thing.",
+      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from Source 1, not Source 2, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." }
   ]
 });
 
@@ -431,7 +431,7 @@ PP.addLesson({
         "Source 1: Emperor penguins live in Antarctica, one of the coldest places on Earth. Thick feathers and a layer of fat help keep them warm.",
         "Source 2: In winter, emperor penguins huddle together in large groups. They take turns standing in the warm middle of the group."
       ],
-      ask: "Write one sentence that sums up both sources.",
+      ask: "Write two sentences that sum up both sources.",
       steps: [
         "Find the big idea of Source 1: penguins live in a very cold place, and their bodies help keep them warm.",
         "Find the big idea of Source 2: penguins huddle together to stay warm.",
@@ -595,13 +595,13 @@ PP.addLesson({
       why: "The answer is \"My aunt has a red bird feeder on her back porch.\" Neither source tells about Kayla's aunt, so it does not belong. The other sentences sum up facts from the two sources." },
     { id: "SK-RA1c-T5", type: "dropdown", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kayla wants to join ideas in her summary. Choose the best word or words for each blank.",
-      text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they eat even more to get ready for their trip south.",
+      text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they drink nectar and eat tiny insects.",
       slots: [
         { options: ["so", "but", "or", "until"], answer: 0 },
-        { options: ["In late summer", "In early spring", "For example", "Instead"], answer: 0 }
+        { options: ["To get that energy", "In early spring", "In conclusion", "Instead"], answer: 0 }
       ],
-      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, check Source 2 to see when the birds get ready for their trip.",
-      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"In late summer,\" because Source 2 says that is when the birds eat more to get ready for the trip. In early spring is the wrong time, because in spring the birds are flying north, and the other choices do not show a result or a time." }
+      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, ask how the second sentence connects to the first one.",
+      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"To get that energy,\" because nectar and insects are how hummingbirds get the energy the first sentence talks about. In early spring adds a time the sources do not give for this, in conclusion would end the summary too soon, and instead would mean they do something different from eating." }
   ]
 });
 

@@ -18,3 +18,12 @@ The checker (`node verification/check-content.js --all`) reports nothing for T-T
 - **A SK-TT3c-T5 DOK**: fixed. Changed from DOK 3 to DOK 2.
 - **A 3.T.T.4.b teach example 2** ("up the stair"): fixed. The line is now "My boots go squishing everywhere." (rhymes with chair), and the note is updated.
 - **B 3.T.T.4.b** (each Test item repeats its Practice twin's format): fixed for T5. It is now an `ms` item worth 2 points, pick 2: "Which TWO stanzas keep the same rhyme pattern…". I added a second correct ABCB stanza (sing/spring) and a new wrong choice (hum/day), for 6 choices. The test total is now 7 points.
+
+## Round 2 (docs/review-lessons/T-T34-verify.md)
+- **MUST SK-TT4b-T2 gives away T1:** fixed. T2 no longer points at Rosa's poem. It now has `passages: []` and its own 4-line `stem`, Theo's squirrel stanza: lines 2 and 4 should rhyme (tree), and line 4 ("And hides it in the grass.") breaks the pattern. The key is "And buries it with glee." The wrong choices are "And drinks a cup of tea." (rhymes but makes no sense), "And then it climbs back down." and "And hides it by the fence." (neither rhymes). The choices no longer use blue-rhymes, so nothing points back to Rosa's stanza 2. No other Test prompt names a line or answer from another Test item.
+- **SHOULD SK-TT4b-T1 states the pattern:** fixed. The prompt is back to "One line in Rosa's poem does not follow her rhyme pattern. Which line is it?" I kept the reduced `targets` (p2:2:2 is still removed). The clue now asks the child to find the pattern in stanza 1 first, so the child has to work out the pattern, as in P1.
+- **SHOULD SK-TT4b-P1 "pair" is ambiguous:** fixed. The prompt now reads "Jaylen's poem rhymes in pairs: lines 1 and 2, then lines 3 and 4. In one pair, the second line does not rhyme with the first. Which line is it?" I updated the clue to match.
+- **NIT "It" in the old T2 key:** resolved by the MUST fix. That item and its key no longer exist.
+- **Not changed, for the lead to decide:** in Practice, SK-TT4b-P2 ("replace stanza 3, line 2") still names P1's answer. The verify rule is about Test items, and Practice gives hints anyway, so I left it. If the same rule should apply to Practice, P2 can get its own stem the same way T2 did.
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures, 0 warnings).

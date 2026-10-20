@@ -63,3 +63,15 @@ File changed: js/data/lessons/T-C.js only. `node verification/check-content.js -
 
 ## Declined
 None.
+
+## Round 2 (docs/review-lessons/T-C-verify.md)
+
+`node verification/check-content.js --all`: PASS (0 failures, 0 warnings).
+
+### SHOULD
+- [SK-TC2c-T1: other test prompts showed the year] **fixed:** the T3 Part A prompt now reads "What does the diary show about TV back then compared with TV today?" The T5 prompt now reads "Does it fit the diary, or does it fit life today?" and its column is now "The diary". No test prompt or choice now shows 1954. The whys still give the year, but they appear only after the child answers. The passage box still says "the 1950s", as it did before. That is passage context, not another item's answer, so I left it.
+- [SK-TC1c-P3: "dry peanut shell" was near-defensible] **fixed:** it is replaced with "cotton boll", which is clearly not part of a peanut plant. The why now says that a cotton boll grows on a cotton plant, not a peanut plant.
+
+### NIT
+- [2.a Teach example: the narrator praises the joke] **fixed:** the line is now "told a joke about a talking sandwich", so the narrator never says he enjoyed it. The note is reworded to match.
+- [SK-TC2c-P5: the prompt showed P1's year] **fixed:** it now reads "Why does it help to know when Ella wrote this letter?"

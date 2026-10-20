@@ -195,12 +195,12 @@ PP.addLesson({
       cols: ["Dialogue", "Action", "Description"],
       rows: [
         { text: "\"We can ride the lazy river instead.\"", answer: 0 },
-        { text: "She climbed the ladder one step at a time without looking down.", answer: 1 },
+        { text: "Priya stood at the bottom of the Tallest Slide and looked up.", answer: 1 },
         { text: "The water park was loud and bright.", answer: 2 },
         { text: "Priya took a deep breath.", answer: 1 }
       ],
       clue: "Dialogue is in quotation marks. An action is something a character does. Description helps you picture the place.",
-      why: "\"We can ride the lazy river instead\" is dialogue because Dev says it. Climbing the ladder and taking a deep breath are actions because Priya does them. \"The water park was loud and bright\" is description of the setting." }
+      why: "\"We can ride the lazy river instead\" is dialogue because Dev says it. Standing at the bottom and looking up, and taking a deep breath, are actions because Priya does them. \"The water park was loud and bright\" is description of the setting." }
   ]
 });
 PP.addLesson({
@@ -987,7 +987,7 @@ PP.addLesson({
         { options: ["Suddenly,", "At first,", "In the end,"], answer: 0 },
         { options: ["Then", "Before that,", "At first,"], answer: 0 }
       ],
-      clue: "For sentence 6, think about how long Sofia had been waiting and how fast this happens. For sentence 10, think about what has to happen first before the fish can go in the net.",
+      clue: "Read sentences 3 to 10 in order. For each blank, ask how that sentence connects to the sentence just before it. Then pick the word that shows that connection.",
       why: "Sentence 6 needs \"Suddenly,\" because after a whole hour of nothing, the bite happens all at once. At first and In the end do not fit the middle of the story. Sentence 10 needs \"Then\" because Aunt Rosa scoops up the fish right after it comes out of the water in sentence 9. Before that and At first would put the events out of order." },
     { id: "SK-TT1e-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Sofia wants to add a beginning before sentence 1 that will hook the reader. Which sentence is best?",

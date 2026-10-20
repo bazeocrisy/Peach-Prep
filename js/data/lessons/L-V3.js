@@ -73,7 +73,7 @@ PP.addLesson({
         ["The Okefenokee Swamp is in the southeast corner of Georgia.", "A swamp is a kind of wetland, which is land that is covered by water for much of the year."],
         ["The water in the swamp looks dark brown, like a cup of tea.", "Leaves and other plant parts fall into the water and slowly break down.", "As they break down, they stain the water and change its color."],
         ["Many animals dwell in the swamp.", "They find food, build nests and raise their young there.", "Alligators, turtles, frogs and herons all make their homes in the Okefenokee."],
-        ["Visitors can paddle canoes along the swamp's narrow waterways.", "Guides tell them to keep an eye out for alligators.", "Alligators often rest along the edges of the water, so it is smart to watch for them.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
+        ["Visitors can paddle canoes along the swamp's narrow waterways.", "Guides tell them to keep an eye out for alligators.", "Alligators often rest along the edges of the water, and they can be hard to see.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
         ["If you visit, be cautious.", "Stay in your boat, keep your hands out of the water and never feed the alligators."]
       ] }
   ],
@@ -102,10 +102,10 @@ PP.addLesson({
           { text: "\"Only two people stopped by in the whole first hour.\"", correct: true },
           { text: "\"They set everything out on two long tables in the front hall.\"" },
           { text: "\"Every spring, Mr. Lee's third graders hold a bake sale to raise money for new library books.\"" },
-          { text: "\"There was enough to buy twelve new books.\"" }
+          { text: "\"Leah sat at the table and sighed.\"" }
         ] },
-      clue: "The clue is not in the same sentence as scarce. Look in paragraph 3 for a detail that tells how many buyers came at first. What does that tell you about scarce?",
-      why: "Part A: very few; not many. Part B: \"Only two people stopped by in the whole first hour.\" Only two buyers in a whole hour is very few, so scarce means very few." },
+      clue: "The clue is not in the same sentence as scarce. Read the other sentences in paragraph 3. Which one tells you the most about the buyers themselves?",
+      why: "Part A: very few; not many. Part B: \"Only two people stopped by in the whole first hour.\" Only two buyers in a whole hour is very few, so scarce means very few. Leah's sigh shows she felt let down, but it does not tell you anything about how many buyers there were." },
     { id: "SK-V3a-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 4. Choose the meaning of devoured.",
       text: "In paragraph 4, devoured means {0}.",
@@ -214,12 +214,12 @@ PP.addLesson({
       prompt: "What does the phrase keep an eye out for mean in paragraph 4?",
       choices: [
         { text: "watch carefully for", correct: true },
-        { text: "close one eye to hide from" },
+        { text: "stay far away from" },
         { text: "take a photo of" },
-        { text: "throw food out to" }
+        { text: "listen for the sound of" }
       ],
-      clue: "Read the sentence after the phrase. What does it say is smart to do about the alligators?",
-      why: "The answer is \"watch carefully for.\" The next sentence says alligators rest along the edges of the water, \"so it is smart to watch for them.\" That tells you the whole phrase keep an eye out for means to watch carefully for something." }
+      clue: "Read the sentence after the phrase. Why would guides warn visitors about animals that are hard to see? What would visitors need to do?",
+      why: "The answer is \"watch carefully for.\" The next sentence says alligators rest along the edges of the water and can be hard to see. Something hard to see is something you must look for carefully, and the phrase uses the word eye. Staying away from alligators is smart, but it is not what the phrase means." }
   ]
 });
 
@@ -890,7 +890,7 @@ PP.addLesson({
       prompt: "Malik wants to replace one plain describing word with thrilling, which means very exciting. Choose the sentence where thrilling fits best.",
       targets: ["p1:1:2", "p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1", "p1:3:2", "p1:3:3"],
       answer: ["p1:3:3"], pick: 1,
-      clue: "Find the plain describing words in the draft. For each one, ask what it describes: a size, how something feels to touch, or how exciting something was.",
+      clue: "Find each plain describing word in the draft. Try thrilling in its place. Does the sentence still make sense and tell more exactly what Malik meant?",
       why: "The answer is \"(9) It was a fun day, and I can't wait to go back.\" Thrilling can replace fun to show how exciting the day was. In sentence 2, big is about size, and in sentence 8, nice is about how skin feels, so thrilling does not fit there." },
     { id: "SK-V3e-P4", type: "ms", points: 2, dok: 2, passages: ["p1"],
       prompt: "Malik wants to replace nice in sentence 8 with a word that tells exactly how the stingray's skin felt. Which TWO words could he use?",

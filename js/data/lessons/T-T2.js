@@ -5,7 +5,7 @@ PP.addLesson({
   teach: {
     big: "The main idea is what a whole text is mostly about, and the key details are the facts that prove it.",
     points: [
-      "The topic is what the text is about in a word or two, like \"sharks.\" The main idea tells something important about the topic, like \"Sharks have bodies built for hunting in the ocean.\"",
+      "The topic is what the text is about in a word or two, like \"sharks.\" The main idea tells something important about the topic, like \"Sharks have lived on Earth for a very long time.\"",
       "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
       "Key details are facts that explain or prove the main idea. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
@@ -180,17 +180,17 @@ PP.addLesson({
       choices: [
         { text: "A mother armadillo usually has four babies at a time.", correct: true },
         { text: "An armadillo grabs bugs with its long, sticky tongue." },
-        { text: "An armadillo's shell protects it from thorny bushes." },
+        { text: "An armadillo's shell covers its back and its sides." },
         { text: "An armadillo hurries to a burrow it has dug." }
       ],
       clue: "First say the main idea to yourself. Then test each detail: does it show how the body helps the armadillo eat or stay safe?",
-      why: "The answer is \"A mother armadillo usually has four babies at a time.\" It is an interesting fact, but it does not show how the body helps with food or safety. The tongue helps it eat, and the shell and the burrow help it stay safe." },
+      why: "The answer is \"A mother armadillo usually has four babies at a time.\" It is an interesting fact, but it does not show how the body helps with food or safety. The tongue helps it eat, and the shell and the burrow are part of how it stays safe." },
     { id: "SK-TT2a-T5", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "The last paragraph says a tough shell helps the armadillo stay safe. Choose the sentence that best supports this idea.",
+      prompt: "The last paragraph says a tough shell helps the armadillo. Choose the sentence that best shows how.",
       targets: ["p2:1:2", "p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1"],
       answer: ["p2:3:3"], pick: 1,
-      clue: "A sentence can tell about the shell without telling how it keeps the armadillo safe. Find the sentence that proves the whole idea.",
-      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells how the shell keeps the armadillo safe. The other shell sentences tell what the shell is made of and what it covers, but not how it helps. The jump is a different way to stay safe." }
+      clue: "Some sentences only describe the shell. Find the one that tells what the shell does for the armadillo.",
+      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells what the shell does for the armadillo. The other shell sentences only describe what the shell is made of and what it covers. The jump and the size sentences are not about the shell." }
   ]
 });
 
@@ -268,7 +268,7 @@ PP.addLesson({
         "A mother monarch lays an egg on milkweed.",
         "A caterpillar hatches and eats its eggshell.",
         "The caterpillar sheds its tight skin several times.",
-        "Its new skin hardens into a chrysalis.",
+        "The caterpillar's new skin hardens into a chrysalis.",
         "A butterfly climbs out and waits for its wings to dry."
       ],
       clue: "Use the signal words and the paragraph order. The article starts at the very beginning of a monarch's life and ends when it can fly.",
@@ -295,7 +295,7 @@ PP.addLesson({
       partB: { prompt: "Which sentence from the article best explains why the answer to Part A happens?",
         choices: [
           { text: "\"Instead, it stays in the caterpillar's body and makes it taste bad.\"", correct: true },
-          { text: "\"First, it eats its own eggshell.\"" },
+          { text: "\"Then it flies off to find flowers.\"" },
           { text: "\"But its skin does not grow with it.\"" },
           { text: "\"Inside the chrysalis, the caterpillar's body slowly changes.\"" }
         ] },
@@ -542,13 +542,13 @@ PP.addLesson({
     { id: "SK-TT2c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "Which statement uses information from BOTH passages?",
       choices: [
-        { text: "Alligators are reptiles, and alligator mothers take care of their babies.", correct: true },
+        { text: "An alligator can float with its eyes above water, and its babies squeak inside their eggs.", correct: true },
         { text: "Adult alligators warm up in the sun, and they swim by swinging their tails." },
         { text: "Mother alligators build nests, and they carry their babies to the water." },
-        { text: "Baby alligators have stripes, and they squeak from inside their eggs." }
+        { text: "Baby alligators have stripes, and their nest is made of mud and sticks." }
       ],
       clue: "For each choice, find where each half of the sentence comes from. The answer needs one half from each passage.",
-      why: "The answer is \"Alligators are reptiles, and alligator mothers take care of their babies.\" Built for the Water says the alligator is a reptile. Alligator Moms says an alligator mother takes care of her babies. Each of the other choices uses only one passage." },
+      why: "The answer is \"An alligator can float with its eyes above water, and its babies squeak inside their eggs.\" Only Built for the Water tells that the eyes are on top of the head so it can float and still see. Only Alligator Moms tells that the babies make squeaking sounds inside their eggs. Each of the other choices uses only one passage." },
     { id: "SK-TT2c-T2", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Where can you find each piece of information? Match each one to the passage that tells it, or to Both.",
       cols: ["Built for the Water", "Alligator Moms", "Both"],

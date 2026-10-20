@@ -32,3 +32,20 @@ Only `js/data/lessons/L-GUM3.js` was edited. `node verification/check-content.js
 - **B [SK-GUM3-2-T4] rows repeat Learn/Practice.** Fixed: rows are now goose, person, ox, moose, with columns geese, people, oxen, moose. Goose also appears in P3, but there it is sorted by type, not matched to its plural.
 
 Declined: none.
+
+## Round 2 (response to L-GUM3-verify.md)
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures, 0 warnings).
+
+- **SHOULD [Lesson 8 Teach point 3] the consonant rule has no exception for th, sh, ch, ck.** Fixed. I added this to point 3: "But letters that make one sound together, like th, sh, ch and ck, stay together: moth-er, rock-et." I checked every lesson 8 item: none splits a th, sh, ch or ck pair. Birthday is split by the compound-word rule.
+- **SHOULD [Lesson 8 parent] "sandwich" is not decided by a taught rule.** Fixed. It is replaced with "button" (double t).
+- **SHOULD [SK-GUM3-2-T4] moose row is a free match.** Fixed. The rows are now person, ox, wolf and knife, matched to people, oxen, wolves and knives. No row matches its own column text. Teach point 3 now adds "wolf becomes wolves" and "knife becomes knives the same way."
+- **SHOULD [SK-GUM3-2-T2/T3/T4/T5] test items reveal each other's answers.** Fixed. Each irregular noun now appears in only one test item:
+  - T1: woman/women. The clue no longer mentions man.
+  - T2: moose and sheep (keys); mouse, child and goose (distractors). Teach point 4 now lists moose.
+  - T3: foot/feet.
+  - T4: person, ox, wolf, knife.
+  - T5: tooth. The other three sentences use only regular plurals (farmers, boxes, books, puppies).
+- **NIT [SK-GUM3-2-T3 clue] "changes the letters inside".** Fixed. It now reads "The word changes its spelling instead of adding -s."
+
+Declined: none.

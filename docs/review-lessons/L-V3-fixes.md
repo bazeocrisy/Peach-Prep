@@ -74,3 +74,18 @@ Only `js/data/lessons/L-V3.js` was edited. `node verification/check-content.js -
 | 3.L.V.3.c | 5 | 5 | 7 |
 | 3.L.V.3.d | 5 | 5 | 7 |
 | 3.L.V.3.e | 5 | 5 | 6 |
+
+## Round 2 (response to L-V3-verify.md)
+
+- **[SK-V3a-P2] Part B is still a lookup.** Fixed.
+  - Replaced the Part B distractor "There was enough to buy twelve new books." with a near miss from the same paragraph: "Leah sat at the table and sighed."
+  - The clue no longer says "how many buyers." It now reads: "Read the other sentences in paragraph 3. Which one tells you the most about the buyers themselves?"
+  - The why explains that the sigh shows Leah's feeling, not how many buyers came.
+- **[SK-V3a-T6] solvable by matching "watch."** Fixed.
+  - p2 paragraph 4's follow-up sentence now gives a reason without repeating the meaning: "Alligators often rest along the edges of the water, and they can be hard to see."
+  - The distractors are now near misses: "stay far away from", "take a photo of" and "listen for the sound of".
+  - The clue asks why guides would warn about animals that are hard to see, and the why is updated.
+  - No other item quoted the changed sentence. Paragraph references are unchanged.
+- **[SK-V3e-P3] clue sorts the words.** Fixed with the reviewer's wording: "Find each plain describing word in the draft. Try thrilling in its place. Does the sentence still make sense and tell more exactly what Malik meant?"
+
+`node verification/check-content.js --all`: PASS (0 failures, 0 warnings). 3.L.V.3.a p2 is FK 4.4.

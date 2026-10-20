@@ -164,8 +164,8 @@ PP.addLesson({
     points: [
       "A plural noun names more than one: one cat, two cats.",
       "Some nouns change their spelling: man becomes men, foot becomes feet, tooth becomes teeth, mouse becomes mice, and goose becomes geese.",
-      "Some nouns change in other ways: child becomes children, person becomes people, and ox becomes oxen.",
-      "A few nouns stay the same: one sheep, ten sheep; one deer, two deer.",
+      "Some nouns change in other ways: child becomes children, person becomes people, ox becomes oxen, and wolf becomes wolves. Knife becomes knives the same way.",
+      "A few nouns stay the same: one sheep, ten sheep; one deer, two deer; one moose, two moose.",
       "Never add -s to a special plural. Childrens, feets and mices are not words."
     ],
     words: [
@@ -262,43 +262,43 @@ PP.addLesson({
         { text: "womens" },
         { text: "woman" }
       ],
-      clue: "Both means two. Think of how man changes when there is more than one.",
+      clue: "Both means two. Woman is a special noun. Say \"one woman, two ___.\"",
       why: "The answer is women. One woman, two women, just like one man, two men." },
     { id: "SK-GUM3-2-T2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO sentences that use plural nouns correctly.",
       choices: [
-        { text: "We counted four deer near the creek.", correct: true },
-        { text: "Grandpa has big feet and wears big boots.", correct: true },
+        { text: "Our class saw two moose at the zoo.", correct: true },
+        { text: "Three sheep slept under a shady tree.", correct: true },
         { text: "The two mouses ate all of the cheese." },
         { text: "Mr. Patel read a story to the childrens." },
         { text: "Six gooses walked slowly across the road." }
       ],
       clue: "Find every word that means more than one. Remember which nouns change their spelling and which stay the same.",
-      why: "The answers are \"We counted four deer near the creek.\" and \"Grandpa has big feet and wears big boots.\" Deer stays the same, and foot becomes feet. The others should say mice, children and geese." },
+      why: "The answers are \"Our class saw two moose at the zoo.\" and \"Three sheep slept under a shady tree.\" Moose and sheep both stay the same. The others should say mice, children and geese." },
     { id: "SK-GUM3-2-T3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Please wipe your {0} on the mat before you come inside.",
       slots: [{ options: ["foots", "feet", "feets"], answer: 1 }],
-      clue: "You have two of these. The word changes the letters inside instead of adding -s.",
+      clue: "You have two of these. The word changes its spelling instead of adding -s.",
       why: "The answer is feet. One foot, two feet." },
     { id: "SK-GUM3-2-T4", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each noun to its plural.",
-      cols: ["geese", "people", "oxen", "moose"],
+      cols: ["people", "oxen", "wolves", "knives"],
       rows: [
-        { text: "goose", answer: 0 },
-        { text: "person", answer: 1 },
-        { text: "ox", answer: 2 },
-        { text: "moose", answer: 3 }
+        { text: "person", answer: 0 },
+        { text: "ox", answer: 1 },
+        { text: "wolf", answer: 2 },
+        { text: "knife", answer: 3 }
       ],
       clue: "Say \"one ___, two ___\" for each word. Listen for the plural that sounds right.",
-      why: "One goose, two geese. One person, two people. One ox, two oxen. One moose, two moose: moose stays the same." },
+      why: "One person, two people. One ox, two oxen. One wolf, two wolves. One knife, two knives." },
     { id: "SK-GUM3-2-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
       options: [
-        "The two deer ran into the woods.",
+        "The farmers sold peaches at the market.",
         "My baby sister has four new tooths.",
-        "The men carried the long ladder.",
-        "Three sheep slept under a tree."
+        "The boxes were full of old books.",
+        "The puppies slept on a soft blanket."
       ],
       answer: [1], pick: 1,
       clue: "Check each plural noun. Does it change, stay the same, or add -s the way it should?",
@@ -1084,7 +1084,7 @@ PP.addLesson({
     points: [
       "A hyphen is a short line (-). It goes at the end of the first line, never at the start of the next line, and it shows that the word keeps going.",
       "Clap the word to count its syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead.",
-      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil.",
+      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together: moth-er, rock-et.",
       "When the same consonant comes twice in the middle, split between the two letters: hap-py, bub-ble.",
       "When a word is made of two smaller words, split between the two words: sun-set, cup-cake."
     ],
@@ -1132,7 +1132,7 @@ PP.addLesson({
       answer: "No. School has only one syllable, so it should not be split. Write the whole word on the next line."
     }
   ],
-  parent: "Write long words like sandwich, puppy and sunflower on paper. Ask your child to clap each one, then draw a line where it could be split and say which rule they used.",
+  parent: "Write long words like button, puppy and sunflower on paper. Ask your child to clap each one, then draw a line where it could be split and say which rule they used.",
   passages: [],
   practice: [
     { id: "SK-GUM3-8-P1", type: "mc", points: 1, dok: 2, passages: [],

@@ -38,3 +38,8 @@ File changed: `js/data/lessons/T-T1.js` only. `node verification/check-content.j
 - **B: the 1.e drafts have 11 sentences (§5b gives 6–10).**
   - Test draft: fixed. It is now 10 sentences.
   - Practice draft: declined. It keeps 11 sentences. Five of its six items depend on its current sentence numbers, the reviewer marked this optional, and §5b governs standalone revising sets, not lesson drafts.
+
+## Round 2 (response to T-T1-verify.md)
+- **MUST: SK-TT1e-T3, the clue gave away "Suddenly,".** Fixed. I used the verifier's strategy-only wording: "Read sentences 3 to 10 in order. For each blank, ask how that sentence connects to the sentence just before it. Then pick the word that shows that connection." The clue no longer describes what either answer means.
+- **NIT: SK-TT1a-T3 / SK-TT1a-T6 shared a sentence ("She climbed the ladder one step at a time without looking down.").** Fixed. In the T6 match, I replaced that row with "Priya stood at the bottom of the Tallest Slide and looked up." (Action) and updated the `why`. The T3 Part B distractor stays as it is, so the two items no longer overlap.
+- `node verification/check-content.js --all`: PASS (0 failures, 0 warnings).

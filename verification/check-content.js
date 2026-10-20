@@ -31,6 +31,7 @@ lessonFiles.forEach(id => run("js/data/lessons/" + id + ".js"));
 const fails = [], warns = [];
 const F = (where, msg) => fails.push(where + ": " + msg);
 const W = (where, msg) => warns.push(where + ": " + msg);
+const STOP = ["that","this","with","from","they","them","their","there","what","when","where","which","who","whom","your","have","about","into","each","word","words","sentence","sentences","choice","choices","answer","read","paragraph","part","does","tell","tells","then","than","only","also","most","more","some","like","just","because","would","could","should","will","were","been","being","make","makes","same","other","both","look","think","find","story","passage","text","line","lines"];
 const wc = t => (String(t).match(/\S+/g) || []).length;
 const norm = t => String(t).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim();
 
@@ -115,6 +116,20 @@ function checkItem(set, it, S, lessonCode) {
       F(w, "why/clue refers to a choice by position, but choices are shuffled");
     const mustName = t => { if (t && why.toLowerCase().indexOf(norm(t).toLowerCase().replace(/[.!?]$/, "")) < 0) W(w, "why does not quote the answer “" + t + "”"); };
     const noLeak = t => { const x = norm(t).toLowerCase().replace(/[.!?]$/, ""); if (x.split(" ").length >= 2 && clue.toLowerCase().indexOf(x) >= 0) F(w, "clue contains the answer “" + t + "”"); };
+    /* Clue giveaway: a distinctive word in the clue that appears in the key
+       but in no wrong choice (and not in the prompt or stem) singles out the key. */
+    const words = t => new Set((norm(t).toLowerCase().match(/[a-z']{4,}/g) || []).filter(x => STOP.indexOf(x) < 0));
+    const giveaway = (ch, label) => {
+      const key = (ch || []).filter(c => c.correct), wrong = (ch || []).filter(c => !c.correct);
+      if (!key.length || !wrong.length) return;
+      const cw = words(clue), ctx = words((it.prompt || "") + " " + [].concat(it.stem || []).join(" "));
+      const wrongW = new Set([].concat(...wrong.map(c => [...words(c.text)])));
+      const hit = [...new Set([].concat(...key.map(c => [...words(c.text)])))].filter(x => cw.has(x) && !wrongW.has(x) && !ctx.has(x));
+      if (hit.length) W(w, (label || "choices") + ": clue shares “" + hit.join(", ") + "” only with the key");
+    };
+    if (it.type === "mc" || it.type === "ms") giveaway(it.choices);
+    if (it.type === "ebsr" && it.partA) giveaway(it.partA.choices, "Part A");
+    if (it.type === "dropdown") (it.slots || []).forEach((sl, k) => giveaway(sl.options.map((o, i) => ({ text: o, correct: i === sl.answer })), "slot " + k));
     switch (it.type) {
       case "mc": if ((it.choices || []).length !== 4) F(w, "mc needs exactly 4 choices (SPEC §5)"); oneCorrect(w, it.choices); { const a = (it.choices || []).find(c => c.correct); if (a) { mustName(a.text); noLeak(a.text); } } break;
       case "ms": {

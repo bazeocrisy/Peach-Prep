@@ -525,10 +525,10 @@ PP.addLesson({
         { text: "peanut under the soil", correct: true },
         { text: "bean pod" },
         { text: "digging machine" },
-        { text: "dry peanut shell" }
+        { text: "cotton boll" }
       ],
       clue: "Labels name parts of the thing in the diagram. Which choices are parts of a growing peanut plant that Slide 2 tells about?",
-      why: "The answers are \"yellow flower\" and \"peanut under the soil.\" Both are parts of the growing plant that Slide 2 describes. A bean pod belongs on Slide 4, a digging machine on Slide 3, and a dry shell is not part of a plant in the ground." },
+      why: "The answers are \"yellow flower\" and \"peanut under the soil.\" Both are parts of the growing plant that Slide 2 describes. A bean pod belongs on Slide 4, a digging machine on Slide 3, and a cotton boll grows on a cotton plant, not a peanut plant." },
     { id: "SK-TC1c-P4", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "Which picture would fit Slide 4 best?",
       choices: [
@@ -622,8 +622,8 @@ PP.addLesson({
     ],
     example: {
       label: "The narrator's view and what really happens",
-      lines: ["I had to sit next to the new kid at lunch. Great. He gave me half of his cookie and told the funniest joke I have ever heard. Still, I did not want to sit there."],
-      note: "The narrator says \"Great\" in a grumpy way and did not want to sit there. But the new kid shares and is funny. A reader might think it was a good lunch, even though the narrator does not say so."
+      lines: ["I had to sit next to the new kid at lunch. Great. He gave me half of his cookie and told a joke about a talking sandwich. Still, I did not want to sit there."],
+      note: "The narrator says \"Great\" in a grumpy way and did not want to sit there. But the new kid shares a cookie and tells a joke. A reader might think the new kid is kind and it was a good lunch, even though the narrator does not say so."
     },
     tip: "On the test, you may be asked how the narrator feels, which detail might make a reader feel differently, or who is telling the story. Find the narrator's feeling words, then check what really happens."
   },
@@ -908,7 +908,7 @@ PP.addLesson({
       clue: "Think about what Ella does not have on her farm. Then find what Hattie has in the city.",
       why: "Part A: Hattie lives in a city with electric lights and streetcars. Part B: \"You wrote that your house has electric lights and that you can ride a streetcar downtown.\" In 1928, Ella's farm had no electricity, so city lights seemed special to her." },
     { id: "SK-TC2c-P5", type: "mc", points: 1, dok: 3, passages: ["p1"],
-      prompt: "Why does it help to know Ella wrote this letter in 1928?",
+      prompt: "Why does it help to know when Ella wrote this letter?",
       choices: [
         { text: "It explains why things that seem normal today were special to Ella.", correct: true },
         { text: "It tells the reader exactly how old Cousin Hattie is." },
@@ -940,7 +940,7 @@ PP.addLesson({
       why: "The answer is \"Televisions were new, and many families did not have one.\" The text box says TV was new then, so a family's first TV was exciting for the whole street." },
     { id: "SK-TC2c-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "What does the diary show about TV in 1954 compared with TV today?",
+      partA: { prompt: "What does the diary show about TV back then compared with TV today?",
         choices: [
           { text: "The pictures were black and white, not color.", correct: true },
           { text: "Shows were on all day and all night long." },
@@ -967,8 +967,8 @@ PP.addLesson({
       clue: "Read the last paragraph. What does it say about Grandma?",
       why: "The answer is \"Grandma does not have a TV, so it will be big news.\" The diary says Grandma does not have a television yet. At that time, a new TV was exciting news to share." },
     { id: "SK-TC2c-T5", type: "match", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Sort each detail. Does it fit the diary in 1954, or does it fit life today?",
-      cols: ["The diary in 1954", "Life today"],
+      prompt: "Sort each detail. Does it fit the diary, or does it fit life today?",
+      cols: ["The diary", "Life today"],
       rows: [
         { text: "A new TV is so special that neighbors come to watch.", answer: 0 },
         { text: "There are only a few channels to choose from.", answer: 0 },
