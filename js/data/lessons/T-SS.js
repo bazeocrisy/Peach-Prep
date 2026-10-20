@@ -471,9 +471,9 @@ PP.addLesson({
         ["(1) Bees are small insects, but they do a very big job."],
         ["(2) Bees help many plants make fruit.", "(3) They carry pollen from one flower to another."],
         ["(4) Many foods we eat need help from bees.", "(5) Apples, blueberries and peaches grow from flowers that bees visit."],
-        ["(6) Bees make honey.", "(7) People like to spread the sweet honey on toast or stir it into hot tea."],
-        ["(8) Some people are afraid of bees.", "(9) Most bees will not sting a person unless they feel scared or in danger."],
-        ["(10) The next time you see a bee buzzing by, remember how much it helps us."]
+        ["(6) Bees also make honey.", "(7) People like to spread the sweet honey on toast or stir it into hot tea."],
+        ["(8) Although many people are afraid of bees, most bees will not sting unless they feel scared or in danger."],
+        ["(9) The next time you see a bee buzzing by, remember how much it helps us."]
       ] }
   ],
   practice: [
@@ -497,18 +497,18 @@ PP.addLesson({
       prompt: "Sofia wants to add a sentence after sentence 5 that gives an example. Which sentence is best?",
       choices: [
         { text: "For example, I can now pedal all the way up Oak Street hill.", correct: true },
-        { text: "Although I can now pedal all the way up Oak Street hill." },
-        { text: "Because I can now pedal all the way up Oak Street hill." },
+        { text: "Although my legs are strong, I can pedal up Oak Street hill." },
+        { text: "Since it was sunny, I rode my bike to school today." },
         { text: "Also, my sister has a bike with a bright green bell." }
       ],
-      clue: "The new sentence must be a complete sentence and must show one example of sentence 5, getting stronger.",
-      why: "The answer is \"For example, I can now pedal all the way up Oak Street hill.\" Pedaling up a hill shows that Sofia's legs are stronger. The sentences that start with Although or Because are not complete sentences, and the sister's bell is not about getting stronger." },
+      clue: "Reread sentence 5. The new sentence must show one example of that idea, and its linking word must do the right job.",
+      why: "The answer is \"For example, I can now pedal all the way up Oak Street hill.\" Pedaling up a hill is one example of Sofia's legs getting stronger. Although does not fit, because strong legs climbing a hill is no surprise. The sunny day and the sister's bell are not about getting stronger." },
     { id: "SK-SS1c-P4", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
-      prompt: "Sofia wants sentence 6 to show that it adds one more reason she likes biking. Choose the word that best completes the sentence.",
-      text: "Biking is {0} fun to do with my friends.",
-      slots: [{ options: ["also", "although", "because"], answer: 0 }],
+      prompt: "Sofia wants sentence 6 to show that it adds one more reason she likes biking. Choose the word that best begins the sentence.",
+      text: "{0}, biking is fun to do with my friends.",
+      slots: [{ options: ["Also", "Although", "Because"], answer: 0 }],
       clue: "Sentence 4 gave one reason. Sentence 6 gives another. Which word adds one more idea of the same kind?",
-      why: "The answer is also. Also adds another reason: biking is good exercise, and it is also fun with friends." },
+      why: "The answer is Also. Also adds another reason: biking is good exercise, and it is also fun with friends. Although would need a surprise, and Because would need a reason for something, but sentence 6 just adds an idea." },
     { id: "SK-SS1c-P5", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each linking word to the job it does.",
       cols: ["Gives a reason", "Adds another idea", "Shows a surprise", "Gives an example"],
@@ -535,33 +535,23 @@ PP.addLesson({
       why: "The answers are because and since. The cold is the reason for wearing coats, and both words tell a reason. Although would mean the coats were a surprise, which does not make sense." }
   ],
   test: [
-    { id: "SK-SS1c-T1", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
-      prompt: "Daniel wants to join sentences 2 and 3. Choose the word that best completes the new sentence.",
-      text: "Bees help many plants make fruit {0} they carry pollen from one flower to another.",
-      slots: [{ options: ["since", "although", "for example"], answer: 0 }],
-      clue: "Does carrying pollen tell why bees help plants, show a surprise, or give an example?",
-      why: "The answer is since. Carrying pollen is the reason bees help plants make fruit, and since tells a reason, just like because." },
+    { id: "SK-SS1c-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Daniel wants to begin one sentence with the words For example. Select the sentence where For example fits best.",
+      targets: ["p2:2:2", "p2:3:2", "p2:4:1", "p2:6:1"],
+      answer: ["p2:3:2"], pick: 1,
+      clue: "For example must come right after a big idea, and the new sentence must name some examples of it. Read the sentence before each choice.",
+      why: "The answer is sentence 5, \"Apples, blueberries and peaches grow from flowers that bees visit.\" Sentence 4 says many foods need bees, and sentence 5 names some of those foods, so it is an example. Sentence 3 tells how bees help, not an example, and sentence 6 already has the linking word also." },
     { id: "SK-SS1c-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Daniel wants to begin sentence 5 with a linking word. Which revision of sentence 5 is best?",
+      prompt: "In sentence 8, why does Daniel use the word although?",
       choices: [
-        { text: "For example, apples, blueberries and peaches grow from flowers that bees visit.", correct: true },
-        { text: "Although apples, blueberries and peaches grow from flowers that bees visit." },
-        { text: "Because apples, blueberries and peaches grow from flowers that bees visit." },
-        { text: "Since apples, blueberries and peaches grow from flowers that bees visit." }
+        { text: "to show that the two ideas do not seem to go together", correct: true },
+        { text: "to give the reason that people are afraid of bees" },
+        { text: "to add one more way that bees help people" },
+        { text: "to give an example of a time a bee stung" }
       ],
-      clue: "Read sentence 4 first. Then ask how sentence 5 connects to it. Also check that the new sentence is complete.",
-      why: "The answer is \"For example, apples, blueberries and peaches grow from flowers that bees visit.\" Sentence 4 says many foods need bees, and sentence 5 names some of those foods. The other choices are not complete sentences." },
-    { id: "SK-SS1c-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Which is the best way to join sentences 8 and 9?",
-      choices: [
-        { text: "Although some people are afraid of bees, most bees will not sting unless they feel scared.", correct: true },
-        { text: "Because some people are afraid of bees, most bees will not sting unless they feel scared." },
-        { text: "Since some people are afraid of bees, most bees will not sting unless they feel scared." },
-        { text: "For example, some people are afraid of bees, so most bees will not sting unless they feel scared." }
-      ],
-      clue: "Is being afraid of bees the reason bees do not sting? Or do the two ideas pull in different directions?",
-      why: "The answer is \"Although some people are afraid of bees, most bees will not sting unless they feel scared.\" People's fear is not the reason bees do not sting. The two ideas go in different directions, so although fits." },
-    { id: "SK-SS1c-T4", type: "dropdown", points: 2, dok: 2, passages: [],
+      clue: "Read the two ideas in sentence 8. If people are afraid of bees, what might you expect bees to do? What does the sentence say instead?",
+      why: "The answer is to show that the two ideas do not seem to go together. You might expect bees to sting often, since people fear them, but most bees will not sting. Although joins those two ideas. It does not give a reason, add a way bees help, or give an example." },
+    { id: "SK-SS1c-T3", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the linking word that best completes each sentence.",
       text: "Lena packed an umbrella {0} the sky looked gray. {1} the rain never came, she was glad to be ready.",
       slots: [
@@ -570,17 +560,27 @@ PP.addLesson({
       ],
       clue: "For each blank, ask: Is this a reason, or is it a surprise?",
       why: "The first answer is because: the gray sky is the reason Lena packed an umbrella. The second answer is Although: she was glad to be ready even though the rain never came, which is a surprise." },
-    { id: "SK-SS1c-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+    { id: "SK-SS1c-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO sentences use a linking word correctly?",
       choices: [
-        { text: "Bees also make honey, a sweet food that people enjoy.", correct: true },
+        { text: "Bees help flowers make fruit, and they also make honey.", correct: true },
         { text: "Although bees are small, they do very important work.", correct: true },
         { text: "Bees visit many flowers, for example they are busy." },
         { text: "Since bees are scary, they make sweet honey." },
         { text: "Bees help plants grow because peaches are sweet." }
       ],
       clue: "Read each sentence and ask what job its linking word is doing. Does that job make sense with the ideas it joins?",
-      why: "The answers are \"Bees also make honey, a sweet food that people enjoy\" and \"Although bees are small, they do very important work.\" Also adds a new idea, and although shows a surprise: small bees do a big job. In the others, the reason or example does not match the idea." }
+      why: "The answers are \"Bees help flowers make fruit, and they also make honey\" and \"Although bees are small, they do very important work.\" Also adds a second job bees do, and although shows a surprise: small bees do a big job. In the others, the reason or example does not match the idea." },
+    { id: "SK-SS1c-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Daniel wants to join sentences 2 and 3 to show which idea is the reason. Which new sentence is best?",
+      choices: [
+        { text: "Bees help many plants make fruit since they carry pollen from flower to flower.", correct: true },
+        { text: "Bees help many plants make fruit, so they carry pollen from flower to flower." },
+        { text: "Although bees help many plants make fruit, they carry pollen from flower to flower." },
+        { text: "Bees help many plants make fruit, for example they carry pollen from flower to flower." }
+      ],
+      clue: "Ask which idea causes the other. Does helping plants make bees carry pollen, or does carrying pollen help the plants?",
+      why: "The answer is \"Bees help many plants make fruit since they carry pollen from flower to flower.\" Carrying pollen is the reason plants can make fruit, and since points to the reason. The so sentence turns it around, as if helping plants were the reason bees carry pollen." }
   ]
 });
 

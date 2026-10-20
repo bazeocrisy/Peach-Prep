@@ -82,12 +82,12 @@ PP.addLesson({
       options: [
         "Hana's garden has tall sunflowers.",
         "We can't find the key to the back door.",
-        "The frog's jumped into the pond.",
+        "Three frog's sat on a log.",
         "I'm happy that you're here."
       ],
       answer: [2], pick: 1,
       clue: "Look at each word with an apostrophe. Does each one stand for missing letters or show belonging? Or does a word just mean more than one?",
-      why: "The error is in \"The frog's jumped into the pond.\" Frogs just means more than one frog. Nothing belongs to them, so it should be frogs with no apostrophe." },
+      why: "The error is in \"Three frog's sat on a log.\" Frogs just means more than one frog. Nothing belongs to them, so it should be frogs with no apostrophe." },
     { id: "SK-GUM3-1-P5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO sentences that use apostrophes correctly.",
       choices: [
@@ -106,7 +106,7 @@ PP.addLesson({
       text: "We {0} go outside until we feed {1} cat.",
       slots: [
         { options: ["cant", "can't", "ca'nt"], answer: 1 },
-        { options: ["Amaras", "Amaras'", "Amara's"], answer: 2 }
+        { options: ["Amaras", "Amara", "Amara's"], answer: 2 }
       ],
       clue: "The first blank is a short way to say two words. The second blank tells who the cat belongs to.",
       why: "The answers are can't and Amara's. Can't is short for cannot, and the apostrophe stands where the n and o were left out. Amara's shows that the cat belongs to Amara, one person, so the 's goes right after her name." },
@@ -128,7 +128,7 @@ PP.addLesson({
         { text: "wo'nt" },
         { text: "wont" }
       ],
-      clue: "This is one of the contractions that changes more than just dropping letters. The apostrophe still goes where the o in not was.",
+      clue: "Say will not fast, the way you talk. Which word do you hear? Then check where the apostrophe goes.",
       why: "The answer is won't. Will not changes to won't. The apostrophe takes the place of the o in not, so it sits between n and t." },
     { id: "SK-GUM3-1-T4", type: "hottext", points: 2, dok: 2, passages: [],
       prompt: "Select the TWO sentences that have an error.",
@@ -163,7 +163,7 @@ PP.addLesson({
     big: "Most nouns add -s to mean more than one, but some special nouns change their spelling or stay the same.",
     points: [
       "A plural noun names more than one: one cat, two cats.",
-      "Some nouns change the letters inside: man becomes men, foot becomes feet, tooth becomes teeth, mouse becomes mice, and goose becomes geese.",
+      "Some nouns change their spelling: man becomes men, foot becomes feet, tooth becomes teeth, mouse becomes mice, and goose becomes geese.",
       "Some nouns change in other ways: child becomes children, person becomes people, and ox becomes oxen.",
       "A few nouns stay the same: one sheep, ten sheep; one deer, two deer.",
       "Never add -s to a special plural. Childrens, feets and mices are not words."
@@ -249,7 +249,7 @@ PP.addLesson({
         { options: ["childs", "children", "childrens"], answer: 1 },
         { options: ["mouses", "mice", "mices"], answer: 1 }
       ],
-      clue: "Both blanks need a word for more than one. Neither word adds -s.",
+      clue: "Both blanks need a word for more than one. Child and mouse are special nouns. Say \"one ___, two ___\" for each.",
       why: "The answers are children and mice. One child, many children. One mouse, two mice. Childrens and mices add an extra -s that does not belong." }
   ],
   test: [
@@ -283,15 +283,15 @@ PP.addLesson({
       why: "The answer is feet. One foot, two feet." },
     { id: "SK-GUM3-2-T4", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each noun to its plural.",
-      cols: ["men", "teeth", "children", "mice"],
+      cols: ["geese", "people", "oxen", "moose"],
       rows: [
-        { text: "man", answer: 0 },
-        { text: "tooth", answer: 1 },
-        { text: "child", answer: 2 },
-        { text: "mouse", answer: 3 }
+        { text: "goose", answer: 0 },
+        { text: "person", answer: 1 },
+        { text: "ox", answer: 2 },
+        { text: "moose", answer: 3 }
       ],
       clue: "Say \"one ___, two ___\" for each word. Listen for the plural that sounds right.",
-      why: "One man, two men. One tooth, two teeth. One child, two children. One mouse, two mice." },
+      why: "One goose, two geese. One person, two people. One ox, two oxen. One moose, two moose: moose stays the same." },
     { id: "SK-GUM3-2-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
       options: [
@@ -317,7 +317,7 @@ PP.addLesson({
       "Most verbs add -ed: jump becomes jumped, and play becomes played.",
       "Irregular verbs change their spelling instead: run becomes ran, eat becomes ate, see becomes saw, and catch becomes caught.",
       "Never add -ed to an irregular verb. Goed, runned and eated are not words.",
-      "Time words like yesterday, last week and this morning tell you to use the past tense."
+      "Time words like yesterday, last week and last night tell you to use the past tense."
     ],
     words: [
       { term: "past tense", means: "a verb form that tells what already happened" },
@@ -346,7 +346,7 @@ PP.addLesson({
       ask: "This sentence has a verb error. How do you fix it?",
       steps: [
         "Find the time word: yesterday. The action already happened.",
-        "Find the verb: bring. It tells about now, not the past.",
+        "Find the verb: bring. Bring is not a past-tense word.",
         "Bring is irregular. Its past tense is brought, not bringed."
       ],
       answer: "Yesterday, Mateo brought his kite to the beach on Tybee Island."
@@ -510,7 +510,7 @@ PP.addLesson({
       prompt: "Choose the joining word that makes the most sense.",
       text: "The sky was dark and cloudy, {0} we brought our umbrellas.",
       slots: [{ options: ["but", "or", "so"], answer: 2 }],
-      clue: "Why did they bring umbrellas? Look for the joining word that tells a result.",
+      clue: "Why did they bring umbrellas? Read both parts and think about how they connect.",
       why: "The answer is so. The dark clouds are the reason they brought umbrellas. So tells what happened because of something." },
     { id: "SK-GUM3-4-P2", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the joining word that makes the most sense.",
@@ -527,7 +527,7 @@ PP.addLesson({
         { text: "can" },
         { text: "walk" }
       ],
-      clue: "Think of FANBOYS. Which word from that list is in the sentence?",
+      clue: "Find the word that links the two things you could do. Cover it and see if the two parts are still connected.",
       why: "The answer is or. Or is a joining word that gives a choice: ride bikes to the park, or walk to the library." },
     { id: "SK-GUM3-4-P4", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each joining word to its job.",
@@ -557,7 +557,7 @@ PP.addLesson({
       prompt: "Choose the joining word that makes the most sense.",
       text: "Should we walk to the park, {0} should we ride our bikes?",
       slots: [{ options: ["or", "so", "but"], answer: 0 }],
-      clue: "The sentence asks you to pick between two things. Which joining word gives a choice?",
+      clue: "Read the whole sentence. What is it asking you to do?",
       why: "The answer is or. The question asks which of two things to do, and or gives a choice." },
     { id: "SK-GUM3-4-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses but correctly?",
@@ -593,15 +593,15 @@ PP.addLesson({
       clue: "Cover the joining word. Look at what is on each side. Is it one word, a few words, or a whole sentence that could stand alone?",
       why: "Cats and dogs and salt or pepper join two single words. Under the bed or behind the door joins two groups of words. The bell rang, and we went inside joins two complete sentences." },
     { id: "SK-GUM3-4-T5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which joining word best completes the sentence?",
-      stem: "The puppy was very tired, ____ it took a long nap.",
+      prompt: "Which sentence makes the most sense?",
       choices: [
-        { text: "so", correct: true },
-        { text: "or" },
-        { text: "but" }
+        { text: "The puppy was very tired, so it took a long nap.", correct: true },
+        { text: "The puppy was very tired, but it took a long nap." },
+        { text: "The puppy was very tired, or it took a long nap." },
+        { text: "The puppy was wide awake, so it took a long nap." }
       ],
-      clue: "Ask why the puppy took a nap. Which joining word tells a result?",
-      why: "The answer is so. The puppy took a nap because it was tired. So tells what happened because of something." }
+      clue: "Read each sentence and ask: Does the second part really go with the first part? Why would a puppy take a nap?",
+      why: "The answer is \"The puppy was very tired, so it took a long nap.\" The puppy took a nap because it was tired, and so tells what happened because of something. But would mean the nap was a surprise, or would mean a choice, and a wide-awake puppy is not a reason to nap." }
   ]
 });
 
@@ -669,7 +669,7 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "The choir {0} at our school every spring.",
       slots: [{ options: ["sing", "sings", "singing"], answer: 1 }],
-      clue: "A choir is one group. Would you say \"the group sing\" or \"the group sings\"?",
+      clue: "Is a choir one group or many separate things? Think about which verb goes with that.",
       why: "The answer is sings. Choir is a collective noun. The group sings together as one, so it takes the verb for one: sings." },
     { id: "SK-GUM3-5-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Is each noun a group noun or an idea noun? Match each to the right column.",
@@ -709,20 +709,20 @@ PP.addLesson({
   test: [
     { id: "SK-GUM3-5-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in the sentence is an abstract noun?",
-      stem: "Lena never lost hope that her cat would come home.",
+      stem: "Lena never lost hope that her cat would come back.",
       choices: [
         { text: "hope", correct: true },
         { text: "cat" },
-        { text: "home" },
+        { text: "lost" },
         { text: "Lena" }
       ],
       clue: "Which word names something you cannot see, hear or touch?",
-      why: "The answer is hope. Hope is a feeling, so it is an abstract noun. Lena, her cat and her home can all be seen." },
+      why: "The answer is hope. Hope is a feeling, so it is an abstract noun. Lena and her cat can be seen, and lost is a verb." },
     { id: "SK-GUM3-5-T2", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "The flock {0} over our pond every fall.",
       slots: [{ options: ["fly", "flies", "flying"], answer: 1 }],
-      clue: "A flock is one group. Would you say \"it fly\" or \"it flies\"?",
+      clue: "Is a flock one group or many separate things? Think about which verb goes with that.",
       why: "The answer is flies. Flock is a collective noun. The whole group moves together as one, so it takes the verb for one: flies." },
     { id: "SK-GUM3-5-T3", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO words that are abstract nouns.",
@@ -770,8 +770,8 @@ PP.addLesson({
     points: [
       "The reflexive pronouns are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves.",
       "Use one when the person doing the action is also the one it happens to: I see myself in the mirror.",
-      "Match the pronoun to the word it points back to: Ben, himself; the girls, themselves; we, ourselves.",
-      "One person or thing ends in -self. More than one ends in -selves.",
+      "Match the pronoun to the word it points back to. One person or thing ends in -self (Ben, himself). More than one ends in -selves (the girls, themselves; we, ourselves).",
+      "You can also use a -self word after by to mean alone (I did it by myself), or to show someone did it with no help (They cleaned it themselves).",
       "Hisself and theirselves are not correct words. Also, do not use myself in place of I or me: say \"Dad and I went,\" not \"Dad and myself went.\""
     ],
     words: [
@@ -886,7 +886,7 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "The players gave {0} a big cheer after the game.",
       slots: [{ options: ["themselves", "theirselves", "himself"], answer: 0 }],
-      clue: "The players are more than one. Which real word ends in -selves?",
+      clue: "Who gave the cheer? Count how many, and check that the word you pick is a real word.",
       why: "The answer is themselves. The players are more than one, so the word ends in -selves. Theirselves is not a correct word." },
     { id: "SK-GUM3-6-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO sentences that use pronouns correctly.",
@@ -965,13 +965,13 @@ PP.addLesson({
     { id: "SK-GUM3-7-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence uses a comma correctly?",
       choices: [
-        { text: "We wanted to swim, but the pool was closed.", correct: true },
-        { text: "We wanted to swim but, the pool was closed." },
-        { text: "We wanted, to swim but the pool was closed." },
-        { text: "We wanted to swim but the pool, was closed." }
+        { text: "Jada wanted to bake cookies, but we had no eggs.", correct: true },
+        { text: "Jada wanted to bake cookies but, we had no eggs." },
+        { text: "Jada wanted, to bake cookies but we had no eggs." },
+        { text: "Jada wanted to bake cookies but we had, no eggs." }
       ],
       clue: "Find the joining word. Where does the comma belong when it joins two complete sentences?",
-      why: "The answer is \"We wanted to swim, but the pool was closed.\" Both sides are complete sentences, so the comma goes right before but, never after it." },
+      why: "The answer is \"Jada wanted to bake cookies, but we had no eggs.\" Both sides are complete sentences, so the comma goes right before but, never after it." },
     { id: "SK-GUM3-7-P2", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that needs a comma.",
       options: [
@@ -995,7 +995,7 @@ PP.addLesson({
       clue: "Cover the joining word. Is the part after it a whole sentence with its own naming part?",
       why: "\"Ava found a shell and she gave it to her mom\" and \"The dog barked but nobody came to the door\" each join two complete sentences, so they need a comma. \"Gave it to her mom\" and \"not salad\" are not sentences, so those two need no comma." },
     { id: "SK-GUM3-7-P4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
-      prompt: "Choose the TWO sentences that use commas correctly.",
+      prompt: "Choose the TWO sentences that are punctuated correctly.",
       choices: [
         { text: "The sun came out, so we hung the wet towels outside.", correct: true },
         { text: "Yusuf can sing and play the guitar.", correct: true },
@@ -1082,33 +1082,44 @@ PP.addLesson({
   teach: {
     big: "When a long word does not fit at the end of a line, you can split it between two syllables and put a hyphen (-) at the end of the line.",
     points: [
-      "A hyphen is a short line (-). At the end of a line, it shows that the word keeps going on the next line.",
-      "Only split a word between its syllables, the beats you hear when you clap it: gar-den, pen-cil.",
-      "The hyphen goes at the end of the first line, not at the start of the next line.",
-      "Never split a word that has only one syllable, like school or bright. Move the whole word to the next line instead.",
-      "In some questions, a | mark shows where the first line ends: gar- | den."
+      "A hyphen is a short line (-). It goes at the end of the first line, never at the start of the next line, and it shows that the word keeps going.",
+      "Clap the word to count its syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead.",
+      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil.",
+      "When the same consonant comes twice in the middle, split between the two letters: hap-py, bub-ble.",
+      "When a word is made of two smaller words, split between the two words: sun-set, cup-cake."
     ],
     words: [
       { term: "hyphen", means: "a short line (-) that joins or splits words" },
-      { term: "syllable", means: "one beat in a word, like the two beats in pen-cil" }
+      { term: "syllable", means: "one beat in a word, like the two beats in pen-cil" },
+      { term: "consonant", means: "any letter that is not a vowel (a, e, i, o, u)" }
     ],
     example: {
       label: "Example",
       lines: ["Yesterday we planted seeds in the gar-", "den behind our school."],
-      note: "Garden has two beats: gar-den. The word is split between the beats, and the hyphen goes at the end of the first line, right after gar."
+      note: "Garden has two beats. The two consonants r and d sit in the middle, so the split goes between them: gar-den. The hyphen ends the first line, right after gar."
     },
-    tip: "The test may show a word broken across two lines and ask if it is split correctly. Clap the word. The break must fall between two beats, and the hyphen must end the first line."
+    tip: "The test may show a word broken across two lines and ask if it is split correctly. First clap it. Then look at the letters in the middle and use the rules. In some questions, a | mark shows where the first line ends: gar- | den."
   },
   learn: [
     {
-      show: ["Rosa found a tiny tur-", "tle near the creek."],
-      ask: "Is the word turtle split correctly?",
+      show: ["Andre opened the win-", "dow to let in the breeze."],
+      ask: "Is the word window split correctly?",
       steps: [
-        "Find the broken word: tur- ends the first line, and tle starts the next.",
-        "Clap turtle: tur-tle. It has two beats.",
-        "Check the split. It falls between the beats, and the hyphen is at the end of the first line."
+        "Clap window: two beats, so it can be split.",
+        "Look at the middle letters: n and d are two different consonants between the vowels i and o.",
+        "The rule says split between them: win-dow. The hyphen is at the end of the first line, so the split is correct."
       ],
-      answer: "Yes. Turtle is split correctly, between its syllables tur and tle."
+      answer: "Yes. Window is split correctly, between the consonants n and d."
+    },
+    {
+      show: ["I lost my red mi-", "tten on the bus."],
+      ask: "Is the word mitten split correctly?",
+      steps: [
+        "Clap mitten: two beats, so it can be split.",
+        "Look at the middle letters: the same consonant, t, comes twice.",
+        "The rule says split between the two t's: mit-ten. This split comes too early."
+      ],
+      answer: "No. Mitten should be split between the two t's: mit- on the first line and ten on the next."
     },
     {
       show: ["We walked to the scho-", "ol in the rain."],
@@ -1121,70 +1132,71 @@ PP.addLesson({
       answer: "No. School has only one syllable, so it should not be split. Write the whole word on the next line."
     }
   ],
-  parent: "Clap out long words together, like wa-ter-mel-on or bas-ket-ball. Then write one on paper, split it at a clap with a hyphen at the end of the line, and let your child check your work.",
+  parent: "Write long words like sandwich, puppy and sunflower on paper. Ask your child to clap each one, then draw a line where it could be split and say which rule they used.",
   passages: [],
   practice: [
     { id: "SK-GUM3-8-P1", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Look at how the word pumpkin is split. Is it split correctly?",
-      stem: ["Our class grew a pump-", "kin in the school garden."],
+      prompt: "Look at how the word doctor is split. Is it split correctly?",
+      stem: ["My little brother went to the doc-", "tor for a checkup."],
       choices: [
-        { text: "Yes, because it is split between the syllables pump and kin.", correct: true },
+        { text: "Yes, because it is split between the consonants c and t.", correct: true },
         { text: "No, because the hyphen should go at the start of the next line." },
-        { text: "No, because pumpkin has only one syllable and cannot be split." },
-        { text: "No, because it should be split between the letters pu and mpkin." }
+        { text: "No, because doctor has only one syllable and cannot be split." },
+        { text: "No, because it should be split between the letters do and ctor." }
       ],
-      clue: "Clap the word pumpkin. Count the beats. Then check where the hyphen sits.",
-      why: "The answer is \"Yes, because it is split between the syllables pump and kin.\" Pumpkin has two beats, pump-kin. The split falls between them, and the hyphen is at the end of the first line." },
+      clue: "Clap the word. Then look at the letters in the middle and at where the hyphen sits.",
+      why: "The answer is \"Yes, because it is split between the consonants c and t.\" Doctor has two beats, and c and t are two different consonants between vowels, so the split goes between them. The hyphen is at the end of the first line, where it belongs." },
     { id: "SK-GUM3-8-P2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word could be split with a hyphen at the end of a line?",
       choices: [
-        { text: "window", correct: true },
+        { text: "carpet", correct: true },
         { text: "school" },
         { text: "bright" },
         { text: "friend" }
       ],
       clue: "Clap each word. A word can only be split if it has more than one beat.",
-      why: "The answer is window. It has two syllables, win-dow, so it can be split between them. School, bright and friend each have only one syllable, so they can never be split." },
+      why: "The answer is carpet. It has two syllables, car-pet, so it can be split between the consonants r and p. School, bright and friend each have only one syllable, so they can never be split." },
     { id: "SK-GUM3-8-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Each word was split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
       cols: ["Correct", "Not correct"],
       rows: [
-        { text: "rab- | bit", answer: 0 },
-        { text: "wi- | ndow", answer: 1 },
-        { text: "sis- | ter", answer: 0 },
-        { text: "bri- | ght", answer: 1 }
+        { text: "muf- | fin", answer: 0 },
+        { text: "wi- | nter", answer: 1 },
+        { text: "sum- | mer", answer: 0 },
+        { text: "brig- | ht", answer: 1 }
       ],
-      clue: "Clap each word. Does the break fall between two beats? Remember that a one-beat word is never split.",
-      why: "Rab-bit and sis-ter are split between their syllables, so they are correct. Window should be split as win- | dow. Bright has only one syllable, so it should not be split at all." },
+      clue: "Clap each word first. Then look for two consonants or a double letter in the middle.",
+      why: "Muf- | fin and sum- | mer are split between double letters, so they are correct. Winter has the consonants n and t in the middle, so it should be win- | ter. Bright has only one syllable, so it should not be split at all." },
     { id: "SK-GUM3-8-P4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "The | mark shows where the first line ends. Choose the TWO words that are split correctly.",
       choices: [
         { text: "bas- | ket", correct: true },
-        { text: "doc- | tor", correct: true },
-        { text: "gard- | en" },
-        { text: "mo- | nkey" },
+        { text: "pop- | corn", correct: true },
+        { text: "le- | tter" },
+        { text: "monk- | ey" },
         { text: "jum- | p" }
       ],
-      clue: "Clap each word slowly. The break must fall exactly between two beats.",
-      why: "The answers are bas- | ket and doc- | tor. Each is split between its two syllables. Garden should be gar- | den, monkey should be mon- | key, and jump has only one syllable, so it should not be split." },
+      clue: "Clap each word. Then use the rules: two consonants, a double letter, or two small words.",
+      why: "The answers are bas- | ket and pop- | corn. Basket splits between the consonants s and k. Popcorn is made of pop and corn, so it splits between the two words. Letter should be let- | ter (between the double t), monkey should be mon- | key (between n and k), and jump has only one syllable, so it should not be split." },
     { id: "SK-GUM3-8-P5", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "The word birthday will not fit at the end of a line. The | mark shows where the line ends. Choose the correct way to split it.",
       text: "Split it like this: {0}",
       slots: [{ options: ["bir- | thday", "birth- | day", "birthd- | ay"], answer: 1 }],
-      clue: "Clap birthday. Where does the first beat end?",
-      why: "The answer is birth- | day. Birthday has two syllables, birth and day, so the break goes between them." }
+      clue: "Look for two smaller words inside birthday.",
+      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them." }
   ],
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Three words are split at the ends of lines. Which word is split correctly?",
-      stem: ["On Saturday we walked to the mark-", "et and bought a bas-", "ket of peaches and some ho-", "ney for Grandma."],
+      prompt: "Four words are split at the ends of lines. Which word is split correctly?",
+      stem: ["On Saturday we had a pic-", "nic by the lake. Dad set up a la-", "dder to hang the silv-", "er lights. Each plate had a napk-", "in on it."],
       choices: [
-        { text: "basket", correct: true },
-        { text: "market" },
-        { text: "honey" }
+        { text: "picnic", correct: true },
+        { text: "ladder" },
+        { text: "silver" },
+        { text: "napkin" }
       ],
-      clue: "Clap each split word. Check whether each break falls between two beats.",
-      why: "The answer is basket. It is split as bas- and ket, between its syllables. Market should be split as mar- and ket, and honey should be split as hon- and ey." },
+      clue: "Look at the letters in the middle of each split word. Is each break exactly between two consonants or between double letters?",
+      why: "The answer is picnic. It is split between the consonants c and n: pic-nic. Ladder should be lad-der (between the double d), silver should be sil-ver (between l and v), and napkin should be nap-kin (between p and k)." },
     { id: "SK-GUM3-8-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "The word butterfly is split at the end of the first line. The | mark shows where a line ends. Which is another correct way to split it?",
       stem: ["The puppy chased a butter-", "fly across the yard."],
@@ -1194,30 +1206,30 @@ PP.addLesson({
         { text: "bu- | tterfly" },
         { text: "butterf- | ly" }
       ],
-      clue: "Clap butterfly. It has three beats. A break can fall between any two of them.",
-      why: "The answer is but- | terfly. Butterfly has three syllables, but-ter-fly, so it can be split after but or after butter. The other splits break a syllable apart." },
+      clue: "Butterfly has a double letter in it. It is also made of two smaller words. Which split follows a rule?",
+      why: "The answer is but- | terfly. Butterfly has a double t, and the rule says to split between the two t's. (The split in the passage, butter- | fly, is also correct, because it falls between the two smaller words butter and fly.) The other splits do not follow any rule." },
     { id: "SK-GUM3-8-T3", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO words that should never be split at the end of a line.",
       choices: [
         { text: "night", correct: true },
         { text: "clown", correct: true },
-        { text: "napkin" },
-        { text: "turtle" },
-        { text: "popcorn" }
+        { text: "hammer" },
+        { text: "candy" },
+        { text: "marble" }
       ],
       clue: "Clap each word. Which ones have only one beat?",
-      why: "The answers are night and clown. Each has only one syllable, so it can never be split. Napkin (nap-kin), turtle (tur-tle) and popcorn (pop-corn) each have two syllables." },
+      why: "The answers are night and clown. Each has only one syllable, so it can never be split. Hammer (ham-mer), candy (can-dy) and marble (mar-ble) each have two syllables." },
     { id: "SK-GUM3-8-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Each word was split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
       cols: ["Correct", "Not correct"],
       rows: [
-        { text: "won- | derful", answer: 0 },
+        { text: "hel- | met", answer: 0 },
         { text: "kit- | ten", answer: 0 },
-        { text: "yesterd- | ay", answer: 1 },
-        { text: "hu- | ngry", answer: 1 }
+        { text: "pi- | llow", answer: 1 },
+        { text: "cact- | us", answer: 1 }
       ],
-      clue: "Clap each word. Does each break fall exactly between two beats?",
-      why: "Won- | derful and kit- | ten are split between syllables, so they are correct. Yesterday should be split as yes- | terday or yester- | day, and hungry should be split as hun- | gry." },
+      clue: "Look at the middle of each word. Is the break exactly between two consonants or between double letters?",
+      why: "Hel- | met splits between the consonants l and m, and kit- | ten splits between the double t, so both are correct. Pillow should be pil- | low (between the double l), and cactus should be cac- | tus (between c and t)." },
     { id: "SK-GUM3-8-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "A student split the word rainbow at the end of a line. What is wrong?",
       stem: ["Grandpa and I watched the rain", "-bow over the lake."],
@@ -1227,7 +1239,7 @@ PP.addLesson({
         { text: "The word should be split between rai and nbow." },
         { text: "A hyphen should never be used to split a word." }
       ],
-      clue: "Clap rainbow and check where the break falls. Then look at where the hyphen was placed.",
-      why: "The answer is \"The hyphen should be at the end of the first line.\" Rainbow is split in the right place, between rain and bow, but the hyphen was put at the start of the next line. It should read rain- on the first line and bow on the next." }
+      clue: "Check where the word is split. Then look at where the hyphen was placed.",
+      why: "The answer is \"The hyphen should be at the end of the first line.\" Rainbow is split in the right place, between the two smaller words rain and bow, but the hyphen was put at the start of the next line. It should read rain- on the first line and bow on the next." }
   ]
 });

@@ -608,11 +608,11 @@ PP.addLesson({
   teach: {
     big: "The narrator is the voice telling the story. The narrator has a point of view, and I can have a different one.",
     points: [
-      "In first person, the narrator is a character in the story. Look for I, me, my and we.",
-      "In third person, the narrator is outside the story. Look for he, she, they and the characters' names.",
-      "A narrator's point of view is how the narrator thinks and feels about what happens.",
+      "A narrator's point of view is how the narrator thinks and feels about what happens. In a poem, the voice is called the speaker, and the speaker has a point of view too.",
+      "Find the narrator's feeling words, like boring, ruined or the best. They tell you the narrator's view.",
       "You, the reader, may see things differently. Look at what actually happens, not only at what the narrator says.",
-      "Ask: How does the narrator feel? How do I feel? Why might they be different?"
+      "If the narrator says I or we about themself, outside of quotation marks, the story is in first person. The narrator is a character.",
+      "If the narrator never says I about themself and tells about the characters by name or with he, she and they, the story is in third person."
     ],
     words: [
       { term: "narrator", means: "the voice that tells the story" },
@@ -621,14 +621,11 @@ PP.addLesson({
       { term: "third person", means: "told by someone outside the story, using he, she and they" }
     ],
     example: {
-      label: "Same event, two points of view",
-      lines: [
-        "First person: I spilled the paint, and my face turned red.",
-        "Third person: Ana spilled the paint, and her face turned red."
-      ],
-      note: "In the first sentence, the narrator is the one who spilled the paint, so the words I and my are used. In the second, someone outside the story tells about Ana."
+      label: "The narrator's view and what really happens",
+      lines: ["I had to sit next to the new kid at lunch. Great. He gave me half of his cookie and told the funniest joke I have ever heard. Still, I did not want to sit there."],
+      note: "The narrator says \"Great\" in a grumpy way and did not want to sit there. But the new kid shares and is funny. A reader might think it was a good lunch, even though the narrator does not say so."
     },
-    tip: "On the test, you may be asked who is telling the story, how the narrator feels, or which detail might make a reader feel differently. Find the narrator's feeling words, then check what really happens."
+    tip: "On the test, you may be asked how the narrator feels, which detail might make a reader feel differently, or who is telling the story. Find the narrator's feeling words, then check what really happens."
   },
   learn: [
     {
@@ -680,7 +677,7 @@ PP.addLesson({
         { text: "Mom" },
         { text: "someone outside the story" }
       ],
-      clue: "Look for I and my in paragraph 1. Who says \"my little brother, Dev\"?",
+      clue: "Look for I and my in paragraph 1. Then look at what Dev calls the narrator at the end.",
       why: "The answer is Dev's big sister. The narrator says \"my little brother, Dev,\" and Dev calls her \"Sis\" at the end. She uses I and my, so the narrator is a character in the story. It is told in first person." },
     { id: "SK-TC2a-P2", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Which two sentences show how the narrator feels about Dev at the start of the story? Choose two sentences.",
@@ -715,8 +712,8 @@ PP.addLesson({
         { text: "We sang all the way to Savannah.", answer: 0 },
         { text: "They sang all the way to Savannah.", answer: 1 }
       ],
-      clue: "I, my and we mean the teller is in the story. Names, he, his and they mean someone outside is telling about others.",
-      why: "\"I packed my bag\" and \"We sang\" are first person because the teller is part of the action. \"Carlos packed his bag\" and \"They sang\" are third person because someone outside is telling about others." },
+      clue: "Does the teller say I or we about themself? If not, the teller is only telling about other people.",
+      why: "\"I packed my bag\" and \"We sang\" are first person because the teller says I and we and is part of the action. \"Carlos packed his bag\" and \"They sang\" are third person because the teller does not say I or we and only tells about others." },
     { id: "SK-TC2a-P5", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "How does the narrator's view change by the end of the story?",
       choices: [
@@ -725,7 +722,7 @@ PP.addLesson({
         { text: "She thinks the yard sale was a waste of time." },
         { text: "She still thinks Dev ruined everything." }
       ],
-      clue: "Compare paragraph 1 with the last sentence. What does the narrator admit at the end?",
+      clue: "Compare paragraph 1 with paragraph 5. What does the narrator admit at the end?",
       why: "The answer is \"She starts to see that Dev's talking helped.\" At the start, she thinks he will ruin everything. At the end, she quietly says, \"I guess talking to people helps.\"" }
   ],
   test: [
@@ -761,8 +758,8 @@ PP.addLesson({
       prompt: "Which detail might make a reader see the morning differently from the narrator?",
       choices: [
         { text: "Grandpa shares cocoa and stories about his own father.", correct: true },
-        { text: "The narrator yawns while Grandpa smiles at a bird." },
-        { text: "The narrator would rather be home sleeping." },
+        { text: "The narrator yawns and wishes to be back in bed." },
+        { text: "The narrator does not care about catching fish." },
         { text: "The boat sits still while they wait for fish." }
       ],
       clue: "The narrator says the morning is boring. Look for a detail that a reader might think is special or kind.",
@@ -773,16 +770,18 @@ PP.addLesson({
       answer: ["p2:5:4"], pick: 1,
       clue: "Look for a sentence where the narrator tells a new feeling, not just what happens.",
       why: "The answer is \"Okay, maybe the morning was a little bit fun.\" Before this, the narrator calls it the most boring morning ever. Now the narrator admits it was a little fun." },
-    { id: "SK-TC2a-T5", type: "dropdown", points: 2, dok: 2, passages: [],
-      stem: "She opened the gate and stepped into the garden.",
-      prompt: "Read the sentence. Choose the words that best complete the sentences below.",
-      text: "This sentence is told in {0}. If the girl were telling it herself, it would begin {1}.",
-      slots: [
-        { options: ["third person", "first person", "a poem"], answer: 0 },
-        { options: ["\"I opened the gate\"", "\"He opened the gate\"", "\"They opened the gate\""], answer: 0 }
+    { id: "SK-TC2a-T5", type: "ms", points: 2, dok: 3, passages: [], pick: 2,
+      stem: "Our class hike was ruined. It rained the whole time, and mud splashed up to my knees. Then Jada and I found a tiny orange salamander under a log. Everyone crowded around to see it. On the way back, we raced to the bus, laughing and dripping.",
+      prompt: "The narrator says the hike was ruined. Which two details might make a reader think the hike was fun? Pick two.",
+      choices: [
+        { text: "Jada and the narrator find a tiny salamander under a log.", correct: true },
+        { text: "The class races to the bus, laughing and dripping.", correct: true },
+        { text: "It rains during the whole hike." },
+        { text: "Mud splashes up to the narrator's knees." },
+        { text: "The narrator calls the hike ruined." }
       ],
-      clue: "Look at the first word. Does it show the teller is in the story or outside it? What word does a teller use for herself?",
-      why: "The answers are \"third person\" and \"I opened the gate.\" The word She shows someone outside is telling about the girl. If the girl told it herself, she would use I." }
+      clue: "Skip what the narrator says about the hike. Look at what the children actually do and how they act.",
+      why: "The answers are finding the salamander and racing to the bus while laughing. Everyone crowds around the salamander, and the children laugh on the way back. A reader might think the hike was fun, even though the narrator calls it ruined. Rain and mud are the reasons the narrator feels that way." }
   ]
 });
 
@@ -794,8 +793,8 @@ PP.addLesson({
     points: [
       "Look for clues about context: a date, a place, the writer's name, or a note in a box.",
       "The time period matters. Long ago, many things were different, like lights, travel and how people got news.",
-      "Who wrote it matters. A child, a scientist and a park ranger see things in different ways.",
-      "The situation matters. What was happening when the writer wrote it?",
+      "Who wrote it and what was happening matter too. A child, a scientist and a park ranger see things in different ways.",
+      "A real letter or diary was written at the time it shows. Historical fiction is written today but pretends to be written long ago. Use the date and any note in a box to learn its pretend time and place.",
       "Ask: How does knowing this help me understand the text?"
     ],
     words: [
@@ -807,7 +806,7 @@ PP.addLesson({
       label: "A note with context",
       lines: [
         "January 29, 2014, Atlanta, Georgia",
-        "Dear Grandpa, School is closed again! Snow and ice cover the roads, and almost nobody can drive. We built a tiny snowman."
+        "Dear Grandpa, School is closed today! Snow and ice cover the roads, and almost nobody can drive. We built a tiny snowman."
       ],
       note: "Snow is rare in Atlanta, so a storm like this is big news there. The date and place explain why the writer is so excited and why the roads are a problem."
     },
@@ -839,7 +838,7 @@ PP.addLesson({
   passages: [
     { id: "p1", title: "A Letter from the Farm", genre: "Historical fiction (letter)",
       paragraphs: [
-        ["Box: This letter is historical fiction.", "It is made up, but it shows what life was like on many Georgia farms in 1928.", "Back then, most farm families did not have electricity."],
+        ["Box: This letter is historical fiction.", "Imagine that a girl on a Georgia farm wrote it long ago, on the date at the top.", "Back then, most farm families did not have electricity."],
         ["## March 3, 1928"],
         ["Dear Cousin Hattie,"],
         ["Thank you for the book you sent for my birthday.", "I read it every night by the light of our oil lamp.", "Papa says I will hurt my eyes, but I cannot stop reading."],
@@ -849,7 +848,7 @@ PP.addLesson({
       ] },
     { id: "p2", title: "Our First Television", genre: "Historical fiction (diary)",
       paragraphs: [
-        ["Box: This diary entry is historical fiction.", "It shows what life was like for many families in the 1950s.", "Back then, television was new, and many families did not have one yet."],
+        ["Box: This diary entry is historical fiction.", "Imagine that a child wrote it in the 1950s, on the date at the top.", "Back then, television was new, and many families did not have one yet."],
         ["## Saturday, October 9, 1954"],
         ["Dear Diary,"],
         ["Today was the best day ever!", "Daddy came home with our very first television set.", "It is a big wooden box with a small screen."],
@@ -860,7 +859,7 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-TC2c-P1", type: "mc", points: 1, dok: 1, passages: ["p1"],
-      prompt: "When was this letter written?",
+      prompt: "When did Ella write this letter?",
       choices: [
         { text: "in March 1928", correct: true },
         { text: "in the summer of 1928" },
@@ -909,7 +908,7 @@ PP.addLesson({
       clue: "Think about what Ella does not have on her farm. Then find what Hattie has in the city.",
       why: "Part A: Hattie lives in a city with electric lights and streetcars. Part B: \"You wrote that your house has electric lights and that you can ride a streetcar downtown.\" In 1928, Ella's farm had no electricity, so city lights seemed special to her." },
     { id: "SK-TC2c-P5", type: "mc", points: 1, dok: 3, passages: ["p1"],
-      prompt: "Why does it help to know this letter is set in 1928?",
+      prompt: "Why does it help to know Ella wrote this letter in 1928?",
       choices: [
         { text: "It explains why things that seem normal today were special to Ella.", correct: true },
         { text: "It tells the reader exactly how old Cousin Hattie is." },
@@ -922,7 +921,7 @@ PP.addLesson({
   test: [
     { id: "SK-TC2c-T1", type: "dropdown", points: 2, dok: 1, passages: ["p2"],
       prompt: "Choose the words that best complete the sentence.",
-      text: "This diary entry is set in {0}, in the city of {1}.",
+      text: "The writer wrote this diary entry in {0}, in the city of {1}.",
       slots: [
         { options: ["1954", "1928", "2024"], answer: 0 },
         { options: ["Macon", "Atlanta", "Savannah"], answer: 0 }
@@ -972,11 +971,11 @@ PP.addLesson({
       cols: ["The diary in 1954", "Life today"],
       rows: [
         { text: "A new TV is so special that neighbors come to watch.", answer: 0 },
-        { text: "The TV picture is only gray, black and white.", answer: 0 },
+        { text: "There are only a few channels to choose from.", answer: 0 },
         { text: "Most TVs show pictures in full color.", answer: 1 },
         { text: "Many people watch shows on phones and tablets.", answer: 1 }
       ],
       clue: "Ask of each detail: Is it in the diary? If not, is it something you see now?",
-      why: "Neighbors coming to see a new TV and a gray, black and white picture are details from the 1954 diary. Full-color TVs and watching shows on phones and tablets are part of life today." }
+      why: "Neighbors coming to see a new TV and having only a few channels are details from the 1954 diary. Full-color TVs and watching shows on phones and tablets are part of life today." }
   ]
 });

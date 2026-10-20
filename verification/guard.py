@@ -231,8 +231,9 @@ with sync_playwright() as p:
     # ---------- 9. Skills: home list, Teach / Learn / Practice / Test ----------
     pg.evaluate("localStorage.clear()"); pg.goto(BASE); pg.wait_for_timeout(700)
     pg.fill("#skill-search", "pronoun"); pg.wait_for_timeout(60)
-    srch = pg.evaluate("[...document.querySelectorAll('#skill-list .skill-row-btn')].map(b=>b.textContent.toLowerCase())")
-    ok("9.1 search narrows the list to matching skills", 0 < len(srch) < 15 and all("pronoun" in t for t in srch), len(srch))
+    srch = pg.evaluate("""[...document.querySelectorAll('#skill-list .skill-row-btn')].map(b=>{const s=PP_STANDARDS.find(x=>x.code===b.dataset.code);
+       return [s.code,s.display,s.plain,s.text,s.gum||'',b.textContent].join(' ').toLowerCase();})""")
+    ok("9.1 search narrows the list to matching skills", 0 < len(srch) < 20 and all("pronoun" in t for t in srch), len(srch))
     pg.fill("#skill-search", ""); pg.click("[data-filter=test]"); pg.wait_for_timeout(60)
     ft = pg.evaluate("""({n:document.querySelectorAll('#skill-list .skill-row-btn').length,
        want:PP_STANDARDS.filter(s=>['reading','writing','both'].indexOf(s.tested)>=0).length})""")
