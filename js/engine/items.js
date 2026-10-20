@@ -68,7 +68,7 @@
      its own sentences (options + 0-based answer indexes). */
   const hotTargets = it => it.options ? it.options.map((o, i) => "opt:" + i) : (it.targets || []);
   const hotAnswer = it => it.options ? it.answer.map(i => "opt:" + i) : it.answer;
-  const hotText = (it, set, ref) => /^opt:/.test(ref) ? it.options[Number(ref.slice(4))] : (sentenceAt(set, ref) || ref);
+  const hotText = (it, set, ref) => /^opt:/.test(ref) ? it.options[Number(ref.slice(4))] : String(sentenceAt(set, ref) || ref).replace(/^(Box|Caption): /, "");
   const hotLabel = (it, set, ref) => /^opt:/.test(ref) ? "Sentence " + (Number(ref.slice(4)) + 1) : visibleLabel(set, ref);
 
   const lbl = n => ["", "ONE", "TWO", "THREE", "FOUR"][n] || String(n);

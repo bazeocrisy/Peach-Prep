@@ -60,6 +60,7 @@
      numbered, so count body paragraphs only. Poems show stanza/line. */
   function isHeading(s) { return /^## /.test(s); }
   function isCaption(s) { return /^Caption: /.test(s); }
+  function isBox(s) { return /^Box: /.test(s); }
   function visibleLabel(set, ref) {
     const r = parseRef(ref);
     if (!r) return "";
@@ -72,16 +73,17 @@
     const first = paras[r.para - 1] && paras[r.para - 1][0];
     if (first && isHeading(first)) return pre + "heading";
     if (first && isCaption(first)) return pre + "caption";
+    if (first && isBox(first)) return pre + "text box";
     let n = 0;
     for (let i = 0; i < r.para; i++) {
       const f = paras[i] && paras[i][0];
-      if (f && !isHeading(f) && !isCaption(f)) n++;
+      if (f && !isHeading(f) && !isCaption(f) && !isBox(f)) n++;
     }
     return pre + "paragraph " + n;
   }
 
   window.PP = {
     addSet, sets, byId, addTask, tasks, taskById, make, clear, el, shuffled,
-    parseRef, passageOf, sentenceAt, visibleLabel, isHeading, isCaption
+    parseRef, passageOf, sentenceAt, visibleLabel, isHeading, isCaption, isBox
   };
 })();

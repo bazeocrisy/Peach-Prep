@@ -10,7 +10,7 @@
      question has Show me how (clue, narrowing, walk-through + answer). */
 (function () {
   "use strict";
-  const { make, clear, el, sentenceAt, visibleLabel, isHeading, isCaption } = PP;
+  const { make, clear, el, sentenceAt, visibleLabel, isHeading, isCaption, isBox } = PP;
   const T = window.PP_ITEMS;
 
   const run = { set: null, mode: "practice", pos: 0, ctxs: [], state: [], done: false };
@@ -47,6 +47,18 @@
           const first = para[0] || "";
           if (isHeading(first)) { art.appendChild(make("h4", "passage-heading", first.replace(/^## /, ""))); return; }
           if (isCaption(first)) { art.appendChild(make("p", "passage-caption", first.replace(/^Caption: /, ""))); return; }
+          if (isBox(first)) {
+            /* A text-box feature (e.g. "Did You Know?"): set apart, not numbered. */
+            const box = make("aside", "passage-box");
+            const body = make("p", "para-body");
+            para.forEach((sx, si) => {
+              const span = make("span", "sent", si === 0 ? sx.replace(/^Box: /, "") : sx);
+              span.dataset.ref = p.id + ":" + (k + 1) + ":" + (si + 1);
+              body.appendChild(span);
+              if (si < para.length - 1) body.appendChild(document.createTextNode(" "));
+            });
+            box.appendChild(body); art.appendChild(box); return;
+          }
           n++;
           const row = make("div", "para");
           row.appendChild(make("span", "para-no", String(n)));

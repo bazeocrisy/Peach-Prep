@@ -7,8 +7,8 @@
  * The child sees numbers only on body paragraphs, so prompts that say "paragraph N" use the
  * child-visible number. Map for this passage:
  *   array 1 = body para 1 | array 2 = heading | array 3 = body para 2 | array 4 = heading
- *   array 5 = body para 3 | array 6 = heading "Did You Know?" | array 7 = body para 4 (the box)
- *   array 8 = heading     | array 9 = body para 5 | array 10 = body para 6 | array 11 = body para 7
+ *   array 5 = body para 3 | array 6 = heading "Did You Know?" | array 7 = the text box ("Box: ", not numbered)
+ *   array 8 = heading     | array 9 = body para 4 | array 10 = body para 5 | array 11 = body para 6
  */
 PP.addSet({
   id: "R-INF-01",
@@ -48,7 +48,7 @@ PP.addSet({
         ],
         ["## Did You Know?"],
         [
-          "Volunteers can place a wire screen over a turtle nest.",
+          "Box: Volunteers can place a wire screen over a turtle nest.",
           "The screen keeps animals such as raccoons from digging up the eggs."
         ],
         ["## Racing to the Sea"],

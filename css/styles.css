@@ -130,6 +130,8 @@ button{font:inherit;color:inherit;}
 .passage-byline{color:var(--muted);font-style:italic;}
 .passage-heading{font-size:1.05rem;margin:16px 0 6px;}
 .passage-caption{font-style:italic;color:var(--muted);background:var(--line-soft);border-radius:8px;padding:8px 10px;font-size:.95rem;}
+.passage-box{background:var(--leaf-tint);border:1px solid var(--leaf-edge);border-radius:12px;padding:10px 14px;margin:0 0 12px;}
+.passage-heading + .passage-box{margin-top:-2px;}
 .para{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;margin-bottom:10px;}
 .para-no{font-family:var(--head);font-weight:700;font-size:.8rem;color:var(--muted);padding-top:4px;text-align:right;}
 .para-body{margin:0;line-height:1.7;}
