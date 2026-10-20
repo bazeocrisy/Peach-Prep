@@ -50,13 +50,13 @@ with sync_playwright() as p:
     # ---------- 1. Home ----------
     h = pg.evaluate("""({title:document.title, cards:document.querySelectorAll('#section-grid .section-card').length,
       rows:document.querySelectorAll('#skill-list .skill-line').length, want:PP_CATALOG.reduce((a,c)=>a+c.groups.reduce((b,g)=>b+g.skills.filter(k=>PP.lessons[k]||k.indexOf('task:')===0).length,0),0),
-      std:PP_STANDARDS.length, cards:document.querySelectorAll('#cat-cards .cat-card').length,
+      std:PP_STANDARDS.length, cards:document.querySelectorAll('#cat-cards .cat-card').length, scards:document.querySelectorAll('#section-grid .section-card').length,
       covered:PP_STANDARDS.filter(s=>s.tested!=='embedded').every(s=>PP_SKILLS.lessonFor(s.code)),
       foot:document.querySelector('.site-foot').textContent, build:document.getElementById('build-badge').textContent,
       sets:PP.sets.filter(s=>s.section!=='skill').length, tasks:PP.tasks.length, manifest:PP_MANIFEST})""")
     ok("1.1 home: five category cards and every catalog skill as a tappable line", h["cards"] == 5 and h["rows"] == h["want"] and h["rows"] > 90, (h["cards"], h["rows"], h["want"]))
     ok("1.1c every non-habit Georgia standard has a lesson", h["covered"])
-    ok("1.1b mixed practice screen has the four section cards", h["cards"] == 4, h["cards"])
+    ok("1.1b mixed practice screen has the four section cards", h["scards"] == 4, h["scards"])
     ok("1.2 every manifest set loaded", h["sets"] == len(h["manifest"]["sets"]), h)
     lc = pg.evaluate("({n:Object.keys(PP.lessons).length})")
     ok("1.2b every manifest lesson file loaded", lc["n"] > 0, lc)
