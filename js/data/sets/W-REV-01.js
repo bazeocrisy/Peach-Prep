@@ -26,7 +26,7 @@ PP.addSet({
         ],
         [
           "(2) A class fish would teach us to be responsible.",
-          "(3) Every day, someone would need to feed the fish and look at the water to make sure it is clean.",
+          "(3) Every day, someone would need to feed the fish and look at the tank to make sure the water is clean.",
           "(4) We could make a job chart.",
           "(5) Everyone would get a turn.",
           "(6) My cousin has a dog named Biscuit that can catch a ball."
@@ -57,7 +57,7 @@ PP.addSet({
         { text: "Fish can live in lakes, in rivers, and even in the ocean." },
         { text: "Have you ever watched a fish blow tiny bubbles in the water?" }
       ],
-      clue: "An opinion tells what the writer thinks should happen. Look for words like think or should, and check that the sentence is about Room 12's tank.",
+      clue: "An opinion tells what the writer wants or believes. It is not just a fact or a question. Which choice tells the reader what Jordan wants for Room 12's tank?",
       why: "The answer is \"I think our class should get a pet fish to live in that tank.\" The words I think and should tell the reader Jordan's opinion, and the sentence connects to the empty tank in sentence 1. The sentence about other classes and the sentence about where fish live are facts, not opinions. The question about bubbles could grab a reader's attention, but it does not say what Jordan wants."
     },
     {
@@ -72,7 +72,7 @@ PP.addSet({
         { options: ["First,", "Finally,", "In conclusion,", "For example,"], answer: 0 },
         { options: ["For example,", "In addition,", "However,", "Before that,"], answer: 1 }
       ],
-      clue: "Sentence 2 gives Jordan's first reason. Sentence 7 gives another reason that agrees with the first one. Pick words that tell the reader that.",
+      clue: "Ask what job each sentence does in the essay. Does it start the reasons, add one more reason, give an example, or wrap up? Choose the transition that does that job.",
       why: "Sentence 2 should begin with \"First,\" because it is the first reason. Finally and In conclusion are for the end, and For example is for an example, not a reason. Sentence 7 should begin with \"In addition,\" because it adds a second reason. For example would not fit because sentence 7 is a new reason, not an example; However signals an idea that disagrees; Before that signals time order."
     },
     {
@@ -86,16 +86,16 @@ PP.addSet({
         { text: "check", correct: true },
         { text: "glance at" },
         { text: "notice" },
-        { text: "splash" }
+        { text: "stare at" }
       ],
-      clue: "Think about the job. Does the helper look for just a second, see something by chance, or look carefully on purpose to make sure something is right? Try each choice in the sentence.",
-      why: "The answer is \"check.\" To check something means to look at it carefully on purpose to make sure it is right, which is exactly the job of making sure the water is clean. Glance at means to look for just a second, and notice means to see something by chance, so neither one tells about a careful job. Splash does not tell how a helper makes sure the water is clean."
+      clue: "Think about the helper's job. Try each word in the sentence. Which one tells exactly what the helper must do?",
+      why: "The answer is \"check.\" To check something means to look at it carefully on purpose to make sure it is right, which is exactly the job of making sure the water is clean. Glance at means to look for just a second. Notice means to see something, but it does not mean doing a careful job. Stare at means to look for a long time, but it does not tell the reader that the helper is making sure of anything."
     },
     {
       id: "W-REV-01-4",
       type: "mc",
       points: 1,
-      std: ["3.T.SS.1.c"],
+      std: ["3.T.SS.1.c", "3.L.GC.2.b"],
       dok: 2,
       prompt: "Sentences 4 and 5 are short and choppy. Which sentence best combines them with a conjunction?",
       choices: [
@@ -113,7 +113,7 @@ PP.addSet({
       points: 1,
       std: ["3.T.SS.1.d"],
       dok: 2,
-      prompt: "One sentence in Jordan's draft does not support the opinion or the reasons. Select the sentence that does not belong.",
+      prompt: "One sentence in Jordan's draft does not support Jordan's reasons. Select the sentence that does not belong.",
       source: "p1",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4", "p1:2:5", "p1:3:1", "p1:3:2", "p1:3:3"],
       answer: ["p1:2:5"],
@@ -126,18 +126,18 @@ PP.addSet({
       type: "ms",
       points: 2,
       pick: 2,
-      std: ["3.T.RA.1.c", "3.T.T.2.d"],
+      std: ["3.T.RA.1.c", "3.T.T.3.c"],
       dok: 3,
-      prompt: "Jordan found these facts in a book about class pets. Which TWO facts best support the reason in sentence 7?",
+      prompt: "Jordan found these sentences in a book about class pets. Which TWO sentences best support the reason in sentence 7?",
       choices: [
         { text: "Watching a fish swim shows how fins help an animal move and steer.", correct: true },
         { text: "A fish's gills let it take in oxygen from the water around it.", correct: true },
         { text: "A job chart helps a class share the work of caring for a pet." },
-        { text: "Fish tanks are sold in many shapes, sizes, and colors." },
+        { text: "A clean fish tank can make a classroom look bright and cheerful." },
         { text: "Some families think that cats and dogs are more fun than fish." }
       ],
-      clue: "First, read sentence 7 to find the reason. Then keep only facts that show something students could learn about science by having a fish.",
-      why: "The answers are \"Watching a fish swim shows how fins help an animal move and steer.\" and \"A fish's gills let it take in oxygen from the water around it.\" Sentence 7 says a fish would help the class learn science, and both facts teach how an animal's body works. The job chart fact supports the reason in sentence 2 instead. The facts about tank colors and about cats and dogs do not show anything students would learn."
+      clue: "First, read sentence 7 to find the reason. Then keep only sentences that show something students could learn about science by having a fish.",
+      why: "The answers are \"Watching a fish swim shows how fins help an animal move and steer.\" and \"A fish's gills let it take in oxygen from the water around it.\" Sentence 7 says a fish would help the class learn science, and both facts teach how an animal's body works. The job chart sentence supports the reason in sentence 2 instead. A cheerful-looking classroom is not something students learn about science, and the sentence about cats and dogs is an opinion that does not show anything students would learn."
     },
     {
       id: "W-REV-01-7",

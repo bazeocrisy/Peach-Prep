@@ -72,13 +72,14 @@ PP.addTask({
         [
           "A skate park is one kind of park that many kids enjoy.",
           "Riding can be so much fun that it does not feel like exercise.",
-          "Riders of different ages often cheer when someone tries a new trick."
+          "Riders of all ages often cheer when someone tries a new trick."
         ],
         [
           "Kids also need safer places to be active.",
           "A skate park gives riders a place to practice away from busy roads.",
-          "Riders can still fall at a skate park, so safety gear matters there, too.",
-          "Riders stay safer when they wear a helmet and pads and learn new tricks slowly.",
+          "Falls can still happen at a skate park.",
+          "Riders stay safer when they wear a helmet and pads.",
+          "Learning new tricks slowly helps, too.",
           "Experts say younger riders should have an adult nearby."
         ]
       ],
@@ -107,8 +108,9 @@ PP.addTask({
     { reason: 0, source: "p1", ref: "p1:2:7", note: "Many skate parks post rules such as wearing a helmet." },
     { reason: 0, source: "p1", ref: "p1:2:8", note: "Some skate parks have a small area just for beginners." },
     { reason: 0, source: "p2", ref: "p2:4:2", note: "A skate park is a place to practice away from busy roads." },
-    { reason: 0, source: "p2", ref: "p2:4:4", note: "Helmets, pads and learning tricks slowly help riders stay safer (falls can still happen, p2:4:3)." },
-    { reason: 0, source: "p2", ref: "p2:4:5", note: "Experts say younger riders should have an adult nearby." },
+    { reason: 0, source: "p2", ref: "p2:4:4", note: "Falls can still happen at a skate park (p2:4:3), but a helmet and pads help riders stay safer." },
+    { reason: 0, source: "p2", ref: "p2:4:5", note: "Learning new tricks slowly also helps riders stay safer." },
+    { reason: 0, source: "p2", ref: "p2:4:6", note: "Experts say younger riders should have an adult nearby." },
     { reason: 1, source: "p1", ref: "p1:3:2", note: "Pushing a board or scooter works the leg muscles." },
     { reason: 1, source: "p1", ref: "p1:3:3", note: "Balancing works the belly and back muscles." },
     { reason: 1, source: "p1", ref: "p1:3:4", note: "Trying a trick again and again keeps riders moving for a long time (p1:3:5)." },
@@ -121,14 +123,14 @@ PP.addTask({
   model: {
     paragraphs: [
       "Picture the empty lot on Maple Street full of kids rolling down ramps and cheering for each other. Some people want a garden there, but I believe the town should build a skate park. A skate park would give kids a safer place to ride, and it would help them stay healthy.",
-      "First, a skate park would give kids a safer place to ride. The first source explains that riding in the street means always looking out for cars. Bumpy sidewalks are risky, too, because hitting one crack or rock can send a rider tumbling. A skate park is built just for riding and sits away from traffic, so riders would not have to dodge cars or bump over cracks. The second source, \"Kids on the Move,\" adds that helmets, pads, and slow practice on new tricks help riders stay safer.",
-      "Second, a skate park would help kids stay active and healthy. According to the second source, kids should move for at least an hour, or 60 minutes, every day, but many of them do not. Riding is a great way to fix that. The first source explains that a rider's legs get a hard workout from pushing a board or scooter, and staying balanced makes the belly and back stronger. Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.",
-      "For these reasons, the town council should turn the empty lot into a skate park. Please choose the skate park so that kids from all over town can ride, play, and cheer each other on for years to come."
+      "First, a skate park would give kids a safer place to ride. The first source explains that riding in the street means looking out for cars. Bumpy sidewalks are risky, too, because hitting one crack or rock can send a rider tumbling. A skate park is built just for riding and sits away from traffic, so riders would not have to dodge cars or bump over cracks. The second source, \"Kids on the Move,\" adds that helmets, pads, and slow practice on new tricks help riders stay safer.",
+      "Second, a skate park would help kids stay active and healthy. According to the second source, kids should move for at least an hour, or 60 minutes, every day, but many do not. Riding is a great way to fix that. The first source explains that a rider's legs get a hard workout from pushing a board or scooter, and staying balanced makes the belly and back stronger. Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.",
+      "For these reasons, the town council should turn the empty lot into a skate park. Please choose the skate park so kids across town can ride, play, and cheer each other on for years."
     ],
     notes: [
       "Purpose and Organization (3 of 3): The introduction paints a picture to hook the reader, names the other side (a garden) in one phrase, and then states the opinion clearly (\"I believe the town should build a skate park\") and previews both reasons. Each body paragraph covers one provided reason, in order. Transitions (First, Second, According to, For these reasons) and conjunctions (but, because, so, and, Since) link the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, names the town council and asks it to act (\"Please choose the skate park\"), and leaves a final picture of kids riding together.",
-      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. Safety: watching for cars in the street, cracks and rocks on sidewalks, a place built for riding away from traffic, and helmets, pads and slow practice. Health: the guideline of at least an hour of activity every day, many kids not getting it, and the leg, belly and back muscles that riding works. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and tells which source each fact came from. The safety claims stay as careful as the sources: the essay says a skate park is a safer place to ride, not a place where no one gets hurt. The writer explains why facts matter: \"so riders would not have to dodge cars or bump over cracks\", \"Riding is a great way to fix that\" and \"Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.\"",
-      "Language Usage and Conventions (2 of 2): The response is long enough to show command. Sentences are complete and varied: simple, compound (joined with but and and) and complex (with because, so, so that and since). Verb tense is controlled: present tense for facts from the sources, would for what the skate park would do, and can in the conclusion for what kids will be able to do. There are no unneeded shifts. Subjects and verbs agree (\"riding in the street means\", \"staying balanced makes\", \"helmets, pads, and slow practice on new tricks help\"). There are no spelling, capitalization or punctuation errors."
+      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. Safety: watching for cars in the street, cracks and rocks on sidewalks, a place built for riding away from traffic, and helmets, pads and slow practice. Health: the guideline of at least an hour of activity every day, many kids not getting it, and the leg, belly and back muscles that riding works. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names the source behind its facts. The safety claims stay as careful as the sources: the essay says a skate park is a safer place to ride, not a place where no one gets hurt. The writer explains why facts matter: \"so riders would not have to dodge cars or bump over cracks\", \"Riding is a great way to fix that\" and \"Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.\"",
+      "Language Usage and Conventions (2 of 2): The response is long enough to show command. Sentences are complete and varied: simple, compound (joined with but and and) and complex (with because, so and since). Verb tense is controlled: present tense for facts from the sources, would for what the skate park would do, and can in the conclusion for what kids will be able to do. There are no unneeded shifts. Subjects and verbs agree (\"riding in the street means\", \"staying balanced makes\", \"helmets, pads, and slow practice on new tricks help\"). There are no spelling, capitalization or punctuation errors."
     ]
   },
   lookFors: {
