@@ -80,7 +80,7 @@ PP.addSet({
     {
       id: "L-VOC-02-5",
       type: "ms",
-      points: 1,
+      points: 2,
       std: ["3.L.V.2.b"],
       dok: 2,
       prompt: "An adjective is a word that describes a noun. Which TWO words are adjectives made by adding a suffix to a base word?",

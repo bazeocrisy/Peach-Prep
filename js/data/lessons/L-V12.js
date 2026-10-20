@@ -370,25 +370,33 @@ PP.addLesson({
   code: "3.L.V.2.a",
   title: "Using word parts to figure out meaning",
   teach: {
-    big: "Many long words are a base word with a part added to the front or the end, so I find the base word, then add the meaning of each part.",
+    big: "Many long words are built from parts, like a base word or a root with a part added to the front or the end, so I find each part and put the meanings together.",
     points: [
       "The base word is the main word. In unkind, the base word is kind.",
-      "A prefix is a part added to the front. Un- and dis- mean not or the opposite of. Re- means again. Pre- means before.",
+      "A prefix is a part added to the front. Un- and dis- mean not or the opposite of. Re- means again. Pre- means before. Mis- means wrongly, so misspell means spell wrongly.",
       "A suffix is a part added to the end. -ful means full of. -less means without. -able means can be. -ly means in a ___ way.",
-      "Put the meanings together. Un + kind means not kind. Re + paint means paint again. Soft + ly means in a soft way.",
-      "Watch out for look-alikes. Uncle and ready start with un and re, but nothing is left that is a word, so they have no prefix."
+      "Some words are built on a common root. A root is a word part that came from Latin or Greek and has its own meaning. Port means carry. Graph means write. Tele means far. Phon means sound. Rupt means break. Spect means look.",
+      "Put the meanings together and check the sentence. Watch out for look-alikes. Uncle and ready start with un and re, but nothing is left that is a word, so they have no prefix."
     ],
     words: [
       { term: "base word", means: "the main word that a prefix or suffix is added to (also called a root word)" },
-      { term: "prefix", means: "a word part added to the front of a base word" },
-      { term: "suffix", means: "a word part added to the end of a base word" }
+      { term: "common root", means: "a word part from Latin or Greek that has its own meaning and shows up in many words, like port (carry) in transport" },
+      { term: "prefix", means: "a word part added to the front of a base word or root" },
+      { term: "suffix", means: "a word part added to the end of a base word or root" }
     ],
-    example: {
-      label: "Example",
-      lines: ["hopeless = hope + less", "-less means without.", "So hopeless means without hope."],
-      note: "Cover the suffix and read the base word. Then put the two meanings together."
-    },
-    tip: "On the test, a question may tell you what a prefix or suffix means and ask what the whole word means. Find the base word first, add the meaning of the part, and check that your answer makes sense in the sentence."
+    examples: [
+      {
+        label: "Example: a suffix",
+        lines: ["hopeless = hope + less", "-less means without.", "So hopeless means without hope."],
+        note: "Cover the suffix and read the base word. Then put the two meanings together."
+      },
+      {
+        label: "Example: two roots",
+        lines: ["telephone = tele + phone", "Tele means far. Phon means sound.", "So a telephone brings sound from far away."],
+        note: "Find each root you know and say its meaning. Then put the meanings together."
+      }
+    ],
+    tip: "On the test, a question may tell you what a prefix, suffix or root means and ask what the whole word means. Find each part first, add the meanings together, and check that your answer makes sense in the sentence."
   },
   learn: [
     {
@@ -412,17 +420,17 @@ PP.addLesson({
       answer: "Playful means full of play, or liking to play a lot."
     },
     {
-      show: ["Leah's coat is washable, so she was not upset when she got mud on it."],
-      ask: "What does washable mean?",
+      show: ["At science night, our class looked at the moon through a telescope."],
+      ask: "What does telescope mean?",
       steps: [
-        "Split the word: wash + able. The base word is wash.",
-        "The suffix -able means can be.",
-        "Check the sentence. Leah is not upset about the mud because her coat can be washed."
+        "Split the word: tele + scope. Tele is a root that means far.",
+        "Scope is a part that means a tool for looking.",
+        "Put them together and check the sentence. The moon is far away, and the class looked at it through the tool."
       ],
-      answer: "Washable means can be washed."
+      answer: "A telescope is a tool for looking at things that are far away."
     }
   ],
-  parent: "Make a word-part hunt out of cereal boxes, signs and mail. When you spot a word like refill, unlocked or helpful, ask your child to cover the prefix or suffix, read the base word, and tell you what the whole word means.",
+  parent: "Make a word-part hunt out of cereal boxes, signs and mail. When you spot a word like refill, unlocked or helpful, ask your child to cover the prefix or suffix, read the base word, and tell you what the whole word means. For roots, hunt for words with port (carry), graph (write) or phon (sound), like report, autograph or headphones.",
   passages: [
     { id: "p1", title: "Nia's Kite", genre: "Literary text",
       paragraphs: [
@@ -464,12 +472,17 @@ PP.addLesson({
       ],
       clue: "Find the base word in fixable. Then put it together with the meaning of -able.",
       why: "The answer is \"can be fixed.\" Fix + able means can be fixed. Grandpa tells Nia not to be unhappy, and then they really do fix the kite." },
-    { id: "SK-V2a-P3", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
-      prompt: "Choose the meaning of retied in paragraph 5.",
-      text: "In paragraph 5, retied means {0}.",
-      slots: [{ options: ["tied again", "not tied", "tied before"], answer: 0 }],
-      clue: "Split the word into a prefix and a base word. What does the prefix re- mean?",
-      why: "The answer is \"tied again.\" Re- means again, and the base word is tie. The string snapped, so they had to tie it on again." },
+    { id: "SK-V2a-P6", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Read the sentence. The root spect means \"look,\" and the suffix -or means \"a person who.\" What is a spectator?",
+      stem: ["Every spectator in the stands cheered when Maya kicked the winning goal."],
+      choices: [
+        { text: "a person who watches", correct: true },
+        { text: "a person who plays" },
+        { text: "a person who keeps score" },
+        { text: "a person who teaches" }
+      ],
+      clue: "Find the root spect at the start of the word and the suffix -or at the end. Put their meanings together.",
+      why: "The answer is \"a person who watches.\" Spect means look and -or means a person who, so a spectator is a person who looks on, or watches. The spectators sat in the stands. Maya was the one who played." },
     { id: "SK-V2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each word from the story to the meaning of its prefix or suffix.",
       cols: ["not", "full of", "in a ___ way", "again"],
@@ -485,14 +498,25 @@ PP.addLesson({
       prompt: "Which TWO words have a prefix added to a base word?",
       choices: [
         { text: "unsure", correct: true },
-        { text: "reread", correct: true },
+        { text: "misspell", correct: true },
         { text: "uncle" },
         { text: "ready" },
-        { text: "under" },
+        { text: "misty" },
         { text: "reach" }
       ],
-      clue: "Cover the first two letters of each word. If a real word is left, that word may have a prefix. If no word is left, it does not.",
-      why: "The answers are \"unsure\" and \"reread.\" Take away un- and sure is left. Take away re- and read is left. In uncle, ready, under and reach, the letters left over are not words, so those words have no prefix." }
+      clue: "Cover the letters at the front that look like a prefix: un, re or mis. If a real word is left, that word may have a prefix. If no word is left, it does not.",
+      why: "The answers are \"unsure\" and \"misspell.\" Take away un- and sure is left, so unsure means not sure. Take away mis- and spell is left, so misspell means spell wrongly. In uncle, ready, misty and reach, the letters left over are not words, so those words have no prefix." },
+    { id: "SK-V2a-P7", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence. The prefix trans- means \"across.\" Use the root in transport to figure out what it means.",
+      stem: ["A big truck will transport the new desks from the store to our school."],
+      choices: [
+        { text: "to carry from one place to another", correct: true },
+        { text: "to write a list of things" },
+        { text: "to look closely at something" },
+        { text: "to break something into pieces" }
+      ],
+      clue: "Cover trans-. What root is left? Think about what that root means, then check it with the truck in the sentence.",
+      why: "The answer is \"to carry from one place to another.\" Trans means across and port means carry, so transport means to carry across, from one place to another. The truck carries the desks from the store to the school. Writing is graph, looking is spect, and breaking is rupt." }
   ],
   test: [
     { id: "SK-V2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -535,25 +559,26 @@ PP.addLesson({
       why: "Part A: not taking care. Care + less means without care, so a careless person is not taking care. Part B: spotless. It ends in -less too, and it means without a spot." },
     { id: "SK-V2a-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each word to the meaning of its prefix or suffix.",
-      cols: ["not", "before", "full of"],
+      cols: ["not", "before", "full of", "wrongly"],
       rows: [
         { text: "unfair", answer: 0 },
         { text: "preview", answer: 1 },
-        { text: "helpful", answer: 2 }
+        { text: "helpful", answer: 2 },
+        { text: "misplace", answer: 3 }
       ],
       clue: "Cover the base word in each one. Look at the part that is left, and remember what it means.",
-      why: "Un- in unfair means not. Pre- in preview means before. -ful in helpful means full of." },
-    { id: "SK-V2a-T5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence has a word that means \"in a quiet way\"? Choose the sentence.",
-      options: [
-        "The baby slept quietly in her crib.",
-        "The library is a quiet place to read.",
-        "Please be quiet during the movie.",
-        "The room was quiet after the bell rang."
+      why: "Un- in unfair means not. Pre- in preview means before. -ful in helpful means full of. Mis- in misplace means wrongly (to put something in the wrong place)." },
+    { id: "SK-V2a-T6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence. Use the root in inspect to figure out what Coach will do.",
+      stem: ["Before the bike race, Coach will inspect each bike to make sure the brakes work."],
+      choices: [
+        { text: "look closely at each bike", correct: true },
+        { text: "carry each bike to the start" },
+        { text: "write a name on each bike" },
+        { text: "break each old bike apart" }
       ],
-      answer: [0], pick: 1,
-      clue: "Every sentence has the base word quiet. Which one has a suffix that means in a ___ way?",
-      why: "The answer is \"The baby slept quietly in her crib.\" Quiet + ly means in a quiet way, and it tells how the baby slept. The other sentences use only the base word quiet." }
+      clue: "Find the root in inspect. What does that root mean? Then check your answer with the brakes in the sentence.",
+      why: "The answer is \"look closely at each bike.\" The root spect means look, so to inspect is to look closely at something. Coach looks at each bike to check that the brakes work. Carry would be port, write would be graph, and break would be rupt." }
   ]
 });
 
@@ -755,38 +780,46 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.L.V.2.c",
-  title: "Building new words with prefixes and suffixes",
+  title: "Building new words with roots, prefixes and suffixes",
   teach: {
-    big: "I can build a new word by adding a prefix to the front or a suffix to the end of a base word, and each part I add changes the meaning.",
+    big: "I can build a new word by adding a prefix to the front or a suffix to the end of a base word or a root, and each part I add changes the meaning.",
     points: [
-      "Start with a base word, like help.",
-      "Add a prefix to the front to change the meaning: un + fair = unfair (not fair). Re + build = rebuild (build again).",
-      "Add a suffix to the end to make a new word: help + ful = helpful. Help + less = helpless. Help + er = helper.",
-      "Choose the part that matches the meaning you want: -ful for full of, -less for without, re- for again, pre- for before.",
+      "Start with a base word, like help, or a common root, like port, which means carry.",
+      "Add a prefix to the front to change the meaning: un + fair = unfair (not fair). Re + build = rebuild (build again). Mis + spell = misspell (spell wrongly).",
+      "Add a suffix to the end to make a new word: help + ful = helpful. Help + less = helpless. Help + er = helper. Choose the part that matches the meaning you want.",
+      "You can build on a root, too. Add a part that has its own meaning, then put the meanings together. Phon means sound, so tele (far) + phone = telephone, and head + phones = headphones.",
       "Sometimes the spelling changes. In most words that end in a consonant and y, change the y to i before adding -ly or -ness: happy + ness = happiness."
     ],
     words: [
       { term: "base word", means: "the main word you build on" },
+      { term: "common root", means: "a word part from Latin or Greek with its own meaning, like port (carry) or graph (write)" },
       { term: "prefix", means: "a part added to the front of a word" },
       { term: "suffix", means: "a part added to the end of a word" }
     ],
-    example: {
-      label: "Example",
-      lines: ["color + ful = colorful (full of color)", "color + less = colorless (without color)", "re + color = recolor (color again)"],
-      note: "One base word can grow into many new words. Each part you add brings its own meaning."
-    },
-    tip: "On the test, you may need to choose the word that best completes a sentence, like hopeful or hopeless. Read the whole sentence, decide what meaning fits, then pick the word with the right part."
+    examples: [
+      {
+        label: "Example: one base word",
+        lines: ["color + ful = colorful (full of color)", "color + less = colorless (without color)", "re + color = recolor (color again)"],
+        note: "One base word can grow into many new words. Each part you add brings its own meaning."
+      },
+      {
+        label: "Example: one root",
+        lines: ["Port means carry.", "port + able = portable (can be carried)", "re + port = report (to carry news back)", "ex + port = export (to carry goods out to another country)"],
+        note: "Every word built on port has something to do with carrying."
+      }
+    ],
+    tip: "On the test, you may need to choose the word that best completes a sentence, like hopeful or hopeless, or the word that was built from the right root. Read the whole sentence, decide what meaning fits, then pick the word with the right parts."
   },
   learn: [
     {
-      show: ["Base word: spot", "Meaning you want: without a spot"],
+      show: ["Root: graph means write.", "Prefix: auto- means self.", "Meaning you want: a name that a person writes themself"],
       ask: "What new word can you build?",
       steps: [
-        "Find the part that means without. That is the suffix -less.",
-        "Add it to the end of the base word: spot + less.",
-        "Try it in a sentence: The kitchen floor was spotless after Dad mopped it."
+        "Find the part that means self. That is the prefix auto-.",
+        "Find the part that means write. That is the root graph.",
+        "Put them together: auto + graph. Try it in a sentence: The baseball player signed his autograph on my cap."
       ],
-      answer: "Spotless means without a spot."
+      answer: "The new word is autograph. It means a name that a person writes themself."
     },
     {
       show: ["Ava had to ___ her story because she left out the ending.", "Base word: write"],
@@ -819,15 +852,9 @@ PP.addLesson({
     ],
     rows: 8
   },
-  parent: "Pick a base word at breakfast, like kind, play or use, and take turns building new words from it (kindness, unkind, kindly). Each person has to use their new word in a sentence.",
+  parent: "Pick a base word at breakfast, like kind, play or use, and take turns building new words from it (kindness, unkind, kindly). Each person has to use their new word in a sentence. Try it with a root too: how many words can you build with port (carry) or phon (sound)?",
   passages: [],
   practice: [
-    { id: "SK-V2c-P1", type: "dropdown", points: 1, dok: 2, passages: [],
-      prompt: "Choose the word that best completes the sentence.",
-      text: "Our team felt {0} after we won the big game.",
-      slots: [{ options: ["cheerful", "cheerless", "cheerfully"], answer: 0 }],
-      clue: "Winning a game is a happy thing. Which suffix means full of? Also check which word sounds right after felt.",
-      why: "The answer is \"cheerful.\" Cheer + ful means full of cheer, which is how a team feels after a win. Cheerless means without cheer, and cheerfully tells how someone does something, so it does not fit after felt." },
     { id: "SK-V2c-P2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Add a prefix to the base word pay. Which new word means \"to pay before\"?",
       choices: [
@@ -849,6 +876,16 @@ PP.addLesson({
       ],
       clue: "For each meaning, find the base word first. Then pick the part that means again, not, without or full of.",
       why: "Re- means again, so to tell again is retell. Dis- means not, so not honest is dishonest. -less means without, so without harm is harmless. -ful means full of, so full of power is powerful." },
+    { id: "SK-V2c-P6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "The prefix e- means \"out.\" The root rupt means \"break.\" Which word would you build to mean \"to break out\"?",
+      choices: [
+        { text: "erupt", correct: true },
+        { text: "export" },
+        { text: "rupture" },
+        { text: "inspect" }
+      ],
+      clue: "You need TWO parts: one that means out and one that means break. Check that both parts are in your word.",
+      why: "The answer is \"erupt.\" E- (out) + rupt (break) = erupt, to break out, like hot rock that breaks out of a volcano. Export starts with ex-, which also means out, but port means carry, not break. Rupture has rupt but no part that means out. Inspect has spect, which means look." },
     { id: "SK-V2c-P4", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Add the suffix -ly to the base word easy. Which new word is spelled correctly?",
       choices: [
@@ -869,7 +906,16 @@ PP.addLesson({
         { text: "happier" }
       ],
       clue: "You need one word that means not happy. Which prefix means not?",
-      why: "The answer is \"unhappy.\" Un- means not, so un + happy means not happy. Happily tells how, happiness is a noun, and happier means more happy." }
+      why: "The answer is \"unhappy.\" Un- means not, so un + happy means not happy. Happily tells how, happiness is a noun, and happier means more happy." },
+    { id: "SK-V2c-P7", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the word built from the root that fits each sentence.",
+      text: "Grandpa's radio is light and has a handle, so it is {0}. The loud thunder {1} our picnic, and we had to stop eating and run inside.",
+      slots: [
+        { options: ["breakable", "portable", "washable"], answer: 1 },
+        { options: ["inspected", "reported", "interrupted"], answer: 2 }
+      ],
+      clue: "For the radio, which root means carry? For the thunder, which root means break? Find the word with that root.",
+      why: "The first answer is portable. Port means carry and -able means can be, and a light radio with a handle can be carried. Breakable and washable have -able but no root that means carry. The second answer is interrupted. Rupt means break, and the thunder broke into the picnic so it had to stop. Inspected has spect (look), and reported has port (carry)." }
   ],
   test: [
     { id: "SK-V2c-T1", type: "dropdown", points: 1, dok: 2, passages: [],
@@ -878,28 +924,28 @@ PP.addLesson({
       slots: [{ options: ["repaint", "painter", "painless"], answer: 0 }],
       clue: "Think about what Dad must do to peeling paint. Then find the part that means again.",
       why: "The answer is \"repaint.\" Re- means again, so Dad had to paint the fence again. Painter names a person, and painless means without pain." },
-    { id: "SK-V2c-T2", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "Add a suffix to the base word read. Which new word means \"can be read\"?",
+    { id: "SK-V2c-T7", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "The prefix micro- means \"small.\" Which word would you build to name a tool that picks up small sounds so everyone can hear them?",
       choices: [
-        { text: "readable", correct: true },
-        { text: "reread" },
-        { text: "reader" },
-        { text: "unread" }
+        { text: "microphone", correct: true },
+        { text: "microscope" },
+        { text: "telephone" },
+        { text: "megaphone" }
       ],
-      clue: "Think about which suffix means can be. Find the word that ends with it.",
-      why: "The answer is \"readable.\" -able means can be, so read + able means can be read. Reread means read again, a reader is a person who reads, and unread means not read." },
-    { id: "SK-V2c-T3", type: "ms", points: 2, dok: 1, passages: [], pick: 2,
-      prompt: "Sara wants words that mean \"full of\" something. Which TWO words did she build with the right suffix?",
+      clue: "You need one part that means small and one part that means sound.",
+      why: "The answer is \"microphone.\" Micro- (small) + phon (sound) = microphone. Microscope has micro-, but scope means a tool for looking, not sound. Telephone and megaphone have phon, but tele means far and mega means big, not small." },
+    { id: "SK-V2c-T8", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Lin is building words on the root port, which means \"carry.\" Which TWO words did she build that have to do with carrying?",
       choices: [
-        { text: "graceful", correct: true },
-        { text: "playful", correct: true },
-        { text: "careless" },
-        { text: "softly" },
-        { text: "rebuild" },
-        { text: "dislike" }
+        { text: "transport", correct: true },
+        { text: "porter", correct: true },
+        { text: "autograph" },
+        { text: "telescope" },
+        { text: "erupt" },
+        { text: "spectator" }
       ],
-      clue: "Look at the end of each word. Which suffix means full of?",
-      why: "The answers are \"graceful\" and \"playful.\" Both end in -ful, which means full of. Careless ends in -less (without), softly ends in -ly, and rebuild and dislike have prefixes." },
+      clue: "Find the word part port in each word. Then check that the whole word has to do with carrying.",
+      why: "The answers are \"transport\" and \"porter.\" Transport means to carry from one place to another. Port + er makes porter, a person who carries bags or boxes. Autograph is built on graph (write), telescope on tele (far), erupt on rupt (break), and spectator on spect (look)." },
     { id: "SK-V2c-T4", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Add the suffix -ness to the base word lazy. Which new word is spelled correctly?",
       choices: [
@@ -923,14 +969,14 @@ PP.addLesson({
       why: "The answer is \"was helpless.\" -less means without, and a helpless kitten cannot help itself. Helpful means full of help, a helper is a person who helps, and helping does not fit the meaning." },
     { id: "SK-V2c-T6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each meaning to the word you would build.",
-      cols: ["prewash", "disagree", "unclear", "loudly"],
+      cols: ["prewash", "disagree", "misuse", "loudly"],
       rows: [
         { text: "to wash before", answer: 0 },
         { text: "to not agree", answer: 1 },
-        { text: "not clear", answer: 2 },
+        { text: "to use wrongly", answer: 2 },
         { text: "in a loud way", answer: 3 }
       ],
-      clue: "For each meaning, find the base word first. Then pick the word with the part that means before, not, or in a ___ way.",
-      why: "Pre- means before, so to wash before is prewash. Dis- means not, so to not agree is disagree. Un- means not, so not clear is unclear. -ly means in a ___ way, so in a loud way is loudly." }
+      clue: "For each meaning, find the base word first. Then pick the word with the part that means before, not, wrongly, or in a ___ way.",
+      why: "Pre- means before, so to wash before is prewash. Dis- means not, so to not agree is disagree. Mis- means wrongly, so to use wrongly is misuse. -ly means in a ___ way, so in a loud way is loudly." }
   ]
 });
