@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peach Prep · Georgia Milestones practice, Grade 3 ELA</title>
+  <meta name="description" content="Free practice for the Georgia Milestones Grade 3 English Language Arts test, mapped to every standard, with a parent guide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='22' fill='%23F28C55'/%3E%3Cpath d='M32 14c2-6 8-9 14-8-1 6-6 10-14 8z' fill='%233E8E5A'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <main id="main">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="screen" id="screen-home" aria-labelledby="home-title">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
+        <h1 id="home-title" class="hero-title" tabindex="-1">Get ready for the Georgia Milestones</h1>
+        <p class="hero-sub">Grade 3 English Language Arts practice, built from the official test blueprint and mapped to every standard.</p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary" id="hero-start">Start practicing</button>
+          <button type="button" class="btn btn-ghost" id="hero-parents">Parent guide</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <h2 class="section-title">The test has two parts, worth 60 points</h2>
+      <p class="section-sub">Practice is grouped the same way. Points come from GaDOE's August 2025 blueprint.</p>
+      <ul class="section-grid" id="section-grid"></ul>
+
+      <div class="parent-band">
+        <div>
+          <h2 class="band-title">For parents</h2>
+          <p>What is on the test, every Grade 3 ELA standard in plain words, what "Proficient" looks like, and how to use Peach Prep with GaDOE's official practice.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="band-parents">Open the parent guide</button>
+      </div>
+
+      <h2 class="section-title small">Everyday tools</h2>
+      <ul class="tool-list" id="tool-list"></ul>
+    </div>
+    <footer class="site-foot">
+      <p>Peach Prep is a free, independent practice site. It is not affiliated with or endorsed by the Georgia Department of Education. All passages and questions are original practice material, not actual test items.</p>
+      <p class="build" id="build-badge"></p>
+    </footer>
+  </section>
+
+  <!-- ===================== SECTION ===================== -->
+  <section class="screen" id="screen-section" aria-labelledby="section-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> Home</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="section-title" tabindex="-1"></h1>
+      <p class="page-sub" id="section-sub"></p>
+      <ul class="set-grid" id="set-grid"></ul>
+      <div class="soon-panel" id="section-soon" hidden></div>
+    </div>
+  </section>
+
+  <!-- ===================== PLAYER ===================== -->
+  <section class="screen" id="screen-player" aria-labelledby="player-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="player-back"><span aria-hidden="true">&larr;</span> Back</button>
+      <p class="bar-tag"><span id="player-mode"></span></p>
+      <button type="button" class="nav-btn" data-go="home">Home</button>
+    </header>
+    <div class="player-head wrap">
+      <h1 class="page-title" id="player-title" tabindex="-1"></h1>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Passage or question">
+      <button type="button" role="tab" id="tab-passage" aria-selected="true">Read the passage</button>
+      <button type="button" role="tab" id="tab-question" aria-selected="false">Question</button>
+    </div>
+    <div class="player-grid" id="player-grid" data-pane="passage">
+      <div class="passage-pane" id="passage-pane" aria-label="Passage">
+        <div id="passage-pane-body"></div>
+      </div>
+      <div class="item-pane">
+        <!-- work -->
+        <div id="stage-work">
+          <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
+          <div class="q-track"><span id="q-bar"></span></div>
+          <h2 class="q-prompt" id="q-prompt" tabindex="-1"></h2>
+          <div id="q-body"></div>
+          <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
+          <div id="q-feedback" class="feedback" aria-live="polite" hidden></div>
+          <div class="q-controls">
+            <button type="button" class="btn btn-soft" id="q-prev">Back</button>
+            <button type="button" class="btn btn-help" id="q-help">Help me</button>
+            <button type="button" class="btn btn-primary" id="q-check">Check</button>
+            <button type="button" class="btn btn-primary" id="q-next">Next</button>
+          </div>
+        </div>
+        <!-- test: confirm -->
+        <div id="stage-confirm" class="panel" hidden>
+          <h2 class="panel-title" id="confirm-title" tabindex="-1">All done?</h2>
+          <p>You can go back and check your answers, or turn in your test.</p>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-primary" id="confirm-submit">Turn in my test</button>
+            <button type="button" class="btn btn-soft" id="confirm-back">Go back and check</button>
+          </div>
+        </div>
+        <!-- test: results -->
+        <div id="stage-results" class="panel" hidden>
+          <div class="score-box" id="res-score-box" tabindex="-1">
+            <span class="score-n" id="res-score"></span><span class="score-of" id="res-of"></span>
+          </div>
+          <div class="skill-rows" id="res-skills"></div>
+          <p class="guidance" id="res-guidance"></p>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-primary" id="res-practice">Practice this set</button>
+            <button type="button" class="btn btn-soft" id="res-review-btn">See my answers</button>
+            <button type="button" class="btn btn-soft" id="res-again">Take the test again</button>
+            <button type="button" class="btn btn-soft" id="res-back">Back to the list</button>
+          </div>
+          <div id="res-review" class="review" hidden></div>
+        </div>
+        <!-- practice: done -->
+        <div id="stage-done" class="panel" hidden>
+          <h2 class="panel-title" id="done-title" tabindex="-1">Great work!</h2>
+          <p id="done-line"></p>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-primary" id="done-test">Try it as a test</button>
+            <button type="button" class="btn btn-soft" id="done-back">Back to the list</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WRITING TASK ===================== -->
+  <section class="screen" id="screen-write" aria-labelledby="write-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="write-back"><span aria-hidden="true">&larr;</span> Back</button>
+      <p class="bar-tag"><span>Writing task</span></p>
+      <button type="button" class="nav-btn" data-go="home">Home</button>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="write-title" tabindex="-1"></h1>
+      <div class="prompt-card" id="write-prompt"></div>
+      <div class="wtabs" role="tablist" aria-label="Writing steps">
+        <button type="button" role="tab" data-wtab="sources" aria-selected="true">1. Read</button>
+        <button type="button" role="tab" data-wtab="plan" aria-selected="false">2. Plan</button>
+        <button type="button" role="tab" data-wtab="write" aria-selected="false">3. Write</button>
+        <button type="button" role="tab" data-wtab="check" aria-selected="false">4. Check</button>
+        <button type="button" role="tab" data-wtab="score" aria-selected="false">For parents</button>
+      </div>
+      <div class="write-grid" id="write-grid" data-tab="sources">
+        <div class="wpanel w-sources" id="w-sources"></div>
+        <div class="wpanel w-plan" id="w-plan"></div>
+        <div class="wpanel w-write" id="w-write"></div>
+        <div class="wpanel w-check" id="w-check"></div>
+        <div class="wpanel w-score" id="w-score"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARENTS ===================== -->
+  <section class="screen" id="screen-parents" aria-labelledby="parents-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" data-go="home"><span aria-hidden="true">&larr;</span> Home</button>
+      <p class="bar-brand">Parent guide</p>
+      <span class="bar-spacer"></span>
+    </header>
+    <div class="wrap">
+      <h1 class="page-title" id="parents-title" tabindex="-1">Parent guide</h1>
+      <p class="page-sub">Georgia Milestones, Grade 3 English Language Arts. Built from GaDOE's official documents, linked below.</p>
+      <div class="ptabs" role="tablist" aria-label="Parent guide sections">
+        <button type="button" role="tab" data-ptab="test" aria-selected="true">The test</button>
+        <button type="button" role="tab" data-ptab="standards" aria-selected="false">Every standard</button>
+        <button type="button" role="tab" data-ptab="essay" aria-selected="false">The essay</button>
+        <button type="button" role="tab" data-ptab="plan" aria-selected="false">How to use</button>
+      </div>
+      <div class="ppanel" id="ptab-test" role="tabpanel"></div>
+      <div class="ppanel" id="ptab-standards" role="tabpanel" hidden></div>
+      <div class="ppanel" id="ptab-essay" role="tabpanel" hidden></div>
+      <div class="ppanel" id="ptab-plan" role="tabpanel" hidden></div>
+    </div>
+  </section>
+
+  </main>
+
+  <script src="js/pp.js"></script>
+  <script src="js/data/site.js"></script>
+  <script src="js/data/standards.js"></script>
+  <script src="js/data/alds.js" onerror="window.PP_ALDS=null"></script>
+  <script src="js/data/manifest.js"></script>
+  <script src="js/engine/items.js"></script>
+  <script src="js/engine/player.js"></script>
+  <script src="js/writing.js"></script>
+  <script src="js/parents.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

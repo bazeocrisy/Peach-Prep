@@ -1,0 +1,372 @@
+/* Peach Prep — the set player: passage + one question at a time.
+
+   PRACTICE: Check gives feedback. Help me gives one step per press:
+     1 the strategy clue, 2 a format-specific narrowing, 3 the walk-through
+     with the answer outlined (the child still enters it). Help is never
+     counted as a mistake. After a third wrong Check the walk-through
+     opens on its own, so a child is never left stuck.
+   TEST: no hints and no feedback. Move freely, then submit. Results in
+     points with a breakdown by skill, then a review where each missed
+     question has Show me how (clue, narrowing, walk-through + answer). */
+(function () {
+  "use strict";
+  const { make, clear, el, sentenceAt, visibleLabel, isHeading, isCaption } = PP;
+  const T = window.PP_ITEMS;
+
+  const run = { set: null, mode: "practice", pos: 0, ctxs: [], state: [], done: false };
+
+  /* ---------- passage pane ---------- */
+  function renderPassages(set, hostEl) {
+    const host = hostEl || el("passage-pane-body");
+    clear(host);
+    if (!set.passages.length) { host.appendChild(make("p", "muted", "This set has no passage.")); return; }
+    set.passages.forEach((p, pi) => {
+      const art = make("article", "passage");
+      if (set.passages.length > 1) art.appendChild(make("p", "passage-tag", "Passage " + (pi + 1)));
+      if (p.title) art.appendChild(make("h3", "passage-title", p.title));
+      if (p.byline) art.appendChild(make("p", "passage-byline", p.byline));
+      if (p.lines) {
+        let n = 0;
+        p.lines.forEach((st, si) => {
+          const stanza = make("div", "stanza");
+          st.forEach((line, li) => {
+            n++;
+            const row = make("p", "poem-line");
+            row.appendChild(make("span", "line-no", (n % 5 === 0) ? String(n) : ""));
+            const span = make("span", "sent", line);
+            span.dataset.ref = p.id + ":" + (si + 1) + ":" + (li + 1);
+            row.appendChild(span);
+            stanza.appendChild(row);
+          });
+          art.appendChild(stanza);
+        });
+      } else {
+        let n = 0;
+        p.paragraphs.forEach((para, k) => {
+          const first = para[0] || "";
+          if (isHeading(first)) { art.appendChild(make("h4", "passage-heading", first.replace(/^## /, ""))); return; }
+          if (isCaption(first)) { art.appendChild(make("p", "passage-caption", first.replace(/^Caption: /, ""))); return; }
+          n++;
+          const row = make("div", "para");
+          row.appendChild(make("span", "para-no", String(n)));
+          const body = make("p", "para-body");
+          para.forEach((s, si) => {
+            const span = make("span", "sent", s);
+            span.dataset.ref = p.id + ":" + (k + 1) + ":" + (si + 1);
+            body.appendChild(span);
+            if (si < para.length - 1) body.appendChild(document.createTextNode(" "));
+          });
+          row.appendChild(body);
+          art.appendChild(row);
+        });
+      }
+      host.appendChild(art);
+    });
+  }
+  function markSelected(refs) {
+    Array.from(document.querySelectorAll("#passage-pane-body .sent")).forEach(s => {
+      s.classList.toggle("is-selected", refs.indexOf(s.dataset.ref) >= 0);
+    });
+  }
+  function flash(ref) {
+    const s = document.querySelector('#passage-pane-body .sent[data-ref="' + ref + '"]');
+    if (!s) return;
+    if (window.matchMedia("(min-width: 980px)").matches) s.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+
+  /* ---------- phone tabs ---------- */
+  function showPane(which) {
+    const grid = el("player-grid");
+    grid.dataset.pane = which;
+    el("tab-passage").setAttribute("aria-selected", which === "passage" ? "true" : "false");
+    el("tab-question").setAttribute("aria-selected", which === "question" ? "true" : "false");
+  }
+
+  /* ---------- one question ---------- */
+  function ctxFor(i) {
+    if (!run.ctxs[i]) {
+      const item = run.set.items[i];
+      run.ctxs[i] = { item, set: run.set, resp: T[item.type].blank(item), ui: {}, locked: false,
+                      onChange: onChange };
+      run.state[i] = { help: 0, wrong: 0, solved: false, firstTry: null };
+    }
+    return run.ctxs[i];
+  }
+
+  function renderItem() {
+    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    const total = run.set.items.length;
+    el("q-count").textContent = "Question " + (i + 1) + " of " + total;
+    el("q-points").textContent = item.points === 2 ? "2 points" : "1 point";
+    el("q-bar").style.width = Math.round((i / total) * 100) + "%";
+    el("q-prompt").textContent = item.prompt;
+    const host = el("q-body");
+    clear(host);
+    ctx.host = host;
+    ctx.ui = Object.assign({}, { fixed: ctx.ui.fixed, fixedRow: ctx.ui.fixedRow, aLocked: ctx.ui.aLocked });
+    ctx.locked = run.mode === "practice" && st.solved;
+    T[item.type].render(ctx);
+    /* re-apply help state after a re-render (e.g. coming Back) */
+    if (run.mode === "practice") {
+      clear(el("q-help-steps"));
+      (st.helpLog || []).forEach(h => addHelp(h.label, h.text));
+      if (st.help >= 3) T[item.type].outline(ctx);
+    } else clear(el("q-help-steps"));
+    if (item.type !== "hottext") markSelected([]);
+    setFeedback(st.fb || null);
+    syncControls();
+    el("q-prompt").focus();
+    window.scrollTo(0, 0);
+  }
+
+  function onChange() {
+    const st = run.state[run.pos];
+    if (run.mode === "practice" && !st.solved && st.fb && st.fb.kind !== "help") setFeedback(null);
+    syncControls();
+  }
+
+  function setFeedback(fb) {
+    const st = run.state[run.pos];
+    st.fb = fb;
+    const box = el("q-feedback");
+    clear(box);
+    box.className = "feedback";
+    if (!fb) { box.hidden = true; return; }
+    box.hidden = false;
+    box.classList.add("is-" + fb.kind);
+    box.appendChild(make("span", "fb-label", fb.label));
+    box.appendChild(make("span", "fb-text", fb.text));
+  }
+
+  function addHelp(label, text) {
+    const p = make("p", "help-step");
+    p.appendChild(make("span", "fb-label", label));
+    p.appendChild(make("span", "help-text", text));
+    el("q-help-steps").appendChild(p);
+  }
+
+  function syncControls() {
+    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    const answered = T[item.type].answered(item, ctx.resp);
+    const last = i === run.set.items.length - 1;
+    el("q-prev").hidden = run.mode === "practice";
+    el("q-prev").disabled = i === 0;
+    if (run.mode === "practice") {
+      el("q-help").hidden = st.solved;
+      el("q-help").disabled = st.help >= 3;
+      el("q-help").textContent = st.help === 0 ? "Help me" : st.help < 3 ? "Help me (next step)" : "Help me";
+      el("q-check").hidden = st.solved;
+      el("q-check").disabled = !answered;
+      el("q-next").hidden = !st.solved;
+      el("q-next").textContent = last ? "Finish" : "Next question";
+    } else {
+      el("q-help").hidden = true;
+      el("q-check").hidden = true;
+      el("q-next").hidden = false;
+      el("q-next").disabled = !answered;
+      el("q-next").textContent = last ? "Finish" : "Next";
+    }
+  }
+
+  /* ---------- practice actions ---------- */
+  function help() {
+    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    if (st.help >= 3 || st.solved) return;
+    st.help++;
+    st.helpLog = st.helpLog || [];
+    let label, text;
+    if (st.help === 1) { label = "Hint 1 of 3"; text = item.clue; }
+    else if (st.help === 2) { label = "Hint 2 of 3"; text = T[item.type].narrow(ctx); }
+    else { label = "Let's walk through it"; text = item.why + " Now you choose it."; T[item.type].outline(ctx); }
+    st.helpLog.push({ label, text });
+    addHelp(label, text);
+    syncControls();
+  }
+
+  function check() {
+    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    if (!T[item.type].answered(item, ctx.resp)) return;
+    const sc = T[item.type].score(item, ctx.resp);
+    if (st.firstTry === null) st.firstTry = sc.points === sc.max;
+    if (sc.points === sc.max) {
+      st.solved = true; ctx.locked = true;
+      setFeedback({ kind: "right", label: "That's right!", text: item.why });
+      renderLockedState(ctx);
+    } else {
+      st.wrong++;
+      const part = sc.points > 0 ? "You got part of it (" + sc.points + " of " + sc.max + " points). " : "";
+      if (st.wrong >= 3 && st.help < 3) {
+        while (st.help < 3) help();
+        setFeedback({ kind: "try", label: "Let's find it together", text: part + "Read the walk-through above, then try again." });
+      } else {
+        setFeedback({ kind: "try", label: "Not quite", text: part + "Try again, or press Help me for a hint." });
+      }
+    }
+    syncControls();
+  }
+
+  function renderLockedState(ctx) {
+    /* lock every control in the question body */
+    Array.from(ctx.host.querySelectorAll("button, select")).forEach(b => { b.disabled = true; });
+    Array.from(ctx.host.querySelectorAll(".is-hint")).forEach(b => b.classList.remove("is-hint"));
+  }
+
+  /* ---------- navigation ---------- */
+  function next() {
+    const last = run.pos === run.set.items.length - 1;
+    if (last) { finish(); return; }
+    run.pos++; renderItem();
+  }
+  function prev() { if (run.pos > 0) { run.pos--; renderItem(); } }
+
+  function finish() {
+    if (run.mode === "practice") return practiceDone();
+    showStage("confirm");
+    el("confirm-title").focus();
+  }
+
+  function showStage(name) {
+    ["work", "confirm", "results", "done"].forEach(s => { el("stage-" + s).hidden = s !== name; });
+    el("player-grid").classList.toggle("is-full", name !== "work");
+    window.scrollTo(0, 0);
+  }
+
+  function practiceDone() {
+    const n = run.set.items.length;
+    const first = run.state.filter(s => s && s.firstTry).length;
+    el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
+      " right on the first try. Asking for help is never a mistake.";
+    showStage("done");
+    el("done-title").focus();
+  }
+
+  /* ---------- test scoring and review ---------- */
+  const SKILL = {
+    "3.T.C": "Purpose, audience and perspective", "3.T.SS": "Structure, text features and figurative language",
+    "3.T.T.1": "Stories: characters, plot and message", "3.T.T.2": "Informational texts: main idea and details",
+    "3.T.T.3": "Opinion texts", "3.T.T.4": "Poetry", "3.T.RA": "Using evidence and sources",
+    "3.L.GC": "Grammar and conventions", "3.L.V": "Vocabulary"
+  };
+  function skillOf(code) {
+    const c = String(code || "");
+    const keys = Object.keys(SKILL).sort((a, b) => b.length - a.length);
+    const k = keys.find(k => c.indexOf(k) === 0);
+    return k ? SKILL[k] : "Other";
+  }
+
+  function submit() {
+    const rows = run.set.items.map((item, i) => {
+      const ctx = ctxFor(i);
+      const sc = T[item.type].score(item, ctx.resp);
+      return { i, item, sc, resp: ctx.resp };
+    });
+    const got = rows.reduce((a, r) => a + r.sc.points, 0);
+    const max = rows.reduce((a, r) => a + r.sc.max, 0);
+    el("res-score").textContent = String(got);
+    el("res-of").textContent = "of " + max + " points";
+    const by = {};
+    rows.forEach(r => {
+      const k = skillOf((r.item.std || [])[0]);
+      by[k] = by[k] || { got: 0, max: 0 }; by[k].got += r.sc.points; by[k].max += r.sc.max;
+    });
+    const host = el("res-skills"); clear(host);
+    Object.keys(by).forEach(k => {
+      const row = make("div", "skill-row");
+      row.appendChild(make("span", "skill-name", k));
+      row.appendChild(make("span", "skill-score", by[k].got + " of " + by[k].max));
+      const bar = make("span", "skill-bar"); const fill = make("span", "skill-fill");
+      fill.style.width = (by[k].max ? Math.round(100 * by[k].got / by[k].max) : 0) + "%";
+      bar.appendChild(fill); row.appendChild(bar);
+      host.appendChild(row);
+    });
+    const pct = max ? got / max : 0;
+    el("res-guidance").textContent = pct >= 0.85 ? "Excellent work. You are ready for harder sets."
+      : pct >= 0.6 ? "Good work. Practice the questions you missed, then try again."
+      : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
+    buildReview(rows);
+    showStage("results");
+    el("res-score-box").focus();
+  }
+
+  function buildReview(rows) {
+    const host = el("res-review"); clear(host); host.hidden = true;
+    el("res-review-btn").textContent = "See my answers";
+    rows.forEach(r => {
+      const it = r.item, full = r.sc.points === r.sc.max;
+      const box = make("div", "review-item" + (full ? " is-right" : ""));
+      const head = make("p", "review-head");
+      head.appendChild(make("span", "review-n", String(r.i + 1)));
+      head.appendChild(make("span", "review-q", it.prompt));
+      head.appendChild(make("span", "review-pts", r.sc.points + " of " + r.sc.max));
+      box.appendChild(head);
+      box.appendChild(make("p", "review-yours", "You answered: " + T[it.type].describe(it, r.resp, run.set)));
+      if (full) box.appendChild(make("p", "review-why", it.why));
+      else {
+        const ans = make("p", "review-answer", "The answer: " + T[it.type].answerText(it, run.set));
+        ans.hidden = true;
+        const out = make("div", "show-how-steps");
+        out.setAttribute("aria-live", "polite");
+        const b = make("button", "btn btn-soft show-how", "Show me how");
+        b.type = "button";
+        let step = 0;
+        b.addEventListener("click", () => {
+          step++;
+          const p = make("p", "help-step");
+          const txt = step === 1 ? it.clue : step === 2 ? T[it.type].narrowText(it, r.resp, run.set) : it.why;
+          p.appendChild(make("span", "fb-label", step < 3 ? "Hint " + step + " of 3" : "The walk-through"));
+          p.appendChild(make("span", "help-text", txt));
+          out.appendChild(p);
+          if (step >= 3) { b.disabled = true; ans.hidden = false; }
+          else b.textContent = "Show me how (next step)";
+        });
+        box.appendChild(b); box.appendChild(out); box.appendChild(ans);
+      }
+      host.appendChild(box);
+    });
+  }
+
+  /* ---------- start ---------- */
+  function start(setId, mode) {
+    const set = PP.byId[setId];
+    if (!set) return;
+    run.set = set; run.mode = mode === "test" ? "test" : "practice";
+    run.pos = 0; run.ctxs = []; run.state = [];
+    el("player-title").textContent = set.title;
+    el("player-mode").textContent = run.mode === "test" ? "Test" : "Practice";
+    el("screen-player").dataset.mode = run.mode;
+    el("screen-player").dataset.section = set.section;
+    renderPassages(set);
+    showStage("work");
+    showPane(set.passages.length ? "passage" : "question");
+    el("player-grid").classList.toggle("no-passage", !set.passages.length);
+    renderItem();
+    window.PP_APP.show("player");
+    el("player-title").focus();
+  }
+
+  function init() {
+    el("q-help").addEventListener("click", help);
+    el("q-check").addEventListener("click", check);
+    el("q-next").addEventListener("click", next);
+    el("q-prev").addEventListener("click", prev);
+    el("tab-passage").addEventListener("click", () => showPane("passage"));
+    el("tab-question").addEventListener("click", () => showPane("question"));
+    el("confirm-back").addEventListener("click", () => { showStage("work"); renderItem(); });
+    el("confirm-submit").addEventListener("click", submit);
+    el("res-review-btn").addEventListener("click", () => {
+      const r = el("res-review"); r.hidden = !r.hidden;
+      el("res-review-btn").textContent = r.hidden ? "See my answers" : "Hide my answers";
+    });
+    el("res-again").addEventListener("click", () => start(run.set.id, "test"));
+    el("res-practice").addEventListener("click", () => start(run.set.id, "practice"));
+    el("done-test").addEventListener("click", () => start(run.set.id, "test"));
+    ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.openSection(run.set.section)));
+  }
+
+  window.PP_PLAYER = {
+    init, start, flash, markSelected, renderPassages,
+    state: () => ({ setId: run.set && run.set.id, mode: run.mode, pos: run.pos, total: run.set ? run.set.items.length : 0,
+                    help: run.state.map(s => s && s.help), solved: run.state.map(s => s && s.solved) }),
+    ctx: i => ctxFor(i === undefined ? run.pos : i)
+  };
+})();
