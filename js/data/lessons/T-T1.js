@@ -106,7 +106,7 @@ PP.addLesson({
           { text: "\"Soon he sang along, even louder than the thunder.\"" }
         ] },
       clue: "The writer does not say how Mateo feels. Look at paragraph 2 for what his voice and his body do right after the room goes dark.",
-      why: "Part A: He feels scared. Part B: \"His voice came out high and squeaky.\" and \"He pulled his blanket up to his chin.\" A squeaky voice and hiding under a blanket show fear. The room going dark is the setting, not Mateo's feeling, and tapping and singing happen later, when he is having fun." },
+      why: "Part A: He feels scared. Part B: \"His voice came out high and squeaky.\" and \"He pulled his blanket up to his chin.\" A squeaky voice and pulling the blanket up to his chin show fear. The room going dark is the setting, not Mateo's feeling, and tapping and singing happen later, when he is having fun." },
     { id: "SK-TT1a-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What do Abuela's words in paragraph 3 show about her?",
       choices: [
@@ -154,7 +154,7 @@ PP.addLesson({
         { text: "She is angry with her brother Dev." },
         { text: "She is sure the slide will be easy." }
       ],
-      clue: "People sometimes fidget with their hands when they have a worried feeling. Look at what Priya sees just before she does this.",
+      clue: "Look at what Priya sees just before she does this. Think about how you might feel standing there.",
       why: "The answer is \"She feels nervous about the slide.\" She looks up at a ladder that seems to reach the clouds, and she keeps twisting the strap. Dev has not even spoken yet, so she is not angry with him." },
     { id: "SK-TT1a-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -165,31 +165,31 @@ PP.addLesson({
           { text: "She starts out bored and ends up tired." },
           { text: "She starts out angry and ends up sad." }
         ] },
-      partB: { prompt: "Which sentence from the end of the story best shows how Priya feels?",
+      partB: { prompt: "Which sentence from the story best shows how Priya feels at the end?",
         choices: [
           { text: "\"Again!\" she shouted, already running back to the ladder.", correct: true },
-          { text: "\"Priya splashed into the pool at the bottom.\"" },
-          { text: "\"At the top, she sat, pinched her nose, and pushed off.\"" },
-          { text: "\"You don't have to go,\" her brother Dev said." }
+          { text: "Priya splashed into the pool at the bottom." },
+          { text: "At the top, she sat, pinched her nose, and pushed off." },
+          { text: "She climbed the ladder one step at a time without looking down." }
         ] },
       clue: "Compare how Priya acts at the bottom of the slide with how she acts after her ride. Then find the sentence where her words and actions show the new feeling.",
-      why: "Part A: She starts out nervous and ends up excited. Part B: \"Again!\" she shouted, already running back to the ladder. Shouting \"Again!\" and running back show she loved the ride. Splashing into the pool tells what happened, not how she feels, and Dev's words come before the ride." },
+      why: "Part A: She starts out nervous and ends up excited. Part B: \"Again!\" she shouted, already running back to the ladder. Shouting \"Again!\" and running back show she loved the ride. The other three sentences tell what Priya does on the slide, not how she feels about it." },
     { id: "SK-TT1a-T4", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence uses description to show how tall and scary the slide looks to Priya? Choose the sentence in the passage.",
       targets: ["p2:1:1", "p2:1:2", "p2:2:1", "p2:2:2", "p2:2:3"],
       answer: ["p2:2:2"], pick: 1,
-      clue: "Find the sentence that describes the slide itself, not the park or what Priya does with her hands.",
+      clue: "Description helps you picture something. Find the sentence that tells how something looks to Priya, not what she does.",
       why: "The answer is \"The ladder seemed to go all the way to the clouds.\" A ladder cannot really reach the clouds, but this description shows how high the slide feels to Priya." },
     { id: "SK-TT1a-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
       prompt: "Why does the author include Dev's words in paragraph 3?",
       choices: [
-        { text: "They give Priya an easy way out of the slide.", correct: true },
+        { text: "They give Priya an easy way out of riding the slide.", correct: true },
         { text: "They show that Dev is afraid of the tall slide." },
         { text: "They explain how to ride the lazy river safely." },
         { text: "They tell the reader that the park is closing." }
       ],
       clue: "Think about the choice Priya has to make after Dev speaks. How do his words set up what she says next?",
-      why: "The answer is \"They give Priya an easy way out of the slide.\" Dev tells her she does not have to go, so Priya must choose. When she says \"No,\" the reader sees how determined she is. Dev never says he is afraid." },
+      why: "The answer is \"They give Priya an easy way out of riding the slide.\" Dev tells her she does not have to go, so Priya must choose. When she says \"No,\" the reader sees how determined she is. Dev never says he is afraid." },
     { id: "SK-TT1a-T6", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each sentence from the story to the kind of detail it is.",
       cols: ["Dialogue", "Action", "Description"],
@@ -207,12 +207,13 @@ PP.addLesson({
   code: "3.T.T.1.b",
   title: "Story elements: characters, setting, problem and solution",
   teach: {
-    big: "Every story has the same four parts: who it is about, where and when it happens, the problem, and how the problem gets solved.",
+    big: "Most stories have four parts: who it is about, where and when it happens, the problem, and how the problem gets solved.",
     points: [
       "Characters are the people or animals in the story. The main character is the one the story is mostly about.",
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet.",
-      "The solution is how the problem is fixed by the end. Look near the end of the story to find it."
+      "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
+      "The parts work together. The problem gets the story moving, the middle shows the character trying to fix it, and the solution brings the story to an end."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -262,7 +263,7 @@ PP.addLesson({
       ] },
     { id: "p2", title: "The Lost Library Book", genre: "Literary text",
       paragraphs: [
-        ["It was Thursday afternoon, and Omar's library book was due the next day.", "He looked in his backpack.", "He looked under his bed.", "The book was not anywhere."],
+        ["It was Thursday afternoon, and Omar's library book was due the next day.", "He looked in his backpack.", "He looked under his bed.", "He asked his little sister, Lina, but she had not seen it.", "The book was not anywhere."],
         ["\"Where did you read it last?\" his dad asked.", "Omar closed his eyes and thought.", "He had read it on the porch swing while it rained on Tuesday."],
         ["Omar hurried outside.", "There, tucked under the swing's cushion, was the book.", "It was a little damp but not ruined."],
         ["Omar dried it with a towel and set it on top of his shoes so he would not forget it.", "On Friday morning, he handed it to Ms. Park at the library desk right on time."]
@@ -324,10 +325,10 @@ PP.addLesson({
         { text: "Omar", correct: true },
         { text: "Omar's dad" },
         { text: "Ms. Park" },
-        { text: "the librarian's helper" }
+        { text: "Omar's sister, Lina" }
       ],
       clue: "The main character is the one the story is mostly about. Who has the problem?",
-      why: "The answer is Omar. The story follows Omar as he looks for his book, finds it and returns it. His dad and Ms. Park appear only for a moment." },
+      why: "The answer is Omar. The story follows Omar as he looks for his book, finds it and returns it. His dad, his sister Lina and Ms. Park appear only for a moment." },
     { id: "SK-TT1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "What problem does Omar have?",
       choices: [
@@ -368,14 +369,14 @@ PP.addLesson({
       why: "The answer is Omar's home on a Thursday afternoon. Paragraph 1 says it is Thursday afternoon, and Omar searches his backpack and under his bed at home. The porch swing on Tuesday is only something he remembers." },
     { id: "SK-TT1b-T5", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each detail to the story part it shows.",
-      cols: ["Problem", "Solution", "Ending"],
+      cols: ["Character", "Problem", "Solution"],
       rows: [
-        { text: "The book is not anywhere.", answer: 0 },
-        { text: "Omar finds the book under the swing's cushion.", answer: 1 },
-        { text: "Omar returns the book on time.", answer: 2 }
+        { text: "Omar's dad", answer: 0 },
+        { text: "The book is not anywhere.", answer: 1 },
+        { text: "Omar finds the book under the swing's cushion.", answer: 2 }
       ],
-      clue: "The problem comes first, the solution fixes it, and the ending shows how things turn out.",
-      why: "The book not being anywhere is the problem. Finding it under the cushion is the solution. Returning it on time is how the story ends." }
+      clue: "Ask three questions: Who is in the story? What goes wrong? How is it fixed?",
+      why: "Omar's dad is a character. The book not being anywhere is the problem. Finding it under the swing's cushion is the solution, because it fixes the problem." }
   ]
 });
 PP.addLesson({
@@ -385,7 +386,7 @@ PP.addLesson({
     big: "What characters are like, what they want and how they change can teach me the lesson of the story.",
     points: [
       "A trait is what a character is like on the inside, such as kind, bossy, brave or honest. You figure it out from what the character says and does.",
-      "Feelings can change during a story. Look for clues like a red face, a big grin or a heavy heart.",
+      "Feelings and thoughts can change during a story. Look for clues like a red face or a big grin, and notice what a character thinks about. Thoughts can explain why a character makes a choice.",
       "A motive is the reason a character does something. Ask: Why did they do that? What do they want?",
       "The lesson, or central message, is what the character learns and what the story teaches you. Look at how the character changes and what happens because of their choices.",
       "A lesson works for anyone, like \"Telling the truth is better than hiding a mistake.\" It is not just what happened in the story."
@@ -479,13 +480,13 @@ PP.addLesson({
     { id: "SK-TT1c-P3", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "How do Marisol's thoughts in paragraph 5 help show the lesson of the story?",
       choices: [
-        { text: "They show she cares that keeping the money hurts him.", correct: true },
+        { text: "They show she cares that keeping the money hurts Mr. Okafor.", correct: true },
         { text: "They show she is tired from walking around the market." },
         { text: "They show she is afraid that she will lose the money." },
         { text: "They show she wishes Mr. Okafor would give her more." }
       ],
       clue: "Read what Marisol thinks about in paragraph 5. Who is she thinking about, and what would happen to him?",
-      why: "The answer is \"They show she cares that keeping the money hurts him.\" She thinks about Mr. Okafor working hard in the sun and coming up short at the end of the day. Thinking about him is what makes her choose to be honest." },
+      why: "The answer is \"They show she cares that keeping the money hurts Mr. Okafor.\" She thinks about Mr. Okafor working hard in the sun and coming up short at the end of the day. Thinking about him is what makes her choose to be honest." },
     { id: "SK-TT1c-P4", type: "ms", points: 2, dok: 2, passages: ["p1"], pick: 2,
       prompt: "Which TWO words best describe Marisol by the end of the story?",
       choices: [
@@ -520,10 +521,10 @@ PP.addLesson({
           { text: "\"But as she carried the pie home, she felt proud all the way.\"", correct: true },
           { text: "\"Marisol had saved her money for weeks.\"" },
           { text: "\"He was busy talking to three customers at once.\"" },
-          { text: "\"She had wanted that sketchbook all summer.\"" }
+          { text: "\"He dropped some coins and bills into her hand without looking.\"" }
         ] },
       clue: "The central message comes from Marisol's big choice and how she feels after it. Pick a lesson about the whole story, then find the sentence that shows how her choice turned out.",
-      why: "Part A: Being honest is right, even when it costs you. Part B: \"But as she carried the pie home, she felt proud all the way.\" Marisol gives up the sketchbook, but she feels proud, which shows honesty was worth it. Saving money and the pie are true details, but they are not what the story teaches." }
+      why: "Part A: Being honest is right, even when it costs you. Part B: \"But as she carried the pie home, she felt proud all the way.\" Marisol gives up the sketchbook, but she feels proud, which shows honesty was worth it. The other sentences tell about saving money and how the mistake happened. They do not show how Marisol's honest choice turned out." }
   ],
   test: [
     { id: "SK-TT1c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -545,7 +546,7 @@ PP.addLesson({
         { text: "bored" }
       ],
       clue: "The writer does not name the feeling. Look at paragraph 5 for what happens to Theo's face and where he looks.",
-      why: "The answer is embarrassed. Theo's cheeks turn red and he stares at the broken sticks after he told Amara, \"I've got this.\" His plan failed in front of the class." },
+      why: "The answer is embarrassed. Theo's cheeks turn red and he stares at the broken sticks after he told Amara, \"I've got this.\" His plan failed right after he told Amara he had it under control." },
     { id: "SK-TT1c-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Why does Theo ask Amara, \"What were you going to tell me before?\"",
       choices: [
@@ -594,7 +595,7 @@ PP.addLesson({
     big: "When I compare two stories, I look at the same parts in both, like the characters, settings and lessons, and tell how they are alike and how they are different.",
     points: [
       "Compare means tell how things are alike. Contrast means tell how they are different.",
-      "Look at the same part in both stories. Who is the main character? Where does it happen? What is the problem? What is the lesson?",
+      "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
       "Stories from different places and cultures can show people who feel and learn the same things.",
       "Keep a chart in your head with two sides: same and different."
@@ -743,7 +744,7 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TT1d-T1", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "How are Pip and Ravi alike?",
+      prompt: "In what way are Pip and Ravi the same?",
       choices: [
         { text: "Each one uses what makes him different to help.", correct: true },
         { text: "Each one is the oldest child in his family." },
@@ -753,7 +754,7 @@ PP.addLesson({
       clue: "Think about what makes each main character different from the others. Then look at how that difference helps in the story.",
       why: "The answer is \"Each one uses what makes him different to help.\" Pip's small paw gets the stone out of the crack. Ravi's quiet, still way lets the whole class see the kingfisher. Pip is the smallest, not the oldest, and Ravi is the quietest, not the loudest." },
     { id: "SK-TT1d-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "How are the settings of the two stories different?",
+      prompt: "Which sentence tells how the place in \"The Smallest Fox\" is different from the place in \"Ravi and the Kingfisher\"?",
       choices: [
         { text: "Pip's story is in a snowy forest, and Ravi's is at a bird park.", correct: true },
         { text: "Pip's story is in a busy city, and Ravi's is in a snowy forest." },
@@ -785,13 +786,13 @@ PP.addLesson({
       prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
       cols: ["Pip's story", "Ravi's story", "Both stories"],
       rows: [
-        { text: "The main character gets back something that was lost.", answer: 0 },
+        { text: "The main character finds something that was lost.", answer: 0 },
         { text: "Staying still and silent helps the main character.", answer: 1 },
         { text: "Others point out how the main character is different.", answer: 2 },
         { text: "By the end, the main character feels good about himself.", answer: 2 }
       ],
       clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-      why: "Only Pip gets back something that was lost: Grandfather's stone. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
+      why: "Only Pip finds something that was lost: Grandfather's stone. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
     { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "How is the problem in Pip's story different from the problem in Ravi's story?",
       choices: [
@@ -895,12 +896,10 @@ PP.addLesson({
       ] },
     { id: "p2", draft: true, title: "The Big Catch", byline: "Sofia's first draft", genre: "Student draft (story)",
       paragraphs: [
-        ["(1) I went fishing one time."],
-        ["(2) Early one Saturday, Aunt Rosa and I rowed a little boat out onto Lake Lanier.", "(3) The water was calm and gray, and the air smelled like pine trees.", "(4) I watched my red bobber float on the water, but for an hour, nothing bit my hook.", "(5) I was ready to give up."],
-        ["(6) Suddenly, my bobber went under, and my fishing pole bent almost in half.", "(7) Aunt Rosa grabbed the net."],
-        ["(8) I reeled and reeled until my arms burned.", "(9) At last, a big fish splashed out of the water."],
-        ["(10) It was big."],
-        ["(11) We went home."]
+        ["(1) Early one Saturday, Aunt Rosa and I rowed a little green boat out onto Lake Lanier.", "(2) The water was calm and gray, and the air smelled like pine trees."],
+        ["(3) I watched my red bobber float on the water, but for a whole hour, nothing bit my hook.", "(4) I was bored.", "(5) My cousin Luis plays soccer every Saturday at the park near his house."],
+        ["(6) My bobber went under, and my fishing pole bent almost in half.", "(7) Aunt Rosa grabbed the net and yelled, \"Hold on tight, Sofia!\""],
+        ["(8) I reeled and reeled until my arms burned and my hands felt sore.", "(9) At last, a fish as long as my arm splashed out of the water, its silver scales shining in the sun.", "(10) Aunt Rosa scooped it into the net, and we both cheered."]
       ] }
   ],
   practice: [
@@ -938,11 +937,11 @@ PP.addLesson({
       prompt: "Andre wants to add these sentences between sentence 8 and sentence 9. Put them in the order that makes the most sense.",
       steps: [
         "We tiptoed into the kitchen.",
-        "Bree pointed at the pantry door, which was open just a crack.",
+        "Inside the kitchen, Bree pointed at the pantry door, which was open just a crack.",
         "I pulled the pantry door open all the way."
       ],
       clue: "Picture the children moving. Where do they have to be before they can see the door? What has to happen before the door can be opened?",
-      why: "The order is: We tiptoed into the kitchen. Bree pointed at the pantry door, which was open just a crack. I pulled the pantry door open all the way. They must reach the kitchen first, then spot the door, then open it and find Peanut." },
+      why: "The order is: We tiptoed into the kitchen. Inside the kitchen, Bree pointed at the pantry door, which was open just a crack. I pulled the pantry door open all the way. They must reach the kitchen first, then spot the door, then open it and find Peanut." },
     { id: "SK-TT1e-P5", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       prompt: "Andre wants to add time words to sentences 7 and 9. Choose the best word or words for each blank.",
       text: "(7) {0} we looked under the couch and behind the bookshelf. (9) {1} we found Peanut sitting in an open bag of sunflower seeds.",
@@ -950,7 +949,7 @@ PP.addLesson({
         { options: ["First,", "Finally,", "In the end,"], answer: 0 },
         { options: ["At last,", "Before that,", "First,"], answer: 0 }
       ],
-      clue: "Sentence 7 is where the search begins. Sentence 9 is where the long search is over. Choose the time words that fit the beginning and the end.",
+      clue: "Read sentences 6 to 9 in order. For each blank, ask whether that sentence comes near the start of the search or after it is over. Then pick the time word that matches.",
       why: "Sentence 7 needs \"First,\" because it is the first place they search. Sentence 9 needs \"At last,\" because they finally find Peanut after a long search. Before that would put the events out of order." },
     { id: "SK-TT1e-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence should replace sentence 11 to give the story a better ending?",
@@ -964,54 +963,51 @@ PP.addLesson({
       why: "The answer is \"I hugged Peanut gently and promised to always close his door.\" It shows Andre is relieved, and it connects back to sentence 3, where he forgot to close the door. The phone ringing starts something new, the hamster fact is off topic, and \"That is the story of what happened\" still just says the story is over." }
   ],
   test: [
-    { id: "SK-TT1e-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Sofia wants a stronger beginning. Which sentence should replace sentence 1?",
+    { id: "SK-TT1e-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "One sentence in Sofia's draft does not belong in the story. Which sentence should she take out? Choose the sentence in the draft.",
+      targets: ["p2:1:2", "p2:2:1", "p2:2:3", "p2:3:2", "p2:4:1"],
+      answer: ["p2:2:3"], pick: 1,
+      clue: "Every sentence in a story should help tell what happened on this fishing trip. Read each one and ask: is this about Sofia's morning on the lake?",
+      why: "The answer is sentence 5, \"My cousin Luis plays soccer every Saturday at the park near his house.\" Luis is not on the boat and soccer has nothing to do with the fishing trip, so the sentence pulls the reader away from the story." },
+    { id: "SK-TT1e-T2", type: "ms", points: 2, dok: 2, passages: ["p2"], pick: 2,
+      prompt: "Sentence 4 tells how Sofia feels instead of showing it. Which TWO sentences would best replace sentence 4 to show that she is bored?",
       choices: [
-        { text: "I never thought a quiet morning on a lake could be so exciting.", correct: true },
-        { text: "Lake Lanier is a big lake in the north part of Georgia." },
-        { text: "Fishing is a hobby that lots of people like to do." },
-        { text: "My aunt Rosa has a blue car and a fluffy gray cat." }
+        { text: "I yawned and rested my chin on my hand.", correct: true },
+        { text: "I sighed and tapped my fingers on the boat.", correct: true },
+        { text: "I was very, very, very bored that day." },
+        { text: "The little boat was painted bright green." },
+        { text: "Aunt Rosa's fishing pole was brand new." }
       ],
-      clue: "A strong beginning fits the story and makes the reader curious. Which choice hints that something is about to happen?",
-      why: "The answer is \"I never thought a quiet morning on a lake could be so exciting.\" It matches the calm lake and hints that something exciting is coming. The other choices are facts that do not pull the reader into Sofia's story." },
-    { id: "SK-TT1e-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Sofia wants to add dialogue after sentence 7. Which sentence fits best?",
+      clue: "Showing means the reader can see what the character does, so they can tell how she feels without being told. Look for actions a bored person might do.",
+      why: "The answers are \"I yawned and rested my chin on my hand.\" and \"I sighed and tapped my fingers on the boat.\" Yawning, sighing and tapping are actions that show boredom. \"Very, very, very bored\" still just tells. The green boat and the new pole are details, but they do not show how Sofia feels." },
+    { id: "SK-TT1e-T3", type: "dropdown", points: 2, dok: 2, passages: ["p2"],
+      prompt: "Sofia wants to add words to the beginning of sentences 6 and 10. Choose the best word for each blank.",
+      text: "(6) {0} my bobber went under, and my fishing pole bent almost in half. (10) {1} Aunt Rosa scooped it into the net, and we both cheered.",
+      slots: [
+        { options: ["Suddenly,", "At first,", "In the end,"], answer: 0 },
+        { options: ["Then", "Before that,", "At first,"], answer: 0 }
+      ],
+      clue: "For sentence 6, think about how long Sofia had been waiting and how fast this happens. For sentence 10, think about what has to happen first before the fish can go in the net.",
+      why: "Sentence 6 needs \"Suddenly,\" because after a whole hour of nothing, the bite happens all at once. At first and In the end do not fit the middle of the story. Sentence 10 needs \"Then\" because Aunt Rosa scoops up the fish right after it comes out of the water in sentence 9. Before that and At first would put the events out of order." },
+    { id: "SK-TT1e-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Sofia wants to add a beginning before sentence 1 that will hook the reader. Which sentence is best?",
       choices: [
-        { text: "\"Hold on tight, Sofia! Don't let go!\" Aunt Rosa shouted.", correct: true },
-        { text: "\"Too bad, nothing is biting today,\" Aunt Rosa sighed." },
-        { text: "\"Let's stop and eat our lunch now,\" Aunt Rosa said." },
-        { text: "\"I really like your new shoes,\" Aunt Rosa said." }
+        { text: "Have you ever waited so long for something that you almost gave up?", correct: true },
+        { text: "This is a story about the day that Aunt Rosa and I went fishing." },
+        { text: "We caught a really big fish that day, and it was so much fun." },
+        { text: "My aunt Rosa has a blue car, a gray cat, and a little garden." }
       ],
-      clue: "Think about what is happening right at sentence 7. What would someone say at that exact moment?",
-      why: "The answer is \"Hold on tight, Sofia! Don't let go!\" Aunt Rosa shouted. A fish has just pulled the pole almost in half, so Aunt Rosa would cheer Sofia on. \"Nothing is biting\" no longer fits because a fish is biting now. Lunch and shoes do not fit the action." },
-    { id: "SK-TT1e-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Sentence 10 does not help the reader picture the fish. Which sentence should replace it?",
-      choices: [
-        { text: "It was as long as my arm, with shiny silver scales.", correct: true },
-        { text: "It was a very nice, very big fish from the lake." },
-        { text: "Fish use their gills to breathe under the water." },
-        { text: "It was the kind of fish that lives in the water." }
-      ],
-      clue: "A good detail shows exactly what something looks like. Which sentence lets you see this one fish?",
-      why: "The answer is \"It was as long as my arm, with shiny silver scales.\" It tells the size and the color, so the reader can picture the fish. \"Very nice, very big\" is still vague, and the other two sentences are about all fish, not this one." },
-    { id: "SK-TT1e-T4", type: "order", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Sofia wants to add these sentences after sentence 9. Put them in the order that makes the most sense.",
-      steps: [
-        "Aunt Rosa scooped the fish into the net.",
-        "She snapped a picture of me holding it up.",
-        "Then we gently let it go back into the lake."
-      ],
-      clue: "Think about what has to happen to the fish first, before anyone can hold it, and what happens last.",
-      why: "The order is: Aunt Rosa scooped the fish into the net. She snapped a picture of me holding it up. Then we gently let it go back into the lake. The fish must be caught before Sofia can hold it, and letting it go comes last. The word Then also signals a later step." },
+      clue: "A hook makes the reader curious and fits what the story is about. It should not give away the ending or wander off topic.",
+      why: "The answer is \"Have you ever waited so long for something that you almost gave up?\" It pulls the reader in with a question and fits the long, boring wait before the fish bites. \"This is a story about\" is flat, the big-fish sentence gives away the ending, and Aunt Rosa's car and cat are off topic." },
     { id: "SK-TT1e-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
-      prompt: "Which sentence should replace sentence 11 to give the story a better ending?",
+      prompt: "The draft stops after sentence 10. Which sentence would be the best ending to add after sentence 10?",
       choices: [
-        { text: "I smiled all the way home, proud that I did not give up.", correct: true },
-        { text: "Then dark clouds rolled in, and rain began to pour down." },
-        { text: "Many kinds of fish live in lakes and rivers in Georgia." },
-        { text: "The next day was Sunday, so I stayed home and read." }
+        { text: "As we rowed back, Aunt Rosa smiled and said, \"See? Waiting paid off.\"", correct: true },
+        { text: "Then my line got tangled, and a frog jumped into our boat." },
+        { text: "Early that morning, we rowed out onto the calm, gray lake." },
+        { text: "The fish had shiny silver scales and was as long as my arm." }
       ],
-      clue: "A strong ending wraps up the story and shows how the character feels. Look back at how Sofia felt in sentence 5.",
-      why: "The answer is \"I smiled all the way home, proud that I did not give up.\" In sentence 5, Sofia was ready to give up, so this ending shows how she changed. A storm starts a new problem, the fish fact is off topic, and Sunday has nothing to do with the fishing trip." }
+      clue: "An ending finishes the story. It does not start something new, go back to the beginning or repeat a detail. Think about the problem Sofia had before the fish bit.",
+      why: "The answer is: As we rowed back, Aunt Rosa smiled and said, \"See? Waiting paid off.\" It closes the trip and connects to the long wait in sentence 3. The tangled line starts a new problem, the early-morning sentence goes back to the beginning, and the silver scales repeat a detail from sentence 9." }
   ]
 });

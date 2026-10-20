@@ -877,7 +877,7 @@ PP.addLesson({
         { text: "Electric lights would hurt her eyes." }
       ],
       clue: "Read the text box before the letter. What did most farms not have in 1928?",
-      why: "The answer is \"Her farm did not have electric lights.\" The text box says most farm families in 1928 did not have electricity, so they used oil lamps for light." },
+      why: "The answer is \"Her farm did not have electric lights.\" The letter is dated 1928, and the text box says most farm families did not have electricity back then, so they used oil lamps for light." },
     { id: "SK-TC2c-P3", type: "ms", points: 2, dok: 2, passages: ["p1"], pick: 2,
       prompt: "Which two details show that this letter tells about life long ago? Pick two.",
       choices: [
