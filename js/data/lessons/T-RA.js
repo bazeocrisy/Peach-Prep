@@ -143,12 +143,12 @@ PP.addLesson({
       prompt: "Which question can the article \"Hunters of the Night\" answer?",
       choices: [
         { text: "How do owls find food in the dark?", correct: true },
-        { text: "Where do owls build their nests?" },
+        { text: "How do owl chicks learn to fly?" },
         { text: "How many eggs does an owl lay?" },
         { text: "Which owl is the largest in the world?" }
       ],
       clue: "Look for the question that the whole article keeps answering, paragraph after paragraph.",
-      why: "The answer is \"How do owls find food in the dark?\" The article tells how owls use sharp hearing, large eyes and quiet feathers to hunt at night. It never tells about nests, eggs or the largest owl." },
+      why: "The answer is \"How do owls find food in the dark?\" The article tells how owls use sharp hearing, large eyes and quiet feathers to hunt at night. It never tells about owl chicks, eggs or the largest owl." },
     { id: "SK-RA1a-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Lila wants to learn how owls catch their food. Which question would help her the most?",
       choices: [
@@ -177,12 +177,12 @@ PP.addLesson({
       rows: [
         { text: "How do owls hear so well?", answer: 0 },
         { text: "Do owls have wings?", answer: 1 },
-        { text: "Where do owls build their nests?", answer: 0 },
+        { text: "Where do snowy owls live?", answer: 0 },
         { text: "What do eagles eat?", answer: 1 },
         { text: "Should my family get a pet owl?", answer: 1 }
       ],
       clue: "A good research question stays on the topic, asks for facts, and teaches you something you do not already know.",
-      why: "\"How do owls hear so well?\" and \"Where do owls build their nests?\" are good research questions: they are about owls and need fact answers. \"Do owls have wings?\" is a yes-or-no question everyone already knows, \"What do eagles eat?\" is off the topic, and \"Should my family get a pet owl?\" asks for an opinion." },
+      why: "\"How do owls hear so well?\" and \"Where do snowy owls live?\" are good research questions: they are about owls and need fact answers. \"Do owls have wings?\" is a yes-or-no question everyone already knows, \"What do eagles eat?\" is off the topic, and \"Should my family get a pet owl?\" asks for an opinion." },
     { id: "SK-RA1a-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
       prompt: "Malik learned that scientists study owl pellets. Which question would help him learn MORE about this idea?",
       choices: [
@@ -358,10 +358,10 @@ PP.addLesson({
         { text: "The moon has no wind or rain to wipe things away.", correct: true },
         { text: "The moon is much smaller than Earth is." },
         { text: "The moon seems to change shape during the month." },
-        { text: "Scientists still study the moon rocks today." }
+        { text: "The moon travels around Earth again and again." }
       ],
       clue: "The heading asks why. Find the fact that explains what keeps the footprints from going away.",
-      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and rocks, not footprints." },
+      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and its path around Earth, not footprints." },
     { id: "SK-RA1b-T3", type: "ms", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi has a note card with the heading \"People on the moon.\" Which TWO facts belong on this card? Choose two answers.",
       pick: 2,
@@ -571,28 +571,28 @@ PP.addLesson({
       clue: "Read the heading again. Find the fact from Source 2 that gives another reason hummingbirds need so much food.",
       why: "The answer is \"In late summer, they eat and eat to get ready for a long trip.\" It gives one more reason hummingbirds eat so much. The feeders are about people, and the nest and summer home are not about why the birds eat so much." },
     { id: "SK-RA1c-T3", type: "ms", points: 2, dok: 3, passages: ["p3", "p4"],
-      prompt: "Which TWO sentences belong in a summary of both sources? Choose two answers.",
+      prompt: "Kayla checks her summary sentences against the sources. Which TWO sentences are true to the sources and belong in her summary? Choose two answers.",
       pick: 2,
       choices: [
-        { text: "Hummingbirds can hover and even fly backward.", correct: true },
-        { text: "They fly south for the winter and come back in spring.", correct: true },
+        { text: "Their wings beat so fast that they look like a blur.", correct: true },
+        { text: "Many of them cross a wide sea without stopping to rest.", correct: true },
         { text: "I think hummingbirds are the cutest birds of all." },
-        { text: "Hummingbirds are bigger than most other birds." },
-        { text: "Hummingbirds stay in Georgia all year long." }
+        { text: "Hummingbirds can only fly forward, like most birds." },
+        { text: "The mother builds her nest out of mud and sticks." }
       ],
-      clue: "A summary sentence must be an important fact, and it must match what the sources really say. Check each choice against the sources.",
-      why: "\"Hummingbirds can hover and even fly backward\" is an important idea from Source 1, and \"They fly south for the winter and come back in spring\" is an important idea from Source 2. The cutest-birds sentence is an opinion. The sources say hummingbirds are some of the smallest birds and that they leave Georgia for winter, so the other two sentences are wrong." },
+      clue: "A summary sentence must be a fact, and it must match what the sources really say. Check each choice against the sources.",
+      why: "\"Their wings beat so fast that they look like a blur\" matches Source 1, and \"Many of them cross a wide sea without stopping to rest\" matches Source 2. The cutest-birds sentence is an opinion. Source 1 says hummingbirds can fly backward, and Source 2 says the nest is made of soft bits of plants and spider silk, so the other two sentences are wrong." },
     { id: "SK-RA1c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Here is Kayla's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [
-        "Hummingbirds are tiny birds that can hover and fly backward.",
-        "They drink nectar and also eat small insects.",
+        "Hummingbirds reach into flowers with long bills and long tongues.",
+        "Many people hang feeders with sugar water to greet them.",
         "My aunt has a red bird feeder on her back porch.",
-        "In summer they build tiny nests, and in late summer they fly south."
+        "Many hummingbirds come back to the same places each year."
       ],
       answer: [2], pick: 1,
       clue: "A summary tells only what the sources say. Check whether each sentence comes from Source 1 or Source 2.",
-      why: "The answer is \"My aunt has a red bird feeder on her back porch.\" Neither source tells about Kayla's aunt, so it does not belong. The other sentences sum up facts from the two sources." },
+      why: "The answer is \"My aunt has a red bird feeder on her back porch.\" Neither source tells about Kayla's aunt, so it does not belong. The other sentences tell facts from the two sources." },
     { id: "SK-RA1c-T5", type: "dropdown", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kayla wants to join ideas in her summary. Choose the best word or words for each blank.",
       text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they drink nectar and eat tiny insects.",
@@ -736,7 +736,7 @@ PP.addLesson({
       partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
         choices: [
           { text: "\"'Now you can play the whole spring song without looking at the keys,' Mr. Bell said.\"", correct: true },
-          { text: "\"Her fingers would not stop shaking.\"" },
+          { text: "\"Ana nodded.\"" },
           { text: "\"Ana took a deep breath.\"" },
           { text: "\"Her teacher, Mr. Bell, sat down beside her.\"" }
         ] },

@@ -61,3 +61,30 @@ The checker passes with `--all`: 0 failures and 0 warnings. Every mc item has ex
   - the u in busy and the ui in build say short i
   - gift has a hard g before i
   - page and giraffe have a soft g
+
+## Round 2 (responses to F-PF-verify.md)
+
+I re-read every clue in the file with one test: is the clue a reusable strategy, or does it single out one choice? `node verification/check-content.js --all`: PASS, 0 failures and 0 warnings in F-PF.js. The 23 warnings it reports are all in other files.
+
+### Verify findings
+- **SK-FF1a-P2 (MUST).** Fixed. The clue is now "This word has a tricky part: the sound you hear is not spelled the way it sounds. Picture the word in a book you have read." It no longer contains a letter test.
+- **SK-FP4a-P7 (MUST).** Fixed. The clue is now "Some of these are real words that mean something else. Read each one in the sentence, then picture the word on a bag at the store." It no longer mentions ea.
+- **SK-FP4a-T6 (SHOULD).** Fixed. The clue is now "Think about how the s sound is spelled at the end of words like this, and what keeps a c soft." It no longer names words that end in ce.
+- **SK-FF1a-T1 (NIT).** Fixed. The clue is now "Picture the word in a book you have read. Check each choice letter by letter, in order."
+- **SK-FF1a-P6 (NIT).** Fixed. The why now explains that "I was a deer" would mean you are a deer.
+- **SK-FF1a-T5 (NIT).** Fixed. The prompt now reads "Read each sentence. In which sentence is one word wrong?" The clue was also rewritten, so this item no longer matches P7 word for word.
+
+### Other clues rewritten in the self-audit
+Each of these clues narrowed the choices to the key. Each one now names the strategy only.
+- **SK-FP4b-P7 (candle):** the clue pointed to the consonant-le ending. It now says to spell one syllable at a time and check each against the syllable types.
+- **SK-FP4b-T6 (pebble):** the clue said the first syllable must be closed and pointed to the ending, which ruled out both distractors. It now says to use what each syllable type tells you about the vowel sound.
+- **SK-FP4c-P2 (making), P3 (stopped), T2 (hopped/napping), T3 (tried):** each clue applied the spelling rule to that one word. They now say to look at how the base word ends and use the spelling rule that fits.
+- **SK-FP4c-T5 (refill):** the clue said "find the word that starts with it", and refill is the only choice with re-. It now says to find the base word and think about what the prefix or suffix adds.
+- **SK-FF1a-P1 (because):** the clue spelled out the mnemonic, which spells the key. It now says "use a memory trick you know for this word" and to check letter by letter.
+- **SK-FF1a-T2 (does):** "this word goes with do" pointed to the d-o start. The clue is now picture-and-check.
+- **SK-FF1a-T3 (busy/build):** "not spelled with just an i" ruled out two options per slot. The clue is now picture-and-check.
+- **SK-FF1a-T4 (Where):** "asks a question about a place" defined the key. The clue now says to read each word in the sentence and ask whether it makes sense.
+- **SK-FF1d-P2 (pan), T2 (hose), T5 (fish):** each clue named the thing the key word means, such as "what Grandpa uses to cook" or "what a kitten drinks from". They now say to find a word that makes sense in the sentence and looks like the misread word.
+
+### Clues kept on purpose
+Some clues state a general rule from Teach, such as "C is usually soft when e, i or y comes next" in 4a-P3 and P6, and "consonant followed by l and e" in 4b-P6. I kept these. Applying the rule is the skill being practiced, and the rule is a reusable strategy that does not name or describe a single choice.
