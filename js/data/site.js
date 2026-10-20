@@ -84,7 +84,7 @@ window.PP_SITE = {
       "Uses mostly complete sentences with some variety.",
       "Uses correct verb tense and subject-verb agreement.",
       "Has few errors in usage, capitals and punctuation, and none that get in the way of meaning.",
-      "Is long enough to show this. A very short answer cannot earn full credit, even with no errors." ] }
+      "Is long enough to show this. The rubric says a very short answer may not earn these points, even with few or no errors." ] }
   ],
   rubricNote: "A response that is blank, copied, too short to score, off topic or unreadable gets a condition code and no score.",
 

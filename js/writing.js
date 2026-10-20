@@ -81,7 +81,7 @@
     function upd() {
       const w = words(t.value), n = paras(t.value);
       stats.textContent = w + " words · " + n + " paragraph" + (n === 1 ? "" : "s") +
-        (w > 0 && w < 120 ? " · Keep going. A very short essay cannot earn full points." : "");
+        (w > 0 && w < 120 ? " · Keep going. A very short essay may not earn full points." : "");
     }
     t.addEventListener("input", () => { data.draft = t.value; save(); upd(); });
     host.appendChild(t); host.appendChild(stats); upd();
