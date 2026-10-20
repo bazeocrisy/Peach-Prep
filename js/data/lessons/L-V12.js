@@ -260,7 +260,7 @@ PP.addLesson({
         ["(5) Plants need sunlight, water and air to grow.", "(6) Bees came to the bean flowers and carried the yellow powder from one flower to another.", "(7) Some bugs chewed holes in a few of our bean leaves."],
         ["(8) By June, we picked and gathered a whole basket of ripe beans.", "(9) We shared them with the lunchroom.", "(10) Next year, we want to grow tomatoes and peppers too."]
       ] },
-    { id: "p2", draft: true, title: "Sea Turtle Nests", byline: "Theo's report draft", genre: "Student draft (informational)",
+    { id: "p2", draft: true, title: "Sea Turtles on Our Beach", byline: "Theo's report draft", genre: "Student draft (informational)",
       paragraphs: [
         ["(1) Every summer, loggerhead sea turtles come to the land along the edge of the sea in Georgia.", "(2) A sea turtle is a kind of animal that has scaly skin, breathes air and lays eggs.", "(3) At night, a mother turtle crawls onto the sand.", "(4) She digs a deep hole with her back flippers.", "(5) She lays her eggs in the hole she dug and covers them with sand."],
         ["(6) About two months later, the baby turtles break out of their eggs.", "(7) Crabs and birds try to catch them.", "(8) The babies hurry across the sand to the sea."],

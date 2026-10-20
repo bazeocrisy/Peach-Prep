@@ -104,7 +104,7 @@ PP.addLesson({
           { text: "\"Every spring, Mr. Lee's third graders hold a bake sale to raise money for new library books.\"" },
           { text: "\"Leah sat at the table and sighed.\"" }
         ] },
-      clue: "The clue is not in the same sentence as scarce. Read the other sentences in paragraph 3. Which one tells you the most about the buyers themselves?",
+      clue: "Read the sentences around it. Which one helps you picture what the first part of the sale was like? Does it show many people or few?",
       why: "Part A: very few; not many. Part B: \"Only two people stopped by in the whole first hour.\" Only two buyers in a whole hour is very few, so scarce means very few. Leah's sigh shows she felt let down, but it does not tell you anything about how many buyers there were." },
     { id: "SK-V3a-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 4. Choose the meaning of devoured.",
@@ -531,7 +531,7 @@ PP.addLesson({
           { text: "\"The leaves were turning red and gold.\"" },
           { text: "\"The air was chilly, so Dev zipped up his jacket.\"" }
         ] },
-      clue: "Find the place where the author puts happy and overjoyed side by side. What does that tell you about the two words?",
+      clue: "Find the place where the author compares two feeling words. What does that comparison tell you about Dev?",
       why: "Part A: to show Dev's feeling was much stronger than happy. Part B: \"He was not just happy.\" The author says Dev was not just happy, then picks overjoyed, a stronger word that means very, very happy." },
     { id: "SK-V3c-P4", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the word that best completes each sentence.",
