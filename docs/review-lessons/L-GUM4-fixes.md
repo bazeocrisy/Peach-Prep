@@ -76,3 +76,17 @@ Checker: `node verification/check-content.js --all` gives PASS (0 failures). Non
 - **SHOULD: the SK-GUM4-5-T5 correct choice repeated P2's "X is the season when …" frame.** Fixed. It is now "Saturday is the day when we go to the library." The why says "We go to the library then" is a whole sentence.
 
 Declined: none.
+
+## Final (response to L-GUM4-final.md)
+
+Checker: `node verification/check-content.js --all` gives PASS (0 failures). None of the warnings are in L-GUM4. No other keys changed.
+
+- **SHOULD: SK-GUM4-8-T5 revealed the SK-GUM4-8-T3 answer.** Fixed. "It's time for bed." in T5 is now "We walked to the park after school." No its/it's sentence remains in T5.
+- **SHOULD: SK-GUM4-4-T4 let a child find the capital-letter mistake by elimination, which then ruled out the lowercase choices in T1, T3 and T5.** Fixed. I made T4 a Correct / Not correct match with no "one mistake" premise, so no column can be found by elimination:
+  - Ms. Grant said, "Open your books." (correct)
+  - "The movie starts soon" Jin said. (not correct: missing comma)
+  - Kenji yelled, "Look at the rainbow!" (correct)
+  - Mia said, "we are almost there." (not correct: lowercase)
+
+  The clue and why are rewritten to match. T1, T3 and T5 are unchanged.
+- **NIT: SK-GUM4-2-T4's "best" row weakly ruled out the T5 "goodest" distractor.** Fixed. The row is now "tallest". The why is updated.

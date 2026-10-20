@@ -271,12 +271,12 @@ PP.addLesson({
         { text: "slower", answer: 0 },
         { text: "most helpful", answer: 1 },
         { text: "worse", answer: 0 },
-        { text: "best", answer: 1 },
+        { text: "tallest", answer: 1 },
         { text: "more careful", answer: 0 },
         { text: "greatest", answer: 1 }
       ],
       clue: "Words with -er or more compare two. Words with -est or most compare three or more. Remember the words that change completely.",
-      why: "Slower, more careful and worse compare two things. Most helpful, greatest and best compare three or more things. Worse comes from bad, and best comes from good." },
+      why: "Slower, more careful and worse compare two things. Most helpful, greatest and tallest compare three or more things. Worse comes from bad." },
     { id: "SK-GUM4-2-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which two sentences use the comparing word correctly?",
       choices: [
@@ -560,16 +560,16 @@ PP.addLesson({
       clue: "Check the comma, the capital letter, and where each mark sits next to the closing quotation marks.",
       why: "The answers are Coach Bell said, \"Great job today.\" and \"May I have some water?\" asked Nico. Sara's sentence needs a comma inside the quotation marks after birthday. Dad's sentence needs a capital D in Don't. Pablo's period belongs inside the quotation marks." },
     { id: "SK-GUM4-4-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Each sentence has one mistake. What does each sentence need?",
-      cols: ["A comma", "A capital letter", "Quotation marks"],
+      prompt: "Is each sentence punctuated correctly?",
+      cols: ["Correct", "Not correct"],
       rows: [
-        { text: "Ms. Grant said \"Open your books.\"", answer: 0 },
-        { text: "Jin said, \"the movie starts soon.\"", answer: 1 },
-        { text: "Kenji yelled, Look at the rainbow!", answer: 2 },
+        { text: "Ms. Grant said, \"Open your books.\"", answer: 0 },
+        { text: "\"The movie starts soon\" Jin said.", answer: 1 },
+        { text: "Kenji yelled, \"Look at the rainbow!\"", answer: 0 },
         { text: "Mia said, \"we are almost there.\"", answer: 1 }
       ],
-      clue: "Check each sentence for three things: a comma after the speaking word, a capital letter at the start of the spoken words, and quotation marks around them.",
-      why: "Ms. Grant's sentence needs a comma after said. Jin's and Mia's sentences need a capital letter: The and We. Kenji's sentence needs quotation marks around Look at the rainbow!" },
+      clue: "Check each sentence for quotation marks around the spoken words, a capital letter at the start of them, a comma between the speaker and the words, and the end mark inside the closing quotation marks.",
+      why: "Ms. Grant's and Kenji's sentences are correct. Jin's sentence needs a comma after soon, inside the quotation marks. Mia's sentence needs a capital letter: We." },
     { id: "SK-GUM4-4-T5", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the correct way to write the spoken words.",
       text: "{0} said Uncle Dev.",
@@ -1131,7 +1131,7 @@ PP.addLesson({
         "This box is too heavy to lift.",
         "Their dog likes to swim.",
         "Call me when your home.",
-        "It's time for bed."
+        "We walked to the park after school."
       ],
       answer: [2], pick: 1,
       clue: "Check each sound-alike word. Try saying the long form of each one that could be a contraction.",
