@@ -149,17 +149,17 @@ PP.addLesson({
       clue: "For each choice, ask: Is this word a name, a title before a name, or a word made from a name?",
       why: "The answer is governor. It is a title right before the name Ellis, so it should be Governor Ellis." },
     { id: "SK-GUM5-1-T5", type: "ms", points: 2, dok: 2, passages: [],
-      prompt: "Choose the TWO sentences that are correct.",
+      prompt: "Choose the TWO lines that are correct.",
       choices: [
         { text: "Ms. Lopez hung a Brazilian flag in our classroom.", correct: true },
-        { text: "We mailed the letter to 14 Pine St.", correct: true },
+        { text: "Address: 14 Pine St.", correct: true },
         { text: "Mr Jackson coaches our soccer team." },
         { text: "We ate german pretzels at the fall festival." },
-        { text: "Our new address is 9 Maple rd." }
+        { text: "Address: 9 Maple rd." }
       ],
       pick: 2,
       clue: "Check that each title has a capital and a period, that each short form of a name has a capital, and that each word made from a place name has a capital.",
-      why: "The answers are \"Ms. Lopez hung a Brazilian flag in our classroom.\" and \"We mailed the letter to 14 Pine St.\" The others should say Mr. Jackson (with a period), German (from Germany) and Maple Rd. (a street name in an address)." }
+      why: "The answers are \"Ms. Lopez hung a Brazilian flag in our classroom.\" and \"Address: 14 Pine St.\" The others should say Mr. Jackson (with a period), German (from Germany) and Maple Rd. (a street name)." }
   ]
 });
 
@@ -278,10 +278,10 @@ PP.addLesson({
       clue: "Look for a person spoken to by name and for yes or no at the start. Then look for a comma that does not belong.",
       why: "The answer is \"Yes, the puppy can sleep in my room.\" Yes starts the answer, so a comma follows it. The others should say \"Is this your backpack, Hector?\" and \"No, I do not want a turn on the swing.\" The Ms. Brown sentence only tells about her, so it needs no comma." },
     { id: "SK-GUM5-2-T2", type: "dropdown", points: 2, dok: 1, passages: [],
-      prompt: "Mom asks Leah to feed the fish, and Leah answers. Choose the words that correctly complete what they say.",
-      text: "Mom: {0} please feed the fish. Leah: {1} I will feed them right now.",
+      prompt: "Mom says the first sentence to Leah, and Leah answers with the second. Choose the words that correctly complete what they say.",
+      text: "{0} please feed the fish. {1} I will feed them right now.",
       slots: [
-        { options: ["Leah", "Leah,", "Leah:"], answer: 1 },
+        { options: ["Leah", "Leah,", "Leah;"], answer: 1 },
         { options: ["Yes", "Yes,", "Yes;"], answer: 1 }
       ],
       clue: "Mom is talking to a person by name. Leah's answer starts with an answer word.",
@@ -789,9 +789,9 @@ PP.addLesson({
       text: "Kim wore shorts {0} the day was chilly, and she put on a jacket {1} she got to the park.",
       slots: [
         { options: ["although", "because", "if"], answer: 0 },
-        { options: ["although", "after", "unless"], answer: 1 }
+        { options: ["although", "after", "until"], answer: 1 }
       ],
-      clue: "Read the sentence with each word in each blank. Is the first idea a surprise, a reason or a case? Is the second idea about time?",
+      clue: "Read the sentence with each word in each blank. Which words make the ideas fit together?",
       why: "The answers are although and after. Wearing shorts on a chilly day is a surprise, and although shows a surprise. Kim put on the jacket once she got to the park, and after tells when." },
     { id: "SK-GUM5-5-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence correctly joins these two ideas?",

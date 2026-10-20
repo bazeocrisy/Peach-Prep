@@ -39,3 +39,11 @@ Checker: `node verification/check-content.js --all` reports PASS (0 failures, 0 
 - [B] GUM5-4: "one at a time" was a memory trick, not the meaning. **fixed:** The big idea, the Learn 2 step, the P1 why, the P3 clue and the T2 clue now say "treated as one".
 - [B] GUM5-4 covers only subject-verb agreement. **declined (no change requested):** Pronoun-antecedent agreement (everyone ... their) is left out on purpose for an Introduce row, to avoid a usage debate.
 - [B] Nested double quotation marks in the SK-GUM5-7-P1 and T1 whys. **fixed:** The sentence is now wrapped in single quotes, and the title keeps its double quotation marks.
+
+## Round 2 (docs/review-lessons/L-GUM5-verify.md)
+- [SHOULD] SK-GUM5-1-T5: the key "We mailed the letter to 14 Pine St." conflicted with Teach point 2 ("not in ordinary sentences"). **fixed:** The key is now the line "Address: 14 Pine St." and the distractor is "Address: 9 Maple rd." The prompt now says "Choose the TWO lines that are correct." The why is updated to match. Teach is unchanged.
+- [SHOULD] SK-GUM5-2-T2: with the colon speaker labels, the "Leah:" option looked like a correct label. **fixed:** The "Mom:" and "Leah:" labels are gone, and the speakers are named only in the prompt: "Mom says the first sentence to Leah, and Leah answers with the second." The "Leah:" option is now "Leah;", which matches "Yes;".
+- [NIT] SK-GUM5-5-T4: "unless" was never taught. **fixed:** It is replaced with "until", which Teach point 1 lists. "When" is left out of the choices because it would also fit.
+- [NIT] SK-GUM5-5-T4: the clue pointed to the only time word. **fixed:** The clue now reads "Read the sentence with each word in each blank. Which words make the ideas fit together?"
+
+Checker after round 2: PASS (0 failures, 0 warnings).

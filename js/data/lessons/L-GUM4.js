@@ -358,8 +358,8 @@ PP.addLesson({
         { text: "Mr. Hill" },
         { text: "the project and Mr. Hill" }
       ],
-      clue: "Their is a pronoun for more than one. Find the noun in the sentence that means more than one and owns something.",
-      why: "The answer is the girls. Their stands for more than one, and girls means more than one. Mr. Hill and the science project each mean one, and the project and Mr. Hill do not own the project." },
+      clue: "Ask two questions about the noun: one or more than one? A person or a thing?",
+      why: "The answer is the girls. Their stands for more than one, and girls means more than one. Mr. Hill and the science project each mean one. The project cannot own itself, and Mr. Hill did not make it, so their does not stand for them together." },
     { id: "SK-GUM4-3-P4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses the pronoun correctly?",
       choices: [
@@ -586,8 +586,8 @@ PP.addLesson({
     big: "Words like who, which, that, where and when can start a part of a sentence that tells more about a noun.",
     points: [
       "Use who to tell more about a person: I have a friend who plays the drums.",
-      "Use that or which to tell more about a thing, an animal or a place when the next words need someone or something to do the action: We crossed the bridge that goes over the river. The park that has a slide is near us.",
-      "Use where for a place or when for a time only if you could say \"in that place\" or \"at that time\": This is the park where we fly kites. (We fly kites in that place.) Saturday is the day when we visit Grandma."
+      "Use that or which to tell more about a thing or an animal: We crossed the bridge that goes over the river.",
+      "Use where for a place or when for a time only if \"in that place\" or \"at that time\" fits with the words after it: This is the park where we fly kites. (We fly kites in that place.) If it does not fit, use that or which, just as for a thing: The park that has a slide is near us."
     ],
     words: [
       { term: "relative pronoun", means: "who, which or that, used to tell more about a noun" },
@@ -596,9 +596,9 @@ PP.addLesson({
     example: {
       label: "Example",
       lines: ["Ms. Kim is the teacher who helped me read.", "Macon is the city where my cousins live.", "Macon is a city that has many old trees."],
-      note: "Who tells more about the teacher, a person. Where fits the second sentence because my cousins live in that place. In the third sentence, the next words need a doer (what has many old trees?), so use that, even though Macon is a place."
+      note: "Who tells more about the teacher, a person. Where fits the second sentence because my cousins live in that place. In the third sentence, \"has many old trees in that place\" does not fit, so use that, even though Macon is a place."
     },
-    tip: "Look at the noun before the blank. For a person, use who. For a thing, use that or which. For a place or a time, use where or when only if you could say \"in that place\" or \"at that time.\" If the next words need a doer, like \"the park ___ has a slide,\" use that."
+    tip: "Look at the noun before the blank. For a person, use who. For a thing or an animal, use that or which. For a place or a time, use where or when only if \"in that place\" or \"at that time\" fits. If it does not fit, use that or which."
   },
   learn: [
     {
@@ -606,8 +606,8 @@ PP.addLesson({
       ask: "Which word fits: who, where or that?",
       steps: [
         "Look at the noun right before the blank: farm. A farm is a place, not a person.",
-        "Check whether the next words already have a doer. Yes: Grandpa grew up.",
-        "Try \"in that place\": Grandpa grew up in that place. It makes sense, so use where."
+        "For a place, try \"in that place\" with the words after the blank: Grandpa grew up in that place.",
+        "It fits, so use where."
       ],
       answer: "Where: We visited the farm where Grandpa grew up."
     },
@@ -615,9 +615,9 @@ PP.addLesson({
       show: ["I read a book ___ has a talking fox in it."],
       ask: "Which word fits: who, that or when?",
       steps: [
-        "Look at the noun right before the blank: book. A book is a thing.",
-        "Check the next words: has a talking fox. They need a doer. What has a talking fox? The book.",
-        "Use that for a thing, especially when the next words need a doer."
+        "Look at the noun right before the blank: book.",
+        "A book is a thing. It is not a person, a place or a time.",
+        "Use that or which for a thing. Of the three choices, only that fits."
       ],
       answer: "That: I read a book that has a talking fox in it."
     }
@@ -641,8 +641,8 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Tybee Island is the place {0} we found the seashells.",
       slots: [ { options: ["where", "who", "when", "which"], answer: 0 } ],
-      clue: "The words after the blank already have a doer: we. Try saying \"in that place\" or \"at that time\" with them.",
-      why: "The answer is where. We found the seashells in that place, so where fits. Which would need the next words to be missing a doer, and who is for people." },
+      clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, try \"in that place\" or \"at that time\" with the words after the blank.",
+      why: "The answer is where. We found the seashells in that place, so where fits. Which does not fit, because the words after the blank are already complete: we found the seashells there. Who is for people, and when is for times." },
     { id: "SK-GUM4-5-P4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word correctly completes the sentence?",
       stem: "I found a shell ___ looks like a star.",
@@ -652,8 +652,8 @@ PP.addLesson({
         { text: "where" },
         { text: "when" }
       ],
-      clue: "What looks like a star? Decide whether the noun before the blank is a person, a thing, a place or a time, and whether the next words need a doer.",
-      why: "The answer is that. A shell is a thing, and the next words need a doer: the shell is what looks like a star. Who is for people, and where and when need their own doer after them." },
+      clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, try \"in that place\" or \"at that time\" with the words after the blank.",
+      why: "The answer is that. A shell is a thing, so use that. Who is for people. \"Looks like a star in that place\" and \"at that time\" do not fit, so where and when are wrong." },
     { id: "SK-GUM4-5-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Which word correctly fills each blank?",
       cols: ["that", "where"],
@@ -664,8 +664,8 @@ PP.addLesson({
         { text: "the kitchen ___ Dad cooks dinner", answer: 1 },
         { text: "the song ___ makes me dance", answer: 0 }
       ],
-      clue: "Check whether the words after the blank have their own doer. If they do, try \"in that place.\" If they need a doer, the noun itself is the doer.",
-      why: "Use where for the library and the kitchen: we borrow books in that place, and Dad cooks dinner in that place. Use that for the bike, the park and the song, because each one is the doer: the bike has a bell, the park has a slide, the song makes me dance." }
+      clue: "Try \"in that place\" with the words after each blank. If it fits, use where. If it does not, use that, just as for a thing.",
+      why: "Use where for the library and the kitchen: we borrow books in that place, and Dad cooks dinner in that place. Use that for the bike and the song, which are things. Use that for the park too, because \"has a slide in that place\" does not fit." }
   ],
   test: [
     { id: "SK-GUM4-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -684,8 +684,8 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "This is the creek {0} we saw the turtles.",
       slots: [ { options: ["where", "who", "when", "whose"], answer: 0 } ],
-      clue: "The words after the blank already have a doer: we. Try saying \"in that place\" or \"at that time\" with them.",
-      why: "The answer is where. We saw the turtles in that place, the creek, so where fits." },
+      clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, try \"in that place\" or \"at that time\" with the words after the blank.",
+      why: "The answer is where. A creek is a place, and we saw the turtles in that place, so where fits. Who is for people, when is for times, and whose shows who owns something." },
     { id: "SK-GUM4-5-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word correctly completes the sentence?",
       stem: "We rode the train ___ goes to the airport.",
@@ -695,19 +695,19 @@ PP.addLesson({
         { text: "where" },
         { text: "when" }
       ],
-      clue: "What goes to the airport? Decide whether the noun before the blank is a person or a thing, and whether the next words need a doer.",
-      why: "The answer is that. A train is a thing, and the next words need a doer: the train is what goes to the airport. Who is for people, and where and when need their own doer after them." },
+      clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, try \"in that place\" or \"at that time\" with the words after the blank.",
+      why: "The answer is that. A train is a thing, so use that. Who is for people, and a train is not a place or a time, so where and when are wrong." },
     { id: "SK-GUM4-5-T5", type: "ms", points: 2, dok: 3, passages: [], pick: 2,
       prompt: "Which two sentences use who, that, where or when correctly?",
       choices: [
         { text: "Ms. Lopez is the nurse who helped me.", correct: true },
         { text: "Spring is the season when dogwoods bloom.", correct: true },
-        { text: "The park who has a slide is near us." },
+        { text: "The bus who takes us to school is yellow." },
         { text: "That is the store when we buy bread." },
         { text: "Liam is the boy where lives next door." }
       ],
-      clue: "For each sentence, look at the noun before the word. Is it a person, a thing, a place or a time? Then check whether the next words have their own doer.",
-      why: "The answers are \"Ms. Lopez is the nurse who helped me.\" and \"Spring is the season when dogwoods bloom.\" The park sentence should use that, because the park is what has a slide. The store sentence should use where, because we buy bread in that place. The Liam sentence should use who, because Liam is a person." }
+      clue: "For each sentence, look at the noun before who, where or when. Is it a person, a thing, a place or a time? For a place or a time, try \"in that place\" or \"at that time.\"",
+      why: "The answers are \"Ms. Lopez is the nurse who helped me.\" and \"Spring is the season when dogwoods bloom.\" The bus sentence should use that, because a bus is a thing. The store sentence should use where, because we buy bread in that place. The Liam sentence should use who, because Liam is a person." }
   ]
 });
 
