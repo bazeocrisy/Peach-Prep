@@ -70,7 +70,7 @@
         answer: "Yes. 97 out of 100 words correct is 97% accuracy, so this page is a good fit for reading alone."
       }
     ],
-    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and compare with the same numbers. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
+    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and compare with the national numbers the timer shows (83 in fall, 97 in winter, 112 in spring). Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
     activity: FLUENCY,
     check: {
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
