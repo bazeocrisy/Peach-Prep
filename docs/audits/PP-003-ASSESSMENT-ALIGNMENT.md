@@ -1,5 +1,8 @@
 # PP-003 Phase E: Assessment alignment
 
+> **Record status:** this report describes `main` at 66e536b (v2.1.0) *before* the PP-003 fixes. See PP-003-CORRECTIONS-LOG.md for what changed on `pp-003-fixes`, PP-003-STANDARDS-REPORT.md for post-fix coverage, and PP-003-TEST-RESULTS.md for post-fix counts and test results.
+
+
 Audit of Peach Prep 2.1.0 (branch `pp-003-audit`, based on main at 66e536b) against GaDOE's Georgia Milestones Grade 3 ELA documents.
 Date of audit: 2026-10-20. Live content is what `js/data/manifest.js` loads: 14 practice sets, the practice test `PT-1` and the writing tasks `W-TASK-01` and `W-TASK-02`.
 

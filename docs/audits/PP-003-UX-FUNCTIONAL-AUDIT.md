@@ -1,5 +1,8 @@
 # PP-003 Phase G: UX and functional baseline audit
 
+> **Record status:** this report describes `main` at 66e536b (v2.1.0) *before* the PP-003 fixes. See PP-003-CORRECTIONS-LOG.md for what changed on `pp-003-fixes`, PP-003-STANDARDS-REPORT.md for post-fix coverage, and PP-003-TEST-RESULTS.md for post-fix counts and test results.
+
+
 - **Build audited:** "Peach Prep 2.1.0" (the `build` string in `js/data/manifest.js`), from the working tree of branch `pp-003-audit` (based on main 66e536b). No site files were changed.
 - **Date:** 2026-10-20.
 - **Server:** `node verification/serve.js . 8410`, stopped at the end of the audit.

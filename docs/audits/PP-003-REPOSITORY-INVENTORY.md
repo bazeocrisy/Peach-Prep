@@ -1,5 +1,8 @@
 # PP-003 Phase A: Repository inventory
 
+> **Record status:** this report describes `main` at 66e536b (v2.1.0) *before* the PP-003 fixes. See PP-003-CORRECTIONS-LOG.md for what changed on `pp-003-fixes`, PP-003-STANDARDS-REPORT.md for post-fix coverage, and PP-003-TEST-RESULTS.md for post-fix counts and test results.
+
+
 - **Repository:** local clone `/home/claude/peach-prep`, branch `pp-003-audit` (from `.git/HEAD`). The brief says it is based on `main` at 66e536b, v2.1.0.
 - **Audited:** 2026-10-20. Files were read as they stood on disk at about 15:20 that day. Other agents work in parallel, and git commands were not allowed, so I could not confirm a clean working tree.
 - **Scope:** inventory and counts only. Nothing in the repo was changed except this file.

@@ -1,5 +1,8 @@
 # PP-003 Source Verification: official GaDOE sources vs. what Peach Prep says
 
+> **Record status:** this report describes `main` at 66e536b (v2.1.0) *before* the PP-003 fixes. See PP-003-CORRECTIONS-LOG.md for what changed on `pp-003-fixes`, PP-003-STANDARDS-REPORT.md for post-fix coverage, and PP-003-TEST-RESULTS.md for post-fix counts and test results.
+
+
 - **Audit date:** 2026-10-20. Every "checked" date below is 2026-10-20.
 - **Scope:** Peach Prep v2.1.0 (main at 66e536b), the live build. Files read: `js/data/site.js`, `js/data/standards.js`, `js/data/alds.js`, `js/data/catalog.js`, `js/parents.js`, `js/engine/items.js` (item types only), `index.html`, `README.md`, `docs/SPEC.md`, `verification/gen-standards.py`.
 - **Method:** I compared the owner's uploaded GaDOE PDFs (text pulled with `pdftotext -layout`; page 1 of the blueprint also checked as an image) against the site. I then tried to confirm each source on an official GaDOE domain using WebSearch and WebFetch.

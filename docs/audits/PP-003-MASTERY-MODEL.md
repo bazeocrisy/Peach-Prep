@@ -1,5 +1,8 @@
 # PP-003 Phase D: Mastery model audit and design
 
+> **Record status:** this report describes `main` at 66e536b (v2.1.0) *before* the PP-003 fixes. See PP-003-CORRECTIONS-LOG.md for what changed on `pp-003-fixes`, PP-003-STANDARDS-REPORT.md for post-fix coverage, and PP-003-TEST-RESULTS.md for post-fix counts and test results.
+
+
 - Scope: design and audit only. No code was changed.
 - Code audited: branch `pp-003-audit`, based on main at 66e536b (Peach Prep 2.1.0, the live version).
 - Files read in full: `js/skills.js`, `js/engine/player.js`, `js/app.js`. Also read the relevant parts of `js/engine/items.js`, `js/pp.js`, `js/parents.js`, `js/data/site.js`, `index.html`, `docs/SPEC.md` §8, and the `verification/guard.py` section 9 tests.
