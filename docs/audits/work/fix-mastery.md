@@ -250,7 +250,7 @@
   - 11.18 cursive gap.
 - **Runs.**
   - Fast subset (sections 1, 9, 10, 11 and 7.1, from a scratch copy that cuts out sections 2-6 and 8): 49 passed, 0 failed.
-  - Full guard: see the result at the end of this log.
+  - Full guard: `python3 verification/guard.py http://localhost:8454/` on 2026-10-20 gave **81 passed, 0 failed**, exit 0. This includes 7.1 no page errors and 8.1 no sideways scroll at 320/375/390.
 - **Gates.** `node verification/check-content.js --all` gave PASS (0 failures, 35 warnings, none on my lessons). `python3 verification/readability.py` ran.
 
 ## 13. (B) items NOT implemented: recommendations for the owner
