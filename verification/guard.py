@@ -41,6 +41,10 @@ with sync_playwright() as p:
     pg.route("**/fonts.g*/**", lambda r: r.abort())
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
+    dialogs = []
+    def _dlg(d):
+        dialogs.append(d.message); d.accept()
+    pg.on("dialog", _dlg)
     pg.goto(BASE); pg.wait_for_timeout(600)
 
     # ---------- 1. Home ----------
@@ -147,6 +151,27 @@ with sync_playwright() as p:
                   const h0=ans.hidden; b.click(); const h1=ans.hidden; b.click(); b.click();
                   return {h0,h1,h3:ans.hidden,steps:it.querySelectorAll('.help-step').length,dis:b.disabled};})()""")
                 if not (v["h0"] and v["h1"] and not v["h3"] and v["steps"] == 3 and v["dis"]): t_fail.append(s + " show-me-how " + json.dumps(v))
+    # leaving a test in progress asks first
+    s0 = pg.evaluate("PP.sets[0].id")
+    pg.evaluate("PP_PLAYER.start('%s','test')" % s0); pg.wait_for_timeout(80)
+    pg.evaluate(CORRECT); pg.wait_for_timeout(20)
+    n0 = len(dialogs)
+    pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(60)
+    ok("4.2 leaving a test in progress asks first", len(dialogs) == n0 + 1 and "Leave this test" in dialogs[-1], dialogs[-1:] )
+    pg.evaluate("PP_PLAYER.start('%s','test')" % s0); pg.wait_for_timeout(80)
+    skip = pg.evaluate("!document.getElementById('q-next').disabled")
+    ok("4.3 a test question can be skipped, like the real test", skip)
+    pg.evaluate("PP_PLAYER.abandon()")
+    # reload keeps the place
+    pg.evaluate("PP_PLAYER.start('%s','practice')" % s0); pg.wait_for_timeout(80)
+    pg.reload(); pg.wait_for_timeout(700)
+    here = pg.evaluate("({screen:PP_APP.current(), set:PP_PLAYER.state().setId})")
+    ok("4.4 a reload returns to the same practice set", here["screen"] == "player" and here["set"] == s0, here)
+    pg.evaluate("PP_PARENTS.open('standards')"); pg.wait_for_timeout(80)
+    pg.evaluate("PP_PLAYER.start('%s','practice')" % s0); pg.wait_for_timeout(80)
+    pg.click("#player-back"); pg.wait_for_timeout(80)
+    back = pg.evaluate("({screen:PP_APP.current(), tab:PP_PARENTS.tab()})")
+    ok("4.5 Back from a set opened in the parent guide returns to the guide", back["screen"] == "parents" and back["tab"] == "standards", back)
     ok("4.1 tests: no hints, full marks when right, 0 when wrong, skill rows, Show me how holds the answer to step 3", not t_fail, t_fail[:5])
 
     # ---------- 5. Parent guide ----------
@@ -211,7 +236,8 @@ with sync_playwright() as p:
         for s in q.evaluate("PP.sets.map(s=>s.id)"):
             q.evaluate("PP_PLAYER.start('%s','practice')" % s); q.wait_for_timeout(60); chk(s + " passage")
             for i in range(q.evaluate("PP_PLAYER.state().total")):
-                q.click("#tab-question"); chk("%s q%d" % (s, i + 1))
+                if q.is_visible("#tab-question"): q.click("#tab-question")
+                chk("%s q%d" % (s, i + 1))
                 for k in range(3): q.click("#q-help")
                 chk("%s q%d help" % (s, i + 1))
                 q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next")

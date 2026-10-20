@@ -99,6 +99,9 @@ sets.forEach(set => {
     if ([1, 2, 3, 4].indexOf(it.dok) < 0) F(w, "dok must be 1-4");
     checkStd(w, it.std);
     const why = norm(it.why || ""), clue = norm(it.clue || "");
+    /* choices are shuffled on screen, so never refer to a choice by position */
+    if (/\b(first|second|third|fourth|last|top|bottom) (choice|option)\b|\b(choice|option) [A-D]\b/i.test(why + " " + clue))
+      F(w, "why/clue refers to a choice by position, but choices are shuffled");
     const mustName = t => { if (t && why.toLowerCase().indexOf(norm(t).toLowerCase().replace(/[.!?]$/, "")) < 0) W(w, "why does not quote the answer “" + t + "”"); };
     const noLeak = t => { const x = norm(t).toLowerCase().replace(/[.!?]$/, ""); if (x.split(" ").length >= 2 && clue.toLowerCase().indexOf(x) >= 0) F(w, "clue contains the answer “" + t + "”"); };
     switch (it.type) {

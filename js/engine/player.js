@@ -60,8 +60,8 @@
             box.appendChild(body); art.appendChild(box); return;
           }
           n++;
-          const row = make("div", "para");
-          row.appendChild(make("span", "para-no", String(n)));
+          const row = make("div", "para" + (p.draft ? " no-num" : ""));
+          if (!p.draft) row.appendChild(make("span", "para-no", String(n)));
           const body = make("p", "para-body");
           para.forEach((s, si) => {
             const span = make("span", "sent", s);
@@ -141,8 +141,16 @@
         a.hidden = item.passages.indexOf(a.dataset.pid) < 0;
       });
       el("player-grid").classList.toggle("no-passage", !item.passages.length);
-      el("tab-passage").hidden = !item.passages.length;
+      el("tabs").hidden = !item.passages.length;
+      const key = item.passages.join(",");
       if (!item.passages.length) showPane("question");
+      else if (key !== run.lastPassages) {
+        /* a new passage starts: show it first, with a note, so a phone user doesn't miss it */
+        showPane("passage");
+        el("passage-note").hidden = false;
+        el("passage-note").textContent = "New passage. Read it, then tap Question.";
+      } else el("passage-note").hidden = true;
+      run.lastPassages = key;
     }
     setFeedback(st.fb || null);
     syncControls();
@@ -194,7 +202,7 @@
       el("q-help").hidden = true;
       el("q-check").hidden = true;
       el("q-next").hidden = false;
-      el("q-next").disabled = !answered;
+      el("q-next").disabled = false;            /* skipping is allowed, like the real test */
       el("q-next").textContent = last ? "Finish" : "Next";
     }
   }
@@ -218,14 +226,15 @@
     const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
     if (!T[item.type].answered(item, ctx.resp)) return;
     const sc = T[item.type].score(item, ctx.resp);
-    if (st.firstTry === null) st.firstTry = sc.points === sc.max;
+    if (st.firstTry === null) st.firstTry = sc.points === sc.max && st.help === 0;
     if (sc.points === sc.max) {
       st.solved = true; ctx.locked = true;
       setFeedback({ kind: "right", label: "That's right!", text: item.why });
       renderLockedState(ctx);
     } else {
       st.wrong++;
-      const part = sc.points > 0 ? "You got part of it (" + sc.points + " of " + sc.max + " points). " : "";
+      const pn = T[item.type].partialNote ? T[item.type].partialNote(item, ctx.resp) : "";
+      const part = sc.points > 0 ? "You got part of it (" + sc.points + " of " + sc.max + " points). " + (pn ? pn + " " : "") : "";
       if (st.wrong >= 3 && st.help < 3) {
         while (st.help < 3) help();
         setFeedback({ kind: "try", label: "Let's find it together", text: part + "Read the walk-through above, then try again." });
@@ -252,12 +261,18 @@
 
   function finish() {
     if (run.mode === "practice") return practiceDone();
+    const blank = run.set.items.map((it, i) => ctxFor(i)).filter(c => !T[c.item.type].answered(c.item, c.resp)).length;
+    el("confirm-line").textContent = blank
+      ? "You left " + blank + " question" + (blank > 1 ? "s" : "") + " blank or not finished. You can go back and check, or turn in your test."
+      : "You answered every question. You can go back and check, or turn in your test.";
     showStage("confirm");
     el("confirm-title").focus();
   }
 
   function showStage(name) {
     ["work", "confirm", "results", "done"].forEach(s => { el("stage-" + s).hidden = s !== name; });
+    if (name !== "work") el("tabs").hidden = true;
+    else el("tabs").hidden = !run.set.passages.length;
     el("player-grid").classList.toggle("is-full", name !== "work");
     window.scrollTo(0, 0);
   }
@@ -266,7 +281,7 @@
     const n = run.set.items.length;
     const first = run.state.filter(s => s && s.firstTry).length;
     el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
-      " right on the first try. Asking for help is never a mistake.";
+      " right on your first try without help. Asking for help is never a mistake; it is how you learn.";
     showStage("done");
     el("done-title").focus();
   }
@@ -286,6 +301,7 @@
   }
 
   function submit() {
+    run.submitted = true;
     const rows = run.set.items.map((item, i) => {
       const ctx = ctxFor(i);
       const sc = T[item.type].score(item, ctx.resp);
@@ -295,6 +311,7 @@
     const max = rows.reduce((a, r) => a + r.sc.max, 0);
     el("res-score").textContent = String(got);
     el("res-of").textContent = "of " + max + " points";
+    el("res-score-box").setAttribute("aria-label", "You scored " + got + " of " + max + " points.");
     const by = {};
     rows.forEach(r => {
       const k = skillOf((r.item.std || [])[0]);
@@ -315,8 +332,9 @@
       : pct >= 0.6 ? "Good work. Practice the questions you missed, then try again."
       : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
     buildReview(rows);
+    el("res-practice").hidden = run.set.kind === "form";
     showStage("results");
-    el("res-score-box").focus();
+    el("res-title").focus();
   }
 
   function buildReview(rows) {
@@ -360,6 +378,9 @@
   function start(setId, mode) {
     const set = PP.byId[setId];
     if (!set) return;
+    if (window.PP_APP.current() !== "player") window.PP_APP.rememberReturn();
+    else if (!window.PP_APP.canLeave()) return;
+    run.submitted = false;
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.pos = 0; run.ctxs = []; run.state = [];
     el("player-title").textContent = set.title;
@@ -370,11 +391,22 @@
     showStage("work");
     showPane(set.passages.length ? "passage" : "question");
     el("player-grid").classList.toggle("no-passage", !set.passages.length);
-    el("tab-passage").hidden = !set.passages.length;
+    el("tabs").hidden = !set.passages.length;
+    run.lastPassages = null;
+    el("passage-note").hidden = true;
     renderItem();
     window.PP_APP.show("player");
+    window.PP_APP.setHash("#play/" + set.id + "/" + run.mode);
+    window.PP_APP.track();
     el("player-title").focus();
   }
+  /* A test counts as in progress from the first answer until it is turned in. */
+  function inProgress() {
+    if (run.mode !== "test" || run.submitted || !run.set) return false;
+    return run.ctxs.some((c, i) => c && T[c.item.type].answered(c.item, c.resp)) ||
+      run.ctxs.some(c => c && JSON.stringify(c.resp) !== JSON.stringify(T[c.item.type].blank(c.item)));
+  }
+  function abandon() { run.submitted = true; }
 
   function init() {
     el("q-help").addEventListener("click", help);
@@ -392,12 +424,12 @@
     el("res-again").addEventListener("click", () => start(run.set.id, "test"));
     el("res-practice").addEventListener("click", () => start(run.set.id, "practice"));
     el("done-test").addEventListener("click", () => start(run.set.id, "test"));
-    ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.openSection(run.set.section)));
+    ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 
   window.PP_PLAYER = {
-    init, start, flash, markSelected, renderPassages,
-    state: () => ({ setId: run.set && run.set.id, mode: run.mode, pos: run.pos, total: run.set ? run.set.items.length : 0,
+    init, start, flash, markSelected, renderPassages, inProgress, abandon,
+    state: () => ({ setId: run.set && run.set.id, section: run.set && run.set.section, mode: run.mode, pos: run.pos, total: run.set ? run.set.items.length : 0,
                     help: run.state.map(s => s && s.help), solved: run.state.map(s => s && s.solved) }),
     ctx: i => ctxFor(i === undefined ? run.pos : i)
   };

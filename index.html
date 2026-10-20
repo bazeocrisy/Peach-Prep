@@ -76,12 +76,13 @@
     <div class="player-head wrap">
       <h1 class="page-title" id="player-title" tabindex="-1"></h1>
     </div>
-    <div class="tabs" role="tablist" aria-label="Passage or question">
+    <div class="tabs" id="tabs" role="tablist" aria-label="Passage or question">
       <button type="button" role="tab" id="tab-passage" aria-selected="true">Read the passage</button>
       <button type="button" role="tab" id="tab-question" aria-selected="false">Question</button>
     </div>
     <div class="player-grid" id="player-grid" data-pane="passage">
       <div class="passage-pane" id="passage-pane" aria-label="Passage">
+        <p class="passage-note" id="passage-note" hidden></p>
         <div id="passage-pane-body"></div>
       </div>
       <div class="item-pane">
@@ -103,7 +104,7 @@
         <!-- test: confirm -->
         <div id="stage-confirm" class="panel" hidden>
           <h2 class="panel-title" id="confirm-title" tabindex="-1">All done?</h2>
-          <p>You can go back and check your answers, or turn in your test.</p>
+          <p id="confirm-line">You can go back and check your answers, or turn in your test.</p>
           <div class="panel-actions">
             <button type="button" class="btn btn-primary" id="confirm-submit">Turn in my test</button>
             <button type="button" class="btn btn-soft" id="confirm-back">Go back and check</button>
@@ -111,7 +112,8 @@
         </div>
         <!-- test: results -->
         <div id="stage-results" class="panel" hidden>
-          <div class="score-box" id="res-score-box" tabindex="-1">
+          <h2 class="panel-title" id="res-title" tabindex="-1">Your results</h2>
+          <div class="score-box" id="res-score-box" role="img">
             <span class="score-n" id="res-score"></span><span class="score-of" id="res-of"></span>
           </div>
           <div class="skill-rows" id="res-skills"></div>

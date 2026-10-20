@@ -69,7 +69,8 @@
   const hotTargets = it => it.options ? it.options.map((o, i) => "opt:" + i) : (it.targets || []);
   const hotAnswer = it => it.options ? it.answer.map(i => "opt:" + i) : it.answer;
   const hotText = (it, set, ref) => /^opt:/.test(ref) ? it.options[Number(ref.slice(4))] : String(sentenceAt(set, ref) || ref).replace(/^(Box|Caption): /, "");
-  const hotLabel = (it, set, ref) => /^opt:/.test(ref) ? "Sentence " + (Number(ref.slice(4)) + 1) : visibleLabel(set, ref);
+  /* free-standing options are shuffled, so they carry no numbered label */
+  const hotLabel = (it, set, ref) => /^opt:/.test(ref) ? "" : visibleLabel(set, ref);
 
   const lbl = n => ["", "ONE", "TWO", "THREE", "FOUR"][n] || String(n);
   /* A "look in paragraph N" hint is only safe when that paragraph (or
@@ -240,6 +241,7 @@
         /* options shown in a shuffled order (once per sitting); value keeps the content index */
         ctx.ddOrder = ctx.ddOrder || item.slots.map(sl => shuffled(sl.options.map((o, oi) => oi)));
         ctx.ddOrder[k].forEach(oi => { const op = make("option", "", item.slots[k].options[oi]); op.value = String(oi); sel.appendChild(op); });
+        if (Math.max.apply(null, item.slots[k].options.map(o => o.length)) > 28) sel.classList.add("is-long");
         sel.value = ctx.resp.v[k] === null ? "" : String(ctx.resp.v[k]);
         sel.disabled = !!ctx.locked;
         sel.addEventListener("change", () => {
@@ -291,7 +293,8 @@
       ctx.hotOrder.forEach(ref => {
         const b = make("button", "hot-option");
         b.type = "button"; b.dataset.ref = ref;
-        b.appendChild(make("span", "hot-where", hotLabel(item, set, ref)));
+        const lab = hotLabel(item, set, ref);
+        if (lab) b.appendChild(make("span", "hot-where", lab));
         b.appendChild(make("span", "hot-text", hotText(item, set, ref)));
         b.addEventListener("click", () => {
           if (ctx.locked) return;
@@ -508,12 +511,20 @@
     const where = it.options ? null : placeHint(it, set);
     if (where) return "Look in " + where.labels.join(" and ") + ".";
     return "It is not " + hotTargets(it).filter(x => hotAnswer(it).indexOf(x) < 0).slice(0, 2)
-      .map(x => it.options ? hotLabel(it, set, x) : "\u201c" + hotText(it, set, x) + "\u201d").join(" or ") + ".";
+      .map(x => "\u201c" + hotText(it, set, x) + "\u201d").join(" or ") + ".";
   };
   T.order.describe = (it, r) => r.v.length ? r.v.map((i, k) => (k + 1) + ". " + it.steps[i]).join("  ") : "No answer";
   T.order.narrowText = it => "The first one is: " + it.steps[0];
   T.match.describe = (it, r) => it.rows.map((row, i) => row.text + " \u2192 " + (r.v[i] === null ? "(none)" : it.cols[r.v[i]])).join(";  ");
   T.match.narrowText = it => "First row: " + it.rows[0].text + " \u2192 " + it.cols[it.rows[0].answer] + ".";
+
+  /* What a partly right answer got right, without giving the rest away. */
+  T.ebsr.partialNote = (it, r) => "Part A is right. Check Part B again.";
+  T.ms.partialNote = (it, r) => "At least one of your choices is right.";
+  T.dropdown.partialNote = (it, r) => "One blank is right.";
+  T.match.partialNote = (it, r) => it.rows.filter((row, i) => r.v[i] === row.answer).length + " of " + it.rows.length + " rows are right.";
+  T.order.partialNote = () => "You are close. Two of them are in the wrong places.";
+  T.hottext.partialNote = () => "One of your sentences is right.";
 
   window.PP_ITEMS = T;
 })();

@@ -69,6 +69,7 @@
     const multi = (set.passages || []).length > 1;
     const pre = multi ? (p.title ? "“" + p.title + "”, " : "") : "";
     if (p.lines) return pre + "stanza " + r.para + ", line " + r.sent;
+    if (p.draft) return "";   /* student drafts number their sentences in the text: (1), (2) ... */
     const paras = p.paragraphs || [];
     const first = paras[r.para - 1] && paras[r.para - 1][0];
     if (first && isHeading(first)) return pre + "heading";

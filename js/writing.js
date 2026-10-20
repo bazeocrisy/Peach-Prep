@@ -158,7 +158,13 @@
 
     if (task.model) {
       const det = make("details", "model");
-      det.appendChild(make("summary", "model-sum", "Show a model essay for this prompt"));
+      const sumEl = make("summary", "model-sum", "Grown-ups: show a model essay for this prompt");
+      det.appendChild(sumEl);
+      /* Keep the model out of the child's way until there is an essay. */
+      sumEl.addEventListener("click", e => {
+        if (det.open) return;
+        if (words(data.draft) < 80 && !window.confirm("This shows a finished essay for this prompt. Show it only after your child has written theirs. Show it now?")) e.preventDefault();
+      });
       const body = make("div", "model-body");
       task.model.paragraphs.forEach(pp => body.appendChild(make("p", "", pp)));
       if (task.model.notes && task.model.notes.length) {
@@ -188,17 +194,20 @@
   function start(id) {
     task = PP.taskById[id];
     if (!task) return;
+    if (window.PP_APP.current() !== "write") window.PP_APP.rememberReturn();
     load();
     el("write-title").textContent = task.title;
     buildAll();
     select("sources");
     window.PP_APP.show("write");
+    window.PP_APP.setHash("#write/" + task.id);
+    window.PP_APP.track();
     el("write-title").focus();
   }
 
   function init() {
     document.querySelectorAll("[data-wtab]").forEach(b => b.addEventListener("click", () => select(b.dataset.wtab)));
-    el("write-back").addEventListener("click", () => window.PP_APP.openSection("writing"));
+
   }
   window.PP_WRITING = { init, start, select, state: () => ({ id: task && task.id, data }) };
 })();

@@ -25,8 +25,29 @@
     current = name;
     SCREENS.forEach(n => { el("screen-" + n).hidden = n !== name; });
     window.scrollTo(0, 0);
-    const hashes = { home: "", section: "#" + sectionKey, parents: "#parents", player: location.hash };
-    if (name !== "player") history.replaceState(null, "", location.pathname + (hashes[name] || ""));
+  }
+
+  /* ---------- navigation: every screen has an address, so the phone's
+     Back button and a reload both land in the right place ---------- */
+  let routing = false;
+  function setHash(hash) {
+    if (routing) { history.replaceState(null, "", location.pathname + location.search + hash); return; }
+    if (location.hash === hash || (!location.hash && !hash)) return;
+    history.pushState(null, "", location.pathname + location.search + hash);
+  }
+  /* A test in progress is never thrown away without asking. */
+  function canLeave() {
+    if (current === "player" && window.PP_PLAYER.inProgress()) {
+      if (!window.confirm("Leave this test? Your answers will not be saved.")) return false;
+      window.PP_PLAYER.abandon();
+    }
+    return true;
+  }
+  function goHome() {
+    if (!canLeave()) return;
+    setHash("");
+    show("home");
+    el("home-title").focus();
   }
 
   /* ---------- Home ---------- */
@@ -73,7 +94,9 @@
   const KIND = { form: "Practice test", literary: "Story", informational: "Informational", opinion: "Opinion", poetry: "Poetry",
                  paired: "Paired texts", grammar: "Grammar", vocabulary: "Vocabulary", revising: "Revising" };
   function openSection(key) {
+    if (!canLeave()) return;
     sectionKey = key;
+    setHash("#" + key);
     const sec = S.sections.find(s => s.key === key);
     el("section-title").textContent = sec.name;
     el("section-sub").textContent = sec.sub + (sec.points ? " · " + sec.points + " of the test's 60 points. " : ". ") + sec.line;
@@ -137,10 +160,29 @@
   }
 
   function route() {
-    const h = location.hash.replace("#", "");
-    if (h === "parents") { window.PP_PARENTS.open(); return; }
-    if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
-    show("home");
+    routing = true;
+    try {
+      const h = location.hash.replace("#", "");
+      const parts = h.split("/");
+      if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : "practice"); return; }
+      if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
+      if (parts[0] === "parents") { window.PP_PARENTS.open(parts[1]); return; }
+      if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
+      show("home");
+    } finally { routing = false; }
+  }
+
+  /* Browser or phone Back: confirm before leaving a test in progress. */
+  let lastHash = location.hash;
+  function onPop() {
+    if (current === "player" && window.PP_PLAYER.inProgress() && !location.hash.startsWith("#play/")) {
+      if (!window.confirm("Leave this test? Your answers will not be saved.")) {
+        history.pushState(null, "", location.pathname + location.search + lastHash);
+        return;
+      }
+      window.PP_PLAYER.abandon();
+    }
+    route();
   }
 
   function init() {
@@ -149,21 +191,47 @@
     window.PP_WRITING.init();
     document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.go;
-      if (g === "home") { show("home"); el("home-title").focus(); }
-      else if (g === "parents") window.PP_PARENTS.open();
+      if (g === "home") goHome();
+      else if (g === "parents") { if (canLeave()) window.PP_PARENTS.open(); }
     }));
     el("hero-start").addEventListener("click", () => openSection("reading"));
     el("hero-parents").addEventListener("click", () => window.PP_PARENTS.open());
     el("band-parents").addEventListener("click", () => window.PP_PARENTS.open());
-    el("player-back").addEventListener("click", () => openSection(sectionKey));
+    el("player-back").addEventListener("click", back);
+    el("write-back") && el("write-back").addEventListener("click", back);
     document.addEventListener("keydown", e => {
       if (e.key !== "Escape") return;
-      if (current === "player") openSection(sectionKey);
-      else if (current !== "home") { show("home"); }
+      const t = e.target;
+      if (t && (t.tagName === "TEXTAREA" || t.tagName === "INPUT" || t.tagName === "SELECT")) return;
+      if (current === "player" || current === "write") back();
+      else if (current !== "home") goHome();
     });
-    loadSets().then(() => { buildHome(); route(); });
+    window.addEventListener("popstate", onPop);
+    window.addEventListener("hashchange", () => { lastHash = location.hash; });
+    window.addEventListener("beforeunload", e => {
+      if (current === "player" && window.PP_PLAYER.inProgress()) { e.preventDefault(); e.returnValue = ""; }
+    });
+    loadSets().then(() => { buildHome(); route(); lastHash = location.hash; });
   }
 
-  window.PP_APP = { show, openSection, current: () => current };
+  /* The activity's Back button returns to wherever it was opened from:
+     the section list, or the parent guide. */
+  let returnTo = null;
+  function rememberReturn() {
+    returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab() } :
+               current === "section" ? { kind: "section", key: sectionKey } : returnTo;
+  }
+  function back() {
+    if (!canLeave()) return;
+    if (current === "player") window.PP_PLAYER.abandon();
+    const r = returnTo;
+    if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab); return; }
+    const key = (r && r.kind === "section") ? r.key :
+      (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));
+    openSection(key);
+  }
+  function track() { lastHash = location.hash; }
+
+  window.PP_APP = { show, openSection, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();

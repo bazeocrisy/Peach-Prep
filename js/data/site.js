@@ -26,8 +26,8 @@ window.PP_SITE = {
     { key: "language", name: "Language", sub: "Grammar and vocabulary", points: null, icon: "abc",
       line: "Grammar and word meaning in test formats. These points are counted inside Reading and Writing.", ready: false,
       soon: "Coming Thursday" },
-    { key: "test", name: "Practice Test", sub: "Shaped like the real test", points: null, icon: "flag",
-      line: "A mixed test with no hints, scored in points, with Show me how afterwards.", ready: false,
+    { key: "test", name: "Practice Test", sub: "A shorter test shaped like the real one", points: null, icon: "flag",
+      line: "Reading, revising and language questions with no hints, scored in points, with Show me how afterwards. (The essay is practiced in Writing.)", ready: false,
       soon: "Coming Friday" }
   ],
 

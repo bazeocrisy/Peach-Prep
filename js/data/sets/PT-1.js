@@ -178,6 +178,7 @@ PP.addSet({
     },
     {
       id: "p3",
+      draft: true,
       title: "Hunters of the Night",
       byline: "Ava's first draft",
       genre: "Student draft (informational)",
@@ -496,7 +497,7 @@ PP.addSet({
       slots: [
         { options: ["For example,", "Besides seeing well,", "Instead,", "As a result,"], answer: 1 }
       ],
-      clue: "Think about what paragraph 2 and paragraph 3 each tell. Which words show that a new idea is being added?",
+      clue: "Think about what the sentences just before sentence 6 tell, and what sentence 6 starts to tell. Which words show that a new idea is being added?",
       why: "The best transition is \"Besides seeing well,\" because it connects the paragraph about owls' eyes to the new idea about owls' ears. For example would mean owls' hearing is an example of what paragraph 2 said, and it is not. Instead would mean hearing takes the place of seeing. As a result would mean owls hear well because of their eyes or how they turn their heads, and that is not true."
     },
     {

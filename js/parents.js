@@ -222,18 +222,24 @@
     host.appendChild(l);
   }
 
+  let curTab = "test";
   function select(tab) {
+    curTab = tab;
+    if (window.PP_APP.current() === "parents") window.PP_APP.setHash("#parents" + (tab && tab !== "test" ? "/" + tab : ""));
     document.querySelectorAll("[data-ptab]").forEach(b => b.setAttribute("aria-selected", b.dataset.ptab === tab ? "true" : "false"));
     ["test", "standards", "essay", "plan"].forEach(t => { el("ptab-" + t).hidden = t !== tab; });
   }
   function open(tab) {
+    tab = ["test", "standards", "essay", "plan"].indexOf(tab) >= 0 ? tab : "test";
     buildTest(); buildStandards(); buildEssay(); buildPlan();
-    select(tab || "test");
     window.PP_APP.show("parents");
+    select(tab);
+    window.PP_APP.setHash("#parents" + (tab !== "test" ? "/" + tab : ""));
+    window.PP_APP.track();
     el("parents-title").focus();
   }
   function init() {
     document.querySelectorAll("[data-ptab]").forEach(b => b.addEventListener("click", () => select(b.dataset.ptab)));
   }
-  window.PP_PARENTS = { init, open, select };
+  window.PP_PARENTS = { init, open, select, tab: () => curTab };
 })();

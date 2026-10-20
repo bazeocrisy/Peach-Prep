@@ -17,6 +17,7 @@ PP.addSet({
   passages: [
     {
       id: "p1",
+      draft: true,
       title: "A Fish for Room 12",
       byline: "Jordan's first draft",
       genre: "Student draft (opinion)",

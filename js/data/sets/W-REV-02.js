@@ -19,6 +19,7 @@ PP.addSet({
   passages: [
     {
       id: "p1",
+      draft: true,
       title: "The Birdhouse",
       byline: "Tasha's first draft",
       genre: "Student draft (narrative)",
@@ -111,7 +112,7 @@ PP.addSet({
         { text: "Lena told Grandpa that the nail she hit had bent to one side." }
       ],
       clue: "Reread sentence 5. Then look for words a character says out loud, inside quotation marks, that match that feeling.",
-      why: "The answer is the sentence that starts with Lena's own words: \"I'll never get this right!\" Lena groaned, staring at the crooked nail. Her words and the word groaned show she feels like giving up, the same feeling sentence 5 tells about. The paint question does not show a feeling about the nail, the cheering shows the wrong feeling, and the last choice tells what she said instead of using her words as dialogue."
+      why: "The answer is the sentence that starts with Lena's own words: \"I'll never get this right!\" Lena groaned, staring at the crooked nail. Her words and the word groaned show she feels like giving up, the same feeling sentence 5 tells about. The paint question does not show a feeling about the nail, the cheering shows the wrong feeling, and the choice that only reports what she said does not use her words as dialogue."
     },
     {
       id: "W-REV-02-5",

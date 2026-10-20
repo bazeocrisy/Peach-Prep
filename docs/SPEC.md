@@ -163,7 +163,7 @@ The narrowing step (Help 2) for each format:
 Language and revising sets use the same `PP.addSet` shape.
 - **Grammar and vocabulary sets** can have `passages: []`. Each item then carries its own sentence or sentences in `prompt`, or in `dropdown.text`, or as `hottext.options`.
 - **`hottext` without a passage** uses `options: ["sentence 1", ...]` and `answer: [index, ...]` (0-based) in place of `targets` and refs.
-- **Revising sets** use one short passage: a student's draft of 6–10 sentences, given as numbered sentences inside paragraphs. Items refer to it, for example "Which sentence should be added after sentence 4?"
+- **Revising sets** use one short passage, marked `draft: true` (paragraph numbers are hidden and the sentences carry their own numbers, (1), (2) …): a student's draft of 6–10 sentences, given as numbered sentences inside paragraphs. Items refer to it, for example "Which sentence should be added after sentence 4?"
 
 ### 5c. Writing task (`js/data/tasks/*.js`)
 
