@@ -286,7 +286,9 @@
       const list = make("div", "hot-list");
       list.setAttribute("role", "group");
       list.setAttribute("aria-label", item.prompt);
-      hotTargets(item).forEach(ref => {
+      /* Passage sentences stay in passage order; free-standing options are shuffled once per sitting. */
+      ctx.hotOrder = ctx.hotOrder || (item.options ? shuffled(hotTargets(item)) : hotTargets(item));
+      ctx.hotOrder.forEach(ref => {
         const b = make("button", "hot-option");
         b.type = "button"; b.dataset.ref = ref;
         b.appendChild(make("span", "hot-where", hotLabel(item, set, ref)));
@@ -400,7 +402,8 @@
       if (it.points === 2) {
         const oneSwap = r.v.length === n && inPlace === n - 2 &&
           r.v.some((x, i) => i < n - 1 && x === i + 1 && r.v[i + 1] === i);
-        if (oneSwap || inPlace >= Math.ceil(n / 2)) return { points: 1, max: 2 };
+        /* partial credit only for a near miss: one adjacent swap, or (5 steps) all but two in place */
+        if (oneSwap || (n >= 5 && inPlace >= n - 2)) return { points: 1, max: 2 };
       }
       return { points: 0, max: it.points };
     },
