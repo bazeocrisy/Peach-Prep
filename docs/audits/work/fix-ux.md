@@ -22,7 +22,7 @@ No lesson, passage or item text was changed. The one data edit is the point valu
 - `python3 verification/readability.py` exits 0.
 - `node verification/check-writing.js` gives 0 failures and 0 warnings.
 - `node --check` passes on every edited JS file.
-- The full `python3 verification/guard.py http://localhost:8456/` result is at the end of this file.
+- `python3 verification/guard.py http://localhost:8456/` (full run): 89 passed, 0 failed.
 
 ---
 
@@ -279,4 +279,4 @@ No lesson, passage or item text was changed. The one data edit is the point valu
 Against the unfixed baseline (/home/claude/peach-prep, served briefly on 8456), section 12 gives 0 passed and 9 failed (`g12-baseline.log.txt`). Against this worktree, it gives 9 passed and 0 failed.
 
 ## Full guard run
-(see below)
+`python3 verification/guard.py http://localhost:8456/` on the final code: **89 passed, 0 failed, exit 0**. That includes all of section 12 and 7.1 (no page errors). Log: `scratchpad/uxfix/guard-full.log.txt`.
