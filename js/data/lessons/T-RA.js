@@ -44,7 +44,7 @@ PP.addLesson({
       answer: "Question 2, \"What makes a volcano erupt?\", would help Zoe learn the most."
     },
     {
-      show: ["Gray squirrels bury nuts in the fall. In winter, they dig up many of the nuts and eat them. They use their strong sense of smell to find the nuts under the ground."],
+      show: ["Gray squirrels bury nuts in the fall. In winter, they dig up many of the nuts and eat them. They use their memory and their strong sense of smell to find the nuts under the ground."],
       ask: "Lin asked, \"What do squirrels do with nuts?\" This text answered her. What is a good dig-deeper question for Lin to ask next?",
       steps: [
         "Find what Lin just learned: squirrels bury nuts and dig up many of them later.",
@@ -77,7 +77,7 @@ PP.addLesson({
     { id: "p2", title: "Hunters of the Night", genre: "Informational text",
       paragraphs: [
         ["Most owls hunt at night.", "Their bodies have special parts that help them find food in the dark."],
-        ["An owl's hearing is very sharp.", "Some owls can find a mouse moving under leaves or snow just by listening.", "The round, flat face of a barn owl helps send sounds to its ears."],
+        ["An owl's hearing is very sharp.", "Some owls can find a mouse moving under leaves or snow just by listening.", "The flat, heart-shaped face of a barn owl helps send sounds to its ears."],
         ["Owls have large eyes that help them see in dim light.", "But an owl cannot move its eyes the way you can.", "Instead, it turns its whole head to look around.", "An owl can turn its head much farther than a person can."],
         ["Many owls fly almost without a sound.", "Their feathers have soft edges that quiet the air as they flap.", "A mouse may not hear an owl coming."],
         ["Owls often swallow small animals whole.", "Later, they cough up a small ball of fur and bones called a pellet.", "Scientists study pellets to learn what owls eat."]
@@ -88,12 +88,12 @@ PP.addLesson({
       prompt: "Kenji wants to learn how honeybees make honey. Which question would help him the most?",
       choices: [
         { text: "How do bees turn nectar into honey?", correct: true },
-        { text: "Do I like honey better than jam?" },
-        { text: "Is honey sweet and sticky?" },
-        { text: "How many jars of honey are in my kitchen?" }
+        { text: "Do honeybees make honey?" },
+        { text: "Where do honeybees build their hives?" },
+        { text: "Is honey sweet and sticky?" }
       ],
-      clue: "Cross out questions about feelings and questions you already know the answer to. Which one asks about how bees do something?",
-      why: "The answer is \"How do bees turn nectar into honey?\" It asks about Kenji's topic and can be answered with facts. Liking honey is an opinion, everyone already knows honey is sweet, and the jars in a kitchen are not about how bees make honey." },
+      clue: "Cross out yes-or-no questions you already know the answer to. Then check which question left is about Kenji's exact topic.",
+      why: "The answer is \"How do bees turn nectar into honey?\" It asks about Kenji's exact topic and needs a real answer from a book. Everyone already knows bees make honey and that honey is sweet, so those yes-or-no questions teach him nothing new. Where bees build hives is a fine research question, but it is about a different topic." },
     { id: "SK-RA1a-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which question can the article \"Busy Honeybees\" answer?",
       choices: [
@@ -121,10 +121,10 @@ PP.addLesson({
         { text: "How does the dance show the bees how far to fly?", correct: true },
         { text: "Does a hive have a queen bee?" },
         { text: "Would I be good at dancing like a bee?" },
-        { text: "What color is a honeybee's body?" }
+        { text: "Do worker bees dance when they find flowers?" }
       ],
       clue: "A dig-deeper question stays on the idea Rosa just learned and asks something new about it.",
-      why: "The answer is \"How does the dance show the bees how far to fly?\" It stays on the dance and asks how it works. The queen and the bee's color are different ideas, and being good at dancing is about Rosa, not about bees." },
+      why: "The answer is \"How does the dance show the bees how far to fly?\" It stays on the dance and asks something new about how it works. Rosa already knows worker bees dance when they find flowers, the queen is a different idea, and being good at dancing is about Rosa, not about bees." },
     { id: "SK-RA1a-P5", type: "ms", points: 2, dok: 2, passages: ["p1"],
       prompt: "Which TWO questions does the article answer? Choose two answers.",
       pick: 2,
@@ -172,26 +172,27 @@ PP.addLesson({
       clue: "Check each question against the article. The ones you cannot answer from the article need another source.",
       why: "The article does not tell where owls build their nests or how long owls live, so Malik needs another source for those. Paragraph 3 explains why owls turn their heads, paragraph 5 says a pellet is fur and bones, and paragraph 4 explains how soft feather edges keep owls quiet." },
     { id: "SK-RA1a-T4", type: "match", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Sort each question. Is it a good research question about owls, or not?",
-      cols: ["Good research question", "Not a research question"],
+      prompt: "Malik is researching owls. Sort each question. Is it a good research question for his topic, or not?",
+      cols: ["Good research question", "Not a good research question"],
       rows: [
         { text: "How do owls hear so well?", answer: 0 },
-        { text: "Are owls cooler than eagles?", answer: 1 },
-        { text: "What do owls eat?", answer: 0 },
-        { text: "Do I want to see an owl someday?", answer: 1 }
+        { text: "Do owls have wings?", answer: 1 },
+        { text: "Where do owls build their nests?", answer: 0 },
+        { text: "What do eagles eat?", answer: 1 },
+        { text: "Should my family get a pet owl?", answer: 1 }
       ],
-      clue: "Ask: could a book or a scientist answer this with facts? Or does the answer depend on someone's feelings?",
-      why: "\"How do owls hear so well?\" and \"What do owls eat?\" are good research questions with fact answers. \"Are owls cooler than eagles?\" is an opinion, and \"Do I want to see an owl someday?\" is about the reader's wishes, so they are not research questions." },
+      clue: "A good research question stays on the topic, asks for facts, and teaches you something you do not already know.",
+      why: "\"How do owls hear so well?\" and \"Where do owls build their nests?\" are good research questions: they are about owls and need fact answers. \"Do owls have wings?\" is a yes-or-no question everyone already knows, \"What do eagles eat?\" is off the topic, and \"Should my family get a pet owl?\" asks for an opinion." },
     { id: "SK-RA1a-T5", type: "mc", points: 1, dok: 3, passages: ["p2"],
       prompt: "Malik learned that scientists study owl pellets. Which question would help him learn MORE about this idea?",
       choices: [
-        { text: "What can the bones in a pellet tell scientists?", correct: true },
-        { text: "Do most owls hunt at night?" },
-        { text: "Would it feel gross to touch a pellet?" },
-        { text: "What color are a barn owl's feathers?" }
+        { text: "How do scientists tell which animal a bone came from?", correct: true },
+        { text: "Do most owls hunt for their food at night?" },
+        { text: "Would it feel gross to touch an owl pellet?" },
+        { text: "What color are the feathers of a barn owl?" }
       ],
-      clue: "A dig-deeper question stays on pellets and asks something the article did not fully explain.",
-      why: "The answer is \"What can the bones in a pellet tell scientists?\" It stays on pellets and asks something new. The article already says most owls hunt at night, touching a pellet is about feelings, and feather color is a different idea." }
+      clue: "A dig-deeper question stays on the idea Malik just learned and asks something the article does not explain.",
+      why: "The answer is \"How do scientists tell which animal a bone came from?\" The article says scientists study pellets to learn what owls eat, but not how they do it, so this question digs deeper. The article already says most owls hunt at night, touching a pellet is about feelings, and feather color is a different idea." }
   ]
 });
 
@@ -258,7 +259,7 @@ PP.addLesson({
         ["A pumpkin starts as a flat, white seed.", "Farmers plant the seeds in late spring or early summer, after the ground is warm."],
         ["Soon a green sprout pokes out of the soil.", "The plant grows into a long vine that spreads across the ground.", "Its big leaves shade the soil and help keep it damp."],
         ["Next, yellow flowers open on the vine.", "Bees visit the flowers and carry pollen from one flower to another.", "Only flowers that get pollen can grow into pumpkins."],
-        ["A tiny green pumpkin forms where the flower was.", "Over the summer, it grows bigger and slowly turns orange.", "Most pumpkins are ready to pick in the fall."]
+        ["A tiny green pumpkin at the bottom of the flower starts to grow.", "Over the summer, it grows bigger and slowly turns orange.", "Most pumpkins are ready to pick in the fall."]
       ] },
     { id: "p2", title: "A Visit with Farmer Ruiz", byline: "Source 2: a student's notes from a class visit", genre: "Informational text",
       paragraphs: [
@@ -303,7 +304,7 @@ PP.addLesson({
         { text: "A pumpkin with its stem on top lasts longer." },
         { text: "Farmers plant the seeds after the ground is warm." }
       ],
-      clue: "Read the heading again. The fact must tell something about bees and how their work matters to pumpkins.",
+      clue: "Read the heading again. Which fact explains why the bees' work matters to a pumpkin?",
       why: "The answer is \"Only flowers that get pollen can grow into pumpkins.\" Bees carry the pollen, so this fact shows why bees matter. The other facts are true, but they are about leaves, stems and planting, not bees." },
     { id: "SK-RA1b-P3", type: "order", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia used both sources to make a note card called \"A pumpkin's life.\" Put her notes in order.",
@@ -311,11 +312,11 @@ PP.addLesson({
         "A flat, white seed is planted in warm ground.",
         "The sprout grows into a long vine.",
         "Bees carry pollen to the yellow flowers.",
-        "A tiny green pumpkin forms and turns orange.",
+        "A tiny green pumpkin grows and turns orange.",
         "The farmer cuts the stem and picks the pumpkin."
       ],
-      clue: "Follow the pumpkin from the very beginning. Source 1 gives the growing steps, and Source 2 tells what happens at the end.",
-      why: "The order is: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, a tiny green pumpkin forms and turns orange, and the farmer cuts the stem and picks it. The first four steps come from Source 1 and the last from Source 2." },
+      clue: "Follow the pumpkin from the very beginning to the very end. Use facts from both sources.",
+      why: "The order is: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, a tiny green pumpkin grows and turns orange, and the farmer cuts the stem and picks it. The first four steps come from Source 1 and the last from Source 2." },
     { id: "SK-RA1b-P4", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia has three note cards. Match each fact to the note card where it belongs.",
       cols: ["How a pumpkin grows", "Caring for the plants", "Picking the pumpkins"],
@@ -344,13 +345,13 @@ PP.addLesson({
       cols: ["Source 1 only", "Source 2 only", "Both sources"],
       rows: [
         { text: "The light from the moon is really sunlight.", answer: 0 },
-        { text: "Astronauts brought moon rocks back to Earth.", answer: 1 },
-        { text: "The moon has no air.", answer: 2 },
+        { text: "Only a few people have ever walked on the moon.", answer: 1 },
+        { text: "There is dust on the moon's ground.", answer: 2 },
         { text: "The moon has round holes called craters.", answer: 0 },
-        { text: "The moon has no wind or rain.", answer: 2 }
+        { text: "A scientist talked to a class about the moon.", answer: 1 }
       ],
       clue: "Look for each fact in both sources. Only choose Both sources when you can find the fact in each one.",
-      why: "Sunlight bouncing off the moon and craters are only in Source 1. Moon rocks are only in Source 2. Both sources say the moon has no air, and both say it has no wind or rain." },
+      why: "Sunlight bouncing off the moon and craters are only in Source 1. The few people who walked on the moon and the scientist's talk are only in Source 2. Both sources tell about dust on the moon: Source 1 says the ground is covered with gray dust, and Source 2 says the astronauts left footprints in the moon dust." },
     { id: "SK-RA1b-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi is making a note card with the heading \"Why footprints last on the moon.\" Which fact belongs on this card?",
       choices: [
@@ -376,23 +377,23 @@ PP.addLesson({
     { id: "SK-RA1b-T4", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Which fact can be found in BOTH sources?",
       choices: [
-        { text: "The moon has no air.", correct: true },
-        { text: "Astronauts walked on the moon in 1969." },
+        { text: "The moon has no wind or rain.", correct: true },
+        { text: "The moon travels around Earth." },
         { text: "The moon's shape seems to change." },
         { text: "Moon rocks help scientists learn." }
       ],
       clue: "Find each fact in one source, then check the other source for the same idea.",
-      why: "The answer is \"The moon has no air.\" Source 1 says the moon has no air, and Source 2 says the astronauts wore space suits because there is no air to breathe. The other facts appear in only one source." },
+      why: "The answer is \"The moon has no wind or rain.\" Source 1 says the moon has no wind and no rain, and Source 2 says the moon has no wind or rain to wipe the footprints away. The other facts appear in only one source." },
     { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kofi's note from Source 1 says, \"The moon has no air.\" Which fact from Source 2 tells why this mattered to the astronauts?",
+      prompt: "Kofi's note from Source 1 says, \"The moon's ground is covered with gray dust and rocks.\" Which fact from Source 2 adds the MOST to this note?",
       choices: [
-        { text: "They wore space suits because there is no air to breathe.", correct: true },
-        { text: "They left footprints in the gray moon dust." },
-        { text: "They brought moon rocks back to Earth." },
-        { text: "Mr. Okafor talked to the class about the moon." }
+        { text: "Astronauts brought moon rocks back for scientists to study.", correct: true },
+        { text: "Astronauts first walked on the moon in the year 1969." },
+        { text: "Only a few people have ever walked on the moon." },
+        { text: "Mr. Okafor talked to the class at the science center." }
       ],
-      clue: "Ask how having no air would change what an astronaut needs. Look in Source 2 for that idea.",
-      why: "The answer is \"They wore space suits because there is no air to breathe.\" It connects to Kofi's note and shows why having no air mattered. The footprints, rocks and talk are not about air." }
+      clue: "Kofi's note is about what covers the moon's ground. Look in Source 2 for a fact that tells more about one of those things.",
+      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The other facts are about when and how many people went to the moon, or about the talk, not the moon's ground." }
   ]
 });
 
@@ -406,7 +407,7 @@ PP.addLesson({
       "Pick the facts that matter most. Leave out tiny details.",
       "Use your own words. Do not copy whole sentences.",
       "A summary tells only what the sources say. Leave out your opinions and facts that are not in your sources.",
-      "Use linking words like also, in addition and in the fall to join ideas from both sources."
+      "Use linking words like also and in addition, or time words like in the fall, to join ideas from both sources."
     ],
     words: [
       { term: "summary", means: "a short telling of the most important ideas" },
@@ -417,7 +418,7 @@ PP.addLesson({
       label: "Example: two sources about sloths",
       lines: [
         "Source 1: Sloths live high in rain forest trees. They move very slowly.",
-        "Source 2: Tiny green plants called algae grow in a sloth's fur. The green color helps a sloth hide among the leaves.",
+        "Source 2: Tiny green living things called algae grow in a sloth's fur. The green color helps a sloth hide among the leaves.",
         "Summary: Sloths are slow animals that live in rain forest trees, and green algae in their fur help them hide."
       ],
       note: "The summary uses one big idea from each source and joins them in one sentence. It does not add opinions like \"Sloths are cute.\""
@@ -435,9 +436,9 @@ PP.addLesson({
         "Find the big idea of Source 1: penguins live in a very cold place, and their bodies help keep them warm.",
         "Find the big idea of Source 2: penguins huddle together to stay warm.",
         "Look for what the two ideas share. Both are about staying warm in the cold.",
-        "Join the ideas in your own words with a linking word like also."
+        "Write the ideas in your own words, and join them with a linking word like also."
       ],
-      answer: "Emperor penguins live in a very cold place, and their thick feathers, fat and huddling help them stay warm."
+      answer: "Emperor penguins live in a very cold place where thick feathers and fat keep them warm. They also huddle together in winter to stay warm."
     },
     {
       show: [
@@ -505,18 +506,18 @@ PP.addLesson({
         { text: "Monarchs fly south to Mexico, where they rest in tall trees all winter." }
       ],
       clue: "A summary of two sources needs a big idea from each one. Check whether each choice uses both sources, and whether it tells facts or feelings.",
-      why: "The answer is \"Monarchs grow up eating milkweed, and many fly south to Mexico each fall.\" It joins the big idea of Source 1 (growing up on milkweed) with the big idea of Source 2 (the trip south). The chrysalis sentence is one small detail, the Mexico sentence uses only Source 2, and the sentence that starts with I think is an opinion." },
+      why: "The answer is \"Monarchs grow up eating milkweed, and many fly south to Mexico each fall.\" It joins the big idea of Source 1 (growing up on milkweed) with the big idea of Source 2 (the trip south). The chrysalis sentence is one small detail, the sentence about resting in tall trees uses only Source 2, and the sentence that starts with I think is an opinion." },
     { id: "SK-RA1c-P2", type: "mc", points: 1, dok: 2, passages: ["p1", "p2"],
       stem: ["Leah's notes from Source 1:", "• Monarchs lay eggs on milkweed.", "• Caterpillars eat only milkweed.", "• Milkweed juice tastes bad to birds."],
       prompt: "Leah's notes are all about milkweed. Which fact from Source 2 should she add to these notes?",
       choices: [
         { text: "In spring, monarchs lay eggs on milkweed as they fly north.", correct: true },
         { text: "In Mexico, monarchs rest in tall trees all winter long." },
-        { text: "So many monarchs land in the trees that they look orange." },
+        { text: "Milkweed juice tastes bad to the birds that eat monarchs." },
         { text: "None of the monarchs has made the trip south before." }
       ],
-      clue: "Leah's notes have one topic. Look through Source 2 for the only fact that is on that same topic.",
-      why: "The answer is \"In spring, monarchs lay eggs on milkweed as they fly north.\" It is the only fact from Source 2 about milkweed, so it fits Leah's notes. The other facts are about the trip and the trees, not milkweed." },
+      clue: "The fact must come from Source 2, fit the topic of Leah's notes, and tell her something she does not already have.",
+      why: "The answer is \"In spring, monarchs lay eggs on milkweed as they fly north.\" It is the only fact from Source 2 about milkweed that is not already in Leah's notes. The fact about milkweed juice comes from Source 1 and is already in her notes, and the other facts are about the trip, not milkweed." },
     { id: "SK-RA1c-P3", type: "hottext", points: 1, dok: 2, passages: ["p1", "p2"],
       prompt: "Here is Leah's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [
@@ -551,13 +552,13 @@ PP.addLesson({
     { id: "SK-RA1c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "Kayla is writing a summary of both sources. Which sentence BEST sums up what the two sources say about hummingbirds?",
       choices: [
-        { text: "Hummingbirds are tiny, fast flyers that nest here in summer and go south in winter.", correct: true },
+        { text: "Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.", correct: true },
         { text: "Hummingbirds can hover in one spot, and they drink nectar from many flowers." },
         { text: "A hummingbird mother builds a nest about the size of a walnut shell." },
         { text: "Hummingbirds are the best birds to watch because they are so cute." }
       ],
       clue: "Look for a sentence that uses a big idea from each source, tells facts, and leaves out small details.",
-      why: "The answer is \"Hummingbirds are tiny, fast flyers that nest here in summer and go south in winter.\" It joins the big idea of Source 1 (tiny, fast flyers) with the big idea of Source 2 (their year of nesting and travel). The hover sentence uses only Source 1, the nest sentence is one detail, and the cute sentence is an opinion." },
+      why: "The answer is \"Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.\" It joins the big idea of Source 1 (tiny, fast flyers) with the big idea of Source 2 (their year of nesting and travel). The hover sentence uses only Source 1, the nest sentence is one detail, and the cute sentence is an opinion." },
     { id: "SK-RA1c-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       stem: ["Kayla's notes from Source 1, under the heading \"Why hummingbirds eat so much\":", "• They use a lot of energy.", "• They must eat many times a day."],
       prompt: "Which fact from Source 2 adds the most to Kayla's notes?",
@@ -565,7 +566,7 @@ PP.addLesson({
         { text: "In late summer, they eat and eat to get ready for a long trip.", correct: true },
         { text: "The mother builds a nest about the size of a walnut shell." },
         { text: "People hang feeders filled with sugar water in the spring." },
-        { text: "They spend the summer in Georgia and the eastern United States." }
+        { text: "They come to Georgia in spring and stay all summer." }
       ],
       clue: "Read the heading again. Find the fact from Source 2 that gives another reason hummingbirds need so much food.",
       why: "The answer is \"In late summer, they eat and eat to get ready for a long trip.\" It gives one more reason hummingbirds eat so much. The feeders are about people, and the nest and summer home are not about why the birds eat so much." },
@@ -574,20 +575,20 @@ PP.addLesson({
       pick: 2,
       choices: [
         { text: "Hummingbirds can hover and even fly backward.", correct: true },
-        { text: "In winter, they fly south and come back in spring.", correct: true },
+        { text: "They fly south for the winter and come back in spring.", correct: true },
         { text: "I think hummingbirds are the cutest birds of all." },
         { text: "Hummingbirds are bigger than most other birds." },
         { text: "Hummingbirds stay in Georgia all year long." }
       ],
       clue: "A summary sentence must be an important fact, and it must match what the sources really say. Check each choice against the sources.",
-      why: "\"Hummingbirds can hover and even fly backward\" is an important idea from Source 1, and \"In winter, they fly south and come back in spring\" is an important idea from Source 2. The cutest-birds sentence is an opinion. The sources say hummingbirds are some of the smallest birds and that they leave Georgia for winter, so the other two sentences are wrong." },
+      why: "\"Hummingbirds can hover and even fly backward\" is an important idea from Source 1, and \"They fly south for the winter and come back in spring\" is an important idea from Source 2. The cutest-birds sentence is an opinion. The sources say hummingbirds are some of the smallest birds and that they leave Georgia for winter, so the other two sentences are wrong." },
     { id: "SK-RA1c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Here is Kayla's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [
         "Hummingbirds are tiny birds that can hover and fly backward.",
         "They drink nectar and also eat small insects.",
         "My aunt has a red bird feeder on her back porch.",
-        "In summer they build tiny nests, and in fall they fly south."
+        "In summer they build tiny nests, and in late summer they fly south."
       ],
       answer: [2], pick: 1,
       clue: "A summary tells only what the sources say. Check whether each sentence comes from Source 1 or Source 2.",
@@ -597,10 +598,10 @@ PP.addLesson({
       text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they eat even more to get ready for their trip south.",
       slots: [
         { options: ["so", "but", "or", "until"], answer: 0 },
-        { options: ["In late summer", "For example", "In conclusion", "Instead"], answer: 0 }
+        { options: ["In late summer", "In early spring", "For example", "Instead"], answer: 0 }
       ],
-      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, ask what kind of word tells when.",
-      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"In late summer,\" because Source 2 says that is when the birds eat more to get ready for the trip. The other choices do not show a result or a time." }
+      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, check Source 2 to see when the birds get ready for their trip.",
+      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"In late summer,\" because Source 2 says that is when the birds eat more to get ready for the trip. In early spring is the wrong time, because in spring the birds are flying north, and the other choices do not show a result or a time." }
   ]
 });
 
@@ -679,7 +680,7 @@ PP.addLesson({
       prompt: "Which sentence shows that a firefly's light is not hot? Choose the sentence in the passage.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1", "p1:4:1"],
       answer: ["p1:2:3"], pick: 1,
-      clue: "Look for a sentence that tells about heat, not just about light.",
+      clue: "The question asks how the light would feel, not where it comes from or what it is used for. Which sentence tells that?",
       why: "The answer is \"Even though the light is bright, it gives off almost no heat.\" Almost no heat means the light is not hot. The other sentences tell where the light comes from or what it is used for." },
     { id: "SK-RA2a-P2", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -697,7 +698,7 @@ PP.addLesson({
           { text: "\"They live in the soil and under leaves.\"" },
           { text: "\"On warm summer evenings in Georgia, you might see tiny lights blinking in the grass.\"" }
         ] },
-      clue: "Paragraph 3 tells how fireflies use their light. For Part B, choose the sentence that shows two fireflies answering each other.",
+      clue: "Think about what fireflies do with their light. For Part B, choose the sentence that shows your Part A answer actually happening, not where fireflies live or where the light comes from.",
       why: "Part A: They flash light patterns back and forth. Part B: \"A female on the ground flashes back to answer him.\" The male flashes and the female flashes back, so they find each other with light. The glow is not warm, and living under leaves is about young fireflies." },
     { id: "SK-RA2a-P3", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Tyrone says, \"Fireflies are not the kind of bug their name says they are.\" Which TWO sentences support Tyrone's idea? Choose two sentences.",
@@ -743,10 +744,10 @@ PP.addLesson({
       why: "Part A: She has become a much better piano player. Part B: \"'Now you can play the whole spring song without looking at the keys,' Mr. Bell said.\" At first she could not play one easy song with both hands, and now she plays a whole song. She is still nervous at the start, and her grandmother's house is only where she practiced." },
     { id: "SK-RA2a-T3", type: "hottext", points: 2, dok: 3, passages: ["p2"],
       prompt: "Which TWO sentences show that Ana feels calm and sure of herself before she plays? Choose two sentences.",
-      targets: ["p2:1:2", "p2:4:2", "p2:4:3", "p2:5:1", "p2:5:3"],
+      targets: ["p2:1:2", "p2:1:3", "p2:4:3", "p2:5:1", "p2:5:3"],
       answer: ["p2:4:3", "p2:5:1"], pick: 2,
       clue: "Find sentences from before she plays. Look for what her hands and body do once she feels better.",
-      why: "The answers are \"Slowly, her hands grew still.\" and \"When her name was called, Ana walked to the piano and sat up tall.\" Still hands and sitting up tall show she is calm and sure. The shaking fingers show she is nervous, thinking about her grandmother's house does not show calm by itself, and smiling as the crowd claps happens after she plays." },
+      why: "The answers are \"Slowly, her hands grew still.\" and \"When her name was called, Ana walked to the piano and sat up tall.\" Still hands and sitting up tall show she is calm and sure. The shaking fingers show she is nervous, the sentence about playing in ten minutes only tells what will happen, and smiling as the crowd claps happens after she plays." },
     { id: "SK-RA2a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Leo says, \"Ana's hard work helped her do well.\" Which sentence from the story BEST supports Leo's opinion?",
       choices: [
@@ -755,7 +756,7 @@ PP.addLesson({
         { text: "\"Her teacher, Mr. Bell, sat down beside her.\"" },
         { text: "\"As the crowd clapped, she smiled so wide that her cheeks hurt.\"" }
       ],
-      clue: "Leo's opinion has two parts: hard work and doing well. The story already shows she does well. Find the sentence that shows the hard work.",
+      clue: "Leo's opinion is about what Ana did to get ready. Which sentence shows that?",
       why: "The answer is \"'You practiced every day for two months.'\" Practicing every day is the hard work Leo is talking about. The clapping shows she did well, but it does not show hard work." }
   ]
 });
@@ -833,15 +834,15 @@ PP.addLesson({
       clue: "Ask who made each source. Do they know about real alligators? Are they selling something or just guessing?",
       why: "The answer is \"a wildlife center web page about alligator nests.\" People at a wildlife center study real animals. The ad wants to sell a toy, the comic book is made up, and the friend's idea is only a guess." },
     { id: "SK-RA2b-P2", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Priya's report is about how tornadoes form. Which source is on her topic?",
+      prompt: "Priya's report is about how hurricanes form. Which source is on her topic?",
       choices: [
-        { text: "a weather scientist's article about how tornadoes form", correct: true },
+        { text: "a weather scientist's article about how hurricanes form", correct: true },
         { text: "a weather scientist's article about how snowflakes form" },
-        { text: "a news story about a town cleaning up after a tornado" },
+        { text: "a news story about a town cleaning up after a hurricane" },
         { text: "a science book chapter about how volcanoes form" }
       ],
       clue: "All of these may be trustworthy. Read Priya's topic again, word by word, and find the source that matches all of it.",
-      why: "The answer is \"a weather scientist's article about how tornadoes form.\" It is about exactly what Priya wants to know. Snowflakes and volcanoes are different topics, and the news story tells what happened after a tornado, not how it formed." },
+      why: "The answer is \"a weather scientist's article about how hurricanes form.\" It is about exactly what Priya wants to know. Snowflakes and volcanoes are different topics, and the news story tells what happened after a hurricane, not how it formed." },
     { id: "SK-RA2b-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Jayden is writing a report about bats. Is each source trustworthy or not?",
       cols: ["Trustworthy", "Not trustworthy"],
@@ -858,9 +859,9 @@ PP.addLesson({
       pick: 2,
       choices: [
         { text: "a Georgia college's farming guide about growing peach trees", correct: true },
-        { text: "a library book by a fruit farmer about caring for peach trees", correct: true },
+        { text: "a library book by a Georgia fruit farmer about caring for peach trees", correct: true },
         { text: "an ad for a peach smoothie at a snack shop" },
-        { text: "a library book by a fruit farmer about growing apple trees" },
+        { text: "a library book by a Georgia fruit farmer about growing apple trees" },
         { text: "a poem a student wrote about eating a sweet peach" }
       ],
       clue: "Check two things for every source. First, can you trust who made it? Second, is it about growing peach trees?",
@@ -881,12 +882,12 @@ PP.addLesson({
       prompt: "Owen is writing about what sea turtles eat. Which source would be the MOST trustworthy?",
       choices: [
         { text: "an aquarium web page written by sea turtle experts", correct: true },
-        { text: "a cartoon movie about a sea turtle who goes to school" },
+        { text: "a page where a person tells about seeing turtles on vacation" },
         { text: "an ad for a sea turtle beach towel at a gift shop" },
         { text: "a post where someone guesses what sea turtles eat" }
       ],
-      clue: "Ask who made each source and why. Look for people who really know about sea turtles.",
-      why: "The answer is \"an aquarium web page written by sea turtle experts.\" Experts at an aquarium study real sea turtles. The cartoon is made up, the towel ad is selling something, and the post is only a guess." },
+      clue: "Ask who made each source and why. Seeing something once is not the same as studying it.",
+      why: "The answer is \"an aquarium web page written by sea turtle experts.\" Experts at an aquarium study real sea turtles. A person who saw turtles on vacation is not an expert and did not study what they eat, the towel ad is selling something, and the post is only a guess." },
     { id: "SK-RA2b-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Grace is writing a report about how honeybees make honey. Which source would be the MOST useful?",
       choices: [
@@ -902,13 +903,13 @@ PP.addLesson({
       cols: ["Trustworthy and on topic", "Trustworthy but not on topic", "Not trustworthy"],
       rows: [
         { text: "a science center book about the life of a frog", answer: 0 },
-        { text: "a science center book about how birds build nests", answer: 1 },
+        { text: "a science center book about how snakes shed their skin", answer: 1 },
         { text: "a toy ad that says its frog grows \"bigger than a dog!\"", answer: 2 },
         { text: "a nature magazine article about tadpoles turning into frogs", answer: 0 },
         { text: "a classmate's guess about how long frogs live", answer: 2 }
       ],
       clue: "Ask two questions about each source. Can I trust who made it? Is it about how frogs grow?",
-      why: "The science center frog book and the nature magazine article about tadpoles are trustworthy and on topic. The science center bird book is trustworthy but not about frogs. The toy ad and the classmate's guess are not trustworthy." },
+      why: "The science center frog book and the nature magazine article about tadpoles are trustworthy and on topic. The science center snake book is trustworthy but not about frogs. The toy ad and the classmate's guess are not trustworthy." },
     { id: "SK-RA2b-T4", type: "ms", points: 2, dok: 3, passages: [],
       prompt: "Ben's report is about why leaves change color in the fall. Which TWO sources should he use? Choose two answers.",
       pick: 2,
@@ -917,10 +918,10 @@ PP.addLesson({
         { text: "a library book by a tree scientist about leaves in the fall", correct: true },
         { text: "a store ad for fall leaf decorations" },
         { text: "a science museum web page about how seeds sprout" },
-        { text: "a story about a squirrel who paints the leaves red" }
+        { text: "a page where a kid tells about jumping in a pile of fall leaves" }
       ],
       clue: "Each source Ben uses must pass two checks: it can be trusted, and it is about leaves changing color.",
-      why: "The science museum page about leaves and the tree scientist's book are both trustworthy and on topic. The store ad is selling decorations, the story is made up, and the seed page is trustworthy but off topic." },
+      why: "The science museum page about leaves and the tree scientist's book are both trustworthy and on topic. The store ad is selling decorations, the kid's page tells about fun with leaves but not why they change color and is not from an expert, and the seed page is trustworthy but off topic." },
     { id: "SK-RA2b-T5", type: "mc", points: 1, dok: 3, passages: [],
       prompt: "Mia is writing about the moon. She found a web page that says, \"I think the moon might be made of rock, but I'm not sure.\" Why is this a weak source?",
       choices: [

@@ -5,8 +5,8 @@ PP.addLesson({
   teach: {
     big: "The main idea is what a whole text is mostly about, and the key details are the facts that prove it.",
     points: [
-      "The topic is what the text is about in a word or two, like \"bees.\" The main idea tells something important about the topic, like \"Bees work together to keep their hive alive.\"",
-      "Look at the title, the first paragraph and the last paragraph. Authors often tell the main idea there.",
+      "The topic is what the text is about in a word or two, like \"sharks.\" The main idea tells something important about the topic, like \"Sharks have bodies built for hunting in the ocean.\"",
+      "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
       "Key details are facts that explain or prove the main idea. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
       "Check your main idea. It should fit the whole text, not just one paragraph."
@@ -62,16 +62,16 @@ PP.addLesson({
         ["A honeybee hive can be home to thousands of bees.", "Inside, the bees are always busy.", "Each bee has a job, and by working together, the bees keep the whole hive alive."],
         ["Every hive has one queen.", "She is bigger than the other bees.", "Her job is to lay eggs, and she can lay hundreds of them in one day."],
         ["Most of the bees in a hive are worker bees.", "Worker bees are all female, and they do almost all of the work.", "Young workers stay inside the hive.", "They clean it, feed the baby bees, and build little wax rooms called cells."],
-        ["Older workers fly outside to look for flowers.", "A honeybee has five eyes.", "The workers gather a sweet liquid called nectar and a yellow powder called pollen.", "Back at the hive, the bees turn the nectar into honey.", "They store the honey in the wax cells so the hive has food in winter."],
+        ["Older workers fly outside to look for flowers.", "The workers gather a sweet liquid called nectar and a yellow powder called pollen.", "Back at the hive, the bees turn the nectar into honey.", "They store the honey in the wax cells so the hive has food in winter.", "A honeybee has five eyes."],
         ["Some workers guard the door of the hive.", "They keep out bees from other hives.", "On hot days, other workers stand near the door and fan their wings to cool the hive down."],
         ["No bee could keep a hive going alone.", "Together, the queen and the workers make the hive a busy, healthy home."]
       ] },
     { id: "p2", title: "The Armored Digger", genre: "Informational text",
       paragraphs: [
         ["In Georgia, you might see an armadillo in a field or by a road.", "It is about the size of a house cat.", "An armadillo's body is made for digging and for staying safe."],
-        ["An armadillo has short, strong legs with sharp claws.", "It uses its claws to dig in the dirt for beetles, ants, and worms.", "Its nose is very good at smelling food under the ground.", "Then it grabs the bugs with its long, sticky tongue."],
-        ["An armadillo also has a hard shell made of bony plates.", "The shell covers its back, its sides, and the top of its head.", "It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.", "Only one kind of armadillo can roll up into a ball.", "That kind does not live in Georgia."],
-        ["When an armadillo is scared, it may jump straight up into the air.", "This can surprise an enemy and give the armadillo time to run away.", "It hurries to its burrow, a tunnel it has dug in the ground."],
+        ["An armadillo has short, strong legs with sharp claws.", "It uses its claws to dig in the dirt for beetles, ants, and worms.", "Its nose is good at smelling food in the ground.", "Then it grabs the bugs with its long, sticky tongue."],
+        ["An armadillo also has a hard shell made of bony plates.", "The shell covers its back, its sides, and the top of its head.", "It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.", "Only three-banded armadillos can roll up into a ball.", "They do not live in Georgia."],
+        ["When an armadillo is scared, it may jump straight up into the air.", "This can surprise an enemy and give the armadillo time to run away.", "It hurries to its burrow, a hole it has dug in the ground."],
         ["A mother armadillo usually has four babies at a time.", "All four babies look exactly alike."],
         ["Strong claws, a good nose, and a tough shell all help the armadillo find food and stay safe."]
       ] }
@@ -86,7 +86,7 @@ PP.addLesson({
         { text: "Some worker bees guard the hive from bees of other hives." }
       ],
       clue: "The main idea fits the whole article, not just one paragraph. Read the first and last paragraphs, then ask which choice covers every part.",
-      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraph 1 says this, and every paragraph after it tells about a different job. The other choices are true, but each one is a detail from only one paragraph." },
+      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraph 1 says this, paragraphs 2 to 5 each tell about a different job, and paragraph 6 says it again. The other choices are true, but each one is a detail from only one paragraph." },
     { id: "SK-TT2a-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the sentence that best states the main idea of the whole article.",
       targets: ["p1:1:1", "p1:1:2", "p1:1:3", "p1:2:1", "p1:3:1"],
@@ -119,12 +119,12 @@ PP.addLesson({
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What is the main idea of paragraph 4?",
         choices: [
-          { text: "Older worker bees gather food and turn it into honey for the hive.", correct: true },
+          { text: "Older worker bees gather food from flowers and make honey for the hive.", correct: true },
           { text: "Honeybees need all five of their eyes to find flowers to visit." },
           { text: "Honeybees eat all of the honey in the hive during the summer." },
           { text: "Young worker bees stay inside the hive and feed the baby bees." }
         ] },
-      partB: { prompt: "Which two sentences from paragraph 4 best support the answer to Part A?", pick: 2,
+      partB: { prompt: "Which two sentences from the article best support the answer to Part A?", pick: 2,
         choices: [
           { text: "\"The workers gather a sweet liquid called nectar and a yellow powder called pollen.\"", correct: true },
           { text: "\"Back at the hive, the bees turn the nectar into honey.\"", correct: true },
@@ -133,7 +133,7 @@ PP.addLesson({
           { text: "\"Every hive has one queen.\"" }
         ] },
       clue: "Read only paragraph 4. Ask what most of its sentences are about. Then find the sentences that prove it.",
-      why: "Part A: Older worker bees gather food and turn it into honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." }
+      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." }
   ],
   test: [
     { id: "SK-TT2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -145,7 +145,7 @@ PP.addLesson({
         { text: "why most armadillos cannot roll up into a tight ball" }
       ],
       clue: "Find the idea that the first and last paragraphs share. Then check that it fits the middle paragraphs too.",
-      why: "The answer is \"how an armadillo's body helps it find food and stay safe.\" Paragraph 1 says the body is made for digging and staying safe, and the last paragraph says the same thing. Georgia, the babies and rolling into a ball are each in only one sentence." },
+      why: "The answer is \"how an armadillo's body helps it find food and stay safe.\" Paragraph 1 says the body is made for digging and staying safe, and the last paragraph says the same thing. Georgia, the babies and rolling into a ball are each only a small part of the article, not what the whole article is about." },
     { id: "SK-TT2a-T2", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What is the main idea of paragraph 4?",
@@ -160,7 +160,7 @@ PP.addLesson({
           { text: "\"This can surprise an enemy and give the armadillo time to run away.\"", correct: true },
           { text: "\"It uses its claws to dig in the dirt for beetles, ants, and worms.\"" },
           { text: "\"The shell covers its back, its sides, and the top of its head.\"" },
-          { text: "\"Only one kind of armadillo can roll up into a ball.\"" }
+          { text: "\"Only three-banded armadillos can roll up into a ball.\"" }
         ] },
       clue: "Read paragraph 4 by itself. What do the jump and the burrow have in common? Then find the sentence that proves it.",
       why: "Part A: An armadillo has quick ways to get away from danger. Part B: \"This can surprise an enemy and give the armadillo time to run away.\" Jumping and hurrying to the burrow are both ways to escape. Digging and the shell are in other paragraphs, and the article says the armadillos in Georgia cannot roll into a ball." },
@@ -186,11 +186,11 @@ PP.addLesson({
       clue: "First say the main idea to yourself. Then test each detail: does it show how the body helps the armadillo eat or stay safe?",
       why: "The answer is \"A mother armadillo usually has four babies at a time.\" It is an interesting fact, but it does not show how the body helps with food or safety. The tongue helps it eat, and the shell and the burrow help it stay safe." },
     { id: "SK-TT2a-T5", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Choose the sentence that best states the main idea of the whole article.",
-      targets: ["p2:1:1", "p2:1:2", "p2:1:3", "p2:2:1", "p2:3:1"],
-      answer: ["p2:1:3"], pick: 1,
-      clue: "The main idea sentence is big enough to cover the claws, the nose, the shell and the jump.",
-      why: "The answer is \"An armadillo's body is made for digging and for staying safe.\" Every paragraph after it gives a detail about digging or staying safe. The sentences about claws and the shell each tell about only one part." }
+      prompt: "The last paragraph says a tough shell helps the armadillo stay safe. Choose the sentence that best supports this idea.",
+      targets: ["p2:1:2", "p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1"],
+      answer: ["p2:3:3"], pick: 1,
+      clue: "A sentence can tell about the shell without telling how it keeps the armadillo safe. Find the sentence that proves the whole idea.",
+      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells how the shell keeps the armadillo safe. The other shell sentences tell what the shell is made of and what it covers, but not how it helps. The jump is a different way to stay safe." }
   ]
 });
 
@@ -249,13 +249,13 @@ PP.addLesson({
         ["After a few days, a small caterpillar hatches from the egg.", "First, it eats its own eggshell.", "Then it begins to munch on milkweed leaves."],
         ["The caterpillar eats and eats, so it grows very fast.", "But its skin does not grow with it.", "When the skin gets too tight, the caterpillar wiggles out of it.", "A new, bigger skin is already underneath.", "This happens several times."],
         ["Milkweed leaves have a kind of poison in them.", "The poison does not hurt the caterpillar.", "Instead, it stays in the caterpillar's body and makes it taste bad.", "As a result, many birds learn to leave monarchs alone."],
-        ["When the caterpillar is full grown, it hangs upside down from a leaf or a stem.", "Its skin splits open one last time, and a green case called a chrysalis forms around its body.", "Inside the chrysalis, the caterpillar's body slowly changes."],
+        ["When the caterpillar is full grown, it hangs upside down from a leaf or a stem.", "Its skin splits open one last time.", "Under it, the new skin hardens into a green case called a chrysalis.", "Inside the chrysalis, the caterpillar's body slowly changes."],
         ["After one or two weeks, the chrysalis cracks open, and a butterfly climbs out.", "At first, its wings are wet and crumpled.", "The butterfly waits for its wings to dry.", "Then it flies off to find flowers."]
       ] },
     { id: "p2", title: "Where Does Rain Come From?", genre: "Informational text",
       paragraphs: [
         ["The rain that falls on your house has been on a long trip.", "It may once have been part of an ocean, a lake, or even a puddle.", "Water moves around and around between the ground and the sky.", "This trip is called the water cycle."],
-        ["The trip begins when the sun warms the water on Earth.", "The sun's heat makes some of the water change into a gas called water vapor.", "Water vapor is invisible, so you cannot see it rise into the air.", "That is why a puddle dries up on a sunny afternoon."],
+        ["The trip begins when the sun warms the water on Earth.", "The sun's heat makes some of the water change into a gas called water vapor.", "That is why a puddle dries up on a sunny afternoon.", "Water vapor is invisible, so you cannot see it rise into the air."],
         ["High in the sky, the air is cooler.", "When water vapor cools, it turns back into tiny drops of water.", "The drops are so small and light that they float in the air.", "Millions of these drops together make a cloud."],
         ["Inside a cloud, the tiny drops bump into each other and join together.", "Little by little, the drops grow bigger and heavier.", "When they become too heavy to float, they fall to the ground as rain.", "If the air is very cold, the water may fall as snow instead."],
         ["Some of the rain soaks into the ground.", "The rest runs into streams, rivers, lakes, and oceans.", "Then the sun warms the water again, and the trip starts over."]
@@ -268,11 +268,11 @@ PP.addLesson({
         "A mother monarch lays an egg on milkweed.",
         "A caterpillar hatches and eats its eggshell.",
         "The caterpillar sheds its tight skin several times.",
-        "A chrysalis forms around the caterpillar.",
+        "Its new skin hardens into a chrysalis.",
         "A butterfly climbs out and waits for its wings to dry."
       ],
       clue: "Use the signal words and the paragraph order. The article starts at the very beginning of a monarch's life and ends when it can fly.",
-      why: "The order is: the mother lays an egg on milkweed, a caterpillar hatches and eats its eggshell, it sheds its tight skin several times, a chrysalis forms, and a butterfly climbs out and waits for its wings to dry." },
+      why: "The order is: the mother lays an egg on milkweed, a caterpillar hatches and eats its eggshell, it sheds its tight skin several times, its new skin hardens into a chrysalis, and a butterfly climbs out and waits for its wings to dry." },
     { id: "SK-TT2b-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Why does the mother monarch lay her eggs on milkweed?",
       choices: [
@@ -281,31 +281,31 @@ PP.addLesson({
         { text: "Birds cannot find eggs that are hidden on milkweed leaves." },
         { text: "Milkweed has more flowers than any other plant in the field." }
       ],
-      clue: "The question asks why, so look for a cause. Find the word because in paragraph 1.",
+      clue: "The question asks why. Look for a signal word that points to a cause.",
       why: "The answer is \"Milkweed is the only kind of plant her caterpillars can eat.\" Paragraph 1 says she chooses milkweed because it is the only kind of plant her babies can eat. The article does not say milkweed keeps eggs warm or hides them." },
     { id: "SK-TT2b-P3", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What is one effect of the caterpillar eating milkweed leaves?",
         choices: [
-          { text: "Many birds learn to leave monarchs alone.", correct: true },
+          { text: "Many birds will not eat monarchs.", correct: true },
           { text: "The caterpillar gets sick from the poison." },
           { text: "The caterpillar's new skin stops growing." },
           { text: "The chrysalis turns a bright green color." }
         ] },
-      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+      partB: { prompt: "Which sentence from the article best explains why the answer to Part A happens?",
         choices: [
-          { text: "\"As a result, many birds learn to leave monarchs alone.\"", correct: true },
-          { text: "\"Then it begins to munch on milkweed leaves.\"" },
+          { text: "\"Instead, it stays in the caterpillar's body and makes it taste bad.\"", correct: true },
+          { text: "\"First, it eats its own eggshell.\"" },
           { text: "\"But its skin does not grow with it.\"" },
           { text: "\"Inside the chrysalis, the caterpillar's body slowly changes.\"" }
         ] },
-      clue: "Read paragraph 4. Follow the chain: the leaves have poison, the poison stays in the caterpillar, and then what happens? Look for the signal words.",
-      why: "Part A: Many birds learn to leave monarchs alone. Part B: \"As a result, many birds learn to leave monarchs alone.\" The poison makes the caterpillar taste bad, and the signal words As a result show the effect. The article says the poison does not hurt the caterpillar." },
+      clue: "Read paragraph 4. Follow the chain one link at a time: the leaves, the poison, the caterpillar, and then the birds.",
+      why: "Part A: Many birds will not eat monarchs. Part B: \"Instead, it stays in the caterpillar's body and makes it taste bad.\" The milkweed poison stays in the caterpillar and makes it taste bad. As a result, many birds learn to leave monarchs alone. The article says the poison does not hurt the caterpillar." },
     { id: "SK-TT2b-P4", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
-      prompt: "Choose the signal word that best completes each sentence.",
+      prompt: "Use the article. Choose the signal word that best completes each sentence.",
       text: "The caterpillar eats a lot, {0} it grows very fast. Its skin gets too tight {1} the skin does not grow with it.",
       slots: [
-        { options: ["so", "because", "before"], answer: 0 },
+        { options: ["so", "although", "before"], answer: 0 },
         { options: ["because", "so", "until"], answer: 0 }
       ],
       clue: "In each sentence, decide which part is the cause and which part is the effect. So comes before an effect. Because comes before a cause.",
@@ -324,7 +324,7 @@ PP.addLesson({
       prompt: "Choose the sentence that tells what the caterpillar does first after it hatches.",
       targets: ["p1:1:2", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1"],
       answer: ["p1:2:2"], pick: 1,
-      clue: "Find the paragraph where the caterpillar hatches. Then look for a signal word that tells what comes first.",
+      clue: "Find the paragraph where the caterpillar hatches. Read its sentences in order.",
       why: "The answer is \"First, it eats its own eggshell.\" The signal word First shows this happens before it starts eating milkweed leaves." }
   ],
   test: [
@@ -347,7 +347,7 @@ PP.addLesson({
         { text: "The drops bump into one another." },
         { text: "Some of the rain soaks into the ground." }
       ],
-      clue: "Find the sentence that says water vapor turns back into drops. Then read the sentence just before it.",
+      clue: "Find where the article tells about water vapor turning into drops. What change happens to the vapor there?",
       why: "The answer is \"The air high in the sky is cooler.\" Paragraph 3 says the air high in the sky is cooler, and when water vapor cools, it turns back into tiny drops. The sun's heat does the opposite: it turns water into vapor." },
     { id: "SK-TT2b-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -421,18 +421,18 @@ PP.addLesson({
         "Text 1: The moon does not make its own light. The light we see is sunlight bouncing off the moon.",
         "Text 2: The moon seems to change shape during the month. As the moon travels around Earth, we see different amounts of its sunny side."
       ],
-      ask: "What do both texts say about where the moon's light comes from?",
+      ask: "How do both texts help you know that the moon's light comes from the sun?",
       steps: [
         "Find what Text 1 says about light. It says the light is sunlight bouncing off the moon.",
         "Find what Text 2 says about light. It talks about the moon's sunny side, the side the sun shines on.",
         "Put the matching parts together."
       ],
-      answer: "Both texts show that the moon's light comes from the sun."
+      answer: "Text 1 says the moon's light is sunlight, and Text 2 agrees when it says we see the moon's sunny side."
     },
     {
       show: [
         "Text 1: In early spring, peach trees are covered with pink flowers. Each flower can grow into a peach.",
-        "Text 2: Peaches are picked in summer, when they are ripe and sweet. Georgia grows so many peaches that it is called the Peach State."
+        "Text 2: Peaches are picked in summer, when they are ripe and sweet. Georgia is famous for its peaches and is called the Peach State."
       ],
       ask: "Using both texts, what happens to a peach tree from spring to summer?",
       steps: [
@@ -490,14 +490,14 @@ PP.addLesson({
       prompt: "Where can you find each piece of information? Match each one to the passage that tells it, or to Both.",
       cols: ["Tiny Flyers", "The Long Trip South", "Both"],
       rows: [
-        { text: "how a hummingbird hovers", answer: 0 },
+        { text: "that a hummingbird can hover", answer: 0 },
         { text: "where hummingbirds go for the winter", answer: 1 },
         { text: "that hummingbirds drink nectar", answer: 2 },
         { text: "how people help hummingbirds in spring", answer: 1 },
         { text: "how the hummingbird got its name", answer: 0 }
       ],
       clue: "Check each piece of information in one passage, then in the other. Mark Both only if you find it in each passage.",
-      why: "Hovering and how the bird got its name are in Tiny Flyers. Where the birds go for the winter and the feeders in spring are in The Long Trip South. Drinking nectar is in both: Tiny Flyers says they lap up nectar, and The Long Trip South says they drink extra nectar before the trip." },
+      why: "That a hummingbird can hover and how the bird got its name are in Tiny Flyers. Where the birds go for the winter and the feeders in spring are in The Long Trip South. Drinking nectar is in both: Tiny Flyers says they lap up nectar, and The Long Trip South says they drink extra nectar before the trip." },
     { id: "SK-TT2c-P3", type: "ebsr", points: 2, dok: 3, passages: ["p1", "p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Tiny Flyers tells that flying uses a lot of energy. How does The Long Trip South add to this idea?",
@@ -517,16 +517,16 @@ PP.addLesson({
       clue: "Find what The Long Trip South says about energy. It must be new information that Tiny Flyers does not give.",
       why: "Part A: It explains that the birds store extra food as fat to use on their trip. Part B: \"Their bodies store the extra food as fat.\" Tiny Flyers says flying uses energy. The Long Trip South adds how the birds save up energy for a long flight. The humming sound and hovering come from Tiny Flyers, and neither passage says sugar water keeps the birds warm." },
     { id: "SK-TT2c-P4", type: "ms", points: 2, dok: 3, passages: ["p1", "p2"], pick: 2,
-      prompt: "A student is writing a report on how hummingbirds use energy. Which two sentences from the passages belong in the report? Choose two answers.",
+      prompt: "A student is writing a report on why hummingbirds need so much food. Which two sentences from the passages belong in the report? Choose two answers.",
       choices: [
         { text: "Flying so fast uses a lot of energy.", correct: true },
         { text: "The fat gives them energy for the journey.", correct: true },
-        { text: "It can even fly backward." },
-        { text: "It is a very small bird." },
+        { text: "Hovering helps a hummingbird eat." },
+        { text: "Hummingbirds also eat tiny insects and spiders." },
         { text: "In spring, the hummingbirds fly back north." }
       ],
-      clue: "The report is only about energy. Look in both passages for sentences that talk about energy.",
-      why: "The answers are \"Flying so fast uses a lot of energy\" from Tiny Flyers and \"The fat gives them energy for the journey\" from The Long Trip South. Together they show how hummingbirds use energy and how they save it up. The other sentences are true, but they are not about energy." },
+      clue: "The report is about why, not what or how. Look in both passages for sentences that tell what food does for a hummingbird.",
+      why: "The answers are \"Flying so fast uses a lot of energy\" from Tiny Flyers and \"The fat gives them energy for the journey\" from The Long Trip South. Together they explain why: food gives hummingbirds the energy for fast flying and for their long trip. The hovering sentence tells how they eat, the insect sentence tells what they eat, and the spring sentence is about the trip home." },
     { id: "SK-TT2c-P5", type: "mc", points: 1, dok: 3, passages: ["p1", "p2"],
       prompt: "Which sentence best combines information from both passages?",
       choices: [
@@ -536,19 +536,19 @@ PP.addLesson({
         { text: "Hummingbirds catch spiders on their trip across the Gulf of Mexico." }
       ],
       clue: "A sentence that combines both passages needs one idea from Tiny Flyers and one idea from The Long Trip South.",
-      why: "The answer is \"Hummingbirds are tiny, fast flyers that travel far south each fall.\" Tiny and fast come from Tiny Flyers, and the trip south comes from The Long Trip South. Hovering is only from Tiny Flyers, the trip and return are only from The Long Trip South, and neither passage says they catch spiders on the trip." }
+      why: "The answer is \"Hummingbirds are tiny, fast flyers that travel far south each fall.\" Fast flying comes from Tiny Flyers, and the trip south comes from The Long Trip South. Hovering is only from Tiny Flyers, the trip and return are only from The Long Trip South, and neither passage says they catch spiders on the trip." }
   ],
   test: [
     { id: "SK-TT2c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "Which statement uses information from BOTH passages?",
       choices: [
-        { text: "Adult alligators warm up in the sun, and their eggs are warmed by rotting leaves.", correct: true },
+        { text: "Alligators are reptiles, and alligator mothers take care of their babies.", correct: true },
         { text: "Adult alligators warm up in the sun, and they swim by swinging their tails." },
         { text: "Mother alligators build nests, and they carry their babies to the water." },
         { text: "Baby alligators have stripes, and they squeak from inside their eggs." }
       ],
       clue: "For each choice, find where each half of the sentence comes from. The answer needs one half from each passage.",
-      why: "The answer is \"Adult alligators warm up in the sun, and their eggs are warmed by rotting leaves.\" Built for the Water says alligators rest in the sun to warm up. Alligator Moms says rotting leaves in the nest keep the eggs warm. Each of the other choices uses only one passage." },
+      why: "The answer is \"Alligators are reptiles, and alligator mothers take care of their babies.\" Built for the Water says the alligator is a reptile. Alligator Moms says an alligator mother takes care of her babies. Each of the other choices uses only one passage." },
     { id: "SK-TT2c-T2", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Where can you find each piece of information? Match each one to the passage that tells it, or to Both.",
       cols: ["Built for the Water", "Alligator Moms", "Both"],
@@ -579,11 +579,11 @@ PP.addLesson({
       clue: "First decide what Alligator Moms is mostly about. Then cross out any choice that Built for the Water already tells.",
       why: "Part A: It tells how a mother alligator cares for her eggs and babies. Part B: \"But an alligator mother takes care of her babies.\" Catching food, resting in the sun and swimming with the tail are all in Built for the Water. The stripes are in Alligator Moms, but they do not show how the mother cares for her babies." },
     { id: "SK-TT2c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Choose the sentence from Alligator Moms that tells how the eggs stay warm.",
-      targets: ["p4:2:1", "p4:2:3", "p4:3:1", "p4:3:3", "p4:4:2"],
+      prompt: "Built for the Water says adult alligators rest in the sun to warm up. Choose the sentence from Alligator Moms that tells a different way alligators get warmth.",
+      targets: ["p3:4:1", "p3:4:2", "p4:2:3", "p4:3:1", "p4:3:3"],
       answer: ["p4:3:1"], pick: 1,
-      clue: "Built for the Water says adult alligators use the sun to warm up. Look in Alligator Moms for what warms the eggs inside the nest.",
-      why: "The answer is \"As the leaves in the nest rot, they give off heat.\" That heat keeps the eggs warm. The other sentences tell where the nest is, how the eggs are covered, how the mother guards them and how the babies call out." }
+      clue: "The sentence must come from Alligator Moms, and it must name a source of heat that is not the sun.",
+      why: "The answer is \"As the leaves in the nest rot, they give off heat.\" Adult alligators get warmth from the sun, but the eggs get warmth from rotting leaves. The two sentences from Built for the Water are about body heat and the sun, and the other sentences from Alligator Moms tell how the eggs are covered and guarded." }
   ]
 });
 
@@ -594,7 +594,7 @@ PP.addLesson({
     big: "A good informational piece names the topic at the start, teaches facts in the middle, and wraps up at the end.",
     points: [
       "The introduction tells the reader what the topic is. It can start with something interesting, but it must make the topic clear.",
-      "The middle gives facts, details and definitions. Every sentence should be about the topic.",
+      "The middle gives facts, details and definitions. A picture or diagram can also help explain a fact. Every sentence should be about the topic.",
       "A definition tells what a word means, like \"A burrow is a hole an animal digs for its home.\"",
       "If a sentence is about something else, like your own pet or your lunch, it does not belong. Take it out.",
       "The conclusion wraps up. It reminds the reader of the topic or the most important idea. It does not start a new topic."
@@ -703,7 +703,7 @@ PP.addLesson({
         { text: "Some people cannot eat them, so they need to choose other snacks." },
         { text: "Pecans are real nuts that grow on very tall trees in Georgia." }
       ],
-      clue: "Sentence 7 says peanuts are not really nuts. The next sentence should tell what they are, using a definition.",
+      clue: "Sentence 7 says what peanuts are not. The next sentence should tell the reader what they are.",
       why: "The answer is \"They are legumes, which are plants that grow seeds in pods, like peas.\" It tells what peanuts really are and defines the word legumes. The other sentences are about cooking peanuts, about people who cannot eat them, or about pecans." },
     { id: "SK-TT2d-P3", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence does not belong in Rosa's draft? Choose the sentence.",
@@ -716,11 +716,11 @@ PP.addLesson({
       choices: [
         { text: "From a yellow flower to a shell underground, peanuts are amazing plants.", correct: true },
         { text: "Next, I will tell you how to make a peanut butter and jelly sandwich." },
-        { text: "Peanuts are not really nuts, and they grow on plants with yellow flowers." },
+        { text: "Peanut plants need warm weather for many months to grow well." },
         { text: "I think that apples are a much better snack than peanuts will ever be." }
       ],
-      clue: "A conclusion wraps up the whole topic. Cross out any choice that starts something new or gives an opinion about a different food.",
-      why: "The answer is \"From a yellow flower to a shell underground, peanuts are amazing plants.\" It sums up how peanuts grow and ends the topic. The sandwich sentence starts a new topic, the sentence about nuts and flowers only repeats facts, and the apple sentence is an opinion about a different food." },
+      clue: "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or is about a different food.",
+      why: "The answer is \"From a yellow flower to a shell underground, peanuts are amazing plants.\" It sums up how peanuts grow and ends the topic. The sandwich sentence starts a new topic, the warm weather sentence adds a new fact instead of wrapping up, and the apple sentence is an opinion about a different food." },
     { id: "SK-TT2d-P5", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Rosa might add these sentences to a new version of her draft. Match each sentence to the part of the draft where it belongs.",
       cols: ["Introduction", "Middle (fact or detail)", "Conclusion"],
@@ -735,7 +735,7 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TT2d-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Kenji's draft has no introduction. Which sentence should he add before sentence 1?",
+      prompt: "Kenji wants to add an opening sentence that tells the reader what his whole draft will be about. Which sentence should he add before sentence 1?",
       choices: [
         { text: "Bats may look strange, but they are amazing animals with special skills.", correct: true },
         { text: "Mice and rats are small animals that some people are afraid of." },
@@ -760,7 +760,7 @@ PP.addLesson({
       ],
       clue: "The new sentence must stay on the same idea as sentence 7: what bats eat.",
       why: "The answer is \"Some kinds of bats eat fruit or drink nectar from flowers instead.\" It tells more about what bats eat. The wing sentence is about bats but not about food, the moth sentence is about moths, and the last sentence is an opinion." },
-    { id: "SK-TT2d-T4", type: "ms", points: 2, dok: 3, passages: ["p2"], pick: 3,
+    { id: "SK-TT2d-T4", type: "ms", points: 2, dok: 2, passages: ["p2"], pick: 3,
       prompt: "Sentence 9 says bats have a special way to find food in the dark. Which three sentences give details that support sentence 9? Choose three answers.",
       choices: [
         { text: "(10) A bat makes high squeaks as it flies.", correct: true },
