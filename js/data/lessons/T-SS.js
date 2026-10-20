@@ -11,11 +11,11 @@ PP.addLesson({
   teach: {
     big: "Authors build a text with a plan: headings split it into sections, a pattern links the ideas, and features like captions and maps help you understand.",
     points: [
-      "Headings split a text into sections. Each heading tells what that section is mostly about.",
       "Sequence tells steps or events in order. Look for clue words like first, next, then and finally.",
       "Cause and effect tells what happened and why. Look for because, so and as a result.",
-      "Compare tells how things are alike and different. Look for both, but and while. Problem and solution tells about a trouble and how it gets fixed.",
-      "Captions tell what a picture shows. Maps show where places are. Both help you understand the words."
+      "Compare tells how things are alike and different. Look for both, alike, but and while.",
+      "Problem and solution tells about a trouble and how it gets fixed. Look for problem, trouble, solve and fix.",
+      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact."
     ],
     words: [
       { term: "section", means: "one part of a text, often with its own heading" },
@@ -83,7 +83,7 @@ PP.addLesson({
         ["## A Home for Many Animals"],
         ["A gopher tortoise uses its strong front legs to dig a long tunnel in the sand.", "This tunnel is called a burrow.", "A burrow stays cool on hot days and warmer on cold nights.", "Because of this, many other animals, such as snakes, frogs and mice, hide in tortoise burrows too."],
         ["## A Big Problem"],
-        ["Long ago, gopher tortoises lived in large pine forests in south Georgia.", "Over many years, people cut down many of these forests to build towns, roads and farms.", "As a result, the tortoises lost much of their home."],
+        ["Long ago, large pine forests covered much of south Georgia, and many gopher tortoises lived there.", "Over many years, people cut down many of these forests to build towns, roads and farms.", "As a result, the tortoises lost much of their home."],
         ["## Working Together"],
         ["Today, people are working to solve this problem.", "Some land is now kept safe so tortoises can live there.", "Workers also set small, careful fires in these pine forests.", "The fires burn away thick bushes.", "Then sunlight can reach the ground, and the low plants that tortoises eat can grow."]
       ] }
@@ -95,15 +95,15 @@ PP.addLesson({
         { text: "It tells the steps in the order they happen.", correct: true },
         { text: "It tells how two kinds of plants are alike." },
         { text: "It tells about a problem and how farmers fix it." },
-        { text: "It tells what causes peanuts to taste salty." }
+        { text: "It tells why peanut plants are good for the soil." }
       ],
       clue: "Read the first word of each sentence in that section. What do those words tell you about time?",
       why: "The answer is \"It tells the steps in the order they happen.\" The clue words first, next, then and finally show sequence. The section follows the peanut from seed, to flower, to peg, to peanut." },
     { id: "SK-SS1a-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Read the section \"Why Peanuts Help the Soil.\" Select the sentence that tells an effect.",
+      prompt: "Read the section \"Why Peanuts Help the Soil.\" Select the sentence that tells how peanut plants affect the crops planted in that field the next year.",
       targets: ["p1:7:1", "p1:7:2", "p1:7:3"],
       answer: ["p1:7:3"], pick: 1,
-      clue: "An effect is what happens because of something else. Find the sentence that tells a result, and look for a clue word that signals a reason.",
+      clue: "First find the cause the section talks about. Then find the sentence that tells what happens later because of it.",
       why: "The answer is \"Because the soil has more plant food, crops such as cotton and corn often grow better in that field the next year.\" More plant food is the cause. Crops growing better is the effect." },
     { id: "SK-SS1a-P3", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
       prompt: "Choose the words that best complete the sentence.",
@@ -166,17 +166,17 @@ PP.addLesson({
       partB: { prompt: "Which sentence from that section best shows this pattern?",
         choices: [
           { text: "\"Because of this, many other animals, such as snakes, frogs and mice, hide in tortoise burrows too.\"", correct: true },
-          { text: "\"This tunnel is called a burrow.\"" },
-          { text: "\"The gopher tortoise is Georgia's state reptile.\"" },
-          { text: "\"Some land is now kept safe so tortoises can live there.\"" }
+          { text: "\"A burrow stays cool on hot days and warmer on cold nights.\"" },
+          { text: "\"A gopher tortoise uses its strong front legs to dig a long tunnel in the sand.\"" },
+          { text: "\"This tunnel is called a burrow.\"" }
         ] },
       clue: "Look for a clue word in the section. Does it point to order, to a reason, or to how things are alike? Then find the sentence with that clue word.",
-      why: "Part A: It tells a cause and the effect it has. Part B: \"Because of this, many other animals, such as snakes, frogs and mice, hide in tortoise burrows too.\" The burrow stays cool and warm (cause), so other animals hide there (effect). The clue words are because of this." },
+      why: "Part A: It tells a cause and the effect it has. Part B: \"Because of this, many other animals, such as snakes, frogs and mice, hide in tortoise burrows too.\" The burrow stays cool and warm (cause), so other animals hide there (effect). The clue words because of this join the cause to the effect. The sentence about the burrow staying cool tells only the cause." },
     { id: "SK-SS1a-T3", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Read the section \"A Big Problem.\" Select the sentence that tells the effect of people cutting down the forests.",
       targets: ["p2:5:1", "p2:5:2", "p2:5:3"],
       answer: ["p2:5:3"], pick: 1,
-      clue: "An effect is what happened after and because of the cutting. Look for a clue word that signals a result.",
+      clue: "Find the sentence that tells what happened because people cut down the forests.",
       why: "The answer is \"As a result, the tortoises lost much of their home.\" Cutting down the forests is the cause. The tortoises losing their home is the effect, and the clue words are as a result." },
     { id: "SK-SS1a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add a photo of a gopher tortoise sitting at the opening of its tunnel. Which caption would best fit the photo?",
@@ -190,10 +190,10 @@ PP.addLesson({
       why: "The answer is \"A gopher tortoise rests at the door of the burrow it dug.\" The photo shows a tortoise at its tunnel, so the caption must tell about that. The other captions tell about things that are not in the photo." },
     { id: "SK-SS1a-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
       prompt: "Choose the words that best complete the sentence.",
-      text: "The heading \"Working Together\" tells the reader that this section is about {0}.",
-      slots: [{ options: ["how people help the tortoises", "how tortoises dig their tunnels", "why the forests were cut down"], answer: 0 }],
-      clue: "Read the sentences under that heading. Who is doing the work, and what are they working on?",
-      why: "The answer is how people help the tortoises. The section tells how people keep land safe and set careful fires so the plants tortoises eat can grow." }
+      text: "Another good heading for the section \"A Home for Many Animals\" would be {0}.",
+      slots: [{ options: ["Sharing a Cool Tunnel", "How People Help Tortoises", "When the Forests Were Cut"], answer: 0 }],
+      clue: "A new heading must tell what the whole section is mostly about. Reread that section, then check each heading against it.",
+      why: "The answer is Sharing a Cool Tunnel. That section tells how the tortoise digs a burrow that stays cool, and how other animals hide in it too. Helping tortoises and cutting forests are told in other sections." }
   ]
 });
 
@@ -207,7 +207,7 @@ PP.addLesson({
   teach: {
     big: "Before you write, pick a plan that fits your job and your reader: steps in order for how-to, sections with headings for a topic, and features that help the reader.",
     points: [
-      "First think about your job. Are you teaching how to do something, telling facts about a topic, or giving your opinion? Then think about who will read it.",
+      "First think about your job. Are you teaching how to do something, or telling facts about a topic? Then think about who will read it.",
       "How-to writing tells steps in the order the reader should do them. Order words like first, next and last help.",
       "Writing about a topic can be split into sections. Each section tells about one part, and a heading names that part.",
       "Features help your reader. A heading names a section, a caption tells what a picture shows, and a numbered list makes steps easy to follow.",
@@ -280,7 +280,7 @@ PP.addLesson({
       paragraphs: [
         ["(1) The Pine Hill Library is a great place for kids in our town.", "(2) It is open six days a week, and it is free to visit."],
         ["(3) You can borrow much more than books at the library.", "(4) Kids can check out movies, puzzles and even board games.", "(5) You can keep most things for two weeks."],
-        ["(6) The library also has fun events for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) Kids can also borrow audiobooks to listen to in the car.", "(9) In the summer, there is a reading contest with prizes."],
+        ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) Kids can also borrow audiobooks to listen to in the car.", "(9) In the summer, there is a reading contest with prizes."],
         ["(10) Next time you need something fun to do, visit the Pine Hill Library!"]
       ] }
   ],
@@ -306,15 +306,15 @@ PP.addLesson({
       clue: "Read only sentences 3 through 6. What do all four sentences tell the reader to do?",
       why: "The answer is \"Making the Feeder Step by Step.\" Sentences 3 to 6 are the steps for making and hanging the feeder. The list of things you need is in sentence 2, not in sentences 3 to 6." },
     { id: "SK-SS1b-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Marcus's readers will be first graders. Which feature would best help them follow his directions?",
+      prompt: "Some of Marcus's readers have never seen a pinecone feeder. Which feature would best help them know what the finished feeder looks like?",
       choices: [
-        { text: "a numbered list of the four steps", correct: true },
-        { text: "a map showing where cardinals live" },
-        { text: "a story about Marcus's favorite bird" },
-        { text: "a chart of bird sizes and colors" }
+        { text: "a photo of a finished feeder with a caption", correct: true },
+        { text: "a numbered list of the four steps" },
+        { text: "a heading above the list of supplies" },
+        { text: "a bold title at the top of the page" }
       ],
-      clue: "Think about the job of the draft. What would help a young reader do the steps in the right order?",
-      why: "The answer is a numbered list of the four steps. The draft is a how-to, so the reader needs to see each step and its order. A map, a story or a chart would not help anyone make the feeder." },
+      clue: "The reader's problem is not knowing what the feeder looks like. Which feature lets a reader see something?",
+      why: "The answer is a photo of a finished feeder with a caption. A photo shows what the feeder looks like, and the caption tells what it is. A numbered list helps with the order of steps, and a heading or title names a part, but none of them shows the feeder." },
     { id: "SK-SS1b-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Marcus wants to add a closing sentence after sentence 8. Which sentence would be the best closing?",
       choices: [
@@ -352,7 +352,7 @@ PP.addLesson({
         { text: "When the Library Is Open" }
       ],
       clue: "Look at the first sentence of that part. It tells what the whole part is mostly about.",
-      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library has fun events, and sentences 7 and 9 tell about story time and the summer contest. Borrowing is the topic of sentences 3 to 5." },
+      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library plans special activities, and sentences 7 and 9 tell about two of them: story time and the summer contest. Borrowing is the topic of sentences 3 to 5." },
     { id: "SK-SS1b-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a photo of the Saturday story time. Which caption would best help her reader?",
       choices: [
@@ -367,12 +367,13 @@ PP.addLesson({
       prompt: "Priya is writing a new paragraph that tells how to get a library card. Put her sentences in the best order.",
       steps: [
         "Getting your own library card is easy.",
-        "First, bring a grown-up with you to the front desk.",
-        "Next, fill out a short form with your name and address.",
-        "Last, the librarian hands you your very own card."
+        "Just bring a grown-up with you to the front desk.",
+        "The librarian will give you a short form to fill out.",
+        "When the form is done, the librarian hands you your card.",
+        "Then you are ready to borrow your very first book!"
       ],
-      clue: "Start with the sentence that tells what the paragraph is about. Then use the order words to place the steps.",
-      why: "The order is: \"Getting your own library card is easy,\" then first, next and last. The opening sentence names the topic, and the order words put the steps in the order a reader would do them." },
+      clue: "Start with the sentence that tells what the paragraph is about. Then picture yourself at the library. What has to happen before each next step can happen?",
+      why: "The order is: the card is easy to get, bring a grown-up to the desk, get a short form, receive your card when the form is done, and then borrow your first book. The topic sentence comes first, and each step must happen before the next one can." },
     { id: "SK-SS1b-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Why did Priya put her ideas into separate paragraphs?",
       choices: [

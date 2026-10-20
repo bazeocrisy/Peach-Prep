@@ -1321,7 +1321,7 @@ PP.addLesson({
       why: "Holiday, ocean and girl are common nouns. Thanksgiving and Atlantic Ocean are proper nouns, because they name one special holiday and one special ocean." },
     { id: "SK-GUM1-9-T3", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "We visited my aunt in a big {0} near the coast.",
+      text: "We visited my aunt in a big {0}.",
       slots: [ { options: ["city", "City", "Augusta"], answer: 0 } ],
       clue: "Look at the words a big before the blank. Do they go with a general word or with a special name?",
       why: "The answer is city. A big goes with a general word, so the sentence needs a common noun. A common noun in the middle of a sentence starts with a small letter, so City is wrong. Augusta is a proper noun, and we do not say a big Augusta." },

@@ -9,7 +9,7 @@ PP.addLesson({
     points: [
       "Past tense tells about something that already happened. Many past tense verbs end in -ed: walked, played.",
       "Present tense tells about something that happens now or happens again and again: I walk, she walks.",
-      "Future tense tells about something that has not happened yet. Put will before the verb: will walk. After will, use the plain verb with no ending.",
+      "Future tense tells about something that has not happened yet. Put the helping word will before the verb: will walk. After will, use the plain verb with no ending.",
       "Time words are clues. Yesterday and last week point to the past. Every day points to the present. Tomorrow and next week point to the future."
     ],
     words: [
@@ -87,7 +87,7 @@ PP.addLesson({
         { text: "The frogs croak by the pond.", answer: 1 },
         { text: "The frogs will croak after the rain.", answer: 2 }
       ],
-      clue: "Look at the verb. An -ed ending shows the past. The word will shows the future. A verb with no ending or with -s shows the present.",
+      clue: "Look at the verb. An -ed ending shows the past. The word will shows the future. If there is no will, a verb with no ending or with -s shows the present.",
       why: "Locked and croaked are past tense. Locks and croak are present tense. Will lock and will croak are future tense." },
     { id: "SK-GUM2-1-P5", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the verbs that correctly complete the sentences.",
@@ -155,15 +155,17 @@ PP.addLesson({
   code: "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr",
   title: "Determiners: a, an, the, this, that and my",
   teach: {
-    big: "A determiner is a small word before a noun that tells which one or whose, like a, an, the, this, those or my.",
+    big: "A determiner is a small word that comes before a noun, like a, an, the, this, those or my.",
     points: [
       "A, an and the are called articles. Use a before a word that starts with a consonant sound (a dog). Use an before a word that starts with a vowel sound (an egg).",
       "This, that, these and those point to things. This and that go with one thing. These and those go with more than one. This and these are close by. That and those are far away.",
       "My, your, his, her, its, our and their tell who owns something: our dog, their house. Its has no apostrophe when it shows owning."
     ],
     words: [
-      { term: "determiner", means: "a small word before a noun that tells which one or whose" },
-      { term: "article", means: "the words a, an and the" }
+      { term: "determiner", means: "a small word that comes before a noun, like a, the, this or my" },
+      { term: "article", means: "the words a, an and the" },
+      { term: "demonstrative adjective", means: "a pointing word before a noun: this, that, these or those" },
+      { term: "possessive adjective", means: "an owning word before a noun, like my, his, its or their" }
     ],
     example: {
       label: "Example",
@@ -207,7 +209,7 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "{0} boots on my feet are too tight.",
       slots: [ { options: ["This", "These", "That", "Them"], answer: 1 } ],
-      clue: "Boots means more than one. The boots are on the speaker's feet, so they are close by.",
+      clue: "Is the noun one thing or more than one? Are the boots close by or far away?",
       why: "The answer is These. These goes with more than one thing that is close by. This and that go with only one thing, and them is a pronoun that never comes before a noun like boots." },
     { id: "SK-GUM2-2-P3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
@@ -272,14 +274,14 @@ PP.addLesson({
       prompt: "Which TWO sentences have an error?",
       choices: [
         { text: "My brother lost his left shoe at the park." },
-        { text: "We baked a apple pie for the party.", correct: true },
+        { text: "We packed a umbrella for the beach trip.", correct: true },
         { text: "That bus is the one that goes to our school." },
         { text: "Those horse lives in the red barn.", correct: true },
         { text: "Your backpack is under the table." },
         { text: "An ant crawled across the sidewalk." }
       ],
       clue: "Check every small word before a noun. Listen for the first sound of the next word, and count whether the noun is one or more than one.",
-      why: "The answers are \"We baked a apple pie for the party.\" and \"Those horse lives in the red barn.\" Apple starts with a vowel sound, so it needs an. Horse is one animal, so it needs that, not those." },
+      why: "The answers are \"We packed a umbrella for the beach trip.\" and \"Those horse lives in the red barn.\" Umbrella starts with a vowel sound, so it needs an. Horse is one animal, so it needs that, not those." },
     { id: "SK-GUM2-2-T5", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
       text: "Kenji wrote {0} thank-you note and put it in {1} backpack.",
@@ -301,8 +303,8 @@ PP.addLesson({
     points: [
       "Names of people and pets get capitals: Maya, a cat named Biscuit. Titles right before a name do too: Dr. Patel, Aunt Rosa.",
       "Names of special places get capitals: Atlanta, Georgia, Elm Street, Lake Lanier.",
-      "Days of the week, months and holidays get capitals: Monday, April, Labor Day.",
-      "Common nouns like city, street, teacher and aunt do not get capitals. Seasons like summer and winter do not either."
+      "Days of the week, months and holidays get capitals: Monday, April, Labor Day. In a holiday name with more than one word, the big words get capitals, and small words like of stay small.",
+      "Common nouns like city, street and teacher do not get capitals. Neither does aunt, unless it comes right before a name. Seasons like summer and winter stay small too."
     ],
     words: [
       { term: "proper noun", means: "the name of one special person, place or thing" },
@@ -310,8 +312,8 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["On Friday, my aunt drove us to Savannah to see the ocean."],
-      note: "Friday and Savannah name a special day and a special place, so they start with capitals. Aunt and ocean are common nouns here, so they stay small."
+      lines: ["On Friday, my aunt drove us to Savannah to see the big ships on the river."],
+      note: "Friday and Savannah name a special day and a special place, so they start with capitals. Aunt, ships and river are common nouns here, so they stay small."
     },
     tip: "On the test, you may need to find the word that should start with a capital letter. Ask: Is this the name of one special person, place, day, month or holiday?"
   },
@@ -343,8 +345,8 @@ PP.addLesson({
     { id: "SK-GUM2-3-P1", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a capitalization error.",
       options: [
-        "Our school is closed on Memorial Day.",
-        "Grandpa Joe was born in Alabama.",
+        "Our school has no classes on Memorial Day.",
+        "Grandpa Joe grew up in Alabama.",
         "My best friend moved to dallas last year.",
         "We swim at the pool every summer.",
         "Ms. Rivera teaches music on Tuesdays."
@@ -366,7 +368,7 @@ PP.addLesson({
       prompt: "Choose the words that correctly complete the sentence.",
       text: "Our class will sing songs at the {0} parade.",
       slots: [ { options: ["Fourth of July", "fourth of July", "fourth of july"], answer: 0 } ],
-      clue: "This is the name of a holiday. The big words in a holiday's name start with capitals. Small words like of stay small.",
+      clue: "Is this the name of a holiday? Which words in the name are big, important words?",
       why: "The answer is Fourth of July. It is the name of a holiday, so Fourth and July start with capitals. The small word of stays small." },
     { id: "SK-GUM2-3-P4", type: "ms", points: 2, dok: 2, passages: [], pick: 3,
       prompt: "Which THREE words in the sentence should begin with a capital letter?",
@@ -379,7 +381,7 @@ PP.addLesson({
         { text: "city" },
         { text: "macon", correct: true }
       ],
-      clue: "Find the name of a street and the name of a city. Every word in a street's name gets a capital.",
+      clue: "Find the name of a street and the name of a city. Is a street's name one word or more than one?",
       why: "The answers are maple, street and macon. Maple Street is the name of one street, so both words need capitals. Macon is the name of a city. Cousin and city are common nouns, and lives is an action word." },
     { id: "SK-GUM2-3-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "These words are written with no capital letters. Sort each one: should it start with a capital letter or not?",
@@ -400,14 +402,14 @@ PP.addLesson({
       prompt: "Select the sentence that has a capitalization error.",
       options: [
         "We flew to Chicago to visit my uncle.",
-        "The museum is closed on Mondays.",
+        "The museum opens late on Sundays.",
         "Dr. Okafor checked my ears and eyes.",
-        "My sister was born on a snowy day in january.",
+        "My sister has a birthday in january.",
         "The Chattahoochee River runs past our town."
       ],
       answer: [3], pick: 1,
       clue: "Check every name of a person, place, day and month. One of them starts with a small letter.",
-      why: "The answer is \"My sister was born on a snowy day in january.\" January is the name of a month, so it needs a capital J." },
+      why: "The answer is \"My sister has a birthday in january.\" January is the name of a month, so it needs a capital J." },
     { id: "SK-GUM2-3-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses capital letters correctly?",
       choices: [
@@ -422,33 +424,33 @@ PP.addLesson({
       prompt: "Choose the words that correctly complete the sentence.",
       text: "We made cards for our moms on {0}.",
       slots: [ { options: ["Mother's Day", "mother's day", "Mother's day"], answer: 0 } ],
-      clue: "This is the name of a holiday. Every big word in it starts with a capital.",
+      clue: "Is this the name of a holiday? Which words in its name need capitals?",
       why: "The answer is Mother's Day. It is the name of a holiday, so both words start with capitals." },
     { id: "SK-GUM2-3-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words in the sentence should begin with a capital letter?",
-      stem: "In the spring, uncle Ray took us to a baseball game in atlanta.",
+      stem: "In the spring, uncle Ray took us to a baseball game in albany.",
       choices: [
         { text: "spring" },
         { text: "uncle", correct: true },
         { text: "baseball" },
         { text: "game" },
-        { text: "atlanta", correct: true }
+        { text: "albany", correct: true }
       ],
       clue: "Find a title that comes right before a person's name, and find the name of a city. Seasons stay small.",
-      why: "The answers are uncle and atlanta. Uncle comes right before the name Ray, so it is part of his name: Uncle Ray. Atlanta is the name of a city. Spring is a season, so it stays small." },
+      why: "The answers are uncle and albany. Uncle comes right before the name Ray, so it is part of his name: Uncle Ray. Albany is the name of a city. Spring is a season, so it stays small." },
     { id: "SK-GUM2-3-T5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "These words are written with no capital letters. Sort each one: should it start with a capital letter or not?",
       cols: ["Needs a capital", "Stays small"],
       rows: [
-        { text: "georgia", answer: 0 },
+        { text: "florida", answer: 0 },
         { text: "state", answer: 1 },
         { text: "december", answer: 0 },
         { text: "month", answer: 1 },
-        { text: "friday", answer: 0 },
+        { text: "wednesday", answer: 0 },
         { text: "weekend", answer: 1 }
       ],
       clue: "Ask: Is this the name of one special place, month or day? Or is it a word for any of them?",
-      why: "Georgia, December and Friday are names of a special state, month and day, so they need capitals. State, month and weekend are common nouns, so they stay small." }
+      why: "Florida, December and Wednesday are names of a special state, month and day, so they need capitals. State, month and weekend are common nouns, so they stay small." }
   ]
 });
 
@@ -459,8 +461,8 @@ PP.addLesson({
   teach: {
     big: "Every sentence needs an end mark: a period for telling, a question mark for asking, and an exclamation point for strong feeling.",
     points: [
-      "A telling sentence ends with a period. A sentence that politely tells someone what to do usually ends with a period too: Please close the door.",
-      "An asking sentence ends with a question mark. Asking sentences often begin with words like who, what, where, why, how, can, do or is.",
+      "A telling sentence ends with a period. A sentence that politely tells someone what to do usually ends with a period too: Please close the door. But if it starts with can you, could you or will you, it asks, so it gets a question mark: Could you close the door?",
+      "An asking sentence ends with a question mark. Asking sentences often begin with words like who, what, where, why, how, can, could, will, do or is.",
       "A sentence that shows strong feeling, like surprise, joy or fear, ends with an exclamation point.",
       "Be careful: a sentence that only tells about a question, like I wonder where my hat is, is a telling sentence. It ends with a period."
     ],
@@ -698,16 +700,16 @@ PP.addLesson({
   test: [
     { id: "SK-GUM2-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "Atlanta and Savannah are two {0} in Georgia.",
-      slots: [ { options: ["citys", "cities", "cityes"], answer: 1 } ],
-      clue: "Look at the letter right before the y in city.",
-      why: "The answer is cities. City has a t, a consonant, before the y, so the y changes to i and -es is added." },
+      text: "Big {0} carry people and cars across the bay.",
+      slots: [ { options: ["ferrys", "ferries", "ferryes"], answer: 1 } ],
+      clue: "Look at the letter right before the y in ferry.",
+      why: "The answer is ferries. Ferry has an r, a consonant, before the y, so the y changes to i and -es is added." },
     { id: "SK-GUM2-5-T2", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "My brother hangs his {0} on a hook by the door.",
-      slots: [ { options: ["keies", "keys", "keyes"], answer: 1 } ],
-      clue: "Look at the letter right before the y in key. Is it a vowel or a consonant?",
-      why: "The answer is keys. Key has an e, a vowel, before the y, so the y stays and you just add -s." },
+      text: "The players washed their muddy {0} after the game.",
+      slots: [ { options: ["jersies", "jerseys", "jerseyes"], answer: 1 } ],
+      clue: "Look at the letter right before the y in jersey. Is it a vowel or a consonant?",
+      why: "The answer is jerseys. Jersey has an e, a vowel, before the y, so the y stays and you just add -s." },
     { id: "SK-GUM2-5-T3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence spells the plural correctly?",
       choices: [
@@ -716,7 +718,7 @@ PP.addLesson({
         { text: "The twins had two birthday partyes this year." },
         { text: "The twins had two birthday party's this year." }
       ],
-      clue: "Think of the word for one: party. Check the letter before the y. A plural never needs an apostrophe.",
+      clue: "Think of the word for one: party. Check the letter before the y. Plural words like this one do not need an apostrophe.",
       why: "The answer is \"The twins had two birthday parties this year.\" Party has a t, a consonant, before the y, so it becomes parties." },
     { id: "SK-GUM2-5-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words change y to i and add -es to mean more than one?",
@@ -733,7 +735,7 @@ PP.addLesson({
       prompt: "Select the TWO sentences that have a spelling error.",
       options: [
         "The bees buzzed around the daisys.",
-        "The trays were stacked by the lunch line.",
+        "The trays sat in a pile by the lunch line.",
         "We counted fifteen ladybugs on the leaf.",
         "Ten fireflys glowed in the dark yard.",
         "The valleys were green after the rain."
@@ -753,7 +755,7 @@ PP.addLesson({
     points: [
       "Subject pronouns do the action. They usually come before the verb: I, you, he, she, it, we, they. (She kicked the ball.)",
       "Object pronouns get the action or come after words like to, with and for: me, you, him, her, it, us, them. (The coach thanked them.)",
-      "Possessive pronouns tell who owns something: my, your, his, her, its, our, their. Mine, yours, ours and theirs can stand alone: The red bike is mine.",
+      "Owning words tell who owns something. My, your, his, her, its, our and their come before a noun. These are the same owning words from the determiners lesson. Mine, yours, his, hers, ours and theirs stand alone: The red bike is mine.",
       "When you name yourself and another person, cover up the other person and say the sentence with just you. Ana and I went home (I went home). Mom called Ana and me (Mom called me)."
     ],
     words: [
@@ -763,7 +765,7 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["Jada gave Leo a book.", "She gave him her book."],
+      lines: ["Jada gave Leo her book.", "She gave him her book."],
       note: "She takes the place of Jada and does the action. Him takes the place of Leo and gets the book. Her tells whose book it is."
     },
     tip: "On the test, cover up the other person's name and say the sentence with just the pronoun. Your ear will often tell you whether I or me sounds right."
@@ -785,7 +787,7 @@ PP.addLesson({
       steps: [
         "The blank comes right before a noun, jackets.",
         "The sentence needs a word that tells who owns the jackets.",
-        "Their is the owning pronoun for more than one person."
+        "Their is the owning word for more than one person."
       ],
       answer: "Their. The twins left their jackets on the bus."
     }
@@ -825,7 +827,7 @@ PP.addLesson({
         "They invited her to the party."
       ],
       answer: [1], pick: 1,
-      clue: "Check each pronoun that does the action. A pronoun at the start of a sentence, before the verb, must be a subject pronoun.",
+      clue: "Find the pronoun that does the action in each sentence. A pronoun that does the action must be a subject pronoun.",
       why: "The answer is \"Him and his sister walk to school together.\" The pronoun does the action of walking, so it should be the subject pronoun he: He and his sister walk to school together." },
     { id: "SK-GUM2-6-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Sort each pronoun by the job it does.",
@@ -895,8 +897,8 @@ PP.addLesson({
     big: "A preposition is a small word that shows where something is or when something happens, like in, on, under, before and after.",
     points: [
       "Some prepositions tell where: in, on, under, over, behind, beside, between, across, through and near.",
-      "Some prepositions tell when: before, after, during and until.",
-      "A preposition comes before a noun, like under the bed or during the game. The words together add a detail to the sentence.",
+      "Some prepositions tell when: before, after, during and until. Some, like through, can tell where or when: through the woods, through the night.",
+      "A preposition starts a group of words that ends with a noun, like under the bed or during the game. The group adds a detail to the sentence. Some prepositions tell other things, like with, for, to and about: a walk with Dad.",
       "Choose the preposition that says exactly what you mean. The cat is on the box and the cat is in the box tell about different places."
     ],
     words: [
@@ -905,7 +907,7 @@ PP.addLesson({
     example: {
       label: "Example",
       lines: ["After school, Nia hid the gift under her bed."],
-      note: "After tells when (after school). Under tells where (under her bed). Each preposition comes right before a noun."
+      note: "After tells when (after school). Under tells where (under her bed). Each preposition starts a group of words that ends with a noun."
     },
     tip: "On the test, try each choice in the sentence and picture what it says. Pick the one that makes sense."
   },
@@ -924,7 +926,7 @@ PP.addLesson({
       show: ["We cannot talk during the fire drill."],
       ask: "Which word is the preposition, and what does it tell?",
       steps: [
-        "Look for a small word that comes right before a noun. During comes before the fire drill.",
+        "Look for a small word that starts a group of words ending in a noun. During starts the group during the fire drill.",
         "Ask: Does it tell where or when? During tells when we cannot talk."
       ],
       answer: "During is the preposition. It tells when."
@@ -953,9 +955,9 @@ PP.addLesson({
     { id: "SK-GUM2-7-P3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "We brush our teeth {0} bedtime.",
-      slots: [ { options: ["before", "under", "across"], answer: 0 } ],
-      clue: "Bedtime is a time, not a place. Which word tells when?",
-      why: "The answer is before. Bedtime is a time, so the sentence needs a preposition that tells when. Under and across tell where." },
+      slots: [ { options: ["before", "under", "across", "until"], answer: 0 } ],
+      clue: "Is bedtime a place or a time? Picture each choice in the sentence. When do people brush their teeth?",
+      why: "The answer is before. Bedtime is a time, so under and across, which tell where, do not fit. Until also tells when, but it would mean brushing your teeth for hours until bedtime. People brush their teeth before bedtime." },
     { id: "SK-GUM2-7-P4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Does each group of words tell where or when? Sort each one.",
       cols: ["Where", "When"],
@@ -1022,7 +1024,7 @@ PP.addLesson({
         "A spider crawled up the wall."
       ],
       answer: [3], pick: 1,
-      clue: "Picture each sentence. Could the thing really be in that place?",
+      clue: "Picture each sentence. Does the small word make sense with the words after it?",
       why: "The answer is \"The bus stopped under the corner to pick us up.\" A bus cannot stop under a corner. The sentence should say at the corner." },
     { id: "SK-GUM2-7-T5", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
@@ -1045,7 +1047,7 @@ PP.addLesson({
     points: [
       "Use commas to separate three or more things in a list: We packed apples, cheese, and crackers.",
       "In a date, put a comma between the day and the year: May 4, 2026. Do not put a comma between the month and the day.",
-      "Put a comma between a city and its state: Columbus, Georgia.",
+      "Put a comma between a city and its state: Columbus, Georgia. In a whole address, a comma also comes after the street: 12 Oak Lane, Macon, Georgia.",
       "In a letter, put a comma after the greeting and after the closing: Dear Sam, and Your friend,"
     ],
     words: [
@@ -1065,21 +1067,21 @@ PP.addLesson({
       show: ["Our class grew beans peas and carrots."],
       ask: "Where do the commas go?",
       steps: [
-        "Find the list. The class grew three things: beans, peas and carrots.",
+        "Find the list. The class grew three things: beans and peas and carrots.",
         "Put a comma after each thing in the list that comes before and.",
         "Do not put a comma after the last thing in the list."
       ],
       answer: "Our class grew beans, peas, and carrots."
     },
     {
-      show: ["My cousin lives in Dalton Georgia. She was born on March 3 2019."],
+      show: ["My cousin lives in Dalton Georgia. She moved there on March 3 2019."],
       ask: "Where do the commas go?",
       steps: [
         "Find the city and state. Put a comma between them: Dalton, Georgia.",
         "Find the date. Put a comma between the day and the year: March 3, 2019.",
         "Check that no comma sits between the month and the day."
       ],
-      answer: "My cousin lives in Dalton, Georgia. She was born on March 3, 2019."
+      answer: "My cousin lives in Dalton, Georgia. She moved there on March 3, 2019."
     }
   ],
   parent: "Write a short thank-you note together. Let your child add the date, the greeting, the closing and a list of three things, and check each comma with you.",
@@ -1089,7 +1091,7 @@ PP.addLesson({
       prompt: "Choose the date that is written correctly.",
       text: "We moved into our new house on {0}.",
       slots: [ { options: ["August 15, 2025", "August, 15 2025", "August 15 2025"], answer: 0 } ],
-      clue: "In a date, the comma goes between two numbers, not between the month and a number.",
+      clue: "Where does the comma go in a date? Think of the date example in the lesson.",
       why: "The answer is August 15, 2025. The comma goes between the day (15) and the year (2025). There is no comma between the month and the day." },
     { id: "SK-GUM2-8-P2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses commas correctly?",
@@ -1175,14 +1177,14 @@ PP.addLesson({
     { id: "SK-GUM2-8-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO sentences use commas correctly?",
       choices: [
-        { text: "The spring concert is on May 4, 2026.", correct: true },
+        { text: "The fall concert is on October 17, 2026.", correct: true },
         { text: "Our flag is red, white, and blue.", correct: true },
         { text: "We hiked, in the woods on Saturday." },
         { text: "The fair starts on June, 5 2026." },
         { text: "I like soup salad, and rice." }
       ],
       clue: "Ask of each comma: Is it in a list, a date, a city and state, or a letter? Also look for a list or date that is missing a comma.",
-      why: "The answers are \"The spring concert is on May 4, 2026.\" and \"Our flag is red, white, and blue.\" The date has its comma between the day and the year, and the list has commas between the colors. The comma after hiked does not belong, the June date has its comma in the wrong place, and the list of foods needs a comma after soup." }
+      why: "The answers are \"The fall concert is on October 17, 2026.\" and \"Our flag is red, white, and blue.\" The date has its comma between the day and the year, and the list has commas between the colors. The comma after hiked does not belong, the June date has its comma in the wrong place, and the list of foods needs a comma after soup." }
   ]
 });
 
@@ -1298,24 +1300,24 @@ PP.addLesson({
     { id: "SK-GUM2-9-T3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence spells the verb correctly?",
       choices: [
-        { text: "The goalie catches the ball with both hands.", correct: true },
-        { text: "The goalie catchs the ball with both hands." },
-        { text: "The goalie catchies the ball with both hands." },
-        { text: "The goalie catchees the ball with both hands." }
+        { text: "The puppy scratches at the back door.", correct: true },
+        { text: "The puppy scratchs at the back door." },
+        { text: "The puppy scratchies at the back door." },
+        { text: "The puppy scratchees at the back door." }
       ],
-      clue: "Catch ends in ch. What ending do verbs that end in ch get?",
-      why: "The answer is \"The goalie catches the ball with both hands.\" Catch ends in ch, so it adds -es: catches." },
+      clue: "Look at the last two letters of scratch. What ending do verbs with those letters get?",
+      why: "The answer is \"The puppy scratches at the back door.\" Scratch ends in ch, so it adds -es: scratches." },
     { id: "SK-GUM2-9-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO sentences spell the verb correctly?",
       choices: [
-        { text: "My cousin studies for her math test.", correct: true },
-        { text: "My cousin studys for her math test." },
+        { text: "My cousin copies the spelling words.", correct: true },
+        { text: "My cousin copys the spelling words." },
         { text: "We danced at the party all night.", correct: true },
         { text: "We danceed at the party all night." },
         { text: "The kite flys high above the beach." }
       ],
       clue: "For each verb, think of its plain form and look at how it ends. Then check the ending that was added.",
-      why: "The answers are \"My cousin studies for her math test.\" and \"We danced at the party all night.\" Study ends in a consonant and y, so it becomes studies. Dance ends in e, so it just adds -d. Studys, danceed and flys are misspelled; fly should be flies." },
+      why: "The answers are \"My cousin copies the spelling words.\" and \"We danced at the party all night.\" Copy ends in a consonant and y, so it becomes copies. Dance ends in e, so it just adds -d. Copys, danceed and flys are misspelled; fly should be flies." },
     { id: "SK-GUM2-9-T5", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentences.",
       text: "Last night, Ana {0} the shelf with her books. Now she {1} for her favorite one.",

@@ -333,7 +333,18 @@ PP.addLesson({
         { text: "shows the parts of something with labels", answer: 3 }
       ],
       clue: "Think about where each feature sits on the page and what it helps you do.",
-      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word marks an important glossary word. A diagram uses labels to show parts." }
+      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word marks an important glossary word. A diagram uses labels to show parts." },
+    { id: "SK-TC1b-P7", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      stem: "This article is also on a website. Next to the heading \"Tail Talk\" is a speaker button that plays a sound.",
+      prompt: "Which sound would the speaker button most likely play?",
+      choices: [
+        { text: "the smack of a beaver's tail hitting the water", correct: true },
+        { text: "the crack of a small tree falling down" },
+        { text: "the crunch of a beaver chewing on a stick" },
+        { text: "the splash of water rushing over a dam" }
+      ],
+      clue: "A sound button goes with the section it sits beside. Read the section under that heading and listen in your head.",
+      why: "The answer is the smack of a beaver's tail hitting the water. The section under \"Tail Talk\" tells about the loud smack that warns other beavers, so hearing it helps the reader. The other sounds go with other parts of the article." }
   ],
   test: [
     { id: "SK-TC1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -376,15 +387,15 @@ PP.addLesson({
       clue: "Arrows from one picture to the next show what comes after what. Which section tells things in that order?",
       why: "Part A: the order of the stages in a monarch's life. Part B: \"Then the caterpillar sheds its skin and becomes a chrysalis with a hard shell.\" The diagram shows egg, caterpillar, chrysalis and butterfly in order, which matches the steps in \"From Egg to Wing.\"" },
     { id: "SK-TC1b-T4", type: "dropdown", points: 2, dok: 2, passages: ["p2"],
-      stem: ["Suppose the word chrysalis is printed in bold in the article.", "The glossary says: chrysalis: the hard case a caterpillar makes before it becomes a butterfly"],
+      stem: ["This article is also on a website.", "Under the heading \"A Long Trip South\" is a link that says \"See a map of the monarchs' path.\"", "Under the heading \"From Egg to Wing\" is a play button that says \"Watch a caterpillar change.\""],
       prompt: "Choose the words that best complete the sentences.",
-      text: "The bold print tells the reader that chrysalis is {0}. The reader can check what it means by {1}.",
+      text: "The link would help a reader {0}. The play button would help a reader {1}.",
       slots: [
-        { options: ["an important word", "the name of the author", "a heading for a section"], answer: 0 },
-        { options: ["looking it up in the glossary", "reading the title again", "counting the paragraphs"], answer: 0 }
+        { options: ["see where monarchs fly in the fall", "learn why birds do not eat monarchs", "find out what milkweed tastes like"], answer: 0 },
+        { options: ["see a chrysalis form in a video", "hear monarchs sing to each other", "read the text box one more time"], answer: 0 }
       ],
-      clue: "Think about why an author makes a word dark and where a reader can find word meanings in a book.",
-      why: "The answers are \"an important word\" and \"looking it up in the glossary.\" Bold print marks key words, and the glossary gives their meanings." },
+      clue: "Read the words on the link and the button. Then think about the section each one sits under.",
+      why: "The answers are \"see where monarchs fly in the fall\" and \"see a chrysalis form in a video.\" The link sits under \"A Long Trip South\" and promises a map of the path. The play button sits under \"From Egg to Wing\" and shows the change a caterpillar goes through." },
     { id: "SK-TC1b-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add a heading above the first paragraph. Which heading fits that paragraph best?",
       choices: [
@@ -468,7 +479,7 @@ PP.addLesson({
         ["## Slide 1: Georgia Peanuts"],
         ["Georgia grows more peanuts than any other state.", "Many peanut farms are in the southern part of the state."],
         ["## Slide 2: Flowers Above, Peanuts Below"],
-        ["A peanut plant has small yellow flowers.", "After a flower fades, a stem grows down into the soil.", "The peanut grows at the end of that stem, under the ground."],
+        ["A peanut plant has small yellow flowers.", "After a flower fades, a stalk called a peg grows down into the soil.", "The peanut grows at the end of that peg, under the ground."],
         ["## Slide 3: Harvest Time"],
         ["In the fall, farmers use a machine to dig up the plants.", "The plants are turned upside down so the peanuts can dry in the sun.", "After a few days, another machine picks the peanuts off the plants."],
         ["## Slide 4: Not Really a Nut"],
@@ -512,12 +523,12 @@ PP.addLesson({
       choices: [
         { text: "yellow flower", correct: true },
         { text: "peanut under the soil", correct: true },
-        { text: "jar of peanut butter" },
-        { text: "state of Georgia" },
-        { text: "farm machine" }
+        { text: "bean pod" },
+        { text: "digging machine" },
+        { text: "dry peanut shell" }
       ],
-      clue: "Labels name parts of the thing in the diagram. Which choices are parts of a peanut plant?",
-      why: "The answers are \"yellow flower\" and \"peanut under the soil.\" Both are parts of the plant that Slide 2 describes. The others are not parts of a peanut plant." },
+      clue: "Labels name parts of the thing in the diagram. Which choices are parts of a growing peanut plant that Slide 2 tells about?",
+      why: "The answers are \"yellow flower\" and \"peanut under the soil.\" Both are parts of the growing plant that Slide 2 describes. A bean pod belongs on Slide 4, a digging machine on Slide 3, and a dry shell is not part of a plant in the ground." },
     { id: "SK-TC1c-P4", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "Which picture would fit Slide 4 best?",
       choices: [
@@ -532,7 +543,7 @@ PP.addLesson({
       prompt: "Kenji wants to play a short sound with one slide. Choose the sound that best fits Slide 3.",
       text: "On Slide 3, Kenji should play {0}.",
       slots: [
-        { options: ["the rumble of a farm machine digging", "birds singing in a forest", "a crowd cheering at a ball game"], answer: 0 }
+        { options: ["the rumble of a farm machine digging", "bees buzzing around yellow flowers", "rain falling on a peanut field"], answer: 0 }
       ],
       clue: "A sound should match what the slide is about. What is happening on Slide 3?",
       why: "The answer is the rumble of a farm machine digging. Slide 3 tells how machines dig up and pick the peanuts, so that sound matches the words." }
@@ -562,23 +573,23 @@ PP.addLesson({
       prompt: "Amara wants to add a button that plays a sound. Which sound would help the first graders most?",
       choices: [
         { text: "a recording of peepers singing at a pond", correct: true },
-        { text: "a recording of a dog barking at night" },
-        { text: "a recording of rain falling on a roof" },
-        { text: "a recording of a school bell ringing" }
+        { text: "a recording of crickets chirping at night" },
+        { text: "a recording of rain falling on a pond" },
+        { text: "a recording of frogs splashing into water" }
       ],
-      clue: "The title tells readers to listen for something. What would they need to hear to know it?",
-      why: "The answer is a recording of peepers singing at a pond. The title says \"Listen for Spring Peepers!\" so hearing the real sound helps first graders know what to listen for on the trail." },
+      clue: "The poster's title tells readers to listen for something. What would they need to hear to know it?",
+      why: "The answer is a recording of peepers singing at a pond. The poster's title says \"Listen for Spring Peepers!\" so hearing the real sound helps first graders know what to listen for on the trail." },
     { id: "SK-TC1c-T4", type: "ms", points: 2, dok: 3, passages: ["p2"], pick: 2,
       prompt: "Amara's audience is first graders. Which two changes would make her poster easier for them to use? Pick two.",
       choices: [
         { text: "Make the title big so it is easy to see from far away.", correct: true },
         { text: "Add a drawing of the X mark with an arrow and the label \"Look for this!\"", correct: true },
-        { text: "Add a long list of science words with no pictures." },
-        { text: "Write all the words in very small letters." },
-        { text: "Take out the picture so there is more room for words." }
+        { text: "Add a fact about how many kinds of frogs live in Georgia." },
+        { text: "Change the title to the frog's science name." },
+        { text: "Take out the heading \"Look for the X.\"" }
       ],
       clue: "Young children read slowly and learn a lot from pictures. Which changes make the poster easier to see and use?",
-      why: "The answers are making the title big and adding a drawing of the X mark with a label. A big title is easy to spot, and a labeled drawing shows first graders exactly what to look for. Long lists, tiny letters and no pictures make a poster harder for young readers." },
+      why: "The answers are making the title big and adding a drawing of the X mark with a label. A big title is easy to spot, and a labeled drawing shows first graders exactly what to look for. Extra facts, a hard science name or a missing heading would not make the poster easier for young readers." },
     { id: "SK-TC1c-T5", type: "dropdown", points: 2, dok: 2, passages: ["p2"],
       prompt: "Amara draws a peeper with two arrows. Choose the best label for each arrow.",
       text: "The arrow pointing to the frog's back should say {0}. The arrow pointing under the frog's chin should say {1}.",
