@@ -174,3 +174,10 @@ Extra items from SOURCE-VERIFICATION §6 in the same files:
 - The external alignment JSON (/home/claude/alignment/…) still has `status`. It is harmless because the generator drops it.
 - The owner should confirm the external `where` app links (Word Workshop / Study Scoop / Sentence Sense). I did not audit them.
 - Not done: SOURCE-VERIFICATION #12 (click-testing the five lor2 links). That needs a human.
+
+## Lead addendum: 3.T.C.1.c, the child makes a real multimodal text
+- **Deficiency** (notes-texts1, Medium): the write activity only asked the child to *describe* a picture, so nothing visual was made.
+- **Requirement:** 3.T.C.1.c asks children to create multimodal texts. The site's paraphrase is in js/data/standards.js.
+- **Change:** js/data/lessons/T-C.js, 3.T.C.1.c `write`. The child now draws the picture on paper and labels it, writes the title, caption and facts in the box, and adds a sound idea or presents the poster aloud to a younger reader. The second checklist line was updated to match.
+- **Verification:** check-content passes.
+- **Remaining limit:** the drawing is on paper, so the site cannot see it. A grown-up checks the poster with the checklist.

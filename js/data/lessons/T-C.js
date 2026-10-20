@@ -498,10 +498,10 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: "Plan a poster that teaches younger kids about an animal you like. Write a title. Describe one picture you would draw. Write a caption for the picture and one or two fact sentences. Add one label or one sound idea.",
+    prompt: "Make a poster that teaches younger kids about an animal you like. On paper, draw one picture and add one label to it. Here, write your title, a caption for your picture, and one or two fact sentences. Then add one sound idea, or show your poster to a younger reader and tell them about it.",
     checklist: [
       "I wrote a title that tells what my poster is about.",
-      "I described a picture that matches my words.",
+      "I drew a picture on paper that matches my words, with one label.",
       "I wrote a caption that tells what the picture shows.",
       "I used words that younger kids can understand.",
       "I added a label or a sound that helps my reader."
