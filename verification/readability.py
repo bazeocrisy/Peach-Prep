@@ -14,9 +14,10 @@ def fk(t):
     n = max(1, len(words)); s = sum(syl(w) for w in words)
     return 0.39 * n / sents + 11.8 * s / n - 15.59
 rows = []
-for f in sorted(glob.glob("js/data/sets/*.js")) + sorted(glob.glob("js/data/tasks/*.js")):
-    js = 'const out=[];global.PP={addSet:s=>out.push(s),addTask:t=>out.push(t)};require("./%s");console.log(JSON.stringify(out));' % f
-    d = json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True).stdout)[0]
+files = sys.argv[1:] or (sorted(glob.glob("js/data/sets/*.js")) + sorted(glob.glob("js/data/tasks/*.js")) + sorted(glob.glob("js/data/lessons/*.js")))
+for f in files:
+  js = 'const out=[];global.PP={addSet:s=>out.push(s),addTask:t=>out.push(t),addLesson:l=>out.push(Object.assign({id:l.code},l))};require("./%s");console.log(JSON.stringify(out));' % f
+  for d in json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True).stdout):
     for p in d.get("passages", []) + d.get("sources", []):
         blocks = p.get("lines") or p.get("paragraphs")
         if p.get("lines"): continue
@@ -24,4 +25,4 @@ for f in sorted(glob.glob("js/data/sets/*.js")) + sorted(glob.glob("js/data/task
         t = re.sub(r"\b(Caption|Box): ", "", t)
         g = fk(t)
         rows.append((d["id"], p["id"], len(t.split()), g))
-        print("%-10s %-3s words=%4d  FK~%4.1f %s" % (d["id"], p["id"], len(t.split()), g, "  <-- above grade 4.5" if g > 4.5 else ""))
+        print("%-12s %-3s words=%4d  FK~%4.1f %s" % (d["id"], p["id"], len(t.split()), g, "  <-- above grade 4.5" if g > 4.5 else ""))

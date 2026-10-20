@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["home", "section", "player", "parents", "write"];
+  const SCREENS = ["home", "skill", "mixed", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -31,8 +31,8 @@
      Back button and a reload both land in the right place ---------- */
   let routing = false;
   let replaceNext = false;
-  function setHash(hash) {
-    if (routing || replaceNext) { replaceNext = false; history.replaceState(null, "", location.pathname + location.search + hash); return; }
+  function setHash(hash, replace) {
+    if (routing || replaceNext || replace) { replaceNext = false; history.replaceState(null, "", location.pathname + location.search + hash); return; }
     if (location.hash === hash || (!location.hash && !hash)) return;
     history.pushState(null, "", location.pathname + location.search + hash);
   }
@@ -50,8 +50,20 @@
        button does not reopen the activity the child just left */
     if (current === "player" || current === "write") replaceNext = true;
     setHash("");
+    window.PP_SKILLS.buildList();
     show("home");
-    el("home-title").focus();
+    /* coming back from a skill: land on that skill's row, not the top of a long list */
+    const last = window.PP_SKILLS.lastCode();
+    const row = last && document.querySelector('#skill-list [data-code="' + CSS.escape(last) + '"]');
+    if (row) { row.focus(); row.scrollIntoView({ block: "center" }); }
+    else el("home-title").focus();
+  }
+  function openMixed() {
+    if (!canLeave()) return;
+    if (current === "section") replaceNext = true;
+    setHash("#mixed");
+    show("mixed");
+    el("mixed-title").focus();
   }
 
   /* ---------- Home ---------- */
@@ -84,6 +96,7 @@
       }
       grid.appendChild(li);
     });
+    window.PP_SKILLS.buildList();
     const tl = el("tool-list"); clear(tl);
     S.tools.forEach(t => {
       const li = make("li", "tool");
@@ -149,6 +162,7 @@
   /* ---------- load sets, then start ---------- */
   function loadSets() {
     const ids = (window.PP_MANIFEST.sets || []);
+    const lids = (window.PP_MANIFEST.lessons || []);
     const tids = (window.PP_MANIFEST.tasks || []);
     const load = src => new Promise(res => {
       const s = document.createElement("script");
@@ -156,7 +170,8 @@
       document.body.appendChild(s);
     });
     return Promise.all(ids.map(id => load("js/data/sets/" + id + ".js"))
-      .concat(tids.map(id => load("js/data/tasks/" + id + ".js")))).then(() => {
+      .concat(tids.map(id => load("js/data/tasks/" + id + ".js")))
+      .concat(lids.map(id => load("js/data/lessons/" + id + ".js")))).then(() => {
       PP.tasks.sort((a, b) => tids.indexOf(a.id) - tids.indexOf(b.id));
       /* keep manifest order */
       PP.sets.sort((a, b) => ids.indexOf(a.id) - ids.indexOf(b.id));
@@ -171,6 +186,8 @@
       if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : "practice"); return; }
       if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
       if (parts[0] === "parents") { window.PP_PARENTS.open(parts[1]); return; }
+      if (parts[0] === "skill" && window.PP_SKILLS.open(decodeURIComponent(parts[1] || ""), parts[2])) return;
+      if (h === "mixed") { show("mixed"); return; }
       if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
       show("home");
     } finally { routing = false; }
@@ -196,11 +213,12 @@
     document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.go;
       if (g === "home") goHome();
+      else if (g === "mixed") openMixed();
       else if (g === "parents") { if (canLeave()) window.PP_PARENTS.open(); }
     }));
-    el("hero-start").addEventListener("click", () => openSection("reading"));
+    window.PP_SKILLS.init();
+    el("hero-mixed").addEventListener("click", openMixed);
     el("hero-parents").addEventListener("click", () => window.PP_PARENTS.open());
-    el("band-parents").addEventListener("click", () => window.PP_PARENTS.open());
     el("player-back").addEventListener("click", back);
     el("write-back") && el("write-back").addEventListener("click", back);
     document.addEventListener("keydown", e => {
@@ -223,6 +241,7 @@
   let returnTo = null;
   function rememberReturn() {
     returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot() } :
+               current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step() } :
                current === "section" ? { kind: "section", key: sectionKey } : returnTo;
   }
   function back() {
@@ -231,12 +250,14 @@
     replaceNext = true;
     const r = returnTo;
     if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
+    if (r && r.kind === "skill") { window.PP_SKILLS.open(r.code, r.step); return; }
+    if (current === "player" && window.PP_PLAYER.state().section === "skill") { window.PP_SKILLS.open(PP.byId[window.PP_PLAYER.state().setId].code); return; }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));
     openSection(key);
   }
   function track() { lastHash = location.hash; }
 
-  window.PP_APP = { show, openSection, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
+  window.PP_APP = { show, openSection, openMixed, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();
