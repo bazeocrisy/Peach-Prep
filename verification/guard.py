@@ -282,7 +282,8 @@ with sync_playwright() as p:
         ok("9.7 Back from a skill test returns to the skill's Test step, with all four steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 4, bk)
         h0 = pg.evaluate("location.hash"); pg.go_back(); pg.wait_for_timeout(250)
         h1 = pg.evaluate("[PP_APP.current(), location.hash]")
-        ok("9.7b one phone Back from there leaves the skill (no duplicate history entry)", h1[0] != "skill" or not h1[1].startswith("#skill/" ), (h0, h1))
+        same = h1[0] == "skill" and pg.evaluate("PP_SKILLS.current()") == qcode
+        ok("9.7b one phone Back from there leaves that skill (no duplicate history entry)", not same, (h0, h1))
         pg.go_forward(); pg.wait_for_timeout(250)
         pg.click("#skill-back"); pg.wait_for_timeout(80)
         hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.textContent}))('%s')""" % qcode)
