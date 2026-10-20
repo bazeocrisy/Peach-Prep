@@ -10,7 +10,7 @@ I did not rely on review-A/B/C or on the fix logs' claims. Every number below is
 |---|---|
 | `node verification/check-content.js --all` | PASS: 0 failures, 8 warnings (all clue-overlap: PT-1-14, SK-V3b-T1 ×2, SK-TC1b-T2, SK-TT1a-T5, SK-TT1d-P1, SK-TT1d-T1, SK-TT1e-T5). None is on an item added in PP-003. Checked 15 sets (147 items), 2 tasks, 99 lessons (995 items). |
 | `python3 verification/readability.py` | Exit 0. No passage is flagged. Highest FK is 3.L.V.3.d p1 at 4.5. |
-| `python3 verification/guard.py http://localhost:8465/` (full run, through serve.js) | See §6. |
+| `python3 verification/guard.py http://localhost:8465/` (full run, through serve.js) | 89 passed, 0 failed, exit 0 (§6). |
 | `git status` | Clean before and after my runs. I edited no repo file except this one. |
 
 ## 1. Regression sweep
@@ -218,7 +218,13 @@ Results:
 
 ## 6. Guard
 
-GUARD_RESULT_PLACEHOLDER
+I ran the full run with `python3 verification/guard.py http://localhost:8465/` against `node verification/serve.js` serving the worktree. **89 passed, 0 failed, exit 0.** This includes:
+- 7.1: no page errors.
+- 8.1: no sideways scroll at 320, 375 and 390.
+- 9.x and 11.x: mastery, migration and review behaviour.
+- 12.8: the D16 not-found page.
+
+The log is at `revE/guard.log`. Earlier logs reported 81 passed. The count is now 89 because the UX agent added the 12.x tests. The server was stopped by its PID, and curl to the port now returns 000.
 
 ## 7. Unresolved problems from reviews A/B/C and the fix logs
 
