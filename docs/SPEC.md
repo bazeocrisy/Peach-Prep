@@ -261,3 +261,4 @@ Rules on top of §5 and §6:
 
   Lessons with an `activity` keep: Learn It, Watch Me, Practice, Check.
 - `clues.groups` (optional): the clue words sorted by structure, used by the "which structure is it?" lesson. When it is present, clue words are not highlighted in passages. Highlighting is also off in Test mode, which stays unaided.
+- `clues.highlight` (optional): set to `false` to show the clue-word box but turn off passage highlighting in practice.

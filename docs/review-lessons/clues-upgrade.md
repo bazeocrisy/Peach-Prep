@@ -69,8 +69,8 @@ Checker: `node verification/check-content.js --all` gives PASS, 0 failures and t
 - Teach points 2 and 3 now name the "alike" and "different" clue words.
 
 ### 3.T.SS.1.a How a text is put together (T-SS.js)
-- `clues.words`: all 32 distinct clue words from the six structures, as one flat list. The engine shows this list and uses it to highlight words in the passage.
-- `clues.groups` (NEW, not in SPEC): the six structures with their exact word lists. The engine ignores this field for now. **Lead:** add it to SPEC §8b or delete it.
+- `clues.words`: all 32 distinct clue words from the six structures, as one flat list. The engine shows this list in the clue-word box.
+- `clues.groups`: the six structures with their exact word lists. It is now in SPEC §8b. Because it is present, the engine does not highlight clue words in this lesson's passages.
 - Ask: "Which kind of text is this, and what clue word told you?"
 - Draw: choose the organizer that fits the structure.
 - `coach` comes from the guide's "How to teach any of them" page and the "tricky words" note on the cheat sheet.
@@ -86,6 +86,12 @@ Checker: `node verification/check-content.js --all` gives PASS, 0 failures and t
 - Teach point 3 (motive) now says that "so" links a reason to a choice and "but" signals a change. Point 4 (lesson) now says that "in the end" leads you to the lesson. This matches the existing P2 `why`, which already explains the word But.
 
 ## For the lead to check
-- The engine turns on "Show clue words" in Test parts as well as Practice. The clue words are general words (but, so, then), so they do not give away any key here. Still, decide whether highlighting should be allowed during a test.
-- Highlighting 32 words for 3.T.SS.1.a, including "has", "so" and "but", will mark a lot of the passage.
+- Resolved: the engine (js/engine/player.js) turns highlighting off in Test mode, and off for any lesson with `clues.groups`, so 3.T.SS.1.a passages are not marked.
 - A distractor in SK-TT1b-T4, "a porch swing on a rainy Tuesday", still mentions the porch swing. It is a fair wrong setting, so I left it, but it does point at the sentence that is the answer to T3 Part B.
+
+## Independent verification (2026-10-20)
+- SK-TT1b-P6: one defensible answer; grade-3 wording. The `why` named the wire, which is the answer to P3 (the next set). It now says "After it, Jada acts on her idea."
+- SK-TT1b-T5: the Solution row "Omar finds the book, and it is not ruined." ruled out T2 choice C ("Rain on the porch has ruined his library book"). It is now "Omar finds the book." Key and `why` unchanged.
+- Known overlap, left as is: T5's Problem row ("The book is not anywhere.") restates the T2 key; T2 choice C and T4 choice C mention the porch, near the T3 Part B key. Each is a weak cue.
+- Privacy grep of js/, docs/, index.html, css/, verification/ and README.md: no child's name, score, child-tied Lexile, packet reference or family detail. Lexile values are passage estimates only.
+- No 7-word run in the edited lessons matches GaDOE text in standards.js or alds.js.

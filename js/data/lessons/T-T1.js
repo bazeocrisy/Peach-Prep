@@ -316,7 +316,7 @@ PP.addLesson({
         { text: "A new character is about to join the story." }
       ],
       clue: "Read what comes right before this sentence and right after it. Has the trouble already started? What happens next?",
-      why: "The answer is \"Jada is about to try a way to fix the problem.\" Then is a clue word that moves the story to the next event. Before it, the rabbits have already eaten half the tomatoes, so the problem has started. Right after it, Jada finds wire to block the gate. That is her try to fix the problem." },
+      why: "The answer is \"Jada is about to try a way to fix the problem.\" Then is a clue word that moves the story to the next event. Before it, the rabbits have already eaten half the tomatoes, so the problem has started. After it, Jada acts on her idea. That is her try to fix the problem." },
     { id: "SK-TT1b-P3", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence tells how Jada solves the problem? Choose the sentence in the passage.",
       targets: ["p1:4:1", "p1:4:2", "p1:4:3", "p1:5:1", "p1:5:2"],
@@ -400,7 +400,7 @@ PP.addLesson({
       rows: [
         { text: "Omar's dad", answer: 0 },
         { text: "The book is not anywhere.", answer: 1 },
-        { text: "Omar finds the book, and it is not ruined.", answer: 2 }
+        { text: "Omar finds the book.", answer: 2 }
       ],
       clue: "Ask three questions: Who is in the story? What goes wrong? How is it fixed?",
       why: "Omar's dad is a character. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
