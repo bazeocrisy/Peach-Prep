@@ -18,7 +18,7 @@
 - Screen audit and re-audit: both MUSTs fixed. The one new MUST from the re-audit is also fixed.
 
 ## Known open items
-- The rubric and checklist links share one GaDOE file ID. They could not be checked from the build sandbox; the owner should click both.
+- Official source links were replaced with the URLs the owner confirmed working (2026-10-20). The Assessment Guide link was removed.
 - On iPhone Safari, the leave-the-test warning may not appear on reload or close. The in-app Back, Home and Escape warnings do work.
 - Lexile labels are estimates. Passages were screened with an approximate grade-level formula and target about grade 4.5 or below.
 - Small items:

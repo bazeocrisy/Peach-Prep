@@ -3,16 +3,17 @@
    Where the reading of a document is ours, the text says "about". */
 window.PP_SITE = {
   sources: {
+    /* URLs confirmed working by the owner on 2026-10-20. */
     blueprint: { title: "Georgia Milestones ELA Grade 3 Assessment Blueprint", date: "August 2025",
-      url: "https://lor2.gadoe.org/gadoe/file/4feebd77-4a21-4788-a3ba-b6f50a71c876/1/GM_Gr3_Blueprint.pdf" },
-    alds: { title: "Draft Achievement Level Descriptors, Grade 3 English Language Arts", date: "October 2025 (effective 2025-26)",
+      url: "https://lor2.gadoe.org/gadoe/file/4feebd77-4a21-4788-a3ba-b6f50a71c876/1/GM_Gr3_ELA_Blueprint.pdf" },
+    alds: { title: "Achievement Level Descriptors, Grade 3 English Language Arts", date: "October 2025 (effective 2025-26)",
       url: "https://lor2.gadoe.org/gadoe/file/0398b5b8-bcad-46a5-af4c-643df515341c/1/GM_ALDs_Gr3_ELA.pdf" },
     rubric: { title: "Grade 3 Eight-Point, Three-Trait Writing Rubric", date: "August 2026",
-      url: "https://lor2.gadoe.org/gadoe/file/ba53bbce-40da-44a3-92ed-a8da5dfd28be/1/Rubrics_Gr3.pdf" },
+      url: "https://lor2.gadoe.org/gadoe/file/ba53bbce-40da-44a3-92ed-a8da5dfd28be/1/GM_Rubric_Gr3.pdf" },
     checklist: { title: "Grade 3 Writer's Checklist", date: "2026",
-      url: "https://lor2.gadoe.org/gadoe/file/ba53bbce-40da-44a3-92ed-a8da5dfd28be/1/Checklists_Gr3.pdf" },
-    guide: { title: "Grade 3 ELA Assessment Guide", date: "",
-      url: "https://lor2.gadoe.org/gadoe/file/d0d5b8f7-63d6-4a7f-8e5f-68df45b837d1/1/GM_Gr3_ELA_AssessmentGuide.pdf" },
+      url: "https://lor2.gadoe.org/gadoe/file/ba53bbce-40da-44a3-92ed-a8da5dfd28be/1/GM_Checklist_Gr3.pdf" },
+    sampler: { title: "Online scoring samplers (how written answers are scored)", date: "",
+      url: "https://lor2.gadoe.org/gadoe/file/d0d5b8f7-63d6-4a7f-8e5f-68df45b837d1/1/GM_Online_Scoring_Sampler_Infographic.pdf" },
     experience: { title: "Experience Online (official practice and study guides)", date: "",
       url: "https://www.gaexperienceonline.com/" }
   },
