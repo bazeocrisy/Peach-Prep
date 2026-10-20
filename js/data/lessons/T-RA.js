@@ -360,7 +360,7 @@ PP.addLesson({
         { text: "The moon seems to change shape during the month." },
         { text: "The moon travels around Earth again and again." }
       ],
-      clue: "The heading asks why. Find the fact that explains what keeps the footprints from going away.",
+      clue: "The heading asks why. Find the fact that explains what keeps the footprints safe.",
       why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and its path around Earth, not footprints." },
     { id: "SK-RA1b-T3", type: "ms", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi has a note card with the heading \"People on the moon.\" Which TWO facts belong on this card? Choose two answers.",
@@ -698,7 +698,7 @@ PP.addLesson({
           { text: "\"They live in the soil and under leaves.\"" },
           { text: "\"On warm summer evenings in Georgia, you might see tiny lights blinking in the grass.\"" }
         ] },
-      clue: "Think about what fireflies do with their light. For Part B, choose the sentence that shows your Part A answer actually happening, not where fireflies live or where the light comes from.",
+      clue: "Think about what fireflies do when they glow. For Part B, choose the sentence that shows your Part A answer actually happening, not where fireflies live or where the glow starts.",
       why: "Part A: They flash light patterns back and forth. Part B: \"A female on the ground flashes back to answer him.\" The male flashes and the female flashes back, so they find each other with light. The glow is not warm, and living under leaves is about young fireflies." },
     { id: "SK-RA2a-P3", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Tyrone says, \"Fireflies are not the kind of bug their name says they are.\" Which TWO sentences support Tyrone's idea? Choose two sentences.",
@@ -896,7 +896,7 @@ PP.addLesson({
         { text: "a cookbook page with recipes that use honey" },
         { text: "a museum page about how people made candles long ago" }
       ],
-      clue: "Grace needs facts about how bees make honey. Find the source that is about that exact topic.",
+      clue: "Grace needs facts about how honey is made. Find the source about that exact topic.",
       why: "The answer is \"a beekeeper's book chapter about how bees make honey.\" It is trustworthy and on her topic. The ant article is about a different animal, the cookbook tells how people use honey, not how bees make it, and the candle page is off topic." },
     { id: "SK-RA2b-T3", type: "match", points: 2, dok: 3, passages: [],
       prompt: "Rosa is writing a report about how frogs grow. Match each source to the group it belongs in.",
@@ -930,7 +930,7 @@ PP.addLesson({
         { text: "Web pages are never trustworthy, so she cannot use it." },
         { text: "It is about the moon, which is not on Mia's topic." }
       ],
-      clue: "Read the words the writer uses. Do they sound like a checked fact, or like someone who does not really know?",
+      clue: "Read the words on the page. Do they sound like a checked fact, or like someone who does not really know?",
       why: "The answer is \"It is only a guess, and the writer says they are not sure.\" Words like I think and I'm not sure show a guess, not a checked fact. The moon really is made of rock, many web pages from museums and scientists can be trusted, and the moon is Mia's topic." }
   ]
 });

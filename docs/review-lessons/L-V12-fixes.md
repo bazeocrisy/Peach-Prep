@@ -50,3 +50,21 @@ Fixed. I rewrote the lesson as "Using school words when you speak and write". It
 - NIT V2a Teach "root words". Fixed: the base-word definition now adds "(also called a root word)".
 
 Declined: none.
+
+## Round 2 (from L-V12-verify.md)
+- MUST SK-V1b-P3 (the clue ruled out both distractors). Fixed:
+  - The clue now gives only a strategy: "Think of the science word for the powder that bees carry from flower to flower. Then try each choice in the sentence."
+  - The "soil" distractor is now "seeds", a nearer miss. The `why` explains both distractors.
+  - The item stays close to the 3.L.V.1.a Teach example on purpose. That lesson teaches pollen as a word you learn from reading, and this practice item has the child use it in writing.
+- SHOULD SK-V1b-T4 (could be answered from memory). Fixed: I replaced all three rows with words that do not appear anywhere else in either lesson.
+  - "the land along the edge of the sea" → shore. Theo's sentence 1 now uses that phrase.
+  - "people who study sea animals" → scientists. Sentence 9 is rewritten to match.
+  - "keep safe from harm" → protect. Sentence 10 is rewritten to match.
+  - Sentence 7 no longer contains "animals that hunt other animals", which was the Teach example.
+- SHOULD SK-V1b-T2 (ungrammatical key, weak distractors). Fixed:
+  - Sentence 5 now reads "She lays her eggs in the hole she dug and covers them with sand."
+  - The prompt now asks the child to replace "hole she dug". With "the" kept, the result reads "in the nest".
+  - The choices are nest / den / hive / shelter, all places animals use. The new clue gives a strategy only.
+  - I used hive instead of the suggested "burrow". A dug hole can fairly be called a burrow, which would give the item a second defensible answer.
+- Cross-item check: no test prompt, stem, passage sentence or choice in any of the five lessons contains another test item's answer. Earlier, sentence 9's "look for new nests" would have revealed T2. It became "turtle tracks" in round 1 and now reads "People who study sea animals…".
+- Checker: no failures and no warnings in L-V12. The 27 warnings reported are all in other files. Theo's draft (p2) scores FK 4.0.
