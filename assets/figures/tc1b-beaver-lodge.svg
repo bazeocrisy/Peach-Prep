@@ -2,24 +2,26 @@
   <title id="t">A beaver lodge cut in half: a dry room above the water and a door under the water</title>
   <defs><pattern id="w" width="24" height="14" patternUnits="userSpaceOnUse"><rect width="24" height="14" fill="#DDEEFA"/><path d="M2 8 q4 -4 8 0 t8 0" fill="none" stroke="#5D8DB8" stroke-width="1.4"/></pattern></defs>
   <!-- pond water and pond bottom -->
-  <rect x="0" y="150" width="320" height="128" fill="url(#w)"/>
-  <path d="M0 150 q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2F5F8A" stroke-width="2.5"/>
+  <rect x="0" y="160" width="320" height="118" fill="url(#w)"/>
+  <path d="M0 160 q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2F5F8A" stroke-width="2.5"/>
   <rect x="0" y="278" width="320" height="12" fill="#D9C7A8" stroke="#6B5435" stroke-width="2"/>
   <!-- the lodge: a dome of sticks and mud -->
   <path d="M34 278 Q34 58 160 58 Q286 58 286 278 Z" fill="#C79C70" stroke="#4A2E16" stroke-width="3"/>
   <g stroke="#5B3A1E" stroke-width="3" stroke-linecap="round">
     <path d="M110 76 l30 -6"/><path d="M168 70 l34 6"/><path d="M220 86 l26 14"/><path d="M80 98 l22 -14"/>
     <path d="M232 120 l24 22"/><path d="M226 170 l30 -8"/><path d="M236 210 l26 6"/><path d="M228 252 l32 -10"/>
-    <path d="M64 130 l20 -16"/><path d="M58 170 l14 -6"/><path d="M140 86 l22 2"/><path d="M190 94 l20 4"/>
+    <path d="M64 130 l20 -16"/><path d="M58 170 l14 -6"/><path d="M70 230 l0 0"/><path d="M84 214 l18 -8"/><path d="M150 200 l28 6"/><path d="M110 236 l30 -4"/><path d="M170 160 l26 -10"/><path d="M190 240 l24 6"/><path d="M120 176 l20 -12"/>
   </g>
   <!-- the dry room, above the top of the water -->
-  <path d="M100 142 Q100 98 160 98 Q220 98 220 142 Z" fill="#FFF8EC" stroke="#4A2E16" stroke-width="2.5"/>
+  <path d="M100 128 Q100 84 160 84 Q220 84 220 128 Z" fill="#FFF8EC" stroke="#4A2E16" stroke-width="2.5"/>
   <!-- the tunnel down to the door under the water -->
-  <path d="M110 142 L134 142 L66 268 L40 268 Z" fill="#DDEEFA" stroke="#4A2E16" stroke-width="2.5"/>
+  <path d="M110 128 L134 128 L66 268 L40 268 Z" fill="url(#w)" stroke="#4A2E16" stroke-width="2.5"/>
+  <path d="M110.6 129.3 L133.4 129.3 L118.5 160 L94 160 Z" fill="#FFF8EC"/>
+  <path d="M94 160 q6 -4 12 0 t12 0" fill="none" stroke="#2F5F8A" stroke-width="2.5"/>
   <!-- labels -->
   <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
     <text x="196" y="30">dry room</text>
-    <path d="M236 38 L178 118" stroke="#111" stroke-width="2"/><circle cx="178" cy="118" r="4.5" fill="#111"/>
+    <path d="M236 38 L178 108" stroke="#111" stroke-width="2"/><circle cx="178" cy="108" r="4.5" fill="#111"/>
     <text x="104" y="320">door under water</text>
     <path d="M140 302 L54 262" stroke="#111" stroke-width="2"/><circle cx="54" cy="262" r="4.5" fill="#111"/>
   </g>

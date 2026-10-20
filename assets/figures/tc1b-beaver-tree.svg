@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="t">
+  <title id="t">A beaver chews through the trunk of a small tree. Wood chips lie on the ground.</title>
+  <!-- ground -->
+  <path d="M0 250 H320" stroke="#4A3A22" stroke-width="3"/>
+  <g stroke="#4A3A22" stroke-width="2"><path d="M20 262 l10 -6"/><path d="M70 266 l12 -4"/><path d="M290 262 l12 -6"/></g>
+  <!-- tree with a chewed, hourglass-shaped notch -->
+  <path d="M206 20 L206 160 Q222 182 206 204 L206 250 L240 250 L240 204 Q224 182 240 160 L240 20" fill="#E8D3B0" stroke="#4A2E16" stroke-width="3"/>
+  <path d="M212 168 Q223 182 212 196 M234 168 Q223 182 234 196" fill="none" stroke="#B88A55" stroke-width="2"/>
+  <g stroke="#4A2E16" stroke-width="2"><path d="M214 40 v30"/><path d="M230 80 v40"/><path d="M216 214 v26"/></g>
+  <path d="M240 60 L282 30" stroke="#4A2E16" stroke-width="4"/><path d="M206 90 L174 64" stroke="#4A2E16" stroke-width="4"/>
+  <!-- wood chips -->
+  <g fill="#F2E2C4" stroke="#4A2E16" stroke-width="1.5">
+    <path d="M246 244 l12 -4 l4 6 l-12 4 Z"/><path d="M266 246 l10 -6 l5 5 l-10 6 Z"/><path d="M186 246 l-10 -5 l-3 6 l10 4 Z"/><path d="M252 232 l9 -2 l2 5 l-9 2 Z"/>
+  </g>
+  <!-- beaver sitting up, front teeth on the notch -->
+  <g fill="#A8754A" stroke="#3B2412" stroke-width="3">
+    <path d="M30 236 Q60 214 112 226 Q70 254 30 236 Z"/>
+    <ellipse cx="128" cy="196" rx="42" ry="52"/>
+    <circle cx="168" cy="150" r="27"/>
+    <ellipse cx="190" cy="160" rx="16" ry="11"/>
+    <circle cx="150" cy="126" r="8"/>
+    <ellipse cx="180" cy="184" rx="14" ry="8"/>
+    <ellipse cx="140" cy="246" rx="24" ry="8"/>
+  </g>
+  <g stroke="#3B2412" stroke-width="1.5"><path d="M44 236 l40 -12 M50 230 l30 10 M64 224 l20 14"/></g>
+  <rect x="196" y="166" width="10" height="12" fill="#fff" stroke="#3B2412" stroke-width="2"/>
+  <circle cx="172" cy="142" r="4" fill="#111"/><circle cx="204" cy="157" r="3.5" fill="#111"/>
+  <!-- labels -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="8" y="60">beaver</text><path d="M60 68 L118 150" stroke="#111" stroke-width="2"/>
+    <text x="256" y="110">tree</text><path d="M262 114 L242 130" stroke="#111" stroke-width="2"/>
+    <text x="150" y="290">wood chips</text><path d="M240 276 L256 250" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

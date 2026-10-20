@@ -366,6 +366,159 @@ with sync_playwright() as p:
     un = pg.evaluate("({t:(document.getElementById('up-next-btn')||{}).textContent||''})")
     ok("10.5 Up next names a skill with its id", bool(re.match(r"^[A-Z]{1,2}\d+ · ", un["t"])), un)
 
+    # ---------- 11. PP-003: honest progress, dated attempts, grown-up checks, fluency notes ----------
+    PROG = "JSON.parse(localStorage.getItem('pp.progress.v1')||'null')"
+    def sit(code, right):
+        """Take one skill check through the UI: every answer right or every answer wrong."""
+        pg.evaluate("PP_PLAYER.start(%s,'test')" % json.dumps("SK:" + code + ":t")); pg.wait_for_timeout(60)
+        for i in range(pg.evaluate("PP_PLAYER.state().total")):
+            pg.evaluate(CORRECT if right else WRONG); pg.click("#q-next"); pg.wait_for_timeout(15)
+        pg.click("#confirm-submit"); pg.wait_for_timeout(60)
+        return pg.text_content("#res-guidance")
+    def fresh(seed=None):
+        pg.evaluate("localStorage.clear()")
+        if seed is not None: pg.evaluate("s=>localStorage.setItem('pp.progress.v1',s)", json.dumps(seed))
+        pg.goto(BASE + "#"); pg.reload(); pg.wait_for_timeout(700)
+    def row_label(code):
+        return pg.evaluate("(c=>{const b=document.querySelector('#skill-list .skill-line[data-code=\"'+c+'\"]');return b?{aria:b.getAttribute('aria-label'),review:!!b.querySelector('.sl-review')}:null})(%s)" % json.dumps(code))
+    quiz = pg.evaluate("Object.keys(PP.lessons).filter(k=>PP.byId['SK:'+k+':t']&&PP_SKILLS.skillId(k))")
+    A, B, C, D = quiz[0], quiz[1], quiz[2], quiz[3]
+    # 11.1 opening a lesson from the list writes nothing
+    fresh()
+    pg.click('#skill-list .skill-line[data-code="%s"]' % A); pg.wait_for_timeout(100)
+    ok("11.1 opening a lesson from the skill list writes no progress", pg.evaluate("PP_APP.current()") == "skill" and pg.evaluate(PROG) is None, pg.evaluate(PROG))
+    # 11.2 the test items cannot be run as hinted practice
+    pg.goto(BASE + "#play/SK:%s:t/practice" % A); pg.wait_for_timeout(400)
+    lp = pg.evaluate("({s:PP_PLAYER.state(), help:document.getElementById('q-help').offsetParent!==null, hash:location.hash})")
+    for i in range(lp["s"]["total"]):
+        pg.evaluate(CORRECT); pg.click("#q-next"); pg.wait_for_timeout(15)
+    pg.click("#confirm-submit"); pg.wait_for_timeout(60)
+    pg.evaluate("PP_SKILLS.recordPractice(%s,'t')" % json.dumps(A))
+    ra = (pg.evaluate(PROG) or {}).get(A, {})
+    ok("11.2 #play/SK:<k>:t/practice runs as a check (no Help me) and never records practice", lp["s"]["mode"] == "test" and not lp["help"] and lp["hash"].endswith("/test")
+       and not ra.get("practiced") and ra.get("tries") == 1, (lp, ra))
+    # 11.3 a first pass stores the new dated fields; old fields keep their meaning
+    fresh()
+    sit(B, False)
+    pg.click("#res-review-btn"); pg.wait_for_timeout(40)              # the child sees the answers
+    seen = (pg.evaluate(PROG) or {}).get(B, {})
+    g2 = sit(B, True)
+    rb = pg.evaluate(PROG)[B]
+    ymd = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+    ok("11.3 a pass stores passedAt, passTry, passBy, lastPassAt and one attempt per try; mastered/best/tries unchanged in meaning",
+       rb.get("mastered") is True and rb.get("tries") == 2 and rb["best"]["got"] == rb["best"]["max"] and ymd.match(rb.get("passedAt", "")) and rb.get("passTry") == 2
+       and rb.get("passBy") == "test" and rb.get("lastPassAt") == rb.get("passedAt") and len(rb.get("attempts", [])) == 2
+       and [a["ok"] for a in rb["attempts"]] == [False, True] and [a["n"] for a in rb["attempts"]] == [1, 2] and "✓ Passed" in g2, rb)
+    ok("11.4 See my answers is recorded, and the next pass is flagged afterAnswers", bool(seen.get("answersSeenAt")) and rb["attempts"][0]["afterAnswers"] is False and rb["attempts"][1]["afterAnswers"] is True, rb.get("attempts"))
+    pg.evaluate("PP_SKILLS.open(%s,'test')" % json.dumps(B)); pg.wait_for_timeout(60)
+    card = pg.text_content("#sk-panel")
+    ok("11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'", "Passed the skill check on " in card and "Passed on try 2." in card
+       and "same questions each time" in card and "Passed after seeing the answers on an earlier try." in card, card[:300])
+    sit(C, True)
+    rc = pg.evaluate(PROG)[C]
+    ok("11.6 a first-try pass without seeing answers: passTry 1, afterAnswers false", rc.get("passTry") == 1 and rc["attempts"][0]["afterAnswers"] is False and not rc.get("answersSeenAt"), rc)
+    # 11.7 fail after a pass: still passed, last attempt failed, review suggested
+    sit(C, False)
+    rc = pg.evaluate(PROG)[C]
+    pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(100)
+    lc = row_label(C)
+    ok("11.7 a fail after a pass keeps the pass, logs ok:false, and shows 'review'", rc.get("mastered") is True and rc["best"]["got"] == rc["best"]["max"] and rc["attempts"][-1]["ok"] is False
+       and lc and lc["review"] and "Review suggested" in lc["aria"], (rc, lc))
+    # 11.8 an old (2.1-style) saved record still loads intact
+    legacy = {D: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}, "_ui": {"lastCat": "reading"}}
+    chk_code2 = next((c for c in lessons if pg.evaluate("!!PP.lessons['%s'].check&&!PP.byId['SK:%s:t']" % (c, c))), None)
+    if chk_code2: legacy[chk_code2] = {"checks": [True] * 5, "mastered": True}
+    fresh(legacy)
+    st = pg.evaluate(PROG)
+    ld, lr = row_label(D), (row_label(chk_code2) if chk_code2 else {"aria": "Checked by a grown-up", "review": False})
+    ok("11.8 a 2.1 record loads intact: old fields unchanged, legacyUndated + firstSeenPassedAt added, no invented passedAt",
+       all(st[D][k] == v for k, v in legacy[D].items()) and st[D].get("legacyUndated") is True and ymd.match(st[D].get("firstSeenPassedAt", "")) and "passedAt" not in st[D]
+       and st["_ui"] == legacy["_ui"] and pg.evaluate("PP_SKILLS.status(%s)" % json.dumps(D)) == "mastered", st)
+    ok("11.9 old passes are labelled honestly: 'Passed the skill check' for a check, 'Checked by a grown-up' for a hands-on check, no review yet",
+       ld and "Passed the skill check" in ld["aria"] and not ld["review"] and "Checked by a grown-up" in lr["aria"] and "Passed the skill check" not in lr["aria"], (ld, lr))
+    # 11.10 review suggested by date; rendering never writes
+    from datetime import date, timedelta
+    old = (date.today() - timedelta(days=10)).isoformat(); new = (date.today() - timedelta(days=2)).isoformat()
+    seed = {A: {"tries": 1, "best": {"got": 6, "max": 6}, "mastered": True, "passedAt": old, "passTry": 1, "passBy": "test", "lastPassAt": old,
+                "attempts": [{"d": old, "got": 6, "max": 6, "ok": True, "n": 1, "afterAnswers": False}]},
+            B: {"tries": 1, "best": {"got": 6, "max": 6}, "mastered": True, "passedAt": new, "passTry": 1, "passBy": "test", "lastPassAt": new,
+                "attempts": [{"d": new, "got": 6, "max": 6, "ok": True, "n": 1, "afterAnswers": False}]}}
+    fresh(seed)
+    s0 = pg.evaluate("localStorage.getItem('pp.progress.v1')")
+    ra, rb2 = row_label(A), row_label(B)
+    pg.evaluate("PP_SKILLS.open(%s,'test')" % json.dumps(A)); pg.wait_for_timeout(60)
+    ca = pg.text_content("#sk-panel")
+    pl = pg.text_content("#home-progress")
+    ok("11.10 'review' shows 10 days after a pass, not 2 days after; the page says so; rendering changes nothing stored",
+       ra["review"] and not rb2["review"] and "Review suggested" in ca and "10 days" in ca and "due for a review" in pl
+       and pg.evaluate("localStorage.getItem('pp.progress.v1')") == s0, (ra, rb2, ca[:200], pl))
+    # 11.11 grown-up check-off is stored and shown apart from a scored check
+    if chk_code:
+        fresh()
+        pg.evaluate("PP_SKILLS.open('%s','test')" % chk_code); pg.wait_for_timeout(60)
+        w0 = pg.evaluate(PROG)
+        for cb in pg.query_selector_all("#sk-panel input[type=checkbox]"): cb.check()
+        pg.click("#sk-grownup-check"); pg.wait_for_timeout(40)
+        rg = pg.evaluate(PROG)[chk_code]; panel = pg.text_content("#sk-panel")
+        pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(100)
+        lg = row_label(chk_code)
+        ok("11.11 grown-up check: passBy 'grownup', mastered kept for counts, labelled 'Checked by a grown-up' (not 'Passed the skill check')",
+           w0 is None and rg.get("mastered") is True and rg.get("passBy") == "grownup" and ymd.match(rg.get("passedAt", "")) and "Checked by a grown-up" in panel
+           and "not a scored skill check" in panel and lg and "Checked by a grown-up" in lg["aria"] and "Passed the skill check" not in lg["aria"], (w0, rg, lg))
+    # 11.12 fluency: labelled a home tool; softened verdict; grown-up observations saved with the reading
+    if flu:
+        fresh()
+        pg.evaluate("PP_SKILLS.open('%s','practice')" % flu); pg.wait_for_timeout(60)
+        note = pg.text_content(".fluency")
+        pg.click("text=Start the minute")
+        ws = pg.query_selector_all(".flu-w"); ws[2].click(); ws[5].click(); ws[5].click()
+        pg.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()+61000;})()"); pg.wait_for_timeout(500)
+        pg.query_selector_all(".flu-w")[99].click(); pg.wait_for_timeout(60)
+        fo = pg.text_content(".flu-out")
+        pg.check(".fo-expr input[value='2']"); pg.check(".fo-pauses input[value='sometimes']"); pg.check(".fo-retell input[value='partly']")
+        pg.wait_for_timeout(40)
+        pg.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()-61000;})()")
+        fl = pg.evaluate(PROG)[flu]["fluency"][-1]
+        hist = pg.text_content(".flu-hist-box")
+        ok("11.12 fluency timer says it is a home practice tool, not a test or screener", "home practice tool" in note and "not a formal test or screener" in note, note[:200])
+        ok("11.13 fluency verdict is for this one reading and notes passages differ", "For this one reading" in fo and "Passages differ in difficulty" in fo and "Right on track" not in fo, fo[:300])
+        ok("11.14 grown-up observations (expression 1-3, pauses, self-corrections from the second tap, retell) are saved with the reading and shown as 'Grown-up observed'",
+           fl.get("wcpm") == 99 and fl.get("obs") == {"selfFix": 1, "expr": 2, "pauses": "sometimes", "retell": "partly"} and ymd.match(fl.get("d", ""))
+           and "Grown-up observed" in hist and "1 self-correction" in hist and "expression and phrasing 2 of 3" in hist, (fl, hist[-200:]))
+    # 11.15 no 'mastered' / 'mastery' left in what parents and children read (Georgia's GUM 'Master' labels allowed)
+    fresh()
+    sit(A, False); res1 = pg.evaluate("document.body.innerText")
+    pg.click("#res-again"); pg.wait_for_timeout(60); sit(A, True); res2 = pg.evaluate("document.body.innerText")
+    texts = {"results-fail": res1, "results-pass": res2}
+    pg.evaluate("PP_APP.goHome()"); pg.wait_for_timeout(100); texts["home"] = pg.evaluate("document.body.innerText")
+    pg.click("[data-filter=todo]"); pg.wait_for_timeout(60); texts["home-filter"] = pg.evaluate("document.body.innerText"); pg.click("[data-filter=all]")
+    for st_ in ("test", "try"):
+        pg.evaluate("PP_SKILLS.open(%s,'%s')" % (json.dumps(A), st_)); pg.wait_for_timeout(60)
+        pg.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true)")
+        texts["skill " + st_] = pg.evaluate("document.body.innerText")
+    if chk_code:
+        pg.evaluate("PP_SKILLS.open('%s','test')" % chk_code); pg.wait_for_timeout(60); texts["grown-up check"] = pg.evaluate("document.body.innerText")
+    for t in ("test", "standards", "essay", "plan"):
+        pg.evaluate("PP_PARENTS.open('%s')" % t); pg.wait_for_timeout(80)
+        pg.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true)")
+        texts["parents " + t] = pg.evaluate("document.querySelector('#ptab-%s').innerText" % t)
+    GUM = re.compile(r"3\.L\.GC\.1 · Master|Master by the end of grade 3|Continue \(not yet mastered\)|Master and Reinforce|grade 3 row: Master|Master, Reinforce|[Gg]rammar chart:? Master\b")
+    left = []
+    for k, t in texts.items():
+        for m in re.finditer(r"\bmaster(ed|y)?\b", GUM.sub("", t), re.I):
+            left.append(k + ": " + GUM.sub("", t)[max(0, m.start() - 40):m.end() + 20].replace("\n", " "))
+    ok("11.15 no 'mastered' or 'mastery' in home, skill, results or parent text (GUM 'Master' labels allowed)", not left, left[:6])
+    ok("11.16 the parent plan says a skill check is not a Georgia Milestones score", "not a Georgia Milestones score" in texts["parents plan"] and "Checked by a grown-up" in texts["parents plan"])
+    ok("11.17 the skill page says a passed check is not a Milestones score, near the Proficient descriptors", "not a Milestones score or achievement level" in texts["skill test"], "")
+    # 11.18 cursive word gaps are about one lowercase o (3.F.H.4.b)
+    cw = pg.evaluate("""(async()=>{PP_SKILLS.open('3.F.H.4.b','teach'); await document.fonts.ready; await new Promise(r=>setTimeout(r,200));
+      const m=el=>{const cs=getComputedStyle(el);const s=document.createElement('span');s.style.cssText='position:absolute;visibility:hidden;white-space:pre;font:'+cs.font+';word-spacing:'+cs.wordSpacing;
+        document.body.appendChild(s);s.textContent='o';const o=s.getBoundingClientRect().width;s.textContent='a a';const w1=s.getBoundingClientRect().width;s.textContent='aa';const w2=s.getBoundingClientRect().width;s.remove();return (w1-w2)/o;};
+      const a=m(document.querySelector('#sk-panel .cursive')); PP_SKILLS.open('3.F.H.4.b','practice'); await new Promise(r=>setTimeout(r,100));
+      return [a, m(document.querySelector('.trace-row'))];})()""") if pg.evaluate("!!PP.lessons['3.F.H.4.b']") else [1, 1]
+    ok("11.18 cursive word gap is about one lowercase o wide in the model and on the tracing sheet", all(0.8 <= x <= 1.25 for x in cw), cw)
+    pg.evaluate("localStorage.clear()")
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------

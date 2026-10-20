@@ -215,7 +215,8 @@ lessons.forEach(L => {
   });
   if (!L.parent) F(S, "parent note missing");
   if (L.write && (!L.write.prompt || !(L.write.checklist || []).length)) F(S, "write needs prompt and checklist");
-  if (rec.tested === "writing" && !L.write) W(S, "writing standard without a write activity");
+  /* GUM chart rows are tested in Constructing Texts as editing/revising items, not as free writing */
+  if (rec.tested === "writing" && !rec.gum && !L.write) W(S, "writing standard without a write activity");
   checkPassages(S, L.passages, "lesson");
   const set = { passages: L.passages || [] };
   const ids = new Set();
@@ -256,6 +257,64 @@ tasks.forEach(t => {
   if (m < 150 || m > 300) W(S, "model essay is " + m + " words");
   ["purpose", "evidence", "conventions"].forEach(k => { if (!t.lookFors || !(t.lookFors[k] || []).length) F(S, "lookFors." + k + " missing"); });
 });
+
+/* ---------- consistency checks (PP-003 Phase H) ----------
+   Catalog keys, lesson codes, the blueprint's assessed expectations and
+   legacy fields. The table below is transcribed from the GaDOE Grade 3 ELA
+   Assessment Blueprint (August 2025), page 1. The blueprint prints the last
+   Constructing vocabulary code as "5.L.V.3 (e)"; it is read as 3.L.V.3 (e). */
+(function () {
+  const BP_IT = { "3.T.C.1": "ab", "3.T.C.2": "ac", "3.T.SS.1": "a", "3.T.SS.2": "a", "3.T.T.1": "abcd", "3.T.T.2": "abc",
+    "3.T.T.3": "a", "3.T.T.4": "a", "3.T.RA.1": "ab", "3.T.RA.2": "ab", "3.L.GC.2": "a", "3.L.V.1": "a", "3.L.V.2": "ab", "3.L.V.3": "abcd" };
+  const BP_CT = { "3.T.C.1": "c", "3.T.SS.1": "bcd", "3.T.SS.2": "b", "3.T.T.1": "e", "3.T.T.2": "d", "3.T.T.3": "c",
+    "3.T.T.4": "b", "3.T.RA.1": "c", "3.L.GC.2": "bcd", "3.L.V.1": "b", "3.L.V.2": "c", "3.L.V.3": "e" };
+  /* 3.L.GC.1* GUM appears only under Constructing Texts: Master and Reinforce rows are assessed there. */
+  const C = "consistency";
+  const want = {};
+  [[BP_IT, "reading"], [BP_CT, "writing"]].forEach(([tbl, part]) => Object.keys(tbl).forEach(base => tbl[base].split("").forEach(l => {
+    const code = base + "." + l; want[code] = want[code] && want[code] !== part ? "both" : part;
+  })));
+  const ONTEST = ["reading", "writing", "both"];
+  Object.keys(want).forEach(code => {
+    const s = STD.find(x => x.code === code);
+    if (!s) F(C, "blueprint expectation " + code + " is missing from standards.js");
+    else if (s.tested !== want[code]) F(C, code + " is tested \"" + s.tested + "\" but the blueprint says \"" + want[code] + "\"");
+  });
+  STD.forEach(s => {
+    if (Object.prototype.hasOwnProperty.call(s, "status")) F(C, s.code + ": legacy \"status\" field is still in standards.js");
+    if (s.gum) {
+      const exp = "MR".indexOf(s.level) >= 0 ? "writing" : "no";
+      if (s.tested !== exp) F(C, s.code + ": GUM " + s.level + " row should be tested \"" + exp + "\" (blueprint: 3.L.GC.1 under Constructing Texts, Master/Reinforce only)");
+    } else if (/^3\.[TL]\.[A-Z]+\.\d\.[a-z]$/.test(s.code)) {
+      if (!want[s.code] && s.tested !== "no") F(C, s.code + " is tested \"" + s.tested + "\" but the blueprint does not list it");
+    } else if (s.strand === "Foundations" && s.tested !== "classroom") F(C, s.code + ": Foundations should be \"classroom\"");
+    else if (s.strand === "Practices" && s.tested !== "embedded") F(C, s.code + ": Practices should be \"embedded\"");
+  });
+  /* every lesson code exists in standards.js (also checked per lesson above; repeated here as a whole-site count) */
+  const badCodes = [].concat(...lessons.map(L => [L.code].concat(L.codes || []))).filter(c => !codes.has(c));
+  if (badCodes.length) F(C, badCodes.length + " lesson code(s) not in standards.js: " + badCodes.slice(0, 5).join(", "));
+  /* every catalog key resolves to a lesson or task */
+  const catFile = path.join(ROOT, "js/data/catalog.js");
+  if (fs.existsSync(catFile)) {
+    run("js/data/catalog.js");
+    const CAT = ctx.window.PP_CATALOG || [];
+    const lessonKeys = new Set(lessons.map(L => L.key || L.code));
+    const taskIds = new Set(tasks.map(t => t.id));
+    const seen = new Set();
+    CAT.forEach(c => (c.groups || []).forEach(g => (g.skills || []).forEach(k => {
+      if (seen.has(k)) F(C, "catalog key listed twice: " + k); seen.add(k);
+      if (/^task:/.test(k)) { if (!taskIds.has(k.slice(5))) F(C, "catalog key " + k + " has no task"); }
+      else if (!lessonKeys.has(k)) F(C, "catalog key " + k + " has no lesson");
+    })));
+    lessonKeys.forEach(k => { if (!seen.has(k)) W(C, "lesson " + k + " is not in the catalog, so it cannot be opened from the home page"); });
+  } else F(C, "js/data/catalog.js not found");
+  /* the meta description claims a lesson with practice and a skill check for every tested standard */
+  STD.filter(s => ONTEST.indexOf(s.tested) >= 0).forEach(s => {
+    const L = lessons.find(x => (x.codes || [x.code]).indexOf(s.code) >= 0 || x.code === s.code);
+    if (!L) F(C, s.code + " is on the test but has no lesson");
+    else if (!(L.practice || []).length || !(L.test || []).length) F(C, s.code + " is on the test but its lesson " + (L.key || L.code) + " lacks practice or test items");
+  });
+})();
 
 const items = sets.reduce((a, s) => a + s.items.length, 0);
 const litems = lessons.reduce((a, l) => a + (l.practice || []).length + (l.test || []).length, 0);
