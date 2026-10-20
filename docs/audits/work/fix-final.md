@@ -154,7 +154,11 @@ Every entry below was reproduced in Chromium before the fix (`repro-before.txt`)
 ## Gates
 - `node verification/check-content.js --all`: **PASS, 0 failures, 8 warnings.** These are the same 8 clue-overlap warnings review-E listed; none is on an item I changed.
 - `python3 verification/readability.py`: exit 0, no passage flagged. I changed no passage text.
-- `python3 verification/guard.py http://localhost:8458/` (full run): result recorded below.
+- `python3 verification/guard.py http://localhost:8458/` (full run): **95 passed, 0 failed, exit 0.**
+  - That is the 89 from review-E plus 13.1-13.6. 4.1 now runs only test-capable sets; see RD-4.
+  - The first full run stopped in section 4 because of RD-4; that was fixed in the guard as described.
+  - Log: `scratchpad/final/guard.log`.
+- Server PID 2403 stopped with `kill` at the end.
 
 ## Not done / for the lead
 - RD-12 to RD-15 (target sizes, sticky clock overlap, grown-up undo, print leftovers) were not in my assignment and are not fixed.
