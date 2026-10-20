@@ -109,7 +109,7 @@ PP.addLesson({
         { text: "On a sunny afternoon last week." }
       ],
       clue: "Look for a who or what and a verb in the same group.",
-      why: "The answer is \"Grandpa fixed the broken swing.\" Grandpa tells who, and fixed tells what he did. The other groups are each missing a who or an action." },
+      why: "The answer is \"Grandpa fixed the broken swing.\" Grandpa tells who, and fixed tells what he did. The other groups are each missing a who or a verb." },
     { id: "SK-GUM1-1-T2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the words that make this a complete sentence.",
       text: "{0} barked at the mail truck.",

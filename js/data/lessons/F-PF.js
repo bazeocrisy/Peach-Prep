@@ -165,16 +165,17 @@ PP.addLesson({
       ],
       clue: "Say thread out loud. Is the ea long, like in team, or short, like the e in bed?",
       why: "The answer is sweater. In thread and sweater, ea says short e, like in bed. In seat, clean and speak, ea says long e." },
-    { id: "SK-FP4a-T4", type: "dropdown", points: 2, dok: 2, passages: [],
-      prompt: "Read the sentence. Then choose the sound g makes in each word.",
-      stem: "The gentle goat ate from my hand.",
-      text: "The g in gentle sounds like {0}. The g in goat sounds like {1}.",
-      slots: [
-        { options: ["the j in jump", "the g in gum", "the z in zip"], answer: 0 },
-        { options: ["the j in jump", "the g in gum", "the z in zip"], answer: 1 }
+    { id: "SK-FP4a-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Which TWO words have a g that sounds like j?",
+      choices: [
+        { text: "giraffe", correct: true },
+        { text: "page", correct: true },
+        { text: "gift" },
+        { text: "goose" },
+        { text: "wagon" }
       ],
-      clue: "Look at the letter right after each g, and say each word out loud to check.",
-      why: "The g in gentle sounds like the j in jump, because e comes right after it. The g in goat sounds like the g in gum, because o comes right after it." },
+      clue: "Look at the letter after each g. Then say each word out loud, because some words break the rule.",
+      why: "Giraffe and page have a soft g that says j. Goose and wagon have a hard g, because o comes after it. Gift breaks the rule: the g comes before i, but it is hard, like in go." },
     { id: "SK-FP4a-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. How do you say the two words spelled read?",
       stem: "I will read the book that Dad read last night.",
@@ -185,7 +186,15 @@ PP.addLesson({
         { text: "The first rhymes with red, and the second rhymes with seed." }
       ],
       clue: "Look for clues about time. Is each reading happening later, or did it already happen? Say the sentence both ways and listen.",
-      why: "The answer is \"The first rhymes with seed, and the second rhymes with red.\" \"I will read\" is about later, so ea says long e. \"Dad read last night\" already happened, so ea says short e." }
+      why: "The answer is \"The first rhymes with seed, and the second rhymes with red.\" \"I will read\" is about later, so ea says long e. \"Dad read last night\" already happened, so ea says short e." },
+    { id: "SK-FP4a-T6", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that is spelled correctly.",
+      text: "The dog jumped over the {0}.",
+      slots: [
+        { options: ["fence", "fense", "fenc"], answer: 0 }
+      ],
+      clue: "Picture the word. Its last sound is spelled the same way as the end of face and dance.",
+      why: "The answer is fence. The s sound at the end is spelled ce, like in face and dance, and the e makes the c soft. Fense sounds the same but is not how the word is spelled. Fenc has no e, so its c would be hard, like k." }
   ]
 });
 
@@ -230,7 +239,7 @@ PP.addLesson({
         "Look between the vowels. There are two consonants, s and k, so split between them: bas / ket.",
         "Both parts end with a consonant, so both are closed and both vowels are short."
       ],
-      answer: "bas / ket. Both syllables are closed, so you read it BAS-kit."
+      answer: "bas / ket. Both syllables are closed, so both vowels are short."
     },
     {
       show: ["pilot"],
@@ -257,15 +266,15 @@ PP.addLesson({
   passages: [],
   practice: [
     { id: "SK-FP4b-P1", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "How do you split the word muffin into syllables?",
+      prompt: "How do you split the word fantastic into syllables?",
       choices: [
-        { text: "muf / fin", correct: true },
-        { text: "mu / ffin" },
-        { text: "muff / in" },
-        { text: "m / uffin" }
+        { text: "fan / tas / tic", correct: true },
+        { text: "fant / as / tic" },
+        { text: "fa / ntas / tic" },
+        { text: "fan / ta / stic" }
       ],
-      clue: "Find the two vowels. Count the consonants between them. When there are two, where do you usually split?",
-      why: "The answer is muf / fin. The vowels are u and i, and two f's stand between them, so you split between the two f's. Both syllables are closed." },
+      clue: "Find the three vowels. Look at the consonants between each pair of vowels. When there are two, where do you usually split?",
+      why: "The answer is fan / tas / tic. Between a and a stand n and t, so you split between them. Between a and i stand s and t, so you split between those too. All three syllables are closed." },
     { id: "SK-FP4b-P2", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each word to its kind of syllable.",
       cols: ["open", "vowel-consonant-e", "vowel team", "r-controlled"],
@@ -292,15 +301,17 @@ PP.addLesson({
       steps: ["re", "mem", "ber"],
       clue: "Say remember slowly and clap each part. Which part do you hear first?",
       why: "The order is re, mem, ber. Re is open, mem is closed, and ber is r-controlled." },
-    { id: "SK-FP4b-P5", type: "dropdown", points: 2, dok: 2, passages: [],
-      prompt: "Choose the right way to split each word.",
-      text: "The word music splits as {0}. The word wagon splits as {1}.",
-      slots: [
-        { options: ["mu / sic", "mus / ic", "m / usic"], answer: 0 },
-        { options: ["wag / on", "wa / gon", "w / agon"], answer: 0 }
+    { id: "SK-FP4b-P5", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Each word has one consonant between two vowels. Match each word to the way it splits.",
+      cols: ["before the consonant (long first vowel)", "after the consonant (short first vowel)"],
+      rows: [
+        { text: "music", answer: 0 },
+        { text: "wagon", answer: 1 },
+        { text: "tulip", answer: 0 },
+        { text: "planet", answer: 1 }
       ],
-      clue: "Each word has one consonant between the vowels. Try splitting before it first. If that is not a real word, split after it.",
-      why: "Music splits as mu / sic: the u is long, so the first syllable is open. Wagon splits as wag / on: wa / gon would say WAY-gun, but the a is short, so the first syllable is closed." },
+      clue: "Try splitting before the middle consonant first and say the word. If that is not a real word, split after it.",
+      why: "Music (mu / sic) and tulip (tu / lip) split before the consonant, so the u is long. Wagon (wag / on) and planet (plan / et) split after it, so the a is short. Wa / gon would say WAY-gun, which is not the word." },
     { id: "SK-FP4b-P6", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words end with a consonant-le syllable?",
       choices: [
@@ -311,19 +322,27 @@ PP.addLesson({
         { text: "sunset" }
       ],
       clue: "Look at the last three letters of each word. Is it a consonant followed by l and e, in that order?",
-      why: "Bubble ends with ble and turtle ends with tle, so both end with a consonant-le syllable. Tunnel and travel end with el, not le. Sunset ends with a closed syllable." }
+      why: "Bubble ends with ble and turtle ends with tle, so both end with a consonant-le syllable. Tunnel and travel end with el, not le. Sunset ends with a closed syllable." },
+    { id: "SK-FP4b-P7", type: "dropdown", points: 1, dok: 2, passages: [],
+      prompt: "Choose the word that is spelled correctly.",
+      text: "Please blow out the {0} on the cake.",
+      slots: [
+        { options: ["candle", "candel", "candal"], answer: 0 }
+      ],
+      clue: "Spell it one syllable at a time: can, then the last syllable. What kind of syllable often ends a word like this?",
+      why: "The answer is candle. It is can / dle: a closed syllable and then a consonant-le syllable, spelled d-l-e." }
   ],
   test: [
     { id: "SK-FP4b-T1", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "How do you split the word helmet into syllables?",
+      prompt: "How do you split the word September into syllables?",
       choices: [
-        { text: "hel / met", correct: true },
-        { text: "he / lmet" },
-        { text: "helm / et" },
-        { text: "h / elmet" }
+        { text: "Sep / tem / ber", correct: true },
+        { text: "Se / ptem / ber" },
+        { text: "Sept / em / ber" },
+        { text: "Sep / te / mber" }
       ],
-      clue: "Find the vowels and count the consonants between them.",
-      why: "The answer is hel / met. The vowels are e and e, and two consonants, l and m, stand between them, so you split between them." },
+      clue: "Find the vowels. Look at the consonants between each pair of vowels and count them.",
+      why: "The answer is Sep / tem / ber. Two consonants, p and t, stand between the first two vowels, so you split between them. Two more, m and b, stand between the next two, so you split between those too." },
     { id: "SK-FP4b-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word ends with a vowel-consonant-e syllable?",
       choices: [
@@ -335,29 +354,40 @@ PP.addLesson({
       clue: "Look at the last syllable of each word. Is there a vowel, then one consonant, then a silent e?",
       why: "The answer is inside. It splits as in / side, and side has i, d and a silent e, so the i is long. Insect and garden end with consonants, and raining ends with ing." },
     { id: "SK-FP4b-T3", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Match each word to its kind of syllable.",
-      cols: ["open", "vowel-consonant-e", "vowel team", "r-controlled"],
+      prompt: "Each row shows one syllable from a longer word. Match each syllable to its kind.",
+      cols: ["closed", "open", "consonant-le"],
       rows: [
-        { text: "we", answer: 0 },
-        { text: "hope", answer: 1 },
-        { text: "seed", answer: 2 },
-        { text: "storm", answer: 3 }
+        { text: "nap in napkin", answer: 0 },
+        { text: "po in pony", answer: 1 },
+        { text: "ple in apple", answer: 2 },
+        { text: "ba in bacon", answer: 1 }
       ],
-      clue: "Look at how each vowel sound is spelled and what comes after it.",
-      why: "We ends with a vowel, so it is open. Hope has o, a consonant, then a silent e. Seed has the vowel team ee. Storm has or, so it is r-controlled." },
-    { id: "SK-FP4b-T4", type: "dropdown", points: 1, dok: 2, passages: [],
-      prompt: "Choose the right way to split the word robin, the name of a bird.",
-      text: "The word robin splits as {0}.",
-      slots: [
-        { options: ["rob / in", "ro / bin", "r / obin"], answer: 0 }
+      clue: "Look at how each syllable ends. Does it end with a consonant, end with a vowel, or is it a consonant plus le at the end of the word?",
+      why: "Nap ends with a consonant, so it is closed. Po and ba end with a vowel, so they are open and the vowel is long. Ple is a consonant plus le at the end of apple." },
+    { id: "SK-FP4b-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Which TWO words split after the middle consonant, so the first vowel is short?",
+      choices: [
+        { text: "robin", correct: true },
+        { text: "seven", correct: true },
+        { text: "paper" },
+        { text: "baby" },
+        { text: "hotel" }
       ],
-      clue: "Try splitting before the b first and say the word. Does it sound like the bird? If not, try the other way.",
-      why: "The answer is rob / in. Ro / bin would say ROE-bin, but the bird's name has a short o, so the first syllable is closed: ROB-in." },
+      clue: "Say each word and listen to the first vowel. Is it short, or does it say its name?",
+      why: "Robin (rob / in) and seven (sev / en) have a short first vowel, so the first syllable is closed. Paper (pa / per), baby (ba / by) and hotel (ho / tel) have a long first vowel, so they split before the consonant." },
     { id: "SK-FP4b-T5", type: "order", points: 2, dok: 1, passages: [],
       prompt: "Put the syllables in order to build the word umbrella.",
       steps: ["um", "brel", "la"],
       clue: "Say umbrella slowly and clap each part. Which part comes first, next and last?",
-      why: "The order is um, brel, la. Um and brel are closed, and la is open." }
+      why: "The order is um, brel, la. Um and brel are closed, and la is open." },
+    { id: "SK-FP4b-T6", type: "dropdown", points: 1, dok: 2, passages: [],
+      prompt: "Choose the word that is spelled correctly.",
+      text: "Tom found a smooth {0} in the creek.",
+      slots: [
+        { options: ["pebble", "peble", "pebbel"], answer: 0 }
+      ],
+      clue: "Spell it one syllable at a time. The first vowel is short, so the first syllable must be closed. How does the last syllable end?",
+      why: "The answer is pebble. It is peb / ble: the first syllable is closed, so the e is short, and the last syllable is consonant-le. Peble would split pe / ble, with a long e." }
   ]
 });
 
@@ -482,7 +512,7 @@ PP.addLesson({
         { text: "plant", correct: true },
         { text: "replant" },
         { text: "planted" },
-        { text: "ant" }
+        { text: "plan" }
       ],
       clue: "Cover the prefix at the start and the suffix at the end. What word is left?",
       why: "The answer is plant. Re- is the prefix and -ed is the suffix, so plant is the base word." }
@@ -522,12 +552,13 @@ PP.addLesson({
       cols: ["drop the e", "double the last letter", "change y to i", "no change"],
       rows: [
         { text: "shine + ing", answer: 0 },
+        { text: "skate + ed", answer: 0 },
         { text: "swim + ing", answer: 1 },
         { text: "happy + ly", answer: 2 },
-        { text: "play + ed", answer: 3 }
+        { text: "spy + ed", answer: 2 }
       ],
-      clue: "Look at the last letters of each base word. For words that end in y, check the letter just before the y.",
-      why: "Shine drops the e (shining). Swim doubles the m (swimming). Happy changes y to i (happily). Play has a vowel before the y, so nothing changes (played)." },
+      clue: "Look at the last letters of each base word. For words that end in y, check the letter just before the y. A column can be used more than once, or not at all.",
+      why: "Shine and skate drop the e (shining, skated). Swim doubles the m (swimming). Happy and spy end with a consonant and y, so the y changes to i (happily, spied). Every word here needs a change, so no row goes under no change." },
     { id: "SK-FP4c-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word means \"to fill again\"?",
       choices: [
@@ -543,14 +574,14 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.F.F.1.a",
-  title: "Tricky words: know them in a snap",
+  title: "Sight words: know them in a snap",
   teach: {
-    big: "Some words do not follow the usual sound rules, so you learn them by heart and know them in a snap.",
+    big: "Some words show up so often that you should know them in a snap, and some of them are tricky because they are not spelled the way they sound.",
     points: [
-      "Sight words are words you see all the time, like said, because and people. Good readers know them right away, without sounding them out.",
-      "Many sight words have a tricky part that is spelled in an unusual way. Find the tricky part and remember it.",
+      "Sight words are words you see all the time. Some follow the rules, like and, went and just. You learn them by heart because they are everywhere.",
+      "Other sight words have a tricky part that is not spelled the way it sounds, like the ai in said. Find the tricky part and remember it.",
       "Little tricks help: a friend is your friend to the end, so friend ends with end. For because, try \"big elephants can always understand small elephants.\"",
-      "Check tricky words in sentences, too. Look-alike words such as though, through and thought mean different things, so read every letter.",
+      "Some sight words look alike: was and saw, from and form, where and were. Read every letter, and check that the word makes sense in the sentence.",
       "Practice a few words each day: look, say, cover, write, check."
     ],
     words: [
@@ -563,9 +594,9 @@ PP.addLesson({
         "said: the ai sounds like the e in bed",
         "friend: the ie sounds like the e in bed",
         "through: the ough sounds like the oo in moon",
-        "could: the l is silent"
+        "could: the oul sounds like the oo in book, and the l is silent"
       ],
-      note: "The rest of each word follows the rules you know. You only have to remember the tricky part."
+      note: "Find the tricky part and remember it. The rest of each word follows the rules you already know."
     },
     tip: "This skill is checked in class, not on the Milestones. But passages on the test are full of these words, and knowing them in a snap leaves more time to think about the questions."
   },
@@ -585,7 +616,7 @@ PP.addLesson({
       ask: "Which word belongs in the sentence?",
       steps: [
         "These words look alike, so read every letter of each one.",
-        "Thought is what you did when you were thinking. Though is used like even if. Through means in one side and out the other.",
+        "Thought is what you did when you were thinking. Though means something like but or even so. Through means in one side and out the other.",
         "You walk in one side of a tunnel and out the other, so through fits."
       ],
       answer: "We walked through the dark tunnel."
@@ -601,7 +632,7 @@ PP.addLesson({
       answer: "Wuns should be once: \"Once a week, we go to the library.\""
     }
   ],
-  parent: "Write five tricky words on sticky notes and put them on the fridge or bathroom mirror. Each morning, have your child read them fast, then hunt for them in a book, menu or sign that day.",
+  parent: "Write five sight words on cards and flash each one for a second or two. Your child should read it right away, without sounding it out; any word they stop on goes back in the practice pile. Then hunt for the words together in a book, menu or sign.",
   passages: [],
   practice: [
     { id: "SK-FF1a-P1", type: "mc", points: 1, dok: 1, passages: [],
@@ -620,7 +651,7 @@ PP.addLesson({
       slots: [
         { options: ["said", "sed", "sayed"], answer: 0 }
       ],
-      clue: "This word sounds like it has the e from bed, but the tricky part is spelled with two letters.",
+      clue: "This word sounds like it has the e from bed, but it is not spelled with e. Picture it in a book.",
       why: "The answer is said. The ai in said makes the sound of the e in bed." },
     { id: "SK-FF1a-P3", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly for each blank.",
@@ -629,8 +660,8 @@ PP.addLesson({
         { options: ["enough", "enuff", "enogh"], answer: 0 },
         { options: ["people", "peple", "peeple"], answer: 0 }
       ],
-      clue: "Both words have a tricky part. One has the same ending as tough. The other has an o that you do not hear.",
-      why: "The answers are enough and people. In enough, ough sounds like uff. In people, you do not hear the o, so eo sounds like long e." },
+      clue: "Picture each word in a book you have read. Both words have a tricky part that is not spelled the way it sounds.",
+      why: "The answers are enough and people. In enough, ough sounds like uff. In people, eo makes the long e sound." },
     { id: "SK-FF1a-P4", type: "ms", points: 2, dok: 1, passages: [], pick: 2,
       prompt: "Which TWO words are spelled correctly?",
       choices: [
@@ -652,7 +683,26 @@ PP.addLesson({
       ],
       answer: [2], pick: 1,
       clue: "Read each sentence slowly. Check the tricky words letter by letter.",
-      why: "The answer is \"It thot about the hens in the barn.\" Thot should be thought: t-h-o-u-g-h-t. The other sentences are spelled correctly." }
+      why: "The answer is \"It thot about the hens in the barn.\" Thot should be thought: t-h-o-u-g-h-t. The other sentences are spelled correctly." },
+    { id: "SK-FF1a-P6", type: "dropdown", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence. Choose the word that makes sense.",
+      text: "Yesterday I {0} a deer in our yard.",
+      slots: [
+        { options: ["saw", "was", "sew"], answer: 0 }
+      ],
+      clue: "These words look alike. Read each one in the sentence and ask: Does that make sense?",
+      why: "The answer is saw. \"Yesterday I saw a deer\" tells what I looked at. Was has the same letters in a different order, and sew means to stitch with a needle." },
+    { id: "SK-FF1a-P7", type: "hottext", points: 1, dok: 2, passages: [],
+      prompt: "One sentence uses a look-alike word that does not belong. Which sentence is it?",
+      options: [
+        "Where are my shoes?",
+        "We were late for the bus.",
+        "The letter came form Grandma.",
+        "This gift is from Aunt Lucy."
+      ],
+      answer: [2], pick: 1,
+      clue: "Read every letter of the short words. Then ask if each sentence makes sense.",
+      why: "The answer is \"The letter came form Grandma.\" It should say from. A form is a paper you fill out, so form does not make sense here." }
   ],
   test: [
     { id: "SK-FF1a-T1", type: "mc", points: 1, dok: 1, passages: [],
@@ -663,7 +713,7 @@ PP.addLesson({
         { text: "agen" },
         { text: "ugain" }
       ],
-      clue: "Picture the word in a book. It starts with a, and it has the same tricky letters as rain.",
+      clue: "Picture the word in a book. It starts with a, and it has the same vowel team as rain.",
       why: "The answer is again: a-g-a-i-n. It is spelled with ai, like in rain." },
     { id: "SK-FF1a-T2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly.",
@@ -675,35 +725,35 @@ PP.addLesson({
       why: "The answer is does. It comes from do, so it starts d-o, then e-s. Dose is a different word." },
     { id: "SK-FF1a-T3", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly for each blank.",
-      text: "Ava's best {0} told a joke, and everyone started to {1}.",
+      text: "Dad was {0} helping us {1} a birdhouse.",
       slots: [
-        { options: ["friend", "freind", "frend"], answer: 0 },
-        { options: ["laugh", "laff", "lagh"], answer: 0 }
+        { options: ["busy", "bizzy", "buzy"], answer: 0 },
+        { options: ["build", "bild", "biuld"], answer: 0 }
       ],
-      clue: "Use the trick for the first word: what does it end with? The second word has a tricky gh that sounds like f.",
-      why: "The answers are friend and laugh. Friend ends with end. In laugh, the augh sounds like af." },
+      clue: "Both words sound like they have a short i, but neither one spells that sound with just an i. Picture each word in a book.",
+      why: "The answers are busy and build. In busy, the u makes a short i sound. In build, the ui makes a short i sound." },
     { id: "SK-FF1a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word best completes the sentence?",
-      stem: "Max ran ____ the sprinkler to cool off.",
+      stem: "____ did you put the map?",
       choices: [
-        { text: "through", correct: true },
-        { text: "though" },
-        { text: "thought" },
-        { text: "threw" }
+        { text: "Where", correct: true },
+        { text: "Were" },
+        { text: "Wear" },
+        { text: "Wore" }
       ],
-      clue: "Think about what Max does with the sprinkler. Then read every letter of each word.",
-      why: "The answer is through. Max runs into the water on one side and out the other. Threw sounds the same, but it means tossed." },
+      clue: "This sentence asks a question about a place. Read every letter of each word.",
+      why: "The answer is Where. Where asks about a place: Where did you put the map? Were, wear and wore look alike, but they do not ask about a place." },
     { id: "SK-FF1a-T5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence has a misspelled word?",
+      prompt: "One sentence uses a look-alike word that does not belong. Which sentence is it?",
       options: [
-        "Our class went to the zoo once.",
-        "We could see the lions from the path.",
-        "Sam knew the anser to the riddle.",
-        "Many people stood by the seals."
+        "Please turn of the lamp.",
+        "We put on our coats and hats.",
+        "Two birds sat on the wire.",
+        "I want to go there someday."
       ],
-      answer: [2], pick: 1,
-      clue: "Read each sentence slowly. Check the tricky words letter by letter, including silent letters.",
-      why: "The answer is \"Sam knew the anser to the riddle.\" Anser should be answer, which has a silent w. The other sentences are spelled correctly." }
+      answer: [0], pick: 1,
+      clue: "Read every letter of the short words. Then ask if each sentence makes sense.",
+      why: "The answer is \"Please turn of the lamp.\" It should say off, with two f's. You turn a lamp off. Of is a different word." }
   ]
 });
 
@@ -781,7 +831,7 @@ PP.addLesson({
       targets: ["p1:1:2", "p1:2:2", "p1:3:1", "p1:3:3", "p1:4:2", "p1:5:1"],
       answer: ["p1:3:1", "p1:5:1"], pick: 2,
       clue: "Read each sentence and ask: Does that make sense? Picture what is happening in the kitchen.",
-      why: "The answers are \"Grandpa heated the plan on the stove.\" and \"They put berries and a little money on top.\" You cannot heat a plan, and you put honey, not money, on pancakes." },
+      why: "The answers are \"Grandpa heated the plan on the stove.\" and \"They put berries and a little money on top.\" You cannot heat a plan, and money is not something you put on pancakes." },
     { id: "SK-FF1d-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "In paragraph 3, Ben read the word plan. Which word does the story most likely say?",
       choices: [
@@ -790,7 +840,7 @@ PP.addLesson({
         { text: "plane" },
         { text: "pen" }
       ],
-      clue: "Read the next sentence in paragraph 3. Which word looks like plan and names something Grandpa can heat on the stove?",
+      clue: "Think about what Grandpa uses to cook on the stove. Check that the word also looks like plan.",
       why: "The answer is pan. Grandpa heats a pan on the stove, and the next sentence says he drops batter into the pan. Pan looks like plan without the l." },
     { id: "SK-FF1d-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "In paragraph 5, Ben read the word money. Choose the word that makes sense and looks like money.",
@@ -798,7 +848,7 @@ PP.addLesson({
       slots: [
         { options: ["honey", "monkey", "many"], answer: 0 }
       ],
-      clue: "Think about what people put on top of pancakes. The right word ends the same way as money.",
+      clue: "Which word would make sense on top of pancakes? Check that it also looks like money.",
       why: "The answer is honey. Honey is a sweet topping for pancakes, and it looks like money except for the first letter." },
     { id: "SK-FF1d-P4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "A reader made a mistake in one of these sentences. Which sentence does NOT make sense?",
@@ -828,24 +878,26 @@ PP.addLesson({
       answer: ["p2:1:2", "p2:4:1"], pick: 2,
       clue: "Read each sentence and ask: Does that make sense? Picture what is happening in the garden.",
       why: "The answers are \"Each student got a small squirrel of dirt.\" and \"One day, a big crown landed on the fence.\" A squirrel is not a piece of dirt, and a crown cannot land on a fence." },
-    { id: "SK-FF1d-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "In paragraph 4, Ava read the word crown. Which word does the story most likely say?",
+    { id: "SK-FF1d-T2", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Leo misread one word in this sentence. Which word did the sentence most likely say?",
+      stem: "Leo read: \"The firefighters sprayed the fire with a long horse.\"",
       choices: [
-        { text: "crow", correct: true },
-        { text: "cow" },
-        { text: "clown" },
-        { text: "crowd" }
+        { text: "hose", correct: true },
+        { text: "house" },
+        { text: "horn" },
+        { text: "hoop" }
       ],
-      clue: "Read the next two sentences. What lands on fences, wants to eat seeds and gets scared by a scarecrow?",
-      why: "The answer is crow. A crow is a bird that can land on a fence and eat seeds, and a scarecrow is made to scare it away. Crow looks like crown without the n." },
-    { id: "SK-FF1d-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
-      prompt: "In paragraph 1, Ava read the word squirrel. Choose the word that makes sense.",
-      text: "Each student got a small {0} of dirt.",
+      clue: "Picture what firefighters use to spray water. Find a word that fits and looks like the word Leo read.",
+      why: "The answer is hose. Firefighters spray water through a long hose. Hose looks like horse without the r." },
+    { id: "SK-FF1d-T3", type: "dropdown", points: 1, dok: 2, passages: [],
+      prompt: "Mia misread one word in this sentence. Choose the word that makes sense.",
+      stem: "Mia read: \"We rode our bikes down the hill as fast as we cold.\"",
+      text: "The word that makes sense in place of cold is {0}.",
       slots: [
-        { options: ["square", "squash", "squeak"], answer: 0 }
+        { options: ["could", "call", "coat"], answer: 0 }
       ],
-      clue: "Each student gets a part of the garden to plant in. Which word names a shape of land?",
-      why: "The answer is square. Each student got a small square of dirt to plant in. Square and squirrel both start with squ, which is why Ava mixed them up." },
+      clue: "Say the end of the sentence with each word: as fast as we ___. Which one sounds right and makes sense?",
+      why: "The answer is could. \"As fast as we could\" means as fast as we were able to go. Could and cold share the letters c, o, l and d, so they are easy to mix up." },
     { id: "SK-FF1d-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "A reader made a mistake in one of these sentences. Which sentence does NOT make sense?",
       choices: [
