@@ -44,3 +44,33 @@ File changed: `js/data/lessons/T-RA.js` only. `node verification/check-content.j
 - A and B, SK-RA2b-P2 repeats Learn 2 (tornadoes): fixed. The topic is now hurricanes (key, news-story distractor and `why`).
 
 No findings declined.
+
+## Round 2 (response to T-RA-verify.md)
+
+File changed: `js/data/lessons/T-RA.js` only. `node verification/check-content.js --all`: PASS, with no failures or warnings for T-RA. The remaining warnings are in other lesson files.
+
+### Verify SHOULDs
+- 3.T.RA.1.c Learn 1, the ask says "one sentence" but the answer has two: fixed. The `ask` is now "Write two sentences that sum up both sources." This keeps the model answer, which shows "also" joining the two ideas as step 4 teaches.
+- SK-RA1b-T2 and T4 share the "no wind or rain" fact: fixed. The T4 key is now "The moon has no air." To keep "no air" in one item only:
+  - The T3 second key is now "Astronauts wore space suits on the moon." It no longer says "because there is no air".
+  - The T2 distractor "Astronauts wore space suits so they could breathe." is now "The moon is much smaller than Earth is."
+  - The T4 distractor "Moon rocks help scientists learn." is now "Mr. Okafor works at a science center." The old one previewed the T5 key.
+- SK-RA1c-T5 hints at the T2 answer: fixed. The second sentence is now "{1}, they drink nectar and eat tiny insects." Slot 2 options are "To get that energy" (key), "In early spring", "In conclusion" and "Instead". The clue and `why` are rewritten. The late-summer eating fact now appears only in T2.
+
+### The same rule applied to the rest of each test (no test item may hint at another item's answer)
+- SK-RA1b-T2: the distractor "Scientists still study the moon rocks today." previewed the T5 key. It is now "The moon travels around Earth again and again."
+- SK-RA1b-T5: the stem note is now "There are rocks on the moon's ground." The old note quoted the dust fact that T1's Both row tests. The distractor "Astronauts first walked on the moon in the year 1969." was a T3 key, so it is now "The moon is Earth's closest neighbor in space." That fact comes from Source 1, so it is wrong for a question that asks for a Source 2 fact.
+- SK-RA1c-T3: the keys restated the T1 key (going south for winter) and a T4 draft sentence (hover and fly backward). The item is now "Which TWO sentences are true to the sources and belong in her summary?"
+  - Keys: "Their wings beat so fast that they look like a blur." (Source 1) and "Many of them cross a wide sea without stopping to rest." (Source 2).
+  - Distractors: an opinion, "can only fly forward" (contradicts Source 1) and "nest out of mud and sticks" (contradicts Source 2).
+- SK-RA1c-T4: the draft's non-key sentences no longer repeat the T1 key or the T3 content. They are now long bills and tongues, feeders with sugar water, and returning to the same places. The key (the aunt's feeder) is unchanged.
+- SK-RA1a-T1: the distractor "Where do owls build their nests?" was a T3 key, so it is now "How do owl chicks learn to fly?" The T4 row with the same nest question is now "Where do snowy owls live?" (still a good research question).
+- SK-RA2a-T2 Part B: the distractor "Her fingers would not stop shaking." was the T1 hottext key, so it is now "Ana nodded."
+
+### New checker warnings (clue shares a word only with the key): fixed
+- SK-RA1b-T2 ("away"): the clue now says "what keeps the footprints safe".
+- SK-RA2a-P2 ("light"): the clue now says "what fireflies do when they glow … where the glow starts".
+- SK-RA2b-T2 ("bees"): the clue now says "how honey is made".
+- SK-RA2b-T5 ("writer"): the clue now says "Read the words on the page".
+
+No findings declined.
