@@ -81,7 +81,7 @@ PP.addSet({
         { text: "It shows that the speaker is afraid of the yard when the sun goes down." }
       ],
       clue: "Notice what stanza 1 talks about and what it does not talk about yet. Is anything glowing in stanza 1?",
-      why: "The answer is \"It sets the scene: a quiet, dark evening before the fireflies come out.\" Stanza 1 shows the sun going down and the dark, still yard, so the fireflies' glow in stanza 2 stands out. The fireflies and the jar do not appear until later stanzas."
+      why: "The answer is that it sets the scene: a quiet, dark evening before the fireflies come out. Stanza 1 shows the sun going down and the dark, still yard, so the fireflies' glow in stanza 2 stands out. The fireflies and the jar do not appear until later stanzas."
     },
     {
       id: "R-POE-01-q3", type: "match", points: 2, std: ["3.T.SS.2.a"], dok: 2,
@@ -155,7 +155,7 @@ PP.addSet({
         { text: "Marcus counts the fireflies all alone, but the speaker counts them with a little sister." }
       ],
       clue: "Check each part of each choice against BOTH texts. A choice is right only if every part of it is true.",
-      why: "The answer is \"Marcus first plans to catch fireflies in a jar, but the speaker would rather watch them.\" Marcus plans to fill the jar to make a night-light for Lila, then changes his mind. The speaker says, \"I'd rather watch them, free and bright.\" Marcus never catches a firefly, Lila (not Marcus) is afraid of the dark, and Marcus counts the lights with Lila, not alone."
+      why: "The answer is: Marcus first plans to catch fireflies in a jar, but the speaker would rather watch them. Marcus plans to fill the jar to make a night-light for Lila, then changes his mind. The speaker says, \"I'd rather watch them, free and bright.\" Marcus never catches a firefly, Lila (not Marcus) is afraid of the dark, and Marcus counts the lights with Lila, not alone."
     },
     {
       id: "R-POE-01-q8", type: "ms", points: 1, std: ["3.T.T.1.d"], dok: 3,
@@ -170,7 +170,7 @@ PP.addSet({
         { text: "Crickets sing while the fireflies glow." }
       ],
       clue: "For each choice, find it in the poem, then find it in the story. Keep only the choices you can find in both.",
-      why: "The answers are \"The fireflies glow outside on a summer evening\" and \"Someone decides not to put fireflies in a jar.\" Both texts take place on a summer evening when fireflies glow. The speaker says, \"I do not need a jar tonight,\" and Marcus sets his jar down and leaves it empty. The lanterns and the crickets are only in the poem, Lila's fear of the dark is only in the story, and no firefly is kept in a jar in either text."
+      why: "The answers are: the fireflies glow outside on a summer evening, and someone decides not to put fireflies in a jar. The speaker says, \"I do not need a jar tonight,\" and Marcus leaves his jar empty. The lanterns and crickets are only in the poem, Lila's fear of the dark is only in the story, and neither text keeps a firefly in a jar."
     }
   ]
 });

@@ -36,7 +36,7 @@ PP.addSet({
         { text: "She thinks the cakes are too sweet to eat." }
       ],
       clue: "The narrator tells the story using I. Read paragraphs 2 and 3 and look for what Min-ji says she thinks and wants, not what someone else thinks.",
-      why: "Min-ji thinks it is slow and wants to be done fast. She says, \"I used to think it was the slowest part,\" and she wants to finish so she can play. It is Grandmother, not Min-ji, who calls it the best part."
+      why: "The answer is that she thinks it is slow and wants to be done fast. She says, \"I used to think it was the slowest part,\" and she wants to finish so she can play. It is Grandmother, not Min-ji, who calls it the best part."
     },
     {
       id: "R-LIT-02-q2", type: "dropdown", points: 1, std: ["3.L.V.3.a"], dok: 2,

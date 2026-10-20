@@ -32,14 +32,14 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.2.a"],
       dok: 2,
-      prompt: "Which sentence is written correctly?",
+      prompt: "Which sentence is correct?",
       choices: [
         { text: "My uncle fixed the fence, and then he painted it white.", correct: true },
         { text: "Because the puppy was hungry and wanted its dinner." },
         { text: "The kite flew high it got stuck in a tall tree." },
         { text: "Running across the wet grass early in the morning." }
       ],
-      clue: "A correct sentence tells who or what, and what they did, and it is a complete thought. Two sentences cannot be smashed together without a joining word.",
+      clue: "A correct sentence tells who or what, and what they did, and it is a complete thought. You cannot smash two sentences together without a joining word.",
       why: "The answer is \"My uncle fixed the fence, and then he painted it white.\" It is two complete sentences joined with a comma and and. The puppy sentence and the grass sentence are not complete thoughts, and the kite sentence runs two sentences together."
     },
     {
@@ -123,7 +123,7 @@ PP.addSet({
       slots: [
         { options: ["barks", "bark", "barking"], answer: 1 }
       ],
-      clue: "Who is doing the action? Skip the words \"in the pet store window\" and find the main noun. Is it one or more than one?",
+      clue: "Who does the action? Skip the words \"in the pet store window\" and find the main noun. Is it one or more than one?",
       why: "The answer is bark. The puppies do the barking, and puppies means more than one, so we say \"the puppies bark.\" Window is not the subject."
     },
     {

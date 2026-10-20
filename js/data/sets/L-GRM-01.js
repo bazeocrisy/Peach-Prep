@@ -42,7 +42,7 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:form-and-use-irregular-plural-nouns"],
       dok: 2,
-      prompt: "Which sentence is written correctly?",
+      prompt: "Which sentence is correct?",
       choices: [
         { text: "The two mice hid under the old porch steps.", correct: true },
         { text: "The dentist checked all of my tooths today." },
@@ -150,7 +150,7 @@ PP.addSet({
         { options: ["I", "me", "myself", "mine"], answer: 1 }
       ],
       clue: "Cover up \"Jada and.\" Then try each word by itself after \"gave.\"",
-      why: "The answer is me. Without Jada, the sentence says \"The librarian gave me new bookmarks.\" Me is the word to use after an action word like gave. Myself is used only when the same person does the action and gets it, like \"I helped myself.\" Here the librarian does the giving, so myself does not fit."
+      why: "The answer is me. Without Jada, the sentence says \"The librarian gave me new bookmarks.\" Me is the word to use after an action word like gave. We use myself only when the same person does the action and gets it, like \"I helped myself.\" Here the librarian does the giving, so myself does not fit."
     },
     {
       id: "L-GRM-01-10",
@@ -158,7 +158,7 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"],
       dok: 2,
-      prompt: "Read the sentence: \"The wind BLOWED the leaves across our yard.\" How should the word in ALL capital letters be written?",
+      prompt: "Read the sentence: \"The wind BLOWED the leaves across our yard.\" What is the correct way to write the word in ALL capital letters?",
       choices: [
         { text: "blew", correct: true },
         { text: "blown" },

@@ -29,7 +29,6 @@ PP.addSet({
         ],
         [
           "First, a garden would help us learn science.",
-          "In third grade, we study how plants grow and change.",
           "Right now, we mostly read about seeds in our science books.",
           "In a garden, we could watch a bean seed sprout, grow leaves, and make new seeds of its own.",
           "Our science teacher, Mr. Lane, says that students remember more when they see things for themselves."
@@ -47,7 +46,7 @@ PP.addSet({
           "Twenty-one of them said yes!"
         ],
         [
-          "Some people may disagree because a garden takes time and work.",
+          "Some people may disagree because a garden would be too much work for the teachers.",
           "However, my mom and three other parents have already offered to help on weekends, so the teachers would not have to do all the work."
         ],
         [
@@ -102,13 +101,13 @@ PP.addSet({
       prompt: "Decide whether each sentence from the article is a fact or an opinion.",
       cols: ["Fact", "Opinion"],
       rows: [
-        { text: "In third grade, we study how plants grow and change.", answer: 0 },
-        { text: "A garden would teach us to work as a team.", answer: 1 },
-        { text: "Last week, I asked the twenty-four students in my class if they would help.", answer: 0 },
-        { text: "A garden would make our school a better place to learn and grow.", answer: 1 }
+        { text: "Finally, a garden would teach us to work as a team.", answer: 1 },
+        { text: "Right now, we mostly read about seeds in our science books.", answer: 0 },
+        { text: "A garden would make our school a better place to learn and grow.", answer: 1 },
+        { text: "Last week, I asked the twenty-four students in my class if they would help.", answer: 0 }
       ],
       clue: "A fact can be checked to see if it is true. An opinion tells what someone thinks or believes, and people could disagree with it.",
-      why: "Facts: third graders study how plants grow, and Maya asked twenty-four classmates. Both can be checked. Opinions: a garden would teach students to work as a team, and a garden would make the school a better place. These are what Maya believes will happen, and other people could disagree."
+      why: "Facts: the class mostly reads about seeds in science books, and Maya asked twenty-four classmates. Both can be checked, for example by visiting the class or asking the students. Opinions: a garden would teach students to work as a team, and a garden would make the school a better place. These are what Maya believes will happen, and other people could disagree."
     },
     {
       id: "R-OPN-01-4",
@@ -118,7 +117,7 @@ PP.addSet({
       dok: 3,
       prompt: "This question has two parts. Answer Part A, then answer Part B.",
       partA: {
-        prompt: "Part A: Why does Maya tell what Mr. Lane and Ms. Ortiz said?",
+        prompt: "Why does Maya tell what Mr. Lane and Ms. Ortiz said?",
         choices: [
           { text: "to show that adults who know about these topics support her reasons", correct: true },
           { text: "to explain which adults will water the garden on the weekends" },
@@ -127,8 +126,10 @@ PP.addSet({
         ]
       },
       partB: {
-        prompt: "Part B: Which sentence from the article best supports the answer to Part A?",
+        prompt: "Which TWO sentences from the article best support the answer to Part A?",
+        pick: 2,
         choices: [
+          { text: "Our science teacher, Mr. Lane, says that students remember more when they see things for themselves.", correct: true },
           { text: "Our school nurse, Ms. Ortiz, told me that children are often more willing to taste vegetables they have grown themselves.", correct: true },
           { text: "For example, my class could grow lettuce and carrots for a salad day." },
           { text: "Each class could take turns watering, pulling weeds, and picking vegetables." },
@@ -136,7 +137,7 @@ PP.addSet({
         ]
       },
       clue: "Think about each adult's job. Why would a reader trust what a science teacher says about learning, or what a nurse says about food?",
-      why: "Part A: Maya includes them to show that adults who know about these topics support her reasons. A science teacher knows about learning, and a nurse knows about healthy eating, so this makes her article more believable. Part B: The sentence about Ms. Ortiz, the school nurse, shows an expert agreeing with her reason about healthier food."
+      why: "Part A: Maya includes them to show that adults who know about these topics support her reasons. A science teacher knows about learning, and a nurse knows about healthy eating, so this makes her article more believable. Part B: The sentence about Mr. Lane, the science teacher, shows an expert agreeing with her reason about learning science. The sentence about Ms. Ortiz, the school nurse, shows an expert agreeing with her reason about healthier food. The parents offer to help with the work, but they are not experts on these topics."
     },
     {
       id: "R-OPN-01-5",
@@ -161,11 +162,11 @@ PP.addSet({
       std: ["3.T.T.3.a"],
       dok: 2,
       prompt: "Read the first sentence of paragraph 3. Choose the answer that completes the sentence.",
-      text: "The linking words Another reason tell the reader that Maya is {0}.",
+      text: "The linking words \"Another reason\" tell the reader that Maya is {0}.",
       slots: [
         { options: ["adding a new reason to support her opinion", "giving an example of a vegetable to grow", "starting the conclusion of her article", "telling what people who disagree think"], answer: 0 }
       ],
-      clue: "Linking words connect ideas. Ask yourself: what came before paragraph 3, and what does the word another mean?",
+      clue: "Linking words connect ideas. What did paragraph 2 give the reader, and what does paragraph 3 give?",
       why: "\"Another reason\" tells the reader that Maya is adding a new reason to support her opinion. Paragraph 2 gave her first reason, and paragraph 3 gives a second one, about eating healthier food."
     },
     {
@@ -188,7 +189,8 @@ PP.addSet({
       points: 1,
       std: ["3.L.V.2.a"],
       dok: 1,
-      prompt: "Read this sentence from paragraph 5.\n\n\"Some people may disagree because a garden takes time and work.\"\n\nThe word disagree is made of the prefix dis- and the word agree. What does disagree mean?",
+      prompt: "Read this sentence from paragraph 5. The word disagree is made of the prefix dis- and the word agree. What does disagree mean?",
+      stem: "\"Some people may disagree because a garden would be too much work for the teachers.\"",
       choices: [
         { text: "to not agree", correct: true },
         { text: "to agree again" },

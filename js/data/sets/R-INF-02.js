@@ -20,7 +20,7 @@ PP.addSet({
       title: "People of the Okefenokee",
       byline: "",
       genre: "Informational text",
-      lexile: "about 640L (estimate)",
+      lexile: "about 700L (estimate)",
       paragraphs: [
         [
           "The Okefenokee Swamp covers a huge area of southeast Georgia and stretches into northern Florida.",
@@ -37,16 +37,16 @@ PP.addSet({
         [
           "In the late 1800s, a company tried to drain the water out of the swamp by digging a long canal.",
           "The company wanted to cut the trees and turn the swamp into farmland.",
-          "The plan was unsuccessful, and the company gave up after a few years."
+          "The plan did not work, and the company gave up after a few years."
         ],
         [
           "In the early 1900s, loggers built railroad tracks into the swamp.",
           "They cut down many of the swamp's giant old cypress trees and sold the wood."
         ],
         [
-          "People began to worry that the swamp and its animals could be lost.",
-          "In 1937, the United States government made most of the swamp a national wildlife refuge, a place where plants and animals are protected.",
-          "Since then, young cypress trees have slowly begun to regrow."
+          "As the giant trees disappeared, people began to worry that the swamp and its animals could be lost.",
+          "In 1937, the United States government made most of the swamp a national wildlife refuge.",
+          "A refuge is a place where plants and animals are protected."
         ]
       ],
       lines: null
@@ -61,13 +61,14 @@ PP.addSet({
         [
           "The name Okefenokee comes from a Native American word.",
           "It is often said to mean \"land of trembling earth.\"",
-          "Visitors who explore the swamp soon learn how it got this name."
+          "Some language experts think the word may have meant \"bubbling water\" instead.",
+          "Either way, visitors who explore the swamp soon see why \"trembling earth\" is a good fit."
         ],
         [
           "Much of the swamp is covered by peat, a thick layer of old, wet plant matter.",
           "In some places, the peat floats on top of the water.",
           "Plants and even small trees grow on these floating islands.",
-          "When a person steps on one, the ground and the trees around it shake."
+          "When a person steps on one, the unsteady ground and the trees around it shake."
         ],
         [
           "The swamp's water is another surprise.",
@@ -81,7 +82,7 @@ PP.addSet({
           "More than two hundred kinds of birds, including tall sandhill cranes, can be seen there."
         ],
         [
-          "Today, the swamp is a national wildlife refuge, so its plants and animals are protected.",
+          "Today, most of the swamp is a national wildlife refuge, so its plants and animals are protected.",
           "Visitors can paddle canoes along water trails or walk on long wooden boardwalks.",
           "In these ways, people can see the swamp up close without harming it."
         ]
@@ -104,7 +105,7 @@ PP.addSet({
         { text: "Loggers built railroad tracks into the swamp to reach the giant cypress trees." }
       ],
       clue: "Which choice fits EVERY paragraph of the passage, not just one of them?",
-      why: "The main idea is \"People have lived in and used the Okefenokee Swamp in different ways over time.\" Each paragraph tells about a different group: Native Americans, swampers, a company, loggers, and finally the government. The other choices each tell about only one paragraph."
+      why: "The main idea is \"People have lived in and used the Okefenokee Swamp in different ways over time.\" After the introduction, the paragraphs tell about different people in time order: Native Americans and swampers, a company, loggers, and finally the government. Each of the other choices tells about only one paragraph."
     },
     {
       id: "R-INF-02-2",
@@ -112,7 +113,7 @@ PP.addSet({
       points: 2,
       std: ["3.T.T.2.b"],
       dok: 2,
-      prompt: "Put these events from \"People of the Okefenokee\" in the order they happened. Drag the earliest event to the top.",
+      prompt: "Put these events from \"People of the Okefenokee\" in the order they happened, earliest to latest.",
       steps: [
         "Native American people fish and hunt in the swamp.",
         "A company digs a canal to try to drain the swamp.",
@@ -128,13 +129,14 @@ PP.addSet({
       points: 1,
       std: ["3.L.V.2.a"],
       dok: 1,
-      prompt: "Read this sentence from paragraph 5 of \"People of the Okefenokee.\"\n\n\"Since then, young cypress trees have slowly begun to regrow.\"\n\nChoose the answer that completes the sentence.",
-      text: "The prefix re- tells you that the word regrow means to grow {0}.",
+      prompt: "Read this sentence from paragraph 2 of \"The Land of Trembling Earth.\" Choose the answer that completes the sentence.",
+      stem: "\"When a person steps on one, the unsteady ground and the trees around it shake.\"",
+      text: "The prefix un- tells you that the word unsteady means {0}.",
       slots: [
-        { options: ["again", "too fast", "for the first time", "before"], answer: 0 }
+        { options: ["not steady", "very steady", "steady again", "steady before"], answer: 0 }
       ],
-      clue: "Think of other words that start with re-, such as reread and refill. What does re- add to each word?",
-      why: "Regrow means to grow again. The prefix re- means \"again,\" just like reread means to read again. The trees were cut down, and now new ones are growing again."
+      clue: "Think of other words that start with un-, such as unhappy and unkind. What does un- do to the word that follows it?",
+      why: "Unsteady means not steady. The prefix un- means \"not,\" just like unhappy means not happy. Ground that shakes when you step on it is not steady."
     },
     {
       id: "R-INF-02-4",
@@ -142,13 +144,13 @@ PP.addSet({
       points: 1,
       std: ["3.T.RA.2.a", "3.T.T.2.b"],
       dok: 2,
-      prompt: "Read paragraphs 4 and 5 of \"People of the Okefenokee.\" Select the sentence that best explains WHY the swamp was made a wildlife refuge.",
+      prompt: "Read paragraphs 3, 4 and 5 of \"People of the Okefenokee.\" Select the sentence that best explains WHY the swamp was made a wildlife refuge.",
       source: "p1",
-      targets: ["p1:4:1", "p1:4:2", "p1:5:1", "p1:5:2", "p1:5:3"],
+      targets: ["p1:3:3", "p1:4:1", "p1:5:1", "p1:5:2"],
       answer: ["p1:5:1"],
       pick: 1,
       clue: "One sentence tells WHAT happened in 1937. Look for the sentence that tells the reason it happened.",
-      why: "The answer is \"People began to worry that the swamp and its animals could be lost.\" That worry is the reason. The sentence about 1937 tells what the government did, but not why."
+      why: "The answer is \"As the giant trees disappeared, people began to worry that the swamp and its animals could be lost.\" It tells what was happening and the worry it caused, and that worry is the reason. The sentence about 1937 tells what the government did, but not why. The sentences about the canal and the railroad tracks tell earlier events, not the reason for the refuge."
     },
     {
       id: "R-INF-02-5",
@@ -158,7 +160,7 @@ PP.addSet({
       dok: 2,
       prompt: "This question has two parts. Answer Part A, then answer Part B.",
       partA: {
-        prompt: "Part A: In \"The Land of Trembling Earth,\" why does the ground shake when a person steps on it in some parts of the swamp?",
+        prompt: "In \"The Land of Trembling Earth,\" why does the ground shake when a person steps on it in some parts of the swamp?",
         choices: [
           { text: "The ground there is peat that floats on top of the water.", correct: true },
           { text: "The roots of tall cypress trees push up through the soil." },
@@ -167,7 +169,7 @@ PP.addSet({
         ]
       },
       partB: {
-        prompt: "Part B: Which sentence from \"The Land of Trembling Earth\" best supports the answer to Part A?",
+        prompt: "Which sentence from \"The Land of Trembling Earth\" best supports the answer to Part A?",
         choices: [
           { text: "It is often said to mean \"land of trembling earth.\"" },
           { text: "In some places, the peat floats on top of the water.", correct: true },
@@ -175,7 +177,7 @@ PP.addSet({
           { text: "Visitors can paddle canoes along water trails or walk on long wooden boardwalks." }
         ]
       },
-      clue: "Find the paragraph that tells about the shaking ground. Read the sentences just before the one about stepping.",
+      clue: "Find the paragraph that tells about the shaking ground and read all of it. Then ask which choice tells the cause, not just what happens.",
       why: "Part A: The answer is \"The ground there is peat that floats on top of the water.\" Part B: \"In some places, the peat floats on top of the water\" shows this. The canal is from the other passage, and the fallen leaves explain the dark water, not the shaking."
     },
     {
@@ -187,15 +189,15 @@ PP.addSet({
       dok: 3,
       prompt: "Which TWO ideas are found in BOTH passages? Choose two answers.",
       choices: [
-        { text: "The swamp is now a wildlife refuge where plants and animals are protected.", correct: true },
-        { text: "Native American people are part of the swamp's history.", correct: true },
+        { text: "Most of the swamp is now a wildlife refuge where plants and animals are protected.", correct: true },
+        { text: "The swamp has a connection to Native American people.", correct: true },
         { text: "A company once tried to drain the swamp by digging a long canal." },
         { text: "The swamp's water looks dark brown, almost like a cup of tea." },
         { text: "Loggers cut down many of the swamp's giant old cypress trees." },
         { text: "Visitors can paddle canoes along water trails through the swamp." }
       ],
       clue: "For each choice, check BOTH passages. Keep a choice only if you can find it in passage 1 AND in passage 2.",
-      why: "The answers are \"The swamp is now a wildlife refuge where plants and animals are protected\" and \"Native American people are part of the swamp's history.\" Both passages tell about the refuge. Both also include Native American people: passage 1 tells that they lived in the swamp, and passage 2 tells that the name Okefenokee comes from a Native American word. The canal and the loggers are only in passage 1. The tea-colored water and the canoes are only in passage 2."
+      why: "The answers are \"Most of the swamp is now a wildlife refuge where plants and animals are protected\" and \"The swamp has a connection to Native American people.\" Both passages tell about the refuge. Both also include Native American people: passage 1 tells that they lived in the swamp, and passage 2 tells that the name Okefenokee comes from a Native American word. The canal and the loggers are only in passage 1. The tea-colored water and the canoes are only in passage 2."
     },
     {
       id: "R-INF-02-7",
@@ -206,14 +208,14 @@ PP.addSet({
       prompt: "Where can you find each piece of information? Match each row to Passage 1 only, Passage 2 only, or Both passages.",
       cols: ["Passage 1 only", "Passage 2 only", "Both passages"],
       rows: [
-        { text: "how the swamp got its name", answer: 1 },
+        { text: "what the swamp's name is often said to mean", answer: 1 },
         { text: "what happened when a company dug a canal", answer: 0 },
-        { text: "that the swamp became a wildlife refuge", answer: 2 },
+        { text: "that the swamp has islands", answer: 2 },
         { text: "why the ground shakes in some places", answer: 1 },
         { text: "how settler families lived on the islands", answer: 0 }
       ],
       clue: "Passage 1 tells about people and events over time. Passage 2 describes the swamp itself. Check both before you choose Both passages.",
-      why: "Passage 2 only: how the swamp got its name, and why the ground shakes. Passage 1 only: the canal, and the swamper families. Both passages: the swamp became a wildlife refuge."
+      why: "Passage 2 only: what the swamp's name is often said to mean, and why the ground shakes. Passage 1 only: the canal, and the swamper families. Both passages: the swamp has islands. Passage 1 tells about people living on the swamp's islands, and passage 2 tells about floating islands of peat."
     },
     {
       id: "R-INF-02-8",

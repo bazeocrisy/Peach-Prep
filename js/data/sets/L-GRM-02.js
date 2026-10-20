@@ -13,14 +13,14 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"],
       dok: 2,
-      prompt: "Which sentence is written correctly?",
+      prompt: "Which sentence is correct?",
       choices: [
         { text: "Leo's backpack hangs on a hook by the door.", correct: true },
         { text: "We cant go outside until the rain stops." },
         { text: "The bird's sing in the oak tree every morning." },
         { text: "Shes my partner for the science project." }
       ],
-      clue: "An apostrophe shows that letters were left out (a contraction) or that something belongs to someone. A word that only means more than one does not get an apostrophe.",
+      clue: "An apostrophe takes the place of letters you leave out (a contraction) or shows that something belongs to someone. A word that only means more than one does not get an apostrophe.",
       why: "The answer is \"Leo's backpack hangs on a hook by the door.\" The backpack belongs to Leo, so Leo's needs an apostrophe. The others should say can't and She's, and birds needs no apostrophe because it only means more than one bird."
     },
     {
@@ -35,7 +35,7 @@ PP.addSet({
         { options: ["Were", "We're", "Wer'e"], answer: 1 },
         { options: ["Grandmas", "Grandma", "Grandma's"], answer: 2 }
       ],
-      clue: "The first blank is a short way to say two words. The apostrophe goes where letters were left out. The second blank tells who the garden belongs to.",
+      clue: "The first blank is a short way to say two words. The apostrophe takes the place of the letters you leave out. The second blank tells who the garden belongs to.",
       why: "The answers are We're and Grandma's. We're is short for \"we are,\" and the apostrophe takes the place of the a. Grandma's shows that the garden belongs to Grandma."
     },
     {
@@ -47,7 +47,7 @@ PP.addSet({
       prompt: "Select the sentence that has an error.",
       options: [
         "Our family drove to Savannah for the Fourth of July.",
-        "My friend Aiden was born in March.",
+        "My friend Aiden has a birthday in March.",
         "We hiked up stone mountain with my uncle last summer.",
         "The library does not open on Thanksgiving Day.",
         "Grandma mailed me a postcard from Texas."
@@ -63,7 +63,7 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:R:capitalize-proper-nouns"],
       dok: 2,
-      prompt: "Which sentence is written correctly?",
+      prompt: "Which sentence is correct?",
       choices: [
         { text: "Our class wrote a letter to a pen pal in Ohio.", correct: true },
         { text: "My Teacher showed us a map of the Chattahoochee River." },
@@ -97,7 +97,7 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"],
       dok: 1,
-      prompt: "Nia wants to write a letter to her aunt. Which greeting is written correctly?",
+      prompt: "Nia wants to write a letter to her aunt. Which greeting is correct?",
       choices: [
         { text: "Dear Aunt Lena,", correct: true },
         { text: "Dear, Aunt Lena" },
@@ -133,7 +133,7 @@ PP.addSet({
       points: 1,
       std: ["3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"],
       dok: 2,
-      prompt: "Each sentence joins two complete sentences with a joining word. Select the sentence that is missing a comma.",
+      prompt: "Each sentence joins two complete sentences with a joining word. Select the sentence that needs a comma.",
       options: [
         "Maya likes to draw horses, and her brother likes to draw trains.",
         "The library was not open today, so we went to the park instead.",

@@ -108,8 +108,8 @@ PP.addSet({
           { text: "Deja's cheeks felt hot." }
         ]
       },
-      clue: "Think about what Deja wants at the beginning of the story and what she does at the end. For Part B, rule out sentences that only tell what Deja sees, feels for a moment, or does to fly the kite. Keep the one that shows her new way of thinking.",
-      why: "Part A: Deja changes from wanting to do it alone to sharing the kite with Theo. Part B: \"It's our kite now\" shows she now thinks of the kite as belonging to both of them, not just to her. \"Now!\" she called is only a signal to let go, her hot cheeks show she is upset for a moment, and looking at the tiny ribbon shows her noticing the problem. None of those shows her sharing."
+      clue: "Think about what Deja wants at the beginning of the story and what she does at the end. For Part B, choose the sentence that shows her new way of thinking, not just something she sees or feels for a moment.",
+      why: "Part A: Deja changes from wanting to do it alone to sharing the kite with Theo. Part B: \"It's our kite now\" shows she now thinks of the kite as belonging to both of them, not just to her. \"Now!\" is only a signal to let go, hot cheeks show she is upset for a moment, and the tiny ribbon shows her noticing the problem. None shows her sharing."
     },
     {
       id: "R-LIT-01-q7", type: "mc", points: 1, std: ["3.T.T.1.a"], dok: 3,
@@ -121,7 +121,7 @@ PP.addSet({
         { text: "They show that Deja's kite is too small to fly well." }
       ],
       clue: "Look at paragraphs 7 and 10. What do Theo and Deja notice about the fish kites, and how does it help?",
-      why: "The fish kites give a clue about how to fix Deja's kite. Their long tails keep them from spinning, which helps Theo, and then Deja, figure out that her kite needs a longer tail. The problem is the short tail, not the size of the kite."
+      why: "The answer is that they give a clue about how to fix Deja's kite. The fish kites' long tails keep them from spinning, which helps Theo, and then Deja, figure out that her kite needs a longer tail. The problem is the short tail, not the size of the kite."
     },
     {
       id: "R-LIT-01-q8", type: "ms", points: 2, std: ["3.T.T.1.c"], dok: 2,
@@ -136,7 +136,7 @@ PP.addSet({
         { text: "Winning a prize is the best part of Kite Day." }
       ],
       clue: "Think about what Deja does at the end that she would not do at the beginning. Then check each choice against the story.",
-      why: "The answers are \"Other people's ideas can help you solve a problem\" and \"It is important to say sorry when you hurt someone.\" Theo's idea fixes the kite. The story also shows that saying sorry when you hurt someone can fix things, which Deja does in paragraph 11, and then Theo happily helps her. The story shows the opposite of the other choices, and it never mentions a prize."
+      why: "The answers are that other people's ideas can help you solve a problem, and that it is important to say sorry when you hurt someone. Theo's idea fixes the kite. The story also shows that saying sorry when you hurt someone can fix things, which Deja does in paragraph 11. The story shows the opposite of the other choices, and it never mentions a prize."
     }
   ]
 });
