@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 330" role="img" aria-labelledby="t">
+  <title id="t">Diagram of a plant with four labels: flower, leaf, stem and roots</title>
+  <!-- soil -->
+  <rect x="0" y="220" width="300" height="110" fill="#EADBC2"/>
+  <path d="M0 220 H300" stroke="#4A3A22" stroke-width="3"/>
+  <g fill="#4A3A22"><circle cx="40" cy="250" r="2"/><circle cx="250" cy="300" r="2"/><circle cx="60" cy="310" r="2"/><circle cx="270" cy="244" r="2"/></g>
+  <!-- roots -->
+  <g fill="none" stroke="#6B4A22" stroke-width="3" stroke-linecap="round">
+    <path d="M150 220 Q146 262 128 300"/><path d="M150 222 Q160 260 176 296"/><path d="M148 240 Q120 252 104 270"/><path d="M152 244 Q182 252 196 268"/><path d="M150 226 V310"/>
+  </g>
+  <!-- stem -->
+  <path d="M150 220 V92" stroke="#2F5A2A" stroke-width="7"/>
+  <!-- leaves -->
+  <path d="M150 170 Q110 136 82 158 Q112 186 150 170 Z" fill="#CFE8C4" stroke="#2F5A2A" stroke-width="2.5"/>
+  <path d="M150 140 Q192 112 216 134 Q188 160 150 140 Z" fill="#CFE8C4" stroke="#2F5A2A" stroke-width="2.5"/>
+  <!-- flower -->
+  <g fill="#FFFFFF" stroke="#111" stroke-width="2.5">
+    <circle cx="150" cy="50" r="15"/><circle cx="150" cy="96" r="15"/><circle cx="127" cy="73" r="15"/><circle cx="173" cy="73" r="15"/>
+    <circle cx="134" cy="57" r="15"/><circle cx="166" cy="57" r="15"/><circle cx="134" cy="89" r="15"/><circle cx="166" cy="89" r="15"/>
+  </g>
+  <circle cx="150" cy="73" r="14" fill="#E9C46A" stroke="#111" stroke-width="2.5"/>
+  <!-- labels -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="208" y="44">flower</text><path d="M206 50 L180 62" stroke="#111" stroke-width="2"/>
+    <text x="12" y="126">leaf</text><path d="M40 132 L94 156" stroke="#111" stroke-width="2"/>
+    <text x="222" y="196">stem</text><path d="M220 190 L156 184" stroke="#111" stroke-width="2"/>
+    <text x="214" y="320">roots</text><path d="M212 312 L180 292" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

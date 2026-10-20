@@ -502,7 +502,7 @@ with sync_playwright() as p:
         pg.evaluate("PP_PARENTS.open('%s')" % t); pg.wait_for_timeout(80)
         pg.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true)")
         texts["parents " + t] = pg.evaluate("document.querySelector('#ptab-%s').innerText" % t)
-    GUM = re.compile(r"3\.L\.GC\.1 · Master|Master by the end of grade 3|Continue \(not yet mastered\)|Master and Reinforce|grade 3 row: Master|Master, Reinforce|[Gg]rammar chart:? Master\b")
+    GUM = re.compile(r"3\.L\.GC\.1 · Master|Master by the end of grade 3|Continue \(not yet mastered\)|Master and Reinforce|grade 3 row: Master|Master, Reinforce|[Gg]rammar chart:? Master\b|Master ?/ ?Reinforce")
     left = []
     for k, t in texts.items():
         for m in re.finditer(r"\bmaster(ed|y)?\b", GUM.sub("", t), re.I):
