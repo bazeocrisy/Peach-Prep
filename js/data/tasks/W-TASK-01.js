@@ -19,28 +19,29 @@ PP.addTask({
       paragraphs: [
         [
           "In a reading buddy program, an older student and a younger student read together.",
-          "For example, a fourth grader might be paired with a first grader.",
-          "Many buddies meet once a week for twenty or thirty minutes.",
-          "Sometimes the older buddy reads out loud.",
-          "Other times, the younger buddy takes a turn."
+          "A fourth grader might read with a first grader.",
+          "Many buddies meet once a week.",
+          "Each visit lasts twenty or thirty minutes.",
+          "Sometimes the big buddy reads out loud.",
+          "Other times, the little buddy takes a turn."
         ],
         [
-          "Younger students can learn a lot from these visits.",
-          "They get to hear an older buddy read out loud.",
-          "This lets them hear how a good reader sounds.",
-          "The buddy can help with hard words.",
-          "The two buddies can also talk about the pictures and the story.",
-          "Many teachers say that young readers get more excited about books when they have a buddy.",
-          "Kids who are excited about books usually read more.",
+          "Little buddies can learn a lot from these visits.",
+          "They get to hear a big buddy read out loud.",
+          "That way, they find out how a good reader sounds.",
+          "The big buddy can help with hard words.",
+          "The two can talk about the pictures and the story, too.",
+          "Many teachers say a buddy gets young readers excited about books.",
+          "Kids who are excited about books often read more.",
           "Reading more helps them grow as readers."
         ],
         [
-          "Reading buddy programs can help older students, too.",
-          "Before each visit, the older buddy practices reading the book out loud.",
-          "This practice helps the older buddy read more smoothly and with more feeling.",
-          "Many older buddies say they feel proud when their little buddy reads a new word.",
+          "Reading buddy programs help older students, too.",
+          "Before each visit, the big buddy practices reading the book out loud.",
+          "This helps the big buddy read more smoothly and with more feeling.",
+          "Many big buddies say they feel proud when their little buddy reads a new word.",
           "They also learn to be patient and kind.",
-          "That is because young readers sometimes need extra time."
+          "Little readers may need extra time."
         ]
       ],
       lines: null
@@ -54,28 +55,28 @@ PP.addTask({
       paragraphs: [
         [
           "Have you ever explained the rules of a game to a friend?",
-          "When you teach someone, you have to think hard about what you know.",
+          "To teach someone, you have to think hard about what you know.",
           "Many teachers call this \"learning by teaching.\""
         ],
         [
           "Reading buddy programs use this idea.",
-          "An older buddy has to understand a story well first.",
-          "Only then can the buddy help a younger child follow it.",
-          "Older buddies often ask questions, such as \"What do you think will happen next?\"",
-          "Thinking about questions like these helps the older buddy understand stories better, too.",
-          "Studies of buddy programs often report that older students feel more sure of their own reading."
+          "A big buddy has to understand a story well first.",
+          "Then the big buddy can help a younger child follow it.",
+          "Big buddies often ask questions, such as \"What will happen next?\"",
+          "Thinking about these questions helps big buddies understand stories better, too.",
+          "Studies of buddy programs often report that big buddies feel more sure about reading."
         ],
         [
           "Little buddies gain a lot, too.",
-          "Young children learn many new words by listening to stories read aloud.",
-          "Working with one buddy also gives them extra practice.",
+          "Young kids learn many new words when they hear stories read aloud.",
+          "Time with one buddy also gives them extra practice.",
           "They get a chance to ask questions, too.",
-          "In a busy classroom, a teacher cannot always sit with each child.",
-          "That is why a buddy can be a big help."
+          "In a busy room, a teacher can't always sit with each child.",
+          "So a buddy can be a big help."
         ],
         [
-          "Many schools notice another good result.",
-          "Students in different grades get to know each other.",
+          "Many schools see one more good result.",
+          "Kids in different grades get to know each other.",
           "Then the whole school starts to feel friendlier."
         ]
       ],
@@ -97,34 +98,35 @@ PP.addTask({
     conclusion: "How will you end? Tell your opinion again, sum up both reasons, and give the principal one last thought to remember."
   },
   evidence: [
-    { reason: 0, source: "p1", ref: "p1:2:2", note: "Younger students get to hear an older buddy read out loud." },
-    { reason: 0, source: "p1", ref: "p1:2:3", note: "Hearing the buddy shows the younger child how a good reader sounds." },
+    { reason: 0, source: "p1", ref: "p1:2:2", note: "Little buddies get to hear a big buddy read out loud." },
+    { reason: 0, source: "p1", ref: "p1:2:3", note: "That way, the younger child finds out how a good reader sounds." },
     { reason: 0, source: "p1", ref: "p1:2:4", note: "The buddy helps with hard words." },
     { reason: 0, source: "p1", ref: "p1:2:6", note: "Many teachers say young readers get more excited about books with a buddy." },
     { reason: 0, source: "p1", ref: "p1:2:8", note: "Reading more (because they are excited) helps them grow as readers." },
     { reason: 0, source: "p2", ref: "p2:3:2", note: "Listening to stories read aloud teaches young children new words." },
-    { reason: 0, source: "p2", ref: "p2:3:3", note: "Working with one buddy gives extra practice." },
+    { reason: 0, source: "p2", ref: "p2:3:3", note: "Time with one buddy gives extra practice." },
+    { reason: 0, source: "p2", ref: "p2:3:4", note: "Little buddies get a chance to ask questions." },
     { reason: 0, source: "p2", ref: "p2:3:5", note: "A teacher cannot always sit with each child, so a buddy adds help (p2:3:6)." },
-    { reason: 1, source: "p1", ref: "p1:3:2", note: "Older buddies practice reading the book out loud before each visit." },
+    { reason: 1, source: "p1", ref: "p1:3:2", note: "Big buddies practice reading the book out loud before each visit." },
     { reason: 1, source: "p1", ref: "p1:3:3", note: "That practice helps them read more smoothly and with more feeling." },
-    { reason: 1, source: "p1", ref: "p1:3:4", note: "Many older buddies feel proud when their little buddy reads a new word." },
-    { reason: 1, source: "p1", ref: "p1:3:5", note: "Older buddies learn to be patient and kind." },
+    { reason: 1, source: "p1", ref: "p1:3:4", note: "Many big buddies say they feel proud when their little buddy reads a new word." },
+    { reason: 1, source: "p1", ref: "p1:3:5", note: "Big buddies learn to be patient and kind, because little readers may need extra time." },
     { reason: 1, source: "p2", ref: "p2:1:2", note: "Teaching someone makes you think hard about what you know." },
-    { reason: 1, source: "p2", ref: "p2:2:2", note: "An older buddy has to understand a story well before helping (learning by teaching)." },
-    { reason: 1, source: "p2", ref: "p2:2:5", note: "Thinking about questions helps the older buddy understand stories better." },
-    { reason: 1, source: "p2", ref: "p2:2:6", note: "Studies often report that older buddies feel more sure of their own reading." }
+    { reason: 1, source: "p2", ref: "p2:2:2", note: "A big buddy has to understand a story well before helping a younger child follow it (learning by teaching)." },
+    { reason: 1, source: "p2", ref: "p2:2:5", note: "Thinking about questions helps big buddies understand stories better." },
+    { reason: 1, source: "p2", ref: "p2:2:6", note: "Studies often report that big buddies feel more sure about reading." }
   ],
   model: {
     paragraphs: [
       "Imagine a first grader grinning because she just read a whole page by herself. That could happen at our school every week! I think our school should start a reading buddy program because it would help both younger and older students.",
-      "First, a reading buddy program would help younger students become better readers. The first source, \"Reading Buddies,\" explains that little kids get to listen while a big buddy reads. That way, they learn what smooth reading should sound like. When a little reader gets stuck, the big buddy can help sound out the word right away. The second source adds that hearing stories is one way small children pick up new vocabulary. More new words and more practice add up to a stronger reader.",
-      "A reading buddy program would also help older students learn and grow. According to the first source, big buddies rehearse each book before a visit, so their reading aloud becomes smoother. It also says many big buddies feel proud whenever a partner figures out a word for the first time. In addition, the second source describes \"learning by teaching.\" You cannot explain a story to someone else until you truly get it yourself. All that extra thinking makes the older buddy a stronger reader, too.",
+      "First, a reading buddy program would help younger students become better readers. The first source, \"Reading Buddies,\" explains that little kids hear smooth reading up close when a big buddy reads to them. That gives them something to aim for when it is their turn to read. When a little reader gets stuck, someone is right there to help sound out the tricky word. The second source adds that hearing stories is one way small children pick up new vocabulary. More new words and more practice add up to a stronger reader.",
+      "A reading buddy program would also help older students learn and grow. According to the first source, big buddies rehearse each book before a visit, so their reading aloud becomes smoother. It also says that hearing a little partner read a brand-new word makes many big buddies proud. In addition, the second source describes \"learning by teaching.\" You cannot explain a story to someone else until you truly get it yourself. All that extra thinking makes the older buddy a stronger reader, too.",
       "In conclusion, a reading buddy program would help little readers grow, and it would help big kids learn, too. Please start a reading buddy program this year so that every student can share a good book with a friend."
     ],
     notes: [
-      "Purpose and Organization (3 of 3): The introduction opens with a picture that pulls the reader in, then states the opinion clearly (\"I think our school should start a reading buddy program\") and previews both reasons. Each body paragraph is about one provided reason, in the same order as the reasons were given. Linking words and phrases (First, That way, When, also, According to, so, In addition, In conclusion) connect the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, sums up both reasons and ends by asking the principal, the audience named in the prompt, to act (\"Please start a reading buddy program this year\").",
-      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. For younger students: listening to a big buddy read, help with hard words, and learning new words by hearing stories. For older students: practicing each book ahead of time, feeling proud, and learning by teaching. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names where each fact came from (\"The first source\", \"According to the first source\", \"the second source\"). Each body paragraph ends with the writer's own explanation of why the facts matter: \"More new words and more practice add up to a stronger reader\" and \"All that extra thinking makes the older buddy a stronger reader, too.\"",
-      "Language Usage and Conventions (2 of 2): The essay is long enough to show command. Sentences are complete and varied: short ones (\"That could happen at our school every week!\"), compound ones joined with and, and complex ones built with because, while, when, so, whenever and until. Verb tense is controlled: present tense for facts from the sources (\"big buddies rehearse\", \"the second source adds\"), would and could for what the program would do, and past tense only in the hook, where a girl \"just read\" a page. There are no unneeded shifts. Subjects and verbs agree (\"the big buddy can help\", \"many big buddies feel\", \"More new words and more practice add up\"). There are no spelling, capitalization or punctuation errors."
+      "Purpose and Organization (3 of 3): The introduction opens with a picture that pulls the reader in, then states the opinion clearly (\"I think our school should start a reading buddy program\") and previews both reasons. Each body paragraph is about one provided reason, in the same order as the reasons were given. Linking words and phrases (First, when, also, According to, so, In addition, In conclusion) connect the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, sums up both reasons and ends by asking the principal, the audience named in the prompt, to act (\"Please start a reading buddy program this year\").",
+      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. For younger students: hearing a big buddy read, help with hard words, and learning new words by hearing stories. For older students: practicing each book ahead of time, feeling proud, and learning by teaching. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names where each fact came from (\"The first source\", \"According to the first source\", \"the second source\"). The writer also adds explanations of their own, such as \"That gives them something to aim for when it is their turn to read\" and \"You cannot explain a story to someone else until you truly get it yourself.\" Each body paragraph ends by tying the facts back to its reason: \"More new words and more practice add up to a stronger reader\" and \"All that extra thinking makes the older buddy a stronger reader, too.\"",
+      "Language Usage and Conventions (2 of 2): The essay is long enough to show command. Sentences are complete and varied: short ones (\"That could happen at our school every week!\"), compound ones joined with and, and complex ones built with because, when, so and until. Verb tense is controlled: present tense for facts from the sources (\"big buddies rehearse\", \"the second source adds\"), would and could for what the program would do, and past tense only in the hook, where a girl \"just read\" a page. There are no unneeded shifts. Subjects and verbs agree (\"the second source adds\", \"hearing a little partner read a brand-new word makes\", \"More new words and more practice add up\"). There are no spelling, capitalization or punctuation errors."
     ]
   },
   lookFors: {
