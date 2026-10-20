@@ -535,15 +535,14 @@ PP.addLesson({
       why: "Part A: not taking care. Care + less means without care, so a careless person is not taking care. Part B: spotless. It ends in -less too, and it means without a spot." },
     { id: "SK-V2a-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each word to the meaning of its prefix or suffix.",
-      cols: ["not", "again", "before", "full of"],
+      cols: ["not", "before", "full of"],
       rows: [
         { text: "unfair", answer: 0 },
-        { text: "rebuild", answer: 1 },
-        { text: "preview", answer: 2 },
-        { text: "helpful", answer: 3 }
+        { text: "preview", answer: 1 },
+        { text: "helpful", answer: 2 }
       ],
       clue: "Cover the base word in each one. Look at the part that is left, and remember what it means.",
-      why: "Un- in unfair means not. Re- in rebuild means again. Pre- in preview means before. -ful in helpful means full of." },
+      why: "Un- in unfair means not. Pre- in preview means before. -ful in helpful means full of." },
     { id: "SK-V2a-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Which sentence has a word that means \"in a quiet way\"? Choose the sentence.",
       options: [
@@ -729,17 +728,17 @@ PP.addLesson({
       clue: "Split brightness into a base word and an ending. Think about what that ending does to a word.",
       why: "Part A: a noun that names something. Part B: -ness. Bright is a describing word, and -ness turns it into a noun. In the sentence, brightness names something the model sun showed." },
     { id: "SK-V2b-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Match each word to the job it does.",
-      cols: ["names a person", "names a thing or a feeling", "tells how"],
+      prompt: "Some of these words end in -ment, and some do not. Match each sentence to the job of the enjoy, move or agree word in it.",
+      cols: ["names a thing or a feeling (noun)", "shows an action (verb)"],
       rows: [
-        { text: "actor", answer: 0 },
-        { text: "sadness", answer: 1 },
-        { text: "gently", answer: 2 },
-        { text: "payment", answer: 1 },
-        { text: "builder", answer: 0 }
+        { text: "Ana smiled with enjoyment.", answer: 0 },
+        { text: "We enjoy the park.", answer: 1 },
+        { text: "The movement of the waves rocked the boat.", answer: 0 },
+        { text: "The kids move to the music.", answer: 1 },
+        { text: "Grandpa signed an agreement.", answer: 0 }
       ],
-      clue: "Check each ending: -er and -or can name a person, -ness and -ment make nouns, and -ly often tells how.",
-      why: "Actor (act + or) and builder (build + er) name people. Sadness (sad + ness) and payment (pay + ment) are nouns that name a feeling and a thing. Gently is an adverb that tells how." },
+      clue: "Look at the word that comes from enjoy, move or agree in each sentence. Check its ending, and ask whether it names something or shows what someone does.",
+      why: "Enjoyment, movement and agreement end in -ment, which makes a noun. They name a feeling or a thing. Enjoy and move have no ending, and in these sentences they show what someone does, so they are verbs." },
     { id: "SK-V2b-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "In which sentence does the -er word name a person who does something? Choose the sentence.",
       options: [
@@ -924,14 +923,14 @@ PP.addLesson({
       why: "The answer is \"was helpless.\" -less means without, and a helpless kitten cannot help itself. Helpful means full of help, a helper is a person who helps, and helping does not fit the meaning." },
     { id: "SK-V2c-T6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each meaning to the word you would build.",
-      cols: ["refill", "unclear", "joyful", "breakable"],
+      cols: ["prewash", "disagree", "unclear", "loudly"],
       rows: [
-        { text: "to fill again", answer: 0 },
-        { text: "not clear", answer: 1 },
-        { text: "full of joy", answer: 2 },
-        { text: "can be broken", answer: 3 }
+        { text: "to wash before", answer: 0 },
+        { text: "to not agree", answer: 1 },
+        { text: "not clear", answer: 2 },
+        { text: "in a loud way", answer: 3 }
       ],
-      clue: "For each meaning, find the base word first. Then pick the part that means again, not, full of or can be.",
-      why: "Re- means again, so to fill again is refill. Un- means not, so not clear is unclear. -ful means full of, so full of joy is joyful. -able means can be, so can be broken is breakable." }
+      clue: "For each meaning, find the base word first. Then pick the word with the part that means before, not, or in a ___ way.",
+      why: "Pre- means before, so to wash before is prewash. Dis- means not, so to not agree is disagree. Un- means not, so not clear is unclear. -ly means in a ___ way, so in a loud way is loudly." }
   ]
 });

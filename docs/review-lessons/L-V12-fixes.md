@@ -68,3 +68,9 @@ Declined: none.
   - I used hive instead of the suggested "burrow". A dug hole can fairly be called a burrow, which would give the item a second defensible answer.
 - Cross-item check: no test prompt, stem, passage sentence or choice in any of the five lessons contains another test item's answer. Earlier, sentence 9's "look for new nests" would have revealed T2. It became "turtle tracks" in round 1 and now reads "People who study sea animals…".
 - Checker: no failures and no warnings in L-V12. The 27 warnings reported are all in other files. Theo's draft (p2) scores FK 4.0.
+- Round 2 follow-up (coordinator: no test item may show a word part or word form that another test item asks for). Fixed:
+  - SK-V2c-T6 now uses prewash, disagree, unclear and loudly. It no longer shows re-, -able, -ful, -less or y-to-i, which T1–T5 ask about.
+  - SK-V2b-T4 now sorts -ment nouns (enjoyment, movement, agreement) from verbs (enjoy, move). It no longer shows -er/-or people (T1, T5), -ly "tells how" (T2) or -ness nouns (T3).
+  - SK-V2a-T4 dropped the rebuild/"again" row, because T1's prompt states that re- means again. It now has 3 rows: not, before and full of.
+  - I re-scanned all five tests against this rule and found no other conflicts.
+  - Checker: no failures or warnings in L-V12.
