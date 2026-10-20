@@ -519,6 +519,139 @@ with sync_playwright() as p:
     ok("11.18 cursive word gap is about one lowercase o wide in the model and on the tracing sheet", all(0.8 <= x <= 1.25 for x in cw), cw)
     pg.evaluate("localStorage.clear()")
 
+    # ---------- 12. PP-003 UX fixes (docs/audits/PP-003-UX-FUNCTIONAL-AUDIT.md D1, D4, D5, D7, D8, D9, D15, D16) ----------
+    def page12(w, h, phone):
+        q = b.new_page(viewport={"width": w, "height": h}, is_mobile=phone, has_touch=phone)
+        q.route("**/fonts.g*/**", lambda r: r.abort())
+        q.on("pageerror", lambda e: errors.append("[12 %d] %s" % (w, e)))
+        q.on("dialog", lambda d: d.accept())
+        return q
+    def goto12(q, hash_=""):
+        q.goto(BASE + hash_); q.wait_for_function("document.getElementById('build-badge').textContent.length > 0"); q.wait_for_timeout(200)
+    HEAD = """(()=>{const h=document.querySelector('#sk-panel .panel-h').getBoundingClientRect(), s=document.getElementById('sk-steps').getBoundingClientRect();
+        return {step:PP_SKILLS.step(), top:Math.round(h.top), bottom:Math.round(h.bottom), bar:Math.round(s.bottom), vh:innerHeight, y:Math.round(scrollY)};})()"""
+    land_fail = []
+    for w, hgt, phone in ((390, 844, True), (1366, 900, False)):
+        q = page12(w, hgt, phone)
+        for code in ("3.T.T.1.b", "3.F.F.1.b"):
+            goto12(q, "#skill/" + code)
+            if q.evaluate("PP_APP.current()") != "skill": continue
+            steps = q.evaluate("[...document.querySelectorAll('#sk-steps .step-btn')].map(b=>b.dataset.step)")
+            for i, s_ in enumerate(steps[:-1]):
+                q.evaluate("(s=>PP_SKILLS.open(%s,s))('%s')" % (json.dumps(code), s_))
+                q.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)"); q.wait_for_timeout(40)
+                q.click("#sk-panel .step-next"); q.wait_for_timeout(80)
+                v = q.evaluate(HEAD)
+                # the heading sits just below the sticky step bar (or lower, only when the page is too short to scroll)
+                if not (v["step"] == steps[i + 1] and v["bar"] - 1 <= v["top"] and v["bottom"] <= v["vh"] and (v["top"] <= v["bar"] + 40 or v["y"] == 0 or v["y"] >= q.evaluate("document.documentElement.scrollHeight-innerHeight") - 1)):
+                    land_fail.append("%d %s Next %s->%s %s" % (w, code, s_, steps[i + 1], json.dumps(v)))
+            # a step tab pressed from the bottom of a long step
+            q.evaluate("PP_SKILLS.open(%s,'teach')" % json.dumps(code))
+            q.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)"); q.wait_for_timeout(40)
+            q.click('#sk-steps [data-step="%s"]' % steps[-1]); q.wait_for_timeout(80)
+            v = q.evaluate(HEAD)
+            if not (v["bar"] - 1 <= v["top"] and v["bottom"] <= v["vh"]): land_fail.append("%d %s tab teach->%s %s" % (w, code, steps[-1], json.dumps(v)))
+        q.close()
+    ok("12.1 D1: Next and the step tabs land with the step heading visible just below the sticky step bar (390 and 1366)", not land_fail, land_fail[:3])
+
+    q = page12(390, 844, True)
+    H = lambda: q.evaluate("location.hash") if q.url.startswith("http") else "LEFT"
+    # D4: a practice set opened from a section, then the in-page Back, then the phone's Back
+    goto12(q, "#mixed")
+    q.click('#section-grid button[data-section="reading"]'); q.wait_for_timeout(150)
+    sid = q.evaluate("PP.sets.find(s=>s.section==='reading').id")
+    q.click('#set-grid button[data-set="%s"][data-mode="practice"]' % sid); q.wait_for_timeout(150)
+    q.click("#player-back"); q.wait_for_timeout(250); h1 = H()
+    q.go_back(); q.wait_for_timeout(250); h2 = H()
+    # D4: the section's own Back button, then the phone's Back
+    goto12(q, "#clues"); q.evaluate("PP_APP.openMixed()"); q.wait_for_timeout(80)
+    q.click('#section-grid button[data-section="reading"]'); q.wait_for_timeout(150)
+    q.click('#screen-section [data-go="mixed"]'); q.wait_for_timeout(250); h3 = H()
+    q.go_back(); q.wait_for_timeout(250); h4 = H()
+    # D4: an essay opened from Home, then its Back, then the phone's Back
+    goto12(q, "#clues"); q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(80)
+    tid = q.evaluate("PP.tasks[0].id")
+    q.click('#skill-list .skill-line[data-code="task:%s"]' % tid); q.wait_for_timeout(150)
+    q.click("#write-back"); q.wait_for_timeout(250); h5 = [H(), q.evaluate("PP_APP.current()")]
+    q.go_back(); q.wait_for_timeout(250); h6 = H()
+    ok("12.2 D4: after the in-page Back from a set, a section or an essay, one phone Back moves on (no dead press)",
+       h1 == "#reading" and h2 == "#mixed" and h3 == "#mixed" and h4 == "#clues" and h5 == ["", "home"] and h6 == "#clues", (h1, h2, h3, h4, h5, h6))
+
+    # D5: Forward or reload onto a finished practice or test shows "you finished this", never question 1
+    def stage():
+        return q.evaluate("['work','confirm','results','done','again'].filter(s=>document.getElementById('stage-'+s)&&!document.getElementById('stage-'+s).hidden)[0]||null")
+    goto12(q, "#skill/3.T.T.1.b/practice")
+    q.click("#sk-start-practice"); q.wait_for_timeout(150)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(30)
+    p0 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+    s0 = stage(); q.go_back(); q.wait_for_timeout(250); q.go_forward(); q.wait_for_timeout(300)
+    s1 = [stage(), H(), q.evaluate("(document.getElementById('again-start')||{}).textContent||''")]
+    q.reload(); q.wait_for_timeout(800); s2 = stage()
+    p1 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+    q.evaluate("(document.getElementById('again-start')||{click(){}}).click()"); q.wait_for_timeout(150)
+    s3 = [stage(), q.evaluate("PP_PLAYER.state().pos")]
+    q.evaluate("PP_PLAYER.start('SK:3.T.T.1.b:t','test')"); q.wait_for_timeout(150)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(CORRECT); q.evaluate("document.getElementById('q-next').click()"); q.wait_for_timeout(25)
+    q.click("#confirm-submit"); q.wait_for_timeout(120)
+    p2 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+    q.reload(); q.wait_for_timeout(800)
+    s4 = [stage(), q.evaluate("(document.getElementById('again-line')||{}).textContent||''")]
+    p3 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+    ok("12.3 D5: Forward or reload on a finished practice or test shows a 'you finished this' screen (not question 1); Start again starts at question 1; nothing stored changes",
+       s0 == "done" and s1[0] == "again" and s1[1].startswith("#play/") and "again" in s1[2].lower() and s2 == "again" and s3 == ["work", 0]
+       and s4[0] == "again" and "Your score was" in s4[1] and p0 == p1 and p2 == p3, (s0, s1, s2, s3, s4, p0 == p1, p2 == p3))
+
+    # D7: keyboard focus stays on the page after a correct Check
+    q.evaluate("PP_PLAYER.start('SK:3.T.T.1.b:p','practice')"); q.wait_for_timeout(150)
+    if q.is_visible("#tab-question"): q.click("#tab-question")
+    q.evaluate(CORRECT); q.focus("#q-check"); q.keyboard.press("Enter"); q.wait_for_timeout(60)
+    f7 = q.evaluate("document.activeElement.id")
+    q.keyboard.press("Enter"); q.wait_for_timeout(80)
+    ok("12.4 D7: after a correct Check, focus moves to Next, and Enter goes on", f7 == "q-next" and q.evaluate("PP_PLAYER.state().pos") == 1, (f7, q.evaluate("PP_PLAYER.state().pos")))
+
+    # D8: damaged essay storage
+    n_err = len(errors)
+    d8 = []
+    for bad in ('{"draft":null,"plan":null,"checks":null,"scores":null}', '{"draft":5,"plan":"x","checks":{"a":1},"scores":[1]}', '"hello"', '[1,2]'):
+        q.evaluate("([k,v])=>localStorage.setItem(k,v)", ["pp.task." + tid, bad])
+        goto12(q, "#write/" + tid)
+        for t in ("plan", "write", "check", "score", "sources"):
+            q.click("[data-wtab=%s]" % t); q.wait_for_timeout(20)
+        q.click("[data-wtab=plan]"); q.fill("#pl-opinion", "Yes."); q.wait_for_timeout(20)
+        d8.append([q.evaluate("document.getElementById('write-grid').dataset.tab"), q.evaluate("JSON.parse(localStorage.getItem('pp.task.%s')).plan.opinion" % tid)])
+    q.evaluate("localStorage.clear()")
+    ok("12.5 D8: damaged essay storage (null, wrong types, not an object) loads without errors and the essay still works",
+       len(errors) == n_err and all(x == ["plan", "Yes."] for x in d8), (d8, errors[n_err:n_err + 2]))
+
+    # D9: the skip link moves focus to the visible screen's heading and keeps the address
+    d9 = []
+    for hs, want in (("", "home-title"), ("#skill/3.T.T.1.b/learn", "sk-title")):
+        goto12(q, hs)
+        q.evaluate("document.querySelector('.skip').focus()"); q.keyboard.press("Enter"); q.wait_for_timeout(120)
+        d9.append([q.evaluate("document.activeElement.id"), H(), q.evaluate("PP_APP.current()")])
+    ok("12.6 D9: the skip link focuses the screen's heading and does not change the page", d9 == [["home-title", "", "home"], ["sk-title", "#skill/3.T.T.1.b/learn", "skill"]], d9)
+
+    # D15: tab lists have roving focus, aria-controls and arrow keys
+    d15 = []
+    for hs, sel in (("#skill/3.T.T.1.b", "#sk-steps"), ("#write/" + tid, ".wtabs"), ("#parents", ".ptabs")):
+        goto12(q, hs)
+        r = q.evaluate("""(sel=>{const ts=[...document.querySelectorAll(sel+' [role=tab]')];
+            return {tabbable:ts.filter(t=>t.tabIndex>=0).length, ctl:ts.every(t=>{const p=document.getElementById(t.getAttribute('aria-controls')||'');return p&&p.getAttribute('role')==='tabpanel'})}})('%s')""" % sel)
+        q.focus(sel + ' [role=tab][aria-selected="true"]'); q.keyboard.press("ArrowRight"); q.wait_for_timeout(80)
+        r["moved"] = q.evaluate("(sel=>[...document.querySelectorAll(sel+' [role=tab]')].findIndex(t=>t.getAttribute('aria-selected')==='true')===1 && document.activeElement.getAttribute('aria-selected')==='true')('%s')" % sel)
+        d15.append(r)
+    ok("12.7 D15: step, essay and parent tabs: one Tab stop, aria-controls a tabpanel, ArrowRight selects the next tab", all(x == {"tabbable": 1, "ctl": True, "moved": True} for x in d15), d15)
+
+    # D16: an address that is not a page shows Home, says so and drops the bad address
+    d16 = []
+    for hs in ("#skill/NOPE", "#play/NOPE/test", "#foo"):
+        goto12(q, hs)
+        d16.append([q.evaluate("PP_APP.current()"), H(), q.evaluate("!!document.getElementById('home-notfound')&&!document.getElementById('home-notfound').hidden")])
+    ok("12.8 D16: a bad address shows Home with a 'not found' note and a clean address", all(x == ["home", "", True] for x in d16), d16)
+    q.close()
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------

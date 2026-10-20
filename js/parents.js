@@ -271,6 +271,7 @@
   }
   function init() {
     document.querySelectorAll("[data-ptab]").forEach(b => b.addEventListener("click", () => select(b.dataset.ptab)));
+    PP.tablist(document.querySelector(".ptabs"));
   }
   window.PP_PARENTS = { init, open, select, snapshot, tab: () => curTab };
 })();

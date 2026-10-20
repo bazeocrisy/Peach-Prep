@@ -17,7 +17,20 @@
   function load() {
     let d = null;
     try { d = JSON.parse(localStorage.getItem(key()) || "null"); } catch (e) { d = null; }
-    data = Object.assign({ plan: {}, draft: "", checks: [], scores: {} }, d || {});
+    /* PP-003 D8: keep only fields of the right type, so damaged storage
+       (for example "plan": null) cannot break the essay screen */
+    const obj = x => !!x && typeof x === "object" && !Array.isArray(x);
+    if (!obj(d)) d = {};
+    const plan = {};
+    if (obj(d.plan)) Object.keys(d.plan).forEach(k => { if (typeof d.plan[k] === "string") plan[k] = d.plan[k]; });
+    const scores = {};
+    if (obj(d.scores)) Object.keys(d.scores).forEach(k => { if (typeof d.scores[k] === "number" && isFinite(d.scores[k])) scores[k] = d.scores[k]; });
+    data = {
+      plan,
+      draft: typeof d.draft === "string" ? d.draft : "",
+      checks: Array.isArray(d.checks) ? d.checks.filter(i => Number.isInteger(i)) : [],
+      scores
+    };
   }
   function save() { try { localStorage.setItem(key(), JSON.stringify(data)); } catch (e) { /* storage off: keep in memory */ } }
 
@@ -229,7 +242,7 @@
 
   function init() {
     document.querySelectorAll("[data-wtab]").forEach(b => b.addEventListener("click", () => select(b.dataset.wtab)));
-
+    PP.tablist(document.querySelector(".wtabs"));
   }
   window.PP_WRITING = { init, start, select, state: () => ({ id: task && task.id, data }) };
 })();

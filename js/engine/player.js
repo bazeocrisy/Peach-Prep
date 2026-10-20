@@ -285,7 +285,15 @@
     else { label = "Let's walk through it"; text = item.why + " Now you choose it."; T[item.type].outline(ctx); }
     st.helpLog.push({ label, text });
     addHelp(label, text);
+    /* PP-003 D11: the hint answers "press Help me", so that line goes */
+    if (st.fb && st.fb.kind === "try") setFeedback(null);
+    const hadFocus = document.activeElement === el("q-help");
     syncControls();
+    /* the last hint disables Help me; keep keyboard focus on the hint, not on <body> */
+    if (hadFocus && el("q-help").disabled) {
+      const last = el("q-help-steps").lastElementChild;
+      if (last) { last.tabIndex = -1; last.focus(); }
+    }
   }
 
   function check() {
@@ -309,6 +317,9 @@
       }
     }
     syncControls();
+    /* PP-003 D7: a right answer hides Check, which had focus; move focus to Next
+       (the feedback above it is a live region, so it is still read out) */
+    if (st.solved) el("q-next").focus();
   }
 
   function renderLockedState(ctx) {
@@ -336,7 +347,7 @@
   }
 
   function showStage(name) {
-    ["work", "confirm", "results", "done"].forEach(s => { el("stage-" + s).hidden = s !== name; });
+    ["work", "confirm", "results", "done", "again"].forEach(s => { el("stage-" + s).hidden = s !== name; });
     if (name !== "work") el("tabs").hidden = true;
     else el("tabs").hidden = !run.set.passages.length;
     el("player-grid").classList.toggle("is-full", name !== "work");
@@ -355,6 +366,7 @@
     el("done-test").hidden = skill && !nx;
     el("done-test").textContent = nx ? nx.label : "Try it as a test";
     el("done-back").textContent = skill ? "Back to the skill" : "Back to the list";
+    window.PP_APP.markDone({ set: run.set.id, mode: run.tryMode ? "try" : "practice", n, first });
     showStage("done");
     el("done-title").focus();
   }
@@ -421,6 +433,13 @@
     buildReview(rows);
     el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !run.set.practiceId);
     el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
+    /* PP-003 D17: after a passed skill check, lead with Back to the skill, not more practice */
+    const passed = run.set.kind === "skill" && got >= Math.ceil(max * 0.8);
+    const acts = el("res-back").parentNode;
+    if (passed) acts.insertBefore(el("res-back"), acts.firstChild); else acts.appendChild(el("res-back"));
+    el("res-back").classList.toggle("btn-primary", passed); el("res-back").classList.toggle("btn-soft", !passed);
+    el("res-practice").classList.toggle("btn-primary", !passed); el("res-practice").classList.toggle("btn-soft", passed);
+    window.PP_APP.markDone({ set: run.set.id, mode: "test", got, max });
     showStage("results");
     el("res-title").focus();
   }
@@ -495,6 +514,35 @@
     window.PP_APP.track();
     el("player-title").focus();
   }
+  /* PP-003 D5: Forward or a reload onto a practice or test that was already
+     finished. Say so and offer to start again; never restart silently.
+     Nothing is recorded here. */
+  function finished(setId, mode, info) {
+    const set = PP.byId[setId];
+    if (!set) return;
+    if (window.PP_APP.current() !== "player") window.PP_APP.rememberReturn();
+    if (set.kind === "skill" && set.part === "t") mode = "test";
+    run.set = set; run.mode = mode === "test" ? "test" : "practice";
+    run.tryMode = mode === "try";
+    run.pos = 0; run.ctxs = []; run.state = []; run.submitted = true;
+    el("player-title").textContent = set.title;
+    el("player-mode").textContent = run.mode === "test" ? "Test" : run.tryMode ? "Try it yourself" : "Practice";
+    el("screen-player").dataset.mode = run.mode;
+    el("screen-player").dataset.section = set.section;
+    const skill = set.kind === "skill";
+    const test = run.mode === "test";
+    el("again-title").textContent = test ? "You already turned in this test" : "You already finished this practice";
+    el("again-line").textContent = test
+      ? (typeof info.got === "number" ? "Your score was " + info.got + " of " + info.max + " points. " : "") +
+        (skill ? "Your skill page keeps your best score. " : "") + "Starting again begins a new test at question 1."
+      : "Starting again begins at question 1." + (skill ? " Your skill page shows that you finished it." : "");
+    el("again-start").textContent = test ? "Take the test again" : "Start the practice again";
+    el("again-back").textContent = skill ? "Back to the skill" : "Back to the list";
+    showStage("again");
+    window.PP_APP.show("player");
+    window.PP_APP.track();
+    el("again-title").focus();
+  }
   /* A test counts as in progress from the first answer until it is turned in. */
   function inProgress() {
     if (run.mode !== "test" || run.submitted || !run.set) return false;
@@ -508,6 +556,7 @@
     el("q-check").addEventListener("click", check);
     el("q-next").addEventListener("click", next);
     el("q-prev").addEventListener("click", prev);
+    PP.tablist(el("tabs"));
     el("tab-passage").addEventListener("click", () => showPane("passage"));
     el("tab-question").addEventListener("click", () => showPane("question"));
     el("clue-toggle").addEventListener("click", () => {
@@ -530,11 +579,12 @@
       const nx = run.set.kind === "skill" && run.set.next;
       if (nx) start(nx.id, nx.mode); else start(run.set.id, "test");
     });
-    ["res-back", "done-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
+    el("again-start").addEventListener("click", () => start(run.set.id, run.mode === "test" ? "test" : run.tryMode ? "try" : "practice"));
+    ["res-back", "done-back", "again-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 
   window.PP_PLAYER = {
-    init, start, flash, markSelected, renderPassages, inProgress, abandon,
+    init, start, finished, flash, markSelected, renderPassages, inProgress, abandon,
     state: () => ({ setId: run.set && run.set.id, section: run.set && run.set.section, mode: run.mode, pos: run.pos, total: run.set ? run.set.items.length : 0,
                     help: run.state.map(s => s && s.help), solved: run.state.map(s => s && s.solved) }),
     ctx: i => ctxFor(i === undefined ? run.pos : i)

@@ -59,7 +59,8 @@
 
   /* ---------- progress (this device only) ---------- */
   const KEY = "pp.progress.v1";
-  function load() { try { return JSON.parse(window.localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  /* a damaged value ("hello", [1,2]) loads as empty progress instead of throwing on the first save */
+  function load() { try { const v = JSON.parse(window.localStorage.getItem(KEY)); return v && typeof v === "object" && !Array.isArray(v) ? v : {}; } catch (e) { return {}; } }
   let prog = load();
   function save() { try { window.localStorage.setItem(KEY, JSON.stringify(prog)); } catch (e) { /* private mode: progress lasts this visit */ } }
   function rec(k) { prog[k] = prog[k] || {}; return prog[k]; }
@@ -204,7 +205,7 @@
     buildCards();
     const host = el("skill-list"); clear(host);
     const q = query.trim().toLowerCase();
-    let shown = 0;
+    let shown = 0, shownTasks = 0;
     CAT.forEach(c => {
       const sec = make("section", "cat-sec cat-" + c.id);
       sec.id = "cat-" + c.id;
@@ -253,7 +254,7 @@
             (st === "mastered" ? passLabel(k) + "." + (due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
           b.addEventListener("click", () => openEntry(k));
           li.appendChild(b); ol.appendChild(li);
-          any++; shown++;
+          any++; shown++; if (isTask(k)) shownTasks++;
         });
         grp.appendChild(ol);
         grid.appendChild(grp);
@@ -264,7 +265,13 @@
     });
     el("skill-empty").hidden = shown > 0;
     const cnt = el("skill-count");
-    cnt.textContent = (q || filter !== "all") && shown ? shown + " skill" + (shown > 1 ? "s" : "") + " match" + (shown > 1 ? "" : "es") + "." : "";
+    /* essays are listed but are not skills with a check, so they are counted apart
+       (this is why "On the test" lists more rows than the progress line counts) */
+    const nSk = shown - shownTasks;
+    const parts = [];
+    if (nSk) parts.push(nSk + " skill" + (nSk > 1 ? "s" : ""));
+    if (shownTasks) parts.push(shownTasks + " essay task" + (shownTasks > 1 ? "s" : ""));
+    cnt.textContent = (q || filter !== "all") && shown ? parts.join(" and ") + " match" + (shown > 1 ? "" : "es") + "." : "";
     buildProgress();
   }
 
@@ -286,8 +293,13 @@
       b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " checks passed." + (ess ? " Plus " + st.essays + " essay task" + (st.essays > 1 ? "s" : "") + ", scored by a grown-up." : "") + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
       b.addEventListener("click", () => {
         rec("_ui").lastCat = c.id; save();
-        const t = el("cat-" + c.id); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
         buildUpNext();
+        /* PP-003 D2: land the category heading below the sticky search bar (sticky at 640px and up) */
+        const t = el("cat-" + c.id); if (!t) return;
+        const tools = document.querySelector(".skill-tools");
+        const off = (tools && getComputedStyle(tools).position === "sticky" ? tools.getBoundingClientRect().height : 0) + 12;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: Math.max(0, t.getBoundingClientRect().top + window.scrollY - off), behavior: reduce ? "auto" : "smooth" });
       });
       host.appendChild(b);
     });
@@ -315,6 +327,8 @@
     const p = make("p", "prog-line");
     p.appendChild(make("strong", "", done + " of " + testedKeys.length));
     p.appendChild(document.createTextNode(" skills that are on the test have a passed skill check on this device."));
+    const nTasks = PP.tasks.length;
+    if (nTasks) p.appendChild(document.createTextNode(" The " + nTasks + " essay task" + (nTasks > 1 ? "s are" : " is") + " scored by a grown-up, so " + (nTasks > 1 ? "they are" : "it is") + " not counted here."));
     const due = Object.keys(lessons).filter(reviewDue).length;
     if (due) p.appendChild(document.createTextNode(" " + due + " passed skill" + (due > 1 ? "s are" : " is") + " due for a review."));
     host.appendChild(p);
@@ -481,8 +495,8 @@
     host.style.setProperty("--steps", S.length);
     S.forEach(([k, name], i) => {
       const b = make("button", "step-btn" + (done[k] ? " is-done" : ""));
-      b.type = "button"; b.dataset.step = k;
-      b.setAttribute("role", "tab");
+      b.type = "button"; b.dataset.step = k; b.id = "sk-tab-" + k;
+      b.setAttribute("role", "tab"); b.setAttribute("aria-controls", "sk-panel");
       b.setAttribute("aria-selected", k === step ? "true" : "false");
       b.appendChild(make("span", "step-n", done[k] ? "✓" : String(i + 1)));
       b.appendChild(make("span", "step-name", name));
@@ -491,6 +505,8 @@
       b.addEventListener("click", () => go(k));
       host.appendChild(b);
     });
+    el("sk-panel").setAttribute("aria-labelledby", "sk-tab-" + step);
+    PP.syncTabs(host);
   }
   function nextStep() {
     const S = stepsFor(lessons[cur]); const i = S.findIndex(x => x[0] === step);
@@ -500,7 +516,8 @@
   function render() {
     const L = lessons[cur];
     const host = el("sk-panel"); clear(host);
-    if (!L) { renderPending(host, byCode[cur]); return; }
+    if (!L) { host.removeAttribute("role"); host.removeAttribute("aria-labelledby"); renderPending(host, byCode[cur]); return; }
+    host.setAttribute("role", "tabpanel");
     renderSteps();
     ({ teach: renderTeach, learn: renderLearn, practice: renderPractice, "try": renderTry, test: renderTest })[step](host, L);
     renderGrownups(host, L);
@@ -647,6 +664,10 @@
     const k = "pp.skwrite." + keyOf(L);
     let saved = {};
     try { saved = JSON.parse(window.localStorage.getItem(k)) || {}; } catch (e) { saved = {}; }
+    /* damaged storage must not break the page (PP-003 D8, same guard as the essay) */
+    if (!saved || typeof saved !== "object" || Array.isArray(saved)) saved = {};
+    if (typeof saved.text !== "string") delete saved.text;
+    if (!Array.isArray(saved.checks)) delete saved.checks;
     const store = () => { try { window.localStorage.setItem(k, JSON.stringify(saved)); } catch (e) { /* ok */ } };
     const card = make("div", "write-card");
     card.appendChild(make("h3", "write-h", "Your turn to write"));
@@ -765,7 +786,9 @@
     const clock = make("p", "flu-clock", "1:00"); clock.setAttribute("aria-live", "off");
     const startB = make("button", "btn btn-primary", "Start the minute"); startB.type = "button";
     const stopB = make("button", "btn btn-soft", "Stop early"); stopB.type = "button"; stopB.hidden = true;
-    ctl.appendChild(clock); ctl.appendChild(startB); ctl.appendChild(stopB);
+    /* PP-003 D10: the "tap the last word" prompt sits in the sticky clock row, so it is on screen at time-up */
+    const prompt = make("p", "flu-prompt", "Grown-up: tap the last word read."); prompt.hidden = true; prompt.tabIndex = -1;
+    ctl.appendChild(clock); ctl.appendChild(startB); ctl.appendChild(stopB); ctl.appendChild(prompt);
     card.appendChild(ctl);
     const say = make("p", "flu-say"); say.setAttribute("aria-live", "polite"); card.appendChild(say);
     const text = make("div", "flu-text"); card.appendChild(text);
@@ -775,6 +798,7 @@
     let which = 0, phase = "ready", t0 = 0, timer = null, secs = 60, words = [], miss = new Set(), fixed = new Set();
     function load(i) {
       which = i; phase = "ready"; miss = new Set(); fixed = new Set(); clearInterval(timer);
+      card.classList.remove("is-reading", "is-picking"); prompt.hidden = true; text.classList.remove("pick-last");
       Array.from(pick.children).forEach((b, k) => b.setAttribute("aria-pressed", k === i ? "true" : "false"));
       clear(text); clear(out);
       const P = A.passages[i];
@@ -821,13 +845,18 @@
       clock.textContent = "Time!";
       say.textContent = "Grown-up: now tap the last word the reader read.";
       text.classList.add("pick-last");
-      const first = words[0]; if (first) first.focus({ preventScroll: true });
+      card.classList.add("is-picking"); prompt.hidden = false;
+      /* focus the prompt (in view, in the sticky row), not word 1, so a screen reader hears what to do */
+      prompt.focus({ preventScroll: true });
     }
     function finish(k) {
+      card.classList.remove("is-picking"); prompt.hidden = true;
       if (secs < 30) {
         phase = "ready"; text.classList.remove("pick-last"); clear(out);
-        out.appendChild(make("p", "go-best", "That reading was shorter than 30 seconds, so it is too short to measure. Press Read again and read for the full minute."));
-        startB.hidden = false; startB.textContent = "Read again"; return;
+        const short = make("p", "go-best", "That reading was shorter than 30 seconds, so it is too short to measure. Press Read again and read for the full minute.");
+        out.appendChild(short);
+        startB.hidden = false; startB.textContent = "Read again";
+        short.tabIndex = -1; short.scrollIntoView({ block: "center" }); short.focus({ preventScroll: true }); return;
       }
       phase = "done"; text.classList.remove("pick-last");
       words.forEach((b, i) => b.classList.toggle("is-past", i > k));
@@ -861,6 +890,10 @@
       out.appendChild(observeForm(r, entry));
       histRedraw();
       startB.hidden = false; startB.textContent = "Read again";
+      /* PP-003 D10: show the result and put focus on it */
+      big.tabIndex = -1;
+      big.scrollIntoView({ block: "start" });
+      big.focus({ preventScroll: true });
     }
     /* Reading history: shown whenever there are saved readings (reading only, never writes). */
     const histP = make("div", "note flu-hist-box"); card.appendChild(histP);
@@ -964,6 +997,7 @@
     C.items.forEach((c, i) => {
       const li = make("li");
       const cb = make("input"); cb.type = "checkbox"; cb.id = "skc-" + i; cb.checked = !!checks()[i];
+      cb.disabled = !!r0.mastered;   /* PP-003 D17: once checked off, the list is a record, not a form */
       cb.addEventListener("change", () => { const r = rec(cur); r.checks = r.checks || []; r.checks[i] = cb.checked; save(); sync(); });
       const lb = make("label", "", c); lb.htmlFor = cb.id;
       li.appendChild(cb); li.appendChild(lb); ul.appendChild(li);
@@ -982,6 +1016,7 @@
       save(); render();
     });
     sync();
+    btn.hidden = !!r0.mastered;      /* the "✓ Checked by a grown-up" line replaces the button */
     card.appendChild(btn);
     host.appendChild(card);
   }
@@ -1024,13 +1059,21 @@
 
   function init() {
     const inp = el("skill-search");
-    inp.addEventListener("input", () => { query = inp.value; buildList(); });
+    inp.addEventListener("input", () => {
+      query = inp.value; buildList();
+      /* PP-003 D3: on a phone, bring the search box to the top so the results show under it */
+      if (query.trim() && window.matchMedia("(max-width: 639px)").matches) {
+        const top = inp.getBoundingClientRect().top;
+        if (top > 12 || top < 0) window.scrollTo(0, Math.max(0, window.scrollY + top - 8));
+      }
+    });
     document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => {
       filter = b.dataset.filter;
       document.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
       buildList();
     }));
     el("skill-back").addEventListener("click", () => window.PP_APP.goHome());
+    PP.tablist(el("sk-steps"));
   }
 
   window.PP_SKILLS = {

@@ -27,6 +27,7 @@
     </header>
 
     <div class="wrap">
+      <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
       <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
       <div class="home-links">
         <button type="button" class="hl-btn" id="hero-mixed">Practice tests and mixed practice</button>
@@ -37,7 +38,7 @@
       <div class="home-progress" id="home-progress"></div>
       <div class="skill-tools">
         <label class="sr" for="skill-search">Find a skill</label>
-        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: try pronoun, B3 or 3.T.T.1" autocomplete="off">
+        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: pronoun, B3, 3.T.T.1" autocomplete="off">
         <div class="seg" role="group" aria-label="Which skills to show">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="test" aria-pressed="false">On the test</button>
@@ -70,7 +71,7 @@
       <p class="page-sub" id="sk-plain"></p>
       <p class="sk-tags" id="sk-tags"></p>
       <div class="steps" id="sk-steps" role="tablist" aria-label="Steps"></div>
-      <div class="sk-panel" id="sk-panel" tabindex="-1"></div>
+      <div class="sk-panel" id="sk-panel" tabindex="-1" role="tabpanel"></div>
       <details class="sk-official" id="sk-official"></details>
     </div>
   </section>
@@ -128,7 +129,6 @@
       <h1 class="page-title" id="section-title" tabindex="-1"></h1>
       <p class="page-sub" id="section-sub"></p>
       <ul class="set-grid" id="set-grid"></ul>
-      <div class="soon-panel" id="section-soon" hidden></div>
     </div>
   </section>
 
@@ -143,16 +143,16 @@
       <h1 class="page-title" id="player-title" tabindex="-1"></h1>
     </div>
     <div class="tabs" id="tabs" role="tablist" aria-label="Passage or question">
-      <button type="button" role="tab" id="tab-passage" aria-selected="true">Read the passage</button>
-      <button type="button" role="tab" id="tab-question" aria-selected="false">Question</button>
+      <button type="button" role="tab" id="tab-passage" aria-selected="true" aria-controls="passage-pane">Read the passage</button>
+      <button type="button" role="tab" id="tab-question" aria-selected="false" aria-controls="item-pane">Question</button>
     </div>
     <div class="player-grid" id="player-grid" data-pane="passage">
-      <div class="passage-pane" id="passage-pane" aria-label="Passage">
+      <div class="passage-pane" id="passage-pane" role="tabpanel" aria-labelledby="tab-passage">
         <p class="passage-note" id="passage-note" tabindex="-1" role="status" hidden></p>
         <button type="button" class="clue-toggle" id="clue-toggle" aria-pressed="false" hidden>Show clue words</button>
         <div id="passage-pane-body"></div>
       </div>
-      <div class="item-pane">
+      <div class="item-pane" id="item-pane" role="tabpanel" aria-labelledby="tab-question">
         <!-- work -->
         <div id="stage-work">
           <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
@@ -193,6 +193,15 @@
           </div>
           <div id="res-review" class="review" hidden></div>
         </div>
+        <!-- finished already: Forward or reload on a finished practice or test (PP-003 D5) -->
+        <div id="stage-again" class="panel" hidden>
+          <h2 class="panel-title" id="again-title" tabindex="-1">You finished this</h2>
+          <p id="again-line"></p>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-primary" id="again-start">Start again</button>
+            <button type="button" class="btn btn-soft" id="again-back">Back to the list</button>
+          </div>
+        </div>
         <!-- practice: done -->
         <div id="stage-done" class="panel" hidden>
           <h2 class="panel-title" id="done-title" tabindex="-1">Great work!</h2>
@@ -217,18 +226,18 @@
       <h1 class="page-title" id="write-title" tabindex="-1"></h1>
       <div class="prompt-card" id="write-prompt"></div>
       <div class="wtabs" role="tablist" aria-label="Writing steps">
-        <button type="button" role="tab" data-wtab="sources" aria-selected="true">1. Read</button>
-        <button type="button" role="tab" data-wtab="plan" aria-selected="false">2. Plan</button>
-        <button type="button" role="tab" data-wtab="write" aria-selected="false">3. Write</button>
-        <button type="button" role="tab" data-wtab="check" aria-selected="false">4. Check</button>
-        <button type="button" role="tab" data-wtab="score" aria-selected="false">For parents</button>
+        <button type="button" role="tab" id="wtab-sources" data-wtab="sources" aria-selected="true" aria-controls="w-sources">1. Read</button>
+        <button type="button" role="tab" id="wtab-plan" data-wtab="plan" aria-selected="false" aria-controls="w-plan">2. Plan</button>
+        <button type="button" role="tab" id="wtab-write" data-wtab="write" aria-selected="false" aria-controls="w-write">3. Write</button>
+        <button type="button" role="tab" id="wtab-check" data-wtab="check" aria-selected="false" aria-controls="w-check">4. Check</button>
+        <button type="button" role="tab" id="wtab-score" data-wtab="score" aria-selected="false" aria-controls="w-score">For parents</button>
       </div>
       <div class="write-grid" id="write-grid" data-tab="sources">
-        <div class="wpanel w-sources" id="w-sources"></div>
-        <div class="wpanel w-plan" id="w-plan"></div>
-        <div class="wpanel w-write" id="w-write"></div>
-        <div class="wpanel w-check" id="w-check"></div>
-        <div class="wpanel w-score" id="w-score"></div>
+        <div class="wpanel w-sources" id="w-sources" role="tabpanel" aria-labelledby="wtab-sources"></div>
+        <div class="wpanel w-plan" id="w-plan" role="tabpanel" aria-labelledby="wtab-plan"></div>
+        <div class="wpanel w-write" id="w-write" role="tabpanel" aria-labelledby="wtab-write"></div>
+        <div class="wpanel w-check" id="w-check" role="tabpanel" aria-labelledby="wtab-check"></div>
+        <div class="wpanel w-score" id="w-score" role="tabpanel" aria-labelledby="wtab-score"></div>
       </div>
     </div>
   </section>
@@ -244,15 +253,15 @@
       <h1 class="page-title" id="parents-title" tabindex="-1">Parent guide</h1>
       <p class="page-sub">Georgia Milestones, Grade 3 English Language Arts. Built from GaDOE's official documents, linked below.</p>
       <div class="ptabs" role="tablist" aria-label="Parent guide sections">
-        <button type="button" role="tab" data-ptab="test" aria-selected="true">The test</button>
-        <button type="button" role="tab" data-ptab="standards" aria-selected="false">Every standard</button>
-        <button type="button" role="tab" data-ptab="essay" aria-selected="false">The essay</button>
-        <button type="button" role="tab" data-ptab="plan" aria-selected="false">How to use</button>
+        <button type="button" role="tab" id="ptab-btn-test" data-ptab="test" aria-selected="true" aria-controls="ptab-test">The test</button>
+        <button type="button" role="tab" id="ptab-btn-standards" data-ptab="standards" aria-selected="false" aria-controls="ptab-standards">Every standard</button>
+        <button type="button" role="tab" id="ptab-btn-essay" data-ptab="essay" aria-selected="false" aria-controls="ptab-essay">The essay</button>
+        <button type="button" role="tab" id="ptab-btn-plan" data-ptab="plan" aria-selected="false" aria-controls="ptab-plan">How to use</button>
       </div>
-      <div class="ppanel" id="ptab-test" role="tabpanel"></div>
-      <div class="ppanel" id="ptab-standards" role="tabpanel" hidden></div>
-      <div class="ppanel" id="ptab-essay" role="tabpanel" hidden></div>
-      <div class="ppanel" id="ptab-plan" role="tabpanel" hidden></div>
+      <div class="ppanel" id="ptab-test" role="tabpanel" aria-labelledby="ptab-btn-test"></div>
+      <div class="ppanel" id="ptab-standards" role="tabpanel" aria-labelledby="ptab-btn-standards" hidden></div>
+      <div class="ppanel" id="ptab-essay" role="tabpanel" aria-labelledby="ptab-btn-essay" hidden></div>
+      <div class="ppanel" id="ptab-plan" role="tabpanel" aria-labelledby="ptab-btn-plan" hidden></div>
     </div>
   </section>
 
