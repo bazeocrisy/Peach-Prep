@@ -331,14 +331,14 @@ PP.addLesson({
     { id: "SK-TT2b-T1", type: "order", points: 2, dok: 2, passages: ["p2"],
       prompt: "Put the steps of the water cycle in order.",
       steps: [
-        "The sun warms water on Earth.",
-        "Some water changes into water vapor and rises.",
-        "Water vapor cools into tiny drops that make a cloud.",
-        "The drops join together and grow heavy.",
-        "The heavy drops fall to the ground as rain."
+        "Water from a lake rises into the air as water vapor.",
+        "A cloud forms high in the sky.",
+        "The drops in the cloud grow bigger.",
+        "Rain falls to the ground.",
+        "Rain runs into streams and rivers."
       ],
-      clue: "Each step causes the next one. Ask what has to happen before each step can happen.",
-      why: "The order is: the sun warms water on Earth, some water changes into water vapor and rises, the vapor cools into tiny drops that make a cloud, the drops join together and grow heavy, and the heavy drops fall as rain." },
+      clue: "Each step has to happen before the next one can. Follow the water from the ground, up to the sky, and back down again.",
+      why: "The order is: water from a lake rises into the air as water vapor, a cloud forms high in the sky, the drops in the cloud grow bigger, rain falls to the ground, and rain runs into streams and rivers. Paragraphs 2 to 5 tell these steps in this order." },
     { id: "SK-TT2b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "What causes water vapor to turn back into tiny drops of water?",
       choices: [

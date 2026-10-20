@@ -56,3 +56,8 @@ Checker: `node verification/check-content.js --all` gives PASS with 0 failures a
   - 2b-P3: the clue now ends with "and then what happens next", not "the birds".
   - 2c-P3: the clue now says "the second passage" and "the first passage" instead of the titles, because the title word "Trip" matched the key.
   - 2c-P5: the clue now says "one idea from each passage" instead of the titles, because the title word "Flyers" matched the key.
+
+## Round 3 (response to T-T2-final.md)
+
+- **SHOULD: the SK-TT2b-T1 order steps revealed the T2 and T3 answers.** Fixed: the steps now name each stage without its cause. They are: water from a lake rises as water vapor; a cloud forms high in the sky; the drops in the cloud grow bigger; rain falls to the ground; rain runs into streams and rivers. The steps no longer mention cooler air (the T2 key) or drops joining until they are too heavy (the T3 key). The clue and the `why` were rewritten to match. The checker passes, with no warnings in T-T2.js.
+- **NIT: SK-TT2d-T4 and T5 both echo sentence 9.** Declined, as the reviewer allowed. Sentence 9 is in the draft the child has open, and the T5 distractors fail for other reasons.

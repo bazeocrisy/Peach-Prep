@@ -118,7 +118,7 @@ PP.addLesson({
           { text: "\"My name is Rosa Delgado, and I am in Ms. Hart's third-grade class.\"" },
           { text: "\"Come visit our class on Friday, and we will show you our drawings.\"" }
         ] },
-      clue: "Think about what a persuasive writer does to change a reader's mind. Then look at how paragraphs 3 and 4 begin.",
+      clue: "Think about what a persuasive writer does to change a reader's mind. Then check which choice Rosa really does in her letter.",
       why: "Part A: She gives reasons a garden would help students. Part B: \"A garden would help us learn.\" That sentence states a reason. The rest of paragraph 3 explains it." },
     { id: "SK-TC1a-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Read each short text. Match it to the author's main purpose.",
