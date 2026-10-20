@@ -35,3 +35,24 @@ File changed: `js/data/lessons/T-T2.js` only. Checker: `node verification/check-
 
 ## Other changes
 - **Readability.** The armadillo passage went to FK 4.5 after the "three-banded" change. Two sentences were trimmed: "Its nose is good at smelling food in the ground." and "It hurries to its burrow, a hole it has dug in the ground." No item quotes them word for word. The T3 ms choice "Its nose can smell food under the ground." is a paraphrase used as an answer choice, not as a quote.
+
+## Round 2 (response to T-T2-verify.md)
+
+Checker: `node verification/check-content.js --all` gives PASS with 0 failures and 0 warnings in T-T2.js. The 27 remaining warnings are all in other files. Every passage is still at FK 4.5 or below.
+
+- **MUST: SK-TT2a-T5 clue and key giveaway.** Fixed:
+  - The prompt now reads "The last paragraph says a tough shell helps the armadillo. Choose the sentence that best shows how." It no longer says "safe".
+  - The clue now reads "Some sentences only describe the shell. Find the one that tells what the shell does for the armadillo."
+  - The `why` was updated to match.
+- **SHOULD: T4 gives away T5.** Fixed: the T4 distractor "An armadillo's shell protects it from thorny bushes." is replaced with "An armadillo's shell covers its back and its sides." That detail still supports the main idea, so T4 keeps one key. The `why` was adjusted.
+- **SHOULD: 2.c T1 can be answered from one passage, and it gave away T3.** Fixed:
+  - The new key is "An alligator can float with its eyes above water, and its babies squeak inside their eggs." The floating half is only in Built for the Water, and the squeaking half is only in Alligator Moms. Neither half is used by T2, T3 or T4.
+  - The distractor that shared the squeak half now reads "Baby alligators have stripes, and their nest is made of mud and sticks." It uses Alligator Moms only.
+  - The other two distractors each still use only one passage. The `why` was rewritten.
+- **SHOULD: the shark Teach example patterns the 2a-T1 key.** Fixed: the example main idea is now "Sharks have lived on Earth for a very long time." It is not about the body.
+- **NIT: 2b-P1 order step starting with "Its".** Fixed: it now reads "The caterpillar's new skin hardens into a chrysalis."
+- **NIT: the 2b-P3 Part B distractor was the 2b-P6 key.** Fixed: it is replaced with "\"Then it flies off to find flowers.\"", which is word for word from paragraph 6.
+- **Also fixed: three warnings from the checker's new rule that a clue must not share a word only with the key.**
+  - 2b-P3: the clue now ends with "and then what happens next", not "the birds".
+  - 2c-P3: the clue now says "the second passage" and "the first passage" instead of the titles, because the title word "Trip" matched the key.
+  - 2c-P5: the clue now says "one idea from each passage" instead of the titles, because the title word "Flyers" matched the key.

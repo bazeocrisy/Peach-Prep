@@ -40,3 +40,34 @@ File changed: `js/data/lessons/T-SS.js`. `node verification/check-content.js --a
 - **[B] SK-SS2a-P5 `why` said windmills turn fast.** Fixed. It now reads "keep turning in big circles, round and round", plus the clue that Rosa kicks hard.
 - **[B] 3.T.SS.1.b Teach point 1 mentioned opinion writing, which the lesson never teaches.** Fixed. "Giving your opinion" was removed.
 - **[B] SK-SS1a-T3 clue pointed straight to "As a result".** Fixed. It now reads "Find the sentence that tells what happened because people cut down the forests."
+
+## Round 2 (response to T-SS-verify.md)
+
+`node verification/check-content.js --all` gives 0 failures and no warnings for T-SS.
+
+### Not fixed in round 1
+- **SK-SS1c-P4: options were not all grammatical, and the prompt gave away Also.** Fixed.
+  - The prompt is now "Choose the word or words that best connect sentence 6 to the paragraph before it."
+  - The options are Also, For example and Instead. All three are grammatical before a comma, so meaning decides.
+  - The clue and `why` are rewritten. They explain why For example (fun is not an example of exercise) and Instead (fun does not replace exercise) are wrong.
+- **SK-SS2a-P3: the clue still pointed at the Part B key.** Fixed with the verifier's wording: "Read what Ms. Ellis says right after the idiom. When might everyone feel this way?" It points to "Everyone does before a race," which is not a Part B choice.
+
+### New findings
+- **SK-SS1b-T1: the prompt gave away T2's answer.** Fixed.
+  - The prompt is now "Read the paragraph that begins with sentence 6. Select the sentence that belongs in a different paragraph of Priya's draft." It no longer names the topic of either paragraph.
+  - The clue now gives a general strategy.
+  - The `why` still explains the borrowing paragraph. It is shown only after the child answers.
+- **SK-SS1d-T5: the key echoed the prompt.** Fixed. The key is now "When the games were over, everyone met in the gym for awards." The `why` is updated.
+- **SK-SS1a-P2: the prompt echoed the key's words.** Fixed. The prompt is now "Select the sentence that tells what happens later because of what the peanut roots do." Sentence 2 tells what the roots do right away, so it is still wrong. The `why` now explains "right away" against "later".
+- **SK-SS1d-P4: the banjo sentence was arguable as a detail.** Fixed. It is replaced with "Shoppers crowd around every table." The `why` is updated.
+
+### NITs
+- **SK-SS2b-T4 `why` repeated a sentence.** Fixed. The repeated part is cut.
+- **SK-SS1d-T3 Part A distractor drew attention to T1's answer.** Fixed. It is now "the lunch the class ate in the cafeteria".
+
+### New checker warnings (clue shares a word only with the key)
+Fixed. Four clues are reworded so they no longer share a word only with the key:
+- **SK-SS1a-P5** ("fact"): "ask what kind of information it gives that the sections do not"
+- **SK-SS1a-T1** ("people"): "what does that sentence say is happening now?"
+- **SK-SS1c-T2** ("ideas"): "Read the two parts of sentence 8"
+- **SK-SS2a-T5** ("nothing"): "Bare means empty, like a wall without posters"

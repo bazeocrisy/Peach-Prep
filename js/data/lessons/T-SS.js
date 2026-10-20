@@ -100,11 +100,11 @@ PP.addLesson({
       clue: "Read the first word of each sentence in that section. What do those words tell you about time?",
       why: "The answer is \"It tells the steps in the order they happen.\" The clue words first, next, then and finally show sequence. The section follows the peanut from seed, to flower, to peg, to peanut." },
     { id: "SK-SS1a-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Read the section \"Why Peanuts Help the Soil.\" Select the sentence that tells how peanut plants affect the crops planted in that field the next year.",
+      prompt: "Read the section \"Why Peanuts Help the Soil.\" Select the sentence that tells what happens later because of what the peanut roots do.",
       targets: ["p1:7:1", "p1:7:2", "p1:7:3"],
       answer: ["p1:7:3"], pick: 1,
       clue: "First find the cause the section talks about. Then find the sentence that tells what happens later because of it.",
-      why: "The answer is \"Because the soil has more plant food, crops such as cotton and corn often grow better in that field the next year.\" More plant food is the cause. Crops growing better is the effect." },
+      why: "The answer is \"Because the soil has more plant food, crops such as cotton and corn often grow better in that field the next year.\" The roots add plant food right away. Later, because the soil has more plant food, the next crops grow better. That later result is the effect." },
     { id: "SK-SS1a-P3", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
       prompt: "Choose the words that best complete the sentence.",
       text: "The heading \"Harvest Time\" tells the reader that this section is about {0}.",
@@ -130,7 +130,7 @@ PP.addLesson({
         { text: "to explain why peanuts grow under the ground" },
         { text: "to show how peanut plants are like cotton plants" }
       ],
-      clue: "A text box is set apart from the main sections. Read it and ask whether it tells steps, reasons, or one extra fact.",
+      clue: "A text box sits apart from the main sections. Read it, then ask what kind of information it gives that the sections do not.",
       why: "The answer is to add an interesting fact about peanuts in Georgia. The box gives one extra fact: Georgia grows more peanuts than any other state. It does not tell steps or reasons." },
     { id: "SK-SS1a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "The author wants to add a map of Georgia that shows where most of the peanut farms are. How would the map help readers?",
@@ -152,7 +152,7 @@ PP.addLesson({
         { text: "The first compares two animals, and the second tells about one." },
         { text: "The first gives a fact, and the second tells the author's feelings." }
       ],
-      clue: "Read both headings, then read the first sentence under \"Working Together.\" What does that sentence say people are doing?",
+      clue: "Read both headings, then read the first sentence under \"Working Together.\" What does that sentence say is happening now?",
       why: "The answer is \"The first tells a trouble, and the second tells how people help.\" \"A Big Problem\" tells how tortoises lost their home. \"Working Together\" begins, \"Today, people are working to solve this problem.\" That is problem and solution." },
     { id: "SK-SS1a-T2", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -338,11 +338,11 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-SS1b-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read the paragraph that begins with sentence 6. It is about events at the library. Select the sentence that belongs in the paragraph about things kids can borrow instead.",
+      prompt: "Read the paragraph that begins with sentence 6. Select the sentence that belongs in a different paragraph of Priya's draft.",
       targets: ["p2:3:1", "p2:3:2", "p2:3:3", "p2:3:4"],
       answer: ["p2:3:3"], pick: 1,
-      clue: "Ask of each sentence: Is this an event, something that happens at the library on a certain day? Or is it something you take home?",
-      why: "The answer is sentence 8, \"Kids can also borrow audiobooks to listen to in the car.\" Audiobooks are something kids borrow, so it belongs with sentences 3 to 5. The other sentences tell about events." },
+      clue: "Name what most of the sentences in that paragraph tell about. Then find the one sentence that tells about something else, and check which other paragraph it matches.",
+      why: "The answer is sentence 8, \"Kids can also borrow audiobooks to listen to in the car.\" The other sentences in that paragraph tell about activities at the library: story time and a reading contest. Audiobooks are something kids borrow, so this sentence belongs in the paragraph about borrowing, sentences 3 to 5." },
     { id: "SK-SS1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a heading above sentences 6 through 9. Which heading fits best?",
       choices: [
@@ -504,11 +504,11 @@ PP.addLesson({
       clue: "Reread sentence 5. The new sentence must show one example of that idea, and its linking word must do the right job.",
       why: "The answer is \"For example, I can now pedal all the way up Oak Street hill.\" Pedaling up a hill is one example of Sofia's legs getting stronger. Although does not fit, because strong legs climbing a hill is no surprise. The sunny day and the sister's bell are not about getting stronger." },
     { id: "SK-SS1c-P4", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
-      prompt: "Sofia wants sentence 6 to show that it adds one more reason she likes biking. Choose the word that best begins the sentence.",
+      prompt: "Choose the word or words that best connect sentence 6 to the paragraph before it.",
       text: "{0}, biking is fun to do with my friends.",
-      slots: [{ options: ["Also", "Although", "Because"], answer: 0 }],
-      clue: "Sentence 4 gave one reason. Sentence 6 gives another. Which word adds one more idea of the same kind?",
-      why: "The answer is Also. Also adds another reason: biking is good exercise, and it is also fun with friends. Although would need a surprise, and Because would need a reason for something, but sentence 6 just adds an idea." },
+      slots: [{ options: ["Also", "For example", "Instead"], answer: 0 }],
+      clue: "Reread sentences 4 and 5, then sentence 6. Is being fun with friends one example of exercise, something in place of exercise, or a whole new idea?",
+      why: "The answer is Also. Sentence 4 says biking is good exercise, and sentence 6 gives a second, different reason Sofia likes it, so also fits. Fun with friends is not an example of exercise, and it does not replace exercise, so For example and Instead do not fit." },
     { id: "SK-SS1c-P5", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each linking word to the job it does.",
       cols: ["Gives a reason", "Adds another idea", "Shows a surprise", "Gives an example"],
@@ -549,7 +549,7 @@ PP.addLesson({
         { text: "to add one more way that bees help people" },
         { text: "to give an example of a time a bee stung" }
       ],
-      clue: "Read the two ideas in sentence 8. If people are afraid of bees, what might you expect bees to do? What does the sentence say instead?",
+      clue: "Read the two parts of sentence 8. If people are afraid of bees, what might you expect bees to do? What does the sentence say instead?",
       why: "The answer is to show that the two ideas do not seem to go together. You might expect bees to sting often, since people fear them, but most bees will not sting. Although joins those two ideas. It does not give a reason, add a way bees help, or give an example." },
     { id: "SK-SS1c-T3", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the linking word that best completes each sentence.",
@@ -701,11 +701,11 @@ PP.addLesson({
       rows: [
         { text: "The Saturday farmers market is a busy place.", answer: 0 },
         { text: "Farmers sell peaches, beans and fresh eggs.", answer: 1 },
-        { text: "A man plays the banjo near the fountain.", answer: 1 },
+        { text: "Shoppers crowd around every table.", answer: 1 },
         { text: "My cousin just got a new puppy.", answer: 2 }
       ],
       clue: "Find the sentence that names the big idea the others can tell about. Then ask which sentence is about something else.",
-      why: "\"The Saturday farmers market is a busy place\" is the topic sentence. The farmers selling food and the man playing the banjo are details that show how busy the market is. The cousin's puppy does not belong because it is not about the market." },
+      why: "\"The Saturday farmers market is a busy place\" is the topic sentence. The farmers selling food and the shoppers crowding every table are details that show how busy the market is. The cousin's puppy does not belong because it is not about the market." },
     { id: "SK-SS1d-P5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Read the paragraph. Which TWO sentences do not belong?",
       stem: "Our class garden is busy in the spring. We plant bean and squash seeds in long rows. My favorite food is spaghetti with meatballs. Every morning, two students water the plants. The new swings on the playground are fast. By May, the first green beans are ready to pick.",
@@ -743,7 +743,7 @@ PP.addLesson({
           { text: "the fun things that happened on Field Day", correct: true },
           { text: "the races Carlos ran in the morning" },
           { text: "the water games the class played after lunch" },
-          { text: "how Carlos's brother is learning to drive" }
+          { text: "the lunch the class ate in the cafeteria" }
         ] },
       partB: { prompt: "Which sentence from the draft best tells the main idea of the whole draft?",
         choices: [
@@ -768,13 +768,13 @@ PP.addLesson({
     { id: "SK-SS1d-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Carlos wants to add a new paragraph that tells what happened at the end of the day. Which sentence would be the best topic sentence for it?",
       choices: [
-        { text: "At the end of the day, everyone met in the gym for awards.", correct: true },
+        { text: "When the games were over, everyone met in the gym for awards.", correct: true },
         { text: "We were all tired from running in the hot sun all day." },
         { text: "My friend Eli won a blue ribbon at the awards." },
         { text: "My best friend Eli forgot to bring his water bottle." }
       ],
       clue: "A topic sentence for a new paragraph names the new idea. Which sentence tells what the whole new paragraph will be about?",
-      why: "The answer is \"At the end of the day, everyone met in the gym for awards.\" It names the big idea of the new paragraph, the awards at the end of the day. Eli's blue ribbon is one detail that could go inside that paragraph, and the other two sentences are small details." }
+      why: "The answer is \"When the games were over, everyone met in the gym for awards.\" It names the big idea of the new paragraph: the awards after all the games. Eli's blue ribbon is one detail that could go inside that paragraph, and the other two sentences are small details." }
   ]
 });
 
@@ -887,7 +887,7 @@ PP.addLesson({
           { text: "\"She had come in third place!\"" },
           { text: "\"She did not look at the other swimmers.\"" }
         ] },
-      clue: "There are no real butterflies at the pool. Look in paragraph 2 for words that tell how Rosa looks or feels.",
+      clue: "There are no real butterflies at the pool. Read what Ms. Ellis says right after the idiom. When might everyone feel this way?",
       why: "Part A: Rosa feels nervous about the race. Part B: \"Her coach, Ms. Ellis, saw Rosa's worried face.\" Ms. Ellis says this right after she sees Rosa looking worried, and she adds that everyone feels that way before a race." },
     { id: "SK-SS2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each phrase from the story to the kind of figurative language it is.",
@@ -964,7 +964,7 @@ PP.addLesson({
         { text: "walls painted with many bright colors" },
         { text: "walls covered with pictures of snow" }
       ],
-      clue: "Bare means nothing is on them. Then think about the color of fresh snow.",
+      clue: "Bare means empty, like a wall without posters. Then think about the color of fresh snow.",
       why: "The answer is very white walls with nothing on them. Fresh snow is bright white, so the simile shows the walls are very white. There is no real snow in the room." }
   ]
 });
@@ -1142,7 +1142,7 @@ PP.addLesson({
         { text: "after sentence 12" }
       ],
       clue: "The new sentence is about the stage lights. Find where Andre is on the stage, and look for a sentence that the bright lights would help explain.",
-      why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5, and in sentence 6 he can hardly see the crowd. Only after sentence 5 does the bright light explain sentence 6, where Andre can hardly see the crowd. In the other places, the lights would not explain anything nearby." },
+      why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5. Only after sentence 5 does the bright light explain sentence 6, where Andre can hardly see the crowd. In the other places, the lights would not explain anything nearby." },
     { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
       prompt: "Andre wants to revise sentence 11 with a simile that shows how proud he felt. Choose the simile that fits best.",
       text: "I felt {0}.",

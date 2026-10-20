@@ -299,7 +299,7 @@ PP.addLesson({
           { text: "\"But its skin does not grow with it.\"" },
           { text: "\"Inside the chrysalis, the caterpillar's body slowly changes.\"" }
         ] },
-      clue: "Read paragraph 4. Follow the chain one link at a time: the leaves, the poison, the caterpillar, and then the birds.",
+      clue: "Read paragraph 4. Follow the chain one link at a time: the leaves, the poison, the caterpillar, and then what happens next.",
       why: "Part A: Many birds will not eat monarchs. Part B: \"Instead, it stays in the caterpillar's body and makes it taste bad.\" The milkweed poison stays in the caterpillar and makes it taste bad. As a result, many birds learn to leave monarchs alone. The article says the poison does not hurt the caterpillar." },
     { id: "SK-TT2b-P4", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       prompt: "Use the article. Choose the signal word that best completes each sentence.",
@@ -514,7 +514,7 @@ PP.addLesson({
           { text: "\"That is a long way for such a tiny bird!\"" },
           { text: "\"But when fall comes, they get ready for a long trip.\"" }
         ] },
-      clue: "Find what The Long Trip South says about energy. It must be new information that Tiny Flyers does not give.",
+      clue: "Find what the second passage says about energy. It must be new information that the first passage does not give.",
       why: "Part A: It explains that the birds store extra food as fat to use on their trip. Part B: \"Their bodies store the extra food as fat.\" Tiny Flyers says flying uses energy. The Long Trip South adds how the birds save up energy for a long flight. The humming sound and hovering come from Tiny Flyers, and neither passage says sugar water keeps the birds warm." },
     { id: "SK-TT2c-P4", type: "ms", points: 2, dok: 3, passages: ["p1", "p2"], pick: 2,
       prompt: "A student is writing a report on why hummingbirds need so much food. Which two sentences from the passages belong in the report? Choose two answers.",
@@ -535,7 +535,7 @@ PP.addLesson({
         { text: "Hummingbirds fly south in the fall and come back north in spring." },
         { text: "Hummingbirds catch spiders on their trip across the Gulf of Mexico." }
       ],
-      clue: "A sentence that combines both passages needs one idea from Tiny Flyers and one idea from The Long Trip South.",
+      clue: "A sentence that combines both passages needs one idea from each passage.",
       why: "The answer is \"Hummingbirds are tiny, fast flyers that travel far south each fall.\" Fast flying comes from Tiny Flyers, and the trip south comes from The Long Trip South. Hovering is only from Tiny Flyers, the trip and return are only from The Long Trip South, and neither passage says they catch spiders on the trip." }
   ],
   test: [

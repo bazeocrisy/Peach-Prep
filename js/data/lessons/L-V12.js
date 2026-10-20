@@ -262,9 +262,9 @@ PP.addLesson({
       ] },
     { id: "p2", draft: true, title: "Sea Turtle Nests", byline: "Theo's report draft", genre: "Student draft (informational)",
       paragraphs: [
-        ["(1) Every summer, loggerhead sea turtles come to the beaches of Georgia.", "(2) A sea turtle is a kind of animal that has scaly skin, breathes air and lays eggs.", "(3) At night, a mother turtle crawls onto the sand.", "(4) She digs a deep hole with her back flippers.", "(5) She lays her eggs in this hole and covers them with sand."],
-        ["(6) About two months later, the baby turtles break out of their eggs.", "(7) Animals that hunt other animals, like crabs and birds, try to catch them.", "(8) The babies hurry across the sand to the sea."],
-        ["(9) People who help without getting paid walk the beach each morning to look for turtle tracks.", "(10) We should all help keep their beaches safe."]
+        ["(1) Every summer, loggerhead sea turtles come to the land along the edge of the sea in Georgia.", "(2) A sea turtle is a kind of animal that has scaly skin, breathes air and lays eggs.", "(3) At night, a mother turtle crawls onto the sand.", "(4) She digs a deep hole with her back flippers.", "(5) She lays her eggs in the hole she dug and covers them with sand."],
+        ["(6) About two months later, the baby turtles break out of their eggs.", "(7) Crabs and birds try to catch them.", "(8) The babies hurry across the sand to the sea."],
+        ["(9) People who study sea animals walk the beach each morning to look for turtle tracks.", "(10) We should all help keep their beaches safe from harm."]
       ] }
   ],
   practice: [
@@ -291,9 +291,9 @@ PP.addLesson({
     { id: "SK-V1b-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which science word should replace the yellow powder in sentence 6?",
       text: "Bees came to the bean flowers and carried the {0} from one flower to another.",
-      slots: [{ options: ["nectar", "pollen", "soil"], answer: 1 }],
-      clue: "Think about the science word for the fine powder that flowers make. One choice is a sweet liquid, and one is the dirt plants grow in.",
-      why: "The answer is \"pollen.\" Pollen is the fine powder flowers make, and bees carry it from flower to flower. Nectar is a sweet liquid, and soil is what plants grow in." },
+      slots: [{ options: ["nectar", "pollen", "seeds"], answer: 1 }],
+      clue: "Think of the science word for the powder that bees carry from flower to flower. Then try each choice in the sentence.",
+      why: "The answer is \"pollen.\" Pollen is the fine powder flowers make, and bees carry it from flower to flower. Nectar is a sweet liquid that bees drink, not a powder. Seeds are what new plants grow from, and they are not a powder either." },
     { id: "SK-V1b-P4", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       prompt: "Choose the school words that should replace bugs in sentence 7 and picked and gathered in sentence 8.",
       text: "Some {0} chewed holes in a few of our bean leaves. By June, we {1} a whole basket of ripe beans.",
@@ -327,15 +327,15 @@ PP.addLesson({
       clue: "All four choices are groups of animals. Which group has scaly skin, breathes air and lays eggs on land?",
       why: "The answer is \"reptile.\" Reptiles, like turtles and alligators, have scaly skin, breathe air and lay eggs. Mammals have hair or fur, amphibians like frogs have moist skin with no scales, and insects have six legs." },
     { id: "SK-V1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read sentence 5. Which word should replace this hole?",
+      prompt: "Read sentence 5. Which word should replace hole she dug to be more exact?",
       choices: [
         { text: "nest", correct: true },
-        { text: "shell" },
-        { text: "flipper" },
-        { text: "pond" }
+        { text: "den" },
+        { text: "hive" },
+        { text: "shelter" }
       ],
-      clue: "Think about the science word for a place an animal makes to lay its eggs.",
-      why: "The answer is \"nest.\" A nest is the place an animal makes for its eggs, and the mother turtle lays her eggs in the hole." },
+      clue: "All four choices are places animals use. Think about what each place is for, and which one fits what the turtle does in this hole.",
+      why: "The answer is \"nest.\" A nest is a place an animal makes for its eggs, and the turtle digs this hole to lay her eggs in it. A den is a home where an animal like a fox rests and hides. A hive is a home that bees build. Shelter can mean any place that keeps an animal safe, so it is not as exact." },
     { id: "SK-V1b-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which science word should replace break out of their eggs in sentence 6?",
       text: "About two months later, the baby turtles {0}.",
@@ -344,14 +344,14 @@ PP.addLesson({
       why: "The answer is \"hatch.\" To hatch means to break out of an egg. Migrate means to move to a new place for part of the year, and hibernate means to sleep through the winter." },
     { id: "SK-V1b-T4", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each group of plain words to the school word that means the same thing.",
-      cols: ["predators", "volunteers", "habitat"],
+      cols: ["shore", "scientists", "protect"],
       rows: [
-        { text: "animals that hunt other animals (sentence 7)", answer: 0 },
-        { text: "people who help without getting paid (sentence 9)", answer: 1 },
-        { text: "the place where an animal finds the food, water and shelter it needs", answer: 2 }
+        { text: "the land along the edge of the sea (sentence 1)", answer: 0 },
+        { text: "people who study sea animals (sentence 9)", answer: 1 },
+        { text: "keep safe from harm (sentence 10)", answer: 2 }
       ],
       clue: "Read each group of plain words. Ask which school word names the same thing, then try it in the sentence.",
-      why: "Animals that hunt other animals are predators. People who help without getting paid are volunteers. The place where an animal finds what it needs is its habitat." },
+      why: "The land along the edge of the sea is the shore. People who study animals, plants and the world around us are scientists. To protect something means to keep it safe from harm." },
     { id: "SK-V1b-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Lucy is telling her class about a map. Which words could she use in place of a box that tells what each symbol means?",
       stem: ["\"Our map of Georgia has a box that tells what each symbol means. A star stands for the capital city.\""],

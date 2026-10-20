@@ -129,7 +129,7 @@ PP.addLesson({
       slots: [
         { options: ["bread", "bred", "breed"], answer: 0 }
       ],
-      clue: "Remember that ea can make the short e sound. Picture the word on a bag at the store.",
+      clue: "Some of these are real words that mean something else. Read each one in the sentence, then picture the word on a bag at the store.",
       why: "The answer is bread. The food is spelled with ea, which makes a short e sound in this word. Bred and breed are different words." }
   ],
   test: [
@@ -193,7 +193,7 @@ PP.addLesson({
       slots: [
         { options: ["fence", "fense", "fenc"], answer: 0 }
       ],
-      clue: "Picture the word. Its last sound is spelled the same way as the end of face and dance.",
+      clue: "Picture the word. Think about how the s sound is spelled at the end of words like this, and what keeps a c soft.",
       why: "The answer is fence. The s sound at the end is spelled ce, like in face and dance, and the e makes the c soft. Fense sounds the same but is not how the word is spelled. Fenc has no e, so its c would be hard, like k." }
   ]
 });
@@ -329,7 +329,7 @@ PP.addLesson({
       slots: [
         { options: ["candle", "candel", "candal"], answer: 0 }
       ],
-      clue: "Spell it one syllable at a time: can, then the last syllable. What kind of syllable often ends a word like this?",
+      clue: "Clap the word and spell it one syllable at a time. Check each syllable against the syllable types you know.",
       why: "The answer is candle. It is can / dle: a closed syllable and then a consonant-le syllable, spelled d-l-e." }
   ],
   test: [
@@ -386,7 +386,7 @@ PP.addLesson({
       slots: [
         { options: ["pebble", "peble", "pebbel"], answer: 0 }
       ],
-      clue: "Spell it one syllable at a time. The first vowel is short, so the first syllable must be closed. How does the last syllable end?",
+      clue: "Clap the word and spell it one syllable at a time. Use what each syllable type tells you about the vowel sound.",
       why: "The answer is pebble. It is peb / ble: the first syllable is closed, so the e is short, and the last syllable is consonant-le. Peble would split pe / ble, with a long e." }
   ]
 });
@@ -472,7 +472,7 @@ PP.addLesson({
       slots: [
         { options: ["making", "makeing", "makking"], answer: 0 }
       ],
-      clue: "Make ends with a silent e. What happens to a silent e before -ing?",
+      clue: "Find the base word and look at how it ends. Then use the spelling rule that fits before -ing.",
       why: "The answer is making. Make ends with a silent e, so you drop the e before adding -ing." },
     { id: "SK-FP4c-P3", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which is the correct way to spell stop with -ed added?",
@@ -482,7 +482,7 @@ PP.addLesson({
         { text: "stopt" },
         { text: "stopted" }
       ],
-      clue: "Stop is a short word that ends with one short vowel and one consonant. What do you usually do to that last consonant?",
+      clue: "Look at how the base word ends. Then use the spelling rule that fits before -ed.",
       why: "The answer is stopped. Stop ends with one short vowel, o, and one consonant, p, so you double the p before adding -ed." },
     { id: "SK-FP4c-P4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each word and ending to the spelling change it needs.",
@@ -535,7 +535,7 @@ PP.addLesson({
         { options: ["hopped", "hoped", "hopt"], answer: 0 },
         { options: ["napping", "naping", "napeing"], answer: 0 }
       ],
-      clue: "The base words are hop and nap. Each ends with one short vowel and one consonant.",
+      clue: "Find the base word in each blank and look at how it ends. Then use the spelling rule that fits.",
       why: "The answers are hopped and napping. Hop and nap each end with one short vowel and one consonant, so you double the last letter. Hoped is a real word, but it comes from hope, not hop." },
     { id: "SK-FP4c-T3", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which is the correct way to spell try with -ed added?",
@@ -545,7 +545,7 @@ PP.addLesson({
         { text: "tryd" },
         { text: "treid" }
       ],
-      clue: "Try ends with a consonant and y. What happens to that y before -ed?",
+      clue: "Look at the last two letters of the base word. Then use the spelling rule that fits before -ed.",
       why: "The answer is tried. Try ends with r and y, a consonant and y, so you change the y to i and add -ed." },
     { id: "SK-FP4c-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each word and ending to the spelling change it needs.",
@@ -567,7 +567,7 @@ PP.addLesson({
         { text: "filling" },
         { text: "filler" }
       ],
-      clue: "Which prefix means again? Find the word that starts with it.",
+      clue: "Find the base word in each choice. Then think about what its prefix or suffix adds to it.",
       why: "The answer is refill. The prefix re- means again, so refill means to fill again." }
   ]
 });
@@ -643,7 +643,7 @@ PP.addLesson({
         { text: "becaus" },
         { text: "becouse" }
       ],
-      clue: "Use the trick: big elephants can always understand small elephants. Check each letter.",
+      clue: "Use a memory trick you know for this word. Then check each choice letter by letter.",
       why: "The answer is because: b-e-c-a-u-s-e, the first letters of big elephants can always understand small elephants." },
     { id: "SK-FF1a-P2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly.",
@@ -651,7 +651,7 @@ PP.addLesson({
       slots: [
         { options: ["said", "sed", "sayed"], answer: 0 }
       ],
-      clue: "This word sounds like it has the e from bed, but it is not spelled with e. Picture it in a book.",
+      clue: "This word has a tricky part: the sound you hear is not spelled the way it sounds. Picture the word in a book you have read.",
       why: "The answer is said. The ai in said makes the sound of the e in bed." },
     { id: "SK-FF1a-P3", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly for each blank.",
@@ -691,7 +691,7 @@ PP.addLesson({
         { options: ["saw", "was", "sew"], answer: 0 }
       ],
       clue: "These words look alike. Read each one in the sentence and ask: Does that make sense?",
-      why: "The answer is saw. \"Yesterday I saw a deer\" tells what I looked at. Was has the same letters in a different order, and sew means to stitch with a needle." },
+      why: "The answer is saw. \"Yesterday I saw a deer\" tells what I looked at. \"I was a deer\" would mean you are a deer, which does not make sense. Was has the same letters as saw in a different order, and sew means to stitch with a needle." },
     { id: "SK-FF1a-P7", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One sentence uses a look-alike word that does not belong. Which sentence is it?",
       options: [
@@ -713,7 +713,7 @@ PP.addLesson({
         { text: "agen" },
         { text: "ugain" }
       ],
-      clue: "Picture the word in a book. It starts with a, and it has the same vowel team as rain.",
+      clue: "Picture the word in a book you have read. Check each choice letter by letter, in order.",
       why: "The answer is again: a-g-a-i-n. It is spelled with ai, like in rain." },
     { id: "SK-FF1a-T2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly.",
@@ -721,7 +721,7 @@ PP.addLesson({
       slots: [
         { options: ["does", "dose", "duz"], answer: 0 }
       ],
-      clue: "This word goes with do. Its tricky part is the vowel sound.",
+      clue: "Picture the word in a book you have read. Read each choice in the sentence and check every letter.",
       why: "The answer is does. It comes from do, so it starts d-o, then e-s. Dose is a different word." },
     { id: "SK-FF1a-T3", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the word that is spelled correctly for each blank.",
@@ -730,7 +730,7 @@ PP.addLesson({
         { options: ["busy", "bizzy", "buzy"], answer: 0 },
         { options: ["build", "bild", "biuld"], answer: 0 }
       ],
-      clue: "Both words sound like they have a short i, but neither one spells that sound with just an i. Picture each word in a book.",
+      clue: "Both words have a tricky part. Picture each word in a book you have read, and check every letter.",
       why: "The answers are busy and build. In busy, the u makes a short i sound. In build, the ui makes a short i sound." },
     { id: "SK-FF1a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word best completes the sentence?",
@@ -741,10 +741,10 @@ PP.addLesson({
         { text: "Wear" },
         { text: "Wore" }
       ],
-      clue: "This sentence asks a question about a place. Read every letter of each word.",
+      clue: "Read every letter of each word. Then read the sentence with each one and ask: Does that make sense?",
       why: "The answer is Where. Where asks about a place: Where did you put the map? Were, wear and wore look alike, but they do not ask about a place." },
     { id: "SK-FF1a-T5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "One sentence uses a look-alike word that does not belong. Which sentence is it?",
+      prompt: "Read each sentence. In which sentence is one word wrong?",
       options: [
         "Please turn of the lamp.",
         "We put on our coats and hats.",
@@ -752,7 +752,7 @@ PP.addLesson({
         "I want to go there someday."
       ],
       answer: [0], pick: 1,
-      clue: "Read every letter of the short words. Then ask if each sentence makes sense.",
+      clue: "Read slowly and picture what each sentence tells you to do or shows you. Check every letter of the small words.",
       why: "The answer is \"Please turn of the lamp.\" It should say off, with two f's. You turn a lamp off. Of is a different word." }
   ]
 });
@@ -840,7 +840,7 @@ PP.addLesson({
         { text: "plane" },
         { text: "pen" }
       ],
-      clue: "Think about what Grandpa uses to cook on the stove. Check that the word also looks like plan.",
+      clue: "Read the sentences around it. Find a word that makes sense there and also looks like plan.",
       why: "The answer is pan. Grandpa heats a pan on the stove, and the next sentence says he drops batter into the pan. Pan looks like plan without the l." },
     { id: "SK-FF1d-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "In paragraph 5, Ben read the word money. Choose the word that makes sense and looks like money.",
@@ -887,7 +887,7 @@ PP.addLesson({
         { text: "horn" },
         { text: "hoop" }
       ],
-      clue: "Picture what firefighters use to spray water. Find a word that fits and looks like the word Leo read.",
+      clue: "Picture what is happening in the sentence. Find a word that makes sense and looks like the word Leo read.",
       why: "The answer is hose. Firefighters spray water through a long hose. Hose looks like horse without the r." },
     { id: "SK-FF1d-T3", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Mia misread one word in this sentence. Choose the word that makes sense.",
@@ -917,7 +917,7 @@ PP.addLesson({
         { text: "milk" },
         { text: "little" }
       ],
-      clue: "Ask what a kitten drinks from. Find the word that does not fit.",
+      clue: "Picture the sentence. Find the word that does not fit, then check its letters.",
       why: "The answer is fish. A kitten drinks milk from a dish, not a fish. Dish and fish look alike, so Owen should look at the first letter and reread." }
   ]
 });
