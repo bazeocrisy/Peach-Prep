@@ -696,7 +696,7 @@
 
   function renderTest(host, L) {
     const set = PP.byId["SK:" + keyOf(L) + ":t"];
-    host.appendChild(make("h2", "panel-h", set ? "Test Your Knowledge" : "Check: show a grown-up"));
+    host.appendChild(make("h2", "panel-h", set ? "Test Your Knowledge (the skill check)" : "Check: show a grown-up"));
     const card = make("div", "go-card");
     if (set) {
       const max = set.items.reduce((a, it) => a + it.points, 0);
@@ -707,8 +707,8 @@
         /* for grown-ups: how the pass was earned (display only, from the dated attempt log) */
         const att = r.attempts || [];
         const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
-        if (r.passTry) card.appendChild(make("p", "go-note pass-try", "Passed on try " + r.passTry + "." + (r.passTry > 1 ? " The check uses the same questions each time." : "")));
-        if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", "Passed after seeing the answers on an earlier try."));
+        if (r.passTry) card.appendChild(make("p", "go-note pass-try", "For grown-ups: passed on try " + r.passTry + "." + (r.passTry > 1 ? " The check uses the same questions each time." : "")));
+        if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", "For grown-ups: passed after seeing the answers on an earlier try."));
         if (r.legacyUndated) card.appendChild(make("p", "go-note", "This pass was saved before the site kept dates, so its date is not known."));
         if (reviewDue(cur)) {
           const last = att[att.length - 1];
@@ -778,7 +778,7 @@
   function renderFluency(host, L, A) {
     const card = make("div", "go-card fluency");
     card.appendChild(make("h3", "write-h", "Read aloud for one minute"));
-    card.appendChild(make("p", "flu-tool-note", "A home practice tool, not a formal test or screener. Teachers use calibrated passages and more than one reading for that, so treat these numbers as a rough guide."));
+    card.appendChild(make("p", "flu-tool-note", "A home practice tool, not a school reading test. Schools use passages that are checked for difficulty and more than one reading, so treat this number as a rough guide."));
     lines(card, A.how, "");
     const pick = make("div", "seg flu-pick"); pick.setAttribute("role", "group"); pick.setAttribute("aria-label", "Choose a passage");
     card.appendChild(pick);
@@ -876,7 +876,7 @@
       if (A.practiced) out.appendChild(make("p", "", "This was a practiced passage, so the speed is higher than on a first reading. Use it to see your own progress from one reading to the next."));
       else out.appendChild(make("p", "", "A typical third grader in the " + season + " reads about " + goal +
         " words correct per minute on a first reading (" + A.goalSource + "). " +
-        (wcpm >= goal ? "For this one reading, that is at or above the grade 3 middle." : wcpm >= goal - 10 ? "For this one reading, that is close to the grade 3 middle. Keep practicing." : "For this one reading, that is below the grade 3 middle. Rereading the same passage a few times a week builds speed. Try it again tomorrow.") +
+        (wcpm >= goal ? "For this one reading, that is at or above the typical grade 3 score." : wcpm >= goal - 10 ? "For this one reading, that is close to the typical grade 3 score. Keep practicing." : "For this one reading, that is below the typical grade 3 score. Rereading the same passage a few times a week builds speed. Try it again tomorrow.") +
         " Passages differ in difficulty, so one reading is a rough guide only."));
       out.appendChild(make("p", "", ratio >= 0.95 ? "Accuracy of 95% or higher means this passage is a good level for reading on your own." :
         ratio >= 0.90 ? "Accuracy of 90-94%: a good level for reading with a grown-up nearby." : "Accuracy under 90% means this passage is hard right now. Read it together first, then try again."));
@@ -941,9 +941,9 @@
       const l = make("label"); const n = make("input"); n.type = "number"; n.min = "0"; n.max = "99"; n.step = "1"; n.id = uid + "sf";
       n.value = entry.obs && entry.obs.selfFix ? String(entry.obs.selfFix) : "";
       n.addEventListener("input", () => { const v = n.value === "" ? null : Math.max(0, Math.min(99, Math.round(+n.value))); store("selfFix", v); });
-      l.appendChild(n); l.appendChild(document.createTextNode("counted from your second taps; change it if needed"));
+      l.appendChild(n); l.appendChild(document.createTextNode("We counted the words you tapped twice. Change the number if needed."));
       fs.appendChild(l); box.appendChild(fs);
-      radios("retell", "Could your child tell what it was mostly about?", [["yes", "Yes"], ["partly", "Partly"], ["notyet", "Not yet"]]);
+      radios("retell", "Ask: \"What was it mostly about?\" Could your child tell you?", [["yes", "Yes"], ["partly", "Partly"], ["notyet", "Not yet"]]);
       return box;
     }
     function obsText(o) {
@@ -1054,7 +1054,7 @@
   function afterTest(set, got, max) {
     const pass = recordTest(set.code, got, max);
     return pass ? "✓ Passed! You passed the skill check. It now shows a check mark on the skill list. Come back in about a week and try it again to see if it stuck."
-      : "To pass the skill check, score " + passMark(max) + " or more. Go back to Watch Me or Practice Together, then try the check again another day.";
+      : "Not yet, and that's OK. Learning takes a few tries. Go back to Watch Me or Practice Together, then try the skill check again on another day. (You need " + passMark(max) + " or more points to pass.)";
   }
 
   function init() {

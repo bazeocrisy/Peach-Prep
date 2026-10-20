@@ -294,7 +294,7 @@ with sync_playwright() as p:
             pg.evaluate(CORRECT); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
         g2 = pg.text_content("#res-guidance")
-        ok("9.6 a failed check says how many points pass it; a passing check says it passed", "To pass the skill check" in g1 and "passed the skill check" in g2, (g1, g2))
+        ok("9.6 a failed check says how many points pass it; a passing check says it passed", "points to pass" in g1 and "passed the skill check" in g2, (g1, g2))
         pg.click("#res-back"); pg.wait_for_timeout(80)
         bk = pg.evaluate("({cur:PP_APP.current(), code:PP_SKILLS.current(), step:PP_SKILLS.step(), done:document.querySelectorAll('#sk-steps .step-btn.is-done').length})")
         ok("9.7 Back from a skill test returns to the skill's Test step, with all five steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 5, bk)
@@ -412,8 +412,8 @@ with sync_playwright() as p:
     ok("11.4 See my answers is recorded, and the next pass is flagged afterAnswers", bool(seen.get("answersSeenAt")) and rb["attempts"][0]["afterAnswers"] is False and rb["attempts"][1]["afterAnswers"] is True, rb.get("attempts"))
     pg.evaluate("PP_SKILLS.open(%s,'test')" % json.dumps(B)); pg.wait_for_timeout(60)
     card = pg.text_content("#sk-panel")
-    ok("11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'", "Passed the skill check on " in card and "Passed on try 2." in card
-       and "same questions each time" in card and "Passed after seeing the answers on an earlier try." in card, card[:300])
+    ok("11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'", "Passed the skill check on " in card and "passed on try 2." in card
+       and "same questions each time" in card and "passed after seeing the answers on an earlier try." in card, card[:300])
     sit(C, True)
     rc = pg.evaluate(PROG)[C]
     ok("11.6 a first-try pass without seeing answers: passTry 1, afterAnswers false", rc.get("passTry") == 1 and rc["attempts"][0]["afterAnswers"] is False and not rc.get("answersSeenAt"), rc)
@@ -480,7 +480,7 @@ with sync_playwright() as p:
         pg.evaluate("(()=>{const n=Date.now.bind(Date);Date.now=()=>n()-61000;})()")
         fl = pg.evaluate(PROG)[flu]["fluency"][-1]
         hist = pg.text_content(".flu-hist-box")
-        ok("11.12 fluency timer says it is a home practice tool, not a test or screener", "home practice tool" in note and "not a formal test or screener" in note, note[:200])
+        ok("11.12 fluency timer says it is a home practice tool, not a test or screener", "home practice tool" in note and "not a school reading test" in note, note[:200])
         ok("11.13 fluency verdict is for this one reading and notes passages differ", "For this one reading" in fo and "Passages differ in difficulty" in fo and "Right on track" not in fo, fo[:300])
         ok("11.14 grown-up observations (expression 1-3, pauses, self-corrections from the second tap, retell) are saved with the reading and shown as 'Grown-up observed'",
            fl.get("wcpm") == 99 and fl.get("obs") == {"selfFix": 1, "expr": 2, "pauses": "sometimes", "retell": "partly"} and ymd.match(fl.get("d", ""))

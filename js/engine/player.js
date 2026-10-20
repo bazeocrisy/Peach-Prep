@@ -411,7 +411,7 @@
     const host = el("res-skills"); clear(host);
     if (run.set.kind === "form") {
       const n = rows.length;
-      host.appendChild(make("p", "note", "This was a SHORTENED practice test: " + n + " questions and " + max + " points, with no essay. " +
+      host.appendChild(make("p", "note", "This was a shortened practice test: " + n + " questions and " + max + " points, with no essay. " +
         "The real Grade 3 test has 60 points, including an 8-point essay. This is a practice score, not a Georgia Milestones score."));
     }
     if (multi) host.appendChild(make("p", "note", "Some questions check two areas, so they count in each one. The area scores add up to more than the total."));
