@@ -67,7 +67,7 @@ PP.addSet({
         [
           "But bright lights from houses and streets can confuse them.",
           "As a result, some hatchlings crawl the wrong way, away from the water.",
-          "To help, many people who live near Georgia beaches block their light at night during nesting season.",
+          "To help, many people who live near Georgia beaches keep their lights from shining on the beach at night during nesting season.",
           "They turn off outdoor lights or close their curtains.",
           "Volunteers also walk the beaches early each morning to look for new turtle tracks and mark the nests."
         ],
@@ -165,9 +165,9 @@ PP.addSet({
         pick: 2,
         choices: [
           { text: "Nesting begins after dark, usually between May and August.", correct: true },
-          { text: "Then she lays about 120 eggs." },
+          { text: "To help, many people who live near Georgia beaches keep their lights from shining on the beach at night during nesting season." },
           { text: "During that time, the sun heats the sand." },
-          { text: "They usually climb out of the nest together at night." },
+          { text: "Hatchlings find the ocean by crawling toward the brightest part of the sky, which is usually above the water." },
           { text: "Volunteers also walk the beaches early each morning to look for new turtle tracks and mark the nests.", correct: true }
         ]
       },
@@ -217,7 +217,7 @@ PP.addSet({
       slots: [
         { options: ["onto the land", "out into the deep sea", "with their young ones", "under the waves"], answer: 0 }
       ],
-      clue: "Read the sentences after the word. Where do the turtles usually live, and where do the females go to build nests?",
+      clue: "Read the sentences after the phrase. Where do the turtles usually live, and where do the females go to build nests?",
       why: "Come ashore means to come onto the land. The paragraph says the turtles live in the ocean, but the females \"return to land\" to lay eggs \"on the sandy beaches.\""
     }
   ]

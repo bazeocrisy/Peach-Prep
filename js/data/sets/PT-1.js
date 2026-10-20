@@ -159,7 +159,7 @@ PP.addSet({
         ],
         ["## Letting Go"],
         [
-          "Before winter, many trees, such as maples and oaks, get ready to drop their leaves.",
+          "Before winter, many trees, such as maples and sweetgums, get ready to drop their leaves.",
           "A thin layer of cells grows where each leaf's stem joins the branch.",
           "This layer slowly cuts the leaf off from the tree.",
           "Soon, even a gentle breeze can knock the leaf loose."
@@ -251,7 +251,7 @@ PP.addSet({
       passages: ["p1"],
       std: ["3.T.T.1.c", "3.T.RA.2.a"],
       dok: 2,
-      prompt: "Which sentence best shows that Malik feels guilty after he hides the chip?",
+      prompt: "Select the sentence that best shows that Malik feels guilty after he hides the chip.",
       source: "p1",
       targets: ["p1:5:2", "p1:6:5", "p1:7:1", "p1:7:2", "p1:7:3", "p1:8:1", "p1:8:2"],
       answer: ["p1:7:3"],
@@ -335,11 +335,11 @@ PP.addSet({
           { text: "\"A chipped pitcher is a small problem, but broken trust is a much bigger one.\"", correct: true },
           { text: "I was in a hurry to finish so I could watch Aunt Bea at the wheel." },
           { text: "\"Could you make another one before the wedding next month?\"" },
-          { text: "\"And I could use a helper at the wheel.\"" }
+          { text: "Before the clay dried, I pressed my thumbprint into the bottom of the new pitcher." }
         ]
       },
       clue: "The central message is the big lesson of the whole story. What does the main character learn by the end?",
-      why: "Part A: The central message is \"Telling the truth is important, even when it is hard to do.\" Malik is scared, but he tells the truth, and Aunt Bea thanks him. Part B: Aunt Bea says, \"A chipped pitcher is a small problem, but broken trust is a much bigger one.\" That means honesty matters more than the pitcher. Rushing is what caused the accident, so the story does not teach that hurrying is good. Malik hides the chip so nobody will see it, but he feels terrible until he tells the truth, so the story does not teach that hidden mistakes do not matter. Malik does not earn a reward by working hard, and the helper invitation is one event, not the lesson of the whole story."
+      why: "Part A: The central message is \"Telling the truth is important, even when it is hard to do.\" Malik is scared, but he tells the truth, and Aunt Bea thanks him. Part B: Aunt Bea says, \"A chipped pitcher is a small problem, but broken trust is a much bigger one.\" That means honesty matters more than the pitcher. Rushing is what caused the accident, so the story does not teach that hurrying is good. Malik hides the chip so nobody will see it, but he feels terrible until he tells the truth, so the story does not teach that hidden mistakes do not matter. Malik does not earn a reward by working hard, and the thumbprint is one event, not the lesson of the whole story."
     },
 
     /* ---------------- p2: "Why Leaves Change Color" ---------------- */
@@ -389,12 +389,12 @@ PP.addSet({
         { text: "Yellow and orange colors are inside the leaves the whole summer.", correct: true },
         { text: "In the fall, the green chlorophyll breaks down and is not replaced.", correct: true },
         { text: "The leaves of some trees make new red and purple colors in the fall." },
-        { text: "Sunny fall days and cool nights make the red colors especially bright." },
+        { text: "Red and purple colors are not hiding in the leaf all summer." },
         { text: "A thin layer of cells grows where each leaf's stem joins the branch." },
         { text: "Fallen leaves add helpful materials to the soil as they break down." }
       ],
       clue: "Find the part of the article that tells why the yellow and orange appear. Which details work together to explain it?",
-      why: "The answers are \"Yellow and orange colors are inside the leaves the whole summer.\" and \"In the fall, the green chlorophyll breaks down and is not replaced.\" Paragraph 3 says the yellow and orange are there all along but hidden by the green. Paragraph 4 says the green breaks down in fall, so the hidden colors can be seen. The details about new colors and sunny days are about red and purple. The layer of cells and the fallen leaves are about how leaves drop and what happens after."
+      why: "The answers are \"Yellow and orange colors are inside the leaves the whole summer.\" and \"In the fall, the green chlorophyll breaks down and is not replaced.\" Paragraph 3 says the yellow and orange are there all along but hidden by the green. Paragraph 4 says the green breaks down in fall, so the hidden colors can be seen. The details about red and purple colors do not explain yellow and orange. The layer of cells and the fallen leaves are about how leaves drop and what happens after."
     },
     {
       id: "PT-1-11",
@@ -428,7 +428,7 @@ PP.addSet({
         { text: "It tells the reader that the section is about why people rake up fallen leaves." }
       ],
       clue: "A heading names the big idea of the section under it. Read the whole section. What is it mostly about?",
-      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. In this section, it is the leaves that let go. How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
+      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. Letting go means the tree lets its leaves fall.How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
     },
     {
       id: "PT-1-13",
@@ -439,19 +439,19 @@ PP.addSet({
       dok: 2,
       prompt: "Read each cause from the article. Choose the effect that goes with it. Use each effect once.",
       cols: [
-        "Red leaves become especially bright.",
-        "Yellow and orange colors stay hidden.",
         "Hidden yellow and orange colors can be seen.",
+        "The soil gets nutrients for new plants.",
+        "The leaf looks green.",
         "A gentle breeze can knock the leaf loose."
       ],
       rows: [
-        { text: "Fall has sunny days and cool nights.", answer: 0 },
-        { text: "In summer, a leaf has a lot of green chlorophyll.", answer: 1 },
-        { text: "The green chlorophyll in a leaf breaks down.", answer: 2 },
-        { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 }
+        { text: "A leaf has a lot of green chlorophyll inside it.", answer: 2 },
+        { text: "The green chlorophyll in a leaf breaks down.", answer: 0 },
+        { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 },
+        { text: "Fallen leaves slowly break down on the ground.", answer: 1 }
       ],
       clue: "A cause makes something happen. Find each cause in the article. Then read on to find what it makes happen.",
-      why: "Sunny fall days and cool nights make red leaves especially bright. In summer, there is so much green chlorophyll that it covers up the yellow and orange, so those colors stay hidden. When the green chlorophyll breaks down, the hidden yellow and orange colors can be seen. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose."
+      why: "Chlorophyll is green, so a leaf full of it looks green. When the green chlorophyll breaks down, the hidden yellow and orange colors can be seen. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
     },
     {
       id: "PT-1-14",
@@ -526,8 +526,8 @@ PP.addSet({
       choices: [
         { text: "Many owls have a ring of stiff feathers around the face that helps gather sounds toward their ears.", correct: true },
         { text: "In some owls, one ear opening is a little higher than the other, which helps the owl tell where a sound comes from.", correct: true },
-        { text: "An owl's eyes are shaped like tubes, so the owl must turn its whole head to look to the side." },
-        { text: "Owls often swallow small animals whole and later spit up the bones and fur in a pellet." },
+        { text: "An owl's eyes are shaped like tubes and cannot move in their sockets, so the owl must turn its whole head to look to the side." },
+        { text: "Owls often swallow small animals whole, and later they spit up the bones and fur in a small bundle called a pellet." },
         { text: "Some owls make their nests in holes inside old trees instead of building nests of their own." }
       ],
       clue: "First, read sentence 6 to find the idea that needs support. Then keep only the facts that are about that same body part.",
@@ -647,13 +647,13 @@ PP.addSet({
       prompt: "Read the paragraph. The word trunk has more than one meaning. What does trunk mean in this paragraph?",
       stem: "When we got to the campground, Dad parked the car and opened the trunk. He lifted out our tent and sleeping bags. Then we set up camp under a tall pine tree.",
       choices: [
-        { text: "the space at the back of a car for carrying things", correct: true },
+        { text: "the part of a car used for carrying things", correct: true },
         { text: "the thick main stem that holds up a tree" },
         { text: "the long nose of an elephant" },
         { text: "the middle part of a person's body" }
       ],
       clue: "Read the words right before and after trunk. What did Dad just do, and what did he take out of the trunk?",
-      why: "The answer is \"the space at the back of a car for carrying things.\" Dad parked the car and opened the trunk, then lifted out the tent and sleeping bags, so the trunk is where things are carried in a car. The paragraph does mention a pine tree, but that comes later and is about where they camped."
+      why: "The answer is \"the part of a car used for carrying things.\" Dad parked the car and opened the trunk, then lifted out the tent and sleeping bags, so the trunk is where things are carried in a car. The paragraph does mention a pine tree, but that comes later and is about where they camped."
     }
   ]
 });

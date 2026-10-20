@@ -40,7 +40,7 @@ PP.addSet({
          "Marcus looked out at the yard, where hundreds of tiny lights were flickering over the grass.",
          "He stood up and held the open jar toward a firefly that floated close to the step.",
          "Then he stopped.",
-         "One firefly in a jar would make only one small light in a dark bedroom.",
+         "Even a jar full of fireflies would make only a small light in a dark bedroom.",
          "Out here, the whole yard was shining, from the grass all the way up to the branches of the oak tree."],
         ["Marcus set the jar down and went inside.",
          "Lila was sitting on her bed with her blanket pulled up to her chin.",
@@ -149,13 +149,13 @@ PP.addSet({
       id: "R-POE-01-q7", type: "mc", points: 1, std: ["3.T.T.1.d", "3.T.C.2.a"], dok: 3,
       prompt: "How is Marcus in \"The Firefly Jar\" different from the speaker in \"Fireflies\"?",
       choices: [
-        { text: "Marcus first plans to catch fireflies in a jar, but the speaker would rather watch them.", correct: true },
+        { text: "Marcus first plans to fill a jar with fireflies, but the speaker chooses to watch them free.", correct: true },
         { text: "Marcus keeps a firefly in his jar all night, but the speaker lets the fireflies go free." },
         { text: "Marcus is afraid of the dark, but the speaker loves to sit outside and watch at night." },
         { text: "Marcus counts the fireflies all alone, but the speaker counts them with a little sister." }
       ],
       clue: "Check each part of each choice against BOTH texts. A choice is right only if every part of it is true.",
-      why: "The answer is: Marcus first plans to catch fireflies in a jar, but the speaker would rather watch them. Marcus plans to fill the jar to make a night-light for Lila, then changes his mind. The speaker says, \"I'd rather watch them, free and bright.\" Marcus never catches a firefly, Lila (not Marcus) is afraid of the dark, and Marcus counts the lights with Lila, not alone."
+      why: "The answer is: Marcus first plans to fill a jar with fireflies, but the speaker chooses to watch them free. Marcus plans to fill the jar to make a night-light for Lila, then changes his mind. The speaker says, \"I'd rather watch them, free and bright.\" Marcus never catches a firefly, Lila (not Marcus) is afraid of the dark, and Marcus counts the lights with Lila, not alone."
     },
     {
       id: "R-POE-01-q8", type: "ms", points: 1, std: ["3.T.T.1.d"], dok: 3,
