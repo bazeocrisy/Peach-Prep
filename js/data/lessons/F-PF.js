@@ -7,7 +7,7 @@ PP.addLesson({
     points: [
       "The letters ea usually say long e, as in bead and team. In some words, like bread and head, ea says short e. In a few words, like great and steak, ea even says long a.",
       "The letters ow can say long o, as in snow and grow. They can also say the sound in cow and town, the same sound you hear in ouch.",
-      "C is usually hard, like k, before a, o or u, as in cat and cup. C is usually soft, like s, when e, i or y comes right after it, as in face, city and fancy.",
+      "C is usually hard, like k, before a, o, u or a consonant, as in cat, cup and clap. C is usually soft, like s, when e, i or y comes right after it, as in face, city and fancy.",
       "G is usually hard, as in go and gum, before a, o or u. Before e, i or y, g is often soft and says j, as in gem, giant and gym. But not always: get, give and girl keep the hard g.",
       "Bonus trickster: ough sounds different in tough, though and through. You learn those words one at a time."
     ],
@@ -100,11 +100,11 @@ PP.addLesson({
       stem: "The giant ate a big plate of grapes.",
       text: "The g in giant sounds like {0}. The g in grapes sounds like {1}.",
       slots: [
-        { options: ["the j in jam", "the g in go", "the z in zoo"], answer: 0 },
-        { options: ["the j in jam", "the g in go", "the z in zoo"], answer: 1 }
+        { options: ["the j in jam", "the g in go", "the k in kite"], answer: 0 },
+        { options: ["the j in jam", "the g in go", "the k in kite"], answer: 1 }
       ],
-      clue: "Look at the letter right after each g. Is it e, i or y, or is it a different letter?",
-      why: "The g in giant sounds like the j in jam, because i comes right after it. The g in grapes sounds like the g in go, because r comes right after it." },
+      clue: "Look at the letter right after each g. Is it e, i or y, or is it a different letter? Then say each word out loud to check.",
+      why: "The g in giant sounds like the j in jam. I comes right after it, and g is often soft before e, i or y. The g in grapes sounds like the g in go, because r comes right after it." },
     { id: "SK-FP4a-P5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words have ea with the long e sound, like in bead?",
       choices: [
@@ -122,7 +122,15 @@ PP.addLesson({
       options: ["Carla", "cut", "cake", "slices"],
       answer: [3], pick: 1,
       clue: "Find each c. Then look at the letter right after it. C is usually soft before e, i or y.",
-      why: "The answer is slices. The c comes before e, so it is soft and says s. In Carla, cut and cake, the c comes before a or u, so it is hard and says k." }
+      why: "The answer is slices. The c comes before e, so it is soft and says s. In Carla, cut and cake, the c comes before a or u, so it is hard and says k." },
+    { id: "SK-FP4a-P7", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that is spelled correctly.",
+      text: "The baker sold a warm loaf of {0}.",
+      slots: [
+        { options: ["bread", "bred", "breed"], answer: 0 }
+      ],
+      clue: "Remember that ea can make the short e sound. Picture the word on a bag at the store.",
+      why: "The answer is bread. The food is spelled with ea, which makes a short e sound in this word. Bred and breed are different words." }
   ],
   test: [
     { id: "SK-FP4a-T1", type: "mc", points: 1, dok: 1, passages: [],

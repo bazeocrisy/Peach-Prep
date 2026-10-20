@@ -51,19 +51,19 @@ window.PP_HABITS = {
   "K-12.P.EICC.2.c": {
     title: "Learning how things work",
     looks: "Your child uses reading and writing to understand how something works or how to do something, step by step.",
-    tryit: ["Read a simple recipe or craft directions together and have your child follow the steps.", "Have your child write 4 steps for something they know how to do, like brushing teeth, then test the steps on you."],
+    tryit: ["Read a no-cook recipe (like a sandwich, trail mix or fruit cup) or simple paper-craft directions together, and have your child follow the steps while you watch.", "Have your child write 4 steps for something they know how to do, like brushing teeth, then test the steps on you."],
     ask: "Can you explain how that works in your own words?"
   },
   "K-12.P.EICC.2.d": {
     title: "Thinking about ideas",
     looks: "Your child thinks about whether ideas in a text make sense, are fair or are well explained, and can write or say what they think about them.",
-    tryit: ["After reading, ask whether a character made a good choice and have your child explain why or why not.", "Read a short article or ad together and decide whether the claims make sense."],
+    tryit: ["After reading, ask whether a character made a good choice and have your child explain why or why not.", "Read the back of a kids' cereal or toy box together and decide whether each claim, like 'the most fun ever!', is a fact you can check or just an opinion."],
     ask: "Do you agree with that? What in the text makes you think so?"
   },
   "K-12.P.EICC.2.e": {
     title: "Using words to solve problems",
-    looks: "Your child reads to help solve a problem and writes to convince someone, like asking for a later bedtime with good reasons.",
-    tryit: ["Have your child write a short note to persuade the family about something, like a weekend activity, with two reasons.", "Read a set of directions or a label together to solve a real problem at home."],
+    looks: "Your child reads to help solve a problem and writes to convince someone, like suggesting a family movie night or a weekend outing, with good reasons.",
+    tryit: ["Have your child write a short note to persuade the family about something, like a weekend activity, with two reasons.", "Read the rules of a board game or the directions for putting a toy together, and use them to settle a real question, like 'Who goes first?' or 'Which piece goes here?'"],
     ask: "What reasons could convince someone to agree with you?"
   },
   "K-12.P.EICC.3.a": {
@@ -81,8 +81,8 @@ window.PP_HABITS = {
   "K-12.P.EICC.3.c": {
     title: "Connecting what I know",
     looks: "Your child links what they already know to what they read, and notices when the text says something new or different from what they thought.",
-    tryit: ["Before reading about a topic, have your child tell what they already know; after reading, talk about what was new.", "When something in a book surprises your child, stop and talk about why it is different from what they expected."],
-    ask: "What does this remind you of, and did anything surprise you?"
+    tryit: ["Before reading about a topic, have your child tell what they already know; after reading, talk about what was new and one thing you still wonder about that the text didn't answer.", "When something in a book surprises your child, stop and talk about why it is different from what they expected."],
+    ask: "What does this remind you of, what surprised you, and what do you still want to know?"
   },
   "K-12.P.EICC.3.d": {
     title: "Summing up and picturing",
@@ -123,13 +123,13 @@ window.PP_HABITS = {
   "K-12.P.EICC.4.c": {
     title: "Coming up with ideas",
     looks: "Your child gets ideas for writing from their own life, from books they've read and from talking with others.",
-    tryit: ["Make an 'idea list' together: favorite memories, things they're experts on, and questions they wonder about.", "After reading a book, brainstorm together what your child could write that the book gave them an idea for."],
+    tryit: ["Make an 'idea list' together: favorite memories, things they're experts on, and questions they wonder about.", "After reading a book, ask your child, 'What does this book make you want to write about?' and jot down two ideas together."],
     ask: "Where could you get ideas for this: something you did, read or talked about?"
   },
   "K-12.P.EICC.4.d": {
     title: "Picking my best ideas",
     looks: "Your child adds ideas and facts to their plan and chooses the most important and interesting ones to use.",
-    tryit: ["Have your child list 5 facts or details, then circle the 3 strongest for their writing.", "Ask your child to put a star next to the idea that will grab the reader most."],
+    tryit: ["Have your child list 5 facts or details, circle the 3 strongest, and write each circled one in the box of their plan where it belongs (beginning, middle or end).", "Ask your child to put a star next to the idea that will grab the reader most."],
     ask: "Which of these ideas matters most for your writing?"
   },
   "K-12.P.EICC.4.e": {
@@ -159,7 +159,7 @@ window.PP_HABITS = {
   "K-12.P.ST.1.a": {
     title: "Knowing the background",
     looks: "Your child uses what they know, what they look up, and what they talk about to understand when and where a text takes place and what was going on then.",
-    tryit: ["Before reading a story set long ago or far away, talk about or look up what life was like there and then.", "Ask your child to point out clues in the text about the time and place."],
+    tryit: ["Before reading a story set long ago or far away, look at a library book or search online together to learn what life was like there and then.", "Ask your child to point out clues in the text about the time and place."],
     ask: "When and where does this happen, and what do you know about that time or place?"
   },
   "K-12.P.ST.1.b": {
@@ -170,9 +170,9 @@ window.PP_HABITS = {
   },
   "K-12.P.ST.1.c": {
     title: "Why the author chose that",
-    looks: "Your child wonders why an author made certain choices, like a setting or word, and how readers might feel about it depending on their situation.",
-    tryit: ["Pick a choice the author made, like where the story is set, and talk about how the story would change if it were different.", "Talk about how a kid today and a kid long ago might react differently to the same story."],
-    ask: "Why do you think the author decided to do it that way?"
+    looks: "Your child thinks about how the time, place and people an author was writing for shaped the author's choices, and how readers in different situations might react differently.",
+    tryit: ["Look at a story or poem from long ago and find one word or detail the author chose because of when it was written, like 'icebox' or 'wagon', then talk about what an author today would write instead.", "Talk about how a kid today and a kid long ago might react differently to the same story."],
+    ask: "What was happening when this was written, and how did that change what the author wrote?"
   },
   "K-12.P.ST.2.a": {
     title: "What is this text for?",
@@ -195,7 +195,7 @@ window.PP_HABITS = {
   "K-12.P.AC.1.a": {
     title: "Noticing story and opinion parts",
     looks: "Your child spots story parts like characters, setting and problem, or opinion parts like reasons, and talks about how they affect the reader.",
-    tryit: ["After a story, name the character, setting, problem and solution together.", "Read a short opinion piece or letter to the editor and find the opinion and the reasons."],
+    tryit: ["After a story, name the character, setting, problem and solution together, then talk about which one made you want to keep reading.", "Read a kid's book review or a short opinion paragraph you write together, and find the opinion and the reasons."],
     ask: "Which part made you care most, and why?"
   },
   "K-12.P.AC.1.b": {
@@ -231,13 +231,13 @@ window.PP_HABITS = {
   "K-12.P.AC.2.c": {
     title: "Building sentences on purpose",
     looks: "Your child chooses how to build sentences, combining short ones, starting in different ways, or using a short one for surprise, to help their writing work.",
-    tryit: ["Give your child two short sentences and have them join them with 'and', 'but' or 'because'.", "Have your child rewrite a paragraph so no two sentences start with the same word."],
+    tryit: ["Give your child two short sentences and have them join them with 'and', 'but' or 'because'.", "Write 3 sentences that all start with 'I' (for example, 'I went to the park. I saw a dog. I threw a ball.') and have your child rewrite them so each one starts a different way."],
     ask: "How could you change this sentence to make it more exciting or clearer?"
   },
   "K-12.P.AC.2.d": {
     title: "Organizing to help my reader",
     looks: "Your child organizes writing with an order, headings, steps or pictures so readers can follow it and the writing does its job.",
-    tryit: ["Have your child make a mini poster about a topic with a title, headings and labeled pictures.", "Have your child number the steps in a how-to so a reader can follow along."],
+    tryit: ["On half a sheet of paper, have your child make a fact card about a topic with a title, two headings and one labeled drawing.", "Have your child number the steps in a how-to so a reader can follow along."],
     ask: "How can you arrange this so your reader can follow it easily?"
   },
   "K-12.P.AC.3.a": {
@@ -249,7 +249,7 @@ window.PP_HABITS = {
   "K-12.P.AC.3.b": {
     title: "Different texts, different details",
     looks: "Your child knows that a story, a report and a poem include different kinds of ideas and information, like feelings in a poem and facts in a report.",
-    tryit: ["Pick a topic like rain; list what a poem about rain would include versus a science report about rain.", "Sort sentences on scraps of paper into 'story' and 'report' piles together."],
+    tryit: ["Pick a topic like rain; list what a poem about rain would include versus a science report about rain.", "Write 6 short sentences about rain on scraps of paper, 3 that sound like a story or poem ('The rain tapped on my window like a drum') and 3 that sound like a report ('Rain forms when water drops in clouds get heavy'), and have your child sort them into 'story' and 'report' piles."],
     ask: "What kind of information would you expect to find in this kind of text?"
   },
   "K-12.P.AC.3.c": {
@@ -261,7 +261,7 @@ window.PP_HABITS = {
   "K-12.P.AC.3.d": {
     title: "Mixing words and pictures",
     looks: "Your child reads and makes texts that combine words with pictures, labels, charts or sounds, and thinks about who will see them.",
-    tryit: ["Have your child make a comic strip or illustrated mini book for a younger relative.", "Read a comic or a book with diagrams together and talk about how the pictures and words work together."],
+    tryit: ["Have your child make a 4-box comic, with words and pictures, that teaches a younger child one thing they know how to do.", "Read a comic or a book with diagrams together and talk about how the pictures and words work together."],
     ask: "What do the pictures add that the words don't say?"
   },
   "K-12.P.CP.1.a": {
@@ -297,7 +297,7 @@ window.PP_HABITS = {
   "K-12.P.CP.2.b": {
     title: "Choosing how to present",
     looks: "Your child picks a good way to share, like a poster, a talk, a story or a demonstration, that fits why they're sharing and who's listening.",
-    tryit: ["Have your child share what they learned about a topic with a younger cousin and then with a grandparent, choosing a fitting way for each.", "Let your child decide whether a drawing, a speech or a show-and-tell is the best way to present a family update."],
+    tryit: ["Have your child explain what they learned about a topic twice, once as if talking to a kindergartner and once to a grown-up (you can play both), choosing a fitting way for each, like a drawing for the little one and a short talk for the grown-up.", "Let your child decide whether a drawing, a speech or a show-and-tell is the best way to present a family update."],
     ask: "What is the best way to share this with this audience?"
   },
   "K-12.P.CP.2.c": {
@@ -315,7 +315,7 @@ window.PP_HABITS = {
   "K-12.P.CP.2.e": {
     title: "Memorizing poems and speeches",
     looks: "Your child learns a grade-level poem or part of a famous speech by heart and recites it, building knowledge and confidence.",
-    tryit: ["Pick a short poem from a library book and learn two lines a day, then recite it to the family.", "Read part of a famous speech together, talk about what it means, and have your child memorize a sentence or two."],
+    tryit: ["Pick a short poem from a library book and learn two lines a day, then recite it to the family.", "Read a few lines of a famous speech made for young listeners or often taught in grade 3, such as the closing lines of Dr. Martin Luther King Jr.'s 'I Have a Dream', talk about what they mean, and have your child memorize one or two sentences."],
     ask: "What do you think this poem or speech is about, and why does it matter?"
   }
 };

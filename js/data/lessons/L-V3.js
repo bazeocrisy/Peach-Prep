@@ -8,13 +8,14 @@ PP.addLesson({
       "A definition clue tells you the meaning right there. Look for words like \"which is,\" \"which means\" or \"or.\"",
       "An example clue gives examples of the word. Look for \"such as\" or \"like.\"",
       "A synonym clue is a nearby word that means the same thing. An antonym clue is a nearby word that means the opposite. Words like \"but\" and \"not\" often point to an antonym.",
-      "Some words have more than one meaning, like bark or pitcher. Read the words around them to choose the meaning that fits.",
-      "Check your guess. Put your meaning in place of the word. If the sentence still makes sense, you are probably right."
+      "Clues work for phrases too. A phrase is a small group of words, like \"make up your mind,\" that has its own meaning. Use the clues around it to figure out what the whole group of words means.",
+      "Some words have more than one meaning, like bark or pitcher. Choose the meaning that fits. Then check: put your meaning in place of the word or phrase. If the sentence still makes sense, you are probably right."
     ],
     words: [
       { term: "context clue", means: "a hint in the words around a word that helps you know what it means" },
       { term: "synonym", means: "a word that means the same or almost the same as another word" },
       { term: "antonym", means: "a word that means the opposite of another word" },
+      { term: "phrase", means: "a small group of words that go together" },
       { term: "multiple-meaning word", means: "a word that is spelled the same but has more than one meaning" }
     ],
     example: {
@@ -56,7 +57,7 @@ PP.addLesson({
       answer: "Here, pitcher means a container that holds and pours drinks."
     }
   ],
-  parent: "When you read together, stop at a word your child does not know. Ask, \"What words nearby give us a hint?\" Then have your child try a meaning in place of the word to see if it makes sense.",
+  parent: "When you read together, stop at a word your child does not know. Ask, \"What words nearby give us a hint?\" Then have your child try a meaning in place of the word to see if it makes sense. Pictures, charts and captions in books are clues too, so point to them when a word is new.",
   passages: [
     { id: "p1", title: "The Class Bake Sale", genre: "Literary text",
       paragraphs: [
@@ -72,7 +73,7 @@ PP.addLesson({
         ["The Okefenokee Swamp is in the southeast corner of Georgia.", "A swamp is a kind of wetland, which is land that is covered by water for much of the year."],
         ["The water in the swamp looks dark brown, like a cup of tea.", "Leaves and other plant parts fall into the water and slowly break down.", "As they break down, they stain the water and change its color."],
         ["Many animals dwell in the swamp.", "They find food, build nests and raise their young there.", "Alligators, turtles, frogs and herons all make their homes in the Okefenokee."],
-        ["Visitors can paddle canoes along the swamp's narrow waterways.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
+        ["Visitors can paddle canoes along the swamp's narrow waterways.", "Guides tell them to keep an eye out for alligators.", "Alligators often rest along the edges of the water, so it is smart to watch for them.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
         ["If you visit, be cautious.", "Stay in your boat, keep your hands out of the water and never feed the alligators."]
       ] }
   ],
@@ -103,7 +104,7 @@ PP.addLesson({
           { text: "\"Every spring, Mr. Lee's third graders hold a bake sale to raise money for new library books.\"" },
           { text: "\"There was enough to buy twelve new books.\"" }
         ] },
-      clue: "The clue is not in the same sentence as scarce. Read the very next sentence. How many buyers came?",
+      clue: "The clue is not in the same sentence as scarce. Look in paragraph 3 for a detail that tells how many buyers came at first. What does that tell you about scarce?",
       why: "Part A: very few; not many. Part B: \"Only two people stopped by in the whole first hour.\" Only two buyers in a whole hour is very few, so scarce means very few." },
     { id: "SK-V3a-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 4. Choose the meaning of devoured.",
@@ -118,7 +119,7 @@ PP.addLesson({
       targets: ["p1:2:1", "p1:3:2", "p1:4:2", "p1:5:2"],
       answer: ["p1:5:2"], pick: 1,
       clue: "A definition clue often uses the signal words \"which is\" or \"which means.\" Look for them.",
-      why: "The answer is \"Then he helped the class write a budget, which is a plan for how to spend money.\" The words \"which is\" lead right into the meaning of budget. The other sentences use an example clue, a clue in the next sentence and a synonym clue." },
+      why: "The answer is \"Then he helped the class write a budget, which is a plan for how to spend money.\" The words \"which is\" lead right into the meaning of budget. The other sentences give an example clue, a sentence that is itself a clue for the word scarce, and a synonym clue." },
     { id: "SK-V3a-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each sentence to the kind of context clue it gives for the word in front of it.",
       cols: ["Definition clue", "Example clue", "Synonym clue", "Antonym clue"],
@@ -128,7 +129,7 @@ PP.addLesson({
         { text: "drowsy: The puppy was drowsy. It was so sleepy it could hardly keep its eyes open.", answer: 2 },
         { text: "tidy: Sam's room was tidy, but his brother's room was a big mess.", answer: 3 }
       ],
-      clue: "Look for signal words in each sentence: \"which are\" gives a meaning, \"such as\" gives examples, and \"but\" shows an opposite. If none of those, look for a word that means the same.",
+      clue: "For each sentence, find the words that help you know the meaning. Do they tell the meaning, give examples, mean the same thing or mean the opposite?",
       why: "Arid has a definition clue (\"which are very dry places\"). Legumes has an example clue (\"such as peas, beans and peanuts\"). Drowsy has a synonym clue (sleepy). Tidy has an antonym clue (\"but ... a big mess\")." },
     { id: "SK-V3a-P6", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Trunk has more than one meaning. What does trunk mean in these sentences?",
@@ -140,7 +141,15 @@ PP.addLesson({
         { text: "a pair of shorts worn for swimming" }
       ],
       clue: "Elephants show up later, so be careful. What did Dad put in the trunk, and what did the family do right after?",
-      why: "The answer is \"the back part of a car used for storage.\" Dad put bags in the trunk, and then the family drove. You put bags in the back of a car before a drive. The elephants are at the zoo, not part of this trunk." }
+      why: "The answer is \"the back part of a car used for storage.\" Dad put bags in the trunk, and then the family drove. You put bags in the back of a car before a drive. The elephants are at the zoo, not part of this trunk." },
+    { id: "SK-V3a-P7", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Read paragraph 2. Choose the meaning of the phrase set everything out.",
+      text: "In paragraph 2, set everything out means {0}.",
+      slots: [
+        { options: ["left on a long trip", "put it where people could see it", "threw it all away"], answer: 1 }
+      ],
+      clue: "Read the whole sentence. Where did the treats go, and why would a bake sale need them there?",
+      why: "The answer is \"put it where people could see it.\" The class put the treats on two long tables in the front hall so buyers could see them and pick some. Read together, the words set everything out mean to lay things out for people to see." }
   ],
   test: [
     { id: "SK-V3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -200,7 +209,17 @@ PP.addLesson({
         { text: "flat and very wide" }
       ],
       clue: "Look for an antonym clue. The next sentence tells what the mats are like instead.",
-      why: "The answer is \"solid and hard to push down.\" The mats are not firm. They are soft and can shake. Firm means the opposite of soft and shaky, so it means solid and hard to push down." }
+      why: "The answer is \"solid and hard to push down.\" The mats are not firm. They are soft and can shake. Firm means the opposite of soft and shaky, so it means solid and hard to push down." },
+    { id: "SK-V3a-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "What does the phrase keep an eye out for mean in paragraph 4?",
+      choices: [
+        { text: "watch carefully for", correct: true },
+        { text: "close one eye to hide from" },
+        { text: "take a photo of" },
+        { text: "throw food out to" }
+      ],
+      clue: "Read the sentence after the phrase. What does it say is smart to do about the alligators?",
+      why: "The answer is \"watch carefully for.\" The next sentence says alligators rest along the edges of the water, \"so it is smart to watch for them.\" That tells you the whole phrase keep an eye out for means to watch carefully for something." }
   ]
 });
 
@@ -275,7 +294,7 @@ PP.addLesson({
     { id: "p2", title: "Nadia's Volcano", genre: "Literary text",
       paragraphs: [
         ["On the morning of the science fair, Nadia felt nervous.", "Her hands were shaky, and her stomach felt full of butterflies."],
-        ["Her project was a model volcano made of clay.", "When vinegar is poured in, baking soda inside makes foam bubble up and spill over the top."],
+        ["Her project was a model volcano made of clay.", "When vinegar is poured onto baking soda inside, foam bubbles up and spills over the top."],
         ["Nadia set the volcano on the table and took a deep breath.", "Then she poured in the vinegar.", "Nothing happened!"],
         ["Her friend Grace peeked inside.", "\"I think you forgot the baking soda,\" Grace whispered.", "Nadia quickly added two big spoonfuls.", "This time, foam rushed up and spilled down the sides."],
         ["The crowd clapped and cheered.", "By the end of the day, Nadia was not nervous anymore, and she felt calm and proud."]
@@ -288,7 +307,7 @@ PP.addLesson({
       slots: [
         { options: ["to", "too", "two"], answer: 2 }
       ],
-      clue: "All three words sound the same. Which one is a number?",
+      clue: "All three words sound the same. Read the sentence. Is the missing word telling where, telling \"also,\" or telling how many chairs? Then match that to a spelling.",
       why: "The answer is two. Two is the number 2, and the sentence tells how many more chairs are needed. To shows direction (go to school), and too means also or more than enough." },
     { id: "SK-V3b-P2", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -306,10 +325,10 @@ PP.addLesson({
           { text: "\"Suddenly, the line jerked.\"" },
           { text: "\"Grandpa snapped a picture.\"" }
         ] },
-      clue: "Kofi says two things about the fish, one right after the other. Look for a word that means the same as enormous.",
+      clue: "Look at the words near enormous. Is there a word that means almost the same thing?",
       why: "Part A: very big. Part B: \"What a huge fish!\" Kofi shouted. Huge is a synonym of enormous. Both words mean very big." },
     { id: "SK-V3b-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Scales has more than one meaning. What does scales mean in paragraph 4?",
+      prompt: "Scales is a homograph. What does scales mean in paragraph 4?",
       choices: [
         { text: "small, thin plates that cover a fish", correct: true },
         { text: "tools used to find how heavy things are" },
@@ -317,7 +336,7 @@ PP.addLesson({
         { text: "sets of music notes played up and down" }
       ],
       clue: "What has the scales in this sentence? Think about what would flash in the sun on that thing.",
-      why: "The answer is \"small, thin plates that cover a fish.\" The sentence is about the fish that just flipped out of the water, and its shiny scales flash in the sun. That is the covering on a fish's body." },
+      why: "The answer is \"small, thin plates that cover a fish.\" The sentence is about the fish that just flipped out of the water, and its shiny scales flash in the sun. That is the covering on a fish's body. All four meanings are spelled scales, so it is a homograph." },
     { id: "SK-V3b-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 3. Wound is a homograph. What does wound mean in this story?",
       choices: [
@@ -390,17 +409,15 @@ PP.addLesson({
         ] },
       clue: "An antonym means the opposite. Find the part of the story where Nadia stops feeling nervous. What does she feel instead?",
       why: "Part A: calm. Part B: \"By the end of the day, Nadia was not nervous anymore, and she felt calm and proud.\" Nervous means worried and jumpy. Calm means quiet and not worried, which is the opposite. Proud is a different feeling, not the opposite of nervous." },
-    { id: "SK-V3b-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Are the two words in each pair synonyms or antonyms? Match each pair.",
-      cols: ["Synonyms", "Antonyms"],
-      rows: [
-        { text: "shout / yell", answer: 0 },
-        { text: "shiny / dull", answer: 1 },
-        { text: "shut / close", answer: 0 },
-        { text: "begin / finish", answer: 1 }
+    { id: "SK-V3b-T4", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the word that correctly completes each sentence.",
+      text: "A synonym of begin is {0}. An antonym of shiny is {1}.",
+      slots: [
+        { options: ["finish", "start", "stop"], answer: 1 },
+        { options: ["bright", "glowing", "dull"], answer: 2 }
       ],
-      clue: "For each pair, try using both words in the same sentence. Does the meaning stay the same, or flip?",
-      why: "Shout and yell both mean to call out loudly, and shut and close both mean to make something not open, so they are synonyms. Shiny and dull are opposites, and begin and finish are opposites, so they are antonyms." },
+      clue: "A synonym means the same. An antonym means the opposite. Try each word in a sentence in place of begin or shiny.",
+      why: "The answers are start and dull. Start means the same as begin, so it is a synonym. Dull means not shiny, so it is an antonym. Bright and glowing mean almost the same as shiny, and finish and stop are opposites of begin." },
     { id: "SK-V3b-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One sentence uses the wrong homophone. Choose that sentence.",
       options: [
@@ -424,7 +441,7 @@ PP.addLesson({
       "Close words can be different amounts of the same thing. Cool, warm, hot and boiling all tell about temperature, but each is a different amount of heat.",
       "You can line up close words like steps on a ladder, from weakest to strongest: tap, knock, pound.",
       "Verbs can show how an action is done. To stroll is to walk slowly and calmly. To march is to walk with strong, even steps, like in a parade.",
-      "Adjectives can show how much. Glad, happy and thrilled all mean pleased, but thrilled is the strongest.",
+      "Adjectives can show how much. Glad and happy both mean pleased. Thrilled is much stronger.",
       "Look for clues in the sentence that tell how much, how fast or how strong. Then choose the word that matches."
     ],
     words: [
@@ -452,7 +469,7 @@ PP.addLesson({
       show: ["Leo was ____ when he won first prize in the whole state art contest.", "glad   happy   thrilled"],
       ask: "Which word fits best?",
       steps: [
-        "All three words mean pleased. Line them up: glad is a little pleased, happy is more, thrilled is the most.",
+        "All three words mean pleased. Glad and happy are about the same. Thrilled is much stronger.",
         "Look for clues about how big the moment is: first prize, in the whole state.",
         "Winning in the whole state is a huge deal, so choose the strongest word."
       ],
@@ -486,7 +503,7 @@ PP.addLesson({
       prompt: "These words all tell how cold something is. Put them in order from LEAST cold to MOST cold.",
       steps: ["cool", "cold", "freezing"],
       orderNote: "Tap the words in order, from least cold to most cold. Tap a placed word to take it back.",
-      clue: "Picture a glass of water. Which word would describe it when it is just a little cold? Which word means it is about to turn to ice?",
+      clue: "Picture a glass of water getting colder and colder. Which word comes first, and which comes last?",
       why: "The order is cool, cold, freezing. Cool is a little cold, like shade on a summer day. Cold is more. Freezing is the coldest, cold enough for water to turn to ice." },
     { id: "SK-V3c-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "In paragraph 3, the author says Dev trudged up the slope. What does trudged show about how Dev walked?",
@@ -498,7 +515,7 @@ PP.addLesson({
       ],
       clue: "Look at the other words in the same sentence. How did Dev's legs feel, and how fast were his steps?",
       why: "The answer is \"He walked slowly, as if his legs were tired.\" The sentence says Dev's legs felt heavy and he went one slow step at a time. To trudge is to walk slowly with heavy, tired steps." },
-    { id: "SK-V3c-P3", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
+    { id: "SK-V3c-P3", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Why does the author use the word overjoyed in paragraph 5?",
         choices: [
@@ -514,17 +531,17 @@ PP.addLesson({
           { text: "\"The leaves were turning red and gold.\"" },
           { text: "\"The air was chilly, so Dev zipped up his jacket.\"" }
         ] },
-      clue: "Happy and overjoyed are close in meaning. Read the sentence right before overjoyed. What does it tell you about how the two words compare?",
+      clue: "Happy and overjoyed are close in meaning. Find the place where the author compares them. Which one is stronger?",
       why: "Part A: to show Dev's feeling was much stronger than happy. Part B: \"He was not just happy.\" The author says Dev was not just happy, then picks overjoyed, a stronger word that means very, very happy." },
     { id: "SK-V3c-P4", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the word that best completes each sentence.",
-      text: "The bath water was too {0}, so Mia added some cold water. Now the water is {1}, just right for a bath.",
+      text: "The bath water was too {0}, so Mia added just a little cold water. Now the water is {1}, just right for a bath.",
       slots: [
         { options: ["cool", "hot", "chilly"], answer: 1 },
-        { options: ["boiling", "freezing", "warm"], answer: 2 }
+        { options: ["cool", "warm", "hot"], answer: 1 }
       ],
       clue: "Mia added cold water to fix the first problem. What was wrong? Then pick the word for water that is comfortable to sit in.",
-      why: "The answers are hot and warm. Mia added cold water because the water was too hot. After that it was warm, which is just right for a bath. Boiling would burn you, and freezing would be far too cold." },
+      why: "The answers are hot and warm. Mia added cold water because the water was too hot. A little cold water made it warm, a step down from hot on the ladder. It is not hot anymore, because it is just right, and only a little cold water was added, so it did not get all the way to cool." },
     { id: "SK-V3c-P5", type: "ms", points: 1, dok: 2, passages: [],
       prompt: "Which TWO words mean to run very fast?",
       pick: 2,
@@ -559,10 +576,10 @@ PP.addLesson({
         { text: "furious", correct: true },
         { text: "annoyed" },
         { text: "grumpy" },
-        { text: "upset" }
+        { text: "irritated" }
       ],
       clue: "Line up the words from a little mad to very, very mad. Which one is at the top of the ladder?",
-      why: "The answer is furious. Furious means very, very angry. Annoyed, grumpy and upset are milder ways to feel mad." },
+      why: "The answer is furious. Furious means very, very angry. Annoyed, grumpy and irritated are milder ways to feel mad." },
     { id: "SK-V3c-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentences. Which word BEST describes Kai?",
       stem: ["Kai got caught in the rain without an umbrella. Water dripped from his hair, his shirt and even his socks."],
@@ -594,11 +611,11 @@ PP.addLesson({
   teach: {
     big: "A dictionary or glossary tells me how to spell a word and what it means. I use ABC order and guide words to find the word fast, then pick the meaning that fits.",
     points: [
-      "Words in a dictionary are in ABC order. If two words start with the same letter, look at the second letter. If those match too, look at the third.",
+      "Words in a dictionary are in ABC order. If two words start with the same letter, look at the second letter. If those match too, look at the third. If one word runs out of letters first, like plan and plane, the shorter word comes first.",
       "Guide words are the two words at the top of a dictionary page. The first guide word is the first word on the page, and the second is the last. Every word on the page comes between them in ABC order.",
       "An entry shows a word, its part of speech and its meanings. Many words have more than one meaning, and each one has a number.",
       "To choose the right meaning, read the sentence, then try each meaning in place of the word. Pick the one that makes sense.",
-      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can also use a dictionary to check how to spell a word."
+      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can use a dictionary in a book or online, and you can use it to check how to spell a word."
     ],
     words: [
       { term: "guide words", means: "the two words at the top of a dictionary page that show the first and last words on it" },
@@ -660,7 +677,7 @@ PP.addLesson({
         ["At last, an adult butterfly comes out.", "It spreads its orange and black wings to dry."],
         ["In the fall, many monarchs migrate.", "They fly south to Mexico.", "They spend the winter there in the forests."],
         ["## Glossary"],
-        ["Box: chrysalis (noun): the hard case a caterpillar makes while it turns into a butterfly.", "larva (noun): a young insect after it hatches from an egg.", "migrate (verb): to move to a new place when the seasons change."]
+        ["Box: chrysalis (noun): the hard outer shell a caterpillar's body forms while it turns into a butterfly.", "larva (noun): a young insect after it hatches from an egg.", "migrate (verb): to move to a new place when the seasons change."]
       ] },
     { id: "p2", title: "How Peanuts Grow", genre: "Informational text",
       paragraphs: [
@@ -686,10 +703,10 @@ PP.addLesson({
       why: "The answer is money. M-o comes after m-i, so money is after mitten. Money and mouse both start with m-o, and n comes before u, so money is before mouse. Milk comes before mitten (l is before t). Mouth comes after mouse (t is after s). Mud comes after mouse (u is after o)." },
     { id: "SK-V3d-P2", type: "order", points: 2, dok: 2, passages: [],
       prompt: "Put these words in ABC order.",
-      steps: ["brick", "bridge", "bright", "broom"],
+      steps: ["star", "stare", "start", "step"],
       orderNote: "Tap the words in ABC order, first to last. Tap a placed word to take it back.",
-      clue: "All four words start with b-r. Look at the third letter first. When the third letters match, look at the fourth.",
-      why: "The order is brick, bridge, bright, broom. Brick, bridge and bright all start with b-r-i, and broom starts with b-r-o, so broom is last. For the other three, look at the fourth letter: c, then d, then g." },
+      clue: "All four words start with s-t. Look at the third letter first. If one word runs out of letters while the others keep going, the shorter word comes first.",
+      why: "The order is star, stare, start, step. Star, stare and start begin with s-t-a, and step begins with s-t-e, so step is last. Star runs out of letters first, so it comes before stare and start. Then compare stare and start: the fifth letters are e and t, and e comes first." },
     { id: "SK-V3d-P3", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Read the dictionary entry and the sentence. Which meaning of match is used in the sentence?",
       stem: [
@@ -713,11 +730,11 @@ PP.addLesson({
       clue: "Milkweed starts with m. Find the other m word in the glossary and compare them letter by letter.",
       why: "The answer is after migrate. Milkweed and migrate both start with m-i. The third letters are l in milkweed and g in migrate. G comes before l, so milkweed goes after migrate, at the end of the glossary." },
     { id: "SK-V3d-P5", type: "hottext", points: 1, dok: 1, passages: [],
-      prompt: "Leo is not sure how to spell a word, so he looks it up in a dictionary. Which spelling will he find?",
+      prompt: "Leo is not sure how to spell because. He turns to the dictionary page with the guide words beach – bell and finds the entry. Which spelling will he see?",
       options: ["becuase", "because", "becaus", "beacuse"],
       answer: [1], pick: 1,
-      clue: "Say the word slowly: be-cause. The second part is spelled like the word cause.",
-      why: "The answer is because. It is spelled b-e-c-a-u-s-e, with the word cause at the end. The other spellings have letters mixed up or missing." }
+      clue: "Say the word slowly: be-cause. Check each spelling letter by letter. Which one has every sound, with the letters in the right order?",
+      why: "The answer is because, spelled b-e-c-a-u-s-e. Becuase and beacuse have letters in the wrong order, and becaus is missing the e at the end." }
   ],
   test: [
     { id: "SK-V3d-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -770,7 +787,7 @@ PP.addLesson({
       clue: "Look at what Grandpa does with his hands, and where the peach is. Then try each meaning in place of pick.",
       why: "The answer is \"to pull a fruit or flower off a plant.\" Grandpa gave a gentle tug to get the peach off the branch. A peach is a fruit, and he pulled it off the tree. In this sentence pick is an action, so it cannot be a tool or a guitar piece." },
     { id: "SK-V3d-T5", type: "dropdown", points: 1, dok: 1, passages: [],
-      prompt: "Pablo checks a dictionary to spell a word in his sentence. Choose the correct spelling.",
+      prompt: "Pablo looks up finish in a dictionary to check how to spell finished. Choose the correct spelling.",
       text: "I {0} my homework before dinner.",
       slots: [
         { options: ["finnished", "finished", "finishd"], answer: 1 }
@@ -867,14 +884,14 @@ PP.addLesson({
       slots: [
         { options: ["crawled", "wandered", "darted"], answer: 2 }
       ],
-      clue: "Sentence 5 says the fish moved quickly and turned all together. Which verb shows a quick, sudden move?",
+      clue: "Sentence 5 tells how fast the fish moved. Which verb matches that speed?",
       why: "The answer is darted. To dart is to move suddenly and quickly. The fish went by quickly and all turned at once. Crawled and wandered are slow, so they do not fit." },
     { id: "SK-V3e-P3", type: "hottext", points: 1, dok: 2, passages: ["p1"],
-      prompt: "In one sentence, Malik could change a plain verb to a more exact verb, like shouted, to show HOW someone spoke. Choose that sentence.",
-      targets: ["p1:1:2", "p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1", "p1:3:2"],
-      answer: ["p1:2:3"], pick: 1,
-      clue: "Look for a sentence where someone talks. Is there a plain word for speaking, and are there clues about how loud it was?",
-      why: "The answer is \"(6) My little brother said, \"Look, a stingray!\" so loudly that people turned to stare.\" Said is a plain verb. The brother spoke so loudly that people stared, so shouted would show exactly how he spoke." },
+      prompt: "Malik wants to replace one plain describing word with thrilling, which means very exciting. Choose the sentence where thrilling fits best.",
+      targets: ["p1:1:2", "p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1", "p1:3:2", "p1:3:3"],
+      answer: ["p1:3:3"], pick: 1,
+      clue: "Find the plain describing words in the draft. For each one, ask what it describes: a size, how something feels to touch, or how exciting something was.",
+      why: "The answer is \"(9) It was a fun day, and I can't wait to go back.\" Thrilling can replace fun to show how exciting the day was. In sentence 2, big is about size, and in sentence 8, nice is about how skin feels, so thrilling does not fit there." },
     { id: "SK-V3e-P4", type: "ms", points: 2, dok: 2, passages: ["p1"],
       prompt: "Malik wants to replace nice in sentence 8 with a word that tells exactly how the stingray's skin felt. Which TWO words could he use?",
       pick: 2,
@@ -883,30 +900,30 @@ PP.addLesson({
         { text: "slippery", correct: true },
         { text: "friendly" },
         { text: "pretty" },
-        { text: "loud" }
+        { text: "shiny" }
       ],
       clue: "The sentence is about touching. Which words tell how something feels under your fingers?",
-      why: "The answers are smooth and slippery. Both tell how something feels when you touch it. Friendly tells about how someone acts, pretty tells how something looks, and loud tells how something sounds." },
+      why: "The answers are smooth and slippery. Both tell how something feels when you touch it. Friendly tells about how someone acts. Pretty and shiny tell how something looks, not how it feels." },
     { id: "SK-V3e-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the most exact word to replace big in sentence 2.",
       text: "The first tank we saw was {0}, and it went all the way up to the ceiling.",
       slots: [
-        { options: ["tiny", "enormous", "shallow"], answer: 1 }
+        { options: ["wide", "towering", "long"], answer: 1 }
       ],
-      clue: "Read the rest of sentence 2. How far up did the tank reach?",
-      why: "The answer is enormous. Enormous means very, very big, and the tank went all the way up to the ceiling. Tiny and shallow mean the tank was small or not deep, which does not match the details." }
+      clue: "All three words can describe something big. Read the rest of sentence 2. Which way was the tank big?",
+      why: "The answer is towering. Towering means very tall, and the detail in sentence 2 is about height: the tank went all the way up to the ceiling. Wide and long tell about size from side to side, not how tall something is." }
   ],
   test: [
     { id: "SK-V3e-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which word should replace bad in sentence 4 to describe the wind more exactly?",
       choices: [
         { text: "fierce", correct: true },
-        { text: "gentle" },
-        { text: "quiet" },
-        { text: "soft" }
+        { text: "steady" },
+        { text: "sticky" },
+        { text: "gentle" }
       ],
       clue: "Sentence 4 tells about a big storm. What kind of wind comes with a big storm?",
-      why: "The answer is fierce. Fierce wind is very strong and wild, which matches a big storm. Gentle, quiet and soft describe a calm breeze, not storm wind." },
+      why: "The answer is fierce. Fierce wind is very strong and wild, which matches a big storm and the word bad. Steady wind blows evenly, gentle wind is calm, and sticky tells how air feels on your skin, not how strong wind is." },
     { id: "SK-V3e-T2", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
       prompt: "Choose the most exact verb to replace came down in sentence 5.",
       text: "Rain {0} down so hard that it made puddles all over the yard.",
@@ -916,7 +933,7 @@ PP.addLesson({
       clue: "The rain fell so hard it made puddles all over. Which word shows a lot of rain falling fast?",
       why: "The answer is poured. When rain pours, a lot falls very hard and fast. That matches puddles all over the yard. Dripped and sprinkled describe only a little rain." },
     { id: "SK-V3e-T3", type: "ms", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Sofia wants to replace good in sentence 9 with words that tell exactly how the tomatoes tasted. Which TWO words could she use?",
+      prompt: "Sofia wants to replace good in sentence 9 with words that tell exactly how the tomatoes tasted or felt to eat. Which TWO words could she use?",
       pick: 2,
       choices: [
         { text: "sweet", correct: true },
@@ -935,8 +952,8 @@ PP.addLesson({
         { text: "The next morning, we came outside to check on our garden." },
         { text: "The next morning, we were outside to check on our garden." }
       ],
-      clue: "Sofia's family is worried about the garden after the storm. Which verb shows HOW they went, not just that they went?",
-      why: "The answer is \"The next morning, we hurried outside to check on our garden.\" Hurried shows they went quickly because they were worried after the storm. Got, came and were are plain words that do not show how they moved." },
+      clue: "After a big storm, the family would want to check the garden fast. Which verb shows HOW they went, not just that they went?",
+      why: "The answer is \"The next morning, we hurried outside to check on our garden.\" Hurried shows they went quickly, which makes sense after a big storm. Got, came and were are plain words that do not show how they moved." },
     { id: "SK-V3e-T5", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "In one sentence, Sofia could use the exact verb watered to say the same thing in fewer words. Choose that sentence.",
       targets: ["p2:1:1", "p2:1:2", "p2:1:3", "p2:2:1", "p2:2:2", "p2:3:1", "p2:3:2", "p2:3:3"],

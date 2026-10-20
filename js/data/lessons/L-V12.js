@@ -13,7 +13,7 @@ PP.addLesson({
     ],
     words: [
       { term: "academic word", means: "a school word you use in many subjects, like describe or compare" },
-      { term: "content word", means: "a word that belongs to one subject, like habitat in science" },
+      { term: "content word", means: "a word that belongs to one subject, like habitat in science (also called a specialized word)" },
       { term: "definition", means: "the meaning of a word" }
     ],
     example: {
@@ -61,7 +61,7 @@ PP.addLesson({
       paragraphs: [
         ["Along the coast of Georgia, there are wide, flat salt marshes.", "A salt marsh is wet, grassy land where the ocean meets the land.", "Twice a day, the tide comes in and covers the marsh with salty water.", "Then the tide goes out again."],
         ["The salt marsh is a habitat for many animals.", "A habitat is the place where an animal finds the food, water and shelter it needs.", "Fiddler crabs dig small holes in the mud.", "They hide in their burrows when the water rises."],
-        ["Some animals in the marsh are predators.", "They hunt other animals for food.", "A tall heron stands very still in the shallow water.", "The water is so low that it barely covers the bird's long legs.", "When a fish swims by, the heron grabs it with its sharp beak."],
+        ["Some animals in the marsh are predators.", "They hunt other animals for food.", "A tall heron stands very still in the shallow water.", "The water is so low that it barely covers the bird's feet.", "When a fish swims by, the heron grabs it with its sharp beak."],
         ["Marsh grass has a special way to survive in salty water.", "It gets rid of extra salt through its leaves.", "Sometimes you can see tiny white bits of salt on the grass."]
       ] },
     { id: "p2", title: "Where Does Rain Come From?", genre: "Informational text",
@@ -70,7 +70,7 @@ PP.addLesson({
         ["First, the sun warms water in oceans, lakes and puddles.", "The water turns into a gas called water vapor and rises into the air.", "This change is called evaporation.", "You cannot see water vapor, but it is all around you."],
         ["High in the sky, the air is cold.", "The cold air cools the water vapor, and it turns back into tiny drops of water.", "This change is called condensation.", "Many of these tiny drops crowd together to make a cloud."],
         ["When the drops in a cloud join and get too heavy, they fall to the ground.", "Water that falls from clouds is called precipitation.", "Rain, snow, sleet and hail are all kinds of precipitation."],
-        ["Some of the water soaks into the ground.", "The rest flows into rivers, lakes and oceans.", "Then the cycle begins again."]
+        ["Some of the water soaks into the ground.", "Much of it flows into rivers, lakes and oceans.", "Then the cycle begins again."]
       ] }
   ],
   practice: [
@@ -88,7 +88,7 @@ PP.addLesson({
       prompt: "Which sentence tells what the word habitat means? Choose the sentence in the passage.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4", "p1:3:1"],
       answer: ["p1:2:2"], pick: 1,
-      clue: "Authors often explain a new word with the helper words is a or is the. Find a sentence that starts with the word habitat.",
+      clue: "Authors often explain a new word with helper words such as is a or is the. Which sentence tells what a habitat is, not just that the marsh is one?",
       why: "The answer is \"A habitat is the place where an animal finds the food, water and shelter it needs.\" The words is the place tell you the meaning. The first sentence uses the word but does not explain it." },
     { id: "SK-V1a-P3", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -127,7 +127,7 @@ PP.addLesson({
         { text: "shallow", answer: 2 }
       ],
       clue: "Find each word in the passage. Then read the sentence it is in and the sentence right after it.",
-      why: "A salt marsh is wet, grassy land where the ocean meets the land (paragraph 1). A predator hunts other animals for food (paragraph 3). Shallow means not deep: the water barely covers the heron's legs (paragraph 3)." }
+      why: "A salt marsh is wet, grassy land where the ocean meets the land (paragraph 1). A predator hunts other animals for food (paragraph 3). Shallow means not deep: the water barely covers the heron's feet (paragraph 3)." }
   ],
   test: [
     { id: "SK-V1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -160,7 +160,7 @@ PP.addLesson({
           { text: "\"The cold air cools the water vapor, and it turns back into tiny drops of water.\"", correct: true },
           { text: "\"The water turns into a gas called water vapor and rises into the air.\"" },
           { text: "\"Water that falls from clouds is called precipitation.\"" },
-          { text: "\"The rest flows into rivers, lakes and oceans.\"" }
+          { text: "\"Much of it flows into rivers, lakes and oceans.\"" }
         ] },
       clue: "The sentence that names condensation says this change. Read the sentence right before it to find out what the change is.",
       why: "Part A: water vapor turning back into tiny drops. Part B: \"The cold air cools the water vapor, and it turns back into tiny drops of water.\" The next sentence says, \"This change is called condensation,\" so condensation is that change." },
@@ -190,184 +190,179 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.L.V.1.b",
-  title: "Using exact words when you write",
+  title: "Using school words when you speak and write",
   teach: {
-    big: "Exact words paint a clear picture, so I trade plain words like good, nice, went and got for words that say exactly what I mean.",
+    big: "When I talk or write about what I learned, I use the real school words, like habitat or citizen, because they say exactly what I mean in fewer words.",
     points: [
-      "Some words are plain. Good, nice, bad, went, got and said do not tell the reader very much.",
-      "An exact word gives more information. Instead of went, a writer might use raced, tiptoed or wandered, depending on how the person moved.",
-      "Use the new words you learn in school. In a science report, tadpoles says more than little baby frogs.",
-      "The exact word must fit the meaning. Read the sentences around it, and ask, \"Does this word tell what really happened?\""
+      "Every subject has its own words. Science has words like habitat and predator. Social studies has words like citizen and mayor. Math has words like measure and estimate.",
+      "When you write a report or answer a question in class, use the school word instead of a long group of plain words. Predators says more, in fewer words, than animals that hunt other animals.",
+      "Pick words that fit the subject and the setting. In a science report, use science words. In a letter to your town, use words about your community.",
+      "Be sure the school word means the same thing as the words it replaces. Read your sentence again to check."
     ],
     words: [
-      { term: "exact", means: "just right; it says the meaning clearly" },
-      { term: "revise", means: "to change your writing to make it better" }
+      { term: "academic word", means: "a school word you use in many subjects, like measure or explain" },
+      { term: "content word", means: "a word that belongs to one subject, like predator in science (also called a specialized word)" }
     ],
     example: {
       label: "Example",
-      lines: ["Plain: The dog ate its food.", "Exact: The dog gulped its food."],
-      note: "Gulped shows HOW the dog ate: fast, in big bites. The reader can picture it."
+      lines: ["Plain: Frogs start out as little swimming babies with tails.", "With a school word: Frogs start out as tadpoles."],
+      note: "Tadpoles is the science word for baby frogs that swim and have tails. One school word takes the place of five plain words and sounds like a real science report."
     },
-    tip: "On the test, you may read a student's draft and choose the word that should replace a plain word to make the meaning more exact. Try each choice in the sentence, and pick the one that fits the details around it."
+    tip: "On the test, you may read a student's report and choose the school word that should replace a group of plain words. Find what the plain words describe, then pick the word that means the same thing."
   },
   learn: [
     {
-      show: ["Kayla's draft: The wind was bad last night. It knocked down two branches in our yard."],
-      ask: "Which word should replace bad to be more exact: fierce, sad or quiet?",
+      show: ["Ana's science report: Cactus plants can live in dry places that get very little rain."],
+      ask: "Which science word could Ana use for dry places that get very little rain: deserts, oceans or forests?",
       steps: [
-        "Find what bad describes. It describes the wind.",
-        "Look for details about the wind. It knocked down two branches, so it was very strong.",
-        "Try each word. A sad wind or a quiet wind could not knock down branches. A fierce wind is strong and wild."
+        "Find the plain words to replace: dry places that get very little rain.",
+        "Think about the science words you know for kinds of places. Oceans are water, so they are not dry.",
+        "A desert is a dry place that gets very little rain. That is the same meaning."
       ],
-      answer: "Fierce is the most exact word: The wind was fierce last night."
+      answer: "Ana could write: Cactus plants can live in deserts."
     },
     {
-      show: ["Marcus's draft: Our class went to the creek to look at bugs for science. We got three kinds of beetles in a jar."],
-      ask: "Which word is more exact than got: collected, bought or lost?",
+      show: ["Jalen's letter to his town: All the people who live in our town and belong to it should help keep the park clean."],
+      ask: "Which social studies word could Jalen use: citizens, visitors or leaders?",
       steps: [
-        "Think about what really happened. The class was at a creek, looking for bugs.",
-        "You cannot buy bugs at a creek, and a lost beetle would not be in the jar.",
-        "Collected means gathered up, which is what the class did."
+        "Find the plain words to replace: the people who live in our town and belong to it.",
+        "Visitors only come for a short time, and leaders are just a few people. Neither one means everyone who lives there.",
+        "Citizens are the people who belong to a town or a country."
       ],
-      answer: "Collected is the most exact word: We collected three kinds of beetles in a jar."
+      answer: "Jalen could write: All the citizens of our town should help keep the park clean."
     },
     {
-      show: ["Rosa's draft: Frogs lay their eggs in the water. The eggs hatch into little swimming babies."],
-      ask: "What science word could Rosa use instead of little swimming babies?",
+      show: ["Mila tells her math group: \"I did not count every bean in the jar. I made a careful guess that there are about 50.\""],
+      ask: "Which math word could Mila use instead of made a careful guess?",
       steps: [
-        "Ask what you learned in science about baby frogs.",
-        "A baby frog that hatches from an egg and swims with a tail is called a tadpole.",
-        "One exact word can take the place of three plain words."
+        "Find the plain words to replace: made a careful guess.",
+        "In math, a careful guess about how many or how much has its own name.",
+        "That word is estimate. The past form is estimated."
       ],
-      answer: "Rosa could write: The eggs hatch into tadpoles."
+      answer: "Mila could say: I estimated that there are about 50 beans."
     }
   ],
   write: {
-    prompt: "Write 4 or 5 sentences about a place you like to visit. Use at least three exact words in place of plain words like good, nice, went or got. Try to use one new word you learned in science or social studies.",
+    prompt: "Pick something you learned in science or social studies this year. Write 4 or 5 sentences to teach a younger child about it. Use at least three school words from that subject, and tell what one of them means.",
     checklist: [
-      "I wrote about one place I like to visit.",
-      "I used at least three exact words instead of plain words.",
-      "I read each sentence to check that my exact words fit what really happened.",
-      "I used one new word I learned in school."
+      "I wrote about one thing I learned in science or social studies.",
+      "I used at least three school words from that subject.",
+      "I told what one of the school words means.",
+      "I read each sentence to check that each school word fits the meaning."
     ],
     rows: 6
   },
-  parent: "Play \"Say it better\" in the car or at dinner: one person says a plain sentence, like \"The soup was good,\" and the other trades the plain word for an exact one, like \"The soup was spicy.\"",
+  parent: "At dinner, ask your child to explain something from science or social studies class, like how plants grow or what the mayor does. Listen for the school words, and if your child says a long plain phrase, ask, \"Is there a school word for that?\"",
   passages: [
-    { id: "p1", draft: true, title: "Our Trip to the Peach Orchard", byline: "Ella's first draft", genre: "Student draft (narrative)",
+    { id: "p1", draft: true, title: "Our Class Garden", byline: "Ana's science report draft", genre: "Student draft (informational)",
       paragraphs: [
-        ["(1) Last Saturday, my family went to a peach orchard in middle Georgia.", "(2) The trees grew in long rows, and the peaches looked nice.", "(3) My little brother got a peach from a low branch.", "(4) It was so juicy that sweet juice dripped down his chin."],
-        ["(5) Then a bee buzzed around his head.", "(6) He said, \"Get it away!\" and ran behind my mom.", "(7) The bee flew off to a flower, and we all laughed."],
-        ["(8) By the end of the day, we had filled three big baskets with peaches.", "(9) That night, Mom made a peach pie, and it was good.", "(10) I can't wait to go back next summer."]
+        ["(1) This spring, our class planted a garden behind the school.", "(2) First, we put bean seeds in the soil and watered them.", "(3) A few days later, tiny young plants began to push up out of the soil.", "(4) Every Friday, we used a ruler to find out how tall each plant was."],
+        ["(5) Plants need sunlight, water and air to grow.", "(6) Bees came to the bean flowers and carried the yellow powder from one flower to another.", "(7) Some bugs chewed holes in a few of our bean leaves."],
+        ["(8) By June, we picked and gathered a whole basket of ripe beans.", "(9) We shared them with the lunchroom.", "(10) Next year, we want to grow tomatoes and peppers too."]
       ] },
-    { id: "p2", draft: true, title: "Sea Turtle Nests", byline: "Theo's first draft", genre: "Student draft (informational)",
+    { id: "p2", draft: true, title: "Sea Turtle Nests", byline: "Theo's report draft", genre: "Student draft (informational)",
       paragraphs: [
-        ["(1) Every summer, loggerhead sea turtles come to the beaches of Georgia.", "(2) At night, a mother turtle goes slowly out of the ocean and onto the sand.", "(3) She uses her back flippers to make a deep hole.", "(4) Then she lays her eggs in the hole and covers them with sand."],
-        ["(5) About two months later, the baby turtles come out of their eggs.", "(6) The little turtles move fast across the sand to get to the water.", "(7) Bright lights on the beach can confuse them, so some people help by keeping the beach dark at night."],
-        ["(8) We should all help keep sea turtle beaches safe."]
+        ["(1) Every summer, loggerhead sea turtles come to the beaches of Georgia.", "(2) A sea turtle is a kind of animal that has scaly skin, breathes air and lays eggs.", "(3) At night, a mother turtle crawls onto the sand.", "(4) She digs a deep hole with her back flippers.", "(5) She lays her eggs in this hole and covers them with sand."],
+        ["(6) About two months later, the baby turtles break out of their eggs.", "(7) Animals that hunt other animals, like crabs and birds, try to catch them.", "(8) The babies hurry across the sand to the sea."],
+        ["(9) People who help without getting paid walk the beach each morning to look for turtle tracks.", "(10) We should all help keep their beaches safe."]
       ] }
   ],
   practice: [
     { id: "SK-V1b-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Read sentence 2. Which word should replace nice to describe the peaches more exactly?",
+      prompt: "Ana wants to use a science word in sentence 3. Which word should replace tiny young plants?",
       choices: [
-        { text: "ripe", correct: true },
-        { text: "kind" },
-        { text: "polite" },
-        { text: "friendly" }
+        { text: "seedlings", correct: true },
+        { text: "roots" },
+        { text: "petals" },
+        { text: "stems" }
       ],
-      clue: "Some words that mean nice are used for people. Which word tells something true about a peach on a tree?",
-      why: "The answer is \"ripe.\" Ripe peaches are soft, sweet and ready to pick, which tells the reader exactly how they looked. Kind, polite and friendly describe people, not fruit." },
+      clue: "All four choices are science words about plants. Which one names a whole plant that has just started to grow, not one part of a plant?",
+      why: "The answer is \"seedlings.\" Seedlings are young plants that have just grown from seeds. Roots, petals and stems are parts of a plant, not young plants." },
     { id: "SK-V1b-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Read sentence 3. Which word should replace got to make the meaning more exact?",
+      prompt: "Read sentence 4. Which word should replace used a ruler to find out?",
       choices: [
-        { text: "picked", correct: true },
-        { text: "bought" },
-        { text: "threw" },
-        { text: "dropped" }
+        { text: "measured", correct: true },
+        { text: "estimated" },
+        { text: "counted" },
+        { text: "guessed" }
       ],
-      clue: "Think about where the peach was. What does a person do to take a peach off a branch?",
-      why: "The answer is \"picked.\" The peach was on a low branch, and you pick fruit from a tree. Bought does not fit because nobody paid at the tree, and in sentence 4 he is eating the peach, so he did not throw or drop it." },
+      clue: "Think about what you do with a ruler in math and science. Is it a guess, or do you find the real size?",
+      why: "The answer is \"measured.\" To measure means to use a tool, like a ruler, to find the exact size of something. Estimated and guessed mean a careful guess without a tool, and counted is for how many, not how tall." },
     { id: "SK-V1b-P3", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Which word should replace said in sentence 6 to be more exact?",
-      text: "He {0}, \"Get it away!\" and ran behind my mom.",
-      slots: [{ options: ["whispered", "shouted", "asked"], answer: 1 }],
-      clue: "Look at the end mark after Get it away and at what he does next. How would a scared boy say those words?",
-      why: "The answer is \"shouted.\" The exclamation point and running away show he was scared and loud. Whispered means speaking very softly, and asked is for a question." },
-    { id: "SK-V1b-P4", type: "ms", points: 2, dok: 2, passages: ["p1"], pick: 2,
-      prompt: "Read sentence 9. Which TWO words could replace good to tell more exactly how the pie tasted?",
-      choices: [
-        { text: "delicious", correct: true },
-        { text: "sweet", correct: true },
-        { text: "helpful" },
-        { text: "brave" },
-        { text: "polite" },
-        { text: "early" }
+      prompt: "Which science word should replace the yellow powder in sentence 6?",
+      text: "Bees came to the bean flowers and carried the {0} from one flower to another.",
+      slots: [{ options: ["nectar", "pollen", "soil"], answer: 1 }],
+      clue: "Think about the science word for the fine powder that flowers make. One choice is a sweet liquid, and one is the dirt plants grow in.",
+      why: "The answer is \"pollen.\" Pollen is the fine powder flowers make, and bees carry it from flower to flower. Nectar is a sweet liquid, and soil is what plants grow in." },
+    { id: "SK-V1b-P4", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
+      prompt: "Choose the school words that should replace bugs in sentence 7 and picked and gathered in sentence 8.",
+      text: "Some {0} chewed holes in a few of our bean leaves. By June, we {1} a whole basket of ripe beans.",
+      slots: [
+        { options: ["insects", "seedlings", "predators"], answer: 0 },
+        { options: ["planted", "harvested", "watered"], answer: 1 }
       ],
-      clue: "The question asks how the pie tasted. Try each word in the sentence: and it was ___. Which words tell about a taste?",
-      why: "The answers are \"delicious\" and \"sweet.\" Both tell how the pie tasted. Helpful, brave and polite can describe a good person, but not a taste. Early tells when, not how something tastes." },
+      clue: "For each blank, ask what the plain words mean. Then try each choice in the sentence and check that it means the same thing.",
+      why: "The answers are \"insects\" and \"harvested.\" Insects is the science word for bugs. Predators hunt other animals, but these bugs ate leaves. To harvest means to pick and gather crops when they are ready. Planting and watering happen at the start, not in June when the beans are ripe." },
     { id: "SK-V1b-P5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the sentence from a student's science report. Which word should replace the yellow powder to be more exact?",
-      stem: ["Bees help flowers by carrying the yellow powder from one flower to another."],
+      prompt: "Diego is giving a talk about his town. Which word could he use in place of the person who leads our town?",
+      stem: ["\"The person who leads our town signed a new rule to keep dogs on a leash in the park.\""],
       choices: [
-        { text: "pollen", correct: true },
-        { text: "nectar" },
-        { text: "honey" },
-        { text: "seeds" }
+        { text: "mayor", correct: true },
+        { text: "citizen" },
+        { text: "volunteer" },
+        { text: "visitor" }
       ],
-      clue: "Think about a science word for the powder that flowers make. Some of the other choices are things bees use but are not powder.",
-      why: "The answer is \"pollen.\" Pollen is the fine powder flowers make, and bees carry it from flower to flower. Nectar is a sweet liquid, honey is made by bees, and seeds are not a powder." }
+      clue: "Think of the social studies word for the leader of a town or city.",
+      why: "The answer is \"mayor.\" A mayor is the leader of a town or city. A citizen is any person who belongs to the town, a volunteer helps without pay, and a visitor is there for a short time." }
   ],
   test: [
     { id: "SK-V1b-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read sentence 2. Which word should replace goes to tell more exactly how the turtle moves onto the sand?",
+      prompt: "Theo wants to use a science word in sentence 2. Which word should replace a kind of animal that has scaly skin, breathes air and lays eggs?",
       choices: [
-        { text: "crawls", correct: true },
-        { text: "dives" },
-        { text: "splashes" },
-        { text: "floats" }
+        { text: "reptile", correct: true },
+        { text: "mammal" },
+        { text: "amphibian" },
+        { text: "insect" }
       ],
-      clue: "Notice where the turtle is going: out of the water and onto the sand. Which way of moving works on land?",
-      why: "The answer is \"crawls.\" The turtle moves slowly out of the ocean onto the sand, so she crawls. Dives, splashes and floats are ways of moving in water." },
+      clue: "All four choices are groups of animals. Which group has scaly skin, breathes air and lays eggs on land?",
+      why: "The answer is \"reptile.\" Reptiles, like turtles and alligators, have scaly skin, breathe air and lay eggs. Mammals have hair or fur, amphibians like frogs have moist skin with no scales, and insects have six legs." },
     { id: "SK-V1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read sentence 3. Which word should replace make to be more exact?",
+      prompt: "Read sentence 5. Which word should replace this hole?",
       choices: [
-        { text: "dig", correct: true },
-        { text: "fill" },
-        { text: "find" },
-        { text: "cover" }
+        { text: "nest", correct: true },
+        { text: "shell" },
+        { text: "flipper" },
+        { text: "pond" }
       ],
-      clue: "Think about what the turtle does with her flippers in the sand to make a hole appear.",
-      why: "The answer is \"dig.\" She uses her flippers to dig a deep hole. To fill or cover a hole would close it up, and to find a hole means it was already there." },
+      clue: "Think about the science word for a place an animal makes to lay its eggs.",
+      why: "The answer is \"nest.\" A nest is the place an animal makes for its eggs, and the mother turtle lays her eggs in the hole." },
     { id: "SK-V1b-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Which word should replace come out of their eggs in sentence 5 to be more exact?",
+      prompt: "Which science word should replace break out of their eggs in sentence 6?",
       text: "About two months later, the baby turtles {0}.",
-      slots: [{ options: ["hatch", "nest", "dive"], answer: 0 }],
-      clue: "There is a science word for when a baby animal breaks out of its egg.",
-      why: "The answer is \"hatch.\" To hatch means to break out of an egg. One exact word takes the place of four plain words." },
-    { id: "SK-V1b-T4", type: "ms", points: 2, dok: 2, passages: ["p2"], pick: 2,
-      prompt: "Read sentence 6. Which TWO words could replace move fast to be more exact?",
-      choices: [
-        { text: "race", correct: true },
-        { text: "hurry", correct: true },
-        { text: "wander" },
-        { text: "stroll" },
-        { text: "tiptoe" },
-        { text: "rest" }
+      slots: [{ options: ["hatch", "migrate", "hibernate"], answer: 0 }],
+      clue: "There is a science word for what a baby animal does when it comes out of its egg.",
+      why: "The answer is \"hatch.\" To hatch means to break out of an egg. Migrate means to move to a new place for part of the year, and hibernate means to sleep through the winter." },
+    { id: "SK-V1b-T4", type: "match", points: 2, dok: 2, passages: ["p2"],
+      prompt: "Match each group of plain words to the school word that means the same thing.",
+      cols: ["predators", "volunteers", "habitat"],
+      rows: [
+        { text: "animals that hunt other animals (sentence 7)", answer: 0 },
+        { text: "people who help without getting paid (sentence 9)", answer: 1 },
+        { text: "the place where an animal finds the food, water and shelter it needs", answer: 2 }
       ],
-      clue: "All of these are ways to move or stop. Which ones keep the meaning of fast?",
-      why: "The answers are \"race\" and \"hurry.\" Both mean to move quickly. Wander, stroll and tiptoe are slow ways to move, and rest means to stop." },
+      clue: "Read each group of plain words. Ask which school word names the same thing, then try it in the sentence.",
+      why: "Animals that hunt other animals are predators. People who help without getting paid are volunteers. The place where an animal finds what it needs is its habitat." },
     { id: "SK-V1b-T5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the sentence from a student's social studies report. Which word should replace pick to be more exact?",
-      stem: ["On Election Day, grown-ups in our town vote to pick a new mayor."],
+      prompt: "Lucy is telling her class about a map. Which words could she use in place of a box that tells what each symbol means?",
+      stem: ["\"Our map of Georgia has a box that tells what each symbol means. A star stands for the capital city.\""],
       choices: [
-        { text: "elect", correct: true },
-        { text: "invite" },
-        { text: "thank" },
-        { text: "follow" }
+        { text: "a map key", correct: true },
+        { text: "a compass rose" },
+        { text: "a map title" },
+        { text: "a map scale" }
       ],
-      clue: "Think of the social studies word for choosing a leader by voting. It is close to the name of the day.",
-      why: "The answer is \"elect.\" To elect means to choose someone by voting, which is exactly what happens on Election Day. Invite, thank and follow do not mean choosing a leader." }
+      clue: "Think about the parts of a map you learned in social studies. Which part explains the symbols?",
+      why: "The answer is \"a map key.\" A map key tells what each symbol on a map means. A compass rose shows directions, a title tells what the map is about, and a scale helps you find distances." }
   ]
 });
 
@@ -384,7 +379,7 @@ PP.addLesson({
       "Watch out for look-alikes. Uncle and ready start with un and re, but nothing is left that is a word, so they have no prefix."
     ],
     words: [
-      { term: "base word", means: "the main word that a prefix or suffix is added to" },
+      { term: "base word", means: "the main word that a prefix or suffix is added to (also called a root word)" },
       { term: "prefix", means: "a word part added to the front of a base word" },
       { term: "suffix", means: "a word part added to the end of a base word" }
     ],
@@ -474,7 +469,7 @@ PP.addLesson({
       text: "In paragraph 5, retied means {0}.",
       slots: [{ options: ["tied again", "not tied", "tied before"], answer: 0 }],
       clue: "Split the word into a prefix and a base word. What does the prefix re- mean?",
-      why: "The answer is \"tied again.\" Re- means again, and the base word is tied. The string snapped, so they had to tie it on again." },
+      why: "The answer is \"tied again.\" Re- means again, and the base word is tie. The string snapped, so they had to tie it on again." },
     { id: "SK-V2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each word from the story to the meaning of its prefix or suffix.",
       cols: ["not", "full of", "in a ___ way", "again"],
@@ -506,7 +501,7 @@ PP.addLesson({
         { text: "can be used again", correct: true },
         { text: "used only one time" },
         { text: "cannot be used at all" },
-        { text: "used before school" }
+        { text: "can be used by many people" }
       ],
       clue: "This word has a prefix AND a suffix. Find the base word in the middle, then add both meanings.",
       why: "The answer is \"can be used again.\" Re + use + able means can be used again. Lunch boxes can be used day after day, unlike paper bags that get thrown away." },
@@ -624,9 +619,9 @@ PP.addLesson({
     { id: "p1", title: "Parade Day", genre: "Literary text",
       paragraphs: [
         ["Every spring, the town of Maple Creek holds a big parade on Main Street.", "Families bring chairs and blankets and wait along the curb."],
-        ["A drummer marches proudly at the front of the band.", "Behind her, a juggler tosses three bright balls high into the air.", "He never drops a single one."],
+        ["A drummer marches proudly at the front of the band.", "A dancer spins in a sparkly dress.", "Behind them, a juggler tosses three bright balls high into the air.", "He never drops a single one."],
         ["The crowd cheers loudly when the red fire truck rolls by.", "A firefighter waves from the window and rings the bell."],
-        ["Children wave little flags with excitement.", "Even the smallest kids clap along to the music."],
+        ["Children wave little flags with excitement.", "The music gets louder as the band comes closer.", "Even the smallest kids clap along."],
         ["At the end, the mayor gives a short speech.", "She thanks every helper for their hard work.", "She says the parade brings happiness to the whole town."]
       ] },
     { id: "p2", title: "Science Fair Day", genre: "Literary text",
@@ -640,15 +635,15 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-V2b-P1", type: "mc", points: 1, dok: 1, passages: ["p1"],
-      prompt: "Read paragraph 2. What does the ending -er tell you about the word drummer?",
+      prompt: "Read paragraph 2. What does the ending -er tell you about the word juggler?",
       choices: [
-        { text: "It names a person who plays a drum.", correct: true },
-        { text: "It means a drum that is bigger." },
-        { text: "It tells how loud the drum sounds." },
-        { text: "It means to play the drum again." }
+        { text: "It names a person who juggles.", correct: true },
+        { text: "It means juggling more balls." },
+        { text: "It tells how high the balls go." },
+        { text: "It means to juggle again." }
       ],
       clue: "Cover -er. Is the base word an action or a describing word? Then remember what -er does to that kind of word.",
-      why: "The answer is \"It names a person who plays a drum.\" Drum is an action here (to drum), and -er added to an action word names a person who does it. The drummer marches at the front of the band." },
+      why: "The answer is \"It names a person who juggles.\" Juggle is an action, and -er added to an action word names a person who does it. The juggler tosses balls in the air." },
     { id: "SK-V2b-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What job does the word loudly do in paragraph 3?",
       choices: [
@@ -662,26 +657,26 @@ PP.addLesson({
     { id: "SK-V2b-P3", type: "ms", points: 2, dok: 2, passages: ["p1"], pick: 2,
       prompt: "Which TWO words from the passage name a person who does something?",
       choices: [
-        { text: "juggler", correct: true },
         { text: "firefighter", correct: true },
+        { text: "helper", correct: true },
+        { text: "louder" },
         { text: "proudly" },
-        { text: "loudly" },
         { text: "excitement" },
         { text: "happiness" }
       ],
       clue: "Look for words that end in -er or -or. Cover the ending. Is the part left an action someone can do?",
-      why: "The answers are \"juggler\" and \"firefighter.\" A juggler juggles, and a firefighter fights fires. Proudly and loudly are adverbs that tell how. Excitement and happiness are nouns that name feelings." },
+      why: "The answers are \"firefighter\" and \"helper.\" A firefighter fights fires, and a helper helps. Louder ends in -er, but loud is a describing word, so louder means more loud. Proudly tells how, and excitement and happiness are nouns that name feelings." },
     { id: "SK-V2b-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each word to the job it does.",
       cols: ["names a person", "names a feeling", "tells how"],
       rows: [
-        { text: "helper", answer: 0 },
+        { text: "dancer", answer: 0 },
         { text: "happiness", answer: 1 },
         { text: "proudly", answer: 2 },
         { text: "excitement", answer: 1 }
       ],
       clue: "Check each ending: -er names a person, -ness and -ment make nouns, and -ly often tells how.",
-      why: "Helper (help + er) names a person who helps. Happiness (happy + ness) and excitement (excite + ment) are nouns that name feelings. Proudly (proud + ly) tells how the drummer marches." },
+      why: "Dancer (dance + er) names a person who dances. Happiness (happy + ness) and excitement (excite + ment) are nouns that name feelings. Proudly (proud + ly) tells how the drummer marches." },
     { id: "SK-V2b-P5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "In which sentence does the -er ending mean \"more,\" not \"a person who\"? Choose the sentence.",
       options: [
@@ -728,8 +723,8 @@ PP.addLesson({
         choices: [
           { text: "-ness", correct: true },
           { text: "bright" },
-          { text: "-ly" },
-          { text: "-er" }
+          { text: "-ess" },
+          { text: "-ight" }
         ] },
       clue: "Split brightness into a base word and an ending. Think about what that ending does to a word.",
       why: "Part A: a noun that names something. Part B: -ness. Bright is a describing word, and -ness turns it into a noun. In the sentence, brightness names something the model sun showed." },
@@ -737,14 +732,14 @@ PP.addLesson({
       prompt: "Match each word to the job it does.",
       cols: ["names a person", "names a thing or a feeling", "tells how"],
       rows: [
-        { text: "sailor", answer: 0 },
+        { text: "actor", answer: 0 },
         { text: "sadness", answer: 1 },
         { text: "gently", answer: 2 },
         { text: "payment", answer: 1 },
         { text: "builder", answer: 0 }
       ],
       clue: "Check each ending: -er and -or can name a person, -ness and -ment make nouns, and -ly often tells how.",
-      why: "Sailor (sail + or) and builder (build + er) name people. Sadness (sad + ness) and payment (pay + ment) are nouns that name a feeling and a thing. Gently is an adverb that tells how." },
+      why: "Actor (act + or) and builder (build + er) name people. Sadness (sad + ness) and payment (pay + ment) are nouns that name a feeling and a thing. Gently is an adverb that tells how." },
     { id: "SK-V2b-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "In which sentence does the -er word name a person who does something? Choose the sentence.",
       options: [
@@ -769,7 +764,7 @@ PP.addLesson({
       "Add a prefix to the front to change the meaning: un + fair = unfair (not fair). Re + build = rebuild (build again).",
       "Add a suffix to the end to make a new word: help + ful = helpful. Help + less = helpless. Help + er = helper.",
       "Choose the part that matches the meaning you want: -ful for full of, -less for without, re- for again, pre- for before.",
-      "Sometimes the spelling changes. If a word ends in a consonant and y, change the y to i before adding -ly or -ness: happy + ness = happiness."
+      "Sometimes the spelling changes. In most words that end in a consonant and y, change the y to i before adding -ly or -ness: happy + ness = happiness."
     ],
     words: [
       { term: "base word", means: "the main word you build on" },
@@ -843,7 +838,7 @@ PP.addLesson({
         { text: "payment" }
       ],
       clue: "Think about which prefix means before. Find the word that starts with it.",
-      why: "The answer is \"prepay.\" Pre- means before, so pre + pay means to pay before. Repay means to pay back, unpaid means not paid, and payment is a noun." },
+      why: "The answer is \"prepay.\" Pre- means before, so pre + pay means to pay before. Repay means to pay again, or pay back, unpaid means not paid, and payment is a noun." },
     { id: "SK-V2c-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each meaning to the word you would build.",
       cols: ["retell", "dishonest", "harmless", "powerful"],
@@ -917,8 +912,8 @@ PP.addLesson({
       clue: "Look at the last two letters of lazy. What is the rule for a word that ends in a consonant and y?",
       why: "The answer is \"laziness.\" Lazy ends in z and then y, so you change the y to i and add -ness." },
     { id: "SK-V2c-T5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the sentence from a student's draft. Which words could replace could not help itself?",
-      stem: ["The tiny kitten could not help itself when it got stuck in the tree."],
+      prompt: "Read the sentence from a student's draft. Which words could replace had no way to help itself?",
+      stem: ["The tiny kitten had no way to help itself when it got stuck in the tree."],
       choices: [
         { text: "was helpless", correct: true },
         { text: "was helpful" },
@@ -929,14 +924,14 @@ PP.addLesson({
       why: "The answer is \"was helpless.\" -less means without, and a helpless kitten cannot help itself. Helpful means full of help, a helper is a person who helps, and helping does not fit the meaning." },
     { id: "SK-V2c-T6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each meaning to the word you would build.",
-      cols: ["rebuild", "unkind", "hopeful", "washable"],
+      cols: ["refill", "unclear", "joyful", "breakable"],
       rows: [
-        { text: "to build again", answer: 0 },
-        { text: "not kind", answer: 1 },
-        { text: "full of hope", answer: 2 },
-        { text: "can be washed", answer: 3 }
+        { text: "to fill again", answer: 0 },
+        { text: "not clear", answer: 1 },
+        { text: "full of joy", answer: 2 },
+        { text: "can be broken", answer: 3 }
       ],
       clue: "For each meaning, find the base word first. Then pick the part that means again, not, full of or can be.",
-      why: "Re- means again, so to build again is rebuild. Un- means not, so not kind is unkind. -ful means full of, so full of hope is hopeful. -able means can be, so can be washed is washable." }
+      why: "Re- means again, so to fill again is refill. Un- means not, so not clear is unclear. -ful means full of, so full of joy is joyful. -able means can be, so can be broken is breakable." }
   ]
 });

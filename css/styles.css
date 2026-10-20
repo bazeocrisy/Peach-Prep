@@ -459,7 +459,8 @@ fieldset.trait{margin:0 0 12px;}
 
 /* ---------- cursive, fluency, tracing ---------- */
 .cursive{font-family:"PP Cursive",cursive;font-size:1.25em;line-height:2.1;letter-spacing:.01em;}
-.flu-pick{margin:4px 0 10px;}
+.flu-pick{margin:4px 0 10px;flex-wrap:wrap;}
+.flu-pick button{flex:1 0 30%;}
 .flu-ctl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
 .flu-clock{font-family:var(--head);font-weight:800;font-size:1.6rem;color:var(--navy);margin:0;min-width:3.2em;}
 .flu-say{color:var(--plum);font-weight:700;}
@@ -473,7 +474,7 @@ fieldset.trait{margin:0 0 12px;}
 .flu-result{font-size:1.1rem;background:var(--right-tint);border:1px solid var(--right-edge);border-radius:10px;padding:10px 12px;}
 .trace-sheet{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 12px;overflow-x:auto;}
 .trace-name{font-size:.95rem;color:var(--muted);}
-.trace-row{font-family:"PP Cursive Guides","PP Cursive",cursive;font-size:2.1rem;line-height:1.9;margin:0 0 4px;color:#9AA8BC;white-space:nowrap;}
+.trace-row{font-size:clamp(1.35rem,6.4vw,2.1rem) !important;font-family:"PP Cursive Guides","PP Cursive",cursive;font-size:2.1rem;line-height:1.9;margin:0 0 4px;color:#9AA8BC;white-space:nowrap;}
 .trace-lines{height:62px;margin:0 0 10px;border-top:1.5px solid #9AA8BC;border-bottom:1.5px solid #9AA8BC;background:linear-gradient(to bottom,transparent calc(50% - 1px),#C9D2DE calc(50% - 1px),#C9D2DE calc(50% + 1px),transparent calc(50% + 1px));}
 .go-card .btn + .btn{margin-left:8px;}
 @media print{

@@ -157,8 +157,8 @@ PP.addLesson({
     big: "Use -er or more to compare two things, and use -est or most to compare three or more.",
     points: [
       "Use -er or more to compare two things. Use -est or most to compare three or more things.",
-      "Short words add -er and -est: fast, faster, fastest. Many longer words use more and most: more careful, most careful. Never use both, like more faster.",
-      "A few words change completely: good, better, best and bad, worse, worst. The word well also changes: well, better, best."
+      "Short words add -er and -est: fast, faster, fastest. Some short words double the last letter first: big, bigger, biggest. Words that end in a consonant and y change the y to i: funny, funnier, funniest.",
+      "Many longer words use more and most: more careful, most careful. Never use both, like more faster. A few words change completely: good, better, best; bad, worse, worst; and well, better, best."
     ],
     words: [
       { term: "comparative", means: "the form that compares two, like taller or more careful" },
@@ -257,13 +257,13 @@ PP.addLesson({
     { id: "SK-GUM4-2-T3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
       choices: [
-        { text: "My cough is worse today than it was yesterday.", correct: true },
+        { text: "Mia's drawing is better than mine.", correct: true },
         { text: "Lucy is the most tallest girl in our class." },
         { text: "This is the baddest storm we have had." },
         { text: "Our new couch is more softer than the old one." }
       ],
       clue: "Check each comparing word. Never use more or most with -er or -est, and remember the words that change completely.",
-      why: "The answer is \"My cough is worse today than it was yesterday.\" Bad changes to worse when you compare two days. The others should say tallest (not most tallest), worst (not baddest) and softer (not more softer)." },
+      why: "The answer is \"Mia's drawing is better than mine.\" Good changes to better when you compare two drawings. The others should say tallest (not most tallest), worst (not baddest) and softer (not more softer)." },
     { id: "SK-GUM4-2-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Does each word compare two things, or three or more things?",
       cols: ["Compares two", "Compares three or more"],
@@ -307,7 +307,7 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["The twins packed their bags, and Mom carried them to the car."],
+      lines: ["The twins packed their bags and zipped them shut."],
       note: "The twins means more than one, so the pronoun is their. Bags means more than one, so the pronoun is them."
     },
     tip: "To check a pronoun, find the noun it stands for. Then ask: Is it one or more than one? Is it a boy, a girl or a thing?"
@@ -327,7 +327,7 @@ PP.addLesson({
       show: ["Grandma Rose found an old quilt in the attic and washed ___."],
       ask: "Which pronoun fits: it, them or her?",
       steps: [
-        "Ask what was washed. The quilt was washed, so quilt is the antecedent.",
+        "Ask what Grandma Rose washed. She washed the quilt, so quilt is the antecedent.",
         "A quilt is one thing, not a person.",
         "Use the pronoun for one thing."
       ],
@@ -341,14 +341,14 @@ PP.addLesson({
       prompt: "Choose the pronoun that stands for Mr. Okafor.",
       text: "Mr. Okafor cleaned {0} glasses with a soft cloth.",
       slots: [ { options: ["his", "her", "their", "its"], answer: 0 } ],
-      clue: "Mr. is a title for a man. Is Mr. Okafor one person or more than one?",
+      clue: "Ask two questions about the noun: one or more than one? A boy or man, a girl or woman, or a thing?",
       why: "The answer is his. Mr. Okafor is one man, so the pronoun is his." },
     { id: "SK-GUM4-3-P2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the pronoun that stands for the cookies.",
       text: "The cookies smelled so good that we ate {0} right away.",
-      slots: [ { options: ["them", "it", "they", "him"], answer: 0 } ],
-      clue: "Does cookies mean one or more than one? Also notice that the pronoun comes after the action word ate.",
-      why: "The answer is them. Cookies means more than one, so use them. They also means more than one, but it is used before the action word, as in \"They smelled good,\" not after it." },
+      slots: [ { options: ["them", "it", "him", "her"], answer: 0 } ],
+      clue: "Does cookies mean one or more than one?",
+      why: "The answer is them. Cookies means more than one, so use them. It, him and her each stand for just one." },
     { id: "SK-GUM4-3-P3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "In this sentence, which noun does the pronoun their stand for?",
       stem: "The girls showed their science project to Mr. Hill.",
@@ -356,10 +356,10 @@ PP.addLesson({
         { text: "the girls", correct: true },
         { text: "the science project" },
         { text: "Mr. Hill" },
-        { text: "the science fair" }
+        { text: "the project and Mr. Hill" }
       ],
-      clue: "Their means belongs to more than one person. Who owns the project?",
-      why: "The answer is the girls. The project belongs to the girls, and their is used for more than one. Mr. Hill is one person, and a project cannot own anything." },
+      clue: "Their is a pronoun for more than one. Find the noun in the sentence that means more than one and owns something.",
+      why: "The answer is the girls. Their stands for more than one, and girls means more than one. Mr. Hill and the science project each mean one, and the project and Mr. Hill do not own the project." },
     { id: "SK-GUM4-3-P4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses the pronoun correctly?",
       choices: [
@@ -393,7 +393,7 @@ PP.addLesson({
       prompt: "Choose the pronoun that stands for Aunt Lucia.",
       text: "Aunt Lucia brought {0} guitar to the family picnic.",
       slots: [ { options: ["her", "his", "their", "its"], answer: 0 } ],
-      clue: "An aunt is a woman. Is Aunt Lucia one person or more than one?",
+      clue: "Ask two questions about the noun: one or more than one? A boy or man, a girl or woman, or a thing?",
       why: "The answer is her. Aunt Lucia is one woman, so the pronoun is her." },
     { id: "SK-GUM4-3-T3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence uses the pronoun correctly?",
@@ -572,10 +572,10 @@ PP.addLesson({
       why: "Ms. Grant's sentence needs a comma after said. Jin's and Mia's sentences need a capital letter: The and We. Kenji's sentence needs quotation marks around Look at the rainbow!" },
     { id: "SK-GUM4-4-T5", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the correct way to write the spoken words.",
-      text: "{0} said Grandma.",
-      slots: [ { options: ["\"Supper is ready,\"", "\"Supper is ready\",", "\"Supper is ready\"", "\"supper is ready,\""], answer: 0 } ],
+      text: "{0} said Uncle Dev.",
+      slots: [ { options: ["\"The game starts at noon,\"", "\"The game starts at noon\",", "\"The game starts at noon\"", "\"the game starts at noon,\""], answer: 0 } ],
       clue: "The speaker comes last. The spoken words need a comma, a capital letter, and the comma in the right place.",
-      why: "The answer is \"Supper is ready,\" with the comma inside the closing quotation marks and a capital S at the start." }
+      why: "The answer is \"The game starts at noon,\" with the comma inside the closing quotation marks and a capital T at the start." }
   ]
 });
 
@@ -586,8 +586,8 @@ PP.addLesson({
     big: "Words like who, which, that, where and when can start a part of a sentence that tells more about a noun.",
     points: [
       "Use who to tell more about a person: I have a friend who plays the drums.",
-      "Use which or that to tell more about a thing or an animal: We crossed the bridge that goes over the river.",
-      "Use where to tell more about a place, and when to tell more about a time: This is the park where we fly kites. Saturday is the day when we visit Grandma."
+      "Use that or which to tell more about a thing, an animal or a place when the next words need someone or something to do the action: We crossed the bridge that goes over the river. The park that has a slide is near us.",
+      "Use where for a place or when for a time only if you could say \"in that place\" or \"at that time\": This is the park where we fly kites. (We fly kites in that place.) Saturday is the day when we visit Grandma."
     ],
     words: [
       { term: "relative pronoun", means: "who, which or that, used to tell more about a noun" },
@@ -595,19 +595,19 @@ PP.addLesson({
     ],
     example: {
       label: "Example",
-      lines: ["Ms. Kim is the teacher who helped me read.", "Macon is the city where my cousins live."],
-      note: "Who tells more about the teacher, a person. Where tells more about Macon, a place."
+      lines: ["Ms. Kim is the teacher who helped me read.", "Macon is the city where my cousins live.", "Macon is a city that has many old trees."],
+      note: "Who tells more about the teacher, a person. Where fits the second sentence because my cousins live in that place. In the third sentence, the next words need a doer (what has many old trees?), so use that, even though Macon is a place."
     },
-    tip: "Look at the noun right before the blank. Is it a person, a thing, a place or a time? That tells you which word to use."
+    tip: "Look at the noun before the blank. For a person, use who. For a thing, use that or which. For a place or a time, use where or when only if you could say \"in that place\" or \"at that time.\" If the next words need a doer, like \"the park ___ has a slide,\" use that."
   },
   learn: [
     {
       show: ["We visited the farm ___ Grandpa grew up."],
-      ask: "Which word fits: who, where or when?",
+      ask: "Which word fits: who, where or that?",
       steps: [
-        "Look at the noun right before the blank: farm.",
-        "A farm is a place.",
-        "Use the word that tells more about a place."
+        "Look at the noun right before the blank: farm. A farm is a place, not a person.",
+        "Check whether the next words already have a doer. Yes: Grandpa grew up.",
+        "Try \"in that place\": Grandpa grew up in that place. It makes sense, so use where."
       ],
       answer: "Where: We visited the farm where Grandpa grew up."
     },
@@ -615,14 +615,14 @@ PP.addLesson({
       show: ["I read a book ___ has a talking fox in it."],
       ask: "Which word fits: who, that or when?",
       steps: [
-        "Look at the noun right before the blank: book.",
-        "A book is a thing. It is not a person or a time.",
-        "Use the word that tells more about a thing."
+        "Look at the noun right before the blank: book. A book is a thing.",
+        "Check the next words: has a talking fox. They need a doer. What has a talking fox? The book.",
+        "Use that for a thing, especially when the next words need a doer."
       ],
       answer: "That: I read a book that has a talking fox in it."
     }
   ],
-  parent: "Play a riddle game: \"I am thinking of a person who ...\" or \"I am thinking of a place where ...\" Take turns finishing the clue and guessing.",
+  parent: "Play a riddle game: \"I am thinking of a person who ...\", \"I am thinking of a thing that ...\" or \"I am thinking of a place where ...\" Take turns finishing the clue and guessing.",
   passages: [],
   practice: [
     { id: "SK-GUM4-5-P1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -635,36 +635,37 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Winter is the season {0} the pond freezes.",
       slots: [ { options: ["when", "who", "where", "whose"], answer: 0 } ],
-      clue: "Look at the noun right before the blank. Is it a person, a place or a time?",
-      why: "The answer is when. A season is a time of year, and when tells more about a time." },
-    { id: "SK-GUM4-5-P3", type: "dropdown", points: 1, dok: 1, passages: [],
+      clue: "Look at the noun right before the blank. Then try \"at that time\" or \"in that place\" with the words after the blank.",
+      why: "The answer is when. A season is a time of year, and the pond freezes at that time." },
+    { id: "SK-GUM4-5-P3", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Tybee Island is the place {0} we found the seashells.",
       slots: [ { options: ["where", "who", "when", "which"], answer: 0 } ],
-      clue: "Look at the noun right before the blank. Is it a person, a place or a time?",
-      why: "The answer is where. Place is the noun before the blank, and where tells more about a place." },
+      clue: "The words after the blank already have a doer: we. Try saying \"in that place\" or \"at that time\" with them.",
+      why: "The answer is where. We found the seashells in that place, so where fits. Which would need the next words to be missing a doer, and who is for people." },
     { id: "SK-GUM4-5-P4", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence uses the word who correctly?",
+      prompt: "Which word correctly completes the sentence?",
+      stem: "I found a shell ___ looks like a star.",
       choices: [
-        { text: "Dr. Patel is the vet who took care of our cat.", correct: true },
-        { text: "This is the cake who Mom baked for my party." },
-        { text: "That is the pond who has frogs and turtles." },
-        { text: "June is the month who school ends for summer." }
+        { text: "that", correct: true },
+        { text: "who" },
+        { text: "where" },
+        { text: "when" }
       ],
-      clue: "Who tells more about a person. Find the sentence where who comes right after a person.",
-      why: "The answer is \"Dr. Patel is the vet who took care of our cat.\" A vet is a person. A cake and a pond are things, and June is a time, so who does not fit them." },
+      clue: "What looks like a star? Decide whether the noun before the blank is a person, a thing, a place or a time, and whether the next words need a doer.",
+      why: "The answer is that. A shell is a thing, and the next words need a doer: the shell is what looks like a star. Who is for people, and where and when need their own doer after them." },
     { id: "SK-GUM4-5-P5", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Which word would you use to tell more about each noun?",
-      cols: ["who", "where", "when"],
+      prompt: "Which word correctly fills each blank?",
+      cols: ["that", "where"],
       rows: [
-        { text: "the coach", answer: 0 },
-        { text: "the library", answer: 1 },
-        { text: "the morning", answer: 2 },
-        { text: "my neighbor", answer: 0 },
-        { text: "the kitchen", answer: 1 }
+        { text: "the bike ___ has a bell", answer: 0 },
+        { text: "the library ___ we borrow books", answer: 1 },
+        { text: "the park ___ has a slide", answer: 0 },
+        { text: "the kitchen ___ Dad cooks dinner", answer: 1 },
+        { text: "the song ___ makes me dance", answer: 0 }
       ],
-      clue: "Ask whether each noun is a person, a place or a time.",
-      why: "The coach and my neighbor are people, so who. The library and the kitchen are places, so where. The morning is a time, so when." }
+      clue: "Check whether the words after the blank have their own doer. If they do, try \"in that place.\" If they need a doer, the noun itself is the doer.",
+      why: "Use where for the library and the kitchen: we borrow books in that place, and Dad cooks dinner in that place. Use that for the bike, the park and the song, because each one is the doer: the bike has a bell, the park has a slide, the song makes me dance." }
   ],
   test: [
     { id: "SK-GUM4-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -677,26 +678,27 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Lunch is the time {0} we sit with our friends.",
       slots: [ { options: ["when", "who", "where", "whose"], answer: 0 } ],
-      clue: "Look at the noun right before the blank. Is it a person, a place or a time?",
-      why: "The answer is when. Time is the noun before the blank, and when tells more about a time." },
-    { id: "SK-GUM4-5-T3", type: "dropdown", points: 1, dok: 1, passages: [],
+      clue: "Look at the noun right before the blank. Then try \"at that time\" or \"in that place\" with the words after the blank.",
+      why: "The answer is when. Time is the noun before the blank, and we sit with our friends at that time." },
+    { id: "SK-GUM4-5-T3", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "This is the creek {0} we saw the turtles.",
       slots: [ { options: ["where", "who", "when", "whose"], answer: 0 } ],
-      clue: "Look at the noun right before the blank. Is it a person, a place or a time?",
-      why: "The answer is where. A creek is a place, and where tells more about a place." },
+      clue: "The words after the blank already have a doer: we. Try saying \"in that place\" or \"at that time\" with them.",
+      why: "The answer is where. We saw the turtles in that place, the creek, so where fits." },
     { id: "SK-GUM4-5-T4", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence uses the word where correctly?",
+      prompt: "Which word correctly completes the sentence?",
+      stem: "We rode the train ___ goes to the airport.",
       choices: [
-        { text: "Atlanta is the city where my dad works.", correct: true },
-        { text: "Mr. Ford is the man where fixed our sink." },
-        { text: "Here is the pencil where I lost at school." },
-        { text: "Ana is the girl where won the spelling bee." }
+        { text: "that", correct: true },
+        { text: "who" },
+        { text: "where" },
+        { text: "when" }
       ],
-      clue: "Where tells more about a place. Find the sentence where it comes right after a place.",
-      why: "The answer is \"Atlanta is the city where my dad works.\" A city is a place. Mr. Ford and Ana are people, so they need who, and a pencil is a thing, so it needs that." },
-    { id: "SK-GUM4-5-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
-      prompt: "Which two sentences use who, where or when correctly?",
+      clue: "What goes to the airport? Decide whether the noun before the blank is a person or a thing, and whether the next words need a doer.",
+      why: "The answer is that. A train is a thing, and the next words need a doer: the train is what goes to the airport. Who is for people, and where and when need their own doer after them." },
+    { id: "SK-GUM4-5-T5", type: "ms", points: 2, dok: 3, passages: [], pick: 2,
+      prompt: "Which two sentences use who, that, where or when correctly?",
       choices: [
         { text: "Ms. Lopez is the nurse who helped me.", correct: true },
         { text: "Spring is the season when dogwoods bloom.", correct: true },
@@ -704,8 +706,8 @@ PP.addLesson({
         { text: "That is the store when we buy bread." },
         { text: "Liam is the boy where lives next door." }
       ],
-      clue: "For each sentence, look at the noun before who, where or when. Is it a person, a place or a time?",
-      why: "The answers are \"Ms. Lopez is the nurse who helped me.\" and \"Spring is the season when dogwoods bloom.\" A nurse is a person, and spring is a time. A park and a store are places, and Liam is a person, so those words do not fit." }
+      clue: "For each sentence, look at the noun before the word. Is it a person, a thing, a place or a time? Then check whether the next words have their own doer.",
+      why: "The answers are \"Ms. Lopez is the nurse who helped me.\" and \"Spring is the season when dogwoods bloom.\" The park sentence should use that, because the park is what has a slide. The store sentence should use where, because we buy bread in that place. The Liam sentence should use who, because Liam is a person." }
   ]
 });
 
@@ -725,7 +727,7 @@ PP.addLesson({
     example: {
       label: "Example",
       lines: ["Ouch! I bumped my knee.", "Oops, I spilled a little juice."],
-      note: "Ouch shows a strong feeling of pain, so an exclamation point follows it. Oops shows a small surprise, so a comma follows it."
+      note: "Ouch shows a strong feeling of pain, so an exclamation point follows it. Oops shows a small mistake, a milder feeling, so a comma follows it."
     },
     tip: "Interjections fit best in stories and in what characters say. Reports and letters to your principal usually do not need them."
   },
@@ -772,8 +774,8 @@ PP.addLesson({
       clue: "Read the rest of the sentence. How would you feel if this happened to you?",
       why: "The answer is Oh no! Dropping an ice cream cone is sad and upsetting. Hooray and Bravo show joy or praise, and Yum shows that food tastes good." },
     { id: "SK-GUM4-6-P3", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "What feeling does each interjection show?",
-      cols: ["Pain", "Joy", "A small mistake"],
+      prompt: "When would you say each interjection?",
+      cols: ["When you are hurt", "When you are happy", "When you make a small mistake"],
       rows: [
         { text: "Ouch!", answer: 0 },
         { text: "Hooray!", answer: 1 },
@@ -790,7 +792,7 @@ PP.addLesson({
         { text: "Oh, I left my book at school.", correct: true },
         { text: "The puppy barked at the mail carrier." },
         { text: "We will go to the fair on Friday." },
-        { text: "Please pass the green beans." }
+        { text: "We fed the ducks at the pond." }
       ],
       clue: "Look for a word at the start that shows a feeling and is followed by a comma or an exclamation point.",
       why: "The answers are \"Yikes! The pot boiled over.\" and \"Oh, I left my book at school.\" Yikes shows alarm, and Oh shows a mild surprise. The other sentences have no word that shows a feeling." },
@@ -808,21 +810,21 @@ PP.addLesson({
   test: [
     { id: "SK-GUM4-6-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in this sentence is the interjection?",
-      stem: "Yum! This peach pie tastes great.",
+      stem: "Bravo! You played that song so nicely.",
       choices: [
-        { text: "Yum", correct: true },
-        { text: "peach" },
-        { text: "great" },
-        { text: "This" }
+        { text: "Bravo", correct: true },
+        { text: "song" },
+        { text: "nicely" },
+        { text: "You" }
       ],
       clue: "An interjection shows a feeling and can stand by itself.",
-      why: "The answer is Yum. It shows that the pie tastes good, and it stands by itself with an exclamation point after it." },
+      why: "The answer is Bravo. It shows praise and joy, and it stands by itself with an exclamation point after it." },
     { id: "SK-GUM4-6-T2", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the interjection that fits best.",
-      text: "{0} That bee stung my arm!",
-      slots: [ { options: ["Ouch!", "Hooray!", "Yum!", "Bravo!"], answer: 0 } ],
-      clue: "Read the rest of the sentence. How would a bee sting feel?",
-      why: "The answer is Ouch! A bee sting hurts, and ouch shows pain. The other words show joy, praise or good taste." },
+      text: "{0} This peach pie tastes amazing!",
+      slots: [ { options: ["Yum!", "Ouch!", "Oops!", "Yikes!"], answer: 0 } ],
+      clue: "Read the rest of the sentence. How does the pie taste, and which word shows that feeling?",
+      why: "The answer is Yum! Yum shows that food tastes good. Ouch shows pain, oops shows a mistake, and yikes shows alarm." },
     { id: "SK-GUM4-6-T3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the interjection that fits best.",
       text: "{0} We are going to the zoo tomorrow!",
@@ -831,27 +833,27 @@ PP.addLesson({
       why: "The answer is Hooray! A trip to the zoo is happy news, and hooray shows joy." },
     { id: "SK-GUM4-6-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "What feeling does the interjection in each sentence show?",
-      cols: ["Pain", "Joy", "Disgust"],
+      cols: ["Pain", "Relief", "Disgust"],
       rows: [
         { text: "Ow! My tooth hurts.", answer: 0 },
-        { text: "Yay! Grandma is here.", answer: 1 },
+        { text: "Phew! We made it on time.", answer: 1 },
         { text: "Yuck! This milk smells sour.", answer: 2 },
-        { text: "Ouch! The pan is hot.", answer: 0 },
+        { text: "Whew! The storm missed our town.", answer: 1 },
         { text: "Ew! There is mud in my shoe.", answer: 2 }
       ],
       clue: "Read the whole sentence. The words after the interjection tell you why the speaker feels that way.",
-      why: "Ow and Ouch show pain: a sore tooth and a hot pan. Yay shows joy about Grandma's visit. Yuck and Ew show disgust: sour milk and mud in a shoe." },
+      why: "Ow shows pain from a sore tooth. Phew and Whew show relief: being on time and the storm missing the town. Yuck and Ew show disgust: sour milk and mud in a shoe." },
     { id: "SK-GUM4-6-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which two sentences are written correctly?",
       choices: [
         { text: "Wow! Look at that rainbow.", correct: true },
-        { text: "Oh, I forgot my jacket.", correct: true },
+        { text: "Oh, the mail is here.", correct: true },
         { text: "Hey! you dropped your glove." },
         { text: "Yikes the dog got out!" },
         { text: "oh no! The bus left." }
       ],
       clue: "Check three things: a capital letter at the start, a comma or exclamation point after the interjection, and a capital letter after an exclamation point.",
-      why: "The answers are \"Wow! Look at that rainbow.\" and \"Oh, I forgot my jacket.\" The sentence about the glove needs a capital Y after the exclamation point. Yikes needs a mark after it. Oh no needs a capital O." }
+      why: "The answers are \"Wow! Look at that rainbow.\" and \"Oh, the mail is here.\" The sentence about the glove needs a capital Y after the exclamation point. Yikes needs a mark after it. Oh no needs a capital O." }
   ]
 });
 
@@ -863,7 +865,7 @@ PP.addLesson({
     points: [
       "A helping verb comes before the main verb. Some helping verbs are has, have, had, will, can, could and should: We have finished. Kai will swim.",
       "A linking verb does not show action. It links the subject to a word that names it or describes it: The soup is hot. My dad was a pilot.",
-      "Am, is, are, was and were are often linking verbs. Seem and become can be linking verbs too: The puppy seems tired."
+      "Am, is, are, was and were are often linking verbs. They can be helping verbs too, but in this lesson you will see them as linking verbs. Seem and become can be linking verbs as well: The puppy seems tired."
     ],
     words: [
       { term: "main verb", means: "the most important verb in a sentence" },
@@ -875,7 +877,7 @@ PP.addLesson({
       lines: ["Grandpa has planted a fig tree.", "The figs are sweet."],
       note: "Has is a helping verb. It helps the main verb planted. Are is a linking verb. It links figs to sweet, a word that describes them."
     },
-    tip: "Look at the word after the verb. If it is another verb, the first verb is a helping verb. If it is a word that names or describes the subject, the verb is a linking verb."
+    tip: "Look at the words after the verb. If the next word is another verb, the first verb is a helping verb. If the words name or describe the subject, the verb is a linking verb."
   },
   learn: [
     {
@@ -934,7 +936,7 @@ PP.addLesson({
         { text: "My uncle was a firefighter.", answer: 1 },
         { text: "The puppy seems hungry.", answer: 1 }
       ],
-      clue: "Look at the word after the verb. Is it another verb, or a word that names or describes the subject?",
+      clue: "Look at the words after the verb. Is the next word another verb, or do the words name or describe the subject?",
       why: "Can and should are helping verbs. They help the main verbs see and wear. Is, was and seems are linking verbs. They link the pie to warm, my uncle to a firefighter, and the puppy to hungry." },
     { id: "SK-GUM4-7-P4", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the helping verb that correctly completes the sentence.",
@@ -976,7 +978,7 @@ PP.addLesson({
         { text: "My" }
       ],
       clue: "There is no action in this sentence. Find the verb that connects the subject to a word that names it.",
-      why: "The answer is is. It links my grandmother to nurse, a word that names her." },
+      why: "The answer is the word is. It links my grandmother to nurse, a word that names her." },
     { id: "SK-GUM4-7-T3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the helping verb that correctly completes the sentence.",
       text: "Dad said we {0} plant the garden this weekend.",
@@ -992,7 +994,7 @@ PP.addLesson({
         { text: "I am ready for school.", answer: 1 },
         { text: "Lily could reach the top shelf.", answer: 0 }
       ],
-      clue: "Look at the word after the verb. Is it another verb, or a word that names or describes the subject?",
+      clue: "Look at the words after the verb. Is the next word another verb, or do the words name or describe the subject?",
       why: "Has and could are helping verbs. They help the main verbs painted and reach. Was and am are linking verbs. They link the sky to gray and I to ready." },
     { id: "SK-GUM4-7-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which two sentences have a helping verb?",
@@ -1128,11 +1130,11 @@ PP.addLesson({
       options: [
         "This box is too heavy to lift.",
         "Their dog likes to swim.",
-        "I think your a great singer.",
+        "Call me when your home.",
         "It's time for bed."
       ],
       answer: [2], pick: 1,
       clue: "Check each sound-alike word. Try saying the long form of each one that could be a contraction.",
-      why: "The answer is \"I think your a great singer.\" It should say you're, which means you are: I think you are a great singer. The other sentences are correct." }
+      why: "The answer is \"Call me when your home.\" It should say you're, which means you are: Call me when you are home. The other sentences are correct." }
   ]
 });

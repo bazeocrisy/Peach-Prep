@@ -492,7 +492,7 @@
     }
     function tick() {
       const left = Math.max(0, 60 - Math.floor((Date.now() - t0) / 1000));
-      clock.textContent = "0:" + String(left).padStart(2, "0");
+      clock.textContent = left >= 60 ? "1:00" : "0:" + String(left).padStart(2, "0");
       if (left <= 0) stop();
     }
     startB.addEventListener("click", () => {
@@ -524,7 +524,8 @@
       const read = k + 1;
       const errs = Array.from(miss).filter(i => i <= k).length;
       const wcpm = Math.round((read - errs) * 60 / secs);
-      const acc = read ? Math.round(100 * (read - errs) / read) : 0;
+      const ratio = read ? (read - errs) / read : 0;
+      const acc = Math.floor(100 * ratio);   /* never round up into the next band */
       clear(out);
       const big = make("p", "flu-result");
       big.appendChild(make("strong", "", wcpm + " words correct per minute"));
@@ -533,10 +534,11 @@
       const m = new Date().getMonth();
       const season = m >= 7 && m <= 10 ? "fall" : (m === 11 || m <= 2) ? "winter" : "spring";
       const goal = A.goal[season];
-      out.appendChild(make("p", "", "A typical third grader in the " + season + " reads about " + goal +
-        " words correct per minute (" + A.goalSource + "). " + (wcpm >= goal ? "Right on track or better!" : wcpm >= goal - 10 ? "Close to typical. Keep practicing." : "Rereading the same passage a few times a week builds speed. Try it again tomorrow.")));
-      out.appendChild(make("p", "", acc >= 95 ? "Accuracy of 95% or higher means this passage is a good level for reading on your own." :
-        acc >= 90 ? "Accuracy of 90-94%: a good level for reading with a grown-up nearby." : "Accuracy under 90% means this passage is hard right now. Read it together first, then try again."));
+      if (A.practiced) out.appendChild(make("p", "", "This was a practiced passage, so the speed is higher than on a first reading. Use it to see your own progress from one reading to the next."));
+      else out.appendChild(make("p", "", "A typical third grader in the " + season + " reads about " + goal +
+        " words correct per minute on a first reading (" + A.goalSource + "). " + (wcpm >= goal ? "Right on track or better!" : wcpm >= goal - 10 ? "Close to typical. Keep practicing." : "Rereading the same passage a few times a week builds speed. Try it again tomorrow.")));
+      out.appendChild(make("p", "", ratio >= 0.95 ? "Accuracy of 95% or higher means this passage is a good level for reading on your own." :
+        ratio >= 0.90 ? "Accuracy of 90-94%: a good level for reading with a grown-up nearby." : "Accuracy under 90% means this passage is hard right now. Read it together first, then try again."));
       const r = rec(cur); r.fluency = r.fluency || [];
       r.fluency.push({ d: new Date().toISOString().slice(0, 10), wcpm, acc, p: which + 1 });
       r.fluency = r.fluency.slice(-12); save();

@@ -7,9 +7,9 @@ PP.addLesson({
   teach: {
     big: "Titles like Mr. and Dr., short forms of names like Jan. and St., and describing words made from place names like American all start with a capital letter.",
     points: [
-      "A title right before a person's name starts with a capital letter: Mr. Cole, Dr. Shah, Mayor Green. The short titles Mr., Mrs., Ms. and Dr. end with a period. When no name comes after it, a word like mayor or doctor stays lowercase.",
-      "An abbreviation is a short way to write a word. If the long word is a name, the short form gets a capital too: Monday becomes Mon., January becomes Jan., and Pine Street becomes Pine St.",
-      "Some describing words are made from the names of places, like American (from America), Mexican (from Mexico) and Chinese (from China). They always start with a capital: an American flag, Mexican food."
+      "A title right before a person's name starts with a capital letter: Mr. Cole, Dr. Shah, Mayor Green. The short titles Mr., Mrs., Ms. and Dr. end with a period. When no name comes after it, a word like mayor or doctor usually stays lowercase.",
+      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street.",
+      "Some describing words are made from names, like the names of places. Mexico is a place, and Mexican is a describing word: Mexican food. These words start with a capital: an American flag, a Chinese kite."
     ],
     words: [
       { term: "abbreviation", means: "a short way to write a word, like Dr. for Doctor" },
@@ -19,10 +19,10 @@ PP.addLesson({
       label: "Example",
       lines: [
         "Dr. Moore checked my teeth.",
-        "We ate Italian food at a cafe on Elm St.",
-        "The mayor will visit our school on Mon., Jan. 12."
+        "The mayor ate Italian food at our school fair.",
+        "Fair schedule: Mon., Jan. 12, at 14 Elm St."
       ],
-      note: "Dr. comes before a name, so it has a capital and a period. Italian comes from Italy, so it has a capital. St., Mon. and Jan. are short for names, so they have capitals. Mayor stays lowercase because no name comes after it."
+      note: "Dr. comes before a name, so it has a capital and a period. Italian comes from Italy, so it has a capital. Mayor stays lowercase because no name comes after it. In the schedule, Mon., Jan. and St. are short for names, so they have capitals."
     },
     tip: "When a question asks you to find the mistake, check every title, every short form and every word made from the name of a place. Ask: Does it need a capital?"
   },
@@ -71,28 +71,28 @@ PP.addLesson({
       clue: "The first blank is a title before a name. Think about how it starts and how it ends. The second blank tells what kind of rice and beans.",
       why: "The answers are Mrs. and Cuban. Mrs. is a title before a name, so it needs a capital letter and a period. Cuban is a describing word made from Cuba, the name of a country, so it needs a capital. Cuba is the country's name, not a describing word." },
     { id: "SK-GUM5-1-P3", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that has an error.",
+      prompt: "Select the line that has an error.",
       options: [
         "Ms. Ito read us a story about a Korean kite festival.",
-        "The library is closed on Sun., but it opens on Mon.",
-        "We bought apples at a stand on Peach ave.",
+        "Library hours: Mon. to Sat.",
+        "Our new address: 22 Peach ave.",
         "Captain Harris steered the boat across the lake.",
         "My cousin has an American flag on her porch."
       ],
       answer: [2], pick: 1,
       clue: "Read each short form and each title. If the long word is part of a name, the short form needs a capital too.",
-      why: "The error is in \"We bought apples at a stand on Peach ave.\" Peach Avenue is the name of a street, so the short form needs a capital: Peach Ave." },
+      why: "The error is in \"Our new address: 22 Peach ave.\" Peach Avenue is the name of a street, so the short form needs a capital: Peach Ave." },
     { id: "SK-GUM5-1-P4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word in the sentence needs a capital letter?",
       stem: "My uncle took our family to an italian restaurant downtown.",
       choices: [
         { text: "italian", correct: true },
-        { text: "uncle" },
+        { text: "family" },
         { text: "restaurant" },
         { text: "downtown" }
       ],
-      clue: "Look for a word made from the name of a place. A word like uncle gets a capital only when a name comes right after it.",
-      why: "The answer is italian. It comes from Italy, the name of a country, so it should be Italian. Uncle has no name after it, and restaurant and downtown are not names." },
+      clue: "Check each word. Is it a title before a name, or a word made from the name of a place?",
+      why: "The answer is italian. It comes from Italy, the name of a country, so it should be Italian. Family, restaurant and downtown are not names, titles or words made from names." },
     { id: "SK-GUM5-1-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Does the word in each row need a capital letter? Match each one.",
       cols: ["Needs a capital", "Stays lowercase"],
@@ -107,15 +107,15 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-GUM5-1-T1", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence is correct?",
+      prompt: "Which one is correct?",
       choices: [
-        { text: "We bought Greek olives at the market on Oak St.", correct: true },
+        { text: "We bought Greek olives at the market.", correct: true },
         { text: "My sister has a checkup with dr. Kim today." },
-        { text: "The parade starts on Main st. at noon." },
+        { text: "Parade route: Main st. to Pine Ave." },
         { text: "Grandpa told us about his trip to the irish coast." }
       ],
       clue: "Check every title, every short form and every word made from the name of a place.",
-      why: "The answer is \"We bought Greek olives at the market on Oak St.\" Greek comes from Greece, and St. is short for Street in a street name. The others should say Dr. Kim, Main St. and Irish." },
+      why: "The answer is \"We bought Greek olives at the market.\" Greek comes from Greece, so it has a capital. The others should say Dr. Kim, Main St. and Irish." },
     { id: "SK-GUM5-1-T2", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
       text: "{0} Okafor showed our class an {1} drum.",
@@ -126,10 +126,10 @@ PP.addLesson({
       clue: "The first blank is a title before a name. The second blank tells what kind of drum.",
       why: "The answers are Mr. and African. Mr. is a title before a name, so it has a capital letter and a period. African is a describing word made from Africa, so it needs a capital." },
     { id: "SK-GUM5-1-T3", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that has an error.",
+      prompt: "Select the line that has an error.",
       options: [
         "Dr. Evans is the vet who takes care of our cat.",
-        "The school play is on Fri. after lunch.",
+        "Play practice: Fri., Oct. 9",
         "Coach Reed gave every player a high five.",
         "We tasted canadian maple syrup at the fair.",
         "Mrs. Nguyen grows Thai basil in her garden."
@@ -146,20 +146,20 @@ PP.addLesson({
         { text: "trip" },
         { text: "our" }
       ],
-      clue: "Look for a title. Is a name right after it?",
+      clue: "For each choice, ask: Is this word a name, a title before a name, or a word made from a name?",
       why: "The answer is governor. It is a title right before the name Ellis, so it should be Governor Ellis." },
     { id: "SK-GUM5-1-T5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Choose the TWO sentences that are correct.",
       choices: [
         { text: "Ms. Lopez hung a Brazilian flag in our classroom.", correct: true },
-        { text: "Our soccer game moved to Tues. because of rain.", correct: true },
+        { text: "We mailed the letter to 14 Pine St.", correct: true },
         { text: "Mr Jackson coaches our soccer team." },
         { text: "We ate german pretzels at the fall festival." },
-        { text: "The new mayor lives on Maple rd." }
+        { text: "Our new address is 9 Maple rd." }
       ],
       pick: 2,
       clue: "Check that each title has a capital and a period, that each short form of a name has a capital, and that each word made from a place name has a capital.",
-      why: "The answers are \"Ms. Lopez hung a Brazilian flag in our classroom.\" and \"Our soccer game moved to Tues. because of rain.\" The others should say Mr. Jackson (with a period), German (from Germany) and Maple Rd. (a street name)." }
+      why: "The answers are \"Ms. Lopez hung a Brazilian flag in our classroom.\" and \"We mailed the letter to 14 Pine St.\" The others should say Mr. Jackson (with a period), German (from Germany) and Maple Rd. (a street name in an address)." }
   ]
 });
 
@@ -278,14 +278,14 @@ PP.addLesson({
       clue: "Look for a person spoken to by name and for yes or no at the start. Then look for a comma that does not belong.",
       why: "The answer is \"Yes, the puppy can sleep in my room.\" Yes starts the answer, so a comma follows it. The others should say \"Is this your backpack, Hector?\" and \"No, I do not want a turn on the swing.\" The Ms. Brown sentence only tells about her, so it needs no comma." },
     { id: "SK-GUM5-2-T2", type: "dropdown", points: 2, dok: 1, passages: [],
-      prompt: "Choose the words that correctly complete the sentences.",
-      text: "{0} please feed the fish. {1} I will feed them right now.",
+      prompt: "Mom asks Leah to feed the fish, and Leah answers. Choose the words that correctly complete what they say.",
+      text: "Mom: {0} please feed the fish. Leah: {1} I will feed them right now.",
       slots: [
         { options: ["Leah", "Leah,", "Leah:"], answer: 1 },
         { options: ["Yes", "Yes,", "Yes;"], answer: 1 }
       ],
-      clue: "In the first sentence, someone is talking to a person by name. The second sentence starts with an answer word.",
-      why: "The answers are Leah, and Yes, with commas. The speaker is talking to Leah, so a comma follows her name. Yes starts the answer, so a comma follows it: \"Leah, please feed the fish. Yes, I will feed them right now.\"" },
+      clue: "Mom is talking to a person by name. Leah's answer starts with an answer word.",
+      why: "The answers are Leah, and Yes, with commas. Mom is talking to Leah, so a comma follows her name. Yes starts Leah's answer, so a comma follows it: \"Leah, please feed the fish.\" \"Yes, I will feed them right now.\"" },
     { id: "SK-GUM5-2-T3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "These sentences have no commas yet. Decide if each one needs a comma after the first word or name.",
       cols: ["Needs a comma", "No comma needed"],
@@ -384,8 +384,8 @@ PP.addLesson({
       clue: "Count the owners in each sentence. Then check: Does the plural end in s or not?",
       why: "The answer is \"All four players' shirts were muddy after the game.\" Players is plural and ends in s, so only an apostrophe is added. The others should say children's, teachers' and dogs'." },
     { id: "SK-GUM5-3-P2", type: "dropdown", points: 2, dok: 2, passages: [],
-      prompt: "Choose the words that correctly complete the sentence.",
-      text: "All the {0} jackets were piled on a bench next to the {1} garden.",
+      prompt: "The jackets belong to twenty students. The garden belongs to all the children at school. Choose the words that correctly complete the sentence.",
+      text: "All twenty {0} jackets were piled on a bench next to the {1} garden.",
       slots: [
         { options: ["student's", "students'", "students"], answer: 1 },
         { options: ["childrens'", "children's", "childrens"], answer: 1 }
@@ -423,7 +423,7 @@ PP.addLesson({
         "The kittens' basket sat by the warm stove."
       ],
       answer: [2], pick: 1,
-      clue: "Look for a plural that does not end in s. Did it get the right ending?",
+      clue: "For each owner word, decide if it is plural. Then check where the apostrophe goes.",
       why: "The error is in \"The mens' choir sang at the fair.\" Men does not end in s, so it gets 's: the men's choir." }
   ],
   test: [
@@ -438,8 +438,8 @@ PP.addLesson({
       clue: "Write the plural of woman first. Does it end in s?",
       why: "The answer is the women's hats. Women is already plural and does not end in s, so it gets 's. Woman's would mean only one woman." },
     { id: "SK-GUM5-3-T2", type: "dropdown", points: 2, dok: 2, passages: [],
-      prompt: "Choose the words that correctly complete the sentence.",
-      text: "My two {0} bowls sit by the door, next to the {1} work boots.",
+      prompt: "Ari has two puppies, and each puppy has a bowl. The boots belong to Ari's dad and uncle. Choose the words that correctly complete the sentence.",
+      text: "The two {0} bowls sit by the door, next to the {1} work boots.",
       slots: [
         { options: ["puppies'", "puppy's", "puppies"], answer: 0 },
         { options: ["mens'", "men's", "mans'"], answer: 1 }
@@ -479,7 +479,7 @@ PP.addLesson({
         "The girls' relay team won first place."
       ],
       answer: [3], pick: 1,
-      clue: "Look for a number word that tells you there is more than one owner. Does the apostrophe match?",
+      clue: "Check each apostrophe. Count the owners, then decide where the apostrophe goes.",
       why: "The error is in \"The two friend's tents were set up by the lake.\" Two friends is plural and ends in s, so the apostrophe goes after the s: the two friends' tents." }
   ]
 });
@@ -489,7 +489,7 @@ PP.addLesson({
   code: "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement",
   title: "Matching verbs to everyone, each, both and many",
   teach: {
-    big: "Everyone and each mean one at a time, so they go with verbs like is, has and likes. Both and many mean more than one, so they go with verbs like are, have and like.",
+    big: "Everyone and each are treated as one, so they go with verbs like is, has and likes. Both and many mean more than one, so they go with verbs like are, have and like.",
     points: [
       "Some pronouns do not name a certain person. Everyone, everybody, someone and each are like this. They are singular, so they take a singular verb: Everyone is ready. Each has a turn. Everybody likes recess.",
       "Both and many always mean more than one. They are plural, so they take a plural verb: Both are ready. Many have a turn. Both like recess.",
@@ -529,7 +529,7 @@ PP.addLesson({
       steps: [
         "Find the pronoun at the start: Each.",
         "Cover up \"of the puppies.\" The verb must match Each, not puppies.",
-        "Each means one at a time, so it is singular. Read it: Each has."
+        "Each is treated as one, so it is singular. Read it: Each has."
       ],
       answer: "has: \"Each of the puppies has a blue collar.\""
     }
@@ -544,7 +544,7 @@ PP.addLesson({
         { options: ["is", "are", "be"], answer: 0 }
       ],
       clue: "Is everyone singular or plural? Skip \"on the bus\" and read the pronoun with each verb.",
-      why: "The answer is is. Everyone means every single person, one at a time, so it takes the singular verb is: \"Everyone on the bus is ready for the field trip.\"" },
+      why: "The answer is is. Everyone is treated as one, so it takes the singular verb is: \"Everyone on the bus is ready for the field trip.\"" },
     { id: "SK-GUM5-4-P2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
       choices: [
@@ -564,7 +564,7 @@ PP.addLesson({
         { text: "Each of the cups ___ blue.", answer: 0 },
         { text: "Many of the apples ___ ripe.", answer: 1 }
       ],
-      clue: "Look only at the first word of each sentence. Does it mean one at a time or more than one?",
+      clue: "Look only at the first word of each sentence. Is it treated as one, or does it mean more than one?",
       why: "Everyone is excited, and Each of the cups is blue, because everyone and each are singular. Both of my shoes are wet, and Many of the apples are ripe, because both and many are plural." },
     { id: "SK-GUM5-4-P4", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
@@ -609,7 +609,7 @@ PP.addLesson({
         { options: ["is", "are", "be"], answer: 1 },
         { options: ["is", "are", "be"], answer: 0 }
       ],
-      clue: "Find the pronoun before each blank. Does it mean more than one, or one at a time?",
+      clue: "Find the pronoun before each blank. Is it treated as one, or does it mean more than one?",
       why: "The answers are are and is. Both is plural, so \"Both of the twins are.\" Each is singular, so \"each of them is.\"" },
     { id: "SK-GUM5-4-T3", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
@@ -641,10 +641,10 @@ PP.addLesson({
         { text: "Each", correct: true },
         { text: "Both" },
         { text: "Many" },
-        { text: "Several" }
+        { text: "All" }
       ],
       clue: "Look at the verb wants. Does it go with one or with more than one?",
-      why: "The answer is Each. Wants is a singular verb, and each is the only singular pronoun here. Both, many and several are plural, so they would take want." }
+      why: "The answer is Each. Wants is a singular verb, and each is the only choice treated as one. Both, many and all of the students mean more than one, so they would take want." }
   ]
 });
 
@@ -655,12 +655,12 @@ PP.addLesson({
   teach: {
     big: "Joining words like because, when, after and if put two ideas into one sentence and show how the ideas connect.",
     points: [
-      "A clause is a group of words with a naming part and an action part, like \"the bell rang.\" Words like because, when, after, before, until, if and although can join two clauses into one sentence.",
-      "Pick the joining word that fits the meaning. Because tells why. When, after, before and until tell when. If tells what has to happen first. Although shows a surprise.",
+      "A clause is a group of words with a naming part and a telling part (what someone or something does or is), like \"the bell rang\" or \"the bus was late.\" Words like because, when, after, before, until, if and although can join two clauses into one sentence.",
+      "Pick the joining word that fits the meaning. Because tells why. When, after, before and until tell when. If tells what must happen for the other part to happen. Although shows a surprise.",
       "A part that starts with one of these words cannot stand alone. \"Because the bus was late\" is not a complete sentence. Join it to another clause: We missed the bell because the bus was late."
     ],
     words: [
-      { term: "clause", means: "a group of words with a naming part and an action part" },
+      { term: "clause", means: "a group of words with a naming part and a telling part" },
       { term: "conjunction", means: "a joining word" }
     ],
     example: {
@@ -749,8 +749,8 @@ PP.addLesson({
         { text: "Although" },
         { text: "Until" }
       ],
-      clue: "The picnic moves inside only when something happens first. Which word tells what has to happen first?",
-      why: "The answer is If. The rain has to happen first for the picnic to move inside, and if tells what has to happen first." }
+      clue: "The picnic moves inside only in one case. Which word sets up that case?",
+      why: "The answer is If. If tells what must happen for the picnic to move inside: rain on Saturday." }
   ],
   test: [
     { id: "SK-GUM5-5-T1", type: "dropdown", points: 1, dok: 2, passages: [],
@@ -770,7 +770,7 @@ PP.addLesson({
         { text: "if" },
         { text: "although" }
       ],
-      clue: "How long did they wait? Pick the word that tells about time.",
+      clue: "Try each word in the blank. Which one makes the two ideas fit together?",
       why: "The answer is until. It tells how long they waited: up to the time the rain stopped." },
     { id: "SK-GUM5-5-T3", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Choose the TWO groups of words that are complete sentences.",
@@ -784,29 +784,26 @@ PP.addLesson({
       pick: 2,
       clue: "A part that starts with a joining word needs another clause to finish the idea. Check whether each one feels finished.",
       why: "The answers are \"I walked to school because my bike had a flat tire.\" and \"We can play outside if you finish your homework.\" Each one joins two clauses. The others start with because, if or after and stop before the idea is finished." },
-    { id: "SK-GUM5-5-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Does the joining word in each sentence tell why or tell when?",
-      cols: ["Tells why", "Tells when"],
-      rows: [
-        { text: "The dog barked because a squirrel ran by.", answer: 0 },
-        { text: "The dog barked until the squirrel ran away.", answer: 1 },
-        { text: "We clapped because the show was funny.", answer: 0 },
-        { text: "We clapped when the show ended.", answer: 1 }
+    { id: "SK-GUM5-5-T4", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the words that best complete the sentence.",
+      text: "Kim wore shorts {0} the day was chilly, and she put on a jacket {1} she got to the park.",
+      slots: [
+        { options: ["although", "because", "if"], answer: 0 },
+        { options: ["although", "after", "unless"], answer: 1 }
       ],
-      clue: "Find the joining word in each sentence. Does it give a reason, or is it about time?",
-      why: "The sentences with because tell why: a squirrel ran by, and the show was funny. The sentences with until and when tell when." },
-    { id: "SK-GUM5-5-T5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the group of words that is NOT a complete sentence.",
-      options: [
-        "Before the sun came up.",
-        "The rooster crowed before the sun came up.",
-        "My aunt drove us to the lake.",
-        "We packed snacks because the trip was long.",
-        "When we got there, the water was calm."
+      clue: "Read the sentence with each word in each blank. Is the first idea a surprise, a reason or a case? Is the second idea about time?",
+      why: "The answers are although and after. Wearing shorts on a chilly day is a surprise, and although shows a surprise. Kim put on the jacket once she got to the park, and after tells when." },
+    { id: "SK-GUM5-5-T5", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Which sentence correctly joins these two ideas?",
+      stem: ["The puppy was tired.", "It had played all day."],
+      choices: [
+        { text: "The puppy was tired because it had played all day.", correct: true },
+        { text: "The puppy was tired although it had played all day." },
+        { text: "The puppy was tired. Because it had played all day." },
+        { text: "The puppy was tired before it had played all day." }
       ],
-      answer: [0], pick: 1,
-      clue: "Look for a group of words that starts with a joining word and stops before the idea is finished.",
-      why: "The answer is \"Before the sun came up.\" It starts with the joining word before, but nothing tells what happened. \"The rooster crowed before the sun came up.\" is complete because it joins two clauses." }
+      clue: "First decide how the ideas connect. Then make sure the joined words form one complete sentence.",
+      why: "The answer is \"The puppy was tired because it had played all day.\" Playing all day is the reason the puppy was tired, and because tells why. \"Because it had played all day.\" cannot stand alone as its own sentence." }
   ]
 });
 
@@ -815,10 +812,10 @@ PP.addLesson({
   code: "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses",
   title: "Commas after an opening part",
   teach: {
-    big: "When a sentence starts with an opening part like \"After lunch\" or \"When the bell rang,\" put a comma after that part.",
+    big: "When a sentence starts with an opening part like \"After lunch\" or \"When the bell rang,\" a comma usually goes after that part.",
     points: [
       "Some sentences begin with an opening part that tells when, where, why or what if. \"After school,\" \"In the morning\" and \"When the bell rang\" are opening parts.",
-      "Put a comma at the end of the opening part, right before the main part of the sentence: When the bell rang, we lined up.",
+      "Put a comma at the end of the opening part, right before the main part of the sentence: When the bell rang, we lined up. After an opening part like \"When the bell rang,\" you need the comma. After a short one like \"After lunch,\" the comma is always OK.",
       "If the same part comes at the end of the sentence, you usually do not need a comma: We lined up when the bell rang."
     ],
     words: [
@@ -979,7 +976,7 @@ PP.addLesson({
   teach: {
     big: "In a title, the first word and the important words start with capital letters. Book titles are in italics or underlined, and titles of stories, poems and songs go in quotation marks.",
     points: [
-      "Capitalize the first word, the last word and every important word in a title. Small words like a, an, the, and, of, in, on and to stay lowercase unless they come first or last: The Fox and the Hen.",
+      "Capitalize the first word, the last word and every important word in a title. Small words like a, an, the, and, of, in, on, at, to and for stay lowercase unless they come first or last: The Fox and the Hen.",
       "The title of a whole book is shown in a special way. When you type it, use italics, which are slanted letters. When you write it by hand, draw a line under it.",
       "Titles of short works, such as stories, poems and songs, go inside quotation marks: We sang \"The Crickets Hum\" at camp."
     ],
@@ -1033,7 +1030,7 @@ PP.addLesson({
         { text: "My sister read the poem The Moon and the Fox to me." }
       ],
       clue: "Check two things: Does the poem title have quotation marks? Do the first word and the important words have capitals?",
-      why: "The answer is \"My sister read the poem \"The Moon and the Fox\" to me.\" A poem title goes in quotation marks, and The, Moon and Fox get capitals. The others have a lowercase the at the start, a lowercase fox, or no quotation marks." },
+      why: "The answer is 'My sister read the poem \"The Moon and the Fox\" to me.' A poem title goes in quotation marks, and The, Moon and Fox get capitals. The others have a lowercase the at the start, a lowercase fox, or no quotation marks." },
     { id: "SK-GUM5-7-P2", type: "match", points: 2, dok: 1, passages: [],
       prompt: "How should each title be shown in typed writing? Match each one.",
       cols: ["Italics (or underline by hand)", "Quotation marks"],
@@ -1087,7 +1084,7 @@ PP.addLesson({
         { text: "We danced to \"the Rainy Day Shuffle\" at the party." }
       ],
       clue: "Check the marks around the song title. Then check the first word and every important word.",
-      why: "The answer is \"We danced to \"The Rainy Day Shuffle\" at the party.\" A song title goes in quotation marks, and every word in this title is important or first, so each one gets a capital." },
+      why: "The answer is 'We danced to \"The Rainy Day Shuffle\" at the party.' A song title goes in quotation marks, and every word in this title is important or first, so each one gets a capital." },
     { id: "SK-GUM5-7-T2", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Choose the TWO sentences that write the title correctly.",
       choices: [
@@ -1114,11 +1111,11 @@ PP.addLesson({
       choices: [
         { text: "Underline it.", correct: true },
         { text: "Put it in quotation marks." },
-        { text: "Write it in all capital letters." },
-        { text: "Put a comma after it." }
+        { text: "Write it in slanted letters (italics)." },
+        { text: "Capitalize only the first word." }
       ],
       clue: "Is it a whole book or a short work? Is Ruby typing or writing by hand?",
-      why: "The answer is \"Underline it.\" It is a whole book, and Ruby is writing by hand, so she draws a line under the title. If she typed it, she would use italics. Quotation marks are for short works like stories, poems and songs." },
+      why: "The answer is \"Underline it.\" It is a whole book, and Ruby is writing by hand, so she draws a line under the title. Slanted letters (italics) are for typed writing, not handwriting. Quotation marks are for short works like stories, poems and songs. Every important word in the title still gets a capital." },
     { id: "SK-GUM5-7-T5", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which title uses capital letters correctly?",
       choices: [
