@@ -5,7 +5,7 @@ Companion to `matrix-texts1.csv`. Checked 2026-10-20 against branch `pp-003-audi
 ## Method
 - Loaded `js/data/manifest.js`, `standards.js`, every manifest lesson, set and task file in a Node `vm` context. I counted items from that data, not from the source text. The practice split follows `js/skills.js:32`: `half = n >= 4 ? ceil(n/2) : n`.
 - `lesson_keys` follows `lessonFor`/`codesOf` (`L.codes || [L.code]`).
-- I read the full teach, learn, passages, practice and test content of all 20 lessons that carry a slice code: T-C.js (5), T-SS.js (6), T-T1.js (5) and T-TS.js (TS-SEQ, TS-CE, TS-PS, TS-CC, TS-DESC). I solved every lesson test item (101 items) and every practice item myself.
+- I read the full teach, learn, passages, practice and test content of all 21 lessons that carry a slice code: T-C.js (5), T-SS.js (6), T-T1.js (5) and T-TS.js (TS-SEQ, TS-CE, TS-PS, TS-CC, TS-DESC). I solved every lesson test item (106 items) and every practice item (117 items) myself.
 - Mixed-set items (`R-*`, `W-REV-*`, `PT-1`) that carry a slice code are listed with their prompt, key and explanation. I did **not** re-solve them against their full passages. Treat their correctness as UNVERIFIED by this slice. They are counted only in `other_demonstrations`.
 - I served the site with Playwright on port 8441 (server since stopped). All 21 lesson keys appear in `PP_CATALOG` and build their `:p`, `:y` and `:t` sets. There were no page errors. The 3.T.C.1.b and 3.T.SS.1.a skill pages contain 0 img/svg/canvas/video/audio elements.
 - The blueprint (Aug 2025) gives the assessment status. The site's `tested` flag agrees with the blueprint for all 16 rows.
@@ -14,7 +14,7 @@ Companion to `matrix-texts1.csv`. Checked 2026-10-20 against branch `pp-003-audi
 ## Totals
 16 rows: 10 VERIFIED COMPLETE, 6 PARTIAL, 0 MISSING, 0 INCORRECT.
 Severity: 1 High (3.T.C.1.b), 5 Medium, 6 Low, 4 None.
-I found no wrong answer keys and no item with two defensible answers in the 101 lesson test items.
+I found no wrong answer keys and no item with two defensible answers in the 106 lesson test items.
 
 ## Cross-cutting finding: the site cannot show any visual
 `assets/` is empty, and the player renders only `## ` headings, `Box: ` asides and `Caption: ` text lines (js/engine/player.js:48-60). It has no bold markup and no image element. SPEC.md:136 makes this a rule: "The site shows no images, so use a text box rather than a caption that describes a picture."

@@ -90,7 +90,7 @@ Each of these 26 files differs from its live counterpart, by 6 to 181 changed di
 | ALDs | `js/data/alds.js` → `PP_ALDS` | 15 standards (all tested grade 3 Texts and Language standards), 4 levels, bullets verbatim. Source comment says DRAFT, October 2025. |
 | Practices ("Everyday habits") | `js/data/habits.js` → `PP_HABITS` | 53 entries, one per K-12 Practice expectation, none missing or extra |
 | Site content | `js/data/site.js` → `PP_SITE` | GaDOE source links; 4 mixed-practice section cards; tool links; blueprint design numbers, claims, DOK; rubric summary; Writer's Checklist (verbatim); "How to use" plan |
-| Catalog (categories) | `js/data/catalog.js` → `PP_CATALOG`, `PP_STRUCTURES`, `PP_STRUCTURES_TRICKY` | 5 categories, 18 lettered groups (A–R), 101 entries (99 lesson keys + 2 `task:` entries); six text structures for the Clue Word Cheat Sheet |
+| Catalog (categories) | `js/data/catalog.js` → `PP_CATALOG`, `PP_STRUCTURES`, `PP_STRUCTURES_TRICKY` | 5 categories, 23 lettered groups (A–W), 101 entries (99 lesson keys + 2 `task:` entries); six text structures for the Clue Word Cheat Sheet |
 | Lessons | `js/data/lessons/*.js` (17 files, 99 `PP.addLesson` calls) | Schema: SPEC §8 and §8b. `js/skills.js` `addLesson()` turns each lesson into up to 3 ordinary sets: `SK:<key>:p` (Practice Together), `SK:<key>:y` (Try It Yourself) and `SK:<key>:t` (Test). |
 | Practice-question sets | `js/data/sets/*.js` (15) | `PP.addSet`. Sections: reading (6), writing/revising (2), language (6), test (1: PT-1, `kind: "form"`). |
 | Extended writing tasks | `js/data/tasks/*.js` (2), UI in `js/writing.js` | Read, Plan, Write, Check (Writer's Checklist), For parents (rubric and model essay). Nothing is machine-scored. |
@@ -214,7 +214,7 @@ SPEC §7 names `verification/guard.js`; the file is actually `guard.py`.
 - No `<img>`, no image URL and no image field appears in any item, lesson, set or task. Scanned by regex over every item object.
 - The Playwright page reported `document.images` = 0.
 - Picture-related content is taught in words:
-  - text `Box:` sidebars: 9 in lessons, 1 in R-INF-01
+  - text `Box:` sidebars: 8 in lessons, 1 in R-INF-01
   - one described slide in the T-C.js 3.T.C.1.c example (lines 431–435: "Picture: …", "Caption: …")
   - STATUS-2.0, "Known limits": the image parts of 3.L.V.3.a and 3.T.C.1.b are taught in words.
 
@@ -226,7 +226,7 @@ SPEC §7 names `verification/guard.js`; the file is actually `guard.py`.
 |---|---|
 | **Active (current spec or status)** | `README.md` (partly stale: its "Structure" list omits `skills.js`, `catalog.js`, `habits.js` and `lessons/`), `docs/SPEC.md` (§8's "four steps" and "home lists every standard" are superseded by §8b and the 2.1 catalog), `docs/STATUS-2.1.md` (current release notes) |
 | **Active process briefs** (still describe how to write or review) | `docs/LESSON-BRIEF.md`, `docs/REVIEW-BRIEF.md`, `docs/VERIFY-BRIEF.md`, `docs/FINAL-VERIFY-BRIEF.md`. They describe the 2.0 four-step flow. |
-| **Historical** | `docs/STATUS-1.0.md`, `docs/STATUS-2.0.md`, `docs/audit-skills.md` (audited build 1.0.0 / the 2.0 home: "147 rows, 69 rows", four steps), `docs/release-review-1.md`, `docs/release-review-writing.md`, `docs/review-{reading,language,writing,pt1}-{A,B}.md`, all of `docs/review-lessons/` (81 files) |
+| **Historical** | `docs/STATUS-1.0.md`, `docs/STATUS-2.0.md`, `docs/audit-skills.md` (audited build 1.0.0 / the 2.0 home: "147 rows, 69 rows", four steps), `docs/release-review-1.md`, `docs/release-review-writing.md`, `docs/review-{reading,language,writing,pt1}-{A,B}.md`, all of `docs/review-lessons/` (85 files) |
 | **Historical code backups (not loaded)** | `docs/pre-*/*.js` (26 files, §1.1) |
 
 ---
@@ -336,7 +336,7 @@ None of these is on the blueprint. I could not check against the official K-12 s
 - **Reading:** the 19 reading-only Texts expectations + 5 TS-* text-structure lessons.
 - **Writing:** the 10 writing-only Texts expectations + 2 essay tasks.
 - **Vocabulary:** all 10 3.L.V expectations.
-- **Grammar:** 4 3.L.GC.2 expectations + 41 GUM rows. The 15 I/C rows sit in group R, "Getting ahead".
+- **Grammar:** 4 3.L.GC.2 expectations + 41 GUM rows. The 15 I/C rows sit in group W, "Getting ahead".
 - **Foundations:** all 10.
 
 **Lessons that are not one-per-code:**
@@ -379,7 +379,7 @@ None of these is on the blueprint. I could not check against the official K-12 s
 | W-TASK-01 "Should our school start a reading buddy program?" | 2 | 2 | 8, scored by a grown-up | 3.T.T.3.c, 3.T.RA.1.c, 3.T.SS.1.c, 3.T.SS.1.d, 3.L.GC.2.b, 3.L.GC.2.c |
 | W-TASK-02 "Should our town turn an empty lot into a skate park?" | 2 | 2 | 8, scored by a grown-up | the same 6 codes |
 
-Each task also appears in the Writing catalog (J/L group "Essay practice") and in `#writing`. That is one object shown in two places, so count it once.
+Each task also appears in the Writing catalog (group M, "Essay practice") and in `#writing`. That is one object shown in two places, so count it once.
 
 **Item types, all 1,126 question objects:** mc 439, dropdown 220, hottext 149, match 134, ms 104, ebsr 55, order 25.
 
@@ -427,7 +427,7 @@ Each task also appears in the Writing catalog (J/L group "Essay practice") and i
 | Writing card counts lessons only (10) | STATUS-2.1 "left for later" | card shows "0/10" | Still true. |
 | Practice Test 1: 24 items, 31 points | STATUS-1.0 | 24 / 31 | Matches. |
 | Reading 34 of 60, Writing 26 of 60 | README, site.js | Blueprint p.1: 34 / 26 | Matches. |
-| **3.L.GC.1 in Interpreting Texts** | `site.js` claims row ("3.L.GC.1, 3.L.GC.2 (a)"), SPEC §2, `standards.js` (GUM M/R = `both`, so the skill page says "On the Milestones: Reading and Writing questions") | **Blueprint p.1 page image: "3.L.GC.1\* GUM" appears only in the Constructing Texts column**; Interpreting lists only 3.L.GC.2 (a) | **Discrepancy.** 26 GUM rows should be `writing`, not `both`. The hard-coded `tested="both"` in `gen-standards.py` line ~39 is the source. The total of 69 is unchanged. |
+| **3.L.GC.1 in Interpreting Texts** | `site.js` claims row ("3.L.GC.1, 3.L.GC.2 (a)"), SPEC §2, `standards.js` (GUM M/R = `both`, so the skill page says "On the Milestones: Reading and Writing questions") | **Blueprint p.1 page image: "3.L.GC.1\* GUM" appears only in the Constructing Texts column**; Interpreting lists only 3.L.GC.2 (a) | **Discrepancy.** 26 GUM rows should be `writing`, not `both`. The hard-coded `tested="both"` in `gen-standards.py` line 39 is the source. The total of 69 is unchanged. |
 | Constructing Texts claim points: "8 for Techniques" | `site.js` `claimPoints`; SPEC §2 table (RA: "inside the writing task") | Page image: the CT "8" spans **Techniques and Research & Analysis** together | Minor wording difference; for Phase B. |
 | "Peach Prep practices each of these": drag-and-drop, drop-down, EBSR, match, reorder, hot text, multiple-part, multiple-select | parent guide, test tab | 7 engine types; no drag interaction (grep finds no "drag"); no separate multiple-part type | Overclaim, unless "order" counts as reorder/drag and "ebsr" as multiple-part. |
 | "Every Georgia Grade 3 ELA standard, each with a lesson, practice and a test" | `<meta name="description">` | 4 hands-on lessons have no practice items and no test; 53 Practices have no lesson | Overclaim. |
