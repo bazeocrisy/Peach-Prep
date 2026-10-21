@@ -345,10 +345,10 @@ PP.addLesson({
         { text: "Dad put up two new shelfs in my room.", answer: 1 },
         { text: "Doctors and nurses work hard to save lives.", answer: 0 },
         { text: "Three fishermans sat on the dock with their poles.", answer: 1 },
-        { text: "Two deer drank from the cool creek.", answer: 0 }
+        { text: "Five bison ate grass on the wide prairie.", answer: 0 }
       ],
       clue: "Find the word in each sentence that names more than one. Is it spelled the special way, with no extra -s?",
-      why: "\"Doctors and nurses work hard to save lives.\" and \"Two deer drank from the cool creek.\" are correct: one life, many lives; one deer, two deer. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
+      why: "\"Doctors and nurses work hard to save lives.\" and \"Five bison ate grass on the wide prairie.\" are correct: one life, many lives; one bison, five bison. Bison stays the same for one or more. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
     { id: "SK-GUM3-2-TB5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One of these sentences has a mistake with a plural noun. Select that sentence.",
       options: [

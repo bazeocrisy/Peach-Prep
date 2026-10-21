@@ -605,10 +605,14 @@ PP.addLesson({
       ],
       clue: "Pick one stanza. Say the last word of each line out loud and listen for the pairs that end with the same sound. Then check another stanza.",
       why: "The answers are \"line 1 rhymes with line 3\" and \"line 2 rhymes with line 4.\" In stanza 1, hill rhymes with still, and gray rhymes with away. Stanza 2 has light and bright, tree and me. Stanza 3 has slow and go, hands and stands. Lines that sit next to each other, like hill and gray, do not rhyme." },
-    { id: "SK-TT4a-TB2", type: "hottext", points: 1, dok: 1, passages: ["p3"],
-      prompt: "A stanza is a group of lines. Choose the line that begins the second stanza of \"Firefly Night.\"",
-      targets: ["p3:1:1", "p3:1:4", "p3:2:1", "p3:2:3", "p3:3:1"],
-      answer: ["p3:2:1"], pick: 1,
+    { id: "SK-TT4a-TB2", type: "mc", points: 1, dok: 1, passages: ["p3"],
+      prompt: "A stanza is a group of lines. Which line begins the second stanza of \"Firefly Night\"?",
+      choices: [
+        { text: "Then blink, blink, blink, a tiny light", correct: true },
+        { text: "And day has gone away." },
+        { text: "Then blink, blink, blink, a spark so bright" },
+        { text: "I cup one gently, soft and slow," }
+      ],
       clue: "Find the spaces in the poem. Each space ends one stanza. Count the groups of lines from the top.",
       why: "The answer is \"Then blink, blink, blink, a tiny light.\" The first stanza ends with \"And day has gone away.\" After the space, the second stanza starts. Another line in stanza 2 also starts with blink, blink, blink, but it is the third line, not the first, and \"I cup one gently, soft and slow\" begins the third stanza." },
     { id: "SK-TT4a-TB3", type: "mc", points: 1, dok: 2, passages: ["p3"],

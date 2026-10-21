@@ -125,3 +125,10 @@ Every set reached full score at both widths, with 0 page errors and 0 horizontal
 - **RC4-2, irregular-plurals form B balance.** TB1 now asks for **snowmen** (the man → men pattern; the wrong choices are snowmans, snowmens and snowman). TB2's "snowmans" sentence is replaced by "Dad cut each sandwich into two halfs.", and the explanation now names thieves, grandchildren and halves. The f/fe → -ves pattern now has 3 targets (TB2 rows, TB3, TB4/TB5), and the man/child patterns are tested too. Points are unchanged at 7. "Snowmen" and "halves" appear nowhere else in the lesson.
 - **A2 SHOULD-1, "erupt" overlap.** SK-V2a-TB5 now uses **disrupted** ("A loud fire drill disrupted our spelling test…"; the key is "broke into it and stopped it for a while"). "Disrupt" appears nowhere else on the site. "Erupt" stays only in 3.L.V.2.c and T-RA. Choice lengths were evened so no length warning remains.
 - **Verification:** check-content passes. These three items get a blind re-solve in round 5 (pp004-review-C5.md).
+
+## Lead addendum: fixes from round 5 (pp004-review-C5.md)
+- **MUST, SK-TT4a-TB2.** The hot-text option labels ("STANZA 2, LINE 1") gave the answer away. The item is now an `mc` with the four poem lines as plain choices. The key and the 1 point are unchanged, and the explanation still quotes the answer.
+- **SHOULD, SK-GUM3-2-TB4.** The "deer" row reused a taught word. It is now "Five bison ate grass on the wide prairie." ("bison" appears nowhere else in the lesson), and the explanation is updated.
+- **SHOULD, SK-V3a-TB1.** It was form A's graph item with the nouns changed. It now tests the trend word **dwindled** from the same graph: week 3 has 8 buckets, week 4 has 4. Key: "became fewer". Points and DOK are unchanged. "Dwindled" appears nowhere else on the site.
+- **Not changed:** PT-1-13's "green" row. The cue is weak, and both alternative rows tried earlier cued other PT-1 items (see C2/C3). Recorded in the backlog.
+- **Verification:** check-content passes with 0 failures. Round 6 re-solves these three items blind.

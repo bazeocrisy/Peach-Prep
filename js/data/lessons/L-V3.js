@@ -259,18 +259,19 @@ PP.addLesson({
      NEEDS INDEPENDENT REVIEW before it is relied on. */
   testB: [
     { id: "SK-V3a-TB1", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the sentences and look at the graph. What does harvest mean?",
-      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "This year, their harvest was biggest in week 3."],
+      prompt: "Read the sentences and look at the graph. What does dwindled mean?",
+      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "After week 3, the pecans on the trees dwindled."],
       figure: { src: "assets/figures/v3a-b-pecan-graph.svg",
         alt: "Bar graph titled Pecans We Picked in November. The words at the bottom say buckets of pecans. The bars show week 1, 3 buckets; week 2, 6 buckets; week 3, 8 buckets; and week 4, 4 buckets. Week 3 has the longest bar." },
       choices: [
-        { text: "the amount of a crop that is picked", correct: true },
-        { text: "the number of trees that grow on a farm" },
-        { text: "the size of the biggest pecan on a tree" },
-        { text: "the number of people who help on a farm" }
+        { text: "became fewer", correct: true },
+        { text: "grew bigger" },
+        { text: "stayed the same" },
+        { text: "turned brown" }
       ],
-      clue: "Read the title of the graph and the words at the bottom. What does the graph count? Then find the week the sentence names.",
-      why: "The answer is \"the amount of a crop that is picked.\" The title is Pecans We Picked in November, and the bottom says buckets of pecans. Week 3 has the longest bar, 8 buckets, and the sentence says the harvest was biggest in week 3. So the harvest is how much of the crop the family picked. The graph does not count trees or people, and it does not show the size of one pecan." },
+      clue: "Read the title of the graph and the words at the bottom. Then compare the bar for week 3 with the bar for week 4.",
+      why: "The answer is \"became fewer.\" The graph counts buckets of pecans picked each week. Week 3 has 8 buckets, but week 4 has only 4 buckets. After week 3 there were fewer pecans left to pick, so dwindled means became fewer. The bars do not get bigger or stay the same after week 3, and the graph does not show color."
+    },
     { id: "SK-V3a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Lighter has more than one meaning. What does lighter mean in paragraph 3?",
       choices: [
