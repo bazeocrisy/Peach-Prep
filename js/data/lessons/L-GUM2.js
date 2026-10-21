@@ -165,7 +165,7 @@ PP.addLesson({
       { term: "determiner", means: "a small word that comes before a noun, like a, the, this or my" },
       { term: "article", means: "the words a, an and the" },
       { term: "demonstrative adjective", means: "a pointing word before a noun: this, that, these or those" },
-      { term: "possessive adjective", means: "an owning word before a noun, like my, his, its or their" }
+      { term: "possessive determiner", means: "an owning word before a noun, like my, his, its or their (some books call it a possessive adjective)" }
     ],
     example: {
       label: "Example",
