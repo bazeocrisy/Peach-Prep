@@ -722,7 +722,7 @@ PP.addLesson({
     { id: "p2", draft: true, title: "Field Day", byline: "Carlos's first draft", genre: "Student draft (narrative)",
       paragraphs: [
         ["(1) Field Day at Maple Creek Elementary was the best day of the whole school year."],
-        ["(2) The morning was full of races.", "(3) First, we hopped across the grass in the sack race.", "(4) Then we raced while carrying eggs on spoons.", "(5) My big brother is learning how to drive a car.", "(6) The last race was a relay, and my team won."],
+        ["(2) The morning was full of races.", "(3) First, we hopped across the grass in the sack race.", "(4) Then we raced while carrying eggs on spoons.", "(5) My big brother says the high school has a real track.", "(6) The last race was a relay, and my team won."],
         ["(7) After lunch, we cooled off with water games.", "(8) We tossed water balloons back and forth with partners.", "(9) The teachers sprayed us with garden hoses.", "(10) Everyone was soaked and laughing."],
         ["(11) I can't wait for next year's Field Day!"]
       ] }
@@ -784,7 +784,7 @@ PP.addLesson({
       targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:2:4", "p2:2:5"],
       answer: ["p2:2:4"], pick: 1,
       clue: "Find the topic sentence of that paragraph. Then test each sentence: is it about that idea?",
-      why: "The answer is sentence 5, \"My big brother is learning how to drive a car.\" The paragraph is about the races on Field Day morning. A brother learning to drive is not about the races." },
+      why: "The answer is sentence 5, \"My big brother says the high school has a real track.\" The paragraph is about the races on Field Day morning. A track sounds like racing, but this sentence is about the high school, not about the races Carlos ran that morning. Sentences 3, 4 and 6 each tell about one Field Day race." },
     { id: "SK-SS1d-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Carlos wants to add a detail to the paragraph that begins with sentence 7. Which sentence fits best?",
       choices: [

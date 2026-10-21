@@ -550,15 +550,15 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-TC1c-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Kenji wants to add one picture to Slide 2. Which picture would best help his audience understand that slide?",
+      prompt: "Kenji's audience is his classmates, and they have never heard the word peg. Which change to Slide 2 would help THESE readers most?",
       choices: [
-        { text: "a drawing of a peanut plant with peanuts under the soil", correct: true },
-        { text: "a photo of a jar of peanut butter on a table" },
-        { text: "a map of Georgia with the state capital marked" },
-        { text: "a photo of a farmer driving a big red tractor" }
+        { text: "a close-up drawing of the stalk growing down into the soil, with the label \"peg\"", correct: true },
+        { text: "a photo of a jar of peanut butter on a kitchen table" },
+        { text: "a chart that shows how many peanuts each state grows" },
+        { text: "the fact that peanuts are in the same family as peas" }
       ],
-      clue: "Read the heading and the words for Slide 2. What would be hard to picture without help?",
-      why: "The answer is a drawing of a peanut plant with peanuts under the soil. Slide 2 says the flowers are above the ground and the peanuts grow below. A drawing shows both parts at once." },
+      clue: "Think about what Kenji's audience does not know yet. Which choice would help a reader understand a brand-new word?",
+      why: "The answer is the close-up drawing with the label \"peg.\" Kenji's classmates do not know what a peg is, so a labeled drawing shows them exactly what the word names. The peanut butter photo and the chart are about peanuts, but they do not help these readers understand the peg. The fact about peas belongs on Slide 4." },
     { id: "SK-TC1c-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Kenji has a photo of peanut plants lying upside down in a field. Which caption should he put under it on Slide 3?",
       choices: [
@@ -662,14 +662,14 @@ PP.addLesson({
       "A narrator's point of view is how the narrator thinks and feels about what happens. In a poem, the voice is called the speaker, and the speaker has a point of view too.",
       "Find the narrator's feeling words, like boring, ruined or the best. They tell you the narrator's view.",
       "You, the reader, may see things differently. Look at what actually happens, not only at what the narrator says.",
-      "If the narrator says I or we about themself, outside of quotation marks, the story is in first person. The narrator is a character.",
-      "If the narrator never says I about themself and tells about the characters by name or with he, she and they, the story is in third person."
+      "Different characters or speakers can see the same thing in different ways. One may love the rain while another hates it. Notice each one's view.",
+      "To find the narrator, ask: Who is telling this? If the teller says I or we about themself, outside of quotation marks, the narrator is a character in the story. If not, the narrator is an outsider who tells about the characters by name or with he, she and they."
     ],
     words: [
       { term: "narrator", means: "the voice that tells the story" },
       { term: "point of view", means: "how someone sees and feels about something" },
-      { term: "first person", means: "told by a character, using I and me" },
-      { term: "third person", means: "told by someone outside the story, using he, she and they" }
+      { term: "speaker", means: "the voice that tells a poem" },
+      { term: "perspective", means: "another word for point of view: how someone sees and feels about something" }
     ],
     example: {
       label: "The narrator's view and what really happens",
@@ -681,13 +681,13 @@ PP.addLesson({
   learn: [
     {
       show: ["My dog, Rex, is the best dog in the whole world. He brings me sticks and licks my face every morning."],
-      ask: "Who is telling this, and is it first person or third person?",
+      ask: "Who is telling this, and how does the narrator feel about Rex?",
       steps: [
         "Look for I, me and my. This text uses my and me.",
-        "That means the narrator is a character. It is Rex's owner.",
-        "A character telling the story is first person. The narrator thinks Rex is the best dog."
+        "That means the narrator is a character in the story. It is Rex's owner.",
+        "Find the feeling words: the best dog in the whole world. The narrator loves Rex."
       ],
-      answer: "Rex's owner is telling it, in first person."
+      answer: "Rex's owner is telling it, and the narrator thinks Rex is the best dog in the world."
     },
     {
       show: ["Tasha hated rainy Saturdays. She said rain ruined everything. But her little brother ran outside to stomp in every puddle, laughing the whole time."],
@@ -729,7 +729,7 @@ PP.addLesson({
         { text: "someone outside the story" }
       ],
       clue: "Look for I and my in paragraph 1. Then look at what Dev calls the narrator at the end.",
-      why: "The answer is Dev's big sister. The narrator says \"my little brother, Dev,\" and Dev calls her \"Sis\" at the end. She uses I and my, so the narrator is a character in the story. It is told in first person." },
+      why: "The answer is Dev's big sister. The narrator says \"my little brother, Dev,\" and Dev calls her \"Sis\" at the end. She uses I and my, so the narrator is a character in the story, not an outsider." },
     { id: "SK-TC2a-P2", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Which two sentences show how the narrator feels about Dev at the start of the story? Choose two sentences.",
       targets: ["p1:1:1", "p1:1:2", "p1:2:1", "p1:2:3", "p1:3:1"],
@@ -754,17 +754,17 @@ PP.addLesson({
         ] },
       clue: "Look at what Dev actually does with each buyer in paragraphs 2 and 3. Is that luck?",
       why: "Part A: Dev sells a lot because he is friendly and helpful. Part B: \"He told her which ones had all their pieces.\" Dev talks to buyers and gives helpful information. The narrator calls it luck, but the reader can see it is more than that." },
-    { id: "SK-TC2a-P4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Read each sentence. Is it told in first person or third person?",
-      cols: ["First person", "Third person"],
-      rows: [
-        { text: "I packed my bag for the trip.", answer: 0 },
-        { text: "Carlos packed his bag for the trip.", answer: 1 },
-        { text: "We sang all the way to Savannah.", answer: 0 },
-        { text: "They sang all the way to Savannah.", answer: 1 }
+    { id: "SK-TC2a-P4", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the poem. How is the speaker's view of the snow different from the sister's view?",
+      stem: ["The snow fell softly all night long,", "and school is closed today.", "My sister frowns out at the yard,", "but I can't wait to play!"],
+      choices: [
+        { text: "The speaker is excited about the snow, but the sister is unhappy about it.", correct: true },
+        { text: "The speaker and the sister are both excited to go out and play." },
+        { text: "The speaker is sad that school is closed, but the sister is glad." },
+        { text: "The speaker and the sister are both upset about the snow." }
       ],
-      clue: "Does the teller say I or we about themself? If not, the teller is only telling about other people.",
-      why: "\"I packed my bag\" and \"We sang\" are first person because the teller says I and we and is part of the action. \"Carlos packed his bag\" and \"They sang\" are third person because the teller does not say I or we and only tells about others." },
+      clue: "In a poem, the voice is called the speaker. Find what the sister's face does. Then find what the speaker says about playing.",
+      why: "The answer is \"The speaker is excited about the snow, but the sister is unhappy about it.\" The sister frowns, which shows she is not happy. The speaker says \"I can't wait to play!\" which shows excitement. The two people see the same snow in different ways, so the choices that say they feel the same are wrong, and nothing shows the speaker is sad." },
     { id: "SK-TC2a-P5", type: "mc", points: 1, dok: 3, passages: ["p1"],
       prompt: "How does the narrator's view change by the end of the story?",
       choices: [
@@ -778,15 +778,15 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TC2a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
-      prompt: "From which point of view is this story told?",
+      prompt: "Who is telling this story?",
       choices: [
-        { text: "first person, by Grandpa's grandchild", correct: true },
-        { text: "first person, by Grandpa" },
-        { text: "third person, by a narrator outside the story" },
-        { text: "first person, by Grandpa's father" }
+        { text: "Grandpa's grandchild, a character in the story", correct: true },
+        { text: "Grandpa, a character in the story" },
+        { text: "an outsider who is not in the story" },
+        { text: "Grandpa's father, a character in the story" }
       ],
       clue: "Find who says I and me. Then find who that person calls \"Grandpa.\"",
-      why: "The answer is first person, by Grandpa's grandchild. The narrator uses I and me and talks about Grandpa, so the narrator is Grandpa's grandchild, a character in the story." },
+      why: "The answer is Grandpa's grandchild. The narrator uses I and me and calls the other person Grandpa, so the narrator is Grandpa's grandchild, a character in the story. Grandpa is talked about, not telling. Grandpa's father is only in Grandpa's stories." },
     { id: "SK-TC2a-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does the narrator feel about the morning for most of the story?",
