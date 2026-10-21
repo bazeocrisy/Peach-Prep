@@ -137,6 +137,7 @@ Fields every item has:
 Paragraph and sentence references:
 - **Paragraph** numbers start at 1, matching the numbers the child sees.
 - A paragraph whose first sentence starts with `"Box: "` is a text box (a sidebar such as "Did You Know?"). It is shown set apart and is not numbered. To show a real picture, diagram, map or graph, use a figure (§5e) rather than words that describe one.
+- In Learn It and Watch Me example lines (`show`/`lines`), a line that starts with `"Box: "` is drawn the same way, as a set-apart text box (PP-004).
 - **Sentence** references use `"p1:3:2"`, meaning passage p1, paragraph 3, sentence 2 (both counted from 1).
 
 | type | Fields | Scoring |

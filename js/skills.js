@@ -651,6 +651,9 @@
   function lines(host, list, cls) {
     (Array.isArray(list) ? list : [list]).forEach(t => {
       const c = /^Cursive: /.test(t);
+      if (/^Box: /.test(t)) {   /* PP-004: a text-box feature in an example, drawn like a passage box (SPEC §5e) */
+        const box = make("aside", "passage-box"); box.appendChild(PP.rich(make("p", "para-body"), t.replace(/^Box: /, ""))); host.appendChild(box); return;
+      }
       host.appendChild(c ? make("p", (cls || "") + " cursive", t.replace(/^Cursive: /, "")) : PP.rich(make("p", cls || ""), t));   /* **bold** words: SPEC §5e */
     });
   }

@@ -228,3 +228,7 @@ So I could not *add* a fourth Watch Me example or an eighth practice item. In bo
   - All matched the keys, and I found no second defensible answer.
   - Caveat: I wrote these items, so this solve is not independent. An independent re-solve of T9, RA1b-P8 and RA1b-T8 is recommended.
   - Known weakness: in T9 the key is the longest choice, though only slightly longer than foil D. RA1b-P8 and T8 are easy at grade 3, which is acceptable for an evaluate-the-source item.
+
+## Lead addendum: Watch Me text boxes (the 3.T.C.2.c "not fixed" item)
+- js/skills.js `lines()`: an example line that starts with `"Box: "` now renders as `aside.passage-box`, the same look as a passage text box. SPEC §5 is updated.
+- T-C.js 3.T.C.2.c Watch Me 2 and 3 now use `"Box: "`. Checked at 390: 2 boxes render on the Watch Me step, with no page errors.

@@ -334,7 +334,7 @@ PP.addLesson({
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Two {0} stood in the lake and ate water plants.",
       slots: [{ options: ["mooses", "moose", "meese"], answer: 1 }],
-      clue: "Two means more than one. Moose is one of the special nouns. Does it change, or does it stay the same?",
+      clue: "Two means more than one, so you need a plural. This animal's name is a special noun. Does it change its spelling, or does it stay the same?",
       why: "The answer is moose. Moose is one of the nouns that stays the same: one moose, two moose. Mooses adds an -s that does not belong, and meese is not a word." },
     { id: "SK-GUM3-2-TB4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Is the plural noun in each sentence correct, or does it need a fix? Match each sentence.",

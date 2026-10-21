@@ -107,6 +107,20 @@ PP.addLesson({
       figures: [
         { after: 3, src: "assets/figures/tt2a-armadillo.svg", label: "Figure 1", caption: "The parts of an armadillo",
           alt: "Diagram of an armadillo seen from the side. Labels point to its long nose, its sharp claws, the bony plates of its shell, and the bands across the middle of its shell. The bands label says: bands that let the shell bend." }
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Inside a Tree Trunk", genre: "Informational text",
+      paragraphs: [
+        ["A tree trunk may look like one solid piece of wood.", "But if you could look inside, you would find several layers.", "Each layer has its own job, and together the layers keep the tree alive and growing."],
+        ["The outside layer is the bark.", "Bark is rough and tough, like a suit of armor.", "It keeps out insects and germs that could make the tree sick.", "It also keeps the wood inside from drying out."],
+        ["Just under the bark is a thin layer called the inner bark.", "A tree's leaves use sunlight to make food.", "The inner bark carries this food from the leaves down to the trunk and the roots."],
+        ["The next layer is the sapwood.", "It is full of tiny tubes, like a bundle of drinking straws.", "These tubes carry water from the roots all the way up to the leaves."],
+        ["The heartwood is in the very center of the trunk.", "It is old sapwood that no longer carries water.", "Heartwood is hard and strong.", "It works like a backbone to help hold the tree up.", "Some trees grow so old that their trunks are wider than a car."],
+        ["A tree needs every one of its layers.", "Working together, they help the tree stay healthy and grow a little bigger each year."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tt2a-b-tree-trunk.svg", label: "Figure 1", caption: "A slice of a tree trunk",
+          alt: "Diagram of a slice cut across a tree trunk. Labels name the layers from the outside in: bark, inner bark, sapwood, and heartwood in the center. Thin rings circle the center. A note says: Each ring = 1 year. Count the rings to find the tree's age." }
       ] }
   ],
   practice: [

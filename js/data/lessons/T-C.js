@@ -881,7 +881,7 @@ PP.addLesson({
       answer: "It was written on July 4, 1976. Knowing the date explains why the town had such a big party."
     },
     {
-      show: ["Text box: A park ranger wrote this sign during a very dry summer. It had not rained for weeks.", "Sign: No campfires today. Please help keep the forest safe."],
+      show: ["Box: A park ranger wrote this sign during a very dry summer. It had not rained for weeks.", "Sign: No campfires today. Please help keep the forest safe."],
       ask: "What was the situation, and why did the ranger write this sign?",
       steps: [
         "Read the text box first. It tells the situation: a dry summer with no rain for weeks.",
@@ -891,7 +891,7 @@ PP.addLesson({
       answer: "The situation was a very dry summer. The forest could catch fire easily, so the ranger wrote the sign to stop fires from starting."
     },
     {
-      show: ["Text box: Mr. Banks has been a firefighter for 20 years. He wrote this for a school newsletter.", "Please test your smoke alarm every month. I have seen how fast a fire can spread through a home. A smoke alarm that works gives your family time to get out."],
+      show: ["Box: Mr. Banks has been a firefighter for 20 years. He wrote this for a school newsletter.", "Please test your smoke alarm every month. I have seen how fast a fire can spread through a home. A smoke alarm that works gives your family time to get out."],
       ask: "Who is the writer, and how does knowing that help you understand what he wrote?",
       steps: [
         "Read the text box. It tells who the writer is: a firefighter for 20 years. That is his individual context.",
