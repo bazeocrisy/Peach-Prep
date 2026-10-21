@@ -9,7 +9,11 @@
 
 ## Verdict
 
-GUARD_VERDICT_PLACEHOLDER
+**PASS for function, with 3 low-severity findings (F1 to F3, section 4).**
+- All four gates pass. The full guard gave 110 passed, 0 failed.
+- Every PP-004 behaviour I was asked to reproduce works as claimed: form rotation, Retained behind the flag, the loophole closed, historical progress preserved against main, review only for dated passes, dashboard counts, the speaking card, text boxes and navigation at 4 widths.
+- 14 of 14 fix-log claims I spot-checked are true in the code.
+- The failures are: the parent guide omits the official wording and page on its 41 GUM rows, contrary to PP-004-CONTENT-CORRECTIONS.md (F1); one stale parent-guide sentence (F2); and a stale mastery document (F3).
 
 ## 1. Gates (exact tails)
 
@@ -43,7 +47,12 @@ DOK points: {"1":0,"2":20,"3":2}
 
 `python3 verification/guard.py http://localhost:8507/` (full run):
 ```
-GUARD_TAIL_PLACEHOLDER
+PASS  16.2 U-1: on SK-TC1b-T2 ("How does the text box add to the article?") the accessibility tree has one visible note named "Text box" that starts "Text box: A monarch"
+PASS  16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390
+PASS  7.1 no page errors
+PASS  8.1 no sideways scroll at 320/375/390 on any screen
+110 passed, 0 failed
+EXIT=0
 ```
 
 ## 2. Independent reproductions (my own Playwright scripts; not the guard)
