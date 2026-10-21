@@ -260,7 +260,7 @@ PP.addLesson({
   testB: [
     { id: "SK-V3a-TB1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentences and look at the graph. What does dwindled mean?",
-      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "After week 3, the pecans on the trees dwindled."],
+      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "After week 3, the pecans the family picked dwindled."],
       figure: { src: "assets/figures/v3a-b-pecan-graph.svg",
         alt: "Bar graph titled Pecans We Picked in November. The words at the bottom say buckets of pecans. The bars show week 1, 3 buckets; week 2, 6 buckets; week 3, 8 buckets; and week 4, 4 buckets. Week 3 has the longest bar." },
       choices: [

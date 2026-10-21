@@ -305,8 +305,8 @@ PP.addLesson({
       why: "The error is in \"My baby sister has four new tooths.\" Tooth is a special noun, so the plural is teeth." }
   ],
   /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
-     Reworked by rc3fix (docs/audits/work/pp004-rc3fix.md, findings RC3-2/RC3-3): every key target except
-     "deer" (one TB4 row) is a special plural that is not in this lesson's teach, Watch Me, practice or form A.
+     Reworked by rc3fix (docs/audits/work/pp004-rc3fix.md, findings RC3-2/RC3-3): every key target (lead round 5-6: TB4 rows now salmon and bison)
+     is a special plural that is not in this lesson's teach, Watch Me, practice or form A.
      Same code and 7 points as form A; each special noun is used in only one item.
      NEEDS INDEPENDENT REVIEW before it is relied on. */
   testB: [
@@ -343,12 +343,12 @@ PP.addLesson({
       cols: ["Correct", "Needs a fix"],
       rows: [
         { text: "Dad put up two new shelfs in my room.", answer: 1 },
-        { text: "Doctors and nurses work hard to save lives.", answer: 0 },
+        { text: "Two salmon swam up the cold river.", answer: 0 },
         { text: "Three fishermans sat on the dock with their poles.", answer: 1 },
         { text: "Five bison ate grass on the wide prairie.", answer: 0 }
       ],
       clue: "Find the word in each sentence that names more than one. Is it spelled the special way, with no extra -s?",
-      why: "\"Doctors and nurses work hard to save lives.\" and \"Five bison ate grass on the wide prairie.\" are correct: one life, many lives; one bison, five bison. Bison stays the same for one or more. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
+      why: "\"Two salmon swam up the cold river.\" and \"Five bison ate grass on the wide prairie.\" are correct: one salmon, two salmon; one bison, five bison. These nouns stay the same for one or more. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
     { id: "SK-GUM3-2-TB5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One of these sentences has a mistake with a plural noun. Select that sentence.",
       options: [

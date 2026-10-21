@@ -141,6 +141,7 @@ button{font:inherit;color:inherit;}
 .para-body{margin:0;line-height:1.7;}
 .stanza{margin-bottom:14px;}
 .poem-line{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;margin:0;line-height:1.7;}
+.poem-line>.sent{padding-left:1.2em;text-indent:-1.2em;}  /* PP-004: a wrapped poem line gets a hanging indent, so it does not look like a new line */
 .line-no{font-size:.75rem;color:var(--muted);text-align:right;padding-top:4px;}
 .sent{border-radius:4px;transition:background-color .2s;}
 .sent.is-selected{background:#FFE7A8;box-shadow:0 0 0 2px #F2C14E;}

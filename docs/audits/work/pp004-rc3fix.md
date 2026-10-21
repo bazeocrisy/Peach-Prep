@@ -132,3 +132,10 @@ Every set reached full score at both widths, with 0 page errors and 0 horizontal
 - **SHOULD, SK-V3a-TB1.** It was form A's graph item with the nouns changed. It now tests the trend word **dwindled** from the same graph: week 3 has 8 buckets, week 4 has 4. Key: "became fewer". Points and DOK are unchanged. "Dwindled" appears nowhere else on the site.
 - **Not changed:** PT-1-13's "green" row. The cue is weak, and both alternative rows tried earlier cued other PT-1 items (see C2/C3). Recorded in the backlog.
 - **Verification:** check-content passes with 0 failures. Round 6 re-solves these three items blind.
+
+## Lead addendum: fixes from round 6 (pp004-review-C6.md, all PASS)
+- **RC6-1, RC6-2.** SK-GUM3-2-TB4's "save lives" row is replaced by "Two salmon swam up the cold river." (an unchanging plural; "salmon" appears nowhere else in the lesson). This removes the life → lives hint before TB5's wife → wives, and it balances the rule types: unchanging (salmon, bison), f/fe → ves (shelfs, plus calves, elves, loaves, wives elsewhere), and man → men (fishermen, snowmen). The explanation is updated.
+- **Code comment** at L-GUM3.js updated: TB4 now uses salmon and bison, not "deer".
+- **RC6-8.** The SK-V3a-TB1 sentence now reads "After week 3, the pecans the family picked dwindled.", which matches what the graph counts.
+- **RC6-6 (site-wide CSS).** Poem lines now get a hanging indent (`.poem-line>.sent`), so a wrapped line is not mistaken for a new line. Checked at 390 on "Firefly Night".
+- These are small wording changes made after the round-6 review. They were checked by the lead (check-content passes, render checked), not by a further independent blind review, and that is recorded in the final handoff.
