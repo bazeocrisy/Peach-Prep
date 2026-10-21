@@ -432,7 +432,7 @@ PP.addLesson({
       why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." },
     { id: "SK-RA1b-P7", type: "mc", points: 1, dok: 2, passages: ["p5"],
       prompt: "Nia is filling in her notes table from the web page. Which note is the BEST one to write in the Fact box?",
-      stem: ["Nia's notes table", "Question: What do pumpkin plants need to grow well?", "Fact: ________", "Where I found it: Kids Garden Club web page, September 8, 2026"],
+      stem: ["**Nia's notes table**", "**Question:** What do pumpkin plants need to grow well?", "**Fact:** ________", "**Where I found it:** Kids Garden Club web page, September 8, 2026"],
       choices: [
         { text: "The vines need lots of space so they do not crowd.", correct: true },
         { text: "The vines grow best when planted close together." },
@@ -501,7 +501,7 @@ PP.addLesson({
       why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. The distance to the moon is true, but it is not about day and night. The Summer Camp box is an ad, and the star chart box is a link to a different page." },
     { id: "SK-RA1b-T7", type: "mc", points: 1, dok: 2, passages: ["p6"],
       prompt: "Kofi is filling in his notes table from the web page. Which note is the BEST one to write in the Fact box?",
-      stem: ["Kofi's notes table", "Question: Why could astronauts take big, bouncing hops on the moon?", "Fact: ________", "Where I found it: Sky Watchers Club web page, April 14, 2026"],
+      stem: ["**Kofi's notes table**", "**Question:** Why could astronauts take big, bouncing hops on the moon?", "**Fact:** ________", "**Where I found it:** Sky Watchers Club web page, April 14, 2026"],
       choices: [
         { text: "Gravity on the moon is weaker, so people weigh less there.", correct: true },
         { text: "Gravity on the moon is stronger, so people weigh more there." },

@@ -71,14 +71,14 @@ PP.addLesson({
       answer: "It is organized in sequence. It tells the steps of a butterfly's life in order."
     },
     {
-      show: ["Alligators and crocodiles are both reptiles. Both have long tails and sharp teeth. But an alligator's snout is wide and rounded, while a crocodile's snout is long and pointed."],
+      show: ["Rabbits and hares are both furry animals with long ears. Both eat grass and leaves. But baby rabbits are born without fur, while baby hares are born with fur and open eyes."],
       ask: "How is this text organized?",
       steps: [
-        "Count the subjects. The text is about two animals, alligators and crocodiles.",
+        "Count the subjects. The text is about two animals, rabbits and hares.",
         "Look for clue words. Both tells how they are alike. But and while tell how they are different.",
         "A text that tells how two things are alike and different is a compare text."
       ],
-      answer: "It is organized to compare. It tells how alligators and crocodiles are alike and different."
+      answer: "It is organized to compare. It tells how rabbits and hares are alike and different."
     },
     {
       show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is this map."],
@@ -1031,15 +1031,16 @@ PP.addLesson({
 /* ---------- 3.T.SS.2.b Use similes, metaphors and idioms in writing ---------- */
 PP.addLesson({
   code: "3.T.SS.2.b",
-  title: "Use similes, metaphors and idioms in your writing",
+  title: "Use figurative language in your writing: similes, metaphors, idioms and more",
   teach: {
-    big: "You can make your writing come alive with comparisons: a simile with like or as, a metaphor that says one thing is another, or an idiom, as long as it fits what you mean.",
+    big: "You can make your writing come alive with figurative language: a simile with like or as, a metaphor that says one thing is another, an idiom, and more, as long as it fits what you mean.",
     points: [
       "First decide what you want your reader to picture or feel. Is it fast, loud, quiet, happy or scared?",
       "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\"",
       "Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
       "Use an idiom only when its meaning matches. \"A piece of cake\" means easy, so it fits an easy test, not a hard one.",
-      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know."
+      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know.",
+      "Similes, metaphors and idioms are not the only kinds of figurative language. You can also give a thing a person's actions, like \"The wind whispered through the trees.\" Use it only if it fits what you mean."
     ],
     words: [
       { term: "simile", means: "a comparison that uses like or as" },
@@ -1150,7 +1151,7 @@ PP.addLesson({
       clue: "Look for like or as first. Then ask: does the sentence say one thing is another, or is it a saying you cannot read word for word?",
       why: "The wolf and the marching band sentences are similes because they use like or as. \"The puddles were shiny mirrors\" is a metaphor. \"Raining cats and dogs\" is an idiom that means raining very hard." },
     { id: "SK-SS2b-P5", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Mei wants to add this sentence: \"The raindrops tapped on the roof like tiny fingers.\" Where is the best place to add it?",
+      prompt: "Mei wants to add this sentence: \"The raindrops danced and drummed on our roof.\" Where is the best place to add it?",
       choices: [
         { text: "after sentence 4", correct: true },
         { text: "after sentence 1" },
@@ -1158,7 +1159,7 @@ PP.addLesson({
         { text: "after sentence 9" }
       ],
       clue: "The new sentence is about rain falling. Find the sentence where the rain starts.",
-      why: "The answer is after sentence 4. Sentence 4 says, \"Then the rain began,\" so the tapping raindrops come right after it. By sentence 7 the storm is gone, and in sentence 1 the rain has not started." }
+      why: "The answer is after sentence 4. Sentence 4 says, \"Then the rain began,\" so the dancing raindrops come right after it. By sentence 7 the storm is gone, and in sentence 1 the rain has not started. This sentence gives the raindrops a person's actions, dancing and drumming, which is another kind of figurative language." }
   ],
   test: [
     { id: "SK-SS2b-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -1202,11 +1203,11 @@ PP.addLesson({
       ],
       clue: "The new sentence is about the stage lights. Find where Andre is on the stage, and look for a sentence that the bright lights would help explain.",
       why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5. Only after sentence 5 does the bright light explain sentence 6, where Andre can hardly see the crowd. In the other places, the lights would not explain anything nearby." },
-    { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
-      prompt: "Andre wants to revise sentence 11 with a simile that shows how proud he felt. Choose the simile that fits best.",
+    { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Andre wants to replace sentence 11 with a simile that shows the same feeling. Choose the simile that fits best.",
       text: "I felt {0}.",
-      slots: [{ options: ["as proud as a peacock", "as busy as a bee", "as quiet as a mouse"], answer: 0 }],
-      clue: "Andre wants to show one feeling. Which simile names that feeling?",
-      why: "The answer is as proud as a peacock. A peacock spreads its bright feathers as if it is showing off, so this simile means very proud. Busy and quiet do not match how Andre felt." }
+      slots: [{ options: ["puffed up like a peacock", "as busy as a bee", "as quiet as a mouse"], answer: 0 }],
+      clue: "Reread sentence 11 to name Andre's feeling. Then think about what each animal is known for.",
+      why: "The answer is puffed up like a peacock. A peacock puffs up and spreads its bright feathers as if it is showing off, so this simile shows the proud feeling in sentence 11. A busy bee shows working hard, and a quiet mouse shows being shy or silent. Neither matches how Andre felt after the cheering." }
   ]
 });
