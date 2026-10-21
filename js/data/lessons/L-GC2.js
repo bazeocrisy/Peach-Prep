@@ -309,13 +309,17 @@ PP.addLesson({
         ["(8) Next, Dad bought a jar of honey from a beekeeper.", "(9) The beekeeper shows us a picture of her hives."],
         ["(10) Sometimes it rains on Saturday.", "(11) We go to the market anyway.", "(12) We always come home with something good to eat."]
       ] },
-    /* PP-004 fixture: used only by testB (form B of the skill check). Needs independent review. */
-    { id: "p3", title: "Our Class Garden", byline: "Mateo's draft", genre: "Student draft (narrative)", draft: true,
+    /* PP-004 form B passage: used only by testB. Revised by reviewfix4 after review C (form B):
+       a present-tense draft (form A's p2 is present too; practice p1 is past), with the one tense
+       slip inside a complex sentence (5). Sentence types: (1)-(4) simple, (5) complex with the
+       SLIP (hopped), (6) simple, (7) simple, (8) simple, (9) simple, (10) simple, (11) simple,
+       (12) simple, (13) complex. Needs independent review. */
+    { id: "p3", title: "Field Day", byline: "Nia's draft", genre: "Student draft (narrative)", draft: true,
       paragraphs: [
-        ["(1) Last spring, our class planted a garden behind the school.", "(2) Ms. Lee gave each of us a small shovel."],
-        ["(3) First, we dug long rows in the soft dirt.", "(4) Then we drop the seeds into the rows.", "(5) We covered them with dirt and patted it down."],
-        ["(6) The seeds needed water.", "(7) We filled a watering can every day.", "(8) After two weeks, tiny green sprouts poked up out of the ground."],
-        ["(9) One morning, a rabbit got into the garden.", "(10) It ate some of the lettuce.", "(11) We built a little fence around the beds.", "(12) By June, we picked beans, carrots and tomatoes to share with our families."]
+        ["(1) Every May, our school has a field day on the big grassy field.", "(2) Each class wears a different color of T-shirt.", "(3) Our class always picks bright green."],
+        ["(4) The morning starts with the sack race.", "(5) When the coach blows her whistle, everyone hopped toward the finish line.", "(6) Most of us fall down at least once.", "(7) We laugh and climb back into our sacks."],
+        ["(8) The tug-of-war is my favorite game.", "(9) The other teams are bigger than ours.", "(10) We win the tug-of-war almost every year."],
+        ["(11) The afternoon gets very hot.", "(12) The teachers set up a water sprinkler.", "(13) We run through it until the last bell rings."]
       ] }
   ],
   practice: [
@@ -422,47 +426,47 @@ PP.addLesson({
      see docs/audits/work/pp004-forms.md. */
   testB: [
     { id: "SK-GC2b-TB1", type: "hottext", points: 1, dok: 2, passages: ["p3"],
-      prompt: "One sentence in Mateo's draft uses a verb that does not fit the time of the rest of the draft. Select that sentence.",
-      targets: ["p3:1:2", "p3:2:1", "p3:2:2", "p3:3:2", "p3:4:3"],
+      prompt: "One sentence in Nia's draft has a verb that does not fit the time of the rest of the draft. Select that sentence.",
+      targets: ["p3:1:2", "p3:2:2", "p3:2:4", "p3:3:1", "p3:4:3"],
       answer: ["p3:2:2"], pick: 1,
-      clue: "Find a time clue at the start of the draft. Then check the verb in each sentence. Which one tells a different time?",
-      why: "The answer is sentence 4, \"Then we drop the seeds into the rows.\" The garden was planted last spring, so the draft is in the past tense: planted, gave, dug, covered. Drop should be dropped." },
+      clue: "Nia tells about something that happens every year. Which tense is most of the draft in? Check every verb, even in the long sentences.",
+      why: "The answer is sentence 5, \"When the coach blows her whistle, everyone hopped toward the finish line.\" Field day happens every May, so the draft is in the present tense: has, wears, starts, fall, laugh. Blows is present, but hopped is past, so the tense slips in the middle of the sentence. Hopped should be hops." },
     { id: "SK-GC2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
-      prompt: "What is the best way to combine sentences 6 and 7?",
+      prompt: "What is the best way to combine sentences 11 and 12?",
       choices: [
-        { text: "The seeds needed water, so we filled a watering can every day.", correct: true },
-        { text: "The seeds needed water, but we filled a watering can every day." },
-        { text: "The seeds needed water we filled a watering can every day." },
-        { text: "The seeds needed water, so we fill a watering can every day." }
+        { text: "Because the afternoon gets very hot, the teachers set up a water sprinkler.", correct: true },
+        { text: "Because the teachers set up a water sprinkler, the afternoon gets very hot." },
+        { text: "The afternoon gets very hot, but the teachers set up a water sprinkler." },
+        { text: "Because the afternoon got very hot, the teachers set up a water sprinkler." }
       ],
-      clue: "Ask how the two ideas go together. Then check the punctuation and make sure both verbs stay in the same time as the draft.",
-      why: "The answer is \"The seeds needed water, so we filled a watering can every day.\" The seeds needing water is the reason the class filled the can, so the word so fits. But would mean the second idea is a surprise. One choice has no comma and joining word, so it is a run-on. The fill choice switches to the present tense." },
+      clue: "Which idea is the reason, and which one happens because of it? Then check that the verbs stay in the same time as the rest of the draft.",
+      why: "The answer is \"Because the afternoon gets very hot, the teachers set up a water sprinkler.\" The heat is the reason for the sprinkler, so because goes with the heat. The choice that puts because with the sprinkler turns the idea around: a sprinkler does not make the day hot. But would mean the sprinkler is a surprise. The got choice slips into the past tense." },
     { id: "SK-GC2b-TB3", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
-      prompt: "Mateo wants to join sentences 10 and 11. Choose the word that best completes the new sentence.",
-      text: "{0} the rabbit ate some of the lettuce, we built a little fence around the beds.",
-      slots: [{ options: ["After", "Before", "Unless"], answer: 0 }],
-      clue: "Which happened first: the rabbit eating the lettuce, or the class building the fence?",
-      why: "The answer is After: \"After the rabbit ate some of the lettuce, we built a little fence around the beds.\" The rabbit ate first, and then the class built the fence. Before would put the fence first, and Unless would mean the fence was built only if the rabbit did not eat." },
+      prompt: "Nia wants to join sentences 9 and 10. Choose the word that best completes the new sentence.",
+      text: "{0} the other teams are bigger than ours, we win the tug-of-war almost every year.",
+      slots: [{ options: ["Although", "Because", "Unless"], answer: 0 }],
+      clue: "Would you expect a smaller team to win? Does the second idea go along with the first, or against it?",
+      why: "The answer is Although: \"Although the other teams are bigger than ours, we win the tug-of-war almost every year.\" You would expect the bigger teams to win, so Nia's team winning goes against what you expect. Although shows that kind of surprise. Because would mean the other teams being bigger makes Nia's team win. Unless would mean her team wins only when the other teams are not bigger." },
     { id: "SK-GC2b-TB4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Does the verb tense stay the same in each sentence, or does it shift? Match each sentence.",
-      cols: ["Tense stays the same", "Tense shifts"],
+      prompt: "Is each sentence correct, or does the tense shift by mistake? Match each sentence.",
+      cols: ["Correct", "Tense shifts by mistake"],
       rows: [
-        { text: "The puppy barked, and the cat ran under the bed.", answer: 0 },
-        { text: "Jada picks up her pencil and wrote her name.", answer: 1 },
-        { text: "Every Sunday, Mom bakes bread, and we eat it warm.", answer: 0 },
-        { text: "Yesterday, the wind blows hard and knocked over our trash can.", answer: 1 }
+        { text: "The hen laid an egg, and Sam carried it inside.", answer: 0 },
+        { text: "Every night, the owl hoots while we slept.", answer: 1 },
+        { text: "Last year, Ana was in second grade, but now she is in third grade.", answer: 0 },
+        { text: "After Grandpa told us a story, he tucks us into bed.", answer: 1 }
       ],
-      clue: "Find every verb in the sentence. Do they all tell about the past, or all about now?",
-      why: "\"The puppy barked, and the cat ran under the bed.\" stays in the past. \"Every Sunday, Mom bakes bread, and we eat it warm.\" stays in the present. \"Jada picks up her pencil and wrote her name.\" shifts from present to past. \"Yesterday, the wind blows hard and knocked over our trash can.\" shifts too; blows should be blew." },
+      clue: "Find every verb. If the tense changes, look for a time word that shows the time really changed. A change with no new time is a mistake.",
+      why: "\"The hen laid an egg, and Sam carried it inside.\" stays in the past. \"Last year, Ana was in second grade, but now she is in third grade.\" changes tense, but that is correct: last year goes with was, and now goes with is. \"Every night, the owl hoots while we slept.\" shifts by mistake; slept should be sleep. \"After Grandpa told us a story, he tucks us into bed.\" shifts by mistake too; tucks should be tucked." },
     { id: "SK-GC2b-TB5", type: "dropdown", points: 2, dok: 2, passages: [],
-      prompt: "Choose the verbs that keep the tense the same.",
-      text: "Last night, Ben {0} his teeth, and then he {1} into bed.",
+      prompt: "Choose the verbs that keep the tense the same and fit the sentence.",
+      text: "Every spring, when the creek {0}, the ducks {1} back to our yard.",
       slots: [
-        { options: ["brushes", "brushed", "brush"], answer: 1 },
-        { options: ["climbed", "climbs", "climb"], answer: 0 }
+        { options: ["rose", "rises", "rise"], answer: 1 },
+        { options: ["come", "came", "comes"], answer: 0 }
       ],
-      clue: "Find the time words at the start of the sentence. Then pick verbs that both tell about that time.",
-      why: "The answers are brushed and climbed. Last night tells you this already happened, so both verbs must be past tense. Brushes and climbs are present tense. Brush and climb are present-tense forms too, and they do not go with Ben or he." }
+      clue: "Every spring tells you how often this happens. Which tense goes with that? Then check that each verb fits its subject: one creek, many ducks.",
+      why: "The answers are rises and come. Every spring tells you this happens again and again, so both verbs are present tense. Rose and came are past tense. Rise does not go with one creek, and comes does not go with more than one duck." }
   ]
 });
 

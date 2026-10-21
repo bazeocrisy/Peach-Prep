@@ -286,7 +286,7 @@ PP.addLesson({
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What is paragraph 5 mostly about?",
         choices: [
-          { text: "The hard wood in the center helps hold the tree up.", correct: true },
+          { text: "The center of the trunk is strong and gives the tree support.", correct: true },
           { text: "The wood in the center carries water to the leaves." },
           { text: "The bark protects the soft wood in the center." },
           { text: "The wood in the center is the newest wood in the tree." }
@@ -299,7 +299,7 @@ PP.addLesson({
           { text: "\"It keeps out insects and germs that could make the tree sick.\"" }
         ] },
       clue: "Read paragraph 5 by itself. Ask what job the center wood does for the tree. Then find the sentence that tells that job.",
-      why: "Part A: The hard wood in the center helps hold the tree up. Part B: \"It works like a backbone to help hold the tree up.\" A backbone holds a body up, and the heartwood does the same for a tree. Paragraph 5 says this wood is old, hard and strong, and that it no longer carries water, so the water and newest-wood choices are wrong. The sentence about old sapwood is true, but it tells what the heartwood does not do, not the job it does. The bark sentences are from paragraph 2." },
+      why: "Part A: The center of the trunk is strong and gives the tree support. Part B: \"It works like a backbone to help hold the tree up.\" A backbone supports a body and holds it up, and the heartwood does the same for a tree. Paragraph 5 says this wood is old, hard and strong, and that it no longer carries water, so the water and newest-wood choices are wrong. The sentence about old sapwood is true, but it tells what the heartwood does not do, not the job it does. The bark sentences are from paragraph 2." },
     { id: "SK-TT2a-TB3", type: "ms", points: 2, dok: 2, passages: ["p3"], pick: 2,
       prompt: "Which two details tell how a tree trunk moves food and water through the tree? Choose two answers.",
       choices: [

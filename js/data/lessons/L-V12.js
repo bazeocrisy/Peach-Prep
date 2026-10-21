@@ -635,18 +635,18 @@ PP.addLesson({
       why: "Part A: to heat ahead of time. Pre- means before, so preheat means to heat before, or ahead of time. The oven is hot before the muffins go in. Part B: preschool. Take away pre- and school is left, so preschool is the school children go to before kindergarten. In pretty and press, the letters left over are not words, so they have no prefix. Un- in unpack means the opposite of." },
     { id: "SK-V2a-TB4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "What does the prefix or suffix in each word mean? Match each word to that meaning.",
-      cols: ["without", "again", "full of", "in a ___ way"],
+      cols: ["the opposite of", "a person who", "more", "in a ___ way"],
       rows: [
-        { text: "fearless", answer: 0 },
-        { text: "repaint", answer: 1 },
-        { text: "joyful", answer: 2 },
-        { text: "loudly", answer: 3 }
+        { text: "disagree", answer: 0 },
+        { text: "builder", answer: 1 },
+        { text: "colder", answer: 2 },
+        { text: "slowly", answer: 3 }
       ],
-      clue: "Find the base word in each one and cover it. Look at the part that is left. Is it at the front or the end, and what does it mean?",
-      why: "-less in fearless means without (without fear). Re- in repaint means again (paint again). -ful in joyful means full of (full of joy). -ly in loudly means in a ___ way (in a loud way)." },
+      clue: "Find the base word in each one and cover it. Look at the part that is left. Two words end in -er, so check the base word: is it an action or a describing word?",
+      why: "Dis- in disagree means the opposite of (the opposite of agree). Build is an action, so -er in builder means a person who (a person who builds). Cold is a describing word, so -er in colder means more (more cold). -ly in slowly means in a ___ way (in a slow way)." },
     { id: "SK-V2a-TB5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. Use the root in erupt to figure out what it means.",
-      stem: ["When the volcano began to erupt, hot melted rock burst out through a crack in its side."],
+      stem: ["When the volcano began to erupt, hot melted rock poured down its sides."],
       choices: [
         { text: "to break open and burst out", correct: true },
         { text: "to carry rocks far away" },
@@ -654,7 +654,7 @@ PP.addLesson({
         { text: "to look down at the land" }
       ],
       clue: "Find the root in erupt. What does that root mean? Then check your answer with what the melted rock did in the sentence.",
-      why: "The answer is \"to break open and burst out.\" The root rupt means break, so erupt means to break out. The melted rock burst out through a crack, just like the word says. Carry would be port, sound would be phon, and look would be spect." }
+      why: "The answer is \"to break open and burst out.\" The root rupt means break, and e- means out, so erupt means to break out. The volcano breaks open, and the hot melted rock comes out and pours down its sides. Carry would be port, sound would be phon, and look would be spect." }
   ]
 });
 
