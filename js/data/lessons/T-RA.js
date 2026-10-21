@@ -486,7 +486,30 @@ PP.addLesson({
         { text: "Mr. Okafor talked to the class at the science center." }
       ],
       clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from Source 2 and tell more about the same thing.",
-      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from Source 1, not Source 2, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." }
+      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from Source 1, not Source 2, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." },
+    { id: "SK-RA1b-T6", type: "match", points: 2, dok: 2, passages: ["p6"],
+      prompt: "Kofi's next research question is \"What are day and night like on the moon?\" Does each part of the web page help answer his question? Match each one.",
+      cols: ["Helps answer the question", "Does not help"],
+      rows: [
+        { text: "Daytime on the moon lasts about two weeks.", answer: 0 },
+        { text: "The moon is about 239,000 miles from Earth.", answer: 1 },
+        { text: "At night, it gets colder than any place on Earth.", answer: 0 },
+        { text: "Sign up for Summer Camp today!", answer: 1 },
+        { text: "More on this site: Make Your Own Star Chart", answer: 1 }
+      ],
+      clue: "Keep Kofi's question in mind. A part helps only if it tells about day or night on the moon. True facts about other things do not help.",
+      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. How far away the moon is, is true, but it is not about day and night. The Summer Camp box is an ad, and the star chart box is a link to a different page." },
+    { id: "SK-RA1b-T7", type: "mc", points: 1, dok: 2, passages: ["p6"],
+      prompt: "Kofi is filling in his notes table from the web page. Which note is the BEST one to write in the Fact box?",
+      stem: ["Kofi's notes table", "Question: Why could astronauts take big, bouncing hops on the moon?", "Fact: ________", "Where I found it: Sky Watchers Club web page, April 14, 2026"],
+      choices: [
+        { text: "Gravity on the moon is weaker, so people weigh less there.", correct: true },
+        { text: "Gravity on the moon is stronger, so people weigh more there." },
+        { text: "The ground gets hotter than boiling water in the daytime." },
+        { text: "A car would need more than five months to drive there." }
+      ],
+      clue: "Ask two things about each note. Does it say the same thing as the web page? Does it help answer Kofi's question?",
+      why: "The answer is \"Gravity on the moon is weaker, so people weigh less there.\" The Light on Your Feet section says the moon's pull is much weaker, so a person weighs much less, and that is why astronauts could take big hops. The note that says stronger gets the fact wrong. The hot ground and the long car trip are true, but they do not explain the hops." }
   ]
 });
 
