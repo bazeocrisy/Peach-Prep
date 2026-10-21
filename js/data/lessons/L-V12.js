@@ -62,7 +62,8 @@ PP.addLesson({
         ["Along the coast of Georgia, there are wide, flat salt marshes.", "A salt marsh is wet, grassy land where the ocean meets the land.", "Twice a day, the tide comes in and covers the marsh with salty water.", "Then the tide goes out again."],
         ["The salt marsh is a habitat for many animals.", "A habitat is the place where an animal finds the food, water and shelter it needs.", "Fiddler crabs dig small holes in the mud.", "They hide in their burrows when the water rises."],
         ["Some animals in the marsh are predators.", "They hunt other animals for food.", "A tall heron stands very still in the shallow water.", "The water is so low that it barely covers the bird's feet.", "When a fish swims by, the heron grabs it with its sharp beak."],
-        ["Marsh grass has a special way to survive in salty water.", "It gets rid of extra salt through its leaves.", "Sometimes you can see tiny white bits of salt on the grass."]
+        ["Marsh grass has a special way to survive in salty water.", "It gets rid of extra salt through its leaves.", "Sometimes you can see tiny white bits of salt on the grass."],
+        ["Scientists compare the marsh in summer and in winter.", "They look for what stays the same and what is different.", "The grass is green and tall in summer, but it turns brown in winter."]
       ] },
     { id: "p2", title: "Where Does Rain Come From?", genre: "Informational text",
       paragraphs: [
@@ -70,7 +71,8 @@ PP.addLesson({
         ["First, the sun warms water in oceans, lakes and puddles.", "The water turns into a gas called water vapor and rises into the air.", "This change is called evaporation.", "You cannot see water vapor, but it is all around you."],
         ["High in the sky, the air is cold.", "The cold air cools the water vapor, and it turns back into tiny drops of water.", "This change is called condensation.", "Many of these tiny drops crowd together to make a cloud."],
         ["When the drops in a cloud join and get too heavy, they fall to the ground.", "Water that falls from clouds is called precipitation.", "Rain, snow, sleet and hail are all kinds of precipitation."],
-        ["Some of the water soaks into the ground.", "Much of it flows into rivers, lakes and oceans.", "Then the cycle begins again."]
+        ["Some of the water soaks into the ground.", "Much of it flows into rivers, lakes and oceans.", "Then the cycle begins again."],
+        ["Weather scientists study clouds and wind every day.", "This helps them predict rain.", "They can tell us a day or two ahead that a storm is coming, so we know to bring an umbrella."]
       ] }
   ],
   practice: [
@@ -118,16 +120,16 @@ PP.addLesson({
       ],
       clue: "Salty water can be hard on a plant. Read the next sentence to see what the grass does about the salt, and why that would help it.",
       why: "The answer is \"to stay alive.\" Marsh grass gets rid of extra salt so it can keep living in salty water. The white bits are salt on the grass, not the grass turning white." },
-    { id: "SK-V1a-P5", type: "match", points: 2, dok: 2, passages: ["p1"],
-      prompt: "Match each word from the passage to what it means.",
-      cols: ["wet, grassy land by the ocean", "an animal that hunts other animals", "not deep"],
-      rows: [
-        { text: "salt marsh", answer: 0 },
-        { text: "predator", answer: 1 },
-        { text: "shallow", answer: 2 }
+    { id: "SK-V1a-P5", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Read paragraph 5. What does the word compare mean?",
+      choices: [
+        { text: "to look at how things are alike and different", correct: true },
+        { text: "to visit the same place many times" },
+        { text: "to draw a picture of a place" },
+        { text: "to count the animals in a place" }
       ],
-      clue: "Find each word in the passage. Then read the sentence it is in and the sentence right after it.",
-      why: "A salt marsh is wet, grassy land where the ocean meets the land (paragraph 1). A predator hunts other animals for food (paragraph 3). Shallow means not deep: the water barely covers the heron's feet (paragraph 3)." }
+      clue: "Read the sentence right after the one with compare. What do the scientists look for?",
+      why: "The answer is \"to look at how things are alike and different.\" The next sentence says the scientists look for what stays the same and what is different. The scientists do go to the marsh in two seasons, but compare means looking for what is alike and different, not just visiting. Compare is a school word you will use in every subject, not only in science." }
   ],
   test: [
     { id: "SK-V1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -164,16 +166,16 @@ PP.addLesson({
         ] },
       clue: "The sentence that names condensation says this change. Read the sentence right before it to find out what the change is.",
       why: "Part A: water vapor turning back into tiny drops. Part B: \"The cold air cools the water vapor, and it turns back into tiny drops of water.\" The next sentence says, \"This change is called condensation,\" so condensation is that change." },
-    { id: "SK-V1a-T4", type: "match", points: 2, dok: 2, passages: ["p2"],
-      prompt: "Match each word from the passage to what it means.",
-      cols: ["water in the form of a gas", "something that happens again and again in a circle", "many tiny drops of water crowded together"],
-      rows: [
-        { text: "water vapor", answer: 0 },
-        { text: "cycle", answer: 1 },
-        { text: "cloud", answer: 2 }
+    { id: "SK-V1a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Read paragraph 6. What does the word predict mean?",
+      choices: [
+        { text: "to tell what will happen before it happens", correct: true },
+        { text: "to measure how much rain has fallen" },
+        { text: "to make a storm go away" },
+        { text: "to name the different kinds of clouds" }
       ],
-      clue: "Find each word in the passage. Read the sentence it is in, and look for the words called or make.",
-      why: "Water vapor is water that has turned into a gas (paragraph 2). The water cycle is a big circle, and the same water is used again and again (paragraph 1). A cloud is made of many tiny drops crowded together (paragraph 3)." },
+      clue: "Read the sentence after the one with predict. When do the scientists tell us about the storm?",
+      why: "The answer is \"to tell what will happen before it happens.\" The next sentence says the scientists tell us a day or two ahead that a storm is coming. Telling ahead of time is what predict means. They do not measure rain that already fell, and they cannot stop a storm. Predict is a school word you can use in reading, science and math." },
     { id: "SK-V1a-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the paragraph. What does the word observe mean?",
       stem: ["Our class will observe the bean plant every morning. We will look closely at its leaves and stem. Then we will write down any changes we see in our science notebooks."],

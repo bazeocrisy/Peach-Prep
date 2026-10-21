@@ -311,7 +311,7 @@ PP.addSet({
         { text: "Malik thinks Mrs. Greene will be angry about the chip, but Aunt Bea knows she will not care." }
       ],
       clue: "Find what Malik is afraid of in paragraph 6. Then read what Aunt Bea says and does after Malik tells her what happened. Compare the two.",
-      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. In paragraph 11, Aunt Bea thanks him for telling her and says, \"A chipped pitcher is a small problem, but broken trust is a much bigger one.\" Malik does think the chip matters, or he would not hide it, and Aunt Bea calls the chip a small problem. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
+      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. In paragraph 11, Aunt Bea thanks him for telling her, and she says the chip matters much less to her than being able to trust him. Malik does think the chip matters, or he would not hide it, and Aunt Bea calls the chip a small problem. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
     },
     {
       id: "PT-1-7",
@@ -440,19 +440,19 @@ PP.addSet({
       dok: 2,
       prompt: "Read each cause from the article. Choose the effect that goes with it. Use each effect once.",
       cols: [
-        "Hidden yellow and orange colors can be seen.",
+        "The tree slows down its food making.",
         "The soil gets nutrients for new plants.",
         "The leaf looks green.",
         "A gentle breeze can knock the leaf loose."
       ],
       rows: [
         { text: "A leaf has a lot of green chlorophyll inside it.", answer: 2 },
-        { text: "The green chlorophyll in a leaf breaks down.", answer: 0 },
+        { text: "In the fall, the days get shorter and there is less sunlight.", answer: 0 },
         { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 },
         { text: "Fallen leaves slowly break down on the ground.", answer: 1 }
       ],
       clue: "A cause makes something happen. Find each cause in the article. Then read on to find what it makes happen.",
-      why: "Chlorophyll is green, so a leaf full of it looks green. When the green chlorophyll breaks down, the hidden yellow and orange colors can be seen. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
+      why: "Chlorophyll is green, so a leaf full of it looks green. When the days get shorter, there is less sunlight, so the tree slows down its food making. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
     },
     {
       id: "PT-1-14",

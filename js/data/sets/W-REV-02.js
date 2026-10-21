@@ -150,7 +150,7 @@ PP.addSet({
       type: "mc",
       points: 1,
       std: ["3.T.T.1.e"],
-      dok: 3,
+      dok: 2,
       prompt: "Sentence 10 is a weak ending. Which sentence should replace sentence 10 to give the story a better ending?",
       choices: [
         { text: "Lena grinned as it peeked out of the round door, and she was glad she had not given up.", correct: true },
