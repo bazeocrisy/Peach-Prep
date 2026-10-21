@@ -910,6 +910,45 @@ with sync_playwright() as p:
        and res6["PP-003 dev=False"] == [True, True, "mastered", tB, "review"] and res6["PP-003 dev=True"] == [True, True, "mastered", tB, "review"], res6)
     q.close()
 
+    # ---------- 15. PP-004: "Say it out loud (with a grown-up)" practice card (L.speak, SPEC §8b) ----------
+    K15 = "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"; j15 = json.dumps(K15)
+    q = page12(1366, 900, False)
+    goto12(q)
+    seed14(q, None)
+    SPK = ("(()=>{const c=document.querySelector('#sk-panel .speak-card');return c?{text:c.textContent,boxes:c.querySelectorAll('input[type=checkbox]').length,"
+           "labelled:[...c.querySelectorAll('input[type=checkbox]')].every(i=>{const l=c.querySelector('label[for=\"'+i.id+'\"]');return !!l&&l.textContent.length>10;}),"
+           "checked:[...c.querySelectorAll('input[type=checkbox]')].map(i=>i.checked)}:null;})()")
+    q.evaluate("PP_SKILLS.open(%s,'practice')" % j15); q.wait_for_timeout(60); onP = q.evaluate(SPK)
+    q.evaluate("PP_SKILLS.open(%s,'try')" % j15); q.wait_for_timeout(60); onY = q.evaluate(SPK)
+    st0 = q.evaluate(P14)
+    ok("15.1 GUM1-1 shows the speaking card on Try It Yourself (not on Practice Together), with 3 labelled checkboxes and the honest label; rendering writes nothing",
+       onP is None and onY and onY["boxes"] == 3 and onY["labelled"] and "Say it out loud (with a grown-up)" in onY["text"]
+       and "Practice with a grown-up. This is not part of the skill check." in onY["text"] and st0 is None, (onP, onY, st0))
+    q.focus("#sk-panel .speak-card input[type=checkbox]"); q.keyboard.press("Space"); q.wait_for_timeout(40)
+    r1 = (q.evaluate(P14) or {}).get(K15, {})
+    s1 = [q.evaluate("PP_SKILLS.status(%s)" % j15), q.evaluate("PP_SKILLS.displayState(%s).id" % j15)]
+    seed14(q, q.evaluate(P14)); q.evaluate("PP_SKILLS.open(%s,'try')" % j15); q.wait_for_timeout(60); again = q.evaluate(SPK)
+    ok("15.2 ticking with the keyboard stores only speakChecks {ticks, d}; status stays Not started; the tick is shown again after a reload",
+       sorted(r1) == ["speakChecks"] and r1["speakChecks"] == {"ticks": [True, False, False], "d": T14} and s1 == ["new", "new"]
+       and again and again["checked"] == [True, False, False], (r1, s1, again))
+    pass15 = {K15: {"tries": 1, "best": {"got": 6, "max": 6}, "bestMax": 6, "mastered": True, "passedAt": d3, "passTry": 1, "passBy": "test", "lastPassAt": d3,
+                    "attempts": [{"d": d3, "got": 6, "max": 6, "ok": True, "n": 1, "afterAnswers": False, "form": "A"}]}}
+    seed14(q, pass15); q.evaluate("PP_SKILLS.open(%s,'try')" % j15); q.wait_for_timeout(60)
+    stb = [q.evaluate("PP_SKILLS.status(%s)" % j15), q.evaluate("PP_SKILLS.displayState(%s).id" % j15), q.evaluate("PP_SKILLS.passKind(%s)" % j15)]
+    q.evaluate("document.querySelectorAll('#sk-panel .speak-card input[type=checkbox]').forEach(i=>i.click())"); q.wait_for_timeout(40)
+    r3 = q.evaluate(P14)[K15]
+    sta = [q.evaluate("PP_SKILLS.status(%s)" % j15), q.evaluate("PP_SKILLS.displayState(%s).id" % j15), q.evaluate("PP_SKILLS.passKind(%s)" % j15)]
+    ok("15.3 on a passed skill, ticking every line changes nothing but speakChecks: mastered, passBy and status are unchanged",
+       {k: v for k, v in r3.items() if k != "speakChecks"} == pass15[K15] and r3["speakChecks"]["ticks"] == [True, True, True] and stb == sta == ["mastered", "passed", "test"], (r3, stb, sta))
+    none15 = []
+    for k_ in ("3.L.GC.2.b", "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-", "3.F.F.1.b"):
+        for st in ("practice", "try", "test"):
+            q.evaluate("PP_SKILLS.open(%s,'%s')" % (json.dumps(k_), st)); q.wait_for_timeout(30)
+            if q.evaluate("!!document.querySelector('#sk-panel .speak-card')"): none15.append((k_, st))
+    ok("15.4 lessons without speaking data show no speaking card on any step", not none15, none15)
+    q.evaluate("localStorage.clear()")
+    q.close()
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------

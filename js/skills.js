@@ -761,6 +761,7 @@
       button: r.practiced ? "Practice again" : "Start practice", id: "sk-start-practice", mode: "practice" }));
     if (L.activity) renderActivity(host, L);
     if (L.write && !PP.byId["SK:" + K + ":y"]) renderWrite(host, L);
+    if (hasSpeak(L) && !PP.byId["SK:" + K + ":y"]) renderSpeak(host, L);
     host.appendChild(nextBtn());
   }
 
@@ -774,7 +775,42 @@
       done: r.tried ? "✓ Finished. Next: the skill check." : "",
       button: r.tried ? "Try again" : "Start", id: "sk-start-try", mode: "try" }));
     if (L.write) renderWrite(host, L);
+    if (hasSpeak(L)) renderSpeak(host, L);
     host.appendChild(nextBtn());
+  }
+
+  /* PP-004: "Say it out loud (with a grown-up)". For a speaking row on a lesson that
+     also has a scored check (L.speak = { intro, items }). Practice only: ticks are kept
+     ONLY in prog[k].speakChecks = { ticks: [true|false, ...], d: "YYYY-MM-DD" } (a new
+     field). It never sets mastered, passBy, taught, practiced or any other field, and
+     status(), rings and counts never read it. Rendering never writes. */
+  function hasSpeak(L) { return !!(L.speak && (L.speak.items || []).length && PP.byId["SK:" + keyOf(L) + ":t"]); }
+  function renderSpeak(host, L) {
+    const S = L.speak;
+    const card = make("div", "go-card speak-card");
+    card.appendChild(make("h3", "write-h", "Say it out loud (with a grown-up)"));
+    card.appendChild(make("p", "go-note speak-note", "Practice with a grown-up. This is not part of the skill check."));
+    lines(card, S.intro, "");
+    const saved = () => { const r = prog[cur]; return r && r.speakChecks && Array.isArray(r.speakChecks.ticks) ? r.speakChecks.ticks : []; };
+    const ul = make("ul", "write-checklist speak-list");
+    const id = "sks-" + keyOf(L).replace(/[^a-z0-9]/gi, "-");
+    S.items.forEach((c, i) => {
+      const li = make("li");
+      const cb = make("input"); cb.type = "checkbox"; cb.id = id + "-" + i; cb.checked = !!saved()[i];
+      cb.addEventListener("change", () => {
+        const r = rec(cur);
+        const sc = r.speakChecks && typeof r.speakChecks === "object" && Array.isArray(r.speakChecks.ticks) ? r.speakChecks : { ticks: [] };
+        sc.ticks[i] = cb.checked;
+        for (let j = 0; j < S.items.length; j++) sc.ticks[j] = !!sc.ticks[j];
+        sc.d = today();
+        r.speakChecks = sc; save();
+      });
+      const lb = make("label", "", c); lb.htmlFor = cb.id;
+      li.appendChild(cb); li.appendChild(lb); ul.appendChild(li);
+    });
+    card.appendChild(ul);
+    card.appendChild(make("p", "note", "These ticks stay on this device. They do not change the skill check or what the site shows as passed."));
+    host.appendChild(card);
   }
 
   /* A short writing activity (writing standards). The draft is kept on this

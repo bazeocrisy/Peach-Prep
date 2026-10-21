@@ -1007,7 +1007,7 @@ PP.addLesson({
         ["Elephants live in Africa and Asia.", "Everyone knows elephants eat more than any other animal ever!"],
         ["They have long trunks.", "An elephant's trunk has no bones in it.", "Elephants flap their big ears to cool off on hot days."],
         ["An elephant can eat a million pounds of peanuts in one day.", "Elephants live together in family groups.", "A baby elephant is called a calf, and it stays close to its mother."],
-        ["Some elephants have long tusks.", "Their gray skin is thick and wrinkly.", "Many elephants live to be 60 years old or even older.", "They can remember places where they found water long ago."]
+        ["Some elephants have long tusks.", "Their gray skin is thick and wrinkly.", "Some elephants live to be 60 years old or even older.", "They can remember places where they found water long ago."]
       ] }
   ],
   practice: [
@@ -1125,9 +1125,9 @@ PP.addLesson({
           { text: "\"Everyone knows elephants eat more than any other animal ever!\"", correct: true },
           { text: "\"They have long trunks.\"" },
           { text: "\"An elephant can eat a million pounds of peanuts in one day.\"", correct: true },
-          { text: "\"Many elephants live to be 60 years old or even older.\"" }
+          { text: "\"A baby elephant is called a calf, and it stays close to its mother.\"" }
         ] },
       clue: "Read each source's words closely. Does the writer tell how the facts were found out? Do the numbers seem possible, or do they sound made up?",
-      why: "Part A: Source 1, because its facts make sense and tell how people found them out. Part B: \"Everyone knows elephants eat more than any other animal ever!\" and \"An elephant can eat a million pounds of peanuts in one day.\" Source 1 says scientists watched elephants eat, and its numbers can be checked. Source 2 says everyone knows, which does not tell who checked, and a million pounds in one day is far too much to be true. Exciting words and being found first do not make a source trustworthy. The sentences about where elephants live and their trunks are true, so they do not show a problem." }
+      why: "Part A: Source 1, because its facts make sense and tell how people found them out. Part B: \"Everyone knows elephants eat more than any other animal ever!\" and \"An elephant can eat a million pounds of peanuts in one day.\" Source 1 says scientists watched elephants eat, and its numbers can be checked. Source 2 says everyone knows, which does not tell who checked, and a million pounds in one day is far too much to be true. Exciting words and being found first do not make a source trustworthy. The sentences about where elephants live, their trunks and baby elephants are true, so they do not show a problem." }
   ]
 });

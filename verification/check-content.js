@@ -259,6 +259,9 @@ lessons.forEach(L => {
   if (L.activity && ["fluency", "trace"].indexOf(L.activity.kind) < 0) F(S, "unknown activity kind " + L.activity.kind);
   if (L.activity && L.activity.kind === "fluency") (L.activity.passages || []).forEach((P, i) => { const n = wc(P.text); if (n < 180) F(S, "fluency passage " + (i + 1) + " is only " + n + " words (a fast reader needs 180+)"); });
   if (L.check && (!L.check.intro || !(L.check.items || []).length)) F(S, "check needs intro and items");
+  /* PP-004: a practice-only speaking card (SPEC §8b); it is shown only beside a scored check */
+  if (L.speak && (!L.speak.intro || !(L.speak.items || []).length)) F(S, "speak needs intro and items");
+  if (L.speak && !(L.test || []).length) F(S, "speak is shown only on a lesson with a test; use check for a grown-up-checked skill");
   [["practice", 4, 7], ["test", 4, 6]].forEach(([k, lo, hi]) => {
     const list = L[k] || [];
     if (!list.length && ((k === "practice" && L.activity) || (k === "test" && L.check))) return;
