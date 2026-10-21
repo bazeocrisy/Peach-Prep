@@ -10,7 +10,7 @@
 - **Scope:**
   - Architecture and the data model, with Retained behind a flag that is off.
   - Form B exists on 13 lessons: 3.L.GC.2.b, 3.T.T.1.a, 3.T.T.1.c, 3.T.SS.2.a, 3.T.T.4.a, 3.T.T.2.a, 3.T.T.2.b, 3.T.RA.2.a, TS-CE, 3.L.V.3.a, 3.L.V.2.a, GUM irregular plurals and GUM irregular past tense. Each has had at least two independent blind reviews (rounds C1 and C5, with C3, C4 and C6 for revised items). Every other lesson still has one check form. (Updated at the end of PP-004.)
-  - Other agents are writing the content forms.
+  - The form-content and independent-review history is recorded in `docs/audits/work/pp004-formB-*.md` and the C review rounds.
 
 This is not a Georgia Milestones measure. Nothing here maps a Peach Prep result to a GaDOE achievement level (Beginning, Developing, Proficient or Distinguished). The ALDs (October 2025) remain DRAFT.
 
@@ -35,7 +35,7 @@ This is not a Georgia Milestones measure. Nothing here maps a Peach Prep result 
 
 | What | Status |
 |---|---|
-| A lesson can declare `testB`. It builds the set `SK:<key>:tB`. | Done. On one lesson only (fixture). |
+| A lesson can declare `testB`. It builds the set `SK:<key>:tB`. | Done. Present on 13 reviewed lessons (67 form-B items); see the scope above. |
 | Deterministic form selection (`nextForm`, `checkSetId`) | Done |
 | `attempts[].form` (`"A"` / `"B"`), plus `passForm` | Done (new fields only) |
 | Per-form "answers seen" (`answersSeenBy`) on two-form lessons | Done (new field only) |

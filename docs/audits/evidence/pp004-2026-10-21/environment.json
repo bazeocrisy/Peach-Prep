@@ -1,0 +1,7 @@
+{
+  "code_sha": "f1f79791fe7215915821a3fc6d165f131231a143",
+  "playwright": "1.49.1",
+  "chromium": "131.0.6778.0",
+  "guard_source_sha256": "b2e235291d1540bf08807b988fd3a7e0d27da0c62eb5b6a0ecc51d7a16e3bbc5",
+  "application_changed": false
+}

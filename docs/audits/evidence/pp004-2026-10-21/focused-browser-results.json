@@ -1,0 +1,514 @@
+[
+  {
+    "name": "320: parent guide official wording and pages",
+    "pass": true,
+    "detail": {
+      "n": 147,
+      "missing": []
+    }
+  },
+  {
+    "name": "320: alternate forms explained",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.2.c teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.2.c learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.2.c practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.2.c try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.C.2.c test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.RA.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.RA.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.RA.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.RA.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.T.RA.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.L.GC.2.a teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.L.GC.2.a learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.L.GC.2.a practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.L.GC.2.a try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: 3.L.GC.2.a test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: W-TASK-01 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: W-TASK-02 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "390: parent guide official wording and pages",
+    "pass": true,
+    "detail": {
+      "n": 147,
+      "missing": []
+    }
+  },
+  {
+    "name": "390: alternate forms explained",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.2.c teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.2.c learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.2.c practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.2.c try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.C.2.c test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.RA.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.RA.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.RA.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.RA.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.T.RA.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.L.GC.2.a teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.L.GC.2.a learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.L.GC.2.a practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.L.GC.2.a try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: 3.L.GC.2.a test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: W-TASK-01 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: W-TASK-02 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "768: parent guide official wording and pages",
+    "pass": true,
+    "detail": {
+      "n": 147,
+      "missing": []
+    }
+  },
+  {
+    "name": "768: alternate forms explained",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.2.c teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.2.c learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.2.c practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.2.c try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.C.2.c test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.RA.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.RA.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.RA.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.RA.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.T.RA.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.L.GC.2.a teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.L.GC.2.a learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.L.GC.2.a practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.L.GC.2.a try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: 3.L.GC.2.a test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: W-TASK-01 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: W-TASK-02 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "1366: parent guide official wording and pages",
+    "pass": true,
+    "detail": {
+      "n": 147,
+      "missing": []
+    }
+  },
+  {
+    "name": "1366: alternate forms explained",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.2.c teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.2.c learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.2.c practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.2.c try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.C.2.c test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.RA.1.b teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.RA.1.b learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.RA.1.b practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.RA.1.b try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.T.RA.1.b test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.L.GC.2.a teach layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.L.GC.2.a learn layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.L.GC.2.a practice layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.L.GC.2.a try layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: 3.L.GC.2.a test layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: W-TASK-01 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: W-TASK-02 parent score guidance",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: no page errors",
+    "pass": true,
+    "detail": []
+  }
+]

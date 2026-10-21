@@ -1,0 +1,32 @@
+{
+  "records": 147,
+  "wording_matches": 147,
+  "misses": [],
+  "pdf_lettered_grade3_codes": 61,
+  "site_lettered_grade3_codes": 53,
+  "excluded_placeholders": [
+    "3.L.GC.2.e",
+    "3.L.V.2.d",
+    "3.T.C.2.b",
+    "3.T.C.2.d",
+    "3.T.RA.2.c",
+    "3.T.SS.2.c",
+    "3.T.T.3.b",
+    "3.T.T.3.d"
+  ],
+  "extra_grade3_codes": [],
+  "gum_counts": {
+    "R": 18,
+    "M": 8,
+    "C": 4,
+    "I": 11
+  },
+  "source_sha256": {
+    "GM_ALDs_Gr3_ELA(2).pdf": "6517cea89c85d58cef63f2becb75782fc8a87c337a0f1fe3cd3ad496346fd1a1",
+    "GM_ALDs_Gr3_Math(2).pdf": "79486ce47d1f355a2dd1877093c3edaa5b299c73090c79aa700508a64ab32758",
+    "GM_Checklist_Gr3(2).pdf": "ed6464b0131c062cc5c9e6f4305dfeca7f76d035516a4bef04200122a15dae92",
+    "GM_Gr3_ELA_Blueprint(2).pdf": "9071eaa9a182ea949bb4c44270f7f2e3f4275cfdf57a0d8287a9273791c98362",
+    "GM_Online_Study_and_Assessment_Guides_Infographic(2).pdf": "d9d5e7028f992e139d66d474a90bb5bbc5c92e685c60c31d2f0dee337d63756b",
+    "Stamdards.pdf": "011c8eab53e3ad883c764e730a4f40669b0a0ea478b2c39d87cb31c0868e6787"
+  }
+}

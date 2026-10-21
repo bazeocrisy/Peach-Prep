@@ -1,0 +1,247 @@
+[
+  {
+    "path": "docs/audits/PP-003-ASSESSMENT-ALIGNMENT.md",
+    "sha256": "2cfdfa2cf2467d9f56335e4cc03de547661db110042106a5eee28a0bdfd0e823",
+    "lines": 382
+  },
+  {
+    "path": "docs/audits/PP-003-CORRECTIONS-LOG.md",
+    "sha256": "e439b309daa8bb95d146b93b327e747268691c83236d9cefe2d43337a8444bd2",
+    "lines": 94
+  },
+  {
+    "path": "docs/audits/PP-003-MASTERY-MODEL.md",
+    "sha256": "f73b582170d90e7b5b638b66436e510daecc7569d2235a79faea294d91753e88",
+    "lines": 487
+  },
+  {
+    "path": "docs/audits/PP-003-RELEASE-READINESS.md",
+    "sha256": "df1482be7cf2fb2d950e0f3be49ad5dd2fdd67920aea5b99a0e0262edd70c94a",
+    "lines": 132
+  },
+  {
+    "path": "docs/audits/PP-003-REPOSITORY-INVENTORY.md",
+    "sha256": "75ba78211b9b3a2d889e7834b5acd6a27c1f244a720121b71a0527950bfa5e94",
+    "lines": 486
+  },
+  {
+    "path": "docs/audits/PP-003-SOURCE-VERIFICATION.md",
+    "sha256": "7129824d9c5a7c10e22ac218f3ee0c24a32851ecf6306515a05e3d47a53e6aa8",
+    "lines": 228
+  },
+  {
+    "path": "docs/audits/PP-003-STANDARDS-MATRIX.csv",
+    "sha256": "5d55d7a0a0443c8aafa01ab77b422247220f1e6e11d23891bc7cd88892635029",
+    "lines": 148
+  },
+  {
+    "path": "docs/audits/PP-003-STANDARDS-REPORT.md",
+    "sha256": "dfc4bd2d168aadc566bfb202b826d4225b4f3a86a86f9ea089297a79ce257365",
+    "lines": 122
+  },
+  {
+    "path": "docs/audits/PP-003-TEST-RESULTS.md",
+    "sha256": "2ca3d3c1c549926cf4e3ab8ea2c2b6c3888cb6216c9e3cbc2c19c1f38e712dea",
+    "lines": 72
+  },
+  {
+    "path": "docs/audits/PP-003-UX-FUNCTIONAL-AUDIT.md",
+    "sha256": "8ad80d879868c9c740a334381cfc32ce8121d4fe09b144f3c75f0a7b93add9a6",
+    "lines": 241
+  },
+  {
+    "path": "docs/audits/PP-004-CONTENT-CORRECTIONS.md",
+    "sha256": "c40a8e46b290fa364fd41fb9655919e09a2f7b0989399ba4e24d08aca603e8cd",
+    "lines": 88
+  },
+  {
+    "path": "docs/audits/PP-004-FINAL-COVERAGE-MATRIX.csv",
+    "sha256": "b71f247fab4e095631008bf99ccf151104f926052d9801cb91005792b8f692a3",
+    "lines": 148
+  },
+  {
+    "path": "docs/audits/PP-004-FOUNDATIONS-REVIEW.md",
+    "sha256": "fe52be6ba41bd4bc2fc59cc818f158add589411590b9ca0a9978117ca9efe485",
+    "lines": 122
+  },
+  {
+    "path": "docs/audits/PP-004-GUM-CHART-VERIFICATION.md",
+    "sha256": "e2bb2d16f59dd0f1e7aef6a94dc66ed831b03b3274b8c8d2f2e521bc07471fa1",
+    "lines": 134
+  },
+  {
+    "path": "docs/audits/PP-004-MASTERY-RECOMMENDATIONS.md",
+    "sha256": "ccc96d3b12a23f44390c9a73648e55311613cf1427d72e59cdb91953cf8e6189",
+    "lines": 244
+  },
+  {
+    "path": "docs/audits/PP-004-OFFICIAL-STANDARDS-VERIFICATION.md",
+    "sha256": "75e89012ec09da9a755726c8741a2ea29b69215529a5f456e9b94013f3b24f4f",
+    "lines": 221
+  },
+  {
+    "path": "docs/audits/PP-004-UX-ACCESSIBILITY.md",
+    "sha256": "cf8a03795d6802de114528872d41500e403a2f7eb3c1493ff344e891234b2282",
+    "lines": 337
+  },
+  {
+    "path": "docs/audits/PP-004-WRITING-REVIEW.md",
+    "sha256": "d29bc06745f8e104cccd134de597190eb4da1a4100569468582f29c97790f750",
+    "lines": 107
+  },
+  {
+    "path": "docs/audits/work/pp004-afix.md",
+    "sha256": "d0068aa39d78ea480cd54911a3d41f42602a1c15bcf59b7220bef8ac06c14096",
+    "lines": 155
+  },
+  {
+    "path": "docs/audits/work/pp004-coldsolve-sample.md",
+    "sha256": "7421dd3146516b7919b9c03bc4dc23f6e766f8fe1b51a058be44c2bc789a3a05",
+    "lines": 249
+  },
+  {
+    "path": "docs/audits/work/pp004-context.md",
+    "sha256": "95293b03dcf818739ee8ecd8081fb8abf60a812389a606b6ddfc831005f6d049",
+    "lines": 130
+  },
+  {
+    "path": "docs/audits/work/pp004-dfix.md",
+    "sha256": "b0b6d76a5fdaa471c79af37d7175247ece518d1b0ae249b177c9cbfbe8b15bb2",
+    "lines": 123
+  },
+  {
+    "path": "docs/audits/work/pp004-exam-plan.md",
+    "sha256": "d138088e48afba85457c6c766d98a1028ebcdcbc0ed53616cb9bbb55acadcbd5",
+    "lines": 420
+  },
+  {
+    "path": "docs/audits/work/pp004-formB-formB-info.md",
+    "sha256": "1e96f5199e09de3eb7347c659275a6dd9a8b97e56813e5bd013b8cf5ce45518e",
+    "lines": 201
+  },
+  {
+    "path": "docs/audits/work/pp004-formB-formB-lang.md",
+    "sha256": "5836c55c70c25698407cf423ee253c9d764121447460a0f1612b157d806c0a02",
+    "lines": 196
+  },
+  {
+    "path": "docs/audits/work/pp004-formB-formB-lit.md",
+    "sha256": "8f1f7fc1ddc89eb575e6902800030a64c00bdae689dda2b8c2b6f24d9e479ee8",
+    "lines": 165
+  },
+  {
+    "path": "docs/audits/work/pp004-forms.md",
+    "sha256": "c486d6b87dfa1265e42cec4c0c198c03ee1a1bdb6e113a54d8b8463766d9400f",
+    "lines": 198
+  },
+  {
+    "path": "docs/audits/work/pp004-foundations.md",
+    "sha256": "6f184d6ca48a2bfd202a74069bb8b725d683e81598332aa5508182db86941977",
+    "lines": 206
+  },
+  {
+    "path": "docs/audits/work/pp004-gapfix.md",
+    "sha256": "8de067aa54819e4312c6ab0d9933634c126ecdc2ed7edf28ba1b605bad0b5e77",
+    "lines": 234
+  },
+  {
+    "path": "docs/audits/work/pp004-gapreview-AB.md",
+    "sha256": "3e9485f37130804a900a018ac66e0d7b26c9d911dcbed528d1988802633b0f55",
+    "lines": 262
+  },
+  {
+    "path": "docs/audits/work/pp004-gapreview-C.md",
+    "sha256": "d07cbd41ce33cd1b3dbbebc2518a1b5015ef00f6b13315393c00a3e4bcfd77fb",
+    "lines": 123
+  },
+  {
+    "path": "docs/audits/work/pp004-lessonaudit-language.md",
+    "sha256": "f9317d826fc9934e0514c20e8bd281363c409668ca8df540c22ff0106fe2064c",
+    "lines": 149
+  },
+  {
+    "path": "docs/audits/work/pp004-lessonaudit-texts.md",
+    "sha256": "e3bd65e42a063bdaa7d3436293ea88d6a7df3425829c73f25ecfc519b2f42efe",
+    "lines": 224
+  },
+  {
+    "path": "docs/audits/work/pp004-lessonfix.md",
+    "sha256": "f2269eb75f51ba042126754822b612e963f83b417de6de65501b805e3168bd27",
+    "lines": 132
+  },
+  {
+    "path": "docs/audits/work/pp004-rc3fix.md",
+    "sha256": "bc1ff806a5a8b78879ee406dda4c9c1b9a696a7961678ab3417d3b1c8caaf33e",
+    "lines": 141
+  },
+  {
+    "path": "docs/audits/work/pp004-research.md",
+    "sha256": "ab1765162f6001294671e777f58258fcaf7b5afb36c8a2acaac8324ae7f02f57",
+    "lines": 189
+  },
+  {
+    "path": "docs/audits/work/pp004-review-A.md",
+    "sha256": "bf178025d4b224a117b15921d36a7b73b5306c70f0066af589075f2cb3083c70",
+    "lines": 210
+  },
+  {
+    "path": "docs/audits/work/pp004-review-A2.md",
+    "sha256": "552fcbe8f8fda4371164fb695a37a1c07a1c9e834329541d424edf3b9e60fec7",
+    "lines": 224
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C-changed.md",
+    "sha256": "fda6bbf72f36d4bf38dfb3e35e5765f741c7f5a0101f47aa11527a080706e8ae",
+    "lines": 174
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C-formB.md",
+    "sha256": "dab7be2d228310ace887c2eab87f83da6728a15b461aeb1bb2f62217d7414b6f",
+    "lines": 252
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C3.md",
+    "sha256": "0cb23acf6303c09cb95b43ae0813d8bb876812af96fae316666f0c0e3b23a7fa",
+    "lines": 161
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C4.md",
+    "sha256": "72de51d1048c657d4219bde178268f3a4af36514edc3a907ca8633167ea0fa23",
+    "lines": 169
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C5.md",
+    "sha256": "585fda81869bd5d87a68cff0baa80a8febd0ee5c4d8db97a5eb1ca23df01490a",
+    "lines": 144
+  },
+  {
+    "path": "docs/audits/work/pp004-review-C6.md",
+    "sha256": "db9170d9030ac96109d9900a81e8037b379b27eceba05cd18afc6246364917bb",
+    "lines": 141
+  },
+  {
+    "path": "docs/audits/work/pp004-review-E.md",
+    "sha256": "ad7ea54ea66fe2968d5b4307876e8b32e74a37d648687d72f53f9167374767e0",
+    "lines": 197
+  },
+  {
+    "path": "docs/audits/work/pp004-reviewfix4.md",
+    "sha256": "3b4fab9047556603103ace972e2c4de3561797756a3aa8034ab3052573702b6e",
+    "lines": 170
+  },
+  {
+    "path": "docs/audits/work/pp004-setfix.md",
+    "sha256": "b637805c7157cd4cbbf12840a57559e01aba95747df0a11940269ca4e3080f0c",
+    "lines": 9
+  },
+  {
+    "path": "docs/audits/work/pp004-standards.md",
+    "sha256": "5a91ecb62a403a5234780783b5bd7cba2e8d4580a4edc7ded002f45d4ff003ed",
+    "lines": 130
+  },
+  {
+    "path": "docs/audits/work/pp004-writing.md",
+    "sha256": "6f499b8bd4f7665afe853b79ac01f84b5a677de73b737754703708c74d3d7bf1",
+    "lines": 104
+  }
+]
