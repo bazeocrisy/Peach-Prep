@@ -793,6 +793,15 @@ PP.addLesson({
         ["\"Now you can play the whole spring song without looking at the keys,\" Mr. Bell said.", "\"You practiced every day for two months.\""],
         ["Ana took a deep breath.", "She thought about all those afternoons at the piano in her grandmother's living room.", "Slowly, her hands grew still."],
         ["When her name was called, Ana walked to the piano and sat up tall.", "She played every note of the spring song.", "As the crowd clapped, she smiled so wide that her cheeks hurt."]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Room for One More", genre: "Literary text",
+      paragraphs: [
+        ["On Monday, a new girl named Rosa joined Ms. Ortiz's third-grade class.", "At lunch, she sat at the end of a long table.", "She stared down at her tray and did not even open her milk."],
+        ["Jada watched Rosa from across the room.", "Last year, Jada had been the new girl at this school.", "She still remembered eating lunch all by herself and wishing someone would say hello."],
+        ["Jada picked up her tray and walked over.", "\"Do you want to sit with us?\" she asked.", "Rosa looked up in surprise.", "Then she gave a small nod and followed Jada."],
+        ["At Jada's table, the girls talked about their favorite things.", "Rosa said that she loved to draw animals.", "Jada grinned, because she loved to draw animals, too.", "She tore a page out of her notebook and passed Rosa a pencil."],
+        ["By the end of lunch, Rosa was giggling at Jada's drawing of a cat in a hat.", "When the bell rang, Rosa asked, \"Can I sit here again tomorrow?\"", "Jada smiled and said, \"There's always room for one more.\""]
       ] }
   ],
   practice: [
@@ -878,6 +887,50 @@ PP.addLesson({
       ],
       clue: "Leo's opinion is about what Ana did to get ready. Which sentence shows that?",
       why: "The answer is \"'You practiced every day for two months.'\" Practicing every day is the hard work Leo is talking about. The clapping shows she did well, but it does not show hard work." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (6) and DOK mix as form A,
+     on the new literary passage p3. NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-RA2a-TB1", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence shows that Rosa feels sad and alone on her first day? Choose the sentence in the passage.",
+      targets: ["p3:1:1", "p3:1:3", "p3:2:1", "p3:3:3", "p3:4:2"],
+      answer: ["p3:1:3"], pick: 1,
+      clue: "Look for something Rosa does, or does not do, that shows how she feels inside.",
+      why: "The answer is \"She stared down at her tray and did not even open her milk.\" Looking down and not eating show that Rosa feels sad and alone. The other sentences tell that she is new, that Jada is watching, that she is surprised, or what she likes to do." },
+    { id: "SK-RA2a-TB2", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Why does Jada go over to Rosa's table?",
+        choices: [
+          { text: "She knows how it feels to eat lunch alone.", correct: true },
+          { text: "She wants to see Rosa's animal drawings." },
+          { text: "Ms. Ortiz asked her to sit with the new girl." },
+          { text: "Her own table does not have any room left." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"She still remembered eating lunch all by herself and wishing someone would say hello.\"", correct: true },
+          { text: "\"Jada watched Rosa from across the room.\"" },
+          { text: "\"Then she gave a small nod and followed Jada.\"" },
+          { text: "\"Rosa looked up in surprise.\"" }
+        ] },
+      clue: "Read what Jada thinks about right before she walks over. For Part B, choose the sentence that tells the reason, not just what Jada sees or does.",
+      why: "Part A: She knows how it feels to eat lunch alone. Part B: \"She still remembered eating lunch all by herself and wishing someone would say hello.\" Jada was once the new girl, so she understands how Rosa feels. Jada does not learn that Rosa draws until later, the story never says Ms. Ortiz asked her, and Jada invites Rosa to sit at her own table, so it does have room. Watching Rosa tells what Jada does, not why." },
+    { id: "SK-RA2a-TB3", type: "hottext", points: 2, dok: 3, passages: ["p3"],
+      prompt: "Which TWO sentences show that Rosa feels happy and welcome by the end of the story? Choose two sentences.",
+      targets: ["p3:1:3", "p3:3:3", "p3:5:1", "p3:5:2", "p3:5:3"],
+      answer: ["p3:5:1", "p3:5:2"], pick: 2,
+      clue: "Find sentences near the end. Look for what Rosa does and says, not what Jada does.",
+      why: "The answers are \"By the end of lunch, Rosa was giggling at Jada's drawing of a cat in a hat.\" and \"When the bell rang, Rosa asked, 'Can I sit here again tomorrow?'\" Giggling shows she is happy, and wanting to come back shows she feels welcome. Staring at her tray happens at the start, looking up in surprise happens before she joins the table, and the last sentence tells what Jada does and says." },
+    { id: "SK-RA2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Mr. Reed says, \"Jada and Rosa like the same thing.\" Which sentence from the story BEST supports his idea?",
+      choices: [
+        { text: "\"Jada grinned, because she loved to draw animals, too.\"", correct: true },
+        { text: "\"Rosa said that she loved to draw animals.\"" },
+        { text: "\"At Jada's table, the girls talked about their favorite things.\"" },
+        { text: "\"Jada picked up her tray and walked over.\"" }
+      ],
+      clue: "Mr. Reed's idea is about both girls. Find the sentence that shows they both like one thing.",
+      why: "The answer is \"Jada grinned, because she loved to draw animals, too.\" The word too shows that Jada loves the same thing Rosa loves. The sentence about Rosa tells only what Rosa likes. Talking about favorite things does not say the things are the same." }
   ]
 });
 

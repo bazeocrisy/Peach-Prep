@@ -267,6 +267,76 @@ PP.addLesson({
       ],
       clue: "Read every label in Figure 1. Then check each choice: can you also find it in the paragraphs?",
       why: "The answer is \"Bands across the middle of the shell let it bend.\" Only the label in Figure 1 tells what the bands do. The bony plates, the shell on the head and the short, strong legs are all told about in paragraphs 2 and 3." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (8) and DOK mix as form A,
+     on the new passage p3 and figure tt2a-b-tree-trunk.svg. NEEDS INDEPENDENT REVIEW;
+     see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TT2a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence best tells the main idea of \"Inside a Tree Trunk\"?",
+      choices: [
+        { text: "A tree trunk has layers, and each one does a job that helps the tree.", correct: true },
+        { text: "Bark is rough and tough, and it covers the outside of the trunk." },
+        { text: "The inner bark is a thin layer that is just under the bark." },
+        { text: "A tree trunk may look like one solid piece of wood." }
+      ],
+      clue: "The main idea fits the whole article. Read the first and last paragraphs, then ask which choice tells about every layer, not just one.",
+      why: "The answer is \"A tree trunk has layers, and each one does a job that helps the tree.\" Paragraph 1 says each layer has its own job, paragraphs 2 to 5 each tell about one layer, and the last paragraph says the tree needs every layer. The bark and inner bark choices tell about only one layer. The solid piece of wood is only how a trunk looks from the outside; the article goes on to show it is not one solid piece." },
+    { id: "SK-TT2a-TB2", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What is paragraph 5 mostly about?",
+        choices: [
+          { text: "The hard wood in the center helps hold the tree up.", correct: true },
+          { text: "The wood in the center carries water to the leaves." },
+          { text: "The bark protects the soft wood in the center." },
+          { text: "The wood in the center is the newest wood in the tree." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"It works like a backbone to help hold the tree up.\"", correct: true },
+          { text: "\"It is old sapwood that no longer carries water.\"" },
+          { text: "\"Bark is rough and tough, like a suit of armor.\"" },
+          { text: "\"It keeps out insects and germs that could make the tree sick.\"" }
+        ] },
+      clue: "Read paragraph 5 by itself. Ask what job the center wood does for the tree. Then find the sentence that tells that job.",
+      why: "Part A: The hard wood in the center helps hold the tree up. Part B: \"It works like a backbone to help hold the tree up.\" A backbone holds a body up, and the heartwood does the same for a tree. Paragraph 5 says this wood is old, hard and strong, and that it no longer carries water, so the water and newest-wood choices are wrong. The sentence about old sapwood is true, but it tells what the heartwood does not do, not the job it does. The bark sentences are from paragraph 2." },
+    { id: "SK-TT2a-TB3", type: "ms", points: 2, dok: 2, passages: ["p3"], pick: 2,
+      prompt: "Which two details tell how a tree trunk moves food and water through the tree? Choose two answers.",
+      choices: [
+        { text: "The inner bark carries food down from the leaves.", correct: true },
+        { text: "Tiny tubes in the sapwood carry water up from the roots.", correct: true },
+        { text: "The bark keeps insects and germs out of the tree." },
+        { text: "The bark stops the wood inside from drying out." },
+        { text: "The leaves use sunlight to make the tree's food." }
+      ],
+      clue: "The question is about carrying things through the trunk. Cross out details about keeping things out, and details about making food.",
+      why: "The answers are \"The inner bark carries food down from the leaves\" and \"Tiny tubes in the sapwood carry water up from the roots.\" Paragraphs 3 and 4 tell how these layers carry food and water. The two bark details are about protecting the tree. The leaves make the food, but they do not move it through the trunk." },
+    { id: "SK-TT2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "The author wants to add one more key detail to paragraph 2. Which sentence would fit best?",
+      choices: [
+        { text: "Thick bark can help keep a tree safe from a small fire.", correct: true },
+        { text: "Bark can be gray, brown, red or even white." },
+        { text: "Some children like to make crayon rubbings of bark." },
+        { text: "The bark of some trees peels off in thin, papery strips." }
+      ],
+      clue: "Ask what job paragraph 2 says the bark does. Pick the sentence that tells one more part of that same job.",
+      why: "The answer is \"Thick bark can help keep a tree safe from a small fire.\" Paragraph 2 tells how bark protects a tree, like armor, and this sentence gives one more way it protects. The colors of bark, crayon rubbings and peeling strips may be interesting, but none of them tells how bark helps the tree." },
+    { id: "SK-TT2a-TB5", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "One sentence in the article is interesting, but it is NOT a key detail. Choose that sentence.",
+      targets: ["p3:2:4", "p3:3:3", "p3:4:2", "p3:5:3", "p3:5:5"],
+      answer: ["p3:5:5"], pick: 1,
+      clue: "Say the main idea to yourself first. Then test each sentence: does it help prove the main idea?",
+      why: "The answer is \"Some trees grow so old that their trunks are wider than a car.\" It is a fun fact, but it does not tell what any layer does for the tree. The other sentences each help show a layer's job: keeping the wood from drying out, carrying food, carrying water through tiny tubes, or being strong enough to hold the tree up." },
+    { id: "SK-TT2a-TB6", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Look at Figure 1. Which question can a reader answer by using the diagram?",
+      choices: [
+        { text: "How can a person tell how old a tree is?", correct: true },
+        { text: "How does bark keep insects out of a tree?" },
+        { text: "What do a tree's leaves use to make food?" },
+        { text: "Why does old sapwood stop carrying water?" }
+      ],
+      clue: "Read every label and the note in Figure 1. Then check each question: does the diagram give the answer?",
+      why: "The answer is \"How can a person tell how old a tree is?\" The note in Figure 1 says each ring is one year, so you count the rings to find the tree's age. The paragraphs do not tell this. The diagram names the bark but does not show how it keeps insects out. It does not show leaves or sunlight, and it does not tell why old sapwood stops carrying water." }
   ]
 });
 
@@ -349,6 +419,16 @@ PP.addLesson({
         ["High in the sky, the air is cooler.", "When water vapor cools, it turns back into tiny drops of water.", "The drops are so small and light that they float in the air.", "Millions of these drops together make a cloud."],
         ["Inside a cloud, the tiny drops bump into each other and join together.", "Little by little, the drops grow bigger and heavier.", "When they become too heavy to float, they fall to the ground as rain.", "If the air is very cold, the water may fall as snow instead."],
         ["Some of the rain soaks into the ground.", "The rest runs into streams, rivers, lakes, and oceans.", "Then the sun warms the water again, and the trip starts over."]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Riding for the Mail", genre: "Informational text",
+      paragraphs: [
+        ["In 1860, many families had moved west to California.", "They wanted letters from home, but the mail was slow.", "A letter sent by stagecoach took more than three weeks to get there.", "A letter sent by ship could take months."],
+        ["So a company came up with a faster plan called the Pony Express.", "Riders on quick horses would carry the mail across the West.", "The first riders set out in April 1860.", "They rode from St. Joseph, Missouri, to Sacramento, California."],
+        ["Here is how the mail moved.", "First, the letters were locked in a leather cover that fit over a saddle.", "Next, a rider rode as fast as he could to the next station.", "The stations were about 10 to 15 miles apart.", "A horse gets tired after a hard run like that.", "So at each station, the rider jumped onto a fresh horse.", "He moved the leather cover to the new saddle in about two minutes.", "After 75 to 100 miles, he handed the mail to a new rider, who raced on."],
+        ["Because the riders changed horses so often, the mail never had to slow down.", "As a result, a letter could cross the West in about 10 days."],
+        ["The Pony Express did not last long, though.", "At the same time, workers were putting up a telegraph line across the country.", "A telegraph sends messages through wires in just minutes.", "The line was finished in October 1861.", "People did not need riders to carry their news now, so the Pony Express closed two days later."],
+        ["The Pony Express ran for only about 19 months.", "Still, people today remember the riders who kept the mail moving."]
       ] }
   ],
   practice: [
@@ -475,6 +555,67 @@ PP.addLesson({
       ],
       clue: "Paragraph 2 tells how the trip begins. Read the last sentence of the article. What does it say happens next?",
       why: "The answer is \"It shows the cycle starts over when the sun warms the water again.\" Paragraph 2 says the trip begins when the sun warms the water. The last paragraph brings the water back to that same step, so the trip goes around and around." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (7) and DOK mix as form A,
+     on the new passage p3 (a series of historical events and the steps of a procedure, where
+     form A used a science process). NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TT2b-TB1", type: "order", points: 2, dok: 2, passages: ["p3"],
+      prompt: "Put the steps for moving the mail in order, from the first step to the last.",
+      steps: [
+        "The letters are locked in a leather cover that fits over a saddle.",
+        "A rider races to the next station.",
+        "The rider moves the leather cover onto a fresh horse.",
+        "The rider hands the mail to a new rider."
+      ],
+      clue: "Paragraph 3 tells the steps. Look for the signal words First and Next, and think about what must happen before the next step can.",
+      why: "The order is: the letters are locked in a leather cover, a rider races to the next station, the rider moves the cover onto a fresh horse, and then the rider hands the mail to a new rider. Paragraph 3 tells these steps in this order. A rider changed horses at many stations, but he handed off the mail only after 75 to 100 miles." },
+    { id: "SK-TT2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why did a Pony Express rider jump onto a fresh horse at each station?",
+      choices: [
+        { text: "A horse got tired after running hard for 10 to 15 miles.", correct: true },
+        { text: "Each station had its own mail that needed a new horse." },
+        { text: "The leather cover could only fit on one kind of saddle." },
+        { text: "The rider had to stop and rest for a day at each station." }
+      ],
+      clue: "Find the sentence about the fresh horse. Then read the sentence right before it. What made the rider need a new horse?",
+      why: "The answer is \"A horse got tired after running hard for 10 to 15 miles.\" Paragraph 3 says the stations were about 10 to 15 miles apart and a horse gets tired after a hard run like that, so the rider jumped onto a fresh horse. The article says the rider moved the cover to the new saddle in about two minutes and kept going, so he did not rest for a day." },
+    { id: "SK-TT2b-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What caused the Pony Express to close?",
+        choices: [
+          { text: "A telegraph line could send news much faster than riders could.", correct: true },
+          { text: "The leather covers were too small to hold many letters." },
+          { text: "Families stopped moving west to live in California." },
+          { text: "The stations were too far apart for the riders to reach." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"A telegraph sends messages through wires in just minutes.\"", correct: true },
+          { text: "\"The first riders set out in April 1860.\"" },
+          { text: "\"The stations were about 10 to 15 miles apart.\"" },
+          { text: "\"They rode from St. Joseph, Missouri, to Sacramento, California.\"" }
+        ] },
+      clue: "Read paragraph 5. Find what workers were putting up at the same time. How long did it take to pass along a message? Then find the sentence that tells that.",
+      why: "Part A: A telegraph line could send news much faster than riders could. Part B: \"A telegraph sends messages through wires in just minutes.\" Riders took about 10 days, but the telegraph took minutes. Once the line was finished, people did not need riders, so the Pony Express closed. The article never says the covers were too small, that families stopped moving west, or that riders could not reach the stations." },
+    { id: "SK-TT2b-TB4", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Use paragraph 4. Choose the word that best completes the sentence.",
+      text: "The riders changed horses at every station, {0} the mail never had to slow down.",
+      slots: [
+        { options: ["so", "but", "until"], answer: 0 }
+      ],
+      clue: "Which part happened first and made the other part happen? Choose the word that comes before an effect.",
+      why: "The answer is \"so.\" Changing horses is the cause, and the mail never slowing down is the effect. So comes right before an effect. But would mean the two ideas do not go together, and until would mean the riders stopped changing horses at some point." },
+    { id: "SK-TT2b-TB5", type: "mc", points: 1, dok: 3, passages: ["p3"],
+      prompt: "Which sentence best explains how the ideas in paragraph 1 and paragraph 4 are connected?",
+      choices: [
+        { text: "Paragraph 1 tells that mail was slow, and paragraph 4 shows how the Pony Express made it faster.", correct: true },
+        { text: "Paragraph 1 tells why the Pony Express closed, and paragraph 4 tells what came after it." },
+        { text: "Paragraph 1 tells about ships, and paragraph 4 tells why ships were faster than horses." },
+        { text: "Paragraph 1 tells about the telegraph, and paragraph 4 tells how the telegraph was built." }
+      ],
+      clue: "Say what paragraph 1 is about in a few words. Then say what paragraph 4 is about. Compare the time a letter took in each one.",
+      why: "The answer is \"Paragraph 1 tells that mail was slow, and paragraph 4 shows how the Pony Express made it faster.\" In paragraph 1, a letter took more than three weeks by stagecoach. In paragraph 4, a letter could cross the West in about 10 days. The closing and the telegraph are in paragraph 5, and the article never says ships were faster than horses." }
   ]
 });
 

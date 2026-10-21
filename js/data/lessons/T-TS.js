@@ -298,6 +298,16 @@ PP.addLesson({
         ["The dam blocks the moving water.", "As a result, the water backs up and spreads out.", "Soon a calm, deep pond forms behind the dam."],
         ["Beavers build a home called a lodge in the pond.", "Coyotes and other hunters cannot easily get inside because the lodge doors are under the water.", "The pond keeps the beaver family safe."],
         ["The new pond helps other animals, too.", "Ducks, frogs and fish move in, since the calm water makes a good home.", "One family of beavers can change a whole stream!"]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "The Plants That Build Dunes", genre: "Informational text",
+      paragraphs: [
+        ["On many Georgia beaches, you can see hills of sand called dunes.", "Tall grasses called sea oats grow on top of them.", "These plants do an important job."],
+        ["Wind blows across the beach almost every day.", "It picks up loose, dry sand and carries it along.", "When the sand hits the stems of the sea oats, it slows down.", "As a result, the sand drops, and a little pile forms around each plant."],
+        ["Sea oats do not mind being buried.", "Since they keep growing up through the sand, they trap more and more of it.", "Over many years, the little piles grow into tall dunes."],
+        ["Under the sand, sea oats have long roots.", "The roots spread out like a net, so they hold the sand in place.", "Strong winds cannot easily blow the dune away."],
+        ["Dunes help people, too.", "During big storms, huge waves crash onto the beach.", "The dunes block many of the waves, so the homes and roads behind them stay safer."],
+        ["Sea oats are protected in Georgia because they help keep the coast safe.", "It is against the law to pick them.", "People's feet can crush the plants, so visitors use wooden walkways to cross the dunes.", "Without the plants, the wind would blow the sand away."]
       ] }
   ],
   practice: [
@@ -409,6 +419,56 @@ PP.addLesson({
       ],
       clue: "Try each word in the sentence. Which one still tells WHY something happens?",
       why: "The answer is since. Since and because both tell why something happens. However shows a difference, for example adds a detail and first tells order." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same codes, points (6) and DOK mix as form A,
+     on the new passage p3. NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TSCE-TB1", type: "order", points: 2, dok: 2, passages: ["p3"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
+      prompt: "These events from the article make a chain. Put them in order, so that each event causes the next one.",
+      steps: [
+        "Wind carries loose, dry sand across the beach.",
+        "The sand hits the stems of the sea oats and slows down.",
+        "The sand drops and forms a little pile around each plant.",
+        "Over many years, the little piles grow into tall dunes."
+      ],
+      clue: "Start with the wind. For each event, ask, \"What does this make happen next?\" Paragraphs 2 and 3 tell the chain.",
+      why: "The order is: wind carries loose sand across the beach, the sand hits the sea oat stems and slows down, the sand drops into a little pile around each plant, and over many years the piles grow into tall dunes. Each event causes the next one. The sand cannot slow down until the wind has carried it to the plants, and the dunes cannot grow until the little piles form." },
+    { id: "SK-TSCE-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence from the article tells the effect FIRST and the cause after it?",
+      choices: [
+        { text: "\"Sea oats are protected in Georgia because they help keep the coast safe.\"", correct: true },
+        { text: "\"People's feet can crush the plants, so visitors use wooden walkways to cross the dunes.\"" },
+        { text: "\"When the sand hits the stems of the sea oats, it slows down.\"" },
+        { text: "\"During big storms, huge waves crash onto the beach.\"" }
+      ],
+      clue: "In each sentence, find the part that happened first. That part is the cause. Which sentence saves the cause for the end?",
+      why: "The answer is \"Sea oats are protected in Georgia because they help keep the coast safe.\" The plants help keep the coast safe, and that is why they are protected, but the sentence tells the protecting first and the reason after the clue word because. In the other sentences the cause comes first: feet crushing plants, sand hitting stems, and big storms." },
+    { id: "SK-TSCE-TB3", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence explains how dunes help keep people safe during a storm? Choose the sentence in the passage.",
+      targets: ["p3:4:3", "p3:5:1", "p3:5:2", "p3:5:3", "p3:6:4"],
+      answer: ["p3:5:3"], pick: 1,
+      clue: "Find the paragraph about storms. Look for a sentence with a clue word that tells what the dunes do and what happens because of it.",
+      why: "The answer is \"The dunes block many of the waves, so the homes and roads behind them stay safer.\" Blocking the waves is the cause, and the clue word so leads to the effect: homes and roads stay safer. \"Dunes help people, too\" says that dunes help but not how. The sentence about huge waves tells what storms do, not what dunes do." },
+    { id: "SK-TSCE-TB4", type: "mc", points: 1, dok: 1, passages: ["p3"],
+      prompt: "According to paragraph 4, what happens because the roots of sea oats spread out like a net?",
+      choices: [
+        { text: "They hold the sand in place.", correct: true },
+        { text: "They pull water up from the ocean." },
+        { text: "They make the waves much smaller." },
+        { text: "They keep the plants from being buried." }
+      ],
+      clue: "Find the words like a net in paragraph 4. Read the clue word after them and the effect that follows.",
+      why: "The answer is \"They hold the sand in place.\" Paragraph 4 says the roots spread out like a net, so they hold the sand in place. The article does not say the roots pull up ocean water or shrink waves, and paragraph 3 says sea oats do get buried." },
+    { id: "SK-TSCE-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 3, the author uses the clue word Since. What does it tell the reader?",
+      choices: [
+        { text: "A cause comes right after it.", correct: true },
+        { text: "A step in order comes right after it." },
+        { text: "An example comes right after it." },
+        { text: "A surprise comes right after it." }
+      ],
+      clue: "Read the sentence that starts with Since. Ask which part happens first and makes the other part happen.",
+      why: "The answer is \"A cause comes right after it.\" In \"Since they keep growing up through the sand, they trap more and more of it,\" the words after Since tell why: the plants keep growing. Trapping more sand is the effect. Since works like because here. It does not tell a step, give an example or show a surprise." }
   ]
 });
 PP.addLesson({
