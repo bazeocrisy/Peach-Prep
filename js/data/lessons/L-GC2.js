@@ -133,7 +133,7 @@ PP.addLesson({
       clue: "A complex sentence has a part that cannot stand alone. Which word makes the first part tell when something happened?",
       why: "The answer is After: \"After we finished our chores, Mom took us to the pool.\" After makes the first part tell when, and that part cannot stand alone. And and so join two whole sentences in the middle, so they do not belong at the start here." },
     { id: "SK-GC2a-P9", type: "ms", points: 2, dok: 2, passages: ["p1"],
-      prompt: "Which TWO sentences in Maya's draft are complex sentences? Choose two answers.",
+      prompt: "Which TWO sentences in Maya's draft are complex sentences?",
       pick: 2,
       choices: [
         { text: "(8) When the beans were ready, we picked them for a class snack.", correct: true },

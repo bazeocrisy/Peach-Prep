@@ -398,7 +398,7 @@ PP.addLesson({
       clue: "Follow the pumpkin from the very beginning to the very end. Use facts from both sources.",
       why: "The order is: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, a tiny green pumpkin grows and turns orange, and the farmer cuts the stem and picks it. The first four steps come from Source 1 and the last from Source 2." },
     { id: "SK-RA1b-P6", type: "ms", points: 2, dok: 2, passages: ["p5"],
-      prompt: "Nia's research question is \"What do pumpkin plants need to grow well?\" Which TWO details from the web page help answer her question? Choose two answers.",
+      prompt: "Nia's research question is \"What do pumpkin plants need to grow well?\" Which TWO details from the web page help answer her question?",
       pick: 2,
       choices: [
         { text: "They grow best with at least six hours of sun each day.", correct: true },
