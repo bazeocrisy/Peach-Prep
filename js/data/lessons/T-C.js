@@ -374,16 +374,16 @@ PP.addLesson({
       clue: "Read the two labels in Figure 1 and follow their lines. Then find the sentences that tell about those same two parts of the lodge.",
       why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The labels in Figure 1 point to a door under the water and a dry room. The diagram helps readers see where those two parts are inside the lodge." },
     { id: "SK-TC1b-P6", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Match each text feature to the job it does.",
-      cols: ["Heading", "Text box", "Bold word", "Diagram"],
+      prompt: "Match each feature to the job it does. Three are in a printed book, and one is in a talk you listen to.",
+      cols: ["Heading", "Text box", "Bold word", "Speaker's voice"],
       rows: [
         { text: "tells what a section will be about", answer: 0 },
         { text: "gives an extra fact set apart from the paragraphs", answer: 1 },
-        { text: "makes one word stand out from the words around it", answer: 2 },
-        { text: "shows the parts of something with labels", answer: 3 }
+        { text: "makes one printed word stand out from the words around it", answer: 2 },
+        { text: "slows down and stops for a moment right before an important fact", answer: 3 }
       ],
-      clue: "Think about where each feature sits on the page and what it helps you do.",
-      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word stands out from the words around it. A diagram uses labels to show parts." }
+      clue: "Think about where each feature sits on the page and what it helps you do. Then think about what a listener, who cannot see the page, hears instead.",
+      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word stands out from the printed words around it. In a talk, the speaker's voice does that job: slowing down and stopping for a moment tells listeners an important fact is coming." }
   ],
   test: [
     { id: "SK-TC1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -780,16 +780,17 @@ PP.addLesson({
       why: "The answer is \"She starts to see that Dev's talking helped.\" At the start, she thinks he will ruin everything. At the end, she quietly says, \"I guess talking to people helps.\"" }
   ],
   test: [
-    { id: "SK-TC2a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
-      prompt: "Who is telling this story?",
+    { id: "SK-TC2a-T6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the poem. How is the speaker's view of the wind different from Dad's view?",
+      stem: ["Dad says this wind is much too cold.", "He zips his jacket tight.", "I laugh and lift my paper kite:", "the wind is just right!"],
       choices: [
-        { text: "Grandpa's grandchild, a character in the story", correct: true },
-        { text: "Grandpa, a character in the story" },
-        { text: "an outsider who is not in the story" },
-        { text: "Grandpa's father, a character in the story" }
+        { text: "The speaker likes the wind for a kite, but Dad thinks it is too cold.", correct: true },
+        { text: "The speaker and Dad both think the wind is much too cold today." },
+        { text: "The speaker thinks the wind is too cold, but Dad likes the wind." },
+        { text: "The speaker and Dad both want to go outside and fly the kite." }
       ],
-      clue: "Find who says I and me. Then find who that person calls \"Grandpa.\"",
-      why: "The answer is Grandpa's grandchild. The narrator uses I and me and calls the other person Grandpa, so the narrator is Grandpa's grandchild, a character in the story. Grandpa is talked about, not telling. Grandpa's father is only in Grandpa's stories." },
+      clue: "In a poem, the voice is called the speaker. Find what Dad says and does. Then find what the speaker says and does.",
+      why: "The answer is \"The speaker likes the wind for a kite, but Dad thinks it is too cold.\" Dad says the wind is much too cold and zips his jacket. The speaker laughs, lifts a kite and says the wind is just right. They see the same wind in different ways, and nothing shows that Dad wants to fly the kite." },
     { id: "SK-TC2a-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does the narrator feel about the morning for most of the story?",

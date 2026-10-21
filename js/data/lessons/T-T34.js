@@ -8,7 +8,8 @@ PP.addLesson({
       "The opinion is what the author believes or wants. Look for clue words like I think, I believe, should and best. The opinion is often in the first paragraph and again at the end.",
       "A reason tells why the author thinks that way. Reasons often come after words like because, First, Another reason and Finally.",
       "Evidence is the facts and examples that back up a reason. It usually comes right after the reason.",
-      "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree."
+      "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+      "Authors also plan how an opinion piece is built. Each reason often gets its own paragraph. Some authors add a paragraph that answers people who disagree, with words like Some people say ... But. The ending says the opinion again and may ask readers to do something."
     ],
     words: [
       { term: "opinion", means: "what someone thinks or believes" },
@@ -130,7 +131,17 @@ PP.addLesson({
         { text: "The library is closed on Saturdays now." }
       ],
       clue: "Evidence for this reason must show that people really did come when the library was open on Saturdays. Check each detail against that.",
-      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and the library being closed now is not evidence for any reason." }
+      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and the library being closed now is not evidence for any reason." },
+    { id: "SK-TT3a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Why does the author end with the last paragraph, \"Please ask the town to open the doors on Saturdays!\"?",
+      choices: [
+        { text: "to say her opinion again and ask readers to do something about it", correct: true },
+        { text: "to give a new reason that she has not told the reader yet" },
+        { text: "to tell a fact about when the library is open now" },
+        { text: "to answer people who say the library costs too much" }
+      ],
+      clue: "Think about how the whole piece is built. What job does the last paragraph of a piece like this usually do?",
+      why: "The answer is to say her opinion again and ask readers to do something about it. The ending brings back Kendra's opinion that the library should open on Saturdays and asks readers to help. It gives no new reason, the hours are told in paragraph 1, and Kendra never writes about cost." }
   ],
   test: [
     { id: "SK-TT3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -171,13 +182,13 @@ PP.addLesson({
           { text: "\"But it does not have a single tree.\"" }
         ] },
       clue: "Find the paragraph that gives the shade reason. What evidence comes right after it? Then pick the sentence that shows that evidence.",
-      why: "Part A: by telling how hot the playground gets in the sun. Part B: \"On hot days in May, the metal slide gets too hot to touch.\" This example shows why shade is needed. The birds and squirrels support a different reason, and the parent club sentence answers people who disagree." },
+      why: "Part A: by telling how hot the playground gets in the sun. Part B: \"On hot days in May, the metal slide gets too hot to touch.\" This example shows why shade is needed. The birds and squirrels support a different reason, and the parent club sentence is about paying for the trees, not about heat." },
     { id: "SK-TT3a-T4", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence states the author's second reason? Choose the sentence in the passage.",
       targets: ["p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1", "p2:4:2"],
       answer: ["p2:3:1"], pick: 1,
       clue: "A reason tells why the author holds the opinion. Evidence gives facts about a reason. Which sentence tells a new why?",
-      why: "The answer is \"Trees would also bring wildlife to our school.\" The word also shows that a new reason is starting. The sentences about birds, squirrels and journals are evidence for it, and paragraph 4 answers people who disagree." },
+      why: "The answer is \"Trees would also bring wildlife to our school.\" The word also shows that a new reason is starting. The sentences about birds, squirrels and journals are evidence for it, and paragraph 4 is about what trees cost." },
     { id: "SK-TT3a-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add one more piece of evidence. Which sentence would best support one of the author's reasons?",
       choices: [
@@ -187,7 +198,17 @@ PP.addLesson({
         { text: "Our parent club meets in the school library on Tuesday nights." }
       ],
       clue: "First, find each of the author's reasons. Then choose the fact that proves one of them.",
-      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" One reason is that trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings do not support either reason: they are not about shade or about wildlife." }
+      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" One reason is that trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings do not support either reason: they are not about shade or about wildlife." },
+    { id: "SK-TT3a-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Why does the author include paragraph 4?",
+      choices: [
+        { text: "to answer people who might disagree with planting trees", correct: true },
+        { text: "to give a new reason that trees would bring wildlife" },
+        { text: "to explain how shade keeps the playground cooler" },
+        { text: "to state the author's opinion for the first time" }
+      ],
+      clue: "Read the first words of paragraph 4. Whose idea is the author talking about there, and how does the author reply?",
+      why: "The answer is to answer people who might disagree with planting trees. Paragraph 4 starts with what some people say, that trees cost too much, and then the author explains how the parent club could raise the money. Wildlife is paragraph 3, shade is paragraph 2, and the opinion is first stated in paragraph 1." }
   ]
 });
 
@@ -356,16 +377,16 @@ PP.addLesson({
       ],
       clue: "For the first blank, ask: Is the new sentence a result of the one before it? For the second blank, ask: Is sentence 7 an example, an ending, or one more reason?",
       why: "The first blank needs \"Therefore\": staying healthy is the result of drinking whenever we are thirsty. However shows something different, For example gives an example, and Before that tells time. The second blank needs \"In addition\": sentence 7 adds a second reason. It is not an example, an ending, or a change of plan." },
-    { id: "SK-TT3c-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Malik wants to add one more sentence to the paragraph about saving class time. Which sentence is best?",
+    { id: "SK-TT3c-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Malik wants to add a third reason in a new paragraph before sentence 10. Which sentence is the best new reason to support his opinion?",
       choices: [
-        { text: "With bottles at our desks, nobody would need to leave the room to get a drink.", correct: true },
-        { text: "Some water bottles are made of metal, and others are made of hard plastic." },
-        { text: "Our teacher says that math is the most important subject of the whole day." },
-        { text: "My water bottle at home has stickers of planets and stars all over it." }
+        { text: "Using our own bottles would spread fewer germs than sharing one fountain.", correct: true },
+        { text: "The water fountain in our hall was put in many years ago." },
+        { text: "I really, really want to keep a water bottle at my desk." },
+        { text: "Some water bottles can keep hot cocoa warm for hours." }
       ],
-      clue: "Find the paragraph about saving class time. Which choice helps show how water bottles would save time?",
-      why: "The answer is \"With bottles at our desks, nobody would need to leave the room to get a drink.\" That paragraph says water bottles would save class time, and this explains how: no one would wait in line at the fountain. What bottles are made of, which subject matters most and stickers on a bottle do not show time being saved." },
+      clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: Does it answer the question, why should Room 8 allow water bottles?",
+      why: "The answer is \"Using our own bottles would spread fewer germs than sharing one fountain.\" It gives a new reason why Room 8 should allow bottles. The fountain's age is a fact that does not explain why, \"I really, really want...\" only says the opinion again, and hot cocoa is off topic." },
     { id: "SK-TT3c-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Sentence 10 is a weak conclusion. Which sentence should replace sentence 10?",
       choices: [

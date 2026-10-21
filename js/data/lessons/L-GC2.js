@@ -819,7 +819,7 @@ PP.addLesson({
     { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 3, passages: [],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: "Lily wrote: \"My grandma has a nice garden.\"",
-      partA: { prompt: "Which revision makes Lily's sentence more exact?",
+      partA: { prompt: "Which revision best elaborates on Lily's idea by adding details?",
         choices: [
           { text: "My grandma has a sunny garden full of tall sunflowers.", correct: true },
           { text: "My grandma has a really, really nice garden." },
@@ -828,13 +828,13 @@ PP.addLesson({
         ] },
       partB: { prompt: "Why is that revision better?",
         choices: [
-          { text: "It uses exact words that help the reader picture the garden.", correct: true },
+          { text: "It adds exact details that help the reader picture the garden.", correct: true },
           { text: "It repeats a word to show how much Lily likes the garden." },
           { text: "It uses plain words, like nice and good, that anyone knows." },
           { text: "It makes the sentence shorter so it is easier to read." }
         ] },
       clue: "Read each revision and try to picture the garden. Which one lets you see it?",
-      why: "Part A: \"My grandma has a sunny garden full of tall sunflowers.\" Part B: It uses exact words that help the reader picture the garden. Sunny and tall are exact adjectives. The other revisions still use plain words like nice, good and fun, so you cannot picture the garden." },
+      why: "Part A: \"My grandma has a sunny garden full of tall sunflowers.\" Part B: It adds exact details that help the reader picture the garden. Sunny and tall are exact adjectives, and full of tall sunflowers adds a detail about what grows there. The other revisions still use plain words like nice, good and fun, so you cannot picture the garden." },
     { id: "SK-GC2d-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each sentence to the describing word that fits it best.",
       cols: ["sharp", "crunchy", "gently", "loudly"],
