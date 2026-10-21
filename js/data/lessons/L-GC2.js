@@ -284,6 +284,14 @@ PP.addLesson({
         ["(4) First, we stop at the peach stand.", "(5) The farmer gives each of us a slice to taste.", "(6) The peaches are sweet.", "(7) They are juicy."],
         ["(8) Next, Dad bought a jar of honey from a beekeeper.", "(9) The beekeeper shows us a picture of her hives."],
         ["(10) Sometimes it rains on Saturday.", "(11) We go to the market anyway.", "(12) We always come home with something good to eat."]
+      ] },
+    /* PP-004 fixture: used only by testB (form B of the skill check). Needs independent review. */
+    { id: "p3", title: "Our Class Garden", byline: "Mateo's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) Last spring, our class planted a garden behind the school.", "(2) Ms. Lee gave each of us a small shovel."],
+        ["(3) First, we dug long rows in the soft dirt.", "(4) Then we drop the seeds into the rows.", "(5) We covered them with dirt and patted it down."],
+        ["(6) The seeds needed water.", "(7) We filled a watering can every day.", "(8) After two weeks, tiny green sprouts poked up out of the ground."],
+        ["(9) One morning, a rabbit got into the garden.", "(10) It ate some of the lettuce.", "(11) We built a little fence around the beds.", "(12) By June, we picked beans, carrots and tomatoes to share with our families."]
       ] }
   ],
   practice: [
@@ -382,6 +390,55 @@ PP.addLesson({
       ],
       clue: "Find the time word at the start of the sentence. Then pick verbs that both tell about that time.",
       why: "The answers are flew and carried. Yesterday tells you this already happened, so both verbs must be past tense. Flies and carries are present tense. Fly and carry are present-tense forms too, and they do not go with Priya or the wind." }
+  ],
+  /* PP-004 FIXTURE: form B of the skill check, written by the "forms" agent so the
+     two-form architecture can be tested (verification/guard.py section 14). It parallels
+     form A item by item (same types, points, DOK and code) on a new passage, p3.
+     NEEDS INDEPENDENT REVIEW (two reviews, SPEC manifest rule) before it is relied on;
+     see docs/audits/work/pp004-forms.md. */
+  testB: [
+    { id: "SK-GC2b-TB1", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "One sentence in Mateo's draft uses a verb that does not fit the time of the rest of the draft. Select that sentence.",
+      targets: ["p3:1:2", "p3:2:1", "p3:2:2", "p3:3:2", "p3:4:3"],
+      answer: ["p3:2:2"], pick: 1,
+      clue: "Find a time clue at the start of the draft. Then check the verb in each sentence. Which one tells a different time?",
+      why: "The answer is sentence 4, \"Then we drop the seeds into the rows.\" The garden was planted last spring, so the draft is in the past tense: planted, gave, dug, covered. Drop should be dropped." },
+    { id: "SK-GC2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What is the best way to combine sentences 6 and 7?",
+      choices: [
+        { text: "The seeds needed water, so we filled a watering can every day.", correct: true },
+        { text: "The seeds needed water, but we filled a watering can every day." },
+        { text: "The seeds needed water we filled a watering can every day." },
+        { text: "The seeds needed water, so we fill a watering can every day." }
+      ],
+      clue: "Ask how the two ideas go together. Then check the punctuation and make sure both verbs stay in the same time as the draft.",
+      why: "The answer is \"The seeds needed water, so we filled a watering can every day.\" The seeds needing water is the reason the class filled the can, so the word so fits. But would mean the second idea is a surprise. One choice has no comma and joining word, so it is a run-on. The fill choice switches to the present tense." },
+    { id: "SK-GC2b-TB3", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Mateo wants to join sentences 10 and 11. Choose the word that best completes the new sentence.",
+      text: "{0} the rabbit ate some of the lettuce, we built a little fence around the beds.",
+      slots: [{ options: ["After", "Before", "Unless"], answer: 0 }],
+      clue: "Which happened first: the rabbit eating the lettuce, or the class building the fence?",
+      why: "The answer is After: \"After the rabbit ate some of the lettuce, we built a little fence around the beds.\" The rabbit ate first, and then the class built the fence. Before would put the fence first, and Unless would mean the fence was built only if the rabbit did not eat." },
+    { id: "SK-GC2b-TB4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Does the verb tense stay the same in each sentence, or does it shift? Match each sentence.",
+      cols: ["Tense stays the same", "Tense shifts"],
+      rows: [
+        { text: "The puppy barked, and the cat ran under the bed.", answer: 0 },
+        { text: "Jada picks up her pencil and wrote her name.", answer: 1 },
+        { text: "Every Sunday, Mom bakes bread, and we eat it warm.", answer: 0 },
+        { text: "Yesterday, the wind blows hard and knocked over our trash can.", answer: 1 }
+      ],
+      clue: "Find every verb in the sentence. Do they all tell about the past, or all about now?",
+      why: "\"The puppy barked, and the cat ran under the bed.\" stays in the past. \"Every Sunday, Mom bakes bread, and we eat it warm.\" stays in the present. \"Jada picks up her pencil and wrote her name.\" shifts from present to past. \"Yesterday, the wind blows hard and knocked over our trash can.\" shifts too; blows should be blew." },
+    { id: "SK-GC2b-TB5", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the verbs that keep the tense the same.",
+      text: "Last night, Ben {0} his teeth, and then he {1} into bed.",
+      slots: [
+        { options: ["brushes", "brushed", "brush"], answer: 1 },
+        { options: ["climbed", "climbs", "climb"], answer: 0 }
+      ],
+      clue: "Find the time words at the start of the sentence. Then pick verbs that both tell about that time.",
+      why: "The answers are brushed and climbed. Last night tells you this already happened, so both verbs must be past tense. Brushes and climbs are present tense. Brush and climb are present-tense forms too, and they do not go with Ben or he." }
   ]
 });
 

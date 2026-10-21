@@ -9,7 +9,7 @@ PP.addLesson({
       "The letters ow can say long o, as in snow and grow. They can also say the sound in cow and town, the same sound you hear in ouch.",
       "C is usually hard, like k, before a, o, u or a consonant, as in cat, cup and clap. C is usually soft, like s, when e, i or y comes right after it, as in face, city and fancy.",
       "G is usually hard, as in go and gum, before a, o or u. Before e, i or y, g is often soft and says j, as in gem, giant and gym. But not always: get, give and girl keep the hard g.",
-      "Bonus trickster: ough sounds different in tough, though and through. You learn those words one at a time."
+      "Two more vowel teams have two sounds. The letters oo can say the sound in moon or the sound in book. The letters ou can say the sound in out or the sound in soup. Bonus trickster: ough sounds different in tough, though and through, so you learn those words one at a time."
     ],
     words: [
       { term: "vowel team", means: "two letters that work together to make one vowel sound, like ea or ow" },
@@ -60,7 +60,24 @@ PP.addLesson({
       answer: "In towel, ow makes the sound in cow and how."
     }
   ],
-  parent: "Play \"sound sort\" with words you see on cereal boxes, signs and mail. Write ea, ow, c and g words on scraps of paper and have your child sort them into two piles by sound, then read each pile aloud.",
+  parent: "Play \"sound sort\" with words you see on cereal boxes, signs and mail. Write ea, ow, oo, c and g words on scraps of paper and have your child sort them into two piles by sound, then read each pile aloud. In Try It Yourself, the \"Read it, then spell it\" lists let you hear your child read these patterns and spell them on paper. The questions on this site can only check that your child picks the right sound or spelling; they cannot hear your child read or watch them write.",
+  write: {
+    prompt: [
+      "**Read it, then spell it.** A grown-up runs this. Your child needs paper and a pencil.",
+      "**Part 1: Read out loud.** Your child reads each word to you. If a word comes out wrong, ask, \"What other sound can those letters make?\" and let them try again. Words: instead, steak, beast, meadow, flower, elbow, fancy, magic, gerbil, cloud, group, wooden.",
+      "**Part 2: Spell it (grown-up only).** Turn the screen away from your child. Say each word, read the sentence, then say the word again. Your child writes only the word.",
+      "1. breath: Take a deep breath.", "2. teach: I will teach my dog a trick.", "3. crowd: A big crowd came to the game.", "4. shadow: My shadow follows me.", "5. circus: We saw clowns at the circus.",
+      "6. bounce: Watch the ball bounce.", "7. gentle: Be gentle with the kitten.", "8. cage: The bird sang in its cage.", "9. spoon: Eat your soup with a spoon.", "10. cook: Dad likes to cook.",
+      "**Check together.** Show the list. Your child puts a check next to each word that matches and circles the part that does not. Most mistakes will be in the tricky part, such as ea written as e (breth) or soft c written as s (sircus). Name the pattern (\"In breath, the short e sound is spelled ea\"), have your child write the word correctly three times while saying the letters, and type it in the box below. Spell the boxed words again in two or three days. If more than three words were missed, go back to Watch Me before trying a new list."
+    ],
+    checklist: [
+      "I read the Part 1 words out loud to my grown-up.",
+      "I wrote the Part 2 words on paper without looking at the screen.",
+      "I checked my words with my grown-up and circled any part I missed.",
+      "I wrote each missed word correctly three times."
+    ],
+    rows: 3
+  },
   passages: [],
   practice: [
     { id: "SK-FP4a-P1", type: "mc", points: 1, dok: 1, passages: [],
@@ -262,7 +279,24 @@ PP.addLesson({
       answer: "cam / el. The first syllable is closed, so the a is short."
     }
   ],
-  parent: "Clap out long words you see on signs, menus and cereal boxes together. Then cover part of the word with your finger and have your child read it one syllable at a time.",
+  parent: "Clap out long words you see on signs, menus and cereal boxes together. Then cover part of the word with your finger and have your child read it one syllable at a time. In Try It Yourself, the \"Read it, then spell it\" lists let you hear your child read long words and spell them on paper. The questions on this site can only check that your child splits and sorts syllables correctly; they cannot hear your child read or watch them write.",
+  write: {
+    prompt: [
+      "**Read it, then spell it.** A grown-up runs this. Your child needs paper and a pencil.",
+      "**Part 1: Read out loud.** Your child reads each word to you. If a word stops them, cover all but the first syllable with your finger, then slide your finger to show one more syllable at a time. Words: hamster, tadpole, fifteen, tiger, cabin, beetle, cactus, explode, cucumber, thunderstorm.",
+      "**Part 2: Spell it (grown-up only).** Turn the screen away from your child. Say each word, read the sentence, then say the word again. Your child claps the word first, then writes it one syllable at a time.",
+      "1. shrimp: We ate shrimp for dinner.", "2. stripe: The flag has a red stripe.", "3. muffin: I had a muffin for breakfast.", "4. silent: The room was silent.", "5. invite: I will invite Sam to my party.",
+      "6. rainbow: A rainbow came out after the rain.", "7. corner: Wait at the corner.", "8. puddle: The dog splashed in a puddle.", "9. maple: A maple tree grows in our yard.", "10. volcano: The volcano sent up smoke.",
+      "**Check together.** Show the list. Your child checks each word that matches and circles the syllable with the mistake. Then ask what kind of syllable it is. For example, if your child wrote mapple, ask: \"Is the a in maple long or short?\" It is long, so the first syllable is open, ma, with one p. If puddle came out pudle, the u is short, so the first syllable must be closed: pud. Have your child write each missed word correctly three times, saying the syllables, and type it in the box below. Spell the boxed words again in two or three days."
+    ],
+    checklist: [
+      "I read the Part 1 words out loud, one syllable at a time when I needed to.",
+      "I clapped each Part 2 word before I wrote it, without looking at the screen.",
+      "I checked my words with my grown-up and circled any syllable I missed.",
+      "I wrote each missed word correctly three times."
+    ],
+    rows: 3
+  },
   passages: [],
   practice: [
     { id: "SK-FP4b-P1", type: "mc", points: 1, dok: 1, passages: [],
@@ -397,22 +431,24 @@ PP.addLesson({
   teach: {
     big: "Find the base word first, then add the beginning and the ending, and watch for spelling changes.",
     points: [
-      "A prefix goes at the start of a word and changes its meaning. Re- means again (redo). Un- means not or the opposite of (unhappy, unlock).",
-      "A suffix goes at the end. -ed often tells that something already happened (jumped). -ing tells that it is happening (jumping). -ly tells how (quickly).",
-      "To read a long word, cover the prefix and suffix, read the base word, then put the parts together: un / pack / ing. Be careful: un in uncle and under is not a prefix, because what is left is not a word.",
-      "Before -ed or -ing, drop a silent e: bake becomes baking. When a short word ends with one short vowel and one consonant, you usually double the consonant: hop becomes hopping.",
+      "A prefix goes at the start of a word and changes its meaning. Re- means again (redo). Un- and dis- mean not or the opposite of (unhappy, unlock, dislike). Mis- means wrongly (misspell), and pre- means before (preheat).",
+      "A suffix goes at the end. -ed often tells that something already happened (jumped). -ing tells that it is happening (jumping). -ly tells how (quickly). -ful means full of (helpful), and -less means without (helpless). The suffix -ful has only one l.",
+      "To read a long word, cover the prefix and suffix, read the base word, then put the parts together: un / pack / ing. Be careful: un in uncle and under, and dis in dish, are not prefixes, because what is left is not a word.",
+      "Before a suffix that starts with a vowel, like -ed or -ing, drop a silent e: bake becomes baking. Before a suffix that starts with a consonant, like -ful, -less or -ly, keep the e: hope becomes hopeful. When a short word ends with one short vowel and one consonant, you usually double the consonant before -ed or -ing: hop becomes hopping.",
       "When a word ends with a consonant and y, change the y to i before -ed or -ly: cry becomes cried, happy becomes happily. Keep the y before -ing (crying), and keep it when a vowel comes before it (played)."
     ],
     words: [
       { term: "base word", means: "the main word, before anything is added" },
-      { term: "prefix", means: "a word part added to the beginning, like re- or un-" },
-      { term: "suffix", means: "a word part added to the end, like -ed, -ing or -ly" }
+      { term: "prefix", means: "a word part added to the beginning, like re-, un- or dis-" },
+      { term: "suffix", means: "a word part added to the end, like -ed, -ing, -ly, -ful or -less" }
     ],
     example: {
       label: "Adding word parts",
       lines: [
         "re + build = rebuild (build again)",
         "un + lock = unlock (the opposite of lock)",
+        "dis + agree = disagree (not agree)",
+        "pain + ful = painful (full of pain); pain + less = painless (without pain)",
         "hope + ing = hoping (drop the e)",
         "hop + ing = hopping (double the p)",
         "cry + ed = cried (change y to i)"
@@ -453,7 +489,24 @@ PP.addLesson({
       answer: "easily"
     }
   ],
-  parent: "When you see a word with re-, un-, -ed, -ing or -ly on a sign or package, ask your child to cover the extra parts with a finger and read the base word. For spelling, call out a base word and an ending (\"swim plus ing\") and have your child write it.",
+  parent: "When you see a word with re-, un-, dis-, -ed, -ing, -ly, -ful or -less on a sign or package, ask your child to cover the extra parts with a finger and read the base word. For spelling, call out a base word and an ending (\"swim plus ing\") and have your child write it. In Try It Yourself, the \"Read it, then spell it\" lists let you hear your child read these words and spell them on paper. The questions on this site can only check that your child picks the right meaning or spelling; they cannot hear your child read or watch them write.",
+  write: {
+    prompt: [
+      "**Read it, then spell it.** A grown-up runs this. Your child needs paper and a pencil.",
+      "**Part 1: Read out loud.** Your child reads each word to you. If a word stops them, have them cover the prefix and suffix with their fingers, read the base word, then add the parts back one at a time. Words: disagree, unpacked, thankful, careless, rewriting, unlucky, disappear, spotless, playful, misplace, preview, carefully.",
+      "**Part 2: Spell it (grown-up only).** Turn the screen away from your child. Say each word, read the sentence, then say the word again. Before writing, your child says the base word and the parts: \"hop, plus ing.\"",
+      "1. hopping: The bunny is hopping across the yard.", "2. hoping: I am hoping for snow.", "3. baking: Mom is baking bread.", "4. cried: The baby cried at night.", "5. replayed: We replayed our favorite song.",
+      "6. unfold: Unfold the map on the table.", "7. dislike: I dislike cold soup.", "8. careful: Be careful on the ice.", "9. helpless: The baby bird was helpless.", "10. happily: The dog wagged its tail happily.",
+      "**Check together.** Show the list. Your child checks each word that matches and circles the part with the mistake. Then name the rule that was missed: hopping doubles the p (hop has one short vowel and one consonant), hoping and baking drop the e, cried and happily change y to i, replayed keeps the y because a vowel comes before it, and careful keeps the e and has only one l. Have your child write each missed word correctly three times while saying the parts, and type it in the box below. Spell the boxed words again in two or three days."
+    ],
+    checklist: [
+      "I read the Part 1 words out loud, covering the parts when I needed to.",
+      "I said the base word and the parts before I wrote each Part 2 word, without looking at the screen.",
+      "I checked my words with my grown-up and circled any part I missed.",
+      "I wrote each missed word correctly three times."
+    ],
+    rows: 3
+  },
   passages: [],
   practice: [
     { id: "SK-FP4c-P1", type: "mc", points: 1, dok: 1, passages: [],
@@ -515,7 +568,18 @@ PP.addLesson({
         { text: "plan" }
       ],
       clue: "Cover the prefix at the start and the suffix at the end. What word is left?",
-      why: "The answer is plant. Re- is the prefix and -ed is the suffix, so plant is the base word." }
+      why: "The answer is plant. Re- is the prefix and -ed is the suffix, so plant is the base word." },
+    { id: "SK-FP4c-P7", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Match each word to what its prefix or suffix means.",
+      cols: ["not or the opposite of", "full of", "without"],
+      rows: [
+        { text: "disobey", answer: 0 },
+        { text: "fearless", answer: 2 },
+        { text: "joyful", answer: 1 },
+        { text: "unfair", answer: 0 }
+      ],
+      clue: "Cover the extra part of each word and read the base word. Then think about what the part you covered adds to it. A column can be used more than once.",
+      why: "Disobey means not obey, and unfair means not fair, so dis- and un- mean not. Joyful means full of joy, so -ful means full of. Fearless means without fear, so -less means without." }
   ],
   test: [
     { id: "SK-FP4c-T1", type: "mc", points: 1, dok: 1, passages: [],
@@ -568,7 +632,18 @@ PP.addLesson({
         { text: "filler" }
       ],
       clue: "Find the base word in each choice. Then think about what its prefix or suffix adds to it.",
-      why: "The answer is refill. The prefix re- means again, so refill means to fill again." }
+      why: "The answer is refill. The prefix re- means again, so refill means to fill again." },
+    { id: "SK-FP4c-T6", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Which TWO words are spelled correctly?",
+      choices: [
+        { text: "useful", correct: true },
+        { text: "careless", correct: true },
+        { text: "usful" },
+        { text: "colorfull" },
+        { text: "homless" }
+      ],
+      clue: "Find the base word and the suffix in each one. Does the suffix start with a vowel or a consonant? Then check the letters at the very end.",
+      why: "Useful and careless are spelled correctly. Use and care end with a silent e, and -ful and -less start with a consonant, so the e stays. Usful and homless dropped the e by mistake (the base words are use and home), and colorfull has two l's, but -ful has only one." }
   ]
 });
 
@@ -576,17 +651,17 @@ PP.addLesson({
   code: "3.F.F.1.a",
   title: "Sight words: know them in a snap",
   teach: {
-    big: "Some words show up so often that you should know them in a snap, and some of them are tricky because they are not spelled the way they sound.",
+    big: "Some words show up so often that you should read them in a snap, and some of them are tricky because they do not sound the way their letters look.",
     points: [
-      "Sight words are words you see all the time. Some follow the rules, like and, went and just. You learn them by heart because they are everywhere.",
-      "Other sight words have a tricky part that is not spelled the way it sounds, like the ai in said. Find the tricky part and remember it.",
-      "Little tricks help: a friend is your friend to the end, so friend ends with end. For because, try \"big elephants can always understand small elephants.\"",
+      "Sight words are words you see all the time. Some follow the rules, like and, went and just. Read them so often that you know them in a snap, without sounding them out.",
+      "Other sight words have a tricky part that is not said the way it looks, like the ai in said. Find the tricky part and remember it.",
+      "A tricky word can look like a word it does not rhyme with. Come looks like home, but it rhymes with drum. If a word you read does not sound right in the sentence, ask: Is this a tricky word?",
       "Some sight words look alike: was and saw, from and form, where and were. Read every letter, and check that the word makes sense in the sentence.",
-      "Practice a few words each day: look, say, cover, write, check."
+      "Practice a few words each day until you can read each one in a snap, both by itself and in a sentence."
     ],
     words: [
       { term: "sight word", means: "a word you know right away when you see it" },
-      { term: "tricky part", means: "the part of a word that is not spelled the way it sounds" }
+      { term: "tricky part", means: "the part of a word that is not said the way it looks" }
     ],
     example: {
       label: "Find the tricky part",
@@ -596,20 +671,20 @@ PP.addLesson({
         "through: the ough sounds like the oo in moon",
         "could: the oul sounds like the oo in book, and the l is silent"
       ],
-      note: "Find the tricky part and remember it. The rest of each word follows the rules you already know."
+      note: "Find the tricky part and remember how it sounds. The rest of each word follows the rules you already know."
     },
     tip: "This skill is checked in class, not on the Milestones. But passages on the test are full of these words, and knowing them in a snap leaves more time to think about the questions."
   },
   learn: [
     {
-      show: ["freind or friend?"],
-      ask: "Which spelling is right?",
+      show: ["come     home"],
+      ask: "Come and home end with the same letters. Do they rhyme?",
       steps: [
-        "Friend is a tricky word. The tricky part is the vowel sound in the middle.",
-        "Use the trick: a friend is your friend to the end.",
-        "Look for end at the end of each spelling. Only friend has it."
+        "Home follows a rule you know: o, then a consonant, then a silent e, so the o says its name.",
+        "Come is a tricky sight word. Its o makes the short u sound, like the u in drum.",
+        "So come rhymes with drum, not with home. Learn it as a sight word."
       ],
-      answer: "friend"
+      answer: "No. Come rhymes with drum. Home rhymes with dome."
     },
     {
       show: ["We walked ____ the dark tunnel.", "though     through     thought"],
@@ -622,68 +697,85 @@ PP.addLesson({
       answer: "We walked through the dark tunnel."
     },
     {
-      show: ["Wuns a week, we go to the library."],
-      ask: "Which word is spelled wrong, and how do you fix it?",
+      show: ["The book says: \"Then we went home.\"", "A reader said: \"Them we want home.\""],
+      ask: "Which two sight words did the reader mix up, and how can the reader fix them?",
       steps: [
-        "Read the sentence and check each word. Wuns does not look right.",
-        "The word sounds like it starts with w, but it is a tricky word.",
-        "Once starts with o, not w. Write it and check it: o-n-c-e."
+        "Both mistakes are small words that follow the rules but look a lot like other words: then and them, went and want.",
+        "Look at every letter. T-h-e-n ends with n. W-e-n-t has an e in the middle.",
+        "Reread the sentence and check that it makes sense: Then we went home."
       ],
-      answer: "Wuns should be once: \"Once a week, we go to the library.\""
+      answer: "The reader read then as them and went as want. Rereading with every letter in mind fixes it: \"Then we went home.\""
     }
   ],
-  parent: "Write five sight words on cards and flash each one for a second or two. Your child should read it right away, without sounding it out; any word they stop on goes back in the practice pile. Then hunt for the words together in a book, menu or sign.",
+  parent: "Write five sight words on cards and flash each one for a second or two. Your child should read it right away, without sounding it out; any word they stop on goes back in the practice pile. Then hunt for the words together in a book, menu or sign. The questions on this page check that your child knows how tricky words are said and can tell look-alike words apart in a sentence. They cannot check how quickly your child reads a word out loud: only a grown-up listening can. Use the quick-read list in Try It Yourself for that.",
+  write: {
+    prompt: [
+      "**Quick-read list.** A grown-up listens while your child reads these words out loud. This is home practice. The site does not time or score it.",
+      "Grown-up: point to one word at a time. If your child reads it correctly within about a second, without sounding it out, it is in a snap. If they sound it out, stop or misread it, say the word, have them say it back while looking at it, and type it in the box below. If you like, time the whole list with a phone stopwatch and see it get faster during the week. There is no grade-level target for this list.",
+      "Tricky words: said, does, friend, could, once, enough, people, laugh, again, busy, build, through.",
+      "Words that follow the rules: went, just, then, them, with, when, much, stop, made, these.",
+      "Now in sentences. Your child reads each one out loud: Once a week, my friend and I build a fort. Mom said the store was busy, so we went home. Could you read it again? It does not make sense to me.",
+      "Practice the words in the box for a minute a day. When a word is in a snap three days in a row, delete it. Add new words from your child's books."
+    ],
+    checklist: [
+      "I read the tricky words out loud to my grown-up.",
+      "I read the words that follow the rules out loud to my grown-up.",
+      "I read the three sentences out loud.",
+      "I practiced the words in the box until each one was in a snap."
+    ],
+    rows: 3
+  },
   passages: [],
   practice: [
     { id: "SK-FF1a-P1", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "Which word is spelled correctly?",
+      prompt: "Read the word were. Which word rhymes with it?",
       choices: [
-        { text: "because", correct: true },
-        { text: "becuase" },
-        { text: "becaus" },
-        { text: "becouse" }
+        { text: "fur", correct: true },
+        { text: "here" },
+        { text: "where" },
+        { text: "fire" }
       ],
-      clue: "Use a memory trick you know for this word. Then check each choice letter by letter.",
-      why: "The answer is because: b-e-c-a-u-s-e, the first letters of big elephants can always understand small elephants." },
-    { id: "SK-FF1a-P2", type: "dropdown", points: 1, dok: 1, passages: [],
-      prompt: "Choose the word that is spelled correctly.",
-      text: "Lena {0} she would bring snacks.",
-      slots: [
-        { options: ["said", "sed", "sayed"], answer: 0 }
-      ],
-      clue: "This word has a tricky part: the sound you hear is not spelled the way it sounds. Picture the word in a book you have read.",
-      why: "The answer is said. The ai in said makes the sound of the e in bed." },
-    { id: "SK-FF1a-P3", type: "dropdown", points: 2, dok: 1, passages: [],
-      prompt: "Choose the word that is spelled correctly for each blank.",
-      text: "We need {0} cups for all the {1} at the party.",
-      slots: [
-        { options: ["enough", "enuff", "enogh"], answer: 0 },
-        { options: ["people", "peple", "peeple"], answer: 0 }
-      ],
-      clue: "Picture each word in a book you have read. Both words have a tricky part that is not spelled the way it sounds.",
-      why: "The answers are enough and people. In enough, ough sounds like uff. In people, eo makes the long e sound." },
-    { id: "SK-FF1a-P4", type: "ms", points: 2, dok: 1, passages: [], pick: 2,
-      prompt: "Which TWO words are spelled correctly?",
+      clue: "Were is a tricky word. Say it the way it sounds in a sentence, like \"We were late,\" not the way its letters look.",
+      why: "The answer is fur. Were sounds like wur, so it rhymes with fur. It looks like here and where, but it does not sound like them. Fire has a long i sound." },
+    { id: "SK-FF1a-P2", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Read the word done. Which word rhymes with it?",
       choices: [
-        { text: "friend", correct: true },
-        { text: "laugh", correct: true },
-        { text: "coud" },
-        { text: "anser" },
-        { text: "thay" }
+        { text: "sun", correct: true },
+        { text: "bone" },
+        { text: "gone" },
+        { text: "down" }
       ],
-      clue: "Picture each word in a book. Look for the tricky parts: a silent letter, or a vowel spelled in an unusual way.",
-      why: "Friend and laugh are spelled correctly. Coud should be could (with a silent l), anser should be answer (with a silent w), and thay should be they." },
-    { id: "SK-FF1a-P5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence has a misspelled word?",
-      options: [
-        "Once upon a time, a fox lived in a den.",
-        "The fox was very hungry.",
-        "It thot about the hens in the barn.",
-        "It could hear them clucking."
+      clue: "Done is a tricky word. Say it in a sentence, like \"I am done with my lunch.\" Then listen for the rhyme.",
+      why: "The answer is sun. In done, the o makes the short u sound, so it rhymes with sun. Done looks like bone, but bone follows the silent e rule and done does not. Gone and down have different vowel sounds." },
+    { id: "SK-FF1a-P3", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Read the sentence. Choose the words that make sense.",
+      text: "Grandma will {0} for us {1} the bus stop.",
+      slots: [
+        { options: ["wait", "want", "what"], answer: 0 },
+        { options: ["by", "be", "buy"], answer: 0 }
       ],
-      answer: [2], pick: 1,
-      clue: "Read each sentence slowly. Check the tricky words letter by letter.",
-      why: "The answer is \"It thot about the hens in the barn.\" Thot should be thought: t-h-o-u-g-h-t. The other sentences are spelled correctly." },
+      clue: "These small words look a lot alike. Read every letter, then read the whole sentence with each one and ask: Does that make sense?",
+      why: "The answers are wait and by. Grandma will wait for us, which means stay until we come, by the bus stop, which means next to it. Want and what start the same way but do not make sense here, and be and buy do not tell where." },
+    { id: "SK-FF1a-P4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Read each word. Sort it by the vowel sound you hear when you say it.",
+      cols: ["the oo sound in moon", "the u sound in sun"],
+      rows: [
+        { text: "who", answer: 0 },
+        { text: "love", answer: 1 },
+        { text: "two", answer: 0 },
+        { text: "month", answer: 1 },
+        { text: "do", answer: 0 }
+      ],
+      clue: "Each of these words has an o, but none of them uses the o sound in go. Say each word in a short sentence, then listen to the vowel.",
+      why: "Who, two and do have the oo sound in moon. Love and month have the u sound in sun. All five are tricky words, because the o does not make the sound in go." },
+    { id: "SK-FF1a-P5", type: "dropdown", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence. Choose the word that makes sense.",
+      text: "Our team {0} the big game, so we got a trophy.",
+      slots: [
+        { options: ["won", "own", "now"], answer: 0 }
+      ],
+      clue: "These three words have the same letters in a different order. Read every letter in order, then read the sentence with each word.",
+      why: "The answer is won. Won is a tricky word: it sounds like one and means came in first. Own and now use the same letters in a different order, but they do not make sense in the sentence." },
     { id: "SK-FF1a-P6", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. Choose the word that makes sense.",
       text: "Yesterday I {0} a deer in our yard.",
@@ -706,32 +798,36 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-FF1a-T1", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "Which word is spelled correctly?",
+      prompt: "Read the word four. Which word rhymes with it?",
       choices: [
-        { text: "again", correct: true },
-        { text: "agian" },
-        { text: "agen" },
-        { text: "ugain" }
+        { text: "door", correct: true },
+        { text: "hour" },
+        { text: "sour" },
+        { text: "fur" }
       ],
-      clue: "Picture the word in a book you have read. Check each choice letter by letter, in order.",
-      why: "The answer is again: a-g-a-i-n. It is spelled with ai, like in rain." },
-    { id: "SK-FF1a-T2", type: "dropdown", points: 1, dok: 1, passages: [],
-      prompt: "Choose the word that is spelled correctly.",
-      text: "My dog {0} not like baths.",
-      slots: [
-        { options: ["does", "dose", "duz"], answer: 0 }
+      clue: "Say the word the way you say it when you count. Then say each choice and listen for the same ending sound.",
+      why: "The answer is door. Four is the number word, and it rhymes with door. It looks like hour and sour, but those have the sound in out." },
+    { id: "SK-FF1a-T2", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Read the word touch. Which word rhymes with it?",
+      choices: [
+        { text: "much", correct: true },
+        { text: "couch" },
+        { text: "pouch" },
+        { text: "coach" }
       ],
-      clue: "Picture the word in a book you have read. Read each choice in the sentence and check every letter.",
-      why: "The answer is does. It comes from do, so it starts d-o, then e-s. Dose is a different word." },
-    { id: "SK-FF1a-T3", type: "dropdown", points: 2, dok: 1, passages: [],
-      prompt: "Choose the word that is spelled correctly for each blank.",
-      text: "Dad was {0} helping us {1} a birdhouse.",
-      slots: [
-        { options: ["busy", "bizzy", "buzy"], answer: 0 },
-        { options: ["build", "bild", "biuld"], answer: 0 }
+      clue: "This word has a tricky vowel. Say it in a sentence, like \"Do not touch the hot pan,\" and listen to the middle sound.",
+      why: "The answer is much. In touch, the ou makes the short u sound, so it rhymes with much. Couch and pouch look alike, but their ou says the sound in out. Coach has a long o." },
+    { id: "SK-FF1a-T3", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Read each word. Does it rhyme with sun or with bone?",
+      cols: ["rhymes with sun", "rhymes with bone"],
+      rows: [
+        { text: "one", answer: 0 },
+        { text: "alone", answer: 1 },
+        { text: "none", answer: 0 },
+        { text: "shown", answer: 1 }
       ],
-      clue: "Both words have a tricky part. Picture each word in a book you have read, and check every letter.",
-      why: "The answers are busy and build. In busy, the u makes a short i sound. In build, the ui makes a short i sound." },
+      clue: "Some of these words follow the rules and some are tricky. Say each word in a short sentence, then listen to its vowel sound.",
+      why: "One and none rhyme with sun. They are tricky words: one sounds like won, and none sounds like nun. Alone and shown rhyme with bone. Alone follows the silent e rule, and shown has ow saying long o." },
     { id: "SK-FF1a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word best completes the sentence?",
       stem: "____ did you put the map?",
@@ -806,7 +902,31 @@ PP.addLesson({
       answer: "\"Then she walked to the bus shop in the rain\" does not make sense. The word is stop, so Theo should reread it as bus stop."
     }
   ],
-  parent: "When your child reads aloud and misreads a word, wait for the end of the sentence before helping. Then ask, \"Did that make sense?\" and let them find and fix the word themselves.",
+  parent: "When your child reads aloud and misreads a word, wait for the end of the sentence before helping. Then ask, \"Did that make sense?\" and let them find and fix the word themselves. The questions on this page use other readers' mistakes, so they show whether your child can spot and fix a misread word on the page. Only listening to your child read, or looking at the Fix-up log in Try It Yourself together, shows whether they do it in their own reading. To count self-corrections during a read-aloud, use the timer in the Reading accurately skill: tap a word a second time when your child fixes it.",
+  coach: {
+    mixup: "Fixing every misread word the moment it happens. If you correct it right away, your child never gets the chance to notice it. Wait until the end of the sentence, or even the paragraph.",
+    strong: "Stops on their own when a sentence does not make sense, goes back, looks at all the letters of the word, fixes it and rereads the sentence. Rereads a paragraph when they cannot say what it was about.",
+    notyet: "Keeps reading after a sentence that makes no sense, or fixes a word only when you point to it. Use the prompts in We do, and praise every fix you hear.",
+    ido: "Read a sentence aloud and misread one word on purpose, such as horse for house. Stop and say, \"Wait, that does not make sense.\" Point to the word, check every letter out loud and reread the whole sentence.",
+    wedo: "Your child reads aloud. When a misread word changes the meaning, wait until the end of the sentence, then ask, \"Did that make sense?\" If they cannot find the problem, point to the sentence. If they still cannot, point to the word and ask, \"What letters do you see?\"",
+    youdo: "Your child reads two pages silently and keeps the Fix-up log in Try It Yourself. Then they tell you one word they fixed, how they knew, and what the pages were mostly about. If they cannot say what a page was about, read it again together and ask once more.",
+    everyday: "Praise the fix, not only the right word: \"I heard you go back and fix that. That is what good readers do.\" Self-corrections that come quickly, before the end of the sentence, are a sign of growing fluency."
+  },
+  write: {
+    prompt: [
+      "**Fix-up log.** Read a page or two of a book on your own, silently. When something does not make sense, stop. Go back, check all the letters of the word, and reread the sentence.",
+      "In the box, write each word you fixed, like this: I read horse, but it was house.",
+      "If you get to the end of a page and cannot say what it was about, reread it. Then write: I reread page __ because ____.",
+      "Last, tell a grown-up one fix and what the pages were mostly about."
+    ],
+    checklist: [
+      "I stopped when something did not make sense.",
+      "I checked all the letters of the word, not just the first one.",
+      "I reread the sentence or the page after I fixed it.",
+      "I told a grown-up what the pages were mostly about."
+    ],
+    rows: 5
+  },
   passages: [
     { id: "p1", title: "Pancake Morning (as Ben read it aloud)", genre: "Literary text",
       paragraphs: [

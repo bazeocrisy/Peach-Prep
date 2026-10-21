@@ -198,31 +198,44 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.T.RA.1.b",
-  title: "Gathering and sorting facts from two sources",
+  title: "Finding, choosing and sorting facts from sources",
   teach: {
-    big: "Good researchers gather facts from more than one source, then sort the facts into groups so they are easy to use.",
+    big: "Good researchers gather facts from more than one source, keep only the facts that help answer their question, and sort those facts into notes.",
     points: [
-      "A source is a place you get facts, like a book, an article, a website or a person who knows a lot.",
-      "Use more than one source. One source may tell facts that the other one leaves out.",
-      "When two sources tell the same fact, you can feel more sure it is true.",
-      "Sort facts into groups with headings, such as \"What it eats\" and \"Where it lives.\" Each fact goes under the heading it fits.",
-      "If the facts tell steps, put them in order from first to last."
+      "A source is a place you get facts. It can be printed, like a book. It can be digital, like a web page. It can be a person who knows a lot.",
+      "Use more than one source. One source may tell facts that the other one leaves out. When two sources tell the same fact, you can feel more sure it is true.",
+      "Start with your research question. A fact is relevant only if it helps answer that question. A fact can be true and still not help.",
+      "A web page often has a site name, a date, headings and boxes on the side. Ads and links in those boxes are usually about something else, so skip them.",
+      "Take notes in a notes table: your question at the top, then each fact in a few of your own words and where you found it.",
+      "Sort facts into groups with headings, such as \"What it eats\" and \"Where it lives.\" If the facts tell steps, put them in order from first to last."
     ],
     words: [
       { term: "source", means: "a place you get information" },
+      { term: "research question", means: "the question you want your research to answer" },
+      { term: "relevant", means: "helps answer your research question" },
       { term: "notes", means: "short facts you write down to remember" },
       { term: "heading", means: "a title that tells what a group of facts is about" }
     ],
-    example: {
-      label: "Example: notes on frogs",
-      lines: [
-        "Source 1: Frogs lay their eggs in water. Tadpoles hatch from the eggs.",
-        "Source 2: A tadpole breathes with gills, like a fish. Later it grows legs and loses its tail.",
-        "Note card \"How a frog grows\": eggs in water → tadpoles hatch → tadpole breathes with gills → grows legs, loses tail"
-      ],
-      note: "Neither source tells the whole story. Putting the facts from both sources in order on one card shows the whole life of a frog."
-    },
-    tip: "On the test, you may read two passages and sort facts by which passage they come from. You may also choose the fact that belongs under a note heading."
+    examples: [
+      {
+        label: "Example: notes on frogs",
+        lines: [
+          "Source 1: Frogs lay their eggs in water. Tadpoles hatch from the eggs.",
+          "Source 2: A tadpole breathes with gills, like a fish. Later it grows legs and loses its tail.",
+          "Note card \"How a frog grows\": eggs in water → tadpoles hatch → tadpole breathes with gills → grows legs, loses tail"
+        ],
+        note: "Neither source tells the whole story. Putting the facts from both sources in order on one card shows the whole life of a frog."
+      },
+      {
+        label: "Example: a notes table",
+        lines: ["The same frog facts, written in a notes table."],
+        figure: { src: "assets/figures/ra1b-notes-table.svg",
+          alt: "A notes table. At the top: Question: How does a frog grow? Below are two columns, Fact and Where I found it. Row 1: Eggs are laid in water, Source 1. Row 2: Tadpoles hatch from the eggs, Source 1. Row 3: A tadpole has gills, Source 2. Row 4: It grows legs and loses its tail, Source 2.",
+          width: 300 },
+        note: "Each row holds one fact in a few words, plus where it came from. If you need to check a fact later, the last column tells you where to look."
+      }
+    ],
+    tip: "On the test, you may read two or three sources, such as a book page, a web page and notes from a talk. You may sort facts by source, choose the fact that belongs under a note heading, or choose the detail or note that best helps answer a research question."
   },
   learn: [
     {
@@ -250,9 +263,43 @@ PP.addLesson({
         "The chick pecks out after three weeks. Its feathers dry after that."
       ],
       answer: "First the hen keeps the eggs warm. Next the chick pecks out. Last its feathers dry and get fluffy."
+    },
+    {
+      show: [
+        "Research question: How do woodpeckers find food?",
+        "Web page: Backyard Bird Club, posted March 3, 2026",
+        "Heading: Dinner Inside a Tree",
+        "(1) Woodpeckers peck small holes in tree bark. (2) Beetle grubs and other insects hide under the bark. (3) A woodpecker pushes its long tongue into a hole and pulls the insects out.",
+        "Heading: Drumming",
+        "(4) In spring, woodpeckers drum fast on trees to tell other woodpeckers, \"This is my home.\"",
+        "Side box: Ad: Bird feeders, two for the price of one!"
+      ],
+      ask: "Which parts of the web page help answer the research question, and which should you skip? Then write one note.",
+      steps: [
+        "Read the research question again. It asks how woodpeckers find food.",
+        "Sentences 1, 2 and 3 tell how a woodpecker finds insects and gets them out, so they are relevant.",
+        "Sentence 4 is true, but drumming is about a home, not food. The side box is an ad. Skip both.",
+        "Write the fact in a few of your own words, and write where you found it."
+      ],
+      answer: "Use sentences 1, 2 and 3. The note: Question: How do woodpeckers find food? Fact: They peck holes in bark and pull out insects with their long tongues. Where I found it: Backyard Bird Club web page, March 3, 2026."
     }
   ],
-  parent: "When your child gets curious about something, look in two places together, such as a library book and a nature show. Sort what you learned onto two sticky notes, each with its own heading.",
+  write: {
+    prompt: [
+      "Do your own research with a grown-up. Pick a topic you wonder about, and write one research question.",
+      "Find facts in two different places, such as a library book, a web page you look at with a grown-up, or a person who knows a lot about the topic.",
+      "Make a notes table like the one in Learn It. Write your question at the top. For each fact, write the fact in a few of your own words and where you found it. Example: Fact: They peck holes in bark. Where I found it: Backyard Bird Club web page."
+    ],
+    checklist: [
+      "I wrote one research question.",
+      "I used two different sources.",
+      "I wrote only facts that help answer my question.",
+      "I wrote each fact in a few of my own words.",
+      "I wrote where I found each fact."
+    ],
+    rows: 8
+  },
+  parent: "When your child gets curious about something, look in two places together, such as a library book and a web page from a museum or nature center. Help your child keep a notes table with the question at the top, then each fact and where it came from. On a web page, point to the ads and side links and ask, \"Does this help answer our question?\"",
   passages: [
     { id: "p1", title: "How Pumpkins Grow", byline: "Source 1: a page from a library book", genre: "Informational text",
       paragraphs: [
@@ -281,6 +328,39 @@ PP.addLesson({
         ["He said that astronauts first walked on the moon in 1969.", "They wore space suits because the moon has no air to breathe.", "Only a few people have ever walked on the moon."],
         ["The astronauts left footprints in the moon dust.", "Mr. Okafor said the footprints are probably still there.", "That is because the moon has no wind or rain to wipe them away."],
         ["The astronauts also brought moon rocks back to Earth.", "Scientists still study those rocks today.", "The rocks help them learn how the moon formed."]
+      ] },
+    /* PP-004: digital sources. Each web page has a site header figure (site name, menu, date),
+       headings ("## ...", which count in refs but not in paragraph numbers), an article, and
+       side boxes with an off-topic ad and an off-topic link. The sites are invented. */
+    { id: "p5", title: "What Pumpkin Plants Need", byline: "Source 3: a web page", genre: "Informational text (web page)",
+      figures: [{ after: 0, src: "assets/figures/ra1b-web-pumpkin.svg",
+        alt: "The top of a web page. The site name is Kids Garden Club. The menu says Home, Plants and Bugs. The page was posted on September 8, 2026.",
+        caption: "The top of the web page", width: 340 }],
+      paragraphs: [
+        ["## Plenty of Sun"],
+        ["Pumpkin plants need a lot of sunlight.", "They grow best in a spot that gets at least six hours of sun each day.", "In the shade, the vines grow slowly and make fewer flowers."],
+        ["## Water and Rich Soil"],
+        ["Pumpkin plants are thirsty.", "If it does not rain, give them about one inch of water each week.", "Pour the water on the soil around the roots, not on the leaves.", "Pumpkins also grow well in soil mixed with compost.", "Compost is a mix of old leaves and food scraps that have rotted."],
+        ["## Room to Grow"],
+        ["Pumpkin vines spread far across the ground.", "Leave lots of space between the plants so the vines do not crowd each other."],
+        ["## Fun Pumpkin Facts"],
+        ["People have grown pumpkins for thousands of years.", "A pumpkin is really a fruit, because it holds seeds.", "Some giant pumpkins grown for contests weigh more than 2,000 pounds."],
+        ["Box: Ad: Fall Festival tickets are on sale now!", "Come for hayrides, face painting and games."],
+        ["Box: More on this site: How to Make a Bird Feeder"]
+      ] },
+    { id: "p6", title: "What Is It Like on the Moon?", byline: "Source 3: a web page", genre: "Informational text (web page)",
+      figures: [{ after: 0, src: "assets/figures/ra1b-web-moon.svg",
+        alt: "The top of a web page. The site name is Sky Watchers Club. The menu says Home, Planets and Moon. The page was posted on April 14, 2026.",
+        caption: "The top of the web page", width: 340 }],
+      paragraphs: [
+        ["## Light on Your Feet"],
+        ["The moon's pull, called gravity, is much weaker than Earth's pull.", "A person who weighs 60 pounds on Earth would weigh only about 10 pounds on the moon.", "That is why astronauts could take big, bouncing hops when they walked there."],
+        ["## Long Days and Long Nights"],
+        ["Daytime on the moon lasts about two weeks.", "Then nighttime lasts about two weeks too.", "In the daytime, the ground gets hotter than boiling water.", "At night, it gets colder than any place on Earth."],
+        ["## How Far Away?"],
+        ["The moon is about 239,000 miles from Earth.", "A car driving day and night without stopping would need more than five months to get there."],
+        ["Box: Ad: Sign up for Summer Camp today!", "Swim, hike and make crafts with friends."],
+        ["Box: More on this site: Make Your Own Star Chart"]
       ] }
   ],
   practice: [
@@ -317,6 +397,18 @@ PP.addLesson({
       ],
       clue: "Follow the pumpkin from the very beginning to the very end. Use facts from both sources.",
       why: "The order is: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, a tiny green pumpkin grows and turns orange, and the farmer cuts the stem and picks it. The first four steps come from Source 1 and the last from Source 2." },
+    { id: "SK-RA1b-P6", type: "ms", points: 2, dok: 2, passages: ["p5"],
+      prompt: "Nia's research question is \"What do pumpkin plants need to grow well?\" Which TWO details from the web page help answer her question? Choose two answers.",
+      pick: 2,
+      choices: [
+        { text: "They grow best with at least six hours of sun each day.", correct: true },
+        { text: "If it does not rain, give them about one inch of water each week.", correct: true },
+        { text: "People have grown pumpkins for thousands of years." },
+        { text: "Some giant pumpkins weigh more than 2,000 pounds." },
+        { text: "Fall Festival tickets are on sale now!" }
+      ],
+      clue: "Read Nia's question again. A detail can be true and still not help. For each detail, ask: Does this tell something a pumpkin plant needs?",
+      why: "The answers are \"They grow best with at least six hours of sun each day\" and \"If it does not rain, give them about one inch of water each week.\" Sun and water are things the plants need. How long people have grown pumpkins and how heavy contest pumpkins get are fun facts, but they do not tell what a plant needs. The Fall Festival box is an ad that is trying to sell tickets." },
     { id: "SK-RA1b-P4", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia has three note cards. Match each fact to the note card where it belongs.",
       cols: ["How a pumpkin grows", "Caring for the plants", "Picking the pumpkins"],
@@ -337,7 +429,18 @@ PP.addLesson({
         { text: "Source 2, because Ms. Ruiz tells how her bees spread the pollen." }
       ],
       clue: "Think about Nia's question first. Then check that the reason in your choice really answers it.",
-      why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." }
+      why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." },
+    { id: "SK-RA1b-P7", type: "mc", points: 1, dok: 2, passages: ["p5"],
+      prompt: "Nia is filling in her notes table from the web page. Which note is the BEST one to write in the Fact box?",
+      stem: ["Nia's notes table", "Question: What do pumpkin plants need to grow well?", "Fact: ?", "Where I found it: Kids Garden Club web page, September 8, 2026"],
+      choices: [
+        { text: "The vines need lots of space so they do not crowd.", correct: true },
+        { text: "The vines grow best when planted close together." },
+        { text: "A pumpkin is really a fruit, because it holds seeds." },
+        { text: "The site also tells how to make a bird feeder." }
+      ],
+      clue: "Ask two things about each note. Does it say the same thing as the web page? Does it help answer Nia's question?",
+      why: "The answer is \"The vines need lots of space so they do not crowd.\" The Room to Grow section says to leave lots of space so the vines do not crowd each other, and space is something the plants need. The note about planting close together says the opposite of the web page. The fruit fact is true, but it does not tell what a plant needs. The bird feeder link is about something else." }
   ],
   test: [
     { id: "SK-RA1b-T1", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],

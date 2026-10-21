@@ -510,10 +510,15 @@
      check and stored a pass), so a "test" address runs them as practice or try. */
   function skillMode(set, mode) {
     if (set.kind !== "skill") return mode;
-    if (set.part === "t") return "test";
+    if (set.part === "t" || set.part === "tB") return "test";   /* PP-004: form B is a check too */
     if (mode === "test") return set.part === "y" ? "try" : "practice";
     return mode;
   }
+  /* PP-004: the site's own "take the check" buttons ask skills.js which form is next.
+     An address that names a form (#play/SK:<k>:tB/test) runs that form; the attempt
+     log records whichever form was actually taken. */
+  const isCheck = set => !!set && set.kind === "skill" && (set.part === "t" || set.part === "tB");
+  const checkFor = set => (window.PP_SKILLS.checkSetId ? window.PP_SKILLS.checkSetId(set.code) : set.id);
   function start(setId, mode) {
     const set = PP.byId[setId];
     if (!set) return;
@@ -604,16 +609,16 @@
       const r = el("res-review"); r.hidden = !r.hidden;
       el("res-review-btn").textContent = r.hidden ? "See my answers" : "Hide my answers";
       /* the review shows these check questions' answers: note it, so a later pass can say so (PP-003) */
-      if (!r.hidden && run.set && run.set.kind === "skill" && run.mode === "test") window.PP_SKILLS.answersSeen(run.set.code);
+      if (!r.hidden && run.set && run.set.kind === "skill" && run.mode === "test") window.PP_SKILLS.answersSeen(run.set.code, run.set.part === "tB" ? "B" : "A");
     });
-    el("res-again").addEventListener("click", () => start(run.set.id, "test"));
+    el("res-again").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, "test"));
     /* a skill's practice and test are two different question sets */
     el("res-practice").addEventListener("click", () => start((run.set.kind === "skill" && run.set.practiceId) || run.set.id, "practice"));
     el("done-test").addEventListener("click", () => {
       const nx = run.set.kind === "skill" && run.set.next;
-      if (nx) start(nx.id, nx.mode); else start(run.set.id, "test");
+      if (nx) start(nx.mode === "test" && isCheck(PP.byId[nx.id]) ? checkFor(PP.byId[nx.id]) : nx.id, nx.mode); else start(run.set.id, "test");
     });
-    el("again-start").addEventListener("click", () => start(run.set.id, run.mode === "test" ? "test" : run.tryMode ? "try" : "practice"));
+    el("again-start").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, run.mode === "test" ? "test" : run.tryMode ? "try" : "practice"));
     ["res-back", "done-back", "again-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 

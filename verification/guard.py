@@ -98,8 +98,8 @@ with sync_playwright() as p:
 
     # ---------- 3. Practice mode on every item ----------
     hint_fail, right_fail, wrong_fail, leak_fail = [], [], [], []
-    # a skill's check set (SK:<k>:t) never runs in practice mode (PP-003 A3); it is covered in section 4 and 11.2
-    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&s.part=='t')).map(s=>s.id)"):
+    # a skill's check sets (SK:<k>:t, and form B SK:<k>:tB, PP-004) never run in practice mode (PP-003 A3); they are covered in sections 4, 11.2 and 14
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&(s.part=='t'||s.part=='tB'))).map(s=>s.id)"):
         pg.evaluate("PP_PLAYER.start('%s','practice')" % s); pg.wait_for_timeout(80)
         n = pg.evaluate("PP_PLAYER.state().total")
         for i in range(n):
@@ -146,7 +146,7 @@ with sync_playwright() as p:
     t_fail = []
     # a skill's Practice Together (:p) and Try It Yourself (:y) sets never run as a test (PP-003 RD-4, 13.2);
     # their items are scored in section 3. Every set that can be a test is run here.
-    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&s.part!=='t')).map(s=>s.id)"):
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&s.part!=='t'&&s.part!=='tB')).map(s=>s.id)"):
         for mode in ("right", "wrong"):
             pg.evaluate("PP_PLAYER.start('%s','test')" % s); pg.wait_for_timeout(80)
             n = pg.evaluate("PP_PLAYER.state().total")

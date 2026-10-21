@@ -246,7 +246,7 @@
         let st = pendingStep || parts[2]; pendingStep = null;
         const ps = window.PP_PLAYER.state();
         let code = ""; try { code = decodeURIComponent(parts[1] || ""); } catch (e) { code = ""; }
-        if (current === "player" && ps.setId === "SK:" + code + ":t") st = "test";
+        if (current === "player" && (ps.setId === "SK:" + code + ":t" || ps.setId === "SK:" + code + ":tB")) st = "test";   /* PP-004: either check form */
         if (code && window.PP_SKILLS.open(code, st)) return;
       }
       if (h === "mixed") { show("mixed"); return; }
@@ -341,7 +341,7 @@
     const r = returnTo;
     const ps = window.PP_PLAYER.state();
     /* after a skill test, show the Test step with the result */
-    const skillStep = r && r.kind === "skill" ? (current === "player" && ps.setId === "SK:" + r.code + ":t" ? "test" : r.step) : null;
+    const skillStep = r && r.kind === "skill" ? (current === "player" && (ps.setId === "SK:" + r.code + ":t" || ps.setId === "SK:" + r.code + ":tB") ? "test" : r.step) : null;
     /* PP-003 D4: the page it was opened from is the entry just before this one:
        go back to it, so the phone's Back button does not land on the same page twice */
     if (r && typeof r.hash === "string" && stepBackTo(r.hash, r)) { if (skillStep) pendingStep = skillStep; return; }
@@ -356,7 +356,7 @@
     if (current === "player" && ps.section === "skill") {
       /* opened straight from an address (no page to return to): the skill's matching step */
       const set = PP.byId[ps.setId];
-      window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", t: "test" })[set.part]); return;
+      window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", t: "test", tB: "test" })[set.part]); return;
     }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));

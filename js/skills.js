@@ -3,7 +3,8 @@
 
    Lessons are registered by js/data/lessons/*.js with PP.addLesson({...}).
    Each lesson's practice and test questions become two ordinary sets
-   (ids "SK:<code>:p" and "SK:<code>:t") that the normal player runs, so
+   (ids "SK:<code>:p" and "SK:<code>:t", plus "SK:<code>:tB" when the lesson has a
+   second check form, testB, PP-004) that the normal player runs, so
    every question format, the Help me ladder and Show me how work the same.
 
    Progress is saved on this device only (localStorage, guarded): which steps
@@ -33,7 +34,19 @@
     const defs = [];
     if (P.length) defs.push(["p", "Practice Together", P.slice(0, half)]);
     if (P.length > half) defs.push(["y", "Try It Yourself", P.slice(half)]);
-    if ((L.test || []).length) defs.push(["t", "Test", L.test]);
+    const formB = (L.test || []).length && (L.testB || []).length;   /* PP-004: a second, independent skill check */
+    if ((L.test || []).length) defs.push(["t", formB ? "Test (form A)" : "Test", L.test]);
+    /* Form B ("SK:<key>:tB") is not in the Practice -> Try -> Test chain: the site picks
+       the form for each check (nextForm below). It shares the lesson's one passages list;
+       its items name their own passages, which should be new ones (SPEC §8b). */
+    if (formB) PP.addSet({
+      id: "SK:" + K + ":tB", section: "skill", kind: "skill", code: K, part: "tB", form: "B", next: null,
+      practiceId: P.length ? "SK:" + K + ":p" : null,
+      title: L.title + " · Test (form B)",
+      clueWords: L.clues && !L.clues.groups && L.clues.highlight !== false ? L.clues.words : null,
+      passages: L.passages || [],
+      items: items(L.testB)
+    });
     defs.forEach(([k, label, list], i) => {
       const nx = defs[i + 1];
       PP.addSet({
@@ -91,7 +104,70 @@
     });
     if (changed) save();
   })();
-  function recordTest(k, got, max) {
+  /* ---------- PP-004: alternate check forms (A = L.test, B = L.testB) ----------
+     Which form the next check uses (deterministic, from the stored log only):
+       1. never attempted -> A;
+       2. otherwise the other form from the LAST attempt (when that attempt was the
+          pass, this is also "a review after a pass uses the form not used for the pass");
+     a lesson without a form B always uses A, exactly as before.
+     Attempts saved before PP-004 have no `form`; only form A existed then, so they
+     count as A. A 2.1 record (tries, no attempt log) also counts as "last was A". */
+  const FLAGS = window.PP_FLAGS || { retained: false };
+  const isCheckPart = part => part === "t" || part === "tB";
+  const formOfPart = part => part === "tB" ? "B" : "A";
+  const otherForm = f => f === "B" ? "A" : "B";
+  const attForm = a => a && a.form === "B" ? "B" : "A";
+  function hasFormB(k) { return !!(PP.byId["SK:" + k + ":t"] && PP.byId["SK:" + k + ":tB"]); }
+  function nextForm(k) {
+    if (!hasFormB(k)) return "A";
+    const r = prog[k] || {};
+    const att = Array.isArray(r.attempts) ? r.attempts : [];
+    if (att.length) return otherForm(attForm(att[att.length - 1]));
+    return r.tries ? "B" : "A";
+  }
+  function checkSetId(k) { return "SK:" + k + ":" + (nextForm(k) === "B" ? "tB" : "t"); }
+  /* Were THIS form's answers shown before? Before PP-004 only form A existed, so a lone
+     answersSeenAt (no per-form map) means form A's answers. */
+  function seenForm(r, form) {
+    if (r.answersSeenBy && typeof r.answersSeenBy === "object") return !!r.answersSeenBy[form];
+    return form === "A" && !!r.answersSeenAt;
+  }
+  /* The form of the first dated scored pass: passForm (PP-004), else the logged attempt
+     that set passTry (PP-003 attempts have no form: A). null when it cannot be known. */
+  function passFormOf(r) {
+    if (r.passForm === "A" || r.passForm === "B") return r.passForm;
+    const a = (r.attempts || []).find(x => x && x.ok && x.n === r.passTry);
+    return a ? attForm(a) : null;
+  }
+  function dayGap(a, b) {
+    const p = /^(\d{4})-(\d{2})-(\d{2})/, x = p.exec(a || ""), y = p.exec(b || "");
+    if (!x || !y) return null;
+    return Math.round((new Date(+y[1], +y[2] - 1, +y[3]) - new Date(+x[1], +x[2] - 1, +x[3])) / 86400000);
+  }
+  /* The pass that Retained is measured from: the first dated scored pass. An undated 2.1
+     pass (legacyUndated, no passedAt) has none until a dated pass is logged; then the
+     first passing attempt in the log stands in. Grown-up checks never qualify. */
+  function anchorPass(r) {
+    if (!r.mastered || (r.passBy && r.passBy !== "test")) return null;
+    if (r.passedAt) { const f = passFormOf(r); return f ? { d: r.passedAt, form: f } : null; }
+    const a = (r.attempts || []).find(x => x && x.ok && x.d);
+    return a ? { d: a.d, form: attForm(a) } : null;
+  }
+  /* Retained (behind PP_FLAGS.retained, OFF by default). Awarded only on a passing,
+     scored, later check that is (1) on a different form from the anchor pass, (2) at
+     least 7 days after it, and (3) not taken after this form's answers were shown.
+     Time alone never awards it; with the flag off nothing is written. */
+  const RETAIN_DAYS = 7;
+  function maybeRetain(r, att) {
+    if (!FLAGS.retained || r.retainedAt || !att.ok || att.afterAnswers) return;
+    const an = anchorPass(r);
+    if (!an || att.form === an.form) return;
+    const gap = dayGap(an.d, att.d);
+    if (gap === null || gap < RETAIN_DAYS) return;
+    r.retainedAt = att.d; r.retainedForm = att.form;
+  }
+  function recordTest(k, got, max, form) {
+    form = form === "B" && hasFormB(k) ? "B" : "A";
     const r = rec(k);
     r.tries = (r.tries || 0) + 1;
     /* bestMax (PP-003 RE-3): the check's point total when this best was set. Older
@@ -101,19 +177,50 @@
     if (pass) r.mastered = true;
     /* new in PP-003: a dated log of each submitted check (last 20) */
     const n = r.tries;
-    const after = !!(r.answersSeenAt && n > 1);   /* the answers to these same questions were shown on an earlier try */
-    r.attempts = (r.attempts || []).concat({ d: today(), got, max, ok: pass, n, afterAnswers: after }).slice(-20);
+    /* the answers to these same questions were shown on an earlier try. With two forms,
+       "these same questions" means this form (PP-004); a one-form lesson is unchanged. */
+    const after = hasFormB(k) ? !!(n > 1 && seenForm(r, form)) : !!(r.answersSeenAt && n > 1);
+    const att = { d: today(), got, max, ok: pass, n, afterAnswers: after, form };   /* form: new in PP-004 */
+    r.attempts = (r.attempts || []).concat(att).slice(-20);
     if (pass) {
-      if (!r.passedAt && !r.legacyUndated) { r.passedAt = today(); r.passTry = n; r.passBy = "test"; }
+      if (!r.passedAt && !r.legacyUndated) { r.passedAt = today(); r.passTry = n; r.passBy = "test"; r.passForm = form; }
       r.lastPassAt = today();
+      maybeRetain(r, att);
     }
     save();
     return pass;
   }
-  /* The child opened See my answers after a skill check. */
-  function answersSeen(k) { if (!lessons[k]) return; rec(k).answersSeenAt = new Date().toISOString(); save(); }
-  /* Test items are never practice: the player runs them in test mode only. */
-  function recordPractice(k, part) { if (part === "t") return; mark(k, part === "y" ? "tried" : "practiced"); }
+  /* The child opened See my answers after a skill check. With two forms the form is
+     noted too (answersSeenBy, PP-004); a lone older answersSeenAt was form A's. */
+  function answersSeen(k, form) {
+    if (!lessons[k]) return;
+    const r = rec(k);
+    if (hasFormB(k)) {
+      if (!r.answersSeenBy || typeof r.answersSeenBy !== "object") r.answersSeenBy = r.answersSeenAt ? { A: r.answersSeenAt } : {};
+      r.answersSeenBy[form === "B" ? "B" : "A"] = new Date().toISOString();
+    }
+    r.answersSeenAt = new Date().toISOString();
+    save();
+  }
+  /* Test items (either form) are never practice: the player runs them in test mode only. */
+  function recordPractice(k, part) { if (isCheckPart(part)) return; mark(k, part === "y" ? "tried" : "practiced"); }
+  /* Displayed states (computed, never stored; PP-004). They map onto status() without
+     changing it: new -> Not started; started -> Learning (only Learn It / Watch Me) or
+     Practicing (any practice, try or check attempt); mastered -> Passed the skill check
+     (or Checked by a grown-up), Review recommended (reviewDue), or, only with
+     PP_FLAGS.retained on, Retained (retainedAt, unless the last try did not pass). */
+  function displayState(k) {
+    const st = status(k);
+    if (st !== "mastered" && st !== "started") return { id: "new", label: "Not started" };
+    const lk = lessons[k] ? k : lessonFor(k);
+    const r = prog[lk] || {};
+    if (st === "started") return r.practiced || r.tried || r.tries ? { id: "practicing", label: "Practicing" } : { id: "learning", label: "Learning" };
+    const att = r.attempts || [], last = att[att.length - 1];
+    if (FLAGS.retained && r.retainedAt && !(last && !last.ok)) return { id: "retained", label: "Retained" };
+    if (reviewDue(lk)) return { id: "review", label: "Review recommended" };
+    return { id: "passed", label: passLabel(lk) };
+  }
+  const retainedShown = k => FLAGS.retained && displayState(k).id === "retained";
   /* How a pass was earned: "grownup" (hands-on Check) or "test" (scored check).
      Older grown-up passes have no passBy; a lesson with a Check and no test can only be passed that way. */
   function passKind(k) {
@@ -254,9 +361,12 @@
           const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
           if (st === "mastered") { const ck = make("span", "sl-done" + (byG ? " by-grownup" : ""), byG ? "✓ grown-up" : "✓"); ck.title = passLabel(k); b.appendChild(ck); }
           else if (st === "started") b.appendChild(make("span", "sl-started", "◐"));
-          if (due) b.appendChild(make("span", "sl-review", "review"));
+          /* PP-004 Retained: only with PP_FLAGS.retained on (a development setting); off, nothing here changes */
+          const kept = st === "mastered" && !isTask(k) && retainedShown(k);
+          if (kept) b.appendChild(make("span", "sl-review sl-retained", "retained"));
+          else if (due) b.appendChild(make("span", "sl-review", "review"));
           b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " +
-            (st === "mastered" ? passLabel(k) + "." + (due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
+            (st === "mastered" ? passLabel(k) + "." + (kept ? " Retained." : due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
           b.addEventListener("click", () => openEntry(k));
           li.appendChild(b); ol.appendChild(li);
           any++; shown++; if (isTask(k)) shownTasks++;
@@ -713,20 +823,28 @@
     return " (on an older version of this check).";
   }
   function renderTest(host, L) {
-    const set = PP.byId["SK:" + keyOf(L) + ":t"];
+    const set0 = PP.byId["SK:" + keyOf(L) + ":t"];
+    /* PP-004: with two forms, the card describes and starts the form the site picks next */
+    const two = !!set0 && hasFormB(keyOf(L));
+    const set = two ? PP.byId[checkSetId(keyOf(L))] : set0;
     host.appendChild(make("h2", "panel-h", set ? "Test Your Knowledge (the skill check)" : "Check: show a grown-up"));
     const card = make("div", "go-card");
     if (set) {
       const max = set.items.reduce((a, it) => a + it.points, 0);
       const r = prog[cur] || {};
       card.appendChild(make("p", "", set.items.length + " questions, " + max + " points, no hints. Score " + passMark(max) + " or more to pass the skill check."));
+      if (two) card.appendChild(make("p", "go-note check-form", "For grown-ups: this skill check has two forms with different questions, A and B. They take turns, starting with A. The next check is form " + nextForm(keyOf(L)) + "."));
       if (r.mastered) {
         card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + bestText(r, max, "Best score: ")));
         /* for grown-ups: how the pass was earned (display only, from the dated attempt log) */
         const att = r.attempts || [];
         const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
-        if (r.passTry) card.appendChild(make("p", "go-note pass-try", "For grown-ups: passed on try " + r.passTry + "." + (r.passTry > 1 ? " The check uses the same questions each time." : "")));
+        if (r.passTry) card.appendChild(make("p", "go-note pass-try", "For grown-ups: passed on try " + r.passTry + (two && pa ? ", on form " + attForm(pa) : "") + "." +
+          (r.passTry > 1 ? (two ? " Each form uses the same questions every time it comes up." : " The check uses the same questions each time.") : "")));
         if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", "For grown-ups: passed after seeing the answers on an earlier try."));
+        /* PP-004 Retained: shown only with PP_FLAGS.retained on */
+        if (retainedShown(cur)) card.appendChild(make("p", "go-note retained-line", "Retained: passed again on form " + r.retainedForm + " on " + niceDate(r.retainedAt) +
+          ", at least " + RETAIN_DAYS + " days after the first pass and on different questions, without seeing that form's answers first."));
         if (r.legacyUndated) card.appendChild(make("p", "go-note", "This pass was saved before the site kept dates, so its date is not known."));
         if (reviewDue(cur)) {
           const last = att[att.length - 1];
@@ -1081,7 +1199,7 @@
 
   /* ---------- player hooks ---------- */
   function afterTest(set, got, max) {
-    const pass = recordTest(set.code, got, max);
+    const pass = recordTest(set.code, got, max, formOfPart(set.part));
     return pass ? "✓ Passed! You passed the skill check. It now shows a check mark on the skill list. Come back in about a week and try it again to see if it stuck."
       : "Not yet, and that's OK. Learning takes a few tries. Go back to Watch Me or Practice Together, then try the skill check again after you practice. (You need " + passMark(max) + " or more points to pass.)";
   }
@@ -1113,6 +1231,7 @@
   window.PP_SKILLS = {
     init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
     answersSeen, reviewDue, passKind, passLabel,
+    nextForm, checkSetId, hasFormB, displayState,   /* PP-004 */
     current: () => cur, step: () => step, lastCode: () => lastCode,
     stepNames: k => (lessons[k] ? stepsFor(lessons[k]).map(x => x[1]) : []),
     lessonCount: () => Object.keys(lessons).length

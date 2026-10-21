@@ -1,0 +1,922 @@
+[
+ {
+  "code": "3.F.P.4.a",
+  "domain": "Foundations",
+  "strand": "Phonics",
+  "wording": "Decode and encode words with graphemes that represent multiple letter-sound correspondences.",
+  "page": 7,
+  "applicable": true
+ },
+ {
+  "code": "3.F.P.4.b",
+  "domain": "Foundations",
+  "strand": "Phonics",
+  "wording": "Decode and encode single-syllable and multisyllabic words of all syllable types.",
+  "page": 7,
+  "applicable": true
+ },
+ {
+  "code": "3.F.P.4.c",
+  "domain": "Foundations",
+  "strand": "Phonics",
+  "wording": "Decode and encode words with common prefixes and suffixes.",
+  "page": 7,
+  "applicable": true
+ },
+ {
+  "code": "3.F.F.1.a",
+  "domain": "Foundations",
+  "strand": "Fluency",
+  "wording": "Increase sight word vocabulary by reading regularly and irregularly spelled words in isolation and context with accuracy and automaticity.",
+  "page": 9,
+  "applicable": true
+ },
+ {
+  "code": "3.F.F.1.b",
+  "domain": "Foundations",
+  "strand": "Fluency",
+  "wording": "Read a variety of unfamiliar grade-level texts with increasing accuracy.",
+  "page": 9,
+  "applicable": true
+ },
+ {
+  "code": "3.F.F.1.c",
+  "domain": "Foundations",
+  "strand": "Fluency",
+  "wording": "Read a wide range of grade-level texts aloud with appropriate prosody (phrasing, expression, juncture/pause, and intonation) to aid comprehension.",
+  "page": 9,
+  "applicable": true
+ },
+ {
+  "code": "3.F.F.1.d",
+  "domain": "Foundations",
+  "strand": "Fluency",
+  "wording": "Self-correct while reading grade-level text (silently or aloud) to aid comprehension and fluency, rereading as necessary.",
+  "page": 9,
+  "applicable": true
+ },
+ {
+  "code": "3.F.H.3.a",
+  "domain": "Foundations",
+  "strand": "Handwriting",
+  "wording": "Read phrases and sentences written in cursive.",
+  "page": 11,
+  "applicable": true
+ },
+ {
+  "code": "3.F.H.4.a",
+  "domain": "Foundations",
+  "strand": "Handwriting",
+  "wording": "Practice forming cursive letters and connectors in words.",
+  "page": 11,
+  "applicable": true
+ },
+ {
+  "code": "3.F.H.4.b",
+  "domain": "Foundations",
+  "strand": "Handwriting",
+  "wording": "Use appropriate spacing between cursive words in a sentence.",
+  "page": 11,
+  "applicable": true
+ },
+ {
+  "code": "3.L.GC.2.a",
+  "domain": "Language",
+  "strand": "Grammar Conventions",
+  "wording": "Distinguish between correctly structured simple, compound, and complex sentences.",
+  "page": 19,
+  "applicable": true
+ },
+ {
+  "code": "3.L.GC.2.b",
+  "domain": "Language",
+  "strand": "Grammar Conventions",
+  "wording": "Use a variety of simple, compound, and complex sentences to strengthen clarity and coherence, establishing consistent verb tense within and between sentences.",
+  "page": 19,
+  "applicable": true
+ },
+ {
+  "code": "3.L.GC.2.c",
+  "domain": "Language",
+  "strand": "Grammar Conventions",
+  "wording": "Use correct subject-verb agreement in a variety of sentences.",
+  "page": 19,
+  "applicable": true
+ },
+ {
+  "code": "3.L.GC.2.d",
+  "domain": "Language",
+  "strand": "Grammar Conventions",
+  "wording": "Elaborate on ideas and information, using adjectives and adverbs when incorporating details and descriptions to convey precise meaning.",
+  "page": 19,
+  "applicable": true
+ },
+ {
+  "code": "3.L.GC.2.e",
+  "domain": "Language",
+  "strand": "Grammar Conventions",
+  "wording": "This progression begins in 9th grade.",
+  "page": 19,
+  "applicable": false,
+  "beginsInGrade": 9
+ },
+ {
+  "code": "3.L.V.1.a",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Acquire a range of general, academic, and specialized vocabulary words and phrases through grade-level texts and content.",
+  "page": 21,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.1.b",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Use grade-level general, academic, and specialized vocabulary words and phrases to enhance communication in a variety of settings.",
+  "page": 21,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.2.a",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Deconstruct words using common roots, root words, and affixes to determine meaning.",
+  "page": 22,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.2.b",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Identify affixes associated with specific parts of speech (e.g., ly is commonly used with adverbs) to aid comprehension.",
+  "page": 22,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.2.c",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Construct words using common roots, root words, and affixes.",
+  "page": 22,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.2.d",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "This progression begins in 6th grade.",
+  "page": 22,
+  "applicable": false,
+  "beginsInGrade": 6
+ },
+ {
+  "code": "3.L.V.3.a",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Use context (e.g., images and graphs) within and beyond a sentence to determine or clarify the meaning of unknown words and multiple-meaning words and phrases.",
+  "page": 23,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.3.b",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Identify homophones and homographs and use the relationship between synonyms and antonyms to clarify word meanings.",
+  "page": 23,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.3.c",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Distinguish shades of meaning among closely related verbs (e.g., toss, throw, hurl) and closely related adjectives (e.g., thin, slender, skinny, scrawny).",
+  "page": 23,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.3.d",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Use glossaries or beginning dictionaries, both print and digital, to check spelling and to determine or clarify the precise meaning of words and phrases.",
+  "page": 23,
+  "applicable": true
+ },
+ {
+  "code": "3.L.V.3.e",
+  "domain": "Language",
+  "strand": "Vocabulary",
+  "wording": "Use knowledge of word relationships and learned vocabulary words and phrases to make precise word choices when speaking and writing.",
+  "page": 23,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.1.a",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "Determine the purpose (e.g., entertain, inform, persuade) and target audience of a text.",
+  "page": 26,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.1.b",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "Determine common text features of print, digital, auditory, spoken, and visual modes and describe how they contribute to the overall purpose and effect.",
+  "page": 26,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.1.c",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "Create multimodal texts, using features of pre-selected modes for a specific purpose and audience.",
+  "page": 26,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.2.a",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "Describe different perspectives of the narrator or speakers and distinguish them from their own.",
+  "page": 27,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.2.b",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "This progression begins in 6th grade.",
+  "page": 27,
+  "applicable": false,
+  "beginsInGrade": 6
+ },
+ {
+  "code": "3.T.C.2.c",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "With adult support, identify the context in which a text is written (e.g., time period, individual, situational).",
+  "page": 27,
+  "applicable": true
+ },
+ {
+  "code": "3.T.C.2.d",
+  "domain": "Texts",
+  "strand": "Context",
+  "wording": "This progression begins in 6th grade.",
+  "page": 27,
+  "applicable": false,
+  "beginsInGrade": 6
+ },
+ {
+  "code": "3.T.SS.1.a",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Describe how texts are arranged to represent information and ideas using text features (e.g., map, captions) and organizational structures (e.g., cause/effect), referring to parts of texts using terms such as chapter or section.",
+  "page": 29,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.1.b",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Design texts using a variety of text structures and features, according to purpose and audience.",
+  "page": 29,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.1.c",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Use conjunctions and transition words or phrases, such as although and since, to add cohesion and link ideas and information.",
+  "page": 29,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.1.d",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Craft related sentences into clear and cohesive paragraphs.",
+  "page": 29,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.2.a",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Identify and describe the use of figurative language, such as similes, metaphors, and idioms in a wide variety of texts.",
+  "page": 30,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.2.b",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "Use figurative language, such as similes, metaphors, and idioms, to show relationships between ideas and information.",
+  "page": 30,
+  "applicable": true
+ },
+ {
+  "code": "3.T.SS.2.c",
+  "domain": "Texts",
+  "strand": "Structure & Style",
+  "wording": "This progression begins in 6th grade.",
+  "page": 30,
+  "applicable": false,
+  "beginsInGrade": 6
+ },
+ {
+  "code": "3.T.T.1.a",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Explain how narrative techniques are used to present ideas, design texts, and convey information about characters, setting, and plot.",
+  "page": 32,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.1.b",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Explain how characters, setting, problem, and solution function in the plot.",
+  "page": 32,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.1.c",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Describe characters’ traits, motivations, actions, thoughts, and feelings and explain their connection to the central message, lesson, or moral of the story.",
+  "page": 32,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.1.d",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Compare and contrast two or more characters, settings, central messages, or events within texts across diverse cultures.",
+  "page": 32,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.1.e",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Apply narrative techniques (e.g., character, setting, problem, resolution, dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a sense of closure.",
+  "page": 32,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.2.a",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Describe the techniques used to present and design expository texts, including facts and key details used to support the main idea.",
+  "page": 33,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.2.b",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text.",
+  "page": 33,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.2.c",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Integrate and explain information from two texts on the same topic in relationship to important points and key details.",
+  "page": 33,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.2.d",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Apply expository techniques to introduce a topic, develop the topic with facts and other information (e.g., definitions, details, illustrations), and provide a concluding statement or section.",
+  "page": 33,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.3.a",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Describe and discuss the techniques used to present and design opinion texts, including author’s opinion statement, supporting reasons, and evidence.",
+  "page": 34,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.3.b",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "This progression begins in 9th grade.",
+  "page": 34,
+  "applicable": false,
+  "beginsInGrade": 9
+ },
+ {
+  "code": "3.T.T.3.c",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section.",
+  "page": 34,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.3.d",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "This progression begins in 9th grade.",
+  "page": 34,
+  "applicable": false,
+  "beginsInGrade": 9
+ },
+ {
+  "code": "3.T.T.4.a",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Discuss and explain techniques used to present and design poetry, including rhyme scheme.",
+  "page": 35,
+  "applicable": true
+ },
+ {
+  "code": "3.T.T.4.b",
+  "domain": "Texts",
+  "strand": "Techniques",
+  "wording": "Apply poetic techniques to produce poetry and engage audiences that use rhyme in at least two stanzas to achieve an intended effect.",
+  "page": 35,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.1.a",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "Generate questions about a self-selected topic of interest to be researched, formulating additional questions to clarify or deepen understanding.",
+  "page": 37,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.1.b",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "Conduct research by locating, gathering, selecting, and organizing information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic.",
+  "page": 37,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.1.c",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic.",
+  "page": 37,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.2.a",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "Refer to specific passages from a text to support an idea, answer, or opinion.",
+  "page": 38,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.2.b",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "Determine what makes a source text credible and relevant and identify examples.",
+  "page": 38,
+  "applicable": true
+ },
+ {
+  "code": "3.T.RA.2.c",
+  "domain": "Texts",
+  "strand": "Research & Analysis",
+  "wording": "This progression begins in 5th grade.",
+  "page": 38,
+  "applicable": false,
+  "beginsInGrade": 5
+ },
+ {
+  "code": "K-12.P.EICC.1.a",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Generate, understand, monitor, and discuss personal and academic reading and writing goals, revising as appropriate.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.1.b",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Discuss or write about personal and academic reading and writing preferences, referring to specific techniques, topics, modes, and genres that resonate most.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.1.c",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Select, read, and write texts of personal interest and academic relevance to grade-level texts and topics.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.1.d",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Build a repertoire of comprehension and composition skills, strategies, and techniques, drawing from them as needed to aid the interpretation and construction of texts.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.1.e",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Participate in a community of readers and writers by developing group norms, discussing texts, sharing individual writing, listening as others share their writing, and offering and responding to feedback.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.1.f",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Develop independence and autonomy as a reader and writer.",
+  "page": 42,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.2.a",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Share real or imagined experiences by interpreting and constructing texts that tell or include stories.",
+  "page": 43,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.2.b",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Make use of texts to build knowledge, develop skills, make informed decisions, and share information and ideas.",
+  "page": 43,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.2.c",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Explain and learn concepts and processes by interpreting and constructing texts.",
+  "page": 43,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.2.d",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Interpret and construct texts to aid the analysis and evaluation of texts and ideas.",
+  "page": 43,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.2.e",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Consume and produce texts in order to solve problems or influence decisions.",
+  "page": 43,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.a",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Establish a purpose and set goals for reading, monitor comprehension, and adjust as needed.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.b",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Scan and skim the text, making note of structures and sections that might be most useful.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.c",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Draw from, compare, build, and integrate prior knowledge with the material in the text, addressing inconsistencies or gaps and adding to knowledge repertoires as appropriate.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.d",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Summarize and visualize sections of the text to maintain understanding.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.e",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Make and track predictions about the events and information likely to come next.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.f",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Make, track, and support inferences about different levels of meaning within the text.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.3.g",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Determine the meanings of unfamiliar words and concepts by applying knowledge of context and of academic vocabulary and word parts.",
+  "page": 44,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.a",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Establish a purpose and goals for writing and identify a target audience.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.b",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Plan how to organize the text by selecting modes, genres, and structures that will achieve the purpose and meet the needs of the target audience.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.c",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Generate ideas for content by assessing prior knowledge, gathering information from texts, and engaging in discussions with others.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.d",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Link ideas and information to the organization plan, highlighting ideas and information that are most relevant, useful, and impactful.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.e",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Construct an initial draft by integrating ideas and information; selecting words, phrases, and sentences; and incorporating craft techniques that will best achieve the purpose of the text and resonate with the target audience.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.f",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Evaluate the text’s effectiveness based on self-review or feedback from others, determining whether the text matches the purpose and goals for writing.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.g",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Make changes to the text based on self-evaluation or external feedback, revising the organization, ideas, information, word choices, and craft techniques in order to increase the text’s effectiveness.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.EICC.4.h",
+  "domain": "Practices",
+  "strand": "Engagement & Intention for Comprehension & Composition",
+  "wording": "Edit the text, ensuring it adheres to the conventions of written language.",
+  "page": 45,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.1.a",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Use prior knowledge, formal or informal research, and discussions with others to identify the key components of context that are most relevant.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.1.b",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Consider how context impacts the purposes of the author and the audience.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.1.c",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Explore how context shapes the author’s decisions and the audience’s responses during the interpretation and construction of texts.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.2.a",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Develop and apply knowledge of author, audience, and context to discern and establish the purpose of texts being interpreted or constructed and to evaluate the extent to which those texts achieve those purposes.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.2.b",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Draw from knowledge of author, audience, and context to discern and establish a clear point of view or unique perspective when interpreting and constructing texts.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.ST.2.c",
+  "domain": "Practices",
+  "strand": "Situating Texts: Author, Audience, Context, & Purpose",
+  "wording": "Draw from knowledge of how authors consider context and audience to determine which information and ideas to highlight, which text design is most accessible, which word choices and language structures are most effective, and which craft techniques are most impactful.",
+  "page": 47,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.1.a",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Identify, apply, and analyze the literary, expository, and opinion (grades K-5) or rhetorical (grades 6-12) elements in texts, explaining or evaluating how specific elements affect the target audience and support the text’s purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.1.b",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Identify, apply, and analyze important, interesting, or effective uses of language, explaining or evaluating how specific word choices affect the target audience and support the text’s purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.1.c",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Explain, analyze, and evaluate how the author’s use of sentence structure and syntax affects the target audience and supports the text’s purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.1.d",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Describe, analyze, and evaluate the design and organization of the text, explaining how specific formats, structures, patterns, and features influence the audience, contribute to the text’s accessibility, and support the text’s purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.2.a",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Integrate literary, expository, and opinion (grades K-5) or rhetorical (grades 6-12) elements to appeal to target audiences and achieve specific purposes.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.2.b",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Craft words and phrases in order to influence the responses, thoughts, decisions, and questions of the target audience and achieve a specific purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.2.c",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Make decisions about sentence structure and syntax in order to accommodate and influence the audience and achieve a specific purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.2.d",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Organize texts by incorporating specific formats, structures, patterns, and features to influence the audience, facilitate accessibility, and support the text’s purpose.",
+  "page": 49,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.3.a",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Explore and create texts in various modes and genres, developing and applying knowledge of how specific features impact meaning, tone, style, purpose, and audience.",
+  "page": 50,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.3.b",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Apply knowledge of how mode and genre impact what kinds of ideas and information are included in texts.",
+  "page": 50,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.3.c",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Apply knowledge of how mode and genre impact how ideas and information are structured and arranged in texts.",
+  "page": 50,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.AC.3.d",
+  "domain": "Practices",
+  "strand": "Author's Craft",
+  "wording": "Consume and produce multimodal texts, integrating a variety of genres, text features, and craft techniques to influence target audiences and achieve specific purposes.",
+  "page": 50,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.1.a",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Arrive to group discussions and collaborative meetings prepared to be an active participant in the work.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.1.b",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Collaborate with others to determine group norms, establish goals and procedures, and facilitate productivity when working on shared projects.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.1.c",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Contribute to discussions and shared projects by offering ideas, listening to the ideas of others, and providing feedback.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.1.d",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Work with others to discuss topics, investigate questions, solve problems, and explore and create texts.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.2.a",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Communicate clearly to present ideas, information, and texts.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.2.b",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Integrate modes and genres most appropriate to purpose and audience.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.2.c",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Vary tone, pace, and nonverbal gestures as appropriate to purpose and audience.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.2.d",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Engage in dialogue with audiences by asking and answering questions.",
+  "page": 52,
+  "applicable": true
+ },
+ {
+  "code": "K-12.P.CP.2.e",
+  "domain": "Practices",
+  "strand": "Collaboration & Presentation",
+  "wording": "Build background knowledge by reciting all or part of significant poems and speeches as appropriate by grade level.",
+  "page": 52,
+  "applicable": true
+ }
+]

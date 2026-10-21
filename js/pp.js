@@ -1,5 +1,21 @@
 /* Peach Prep — namespace, set registry and small DOM helpers.
    Loaded first. Set files call PP.addSet({...}). */
+
+/* Feature flags (PP-004). Every flag is OFF for visitors. A flag can be turned on only
+   by a development setting on this device, never by stored progress:
+     - the address has ?dev=retained  (several: ?dev=retained,other), or
+     - localStorage "pp.dev" holds "retained" (same comma list).
+   The object is frozen once set, so page code cannot switch a flag on later.
+   retained: the "Retained" status (docs/audits/PP-004-MASTERY-RECOMMENDATIONS.md). */
+(function () {
+  "use strict";
+  const on = {};
+  const add = v => String(v || "").split(",").forEach(x => { x = x.trim().toLowerCase(); if (x) on[x] = true; });
+  try { add(new URLSearchParams(window.location.search).get("dev")); } catch (e) { /* no address */ }
+  try { add(window.localStorage.getItem("pp.dev")); } catch (e) { /* storage blocked */ }
+  window.PP_FLAGS = Object.freeze({ retained: !!on.retained });
+})();
+
 (function () {
   "use strict";
   const sets = [];
