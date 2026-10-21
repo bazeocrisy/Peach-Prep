@@ -771,7 +771,7 @@ PP.addLesson({
       "The reflexive pronouns are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves.",
       "Use one when the person doing the action is also the one it happens to: I see myself in the mirror.",
       "Match the pronoun to the word it points back to. One person or thing ends in -self (Ben, himself). More than one ends in -selves (the girls, themselves; we, ourselves).",
-      "You can also use a -self word after by to mean alone (I did it by myself), or to show someone did it with no help (They cleaned it themselves).",
+      "You can also use a -self word after by to mean alone (I did it by myself).",
       "Hisself and theirselves are not correct words. Also, do not use myself in place of I or me: say \"Dad and I went,\" not \"Dad and myself went.\""
     ],
     words: [
@@ -892,13 +892,13 @@ PP.addLesson({
       prompt: "Choose the TWO sentences that use pronouns correctly.",
       choices: [
         { text: "I washed all of the dishes by myself.", correct: true },
-        { text: "The kids cleaned up the room themselves.", correct: true },
+        { text: "The kids poured themselves some cold milk.", correct: true },
         { text: "Dad and myself went fishing at the lake." },
         { text: "Theo made hisself a cheese sandwich." },
         { text: "We packed ourself a picnic lunch." }
       ],
       clue: "Check that each -self or -selves word is real and points back to someone who is the subject. Remember: myself never takes the place of I.",
-      why: "The answers are \"I washed all of the dishes by myself.\" and \"The kids cleaned up the room themselves.\" Myself points back to I, and themselves points back to the kids. The others should say \"Dad and I,\" himself and ourselves." },
+      why: "The answers are \"I washed all of the dishes by myself.\" and \"The kids poured themselves some cold milk.\" Myself points back to I. The kids poured the milk for the kids, so themselves points back to the kids. The others should say \"Dad and I,\" himself and ourselves." },
     { id: "SK-GUM3-6-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word correctly completes what Coach said?",
       stem: "Coach said, \"You and your brother should be proud of ____.\"",
@@ -1182,8 +1182,8 @@ PP.addLesson({
       prompt: "The word birthday will not fit at the end of a line. The | mark shows where the line ends. Choose the correct way to split it.",
       text: "Split it like this: {0}",
       slots: [{ options: ["bir- | thday", "birth- | day", "birthd- | ay"], answer: 1 }],
-      clue: "Look for two smaller words inside birthday.",
-      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them." }
+      clue: "Clap the word. Then use the split rules from the lesson: two different consonants, a double letter, or two smaller words. Remember that some letter pairs stay together.",
+      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them. Bir- | thday breaks up th, which makes one sound and stays together. Birthd- | ay does not split between the two beats, birth and day." }
   ],
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],

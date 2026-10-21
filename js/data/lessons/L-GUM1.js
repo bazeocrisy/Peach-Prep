@@ -7,7 +7,7 @@ PP.addLesson({
   teach: {
     big: "A complete sentence has a part that tells who or what, and a verb, so it makes a whole thought.",
     points: [
-      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they.",
+      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. In a command like Close the door, the who is you, even though it is not written.",
       "Every sentence has a verb. Most verbs tell an action, like splashed or runs. Some verbs, like is and was, tell what someone or something is like.",
       "If a group of words has nothing that tells who or what, or has no verb, the thought is not complete. Add the missing part."
     ],
@@ -705,10 +705,10 @@ PP.addLesson({
   test: [
     { id: "SK-GUM1-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "My aunt keeps four {0} on her porch.",
-      slots: [ { options: ["benches", "benchs", "bench"], answer: 0 } ],
-      clue: "Four means more than one. Look at the last two letters of bench.",
-      why: "The answer is benches. Bench ends in ch, so it adds -es." },
+      text: "Dad fixed two {0} that had stopped ticking.",
+      slots: [ { options: ["watches", "watchs", "watch"], answer: 0 } ],
+      clue: "Two means more than one. Look at the last two letters of watch.",
+      why: "The answer is watches. Watch ends in ch, so it adds -es. Say it: watch-es. You hear the extra beat. Watchs is missing the e, and watch names only one." },
     { id: "SK-GUM1-5-T2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word correctly names more than one brush?",
       choices: [

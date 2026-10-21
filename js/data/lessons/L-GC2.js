@@ -120,36 +120,40 @@ PP.addLesson({
       ],
       clue: "A compound sentence joins two whole thoughts with a comma and a joining word. Check whether the words on each side of the joining word could stand alone as a sentence.",
       why: "The answer is \"The wind blew hard, and the leaves fell from the trees.\" \"The wind blew hard\" and \"the leaves fell from the trees\" are both whole thoughts. In the windows sentence, and only joins two nouns. In the yard sentence, and joins two verbs that share one subject, so it is simple. The sentence that starts with When is complex." },
+    { id: "SK-GC2a-P7", type: "hottext", points: 1, dok: 2, passages: ["p1"],
+      prompt: "One sentence in Maya's draft is a run-on. Select that sentence.",
+      targets: ["p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1"],
+      answer: ["p1:2:3"], pick: 1,
+      clue: "A run-on has two whole thoughts with nothing to join them. Read each sentence slowly. Is there a spot where one thought ends and a new one starts, with no end mark and no comma and joining word?",
+      why: "The answer is sentence 7, \"The beans grew fast the carrots took much longer.\" \"The beans grew fast\" is one whole thought, and \"the carrots took much longer\" is another, with nothing between them. Maya could write: The beans grew fast, but the carrots took much longer. Sentence 3 also has two whole thoughts, but they are joined correctly with a comma and and." },
     { id: "SK-GC2a-P4", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that makes this a correct complex sentence.",
       text: "{0} we finished our chores, Mom took us to the pool.",
       slots: [{ options: ["After", "And", "So"], answer: 0 }],
       clue: "A complex sentence has a part that cannot stand alone. Which word makes the first part tell when something happened?",
       why: "The answer is After: \"After we finished our chores, Mom took us to the pool.\" After makes the first part tell when, and that part cannot stand alone. And and so join two whole sentences in the middle, so they do not belong at the start here." },
-    { id: "SK-GC2a-P5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that is a run-on.",
-      options: [
-        "Grandma planted peppers, and I watered them.",
-        "The peppers grew tall they turned bright red.",
-        "Because the summer was hot, we watered every day.",
-        "We picked the peppers in August.",
-        "Grandma made salsa with the peppers and tomatoes."
-      ],
-      answer: [1], pick: 1,
-      clue: "A run-on has two whole thoughts with nothing to join them. Look for a spot where one thought ends and a new one starts with no end mark and no comma and joining word.",
-      why: "The answer is \"The peppers grew tall they turned bright red.\" \"The peppers grew tall\" is one whole thought, and \"they turned bright red\" is another. It could be fixed like this: The peppers grew tall, and they turned bright red." },
-    { id: "SK-GC2a-P6", type: "ms", points: 2, dok: 2, passages: [],
-      prompt: "Choose the TWO complex sentences.",
-      choices: [
-        { text: "If it rains on Saturday, the fair will move inside.", correct: true },
-        { text: "We clapped loudly when the band started to play.", correct: true },
-        { text: "It rained on Saturday, but the fair went on." },
-        { text: "The band played songs for an hour." },
-        { text: "Because the band played so loudly." }
-      ],
+    { id: "SK-GC2a-P9", type: "ms", points: 2, dok: 2, passages: ["p1"],
+      prompt: "Which TWO sentences in Maya's draft are complex sentences? Choose two answers.",
       pick: 2,
-      clue: "A complex sentence has a whole thought plus a part that starts with a word like because, when, after or if. That part can come at the start or at the end. Make sure there is a whole thought too.",
-      why: "The answers are \"If it rains on Saturday, the fair will move inside.\" and \"We clapped loudly when the band started to play.\" Each has a whole thought plus a part that starts with if or when. The but sentence is compound. The band sentence is simple. \"Because the band played so loudly.\" has no whole thought, so it is a fragment." }
+      choices: [
+        { text: "(8) When the beans were ready, we picked them for a class snack.", correct: true },
+        { text: "(10) We will cook them in a soup after we pull them up.", correct: true },
+        { text: "(3) Mr. Hall brought a bag of rich soil, and we mixed it into the dirt." },
+        { text: "(4) Next, we planted rows of beans and carrots." },
+        { text: "(5) Because the weather was dry." }
+      ],
+      clue: "A complex sentence has a whole thought plus a part that cannot stand alone. That part can come at the start or at the end. A part all by itself, with no whole thought, is not a sentence at all.",
+      why: "The answers are sentence 8, \"When the beans were ready, we picked them for a class snack.\" and sentence 10, \"We will cook them in a soup after we pull them up.\" Each has a whole thought plus a part that starts with when or after. Sentence 3 is compound: two whole thoughts joined with a comma and and. Sentence 4 is simple. Sentence 5 has no whole thought, so it is a fragment." },
+    { id: "SK-GC2a-P8", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Sentence 5 in Maya's draft is a fragment. Which is the best way to join sentences 5 and 6 to fix it?",
+      choices: [
+        { text: "Because the weather was dry, we watered the rows every morning.", correct: true },
+        { text: "Because the weather was dry, and we watered the rows every morning." },
+        { text: "The weather was dry, we watered the rows every morning." },
+        { text: "Because the weather was dry every morning." }
+      ],
+      clue: "A good fix keeps both ideas and leaves you with a whole thought. Check each choice: Does it leave you waiting? Are two whole thoughts held together by only a comma?",
+      why: "The answer is \"Because the weather was dry, we watered the rows every morning.\" The because part now has a whole thought to go with it, so it no longer leaves you waiting. In the choice with and, both parts hang on Because, so it still leaves you waiting. The choice that starts with The weather has two whole thoughts with only a comma, so it is a run-on. \"Because the weather was dry every morning.\" is still a fragment." }
   ],
   test: [
     { id: "SK-GC2a-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -193,29 +197,28 @@ PP.addLesson({
       ],
       clue: "Count the whole thoughts. One whole thought is simple. Two whole thoughts joined with and, but, or, so is compound. A whole thought plus a part that starts with a word like because or after is complex.",
       why: "\"My brother and I built a fort out of boxes.\" and \"We fixed the fort the next morning.\" are simple; the and in the first one only joins two people. \"We built a fort, and Dad helped us tape the roof.\" is compound. \"Because the fort had no door, we crawled in through a window.\" and \"The fort fell down after the dog ran into it.\" are complex." },
-    { id: "SK-GC2a-T4", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that is a fragment.",
-      options: [
-        "The lighthouse stands on a rocky point.",
-        "Its bright light warns ships at night.",
-        "When the keeper climbed the long stairs each evening.",
-        "Today, the light turns on by itself.",
-        "Visitors can climb to the top in summer."
-      ],
-      answer: [2], pick: 1,
-      clue: "Read each sentence alone. Does one of them leave you waiting to find out what happened?",
-      why: "The answer is \"When the keeper climbed the long stairs each evening.\" It has a who and a does-what, but the word When leaves you waiting. It needs a whole thought, such as: When the keeper climbed the long stairs each evening, he lit the lamp." },
-    { id: "SK-GC2a-T5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "This sentence is a run-on. Which is the best way to fix it?",
-      stem: "Dad burned the toast he made more.",
+    { id: "SK-GC2a-T6", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "One sentence in Jordan's draft is a fragment. Select that sentence.",
+      targets: ["p2:2:2", "p2:2:3", "p2:2:4", "p2:3:1", "p2:4:1"],
+      answer: ["p2:2:3"], pick: 1,
+      clue: "Read each sentence by itself. Does one of them leave you waiting to find out what happened?",
+      why: "The answer is sentence 5, \"When we reached the top.\" It has a who and a does-what, but the word When leaves you waiting. Jordan could join it to sentence 6: When we reached the top, we could see boats far out on the water. Each of the other sentences has a whole thought." },
+    { id: "SK-GC2a-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Sentence 8 in Jordan's draft is a run-on. Which is the best way to fix it?",
       choices: [
-        { text: "Dad burned the toast, so he made more.", correct: true },
-        { text: "Dad burned the toast, he made more." },
-        { text: "Dad burned the toast so, he made more." },
-        { text: "Because Dad burned the toast." }
+        { text: "Each night, a keeper climbed the stairs, and he lit the big lamp.", correct: true },
+        { text: "Each night, a keeper climbed the stairs, he lit the big lamp." },
+        { text: "Each night, a keeper climbed the stairs and, he lit the big lamp." },
+        { text: "Each night, when a keeper climbed the stairs." }
       ],
       clue: "Read each fix. Does it still have both whole thoughts? Are they joined in a way you learned?",
-      why: "The answer is \"Dad burned the toast, so he made more.\" The comma goes before so, and so joins the two whole thoughts. A comma alone still makes a run-on, the comma after so is in the wrong place, and the because choice is a fragment." }
+      why: "The answer is \"Each night, a keeper climbed the stairs, and he lit the big lamp.\" The comma goes before and, and and joins the two whole thoughts. A comma alone still makes a run-on, the comma after and is in the wrong place, and the when choice is a fragment." },
+    { id: "SK-GC2a-T8", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Select the sentence in Jordan's draft that is a complex sentence.",
+      targets: ["p2:1:1", "p2:2:2", "p2:2:3", "p2:3:3", "p2:4:1"],
+      answer: ["p2:4:1"], pick: 1,
+      clue: "Look for a sentence with a whole thought plus a part that cannot stand alone. Make sure the sentence really has a whole thought too.",
+      why: "The answer is sentence 11, \"Before we left, I bought a postcard of the lighthouse.\" \"I bought a postcard of the lighthouse\" can stand alone, and \"Before we left\" cannot. Sentence 1 starts with Last summer, but that part has no who or does-what, so sentence 1 is simple. Sentence 4 is compound and sentence 9 is simple. Sentence 5 starts with When, but it has no whole thought, so it is not a complex sentence." }
   ]
 });
 

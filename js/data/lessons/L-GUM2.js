@@ -381,7 +381,7 @@ PP.addLesson({
         { text: "city" },
         { text: "macon", correct: true }
       ],
-      clue: "Find the name of a street and the name of a city. Is a street's name one word or more than one?",
+      clue: "Find the name of a street and the name of a city. Then check every word in each name.",
       why: "The answers are maple, street and macon. Maple Street is the name of one street, so both words need capitals. Macon is the name of a city. Cousin and city are common nouns, and lives is an action word." },
     { id: "SK-GUM2-3-P5", type: "match", points: 2, dok: 2, passages: [],
       prompt: "These words are written with no capital letters. Sort each one: should it start with a capital letter or not?",
@@ -574,13 +574,13 @@ PP.addLesson({
     { id: "SK-GUM2-4-T3", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence should end with an exclamation point?",
       choices: [
-        { text: "Look out, a snake is right by your foot", correct: true },
+        { text: "Yikes, there is a snake right by your foot", correct: true },
         { text: "There is a little snake in the tall grass" },
         { text: "Have you ever held a snake in your hands" },
         { text: "My friend wants a pet snake for his birthday" }
       ],
       clue: "Which sentence would someone say loudly, with a strong feeling like surprise or fear?",
-      why: "The answer is \"Look out, a snake is right by your foot\" because it is a warning said with strong feeling. The sentence that begins with have asks a question, and the other two are telling sentences." },
+      why: "The answer is \"Yikes, there is a snake right by your foot\" because it shows surprise and fear. Yikes is a word people shout when they are scared. The sentence that begins with have asks a question, and the other two are telling sentences." },
     { id: "SK-GUM2-4-T4", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the correct end mark for the sentence.",
       text: "Tamika wonders if the pool is open today{0}",

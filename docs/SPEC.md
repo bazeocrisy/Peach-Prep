@@ -299,3 +299,42 @@ Rules on top of §5 and §6:
   Lessons with an `activity` keep: Learn It, Watch Me, Practice, Check.
 - `clues.groups` (optional): the clue words sorted by structure, used by the "which structure is it?" lesson. When it is present, clue words are not highlighted in passages. Highlighting is also off in Test mode, which stays unaided.
 - `clues.highlight` (optional): set to `false` to show the clue-word box but turn off passage highlighting in practice.
+- `testB` (optional, PP-004): a second, independent skill check ("form B"). `test` is form A.
+  - **Shape.** 4-6 items in the §5 item schema, no hints, like `test`. They are checked by `verification/check-content.js`: the same Georgia codes as form A (item `std`, defaulting to the lesson code); the same total points as form A, so the pass mark is the same; no item id shared with form A (ids stay unique site-wide); no stem (the `stem` text, or a dropdown's `text` sentence) and no whole question identical to one in form A.
+  - **Passages: one list per lesson (the chosen design).** Form B uses the lesson's single `passages` list, like practice and form A. Add the passages it needs to that list, and name them in each form B item's `passages`. There is no separate `passagesB`. One list keeps every existing tool working unchanged (the passage pane, `readability.py`, the passage checks and the hot-text references), and each item already says which passages it shows. A form B item that names a practice passage or a form A passage gets a warning, because a new passage makes the forms more independent.
+  - **Set.** It becomes the set `SK:<key>:tB` (`part: "tB"`). It is not in the Practice Together → Try It Yourself → Test chain. When a lesson has `testB`, form A's set title says "Test (form A)" and form B's says "Test (form B)".
+  - **Which form a check uses** (`PP_SKILLS.nextForm`, from the stored attempt log only; deterministic):
+    1. The first check ever uses form A.
+    2. After any attempt, the next check uses the other form.
+    3. So a review after a pass uses the form NOT used for that pass (the pass is the last attempt). If a later try failed, rule 2 applies to it: the next check is the form that did not just fail.
+    - Attempts saved before PP-004 have no `form`. They were form A, the only form then. A 2.1 record with `tries` but no attempt log also counts as "last was A".
+    - The site's own buttons follow these rules: the skill page's "Take the skill check", the results screen's "Take the skill check again", Try It Yourself's "Take the skill check" and the "already turned in" screen. An address that names a form (`#play/SK:<key>:tB/test`) runs that form. Either way, the attempt records the form that was actually taken.
+  - **Recording.** Each `attempts[]` entry gains `form: "A" | "B"` (a new field; lessons without `testB` record `"A"`). The first dated pass also stores `passForm`. On a two-form lesson, "See my answers" also notes the form in `answersSeenBy: { A, B }`, and an attempt's `afterAnswers` means that *this form's* answers were shown earlier. A lone older `answersSeenAt` counts as form A's. On a one-form lesson, `afterAnswers` is worked out exactly as before.
+  - **Meaning of a pass.** A pass on either form is "Passed the skill check", stored as `mastered` with exactly the meaning in §8 (at least ceil(80%) of the points).
+  - **Never practice.** `:tB`, like `:t`, always runs as a check (no hints) and never records practice. That is the RD-4 rule.
+  - **Without `testB`** a lesson behaves exactly as before.
+- **Retained (PP-004, OFF by default).** `window.PP_FLAGS = { retained: false }` is set in `js/pp.js` and then frozen. A development setting turns it on for one device: `?dev=retained` in the address, or `localStorage["pp.dev"] = "retained"`. Several flags can be given as a comma list.
+  - **With the flag on**, a skill becomes Retained only when a later scored check passes, and that check is:
+    - on a different form from the first dated pass;
+    - at least 7 days after `passedAt`;
+    - not taken after that form's answers were seen (`afterAnswers` is false).
+  - Then `retainedAt` (the date of that check) and `retainedForm` are stored. They are new fields, and they are never changed or cleared afterwards.
+  - **What never makes a skill Retained:**
+    - Elapsed time alone.
+    - An undated 2.1 pass. For a `legacyUndated` record, the first dated pass in the log stands in for `passedAt`.
+    - A grown-up check.
+    - A lesson with no form B, because there is no other form.
+  - **With the flag off** nothing is written and nothing is shown.
+  - Displayed states (`PP_SKILLS.displayState`, computed, never stored, mapped onto `status()` without changing it):
+
+    | Shown | From |
+    |---|---|
+    | Not started | `status` `new` |
+    | Learning | `started`, with only `taught` / `learned` |
+    | Practicing | `started`, with `practiced`, `tried` or `tries` |
+    | Passed skill check (or Checked by a grown-up) | `mastered` |
+    | Review recommended | `mastered` and `reviewDue` |
+    | Retained (flag only) | `mastered` and `retainedAt`, unless the last try did not pass |
+
+    Only "Retained" is new on screen, and only with the flag on. The other states keep their current wording ("Started", "✓", "review").
+  - Policy and owner decisions: docs/audits/PP-004-MASTERY-RECOMMENDATIONS.md.

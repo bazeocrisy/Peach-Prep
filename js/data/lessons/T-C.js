@@ -225,7 +225,7 @@ PP.addLesson({
       ],
       figure: { src: "assets/figures/tc1b-frog.svg", label: "Figure 1", caption: "A green frog waits on a lily pad in a Georgia pond at night.",
         alt: "A drawing of a frog sitting on a round lily pad in a pond." },
-      note: "The heading tells what the section is about. The word tongue is in bold because it is important. The text box adds a fun extra fact. The picture shows the frog and the lily pad. The caption adds two things the picture cannot show: where (a Georgia pond) and when (at night)."
+      note: "The heading tells what the section is about. The word tongue is in bold because it is a key word: it names what a frog uses to catch its food. The text box adds a fun extra fact. The picture shows the frog and the lily pad. The caption adds two things the picture cannot show: where (a Georgia pond) and when (at night)."
     }, {
       label: "Text features on a web page about frogs",
       lines: [
@@ -442,8 +442,8 @@ PP.addLesson({
       choices: [
         { text: "migrate: to move to a far-away place when the season changes", correct: true },
         { text: "migrate: to change from a caterpillar into a butterfly" },
-        { text: "migrate: to stop and drink nectar from flowers" },
-        { text: "migrate: to stay in one warm place all year long" }
+        { text: "migrate: to stop on the way and drink nectar from flowers" },
+        { text: "migrate: to stay in one warm place all through the year" }
       ],
       clue: "A bold word is a key word for its own section. Read the sentences right after it to learn what it means.",
       why: "The answer is \"migrate: to move to a far-away place when the season changes.\" The author made migrate bold because it is the big idea of \"A Long Trip South.\" The next sentences tell what it means: each fall, monarchs fly south to a warmer place, and some go all the way to Mexico. Changing into a butterfly is told in a different section. Drinking nectar is only something monarchs do on the way. Staying in one place is the opposite of the long trip." },
@@ -1058,19 +1058,19 @@ PP.addLesson({
       partA: { prompt: "Why does Grace know so much about what baby sea turtles need?",
         choices: [
           { text: "She has spent many years taking care of turtle nests by the sea.", correct: true },
-          { text: "She learned all about turtles by reading a kids' magazine." },
-          { text: "She is a visitor who walks on the beach on summer nights." },
-          { text: "She studied turtles as a girl, so she has always known." }
+          { text: "She learned all about sea turtles by reading a kids' magazine." },
+          { text: "She is a visitor who walks on the beach on warm summer nights." },
+          { text: "She studied turtles as a young girl, so she has always known." }
         ] },
       partB: { prompt: "Which detail best supports the answer to Part A?",
         choices: [
-          { text: "The box says that for 30 years, her job has been to keep sea turtle nests safe.", correct: true },
-          { text: "The box says that she wrote this for a kids' magazine." },
-          { text: "Grace says that she uses a red flashlight, not a white one." },
-          { text: "Grace says that she teaches every beach visitor she meets." }
+          { text: "The box says that her job for 30 years has been keeping turtle nests safe.", correct: true },
+          { text: "The box says that she wrote this piece for a kids' magazine." },
+          { text: "Grace says that she always uses a red flashlight, never a white one." },
+          { text: "Grace says that she now teaches every beach visitor she meets." }
         ] },
       clue: "Read the note in the box first. What has Grace done for most of her life? Then check what she says about when she was a girl.",
-      why: "Part A: She has spent many years taking care of turtle nests by the sea. Part B: The box says that for 30 years, her job has been to keep sea turtle nests safe. That is her individual context: her job and her life by the sea. She writes for the magazine, she did not learn from it. She teaches visitors, so she is not one. She says that as a girl she did not know about the lights. The red flashlight shows what she knows, but not how she learned it."},
+      why: "Part A: She has spent many years taking care of turtle nests by the sea. Part B: The box says that her job for 30 years has been keeping turtle nests safe. That is her individual context: her job and her life by the sea. She writes for the magazine, she did not learn from it. She teaches visitors, so she is not one. She says that as a girl she did not know about the lights. The red flashlight shows what she knows, but not how she learned it."},
     { id: "SK-TC2c-T6", type: "mc", points: 1, dok: 2, passages: [],
       stem: ["Note in a box: Imani wrote this note to her neighbor in September. A hurricane was heading for the Georgia coast, and families near the beach were told to leave right away. Her neighbor lived farther from the beach and could stay.", "Dear Mr. Ortiz, We have to leave tonight. Please feed my fish, Goldie, until we get back!"],
       prompt: "How does knowing Imani's situation help you understand her note?",

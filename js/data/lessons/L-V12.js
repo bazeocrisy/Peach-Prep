@@ -392,7 +392,7 @@ PP.addLesson({
       },
       {
         label: "Example: roots to know",
-        lines: ["port = carry, as in portable", "graph = write, as in autograph", "tele = far, as in television", "phon = sound, as in phonics", "rupt = break, as in rupture", "spect = look, as in spectacles", "telephone = tele + phone. Tele means far. Phone comes from phon, which means sound.", "So a telephone brings sound from far away."],
+        lines: ["port = carry, as in portable", "graph = write, as in autograph", "tele = far, as in television", "phon = sound, as in phonics", "rupt = break, as in interrupt (to break in while someone is talking)", "spect = look, as in spectacles", "telephone = tele + phone. Tele means far. Phone comes from phon, which means sound.", "So a telephone brings sound from far away."],
         note: "Find each root you know and say its meaning. Then put the meanings together."
       }
     ],
