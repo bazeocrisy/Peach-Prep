@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="t">
+  <title id="t">Bar graph titled People Who Came to the Nature Center. The bottom says number of people. Winter 20, spring 50, summer 40, fall 30.</title>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <text x="160" y="26" font-size="22" font-weight="bold" text-anchor="middle">People Who Came</text>
+    <text x="160" y="52" font-size="22" font-weight="bold" text-anchor="middle">to the Nature Center</text>
+    <g font-size="21" text-anchor="end"><text x="84" y="102">Winter</text><text x="84" y="147">Spring</text><text x="84" y="192">Summer</text><text x="84" y="237">Fall</text></g>
+  </g>
+  <g fill="#BFE0B4" stroke="#111" stroke-width="2.5">
+    <rect x="92" y="80" width="76" height="30"/>
+    <rect x="92" y="125" width="190" height="30"/>
+    <rect x="92" y="170" width="152" height="30"/>
+    <rect x="92" y="215" width="114" height="30"/>
+  </g>
+  <path d="M92 70 V256 H300" fill="none" stroke="#111" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <text x="174" y="102">20</text><text x="288" y="147">50</text><text x="250" y="192">40</text><text x="212" y="237">30</text>
+    <text x="196" y="286" text-anchor="middle">number of people</text>
+  </g>
+</svg>

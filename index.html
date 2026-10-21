@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peach Prep · Georgia Milestones practice, Grade 3 ELA</title>
-  <meta name="description" content="Every Georgia Grade 3 English Language Arts standard, each with a lesson, practice and a test, for the Georgia Milestones. Free, with a parent guide.">
+  <meta name="description" content="Georgia Milestones Grade 3 English Language Arts practice: a lesson with practice and a skill check for every tested standard, lessons for classroom-only skills, everyday habits, essay practice and a shortened practice test. Free, with a parent guide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -15,18 +15,74 @@
   <a class="skip" href="#main">Skip to content</a>
   <main id="main">
 
+  <!-- Choice and path contain no account or placement assessment. -->
+  <section class="screen" id="screen-choose" aria-labelledby="choose-title">
+    <div class="wrap path-wrap">
+      <p class="brand">Peach Prep · Grade 3 ELA</p>
+      <h1 class="page-title" id="choose-title" tabindex="-1">How would you like to learn?</h1>
+      <p class="page-sub">Choose a suggested route or pick a skill. You can switch anytime.</p>
+      <div class="learning-choices">
+        <article class="path-card">
+          <p class="path-eyebrow">A little guidance</p>
+          <h2>Follow the Learning Path</h2>
+          <p>Start with stories and sentences, then build toward research and writing. See what to work on next.</p>
+          <button type="button" class="btn btn-primary" id="choose-path" disabled>Follow the Learning Path</button>
+        </article>
+        <article class="path-card">
+          <p class="path-eyebrow">Your choice</p>
+          <h2>Choose Individual Lessons</h2>
+          <p>Pick a skill your child needs or match what they are learning at school. Every lesson stays available.</p>
+          <button type="button" class="btn btn-soft" id="choose-browse" disabled>Choose Individual Lessons</button>
+        </article>
+      </div>
+      <p class="note">No login needed. Progress is saved in this browser on this device when storage is available. Shared use is not separate child tracking.</p>
+      <p class="note path-storage" role="status"></p>
+    </div>
+  </section>
+  <section class="screen" id="screen-path" aria-labelledby="path-title" hidden>
+    <header class="bar path-bar">
+      <button type="button" class="nav-btn" data-go="choose">Switch learning mode</button>
+      <button type="button" class="nav-btn" data-go="parents">Parent guide</button>
+    </header>
+    <div class="wrap path-wrap">
+      <h1 class="page-title" id="path-title" tabindex="-1">Your Learning Path</h1>
+      <p class="page-sub">A suggested route through Grade 3 ELA. Work at your own pace; every lesson stays available.</p>
+      <div id="path-intro" hidden>
+        <article class="path-card">
+          <h2>How your learning path works</h2>
+          <ul>
+            <li>Begin with stories and sentences, then build toward research and writing.</li>
+            <li>Use Learn It, Watch Me, Practice Together, Try It Yourself, and a check. A lesson can take more than one session.</li>
+            <li>Begin reading aloud, handwriting, and everyday habits alongside your lessons. A grown-up helps observe these activities.</li>
+            <li>Mark activities finished when you have worked through them. This is a bookmark, not proof of mastery; check results stay separate.</li>
+            <li>You can open another lesson or switch modes anytime without clearing your progress.</li>
+          </ul>
+          <div class="path-actions">
+            <button type="button" class="btn btn-primary" id="path-start">Start My Path</button>
+            <button type="button" class="btn btn-soft" id="path-preview">View the Full Path</button>
+          </div>
+        </article>
+      </div>
+      <p class="note">Saved in this browser on this device. Clearing browser data can erase progress. No account or cross-device saving yet.</p>
+      <p class="note path-storage" role="status"></p>
+      <div id="path-content"></div>
+    </div>
+  </section>
+
   <!-- ===================== HOME: every standard ===================== -->
-  <section class="screen" id="screen-home" aria-labelledby="home-title">
+  <section class="screen" id="screen-home" aria-labelledby="home-title" hidden>
     <header class="hero hero-compact">
       <div class="hero-inner">
         <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
         <h1 id="home-title" class="hero-title" tabindex="-1">Georgia Milestones · Grade 3 ELA</h1>
-        <p class="hero-sub">Every skill on Georgia's standards, in learning order. Each one: Learn It, Watch Me, Practice Together, Try It Yourself, Test.</p>
+        <p class="hero-sub">Georgia's grade 3 ELA skills, in learning order. Most have five steps: Learn It, Watch Me, Practice Together, Try It Yourself, Test.</p>
         <div class="up-next" id="up-next"></div>
       </div>
     </header>
 
     <div class="wrap">
+      <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
+      <div class="path-actions browse-mode"><button type="button" class="btn btn-primary" data-go="path">Follow the Learning Path</button><button type="button" class="btn btn-soft" data-go="choose">Switch learning mode</button></div>
       <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
       <div class="home-links">
         <button type="button" class="hl-btn" id="hero-mixed">Practice tests and mixed practice</button>
@@ -37,11 +93,11 @@
       <div class="home-progress" id="home-progress"></div>
       <div class="skill-tools">
         <label class="sr" for="skill-search">Find a skill</label>
-        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: try pronoun, B3 or 3.T.T.1" autocomplete="off">
+        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: pronoun, B3, 3.T.T.1" autocomplete="off">
         <div class="seg" role="group" aria-label="Which skills to show">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="test" aria-pressed="false">On the test</button>
-          <button type="button" data-filter="todo" aria-pressed="false">Not mastered</button>
+          <button type="button" data-filter="todo" aria-pressed="false">Not passed yet</button>
         </div>
       </div>
       <p class="skill-count" id="skill-count" role="status"></p>
@@ -70,7 +126,7 @@
       <p class="page-sub" id="sk-plain"></p>
       <p class="sk-tags" id="sk-tags"></p>
       <div class="steps" id="sk-steps" role="tablist" aria-label="Steps"></div>
-      <div class="sk-panel" id="sk-panel" tabindex="-1"></div>
+      <div class="sk-panel" id="sk-panel" tabindex="-1" role="tabpanel"></div>
       <details class="sk-official" id="sk-official"></details>
     </div>
   </section>
@@ -128,7 +184,6 @@
       <h1 class="page-title" id="section-title" tabindex="-1"></h1>
       <p class="page-sub" id="section-sub"></p>
       <ul class="set-grid" id="set-grid"></ul>
-      <div class="soon-panel" id="section-soon" hidden></div>
     </div>
   </section>
 
@@ -143,16 +198,16 @@
       <h1 class="page-title" id="player-title" tabindex="-1"></h1>
     </div>
     <div class="tabs" id="tabs" role="tablist" aria-label="Passage or question">
-      <button type="button" role="tab" id="tab-passage" aria-selected="true">Read the passage</button>
-      <button type="button" role="tab" id="tab-question" aria-selected="false">Question</button>
+      <button type="button" role="tab" id="tab-passage" aria-selected="true" aria-controls="passage-pane">Read the passage</button>
+      <button type="button" role="tab" id="tab-question" aria-selected="false" aria-controls="item-pane">Question</button>
     </div>
     <div class="player-grid" id="player-grid" data-pane="passage">
-      <div class="passage-pane" id="passage-pane" aria-label="Passage">
+      <div class="passage-pane" id="passage-pane" role="tabpanel" aria-labelledby="tab-passage">
         <p class="passage-note" id="passage-note" tabindex="-1" role="status" hidden></p>
         <button type="button" class="clue-toggle" id="clue-toggle" aria-pressed="false" hidden>Show clue words</button>
         <div id="passage-pane-body"></div>
       </div>
-      <div class="item-pane">
+      <div class="item-pane" id="item-pane" role="tabpanel" aria-labelledby="tab-question">
         <!-- work -->
         <div id="stage-work">
           <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
@@ -160,7 +215,8 @@
           <h2 class="q-prompt" id="q-prompt" tabindex="-1"></h2>
           <div id="q-body"></div>
           <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
-          <div id="q-feedback" class="feedback" aria-live="polite" hidden></div>
+          <div id="q-feedback" class="feedback" hidden></div>
+          <p id="q-say" class="sr" role="status" aria-live="polite"></p>
           <div class="q-controls">
             <button type="button" class="btn btn-soft" id="q-prev">Previous question</button>
             <button type="button" class="btn btn-help" id="q-help">Help me</button>
@@ -193,6 +249,15 @@
           </div>
           <div id="res-review" class="review" hidden></div>
         </div>
+        <!-- finished already: Forward or reload on a finished practice or test (PP-003 D5) -->
+        <div id="stage-again" class="panel" hidden>
+          <h2 class="panel-title" id="again-title" tabindex="-1">You finished this</h2>
+          <p id="again-line"></p>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-primary" id="again-start">Start again</button>
+            <button type="button" class="btn btn-soft" id="again-back">Back to the list</button>
+          </div>
+        </div>
         <!-- practice: done -->
         <div id="stage-done" class="panel" hidden>
           <h2 class="panel-title" id="done-title" tabindex="-1">Great work!</h2>
@@ -217,18 +282,18 @@
       <h1 class="page-title" id="write-title" tabindex="-1"></h1>
       <div class="prompt-card" id="write-prompt"></div>
       <div class="wtabs" role="tablist" aria-label="Writing steps">
-        <button type="button" role="tab" data-wtab="sources" aria-selected="true">1. Read</button>
-        <button type="button" role="tab" data-wtab="plan" aria-selected="false">2. Plan</button>
-        <button type="button" role="tab" data-wtab="write" aria-selected="false">3. Write</button>
-        <button type="button" role="tab" data-wtab="check" aria-selected="false">4. Check</button>
-        <button type="button" role="tab" data-wtab="score" aria-selected="false">For parents</button>
+        <button type="button" role="tab" id="wtab-sources" data-wtab="sources" aria-selected="true" aria-controls="w-sources">1. Read</button>
+        <button type="button" role="tab" id="wtab-plan" data-wtab="plan" aria-selected="false" aria-controls="w-plan">2. Plan</button>
+        <button type="button" role="tab" id="wtab-write" data-wtab="write" aria-selected="false" aria-controls="w-write">3. Write</button>
+        <button type="button" role="tab" id="wtab-check" data-wtab="check" aria-selected="false" aria-controls="w-check">4. Check</button>
+        <button type="button" role="tab" id="wtab-score" data-wtab="score" aria-selected="false" aria-controls="w-score">For parents</button>
       </div>
       <div class="write-grid" id="write-grid" data-tab="sources">
-        <div class="wpanel w-sources" id="w-sources"></div>
-        <div class="wpanel w-plan" id="w-plan"></div>
-        <div class="wpanel w-write" id="w-write"></div>
-        <div class="wpanel w-check" id="w-check"></div>
-        <div class="wpanel w-score" id="w-score"></div>
+        <div class="wpanel w-sources" id="w-sources" role="tabpanel" aria-labelledby="wtab-sources"></div>
+        <div class="wpanel w-plan" id="w-plan" role="tabpanel" aria-labelledby="wtab-plan"></div>
+        <div class="wpanel w-write" id="w-write" role="tabpanel" aria-labelledby="wtab-write"></div>
+        <div class="wpanel w-check" id="w-check" role="tabpanel" aria-labelledby="wtab-check"></div>
+        <div class="wpanel w-score" id="w-score" role="tabpanel" aria-labelledby="wtab-score"></div>
       </div>
     </div>
   </section>
@@ -244,15 +309,15 @@
       <h1 class="page-title" id="parents-title" tabindex="-1">Parent guide</h1>
       <p class="page-sub">Georgia Milestones, Grade 3 English Language Arts. Built from GaDOE's official documents, linked below.</p>
       <div class="ptabs" role="tablist" aria-label="Parent guide sections">
-        <button type="button" role="tab" data-ptab="test" aria-selected="true">The test</button>
-        <button type="button" role="tab" data-ptab="standards" aria-selected="false">Every standard</button>
-        <button type="button" role="tab" data-ptab="essay" aria-selected="false">The essay</button>
-        <button type="button" role="tab" data-ptab="plan" aria-selected="false">How to use</button>
+        <button type="button" role="tab" id="ptab-btn-test" data-ptab="test" aria-selected="true" aria-controls="ptab-test">The test</button>
+        <button type="button" role="tab" id="ptab-btn-standards" data-ptab="standards" aria-selected="false" aria-controls="ptab-standards">Every standard</button>
+        <button type="button" role="tab" id="ptab-btn-essay" data-ptab="essay" aria-selected="false" aria-controls="ptab-essay">The essay</button>
+        <button type="button" role="tab" id="ptab-btn-plan" data-ptab="plan" aria-selected="false" aria-controls="ptab-plan">How to use</button>
       </div>
-      <div class="ppanel" id="ptab-test" role="tabpanel"></div>
-      <div class="ppanel" id="ptab-standards" role="tabpanel" hidden></div>
-      <div class="ppanel" id="ptab-essay" role="tabpanel" hidden></div>
-      <div class="ppanel" id="ptab-plan" role="tabpanel" hidden></div>
+      <div class="ppanel" id="ptab-test" role="tabpanel" aria-labelledby="ptab-btn-test"></div>
+      <div class="ppanel" id="ptab-standards" role="tabpanel" aria-labelledby="ptab-btn-standards" hidden></div>
+      <div class="ppanel" id="ptab-essay" role="tabpanel" aria-labelledby="ptab-btn-essay" hidden></div>
+      <div class="ppanel" id="ptab-plan" role="tabpanel" aria-labelledby="ptab-btn-plan" hidden></div>
     </div>
   </section>
 
@@ -265,11 +330,13 @@
   <script src="js/data/habits.js" onerror="window.PP_HABITS=null"></script>
   <script src="js/data/manifest.js"></script>
   <script src="js/data/catalog.js"></script>
+  <script src="js/data/path.js"></script>
   <script src="js/engine/items.js"></script>
   <script src="js/engine/player.js"></script>
   <script src="js/skills.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/parents.js"></script>
+  <script src="js/path.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

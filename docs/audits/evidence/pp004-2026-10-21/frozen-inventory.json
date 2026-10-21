@@ -1,0 +1,87 @@
+{
+  "lessons": 99,
+  "forms": [
+    {
+      "code": "3.T.SS.2.a",
+      "a": 6,
+      "b": 6,
+      "items": 5
+    },
+    {
+      "code": "3.T.T.1.a",
+      "a": 8,
+      "b": 8,
+      "items": 6
+    },
+    {
+      "code": "3.T.T.1.c",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "TS-CE",
+      "a": 6,
+      "b": 6,
+      "items": 5
+    },
+    {
+      "code": "3.T.T.2.a",
+      "a": 8,
+      "b": 8,
+      "items": 6
+    },
+    {
+      "code": "3.T.T.2.b",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.T.T.4.a",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.T.RA.2.a",
+      "a": 6,
+      "b": 6,
+      "items": 4
+    },
+    {
+      "code": "3.L.GC.2.b",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.L.GC.1:M:form-and-use-irregular-plural-nouns",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.L.V.2.a",
+      "a": 7,
+      "b": 7,
+      "items": 5
+    },
+    {
+      "code": "3.L.V.3.a",
+      "a": 7,
+      "b": 7,
+      "items": 6
+    }
+  ],
+  "practiceItems": 520,
+  "formAItems": 489,
+  "formBItems": 67,
+  "figures": 29
+}

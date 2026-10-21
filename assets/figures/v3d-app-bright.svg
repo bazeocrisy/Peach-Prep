@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 404" role="img" aria-labelledby="t">
+  <title id="t">A dictionary app screen. The search box says brite. Under it the app asks Did you mean: bright? The entry shows the word bright, a Hear it button, a Meanings tab and a Synonyms tab, the part of speech adjective, and two numbered meanings.</title>
+  <rect x="2" y="2" width="296" height="400" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
+  <path d="M2 34 H298" stroke="#444" stroke-width="2"/>
+  <rect x="3.5" y="3.5" width="293" height="29" rx="10" fill="#E6E6E6"/>
+  <g fill="#FFFFFF" stroke="#444" stroke-width="1.5"><circle cx="20" cy="18" r="6"/><circle cx="38" cy="18" r="6"/><circle cx="56" cy="18" r="6"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <rect x="14" y="48" width="272" height="40" rx="20" fill="#FFFFFF" stroke="#444" stroke-width="2"/>
+    <circle cx="38" cy="66" r="8" fill="none" stroke="#444" stroke-width="3"/><path d="M44 72 L52 80" stroke="#444" stroke-width="3.5"/>
+    <text x="62" y="76">brite</text>
+    <text x="16" y="120" fill="#444">Did you mean:</text>
+    <text x="166" y="120"><tspan fill="#123E9C" font-weight="bold" text-decoration="underline">bright</tspan><tspan fill="#444">?</tspan></text>
+    <path d="M14 146 H286" stroke="#BBB" stroke-width="1.5"/>
+    <text x="16" y="190" font-size="28" font-weight="bold">bright</text>
+    <rect x="160" y="165" width="126" height="36" rx="18" fill="#F4F4F4" stroke="#111" stroke-width="2"/>
+    <path d="M176 180 h6 l8 -7 v20 l-8 -7 h-6 z" fill="#111"/>
+    <path d="M194 177 q5 6 0 12" fill="none" stroke="#111" stroke-width="2.5"/>
+    <text x="206" y="190">Hear it</text>
+    <rect x="14" y="216" width="134" height="38" rx="6" fill="#FFF0B8" stroke="#111" stroke-width="3"/>
+    <text x="81" y="242" text-anchor="middle" font-weight="bold">Meanings</text>
+    <rect x="152" y="216" width="134" height="38" rx="6" fill="#F4F4F4" stroke="#444" stroke-width="2"/>
+    <text x="219" y="242" text-anchor="middle">Synonyms</text>
+    <text x="16" y="288" font-style="italic" fill="#333">adjective</text>
+    <text x="16" y="322" font-weight="bold">1.</text>
+    <text x="42" y="322">full of light; shining</text>
+    <text x="16" y="358" font-weight="bold">2.</text>
+    <text x="42" y="358">smart and quick to learn</text>
+  </g>
+</svg>

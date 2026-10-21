@@ -158,7 +158,7 @@ PP.addSet({
       why: "The answer is: Marcus first plans to fill a jar with fireflies, but the speaker chooses to watch them free. Marcus plans to fill the jar to make a night-light for Lila, then changes his mind. The speaker says, \"I'd rather watch them, free and bright.\" Marcus never catches a firefly, Lila (not Marcus) is afraid of the dark, and Marcus counts the lights with Lila, not alone."
     },
     {
-      id: "R-POE-01-q8", type: "ms", points: 1, std: ["3.T.T.1.d"], dok: 3,
+      id: "R-POE-01-q8", type: "ms", points: 2, std: ["3.T.T.1.d"], dok: 3,
       prompt: "Which TWO ideas are found in BOTH the poem and the story? Choose two answers.",
       pick: 2,
       choices: [

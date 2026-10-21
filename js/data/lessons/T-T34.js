@@ -8,7 +8,8 @@ PP.addLesson({
       "The opinion is what the author believes or wants. Look for clue words like I think, I believe, should and best. The opinion is often in the first paragraph and again at the end.",
       "A reason tells why the author thinks that way. Reasons often come after words like because, First, Another reason and Finally.",
       "Evidence is the facts and examples that back up a reason. It usually comes right after the reason.",
-      "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree."
+      "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+      "Authors also plan how an opinion piece is built. Each reason often gets its own paragraph. Some authors add a paragraph that answers people who disagree, with words like Some people say ... But. The ending says the opinion again and may ask readers to do something."
     ],
     words: [
       { term: "opinion", means: "what someone thinks or believes" },
@@ -130,7 +131,17 @@ PP.addLesson({
         { text: "The library is closed on Saturdays now." }
       ],
       clue: "Evidence for this reason must show that people really did come when the library was open on Saturdays. Check each detail against that.",
-      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and the library being closed now is not evidence for any reason." }
+      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and the library being closed now is not evidence for any reason." },
+    { id: "SK-TT3a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Why does the author end with the last paragraph, \"Please ask the town to open the doors on Saturdays!\"?",
+      choices: [
+        { text: "to say her opinion again and ask readers to do something about it", correct: true },
+        { text: "to give a new reason that she has not told the reader yet" },
+        { text: "to tell a fact about when the library is open now" },
+        { text: "to answer people who say the library costs too much" }
+      ],
+      clue: "Think about how the whole piece is built. What job does the last paragraph of a piece like this usually do?",
+      why: "The answer is to say her opinion again and ask readers to do something about it. The ending brings back Kendra's opinion that the library should open on Saturdays and asks readers to help. It gives no new reason, the hours are told in paragraph 1, and Kendra never writes about cost." }
   ],
   test: [
     { id: "SK-TT3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -171,13 +182,13 @@ PP.addLesson({
           { text: "\"But it does not have a single tree.\"" }
         ] },
       clue: "Find the paragraph that gives the shade reason. What evidence comes right after it? Then pick the sentence that shows that evidence.",
-      why: "Part A: by telling how hot the playground gets in the sun. Part B: \"On hot days in May, the metal slide gets too hot to touch.\" This example shows why shade is needed. The birds and squirrels support a different reason, and the parent club sentence answers people who disagree." },
+      why: "Part A: by telling how hot the playground gets in the sun. Part B: \"On hot days in May, the metal slide gets too hot to touch.\" This example shows why shade is needed. The birds and squirrels support a different reason, and the parent club sentence is about paying for the trees, not about heat." },
     { id: "SK-TT3a-T4", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence states the author's second reason? Choose the sentence in the passage.",
       targets: ["p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1", "p2:4:2"],
       answer: ["p2:3:1"], pick: 1,
       clue: "A reason tells why the author holds the opinion. Evidence gives facts about a reason. Which sentence tells a new why?",
-      why: "The answer is \"Trees would also bring wildlife to our school.\" The word also shows that a new reason is starting. The sentences about birds, squirrels and journals are evidence for it, and paragraph 4 answers people who disagree." },
+      why: "The answer is \"Trees would also bring wildlife to our school.\" The word also shows that a new reason is starting. The sentences about birds, squirrels and journals are evidence for it, and paragraph 4 is about what trees cost." },
     { id: "SK-TT3a-T5", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "The author wants to add one more piece of evidence. Which sentence would best support one of the author's reasons?",
       choices: [
@@ -187,7 +198,17 @@ PP.addLesson({
         { text: "Our parent club meets in the school library on Tuesday nights." }
       ],
       clue: "First, find each of the author's reasons. Then choose the fact that proves one of them.",
-      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" One reason is that trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings do not support either reason: they are not about shade or about wildlife." }
+      why: "The answer is \"Last spring, a robin built a nest in a tree across the street from our school.\" One reason is that trees would bring wildlife to the school, and a robin nesting in a tree nearby shows that trees bring birds. The slide, kickball and parent club meetings do not support either reason: they are not about shade or about wildlife." },
+    { id: "SK-TT3a-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Why does the author include paragraph 4?",
+      choices: [
+        { text: "to answer people who might disagree with planting trees", correct: true },
+        { text: "to give a new reason that trees would bring wildlife" },
+        { text: "to explain how shade keeps the playground cooler" },
+        { text: "to state the author's opinion for the first time" }
+      ],
+      clue: "Read the first words of paragraph 4. Whose idea is the author talking about there, and how does the author reply?",
+      why: "The answer is to answer people who might disagree with planting trees. Paragraph 4 starts with what some people say, that trees cost too much, and then the author explains how the parent club could raise the money. Wildlife is paragraph 3, shade is paragraph 2, and the opinion is first stated in paragraph 1." }
   ]
 });
 
@@ -198,7 +219,7 @@ PP.addLesson({
     big: "A strong opinion piece states your opinion, explains each reason with facts or examples, links ideas with words like because, and ends by saying your opinion again.",
     points: [
       "Begin by introducing the topic. Then state your opinion clearly in one sentence, like \"I think our class should start a garden.\"",
-      "Give reasons. On the Milestones writing task, you are given the reasons. Your job is to explain each one with facts and examples from the passages, in your own words.",
+      "Give reasons. A reason tells WHY your opinion is a good one. When you write on your own, you think of the reasons yourself. On the Milestones, the writing task usually gives you the reasons (the rubric calls them the provided reasons). Either way, explain each reason with facts and examples, in your own words.",
       "Link your ideas with words like because, therefore, also, for example and in addition. Because joins your opinion or a reason to the facts that explain it.",
       "End with a conclusion. Say your opinion again and sum up your reasons. Do not start a new idea at the end."
     ],
@@ -247,10 +268,10 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: ["Should kids have a job at home, like feeding a pet or setting the table?", "Write a short opinion paragraph. Start with your opinion. Then use these two reasons: Jobs teach kids to be responsible. Jobs help the whole family. Explain each reason with because and an example. End with a sentence that says your opinion again."],
+    prompt: ["Should kids have a job at home, like feeding a pet or setting the table?", "Write a short opinion paragraph. Start with your opinion. Then give two reasons. You can use these reasons, or think of one of your own: Jobs teach kids to be responsible. Jobs help the whole family. Explain each reason with because and an example. End with a sentence that says your opinion again."],
     checklist: [
       "I stated my opinion in the first sentence.",
-      "I gave both reasons and used because to explain each one.",
+      "I gave two reasons and used because to explain each one.",
       "I added an example for each reason.",
       "I ended with a sentence that says my opinion again."
     ],
@@ -323,7 +344,18 @@ PP.addLesson({
         "For all these reasons, a reading corner would be great for our class."
       ],
       clue: "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
-      why: "The order is: the empty corner (introduces the topic), I think we should turn it into a reading corner (the opinion), First (reason 1), Also (reason 2), and For all these reasons (the conclusion)." }
+      why: "The order is: the empty corner (introduces the topic), I think we should turn it into a reading corner (the opinion), First (reason 1), Also (reason 2), and For all these reasons (the conclusion)." },
+    { id: "SK-TT3c-P6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read Theo's opinion in the box. Theo needs to think of a reason on his own. Which sentence is the best reason to support his opinion?",
+      stem: ["Opinion: Our playground should have a buddy bench, where kids can sit when they need someone to play with."],
+      choices: [
+        { text: "Kids who feel left out would have an easy way to find a friend.", correct: true },
+        { text: "Our playground already has two slides and a big swing set." },
+        { text: "I really think a buddy bench is a great idea." },
+        { text: "Some kids like to eat their lunch outside on sunny days." }
+      ],
+      clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: Does it answer the question, why should the school do this?",
+      why: "The answer is \"Kids who feel left out would have an easy way to find a friend.\" It tells why a buddy bench is a good idea. The slides sentence is a fact, but it does not explain why the playground needs a bench. \"I really think...\" only says the opinion again, and eating lunch outside is not about finding someone to play with." }
   ],
   test: [
     { id: "SK-TT3c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -345,16 +377,16 @@ PP.addLesson({
       ],
       clue: "For the first blank, ask: Is the new sentence a result of the one before it? For the second blank, ask: Is sentence 7 an example, an ending, or one more reason?",
       why: "The first blank needs \"Therefore\": staying healthy is the result of drinking whenever we are thirsty. However shows something different, For example gives an example, and Before that tells time. The second blank needs \"In addition\": sentence 7 adds a second reason. It is not an example, an ending, or a change of plan." },
-    { id: "SK-TT3c-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Malik wants to add one more sentence to the paragraph about saving class time. Which sentence is best?",
+    { id: "SK-TT3c-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Malik wants to add a third reason in a new paragraph before sentence 10. Which sentence is the best new reason to support his opinion?",
       choices: [
-        { text: "With bottles at our desks, nobody would need to leave the room to get a drink.", correct: true },
-        { text: "Some water bottles are made of metal, and others are made of hard plastic." },
-        { text: "Our teacher says that math is the most important subject of the whole day." },
-        { text: "My water bottle at home has stickers of planets and stars all over it." }
+        { text: "Using our own bottles would spread fewer germs than sharing one fountain.", correct: true },
+        { text: "The water fountain in our hall was put in many years ago." },
+        { text: "I really, really want to keep a water bottle at my desk." },
+        { text: "Some water bottles can keep hot cocoa warm for hours." }
       ],
-      clue: "Find the paragraph about saving class time. Which choice helps show how water bottles would save time?",
-      why: "The answer is \"With bottles at our desks, nobody would need to leave the room to get a drink.\" That paragraph says water bottles would save class time, and this explains how: no one would wait in line at the fountain. What bottles are made of, which subject matters most and stickers on a bottle do not show time being saved." },
+      clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: Does it answer the question, why should Room 8 allow water bottles?",
+      why: "The answer is \"Using our own bottles would spread fewer germs than sharing one fountain.\" It gives a new reason why Room 8 should allow bottles. The fountain's age is a fact that does not explain why, \"I really, really want...\" only says the opinion again, and hot cocoa is off topic." },
     { id: "SK-TT3c-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Sentence 10 is a weak conclusion. Which sentence should replace sentence 10?",
       choices: [
@@ -440,6 +472,19 @@ PP.addLesson({
         ["I run across the windy hill.", "My kite is lying flat and still.", "Then a gust comes rushing by,", "And up it jumps into the sky!"],
         ["Higher, higher, past the trees,", "It dips and dances in the breeze.", "Its tail goes swishing left and right.", "I hold the string with all my might."],
         ["Higher, higher, near the sun,", "I laugh and shout and start to run.", "But when the wind grows calm at last,", "My kite floats down, but not too fast."]
+      ] },
+    /* PP-004 form B passages: used only by testB. p3 rhymes ABAB (form A's poem is AABB and
+       the practice poem is ABCB); p4 is a one-stanza ABCB poem for a single rhyme item.
+       Needs independent review. */
+    { id: "p3", title: "Firefly Night", byline: "", genre: "Poem",
+      lines: [
+        ["The sun slips down behind the hill,", "The sky turns pink, then gray.", "The yard grows dark and very still,", "And day has gone away."],
+        ["Then blink, blink, blink, a tiny light", "Floats up beside the tree.", "Then blink, blink, blink, a spark so bright", "Comes drifting close to me."],
+        ["I cup one gently, soft and slow,", "And peek inside my hands.", "Then blink, blink, blink, I let it go", "To where the tall grass stands."]
+      ] },
+    { id: "p4", title: "Snail Climb", byline: "", genre: "Poem",
+      lines: [
+        ["A snail crawled up our garden wall,", "As slow as slow can be.", "It inched and inched to reach the top,", "Then looked right down at me."]
       ] }
   ],
   practice: [
@@ -453,7 +498,7 @@ PP.addLesson({
       ],
       clue: "Pick one stanza. Read the last word of each line out loud. Which two end words sound alike? Then check the other stanzas.",
       why: "The answer is \"In each stanza, lines 2 and 4 rhyme.\" In stanza 1, night rhymes with tight. In stanza 2, yard rhymes with hard. In stanza 3, sound rhymes with ground. Lines 1 and 3 do not rhyme." },
-    { id: "SK-TT4a-P2", type: "hottext", points: 1, dok: 1, passages: ["p1"],
+    { id: "SK-TT4a-P2", type: "hottext", points: 2, dok: 1, passages: ["p1"],
       prompt: "Which TWO lines in stanza 2 rhyme with each other? Choose two lines in the poem.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4"],
       answer: ["p1:2:2", "p1:2:4"], pick: 2,
@@ -544,6 +589,62 @@ PP.addLesson({
       answer: ["p2:2:1"], pick: 1,
       clue: "Say breeze out loud. Then read the last word of each line you can choose. Which one ends with the same sound?",
       why: "The answer is \"Higher, higher, past the trees,\" because trees rhymes with breeze. Hill, still, right and might do not end with the same sound as breeze." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (7) and DOK mix
+     (1,1,2,2,1) as form A, on new poems p3 and p4. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT4a-TB1", type: "ms", points: 2, dok: 1, passages: ["p3"], pick: 2,
+      prompt: "Which TWO sentences about the rhymes in \"Firefly Night\" are true?",
+      choices: [
+        { text: "In each stanza, line 1 rhymes with line 3.", correct: true },
+        { text: "In each stanza, line 2 rhymes with line 4.", correct: true },
+        { text: "In each stanza, line 1 rhymes with line 2." },
+        { text: "In each stanza, line 3 rhymes with line 4." },
+        { text: "None of the lines in the poem rhyme." }
+      ],
+      clue: "Pick one stanza. Say the last word of each line out loud and listen for the pairs that end with the same sound. Then check another stanza.",
+      why: "The answers are \"line 1 rhymes with line 3\" and \"line 2 rhymes with line 4.\" In stanza 1, hill rhymes with still, and gray rhymes with away. Stanza 2 has light and bright, tree and me. Stanza 3 has slow and go, hands and stands. Lines that sit next to each other, like hill and gray, do not rhyme." },
+    { id: "SK-TT4a-TB2", type: "mc", points: 1, dok: 1, passages: ["p3"],
+      prompt: "A stanza is a group of lines. Which line begins the second stanza of \"Firefly Night\"?",
+      choices: [
+        { text: "Then blink, blink, blink, a tiny light", correct: true },
+        { text: "And day has gone away." },
+        { text: "Then blink, blink, blink, a spark so bright" },
+        { text: "I cup one gently, soft and slow," }
+      ],
+      clue: "Find the spaces in the poem. Each space ends one stanza. Count the groups of lines from the top.",
+      why: "The answer is \"Then blink, blink, blink, a tiny light.\" The first stanza ends with \"And day has gone away.\" After the space, the second stanza starts. Another line in stanza 2 also starts with blink, blink, blink, but it is the third line, not the first, and \"I cup one gently, soft and slow\" begins the third stanza." },
+    { id: "SK-TT4a-TB3", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why does the poet repeat the words \"blink, blink, blink\" in stanzas 2 and 3?",
+      choices: [
+        { text: "to show the fireflies' lights going on and off", correct: true },
+        { text: "to show that the speaker's eyes are getting sleepy" },
+        { text: "to show that the sun is going down behind the hill" },
+        { text: "to tell the reader that fireflies make a loud sound" }
+      ],
+      clue: "Look at what comes right after the repeated words each time. What is doing the blinking?",
+      why: "The answer is \"to show the fireflies' lights going on and off.\" Each time, the words come with a tiny light or a bright spark, and saying blink three times gives the poem a beat, like the lights going on, off, on. The speaker is awake and catching a firefly, the sun went down in stanza 1, and the poem never says fireflies make noise." },
+    { id: "SK-TT4a-TB4", type: "match", points: 2, dok: 2, passages: ["p3"],
+      prompt: "What happens in each stanza? Match each summary to its stanza.",
+      cols: ["Stanza 1", "Stanza 2", "Stanza 3"],
+      rows: [
+        { text: "The speaker holds a firefly in cupped hands and then lets it go.", answer: 2 },
+        { text: "Evening comes, and the yard turns dark and quiet.", answer: 0 },
+        { text: "Tiny lights float up and drift close to the speaker.", answer: 1 }
+      ],
+      clue: "Read one stanza at a time. Ask: Is this about the night beginning, the lights showing up, or what the speaker does?",
+      why: "Stanza 1: evening comes, and the yard turns dark and quiet. Stanza 2: tiny lights float up and drift close to the speaker. Stanza 3: the speaker holds a firefly in cupped hands and then lets it go. Each stanza has its own job: first the scene is set, then the fireflies arrive, then the speaker acts." },
+    { id: "SK-TT4a-TB5", type: "mc", points: 1, dok: 1, passages: ["p4"],
+      prompt: "In \"Snail Climb,\" which word from the poem rhymes with the word be?",
+      choices: [
+        { text: "me", correct: true },
+        { text: "wall" },
+        { text: "top" },
+        { text: "slow" }
+      ],
+      clue: "Say be out loud. Then say each choice. Which one ends with the same sound?",
+      why: "The answer is me. Be and me end with the same long e sound, so lines 2 and 4 rhyme. Wall and top end lines 1 and 3, and they do not rhyme with anything. Slow does not end with the e sound." }
   ]
 });
 
@@ -554,8 +655,8 @@ PP.addLesson({
     big: "To write a rhyming poem, pick a rhyme pattern, use it in every stanza, and choose rhyming words that still make sense and help your reader feel something.",
     points: [
       "Pick a topic and a feeling you want your reader to have, like cozy, excited or silly.",
-      "Write at least two stanzas, and leave a space between them.",
-      "Choose a rhyme pattern, such as lines 1 and 2 rhyme and lines 3 and 4 rhyme. Use that same pattern in every stanza.",
+      "Think about your audience, the people who will read or hear your poem. Sound words, action words and a fun or surprising ending help them picture your poem and keep them listening.",
+      "Write at least two stanzas, and leave a space between them. Choose a rhyme pattern, such as lines 1 and 2 rhyme and lines 3 and 4 rhyme. Use that same pattern in every stanza.",
       "Before you write, make a list of rhyming words, like sun, fun, run and done.",
       "A good rhyming line must also make sense and stay on your topic. Never pick a rhyme that changes what you mean."
     ],
@@ -576,7 +677,7 @@ PP.addLesson({
         note: "Stanza 2 keeps the same pattern: eat and feet rhyme, and everywhere and chair rhyme. The silly ending gives the poem a smile."
       }
     ],
-    tip: "On the test, you may choose the line that best finishes a stanza or that keeps the rhyme pattern. The best line has to rhyme in the right place AND make sense with the rest of the poem."
+    tip: "On the test, you may choose the line that best finishes a stanza or that keeps the rhyme pattern. The best line has to rhyme in the right place AND make sense with the rest of the poem. Some questions name a feeling, like calm or excited. Then every choice may rhyme, so pick the line whose words and sounds make the reader feel that way."
   },
   learn: [
     {
@@ -596,7 +697,8 @@ PP.addLesson({
       steps: [
         "Find the rhyme pattern. Lines 2 and 4 rhyme, so line 4 must rhyme with small.",
         "Check each choice. Tall rhymes with small. Tonight does not.",
-        "Make sure the rhyming line makes sense. \"I find the one that's round and smooth and tall\" fits a pumpkin."
+        "Make sure the rhyming line makes sense. \"I find the one that's round and smooth and tall\" fits a pumpkin.",
+        "Some questions name a feeling, and then every choice may rhyme. Listen to the words. If the poet wants a cozy feeling, soft, warm and snug sound cozy, but crash and bang do not."
       ],
       answer: "The best line is \"That's round and smooth and tall.\" It rhymes with small and makes sense."
     },
@@ -612,13 +714,14 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: ["Write a rhyming poem about something you love to do outside.", "Write at least two stanzas of four lines each. Choose a rhyme pattern, and use the same pattern in both stanzas. Pick words that help your reader feel what you feel."],
+    prompt: ["Write a rhyming poem about something you love to do outside.", "Write at least two stanzas of four lines each. Choose a rhyme pattern, and use the same pattern in both stanzas. Pick words that help your reader feel what you feel. Then read your poem out loud to someone, and watch how they react."],
     checklist: [
       "I wrote at least two stanzas, with a space between them.",
       "I used a rhyme pattern, like lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
       "I used the same rhyme pattern in every stanza.",
       "My rhyming words make sense and stay on my topic.",
-      "I chose words that help my reader feel how I feel."
+      "I chose words that help my reader feel how I feel.",
+      "I read my poem to someone, and my words helped them picture it or smile."
     ],
     rows: 10
   },
@@ -683,7 +786,18 @@ PP.addLesson({
         { text: "In spring, the tree grows leaves of green, / The brightest ones I know. / I'll wait for fall to come around, / And watch them all turn red." }
       ],
       clue: "Jaylen's pattern is: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Check both pairs in each choice. Only one stanza gets both pairs right.",
-      why: "The answer is \"In spring, the tree grows leaves of green, / The prettiest that I have seen. / I'll wait for fall to come around, / When leaves come tumbling to the ground.\" Green rhymes with seen, and around rhymes with ground, so it matches Jaylen's pattern. In the other stanzas, either only lines 2 and 4 rhyme, only the first pair rhymes, or nothing rhymes." }
+      why: "The answer is \"In spring, the tree grows leaves of green, / The prettiest that I have seen. / I'll wait for fall to come around, / When leaves come tumbling to the ground.\" Green rhymes with seen, and around rhymes with ground, so it matches Jaylen's pattern. In the other stanzas, either only lines 2 and 4 rhyme, only the first pair rhymes, or nothing rhymes." },
+    { id: "SK-TT4b-P6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["The rain has stopped, the house is still,", "My lamp is glowing low.", "I pull my blanket to my chin", "______________________"],
+      prompt: "Mia wants the end of her stanza to make the reader feel calm and sleepy. Lines 2 and 4 rhyme. Which line best does that?",
+      choices: [
+        { text: "And drift to sleep, so soft and slow.", correct: true },
+        { text: "Then jump up fast, it's time to go!" },
+        { text: "And hear the wild winds start to blow." },
+        { text: "And shout out loud, \"Hello! Hello!\"" }
+      ],
+      clue: "Every choice rhymes with low. So look at the words in each line. Do they sound quiet and gentle, or loud and busy?",
+      why: "The answer is \"And drift to sleep, so soft and slow.\" Words like drift, soft and slow sound quiet and gentle, and they match a still house and a low lamp. That makes the reader feel calm and sleepy. Jumping up fast and shouting feel loud and busy, and wild winds feel stormy, not calm." }
   ],
   test: [
     { id: "SK-TT4b-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
@@ -734,6 +848,17 @@ PP.addLesson({
         { text: "The night is dark, the pond is calm, / The crickets chirp and hum. / The frog curls up beside a rock / And sleeps until it's day." }
       ],
       clue: "First find which lines rhyme in Rosa's stanzas. Then check those same lines in each choice.",
-      why: "The answers are \"The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.\" and \"The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.\" Glow rhymes with below, and sing rhymes with spring, so lines 2 and 4 rhyme, just like Rosa's other stanzas. In the other choices, lines 2 and 4 do not rhyme: night and glad, glow and sleep, shine and mud, hum and day." }
+      why: "The answers are \"The moon comes out above the pond, / The stars begin to glow. / The frog hops off his lily pad / And swims down deep below.\" and \"The night is dark, the pond is calm, / The crickets start to sing. / The frog curls up beside a rock / And dreams of early spring.\" Glow rhymes with below, and sing rhymes with spring, so lines 2 and 4 rhyme, just like Rosa's other stanzas. In the other choices, lines 2 and 4 do not rhyme: night and glad, glow and sleep, shine and mud, hum and day." },
+    { id: "SK-TT4b-T6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["We click and clack up to the top,", "______________________"],
+      prompt: "Dev is writing a poem about a roller coaster. He wants line 2 to make the reader feel how fast and exciting the ride is. Lines 1 and 2 rhyme. Which line best does that?",
+      choices: [
+        { text: "Then whoosh! We zoom down, flip and drop!", correct: true },
+        { text: "We roll along and never stop." },
+        { text: "I see the snack stand and the shop." },
+        { text: "We sit and wait, then slowly stop." }
+      ],
+      clue: "Every choice rhymes with top. Which line uses sound words and action words that feel fast?",
+      why: "The answer is \"Then whoosh! We zoom down, flip and drop!\" Whoosh is a sound word, and zoom, flip and drop are fast action words, so the reader feels the speed and thrill. Rolling along sounds steady, sitting and slowly stopping sound calm and slow, and the snack stand line is about something else. None of those lines makes the ride feel fast." }
   ]
 });

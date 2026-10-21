@@ -1,0 +1,32 @@
+{
+  "tested_code_sha": "f1f79791fe7215915821a3fc6d165f131231a143",
+  "guard": {
+    "passed": 110,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "focused_browser": {
+    "passed": 100,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "content": {
+    "failures": 0,
+    "warnings": 6
+  },
+  "writing": {
+    "failures": 0,
+    "warnings": 0
+  },
+  "readability": {
+    "prose_records": 125,
+    "maximum_printed_fk": 4.5,
+    "flagged_above_4_5": 0
+  },
+  "source_wording_matches": 147,
+  "assessed_rows_complete": 69,
+  "retained_default": false,
+  "application_changed": false,
+  "recommendation": "READY FOR OWNER REVIEW WITH DOCUMENTED LIMITATIONS",
+  "merge_or_deploy_performed": false
+}

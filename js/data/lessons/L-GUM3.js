@@ -303,6 +303,63 @@ PP.addLesson({
       answer: [1], pick: 1,
       clue: "Check each plural noun. Does it change, stay the same, or add -s the way it should?",
       why: "The error is in \"My baby sister has four new tooths.\" Tooth is a special noun, so the plural is teeth." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Reworked by rc3fix (docs/audits/work/pp004-rc3fix.md, findings RC3-2/RC3-3): every key target (lead round 5-6: TB4 rows now salmon and bison)
+     is a special plural that is not in this lesson's teach, Watch Me, practice or form A.
+     Same code and 7 points as form A; each special noun is used in only one item.
+     NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-GUM3-2-TB1", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that belongs in the blank.",
+      stem: "After the big storm, we built three ____ in the front yard.",
+      choices: [
+        { text: "snowmen", correct: true },
+        { text: "snowmans" },
+        { text: "snowmens" },
+        { text: "snowman" }
+      ],
+      clue: "Three means more than one, so the blank needs a plural. Snowman ends with the word man. Say \"one man, two ___.\"",
+      why: "The answer is snowmen. Snowman ends with man, and man is a special noun: one man, two men. So one snowman, three snowmen. Snowmans and snowmens are not words. Snowman names only one, and we built three." },
+    { id: "SK-GUM3-2-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Read each sentence. Which TWO sentences have no mistakes with plural nouns?",
+      choices: [
+        { text: "The farmer's two calves drank milk from a big bucket.", correct: true },
+        { text: "The elves in our class play wore pointy green hats.", correct: true },
+        { text: "In the story, two thiefs tried to take the king's gold." },
+        { text: "Grandma gave each of her grandchilds a hug." },
+        { text: "Dad cut each sandwich into two halfs." }
+      ],
+      clue: "Find the word in each sentence that names more than one. Is it a special noun? Say \"one ___, two ___\" to check it.",
+      why: "The answers are \"The farmer's two calves drank milk from a big bucket.\" and \"The elves in our class play wore pointy green hats.\" One calf, two calves. One elf, many elves. In both words, the f changes to v before -es is added. The other sentences should say thieves, grandchildren and halves. Thief and half change the same way as calf: one thief, two thieves; one half, two halves. Grandchild changes like child and children. So thiefs, grandchilds and halfs are not words." },
+    { id: "SK-GUM3-2-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that correctly completes the sentence.",
+      text: "Mom baked three {0} of bread for the bake sale.",
+      slots: [{ options: ["loafs", "loaves", "loaf"], answer: 1 }],
+      clue: "Three means more than one, so you need a plural. Loaf ends in f. Think of another noun that ends in f or fe, like knife. How does it make its plural?",
+      why: "The answer is loaves. One loaf, three loaves. Like knife and knives, the f changes to v before -es is added. Loafs is not the plural of loaf, and loaf names only one." },
+    { id: "SK-GUM3-2-TB4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Is the plural noun in each sentence correct, or does it need a fix? Match each sentence.",
+      cols: ["Correct", "Needs a fix"],
+      rows: [
+        { text: "Dad put up two new shelfs in my room.", answer: 1 },
+        { text: "Two salmon swam up the cold river.", answer: 0 },
+        { text: "Three fishermans sat on the dock with their poles.", answer: 1 },
+        { text: "Five bison ate grass on the wide prairie.", answer: 0 }
+      ],
+      clue: "Find the word in each sentence that names more than one. Is it spelled the special way, with no extra -s?",
+      why: "\"Two salmon swam up the cold river.\" and \"Five bison ate grass on the wide prairie.\" are correct: one salmon, two salmon; one bison, five bison. These nouns stay the same for one or more. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
+    { id: "SK-GUM3-2-TB5", type: "hottext", points: 1, dok: 2, passages: [],
+      prompt: "One of these sentences has a mistake with a plural noun. Select that sentence.",
+      options: [
+        "The buses waited in a long line.",
+        "My uncles came to the picnic with their wifes.",
+        "Mom bought two bunches of grapes.",
+        "Both babies napped in their strollers."
+      ],
+      answer: [1], pick: 1,
+      clue: "Check the word in each sentence that names more than one. Is it a regular plural that adds -s or -es, or a special noun?",
+      why: "The error is in \"My uncles came to the picnic with their wifes.\" Wife is a special noun: one wife, two wives. The f changes to v, so wifes is not a word. Buses, bunches and babies are all spelled correctly." }
   ]
 });
 
@@ -455,6 +512,62 @@ PP.addLesson({
       ],
       clue: "Last fall already happened. Break is a special verb. Which word tells about the past with no helper word?",
       why: "The answer is \"Change breaked to broke.\" Break is irregular, so its past tense is broke. Broken needs a helper like has, and breaks tells about now." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code, 7 points and DOK mix as form A; new sentences, and every verb is new to this lesson
+     and used in only one item. NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-GUM3-3-TB1", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Choose the verb that belongs in the blank.",
+      stem: "At recess yesterday, Ruby ____ off the monkey bars and scraped her knee.",
+      choices: [
+        { text: "fell", correct: true },
+        { text: "falled" },
+        { text: "fallen" },
+        { text: "falls" }
+      ],
+      clue: "Yesterday tells you the action already happened. Fall is a special verb. Which word tells about the past with no helper word?",
+      why: "The answer is fell. Fall is an irregular verb, so its past tense is fell. Falled is not a word, fallen needs a helper word like has, and falls tells about now." },
+    { id: "SK-GUM3-3-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Which TWO sentences use the correct past-tense verb?",
+      choices: [
+        { text: "Mom told us a funny story at dinner last night.", correct: true },
+        { text: "The whole class stood in line by the door.", correct: true },
+        { text: "Keisha holded the baby kitten in her lap." },
+        { text: "The wind shaked our windows during the storm." },
+        { text: "Our team losed the soccer game on Saturday." }
+      ],
+      clue: "Find the verb in each sentence. Is it a real past-tense word, or a special verb with -ed added by mistake?",
+      why: "The answers are \"Mom told us a funny story at dinner last night.\" and \"The whole class stood in line by the door.\" Tell becomes told, and stand becomes stood. The others should say held, shook and lost." },
+    { id: "SK-GUM3-3-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the verb that correctly completes the sentence.",
+      text: "Last Sunday, Grandpa {0} his lucky blue hat to the fishing pond.",
+      slots: [{ options: ["weared", "wore", "wear", "worn"], answer: 1 }],
+      clue: "Last Sunday already happened. Wear is a special verb that does not add -ed.",
+      why: "The answer is wore. Wear is an irregular verb, so its past tense is wore. Weared is not a word, wear tells about now, and worn needs a helper word like has." },
+    { id: "SK-GUM3-3-TB4", type: "hottext", points: 2, dok: 2, passages: [],
+      prompt: "Two of these sentences have a verb mistake. Select the TWO sentences.",
+      options: [
+        "We chose a puppy at the animal shelter.",
+        "The phone ringed three times before Mom answered it.",
+        "Nia forgot her jacket on the bus.",
+        "Leo sended a birthday card to his cousin in Macon.",
+        "The top spun across the kitchen floor."
+      ],
+      answer: [1, 3], pick: 2,
+      clue: "Find the past-tense verb in each sentence. Which two special verbs got -ed added when they should have changed into a new word?",
+      why: "The errors are in \"The phone ringed three times before Mom answered it.\" and \"Leo sended a birthday card to his cousin in Macon.\" Ring becomes rang, and send becomes sent. Chose, forgot and spun are the correct past tense of choose, forget and spin." },
+    { id: "SK-GUM3-3-TB5", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "This sentence has one verb mistake. Which change fixes it?",
+      stem: "On Friday, Imani took her dog to the park, and it chased a ball until it getted tired.",
+      choices: [
+        { text: "Change getted to got.", correct: true },
+        { text: "Change getted to gotten." },
+        { text: "Change took to taked." },
+        { text: "Change took to taken." }
+      ],
+      clue: "Check each verb in the sentence. Which one is not a real past-tense word? Then pick the past-tense word that needs no helper word.",
+      why: "The answer is \"Change getted to got.\" Get is an irregular verb, so its past tense is got. Gotten needs a helper word like has. Took is already correct, because take changes to took. Taked is not a word, and taken needs a helper word too." }
   ]
 });
 
@@ -771,7 +884,7 @@ PP.addLesson({
       "The reflexive pronouns are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves.",
       "Use one when the person doing the action is also the one it happens to: I see myself in the mirror.",
       "Match the pronoun to the word it points back to. One person or thing ends in -self (Ben, himself). More than one ends in -selves (the girls, themselves; we, ourselves).",
-      "You can also use a -self word after by to mean alone (I did it by myself), or to show someone did it with no help (They cleaned it themselves).",
+      "You can also use a -self word after by to mean alone (I did it by myself).",
       "Hisself and theirselves are not correct words. Also, do not use myself in place of I or me: say \"Dad and I went,\" not \"Dad and myself went.\""
     ],
     words: [
@@ -892,13 +1005,13 @@ PP.addLesson({
       prompt: "Choose the TWO sentences that use pronouns correctly.",
       choices: [
         { text: "I washed all of the dishes by myself.", correct: true },
-        { text: "The kids cleaned up the room themselves.", correct: true },
+        { text: "The kids poured themselves some cold milk.", correct: true },
         { text: "Dad and myself went fishing at the lake." },
         { text: "Theo made hisself a cheese sandwich." },
         { text: "We packed ourself a picnic lunch." }
       ],
       clue: "Check that each -self or -selves word is real and points back to someone who is the subject. Remember: myself never takes the place of I.",
-      why: "The answers are \"I washed all of the dishes by myself.\" and \"The kids cleaned up the room themselves.\" Myself points back to I, and themselves points back to the kids. The others should say \"Dad and I,\" himself and ourselves." },
+      why: "The answers are \"I washed all of the dishes by myself.\" and \"The kids poured themselves some cold milk.\" Myself points back to I. The kids poured the milk for the kids, so themselves points back to the kids. The others should say \"Dad and I,\" himself and ourselves." },
     { id: "SK-GUM3-6-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which word correctly completes what Coach said?",
       stem: "Coach said, \"You and your brother should be proud of ____.\"",
@@ -1182,8 +1295,8 @@ PP.addLesson({
       prompt: "The word birthday will not fit at the end of a line. The | mark shows where the line ends. Choose the correct way to split it.",
       text: "Split it like this: {0}",
       slots: [{ options: ["bir- | thday", "birth- | day", "birthd- | ay"], answer: 1 }],
-      clue: "Look for two smaller words inside birthday.",
-      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them." }
+      clue: "Clap the word. Then use the split rules from the lesson: two different consonants, a double letter, or two smaller words. Remember that some letter pairs stay together.",
+      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them. Bir- | thday breaks up th, which makes one sound and stays together. Birthd- | ay does not split between the two beats, birth and day." }
   ],
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],

@@ -697,13 +697,13 @@ PP.addLesson({
       ],
       clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, add there or then to the words after the blank. If they make a whole sentence, use where or when.",
       why: "The answer is that. A train is a thing, so use that. Who is for people, and a train is not a place or a time, so where and when are wrong." },
-    { id: "SK-GUM4-5-T5", type: "ms", points: 2, dok: 3, passages: [], pick: 2,
+    { id: "SK-GUM4-5-T5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which two sentences use who, that, where or when correctly?",
       choices: [
         { text: "Ms. Lopez is the nurse who helped me.", correct: true },
         { text: "Saturday is the day when we go to the library.", correct: true },
         { text: "The bus who takes us to school is yellow." },
-        { text: "That is the store when we buy bread." },
+        { text: "This is the store when we buy bread." },
         { text: "Liam is the boy where lives next door." }
       ],
       clue: "For each sentence, look at the noun before who, where or when. Is it a person, a thing, a place or a time? For a place or a time, add there or then to the words after it and check for a whole sentence.",

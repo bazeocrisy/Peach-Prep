@@ -29,7 +29,7 @@ const ASSESSED = new Set([
   "3.T.T.1.e", "3.T.T.2.d", "3.T.T.3.c", "3.T.T.4.b", "3.T.RA.1.c",
   "3.L.GC.2.b", "3.L.GC.2.c", "3.L.GC.2.d", "3.L.V.1.b", "3.L.V.2.c", "3.L.V.3.e"
 ]);
-const stdOk = c => ASSESSED.has(c) || /^3\.L\.GC\.1:[GUM]:[a-z0-9-]+$/.test(c);
+const stdOk = c => ASSESSED.has(c) || /^3\.L\.GC\.1:[MR]:[a-z0-9-]+$/.test(c);
 const TYPES = ["mc", "ms", "ebsr", "dropdown", "hottext", "order", "match"];
 
 // What each revising set must cover (from the brief)
@@ -219,6 +219,67 @@ for (const t of tasks) {
   const lf = t.lookFors || {};
   for (const k of ["purpose", "evidence", "conventions"])
     if (!Array.isArray(lf[k]) || !lf[k].length || !lf[k].every(isStr)) fail(T, "lookFors." + k + " must be a non-empty array of strings");
+
+  /* PP-004: leveled example responses, scored by Peach Prep with the rubric's trait descriptions */
+  const TRAIT_KEYS = ["purpose", "evidence", "conventions"], TRAIT_MAX = { purpose: 3, evidence: 3, conventions: 2 };
+  const TRAIT_NAMES = ["Purpose and Organization", "Evidence and Elaboration", "Language Usage and Conventions"];
+  const ex = t.examples;
+  if (!Array.isArray(ex) || ex.length < 3) fail(T, "examples needs 3+ leveled responses (PP-004)");
+  else {
+    const totals = [];
+    const srcGrams = new Set();
+    Object.values(text).forEach(st => { const tk = tokens(st); for (let i = 0; i + COPY_RUN <= tk.length; i++) srcGrams.add(tk.slice(i, i + COPY_RUN).join(" ")); });
+    ex.forEach((e, i) => {
+      const X = T + "/examples[" + i + "]";
+      const sc = e.scores || {};
+      TRAIT_KEYS.forEach(k => { if (!Number.isInteger(sc[k]) || sc[k] < 0 || sc[k] > TRAIT_MAX[k]) fail(X, "scores." + k + " must be an integer 0-" + TRAIT_MAX[k]); });
+      const sum = TRAIT_KEYS.reduce((a, k) => a + (sc[k] || 0), 0);
+      if (e.total !== sum) fail(X, "total " + e.total + " does not equal the trait scores (" + sum + ")");
+      if (sum >= 8) fail(X, "examples must be below the top score; the model is the 8-point response");
+      totals.push(sum);
+      if (!Array.isArray(e.paragraphs) || !e.paragraphs.length || !e.paragraphs.every(isStr)) { fail(X, "paragraphs must be non-empty strings"); return; }
+      const all = e.paragraphs.join(" ");
+      if (!isStr(e.next)) fail(X, "next (what to work on next) is empty");
+      const notes = e.notes || [];
+      if (!Array.isArray(notes) || notes.length !== 3) { fail(X, "notes needs 3 notes, one per trait"); return; }
+      TRAIT_NAMES.forEach((tr, j) => {
+        const want = tr + " (" + sc[TRAIT_KEYS[j]] + " of " + TRAIT_MAX[TRAIT_KEYS[j]] + "):";
+        if (!isStr(notes[j]) || !notes[j].startsWith(want)) fail(X, "notes[" + j + "] should start with \"" + want + "\"");
+      });
+      // quotes of 3+ words in a note must come from the example itself
+      notes.forEach((n, j) => (norm(n).match(/"([^"]+)"/g) || []).forEach(q => {
+        const s = q.slice(1, -1).replace(/[.,]$/, "");
+        if (s.split(" ").length >= 3 && !norm(all).toLowerCase().includes(s.toLowerCase())) fail(X, "notes[" + j + "] quotes text not in the example: " + s);
+      }));
+      // copying is allowed only when the evidence note says so
+      const et = tokens(all); const copied = [];
+      for (let k = 0; k + COPY_RUN <= et.length; k++) { const g = et.slice(k, k + COPY_RUN).join(" "); if (srcGrams.has(g)) copied.push(g); }
+      if (copied.length && !/cop(y|ied|ies|ying)/i.test(notes[1] || "")) fail(X, "copies " + COPY_RUN + "+ words from a source but the evidence note does not say so: \"" + copied[0] + "\"");
+      info(X, sum + " of 8 (" + TRAIT_KEYS.map(k => sc[k]).join("/") + "), " + words(all) + " words" + (copied.length ? ", copied run flagged in note" : ""));
+    });
+    if (new Set(totals).size !== totals.length) fail(T, "example totals should differ: " + totals.join(", "));
+  }
+
+  /* PP-004: step-by-step parent scoring for each trait */
+  const sg = t.scoring || {};
+  TRAIT_KEYS.forEach(k => {
+    const G = T + "/scoring." + k, b = sg[k] || {};
+    if (!Array.isArray(b.steps) || b.steps.length < 3 || !b.steps.every(isStr)) fail(G, "steps needs 3+ strings");
+    if (!Array.isArray(b.say) || b.say.length < 2 || !b.say.every(isStr)) fail(G, "say needs 2+ strings");
+    const pk = Object.keys(b.points || {}).map(Number).sort((x, y) => x - y);
+    const want = Array.from({ length: TRAIT_MAX[k] + 1 }, (_, i) => i);
+    if (pk.join() !== want.join()) fail(G, "points must describe exactly " + want.join(", "));
+    else want.forEach(v => { if (!isStr(b.points[v])) fail(G, "points[" + v + "] is empty"); });
+  });
+}
+
+/* PP-004: the parent tab keeps the home-score caveat and labels the examples as Peach Prep's, not GaDOE anchor papers */
+{
+  const ui = fs.readFileSync(path.join(__dirname, "..", "js", "writing.js"), "utf8");
+  for (const s of ["This is a home score for practice, not an official Georgia Milestones score.",
+                   "examples scored by Peach Prep using the official rubric's descriptions",
+                   "not official GaDOE anchor papers"])
+    if (!ui.includes(s)) fail("js/writing.js", "missing text: " + s);
 }
 
 /* =================== REVISING SETS =================== */

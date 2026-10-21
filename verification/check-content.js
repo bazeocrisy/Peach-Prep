@@ -35,7 +35,35 @@ const STOP = ["that","this","with","from","they","them","their","there","what","
 const wc = t => (String(t).match(/\S+/g) || []).length;
 const norm = t => String(t).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim();
 
-function passageText(p) { return (p.lines || p.paragraphs || []).map(b => b.join(" ")).join(" "); }
+function passageText(p) { return (p.lines || p.paragraphs || []).map(b => b.join(" ")).join(" ").replace(/\*\*/g, ""); }
+/* Figures and bold words (SPEC §5e). A figure's file must exist under
+   assets/figures/, its alt text must say what the picture shows, and SVG
+   text must stay readable: at least 14px at the width the figure is drawn on
+   a 320px phone (about 198px in a Learn It example, 220px or more in a
+   passage, a question or a Watch Me example). */
+const FIG_W = { teach: 198, other: 220 }, figSeen = {};
+function checkFigures(where, list, blocks, minW) {
+  [].concat(list || []).forEach((f, i) => {
+    const w = where + " figure " + (i + 1);
+    if (!f || typeof f !== "object") { F(w, "is not an object"); return; }
+    if (!/^assets\/figures\/[a-z0-9-]+\.(svg|png)$/.test(f.src || "")) F(w, "src must be assets/figures/<name>.svg or .png");
+    else if (!fs.existsSync(path.join(ROOT, f.src))) F(w, "file not found: " + f.src);
+    else if (/\.svg$/.test(f.src) && !figSeen[f.src + minW]) { figSeen[f.src + minW] = 1; checkSvg(w, f.src, minW || FIG_W.other); }
+    if (typeof f.alt !== "string" || wc(f.alt) < 5) F(w, "needs alt text that says what the picture shows (5+ words)");
+    if (blocks) { if (!Number.isInteger(f.after) || f.after < 0 || f.after > blocks.length) F(w, "after must be a whole number from 0 to " + blocks.length); }
+    else if (f.after !== undefined) W(w, "after is only used on passage figures");
+  });
+}
+function checkSvg(w, src, minW) {
+  const t = fs.readFileSync(path.join(ROOT, src), "utf8");
+  if (/<script|\son[a-z]+=|href="(https?:)?\/\//i.test(t)) F(w, src + " has a script or an outside link");
+  const vb = /viewBox="[\d.-]+ [\d.-]+ ([\d.]+) [\d.]+"/.exec(t);
+  if (!vb) { F(w, src + " needs a viewBox"); return; }
+  const sizes = (t.match(/font-size="[\d.]+"/g) || []).map(x => Number(/[\d.]+/.exec(x)[0]));
+  const px = sizes.length ? Math.min.apply(null, sizes) * minW / Number(vb[1]) : 99;
+  if (px < 14) W(w, src + ": smallest text is " + px.toFixed(1) + "px on a 320px phone (need 14+)");
+}
+const badBold = s => (String(s).match(/\*\*/g) || []).length % 2 === 1;
 function sentenceAt(set, ref) {
   const m = /^([a-z0-9]+):(\d+):(\d+)$/i.exec(ref || ""); if (!m) return null;
   const p = (set.passages || set.sources || []).find(x => x.id === m[1]); if (!p) return null;
@@ -50,8 +78,10 @@ function checkPassages(where, list, kind) {
     if (!Array.isArray(blocks) || !blocks.length) { F(where, p.id + " has no paragraphs/lines"); return; }
     blocks.forEach((b, i) => {
       if (!Array.isArray(b) || !b.length) F(where, p.id + " block " + (i + 1) + " is not a non-empty array");
-      (b || []).forEach(s => { if (typeof s !== "string" || !s.trim()) F(where, p.id + " empty sentence in block " + (i + 1)); });
+      (b || []).forEach(s => { if (typeof s !== "string" || !s.trim()) F(where, p.id + " empty sentence in block " + (i + 1)); else if (badBold(s)) F(where, p.id + " unmatched ** in block " + (i + 1)); });
     });
+    if (p.figures && p.lines) F(where, p.id + ": figures are for prose passages only");
+    checkFigures(where + " " + p.id, p.figures, p.lines ? null : blocks);
     const n = wc(passageText(p));
     if (!p.lines && kind !== "revising" && n < 100) W(where, p.id + " is short (" + n + " words)");
     if (n > 650) W(where, p.id + " is long (" + n + " words)");
@@ -103,6 +133,10 @@ function checkItem(set, it, S, lessonCode) {
     ["id", "type", "prompt", "clue", "why"].forEach(k => { if (!it[k]) F(w, "missing " + k); });
     if (String(it.prompt || "").length > 220 && !it.stem) W(w, "long prompt: move the reading text into stem");
     if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
+    if (it.figure) checkFigures(w, it.figure);
+    [].concat(it.stem || []).forEach(s => { if (badBold(s)) F(w, "unmatched ** in stem"); });
+    /* the review screen prints hot-text sentences as plain text, so keep **bold** out of them */
+    if (it.type === "hottext") [].concat(it.targets || [], it.answer || []).forEach(r => { const s = sentenceAt(set, r); if (s && /\*\*/.test(s)) F(w, "hottext target " + r + " has **bold** markup"); });
     if ([1, 2, 3, 4].indexOf(it.dok) < 0) F(w, "dok must be 1-4");
     if (lessonCode) {
       /* a lesson question practices the lesson's own standard, tested or not */
@@ -206,16 +240,18 @@ lessons.forEach(L => {
   const T = L.teach || {};
   if (!T.big) F(S, "teach.big missing");
   if (!Array.isArray(T.points) || T.points.length < 3) F(S, "teach.points needs 3+");
-  (T.examples || (T.example ? [T.example] : [])).forEach((ex, i) => { if (!ex.lines || !ex.note) F(S, "teach example " + (i + 1) + " needs lines and note"); });
+  (T.examples || (T.example ? [T.example] : [])).forEach((ex, i) => { if (!ex.lines || !ex.note) F(S, "teach example " + (i + 1) + " needs lines and note"); checkFigures(S + " teach example " + (i + 1), ex.figure, null, FIG_W.teach); });
   if (!(T.examples || T.example)) F(S, "teach needs an example");
   if (!Array.isArray(L.learn) || L.learn.length < 2 || L.learn.length > 3) F(S, "learn needs 2-3 worked examples");
   (L.learn || []).forEach((ex, i) => {
     if (!ex.ask || !ex.answer) F(S, "learn " + (i + 1) + " needs ask and answer");
+    checkFigures(S + " learn " + (i + 1), ex.figure);
     if (!Array.isArray(ex.steps) || ex.steps.length < 2 || ex.steps.length > 4) F(S, "learn " + (i + 1) + " needs 2-4 steps");
   });
   if (!L.parent) F(S, "parent note missing");
   if (L.write && (!L.write.prompt || !(L.write.checklist || []).length)) F(S, "write needs prompt and checklist");
-  if (rec.tested === "writing" && !L.write) W(S, "writing standard without a write activity");
+  /* GUM chart rows are tested in Constructing Texts as editing/revising items, not as free writing */
+  if (rec.tested === "writing" && !rec.gum && !L.write) W(S, "writing standard without a write activity");
   checkPassages(S, L.passages, "lesson");
   const set = { passages: L.passages || [] };
   const ids = new Set();
@@ -223,6 +259,9 @@ lessons.forEach(L => {
   if (L.activity && ["fluency", "trace"].indexOf(L.activity.kind) < 0) F(S, "unknown activity kind " + L.activity.kind);
   if (L.activity && L.activity.kind === "fluency") (L.activity.passages || []).forEach((P, i) => { const n = wc(P.text); if (n < 180) F(S, "fluency passage " + (i + 1) + " is only " + n + " words (a fast reader needs 180+)"); });
   if (L.check && (!L.check.intro || !(L.check.items || []).length)) F(S, "check needs intro and items");
+  /* PP-004: a practice-only speaking card (SPEC §8b); it is shown only beside a scored check */
+  if (L.speak && (!L.speak.intro || !(L.speak.items || []).length)) F(S, "speak needs intro and items");
+  if (L.speak && !(L.test || []).length) F(S, "speak is shown only on a lesson with a test; use check for a grown-up-checked skill");
   [["practice", 4, 7], ["test", 4, 6]].forEach(([k, lo, hi]) => {
     const list = L[k] || [];
     if (!list.length && ((k === "practice" && L.activity) || (k === "test" && L.check))) return;
@@ -240,6 +279,43 @@ lessons.forEach(L => {
   (L.test || []).forEach(it => (it.passages || []).forEach(pid => { if (pp.has(pid)) W(S + " " + it.id, "test reuses practice passage " + pid); }));
   const max = (L.test || []).reduce((a, i) => a + (i.points || 0), 0);
   if (max < 5 && !L.check) W(S, "test is only " + max + " points");
+  /* ---------- PP-004: a second, independent check form (testB, SPEC §8b) ----------
+     4-6 items; the same codes as form A; the same total points (so the pass mark is the
+     same); no item id shared with form A; no stem, and no whole question, identical to
+     form A's. Form B items use the lesson's passages list and should name new passages. */
+  if (L.testB !== undefined) {
+    const A = L.test || [], B = L.testB, SB = S + " testB";
+    if (!Array.isArray(B)) { F(SB, "must be a list of items"); return; }
+    if (!A.length) F(SB, "form B needs a form A (test) in the same lesson");
+    if (B.length < 4 || B.length > 6) F(SB, "needs 4-6 questions (has " + B.length + ")");
+    const codeSet = list => [...new Set([].concat(...list.map(i => i.std || [L.code])))].sort().join(", ");
+    if (codeSet(B) !== codeSet(A)) F(SB, "covers " + codeSet(B) + " but form A covers " + codeSet(A) + " (the codes must be the same)");
+    const maxB = B.reduce((a, i) => a + (i.points || 0), 0);
+    if (maxB !== max) F(SB, "is worth " + maxB + " points but form A is worth " + max + " (they must match, so the pass mark is the same)");
+    /* the text the child reads inside the question (stem, or a dropdown sentence) */
+    const stemOf = it => norm([].concat(it.stem || []).concat(it.text ? [it.text] : []).join(" ")).toLowerCase();
+    const whole = it => norm(it.prompt || "").toLowerCase() + "|" + stemOf(it) + "|" + JSON.stringify([it.choices, it.rows, it.slots, it.targets, it.options, it.steps, it.partA, it.partB, it.passages]);
+    const idsA = new Set(A.map(i => i.id)), stemsA = new Set(A.map(stemOf).filter(Boolean)), wholeA = new Set(A.map(whole));
+    const pA = new Set([].concat(...A.map(i => i.passages || [])));
+    B.forEach(it => {
+      const w = SB + " " + it.id;
+      if (idsA.has(it.id)) F(w, "item id is also used in form A");
+      else if (ids.has(it.id)) F(w, "duplicate item id");
+      else if (seenItem.has(it.id)) F(w, "item id used elsewhere");
+      ids.add(it.id); seenItem.add(it.id);
+      if (!Array.isArray(it.passages)) F(w, "needs passages: [...] (use [] for none)");
+      else it.passages.forEach(pid => {
+        if (!set.passages.some(p => p.id === pid)) F(w, "unknown passage " + pid);
+        if (pp.has(pid)) W(w, "form B reuses practice passage " + pid);
+        else if (pA.has(pid)) W(w, "form B reuses form A passage " + pid + " (a new passage makes the forms more independent)");
+      });
+      checkItem({ passages: (L.passages || []).filter(p => (it.passages || []).indexOf(p.id) >= 0) }, it, SB, L.code);
+      if (it.std && !it.std.some(c => (L.codes || [L.code]).indexOf(c) >= 0)) F(w, "std must include one of the lesson's codes");
+      const st = stemOf(it);
+      if (st && stemsA.has(st)) F(w, "stem is identical to a form A stem");
+      if (wholeA.has(whole(it))) F(w, "question is identical to a form A question");
+    });
+  }
 });
 
 tasks.forEach(t => {
@@ -257,8 +333,115 @@ tasks.forEach(t => {
   ["purpose", "evidence", "conventions"].forEach(k => { if (!t.lookFors || !(t.lookFors[k] || []).length) F(S, "lookFors." + k + " missing"); });
 });
 
+/* ---------- consistency checks (PP-003 Phase H) ----------
+   Catalog keys, lesson codes, the blueprint's assessed expectations and
+   legacy fields. The table below is transcribed from the GaDOE Grade 3 ELA
+   Assessment Blueprint (August 2025), page 1. The blueprint prints the last
+   Constructing vocabulary code as "5.L.V.3 (e)"; it is read as 3.L.V.3 (e). */
+(function () {
+  const BP_IT = { "3.T.C.1": "ab", "3.T.C.2": "ac", "3.T.SS.1": "a", "3.T.SS.2": "a", "3.T.T.1": "abcd", "3.T.T.2": "abc",
+    "3.T.T.3": "a", "3.T.T.4": "a", "3.T.RA.1": "ab", "3.T.RA.2": "ab", "3.L.GC.2": "a", "3.L.V.1": "a", "3.L.V.2": "ab", "3.L.V.3": "abcd" };
+  const BP_CT = { "3.T.C.1": "c", "3.T.SS.1": "bcd", "3.T.SS.2": "b", "3.T.T.1": "e", "3.T.T.2": "d", "3.T.T.3": "c",
+    "3.T.T.4": "b", "3.T.RA.1": "c", "3.L.GC.2": "bcd", "3.L.V.1": "b", "3.L.V.2": "c", "3.L.V.3": "e" };
+  /* 3.L.GC.1* GUM appears only under Constructing Texts: Master and Reinforce rows are assessed there. */
+  const C = "consistency";
+  const want = {};
+  [[BP_IT, "reading"], [BP_CT, "writing"]].forEach(([tbl, part]) => Object.keys(tbl).forEach(base => tbl[base].split("").forEach(l => {
+    const code = base + "." + l; want[code] = want[code] && want[code] !== part ? "both" : part;
+  })));
+  const ONTEST = ["reading", "writing", "both"];
+  Object.keys(want).forEach(code => {
+    const s = STD.find(x => x.code === code);
+    if (!s) F(C, "blueprint expectation " + code + " is missing from standards.js");
+    else if (s.tested !== want[code]) F(C, code + " is tested \"" + s.tested + "\" but the blueprint says \"" + want[code] + "\"");
+  });
+  STD.forEach(s => {
+    if (Object.prototype.hasOwnProperty.call(s, "status")) F(C, s.code + ": legacy \"status\" field is still in standards.js");
+    if (s.gum) {
+      const exp = "MR".indexOf(s.level) >= 0 ? "writing" : "no";
+      if (s.tested !== exp) F(C, s.code + ": GUM " + s.level + " row should be tested \"" + exp + "\" (blueprint: 3.L.GC.1 under Constructing Texts, Master/Reinforce only)");
+    } else if (/^3\.[TL]\.[A-Z]+\.\d\.[a-z]$/.test(s.code)) {
+      if (!want[s.code] && s.tested !== "no") F(C, s.code + " is tested \"" + s.tested + "\" but the blueprint does not list it");
+    } else if (s.strand === "Foundations" && s.tested !== "classroom") F(C, s.code + ": Foundations should be \"classroom\"");
+    else if (s.strand === "Practices" && s.tested !== "embedded") F(C, s.code + ": Practices should be \"embedded\"");
+  });
+  /* every lesson code exists in standards.js (also checked per lesson above; repeated here as a whole-site count) */
+  const badCodes = [].concat(...lessons.map(L => [L.code].concat(L.codes || []))).filter(c => !codes.has(c));
+  if (badCodes.length) F(C, badCodes.length + " lesson code(s) not in standards.js: " + badCodes.slice(0, 5).join(", "));
+  /* every catalog key resolves to a lesson or task */
+  const catFile = path.join(ROOT, "js/data/catalog.js");
+  if (fs.existsSync(catFile)) {
+    run("js/data/catalog.js");
+    const CAT = ctx.window.PP_CATALOG || [];
+    const lessonKeys = new Set(lessons.map(L => L.key || L.code));
+    const taskIds = new Set(tasks.map(t => t.id));
+    const seen = new Set();
+    CAT.forEach(c => (c.groups || []).forEach(g => (g.skills || []).forEach(k => {
+      if (seen.has(k)) F(C, "catalog key listed twice: " + k); seen.add(k);
+      if (/^task:/.test(k)) { if (!taskIds.has(k.slice(5))) F(C, "catalog key " + k + " has no task"); }
+      else if (!lessonKeys.has(k)) F(C, "catalog key " + k + " has no lesson");
+    })));
+    lessonKeys.forEach(k => { if (!seen.has(k)) W(C, "lesson " + k + " is not in the catalog, so it cannot be opened from the home page"); });
+  } else F(C, "js/data/catalog.js not found");
+  /* the meta description claims a lesson with practice and a skill check for every tested standard */
+  STD.filter(s => ONTEST.indexOf(s.tested) >= 0).forEach(s => {
+    const L = lessons.find(x => (x.codes || [x.code]).indexOf(s.code) >= 0 || x.code === s.code);
+    if (!L) F(C, s.code + " is on the test but has no lesson");
+    else if (!(L.practice || []).length || !(L.test || []).length) F(C, s.code + " is on the test but its lesson " + (L.key || L.code) + " lacks practice or test items");
+  });
+})();
+
+/* ---------- PP-004: standards.js against the official grade 3 standards ----------
+   Source: "Georgia's K-12 ELA Standards: Foundations, Language, Texts, & Practices, Grades 3-5"
+   (52 pp., approved May 2023), transcribed with page numbers into
+   docs/audits/work/official-gr3-standards.json and docs/audits/work/official-gr3-gum.json
+   (see docs/audits/PP-004-OFFICIAL-STANDARDS-VERIFICATION.md and PP-004-GUM-CHART-VERIFICATION.md). */
+(function () {
+  const C = "official-standards";
+  const WORK = path.join(ROOT, "docs/audits/work");
+  const load = f => { try { return JSON.parse(fs.readFileSync(path.join(WORK, f), "utf8")); } catch (e) { F(C, f + " could not be read: " + e.message); return null; } };
+  const OFF = load("official-gr3-standards.json"), GUM = load("official-gr3-gum.json");
+  if (!OFF || !GUM) return;
+  const byCode = {}; STD.forEach(s => { byCode[s.code] = s; });
+  /* 1. every applicable grade 3 code is on the site, and no "This progression begins in grade N" code is */
+  OFF.forEach(o => {
+    const s = byCode[o.code];
+    if (o.applicable && !s) F(C, o.code + " (p. " + o.page + ") is missing from standards.js");
+    if (!o.applicable && s) F(C, o.code + " is listed on the site, but p. " + o.page + " says: " + o.wording);
+    /* 2. the official wording stored on the site is verbatim */
+    if (o.applicable && s) {
+      if (s.official !== o.wording) F(C, o.code + ": official wording differs from p. " + o.page);
+      if (s.page !== o.page) F(C, o.code + ": page is " + s.page + ", official page is " + o.page);
+      if (typeof s.text !== "string" || !s.text.trim()) F(C, o.code + ": text is empty");
+    }
+  });
+  const offApplicable = new Set(OFF.filter(o => o.applicable).map(o => o.code));
+  STD.forEach(s => { if (!s.gum && !offApplicable.has(s.code)) F(C, s.code + " is in standards.js but is not an official grade 3 expectation"); });
+  /* 3. GUM rows: the site has exactly the official grade 3 rows (M, R, I, C), each with the official level */
+  const gumSite = STD.filter(s => s.gum);
+  const g3 = GUM.filter(g => g.grade3 !== "NYI");
+  if (g3.length !== gumSite.length) F(C, "site has " + gumSite.length + " GUM rows; the official chart has " + g3.length + " grade 3 rows");
+  GUM.forEach(g => {
+    if (g.grade3 === "NYI") { if (g.siteCode) F(C, "GUM row \"" + g.skill + "\" is NYI in grade 3 but is mapped to " + g.siteCode); return; }
+    if (["M", "R", "I", "C"].indexOf(g.grade3) < 0) F(C, "GUM row \"" + g.skill + "\" has an unexpected grade 3 level " + g.grade3);
+    const s = byCode[g.siteCode];
+    if (!s || !s.gum) { F(C, "official grade 3 GUM row \"" + g.skill + "\" (p. " + g.page + ") has no site row"); return; }
+    if (s.level !== g.grade3) F(C, s.code + ": level " + s.level + ", official grade 3 level is " + g.grade3 + " (p. " + g.page + ")");
+    if (s.code.split(":")[1] !== g.grade3) F(C, s.code + ": the level in the code slug does not match the official level " + g.grade3);
+    if (s.official !== g.skill) F(C, s.code + ": official GUM wording differs from p. " + g.page);
+    if (s.page !== g.page) F(C, s.code + ": page is " + s.page + ", official page is " + g.page);
+    /* 4. the blueprint assesses only Master and Reinforce rows (Constructing Texts) */
+    const exp = g.grade3 === "M" || g.grade3 === "R" ? "writing" : "no";
+    if (s.tested !== exp) F(C, s.code + ": GUM " + g.grade3 + " row must be tested \"" + exp + "\", not \"" + s.tested + "\"");
+  });
+  const mapped = new Set(g3.map(g => g.siteCode));
+  gumSite.forEach(s => { if (!mapped.has(s.code)) F(C, s.code + " is not an official grade 3 GUM row"); });
+  const n = {}; g3.forEach(g => { n[g.grade3] = (n[g.grade3] || 0) + 1; });
+  if (n.M !== 8 || n.R !== 18 || n.I !== 11 || n.C !== 4) F(C, "official grade 3 GUM counts changed: " + JSON.stringify(n) + " (expected M 8, R 18, I 11, C 4)");
+})();
+
 const items = sets.reduce((a, s) => a + s.items.length, 0);
-const litems = lessons.reduce((a, l) => a + (l.practice || []).length + (l.test || []).length, 0);
+const litems = lessons.reduce((a, l) => a + (l.practice || []).length + (l.test || []).length + (Array.isArray(l.testB) ? l.testB.length : 0), 0);   /* testB: PP-004 */
 console.log("Checked " + sets.length + " sets (" + items + " items), " + tasks.length + " tasks and " + lessons.length + " lessons (" + litems + " items)" + (all ? " [all files]" : " [manifest]"));
 warns.forEach(x => console.log("  warn  " + x));
 fails.forEach(x => console.log("  FAIL  " + x));

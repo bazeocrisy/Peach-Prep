@@ -30,8 +30,8 @@ PP.addSet({
   id: "PT-1",
   section: "test",
   kind: "form",
-  title: "Practice Test 1",
-  blurb: "A shorter practice test shaped like the real one: reading, revising and language questions. (It does not include the essay. Practice that in Writing.)",
+  title: "Practice Test 1 (shortened)",
+  blurb: "A shortened practice test shaped like the real one: 24 reading, revising and language questions worth 31 points, with no essay. The real Grade 3 test has 60 points, including an 8-point essay. Practice the essay in Writing.",
   passages: [
     {
       id: "p1",
@@ -305,13 +305,13 @@ PP.addSet({
       dok: 3,
       prompt: "In paragraph 6, Malik tells the reader what he is thinking. How is Malik's view of the chip different from Aunt Bea's view later in the story?",
       choices: [
-        { text: "Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.", correct: true },
-        { text: "Malik thinks the chip is too small to matter at all, but Aunt Bea thinks the chip ruins the pitcher." },
+        { text: "Malik thinks the chip is a big problem he must hide, but Aunt Bea treats it as a problem she can solve by making a new pitcher.", correct: true },
+        { text: "Malik thinks the chip is too small to matter, but Aunt Bea thinks it ruins her shop." },
         { text: "Malik hopes he can keep helping in the shop, but Aunt Bea decides that he cannot help her anymore." },
         { text: "Malik thinks Mrs. Greene will be angry about the chip, but Aunt Bea knows she will not care." }
       ],
       clue: "Find what Malik is afraid of in paragraph 6. Then read what Aunt Bea says and does after Malik tells her what happened. Compare the two.",
-      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. In paragraph 11, Aunt Bea thanks him for telling her and says, \"A chipped pitcher is a small problem, but broken trust is a much bigger one.\" Malik does think the chip matters, or he would not hide it, and Aunt Bea calls the chip a small problem. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
+      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea treats it as a problem she can solve by making a new pitcher.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. After he tells her, Aunt Bea stays calm. In paragraphs 12 and 13, she agrees to make another pitcher before the wedding, so the chip is something she can fix. Malik does think the chip matters, or he would not hide it, and Aunt Bea does not act as if her shop is ruined. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
     },
     {
       id: "PT-1-7",
@@ -355,7 +355,7 @@ PP.addSet({
       choices: [
         { text: "Leaves change color and fall because of changes inside them as trees get ready for winter.", correct: true },
         { text: "Chlorophyll is a green material inside leaves that helps them make food for the tree." },
-        { text: "Sunny fall days and cool nights help make the red colors in some leaves very bright." },
+        { text: "The leaves of many maples and sweetgums make red and purple colors in the fall." },
         { text: "Fallen leaves break down on the ground and add nutrients that new plants can use." }
       ],
       clue: "A main idea is about the WHOLE article, not just one section. Read the three headings. What big idea ties them all together?",
@@ -429,7 +429,7 @@ PP.addSet({
         { text: "It tells the reader that the section is about why people rake up fallen leaves." }
       ],
       clue: "A heading names the big idea of the section under it. Read the whole section. What is it mostly about?",
-      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. Letting go means the tree lets its leaves fall.How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
+      why: "The answer is \"It tells the reader that the section is about how a tree drops its leaves.\" The section under \"Letting Go\" tells how a thin layer of cells cuts each leaf off, how a breeze knocks it loose, and why losing leaves helps the tree. Letting go means the tree lets its leaves fall. How leaves lose their green color and how a tree stops making food are explained in the section before, \"Shorter Days, Brighter Colors.\" The article never talks about people raking leaves."
     },
     {
       id: "PT-1-13",
@@ -440,19 +440,19 @@ PP.addSet({
       dok: 2,
       prompt: "Read each cause from the article. Choose the effect that goes with it. Use each effect once.",
       cols: [
-        "Hidden yellow and orange colors can be seen.",
+        "The tree saves water during the cold months.",
         "The soil gets nutrients for new plants.",
         "The leaf looks green.",
         "A gentle breeze can knock the leaf loose."
       ],
       rows: [
         { text: "A leaf has a lot of green chlorophyll inside it.", answer: 2 },
-        { text: "The green chlorophyll in a leaf breaks down.", answer: 0 },
+        { text: "A tree loses its leaves.", answer: 0 },
         { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 },
         { text: "Fallen leaves slowly break down on the ground.", answer: 1 }
       ],
       clue: "A cause makes something happen. Find each cause in the article. Then read on to find what it makes happen.",
-      why: "Chlorophyll is green, so a leaf full of it looks green. When the green chlorophyll breaks down, the hidden yellow and orange colors can be seen. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
+      why: "Chlorophyll is green, so a leaf full of it looks green. Paragraph 7 says that losing its leaves helps the tree save water during the cold winter months. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
     },
     {
       id: "PT-1-14",

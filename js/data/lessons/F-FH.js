@@ -4,7 +4,7 @@
 (function () {
   const FLUENCY = {
     kind: "fluency",
-    how: ["Pick a passage the reader has not read before. The reader reads out loud for one minute. A grown-up follows along on the screen and taps any word that is skipped or read wrong. A word the reader fixes right away counts as correct."],
+    how: ["Pick a passage the reader has not read before. The reader reads out loud for one minute. A grown-up follows along on the screen and taps any word that is skipped or read wrong. If the reader fixes a word on their own, tap it a second time: it counts as correct and as a self-correction. When the minute is over, ask, \"What was it mostly about?\""],
     goal: { fall: 83, winter: 97, spring: 112 },
     goalSource: "the 50th percentile, or median, of national grade 3 norms for a first reading of a new passage: Hasbrouck and Tindal, 2017",
     passages: [
@@ -70,15 +70,25 @@
         answer: "Yes. 97 out of 100 words correct is 97% accuracy, so this page is a good fit for reading alone."
       }
     ],
-    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and compare with the national numbers the timer shows (83 in fall, 97 in winter, 112 in spring). Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
+    parent: "Use the read-aloud timer on a new passage once or twice a week, starting with passages 1 to 4. When those have all been read, have your child read a page of a new grade 3 library book for one minute: count the words read, subtract the mistakes, and look at the typical grade 3 scores the timer shows (83 in fall, 97 in winter, 112 in spring) as a rough guide only: library pages differ in difficulty, and this is home practice, not a test. Accuracy matters more than speed: if your child misses more than about 5 words in 100, read the passage together first, then let them try again.",
+    coach: {
+      mixup: "Jumping in on every hard word. If you say the word right away, your child practices waiting for help, not reading. Give a few seconds, then a prompt, and only then the word.",
+      strong: "On a passage they have not seen before, reads almost every word correctly (about 95 or more of every 100), slows down at a new word and works through it in parts, and goes back to fix a word that did not make sense.",
+      notyet: "Guesses from the first letter, skips or adds small words, or keeps going when a sentence does not make sense. Try an easier passage, or read it together first and then let your child read it alone.",
+      ido: "Read the first few sentences of a new passage aloud. At a long word, think out loud: \"I don't know this one. I'll cover the ending, read the first part, then add the rest.\" Then check that the sentence makes sense.",
+      wedo: "Read the next paragraph together, at the same time. When either of you reaches a hard word, stop, break it into parts together, and reread the sentence.",
+      youdo: "Your child reads a passage they have not read before, out loud, while you follow along with the timer and tap any word that is skipped or read wrong. When they stop on a word, wait about three seconds, then ask, \"What part do you know?\" before telling them. Afterward, ask what it was mostly about.",
+      everyday: "Once or twice a week, have your child read aloud a page they have never seen from a different kind of text each time: a story, a science or history book, a poem, a recipe or directions. Watch for fewer and fewer stops on new pages over a few weeks. That is increasing accuracy."
+    },
     activity: FLUENCY,
     check: {
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
       items: [
         "Read two new passages of different kinds (a story and a fact passage) at about 95% accuracy or better. The timer works this out.",
-        "Noticed and fixed a word that came out wrong (or made no mistakes to fix).",
+        "When a word came out wrong, noticed it and fixed it without help. (If there were no mistakes, try a harder passage or a page of a chapter book. If there are still none, check this line.)",
         "Told in their own words what each passage was mostly about.",
-        "Read long or new words by breaking them into parts, not by guessing. Check this if every long word was read correctly."
+        "Read long or new words by breaking them into parts, not by guessing.",
+        "Over two weeks or more, accuracy on new passages stayed at about 95% or better, or went up. The timer's list of recent readings shows this."
       ]
     }
   });
@@ -124,6 +134,15 @@
       }
     ],
     parent: "Model it: read a page aloud with lots of expression, then have your child read the same page. Repeated reading of one short passage, three or four times over a week, builds smoothness fast. For a fair speed check against the national numbers, use the Reading accurately skill with a passage your child has not read before.",
+    coach: {
+      mixup: "Thinking that faster is better. A child who races and runs through periods and commas is not reading with expression, even if the words-per-minute number is high. Talking speed is the goal.",
+      strong: "Sounds like talking: reads in phrases, drops the voice at periods, makes yes-or-no questions go up, shows feeling at exclamation points, and changes voice for characters. Can tell you afterward what happened and how a character felt.",
+      notyet: "Reads word by word in a flat voice, runs through periods, or reads so fast that the meaning gets lost. Go back to We do and read short parts together.",
+      ido: "Read three or four sentences of a passage aloud with lots of expression. Then read the same sentences in a flat robot voice. Ask which one was easier to understand, and why.",
+      wedo: "Echo reading: read one sentence with expression, then your child reads the same sentence the same way. Next, read a whole paragraph together at the same time.",
+      youdo: "Your child practices one passage three or four times over a week, then reads it to you with the timer. After the reading, mark the expression and pause notes under the result, then ask what happened and how a character felt.",
+      everyday: "Use many kinds of text: read a poem like a performer, a page of a fact book like a news reporter, and a story with talking by giving each character a voice. Reading to a younger child, a pet or a relative on a call gives a real reason to practice."
+    },
     activity: FLUENCY_PRACTICED,
     check: {
       intro: "Grown-up: listen to your child read a passage they have practiced (passage 5 or 6, which have characters talking), then check each line that is true.",
@@ -132,7 +151,8 @@
         "Paused at commas and stopped at periods.",
         "Made questions sound like asking and showed feeling for exclamations.",
         "Read in phrases, groups of words that go together.",
-        "Changed their voice for characters who were speaking."
+        "Changed their voice for characters who were speaking.",
+        "After reading, told what happened and how one character felt."
       ]
     }
   });

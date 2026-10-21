@@ -118,16 +118,133 @@ PP.addTask({
   ],
   model: {
     paragraphs: [
-      "Imagine a first grader grinning because she just read a whole page by herself. That could happen at our school every week! I think our school should start a reading buddy program because it would help both younger and older students.",
-      "First, a reading buddy program would help younger students become better readers. The first source, \"Reading Buddies,\" explains that little kids hear smooth reading up close when a big buddy reads to them. That gives them something to aim for when it is their turn to read. When a little reader gets stuck, someone is right there to help sound out the tricky word. The second source adds that hearing stories is one way small children pick up new vocabulary. More new words and a helper close by add up to a stronger reader.",
-      "A reading buddy program would also help older students learn and grow. According to the first source, big buddies rehearse each book before a visit, so their reading aloud becomes smoother. It also says that hearing a little partner read a brand-new word makes many big buddies proud. In addition, the second source describes \"learning by teaching.\" You cannot explain a story to someone else until you truly get it yourself. All that extra thinking makes the older buddy a stronger reader, too.",
+      "Imagine a first grader at our school grinning because she just read a whole page to her reading buddy! Reading buddies are big kids and little kids who share books. I think our school should start a reading buddy program because it would help both younger and older students.",
+      "First, a reading buddy program would help younger students become better readers. The first source, \"Reading Buddies,\" explains that little kids learn what good reading sounds like by listening to a big buddy. That gives them something to aim for when it is their turn to read. When a little reader gets stuck, someone is right there to help with the tricky word. The second source adds that hearing stories teaches small children new words. More new words and a helper close by add up to a stronger reader.",
+      "A reading buddy program would also help older students learn and grow. According to the first source, big buddies rehearse each book before a visit, so their reading aloud becomes smoother. It also says that hearing a little partner read a brand-new word makes many big buddies proud. In addition, the second source describes \"learning by teaching.\" You cannot explain a story to someone else until you truly get it yourself. All that extra thinking helps the older buddy understand stories better, too.",
       "In conclusion, a reading buddy program would help little readers grow, and it would help big kids learn, too. Please start a reading buddy program this year so that every student can share a good book with a friend."
     ],
     notes: [
-      "Purpose and Organization (3 of 3): The introduction opens with a picture that pulls the reader in, then states the opinion clearly (\"I think our school should start a reading buddy program\") and previews both reasons. Each body paragraph is about one provided reason, in the same order as the reasons were given. Linking words and phrases (First, when, also, According to, so, In addition, In conclusion) connect the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, sums up both reasons and ends by asking the principal, the audience named in the prompt, to act (\"Please start a reading buddy program this year\").",
-      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. For younger students: hearing a big buddy read, help with hard words, and learning new words by hearing stories. For older students: practicing each book ahead of time, feeling proud, and learning by teaching. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names the source behind its facts (\"The first source\", \"According to the first source\", \"the second source\"). The writer also adds explanations of their own, such as \"That gives them something to aim for when it is their turn to read,\" and restates \"learning by teaching\" in kid-friendly words (\"You cannot explain a story to someone else until you truly get it yourself\"). Each body paragraph ends by tying the facts back to its reason: \"More new words and a helper close by add up to a stronger reader\" and \"All that extra thinking makes the older buddy a stronger reader, too.\"",
-      "Language Usage and Conventions (2 of 2): The essay is long enough to show command. Sentences are complete and varied: short ones (\"That could happen at our school every week!\"), compound ones joined with and, and complex ones built with because, when, so and until. Verb tense is controlled: present tense for facts from the sources (\"big buddies rehearse\", \"the second source adds\"), would and could for what the program would do, and past tense only in the hook, where a girl \"just read\" a page. There are no unneeded shifts. Subjects and verbs agree (\"the second source adds\", \"hearing a little partner read a brand-new word makes\", \"More new words and a helper close by add up\"). There are no spelling, capitalization or punctuation errors."
+      "Purpose and Organization (3 of 3): The introduction opens with a picture that pulls the reader in, tells what reading buddies are, then states the opinion clearly (\"I think our school should start a reading buddy program\") and previews both reasons. Each body paragraph is about one provided reason, in the same order as the reasons were given. Linking words and phrases (First, when, also, According to, so, In addition, In conclusion) connect the facts to the reasons and the reasons to the opinion. The conclusion restates the opinion, sums up both reasons and ends by asking the principal, the audience named in the prompt, to act (\"Please start a reading buddy program this year\").",
+      "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. For younger students: hearing a big buddy read, help with hard words, and learning new words by hearing stories. For older students: practicing each book ahead of time, feeling proud, and learning by teaching. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names the source behind its facts (\"The first source\", \"According to the first source\", \"the second source\"). The writer also adds explanations of their own, such as \"That gives them something to aim for when it is their turn to read,\" and restates \"learning by teaching\" in kid-friendly words (\"You cannot explain a story to someone else until you truly get it yourself\"). Each body paragraph ends by tying the facts back to its reason: \"More new words and a helper close by add up to a stronger reader\" and \"All that extra thinking helps the older buddy understand stories better, too.\"",
+      "Language Usage and Conventions (2 of 2): The essay is long enough to show command. Sentences are complete and varied: short, simple ones (\"Reading buddies are big kids and little kids who share books\"), compound ones joined with and, and complex ones built with because, when, so and until. Verb tense is controlled: present tense for facts from the sources (\"big buddies rehearse\", \"the second source adds\"), would for what the program would do, and past tense only in the hook, where a girl \"just read\" a page. There are no unneeded shifts. Subjects and verbs agree (\"the second source adds\", \"hearing a little partner read a brand-new word makes\", \"More new words and a helper close by add up\"). There are no spelling, capitalization or punctuation errors."
     ]
+  },
+  /* PP-004: original example responses below the top score, written and scored by Peach Prep
+     with the official rubric's trait descriptions (GaDOE Grade 3 Eight-Point, Three-Trait Writing
+     Rubric, August 2026). They are NOT GaDOE anchor papers. Mistakes in them are on purpose. */
+  examples: [
+    {
+      total: 2,
+      scores: { purpose: 1, evidence: 1, conventions: 0 },
+      paragraphs: [
+        "I think we shoud have reading budys. it is fun. the big kid read to the little kid and they like it and the little kid get help with words and it is fun and they read books and then they go back to class.",
+        "Reading budys is good."
+      ],
+      notes: [
+        "Purpose and Organization (1 of 3): There is an opinion (\"I think we shoud have reading budys\"), but the introduction is weak: it does not say what reading buddies are or who the essay is for. Ideas about younger and older students are not grouped, and \"and then\" strings everything together instead of linking reasons to the opinion. \"Reading budys is good\" is a weak concluding statement. This matches the rubric's 1 column: a weak introduction, a weak structure and a weak conclusion.",
+        "Evidence and Elaboration (1 of 3): Only one provided reason is touched: the big kid reads to the little kid, and the little kid gets help with words. Those ideas come from Source 1, but they are listed, not explained. \"It is fun\" and \"they go back to class\" are not from the sources and do not support a reason. Reason 2 (older students) is missing. This is minimal support, the rubric's 1.",
+        "Language Usage and Conventions (0 of 2): The essay is very short, and errors are frequent: one long run-on joined by and, missing capitals (\"it is fun\", \"the big kid\"), subject-verb errors (\"the big kid read\", \"the little kid get\", \"Reading budys is\") and misspellings (shoud, budys). There is almost no sentence variety. The rubric says a very brief response may not show even partial command, so we scored it 0. Some scorers could give a 1 because the meaning is still clear."
+      ],
+      next: "Start with organization: help your child write one sentence that tells the opinion, then one group of sentences about little kids and one about big kids."
+    },
+    {
+      total: 4,
+      scores: { purpose: 2, evidence: 1, conventions: 1 },
+      paragraphs: [
+        "Our school should start a reading buddy program. I have two reasons.",
+        "First, it helps younger students. The big buddy can help with hard words. Little kids like to hear stories. My little brother likes it when I read to him.",
+        "Second, it helps older students to. They practice the book before they go. They feels proud.",
+        "That is why we need reading buddys. Thank you for reading my essay."
+      ],
+      notes: [
+        "Purpose and Organization (2 of 3): The opinion is stated in the first sentence, and the essay has four paragraphs: an introduction, one paragraph for each reason in order, and a conclusion. First, Second and That is why work as transitions. It is not a 3 because the introduction is plain (\"I have two reasons\"), the facts are not linked to the reasons with words like because or so, and the conclusion is short. The rubric's 2 column fits: an adequate introduction, structure and conclusion.",
+        "Evidence and Elaboration (1 of 3): Both reasons are named, but the support is thin. \"The big buddy can help with hard words\" is copied word for word from Source 1, so it is not in the child's own words. \"Little kids like to hear stories\" is only loosely connected to the sources, and the little brother is a personal idea, which is fine as an extra but does not replace source facts. Reason 2 has two short facts from Source 1 (practicing the book, feeling proud) with no explaining. Only Source 1 is used. We scored it 1 because the facts are listed with almost no elaboration. This one is close to the line; a scorer could see it as a low 2, since the facts it does use are relevant.",
+        "Language Usage and Conventions (1 of 2): Most sentences are complete, but almost all are short and simple, so there is little variety. There is a subject-verb error (\"They feels proud\"), a spelling error (buddys) and \"to\" where it should be \"too\". The essay is also short. This fits the rubric's 1: some correct sentences and agreement, with limited variety."
+      ],
+      next: "Work on evidence: for each reason, find one fact in Source 2, say it in your own words, and add a sentence that starts with \"That means...\""
+    },
+    {
+      total: 6,
+      scores: { purpose: 2, evidence: 2, conventions: 2 },
+      paragraphs: [
+        "I think our school should start a reading buddy program, and I hope you will agree. It would help little kids and big kids.",
+        "First, a reading buddy program would help younger students read better. In \"Reading Buddies,\" it says the big buddy helps with hard words. The second source says hearing stories read aloud teaches young kids lots of new words. That means the little kids would know more words.",
+        "Also, older students would learn too. The first source says big buddies practice the book before each visit so they read more smoothly. The second source explains that teaching makes you think hard about what you already know. Big buddies would get better at reading because they have to explain the story.",
+        "In conclusion, reading buddies help everyone. Please start a reading buddy program at our school."
+      ],
+      notes: [
+        "Purpose and Organization (2 of 3): The introduction states the opinion and previews both reasons, and \"I hope you will agree\" speaks to the principal. Each reason has its own paragraph, and First, Also, That means, because and In conclusion connect the ideas. It is not a 3 because the introduction does not pull the reader in or explain the topic, and the conclusion only restates the opinion without summing up both reasons. This is the rubric's 2: adequate introduction, structure, transitions and conclusion.",
+        "Evidence and Elaboration (2 of 3): Both reasons are supported with relevant facts from BOTH sources, mostly in the child's own words: help with hard words and learning new words (younger students), practicing before each visit and learning by teaching (older students). The child explains a little (\"That means the little kids would know more words\", \"because they have to explain the story\"). It is not a 3 because each reason has only two facts and one short explanation. A 3 would explain more fully how each fact helps the reason.",
+        "Language Usage and Conventions (2 of 2): The essay is long enough to show command. Sentences are complete and varied: simple, compound (joined with and) and complex (with so, because and that). Subjects and verbs agree (\"the big buddy helps\", \"teaching makes\"). The conclusion shifts from would to the present tense (\"reading buddies help everyone\"), and \"learn too\" needs a comma before too. These are small errors that do not get in the way of meaning, which still fits a 2."
+      ],
+      next: "To reach the top score, add one more explaining sentence for each fact, and end by summing up both reasons."
+    }
+  ],
+  /* PP-004: step-by-step scoring for a grown-up, one block per rubric trait. "points" restates
+     each rubric column in plain words; "say" gives coaching lines for the child. */
+  scoring: {
+    purpose: {
+      steps: [
+        "Read the whole essay once, the way the principal would, without marking anything.",
+        "Underline the opinion. It should be near the beginning and say that the school should start a reading buddy program.",
+        "Put a 1 beside sentences about younger students and a 2 beside sentences about older students. Are the 1s together and the 2s together?",
+        "Circle linking words such as First, Also, because, so, for example and In conclusion. Do they tie each reason back to the opinion?",
+        "Read the ending. Does it restate the opinion, sum up the reasons or ask the principal to act?",
+        "Choose the score that fits best overall. An essay can show parts of two levels; pick the one it matches most."
+      ],
+      points: {
+        3: "A strong introduction makes the opinion clear. Each reason has its own clear group of sentences. Linking words connect the reasons to the opinion all the way through. A strong ending wraps it up.",
+        2: "All the parts are there and the essay is easy enough to follow, but some parts are plain or thin, such as a one-line introduction, linking words used only here and there, or a reason not clearly tied to the opinion.",
+        1: "The introduction or the ending is weak. Ideas are mixed together or hard to follow, and few linking words connect them.",
+        0: "There is no introduction, no order you can find and no ending. On the real test, a blank, copied, off-topic or too-short essay gets a condition code instead of a score."
+      },
+      say: [
+        "\"Show me the sentence that tells your opinion.\" If it is there, praise it: \"The principal knows what you think right away.\"",
+        "\"Where does your reason about little kids start? Can you add a word like First or Also so the principal knows a new reason is starting?\"",
+        "\"How could your last sentence ask the principal to do something?\""
+      ]
+    },
+    evidence: {
+      steps: [
+        "Open \"Where the support is in the sources\" below. It lists the facts that fit each reason.",
+        "Under reason 1 (younger students), check each fact the child used from a source. Do the same for reason 2 (older students).",
+        "Check the wording. A sentence that matches the source word for word, or with only a word or two changed, is copied, not in the child's own words.",
+        "After each fact, look for the child's own explaining, often with so, because or that means. A fact with no explaining counts for less.",
+        "Ideas from the child's own life are fine as extras, but they do not take the place of facts from the sources.",
+        "Choose the score that fits best overall."
+      ],
+      points: {
+        3: "Both reasons are supported with well-chosen facts from the sources, in the child's own words, and the child explains how each fact supports the reason.",
+        2: "The reasons are supported with relevant facts from the sources and some explaining, but the support is thin or uneven, or the facts are listed more than explained.",
+        1: "The support is minimal: few facts, facts that do not fit the reason, or facts with almost no explaining.",
+        0: "There are no reasons and no information from the sources."
+      },
+      say: [
+        "\"Show me one fact you found in Source 1 and one in Source 2.\"",
+        "\"You told me a fact. Now tell me why it matters. Try starting with 'That means...'\"",
+        "\"This sentence sounds just like the source. How would you say it to a friend?\""
+      ]
+    },
+    conventions: {
+      steps: [
+        "Read the essay out loud exactly as it is written. Mark each spot where you stumble or have to reread.",
+        "Check the sentences. Are they complete? Are some short and some joined with because, and, but or so?",
+        "Check the verbs. Does the tense stay steady? Do subjects and verbs agree (older students feel, a buddy helps)?",
+        "Look back at your marks. Do the mistakes only look messy, or do they make the meaning hard to follow?",
+        "Check the length. A very short essay may not show enough to earn a 2, even with few mistakes.",
+        "Choose the score that fits best overall."
+      ],
+      points: {
+        2: "Most sentences are complete and they vary. Verb tense and subject-verb agreement are mostly correct. There are few mistakes, and none make the meaning unclear. The essay is long enough to show this.",
+        1: "Some sentences are complete, with little variety. Some verbs are in the wrong tense or do not agree, and some mistakes sometimes make the meaning unclear.",
+        0: "There are few or no complete sentences, little correct tense or agreement, and frequent mistakes that often make the meaning unclear."
+      },
+      say: [
+        "\"Read this sentence out loud to me. Does it sound right?\"",
+        "\"Find two short sentences you could join with because or so.\"",
+        "\"Check your verbs: did you stay in the same time all the way through?\""
+      ]
+    }
   },
   lookFors: {
     purpose: [

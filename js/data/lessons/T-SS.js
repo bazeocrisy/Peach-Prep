@@ -43,7 +43,7 @@ PP.addLesson({
       "Compare tells how things are alike and different. Look for both, alike, same, but, however, unlike, different and while.",
       "Problem and solution tells about a trouble and how it gets fixed. Look for problem, tried, but, decided, solved and finally.",
       "Description tells about one topic with details. Look for for example, such as, also, in addition, has and looks like. Stories have clue words too: one day, but, then, so, finally and in the end.",
-      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact."
+      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact. In a book, the table of contents lists the chapters and the page where each one starts, so you know where to look."
     ],
     words: [
       { term: "section", means: "one part of a text, often with its own heading" },
@@ -71,22 +71,24 @@ PP.addLesson({
       answer: "It is organized in sequence. It tells the steps of a butterfly's life in order."
     },
     {
-      show: ["Alligators and crocodiles are both reptiles. Both have long tails and sharp teeth. But an alligator's snout is wide and rounded, while a crocodile's snout is long and pointed."],
+      show: ["Rabbits and hares are both furry animals with long ears. Both eat grass and leaves. But baby rabbits are born without fur, while baby hares are born with fur and open eyes."],
       ask: "How is this text organized?",
       steps: [
-        "Count the subjects. The text is about two animals, alligators and crocodiles.",
+        "Count the subjects. The text is about two animals, rabbits and hares.",
         "Look for clue words. Both tells how they are alike. But and while tell how they are different.",
         "A text that tells how two things are alike and different is a compare text."
       ],
-      answer: "It is organized to compare. It tells how alligators and crocodiles are alike and different."
+      answer: "It is organized to compare. It tells how rabbits and hares are alike and different."
     },
     {
-      show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is a map of Georgia with the river drawn in blue."],
+      show: ["An article says the Chattahoochee River starts in the mountains of north Georgia. It flows past the city of Atlanta and then runs along part of the border between Georgia and Alabama. Next to the article is this map."],
+      figure: { src: "assets/figures/ss1a-georgia-river.svg", label: "Figure 1", caption: "The Chattahoochee River in Georgia",
+        alt: "Map of Georgia, with an arrow that points north. Alabama is to the west and Florida is to the south. The Chattahoochee River is drawn as a thick striped line. It starts in the mountains in the north, flows southwest past a dot for Atlanta, then runs south along the border between Georgia and Alabama." },
       ask: "How does the map help the reader?",
       steps: [
         "Think about what the words tell. They name places the river passes.",
-        "Think about what a map does. A map shows where places are.",
-        "Put them together. The map lets you see the river's path and where those places are."
+        "Look at the map. The arrow shows that the top of the map is north. Find the mountains at the top, the dot for Atlanta, and the striped line for the river.",
+        "Put them together. Follow the river from the mountains, past Atlanta, and down the edge of Georgia next to Alabama. The map lets you see the river's path and where those places are."
       ],
       answer: "The map shows the path of the river, so the reader can see where it starts, where Atlanta is, and where it runs along the Alabama border."
     }
@@ -161,15 +163,28 @@ PP.addLesson({
       clue: "A text box sits apart from the main sections. Read it, then ask what kind of information it gives that the sections do not.",
       why: "The answer is to add an interesting fact about peanuts in Georgia. The box gives one extra fact: Georgia grows more peanuts than any other state. It does not tell steps or reasons." },
     { id: "SK-SS1a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "The author wants to add a map of Georgia that shows where most of the peanut farms are. How would the map help readers?",
+      prompt: "The author added this map to the article. What does the map show that the words in the article do not?",
+      figure: { src: "assets/figures/ss1a-peanut-map.svg",
+        alt: "Map of Georgia with an arrow that points north. A striped area in the south and southwest part of the state matches the key, which says peanut farms. A dot shows Atlanta in the north." },
       choices: [
-        { text: "It would show which parts of the state have peanut farms.", correct: true },
-        { text: "It would show the steps for growing a peanut plant." },
-        { text: "It would explain why peanut roots help the soil." },
-        { text: "It would tell how many days the peanuts dry in the sun." }
+        { text: "which part of Georgia the peanut farms are in", correct: true },
+        { text: "the steps for growing a peanut plant" },
+        { text: "why peanut roots help the soil" },
+        { text: "how many days the peanuts dry in the sun" }
       ],
-      clue: "Think about what a map is good at showing. Is it steps, reasons, or places?",
-      why: "The answer is \"It would show which parts of the state have peanut farms.\" A map shows where places are. Steps and reasons are told by the words in the sections, not by a map." }
+      clue: "Look at the key and the striped area on the map. Then check the sections: do the words already tell you each choice?",
+      why: "The answer is \"which part of Georgia the peanut farms are in.\" The striped area and the key show that the farms are in the south part of the state. The article says many Georgia farmers grow peanuts, but it never says where. The steps, the soil and the drying time are told by the words in the sections, not shown on the map." },
+    { id: "SK-SS1a-P7", type: "mc", points: 1, dok: 1, passages: [],
+      stem: ["Here is the table of contents from a book called Georgia's Sea Turtles.", "Chapter 1: Meet the Sea Turtles, page 2", "Chapter 2: Nests in the Sand, page 8", "Chapter 3: The Race to the Ocean, page 14", "Chapter 4: How People Help, page 20"],
+      prompt: "In which chapter would you look to find out how baby sea turtles get from their nest to the water?",
+      choices: [
+        { text: "Chapter 3: The Race to the Ocean", correct: true },
+        { text: "Chapter 2: Nests in the Sand" },
+        { text: "Chapter 1: Meet the Sea Turtles" },
+        { text: "Chapter 4: How People Help" }
+      ],
+      clue: "Think about where the babies start and where they are going. Then read each chapter title.",
+      why: "The answer is \"Chapter 3: The Race to the Ocean.\" The babies hatch in a nest and must get to the water, and this chapter title names that trip to the ocean. Chapter 2 is about the nests themselves, Chapter 1 is an introduction, and Chapter 4 is about people." }
   ],
   test: [
     { id: "SK-SS1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -207,15 +222,17 @@ PP.addLesson({
       clue: "Find the sentence that tells what happened because people cut down the forests.",
       why: "The answer is \"As a result, the tortoises lost much of their home.\" Cutting down the forests is the cause. The tortoises losing their home is the effect, and the clue words are as a result." },
     { id: "SK-SS1a-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "The author wants to add a photo of a gopher tortoise sitting at the opening of its tunnel. Which caption would best fit the photo?",
+      prompt: "The author wants to add this picture to the article. Which caption would best fit the picture?",
+      figure: { src: "assets/figures/ss1a-tortoise-burrow.svg",
+        alt: "A drawing of a gopher tortoise sitting on sandy ground, right in front of the dark, round opening of a tunnel in a mound of sand." },
       choices: [
         { text: "A gopher tortoise rests at the door of the burrow it dug.", correct: true },
         { text: "Workers set a small fire to clear away thick bushes." },
         { text: "Pine forests once covered much of south Georgia." },
         { text: "Many towns and roads were built over the years." }
       ],
-      clue: "A caption tells what the picture shows. Picture the photo in your mind, then find the words that describe it.",
-      why: "The answer is \"A gopher tortoise rests at the door of the burrow it dug.\" The photo shows a tortoise at its tunnel, so the caption must tell about that. The other captions tell about things that are not in the photo." },
+      clue: "A caption tells what the picture shows. Look at the picture first, then find the words that describe it.",
+      why: "The answer is \"A gopher tortoise rests at the door of the burrow it dug.\" The picture shows a tortoise at the opening of its tunnel, and the article says that kind of tunnel is called a burrow. The other captions tell about workers, forests and towns, which are not in the picture." },
     { id: "SK-SS1a-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
       prompt: "Choose the words that best complete the sentence.",
       text: "Another good heading for the section \"A Home for Many Animals\" would be {0}.",
@@ -308,7 +325,7 @@ PP.addLesson({
       paragraphs: [
         ["(1) The Pine Hill Library is a great place for kids in our town.", "(2) It is open six days a week, and it is free to visit."],
         ["(3) You can borrow much more than books at the library.", "(4) Kids can check out movies, puzzles and even board games.", "(5) You can keep most things for two weeks."],
-        ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) Kids can also borrow audiobooks to listen to in the car.", "(9) In the summer, there is a reading contest with prizes."],
+        ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) On Wednesdays, kids can join a building-block club.", "(9) In the summer, there is a reading contest with prizes."],
         ["(10) Next time you need something fun to do, visit the Pine Hill Library!"]
       ] }
   ],
@@ -365,12 +382,16 @@ PP.addLesson({
       why: "Folding a boat is a how-to, so it needs steps in order. Frogs and toads are two things side by side, so that is compare. Why a pond dried up asks for a reason, so that is cause and effect." }
   ],
   test: [
-    { id: "SK-SS1b-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read the paragraph that begins with sentence 6. Select the sentence that belongs in a different paragraph of Priya's draft.",
-      targets: ["p2:3:1", "p2:3:2", "p2:3:3", "p2:3:4"],
-      answer: ["p2:3:3"], pick: 1,
-      clue: "Name what most of the sentences in that paragraph tell about. Then find the one sentence that tells about something else, and check which other paragraph it matches.",
-      why: "The answer is sentence 8, \"Kids can also borrow audiobooks to listen to in the car.\" The other sentences in that paragraph tell about activities at the library: story time and a reading contest. Audiobooks are something kids borrow, so this sentence belongs in the paragraph about borrowing, sentences 3 to 5." },
+    { id: "SK-SS1b-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Priya wants to add a paragraph to help readers choose between the Pine Hill Library and their school library. Which plan fits that job best?",
+      choices: [
+        { text: "Compare them: tell what both libraries have, then what only one of them has.", correct: true },
+        { text: "List the steps for walking from the school to the town library, in order." },
+        { text: "Explain what caused the town to build its library many years ago." },
+        { text: "Tell a story about a day when Priya lost a book at her school." }
+      ],
+      clue: "Think about what a reader needs to know to choose between two places.",
+      why: "The answer is \"Compare them: tell what both libraries have, then what only one of them has.\" To choose between two places, readers need to see how they are alike and different, so a compare plan fits. Steps in order fit a how-to, a cause-and-effect plan tells why something happened, and a story about a lost book does not help readers choose." },
     { id: "SK-SS1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a heading above sentences 6 through 9. Which heading fits best?",
       choices: [
@@ -380,7 +401,7 @@ PP.addLesson({
         { text: "When the Library Is Open" }
       ],
       clue: "Look at the first sentence of that part. It tells what the whole part is mostly about.",
-      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library plans special activities, and sentences 7 and 9 tell about two of them: story time and the summer contest. Borrowing is the topic of sentences 3 to 5." },
+      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library plans special activities, and sentences 7 to 9 tell about three of them: story time, the block club and the summer contest. Borrowing is the topic of sentences 3 to 5." },
     { id: "SK-SS1b-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a photo of the Saturday story time. Which caption would best help her reader?",
       choices: [
@@ -411,7 +432,17 @@ PP.addLesson({
         { text: "so every paragraph would be the very same length" }
       ],
       clue: "Look at the middle of the draft. What is each paragraph mostly about?",
-      why: "The answer is so each paragraph tells about one part of the library. One paragraph tells what kids can borrow, and another tells about events. That makes the draft easy for a reader to follow." }
+      why: "The answer is so each paragraph tells about one part of the library. One paragraph tells what kids can borrow, and another tells about events. That makes the draft easy for a reader to follow." },
+    { id: "SK-SS1b-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Priya will turn her draft into a poster for kindergarten children who are just learning to read. Which change would help THESE readers most?",
+      choices: [
+        { text: "a big picture for each thing kids can do there, with one or two easy words under it", correct: true },
+        { text: "a chart that lists the hours the library is open on each day of the week" },
+        { text: "a long paragraph that tells how and when the library was first built" },
+        { text: "a map that shows which shelves hold which kinds of books" }
+      ],
+      clue: "Think about who will read the poster. What can a child who is just learning to read use without help?",
+      why: "The answer is a big picture for each thing kids can do there, with one or two easy words under it. Children who are just learning to read can understand pictures and a few easy words. A chart of hours could help a grown-up plan a visit, and a long paragraph or a shelf map could help older readers, but those need too much reading for these young readers." }
   ]
 });
 
@@ -691,7 +722,7 @@ PP.addLesson({
     { id: "p2", draft: true, title: "Field Day", byline: "Carlos's first draft", genre: "Student draft (narrative)",
       paragraphs: [
         ["(1) Field Day at Maple Creek Elementary was the best day of the whole school year."],
-        ["(2) The morning was full of races.", "(3) First, we hopped across the grass in the sack race.", "(4) Then we raced while carrying eggs on spoons.", "(5) My big brother is learning how to drive a car.", "(6) The last race was a relay, and my team won."],
+        ["(2) The morning was full of races.", "(3) First, we hopped across the grass in the sack race.", "(4) Then we raced while carrying eggs on spoons.", "(5) My big brother says the high school has a real track.", "(6) The last race was a relay, and my team won."],
         ["(7) After lunch, we cooled off with water games.", "(8) We tossed water balloons back and forth with partners.", "(9) The teachers sprayed us with garden hoses.", "(10) Everyone was soaked and laughing."],
         ["(11) I can't wait for next year's Field Day!"]
       ] }
@@ -753,7 +784,7 @@ PP.addLesson({
       targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:2:4", "p2:2:5"],
       answer: ["p2:2:4"], pick: 1,
       clue: "Find the topic sentence of that paragraph. Then test each sentence: is it about that idea?",
-      why: "The answer is sentence 5, \"My big brother is learning how to drive a car.\" The paragraph is about the races on Field Day morning. A brother learning to drive is not about the races." },
+      why: "The answer is sentence 5, \"My big brother says the high school has a real track.\" The paragraph is about the races on Field Day morning. A track sounds like racing, but this sentence is about the high school, not about the races Carlos ran that morning. Sentences 3, 4 and 6 each tell about one Field Day race." },
     { id: "SK-SS1d-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Carlos wants to add a detail to the paragraph that begins with sentence 7. Which sentence fits best?",
       choices: [
@@ -880,6 +911,18 @@ PP.addLesson({
         ["That evening, Jamal sat alone on the front steps.", "The sun was a hot orange ball sinking behind the pine trees.", "Then a girl rolled up the sidewalk on a scooter."],
         ["\"I'm Noor,\" she said.", "\"I live next door.\"", "\"Want to ride to the park?\""],
         ["Jamal grabbed his scooter, and the two of them zoomed down the sidewalk like rockets.", "By dinnertime, Jamal was smiling from ear to ear.", "Maybe this new town would not be so bad after all."]
+      ] },
+    /* PP-004 form B passage: used only by testB. A friendly letter, so form B adds a
+       different kind of text (the standard says "a wide variety of texts"). Needs independent review. */
+    { id: "p3", title: "A Letter from Camp", genre: "Letter",
+      paragraphs: [
+        ["Dear Grandpa,"],
+        ["Camp Pine Lake is the best place in the world!", "On the first day, I didn't know anyone.", "Then a girl named Lucy told a silly joke about a frog, and that broke the ice.", "Now we are best friends."],
+        ["Yesterday, we took canoes out on the lake.", "My canoe wobbled like a bowl of jelly when I climbed in.", "I was sure I would tip over, but I didn't!", "Of all the things we do here, I like the canoes best."],
+        ["Our counselor, Jo, is a walking map.", "She never gets lost, and she knows every path through the woods.", "She can even find the trail to the waterfall after dark."],
+        ["At night, we sit by the campfire and sing songs.", "The sky is a dark blanket sprinkled with glitter.", "By the time we hit the hay, I am too tired to keep my eyes open."],
+        ["I miss you and Grandma.", "I will see you in two weeks!"],
+        ["Love,", "Ana"]
       ] }
   ],
   practice: [
@@ -994,21 +1037,80 @@ PP.addLesson({
       ],
       clue: "Bare means empty, like a wall without posters. Then think about the color of fresh snow.",
       why: "The answer is very white walls with nothing on them. Fresh snow is bright white, so the simile shows the walls are very white. There is no real snow in the room." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (6) and DOK mix
+     (2,2,3,2,2) as form A, on a new passage p3 (a letter). NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-SS2a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 2, Ana writes that Lucy's silly joke \"broke the ice.\" What does this mean?",
+      choices: [
+        { text: "The joke helped the girls stop feeling shy and start talking.", correct: true },
+        { text: "The joke cracked the ice on the frozen lake." },
+        { text: "The joke made Ana feel cold and lonely." },
+        { text: "The joke got Lucy in trouble with the counselor." }
+      ],
+      clue: "Read the sentences just before and just after the joke. How do Ana and Lucy get along before it, and after it?",
+      why: "The answer is \"The joke helped the girls stop feeling shy and start talking.\" Before the joke, Ana didn't know anyone. After it, she and Lucy are best friends. \"Break the ice\" is an idiom for getting past the shy, quiet start when people first meet. The lake is warm enough for canoes, so no real ice cracked." },
+    { id: "SK-SS2a-TB2", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Select the sentence from paragraphs 3, 4 and 5 that uses an idiom.",
+      targets: ["p3:3:1", "p3:3:3", "p3:4:2", "p3:5:2", "p3:5:3"],
+      answer: ["p3:5:3"], pick: 1,
+      clue: "An idiom is a saying that does not mean what its words say. Look for words that would sound silly if you pictured them exactly.",
+      why: "The answer is \"By the time we hit the hay, I am too tired to keep my eyes open.\" No one really hits any hay. \"Hit the hay\" is an idiom that means go to bed, and the rest of the sentence, about being too tired to keep her eyes open, fits that meaning. The sky sentence is a metaphor, and the other sentences mean just what they say." },
+    { id: "SK-SS2a-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Ana writes, \"Our counselor, Jo, is a walking map.\" What does Ana mean?",
+        choices: [
+          { text: "Jo knows her way around the camp very well.", correct: true },
+          { text: "Jo carries a big paper map everywhere she goes." },
+          { text: "Jo walks slowly so that everyone can keep up." },
+          { text: "Jo likes to draw maps of the lake." }
+        ] },
+      partB: { prompt: "Which sentence from the letter best helps you understand what Ana means?",
+        choices: [
+          { text: "\"She never gets lost, and she knows every path through the woods.\"", correct: true },
+          { text: "\"Yesterday, we took canoes out on the lake.\"" },
+          { text: "\"At night, we sit by the campfire and sing songs.\"" },
+          { text: "\"Camp Pine Lake is the best place in the world!\"" }
+        ] },
+      clue: "Jo is not really a map. Think about what a map helps people do. Then read what Ana says about Jo next.",
+      why: "Part A: Jo knows her way around the camp very well. Part B: \"She never gets lost, and she knows every path through the woods.\" A map shows you how to get places. Saying Jo is a walking map, without like or as, is a metaphor: Jo can show the way just like a map can. The letter never says Jo carries or draws a map." },
+    { id: "SK-SS2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence from the letter uses a simile?",
+      choices: [
+        { text: "My canoe wobbled like a bowl of jelly when I climbed in.", correct: true },
+        { text: "Of all the things we do here, I like the canoes best." },
+        { text: "Our counselor, Jo, is a walking map." },
+        { text: "Then a girl named Lucy told a silly joke about a frog, and that broke the ice." }
+      ],
+      clue: "A simile compares two different things using like or as. Be careful: not every like makes a comparison.",
+      why: "The answer is \"My canoe wobbled like a bowl of jelly when I climbed in.\" It uses like to compare the shaky canoe to wobbly jelly. \"I like the canoes best\" uses like to mean enjoy, so it compares nothing. The walking map sentence is a metaphor, and \"broke the ice\" is an idiom." },
+    { id: "SK-SS2a-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Ana writes, \"The sky is a dark blanket sprinkled with glitter.\" What does she want Grandpa to picture?",
+      choices: [
+        { text: "a black sky full of bright, twinkling stars", correct: true },
+        { text: "a blanket spread out on the grass by the fire" },
+        { text: "a sky full of gray rain clouds" },
+        { text: "glitter left over from an art project at camp" }
+      ],
+      clue: "Ana is sitting by the campfire after sundown. What tiny, shiny things could be scattered across the sky above her?",
+      why: "The answer is \"a black sky full of bright, twinkling stars.\" At night the sky is dark like a blanket, and the stars shine like tiny bits of glitter. There is no real blanket or glitter in the sky, and rain clouds would hide the sparkles, not show them." }
   ]
 });
 
 /* ---------- 3.T.SS.2.b Use similes, metaphors and idioms in writing ---------- */
 PP.addLesson({
   code: "3.T.SS.2.b",
-  title: "Use similes, metaphors and idioms in your writing",
+  title: "Use figurative language in your writing: similes, metaphors, idioms and more",
   teach: {
-    big: "You can make your writing come alive with comparisons: a simile with like or as, a metaphor that says one thing is another, or an idiom, as long as it fits what you mean.",
+    big: "You can make your writing come alive with figurative language: a simile with like or as, a metaphor that says one thing is another, an idiom, and more, as long as it fits what you mean.",
     points: [
       "First decide what you want your reader to picture or feel. Is it fast, loud, quiet, happy or scared?",
-      "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\"",
-      "Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
+      "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\" Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
       "Use an idiom only when its meaning matches. \"A piece of cake\" means easy, so it fits an easy test, not a hard one.",
-      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know."
+      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know.",
+      "Similes, metaphors and idioms are not the only kinds of figurative language. You can also give a thing a person's actions, like \"The wind whispered through the trees.\" Use it only if it fits what you mean."
     ],
     words: [
       { term: "simile", means: "a comparison that uses like or as" },
@@ -1119,7 +1221,7 @@ PP.addLesson({
       clue: "Look for like or as first. Then ask: does the sentence say one thing is another, or is it a saying you cannot read word for word?",
       why: "The wolf and the marching band sentences are similes because they use like or as. \"The puddles were shiny mirrors\" is a metaphor. \"Raining cats and dogs\" is an idiom that means raining very hard." },
     { id: "SK-SS2b-P5", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Mei wants to add this sentence: \"The raindrops tapped on the roof like tiny fingers.\" Where is the best place to add it?",
+      prompt: "Mei wants to add this sentence: \"The raindrops danced and drummed on our roof.\" Where is the best place to add it?",
       choices: [
         { text: "after sentence 4", correct: true },
         { text: "after sentence 1" },
@@ -1127,7 +1229,7 @@ PP.addLesson({
         { text: "after sentence 9" }
       ],
       clue: "The new sentence is about rain falling. Find the sentence where the rain starts.",
-      why: "The answer is after sentence 4. Sentence 4 says, \"Then the rain began,\" so the tapping raindrops come right after it. By sentence 7 the storm is gone, and in sentence 1 the rain has not started." }
+      why: "The answer is after sentence 4. Sentence 4 says, \"Then the rain began,\" so the dancing raindrops come right after it. By sentence 7 the storm is gone, and in sentence 1 the rain has not started. This sentence gives the raindrops a person's actions, dancing and drumming, which is another kind of figurative language." }
   ],
   test: [
     { id: "SK-SS2b-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -1171,11 +1273,11 @@ PP.addLesson({
       ],
       clue: "The new sentence is about the stage lights. Find where Andre is on the stage, and look for a sentence that the bright lights would help explain.",
       why: "The answer is after sentence 5. Andre walks onto the stage in sentence 5. Only after sentence 5 does the bright light explain sentence 6, where Andre can hardly see the crowd. In the other places, the lights would not explain anything nearby." },
-    { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 1, passages: ["p2"],
-      prompt: "Andre wants to revise sentence 11 with a simile that shows how proud he felt. Choose the simile that fits best.",
+    { id: "SK-SS2b-T5", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Andre wants to replace sentence 11 with a simile that shows the same feeling. Choose the simile that fits best.",
       text: "I felt {0}.",
-      slots: [{ options: ["as proud as a peacock", "as busy as a bee", "as quiet as a mouse"], answer: 0 }],
-      clue: "Andre wants to show one feeling. Which simile names that feeling?",
-      why: "The answer is as proud as a peacock. A peacock spreads its bright feathers as if it is showing off, so this simile means very proud. Busy and quiet do not match how Andre felt." }
+      slots: [{ options: ["puffed up like a peacock", "as busy as a bee", "as quiet as a mouse"], answer: 0 }],
+      clue: "Reread sentence 11 to name Andre's feeling. Then think about what each animal is known for.",
+      why: "The answer is puffed up like a peacock. A peacock puffs up and spreads its bright feathers as if it is showing off, so this simile shows the proud feeling in sentence 11. A busy bee shows working hard, and a quiet mouse shows being shy or silent. Neither matches how Andre felt after the cheering." }
   ]
 });

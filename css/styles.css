@@ -7,11 +7,11 @@
 :root{
   --navy:#123A6B; --navy-deep:#0D2B50; --text:#16304F; --muted:#51678A;
   --page:#FBF7F2; --card:#FFFFFF; --line:#E6DCD0; --line-soft:#F1EAE1;
-  --peach:#E8743B; --peach-deep:#B4531F; --peach-tint:#FDEEE4; --peach-edge:#F6CDB4;
+  --peach:#E8743B; --peach-deep:#A0471A; --peach-tint:#FDEEE4; --peach-edge:#F6CDB4;
   --leaf:#2F7A4F; --leaf-tint:#E8F4EC; --leaf-edge:#BFDDCA;
   --sky:#1B4FA8; --sky-tint:#EDF3FD; --sky-edge:#CBDDF7;
   --plum:#6A4CD0; --plum-tint:#F2EEFC; --plum-edge:#D8CEF5;
-  --right:#1E8A52; --right-tint:#E9F6EF; --right-edge:#BDE3CC;
+  --right:#17703F; --right-tint:#E9F6EF; --right-edge:#BDE3CC;
   --try:#B4530F; --try-tint:#FFF3EA; --try-edge:#F3CFB5;
   --hint:#6A4CD0;
   --radius:16px; --radius-sm:10px; --pill:999px;
@@ -31,7 +31,7 @@ a{color:var(--sky);}
 button{font:inherit;color:inherit;}
 :focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:6px;}
 [tabindex="-1"]:focus{outline:none;}
-.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 12px;z-index:9;}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 12px;z-index:9;min-height:44px;display:inline-flex;align-items:center;}
 .skip:focus{left:8px;}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px;}
 .muted{color:var(--muted);}
@@ -59,6 +59,10 @@ button{font:inherit;color:inherit;}
 .bar-brand,.bar-tag{font-family:var(--head);font-weight:800;color:var(--peach-deep);margin:0;text-align:center;min-width:0;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .bar-tag span{display:inline-block;background:var(--peach-tint);border:1px solid var(--peach-edge);border-radius:var(--pill);padding:4px 12px;font-size:.9rem;}
+/* PP-004 U-2: the mode tag ("Skill check", "Try it yourself", "Writing task") wraps instead of being cut off */
+.bar-tag{overflow:visible;white-space:normal;}
+.bar-tag span{max-width:100%;}
+@media (max-width:360px){ .bar-tag span{font-size:.8rem;line-height:1.2;padding:3px 8px;border-radius:12px;} }
 .bar-spacer{width:88px;}
 
 /* ---------- home ---------- */
@@ -91,9 +95,6 @@ button{font:inherit;color:inherit;}
 .sec-writing .section-icon{background:var(--peach-tint);border-color:var(--peach-edge);color:var(--peach-deep);}
 .sec-language .section-icon{background:var(--plum-tint);border-color:var(--plum-edge);color:var(--plum);}
 .sec-test .section-icon{background:var(--leaf-tint);border-color:var(--leaf-edge);color:var(--leaf);}
-.is-soon{background:#FCFAF7;}
-.soon-label{margin:auto 0 0;font-family:var(--head);font-weight:700;color:var(--muted);font-size:.95rem;}
-.soon-label::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--peach);margin-right:8px;vertical-align:middle;}
 .parent-band{margin:26px 0 0;padding:18px 16px;background:var(--peach-tint);border:1px solid var(--peach-edge);border-radius:var(--radius);
   display:flex;flex-direction:column;gap:12px;}
 .band-title{font-size:1.2rem;margin-bottom:6px;}
@@ -112,7 +113,6 @@ button{font:inherit;color:inherit;}
 .set-meta{margin:0;color:var(--muted);font-size:.95rem;}
 .set-actions{display:flex;gap:10px;margin-top:6px;}
 .set-actions .btn{flex:1;}
-.soon-panel{background:#fff;border:1px dashed var(--line);border-radius:var(--radius);padding:20px;color:var(--muted);}
 
 /* ---------- player ---------- */
 .player-head .page-title{font-size:1.35rem;}
@@ -132,13 +132,16 @@ button{font:inherit;color:inherit;}
 .passage-byline{color:var(--muted);font-style:italic;}
 .passage-heading{font-size:1.05rem;margin:16px 0 6px;}
 .passage-caption{font-style:italic;color:var(--muted);background:var(--line-soft);border-radius:8px;padding:8px 10px;font-size:.95rem;}
-.passage-box{background:var(--leaf-tint);border:1px solid var(--leaf-edge);border-radius:12px;padding:10px 14px;margin:0 0 12px;}
+/* PP-004 U-1: blue, with a thick left edge, so a text box never looks like the green
+   "Answer:" / "That's right!" boxes; the edge (not colour alone) sets it apart, also on paper */
+.passage-box{background:var(--sky-tint);border:1px solid var(--sky-edge);border-left:5px solid var(--sky);border-radius:12px;padding:10px 14px;margin:0 0 12px;}
 .passage-heading + .passage-box{margin-top:-2px;}
 .para{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;margin-bottom:10px;}
 .para-no{font-family:var(--head);font-weight:700;font-size:.8rem;color:var(--muted);padding-top:4px;text-align:right;}
 .para-body{margin:0;line-height:1.7;}
 .stanza{margin-bottom:14px;}
 .poem-line{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;margin:0;line-height:1.7;}
+.poem-line>.sent{padding-left:1.2em;text-indent:-1.2em;}  /* PP-004: a wrapped poem line gets a hanging indent, so it does not look like a new line */
 .line-no{font-size:.75rem;color:var(--muted);text-align:right;padding-top:4px;}
 .sent{border-radius:4px;transition:background-color .2s;}
 .sent.is-selected{background:#FFE7A8;box-shadow:0 0 0 2px #F2C14E;}
@@ -317,6 +320,7 @@ fieldset.trait{margin:0 0 12px;}
 .hot-option.is-picked::before{content:"\2713 Selected";font-family:var(--head);font-weight:800;font-size:.8rem;color:#7A5A00;}
 .passage-note{background:var(--peach-tint);border:1px solid var(--peach-edge);border-radius:10px;padding:8px 12px;font-weight:700;}
 .std-practice .linkish{min-height:44px;display:inline-flex;align-items:center;text-align:left;padding:4px 0;}
+.std-practice a{display:inline-flex;align-items:center;min-height:44px;}
 .para.no-num{grid-template-columns:minmax(0,1fr);}
 @media (max-width:639px){
   .ptable thead{display:none;}
@@ -363,7 +367,9 @@ fieldset.trait{margin:0 0 12px;}
 .skill-count{margin:4px 0 0;color:var(--muted);font-weight:700;min-height:0;}
 .skill-count:empty{display:none;}
 .skill-search{width:100%;min-height:48px;border:1px solid var(--line);border-radius:var(--pill);padding:10px 18px;font:inherit;background:#fff;color:var(--text);}
-.skill-search:focus{border-color:var(--sky);outline:none;box-shadow:0 0 0 3px var(--sky-tint);}
+@media (max-width:360px){.skill-search{padding:10px 14px;}}
+/* PP-004 U-6.4: the same 3px #1B4FA8 ring as every other control (was a 1.1:1 pale halo) */
+.skill-search:focus{border-color:var(--sky);outline:3px solid var(--sky);outline-offset:2px;border-radius:var(--pill);box-shadow:none;}
 .seg{display:flex;gap:6px;}
 .seg button{flex:1;min-height:44px;border-radius:var(--pill);border:1px solid var(--line);background:#fff;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--navy);cursor:pointer;padding:6px 8px;}
 .seg button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff;}
@@ -438,7 +444,8 @@ fieldset.trait{margin:0 0 12px;}
 .write-box{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;line-height:1.6;min-height:150px;resize:vertical;}
 .write-check-h{font-weight:700;margin:12px 0 6px;}
 .write-checklist{list-style:none;margin:0 0 10px;padding:0;}
-.write-checklist li{display:flex;align-items:flex-start;gap:10px;min-height:40px;}
+.write-checklist li{display:flex;align-items:flex-start;gap:10px;min-height:44px;}
+.write-checklist label{flex:1;min-height:44px;padding:2px 0;cursor:pointer;}
 .write-checklist input{width:22px;height:22px;margin-top:3px;flex:0 0 22px;}
 .for-grownups{background:var(--line-soft);border-radius:12px;padding:12px 14px;margin:6px 0 14px;font-size:.95rem;}
 .fg-label{font-family:var(--head);font-weight:700;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;margin:0 0 4px;}
@@ -463,25 +470,33 @@ fieldset.trait{margin:0 0 12px;}
 .cursive{font-family:"PP Cursive",cursive;font-size:1.25em;line-height:2.1;letter-spacing:.01em;}
 .flu-pick{margin:4px 0 10px;flex-wrap:wrap;}
 .flu-pick button{flex:1 0 30%;}
-.fluency.is-reading .flu-ctl{position:sticky;top:0;z-index:4;background:#fff;padding:6px 0;border-bottom:1px solid var(--line);}
+.fluency.is-reading .flu-ctl,.fluency.is-picking .flu-ctl{position:sticky;top:0;z-index:4;background:#fff;padding:6px 0;border-bottom:1px solid var(--line);}
 .flu-ctl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
 .flu-clock{font-family:var(--head);font-weight:800;font-size:1.6rem;color:var(--navy);margin:0;min-width:3.2em;}
 .flu-say{color:var(--plum);font-weight:700;}
+.flu-prompt{flex:1 1 100%;margin:0;color:var(--plum);font-weight:800;}
+.flu-result:focus{outline:none;}
 .flu-text{border:1px solid var(--line);border-radius:12px;padding:12px;line-height:2;font-size:1.1rem;}
 .flu-title{font-family:var(--head);font-weight:700;color:var(--navy-deep);margin:0 0 4px;}
-.flu-w{background:none;border:0;border-radius:6px;padding:6px 2px;font:inherit;color:var(--text);cursor:pointer;min-height:0;}
+.flu-w{background:none;border:0;border-radius:6px;padding:6px 5px;min-width:24px;font:inherit;color:var(--text);cursor:pointer;min-height:0;}
 .flu-w.is-miss{background:var(--try-tint);color:var(--try);text-decoration:line-through;outline:1px solid var(--try-edge);}
 .pick-last .flu-w:hover,.pick-last .flu-w:focus{background:var(--sky-tint);outline:2px solid var(--sky);}
-.flu-w.is-past{color:#A99C8C;}
+.flu-w.is-past{color:#7A6E60;}
 .flu-out{margin-top:12px;}
 .flu-result{font-size:1.1rem;background:var(--right-tint);border:1px solid var(--right-edge);border-radius:10px;padding:10px 12px;}
 .trace-sheet{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 12px;overflow-x:auto;}
 .trace-name{font-size:.95rem;color:var(--muted);}
 .trace-row{font-size:clamp(1.35rem,6.4vw,2.1rem) !important;font-family:"PP Cursive Guides","PP Cursive",cursive;font-size:2.1rem;line-height:1.9;margin:0 0 4px;color:#9AA8BC;white-space:nowrap;}
 .trace-lines{font-size:clamp(1.35rem,6.4vw,2.1rem);height:1.35em;margin:0 0 10px;border-top:1.5px solid #9AA8BC;border-bottom:1.5px solid #9AA8BC;background:linear-gradient(to bottom,transparent calc(50% - 1px),#C9D2DE calc(50% - 1px),#C9D2DE calc(50% + 1px),transparent calc(50% + 1px));}
-.go-card .btn + .btn{margin-left:8px;}
+.go-card.trace .btn{margin:4px 8px 4px 0;}
 @media print{
   .bar,.steps,.skill-tools,.hero-actions,.for-grownups,.step-next,.go-card .btn{display:none !important;}
+  /* PP-003 D14: no tabs or action buttons on paper; the player prints the passage and the question */
+  #tabs,.wtabs,.ptabs,.panel-actions,.q-controls,.clue-toggle,.skip,.notfound{display:none !important;}
+  /* PP-004 U-6.1 (PP-003 RD-15): the on-screen "New passage" note and the essay's "Start this task over" are not for paper */
+  #passage-note,#w-score .btn{display:none !important;}
+  .player-grid:not(.is-full):not(.no-passage) .passage-pane,.player-grid:not(.is-full) .item-pane{display:block !important;}
+  .passage-pane{position:static !important;max-height:none !important;overflow:visible !important;}
   body.print-trace *{visibility:hidden;}
   body.print-trace .trace-sheet.is-printing,body.print-trace .trace-sheet.is-printing *{visibility:visible;}
   body.print-trace .trace-sheet.is-printing{position:absolute;left:0;top:0;width:100%;border:0;}
@@ -504,13 +519,16 @@ fieldset.trait{margin:0 0 12px;}
 .cc-next{font-size:.82rem;color:var(--muted);font-weight:700;line-height:1.25;}
 .cat-foundations{--c:#2F7A4F;}
 .cat-reading{--c:#1B4FA8;}
-.cat-writing{--c:#B4531F;}
+.cat-writing{--c:#A0471A;}
 .cat-vocabulary{--c:#6A4CD0;}
 .cat-grammar{--c:#0E7C86;}
 .home-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;}
 .hl-btn{min-height:44px;border-radius:var(--pill);border:1px solid var(--line);background:#fff;padding:8px 14px;font-family:var(--head);font-weight:700;color:var(--navy);cursor:pointer;font-size:.92rem;}
 .hl-btn:hover{border-color:var(--navy);}
 .cat-sec{margin:28px 0 0;scroll-margin-top:12px;}
+@media (min-width:640px){.cat-sec{scroll-margin-top:110px;}}
+.notfound{margin:14px 0 0;padding:10px 14px;background:var(--try-tint);border:1px solid var(--try-edge);border-radius:12px;font-weight:700;}
+.sk-panel{scroll-margin-top:84px;}
 .cat-head{border-left:6px solid var(--c,var(--navy));padding:2px 0 2px 12px;margin-bottom:12px;}
 .cat-title{font-size:1.5rem;color:var(--c,var(--navy-deep));}
 .cat-line{margin:2px 0 0;color:var(--muted);}
@@ -537,7 +555,7 @@ fieldset.trait{margin:0 0 12px;}
 .clue-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;}
 .clue-chip{display:inline-block;background:#fff;border:1px solid var(--peach-edge);border-radius:var(--pill);padding:2px 10px;font-weight:800;text-decoration:underline;text-underline-offset:3px;color:var(--navy-deep);margin:2px 4px 2px 0;}
 .clue-ask,.clue-draw{margin:0 0 6px;}
-.clue-toggle{min-height:40px;border-radius:var(--pill);border:1px solid var(--peach-edge);background:var(--peach-tint);color:var(--navy-deep);font-family:var(--head);font-weight:700;padding:6px 14px;margin:0 0 10px;cursor:pointer;}
+.clue-toggle{min-height:44px;border-radius:var(--pill);border:1px solid var(--peach-edge);background:var(--peach-tint);color:var(--navy-deep);font-family:var(--head);font-weight:700;padding:6px 14px;margin:0 0 10px;cursor:pointer;}
 .clue-toggle[aria-pressed="true"]{background:var(--peach-deep);color:#fff;border-color:var(--peach-deep);}
 mark.clue-w{background:none;color:inherit;}
 .show-clues mark.clue-w{background:#FFE58A;font-weight:800;text-decoration:underline;border-radius:3px;padding:0 1px;}
@@ -550,7 +568,7 @@ mark.clue-w{background:none;color:inherit;}
 .clue-sheet .teach-tip{margin-top:12px;}
 .fg-sub{font-weight:800;margin:6px 0 2px;}
 .five-min{margin-top:6px;}
-.five-min summary{cursor:pointer;font-weight:800;min-height:40px;display:flex;align-items:center;}
+.five-min summary{cursor:pointer;font-weight:800;min-height:44px;display:flex;align-items:center;}
 @media (max-width:639px){
   .cat-cards{grid-template-columns:1fr;gap:8px;}
   .cat-card{display:grid;grid-template-columns:1fr auto;grid-template-areas:"name ring" "next ring";align-items:center;min-height:0;padding:10px 12px;border-top-width:1px;border-left:6px solid var(--c,var(--navy));gap:2px 10px;}
@@ -607,3 +625,98 @@ mark.clue-w{background:none;color:inherit;}
 #habit-list{display:block;max-width:760px;columns:auto;}
 #habit-list .habit-group{break-inside:avoid;border-bottom:1px solid var(--line);margin:0;padding:2px 0;}
 .habit-group>summary{font-family:var(--head);font-weight:800;color:var(--navy);font-size:1.05rem;}
+
+/* ---------- PP-003 mastery/fluency fixes ---------- */
+/* 3.F.H.4.b: the lesson says leave about one lowercase o between cursive words.
+   Measured in Chromium: a plain space is ~0.3em and an o ~0.6em in both cursive fonts,
+   so .3em of extra word spacing makes the gap about one o wide. */
+.cursive,.trace-row{word-spacing:.3em;}
+.sl-review{flex:0 0 auto;font-size:.72rem;font-weight:800;color:var(--plum);border:1px solid var(--plum);border-radius:999px;padding:1px 7px;margin-left:4px;}
+.sl-done.by-grownup{background:var(--plum);width:auto;border-radius:11px;padding:0 8px;white-space:nowrap;font-size:.75rem;}
+.go-note{margin:4px 0;color:var(--muted);font-size:.95rem;}
+.flu-tool-note{font-size:.95rem;color:var(--muted);border-left:4px solid var(--line);padding:2px 0 2px 10px;}
+.flu-obs{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:12px 0;}
+.flu-obs legend,.flu-obs .fo-h{font-family:var(--head);font-weight:800;color:var(--navy-deep);}
+.flu-obs fieldset{border:0;padding:0;margin:8px 0;min-width:0;}
+.flu-obs fieldset legend{font-size:1rem;font-weight:700;margin-bottom:4px;}
+.flu-obs label{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-right:14px;}
+.flu-obs input[type=number]{width:4.5em;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;min-height:44px;}   /* PP-004 U-5 (PP-003 RD-12): was 40px */
+.flu-hist{margin:6px 0 0;padding-left:1.2em;}
+.flu-hist li{margin:2px 0;}
+.flu-obs-tag{font-weight:700;color:var(--plum);}
+.ald-note{font-weight:700;}
+/* the wider word gaps make the longest trace row ~10% longer: shrink it a little on the narrowest phones so it fits */
+@media (max-width:380px){ .trace-sheet .trace-row{font-size:clamp(1.12rem,5.6vw,2.1rem) !important;} }
+
+/* ---------- PP-003: figures and bold words (SPEC §5e) ---------- */
+.pp-figure{margin:4px 0 14px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px;break-inside:avoid;page-break-inside:avoid;}
+.pp-fig-img{display:block;width:100%;max-width:380px;height:auto;margin:0 auto;}
+.pp-fig-cap{margin:8px 0 0;font-size:.95rem;line-height:1.4;color:var(--text);text-align:left;}
+.pp-fig-label{color:var(--navy-deep);}
+.pp-bold{font-weight:800;}
+.q-stem .pp-figure,.ex-body .pp-figure{margin:8px 0 4px;padding:6px;}
+@media (max-width:420px){.pp-figure{padding:6px;}.ex-body .pp-figure,.q-stem .pp-figure{padding:0;border:0;}}
+@media print{
+  .pp-figure{border:1px solid #999;}
+  .pp-fig-img{max-width:9cm;}
+}
+
+/* ---------- PP-004: writing task parent tab (step-by-step scoring, leveled examples) ---------- */
+.score-steps{margin:8px 0 10px;border-left:4px solid var(--peach-edge);padding:2px 0 2px 10px;}
+.score-steps > summary{cursor:pointer;min-height:44px;display:flex;align-items:center;margin:0;list-style:none;}
+/* PP-004 U-3: flex hid the open/close triangle; show the site's ▸ / ▾ marker (as on .five-min, .sk-official, .habit-group) */
+.score-steps > summary::-webkit-details-marker{display:none;}
+.score-steps > summary::before{content:"▸";display:inline-block;width:1.1em;flex:none;color:var(--peach-deep);}
+.score-steps[open] > summary::before{content:"▾";}
+/* PP-004 U-5 (PP-003 RD-12): "Where the support is in the sources" was a 22px target */
+.evidence-key > summary{cursor:pointer;display:list-item;min-height:44px;padding:11px 0;margin:4px 0;}
+.score-steps ol.plist{padding-left:1.4em;}
+.score-levels li{margin:6px 0;}
+.examples .ex-level{border-top:2px dashed var(--line);padding-top:12px;margin-top:12px;}
+.examples .ex-level:first-of-type{border-top:0;margin-top:4px;padding-top:0;}
+.ex-level-head{font-size:1.05rem;margin:4px 0 2px;}
+.ex-level-scores{margin:0 0 6px;font-weight:700;color:var(--peach-deep);font-size:.95rem;overflow-wrap:anywhere;}
+.ex-essay{max-height:none;}
+.ex-next{background:var(--leaf-tint);border:1px solid var(--leaf-edge);border-radius:10px;padding:8px 12px;margin:6px 0 0;}
+@media print{ .score-steps,.examples{break-inside:avoid-page;} }
+
+/* Parent learning choice and suggested path: independent from scored progress. */
+.path-wrap{max-width:980px;padding-top:24px;padding-bottom:48px;}
+.learning-choices{display:grid;gap:18px;margin:24px 0;}
+.path-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);min-width:0;}
+.path-card h2{font-size:1.4rem;margin-bottom:12px;}
+.path-card p{margin-bottom:16px;}
+.path-card ul{padding-left:22px;}
+.path-card li{margin-bottom:10px;}
+.path-eyebrow{font-weight:800;color:var(--peach-deep);}
+.path-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;}
+.path-wrap .btn{white-space:normal;text-align:left;max-width:100%;overflow-wrap:anywhere;}
+.browse-mode{margin-top:24px;}
+.path-progress{margin:16px 0;color:var(--muted);}
+.path-next-card{border:2px solid var(--leaf-edge);}
+.path-alongside{background:var(--sky-tint);border:1px solid var(--sky-edge);border-radius:var(--radius);padding:20px;margin:20px 0;}
+.path-alongside h2{font-size:1.15rem;margin-bottom:10px;}
+.path-section-title{font-size:1.5rem;margin-top:28px;margin-bottom:12px;}
+.path-phase{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);margin:14px 0;min-width:0;}
+.path-phase>summary,.path-habit-group>summary{padding:16px;min-height:48px;cursor:pointer;font-weight:800;overflow-wrap:anywhere;}
+.path-phase>p{padding:0 16px;}
+.path-group-title{font-size:1.05rem;padding:14px 18px 0;}
+.path-lessons{padding:0 16px 0 44px;margin:8px 0 16px;}
+.path-lesson{padding:12px 0;border-bottom:1px solid var(--line-soft);}
+.path-lesson>.btn{justify-content:flex-start;border-radius:12px;}
+.path-lesson .note{margin:8px 0;}
+.path-check{display:flex;align-items:flex-start;gap:10px;min-height:44px;padding:10px 0;cursor:pointer;font-size:.95rem;}
+.path-check input{flex:0 0 22px;width:22px;height:22px;margin:0;accent-color:var(--leaf);}
+.path-check span{min-width:0;overflow-wrap:anywhere;}
+.path-habit-group{border-top:1px solid var(--line);}
+.path-habit{padding:18px;border-top:1px solid var(--line-soft);}
+.path-habit h3{font-size:1.1rem;margin-bottom:10px;}
+.path-habit ul{padding-left:22px;}
+.path-bar{flex-wrap:wrap;}
+.path-storage:not(:empty){background:var(--try-tint);border:1px solid var(--try-edge);padding:12px;border-radius:10px;}
+@media(min-width:700px){.learning-choices{grid-template-columns:1fr 1fr;}.learning-choices .path-card{display:flex;flex-direction:column;align-items:flex-start;}.learning-choices .btn{margin-top:auto;}}
+@media(max-width:360px){.path-card{padding:18px;}.path-lessons{padding-left:34px;padding-right:12px;}.path-bar .nav-btn{padding:8px 12px;font-size:.9rem;}}
+
+.path-wrap>.brand{color:var(--peach-deep);}
+.path-lesson-group{border-top:1px solid var(--line-soft);}
+.path-lesson-group>summary{min-height:48px;padding:14px 18px;cursor:pointer;font-weight:700;}

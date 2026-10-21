@@ -2,7 +2,7 @@
    and calls PP.addSet(). A set is listed here only after it has passed the
    content checker, two independent reviews and the screen audit. */
 window.PP_MANIFEST = {
-  build: "Peach Prep 2.1.0",
+  build: "Peach Prep 2.2.0-rc (PP-003)",
   tasks: ["W-TASK-01", "W-TASK-02"],
   /* Skill lessons (Learn It, Watch Me, Practice Together, Try It Yourself, Test), one file per standard group.
      A file is listed only after it has passed the checker and two reviews. */

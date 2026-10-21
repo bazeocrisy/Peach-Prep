@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 300 225" role="img" aria-labelledby="t">
+  <title id="t">A monarch butterfly sits on top of a flower.</title>
+  <!-- flower -->
+  <path d="M150 250 V150" stroke="#2F5A2A" stroke-width="5"/>
+  <path d="M150 220 Q110 200 100 214 Q120 230 150 220 Z M150 196 Q190 176 202 190 Q182 206 150 196 Z" fill="#DCEFD3" stroke="#2F5A2A" stroke-width="2.5"/>
+  <g fill="#FFFFFF" stroke="#111" stroke-width="2.5">
+    <ellipse cx="150" cy="118" rx="14" ry="30"/><ellipse cx="150" cy="182" rx="14" ry="30" transform="rotate(0)" />
+    <ellipse cx="118" cy="150" rx="30" ry="14"/><ellipse cx="182" cy="150" rx="30" ry="14"/>
+    <ellipse cx="127" cy="127" rx="13" ry="28" transform="rotate(-45 127 127)"/><ellipse cx="173" cy="127" rx="13" ry="28" transform="rotate(45 173 127)"/>
+    <ellipse cx="127" cy="173" rx="13" ry="28" transform="rotate(45 127 173)"/><ellipse cx="173" cy="173" rx="13" ry="28" transform="rotate(-45 173 173)"/>
+  </g>
+  <circle cx="150" cy="150" r="20" fill="#E9C46A" stroke="#111" stroke-width="2.5"/>
+  <!-- monarch, wings open, resting on the flower -->
+  <g transform="translate(150 114)">
+    <g stroke="#111" stroke-width="2.5" fill="#F4A340">
+      <path d="M-4 -6 Q-52 -62 -72 -34 Q-80 -2 -4 0 Z"/><path d="M4 -6 Q52 -62 72 -34 Q80 -2 4 0 Z"/>
+      <path d="M-4 4 Q-58 10 -50 42 Q-28 54 -4 10 Z"/><path d="M4 4 Q58 10 50 42 Q28 54 4 10 Z"/>
+    </g>
+    <g stroke="#111" stroke-width="2" fill="none"><path d="M-8 -6 L-56 -40 M8 -6 L56 -40 M-8 6 L-44 32 M8 6 L44 32"/></g>
+    <g fill="#fff" stroke="#111" stroke-width="1"><circle cx="-64" cy="-34" r="3.5"/><circle cx="64" cy="-34" r="3.5"/><circle cx="-46" cy="38" r="3.5"/><circle cx="46" cy="38" r="3.5"/><circle cx="-70" cy="-22" r="3"/><circle cx="70" cy="-22" r="3"/></g>
+    <path d="M0 -16 V34" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-1 -16 l-10 -22 M1 -16 l10 -22" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

@@ -198,31 +198,46 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.T.RA.1.b",
-  title: "Gathering and sorting facts from two sources",
+  title: "Finding, choosing and sorting facts from sources",
   teach: {
-    big: "Good researchers gather facts from more than one source, then sort the facts into groups so they are easy to use.",
+    big: "Good researchers gather facts from more than one source, keep only the facts that help answer their question, and sort those facts into notes.",
     points: [
-      "A source is a place you get facts, like a book, an article, a website or a person who knows a lot.",
-      "Use more than one source. One source may tell facts that the other one leaves out.",
-      "When two sources tell the same fact, you can feel more sure it is true.",
-      "Sort facts into groups with headings, such as \"What it eats\" and \"Where it lives.\" Each fact goes under the heading it fits.",
-      "If the facts tell steps, put them in order from first to last."
+      "A source is a place you get facts. It can be printed, like a book. It can be digital, like a web page. It can be a person who knows a lot.",
+      "Use more than one source. One source may tell facts that the other one leaves out. When two sources tell the same fact, you can feel more sure it is true.",
+      "Choose credible sources. A credible source is one you can trust because people who know the facts made it, like a library book, a museum or science center, a park ranger or a scientist. Check who made a web page. If anyone can post on it, if no name is given, or if it is mostly ads, it is not a strong source.",
+      "Start with your research question. A fact is relevant only if it helps answer that question. A fact can be true and still not help.",
+      "A web page often has a site name, a date, headings and boxes on the side. Ads, news and links in those boxes are usually about something else, so skip them.",
+      "Take notes in a notes table: your question at the top, then each fact in a few of your own words and where you found it.",
+      "Sort facts into groups with headings, such as \"What it eats\" and \"Where it lives.\" If the facts tell steps, put them in order from first to last."
     ],
     words: [
       { term: "source", means: "a place you get information" },
+      { term: "credible", means: "can be trusted, because people who know the facts made it" },
+      { term: "research question", means: "the question you want your research to answer" },
+      { term: "relevant", means: "helps answer your research question" },
       { term: "notes", means: "short facts you write down to remember" },
       { term: "heading", means: "a title that tells what a group of facts is about" }
     ],
-    example: {
-      label: "Example: notes on frogs",
-      lines: [
-        "Source 1: Frogs lay their eggs in water. Tadpoles hatch from the eggs.",
-        "Source 2: A tadpole breathes with gills, like a fish. Later it grows legs and loses its tail.",
-        "Note card \"How a frog grows\": eggs in water → tadpoles hatch → tadpole breathes with gills → grows legs, loses tail"
-      ],
-      note: "Neither source tells the whole story. Putting the facts from both sources in order on one card shows the whole life of a frog."
-    },
-    tip: "On the test, you may read two passages and sort facts by which passage they come from. You may also choose the fact that belongs under a note heading."
+    examples: [
+      {
+        label: "Example: notes on frogs",
+        lines: [
+          "Source 1: Frogs lay their eggs in water. Tadpoles hatch from the eggs.",
+          "Source 2: A tadpole breathes with gills, like a fish. Later it grows legs and loses its tail.",
+          "Note card \"How a frog grows\": eggs in water → tadpoles hatch → tadpole breathes with gills → grows legs, loses tail"
+        ],
+        note: "Neither source tells the whole story. Putting the facts from both sources in order on one card shows the whole life of a frog."
+      },
+      {
+        label: "Example: a notes table",
+        lines: ["The same frog facts, written in a notes table."],
+        figure: { src: "assets/figures/ra1b-notes-table.svg",
+          alt: "A notes table. At the top: Question: How does a frog grow? Below are two columns, Fact and Where I found it. Row 1: Eggs are laid in water, Source 1. Row 2: Tadpoles hatch from the eggs, Source 1. Row 3: A tadpole has gills, Source 2. Row 4: It grows legs and loses its tail, Source 2.",
+          width: 300 },
+        note: "Each row holds one fact in a few words, plus where it came from. If you need to check a fact later, the last column tells you where to look."
+      }
+    ],
+    tip: "On the test, you may read two or three sources, such as a book page, a web page and notes from a talk. You may choose the source you can trust most, sort facts by source, choose the fact that belongs under a note heading, or choose the detail or note that best helps answer a research question."
   },
   learn: [
     {
@@ -250,9 +265,43 @@ PP.addLesson({
         "The chick pecks out after three weeks. Its feathers dry after that."
       ],
       answer: "First the hen keeps the eggs warm. Next the chick pecks out. Last its feathers dry and get fluffy."
+    },
+    {
+      show: [
+        "Research question: How do woodpeckers find food?",
+        "Web page: Pine Hollow Nature Center, posted March 3, 2026",
+        "Heading: Dinner Inside a Tree",
+        "(1) Woodpeckers peck small holes in tree bark. (2) Beetle grubs and other insects hide under the bark. (3) A woodpecker pushes its long tongue into a hole and pulls the insects out.",
+        "Heading: Drumming",
+        "(4) In spring, woodpeckers drum fast on trees to tell other woodpeckers, \"This is my home.\"",
+        "Side box: Gift shop sale: Bird feeders, two for the price of one!"
+      ],
+      ask: "Which parts of the web page help answer the research question, and which should you skip? Then write one note.",
+      steps: [
+        "Check who made the page: a nature center, where people who study birds and other animals work. That makes it a credible source. Then read the research question again. It asks how woodpeckers find food.",
+        "Sentences 1, 2 and 3 tell how a woodpecker finds insects and gets them out, so they are relevant.",
+        "Sentence 4 is true, but drumming is about a home, not food. The side box is an ad for the gift shop. Skip both.",
+        "Write the fact in a few of your own words, and write where you found it."
+      ],
+      answer: "Use sentences 1, 2 and 3. The note: Question: How do woodpeckers find food? Fact: They peck holes in bark and pull out insects with their long tongues. Where I found it: Pine Hollow Nature Center web page, March 3, 2026."
     }
   ],
-  parent: "When your child gets curious about something, look in two places together, such as a library book and a nature show. Sort what you learned onto two sticky notes, each with its own heading.",
+  write: {
+    prompt: [
+      "Do your own research with a grown-up. Pick a topic you wonder about, and write one research question.",
+      "Find facts in two different places you can trust, such as a library book, a web page you look at with a grown-up, or a person who knows a lot about the topic.",
+      "Make a notes table like the one in Learn It. Write your question at the top. For each fact, write the fact in a few of your own words and where you found it. Example: Fact: They peck holes in bark. Where I found it: Pine Hollow Nature Center web page."
+    ],
+    checklist: [
+      "I wrote one research question.",
+      "I used two different sources I can trust.",
+      "I wrote only facts that help answer my question.",
+      "I wrote each fact in a few of my own words.",
+      "I wrote where I found each fact."
+    ],
+    rows: 8
+  },
+  parent: "When your child gets curious about something, look in two places together, such as a library book and a web page from a museum or nature center. Help your child keep a notes table with the question at the top, then each fact and where it came from. On a web page, point to the ads and side links and ask, \"Does this help answer our question?\" Also ask, \"Who made this page? Can we trust it?\" The skill \"Is this a good source?\" (3.T.RA.2.b) practices this more.",
   passages: [
     { id: "p1", title: "How Pumpkins Grow", byline: "Source 1: a page from a library book", genre: "Informational text",
       paragraphs: [
@@ -268,25 +317,59 @@ PP.addLesson({
         ["When the summer is dry, Ms. Ruiz waters the vines.", "She also pulls weeds so the pumpkins get plenty of sunlight and water."],
         ["In the fall, she picks the pumpkins when they are hard and orange.", "She cuts each stem with clippers and leaves a short piece on top.", "She told us that a pumpkin with its stem lasts longer.", "Then she sells the pumpkins at her farm stand."]
       ] },
-    { id: "p3", title: "Our Moon", byline: "Source 1: a page from a science book", genre: "Informational text",
+    { id: "p3", title: "Our Moon", byline: "A page from a science book", genre: "Informational text",
       paragraphs: [
         ["The moon is Earth's closest neighbor in space.", "It is much smaller than Earth.", "It travels around Earth again and again."],
         ["The moon does not make its own light.", "The light we see is sunlight bouncing off the moon.", "That is why the moon can look so bright in the night sky."],
         ["The moon seems to change shape during the month.", "Sometimes we see a full, round moon.", "Other times we see a thin sliver, or no moon at all.", "These changes are called phases."],
         ["The moon has no air and no wind.", "There is no rain there either.", "Its ground is covered with gray dust and rocks.", "It also has many round holes called craters."]
       ] },
-    { id: "p4", title: "A Talk at the Science Center", byline: "Source 2: a student's notes from a talk", genre: "Informational text",
+    { id: "p4", title: "A Talk at the Science Center", byline: "A student's notes from a talk", genre: "Informational text",
       paragraphs: [
         ["Last Saturday, Mr. Okafor, a scientist at the science center, talked to our class about the moon.", "We wrote down what he told us."],
         ["He said that astronauts first walked on the moon in 1969.", "They wore space suits because the moon has no air to breathe.", "Only a few people have ever walked on the moon."],
         ["The astronauts left footprints in the moon dust.", "Mr. Okafor said the footprints are probably still there.", "That is because the moon has no wind or rain to wipe them away."],
         ["The astronauts also brought moon rocks back to Earth.", "Scientists still study those rocks today.", "The rocks help them learn how the moon formed."]
+      ] },
+    /* PP-004: digital sources. Each web page has a site header figure (site name, menu, date),
+       headings ("## ...", which count in refs but not in paragraph numbers), an article, and
+       side boxes with off-topic news and an off-topic link. The sites are invented (gapfix: they now model
+       credible sources, an extension office and a science museum, instead of clubs with ads). */
+    { id: "p5", title: "What Pumpkin Plants Need", byline: "Another source: a web page from a county extension office, where plant scientists help people grow food", genre: "Informational text (web page)",
+      figures: [{ after: 0, src: "assets/figures/ra1b-web-pumpkin.svg",
+        alt: "The top of a web page. The site name is Maple County Extension Office. The menu says Home, Plants and Bugs. The page was posted on September 8, 2026.",
+        caption: "The top of the web page", width: 340 }],
+      paragraphs: [
+        ["## Plenty of Sun"],
+        ["Pumpkin plants need a lot of sunlight.", "They grow best in a spot that gets at least six hours of sun each day.", "In the shade, the vines grow slowly and make fewer flowers."],
+        ["## Water and Rich Soil"],
+        ["Pumpkin plants are thirsty.", "If it does not rain, give them about one inch of water each week.", "Pour the water on the soil around the roots, not on the leaves.", "Pumpkins also grow well in soil mixed with compost.", "Compost is a mix of old leaves and food scraps that have rotted."],
+        ["## Room to Grow"],
+        ["Pumpkin vines spread far across the ground.", "Leave lots of space between the plants so the vines do not crowd each other."],
+        ["## Fun Pumpkin Facts"],
+        ["People have grown pumpkins for thousands of years.", "A pumpkin is really a fruit, because it holds seeds.", "Some giant pumpkins grown for contests weigh more than 2,000 pounds."],
+        ["Box: News: Fall Festival tickets are on sale now!", "Come to the county fairgrounds for hayrides, face painting and games."],
+        ["Box: More on this site: How to Make a Bird Feeder"]
+      ] },
+    { id: "p6", title: "What Is It Like on the Moon?", byline: "Another source: a web page from a science museum, written by its space scientists", genre: "Informational text (web page)",
+      figures: [{ after: 0, src: "assets/figures/ra1b-web-moon.svg",
+        alt: "The top of a web page. The site name is Riverbend Science Museum. The menu says Home, Planets and Moon. The page was posted on April 14, 2026.",
+        caption: "The top of the web page", width: 340 }],
+      paragraphs: [
+        ["## Light on Your Feet"],
+        ["The moon's pull, called gravity, is much weaker than Earth's pull.", "A person who weighs 60 pounds on Earth would weigh only about 10 pounds on the moon.", "That is why astronauts could take big, bouncing hops when they walked there."],
+        ["## Long Days and Long Nights"],
+        ["Daytime on the moon lasts about two weeks.", "Then nighttime lasts about two weeks too.", "In the daytime, the ground gets hotter than boiling water.", "At night, it gets colder than any place on Earth."],
+        ["## How Far Away?"],
+        ["The moon is about 239,000 miles from Earth.", "A car driving day and night at highway speed, about 60 miles per hour, would need more than five months to get there."],
+        ["Box: Museum news: Sign up for Summer Camp today!", "Build robots and make new friends."],
+        ["Box: More on this site: Make Your Own Star Chart"]
       ] }
   ],
   practice: [
     { id: "SK-RA1b-P1", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Where can you find each fact? Match each fact to the source it comes from.",
-      cols: ["Source 1 only", "Source 2 only", "Both sources"],
+      cols: ["\"How Pumpkins Grow\" only", "\"A Visit with Farmer Ruiz\" only", "Both sources"],
       rows: [
         { text: "Pumpkin seeds are flat and white.", answer: 0 },
         { text: "A farmer keeps boxes of bees near the field.", answer: 1 },
@@ -295,17 +378,17 @@ PP.addLesson({
         { text: "A short piece of stem helps a pumpkin last longer.", answer: 1 }
       ],
       clue: "Check each fact in both sources before you choose. A fact belongs to both only if you can find it in each one.",
-      why: "Flat, white seeds are only in Source 1. The boxes of bees and the short piece of stem are only in Source 2, from Ms. Ruiz. Both sources say bees carry pollen from flower to flower, and both say pumpkins are picked in the fall." },
-    { id: "SK-RA1b-P2", type: "mc", points: 1, dok: 2, passages: ["p1", "p2"],
-      prompt: "Nia is making a note card with the heading \"How bees help pumpkins.\" Which fact belongs on this card?",
+      why: "Flat, white seeds are only in \"How Pumpkins Grow.\" The boxes of bees and the short piece of stem are only in \"A Visit with Farmer Ruiz.\" Both sources say bees carry pollen from flower to flower, and both say pumpkins are picked in the fall." },
+    { id: "SK-RA1b-P8", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Nia wants one more source about what pumpkin plants need. Which source can she trust the MOST?",
       choices: [
-        { text: "Only flowers that get pollen can grow into pumpkins.", correct: true },
-        { text: "Big leaves shade the soil and help keep it damp." },
-        { text: "A pumpkin with its stem on top lasts longer." },
-        { text: "Farmers plant the seeds after the ground is warm." }
+        { text: "a garden guide written by plant scientists who help farmers", correct: true },
+        { text: "a post on a game website by someone who does not give a name" },
+        { text: "an ad from a store that wants to sell her pumpkin seeds" },
+        { text: "a cartoon about a talking pumpkin who wins a prize" }
       ],
-      clue: "Read the heading again. Which fact explains why the bees' work matters to a pumpkin?",
-      why: "The answer is \"Only flowers that get pollen can grow into pumpkins.\" Bees carry the pollen, so this fact shows why bees matter. The other facts are true, but they are about leaves, stems and planting, not bees." },
+      clue: "For each source, ask: Who made it? Do they know the facts, or are they selling something, hiding their name or telling a made-up story?",
+      why: "The answer is \"a garden guide written by plant scientists who help farmers.\" Plant scientists study how plants grow, so their guide is a credible source. Nia cannot tell who wrote the game website post, the ad is trying to sell seeds, and the cartoon is a made-up story, not a fact source." },
     { id: "SK-RA1b-P3", type: "order", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia used both sources to make a note card called \"A pumpkin's life.\" Put her notes in order.",
       steps: [
@@ -317,6 +400,18 @@ PP.addLesson({
       ],
       clue: "Follow the pumpkin from the very beginning to the very end. Use facts from both sources.",
       why: "The order is: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, a tiny green pumpkin grows and turns orange, and the farmer cuts the stem and picks it. The first four steps come from Source 1 and the last from Source 2." },
+    { id: "SK-RA1b-P6", type: "ms", points: 2, dok: 2, passages: ["p5"],
+      prompt: "Nia's research question is \"What do pumpkin plants need to grow well?\" Which TWO details from the web page help answer her question?",
+      pick: 2,
+      choices: [
+        { text: "They grow best with at least six hours of sun each day.", correct: true },
+        { text: "If it does not rain, give them about one inch of water each week.", correct: true },
+        { text: "People have grown pumpkins for thousands of years." },
+        { text: "Some giant pumpkins weigh more than 2,000 pounds." },
+        { text: "Fall Festival tickets are on sale now!" }
+      ],
+      clue: "Read Nia's question again. A detail can be true and still not help. For each detail, ask: Does this tell something a pumpkin plant needs?",
+      why: "The answers are \"They grow best with at least six hours of sun each day\" and \"If it does not rain, give them about one inch of water each week.\" Sun and water are things the plants need. How long people have grown pumpkins and how heavy contest pumpkins get are fun facts, but they do not tell what a plant needs. The Fall Festival box is news about an event, not about what a plant needs." },
     { id: "SK-RA1b-P4", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia has three note cards. Match each fact to the note card where it belongs.",
       cols: ["How a pumpkin grows", "Caring for the plants", "Picking the pumpkins"],
@@ -337,12 +432,23 @@ PP.addLesson({
         { text: "Source 2, because Ms. Ruiz tells how her bees spread the pollen." }
       ],
       clue: "Think about Nia's question first. Then check that the reason in your choice really answers it.",
-      why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." }
+      why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." },
+    { id: "SK-RA1b-P7", type: "mc", points: 1, dok: 2, passages: ["p5"],
+      prompt: "Nia is filling in her notes table from the web page. Which note is the BEST one to write in the Fact box?",
+      stem: ["**Nia's notes table**", "**Question:** What do pumpkin plants need to grow well?", "**Fact:** ________", "**Where I found it:** Maple County Extension Office web page, September 8, 2026"],
+      choices: [
+        { text: "The vines need lots of space so they do not crowd.", correct: true },
+        { text: "The vines grow best when planted close together." },
+        { text: "A pumpkin is really a fruit, because it holds seeds." },
+        { text: "The site also tells how to make a bird feeder." }
+      ],
+      clue: "Ask two things about each note. Does it say the same thing as the web page? Does it help answer Nia's question?",
+      why: "The answer is \"The vines need lots of space so they do not crowd.\" The Room to Grow section says to leave lots of space so the vines do not crowd each other, and space is something the plants need. The note about planting close together says the opposite of the web page. The fruit fact is true, but it does not tell what a plant needs. The bird feeder link is about something else." }
   ],
   test: [
     { id: "SK-RA1b-T1", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Where can you find each fact? Match each fact to the source it comes from.",
-      cols: ["Source 1 only", "Source 2 only", "Both sources"],
+      cols: ["\"Our Moon\" only", "\"A Talk at the Science Center\" only", "Both sources"],
       rows: [
         { text: "The light from the moon is really sunlight.", answer: 0 },
         { text: "Only a few people have ever walked on the moon.", answer: 1 },
@@ -351,17 +457,18 @@ PP.addLesson({
         { text: "A scientist talked to a class about the moon.", answer: 1 }
       ],
       clue: "Look for each fact in both sources. Only choose Both sources when you can find the fact in each one.",
-      why: "Sunlight bouncing off the moon and craters are only in Source 1. The few people who walked on the moon and the scientist's talk are only in Source 2. Both sources tell about dust on the moon: Source 1 says the ground is covered with gray dust, and Source 2 says the astronauts left footprints in the moon dust." },
-    { id: "SK-RA1b-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Kofi is making a note card with the heading \"Why footprints last on the moon.\" Which fact belongs on this card?",
+      why: "Sunlight bouncing off the moon and craters are only in \"Our Moon.\" The few people who walked on the moon and the scientist's talk are only in \"A Talk at the Science Center.\" Both sources tell about dust on the moon: \"Our Moon\" says the ground is covered with gray dust, and the talk notes say the astronauts left footprints in the moon dust." },
+    { id: "SK-RA1b-T8", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Kofi wants one more web page about the moon. He finds these two pages.", "**Page A:** \"The Moon,\" from the Lakeside Space Center. It was written by space scientists who work there.", "**Page B:** \"Moon Chat,\" a page where anyone can post. The person who wrote about the moon did not give a name. The page is full of ads for games."],
+      prompt: "Which page should Kofi use for his research, and why?",
       choices: [
-        { text: "The moon has no wind or rain to wipe things away.", correct: true },
-        { text: "The moon is much smaller than Earth is." },
-        { text: "The moon seems to change shape during the month." },
-        { text: "The moon travels around Earth again and again." }
+        { text: "Page A, because scientists who study space wrote it.", correct: true },
+        { text: "Page B, because anyone can post, so it has more facts." },
+        { text: "Page B, because it has fun games to play about the moon." },
+        { text: "Page A, because Page B is not about the moon at all." }
       ],
-      clue: "The heading asks why. Find the fact that explains what keeps the footprints safe.",
-      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and its path around Earth, not footprints." },
+      clue: "Ask who made each page. Do they know the facts? Then check that the reason in your choice is true and really matters.",
+      why: "The answer is \"Page A, because scientists who study space wrote it.\" A credible source comes from people who know the facts, and space scientists study the moon. On Page B, anyone can post and the writer gave no name, so Kofi cannot tell if the facts are true. More posts do not make facts true, and games do not help answer a research question. Both pages are about the moon, so that is not the reason." },
     { id: "SK-RA1b-T3", type: "ms", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi has a note card with the heading \"People on the moon.\" Which TWO facts belong on this card? Choose two answers.",
       pick: 2,
@@ -374,26 +481,39 @@ PP.addLesson({
       ],
       clue: "Each fact on this card must be about people going to the moon. Facts about the moon by itself go on a different card.",
       why: "\"Astronauts first walked on the moon in 1969\" and \"Astronauts wore space suits on the moon\" are about people on the moon. The other three facts tell what the moon itself is like, so they belong on a different card." },
-    { id: "SK-RA1b-T4", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Which fact can be found in BOTH sources?",
-      choices: [
-        { text: "The moon has no air.", correct: true },
-        { text: "The moon travels around Earth." },
-        { text: "The moon's shape seems to change." },
-        { text: "Mr. Okafor works at a science center." }
-      ],
-      clue: "Find each fact in one source, then check the other source for the same idea.",
-      why: "The answer is \"The moon has no air.\" Source 1 says the moon has no air, and Source 2 says the astronauts wore space suits because the moon has no air to breathe. The other facts appear in only one source." },
-    { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kofi's note from Source 1 says, \"There are rocks on the moon's ground.\" Which fact from Source 2 adds the MOST to this note?",
+    { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
+      prompt: "Kofi's note from \"Our Moon\" says, \"There are rocks on the moon's ground.\" Which fact from \"A Talk at the Science Center\" adds the MOST to this note?",
       choices: [
         { text: "Astronauts brought moon rocks back for scientists to study.", correct: true },
         { text: "The moon is Earth's closest neighbor in space." },
         { text: "Only a few people have ever walked on the moon." },
         { text: "Mr. Okafor talked to the class at the science center." }
       ],
-      clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from Source 2 and tell more about the same thing.",
-      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from Source 1, not Source 2, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." }
+      clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from the talk and tell more about the same thing.",
+      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from \"Our Moon,\" not the talk, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." },
+    { id: "SK-RA1b-T6", type: "match", points: 2, dok: 2, passages: ["p6"],
+      prompt: "Kofi's next research question is \"What are day and night like on the moon?\" Does each part of the web page help answer his question? Match each one.",
+      cols: ["Helps answer the question", "Does not help"],
+      rows: [
+        { text: "Daytime on the moon lasts about two weeks.", answer: 0 },
+        { text: "The moon is about 239,000 miles from Earth.", answer: 1 },
+        { text: "At night, the ground gets colder than any place on Earth.", answer: 0 },
+        { text: "Sign up for Summer Camp today!", answer: 1 },
+        { text: "More on this site: Make Your Own Star Chart", answer: 1 }
+      ],
+      clue: "Keep Kofi's question in mind. A part helps only if it tells about day or night on the moon. True facts about other things do not help.",
+      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. The distance to the moon is true, but it is not about day and night. The Summer Camp box is museum news about a camp, and the star chart box is a link to a different page." },
+    { id: "SK-RA1b-T7", type: "mc", points: 1, dok: 2, passages: ["p6"],
+      prompt: "Kofi is filling in his notes table from the web page. Which note is the BEST one to write in the Fact box?",
+      stem: ["**Kofi's notes table**", "**Question:** Why could astronauts take big, bouncing hops on the moon?", "**Fact:** ________", "**Where I found it:** Riverbend Science Museum web page, April 14, 2026"],
+      choices: [
+        { text: "Gravity on the moon is weaker, so people weigh less there.", correct: true },
+        { text: "Gravity on the moon is stronger, so people weigh more there." },
+        { text: "The ground gets hotter than boiling water in the daytime." },
+        { text: "A car would need more than five months to drive there." }
+      ],
+      clue: "Ask two things about each note. Does it say the same thing as the web page? Does it help answer Kofi's question?",
+      why: "The answer is \"Gravity on the moon is weaker, so people weigh less there.\" The Light on Your Feet section says the moon's pull is much weaker, so a person weighs much less, and that is why astronauts could take big hops. The note that says stronger gets the fact wrong. The hot ground and the long car trip are true, but they do not explain the hops." }
   ]
 });
 
@@ -455,7 +575,7 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: "Reread the two monarch butterfly sources from Practice, \"From Egg to Butterfly\" and \"The Long Trip South.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources.",
+    prompt: "Reread the two monarch butterfly sources from Practice, \"A Monarch Grows Up\" and \"Monarchs Fly to Mexico.\" Write a summary of 3 to 5 sentences that tells the most important facts from both sources. Or choose your own topic, find two sources about it with a grown-up, and summarize those.",
     checklist: [
       "I told the big idea of both sources.",
       "I used my own words instead of copying sentences.",
@@ -467,33 +587,32 @@ PP.addLesson({
   },
   parent: "After you and your child watch a short nature video and read a library book on the same animal, ask them to tell you three sentences that sum up both. Listen for facts from each one and no opinions.",
   passages: [
-    { id: "p1", title: "From Egg to Butterfly", byline: "Source 1", genre: "Informational text",
+    { id: "p1", title: "A Monarch Grows Up", byline: "Source 1", genre: "Informational text",
       paragraphs: [
         ["A monarch butterfly starts life as a tiny egg.", "The mother lays each egg on a milkweed plant."],
         ["When the caterpillar hatches, it eats milkweed leaves.", "In fact, milkweed is the only plant a monarch caterpillar eats.", "It eats and grows for about two weeks."],
         ["Then it hangs upside down and makes a green case called a chrysalis.", "Inside, its body changes.", "After a week or two, an orange and black butterfly comes out of the case."],
         ["Milkweed has a juice that tastes bad to birds.", "Monarchs keep some of it in their bodies, even as grown butterflies.", "So many birds learn to leave them alone."]
       ] },
-    { id: "p2", title: "The Long Trip South", byline: "Source 2", genre: "Informational text",
+    { id: "p2", title: "Monarchs Fly to Mexico", byline: "Source 2", genre: "Informational text",
       paragraphs: [
         ["Each fall, many monarchs in the eastern United States begin a long trip.", "They fly south to the mountains of Mexico."],
         ["None of these butterflies has made the trip before.", "Still, they find their way to the same forests year after year.", "Scientists think the monarchs use the sun to help them find the way."],
         ["In Mexico, the monarchs rest in tall trees for the winter.", "So many butterflies cover the branches that the trees look orange."],
         ["In spring, the monarchs fly north again.", "They stop to lay eggs on milkweed along the way.", "Their children and grandchildren finish the trip north."]
       ] },
-    { id: "p3", title: "Tiny Flyers", byline: "Source 1", genre: "Informational text",
+    { id: "p3", title: "Meet the Brown Thrasher", byline: "Source 1", genre: "Informational text",
       paragraphs: [
-        ["Hummingbirds are some of the smallest birds in the world.", "Many weigh less than a nickel.", "They are named for the humming sound their wings make."],
-        ["A hummingbird's wings beat so fast that they look like a blur.", "These birds can hover in one spot, like a helicopter.", "They can even fly backward."],
-        ["Hummingbirds drink nectar from flowers.", "They reach deep inside each flower with a long bill and a long tongue.", "They also eat tiny insects and spiders."],
-        ["Because they fly so much, hummingbirds use a lot of energy.", "They must eat many times a day, so they visit flower after flower."]
+        ["The brown thrasher is the state bird of Georgia.", "It has a reddish-brown back, a long tail and bright yellow eyes.", "Its white chest is covered with brown spots."],
+        ["Brown thrashers are famous singers.", "One bird can sing more than one thousand different songs.", "It sings each part of a song two times before it moves on to the next part."],
+        ["Look for thrashers in yards and woods that have lots of bushes.", "They find most of their food on the ground.", "A thrasher sweeps its long, curved bill from side to side through dead leaves.", "It finds beetles, worms and other small animals hiding there.", "It also eats berries, seeds and acorns."]
       ] },
-    { id: "p4", title: "A Hummingbird's Year", byline: "Source 2", genre: "Informational text",
+    { id: "p4", title: "A Thrasher Family", byline: "Source 2", genre: "Informational text",
       paragraphs: [
-        ["Each spring, ruby-throated hummingbirds come to Georgia.", "They stay all summer long."],
-        ["The mother builds a nest about the size of a walnut shell.", "She makes it from soft bits of plants.", "She holds it together with spider silk.", "Then she lays two tiny white eggs."],
-        ["In late summer, the birds eat and eat to get ready for a long trip.", "Then they fly far south for the winter.", "Many of them cross a wide sea without stopping to rest."],
-        ["In spring, they fly north again.", "Many come back to the same places year after year.", "Many people hang feeders filled with sugar water to greet them."]
+        ["In spring, a pair of brown thrashers builds a nest together.", "They hide it in a thick bush or low in a small tree."],
+        ["The nest is made of twigs.", "The birds line the inside with soft grass and leaves."],
+        ["The mother lays three to five eggs.", "Each egg is pale blue with tiny brown spots.", "Both parents take turns keeping the eggs warm, and both bring food to the babies after they hatch."],
+        ["Thrashers guard their nest.", "When a cat or a person comes too close, a parent may dive at them and even strike them.", "Many thrasher families raise two sets of babies in one summer."]
       ] }
   ],
   practice: [
@@ -550,58 +669,59 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-RA1c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kayla is writing a summary of both sources. Which sentence BEST sums up what the two sources say about hummingbirds?",
+      prompt: "Kayla is writing a summary of both sources. Which sentence BEST sums up what the two sources say about brown thrashers?",
       choices: [
-        { text: "Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.", correct: true },
-        { text: "Hummingbirds can hover in one spot, and they drink nectar from many flowers." },
-        { text: "A hummingbird mother builds a nest about the size of a walnut shell." },
-        { text: "Hummingbirds are the best birds to watch because they are so cute." }
+        { text: "Thrashers find their food on the ground, and thrasher parents work together to raise a family.", correct: true },
+        { text: "Brown thrashers have reddish-brown backs, long tails, spotted chests and yellow eyes." },
+        { text: "Each brown thrasher egg is pale blue and covered with tiny brown spots." },
+        { text: "I think brown thrashers are the prettiest birds in the whole state of Georgia." }
       ],
       clue: "Look for a sentence that uses a big idea from each source, tells facts, and leaves out small details.",
-      why: "The answer is \"Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.\" It joins the big idea of Source 1 (tiny, fast flyers) with the big idea of Source 2 (their year of nesting and travel). The hover sentence uses only Source 1, the nest sentence is one detail, and the cute sentence is an opinion." },
+      why: "The answer is \"Thrashers find their food on the ground, and thrasher parents work together to raise a family.\" It joins a big idea from Source 1 (how the bird finds food) with the big idea of Source 2 (a thrasher pair raising a family). The sentence about backs, tails, chests and eyes uses only Source 1, the egg sentence is one tiny detail, and the prettiest-birds sentence is an opinion." },
     { id: "SK-RA1c-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      stem: ["Kayla's notes from Source 1, under the heading \"Why hummingbirds eat so much\":", "• They use a lot of energy.", "• They must eat many times a day."],
+      stem: ["Kayla's notes from Source 1, under the heading \"Where to look for a brown thrasher\":", "• in yards and woods with lots of bushes", "• on the ground, searching through dead leaves"],
       prompt: "Which fact from Source 2 adds the most to Kayla's notes?",
       choices: [
-        { text: "In late summer, they eat and eat to get ready for a long trip.", correct: true },
-        { text: "The mother builds a nest about the size of a walnut shell." },
-        { text: "People hang feeders filled with sugar water in the spring." },
-        { text: "They come to Georgia in spring and stay all summer." }
+        { text: "In spring, they hide their nests in thick bushes or low in small trees.", correct: true },
+        { text: "The mother thrasher lays three to five eggs in the nest." },
+        { text: "Both parents bring food to the babies after they hatch." },
+        { text: "Many thrasher families raise two sets of babies each summer." }
       ],
-      clue: "Read the heading again. Find the fact from Source 2 that gives another reason hummingbirds need so much food.",
-      why: "The answer is \"In late summer, they eat and eat to get ready for a long trip.\" It gives one more reason hummingbirds eat so much. The feeders are about people, and the nest and summer home are not about why the birds eat so much." },
+      clue: "Read the heading again. Find the fact from Source 2 that tells another place where you might find a thrasher.",
+      why: "The answer is \"In spring, they hide their nests in thick bushes or low in small trees.\" It tells one more place to look for a thrasher, so it fits the heading. The facts about the eggs, feeding the babies and raising two sets of babies are true, but they do not tell where to look." },
     { id: "SK-RA1c-T3", type: "ms", points: 2, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kayla checks her summary sentences against the sources. Which TWO sentences are true to the sources and belong in her summary? Choose two answers.",
+      prompt: "Kayla checks her summary sentences. Which TWO sentences are true to the sources, tell an important idea, and use her own words? Choose two answers.",
       pick: 2,
       choices: [
-        { text: "Their wings beat so fast that they look like a blur.", correct: true },
-        { text: "Many of them cross a wide sea without stopping to rest.", correct: true },
-        { text: "I think hummingbirds are the cutest birds of all." },
-        { text: "Hummingbirds can only fly forward, like most birds." },
-        { text: "The mother builds her nest out of mud and sticks." }
+        { text: "A brown thrasher can sing a huge number of different songs.", correct: true },
+        { text: "Thrasher parents protect their nest from cats and people.", correct: true },
+        { text: "The birds line the inside with soft grass and leaves." },
+        { text: "I think thrashers are the best singers in the world." },
+        { text: "Brown thrashers live only in the far north, not in Georgia." },
+        { text: "A thrasher sings each part of its song five times." }
       ],
-      clue: "A summary sentence must be a fact, and it must match what the sources really say. Check each choice against the sources.",
-      why: "\"Their wings beat so fast that they look like a blur\" matches Source 1, and \"Many of them cross a wide sea without stopping to rest\" matches Source 2. The cutest-birds sentence is an opinion. Source 1 says hummingbirds can fly backward, and Source 2 says the nest is made of soft bits of plants and spider silk, so the other two sentences are wrong." },
+      clue: "Check three things for each sentence. Is it a fact the sources really give? Is it a big idea, not a tiny detail? Is it said in a new way, not copied?",
+      why: "The answers are \"A brown thrasher can sing a huge number of different songs\" and \"Thrasher parents protect their nest from cats and people.\" Each one sums up the main idea of a paragraph in new words. \"The birds line the inside with soft grass and leaves\" is true, but it is a small detail copied word for word from Source 2. The best-singers sentence is an opinion. Source 1 says the thrasher is Georgia's state bird and sings each part two times, so the last two sentences are wrong." },
     { id: "SK-RA1c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Here is Kayla's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [
-        "Hummingbirds reach into flowers with long bills and long tongues.",
-        "Many people hang feeders with sugar water to greet them.",
-        "My aunt has a red bird feeder on her back porch.",
-        "Many hummingbirds come back to the same places each year."
+        "Georgia chose the brown thrasher as its state bird.",
+        "A thrasher sweeps its bill through dead leaves to find bugs to eat.",
+        "My grandpa hears a thrasher singing outside his window every morning.",
+        "A thrasher pair builds its nest out of twigs and soft grass."
       ],
       answer: [2], pick: 1,
       clue: "A summary tells only what the sources say. Check whether each sentence comes from Source 1 or Source 2.",
-      why: "The answer is \"My aunt has a red bird feeder on her back porch.\" Neither source tells about Kayla's aunt, so it does not belong. The other sentences tell facts from the two sources." },
+      why: "The answer is \"My grandpa hears a thrasher singing outside his window every morning.\" Neither source tells about Kayla's grandpa, so it does not belong. Each of the other sentences tells an important idea from one of the sources in Kayla's own words." },
     { id: "SK-RA1c-T5", type: "dropdown", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kayla wants to join ideas in her summary. Choose the best word or words for each blank.",
-      text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they drink nectar and eat tiny insects.",
+      text: "The mother thrasher lays three to five eggs. {0}, both parents take turns keeping them warm. {1} the babies hatch, both parents bring them food.",
       slots: [
-        { options: ["so", "but", "or", "until"], answer: 0 },
-        { options: ["To get that energy", "In early spring", "In conclusion", "Instead"], answer: 0 }
+        { options: ["Then", "For example", "Instead", "In conclusion"], answer: 0 },
+        { options: ["After", "Before", "Unless", "Although"], answer: 0 }
       ],
-      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, ask how the second sentence connects to the first one.",
-      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"To get that energy,\" because nectar and insects are how hummingbirds get the energy the first sentence talks about. In early spring adds a time the sources do not give for this, in conclusion would end the summary too soon, and instead would mean they do something different from eating." }
+      clue: "Both blanks need time words. Ask what happens first, next and last.",
+      why: "The first blank is \"Then,\" because keeping the eggs warm comes after the mother lays them. The second blank is \"After,\" because the parents feed the babies once they have hatched. For example would mean an example comes next, instead would mean something different happens, and in conclusion would end the summary too soon. Before would put feeding ahead of hatching, and unless and although do not make sense here." }
   ]
 });
 
@@ -673,6 +793,15 @@ PP.addLesson({
         ["\"Now you can play the whole spring song without looking at the keys,\" Mr. Bell said.", "\"You practiced every day for two months.\""],
         ["Ana took a deep breath.", "She thought about all those afternoons at the piano in her grandmother's living room.", "Slowly, her hands grew still."],
         ["When her name was called, Ana walked to the piano and sat up tall.", "She played every note of the spring song.", "As the crowd clapped, she smiled so wide that her cheeks hurt."]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Room for One More", genre: "Literary text",
+      paragraphs: [
+        ["On Monday, a new girl named Rosa joined Ms. Ortiz's third-grade class.", "At lunch, she sat at the end of a long table.", "She stared down at her tray and did not even open her milk."],
+        ["Jada watched Rosa from across the room.", "Last year, Jada had been the new girl at this school.", "She still remembered eating lunch all by herself and wishing someone would say hello."],
+        ["Jada picked up her tray and walked over.", "\"Do you want to sit with us?\" she asked.", "Rosa looked up in surprise.", "Then she gave a small nod and followed Jada."],
+        ["At Jada's table, the girls talked about their favorite things.", "Rosa said that she loved to draw animals.", "Jada grinned, because she loved to draw animals, too.", "She tore a page out of her notebook and passed Rosa a pencil."],
+        ["By the end of lunch, Rosa was giggling at Jada's drawing of a cat in a hat.", "When the bell rang, Rosa asked, \"Can I sit here again tomorrow?\"", "Jada smiled and said, \"There's always room for one more.\""]
       ] }
   ],
   practice: [
@@ -758,6 +887,50 @@ PP.addLesson({
       ],
       clue: "Leo's opinion is about what Ana did to get ready. Which sentence shows that?",
       why: "The answer is \"'You practiced every day for two months.'\" Practicing every day is the hard work Leo is talking about. The clapping shows she did well, but it does not show hard work." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (6) and DOK mix as form A,
+     on the new literary passage p3. NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-RA2a-TB1", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence shows that Rosa feels sad and alone on her first day? Choose the sentence in the passage.",
+      targets: ["p3:1:1", "p3:1:3", "p3:2:1", "p3:3:3", "p3:4:2"],
+      answer: ["p3:1:3"], pick: 1,
+      clue: "Look for something Rosa does, or does not do, that shows how she feels inside.",
+      why: "The answer is \"She stared down at her tray and did not even open her milk.\" Looking down and not eating show that Rosa feels sad and alone. The other sentences tell that she is new, that Jada is watching, that she is surprised, or what she likes to do." },
+    { id: "SK-RA2a-TB2", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Why does Jada go over to Rosa's table?",
+        choices: [
+          { text: "She knows how it feels to eat lunch alone.", correct: true },
+          { text: "She wants to see Rosa's animal drawings." },
+          { text: "Ms. Ortiz asked her to sit with the new girl." },
+          { text: "Her own table does not have any room left." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"She still remembered eating lunch all by herself and wishing someone would say hello.\"", correct: true },
+          { text: "\"Jada watched Rosa from across the room.\"" },
+          { text: "\"Then she gave a small nod and followed Jada.\"" },
+          { text: "\"Rosa looked up in surprise.\"" }
+        ] },
+      clue: "Read what Jada thinks about right before she walks over. For Part B, choose the sentence that tells the reason, not just what Jada sees or does.",
+      why: "Part A: She knows how it feels to eat lunch alone. Part B: \"She still remembered eating lunch all by herself and wishing someone would say hello.\" Jada was once the new girl, so she understands how Rosa feels. Jada does not learn that Rosa draws until later, the story never says Ms. Ortiz asked her, and Jada invites Rosa to sit at her own table, so it does have room. Watching Rosa tells what Jada does, not why." },
+    { id: "SK-RA2a-TB3", type: "hottext", points: 2, dok: 3, passages: ["p3"],
+      prompt: "Which TWO sentences show that Rosa feels happy and welcome by the end of the story? Choose two sentences.",
+      targets: ["p3:1:3", "p3:3:3", "p3:5:1", "p3:5:2", "p3:5:3"],
+      answer: ["p3:5:1", "p3:5:2"], pick: 2,
+      clue: "Find sentences near the end. Look for what Rosa does and says, not what Jada does.",
+      why: "The answers are \"By the end of lunch, Rosa was giggling at Jada's drawing of a cat in a hat.\" and \"When the bell rang, Rosa asked, 'Can I sit here again tomorrow?'\" Giggling shows she is happy, and wanting to come back shows she feels welcome. Staring at her tray happens at the start, looking up in surprise happens before she joins the table, and the last sentence tells what Jada does and says." },
+    { id: "SK-RA2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Mr. Reed says, \"Jada and Rosa like the same thing.\" Which sentence from the story BEST supports his idea?",
+      choices: [
+        { text: "\"Jada grinned, because she loved to draw animals, too.\"", correct: true },
+        { text: "\"Rosa said that she loved to draw animals.\"" },
+        { text: "\"At Jada's table, the girls talked about their favorite things.\"" },
+        { text: "\"Jada picked up her tray and walked over.\"" }
+      ],
+      clue: "Mr. Reed's idea is about both girls. Find the sentence that shows they both like one thing.",
+      why: "The answer is \"Jada grinned, because she loved to draw animals, too.\" The word too shows that Jada loves the same thing Rosa loves. The sentence about Rosa tells only what Rosa likes. Talking about favorite things does not say the things are the same." }
   ]
 });
 
@@ -769,8 +942,8 @@ PP.addLesson({
     points: [
       "A trustworthy source comes from people who know the topic well, such as scientists, museums, libraries or park rangers.",
       "Be careful with ads. An ad wants you to buy something, so it may only tell the good parts or make things sound bigger than they are.",
-      "A guess or an opinion is not the same as a fact that has been checked.",
-      "Made-up stories are fun to read, but they are not the place to find facts.",
+      "A guess, an opinion or a made-up story is not the same as a fact that has been checked.",
+      "Read the words, too. Words like everyone knows, or numbers that sound impossible, are warning signs. A good source gives facts that make sense and may tell how people found them out.",
       "A source must also be on your topic. A great book about frogs will not help a report about snakes."
     ],
     words: [
@@ -821,7 +994,22 @@ PP.addLesson({
     }
   ],
   parent: "When you see an ad, a cereal box or a sign together, ask, \"Who made this? Do they want to sell us something? Would we trust it for a school report?\"",
-  passages: [],
+  passages: [
+    { id: "p1", title: "How Much Do Elephants Eat?", byline: "Source 1", genre: "Informational text (web page)",
+      paragraphs: [
+        ["Elephants are the largest animals that live on land.", "Because they are so big, they need a lot of food."],
+        ["An adult elephant can eat about 300 pounds of plants in one day.", "Scientists who study elephants have watched them eat for as long as 16 hours a day.", "Elephants eat grass, leaves, bark and fruit."],
+        ["An elephant uses its trunk to pull up grass and to pick fruit from trees.", "It uses its tusks to peel bark off tree trunks.", "Elephants also drink a lot of water, as much as 50 gallons in a day."],
+        ["Plants do not give an elephant much energy in each bite.", "That is why elephants must eat so much and spend most of the day eating."]
+      ] },
+    { id: "p2", title: "All About Elephants", byline: "Source 2", genre: "Informational text (web page)",
+      paragraphs: [
+        ["Elephants live in Africa and Asia.", "Everyone knows elephants eat more than any other animal ever!"],
+        ["They have long trunks.", "An elephant's trunk has no bones in it.", "Elephants flap their big ears to cool off on hot days."],
+        ["An elephant can eat a million pounds of peanuts in one day.", "Elephants live together in family groups.", "A baby elephant is called a calf, and it stays close to its mother."],
+        ["Some elephants have long tusks.", "Their gray skin is thick and wrinkly.", "Some elephants live to be 60 years old or even older.", "They can remember places where they found water long ago."]
+      ] }
+  ],
   practice: [
     { id: "SK-RA2b-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Carlos is writing a report about how alligators care for their babies. Which source would be the MOST trustworthy?",
@@ -922,15 +1110,24 @@ PP.addLesson({
       ],
       clue: "Each source Ben uses must pass two checks: it can be trusted, and it is about leaves changing color.",
       why: "The science museum page about leaves and the tree scientist's book are both trustworthy and on topic. The store ad is selling decorations, the kid's page tells about fun with leaves but not why they change color and is not from an expert, and the seed page is trustworthy but off topic." },
-    { id: "SK-RA2b-T5", type: "mc", points: 1, dok: 3, passages: [],
-      prompt: "Mia is writing about the moon. She found a web page that says, \"I think the moon might be made of rock, but I'm not sure.\" Why is this a weak source?",
-      choices: [
-        { text: "It is only a guess, and the writer says they are not sure.", correct: true },
-        { text: "The moon is not made of rock, so the page is wrong." },
-        { text: "Web pages are never trustworthy, so she cannot use it." },
-        { text: "It is about the moon, which is not on Mia's topic." }
-      ],
-      clue: "Read the words on the page. Do they sound like a checked fact, or like someone who does not really know?",
-      why: "The answer is \"It is only a guess, and the writer says they are not sure.\" Words like I think and I'm not sure show a guess, not a checked fact. The moon really is made of rock, many web pages from museums and scientists can be trusted, and the moon is Mia's topic." }
+    { id: "SK-RA2b-T5", type: "ebsr", points: 2, dok: 3, passages: ["p1", "p2"],
+      prompt: "Mia is writing about how much elephants eat. She found these two web pages. Read both, then answer Part A and Part B.",
+      partA: { prompt: "Which source should Mia trust more?",
+        choices: [
+          { text: "Source 1, because its facts make sense and tell how people found them out.", correct: true },
+          { text: "Source 2, because it uses exciting words that make the facts sound big." },
+          { text: "Source 1, because it is the first one Mia happened to find." },
+          { text: "Source 2, because it says that everyone already knows the facts." }
+        ] },
+      partB: { prompt: "Which TWO sentences from Source 2 best show that Mia should not trust it?", pick: 2,
+        choices: [
+          { text: "\"Elephants live in Africa and Asia.\"" },
+          { text: "\"Everyone knows elephants eat more than any other animal ever!\"", correct: true },
+          { text: "\"They have long trunks.\"" },
+          { text: "\"An elephant can eat a million pounds of peanuts in one day.\"", correct: true },
+          { text: "\"A baby elephant is called a calf, and it stays close to its mother.\"" }
+        ] },
+      clue: "Read each source's words closely. Does the writer tell how the facts were found out? Do the numbers seem possible, or do they sound made up?",
+      why: "Part A: Source 1, because its facts make sense and tell how people found them out. Part B: \"Everyone knows elephants eat more than any other animal ever!\" and \"An elephant can eat a million pounds of peanuts in one day.\" Source 1 says scientists watched elephants eat, and its numbers can be checked. Source 2 says everyone knows, which does not tell who checked, and a million pounds in one day is far too much to be true. Exciting words and being found first do not make a source trustworthy. The sentences about where elephants live, their trunks and baby elephants are true, so they do not show a problem." }
   ]
 });

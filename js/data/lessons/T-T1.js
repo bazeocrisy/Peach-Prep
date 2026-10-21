@@ -75,6 +75,17 @@ PP.addLesson({
         ["Priya took a deep breath.", "\"No,\" she said.", "\"I came here to ride this slide, and I'm going to do it.\""],
         ["She climbed the ladder one step at a time without looking down.", "At the top, she sat, pinched her nose, and pushed off."],
         ["Whoosh!", "Priya splashed into the pool at the bottom.", "She popped up with a huge grin.", "\"Again!\" she shouted, already running back to the ladder."]
+      ] },
+    /* PP-004 form B passage: used only by testB. Needs independent review. */
+    { id: "p3", title: "The Open Gate", genre: "Literary text",
+      paragraphs: [
+        ["Fog lay over Pop-Pop's farm like a thick gray blanket.", "The grass was wet and cold, and the old red barn creaked in the wind."],
+        ["Imani yawned as she carried the feed bucket to the goat pen.", "The pen smelled like wet hay.", "Then she stopped.", "The gate was wide open, and the pen was empty."],
+        ["\"Pop-Pop!\" she shouted.", "\"The goats got out!\"", "Imani bit her lip and stared at the empty pen."],
+        ["Pop-Pop came running from the porch, still in his slippers.", "\"Don't worry,\" he said.", "\"Goats never go far from breakfast.\"", "He took the bucket from Imani and shook it hard, and the feed rattled inside."],
+        ["Imani heard a bell jingle behind the barn, and then another.", "One by one, three goats trotted around the corner.", "They bleated and pushed their noses toward the bucket."],
+        ["Imani laughed and latched the gate tight.", "\"Next time,\" she said, \"I'm checking that gate first.\""],
+        ["By then, the sun had burned away the fog, and the whole farm sparkled."]
       ] }
   ],
   practice: [
@@ -201,11 +212,80 @@ PP.addLesson({
       ],
       clue: "Dialogue is in quotation marks. An action is something a character does. Description helps you picture the place.",
       why: "\"We can ride the lazy river instead\" is dialogue because Dev says it. Standing at the bottom and looking up, and taking a deep breath, are actions because Priya does them. \"The water park was loud and bright\" is description of the setting." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (8) and DOK mix
+     (2,2,3,2,3,2) as form A, on a new passage p3. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT1a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "When does the story most likely take place?",
+      choices: [
+        { text: "early in the morning", correct: true },
+        { text: "around lunchtime" },
+        { text: "late in the evening" },
+        { text: "in the middle of the night" }
+      ],
+      clue: "The writer never names the time. Look at the weather, at how Imani feels, and at what Pop-Pop says the goats want.",
+      why: "The answer is early in the morning. Fog covers the farm, Imani yawns while she does her chores, and Pop-Pop says goats never go far from breakfast. Breakfast is a morning meal, so the details of the setting point to early morning, not lunchtime, evening or night." },
+    { id: "SK-TT1a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 4, Pop-Pop shakes the feed bucket hard. What does this action show about him?",
+      choices: [
+        { text: "He knows a smart way to get the goats to come back.", correct: true },
+        { text: "He is angry that the goats ran off." },
+        { text: "He is trying to scare the goats away from the farm." },
+        { text: "He wants Imani to go inside and eat her breakfast." }
+      ],
+      clue: "Think about what hungry goats would hear when the feed rattles. Then look at what happens right after.",
+      why: "The answer is \"He knows a smart way to get the goats to come back.\" The rattling feed tells the hungry goats that food is ready, and soon three goats trot back. He just told Imani not to worry, so he is not angry, and he wants the goats to come closer, not run away." },
+    { id: "SK-TT1a-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How do Imani's words in paragraph 3 move the plot forward?",
+        choices: [
+          { text: "They tell Pop-Pop about the problem, so he rushes out to help.", correct: true },
+          { text: "They solve the problem by calling the goats back to the pen." },
+          { text: "They explain how the goats were able to open the gate." },
+          { text: "They show that Imani is glad the goats are gone." }
+        ] },
+      partB: { prompt: "Which sentence shows what happens because of Imani's words?",
+        choices: [
+          { text: "Pop-Pop came running from the porch, still in his slippers.", correct: true },
+          { text: "The pen smelled like wet hay." },
+          { text: "Imani heard a bell jingle behind the barn, and then another." },
+          { text: "Imani laughed and latched the gate tight." }
+        ] },
+      clue: "Read what Imani shouts. Then read the very next paragraph. Who hears her, and what does that person do?",
+      why: "Part A: They tell Pop-Pop about the problem, so he rushes out to help. Part B: \"Pop-Pop came running from the porch, still in his slippers.\" Imani's shout lets Pop-Pop know the goats are gone, and he comes so fast he does not change his slippers. Her words do not bring the goats back; the rattling feed does that later. The bell and the latched gate come later, too." },
+    { id: "SK-TT1a-TB4", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence uses description to show how the setting has changed by the end of the story? Choose the sentence in the passage.",
+      targets: ["p3:1:1", "p3:1:2", "p3:2:2", "p3:5:1", "p3:7:1"],
+      answer: ["p3:7:1"], pick: 1,
+      clue: "Think about what the farm looked like at the very start. Find the sentence that shows the farm looking different.",
+      why: "The answer is \"By then, the sun had burned away the fog, and the whole farm sparkled.\" At the start, fog lay over the farm like a gray blanket. At the end, the fog is gone and the farm sparkles. The other sentences describe the farm, the pen or a sound, but they do not show a change." },
+    { id: "SK-TT1a-TB5", type: "mc", points: 1, dok: 3, passages: ["p3"],
+      prompt: "How does the dialogue in paragraph 6 help end the story?",
+      choices: [
+        { text: "It shows the trouble is over and Imani has learned something.", correct: true },
+        { text: "It starts a new problem that the story never solves." },
+        { text: "It shows that Imani is still upset with the goats." },
+        { text: "It tells the reader who left the gate open." }
+      ],
+      clue: "Look at what Imani does just before she speaks. Then think about what \"Next time\" tells you she will do differently.",
+      why: "The answer is \"It shows the trouble is over and Imani has learned something.\" The goats are back, Imani laughs and latches the gate, and her words show she has a plan for next time. She laughs, so she is not upset, and the story never says who left the gate open." },
+    { id: "SK-TT1a-TB6", type: "match", points: 2, dok: 2, passages: ["p3"],
+      prompt: "What does each detail mostly help you understand? Match each detail from the story.",
+      cols: ["A character", "The setting", "An event in the plot"],
+      rows: [
+        { text: "The grass was wet and cold, and the old red barn creaked in the wind.", answer: 1 },
+        { text: "Imani bit her lip and stared at the empty pen.", answer: 0 },
+        { text: "One by one, three goats trotted around the corner.", answer: 2 },
+        { text: "The pen smelled like wet hay.", answer: 1 }
+      ],
+      clue: "Ask: Does this detail tell how someone feels or what they are like? Does it help me picture the place? Or does it tell something that happens?",
+      why: "The wet grass, the creaking barn and the smell of wet hay help you picture the setting. Imani biting her lip shows a character's feeling: she is worried. The goats trotting back is an event in the plot, because it solves the problem of the missing goats." }
   ]
 });
 PP.addLesson({
   code: "3.T.T.1.b",
-  codes: ["3.T.T.1.b", "3.T.SS.1.a"],
   title: "Story elements: characters, setting, problem and solution",
   clues: {
     words: ["one day", "but", "then", "so", "finally", "in the end"],
@@ -228,8 +308,8 @@ PP.addLesson({
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet.",
       "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
-      "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution.",
-      "Sum up any story with five words: Somebody, Wanted, But, So, Then. Somebody is the main character. Wanted is what that character wants. But is the problem. So is what the character does about it. Then is how it ends."
+      "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution. To sum up any story, say: Somebody (the main character) Wanted something, But (the problem), So (what the character does), Then (how it ends).",
+      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -265,6 +345,17 @@ PP.addLesson({
         "Put the where and the when together."
       ],
       answer: "A bus on a snowy mountain road in winter."
+    },
+    {
+      show: ["The Ruiz family set up their tent at a lake deep in the woods. The nearest store was an hour away. At supper, Ben opened the cooler and groaned. He had forgotten the hot dog buns! So Ben looked in the food box and found a pack of tortillas. The family wrapped their hot dogs in tortillas, and everyone said it was the best supper of the trip."],
+      ask: "How do the setting and the problem change what happens in this story?",
+      steps: [
+        "Find the setting: a campsite at a lake deep in the woods, an hour from a store.",
+        "Ask how the setting changes things. If a store were next door, Ben could just buy buns. Because the store is far away, he cannot.",
+        "Ask how the problem makes the character act. With no buns and no store, Ben has to find another way, so he looks in the food box.",
+        "Put it together. The faraway setting makes the problem harder, and that leads Ben to the tortillas, which solve it."
+      ],
+      answer: "The campsite is far from any store, so Ben cannot buy new buns. That makes him look for another way, and the tortillas solve the problem."
     }
   ],
   parent: "After any story you read together, ask four quick questions: Who is it about? Where and when does it happen? What goes wrong? How does it get fixed? Let your child point to the sentences that show each answer.",
@@ -323,6 +414,16 @@ PP.addLesson({
       answer: ["p1:4:3"], pick: 1,
       clue: "The solution is the action that fixes the problem. Find what Jada does, not what she thinks or sees.",
       why: "The answer is \"She found an old piece of wire fence in the shed and asked Grandma to help her bend it along the bottom of the gate.\" The wire blocks the rabbits, so the tomatoes are safe." },
+    { id: "SK-TT1b-P7", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "The rabbits come into the garden at night. How does that part of the setting affect what Jada does?",
+      choices: [
+        { text: "No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.", correct: true },
+        { text: "The garden is too dark to see in, so Jada has to water the tomatoes at night." },
+        { text: "The rabbits are easy to catch in the dark, so Jada waits by the gate to grab them." },
+        { text: "Grandma Bea is asleep, so Jada has to take care of the whole garden alone." }
+      ],
+      clue: "Read paragraph 3 again. When do the rabbits come? Then look at the kind of fix Jada makes in paragraph 4. Why would that kind of fix be a good idea at that time?",
+      why: "The answer is \"No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.\" The rabbits come at night, when no one is in the garden to stop them. That is why Jada makes something that blocks the gate all night long instead of trying to chase them. Jada waters the garden in the morning, she never waits by the gate, and Grandma Bea helps her." },
     { id: "SK-TT1b-P4", type: "order", points: 2, dok: 2, passages: ["p1"],
       prompt: "Put the events of the story in order.",
       steps: [
@@ -357,15 +458,15 @@ PP.addLesson({
       clue: "The main character is the one the story is mostly about. Who has the problem?",
       why: "The answer is Omar. The story follows Omar as he looks for his book, finds it and returns it. His dad, his sister Lina and Ms. Park appear only for a moment." },
     { id: "SK-TT1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "What problem does Omar have?",
+      prompt: "The story begins on a Thursday afternoon. Why does this time matter to the plot?",
       choices: [
-        { text: "He cannot find a library book that is due the next day.", correct: true },
-        { text: "He does not want to finish reading his library book." },
-        { text: "Rain on the porch has ruined his library book." },
-        { text: "The library will be closed when the book is due." }
+        { text: "The book is due on Friday, so Omar has very little time to find it.", correct: true },
+        { text: "It rains every Thursday, so Omar has to stay inside and read." },
+        { text: "The library is closed on Thursdays, so Omar cannot go there." },
+        { text: "Omar's dad gets home early on Thursdays, so he can help search." }
       ],
-      clue: "Look at paragraph 1. What is wrong, and why does it matter now?",
-      why: "The answer is \"He cannot find a library book that is due the next day.\" Paragraph 1 says the book is due the next day and is not anywhere. The book gets damp but is not ruined." },
+      clue: "Read the first sentence again. What else does it tell you besides the day? Think about why Omar searches so hard.",
+      why: "The answer is \"The book is due on Friday, so Omar has very little time to find it.\" Paragraph 1 says it is Thursday afternoon and the book is due the next day. That short time is what makes Omar hurry to look everywhere. The story says it rained on Tuesday, not every Thursday, and it never says when the library is closed or when Dad gets home." },
     { id: "SK-TT1b-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does Omar solve his problem?",
@@ -385,25 +486,26 @@ PP.addLesson({
       clue: "Part A asks how the problem gets fixed. Find what Omar does that leads him to the book. Then choose the sentence that shows that step.",
       why: "Part A: He remembers where he last read the book and looks there. Part B: \"He had read it on the porch swing while it rained on Tuesday.\" Remembering the porch swing sends him outside, where he finds the book under the cushion." },
     { id: "SK-TT1b-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Which words best describe the setting at the start of the story?",
+      prompt: "In paragraph 4, Omar sets the book on top of his shoes. How does this event affect the end of the story?",
       choices: [
-        { text: "Omar's home on a Thursday afternoon", correct: true },
-        { text: "the school library on a Friday morning" },
-        { text: "a porch swing on a rainy Tuesday" },
-        { text: "Ms. Park's desk after school" }
+        { text: "He cannot leave without seeing it, so he returns the book on time.", correct: true },
+        { text: "It keeps the book dry, so the rain does not ruin it." },
+        { text: "It shows Lina where the book is, so she can read it next." },
+        { text: "It makes him late, so Ms. Park has to wait for the book." }
       ],
-      clue: "The question says \"at the start.\" Read the first paragraph for when and where.",
-      why: "The answer is Omar's home on a Thursday afternoon. Paragraph 1 says it is Thursday afternoon, and Omar searches his backpack and under his bed at home. The porch swing on Tuesday is only something he remembers." },
+      clue: "Think about what Omar does every morning before he leaves the house. Then read the last sentence of the story.",
+      why: "The answer is \"He cannot leave without seeing it, so he returns the book on time.\" Omar puts the book on his shoes so he will not forget it. The last sentence shows it worked: on Friday morning he hands the book to Ms. Park right on time. He dries the book with a towel, not with his shoes, and the story never says Lina reads it or that Omar is late." },
     { id: "SK-TT1b-T5", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each detail to the story part it shows.",
-      cols: ["Character", "Problem", "Solution"],
+      cols: ["Character", "Setting", "Problem", "Solution"],
       rows: [
-        { text: "Omar's dad", answer: 0 },
-        { text: "The book is not anywhere.", answer: 1 },
-        { text: "Omar finds the book.", answer: 2 }
+        { text: "Lina, who has not seen the book", answer: 0 },
+        { text: "Thursday afternoon at Omar's house", answer: 1 },
+        { text: "The book is not anywhere.", answer: 2 },
+        { text: "Omar finds the book.", answer: 3 }
       ],
-      clue: "Ask three questions: Who is in the story? What goes wrong? How is it fixed?",
-      why: "Omar's dad is a character. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
+      clue: "Ask four questions: Who is in the story? When and where does it happen? What goes wrong? How is it fixed?",
+      why: "Lina is a character. She is in the story even though she does not have the problem. Thursday afternoon at Omar's house tells when and where, so it is the setting. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
   ]
 });
 PP.addLesson({
@@ -490,6 +592,19 @@ PP.addLesson({
         ["\"What were you going to tell me before?\" he asked.", "Amara showed him her drawing.", "\"Triangles make a bridge stronger,\" she said."],
         ["Ms. Ruiz gave them one more day.", "This time, Theo listened while Amara explained, and they built the bridge together."],
         ["The next afternoon, their new bridge held the cup of marbles, and then a second cup, too.", "Theo grinned at his partner.", "\"Your idea was the best part,\" he said."]
+      ] },
+    /* PP-004 form B passage: used only by testB. Needs independent review. */
+    { id: "p3", title: "Ji-ho's Mandu", genre: "Literary text",
+      paragraphs: [
+        ["On Sunday, Ji-ho helped Halmoni, his grandmother, make mandu for the family dinner.", "Mandu are Korean dumplings, often filled with meat and vegetables."],
+        ["Halmoni's fingers moved fast.", "She put a spoonful of filling on a round wrapper, folded it in half and pinched the edge shut in tiny folds.", "Each one looked like a neat little moon."],
+        ["Ji-ho wanted his mandu to look just like hers, so he tried to work as fast as she did.", "He stuffed in a big pile of filling.", "Rip!", "The wrapper tore open."],
+        ["He grabbed another wrapper and tried again, even faster.", "Rip!", "Ji-ho threw the torn wrapper down and crossed his arms.", "\"I'm no good at this,\" he grumbled.", "\"You do it.\""],
+        ["Halmoni did not take over.", "Instead, she wiped her hands and took an old photo out of a drawer.", "It showed a young girl holding a plate of lumpy, lopsided dumplings."],
+        ["\"That girl is me,\" Halmoni said.", "\"My first mandu looked just like that.", "My mother told me to slow down and try one more.\""],
+        ["Ji-ho looked at the photo for a long time.", "He thought, \"If Halmoni's first mandu were lumpy, maybe mine can get better, too.\""],
+        ["He picked up a new wrapper.", "This time, he used a small spoonful and pinched the edge slowly, one fold at a time.", "His mandu was a little crooked, but it held together."],
+        ["By dinnertime, Ji-ho had made twelve mandu.", "Some were lumpy, and some were almost as neat as Halmoni's.", "His family ate every single one, and Ji-ho smiled the whole time."]
       ] }
   ],
   practice: [
@@ -618,6 +733,66 @@ PP.addLesson({
       ],
       clue: "Theo changes in the middle of the story. Ask: is this how the old Theo acts, or the new Theo?",
       why: "Before the bridge breaks, Theo waves his hand at Amara and grabs the glue before she can speak. After it breaks, he listens to her idea and tells her it was the best part. The change in Theo is what teaches the lesson." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (7) and DOK mix
+     (2,2,2,3,2) as form A, on a new passage p3. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT1c-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why does Ji-ho rush and stuff in a big pile of filling at first?",
+      choices: [
+        { text: "He wants to make mandu as well as Halmoni does.", correct: true },
+        { text: "He wants to finish fast so he can go outside and play." },
+        { text: "Halmoni tells him to hurry before the family comes." },
+        { text: "He wants to make more mandu than anyone else." }
+      ],
+      clue: "Find the clue word so in paragraph 3. It links what Ji-ho is hoping for to what he does.",
+      why: "The answer is \"He wants to make mandu as well as Halmoni does.\" Paragraph 3 says he wanted his mandu to look just like hers, so he tried to work as fast as she did. The story never says he wants to play or to make the most, and Halmoni's advice is to slow down, not hurry." },
+    { id: "SK-TT1c-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What do Ji-ho's words and actions in paragraph 4 show about how he feels?",
+      choices: [
+        { text: "He is frustrated and ready to give up.", correct: true },
+        { text: "He is sleepy and wants to take a nap." },
+        { text: "He is angry at Halmoni for tearing his wrapper." },
+        { text: "He is proud of how fast he is working." }
+      ],
+      clue: "The writer does not name the feeling. Look at what Ji-ho does with the torn wrapper and his arms, and listen to what he says.",
+      why: "The answer is \"He is frustrated and ready to give up.\" He throws the wrapper down, crosses his arms and says, \"I'm no good at this. You do it.\" Ji-ho tore the wrapper himself, so he is not angry at Halmoni, and nothing he does shows pride." },
+    { id: "SK-TT1c-TB3", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence tells a thought that helps Ji-ho decide to try again? Choose the sentence in the passage.",
+      targets: ["p3:5:1", "p3:6:3", "p3:7:1", "p3:7:2", "p3:8:1"],
+      answer: ["p3:7:2"], pick: 1,
+      clue: "A thought is what a character says inside his own head. Check who is talking or thinking in each sentence.",
+      why: "The answer is \"He thought, 'If Halmoni's first mandu were lumpy, maybe mine can get better, too.'\" This is Ji-ho's own thought, and it gives him the reason to pick up a new wrapper. The sentence about slowing down is Halmoni's words, not Ji-ho's thought, and looking at the photo or picking up a wrapper is an action." },
+    { id: "SK-TT1c-TB4", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What lesson does Ji-ho learn by the end of the story?",
+        choices: [
+          { text: "Getting good at something hard takes time and practice.", correct: true },
+          { text: "It is best to let someone else do a hard job." },
+          { text: "Food has to look perfect to taste good." },
+          { text: "Old photos help you remember your family." }
+        ] },
+      partB: { prompt: "Which sentence from the story best shows that Ji-ho has learned this lesson?",
+        choices: [
+          { text: "\"Some were lumpy, and some were almost as neat as Halmoni's.\"", correct: true },
+          { text: "\"Halmoni's fingers moved fast.\"" },
+          { text: "\"He stuffed in a big pile of filling.\"" },
+          { text: "\"'I'm no good at this,' he grumbled.\"" }
+        ] },
+      clue: "Compare how Ji-ho acts in paragraph 4 with how he acts at the end. What does he do differently, and how do his mandu turn out?",
+      why: "Part A: Getting good at something hard takes time and practice. Part B: \"Some were lumpy, and some were almost as neat as Halmoni's.\" Ji-ho stops giving up, slows down and keeps going, and his mandu get better. Letting someone else do it is what he wanted before he changed. His family eats even the lumpy ones, so food does not have to look perfect." },
+    { id: "SK-TT1c-TB5", type: "ms", points: 2, dok: 2, passages: ["p3"], pick: 2,
+      prompt: "Which TWO words best describe Halmoni in this story?",
+      choices: [
+        { text: "caring", correct: true },
+        { text: "wise", correct: true },
+        { text: "bossy" },
+        { text: "impatient" },
+        { text: "forgetful" }
+      ],
+      clue: "Look at what Halmoni does when Ji-ho says \"You do it,\" and think about why she shows him the old photo.",
+      why: "The answers are caring and wise. She does not take over or scold Ji-ho; she stops to help him feel better, which is caring. She uses her own first lumpy mandu and her mother's advice to teach him, which is wise. Her fingers move fast, but she is not impatient with Ji-ho, and she remembers her first mandu, so she is not forgetful." }
   ]
 });
 PP.addLesson({
@@ -643,7 +818,7 @@ PP.addLesson({
       "Compare means tell how things are alike. Contrast means tell how they are different. Clue words like both, alike and same show how things are alike. Words like but, however, unlike, different and while show how they are different.",
       "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
-      "Stories from different places and cultures can show people who feel and learn the same things.",
+      "You will often compare stories from different places and cultures, like a story from Ghana and a story from Vermont. Notice what is different about each place and way of life, and what the characters feel and learn that is the same.",
       "Keep a chart in your head with two sides: same and different."
     ],
     words: [
@@ -707,14 +882,14 @@ PP.addLesson({
         ["Lucy pulled the sled over to her friends.", "\"Let's ride together,\" she said."],
         ["The three of them squeezed onto the red sled.", "They flew down the hill, laughing and shouting the whole way.", "It was the best ride of the day."]
       ] },
-    { id: "p3", title: "The Smallest Fox", genre: "Literary text",
+    { id: "p3", title: "The Smallest Cousin", genre: "Literary text",
       paragraphs: [
-        ["Long ago, in a snowy forest, there lived a fox named Pip.", "Pip was the smallest fox in his family.", "His big brothers liked to tease him.", "\"You are too tiny to help with anything,\" they said."],
-        ["One day, Grandfather Fox dropped his smooth, shiny stone.", "It was his favorite treasure.", "The stone rolled down the hill and slid into a narrow crack between two rocks."],
-        ["The big brothers pushed their paws into the crack.", "They pushed and pulled, but their paws were too wide.", "\"It's gone for good,\" they groaned."],
-        ["Pip stepped forward.", "He slipped his thin little paw into the crack, wiggled it, and pulled out the stone."],
-        ["Grandfather Fox held the stone close.", "\"Being small is what saved my treasure,\" he said."],
-        ["From that day on, Pip's brothers never teased him again.", "Pip felt proud of being just the size he was."]
+        ["Mateo lived with his big family in a town in Oaxaca, Mexico.", "He was the youngest and smallest of all the cousins.", "His big cousins liked to tease him.", "\"You are too tiny to help with anything,\" they said."],
+        ["One afternoon, Grandfather dropped his old silver ring in the courtyard.", "It was his favorite treasure.", "The ring rolled across the stones and slid into a narrow crack in the wall."],
+        ["The big cousins pushed their fingers into the crack.", "They pushed and pulled, but their hands were too wide.", "\"It's gone for good,\" they groaned."],
+        ["Mateo stepped forward.", "He slipped his thin little hand into the crack, wiggled it, and pulled out the ring."],
+        ["Grandfather held the ring close.", "\"Being small is what saved my treasure,\" he said."],
+        ["From that day on, Mateo's cousins never teased him again.", "Mateo felt proud of being just the size he was."]
       ] },
     { id: "p4", title: "Ravi and the Kingfisher", genre: "Literary text",
       paragraphs: [
@@ -790,25 +965,25 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TT1d-T1", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "In what way are Pip and Ravi the same?",
+      prompt: "How are Grandfather in \"The Smallest Cousin\" and Ms. Devi in \"Ravi and the Kingfisher\" alike?",
       choices: [
-        { text: "Each one uses what makes him different to help.", correct: true },
-        { text: "Each one is the oldest child in his family." },
-        { text: "Each one gets lost far away from his home." },
-        { text: "Each one is the loudest one in his group." }
+        { text: "Each one praises the main character near the end.", correct: true },
+        { text: "Each one teases the main character at the start." },
+        { text: "Each one loses a treasure that is hard to reach." },
+        { text: "Each one takes a group of children on a trip." }
       ],
-      clue: "Think about what makes each main character different from the others. Then look at how that difference helps in the story.",
-      why: "The answer is \"Each one uses what makes him different to help.\" Pip's small paw gets the stone out of the crack. Ravi's quiet, still way lets the whole class see the kingfisher. Pip is the smallest, not the oldest, and Ravi is the quietest, not the loudest." },
+      clue: "Find the grown-up in each story. Read what each one says in the last part of the story, and check that your answer is true for BOTH grown-ups.",
+      why: "The answer is \"Each one praises the main character near the end.\" Grandfather says Mateo's small size saved his treasure, and Ms. Devi tells Ravi he is a great bird watcher. The cousins and the other kids are the ones who tease or question, not the grown-ups. Only Grandfather loses a treasure, and only Ms. Devi takes the class on a trip." },
     { id: "SK-TT1d-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Which sentence tells how the place in \"The Smallest Fox\" is different from the place in \"Ravi and the Kingfisher\"?",
+      prompt: "Which sentence tells how the place in \"The Smallest Cousin\" is different from the place in \"Ravi and the Kingfisher\"?",
       choices: [
-        { text: "Pip's story is in a snowy forest, and Ravi's is at a bird park.", correct: true },
-        { text: "Pip's story is in a busy city, and Ravi's is in a snowy forest." },
-        { text: "Pip's story is on a sandy beach, and Ravi's is at a school." },
-        { text: "Pip's story is in a fox's den, and Ravi's is in a classroom." }
+        { text: "Mateo's story is at his family's home in Mexico, and Ravi's is at a bird park in India.", correct: true },
+        { text: "Mateo's story is at a bird park in Mexico, and Ravi's is at his family's home in India." },
+        { text: "Mateo's story is on a sandy beach in India, and Ravi's is at a school in Mexico." },
+        { text: "Mateo's story is in a busy classroom, and Ravi's is in a family's courtyard." }
       ],
-      clue: "Look at the first sentence of \"The Smallest Fox\" and the first two paragraphs of \"Ravi and the Kingfisher.\" Where does the action happen?",
-      why: "The answer is \"Pip's story is in a snowy forest, and Ravi's is at a bird park.\" Pip lives in a snowy forest, and the stone is lost among rocks there. Ravi's class takes a trip to a bird park by a lake, and the important part happens there, not in a classroom." },
+      clue: "Look at the first paragraph of each story to find the country. Then find where the most important part of each story happens.",
+      why: "The answer is \"Mateo's story is at his family's home in Mexico, and Ravi's is at a bird park in India.\" Mateo lives in Oaxaca, Mexico, and the ring is lost in the family's courtyard. Ravi lives in Chennai, India, and his class takes a trip to a bird park by a lake, where the important part happens. The other choices mix up the places or name places that are not in the stories." },
     { id: "SK-TT1d-T3", type: "ebsr", points: 2, dok: 3, passages: ["p3", "p4"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What lesson do BOTH stories teach?",
@@ -820,17 +995,17 @@ PP.addLesson({
         ] },
       partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
         choices: [
-          { text: "\"Pip felt proud of being just the size he was.\"", correct: true },
+          { text: "\"Mateo felt proud of being just the size he was.\"", correct: true },
           { text: "\"For the first time, he was glad to be the quiet one.\"", correct: true },
-          { text: "\"His big brothers liked to tease him.\"" },
-          { text: "\"They pushed and pulled, but their paws were too wide.\"" },
+          { text: "\"His big cousins liked to tease him.\"" },
+          { text: "\"They pushed and pulled, but their hands were too wide.\"" },
           { text: "\"Every time they came close, the birds flew away.\"" }
         ] },
-      clue: "Look at how each main character feels about himself at the very end. A lesson for both stories must fit Pip AND Ravi.",
-      why: "Part A: What makes you different can also make you special. Part B: \"Pip felt proud of being just the size he was.\" and \"For the first time, he was glad to be the quiet one.\" Both characters end up glad about the very thing that made them different. The teasing and the birds flying away happen before the characters learn the lesson." },
+      clue: "Look at how each main character feels about himself at the very end. A lesson for both stories must fit Mateo AND Ravi.",
+      why: "Part A: What makes you different can also make you special. Part B: \"Mateo felt proud of being just the size he was.\" and \"For the first time, he was glad to be the quiet one.\" Both characters end up glad about the very thing that made them different. The teasing and the birds flying away happen before the characters learn the lesson." },
     { id: "SK-TT1d-T4", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
-      cols: ["Pip's story", "Ravi's story", "Both stories"],
+      cols: ["Mateo's story", "Ravi's story", "Both stories"],
       rows: [
         { text: "The main character finds something that was lost.", answer: 0 },
         { text: "Staying still and silent helps the main character.", answer: 1 },
@@ -838,17 +1013,17 @@ PP.addLesson({
         { text: "By the end, the main character feels good about himself.", answer: 2 }
       ],
       clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-      why: "Only Pip finds something that was lost: Grandfather's stone. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
-    { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "How is the problem in Pip's story different from the problem in Ravi's story?",
+      why: "Only Mateo finds something that was lost: Grandfather's ring. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
+    { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
+      prompt: "How is the problem in Mateo's story different from the problem in Ravi's story?",
       choices: [
-        { text: "In Pip's story, a treasure is stuck, but in Ravi's, the birds keep flying away.", correct: true },
-        { text: "In Pip's story, Pip gets lost, but in Ravi's, Ravi cannot find his teacher." },
-        { text: "In Pip's story, the foxes are hungry, but in Ravi's, the class misses the bus." },
-        { text: "In Pip's story, a storm is coming, but in Ravi's, Arjun falls into the lake." }
+        { text: "In Mateo's story, a treasure is stuck, but in Ravi's, the birds keep flying away.", correct: true },
+        { text: "In Mateo's story, Mateo gets lost, but in Ravi's, Ravi cannot find his teacher." },
+        { text: "In Mateo's story, the cousins are hungry, but in Ravi's, the class misses the bus." },
+        { text: "In Mateo's story, a storm is coming, but in Ravi's, Arjun falls into the lake." }
       ],
       clue: "Find what goes wrong in the middle of each story. Then check both halves of each choice against the stories.",
-      why: "The answer is \"In Pip's story, a treasure is stuck, but in Ravi's, the birds keep flying away.\" Grandfather's stone is stuck in a crack, and the noisy children scare the birds away. None of the other problems happen in either story." }
+      why: "The answer is \"In Mateo's story, a treasure is stuck, but in Ravi's, the birds keep flying away.\" Grandfather's ring is stuck in a crack, and the noisy children scare the birds away. None of the other problems happen in either story." }
   ]
 });
 PP.addLesson({

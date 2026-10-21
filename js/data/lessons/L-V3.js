@@ -9,7 +9,8 @@ PP.addLesson({
       "An example clue gives examples of the word. Look for \"such as\" or \"like.\"",
       "A synonym clue is a nearby word that means the same thing. An antonym clue is a nearby word that means the opposite. Words like \"but\" and \"not\" often point to an antonym.",
       "Clues work for phrases too. A phrase is a small group of words, like \"make up your mind,\" that has its own meaning. Use the clues around it to figure out what the whole group of words means.",
-      "Some words have more than one meaning, like bark or pitcher. Choose the meaning that fits. Then check: put your meaning in place of the word or phrase. If the sentence still makes sense, you are probably right."
+      "Some words have more than one meaning, like bark or pitcher. Choose the meaning that fits. Then check: put your meaning in place of the word or phrase. If the sentence still makes sense, you are probably right.",
+      "Pictures, captions, charts and graphs can show what a word means. Read the caption and the labels on a picture. On a chart or graph, read the title and the words on the side and bottom. Then check the meaning in the sentence."
     ],
     words: [
       { term: "context clue", means: "a hint in the words around a word that helps you know what it means" },
@@ -18,11 +19,18 @@ PP.addLesson({
       { term: "phrase", means: "a small group of words that go together" },
       { term: "multiple-meaning word", means: "a word that is spelled the same but has more than one meaning" }
     ],
-    example: {
-      label: "Example",
-      lines: ["Our class garden needs compost, which is a mix of rotted leaves and food scraps that helps plants grow."],
-      note: "The words \"which is\" are a signal. Everything after them tells you what compost means. This is a definition clue."
-    },
+    examples: [
+      {
+        label: "Example: a definition clue",
+        lines: ["Our class garden needs compost, which is a mix of rotted leaves and food scraps that helps plants grow."],
+        note: "The words \"which is\" are a signal. Everything after them tells you what compost means. This is a definition clue."
+      },
+      {
+        label: "Example: an example clue",
+        lines: ["Mom keeps utensils such as forks, spoons and ladles in the top kitchen drawer."],
+        note: "The words \"such as\" are a signal that examples are coming. Forks, spoons and ladles are all tools for cooking and eating, so utensils are tools for cooking and eating."
+      }
+    ],
     tip: "On the test, a question may ask what a word means in a paragraph. Then Part B asks which sentence helps you know. The clue is often in the same sentence or the one right before or after it."
   },
   learn: [
@@ -37,14 +45,16 @@ PP.addLesson({
       answer: "Sturdy means strong and solid, not likely to break or fall."
     },
     {
-      show: ["Mom keeps utensils such as forks, spoons and ladles in the top kitchen drawer."],
-      ask: "What are utensils?",
+      show: ["Our class kept a graph all spring. June had the most precipitation."],
+      figure: { src: "assets/figures/v3a-rainfall-graph.svg", label: "Figure 1", caption: "Our class kept track of the rain.",
+        alt: "Bar graph titled Rain in Our Garden. The side of the graph says inches of rain. The bars show March 4 inches, April 3 inches, May 2 inches and June 5 inches. June has the tallest bar." },
+      ask: "What does precipitation mean? Use the graph.",
       steps: [
-        "Look for a signal. The words \"such as\" tell you examples are coming.",
-        "List the examples: forks, spoons and ladles.",
-        "Ask what the examples have in common. They are all tools you use to cook or eat."
+        "Read the title. It tells what the graph measures: Rain in Our Garden.",
+        "Read the words on the side: inches of rain. Each bar shows how much rain came down in one month. June has the tallest bar, 5 inches.",
+        "Check the sentence. It says June had the most precipitation, and the graph shows June had the most rain. So precipitation must mean rain, or other water that falls from the sky."
       ],
-      answer: "Utensils are tools used for cooking and eating."
+      answer: "Precipitation means rain, or other water like snow, that falls from the sky."
     },
     {
       show: ["At the picnic, Aunt Rosa poured cold lemonade from a glass pitcher into our cups."],
@@ -75,6 +85,24 @@ PP.addLesson({
         ["Many animals dwell in the swamp.", "They find food, build nests and raise their young there.", "Alligators, turtles, frogs and herons all make their homes in the Okefenokee."],
         ["Visitors can paddle canoes along the swamp's narrow waterways.", "Guides tell them to keep an eye out for alligators.", "Alligators often rest along the edges of the water, and they can be hard to see.", "In some spots, thick mats of plants float on top of the water.", "These mats look like land, but they are not firm.", "They are soft and can shake when something moves on them."],
         ["If you visit, be cautious.", "Stay in your boat, keep your hands out of the water and never feed the alligators."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/v3a-heron.svg", label: "Figure 1", caption: "A heron hunts for fish in the shallow water.",
+          alt: "A drawing of a heron, a tall bird, standing in shallow water. Labels point to its long neck, its sharp beak and its long legs." }
+      ] },
+    /* PP-004 form B (testB) passage, written by formB-lang. Needs independent review. */
+    { id: "p3", title: "How a Hot-Air Balloon Flies", genre: "Informational text",
+      paragraphs: [
+        ["A hot-air balloon has no engine and no wings.", "Still, it can float high above the trees."],
+        ["A balloon has three main parts, plus a few smaller ones.", "The big cloth bag on top is called the envelope.", "Under the envelope is a burner, and under the burner hangs a basket for the pilot and riders."],
+        ["To make the balloon go up, the pilot turns on the burner.", "It shoots a tall flame up into the envelope and heats the air inside.", "Hot air is lighter than cool air.", "The same amount of hot air weighs less, so it rises and carries the balloon with it."],
+        ["As the air inside gets hotter, the balloon begins to ascend.", "It floats higher and higher.", "Soon the houses below look as small as toy blocks."],
+        ["A pilot cannot steer a balloon the way a driver steers a car.", "The balloon drifts wherever the wind pushes it.", "That is why pilots like to fly early in the morning, when the air is usually calm.", "Later in the day, the wind is often gusty instead, and it can push a balloon the wrong way."],
+        ["When it is time to come down, the pilot pulls a long cord that opens the vent.", "Some of the hot air escapes, and the balloon sinks slowly.", "The pilot looks for an open field where the balloon can touch down.", "A few minutes later, the basket bumps gently onto the grass."]
+      ],
+      figures: [
+        { after: 2, src: "assets/figures/v3a-b-balloon-parts.svg", label: "Figure 1", caption: "The parts of a hot-air balloon",
+          alt: "A drawing of a hot-air balloon with four labels. The label vent points to a small dashed circle at the very top of the balloon. The label envelope points to the big balloon. The label burner points to a small box under the balloon, with a flame pointing up into it. The label basket points to the basket that hangs from ropes at the bottom." }
       ] }
   ],
   practice: [
@@ -132,16 +160,18 @@ PP.addLesson({
       clue: "For each sentence, find the words that help you know the meaning. Do they tell the meaning, give examples, mean the same thing or mean the opposite?",
       why: "Arid has a definition clue (\"which are very dry places\"). Legumes has an example clue (\"such as peas, beans and peanuts\"). Drowsy has a synonym clue (sleepy). Tidy has an antonym clue (\"but ... a big mess\")." },
     { id: "SK-V3a-P6", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Trunk has more than one meaning. What does trunk mean in these sentences?",
-      stem: ["Dad put our bags in the trunk. Then we drove to the zoo to see the elephants."],
+      prompt: "Trunk has more than one meaning. Use the sentence and the picture. What does trunk mean here?",
+      stem: ["Grandpa leaned the ladder against the trunk."],
+      figure: { src: "assets/figures/v3a-tree-ladder.svg",
+        alt: "A drawing of a ladder leaning against a tree. The top of the ladder touches the tree a little below its lowest branch. Labels point to a branch and the roots." },
       choices: [
-        { text: "the back part of a car used for storage", correct: true },
+        { text: "the thick main stem of a tree", correct: true },
+        { text: "the back part of a car used for storage" },
         { text: "the long nose of an elephant" },
-        { text: "the thick main stem of a tree" },
         { text: "a pair of shorts worn for swimming" }
       ],
-      clue: "Elephants show up later, so be careful. What did Dad put in the trunk, and what did the family do right after?",
-      why: "The answer is \"the back part of a car used for storage.\" Dad put bags in the trunk, and then the family drove. You put bags in the back of a car before a drive. The elephants are at the zoo, not part of this trunk." },
+      clue: "The sentence alone could fit more than one meaning. Look at the picture. What is the ladder leaning on? Which meaning matches that?",
+      why: "The answer is \"the thick main stem of a tree.\" The sentence does not say what kind of trunk it is, but the picture does. The ladder leans on the thick wooden part of the tree, between the roots and the branches. That part is the trunk, and it holds the tree up. A car, an elephant and swim shorts are not in the picture." },
     { id: "SK-V3a-P7", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read paragraph 2. Choose the meaning of the phrase set everything out.",
       text: "In paragraph 2, set everything out means {0}.",
@@ -152,16 +182,19 @@ PP.addLesson({
       why: "The answer is \"put it where people could see it.\" The class put the treats on two long tables in the front hall so buyers could see them and pick some. Read together, the words set everything out mean to lay things out for people to see." }
   ],
   test: [
-    { id: "SK-V3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
-      prompt: "What is a wetland, as used in paragraph 1?",
+    { id: "SK-V3a-T8", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence and look at the graph. What does attendance mean?",
+      stem: ["Attendance at the swamp's nature center was highest in spring."],
+      figure: { src: "assets/figures/v3a-visitors-graph.svg",
+        alt: "Bar graph titled People Who Came to the Nature Center. The words at the bottom say number of people. The bars show winter 20, spring 50, summer 40 and fall 30. Spring has the longest bar." },
       choices: [
-        { text: "land covered by water for much of the year", correct: true },
-        { text: "a deep lake with no trees or plants near it" },
-        { text: "a river that flows all the way to the sea" },
-        { text: "dry land in the southeast corner of a state" }
+        { text: "the number of people who come to a place", correct: true },
+        { text: "the kind of weather a place has each season" },
+        { text: "the price of a ticket to get into a place" },
+        { text: "the number of animals that live in a place" }
       ],
-      clue: "Look for the signal words \"which is\" in paragraph 1. Read what comes after them.",
-      why: "The answer is \"land covered by water for much of the year.\" Paragraph 1 says a wetland \"is land that is covered by water for much of the year.\" The words \"which is\" give a definition clue." },
+      clue: "Read the title of the graph and the words at the bottom. What does the graph count?",
+      why: "The answer is \"the number of people who come to a place.\" The title is People Who Came to the Nature Center, and the bottom says number of people. Spring has the longest bar, 50 people, and the sentence says attendance was highest in spring. So attendance is how many people come. The graph does not show weather, ticket prices or animals." },
     { id: "SK-V3a-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What does dwell mean in paragraph 3?",
@@ -181,14 +214,14 @@ PP.addLesson({
         ] },
       clue: "Read the sentences right after the word dwell. What do the animals do in the swamp, day after day?",
       why: "Part A: to live in a place. Part B: \"They find food, build nests and raise their young there.\" and \"Alligators, turtles, frogs and herons all make their homes in the Okefenokee.\" Animals that eat, nest, raise babies and make homes in a place live there." },
-    { id: "SK-V3a-T3", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
-      prompt: "Read paragraph 5. Choose the meaning of cautious.",
-      text: "In paragraph 5, cautious means {0}.",
+    { id: "SK-V3a-T7", type: "dropdown", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Paragraph 3 names herons, but the words do not tell what a heron is. Use Figure 1 to choose the meaning.",
+      text: "In paragraph 3, a heron is {0}.",
       slots: [
-        { options: ["excited and loud", "careful to stay safe", "slow and sleepy"], answer: 1 }
+        { options: ["a long fish that swims in dark water", "a tall bird that hunts in shallow water", "a plant that floats on top of the water"], answer: 1 }
       ],
-      clue: "Read the sentence after cautious. What kinds of things does it tell visitors to do?",
-      why: "The answer is \"careful to stay safe.\" The next sentence tells visitors to stay in the boat, keep their hands out of the water and never feed the alligators. Those are all ways to be careful, so cautious means careful to stay safe." },
+      clue: "Look at the picture and read its labels and caption. What kind of living thing has those body parts?",
+      why: "The answer is \"a tall bird that hunts in shallow water.\" Figure 1 shows a sharp beak, a long neck and two long legs standing in shallow water. Fish and plants do not have beaks or legs, so a heron is a tall bird. The caption tells what the bird does: it hunts for fish in the shallow water." },
     { id: "SK-V3a-T4", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Pen has more than one meaning. What does pen mean in this sentence?",
       stem: ["The farmer opened the pen and let the pigs run out into the muddy field."],
@@ -220,6 +253,82 @@ PP.addLesson({
       ],
       clue: "Read the sentence after the phrase. Why would guides warn visitors about animals that are hard to see? What would visitors need to do?",
       why: "The answer is \"watch carefully for.\" The next sentence says alligators rest along the edges of the water and can be hard to see. Something hard to see is something you must look for carefully, and the phrase uses the word eye. Staying away from alligators is smart, but it is not what the phrase means." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code, 7 points and DOK 2 throughout, like form A, on a new passage (p3) and a new graph.
+     NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-V3a-TB1", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentences and look at the graph. What does dwindled mean?",
+      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "After week 3, the pecans the family picked dwindled."],
+      figure: { src: "assets/figures/v3a-b-pecan-graph.svg",
+        alt: "Bar graph titled Pecans We Picked in November. The words at the bottom say buckets of pecans. The bars show week 1, 3 buckets; week 2, 6 buckets; week 3, 8 buckets; and week 4, 4 buckets. Week 3 has the longest bar." },
+      choices: [
+        { text: "became fewer", correct: true },
+        { text: "grew bigger" },
+        { text: "stayed the same" },
+        { text: "turned brown" }
+      ],
+      clue: "Read the title of the graph and the words at the bottom. Then compare the bar for week 3 with the bar for week 4.",
+      why: "The answer is \"became fewer.\" The graph counts buckets of pecans picked each week. Week 3 has 8 buckets, but week 4 has only 4 buckets. After week 3 there were fewer pecans left to pick, so dwindled means became fewer. The bars do not get bigger or stay the same after week 3, and the graph does not show color."
+    },
+    { id: "SK-V3a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Lighter has more than one meaning. What does lighter mean in paragraph 3?",
+      choices: [
+        { text: "weighing less", correct: true },
+        { text: "giving off more light" },
+        { text: "paler in color" },
+        { text: "a small tool that makes a flame" }
+      ],
+      clue: "Think of the different meanings of lighter. Then read the sentence right after it. Which meaning does that sentence point to?",
+      why: "The answer is \"weighing less.\" The next sentence says the same amount of hot air weighs less, so it rises. The paragraph compares how much hot air and cool air weigh, not how bright they are or what color they are. A tool that makes a flame does not fit the sentence \"Hot air is lighter than cool air.\"" },
+    { id: "SK-V3a-TB3", type: "ebsr", points: 2, dok: 2, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What does ascend mean in paragraph 4?",
+        choices: [
+          { text: "to go up higher", correct: true },
+          { text: "to come down slowly" },
+          { text: "to float from side to side" },
+          { text: "to fill up with air" }
+        ] },
+      partB: { prompt: "Which TWO sentences from the article BEST help you know what ascend means?", pick: 2,
+        choices: [
+          { text: "\"It floats higher and higher.\"", correct: true },
+          { text: "\"Soon the houses below look as small as toy blocks.\"", correct: true },
+          { text: "\"The big cloth bag on top is called the envelope.\"" },
+          { text: "\"The balloon drifts wherever the wind pushes it.\"" },
+          { text: "\"Some of the hot air escapes, and the balloon sinks slowly.\"" }
+        ] },
+      clue: "Read the two sentences right after the word ascend. Where is the balloon going? How do things on the ground look from there?",
+      why: "Part A: to go up higher. Part B: \"It floats higher and higher.\" and \"Soon the houses below look as small as toy blocks.\" The balloon keeps rising, and houses look tiny when you are high above them. Drifting with the wind is moving sideways, and sinking is coming down, so those sentences do not show what ascend means." },
+    { id: "SK-V3a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What does gusty mean in paragraph 5?",
+      choices: [
+        { text: "blowing hard in sudden bursts", correct: true },
+        { text: "quiet and still, with no wind" },
+        { text: "warm and bright with sunshine" },
+        { text: "cool and damp, like fog" }
+      ],
+      clue: "Look for an antonym clue. The word instead tells you the wind later in the day is different from the morning air. How does the paragraph describe the morning air?",
+      why: "The answer is \"blowing hard in sudden bursts.\" In the morning the air is usually calm, but later the wind is gusty instead. Instead tells you gusty is the opposite of calm. The same sentence says this wind can push a balloon the wrong way, so it blows hard. Quiet and still, with no wind, describes calm air, which is the opposite of gusty. The paragraph says nothing about sunshine or fog." },
+    { id: "SK-V3a-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Read paragraph 6 and look at Figure 1. What is the vent?",
+      choices: [
+        { text: "an opening at the very top of the envelope", correct: true },
+        { text: "a door on the side of the basket" },
+        { text: "a pipe that the burner's flame comes out of" },
+        { text: "a flap at the bottom of the envelope" }
+      ],
+      clue: "The paragraph tells what the vent does. The picture shows where it is. Find the label vent in Figure 1.",
+      why: "The answer is \"an opening at the very top of the envelope.\" Paragraph 6 says that opening the vent lets some hot air escape, but it does not say where the vent is. Figure 1 shows the label vent pointing to a round opening at the very top of the balloon. The bottom of the envelope, the burner and the basket are all lower down, and the burner and the basket have their own labels." },
+    { id: "SK-V3a-TB6", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What does the phrase touch down mean in paragraph 6? Choose the best meaning.",
+      text: "In paragraph 6, touch down means {0}.",
+      slots: [
+        { options: ["tap something with your hand", "land on the ground", "fly low over the trees"], answer: 1 }
+      ],
+      clue: "Read the sentence after the phrase. What happens to the basket a few minutes later?",
+      why: "The answer is \"land on the ground.\" The pilot looks for an open field, and a few minutes later the basket bumps gently onto the grass. That is a landing. The phrase is not about touching something with a hand, and the balloon does more than fly low: it comes all the way down." }
   ]
 });
 
@@ -358,7 +467,7 @@ PP.addLesson({
       ],
       clue: "For each pair, ask: Do these words mean the same thing, or the opposite?",
       why: "Calm and still both mean quiet and not moving, so they are synonyms. Huge and enormous both mean very big, so they are synonyms. Tight and loose are opposites, and so are early and late, so they are antonyms." },
-    { id: "SK-V3b-P6", type: "ms", points: 1, dok: 1, passages: [],
+    { id: "SK-V3b-P6", type: "ms", points: 2, dok: 1, passages: [],
       prompt: "Which TWO pairs of words are homophones?",
       pick: 2,
       choices: [
@@ -542,7 +651,7 @@ PP.addLesson({
       ],
       clue: "Mia added cold water to fix the first problem. What was wrong? Then pick the word for water that is comfortable to sit in.",
       why: "The answers are hot and warm. Mia added cold water because the water was too hot. A little cold water made it warm, a step down from hot on the ladder. It is not hot anymore, because it is just right, and only a little cold water was added, so it did not get all the way to cool." },
-    { id: "SK-V3c-P5", type: "ms", points: 1, dok: 2, passages: [],
+    { id: "SK-V3c-P5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Which TWO words mean to run very fast?",
       pick: 2,
       choices: [
@@ -609,27 +718,40 @@ PP.addLesson({
   code: "3.L.V.3.d",
   title: "Using a dictionary and a glossary",
   teach: {
-    big: "A dictionary or glossary tells me how to spell a word and what it means. I use ABC order and guide words to find the word fast, then pick the meaning that fits.",
+    big: "A dictionary or glossary, in a book or on a screen, tells me how to spell a word and what a word or phrase means. I find the entry, then pick the meaning that fits.",
     points: [
       "Words in a dictionary are in ABC order. If two words start with the same letter, look at the second letter. If those match too, look at the third. If one word runs out of letters first, like plan and plane, the shorter word comes first.",
       "Guide words are the two words at the top of a dictionary page. The first guide word is the first word on the page, and the second is the last. Every word on the page comes between them in ABC order.",
-      "An entry shows a word, its part of speech and its meanings. Many words have more than one meaning, and each one has a number.",
-      "To choose the right meaning, read the sentence, then try each meaning in place of the word. Pick the one that makes sense.",
-      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can use a dictionary in a book or online, and you can use it to check how to spell a word."
+      "An entry shows a word, its part of speech and its meanings. Many words have more than one meaning, and each one has a number. To choose, read the sentence, then try each meaning in place of the word. Pick the one that makes sense.",
+      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can also use a dictionary to check how to spell a word.",
+      "A digital dictionary is on a computer, tablet or phone. Instead of using guide words, you type the word in the search box. If you spell it wrong, it may ask \"Did you mean ...?\" and show the right spelling. A Hear it button says the word out loud, and a Synonyms tab shows words that mean almost the same.",
+      "Dictionaries and glossaries also explain phrases. A phrase is a group of words that means something together, like look after. Look up the main word, then find the phrase in its entry. A phrase can mean something different from its words one by one."
     ],
     words: [
       { term: "guide words", means: "the two words at the top of a dictionary page that show the first and last words on it" },
       { term: "entry", means: "a word in a dictionary and all the information about it" },
-      { term: "glossary", means: "a list of important words and their meanings at the back of a book or article" }
+      { term: "glossary", means: "a list of important words and their meanings at the back of a book or article" },
+      { term: "digital dictionary", means: "a dictionary on a computer, tablet or phone, where you type the word you want" },
+      { term: "phrase", means: "a group of words that means something together" }
     ],
-    example: {
-      label: "A dictionary entry",
-      lines: [
-        "crane (noun) 1. a tall bird with long legs and a long neck 2. a large machine that lifts and moves heavy things",
-        "Sentence: The crane lifted the steel beam to the top of the new building."
-      ],
-      note: "Crane has two meanings. A bird cannot lift a steel beam to the top of a building, so the sentence uses meaning 2."
-    },
+    examples: [
+      {
+        label: "A dictionary entry",
+        lines: [
+          "crane (noun) 1. a tall bird with long legs and a long neck 2. a large machine that lifts and moves heavy things",
+          "Sentence: The crane lifted the steel beam to the top of the new building."
+        ],
+        note: "Crane has two meanings. A bird cannot lift a steel beam to the top of a building, so the sentence uses meaning 2."
+      },
+      {
+        label: "A phrase in an entry",
+        lines: [
+          "look (verb) 1. to turn your eyes toward something so you can see it 2. to seem **look after** to take care of someone or something",
+          "Sentence: Ana will look after her baby brother while Mom cooks dinner."
+        ],
+        note: "Look after is a phrase, so it is listed in bold inside the entry for its main word, look. It does not mean to look behind someone. It means to take care of him."
+      }
+    ],
     tip: "On the test, you may see a dictionary entry next to a sentence. Read every numbered meaning before you choose, and try each one in the sentence."
   },
   learn: [
@@ -655,19 +777,23 @@ PP.addLesson({
     },
     {
       show: [
-        "spring (noun) 1. the season between winter and summer 2. a metal coil that bounces back after it is pushed 3. a place where water comes up out of the ground",
-        "Sentence: The hikers filled their bottles with cool water from a spring in the hills."
+        "Sentence: The hikers filled their bottles with cool water from a spring in the hills.",
+        "Ravi looks up spring in a dictionary app on a tablet."
       ],
-      ask: "Which meaning of spring is used in the sentence?",
+      figure: { src: "assets/figures/v3d-app-spring.svg", width: 320,
+        alt: "A dictionary app screen. The search box says spring. The entry shows the word spring in bold, a Hear it button with a speaker, a Meanings tab (open) and a Synonyms tab, the part of speech noun, and three numbered meanings: 1. the season between winter and summer. 2. a metal coil that bounces back after it is pushed. 3. a place where water comes up out of the ground.",
+        caption: "A digital dictionary" },
+      ask: "How does Ravi use the app, and which meaning of spring is used in the sentence?",
       steps: [
-        "Read all three meanings first.",
-        "Find clue words in the sentence: filled their bottles, cool water, in the hills.",
-        "Try each meaning. You cannot fill a bottle with water from a season or from a metal coil. You can fill it from a place where water comes out of the ground."
+        "Ravi types spring in the search box at the top. He does not need guide words, because the app finds the entry for him.",
+        "He taps Hear it to hear the word said out loud. He stays on the Meanings tab, checks the part of speech (noun) and reads all three numbered meanings.",
+        "He finds clue words in the sentence: filled their bottles, cool water, in the hills.",
+        "He tries each meaning. You cannot fill a bottle with water from a season or from a metal coil. You can fill it from a place where water comes out of the ground."
       ],
       answer: "Meaning 3: a place where water comes up out of the ground."
     }
   ],
-  parent: "Grab any dictionary or the glossary in a school book. Call out a word and race to find it, then talk about the guide words on that page. When your child asks how to spell a word, look it up together instead of just telling them.",
+  parent: "Grab any dictionary or the glossary in a school book. Call out a word and race to find it, then talk about the guide words on that page. Try a free online children's dictionary too: type the word, press the button to hear it, and read every meaning before you pick one. When your child asks how to spell a word, look it up together instead of just telling them.",
   passages: [
     { id: "p1", title: "The Life of a Monarch Butterfly", genre: "Informational text",
       paragraphs: [
@@ -719,6 +845,20 @@ PP.addLesson({
       ],
       clue: "Try each meaning in place of match. Which one makes sense when talking about a red sock and a green sock?",
       why: "The answer is 3. Tia's socks are different colors, so they do not go well together or look the same. That is meaning 3. Socks are not a stick that makes a flame or a game between teams." },
+    { id: "SK-V3d-P6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the dictionary entry and the sentence. What does the phrase give up mean in the sentence?",
+      stem: [
+        "give (verb) 1. to hand something to someone 2. to let someone have something as a present **give up** to stop trying",
+        "Sentence: The puzzle had 500 pieces, but Jada did not give up until every piece was in place."
+      ],
+      choices: [
+        { text: "to stop trying", correct: true },
+        { text: "to hand something to someone" },
+        { text: "to lift something up high" },
+        { text: "to let someone have a present" }
+      ],
+      clue: "Give up is a phrase, so look for it in bold inside the entry for give. Do not add up the meanings of give and up one by one.",
+      why: "The answer is to stop trying. The dictionary lists the phrase give up in bold, with its own meaning. Jada kept working until every piece was in place, so she did not stop trying. To hand something over and to let someone have a present are meanings of give by itself, and lifting something up high is a guess from the word up." },
     { id: "SK-V3d-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "The writer wants to add the word milkweed to the glossary. Where should it go so the glossary stays in ABC order?",
       choices: [
@@ -734,7 +874,19 @@ PP.addLesson({
       options: ["becuase", "because", "becaus", "beacuse"],
       answer: [1], pick: 1,
       clue: "Say the word slowly: be-cause. Check each spelling letter by letter. Which one has every sound, with the letters in the right order?",
-      why: "The answer is because, spelled b-e-c-a-u-s-e. Becuase and beacuse have letters in the wrong order, and becaus is missing the e at the end." }
+      why: "The answer is because, spelled b-e-c-a-u-s-e. Becuase and beacuse have letters in the wrong order, and becaus is missing the e at the end." },
+    { id: "SK-V3d-P7", type: "dropdown", points: 2, dok: 2, passages: [],
+      stem: ["Nia's sentence: The woodpecker pecked at the bark of the old oak to find bugs.", "Nia was not sure of the spelling, so she typed barck into a dictionary app."],
+      prompt: "Use the dictionary screen. Choose the spelling and the meaning that fit Nia's sentence.",
+      figure: { src: "assets/figures/v3d-app-bark.svg", width: 320,
+        alt: "A dictionary app screen. The search box says barck. Under it the app asks: Did you mean: bark? The entry shows the word bark, a Hear it button, a Meanings tab and a Synonyms tab, the part of speech noun, and two numbered meanings: 1. the short, loud sound a dog makes. 2. the hard outer covering of a tree trunk." },
+      text: "The word is spelled {0}, and in Nia's sentence it means {1}.",
+      slots: [
+        { options: ["barck", "bark", "barke"], answer: 1 },
+        { options: ["the short, loud sound a dog makes", "the hard outer covering of a tree trunk", "a tool that a bird uses to peck wood"], answer: 1 }
+      ],
+      clue: "First, look under the search box: what spelling does the app suggest? Then read both meanings and ask: what does a woodpecker peck at on an oak?",
+      why: "The answers are bark and \"the hard outer covering of a tree trunk.\" The app asked \"Did you mean: bark?\", so barck is not the right spelling, and barke is not shown anywhere. A woodpecker pecks at the hard outer covering of a tree trunk, so the sentence uses meaning 2, not meaning 1, the sound a dog makes. A tool for pecking is not one of the meanings on the screen." }
   ],
   test: [
     { id: "SK-V3d-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -786,14 +938,33 @@ PP.addLesson({
       ],
       clue: "Look at what Grandpa does with his hands, and where the peach is. Then try each meaning in place of pick.",
       why: "The answer is \"to pull a fruit or flower off a plant.\" Grandpa gave a gentle tug to get the peach off the branch. A peach is a fruit, and he pulled it off the tree. In this sentence pick is an action, so it cannot be a tool or a guitar piece." },
-    { id: "SK-V3d-T5", type: "dropdown", points: 1, dok: 1, passages: [],
-      prompt: "Pablo looks up finish in a dictionary to check how to spell finished. Choose the correct spelling.",
-      text: "I {0} my homework before dinner.",
-      slots: [
-        { options: ["finnished", "finished", "finishd"], answer: 1 }
+    { id: "SK-V3d-T6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Mateo's sentence: My sister is so ____ that she read a whole chapter book in one day.", "He is not sure how to spell the word he wants, so he types brite into a dictionary app."],
+      prompt: "Use the dictionary screen. Which spelling and meaning should Mateo use?",
+      figure: { src: "assets/figures/v3d-app-bright.svg", width: 320,
+        alt: "A dictionary app screen. The search box says brite. Under it the app asks: Did you mean: bright? The entry shows the word bright, a Hear it button, a Meanings tab and a Synonyms tab, the part of speech adjective, and two numbered meanings: 1. full of light; shining. 2. smart and quick to learn." },
+      choices: [
+        { text: "bright, with meaning 2", correct: true },
+        { text: "bright, with meaning 1" },
+        { text: "brite, with meaning 2" },
+        { text: "brite, with meaning 1" }
       ],
-      clue: "Start with the base word finish. Then add the ending for something that already happened.",
-      why: "The answer is finished. The base word finish has one n. To show it already happened, add -ed: f-i-n-i-s-h-e-d." }
+      clue: "Check two things on the screen: the spelling the app suggests under the search box, and the meaning that fits a sister who reads a whole book in one day.",
+      why: "The answer is bright, with meaning 2. The app asked \"Did you mean: bright?\", so brite is not the right spelling. A sister who reads a chapter book in one day is smart and quick to learn. She is not full of light, so meaning 1 does not fit." },
+    { id: "SK-V3d-T7", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the dictionary entry and the sentence. What does ran out of mean in the sentence?",
+      stem: [
+        "run (verb) 1. to move fast on your feet 2. to be in charge of something **run out of** to use up all of something so none is left",
+        "Sentence: We ran out of glue, so we could not finish the poster."
+      ],
+      choices: [
+        { text: "used up all of", correct: true },
+        { text: "moved fast away from" },
+        { text: "was in charge of" },
+        { text: "hurried outside with" }
+      ],
+      clue: "Ran is a form of run. Find the phrase in bold inside the entry for run, then try its meaning in the sentence.",
+      why: "The answer is used up all of. Ran out of is the past form of the phrase run out of, which the entry lists in bold: to use up all of something so none is left. With no glue left, they could not finish the poster. Moving fast and being in charge are meanings of run by itself, and hurrying outside is a guess from the word out." }
   ]
 });
 

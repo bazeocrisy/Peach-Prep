@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="t">
+  <title id="t">Bar graph titled Rain in Our Garden. It shows inches of rain each month: March 4, April 3, May 2, June 5.</title>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <text x="160" y="26" font-size="22" font-weight="bold" text-anchor="middle">Rain in Our Garden</text>
+    <text transform="translate(22 160) rotate(-90)" font-size="21" text-anchor="middle">inches of rain</text>
+    <g font-size="21" text-anchor="end"><text x="66" y="257">0</text><text x="66" y="187">2</text><text x="66" y="117">4</text><text x="66" y="47">6</text></g>
+  </g>
+  <g stroke="#C9C2B6" stroke-width="1.5"><path d="M74 180 H292 M74 110 H292 M74 40 H292"/></g>
+  <path d="M74 36 V250 H292" fill="none" stroke="#111" stroke-width="3"/>
+  <g fill="#9EC3E6" stroke="#111" stroke-width="2.5">
+    <rect x="86" y="110" width="38" height="140"/>
+    <rect x="138" y="145" width="38" height="105"/>
+    <rect x="190" y="180" width="38" height="70"/>
+    <rect x="242" y="75" width="38" height="175"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111" text-anchor="middle">
+    <text x="105" y="102">4</text><text x="157" y="137">3</text><text x="209" y="172">2</text><text x="261" y="67">5</text>
+    <text x="105" y="278">Mar</text><text x="157" y="278">Apr</text><text x="209" y="278">May</text><text x="261" y="278">Jun</text>
+  </g>
+</svg>

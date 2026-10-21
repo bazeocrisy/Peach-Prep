@@ -90,7 +90,7 @@ PP.addSet({
         { text: "A garden could earn money by selling vegetables." },
         { text: "A garden would make school lunches cost less." }
       ],
-      clue: "Maya uses the words First, Another reason and Finally to start each reason. Find those words.",
+      clue: "Look at the first sentence of paragraphs 2, 3 and 4.",
       why: "The answers are \"A garden would help students learn about science\" (paragraph 2, First), \"A garden could help students eat healthier food\" (paragraph 3, Another reason), and \"A garden would teach students to work as a team\" (paragraph 4, Finally). She never says a garden is for reading, earning money, or cheaper lunches."
     },
     {

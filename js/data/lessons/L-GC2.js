@@ -28,7 +28,7 @@ PP.addLesson({
       ],
       note: "The first three are correct sentences. The fragment starts like the complex sentence but stops before the whole thought. The run-on has two whole thoughts with nothing to join them."
     },
-    tip: "On the test, you may be asked which sentence is complete or which one is written correctly. Read each choice by itself and ask: Does it have a who, a does-what and a whole thought?"
+    tip: "On the test, you may be asked which sentence is complete or which one is written correctly. You may also read a student's draft and find the fragment or run-on, choose the best way to fix it, or find a sentence of one kind. Read each sentence by itself and ask: Does it have a who, a does-what and a whole thought?"
   },
   learn: [
     {
@@ -43,15 +43,15 @@ PP.addLesson({
       answer: "It is a fragment. You could fix it like this: After the storm passed over Columbus, the sky turned pink."
     },
     {
-      show: ["Kofi and his cousin fished in the creek.", "Kofi fished in the creek, and his cousin read a book."],
-      ask: "Which sentence is simple, and which is compound?",
+      show: ["From a student's draft:", "(1) Kofi and his cousin fished in the creek. (2) Kofi caught a small fish, but his cousin caught nothing. (3) When the sun went down, they walked home."],
+      ask: "Which sentence is simple, which is compound, and which is complex?",
       steps: [
-        "Both sentences use the word and, so look at what and joins.",
-        "In the first sentence, and joins two people: Kofi and his cousin. There is only one does-what, fished.",
-        "In the second sentence, check each side. \"Kofi fished in the creek\" can stand alone. \"His cousin read a book\" can stand alone too.",
-        "Two whole thoughts joined with a comma and and make a compound sentence."
+        "Sentence 1: and joins two people, Kofi and his cousin. There is only one does-what, fished, and one whole thought. So sentence 1 is simple.",
+        "Sentence 2: \"Kofi caught a small fish\" can stand alone. \"His cousin caught nothing\" can stand alone too. Two whole thoughts joined by a comma and but make it compound.",
+        "Sentence 3: \"They walked home\" can stand alone. \"When the sun went down\" has a who and a does-what, but it cannot stand alone, because When leaves you waiting.",
+        "One whole thought plus a part that cannot stand alone makes sentence 3 complex."
       ],
-      answer: "The first sentence is simple. The second sentence is compound."
+      answer: "Sentence 1 is simple, sentence 2 is compound, and sentence 3 is complex."
     },
     {
       show: ["The library was closed we went to the park instead."],
@@ -65,8 +65,29 @@ PP.addLesson({
       answer: "It is a run-on. One way to fix it: The library was closed, so we went to the park instead."
     }
   ],
-  parent: "When your child tells you about the day, pick one sentence and play \"sentence builder\": say it as a simple sentence, add and, but or so to make it compound, then start it with because or when to make it complex.",
-  passages: [],
+  parent: "When your child tells you about the day, pick one sentence and play \"sentence builder\": say it as a simple sentence, add and, but or so to make it compound, then start it with because or when to make it complex. You can also read a few sentences from a book out loud and ask, \"Was that one simple, compound or complex?\"",
+  passages: [
+    /* PP-004: two short student drafts so the skill is practiced inside a text, not only on single
+       sentences. p1 is for practice and p2 for the check. Each draft has exactly one fragment and
+       one run-on; every other sentence is correct. Sentence types (for reviewers):
+       p1: (1) simple (2) simple (3) compound (4) simple (5) FRAGMENT (6) simple (7) RUN-ON
+           (8) complex (9) simple (10) complex (11) simple
+       p2: (1) simple (2) simple (3) simple (4) compound (5) FRAGMENT (6) simple (7) simple
+           (8) RUN-ON (9) simple (10) simple (11) complex */
+    { id: "p1", title: "Our Class Garden", byline: "Maya's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) This spring, our class planted a garden behind the school.", "(2) First, we dug up the hard dirt with small shovels.", "(3) Mr. Hall brought a bag of rich soil, and we mixed it into the dirt.", "(4) Next, we planted rows of beans and carrots."],
+        ["(5) Because the weather was dry.", "(6) We watered the rows every morning.", "(7) The beans grew fast the carrots took much longer."],
+        ["(8) When the beans were ready, we picked them for a class snack.", "(9) The carrots should be ready in a few more weeks.", "(10) We will cook them in a soup after we pull them up.", "(11) I can hardly wait!"]
+      ] },
+    { id: "p2", title: "The Old Lighthouse", byline: "Jordan's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) Last summer, my family visited an old lighthouse on the Georgia coast.", "(2) The tall white tower stood on a sandy point near the ocean."],
+        ["(3) We climbed the long, winding stairs to the top.", "(4) My legs ached, but I kept going.", "(5) When we reached the top.", "(6) We could see boats far out on the water."],
+        ["(7) A guide told us about the keepers from long ago.", "(8) Each night, a keeper climbed the stairs he lit the big lamp.", "(9) The bright light warned ships about the rocks.", "(10) Today, the lamp turns on by itself."],
+        ["(11) Before we left, I bought a postcard of the lighthouse."]
+      ] }
+  ],
   practice: [
     { id: "SK-GC2a-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which of these is a complete sentence?",
@@ -105,30 +126,34 @@ PP.addLesson({
       slots: [{ options: ["After", "And", "So"], answer: 0 }],
       clue: "A complex sentence has a part that cannot stand alone. Which word makes the first part tell when something happened?",
       why: "The answer is After: \"After we finished our chores, Mom took us to the pool.\" After makes the first part tell when, and that part cannot stand alone. And and so join two whole sentences in the middle, so they do not belong at the start here." },
-    { id: "SK-GC2a-P5", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that is a run-on.",
-      options: [
-        "Grandma planted peppers, and I watered them.",
-        "The peppers grew tall they turned bright red.",
-        "Because the summer was hot, we watered every day.",
-        "We picked the peppers in August.",
-        "Grandma made salsa with the peppers and tomatoes."
-      ],
-      answer: [1], pick: 1,
-      clue: "A run-on has two whole thoughts with nothing to join them. Look for a spot where one thought ends and a new one starts with no end mark and no comma and joining word.",
-      why: "The answer is \"The peppers grew tall they turned bright red.\" \"The peppers grew tall\" is one whole thought, and \"they turned bright red\" is another. It could be fixed like this: The peppers grew tall, and they turned bright red." },
-    { id: "SK-GC2a-P6", type: "ms", points: 2, dok: 2, passages: [],
-      prompt: "Choose the TWO complex sentences.",
-      choices: [
-        { text: "If it rains on Saturday, the fair will move inside.", correct: true },
-        { text: "We clapped loudly when the band started to play.", correct: true },
-        { text: "It rained on Saturday, but the fair went on." },
-        { text: "The band played songs for an hour." },
-        { text: "Because the band played so loudly." }
-      ],
+    { id: "SK-GC2a-P7", type: "hottext", points: 1, dok: 2, passages: ["p1"],
+      prompt: "One sentence in Maya's draft is a run-on. Select that sentence.",
+      targets: ["p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1"],
+      answer: ["p1:2:3"], pick: 1,
+      clue: "A run-on has two whole thoughts with nothing to join them. Read each sentence slowly. Is there a spot where one thought ends and a new one starts, with no end mark and no comma and joining word?",
+      why: "The answer is sentence 7, \"The beans grew fast the carrots took much longer.\" \"The beans grew fast\" is one whole thought, and \"the carrots took much longer\" is another, with nothing between them. Maya could write: The beans grew fast, but the carrots took much longer. None of the other sentences has two whole thoughts crammed together with nothing between them." },
+    { id: "SK-GC2a-P9", type: "ms", points: 2, dok: 2, passages: ["p1"],
+      prompt: "Which TWO sentences in Maya's draft are complex sentences?",
       pick: 2,
-      clue: "A complex sentence has a whole thought plus a part that starts with a word like because, when, after or if. That part can come at the start or at the end. Make sure there is a whole thought too.",
-      why: "The answers are \"If it rains on Saturday, the fair will move inside.\" and \"We clapped loudly when the band started to play.\" Each has a whole thought plus a part that starts with if or when. The but sentence is compound. The band sentence is simple. \"Because the band played so loudly.\" has no whole thought, so it is a fragment." }
+      choices: [
+        { text: "(8) When the beans were ready, we picked them for a class snack.", correct: true },
+        { text: "(10) We will cook them in a soup after we pull them up.", correct: true },
+        { text: "(3) Mr. Hall brought a bag of rich soil, and we mixed it into the dirt." },
+        { text: "(4) Next, we planted rows of beans and carrots." },
+        { text: "(5) Because the weather was dry." }
+      ],
+      clue: "A complex sentence has a whole thought plus a part that cannot stand alone. That part can come at the start or at the end. A part all by itself, with no whole thought, is not a sentence at all.",
+      why: "The answers are sentence 8, \"When the beans were ready, we picked them for a class snack.\" and sentence 10, \"We will cook them in a soup after we pull them up.\" Each has a whole thought plus a part that starts with when or after. Sentence 3 is compound: two whole thoughts joined with a comma and and. Sentence 4 is simple. Sentence 5 has no whole thought, so it is a fragment." },
+    { id: "SK-GC2a-P8", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Sentence 5 in Maya's draft is a fragment. Which is the best way to join sentences 5 and 6 to fix it?",
+      choices: [
+        { text: "Because the weather was dry, we watered the rows every morning.", correct: true },
+        { text: "Because the weather was dry, and we watered the rows every morning." },
+        { text: "The weather was dry, we watered the rows every morning." },
+        { text: "Because the weather was dry every morning." }
+      ],
+      clue: "A good fix keeps both ideas and leaves you with a whole thought. Check each choice: Does it leave you waiting? Are two whole thoughts held together by only a comma?",
+      why: "The answer is \"Because the weather was dry, we watered the rows every morning.\" The because part now has a whole thought to go with it, so it no longer leaves you waiting. In the choice with and, both parts hang on Because, so it still leaves you waiting. The choice that starts with The weather has two whole thoughts with only a comma, so it is a run-on. \"Because the weather was dry every morning.\" is still a fragment." }
   ],
   test: [
     { id: "SK-GC2a-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -141,7 +166,7 @@ PP.addLesson({
       ],
       clue: "Check how the two thoughts are joined. Two whole thoughts need a comma and a joining word. Also make sure each part has a who.",
       why: "The answer is \"The museum opens at nine, but the gift shop opens at ten.\" It joins two whole thoughts with a comma and but. One choice has nothing between the thoughts, and one has only a comma, so both are run-ons. \"Opens at nine, but the gift shop opens at ten.\" has no who for opens at nine." },
-    { id: "SK-GC2a-T2", type: "ebsr", points: 2, dok: 3, passages: [],
+    { id: "SK-GC2a-T2", type: "ebsr", points: 2, dok: 2, passages: [],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: "When the whistle blew, the swimmers dove into the pool.",
       partA: { prompt: "What kind of sentence is this?",
@@ -172,29 +197,28 @@ PP.addLesson({
       ],
       clue: "Count the whole thoughts. One whole thought is simple. Two whole thoughts joined with and, but, or, so is compound. A whole thought plus a part that starts with a word like because or after is complex.",
       why: "\"My brother and I built a fort out of boxes.\" and \"We fixed the fort the next morning.\" are simple; the and in the first one only joins two people. \"We built a fort, and Dad helped us tape the roof.\" is compound. \"Because the fort had no door, we crawled in through a window.\" and \"The fort fell down after the dog ran into it.\" are complex." },
-    { id: "SK-GC2a-T4", type: "hottext", points: 1, dok: 2, passages: [],
-      prompt: "Select the sentence that is a fragment.",
-      options: [
-        "The lighthouse stands on a rocky point.",
-        "Its bright light warns ships at night.",
-        "When the keeper climbed the long stairs each evening.",
-        "Today, the light turns on by itself.",
-        "Visitors can climb to the top in summer."
-      ],
-      answer: [2], pick: 1,
-      clue: "Read each sentence alone. Does one of them leave you waiting to find out what happened?",
-      why: "The answer is \"When the keeper climbed the long stairs each evening.\" It has a who and a does-what, but the word When leaves you waiting. It needs a whole thought, such as: When the keeper climbed the long stairs each evening, he lit the lamp." },
-    { id: "SK-GC2a-T5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "This sentence is a run-on. Which is the best way to fix it?",
-      stem: "Dad burned the toast he made more.",
+    { id: "SK-GC2a-T6", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "One sentence in Jordan's draft is a fragment. Select that sentence.",
+      targets: ["p2:2:2", "p2:2:3", "p2:2:4", "p2:3:1", "p2:4:1"],
+      answer: ["p2:2:3"], pick: 1,
+      clue: "Read each sentence by itself. Does one of them leave you waiting to find out what happened?",
+      why: "The answer is sentence 5, \"When we reached the top.\" It has a who and a does-what, but the word When leaves you waiting. Jordan could join it to sentence 6: When we reached the top, we could see boats far out on the water. Each of the other sentences has a whole thought." },
+    { id: "SK-GC2a-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Sentence 8 in Jordan's draft is a run-on. Which is the best way to fix it?",
       choices: [
-        { text: "Dad burned the toast, so he made more.", correct: true },
-        { text: "Dad burned the toast, he made more." },
-        { text: "Dad burned the toast so, he made more." },
-        { text: "Because Dad burned the toast." }
+        { text: "Each night, a keeper climbed the stairs, and he lit the big lamp.", correct: true },
+        { text: "Each night, a keeper climbed the stairs, he lit the big lamp." },
+        { text: "Each night, a keeper climbed the stairs and, he lit the big lamp." },
+        { text: "Each night, when a keeper climbed the stairs." }
       ],
       clue: "Read each fix. Does it still have both whole thoughts? Are they joined in a way you learned?",
-      why: "The answer is \"Dad burned the toast, so he made more.\" The comma goes before so, and so joins the two whole thoughts. A comma alone still makes a run-on, the comma after so is in the wrong place, and the because choice is a fragment." }
+      why: "The answer is \"Each night, a keeper climbed the stairs, and he lit the big lamp.\" The comma goes before and, and and joins the two whole thoughts. A comma alone still makes a run-on, the comma after and is in the wrong place, and the when choice is a fragment." },
+    { id: "SK-GC2a-T8", type: "hottext", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Select the sentence in Jordan's draft that is a complex sentence.",
+      targets: ["p2:1:1", "p2:2:2", "p2:2:3", "p2:3:3", "p2:4:1"],
+      answer: ["p2:4:1"], pick: 1,
+      clue: "Look for a sentence with a whole thought plus a part that cannot stand alone. Make sure the sentence really has a whole thought too.",
+      why: "The answer is sentence 11, \"Before we left, I bought a postcard of the lighthouse.\" \"I bought a postcard of the lighthouse\" can stand alone, and \"Before we left\" cannot. Sentence 1 starts with Last summer, but that part has no who or does-what, so sentence 1 is simple. Sentence 4 is compound and sentence 9 is simple. Sentence 5 starts with When, but it has no whole thought, so it is not a complex sentence." }
   ]
 });
 
@@ -284,6 +308,18 @@ PP.addLesson({
         ["(4) First, we stop at the peach stand.", "(5) The farmer gives each of us a slice to taste.", "(6) The peaches are sweet.", "(7) They are juicy."],
         ["(8) Next, Dad bought a jar of honey from a beekeeper.", "(9) The beekeeper shows us a picture of her hives."],
         ["(10) Sometimes it rains on Saturday.", "(11) We go to the market anyway.", "(12) We always come home with something good to eat."]
+      ] },
+    /* PP-004 form B passage: used only by testB. Revised by reviewfix4 after review C (form B):
+       a present-tense draft (form A's p2 is present too; practice p1 is past), with the one tense
+       slip inside a complex sentence (5). Sentence types: (1)-(4) simple, (5) complex with the
+       SLIP (handed), (6)-(12) simple, (13) complex. The topic is new to the site (T-SS already
+       has a "Field Day" draft, so that topic was avoided). Needs independent review. */
+    { id: "p3", title: "Saturdays at the Bakery", byline: "Nia's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) Every Saturday, my grandma opens her bakery at six o'clock.", "(2) I help her before the customers come.", "(3) My job is to fill the jars with cookies."],
+        ["(4) The first customer is always Mr. Banks.", "(5) When he walks through the door, Grandma handed him a warm cinnamon roll.", "(6) He pays with coins from a little leather bag.", "(7) Then he sits by the window and reads the paper."],
+        ["(8) Grandma's bakery is small and cozy.", "(9) The bakery down the street is much bigger.", "(10) More people come to Grandma's bakery."],
+        ["(11) The bakery gets very busy at lunchtime.", "(12) Grandma's neighbor comes to help at the counter.", "(13) We close the door when the last roll is gone."]
       ] }
   ],
   practice: [
@@ -382,6 +418,55 @@ PP.addLesson({
       ],
       clue: "Find the time word at the start of the sentence. Then pick verbs that both tell about that time.",
       why: "The answers are flew and carried. Yesterday tells you this already happened, so both verbs must be past tense. Flies and carries are present tense. Fly and carry are present-tense forms too, and they do not go with Priya or the wind." }
+  ],
+  /* PP-004 FIXTURE: form B of the skill check, written by the "forms" agent so the
+     two-form architecture can be tested (verification/guard.py section 14). It parallels
+     form A item by item (same types, points, DOK and code) on a new passage, p3.
+     NEEDS INDEPENDENT REVIEW (two reviews, SPEC manifest rule) before it is relied on;
+     see docs/audits/work/pp004-forms.md. */
+  testB: [
+    { id: "SK-GC2b-TB1", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "One sentence in Nia's draft has a verb that does not fit the time of the rest of the draft. Select that sentence.",
+      targets: ["p3:1:2", "p3:2:2", "p3:2:4", "p3:3:1", "p3:4:3"],
+      answer: ["p3:2:2"], pick: 1,
+      clue: "Nia tells about something that happens every week. Which tense is most of the draft in? Check every verb, even in the long sentences.",
+      why: "The answer is sentence 5, \"When he walks through the door, Grandma handed him a warm cinnamon roll.\" Nia tells what happens every Saturday, so the draft is in the present tense: opens, help, is, pays, sits. Walks is present, but handed is past, so the tense slips in the middle of the sentence. Handed should be hands." },
+    { id: "SK-GC2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What is the best way to combine sentences 11 and 12?",
+      choices: [
+        { text: "Because the bakery gets very busy at lunchtime, Grandma's neighbor comes to help at the counter.", correct: true },
+        { text: "Because Grandma's neighbor comes to help at the counter, the bakery gets very busy at lunchtime." },
+        { text: "The bakery gets very busy at lunchtime, but Grandma's neighbor comes to help at the counter." },
+        { text: "Because the bakery got very busy at lunchtime, Grandma's neighbor comes to help at the counter." }
+      ],
+      clue: "Which idea is the reason, and which one happens because of it? Then check that the verbs stay in the same time as the rest of the draft.",
+      why: "The answer is \"Because the bakery gets very busy at lunchtime, Grandma's neighbor comes to help at the counter.\" The busy lunchtime is the reason the neighbor comes, so because goes with the busy lunchtime. The choice that puts because with the neighbor turns the idea around: the neighbor coming to help does not make the bakery busy. But would mean the help is a surprise. The got choice slips into the past tense." },
+    { id: "SK-GC2b-TB3", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Nia wants to join sentences 9 and 10. Choose the word that best completes the new sentence.",
+      text: "{0} the bakery down the street is much bigger, more people come to Grandma's bakery.",
+      slots: [{ options: ["Although", "Because", "Unless"], answer: 0 }],
+      clue: "Would you expect more people to go to the bigger bakery? Does the second idea go along with the first, or against it?",
+      why: "The answer is Although: \"Although the bakery down the street is much bigger, more people come to Grandma's bakery.\" You might expect more people to go to the bigger bakery, so this goes against what you expect. Although shows that kind of surprise. Because would mean the other bakery being bigger is the reason people come to Grandma's. Unless would mean people come to Grandma's only when the other bakery is not bigger." },
+    { id: "SK-GC2b-TB4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Is each sentence correct, or does the tense shift by mistake? Match each sentence.",
+      cols: ["Correct", "Tense shifts by mistake"],
+      rows: [
+        { text: "The hen laid an egg, and Sam carried it inside.", answer: 0 },
+        { text: "Every night, the owl hoots while we slept.", answer: 1 },
+        { text: "Last year, Ana was in second grade, but now she is in third grade.", answer: 0 },
+        { text: "After Grandpa told us a story, he tucks us into bed.", answer: 1 }
+      ],
+      clue: "Find every verb. If the tense changes, look for a time word that shows the time really changed. A change with no new time is a mistake.",
+      why: "\"The hen laid an egg, and Sam carried it inside.\" stays in the past. \"Last year, Ana was in second grade, but now she is in third grade.\" changes tense, but that is correct: last year goes with was, and now goes with is. \"Every night, the owl hoots while we slept.\" shifts by mistake; slept should be sleep. \"After Grandpa told us a story, he tucks us into bed.\" shifts by mistake too; tucks should be tucked." },
+    { id: "SK-GC2b-TB5", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the verbs that keep the tense the same and fit the sentence.",
+      text: "Every spring, when the creek {0}, the ducks {1} back to our yard.",
+      slots: [
+        { options: ["rose", "rises", "rise"], answer: 1 },
+        { options: ["come", "came", "comes"], answer: 0 }
+      ],
+      clue: "Every spring tells you how often this happens. Which tense goes with that? Then check that each verb fits its subject: one creek, many ducks.",
+      why: "The answers are rises and come. Every spring tells you this happens again and again, so both verbs are present tense. Rose and came are past tense. Rise does not go with one creek, and comes does not go with more than one duck." }
   ]
 });
 
@@ -395,7 +480,7 @@ PP.addLesson({
       "In the present tense, a verb for one person or thing usually ends in s: The bird sings. A verb for more than one does not: The birds sing.",
       "Some verbs change in other ways. For one person or thing (he, she, it, Dad, the dog), use is, was, has and does. For more than one, use are, were, have and do.",
       "Two subjects joined by and count as more than one: Ella and Sam are friends. With I and you, use the verb with no s: I run, you run. Be is special: I am, I was, you are, you were.",
-      "Words can come between the subject and the verb. Skip over them and match the verb to the real subject: The box of crayons is on the table."
+      "Words can come between the subject and the verb. Skip over them and match the verb to the real subject: The box of crayons is on the table. A long sentence can have two parts, joined by a word like when or because. Each part has its own subject and verb, and each pair must agree: When the bell rings, the students line up."
     ],
     words: [
       { term: "subject", means: "who or what the sentence is about" },
@@ -512,7 +597,16 @@ PP.addLesson({
         { text: "These bikes has no bells." }
       ],
       clue: "Doesn't and has go with one. Don't and have go with more than one. Check each subject.",
-      why: "The answer is \"The bike doesn't have a bell.\" Bike is one, so doesn't is correct. Bikes needs don't, that bike needs doesn't, and these bikes needs have." }
+      why: "The answer is \"The bike doesn't have a bell.\" Bike is one, so doesn't is correct. Bikes needs don't, that bike needs doesn't, and these bikes needs have." },
+    { id: "SK-GC2c-P7", type: "dropdown", points: 2, dok: 2, passages: [],
+      prompt: "Choose the verbs that agree with their subjects.",
+      text: "When the twins {0} home from school, their dog {1} to the door.",
+      slots: [
+        { options: ["get", "gets", "getting"], answer: 0 },
+        { options: ["run", "runs", "running"], answer: 1 }
+      ],
+      clue: "This sentence has two parts, and each part has its own subject. Find each subject and ask: one or more than one?",
+      why: "The answers are get and runs. In the first part, the subject is twins, which is more than one, so get has no s. In the second part, the subject is dog, which is one, so runs ends in s. The word when joins the two parts, but each part still needs a subject and verb that agree." }
   ],
   test: [
     { id: "SK-GC2c-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -572,9 +666,9 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.L.GC.2.d",
-  title: "Use exact describing words",
+  title: "Add details with exact describing words",
   teach: {
-    big: "Adjectives and adverbs add details. The best ones tell exactly what you mean, so your reader can picture it.",
+    big: "When you elaborate, you add details that tell more about an idea. Exact adjectives and adverbs make those details clear, so your reader can picture what you mean.",
     points: [
       "An adjective describes a noun. It tells what kind, how many or which one: a shaggy dog, three apples.",
       "An adverb describes a verb. It tells how, when or where something happens: whispered softly, left early, played outside.",
@@ -617,13 +711,14 @@ PP.addLesson({
     },
     {
       show: ["A bird sat on the fence."],
-      ask: "How can you add an adjective and an adverb to make this sentence clearer?",
+      ask: "How can you elaborate on this idea, adding details with adjectives and adverbs?",
       steps: [
         "Ask: what kind of bird? Add adjectives before bird, like tiny and red.",
         "Ask: how did it sit? Add an adverb after sat, like calmly.",
+        "Ask: what else could the reader learn? Add a detail that tells more, like what the bird was doing: singing a cheerful song.",
         "Read it back. Can you picture it now?"
       ],
-      answer: "A tiny red bird sat calmly on the fence."
+      answer: "A tiny red bird sat calmly on the fence, singing a cheerful song."
     }
   ],
   write: {
@@ -669,15 +764,15 @@ PP.addLesson({
       clue: "Ask what the word describes. If it tells what kind of thing, it is an adjective. If it tells how, when or where something happens, it is an adverb.",
       why: "Striped tells what kind of snake, and sticky tells what the hands were like, so they are adjectives. Gently tells how she patted, outside tells where they played, and early tells when the bus came, so they are adverbs." },
     { id: "SK-GC2d-P4", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence gives the most exact details?",
+      prompt: "Ben wrote, \"We went to the beach.\" He wants to elaborate by adding details that tell more about his idea. Which revision does that best?",
       choices: [
-        { text: "The tiny kitten purred softly in my lap.", correct: true },
-        { text: "The little cat was nice and sat in my lap." },
-        { text: "The kitten did something cute in my lap today." },
-        { text: "A good pet sat on me for a long, long time." }
+        { text: "We went to the sandy beach early and splashed happily in the cool waves.", correct: true },
+        { text: "We went to the beach, and the beach was really nice and fun." },
+        { text: "We went to the beach on a day, and then we went back home." },
+        { text: "We went to the beach with some stuff, and it was a good time." }
       ],
-      clue: "Look for describing words that help you picture exactly what happened. Plain words like nice and good do not help much.",
-      why: "The answer is \"The tiny kitten purred softly in my lap.\" Tiny tells what the kitten looked like, and softly tells how it purred. The other sentences mix in plain words like nice, something, cute and good, so you cannot picture exactly what happened." },
+      clue: "Elaborate means to tell more. Which revision adds new details that help you picture the trip?",
+      why: "The answer is \"We went to the sandy beach early and splashed happily in the cool waves.\" It adds details that tell more: sandy tells what kind of beach, early tells when, happily tells how they splashed, and cool tells what the waves were like. The other revisions add plain words like nice, fun, stuff and good, or add words that tell nothing new, so the reader still cannot picture the trip." },
     { id: "SK-GC2d-P5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Sam wrote, \"We ate good pancakes.\" Choose the TWO words that could replace good to tell exactly what the pancakes were like.",
       choices: [
@@ -721,10 +816,10 @@ PP.addLesson({
       ],
       clue: "Read both sentences. How much time passed before the truck left? What does that tell you about how the firefighters climbed on?",
       why: "The answer is quickly. The truck left in less than a minute, so the firefighters must have climbed on quickly. Proudly and quietly do not explain how they got going so soon, and slowly means the opposite." },
-    { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 3, passages: [],
+    { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 2, passages: [],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: "Lily wrote: \"My grandma has a nice garden.\"",
-      partA: { prompt: "Which revision makes Lily's sentence more exact?",
+      partA: { prompt: "Which revision best elaborates on Lily's idea by adding details?",
         choices: [
           { text: "My grandma has a sunny garden full of tall sunflowers.", correct: true },
           { text: "My grandma has a really, really nice garden." },
@@ -733,13 +828,13 @@ PP.addLesson({
         ] },
       partB: { prompt: "Why is that revision better?",
         choices: [
-          { text: "It uses exact words that help the reader picture the garden.", correct: true },
+          { text: "It adds exact details that help the reader picture the garden.", correct: true },
           { text: "It repeats a word to show how much Lily likes the garden." },
           { text: "It uses plain words, like nice and good, that anyone knows." },
           { text: "It makes the sentence shorter so it is easier to read." }
         ] },
       clue: "Read each revision and try to picture the garden. Which one lets you see it?",
-      why: "Part A: \"My grandma has a sunny garden full of tall sunflowers.\" Part B: It uses exact words that help the reader picture the garden. Sunny and tall are exact adjectives. The other revisions still use plain words like nice, good and fun, so you cannot picture the garden." },
+      why: "Part A: \"My grandma has a sunny garden full of tall sunflowers.\" Part B: It adds exact details that help the reader picture the garden. Sunny and tall are exact adjectives, and full of tall sunflowers adds a detail about what grows there. The other revisions still use plain words like nice, good and fun, so you cannot picture the garden." },
     { id: "SK-GC2d-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each sentence to the describing word that fits it best.",
       cols: ["sharp", "crunchy", "gently", "loudly"],

@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
+  const SCREENS = ["choose", "path", "home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -23,7 +23,9 @@
 
   function show(name) {
     current = name;
+    document.querySelectorAll("[data-go=home]").forEach(b => { b.textContent = name === "player" || name === "write" ? "Home" : window.PP_PATH.mode() === "path" ? "← Learning path" : "← All skills"; });
     SCREENS.forEach(n => { el("screen-" + n).hidden = n !== name; });
+    el("home-notfound").hidden = true;
     window.scrollTo(0, 0);
   }
 
@@ -31,11 +33,41 @@
      Back button and a reload both land in the right place ---------- */
   let routing = false;
   let pendingStep = null;
+  let pendingReturn = null;   /* set when an in-page Back steps back through history (D4) */
   let replaceNext = false;
-  function setHash(hash, replace) {
-    if (routing || replaceNext || replace) { replaceNext = false; history.replaceState(null, "", location.pathname + location.search + hash); return; }
-    if (location.hash === hash || (!location.hash && !hash)) return;
-    history.pushState(null, "", location.pathname + location.search + hash);
+  /* Every pushed entry remembers the address it was opened from (state.ppFrom),
+     so an in-page Back can step back to that entry instead of adding a copy.
+     A replace keeps ppFrom (the entry before it has not changed); `state`
+     overrides that. Routing keeps the entry's state as it is. */
+  function setHash(hash, replace, state) {
+    window.PP_PATH.track(hash);
+    const url = location.pathname + location.search + hash;
+    if (routing) { replaceNext = false; history.replaceState(history.state, "", url); return false; }
+    if (replaceNext || replace) {
+      replaceNext = false;
+      const keep = state !== undefined ? state : (history.state && typeof history.state.ppFrom === "string" ? { ppFrom: history.state.ppFrom } : null);
+      history.replaceState(keep, "", url);
+      return false;
+    }
+    if (location.hash === hash || (!location.hash && !hash)) return false;
+    history.pushState({ ppFrom: location.hash }, "", url);
+    return true;
+  }
+  /* PP-003 D4: when the entry just before this one is `hash`, go back to it
+     (one entry, no duplicate) instead of replacing this one with a copy. */
+  function stepBackTo(hash, r) {
+    const s = history.state;
+    if (!s || typeof s.ppFrom !== "string" || s.ppFrom !== hash) return false;
+    pendingReturn = r || { kind: "focus" };
+    history.back();
+    return true;
+  }
+  /* PP-003 D5: a finished practice or test marks its own history entry, so
+     Forward or a reload shows "you finished this" instead of restarting it.
+     Only the history entry changes; stored progress is not touched. */
+  function markDone(info) {
+    if (!/^#play\//.test(location.hash)) return;
+    history.replaceState(Object.assign({}, history.state, { ppDone: info }), "", location.href);
   }
   /* A test in progress is never thrown away without asking. */
   function canLeave() {
@@ -47,14 +79,24 @@
   }
   function goHome() {
     if (!canLeave()) return;
-    /* leaving an activity replaces its history entry, so the phone's Back
-       button does not reopen the activity the child just left */
+    if (window.PP_PATH.mode() === "path") { window.PP_PATH.open(); return; }
+    /* leaving an activity: if it was opened from Home, step back to that entry */
+    if ((current === "player" || current === "write") && stepBackTo("", { kind: "home", row: true })) return;
+    /* otherwise replace its history entry, so the phone's Back button does not
+       reopen the activity the child just left */
     if (current === "player" || current === "write") replaceNext = true;
     setHash("");
+    landHome(true, true);
+  }
+  function landHome(toRow, focus, browse) {
+    if (!browse && window.PP_PATH.mode() === "path") { window.PP_PATH.open(); return; }
+    if (!browse && !window.PP_PATH.mode()) { window.PP_PATH.showChoice(); return; }
+    el("skill-back").textContent = "← All skills";
     window.PP_SKILLS.buildList();
     show("home");
+    if (!focus) return;
     /* coming back from a skill: land on that skill's row, not the top of a long list */
-    const last = window.PP_SKILLS.lastCode();
+    const last = toRow && window.PP_SKILLS.lastCode();
     const row = last && document.querySelector('#skill-list [data-code="' + CSS.escape(last) + '"]');
     if (row) { row.focus(); row.scrollIntoView({ block: "center" }); }
     else el("home-title").focus();
@@ -71,6 +113,7 @@
   const openHabits = () => openSimple("habits", "#habits", window.PP_SKILLS.buildHabits, "habits-title");
   function openMixed() {
     if (!canLeave()) return;
+    if (current === "section" && stepBackTo("#mixed")) return;
     if (current === "section") replaceNext = true;
     setHash("#mixed");
     show("mixed");
@@ -92,19 +135,16 @@
       li.appendChild(make("p", "section-line", sec.line));
       const sets = PP.sets.filter(s => s.section === sec.key);
       const tasks = sec.key === "writing" ? PP.tasks : [];
-      if (sets.length || tasks.length) {
-        const bits = [];
-        if (tasks.length) bits.push(tasks.length + " writing task" + (tasks.length > 1 ? "s" : ""));
-        if (sets.length) bits.push(sets.length + " practice set" + (sets.length > 1 ? "s" : ""));
-        li.appendChild(make("p", "section-count", bits.join(" · ")));
-        const b = make("button", "btn btn-primary btn-block", "Open " + sec.name);
-        b.type = "button"; b.dataset.section = sec.key;
-        b.addEventListener("click", () => openSection(sec.key));
-        li.appendChild(b);
-      } else {
-        li.classList.add("is-soon");
-        li.appendChild(make("p", "soon-label", sec.soon || "Coming soon"));
-      }
+      /* a section with nothing in it is not shown (no "Coming soon" cards) */
+      if (!sets.length && !tasks.length) return;
+      const bits = [];
+      if (tasks.length) bits.push(tasks.length + " writing task" + (tasks.length > 1 ? "s" : ""));
+      if (sets.length) bits.push(sets.length + " practice set" + (sets.length > 1 ? "s" : ""));
+      li.appendChild(make("p", "section-count", bits.join(" · ")));
+      const b = make("button", "btn btn-primary btn-block", "Open " + sec.name);
+      b.type = "button"; b.dataset.section = sec.key;
+      b.addEventListener("click", () => openSection(sec.key));
+      li.appendChild(b);
       grid.appendChild(li);
     });
     window.PP_SKILLS.buildList();
@@ -163,9 +203,6 @@
       li.appendChild(acts);
       grid.appendChild(li);
     });
-    const soon = el("section-soon");
-    soon.hidden = !!(sets.length || tasks.length);
-    if (!sets.length && !tasks.length) soon.textContent = (sec.soon || "Coming soon") + ". This section is being written and checked.";
     show("section");
     el("section-title").focus();
   }
@@ -189,26 +226,56 @@
     });
   }
 
+  const TITLE = { choose: "choose-title", path: "path-title", home: "home-title", mixed: "mixed-title", clues: "clues-title", habits: "habits-title", section: "section-title",
+                  parents: "parents-title", skill: "sk-title", player: "player-title", write: "write-title" };
   function route() {
     routing = true;
+    const ret = pendingReturn; pendingReturn = null;
     try {
       const h = location.hash.replace("#", "");
       const parts = h.split("/");
-      if (parts[0] === "play" && PP.byId[parts[1]]) { window.PP_PLAYER.start(parts[1], parts[2] === "test" ? "test" : parts[2] === "try" ? "try" : "practice"); return; }
+      if (parts[0] === "play" && PP.byId[parts[1]]) {
+        const mode = parts[2] === "test" ? "test" : parts[2] === "try" ? "try" : "practice";
+        const done = history.state && history.state.ppDone;
+        if (done && done.set === parts[1]) { window.PP_PLAYER.finished(parts[1], mode, done); return; }
+        window.PP_PLAYER.start(parts[1], mode); return;
+      }
+      if (h === "choose") { window.PP_PATH.showChoice(); return; }
+      if (h === "path") { window.PP_PATH.open(); return; }
+      if (h === "browse") { landHome(false, true, true); return; }
       if (h === "clues") { window.PP_SKILLS.buildClues(); show("clues"); return; }
       if (h === "habits") { window.PP_SKILLS.buildHabits(); show("habits"); return; }
       if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
-      if (parts[0] === "parents") { window.PP_PARENTS.open(parts[1]); return; }
+      if (parts[0] === "parents") {
+        if (ret && ret.kind === "parents") window.PP_PARENTS.open(ret.tab, ret.state);
+        else window.PP_PARENTS.open(parts[1]);
+        return;
+      }
       if (parts[0] === "skill") {
         let st = pendingStep || parts[2]; pendingStep = null;
         const ps = window.PP_PLAYER.state();
-        if (current === "player" && ps.setId === "SK:" + decodeURIComponent(parts[1] || "") + ":t") st = "test";
-        if (window.PP_SKILLS.open(decodeURIComponent(parts[1] || ""), st)) return;
+        let code = ""; try { code = decodeURIComponent(parts[1] || ""); } catch (e) { code = ""; }
+        if (current === "player" && (ps.setId === "SK:" + code + ":t" || ps.setId === "SK:" + code + ":tB")) st = "test";   /* PP-004: either check form */
+        if (code && window.PP_SKILLS.open(code, st)) return;
       }
       if (h === "mixed") { show("mixed"); return; }
       if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
-      show("home");
-    } finally { routing = false; }
+      landHome(!!(ret && ret.row), !!ret, !!h);
+      /* PP-003 D16: an address that is not a page shows Home, says so, and drops the bad address */
+      if (h) {
+        history.replaceState(null, "", location.pathname + location.search);
+        lastHash = "";
+        if (h !== "main") {
+          /* PP-003 RD-11: focus the note, so it is read out and keyboard users start from it */
+          const nf = el("home-notfound");
+          nf.hidden = false; nf.tabIndex = -1; nf.focus();
+        }
+      }
+    } finally {
+      routing = false;
+      /* an in-page Back that stepped back through history: put focus on the page title */
+      if (ret && current !== "home" && current !== "skill" && current !== "parents" && TITLE[current]) el(TITLE[current]).focus();
+    }
   }
 
   /* Browser or phone Back: confirm before leaving a test in progress. */
@@ -230,11 +297,14 @@
     window.PP_WRITING.init();
     document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.go;
+      if (g === "choose") { window.PP_PATH.choose(); return; }
+      if (g === "path") { window.PP_PATH.open(); return; }
       if (g === "home") goHome();
       else if (g === "mixed") openMixed();
       else if (g === "parents") { if (canLeave()) window.PP_PARENTS.open(); }
     }));
     window.PP_SKILLS.init();
+    window.PP_PATH.init();
     el("hero-mixed").addEventListener("click", openMixed);
     el("hero-clues").addEventListener("click", openClues);
     el("hero-habits").addEventListener("click", openHabits);
@@ -242,6 +312,13 @@
     el("hero-parents").addEventListener("click", () => window.PP_PARENTS.open());
     el("player-back").addEventListener("click", back);
     el("write-back") && el("write-back").addEventListener("click", back);
+    /* PP-003 D9: the skip link moves focus to the visible screen's heading.
+       It must not change the address: "#main" is not a page. */
+    document.querySelector(".skip").addEventListener("click", e => {
+      e.preventDefault();
+      const h = document.querySelector(".screen:not([hidden]) h1");
+      if (h) h.focus();
+    });
     document.addEventListener("keydown", e => {
       if (e.key !== "Escape") return;
       const t = e.target;
@@ -254,46 +331,52 @@
     window.addEventListener("beforeunload", e => {
       if (current === "player" && window.PP_PLAYER.inProgress()) { e.preventDefault(); e.returnValue = ""; }
     });
-    loadSets().then(() => { buildHome(); route(); lastHash = location.hash; });
+    loadSets().then(() => { buildHome(); el("choose-path").disabled = false; el("choose-browse").disabled = false; route(); booted = true; lastHash = location.hash; });
   }
 
   /* The activity's Back button returns to wherever it was opened from:
      the section list, or the parent guide. */
   let returnTo = null;
+  let booted = false;   /* false during the first route after a load: nothing was on screen before it */
   function rememberReturn() {
-    returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot() } :
-               current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), pushed: true } :
-               current === "section" ? { kind: "section", key: sectionKey } :
-               current === "home" || current === "clues" || current === "habits" ? { kind: current } : returnTo;
+    if (!booted) { returnTo = null; return; }
+    /* the address being left: during routing (Forward, reload) that is the entry before this one */
+    const hash = routing ? lastHash : location.hash;
+    returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot(), hash } :
+               current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), hash } :
+               current === "section" ? { kind: "section", key: sectionKey, hash } :
+               current === "home" || current === "clues" || current === "habits" || current === "path" ? { kind: current, hash } : returnTo;
   }
   function back() {
     if (!canLeave()) return;
     if (current === "player") window.PP_PLAYER.abandon();
-    replaceNext = true;
     const r = returnTo;
+    const ps = window.PP_PLAYER.state();
+    /* after a skill test, show the Test step with the result */
+    const skillStep = r && r.kind === "skill" ? (current === "player" && (ps.setId === "SK:" + r.code + ":t" || ps.setId === "SK:" + r.code + ":tB") ? "test" : r.step) : null;
+    /* PP-003 D4: the page it was opened from is the entry just before this one:
+       go back to it, so the phone's Back button does not land on the same page twice */
+    if (r && typeof r.hash === "string" && stepBackTo(r.hash, r)) { if (skillStep) pendingStep = skillStep; return; }
+    /* opened from an address or reloaded: the entry before this one is still where it was opened from */
+    if (!r && history.state && typeof history.state.ppFrom === "string" && stepBackTo(history.state.ppFrom)) return;
+    replaceNext = true;
+    if (r && r.kind === "path") { window.PP_PATH.open(); return; }
     if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
-    if (r && r.kind === "home") { replaceNext = true; setHash(""); window.PP_SKILLS.buildList(); show("home"); el("home-title").focus(); return; }
+    if (r && r.kind === "home") { setHash(""); landHome(false, true); return; }
     if (r && r.kind === "clues") { window.PP_SKILLS.buildClues(); setHash("#clues"); show("clues"); el("clues-title").focus(); return; }
     if (r && r.kind === "habits") { window.PP_SKILLS.buildHabits(); setHash("#habits"); show("habits"); el("habits-title").focus(); return; }
-    if (r && r.kind === "skill") {
-      /* after a skill test, show the Test step with the result */
-      const ps = window.PP_PLAYER.state();
-      const st = current === "player" && ps.setId === "SK:" + r.code + ":t" ? "test" : r.step;
-      if (r.pushed && current === "player") {
-        /* the skill page is the entry just before the player: go back to it
-           so the phone's Back button does not land on the same page twice */
-        replaceNext = false; r.pushed = false; pendingStep = st;
-        history.back(); return;
-      }
-      window.PP_SKILLS.open(r.code, st); return;
+    if (r && r.kind === "skill") { window.PP_SKILLS.open(r.code, skillStep); return; }
+    if (current === "player" && ps.section === "skill") {
+      /* opened straight from an address (no page to return to): the skill's matching step */
+      const set = PP.byId[ps.setId];
+      window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", t: "test", tB: "test" })[set.part]); return;
     }
-    if (current === "player" && window.PP_PLAYER.state().section === "skill") { window.PP_SKILLS.open(PP.byId[window.PP_PLAYER.state().setId].code); return; }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));
     openSection(key);
   }
   function track() { lastHash = location.hash; }
 
-  window.PP_APP = { show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, current: () => current };
+  window.PP_APP = { landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();

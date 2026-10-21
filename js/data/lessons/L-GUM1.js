@@ -7,7 +7,7 @@ PP.addLesson({
   teach: {
     big: "A complete sentence has a part that tells who or what, and a verb, so it makes a whole thought.",
     points: [
-      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they.",
+      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. In a command like Close the door, the who is you, even though it is not written.",
       "Every sentence has a verb. Most verbs tell an action, like splashed or runs. Some verbs, like is and was, tell what someone or something is like.",
       "If a group of words has nothing that tells who or what, or has no verb, the thought is not complete. Add the missing part."
     ],
@@ -46,6 +46,14 @@ PP.addLesson({
     }
   ],
   parent: "This skill is about speaking in complete thoughts, so practice it out loud. When your child answers with a few words, like \"the park,\" ask them to say it again as a whole sentence, such as \"We went to the park.\"",
+  speak: {
+    intro: "Grown-up: during a short talk (at dinner or in the car), ask a few everyday questions out loud, like \"What did you do at recess?\" or \"What should we make for lunch?\" Listen to each answer. If it is only a few words, like \"the swings,\" ask your child to say it again as a whole sentence. Tick each line that is true.",
+    items: [
+      "Answered at least 3 questions in complete spoken sentences, each with a who or what and a verb (for example, \"I played on the swings.\").",
+      "When asked to say a short answer again as a whole sentence, did it without help.",
+      "Gave a spoken command (like \"Please pass the bread.\") and could tell you that the who in a command is you."
+    ]
+  },
   passages: [],
   practice: [
     { id: "SK-GUM1-1-P1", type: "mc", points: 1, dok: 1, passages: [],
@@ -199,6 +207,14 @@ PP.addLesson({
     }
   ],
   parent: "This skill is about speaking, so practice it out loud. Count things around the house together (\"one spoon, four spoons\"), and when your child says \"three cup,\" repeat it back the right way (\"three cups\") and have them say it too.",
+  speak: {
+    intro: "Grown-up: gather a few small things, like spoons, socks, coins or blocks. Hold up one, then a group, and ask \"What do you see?\" or \"How many are there?\" Your child answers out loud in a sentence. Use nouns that add -s or -es here; plurals like mice and feet have their own skill. Tick each line that is true.",
+    items: [
+      "Said the one form correctly for a single thing at least 3 times (for example, \"I see one spoon.\").",
+      "Said the more-than-one form correctly for a group at least 3 times, with the -s or -es sound you can hear (for example, \"I see four spoons.\").",
+      "When you repeated a mix-up back the right way (\"three cups\"), said it the right way too."
+    ]
+  },
   passages: [],
   practice: [
     { id: "SK-GUM1-2-P1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -354,6 +370,14 @@ PP.addLesson({
     }
   ],
   parent: "This skill is about asking questions out loud. Play a quick game: you say an answer (\"At the grocery store\") and your child asks a question that fits it (\"Where did you buy the milk?\"). Try to use all six question words.",
+  speak: {
+    intro: "Grown-up: say an answer out loud, like \"At the grocery store,\" \"After dinner\" or \"Because it was raining.\" Your child asks a spoken question that fits it. Mix up the kinds of answers: a person, a thing, a place, a time, a reason and a way. Tick each line that is true.",
+    items: [
+      "Asked a spoken question that fit the answer, with the right question word, at least 5 times.",
+      "Used at least 4 different question words (who, what, where, when, why, how).",
+      "Asked whole questions, not just one word (for example, \"Where did you buy the milk?\", not just \"Where?\")."
+    ]
+  },
   passages: [],
   practice: [
     { id: "SK-GUM1-3-P1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -705,10 +729,10 @@ PP.addLesson({
   test: [
     { id: "SK-GUM1-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "My aunt keeps four {0} on her porch.",
-      slots: [ { options: ["benches", "benchs", "bench"], answer: 0 } ],
-      clue: "Four means more than one. Look at the last two letters of bench.",
-      why: "The answer is benches. Bench ends in ch, so it adds -es." },
+      text: "Dad fixed two {0} that had stopped ticking.",
+      slots: [ { options: ["watches", "watchs", "watch"], answer: 0 } ],
+      clue: "Two means more than one. Look at the last two letters of watch.",
+      why: "The answer is watches. Watch ends in ch, so it adds -es. Say it: watch-es. You hear the extra beat. Watchs is missing the e, and watch names only one." },
     { id: "SK-GUM1-5-T2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word correctly names more than one brush?",
       choices: [

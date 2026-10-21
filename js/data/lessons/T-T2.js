@@ -23,19 +23,28 @@ PP.addLesson({
       "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
       "Key details are facts that explain or prove the main idea. Clue words like for example, such as, also, in addition, has and looks like often point to a detail. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
-      "Check your main idea. It should fit the whole text, not just one paragraph."
+      "Check your main idea. It should fit the whole text, not just one paragraph.",
+      "Authors also design an article to help you find and understand the facts. A heading names a section. A text box sets apart an extra fact. A photo or drawing has a caption that tells what it shows. A diagram uses labels to name the parts. Ask, \"What does this part of the page help me understand?\""
     ],
     words: [
       { term: "topic", means: "what a text is about, in a word or two" },
       { term: "main idea", means: "the most important point the author makes about the topic" },
-      { term: "key detail", means: "a fact that helps prove or explain the main idea" }
+      { term: "key detail", means: "a fact that helps prove or explain the main idea" },
+      { term: "diagram", means: "a drawing with labels that name its parts" }
     ],
-    example: {
-      label: "Example",
-      lines: ["A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes. A camel can also go a long time without drinking water."],
-      note: "Topic: camels. Main idea: a camel's body helps it live in the desert. Key details: wide feet for soft sand, long eyelashes against blowing sand, and going a long time without water. Each detail shows one way the body helps."
-    },
-    tip: "On the test, a main idea question may ask what a text is \"mostly about.\" A second part may ask which detail supports it. Pick a detail that proves the main idea, not just any true fact from the text."
+    examples: [
+      {
+        label: "Example: main idea and key details",
+        lines: ["A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes. A camel can also go a long time without drinking water."],
+        note: "Topic: camels. Main idea: a camel's body helps it live in the desert. Key details: wide feet for soft sand, long eyelashes against blowing sand, and going a long time without water. Each detail shows one way the body helps."
+      },
+      {
+        label: "Example: a detail that is not a key detail",
+        lines: ["Earthworms help gardens grow. As they tunnel through the dirt, they make spaces where air and water can reach plant roots. Worms also eat bits of dead leaves. What they leave behind makes the soil richer. Earthworms do not have any eyes."],
+        note: "Main idea: earthworms help gardens grow. Tunnels for air and water and richer soil are key details, because they show how worms help. Having no eyes is a fun fact, but it does not show how worms help a garden, so it is not a key detail."
+      }
+    ],
+    tip: "On the test, a main idea question may ask what a text is \"mostly about.\" A second part may ask which detail supports it. Pick a detail that proves the main idea, not just any true fact from the text. You may also be asked how a heading, caption or diagram helps the reader."
   },
   learn: [
     {
@@ -49,14 +58,16 @@ PP.addLesson({
       answer: "The main idea is that penguins are excellent swimmers. Two key details are that their flipper wings push them through the water and their smooth bodies slide easily."
     },
     {
-      show: ["Earthworms help gardens grow. As they tunnel through the dirt, they make spaces where air and water can reach plant roots. Worms also eat bits of dead leaves. What they leave behind makes the soil richer. Earthworms do not have any eyes."],
-      ask: "Which detail is NOT a key detail for the main idea?",
+      show: ["Heading: Built for the Desert", "A camel's body is built for life in the desert. Its wide, flat feet help it walk on soft sand without sinking. Long eyelashes help keep blowing sand out of its eyes.", "Text box: Did You Know? A camel's hump stores fat, not water. Its body can use the fat when food is hard to find."],
+      figure: { src: "assets/figures/tt2a-camel.svg", label: "Figure 1", caption: "Body parts that help a camel live in the desert",
+        alt: "Diagram of a camel standing on sand. Labels point to its hump, its long eyelashes, and its wide, flat feet." },
+      ask: "How do the heading, the diagram and the text box help the reader?",
       steps: [
-        "Find the main idea. The first sentence says earthworms help gardens grow.",
-        "Test each detail. Ask, \"Does this show how worms help gardens?\"",
-        "Tunnels let in air and water, so yes. Richer soil, yes. Having no eyes is interesting, but it does not show how worms help a garden."
+        "Read the heading. It names what the section is about: how a camel is built for the desert.",
+        "Read the caption under Figure 1. It tells what the whole diagram shows. Then follow each label's line. The feet and eyelashes labels point to the same key details the paragraph tells about, so now I can see them.",
+        "Read the text box. It sets apart an extra fact about the hump. It is interesting, but the paragraph does not need it to make its point."
       ],
-      answer: "\"Earthworms do not have any eyes\" is not a key detail. It is a fun fact, but it does not show how worms help gardens grow."
+      answer: "The heading names the section. The caption tells what the diagram shows, and its labels let me see the key details from the paragraph. The text box adds an extra fact."
     },
     {
       show: ["A spider makes silk inside its body. Some spiders spin sticky webs to catch insects. Others use silk to wrap up their eggs and keep them safe. Baby spiders may even let out a long silk thread and float away on the wind."],
@@ -79,6 +90,10 @@ PP.addLesson({
         ["Older workers fly outside to look for flowers.", "The workers gather a sweet liquid called nectar and a yellow powder called pollen.", "Back at the hive, the bees turn the nectar into honey.", "They store the honey in the wax cells so the hive has food in winter.", "A honeybee has five eyes."],
         ["Some workers guard the door of the hive.", "They keep out bees from other hives.", "On hot days, other workers stand near the door and fan their wings to cool the hive down."],
         ["No bee could keep a hive going alone.", "Together, the queen and the workers make the hive a busy, healthy home."]
+      ],
+      figures: [
+        { after: 4, src: "assets/figures/tt2a-honeycomb.svg", label: "Figure 1", caption: "Wax cells in a honeycomb",
+          alt: "Diagram of wax cells in a honeycomb. Each cell has six sides. Labels point to a cell with an egg, a cell full of honey and a cell with pollen." }
       ] },
     { id: "p2", title: "The Armored Digger", genre: "Informational text",
       paragraphs: [
@@ -88,6 +103,24 @@ PP.addLesson({
         ["When an armadillo is scared, it may jump straight up into the air.", "This can surprise an enemy and give the armadillo time to run away.", "It hurries to its burrow, a hole it has dug in the ground."],
         ["A mother armadillo usually has four babies at a time.", "All four babies look exactly alike."],
         ["Strong claws, a good nose, and a tough shell all help the armadillo find food and stay safe."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/tt2a-armadillo.svg", label: "Figure 1", caption: "The parts of an armadillo",
+          alt: "Diagram of an armadillo seen from the side. Labels point to its long nose, its sharp claws, the bony plates of its shell, and the bands across the middle of its shell. The bands label says: bands that let the shell bend." }
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Inside a Tree Trunk", genre: "Informational text",
+      paragraphs: [
+        ["A tree trunk may look like one solid piece of wood.", "But if you could look inside, you would find several layers.", "Each layer has its own job, and together the layers keep the tree alive and growing."],
+        ["The outside layer is the bark.", "Bark is rough and tough, like a suit of armor.", "It keeps out insects and germs that could make the tree sick.", "It also keeps the wood inside from drying out."],
+        ["Just under the bark is a thin layer called the inner bark.", "A tree's leaves use sunlight to make food.", "The inner bark carries this food from the leaves down to the trunk and the roots."],
+        ["The next layer is the sapwood.", "It is full of tiny tubes, like a bundle of drinking straws.", "These tubes carry water from the roots all the way up to the leaves."],
+        ["The heartwood is in the very center of the trunk.", "It is old sapwood that no longer carries water.", "Heartwood is hard and strong.", "It works like a backbone to help hold the tree up.", "Some trees grow so old that their trunks are wider than a car."],
+        ["A tree needs every one of its layers.", "Working together, they help the tree stay healthy and grow a little bigger each year."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tt2a-b-tree-trunk.svg", label: "Figure 1", caption: "A slice of a tree trunk",
+          alt: "Diagram of a slice cut across a tree trunk. Labels name the layers from the outside in: bark, inner bark, sapwood, and heartwood in the center. Thin rings circle the center. A note says: Each ring = 1 year. Count the rings to find the tree's age." }
       ] }
   ],
   practice: [
@@ -100,7 +133,7 @@ PP.addLesson({
         { text: "Some worker bees guard the hive from bees of other hives." }
       ],
       clue: "The main idea fits the whole article, not just one paragraph. Read the first and last paragraphs, then ask which choice covers every part.",
-      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraph 1 says this, paragraphs 2 to 5 each tell about a different job, and paragraph 6 says it again. The other choices are true, but each one is a detail from only one paragraph." },
+      why: "The answer is \"Honeybees in a hive each have a job, and they work together.\" Paragraphs 2 to 5 each tell about a different job, and the first and last paragraphs tie the jobs together. The other choices are true, but each one is a detail from only one paragraph." },
     { id: "SK-TT2a-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the sentence that best states the main idea of the whole article.",
       targets: ["p1:1:1", "p1:1:2", "p1:1:3", "p1:2:1", "p1:3:1"],
@@ -113,11 +146,21 @@ PP.addLesson({
         { text: "Young workers clean the hive and feed the baby bees.", correct: true },
         { text: "Older workers gather nectar and pollen from flowers.", correct: true },
         { text: "The queen is bigger than the other bees in the hive." },
-        { text: "A honeybee has five eyes." },
+        { text: "The queen lays hundreds of eggs in one day." },
         { text: "A hive can be home to thousands of bees." }
       ],
       clue: "The idea is about the jobs of worker bees. Cross out any detail about the queen, or any detail that does not name a job.",
-      why: "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\" Both name jobs that workers do. The queen detail is not about workers. Five eyes and thousands of bees are true, but they are not jobs." },
+      why: "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\" Both name jobs that workers do. The queen details are not about workers, and thousands of bees is not a job." },
+    { id: "SK-TT2a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Look at Figure 1. How does the diagram help the reader understand paragraphs 3 and 4?",
+      choices: [
+        { text: "It shows the six-sided shape of the wax cells that the workers build.", correct: true },
+        { text: "It shows how older worker bees find their way to the flowers." },
+        { text: "It shows how the guard bees keep other bees out of the hive." },
+        { text: "It shows how much bigger the queen is than the worker bees." }
+      ],
+      clue: "Read the caption. Then find the paragraph that talks about the same thing.",
+      why: "The answer is \"It shows the six-sided shape of the wax cells that the workers build.\" Paragraph 3 says young workers build little wax rooms called cells, but the words do not say what the cells look like. Figure 1 lets you see them. The diagram does not show flowers, guards or the queen." },
     { id: "SK-TT2a-P4", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "The main idea is that honeybees each have a job and work together. Decide whether each detail is a key detail or not a key detail.",
       cols: ["Key detail", "Not a key detail"],
@@ -147,7 +190,16 @@ PP.addLesson({
           { text: "\"Every hive has one queen.\"" }
         ] },
       clue: "Read only paragraph 4. Ask what most of its sentences are about. Then find the sentences that prove it.",
-      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 says nothing about needing five eyes, and it says the honey is saved for winter. Young workers are in paragraph 3." }
+      why: "Part A: Older worker bees gather food from flowers and make honey for the hive. Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\" Paragraph 4 does say a honeybee has five eyes, but that one fact is not about gathering food or making honey, so it does not support the main idea. Paragraph 4 also says the honey is saved for winter, not eaten in summer. Young workers are in paragraph 3." },
+    { id: "SK-TT2a-P7", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
+      prompt: "Look at Figure 1 again. Choose the words that best complete the sentences.",
+      text: "The caption tells {0}. The labels tell {1}.",
+      slots: [
+        { options: ["what the whole diagram shows", "who wrote the article", "the main idea of paragraph 2"], answer: 0 },
+        { options: ["how many bees live in one hive", "when the queen lays her eggs", "what is inside some of the cells"], answer: 2 }
+      ],
+      clue: "Read the words under Figure 1. Then read each word that has a line pointing into the picture. Ask what job each kind of words does.",
+      why: "The answers are \"what the whole diagram shows\" and \"what is inside some of the cells.\" The caption, \"Wax cells in a honeycomb,\" names the whole picture. The labels \"cell with an egg,\" \"honey\" and \"pollen\" each point to what is inside some of the cells." },
   ],
   test: [
     { id: "SK-TT2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -204,7 +256,87 @@ PP.addLesson({
       targets: ["p2:1:2", "p2:3:1", "p2:3:2", "p2:3:3", "p2:4:1"],
       answer: ["p2:3:3"], pick: 1,
       clue: "Some sentences only describe the shell. Find the one that tells what the shell does for the armadillo.",
-      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells what the shell does for the armadillo. The other shell sentences only describe what the shell is made of and what it covers. The jump and the size sentences are not about the shell." }
+      why: "The answer is \"It keeps the armadillo safe from thorny bushes and from some animals that want to eat it.\" It tells what the shell does for the armadillo. The other shell sentences only describe what the shell is made of and what it covers. The jump and the size sentences are not about the shell." },
+    { id: "SK-TT2a-T6", type: "mc", points: 1, dok: 2, passages: ["p2"],
+      prompt: "Look at Figure 1. Which fact does the reader learn ONLY from the diagram, not from the paragraphs?",
+      choices: [
+        { text: "Bands across the middle of the shell let it bend.", correct: true },
+        { text: "The shell is made of hard, bony plates." },
+        { text: "The shell covers the top of the head." },
+        { text: "An armadillo has short, strong legs." }
+      ],
+      clue: "Read every label in Figure 1. Then check each choice: can you also find it in the paragraphs?",
+      why: "The answer is \"Bands across the middle of the shell let it bend.\" Only the label in Figure 1 tells what the bands do. The bony plates, the shell on the head and the short, strong legs are all told about in paragraphs 2 and 3." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (8) and DOK mix as form A,
+     on the new passage p3 and figure tt2a-b-tree-trunk.svg. NEEDS INDEPENDENT REVIEW;
+     see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TT2a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence best tells the main idea of \"Inside a Tree Trunk\"?",
+      choices: [
+        { text: "A tree trunk has layers, and each one does a job that helps the tree.", correct: true },
+        { text: "Bark is rough and tough, and it covers the outside of the trunk." },
+        { text: "The inner bark is a thin layer that is just under the bark." },
+        { text: "A tree trunk may look like one solid piece of wood." }
+      ],
+      clue: "The main idea fits the whole article. Read the first and last paragraphs, then ask which choice tells about every layer, not just one.",
+      why: "The answer is \"A tree trunk has layers, and each one does a job that helps the tree.\" Paragraph 1 says each layer has its own job, paragraphs 2 to 5 each tell about one layer, and the last paragraph says the tree needs every layer. The bark and inner bark choices tell about only one layer. The solid piece of wood is only how a trunk looks from the outside; the article goes on to show it is not one solid piece." },
+    { id: "SK-TT2a-TB2", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What is paragraph 5 mostly about?",
+        choices: [
+          { text: "The center of the trunk is strong and gives the tree support.", correct: true },
+          { text: "The wood in the center carries water to the leaves." },
+          { text: "The bark protects the soft wood in the center." },
+          { text: "The wood in the center is the newest wood in the tree." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"It works like a backbone to help hold the tree up.\"", correct: true },
+          { text: "\"It is old sapwood that no longer carries water.\"" },
+          { text: "\"Bark is rough and tough, like a suit of armor.\"" },
+          { text: "\"It keeps out insects and germs that could make the tree sick.\"" }
+        ] },
+      clue: "Read paragraph 5 by itself. Ask what job the center wood does for the tree. Then find the sentence that tells that job.",
+      why: "Part A: The center of the trunk is strong and gives the tree support. Part B: \"It works like a backbone to help hold the tree up.\" A backbone supports a body and holds it up, and the heartwood does the same for a tree. Paragraph 5 says this wood is old, hard and strong, and that it no longer carries water, so the water and newest-wood choices are wrong. The sentence about old sapwood is true, but it tells what the heartwood does not do, not the job it does. The bark sentences are from paragraph 2." },
+    { id: "SK-TT2a-TB3", type: "ms", points: 2, dok: 2, passages: ["p3"], pick: 2,
+      prompt: "Which two details tell how a tree trunk moves food and water through the tree? Choose two answers.",
+      choices: [
+        { text: "The inner bark carries food down from the leaves.", correct: true },
+        { text: "Tiny tubes in the sapwood carry water up from the roots.", correct: true },
+        { text: "The bark keeps insects and germs out of the tree." },
+        { text: "The bark stops the wood inside from drying out." },
+        { text: "The leaves use sunlight to make the tree's food." }
+      ],
+      clue: "The question is about carrying things through the trunk. Cross out details about keeping things out, and details about making food.",
+      why: "The answers are \"The inner bark carries food down from the leaves\" and \"Tiny tubes in the sapwood carry water up from the roots.\" Paragraphs 3 and 4 tell how these layers carry food and water. The two bark details are about protecting the tree. The leaves make the food, but they do not move it through the trunk." },
+    { id: "SK-TT2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "The author wants to add one more key detail to paragraph 2. Which sentence would fit best?",
+      choices: [
+        { text: "Thick bark can help keep a tree safe from a small fire.", correct: true },
+        { text: "Bark can be gray, brown, red or even white." },
+        { text: "Some children like to make crayon rubbings of bark." },
+        { text: "The bark of some trees peels off in thin, papery strips." }
+      ],
+      clue: "Ask what job paragraph 2 says the bark does. Pick the sentence that tells one more part of that same job.",
+      why: "The answer is \"Thick bark can help keep a tree safe from a small fire.\" Paragraph 2 tells how bark protects a tree, like armor, and this sentence gives one more way it protects. The colors of bark, crayon rubbings and peeling strips may be interesting, but none of them tells how bark helps the tree." },
+    { id: "SK-TT2a-TB5", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "One sentence in the article is interesting, but it is NOT a key detail. Choose that sentence.",
+      targets: ["p3:2:4", "p3:3:3", "p3:4:2", "p3:5:3", "p3:5:5"],
+      answer: ["p3:5:5"], pick: 1,
+      clue: "Say the main idea to yourself first. Then test each sentence: does it help prove the main idea?",
+      why: "The answer is \"Some trees grow so old that their trunks are wider than a car.\" It is a fun fact, but it does not tell what any layer does for the tree. The other sentences each help show a layer's job: keeping the wood from drying out, carrying food, carrying water through tiny tubes, or being strong enough to hold the tree up." },
+    { id: "SK-TT2a-TB6", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Look at Figure 1. Which question can a reader answer by using the diagram?",
+      choices: [
+        { text: "How can a person tell how old a tree is?", correct: true },
+        { text: "How does bark keep insects out of a tree?" },
+        { text: "What do a tree's leaves use to make food?" },
+        { text: "Why does old sapwood stop carrying water?" }
+      ],
+      clue: "Read every label and the note in Figure 1. Then check each question: does the diagram give the answer?",
+      why: "The answer is \"How can a person tell how old a tree is?\" The note in Figure 1 says each ring is one year, so you count the rings to find the tree's age. The paragraphs do not tell this. The diagram names the bark but does not show how it keeps insects out. It does not show leaves or sunlight, and it does not tell why old sapwood stops carrying water." }
   ]
 });
 
@@ -287,6 +419,16 @@ PP.addLesson({
         ["High in the sky, the air is cooler.", "When water vapor cools, it turns back into tiny drops of water.", "The drops are so small and light that they float in the air.", "Millions of these drops together make a cloud."],
         ["Inside a cloud, the tiny drops bump into each other and join together.", "Little by little, the drops grow bigger and heavier.", "When they become too heavy to float, they fall to the ground as rain.", "If the air is very cold, the water may fall as snow instead."],
         ["Some of the rain soaks into the ground.", "The rest runs into streams, rivers, lakes, and oceans.", "Then the sun warms the water again, and the trip starts over."]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "Riding for the Mail", genre: "Informational text",
+      paragraphs: [
+        ["In 1860, many families had moved west to California.", "They wanted letters from home, but the mail was slow.", "A letter sent by stagecoach took more than three weeks to get there.", "A letter sent by ship could take months."],
+        ["So a company came up with a faster plan called the Pony Express.", "Riders on quick horses would carry the mail across the West.", "The first riders set out in April 1860.", "They rode from St. Joseph, Missouri, to Sacramento, California."],
+        ["Here is how the mail moved.", "First, the letters were locked in a leather cover that fit over a saddle.", "Next, a rider rode as fast as he could to the next station.", "The stations were about 10 to 15 miles apart.", "A horse gets tired after a hard run like that.", "So at each station, the rider jumped onto a fresh horse.", "He moved the leather cover to the new saddle in about two minutes.", "After 75 to 100 miles, he handed the mail to a new rider, who raced on."],
+        ["Because the riders changed horses so often, the mail never had to slow down.", "As a result, a letter could cross the West in about 10 days."],
+        ["The Pony Express did not last long, though.", "At the same time, workers were putting up a telegraph line across the country.", "A telegraph sends messages through wires in just minutes.", "The line was finished in October 1861.", "People did not need riders to carry their news now, so the Pony Express closed two days later."],
+        ["The Pony Express ran for only about 19 months.", "Still, people today remember the riders who kept the mail moving."]
       ] }
   ],
   practice: [
@@ -413,6 +555,67 @@ PP.addLesson({
       ],
       clue: "Paragraph 2 tells how the trip begins. Read the last sentence of the article. What does it say happens next?",
       why: "The answer is \"It shows the cycle starts over when the sun warms the water again.\" Paragraph 2 says the trip begins when the sun warms the water. The last paragraph brings the water back to that same step, so the trip goes around and around." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same code, points (7) and DOK mix as form A,
+     on the new passage p3 (a series of historical events and the steps of a procedure, where
+     form A used a science process). NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TT2b-TB1", type: "order", points: 2, dok: 2, passages: ["p3"],
+      prompt: "Put the steps for moving the mail in order, from the first step to the last.",
+      steps: [
+        "The letters are locked in a leather cover that fits over a saddle.",
+        "A rider races to the next station.",
+        "The rider moves the leather cover onto a fresh horse.",
+        "The rider hands the mail to a new rider."
+      ],
+      clue: "Paragraph 3 tells the steps. Look for the signal words First and Next, and think about what must happen before the next step can.",
+      why: "The order is: the letters are locked in a leather cover, a rider races to the next station, the rider moves the cover onto a fresh horse, and then the rider hands the mail to a new rider. Paragraph 3 tells these steps in this order. A rider changed horses at many stations, but he handed off the mail only after 75 to 100 miles." },
+    { id: "SK-TT2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why did a Pony Express rider jump onto a fresh horse at each station?",
+      choices: [
+        { text: "A horse got tired after running hard for 10 to 15 miles.", correct: true },
+        { text: "Each station had its own mail that needed a new horse." },
+        { text: "The leather cover could only fit on one kind of saddle." },
+        { text: "The rider had to stop and rest for a day at each station." }
+      ],
+      clue: "Find the sentence about the fresh horse. Then read the sentence right before it. What made the rider need a new horse?",
+      why: "The answer is \"A horse got tired after running hard for 10 to 15 miles.\" Paragraph 3 says the stations were about 10 to 15 miles apart and a horse gets tired after a hard run like that, so the rider jumped onto a fresh horse. The article says the rider moved the cover to the new saddle in about two minutes and kept going, so he did not rest for a day." },
+    { id: "SK-TT2b-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What caused the Pony Express to close?",
+        choices: [
+          { text: "A telegraph line could send news much faster than riders could.", correct: true },
+          { text: "The leather covers were too small to hold many letters." },
+          { text: "Families stopped moving west to live in California." },
+          { text: "The stations were too far apart for the riders to reach." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"A telegraph sends messages through wires in just minutes.\"", correct: true },
+          { text: "\"The first riders set out in April 1860.\"" },
+          { text: "\"The stations were about 10 to 15 miles apart.\"" },
+          { text: "\"They rode from St. Joseph, Missouri, to Sacramento, California.\"" }
+        ] },
+      clue: "Read paragraph 5. Find what workers were putting up at the same time. How long did it take to pass along a message? Then find the sentence that tells that.",
+      why: "Part A: A telegraph line could send news much faster than riders could. Part B: \"A telegraph sends messages through wires in just minutes.\" Riders took about 10 days, but the telegraph took minutes. Once the line was finished, people did not need riders, so the Pony Express closed. The article never says the covers were too small, that families stopped moving west, or that riders could not reach the stations." },
+    { id: "SK-TT2b-TB4", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Use paragraph 4. Choose the word that best completes the sentence.",
+      text: "The riders changed horses at every station, {0} the mail never had to slow down.",
+      slots: [
+        { options: ["so", "but", "until"], answer: 0 }
+      ],
+      clue: "Which part happened first and made the other part happen? Choose the word that comes before an effect.",
+      why: "The answer is \"so.\" Changing horses is the cause, and the mail never slowing down is the effect. So comes right before an effect. But would mean the two ideas do not go together, and until would mean the riders stopped changing horses at some point." },
+    { id: "SK-TT2b-TB5", type: "mc", points: 1, dok: 3, passages: ["p3"],
+      prompt: "Which sentence best explains how the ideas in paragraph 1 and paragraph 4 are connected?",
+      choices: [
+        { text: "Paragraph 1 tells that mail was slow, and paragraph 4 shows how the Pony Express made it faster.", correct: true },
+        { text: "Paragraph 1 tells why the Pony Express closed, and paragraph 4 tells what came after it." },
+        { text: "Paragraph 1 tells about ships, and paragraph 4 tells why ships were faster than horses." },
+        { text: "Paragraph 1 tells about the telegraph, and paragraph 4 tells how the telegraph was built." }
+      ],
+      clue: "Say what paragraph 1 is about in a few words. Then say what paragraph 4 is about. Compare the time a letter took in each one.",
+      why: "The answer is \"Paragraph 1 tells that mail was slow, and paragraph 4 shows how the Pony Express made it faster.\" In paragraph 1, a letter took more than three weeks by stagecoach. In paragraph 4, a letter could cross the West in about 10 days. The closing and the telegraph are in paragraph 5, and the article never says ships were faster than horses." }
   ]
 });
 
@@ -636,7 +839,7 @@ PP.addLesson({
     big: "A good informational piece names the topic at the start, teaches facts in the middle, and wraps up at the end.",
     points: [
       "The introduction tells the reader what the topic is. It can start with something interesting, but it must make the topic clear.",
-      "The middle gives facts, details and definitions. A picture or diagram can also help explain a fact. Every sentence should be about the topic.",
+      "The middle gives facts, details and definitions. A picture or diagram with a caption can also help explain a fact. Choose one that shows the facts in that part of your writing. Every sentence should be about the topic.",
       "A definition tells what a word means, like \"A burrow is a hole an animal digs for its home.\"",
       "If a sentence is about something else, like your own pet or your lunch, it does not belong. Take it out.",
       "The conclusion wraps up. It reminds the reader of the topic or the most important idea. It does not start a new topic."
@@ -704,6 +907,7 @@ PP.addLesson({
       "I named my topic in my first sentence.",
       "I gave at least three true facts or details.",
       "I explained what one word means.",
+      "If a picture would help explain a fact, I drew it and labeled it.",
       "Every sentence is about my topic.",
       "My last sentence wraps up my topic."
     ],
@@ -773,7 +977,17 @@ PP.addLesson({
         { text: "Now you know why peanuts are such a special plant.", answer: 2 }
       ],
       clue: "Ask what job each sentence does. Does it open the topic, teach a fact, or wrap up what the reader learned?",
-      why: "\"Have you ever wondered how peanuts grow? Read on to find out\" opens the topic, so it is the introduction. The sentences about warm weather and sandy soil and about roasting and boiling are facts for the middle. \"Now you know why peanuts are such a special plant\" wraps up, so it is the conclusion." }
+      why: "\"Have you ever wondered how peanuts grow? Read on to find out\" opens the topic, so it is the introduction. The sentences about warm weather and sandy soil and about roasting and boiling are facts for the middle. \"Now you know why peanuts are such a special plant\" wraps up, so it is the conclusion." },
+    { id: "SK-TT2d-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "Rosa wants to add a picture with a caption next to sentences 4 and 5. Which one would best help readers understand those sentences?",
+      choices: [
+        { text: "a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\"", correct: true },
+        { text: "a photo of a jar of peanut butter on a kitchen table, with the caption \"Peanut butter is made from peanuts\"" },
+        { text: "a drawing of a farmer on a tractor in a peanut field, with the caption \"Farmers dig up peanuts in the fall\"" },
+        { text: "a drawing of a bowl of popcorn next to a movie ticket, with the caption \"My favorite movie snack\"" }
+      ],
+      clue: "Reread sentences 4 and 5. What happens there that is hard to picture? Which picture would let the reader see it?",
+      why: "The answer is a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\". Sentences 4 and 5 tell how a peg pushes into the soil and grows a shell under the ground, and the diagram lets readers see that. The peanut butter photo is about peanuts but not about how they grow. The farmer drawing goes with sentence 6, not 4 and 5. The popcorn drawing is not about peanuts at all." }
   ],
   test: [
     { id: "SK-TT2d-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
@@ -823,6 +1037,16 @@ PP.addLesson({
         { text: "My favorite animal at the zoo is the tall giraffe." }
       ],
       clue: "A conclusion wraps up the most important ideas of the whole draft. It does not add one small fact or start a new topic.",
-      why: "The answer is \"Bats are amazing flyers with a special way to find food.\" It reminds the reader of the big ideas: bats fly, and they find food with echoes. The cave and tree sentence is one small fact, the ocean sentence starts a new topic, and the giraffe sentence is off topic." }
+      why: "The answer is \"Bats are amazing flyers with a special way to find food.\" It reminds the reader of the big ideas: bats fly, and they find food with echoes. The cave and tree sentence is one small fact, the ocean sentence starts a new topic, and the giraffe sentence is off topic." },
+    { id: "SK-TT2d-T6", type: "mc", points: 1, dok: 3, passages: ["p2"],
+      prompt: "Kenji can add only ONE more sentence to his draft. Which choice would best develop his topic, and why?",
+      choices: [
+        { text: "Add \"A mammal is an animal that has hair and feeds its babies milk\" after sentence 1, because it tells what a key word means.", correct: true },
+        { text: "Add \"Bats come in many sizes and colors\" after sentence 12, because any new fact about bats makes a draft better." },
+        { text: "Add \"Owls also hunt for food at night\" after sentence 6, because it tells about another animal that is awake at night." },
+        { text: "Add \"I think bats are the best animals ever\" after sentence 3, because a strong feeling makes the reader care." }
+      ],
+      clue: "Check two things in each choice. Does the sentence teach about bats and fit the sentences around it? Is the reason a good reason for adding it?",
+      why: "The answer is to add \"A mammal is an animal that has hair and feeds its babies milk\" after sentence 1, because it tells what a key word means. Sentence 1 uses the word mammals, and the definition helps the reader understand why bats belong with dogs, horses and people. The sizes fact is about bats, but sentences 9 to 12 explain how bats find food, so it does not fit there, and not every fact makes a draft better. The owl sentence is about owls, not bats. The last sentence is an opinion, not a fact." }
   ]
 });

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="t">
+  <title id="t">Diagram of an armadillo with four labels: long nose, sharp claws, bony plates, and bands that let the shell bend</title>
+  <path d="M0 226 H320" stroke="#4A3A22" stroke-width="3"/>
+  <!-- tail -->
+  <path d="M52 186 Q20 200 8 222 Q30 206 60 198 Z" fill="#CDB89A" stroke="#3B2E1E" stroke-width="2.5"/>
+  <!-- legs with claws -->
+  <g fill="#CDB89A" stroke="#3B2E1E" stroke-width="2.5"><path d="M84 190 L80 222 L98 222 L100 192 Z"/><path d="M206 190 L212 222 L230 222 L224 188 Z"/></g>
+  <g stroke="#111" stroke-width="2.5" stroke-linecap="round"><path d="M212 222 l-4 6 M220 222 l-2 7 M228 222 l1 7"/><path d="M80 222 l-4 6 M88 222 l-2 7 M96 222 l1 7"/></g>
+  <!-- shell: front and back plates with bands in the middle -->
+  <path d="M50 196 Q52 108 140 102 Q236 100 244 194 Z" fill="#E7D7BC" stroke="#3B2E1E" stroke-width="3"/>
+  <g fill="none" stroke="#3B2E1E" stroke-width="1.5"><path d="M60 170 l16 -6 M70 150 l14 -2 M88 132 l12 6 M216 140 l12 6 M224 164 l12 -2 M206 124 l10 10"/></g>
+  <g fill="none" stroke="#3B2E1E" stroke-width="3"><path d="M118 104 Q112 150 114 196"/><path d="M130 103 Q126 150 128 196"/><path d="M142 102 Q140 150 142 196"/><path d="M154 102 Q154 150 156 196"/><path d="M166 103 Q168 150 170 196"/><path d="M178 104 Q182 150 184 196"/></g>
+  <!-- head with long nose -->
+  <path d="M236 150 Q262 140 282 162 L314 182 Q310 188 300 187 Q262 184 240 186 Z" fill="#CDB89A" stroke="#3B2E1E" stroke-width="2.5"/>
+  <path d="M240 152 Q258 140 278 158 L270 165 Q256 154 243 160 Z" fill="#E7D7BC" stroke="#3B2E1E" stroke-width="2"/>
+  <path d="M244 146 L248 124 L258 148 Z" fill="#CDB89A" stroke="#3B2E1E" stroke-width="2.5"/>
+  <circle cx="262" cy="166" r="3" fill="#111"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <text x="88" y="26">bands that let</text><text x="88" y="50">the shell bend</text><path d="M150 56 L148 110" stroke="#111" stroke-width="2"/>
+    <text x="6" y="80">bony plates</text><path d="M44 86 L76 130" stroke="#111" stroke-width="2"/>
+    <text x="210" y="96">long nose</text><path d="M290 104 L309 178" stroke="#111" stroke-width="2"/>
+    <text x="184" y="290">sharp claws</text><path d="M232 272 L222 232" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

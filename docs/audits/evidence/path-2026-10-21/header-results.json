@@ -1,0 +1,458 @@
+[
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 320,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 360,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 375,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "browse",
+    "width": 390,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 320,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 360,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 375,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Practice",
+    "pass": true,
+    "tag": {
+      "text": "Practice",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Try it yourself",
+    "pass": true,
+    "tag": {
+      "text": "Try it yourself",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Skill check",
+    "pass": true,
+    "tag": {
+      "text": "Skill check",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Test",
+    "pass": true,
+    "tag": {
+      "text": "Test",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Writing task",
+    "pass": true,
+    "tag": {
+      "text": "Writing task",
+      "cut": false
+    }
+  },
+  {
+    "mode": "path",
+    "width": 390,
+    "screen": "Lesson",
+    "pass": true,
+    "tag": null
+  }
+]

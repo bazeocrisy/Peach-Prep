@@ -65,7 +65,7 @@ PP.addTask({
           "This is most common when kids spend a lot of time sitting."
         ],
         [
-          "Having a good place to play nearby makes kids more likely to be active.",
+          "Kids are often more active when they have a good place to play nearby.",
           "When a town opens a new park, people often use it.",
           "They walk, play, and exercise there."
         ],
@@ -117,7 +117,7 @@ PP.addTask({
     { reason: 1, source: "p2", ref: "p2:1:1", note: "Health experts say children need at least one hour (60 minutes) of activity every day." },
     { reason: 1, source: "p2", ref: "p2:1:2", note: "Activity makes the heart and muscles stronger." },
     { reason: 1, source: "p2", ref: "p2:1:4", note: "Many children do not get that much activity." },
-    { reason: 1, source: "p2", ref: "p2:2:1", note: "Having a good place to play nearby makes kids more likely to be active." },
+    { reason: 1, source: "p2", ref: "p2:2:1", note: "Kids are often more active when they have a good place to play nearby." },
     { reason: 1, source: "p2", ref: "p2:3:2", note: "Riding can be so much fun that it does not feel like exercise." }
   ],
   model: {
@@ -132,6 +132,122 @@ PP.addTask({
       "Evidence and Elaboration (3 of 3): Both provided reasons are developed with information from BOTH sources. Safety: watching for cars in the street, cracks and rocks on sidewalks, a space of their own away from traffic, and helmets, pads and slow practice. Health: the guideline of at least an hour of activity every day, many kids not getting it, and the leg, belly and back muscles that riding works. The writer retells each fact in new words and new sentence patterns instead of copying or swapping a word or two, and names the source behind its facts. The safety claims stay as careful as the sources: the essay says a skate park is a safer place to ride, not a place where no one gets hurt. The writer explains why facts matter: \"so they would not have to dodge cars or bump over cracks\", \"A skate park would give kids room to practice slowly, with no cars rushing by\", \"Riding is a great way to fix that\" and \"Since riding feels like play, kids would want to keep practicing tricks instead of sitting inside.\"",
       "Language Usage and Conventions (2 of 2): The response is long enough to show command. Sentences are complete and varied: simple, compound (joined with but and and) and complex (with because, so and since). Verb tense is controlled: present tense for facts from the sources, would for what the skate park would do, and can in the conclusion for what kids will be able to do. There are no unneeded shifts. Subjects and verbs agree (\"riding in the street means\", \"staying balanced makes\", \"helmets, pads, and slow practice on new tricks help\"). There are no spelling, capitalization or punctuation errors."
     ]
+  },
+  /* PP-004: original example responses below the top score, written and scored by Peach Prep
+     with the official rubric's trait descriptions (GaDOE Grade 3 Eight-Point, Three-Trait Writing
+     Rubric, August 2026). They are NOT GaDOE anchor papers. Mistakes in them are on purpose.
+     The trait patterns differ from W-TASK-01 on purpose, to show that the same total can come
+     from different strengths. */
+  examples: [
+    {
+      total: 2,
+      scores: { purpose: 1, evidence: 0, conventions: 1 },
+      paragraphs: [
+        "I think it should be a skate park. Skate parks are so cool. My cousin has a skateboard, and he can do a kickflip. I want to learn how to do one too.",
+        "A garden is boring. I hope we get a skate park."
+      ],
+      notes: [
+        "Purpose and Organization (1 of 3): The first sentence gives an opinion, but the introduction is weak: it does not name the lot or speak to the town council. The essay jumps from cool parks to a cousin to the garden, so there is little sense of order, and there are almost no linking words. \"I hope we get a skate park\" is a weak concluding statement. This is the rubric's 1.",
+        "Evidence and Elaboration (0 of 3): Neither provided reason (safety, or staying active and healthy) is used, and nothing comes from the sources. The cousin and the kickflip are personal ideas, and \"A garden is boring\" is not a reason the sources support. The rubric's 0 column says the response does not use reasons, relevant information from the sources or elaboration, which fits.",
+        "Language Usage and Conventions (1 of 2): The sentences are complete and mostly correct, and one is joined with and. But the essay is very short and the sentences are almost all simple, so it shows only partial command. The rubric says a very brief response may not be enough to show adequate command, even with few errors."
+      ],
+      next: "Start with evidence: reread the two reasons with your child, then find one fact in the sources for each reason."
+    },
+    {
+      total: 4,
+      scores: { purpose: 1, evidence: 2, conventions: 1 },
+      paragraphs: [
+        "The lot on maple street should be a skate park because it is safer and kids need exercise. In the street you have to watch for cars and sidewalks have cracks and rocks that can make you fall but at a skate park you are away from traffic. The second source says kids need to be active for a hour every day and many kids dont get that much. Pushing a skateboard makes your leg muscles work hard. Also you can wear a helmet and pads to be safer. Kids would be outside moving instead of sitting. So the town should build it."
+      ],
+      notes: [
+        "Purpose and Organization (1 of 3): The first sentence states the opinion and both reasons, which is a good start. But the whole essay is one paragraph, the safety and health ideas are mixed together (the helmet sentence sits in the middle of the health facts), and \"So the town should build it\" is a weak concluding statement. A weak structure and a weak conclusion fit the rubric's 1, even with a clear opinion.",
+        "Evidence and Elaboration (2 of 3): Both reasons are supported with relevant facts from both sources: watching for cars, cracks and rocks, being away from traffic, an hour of activity every day, many kids not getting it, leg muscles, and helmets and pads. They are mostly in the child's own words. It is not a 3 because the facts are listed, with very little explaining; \"Kids would be outside moving instead of sitting\" is the only real elaboration. This is the rubric's 2: relevant information and adequate elaboration.",
+        "Language Usage and Conventions (1 of 2): The second sentence is a long run-on that joins four ideas with and and but and no commas, which makes it hard to follow. There are capital errors (maple street), a missing apostrophe (dont), \"a hour\" instead of \"an hour\", and missing commas after In the street and Also. Verbs mostly agree. These errors sometimes get in the way of meaning, which fits the rubric's 1."
+      ],
+      next: "Work on organization: split the essay into an introduction, a safety paragraph, a health paragraph and an ending, and break the long sentence into shorter ones."
+    },
+    {
+      total: 6,
+      scores: { purpose: 3, evidence: 2, conventions: 1 },
+      paragraphs: [
+        "Imagine kids riding ramps instead of dodging cars. Town council members, I believe the empty lot on Maple Street should become a skate park, not a garden. A skate park would give kids a safer place to ride, and it would help them stay active and healthy.",
+        "To begin with, a skate park would be safer than the street. The first source says that kids who ride in the street always have to look out for cars. Sidewalks has cracks and bumps that makes riders fall. At a skate park kids was away from traffic. The second source says a helmet and pads help riders stay safer too.",
+        "Another reason is that kids need to stay active. The second source says kids need an hour of exercise every day but alot of kids dont get that. Riding works your legs and your belly muscles. Riding is fun so kids will want to keep doing it and they will be healthy.",
+        "For these reasons, please vote for the skate park. It would keep kids safer and moving, and it would give them a fun place to be together."
+      ],
+      notes: [
+        "Purpose and Organization (3 of 3): The introduction pulls the reader in, speaks to the town council, states the opinion clearly and previews both reasons. Each reason has its own paragraph, in order. Transitions (To begin with, Another reason, For these reasons) and conjunctions (and, but, so) connect the reasons to the opinion. The conclusion sums up both reasons and asks the council to act. This matches the rubric's 3.",
+        "Evidence and Elaboration (2 of 3): Both reasons are supported with relevant facts from both sources: cars in the street, cracks and bumps, being away from traffic, a helmet and pads, an hour of activity a day, many kids not getting it, and the leg and belly muscles riding works. It is not a 3 because there is little explaining: most facts are listed one after another, and the health paragraph has only one short explanation (\"Riding is fun so kids will want to keep doing it\"). One sentence (\"kids who ride in the street always have to look out for cars\") stays very close to the source's wording; a stronger essay would say it in the child's own words.",
+        "Language Usage and Conventions (1 of 2): There is good sentence variety, but there are several subject-verb errors (\"Sidewalks has\", \"bumps that makes\", \"kids was\"), a tense shift from would to was and then to will, and other errors (alot, dont, missing commas). Several of these make the reader stop and reread. This fits the rubric's 1: some correct verb tense and agreement, with errors that sometimes interfere. Strong organization does not raise this trait; each trait is scored on its own."
+      ],
+      next: "Work on conventions: read the essay aloud together and fix each verb so it matches its subject (sidewalks have, kids were). Then add a \"That means...\" sentence after each fact."
+    }
+  ],
+  /* PP-004: step-by-step scoring for a grown-up, one block per rubric trait. "points" restates
+     each rubric column in plain words; "say" gives coaching lines for the child. */
+  scoring: {
+    purpose: {
+      steps: [
+        "Read the whole essay once, the way a town council member would, without marking anything.",
+        "Underline the opinion. It should be near the beginning and say that the lot should become a skate park.",
+        "Put an S beside sentences about safety and an H beside sentences about health. Are the S sentences together and the H sentences together?",
+        "Circle linking words such as First, Second, Also, because, so and For these reasons. Do they tie each reason back to the opinion?",
+        "Read the ending. Does it restate the opinion, sum up the reasons or ask the town council to act?",
+        "Choose the score that fits best overall. An essay can show parts of two levels; pick the one it matches most."
+      ],
+      points: {
+        3: "A strong introduction makes the opinion clear. Each reason has its own clear group of sentences. Linking words connect the reasons to the opinion all the way through. A strong ending wraps it up.",
+        2: "All the parts are there and the essay is easy enough to follow, but some parts are plain or thin, such as a one-line introduction, linking words used only here and there, or a reason not clearly tied to the opinion.",
+        1: "The introduction or the ending is weak. Ideas are mixed together or hard to follow, and few linking words connect them.",
+        0: "There is no introduction, no order you can find and no ending. On the real test, a blank, copied, off-topic or too-short essay gets a condition code instead of a score."
+      },
+      say: [
+        "\"Show me the sentence that tells your opinion.\" If it is there, praise it: \"The town council knows what you think right away.\"",
+        "\"Which sentences are about safety? Which are about health? Can you put each group in its own paragraph?\"",
+        "\"How could your last sentence ask the town council to do something?\""
+      ]
+    },
+    evidence: {
+      steps: [
+        "Open \"Where the support is in the sources\" below. It lists the facts that fit each reason.",
+        "Under reason 1 (a safer place to ride), check each fact the child used from a source. Do the same for reason 2 (active and healthy).",
+        "Check the wording. A sentence that matches the source word for word, or with only a word or two changed, is copied, not in the child's own words.",
+        "After each fact, look for the child's own explaining, often with so, because or that means. A fact with no explaining counts for less.",
+        "Check that safety claims stay careful. The sources say a skate park is safer than the street, and that falls can still happen there. \"No one ever gets hurt\" is not supported.",
+        "Choose the score that fits best overall."
+      ],
+      points: {
+        3: "Both reasons are supported with well-chosen facts from the sources, in the child's own words, and the child explains how each fact supports the reason.",
+        2: "The reasons are supported with relevant facts from the sources and some explaining, but the support is thin or uneven, or the facts are listed more than explained.",
+        1: "The support is minimal: few facts, facts that do not fit the reason, or facts with almost no explaining.",
+        0: "There are no reasons and no information from the sources."
+      },
+      say: [
+        "\"Show me one fact you found in Source 1 and one in Source 2.\"",
+        "\"You told me a fact. Now tell me why it matters. Try starting with 'That means...'\"",
+        "\"This sentence sounds just like the source. How would you say it to a friend?\""
+      ]
+    },
+    conventions: {
+      steps: [
+        "Read the essay out loud exactly as it is written. Mark each spot where you stumble or have to reread.",
+        "Check the sentences. Are they complete? Are some short and some joined with because, and, but or so?",
+        "Check the verbs. Does the tense stay steady? Do subjects and verbs agree (kids need, a skate park gives)?",
+        "Look back at your marks. Do the mistakes only look messy, or do they make the meaning hard to follow?",
+        "Check the length. A very short essay may not show enough to earn a 2, even with few mistakes.",
+        "Choose the score that fits best overall."
+      ],
+      points: {
+        2: "Most sentences are complete and they vary. Verb tense and subject-verb agreement are mostly correct. There are few mistakes, and none make the meaning unclear. The essay is long enough to show this.",
+        1: "Some sentences are complete, with little variety. Some verbs are in the wrong tense or do not agree, and some mistakes sometimes make the meaning unclear.",
+        0: "There are few or no complete sentences, little correct tense or agreement, and frequent mistakes that often make the meaning unclear."
+      },
+      say: [
+        "\"Read this sentence out loud to me. Does it sound right?\"",
+        "\"Find two short sentences you could join with because or so.\"",
+        "\"Check your verbs: did you stay in the same time all the way through?\""
+      ]
+    }
   },
   lookFors: {
     purpose: [

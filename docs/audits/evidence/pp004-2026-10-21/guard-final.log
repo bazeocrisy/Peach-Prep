@@ -1,0 +1,221 @@
+CHECK PASS 1.1 home: five category cards and every catalog skill as a tappable line
+CHECK PASS 1.1c every non-habit Georgia standard has a lesson
+CHECK PASS 1.1b mixed practice screen has the four section cards
+CHECK PASS 1.2 every manifest set loaded
+CHECK PASS 1.2b every manifest lesson file loaded
+CHECK PASS 1.3 every manifest task loaded
+CHECK PASS 1.4 not-affiliated disclaimer on Home
+CHECK PASS 1.5 build badge shown
+CHECK PASS 2.1 the correct response earns full points on every item (1223 items)
+CHECK PASS 2.2 an empty response earns 0 on every item
+CHECK PASS 2.3 two-part items give 1 point for Part A only
+CHECK PASS 2.4 every item can describe its answer, the child's answer and a review hint
+CHECK PASS 2.5 no review hint has an empty place name
+CHECK PASS 3.1 a wrong Check says try again (every item)
+CHECK PASS 3.2 a wrong Check never shows the walk-through
+CHECK PASS 3.3 Help me: clue, then narrowing that never rules out the answer, then walk-through; child still answers
+CHECK PASS 3.4 the correct answer after help is accepted, and every set reaches its done panel
+CHECK PASS 4.2 leaving a test in progress asks first
+CHECK PASS 4.3 a test question can be skipped, like the real test
+CHECK PASS 4.4 a reload returns to the same practice set
+CHECK PASS 4.5 Back from a set opened in the parent guide returns to the guide
+CHECK PASS 4.1 tests: no hints, full marks when right, 0 when wrong, skill rows, Show me how holds the answer to step 3
+CHECK PASS 5.1 the test tab shows 60 points, 49 items, 41 scored
+CHECK PASS 5.2 the test tab links official sources and says not affiliated
+CHECK PASS 5.3 every standard is listed
+CHECK PASS 5.4 'only what is on the test' shows exactly the assessed standards
+CHECK PASS 5.5 a tested standard shows GaDOE's Proficient descriptors verbatim
+CHECK PASS 5.6 grammar-chart rows: Master/Reinforce on the test (writing part only, per the blueprint), Introduce/Continue not
+CHECK PASS 5.7 essay tab: 3 rubric traits and the 11-line Writer's Checklist
+CHECK PASS 6.1 W-TASK-01: plan and draft are kept after a reload
+CHECK PASS 6.2 W-TASK-01: word and paragraph count
+CHECK PASS 6.3 W-TASK-01: the official checklist has 11 lines
+CHECK PASS 6.4 W-TASK-01: rubric total adds to 7 of 8
+CHECK PASS 6.5 W-TASK-01: a model essay is available to parents
+CHECK PASS 6.1 W-TASK-02: plan and draft are kept after a reload
+CHECK PASS 6.2 W-TASK-02: word and paragraph count
+CHECK PASS 6.3 W-TASK-02: the official checklist has 11 lines
+CHECK PASS 6.4 W-TASK-02: rubric total adds to 7 of 8
+CHECK PASS 6.5 W-TASK-02: a model essay is available to parents
+CHECK PASS 9.1 search narrows the list to matching skills
+CHECK PASS 9.2 'On the test' shows only tested skills, and every tested standard is there
+CHECK PASS 9.3 lessons are loaded
+CHECK PASS 9.4 every lesson renders every step (five for quiz skills)
+CHECK PASS 9.5a Practice Together leads to Try It Yourself, where Help me starts hidden
+CHECK PASS 9.5b in Try It Yourself, Help me unlocks after one wrong try
+CHECK PASS 9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set
+CHECK PASS 9.6 a failed check says how many points pass it; a passing check says it passed
+CHECK PASS 9.7 Back from a skill test returns to the skill's Test step, with all five steps checked
+CHECK PASS 9.7b one phone Back from there leaves that skill (no duplicate history entry)
+CHECK PASS 9.8 All skills returns home on that skill's row, now marked Passed the skill check
+CHECK PASS 9.9 progress is kept on the device after a reload
+CHECK PASS 9.10 a skill page address opens that skill and step
+CHECK PASS 9.11 standards without a lesson open an honest page (no empty steps)
+CHECK PASS 9.12 fluency timer: one minute, 100 words read, 1 missed = 99 words correct per minute, 99% accuracy
+CHECK PASS 9.13 grown-up check: 'Checked by a grown-up' only after every line is checked
+CHECK PASS 9.14 the cursive font loads from the site itself
+CHECK PASS 10.1 Show clue words highlights the clue words in a practice passage
+CHECK PASS 10.2 the clue-word button is off in tests
+CHECK PASS 10.3 the Clue Word Cheat Sheet shows the six structures
+CHECK PASS 10.4 Everyday habits lists every K-12 practice
+CHECK PASS 10.5 Up next names a skill with its id
+CHECK PASS 11.1 opening a lesson from the skill list writes no progress
+CHECK PASS 11.2 #play/SK:<k>:t/practice runs as a check (no Help me) and never records practice
+CHECK PASS 11.3 a pass stores passedAt, passTry, passBy, lastPassAt and one attempt per try; mastered/best/tries unchanged in meaning
+CHECK PASS 11.4 See my answers is recorded, and the next pass is flagged afterAnswers
+CHECK PASS 11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'
+CHECK PASS 11.6 a first-try pass without seeing answers: passTry 1, afterAnswers false
+CHECK PASS 11.7 a fail after a pass keeps the pass, logs ok:false, and shows 'review'
+CHECK PASS 11.8 a 2.1 record loads intact: old fields unchanged, legacyUndated + firstSeenPassedAt added, no invented passedAt
+CHECK PASS 11.9 old passes are labelled honestly: 'Passed the skill check' for a check, 'Checked by a grown-up' for a hands-on check, no review yet
+CHECK PASS 11.10 'review' shows 10 days after a pass, not 2 days after; the page says so; rendering changes nothing stored
+CHECK PASS 11.11 grown-up check: passBy 'grownup', mastered kept for counts, labelled 'Checked by a grown-up' (not 'Passed the skill check')
+CHECK PASS 11.12 fluency timer says it is a home practice tool, not a test or screener
+CHECK PASS 11.13 fluency verdict is for this one reading and notes passages differ
+CHECK PASS 11.14 grown-up observations (expression 1-3, pauses, self-corrections from the second tap, retell) are saved with the reading and shown as 'Grown-up observed'
+CHECK PASS 11.15 no 'mastered' or 'mastery' in home, skill, results or parent text (GUM 'Master' labels allowed)
+CHECK PASS 11.16 the parent plan says a skill check is not a Georgia Milestones score
+CHECK PASS 11.17 the skill page says a passed check is not a Milestones score, near the Proficient descriptors
+CHECK PASS 11.18 cursive word gap is about one lowercase o wide in the model and on the tracing sheet
+CHECK PASS 12.1 D1: Next and the step tabs land with the step heading visible just below the sticky step bar (390 and 1366)
+CHECK PASS 12.2 D4: after the in-page Back from a set, a section or an essay, one phone Back moves on (no dead press)
+CHECK PASS 12.3 D5: Forward or reload on a finished practice or test shows a 'you finished this' screen (not question 1); Start again starts at question 1; nothing stored changes
+CHECK PASS 12.4 D7: after a correct Check, focus moves to Next, and Enter goes on
+CHECK PASS 12.5 D8: damaged essay storage (null, wrong types, not an object) loads without errors and the essay still works
+CHECK PASS 12.6 D9: the skip link focuses the screen's heading and does not change the page
+CHECK PASS 12.7 D15: step, essay and parent tabs: one Tab stop, aria-controls a tabpanel, ArrowRight selects the next tab
+CHECK PASS 12.8 D16: a bad address shows Home with a 'not found' note and a clean address
+CHECK PASS 13.1 RD-1/RD-7/RD-8: the fluency result sits fully below the sticky step bar with focus on it (320/390/768/1366); no long live region; words carry aria-pressed
+CHECK PASS 13.2 RD-4: #play/SK:<k>:p/test and :y/test run as practice or try, and finishing them stores no pass, try or best score
+CHECK PASS 13.3 RD-9: no figure alt text or SVG title lists what is NOT in the picture (29 alts, 29 titles)
+CHECK PASS 13.4 RE-3 bestMax: an old best (5 of 6) is not shown next to a 7-point check; a new best stores bestMax and shows 'of 7'; render writes nothing
+CHECK PASS 13.5 RE-11: undated legacy passes do not all turn 'review' a week after the update
+CHECK PASS 13.6 RD-2/RD-3/RD-10/RD-11: focus after the grown-up check, the third Show me how and a bad address; 'Not yet' wording and labels
+CHECK PASS 14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points
+CHECK PASS 14.1 form order: first check A, then the other form after every attempt (B, A, B); a review after a pass uses the other form; one-form lessons always use A
+CHECK PASS 14.2 each attempt records its form (new field only); a pass on form B counts as 'Passed the skill check' exactly as before
+CHECK PASS 14.3 SK:<k>:tB never runs as practice and never records practice; Try It Yourself's 'Take the skill check' opens the form the site picks
+CHECK PASS 14.4 with PP_FLAGS.retained off (default, and frozen), a valid later pass on form B 10 days on stores no retainedAt/retainedForm and shows no 'Retained'
+CHECK PASS 14.5a flag on: no Retained on the same form, before 7 days, after that form's answers were seen, from time alone, or from an undated 2.1 pass
+CHECK PASS 14.5b flag on: a pass on the other form 10 days after the first pass, without seeing its answers, stores retainedAt (today) and retainedForm B and shows 'Retained'; flag also via localStorage pp.dev
+CHECK PASS 14.6 a seeded 2.1 record and a seeded PP-003 record load unchanged with the flag off and on (2.1 gains only PP-003's legacyUndated/firstSeenPassedAt); rendering writes nothing
+CHECK PASS 15.1 GUM1-1 shows the speaking card on Try It Yourself (not on Practice Together), with 3 labelled checkboxes and the honest label; rendering writes nothing
+CHECK PASS 15.2 ticking with the keyboard stores only speakChecks {ticks, d}; status stays Not started; the tick is shown again after a reload
+CHECK PASS 15.3 on a passed skill, ticking every line changes nothing but speakChecks: mastered, passBy and status are unchanged
+CHECK PASS 15.4 lessons without speaking data show no speaking card on any step
+CHECK PASS 16.1 U-1: every text box in passages (19 sets) and in Learn It / Watch Me examples (1 lessons) is role=note, named 'Text box', with a hidden 'Text box:' lead-in; drawn unlike the green 'Answer:' box (own tint, thick left edge), text contrast >= 4.5:1
+CHECK PASS 16.2 U-1: on SK-TC1b-T2 ("How does the text box add to the article?") the accessibility tree has one visible note named "Text box" that starts "Text box: A monarch"
+CHECK PASS 16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390
+CHECK PASS 7.1 no page errors
+CHECK PASS 8.1 no sideways scroll at 320/375/390 on any screen
+PASS  1.1 home: five category cards and every catalog skill as a tappable line
+PASS  1.1c every non-habit Georgia standard has a lesson
+PASS  1.1b mixed practice screen has the four section cards
+PASS  1.2 every manifest set loaded
+PASS  1.2b every manifest lesson file loaded
+PASS  1.3 every manifest task loaded
+PASS  1.4 not-affiliated disclaimer on Home
+PASS  1.5 build badge shown
+PASS  2.1 the correct response earns full points on every item (1223 items)
+PASS  2.2 an empty response earns 0 on every item
+PASS  2.3 two-part items give 1 point for Part A only
+PASS  2.4 every item can describe its answer, the child's answer and a review hint
+PASS  2.5 no review hint has an empty place name
+PASS  3.1 a wrong Check says try again (every item)
+PASS  3.2 a wrong Check never shows the walk-through
+PASS  3.3 Help me: clue, then narrowing that never rules out the answer, then walk-through; child still answers
+PASS  3.4 the correct answer after help is accepted, and every set reaches its done panel
+PASS  4.2 leaving a test in progress asks first
+PASS  4.3 a test question can be skipped, like the real test
+PASS  4.4 a reload returns to the same practice set
+PASS  4.5 Back from a set opened in the parent guide returns to the guide
+PASS  4.1 tests: no hints, full marks when right, 0 when wrong, skill rows, Show me how holds the answer to step 3
+PASS  5.1 the test tab shows 60 points, 49 items, 41 scored
+PASS  5.2 the test tab links official sources and says not affiliated
+PASS  5.3 every standard is listed
+PASS  5.4 'only what is on the test' shows exactly the assessed standards
+PASS  5.5 a tested standard shows GaDOE's Proficient descriptors verbatim
+PASS  5.6 grammar-chart rows: Master/Reinforce on the test (writing part only, per the blueprint), Introduce/Continue not
+PASS  5.7 essay tab: 3 rubric traits and the 11-line Writer's Checklist
+PASS  6.1 W-TASK-01: plan and draft are kept after a reload
+PASS  6.2 W-TASK-01: word and paragraph count
+PASS  6.3 W-TASK-01: the official checklist has 11 lines
+PASS  6.4 W-TASK-01: rubric total adds to 7 of 8
+PASS  6.5 W-TASK-01: a model essay is available to parents
+PASS  6.1 W-TASK-02: plan and draft are kept after a reload
+PASS  6.2 W-TASK-02: word and paragraph count
+PASS  6.3 W-TASK-02: the official checklist has 11 lines
+PASS  6.4 W-TASK-02: rubric total adds to 7 of 8
+PASS  6.5 W-TASK-02: a model essay is available to parents
+PASS  9.1 search narrows the list to matching skills
+PASS  9.2 'On the test' shows only tested skills, and every tested standard is there
+PASS  9.3 lessons are loaded
+PASS  9.4 every lesson renders every step (five for quiz skills)
+PASS  9.5a Practice Together leads to Try It Yourself, where Help me starts hidden
+PASS  9.5b in Try It Yourself, Help me unlocks after one wrong try
+PASS  9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set
+PASS  9.6 a failed check says how many points pass it; a passing check says it passed
+PASS  9.7 Back from a skill test returns to the skill's Test step, with all five steps checked
+PASS  9.7b one phone Back from there leaves that skill (no duplicate history entry)
+PASS  9.8 All skills returns home on that skill's row, now marked Passed the skill check
+PASS  9.9 progress is kept on the device after a reload
+PASS  9.10 a skill page address opens that skill and step
+PASS  9.11 standards without a lesson open an honest page (no empty steps)
+PASS  9.12 fluency timer: one minute, 100 words read, 1 missed = 99 words correct per minute, 99% accuracy
+PASS  9.13 grown-up check: 'Checked by a grown-up' only after every line is checked
+PASS  9.14 the cursive font loads from the site itself
+PASS  10.1 Show clue words highlights the clue words in a practice passage
+PASS  10.2 the clue-word button is off in tests
+PASS  10.3 the Clue Word Cheat Sheet shows the six structures
+PASS  10.4 Everyday habits lists every K-12 practice
+PASS  10.5 Up next names a skill with its id
+PASS  11.1 opening a lesson from the skill list writes no progress
+PASS  11.2 #play/SK:<k>:t/practice runs as a check (no Help me) and never records practice
+PASS  11.3 a pass stores passedAt, passTry, passBy, lastPassAt and one attempt per try; mastered/best/tries unchanged in meaning
+PASS  11.4 See my answers is recorded, and the next pass is flagged afterAnswers
+PASS  11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'
+PASS  11.6 a first-try pass without seeing answers: passTry 1, afterAnswers false
+PASS  11.7 a fail after a pass keeps the pass, logs ok:false, and shows 'review'
+PASS  11.8 a 2.1 record loads intact: old fields unchanged, legacyUndated + firstSeenPassedAt added, no invented passedAt
+PASS  11.9 old passes are labelled honestly: 'Passed the skill check' for a check, 'Checked by a grown-up' for a hands-on check, no review yet
+PASS  11.10 'review' shows 10 days after a pass, not 2 days after; the page says so; rendering changes nothing stored
+PASS  11.11 grown-up check: passBy 'grownup', mastered kept for counts, labelled 'Checked by a grown-up' (not 'Passed the skill check')
+PASS  11.12 fluency timer says it is a home practice tool, not a test or screener
+PASS  11.13 fluency verdict is for this one reading and notes passages differ
+PASS  11.14 grown-up observations (expression 1-3, pauses, self-corrections from the second tap, retell) are saved with the reading and shown as 'Grown-up observed'
+PASS  11.15 no 'mastered' or 'mastery' in home, skill, results or parent text (GUM 'Master' labels allowed)
+PASS  11.16 the parent plan says a skill check is not a Georgia Milestones score
+PASS  11.17 the skill page says a passed check is not a Milestones score, near the Proficient descriptors
+PASS  11.18 cursive word gap is about one lowercase o wide in the model and on the tracing sheet
+PASS  12.1 D1: Next and the step tabs land with the step heading visible just below the sticky step bar (390 and 1366)
+PASS  12.2 D4: after the in-page Back from a set, a section or an essay, one phone Back moves on (no dead press)
+PASS  12.3 D5: Forward or reload on a finished practice or test shows a 'you finished this' screen (not question 1); Start again starts at question 1; nothing stored changes
+PASS  12.4 D7: after a correct Check, focus moves to Next, and Enter goes on
+PASS  12.5 D8: damaged essay storage (null, wrong types, not an object) loads without errors and the essay still works
+PASS  12.6 D9: the skip link focuses the screen's heading and does not change the page
+PASS  12.7 D15: step, essay and parent tabs: one Tab stop, aria-controls a tabpanel, ArrowRight selects the next tab
+PASS  12.8 D16: a bad address shows Home with a 'not found' note and a clean address
+PASS  13.1 RD-1/RD-7/RD-8: the fluency result sits fully below the sticky step bar with focus on it (320/390/768/1366); no long live region; words carry aria-pressed
+PASS  13.2 RD-4: #play/SK:<k>:p/test and :y/test run as practice or try, and finishing them stores no pass, try or best score
+PASS  13.3 RD-9: no figure alt text or SVG title lists what is NOT in the picture (29 alts, 29 titles)
+PASS  13.4 RE-3 bestMax: an old best (5 of 6) is not shown next to a 7-point check; a new best stores bestMax and shows 'of 7'; render writes nothing
+PASS  13.5 RE-11: undated legacy passes do not all turn 'review' a week after the update
+PASS  13.6 RD-2/RD-3/RD-10/RD-11: focus after the grown-up check, the third Show me how and a bad address; 'Not yet' wording and labels
+PASS  14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points
+PASS  14.1 form order: first check A, then the other form after every attempt (B, A, B); a review after a pass uses the other form; one-form lessons always use A
+PASS  14.2 each attempt records its form (new field only); a pass on form B counts as 'Passed the skill check' exactly as before
+PASS  14.3 SK:<k>:tB never runs as practice and never records practice; Try It Yourself's 'Take the skill check' opens the form the site picks
+PASS  14.4 with PP_FLAGS.retained off (default, and frozen), a valid later pass on form B 10 days on stores no retainedAt/retainedForm and shows no 'Retained'
+PASS  14.5a flag on: no Retained on the same form, before 7 days, after that form's answers were seen, from time alone, or from an undated 2.1 pass
+PASS  14.5b flag on: a pass on the other form 10 days after the first pass, without seeing its answers, stores retainedAt (today) and retainedForm B and shows 'Retained'; flag also via localStorage pp.dev
+PASS  14.6 a seeded 2.1 record and a seeded PP-003 record load unchanged with the flag off and on (2.1 gains only PP-003's legacyUndated/firstSeenPassedAt); rendering writes nothing
+PASS  15.1 GUM1-1 shows the speaking card on Try It Yourself (not on Practice Together), with 3 labelled checkboxes and the honest label; rendering writes nothing
+PASS  15.2 ticking with the keyboard stores only speakChecks {ticks, d}; status stays Not started; the tick is shown again after a reload
+PASS  15.3 on a passed skill, ticking every line changes nothing but speakChecks: mastered, passBy and status are unchanged
+PASS  15.4 lessons without speaking data show no speaking card on any step
+PASS  16.1 U-1: every text box in passages (19 sets) and in Learn It / Watch Me examples (1 lessons) is role=note, named 'Text box', with a hidden 'Text box:' lead-in; drawn unlike the green 'Answer:' box (own tint, thick left edge), text contrast >= 4.5:1
+PASS  16.2 U-1: on SK-TC1b-T2 ("How does the text box add to the article?") the accessibility tree has one visible note named "Text box" that starts "Text box: A monarch"
+PASS  16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390
+PASS  7.1 no page errors
+PASS  8.1 no sideways scroll at 320/375/390 on any screen
+110 passed, 0 failed

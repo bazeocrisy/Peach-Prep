@@ -162,7 +162,7 @@ PP.addSet({
     {
       id: "L-VOC-03-9",
       type: "ms",
-      points: 1,
+      points: 2,
       std: ["3.L.V.3.e"],
       dok: 2,
       prompt: "Rosa wrote this sentence: \"The puppy went across the yard to get the ball.\" Which TWO words could Rosa use in place of went to show exactly HOW the puppy moved?",

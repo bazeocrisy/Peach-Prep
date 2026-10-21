@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 470" role="img" aria-labelledby="t">
+  <title id="t">A notes table. At the top: Question: How does a frog grow? Below are two columns, Fact and Where I found it. Row 1: Eggs are laid in water. Source 1. Row 2: Tadpoles hatch from the eggs. Source 1. Row 3: A tadpole has gills. Source 2. Row 4: It grows legs and loses its tail. Source 2.</title>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <text x="150" y="28" font-size="22" font-weight="bold" text-anchor="middle">My Notes Table</text>
+  </g>
+  <rect x="4" y="40" width="292" height="74" fill="#FFF6DD" stroke="#111" stroke-width="2.5"/>
+  <rect x="4" y="114" width="292" height="62" fill="#F1E3C8" stroke="#111" stroke-width="2.5"/>
+  <g fill="none" stroke="#111" stroke-width="2.5">
+    <rect x="4" y="176" width="292" height="68"/>
+    <rect x="4" y="244" width="292" height="68"/>
+    <rect x="4" y="312" width="292" height="68"/>
+    <rect x="4" y="380" width="292" height="86"/>
+    <path d="M184 114 V466"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="14" y="70" font-weight="bold">Question:</text>
+    <text x="14" y="100">How does a frog grow?</text>
+    <text x="14" y="152" font-weight="bold">Fact</text>
+    <text x="194" y="140" font-weight="bold">Where I</text>
+    <text x="194" y="166" font-weight="bold">found it</text>
+    <text x="14" y="204">Eggs are laid</text>
+    <text x="14" y="232">in water.</text>
+    <text x="194" y="218">Source 1</text>
+    <text x="14" y="272">Tadpoles hatch</text>
+    <text x="14" y="300">from the eggs.</text>
+    <text x="194" y="286">Source 1</text>
+    <text x="14" y="340">A tadpole</text>
+    <text x="14" y="368">has gills.</text>
+    <text x="194" y="354">Source 2</text>
+    <text x="14" y="406">It grows legs</text>
+    <text x="14" y="430">and loses</text>
+    <text x="14" y="454">its tail.</text>
+    <text x="194" y="430">Source 2</text>
+  </g>
+</svg>

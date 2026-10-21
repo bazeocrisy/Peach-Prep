@@ -189,24 +189,24 @@ PP.addLesson({
       ],
       clue: "These are clue words. Ask: What question do they help a reader answer?",
       why: "The answer is \"to show the order of the steps for making the cobbler.\" These are time clue words. Nothing goes wrong in the story, and the author does not compare two fruits." },
-    { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 3, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
+    { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "Why does Grandpa put the pan in the oven when it has only butter in it?",
+      partA: { prompt: "Why does the butter have to go into the oven BEFORE Keisha pours in the batter?",
         choices: [
-          { text: "so the butter will melt in the pan first", correct: true },
-          { text: "so the peaches will get soft and sweet" },
-          { text: "so the kitchen will smell good later" },
-          { text: "so the batter will be thick and smooth" }
+          { text: "The batter goes in on top of the butter, so the butter has to be ready first.", correct: true },
+          { text: "The butter needs time to cool down before the peaches go in." },
+          { text: "The batter has to bake by itself before the butter is added." },
+          { text: "Grandpa needs the oven empty while Keisha stirs the batter." }
         ] },
       partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
         choices: [
-          { text: "\"Grandpa set the pan in the hot oven so the butter would melt.\"", correct: true },
-          { text: "\"The batter was thick and smooth, like pancake batter.\"" },
-          { text: "\"She did not stir it.\"" },
+          { text: "\"Keisha poured the batter right on top of the melted butter.\"", correct: true },
+          { text: "\"Then Keisha stirred flour, sugar and milk in a big bowl.\"" },
+          { text: "\"First, they washed six ripe peaches.\"" },
           { text: "\"The top of the cobbler was puffy and golden brown.\"" }
         ] },
-      clue: "Look at what is in the pan when it goes into the oven. Then find the sentence that tells what the oven does to it.",
-      why: "Part A: so the butter will melt in the pan first. Part B: \"Grandpa set the pan in the hot oven so the butter would melt.\" One step gets the pan ready for the next one. The batter goes on top of the melted butter." }
+      clue: "Find the step where Keisha pours the batter. What is already in the pan by then?",
+      why: "Part A: the batter goes in on top of the butter, so the butter has to be ready first. Part B: \"Keisha poured the batter right on top of the melted butter.\" In a sequence, one step can get things ready for the next. The butter melts first, and then the batter goes on top of it. The sentence about stirring tells a step but not why the butter comes first. Nothing in the story says the butter cools, and the batter is never baked alone." }
   ]
 });
 PP.addLesson({
@@ -298,6 +298,16 @@ PP.addLesson({
         ["The dam blocks the moving water.", "As a result, the water backs up and spreads out.", "Soon a calm, deep pond forms behind the dam."],
         ["Beavers build a home called a lodge in the pond.", "Coyotes and other hunters cannot easily get inside because the lodge doors are under the water.", "The pond keeps the beaver family safe."],
         ["The new pond helps other animals, too.", "Ducks, frogs and fish move in, since the calm water makes a good home.", "One family of beavers can change a whole stream!"]
+      ] },
+    /* PP-004 form B (testB) passage, used only by testB. Needs independent review. */
+    { id: "p3", title: "The Plants That Build Dunes", genre: "Informational text",
+      paragraphs: [
+        ["On many Georgia beaches, you can see hills of sand called dunes.", "Tall grasses called sea oats grow on top of them.", "These plants do an important job."],
+        ["Wind blows across the beach almost every day.", "It picks up loose, dry sand and carries it along.", "When the sand hits the stems of the sea oats, it slows down.", "As a result, the sand drops, and a little pile forms around each plant."],
+        ["Sea oats do not mind being buried.", "Since they keep growing up through the sand, they trap more and more of it.", "Over many years, the little piles grow into tall dunes."],
+        ["Under the sand, sea oats have long roots.", "The roots spread out like a net, so they hold the sand in place.", "Strong winds cannot easily blow the dune away."],
+        ["Dunes help people, too.", "During big storms, huge waves crash onto the beach.", "The dunes block many of the waves, so the homes and roads behind them stay safer."],
+        ["Sea oats are protected in Georgia because they help keep the coast safe.", "It is against the law to pick them.", "People's feet can crush the plants, so visitors use wooden walkways to cross the dunes.", "Without the plants, the wind would blow the sand away."]
       ] }
   ],
   practice: [
@@ -365,13 +375,13 @@ PP.addLesson({
     { id: "SK-TSCE-T1", type: "order", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "Put the events in order, from the first cause to the last effect.",
       steps: [
-        "Beavers chew through small trees.",
         "Beavers pile sticks, rocks and mud across a stream.",
+        "The dam blocks the moving water.",
         "A calm, deep pond forms.",
         "Ducks, frogs and fish move in."
       ],
       clue: "Ask what each event causes. The cause always comes before its effect.",
-      why: "The order is: beavers chew through trees, they pile sticks, rocks and mud across a stream, a calm pond forms, and then ducks, frogs and fish move in. Each event causes the next one." },
+      why: "The order is: beavers pile sticks, rocks and mud across a stream, the dam blocks the moving water, a calm pond forms, and then ducks, frogs and fish move in. Each event makes the next one happen. The pile of sticks is the dam, the blocked water fills up into a pond, and the calm pond gives the animals a home." },
     { id: "SK-TSCE-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Read the sentence from paragraph 4 in the box. Which part is the CAUSE?",
       stem: ["Coyotes and other hunters cannot easily get inside because the lodge doors are under the water."],
@@ -409,6 +419,56 @@ PP.addLesson({
       ],
       clue: "Try each word in the sentence. Which one still tells WHY something happens?",
       why: "The answer is since. Since and because both tell why something happens. However shows a difference, for example adds a detail and first tells order." }
+  ],
+  /* PP-004 form B of the skill check (formB-info). Same codes, points (6) and DOK mix as form A,
+     on the new passage p3. NEEDS INDEPENDENT REVIEW; see docs/audits/work/pp004-formB-formB-info.md. */
+  testB: [
+    { id: "SK-TSCE-TB1", type: "order", points: 2, dok: 2, passages: ["p3"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
+      prompt: "These events from the article make a chain. Put them in order, so that each event causes the next one.",
+      steps: [
+        "Wind carries loose, dry sand across the beach.",
+        "The sand hits the stems of the sea oats and slows down.",
+        "The sand drops and forms a little pile around each plant.",
+        "Over many years, the little piles grow into tall dunes."
+      ],
+      clue: "Start with the wind. For each event, ask, \"What does this make happen next?\" Paragraphs 2 and 3 tell the chain.",
+      why: "The order is: wind carries loose sand across the beach, the sand hits the sea oat stems and slows down, the sand drops into a little pile around each plant, and over many years the piles grow into tall dunes. Each event causes the next one. The sand cannot slow down until the wind has carried it to the plants, and the dunes cannot grow until the little piles form." },
+    { id: "SK-TSCE-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence from the article tells the effect FIRST and the cause after it?",
+      choices: [
+        { text: "\"Sea oats are protected in Georgia because they help keep the coast safe.\"", correct: true },
+        { text: "\"People's feet can crush the plants, so visitors use wooden walkways to cross the dunes.\"" },
+        { text: "\"When the sand hits the stems of the sea oats, it slows down.\"" },
+        { text: "\"During big storms, huge waves crash onto the beach.\"" }
+      ],
+      clue: "In each sentence, find the part that happened first. That part is the cause. Which sentence saves the cause for the end?",
+      why: "The answer is \"Sea oats are protected in Georgia because they help keep the coast safe.\" The plants help keep the coast safe, and that is why they are protected, but the sentence tells the protecting first and the reason after the clue word because. In the other sentences the cause comes first: feet crushing plants, sand hitting stems, and big storms." },
+    { id: "SK-TSCE-TB3", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence explains how dunes help keep people safe during a storm? Choose the sentence in the passage.",
+      targets: ["p3:4:3", "p3:5:1", "p3:5:2", "p3:5:3", "p3:6:4"],
+      answer: ["p3:5:3"], pick: 1,
+      clue: "Find the paragraph about storms. Look for a sentence with a clue word that tells what the dunes do and what happens because of it.",
+      why: "The answer is \"The dunes block many of the waves, so the homes and roads behind them stay safer.\" Blocking the waves is the cause, and the clue word so leads to the effect: homes and roads stay safer. \"Dunes help people, too\" says that dunes help but not how. The sentence about huge waves tells what storms do, not what dunes do. The two sentences about wind tell what happens to the sand, not how people are kept safe." },
+    { id: "SK-TSCE-TB4", type: "mc", points: 1, dok: 1, passages: ["p3"],
+      prompt: "According to paragraph 4, what happens because the roots of sea oats spread out like a net?",
+      choices: [
+        { text: "They hold the sand in place.", correct: true },
+        { text: "They pull water up from the ocean." },
+        { text: "They make the waves much smaller." },
+        { text: "They keep the plants from being buried." }
+      ],
+      clue: "Find the words like a net in paragraph 4. Read the clue word after them and the effect that follows.",
+      why: "The answer is \"They hold the sand in place.\" Paragraph 4 says the roots spread out like a net, so they hold the sand in place. The article does not say the roots pull up ocean water or shrink waves, and paragraph 3 says sea oats do get buried." },
+    { id: "SK-TSCE-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 3, the author uses the clue word Since. What does it tell the reader?",
+      choices: [
+        { text: "A cause comes right after it.", correct: true },
+        { text: "A step in order comes right after it." },
+        { text: "An example comes right after it." },
+        { text: "A surprise comes right after it." }
+      ],
+      clue: "Read the sentence that starts with Since. Ask which part happens first and makes the other part happen.",
+      why: "The answer is \"A cause comes right after it.\" In \"Since they keep growing up through the sand, they trap more and more of it,\" the words after Since tell why: the plants keep growing. Trapping more sand is the effect. Since works like because here. It does not tell a step, give an example or show a surprise." }
   ]
 });
 PP.addLesson({
@@ -434,7 +494,7 @@ PP.addLesson({
     big: "The author shows a problem, the things someone tries, and the solution that finally works.",
     points: [
       "The problem is what is wrong. Look for the word problem or for something that keeps going wrong.",
-      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right before a try that failed.",
+      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right after a try. It tells you the try did not work.",
       "Failed tries matter. They help show what the REAL problem was.",
       "The solution is what finally fixes it. Clue words like decided, solved and finally point to it.",
       "You see this in stories and in true texts, too. A town with too much litter might add recycling bins."
@@ -510,8 +570,8 @@ PP.addLesson({
       prompt: "Which sentence shows that Jamal's FIRST try did not work? Choose the sentence in the passage.",
       targets: ["p1:3:1", "p1:3:2", "p1:4:1", "p1:4:2", "p1:6:1"],
       answer: ["p1:3:2"], pick: 1,
-      clue: "In a problem-and-solution story, the word but often comes right before a try that failed. Find the first try, then check the sentence after it.",
-      why: "The answer is \"But the next morning, a new line of ants marched right back.\" Jamal's first try was wiping the ants away. The clue word But shows that it did not work. The other But sentence is about his second try." },
+      clue: "Find Jamal's first try. Then read the sentence right after it. What happened the next morning?",
+      why: "The answer is \"But the next morning, a new line of ants marched right back.\" Jamal's first try was wiping the ants away. The very next morning, a new line of ants marched right back, so wiping did not stop them. The other sentence about the ants coming back is about his second try." },
     { id: "SK-TSPS-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What finally solves the problem?",
       choices: [
@@ -614,7 +674,7 @@ PP.addLesson({
 PP.addLesson({
   key: "TS-CC",
   code: "3.T.SS.1.a",
-  codes: ["3.T.SS.1.a", "3.T.T.2.c"],
+  codes: ["3.T.SS.1.a"],
   title: "Compare and contrast: alike and different",
   clues: {
     words: ["both", "alike", "same", "but", "however", "unlike", "different", "while"],
@@ -719,7 +779,7 @@ PP.addLesson({
       answer: ["p1:2:1"], pick: 1,
       clue: "Paragraph 1 tells how they are alike. Look for the first clue word that turns toward differences.",
       why: "The answer is \"However, they are different in some ways.\" The clue word However marks the switch. Before it, the author tells how frogs and toads are alike. After it, the author tells how they are different." },
-    { id: "SK-TSCC-P3", type: "match", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-P3", type: "match", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Sort each fact into the right column.",
       cols: ["Frog only", "Both", "Toad only"],
       rows: [
@@ -749,7 +809,7 @@ PP.addLesson({
       ],
       clue: "This sentence tells how two animals live in different places. Pick the clue word that shows a difference.",
       why: "The answer is Unlike. Unlike most frogs, many toads live far from ponds. Unlike is a contrast clue word. Because tells why, and finally tells order." },
-    { id: "SK-TSCC-P6", type: "ms", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-P6", type: "ms", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Which TWO sentences tell how frogs and toads are ALIKE?",
       pick: 2,
       choices: [
@@ -769,7 +829,7 @@ PP.addLesson({
       answer: ["p2:2:1"], pick: 1,
       clue: "Find where the author stops telling what the animals share. Look for the clue word that starts the turn.",
       why: "The answer is \"However, these two animals are different in some ways.\" The clue word However marks the switch. Paragraph 1 tells how the animals are alike, and the rest of the passage tells how they are different." },
-    { id: "SK-TSCC-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
+    { id: "SK-TSCC-T2", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How is an alligator's snout different from a crocodile's snout?",
         choices: [
@@ -808,16 +868,18 @@ PP.addLesson({
       ],
       clue: "Find the clue word in paragraph 1 that tells how two things are alike. Check each choice against that paragraph.",
       why: "The answer is \"Both lay eggs in nests on land.\" Paragraph 1 says this with the clue word Both. They are reptiles, not fish, and their skin is thick and scaly." },
-    { id: "SK-TSCC-T5", type: "mc", points: 1, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.c"],
-      prompt: "What can you see when a crocodile shuts its mouth?",
-      choices: [
-        { text: "top and bottom teeth", correct: true },
-        { text: "only its top teeth" },
-        { text: "only its bottom teeth" },
-        { text: "no teeth at all" }
+    { id: "SK-TSCC-T5", type: "match", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
+      prompt: "Match each detail to the animal it is true for. Some details are true for both animals.",
+      cols: ["Alligator only", "Crocodile only", "Both"],
+      rows: [
+        { text: "You see mostly its top teeth when its mouth is shut.", answer: 0 },
+        { text: "You see top and bottom teeth when its mouth is shut.", answer: 1 },
+        { text: "It can live in salty water.", answer: 1 },
+        { text: "It has a long tail.", answer: 2 },
+        { text: "It lives in the wild in Georgia.", answer: 0 }
       ],
-      clue: "Paragraph 3 tells about each animal's teeth. Make sure you read the part about the right animal.",
-      why: "The answer is \"top and bottom teeth.\" Paragraph 3 says that when a crocodile shuts its mouth, you can see top and bottom teeth. Seeing mostly the top teeth is true of an alligator." }
+      clue: "For each detail, find what the passage says about alligators, then about crocodiles. If it is true for both, choose Both.",
+      why: "Seeing mostly top teeth is true of alligators, and seeing top and bottom teeth is true of crocodiles (paragraph 3). Only crocodiles can live in salty water too (paragraph 4). Both animals have long tails (paragraph 1). Georgia has lots of alligators, but wild crocodiles live only in south Florida, so living wild in Georgia is true of alligators only." }
   ]
 });
 PP.addLesson({

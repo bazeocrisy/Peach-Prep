@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 476" role="img" aria-labelledby="t">
+  <title id="t">Diagram of a slice cut across a tree trunk. Labels name the layers from the outside in: bark, inner bark, sapwood, and heartwood in the center. Thin rings circle the center. A note says: Each ring = 1 year. Count the rings to find the tree's age.</title>
+  <defs>
+    <!-- bark texture: short dark strokes, so the bark does not depend on color alone -->
+    <pattern id="bk" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#7A4E2A"/><path d="M1 1 L4 7 M5 0 L7 5" stroke="#3E2410" stroke-width="1.6"/></pattern>
+  </defs>
+  <!-- layers, outside in -->
+  <circle cx="160" cy="200" r="100" fill="url(#bk)" stroke="#2B1A0C" stroke-width="3"/>
+  <circle cx="160" cy="200" r="88" fill="#D9B98C" stroke="#2B1A0C" stroke-width="1.5"/>
+  <circle cx="160" cy="200" r="81" fill="#F6E7C3" stroke="#2B1A0C" stroke-width="2"/>
+  <circle cx="160" cy="200" r="42" fill="#C9965A" stroke="#2B1A0C" stroke-width="2"/>
+  <!-- growth rings (dashed lines in the sapwood, solid in the heartwood) -->
+  <g fill="none" stroke="#6B4A22" stroke-width="1.6">
+    <circle cx="160" cy="200" r="71" stroke-dasharray="5 3"/>
+    <circle cx="160" cy="200" r="62" stroke-dasharray="5 3"/>
+    <circle cx="160" cy="200" r="52" stroke-dasharray="5 3"/>
+    <circle cx="160" cy="200" r="32" stroke="#3E2410"/>
+    <circle cx="160" cy="200" r="22" stroke="#3E2410"/>
+    <circle cx="160" cy="200" r="12" stroke="#3E2410"/>
+  </g>
+  <circle cx="160" cy="200" r="3" fill="#3E2410"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="6" y="34">bark</text>
+    <path d="M30 42 L93 133" stroke="#111" stroke-width="2"/><circle cx="93" cy="133" r="3.5"/>
+    <text x="196" y="34">inner bark</text>
+    <path d="M240 42 L202 127" stroke="#111" stroke-width="2"/><circle cx="202" cy="127" r="3.5"/>
+    <text x="6" y="352">sapwood</text>
+    <path d="M46 332 L113 247" stroke="#111" stroke-width="2"/><circle cx="113" cy="247" r="3.5"/>
+    <text x="200" y="352">heartwood</text>
+    <path d="M250 332 L175 215" stroke="#111" stroke-width="2"/><circle cx="175" cy="215" r="3.5"/>
+    <!-- note about rings, with a line to one ring -->
+    <rect x="10" y="372" width="300" height="94" rx="8" fill="#FFFFFF" stroke="#111" stroke-width="2"/>
+    <path d="M160 372 L160 262" stroke="#111" stroke-width="2"/><circle cx="160" cy="262" r="3.5"/>
+    <text x="24" y="401">Each ring = 1 year.</text>
+    <text x="24" y="427">Count the rings to</text>
+    <text x="24" y="453">find the tree's age.</text>
+  </g>
+</svg>

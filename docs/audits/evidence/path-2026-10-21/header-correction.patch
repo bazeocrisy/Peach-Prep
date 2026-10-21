@@ -1,0 +1,5 @@
+--- before/js/app.js
++++ after/js/app.js
+@@ -26 +26 @@
+-    document.querySelectorAll("[data-go=home]").forEach(b => { b.textContent = window.PP_PATH.mode() === "path" ? "← Learning path" : "← All skills"; });
++    document.querySelectorAll("[data-go=home]").forEach(b => { b.textContent = name === "player" || name === "write" ? "Home" : window.PP_PATH.mode() === "path" ? "← Learning path" : "← All skills"; });

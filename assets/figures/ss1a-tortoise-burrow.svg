@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" role="img" aria-labelledby="t">
+  <title id="t">A gopher tortoise sits on sandy ground right in front of the dark, round opening of a tunnel in a mound of sand.</title>
+  <defs><pattern id="s" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#F3E3BF"/><circle cx="3" cy="4" r="1.2" fill="#B89A5E"/><circle cx="9" cy="9" r="1.2" fill="#B89A5E"/></pattern></defs>
+  <rect x="0" y="160" width="320" height="50" fill="url(#s)"/>
+  <path d="M150 162 Q215 64 312 162 Z" fill="url(#s)" stroke="#7A5C2E" stroke-width="3"/>
+  <path d="M0 162 H320" stroke="#7A5C2E" stroke-width="3"/>
+  <!-- tunnel opening -->
+  <path d="M196 162 Q230 96 266 162 Z" fill="#4A3A26" stroke="#2E2416" stroke-width="3"/>
+  <!-- grass tufts -->
+  <g stroke="#3F6B2A" stroke-width="3" stroke-linecap="round" fill="none"><path d="M20 162 l-4 -16 M24 162 l2 -18 M28 162 l7 -14"/><path d="M300 162 l-3 -12 M304 162 l3 -14"/></g>
+  <!-- tortoise facing the opening -->
+  <g stroke="#2E2416" stroke-width="3">
+    <path d="M60 168 L56 182 L74 182 L76 168 Z" fill="#9C8A66"/>
+    <path d="M140 168 L142 182 L160 182 L156 168 Z" fill="#9C8A66"/>
+    <path d="M150 146 Q170 132 186 140 Q192 148 184 154 Q168 160 150 158 Z" fill="#9C8A66"/>
+    <path d="M44 170 Q50 92 104 90 Q160 92 166 170 Z" fill="#C2A774"/>
+  </g>
+  <g fill="none" stroke="#2E2416" stroke-width="2"><path d="M70 130 Q104 112 140 130"/><path d="M84 106 L92 128 M124 106 L116 128 M104 92 V120"/><path d="M60 152 H150"/></g>
+  <circle cx="176" cy="144" r="3" fill="#111"/>
+</svg>

@@ -64,7 +64,7 @@ PP.addSet({
     {
       id: "L-VOC-01-4",
       type: "match",
-      points: 1,
+      points: 2,
       std: ["3.L.V.3.a"],
       dok: 2,
       prompt: "The word light has more than one meaning. Match each sentence to the meaning of light in that sentence.",
