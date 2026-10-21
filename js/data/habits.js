@@ -8,8 +8,8 @@ window.PP_HABITS = {
   },
   "K-12.P.EICC.1.b": {
     title: "Knowing what I like to read",
-    looks: "Your child can say what kinds of books and writing they enjoy, such as funny stories, animal facts or poems, and explain why.",
-    tryit: ["Sort a stack of books from home or the library into 'love it', 'it's okay' and 'not for me', then talk about why.", "Have your child finish the sentence 'My favorite kind of book is ___ because ___' out loud or on paper."],
+    looks: "Your child can say what kinds of books and writing they enjoy, such as funny stories, animal facts or poems, and explain why. They can name what they like about how a piece is written, such as funny talking or a surprise at the end of each chapter, and which ways of reading and writing they enjoy: reading on paper, listening to an audiobook or watching a video, and writing stories, facts or opinions.",
+    tryit: ["Sort a stack of books from home or the library into 'love it', 'it's okay' and 'not for me', then talk about why.", "Have your child finish the sentence 'My favorite kind of book is ___ because ___' out loud or on paper.", "Have your child finish 'I like how the author ___' (for example, 'makes the animals talk' or 'ends each chapter with a surprise') and 'I like reading, listening or watching best because ___'."],
     ask: "What is it about this kind of book that you like so much?"
   },
   "K-12.P.EICC.1.c": {
@@ -26,8 +26,8 @@ window.PP_HABITS = {
   },
   "K-12.P.EICC.1.e": {
     title: "Being part of a reading family",
-    looks: "Your child talks about books with others, shares their writing, and gives and takes kind, helpful feedback, following simple rules for talking together.",
-    tryit: ["Hold a 10-minute family book chat at dinner: agree on rules first, like one person talks at a time.", "Have your child read a short piece of their writing to the family; each listener gives one 'star' (something good) and one 'wish' (an idea)."],
+    looks: "Your child talks about books with others, shares their writing, listens closely when others share their writing, and gives and takes kind, helpful feedback, following simple rules for talking together. After getting feedback, your child uses it to make a change to their own writing.",
+    tryit: ["Hold a 10-minute family book chat at dinner: agree on rules first, like one person talks at a time.", "Have your child read a short piece of their writing to the family; each listener gives one 'star' (something good) and one 'wish' (an idea).", "Switch roles: a grown-up or older sibling reads a short piece of their own writing. Your child listens all the way to the end, then gives one star and one wish.", "After your child hears a wish about their own writing, they make one change and tell you what they changed and why."],
     ask: "What is one kind thing and one helpful idea you could tell about this writing?"
   },
   "K-12.P.EICC.1.f": {
@@ -92,14 +92,14 @@ window.PP_HABITS = {
   },
   "K-12.P.EICC.3.e": {
     title: "Making predictions",
-    looks: "Your child guesses what will happen next using clues from the story, then keeps reading to check whether they were right.",
-    tryit: ["Before turning the page, have your child predict what will happen and why.", "Write predictions on a sticky note in the book and check them at the end of the chapter."],
+    looks: "Your child guesses what will happen next using clues from the story, then keeps reading to check whether they were right. In a fact book or article, they predict what information comes next from the headings, pictures and table of contents, and check that too.",
+    tryit: ["Before turning the page, have your child predict what will happen and why.", "Write predictions on a sticky note in the book and check them at the end of the chapter.", "In a fact book, read a heading aloud, like 'What Bats Eat', and have your child predict two facts the section will tell. Read the section together and check each one off or change it."],
     ask: "What do you think will happen next, and what clues tell you that?"
   },
   "K-12.P.EICC.3.f": {
     title: "Reading between the lines",
-    looks: "Your child figures out things the author doesn't say directly, like how a character feels, and points to clues in the text that show it.",
-    tryit: ["Pause on a character's actions and ask your child how the character feels and which words show it.", "Play 'detective': read a short paragraph and have your child find two clues that prove their idea."],
+    looks: "Your child figures out things the author doesn't say directly, like how a character feels, and points to clues in the text that show it. As they read on, they keep track of the idea and change it if new clues show something different.",
+    tryit: ["Pause on a character's actions and ask your child how the character feels and which words show it.", "Play 'detective': read a short paragraph and have your child find two clues that prove their idea.", "Track it: when your child makes an inference ('I think Sam is nervous'), write it on a sticky note in the book. As you read on, add a check mark when a new clue fits, or cross it out and write a new idea when a clue does not."],
     ask: "How do you know? Show me the words that tell you."
   },
   "K-12.P.EICC.3.g": {

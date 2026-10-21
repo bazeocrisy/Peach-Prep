@@ -312,14 +312,14 @@ PP.addLesson({
     /* PP-004 form B passage: used only by testB. Revised by reviewfix4 after review C (form B):
        a present-tense draft (form A's p2 is present too; practice p1 is past), with the one tense
        slip inside a complex sentence (5). Sentence types: (1)-(4) simple, (5) complex with the
-       SLIP (hopped), (6) simple, (7) simple, (8) simple, (9) simple, (10) simple, (11) simple,
-       (12) simple, (13) complex. Needs independent review. */
-    { id: "p3", title: "Field Day", byline: "Nia's draft", genre: "Student draft (narrative)", draft: true,
+       SLIP (handed), (6)-(12) simple, (13) complex. The topic is new to the site (T-SS already
+       has a "Field Day" draft, so that topic was avoided). Needs independent review. */
+    { id: "p3", title: "Saturdays at the Bakery", byline: "Nia's draft", genre: "Student draft (narrative)", draft: true,
       paragraphs: [
-        ["(1) Every May, our school has a field day on the big grassy field.", "(2) Each class wears a different color of T-shirt.", "(3) Our class always picks bright green."],
-        ["(4) The morning starts with the sack race.", "(5) When the coach blows her whistle, everyone hopped toward the finish line.", "(6) Most of us fall down at least once.", "(7) We laugh and climb back into our sacks."],
-        ["(8) The tug-of-war is my favorite game.", "(9) The other teams are bigger than ours.", "(10) We win the tug-of-war almost every year."],
-        ["(11) The afternoon gets very hot.", "(12) The teachers set up a water sprinkler.", "(13) We run through it until the last bell rings."]
+        ["(1) Every Saturday, my grandma opens her bakery at six o'clock.", "(2) I help her before the customers come.", "(3) My job is to fill the jars with cookies."],
+        ["(4) The first customer is always Mr. Banks.", "(5) When he walks through the door, Grandma handed him a warm cinnamon roll.", "(6) He pays with coins from a little leather bag.", "(7) Then he sits by the window and reads the paper."],
+        ["(8) Grandma's bakery is small and cozy.", "(9) The bakery down the street is much bigger.", "(10) More people come to Grandma's bakery."],
+        ["(11) The bakery gets very busy at lunchtime.", "(12) Grandma's neighbor comes to help at the counter.", "(13) We close the door when the last roll is gone."]
       ] }
   ],
   practice: [
@@ -429,24 +429,24 @@ PP.addLesson({
       prompt: "One sentence in Nia's draft has a verb that does not fit the time of the rest of the draft. Select that sentence.",
       targets: ["p3:1:2", "p3:2:2", "p3:2:4", "p3:3:1", "p3:4:3"],
       answer: ["p3:2:2"], pick: 1,
-      clue: "Nia tells about something that happens every year. Which tense is most of the draft in? Check every verb, even in the long sentences.",
-      why: "The answer is sentence 5, \"When the coach blows her whistle, everyone hopped toward the finish line.\" Field day happens every May, so the draft is in the present tense: has, wears, starts, fall, laugh. Blows is present, but hopped is past, so the tense slips in the middle of the sentence. Hopped should be hops." },
+      clue: "Nia tells about something that happens every week. Which tense is most of the draft in? Check every verb, even in the long sentences.",
+      why: "The answer is sentence 5, \"When he walks through the door, Grandma handed him a warm cinnamon roll.\" Nia tells what happens every Saturday, so the draft is in the present tense: opens, help, is, pays, sits. Walks is present, but handed is past, so the tense slips in the middle of the sentence. Handed should be hands." },
     { id: "SK-GC2b-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "What is the best way to combine sentences 11 and 12?",
       choices: [
-        { text: "Because the afternoon gets very hot, the teachers set up a water sprinkler.", correct: true },
-        { text: "Because the teachers set up a water sprinkler, the afternoon gets very hot." },
-        { text: "The afternoon gets very hot, but the teachers set up a water sprinkler." },
-        { text: "Because the afternoon got very hot, the teachers set up a water sprinkler." }
+        { text: "Because the bakery gets very busy at lunchtime, Grandma's neighbor comes to help at the counter.", correct: true },
+        { text: "Because Grandma's neighbor comes to help at the counter, the bakery gets very busy at lunchtime." },
+        { text: "The bakery gets very busy at lunchtime, but Grandma's neighbor comes to help at the counter." },
+        { text: "Because the bakery got very busy at lunchtime, Grandma's neighbor comes to help at the counter." }
       ],
       clue: "Which idea is the reason, and which one happens because of it? Then check that the verbs stay in the same time as the rest of the draft.",
-      why: "The answer is \"Because the afternoon gets very hot, the teachers set up a water sprinkler.\" The heat is the reason for the sprinkler, so because goes with the heat. The choice that puts because with the sprinkler turns the idea around: a sprinkler does not make the day hot. But would mean the sprinkler is a surprise. The got choice slips into the past tense." },
+      why: "The answer is \"Because the bakery gets very busy at lunchtime, Grandma's neighbor comes to help at the counter.\" The busy lunchtime is the reason the neighbor comes, so because goes with the busy lunchtime. The choice that puts because with the neighbor turns the idea around: the neighbor coming to help does not make the bakery busy. But would mean the help is a surprise. The got choice slips into the past tense." },
     { id: "SK-GC2b-TB3", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
       prompt: "Nia wants to join sentences 9 and 10. Choose the word that best completes the new sentence.",
-      text: "{0} the other teams are bigger than ours, we win the tug-of-war almost every year.",
+      text: "{0} the bakery down the street is much bigger, more people come to Grandma's bakery.",
       slots: [{ options: ["Although", "Because", "Unless"], answer: 0 }],
-      clue: "Would you expect a smaller team to win? Does the second idea go along with the first, or against it?",
-      why: "The answer is Although: \"Although the other teams are bigger than ours, we win the tug-of-war almost every year.\" You would expect the bigger teams to win, so Nia's team winning goes against what you expect. Although shows that kind of surprise. Because would mean the other teams being bigger makes Nia's team win. Unless would mean her team wins only when the other teams are not bigger." },
+      clue: "Would you expect more people to go to the bigger bakery? Does the second idea go along with the first, or against it?",
+      why: "The answer is Although: \"Although the bakery down the street is much bigger, more people come to Grandma's bakery.\" You might expect more people to go to the bigger bakery, so this goes against what you expect. Although shows that kind of surprise. Because would mean the other bakery being bigger is the reason people come to Grandma's. Unless would mean people come to Grandma's only when the other bakery is not bigger." },
     { id: "SK-GC2b-TB4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Is each sentence correct, or does the tense shift by mistake? Match each sentence.",
       cols: ["Correct", "Tense shifts by mistake"],

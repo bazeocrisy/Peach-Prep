@@ -717,27 +717,40 @@ PP.addLesson({
   code: "3.L.V.3.d",
   title: "Using a dictionary and a glossary",
   teach: {
-    big: "A dictionary or glossary tells me how to spell a word and what it means. I use ABC order and guide words to find the word fast, then pick the meaning that fits.",
+    big: "A dictionary or glossary, in a book or on a screen, tells me how to spell a word and what a word or phrase means. I find the entry, then pick the meaning that fits.",
     points: [
       "Words in a dictionary are in ABC order. If two words start with the same letter, look at the second letter. If those match too, look at the third. If one word runs out of letters first, like plan and plane, the shorter word comes first.",
       "Guide words are the two words at the top of a dictionary page. The first guide word is the first word on the page, and the second is the last. Every word on the page comes between them in ABC order.",
-      "An entry shows a word, its part of speech and its meanings. Many words have more than one meaning, and each one has a number.",
-      "To choose the right meaning, read the sentence, then try each meaning in place of the word. Pick the one that makes sense.",
-      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can use a dictionary in a book or online, and you can use it to check how to spell a word."
+      "An entry shows a word, its part of speech and its meanings. Many words have more than one meaning, and each one has a number. To choose, read the sentence, then try each meaning in place of the word. Pick the one that makes sense.",
+      "A glossary is like a small dictionary at the back of a book or article. It explains only the important words from that text. You can also use a dictionary to check how to spell a word.",
+      "A digital dictionary is on a computer, tablet or phone. Instead of using guide words, you type the word in the search box. If you spell it wrong, it may ask \"Did you mean ...?\" and show the right spelling. A Hear it button says the word out loud, and a Synonyms tab shows words that mean almost the same.",
+      "Dictionaries and glossaries also explain phrases. A phrase is a group of words that means something together, like look after. Look up the main word, then find the phrase in its entry. A phrase can mean something different from its words one by one."
     ],
     words: [
       { term: "guide words", means: "the two words at the top of a dictionary page that show the first and last words on it" },
       { term: "entry", means: "a word in a dictionary and all the information about it" },
-      { term: "glossary", means: "a list of important words and their meanings at the back of a book or article" }
+      { term: "glossary", means: "a list of important words and their meanings at the back of a book or article" },
+      { term: "digital dictionary", means: "a dictionary on a computer, tablet or phone, where you type the word you want" },
+      { term: "phrase", means: "a group of words that means something together" }
     ],
-    example: {
-      label: "A dictionary entry",
-      lines: [
-        "crane (noun) 1. a tall bird with long legs and a long neck 2. a large machine that lifts and moves heavy things",
-        "Sentence: The crane lifted the steel beam to the top of the new building."
-      ],
-      note: "Crane has two meanings. A bird cannot lift a steel beam to the top of a building, so the sentence uses meaning 2."
-    },
+    examples: [
+      {
+        label: "A dictionary entry",
+        lines: [
+          "crane (noun) 1. a tall bird with long legs and a long neck 2. a large machine that lifts and moves heavy things",
+          "Sentence: The crane lifted the steel beam to the top of the new building."
+        ],
+        note: "Crane has two meanings. A bird cannot lift a steel beam to the top of a building, so the sentence uses meaning 2."
+      },
+      {
+        label: "A phrase in an entry",
+        lines: [
+          "look (verb) 1. to turn your eyes toward something so you can see it 2. to seem **look after** to take care of someone or something",
+          "Sentence: Ana will look after her baby brother while Mom cooks dinner."
+        ],
+        note: "Look after is a phrase, so it is listed in bold inside the entry for its main word, look. It does not mean to look behind someone. It means to take care of him."
+      }
+    ],
     tip: "On the test, you may see a dictionary entry next to a sentence. Read every numbered meaning before you choose, and try each one in the sentence."
   },
   learn: [
@@ -763,19 +776,23 @@ PP.addLesson({
     },
     {
       show: [
-        "spring (noun) 1. the season between winter and summer 2. a metal coil that bounces back after it is pushed 3. a place where water comes up out of the ground",
-        "Sentence: The hikers filled their bottles with cool water from a spring in the hills."
+        "Sentence: The hikers filled their bottles with cool water from a spring in the hills.",
+        "Ravi looks up spring in a dictionary app on a tablet."
       ],
-      ask: "Which meaning of spring is used in the sentence?",
+      figure: { src: "assets/figures/v3d-app-spring.svg", width: 320,
+        alt: "A dictionary app screen. The search box says spring. The entry shows the word spring in bold, a Hear it button with a speaker, a Meanings tab (open) and a Synonyms tab, the part of speech noun, and three numbered meanings: 1. the season between winter and summer. 2. a metal coil that bounces back after it is pushed. 3. a place where water comes up out of the ground.",
+        caption: "A digital dictionary" },
+      ask: "How does Ravi use the app, and which meaning of spring is used in the sentence?",
       steps: [
-        "Read all three meanings first.",
-        "Find clue words in the sentence: filled their bottles, cool water, in the hills.",
-        "Try each meaning. You cannot fill a bottle with water from a season or from a metal coil. You can fill it from a place where water comes out of the ground."
+        "Ravi types spring in the search box at the top. He does not need guide words, because the app finds the entry for him.",
+        "He taps Hear it to hear the word said out loud. He stays on the Meanings tab, checks the part of speech (noun) and reads all three numbered meanings.",
+        "He finds clue words in the sentence: filled their bottles, cool water, in the hills.",
+        "He tries each meaning. You cannot fill a bottle with water from a season or from a metal coil. You can fill it from a place where water comes out of the ground."
       ],
       answer: "Meaning 3: a place where water comes up out of the ground."
     }
   ],
-  parent: "Grab any dictionary or the glossary in a school book. Call out a word and race to find it, then talk about the guide words on that page. When your child asks how to spell a word, look it up together instead of just telling them.",
+  parent: "Grab any dictionary or the glossary in a school book. Call out a word and race to find it, then talk about the guide words on that page. Try a free online children's dictionary too: type the word, press the button to hear it, and read every meaning before you pick one. When your child asks how to spell a word, look it up together instead of just telling them.",
   passages: [
     { id: "p1", title: "The Life of a Monarch Butterfly", genre: "Informational text",
       paragraphs: [
@@ -827,6 +844,20 @@ PP.addLesson({
       ],
       clue: "Try each meaning in place of match. Which one makes sense when talking about a red sock and a green sock?",
       why: "The answer is 3. Tia's socks are different colors, so they do not go well together or look the same. That is meaning 3. Socks are not a stick that makes a flame or a game between teams." },
+    { id: "SK-V3d-P6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the dictionary entry and the sentence. What does the phrase give up mean in the sentence?",
+      stem: [
+        "give (verb) 1. to hand something to someone 2. to let someone have something as a present **give up** to stop trying",
+        "Sentence: The puzzle had 500 pieces, but Jada did not give up until every piece was in place."
+      ],
+      choices: [
+        { text: "to stop trying", correct: true },
+        { text: "to hand something to someone" },
+        { text: "to lift something up high" },
+        { text: "to let someone have a present" }
+      ],
+      clue: "Give up is a phrase, so look for it in bold inside the entry for give. Do not add up the meanings of give and up one by one.",
+      why: "The answer is to stop trying. The dictionary lists the phrase give up in bold, with its own meaning. Jada kept working until every piece was in place, so she did not stop trying. To hand something over and to let someone have a present are meanings of give by itself, and lifting something up high is a guess from the word up." },
     { id: "SK-V3d-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "The writer wants to add the word milkweed to the glossary. Where should it go so the glossary stays in ABC order?",
       choices: [
@@ -842,7 +873,19 @@ PP.addLesson({
       options: ["becuase", "because", "becaus", "beacuse"],
       answer: [1], pick: 1,
       clue: "Say the word slowly: be-cause. Check each spelling letter by letter. Which one has every sound, with the letters in the right order?",
-      why: "The answer is because, spelled b-e-c-a-u-s-e. Becuase and beacuse have letters in the wrong order, and becaus is missing the e at the end." }
+      why: "The answer is because, spelled b-e-c-a-u-s-e. Becuase and beacuse have letters in the wrong order, and becaus is missing the e at the end." },
+    { id: "SK-V3d-P7", type: "dropdown", points: 2, dok: 2, passages: [],
+      stem: ["Nia's sentence: The woodpecker pecked at the bark of the old oak to find bugs.", "Nia was not sure of the spelling, so she typed barck into a dictionary app."],
+      prompt: "Use the dictionary screen. Choose the spelling and the meaning that fit Nia's sentence.",
+      figure: { src: "assets/figures/v3d-app-bark.svg", width: 320,
+        alt: "A dictionary app screen. The search box says barck. Under it the app asks: Did you mean: bark? The entry shows the word bark, a Hear it button, a Meanings tab and a Synonyms tab, the part of speech noun, and two numbered meanings: 1. the short, loud sound a dog makes. 2. the hard outer covering of a tree trunk." },
+      text: "The word is spelled {0}, and in Nia's sentence it means {1}.",
+      slots: [
+        { options: ["barck", "bark", "barke"], answer: 1 },
+        { options: ["the short, loud sound a dog makes", "the hard outer covering of a tree trunk", "a tool that a bird uses to peck wood"], answer: 1 }
+      ],
+      clue: "First, look under the search box: what spelling does the app suggest? Then read both meanings and ask: what does a woodpecker peck at on an oak?",
+      why: "The answers are bark and \"the hard outer covering of a tree trunk.\" The app asked \"Did you mean: bark?\", so barck is not the right spelling, and barke is not shown anywhere. A woodpecker pecks at the hard outer covering of a tree trunk, so the sentence uses meaning 2, not meaning 1, the sound a dog makes. A tool for pecking is not one of the meanings on the screen." }
   ],
   test: [
     { id: "SK-V3d-T1", type: "mc", points: 1, dok: 2, passages: [],
@@ -894,14 +937,33 @@ PP.addLesson({
       ],
       clue: "Look at what Grandpa does with his hands, and where the peach is. Then try each meaning in place of pick.",
       why: "The answer is \"to pull a fruit or flower off a plant.\" Grandpa gave a gentle tug to get the peach off the branch. A peach is a fruit, and he pulled it off the tree. In this sentence pick is an action, so it cannot be a tool or a guitar piece." },
-    { id: "SK-V3d-T5", type: "dropdown", points: 1, dok: 1, passages: [],
-      prompt: "Pablo looks up finish in a dictionary to check how to spell finished. Choose the correct spelling.",
-      text: "I {0} my homework before dinner.",
-      slots: [
-        { options: ["finnished", "finished", "finishd"], answer: 1 }
+    { id: "SK-V3d-T6", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Mateo's sentence: My sister is so ____ that she read a whole chapter book in one day.", "He is not sure how to spell the word he wants, so he types brite into a dictionary app."],
+      prompt: "Use the dictionary screen. Which spelling and meaning should Mateo use?",
+      figure: { src: "assets/figures/v3d-app-bright.svg", width: 320,
+        alt: "A dictionary app screen. The search box says brite. Under it the app asks: Did you mean: bright? The entry shows the word bright, a Hear it button, a Meanings tab and a Synonyms tab, the part of speech adjective, and two numbered meanings: 1. full of light; shining. 2. smart and quick to learn." },
+      choices: [
+        { text: "bright, with meaning 2", correct: true },
+        { text: "bright, with meaning 1" },
+        { text: "brite, with meaning 2" },
+        { text: "brite, with meaning 1" }
       ],
-      clue: "Start with the base word finish. Then add the ending for something that already happened.",
-      why: "The answer is finished. The base word finish has one n. To show it already happened, add -ed: f-i-n-i-s-h-e-d." }
+      clue: "Check two things on the screen: the spelling the app suggests under the search box, and the meaning that fits a sister who reads a whole book in one day.",
+      why: "The answer is bright, with meaning 2. The app asked \"Did you mean: bright?\", so brite is not the right spelling. A sister who reads a chapter book in one day is smart and quick to learn. She is not full of light, so meaning 1 does not fit." },
+    { id: "SK-V3d-T7", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the dictionary entry and the sentence. What does ran out of mean in the sentence?",
+      stem: [
+        "run (verb) 1. to move fast on your feet 2. to be in charge of something **run out of** to use up all of something so none is left",
+        "Sentence: We ran out of glue, so we could not finish the poster."
+      ],
+      choices: [
+        { text: "used up all of", correct: true },
+        { text: "moved fast away from" },
+        { text: "was in charge of" },
+        { text: "hurried outside with" }
+      ],
+      clue: "Ran is a form of run. Find the phrase in bold inside the entry for run, then try its meaning in the sentence.",
+      why: "The answer is used up all of. Ran out of is the past form of the phrase run out of, which the entry lists in bold: to use up all of something so none is left. With no glue left, they could not finish the poster. Moving fast and being in charge are meanings of run by itself, and hurrying outside is a guess from the word out." }
   ]
 });
 
