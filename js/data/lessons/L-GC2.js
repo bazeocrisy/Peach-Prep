@@ -662,9 +662,9 @@ PP.addLesson({
 
 PP.addLesson({
   code: "3.L.GC.2.d",
-  title: "Use exact describing words",
+  title: "Add details with exact describing words",
   teach: {
-    big: "Adjectives and adverbs add details. The best ones tell exactly what you mean, so your reader can picture it.",
+    big: "When you elaborate, you add details that tell more about an idea. Exact adjectives and adverbs make those details clear, so your reader can picture what you mean.",
     points: [
       "An adjective describes a noun. It tells what kind, how many or which one: a shaggy dog, three apples.",
       "An adverb describes a verb. It tells how, when or where something happens: whispered softly, left early, played outside.",
@@ -707,13 +707,14 @@ PP.addLesson({
     },
     {
       show: ["A bird sat on the fence."],
-      ask: "How can you add an adjective and an adverb to make this sentence clearer?",
+      ask: "How can you elaborate on this idea, adding details with adjectives and adverbs?",
       steps: [
         "Ask: what kind of bird? Add adjectives before bird, like tiny and red.",
         "Ask: how did it sit? Add an adverb after sat, like calmly.",
+        "Ask: what else could the reader learn? Add a detail that tells more, like what the bird was doing: singing a cheerful song.",
         "Read it back. Can you picture it now?"
       ],
-      answer: "A tiny red bird sat calmly on the fence."
+      answer: "A tiny red bird sat calmly on the fence, singing a cheerful song."
     }
   ],
   write: {
@@ -759,15 +760,15 @@ PP.addLesson({
       clue: "Ask what the word describes. If it tells what kind of thing, it is an adjective. If it tells how, when or where something happens, it is an adverb.",
       why: "Striped tells what kind of snake, and sticky tells what the hands were like, so they are adjectives. Gently tells how she patted, outside tells where they played, and early tells when the bus came, so they are adverbs." },
     { id: "SK-GC2d-P4", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Which sentence gives the most exact details?",
+      prompt: "Ben wrote, \"We went to the beach.\" He wants to elaborate by adding details that tell more about his idea. Which revision does that best?",
       choices: [
-        { text: "The tiny kitten purred softly in my lap.", correct: true },
-        { text: "The little cat was nice and sat in my lap." },
-        { text: "The kitten did something cute in my lap today." },
-        { text: "A good pet sat on me for a long, long time." }
+        { text: "We went to the sandy beach early and splashed happily in the cool waves.", correct: true },
+        { text: "We went to the beach, and the beach was really nice and fun." },
+        { text: "We went to the beach on a day, and then we went back home." },
+        { text: "We went to the beach with some stuff, and it was a good time." }
       ],
-      clue: "Look for describing words that help you picture exactly what happened. Plain words like nice and good do not help much.",
-      why: "The answer is \"The tiny kitten purred softly in my lap.\" Tiny tells what the kitten looked like, and softly tells how it purred. The other sentences mix in plain words like nice, something, cute and good, so you cannot picture exactly what happened." },
+      clue: "Elaborate means to tell more. Which revision adds new details that help you picture the trip?",
+      why: "The answer is \"We went to the sandy beach early and splashed happily in the cool waves.\" It adds details that tell more: sandy tells what kind of beach, early tells when, happily tells how they splashed, and cool tells what the waves were like. The other revisions add plain words like nice, fun, stuff and good, or add words that tell nothing new, so the reader still cannot picture the trip." },
     { id: "SK-GC2d-P5", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Sam wrote, \"We ate good pancakes.\" Choose the TWO words that could replace good to tell exactly what the pancakes were like.",
       choices: [

@@ -945,7 +945,7 @@ PP.addLesson({
         ["An elephant uses its trunk to pull up grass and to pick fruit from trees.", "It uses its tusks to peel bark off tree trunks.", "Elephants also drink a lot of water, as much as 50 gallons in a day."],
         ["Plants do not give an elephant much energy in each bite.", "That is why elephants must eat so much and spend most of the day eating."]
       ] },
-    { id: "p2", title: "Elephants Are Awesome", byline: "Source 2", genre: "Informational text (web page)",
+    { id: "p2", title: "All About Elephants", byline: "Source 2", genre: "Informational text (web page)",
       paragraphs: [
         ["Elephants live in Africa and Asia.", "Everyone knows elephants eat more than any other animal ever!"],
         ["They have long trunks.", "An elephant's trunk has no bones in it.", "Elephants flap their big ears to cool off on hot days."],
