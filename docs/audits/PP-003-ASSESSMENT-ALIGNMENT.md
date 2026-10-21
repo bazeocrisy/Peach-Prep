@@ -175,6 +175,8 @@ GaDOE (blueprint footnote 1) lists selected-response plus drag-and-drop, drop-do
 
 ## E2. Specification: optional full-length practice exam ("Practice Test: Full Length")
 
+> **Superseded in part by PP-004.** A PP-004 review checked this section against the blueprint. The core numbers are right: 49 items, 41 scored, 60 points, and the cell points. It found an item-count error in the proposed sections (they added to 42, not 41) and several claims that the official sources do not support. Those claims, about section order, no going back, how field-test items are identified, and which cell the essay is in, are now marked UNVERIFIED and treated as Peach Prep design choices. See `docs/audits/work/pp004-exam-plan.md` (corrections C1–C10) and `docs/audits/PP-004-ASSESSMENT-REVIEW.md`. The implementation plan there replaces this specification.
+
 **This is a specification only. Nothing here is implemented.**
 
 ### E2.1 Item counts and points per cell

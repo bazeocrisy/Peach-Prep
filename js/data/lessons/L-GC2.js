@@ -28,7 +28,7 @@ PP.addLesson({
       ],
       note: "The first three are correct sentences. The fragment starts like the complex sentence but stops before the whole thought. The run-on has two whole thoughts with nothing to join them."
     },
-    tip: "On the test, you may be asked which sentence is complete or which one is written correctly. Read each choice by itself and ask: Does it have a who, a does-what and a whole thought?"
+    tip: "On the test, you may be asked which sentence is complete or which one is written correctly. You may also read a student's draft and find the fragment or run-on, choose the best way to fix it, or find a sentence of one kind. Read each sentence by itself and ask: Does it have a who, a does-what and a whole thought?"
   },
   learn: [
     {
@@ -82,7 +82,7 @@ PP.addLesson({
       ] },
     { id: "p2", title: "The Old Lighthouse", byline: "Jordan's draft", genre: "Student draft (narrative)", draft: true,
       paragraphs: [
-        ["(1) Last summer, my family visited an old lighthouse on the Georgia coast.", "(2) It stands on a sandy point near the ocean."],
+        ["(1) Last summer, my family visited an old lighthouse on the Georgia coast.", "(2) The tall white tower stood on a sandy point near the ocean."],
         ["(3) We climbed the long, winding stairs to the top.", "(4) My legs ached, but I kept going.", "(5) When we reached the top.", "(6) We could see boats far out on the water."],
         ["(7) A guide told us about the keepers from long ago.", "(8) Each night, a keeper climbed the stairs he lit the big lamp.", "(9) The bright light warned ships about the rocks.", "(10) Today, the lamp turns on by itself."],
         ["(11) Before we left, I bought a postcard of the lighthouse."]

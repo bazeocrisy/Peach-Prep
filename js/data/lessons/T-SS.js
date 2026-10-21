@@ -325,7 +325,7 @@ PP.addLesson({
       paragraphs: [
         ["(1) The Pine Hill Library is a great place for kids in our town.", "(2) It is open six days a week, and it is free to visit."],
         ["(3) You can borrow much more than books at the library.", "(4) Kids can check out movies, puzzles and even board games.", "(5) You can keep most things for two weeks."],
-        ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) Kids can also borrow audiobooks to listen to in the car.", "(9) In the summer, there is a reading contest with prizes."],
+        ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) On Wednesdays, kids can join a building-block club.", "(9) In the summer, there is a reading contest with prizes."],
         ["(10) Next time you need something fun to do, visit the Pine Hill Library!"]
       ] }
   ],
@@ -401,7 +401,7 @@ PP.addLesson({
         { text: "When the Library Is Open" }
       ],
       clue: "Look at the first sentence of that part. It tells what the whole part is mostly about.",
-      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library plans special activities, and sentences 7 and 9 tell about two of them: story time and the summer contest. Borrowing is the topic of sentences 3 to 5." },
+      why: "The answer is \"Fun Events for Kids.\" Sentence 6 says the library plans special activities, and sentences 7 to 9 tell about three of them: story time, the block club and the summer contest. Borrowing is the topic of sentences 3 to 5." },
     { id: "SK-SS1b-T3", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a photo of the Saturday story time. Which caption would best help her reader?",
       choices: [
