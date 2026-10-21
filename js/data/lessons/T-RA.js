@@ -612,7 +612,7 @@ PP.addLesson({
         ["In spring, a pair of brown thrashers builds a nest together.", "They hide it in a thick bush or low in a small tree."],
         ["The nest is made of twigs.", "The birds line the inside with soft grass and leaves."],
         ["The mother lays three to five eggs.", "Each egg is pale blue with tiny brown spots.", "Both parents take turns keeping the eggs warm, and both bring food to the babies after they hatch."],
-        ["Thrashers guard their nest.", "When a cat or a person comes too close, the father may dive at them and even strike them.", "Many thrasher families raise two sets of babies in one summer."]
+        ["Thrashers guard their nest.", "When a cat or a person comes too close, a parent may dive at them and even strike them.", "Many thrasher families raise two sets of babies in one summer."]
       ] }
   ],
   practice: [
@@ -1124,7 +1124,8 @@ PP.addLesson({
           { text: "\"Elephants live in Africa and Asia.\"" },
           { text: "\"Everyone knows elephants eat more than any other animal ever!\"", correct: true },
           { text: "\"They have long trunks.\"" },
-          { text: "\"An elephant can eat a million pounds of peanuts in one day.\"", correct: true }
+          { text: "\"An elephant can eat a million pounds of peanuts in one day.\"", correct: true },
+          { text: "\"Many elephants live to be 60 years old or even older.\"" }
         ] },
       clue: "Read each source's words closely. Does the writer tell how the facts were found out? Do the numbers seem possible, or do they sound made up?",
       why: "Part A: Source 1, because its facts make sense and tell how people found them out. Part B: \"Everyone knows elephants eat more than any other animal ever!\" and \"An elephant can eat a million pounds of peanuts in one day.\" Source 1 says scientists watched elephants eat, and its numbers can be checked. Source 2 says everyone knows, which does not tell who checked, and a million pounds in one day is far too much to be true. Exciting words and being found first do not make a source trustworthy. The sentences about where elephants live and their trunks are true, so they do not show a problem." }

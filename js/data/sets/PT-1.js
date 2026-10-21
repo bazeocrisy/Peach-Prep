@@ -305,13 +305,13 @@ PP.addSet({
       dok: 3,
       prompt: "In paragraph 6, Malik tells the reader what he is thinking. How is Malik's view of the chip different from Aunt Bea's view later in the story?",
       choices: [
-        { text: "Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.", correct: true },
-        { text: "Malik thinks the chip is too small to matter at all, but Aunt Bea thinks the chip ruins the pitcher." },
+        { text: "Malik thinks the chip is a big problem he must hide, but Aunt Bea treats it as a problem she can solve by making a new pitcher.", correct: true },
+        { text: "Malik thinks the chip is too small to matter, but Aunt Bea thinks it ruins her shop." },
         { text: "Malik hopes he can keep helping in the shop, but Aunt Bea decides that he cannot help her anymore." },
         { text: "Malik thinks Mrs. Greene will be angry about the chip, but Aunt Bea knows she will not care." }
       ],
       clue: "Find what Malik is afraid of in paragraph 6. Then read what Aunt Bea says and does after Malik tells her what happened. Compare the two.",
-      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea thinks it matters less than the truth.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. In paragraph 11, Aunt Bea thanks him for telling her, and she says the chip matters much less to her than being able to trust him. Malik does think the chip matters, or he would not hide it, and Aunt Bea calls the chip a small problem. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
+      why: "The answer is \"Malik thinks the chip is a big problem he must hide, but Aunt Bea treats it as a problem she can solve by making a new pitcher.\" In paragraph 6, Malik worries that Aunt Bea will never let him help in the shop again, so he hides the chip. After he tells her, Aunt Bea stays calm. In paragraphs 12 and 13, she agrees to make another pitcher before the wedding, so the chip is something she can fix. Malik does think the chip matters, or he would not hide it, and Aunt Bea does not act as if her shop is ruined. Aunt Bea does not stop Malik from helping: she asks him to help at the wheel. Malik never says that Mrs. Greene will be angry."
     },
     {
       id: "PT-1-7",
@@ -440,19 +440,19 @@ PP.addSet({
       dok: 2,
       prompt: "Read each cause from the article. Choose the effect that goes with it. Use each effect once.",
       cols: [
-        "The tree slows down its food making.",
+        "The red colors are especially bright.",
         "The soil gets nutrients for new plants.",
         "The leaf looks green.",
         "A gentle breeze can knock the leaf loose."
       ],
       rows: [
         { text: "A leaf has a lot of green chlorophyll inside it.", answer: 2 },
-        { text: "In the fall, the days get shorter and there is less sunlight.", answer: 0 },
+        { text: "Fall days are sunny, and fall nights are cool.", answer: 0 },
         { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 },
         { text: "Fallen leaves slowly break down on the ground.", answer: 1 }
       ],
       clue: "A cause makes something happen. Find each cause in the article. Then read on to find what it makes happen.",
-      why: "Chlorophyll is green, so a leaf full of it looks green. When the days get shorter, there is less sunlight, so the tree slows down its food making. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
+      why: "Chlorophyll is green, so a leaf full of it looks green. Paragraph 5 says sunny fall days and cool nights help make the reds especially bright. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
     },
     {
       id: "PT-1-14",

@@ -703,7 +703,7 @@ PP.addLesson({
         { text: "Ms. Lopez is the nurse who helped me.", correct: true },
         { text: "Saturday is the day when we go to the library.", correct: true },
         { text: "The bus who takes us to school is yellow." },
-        { text: "That is the store when we buy bread." },
+        { text: "This is the store when we buy bread." },
         { text: "Liam is the boy where lives next door." }
       ],
       clue: "For each sentence, look at the noun before who, where or when. Is it a person, a thing, a place or a time? For a place or a time, add there or then to the words after it and check for a whole sentence.",

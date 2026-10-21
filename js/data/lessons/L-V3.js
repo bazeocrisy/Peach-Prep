@@ -94,7 +94,7 @@ PP.addLesson({
     { id: "p3", title: "How a Hot-Air Balloon Flies", genre: "Informational text",
       paragraphs: [
         ["A hot-air balloon has no engine and no wings.", "Still, it can float high above the trees."],
-        ["A balloon has three main parts.", "The big cloth bag on top is called the envelope.", "Under the envelope is a burner, and under the burner hangs a basket for the pilot and riders."],
+        ["A balloon has three main parts, plus a few smaller ones.", "The big cloth bag on top is called the envelope.", "Under the envelope is a burner, and under the burner hangs a basket for the pilot and riders."],
         ["To make the balloon go up, the pilot turns on the burner.", "It shoots a tall flame up into the envelope and heats the air inside.", "Hot air is lighter than cool air.", "The same amount of hot air weighs less, so it rises and carries the balloon with it."],
         ["As the air inside gets hotter, the balloon begins to ascend.", "It floats higher and higher.", "Soon the houses below look as small as toy blocks."],
         ["A pilot cannot steer a balloon the way a driver steers a car.", "The balloon drifts wherever the wind pushes it.", "That is why pilots like to fly early in the morning, when the air is usually calm.", "Later in the day, the wind is often gusty instead, and it can push a balloon the wrong way."],

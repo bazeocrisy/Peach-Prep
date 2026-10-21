@@ -326,15 +326,15 @@ PP.addLesson({
       why: "The order is: the empty corner (introduces the topic), I think we should turn it into a reading corner (the opinion), First (reason 1), Also (reason 2), and For all these reasons (the conclusion)." },
     { id: "SK-TT3c-P6", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read Theo's opinion in the box. Theo needs to think of a reason on his own. Which sentence is the best reason to support his opinion?",
-      stem: ["Opinion: Our school should start a reading buddy program, where older kids read with younger kids."],
+      stem: ["Opinion: Our playground should have a buddy bench, where kids can sit when they need someone to play with."],
       choices: [
-        { text: "Younger kids would get extra help as they learn to read.", correct: true },
-        { text: "Our school library has hundreds of books on its shelves." },
-        { text: "I really think a reading buddy program is a great idea." },
-        { text: "Some of the older kids like to play soccer at recess." }
+        { text: "Kids who feel left out would have an easy way to find a friend.", correct: true },
+        { text: "Our playground already has two slides and a big swing set." },
+        { text: "I really think a buddy bench is a great idea." },
+        { text: "Some kids like to eat their lunch outside on sunny days." }
       ],
       clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: Does it answer the question, why should the school do this?",
-      why: "The answer is \"Younger kids would get extra help as they learn to read.\" It tells why a reading buddy program is a good idea. The library sentence is a fact, but it does not explain why buddies would help. \"I really think...\" only says the opinion again, and soccer at recess is not about reading." }
+      why: "The answer is \"Kids who feel left out would have an easy way to find a friend.\" It tells why a buddy bench is a good idea. The slides sentence is a fact, but it does not explain why the playground needs a bench. \"I really think...\" only says the opinion again, and eating lunch outside is not about finding someone to play with." }
   ],
   test: [
     { id: "SK-TT3c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],

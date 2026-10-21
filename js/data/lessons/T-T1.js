@@ -1014,7 +1014,7 @@ PP.addLesson({
       ],
       clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
       why: "Only Mateo finds something that was lost: Grandfather's ring. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
-    { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
+    { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "How is the problem in Mateo's story different from the problem in Ravi's story?",
       choices: [
         { text: "In Mateo's story, a treasure is stuck, but in Ravi's, the birds keep flying away.", correct: true },

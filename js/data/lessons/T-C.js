@@ -979,7 +979,7 @@ PP.addLesson({
         { text: "Ella had hurt her eyes from reading, and she could not read anymore." }
       ],
       clue: "Letters often say early on why the writer is writing. Read the first paragraph after \"Dear Cousin Hattie.\"",
-      why: "The answer is \"Hattie had sent her a book for her birthday, and Ella wanted to thank her.\" That is the situation: Ella starts with \"Thank you for the book you sent for my birthday.\" Ella only hopes to visit Atlanta, so her family is not moving. Papa and Walter plow the field themselves. Papa only says she will hurt her eyes, and she says she cannot stop reading."},
+      why: "The answer is \"Hattie had sent her a book for her birthday, and Ella wanted to thank her.\" That is the situation: Ella starts with \"Thank you for the book you sent for my birthday.\" Nothing in the letter says her family is moving. Papa and Walter plow the field themselves. Papa only says she will hurt her eyes, and she says she cannot stop reading."},
     { id: "SK-TC2c-P6", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Read \"Dr. Ruiz's Field Notebook.\" Why are Dr. Ruiz's notes full of numbers and short facts?",
       choices: [

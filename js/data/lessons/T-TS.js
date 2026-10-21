@@ -189,7 +189,7 @@ PP.addLesson({
       ],
       clue: "These are clue words. Ask: What question do they help a reader answer?",
       why: "The answer is \"to show the order of the steps for making the cobbler.\" These are time clue words. Nothing goes wrong in the story, and the author does not compare two fruits." },
-    { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 3, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
+    { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Why does the butter have to go into the oven BEFORE Keisha pours in the batter?",
         choices: [
@@ -571,7 +571,7 @@ PP.addLesson({
       targets: ["p1:3:1", "p1:3:2", "p1:4:1", "p1:4:2", "p1:6:1"],
       answer: ["p1:3:2"], pick: 1,
       clue: "Find Jamal's first try. Then read the sentence right after it. What happened the next morning?",
-      why: "The answer is \"But the next morning, a new line of ants marched right back.\" Jamal's first try was wiping the ants away. The clue word But shows that it did not work. The other But sentence is about his second try." },
+      why: "The answer is \"But the next morning, a new line of ants marched right back.\" Jamal's first try was wiping the ants away. The very next morning, a new line of ants marched right back, so wiping did not stop them. The other sentence about the ants coming back is about his second try." },
     { id: "SK-TSPS-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What finally solves the problem?",
       choices: [
