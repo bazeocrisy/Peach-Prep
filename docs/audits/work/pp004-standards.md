@@ -124,3 +124,7 @@ A new section, "PP-004: standards.js against the official grade 3 standards", wa
 - the official counts.
 
 **Verification.** A mutation test in a scratch copy produced 6 expected FAILs: a relevelled row, two altered official wordings, a code removed and a fake code added. The real tree passes.
+
+## Lead addendum: show the official wording
+- The skill page (js/skills.js, `#sk-official`) and the parent guide's "Every standard" tab (js/parents.js) now show each standard's `official` field in quotation marks, labelled "Georgia's official wording (standards p. N)". If a record has no `official` field, the old paraphrase label is kept. GUM rows keep their level line.
+- The child-facing `plain` paraphrase is unchanged.

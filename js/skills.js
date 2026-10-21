@@ -553,8 +553,10 @@
     off.appendChild(make("summary", "", "Georgia's standard" + (anyTest ? " and what Proficient looks like" : "")));
     codes.forEach(c => {
       const x = byCode[c]; if (!x) return;
-      /* standards.js text is paraphrased, so it is not shown in quotation marks */
-      const p = make("p", "sk-off-text"); p.appendChild(make("strong", "", codeLabel(x) + " (paraphrased): ")); p.appendChild(document.createTextNode(x.text));
+      /* PP-004: show Georgia's exact wording (x.official, from the May 2023 Grades 3-5 standards) with its page */
+      const p = make("p", "sk-off-text");
+      if (x.official) { p.appendChild(make("strong", "", codeLabel(x) + " (Georgia's official wording" + (x.page ? ", standards p. " + x.page : "") + "): ")); p.appendChild(document.createTextNode("\u201C" + x.official + "\u201D")); }
+      else { p.appendChild(make("strong", "", codeLabel(x) + " (paraphrased): ")); p.appendChild(document.createTextNode(x.text)); }
       off.appendChild(p);
     });
     off.appendChild(make("p", "note", "Georgia's K-12 English Language Arts Standards, grades 3-5" + (s.gum ? ", Grammar, Usage and Mechanics chart (grade 3 row: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] + ")" : "") + "."));

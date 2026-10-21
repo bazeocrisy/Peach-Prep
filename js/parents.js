@@ -144,6 +144,7 @@
       const body = make("div", "std-body");
       if (s.plain) body.appendChild(make("p", "std-plain", s.plain));
       if (s.gum) body.appendChild(make("p", "", "Grade 3 level: " + ({ M: "Master by the end of grade 3", R: "Reinforce (learned earlier)", I: "Introduce this year", C: "Continue (not yet mastered)" })[s.level] + ". " + (s.testedNote || "")));
+      else if (s.official) body.appendChild(make("p", "", "Georgia's official wording" + (s.page ? " (standards p. " + s.page + ")" : "") + ": \u201C" + s.official + "\u201D"));
       else body.appendChild(make("p", "", "Georgia's standard, paraphrased: " + s.text));
       body.appendChild(make("p", "std-tested", tb[1] + "."));
       const k = aldKey(s.code.split(":")[0]);
