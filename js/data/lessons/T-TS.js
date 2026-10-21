@@ -434,7 +434,7 @@ PP.addLesson({
     big: "The author shows a problem, the things someone tries, and the solution that finally works.",
     points: [
       "The problem is what is wrong. Look for the word problem or for something that keeps going wrong.",
-      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right before a try that failed.",
+      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right after a try. It tells you the try did not work.",
       "Failed tries matter. They help show what the REAL problem was.",
       "The solution is what finally fixes it. Clue words like decided, solved and finally point to it.",
       "You see this in stories and in true texts, too. A town with too much litter might add recycling bins."
@@ -510,7 +510,7 @@ PP.addLesson({
       prompt: "Which sentence shows that Jamal's FIRST try did not work? Choose the sentence in the passage.",
       targets: ["p1:3:1", "p1:3:2", "p1:4:1", "p1:4:2", "p1:6:1"],
       answer: ["p1:3:2"], pick: 1,
-      clue: "In a problem-and-solution story, the word but often comes right before a try that failed. Find the first try, then check the sentence after it.",
+      clue: "Find Jamal's first try. Then read the sentence right after it. What happened the next morning?",
       why: "The answer is \"But the next morning, a new line of ants marched right back.\" Jamal's first try was wiping the ants away. The clue word But shows that it did not work. The other But sentence is about his second try." },
     { id: "SK-TSPS-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What finally solves the problem?",

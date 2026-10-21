@@ -98,7 +98,7 @@
     }
     t.addEventListener("input", () => { data.draft = t.value; save(); upd(); });
     host.appendChild(t); host.appendChild(stats); upd();
-    host.appendChild(make("p", "note", "Spell-check is off, like on the test. Peach Prep does not score the essay; a grown-up uses the For parents tab."));
+    host.appendChild(make("p", "note", "Spell-check is off here. Peach Prep does not score the essay; a grown-up uses the For parents tab."));
     const go = make("button", "btn btn-primary", "Next: check my work"); go.type = "button";
     go.addEventListener("click", () => select("check"));
     host.appendChild(go);

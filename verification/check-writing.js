@@ -29,7 +29,7 @@ const ASSESSED = new Set([
   "3.T.T.1.e", "3.T.T.2.d", "3.T.T.3.c", "3.T.T.4.b", "3.T.RA.1.c",
   "3.L.GC.2.b", "3.L.GC.2.c", "3.L.GC.2.d", "3.L.V.1.b", "3.L.V.2.c", "3.L.V.3.e"
 ]);
-const stdOk = c => ASSESSED.has(c) || /^3\.L\.GC\.1:[GUM]:[a-z0-9-]+$/.test(c);
+const stdOk = c => ASSESSED.has(c) || /^3\.L\.GC\.1:[MR]:[a-z0-9-]+$/.test(c);
 const TYPES = ["mc", "ms", "ebsr", "dropdown", "hottext", "order", "match"];
 
 // What each revising set must cover (from the brief)
