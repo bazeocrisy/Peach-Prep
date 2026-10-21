@@ -565,8 +565,8 @@ PP.addLesson({
     big: "To write a rhyming poem, pick a rhyme pattern, use it in every stanza, and choose rhyming words that still make sense and help your reader feel something.",
     points: [
       "Pick a topic and a feeling you want your reader to have, like cozy, excited or silly.",
-      "Write at least two stanzas, and leave a space between them.",
-      "Choose a rhyme pattern, such as lines 1 and 2 rhyme and lines 3 and 4 rhyme. Use that same pattern in every stanza.",
+      "Think about your audience, the people who will read or hear your poem. Sound words, action words and a fun or surprising ending help them picture your poem and keep them listening.",
+      "Write at least two stanzas, and leave a space between them. Choose a rhyme pattern, such as lines 1 and 2 rhyme and lines 3 and 4 rhyme. Use that same pattern in every stanza.",
       "Before you write, make a list of rhyming words, like sun, fun, run and done.",
       "A good rhyming line must also make sense and stay on your topic. Never pick a rhyme that changes what you mean."
     ],
@@ -624,13 +624,14 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: ["Write a rhyming poem about something you love to do outside.", "Write at least two stanzas of four lines each. Choose a rhyme pattern, and use the same pattern in both stanzas. Pick words that help your reader feel what you feel."],
+    prompt: ["Write a rhyming poem about something you love to do outside.", "Write at least two stanzas of four lines each. Choose a rhyme pattern, and use the same pattern in both stanzas. Pick words that help your reader feel what you feel. Then read your poem out loud to someone, and watch how they react."],
     checklist: [
       "I wrote at least two stanzas, with a space between them.",
       "I used a rhyme pattern, like lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
       "I used the same rhyme pattern in every stanza.",
       "My rhyming words make sense and stay on my topic.",
-      "I chose words that help my reader feel how I feel."
+      "I chose words that help my reader feel how I feel.",
+      "I read my poem to someone, and my words helped them picture it or smile."
     ],
     rows: 10
   },

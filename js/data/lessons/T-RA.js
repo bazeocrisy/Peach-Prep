@@ -597,19 +597,18 @@ PP.addLesson({
         ["In Mexico, the monarchs rest in tall trees for the winter.", "So many butterflies cover the branches that the trees look orange."],
         ["In spring, the monarchs fly north again.", "They stop to lay eggs on milkweed along the way.", "Their children and grandchildren finish the trip north."]
       ] },
-    { id: "p3", title: "Hummingbirds Up Close", byline: "Source 1", genre: "Informational text",
+    { id: "p3", title: "Meet the Brown Thrasher", byline: "Source 1", genre: "Informational text",
       paragraphs: [
-        ["Hummingbirds are some of the smallest birds in the world.", "Many weigh less than a nickel.", "They are named for the humming sound their wings make."],
-        ["A hummingbird's wings beat so fast that they look like a blur.", "These birds can hover in one spot, like a helicopter.", "They can even fly backward."],
-        ["Hummingbirds drink nectar from flowers.", "They reach deep inside each flower with a long bill and a long tongue.", "They also eat tiny insects and spiders."],
-        ["Because they fly so much, hummingbirds use a lot of energy.", "They must eat many times a day, so they visit flower after flower."]
+        ["The brown thrasher is the state bird of Georgia.", "It has a reddish-brown back, a long tail and bright yellow eyes.", "Its white chest is covered with brown spots."],
+        ["Brown thrashers are famous singers.", "One bird can sing more than one thousand different songs.", "It sings each part of a song two times before it moves on to the next part."],
+        ["Look for thrashers in yards and woods that have lots of bushes.", "They find most of their food on the ground.", "A thrasher sweeps its long, curved bill from side to side through dead leaves.", "It finds beetles, worms and other small animals hiding there.", "It also eats berries, seeds and acorns."]
       ] },
-    { id: "p4", title: "A Hummingbird's Year", byline: "Source 2", genre: "Informational text",
+    { id: "p4", title: "A Thrasher Family", byline: "Source 2", genre: "Informational text",
       paragraphs: [
-        ["Each spring, ruby-throated hummingbirds come to Georgia.", "They stay all summer long."],
-        ["The mother builds a nest about the size of a walnut shell.", "She makes it from soft bits of plants.", "She holds it together with spider silk.", "Then she lays two tiny white eggs."],
-        ["In late summer, the birds eat and eat to get ready for a long trip.", "Then they fly far south for the winter.", "Many of them cross a wide sea without stopping to rest."],
-        ["In spring, they fly north again.", "Many come back to the same places year after year.", "Many people hang feeders filled with sugar water to greet them."]
+        ["In spring, a pair of brown thrashers builds a nest together.", "They hide it in a thick bush or low in a small tree."],
+        ["The nest is made of twigs.", "The birds line the inside with soft grass and leaves."],
+        ["The mother lays three to five eggs.", "Each egg is pale blue with tiny brown spots.", "Both parents take turns keeping the eggs warm, and both bring food to the babies after they hatch."],
+        ["Thrashers guard their nest.", "When a cat or a person comes too close, the father may dive at them and even strike them.", "Many thrasher families raise two sets of babies in one summer."]
       ] }
   ],
   practice: [
@@ -666,59 +665,59 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-RA1c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kayla is writing a summary of both sources. Which sentence BEST sums up what the two sources say about hummingbirds?",
+      prompt: "Kayla is writing a summary of both sources. Which sentence BEST sums up what the two sources say about brown thrashers?",
       choices: [
-        { text: "Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.", correct: true },
-        { text: "Hummingbirds can hover in one spot, and they drink nectar from many flowers." },
-        { text: "A hummingbird mother builds a nest about the size of a walnut shell." },
-        { text: "Hummingbirds are the best birds to watch because they are so cute." }
+        { text: "Thrashers find their food on the ground, and thrasher parents work together to raise a family.", correct: true },
+        { text: "Brown thrashers have reddish-brown backs, long tails, spotted chests and yellow eyes." },
+        { text: "Each brown thrasher egg is pale blue and covered with tiny brown spots." },
+        { text: "I think brown thrashers are the prettiest birds in the whole state of Georgia." }
       ],
       clue: "Look for a sentence that uses a big idea from each source, tells facts, and leaves out small details.",
-      why: "The answer is \"Hummingbirds are tiny, fast flyers that nest in Georgia in summer and go south in winter.\" It joins the big idea of Source 1 (tiny, fast flyers) with the big idea of Source 2 (their year of nesting and travel). The hover sentence uses only Source 1, the nest sentence is one detail, and the cute sentence is an opinion." },
+      why: "The answer is \"Thrashers find their food on the ground, and thrasher parents work together to raise a family.\" It joins a big idea from Source 1 (how the bird finds food) with the big idea of Source 2 (a thrasher pair raising a family). The sentence about backs, tails, chests and eyes uses only Source 1, the egg sentence is one tiny detail, and the prettiest-birds sentence is an opinion." },
     { id: "SK-RA1c-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      stem: ["Kayla's notes from Source 1, under the heading \"Why hummingbirds eat so much\":", "• They use a lot of energy.", "• They must eat many times a day."],
+      stem: ["Kayla's notes from Source 1, under the heading \"Where to look for a brown thrasher\":", "• in yards and woods with lots of bushes", "• on the ground, searching through dead leaves"],
       prompt: "Which fact from Source 2 adds the most to Kayla's notes?",
       choices: [
-        { text: "In late summer, they eat and eat to get ready for a long trip.", correct: true },
-        { text: "The mother builds a nest about the size of a walnut shell." },
-        { text: "People hang feeders filled with sugar water in the spring." },
-        { text: "They come to Georgia in spring and stay all summer." }
+        { text: "In spring, they hide their nests in thick bushes or low in small trees.", correct: true },
+        { text: "The mother thrasher lays three to five eggs in the nest." },
+        { text: "Both parents bring food to the babies after they hatch." },
+        { text: "Many thrasher families raise two sets of babies each summer." }
       ],
-      clue: "Read the heading again. Find the fact from Source 2 that gives another reason hummingbirds need so much food.",
-      why: "The answer is \"In late summer, they eat and eat to get ready for a long trip.\" It gives one more reason hummingbirds eat so much. The feeders are about people, and the nest and summer home are not about why the birds eat so much." },
+      clue: "Read the heading again. Find the fact from Source 2 that tells another place where you might find a thrasher.",
+      why: "The answer is \"In spring, they hide their nests in thick bushes or low in small trees.\" It tells one more place to look for a thrasher, so it fits the heading. The facts about the eggs, feeding the babies and raising two sets of babies are true, but they do not tell where to look." },
     { id: "SK-RA1c-T3", type: "ms", points: 2, dok: 3, passages: ["p3", "p4"],
       prompt: "Kayla checks her summary sentences. Which TWO sentences are true to the sources, tell an important idea, and use her own words? Choose two answers.",
       pick: 2,
       choices: [
-        { text: "Hummingbirds are very small birds that fly in amazing ways, like hovering in place.", correct: true },
-        { text: "A mother hummingbird builds a small, soft nest where she lays her eggs.", correct: true },
-        { text: "Many weigh less than a nickel." },
-        { text: "I think hummingbirds are the cutest birds of all." },
-        { text: "Hummingbirds stay in Georgia all year long." },
-        { text: "Hummingbirds eat only seeds that they find on the ground." }
+        { text: "A brown thrasher can sing a huge number of different songs.", correct: true },
+        { text: "Thrasher parents protect their nest from cats and people.", correct: true },
+        { text: "The birds line the inside with soft grass and leaves." },
+        { text: "I think thrashers are the best singers in the world." },
+        { text: "Brown thrashers live only in the far north, not in Georgia." },
+        { text: "A thrasher sings each part of its song five times." }
       ],
       clue: "Check three things for each sentence. Is it a fact the sources really give? Is it a big idea, not a tiny detail? Is it said in a new way, not copied?",
-      why: "The answers are \"Hummingbirds are very small birds that fly in amazing ways, like hovering in place\" and \"A mother hummingbird builds a small, soft nest where she lays her eggs.\" Each one sums up a big idea from one source in new words. \"Many weigh less than a nickel\" is true, but it is a tiny detail copied word for word from Source 1. The cutest-birds sentence is an opinion. Source 2 says the birds fly south for the winter, and Source 1 says they drink nectar and eat insects, so the last two sentences are wrong." },
+      why: "The answers are \"A brown thrasher can sing a huge number of different songs\" and \"Thrasher parents protect their nest from cats and people.\" Each one sums up the main idea of a paragraph in new words. \"The birds line the inside with soft grass and leaves\" is true, but it is a small detail copied word for word from Source 2. The best-singers sentence is an opinion. Source 1 says the thrasher is Georgia's state bird and sings each part two times, so the last two sentences are wrong." },
     { id: "SK-RA1c-T4", type: "hottext", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "Here is Kayla's draft summary. Which sentence should she take out because it does not belong in a summary?",
       options: [
-        "Hummingbirds reach into flowers with long bills and long tongues.",
-        "Many people hang feeders with sugar water to greet them.",
-        "My aunt has a red bird feeder on her back porch.",
-        "Many hummingbirds come back to the same places each year."
+        "Georgia chose the brown thrasher as its state bird.",
+        "A thrasher sweeps its bill through dead leaves to find bugs to eat.",
+        "My grandpa hears a thrasher singing outside his window every morning.",
+        "A thrasher pair builds its nest out of twigs and soft grass."
       ],
       answer: [2], pick: 1,
       clue: "A summary tells only what the sources say. Check whether each sentence comes from Source 1 or Source 2.",
-      why: "The answer is \"My aunt has a red bird feeder on her back porch.\" Neither source tells about Kayla's aunt, so it does not belong. The other sentences tell facts from the two sources." },
+      why: "The answer is \"My grandpa hears a thrasher singing outside his window every morning.\" Neither source tells about Kayla's grandpa, so it does not belong. Each of the other sentences tells an important idea from one of the sources in Kayla's own words." },
     { id: "SK-RA1c-T5", type: "dropdown", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kayla wants to join ideas in her summary. Choose the best word or words for each blank.",
-      text: "Hummingbirds use a lot of energy, {0} they must eat many times a day. {1}, they drink nectar and eat tiny insects.",
+      text: "The mother thrasher lays three to five eggs. {0}, both parents take turns keeping them warm. {1} the babies hatch, both parents bring them food.",
       slots: [
-        { options: ["so", "but", "or", "until"], answer: 0 },
-        { options: ["To get that energy", "In early spring", "In conclusion", "Instead"], answer: 0 }
+        { options: ["Then", "For example", "Instead", "In conclusion"], answer: 0 },
+        { options: ["After", "Before", "Unless", "Although"], answer: 0 }
       ],
-      clue: "For the first blank, ask whether the second part is a result of the first part. For the second blank, ask how the second sentence connects to the first one.",
-      why: "The first blank is \"so,\" because eating many times a day is a result of using a lot of energy. The second blank is \"To get that energy,\" because nectar and insects are how hummingbirds get the energy the first sentence talks about. In early spring adds a time the sources do not give for this, in conclusion would end the summary too soon, and instead would mean they do something different from eating." }
+      clue: "Both blanks need time words. Ask what happens first, next and last.",
+      why: "The first blank is \"Then,\" because keeping the eggs warm comes after the mother lays them. The second blank is \"After,\" because the parents feed the babies once they have hatched. For example would mean an example comes next, instead would mean something different happens, and in conclusion would end the summary too soon. Before would put feeding ahead of hatching, and unless and although do not make sense here." }
   ]
 });
 
@@ -886,8 +885,8 @@ PP.addLesson({
     points: [
       "A trustworthy source comes from people who know the topic well, such as scientists, museums, libraries or park rangers.",
       "Be careful with ads. An ad wants you to buy something, so it may only tell the good parts or make things sound bigger than they are.",
-      "A guess or an opinion is not the same as a fact that has been checked.",
-      "Made-up stories are fun to read, but they are not the place to find facts.",
+      "A guess, an opinion or a made-up story is not the same as a fact that has been checked.",
+      "Read the words, too. Words like everyone knows, or numbers that sound impossible, are warning signs. A good source gives facts that make sense and may tell how people found them out.",
       "A source must also be on your topic. A great book about frogs will not help a report about snakes."
     ],
     words: [
@@ -938,7 +937,22 @@ PP.addLesson({
     }
   ],
   parent: "When you see an ad, a cereal box or a sign together, ask, \"Who made this? Do they want to sell us something? Would we trust it for a school report?\"",
-  passages: [],
+  passages: [
+    { id: "p1", title: "How Much Do Elephants Eat?", byline: "Source 1", genre: "Informational text (web page)",
+      paragraphs: [
+        ["Elephants are the largest animals that live on land.", "Because they are so big, they need a lot of food."],
+        ["An adult elephant can eat about 300 pounds of plants in one day.", "Scientists who study elephants have watched them eat for as long as 16 hours a day.", "Elephants eat grass, leaves, bark and fruit."],
+        ["An elephant uses its trunk to pull up grass and to pick fruit from trees.", "It uses its tusks to peel bark off tree trunks.", "Elephants also drink a lot of water, as much as 50 gallons in a day."],
+        ["Plants do not give an elephant much energy in each bite.", "That is why elephants must eat so much and spend most of the day eating."]
+      ] },
+    { id: "p2", title: "Elephants Are Awesome", byline: "Source 2", genre: "Informational text (web page)",
+      paragraphs: [
+        ["Elephants live in Africa and Asia.", "Everyone knows elephants eat more than any other animal ever!"],
+        ["They have long trunks.", "An elephant's trunk has no bones in it.", "Elephants flap their big ears to cool off on hot days."],
+        ["An elephant can eat a million pounds of peanuts in one day.", "Elephants live together in family groups.", "A baby elephant is called a calf, and it stays close to its mother."],
+        ["Some elephants have long tusks.", "Their gray skin is thick and wrinkly.", "Many elephants live to be 60 years old or even older.", "They can remember places where they found water long ago."]
+      ] }
+  ],
   practice: [
     { id: "SK-RA2b-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Carlos is writing a report about how alligators care for their babies. Which source would be the MOST trustworthy?",
@@ -1039,15 +1053,23 @@ PP.addLesson({
       ],
       clue: "Each source Ben uses must pass two checks: it can be trusted, and it is about leaves changing color.",
       why: "The science museum page about leaves and the tree scientist's book are both trustworthy and on topic. The store ad is selling decorations, the kid's page tells about fun with leaves but not why they change color and is not from an expert, and the seed page is trustworthy but off topic." },
-    { id: "SK-RA2b-T5", type: "mc", points: 1, dok: 3, passages: [],
-      prompt: "Mia is writing about the moon. She found a web page that says, \"I think the moon might be made of rock, but I'm not sure.\" Why is this a weak source?",
-      choices: [
-        { text: "It is only a guess, and the writer says they are not sure.", correct: true },
-        { text: "The moon is not made of rock, so the page is wrong." },
-        { text: "Web pages are never trustworthy, so she cannot use it." },
-        { text: "It is about the moon, which is not on Mia's topic." }
-      ],
-      clue: "Read the words on the page. Do they sound like a checked fact, or like someone who does not really know?",
-      why: "The answer is \"It is only a guess, and the writer says they are not sure.\" Words like I think and I'm not sure show a guess, not a checked fact. The moon really is made of rock, many web pages from museums and scientists can be trusted, and the moon is Mia's topic." }
+    { id: "SK-RA2b-T5", type: "ebsr", points: 2, dok: 3, passages: ["p1", "p2"],
+      prompt: "Mia is writing about how much elephants eat. She found these two web pages. Read both, then answer Part A and Part B.",
+      partA: { prompt: "Which source should Mia trust more?",
+        choices: [
+          { text: "Source 1, because its facts make sense and tell how people found them out.", correct: true },
+          { text: "Source 2, because it uses exciting words that make the facts sound big." },
+          { text: "Source 1, because it is the first one Mia happened to find." },
+          { text: "Source 2, because it says that everyone already knows the facts." }
+        ] },
+      partB: { prompt: "Which TWO sentences from Source 2 best show that Mia should not trust it?", pick: 2,
+        choices: [
+          { text: "\"Elephants live in Africa and Asia.\"" },
+          { text: "\"Everyone knows elephants eat more than any other animal ever!\"", correct: true },
+          { text: "\"They have long trunks.\"" },
+          { text: "\"An elephant can eat a million pounds of peanuts in one day.\"", correct: true }
+        ] },
+      clue: "Read each source's words closely. Does the writer tell how the facts were found out? Do the numbers seem possible, or do they sound made up?",
+      why: "Part A: Source 1, because its facts make sense and tell how people found them out. Part B: \"Everyone knows elephants eat more than any other animal ever!\" and \"An elephant can eat a million pounds of peanuts in one day.\" Source 1 says scientists watched elephants eat, and its numbers can be checked. Source 2 says everyone knows, which does not tell who checked, and a million pounds in one day is far too much to be true. Exciting words and being found first do not make a source trustworthy. The sentences about where elephants live and their trunks are true, so they do not show a problem." }
   ]
 });

@@ -1036,8 +1036,7 @@ PP.addLesson({
     big: "You can make your writing come alive with figurative language: a simile with like or as, a metaphor that says one thing is another, an idiom, and more, as long as it fits what you mean.",
     points: [
       "First decide what you want your reader to picture or feel. Is it fast, loud, quiet, happy or scared?",
-      "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\"",
-      "Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
+      "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\" Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
       "Use an idiom only when its meaning matches. \"A piece of cake\" means easy, so it fits an easy test, not a hard one.",
       "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know.",
       "Similes, metaphors and idioms are not the only kinds of figurative language. You can also give a thing a person's actions, like \"The wind whispered through the trees.\" Use it only if it fits what you mean."
