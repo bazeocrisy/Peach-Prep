@@ -134,6 +134,15 @@
       }
     ],
     parent: "Model it: read a page aloud with lots of expression, then have your child read the same page. Repeated reading of one short passage, three or four times over a week, builds smoothness fast. For a fair speed check against the national numbers, use the Reading accurately skill with a passage your child has not read before.",
+    coach: {
+      mixup: "Thinking that faster is better. A child who races and runs through periods and commas is not reading with expression, even if the words-per-minute number is high. Talking speed is the goal.",
+      strong: "Sounds like talking: reads in phrases, drops the voice at periods, makes yes-or-no questions go up, shows feeling at exclamation points, and changes voice for characters. Can tell you afterward what happened and how a character felt.",
+      notyet: "Reads word by word in a flat voice, runs through periods, or reads so fast that the meaning gets lost. Go back to We do and read short parts together.",
+      ido: "Read three or four sentences of a passage aloud with lots of expression. Then read the same sentences in a flat robot voice. Ask which one was easier to understand, and why.",
+      wedo: "Echo reading: read one sentence with expression, then your child reads the same sentence the same way. Next, read a whole paragraph together at the same time.",
+      youdo: "Your child practices one passage three or four times over a week, then reads it to you with the timer. After the reading, mark the expression and pause notes under the result, then ask what happened and how a character felt.",
+      everyday: "Use many kinds of text: read a poem like a performer, a page of a fact book like a news reporter, and a story with talking by giving each character a voice. Reading to a younger child, a pet or a relative on a call gives a real reason to practice."
+    },
     activity: FLUENCY_PRACTICED,
     check: {
       intro: "Grown-up: listen to your child read a passage they have practiced (passage 5 or 6, which have characters talking), then check each line that is true.",
@@ -142,7 +151,8 @@
         "Paused at commas and stopped at periods.",
         "Made questions sound like asking and showed feeling for exclamations.",
         "Read in phrases, groups of words that go together.",
-        "Changed their voice for characters who were speaking."
+        "Changed their voice for characters who were speaking.",
+        "After reading, told what happened and how one character felt."
       ]
     }
   });

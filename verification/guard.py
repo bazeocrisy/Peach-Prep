@@ -753,6 +753,163 @@ with sync_playwright() as p:
        f6.get("grownup", True) and f6["showhow"] and f6["notfound"] == "home-notfound" and f6["notyet"] == ["Practice Together", "Take the skill check again", True], f6)
     q.close()
 
+    # ---------- 14. PP-004: alternate check forms (testB) and Retained behind PP_FLAGS (docs/audits/PP-004-MASTERY-RECOMMENDATIONS.md) ----------
+    K14 = "3.L.GC.2.b"                     # the one lesson with a fixture form B (docs/audits/work/pp004-forms.md)
+    tA, tB = "SK:%s:t" % K14, "SK:%s:tB" % K14
+    P14 = "JSON.parse(localStorage.getItem('pp.progress.v1')||'null')"
+    T14 = date.today().isoformat()
+    d10 = (date.today() - timedelta(days=10)).isoformat(); d3 = (date.today() - timedelta(days=3)).isoformat()
+    jk = json.dumps(K14)
+    def seed14(qq, seed, hash_="#", dev=False):
+        qq.evaluate("localStorage.clear()")
+        if seed is not None: qq.evaluate("s=>localStorage.setItem('pp.progress.v1',s)", json.dumps(seed))
+        qq.goto(BASE + ("?dev=retained" if dev else "") + hash_); qq.reload()
+        qq.wait_for_function("document.getElementById('build-badge').textContent.length > 0"); qq.wait_for_timeout(300)
+    def answer14(qq, right):
+        for i in range(qq.evaluate("PP_PLAYER.state().total")):
+            qq.evaluate(CORRECT if right else WRONG); qq.evaluate("document.getElementById('q-next').click()"); qq.wait_for_timeout(15)
+        qq.click("#confirm-submit"); qq.wait_for_timeout(80)
+    def take14(qq, right, via="button"):
+        """One check on K14. via='button': the skill page's own button picks the form; otherwise the named set runs."""
+        if via == "button":
+            qq.evaluate("PP_SKILLS.open(%s,'test')" % jk); qq.wait_for_timeout(60)
+            qq.click("#sk-start-test"); qq.wait_for_timeout(80)
+        else:
+            qq.evaluate("PP_PLAYER.start(%s,'test')" % json.dumps(via)); qq.wait_for_timeout(80)
+        sid = qq.evaluate("PP_PLAYER.state().setId")
+        answer14(qq, right)
+        return sid
+    passA10 = lambda d: {K14: {"tries": 1, "best": {"got": 7, "max": 7}, "bestMax": 7, "mastered": True, "passedAt": d, "passTry": 1, "passBy": "test", "passForm": "A", "lastPassAt": d,
+                               "attempts": [{"d": d, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False, "form": "A"}]}}
+    RFIELDS = ("retainedAt", "retainedForm")
+    q = page12(1366, 900, False)
+    goto12(q)
+    ok("14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points",
+       q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&PP.byId['SK:'+k+':y'].next.id==='SK:'+k+':t'"
+                  "&&PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+k+':tB'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk))
+    # 14.1 form selection: first ever -> A; after any attempt -> the other form; a review after a pass -> the form not used for the pass
+    seed14(q, None)
+    q.evaluate("PP_SKILLS.open(%s,'test')" % jk); card0 = q.text_content("#sk-panel .go-card")
+    s1 = take14(q, False)                                   # 1st ever: A (fail)
+    q.click("#res-again"); q.wait_for_timeout(80)            # the results screen's retake button
+    s2 = q.evaluate("PP_PLAYER.state().setId"); answer14(q, True)   # B (pass)
+    g2 = q.text_content("#res-guidance")
+    q.evaluate("PP_SKILLS.open(%s,'test')" % jk); card3 = q.text_content("#sk-panel .go-card")
+    s3 = take14(q, True)                                    # review after the pass on B: A (pass)
+    s4 = take14(q, False)                                   # after that attempt: B (fail)
+    r14 = q.evaluate(P14)[K14]
+    picks = {}
+    for name, seed in (("nothing", None),
+                       ("2.1 record", {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}}),
+                       ("PP-003 pass (no form logged)", {K14: {"tries": 1, "best": {"got": 7, "max": 7}, "mastered": True, "passedAt": d10, "passTry": 1, "passBy": "test", "lastPassAt": d10,
+                                                             "attempts": [{"d": d10, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False}]}}),
+                       ("pass on B", {K14: {"tries": 1, "mastered": True, "attempts": [{"d": d10, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False, "form": "B"}]}})):
+        seed14(q, seed); picks[name] = q.evaluate("PP_SKILLS.checkSetId(%s)" % jk)
+    one = next(k for k in quiz if not q.evaluate("PP_SKILLS.hasFormB(%s)" % json.dumps(k)))
+    seed14(q, None)
+    o1 = take14(q, False, "SK:%s:t" % one); q.click("#res-again"); q.wait_for_timeout(80); o2 = q.evaluate("PP_PLAYER.state().setId"); answer14(q, False)
+    ro = q.evaluate(P14)[one]
+    ok("14.1 form order: first check A, then the other form after every attempt (B, A, B); a review after a pass uses the other form; one-form lessons always use A",
+       [s1, s2, s3, s4] == [tA, tB, tA, tB] and "next check is form A" in card0 and "next check is form A" in card3
+       and picks == {"nothing": tA, "2.1 record": tB, "PP-003 pass (no form logged)": tB, "pass on B": tA}
+       and o1 == o2 == "SK:%s:t" % one and not q.evaluate("!!PP.byId['SK:%s:tB']" % one), ([s1, s2, s3, s4], picks, o1, o2))
+    ok("14.2 each attempt records its form (new field only); a pass on form B counts as 'Passed the skill check' exactly as before",
+       [a.get("form") for a in r14["attempts"]] == ["A", "B", "A", "B"] and [a["ok"] for a in r14["attempts"]] == [False, True, True, False]
+       and r14.get("mastered") is True and r14.get("passTry") == 2 and r14.get("passBy") == "test" and r14.get("passForm") == "B" and ymd.match(r14.get("passedAt", ""))
+       and r14.get("tries") == 4 and "passed the skill check" in g2 and not any(f in r14 for f in RFIELDS)
+       and [a.get("form") for a in ro["attempts"]] == ["A", "A"] and "answersSeenBy" not in ro, (r14, ro))
+    # 14.3 form B can never run as practice (RD-4 extended): address, direct start and recordPractice; Try It leads to the form the site picks
+    seed14(q, None, "#play/%s/practice" % tB)
+    lp = q.evaluate("({s:PP_PLAYER.state(), help:document.getElementById('q-help').offsetParent!==null, hash:location.hash, tag:document.getElementById('player-mode').textContent})")
+    answer14(q, True)
+    q.evaluate("PP_SKILLS.recordPractice(%s,'tB')" % jk)
+    q.evaluate("PP_PLAYER.start(%s,'practice')" % json.dumps(tB)); q.wait_for_timeout(60)
+    m2 = q.evaluate("PP_PLAYER.state().mode"); q.evaluate("PP_PLAYER.abandon()")
+    rp = q.evaluate(P14)[K14]
+    seed14(q, {K14: {"tries": 1, "attempts": [{"d": T14, "got": 0, "max": 7, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}]}})
+    q.evaluate("PP_PLAYER.start('SK:%s:y','try')" % K14); q.wait_for_timeout(80)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(20)
+    q.click("#done-test"); q.wait_for_timeout(80)
+    dt = q.evaluate("PP_PLAYER.state()"); q.evaluate("PP_PLAYER.abandon()")
+    ok("14.3 SK:<k>:tB never runs as practice and never records practice; Try It Yourself's 'Take the skill check' opens the form the site picks",
+       lp["s"]["mode"] == "test" and not lp["help"] and lp["hash"] == "#play/%s/test" % tB and lp["tag"] == "Skill check" and m2 == "test"
+       and not rp.get("practiced") and rp.get("tries") == 1 and rp["attempts"][0]["form"] == "B" and dt["setId"] == tB and dt["mode"] == "test", (lp, m2, rp, dt))
+    # 14.4 flag OFF (the default): Retained is never awarded, stored or shown, even on a valid later check on the other form
+    seed14(q, passA10(d10))
+    f0 = q.evaluate("PP_FLAGS.retained"); q.evaluate("try{PP_FLAGS.retained=true}catch(e){}"); f1 = q.evaluate("PP_FLAGS.retained")
+    sb = take14(q, True)
+    r44 = q.evaluate(P14)[K14]
+    q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(80)
+    row44 = q.evaluate("(c=>{const b=document.querySelector('#skill-list .skill-line[data-code=\"'+c+'\"]');return {ret:!!b.querySelector('.sl-retained'),aria:b.getAttribute('aria-label')}})(%s)" % jk)
+    q.evaluate("PP_SKILLS.open(%s,'test')" % jk); card44 = q.text_content("#sk-panel")
+    ok("14.4 with PP_FLAGS.retained off (default, and frozen), a valid later pass on form B 10 days on stores no retainedAt/retainedForm and shows no 'Retained'",
+       f0 is False and f1 is False and sb == tB and r44["attempts"][-1]["form"] == "B" and r44["attempts"][-1]["ok"] is True and not any(f in r44 for f in RFIELDS)
+       and q.evaluate("PP_SKILLS.displayState(%s).id" % jk) == "passed" and not row44["ret"] and "Retained" not in row44["aria"] and "Retained" not in card44, (f0, f1, sb, r44, row44))
+    # 14.5 flag ON (?dev=retained): not on the same form, not before 7 days, not after that form's answers were seen, not from time alone, not from an undated pass; yes on a valid later check
+    res5 = {}
+    seed14(q, passA10(d10), dev=True); res5["flag"] = q.evaluate("PP_FLAGS.retained")
+    take14(q, True, tA); res5["same form"] = q.evaluate(P14)[K14]
+    seed14(q, passA10(d3), dev=True); res5["pick 3 days"] = take14(q, True); res5["3 days"] = q.evaluate(P14)[K14]
+    ts = T14 + "T08:00:00.000Z"
+    seenB = passA10(d10); seenB[K14].update({"tries": 2, "answersSeenAt": ts, "answersSeenBy": {"B": ts}})
+    seenB[K14]["attempts"].append({"d": T14, "got": 0, "max": 7, "ok": False, "n": 2, "afterAnswers": False, "form": "B"})
+    seed14(q, seenB, dev=True); take14(q, True, tB); res5["after answers"] = q.evaluate(P14)[K14]
+    seed14(q, passA10((date.today() - timedelta(days=30)).isoformat()), dev=True)
+    t0 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+    q.evaluate("PP_SKILLS.open(%s,'test')" % jk); q.wait_for_timeout(60); q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(60)
+    res5["time alone"] = [q.evaluate("localStorage.getItem('pp.progress.v1')") == t0, q.evaluate("PP_SKILLS.displayState(%s).id" % jk)]
+    seed14(q, {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}}, dev=True)
+    res5["pick legacy"] = take14(q, True); res5["legacy"] = q.evaluate(P14)[K14]
+    seed14(q, passA10(d10), dev=True)
+    res5["pick valid"] = take14(q, True); res5["valid"] = q.evaluate(P14)[K14]
+    q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(80)
+    res5["row"] = q.evaluate("(c=>{const b=document.querySelector('#skill-list .skill-line[data-code=\"'+c+'\"]');return {ret:!!b.querySelector('.sl-retained'),aria:b.getAttribute('aria-label')}})(%s)" % jk)
+    q.evaluate("PP_SKILLS.open(%s,'test')" % jk); res5["card"] = q.text_content("#sk-panel .go-card"); res5["state"] = q.evaluate("PP_SKILLS.displayState(%s)" % jk)
+    q.evaluate("localStorage.clear(); localStorage.setItem('pp.dev','retained')"); q.goto(BASE + "#"); q.reload()
+    q.wait_for_function("document.getElementById('build-badge').textContent.length > 0"); res5["pp.dev key"] = q.evaluate("PP_FLAGS.retained")
+    q.evaluate("localStorage.clear()")
+    no = lambda r: not any(f in r for f in RFIELDS)
+    ok("14.5a flag on: no Retained on the same form, before 7 days, after that form's answers were seen, from time alone, or from an undated 2.1 pass",
+       res5["flag"] is True and no(res5["same form"]) and res5["same form"]["attempts"][-1]["form"] == "A"
+       and res5["pick 3 days"] == tB and no(res5["3 days"])
+       and no(res5["after answers"]) and res5["after answers"]["attempts"][-1]["afterAnswers"] is True and res5["after answers"]["attempts"][-1]["form"] == "B"
+       and res5["time alone"] == [True, "review"]
+       and res5["pick legacy"] == tB and no(res5["legacy"]) and res5["legacy"].get("legacyUndated") is True and "passedAt" not in res5["legacy"], res5)
+    v5 = res5["valid"]
+    ok("14.5b flag on: a pass on the other form 10 days after the first pass, without seeing its answers, stores retainedAt (today) and retainedForm B and shows 'Retained'; flag also via localStorage pp.dev",
+       res5["pick valid"] == tB and v5.get("retainedAt") == T14 and v5.get("retainedForm") == "B" and v5.get("passedAt") == d10 and v5.get("passForm") == "A"
+       and res5["row"]["ret"] and "Retained." in res5["row"]["aria"] and "Retained: passed again on form B" in res5["card"]
+       and res5["state"] == {"id": "retained", "label": "Retained"} and res5["pp.dev key"] is True, {k: res5[k] for k in ("pick valid", "valid", "row", "state", "pp.dev key")})
+    # 14.6 a seeded 2.1-era record and a seeded PP-003 record load unchanged (flag off and on); rendering writes nothing
+    rec21 = {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}, "_ui": {"lastCat": "language"}}
+    rec03 = {K14: {"taught": True, "learned": True, "practiced": True, "tried": True, "tries": 2, "best": {"got": 7, "max": 7}, "bestMax": 7, "mastered": True,
+                   "passedAt": d10, "passTry": 2, "passBy": "test", "lastPassAt": d10, "answersSeenAt": d10 + "T15:00:00.000Z",
+                   "attempts": [{"d": d10, "got": 3, "max": 7, "ok": False, "n": 1, "afterAnswers": False}, {"d": d10, "got": 7, "max": 7, "ok": True, "n": 2, "afterAnswers": True}]},
+             one: {"tries": 1, "best": {"got": 1, "max": 7}, "bestMax": 7, "attempts": [{"d": d3, "got": 1, "max": 7, "ok": False, "n": 1, "afterAnswers": False}]}, "_ui": {"lastCat": "reading"}}
+    res6 = {}
+    for dev in (False, True):
+        seed14(q, rec21, dev=dev)
+        st21 = q.evaluate(P14)
+        q.evaluate("PP_SKILLS.open(%s,'test')" % jk); q.wait_for_timeout(60); q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(60)
+        st21b = q.evaluate(P14)
+        added = sorted(set(st21[K14]) - set(rec21[K14]))
+        res6["2.1 dev=%s" % dev] = [all(st21[K14][k] == v for k, v in rec21[K14].items()), st21["_ui"] == rec21["_ui"], added, st21b == st21,
+                                    q.evaluate("PP_SKILLS.status(%s)" % jk), q.evaluate("PP_SKILLS.checkSetId(%s)" % jk)]
+        seed14(q, rec03, dev=dev)
+        s03 = q.evaluate("localStorage.getItem('pp.progress.v1')")
+        for k_ in (K14, one):
+            q.evaluate("PP_SKILLS.open(%s,'test')" % json.dumps(k_)); q.wait_for_timeout(60)
+        q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(60)
+        res6["PP-003 dev=%s" % dev] = [q.evaluate("localStorage.getItem('pp.progress.v1')") == s03, json.loads(s03) == rec03, q.evaluate("PP_SKILLS.status(%s)" % jk),
+                                      q.evaluate("PP_SKILLS.checkSetId(%s)" % jk), q.evaluate("PP_SKILLS.displayState(%s).id" % jk)]
+    q.evaluate("localStorage.clear()")
+    want21 = [True, True, ["firstSeenPassedAt", "legacyUndated"], True, "mastered", tB]
+    ok("14.6 a seeded 2.1 record and a seeded PP-003 record load unchanged with the flag off and on (2.1 gains only PP-003's legacyUndated/firstSeenPassedAt); rendering writes nothing",
+       res6["2.1 dev=False"] == want21 and res6["2.1 dev=True"] == want21
+       and res6["PP-003 dev=False"] == [True, True, "mastered", tB, "review"] and res6["PP-003 dev=True"] == [True, True, "mastered", tB, "review"], res6)
+    q.close()
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------

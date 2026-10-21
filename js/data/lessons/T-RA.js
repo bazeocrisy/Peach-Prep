@@ -432,7 +432,7 @@ PP.addLesson({
       why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." },
     { id: "SK-RA1b-P7", type: "mc", points: 1, dok: 2, passages: ["p5"],
       prompt: "Nia is filling in her notes table from the web page. Which note is the BEST one to write in the Fact box?",
-      stem: ["Nia's notes table", "Question: What do pumpkin plants need to grow well?", "Fact: ?", "Where I found it: Kids Garden Club web page, September 8, 2026"],
+      stem: ["Nia's notes table", "Question: What do pumpkin plants need to grow well?", "Fact: ________", "Where I found it: Kids Garden Club web page, September 8, 2026"],
       choices: [
         { text: "The vines need lots of space so they do not crowd.", correct: true },
         { text: "The vines grow best when planted close together." },
@@ -477,16 +477,6 @@ PP.addLesson({
       ],
       clue: "Each fact on this card must be about people going to the moon. Facts about the moon by itself go on a different card.",
       why: "\"Astronauts first walked on the moon in 1969\" and \"Astronauts wore space suits on the moon\" are about people on the moon. The other three facts tell what the moon itself is like, so they belong on a different card." },
-    { id: "SK-RA1b-T4", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Which fact can be found in BOTH sources?",
-      choices: [
-        { text: "The moon has no air.", correct: true },
-        { text: "The moon travels around Earth." },
-        { text: "The moon's shape seems to change." },
-        { text: "Mr. Okafor works at a science center." }
-      ],
-      clue: "Find each fact in one source, then check the other source for the same idea.",
-      why: "The answer is \"The moon has no air.\" Source 1 says the moon has no air, and Source 2 says the astronauts wore space suits because the moon has no air to breathe. The other facts appear in only one source." },
     { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "Kofi's note from Source 1 says, \"There are rocks on the moon's ground.\" Which fact from Source 2 adds the MOST to this note?",
       choices: [
