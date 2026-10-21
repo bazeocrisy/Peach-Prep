@@ -102,7 +102,7 @@ PP.addLesson({
       ],
       figures: [
         { after: 2, src: "assets/figures/v3a-b-balloon-parts.svg", label: "Figure 1", caption: "The parts of a hot-air balloon",
-          alt: "A drawing of a hot-air balloon with four labels. The vent is a round opening at the very top of the balloon. The envelope is the big cloth balloon. The burner is under the envelope, with a flame pointing up into it. The basket hangs from ropes at the bottom." }
+          alt: "A drawing of a hot-air balloon with four labels. The label vent points to a small dashed circle at the very top of the balloon. The label envelope points to the big balloon. The label burner points to a small box under the balloon, with a flame pointing up into it. The label basket points to the basket that hangs from ropes at the bottom." }
       ] }
   ],
   practice: [

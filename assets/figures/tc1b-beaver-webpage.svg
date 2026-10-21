@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 470" role="img" aria-labelledby="t">
-  <title id="t">A web page with tabs, the heading Busy Builders, a video with a play button, a caption line under the video, and an underlined link.</title>
+  <title id="t">A web page with tabs, the heading Busy Builders, a video with a play button that shows a pile of sticks in the water, a caption line under the video, and an underlined link.</title>
   <!-- screen frame -->
   <rect x="2" y="2" width="316" height="466" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
   <path d="M2 34 H318" stroke="#444" stroke-width="2"/>
@@ -15,7 +15,7 @@
     <text x="260" y="71" text-anchor="middle">Otters</text>
     <!-- heading -->
     <text x="12" y="120" font-size="24" font-weight="bold">Busy Builders</text>
-    <!-- video: a dam with water spilling over it, and a play button -->
+    <!-- video still: a pile of sticks in the water (PP-004 F-2: no water is drawn spilling over it), and a play button -->
     <rect x="12" y="136" width="296" height="140" fill="#DCEBF5" stroke="#444" stroke-width="2"/>
     <path d="M12 236 Q90 226 160 232 T308 236 V276 H12 Z" fill="#9CC3DE"/>
     <path d="M30 236 L60 196 L120 192 L150 236 Z" fill="#B58B5A" stroke="#4A2E16" stroke-width="2"/>

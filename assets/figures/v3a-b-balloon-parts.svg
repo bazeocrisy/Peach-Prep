@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img" aria-labelledby="t">
-  <title id="t">The parts of a hot-air balloon. The vent is a round opening at the very top of the balloon. The envelope is the big cloth balloon. The burner is under the envelope, with a flame pointing up. The basket hangs at the bottom from ropes.</title>
+  <title id="t">The parts of a hot-air balloon, with four labels. The label vent points to a small dashed circle at the very top of the balloon. The label envelope points to the big balloon. The label burner points to a small box under the balloon, with a flame pointing up. The label basket points to the basket that hangs from ropes at the bottom.</title>
   <!-- envelope -->
   <path d="M130 40 C190 40 215 80 215 120 C215 165 170 200 145 225 L115 225 C90 200 45 165 45 120 C45 80 70 40 130 40 Z" fill="#F4E3B5" stroke="#111" stroke-width="3"/>
   <g fill="none" stroke="#111" stroke-width="1.8">

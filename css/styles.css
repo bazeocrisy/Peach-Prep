@@ -59,6 +59,10 @@ button{font:inherit;color:inherit;}
 .bar-brand,.bar-tag{font-family:var(--head);font-weight:800;color:var(--peach-deep);margin:0;text-align:center;min-width:0;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .bar-tag span{display:inline-block;background:var(--peach-tint);border:1px solid var(--peach-edge);border-radius:var(--pill);padding:4px 12px;font-size:.9rem;}
+/* PP-004 U-2: the mode tag ("Skill check", "Try it yourself", "Writing task") wraps instead of being cut off */
+.bar-tag{overflow:visible;white-space:normal;}
+.bar-tag span{max-width:100%;}
+@media (max-width:360px){ .bar-tag span{font-size:.8rem;line-height:1.2;padding:3px 8px;border-radius:12px;} }
 .bar-spacer{width:88px;}
 
 /* ---------- home ---------- */
@@ -128,7 +132,9 @@ button{font:inherit;color:inherit;}
 .passage-byline{color:var(--muted);font-style:italic;}
 .passage-heading{font-size:1.05rem;margin:16px 0 6px;}
 .passage-caption{font-style:italic;color:var(--muted);background:var(--line-soft);border-radius:8px;padding:8px 10px;font-size:.95rem;}
-.passage-box{background:var(--leaf-tint);border:1px solid var(--leaf-edge);border-radius:12px;padding:10px 14px;margin:0 0 12px;}
+/* PP-004 U-1: blue, with a thick left edge, so a text box never looks like the green
+   "Answer:" / "That's right!" boxes; the edge (not colour alone) sets it apart, also on paper */
+.passage-box{background:var(--sky-tint);border:1px solid var(--sky-edge);border-left:5px solid var(--sky);border-radius:12px;padding:10px 14px;margin:0 0 12px;}
 .passage-heading + .passage-box{margin-top:-2px;}
 .para{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;margin-bottom:10px;}
 .para-no{font-family:var(--head);font-weight:700;font-size:.8rem;color:var(--muted);padding-top:4px;text-align:right;}
@@ -361,7 +367,8 @@ fieldset.trait{margin:0 0 12px;}
 .skill-count:empty{display:none;}
 .skill-search{width:100%;min-height:48px;border:1px solid var(--line);border-radius:var(--pill);padding:10px 18px;font:inherit;background:#fff;color:var(--text);}
 @media (max-width:360px){.skill-search{padding:10px 14px;}}
-.skill-search:focus{border-color:var(--sky);outline:none;box-shadow:0 0 0 3px var(--sky-tint);}
+/* PP-004 U-6.4: the same 3px #1B4FA8 ring as every other control (was a 1.1:1 pale halo) */
+.skill-search:focus{border-color:var(--sky);outline:3px solid var(--sky);outline-offset:2px;border-radius:var(--pill);box-shadow:none;}
 .seg{display:flex;gap:6px;}
 .seg button{flex:1;min-height:44px;border-radius:var(--pill);border:1px solid var(--line);background:#fff;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--navy);cursor:pointer;padding:6px 8px;}
 .seg button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff;}
@@ -485,6 +492,8 @@ fieldset.trait{margin:0 0 12px;}
   .bar,.steps,.skill-tools,.hero-actions,.for-grownups,.step-next,.go-card .btn{display:none !important;}
   /* PP-003 D14: no tabs or action buttons on paper; the player prints the passage and the question */
   #tabs,.wtabs,.ptabs,.panel-actions,.q-controls,.clue-toggle,.skip,.notfound{display:none !important;}
+  /* PP-004 U-6.1 (PP-003 RD-15): the on-screen "New passage" note and the essay's "Start this task over" are not for paper */
+  #passage-note,#w-score .btn{display:none !important;}
   .player-grid:not(.is-full):not(.no-passage) .passage-pane,.player-grid:not(.is-full) .item-pane{display:block !important;}
   .passage-pane{position:static !important;max-height:none !important;overflow:visible !important;}
   body.print-trace *{visibility:hidden;}
@@ -630,7 +639,7 @@ mark.clue-w{background:none;color:inherit;}
 .flu-obs fieldset{border:0;padding:0;margin:8px 0;min-width:0;}
 .flu-obs fieldset legend{font-size:1rem;font-weight:700;margin-bottom:4px;}
 .flu-obs label{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-right:14px;}
-.flu-obs input[type=number]{width:4.5em;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;}
+.flu-obs input[type=number]{width:4.5em;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;min-height:44px;}   /* PP-004 U-5 (PP-003 RD-12): was 40px */
 .flu-hist{margin:6px 0 0;padding-left:1.2em;}
 .flu-hist li{margin:2px 0;}
 .flu-obs-tag{font-weight:700;color:var(--plum);}
@@ -653,7 +662,13 @@ mark.clue-w{background:none;color:inherit;}
 
 /* ---------- PP-004: writing task parent tab (step-by-step scoring, leveled examples) ---------- */
 .score-steps{margin:8px 0 10px;border-left:4px solid var(--peach-edge);padding:2px 0 2px 10px;}
-.score-steps > summary{cursor:pointer;min-height:44px;display:flex;align-items:center;margin:0;}
+.score-steps > summary{cursor:pointer;min-height:44px;display:flex;align-items:center;margin:0;list-style:none;}
+/* PP-004 U-3: flex hid the open/close triangle; show the site's ▸ / ▾ marker (as on .five-min, .sk-official, .habit-group) */
+.score-steps > summary::-webkit-details-marker{display:none;}
+.score-steps > summary::before{content:"▸";display:inline-block;width:1.1em;flex:none;color:var(--peach-deep);}
+.score-steps[open] > summary::before{content:"▾";}
+/* PP-004 U-5 (PP-003 RD-12): "Where the support is in the sources" was a 22px target */
+.evidence-key > summary{cursor:pointer;display:list-item;min-height:44px;padding:11px 0;margin:4px 0;}
 .score-steps ol.plist{padding-left:1.4em;}
 .score-levels li{margin:6px 0;}
 .examples .ex-level{border-top:2px dashed var(--line);padding-top:12px;margin-top:12px;}

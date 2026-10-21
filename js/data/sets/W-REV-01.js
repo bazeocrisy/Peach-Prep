@@ -121,7 +121,7 @@ PP.addSet({
       answer: ["p1:2:5"],
       pick: 1,
       clue: "Every sentence should help explain why the class should get a fish. Read each paragraph and ask: does this sentence stay on that idea?",
-      why: "The answer is sentence 6, \"My cousin has a dog named Biscuit that can catch a ball.\" Paragraph 2 is about how a class fish would teach responsibility. A cousin's dog is not a class fish and is not about the class taking care of a pet, so the sentence does not belong."
+      why: "The answer is sentence 6, \"My cousin has a dog named Biscuit that can catch a ball.\" The second paragraph (sentences 2 to 6) is about how a class fish would teach responsibility. A cousin's dog is not a class fish and is not about the class taking care of a pet, so the sentence does not belong."
     },
     {
       id: "W-REV-01-6",

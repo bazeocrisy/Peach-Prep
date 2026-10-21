@@ -949,6 +949,82 @@ with sync_playwright() as p:
     q.evaluate("localStorage.clear()")
     q.close()
 
+    # ---------- 16. PP-004 UX and accessibility review (docs/audits/PP-004-UX-ACCESSIBILITY.md U-1, U-2) ----------
+    def _lum(c):
+        c = [x / 255 for x in c]; c = [x / 12.92 if x <= .03928 else ((x + .055) / 1.055) ** 2.4 for x in c]
+        return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]
+    def _rgb(s): return [int(x) for x in re.findall(r"\d+", s)[:3]]
+    def _cr(a, b_):
+        la, lb = sorted([_lum(_rgb(a)), _lum(_rgb(b_))], reverse=True); return (la + .05) / (lb + .05)
+    # 16.1 U-1: every text box ("Box: ") in a passage, a Learn It example and a Watch Me example is a note named
+    #      "Text box" with a hidden "Text box:" lead-in, so a screen-reader user knows it is the text box
+    BOX16 = """(sel)=>[...document.querySelectorAll(sel)].map(a=>{const sr=a.querySelector('.para-body > .sr:first-child'),body=a.querySelector('.para-body');
+        return {role:a.getAttribute('role'),name:a.getAttribute('aria-label'),lead:sr?sr.textContent:null,
+                hidden:!!sr&&getComputedStyle(sr).position==='absolute'&&sr.getBoundingClientRect().width<=1,
+                bg:getComputedStyle(a).backgroundColor,fg:getComputedStyle(body||a).color,edge:parseFloat(getComputedStyle(a).borderLeftWidth),text:a.textContent.slice(0,50)}})"""
+    def box_ok(v): return v["role"] == "note" and v["name"] == "Text box" and v["lead"] == "Text box: " and v["hidden"]
+    q = page12(390, 844, True)
+    goto12(q)
+    bad16 = []; n16 = 0; bgs = set()
+    sets16 = q.evaluate("PP.sets.map(s=>[s.id,(s.passages||[]).reduce((n,p)=>n+(p.paragraphs||[]).filter(pa=>/^Box: /.test(pa[0]||'')).length,0)]).filter(x=>x[1]>0)")
+    for sid, want in sets16:
+        q.evaluate("PP_PLAYER.start(%s,'practice')" % json.dumps(sid)); q.wait_for_timeout(40)
+        got = q.evaluate(BOX16, "#passage-pane-body aside.passage-box")
+        n16 += len(got); bgs.update((v["bg"], v["fg"], v["edge"]) for v in got)
+        if len(got) != want or not all(box_ok(v) for v in got): bad16.append((sid, want, got[:1]))
+        q.evaluate("PP_PLAYER.abandon()")
+    less16 = q.evaluate("""Object.keys(PP.lessons).map(k=>{const L=PP.lessons[k],isB=x=>/^Box: /.test(x);
+        const ex=(L.teach&&(L.teach.examples||(L.teach.example?[L.teach.example]:[])))||[];
+        return [k,ex.reduce((n,e)=>n+[].concat(e.lines||[]).filter(isB).length,0),(L.learn||[]).reduce((n,e)=>n+(e.show||[]).filter(isB).length,0)]}).filter(x=>x[1]+x[2]>0)""")
+    for k_, wteach, wlearn in less16:
+        for st, want in (("teach", wteach), ("learn", wlearn)):
+            q.evaluate("PP_SKILLS.open(%s,'%s')" % (json.dumps(k_), st)); q.wait_for_timeout(30)
+            got = q.evaluate(BOX16, "#sk-panel aside.passage-box")
+            n16 += len(got); bgs.update((v["bg"], v["fg"], v["edge"]) for v in got)
+            if len(got) != want or not all(box_ok(v) for v in got): bad16.append((k_, st, want, got[:1]))
+    q.evaluate("PP_SKILLS.open('3.T.C.2.c','learn')"); q.wait_for_timeout(40)
+    ans16 = q.evaluate("getComputedStyle(document.querySelector('#sk-panel .learn-answer')).backgroundColor")
+    look = [(bg, round(_cr(bg, fg), 2), edge) for bg, fg, edge in bgs]
+    ok("16.1 U-1: every text box in passages (%d sets) and in Learn It / Watch Me examples (%d lessons) is role=note, named 'Text box', with a hidden 'Text box:' lead-in; "
+       "drawn unlike the green 'Answer:' box (own tint, thick left edge), text contrast >= 4.5:1" % (len(sets16), len(less16)),
+       not bad16 and n16 >= 20 and len(look) == 1 and look[0][0] != ans16 and look[0][1] >= 4.5 and look[0][2] >= 3, (bad16[:2], n16, look, ans16))
+    # the scored item that asks about "the text box": a screen reader reaches a note named Text box with the box's words
+    q.evaluate("PP_PLAYER.start('SK:3.T.C.1.b:t','test')"); q.wait_for_timeout(60)
+    for _ in range(12):
+        if q.evaluate("PP_PLAYER.ctx().item.id") == "SK-TC1b-T2": break
+        if q.is_visible("#tab-question"): q.click("#tab-question")
+        q.click("#q-next"); q.wait_for_timeout(30)
+    t2 = q.evaluate("PP_PLAYER.ctx().item.id")
+    if q.is_visible("#tab-passage"): q.click("#tab-passage")
+    q.wait_for_timeout(60)
+    vis = q.locator("#passage-pane-body aside.passage-box >> visible=true")
+    snap = vis.first.aria_snapshot() if vis.count() == 1 else "visible boxes: %d" % vis.count()
+    q.evaluate("PP_PLAYER.abandon()")
+    ok("16.2 U-1: on SK-TC1b-T2 (\"How does the text box add to the article?\") the accessibility tree has one visible note named \"Text box\" that starts \"Text box: A monarch\"",
+       t2 == "SK-TC1b-T2" and 'note "Text box"' in snap and "Text box: A monarch" in snap, (t2, snap))
+    q.close()
+    # 16.3 U-2: the player and essay mode tag is never cut off on narrow phones (it wraps instead)
+    TAG16 = """(()=>{const t=[...document.querySelectorAll('.bar-tag')].find(x=>x.offsetParent);if(!t)return null;const s=t.querySelector('span'),r=s.getBoundingClientRect(),pr=t.getBoundingClientRect();
+        return {text:s.textContent,cut:s.scrollWidth>s.clientWidth+1||t.scrollWidth>t.clientWidth+1||r.right>pr.right+1||r.left<pr.left-1||r.width<1}})()"""
+    cut16 = []; seen16 = set()
+    for w in (320, 360, 375, 390):
+        q = page12(w, 700, True)
+        goto12(q)
+        mixed = q.evaluate("PP.sets.find(s=>s.section!=='skill').id")
+        for sid, mode in (("SK:3.T.C.1.b:p", "practice"), ("SK:3.T.C.1.b:y", "try"), ("SK:3.T.C.1.b:t", "test"), (mixed, "test")):
+            q.evaluate("PP_PLAYER.start(%s,'%s')" % (json.dumps(sid), mode)); q.wait_for_timeout(60)
+            v = q.evaluate(TAG16)
+            if not v or v["cut"]: cut16.append((w, sid, v))
+            else: seen16.add(v["text"])
+            q.evaluate("PP_PLAYER.abandon()")
+        q.evaluate("PP_WRITING.start(PP.tasks[0].id)"); q.wait_for_timeout(60)
+        v = q.evaluate(TAG16)
+        if not v or v["cut"]: cut16.append((w, "writing", v))
+        else: seen16.add(v["text"])
+        q.close()
+    ok("16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390",
+       not cut16 and {"Practice", "Try it yourself", "Skill check", "Test", "Writing task"} <= seen16, (cut16[:3], sorted(seen16)))
+
     ok("7.1 no page errors", not errors, errors[:3])
 
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------

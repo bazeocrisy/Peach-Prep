@@ -41,7 +41,36 @@
     return fig;
   }
   function figures(host, list) { [].concat(list || []).forEach(f => host.appendChild(figure(f))); }
-  PP.rich = rich; PP.figure = figure; PP.figures = figures;
+  /* PP-004 U-1: a text-box feature ("Box: ") in a passage or a Watch Me example.
+     The tint alone told a sighted reader it is a text box (WCAG 1.3.1), and a scored
+     item asks about "the text box", so it is named for screen readers too: role=note
+     with the name "Text box", plus a hidden "Text box:" lead-in that every reader
+     speaks in reading order. Returns the aside; the text goes in its p.para-body. */
+  function textBox() {
+    const box = make("aside", "passage-box");
+    box.setAttribute("role", "note"); box.setAttribute("aria-label", "Text box");
+    const body = make("p", "para-body");
+    body.appendChild(make("span", "sr", "Text box: "));
+    box.appendChild(body);
+    return box;
+  }
+  /* PP-004 U-4: after new content appears above a focused button, scroll the least
+     needed so that the new content's top and the next action's bottom are both on
+     screen, below any sticky bar. If both do not fit, the top of the new content wins. */
+  function reveal(topEl, bottomEl) {
+    if (!topEl || !bottomEl) return;
+    const m = 12, vh = window.innerHeight;
+    let bar = 0;
+    document.querySelectorAll(".steps").forEach(s => {
+      if (s.offsetParent && getComputedStyle(s).position === "sticky") bar = Math.max(bar, s.getBoundingClientRect().bottom);
+    });
+    const t = topEl.getBoundingClientRect().top, bo = bottomEl.getBoundingClientRect().bottom;
+    let dy = 0;
+    if (bo > vh - m) dy = bo - (vh - m);
+    if (t - dy < bar + m) dy = t - (bar + m);
+    if (Math.abs(dy) >= 1) window.scrollBy(0, Math.round(dy));
+  }
+  PP.rich = rich; PP.figure = figure; PP.figures = figures; PP.textBox = textBox; PP.reveal = reveal;
 
   /* ---------- passage pane ---------- */
   function renderPassages(set, hostEl) {
@@ -81,15 +110,15 @@
           if (isCaption(first)) { art.appendChild(make("p", "passage-caption", first.replace(/^Caption: /, ""))); return; }
           if (isBox(first)) {
             /* A text-box feature (e.g. "Did You Know?"): set apart, not numbered. */
-            const box = make("aside", "passage-box");
-            const body = make("p", "para-body");
+            const box = textBox();   /* PP-004 U-1: named "Text box" for screen readers */
+            const body = box.lastChild;
             para.forEach((sx, si) => {
               const span = rich(make("span", "sent"), si === 0 ? sx.replace(/^Box: /, "") : sx);
               span.dataset.ref = p.id + ":" + (k + 1) + ":" + (si + 1);
               body.appendChild(span);
               if (si < para.length - 1) body.appendChild(document.createTextNode(" "));
             });
-            box.appendChild(body); art.appendChild(box); return;
+            art.appendChild(box); return;
           }
           n++;
           const row = make("div", "para" + (p.draft ? " no-num" : ""));
@@ -169,7 +198,7 @@
     const total = run.set.items.length;
     el("q-count").textContent = "Question " + (i + 1) + " of " + total;
     el("q-points").textContent = item.points === 2 ? "2 points" : "1 point";
-    el("q-bar").style.width = Math.round((i / total) * 100) + "%";
+    el("q-bar").style.width = Math.round(((i + 1) / total) * 100) + "%";   /* PP-004 U-6.6: matches "Question i of n", so the last question shows 100% */
     el("q-prompt").textContent = item.prompt;
     const host = el("q-body");
     clear(host);
@@ -332,6 +361,9 @@
     /* PP-003 D7: a right answer hides Check, which had focus; move focus to Next
        (the feedback above it is a live region, so it is still read out) */
     if (st.solved) el("q-next").focus();
+    /* PP-004 U-4b: a wrong answer adds "Not quite" above Check and Help me, which can push
+       them (and focus) below the screen: keep the feedback and the next action in view */
+    else reveal(el("q-feedback"), el("q-check").parentElement);
   }
 
   function renderLockedState(ctx) {

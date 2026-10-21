@@ -35,14 +35,14 @@
     if (P.length) defs.push(["p", "Practice Together", P.slice(0, half)]);
     if (P.length > half) defs.push(["y", "Try It Yourself", P.slice(half)]);
     const formB = (L.test || []).length && (L.testB || []).length;   /* PP-004: a second, independent skill check */
-    if ((L.test || []).length) defs.push(["t", formB ? "Test (form A)" : "Test", L.test]);
+    if ((L.test || []).length) defs.push(["t", formB ? "Skill check (form A)" : "Skill check", L.test]);   /* PP-004 U-6.7: one name for the check (step: "Test Your Knowledge") */
     /* Form B ("SK:<key>:tB") is not in the Practice -> Try -> Test chain: the site picks
        the form for each check (nextForm below). It shares the lesson's one passages list;
        its items name their own passages, which should be new ones (SPEC §8b). */
     if (formB) PP.addSet({
       id: "SK:" + K + ":tB", section: "skill", kind: "skill", code: K, part: "tB", form: "B", next: null,
       practiceId: P.length ? "SK:" + K + ":p" : null,
-      title: L.title + " · Test (form B)",
+      title: L.title + " · Skill check (form B)",
       clueWords: L.clues && !L.clues.groups && L.clues.highlight !== false ? L.clues.words : null,
       passages: L.passages || [],
       items: items(L.testB)
@@ -415,6 +415,9 @@
         const off = (tools && getComputedStyle(tools).position === "sticky" ? tools.getBoundingClientRect().height : 0) + 12;
         const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         window.scrollTo({ top: Math.max(0, t.getBoundingClientRect().top + window.scrollY - off), behavior: reduce ? "auto" : "smooth" });
+        /* PP-004 U-6.5: move focus into the section, so the next Tab goes to its first skill, not the next card */
+        const h2 = t.querySelector(".cat-title");
+        if (h2) { h2.tabIndex = -1; h2.focus({ preventScroll: true }); }
       });
       host.appendChild(b);
     });
@@ -652,7 +655,7 @@
     (Array.isArray(list) ? list : [list]).forEach(t => {
       const c = /^Cursive: /.test(t);
       if (/^Box: /.test(t)) {   /* PP-004: a text-box feature in an example, drawn like a passage box (SPEC §5e) */
-        const box = make("aside", "passage-box"); box.appendChild(PP.rich(make("p", "para-body"), t.replace(/^Box: /, ""))); host.appendChild(box); return;
+        const box = PP.textBox(); box.lastChild.appendChild(PP.rich(make("span", ""), t.replace(/^Box: /, ""))); host.appendChild(box); return;
       }
       host.appendChild(c ? make("p", (cls || "") + " cursive", t.replace(/^Cursive: /, "")) : PP.rich(make("p", cls || ""), t));   /* **bold** words: SPEC §5e */
     });
@@ -724,13 +727,18 @@
       b.type = "button";
       let k = 0;
       b.addEventListener("click", () => {
-        if (k < ex.steps.length) { ol.appendChild(make("li", "", ex.steps[k])); k++; }
+        let li = null;
+        if (k < ex.steps.length) { li = ol.appendChild(make("li", "", ex.steps[k])); k++; }
         if (k >= ex.steps.length) {
           ans.hidden = false; b.hidden = true;
           finished++;
           if (finished >= exs.length) { mark(cur, "learned"); renderSteps(); }
-          ans.setAttribute("tabindex", "-1"); ans.focus();
-        } else b.textContent = "Show the next step (" + (k + 1) + " of " + ex.steps.length + ")";
+          ans.setAttribute("tabindex", "-1"); ans.focus({ preventScroll: true });
+          PP.reveal(li || ans, ans);   /* PP-004 U-4a: the last step and the answer on screen */
+        } else {
+          b.textContent = "Show the next step (" + (k + 1) + " of " + ex.steps.length + ")";
+          PP.reveal(li, b);   /* PP-004 U-4a: the new step and the button (which keeps focus) on screen */
+        }
       });
       card.appendChild(b);
       host.appendChild(card);

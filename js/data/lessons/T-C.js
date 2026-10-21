@@ -347,7 +347,7 @@ PP.addLesson({
     { id: "SK-TC1b-P10", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       stem: ["This article is also on a website. The picture shows part of the web page for the section \"Busy Builders.\""],
       figure: { src: "assets/figures/tc1b-beaver-webpage.svg",
-        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a dam of sticks with water spilling over it. Under the video is a dark bar with two caption lines: [water rushing], then NARRATOR: The water spills over the dam. Below that is the sentence Beavers use sticks and mud. At the bottom are underlined words: Next page: Beaver lodges." },
+        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a pile of sticks in the water. Under the video is a dark bar with two caption lines: [water rushing], then NARRATOR: The water spills over the dam. Below that is the sentence Beavers use sticks and mud. At the bottom are underlined words: Next page: Beaver lodges." },
       prompt: "Choose the words that best complete the sentences.",
       text: "In the caption line, the words [water rushing] tell the reader {0}. The underlined words at the bottom will {1}.",
       slots: [
