@@ -222,7 +222,7 @@ The implemented rule is the conservative minimum, and it is easy to tighten. The
 
 ## 7. Verification (2026-10-20)
 
-- `node verification/check-content.js --all`: PASS, 0 failures, 8 warnings. These are the same 8 clue-overlap warnings as before; none is on 3.L.GC.2.b.
+- `node verification/check-content.js --all`: PASS, 0 failures, 7 warnings on the final run (8 earlier; another agent removed one). None is on 3.L.GC.2.b.
 - **Checker mutation tests** (scratch copies, not the repo). Each was caught:
   - a form B id reused from form A;
   - an extra code;
@@ -233,7 +233,7 @@ The implemented rule is the conservative minimum, and it is easy to tighten. The
 - `node verification/check-writing.js`: 0 failures, 0 warnings.
 - **guard section 14.** A fast subset (sections 1, 14 and 7.1) gave 17 passed, 0 failed.
 - **guard mutation test.** With `RETAIN_DAYS = 2` and the flag forced on, served from a scratch copy, 14.4 and 14.5a FAIL as they should.
-- **Full guard:** `python3 verification/guard.py http://localhost:8484/`. See docs/audits/work/pp004-forms.md for the final count.
+- **Full guard:** `python3 verification/guard.py http://localhost:8484/`. **103 passed, 0 failed, exit 0.**
 
 ---
 

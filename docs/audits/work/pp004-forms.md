@@ -180,11 +180,11 @@
 
 ## Gates
 
-- `node verification/check-content.js --all`: PASS (0 failures, 8 warnings, none mine).
+- `node verification/check-content.js --all`: PASS (0 failures; 8 warnings, then 7 on the final run; none mine).
 - `python3 verification/readability.py`: ran. p3 has 115 words, FK about 2.0.
 - `node verification/check-writing.js`: 0 failures, 0 warnings.
 - **Fast subset** (sections 1, 14 and 7.1): 17 passed, 0 failed.
-- **Full guard** `python3 verification/guard.py http://localhost:8484/`: RESULT_PLACEHOLDER
+- **Full guard** `python3 verification/guard.py http://localhost:8484/`: **103 passed, 0 failed, exit 0** (2026-10-20; log `scratchpad/pp004forms/guard.log`). That includes 4.1 with `:tB` run in test mode, 7.1 no page errors, 8.1 no sideways scroll, and 14.0-14.6.
 
 ## For the lead / other agents
 
