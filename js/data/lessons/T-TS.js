@@ -191,22 +191,22 @@ PP.addLesson({
       why: "The answer is \"to show the order of the steps for making the cobbler.\" These are time clue words. Nothing goes wrong in the story, and the author does not compare two fruits." },
     { id: "SK-TSSEQ-T5", type: "ebsr", points: 2, dok: 3, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "Why does Grandpa put the pan in the oven when it has only butter in it?",
+      partA: { prompt: "Why does the butter have to go into the oven BEFORE Keisha pours in the batter?",
         choices: [
-          { text: "so the butter will melt in the pan first", correct: true },
-          { text: "so the peaches will get soft and sweet" },
-          { text: "so the kitchen will smell good later" },
-          { text: "so the batter will be thick and smooth" }
+          { text: "The batter goes in on top of the butter, so the butter has to be ready first.", correct: true },
+          { text: "The butter needs time to cool down before the peaches go in." },
+          { text: "The batter has to bake by itself before the butter is added." },
+          { text: "Grandpa needs the oven empty while Keisha stirs the batter." }
         ] },
       partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
         choices: [
-          { text: "\"Grandpa set the pan in the hot oven so the butter would melt.\"", correct: true },
-          { text: "\"The batter was thick and smooth, like pancake batter.\"" },
-          { text: "\"She did not stir it.\"" },
+          { text: "\"Keisha poured the batter right on top of the melted butter.\"", correct: true },
+          { text: "\"Then Keisha stirred flour, sugar and milk in a big bowl.\"" },
+          { text: "\"First, they washed six ripe peaches.\"" },
           { text: "\"The top of the cobbler was puffy and golden brown.\"" }
         ] },
-      clue: "Look at what is in the pan when it goes into the oven. Then find the sentence that tells what the oven does to it.",
-      why: "Part A: so the butter will melt in the pan first. Part B: \"Grandpa set the pan in the hot oven so the butter would melt.\" One step gets the pan ready for the next one. The batter goes on top of the melted butter." }
+      clue: "Find the step where Keisha pours the batter. What is already in the pan by then?",
+      why: "Part A: the batter goes in on top of the butter, so the butter has to be ready first. Part B: \"Keisha poured the batter right on top of the melted butter.\" In a sequence, one step can get things ready for the next. The butter melts first, and then the batter goes on top of it. The sentence about stirring tells a step but not why the butter comes first. Nothing in the story says the butter cools, and the batter is never baked alone." }
   ]
 });
 PP.addLesson({
@@ -365,13 +365,13 @@ PP.addLesson({
     { id: "SK-TSCE-T1", type: "order", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "Put the events in order, from the first cause to the last effect.",
       steps: [
-        "Beavers chew through small trees.",
         "Beavers pile sticks, rocks and mud across a stream.",
+        "The dam blocks the moving water.",
         "A calm, deep pond forms.",
         "Ducks, frogs and fish move in."
       ],
       clue: "Ask what each event causes. The cause always comes before its effect.",
-      why: "The order is: beavers chew through trees, they pile sticks, rocks and mud across a stream, a calm pond forms, and then ducks, frogs and fish move in. Each event causes the next one." },
+      why: "The order is: beavers pile sticks, rocks and mud across a stream, the dam blocks the moving water, a calm pond forms, and then ducks, frogs and fish move in. Each event makes the next one happen. The pile of sticks is the dam, the blocked water fills up into a pond, and the calm pond gives the animals a home." },
     { id: "SK-TSCE-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Read the sentence from paragraph 4 in the box. Which part is the CAUSE?",
       stem: ["Coyotes and other hunters cannot easily get inside because the lodge doors are under the water."],
@@ -808,16 +808,18 @@ PP.addLesson({
       ],
       clue: "Find the clue word in paragraph 1 that tells how two things are alike. Check each choice against that paragraph.",
       why: "The answer is \"Both lay eggs in nests on land.\" Paragraph 1 says this with the clue word Both. They are reptiles, not fish, and their skin is thick and scaly." },
-    { id: "SK-TSCC-T5", type: "mc", points: 1, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
-      prompt: "What can you see when a crocodile shuts its mouth?",
-      choices: [
-        { text: "top and bottom teeth", correct: true },
-        { text: "only its top teeth" },
-        { text: "only its bottom teeth" },
-        { text: "no teeth at all" }
+    { id: "SK-TSCC-T5", type: "match", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a"],
+      prompt: "Match each detail to the animal it is true for. Some details are true for both animals.",
+      cols: ["Alligator only", "Crocodile only", "Both"],
+      rows: [
+        { text: "You see mostly its top teeth when its mouth is shut.", answer: 0 },
+        { text: "You see top and bottom teeth when its mouth is shut.", answer: 1 },
+        { text: "It can live in salty water.", answer: 1 },
+        { text: "It has a long tail.", answer: 2 },
+        { text: "It lives in the wild in Georgia.", answer: 0 }
       ],
-      clue: "Paragraph 3 tells about each animal's teeth. Make sure you read the part about the right animal.",
-      why: "The answer is \"top and bottom teeth.\" Paragraph 3 says that when a crocodile shuts its mouth, you can see top and bottom teeth. Seeing mostly the top teeth is true of an alligator." }
+      clue: "For each detail, find what the passage says about alligators, then about crocodiles. If it is true for both, choose Both.",
+      why: "Seeing mostly top teeth is true of alligators, and seeing top and bottom teeth is true of crocodiles (paragraph 3). Only crocodiles can live in salty water too (paragraph 4). Both animals have long tails (paragraph 1). Georgia has lots of alligators, but wild crocodiles live only in south Florida, so living wild in Georgia is true of alligators only." }
   ]
 });
 PP.addLesson({

@@ -552,13 +552,13 @@ PP.addLesson({
     { id: "SK-TC1c-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Kenji's audience is his classmates, and they have never heard the word peg. Which change to Slide 2 would help THESE readers most?",
       choices: [
-        { text: "a close-up drawing of the stalk growing down into the soil, with the label \"peg\"", correct: true },
+        { text: "a drawing of the stalk going into the soil, with a label on it", correct: true },
         { text: "a photo of a jar of peanut butter on a kitchen table" },
         { text: "a chart that shows how many peanuts each state grows" },
-        { text: "the fact that peanuts are in the same family as peas" }
+        { text: "a sentence telling that peanuts are in the same family as peas" }
       ],
       clue: "Think about what Kenji's audience does not know yet. Which choice would help a reader understand a brand-new word?",
-      why: "The answer is the close-up drawing with the label \"peg.\" Kenji's classmates do not know what a peg is, so a labeled drawing shows them exactly what the word names. The peanut butter photo and the chart are about peanuts, but they do not help these readers understand the peg. The fact about peas belongs on Slide 4." },
+      why: "The answer is \"a drawing of the stalk going into the soil, with a label on it.\" The label would say peg. Kenji's classmates do not know what a peg is, so a labeled drawing shows them exactly what the word names. The peanut butter photo and the chart are about peanuts, but they do not help these readers understand the peg. The sentence about peas belongs on Slide 4." },
     { id: "SK-TC1c-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Kenji has a photo of peanut plants lying upside down in a field. Which caption should he put under it on Slide 3?",
       choices: [

@@ -416,14 +416,15 @@ PP.addLesson({
       why: "The answer is \"He cannot leave without seeing it, so he returns the book on time.\" Omar puts the book on his shoes so he will not forget it. The last sentence shows it worked: on Friday morning he hands the book to Ms. Park right on time. He dries the book with a towel, not with his shoes, and the story never says Lina reads it or that Omar is late." },
     { id: "SK-TT1b-T5", type: "match", points: 2, dok: 2, passages: ["p2"],
       prompt: "Match each detail to the story part it shows.",
-      cols: ["Character", "Problem", "Solution"],
+      cols: ["Character", "Setting", "Problem", "Solution"],
       rows: [
-        { text: "Omar's dad", answer: 0 },
-        { text: "The book is not anywhere.", answer: 1 },
-        { text: "Omar finds the book.", answer: 2 }
+        { text: "Lina, who has not seen the book", answer: 0 },
+        { text: "Thursday afternoon at Omar's house", answer: 1 },
+        { text: "The book is not anywhere.", answer: 2 },
+        { text: "Omar finds the book.", answer: 3 }
       ],
-      clue: "Ask three questions: Who is in the story? What goes wrong? How is it fixed?",
-      why: "Omar's dad is a character. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
+      clue: "Ask four questions: Who is in the story? When and where does it happen? What goes wrong? How is it fixed?",
+      why: "Lina is a character. She is in the story even though she does not have the problem. Thursday afternoon at Omar's house tells when and where, so it is the setting. The book not being anywhere is the problem. Finding the book is the solution, because it fixes the problem." }
   ]
 });
 PP.addLesson({
@@ -663,7 +664,7 @@ PP.addLesson({
       "Compare means tell how things are alike. Contrast means tell how they are different. Clue words like both, alike and same show how things are alike. Words like but, however, unlike, different and while show how they are different.",
       "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
-      "Stories from different places and cultures can show people who feel and learn the same things.",
+      "You will often compare stories from different places and cultures, like a story from Ghana and a story from Vermont. Notice what is different about each place and way of life, and what the characters feel and learn that is the same.",
       "Keep a chart in your head with two sides: same and different."
     ],
     words: [
@@ -727,14 +728,14 @@ PP.addLesson({
         ["Lucy pulled the sled over to her friends.", "\"Let's ride together,\" she said."],
         ["The three of them squeezed onto the red sled.", "They flew down the hill, laughing and shouting the whole way.", "It was the best ride of the day."]
       ] },
-    { id: "p3", title: "The Smallest Fox", genre: "Literary text",
+    { id: "p3", title: "The Smallest Cousin", genre: "Literary text",
       paragraphs: [
-        ["Long ago, in a snowy forest, there lived a fox named Pip.", "Pip was the smallest fox in his family.", "His big brothers liked to tease him.", "\"You are too tiny to help with anything,\" they said."],
-        ["One day, Grandfather Fox dropped his smooth, shiny stone.", "It was his favorite treasure.", "The stone rolled down the hill and slid into a narrow crack between two rocks."],
-        ["The big brothers pushed their paws into the crack.", "They pushed and pulled, but their paws were too wide.", "\"It's gone for good,\" they groaned."],
-        ["Pip stepped forward.", "He slipped his thin little paw into the crack, wiggled it, and pulled out the stone."],
-        ["Grandfather Fox held the stone close.", "\"Being small is what saved my treasure,\" he said."],
-        ["From that day on, Pip's brothers never teased him again.", "Pip felt proud of being just the size he was."]
+        ["Mateo lived with his big family in a town in Oaxaca, Mexico.", "He was the youngest and smallest of all the cousins.", "His big cousins liked to tease him.", "\"You are too tiny to help with anything,\" they said."],
+        ["One afternoon, Grandfather dropped his old silver ring in the courtyard.", "It was his favorite treasure.", "The ring rolled across the stones and slid into a narrow crack in the wall."],
+        ["The big cousins pushed their fingers into the crack.", "They pushed and pulled, but their hands were too wide.", "\"It's gone for good,\" they groaned."],
+        ["Mateo stepped forward.", "He slipped his thin little hand into the crack, wiggled it, and pulled out the ring."],
+        ["Grandfather held the ring close.", "\"Being small is what saved my treasure,\" he said."],
+        ["From that day on, Mateo's cousins never teased him again.", "Mateo felt proud of being just the size he was."]
       ] },
     { id: "p4", title: "Ravi and the Kingfisher", genre: "Literary text",
       paragraphs: [
@@ -810,25 +811,25 @@ PP.addLesson({
   ],
   test: [
     { id: "SK-TT1d-T1", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "In what way are Pip and Ravi the same?",
+      prompt: "How are Grandfather in \"The Smallest Cousin\" and Ms. Devi in \"Ravi and the Kingfisher\" alike?",
       choices: [
-        { text: "Each one uses what makes him different to help.", correct: true },
-        { text: "Each one is the oldest child in his family." },
-        { text: "Each one gets lost far away from his home." },
-        { text: "Each one is the loudest one in his group." }
+        { text: "Each one praises the main character near the end.", correct: true },
+        { text: "Each one teases the main character at the start." },
+        { text: "Each one loses a treasure that is hard to reach." },
+        { text: "Each one takes a group of children on a trip." }
       ],
-      clue: "Think about what makes each main character different from the others. Then look at how that difference helps in the story.",
-      why: "The answer is \"Each one uses what makes him different to help.\" Pip's small paw gets the stone out of the crack. Ravi's quiet, still way lets the whole class see the kingfisher. Pip is the smallest, not the oldest, and Ravi is the quietest, not the loudest." },
+      clue: "Find the grown-up in each story. Read what each one says in the last part of the story, and check that your answer is true for BOTH grown-ups.",
+      why: "The answer is \"Each one praises the main character near the end.\" Grandfather says Mateo's small size saved his treasure, and Ms. Devi tells Ravi he is a great bird watcher. The cousins and the other kids are the ones who tease or question, not the grown-ups. Only Grandfather loses a treasure, and only Ms. Devi takes the class on a trip." },
     { id: "SK-TT1d-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Which sentence tells how the place in \"The Smallest Fox\" is different from the place in \"Ravi and the Kingfisher\"?",
+      prompt: "Which sentence tells how the place in \"The Smallest Cousin\" is different from the place in \"Ravi and the Kingfisher\"?",
       choices: [
-        { text: "Pip's story is in a snowy forest, and Ravi's is at a bird park.", correct: true },
-        { text: "Pip's story is in a busy city, and Ravi's is in a snowy forest." },
-        { text: "Pip's story is on a sandy beach, and Ravi's is at a school." },
-        { text: "Pip's story is in a fox's den, and Ravi's is in a classroom." }
+        { text: "Mateo's story is at his family's home in Mexico, and Ravi's is at a bird park in India.", correct: true },
+        { text: "Mateo's story is at a bird park in Mexico, and Ravi's is at his family's home in India." },
+        { text: "Mateo's story is on a sandy beach in India, and Ravi's is at a school in Mexico." },
+        { text: "Mateo's story is in a busy classroom, and Ravi's is in a family's courtyard." }
       ],
-      clue: "Look at the first sentence of \"The Smallest Fox\" and the first two paragraphs of \"Ravi and the Kingfisher.\" Where does the action happen?",
-      why: "The answer is \"Pip's story is in a snowy forest, and Ravi's is at a bird park.\" Pip lives in a snowy forest, and the stone is lost among rocks there. Ravi's class takes a trip to a bird park by a lake, and the important part happens there, not in a classroom." },
+      clue: "Look at the first paragraph of each story to find the country. Then find where the most important part of each story happens.",
+      why: "The answer is \"Mateo's story is at his family's home in Mexico, and Ravi's is at a bird park in India.\" Mateo lives in Oaxaca, Mexico, and the ring is lost in the family's courtyard. Ravi lives in Chennai, India, and his class takes a trip to a bird park by a lake, where the important part happens. The other choices mix up the places or name places that are not in the stories." },
     { id: "SK-TT1d-T3", type: "ebsr", points: 2, dok: 3, passages: ["p3", "p4"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What lesson do BOTH stories teach?",
@@ -840,17 +841,17 @@ PP.addLesson({
         ] },
       partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
         choices: [
-          { text: "\"Pip felt proud of being just the size he was.\"", correct: true },
+          { text: "\"Mateo felt proud of being just the size he was.\"", correct: true },
           { text: "\"For the first time, he was glad to be the quiet one.\"", correct: true },
-          { text: "\"His big brothers liked to tease him.\"" },
-          { text: "\"They pushed and pulled, but their paws were too wide.\"" },
+          { text: "\"His big cousins liked to tease him.\"" },
+          { text: "\"They pushed and pulled, but their hands were too wide.\"" },
           { text: "\"Every time they came close, the birds flew away.\"" }
         ] },
-      clue: "Look at how each main character feels about himself at the very end. A lesson for both stories must fit Pip AND Ravi.",
-      why: "Part A: What makes you different can also make you special. Part B: \"Pip felt proud of being just the size he was.\" and \"For the first time, he was glad to be the quiet one.\" Both characters end up glad about the very thing that made them different. The teasing and the birds flying away happen before the characters learn the lesson." },
+      clue: "Look at how each main character feels about himself at the very end. A lesson for both stories must fit Mateo AND Ravi.",
+      why: "Part A: What makes you different can also make you special. Part B: \"Mateo felt proud of being just the size he was.\" and \"For the first time, he was glad to be the quiet one.\" Both characters end up glad about the very thing that made them different. The teasing and the birds flying away happen before the characters learn the lesson." },
     { id: "SK-TT1d-T4", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
-      cols: ["Pip's story", "Ravi's story", "Both stories"],
+      cols: ["Mateo's story", "Ravi's story", "Both stories"],
       rows: [
         { text: "The main character finds something that was lost.", answer: 0 },
         { text: "Staying still and silent helps the main character.", answer: 1 },
@@ -858,17 +859,17 @@ PP.addLesson({
         { text: "By the end, the main character feels good about himself.", answer: 2 }
       ],
       clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-      why: "Only Pip finds something that was lost: Grandfather's stone. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
+      why: "Only Mateo finds something that was lost: Grandfather's ring. Only Ravi is helped by staying still and silent. In both stories, others point out the difference (\"too tiny\" and \"Why don't you ever talk?\"), and both characters feel good about themselves at the end." },
     { id: "SK-TT1d-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "How is the problem in Pip's story different from the problem in Ravi's story?",
+      prompt: "How is the problem in Mateo's story different from the problem in Ravi's story?",
       choices: [
-        { text: "In Pip's story, a treasure is stuck, but in Ravi's, the birds keep flying away.", correct: true },
-        { text: "In Pip's story, Pip gets lost, but in Ravi's, Ravi cannot find his teacher." },
-        { text: "In Pip's story, the foxes are hungry, but in Ravi's, the class misses the bus." },
-        { text: "In Pip's story, a storm is coming, but in Ravi's, Arjun falls into the lake." }
+        { text: "In Mateo's story, a treasure is stuck, but in Ravi's, the birds keep flying away.", correct: true },
+        { text: "In Mateo's story, Mateo gets lost, but in Ravi's, Ravi cannot find his teacher." },
+        { text: "In Mateo's story, the cousins are hungry, but in Ravi's, the class misses the bus." },
+        { text: "In Mateo's story, a storm is coming, but in Ravi's, Arjun falls into the lake." }
       ],
       clue: "Find what goes wrong in the middle of each story. Then check both halves of each choice against the stories.",
-      why: "The answer is \"In Pip's story, a treasure is stuck, but in Ravi's, the birds keep flying away.\" Grandfather's stone is stuck in a crack, and the noisy children scare the birds away. None of the other problems happen in either story." }
+      why: "The answer is \"In Mateo's story, a treasure is stuck, but in Ravi's, the birds keep flying away.\" Grandfather's ring is stuck in a crack, and the noisy children scare the birds away. None of the other problems happen in either story." }
   ]
 });
 PP.addLesson({
