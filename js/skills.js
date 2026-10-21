@@ -777,10 +777,12 @@
   function renderTry(host, L) {
     const K = keyOf(L);
     const set = PP.byId["SK:" + K + ":y"];
+    const count = set ? set.items.length : 0;
+    const countText = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][count] || String(count);
     host.appendChild(make("h2", "panel-h", "Try It Yourself"));
     const r = prog[cur] || {};
     if (set) host.appendChild(goCard(set, {
-      intro: set.items.length + " new questions on your own. Press Check to see if you are right. Help me unlocks after one try.",
+      intro: countText + (count === 1 ? " new question" : " new questions") + " on your own. Press Check to see if you are right. Help me unlocks after one try.",
       done: r.tried ? "✓ Finished. Next: the skill check." : "",
       button: r.tried ? "Try again" : "Start", id: "sk-start-try", mode: "try" }));
     if (L.write) renderWrite(host, L);
