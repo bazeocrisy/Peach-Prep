@@ -493,12 +493,12 @@ PP.addLesson({
       rows: [
         { text: "Daytime on the moon lasts about two weeks.", answer: 0 },
         { text: "The moon is about 239,000 miles from Earth.", answer: 1 },
-        { text: "At night, it gets colder than any place on Earth.", answer: 0 },
+        { text: "At night, the ground gets colder than any place on Earth.", answer: 0 },
         { text: "Sign up for Summer Camp today!", answer: 1 },
         { text: "More on this site: Make Your Own Star Chart", answer: 1 }
       ],
       clue: "Keep Kofi's question in mind. A part helps only if it tells about day or night on the moon. True facts about other things do not help.",
-      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. How far away the moon is, is true, but it is not about day and night. The Summer Camp box is an ad, and the star chart box is a link to a different page." },
+      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. The distance to the moon is true, but it is not about day and night. The Summer Camp box is an ad, and the star chart box is a link to a different page." },
     { id: "SK-RA1b-T7", type: "mc", points: 1, dok: 2, passages: ["p6"],
       prompt: "Kofi is filling in his notes table from the web page. Which note is the BEST one to write in the Fact box?",
       stem: ["Kofi's notes table", "Question: Why could astronauts take big, bouncing hops on the moon?", "Fact: ________", "Where I found it: Sky Watchers Club web page, April 14, 2026"],

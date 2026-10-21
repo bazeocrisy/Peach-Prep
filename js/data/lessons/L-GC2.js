@@ -43,15 +43,15 @@ PP.addLesson({
       answer: "It is a fragment. You could fix it like this: After the storm passed over Columbus, the sky turned pink."
     },
     {
-      show: ["Kofi and his cousin fished in the creek.", "Kofi fished in the creek, and his cousin read a book."],
-      ask: "Which sentence is simple, and which is compound?",
+      show: ["From a student's draft:", "(1) Kofi and his cousin fished in the creek. (2) Kofi caught a small fish, but his cousin caught nothing. (3) When the sun went down, they walked home."],
+      ask: "Which sentence is simple, which is compound, and which is complex?",
       steps: [
-        "Both sentences use the word and, so look at what and joins.",
-        "In the first sentence, and joins two people: Kofi and his cousin. There is only one does-what, fished.",
-        "In the second sentence, check each side. \"Kofi fished in the creek\" can stand alone. \"His cousin read a book\" can stand alone too.",
-        "Two whole thoughts joined with a comma and and make a compound sentence."
+        "Sentence 1: and joins two people, Kofi and his cousin. There is only one does-what, fished, and one whole thought. So sentence 1 is simple.",
+        "Sentence 2: \"Kofi caught a small fish\" can stand alone. \"His cousin caught nothing\" can stand alone too. Two whole thoughts joined by a comma and but make it compound.",
+        "Sentence 3: \"They walked home\" can stand alone. \"When the sun went down\" has a who and a does-what, but it cannot stand alone, because When leaves you waiting.",
+        "One whole thought plus a part that cannot stand alone makes sentence 3 complex."
       ],
-      answer: "The first sentence is simple. The second sentence is compound."
+      answer: "Sentence 1 is simple, sentence 2 is compound, and sentence 3 is complex."
     },
     {
       show: ["The library was closed we went to the park instead."],
@@ -65,8 +65,29 @@ PP.addLesson({
       answer: "It is a run-on. One way to fix it: The library was closed, so we went to the park instead."
     }
   ],
-  parent: "When your child tells you about the day, pick one sentence and play \"sentence builder\": say it as a simple sentence, add and, but or so to make it compound, then start it with because or when to make it complex.",
-  passages: [],
+  parent: "When your child tells you about the day, pick one sentence and play \"sentence builder\": say it as a simple sentence, add and, but or so to make it compound, then start it with because or when to make it complex. You can also read a few sentences from a book out loud and ask, \"Was that one simple, compound or complex?\"",
+  passages: [
+    /* PP-004: two short student drafts so the skill is practiced inside a text, not only on single
+       sentences. p1 is for practice and p2 for the check. Each draft has exactly one fragment and
+       one run-on; every other sentence is correct. Sentence types (for reviewers):
+       p1: (1) simple (2) simple (3) compound (4) simple (5) FRAGMENT (6) simple (7) RUN-ON
+           (8) complex (9) simple (10) complex (11) simple
+       p2: (1) simple (2) simple (3) simple (4) compound (5) FRAGMENT (6) simple (7) simple
+           (8) RUN-ON (9) simple (10) simple (11) complex */
+    { id: "p1", title: "Our Class Garden", byline: "Maya's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) This spring, our class planted a garden behind the school.", "(2) First, we dug up the hard dirt with small shovels.", "(3) Mr. Hall brought a bag of rich soil, and we mixed it into the dirt.", "(4) Next, we planted rows of beans and carrots."],
+        ["(5) Because the weather was dry.", "(6) We watered the rows every morning.", "(7) The beans grew fast the carrots took much longer."],
+        ["(8) When the beans were ready, we picked them for a class snack.", "(9) The carrots should be ready in a few more weeks.", "(10) We will cook them in a soup after we pull them up.", "(11) I can hardly wait!"]
+      ] },
+    { id: "p2", title: "The Old Lighthouse", byline: "Jordan's draft", genre: "Student draft (narrative)", draft: true,
+      paragraphs: [
+        ["(1) Last summer, my family visited an old lighthouse on the Georgia coast.", "(2) It stands on a sandy point near the ocean."],
+        ["(3) We climbed the long, winding stairs to the top.", "(4) My legs ached, but I kept going.", "(5) When we reached the top.", "(6) We could see boats far out on the water."],
+        ["(7) A guide told us about the keepers from long ago.", "(8) Each night, a keeper climbed the stairs he lit the big lamp.", "(9) The bright light warned ships about the rocks.", "(10) Today, the lamp turns on by itself."],
+        ["(11) Before we left, I bought a postcard of the lighthouse."]
+      ] }
+  ],
   practice: [
     { id: "SK-GC2a-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which of these is a complete sentence?",
