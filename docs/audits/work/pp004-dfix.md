@@ -110,7 +110,7 @@
 - Section 16 alone (`g16.py`): 3 passed, 0 failed.
 - Full guard `python3 verification/guard.py http://localhost:8502/`: see the result line below.
 
-FULL_GUARD_RESULT_PLACEHOLDER
+- **Full guard result: 110 passed, 0 failed, exit 0** (`dfix/guard-full.log`). This includes 16.1-16.3, 7.1 (no page errors) and 8.1 (no sideways scroll at 320/375/390 on any screen).
 
 ## What I did not do
 - No real screen reader, iOS Safari or Firefox; Chromium only.
