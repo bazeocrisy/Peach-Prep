@@ -198,7 +198,7 @@ PP.addLesson({
     big: "A strong opinion piece states your opinion, explains each reason with facts or examples, links ideas with words like because, and ends by saying your opinion again.",
     points: [
       "Begin by introducing the topic. Then state your opinion clearly in one sentence, like \"I think our class should start a garden.\"",
-      "Give reasons. The Milestones rubric calls them the provided reasons, so the writing task usually gives you the reasons. Your job is to explain each one with facts and examples from the passages, in your own words.",
+      "Give reasons. A reason tells WHY your opinion is a good one. When you write on your own, you think of the reasons yourself. On the Milestones, the writing task usually gives you the reasons (the rubric calls them the provided reasons). Either way, explain each reason with facts and examples, in your own words.",
       "Link your ideas with words like because, therefore, also, for example and in addition. Because joins your opinion or a reason to the facts that explain it.",
       "End with a conclusion. Say your opinion again and sum up your reasons. Do not start a new idea at the end."
     ],
@@ -247,10 +247,10 @@ PP.addLesson({
     }
   ],
   write: {
-    prompt: ["Should kids have a job at home, like feeding a pet or setting the table?", "Write a short opinion paragraph. Start with your opinion. Then use these two reasons: Jobs teach kids to be responsible. Jobs help the whole family. Explain each reason with because and an example. End with a sentence that says your opinion again."],
+    prompt: ["Should kids have a job at home, like feeding a pet or setting the table?", "Write a short opinion paragraph. Start with your opinion. Then give two reasons. You can use these reasons, or think of one of your own: Jobs teach kids to be responsible. Jobs help the whole family. Explain each reason with because and an example. End with a sentence that says your opinion again."],
     checklist: [
       "I stated my opinion in the first sentence.",
-      "I gave both reasons and used because to explain each one.",
+      "I gave two reasons and used because to explain each one.",
       "I added an example for each reason.",
       "I ended with a sentence that says my opinion again."
     ],
@@ -323,7 +323,18 @@ PP.addLesson({
         "For all these reasons, a reading corner would be great for our class."
       ],
       clue: "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
-      why: "The order is: the empty corner (introduces the topic), I think we should turn it into a reading corner (the opinion), First (reason 1), Also (reason 2), and For all these reasons (the conclusion)." }
+      why: "The order is: the empty corner (introduces the topic), I think we should turn it into a reading corner (the opinion), First (reason 1), Also (reason 2), and For all these reasons (the conclusion)." },
+    { id: "SK-TT3c-P6", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read Theo's opinion in the box. Theo needs to think of a reason on his own. Which sentence is the best reason to support his opinion?",
+      stem: ["Opinion: Our school should start a reading buddy program, where older kids read with younger kids."],
+      choices: [
+        { text: "Younger kids would get extra help as they learn to read.", correct: true },
+        { text: "Our school library has hundreds of books on its shelves." },
+        { text: "I really think a reading buddy program is a great idea." },
+        { text: "Some of the older kids like to play soccer at recess." }
+      ],
+      clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: Does it answer the question, why should the school do this?",
+      why: "The answer is \"Younger kids would get extra help as they learn to read.\" It tells why a reading buddy program is a good idea. The library sentence is a fact, but it does not explain why buddies would help. \"I really think...\" only says the opinion again, and soccer at recess is not about reading." }
   ],
   test: [
     { id: "SK-TT3c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
