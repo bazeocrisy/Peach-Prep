@@ -355,7 +355,7 @@ PP.addSet({
       choices: [
         { text: "Leaves change color and fall because of changes inside them as trees get ready for winter.", correct: true },
         { text: "Chlorophyll is a green material inside leaves that helps them make food for the tree." },
-        { text: "Sunny fall days and cool nights help make the red colors in some leaves very bright." },
+        { text: "The leaves of many maples and sweetgums make red and purple colors in the fall." },
         { text: "Fallen leaves break down on the ground and add nutrients that new plants can use." }
       ],
       clue: "A main idea is about the WHOLE article, not just one section. Read the three headings. What big idea ties them all together?",
@@ -440,19 +440,19 @@ PP.addSet({
       dok: 2,
       prompt: "Read each cause from the article. Choose the effect that goes with it. Use each effect once.",
       cols: [
-        "The red colors are especially bright.",
+        "The tree saves water during the cold months.",
         "The soil gets nutrients for new plants.",
         "The leaf looks green.",
         "A gentle breeze can knock the leaf loose."
       ],
       rows: [
         { text: "A leaf has a lot of green chlorophyll inside it.", answer: 2 },
-        { text: "Fall days are sunny, and fall nights are cool.", answer: 0 },
+        { text: "A tree loses its leaves.", answer: 0 },
         { text: "A thin layer of cells grows where the stem joins the branch.", answer: 3 },
         { text: "Fallen leaves slowly break down on the ground.", answer: 1 }
       ],
       clue: "A cause makes something happen. Find each cause in the article. Then read on to find what it makes happen.",
-      why: "Chlorophyll is green, so a leaf full of it looks green. Paragraph 5 says sunny fall days and cool nights help make the reds especially bright. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
+      why: "Chlorophyll is green, so a leaf full of it looks green. Paragraph 7 says that losing its leaves helps the tree save water during the cold winter months. The thin layer of cells cuts the leaf off from the tree, so a gentle breeze can knock it loose. Fallen leaves break down and add nutrients to the soil for new plants."
     },
     {
       id: "PT-1-14",

@@ -816,7 +816,7 @@ PP.addLesson({
       ],
       clue: "Read both sentences. How much time passed before the truck left? What does that tell you about how the firefighters climbed on?",
       why: "The answer is quickly. The truck left in less than a minute, so the firefighters must have climbed on quickly. Proudly and quietly do not explain how they got going so soon, and slowly means the opposite." },
-    { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 3, passages: [],
+    { id: "SK-GC2d-T3", type: "ebsr", points: 2, dok: 2, passages: [],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: "Lily wrote: \"My grandma has a nice garden.\"",
       partA: { prompt: "Which revision best elaborates on Lily's idea by adding details?",

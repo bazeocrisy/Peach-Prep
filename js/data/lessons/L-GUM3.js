@@ -305,31 +305,33 @@ PP.addLesson({
       why: "The error is in \"My baby sister has four new tooths.\" Tooth is a special noun, so the plural is teeth." }
   ],
   /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
-     Same code and 7 points as form A; new sentences, and each special noun is used in only one item.
+     Reworked by rc3fix (docs/audits/work/pp004-rc3fix.md, findings RC3-2/RC3-3): every key target except
+     "deer" (one TB4 row) is a special plural that is not in this lesson's teach, Watch Me, practice or form A.
+     Same code and 7 points as form A; each special noun is used in only one item.
      NEEDS INDEPENDENT REVIEW before it is relied on. */
   testB: [
     { id: "SK-GUM3-2-TB1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that belongs in the blank.",
-      stem: "A family of ____ swam across the pond behind our school.",
+      stem: "Mom cut the orange into two ____ so we could share it.",
       choices: [
-        { text: "geese", correct: true },
-        { text: "gooses" },
-        { text: "geeses" },
-        { text: "goose" }
+        { text: "halves", correct: true },
+        { text: "halfs" },
+        { text: "halfes" },
+        { text: "half" }
       ],
-      clue: "A family has more than one bird, so the blank needs a plural. Goose is a special noun. Say \"one goose, two ___.\"",
-      why: "The answer is geese. One goose, two geese. Goose changes the letters inside the word instead of adding -s, so gooses and geeses are not words. Goose names only one bird, and a family has more than one." },
+      clue: "Two means more than one, so the blank needs a plural. Say \"one half, two ___.\"",
+      why: "The answer is halves. One half, two halves. The f changes to v before -es is added, so halfs and halfes are not words. Half names only one part, and Mom cut the orange into two parts." },
     { id: "SK-GUM3-2-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Read each sentence. Which TWO sentences have no mistakes with plural nouns?",
       choices: [
-        { text: "Many people came to watch the parade.", correct: true },
-        { text: "Grandpa sharpened all the knives in the kitchen.", correct: true },
-        { text: "Two mooses waded into the cold lake." },
-        { text: "Four deers drank from the cool creek." },
-        { text: "Our cat chased two mices across the yard." }
+        { text: "The farmer's two calves drank milk from a big bucket.", correct: true },
+        { text: "The elves in our class play wore pointy green hats.", correct: true },
+        { text: "In the story, two thiefs tried to take the king's gold." },
+        { text: "Grandma gave each of her grandchilds a hug." },
+        { text: "We built three snowmans in the front yard." }
       ],
       clue: "Find the word in each sentence that names more than one. Is it a special noun? Say \"one ___, two ___\" to check it.",
-      why: "The answers are \"Many people came to watch the parade.\" and \"Grandpa sharpened all the knives in the kitchen.\" One person, many people. One knife, two knives. The other sentences should say moose, deer and mice. Moose and deer stay the same, so mooses and deers are not words, and mice already means more than one, so it never adds -s." },
+      why: "The answers are \"The farmer's two calves drank milk from a big bucket.\" and \"The elves in our class play wore pointy green hats.\" One calf, two calves. One elf, many elves. In both words, the f changes to v before -es is added. The other sentences should say thieves, grandchildren and snowmen. Thief changes the same way as calf: one thief, two thieves. Grandchild changes like child and children, and snowman changes like man and men, so thiefs, grandchilds and snowmans are not words." },
     { id: "SK-GUM3-2-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Mom baked three {0} of bread for the bake sale.",
@@ -340,24 +342,24 @@ PP.addLesson({
       prompt: "Is the plural noun in each sentence correct, or does it need a fix? Match each sentence.",
       cols: ["Correct", "Needs a fix"],
       rows: [
-        { text: "The children fed the ducks at the park.", answer: 0 },
         { text: "Dad put up two new shelfs in my room.", answer: 1 },
-        { text: "The farmer's oxen rested in the barn after a long day.", answer: 0 },
-        { text: "The womens in the choir sang a song.", answer: 1 }
+        { text: "Doctors and nurses work hard to save lives.", answer: 0 },
+        { text: "Three fishermans sat on the dock with their poles.", answer: 1 },
+        { text: "Two deer drank from the cool creek.", answer: 0 }
       ],
       clue: "Find the word in each sentence that names more than one. Is it spelled the special way, with no extra -s?",
-      why: "\"The children fed the ducks at the park.\" and \"The farmer's oxen rested in the barn after a long day.\" are correct: one child, many children; one ox, two oxen. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"The womens in the choir sang a song.\" needs a fix too: women already means more than one, so it never adds -s." },
+      why: "\"Doctors and nurses work hard to save lives.\" and \"Two deer drank from the cool creek.\" are correct: one life, many lives; one deer, two deer. \"Dad put up two new shelfs in my room.\" needs a fix: one shelf, two shelves, because the f changes to v before -es. \"Three fishermans sat on the dock with their poles.\" needs a fix too: fisherman ends in man, so it changes the way man does. One fisherman, three fishermen." },
     { id: "SK-GUM3-2-TB5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One of these sentences has a mistake with a plural noun. Select that sentence.",
       options: [
         "The buses waited in a long line.",
-        "Our class drew pictures of the sheeps at the petting zoo.",
+        "My uncles came to the picnic with their wifes.",
         "Mom bought two bunches of grapes.",
         "Both babies napped in their strollers."
       ],
       answer: [1], pick: 1,
       clue: "Check the word in each sentence that names more than one. Is it a regular plural that adds -s or -es, or a special noun?",
-      why: "The error is in \"Our class drew pictures of the sheeps at the petting zoo.\" Sheep is a special noun that stays the same: one sheep, many sheep. Buses, bunches and babies are all spelled correctly." }
+      why: "The error is in \"My uncles came to the picnic with their wifes.\" Wife is a special noun: one wife, two wives. The f changes to v, so wifes is not a word. Buses, bunches and babies are all spelled correctly." }
   ]
 });
 
