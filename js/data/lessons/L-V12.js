@@ -645,16 +645,16 @@ PP.addLesson({
       clue: "Find the base word in each one and cover it. Look at the part that is left, and remember what that part means.",
       why: "Dis- in disagree means the opposite of (the opposite of agree). Re- in reopen means again (to open again). -less in seedless means without (seedless grapes have no seeds). -ly in slowly means in a ___ way (in a slow way)." },
     { id: "SK-V2a-TB5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the sentence. Use the root in erupt to figure out what it means.",
-      stem: ["When the volcano began to erupt, hot melted rock poured down its sides."],
+      prompt: "Read the sentence. Use the root in disrupted to figure out what it means.",
+      stem: ["A loud fire drill disrupted our spelling test, so we had to finish it after lunch."],
       choices: [
-        { text: "to break open and burst out", correct: true },
-        { text: "to carry rocks far away" },
-        { text: "to make a ringing sound" },
-        { text: "to look down at the land" }
+        { text: "broke into it and stopped it for a while", correct: true },
+        { text: "carried it away to a different place" },
+        { text: "made a soft and quiet sound near it" },
+        { text: "looked at it closely for a long time" }
       ],
-      clue: "Find the root in erupt. What does that root mean? Then check your answer with what the melted rock did in the sentence.",
-      why: "The answer is \"to break open and burst out.\" The root rupt means break, and e- means out, so erupt means to break out. The volcano breaks open, and the hot melted rock comes out and pours down its sides. Carry would be port, sound would be phon, and look would be spect." }
+      clue: "Find the root in disrupted. What does that root mean? Then check your answer with what happened to the spelling test.",
+      why: "The answer is \"broke into it and stopped it for a while.\" The root rupt means break. The fire drill broke into the spelling test, so the class stopped and finished it later. Carry would be port, sound would be phon, and look would be spect." }
   ]
 });
 

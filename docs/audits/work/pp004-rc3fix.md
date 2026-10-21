@@ -119,3 +119,9 @@ Every set reached full score at both widths, with 0 page errors and 0 horizontal
 - RC3-4 is only partly met (re- and -less are practice-labeled meanings), for the reason given above. The lead may prefer the reviewer's other option: add a teach line for -er to 3.L.V.2.a and keep the original rows.
 - RC3-5 through RC3-9 were NOTEs and were not assigned. They are unchanged.
 - guard.py was not run.
+
+## Lead addendum: fixes from round 4 (pp004-review-C4.md) and review A2
+- **RC4-1, SK-TC1b-P10 (beaver figure).** The narrator line now reads "The dam slows the rushing water." That fits the "Busy Builders" dam section and the item's wrong choice about the dam video. The SVG and the item's alt text are updated together. The key is unchanged, since the item asks what "[water rushing]" tells the reader.
+- **RC4-2, irregular-plurals form B balance.** TB1 now asks for **snowmen** (the man → men pattern; the wrong choices are snowmans, snowmens and snowman). TB2's "snowmans" sentence is replaced by "Dad cut each sandwich into two halfs.", and the explanation now names thieves, grandchildren and halves. The f/fe → -ves pattern now has 3 targets (TB2 rows, TB3, TB4/TB5), and the man/child patterns are tested too. Points are unchanged at 7. "Snowmen" and "halves" appear nowhere else in the lesson.
+- **A2 SHOULD-1, "erupt" overlap.** SK-V2a-TB5 now uses **disrupted** ("A loud fire drill disrupted our spelling test…"; the key is "broke into it and stopped it for a while"). "Disrupt" appears nowhere else on the site. "Erupt" stays only in 3.L.V.2.c and T-RA. Choice lengths were evened so no length warning remains.
+- **Verification:** check-content passes. These three items get a blind re-solve in round 5 (pp004-review-C5.md).

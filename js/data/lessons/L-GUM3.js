@@ -312,15 +312,15 @@ PP.addLesson({
   testB: [
     { id: "SK-GUM3-2-TB1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that belongs in the blank.",
-      stem: "Mom cut the orange into two ____ so we could share it.",
+      stem: "After the big storm, we built three ____ in the front yard.",
       choices: [
-        { text: "halves", correct: true },
-        { text: "halfs" },
-        { text: "halfes" },
-        { text: "half" }
+        { text: "snowmen", correct: true },
+        { text: "snowmans" },
+        { text: "snowmens" },
+        { text: "snowman" }
       ],
-      clue: "Two means more than one, so the blank needs a plural. Say \"one half, two ___.\"",
-      why: "The answer is halves. One half, two halves. The f changes to v before -es is added, so halfs and halfes are not words. Half names only one part, and Mom cut the orange into two parts." },
+      clue: "Three means more than one, so the blank needs a plural. Snowman ends with the word man. Say \"one man, two ___.\"",
+      why: "The answer is snowmen. Snowman ends with man, and man is a special noun: one man, two men. So one snowman, three snowmen. Snowmans and snowmens are not words. Snowman names only one, and we built three." },
     { id: "SK-GUM3-2-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Read each sentence. Which TWO sentences have no mistakes with plural nouns?",
       choices: [
@@ -328,10 +328,10 @@ PP.addLesson({
         { text: "The elves in our class play wore pointy green hats.", correct: true },
         { text: "In the story, two thiefs tried to take the king's gold." },
         { text: "Grandma gave each of her grandchilds a hug." },
-        { text: "We built three snowmans in the front yard." }
+        { text: "Dad cut each sandwich into two halfs." }
       ],
       clue: "Find the word in each sentence that names more than one. Is it a special noun? Say \"one ___, two ___\" to check it.",
-      why: "The answers are \"The farmer's two calves drank milk from a big bucket.\" and \"The elves in our class play wore pointy green hats.\" One calf, two calves. One elf, many elves. In both words, the f changes to v before -es is added. The other sentences should say thieves, grandchildren and snowmen. Thief changes the same way as calf: one thief, two thieves. Grandchild changes like child and children, and snowman changes like man and men, so thiefs, grandchilds and snowmans are not words." },
+      why: "The answers are \"The farmer's two calves drank milk from a big bucket.\" and \"The elves in our class play wore pointy green hats.\" One calf, two calves. One elf, many elves. In both words, the f changes to v before -es is added. The other sentences should say thieves, grandchildren and halves. Thief and half change the same way as calf: one thief, two thieves; one half, two halves. Grandchild changes like child and children. So thiefs, grandchilds and halfs are not words." },
     { id: "SK-GUM3-2-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
       text: "Mom baked three {0} of bread for the bake sale.",
