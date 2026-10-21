@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 628" role="img" aria-labelledby="t">
   <title id="t">A web page about frogs with six numbered parts: menu tabs, a search box, a video with a play button, a caption line, a pop-up word box and a link.</title>
   <!-- screen frame -->
-  <rect x="2" y="2" width="296" height="596" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
+  <rect x="2" y="2" width="296" height="624" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
   <path d="M2 34 H298" stroke="#444" stroke-width="2"/>
   <rect x="3.5" y="3.5" width="293" height="29" rx="10" fill="#E6E6E6"/>
   <g fill="#FFFFFF" stroke="#444" stroke-width="1.5"><circle cx="20" cy="18" r="6"/><circle cx="38" cy="18" r="6"/><circle cx="56" cy="18" r="6"/></g>
@@ -31,25 +31,26 @@
     <text x="54" y="328" fill="#FFFFFF">[frog croaks]</text>
     <text x="54" y="356" fill="#FFFFFF">NARRATOR: Listen!</text>
     <!-- 5 words with a pop-up word box -->
-    <text x="44" y="404">Frogs catch bugs</text>
+    <text x="44" y="404">Frogs catch insects</text>
     <text x="44" y="432">with a sticky tongue.</text>
     <path d="M166 438 H232" stroke="#111" stroke-width="2.5" stroke-dasharray="4 4"/>
     <path d="M191 448 L199 440 L207 448" fill="#FFF8E0" stroke="#111" stroke-width="2"/>
-    <rect x="44" y="448" width="240" height="66" rx="8" fill="#FFF8E0" stroke="#111" stroke-width="2"/>
+    <rect x="44" y="448" width="240" height="94" rx="8" fill="#FFF8E0" stroke="#111" stroke-width="2"/>
     <path d="M192 448 H206" stroke="#FFF8E0" stroke-width="3"/>
     <text x="54" y="474"><tspan font-weight="bold">tongue:</tspan> the soft</text>
-    <text x="54" y="502">part of the mouth</text>
+    <text x="54" y="502">part inside the mouth</text>
+    <text x="54" y="530">that can move</text>
     <text x="268" y="472" font-weight="bold">x</text>
     <!-- 6 link -->
-    <text x="44" y="560" fill="#123E9C" text-decoration="underline">See what toads eat</text>
+    <text x="44" y="588" fill="#123E9C" text-decoration="underline">See what toads eat</text>
     <!-- number badges in the left margin -->
     <g font-weight="bold" text-anchor="middle">
       <circle cx="22" cy="63" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="71">1</text>
       <circle cx="22" cy="112" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="120">2</text>
       <circle cx="22" cy="240" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="248">3</text>
       <circle cx="22" cy="334" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="342">4</text>
-      <circle cx="22" cy="481" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="489">5</text>
-      <circle cx="22" cy="553" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="561">6</text>
+      <circle cx="22" cy="495" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="503">5</text>
+      <circle cx="22" cy="581" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="22" y="589">6</text>
     </g>
   </g>
 </svg>

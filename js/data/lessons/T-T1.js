@@ -75,6 +75,17 @@ PP.addLesson({
         ["Priya took a deep breath.", "\"No,\" she said.", "\"I came here to ride this slide, and I'm going to do it.\""],
         ["She climbed the ladder one step at a time without looking down.", "At the top, she sat, pinched her nose, and pushed off."],
         ["Whoosh!", "Priya splashed into the pool at the bottom.", "She popped up with a huge grin.", "\"Again!\" she shouted, already running back to the ladder."]
+      ] },
+    /* PP-004 form B passage: used only by testB. Needs independent review. */
+    { id: "p3", title: "The Open Gate", genre: "Literary text",
+      paragraphs: [
+        ["Fog lay over Pop-Pop's farm like a thick gray blanket.", "The grass was wet and cold, and the old red barn creaked in the wind."],
+        ["Imani yawned as she carried the feed bucket to the goat pen.", "The pen smelled like wet hay.", "Then she stopped.", "The gate was wide open, and the pen was empty."],
+        ["\"Pop-Pop!\" she shouted.", "\"The goats got out!\"", "Imani bit her lip and stared at the empty pen."],
+        ["Pop-Pop came running from the porch, still in his slippers.", "\"Don't worry,\" he said.", "\"Goats never go far from breakfast.\"", "He took the bucket from Imani and shook it hard, and the feed rattled inside."],
+        ["Imani heard a bell jingle behind the barn, and then another.", "One by one, three goats trotted around the corner.", "They bleated and pushed their noses toward the bucket."],
+        ["Imani laughed and latched the gate tight.", "\"Next time,\" she said, \"I'm checking that gate first.\""],
+        ["By then, the sun had burned away the fog, and the whole farm sparkled."]
       ] }
   ],
   practice: [
@@ -201,6 +212,76 @@ PP.addLesson({
       ],
       clue: "Dialogue is in quotation marks. An action is something a character does. Description helps you picture the place.",
       why: "\"We can ride the lazy river instead\" is dialogue because Dev says it. Standing at the bottom and looking up, and taking a deep breath, are actions because Priya does them. \"The water park was loud and bright\" is description of the setting." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (8) and DOK mix
+     (2,2,3,2,3,2) as form A, on a new passage p3. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT1a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "When does the story most likely take place?",
+      choices: [
+        { text: "early in the morning", correct: true },
+        { text: "around lunchtime" },
+        { text: "late in the evening" },
+        { text: "in the middle of the night" }
+      ],
+      clue: "The writer never names the time. Look at the weather, at how Imani feels, and at what Pop-Pop says the goats want.",
+      why: "The answer is early in the morning. Fog covers the farm, Imani yawns while she does her chores, and Pop-Pop says goats never go far from breakfast. Breakfast is a morning meal, so the details of the setting point to early morning, not lunchtime, evening or night." },
+    { id: "SK-TT1a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 4, Pop-Pop shakes the feed bucket hard. What does this action show about him?",
+      choices: [
+        { text: "He knows a smart way to get the goats to come back.", correct: true },
+        { text: "He is angry that the goats ran off." },
+        { text: "He is trying to scare the goats away from the farm." },
+        { text: "He wants Imani to go inside and eat her breakfast." }
+      ],
+      clue: "Think about what hungry goats would hear when the feed rattles. Then look at what happens right after.",
+      why: "The answer is \"He knows a smart way to get the goats to come back.\" The rattling feed tells the hungry goats that food is ready, and soon three goats trot back. He just told Imani not to worry, so he is not angry, and he wants the goats to come closer, not run away." },
+    { id: "SK-TT1a-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How do Imani's words in paragraph 3 move the plot forward?",
+        choices: [
+          { text: "They tell Pop-Pop about the problem, so he rushes out to help.", correct: true },
+          { text: "They solve the problem by calling the goats back to the pen." },
+          { text: "They explain how the goats were able to open the gate." },
+          { text: "They show that Imani is glad the goats are gone." }
+        ] },
+      partB: { prompt: "Which sentence shows what happens because of Imani's words?",
+        choices: [
+          { text: "Pop-Pop came running from the porch, still in his slippers.", correct: true },
+          { text: "The pen smelled like wet hay." },
+          { text: "Imani heard a bell jingle behind the barn, and then another." },
+          { text: "Imani laughed and latched the gate tight." }
+        ] },
+      clue: "Read what Imani shouts. Then read the very next paragraph. Who hears her, and what does that person do?",
+      why: "Part A: They tell Pop-Pop about the problem, so he rushes out to help. Part B: \"Pop-Pop came running from the porch, still in his slippers.\" Imani's shout lets Pop-Pop know the goats are gone, and he comes so fast he does not change his slippers. Her words do not bring the goats back; the rattling feed does that later. The bell and the latched gate come later, too." },
+    { id: "SK-TT1a-TB4", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence uses description to show how the setting has changed by the end of the story? Choose the sentence in the passage.",
+      targets: ["p3:1:1", "p3:1:2", "p3:2:2", "p3:5:1", "p3:7:1"],
+      answer: ["p3:7:1"], pick: 1,
+      clue: "Think about what the farm looked like at the very start. Find the sentence that shows the farm looking different.",
+      why: "The answer is \"By then, the sun had burned away the fog, and the whole farm sparkled.\" At the start, fog lay over the farm like a gray blanket. At the end, the fog is gone and the farm sparkles. The other sentences describe the farm, the pen or a sound, but they do not show a change." },
+    { id: "SK-TT1a-TB5", type: "mc", points: 1, dok: 3, passages: ["p3"],
+      prompt: "How does the dialogue in paragraph 6 help end the story?",
+      choices: [
+        { text: "It shows the trouble is over and Imani has learned something.", correct: true },
+        { text: "It starts a new problem that the story never solves." },
+        { text: "It shows that Imani is still upset with the goats." },
+        { text: "It tells the reader who left the gate open." }
+      ],
+      clue: "Look at what Imani does just before she speaks. Then think about what \"Next time\" tells you she will do differently.",
+      why: "The answer is \"It shows the trouble is over and Imani has learned something.\" The goats are back, Imani laughs and latches the gate, and her words show she has a plan for next time. She laughs, so she is not upset, and the story never says who left the gate open." },
+    { id: "SK-TT1a-TB6", type: "match", points: 2, dok: 2, passages: ["p3"],
+      prompt: "What does each detail mostly help you understand? Match each detail from the story.",
+      cols: ["A character", "The setting", "An event in the plot"],
+      rows: [
+        { text: "The grass was wet and cold, and the old red barn creaked in the wind.", answer: 1 },
+        { text: "Imani bit her lip and stared at the empty pen.", answer: 0 },
+        { text: "One by one, three goats trotted around the corner.", answer: 2 },
+        { text: "The pen smelled like wet hay.", answer: 1 }
+      ],
+      clue: "Ask: Does this detail tell how someone feels or what they are like? Does it help me picture the place? Or does it tell something that happens?",
+      why: "The wet grass, the creaking barn and the smell of wet hay help you picture the setting. Imani biting her lip shows a character's feeling: she is worried. The goats trotting back is an event in the plot, because it solves the problem of the missing goats." }
   ]
 });
 PP.addLesson({
@@ -511,6 +592,19 @@ PP.addLesson({
         ["\"What were you going to tell me before?\" he asked.", "Amara showed him her drawing.", "\"Triangles make a bridge stronger,\" she said."],
         ["Ms. Ruiz gave them one more day.", "This time, Theo listened while Amara explained, and they built the bridge together."],
         ["The next afternoon, their new bridge held the cup of marbles, and then a second cup, too.", "Theo grinned at his partner.", "\"Your idea was the best part,\" he said."]
+      ] },
+    /* PP-004 form B passage: used only by testB. Needs independent review. */
+    { id: "p3", title: "Ji-ho's Mandu", genre: "Literary text",
+      paragraphs: [
+        ["On Sunday, Ji-ho helped Halmoni, his grandmother, make mandu for the family dinner.", "Mandu are Korean dumplings, often filled with meat and vegetables."],
+        ["Halmoni's fingers moved fast.", "She put a spoonful of filling on a round wrapper, folded it in half and pinched the edge shut in tiny folds.", "Each one looked like a neat little moon."],
+        ["Ji-ho wanted his mandu to look just like hers, so he tried to work as fast as she did.", "He stuffed in a big pile of filling.", "Rip!", "The wrapper tore open."],
+        ["He grabbed another wrapper and tried again, even faster.", "Rip!", "Ji-ho threw the torn wrapper down and crossed his arms.", "\"I'm no good at this,\" he grumbled.", "\"You do it.\""],
+        ["Halmoni did not take over.", "Instead, she wiped her hands and took an old photo out of a drawer.", "It showed a young girl holding a plate of lumpy, lopsided dumplings."],
+        ["\"That girl is me,\" Halmoni said.", "\"My first mandu looked just like that.", "My mother told me to slow down and try one more.\""],
+        ["Ji-ho looked at the photo for a long time.", "He thought, \"If Halmoni's first mandu were lumpy, maybe mine can get better, too.\""],
+        ["He picked up a new wrapper.", "This time, he used a small spoonful and pinched the edge slowly, one fold at a time.", "His mandu was a little crooked, but it held together."],
+        ["By dinnertime, Ji-ho had made twelve mandu.", "Some were lumpy, and some were almost as neat as Halmoni's.", "His family ate every single one, and Ji-ho smiled the whole time."]
       ] }
   ],
   practice: [
@@ -639,6 +733,66 @@ PP.addLesson({
       ],
       clue: "Theo changes in the middle of the story. Ask: is this how the old Theo acts, or the new Theo?",
       why: "Before the bridge breaks, Theo waves his hand at Amara and grabs the glue before she can speak. After it breaks, he listens to her idea and tells her it was the best part. The change in Theo is what teaches the lesson." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (7) and DOK mix
+     (2,2,2,3,2) as form A, on a new passage p3. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT1c-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why does Ji-ho rush and stuff in a big pile of filling at first?",
+      choices: [
+        { text: "He wants to make mandu as well as Halmoni does.", correct: true },
+        { text: "He wants to finish fast so he can go outside and play." },
+        { text: "Halmoni tells him to hurry before the family comes." },
+        { text: "He wants to make more mandu than anyone else." }
+      ],
+      clue: "Find the clue word so in paragraph 3. It links what Ji-ho is hoping for to what he does.",
+      why: "The answer is \"He wants to make mandu as well as Halmoni does.\" Paragraph 3 says he wanted his mandu to look just like hers, so he tried to work as fast as she did. The story never says he wants to play or to make the most, and Halmoni's advice is to slow down, not hurry." },
+    { id: "SK-TT1c-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What do Ji-ho's words and actions in paragraph 4 show about how he feels?",
+      choices: [
+        { text: "He is frustrated and ready to give up.", correct: true },
+        { text: "He is sleepy and wants to take a nap." },
+        { text: "He is angry at Halmoni for tearing his wrapper." },
+        { text: "He is proud of how fast he is working." }
+      ],
+      clue: "The writer does not name the feeling. Look at what Ji-ho does with the torn wrapper and his arms, and listen to what he says.",
+      why: "The answer is \"He is frustrated and ready to give up.\" He throws the wrapper down, crosses his arms and says, \"I'm no good at this. You do it.\" Ji-ho tore the wrapper himself, so he is not angry at Halmoni, and nothing he does shows pride." },
+    { id: "SK-TT1c-TB3", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence tells a thought that helps Ji-ho decide to try again? Choose the sentence in the passage.",
+      targets: ["p3:5:1", "p3:6:3", "p3:7:1", "p3:7:2", "p3:8:1"],
+      answer: ["p3:7:2"], pick: 1,
+      clue: "A thought is what a character says inside his own head. Check who is talking or thinking in each sentence.",
+      why: "The answer is \"He thought, 'If Halmoni's first mandu were lumpy, maybe mine can get better, too.'\" This is Ji-ho's own thought, and it gives him the reason to pick up a new wrapper. The sentence about slowing down is Halmoni's words, not Ji-ho's thought, and looking at the photo or picking up a wrapper is an action." },
+    { id: "SK-TT1c-TB4", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What lesson does Ji-ho learn by the end of the story?",
+        choices: [
+          { text: "Getting good at something hard takes time and practice.", correct: true },
+          { text: "It is best to let someone else do a hard job." },
+          { text: "Food has to look perfect to taste good." },
+          { text: "Old photos help you remember your family." }
+        ] },
+      partB: { prompt: "Which sentence from the story best shows that Ji-ho has learned this lesson?",
+        choices: [
+          { text: "\"Some were lumpy, and some were almost as neat as Halmoni's.\"", correct: true },
+          { text: "\"Halmoni's fingers moved fast.\"" },
+          { text: "\"He stuffed in a big pile of filling.\"" },
+          { text: "\"'I'm no good at this,' he grumbled.\"" }
+        ] },
+      clue: "Compare how Ji-ho acts in paragraph 4 with how he acts at the end. What does he do differently, and how do his mandu turn out?",
+      why: "Part A: Getting good at something hard takes time and practice. Part B: \"Some were lumpy, and some were almost as neat as Halmoni's.\" Ji-ho stops giving up, slows down and keeps going, and his mandu get better. Letting someone else do it is what he wanted before he changed. His family eats even the lumpy ones, so food does not have to look perfect." },
+    { id: "SK-TT1c-TB5", type: "ms", points: 2, dok: 2, passages: ["p3"], pick: 2,
+      prompt: "Which TWO words best describe Halmoni in this story?",
+      choices: [
+        { text: "caring", correct: true },
+        { text: "wise", correct: true },
+        { text: "bossy" },
+        { text: "impatient" },
+        { text: "forgetful" }
+      ],
+      clue: "Look at what Halmoni does when Ji-ho says \"You do it,\" and think about why she shows him the old photo.",
+      why: "The answers are caring and wise. She does not take over or scold Ji-ho; she stops to help him feel better, which is caring. She uses her own first lumpy mandu and her mother's advice to teach him, which is wise. Her fingers move fast, but she is not impatient with Ji-ho, and she remembers her first mandu, so she is not forgetful." }
   ]
 });
 PP.addLesson({

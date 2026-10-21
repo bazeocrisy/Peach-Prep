@@ -232,7 +232,7 @@ PP.addLesson({
         "The same article is on a website. Each number points to a feature."
       ],
       figure: { src: "assets/figures/tc1b-frog-webpage.svg", label: "Figure 2", caption: "A web page about frogs",
-        alt: "A web page about frogs with numbered parts. 1: three tabs at the top that say Home, Frogs and Toads. The Frogs tab has a thick border. 2: a box with a magnifying glass and the word Search. Then the heading What Frogs Eat. 3: a video box showing a frog, with a round play button. 4: a dark bar under the video with two lines: [frog croaks] and NARRATOR: Listen! Then the words Frogs catch bugs with a sticky tongue, with a dotted line under tongue. 5: a box pointing to tongue that says tongue: the soft part of the mouth. 6: underlined words at the bottom that say See what toads eat." },
+        alt: "A web page about frogs with numbered parts. 1: three tabs at the top that say Home, Frogs and Toads. The Frogs tab has a thick border. 2: a box with a magnifying glass and the word Search. Then the heading What Frogs Eat. 3: a video box showing a frog, with a round play button. 4: a dark bar under the video with two lines: [frog croaks] and NARRATOR: Listen! Then the words Frogs catch insects with a sticky tongue, with a dotted line under tongue. 5: a box pointing to tongue that says tongue: the soft part inside the mouth that can move. 6: underlined words at the bottom that say See what toads eat." },
       note: "1. The menu tabs take you to other parts of the site, like the page about toads. 2. The search box finds pages when you type a word. 3. The play button starts the video, so you can see and hear the frog. 4. The caption line shows the sound in [brackets] and the words the narrator says, so you can follow the video even with the sound off. 5. The pop-up box tells what tongue means without leaving the page. 6. The link opens a new page with more facts."
     }],
     tip: "On the test, you may be asked which heading to read to find a fact, which caption fits a picture, or how a text box, bold word, caption, diagram or web page feature helps the reader. Think about the job each feature does."
@@ -344,6 +344,18 @@ PP.addLesson({
       ],
       clue: "People who listen to a talk cannot see bold print. What can a speaker say to do the same job?",
       why: "The answer is \"to tell listeners that the next fact matters a lot.\" Listeners cannot see bold print or headings, so a speaker uses spoken signals, like \"Listen closely,\" to point out an important part. She keeps talking after it, so her talk is not over. She does not ask a question, and those words do not name a place." },
+    { id: "SK-TC1b-P10", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
+      stem: ["This article is also on a website. The picture shows part of the web page for the section \"Busy Builders.\""],
+      figure: { src: "assets/figures/tc1b-beaver-webpage.svg",
+        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a dam of sticks with water spilling over it. Under the video is a dark bar with two caption lines: [water rushing], then NARRATOR: The water spills over the dam. Below that is the sentence Beavers use sticks and mud. At the bottom are underlined words: Next page: Beaver lodges." },
+      prompt: "Choose the words that best complete the sentences.",
+      text: "In the caption line, the words [water rushing] tell the reader {0}. The underlined words at the bottom will {1}.",
+      slots: [
+        { options: ["what sound plays in the video", "what words the narrator says", "what the beaver is building"], answer: 0 },
+        { options: ["open a page about beaver lodges", "play the video about the dam", "tell what the word dam means"], answer: 0 }
+      ],
+      clue: "Look at how each line in the caption starts. Then read the underlined words and think about what tapping them would do.",
+      why: "The answers are \"what sound plays in the video\" and \"open a page about beaver lodges.\" Words in [brackets] name a sound, so a reader with the sound off still knows the water is rushing. The narrator's words come after NARRATOR:, and [water rushing] does not name anything the beaver builds. The underlined words are a link. Its words say Next page: Beaver lodges, so it opens a new page. The play button starts the video, and no word on the page has a pop-up meaning." },
     { id: "SK-TC1b-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       stem: ["In the section \"A Home with a Secret Door,\" the word **lodge** is printed in dark, bold letters.", "The glossary at the back of the book says: lodge: a beaver's home made of sticks and mud"],
       prompt: "How does the bold print help the reader?",
@@ -354,7 +366,7 @@ PP.addLesson({
         { text: "It shows the word should be read in a loud voice." }
       ],
       clue: "Think about why an author makes a word stand out, and where else the word shows up.",
-      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print points out key words, and the glossary tells what they mean. Bold does not mark a book title, a new spelling or a loud voice." },
+      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print tells the reader the word matters, and the glossary tells what it means. Bold does not mark a book title, a new spelling or a loud voice." },
     { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1. Which two sentences in the article tell about the parts that its labels point to? Choose two sentences.",
       targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],
@@ -367,35 +379,13 @@ PP.addLesson({
       rows: [
         { text: "tells what a section will be about", answer: 0 },
         { text: "gives an extra fact set apart from the paragraphs", answer: 1 },
-        { text: "marks an important word that is in the glossary", answer: 2 },
+        { text: "makes one word stand out from the words around it", answer: 2 },
         { text: "shows the parts of something with labels", answer: 3 }
       ],
       clue: "Think about where each feature sits on the page and what it helps you do.",
-      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word marks an important glossary word. A diagram uses labels to show parts." },
-    { id: "SK-TC1b-P10", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
-      stem: ["This article is also on a website. The picture shows part of the web page for the section \"Busy Builders.\""],
-      figure: { src: "assets/figures/tc1b-beaver-webpage.svg",
-        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a dam of sticks with water spilling over it. Under the video is a dark bar with three lines of words: [water rushing], then NARRATOR: The water spills over the dam. Below that is the sentence Beavers use sticks and mud. At the bottom are underlined words: Next page: Beaver lodges." },
-      prompt: "Choose the words that best complete the sentences.",
-      text: "In the caption line, the words [water rushing] tell the reader {0}. The underlined words at the bottom will {1}.",
-      slots: [
-        { options: ["what sound plays in the video", "what words the narrator says", "what the beaver is building"], answer: 0 },
-        { options: ["open a page about beaver lodges", "play the video about the dam", "tell what the word dam means"], answer: 0 }
-      ],
-      clue: "Look at how each line in the caption starts. Then read the underlined words and think about what tapping them would do.",
-      why: "The answers are \"what sound plays in the video\" and \"open a page about beaver lodges.\" Words in [brackets] name a sound, so a reader with the sound off still knows the water is rushing. The narrator's words come after NARRATOR:, and [water rushing] does not name anything the beaver builds. The underlined words are a link. Its words say Next page: Beaver lodges, so it opens a new page. The play button starts the video, and no word on the page has a pop-up meaning." }
+      why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word stands out from the words around it. A diagram uses labels to show parts." }
   ],
   test: [
-    { id: "SK-TC1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
-      prompt: "Which heading would help a reader find out why birds stay away from monarchs?",
-      choices: [
-        { text: "Bright Colors Send a Message", correct: true },
-        { text: "From Egg to Wing" },
-        { text: "A Long Trip South" },
-        { text: "Did You Know?" }
-      ],
-      clue: "Read each heading. Which section would explain why one animal stays away from another?",
-      why: "The answer is Bright Colors Send a Message. That section says monarchs taste bad and their bright orange color warns birds to stay away." },
     { id: "SK-TC1b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "How does the text box add to the article?",
       choices: [
@@ -404,7 +394,7 @@ PP.addLesson({
         { text: "It explains why monarchs fly south in the fall." },
         { text: "It names the colors on a monarch's wings." }
       ],
-      clue: "Read only the words in the box. What new fact does it give that the paragraphs do not?",
+      clue: "Read only the words in the box. What does it tell you that the paragraphs do not?",
       why: "The answer is \"It gives a surprising fact about how monarchs find milkweed.\" The box says a monarch can taste with its feet to tell if a plant is milkweed. That fact is not in the paragraphs." },
     { id: "SK-TC1b-T3", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "Look at Figure 1 next to the section \"From Egg to Wing.\" This question has two parts. Answer Part A, then Part B.",
@@ -429,13 +419,26 @@ PP.addLesson({
       figure: { src: "assets/figures/tc1b-monarch-webpage.svg",
         alt: "A web page. At the top are three tabs: Home, Butterflies and Bees. The Butterflies tab has a thick border. Under them is a box with a magnifying glass and the word Search. Next is the heading From Egg to Wing. The page says A tiny caterpillar hatches from its egg, with a dotted line under the word hatches. An open box points to hatches and says hatches: comes out of an egg. It has a small x in the corner. Then the page says Then it eats and eats. At the bottom are underlined words: Next page: Monarch gardens." },
       prompt: "Choose the words that best complete the sentences.",
-      text: "To learn what hatches means without leaving this page, a reader should {0}. To find a page about bees, a reader should {1}.",
+      text: "To learn what hatches means, a reader should {0}. To find out which flowers people can plant for monarchs, a reader should {1}.",
       slots: [
         { options: ["read the open box next to the word", "tap the Butterflies tab at the top", "tap the underlined words at the bottom"], answer: 0 },
-        { options: ["tap the Bees tab at the top", "read the open box next to the word", "tap the underlined words at the bottom"], answer: 0 }
+        { options: ["tap the underlined words at the bottom", "tap the Bees tab at the top", "read the open box next to the word"], answer: 0 }
       ],
       clue: "Find each feature in the picture. Ask what it does: does it keep you on this page, or take you to another page? Where does it take you?",
-      why: "The answers are \"read the open box next to the word\" and \"tap the Bees tab at the top.\" The open box is a pop-up. It tells what hatches means, and the reader stays on the same page. The menu tabs take a reader to other parts of the site, and one tab says Bees. The Butterflies tab is the page the reader is already on, and the underlined link at the bottom goes to a page about monarch gardens, not bees." },
+      why: "The answers are \"read the open box next to the word\" and \"tap the underlined words at the bottom.\" The open box is a pop-up. It tells what hatches means, and the reader stays on the same page. The underlined words are a link that says Next page: Monarch gardens, so it opens a page about gardens for monarchs, where a reader can learn which flowers to plant. The Butterflies tab is the page the reader is already on, and the Bees tab goes to a page about bees, not monarchs." },
+    { id: "SK-TC1b-T9", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["The picture shows a video about monarchs on a website. The sound is turned off, so the viewer reads the caption line under the video."],
+      figure: { src: "assets/figures/tc1b-monarch-video.svg",
+        alt: "A video screen. It shows a monarch butterfly hanging under a leaf on a branch while rain falls. Under the video is a dark bar with two caption lines: [rain tapping], then NARRATOR: They wait for the rain to stop." },
+      prompt: "What does the caption line tell the viewer?",
+      choices: [
+        { text: "A rain sound plays, and the narrator says the monarchs wait for it to stop.", correct: true },
+        { text: "The narrator says the words \"rain tapping\" before the other words." },
+        { text: "The monarchs are tapping their wings on the leaves to talk." },
+        { text: "The words are a link that opens a new page about rain." }
+      ],
+      clue: "Look at how each caption line starts. What do words in [brackets] name? What does a name with a colon show?",
+      why: "The answer is \"A rain sound plays, and the narrator says the monarchs wait for it to stop.\" Words in [brackets] name a sound, so [rain tapping] is the sound of the rain, not words that someone says. NARRATOR: shows who is talking, and the words after it are what the narrator says. Nothing says the monarchs are tapping, and the caption line is not underlined like a link." },
     { id: "SK-TC1b-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
       stem: ["In the section \"A Long Trip South,\" the author printed one word in bold: **migrate**.", "The book has a glossary at the back."],
       prompt: "What would the glossary most likely say about the bold word?",
@@ -878,20 +881,20 @@ PP.addLesson({
       answer: "It was written on July 4, 1976. Knowing the date explains why the town had such a big party."
     },
     {
-      show: ["Note in a box: A park ranger wrote this sign during a very dry summer. It had not rained for weeks.", "Sign: No campfires today. Please help keep the forest safe."],
+      show: ["Text box: A park ranger wrote this sign during a very dry summer. It had not rained for weeks.", "Sign: No campfires today. Please help keep the forest safe."],
       ask: "What was the situation, and why did the ranger write this sign?",
       steps: [
-        "Read the note in the box first. It tells the situation: a dry summer with no rain for weeks.",
+        "Read the text box first. It tells the situation: a dry summer with no rain for weeks.",
         "Think about what that means. Dry leaves and grass can catch fire easily.",
         "Now the sign makes sense. The sign alone does not say why. The situation does: the ranger wants to stop a forest fire."
       ],
       answer: "The situation was a very dry summer. The forest could catch fire easily, so the ranger wrote the sign to stop fires from starting."
     },
     {
-      show: ["Note in a box: Mr. Banks has been a firefighter for 20 years. He wrote this for a school newsletter.", "Please test your smoke alarm every month. I have seen how fast a fire can spread through a home. A smoke alarm that works gives your family time to get out."],
+      show: ["Text box: Mr. Banks has been a firefighter for 20 years. He wrote this for a school newsletter.", "Please test your smoke alarm every month. I have seen how fast a fire can spread through a home. A smoke alarm that works gives your family time to get out."],
       ask: "Who is the writer, and how does knowing that help you understand what he wrote?",
       steps: [
-        "Read the note in the box. It tells who the writer is: a firefighter for 20 years. That is his individual context.",
+        "Read the text box. It tells who the writer is: a firefighter for 20 years. That is his individual context.",
         "Think about what his job has shown him. Firefighters go into real fires and see how fast they move.",
         "Reread his words. \"I have seen how fast a fire can spread\" comes from his own work. That is why his warning is so strong, and why readers can trust it."
       ],
@@ -919,6 +922,31 @@ PP.addLesson({
         ["Daddy turned a knob, and a gray picture of a cowboy show popped up.", "There is no color, only gray, black and white.", "We can watch only a few channels."],
         ["All the kids on our street came over to watch.", "Mrs. Lee from next door brought popcorn.", "We sat on the floor of our living room in Macon until supper."],
         ["Tomorrow I am going to write a letter to Grandma about it.", "She does not have a television yet."]
+      ] },
+    /* PP-004 gapfix: the short texts for the individual and situational items. Each one has a
+       real text box ("Box: ", SPEC §5) that tells who wrote it and what was happening, so the
+       Learn It point "look for a note in a box" matches what the child sees. p3 is for practice
+       and p4 is for the check. */
+    { id: "p3", title: "Three Short Texts", genre: "Short texts (field notes, newsletter, sign)",
+      paragraphs: [
+        ["## Dr. Ruiz's Field Notebook"],
+        ["Box: Dr. Ruiz is a scientist who studies frogs.", "She wrote this in her field notebook."],
+        ["June 12. Pond 3.", "Counted 14 green frogs and 2 bullfrogs.", "Water is low.", "Frogs stay near the deep end."],
+        ["## A Note from the Bus Driver"],
+        ["Box: Ms. Greene has driven a school bus in Georgia for 15 years.", "She wrote this for the school newsletter."],
+        ["Please stay in your seat until the bus stops.", "I have had to stop fast many times, and a rider who is standing up can fall."],
+        ["## A Sign for Field Day"],
+        ["Box: Leo wrote this sign on the morning of field day at his school.", "It had rained hard all night."],
+        ["FIELD DAY CHANGE!", "Meet in the gym, not on the field.", "Wear your sneakers!"]
+      ] },
+    { id: "p4", title: "Two Short Texts", genre: "Short texts (magazine piece, note)",
+      paragraphs: [
+        ["## Keeping Turtle Nests Safe"],
+        ["Box: Grace Mills wrote this for a kids' magazine.", "She grew up on an island near the Georgia coast.", "For 30 years, her job has been to keep sea turtle nests safe."],
+        ["On summer nights, I walk the beach with a red flashlight, never a bright white one.", "Baby turtles find the sea by following the soft glow over the water.", "A bright light can lead them the wrong way.", "When I was a girl, I did not know that.", "Now I teach every beach visitor I meet."],
+        ["## A Note to a Neighbor"],
+        ["Box: Imani wrote this note to her neighbor in September.", "A hurricane was heading for the Georgia coast, and families near the beach were told to leave right away.", "Her neighbor lived farther from the beach and could stay."],
+        ["Dear Mr. Ortiz,", "We have to leave tonight.", "Please feed my fish, Goldie, until we get back!"]
       ] }
   ],
   practice: [
@@ -952,9 +980,8 @@ PP.addLesson({
       ],
       clue: "Letters often say early on why the writer is writing. Read the first paragraph after \"Dear Cousin Hattie.\"",
       why: "The answer is \"Hattie had sent her a book for her birthday, and Ella wanted to thank her.\" That is the situation: Ella starts with \"Thank you for the book you sent for my birthday.\" Ella only hopes to visit Atlanta, so her family is not moving. Papa and Walter plow the field themselves. Papa only says she will hurt her eyes, and she says she cannot stop reading."},
-    { id: "SK-TC2c-P6", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["Note in a box: Dr. Ruiz is a scientist who studies frogs. She wrote this in her field notebook.", "June 12. Pond 3. Counted 14 green frogs and 2 bullfrogs. Water is low. Frogs stay near the deep end."],
-      prompt: "Why are Dr. Ruiz's notes full of numbers and short facts?",
+    { id: "SK-TC2c-P6", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Read \"Dr. Ruiz's Field Notebook.\" Why are Dr. Ruiz's notes full of numbers and short facts?",
       choices: [
         { text: "She is a scientist, so she writes exact counts to keep track of the frogs.", correct: true },
         { text: "She was writing to a friend, so she kept her note short and fun." },
@@ -963,7 +990,7 @@ PP.addLesson({
       ],
       clue: "Read the note in the box. Who is the writer, and what is her job? How would a person with that job write?",
       why: "The answer is \"She is a scientist, so she writes exact counts to keep track of the frogs.\" The box tells you who the writer is. Scientists count and record facts so they can compare them later. The notes are not written to a friend, they give no clue about a storm, and they are not a funny story." },
-    { id: "SK-TC2c-P4", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
+    { id: "SK-TC2c-P4", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Ella lives on a farm in 1928. Why does she think Hattie is lucky?",
         choices: [
@@ -981,9 +1008,8 @@ PP.addLesson({
         ] },
       clue: "Think about what Ella does not have on her farm. Then look for what Hattie has that Ella wishes for.",
       why: "Part A: Hattie lives in a city with electric lights and streetcars. Part B: \"You wrote that your house has electric lights and that you can ride a streetcar downtown.\" In 1928, Ella's farm had no electricity, so city lights seemed special to her." },
-    { id: "SK-TC2c-P8", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["Note in a box: Ms. Greene has driven a school bus in Georgia for 15 years. She wrote this for the school newsletter.", "Please stay in your seat until the bus stops. I have had to stop fast many times, and a rider who is standing up can fall."],
-      prompt: "Why can Ms. Greene be so sure that a standing rider can fall?",
+    { id: "SK-TC2c-P8", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Read \"A Note from the Bus Driver.\" Why can Ms. Greene be so sure that a standing rider can fall?",
       choices: [
         { text: "She has driven a bus for years and has had to stop fast many times.", correct: true },
         { text: "She read a story in the newsletter about a bus that stopped fast." },
@@ -992,9 +1018,8 @@ PP.addLesson({
       ],
       clue: "Read the note in the box. What is Ms. Greene's job, and how long has she done it? Then find what she says she has seen.",
       why: "The answer is \"She has driven a bus for years and has had to stop fast many times.\" The box tells her individual context: she has been a bus driver for 15 years. Her own experience is why she can be sure. She wrote for the newsletter, she did not read about it there. The box says she drives the bus, so she is not a student rider or a nurse."},
-    { id: "SK-TC2c-P9", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["Note in a box: Leo wrote this sign on the morning of field day at his school. It had rained hard all night.", "FIELD DAY CHANGE! Meet in the gym, not on the field. Wear your sneakers!"],
-      prompt: "Why did Leo tell everyone to meet in the gym?",
+    { id: "SK-TC2c-P9", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Read \"A Sign for Field Day.\" Why did Leo tell everyone to meet in the gym?",
       choices: [
         { text: "The rain had made the field too wet and muddy to use.", correct: true },
         { text: "Field day had been moved to a different day next week." },
@@ -1024,7 +1049,7 @@ PP.addLesson({
       ],
       clue: "Read the text box. What was true about television in the 1950s?",
       why: "The answer is \"Televisions were new, and many families did not have one.\" The text box says TV was new then, so a family's first TV was exciting for the whole street." },
-    { id: "SK-TC2c-T3", type: "ebsr", points: 2, dok: 3, passages: ["p2"],
+    { id: "SK-TC2c-T3", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What does the diary show about TV back then compared with TV today?",
         choices: [
@@ -1042,7 +1067,7 @@ PP.addLesson({
         ] },
       clue: "Look in paragraph 3, where the writer describes the picture on the screen.",
       why: "Part A: The pictures were black and white, not color. Part B: \"There is no color, only gray, black and white.\" Most TVs today show color, so this detail shows how TV was different in 1954." },
-    { id: "SK-TC2c-T4", type: "mc", points: 1, dok: 3, passages: ["p2"],
+    { id: "SK-TC2c-T4", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Why does the writer want to tell Grandma about the TV?",
       choices: [
         { text: "Grandma does not have a TV, so it will be big news.", correct: true },
@@ -1052,9 +1077,8 @@ PP.addLesson({
       ],
       clue: "Read the last paragraph. What does it say about Grandma?",
       why: "The answer is \"Grandma does not have a TV, so it will be big news.\" The diary says Grandma does not have a television yet. At that time, a new TV was exciting news to share." },
-    { id: "SK-TC2c-T7", type: "ebsr", points: 2, dok: 2, passages: [],
-      stem: ["Note in a box: Grace Mills wrote this for a kids' magazine. She grew up on an island near the Georgia coast. For 30 years, her job has been to keep sea turtle nests safe.", "On summer nights, I walk the beach with a red flashlight, never a bright white one. Baby turtles find the sea by following the soft glow over the water. A bright light can lead them the wrong way. When I was a girl, I did not know that. Now I teach every beach visitor I meet."],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+    { id: "SK-TC2c-T7", type: "ebsr", points: 2, dok: 2, passages: ["p4"],
+      prompt: "Read \"Keeping Turtle Nests Safe.\" This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Why does Grace know so much about what baby sea turtles need?",
         choices: [
           { text: "She has spent many years taking care of turtle nests by the sea.", correct: true },
@@ -1071,9 +1095,8 @@ PP.addLesson({
         ] },
       clue: "Read the note in the box first. What has Grace done for most of her life? Then check what she says about when she was a girl.",
       why: "Part A: She has spent many years taking care of turtle nests by the sea. Part B: The box says that her job for 30 years has been keeping turtle nests safe. That is her individual context: her job and her life by the sea. She writes for the magazine, she did not learn from it. She teaches visitors, so she is not one. She says that as a girl she did not know about the lights. The red flashlight shows what she knows, but not how she learned it."},
-    { id: "SK-TC2c-T6", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["Note in a box: Imani wrote this note to her neighbor in September. A hurricane was heading for the Georgia coast, and families near the beach were told to leave right away. Her neighbor lived farther from the beach and could stay.", "Dear Mr. Ortiz, We have to leave tonight. Please feed my fish, Goldie, until we get back!"],
-      prompt: "How does knowing Imani's situation help you understand her note?",
+    { id: "SK-TC2c-T6", type: "mc", points: 1, dok: 2, passages: ["p4"],
+      prompt: "Read \"A Note to a Neighbor.\" How does knowing Imani's situation help you understand her note?",
       choices: [
         { text: "A storm was coming, so her family had to leave fast and could not stay to feed Goldie.", correct: true },
         { text: "Her family was going on a fun trip, so she planned ahead and asked for help with Goldie." },

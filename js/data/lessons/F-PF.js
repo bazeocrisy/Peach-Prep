@@ -783,7 +783,7 @@ PP.addLesson({
         { options: ["saw", "was", "sew"], answer: 0 }
       ],
       clue: "These words look alike. Read each one in the sentence and ask: Does that make sense?",
-      why: "The answer is saw. \"Yesterday I saw a deer\" tells what I looked at. \"I was a deer\" would mean you are a deer, which does not make sense. Was has the same letters as saw in a different order, and sew means to stitch with a needle." },
+      why: "The answer is saw. \"Yesterday I saw a deer\" tells what I looked at. \"Yesterday I was a deer\" would mean the writer was a deer, which does not make sense. Was has the same letters as saw in a different order, and sew means to stitch with a needle." },
     { id: "SK-FF1a-P7", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "One sentence uses a look-alike word that does not belong. Which sentence is it?",
       options: [

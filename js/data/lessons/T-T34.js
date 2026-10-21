@@ -451,6 +451,19 @@ PP.addLesson({
         ["I run across the windy hill.", "My kite is lying flat and still.", "Then a gust comes rushing by,", "And up it jumps into the sky!"],
         ["Higher, higher, past the trees,", "It dips and dances in the breeze.", "Its tail goes swishing left and right.", "I hold the string with all my might."],
         ["Higher, higher, near the sun,", "I laugh and shout and start to run.", "But when the wind grows calm at last,", "My kite floats down, but not too fast."]
+      ] },
+    /* PP-004 form B passages: used only by testB. p3 rhymes ABAB (form A's poem is AABB and
+       the practice poem is ABCB); p4 is a one-stanza ABCB poem for a single rhyme item.
+       Needs independent review. */
+    { id: "p3", title: "Firefly Night", byline: "", genre: "Poem",
+      lines: [
+        ["The sun slips down behind the hill,", "The sky turns pink, then gray.", "The yard grows dark and very still,", "And day has gone away."],
+        ["Then blink, blink, blink, a tiny light", "Floats up beside the tree.", "Then blink, blink, blink, a spark so bright", "Comes drifting close to me."],
+        ["I cup one gently, soft and slow,", "And peek inside my hands.", "Then blink, blink, blink, I let it go", "To where the tall grass stands."]
+      ] },
+    { id: "p4", title: "Snail Climb", byline: "", genre: "Poem",
+      lines: [
+        ["A snail crawled up our garden wall,", "As slow as slow can be.", "It inched and inched to reach the top,", "Then looked right down at me."]
       ] }
   ],
   practice: [
@@ -555,6 +568,58 @@ PP.addLesson({
       answer: ["p2:2:1"], pick: 1,
       clue: "Say breeze out loud. Then read the last word of each line you can choose. Which one ends with the same sound?",
       why: "The answer is \"Higher, higher, past the trees,\" because trees rhymes with breeze. Hill, still, right and might do not end with the same sound as breeze." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (7) and DOK mix
+     (1,1,2,2,1) as form A, on new poems p3 and p4. NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-TT4a-TB1", type: "ms", points: 2, dok: 1, passages: ["p3"], pick: 2,
+      prompt: "Which TWO sentences about the rhymes in \"Firefly Night\" are true?",
+      choices: [
+        { text: "In each stanza, line 1 rhymes with line 3.", correct: true },
+        { text: "In each stanza, line 2 rhymes with line 4.", correct: true },
+        { text: "In each stanza, line 1 rhymes with line 2." },
+        { text: "In each stanza, line 3 rhymes with line 4." },
+        { text: "None of the lines in the poem rhyme." }
+      ],
+      clue: "Pick one stanza. Say the last word of each line out loud and listen for the pairs that end with the same sound. Then check another stanza.",
+      why: "The answers are \"line 1 rhymes with line 3\" and \"line 2 rhymes with line 4.\" In stanza 1, hill rhymes with still, and gray rhymes with away. Stanza 2 has light and bright, tree and me. Stanza 3 has slow and go, hands and stands. Lines that sit next to each other, like hill and gray, do not rhyme." },
+    { id: "SK-TT4a-TB2", type: "hottext", points: 1, dok: 1, passages: ["p3"],
+      prompt: "A stanza is a group of lines. Choose the line that begins the second stanza of \"Firefly Night.\"",
+      targets: ["p3:1:1", "p3:1:4", "p3:2:1", "p3:2:3", "p3:3:1"],
+      answer: ["p3:2:1"], pick: 1,
+      clue: "Find the spaces in the poem. Each space ends one stanza. Count the groups of lines from the top.",
+      why: "The answer is \"Then blink, blink, blink, a tiny light.\" The first stanza ends with \"And day has gone away.\" After the space, the second stanza starts. Another line in stanza 2 also starts with blink, blink, blink, but it is the third line, not the first, and \"I cup one gently, soft and slow\" begins the third stanza." },
+    { id: "SK-TT4a-TB3", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Why does the poet repeat the words \"blink, blink, blink\" in stanzas 2 and 3?",
+      choices: [
+        { text: "to show the fireflies' lights going on and off", correct: true },
+        { text: "to show that the speaker's eyes are getting sleepy" },
+        { text: "to show that the sun is going down behind the hill" },
+        { text: "to tell the reader that fireflies make a loud sound" }
+      ],
+      clue: "Look at what comes right after the repeated words each time. What is doing the blinking?",
+      why: "The answer is \"to show the fireflies' lights going on and off.\" Each time, the words come with a tiny light or a bright spark, and saying blink three times gives the poem a beat, like the lights going on, off, on. The speaker is awake and catching a firefly, the sun went down in stanza 1, and the poem never says fireflies make noise." },
+    { id: "SK-TT4a-TB4", type: "match", points: 2, dok: 2, passages: ["p3"],
+      prompt: "What happens in each stanza? Match each summary to its stanza.",
+      cols: ["Stanza 1", "Stanza 2", "Stanza 3"],
+      rows: [
+        { text: "The speaker holds a firefly in cupped hands and then lets it go.", answer: 2 },
+        { text: "Evening comes, and the yard turns dark and quiet.", answer: 0 },
+        { text: "Tiny lights float up and drift close to the speaker.", answer: 1 }
+      ],
+      clue: "Read one stanza at a time. Ask: Is this about the night beginning, the lights showing up, or what the speaker does?",
+      why: "Stanza 1: evening comes, and the yard turns dark and quiet. Stanza 2: tiny lights float up and drift close to the speaker. Stanza 3: the speaker holds a firefly in cupped hands and then lets it go. Each stanza has its own job: first the scene is set, then the fireflies arrive, then the speaker acts." },
+    { id: "SK-TT4a-TB5", type: "mc", points: 1, dok: 1, passages: ["p4"],
+      prompt: "In \"Snail Climb,\" which word from the poem rhymes with the word be?",
+      choices: [
+        { text: "me", correct: true },
+        { text: "wall" },
+        { text: "top" },
+        { text: "slow" }
+      ],
+      clue: "Say be out loud. Then say each choice. Which one ends with the same sound?",
+      why: "The answer is me. Be and me end with the same long e sound, so lines 2 and 4 rhyme. Wall and top end lines 1 and 3, and they do not rhyme with anything. Slow does not end with the e sound." }
   ]
 });
 

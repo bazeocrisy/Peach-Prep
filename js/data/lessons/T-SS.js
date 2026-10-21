@@ -911,6 +911,18 @@ PP.addLesson({
         ["That evening, Jamal sat alone on the front steps.", "The sun was a hot orange ball sinking behind the pine trees.", "Then a girl rolled up the sidewalk on a scooter."],
         ["\"I'm Noor,\" she said.", "\"I live next door.\"", "\"Want to ride to the park?\""],
         ["Jamal grabbed his scooter, and the two of them zoomed down the sidewalk like rockets.", "By dinnertime, Jamal was smiling from ear to ear.", "Maybe this new town would not be so bad after all."]
+      ] },
+    /* PP-004 form B passage: used only by testB. A friendly letter, so form B adds a
+       different kind of text (the standard says "a wide variety of texts"). Needs independent review. */
+    { id: "p3", title: "A Letter from Camp", genre: "Letter",
+      paragraphs: [
+        ["Dear Grandpa,"],
+        ["Camp Pine Lake is the best place in the world!", "On the first day, I didn't know anyone.", "Then a girl named Lucy told a silly joke about a frog, and that broke the ice.", "Now we are best friends."],
+        ["Yesterday, we took canoes out on the lake.", "My canoe wobbled like a bowl of jelly when I climbed in.", "I was sure I would tip over, but I didn't!", "Of all the things we do here, I like the canoes best."],
+        ["Our counselor, Jo, is a walking map.", "She never gets lost, and she knows every path through the woods.", "She can even find the trail to the waterfall after dark."],
+        ["At night, we sit by the campfire and sing songs.", "The sky is a dark blanket sprinkled with glitter.", "By the time we hit the hay, I am too tired to keep my eyes open."],
+        ["I miss you and Grandma.", "I will see you in two weeks!"],
+        ["Love,", "Ana"]
       ] }
   ],
   practice: [
@@ -1025,6 +1037,65 @@ PP.addLesson({
       ],
       clue: "Bare means empty, like a wall without posters. Then think about the color of fresh snow.",
       why: "The answer is very white walls with nothing on them. Fresh snow is bright white, so the simile shows the walls are very white. There is no real snow in the room." }
+  ],
+  /* PP-004 form B of the skill check (agent formB-lit). Same code, points (6) and DOK mix
+     (2,2,3,2,2) as form A, on a new passage p3 (a letter). NEEDS INDEPENDENT REVIEW.
+     See docs/audits/work/pp004-formB-formB-lit.md. */
+  testB: [
+    { id: "SK-SS2a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "In paragraph 2, Ana writes that Lucy's silly joke \"broke the ice.\" What does this mean?",
+      choices: [
+        { text: "The joke helped the girls stop feeling shy and start talking.", correct: true },
+        { text: "The joke cracked the ice on the frozen lake." },
+        { text: "The joke made Ana feel cold and lonely." },
+        { text: "The joke got Lucy in trouble with the counselor." }
+      ],
+      clue: "Read the sentences just before and just after the joke. How do Ana and Lucy get along before it, and after it?",
+      why: "The answer is \"The joke helped the girls stop feeling shy and start talking.\" Before the joke, Ana didn't know anyone. After it, she and Lucy are best friends. \"Break the ice\" is an idiom for getting past the shy, quiet start when people first meet. The lake is warm enough for canoes, so no real ice cracked." },
+    { id: "SK-SS2a-TB2", type: "hottext", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Select the sentence from paragraphs 3, 4 and 5 that uses an idiom.",
+      targets: ["p3:3:1", "p3:3:3", "p3:4:2", "p3:5:2", "p3:5:3"],
+      answer: ["p3:5:3"], pick: 1,
+      clue: "An idiom is a saying that does not mean what its words say. Look for words that would sound silly if you pictured them exactly.",
+      why: "The answer is \"By the time we hit the hay, I am too tired to keep my eyes open.\" No one really hits any hay. \"Hit the hay\" is an idiom that means go to bed, and the rest of the sentence, about being too tired to keep her eyes open, fits that meaning. The sky sentence is a metaphor, and the other sentences mean just what they say." },
+    { id: "SK-SS2a-TB3", type: "ebsr", points: 2, dok: 3, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Ana writes, \"Our counselor, Jo, is a walking map.\" What does Ana mean?",
+        choices: [
+          { text: "Jo knows her way around the camp very well.", correct: true },
+          { text: "Jo carries a big paper map everywhere she goes." },
+          { text: "Jo walks slowly so that everyone can keep up." },
+          { text: "Jo likes to draw maps of the lake." }
+        ] },
+      partB: { prompt: "Which sentence from the letter best helps you understand what Ana means?",
+        choices: [
+          { text: "\"She never gets lost, and she knows every path through the woods.\"", correct: true },
+          { text: "\"Yesterday, we took canoes out on the lake.\"" },
+          { text: "\"At night, we sit by the campfire and sing songs.\"" },
+          { text: "\"Camp Pine Lake is the best place in the world!\"" }
+        ] },
+      clue: "Jo is not really a map. Think about what a map helps people do. Then read what Ana says about Jo next.",
+      why: "Part A: Jo knows her way around the camp very well. Part B: \"She never gets lost, and she knows every path through the woods.\" A map shows you how to get places. Saying Jo is a walking map, without like or as, is a metaphor: Jo can show the way just like a map can. The letter never says Jo carries or draws a map." },
+    { id: "SK-SS2a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Which sentence from the letter uses a simile?",
+      choices: [
+        { text: "My canoe wobbled like a bowl of jelly when I climbed in.", correct: true },
+        { text: "Of all the things we do here, I like the canoes best." },
+        { text: "Our counselor, Jo, is a walking map." },
+        { text: "Then a girl named Lucy told a silly joke about a frog, and that broke the ice." }
+      ],
+      clue: "A simile compares two different things using like or as. Be careful: not every like makes a comparison.",
+      why: "The answer is \"My canoe wobbled like a bowl of jelly when I climbed in.\" It uses like to compare the shaky canoe to wobbly jelly. \"I like the canoes best\" uses like to mean enjoy, so it compares nothing. The walking map sentence is a metaphor, and \"broke the ice\" is an idiom." },
+    { id: "SK-SS2a-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Ana writes, \"The sky is a dark blanket sprinkled with glitter.\" What does she want Grandpa to picture?",
+      choices: [
+        { text: "a black sky full of bright, twinkling stars", correct: true },
+        { text: "a blanket spread out on the grass by the fire" },
+        { text: "a sky full of gray rain clouds" },
+        { text: "glitter left over from an art project at camp" }
+      ],
+      clue: "Ana is sitting by the campfire after sundown. What tiny, shiny things could be scattered across the sky above her?",
+      why: "The answer is \"a black sky full of bright, twinkling stars.\" At night the sky is dark like a blanket, and the stars shine like tiny bits of glitter. There is no real blanket or glitter in the sky, and rain clouds would hide the sparkles, not show them." }
   ]
 });
 

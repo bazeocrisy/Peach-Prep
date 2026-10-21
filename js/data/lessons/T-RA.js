@@ -204,13 +204,15 @@ PP.addLesson({
     points: [
       "A source is a place you get facts. It can be printed, like a book. It can be digital, like a web page. It can be a person who knows a lot.",
       "Use more than one source. One source may tell facts that the other one leaves out. When two sources tell the same fact, you can feel more sure it is true.",
+      "Choose credible sources. A credible source is one you can trust because people who know the facts made it, like a library book, a museum or science center, a park ranger or a scientist. Check who made a web page. If anyone can post on it, if no name is given, or if it is mostly ads, it is not a strong source.",
       "Start with your research question. A fact is relevant only if it helps answer that question. A fact can be true and still not help.",
-      "A web page often has a site name, a date, headings and boxes on the side. Ads and links in those boxes are usually about something else, so skip them.",
+      "A web page often has a site name, a date, headings and boxes on the side. Ads, news and links in those boxes are usually about something else, so skip them.",
       "Take notes in a notes table: your question at the top, then each fact in a few of your own words and where you found it.",
       "Sort facts into groups with headings, such as \"What it eats\" and \"Where it lives.\" If the facts tell steps, put them in order from first to last."
     ],
     words: [
       { term: "source", means: "a place you get information" },
+      { term: "credible", means: "can be trusted, because people who know the facts made it" },
       { term: "research question", means: "the question you want your research to answer" },
       { term: "relevant", means: "helps answer your research question" },
       { term: "notes", means: "short facts you write down to remember" },
@@ -235,7 +237,7 @@ PP.addLesson({
         note: "Each row holds one fact in a few words, plus where it came from. If you need to check a fact later, the last column tells you where to look."
       }
     ],
-    tip: "On the test, you may read two or three sources, such as a book page, a web page and notes from a talk. You may sort facts by source, choose the fact that belongs under a note heading, or choose the detail or note that best helps answer a research question."
+    tip: "On the test, you may read two or three sources, such as a book page, a web page and notes from a talk. You may choose the source you can trust most, sort facts by source, choose the fact that belongs under a note heading, or choose the detail or note that best helps answer a research question."
   },
   learn: [
     {
@@ -267,39 +269,39 @@ PP.addLesson({
     {
       show: [
         "Research question: How do woodpeckers find food?",
-        "Web page: Backyard Bird Club, posted March 3, 2026",
+        "Web page: Pine Hollow Nature Center, posted March 3, 2026",
         "Heading: Dinner Inside a Tree",
         "(1) Woodpeckers peck small holes in tree bark. (2) Beetle grubs and other insects hide under the bark. (3) A woodpecker pushes its long tongue into a hole and pulls the insects out.",
         "Heading: Drumming",
         "(4) In spring, woodpeckers drum fast on trees to tell other woodpeckers, \"This is my home.\"",
-        "Side box: Ad: Bird feeders, two for the price of one!"
+        "Side box: Gift shop sale: Bird feeders, two for the price of one!"
       ],
       ask: "Which parts of the web page help answer the research question, and which should you skip? Then write one note.",
       steps: [
-        "Read the research question again. It asks how woodpeckers find food.",
+        "Check who made the page: a nature center, where people who study birds and other animals work. That makes it a credible source. Then read the research question again. It asks how woodpeckers find food.",
         "Sentences 1, 2 and 3 tell how a woodpecker finds insects and gets them out, so they are relevant.",
-        "Sentence 4 is true, but drumming is about a home, not food. The side box is an ad. Skip both.",
+        "Sentence 4 is true, but drumming is about a home, not food. The side box is an ad for the gift shop. Skip both.",
         "Write the fact in a few of your own words, and write where you found it."
       ],
-      answer: "Use sentences 1, 2 and 3. The note: Question: How do woodpeckers find food? Fact: They peck holes in bark and pull out insects with their long tongues. Where I found it: Backyard Bird Club web page, March 3, 2026."
+      answer: "Use sentences 1, 2 and 3. The note: Question: How do woodpeckers find food? Fact: They peck holes in bark and pull out insects with their long tongues. Where I found it: Pine Hollow Nature Center web page, March 3, 2026."
     }
   ],
   write: {
     prompt: [
       "Do your own research with a grown-up. Pick a topic you wonder about, and write one research question.",
-      "Find facts in two different places, such as a library book, a web page you look at with a grown-up, or a person who knows a lot about the topic.",
-      "Make a notes table like the one in Learn It. Write your question at the top. For each fact, write the fact in a few of your own words and where you found it. Example: Fact: They peck holes in bark. Where I found it: Backyard Bird Club web page."
+      "Find facts in two different places you can trust, such as a library book, a web page you look at with a grown-up, or a person who knows a lot about the topic.",
+      "Make a notes table like the one in Learn It. Write your question at the top. For each fact, write the fact in a few of your own words and where you found it. Example: Fact: They peck holes in bark. Where I found it: Pine Hollow Nature Center web page."
     ],
     checklist: [
       "I wrote one research question.",
-      "I used two different sources.",
+      "I used two different sources I can trust.",
       "I wrote only facts that help answer my question.",
       "I wrote each fact in a few of my own words.",
       "I wrote where I found each fact."
     ],
     rows: 8
   },
-  parent: "When your child gets curious about something, look in two places together, such as a library book and a web page from a museum or nature center. Help your child keep a notes table with the question at the top, then each fact and where it came from. On a web page, point to the ads and side links and ask, \"Does this help answer our question?\"",
+  parent: "When your child gets curious about something, look in two places together, such as a library book and a web page from a museum or nature center. Help your child keep a notes table with the question at the top, then each fact and where it came from. On a web page, point to the ads and side links and ask, \"Does this help answer our question?\" Also ask, \"Who made this page? Can we trust it?\" The skill \"Is this a good source?\" (3.T.RA.2.b) practices this more.",
   passages: [
     { id: "p1", title: "How Pumpkins Grow", byline: "Source 1: a page from a library book", genre: "Informational text",
       paragraphs: [
@@ -315,14 +317,14 @@ PP.addLesson({
         ["When the summer is dry, Ms. Ruiz waters the vines.", "She also pulls weeds so the pumpkins get plenty of sunlight and water."],
         ["In the fall, she picks the pumpkins when they are hard and orange.", "She cuts each stem with clippers and leaves a short piece on top.", "She told us that a pumpkin with its stem lasts longer.", "Then she sells the pumpkins at her farm stand."]
       ] },
-    { id: "p3", title: "Our Moon", byline: "Source 1: a page from a science book", genre: "Informational text",
+    { id: "p3", title: "Our Moon", byline: "A page from a science book", genre: "Informational text",
       paragraphs: [
         ["The moon is Earth's closest neighbor in space.", "It is much smaller than Earth.", "It travels around Earth again and again."],
         ["The moon does not make its own light.", "The light we see is sunlight bouncing off the moon.", "That is why the moon can look so bright in the night sky."],
         ["The moon seems to change shape during the month.", "Sometimes we see a full, round moon.", "Other times we see a thin sliver, or no moon at all.", "These changes are called phases."],
         ["The moon has no air and no wind.", "There is no rain there either.", "Its ground is covered with gray dust and rocks.", "It also has many round holes called craters."]
       ] },
-    { id: "p4", title: "A Talk at the Science Center", byline: "Source 2: a student's notes from a talk", genre: "Informational text",
+    { id: "p4", title: "A Talk at the Science Center", byline: "A student's notes from a talk", genre: "Informational text",
       paragraphs: [
         ["Last Saturday, Mr. Okafor, a scientist at the science center, talked to our class about the moon.", "We wrote down what he told us."],
         ["He said that astronauts first walked on the moon in 1969.", "They wore space suits because the moon has no air to breathe.", "Only a few people have ever walked on the moon."],
@@ -331,10 +333,11 @@ PP.addLesson({
       ] },
     /* PP-004: digital sources. Each web page has a site header figure (site name, menu, date),
        headings ("## ...", which count in refs but not in paragraph numbers), an article, and
-       side boxes with an off-topic ad and an off-topic link. The sites are invented. */
-    { id: "p5", title: "What Pumpkin Plants Need", byline: "Source 3: a web page", genre: "Informational text (web page)",
+       side boxes with off-topic news and an off-topic link. The sites are invented (gapfix: they now model
+       credible sources, an extension office and a science museum, instead of clubs with ads). */
+    { id: "p5", title: "What Pumpkin Plants Need", byline: "Another source: a web page from a county extension office, where plant scientists help people grow food", genre: "Informational text (web page)",
       figures: [{ after: 0, src: "assets/figures/ra1b-web-pumpkin.svg",
-        alt: "The top of a web page. The site name is Kids Garden Club. The menu says Home, Plants and Bugs. The page was posted on September 8, 2026.",
+        alt: "The top of a web page. The site name is Maple County Extension Office. The menu says Home, Plants and Bugs. The page was posted on September 8, 2026.",
         caption: "The top of the web page", width: 340 }],
       paragraphs: [
         ["## Plenty of Sun"],
@@ -345,12 +348,12 @@ PP.addLesson({
         ["Pumpkin vines spread far across the ground.", "Leave lots of space between the plants so the vines do not crowd each other."],
         ["## Fun Pumpkin Facts"],
         ["People have grown pumpkins for thousands of years.", "A pumpkin is really a fruit, because it holds seeds.", "Some giant pumpkins grown for contests weigh more than 2,000 pounds."],
-        ["Box: Ad: Fall Festival tickets are on sale now!", "Come for hayrides, face painting and games."],
+        ["Box: News: Fall Festival tickets are on sale now!", "Come to the county fairgrounds for hayrides, face painting and games."],
         ["Box: More on this site: How to Make a Bird Feeder"]
       ] },
-    { id: "p6", title: "What Is It Like on the Moon?", byline: "Source 3: a web page", genre: "Informational text (web page)",
+    { id: "p6", title: "What Is It Like on the Moon?", byline: "Another source: a web page from a science museum, written by its space scientists", genre: "Informational text (web page)",
       figures: [{ after: 0, src: "assets/figures/ra1b-web-moon.svg",
-        alt: "The top of a web page. The site name is Sky Watchers Club. The menu says Home, Planets and Moon. The page was posted on April 14, 2026.",
+        alt: "The top of a web page. The site name is Riverbend Science Museum. The menu says Home, Planets and Moon. The page was posted on April 14, 2026.",
         caption: "The top of the web page", width: 340 }],
       paragraphs: [
         ["## Light on Your Feet"],
@@ -358,15 +361,15 @@ PP.addLesson({
         ["## Long Days and Long Nights"],
         ["Daytime on the moon lasts about two weeks.", "Then nighttime lasts about two weeks too.", "In the daytime, the ground gets hotter than boiling water.", "At night, it gets colder than any place on Earth."],
         ["## How Far Away?"],
-        ["The moon is about 239,000 miles from Earth.", "A car driving day and night without stopping would need more than five months to get there."],
-        ["Box: Ad: Sign up for Summer Camp today!", "Swim, hike and make crafts with friends."],
+        ["The moon is about 239,000 miles from Earth.", "A car driving day and night at highway speed, about 60 miles per hour, would need more than five months to get there."],
+        ["Box: Museum news: Sign up for Summer Camp today!", "Build robots and make new friends."],
         ["Box: More on this site: Make Your Own Star Chart"]
       ] }
   ],
   practice: [
     { id: "SK-RA1b-P1", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Where can you find each fact? Match each fact to the source it comes from.",
-      cols: ["Source 1 only", "Source 2 only", "Both sources"],
+      cols: ["\"How Pumpkins Grow\" only", "\"A Visit with Farmer Ruiz\" only", "Both sources"],
       rows: [
         { text: "Pumpkin seeds are flat and white.", answer: 0 },
         { text: "A farmer keeps boxes of bees near the field.", answer: 1 },
@@ -375,17 +378,17 @@ PP.addLesson({
         { text: "A short piece of stem helps a pumpkin last longer.", answer: 1 }
       ],
       clue: "Check each fact in both sources before you choose. A fact belongs to both only if you can find it in each one.",
-      why: "Flat, white seeds are only in Source 1. The boxes of bees and the short piece of stem are only in Source 2, from Ms. Ruiz. Both sources say bees carry pollen from flower to flower, and both say pumpkins are picked in the fall." },
-    { id: "SK-RA1b-P2", type: "mc", points: 1, dok: 2, passages: ["p1", "p2"],
-      prompt: "Nia is making a note card with the heading \"How bees help pumpkins.\" Which fact belongs on this card?",
+      why: "Flat, white seeds are only in \"How Pumpkins Grow.\" The boxes of bees and the short piece of stem are only in \"A Visit with Farmer Ruiz.\" Both sources say bees carry pollen from flower to flower, and both say pumpkins are picked in the fall." },
+    { id: "SK-RA1b-P8", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Nia wants one more source about what pumpkin plants need. Which source can she trust the MOST?",
       choices: [
-        { text: "Only flowers that get pollen can grow into pumpkins.", correct: true },
-        { text: "Big leaves shade the soil and help keep it damp." },
-        { text: "A pumpkin with its stem on top lasts longer." },
-        { text: "Farmers plant the seeds after the ground is warm." }
+        { text: "a garden guide written by plant scientists who help farmers", correct: true },
+        { text: "a post on a game website by someone who does not give a name" },
+        { text: "an ad from a store that wants to sell her pumpkin seeds" },
+        { text: "a cartoon about a talking pumpkin who wins a prize" }
       ],
-      clue: "Read the heading again. Which fact explains why the bees' work matters to a pumpkin?",
-      why: "The answer is \"Only flowers that get pollen can grow into pumpkins.\" Bees carry the pollen, so this fact shows why bees matter. The other facts are true, but they are about leaves, stems and planting, not bees." },
+      clue: "For each source, ask: Who made it? Do they know the facts, or are they selling something, hiding their name or telling a made-up story?",
+      why: "The answer is \"a garden guide written by plant scientists who help farmers.\" Plant scientists study how plants grow, so their guide is a credible source. Nia cannot tell who wrote the game website post, the ad is trying to sell seeds, and the cartoon is a made-up story, not a fact source." },
     { id: "SK-RA1b-P3", type: "order", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia used both sources to make a note card called \"A pumpkin's life.\" Put her notes in order.",
       steps: [
@@ -408,7 +411,7 @@ PP.addLesson({
         { text: "Fall Festival tickets are on sale now!" }
       ],
       clue: "Read Nia's question again. A detail can be true and still not help. For each detail, ask: Does this tell something a pumpkin plant needs?",
-      why: "The answers are \"They grow best with at least six hours of sun each day\" and \"If it does not rain, give them about one inch of water each week.\" Sun and water are things the plants need. How long people have grown pumpkins and how heavy contest pumpkins get are fun facts, but they do not tell what a plant needs. The Fall Festival box is an ad that is trying to sell tickets." },
+      why: "The answers are \"They grow best with at least six hours of sun each day\" and \"If it does not rain, give them about one inch of water each week.\" Sun and water are things the plants need. How long people have grown pumpkins and how heavy contest pumpkins get are fun facts, but they do not tell what a plant needs. The Fall Festival box is news about an event, not about what a plant needs." },
     { id: "SK-RA1b-P4", type: "match", points: 2, dok: 2, passages: ["p1", "p2"],
       prompt: "Nia has three note cards. Match each fact to the note card where it belongs.",
       cols: ["How a pumpkin grows", "Caring for the plants", "Picking the pumpkins"],
@@ -432,7 +435,7 @@ PP.addLesson({
       why: "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\" Paragraph 4 of Source 2 tells how she picks them, cuts the stems and sells them at her farm stand. Source 1 only says when pumpkins are ready, and the bees are not about getting pumpkins ready to sell." },
     { id: "SK-RA1b-P7", type: "mc", points: 1, dok: 2, passages: ["p5"],
       prompt: "Nia is filling in her notes table from the web page. Which note is the BEST one to write in the Fact box?",
-      stem: ["**Nia's notes table**", "**Question:** What do pumpkin plants need to grow well?", "**Fact:** ________", "**Where I found it:** Kids Garden Club web page, September 8, 2026"],
+      stem: ["**Nia's notes table**", "**Question:** What do pumpkin plants need to grow well?", "**Fact:** ________", "**Where I found it:** Maple County Extension Office web page, September 8, 2026"],
       choices: [
         { text: "The vines need lots of space so they do not crowd.", correct: true },
         { text: "The vines grow best when planted close together." },
@@ -445,7 +448,7 @@ PP.addLesson({
   test: [
     { id: "SK-RA1b-T1", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Where can you find each fact? Match each fact to the source it comes from.",
-      cols: ["Source 1 only", "Source 2 only", "Both sources"],
+      cols: ["\"Our Moon\" only", "\"A Talk at the Science Center\" only", "Both sources"],
       rows: [
         { text: "The light from the moon is really sunlight.", answer: 0 },
         { text: "Only a few people have ever walked on the moon.", answer: 1 },
@@ -454,17 +457,18 @@ PP.addLesson({
         { text: "A scientist talked to a class about the moon.", answer: 1 }
       ],
       clue: "Look for each fact in both sources. Only choose Both sources when you can find the fact in each one.",
-      why: "Sunlight bouncing off the moon and craters are only in Source 1. The few people who walked on the moon and the scientist's talk are only in Source 2. Both sources tell about dust on the moon: Source 1 says the ground is covered with gray dust, and Source 2 says the astronauts left footprints in the moon dust." },
-    { id: "SK-RA1b-T2", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
-      prompt: "Kofi is making a note card with the heading \"Why footprints last on the moon.\" Which fact belongs on this card?",
+      why: "Sunlight bouncing off the moon and craters are only in \"Our Moon.\" The few people who walked on the moon and the scientist's talk are only in \"A Talk at the Science Center.\" Both sources tell about dust on the moon: \"Our Moon\" says the ground is covered with gray dust, and the talk notes say the astronauts left footprints in the moon dust." },
+    { id: "SK-RA1b-T8", type: "mc", points: 1, dok: 2, passages: [],
+      stem: ["Kofi wants one more web page about the moon. He finds these two pages.", "**Page A:** \"The Moon,\" from the Lakeside Space Center. It was written by space scientists who work there.", "**Page B:** \"Moon Chat,\" a page where anyone can post. The person who wrote about the moon did not give a name. The page is full of ads for games."],
+      prompt: "Which page should Kofi use for his research, and why?",
       choices: [
-        { text: "The moon has no wind or rain to wipe things away.", correct: true },
-        { text: "The moon is much smaller than Earth is." },
-        { text: "The moon seems to change shape during the month." },
-        { text: "The moon travels around Earth again and again." }
+        { text: "Page A, because scientists who study space wrote it.", correct: true },
+        { text: "Page B, because anyone can post, so it has more facts." },
+        { text: "Page B, because it has fun games to play about the moon." },
+        { text: "Page A, because Page B is not about the moon at all." }
       ],
-      clue: "The heading asks why. Find the fact that explains what keeps the footprints safe.",
-      why: "The answer is \"The moon has no wind or rain to wipe things away.\" Source 2 says this is why the footprints are probably still there. The other facts are about the moon's size, its phases and its path around Earth, not footprints." },
+      clue: "Ask who made each page. Do they know the facts? Then check that the reason in your choice is true and really matters.",
+      why: "The answer is \"Page A, because scientists who study space wrote it.\" A credible source comes from people who know the facts, and space scientists study the moon. On Page B, anyone can post and the writer gave no name, so Kofi cannot tell if the facts are true. More posts do not make facts true, and games do not help answer a research question. Both pages are about the moon, so that is not the reason." },
     { id: "SK-RA1b-T3", type: "ms", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Kofi has a note card with the heading \"People on the moon.\" Which TWO facts belong on this card? Choose two answers.",
       pick: 2,
@@ -477,16 +481,16 @@ PP.addLesson({
       ],
       clue: "Each fact on this card must be about people going to the moon. Facts about the moon by itself go on a different card.",
       why: "\"Astronauts first walked on the moon in 1969\" and \"Astronauts wore space suits on the moon\" are about people on the moon. The other three facts tell what the moon itself is like, so they belong on a different card." },
-    { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
-      prompt: "Kofi's note from Source 1 says, \"There are rocks on the moon's ground.\" Which fact from Source 2 adds the MOST to this note?",
+    { id: "SK-RA1b-T5", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
+      prompt: "Kofi's note from \"Our Moon\" says, \"There are rocks on the moon's ground.\" Which fact from \"A Talk at the Science Center\" adds the MOST to this note?",
       choices: [
         { text: "Astronauts brought moon rocks back for scientists to study.", correct: true },
         { text: "The moon is Earth's closest neighbor in space." },
         { text: "Only a few people have ever walked on the moon." },
         { text: "Mr. Okafor talked to the class at the science center." }
       ],
-      clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from Source 2 and tell more about the same thing.",
-      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from Source 1, not Source 2, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." },
+      clue: "Kofi's note is about what is on the moon's ground. The fact you add must come from the talk and tell more about the same thing.",
+      why: "The answer is \"Astronauts brought moon rocks back for scientists to study.\" It tells more about the rocks in Kofi's note. The neighbor fact comes from \"Our Moon,\" not the talk, and the other facts are about how many people went to the moon or about the talk, not the moon's ground." },
     { id: "SK-RA1b-T6", type: "match", points: 2, dok: 2, passages: ["p6"],
       prompt: "Kofi's next research question is \"What are day and night like on the moon?\" Does each part of the web page help answer his question? Match each one.",
       cols: ["Helps answer the question", "Does not help"],
@@ -498,10 +502,10 @@ PP.addLesson({
         { text: "More on this site: Make Your Own Star Chart", answer: 1 }
       ],
       clue: "Keep Kofi's question in mind. A part helps only if it tells about day or night on the moon. True facts about other things do not help.",
-      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. The distance to the moon is true, but it is not about day and night. The Summer Camp box is an ad, and the star chart box is a link to a different page." },
+      why: "Two parts help: how long daytime lasts and how cold it gets at night both tell what day and night are like on the moon. The distance to the moon is true, but it is not about day and night. The Summer Camp box is museum news about a camp, and the star chart box is a link to a different page." },
     { id: "SK-RA1b-T7", type: "mc", points: 1, dok: 2, passages: ["p6"],
       prompt: "Kofi is filling in his notes table from the web page. Which note is the BEST one to write in the Fact box?",
-      stem: ["**Kofi's notes table**", "**Question:** Why could astronauts take big, bouncing hops on the moon?", "**Fact:** ________", "**Where I found it:** Sky Watchers Club web page, April 14, 2026"],
+      stem: ["**Kofi's notes table**", "**Question:** Why could astronauts take big, bouncing hops on the moon?", "**Fact:** ________", "**Where I found it:** Riverbend Science Museum web page, April 14, 2026"],
       choices: [
         { text: "Gravity on the moon is weaker, so people weigh less there.", correct: true },
         { text: "Gravity on the moon is stronger, so people weigh more there." },

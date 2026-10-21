@@ -451,6 +451,15 @@ PP.addLesson({
         ["But the class did not give up.", "They made posters that said, \"Don't be careless with trash!\"", "Each week, they counted the paper bags in the trash cans."],
         ["Little by little, the number of bags went down.", "By spring, the trash cans were only half full.", "The principal said the plan was very helpful."],
         ["Next fall, the class will give the new third graders a preview of the plan."]
+      ] },
+    /* PP-004 form B (testB) passage, written by formB-lang. Needs independent review. */
+    { id: "p3", title: "The Muffin Mix-Up", genre: "Literary text",
+      paragraphs: [
+        ["On Saturday morning, Theo and his mom decided to bake blueberry muffins for Grandma."],
+        ["\"First, we need to preheat the oven,\" Mom said.", "Theo turned the oven on and set it to 375 degrees.", "That way, it would already be hot when the muffins were ready to bake."],
+        ["Next, Theo read the recipe card out loud.", "\"Seven cups of sugar!\" he said.", "Mom looked at the card and laughed.", "\"You misread it,\" she said.", "\"The 1 on the card looks a little like a 7, but we only need one cup.\""],
+        ["Theo grabbed a big plastic bowl from the shelf.", "It slipped out of his hands and hit the floor with a clunk.", "Theo held his breath, but the bowl did not have a single crack.", "\"I'm glad this bowl is unbreakable,\" Mom said with a smile."],
+        ["Soon the whole kitchen smelled sweet and warm.", "Theo saved the biggest muffin for Grandma."]
       ] }
   ],
   practice: [
@@ -581,6 +590,71 @@ PP.addLesson({
       ],
       clue: "Find the root in inspect. What does that root mean? Then check your answer with the brakes in the sentence.",
       why: "The answer is \"look closely at each bike.\" The root spect means look, so to inspect is to look closely at something. Coach looks at each bike to check that the brakes work. Carry would be port, write would be graph, and break would be rupt." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code, 7 points and DOK mix (one DOK 1, four DOK 2) as form A, on a new passage (p3).
+     NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-V2a-TB1", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "The prefix un- means \"not,\" and the suffix -able means \"can be.\" What does unbreakable mean in paragraph 4?",
+      choices: [
+        { text: "cannot be broken", correct: true },
+        { text: "can be broken easily" },
+        { text: "broken one more time" },
+        { text: "broken a long time ago" }
+      ],
+      clue: "This word has a prefix and a suffix. Find the base word in the middle. Then add the meanings of both parts.",
+      why: "The answer is \"cannot be broken.\" Break + able means can be broken, and un- means not, so un + break + able means not able to be broken. The bowl falls on the floor and does not even crack. Can be broken easily leaves out the meaning of un-." },
+    { id: "SK-V2a-TB2", type: "mc", points: 1, dok: 1, passages: ["p3"],
+      prompt: "The prefix mis- means \"wrongly.\" What does misread mean in paragraph 3?",
+      choices: [
+        { text: "read wrongly", correct: true },
+        { text: "read again" },
+        { text: "did not read" },
+        { text: "read before" }
+      ],
+      clue: "Cover mis- and read the base word. Then add the meaning the question gives you for mis-.",
+      why: "The answer is \"read wrongly.\" Mis + read means read wrongly. Theo did read the card, but he thought the 1 was a 7, so he read it the wrong way." },
+    { id: "SK-V2a-TB3", type: "ebsr", points: 2, dok: 2, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What does preheat mean in paragraph 2?",
+        choices: [
+          { text: "to heat ahead of time", correct: true },
+          { text: "to heat one more time" },
+          { text: "to stop heating" },
+          { text: "to heat a little bit" }
+        ] },
+      partB: { prompt: "Which word has a prefix with the same meaning as the prefix in preheat?",
+        choices: [
+          { text: "preschool", correct: true },
+          { text: "pretty" },
+          { text: "press" },
+          { text: "unpack" }
+        ] },
+      clue: "Split preheat into a prefix and a base word, and remember what the prefix means. For Part B, cover the same letters in each word. Is a real word left, and does the meaning fit?",
+      why: "Part A: to heat ahead of time. Pre- means before, so preheat means to heat before, or ahead of time. The oven is hot before the muffins go in. Part B: preschool. Take away pre- and school is left, so preschool is the school children go to before kindergarten. In pretty and press, the letters left over are not words, so they have no prefix. Un- in unpack means the opposite of." },
+    { id: "SK-V2a-TB4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "What does the prefix or suffix in each word mean? Match each word to that meaning.",
+      cols: ["without", "again", "full of", "in a ___ way"],
+      rows: [
+        { text: "fearless", answer: 0 },
+        { text: "repaint", answer: 1 },
+        { text: "joyful", answer: 2 },
+        { text: "loudly", answer: 3 }
+      ],
+      clue: "Find the base word in each one and cover it. Look at the part that is left. Is it at the front or the end, and what does it mean?",
+      why: "-less in fearless means without (without fear). Re- in repaint means again (paint again). -ful in joyful means full of (full of joy). -ly in loudly means in a ___ way (in a loud way)." },
+    { id: "SK-V2a-TB5", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentence. Use the root in erupt to figure out what it means.",
+      stem: ["When the volcano began to erupt, hot melted rock burst out through a crack in its side."],
+      choices: [
+        { text: "to break open and burst out", correct: true },
+        { text: "to carry rocks far away" },
+        { text: "to make a ringing sound" },
+        { text: "to look down at the land" }
+      ],
+      clue: "Find the root in erupt. What does that root mean? Then check your answer with what the melted rock did in the sentence.",
+      why: "The answer is \"to break open and burst out.\" The root rupt means break, so erupt means to break out. The melted rock burst out through a crack, just like the word says. Carry would be port, sound would be phon, and look would be spect." }
   ]
 });
 

@@ -89,6 +89,20 @@ PP.addLesson({
       figures: [
         { after: 3, src: "assets/figures/v3a-heron.svg", label: "Figure 1", caption: "A heron hunts for fish in the shallow water.",
           alt: "A drawing of a heron, a tall bird, standing in shallow water. Labels point to its long neck, its sharp beak and its long legs." }
+      ] },
+    /* PP-004 form B (testB) passage, written by formB-lang. Needs independent review. */
+    { id: "p3", title: "How a Hot-Air Balloon Flies", genre: "Informational text",
+      paragraphs: [
+        ["A hot-air balloon has no engine and no wings.", "Still, it can float high above the trees."],
+        ["A balloon has three main parts.", "The big cloth bag on top is called the envelope.", "Under the envelope is a burner, and under the burner hangs a basket for the pilot and riders."],
+        ["To make the balloon go up, the pilot turns on the burner.", "It shoots a tall flame up into the envelope and heats the air inside.", "Hot air is lighter than cool air.", "The same amount of hot air weighs less, so it rises and carries the balloon with it."],
+        ["As the air inside gets hotter, the balloon begins to ascend.", "It floats higher and higher.", "Soon the houses below look as small as toy blocks."],
+        ["A pilot cannot steer a balloon the way a driver steers a car.", "The balloon drifts wherever the wind pushes it.", "That is why pilots like to fly early in the morning, when the air is usually calm.", "Later in the day, the wind is often gusty instead, and it can push a balloon the wrong way."],
+        ["When it is time to come down, the pilot pulls a long cord that opens the vent.", "Some of the hot air escapes, and the balloon sinks slowly.", "The pilot looks for an open field where the balloon can touch down.", "A few minutes later, the basket bumps gently onto the grass."]
+      ],
+      figures: [
+        { after: 2, src: "assets/figures/v3a-b-balloon-parts.svg", label: "Figure 1", caption: "The parts of a hot-air balloon",
+          alt: "A drawing of a hot-air balloon with four labels. The vent is a round opening at the very top of the balloon. The envelope is the big cloth balloon. The burner is under the envelope, with a flame pointing up into it. The basket hangs from ropes at the bottom." }
       ] }
   ],
   practice: [
@@ -239,6 +253,81 @@ PP.addLesson({
       ],
       clue: "Read the sentence after the phrase. Why would guides warn visitors about animals that are hard to see? What would visitors need to do?",
       why: "The answer is \"watch carefully for.\" The next sentence says alligators rest along the edges of the water and can be hard to see. Something hard to see is something you must look for carefully, and the phrase uses the word eye. Staying away from alligators is smart, but it is not what the phrase means." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code, 7 points and DOK 2 throughout, like form A, on a new passage (p3) and a new graph.
+     NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-V3a-TB1", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Read the sentences and look at the graph. What does harvest mean?",
+      stem: ["Every November, Grandpa's family picks pecans on his farm in south Georgia.", "This year, their harvest was biggest in week 3."],
+      figure: { src: "assets/figures/v3a-b-pecan-graph.svg",
+        alt: "Bar graph titled Pecans We Picked in November. The words at the bottom say buckets of pecans. The bars show week 1, 3 buckets; week 2, 6 buckets; week 3, 8 buckets; and week 4, 4 buckets. Week 3 has the longest bar." },
+      choices: [
+        { text: "the amount of a crop that is picked", correct: true },
+        { text: "the number of trees that grow on a farm" },
+        { text: "the size of the biggest pecan on a tree" },
+        { text: "the number of people who help on a farm" }
+      ],
+      clue: "Read the title of the graph and the words at the bottom. What does the graph count? Then find the week the sentence names.",
+      why: "The answer is \"the amount of a crop that is picked.\" The title is Pecans We Picked in November, and the bottom says buckets of pecans. Week 3 has the longest bar, 8 buckets, and the sentence says the harvest was biggest in week 3. So the harvest is how much of the crop the family picked. The graph does not count trees or people, and it does not show the size of one pecan." },
+    { id: "SK-V3a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Lighter has more than one meaning. What does lighter mean in paragraph 3?",
+      choices: [
+        { text: "weighing less", correct: true },
+        { text: "giving off more light" },
+        { text: "paler in color" },
+        { text: "a small tool that makes a flame" }
+      ],
+      clue: "Think of the different meanings of lighter. Then read the sentence right after it. Which meaning does that sentence point to?",
+      why: "The answer is \"weighing less.\" The next sentence says the same amount of hot air weighs less, so it rises. The paragraph compares how much hot air and cool air weigh, not how bright they are or what color they are. A tool that makes a flame does not fit the sentence \"Hot air is lighter than cool air.\"" },
+    { id: "SK-V3a-TB3", type: "ebsr", points: 2, dok: 2, passages: ["p3"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What does ascend mean in paragraph 4?",
+        choices: [
+          { text: "to go up higher", correct: true },
+          { text: "to come down slowly" },
+          { text: "to float from side to side" },
+          { text: "to fill up with air" }
+        ] },
+      partB: { prompt: "Which TWO sentences from the article BEST help you know what ascend means?", pick: 2,
+        choices: [
+          { text: "\"It floats higher and higher.\"", correct: true },
+          { text: "\"Soon the houses below look as small as toy blocks.\"", correct: true },
+          { text: "\"The big cloth bag on top is called the envelope.\"" },
+          { text: "\"The balloon drifts wherever the wind pushes it.\"" },
+          { text: "\"Some of the hot air escapes, and the balloon sinks slowly.\"" }
+        ] },
+      clue: "Read the two sentences right after the word ascend. Where is the balloon going? How do things on the ground look from there?",
+      why: "Part A: to go up higher. Part B: \"It floats higher and higher.\" and \"Soon the houses below look as small as toy blocks.\" The balloon keeps rising, and houses look tiny when you are high above them. Drifting with the wind is moving sideways, and sinking is coming down, so those sentences do not show what ascend means." },
+    { id: "SK-V3a-TB4", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What does gusty mean in paragraph 5?",
+      choices: [
+        { text: "blowing hard in sudden bursts", correct: true },
+        { text: "quiet and still, with no wind" },
+        { text: "warm and bright with sunshine" },
+        { text: "cool and damp, like fog" }
+      ],
+      clue: "Look for an antonym clue. The word instead tells you the wind later in the day is different from the morning air. How does the paragraph describe the morning air?",
+      why: "The answer is \"blowing hard in sudden bursts.\" In the morning the air is usually calm, but later the wind is gusty instead. Instead tells you gusty is the opposite of calm. The same sentence says this wind can push a balloon the wrong way, so it blows hard. Quiet and still, with no wind, describes calm air, which is the opposite of gusty. The paragraph says nothing about sunshine or fog." },
+    { id: "SK-V3a-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
+      prompt: "Read paragraph 6 and look at Figure 1. What is the vent?",
+      choices: [
+        { text: "an opening at the very top of the envelope", correct: true },
+        { text: "a door on the side of the basket" },
+        { text: "a pipe that the burner's flame comes out of" },
+        { text: "a flap at the bottom of the envelope" }
+      ],
+      clue: "The paragraph tells what the vent does. The picture shows where it is. Find the label vent in Figure 1.",
+      why: "The answer is \"an opening at the very top of the envelope.\" Paragraph 6 says that opening the vent lets some hot air escape, but it does not say where the vent is. Figure 1 shows the label vent pointing to a round opening at the very top of the balloon. The bottom of the envelope, the burner and the basket are all lower down, and the burner and the basket have their own labels." },
+    { id: "SK-V3a-TB6", type: "dropdown", points: 1, dok: 2, passages: ["p3"],
+      prompt: "What does the phrase touch down mean in paragraph 6? Choose the best meaning.",
+      text: "In paragraph 6, touch down means {0}.",
+      slots: [
+        { options: ["tap something with your hand", "land on the ground", "fly low over the trees"], answer: 1 }
+      ],
+      clue: "Read the sentence after the phrase. What happens to the basket a few minutes later?",
+      why: "The answer is \"land on the ground.\" The pilot looks for an open field, and a few minutes later the basket bumps gently onto the grass. That is a landing. The phrase is not about touching something with a hand, and the balloon does more than fly low: it comes all the way down." }
   ]
 });
 

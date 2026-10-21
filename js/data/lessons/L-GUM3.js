@@ -303,6 +303,61 @@ PP.addLesson({
       answer: [1], pick: 1,
       clue: "Check each plural noun. Does it change, stay the same, or add -s the way it should?",
       why: "The error is in \"My baby sister has four new tooths.\" Tooth is a special noun, so the plural is teeth." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code and 7 points as form A; new sentences, and each special noun is used in only one item.
+     NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-GUM3-2-TB1", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that belongs in the blank.",
+      stem: "A family of ____ swam across the pond behind our school.",
+      choices: [
+        { text: "geese", correct: true },
+        { text: "gooses" },
+        { text: "geeses" },
+        { text: "goose" }
+      ],
+      clue: "A family has more than one bird, so the blank needs a plural. Goose is a special noun. Say \"one goose, two ___.\"",
+      why: "The answer is geese. One goose, two geese. Goose changes the letters inside the word instead of adding -s, so gooses and geeses are not words. Goose names only one bird, and a family has more than one." },
+    { id: "SK-GUM3-2-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Read each sentence. Which TWO sentences have no mistakes with plural nouns?",
+      choices: [
+        { text: "Many people came to watch the parade.", correct: true },
+        { text: "Grandpa sharpened all the knives in the kitchen.", correct: true },
+        { text: "Two wolfs howled at the bright moon." },
+        { text: "Four deers drank from the cool creek." },
+        { text: "Our cat chased two mices across the yard." }
+      ],
+      clue: "Find the word in each sentence that names more than one. Is it a special noun? Say \"one ___, two ___\" to check it.",
+      why: "The answers are \"Many people came to watch the parade.\" and \"Grandpa sharpened all the knives in the kitchen.\" One person, many people. One knife, two knives. The other sentences should say wolves, deer and mice. Deer stays the same, so deers is not a word, and mice already means more than one, so it never adds -s." },
+    { id: "SK-GUM3-2-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the word that correctly completes the sentence.",
+      text: "Two {0} stood in the lake and ate water plants.",
+      slots: [{ options: ["mooses", "moose", "meese"], answer: 1 }],
+      clue: "Two means more than one. Moose is one of the special nouns. Does it change, or does it stay the same?",
+      why: "The answer is moose. Moose is one of the nouns that stays the same: one moose, two moose. Mooses adds an -s that does not belong, and meese is not a word." },
+    { id: "SK-GUM3-2-TB4", type: "match", points: 2, dok: 2, passages: [],
+      prompt: "Is the plural noun in each sentence correct, or does it need a fix? Match each sentence.",
+      cols: ["Correct", "Needs a fix"],
+      rows: [
+        { text: "The children fed the ducks at the park.", answer: 0 },
+        { text: "Grandma made warm socks for my cold foots.", answer: 1 },
+        { text: "The farmer's oxen rested in the barn after a long day.", answer: 0 },
+        { text: "The womens in the choir sang a song.", answer: 1 }
+      ],
+      clue: "Find the word in each sentence that names more than one. Is it spelled the special way, with no extra -s?",
+      why: "\"The children fed the ducks at the park.\" and \"The farmer's oxen rested in the barn after a long day.\" are correct: one child, many children; one ox, two oxen. \"Grandma made warm socks for my cold foots.\" needs a fix: one foot, two feet. \"The womens in the choir sang a song.\" needs a fix too: women already means more than one, so it never adds -s." },
+    { id: "SK-GUM3-2-TB5", type: "hottext", points: 1, dok: 2, passages: [],
+      prompt: "One of these sentences has a mistake with a plural noun. Select that sentence.",
+      options: [
+        "The buses waited in a long line.",
+        "Our class drew pictures of the sheeps at the petting zoo.",
+        "Mom bought two bunches of grapes.",
+        "Both babies napped in their strollers."
+      ],
+      answer: [1], pick: 1,
+      clue: "Check the word in each sentence that names more than one. Is it a regular plural that adds -s or -es, or a special noun?",
+      why: "The error is in \"Our class drew pictures of the sheeps at the petting zoo.\" Sheep is a special noun that stays the same: one sheep, many sheep. Buses, bunches and babies are all spelled correctly." }
   ]
 });
 
@@ -455,6 +510,62 @@ PP.addLesson({
       ],
       clue: "Last fall already happened. Break is a special verb. Which word tells about the past with no helper word?",
       why: "The answer is \"Change breaked to broke.\" Break is irregular, so its past tense is broke. Broken needs a helper like has, and breaks tells about now." }
+  ],
+  /* PP-004 form B of the skill check, written by formB-lang (see docs/audits/work/pp004-formB-formB-lang.md).
+     Same code, 7 points and DOK mix as form A; new sentences, and every verb is new to this lesson
+     and used in only one item. NEEDS INDEPENDENT REVIEW before it is relied on. */
+  testB: [
+    { id: "SK-GUM3-3-TB1", type: "mc", points: 1, dok: 1, passages: [],
+      prompt: "Choose the verb that belongs in the blank.",
+      stem: "At recess yesterday, Ruby ____ off the monkey bars and scraped her knee.",
+      choices: [
+        { text: "fell", correct: true },
+        { text: "falled" },
+        { text: "fallen" },
+        { text: "falls" }
+      ],
+      clue: "Yesterday tells you the action already happened. Fall is a special verb. Which word tells about the past with no helper word?",
+      why: "The answer is fell. Fall is an irregular verb, so its past tense is fell. Falled is not a word, fallen needs a helper word like has, and falls tells about now." },
+    { id: "SK-GUM3-3-TB2", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
+      prompt: "Which TWO sentences use the correct past-tense verb?",
+      choices: [
+        { text: "Mom told us a funny story at dinner last night.", correct: true },
+        { text: "The whole class stood in line by the door.", correct: true },
+        { text: "Keisha holded the baby kitten in her lap." },
+        { text: "The wind shaked our windows during the storm." },
+        { text: "Our team losed the soccer game on Saturday." }
+      ],
+      clue: "Find the verb in each sentence. Is it a real past-tense word, or a special verb with -ed added by mistake?",
+      why: "The answers are \"Mom told us a funny story at dinner last night.\" and \"The whole class stood in line by the door.\" Tell becomes told, and stand becomes stood. The others should say held, shook and lost." },
+    { id: "SK-GUM3-3-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
+      prompt: "Choose the verb that correctly completes the sentence.",
+      text: "Last Sunday, Grandpa {0} his lucky blue hat to the fishing pond.",
+      slots: [{ options: ["weared", "wore", "wear", "worn"], answer: 1 }],
+      clue: "Last Sunday already happened. Wear is a special verb that does not add -ed.",
+      why: "The answer is wore. Wear is an irregular verb, so its past tense is wore. Weared is not a word, wear tells about now, and worn needs a helper word like has." },
+    { id: "SK-GUM3-3-TB4", type: "hottext", points: 2, dok: 2, passages: [],
+      prompt: "Two of these sentences have a verb mistake. Select the TWO sentences.",
+      options: [
+        "We chose a puppy at the animal shelter.",
+        "The phone ringed three times before Mom answered it.",
+        "Nia forgot her jacket on the bus.",
+        "Leo sended a birthday card to his cousin in Macon.",
+        "The top spun across the kitchen floor."
+      ],
+      answer: [1, 3], pick: 2,
+      clue: "Find the past-tense verb in each sentence. Which two special verbs got -ed added when they should have changed into a new word?",
+      why: "The errors are in \"The phone ringed three times before Mom answered it.\" and \"Leo sended a birthday card to his cousin in Macon.\" Ring becomes rang, and send becomes sent. Chose, forgot and spun are the correct past tense of choose, forget and spin." },
+    { id: "SK-GUM3-3-TB5", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "This sentence has one verb mistake. Which change fixes it?",
+      stem: "On Friday, Imani took her dog to the park, and it chased a ball until it getted tired.",
+      choices: [
+        { text: "Change getted to got.", correct: true },
+        { text: "Change getted to gotten." },
+        { text: "Change took to taked." },
+        { text: "Change took to taken." }
+      ],
+      clue: "Check each verb in the sentence. Which one is not a real past-tense word? Then pick the past-tense word that needs no helper word.",
+      why: "The answer is \"Change getted to got.\" Get is an irregular verb, so its past tense is got. Gotten needs a helper word like has. Took is already correct, because take changes to took. Taked is not a word, and taken needs a helper word too." }
   ]
 });
 
