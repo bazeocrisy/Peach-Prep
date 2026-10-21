@@ -9,7 +9,7 @@
 - **Format reference:** docs/SPEC.md §8b (the `testB` and Retained bullets)
 - **Scope:**
   - Architecture and the data model, with Retained behind a flag that is off.
-  - One fixture form B, on 3.L.GC.2.b only. Every other lesson still has one check form.
+  - Form B exists on 13 lessons: 3.L.GC.2.b, 3.T.T.1.a, 3.T.T.1.c, 3.T.SS.2.a, 3.T.T.4.a, 3.T.T.2.a, 3.T.T.2.b, 3.T.RA.2.a, TS-CE, 3.L.V.3.a, 3.L.V.2.a, GUM irregular plurals and GUM irregular past tense. Each has had at least two independent blind reviews (rounds C1 and C5, with C3, C4 and C6 for revised items). Every other lesson still has one check form. (Updated at the end of PP-004.)
   - Other agents are writing the content forms.
 
 This is not a Georgia Milestones measure. Nothing here maps a Peach Prep result to a GaDOE achievement level (Beginning, Developing, Proficient or Distinguished). The ALDs (October 2025) remain DRAFT.
@@ -79,7 +79,7 @@ PP.addLesson({
 
 - `skills.js addLesson` registers `SK:<key>:tB` with `part: "tB"`, `form: "B"` and `next: null`.
 - Form B is not in the Practice Together → Try It Yourself → Test chain. The chain still ends at `:t`, and the form is chosen when a check starts.
-- On a two-form lesson, the set titles read "… · Test (form A)" and "… · Test (form B)". One-form lessons keep "… · Test".
+- On a two-form lesson, the set titles read "… · Skill check (form A)" and "… · Skill check (form B)". One-form lessons read "… · Skill check".
 
 ### 2.3 Form selection (deterministic, explainable)
 
@@ -194,7 +194,7 @@ The implemented rule is the conservative minimum, and it is easy to tighten. The
 5. **D5. Grown-up checks** (R10): excluded, or a separate "re-checked" state?
 6. **D6. Wording.** "Retained" is a working label. My suggestion for parents: "Still knows it: passed again a week later on new questions". The child-facing label needs a decision.
 7. **D7. 8-week light review** after Retained (R9).
-8. **D8. Form B content.** It is needed for the 74 on-test lessons before launch. Each form B needs the checker and two independent reviews (the manifest rule). The 3.L.GC.2.b fixture is unreviewed.
+8. **D8. Form B content.** It is needed for the 74 on-test lessons before Retained can be switched on for everyone. Each form B needs the checker and two independent reviews (the manifest rule). 13 lessons have reviewed forms (see above), and 61 on-test lessons still need one.
 9. **D9. Address-chosen forms.** An address that names a form runs it, and that is recorded honestly. Should the site instead always redirect to `nextForm`? Redirecting is stricter, but it makes "this address runs form B" untrue and breaks the guard's direct-set tests.
 
 ---
@@ -241,4 +241,4 @@ The implemented rule is the conservative minimum, and it is easy to tighten. The
 
 - No parent guide text, home count, progress view or CSS for Retained (files not assigned; owner decisions D4 and D6 pending).
 - No light review after Retained (R9) and no grown-up re-check (R10).
-- Form B exists only for 3.L.GC.2.b, as an unreviewed fixture.
+- Form B exists for 13 lessons, each independently reviewed twice. The other on-test lessons have one form.

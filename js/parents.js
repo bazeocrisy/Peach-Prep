@@ -143,6 +143,7 @@
       det.appendChild(sum);
       const body = make("div", "std-body");
       if (s.plain) body.appendChild(make("p", "std-plain", s.plain));
+      if (s.gum && s.official) body.appendChild(make("p", "", "Georgia's official wording (Grammar, Usage & Mechanics chart" + (s.page ? ", standards p. " + s.page : "") + "): \u201C" + s.official + "\u201D"));
       if (s.gum) body.appendChild(make("p", "", "Grade 3 level: " + ({ M: "Master by the end of grade 3", R: "Reinforce (learned earlier)", I: "Introduce this year", C: "Continue (not yet mastered)" })[s.level] + ". " + (s.testedNote || "")));
       else if (s.official) body.appendChild(make("p", "", "Georgia's official wording" + (s.page ? " (standards p. " + s.page + ")" : "") + ": \u201C" + s.official + "\u201D"));
       else body.appendChild(make("p", "", "Georgia's standard, paraphrased: " + s.text));
@@ -237,7 +238,7 @@
     ]));
     host.appendChild(h(2, "What \u201cPassed the skill check\u201d means"));
     host.appendChild(p("A skill check is 4 to 6 questions on one skill, with no hints. Passing means your child scored at least 80% of the points with no hints, one time, on this device. It is a good sign, not proof the skill is secure."));
-    host.appendChild(p("The check uses the same questions each time, and after a try your child can see the answers, so a quick retake can be passed from memory. The skill page shows when a check was passed, on which try, and whether the answers had been seen on an earlier try."));
+    host.appendChild(p("Most skill checks use the same questions each time. Some skills now have a second form (form B) with different passages and questions, and the site switches forms between tries. After a try your child can see the answers, so a quick retake of the same form can be passed from memory. The skill page shows when a check was passed, on which try, and whether the answers had been seen on an earlier try."));
     host.appendChild(p("A Peach Prep skill check is not a Georgia Milestones score and does not predict an achievement level. The real test mixes skills across longer passages."));
     host.appendChild(p("Come back to a passed skill about a week later, and again a few weeks after that. If your child still gets it right, it has stuck. The skill list marks a passed skill \u201creview\u201d 7 days after a dated pass, or when the last try did not pass."));
     host.appendChild(p("Hands-on skills (reading aloud and cursive) have no scored check. A grown-up ticks a checklist instead, and the site shows these as \u201cChecked by a grown-up\u201d, kept apart from passed skill checks. The read-aloud timer is a home practice tool, not a formal test or screener."));

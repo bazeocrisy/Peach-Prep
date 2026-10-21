@@ -2,15 +2,27 @@
 
 - Date: 2026-10-21. Read-only reviewer. No repo code or content edited, no fixes made.
 - Worktree: /home/claude/pp-fix (branch `pp-003-fixes`), served with `node verification/serve.js . 8507`.
-- **Commit tested: `e6ce7b3e477cc95f298f57ff0baa626d2b5de558`** (HEAD from `git rev-parse HEAD` at start; working tree clean).
-  - While the guard was running, the lead committed `ac385b9` and `ae2fe1a`. `git diff --stat e6ce7b3 ae2fe1a` touches only docs/audits/PP-004-CONTENT-CORRECTIONS.md, PP-004-FINAL-COVERAGE-MATRIX.csv and work/pp004-review-A2.md. No site code or content changed, so the results below hold for `ae2fe1a` too.
+- **Commits tested.** The tree was NOT frozen during this review. Content was edited and committed three times while my runs were in progress. The brief said nobody was editing.
+
+| Run | Commit(s) on disk | Result |
+|---|---|---|
+| Start: gates, forms.py, misc.py, history.py, nav.py, nav2.py, extra.py, claim spot-check | `e6ce7b3` (clean tree) | see sections 1 to 3 |
+| Guard run 1, 00:29 to 00:51 | `e6ce7b3`, then `8f901e3`. L-GUM3.js, T-C.js and L-V12.js changed on disk at 00:41 to 00:42, plus the beaver SVG. | 110 passed, 0 failed |
+| Re-run of forms, misc, history, nav, nav2 and extra | `8f901e3` | identical results (28/28, 32/34 with only F1 plus my a11y-snapshot script artifact, history equal, 124/124, 16/16, 8/8) |
+| Guard run 2, 00:52 to 01:14 | `8f901e3`, then `7a68223` and `ab8b858` (01:11). L-GUM3.js, L-V3.js, T-T34.js and css/styles.css (a `.poem-line>.sent` hanging indent) changed during the run. | 110 passed, 0 failed |
+| Final gates | `ab8b858` | check-content PASS (0 failures, 6 warnings); readability exit 0 (max FK 4.5); check-writing 0 failures, 0 warnings |
+
+  - So **no single full guard run covers a fixed tree**. The last commit gated in full is `ab8b858`. It has only check-content, readability and check-writing, with guard run 2 overlapping its last 3 minutes. The behaviour scripts were last run on `8f901e3`.
+  - All the code changes after `e6ce7b3` are lesson data, one SVG and one CSS rule. None touches js/*.js or js/engine/*.js, so the behaviour results in section 2 are unaffected.
+  - The lead also committed an in-progress copy of this file (with placeholders) in `8f901e3`. This version replaces it.
 - Production baseline: `main` at 66e536b, checked out read-only as a detached `git worktree` at scratchpad/revE4/main66. Playwright served it by request interception, so it needed no second port. The worktree was removed afterwards.
 - Logs and scripts: /tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/revE4/ (`*.log`, `scripts/*.py`).
 
 ## Verdict
 
 **PASS for function, with 3 low-severity findings (F1 to F3, section 4).**
-- All four gates pass. The full guard gave 110 passed, 0 failed.
+- All four gates pass. The full guard gave 110 passed, 0 failed on both runs, but each run straddled commits (see "Commits tested").
+- A full guard run on a frozen tree is still owed once editing stops.
 - Every PP-004 behaviour I was asked to reproduce works as claimed: form rotation, Retained behind the flag, the loophole closed, historical progress preserved against main, review only for dated passes, dashboard counts, the speaking card, text boxes and navigation at 4 widths.
 - 14 of 14 fix-log claims I spot-checked are true in the code.
 - The failures are: the parent guide omits the official wording and page on its 41 GUM rows, contrary to PP-004-CONTENT-CORRECTIONS.md (F1); one stale parent-guide sentence (F2); and a stale mastery document (F3).
@@ -137,7 +149,7 @@ The one review on an undated pass is the documented case where the last dated tr
 ## 3. Spot-check of fix-log claims against the code (14 checked, 14 true)
 | # | Log / ID | Claim | Result |
 |---|---|---|---|
-| 1 | reviewfix4 B3 | SK-V2a-TB5 stem "When the volcano began to erupt, hot melted rock poured down its sides." | true |
+| 1 | reviewfix4 B3 | SK-V2a-TB5 stem "When the volcano began to erupt, hot melted rock poured down its sides." | true at e6ce7b3. Superseded in 8f901e3 by the rc3fix lead addendum ("disrupted"), which I also confirmed in the code: the stem "A loud fire drill disrupted our spelling test…" and the key "broke into it and stopped it for a while". The RC4-1 beaver narrator line and the RC4-2 snowmen/halfs rows are also present. |
 | 2 | reviewfix4 C8 | SK-GUM4-5-T5 choice "This is the store when we buy bread." | true |
 | 3 | reviewfix4 C9 | "a parent may dive at them" (3.T.RA.1.c p4); "father" gone | true |
 | 4 | reviewfix4 C7 | SK-RA2b-T5 Part B has 5 choices incl. the calf sentence; passage "Some elephants live to be 60…"; "Many elephants" gone | true |
