@@ -533,6 +533,7 @@
     if (!s) return false;
     if (!window.PP_APP.canLeave()) return false;
     cur = k || id; lastCode = cur;
+    el("skill-back").textContent = window.PP_PATH && window.PP_PATH.mode() === "path" ? "← Learning path" : "← All skills";
     const L = k ? lessons[k] : null;
     step = L && stepsFor(L).some(x => x[0] === which) ? which : "teach";
     const sid = k && ids[k];

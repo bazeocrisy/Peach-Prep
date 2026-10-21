@@ -1,0 +1,16 @@
+{
+  "base_commit": "799b393ff61fab871020238800a3a803f5b15b2d",
+  "chromium": "131.0.6778.0",
+  "playwright": "1.49.1",
+  "axe_core": "4.14.0",
+  "font_requests": "blocked; system fallback font used",
+  "widths": [
+    320,
+    390,
+    768,
+    1366
+  ],
+  "legacy_mode_fixture": "pp.path.v1.mode=browse; original guard assertions unchanged",
+  "guard_source_sha256": "b2e235291d1540bf08807b988fd3a7e0d27da0c62eb5b6a0ecc51d7a16e3bbc5",
+  "final_legacy_selection": "All original sections except 3/4 (nine assertions passed before header-only correction); original assertions unmodified"
+}

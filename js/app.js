@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
+  const SCREENS = ["choose", "path", "home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -23,6 +23,7 @@
 
   function show(name) {
     current = name;
+    document.querySelectorAll("[data-go=home]").forEach(b => { b.textContent = name === "player" || name === "write" ? "Home" : window.PP_PATH.mode() === "path" ? "← Learning path" : "← All skills"; });
     SCREENS.forEach(n => { el("screen-" + n).hidden = n !== name; });
     el("home-notfound").hidden = true;
     window.scrollTo(0, 0);
@@ -39,6 +40,7 @@
      A replace keeps ppFrom (the entry before it has not changed); `state`
      overrides that. Routing keeps the entry's state as it is. */
   function setHash(hash, replace, state) {
+    window.PP_PATH.track(hash);
     const url = location.pathname + location.search + hash;
     if (routing) { replaceNext = false; history.replaceState(history.state, "", url); return false; }
     if (replaceNext || replace) {
@@ -77,6 +79,7 @@
   }
   function goHome() {
     if (!canLeave()) return;
+    if (window.PP_PATH.mode() === "path") { window.PP_PATH.open(); return; }
     /* leaving an activity: if it was opened from Home, step back to that entry */
     if ((current === "player" || current === "write") && stepBackTo("", { kind: "home", row: true })) return;
     /* otherwise replace its history entry, so the phone's Back button does not
@@ -85,7 +88,10 @@
     setHash("");
     landHome(true, true);
   }
-  function landHome(toRow, focus) {
+  function landHome(toRow, focus, browse) {
+    if (!browse && window.PP_PATH.mode() === "path") { window.PP_PATH.open(); return; }
+    if (!browse && !window.PP_PATH.mode()) { window.PP_PATH.showChoice(); return; }
+    el("skill-back").textContent = "← All skills";
     window.PP_SKILLS.buildList();
     show("home");
     if (!focus) return;
@@ -220,7 +226,7 @@
     });
   }
 
-  const TITLE = { home: "home-title", mixed: "mixed-title", clues: "clues-title", habits: "habits-title", section: "section-title",
+  const TITLE = { choose: "choose-title", path: "path-title", home: "home-title", mixed: "mixed-title", clues: "clues-title", habits: "habits-title", section: "section-title",
                   parents: "parents-title", skill: "sk-title", player: "player-title", write: "write-title" };
   function route() {
     routing = true;
@@ -234,6 +240,9 @@
         if (done && done.set === parts[1]) { window.PP_PLAYER.finished(parts[1], mode, done); return; }
         window.PP_PLAYER.start(parts[1], mode); return;
       }
+      if (h === "choose") { window.PP_PATH.showChoice(); return; }
+      if (h === "path") { window.PP_PATH.open(); return; }
+      if (h === "browse") { landHome(false, true, true); return; }
       if (h === "clues") { window.PP_SKILLS.buildClues(); show("clues"); return; }
       if (h === "habits") { window.PP_SKILLS.buildHabits(); show("habits"); return; }
       if (parts[0] === "write" && PP.taskById[parts[1]]) { window.PP_WRITING.start(parts[1]); return; }
@@ -251,7 +260,7 @@
       }
       if (h === "mixed") { show("mixed"); return; }
       if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
-      landHome(!!(ret && ret.row), !!ret);
+      landHome(!!(ret && ret.row), !!ret, !!h);
       /* PP-003 D16: an address that is not a page shows Home, says so, and drops the bad address */
       if (h) {
         history.replaceState(null, "", location.pathname + location.search);
@@ -288,11 +297,14 @@
     window.PP_WRITING.init();
     document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.go;
+      if (g === "choose") { window.PP_PATH.choose(); return; }
+      if (g === "path") { window.PP_PATH.open(); return; }
       if (g === "home") goHome();
       else if (g === "mixed") openMixed();
       else if (g === "parents") { if (canLeave()) window.PP_PARENTS.open(); }
     }));
     window.PP_SKILLS.init();
+    window.PP_PATH.init();
     el("hero-mixed").addEventListener("click", openMixed);
     el("hero-clues").addEventListener("click", openClues);
     el("hero-habits").addEventListener("click", openHabits);
@@ -319,7 +331,7 @@
     window.addEventListener("beforeunload", e => {
       if (current === "player" && window.PP_PLAYER.inProgress()) { e.preventDefault(); e.returnValue = ""; }
     });
-    loadSets().then(() => { buildHome(); route(); booted = true; lastHash = location.hash; });
+    loadSets().then(() => { buildHome(); el("choose-path").disabled = false; el("choose-browse").disabled = false; route(); booted = true; lastHash = location.hash; });
   }
 
   /* The activity's Back button returns to wherever it was opened from:
@@ -333,7 +345,7 @@
     returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot(), hash } :
                current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), hash } :
                current === "section" ? { kind: "section", key: sectionKey, hash } :
-               current === "home" || current === "clues" || current === "habits" ? { kind: current, hash } : returnTo;
+               current === "home" || current === "clues" || current === "habits" || current === "path" ? { kind: current, hash } : returnTo;
   }
   function back() {
     if (!canLeave()) return;
@@ -348,6 +360,7 @@
     /* opened from an address or reloaded: the entry before this one is still where it was opened from */
     if (!r && history.state && typeof history.state.ppFrom === "string" && stepBackTo(history.state.ppFrom)) return;
     replaceNext = true;
+    if (r && r.kind === "path") { window.PP_PATH.open(); return; }
     if (r && r.kind === "parents") { window.PP_PARENTS.open(r.tab, r.state); return; }
     if (r && r.kind === "home") { setHash(""); landHome(false, true); return; }
     if (r && r.kind === "clues") { window.PP_SKILLS.buildClues(); setHash("#clues"); show("clues"); el("clues-title").focus(); return; }
@@ -364,6 +377,6 @@
   }
   function track() { lastHash = location.hash; }
 
-  window.PP_APP = { show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, current: () => current };
+  window.PP_APP = { landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();

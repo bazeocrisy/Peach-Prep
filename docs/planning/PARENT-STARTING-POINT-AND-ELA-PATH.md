@@ -1,6 +1,8 @@
 # Peach Prep: parent starting point and complete ELA learning path
 
-Date: 2026-10-21. Status: **proposed learning route, documentation only**.
+Date: 2026-10-21. Status: **learning route implemented in the draft candidate; not merged or deployed**.
+
+Implementation audit: `docs/audits/LEARNING-PATH-IMPLEMENTATION-REVIEW.md`. The route is a suggested learning sequence, not a validated placement system.
 Audited application reference: `f1f79791fe7215915821a3fc6d165f131231a143`; documentation baseline: `7a355630cdadfae6ae55fc78f1d97ceebe99b0e0`.
 
 ## Recommendation
@@ -53,6 +55,7 @@ Links point to the existing skill/task routes. The audited candidate is unmerged
 
 | Group | Order | Existing activity | Lesson key / route |
 |---|---:|---|---|
+| Start with story elements | 1 | Story elements: characters, setting, problem and solution | `3.T.T.1.b`; `#skill/3.T.T.1.b` |
 | Stories | 1 | Story clues: dialogue, description and actions | `3.T.T.1.a`; `#skill/3.T.T.1.a` |
 | Stories | 2 | Characters and the story's lesson | `3.T.T.1.c`; `#skill/3.T.T.1.c` |
 | Stories | 3 | Point of view: the narrator's view and yours | `3.T.C.2.a`; `#skill/3.T.C.2.a` |
@@ -82,7 +85,6 @@ Links point to the existing skill/task routes. The audited candidate is unmerged
 
 | Group | Order | Existing activity | Lesson key / route |
 |---|---:|---|---|
-| Text structure and clue words | 1 | Story elements: characters, setting, problem and solution | `3.T.T.1.b`; `#skill/3.T.T.1.b` |
 | Text structure and clue words | 2 | Sequence: first, next, last | `TS-SEQ`; `#skill/TS-SEQ` |
 | Text structure and clue words | 3 | Cause and effect: what happened and why | `TS-CE`; `#skill/TS-CE` |
 | Text structure and clue words | 4 | Problem and solution: the tries and what works | `TS-PS`; `#skill/TS-PS` |
@@ -174,21 +176,21 @@ Links point to the existing skill/task routes. The audited candidate is unmerged
 
 | Group | Order | Existing activity | Lesson key / route |
 |---|---:|---|---|
-| Getting ahead (not on the grade 3 test) | 1 | Prepositional phrases | `3.L.GC.1:C:form-and-use-prepositional-phrases`; `#skill/3.L.GC.1:C:form-and-use-prepositional-phrases` |
-| Getting ahead (not on the grade 3 test) | 2 | Comparing words: -er, -est, more and most | `3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti`; `#skill/3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti` |
-| Getting ahead (not on the grade 3 test) | 3 | Pronouns that match their nouns | `3.L.GC.1:C:ensure-pronoun-antecedent-agreement`; `#skill/3.L.GC.1:C:ensure-pronoun-antecedent-agreement` |
-| Getting ahead (not on the grade 3 test) | 4 | Helping verbs and linking verbs | `3.L.GC.1:I:use-helping-and-linking-verbs`; `#skill/3.L.GC.1:I:use-helping-and-linking-verbs` |
-| Getting ahead (not on the grade 3 test) | 5 | Interjections: Wow! Oh no! | `3.L.GC.1:I:use-interjections`; `#skill/3.L.GC.1:I:use-interjections` |
-| Getting ahead (not on the grade 3 test) | 6 | Sound-alike words: to, too, two and more | `3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t`; `#skill/3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t` |
-| Getting ahead (not on the grade 3 test) | 7 | Punctuating what people say | `3.L.GC.1:C:use-conventional-capitalization-quotation-marks-`; `#skill/3.L.GC.1:C:use-conventional-capitalization-quotation-marks-` |
-| Getting ahead (not on the grade 3 test) | 8 | Commas with names and with yes and no | `3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes`; `#skill/3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes` |
-| Getting ahead (not on the grade 3 test) | 9 | Commas after an opening part | `3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses`; `#skill/3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses` |
-| Getting ahead (not on the grade 3 test) | 10 | Apostrophes for more than one owner | `3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns`; `#skill/3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns` |
-| Getting ahead (not on the grade 3 test) | 11 | Matching verbs to everyone, each, both and many | `3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement`; `#skill/3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement` |
-| Getting ahead (not on the grade 3 test) | 12 | Who, which, that, where and when | `3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs`; `#skill/3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs` |
-| Getting ahead (not on the grade 3 test) | 13 | Joining ideas with because, when, after and if | `3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses`; `#skill/3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses` |
-| Getting ahead (not on the grade 3 test) | 14 | Capital letters in Mr., Dr., St. and words like American | `3.L.GC.1:I:use-conventional-capitalization-in-abbreviations`; `#skill/3.L.GC.1:I:use-conventional-capitalization-in-abbreviations` |
-| Getting ahead (not on the grade 3 test) | 15 | Writing titles of books, stories, poems and songs | `3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar`; `#skill/3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar` |
+| Introduce and keep practicing (not on the grade 3 test) | 1 | Prepositional phrases | `3.L.GC.1:C:form-and-use-prepositional-phrases`; `#skill/3.L.GC.1:C:form-and-use-prepositional-phrases` |
+| Introduce and keep practicing (not on the grade 3 test) | 2 | Comparing words: -er, -est, more and most | `3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti`; `#skill/3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti` |
+| Introduce and keep practicing (not on the grade 3 test) | 3 | Pronouns that match their nouns | `3.L.GC.1:C:ensure-pronoun-antecedent-agreement`; `#skill/3.L.GC.1:C:ensure-pronoun-antecedent-agreement` |
+| Introduce and keep practicing (not on the grade 3 test) | 4 | Helping verbs and linking verbs | `3.L.GC.1:I:use-helping-and-linking-verbs`; `#skill/3.L.GC.1:I:use-helping-and-linking-verbs` |
+| Introduce and keep practicing (not on the grade 3 test) | 5 | Interjections: Wow! Oh no! | `3.L.GC.1:I:use-interjections`; `#skill/3.L.GC.1:I:use-interjections` |
+| Introduce and keep practicing (not on the grade 3 test) | 6 | Sound-alike words: to, too, two and more | `3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t`; `#skill/3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t` |
+| Introduce and keep practicing (not on the grade 3 test) | 7 | Punctuating what people say | `3.L.GC.1:C:use-conventional-capitalization-quotation-marks-`; `#skill/3.L.GC.1:C:use-conventional-capitalization-quotation-marks-` |
+| Introduce and keep practicing (not on the grade 3 test) | 8 | Commas with names and with yes and no | `3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes`; `#skill/3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes` |
+| Introduce and keep practicing (not on the grade 3 test) | 9 | Commas after an opening part | `3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses`; `#skill/3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses` |
+| Introduce and keep practicing (not on the grade 3 test) | 10 | Apostrophes for more than one owner | `3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns`; `#skill/3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns` |
+| Introduce and keep practicing (not on the grade 3 test) | 11 | Matching verbs to everyone, each, both and many | `3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement`; `#skill/3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement` |
+| Introduce and keep practicing (not on the grade 3 test) | 12 | Who, which, that, where and when | `3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs`; `#skill/3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs` |
+| Introduce and keep practicing (not on the grade 3 test) | 13 | Joining ideas with because, when, after and if | `3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses`; `#skill/3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses` |
+| Introduce and keep practicing (not on the grade 3 test) | 14 | Capital letters in Mr., Dr., St. and words like American | `3.L.GC.1:I:use-conventional-capitalization-in-abbreviations`; `#skill/3.L.GC.1:I:use-conventional-capitalization-in-abbreviations` |
+| Introduce and keep practicing (not on the grade 3 test) | 15 | Writing titles of books, stories, poems and songs | `3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar`; `#skill/3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar` |
 
 ## Every non-Practices matrix entry mapped
 
@@ -273,7 +275,7 @@ Keys beginning `3.L.GC.1:` identify internal grammar-chart rows under official s
 | `3.T.SS.2.a` | 5 | `3.T.SS.2.a` |
 | `3.T.SS.2.b` | 5 | `3.T.SS.2.b` |
 | `3.T.T.1.a` | 1 | `3.T.T.1.a` |
-| `3.T.T.1.b` | 3 | `3.T.T.1.b`; `TS-PS` |
+| `3.T.T.1.b` | 1, 3 | `3.T.T.1.b`; `TS-PS` |
 | `3.T.T.1.c` | 1 | `3.T.T.1.c` |
 | `3.T.T.1.d` | 1 | `3.T.T.1.d` |
 | `3.T.T.1.e` | 5 | `3.T.T.1.e` |
@@ -353,15 +355,15 @@ Use the existing parent habit card for each code; the table assigns when to begi
 
 ## Completion record and limits
 
-Maintain three separate observations: **activity visited/completed**, **scored check result**, and **adult-observed application**. Record dates and a short note where a parent observes performance. Existing saved state does not automatically track completion of this entire proposed route, all 53 practices, or every oral/handwritten requirement. A parent checklist is sufficient for the initial pilot; do not claim an automatic “all standards mastered” percentage.
+Maintain three separate observations: **activity visited/completed**, **scored check result**, and **adult-observed application**. Record dates and a short note where a parent observes performance. The new checklist records activities marked finished and routines tried by a parent; it cannot verify every oral/handwritten performance. Use the checklist alongside actual observations; do not claim an automatic “all standards mastered” percentage.
 
 At the end, review any unchecked mapped entries, revisit skills in unfamiliar texts, and review the child's writing with the existing guides. PT-1 can provide mixed practice; it is shortened and does not cover the entire pathway or constitute a complete Milestones simulation. No single terminal test certifies all ELA codes.
 
-## Smallest future app change, if requested
+## Initial implementation scope
 
-Add a parent-facing “Start here” guide containing this route overview, the first lesson link, links to existing groups and parent habit cards, and a clear device-only progress note. Keep the existing catalog available. Consider a later “next suggested activity” control only after validating the route with families. Do not implement placement, new assessment banks, backend/login, cross-device sync, a new mastery policy, or a redesign of all lessons for this scope.
+The draft candidate now provides two starting choices, a short path introduction, a next-lesson bookmark, expandable phases/groups, activity-finished checkboxes and parent-routine checkboxes. It uses the existing lessons and leaves the catalog accessible. Switching modes preserves lesson scores, drafts and the separate path checklist. The first story-elements lesson was moved forward from its catalog group into phase 1; it appears only once in the route. The remaining text-structure lessons stay in phase 3.
 
-No application files, saved-progress schemas, assessment items or feature flags were changed for this document. No merge or deployment is authorized by this plan.
+The `pp.path.v1` record stores the mode, introduction acknowledgment, lesson/step bookmark and explicit activity/routine checklist. It does not change the existing saved-progress schema or equate a checked activity with mastery. See the implementation review for current tests and limitations. No placement assessment, backend/login, cross-device sync or new mastery policy was added.
 
 ## Verification and sources
 

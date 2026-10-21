@@ -1,0 +1,30 @@
+info  W-TASK-01/p1: 188 words, 3 paragraphs
+info  W-TASK-01/p2: 173 words, 4 paragraphs
+info  W-TASK-01: reason 1: 9 evidence refs across 2 sources
+info  W-TASK-01: reason 2: 8 evidence refs across 2 sources
+info  W-TASK-01: model: 260 words, 4 paragraphs
+info  W-TASK-01/examples[0]: 2 of 8 (1/1/0), 49 words
+info  W-TASK-01/examples[1]: 4 of 8 (2/1/1), 70 words, copied run flagged in note
+info  W-TASK-01/examples[2]: 6 of 8 (2/2/2), 138 words
+info  W-TASK-02/p1: 179 words, 3 paragraphs
+info  W-TASK-02/p2: 180 words, 4 paragraphs
+info  W-TASK-02: reason 1: 10 evidence refs across 2 sources
+info  W-TASK-02: reason 2: 8 evidence refs across 2 sources
+info  W-TASK-02: model: 259 words, 4 paragraphs
+info  W-TASK-02/examples[0]: 2 of 8 (1/0/1), 44 words
+info  W-TASK-02/examples[1]: 4 of 8 (1/2/1), 103 words
+info  W-TASK-02/examples[2]: 6 of 8 (3/2/1), 187 words
+info  W-REV-01/p1: 109 words, 4 paragraphs
+info  W-REV-01/W-REV-01-2: sentence 2: draft has "(nothing)", answer "First,"
+info  W-REV-01/W-REV-01-2: sentence 7: draft has "(nothing)", answer "In addition,"
+info  W-REV-01/W-REV-01-7: sentence 8: draft has "studies", answer "study"
+info  W-REV-01/W-REV-01-7: sentence 9: draft has "watch", answer "watched"
+info  W-REV-02/p1: 94 words, 4 paragraphs
+info  W-REV-02/W-REV-02-5: sentence 7: draft has "(nothing)", answer "This time,"
+info  W-REV-02/W-REV-02-5: sentence 9: draft has "(nothing)", answer "A week later,"
+
+Revising items: 16, points: 22, two-point items: 6 (38%)
+Types: {"mc":9,"dropdown":3,"hottext":1,"ms":2,"order":1}
+DOK points: {"1":0,"2":20,"3":2}
+
+0 failures, 0 warnings

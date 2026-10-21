@@ -15,8 +15,62 @@
   <a class="skip" href="#main">Skip to content</a>
   <main id="main">
 
+  <!-- Choice and path contain no account or placement assessment. -->
+  <section class="screen" id="screen-choose" aria-labelledby="choose-title">
+    <div class="wrap path-wrap">
+      <p class="brand">Peach Prep · Grade 3 ELA</p>
+      <h1 class="page-title" id="choose-title" tabindex="-1">How would you like to learn?</h1>
+      <p class="page-sub">Choose a suggested route or pick a skill. You can switch anytime.</p>
+      <div class="learning-choices">
+        <article class="path-card">
+          <p class="path-eyebrow">A little guidance</p>
+          <h2>Follow the Learning Path</h2>
+          <p>Start with stories and sentences, then build toward research and writing. See what to work on next.</p>
+          <button type="button" class="btn btn-primary" id="choose-path" disabled>Follow the Learning Path</button>
+        </article>
+        <article class="path-card">
+          <p class="path-eyebrow">Your choice</p>
+          <h2>Choose Individual Lessons</h2>
+          <p>Pick a skill your child needs or match what they are learning at school. Every lesson stays available.</p>
+          <button type="button" class="btn btn-soft" id="choose-browse" disabled>Choose Individual Lessons</button>
+        </article>
+      </div>
+      <p class="note">No login needed. Progress is saved in this browser on this device when storage is available. Shared use is not separate child tracking.</p>
+      <p class="note path-storage" role="status"></p>
+    </div>
+  </section>
+  <section class="screen" id="screen-path" aria-labelledby="path-title" hidden>
+    <header class="bar path-bar">
+      <button type="button" class="nav-btn" data-go="choose">Switch learning mode</button>
+      <button type="button" class="nav-btn" data-go="parents">Parent guide</button>
+    </header>
+    <div class="wrap path-wrap">
+      <h1 class="page-title" id="path-title" tabindex="-1">Your Learning Path</h1>
+      <p class="page-sub">A suggested route through Grade 3 ELA. Work at your own pace; every lesson stays available.</p>
+      <div id="path-intro" hidden>
+        <article class="path-card">
+          <h2>How your learning path works</h2>
+          <ul>
+            <li>Begin with stories and sentences, then build toward research and writing.</li>
+            <li>Use Learn It, Watch Me, Practice Together, Try It Yourself, and a check. A lesson can take more than one session.</li>
+            <li>Begin reading aloud, handwriting, and everyday habits alongside your lessons. A grown-up helps observe these activities.</li>
+            <li>Mark activities finished when you have worked through them. This is a bookmark, not proof of mastery; check results stay separate.</li>
+            <li>You can open another lesson or switch modes anytime without clearing your progress.</li>
+          </ul>
+          <div class="path-actions">
+            <button type="button" class="btn btn-primary" id="path-start">Start My Path</button>
+            <button type="button" class="btn btn-soft" id="path-preview">View the Full Path</button>
+          </div>
+        </article>
+      </div>
+      <p class="note">Saved in this browser on this device. Clearing browser data can erase progress. No account or cross-device saving yet.</p>
+      <p class="note path-storage" role="status"></p>
+      <div id="path-content"></div>
+    </div>
+  </section>
+
   <!-- ===================== HOME: every standard ===================== -->
-  <section class="screen" id="screen-home" aria-labelledby="home-title">
+  <section class="screen" id="screen-home" aria-labelledby="home-title" hidden>
     <header class="hero hero-compact">
       <div class="hero-inner">
         <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
@@ -28,6 +82,7 @@
 
     <div class="wrap">
       <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
+      <div class="path-actions browse-mode"><button type="button" class="btn btn-primary" data-go="path">Follow the Learning Path</button><button type="button" class="btn btn-soft" data-go="choose">Switch learning mode</button></div>
       <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
       <div class="home-links">
         <button type="button" class="hl-btn" id="hero-mixed">Practice tests and mixed practice</button>
@@ -275,11 +330,13 @@
   <script src="js/data/habits.js" onerror="window.PP_HABITS=null"></script>
   <script src="js/data/manifest.js"></script>
   <script src="js/data/catalog.js"></script>
+  <script src="js/data/path.js"></script>
   <script src="js/engine/items.js"></script>
   <script src="js/engine/player.js"></script>
   <script src="js/skills.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/parents.js"></script>
+  <script src="js/path.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

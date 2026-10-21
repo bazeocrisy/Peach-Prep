@@ -1,0 +1,5 @@
+--- regression/js/path.js
++++ final/js/path.js
+@@ -173 +173 @@
+-        group.appendChild(make("summary", "", g.name + " · " + g.skills.length + " activities"));
++        group.appendChild(make("summary", "", g.name + " · " + g.skills.length + (g.skills.length === 1 ? " activity" : " activities")));

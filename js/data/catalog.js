@@ -76,7 +76,7 @@ window.PP_CATALOG = [
         "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa",
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos",
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"] },
-      { name: "Getting ahead (not on the grade 3 test)", skills: [
+      { name: "Introduce and keep practicing (not on the grade 3 test)", skills: [
         "3.L.GC.1:C:form-and-use-prepositional-phrases",
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti",
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement",
