@@ -117,3 +117,7 @@
 - U-6.2 (sticky fluency clock row over the step bar), U-6.3 (reason for the disabled "Mark as checked" button), U-6.9 (19-20 px parent-guide source links), F-4 (narrow teach-card figures) and F-6 (river through the Atlanta dot): not in my assignment, not changed.
 - The visible narrator caption in the beaver SVG (see 7).
 - `docs/SPEC.md:310` still uses the old set titles (lead to update).
+
+## Lead addendum
+- `assets/figures/tc1b-beaver-webpage.svg`: the narrator caption read "The water spills over the dam.", which the drawing (a lodge in flat water) does not show. It now reads "The water rushes past the lodge.", and SK-TC1b-P10's alt text matches. The item asks what "[water rushing]" tells the reader, so the key is unchanged.
+- `docs/SPEC.md` §8b: the set titles now read "Skill check (form A/B)", matching the UI.
