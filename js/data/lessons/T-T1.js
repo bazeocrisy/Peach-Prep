@@ -107,7 +107,7 @@ PP.addLesson({
         ["Dad crouched beside her.", "A tiny green crab scuttled sideways and tucked itself under a rock."],
         ["Lily reached for the rock.", "\"Wait,\" Dad said gently.", "\"That rock is the crab's house. How would you feel if a giant lifted off your roof?\""],
         ["Lily pulled her hand back.", "She lay on her stomach and watched instead.", "After a while, the crab crept out and waved one claw, as if it were saying hello."],
-        ["Far out, the waves began to roll back in.", "\"Time to go,\" Dad said.", "\"The ocean wants its pool back.\"", "Lily waved goodbye to the crab and raced the water up the beach."]
+        ["Far out, the waves began to roll back in.", "\"Time to go,\" Dad said.", "\"The ocean wants its pool back.\"", "Lily waved goodbye to the crab and raced the water up the beach, laughing."]
       ] }
   ],
   practice: [
@@ -400,7 +400,7 @@ PP.addLesson({
             { text: "\"After a while, the crab crept out and waved one claw, as if it were saying hello.\"", correct: true },
             { text: "\"A tiny green crab scuttled sideways and tucked itself under a rock.\"" },
             { text: "\"Lily reached for the rock.\"" },
-            { text: "\"Lily waved goodbye to the crab and raced the water up the beach.\"" }
+            { text: "\"Lily waved goodbye to the crab and raced the water up the beach, laughing.\"" }
           ] },
         clue: "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
         hints: [
@@ -862,20 +862,20 @@ PP.addLesson({
        compare item (C14); p4 only by core set 3. Never used by test. NEEDS INDEPENDENT REVIEW. */
     { id: "p3", title: "The Ice Cube Challenge", genre: "Literary text",
       paragraphs: [
-        ["The air conditioner at Pine Street School broke on the hottest day of August.", "Room 6 felt like an oven, even with every window open."],
-        ["\"Here is today's science challenge,\" said Ms. Banks.", "\"Keep your ice cube from melting until the lunch bell rings.\"", "Each team got two ice cubes and a box of supplies: paper cups, foil, tape and an old wool sock."],
-        ["Bryce set his team's first cube in a paper cup on the sunny windowsill.", "\"It can sit in the fresh air,\" he said.", "But the sun beat down on the glass, and in ten minutes the cube was a puddle."],
-        ["Now there was only one cube left.", "Ana thought hard.", "\"Wool keeps my feet warm in winter, so maybe it can keep the heat out, too,\" she said slowly."],
-        ["She wrapped the last cube in foil and tucked it inside the sock.", "Then Bryce set the sock in a shady corner under his desk."],
-        ["When the lunch bell rang, the other teams had cups of water.", "Ana unrolled the sock.", "Inside sat a small ice cube, still cold and shiny."],
-        ["\"You were right about the sock,\" Bryce said.", "Ms. Banks smiled and gave their team the first gold star of the year."]
+        ["The air conditioner at Pine Street School broke on the hottest day of August, and Room 6 felt like an oven."],
+        ["\"Keep your ice cube from melting until the lunch bell rings,\" said Ms. Banks.", "Each team got two ice cubes, some foil and an old wool sock."],
+        ["Bryce set their first cube in a paper cup on the sunny windowsill.", "\"It can sit in the fresh air,\" he said.", "But the sun beat down on the glass, and in ten minutes the cube was a puddle."],
+        ["Now there was only one cube left.", "Ana thought hard.", "\"Wool keeps my feet warm in winter, so maybe it can keep the heat out, too,\" she said."],
+        ["She wrapped the last cube in foil and tucked it inside the sock.", "Bryce set the sock in a shady corner under his desk."],
+        ["At the lunch bell, the other teams had cups of water.", "Ana unrolled the sock.", "Inside sat a small ice cube, still cold and shiny."],
+        ["\"You were right about the sock,\" Bryce said.", "Ms. Banks gave their team a gold star."]
       ] },
     { id: "p4", title: "The Hidden Peach Stand", genre: "Literary text",
       paragraphs: [
         ["Grandpa Joe's peach stand sat at the end of a long dirt road outside Fort Valley, Georgia.", "Tall pine trees hid it from the highway."],
         ["One July morning, the stand was piled high with ripe peaches.", "But by noon, not one car had come down the road.", "\"If we don't sell these soon, they'll get soft and spoil,\" Grandpa sighed."],
-        ["Malia and her cousin Dre wanted to help.", "First, Dre painted PEACHES in giant red letters on a sign and hung it on the front of the stand.", "They waited and waited.", "Still, no cars came."],
-        ["Malia walked all the way out to the highway and looked back.", "All she could see were pine trees.", "\"Nobody can see our sign from here,\" she called."],
+        ["Malia and her cousin Dre wanted to help.", "First, Dre painted PEACHES in giant red letters on a sign for the stand.", "Still, no cars came."],
+        ["Malia walked out to the highway and looked back.", "All she could see were pine trees.", "\"Nobody can see our sign from here,\" she called."],
         ["So the cousins painted big arrows on three old boards.", "They pushed the boards into the ground beside the highway, right where the dirt road began."],
         ["Within an hour, a blue truck turned onto the dirt road.", "Then came a van, and then two more cars."],
         ["By sunset, every basket was empty.", "Grandpa Joe gave each cousin the last two peaches.", "\"Best helpers in Georgia,\" he said."]
@@ -1045,7 +1045,7 @@ PP.addLesson({
             { text: "\"Now there was only one cube left.\"", correct: true },
             { text: "\"Ana thought hard.\"" },
             { text: "\"It can sit in the fresh air,\" he said." },
-            { text: "\"When the lunch bell rang, the other teams had cups of water.\"" }
+            { text: "\"At the lunch bell, the other teams had cups of water.\"" }
           ] },
         clue: "A problem makes a character act. When a try does not work, ask what has changed and what the character has to do now.",
         hints: [
@@ -1086,7 +1086,7 @@ PP.addLesson({
           { text: "Bryce tells Ana that she was right about the sock.", correct: true },
           { text: "Ana wraps the last cube in foil and tucks it in a sock." },
           { text: "Bryce sets the first cube in a cup on the windowsill." },
-          { text: "Each team gets two ice cubes and a box of supplies." }
+          { text: "Each team gets two ice cubes, some foil and a sock." }
         ],
         clue: "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
         hints: [
@@ -1098,7 +1098,7 @@ PP.addLesson({
           "The problem is keeping a cube from melting until the lunch bell.",
           "When the bell rings, Ana unrolls the sock and finds the cube still cold and shiny. Then Bryce says she was right about the sock.",
           "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\"",
-          "Wrapping the cube is the plan, not proof that it worked. The windowsill cube and the box of supplies come earlier in the story."
+          "Wrapping the cube is the plan, not proof that it worked. The windowsill cube and the supplies come earlier in the story."
         ],
         misconception: "A common mix-up is choosing the action that solves the problem instead of a detail that proves it worked.",
         why: "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\" Both show that the plan worked. Wrapping the cube is the plan itself, and the windowsill and the supplies come before the problem is solved." },
@@ -1191,7 +1191,7 @@ PP.addLesson({
       { id: "SK-TT1b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p3", "p4"],
         prompt: "How are the solutions in \"The Ice Cube Challenge\" and \"The Hidden Peach Stand\" alike?",
         choices: [
-          { text: "In both, a child learns what is causing the problem, then fixes that cause.", correct: true },
+          { text: "In both, a child figures out what is causing the problem, then fixes that cause.", correct: true },
           { text: "In both, a grown-up steps in and solves the problem for the children." },
           { text: "In both, the very first try works, so the children never need a new plan." },
           { text: "In both, the children solve the problem by making something much bigger." }
@@ -1205,11 +1205,11 @@ PP.addLesson({
         how: [
           "In \"The Ice Cube Challenge,\" the first cube melts in the sun. Ana then thinks about what keeps heat out and uses foil, wool and shade.",
           "In \"The Hidden Peach Stand,\" the sign on the stand brings no cars. Malia walks out to the highway to find out why, and then the cousins fix it.",
-          "The answer is \"In both, a child learns what is causing the problem, then fixes that cause.\"",
+          "The answer is \"In both, a child figures out what is causing the problem, then fixes that cause.\"",
           "No grown-up solves either problem, the first try fails in both stories, and in the peach story the giant sign is the try that does not work."
         ],
         misconception: "A common mix-up is choosing a sentence that is true for only one story. Check each choice against both stories.",
-        why: "The answer is \"In both, a child learns what is causing the problem, then fixes that cause.\" Ana works out what keeps heat away from ice, and Malia goes to the highway to see why no cars come. No grown-up solves either problem, the first try fails in both stories, and the giant sign is the try that does not work." },
+        why: "The answer is \"In both, a child figures out what is causing the problem, then fixes that cause.\" Ana works out what keeps heat away from ice, and Malia goes to the highway to see why no cars come. No grown-up solves either problem, the first try fails in both stories, and the giant sign is the try that does not work." },
       { id: "SK-TT1b-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
         prompt: "Which new story has a solution that works for the same reason Malia's solution works?",
         choices: [
@@ -1383,7 +1383,8 @@ PP.addLesson({
         "Next, Grandma Bea says rabbits come under the gate (paragraph 3).",
         "Then Jada puts wire along the bottom of the gate (paragraph 4).",
         "Last, every tomato is still on its vine (paragraph 5). That is problem, cause, solution, result."
-      ] },
+      ],
+      misconception: "A common mix-up is putting the explanation of the problem before the problem itself. A character has to find the trouble before anyone can explain it." },
     "SK-TT1b-P5": {
       hints: [
         "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
@@ -1395,7 +1396,8 @@ PP.addLesson({
         "Behind a house in Macon in summer tells where and when, so it is the setting.",
         "Rabbits squeezing under the gate is what goes wrong, so it is the problem.",
         "The wire along the bottom of the gate fixes it, so it is the solution."
-      ] }
+      ],
+      misconception: "A common mix-up is calling a character the problem. Grandma Bea is in the story, but the trouble is the rabbits." }
   },
   test: [
     { id: "SK-TT1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -2361,6 +2363,46 @@ PP.addLesson({
         ["Ravi sat down on a bench by the water and stayed very still.", "After a few minutes, a little bird with bright blue wings landed on a branch right next to him.", "It was a kingfisher!"],
         ["Ravi pointed without a sound.", "One by one, his classmates tiptoed over and sat beside him.", "Nobody spoke.", "They watched the kingfisher dive into the lake and come up with a tiny fish."],
         ["\"Ravi, you are a great bird watcher,\" said his teacher, Ms. Devi.", "\"Your quiet way helped all of us see.\"", "Ravi smiled.", "For the first time, he was glad to be the quiet one."]
+      ] },
+    /* Expansion 2026-10-22 (batch B1, author b1a): two new pairs. p5 + p6 are used only by core set 2;
+       p7 + p8 only by core set 3. Never used by test. NEEDS INDEPENDENT REVIEW, including the
+       cultural details (Danish chair jump at midnight; Japanese New Year's Eve soba and temple bell;
+       Mongolian ger moved to spring pasture; Norwegian autumn sheep gathering with bell sheep). */
+    { id: "p5", title: "Leap into the New Year", genre: "Literary text",
+      paragraphs: [
+        ["In Copenhagen, Denmark, the last night of the year was cold and dark.", "Snow dusted the rooftops outside Freja's apartment window."],
+        ["This year, Freja was finally old enough to stay up until midnight.", "She checked the clock on the wall again and again.", "\"Is it time yet?\" she asked.", "\"Not yet,\" said her mom with a laugh."],
+        ["At five minutes to midnight, the whole family climbed up onto chairs in the living room.", "Grandpa wobbled on his, and everyone giggled."],
+        ["\"Why do we do this?\" Freja asked.", "\"At midnight, we jump off our chairs,\" Mom said.", "\"We leave the old year behind and land in the new one, and we hope it will be a good year.\""],
+        ["The family counted down together.", "\"Three, two, one!\"", "Freja leaped off her chair and landed with a thump."],
+        ["Outside, fireworks burst over the harbor in red and gold.", "Freja hugged Grandpa tight.", "\"I jumped right into the new year,\" she said, \"and I'm so glad we did it together.\""]
+      ] },
+    { id: "p6", title: "Noodles on the Last Night", genre: "Literary text",
+      paragraphs: [
+        ["Haruto had never spent the last night of the year at his grandparents' house in Kyoto, Japan.", "Their wooden house was quiet and warm, and it smelled like soup."],
+        ["That evening, Grandma set a bowl of hot soba in front of him.", "Soba are thin noodles made from buckwheat.", "Haruto lifted the long noodles with his chopsticks."],
+        ["\"Why are the noodles so long?\" he asked.", "\"Long noodles stand for a long, healthy life,\" Grandma said.", "\"We eat them on the last night of the year and hope the new year will be good.\""],
+        ["Near midnight, the family walked to the temple at the end of their street.", "A huge bronze bell hung there, and people took turns ringing it.", "The deep sound rolled through the cold air."],
+        ["Grandpa lifted Haruto up so he could pull the thick rope.", "BONG!", "Haruto felt the sound hum in his chest."],
+        ["On the walk home, Haruto held Grandma's hand.", "\"Next year, can I ring the bell again?\" he asked.", "Grandma smiled and said, \"It is your family's bell, too.\""]
+      ] },
+    { id: "p7", title: "Moving Day on the Grassland", genre: "Literary text",
+      paragraphs: [
+        ["Every spring, Bataa's family moved their home across the wide, grassy land of Mongolia.", "Their home was a ger, a round tent made of wooden poles and thick felt."],
+        ["This year, the grass near their winter camp was almost gone, and the sheep were hungry.", "\"It is time to move,\" Father said."],
+        ["The whole family took the ger apart.", "They rolled up the felt walls, tied the poles together and loaded everything onto an old truck."],
+        ["Then Father handed Bataa the reins of a small gray horse.", "\"You are old enough to help herd the sheep,\" he said.", "Bataa sat up tall in the saddle."],
+        ["All day, Bataa rode behind the flock.", "When a lamb wandered toward the river, he trotted after it and turned it back."],
+        ["At sunset, they reached a valley green with new grass.", "The sheep spread out to eat.", "Bataa slid off his horse, tired but proud.", "\"Good work, herder,\" Father said."]
+      ] },
+    { id: "p8", title: "Bringing the Sheep Home", genre: "Literary text",
+      paragraphs: [
+        ["All summer, the sheep from Ingrid's family farm in Norway grazed high in the mountains.", "In September, the air turned cold, and the first snow dusted the peaks."],
+        ["\"The sheep must come down before winter,\" Grandma said.", "\"Tomorrow, you will help us find them.\""],
+        ["Early the next morning, Ingrid, Grandma and two neighbors hiked up a steep, rocky trail.", "Ingrid listened for bells.", "Some of the sheep wore bells, so people could find them among the rocks."],
+        ["High on the mountain, Ingrid heard a clink.", "Behind a big rock stood a ewe, a mother sheep, with a bell around her neck.", "Four more sheep waited behind her."],
+        ["\"The others follow the bell sheep,\" Grandma had told her.", "So Ingrid took hold of the ewe's collar and led her down the trail.", "Clink, clink.", "One by one, the other sheep followed."],
+        ["At the farm gate, Grandma counted the sheep and smiled.", "\"You found the bell sheep all by yourself,\" she said.", "Ingrid grinned all the way to the barn."]
       ] }
   ],
   practice: [
@@ -2425,6 +2467,469 @@ PP.addLesson({
       clue: "Find what goes wrong for each character just before they change their mind. Check each part of the choice against the story.",
       why: "The answer is \"Kofi sees his fruit go to waste, but Lucy finds that sledding alone is no fun.\" Kofi frowns at the rotten mangoes, and Lucy finds sledding is not fun with no one to cheer or race. Ama brings soup only after Kofi shares, and Ben is Lucy's friend, not her brother." }
   ],
+  /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P4 and P5;
+     they stay in practice, and the engine leaves them out of Practice Together, so Together shows P1-P3.
+     Set 1 uses the practice pair (p1, p2); set 2 a new pair about New Year customs (p5, p6); set 3 a new
+     pair about moving sheep with the seasons (p7, p8) plus a third short story (C13). Hints and Show me
+     how for refs and Together items are in addons.
+     Author log: docs/expansion-2026-10-22/batches/B1-b1a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT1d-P4" },
+      { ref: "SK-TT1d-P5" },
+      { id: "SK-TT1d-C03", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p1", "p2"],
+        prompt: "Both main characters decide to share, but they share in different ways. Complete the sentences. Choose the best answer for each blank.",
+        text: "Kofi shares by {0}. Lucy shares by {1}.",
+        slots: [
+          { options: ["giving a mango to every child he meets", "letting one friend pick from his tree", "selling his mangoes at a market"], answer: 0 },
+          { options: ["riding the sled together with her friends", "giving her sled to Sofia to keep", "letting Ben ride the sled by himself"], answer: 0 }
+        ],
+        clue: "Two characters can do the same kind of thing in different ways. Find exactly what each one does once they decide to share.",
+        hints: [
+          "Two characters can do the same kind of thing in different ways. Find exactly what each one does once they decide to share.",
+          "Find the part of each story where the main character first shares.",
+          "The story never says Kofi goes to a market, so that choice does not fit the first blank. Use the last paragraph of \"The Red Sled\" to test each choice for the second blank."
+        ],
+        how: [
+          "Kofi gives a mango to every child he meets on the road.",
+          "Lucy pulls the sled over to her friends, and the three of them squeeze on and ride down together.",
+          "The answers are giving a mango to every child he meets and riding the sled together with her friends.",
+          "Kofi gives his fruit away, but Lucy shares by doing something with her friends. Neither story has a market, a sled given away to keep, or anyone riding alone after Lucy shares."
+        ],
+        misconception: "A common mix-up is thinking that two characters who both share must share in the same way. Check what each one really does.",
+        why: "The answers are giving a mango to every child he meets and riding the sled together with her friends. Kofi gives his fruit away to the children he meets, and Lucy squeezes onto the sled with Ben and Sofia. There is no market, Lucy does not give the sled away, and nobody rides alone after she shares." },
+      { id: "SK-TT1d-C04", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p1", "p2"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How is the time in the two stories different?",
+          choices: [
+            { text: "Kofi's story lasts more than one day, but Lucy's story happens in one day.", correct: true },
+            { text: "Kofi's story happens in one day, but Lucy's story lasts a whole winter." },
+            { text: "Both stories happen in a single morning, before lunch." },
+            { text: "Kofi's story happens at night, but Lucy's happens in the morning." }
+          ] },
+        partB: { prompt: "Which sentence from \"Kofi's Mangoes\" best supports the answer to Part A?",
+          choices: [
+            { text: "\"The next morning, he filled a basket and carried it down the road.\"", correct: true },
+            { text: "\"Flies buzzed around the tree.\"" },
+            { text: "\"Her brother gave Kofi a whistle he had carved.\"" },
+            { text: "\"Kofi smiled.\"" }
+          ] },
+        clue: "A setting includes when a story happens. Look for words in each story that tell when things happen and how much time goes by.",
+        hints: [
+          "A setting includes when a story happens. Look for words in each story that tell when things happen and how much time goes by.",
+          "In each story, find every word or phrase that tells when something happens.",
+          "Lucy's story begins with the first big snow, and nothing in it says that weeks go by, so the choice about a whole winter does not fit. For Part B, the sentence must match your Part A answer."
+        ],
+        how: [
+          "In \"Kofi's Mangoes,\" Kofi eats mangoes for breakfast, lunch and dinner. Then the story says \"the next morning\" and \"that afternoon.\" So it lasts more than one day.",
+          "In \"The Red Sled,\" Lucy sleds after the first big snow, rides again and again, and then has \"the best ride of the day.\" It all happens in one day.",
+          "Part A: Kofi's story lasts more than one day, but Lucy's story happens in one day. Part B: \"The next morning, he filled a basket and carried it down the road.\"",
+          "The flies, the whistle and Kofi's smile do not tell when anything happens."
+        ],
+        misconception: "A common mix-up is thinking a setting is only a place. When a story happens, and how long it lasts, is part of the setting too.",
+        why: "Part A: Kofi's story lasts more than one day, but Lucy's story happens in one day. Part B: \"The next morning, he filled a basket and carried it down the road.\" Kofi's story moves on to the next morning and that afternoon, but Lucy's sledding all happens on one snowy day. The other sentences do not tell when anything happens." },
+      { id: "SK-TT1d-C05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: ["p1", "p2"],
+        prompt: "Kofi will not share his mangoes, and Lucy will not share her sled. How is what Kofi keeps different from what Lucy keeps?",
+        choices: [
+          { text: "Kofi has more mangoes than he can use, but Lucy has just one sled.", correct: true },
+          { text: "Kofi has just one mango left, but Lucy has many sleds to use." },
+          { text: "Kofi's mangoes are brand-new, but Lucy's sled is old and worn." },
+          { text: "Kofi's mangoes belong to Ama, but Lucy's sled belongs to Ben." }
+        ],
+        clue: "To contrast, look at the same part of both stories and tell how it is different. Here, look at the thing each character keeps.",
+        hints: [
+          "To contrast, look at the same part of both stories and tell how it is different. Here, look at the thing each character keeps.",
+          "Look at what each story says about the mango tree and about Lucy's sled.",
+          "Lucy's sled is brand-new, so the choice that calls it old mixes up the facts. Check each other choice against both stories."
+        ],
+        how: [
+          "Kofi's tree grows more fruit than anyone could count. He eats mangoes at every meal, and there are still too many.",
+          "Lucy has one brand-new red sled.",
+          "The answer is \"Kofi has more mangoes than he can use, but Lucy has just one sled.\"",
+          "Lucy's sled is new, Kofi has far more than one mango, the mangoes are Kofi's, not Ama's, and the sled is Lucy's, not Ben's."
+        ],
+        misconception: "A common mix-up is mixing up which detail belongs to which story. Check each half of the choice against its own story.",
+        why: "The answer is \"Kofi has more mangoes than he can use, but Lucy has just one sled.\" Kofi's tree grows more fruit than anyone could count, but Lucy has one brand-new sled. The sled is not old, Kofi has far more than one mango, and the things belong to Kofi and Lucy, not to Ama or Ben." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT1d-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
+        prompt: "How are the settings of \"Leap into the New Year\" and \"Noodles on the Last Night\" alike?",
+        choices: [
+          { text: "Both stories happen on the last night of the year.", correct: true },
+          { text: "Both stories happen in a city beside a harbor." },
+          { text: "Both stories happen in a grandparents' wooden house." },
+          { text: "Both stories happen on a warm summer evening." }
+        ],
+        clue: "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
+        hints: [
+          "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
+          "Read the first paragraph of each story.",
+          "Only Freja's story has a harbor, so that choice is true for just one story. Check the other choices against both stories."
+        ],
+        how: [
+          "\"Leap into the New Year\" happens in an apartment in Copenhagen, Denmark, on the last night of the year.",
+          "\"Noodles on the Last Night\" happens at a grandparents' house in Kyoto, Japan, on the last night of the year.",
+          "The answer is \"Both stories happen on the last night of the year.\"",
+          "Only Freja's story has a harbor, only Haruto's story has a wooden house, and both nights are cold, not summer evenings."
+        ],
+        misconception: "A common mix-up is choosing a detail that is true for only one of the stories.",
+        why: "The answer is \"Both stories happen on the last night of the year.\" Freja is in Denmark and Haruto is in Japan, but both stories take place on that same night. Only Freja's story has a harbor, only Haruto's has a wooden house, and both nights are cold." },
+      { id: "SK-TT1d-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How are Freja and Haruto alike?",
+          choices: [
+            { text: "Each one wants to know why the family follows a custom.", correct: true },
+            { text: "Each one is staying up until midnight for the very first time." },
+            { text: "Each one is visiting grandparents in another town." },
+            { text: "Each one is afraid of the loud sounds at midnight." }
+          ] },
+        partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
+          choices: [
+            { text: "\"Why do we do this?\" Freja asked.", correct: true },
+            { text: "\"Why are the noodles so long?\" he asked.", correct: true },
+            { text: "\"Is it time yet?\" she asked." },
+            { text: "\"Next year, can I ring the bell again?\" he asked." },
+            { text: "\"She checked the clock on the wall again and again.\"" }
+          ] },
+        clue: "To compare two characters, find something each one says or does. Then check that it is true for both.",
+        hints: [
+          "To compare two characters, find something each one says or does. Then check that it is true for both.",
+          "Each child asks a grown-up more than one question. Find every question each child asks.",
+          "Only Haruto is visiting his grandparents' house, so that choice fits just one story. For Part B, the two sentences must match your Part A answer, one from each story."
+        ],
+        how: [
+          "In paragraph 4 of her story, Freja asks, \"Why do we do this?\"",
+          "In paragraph 3 of his story, Haruto asks, \"Why are the noodles so long?\"",
+          "Part A: Each one wants to know why the family follows a custom. Part B: those two questions, one from each story.",
+          "Only Freja is said to be staying up until midnight for the first time, only Haruto is visiting grandparents, and neither one is afraid. The other questions ask about the time or about next year, not about why."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true for only one character. A comparison must fit both.",
+        why: "Part A: Each one wants to know why the family follows a custom. Part B: \"Why do we do this?\" Freja asked, and \"Why are the noodles so long?\" he asked. Both children ask why. Only Freja is staying up for the first time, only Haruto is visiting grandparents, and neither one is afraid." },
+      { id: "SK-TT1d-C08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
+        prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
+        cols: ["Freja's story", "Haruto's story", "Both stories"],
+        rows: [
+          { text: "The family jumps off chairs at midnight.", answer: 0 },
+          { text: "People take turns ringing a big bell.", answer: 1 },
+          { text: "A grandparent is part of the celebration.", answer: 2 },
+          { text: "Fireworks light up the sky.", answer: 0 }
+        ],
+        clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
+        hints: [
+          "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
+          "Look at what each family does near midnight, and at who is with each child.",
+          "Freja's family does not go to a temple, so the bell belongs to only one story. Sort the other details the same way."
+        ],
+        how: [
+          "Jumping off chairs at midnight happens only in Freja's story.",
+          "Ringing a big bell happens only in Haruto's story, at a temple.",
+          "Fireworks burst over the harbor only in Freja's story.",
+          "A grandparent is part of both celebrations: Freja hugs Grandpa, and Haruto is with Grandma and Grandpa. So that detail goes in Both stories."
+        ],
+        misconception: "A common mix-up is putting a detail in Both stories because it sounds like a holiday. Check that it really happens in both.",
+        why: "Jumping off chairs and fireworks happen only in Freja's story. Ringing a big temple bell happens only in Haruto's story. A grandparent is part of both celebrations: Freja's grandpa wobbles on his chair, and Haruto's grandma and grandpa share the night with him." },
+      { id: "SK-TT1d-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
+        prompt: "What message do the two stories share?",
+        choices: [
+          { text: "Taking part in a family tradition can help you feel you belong.", correct: true },
+          { text: "Staying up until midnight is the best part of any holiday." },
+          { text: "Food is the most important part of a celebration." },
+          { text: "Families everywhere celebrate a holiday in the same way." }
+        ],
+        clue: "A shared message must fit both stories. Look at how each story ends and what each child feels about the family's custom.",
+        hints: [
+          "A shared message must fit both stories. Look at how each story ends and what each child feels about the family's custom.",
+          "Read the last paragraph of each story. What do the children say, and what does Grandma say?",
+          "The two families do very different things, so a message saying every family celebrates the same way does not fit. Test the other choices against both endings."
+        ],
+        how: [
+          "At the end of Freja's story, she says she is glad the family did it together.",
+          "At the end of Haruto's story, he asks to ring the bell again, and Grandma tells him it is his family's bell, too.",
+          "Both children feel part of the family because they joined in. The answer is \"Taking part in a family tradition can help you feel you belong.\"",
+          "Staying up late fits only Freja's story, and food fits only Haruto's. The families do different things, so the message about every family celebrating the same way does not fit."
+        ],
+        misconception: "A common mix-up is choosing a message that fits only one story, like one about food.",
+        why: "The answer is \"Taking part in a family tradition can help you feel you belong.\" Freja is glad her family jumped together, and Haruto's grandma tells him the bell is his family's bell, too. Staying up late fits only Freja's story, food fits only Haruto's, and the families celebrate in different ways." },
+      { id: "SK-TT1d-C10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
+        prompt: "Haruto's grandma says the long noodles \"stand for a long, healthy life.\" Which part of Freja's story is MOST like this?",
+        choices: [
+          { text: "Mom explains why they all jump off the chairs.", correct: true },
+          { text: "Freja checks the clock on the wall again and again." },
+          { text: "Grandpa wobbles on his chair, and everyone giggles." },
+          { text: "Fireworks burst over the harbor in red and gold." }
+        ],
+        clue: "To compare customs from two cultures, look past what people do and ask what the custom means to the family.",
+        hints: [
+          "To compare customs from two cultures, look past what people do and ask what the custom means to the family.",
+          "Reread paragraph 3 of Haruto's story. Then reread the paragraphs of Freja's story that come before midnight.",
+          "The fireworks come after midnight and do not tell what anything means, so that choice does not fit. Test each choice that is left against Grandma's words."
+        ],
+        how: [
+          "Grandma's words tell what the noodles mean: a long, healthy life, and a hope for a good new year.",
+          "In Freja's story, Mom tells what jumping off the chairs means: leaving the old year behind and hoping the new one will be good.",
+          "The answer is \"Mom explains why they all jump off the chairs.\" Both grown-ups explain the meaning of a custom.",
+          "Watching the clock, Grandpa's wobble and the fireworks are things that happen, but they do not tell what a custom means."
+        ],
+        misconception: "A common mix-up is matching what people do instead of what the custom means. Customs can look different and mean the same thing.",
+        why: "The answer is \"Mom explains why they all jump off the chairs.\" Like Grandma, Mom explains what a custom means: both are hopes for a good new year. Watching the clock, Grandpa's wobble and the fireworks happen, but they do not explain a custom." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT1d-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
+        prompt: "Complete the sentences about the settings. Choose the best answer for each blank.",
+        text: "\"Moving Day on the Grassland\" happens on {0}. \"Bringing the Sheep Home\" happens on {1}.",
+        slots: [
+          { options: ["wide, grassy land in the spring", "steep mountains in early fall", "a busy city street in the summer"], answer: 0 },
+          { options: ["steep mountains in early fall", "snowy mountains in the middle of winter", "flat, grassy land in the spring"], answer: 0 }
+        ],
+        clue: "A setting tells where and when. Find the place and the season in each story, and keep the two stories apart.",
+        hints: [
+          "A setting tells where and when. Find the place and the season in each story, and keep the two stories apart.",
+          "Read the first paragraph of each story.",
+          "Grandma says the sheep must come down before winter, so Ingrid's story does not happen in the middle of winter. Use the first paragraph of Bataa's story to fill the other blank."
+        ],
+        how: [
+          "\"Moving Day on the Grassland\" begins in spring, on the wide, grassy land of Mongolia.",
+          "\"Bringing the Sheep Home\" happens in September, high in the mountains of Norway. September is early fall, and the sheep must come down before winter.",
+          "The answers are wide, grassy land in the spring and steep mountains in early fall.",
+          "The steep mountains belong to Ingrid's story, not Bataa's, and the first snow on the peaks does not mean it is the middle of winter."
+        ],
+        misconception: "A common mix-up is mixing up which setting belongs to which story, or reading the first snow as the middle of winter.",
+        why: "The answers are wide, grassy land in the spring and steep mountains in early fall. Bataa's family moves every spring across the grassland of Mongolia. Ingrid's sheep come down from the mountains of Norway in September, before winter starts." },
+      { id: "SK-TT1d-C12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
+        prompt: "Choose ONE sentence from each story that shows the main character guiding the sheep. Choose two sentences in the passages.",
+        targets: ["p7:3:1", "p7:4:3", "p7:5:2", "p8:3:1", "p8:5:2", "p8:6:3"],
+        answer: ["p7:5:2", "p8:5:2"], pick: 2,
+        clue: "An action is something a character does. To compare two characters, find one action for each one that fits the question.",
+        hints: [
+          "An action is something a character does. To compare two characters, find one action for each one that fits the question.",
+          "Look in the middle of each story, once the sheep are on the move.",
+          "Sitting up tall in the saddle happens before Bataa moves any sheep. Check each other sentence: is the child moving the sheep?"
+        ],
+        how: [
+          "In paragraph 5 of Bataa's story, a lamb wanders toward the river, and he trots after it and turns it back.",
+          "In paragraph 5 of Ingrid's story, she takes hold of the bell sheep's collar and leads her down the trail.",
+          "The answers are those two sentences, one from each story.",
+          "Sitting up tall happens before the sheep move. Taking the ger apart is a job for the whole family, hiking up comes before Ingrid finds the sheep, and her grin comes at the very end."
+        ],
+        misconception: "A common mix-up is choosing a sentence about how a character feels instead of what the character does.",
+        why: "The answers are the sentence where Bataa trots after a lamb and turns it back, and the sentence where Ingrid takes hold of the ewe's collar and leads her down the trail. Both children guide the sheep. Sitting up tall, taking the ger apart, hiking up the trail and grinning at the barn do not show anyone moving sheep." },
+      { id: "SK-TT1d-C13", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p7", "p8"], pick: 2,
+        stem: ["Story 3: In a village in Kenya, the dry season has come, and the stream near Wanjiru's home has dried up. Every morning, Wanjiru and her older brother walk the family's goats to a water hole far away. Wanjiru keeps the smallest goat close to her side the whole way."],
+        prompt: "Think about \"Moving Day on the Grassland,\" \"Bringing the Sheep Home\" and Story 3. Which TWO sentences are true about ALL THREE stories?",
+        choices: [
+          { text: "A child helps move animals to the place they need to be.", correct: true },
+          { text: "A change in the season helps decide when the animals move.", correct: true },
+          { text: "A child rides a horse to keep the animals together." },
+          { text: "A child finds the animals by listening for a bell." },
+          { text: "A child walks the animals to a water hole each day." }
+        ],
+        clue: "When you compare three stories, a sentence must be true for every one of them. Check each sentence against all three.",
+        hints: [
+          "When you compare three stories, a sentence must be true for every one of them. Check each sentence against all three.",
+          "Read Story 3 again. Then think back to the start and the middle of the other two stories. Choose two.",
+          "Only Ingrid listens for a bell, so that sentence does not fit all three stories. Test each other sentence the same way."
+        ],
+        how: [
+          "Bataa helps move the sheep to new grass in spring, when the old grass is gone.",
+          "Ingrid helps bring the sheep down in early fall, before winter. Wanjiru helps walk the goats to water in the dry season, when the stream has dried up.",
+          "So in all three, a child helps move animals to the place they need to be, and a change in the season helps decide when.",
+          "Riding a horse is only in Bataa's story, the bell is only in Ingrid's, and the water hole is only in Wanjiru's."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true for one or two of the stories but not all three.",
+        why: "The answers are \"A child helps move animals to the place they need to be.\" and \"A change in the season helps decide when the animals move.\" Bataa moves sheep in spring, Ingrid brings them down before winter, and Wanjiru walks goats to water in the dry season. The horse, the bell and the water hole each belong to only one story." },
+      { id: "SK-TT1d-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
+        prompt: "Which new story teaches the same lesson as BOTH \"Moving Day on the Grassland\" and \"Bringing the Sheep Home\"?",
+        choices: [
+          { text: "Tomás's aunt lets him steer the family's fishing boat for the first time, and he beams when they reach the dock.", correct: true },
+          { text: "Lena feeds the ducks at the park every Sunday morning with her mom and her baby brother." },
+          { text: "Jalen's family packs up their apartment and moves to a new town across the state." },
+          { text: "Kim's goat wins a blue ribbon at the county fair, and Kim takes a photo of it." }
+        ],
+        clue: "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
+        hints: [
+          "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
+          "In each story, look at what a grown-up says to the child, and at how the child feels at the end.",
+          "Jalen's family moves, like Bataa's family, but moving to a new town is not the lesson. Say the lesson aloud, then test the stories that are left."
+        ],
+        how: [
+          "In \"Moving Day on the Grassland,\" Father hands Bataa the reins and says he is old enough to help. At the end, Bataa is tired but proud.",
+          "In \"Bringing the Sheep Home,\" Grandma tells Ingrid she will help find the sheep. At the end, Ingrid grins after Grandma says she found the bell sheep all by herself.",
+          "The shared lesson: being trusted with a real job can make you proud. Tomás steers the boat for the first time and beams, so his story teaches the same lesson.",
+          "The ducks story and the fair story have animals, and Jalen's story has a move, but those only match a topic."
+        ],
+        misconception: "A common mix-up is matching a story by its topic, like animals or moving, instead of by its lesson.",
+        why: "The answer is \"Tomás's aunt lets him steer the family's fishing boat for the first time, and he beams when they reach the dock.\" Like Bataa and Ingrid, Tomás is trusted with a real job and feels proud. The ducks, the move and the goat ribbon only share a topic with the sheep stories." },
+      { id: "SK-TT1d-C15", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How is the way of life of Bataa's family different from the way of life of Ingrid's family?",
+          choices: [
+            { text: "Bataa's family carries its home along when it moves, but Ingrid's family stays on one farm.", correct: true },
+            { text: "Bataa's family lives in a big city, but Ingrid's family lives out in the country." },
+            { text: "Bataa's family raises goats, but Ingrid's family raises horses on its farm." },
+            { text: "Bataa's family never moves, but Ingrid's family moves to new land every spring." }
+          ] },
+        partB: { prompt: "Which sentence from \"Moving Day on the Grassland\" best supports the answer to Part A?",
+          choices: [
+            { text: "\"They rolled up the felt walls, tied the poles together and loaded everything onto an old truck.\"", correct: true },
+            { text: "\"Bataa sat up tall in the saddle.\"" },
+            { text: "\"The sheep spread out to eat.\"" },
+            { text: "\"At sunset, they reached a valley green with new grass.\"" }
+          ] },
+        clue: "To compare two cultures, look at how each family lives, not just at what happens on one day.",
+        hints: [
+          "To compare two cultures, look at how each family lives, not just at what happens on one day.",
+          "Read the first paragraph of each story, and paragraph 3 of Bataa's story.",
+          "Both families keep sheep, so the choice about goats and horses does not fit. For Part B, the sentence must match your Part A answer."
+        ],
+        how: [
+          "Bataa's family lives in a ger, a round tent. Every spring they take it apart and move it to new grass.",
+          "Ingrid's family has a farm with a gate and a barn. The sheep go up the mountain and come back, but the farm stays in one place.",
+          "Part A: Bataa's family carries its home along when it moves, but Ingrid's family stays on one farm. Part B: \"They rolled up the felt walls, tied the poles together and loaded everything onto an old truck.\"",
+          "Both families keep sheep, neither lives in a city, and it is Bataa's family, not Ingrid's, that moves every spring."
+        ],
+        misconception: "A common mix-up is choosing a sentence about one day's events when the question asks about a family's whole way of life.",
+        why: "Part A: Bataa's family carries its home along when it moves, but Ingrid's family stays on one farm. Part B: \"They rolled up the felt walls, tied the poles together and loaded everything onto an old truck.\" Bataa's family packs up its ger and moves it every spring, while Ingrid's sheep come home to a farm that stays put. Both families keep sheep, and neither lives in a city." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own pair of short new stories. */
+  similar: [
+    { id: "SK-TT1d-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C03", "SK-TT1d-C05"],
+      stem: ["Story 1: On a farm in Iowa, Sam finds a baby bird on the ground. He makes it a nest in a shoebox and feeds it until it is strong enough to fly away.", "Story 2: In a busy market in Morocco, Amina finds a lost kitten under a fruit cart. She carries it home, and her family keeps it as a pet."],
+      prompt: "How is what Sam does different from what Amina does?",
+      choices: [
+        { text: "Sam cares for the bird until it can leave, but Amina keeps the kitten.", correct: true },
+        { text: "Sam keeps the bird as a pet, but Amina lets the kitten go free." },
+        { text: "Sam finds the bird at a market, but Amina finds the kitten on a farm." },
+        { text: "Sam asks his family for help, but Amina takes care of it alone." }
+      ],
+      clue: "To contrast, look at the same part of both stories, here what each child does with the animal, and tell how it is different.",
+      hints: [
+        "To contrast, look at the same part of both stories, here what each child does with the animal, and tell how it is different.",
+        "Read the last sentence of each story.",
+        "Sam is on a farm and Amina is at a market, so the choice that swaps the places mixes up the stories. Test each choice that is left."
+      ],
+      how: [
+        "Sam feeds the bird until it is strong enough to fly away.",
+        "Amina takes the kitten home, and her family keeps it as a pet.",
+        "The answer is \"Sam cares for the bird until it can leave, but Amina keeps the kitten.\"",
+        "The places are swapped in one choice, Sam does not keep the bird, and neither story says who helps whom."
+      ],
+      why: "The answer is \"Sam cares for the bird until it can leave, but Amina keeps the kitten.\" Sam feeds the bird until it can fly away, and Amina's family keeps the kitten as a pet. One choice swaps the places, Sam does not keep the bird, and neither story says who helps." },
+    { id: "SK-TT1d-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C06", "SK-TT1d-C04", "SK-TT1d-C11"],
+      stem: ["Story 1: On a hot afternoon in Australia, Mia's family eats lunch on the beach under a big umbrella.", "Story 2: On a hot afternoon in Egypt, Karim's family eats lunch on a boat on the Nile River."],
+      prompt: "How are the settings of the two stories alike?",
+      choices: [
+        { text: "Both happen on a hot afternoon near water.", correct: true },
+        { text: "Both happen on a boat on a long river." },
+        { text: "Both happen on a sandy beach by the sea." },
+        { text: "Both happen on a cold morning in a city." }
+      ],
+      clue: "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
+      hints: [
+        "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
+        "Read the beginning of each story for the time, and the end of each story for the place.",
+        "Only Karim's family is on a boat, so that choice fits just one story. Test each choice that is left against both stories."
+      ],
+      how: [
+        "Mia's story: a hot afternoon on a beach.",
+        "Karim's story: a hot afternoon on a boat on the Nile River.",
+        "The answer is \"Both happen on a hot afternoon near water.\"",
+        "Only Karim is on a boat, only Mia is on a beach, and neither story is cold or in the morning."
+      ],
+      why: "The answer is \"Both happen on a hot afternoon near water.\" Mia is at a beach and Karim is on a river, and both stories are on a hot afternoon. The boat fits only Karim's story, the beach only Mia's, and neither is cold or in the morning." },
+    { id: "SK-TT1d-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C09", "SK-TT1d-P4", "SK-TT1d-C14"],
+      stem: ["Story 1: In a town in Brazil, Lucas and his friend argue over a soccer ball. Lucas feels bad all night. The next day, he says he is sorry, and they play together again.", "Story 2: In a small town in Ireland, Nora snaps at her little sister for messing up her drawing. Later, Nora tells her she is sorry, and the two sisters draw a new picture together."],
+      prompt: "What lesson do BOTH stories teach?",
+      choices: [
+        { text: "Saying sorry can help fix a hurt friendship.", correct: true },
+        { text: "Soccer is more fun when you play with friends." },
+        { text: "Little sisters should never touch your drawings." },
+        { text: "It is best to stay away from people who argue." }
+      ],
+      clue: "A lesson for both stories must fit both characters. Look at what each main character does after the trouble, and how it turns out.",
+      hints: [
+        "A lesson for both stories must fit both characters. Look at what each main character does after the trouble, and how it turns out.",
+        "Read the last sentence of each story.",
+        "Soccer is only in Lucas's story, so a lesson about soccer fits just one story. Test each choice that is left against both stories."
+      ],
+      how: [
+        "Lucas argues with his friend, says he is sorry the next day, and they play together again.",
+        "Nora snaps at her sister, says she is sorry, and they draw a new picture together.",
+        "The answer is \"Saying sorry can help fix a hurt friendship.\"",
+        "Soccer fits only Lucas's story, the drawing rule fits only Nora's, and both characters go back to the person instead of staying away."
+      ],
+      misconception: "A common mix-up is choosing a lesson about a topic in only one of the stories.",
+      why: "The answer is \"Saying sorry can help fix a hurt friendship.\" Lucas and Nora each say sorry, and each one is close again with the other person. Soccer fits only Lucas's story, the drawing rule fits only Nora's, and neither character stays away." }
+  ],
+  /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
+  addons: {
+    "SK-TT1d-P1": {
+      hints: [
+        "To compare, find what each main character does at the start. Then check that your answer is true for both stories.",
+        "Read what Kofi says in paragraph 2 of his story and what Lucy says in paragraph 2 of hers.",
+        "Only Lucy's story has cold weather, so that choice is true for just one story. Test each choice that is left against both stories."
+      ],
+      how: [
+        "When the children ask for a mango, Kofi says, \"They are all mine.\"",
+        "When Sofia asks for a turn, Lucy says she wants the sled all to herself.",
+        "The answer is \"They both refuse to share something they have.\"",
+        "Only Lucy's story is cold, neither one is a new kid, and neither asks friends for help with a job."
+      ] },
+    "SK-TT1d-P2": {
+      hints: [
+        "A setting is where and when a story happens. Find the place and the weather or season in each story.",
+        "Read the first paragraph of each story.",
+        "Neither story happens in a big city, so the choice about a city does not fit. Test each choice that is left against both first paragraphs."
+      ],
+      how: [
+        "Kofi's story happens in a village in Ghana in the hot season.",
+        "Lucy's story happens on Pine Hill in Vermont after the first big snow.",
+        "The answer is \"Kofi's story is in a hot village, and Lucy's is on a snowy hill.\"",
+        "Neither story is in a big city, at a school, on a beach or in a pine forest."
+      ] },
+    "SK-TT1d-P3": {
+      hints: [
+        "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
+        "Look at what happens in the middle and at the end of each story.",
+        "Neighbors bring Kofi soup and a whistle, but no one brings Lucy a gift, so that detail belongs to one story. Sort the other details the same way."
+      ],
+      how: [
+        "Only Kofi's mangoes rot, so food going to waste belongs to Kofi's story.",
+        "Only Lucy finds that playing alone is no fun.",
+        "Neighbors bring gifts only to Kofi.",
+        "Both main characters decide to share, so that detail goes in Both stories."
+      ] },
+    "SK-TT1d-P4": {
+      hints: [
+        "A lesson for both stories must fit Kofi AND Lucy. Look at how each story ends, after the main character changes.",
+        "Read the last paragraph of each story. Choose one sentence from each story for Part B.",
+        "Eating too much fruit never makes anyone sick in Kofi's story, so that choice does not fit. For Part B, the two sentences must match your Part A answer, one from each story."
+      ],
+      how: [
+        "At the end of Kofi's story, sharing his mangoes fills his days with friends.",
+        "At the end of Lucy's story, the three friends ride together, and it is the best ride of the day.",
+        "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\"",
+        "Keeping new things clean, getting sick and winter fun fit only one story or neither."
+      ],
+      misconception: "A common mix-up is choosing a lesson that fits only one story. Check it against both." },
+    "SK-TT1d-P5": {
+      hints: [
+        "Find what goes wrong for each character just before they change their mind. Check each part of a choice against the story.",
+        "Read paragraph 3 and the start of paragraph 4 of \"Kofi's Mangoes,\" and paragraph 3 of \"The Red Sled.\"",
+        "Ben is Lucy's friend, not her brother, so that choice has a mistake in it. Test each choice that is left against both stories."
+      ],
+      how: [
+        "Kofi has too many mangoes. They rot on the ground, and he frowns at the rotten fruit.",
+        "Lucy rides alone again and again, with no one to cheer or race, and sledding stops being fun.",
+        "The answer is \"Kofi sees his fruit go to waste, but Lucy finds that sledding alone is no fun.\"",
+        "No parent explains a lesson, nobody reads a book, and no one gets sick or hurt."
+      ],
+      misconception: "A common mix-up is accepting a choice when only one half of it is true. Check both halves." }
+  },
   test: [
     { id: "SK-TT1d-T1", type: "mc", points: 1, dok: 2, passages: ["p3", "p4"],
       prompt: "How are Grandfather in \"The Smallest Cousin\" and Ms. Devi in \"Ravi and the Kingfisher\" alike?",

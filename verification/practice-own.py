@@ -356,7 +356,7 @@ with sync_playwright() as p:
         msg = "Saving is unavailable. Your practice answers are kept only while this page stays open. If you reload or close it, this practice starts again from the beginning."
         ok = msg in pn["n"] and "You can stop after any set and come back." not in pn["line"] and msg in pl["n"] and pl["solved"] and "Right with hints" in pl["st"] and kept["solved"] and not errs
         if name == "full":
-            q.evaluate("Storage.prototype.setItem=window.__realSet"); q.click("#q-hint"); q.wait_for_timeout(40)   # a later action saves
+            q.evaluate("()=>{Storage.prototype.setItem=window.__realSet;}"); q.click("#q-next"); q.wait_for_timeout(40)   # a later action (moving on) saves
             q.evaluate(WRONG)
             cleared = q.evaluate("({n:(document.querySelector('#q-storage .practice-storage')||{}).hidden, v:!!localStorage.getItem('pp.practice.v1')})")
             ok = ok and cleared == {"n": True, "v": True}
@@ -378,7 +378,7 @@ with sync_playwright() as p:
         raw2 = q.evaluate("localStorage.getItem('pp.practice.v1')")
         good = expect in n0 and raw1 == raw and not errs and raw2 != raw and isinstance(json.loads(raw2), dict)
         if name == "mixed":
-            good = good and info["st"] == "retry" and info["rec"]["w"] == 2 and info["rec"]["h"] == 3 and info["rec"]["x"] is False and info["resp"] == '{"v":[]}'
+            good = good and info["st"] == "hints" and info["rec"]["w"] == 2 and info["rec"]["h"] == 3 and info["rec"]["x"] is False and info["resp"] == '{"v":[]}'
         check("E.2 malformed pp.practice.v1 (%s): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts" % name, good, (n0, raw1 == raw, info, errs))
         close_page(q)
 
@@ -397,11 +397,12 @@ with sync_playwright() as p:
     q = page(b, errors=errors, browse=False)
     q.goto(BASE); q.wait_for_timeout(300)
     q.evaluate("s=>{localStorage.clear();for(const k in s)localStorage.setItem(k,s[k]);}", seed)
-    ready(q, "#browse")
+    ready(q, "#browse"); q.reload(); q.wait_for_timeout(700)   # a hash-only goto keeps the document: reload so the seed is read
     before = q.evaluate(KEYS)
     lab = q.evaluate("(k=>({state:PP_SKILLS.displayState(k).label, tryTick:(PP_SKILLS.open(k,'try'),document.getElementById('sk-tab-try').classList.contains('is-done'))}))(%s)" % json.dumps(K))
     for h in ("#browse", "#std/3.T.T.1", "#std/" + K, "#std/3.L.GC.1", "#std/K-12.P.EICC.1", "#skill/%s/teach" % K, "#skill/%s/practice" % K, "#skill/%s/try" % K, "#skill/%s/test" % K,
-              "#parents/standards", "#parents", "#habits", "#path", "#choose", "#skill/3.L.GC.2.b/test"):
+              "#parents/standards", "#parents", "#habits", "#choose", "#skill/3.L.GC.2.b/test"):
+        # (#path is left out on purpose: opening the Learning Path has always saved mode "path" in pp.path.v1)
         q.goto(BASE + h); q.wait_for_timeout(250)
     q.evaluate("PP_APP.landBrowse()"); q.fill("#skill-search", "3-5.T.T.1"); q.wait_for_timeout(80)
     mid = q.evaluate(KEYS)
@@ -436,7 +437,7 @@ with sync_playwright() as p:
     errs = []
     q = page(b, 320, 568, errors=errs); ready(q, "#browse")
     q.evaluate("s=>{for(const k in s)localStorage.setItem(k,s[k]);}", seed)
-    ready(q, "#browse")
+    ready(q, "#browse"); q.reload(); q.wait_for_timeout(700)
     before = q.evaluate(KEYS)
     codes = q.evaluate("""(()=>{const out=[];PP_STANDARDS.forEach(s=>out.push([s.code,s.official||s.text]));PP_STD_GROUPS.forEach(g=>{out.push([g.code,g.official]);out.push([g.band,g.official]);});
         ['M','R','I','C'].forEach(l=>out.push(['3.L.GC.1:'+l,PP_STD_GROUPS.find(g=>g.code==='3.L.GC.1').official]));return out;})()""")
@@ -526,7 +527,7 @@ with sync_playwright() as p:
     d1 = q.evaluate("[PP_APP.current(), location.hash]")
     ready(q, "#std/not-a-code")
     d2 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('home-notfound').hidden]")
-    ready(q, "#play/SK:%s:y2/try" % K)
+    ready(q, "#play/SK:%s:y2/try" % K); q.reload(); q.wait_for_timeout(700)   # a direct load, not a move inside the page
     d3 = q.evaluate("[PP_APP.current(), PP_PLAYER.state().setId, PP_PLAYER.state().own]")
     q.click("#player-back"); q.wait_for_timeout(200)
     d4 = q.evaluate("[PP_APP.current(), PP_SKILLS.step()]")
@@ -648,7 +649,7 @@ base_rc, base_out = cc()
 check("L.0 check-content passes on the candidate; uncovered core items are a warning, and the derived Together ids are printed",
       base_rc == 0 and "have no similar item" in base_out and "lesson 3.T.T.1.c: Practice Together = SK-TT1c-P1, SK-TT1c-P2, SK-TT1c-P3" in base_out, base_out[-400:])
 MUT = [
-    ("a set of four", '      { ref: "SK-TT1c-P6" }\n    ] },', '    ] },', "set 1\", \"needs exactly 5 items"),
+    ("a set of four", '      { ref: "SK-TT1c-P6" }\n    ] },', '    ] },', "core set 1: needs exactly 5 items"),
     ("a hint that contains the answer", '"Authors give a character words for a reason. Ask what the words tell you about the main character\'s choice and the story\'s lesson.",\n          "Reread paragraph 7.',
      '"It is to show that what Marisol did was special, because many people would keep the money.",\n          "Reread paragraph 7.', "contains the answer"),
     ("a core item without how", 'how: [\n          "Paragraph 1 says Kendra', 'howx: [\n          "Paragraph 1 says Kendra', "needs how"),
@@ -666,7 +667,7 @@ for name, a, b_, want in MUT:
     check("L.%s check-content fails %s" % (name.replace(" ", "-"), name), rc == 1 and want in (out or ""), (rc, (out or "")[-300:]))
 rc, out = cc("js/data/std-groups.js", "Explain, analyze, and use narrative techniques to shape understandings.", "Explain and use narrative techniques.")
 check("L.std-groups check-content fails changed official parent wording", rc == 1 and "official wording differs" in out, (rc, out[-300:]))
-rc, out = cc("js/data/std-groups.js", '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d", "3.T.T.1.e"', '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d"', "order is missing")
+rc, out = cc("js/data/std-groups.js", '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d", "3.T.T.1.e"', '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d"')
 check("L.std-groups check-content fails an order that leaves out a component", rc == 1 and "order is missing 3.T.T.1.e" in out, (rc, out[-300:]))
 shutil.rmtree(tmp, ignore_errors=True)
 
