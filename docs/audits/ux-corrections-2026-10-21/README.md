@@ -25,13 +25,17 @@ Three implementation agents divided writing recovery, progress/short-writing rec
 | Progress and short-writing recovery | 67 passed, zero failed |
 | Instructional-copy runtime functions | 28 assertions passed |
 | Independent combined review | 87 passed, zero failed; no uncaught page errors |
+| All short-writing activities at seven viewports | 161 of 161 combinations passed; no overflow or page errors |
 | Existing Learning Path integration | 148 passed, zero failed |
-| Original question-player guard | PENDING; merge is held until this run finishes successfully |
+| Original question-player guard | **110 passed, zero failed, exit code zero** on the frozen application source |
 | Content checker | Zero failures; six existing clue-overlap warnings |
 | Writing checker | Zero failures; zero warnings |
+| Readability screen | 125 unchanged prose-passage records; no new passage text |
 | JavaScript syntax / whitespace | Passed for all six changed application files |
 
 The independent reviewer approved the corrections, contingent on the root integration result. See [independent review](INDEPENDENT-REVIEW.md) and [machine-readable results](independent-review-results.json). Original historical audits remain historical; their tests are not mislabeled as new runs.
+
+The additional short-writing matrix covers every one of the 23 actual `L.write` activities at every specified viewport, including failed persistence, newest text/checklist entries after step and lesson return, the unsaved notice and horizontal extent. See [161-combination results](shortwriting-layout-results.json). [Focused recovery results](recovery-results.json) preserve the writing/progress checks, and the [application fingerprint](application-fingerprint.json) identifies all 83 frozen application assets.
 
 The focused cases cover blocked storage getters, failed reads with working writes, quota/write failures, stale persisted drafts, successful recovery and reload, task/lesson/mode isolation, reset cancel/accept, multi-task unload protection, malformed records and neighboring history, no invented pass, practice/test address handling, and scored A/B rotation.
 
@@ -43,6 +47,8 @@ Browser checks use packaged Chromium 131 with Playwright 1.49.1, headless viewpo
 
 The original guard's assertions are unchanged. [The launcher](../../../verification/launch-ux-regression.py) supplies the packaged browser and fresh-browser isolation. It sets a browse preference fixture because the older home journey predates first-visit mode selection; the separate path suite verifies first visits. No assertion is weakened or skipped. Each script starts a static server in its own command environment.
 
+An initial full run exposed an error in that launcher fixture: the guard deliberately navigates to `about:blank`, whose storage has no usable origin. The fixture's unguarded storage access created a `SecurityError`; application code did not. A [controlled proof](fixture-origin-proof.json) reproduced one error with the original fixture and none with its guarded equivalent. The launcher now guards its own storage setup. Application files remained unchanged, and the complete clean rerun returned 110 passed, zero failed, exit code zero. Temporary diagnostic runs that skipped expensive loops were used only to locate the cause, not as release acceptance evidence. See the [final full log](guard-final.log) and [all 110 assertion results](guard-results.json).
+
 ```bash
 node verification/check-instructional-copy.js
 node verification/check-content.js --all
@@ -50,6 +56,7 @@ node verification/check-writing.js
 python3 verification/writing-recovery.py
 python3 verification/skills-recovery.py
 python3 verification/ux-release-review.py
+python3 verification/ux-shortwriting-layout.py
 python3 verification/launch-ux-regression.py path
 python3 verification/launch-ux-regression.py guard
 ```
@@ -62,4 +69,6 @@ When browser storage is unavailable, this correction protects work within the cu
 
 ## Release status
 
-Application source is frozen for verification. Merge is pending the original guard result. No separate deployment is initiated by these verification scripts. GitHub Pages may update automatically after an owner-authorized merge; deployment must be checked separately from the merge result.
+**Approved for the owner-authorized merge.** All required automated checks and the independent code review passed. The application assets match the frozen fingerprint; source changes are limited to six JavaScript files. See [PR #4](https://github.com/bazeocrisy/Peach-Prep/pull/4) for its authoritative merge status.
+
+No separate deployment is initiated by these verification scripts. GitHub Pages may update automatically after merge. The pre-merge [deployment comparison](deployed-before-merge.json) correctly found the six changed JavaScript files still on the older live version, with 77 other assets matching. The read-only `verification/check-deployed-assets.py` compares all 83 canonical live asset URLs against the frozen fingerprint after merge. Byte equality verifies the deployed application content, not an actual-device or live-browser acceptance session.

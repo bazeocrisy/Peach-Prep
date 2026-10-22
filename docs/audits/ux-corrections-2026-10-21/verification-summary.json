@@ -1,0 +1,45 @@
+{
+  "application_commit": "4a1e03602d3c8474e5a4506bd4c84cc862c804ad",
+  "guard": {
+    "passed": 110,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "path": {
+    "passed": 148,
+    "failed": 0
+  },
+  "writing_recovery": {
+    "passed": 75,
+    "failed": 0
+  },
+  "progress_recovery": {
+    "passed": 67,
+    "failed": 0
+  },
+  "instructional_copy": {
+    "passed": 28,
+    "failed": 0
+  },
+  "independent_review": {
+    "passed": 87,
+    "failed": 0
+  },
+  "shortwriting_layout": {
+    "combinations": 161,
+    "failed": 0
+  },
+  "content": {
+    "failures": 0,
+    "warnings": 6
+  },
+  "writing_content": {
+    "failures": 0,
+    "warnings": 0
+  },
+  "readability": {
+    "records": 125
+  },
+  "frozen_assets": 83,
+  "environment": "Chromium 131 viewport simulation, Playwright 1.49.1, system fonts; not actual-device acceptance"
+}
