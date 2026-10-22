@@ -520,7 +520,7 @@ PP.addLesson({
     big: "What characters are like, what they want and how they change can teach me the lesson of the story.",
     points: [
       "A trait is what a character is like on the inside, such as kind, bossy, brave or honest. A feeling can change from moment to moment, but a trait shows up again and again in what a character does.",
-      "Actions are what a character does. Words are what a character says, and thoughts happen inside the character's head. Writers often show a feeling with a clue, like a big grin or a shaking lip. Use what just happened to decide what the clue means.",
+      "Actions are what a character does. Words are what a character says, and thoughts happen inside the character's head. Writers often show a feeling with a clue, like a big grin or hands balled into fists. Use what just happened to decide what the clue means.",
       "A motive is the reason a character does something. Ask: Why did they do that? What do they want? The clue word so often links a reason to a choice. Then ask: What happened because of that choice?",
       "Other characters help, too. When someone reacts to the main character, ask what their words tell you about the main character's choice.",
       "The lesson, or central message, is what the character learns and what the story teaches you. It works for anyone, like \"Telling the truth is better than hiding a mistake,\" and it is not just what happened. Once you know a character and a lesson, you can predict what the character would do somewhere new, compare two characters, and spot the same lesson in a different story."

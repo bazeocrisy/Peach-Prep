@@ -212,3 +212,11 @@ These change a key, a passage, a choice, a target, a row or a prompt. Reviewers 
 - **Ladder audit and same-set leakage check:** every item in §8.2.
 - **Teaching check:** the new teach points and the three Watch Me examples.
 - I have not reviewed any of this myself.
+
+## 9. Lead notes after the re-review (B0 ACCEPTED in B0-review-1.md "Re-review")
+- **Re-review SHOULD 4.** Learn It point 2's example feeling clue "a shaking lip" was also a key in C07 and a choice in C09. It now reads "hands balled into fists", which no item uses.
+- **Re-review SHOULD 2.** The Practice Together exclusion is assigned to the engine agent (architecture doc, check-content rule, and a test).
+- **Still open.** These are recorded in the continuation ledger:
+  - SHOULD 1: the similar bank has three items, so nine core items have no mapped similar item. This shows as a warning only.
+  - SHOULD 3: the Tasha Watch Me example and the p4 and p9 stories share the "help someone even at a cost" lesson.
+- **Commit labelling.** The author's fixes landed in commit b37beb5, which is labelled "Expansion B0: independent review 2". That commit actually contains the fixes after review. The history was not rewritten.

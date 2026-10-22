@@ -189,3 +189,127 @@
   - MUST-1 to MUST-4 are about the hint wording and leakage within sets. They can be fixed by editing text only, with no change to keys or items.
   - MUST-5 is a structural decision for the lead.
   - After the fixes, a hint-only re-review is enough: rerun the ladder audit on every h1+h2 and h3, and the same-set leakage check. Another full blind solve is not needed unless items or passages change.
+
+---
+
+## Re-review (after the author's fixes, B0-author-log.md §8)
+
+**Order kept:** I re-solved the changed items blind and saved my answers before I read §8 of the author log.
+
+### R1. Blind re-solve of the changed items
+
+- **Method.** The same seeded, shuffled, no-key print (`scratchpad/blind.js`, which now prints every non-check passage, so p9 is included). The output is `scratchpad/blind-B0-r2.txt`. My answers are in `scratchpad/blind-answers-B0-r2.json`, saved first. The comparison script is `scratchpad/cmp2.js`.
+- **Result: 7 of 7 agree (100%).** These are C03 (now on p9), C06, C08, C09, C10, C11 and C14.
+  - The script prints "7/18", because it divides by every item in the lesson, not just the seven it compared.
+  - Counted across both rounds, every truly blind solve agrees: 15 of 15, then 7 of 7.
+- **Item notes:**
+  - **C03 on p9.** The six targets separate an action from thought, speech, an earlier action, an opposite action and another person's action. Only "Malik stood up and waved her toward his seat." fits.
+  - **C08.** Each feeling is used once, and "shoulders sank" now reads clearly as disappointed. "Proud" for the clapping and the hug is defensible; it is the only one of the four feelings that fits.
+  - **C09.** The new target "His lip was shaking." is a good distractor (something she sees).
+  - **C14.** The new distractors are each true for only one of the two characters, which makes the item a real comparison.
+  - **p4 paragraph 6.** It agrees with C08 and C09.
+  - **p9.** 146 words, original, grade 3 suitable.
+
+### R2. Hint ladders (all fifteen core items, three similar items, P1 to P6)
+
+For each item I checked three things:
+- whether hint 3 alone leaves only the key;
+- whether any hint repeats the key's words;
+- whether hints 1 and 2 count or locate the key for the child;
+- whether any hint, `how` or `why` gives away another item in the same set or a check item.
+
+| Item | h3 leaves | Result |
+|---|---|---|
+| P1 | 3 of 4 | pass |
+| P2 | 3 targets after h2 + h3 | pass |
+| P3 | 2 of 4 | pass |
+| P4 | 4 of 5 (pick 2); no definitions of the keys | pass. MUST-1 and MUST-4 are fixed: no pointer to the action in paragraph 6 |
+| P5 | 2 orders | pass |
+| C03 | 5 of 6 | pass |
+| C04 | 3 of 4 | pass. MUST-1 is fixed |
+| P6 | 2 of 4 in Part A and 2 of 4 in Part B | pass. SHOULD-1 is fixed |
+| C06 | 3 of 4; no echo of "something she wants" | pass. MUST-1 is fixed |
+| C07 | 3 of 4 in Part A; Part B neutral | pass. MUST-1 and MUST-3 are fixed |
+| C08 | completes one row of four (allowed by 04 §4.5 rule 3); the memory is no longer mentioned | pass. MUST-3 is fixed |
+| C09 | 4 of 5 in the h2 range, from 7 targets; no cue words, no count | pass. MUST-2 is fixed |
+| C10 | 2 of 4 | pass |
+| C11 | 4 of 5 (pick 2) | pass. See NOTE-R2 for h2 |
+| C12 | 2 of 3 in each slot; "the other way" is gone | pass. SHOULD-1 is fixed |
+| C13 | 3 of 4 | pass |
+| C14 | 4 of 5 (pick 2) | pass |
+| C15 | 2 of 4; "start alone" is gone | pass. MUST-1 is fixed |
+| S01 | 3 of 4 | pass. MUST-1 is fixed |
+| S02 | 3 of 4 in Part A; Part B neutral | pass. MUST-1 is fixed |
+| S03 | 2 of 4 | pass |
+
+- **Same-set leakage.**
+  - Set 1: C03 is now on its own passage, so P4's ladder cannot point at it. C04's `how` no longer names honesty, so it does not pre-teach P6.
+  - Set 2: C07 and C08 no longer call any paragraph 4 sentence a thought or a memory.
+  - **No leak remains.** The only links left between items in the same set narrow the choices without giving the key:
+    - C07's `how` calls "His lip was shaking." something Kendra *sees*. That eliminates one of C09's seven targets.
+    - P4's key (honest) supports P6 Part A, but the passage itself says "Thank you for being honest."
+    - C11's results and C12's "determined" prepare for C15 and C13. That is the same story read in order.
+- **Check items.** No core or similar text, no hint and no Watch Me example names a form A or form B character, passage, word or key. The words "bossy" and "caring" appear in Teach and Watch Me, and they match keys on T1 and TB5. That text was there before B0 and teaches the vocabulary, not the item. I leave it as is.
+
+### R3. Explanations, mappings and teaching
+
+- **Show me how.** I read all 21 items again (P1 to P6, the twelve new core items and the three similar items). Every one is accurate and ends with the answer and a reason.
+  - SHOULD-3 is fixed. C07's step 3 now says "just before she decides", and the "slows down" row is gone.
+- **`like` mappings.** Each one is now a real sibling:
+  - S01 is P4 and C06 (a trait from an action).
+  - S02 is C07 and C12 (motive).
+  - S03 is C10 and P6 (lesson).
+  - SHOULD-4 is half done. Nine core items have no similar item, and 01 §2.6 rule 9 ("every core item is covered") is not met. The lead accepted this (author log §6.6). It is still open as RS-1 below.
+- **Teaching.** The new Teach points and Watch Me examples now model what the fifteen ask for:
+  - feeling vs trait, and prediction (Rosa);
+  - action vs words vs thoughts, motive, cause and result, and why an author gives a minor character a line (Tasha);
+  - comparing two characters, and the same lesson in a new situation tested by lesson, not topic (Lena and Kwame).
+  - Reading feelings from clues is taught in Teach point 2.
+  - SHOULD-5 is fixed.
+- **MUST-5 (refs in `practice`).** The lead decided that Together leaves out any item that `core` references (author log §6.1). That settles the content question. But `01-architecture.md` still says Together is "all of `L.practice`" (§2.2) and that moved items are "removed from `practice`" (§2.3). No check-content rule or guard asserts the exclusion. This is now RS-2 below.
+
+### R4. Remaining findings
+
+**No MUSTs remain.**
+
+**RS-1 (SHOULD, accepted by the lead). The similar bank still has three items.**
+- Nine core items have no similar item: P5, C03, C04, C08, C09, C11, C13, C14 and C15. On those items, "Try a similar question" is hidden.
+- **Fix, in a later revision:**
+  - add similar items for an ordering of feelings, an action hot text, an author's-purpose item, a mixed-feeling match, a thoughts hot text, a cause and result, a prediction, a compare and a lesson transfer;
+  - until then, make check-content rule 9 a warning for this lesson.
+
+**RS-2 (SHOULD). Write the refs decision into the architecture.**
+- **Fix:**
+  - amend 01 §2.2 and §2.3: Together equals `practice` minus the ids that `core` references, and refs stay in `practice`;
+  - add a check-content rule that Together has two to five items after the exclusion;
+  - add a guard assertion that no `{ref}` id is rendered in `SK:<key>:p`.
+
+**RS-3 (SHOULD). The same lesson appears three times.**
+- p9 (Malik gives up his seat when tired), Watch Me Tasha (helps a lost boy and misses tetherball) and p4 (Kendra gives up the ribbon) all teach "help someone in need, even when it costs you".
+- Their thoughts also follow the same pattern:
+  - Tasha: "If I help him, I'll miss my turn"
+  - Kendra: "If I stop, I'll never get the blue ribbon"
+  - Malik: "I earned this seat"
+- Even Malik's last line (his legs "did not feel so tired anymore") mirrors Kendra's "her heart felt full".
+- This is not a leak of any key. But Watch Me and set 1 rehearse set 2's lesson (C10) and C09's kind of thought, and the author log (§2) itself lists theme variety as a goal.
+- **Fix:** give the Tasha example a different lesson, such as owning up, or patience with a younger sibling. It still needs the same sort of speech, thought and action sentences, a result, and a minor character's reaction. Optionally, give p9 a different motive as well; C03 tests only an action, so p9's lesson can be anything.
+
+**RS-4 (SHOULD). The Learn It cue matches a core key.**
+- Teach point 2 gives "a shaking lip" as its example of a feeling clue.
+- "His lip was shaking." is the Part B key of C07, and a target in C09.
+- **Fix:** use a clue that no item uses, such as "a stomping foot" or "a wobbly voice".
+
+**NOTE-R1.** C03's prompt is long, at 27 words with a "not … or …" clause. It is clear, but "Which sentence shows an action that proves Malik has decided to give up his seat?" would do, because hint 1 already explains the difference between an action and words or thoughts.
+
+**NOTE-R2.** C11's h2 ("ask what other people do after they see it") is close to naming what kind of answer the keys are. It does not quote either key, and h3 still leaves four options, so I accept it.
+
+**NOTE-R3.** C06's new distractor mentions soccer, which also appears in p9 (set 1). Nothing turns on it.
+
+### Re-review verdict
+
+**ACCEPTED.**
+- The keys are confirmed: 7 of 7 on the blind re-solve.
+- Every MUST from my first review is resolved: MUST-1 to MUST-4 in the text, and MUST-5 by the lead's decision.
+- Every ladder passes the audit, and no item gives away another item in its set or a check item.
+- RS-1 to RS-4 are SHOULDs for the lead. None of them blocks release of this content.
+- RS-2 is about the architecture and the checks, not the lesson file. It must be done before the engine change ships.

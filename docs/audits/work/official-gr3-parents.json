@@ -1,0 +1,257 @@
+{
+ "source": "Georgia's K-12 ELA Standards: Foundations, Language, Texts, & Practices, Grades 3-5 (approved May 2023), 52 pp. Parent (STANDARD) statements transcribed by pdftotext -layout from the page that holds the grade 3 expectations table. When the same standard is printed with different words on another page (a table of contents), those are listed in otherWordings. Footnote asterisks are dropped.",
+ "parents": [
+  {
+   "code": "3.F.P.4",
+   "band": "3-5.F.P.4",
+   "name": "Decoding & Encoding with Phonics",
+   "wording": "Use knowledge of phonics to decode and encode grade-level words.",
+   "page": 7
+  },
+  {
+   "code": "3.F.F.1",
+   "band": "3-5.F.F.1",
+   "name": "Oral & Silent Reading Fluency",
+   "wording": "Demonstrate oral and silent reading fluency to read grade-level texts for understanding, self-correcting as necessary to ensure accuracy and aid comprehension.",
+   "page": 9
+  },
+  {
+   "code": "3.F.H.3",
+   "band": "3-5.F.H.3",
+   "name": "Read Cursive",
+   "wording": "Read texts written in cursive.",
+   "page": 11
+  },
+  {
+   "code": "3.F.H.4",
+   "band": "3-5.F.H.4",
+   "name": "Write Cursive",
+   "wording": "Use fine motor skills to form legible letters and words in cursive.",
+   "page": 11
+  },
+  {
+   "code": "3.L.GC.1",
+   "band": "3-5.L.GC.1",
+   "name": "Grammar, Usage, & Mechanics",
+   "wording": "Learn and apply conventions of Standard English grammar, usage, and mechanics to aid the comprehension and analysis of texts and to communicate clearly and precisely in written and spoken language.",
+   "page": 15
+  },
+  {
+   "code": "3.L.GC.2",
+   "band": "3-5.L.GC.2",
+   "name": "Syntax",
+   "wording": "Apply understandings of sentence structure to comprehend and compose varied sentences.",
+   "page": 19
+  },
+  {
+   "code": "3.L.V.1",
+   "band": "3-5.L.V.1",
+   "name": "General, Academic, & Specialized Vocabulary",
+   "wording": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "page": 21,
+   "otherWordings": [
+    {
+     "page": 12,
+     "wording": "Acquire and use general, academic, and specialized vocabulary words with precision in a variety of settings."
+    },
+    {
+     "page": 20,
+     "wording": "Acquire and use general, academic, and specialized vocabulary words with precision in a variety of settings."
+    }
+   ]
+  },
+  {
+   "code": "3.L.V.2",
+   "band": "3-5.L.V.2",
+   "name": "Word Analysis",
+   "wording": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "page": 22
+  },
+  {
+   "code": "3.L.V.3",
+   "band": "3-5.L.V.3",
+   "name": "Meaning & Purpose",
+   "wording": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "page": 23
+  },
+  {
+   "code": "3.T.C.1",
+   "band": "3-5.T.C.1",
+   "name": "Purpose & Audience",
+   "wording": "Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
+   "page": 26
+  },
+  {
+   "code": "3.T.C.2",
+   "band": "3-5.T.C.2",
+   "name": "Authors & Speakers",
+   "wording": "Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
+   "page": 27
+  },
+  {
+   "code": "3.T.SS.1",
+   "band": "3-5.T.SS.1",
+   "name": "Organization",
+   "wording": "Demonstrate and apply understanding of organizational structures and elements to create coherent and engaging texts.",
+   "page": 29
+  },
+  {
+   "code": "3.T.SS.2",
+   "band": "3-5.T.SS.2",
+   "name": "Craft",
+   "wording": "Use language to interpret meaning and craft engaging texts.",
+   "page": 30
+  },
+  {
+   "code": "3.T.T.1",
+   "band": "3-5.T.T.1",
+   "name": "Narrative Techniques",
+   "wording": "Explain, analyze, and use narrative techniques to shape understandings.",
+   "page": 32
+  },
+  {
+   "code": "3.T.T.2",
+   "band": "3-5.T.T.2",
+   "name": "Expository Techniques",
+   "wording": "Explain, analyze, and use expository techniques to shape understandings.",
+   "page": 33
+  },
+  {
+   "code": "3.T.T.3",
+   "band": "3-5.T.T.3",
+   "name": "Opinion Techniques",
+   "wording": "Explain, analyze, and use opinion techniques to shape understandings.",
+   "page": 34
+  },
+  {
+   "code": "3.T.T.4",
+   "band": "3-5.T.T.4",
+   "name": "Poetic Techniques",
+   "wording": "Explain, analyze, and use poetic techniques to shape understandings.",
+   "page": 35
+  },
+  {
+   "code": "3.T.RA.1",
+   "band": "3-5.T.RA.1",
+   "name": "Research & Inquiry",
+   "wording": "Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
+   "page": 37,
+   "printedCode": "3-5.RA.1"
+  },
+  {
+   "code": "3.T.RA.2",
+   "band": "3-5.T.RA.2",
+   "name": "Curating Sources & Evidence",
+   "wording": "Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
+   "page": 38,
+   "printedCode": "3-5.RA.2",
+   "otherWordings": [
+    {
+     "page": 24,
+     "wording": "Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics."
+    },
+    {
+     "page": 36,
+     "wording": "Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics."
+    }
+   ]
+  },
+  {
+   "code": "K-12.P.EICC.1",
+   "band": "K-12.P.EICC.1",
+   "name": "Reader & Writer Identity",
+   "wording": "Build an identity as a reader and writer, developing a repertoire of resources and tools to continuously expand participation as an active consumer and producer of texts.",
+   "page": 42
+  },
+  {
+   "code": "K-12.P.EICC.2",
+   "band": "K-12.P.EICC.2",
+   "name": "Engagement & Intention",
+   "wording": "Engage in written or spoken dialogue as author and audience for a variety of tasks and purposes, making intentional connections within, between, and beyond texts.",
+   "page": 43
+  },
+  {
+   "code": "K-12.P.EICC.3",
+   "band": "K-12.P.EICC.3",
+   "name": "Comprehension Strategies",
+   "wording": "Engage with a range of complex texts for a variety of tasks and purposes, accessing and using strategies for comprehension before, during, and after reading as part of the meaning-making process.",
+   "page": 44
+  },
+  {
+   "code": "K-12.P.EICC.4",
+   "band": "K-12.P.EICC.4",
+   "name": "Writing Processes",
+   "wording": "Compose a range of texts for a variety of purposes and audiences, flexibly engaging in writing processes to plan, draft, evaluate, revise, and edit texts.",
+   "page": 45
+  },
+  {
+   "code": "K-12.P.ST.1",
+   "band": "K-12.P.ST.1",
+   "name": "Context",
+   "wording": "Develop and apply knowledge of key components of context such as background information, geographic location, cultural influences, time period, and contemporary events when interpreting and constructing texts.",
+   "page": 47
+  },
+  {
+   "code": "K-12.P.ST.2",
+   "band": "K-12.P.ST.2",
+   "name": "Author, Audience, & Purpose",
+   "wording": "Interpret and construct texts by developing and applying knowledge of the strategies and techniques authors use to accommodate the target audience and achieve the text’s purpose.",
+   "page": 47
+  },
+  {
+   "code": "K-12.P.AC.1",
+   "band": "K-12.P.AC.1",
+   "name": "Reading like a Writer",
+   "wording": "Interpret texts through the author’s lens by identifying, analyzing, and evaluating craft techniques that are connected to the responses, thoughts, decisions, and questions triggered by the text.",
+   "page": 49
+  },
+  {
+   "code": "K-12.P.AC.2",
+   "band": "K-12.P.AC.2",
+   "name": "Writing like a Reader",
+   "wording": "Construct texts with the audience’s experience in mind, basing decisions about craft techniques on context and purpose.",
+   "page": 49,
+   "otherWordings": [
+    {
+     "page": 40,
+     "wording": "Construct texts with the audience’s experience in mind, basing decisions about craft techniques on knowledge of context, author, audience, and purpose."
+    },
+    {
+     "page": 48,
+     "wording": "Construct texts with the audience’s experience in mind, basing decisions about craft techniques on knowledge of context, author, audience, and purpose."
+    }
+   ]
+  },
+  {
+   "code": "K-12.P.AC.3",
+   "band": "K-12.P.AC.3",
+   "name": "Text Design",
+   "wording": "Consider the impact of text design on audience and purpose when consuming and producing texts across modes and genres.",
+   "page": 50,
+   "otherWordings": [
+    {
+     "page": 40,
+     "wording": "Consider the impact of text design on audience and purpose when consuming and producing texts across a range of modes and genres."
+    },
+    {
+     "page": 48,
+     "wording": "Consider the impact of text design on audience and purpose when consuming and producing texts across a range of modes and genres."
+    }
+   ]
+  },
+  {
+   "code": "K-12.P.CP.1",
+   "band": "K-12.P.CP.1",
+   "name": "Collaboration",
+   "wording": "Collaborate with others to accomplish shared goals and projects.",
+   "page": 52
+  },
+  {
+   "code": "K-12.P.CP.2",
+   "band": "K-12.P.CP.2",
+   "name": "Presentation",
+   "wording": "Use presentation skills to tailor communication to target audiences for specific purposes.",
+   "page": 52
+  }
+ ]
+}
