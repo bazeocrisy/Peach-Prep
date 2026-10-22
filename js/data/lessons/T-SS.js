@@ -230,7 +230,32 @@ PP.addLesson({
       { ref: "SK-SS1a-P5" },
       { ref: "SK-SS1a-P6" },
       { ref: "SK-SS1a-P7" },
-      { id: "SK-SS1a-C04", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p1"],
+      { id: "SK-SS1a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
+        stem: ["The author wants to add this drawing to the article."],
+        figure: { src: "assets/figures/ss1a-c-peanut-harvest.svg",
+          alt: "Drawing of a peanut field on a sunny day. Three peanut plants lie upside down on top of the soil, with their leaves on the ground and bunches of peanuts on top, up in the air. Labels name the sun, the peanuts, the leaves and the soil." },
+        prompt: "In which section would the drawing help readers most?",
+        choices: [
+          { text: "Harvest Time", correct: true },
+          { text: "From Flower to Peanut" },
+          { text: "Why Peanuts Help the Soil" },
+          { text: "Did You Know?" }
+        ],
+        clue: "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+        hints: [
+          "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+          "Look closely at the plants in the drawing. Where are the peanuts, and where are the leaves? Then look through all of the sections.",
+          "The drawing has a label for soil, but the soil section tells what roots add to the soil, and the drawing shows no roots. Check the other sections the same way."
+        ],
+        how: [
+          "In the drawing, the plants lie upside down on the soil, so the peanuts are up in the air under the sun.",
+          "\"Harvest Time\" tells how a machine turns the plants upside down so the peanuts face the sky, and the peanuts dry in the sun.",
+          "The answer is Harvest Time.",
+          "In \"From Flower to Peanut\" the peanuts grow under the ground, the soil section is about what roots add, and the box is one fact about Georgia."
+        ],
+        misconception: "A common mix-up is matching one word, like soil or peanut, instead of what the whole picture shows.",
+        why: "The answer is Harvest Time. That section tells how a machine turns the plants upside down so the peanuts face the sky, and then the peanuts dry in the sun, which is just what the drawing shows. In \"From Flower to Peanut\" the peanuts are still under the ground, the soil section is about roots, and the box gives one fact about Georgia." },
+      { id: "SK-SS1a-C05", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p1"],
         prompt: "Choose the words that best complete the sentences.",
         text: "The section \"Harvest Time\" comes right after \"From Flower to Peanut\" because the harvest happens {0}. So the author arranged these two sections in {1}.",
         slots: [
@@ -250,32 +275,7 @@ PP.addLesson({
           "Neither section is more important, and they are not two groups being compared."
         ],
         misconception: "A common mix-up is thinking sections can go in any order. Here the order of the sections matches the order things happen.",
-        why: "The answers are \"after the peanuts finish growing\" and \"the order of a peanut's year.\" \"From Flower to Peanut\" starts with planting in the spring, and \"Harvest Time\" starts in the fall, after the peanuts have grown. The sections follow the peanut's year from start to end." },
-      { id: "SK-SS1a-C05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
-        stem: ["The author wants to add this diagram to the article."],
-        figure: { src: "assets/figures/ss1a-c-peanut-plant.svg",
-          alt: "Diagram of a peanut plant. Above a line marked soil, the plant has green leaves and a small flower labeled flower. A thin stem labeled peg bends from the plant down into the soil. Under the soil, at the end of the peg, is a shell labeled peanut." },
-        prompt: "In which section would the diagram help readers most?",
-        choices: [
-          { text: "From Flower to Peanut", correct: true },
-          { text: "Harvest Time" },
-          { text: "Why Peanuts Help the Soil" },
-          { text: "Did You Know?" }
-        ],
-        clue: "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
-        hints: [
-          "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
-          "Read every label on the diagram. Then look through all of the sections for those same words.",
-          "The diagram has a label for soil, but the soil section tells what the roots add to the soil, and the diagram does not show roots. Check the other sections the same way."
-        ],
-        how: [
-          "The labels name a flower, a peg, a peanut and the soil.",
-          "\"From Flower to Peanut\" tells how a flower fades, a peg grows down into the soil, and a peanut grows at the end of the peg.",
-          "The answer is From Flower to Peanut. The diagram lets readers see the peg going under the ground.",
-          "\"Harvest Time\" is about machines, the soil section is about what roots add, and the box is one fact about Georgia."
-        ],
-        misconception: "A common mix-up is matching one word, like soil, instead of what the whole picture shows.",
-        why: "The answer is From Flower to Peanut. That section tells how a flower fades, a thin peg grows down into the soil, and a peanut grows at the end of the peg, which is just what the labels show. \"Harvest Time\" is about machines, the soil section is about roots, and the box gives one fact about Georgia." }
+        why: "The answers are \"after the peanuts finish growing\" and \"the order of a peanut's year.\" \"From Flower to Peanut\" starts with planting in the spring, and \"Harvest Time\" starts in the fall, after the peanuts have grown. The sections follow the peanut's year from start to end." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-SS1a-C06", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
