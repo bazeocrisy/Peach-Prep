@@ -442,3 +442,48 @@ For every item changed below, I read the clue and hints 1 to 3 together as one s
 - The scratch audit reports no new key overlaps.
 - Port 8732: all six own sets (`:y`, `:y2`, `:y3` for both lessons) render with no page errors.
 - No git.
+
+## 10. Fixes after the second re-review (B1-rereview-b1b-2.md)
+
+**Verdicts:** 3.T.C.2.a was ACCEPTED. TS-PS needed changes for M-1 (P5), S-1 (C10) and S-2 (S03). For each changed item, I read the clue and hints 1 to 3 together and confirmed that a real competitor survives.
+
+### 10.1 Needs blind re-solve
+
+| Item | What changed | Finding |
+|---|---|---|
+| **SK-TSPS-P5** (core 1.1, ref; the practice item itself was edited) | The key is reworded so it no longer echoes the passage: "The ants could still smell the food and find it." Two distractors now come from the story: "Jamal moved the bowl only a little way." (a misreading of "the other side of the kitchen", ¶4) and "The ants were still on the wet paper towel." (it mixes in the first try, ¶3). "Pepper pushed the bowl back to its spot." is kept. "Too heavy" and "Grandma wanted it" are removed. The `why` is updated | M-1 |
+| **SK-TSPS-S03** | The dud "Paint the ceiling above the door." is replaced with the wrong-cause choice "Ask everyone to wipe their wet shoes outside the door." The last two sentences of the story refute it | S-2 |
+
+### 10.2 Hint, how and why changes only
+
+**SK-TSPS-P5 addon**
+- Hint 2 is now "Reread paragraphs 3 and 4." Both tries and both new distractors are there.
+- Hint 3 now rules out Pepper only ("Decide between the choices that are left"). The phrase "against what happens after the try" is gone.
+- The how and misconception are updated.
+- **Whole ladder:** after hint 3, three choices stand: the key, "only a little way" and "paper towel".
+
+**SK-TSPS-C10**
+- Hint 2 is now "Reread paragraphs 1 to 3", which was the reviewer's first option. The region holds all four Part B choices and the sources of the Part A choices.
+- I accept the reviewer's point that "every place a hint names must hold at least two Part B choices" applies to a named region, not to each paragraph inside it. My §9.3 reading was too narrow.
+- Hint 3 still rules out "stand too close".
+- **Whole ladder:**
+  - Part A: the key and "Amari's sore ankles" survive.
+  - Part B: the key and "Then she watched…" survive.
+
+**SK-TSPS-S03**
+- The how and why are updated for the shoes distractor.
+- **Whole ladder:** after hint 3 (mopping), the key, "two big mats" and "wipe wet shoes" stand.
+
+**SK-TC2a-C14 (optional, done)**
+- The `why` now says "only the narrator's claims" instead of "excuses". "Being the best" is a boast, not an excuse.
+
+### 10.3 Not acted on
+
+- **N-1 to N-4 (TS-PS):** the reviewer judged these acceptable, or recorded them as passing.
+- **N-5 (TC2a P5 is the only positive choice):** left for a later revision, as the reviewer suggested. 3.T.C.2.a is accepted.
+
+### 10.4 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. The only warnings in these lessons are the extra-question coverage notices.
+- The scratch audit shows no hits on P5, C10, S03 or C14.
+- No git.

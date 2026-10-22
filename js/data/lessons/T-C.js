@@ -1615,7 +1615,7 @@ PP.addLesson({
           "Being the best is only the narrator's view, and Tia did pass. \"The ball came too fast\" is the narrator's excuse; the coach's advice shows the narrator could learn to stop it."
         ],
         misconception: "A common mix-up is believing everything the narrator says. A reader checks the narrator's words against what really happens.",
-        why: "The answer is \"The narrator could get better by practicing, as the coach says.\" The narrator blames others, but Tia did pass twice, and the narrator could not stop the ball. Being the best and the ball being too fast for anyone are the narrator's excuses, not what a reader sees: the coach says the narrator can practice stopping the ball." },
+        why: "The answer is \"The narrator could get better by practicing, as the coach says.\" The narrator blames others, but Tia did pass twice, and the narrator could not stop the ball. Being the best and the ball being too fast for anyone are only the narrator's claims, not what a reader sees: the coach says the narrator can practice stopping the ball." },
       { id: "SK-TC2a-C15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
         stem: ["Keisha's journal: Today we made clay pots in art class. My hands got cold and sticky, and my pot leaned to one side like it was about to tip over. I can't wait to wash this clay off.", "Marco's journal: Today we made clay pots in art class! I loved squishing the cool clay between my fingers. My pot leans a little, but Mr. Diaz says that gives it character."],
         prompt: "Read the two journal entries in the box. Keisha and Marco write about the same art class. Which TWO sentences tell how their views are different?",

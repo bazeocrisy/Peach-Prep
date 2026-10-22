@@ -1648,13 +1648,13 @@ PP.addLesson({
     { id: "SK-TSPS-P5", type: "mc", points: 1, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.1.b"],
       prompt: "Why didn't moving the bowl solve the problem?",
       choices: [
-        { text: "The ants followed the smell of the food.", correct: true },
-        { text: "Pepper pushed the bowl back to its spot." },
-        { text: "The bowl was too heavy for Jamal to lift." },
-        { text: "Grandma wanted the bowl to stay in place." }
+        { text: "The ants could still smell the food and find it.", correct: true },
+        { text: "Jamal moved the bowl only a little way." },
+        { text: "The ants were still on the wet paper towel." },
+        { text: "Pepper pushed the bowl back to its spot." }
       ],
       clue: "A try fails for a reason. The story usually tells what went wrong after the try.",
-      why: "The answer is \"The ants followed the smell of the food.\" Paragraph 4 says the ants followed the smell and found the bowl again. Moving the bowl did not stop the smell, so the ants kept coming." },
+      why: "The answer is \"The ants could still smell the food and find it.\" Paragraph 4 says the ants followed the smell and found the bowl again. Moving the bowl did not stop the smell, so the ants kept coming. Jamal moved the bowl to the other side of the kitchen, not a little way; the paper towel was the first try; and Pepper only sat and stared." },
     { id: "SK-TSPS-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read the sentence from paragraph 3 in the box. What does the word \"But\" show here?",
       stem: ["But the next morning, a new line of ants marched right back."],
@@ -1868,7 +1868,7 @@ PP.addLesson({
         clue: "Failed tries help show the real problem. When a try does not work, the thing it changed was not the real trouble.",
         hints: [
           "Failed tries help show the real problem. When a try does not work, the thing it changed was not the real trouble.",
-          "Reread paragraph 2.",
+          "Reread paragraphs 1 to 3.",
           "Nothing in the story says the turners stand too close together. For Part B, choose the sentence that shows the cause, not one that shows something going wrong."
         ],
         how: [
@@ -2063,7 +2063,7 @@ PP.addLesson({
         { text: "Fix the crack in the ceiling above the door.", correct: true },
         { text: "Put down two big mats instead of one." },
         { text: "Mop the floor every few minutes." },
-        { text: "Paint the ceiling above the door." }
+        { text: "Ask everyone to wipe their wet shoes outside the door." }
       ],
       clue: "A good plan fixes the real problem, not only what the problem causes.",
       hints: [
@@ -2075,10 +2075,10 @@ PP.addLesson({
         "A bigger mat and more mopping did not stop the puddle. They only dealt with the water after it fell.",
         "The custodian finds rain dripping through a crack in the ceiling. That is the real problem.",
         "The answer is \"Fix the crack in the ceiling above the door.\"",
-        "More mats and more mopping repeat tries that failed, and paint on the ceiling would not close the crack the rain comes through."
+        "More mats and more mopping repeat tries that failed. Wiping shoes would help only if the water came in on shoes, but it drips from the ceiling."
       ],
       misconception: "A common mix-up is choosing a bigger version of a try that already failed.",
-      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and paint would not close the crack." }
+      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and wiping shoes does not help, because the water drips from the ceiling, not from shoes." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1, P2, P3, P4 and P6. */
   addons: {
@@ -2134,16 +2134,16 @@ PP.addLesson({
     "SK-TSPS-P5": {
       hints: [
         "A try fails for a reason. The story usually tells what went wrong after the try.",
-        "For each choice, look for it in the story. A reason the story does not tell cannot be the answer.",
-        "Pepper only sits and stares at the ants in paragraph 2, so she does not move the bowl. Test each choice that is left against what happens after the try."
+        "Reread paragraphs 3 and 4.",
+        "Pepper only sits and stares at the ants in paragraph 2, so she does not push the bowl anywhere. Decide between the choices that are left."
       ],
       how: [
         "Jamal's try in paragraph 4 is moving the bowl to the other side of the kitchen.",
         "The next sentence says the ants followed the smell of the food and found it again.",
-        "The answer is \"The ants followed the smell of the food.\" Moving the bowl did not take away the smell, so the ants kept coming.",
-        "Nothing in the story says Pepper moved the bowl, that it was too heavy, or that Grandma wanted it to stay."
+        "The answer is \"The ants could still smell the food and find it.\" Moving the bowl did not take away the smell, so the ants kept coming.",
+        "Jamal moved the bowl to the other side of the kitchen, not a little way. The wet paper towel was his first try, in paragraph 3. Pepper only sat and stared."
       ],
-      misconception: "A common mix-up is picking a reason that sounds possible but is not in the story. The reason a try fails is told right after the try." },
+      misconception: "A common mix-up is mixing up the two tries, or misreading how far the bowl was moved. The reason this try failed is told right after it." },
     "SK-TSPS-P6": {
       hints: [
         "The word but can do different jobs. In a problem-and-solution story, ask what comes just before it and what comes just after.",
