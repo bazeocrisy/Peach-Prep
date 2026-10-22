@@ -522,7 +522,7 @@ PP.addLesson({
       clue: "Whole sections can have a pattern too. Ask when each part happens.",
       hints: [
         "Whole sections can have a pattern too. Ask when each part happens.",
-        "Think about what a gardener does at the start of the season and what a gardener does at the end.",
+        "Read the three headings in order.",
         "No heading names a trouble, so the order is not a problem and then a fix. Test the other choices."
       ],
       how: [

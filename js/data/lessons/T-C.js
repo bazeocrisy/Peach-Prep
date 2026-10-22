@@ -207,7 +207,7 @@ PP.addLesson({
       "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
       "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it. Labels can point out parts that a photo might hide, and numbers or arrows on a diagram can show an order.",
       "Features are not only on paper. A web page has its own features. Menu tabs take you to other parts of the site. A search box finds pages when you type a word. A play button starts a video or a sound. A pop-up box tells what a word means without leaving the page. A link opens a new page with more facts.",
-      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. In a video or a podcast, sounds and music can signal a change, too."
+      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. In a video or a podcast, sounds and music can signal a change, or make listeners feel excited or calm."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -280,7 +280,7 @@ PP.addLesson({
         ["## Busy Builders"],
         ["Beavers cut down small trees with their strong front teeth.", "They push sticks, rocks and mud into a stream to build a wall called a dam.", "The dam slows the water and makes a pond."],
         ["## A Home with a Secret Door"],
-        ["In the pond, beavers build a home called a **lodge**.", "A lodge is a dome made of sticks and mud.", "Its doors are under the water, so foxes and other hunters cannot easily get inside.", "The room inside stays dry above the water."],
+        ["In the pond, beavers build a home called a **lodge**.", "A lodge is a dome made of sticks and mud.", "Its doors are under the water.", "The room inside stays dry above the water."],
         ["## Did You Know?"],
         ["Box: A beaver's front teeth never stop growing.", "Chewing on wood keeps them from getting too long."],
         ["## Tail Talk"],
@@ -309,7 +309,7 @@ PP.addLesson({
           alt: "A drawing of a monarch butterfly with its wings open, sitting on top of a flower." }
       ] },
     /* B2 (expansion 2026-10-22, author b2d): p3 is used only by core set 2 and p4 only by core set 3.
-       Never used by test. NEEDS INDEPENDENT REVIEW. p3's Figure 1 has no caption on purpose (core C07 asks for one). */
+       Never used by test. NEEDS INDEPENDENT RE-REVIEW (B2 fixes). p3's Figure 1 has no caption on purpose (core C07 asks for one). */
     { id: "p3", title: "How a Water Tower Works", genre: "Informational text",
       paragraphs: [
         ["Many towns in Georgia have a tall water tower.", "It may look like a giant ball on stilts, but it has an important job."],
@@ -326,7 +326,7 @@ PP.addLesson({
       ] },
     { id: "p4", title: "Reading a Swimming Pool", genre: "Informational text",
       paragraphs: [
-        ["A pool for swim races is full of helpers.", "Each one tells swimmers something without saying a word.", "Races begin when swimmers dive from raised platforms called starting blocks."],
+        ["Before a race, swimmers stand on raised platforms called starting blocks.", "Once they dive in, the pool itself is full of helpers.", "Each one tells swimmers something without saying a word."],
         ["## Lines and Ropes"],
         ["Ropes with floats, called lane lines, divide the pool into lanes.", "They keep each swimmer in a lane and make the waves smaller.", "A dark line on the bottom of each lane helps swimmers swim straight.", "Near each wall, the dark line ends in a T, which warns swimmers that the wall is close."],
         ["## Flags Overhead"],
@@ -400,7 +400,7 @@ PP.addLesson({
       targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],
       answer: ["p1:5:3", "p1:5:4"], pick: 2,
       clue: "Read the two labels in Figure 1 and follow their lines. Then find the sentences that tell about those same two parts of the lodge.",
-      why: "The answers are \"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" and \"The room inside stays dry above the water.\" The labels in Figure 1 point to a door under the water and a dry room. The diagram helps readers see where those two parts are inside the lodge." },
+      why: "The answers are \"Its doors are under the water.\" and \"The room inside stays dry above the water.\" The labels in Figure 1 point to a door under the water and a dry room. The diagram helps readers see where those two parts are inside the lodge." },
     { id: "SK-TC1b-P6", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Match each feature to the job it does. Three are in a printed book, and one is in a talk you listen to.",
       cols: ["Heading", "Text box", "Bold word", "Speaker's voice"],
@@ -424,74 +424,73 @@ PP.addLesson({
     { title: "Set 1", items: [
       { ref: "SK-TC1b-P5" },
       { ref: "SK-TC1b-P6" },
-      { id: "SK-TC1b-C03", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: ["p1"],
-        prompt: "Why does the author put the fact about a beaver's teeth in a \"Did You Know?\" box instead of in the section \"Busy Builders\"?",
+      { id: "SK-TC1b-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"],
+        prompt: "The author found four more facts about beavers. Which one would fit best in the \"Did You Know?\" box instead of in a section?",
         choices: [
-          { text: "It is an extra fact, and the section makes sense without it.", correct: true },
-          { text: "It is the most important idea in the whole article." },
-          { text: "It tells the steps beavers follow to build a dam." },
-          { text: "It explains the bold word that is in the glossary." }
+          { text: "A beaver can stay underwater for about fifteen minutes.", correct: true },
+          { text: "A beaver's dam is built from sticks, rocks and mud." },
+          { text: "A beaver lodge has a dry room above the water." },
+          { text: "A beaver slaps its tail on the water to warn others." }
         ],
-        clue: "A text box is set apart from the paragraphs. Ask what kind of fact an author puts in a box.",
+        clue: "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
         hints: [
-          "A text box is set apart from the paragraphs. Ask what kind of fact an author puts in a box.",
-          "Read the box. Then read \"Busy Builders.\" What is that section mostly about?",
-          "The steps for building a dam are told in \"Busy Builders\" itself, not in the box. Test the other choices against the box."
+          "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
+          "Read the headings and say what each section is mostly about.",
+          "The tail slap is the whole idea of \"Tail Talk,\" so taking it out of that section would hurt it. Check the other facts the same way."
         ],
         how: [
-          "\"Busy Builders\" is about how beavers cut trees and build dams that make ponds.",
-          "The box tells that a beaver's teeth never stop growing. It is interesting, but the section about building makes sense without it.",
-          "The answer is \"It is an extra fact, and the section makes sense without it.\"",
-          "The whole article is about how beavers live and build, the box tells no steps, and the box does not explain any bold word."
+          "\"Busy Builders\" needs the dam, the lodge section needs the dry room, and \"Tail Talk\" needs the tail slap. Each of those facts is part of its section's big idea.",
+          "Staying underwater for about fifteen minutes is fun to know, but no section needs it to make sense.",
+          "The answer is \"A beaver can stay underwater for about fifteen minutes.\""
         ],
-        misconception: "A common mix-up is thinking a box holds the most important idea. A box usually adds an extra fact.",
-        why: "The answer is \"It is an extra fact, and the section makes sense without it.\" \"Busy Builders\" tells how beavers build dams. The fact that their teeth keep growing is fun to know, but the section does not need it, so the author sets it apart. It is not the main idea, it tells no steps, and it explains no bold word." },
+        misconception: "A common mix-up is putting an important fact in the box. The box is for extra facts; the big ideas stay in the sections.",
+        why: "The answer is \"A beaver can stay underwater for about fifteen minutes.\" It is a fun extra fact that no section needs. The dam, the dry room and the tail slap are each part of a section's big idea, so they belong in their sections." },
       { id: "SK-TC1b-C04", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"], pick: 2,
         prompt: "How does the heading \"A Home with a Secret Door\" help the reader? Choose TWO answers.",
         choices: [
           { text: "It tells that the section is about the beavers' home.", correct: true },
-          { text: "It makes the reader curious about the hidden door.", correct: true },
+          { text: "It makes the reader want to find out the secret.", correct: true },
           { text: "It tells what the bold word lodge means." },
-          { text: "It gives an extra fact set apart from the section." },
-          { text: "It tells the order in which beavers build things." }
+          { text: "It names the animals that share the pond with beavers." },
+          { text: "It tells the order of the steps in the section." }
         ],
-        clue: "A heading is a small title over a section. Ask what it tells you before you read, and how it makes you feel about reading on.",
+        clue: "A heading is a small title over a section. Think about the jobs a heading can do for a reader.",
         hints: [
-          "A heading is a small title over a section. Ask what it tells you before you read, and how it makes you feel about reading on.",
+          "A heading is a small title over a section. Think about the jobs a heading can do for a reader.",
           "Read the heading, then read the sentences under it. Choose two.",
           "The bold word lodge is explained by the sentences and the glossary, not by the heading. Test the other choices against the heading's own words."
         ],
         how: [
           "The sentences under the heading tell about the lodge, which is where beavers live.",
-          "The words Secret Door make you wonder what the secret is, so you want to read on and find out.",
-          "The answers are \"It tells that the section is about the beavers' home.\" and \"It makes the reader curious about the hidden door.\"",
-          "The heading does not explain lodge, it is not a box, and it says nothing about an order of building."
+          "The word Secret makes you wonder, so you want to read on and find out.",
+          "The answers are \"It tells that the section is about the beavers' home.\" and \"It makes the reader want to find out the secret.\"",
+          "The heading does not explain lodge, names no other animals, and tells no order of steps."
         ],
         misconception: "A common mix-up is mixing up the jobs of features: a heading names the topic, but a box or a glossary gives the facts.",
-        why: "The answers are \"It tells that the section is about the beavers' home.\" and \"It makes the reader curious about the hidden door.\" The section is about the lodge, the beavers' home, and the word Secret makes readers want to find out more. The heading does not define lodge, is not a box, and tells no order." },
+        why: "The answers are \"It tells that the section is about the beavers' home.\" and \"It makes the reader want to find out the secret.\" The section is about the lodge, the beavers' home, and the word Secret makes readers want to read on. The heading does not define lodge, names no other animals, and tells no order." },
       { id: "SK-TC1b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: ["p1"],
-        stem: ["A park ranger is reading \"Life in a Beaver Pond\" aloud to a group of visitors. She has just finished the part about the lodge. Next comes the section \"Tail Talk.\""],
-        prompt: "Her listeners cannot see the headings. What could the ranger do to help them know that a new part is starting?",
+        stem: ["Andre is reading \"Life in a Beaver Pond\" aloud to his class. He has just finished the part about the lodge. Next comes the section \"Tail Talk.\""],
+        prompt: "His classmates cannot see the headings. What could Andre do to help them know that a new part is starting?",
         choices: [
           { text: "Say, \"Now let's find out how beavers use their tails.\"", correct: true },
-          { text: "Read the next sentences faster so the talk ends sooner." },
-          { text: "Point to the bold word lodge in her own copy of the book." },
+          { text: "Say, \"A lodge is a beaver's home,\" one more time." },
+          { text: "Point to the bold word lodge in his own copy of the book." },
           { text: "Skip the heading and go right on to the next sentence." }
         ],
         clue: "In a talk, listeners cannot see headings. A speaker's words and voice have to do the heading's job.",
         hints: [
           "In a talk, listeners cannot see headings. A speaker's words and voice have to do the heading's job.",
-          "Read the heading \"Tail Talk\" and the sentences under it.",
-          "Pointing to a word in her own book does not help, because the listeners cannot see her page. Test the other choices."
+          "Think about what job a heading does on the page. Then picture the classmates listening to each choice.",
+          "Pointing to a word in his own book does not help, because his classmates cannot see his page. Test the other choices."
         ],
         how: [
           "On the page, the heading \"Tail Talk\" tells readers that a new part about tails is starting.",
-          "Listeners cannot see it, so the ranger can say out loud what the next part is about.",
+          "Listeners cannot see it, so Andre can say out loud what the next part is about.",
           "The answer is to say, \"Now let's find out how beavers use their tails.\"",
-          "Reading faster, skipping the heading, or pointing at her own book does not tell listeners a new part is starting."
+          "Saying the lodge line again repeats the old part, skipping the heading hides the change, and pointing at his own book does not reach his classmates."
         ],
         misconception: "A common mix-up is using a print feature, like bold, in a talk. Listeners can only hear the speaker.",
-        why: "The answer is to say, \"Now let's find out how beavers use their tails.\" A heading tells readers a new part is starting. Listeners cannot see it, so the ranger says what the next part is about. Reading faster or skipping the heading hides the change, and her own book is not something the listeners can see." }
+        why: "The answer is to say, \"Now let's find out how beavers use their tails.\" A heading tells readers a new part is starting. Listeners cannot see it, so Andre says what the next part is about. Repeating the lodge line goes back to the old part, skipping the heading hides the change, and his own book is not something the listeners can see." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TC1b-C06", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
@@ -503,11 +502,11 @@ PP.addLesson({
           { text: "showers" },
           { text: "pipe" }
         ],
-        clue: "A bold word is a key word. It often names the big idea of its section, and the sentences around it tell what it means.",
+        clue: "A bold word is a key word. It often names the big idea of its section.",
         hints: [
-          "A bold word is a key word. It often names the big idea of its section, and the sentences around it tell what it means.",
+          "A bold word is a key word. It often names the big idea of its section.",
           "Read all four sentences under \"Down to Your Faucet.\" Every choice comes from that section.",
-          "Faucet is in the heading, but no sentence in the section explains what a faucet is, because readers already know. Test the other words the same way."
+          "Pipe comes up only once, in the last sentence, as the path the water takes. Check the other words."
         ],
         how: [
           "The section tells how water gets from the tank down to a home.",
@@ -521,7 +520,7 @@ PP.addLesson({
         stem: ["Figure 1 has no caption yet. The author wants a caption that tells what the whole diagram shows."],
         prompt: "Which caption should the author add to Figure 1?",
         choices: [
-          { text: "How water gets from a tower to a home", correct: true },
+          { text: "How a water tower gets water to a home", correct: true },
           { text: "A pump at the bottom of a water tower" },
           { text: "Some towers hold a million gallons" },
           { text: "A family turns on the shower at dawn" }
@@ -535,11 +534,11 @@ PP.addLesson({
         how: [
           "Figure 1 shows a pump, a tank, pipes, a home and three numbered arrows between them.",
           "A caption for the whole diagram has to cover all of those parts and the arrows.",
-          "The answer is \"How water gets from a tower to a home.\"",
+          "The answer is \"How a water tower gets water to a home.\"",
           "The pump is only one part, the diagram shows no gallons, and no one in the diagram is taking a shower."
         ],
         misconception: "A common mix-up is choosing a caption for one part of a diagram, or a true fact that the diagram does not show.",
-        why: "The answer is \"How water gets from a tower to a home.\" The diagram shows the pump, the tank, the pipes, the home and arrows between them, so the caption must tell about the whole trip. The pump is only one part, the gallons fact is in the box, and the diagram shows no shower." },
+        why: "The answer is \"How a water tower gets water to a home.\" The diagram shows the pump, the tank, the pipes, the home and arrows between them, so the caption must tell about the whole trip. The pump is only one part, the gallons fact is in the box, and the diagram shows no shower." },
       { id: "SK-TC1b-C08", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
         prompt: "Use Figure 1 and the article. Put the steps of the water's trip in order.",
         steps: [
@@ -561,63 +560,73 @@ PP.addLesson({
           "Arrow 3 goes toward the home: the water flows into a home."
         ],
         why: "The order is: a pump pushes water up a pipe into the tank, the water waits in the tank high above the town, the water rushes down a pipe under the street, and the water flows into a home. Arrows 1, 2 and 3 in Figure 1 show the trip in that order." },
-      { id: "SK-TC1b-C09", type: "match", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      { id: "SK-TC1b-C09", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
         stem: ["The article \"How a Water Tower Works\" is also on a website. The picture shows part of the web page."],
         figure: { src: "assets/figures/tc1b-c-water-webpage.svg",
           alt: "A web page. At the top are three tabs: Home, Water and Weather. The Water tab has a thick border. Under the tabs is a box with a magnifying glass and the word Search. Next is the heading Down to Your Faucet. Then there is a video box that shows a water tower, with a round play button. Under the video is a dark bar with two caption lines: [water splashing], then NARRATOR: The tank fills up at night. Below that is the sentence Water rushes to each home. At the bottom are underlined words: Next page: Using less water." },
-        prompt: "Match each thing a reader wants to do with the feature to use. Use each feature once.",
-        cols: ["Play button", "Weather tab", "Search box", "Underlined words"],
-        rows: [
-          { text: "watch the water tower's tank fill up", answer: 0 },
-          { text: "go to the part of the site about rain and storms", answer: 1 },
-          { text: "find every page on the site that talks about pipes", answer: 2 },
-          { text: "read the next page, about using less water", answer: 3 }
+        prompt: "Which TWO things can the video on this web page do that the printed article cannot?",
+        choices: [
+          { text: "show the tank filling up as it happens", correct: true },
+          { text: "let the reader hear the water splashing", correct: true },
+          { text: "tell what the section \"Down to Your Faucet\" is about" },
+          { text: "name each part of the tower with a label" },
+          { text: "set apart a surprising fact about water towers" }
         ],
-        clue: "Each web page feature has its own job. Ask: does it start something on this page, or take you somewhere else?",
+        clue: "Features are not only on paper. Ask what a video can do that words and pictures on a page cannot.",
         hints: [
-          "Each web page feature has its own job. Ask: does it start something on this page, or take you somewhere else?",
-          "Find each of the four features on the web page. Read the words on or next to each one.",
-          "The play button starts the video on this page, and the video shows the water tower. Decide where the other three features take a reader."
+          "Features are not only on paper. Ask what a video can do that words and pictures on a page cannot.",
+          "Look at the video box and the lines under it. Then ask, for each choice, whether a printed page could do it too. Choose two.",
+          "A printed article can have a heading that tells what a section is about, so that is not something only the video can do. Test the others."
         ],
         how: [
-          "The play button starts the video, which shows the tank, so it is for watching the tank fill.",
-          "The Weather tab takes the reader to the part of the site about weather, like rain and storms.",
-          "The search box finds every page with a word you type, such as pipes.",
-          "The underlined words are a link that says Next page: Using less water, so they open that page."
+          "A printed page can have a heading, a diagram with labels, and a box with a surprising fact.",
+          "A video moves and has sound. It can show the tank filling as it happens, and the caption line shows a splashing sound to hear.",
+          "The answers are \"show the tank filling up as it happens\" and \"let the reader hear the water splashing.\""
         ],
-        why: "Use the play button to watch the tank fill. Use the Weather tab to go to the part of the site about rain and storms. Use the search box to find every page that talks about pipes. Use the underlined words, a link, to open the next page about using less water." },
-      { id: "SK-TC1b-C10", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
-        stem: ["Look at the caption line under the video on this web page."],
+        misconception: "A common mix-up is thinking a web page feature does something new when a printed page can do it too, like a heading.",
+        why: "The answers are \"show the tank filling up as it happens\" and \"let the reader hear the water splashing.\" A video moves and has sound. A heading, a labeled diagram and a fact box can all be printed on paper." },
+      { id: "SK-TC1b-C10", type: "dropdown", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+        stem: ["Look at the caption line under the video on this web page. Later in the same video, the pump turns on with a loud hum, and nobody is talking."],
         figure: { src: "assets/figures/tc1b-c-water-webpage.svg",
           alt: "A web page. At the top are three tabs: Home, Water and Weather. The Water tab has a thick border. Under the tabs is a box with a magnifying glass and the word Search. Next is the heading Down to Your Faucet. Then there is a video box that shows a water tower, with a round play button. Under the video is a dark bar with two caption lines: [water splashing], then NARRATOR: The tank fills up at night. Below that is the sentence Water rushes to each home. At the bottom are underlined words: Next page: Using less water." },
-        prompt: "Which TWO sentences about the caption line are true?",
-        choices: [
-          { text: "The words after NARRATOR: are spoken by someone in the video.", correct: true },
-          { text: "A viewer with the sound off can still follow the video.", correct: true },
-          { text: "The words [water splashing] are said out loud by the narrator." },
-          { text: "The caption line opens a new page about the water tank." },
-          { text: "The caption line lists the tabs at the top of the page." }
-        ],
-        clue: "A caption line shows in words what you would hear. Words in [brackets] name a noise, and a name with a colon shows who is talking.",
+        prompt: "Choose the words that best complete the sentence.",
+        text: "The caption line should show the line {0}.",
+        slots: [{ options: ["[pump humming]", "NARRATOR: The pump hums.", "PUMP: Hummm!"], answer: 0 }],
+        clue: "A caption line has its own way to show sounds and its own way to show talking. Think about what the Teach page said about each one.",
         hints: [
-          "A caption line shows in words what you would hear. Words in [brackets] name a noise, and a name with a colon shows who is talking.",
-          "Read each line in the dark bar, one at a time. Ask what kind of line it is. Choose two.",
-          "The caption line is not underlined like a link, so it does not open a new page. Test the other sentences against the two lines."
+          "A caption line has its own way to show sounds and its own way to show talking. Think about what the Teach page said about each one.",
+          "Read the stem again, then read each of the three lines.",
+          "A name and a colon show who is talking, and a pump cannot talk, so the line that starts with PUMP: does not fit. Check the other two."
         ],
         how: [
-          "The first line, [water splashing], is in brackets, so it names a noise in the video. Nobody says those words.",
-          "The second line starts with NARRATOR:, so the words after it are what the narrator says.",
-          "The answers are \"The words after NARRATOR: are spoken by someone in the video.\" and \"A viewer with the sound off can still follow the video.\" The caption line shows both the noise and the words in writing.",
-          "It is not a link, and it does not list the tabs."
+          "The stem says the pump hums and nobody is talking, so the new line must show a sound.",
+          "Words in [brackets] name a sound, so the line is [pump humming].",
+          "A name and a colon show someone talking. Nobody is talking, and a pump cannot talk, so the other two lines do not fit."
         ],
-        misconception: "A common mix-up is reading the words in [brackets] as words someone says. Brackets name a noise.",
-        why: "The answers are \"The words after NARRATOR: are spoken by someone in the video.\" and \"A viewer with the sound off can still follow the video.\" [water splashing] names a noise, and NARRATOR: shows who is talking, so a viewer can follow along without sound. The caption line is not a link and does not list the tabs." }
+        misconception: "A common mix-up is writing a sound as if someone said it. Brackets name a sound.",
+        why: "The answer is [pump humming]. Words in [brackets] name a sound, and nobody is talking. A name with a colon, like NARRATOR: or PUMP:, would show someone talking." }
     ] },
     { title: "Set 3", items: [
-      { id: "SK-TC1b-C11", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: ["p4"],
+      { id: "SK-TC1b-C11", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p4"],
+        prompt: "Which sentence from the article names a part of the pool that Figure 1 does NOT show? Choose the sentence in the passage.",
+        targets: ["p4:1:1", "p4:3:1", "p4:3:3", "p4:3:4", "p4:5:2"],
+        answer: ["p4:1:1"], pick: 1,
+        clue: "Put the diagram with the words. Read each label, then check which parts in the article have a label.",
+        hints: [
+          "Put the diagram with the words. Read each label, then check which parts in the article have a label.",
+          "List the three labels in Figure 1. Then read every sentence in the article that names a part of the pool.",
+          "The sentence about the T near each wall matches the line on the bottom, which Figure 1 shows ending in a T. Check the other sentences the same way."
+        ],
+        how: [
+          "Figure 1 labels the backstroke flags, the lane lines and the line on the bottom, which ends in a T.",
+          "The sentences about lane lines, the dark line, the T and the row of flags all name parts that Figure 1 shows.",
+          "The answer is \"Before a race, swimmers stand on raised platforms called starting blocks.\" Figure 1 has no starting blocks."
+        ],
+        why: "The answer is \"Before a race, swimmers stand on raised platforms called starting blocks.\" Figure 1 labels the lane lines, the line on the bottom with its T, and the backstroke flags, but it does not show any starting blocks." },
+      { id: "SK-TC1b-C12", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: ["p4"],
         prompt: "The author could have used a photo of swimmers in a race instead of Figure 1. Why is Figure 1 a better choice for this article?",
         choices: [
-          { text: "Its labels point to each helper, so readers can see where it is.", correct: true },
+          { text: "Its labels name each helper in the water, so readers can see where it is.", correct: true },
           { text: "It shows readers which swimmer is in the lead and winning." },
           { text: "It shows readers how fast each of the swimmers is moving." },
           { text: "Its labels tell readers what the word backstroke means." }
@@ -631,27 +640,11 @@ PP.addLesson({
         how: [
           "Figure 1 shows the pool from above, with labels for the backstroke flags, the lane lines and the line on the bottom.",
           "The article is about those helpers. The labels show where each one is, which a photo of a busy race might hide.",
-          "The answer is \"Its labels point to each helper, so readers can see where it is.\"",
+          "The answer is \"Its labels name each helper in the water, so readers can see where it is.\"",
           "There are no swimmers in the diagram, and no label tells what backstroke means."
         ],
         misconception: "A common mix-up is thinking a photo is always better. A labeled diagram can point out parts that a photo might hide.",
-        why: "The answer is \"Its labels point to each helper, so readers can see where it is.\" The article is about the lane lines, the line on the bottom and the flags, and the diagram labels each one. It has no swimmers, so it shows no winner or speed, and no label explains backstroke." },
-      { id: "SK-TC1b-C12", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p4"],
-        prompt: "Which sentence from the article names a part of the pool that Figure 1 does NOT show? Choose the sentence in the passage.",
-        targets: ["p4:1:3", "p4:3:1", "p4:3:3", "p4:3:4", "p4:5:2"],
-        answer: ["p4:1:3"], pick: 1,
-        clue: "Put the diagram with the words. Read each label, then check which parts in the article have a label.",
-        hints: [
-          "Put the diagram with the words. Read each label, then check which parts in the article have a label.",
-          "List the three labels in Figure 1. Then read every sentence in the article that names a part of the pool.",
-          "The sentence about the T near each wall matches the line on the bottom, which Figure 1 shows ending in a T. Check the other sentences the same way."
-        ],
-        how: [
-          "Figure 1 labels the backstroke flags, the lane lines and the line on the bottom, which ends in a T.",
-          "The sentences about lane lines, the dark line, the T and the row of flags all name parts that Figure 1 shows.",
-          "The answer is \"Races begin when swimmers dive from raised platforms called starting blocks.\" Figure 1 has no starting blocks."
-        ],
-        why: "The answer is \"Races begin when swimmers dive from raised platforms called starting blocks.\" Figure 1 labels the lane lines, the line on the bottom with its T, and the backstroke flags, but it does not show any starting blocks." },
+        why: "The answer is \"Its labels name each helper in the water, so readers can see where it is.\" The article is about the lane lines, the line on the bottom and the flags, and the diagram labels each one. It has no swimmers, so it shows no winner or speed, and no label explains backstroke." },
       { id: "SK-TC1b-C13", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
         stem: ["The Oak Street School News comes two ways: as a printed paper that goes home in backpacks, and as a web page."],
         prompt: "Which TWO features could be on the web page but NOT in the printed paper?",
@@ -675,7 +668,7 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is thinking a photo or a box is only for web pages. Many features work on paper and on a screen.",
         why: "The answers are \"a play button for a video of the spring concert\" and \"underlined words that open the lunch menu page.\" A video and a link need a screen. Headings, photos with captions and text boxes can be printed on paper." },
-      { id: "SK-TC1b-C14", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.b"], passages: [], pick: 2,
+      { id: "SK-TC1b-C14", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
         stem: ["Kiara is giving a talk to her class about staying safe on the playground. She has three rules. She wants her listeners to know that the third rule is the most important one."],
         prompt: "Which TWO things should Kiara do?",
         choices: [
@@ -729,28 +722,28 @@ PP.addLesson({
   similar: [
     { id: "SK-TC1b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
       like: ["SK-TC1b-C03"],
-      stem: ["An article called \"Our School Recycles\" tells how each class sorts cans and paper. Next to the paragraphs, a \"Did You Know?\" box says: Recycling one can saves enough energy to run a TV for three hours."],
-      prompt: "Why did the author put this fact in a box?",
+      stem: ["An article called \"Our School Recycles\" has three sections: \"Sorting Cans,\" \"Sorting Paper\" and \"Where It All Goes.\" It also has a \"Did You Know?\" box."],
+      prompt: "Which fact would fit best in the box?",
       choices: [
-        { text: "It is a fun extra fact that the paragraphs do not need.", correct: true },
-        { text: "It tells the steps each class follows to sort cans." },
-        { text: "It is the main idea of the whole article." },
-        { text: "It tells what a bold word in the article means." }
+        { text: "One recycled can saves enough energy to run a TV for three hours.", correct: true },
+        { text: "Cans go in the blue bin, and paper goes in the green bin." },
+        { text: "Each class sorts its paper every Friday afternoon." },
+        { text: "A truck takes the full bins to a recycling center." }
       ],
-      clue: "A text box is set apart from the paragraphs. Ask what kind of fact goes in a box.",
+      clue: "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
       hints: [
-        "A text box is set apart from the paragraphs. Ask what kind of fact goes in a box.",
-        "Compare what the article is about with what the box says.",
-        "The steps for sorting are in the article's paragraphs, not in the box. Test the other choices."
+        "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
+        "Read the three section headings. Think about what each section must explain.",
+        "Which bin cans go in is part of how to sort cans, so that fact belongs in \"Sorting Cans.\" Check the others."
       ],
       how: [
-        "The article tells how each class sorts cans and paper.",
-        "The box tells a surprising fact about energy. The article makes sense without it.",
-        "The answer is \"It is a fun extra fact that the paragraphs do not need.\""
+        "The bins and the Friday sorting belong in the sorting sections, and the truck belongs in \"Where It All Goes.\"",
+        "The energy fact is surprising, but no section needs it.",
+        "The answer is \"One recycled can saves enough energy to run a TV for three hours.\""
       ],
-      why: "The answer is \"It is a fun extra fact that the paragraphs do not need.\" The article is about how classes sort cans and paper. The energy fact is interesting, but the paragraphs do not need it, so it is set apart. It tells no steps, is not the main idea, and explains no bold word." },
+      why: "The answer is \"One recycled can saves enough energy to run a TV for three hours.\" It is a fun extra fact. The bins, the Friday sorting and the truck each belong in one of the three sections." },
     { id: "SK-TC1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      like: ["SK-TC1b-C09", "SK-TC1b-C13"],
+      like: ["SK-TC1b-C09"],
       stem: ["A web page about the Riverside Zoo has three tabs at the top: Home, Animals and Visit. It also has a search box, a video of the lions with a play button, and underlined words at the bottom that say Next page: Zoo map."],
       prompt: "Ty wants to hear the lions roar. What should he do?",
       choices: [
@@ -759,10 +752,10 @@ PP.addLesson({
         { text: "tap the underlined words at the bottom" },
         { text: "tap the Visit tab at the top" }
       ],
-      clue: "Each web page feature has its own job. Ask which feature starts a sound or a video on the page.",
+      clue: "Each web page feature has its own job. Ask what Ty wants to do.",
       hints: [
-        "Each web page feature has its own job. Ask which feature starts a sound or a video on the page.",
-        "Ty wants to hear something. Which feature on the page has the lions in it?",
+        "Each web page feature has its own job. Ask what Ty wants to do.",
+        "Read Ty's goal again. Then read each choice and picture what would happen.",
         "The underlined words open a page about the zoo map, and a map makes no sound. Test the other choices."
       ],
       how: [
@@ -781,10 +774,10 @@ PP.addLesson({
         { text: "read the word silk faster than the other words" },
         { text: "skip the word silk so his report is shorter" }
       ],
-      clue: "Listeners cannot see bold print. In a talk, a speaker's voice and words do the job of bold.",
+      clue: "Think about how Omar's classmates will take in his report.",
       hints: [
-        "Listeners cannot see bold print. In a talk, a speaker's voice and words do the job of bold.",
-        "For each choice, ask: will the listeners hear it?",
+        "Think about how Omar's classmates will take in his report.",
+        "For each choice, ask: will the listeners notice it?",
         "Making the word darker on his paper does not help, because only Omar sees his paper. Test the other choices."
       ],
       how: [
@@ -863,7 +856,7 @@ PP.addLesson({
       ],
       how: [
         "Figure 1 has two labels: dry room and door under water.",
-        "\"Its doors are under the water, so foxes and other hunters cannot easily get inside.\" tells about the door.",
+        "\"Its doors are under the water.\" tells about the door.",
         "\"The room inside stays dry above the water.\" tells about the dry room.",
         "The other sentences tell about trees, the dam and the tail, which Figure 1 does not label."
       ] },

@@ -42,14 +42,16 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["First, Sam got a bowl. Next, he poured in the cereal. Then he added milk. Finally, he ate it all up!"],
-      ask: "What did Sam do first? What did he do last?",
+      /* B2 review fix (SHOULD-14 / NOTE-15): replaces a grade 1 cereal example with a grade 3 one
+         that also models why one step must finish before the next. */
+      show: ["Our class made a newspaper. First, each student wrote a short story. Next, Ms. Diaz read the stories and marked any mistakes. After the stories were fixed, the class typed them on the computer. Finally, the newspaper was printed and handed out to every family."],
+      ask: "What happened first and last? Why were the stories fixed before they were typed?",
       steps: [
-        "Find the clue words: First, Next, Then, Finally.",
-        "Ask: What happened first? Next? Last?",
-        "First points to the start. Finally points to the end."
+        "Find the clue words: First, Next, After, Finally.",
+        "First tells the start: each student wrote a story. Finally tells the end: the newspaper was printed and handed out.",
+        "\"After the stories were fixed\" shows that one step had to be finished before the next one could start. Fixing first means the typed stories have no mistakes."
       ],
-      answer: "First, Sam got a bowl. Last, he ate the cereal."
+      answer: "First, each student wrote a story. Last, the newspaper was printed and handed out. The stories were fixed before typing so the printed newspaper would not have mistakes."
     },
     {
       show: ["Mia wanted to paint. First, she put on a smock. After that, she filled a cup with water. Later, she painted a red barn."],
@@ -101,14 +103,17 @@ PP.addLesson({
         ["Over thousands of years, the cracks grow wider and wider.", "Some of them become tunnels.", "Finally, a few tunnels grow into big, hollow rooms.", "A cave has formed!"],
         ["The water is not done yet.", "Drops still drip from the cave's ceiling.", "Each drop leaves behind a speck of rock.", "After a very long time, the specks build up into stone icicles called stalactites."]
       ] },
+    /* B2 review fix: hotel removed (first hotel was 1846), 1837 is when the end point was chosen
+       (building began in 1838), the "too long" complaint and the engineer's suggestion are kept as
+       two different people, and the origin of the name is given as uncertain. */
     { id: "p4", title: "How Atlanta Got Its Name", genre: "Informational text",
       paragraphs: [
         ["## A Stake in the Ground"],
-        ["In 1837, workers began building a railroad that would run north to Tennessee.", "They needed to mark the spot where the tracks would end.", "So they drove a tall stake into the red clay.", "People called the spot Terminus, a word that means \"the end of the line.\""],
+        ["In 1837, railroad planners chose the spot where a new railroad to Tennessee would end.", "Workers drove a stake into the red clay to mark it.", "People called the spot Terminus.", "The word means \"the end of the line.\""],
         ["## A Town Grows"],
-        ["Soon, people came to work on the railroad.", "Then stores, houses and a hotel went up near the tracks.", "Before long, Terminus was a busy little town.", "In 1843, the town got a new name, Marthasville.", "It was named for Martha Lumpkin, the daughter of a former governor."],
+        ["Soon, people came to work on the railroad.", "Then houses and a store went up near the tracks.", "Before long, Terminus was a small town.", "In 1843, the town got a new name, Marthasville.", "It was named for Martha Lumpkin, a governor's daughter."],
         ["## The Name That Stuck"],
-        ["A few years later, a railroad leader said that Marthasville was too long a name.", "He suggested Atlanta, a name that came from the Western and Atlantic Railroad.", "In 1845, the town became Atlanta.", "Today, Atlanta is the capital of Georgia and one of the biggest cities in the South."]
+        ["Some railroad men said Marthasville was too long a name.", "Then a railroad engineer suggested a new name, Atlanta.", "No one knows for sure where the name came from.", "It may come from the word Atlantic, as in the Western and Atlantic Railroad.", "In 1845, the town became Atlanta.", "Today, Atlanta is the capital of Georgia and one of the biggest cities in the South."]
       ] }
   ],
   practice: [
@@ -215,19 +220,19 @@ PP.addLesson({
           { text: "First would mean this is the starting step, but there is no buttermilk until after the shaking.", correct: true },
           { text: "First would mean this step does not matter much, so a reader might skip it and go on." },
           { text: "First is not a time clue word, so a reader could not tell when to do this step at all." },
-          { text: "First would mean the passage tells a story about a family instead of giving steps." }
+          { text: "First would mean this step happens at the same time as the shaking." }
         ],
         clue: "Time clue words tell where a step belongs in the order. Changing a clue word can change what a reader thinks happens when.",
         hints: [
           "Time clue words tell where a step belongs in the order. Changing a clue word can change what a reader thinks happens when.",
           "Ask what the word First would tell a reader about this step. Then compare that with the order of paragraphs 2 through 5.",
-          "First is a time clue word, just like After that, so rule out the choice that says it is not. Test each choice that is left against what happens in paragraph 4."
+          "First is a time clue word, just like After that, so rule out the choice that says it is not. For each choice that is left, ask: is that really what the word First tells a reader?"
         ],
         how: [
           "After that tells the reader that pouring off the buttermilk comes after the earlier steps.",
           "The buttermilk is named for the first time in paragraph 4, after lots of shaking makes the lump of butter.",
           "If the step began with First, a reader would think to pour off buttermilk before there is any. The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\"",
-          "First is a time word, and changing it would not make the passage a story or make the step unimportant."
+          "First is a time word. It tells that a step comes before the others, not that it happens at the same time as another step or that it does not matter."
         ],
         misconception: "A common mix-up is thinking any time clue word can start any step. Each one tells where the step belongs in the order.",
         why: "The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\" The buttermilk forms in paragraph 4, so this step must come after the shaking. First is a time word, so the other choices do not explain the problem." },
@@ -274,7 +279,7 @@ PP.addLesson({
         how: [
           "Paragraph 2: first, rain soaks into the ground. As it trickles through the soil, it picks up a gas from dead leaves and roots.",
           "Paragraph 3: next, the water seeps into cracks in the limestone.",
-          "Paragraph 4: over thousands of years, the cracks grow into tunnels and rooms. Paragraph 5: after that, dripping water builds stone icicles.",
+          "Paragraph 4: over thousands of years, the cracks grow into tunnels and rooms. Paragraph 5: after a very long time, dripping water builds stone icicles.",
           "The order is: rain soaks in, the water picks up a gas, it seeps into cracks, the cracks grow into tunnels and rooms, and dripping water builds stone icicles."
         ],
         misconception: "A common mix-up is putting the stone icicles before the cave. They form only after there is a cave ceiling for water to drip from.",
@@ -290,7 +295,7 @@ PP.addLesson({
           ] },
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
-            { text: "\"Limestone is soft enough that sour water can slowly eat it away.\"", correct: true },
+            { text: "\"The gas turns the water a little bit sour, like very weak lemon juice.\"", correct: true },
             { text: "\"First, rain falls and soaks into the ground.\"" },
             { text: "\"Some of them become tunnels.\"" },
             { text: "\"Drops still drip from the cave's ceiling.\"" }
@@ -304,13 +309,13 @@ PP.addLesson({
         how: [
           "Paragraph 2 says the water picks up a gas in the soil, and the gas turns it a little bit sour.",
           "Paragraph 3 says limestone is soft enough that sour water can slowly eat it away.",
-          "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"Limestone is soft enough that sour water can slowly eat it away.\"",
-          "The article never says the soil cleans the water, fills the cracks or keeps the water cold."
+          "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"The gas turns the water a little bit sour, like very weak lemon juice.\"",
+          "The article never says the soil cleans the water, fills the cracks or keeps the water cold. The other Part B sentences tell steps but not what the soil does to the water."
         ],
         misconception: "A common mix-up is treating each step as separate. In a science process, one step changes something so the next step can happen.",
-        why: "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"Limestone is soft enough that sour water can slowly eat it away.\" The gas from the soil turns the water sour, and sour water can wear away limestone. The article never says the soil cleans the water, fills the cracks or keeps it cold." },
+        why: "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"The gas turns the water a little bit sour, like very weak lemon juice.\" The gas the water picks up in the soil turns it sour, and paragraph 3 says sour water can wear away limestone. The article never says the soil cleans the water, fills the cracks or keeps it cold." },
       { id: "SK-TSSEQ-C08", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p3"],
-        prompt: "Which TWO sentences use time words to tell that part of the process takes a VERY long time? Choose two sentences in the passage.",
+        prompt: "Which TWO sentences use time words that tell how much time passes, not only the order? Choose two sentences in the passage.",
         targets: ["p3:2:1", "p3:3:1", "p3:4:1", "p3:4:3", "p3:5:1", "p3:5:4"],
         answer: ["p3:4:1", "p3:5:4"], pick: 2,
         clue: "Some time words tell order, like first and next. Others tell how much time passes. Look for the second kind.",
@@ -377,32 +382,32 @@ PP.addLesson({
         prompt: "What was the town called when each event happened? Match each event to the town's name at that time.",
         cols: ["Terminus", "Marthasville", "Atlanta"],
         rows: [
-          { text: "A hotel went up near the tracks.", answer: 0 },
-          { text: "A railroad leader said the name was too long.", answer: 1 },
-          { text: "A railroad leader suggested a name from the Western and Atlantic Railroad.", answer: 1 },
+          { text: "A store went up near the tracks.", answer: 0 },
+          { text: "Some railroad men said the name was too long.", answer: 1 },
+          { text: "An engineer suggested the name Atlanta.", answer: 1 },
           { text: "The town became one of the biggest cities in the South.", answer: 2 }
         ],
         clue: "In a history text, events go in time order. Keep track of what the town was called at each point.",
         hints: [
           "In a history text, events go in time order. Keep track of what the town was called at each point.",
           "Find the two sentences that tell when the town got a new name. Each event happened either before or after them.",
-          "The hotel went up before the town got its second name, so it goes with Terminus. Sort the other events the same way."
+          "The store is in the section \"A Town Grows,\" before the town got its second name, so it goes with Terminus. Sort the other events the same way."
         ],
         how: [
           "The spot was called Terminus from 1837. In 1843, it got the name Marthasville. In 1845, it became Atlanta.",
-          "Stores, houses and a hotel went up before the 1843 name change, so the hotel goes with Terminus.",
-          "The railroad leader said Marthasville was too long and suggested Atlanta before the 1845 change, so both of those go with Marthasville.",
+          "The store is told about before the 1843 name change, so it goes with Terminus.",
+          "Some railroad men said Marthasville was too long, and then an engineer suggested Atlanta. Both happened before the 1845 change, so both go with Marthasville.",
           "Atlanta is one of the biggest cities in the South today, so that goes with Atlanta."
         ],
-        misconception: "A common mix-up is matching an event to the name in its section heading. The railroad leader is in the section \"The Name That Stuck,\" but he spoke while the town was still Marthasville.",
-        why: "The hotel went up while the town was Terminus. The railroad leader said the name was too long and suggested Atlanta while it was still Marthasville, before the 1845 change. Being one of the biggest cities in the South is true of Atlanta today." },
+        misconception: "A common mix-up is matching an event to the name in its section heading. The railroad men and the engineer are in the section \"The Name That Stuck,\" but they spoke while the town was still Marthasville.",
+        why: "The store went up while the town was Terminus. The railroad men said the name was too long, and an engineer suggested Atlanta, while it was still Marthasville, before the 1845 change. Being one of the biggest cities in the South is true of Atlanta today." },
       { id: "SK-TSSEQ-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Why did a town grow up at Terminus?",
           choices: [
-            { text: "The railroad brought workers, and stores and homes were built near the tracks.", correct: true },
+            { text: "The railroad brought workers, and houses and a store were built near the tracks.", correct: true },
             { text: "Martha Lumpkin asked families from all over Georgia to move to the spot." },
-            { text: "A railroad leader gave the spot a shorter name that people liked better." },
+            { text: "A railroad engineer gave the spot a shorter name that people liked better." },
             { text: "The spot was already the capital of Georgia, so many people lived there." }
           ] },
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
@@ -416,21 +421,21 @@ PP.addLesson({
         hints: [
           "In a history text, one event can lead to the next. Ask what happened before the town grew.",
           "Reread the section \"A Town Grows.\" Pay attention to the order of the events in it.",
-          "The railroad leader gave a new name years after the town had already grown, so a later event cannot be the reason. For Part B, choose the sentence that matches your Part A answer."
+          "The engineer suggested a new name years after the town had already grown, so a later event cannot be the reason. For Part B, choose the sentence that matches your Part A answer."
         ],
         how: [
-          "The section \"A Town Grows\" tells events in order. Soon, people came to work on the railroad. Then stores, houses and a hotel went up near the tracks.",
-          "Before long, Terminus was a busy little town. So the railroad is what made the town grow.",
-          "Part A: The railroad brought workers, and stores and homes were built near the tracks. Part B: \"Soon, people came to work on the railroad.\"",
+          "The section \"A Town Grows\" tells events in order. Soon, people came to work on the railroad. Then houses and a store went up near the tracks.",
+          "Before long, Terminus was a small town. So the railroad is what made the town grow.",
+          "Part A: The railroad brought workers, and houses and a store were built near the tracks. Part B: \"Soon, people came to work on the railroad.\"",
           "The new names came after the town had grown, Martha Lumpkin never asks anyone to move, and the article says Atlanta is the capital today, not back then."
         ],
         misconception: "A common mix-up is choosing a later event as the reason for an earlier one. A cause comes before what it causes.",
-        why: "Part A: The railroad brought workers, and stores and homes were built near the tracks. Part B: \"Soon, people came to work on the railroad.\" The workers came first, then stores, houses and a hotel, and then Terminus was a busy town. The names and being the capital came later." },
+        why: "Part A: The railroad brought workers, and houses and a store were built near the tracks. Part B: \"Soon, people came to work on the railroad.\" The workers came first, then houses and a store, and then Terminus was a small town. The names and being the capital came later." },
       { id: "SK-TSSEQ-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         stem: ["In 1847, Atlanta officially became a city."],
         prompt: "A student wants to add the sentence in the box to the article. Where does it belong? Choose the sentence in the passage that it should come right after.",
-        targets: ["p4:2:1", "p4:4:3", "p4:4:4", "p4:6:1", "p4:6:3", "p4:6:4"],
-        answer: ["p4:6:3"], pick: 1,
+        targets: ["p4:2:1", "p4:4:3", "p4:4:4", "p4:6:1", "p4:6:5", "p4:6:6"],
+        answer: ["p4:6:5"], pick: 1,
         clue: "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
         hints: [
           "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
@@ -445,29 +450,30 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is putting a new event at the very end. If the last sentence tells about today, an event from long ago belongs before it.",
         why: "The answer is \"In 1845, the town became Atlanta.\" The new sentence tells about 1847, which comes after 1845 and before today, so it belongs between those two sentences in the section \"The Name That Stuck.\"" },
+      /* B2 review fix (MUST-4): was "How to Patch a Bike Tube", which 3.T.T.2.b keeps. New procedure, no bikes. */
       { id: "SK-TSSEQ-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
-        stem: ["How to Patch a Bike Tube", "(1) First, flip the bike over so it rests on its seat and handlebars.", "(2) Next, take off the wheel and pull the flat tube out of the tire.", "(3) Then pump a little air into the tube and dip it in a tub of water.", "(4) Watch for a stream of tiny bubbles. That is where the air leaks out.", "(5) After that, dry the spot, rub it with sandpaper and press a patch over the hole.", "(6) Finally, put the tube back, fill it with air and put the wheel back on."],
-        prompt: "Read the directions in the box. Why do the directions say to pump a little air into the tube BEFORE dipping it in water?",
+        stem: ["How to Make a Paper Snowflake", "(1) First, fold a square of paper in half, corner to corner, to make a triangle.", "(2) Next, fold the triangle in half.", "(3) Then fold it in half one more time.", "(4) After that, cut small shapes along the edges. Each cut goes through all the layers at once.", "(5) Finally, unfold the paper and flatten it to see your snowflake."],
+        prompt: "Read the directions in the box. Why do the directions say to fold the paper BEFORE you cut it?",
         choices: [
-          { text: "Air must leak out of the hole to make the bubbles that show where it is.", correct: true },
-          { text: "A tube with some air in it is easier to pull out of the tire." },
-          { text: "The air dries the tube so that the patch will stick to it." },
-          { text: "The water would wash the patch away if the tube were flat." }
+          { text: "Each cut goes through every layer, so the same shape repeats all around.", correct: true },
+          { text: "Folded paper is stiffer, so the scissors will not tear it." },
+          { text: "The folds must be made so there is something to unfold in step 5." },
+          { text: "The fold lines show you where to draw the shapes before you cut." }
         ],
         clue: "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
         hints: [
           "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
-          "Find the step that each choice talks about, from step 2 to step 5. Then read the steps around the one the question names.",
-          "The tube is pulled out of the tire in step 2, before any air goes in, so that choice does not fit. Test each choice that is left against step 4."
+          "Find the step each choice talks about. Then read the step the question names and the step that comes after it.",
+          "The directions never say that folded paper is stiffer, so rule out that choice. For each choice that is left, ask: do the directions say it, or does it only sound possible?"
         ],
         how: [
-          "Step 3 says to pump a little air into the tube and dip it in water.",
-          "Step 4 says to watch for tiny bubbles, because that is where the air leaks out.",
-          "Bubbles can form only if there is air inside to leak out. The answer is \"Air must leak out of the hole to make the bubbles that show where it is.\"",
-          "The tube is already out of the tire, drying happens in step 5, and the patch is not on yet when the tube goes in the water."
+          "Steps 1 to 3 fold the square into a small triangle with many layers.",
+          "Step 4 says each cut goes through all the layers at once.",
+          "So one cut makes the same shape in every layer, and the shapes repeat all around when you unfold it. The answer is \"Each cut goes through every layer, so the same shape repeats all around.\"",
+          "The directions never say folded paper is stiffer or that fold lines show where to draw, and unfolding in step 5 is not the reason for folding."
         ],
-        misconception: "A common mix-up is choosing a reason that belongs to a different step. Match the reason to the step that comes right after.",
-        why: "The answer is \"Air must leak out of the hole to make the bubbles that show where it is.\" Step 4 says the bubbles show where the air leaks out, so there must be air in the tube first. The tube is already out of the tire, drying comes in step 5, and the patch goes on later." },
+        misconception: "A common mix-up is choosing a reason that only sounds possible. Use what the directions say happens in the next step.",
+        why: "The answer is \"Each cut goes through every layer, so the same shape repeats all around.\" Step 4 says each cut goes through all the layers, and the layers come from folding first. The directions never say folded paper is stiffer or that the folds show where to draw, and unfolding is the result, not the reason." },
       { id: "SK-TSSEQ-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         prompt: "Coach Reed wrote warm-up directions for the track team. Choose the time words that best complete them.",
         text: "First, jog two laps around the track to warm up your muscles. {0} your legs feel loose, stretch your arms and legs for five minutes. {1}, line up with your team for the relay race.",
@@ -496,7 +502,7 @@ PP.addLesson({
   similar: [
     { id: "SK-TSSEQ-S01", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-P4", "SK-TSSEQ-C06"],
-      stem: ["Moving a plant to a bigger pot: First, put a few inches of fresh soil in the bottom of the new pot. Next, tip the old pot and gently slide the plant out. Then set the plant on top of the new soil. After that, add more soil around the roots and press it down. Finally, water the plant well."],
+      stem: ["Moving a plant to a bigger pot: Water the plant well as the very last step. Before that, add more soil around the roots and press it down. But you cannot add that soil until the plant is sitting in its new pot. Start by putting a few inches of fresh soil in the bottom of the new pot. Then slide the plant out of its old pot and set it on the new soil."],
       prompt: "Read the directions in the box. Put the steps in order.",
       steps: [
         "Put fresh soil in the bottom of the new pot.",
@@ -505,42 +511,44 @@ PP.addLesson({
         "Add more soil around the roots.",
         "Water the plant well."
       ],
-      clue: "Sequence means the order matters. Use the time clue words to find which step starts and which step ends.",
+      clue: "Sequence means the order matters. Time words tell where each step belongs, even when the steps are not told in order.",
       hints: [
-        "Sequence means the order matters. Use the time clue words to find which step starts and which step ends.",
-        "Find each step in the directions and the time word in front of it.",
-        "Watering comes with the clue word Finally, so it goes last. Place the other steps by asking what has to be done before each one."
+        "Sequence means the order matters. Time words tell where each step belongs, even when the steps are not told in order.",
+        "The directions are not told in order. Find the words that tell where each step goes, like start, before that, until and last.",
+        "Watering is the very last step, so it goes at the end. Place the other steps by asking what has to be done before each one."
       ],
       how: [
-        "First, put fresh soil in the new pot. Next, slide the plant out of the old pot.",
-        "Then set the plant on the new soil. After that, add more soil around the roots.",
-        "Finally, water the plant well. That is the order."
+        "\"Start by\" tells the first step: put fresh soil in the bottom of the new pot.",
+        "\"Then\" comes next: slide the plant out of its old pot and set it on the new soil.",
+        "You cannot add soil around the roots until the plant is in its new pot, and that comes before watering.",
+        "So the order is: fresh soil in the new pot, slide the plant out, set it on the new soil, add soil around the roots, and water it."
       ],
-      misconception: "A common mix-up is setting the plant in the new pot before there is soil in the bottom. The clue word First tells which step gets the pot ready.",
-      why: "The order is: put fresh soil in the new pot, slide the plant out of the old pot, set it on the new soil, add more soil around the roots, and water it. The time words First, Next, Then, After that and Finally show this order." },
-    { id: "SK-TSSEQ-S02", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      misconception: "A common mix-up is putting the steps in the order they are told. Words like before that and until show the real order.",
+      why: "The order is: put fresh soil in the new pot, slide the plant out of the old pot, set it on the new soil, add more soil around the roots, and water it. The words start by, then, until, before that and last show this order, even though the directions are not told in order." },
+    { id: "SK-TSSEQ-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-P5", "SK-TSSEQ-C14"],
-      stem: ["(1) First, sand the birdhouse until the wood feels smooth.", "(2) Next, wipe off all the dust with a damp cloth.", "(3) Then let the wood dry for an hour, because paint slides off wet wood.", "(4) After that, brush on two coats of paint.", "(5) Finally, hang the birdhouse on a tree branch."],
+      stem: ["(1) First, sand the birdhouse until the wood feels smooth.", "(2) Next, wipe off all the dust with a damp cloth.", "(3) Then let the wood dry for an hour.", "(4) After that, brush on two coats of paint.", "(5) Finally, hang the birdhouse on a tree branch."],
       prompt: "Read the directions in the box. What would most likely happen if you painted the birdhouse BEFORE you let the wood dry?",
       choices: [
-        { text: "The paint might slide off the damp wood.", correct: true },
-        { text: "The dust would come back onto the wood." },
-        { text: "The birdhouse would be too heavy to hang." },
-        { text: "The wood would feel rough again." }
+        { text: "The paint would go on wet wood and might not stick well.", correct: true },
+        { text: "The dust from sanding would come back onto the wood." },
+        { text: "The birdhouse would be too heavy to hang on a branch." },
+        { text: "The wood would feel rough again under the paint." }
       ],
       clue: "In a sequence, one step often gets things ready for the next. Ask what job the earlier step does.",
       hints: [
         "In a sequence, one step often gets things ready for the next. Ask what job the earlier step does.",
         "Read each step all the way through, not just its first words, and ask what each one is for.",
-        "Sanding makes the wood smooth, and nothing in the directions says paint would make it rough again, so that choice does not fit. Test the others against step 3."
+        "Sanding makes the wood smooth, and nothing in the directions says paint would make it rough again, so rule out that choice. For each choice that is left, ask what the skipped step was for."
       ],
       how: [
         "Step 2 uses a damp cloth, so the wood is wet afterward.",
-        "Step 3 says to let the wood dry, because paint slides off wet wood.",
-        "So painting before it dries would put paint on wet wood. The answer is \"The paint might slide off the damp wood.\""
+        "Step 3 lets the wood dry before any paint goes on, so the drying step gets the wood ready for paint.",
+        "Painting before it dries would put paint on wet wood, and paint does not stick well to wet things. The answer is \"The paint would go on wet wood and might not stick well.\"",
+        "The dust is already gone, and drying has nothing to do with how heavy the birdhouse is or how rough it feels."
       ],
       misconception: "A common mix-up is guessing a result that has nothing to do with the skipped step. Ask what that step was for.",
-      why: "The answer is \"The paint might slide off the damp wood.\" Step 3 says to let the wood dry because paint slides off wet wood. The other results are not connected to drying." },
+      why: "The answer is \"The paint would go on wet wood and might not stick well.\" The damp cloth in step 2 leaves the wood wet, and step 3 lets it dry before painting. The other results are not connected to drying." },
     { id: "SK-TSSEQ-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C10", "SK-TSSEQ-C13"],
       stem: ["(1) In 1950, Oak Street School opened with just two classrooms.", "(2) In 1968, a gym was added so students could play inside on rainy days.", "(3) Ten years after it opened, the school added six more classrooms.", "(4) In 2001, the old gym was turned into a library.", "(5) Today, more than 400 students go to Oak Street School."],
