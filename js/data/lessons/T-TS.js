@@ -821,9 +821,9 @@ PP.addLesson({
       ] },
     { id: "p6", title: "Why Did the Lake Turn Green?", genre: "Informational text",
       paragraphs: [
-        ["Every summer, families swim and fish in Clear Lake.", "But one August, the water turned bright green, and it smelled bad."],
-        ["Scientists tested the water.", "They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.", "Fertilizer helps plants grow, and it helped tiny green living things called algae grow, too."],
-        ["Soon there was so much algae that the water looked like pea soup.", "As the algae died and rotted, it used up much of the air in the water, so some fish could not breathe."],
+        ["Every summer, families swim and fish in Clear Lake.", "But one August, the water turned bright green.", "It smelled bad, too."],
+        ["Scientists tested the water.", "They found that fertilizer from lawns and farms had washed into the lake when it rained hard.", "Fertilizer helps plants grow.", "It helped tiny green living things called algae grow, too."],
+        ["Soon the lake was so full of algae that it looked like pea soup.", "When the algae died and rotted, it used up much of the air in the water, so some fish could not breathe."],
         ["Now the town asks people to use less fertilizer and to sweep it off sidewalks and streets."]
       ] }
   ],
@@ -1240,9 +1240,9 @@ PP.addLesson({
         ] },
       partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
         choices: [
-          { text: "\"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\"", correct: true },
-          { text: "\"But one August, the water turned bright green, and it smelled bad.\"" },
-          { text: "\"Soon there was so much algae that the water looked like pea soup.\"" },
+          { text: "\"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\"", correct: true },
+          { text: "\"But one August, the water turned bright green.\"" },
+          { text: "\"Soon the lake was so full of algae that it looked like pea soup.\"" },
           { text: "\"Now the town asks people to use less fertilizer and to sweep it off sidewalks and streets.\"" }
         ] },
       clue: "A cause happens before its effect and makes it happen. Ask: Why did this happen?",
@@ -2270,9 +2270,9 @@ PP.addLesson({
       ] },
     { id: "p5", title: "Two Trucks That Help", genre: "Informational text",
       paragraphs: [
-        ["When there is an emergency, you might hear a siren and see flashing lights.", "Both fire trucks and ambulances use sirens and lights to tell other drivers to move out of the way."],
+        ["In an emergency, you might hear a siren and see flashing lights.", "Fire trucks and ambulances both use sirens and lights.", "They tell other drivers to move out of the way."],
         ["However, the two trucks do different jobs.", "A fire truck carries long hoses, tall ladders and tanks of water.", "Firefighters use them to put out fires and to reach people high up in buildings."],
-        ["An ambulance carries a bed on wheels called a stretcher.", "Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.", "The crew uses them to care for sick or hurt people on the way to the hospital."]
+        ["An ambulance carries a bed on wheels called a stretcher.", "Unlike a fire truck, it is filled with things like bandages to help people who are hurt.", "The crew cares for sick or hurt people on the way to the hospital."]
       ] }
   ],
   practice: [
@@ -2686,8 +2686,8 @@ PP.addLesson({
         ] },
       partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
         choices: [
-          { text: "\"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\"", correct: true },
-          { text: "\"Both fire trucks and ambulances use sirens and lights to tell other drivers to move out of the way.\"" },
+          { text: "\"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\"", correct: true },
+          { text: "\"Fire trucks and ambulances both use sirens and lights.\"" },
           { text: "\"A fire truck carries long hoses, tall ladders and tanks of water.\"" },
           { text: "\"However, the two trucks do different jobs.\"" }
         ] },
@@ -2699,11 +2699,11 @@ PP.addLesson({
       ],
       how: [
         "Paragraph 2 says a fire truck carries hoses, ladders and water for putting out fires.",
-        "Paragraph 3 says an ambulance carries a stretcher and, unlike a fire truck, medical supplies for sick or hurt people.",
-        "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\"",
+        "Paragraph 3 says an ambulance carries a stretcher and, unlike a fire truck, things like bandages for people who are hurt.",
+        "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\"",
         "Sirens are true of both trucks, and ladders and water are fire truck facts."
       ],
-      why: "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\" Both trucks use sirens, and ladders and water tanks belong to the fire truck." },
+      why: "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\" Both trucks use sirens, and ladders and water tanks belong to the fire truck." },
     { id: "SK-TSCC-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C12"],
       stem: ["Darnell has two coats.", "His rain jacket is thin and waterproof, so rain rolls right off it.", "His puffy coat is thick and very warm, but it soaks up water when it gets wet.", "Both coats have hoods and zip up the front."],
@@ -2977,16 +2977,18 @@ PP.addLesson({
       ] }
   ],
   practice: [
-    { id: "SK-TSDESC-P1", type: "mc", points: 1, dok: 1, passages: ["p1"],
-      prompt: "What does a pelican's pouch look like?",
+    /* B2 (b2b): P1 was a DOK 1 lookup with a trivial key ("a big bag"); it now asks what a
+       describing comparison helps the reader understand. It stays in Together. */
+    { id: "SK-TSDESC-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
+      prompt: "In paragraph 5, the author says a pelican's feet \"work like paddles.\" What does this describing detail help the reader understand?",
       choices: [
-        { text: "a big bag", correct: true },
-        { text: "a sharp beak" },
-        { text: "a tiny feather" },
-        { text: "a thick shell" }
+        { text: "how the pelican's feet push it through the water", correct: true },
+        { text: "how the pelican uses its feet to grab fish" },
+        { text: "what color the pelican's webbed feet are" },
+        { text: "why the pelican dives headfirst into the sea" }
       ],
-      clue: "Find the clue words \"looks like\" in paragraph 2. Read what comes right after them.",
-      why: "The answer is \"a big bag.\" Paragraph 2 says the pouch looks like a big bag. Looks like is a describing clue word." },
+      clue: "Describing words like looks like and works like compare something new to something you already know.",
+      why: "The answer is \"how the pelican's feet push it through the water.\" A paddle pushes a boat through water, and the next sentence says a pelican can paddle across the water like a duck. The passage never says the feet grab fish or tells their color, and diving is in paragraph 3." },
     { id: "SK-TSDESC-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence uses a clue word to give an EXAMPLE? Choose the sentence in the passage.",
       targets: ["p1:2:3", "p1:3:1", "p1:5:1", "p1:5:2", "p1:5:3"],
@@ -3002,17 +3004,20 @@ PP.addLesson({
         { text: "how pelicans build nests for their eggs" }
       ],
       clue: "Ask: What is this mostly about? Pick the answer that fits every paragraph, not just one sentence.",
-      why: "The answer is \"how a brown pelican's body helps it catch fish.\" Paragraph 1 says its whole body is built for catching fish, and the bill, the pouch and the sharp eyes tell more about this. The feet are only one detail, and the passage never talks about nests." },
+      why: "The answer is \"how a brown pelican's body helps it catch fish.\" Paragraph 1 says its whole body is built for catching fish, and the rest of the passage tells more about this. The feet are only one detail, and the passage never talks about nests." },
+    /* B2 (b2b): P4 was off-skill literal recall (why the bill tips down); it now asks for the main
+       idea of one paragraph, against a literal misreading and details from other paragraphs. It stays
+       in Together. */
     { id: "SK-TSDESC-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Why does a pelican tip its bill down after it scoops up a fish?",
+      prompt: "What is paragraph 2 mostly about?",
       choices: [
-        { text: "to drain out the water before it swallows", correct: true },
-        { text: "to dive deeper into the sea for more" },
-        { text: "to show other pelicans where to look" },
-        { text: "to dry its feathers in the warm sun" }
+        { text: "the pelican's long bill and the pouch under it", correct: true },
+        { text: "a big bag that the pelican carries with it" },
+        { text: "how the pelican dives down to catch fish" },
+        { text: "how the pelican drains water from its pouch" }
       ],
-      clue: "Read paragraph 4. Find the sentence that tells what the pelican does with its bill and what that is for.",
-      why: "The answer is \"to drain out the water before it swallows.\" Paragraph 4 says the pelican tips its bill down to drain out the water before it swallows the fish." },
+      clue: "Ask: What do all the sentences in paragraph 2 tell about? A choice that fits only part of one sentence is a detail.",
+      why: "The answer is \"the pelican's long bill and the pouch under it.\" All three sentences tell about the bill and its pouch. The pouch only looks like a big bag; the pelican does not carry a bag. Diving is in paragraph 3, and draining is in paragraph 4." },
     { id: "SK-TSDESC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the clue word that best completes the sentences.",
       text: "A pelican has sharp eyes. It {0} has webbed feet.",
