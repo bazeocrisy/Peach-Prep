@@ -23,23 +23,25 @@
 
 ## 2. Passages added
 
+**This section and §3, §4 and §6 were updated in §11 to show the current data.** §8 to §10 record how each item got here.
+
 All passages are original. None is used by `test`. Children's names are ordinary first names, and there are no brands and no real people.
 
 | Lesson | Id | Title | Words | FK | Domain | Used by |
 |---|---|---|---|---|---|---|
-| TS-PS | p3 | The Wobbly Table | 141 | 3.3 | family / home | C05 |
-| TS-PS | p4 | The Tangled Ropes | 168 | 3.4 | sports / community (Double Dutch team) | C06 to C10, C13 |
+| TS-PS | p3 | The Wobbly Table (rebuilt in §8: one failed try by Aunt Bea; Niko reasons out the cause in ¶3) | 135 | 2.8 | family / home | C03, C04, C05 |
+| TS-PS | p4 | The Tangled Ropes (rebuilt in §8: Amari works out the cause in ¶2; Kiara's new ropes fail in ¶3; the chant in ¶4) | 176 | 3.3 | sports / community (Double Dutch in Ms. Bell's driveway) | C06 to C10, C13 |
 | TS-PS | p5 | Dots on the Glass (informational) | 177 | 3.7 | science / school | C11, C12, C13 |
 | TS-PS | p6 | The Droopy Bean Plants | 108 | 1.9 | school / science | S01 |
-| TS-PS | p7 | The Soggy Sandwich | 111 | 3.5 | family | S02 |
-| 3.T.C.2.a | p3 | Ms. Pruitt's Corner | 148 | 1.6 | school / community (crossing guard) | C04, C05 |
+| TS-PS | p7 | The Soggy Sandwich (rebuilt in §8: Kayla finds the cause herself in ¶3) | 117 | 3.9 | family | S02 |
+| 3.T.C.2.a | p3 | Ms. Pruitt's Corner | 148 | 1.6 | school / community (crossing guard) | C05 |
 | 3.T.C.2.a | p4 | The Big Red Chair (two parts, two narrators; `## Part 1` and `## Part 2` headings) | 175 | 2.3 | community (barbershop) | C06 to C10 |
-| 3.T.C.2.a | p5 | Bath Day (poem, four stanzas; the speaker is a dog and is never named) | 16 lines | n/a | home / pets | C11, C12 |
+| 3.T.C.2.a | p5 | Bath Day (poem, four stanzas; the speaker is an animal, most likely the family dog, and is never named) | 16 lines | n/a | home / pets | C11, C12 |
 
-**Fact check, p5 (TS-PS).** One hawk silhouette does not stop window strikes. Small markers spaced about two inches apart across the whole pane do. This is the bird-safe glass guidance (the American Bird Conservancy "2 by 2" rule). The text makes no claim about any real school.
+**Fact check, p5 (TS-PS).** One hawk silhouette does not stop window strikes. Small markers spaced about two inches apart across the whole pane do. This is the bird-safe glass guidance (the American Bird Conservancy "2 by 2" rule; also FLAP). The text makes no claim about any real school.
 
 **Themes and settings deliberately avoided** (form A, mixed sets, the Practice Test and other lessons):
-- TS-PS form A ("The Muddy Path": a school garden, boards, sand, a low spot and wood chips; and the cats and turtles "but" sentence)
+- TS-PS form A ("The Muddy Path": a school garden, boards, sand, a low spot and wood chips; and the cats and turtles "but" sentence). Since §8, no new TS-PS story uses its layout: two failed tries, then "looked closely" and the cause in paragraph 4, then "The problem was finally solved!"
 - ants, kites, a fish tank and soccer balls (TS-PS practice, Watch Me and teach)
 - sea turtles and gopher tortoises (R-INF-01 and other lessons)
 - water bottles, the lunchroom, gardens, gates and hamsters
@@ -49,7 +51,7 @@ All passages are original. None is used by `test`. Children's names are ordinary
 
 A first draft of 3.T.C.2.a p3 had a grandpa. I changed him to a crossing guard so it does not echo form A's T3 key, where Grandpa's kindness is something the narrator misses.
 
-## 3. The fifteen
+## 3. The fifteen (current)
 
 **Component codes**
 
@@ -59,7 +61,7 @@ TS-PS (3.T.SS.1.a and 3.T.T.1.b):
 - C: why a try failed, and the real problem. This is the hardest component and the coach's "push" skill.
 - D: the solution and the evidence that it worked
 - E: how the text is arranged as problem and solution, in stories and in true texts
-- F: how a character or a detail of the setting works in the plot (3.T.T.1.b)
+- F: how a character works in the plot (3.T.T.1.b)
 
 3.T.C.2.a ("Describe different perspectives of the narrator or speakers and distinguish them from their own", p. 27):
 - N: identify the narrator or speaker
@@ -72,54 +74,51 @@ TS-PS (3.T.SS.1.a and 3.T.T.1.b):
 
 | # | Id | Set | Comp | Task | Format | Pts | DOK | Text | How it differs from the others |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | SK-TSPS-P4 (ref) | 1 | B | construct | dropdown | 2 | 2 | p1 | The only item where the child builds the clue words into a sentence |
-| 2 | SK-TSPS-P5 (ref) | 1 | C | explain | mc | 1 | 3 | p1 | Why one named try failed, on a story; a single reason |
-| 3 | SK-TSPS-C03 | 1 | D | compare | mc | 1 | 3 | p1 | Compares the solution with the two failed tries. Every distractor is something a failed try did, or whose idea it was |
-| 4 | SK-TSPS-P6 (ref) | 1 | B/E | identify (what a clue word does) | mc | 1 | 2 | p1 (boxed sentence) | The job of "but" in one sentence |
-| 5 | SK-TSPS-C05 | 1 | C/A | use evidence | hottext | 1 | 2 | p3 | Find the sentence that gives the real cause. The distractors are an effect, a reason a try failed, a guessed cause (the floor), an action and the fix |
-| 6 | SK-TSPS-C06 | 2 | F/A | explain (author's purpose) | mc | 1 | 2 | p4 | Why a time-and-place detail (the fair in two weeks) matters to the problem |
-| 7 | SK-TSPS-C07 | 2 | E/A/B/D | identify (sort onto the structure) | match | 2 | 2 | p4 | Sorts events onto a problem, try and solution map. One column is used twice |
-| 8 | SK-TSPS-C08 | 2 | C | use evidence | ebsr | 2 | 3 | p4 | The real cause with support. Each Part A distractor is ruled out by the text (new ropes, more space, "Your jumping is fine"). Part B separates the cause from sentences about failing tries |
-| 9 | SK-TSPS-C09 | 2 | D | use evidence | hottext (choose two) | 2 | 2 | p4 | Proof the solution worked, kept apart from the decision itself and from a partial improvement |
-| 10 | SK-TSPS-C10 | 2 | F | explain (a character's role) | mc | 1 | 2 | p4 | A helper who finds the real problem, but does not do the fixing |
+| 1 | SK-TSPS-P5 (ref) | 1 | C | explain | mc | 1 | 2 | p1 | Why one named try failed. Two distractors are story misreadings (how far the bowl moved; the first try's paper towel) |
+| 2 | SK-TSPS-C02 | 1 | F | explain (a character's role) | mc | 1 | 2 | p1 | What Grandma contributes. The distractors are things Jamal did |
+| 3 | SK-TSPS-C03 | 1 | A/B | construct | dropdown | 2 | 2 | p3 | Builds the problem and the try into sentences. The distractors are a place and Niko's later actions |
+| 4 | SK-TSPS-C04 | 1 | C | use evidence | hottext | 1 | 2 | p3 | The sentence that gives the real cause, kept apart from a guess (bumpy floor), an effect, Niko's general claim, a check and the fix |
+| 5 | SK-TSPS-C05 | 1 | B/E | explain (what a clue word does) | mc | 1 | 2 | p3 (boxed sentence) | "But" that shows a difference, not a failed try. It is the contrast to Together P6 |
+| 6 | SK-TSPS-C06 | 2 | F | compare (two characters) | dropdown | 2 | 2 | p4 | What Amari wants against what Kiara wants when the ropes first tangle. Each slot has its own distractors |
+| 7 | SK-TSPS-C07 | 2 | E/A/B/D | identify (sort onto the structure) | match (four columns) | 2 | 2 | p4 | Problem, a try that did not work, solution and proof that it worked |
+| 8 | SK-TSPS-C08 | 2 | A/F | explain (why the problem matters) | mc | 1 | 2 | p4 | The stakes come from a plot element (the show's best part), not a time detail |
+| 9 | SK-TSPS-C09 | 2 | C | explain (what a failed try shows) | mc | 1 | 3 | p4 | The inference from a failed try: "The ropes were never the real trouble" |
+| 10 | SK-TSPS-C10 | 2 | C | use evidence | ebsr | 2 | 3 | p4 | The real cause (the hand speeds) with support. It is last in the set so no earlier item answers it |
 | 11 | SK-TSPS-C11 | 3 | C | explain (two reasons from the text) | ms | 2 | 2 | p5 (informational) | Why a try failed in a true text. The distractors sound possible but are not in the article |
-| 12 | SK-TSPS-C12 | 3 | E | construct (order the parts of the article) | order | 1 | 2 | p5 | The only ordering item: problem, try, why it failed, solution, result |
-| 13 | SK-TSPS-C13 | 3 | C/E (also D) | compare | match (three columns) | 2 | 3 | p4 + p5 | Compares across two texts. Two rows fit both texts and two fit only one |
+| 12 | SK-TSPS-C12 | 3 | E | construct (order the parts of the article) | order (five steps) | 2 | 2 | p5 | Problem, try, why it failed, solution, result |
+| 13 | SK-TSPS-C13 | 3 | C/E | compare | match (three columns) | 2 | 3 | p4 + p5 | Structural rows: when the cause is found, who explains it, whether the first try misses it, and whether the text tells the result |
 | 14 | SK-TSPS-C14 | 3 | C/D | transfer (choose a plan) | ms | 2 | 3 | new stem (park, raccoons) | Picks plans that fix the real problem. The distractors are bigger versions of failed tries and a plan that only cleans up afterwards |
-| 15 | SK-TSPS-C15 | 3 | E/C | transfer / construct (complete a paragraph) | mc | 1 | 3 | new stem (school swings) | Chooses the sentence that does the "why it failed" job in a writer's paragraph. The distractors stay on topic but do not do that job |
+| 15 | SK-TSPS-C15 | 3 | E/C | transfer / construct (complete a paragraph) | mc | 1 | 3 | new stem (school swings) | Chooses the sentence that does the "why it failed" job. The distractors are wrong-way explanations and a detail about timing |
 
 **Tallies**
-- **Points:** 22.
-- **Formats:** seven. mc 6 (the limit), ms 2, hottext 2, match 2, dropdown 1, ebsr 1, order 1. Nine items use technology-enhanced formats.
-- **DOK:** DOK 3 on six items (2, 3, 8, 13, 14, 15), DOK 2 on nine, DOK 1 on none.
+- **Points:** 23.
+- **Formats:** seven.
+  - mc 6, the limit: P5, C02, C05, C08, C09, C15
+  - dropdown 2, match 2, ms 2, hottext 1, ebsr 1, order 1
+- **DOK:** DOK 3 on five items (C09, C10, C13, C14, C15), DOK 2 on ten, DOK 1 on none.
 - **Tasks:**
-  - identify: 4, 7
-  - explain: 2, 6, 10, 11
-  - evidence: 5, 8, 9
-  - construct: 1, 12, (15)
-  - compare: 3, 13
-  - transfer: 14, 15
+  - identify: C07
+  - explain: P5, C02, C05, C08, C09, C11
+  - evidence: C04, C10
+  - construct: C03, C12, (C15)
+  - compare: C06, C13
+  - transfer: C14, C15
 - **Components:**
-  - A: 5, 6, 7
-  - B: 1, 4, 7
-  - C: 2, 5, 8, 11, 13, 14, 15. It appears in every set.
-  - D: 3, 9, 14
-  - E: 4, 7, 12, 13, 15
-  - F: 6, 10
-- **Each set covers at least three components:**
-  - set 1: B, C, D, A
-  - set 2: F, A, B, D, E, C
-  - set 3: C, E, D
+  - A: C03, C07, C08
+  - B: C03, C05, C07
+  - C: P5, C04, C09, C10, C11, C13, C14, C15. It appears in every set.
+  - D: C07, C14
+  - E: C05, C07, C12, C13, C15
+  - F: C02, C06, C08
 - **Domains:**
-  - home and family: 1 to 5
-  - sports and community: 6 to 10
-  - science and school: 11, 12
-  - sports and science: 13
-  - community and nature: 14
-  - school: 15
-  - That is at least four domains, and none has more than five items.
-- **Passage load:** p1 has 4 items, p3 has 1, p4 has 6, p5 has 3, and two new stems.
-- **Variety:** two stories, an informational article, a cross-text comparison and two transfer stems. True problem-and-solution structure in a true text is covered by p5 and C15 (teach point 5).
+  - home and family: set 1
+  - sports and community: set 2
+  - science and school: C11, C12
+  - sports and science: C13
+  - community and nature: C14
+  - school: C15
+- **Passage load:** p1 has 2 items, p3 has 3, p4 has 6, p5 has 3, plus two stems.
+- **Practice Together:** P1, P2, P3, P4 and P6.
 
 ### 3.T.C.2.a
 
@@ -127,61 +126,53 @@ TS-PS (3.T.SS.1.a and 3.T.T.1.b):
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | SK-TC2a-C01 | 1 | C | use evidence | ms | 2 | 2 | p1 | A secondary character's own view, kept apart from the narrator's view of him and from plain facts |
 | 2 | SK-TC2a-P5 (ref) | 1 | Ch | explain | mc | 1 | 3 | p1 | The narrator's view changes |
-| 3 | SK-TC2a-C03 | 1 | N | identify | mc | 1 | 2 | new stem (school bus) | An outside narrator with "I" inside quotation marks (teach point 5) |
-| 4 | SK-TC2a-C04 | 1 | R (with P) | construct | dropdown | 2 | 3 | p3 | The child places the narrator's view and a reader's view in the right blanks. The same two ideas appear in both slots, so the task is to tell them apart |
-| 5 | SK-TC2a-C05 | 1 | P / Ch (no change) | use evidence | ebsr | 2 | 2 | p3 | The narrator's view does NOT change even when the reader's does. It is the counterpart of item 2 |
+| 3 | SK-TC2a-C03 | 1 | N | identify | mc | 1 | 1 | new stem (school bus) | An outside narrator with "I" inside quotation marks (teach point 5) |
+| 4 | SK-TC2a-C04 | 1 | R (with P) | construct | dropdown | 2 | 2 | new stem (big sister Renee, backpack; family) | The child places the narrator's view and a reader's view in the right blanks |
+| 5 | SK-TC2a-C05 | 1 | P / Ch (no change) | use evidence | ebsr | 2 | 2 | p3 | The narrator's view does NOT change even when the reader's might. It is the counterpart of item 2 |
 | 6 | SK-TC2a-C06 | 2 | N | use evidence (clues) | ms | 2 | 2 | p4 | Clues that a second part has a new narrator. The trap: "uses the word I" is true of both parts |
 | 7 | SK-TC2a-C07 | 2 | C | identify (attribute views) | match | 2 | 2 | p4 | Assign each view to one of two narrators |
-| 8 | SK-TC2a-C08 | 2 | P | explain (a comparison) | mc | 1 | 2 | p4 | A simile shows the narrator's view. The distractors read it literally |
-| 9 | SK-TC2a-C09 | 2 | Ch | use evidence | hottext | 1 | 2 | p4 | A change shown through another narrator's eyes, kept apart from moments in the middle of the haircut |
-| 10 | SK-TC2a-C10 | 2 | R / C | explain (author's choice) | mc | 1 | 3 | p4 | Why the author switches narrators: what a second view lets a reader see |
-| 11 | SK-TC2a-C11 | 3 | N | use evidence (clues) | ms | 2 | 3 | p5 (poem) | A speaker who is not named and not human. Only clues that fit a dog alone count |
-| 12 | SK-TC2a-C12 | 3 | R | construct (written) | **cr** | 0 | 3 | p5 | The child states the speaker's view and their own, with a detail. Never scored; sample and four criteria |
-| 13 | SK-TC2a-C13 | 3 | N | transfer (sort) | match | 2 | 2 | four new one-line stems | Character narrator or outside narrator across four new snippets, including "we", and "I" inside quotation marks |
-| 14 | SK-TC2a-C14 | 3 | R | transfer | mc | 1 | 3 | new stem (soccer) | An unreliable narrator. The reader sees what the narrator will not admit |
+| 8 | SK-TC2a-C08 | 2 | P | explain (a comparison) | mc | 1 | 2 | p4 | A comparison shows the narrator's view. Two distractors read it literally |
+| 9 | SK-TC2a-C09 | 2 | Ch | use evidence | hottext | 1 | 2 | p4 | A change shown through another narrator's eyes |
+| 10 | SK-TC2a-C10 | 2 | R / C | explain (author's choice) | mc | 1 | 3 | p4 | Why the author switches narrators. The distractors are perspective misreadings |
+| 11 | SK-TC2a-C11 | 3 | N | use evidence (clues) | ms | 2 | 3 | p5 (poem) | A speaker who is not named. Only clues that fit an animal and not a child count |
+| 12 | SK-TC2a-C12 | 3 | R | construct (written) | **cr** | 0 | 3 | p5 | The child gives the speaker's view and their own, each with a detail. Never scored; sample and four criteria |
+| 13 | SK-TC2a-C13 | 3 | P | transfer (sort) | match | 2 | 2 | four new one-line stems | Shows how the teller feels, or only tells what happens |
+| 14 | SK-TC2a-C14 | 3 | R | transfer | mc | 1 | 3 | new stem (soccer) | An unreliable narrator. One distractor takes the narrator's excuse at face value |
 | 15 | SK-TC2a-C15 | 3 | C | compare | ms | 2 | 3 | new stem (two journal entries, art class) | Two narrators on the same event. One distractor is true of both (alike, not different) |
 
 **Tallies**
 - **Points:** 22 scored, plus the cr item.
-- **Formats:** seven. mc 5, ms 4, match 2, dropdown 1, ebsr 1, hottext 1, cr 1. Nine items use technology-enhanced formats.
-- **DOK:** DOK 3 on seven items (2, 4, 10, 11, 12, 14, 15), DOK 2 on eight, DOK 1 on none.
-- **Tasks:**
-  - identify: 3, 7
-  - explain: 2, 8, 10
-  - evidence: 1, 5, 6, 9, 11
-  - construct: 4, 12
-  - compare: 15 (and 1, a contrast)
-  - transfer: 13, 14
+- **Formats:** seven. mc 5, ms 4, match 2, dropdown 1, ebsr 1, hottext 1, cr 1.
+- **DOK:** DOK 3 on six items (P5, C10, C11, C12, C14, C15), DOK 2 on eight, DOK 1 on one (C03).
 - **Components:**
-  - N: 3, 6, 11, 13
-  - P: 4, 5, 8
-  - C: 1, 7, 10, 15
-  - R: 4, 10, 12, 14. It appears in every set.
-  - Ch: 2, 5, 9
+  - N: C03, C06, C11
+  - P: C04, C05, C08, C13
+  - C: C01, C07, C10, C15
+  - R: C04, C10, C12, C14. It appears in every set.
+  - Ch: P5, C05, C09
 - **Domains:**
-  - family: 1, 2
-  - school: 3, 4, 5, 15
-  - community: 6 to 10
-  - home and pets: 11, 12
-  - mixed: 13
-  - sports: 14
-  - None has more than five items.
-- **Text frames (the matrix asked for variety):** a first-person story, a third-person snippet, two narrators in two parts, a poem with an animal speaker, journal entries, and (in the similar bank) a letter and a tree speaker.
+  - family: C01, P5, C04
+  - school: C03, C05, C15
+  - community: C06 to C10
+  - home and pets: C11, C12
+  - mixed: C13
+  - sports: C14
+- **Practice Together:** P1 to P4.
 
-## 4. Similar bank
+## 4. Similar bank (current)
 
 | Id | `like` | Comp | Format | DOK | Text |
 |---|---|---|---|---|---|
-| SK-TSPS-S01 | P5, C05, C11 | C | mc | 2 | p6 (bean plants) |
-| SK-TSPS-S02 | C08, C05 | C (real cause and evidence) | ebsr | 3 | p7 (soggy sandwich) |
-| SK-TSPS-S03 | C14, C15 | C/D transfer | mc | 3 | new stem (ceiling leak) |
+| SK-TSPS-S01 | P5, C04, C11 | C | mc | 2 | p6 (bean plants) |
+| SK-TSPS-S02 | C10, C04 | C (real cause and evidence) | ebsr | 3 | p7 (soggy sandwich) |
+| SK-TSPS-S03 | C14 | C/D transfer | mc | 2 | new stem (ceiling leak) |
 | SK-TC2a-S01 | C04, C14 | R | mc | 3 | letter stem (chess club) |
-| SK-TC2a-S02 | C11, C03, C06 | N | mc | 2 | poem stem (tree speaker) |
-| SK-TC2a-S03 | C15, C07, C01 | C | ms | 2 | new stem (library mural) |
+| SK-TC2a-S02 | C11, C03 | N | mc | 2 | poem stem (tree speaker) |
+| SK-TC2a-S03 | C15, C07 | C | ms | 2 | new stem (library mural) |
 
 Each `like` lists only the core items the extra question really practises. As in B0, some core items have no extra question:
-- TS-PS: nine items.
-- 3.T.C.2.a: seven items.
+- TS-PS: ten items.
+- 3.T.C.2.a: nine items.
 
 check-content warns about these, and the lead kept the bank at three per lesson.
 
@@ -209,17 +200,16 @@ check-content warns about these, and the lead kept the bank at three per lesson.
 
 ## 6. Reuse and weak-item decisions
 
-**Reuse**
+**Reuse (current)**
 
 | Item | Decision | Reason |
 |---|---|---|
-| SK-TSPS-P4, P5, P6 | Reused by `{ ref }` as items 1, 2 and 4, with hints and how in `addons` | The inventory marks them reusable. See the note on P4 and P6 below |
-| SK-TSPS-P1 to P3 | Kept in Together, with addons | Guided practice. The P2 addon avoids the word "smell", so it does not pre-teach P5's key |
-| SK-TC2a-P5 | Reused by `{ ref }` as item 2, with addons | The inventory marks it reusable |
-| **SK-TC2a-P4 (snow poem)** | **Not in core. It moves to Together** (P1 to P4, four items), with addons | The coverage matrix notes that form A's T6 mirrors P4's frame ("How is the speaker's view … different from …"). Contrast is covered in core by other frames (C01, C07, C15). The lead may prefer P4 back in core |
+| SK-TSPS-P5 | Reused by `{ ref }` as core 1.1, with hints and how in `addons`. Its choices were edited in §10 (B1-rereview-b1b-2 M-1) | The inventory marks it reusable. It is the only TS-PS ref |
+| SK-TSPS-P4, P6 | **Not in core.** Both are in Practice Together, with addons (§8) | They share key logic ("but" shows a failed try), and P4's why/how gave away P6 (2B M-2). If either stayed in set 1, the other in Together would pre-answer it |
+| SK-TSPS-P1 to P3 | Kept in Together, with addons | Guided practice. Together is P1, P2, P3, P4 and P6 (five items, the limit) |
+| SK-TC2a-P5 | Reused by `{ ref }` as core 1.2, with addons | The inventory marks it reusable |
+| **SK-TC2a-P4 (snow poem)** | **Not in core.** It is in Together (P1 to P4), with addons | Form A's T6 mirrors P4's frame. Contrast is covered in core by other frames (C01, C07, C15) |
 | Inventory weak items | None are listed for these two lessons | — |
-
-**Note on P4 and P6 (both existing items).** P6's Show me how explains that "but" shows a failed try, and P4's second slot is "but". They overlap by design in the old lesson. I kept both, as the inventory allows.
 
 **Leakage handled while authoring**
 - **TS-PS set 2 order.** The cause item (ebsr) and the map (match) were swapped, so the map is item 7 and the cause item is item 8. The cause item's reasoning mentions the failed tries. With the map first, nothing in an earlier item's help answers a later item; at most, the later cause item repeats facts the map has already sorted.
@@ -486,4 +476,37 @@ For every item changed below, I read the clue and hints 1 to 3 together as one s
 
 - `node verification/check-content.js --all`: PASS, 0 failures. The only warnings in these lessons are the extra-question coverage notices.
 - The scratch audit shows no hits on P5, C10, S03 or C14.
+- No git.
+
+## 11. Fixes after the third re-review (B1-rereview-b1b-3.md)
+
+**Verdicts:** TS-PS ACCEPTED; 3.T.C.2.a ACCEPTED. Both TS-PS SHOULDs are fixed. The changes are wording and one choice swap.
+
+### 11.1 Needs blind re-solve
+
+| Item | What changed | Finding |
+|---|---|---|
+| **SK-TSPS-S03** | "Put down two big mats instead of one." is replaced with "Put a bucket under the crack to catch the drips.", a choice that deals only with the effect. The how, why and misconception are updated | S-2 |
+
+### 11.2 Wording only
+
+- **SK-TSPS-P5 (S-1):**
+  - The `why` and how steps 1 and 4 no longer make Jamal the subject. They now read "The bowl went to the other side of the kitchen…", "the paper towel was an earlier try" and "The try in paragraph 4 is…".
+  - So P5 no longer tells the child who did the tries that C02 (the next item) uses as distractors.
+  - P5's choices and hints are unchanged.
+
+### 11.3 Whole-ladder check, S03
+
+- The clue and hint 1 give the strategy: "fixes the real problem, not only what the problem causes".
+- Hint 2, "Reread the last two sentences", now names sentences that hold a wrong choice (the bucket under the crack) as well as the key.
+- Hint 3 rules out mopping only.
+- After hint 3, three choices stand: the key, the bucket and "wipe wet shoes". The bucket is a real competitor that a child must reject by hint 1's test.
+
+### 11.4 Log tidy-up (re-review N-5)
+
+§2 (passages), §3 (the fifteen and the tallies for both lessons), §4 (similar bank) and §6 (reuse) now show the current data. §6's list of authoring-time leak fixes is marked as the first version.
+
+### 11.5 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In these lessons, the only warnings are the extra-question coverage notices.
 - No git.

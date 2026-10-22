@@ -1654,7 +1654,7 @@ PP.addLesson({
         { text: "Pepper pushed the bowl back to its spot." }
       ],
       clue: "A try fails for a reason. The story usually tells what went wrong after the try.",
-      why: "The answer is \"The ants could still smell the food and find it.\" Paragraph 4 says the ants followed the smell and found the bowl again. Moving the bowl did not stop the smell, so the ants kept coming. Jamal moved the bowl to the other side of the kitchen, not a little way; the paper towel was the first try; and Pepper only sat and stared." },
+      why: "The answer is \"The ants could still smell the food and find it.\" Paragraph 4 says the ants followed the smell and found the bowl again. Moving the bowl did not stop the smell, so the ants kept coming. The bowl went to the other side of the kitchen, not a little way; the paper towel was an earlier try; and Pepper only sat and stared." },
     { id: "SK-TSPS-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read the sentence from paragraph 3 in the box. What does the word \"But\" show here?",
       stem: ["But the next morning, a new line of ants marched right back."],
@@ -2061,7 +2061,7 @@ PP.addLesson({
       prompt: "Read the story in the box. Which plan would most likely solve the real problem?",
       choices: [
         { text: "Fix the crack in the ceiling above the door.", correct: true },
-        { text: "Put down two big mats instead of one." },
+        { text: "Put a bucket under the crack to catch the drips." },
         { text: "Mop the floor every few minutes." },
         { text: "Ask everyone to wipe their wet shoes outside the door." }
       ],
@@ -2075,10 +2075,10 @@ PP.addLesson({
         "A bigger mat and more mopping did not stop the puddle. They only dealt with the water after it fell.",
         "The custodian finds rain dripping through a crack in the ceiling. That is the real problem.",
         "The answer is \"Fix the crack in the ceiling above the door.\"",
-        "More mats and more mopping repeat tries that failed. Wiping shoes would help only if the water came in on shoes, but it drips from the ceiling."
+        "A bucket only catches the water after it drips, and the crack keeps leaking. More mopping repeats a try that failed. Wiping shoes would help only if the water came in on shoes, but it drips from the ceiling."
       ],
-      misconception: "A common mix-up is choosing a bigger version of a try that already failed.",
-      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and wiping shoes does not help, because the water drips from the ceiling, not from shoes." }
+      misconception: "A common mix-up is choosing a plan that only deals with the water, like a bucket or more mopping, instead of fixing where the water comes from.",
+      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. A bucket only catches the drips while the crack keeps leaking, more mopping already failed, and wiping shoes does not help, because the water drips from the ceiling, not from shoes." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1, P2, P3, P4 and P6. */
   addons: {
@@ -2138,10 +2138,10 @@ PP.addLesson({
         "Pepper only sits and stares at the ants in paragraph 2, so she does not push the bowl anywhere. Decide between the choices that are left."
       ],
       how: [
-        "Jamal's try in paragraph 4 is moving the bowl to the other side of the kitchen.",
+        "The try in paragraph 4 is moving the bowl to the other side of the kitchen.",
         "The next sentence says the ants followed the smell of the food and found it again.",
         "The answer is \"The ants could still smell the food and find it.\" Moving the bowl did not take away the smell, so the ants kept coming.",
-        "Jamal moved the bowl to the other side of the kitchen, not a little way. The wet paper towel was his first try, in paragraph 3. Pepper only sat and stared."
+        "The bowl went to the other side of the kitchen, not a little way. The wet paper towel was the first try, in paragraph 3. Pepper only sat and stared."
       ],
       misconception: "A common mix-up is mixing up the two tries, or misreading how far the bowl was moved. The reason this try failed is told right after it." },
     "SK-TSPS-P6": {

@@ -122,9 +122,10 @@ Item figure: `ss1a-c-bat-lathe.svg` (a billet spinning against a blade, with sha
 - **E:** purpose and effect. It appears in every set.
 
 ### 2.1 Reuse and weak item
-- P5 and P6 are reused as `{ref}` in set 1, with addons. P5 stays a ref, as the lead asked.
-- **P4 (weak: implausible distractors).** I revised it in place and kept it in Practice Together. Its new distractors are feature mix-ups, and its key and clue are unchanged.
-- Together is P1, P8, P9, P10 and P4.
+- **Refs.** P5 and P4 are reused as `{ref}` in set 1, with addons. P5 stays a ref, as the lead asked.
+- **P4 (weak: implausible distractors).** I revised it in place: its new distractors are feature mix-ups, and its key and clue are unchanged. In the second round it took P6's core slot (§5.4).
+- **P6** is no longer in core, because its prompt gives away its own speaker row. It is unchanged in `practice` and now sits in Practice Together.
+- **Together** is P1, P8, P9, P10 and P6 (five items, within the 2-5 rule).
 
 ### 2.2 Passages and figures (never used by test)
 
@@ -140,38 +141,38 @@ Item figure: `tc1b-c-water-webpage.svg` (tabs, search, heading, video with play 
 | # | Id | Set | Component | Task | Format | Pts | DOK | Text | How it differs |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | P5 (ref) | 1 | Vi | use evidence | hottext, two | 2 | 2 | p1 + lodge diagram | Labels to sentences |
-| 2 | P6 (ref) | 1 | Pr + Au | identify | match | 2 | 2 | none | Feature to job |
+| 2 | P4 (ref, revised weak item) | 1 | Pr bold + glossary + E | explain | mc | 1 | 2 | p1 | The only glossary item |
 | 3 | C03 | 1 | Pr box + E | apply | mc | 1 | 2 | p1 | Which new fact belongs in the box |
 | 4 | C04 | 1 | Pr heading + E | explain | ms, two | 2 | 2 | p1 | A heading's topic and its effect |
 | 5 | C05 | 1 | Au spoken + E | construct/transfer | mc | 1 | 3 | Andre reads p1 to his class | Spoken stand-in for a heading |
 | 6 | C06 | 2 | Pr bold + E | edit (choose the word to bold) | mc | 1 | 2 | p3 | Bold the section's key word |
-| 7 | C07 | 2 | Vi caption + E | edit (add a caption) | mc | 1 | 2 | p3 + diagram | Caption for the whole diagram |
+| 7 | C07 | 2 | Vi caption + E | edit (add a caption) | dropdown, 1 slot | 1 | 2 | p3 + diagram | Caption for the whole diagram |
 | 8 | C08 | 2 | Vi numbered arrows | construct | order, 4 steps | 2 | 2 | p3 + diagram | Order from arrows and text |
 | 9 | C09 | 2 | Di video + E | compare (video vs print) | ms, two | 2 | 2 | web page figure | What the video adds |
 | 10 | C10 | 2 | Au caption line | construct | dropdown, 1 slot | 1 | 2 | web page figure | Write a sound line for a new sound |
 | 11 | C11 | 3 | Vi diagram vs text | use evidence | hottext | 1 | 2 | p4 + pool | Sentence naming a part not shown |
 | 12 | C12 | 3 | Vi + E | compare (diagram vs photo) | mc | 1 | 3 | p4 + pool | Why a labeled diagram beats a photo |
 | 13 | C13 | 3 | Di vs Pr | compare/transfer | ms, two | 2 | 2 | school newsletter | Web-only features |
-| 14 | C14 | 3 | Au spoken + E | transfer | ms, two | 2 | 2 | Kiara's talk (school) | Spoken cues for importance |
+| 14 | C14 | 3 | Au spoken + E | transfer | ms, two | 2 | 2 | Kiara's talk (school) | Spoken signals that help listeners keep track of parts |
 | 15 | C15 | 3 | Au podcast sound + E | transfer/explain | mc | 1 | 2 | basketball podcast (sports) | Effect of an added sound |
 
 **Tallies:**
-- Points: 22.
-- Formats: mc 6, ms 4, hottext 2, dropdown 1, match 1, order 1. That is six formats, nine of them technology-enhanced. The order item has four steps and is worth 2.
+- Points: 21.
+- Formats: mc 6, ms 4, dropdown 2, hottext 2, order 1. That is five formats, nine of them technology-enhanced. The order item has four steps and is worth 2.
 - DOK: level 2 on thirteen items, level 3 on two (C05, C12).
 - Modes:
-  - print: P6, C03, C04, C06, C13
+  - print: P4, C03, C04, C06, C13
   - visual: P5, C07, C08, C11, C12
   - digital: C09, C13
-  - auditory/spoken: P6 (one row), C05, C10, C14, C15
+  - auditory/spoken: C05, C10, C14, C15
 
 **Similar bank:**
 
 | Id | Mirrors | Context |
 |---|---|---|
-| S01 | C03 | which recycling fact fits the box |
+| S01 | C03 | which train fact fits the box |
 | S02 | C09 | the zoo video |
-| S03 | C14, C05 | the spider report read aloud |
+| S03 | C05, C14 | Omar signals a new part of his spider report |
 
 ## 3. Earlier claim corrected
 

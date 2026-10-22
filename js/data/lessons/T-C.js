@@ -207,7 +207,7 @@ PP.addLesson({
       "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
       "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it. Labels can point out parts that a photo might hide, and numbers or arrows on a diagram can show an order.",
       "Features are not only on paper. A web page has its own features. Menu tabs take you to other parts of the site. A search box finds pages when you type a word. A play button starts a video or a sound. A pop-up box tells what a word means without leaving the page. A link opens a new page with more facts.",
-      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. In a video or a podcast, sounds and music can signal a change, or make listeners feel excited or calm."
+      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. Words like first, next and last help listeners keep track of the parts. In a video or a podcast, sounds and music can signal a change, or make listeners feel excited or calm."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -435,7 +435,7 @@ PP.addLesson({
         clue: "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
         hints: [
           "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
-          "Read the headings and say what each section is mostly about.",
+          "Read the box that is already in the article. What kind of fact is in it?",
           "The tail slap is the whole idea of \"Tail Talk,\" so taking it out of that section would hurt it. Check the other facts the same way."
         ],
         how: [
@@ -477,10 +477,10 @@ PP.addLesson({
           { text: "Point to the bold word lodge in his own copy of the book." },
           { text: "Skip the heading and go right on to the next sentence." }
         ],
-        clue: "In a talk, listeners cannot see headings. A speaker's words and voice have to do the heading's job.",
+        clue: "Think about the difference between reading a page and listening to someone read it.",
         hints: [
-          "In a talk, listeners cannot see headings. A speaker's words and voice have to do the heading's job.",
-          "Think about what job a heading does on the page. Then picture the classmates listening to each choice.",
+          "Think about the difference between reading a page and listening to someone read it.",
+          "Read each choice and picture what the classmates would hear.",
           "Pointing to a word in his own book does not help, because his classmates cannot see his page. Test the other choices."
         ],
         how: [
@@ -521,9 +521,9 @@ PP.addLesson({
         prompt: "Choose the words that best complete the sentence.",
         text: "Figure 1 should have the caption {0}.",
         slots: [{ options: ["How a water tower gets water to a home", "A pump at the bottom of a water tower", "Some towers hold a million gallons"], answer: 0 }],
-        clue: "A caption tells what a picture shows. A caption for a diagram tells what the whole drawing is about.",
+        clue: "A caption tells what a picture shows.",
         hints: [
-          "A caption tells what a picture shows. A caption for a diagram tells what the whole drawing is about.",
+          "A caption tells what a picture shows.",
           "Look at every labeled part of Figure 1, not just one of them.",
           "Figure 1 does show a pump, but the pump is only one part of the diagram. Check whether each other caption fits the whole diagram."
         ],
@@ -592,7 +592,7 @@ PP.addLesson({
         hints: [
           "A caption line has its own way to show sounds and its own way to show talking. Think about what the Teach page said about each one.",
           "Read the stem again, then read each of the three lines.",
-          "A name and a colon show who is talking, and a pump cannot talk, so the line that starts with PUMP: does not fit. Check the other two."
+          "Nobody is talking in this part of the video, so the narrator has nothing to say here. Check the other two lines."
         ],
         how: [
           "The stem says the pump hums and nobody is talking, so the new line must show a sound.",
@@ -651,10 +651,10 @@ PP.addLesson({
           { text: "a photo of the art show with a caption" },
           { text: "a \"Did You Know?\" box with a fun fact" }
         ],
-        clue: "Features are not only on paper. Some features work only on a screen, because they make something happen when you tap them.",
+        clue: "Features are not only on paper. Some features look the same on paper and on a screen.",
         hints: [
-          "Features are not only on paper. Some features work only on a screen, because they make something happen when you tap them.",
-          "For each feature, ask: could this be printed on paper, or does it need a screen? Choose two.",
+          "Features are not only on paper. Some features look the same on paper and on a screen.",
+          "Picture each feature on the printed paper. Then picture it on the web page. Choose two.",
           "A heading can be printed over a story on paper, so it is in both. Test each of the other features."
         ],
         how: [
@@ -665,29 +665,29 @@ PP.addLesson({
         misconception: "A common mix-up is thinking a photo or a box is only for web pages. Many features work on paper and on a screen.",
         why: "The answers are \"a play button for a video of the spring concert\" and \"underlined words that open the lunch menu page.\" A video and a link need a screen. Headings, photos with captions and text boxes can be printed on paper." },
       { id: "SK-TC1b-C14", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
-        stem: ["Kiara is giving a talk to her class about staying safe on the playground. She has three rules. She wants her listeners to know that the third rule is the most important one."],
+        stem: ["Kiara is giving a talk to her class about staying safe on the playground. She has three rules. She wants her listeners to keep track of which rule she is on."],
         prompt: "Which TWO things should Kiara do?",
         choices: [
-          { text: "Pause just before the third rule and say it slowly.", correct: true },
-          { text: "Say, \"This next rule is the one to remember,\" before it.", correct: true },
-          { text: "Print the third rule in bold on her own note card." },
-          { text: "Underline the third rule twice on her own note card." },
-          { text: "Read all three rules fast, in the very same voice." }
+          { text: "Say at the start, \"I have three rules to share.\"", correct: true },
+          { text: "Say \"first,\" \"next\" and \"last\" before the rules.", correct: true },
+          { text: "Number the three rules on her own note card." },
+          { text: "Put a box around each rule on her note card." },
+          { text: "Say all three rules in one long sentence." }
         ],
-        clue: "Listeners cannot see the page. In a talk, the speaker's voice and words do the job that bold print does on paper.",
+        clue: "Think about what Kiara's listeners can and cannot take in.",
         hints: [
-          "Listeners cannot see the page. In a talk, the speaker's voice and words do the job that bold print does on paper.",
+          "Think about what Kiara's listeners can and cannot take in.",
           "For each choice, ask: will the listeners hear it? Choose two.",
-          "Kiara's note card is only for her, so bold letters on it do not reach her listeners. Test the other choices the same way."
+          "Numbers on her own note card are only for her, so they do not reach her listeners. Test the other choices the same way."
         ],
         how: [
-          "Her listeners only hear Kiara. Anything on her own note card cannot help them.",
-          "Pausing before the rule and saying it slowly makes it stand out, the way bold print does.",
-          "Telling listeners that the next rule is the one to remember points to it before she says it.",
-          "The answers are \"Pause just before the third rule and say it slowly.\" and \"Say, \"This next rule is the one to remember,\" before it.\" Reading fast in the same voice makes every rule sound alike."
+          "Her listeners only hear Kiara, so anything on her own note card cannot help them.",
+          "Saying at the start that there are three rules tells listeners what is coming, the way headings show the parts of a page.",
+          "Saying first, next and last tells listeners which rule she is on.",
+          "The answers are \"Say at the start, \"I have three rules to share.\"\" and \"Say \"first,\" \"next\" and \"last\" before the rules.\" One long sentence runs the rules together."
         ],
-        misconception: "A common mix-up is using a print feature, like bold or underlining, to help listeners. They cannot see it.",
-        why: "The answers are \"Pause just before the third rule and say it slowly.\" and \"Say, \"This next rule is the one to remember,\" before it.\" Listeners hear only her voice and words. Bold and underlining on her own card do not reach them, and reading fast in one voice makes every rule sound the same." },
+        misconception: "A common mix-up is using a print feature, like numbers or a box on paper, to help listeners. They cannot see it.",
+        why: "The answers are \"Say at the start, \"I have three rules to share.\"\" and \"Say \"first,\" \"next\" and \"last\" before the rules.\" Listeners hear only her words, so spoken signals help them keep track. Numbers and boxes on her own card do not reach them, and one long sentence runs the rules together." },
       { id: "SK-TC1b-C15", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Here is part of the script for a school podcast about the Tigers basketball team. Words in [brackets] name sounds, and a name with a colon shows who is talking.", "[cheering crowd]", "DEV: Welcome back to Tiger Talk! Last night, our team played the Eagles.", "MAYA: It was close all game. [drumroll]", "DEV: And the final score was 40 to 38. The Tigers won!"],
         prompt: "Why does the podcast play a drumroll right before Dev tells the score?",
@@ -729,7 +729,7 @@ PP.addLesson({
       clue: "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
       hints: [
         "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
-        "Read the three section headings. Think about what each section must explain.",
+        "Read the stem again and say what the whole article is about.",
         "Where to buy a ticket is part of buying a ticket, so that fact belongs in \"Buying a Ticket.\" Check the others."
       ],
       how: [
@@ -761,27 +761,27 @@ PP.addLesson({
       ],
       why: "The answer is \"tap the play button on the video.\" The video shows the lions, and the play button starts it with its sound. The search box finds pages, the link opens the zoo map, and the Visit tab goes to another part of the site." },
     { id: "SK-TC1b-S03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      like: ["SK-TC1b-C14", "SK-TC1b-C05"],
-      stem: ["Omar is reading his report about spiders aloud to his class. In the written report, the word silk is in bold because it is the key word."],
-      prompt: "What could Omar do so his listeners know that silk is a key word?",
+      like: ["SK-TC1b-C05", "SK-TC1b-C14"],
+      stem: ["Omar is reading his report about spiders aloud to his class. In the written report, each part has a heading."],
+      prompt: "What could Omar do so his listeners know when he starts a new part?",
       choices: [
-        { text: "slow down and say, \"Here is an important word: silk.\"", correct: true },
-        { text: "make the word silk even darker on his own paper" },
-        { text: "read the word silk faster than the other words" },
-        { text: "skip the word silk so his report is shorter" }
+        { text: "say, \"Next, I will tell you how spiders spin webs.\"", correct: true },
+        { text: "make the headings even darker on his own paper" },
+        { text: "read the headings faster than the other words" },
+        { text: "skip the headings so his report is shorter" }
       ],
       clue: "Think about how Omar's classmates will take in his report.",
       hints: [
         "Think about how Omar's classmates will take in his report.",
         "For each choice, ask: will the listeners notice it?",
-        "Making the word darker on his paper does not help, because only Omar sees his paper. Test the other choices."
+        "Making the headings darker on his paper does not help, because only Omar sees his paper. Test the other choices."
       ],
       how: [
-        "Only Omar can see the bold word on his paper.",
-        "Slowing down and naming the word as important lets listeners hear that it matters.",
-        "The answer is to slow down and say, \"Here is an important word: silk.\""
+        "Only Omar can see the headings on his paper.",
+        "Saying what the next part is about lets listeners hear that a new part is starting, the way a heading does on a page.",
+        "The answer is to say, \"Next, I will tell you how spiders spin webs.\""
       ],
-      why: "The answer is to slow down and say, \"Here is an important word: silk.\" Listeners hear his voice, not his paper. Darker letters are on his own paper, and reading the word faster or skipping it makes it easy to miss." }
+      why: "The answer is to say, \"Next, I will tell you how spiders spin webs.\" Listeners hear his voice, not his paper. Darker headings are on his own paper, and reading the headings faster or skipping them makes the change easy to miss." }
   ],
   /* Hints and Show me how for items kept in practice: refs P5, P4 (core set 1) and Together P1, P8, P9, P10, P6. */
   addons: {
