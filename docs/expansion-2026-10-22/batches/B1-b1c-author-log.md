@@ -347,3 +347,14 @@ The re-review accepted 3.T.T.4.a and asked for changes to 3.T.SS.2.a. This secti
 - `node verification/check-content.js --all`: PASS, 0 failures. The only warnings in these two lessons are the similar-coverage warnings: 8 core items in 3.T.SS.2.a and 11 in 3.T.T.4.a have no similar item.
 - No passage text changed in this round, so readability is unchanged.
 - I have not reviewed my own work.
+
+## 8. Final hint fixes (B1-rereview-b1c-2.md, lead message)
+
+3.T.SS.2.a was accepted. These are two hint-only changes. No choices, keys, targets or passages changed, so nothing needs a blind re-solve.
+
+| Item | Change | Finding |
+|---|---|---|
+| SK-SS2a-C09 | Hint 3 was "Try putting the word enjoy in place of like, and then the words similar to…". It quoted the slot 0 key and produced an awkward swap. It is now the reviewer's second proposal: "If like were comparing, what would the castle be compared to? Look for a second thing in the line. If there is none, like has its other meaning." It scaffolds slot 0 without naming the key and leaves slot 1 to the child | rereview-2 S-1 |
+| SK-SS2a-P2 (Together addon) | Hint 1 "It says one thing is another" became "It says one thing is a different kind of thing", which matches the glossary and teach point 2 | lead |
+
+**Gate:** `node verification/check-content.js --all` passes with 0 failures. The only warning in 3.T.SS.2.a is the similar-coverage warning.

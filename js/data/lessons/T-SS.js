@@ -1679,7 +1679,7 @@ PP.addLesson({
         hints: [
           "Not every like makes a simile. A simile uses like to compare two different things.",
           "Read the line and try saying it with another word in place of like. Is anything being compared to anything else?",
-          "Try putting the word enjoy in place of like, and then the words similar to. Which one keeps the meaning of the line?"
+          "If like were comparing, what would the castle be compared to? Look for a second thing in the line. If there is none, like has its other meaning."
         ],
         how: [
           "In \"I like to build a castle here,\" like tells how the speaker feels about building. It means enjoy.",
@@ -1928,7 +1928,7 @@ PP.addLesson({
       misconception: "A common mix-up is reading the comparison word for word, as if there were a real drum." },
     "SK-SS2a-P2": {
       hints: [
-        "A metaphor compares two things without like or as. It says one thing is another.",
+        "A metaphor compares two things without like or as. It says one thing is a different kind of thing.",
         "Check each sentence you can choose for the words like or as. A sentence with one of them is a simile, not a metaphor.",
         "\"Rosa stood at the edge of the pool with her heart pounding like a drum\" uses like, so it is a simile. Check the other sentences the same way."
       ],
