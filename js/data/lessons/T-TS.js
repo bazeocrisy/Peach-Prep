@@ -90,6 +90,25 @@ PP.addLesson({
         ["After that, Grandpa took the pan out of the oven.", "Keisha poured the batter right on top of the melted butter.", "She did not stir it.", "She spooned the peaches over the batter, and Grandpa slid the pan back into the oven."],
         ["Later, the whole kitchen smelled sweet.", "Grandpa opened the oven door.", "The top of the cobbler was puffy and golden brown."],
         ["Finally, they let it cool, and each of them ate a big bowl.", "\"Next summer,\" Keisha said, \"I will make it for you.\""]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2b): p3 and p4 are used only by core (p3 set 2, p4 set 3).
+       Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "How Water Carves a Cave", genre: "Informational text",
+      paragraphs: [
+        ["Deep under the hills of north Georgia, there are caves big enough to walk through.", "How did these rooms of rock get there?", "Water made them, one drop at a time."],
+        ["First, rain falls and soaks into the ground.", "As the water trickles through the soil, it picks up a gas from dead leaves and roots.", "The gas turns the water a little bit sour, like very weak lemon juice."],
+        ["Next, the sour water seeps down into cracks in a rock called limestone.", "Limestone is soft enough that sour water can slowly eat it away.", "The water wears down the rock and carries tiny bits of it off."],
+        ["Over thousands of years, the cracks grow wider and wider.", "Some of them become tunnels.", "Finally, a few tunnels grow into big, hollow rooms.", "A cave has formed!"],
+        ["The water is not done yet.", "Drops still drip from the cave's ceiling.", "Each drop leaves behind a speck of rock.", "After a very long time, the specks build up into stone icicles called stalactites."]
+      ] },
+    { id: "p4", title: "How Atlanta Got Its Name", genre: "Informational text",
+      paragraphs: [
+        ["## A Stake in the Ground"],
+        ["In 1837, workers began building a railroad that would run north to Tennessee.", "They needed to mark the spot where the tracks would start.", "So they drove a tall stake into the red clay.", "People called the spot Terminus, a word that means \"the end of the line.\""],
+        ["## A Town Grows"],
+        ["Soon, people came to work on the railroad.", "Then stores, houses and a hotel went up near the tracks.", "Before long, Terminus was a busy little town.", "In 1843, the town got a new name, Marthasville.", "It was named for Martha Lumpkin, the daughter of a former governor."],
+        ["## The Name That Stuck"],
+        ["A few years later, a railroad leader said that Marthasville was too long a name.", "He suggested Atlanta, a name that came from the Western and Atlantic Railroad.", "In 1845, the town became Atlanta.", "Today, Atlanta is the capital of Georgia and one of the biggest cities in the South."]
       ] }
   ],
   practice: [
