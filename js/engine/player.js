@@ -295,13 +295,20 @@
     if (!c.st.howOpen) return;
     const it = c.item;
     const h = make("p", "how-h", "Show me how"); h.tabIndex = -1; box.appendChild(h);
-    box.appendChild(make("p", "how-warn-line", c.st.shown ? "The answer is shown, so this question counts as answer shown. You can still choose it and check." : "You already had this one right. Here are the steps."));
+    /* type-aware (reviewer fix): a written answer is compared, not chosen. Layout, top to bottom:
+       hints, these steps, the compare box (#q-cr), the feedback, then the buttons. */
+    const cr = it.type === "cr";
+    box.appendChild(make("p", "how-warn-line", c.st.shown
+      ? (cr ? "This shows one good answer, so this question counts as answer shown. Compare your answer with the sample" +
+              (c.st.crDone ? " and the checklist below." : ", then press Compare with the sample to see the checklist.")
+            : "The answer is shown, so this question counts as answer shown. You can still choose it and check.")
+      : (cr ? "You already compared your answer. Here are the steps." : "You already had this one right. Here are the steps.")));
     const ol = make("ol", "how-list");
     (Array.isArray(it.how) && it.how.length ? it.how : [it.why]).forEach(t => ol.appendChild(make("li", "", t)));
     box.appendChild(ol);
     if (it.type === "cr") {
       const a = make("p", "how-answer"); a.appendChild(make("strong", "", "One good answer: ")); a.appendChild(document.createTextNode(it.sample)); box.appendChild(a);
-      box.appendChild(make("p", "note", "Other answers can also be right. Check yours against the list."));
+      box.appendChild(make("p", "note", "Other answers can also be right."));
     } else {
       const a = make("p", "how-answer"); a.appendChild(make("strong", "", "The answer: ")); a.appendChild(document.createTextNode(T[it.type].answerText(it, run.set))); box.appendChild(a);
     }
@@ -568,9 +575,9 @@
     if (!T[item.type].answered(item, ctx.resp)) return;
     if (item.type === "cr") {
       st.crDone = true;
-      setFeedback({ kind: "help", label: "Compare with the sample", text: "One good answer is shown below. Other answers can also be right. Use the list to check your own writing." });
+      setFeedback({ kind: "help", label: "Compare with the sample", text: "One good answer and a checklist are shown above. Other answers can also be right. Use the checklist to look at your own writing." });
       persist({ t: "cr" });
-      renderCompare(c); syncControls();
+      renderCompare(c); if (c.st.howOpen) renderHow(c); syncControls();
       const h = el("q-cr").querySelector(".cr-h"); if (h) { h.tabIndex = -1; h.focus(); }
       return;
     }

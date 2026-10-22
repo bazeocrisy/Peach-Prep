@@ -15,6 +15,16 @@ This implements phases 1 to 5 of the lead's brief against `01-architecture.md`, 
 
 `01-architecture.md` was updated to state the Together exclusion, rule 10b, the warning-only similar coverage and the no-fallback similar choice.
 
+### Reviewer fix: Show me how on a written (`cr`) item
+
+Show me how used the multiple-choice line "You can still choose it and check" on written items, and the Compare feedback said the sample was "shown below" although the sample box sits above the feedback. Now:
+- Before Compare: "This shows one good answer, so this question counts as answer shown. Compare your answer with the sample, then press Compare with the sample to see the checklist."
+- After Compare (the line refreshes when Compare is pressed): "… Compare your answer with the sample and the checklist below."
+- Opened after comparing: "You already compared your answer. Here are the steps."
+- The Compare feedback: "One good answer and a checklist are shown above. …"
+
+The layout, top to bottom, is hints, Show me how steps, the compare box, the feedback, then the buttons. practice-own D.3 checks the wording and the measured positions.
+
 ## 2. Changes by file
 
 **New files**
@@ -57,7 +67,7 @@ The review-ledger and assessment-version hashes (architecture rules 11-12) and a
 
 ## 4. Tests
 
-### New suite: `verification/practice-own.py` — 65 checks, all passing
+### New suite: `verification/practice-own.py` — 66 checks, all passing
 `CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome python3 verification/practice-own.py http://127.0.0.1:8720/ <out>` (screenshots and `practice-own-results.json` in `<out>`; this run used the scratchpad, `…/scratchpad/eng/out-own/`).
 
 | Group | What it proves |
@@ -65,7 +75,7 @@ The review-ledger and assessment-version hashes (architecture rules 11-12) and a
 | A (5) | Together = P1-P3 exactly, P4-P6 only in core; set ids/next chain; addons merged; Together keeps Help me and ends at the picker |
 | B (17) | every control and label, 44px targets, blank state, wrong → retry, two-tries rule, three authored hints in order with no outline or narrowing, Show me how (steps, answer, mix-up, outline, focus) marks Answer shown permanently, history log, no `pp.progress.v1` writes, similar item separate (`s` with `for`), bank used up, uncovered item hides the button, all five statuses in words, already-finished stage, Look back, picker statuses |
 | C (4) | resume after reload at question 4 with the unchecked answer, earlier answer, choice order and hint log; `#play/…:y3/test` runs as practice and stores no pass; after all fifteen only `tried:true` is written and the list says Started |
-| D (2) | `cr` via an in-page fixture lesson: Not scored, Compare with the sample, criteria, status Written and checked, never right; resume of text and ticks |
+| D (3) | `cr` via an in-page fixture lesson: Not scored, Compare with the sample, criteria, status Written and checked, never right; resume of text and ticks; type-aware Show me how wording and true position words |
 | E (5) | blocked and full storage notices on picker and player, no stop-and-come-back promise, works for the visit, notice clears after a later save; malformed JSON, an array, and a mixed record (`__proto__`, string `w`, out-of-range `h`, out-of-range response) — honest notice, valid records cleaned, raw value untouched until a child acts |
 | F (3) | compatibility (§6); a legacy `tried` shows Practicing but does not tick the fifteen-item step; a lesson without core behaves exactly as before |
 | G (7) | all 211 standard addresses (147 leaves, 30 parents, 30 band forms, four grammar-chart levels) open with focused h1, official wording and page, no nested links, no sideways scroll at 320; rendering writes nothing; multi-lesson order; parent, GUM-level and Practices pages; every displayed code is a link and none is nested; code search for 3.T.T.1, 3-5.T.T.1, K-12.P.EICC.1, a GUM level, a GUM row and 3-5.RA.2 |

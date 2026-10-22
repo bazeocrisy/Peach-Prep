@@ -122,15 +122,15 @@ PP.addLesson({
        Never used by test. NEEDS INDEPENDENT REVIEW. Pine County and Millbrook are made-up places. */
     { id: "p3", title: "The Library on Wheels", genre: "Informational text",
       paragraphs: [
-        ["Not every family in Georgia lives close to a library.", "In some places, the library goes out on the road instead."],
+        ["Some families in Georgia live far from a library.", "In some places, the library goes out on the road to find them."],
         ["## A Long Way to Town"],
         ["The main library in Pine County is in the small town of Millbrook.", "Many families live on farms far from town.", "For them, a trip to the library can take most of a Saturday.", "To fix this problem, the county bought a bookmobile.", "Now the library comes to them once a week."],
         ["## Inside the Bookmobile"],
-        ["A bookmobile is a large bus with shelves instead of seats.", "It holds about 3,000 books, plus movies and books you can listen to.", "Low shelves in the back hold picture books for young readers.", "A small desk near the door has a computer for checking out books."],
+        ["A bookmobile is a large bus with shelves instead of seats.", "It holds about 3,000 books, plus movies and books you can listen to.", "Low shelves in the back hold picture books for young readers.", "Near the door is a small desk with a computer."],
         ["## Bookmobile or Library Building?"],
-        ["Both the bookmobile and the library building lend books for free.", "Both use the same library card, too.", "However, the library building has many more books than the bus.", "The building stays in one place, while the bookmobile comes to you."],
+        ["Both the bus and the library building lend books for free.", "Both use the same library card, too.", "However, the building has many more books than the bus.", "The building stays in one place, while the bookmobile comes to you."],
         ["## Did You Know?"],
-        ["Box: The first bookmobiles were wagons pulled by horses, more than 100 years ago."]
+        ["Box: Long ago, the first bookmobiles were wagons pulled by horses."]
       ],
       figures: [
         { after: 3, src: "assets/figures/ss1a-c-bookmobile-map.svg", label: "Figure 1", caption: "Bookmobile stops in Pine County",
@@ -138,11 +138,11 @@ PP.addLesson({
       ] },
     { id: "p4", title: "How a Wooden Bat Is Made", genre: "Informational text",
       paragraphs: [
-        ["Many young baseball players swing metal bats.", "In the big leagues, though, players must swing bats made of wood."],
+        ["Many young baseball players swing metal bats.", "But big-league players must use wooden bats.", "Each one is made with care."],
         ["## Wood or Metal?"],
         ["Both kinds of bats have a thin handle and a thick barrel.", "A metal bat is hollow inside, so it is light and easy to swing.", "A wooden bat is solid, so it feels heavier.", "Unlike a metal bat, a wooden bat can crack if the ball hits it in the wrong spot."],
         ["## From Tree to Bat"],
-        ["First, workers cut logs from ash or maple trees into long, round pieces called billets.", "Next, the billets dry for many weeks until the wood is hard.", "Then a machine spins each billet while a sharp blade shapes it into a bat.", "Finally, the bat is sanded smooth and covered with a clear, shiny coat."],
+        ["First, workers cut ash or maple logs into long, round pieces called billets.", "Next, the billets dry for many weeks until the wood is hard.", "Then a machine spins each billet while a sharp blade shapes it into a bat.", "Finally, the bat is sanded smooth and given a clear, shiny coat.", "Now it is ready to play ball!"],
         ["## Did You Know?"],
         ["Box: A big-league player can break dozens of wooden bats in one season."]
       ],
@@ -219,6 +219,456 @@ PP.addLesson({
       clue: "Think about where the babies start and where they are going. Then read each chapter title.",
       why: "The answer is \"Chapter 3: The Race to the Ocean.\" The babies hatch in a nest and must get to the water, and this chapter title names that trip to the ocean. Chapter 2 is about the nests themselves, Chapter 1 is an introduction, and Chapter 4 is about people." }
   ],
+  /* ---------- B2 (expansion 2026-10-22, author b2d; 01-architecture.md §2.2-2.3) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P5, P6 and P7
+     (they stay in practice; Practice Together is P1-P4). New ids are numbered by their place in the fifteen.
+     BROAD CODE: this lesson still covers both halves of 3.T.SS.1.a (features + chapter/section terms, and
+     "which structure is it?"). The author log names which items would move to the planned features lesson.
+     Author log: docs/expansion-2026-10-22/batches/B2-b2d-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-SS1a-P5" },
+      { ref: "SK-SS1a-P6" },
+      { ref: "SK-SS1a-P7" },
+      { id: "SK-SS1a-C04", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p1"],
+        prompt: "Choose the words that best complete the sentences.",
+        text: "The section \"Harvest Time\" comes right after \"From Flower to Peanut\" because the harvest happens {0}. So the author arranged these two sections in {1}.",
+        slots: [
+          { options: ["after the peanuts finish growing", "before the seeds are planted", "while the flowers are still open"], answer: 0 },
+          { options: ["the order of a peanut's year", "order from most to least important", "two groups that are alike and different"], answer: 0 }
+        ],
+        clue: "Whole sections can follow a pattern too. Think about when the things in each section happen.",
+        hints: [
+          "Whole sections can follow a pattern too. Think about when the things in each section happen.",
+          "Read the first sentence under each of the two headings. Each one names a time of year.",
+          "Seeds are planted at the very start, so the harvest cannot come before the planting. That settles one wrong answer in the first blank. For the second blank, ask what kind of order the two sections follow."
+        ],
+        how: [
+          "\"From Flower to Peanut\" begins in the spring, when farmers plant the seeds.",
+          "\"Harvest Time\" begins in the fall, when machines dig up the plants that have grown.",
+          "So the harvest happens after the peanuts finish growing, and the two sections are arranged in the order of a peanut's year.",
+          "Neither section is more important, and they are not two groups being compared."
+        ],
+        misconception: "A common mix-up is thinking sections can go in any order. Here the order of the sections matches the order things happen.",
+        why: "The answers are \"after the peanuts finish growing\" and \"the order of a peanut's year.\" \"From Flower to Peanut\" starts with planting in the spring, and \"Harvest Time\" starts in the fall, after the peanuts have grown. The sections follow the peanut's year from start to end." },
+      { id: "SK-SS1a-C05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
+        stem: ["The author wants to add this diagram to the article."],
+        figure: { src: "assets/figures/ss1a-c-peanut-plant.svg",
+          alt: "Diagram of a peanut plant. Above a line marked soil, the plant has green leaves and a small flower labeled flower. A thin stem labeled peg bends from the plant down into the soil. Under the soil, at the end of the peg, is a shell labeled peanut." },
+        prompt: "In which section would the diagram help readers most?",
+        choices: [
+          { text: "From Flower to Peanut", correct: true },
+          { text: "Harvest Time" },
+          { text: "Why Peanuts Help the Soil" },
+          { text: "Did You Know?" }
+        ],
+        clue: "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+        hints: [
+          "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+          "Read every label on the diagram. Then look through all of the sections for those same words.",
+          "The diagram has a label for soil, but the soil section tells what the roots add to the soil, and the diagram does not show roots. Check the other sections the same way."
+        ],
+        how: [
+          "The labels name a flower, a peg, a peanut and the soil.",
+          "\"From Flower to Peanut\" tells how a flower fades, a peg grows down into the soil, and a peanut grows at the end of the peg.",
+          "The answer is From Flower to Peanut. The diagram lets readers see the peg going under the ground.",
+          "\"Harvest Time\" is about machines, the soil section is about what roots add, and the box is one fact about Georgia."
+        ],
+        misconception: "A common mix-up is matching one word, like soil, instead of what the whole picture shows.",
+        why: "The answer is From Flower to Peanut. That section tells how a flower fades, a thin peg grows down into the soil, and a peanut grows at the end of the peg, which is just what the labels show. \"Harvest Time\" is about machines, the soil section is about roots, and the box gives one fact about Georgia." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-SS1a-C06", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Match each section of \"The Library on Wheels\" to the pattern it mainly uses. One pattern is not used.",
+        cols: ["Sequence", "Problem and solution", "Description", "Compare and contrast"],
+        rows: [
+          { text: "A Long Way to Town", answer: 1 },
+          { text: "Inside the Bookmobile", answer: 2 },
+          { text: "Bookmobile or Library Building?", answer: 3 }
+        ],
+        clue: "Clue words show the pattern, but read the whole section to see what job the words do.",
+        hints: [
+          "Clue words show the pattern, but read the whole section to see what job the words do.",
+          "Read one section at a time and find its clue words. One section has very few clue words, so ask what kind of details it gives.",
+          "\"Inside the Bookmobile\" has no time words like first or next, so it is not sequence. Decide which pattern fits each section."
+        ],
+        how: [
+          "\"A Long Way to Town\" tells a trouble, a library trip that takes most of a Saturday, and a fix, the county's bookmobile. That is problem and solution.",
+          "\"Inside the Bookmobile\" gives details about one thing: its shelves, books and desk. That is description.",
+          "\"Bookmobile or Library Building?\" uses both, however and while to tell how two things are alike and different. That is compare and contrast.",
+          "No section tells steps in order, so sequence is not used."
+        ],
+        misconception: "A common mix-up is choosing a pattern from one clue word. Words like so and but show up in many patterns, so read the whole section.",
+        why: "\"A Long Way to Town\" is problem and solution: farm families live far from the library, so the county bought a bookmobile. \"Inside the Bookmobile\" is description: it gives details about the bus. \"Bookmobile or Library Building?\" is compare and contrast: it uses both, however and while. Sequence is not used." },
+      { id: "SK-SS1a-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Look at Figure 1. This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How does the map help a reader understand the section \"A Long Way to Town\"?",
+          choices: [
+            { text: "It shows how far the bookmobile stops are from the library.", correct: true },
+            { text: "It shows what the shelves inside the bookmobile look like." },
+            { text: "It shows which day of the week the bus visits each stop." },
+            { text: "It shows how many books the bookmobile can carry at once." }
+          ] },
+        partB: { prompt: "Which sentence from the article does the map help explain?",
+          choices: [
+            { text: "\"Many families live on farms far from town.\"", correct: true },
+            { text: "\"It holds about 3,000 books, plus movies and books you can listen to.\"" },
+            { text: "\"Low shelves in the back hold picture books for young readers.\"" },
+            { text: "\"Both use the same library card, too.\"" }
+          ] },
+        clue: "A map shows where places are. Ask what the map lets you see that is hard to picture from the words alone.",
+        hints: [
+          "A map shows where places are. Ask what the map lets you see that is hard to picture from the words alone.",
+          "Use the key to find the black square and the white circles. Then use the scale bar to think about the space between them.",
+          "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. For Part B, choose the sentence that matches your Part A answer."
+        ],
+        how: [
+          "The black square in Millbrook is the library building. The white circles near the corners of the county are the bookmobile stops.",
+          "The scale bar shows 5 miles, and each stop is more than two scale bars from Millbrook. The stops are far from the library.",
+          "Part A: It shows how far the bookmobile stops are from the library. Part B: \"Many families live on farms far from town.\"",
+          "The map shows no shelves, no days and no number of books, and it says nothing about library cards."
+        ],
+        misconception: "A common mix-up is picking something true about the bookmobile that the map does not show.",
+        why: "Part A: It shows how far the bookmobile stops are from the library. Part B: \"Many families live on farms far from town.\" The map puts the library in the middle of the county and the stops near the edges, more than 10 miles away. It shows no shelves, days, books or cards." },
+      { id: "SK-SS1a-C08", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        stem: ["The author wants to add this sentence to the article:", "There is even a small rug where children can sit and read."],
+        prompt: "Choose the words that best complete the sentence.",
+        text: "The new sentence belongs in the section {0}.",
+        slots: [{ options: ["Inside the Bookmobile", "A Long Way to Town", "Bookmobile or Library Building?"], answer: 0 }],
+        clue: "To decide where a sentence belongs, find the section whose heading and sentences tell about the same thing.",
+        hints: [
+          "To decide where a sentence belongs, find the section whose heading and sentences tell about the same thing.",
+          "Ask where the rug in the new sentence would be. Then read all three headings and the sentences under them.",
+          "The new sentence says nothing about how far away the library is, so it does not fit \"A Long Way to Town.\" Check the other two sections."
+        ],
+        how: [
+          "The new sentence tells about a rug where children sit and read. The rug would be on the bus.",
+          "One section tells about the shelves, the picture books and the desk on the bus.",
+          "The answer is Inside the Bookmobile.",
+          "The other two sections tell about the long trip to town and about how the bus and the building compare."
+        ],
+        why: "The answer is Inside the Bookmobile. That section tells what is on the bus: shelves, picture books and a desk. A rug where children sit and read is one more thing on the bus. The other sections tell about the trip to town and compare the bus with the building." },
+      { id: "SK-SS1a-C09", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+        stem: ["Text 1: Getting Ready for Art Night", "First, Ms. Hill's class hung their paintings in the hall. Next, they set out paper and crayons on the tables. Then they taped up signs with arrows. Last, they opened the doors for the families.", "Text 2: Why Art Night Moved", "A storm knocked out the power at school on Thursday. Because the hall was dark, art night could not happen that evening. As a result, it moved to the next Tuesday."],
+        prompt: "How are the two texts organized? Choose TWO answers.",
+        choices: [
+          { text: "Text 1 tells the steps in the order they happened.", correct: true },
+          { text: "Text 2 tells what happened and why.", correct: true },
+          { text: "Text 1 tells a problem and how it was fixed." },
+          { text: "Text 2 compares two different nights." },
+          { text: "Both texts describe what the hall looks like." }
+        ],
+        clue: "Look for clue words in each text. They tell you how the author put the ideas together.",
+        hints: [
+          "Look for clue words in each text. They tell you how the author put the ideas together.",
+          "Read Text 1 and list its clue words. Then read Text 2 and list its clue words. Choose two.",
+          "Text 2 names two days, Thursday and Tuesday, but it never says how they are alike or different. Decide which pattern each text uses."
+        ],
+        how: [
+          "Text 1 uses First, Next, Then and Last. It tells the steps in order.",
+          "Text 2 uses because and as a result. It tells what happened, a storm, and why art night moved.",
+          "The answers are \"Text 1 tells the steps in the order they happened.\" and \"Text 2 tells what happened and why.\"",
+          "Nothing goes wrong in Text 1, Text 2 does not compare the two nights, and neither text describes the hall."
+        ],
+        misconception: "A common mix-up is thinking two texts on the same topic must use the same pattern.",
+        why: "The answers are \"Text 1 tells the steps in the order they happened.\" and \"Text 2 tells what happened and why.\" Text 1 uses First, Next, Then and Last. Text 2 uses because and as a result. Nothing goes wrong in Text 1, Text 2 does not compare the nights, and neither text describes the hall." },
+      { id: "SK-SS1a-C10", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"], pick: 2,
+        stem: ["\"The Library on Wheels\" is Chapter 4 of a book called Libraries Near and Far."],
+        prompt: "Which TWO sentences use the words chapter and section correctly?",
+        choices: [
+          { text: "Chapter 4 has a section called \"Inside the Bookmobile.\"", correct: true },
+          { text: "The section \"A Long Way to Town\" is part of Chapter 4.", correct: true },
+          { text: "The book Libraries Near and Far is one section of Chapter 4." },
+          { text: "\"Did You Know?\" is the title of Chapter 4." },
+          { text: "Each section of Chapter 4 is a different book." }
+        ],
+        clue: "A book is split into chapters, and a chapter can be split into smaller sections. Each section often has its own heading.",
+        hints: [
+          "A book is split into chapters, and a chapter can be split into smaller sections. Each section often has its own heading.",
+          "The stem tells which chapter the article is. The headings in the article name its parts. Choose two.",
+          "\"Did You Know?\" is the heading of a box inside the article, not the title of a whole chapter. For each other sentence, ask which part is bigger and which part is inside it."
+        ],
+        how: [
+          "The book is the biggest part. Chapter 4 is one part of the book.",
+          "The headings in the article name sections inside Chapter 4.",
+          "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\"",
+          "A book is not a section of a chapter, the box is not a chapter, and the sections are not separate books."
+        ],
+        misconception: "A common mix-up is swapping the two words. A chapter is the bigger part, and sections are inside it.",
+        why: "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\" The book holds chapters, and Chapter 4 holds sections with headings. The book is not a section, \"Did You Know?\" is a box, and the sections are not books." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-SS1a-C11", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4"],
+        prompt: "The author tells how a wooden bat is made in time order. Why is time order a good choice for the section \"From Tree to Bat\"?",
+        choices: [
+          { text: "The wood must dry before it is shaped, so the steps must come in order.", correct: true },
+          { text: "Time order shows readers which kind of bat is easier to swing." },
+          { text: "Time order explains why a wooden bat can crack in the wrong spot." },
+          { text: "Time order tells readers where ash and maple trees grow best." }
+        ],
+        clue: "Authors choose a pattern that fits what they want to explain. Think about why this information is told in time order.",
+        hints: [
+          "Authors choose a pattern that fits what they want to explain. Think about why this information is told in time order.",
+          "Reread the section \"From Tree to Bat\" from the first step to the last.",
+          "Which bat is easier to swing is told in \"Wood or Metal?\", not in the time-order section. Test the other choices against the steps."
+        ],
+        how: [
+          "The section starts with logs, then the billets dry, then a blade shapes them, and last the bat is sanded and coated.",
+          "The billets must dry until the wood is hard before the blade shapes them, and a bat cannot be sanded before it has a shape. The order matters.",
+          "The answer is \"The wood must dry before it is shaped, so the steps must come in order.\"",
+          "Swinging and cracking are told in \"Wood or Metal?\", and the article never says where the trees grow."
+        ],
+        misconception: "A common mix-up is choosing a fact from a different section. The question asks why time order fits this section.",
+        why: "The answer is \"The wood must dry before it is shaped, so the steps must come in order.\" Making a bat goes from logs, to drying, to shaping, to sanding, and each step needs the one before it. Swinging and cracking are told in \"Wood or Metal?\", and the article never says where the trees grow." },
+      { id: "SK-SS1a-C12", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
+        prompt: "Look at Figure 1. Which sentence from the article does the diagram help a reader picture? Choose the sentence in the passage.",
+        targets: ["p4:3:1", "p4:3:2", "p4:3:4", "p4:5:1", "p4:5:4"],
+        answer: ["p4:3:1"], pick: 1,
+        clue: "A diagram is a drawing with labels. Match the labels to the words in the article.",
+        hints: [
+          "A diagram is a drawing with labels. Match the labels to the words in the article.",
+          "Read the three labels in Figure 1. Then look through both sections for a sentence that names the same parts.",
+          "The sentence about a metal bat being hollow tells about the inside of a bat, and Figure 1 shows only the outside. Check the other sentences: which one names parts you can see?"
+        ],
+        how: [
+          "Figure 1 labels the knob, the handle and the barrel.",
+          "One sentence names two of those parts, a thin handle and a thick barrel, so the diagram helps a reader see them.",
+          "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\"",
+          "The hollow inside, the wrong spot, the billets and the shiny coat are not shown in Figure 1."
+        ],
+        why: "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\" Figure 1 labels the handle and the barrel, so a reader can see how thin and thick they are. The diagram does not show the inside of a bat, where a bat cracks, billets or the clear coat." },
+      { id: "SK-SS1a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Kids at Oak Ridge Elementary kept losing their jackets on the playground. At first, the teachers put up a sign that said, \"Check for your jacket before you go in.\" But the jackets kept piling up by the fence. Then a third-grade class built a lost-and-found box and painted each class's name on a shelf. After that, most jackets found their way home."],
+        prompt: "Which pattern does the author mainly use in this paragraph?",
+        choices: [
+          { text: "a trouble and the tries to fix it", correct: true },
+          { text: "the steps for doing a job, in order" },
+          { text: "how two things are alike and different" },
+          { text: "details that describe one place" }
+        ],
+        clue: "Clue words like then and after that show up in many patterns. Read the whole paragraph and ask what the author is mainly telling about.",
+        hints: [
+          "Clue words like then and after that show up in many patterns. Read the whole paragraph and ask what the author is mainly telling about.",
+          "Read the paragraph from the first sentence to the last. What is it mostly about, from start to end?",
+          "The paragraph tells about one playground and one school, not two things side by side, so it is not comparing. Test the other three choices against the whole paragraph."
+        ],
+        how: [
+          "The first sentence tells a trouble: kids keep losing their jackets.",
+          "The sign is a first try, but the jackets keep piling up. Then the class builds a lost-and-found box, and it works.",
+          "The answer is \"a trouble and the tries to fix it.\" The time words show the order of the tries.",
+          "It is not steps for doing a job, it does not compare two things, and it does not mainly describe a place."
+        ],
+        misconception: "Some clue words are tricky: then and after that show up in lots of kinds of text. Ask whether the author is showing what goes wrong or the steps of a job.",
+        why: "The answer is \"a trouble and the tries to fix it.\" Kids keep losing jackets, a sign does not work, and a lost-and-found box does. The time words show the order of the tries, but the paragraph is not the steps for a job. It does not compare two things or mainly describe a place." },
+      { id: "SK-SS1a-C14", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Here is part of the table of contents from a book called Camping in Georgia.", "Chapter 1: Getting Ready, page 1", "• Packing Your Bag, page 2", "• Choosing a Tent, page 5", "Chapter 2: At the Campsite, page 8", "• Building a Safe Campfire, page 9", "• Storing Food Away from Bears, page 12", "Chapter 3: Exploring, page 15", "• Reading a Trail Map, page 16", "• Animals You Might See, page 19"],
+        prompt: "Jada's family is camping in the mountains. She wants to know where to put their snacks at night so a hungry bear cannot get them. Choose the words that best complete the sentence.",
+        text: "Jada should read Chapter {0}, in the section that starts on page {1}.",
+        slots: [
+          { options: ["2", "1", "3"], answer: 0 },
+          { options: ["12", "19", "2"], answer: 0 }
+        ],
+        clue: "A table of contents lists the chapters and the sections inside them. Read each title and ask what that part of the book is about.",
+        hints: [
+          "A table of contents lists the chapters and the sections inside them. Read each title and ask what that part of the book is about.",
+          "Think about where the family will be when they put their snacks away at night. Then read every section title, not only the chapter titles.",
+          "\"Animals You Might See\" names animals, but it is in the chapter about exploring, not about food. Check the other sections the same way."
+        ],
+        how: [
+          "Jada needs to know where to put food at night so a bear cannot get it.",
+          "Chapter 2, \"At the Campsite,\" has a section called \"Storing Food Away from Bears.\" It starts on page 12.",
+          "So she should read Chapter 2, in the section that starts on page 12.",
+          "\"Packing Your Bag\" is about getting ready at home, and \"Animals You Might See\" is about what you might spot while exploring."
+        ],
+        misconception: "A common mix-up is choosing a title that shares one word with the question, like animals or bag, instead of the one whose whole topic fits.",
+        why: "The answers are 2 and 12. Chapter 2, \"At the Campsite,\" has the section \"Storing Food Away from Bears,\" which starts on page 12. \"Animals You Might See\" is about spotting animals while exploring, and \"Packing Your Bag\" is about getting ready." },
+      { id: "SK-SS1a-C15", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Ana is writing a report about a state park. She has a photo of a waterfall, facts about the trails, and a few surprising facts."],
+        prompt: "Match each thing Ana wants to show readers to the feature that would show it best. Use each feature once.",
+        cols: ["Heading", "Map", "Caption", "Text box"],
+        rows: [
+          { text: "what each part of her report will be about", answer: 0 },
+          { text: "where the three hiking trails are in the park", answer: 1 },
+          { text: "what is happening in her photo of the waterfall", answer: 2 },
+          { text: "one surprising fact that does not fit in any paragraph", answer: 3 }
+        ],
+        clue: "Each feature has its own job. Ask what each feature helps a reader see or find.",
+        hints: [
+          "Each feature has its own job. Ask what each feature helps a reader see or find.",
+          "Read each thing Ana wants to show. Picture her report: where on the page would each one go?",
+          "A caption goes with a picture, so it fits the row about her photo. Decide where the other three features go."
+        ],
+        how: [
+          "Where the trails are in the park is about places, so a map shows it best.",
+          "A caption tells what a photo shows, so it goes with the waterfall photo.",
+          "A heading tells what each part of the report is about.",
+          "A text box sets one extra fact apart from the paragraphs."
+        ],
+        why: "A heading tells what each part of the report will be about. A map shows where the trails are. A caption tells what is happening in the waterfall photo. A text box sets apart a surprising fact that does not fit in a paragraph." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short text. Each `like` lists only the
+     core items it really practises, so some core items have no extra question. */
+  similar: [
+    { id: "SK-SS1a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C04"],
+      stem: ["An article called \"Growing Tomatoes\" has three sections, in this order:", "Planting the Seeds", "Watering and Weeding", "Picking Time"],
+      prompt: "Why did the author put the sections in this order?",
+      choices: [
+        { text: "They follow the order things happen as tomatoes grow.", correct: true },
+        { text: "They go from the most fun part to the least fun part." },
+        { text: "They compare two different ways to grow tomatoes." },
+        { text: "They tell a problem first and then how to fix it." }
+      ],
+      clue: "Whole sections can have a pattern too. Ask when each part happens.",
+      hints: [
+        "Whole sections can have a pattern too. Ask when each part happens.",
+        "Think about what a gardener does at the start of the season and what a gardener does at the end.",
+        "No heading names a trouble, so the order is not a problem and then a fix. Test the other choices."
+      ],
+      how: [
+        "Planting comes first, watering and weeding come while the plants grow, and picking comes last.",
+        "The sections follow that order.",
+        "The answer is \"They follow the order things happen as tomatoes grow.\"",
+        "Nothing ranks the parts as fun, nothing compares two ways, and no heading names a problem."
+      ],
+      why: "The answer is \"They follow the order things happen as tomatoes grow.\" Seeds are planted first, the plants are watered and weeded while they grow, and the tomatoes are picked last." },
+    { id: "SK-SS1a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C06", "SK-SS1a-C13"],
+      stem: ["Hot lunch and a packed lunch both give you a meal at school. Both can have fruit and milk. However, hot lunch is cooked in the school kitchen, while a packed lunch is made at home. Then, at lunchtime, you eat with your class either way."],
+      prompt: "Which pattern does the author mainly use in this paragraph?",
+      choices: [
+        { text: "how two things are alike and different", correct: true },
+        { text: "a trouble and how it gets fixed" },
+        { text: "steps in the order they happen" },
+        { text: "what happened and why" }
+      ],
+      clue: "Clue words show the pattern, but read the whole paragraph to see what job the words do.",
+      hints: [
+        "Clue words show the pattern, but read the whole paragraph to see what job the words do.",
+        "Count the topics the paragraph is about. Then list its clue words.",
+        "The word then appears once, but the paragraph does not tell steps for a job. Test the other choices."
+      ],
+      how: [
+        "The paragraph is about two things: hot lunch and a packed lunch.",
+        "Both tells how they are alike. However and while tell how they are different.",
+        "The answer is \"how two things are alike and different.\""
+      ],
+      misconception: "A common mix-up is choosing a pattern from one clue word, like then. Read the whole paragraph.",
+      why: "The answer is \"how two things are alike and different.\" The paragraph is about hot lunch and a packed lunch. Both shows how they are alike, and however and while show how they are different." },
+    { id: "SK-SS1a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C15", "SK-SS1a-P6"],
+      stem: ["Jamal is writing a report about the city zoo. He wants readers to see where the elephant barn is and how to walk there from the front gate."],
+      prompt: "Which feature should Jamal add to his report?",
+      choices: [
+        { text: "a map with a key", correct: true },
+        { text: "a caption under a photo" },
+        { text: "a box with a fun fact" },
+        { text: "a heading for each section" }
+      ],
+      clue: "Each feature has its own job. Ask which feature shows where places are.",
+      hints: [
+        "Each feature has its own job. Ask which feature shows where places are.",
+        "Jamal wants readers to find their way from one place to another. Which feature helps with that?",
+        "A heading tells what a section is about, but it cannot show a path. Test the other choices."
+      ],
+      how: [
+        "Jamal wants to show where the barn is and how to get there from the gate.",
+        "A map shows where places are, and a key explains its symbols.",
+        "The answer is \"a map with a key.\""
+      ],
+      why: "The answer is \"a map with a key.\" A map shows where the elephant barn and the gate are, so readers can see the path between them. A caption, a fun-fact box and headings cannot show a path." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P5-P7 (core set 1) and Together P1-P4. */
+  addons: {
+    "SK-SS1a-P1": {
+      hints: [
+        "Look for clue words. They tell you how the author put the ideas together.",
+        "Read the first word or two of each sentence in \"From Flower to Peanut.\"",
+        "The section never names a second kind of plant, so it is not comparing. Ask what the clue words tell you about time."
+      ],
+      how: [
+        "The sentences start with First, Next, Then and Finally.",
+        "Those clue words show things happening in order: seed, flower, peg, peanut.",
+        "The answer is \"It tells the steps in the order they happen.\"",
+        "Why peanuts help the soil is a different section, and no problem gets fixed here."
+      ],
+      misconception: "A common mix-up is naming what the section is about, peanuts, instead of how it is put together." },
+    "SK-SS1a-P2": {
+      hints: [
+        "Cause and effect tells what happened and why. Find the cause first, then look for what happens because of it.",
+        "All three sentences in the section are choices. Which one tells what the roots do?",
+        "The sentence about roots tells the cause, not what happens later. Look for a clue word that links back to the cause."
+      ],
+      how: [
+        "The roots work with tiny living things to add plant food to the soil. That is the cause.",
+        "The clue word because links back to it, and the sentence tells what happens the next year.",
+        "The answer is \"Because the soil has more plant food, crops such as cotton and corn often grow better in that field the next year.\"",
+        "The first sentence only says peanut plants are good for the soil. It does not tell what happens later."
+      ] },
+    "SK-SS1a-P3": {
+      hints: [
+        "A heading names what a section is mostly about.",
+        "Read every sentence under \"Harvest Time.\" What are the farmers and machines doing?",
+        "Peanut flowers are told about in another section, before the harvest. Ask what all the sentences under this heading describe."
+      ],
+      how: [
+        "Under \"Harvest Time,\" a machine digs up the plants, the peanuts dry, and another machine picks them off.",
+        "All of that is gathering the crop. Harvest means gathering a crop.",
+        "The answer is how farmers gather the peanuts.",
+        "The soil and the flowers are told about in other sections."
+      ] },
+    "SK-SS1a-P4": {
+      hints: [
+        "Ask what each set of clue words helps an author do.",
+        "Start with the set of words that tells about time. Then find the set that tells a reason.",
+        "Both and alike show ways things are the same, so that set is not about time. Decide where the last three sets go."
+      ],
+      how: [
+        "First, next and finally tell order: sequence.",
+        "Because, so and as a result tell why: cause and effect.",
+        "Both, alike and but tell how things are the same and different: compare.",
+        "The trouble was and to fix it tell about a problem and a solution."
+      ] },
+    "SK-SS1a-P5": {
+      hints: [
+        "A text box sits apart from the sections. Ask what kind of information it gives.",
+        "Read the words in the box. Then ask whether any section tells that same information.",
+        "The steps for planting are told in \"From Flower to Peanut,\" not in the box. Test the other choices against the box's one sentence."
+      ],
+      how: [
+        "The box has one sentence: Georgia grows more peanuts than any other state.",
+        "No section tells that fact, and it is not a step or a reason. It is an extra fact.",
+        "The answer is \"to add an interesting fact about peanuts in Georgia.\"",
+        "The box does not tell steps, explain why peanuts grow under the ground, or compare plants."
+      ],
+      misconception: "A common mix-up is thinking a box repeats the main idea. A box usually adds something extra." },
+    "SK-SS1a-P6": {
+      hints: [
+        "A map shows where places are. Ask what the map shows that the words do not tell.",
+        "Read the key, then find what it marks on the map. Then check whether any section tells you the same thing.",
+        "The steps for growing a peanut are told in words, and a map cannot show steps. Check the other choices the same way: is it on the map, and is it already in the words?"
+      ],
+      how: [
+        "The key says the striped area is peanut farms. The stripes cover the south part of Georgia.",
+        "The article says many Georgia farmers grow peanuts, but it never says where.",
+        "The answer is \"which part of Georgia the peanut farms are in.\"",
+        "The steps, the soil and the drying time are all told in words, and the map shows none of them."
+      ] },
+    "SK-SS1a-P7": {
+      hints: [
+        "A table of contents lists the chapters. Each chapter title tells what that part of the book is about.",
+        "Think about where baby sea turtles start and where they need to go. Then read every chapter title.",
+        "Chapter 2 is about the nests themselves, not about what happens after the babies hatch. Test each of the other titles against the question."
+      ],
+      how: [
+        "The babies hatch in a nest on the sand and must get to the water.",
+        "Chapter 3's title names a trip to the ocean.",
+        "The answer is \"Chapter 3: The Race to the Ocean.\"",
+        "Chapter 1 meets the turtles, Chapter 2 is about the nests, and Chapter 4 is about people."
+      ],
+      misconception: "A common mix-up is choosing a chapter that shares one word with the question, like nest, instead of the one whose whole topic fits." }
+  },
   test: [
     { id: "SK-SS1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "How are the sections \"A Big Problem\" and \"Working Together\" connected?",
@@ -877,14 +1327,14 @@ PP.addLesson({
   teach: {
     big: "Authors use special language to help you picture things: a simile compares with like or as, a metaphor says one thing is another, and an idiom is a saying that means something different from its words.",
     points: [
-      "A simile compares two different things using like or as. \"The lake was as smooth as glass\" means the lake was very smooth and flat.",
+      "A simile compares two different kinds of things using like or as. \"The lake was as smooth as glass\" means the lake was very smooth and flat.",
       "A metaphor compares without like or as. It says one thing is another. \"The classroom was a zoo\" means the room was loud and wild. But \"The classroom was noisy\" is not a metaphor, because it just tells a fact.",
       "An idiom is a saying you cannot read word for word. \"It's raining cats and dogs\" means it is raining very hard.",
       "To find the meaning, ask: How are the two things alike? Then use the sentences around it as clues. Last, ask why the author chose it: what does it help you picture or feel? Stories, poems, letters and articles all use figurative language.",
       "Not every like or as makes a simile. \"I like pizza\" does not compare anything, and \"My bike is as big as yours\" compares two things of the same kind."
     ],
     words: [
-      { term: "simile", means: "a comparison that uses like or as" },
+      { term: "simile", means: "a comparison of two different kinds of things that uses like or as" },
       { term: "metaphor", means: "a comparison that says one thing is another" },
       { term: "idiom", means: "a saying that means something different from its words" }
     ],
@@ -902,6 +1352,7 @@ PP.addLesson({
       steps: [
         "Look for like or as. The sentence says as soft as a cloud, so it is a simile.",
         "Name the two things being compared: the dog's fur and a cloud.",
+        "Check that they are different kinds of things. Fur and a cloud are. \"Her fur was as soft as her sister's\" compares two of the same kind of thing, so it would not be a simile.",
         "Ask how they are alike. Clouds look very soft and fluffy."
       ],
       answer: "It is a simile. It means the dog's fur was very soft."
@@ -962,7 +1413,7 @@ PP.addLesson({
     { id: "p4", title: "Beach Morning", byline: "", genre: "Poem",
       lines: [
         ["The ocean is a sleepy cat", "That stretches on the sand.", "It purrs and curls around my feet", "And licks my open hand."],
-        ["The gulls are like a recess yard.", "They squawk and swoop and call.", "They chase each other round and round", "Like kids who chase a ball."],
+        ["The gulls are like a recess crowd.", "They squawk and swoop and call.", "They chase each other round and round", "Like kids who chase a ball."],
         ["I like to build a castle here", "With towers in a row.", "A wave rolls in and knocks it flat.", "\"Chin up!\" says Grandpa Joe."],
         ["We build again up by the dunes", "And pat each tower tight.", "It is still standing after lunch,", "And Grandpa says, \"Just right!\""]
       ] },
@@ -972,7 +1423,7 @@ PP.addLesson({
         ["An anole is a little magician.", "On a sunny leaf, its skin is bright green.", "When the air turns cool, or when the lizard feels scared, its skin can turn brown in just a few minutes."],
         ["Anoles are fast hunters.", "An anole sits very still and watches.", "When a fly lands nearby, the lizard shoots forward like a rubber band snapping.", "Then it gulps down its meal."],
         ["A male anole has a pink flap of skin under his chin.", "To warn another male to stay away, he puffs it out and bobs his head up and down.", "The flap is a bright stop sign that says, \"This spot is mine!\""],
-        ["Next time you are outside, keep your eyes peeled.", "A brown anole on a tree trunk can be very hard to spot."]
+        ["Next time you are outside, keep your eyes peeled.", "An anole that has turned brown on a tree trunk can be very hard to spot."]
       ] }
   ],
   practice: [
@@ -1056,19 +1507,19 @@ PP.addLesson({
             { text: "\"She had come in third place!\"", correct: true },
             { text: "\"It was her very first swim meet.\"" },
             { text: "\"She did not look at the other swimmers.\"" },
-            { text: "\"She kicked hard.\"" }
+            { text: "\"When Rosa touched the wall, she pulled off her goggles.\"" }
           ] },
         clue: "A comparison with like helps you picture something. Ask how the two things are alike, then look for a clue about why it is happening.",
         hints: [
           "A comparison with like helps you picture something. Ask how the two things are alike, then look for a clue about why it is happening.",
-          "Picture a ball bouncing up and down. Then reread what happens to Rosa just before her brother starts jumping.",
+          "Picture a ball bouncing up and down. Then reread paragraph 4 from the beginning.",
           "There is no ball game in the stands, so the words are about how her brother acts, not what he plays. For Part B, the sentence you choose must match your Part A answer."
         ],
         how: [
           "A bouncing ball goes up and down again and again, fast and full of energy.",
           "Paragraph 4 says Rosa touched the wall and came in third place, and the sentence ends with an exclamation mark. Right after that, her brother jumps up and down.",
           "Part A: He is thrilled about how Rosa did in the race. Part B: \"She had come in third place!\"",
-          "He is not playing a game, and nothing shows he is upset or bored. The other sentences tell about the start of the meet and the race itself."
+          "He is not playing a game, and nothing shows he is upset or bored. Pulling off her goggles does not tell how the race went, and the other sentences tell about the start of the meet and the race itself."
         ],
         misconception: "A common mix-up is reading the comparison word for word, as if there were a real ball.",
         why: "Part A: He is thrilled about how Rosa did in the race. Part B: \"She had come in third place!\" A bouncing ball is full of energy. Right after Rosa finds out she came in third, her brother jumps up and down, which shows how excited he is for her. There is no ball game, and nothing shows he is upset or bored." },
@@ -1083,8 +1534,8 @@ PP.addLesson({
         clue: "Authors choose comparisons for a reason. Ask what the comparison helps you feel, and how it fits what is happening in the story.",
         hints: [
           "Authors choose comparisons for a reason. Ask what the comparison helps you feel, and how it fits what is happening in the story.",
-          "Reread paragraph 1. How is Rosa feeling as she stands at the edge of the pool?",
-          "The pool has not frozen, because Rosa dives right in. Ask which of the other choices fits the way Rosa feels in paragraph 1."
+          "Reread paragraph 1. What else does the author tell you about Rosa there?",
+          "The pool has not frozen, because Rosa dives right in. Check each choice that is left against paragraph 1."
         ],
         how: [
           "In paragraph 1, it is Rosa's very first meet, and her heart is pounding. She is nervous.",
@@ -1104,9 +1555,9 @@ PP.addLesson({
           { text: "This pool is as long as the pool at my school." },
           { text: "Ms. Ellis said I swam faster than last week." }
         ],
-        clue: "A simile compares two different things using like or as. Not every like or as is a simile.",
+        clue: "A simile compares two different kinds of things using like or as. Not every like or as is a simile.",
         hints: [
-          "A simile compares two different things using like or as. Not every like or as is a simile.",
+          "A simile compares two different kinds of things using like or as. Not every like or as is a simile.",
           "For each sentence, find like or as. Then ask: are two different kinds of things being compared? Choose two.",
           "\"I like swimming on Saturday mornings best\" uses like to mean enjoy, so it compares nothing. Test the other sentences: does each one compare two different kinds of things, or two of the same kind?"
         ],
@@ -1124,22 +1575,22 @@ PP.addLesson({
         text: "\"Knock it out of the park\" is {0}. Coach Ellis means that Rosa {1}.",
         slots: [
           { options: ["an idiom", "a simile", "a metaphor"], answer: 0 },
-          { options: ["will do even better at the next meet", "will hit a ball far over a fence", "will swim in a pool inside a park"], answer: 0 }
+          { options: ["will do even better at the next meet", "will hit a ball far over a fence", "should rest and skip the next meet"], answer: 0 }
         ],
         clue: "First decide what kind of language the words are: a comparison with like or as, a comparison that says one thing is another, or a saying. Then use what is happening to find the meaning.",
         hints: [
           "First decide what kind of language the words are: a comparison with like or as, a comparison that says one thing is another, or a saying. Then use what is happening to find the meaning.",
-          "Look at what Coach Ellis does and says first: a high five and \"Keep practicing.\" Then think about what she hopes will happen at the next meet.",
-          "There is no ball and no park at a swim meet, and nothing is joined by like or as. That tells you the kind of language. For the second blank, ask what a coach who gives a high five expects."
+          "Reread everything Coach Ellis does and says, not just the saying.",
+          "Nothing is joined by like or as, so it is not a simile. Decide whether it says one thing is another, or is a saying."
         ],
         how: [
           "Rosa is not hitting a ball, and the meet is not in a park, so the words do not mean what they say. There is no like or as, and it does not say one thing is another.",
           "So it is an idiom, a saying with a different meaning.",
-          "Coach Ellis gives a high five and tells Rosa to keep practicing. She thinks Rosa will do great.",
+          "Coach Ellis gives a high five and tells Rosa to keep practicing. She thinks Rosa will do great, so she does not want her to skip a meet.",
           "The answers are an idiom and will do even better at the next meet."
         ],
         misconception: "A common mix-up is reading the saying word for word, as if Rosa would really hit a ball.",
-        why: "The answers are an idiom and will do even better at the next meet. \"Knock it out of the park\" is a saying that means do something very well. There is no ball or park at a swim meet, and Coach Ellis is cheering Rosa on with a high five." }
+        why: "The answers are an idiom and will do even better at the next meet. \"Knock it out of the park\" is a saying that means do something very well. There is no ball or park at a swim meet, and Coach Ellis is cheering Rosa on with a high five and \"Keep practicing,\" not telling her to skip a meet." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-SS2a-C06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: ["p4"],
@@ -1153,8 +1604,8 @@ PP.addLesson({
         clue: "A metaphor says one thing is another. Ask what the two things have in common.",
         hints: [
           "A metaphor says one thing is another. Ask what the two things have in common.",
-          "Picture a sleepy cat curling around your legs. How does it move, and how hard does it push?",
-          "There is no real cat on the beach, so one choice reads the words too literally. Of the others, ask which kind of water a sleepy cat would be like."
+          "Picture a sleepy cat. Then reread stanza 1 for what the ocean does.",
+          "There is no real cat on the beach, so one choice reads the words too literally. Test the choices that are left against stanza 1."
         ],
         how: [
           "A sleepy cat moves slowly and gently. It stretches out, purrs and curls around you.",
@@ -1183,7 +1634,7 @@ PP.addLesson({
         clue: "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
         hints: [
           "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
-          "Reread stanza 3. What happens to the castle right before Grandpa Joe speaks?",
+          "Reread stanza 3 and the lines around \"Chin up!\"",
           "Grandpa is not asking anyone to look at the sky, and the gulls are only in stanza 2. For Part B, the line you choose must match your Part A answer."
         ],
         how: [
@@ -1206,17 +1657,17 @@ PP.addLesson({
         clue: "A simile compares two different things using like. Ask how the two things are alike.",
         hints: [
           "A simile compares two different things using like. Ask how the two things are alike.",
-          "Think about what a recess yard sounds like, and what kids chasing a ball look like. Choose two.",
+          "Reread stanza 2. What do the gulls do in each line? Choose two.",
           "The gulls are not real children, so they do not go to school. Check each other choice against what kids at recess are like."
         ],
         how: [
-          "A recess yard is full of shouting. That shows the gulls are noisy: they squawk and call.",
+          "A recess crowd is full of shouting. That shows the gulls are noisy: they squawk and call.",
           "Kids chasing a ball run fast and play. That shows how the gulls swoop and chase each other.",
           "The answers are \"The gulls make a lot of noise\" and \"The gulls move around fast and playfully.\"",
           "The gulls are birds, not students, and the poem never says they are hungry or scared."
         ],
         misconception: "A common mix-up is choosing a sentence that takes the comparison word for word, as if the gulls really went to school.",
-        why: "The answers are \"The gulls make a lot of noise\" and \"The gulls move around fast and playfully.\" A recess yard is loud, and kids chasing a ball move fast and play, just like the squawking, swooping gulls. The gulls do not go to school, and the poem never says they are hungry or scared." },
+        why: "The answers are \"The gulls make a lot of noise\" and \"The gulls move around fast and playfully.\" A recess crowd is loud, and kids chasing a ball move fast and play, just like the squawking, swooping gulls. The gulls do not go to school, and the poem never says they are hungry or scared." },
       { id: "SK-SS2a-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: ["p4"],
         prompt: "Read this line from stanza 3: \"I like to build a castle here.\" Complete the sentence. Choose the best answer for each blank.",
         text: "In this line, the word like {0}, so the line {1}.",
@@ -1296,25 +1747,25 @@ PP.addLesson({
           ] },
         partB: { prompt: "Which sentence from the article best helps you understand what the author means?",
           choices: [
-            { text: "\"A brown anole on a tree trunk can be very hard to spot.\"", correct: true },
+            { text: "\"An anole that has turned brown on a tree trunk can be very hard to spot.\"", correct: true },
             { text: "\"Sticky pads on its toes help it climb walls and even glass.\"" },
-            { text: "\"Then it gulps down its meal.\"" },
+            { text: "\"When the air turns cool, or when the lizard feels scared, its skin can turn brown in just a few minutes.\"" },
             { text: "\"It is called a green anole.\"" }
           ] },
         clue: "An idiom does not mean what its words say. Use the sentences around it to find what it really means.",
         hints: [
           "An idiom does not mean what its words say. Use the sentences around it to find what it really means.",
-          "Read paragraph 5. What does the author say about finding an anole on a tree?",
+          "Try each Part A meaning in place of the idiom. Which one makes sense with the rest of the article?",
           "Nobody can really peel their eyes like a banana, so one meaning reads the words too literally. For Part B, the sentence you choose must match your Part A answer."
         ],
         how: [
           "No one can really peel their eyes, so this is an idiom.",
-          "The next sentence says a brown anole on a tree trunk can be very hard to spot. You would have to look hard to see it.",
-          "Part A: Look very carefully as you watch. Part B: \"A brown anole on a tree trunk can be very hard to spot.\"",
-          "The author wants you to look, so closing your eyes or staying indoors does not fit."
+          "The next sentence says an anole that has turned brown on a tree trunk can be very hard to spot. You would have to look hard to see it.",
+          "Part A: Look very carefully as you watch. Part B: \"An anole that has turned brown on a tree trunk can be very hard to spot.\"",
+          "The author wants you to look, so closing your eyes or staying indoors does not fit. The color sentence explains how an anole turns brown, not why you need to look carefully."
         ],
         misconception: "A common mix-up is reading the saying word for word, as if it were about peeling something.",
-        why: "Part A: Look very carefully as you watch. Part B: \"A brown anole on a tree trunk can be very hard to spot.\" Nobody really peels their eyes. Because a brown anole is hard to see on a tree, you have to look carefully to find one. The other sentences tell facts about anoles but do not explain the saying." },
+        why: "Part A: Look very carefully as you watch. Part B: \"An anole that has turned brown on a tree trunk can be very hard to spot.\" Nobody really peels their eyes. Because an anole that has turned brown is hard to see on a tree, you have to look carefully to find one. The color sentence tells how an anole changes, but not why you must look carefully, and the other sentences tell other facts." },
       { id: "SK-SS2a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: ["p5"],
         prompt: "In paragraph 2, the author writes, \"An anole is a little magician.\" Why does the author use this metaphor?",
         choices: [
@@ -1326,8 +1777,8 @@ PP.addLesson({
         clue: "Authors use metaphors to help you picture something. Ask what the two things have in common, and read the sentences around the metaphor.",
         hints: [
           "Authors use metaphors to help you picture something. Ask what the two things have in common, and read the sentences around the metaphor.",
-          "Read the sentences that come right after the metaphor. What are they about?",
-          "The anole does not perform for people, so one choice reads the words too literally. Another choice is about eating, which the article tells about later, in paragraph 3. Test the two choices that are left against paragraph 2."
+          "Ask what a magician does that amazes people. Then look for something the anole does that could seem just as surprising.",
+          "The anole does not perform for people, so one choice reads the words too literally. For each choice that is left, find the paragraph it comes from and compare it with the paragraph the metaphor is in."
         ],
         how: [
           "Paragraph 2 begins by calling the anole a little magician.",
@@ -1373,7 +1824,7 @@ PP.addLesson({
         clue: "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
         hints: [
           "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
-          "Think about what a real desert looks like, how ants work, and what the garden looks like by June.",
+          "Find each phrase in the writing, and read the sentence around it.",
           "Nobody's thumbs really turned green, so the last phrase is not about color. Ask what Mr. Davis sees when he says it. Then match the other two phrases the same way."
         ],
         how: [
@@ -1391,7 +1842,7 @@ PP.addLesson({
   similar: [
     { id: "SK-SS2a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-P5", "SK-SS2a-C06"],
-      stem: ["Every day in science class, Ms. Ortiz's students ask question after question. \"You are all sponges!\" she laughs. \"You soak up everything I teach.\""],
+      stem: ["Every day in science class, Ms. Ortiz's students ask question after question. \"You are all sponges!\" she laughs."],
       prompt: "What does Ms. Ortiz mean when she says her students are sponges?",
       choices: [
         { text: "They learn new things quickly and easily.", correct: true },
@@ -1402,16 +1853,16 @@ PP.addLesson({
       clue: "A metaphor says one thing is another. Ask what the students and sponges have in common.",
       hints: [
         "A metaphor says one thing is another. Ask what the students and sponges have in common.",
-        "Think about what a sponge does with water. Then read what Ms. Ortiz says right after.",
+        "Think about what a sponge does with water. Then reread what the students do in class.",
         "The students are not really sponges, so being wet or wiping tables reads the words too literally. Decide which of the two choices that are left fits a class that asks question after question."
       ],
       how: [
         "A sponge soaks up water fast.",
-        "Ms. Ortiz says the students soak up everything she teaches, and they ask question after question.",
+        "The students ask question after question, so they are taking in everything they can, the way a sponge soaks up water.",
         "The answer is \"They learn new things quickly and easily.\"",
-        "They are not wet, the story does not tell about cleaning, and forgetting is the opposite of soaking up."
+        "They are not wet, the story does not tell about cleaning, and students who ask so many questions are not forgetting."
       ],
-      why: "The answer is \"They learn new things quickly and easily.\" A sponge soaks up water, and the students soak up what Ms. Ortiz teaches. They are not really wet or cleaning, and forgetting is the opposite of what she says." },
+      why: "The answer is \"They learn new things quickly and easily.\" A sponge soaks up water, and students who ask question after question take in everything they can. They are not really wet or cleaning, and forgetting does not fit students who ask so many questions." },
     { id: "SK-SS2a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C05", "SK-SS2a-C07", "SK-SS2a-C12"],
       stem: ["Deshawn baked his very first pan of cornbread. Grandma took a bite and nodded. Then she saw his worried face. \"You're on the right track,\" she said. \"Next time, use a little less salt, and it will be perfect.\""],
@@ -1445,9 +1896,9 @@ PP.addLesson({
         { text: "Box turtles like to sit in warm patches of sun." },
         { text: "A turtle's shell is a strong house on its back." }
       ],
-      clue: "A simile compares two different things using like or as. Check what each like or as is doing.",
+      clue: "A simile compares two different kinds of things using like or as. Check what each like or as is doing.",
       hints: [
-        "A simile compares two different things using like or as. Check what each like or as is doing.",
+        "A simile compares two different kinds of things using like or as. Check what each like or as is doing.",
         "For each sentence, ask: are two different kinds of things being compared, and is like or as joining them?",
         "\"Box turtles like to sit in warm patches of sun\" uses like to mean enjoy, so it compares nothing. Test the other three sentences."
       ],
@@ -1488,7 +1939,7 @@ PP.addLesson({
     "SK-SS2a-P3": {
       hints: [
         "An idiom does not mean what its words say. Use the clues around it to find what it really means.",
-        "Read what Ms. Ellis sees just before she speaks, and what she says right after the idiom.",
+        "Try each Part A meaning in place of the idiom. Which one fits what Ms. Ellis says about everyone before a race?",
         "There are no real butterflies at the pool, so Rosa is not excited to see butterflies. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [
@@ -1624,7 +2075,7 @@ PP.addLesson({
         { text: "Our counselor, Jo, is a walking map." },
         { text: "Then a girl named Lucy told a silly joke about a frog, and that broke the ice." }
       ],
-      clue: "A simile compares two different things using like or as. Be careful: not every like makes a comparison.",
+      clue: "A simile compares two different kinds of things using like or as. Be careful: not every like makes a comparison.",
       why: "The answer is \"My canoe wobbled like a bowl of jelly when I climbed in.\" It uses like to compare the shaky canoe to wobbly jelly. \"I like the canoes best\" uses like to mean enjoy, so it compares nothing. The walking map sentence is a metaphor, and \"broke the ice\" is an idiom." },
     { id: "SK-SS2a-TB5", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Ana writes, \"The sky is a dark blanket sprinkled with glitter.\" What does she want Grandpa to picture?",

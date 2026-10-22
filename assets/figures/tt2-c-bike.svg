@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 270" role="img" aria-labelledby="t">
+  <title id="t">Drawing of a bike seen from the side, with no rider on it. Five labels with lines point to the seat, the handlebars, a brake lever, a pedal and the chain.</title>
+  <!-- wheels -->
+  <g fill="none" stroke="#222" stroke-width="5"><circle cx="72" cy="176" r="50"/><circle cx="246" cy="176" r="50"/></g>
+  <g stroke="#888" stroke-width="1.5"><path d="M72 126 L72 226 M22 176 L122 176 M37 141 L107 211 M37 211 L107 141"/><path d="M246 126 L246 226 M196 176 L296 176 M211 141 L281 211 M211 211 L281 141"/></g>
+  <!-- frame -->
+  <g fill="none" stroke="#2F6DB5" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M72 176 L150 180 L122 104 Z"/>
+    <path d="M122 104 L222 100 L150 180"/>
+    <path d="M222 100 L246 176"/>
+    <path d="M216 82 L222 100"/>
+  </g>
+  <!-- seat post and seat -->
+  <path d="M122 104 L118 86" stroke="#2F6DB5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M98 82 Q118 72 140 80 L136 88 Q118 84 100 88 Z" fill="#333" stroke="#111" stroke-width="2"/>
+  <!-- handlebars and brake lever -->
+  <path d="M206 80 L232 78 Q244 78 246 90" fill="none" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+  <path d="M232 84 L252 100" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <!-- chain ring, chain, pedal -->
+  <circle cx="150" cy="180" r="14" fill="#DDD" stroke="#222" stroke-width="3"/>
+  <g fill="none" stroke="#555" stroke-width="2.5" stroke-dasharray="4 3"><path d="M150 166 L72 170"/><path d="M150 194 L72 182"/></g>
+  <path d="M150 180 L168 204" stroke="#222" stroke-width="4"/>
+  <rect x="160" y="202" width="22" height="7" fill="#222"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#111">
+    <text x="40" y="34">seat</text><path d="M70 40 L110 78" stroke="#111" stroke-width="2"/>
+    <text x="178" y="24">handlebars</text><path d="M224 30 L224 74" stroke="#111" stroke-width="2"/>
+    <text x="252" y="60">brake</text><text x="252" y="82">lever</text><path d="M262 88 L250 96" stroke="#111" stroke-width="2"/>
+    <text x="70" y="262">chain</text><path d="M98 244 L108 180" stroke="#111" stroke-width="2"/>
+    <text x="160" y="262">pedal</text><path d="M184 244 L174 212" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

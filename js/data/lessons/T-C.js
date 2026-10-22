@@ -201,13 +201,13 @@ PP.addLesson({
   teach: {
     big: "Text features are the helpers around the paragraphs. They show you where to look and what is important.",
     points: [
-      "A heading is a small title over a section. It tells what that section is about.",
+      "A heading is a small title over a section. It tells what that section is about. A heading with a fun or surprising word can also make you curious to read on.",
       "A bold word is printed in dark letters. Bold tells you, \"This is a key word. Learn it.\" A bold word often names the big idea of its section, and the sentences around it tell what it means. You can also check its meaning in a glossary at the back.",
       "A text box is set apart from the paragraphs. It often gives an extra fact, like a \"Did You Know?\" box.",
       "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
-      "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it.",
+      "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it. Labels can point out parts that a photo might hide, and numbers or arrows on a diagram can show an order.",
       "Features are not only on paper. A web page has its own features. Menu tabs take you to other parts of the site. A search box finds pages when you type a word. A play button starts a video or a sound. A pop-up box tells what a word means without leaving the page. A link opens a new page with more facts.",
-      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part."
+      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. In a video or a podcast, sounds and music can signal a change, too."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -307,6 +307,34 @@ PP.addLesson({
           alt: "Diagram of the life cycle of a monarch. Four drawings sit in a circle, with an arrow from each one to the next: 1 egg on a leaf, 2 caterpillar, 3 chrysalis hanging from a twig, 4 butterfly. An arrow goes from the butterfly back to the egg." },
         { after: 7, src: "assets/figures/tc1b-monarch-flower.svg", label: "Figure 2", caption: "A monarch rests in a Georgia garden on its long trip south.",
           alt: "A drawing of a monarch butterfly with its wings open, sitting on top of a flower." }
+      ] },
+    /* B2 (expansion 2026-10-22, author b2d): p3 is used only by core set 2 and p4 only by core set 3.
+       Never used by test. NEEDS INDEPENDENT REVIEW. p3's Figure 1 has no caption on purpose (core C07 asks for one). */
+    { id: "p3", title: "How a Water Tower Works", genre: "Informational text",
+      paragraphs: [
+        ["Many towns in Georgia have a tall water tower.", "It may look like a giant ball on stilts, but it has an important job."],
+        ["## Water Up High"],
+        ["At night, when most people are asleep, a pump pushes water up a pipe into the tower's tank.", "The tank holds the water high above the town until people need it."],
+        ["## Down to Your Faucet"],
+        ["In the morning, people turn on faucets and showers.", "Then gravity pulls the water down from the tank.", "Gravity is the force that pulls things toward the ground.", "The water rushes down a pipe under the street and into each home."],
+        ["## Did You Know?"],
+        ["Box: Some water towers hold more than one million gallons of water."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tc1b-c-water-tower.svg", label: "Figure 1",
+          alt: "Diagram of a water tower and a home, with three numbered arrows. On the ground at the left is a small building labeled pump. A pipe goes from the pump up into a big tank at the top of the tower, labeled tank, and arrow 1 on that pipe points up. A second pipe goes from the tank down the tower and under the ground, and arrow 2 on it points down. Arrow 3 points along the pipe under the ground toward a house labeled home. Another label, pipe, points to the first pipe." }
+      ] },
+    { id: "p4", title: "Reading a Swimming Pool", genre: "Informational text",
+      paragraphs: [
+        ["A pool for swim races is full of helpers.", "Each one tells swimmers something without saying a word.", "Races begin when swimmers dive from raised platforms called starting blocks."],
+        ["## Lines and Ropes"],
+        ["Ropes with floats, called lane lines, divide the pool into lanes.", "They keep each swimmer in a lane and make the waves smaller.", "A dark line on the bottom of each lane helps swimmers swim straight.", "Near each wall, the dark line ends in a T, which warns swimmers that the wall is close."],
+        ["## Flags Overhead"],
+        ["Swimmers doing the backstroke float on their backs, so they cannot see the wall coming.", "A row of small flags hangs over the pool, about five yards from each wall.", "When backstrokers pass under the flags, they count their strokes so they do not bump their heads."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tc1b-c-pool-lanes.svg", label: "Figure 1", caption: "Helpers in a pool for swim races",
+          alt: "Diagram of a swimming pool seen from above, split into three lanes. Two ropes with floats, labeled lane line, run the length of the pool between the lanes. A dark line labeled line on the bottom runs down the middle of each lane and ends in a T shape near each wall. Near each end of the pool, a row of small triangle flags, labeled backstroke flags, hangs across all the lanes." }
       ] }
   ],
   practice: [
@@ -361,12 +389,12 @@ PP.addLesson({
       prompt: "How does the bold print help the reader?",
       choices: [
         { text: "It shows the word is important and is explained in the glossary.", correct: true },
-        { text: "It shows the word is the title of the whole book." },
-        { text: "It shows the word is spelled in a new or unusual way." },
-        { text: "It shows the word should be read in a loud voice." }
+        { text: "It shows the word is a fact set apart in a text box." },
+        { text: "It shows the word is the heading of a new section." },
+        { text: "It shows the word names the topic of the whole article." }
       ],
       clue: "Think about why an author makes a word stand out, and where else the word shows up.",
-      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print tells the reader the word matters, and the glossary tells what it means. Bold does not mark a book title, a new spelling or a loud voice." },
+      why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print tells the reader the word matters, and the glossary tells what it means. Lodge sits inside a sentence, not in a box or on a heading line, and the whole article is about life in a beaver pond, not only the lodge." },
     { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1. Which two sentences in the article tell about the parts that its labels point to? Choose two sentences.",
       targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],

@@ -803,13 +803,13 @@ PP.addLesson({
       ] },
     /* B2 (expansion 2026-10-22, author b2c): p4 and p5 are used only by core (p4 set 2 and the set 3
        compare item, p5 set 3); p6 only by the similar bank. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
-    { id: "p4", title: "The Town at the End of the Line", genre: "Informational text",
+    { id: "p4", title: "Lights for the Farm", genre: "Informational text",
       paragraphs: [
-        ["In the 1830s, Georgia leaders wanted a faster way to carry cotton and other goods to states in the north.", "Wagons on bumpy dirt roads were slow, and they could carry only small loads.", "So the state decided to build a railroad."],
-        ["Workers chose a spot in the forest where the new tracks would end.", "In 1837, they marked the spot with a post."],
-        ["Many workers came to build the railroad, and they needed places to sleep and eat.", "As a result, people built cabins and small stores near the post.", "The little town was called Terminus, a word that means \"the end of the line.\""],
-        ["Soon, other railroads were built to meet the first one there.", "Because trains now came from many directions, the town became a busy place to buy and sell goods.", "The stores and the train station needed more workers, so more families moved to town."],
-        ["As the town grew, its name changed, too.", "By 1847, it was called Atlanta.", "Today, Atlanta is the biggest city in Georgia, and trains still rumble through it."]
+        ["In the 1920s, most cities in Georgia had electric lights.", "But most farms far from town did not.", "Power companies said building long power lines out to a few farms cost too much."],
+        ["So farm families kept doing their work by hand.", "They carried water from wells in heavy buckets, and they read at night by the light of oil lamps."],
+        ["In 1935, the United States government began lending money to help build power lines in the country.", "Farmers joined together in groups to share the cost.", "As a result, power lines finally stretched out to farms."],
+        ["Because farms now had electricity, families could use electric pumps to bring water inside.", "Chores that once took hours took only minutes, so children had more time for school and play."],
+        ["Today, almost every home in Georgia has electric power."]
       ] },
     { id: "p5", title: "Fire in the Pine Forest", genre: "Informational text",
       paragraphs: [
@@ -971,38 +971,38 @@ PP.addLesson({
     { title: "Set 2", items: [
       { id: "SK-TSCE-C06", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
-        partA: { prompt: "Why did people build cabins and small stores near the post?",
+        partA: { prompt: "Why did power companies in the 1920s not build power lines out to most farms?",
           choices: [
-            { text: "The railroad workers needed food and a place to stay.", correct: true },
-            { text: "Trains were bringing goods from many directions." },
-            { text: "The state wanted to give a new town a name." },
-            { text: "The town had become the biggest city in Georgia." }
+            { text: "Long lines out to only a few farms cost too much.", correct: true },
+            { text: "Farm families did not want lights in their homes." },
+            { text: "The government told the companies not to build them." },
+            { text: "Farmers had already built power lines of their own." }
           ] },
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
-            { text: "\"Many workers came to build the railroad, and they needed places to sleep and eat.\"", correct: true },
-            { text: "\"In 1837, they marked the spot with a post.\"" },
-            { text: "\"The little town was called Terminus, a word that means \"the end of the line.\"\"" },
-            { text: "\"Soon, other railroads were built to meet the first one there.\"" }
+            { text: "\"Power companies said building long power lines out to a few farms cost too much.\"", correct: true },
+            { text: "\"In the 1920s, most cities in Georgia had electric lights.\"" },
+            { text: "\"Farmers joined together in groups to share the cost.\"" },
+            { text: "\"As a result, power lines finally stretched out to farms.\"" }
           ] },
-        clue: "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
+        clue: "To find a cause, ask: Why did this happen? The cause can be told in the same sentence as the effect.",
         hints: [
-          "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
-          "Find the sentence in paragraph 3 that tells about the cabins and stores. Look at the clue word it begins with.",
-          "Trains from many directions came after the town was built, in paragraph 4, so they cannot have caused the first cabins. For Part B, choose the sentence that tells the cause, not one that tells what happened next."
+          "To find a cause, ask: Why did this happen? The cause can be told in the same sentence as the effect.",
+          "Reread paragraph 1. Find what the power companies said.",
+          "Nothing in the article says farm families did not want lights, so that choice is not the cause. For Part B, choose the sentence that tells why there were no lines, not one about later years."
         ],
         how: [
-          "Paragraph 3 says, \"As a result, people built cabins and small stores near the post.\" As a result means the cause comes just before it.",
-          "The sentence before says many workers came to build the railroad, and they needed places to sleep and eat.",
-          "Part A: The railroad workers needed food and a place to stay. Part B: \"Many workers came to build the railroad, and they needed places to sleep and eat.\"",
-          "Trains from many directions and the big city came later, so they cannot be the cause. The post and the name do not tell why the cabins were built."
+          "Paragraph 1 says cities had electric lights, but most farms far from town did not.",
+          "The next sentence tells why: power companies said building long power lines out to a few farms cost too much.",
+          "Part A: Long lines out to only a few farms cost too much. Part B: \"Power companies said building long power lines out to a few farms cost too much.\"",
+          "The article never says families did not want lights or that the government said no, and farmers did not build their own lines."
         ],
-        misconception: "A common mix-up is choosing something that happened later. A cause has to happen before its effect.",
-        why: "Part A: The railroad workers needed food and a place to stay. Part B: \"Many workers came to build the railroad, and they needed places to sleep and eat.\" The next sentence begins with As a result, so the workers' needs caused the cabins and stores. The trains and the big city came later." },
+        misconception: "A common mix-up is choosing a reason that sounds possible but is not in the article. Use the cause the author gives.",
+        why: "Part A: Long lines out to only a few farms cost too much. Part B: \"Power companies said building long power lines out to a few farms cost too much.\" That is why most farms had no power. The other reasons are not in the article, and the sentences about farmers sharing the cost and lines reaching farms tell what happened later." },
       { id: "SK-TSCE-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        stem: ["A student wrote: \"The town became a busy place to buy and sell goods, so trains came from many directions.\""],
+        stem: ["A student wrote: \"Children had more time for school and play, so chores that once took hours took only minutes.\""],
         prompt: "The clue word in the student's sentence makes the cause and effect from paragraph 4 backward. Choose the clue word that fixes it.",
-        text: "The town became a busy place to buy and sell goods {0} trains came from many directions.",
+        text: "Children had more time for school and play {0} chores that once took hours took only minutes.",
         slots: [
           { options: ["so", "because", "until"], answer: 1 }
         ],
@@ -1013,74 +1013,75 @@ PP.addLesson({
           "Until tells when something stops, not why it happens, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
         ],
         how: [
-          "Paragraph 4 says trains came from many directions, and that made the town a busy place to buy and sell goods.",
-          "So the trains are the cause, and the busy town is the effect.",
-          "In the sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
-          "With so, the sentence says the busy town made the trains come, which is backward. Until does not tell a cause at all."
+          "Paragraph 4 says chores that once took hours took only minutes, so children had more time for school and play.",
+          "So the quicker chores are the cause, and the extra time is the effect.",
+          "In the student's sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
+          "With so, the sentence says the extra time made the chores quicker, which is backward. Until does not tell a cause at all."
         ],
         misconception: "A common mix-up is thinking so and because do the same job. Because points to a cause. So points to an effect.",
-        why: "The answer is because. The trains came first and made the town busy, so the cause is \"trains came from many directions.\" Because comes just before a cause. With so, the sentence would say the busy town made the trains come." },
-      { id: "SK-TSCE-C08", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        prompt: "Which event in the article started all the others?",
+        why: "The answer is because. The chores got quicker first, and that gave children more time, so the cause is \"chores that once took hours took only minutes.\" Because comes just before a cause. With so, the sentence would say the extra time made the chores quicker." },
+      { id: "SK-TSCE-C08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which event in the article is BOTH an effect of power lines reaching farms AND a cause of something that happened after it?",
         choices: [
-          { text: "Georgia leaders wanted a faster way to carry goods.", correct: true },
-          { text: "Workers marked a spot in the forest with a post." },
-          { text: "Other railroads were built to meet the first one." },
-          { text: "The town was given the new name Atlanta." }
+          { text: "Families could use electric pumps to bring water inside.", correct: true },
+          { text: "Children had more time for school and for play." },
+          { text: "Farmers joined together in groups to share the cost." },
+          { text: "Farm families read at night by the light of oil lamps." }
         ],
-        clue: "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+        clue: "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
         hints: [
-          "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
-          "Put the four events in time order in your head. Then ask which one led to the next.",
-          "The new name came at the end of the chain, so it could not start the other events. Test each choice that is left: did something else have to happen before it?"
+          "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
+          "Draw the chain from the article as boxes with arrows. Start with the 1920s and keep going to the end.",
+          "Oil lamps were used before the power lines came, so they cannot be an effect of the lines. Check each choice that is left: does it have an arrow coming in from the power lines and an arrow going out?"
         ],
         how: [
-          "Paragraph 1 tells why there was a railroad at all: Georgia leaders wanted a faster way to carry goods, and wagons were too slow.",
-          "The answer is \"Georgia leaders wanted a faster way to carry goods.\"",
-          "The post and the other railroads could not happen until there was a plan for a railroad, and the new name came last."
+          "The power lines reach farms in paragraph 3. Paragraph 4 tells what happened because of that.",
+          "Because farms had electricity, families could use electric pumps to bring water inside. Chores got quicker, so children had more time.",
+          "The answer is \"Families could use electric pumps to bring water inside.\" It is an effect of the power lines and a cause of quicker chores.",
+          "Extra time for children is only an effect at the end of the chain. Farmers sharing the cost came before the lines, and oil lamps were used before power came."
         ],
-        misconception: "A common mix-up is choosing an event from the middle of the chain. The first cause is the one that starts the whole chain.",
-        why: "The answer is \"Georgia leaders wanted a faster way to carry goods.\" The other choices could not happen until there was a plan for a railroad, and the new name came last." },
+        misconception: "A common mix-up is choosing the last event in the chain. A middle link has a cause before it and an effect after it.",
+        why: "The answer is \"Families could use electric pumps to bring water inside.\" The power lines made the pumps possible, and the pumps made chores quicker. Extra time for children ends the chain, farmers shared the cost before the lines came, and oil lamps came before electricity." },
       { id: "SK-TSCE-C09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         prompt: "Which sentence best tells how the author organizes this article?",
         choices: [
-          { text: "It tells events in time order, and each event causes the next one.", correct: true },
-          { text: "It tells events in time order, but the events do not affect each other." },
-          { text: "It gives the steps a reader would follow to build a railroad." },
-          { text: "It compares a small town long ago with a big city today." }
+          { text: "It tells events in time order and shows how one led to another.", correct: true },
+          { text: "It tells events in time order, but they do not affect each other." },
+          { text: "It gives the steps a reader would follow to build a power line." },
+          { text: "It compares life on a farm with life in a city in the 1920s." }
         ],
         clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
         hints: [
           "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
           "Notice the clue words that join the sentences, such as so and as a result. What do they tell you about how the happenings connect?",
-          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the clue words you found."
+          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the whole article, not just paragraph 1."
         ],
         how: [
-          "The article goes in time order, from the 1830s to today.",
-          "Clue words such as so, as a result and because join each event to the one before it.",
-          "The answer is \"It tells events in time order, and each event causes the next one.\"",
-          "The events do affect each other, the article does not tell a reader how to build anything, and it does not go back and forth comparing the town and the city."
+          "The article goes in time order, from the 1920s to 1935 to today.",
+          "Clue words such as so, as a result and because join each happening to the one before it.",
+          "The answer is \"It tells events in time order and shows how one led to another.\"",
+          "The events do affect each other, the article is not a how-to, and only paragraph 1 mentions cities, so the article as a whole is not a comparison."
         ],
-        misconception: "A common mix-up is calling a history text only time order. Check the clue words: they show that each event caused the next.",
-        why: "The answer is \"It tells events in time order, and each event causes the next one.\" The events go from the 1830s to today, and clue words such as so, as a result and because show how each one led to the next. It is not a how-to, and it does not compare." },
-      { id: "SK-TSCE-C10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        prompt: "Which sentence tells an effect of the town becoming a busy place to buy and sell goods? Choose the sentence in the passage.",
-        targets: ["p4:2:2", "p4:3:2", "p4:3:3", "p4:4:1", "p4:4:2", "p4:4:3"],
-        answer: ["p4:4:3"], pick: 1,
+        misconception: "A common mix-up is calling a history text only time order, or naming the pattern of one paragraph. Check the clue words across the whole article.",
+        why: "The answer is \"It tells events in time order and shows how one led to another.\" The events go from the 1920s to today, and clue words such as so, as a result and because show how each one led to the next. It is not a how-to, and only paragraph 1 mentions cities." },
+      { id: "SK-TSCE-C10", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which TWO sentences tell effects of farms having no electricity? Choose two sentences in the passage.",
+        targets: ["p4:1:2", "p4:1:3", "p4:2:1", "p4:2:2", "p4:3:3", "p4:4:2"],
+        answer: ["p4:2:1", "p4:2:2"], pick: 2,
         clue: "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
         hints: [
           "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
-          "Find where the article says the town became busy. An effect can be told in the same sentence or in a later one.",
-          "The sentence about cabins and small stores tells an effect of the workers coming, which happened earlier. Check each other sentence: did the busy town make it happen?"
+          "Find where the article says farms did not have power. An effect can be told in the same paragraph or a later one. Choose two.",
+          "The sentence about chores taking only minutes tells an effect of having electricity, not of having none. Check each other sentence: did having no power make it happen?"
         ],
         how: [
-          "Paragraph 4 says the town became a busy place to buy and sell goods.",
-          "The next sentence says the stores and the train station needed more workers, so more families moved to town. The clue word so points to the effect.",
-          "The answer is \"The stores and the train station needed more workers, so more families moved to town.\"",
-          "The sentence that says the town became busy tells why it got busy, so it is the cause, not an effect of it. The other sentences happened before the town was busy."
+          "Paragraph 1 says most farms far from town did not have electric lights.",
+          "Because of that, farm families kept doing their work by hand. They carried water in heavy buckets and read by oil lamps.",
+          "The answers are \"So farm families kept doing their work by hand.\" and \"They carried water from wells in heavy buckets, and they read at night by the light of oil lamps.\"",
+          "The sentence about the power companies tells why there was no power, so it is a cause. Lines reaching farms and quicker chores came later, once there was power."
         ],
-        misconception: "A common mix-up is choosing the sentence that names the cause. The question asks what the busy town made happen next.",
-        why: "The answer is \"The stores and the train station needed more workers, so more families moved to town.\" The busy town needed more workers, and so more families came. The sentence about the busy town tells the cause itself, and the other sentences tell events that came before it." }
+        misconception: "A common mix-up is choosing a sentence that tells the cause, or an effect of a later event. Ask: did having no power make this happen?",
+        why: "The answers are \"So farm families kept doing their work by hand.\" and \"They carried water from wells in heavy buckets, and they read at night by the light of oil lamps.\" Both happened because farms had no electricity. The power companies' reason is a cause, and the later sentences tell what happened once power came." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TSCE-C11", type: "cr", dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p5"], rows: 4,
@@ -1130,28 +1131,28 @@ PP.addLesson({
         why: "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" With no fires, bushes and trees grew thick, and their shade kept the young pines from growing. Sunlight on the floor and tall pines came from the fires, and lightning started fires long before." },
       /* Compares the set 2 and set 3 texts, so it carries both passages. */
       { id: "SK-TSCE-C13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4", "p5"],
-        prompt: "Think about \"The Town at the End of the Line\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
-        cols: ["only The Town at the End of the Line", "only Fire in the Pine Forest", "both articles"],
+        prompt: "Think about \"Lights for the Farm\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
+        cols: ["only Lights for the Farm", "only Fire in the Pine Forest", "both articles"],
         rows: [
           { text: "One event causes the next, like links in a chain.", answer: 2 },
           { text: "A choice people made changed what happened later.", answer: 2 },
           { text: "Something in nature starts a change.", answer: 1 },
-          { text: "A place gets its name from one of the events.", answer: 0 }
+          { text: "Family life gets easier at the end.", answer: 0 }
         ],
         clue: "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
         hints: [
           "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
           "In each article, look for what starts the changes and for any choice that people make.",
-          "In \"The Town at the End of the Line,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
+          "In \"Lights for the Farm,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
         ],
         how: [
           "Both articles tell a chain: in each one, one event causes the next.",
-          "In both, people's choices change what happens later: Georgia builds a railroad, and people put out forest fires.",
+          "In both, people's choices change what happens later: farmers share the cost of power lines, and people put out forest fires.",
           "Only \"Fire in the Pine Forest\" has something in nature start a change: lightning starts fires.",
-          "Only \"The Town at the End of the Line\" tells how a place got its name from one of the events: Terminus means the end of the line."
+          "Only \"Lights for the Farm\" ends with family life getting easier: chores take minutes, and children have more time."
         ],
         misconception: "A common mix-up is calling a sentence true for both when it fits only one article. Check it against each article on its own.",
-        why: "Both articles tell a chain of causes and effects, and in both, people's choices change what happens later. Only the pine forest article has something in nature, lightning, start a change. Only the town article tells how a place got its name from one of the events." },
+        why: "Both articles tell a chain of causes and effects, and in both, people's choices change what happens later. Only the pine forest article has something in nature, lightning, start a change. Only the farm article ends with family life getting easier." },
       { id: "SK-TSCE-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Dre's bike tires were low on air.", "When tires are low, more of the soft rubber presses flat against the road.", "That makes the bike harder to push forward, so the rider has to pedal harder.", "On Saturday, Dre fell far behind his friends on the big hill.", "That night, he pumped air into both tires until they were firm."],
         prompt: "Read the story in the box. What will most likely happen the next time Dre rides up the big hill?",
@@ -1254,12 +1255,12 @@ PP.addLesson({
       how: [
         "Paragraph 2 says the scientists found that fertilizer had washed into the lake.",
         "Fertilizer helps plants grow, and it helped the algae grow, too.",
-        "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\"",
+        "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\"",
         "The fish and the green water are effects, swimming did not make algae grow, and the town's request came afterward."
       ],
-      why: "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\" The fertilizer helped the algae grow. The green water and the fish are effects, and the town's request came later." },
+      why: "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\" The fertilizer helped the algae grow. The green water and the fish are effects, and the town's request came later." },
     { id: "SK-TSCE-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
-      like: ["SK-TSCE-P4", "SK-TSCE-C12"],
+      like: ["SK-TSCE-P4", "SK-TSCE-C08", "SK-TSCE-C12"],
       stem: ["Mrs. Ruiz took down the bird feeder in her yard.", "Without the seeds, fewer birds came to visit.", "The birds had been eating the green caterpillars on her tomato plants.", "With fewer birds around, more caterpillars lived and grew.", "By July, the caterpillars had chewed holes in almost every tomato leaf."],
       prompt: "Read the story in the box. Which event is BOTH an effect of something before it AND a cause of something after it?",
       choices: [
@@ -2253,12 +2254,12 @@ PP.addLesson({
        compare item, p4 set 3); p5 only by the similar bank. Never used by test. NEEDS INDEPENDENT REVIEW. */
     { id: "p3", title: "School Then and Now", genre: "Informational text",
       paragraphs: [
-        ["Children in Georgia went to school in 1900, and children go to school today.", "Both groups of students learned to read, write and do math.", "Both had time to play outside, too."],
+        ["Children in Georgia went to school in 1900.", "Children go to school today, too.", "Both groups of students learned to read, write and do math.", "Both had time to play outside."],
         ["However, a school day in 1900 looked very different.", "Many children went to a one-room school.", "One teacher taught every grade in the same room, from the youngest children to the oldest."],
-        ["Today, most schools have many classrooms.", "Unlike the students in 1900, children today usually share a room with others their own age."],
+        ["Today, most schools have many classrooms.", "Unlike the students in 1900, children today usually share a room with kids their own age."],
         ["Students in 1900 often wrote on small chalkboards called slates.", "They wiped the slates clean and used them again and again.", "Students today write on paper, and many also type on computers."],
         ["Getting to school was different, too.", "Many children in 1900 walked a long way on dirt roads, while many children today ride a bus."],
-        ["The next time you sit at your desk, think about the children in that one-room school!"]
+        ["The next time you sit at your desk, think about the kids in that one-room school!"]
       ] },
     { id: "p4", title: "Canoe or Kayak?", genre: "Informational text",
       paragraphs: [
@@ -2446,7 +2447,7 @@ PP.addLesson({
             { text: "\"One teacher taught every grade in the same room, from the youngest children to the oldest.\"", correct: true },
             { text: "\"However, a school day in 1900 looked very different.\"" },
             { text: "\"Students in 1900 often wrote on small chalkboards called slates.\"" },
-            { text: "\"Both had time to play outside, too.\"" }
+            { text: "\"Both had time to play outside.\"" }
           ] },
         clue: "To find a difference, find what is true of one thing but not the other. Look for a contrast clue word.",
         hints: [
@@ -2960,7 +2961,7 @@ PP.addLesson({
       paragraphs: [
         ["When there is a fire, firefighters cannot run back to the station for what they need.", "So a fire engine carries everything with it.", "You can think of it as a firehouse on wheels."],
         ["## Water and Hoses"],
-        ["A fire engine has a big tank that holds hundreds of gallons of water.", "It also has a strong pump.", "The pump pushes water through long hoses that are folded on the back of the truck.", "When the tank runs low, firefighters hook a hose to a fire hydrant on the street."],
+        ["A fire engine has a big tank that holds hundreds of gallons of water.", "It also has a strong pump.", "The pump pushes water through long hoses on the back of the truck.", "When the tank runs low, firefighters hook a hose to a fire hydrant."],
         ["## Ladders for High Places"],
         ["Ladders hang along the sides of the truck.", "Some are short, and some can stretch up past a second-floor window.", "Firefighters use them to reach people who are trapped upstairs.", "Long ago, many fire stations kept a spotted dog called a Dalmatian."],
         ["## Tools for Tough Jobs"],
@@ -2970,8 +2971,8 @@ PP.addLesson({
       paragraphs: [
         ["A baseball glove may look like a big leather hand.", "But every part of it is made to help a player catch and hold the ball."],
         ["The pocket is the deep, curved spot in the palm of the glove.", "It is where the ball lands.", "A good pocket is shaped like a shallow bowl, so the ball settles in and does not bounce out."],
-        ["Between the thumb and the first finger is the web.", "The web is made of strips of leather laced together.", "It works like a small net that traps the ball.", "Some webs also have open spaces, so a player can see the ball through them."],
-        ["Thick padding lines the inside of the glove.", "For example, extra padding sits under the palm, where the ball hits hardest.", "In addition, leather laces hold every part tightly together, so the glove keeps its shape."],
+        ["Between the thumb and the first finger is the web.", "The web is made of laced leather strips.", "It works like a small net that traps the ball."],
+        ["Thick padding lines the inside of the glove.", "For example, extra padding sits under the palm, where the ball hits hardest.", "In addition, leather laces hold every part together."],
         ["Box: Did You Know? The first baseball players did not wear gloves at all.", "They caught the ball with their bare hands!"],
         ["Gloves come in many colors, such as brown, black and even bright blue.", "Some players write their number inside the thumb.", "But no matter how it looks, every part of a good glove works together to help a player make the catch."]
       ] }
@@ -3039,6 +3040,464 @@ PP.addLesson({
       clue: "Each choice is a detail. Ask about each one: Does this tell how the bird gets its food, or something else about it?",
       why: "The answers are \"It folds its wings and dives headfirst into the sea.\" and \"It scoops up water and fish at the same time.\" Diving and scooping are how the pelican gets fish. The other details tell where it lives, how it swims and how big it is." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2b; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try items P6 and P5 by id (they stay in
+     practice; the engine leaves them out of Together, so Together shows P1, P2, P3 and P4, with P1
+     and P4 revised). New ids are numbered by their place in the fifteen. Hints and Show me how for
+     refs and Together items are in addons. Author log:
+     docs/expansion-2026-10-22/batches/B2-b2b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TSDESC-P6" },
+      { id: "SK-TSDESC-C02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p1"],
+        prompt: "The author wants to add a heading above paragraph 4. Which heading fits paragraph 4 best?",
+        choices: [
+          { text: "A Pouch That Works Like a Net", correct: true },
+          { text: "A Bird That Paddles Like a Duck" },
+          { text: "Sharp Eyes High in the Sky" },
+          { text: "A Bird of Georgia's Coast" }
+        ],
+        clue: "A heading names what a section is mostly about. Read the whole paragraph, then ask what every sentence in it tells about.",
+        hints: [
+          "A heading names what a section is mostly about. Read the whole paragraph, then ask what every sentence in it tells about.",
+          "Say in a few words what each paragraph of the passage is about. Then look again at the one the question names.",
+          "Paddling like a duck is told in paragraph 5, not paragraph 4, so that heading does not fit. Check each heading that is left against paragraph 4."
+        ],
+        how: [
+          "Paragraph 4 begins, \"The pouch works like a fishing net.\"",
+          "The other sentences in paragraph 4 tell more about how the pouch is used.",
+          "The answer is \"A Pouch That Works Like a Net.\"",
+          "Sharp eyes are in paragraph 3, paddling is in paragraph 5, and Georgia's coast is in paragraph 1."
+        ],
+        misconception: "A common mix-up is choosing a heading that fits a different paragraph. A heading must fit the section it sits above.",
+        why: "The answer is \"A Pouch That Works Like a Net.\" Every sentence in paragraph 4 tells about the pouch and how it is used. The other headings fit paragraphs 1, 3 and 5." },
+      { ref: "SK-TSDESC-P5" },
+      { id: "SK-TSDESC-C04", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p1"],
+        prompt: "The author wants to add one more sentence to this passage. Which sentence would best support the passage's main idea?",
+        choices: [
+          { text: "A small hook at the tip of the bill helps a pelican hold slippery fish.", correct: true },
+          { text: "Brown pelicans build nests of sticks on small islands near the coast." },
+          { text: "Many people like to take pictures of pelicans when they visit the beach." },
+          { text: "First, a young pelican hatches from its egg, and then it learns to fly." }
+        ],
+        clue: "A key detail tells more about the main idea. A detail can be true and interesting but still not tell more about the big point.",
+        hints: [
+          "A key detail tells more about the main idea. A detail can be true and interesting but still not tell more about the big point.",
+          "First say the main idea of the whole passage in your own words.",
+          "The sentence about a young pelican hatching uses time words to tell steps, so it does not fit this description. Test the other sentences against the main idea."
+        ],
+        how: [
+          "The main idea is that the pelican's whole body is built for catching fish.",
+          "A hook on the bill is a part of the body that helps the pelican hold on to fish, so it fits.",
+          "The answer is \"A small hook at the tip of the bill helps a pelican hold slippery fish.\"",
+          "Nests and pictures are about pelicans, but not about catching fish, and the hatching sentence tells steps."
+        ],
+        misconception: "A common mix-up is choosing any true fact about the topic. A key detail must tell more about the main idea, not just about the same animal.",
+        why: "The answer is \"A small hook at the tip of the bill helps a pelican hold slippery fish.\" The main idea is that the pelican's body is built for catching fish, and the hook is one more body part that helps. Nests and pictures are about pelicans but not about catching fish, and the hatching sentence tells steps in order." },
+      { id: "SK-TSDESC-C05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p1"], pick: 2,
+        prompt: "Which TWO clues show that this passage is organized as a description?",
+        choices: [
+          { text: "Paragraph 1 names the topic and its big idea.", correct: true },
+          { text: "Each paragraph after that tells about one part of the pelican's body.", correct: true },
+          { text: "The paragraphs tell the steps of a job in the order they happen." },
+          { text: "The author tells about a problem and the tries that fix it." },
+          { text: "Every paragraph compares the pelican with a duck." }
+        ],
+        clue: "A description tells about one thing and gives details that tell more about it. Other structures have other patterns.",
+        hints: [
+          "A description tells about one thing and gives details that tell more about it. Other structures have other patterns.",
+          "Look at what paragraph 1 does. Then look at what each later paragraph is about. Choose two.",
+          "Only paragraph 5 mentions a duck, so the choice about comparing the pelican with a duck in every paragraph does not fit. Check the other choices against the passage."
+        ],
+        how: [
+          "Paragraph 1 names the topic, the brown pelican, and says its whole body is built for catching fish.",
+          "Paragraphs 2 through 5 each tell about one part of its body: the bill and pouch, the eyes, the pouch again, and the feet.",
+          "The answers are \"Paragraph 1 names the topic and its big idea.\" and \"Each paragraph after that tells about one part of the pelican's body.\"",
+          "There are no steps in order, no problem and tries, and only one paragraph mentions a duck."
+        ],
+        misconception: "A common mix-up is calling a passage a comparison because one sentence says \"just like.\" Look at what the whole passage does.",
+        why: "The answers are \"Paragraph 1 names the topic and its big idea.\" and \"Each paragraph after that tells about one part of the pelican's body.\" That is the pattern of a description. The passage has no steps, no problem and only one comparison with a duck." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TSDESC-C06", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "What is the main idea of \"A Firehouse on Wheels\"?",
+          choices: [
+            { text: "A fire engine carries the water, ladders and tools that firefighters need at a fire.", correct: true },
+            { text: "Some fire engine ladders can stretch up past a second-floor window." },
+            { text: "Firefighters use axes to break through doors that are locked." },
+            { text: "Firefighters must get to a fire as fast as they possibly can." }
+          ] },
+        partB: { prompt: "Which sentence from the passage best supports the answer to Part A?",
+          choices: [
+            { text: "\"So a fire engine carries everything with it.\"", correct: true },
+            { text: "\"Ladders hang along the sides of the truck.\"" },
+            { text: "\"When the tank runs low, firefighters hook a hose to a fire hydrant.\"" },
+            { text: "\"Some are short, and some can stretch up past a second-floor window.\"" }
+          ] },
+        clue: "The main idea is the big point the whole text makes. Ask: What is this mostly about? Then check: does every section tell more about it?",
+        hints: [
+          "The main idea is the big point the whole text makes. Ask: What is this mostly about? Then check: does every section tell more about it?",
+          "Say in a few words what each section under a heading is about.",
+          "Ladders that reach a window are told about in only one section, so that is a detail, not the main idea. For Part B, choose the sentence that best matches your Part A answer."
+        ],
+        how: [
+          "Ask what the water, the ladders and the tools in the sections have in common.",
+          "Together, the sections show what the truck brings to a fire.",
+          "Part A: A fire engine carries the water, ladders and tools that firefighters need at a fire. Part B: \"So a fire engine carries everything with it.\"",
+          "Ladders and axes are each one detail, and the passage never says how fast firefighters must get there."
+        ],
+        misconception: "A common mix-up is choosing a detail from one section as the main idea. The main idea must fit every section.",
+        why: "Part A: A fire engine carries the water, ladders and tools that firefighters need at a fire. Part B: \"So a fire engine carries everything with it.\" Every section tells about one kind of thing the truck carries. Ladders and axes are single details." },
+      { id: "SK-TSDESC-C07", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p3"],
+        prompt: "Each job below needs something from the fire engine. Match each job to the heading of the section that tells about what the firefighters would use.",
+        cols: ["Water and Hoses", "Ladders for High Places", "Tools for Tough Jobs"],
+        rows: [
+          { text: "Firefighters reach a cat stuck on a roof.", answer: 1 },
+          { text: "A crew opens the door of a car after a crash.", answer: 2 },
+          { text: "Firefighters bandage a scraped knee.", answer: 2 },
+          { text: "Firefighters spray a burning shed from across the yard.", answer: 0 }
+        ],
+        clue: "A heading names what its section is mostly about. To place a detail, ask which section's topic it fits.",
+        hints: [
+          "A heading names what its section is mostly about. To place a detail, ask which section's topic it fits.",
+          "Read the three headings. Then read what each section says the firefighters use.",
+          "Spraying a shed from across the yard needs water pushed through a long hose, so it goes under \"Water and Hoses.\" Sort the other rows the same way."
+        ],
+        how: [
+          "Water and Hoses: the pump pushes water through long hoses, so spraying a burning shed from across the yard goes here.",
+          "Ladders for High Places: ladders stretch up high, so reaching a cat on a roof goes here.",
+          "Tools for Tough Jobs: a cutter can open a crushed car, and a first-aid kit is for people who are hurt, so opening a car door and bandaging a knee both go here."
+        ],
+        misconception: "A common mix-up is matching by the kind of job instead of by what the section says. A bandage is not a tool for breaking things, but the first-aid kit is in the tools section.",
+        why: "Spraying a shed goes with Water and Hoses. Reaching a cat on a roof goes with Ladders for High Places. Opening a crushed car and bandaging a knee go with Tools for Tough Jobs, because the cutter and the first-aid kit are both in that section." },
+      { id: "SK-TSDESC-C08", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p3"],
+        prompt: "Which TWO sentences are interesting facts that do NOT support the main idea of the passage? Choose two sentences in the passage.",
+        targets: ["p3:3:2", "p3:5:1", "p3:5:4", "p3:7:3", "p3:7:4", "p3:7:5"],
+        answer: ["p3:5:4", "p3:7:5"], pick: 2,
+        clue: "A key detail tells more about the main idea. Some details are fun to know but do not tell more about the big point.",
+        hints: [
+          "A key detail tells more about the main idea. Some details are fun to know but do not tell more about the big point.",
+          "Say the main idea of the whole passage in your own words. Then test each sentence in the sections: does it tell more about that idea? Choose two.",
+          "The sentence about the pump tells how the truck gets water onto a fire, so it is a key detail. Test each other sentence the same way."
+        ],
+        how: [
+          "Each heading names one section's topic. A key detail tells more about the topic of its section.",
+          "The pump goes with water and hoses. The ladders go with high places. The cutter and the first-aid kit go with tools.",
+          "A Dalmatian is a fun fact about fire stations long ago, and the truck's color does not tell about water, ladders or tools.",
+          "The answers are \"Long ago, many fire stations kept a spotted dog called a Dalmatian.\" and \"Most fire trucks are painted red, but some are yellow or white.\""
+        ],
+        misconception: "A common mix-up is thinking every true sentence in a passage is a key detail. Some are there because they are fun to know.",
+        why: "The answers are \"Long ago, many fire stations kept a spotted dog called a Dalmatian.\" and \"Most fire trucks are painted red, but some are yellow or white.\" Both are interesting, but neither tells about the water, ladders or tools the truck carries. The pump, the ladders, the cutter and the first-aid kit are key details." },
+      { id: "SK-TSDESC-C09", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        stem: ["Firefighters need tools for jobs that water cannot do.", "They use axes to break through locked doors."],
+        prompt: "Read the two sentences from the section \"Tools for Tough Jobs\" in the box. The author wants to start the second sentence with a clue word. Which revision connects the two sentences best?",
+        choices: [
+          { text: "For example, they use axes to break through locked doors.", correct: true },
+          { text: "However, they use axes to break through locked doors." },
+          { text: "Finally, they use axes to break through locked doors." },
+          { text: "Next, they use axes to break through locked doors." }
+        ],
+        clue: "Each describing clue word has a job. Ask what the second sentence does for the first one.",
+        hints: [
+          "Each describing clue word has a job. Ask what the second sentence does for the first one.",
+          "Read the first sentence. Then ask whether the second sentence goes on in time, turns the idea around, or tells more about it.",
+          "However shows a difference, but axes are not the opposite of tools for tough jobs. Read the pair with each clue word that is left."
+        ],
+        how: [
+          "The first sentence says firefighters need tools for jobs that water cannot do.",
+          "The second sentence names one of those tools, axes, and a job it does.",
+          "A clue word that brings in one case of a bigger idea fits here. The answer is \"For example, they use axes to break through locked doors.\"",
+          "However shows a difference, and Next and Finally tell order."
+        ],
+        misconception: "A common mix-up is reaching for a time word like next or finally. In a description, clue words add details or give examples.",
+        why: "The answer is \"For example, they use axes to break through locked doors.\" Axes are one case of the tools the first sentence talks about. However would show a difference, and Next and Finally would tell order." },
+      { id: "SK-TSDESC-C10", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Why did the author organize \"A Firehouse on Wheels\" as a description with headings, instead of using time words like first and next?",
+        choices: [
+          { text: "The author is telling about the parts of one thing, and the parts do not happen in an order.", correct: true },
+          { text: "The author is telling the steps a firefighter follows, and each step needs its own heading." },
+          { text: "The author is telling how firefighters solved a problem when their water tank ran low." },
+          { text: "The author is comparing old fire trucks from long ago with the fire trucks of today." }
+        ],
+        clue: "Authors pick a structure that fits what they want to tell. Ask what the reader learns from each section.",
+        hints: [
+          "Authors pick a structure that fits what they want to tell. Ask what the reader learns from each section.",
+          "Read the three headings and the first paragraph of the passage again.",
+          "The hydrant is one more detail about water, not a problem the firefighters had to solve, so that choice does not fit. Check the other choices against the headings."
+        ],
+        how: [
+          "Each heading names a different kind of thing, and the sections could be read in any order without changing what they mean.",
+          "Nothing in one section has to happen before something in another section, so time words would not fit.",
+          "The answer is \"The author is telling about the parts of one thing, and the parts do not happen in an order.\"",
+          "There are no steps, no problem being solved, and old trucks are never compared with new ones."
+        ],
+        misconception: "A common mix-up is thinking headings always mean steps. Headings can also sort details about one topic.",
+        why: "The answer is \"The author is telling about the parts of one thing, and the parts do not happen in an order.\" The sections tell about water, ladders and tools, and none has to come before another. The passage has no steps, no problem and no comparison of old and new trucks." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TSDESC-C11", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p4"],
+        prompt: "Which TWO sentences tell the main idea of the whole passage? Choose two sentences in the passage.",
+        targets: ["p4:1:1", "p4:1:2", "p4:2:2", "p4:3:3", "p4:6:1", "p4:6:3"],
+        answer: ["p4:1:2", "p4:6:3"], pick: 2,
+        clue: "The main idea is the big point the whole passage makes. A detail tells about only one part.",
+        hints: [
+          "The main idea is the big point the whole passage makes. A detail tells about only one part.",
+          "Read each sentence you can choose and ask: does it tell about the whole glove, or only one part or one look? Choose two.",
+          "\"It is where the ball lands\" tells about only the pocket, so it is a detail. Test each other sentence the same way."
+        ],
+        how: [
+          "A main idea sentence must fit the whole passage, not one part.",
+          "Paragraph 1 says every part of the glove is made to help a player catch and hold the ball. The last paragraph says it again in other words.",
+          "The answers are \"But every part of it is made to help a player catch and hold the ball.\" and \"But no matter how it looks, every part of a good glove works together to help a player make the catch.\"",
+          "Looking like a leather hand and coming in many colors tell only how a glove looks, and the others tell about one part."
+        ],
+        misconception: "A common mix-up is picking the very first sentence. The first sentence can hook the reader without telling the big point.",
+        why: "The answers are \"But every part of it is made to help a player catch and hold the ball.\" and \"But no matter how it looks, every part of a good glove works together to help a player make the catch.\" Both fit the whole passage. The other sentences tell how a glove looks or about one part." },
+      { id: "SK-TSDESC-C12", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p4"], pick: 2,
+        prompt: "Which TWO details best support the main idea of the passage?",
+        choices: [
+          { text: "A good pocket is shaped like a shallow bowl, so the ball settles in.", correct: true },
+          { text: "The web works like a small net that traps the ball.", correct: true },
+          { text: "Gloves come in many colors, such as brown, black and bright blue." },
+          { text: "Some players write their number inside the thumb of the glove." },
+          { text: "A baseball glove may look like a big leather hand." }
+        ],
+        clue: "Key details tell more about the main idea. A detail can be true and still not support the big point.",
+        hints: [
+          "Key details tell more about the main idea. A detail can be true and still not support the big point.",
+          "First say the main idea in your own words. Then test each choice against it. Choose two.",
+          "Writing a number inside the thumb tells how a player marks a glove, not anything the main idea is about. Check the other choices against the main idea."
+        ],
+        how: [
+          "The main idea is that every part of a glove helps a player catch and hold the ball.",
+          "The pocket's bowl shape keeps the ball from bouncing out, and the web traps the ball. Both show a part helping with the catch.",
+          "The answers are \"A good pocket is shaped like a shallow bowl, so the ball settles in.\" and \"The web works like a small net that traps the ball.\"",
+          "Colors, a number in the thumb and looking like a hand tell how a glove looks, not how it helps."
+        ],
+        misconception: "A common mix-up is choosing a describing detail that is true but only tells how something looks. A key detail must support the main idea.",
+        why: "The answers are \"A good pocket is shaped like a shallow bowl, so the ball settles in.\" and \"The web works like a small net that traps the ball.\" Both show a part of the glove helping a player catch. Colors, a number and looking like a hand do not." },
+      { id: "SK-TSDESC-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p4"],
+        prompt: "Why did the author put the fact about the first baseball players in a text box?",
+        choices: [
+          { text: "It is a fun fact that does not support the main idea.", correct: true },
+          { text: "It is the most important detail in the whole passage." },
+          { text: "It tells the first step in making a baseball glove." },
+          { text: "It explains how the web helps a player trap the ball." }
+        ],
+        clue: "Text features like a text box set some facts apart. Ask how the fact in the box connects to the big point of the passage.",
+        hints: [
+          "Text features like a text box set some facts apart. Ask how the fact in the box connects to the big point of the passage.",
+          "Read the box. Then read the paragraph just before it and the one just after it.",
+          "The box never mentions the web, so it does not explain how the web traps the ball. Test the other choices against what the box says."
+        ],
+        how: [
+          "The box says the first players did not wear gloves at all and caught the ball with bare hands.",
+          "The paragraphs around it tell how the parts of a glove help a player. The box does not tell about any part of a glove.",
+          "It is interesting, so the author keeps it but sets it apart. The answer is \"It is a fun fact that does not support the main idea.\"",
+          "It is not the most important detail, it tells no steps, and it never mentions the web."
+        ],
+        misconception: "A common mix-up is thinking a fact in a box must be the most important one. A box often holds an extra fact that is fun but not a key detail.",
+        why: "The answer is \"It is a fun fact that does not support the main idea.\" The box tells that early players used bare hands, which is interesting but tells nothing about how a glove's parts help. It gives no steps and does not mention the web." },
+      { id: "SK-TSDESC-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+        stem: ["(1) ______", "(2) Its thick, green stem stores water, like a canteen.", "(3) Instead of wide, flat leaves, it has sharp spines, so less water dries up into the air.", "(4) A waxy skin also keeps water from escaping.", "(5) In addition, its roots spread out wide, just under the ground, to soak up rain quickly."],
+        prompt: "A student wrote this description of a cactus. Which sentence would best fill the blank as the main idea sentence?",
+        choices: [
+          { text: "A cactus has a body that is built to save water in a dry desert.", correct: true },
+          { text: "A cactus has sharp spines that can poke anyone who touches it." },
+          { text: "Many people like to grow small cactus plants in pots at home." },
+          { text: "First, a cactus grows from a tiny seed in the warm desert sand." }
+        ],
+        clue: "A main idea sentence names the topic and the big point. Every detail sentence after it should tell more about that point.",
+        hints: [
+          "A main idea sentence names the topic and the big point. Every detail sentence after it should tell more about that point.",
+          "Read sentences 2 through 5, and ask what each one tells about.",
+          "Spines are named in only one sentence, so the choice about spines that poke is just one detail. Test each other choice against all four sentences."
+        ],
+        how: [
+          "Sentence 2 is about storing water. Sentence 3 is about spines that let less water dry up. Sentence 4 is about skin that keeps water in. Sentence 5 is about roots that soak up rain.",
+          "All four tell how a cactus gets or keeps water.",
+          "The answer is \"A cactus has a body that is built to save water in a dry desert.\"",
+          "Poking spines is one detail, growing cactus plants in pots is off the topic, and the seed sentence starts a sequence."
+        ],
+        misconception: "A common mix-up is choosing a sentence about one interesting detail. A main idea sentence must fit every detail that follows it.",
+        why: "The answer is \"A cactus has a body that is built to save water in a dry desert.\" The stem, spines, skin and roots all help the cactus get or keep water. Poking spines is one detail, pots are off the topic, and the seed sentence starts a sequence." },
+      { id: "SK-TSDESC-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        prompt: "A student is writing a description of the school playground. Choose the clue words that best complete the paragraph.",
+        text: "Our playground has something for everyone. It has a tall slide and two swing sets for kids who like to move. {0}, there is a quiet bench under an oak tree for kids who want to read. Games are painted on the blacktop, {1} hopscotch and four square.",
+        slots: [
+          { options: ["In addition", "Instead", "First"], answer: 0 },
+          { options: ["such as", "so", "after"], answer: 0 }
+        ],
+        clue: "Describing clue words have jobs. Some add one more detail, and some show that examples are coming.",
+        hints: [
+          "Describing clue words have jobs. Some add one more detail, and some show that examples are coming.",
+          "Read the sentence before each blank. Ask what the sentence with the blank does for the one before it.",
+          "First would start a set of steps, but this paragraph describes a place and gives no steps. Read each sentence with the words that are left."
+        ],
+        how: [
+          "The first sentence names the topic: the playground has something for everyone.",
+          "The bench is one more thing the playground has, so the first blank needs a clue word that adds a detail: In addition.",
+          "Hopscotch and four square are examples of the painted games, so the second blank needs such as.",
+          "The answers are In addition and such as. Instead would mean the bench takes the place of the slide, and so and after do not bring in examples."
+        ],
+        misconception: "A common mix-up is using a time word like first in a description. A description adds details; it does not give steps.",
+        why: "The answers are In addition and such as. In addition adds the bench as one more detail, and such as brings in examples of the painted games. Instead, First, so and after do not do those jobs." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. `like` lists only the
+     core items each one really practises (same component and task). */
+  similar: [
+    { id: "SK-TSDESC-S01", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TSDESC-P6", "SK-TSDESC-C12"],
+      stem: ["(1) The great blue heron is a tall bird that hunts in ponds and marshes.", "(2) Its long legs let it wade into the water without getting its feathers wet.", "(3) It stands very still and waits for a fish to swim close.", "(4) Then its long neck shoots forward, and its sharp bill grabs the fish.", "(5) Herons often build their nests high in trees.", "(6) Some people call them \"big blue cranes,\" but cranes are a different kind of bird."],
+      prompt: "Read the paragraph in the box. Which TWO details best show how a heron's BODY helps it hunt?",
+      choices: [
+        { text: "Its long legs let it wade into the water without getting its feathers wet.", correct: true },
+        { text: "Its long neck shoots forward, and its sharp bill grabs the fish.", correct: true },
+        { text: "It stands very still and waits for a fish to swim close." },
+        { text: "Herons often build their nests high in trees." },
+        { text: "Some people call them \"big blue cranes.\"" }
+      ],
+      clue: "Key details tell more about the idea in the question. Ask about each one: does it tell about a body part that helps the heron hunt?",
+      hints: [
+        "Key details tell more about the idea in the question. Ask about each one: does it tell about a body part that helps the heron hunt?",
+        "Check each choice against the paragraph. Choose two.",
+        "Building nests is about where herons raise their young, not about hunting, so that choice does not fit. Check the others the same way."
+      ],
+      how: [
+        "Long legs are a body part, and they let the heron wade into the water where fish are.",
+        "The long neck and sharp bill are body parts, and they grab the fish.",
+        "The answers are \"Its long legs let it wade into the water without getting its feathers wet.\" and \"Its long neck shoots forward, and its sharp bill grabs the fish.\"",
+        "Standing still is something the heron does, not a body part, and nests and names are not about hunting."
+      ],
+      misconception: "A common mix-up is choosing a true detail that fits the topic but not the question. Read the question's key word: body.",
+      why: "The answers are \"Its long legs let it wade into the water without getting its feathers wet.\" and \"Its long neck shoots forward, and its sharp bill grabs the fish.\" Both tell about body parts that help it hunt. Standing still is a way of acting, and nests and names are not about hunting." },
+    { id: "SK-TSDESC-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C02", "SK-TSDESC-C07"],
+      stem: ["The recycling center has a big bin for each kind of item.", "Blue bins hold paper and flat cardboard boxes.", "Green bins hold glass jars and bottles.", "In addition, yellow bins take metal cans."],
+      prompt: "Read the section in the box. Which heading fits this section best?",
+      choices: [
+        { text: "A Bin for Every Kind", correct: true },
+        { text: "Blue Bins for Paper" },
+        { text: "How to Sort Trash at Home" },
+        { text: "Why Recycling Helps the Earth" }
+      ],
+      clue: "A heading names what a section is mostly about. Ask what all the sentences in the section tell about.",
+      hints: [
+        "A heading names what a section is mostly about. Ask what all the sentences in the section tell about.",
+        "Say in a few words what each of the four sentences is about.",
+        "Blue bins are named in only one sentence, so that heading fits just one detail. Check the other headings against all four sentences."
+      ],
+      how: [
+        "The first sentence says there is a bin for each kind of item.",
+        "The other sentences name the bins for paper, glass and cans.",
+        "The answer is \"A Bin for Every Kind.\" The section never tells how to sort trash at home or why recycling helps."
+      ],
+      misconception: "A common mix-up is choosing a heading that fits only one sentence. A heading must fit the whole section.",
+      why: "The answer is \"A Bin for Every Kind.\" Every sentence tells about a bin for one kind of item. Blue bins are one detail, and the section does not tell about sorting at home or why recycling helps." },
+    { id: "SK-TSDESC-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C04", "SK-TSDESC-C08"],
+      stem: ["(1) Pine trees are built to handle cold, snowy winters.", "(2) Their needles are thin and waxy, so snow slides off.", "(3) Their branches bend under heavy snow instead of snapping.", "(4) Pine cones come in many shapes and sizes.", "(5) Thick bark also helps keep the trunk from freezing."],
+      prompt: "Read the paragraph in the box. Which sentence does NOT support the main idea?",
+      choices: [
+        { text: "Pine cones come in many shapes and sizes.", correct: true },
+        { text: "Their needles are thin and waxy, so snow slides off." },
+        { text: "Their branches bend under heavy snow instead of snapping." },
+        { text: "Thick bark also helps keep the trunk from freezing." }
+      ],
+      clue: "A key detail tells more about the main idea. A detail can be about the same topic and still not tell more about the big point.",
+      hints: [
+        "A key detail tells more about the main idea. A detail can be about the same topic and still not tell more about the big point.",
+        "Find the main idea sentence. Then test each detail against it.",
+        "The needles let snow slide off, so that sentence tells how pines handle winter. Test the others the same way."
+      ],
+      how: [
+        "Sentence 1 gives the main idea: pine trees are built to handle cold, snowy winters.",
+        "Needles, branches and bark each help the tree in snow or cold.",
+        "The answer is \"Pine cones come in many shapes and sizes.\" It is about pine trees, but not about winter."
+      ],
+      misconception: "A common mix-up is keeping any sentence about the same topic. A key detail must tell more about the main idea.",
+      why: "The answer is \"Pine cones come in many shapes and sizes.\" It is about pines, but it does not tell how they handle winter. The needles, branches and bark all do." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P6 and P5 (core set 1) and Together P1-P4
+     (P1 and P4 revised). */
+  addons: {
+    "SK-TSDESC-P1": {
+      hints: [
+        "Describing words like looks like and works like compare something new to something you already know.",
+        "Think about what a paddle is used for. Then read the rest of paragraph 5.",
+        "The passage never tells the color of the pelican's feet, so that choice does not fit. Test each choice that is left against paragraph 5."
+      ],
+      how: [
+        "A paddle pushes a boat through the water.",
+        "The next sentence says a pelican can paddle across the water just like a duck.",
+        "So the comparison helps you picture the feet pushing the bird along. The answer is \"how the pelican's feet push it through the water.\""
+      ],
+      misconception: "A common mix-up is thinking a comparison tells what something looks like. Works like tells what something does." },
+    "SK-TSDESC-P2": {
+      hints: [
+        "Describing clue words have different jobs. Some add a detail, some show what something is like, and one kind gives an example.",
+        "Find the clue word in each sentence you can choose.",
+        "\"In addition\" adds one more detail about the pelican, so that sentence is not the one. Check the other clue words the same way."
+      ],
+      how: [
+        "The sentences use the clue words looks like, also, In addition, work like and For example.",
+        "Also and In addition add details. Looks like and work like tell what something is like.",
+        "For example gives an example. The answer is \"For example, a pelican can paddle across the water just like a duck.\""
+      ],
+      misconception: "A common mix-up is choosing any sentence with a clue word. Each clue word has its own job." },
+    "SK-TSDESC-P3": {
+      hints: [
+        "Ask: What is this mostly about? Then check: does every paragraph tell more about it?",
+        "Say in a few words what each paragraph is about.",
+        "The feet are only in paragraph 5, so that choice is just one detail. Test the other choices against every paragraph."
+      ],
+      how: [
+        "Paragraph 1 says the pelican's whole body is built for catching fish.",
+        "Check it: the rest of the passage tells more about that.",
+        "The answer is \"how a brown pelican's body helps it catch fish.\" The feet are one detail, and nests and the coast are not what the passage is about."
+      ],
+      misconception: "A common mix-up is picking one fun detail as the main idea. The main idea must fit the whole passage." },
+    "SK-TSDESC-P4": {
+      hints: [
+        "The main idea of a paragraph is what all its sentences tell about. Ask: What is this paragraph mostly about?",
+        "Read the three sentences in paragraph 2. Find the thing each one names.",
+        "Diving happens in paragraph 3, not paragraph 2, so that choice does not fit. Test the others: does it fit all three sentences, or only one part of one?"
+      ],
+      how: [
+        "Sentence 1 is about the long bill. Sentences 2 and 3 are about the pouch under it.",
+        "The pouch only looks like a big bag. The pelican does not carry a bag.",
+        "The answer is \"the pelican's long bill and the pouch under it.\""
+      ],
+      misconception: "A common mix-up is reading a describing comparison as a fact. Looks like a big bag does not mean it is a bag." },
+    "SK-TSDESC-P5": {
+      hints: [
+        "Describing clue words have jobs. Some add a detail, some show a difference, and some tell order.",
+        "Read both sentences together. Ask how the second one is connected to the first.",
+        "Finally tells the last step in a sequence, and this passage does not tell steps. Read the sentences with each word that is left."
+      ],
+      how: [
+        "The first sentence tells one thing a pelican has: sharp eyes.",
+        "The second sentence tells one more thing it has: webbed feet. It is not a difference and not a step.",
+        "Also adds a detail. The answer is also: \"It also has webbed feet.\"",
+        "However would show a difference, and finally would tell the last step."
+      ],
+      misconception: "A common mix-up is choosing however whenever two different body parts are named. However is for a difference; also adds one more detail." },
+    "SK-TSDESC-P6": {
+      hints: [
+        "Key details tell more about the main idea. Ask about each detail: does it tell how the bird gets its food, or something else about it?",
+        "Find each choice in the passage, and note which paragraph it comes from. Choose two.",
+        "\"Its feet work like paddles\" tells how the pelican moves across the water, not how it gets food. Check the other choices the same way."
+      ],
+      how: [
+        "The question asks how a pelican catches fish.",
+        "Paragraph 3: it folds its wings and dives headfirst into the sea. Paragraph 4: the pouch scoops up water and fish at the same time.",
+        "The answers are \"It folds its wings and dives headfirst into the sea.\" and \"It scoops up water and fish at the same time.\"",
+        "Where it lives, how its feet paddle and how big it is do not tell how it catches fish."
+      ],
+      misconception: "A common mix-up is choosing a true detail that tells about the topic but not about the question. Each answer must tell how the pelican catches fish." }
+  },
   test: [
     { id: "SK-TSDESC-T1", type: "mc", points: 1, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.a"],
       prompt: "What is this passage mostly about?",

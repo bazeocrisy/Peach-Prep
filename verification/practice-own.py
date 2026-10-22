@@ -56,6 +56,13 @@ PARTIAL = """(()=>{const c=PP_PLAYER.ctx(),it=c.item,r=c.resp;const ci=ch=>ch.ma
   if(it.type=='dropdown'&&it.slots.length==2){r.v=[it.slots[0].answer,it.slots[1].answer===0?1:0];}
   if(it.type=='match'){r.v=it.rows.map(x=>x.answer);const a=r.v[0];r.v[0]=r.v[1];r.v[1]=a;}
   c.onChange();})()"""
+FXCR = """(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],
+        clue:'A clue.',hints:['Hint one.','Hint two.','Hint three.'],how:['Step one.','The answer is right one.'],why:'The answer is right one.'});
+      const cr={id:'SK-FXCR-C01',type:'cr',dok:3,prompt:'Write one sentence that tells the lesson of a story you know.',rows:3,sample:'Telling the truth is better than hiding a mistake.',
+        criteria:['I wrote a lesson that works for anyone.','I did not just retell what happened.'],clue:'A lesson works for anyone.',hints:['A lesson works for anyone.','Think about what the character learns.','Start with a word like always or never.'],how:['Name what the character learns.','Say it so it works for anyone.'],why:'A lesson is what anyone can learn.'};
+      PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',teach:{big:'x',points:['a','b','c'],example:{lines:['x'],note:'y'}},learn:[],parent:'p',
+        practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],test:[mc('SK-FXCR-T1',3),mc('SK-FXCR-T2',4),mc('SK-FXCR-T3',5),mc('SK-FXCR-T4',6)],
+        core:{rev:'1',sets:[{items:[cr,mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-D0'+n,10+n))},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-E0'+n,20+n))}]}});})()"""
 KEYS = "(()=>{const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);o[k]=localStorage.getItem(k);}return o;})()"
 PRACTICE = "JSON.parse(localStorage.getItem('pp.practice.v1')||'null')"
 PROG = "JSON.parse(localStorage.getItem('pp.progress.v1')||'null')"
@@ -314,13 +321,7 @@ with sync_playwright() as p:
 
     # ---------------- D. constructed response (cr) via a fixture lesson registered in the page ----------------
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
-    q.evaluate("""(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],
-        clue:'A clue.',hints:['Hint one.','Hint two.','Hint three.'],how:['Step one.','The answer is right one.'],why:'The answer is right one.'});
-      const cr={id:'SK-FXCR-C01',type:'cr',dok:3,prompt:'Write one sentence that tells the lesson of a story you know.',rows:3,sample:'Telling the truth is better than hiding a mistake.',
-        criteria:['I wrote a lesson that works for anyone.','I did not just retell what happened.'],clue:'A lesson works for anyone.',hints:['A lesson works for anyone.','Think about what the character learns.','Start with a word like always or never.'],how:['Name what the character learns.','Say it so it works for anyone.'],why:'A lesson is what anyone can learn.'};
-      PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',teach:{big:'x',points:['a','b','c'],example:{lines:['x'],note:'y'}},learn:[],parent:'p',
-        practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],test:[mc('SK-FXCR-T1',3),mc('SK-FXCR-T2',4),mc('SK-FXCR-T3',5),mc('SK-FXCR-T4',6)],
-        core:{rev:'1',sets:[{items:[cr,mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-D0'+n,10+n))},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-E0'+n,20+n))}]}});})()""")
+    q.evaluate(FXCR)
     q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
     cr0 = q.evaluate("({pts:document.getElementById('q-points').textContent, check:document.getElementById('q-check').textContent, dis:document.getElementById('q-check').disabled, box:!!document.querySelector('#q-body textarea.cr-box'), label:!!document.querySelector('#q-body label.cr-label')})")
     q.fill("#q-body textarea", "Being honest is always the right choice."); q.click("#q-check"); q.wait_for_timeout(60)
@@ -339,6 +340,21 @@ with sync_playwright() as p:
     q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try',{pos:0})"); q.wait_for_timeout(100)
     cr2 = q.evaluate("({text:document.querySelector('#q-body textarea').value, checks:[...document.querySelectorAll('#q-cr input')].map(x=>x.checked)})")
     check("D.2 cr resume: the written answer and the ticked criteria come back after a reload", cr2 == {"text": "Being honest is always the right choice.", "checks": [True, False]}, cr2)
+    close_page(q)
+    # D.3 (reviewer fix): Show me how on a written item uses compare wording, not "choose it", and the position words match the layout
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); q.evaluate(FXCR)
+    q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
+    q.fill("#q-body textarea", "Always tell the truth."); q.click("#q-how"); q.wait_for_timeout(60)
+    h0 = q.evaluate("document.querySelector('#q-how-steps .how-warn-line').textContent")
+    q.click("#q-check"); q.wait_for_timeout(60)
+    h1 = q.evaluate("""({line:document.querySelector('#q-how-steps .how-warn-line').textContent, fb:document.getElementById('q-feedback').textContent, all:document.getElementById('q-how-steps').textContent,
+        how:document.getElementById('q-how-steps').getBoundingClientRect().bottom, crTop:document.getElementById('q-cr').getBoundingClientRect().top,
+        crBottom:document.getElementById('q-cr').getBoundingClientRect().bottom, fbTop:document.getElementById('q-feedback').getBoundingClientRect().top,
+        btnTop:document.getElementById('q-check').getBoundingClientRect().top, status:document.getElementById('q-status').textContent})""")
+    check("D.3 Show me how on a written item: compare wording (no 'choose it'), refreshed after Compare; the checklist is below the steps and the feedback's 'shown above' is true",
+          "Compare your answer with the sample, then press Compare with the sample" in h0 and "choose" not in h0
+          and h1["line"].endswith("Compare your answer with the sample and the checklist below.") and "choose" not in h1["all"]
+          and "shown above" in h1["fb"] and h1["how"] <= h1["crTop"] and h1["crBottom"] <= h1["fbTop"] and "Answer shown" in h1["status"], (h0, h1))
     close_page(q)
 
     # ---------------- E. storage: blocked, full, malformed ----------------

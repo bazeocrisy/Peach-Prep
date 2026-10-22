@@ -121,6 +121,35 @@ PP.addLesson({
       figures: [
         { after: 5, src: "assets/figures/tt2a-b-tree-trunk.svg", label: "Figure 1", caption: "A slice of a tree trunk",
           alt: "Diagram of a slice cut across a tree trunk. Labels name the layers from the outside in: bark, inner bark, sapwood, and heartwood in the center. Thin rings circle the center. A note says: Each ring = 1 year. Count the rings to find the tree's age." }
+      ] },
+    /* B2 (expansion 2026-10-22, author b2a): p4 and p5 are used only by core sets 2 and 3.
+       Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "Ready in a Flash", genre: "Informational text",
+      paragraphs: [
+        ["A fire station is a busy building.", "Firefighters may spend a whole day and a whole night there.", "Every part of the station is planned so they can get to a fire fast."],
+        ["## The Engine Bay"],
+        ["The fire trucks wait in a big room called the engine bay.", "Its wide doors open right onto the street.", "Each firefighter's boots, pants and coat hang on a rack beside the truck.", "The pants are already tucked into the boots.", "A firefighter can step in, pull them up and be dressed in less than a minute."],
+        ["## Living Upstairs"],
+        ["Upstairs, there is a kitchen and a room full of beds.", "Firefighters cook meals together and take turns washing the dishes.", "When an alarm rings at night, bright lights flash on.", "In some stations, the firefighters slide down a shiny pole, because a pole is faster than the stairs."],
+        ["## Did You Know?"],
+        ["Box: Long ago, horses pulled fire wagons through the streets.", "Today, some fire stations keep a dog as a pet."],
+        ["From the pole to the boots beside the truck, a fire station is built to save time.", "When someone needs help, every second counts."]
+      ],
+      figures: [
+        { after: 5, src: "assets/figures/tt2-c-fire-station.svg", label: "Figure 1", caption: "Inside a fire station",
+          alt: "Diagram of a fire station cut open so you can see both floors. On the top floor, labels name the bunk room and the kitchen. A pole goes from the bunk room down through a hole in the floor to the bottom floor. On the bottom floor, the bottom of the pole is right next to a rack labeled gear rack, and the gear rack is right next to the fire truck. The front of the truck faces an opening labeled big doors, and the street is outside the doors." }
+      ] },
+    { id: "p5", title: "The Vine That Grew and Grew", genre: "Informational text",
+      paragraphs: [
+        ["Drive along a country road in Georgia in summer, and you may see trees covered in green leaves from top to bottom.", "Those leaves may not belong to the trees at all.", "They may belong to a vine called kudzu."],
+        ["## A Plan to Help"],
+        ["Kudzu first came to the United States from Japan more than 100 years ago.", "In the 1930s, heavy rains were washing away the soil on many Southern farms.", "Kudzu's roots grip the dirt, so farmers were paid to plant it to hold the soil in place."],
+        ["## A Plan Gone Wrong"],
+        ["Kudzu liked the hot, wet Southern summers a little too much.", "In summer, a kudzu vine can grow about a foot in one day.", "It climbs over trees, fences and even old barns.", "The thick leaves block the sunlight, so the trees underneath can die."],
+        ["## Did You Know?"],
+        ["Box: Kudzu has purple flowers that smell like grape candy.", "Some people use the flowers to make jelly."],
+        ["## Keeping Kudzu Back"],
+        ["Today, people work hard to stop kudzu from spreading.", "They cut the vines and dig up the roots.", "Kudzu was planted to help the land, but now people must work to protect the land from it."]
       ] }
   ],
   practice: [
