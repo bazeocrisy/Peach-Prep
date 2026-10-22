@@ -794,7 +794,7 @@ PP.addLesson({
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet. The solution is how the problem is fixed by the end. Near the end, look for proof that the fix worked, and check that the whole problem is fixed, not just part of it.",
       "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution. To sum up any story, say: Somebody (the main character) Wanted something, But (the problem), So (what the character does), Then (how it ends).",
-      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix. When a first try does not work, ask what is really causing the problem."
+      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix. When a first try does not work, ask what is really causing the problem. To tell whether two fixes work for the same reason, say what each fix changes, not what it looks like."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -944,27 +944,47 @@ PP.addLesson({
       prompt: "Match each detail from the story to the story part it shows.",
       cols: ["Character", "Setting", "Problem", "Solution"],
       rows: [
-        { text: "Jada", answer: 0 },
-        { text: "summer mornings in Macon", answer: 1 },
-        { text: "Half of the little tomatoes are gone.", answer: 2 },
-        { text: "Grandma Bea", answer: 0 }
+        { text: "Grandma Bea", answer: 0 },
+        { text: "behind a house in Macon in summer", answer: 1 },
+        { text: "Rabbits get into the garden and eat the tomatoes.", answer: 2 },
+        { text: "wire bent along the bottom of the gate", answer: 3 }
       ],
       clue: "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
-      why: "Jada and Grandma Bea are both characters. Summer mornings in Macon tell where and when, so they are the setting. Half of the tomatoes being gone is what goes wrong, so it is the problem. None of these details is the solution." }
+      why: "Grandma Bea is a character. Behind a house in Macon in summer tells where and when, so it is the setting. Rabbits getting in and eating the tomatoes is the trouble the rest of the story is about fixing, so it is the problem. The wire along the gate fixes it, so it is the solution." }
   ],
   /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
-     core: fifteen independent items in three sets of five. { ref } reuses the Try items P7, P4 and P5;
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P7 and P4;
      they stay in practice, and the engine leaves them out of Practice Together, so Together shows
-     P1, P2, P6 and P3. Hints and Show me how for refs and Together items are in addons.
+     P1, P2, P6, P3 and P5 (P5 left core after the B1 re-review; C03 replaces it). Hints and Show me how for refs and Together items are in addons.
      This code is shared with TS-PS; these items weight how each story part works in the plot.
      Author log: docs/expansion-2026-10-22/batches/B1-b1a-author-log.md. NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
       { ref: "SK-TT1b-P7" },
       { ref: "SK-TT1b-P4" },
-      { ref: "SK-TT1b-P5" },
+      { id: "SK-TT1b-C03", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p1"],
+        prompt: "Read paragraph 1 again. Then complete the sentences. Choose the best answer for each blank.",
+        text: "In this story, Jada is {0}. The author says that this year Jada was old enough to help, so the reader can expect that {1}.",
+        slots: [
+          { options: ["the main character", "a helper who comes in near the end", "the one who causes the problem"], answer: 0 },
+          { options: ["Jada will be the one who solves the problem", "the rabbits are new to the garden this year", "Grandma Bea will rest while Jada works"], answer: 0 }
+        ],
+        clue: "People in a story do different jobs in the plot. A detail near the start of a story can set up the job someone will do later.",
+        hints: [
+          "People in a story do different jobs in the plot. A detail near the start of a story can set up the job someone will do later.",
+          "Read paragraph 1 again. Ask who the rest of the story follows.",
+          "Nothing in the story says the rabbits are new this year, so that choice does not fit the second blank. Test each choice that is left for the second blank against the whole story."
+        ],
+        how: [
+          "Paragraph 1 says that this year, Jada was old enough to help in Grandma Bea's garden.",
+          "The rest of the story follows Jada: she finds the trouble, thinks about it all day and checks the garden the next morning. So she is the main character.",
+          "Telling the reader she is old enough to help sets up her job in the plot: she will be the one who solves the problem.",
+          "The answers are the main character and Jada will be the one who solves the problem. Nothing says the rabbits are new, and Grandma Bea helps rather than rests."
+        ],
+        misconception: "A common mix-up is thinking a detail at the start is only background. Ask what job it sets up for a character later in the story.",
+        why: "The answers are the main character and Jada will be the one who solves the problem. The story follows Jada from start to end, and saying she is old enough to help sets her up to fix the trouble. Nothing says the rabbits are new, and Grandma Bea helps rather than rests." },
       { id: "SK-TT1b-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
-        stem: ["On Saturday morning, the library's story hour was about to begin, but Ms. Lin, the reader, had lost her voice. The children on the rug grew restless, and a few got up to leave.", "Then Amir, a fourth grader, offered to read the book aloud while Ms. Lin turned the pages and showed the pictures. Soon every child on the rug was listening."],
+        stem: ["On Saturday morning, Ms. Lin wanted to read the new dragon book at the library's story hour. But when she opened it, only a whisper came out, because she had lost her voice. The children on the rug grew restless, and a few got up to leave.", "Then Amir, a fourth grader, offered to read the book aloud while Ms. Lin turned the pages and showed the pictures. Soon every child on the rug was listening."],
         prompt: "Read the story. What part does Amir play in the plot?",
         choices: [
           { text: "He is a helper whose actions make the solution possible.", correct: true },
@@ -982,10 +1002,10 @@ PP.addLesson({
           "The problem: Ms. Lin has lost her voice, so the children get restless and some start to leave.",
           "Amir offers to read aloud while Ms. Lin shows the pictures. After that, every child is listening.",
           "The answer is \"He is a helper whose actions make the solution possible.\"",
-          "The story is about Ms. Lin's story hour, so the problem is hers. Helping fix a problem does not make someone the main character, and the children were restless before Amir spoke."
+          "Ms. Lin is the one with the goal and the problem, so the story is about her. Helping fix a problem does not make someone the main character, and the children were restless before Amir spoke."
         ],
         misconception: "A common mix-up is thinking that whoever fixes the problem must be the main character. A helper matters to the plot because of what he helps fix.",
-        why: "The answer is \"He is a helper whose actions make the solution possible.\" The problem is Ms. Lin's: she has lost her voice and the children are restless. Amir reads aloud so the story hour can go on. Helping does not make him the main character, and he did not cause the restlessness." },
+        why: "The answer is \"He is a helper whose actions make the solution possible.\" The goal and the problem are Ms. Lin's: she wants to read the dragon book, but she has lost her voice and the children are restless. Amir reads aloud so the story hour can go on. Helping does not make him the main character, and he did not cause the restlessness." },
       { id: "SK-TT1b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p1"],
         prompt: "In paragraph 5, the author writes, \"The footprints stopped right at the wire.\" Why does the author include this sentence?",
         choices: [
@@ -1133,26 +1153,26 @@ PP.addLesson({
         prompt: "Complete the sentences about the problem in the story. Choose the best answer for each blank.",
         text: "Shouting does not fix the problem because {0}. The class has to fix the problem quickly because {1}.",
         slots: [
-          { options: ["the fans drown out the actors' voices in the back", "the actors do not know their lines yet", "the first graders keep talking during the play"], answer: 0 },
-          { options: ["the play is that same night", "the fans are about to break down", "the first graders have to go home soon"], answer: 0 }
+          { options: ["the fans drown out the actors' voices in the back", "the actors do not know their lines yet", "the actors are not shouting loudly enough"], answer: 0 },
+          { options: ["the play is that same night", "the last practice is almost over", "the first graders have to go home soon"], answer: 0 }
         ],
         clue: "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
         hints: [
           "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
-          "For the first blank, find out what Malia learns when she sits where the first graders sat. For the second blank, ask what is happening later that day.",
+          "For the first blank, read what happens after the actors shout. For the second blank, look for a time clue in the story. There is more than one.",
           "The actors shout every line, so they do know their lines. Check each choice that is left for the first blank against what Malia hears from the last row."
         ],
         how: [
           "When Malia sits in the last row, the actors' voices are lost under the roar of the fans. Shouting cannot fix that, because the fans are louder.",
           "So the first answer is the fans drown out the actors' voices in the back.",
           "The play is that same night, so the class must fix the problem quickly.",
-          "The actors know their lines, nobody says the first graders talked, the fans are not breaking, and no one has to go home."
+          "The actors know their lines. They already shouted until their throats hurt, and Malia says, \"It's not our voices,\" so louder shouting is not the answer. The last practice ending is not why the class must hurry, and no one has to go home."
         ],
         misconception: "A common mix-up is blaming the actors. Their voices were fine; the setting kept the back rows from hearing.",
-        why: "The answers are the fans drown out the actors' voices in the back and the play is that same night. From the last row, Malia hears only the roar of the fans, and the play is that night. The actors know their lines, nobody talks during the play, and the fans are not breaking." },
+        why: "The answers are the fans drown out the actors' voices in the back and the play is that same night. From the last row, Malia hears only the roar of the fans, and the play is that night. The actors know their lines and already shout as loudly as they can, the end of practice is not the reason to hurry, and no one has to go home." },
       { id: "SK-TT1b-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
-        partA: { prompt: "What part does Mr. Oduya play in the plot?",
+        partA: { prompt: "What is Mr. Oduya's job in the plot?",
           choices: [
             { text: "He helps carry out the fix once Malia finds the cause.", correct: true },
             { text: "He finds out what is really causing the problem." },
@@ -1258,22 +1278,22 @@ PP.addLesson({
       choices: [
         { text: "Without him, Ms. Reyes could not finish the job.", correct: true },
         { text: "He shows the reader how messy the park is." },
-        { text: "He explains why the leaves fell off the trees." },
+        { text: "He is the main character, because the bag gets into the truck when he helps." },
         { text: "He is the one who filled the bag too full." }
       ],
       clue: "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
       hints: [
         "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
         "Find the problem in the first sentence. Then read what Mr. Cole does.",
-        "Nothing in the story says who filled the bag, so that choice has no support. Test each choice that is left."
+        "The story never says the park is messy, so that choice has no support. Test each choice that is left."
       ],
       how: [
         "The problem: the bag of leaves is too heavy for Ms. Reyes to lift.",
         "Mr. Cole grabs the other side, and together they get the bag into the truck.",
         "If he were not there, the bag would still be on the ground. The answer is \"Without him, Ms. Reyes could not finish the job.\"",
-        "He never talks about how messy the park is or why leaves fall, and nothing says he filled the bag."
+        "The story never says the park is messy, nothing says he filled the bag, and the story is about Ms. Reyes and her job, so he is a helper, not the main character."
       ],
-      why: "The answer is \"Without him, Ms. Reyes could not finish the job.\" She cannot lift the bag alone, and he grabs the other side so they can lift it together. He does not describe the park, explain the leaves or fill the bag." },
+      why: "The answer is \"Without him, Ms. Reyes could not finish the job.\" She cannot lift the bag alone, and he grabs the other side so they can lift it together. Nothing says the park is messy or that he filled the bag, and helping does not make him the main character." },
     { id: "SK-TT1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
       like: ["SK-TT1b-C07"],
       stem: ["After a big rain, the creek behind Mia's house ran fast and high. Mia set her paper boat on the water, and it tipped right over. First she folded a new boat with a wider bottom, but the fast water tipped that one, too. Then she found a calm pool near the bank. Her boat floated there for a long time."],
@@ -1403,16 +1423,16 @@ PP.addLesson({
     "SK-TT1b-P5": {
       hints: [
         "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
-        "For each detail, find it in the story. Is it a person, a place and time, a trouble or a fix? A story part can be used more than once, and one may not be used at all.",
-        "Jada is a person in the story, so she is a character. Sort the other three details the same way."
+        "For each detail, find it in the story. Is it a person, a place and time, a trouble or a fix?",
+        "Grandma Bea is a person in the story, so she is a character. Sort the other three details the same way."
       ],
       how: [
-        "Jada and Grandma Bea are people in the story, so both are characters.",
-        "Summer mornings in Macon tell where and when, so they are the setting.",
-        "Half of the little tomatoes being gone is what goes wrong, so it is the problem.",
-        "None of the four details fixes the trouble, so the Solution column is not used."
+        "Grandma Bea is a person in the story, so she is a character.",
+        "Behind a house in Macon in summer tells where and when, so it is the setting.",
+        "Rabbits getting in and eating the tomatoes is the trouble the rest of the story is about fixing, so it is the problem.",
+        "The wire along the bottom of the gate fixes it, so it is the solution."
       ],
-      misconception: "A common mix-up is thinking every story part must be used once. Sort each detail by what it is, even if a part is left over." }
+      misconception: "A common mix-up is naming the first thing that happens as the problem. The problem is what the rest of the story is about fixing." }
   },
   test: [
     { id: "SK-TT1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -2470,7 +2490,7 @@ PP.addLesson({
           { text: "\"Lucy held the rope tight.\"" },
           { text: "\"The first big snow of the year covered Pine Hill in Vermont.\"" }
         ] },
-      clue: "A lesson for both stories must fit Kofi AND Lucy. Look at how each story ends, after the main character changes.",
+      clue: "A lesson for both stories must fit Kofi AND Lucy. Ask what each main character learns, then check it against both stories.",
       why: "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\" Both endings show that things got better after the character shared. The other choices fit only one story, or neither." },
     { id: "SK-TT1d-P5", type: "mc", points: 1, dok: 3, passages: ["p1", "p2"],
       prompt: "How is the way Kofi learns his lesson different from the way Lucy learns hers?",
@@ -2695,23 +2715,23 @@ PP.addLesson({
         prompt: "Complete the sentences about the settings. Choose the best answer for each blank.",
         text: "\"Moving Day on the Grassland\" happens on {0}. \"Bringing the Sheep Home\" happens on {1}.",
         slots: [
-          { options: ["wide, grassy land in the spring", "steep mountains in early fall", "a busy city street in the summer"], answer: 0 },
+          { options: ["open grassland in the spring", "steep mountains in early fall", "a busy city street in the summer"], answer: 0 },
           { options: ["steep mountains in early fall", "snowy mountains in the middle of winter", "flat, grassy land in the spring"], answer: 0 }
         ],
         clue: "A setting tells where and when. Find the place and the season in each story, and keep the two stories apart.",
         hints: [
           "A setting tells where and when. Find the place and the season in each story, and keep the two stories apart.",
           "Read the first paragraph of each story.",
-          "Grandma says the sheep must come down before winter, so Ingrid's story does not happen in the middle of winter. Which choice that is left matches Ingrid's story?"
+          "Grandma says the sheep must come down before winter, so Ingrid's story does not happen in the middle of winter. Test the other choices for each blank against the first paragraphs."
         ],
         how: [
           "\"Moving Day on the Grassland\" begins in spring, on the wide, grassy land of Mongolia.",
           "\"Bringing the Sheep Home\" happens in September, high in the mountains of Norway. September is early fall, and the sheep must come down before winter.",
-          "The answers are wide, grassy land in the spring and steep mountains in early fall.",
+          "The answers are open grassland in the spring and steep mountains in early fall.",
           "The steep mountains belong to Ingrid's story, not Bataa's, and the first snow on the peaks does not mean it is the middle of winter."
         ],
         misconception: "A common mix-up is mixing up which setting belongs to which story, or reading the first snow as the middle of winter.",
-        why: "The answers are wide, grassy land in the spring and steep mountains in early fall. Bataa's family moves every spring across the grassland of Mongolia. Ingrid's sheep come down from the mountains of Norway in September, before winter starts." },
+        why: "The answers are open grassland in the spring and steep mountains in early fall. Bataa's family moves every spring across the grassland of Mongolia. Ingrid's sheep come down from the mountains of Norway in September, before winter starts." },
       { id: "SK-TT1d-C12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
         prompt: "Choose ONE sentence from each story that shows the main character guiding the sheep. Choose two sentences in the passages.",
         targets: ["p7:3:1", "p7:4:3", "p7:5:2", "p7:6:2", "p8:3:1", "p8:5:2", "p8:5:4", "p8:6:3"],
@@ -2720,7 +2740,7 @@ PP.addLesson({
         hints: [
           "An action is something a character does. To compare two characters, find one action for each one that fits the question.",
           "In each story, find the part where the child is with the sheep.",
-          "Falling asleep that night does not move any sheep. Check each other sentence: is the child the one moving the sheep, or are the sheep doing something on their own?"
+          "Sitting up tall in the saddle shows how Bataa feels; no sheep move. Check each other sentence against the question."
         ],
         how: [
           "In paragraph 5 of Bataa's story, a lamb wanders toward the river, and he trots after it and turns it back.",
@@ -2765,7 +2785,7 @@ PP.addLesson({
         clue: "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
         hints: [
           "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
-          "Ask what each child is given to do, and how the child feels after doing it.",
+          "Reread the part where each child is handed a job, and the last paragraph of each story.",
           "Jalen's family moves, like Bataa's family, but moving to a new town is not the lesson. Say the lesson aloud, then test the stories that are left."
         ],
         how: [
@@ -2795,7 +2815,7 @@ PP.addLesson({
         clue: "To compare two cultures, look at how each family lives, not just at what happens on one day.",
         hints: [
           "To compare two cultures, look at how each family lives, not just at what happens on one day.",
-          "Read the first paragraph of each story. Where does each family live, and does that place stay put?",
+          "Read the first paragraph of each story. What does each one tell you about how the family lives?",
           "Both families keep sheep, so the choice about goats and horses does not fit. For Part B, the sentence must match your Part A answer."
         ],
         how: [
@@ -2857,7 +2877,7 @@ PP.addLesson({
       ],
       why: "The answer is \"Both happen on a hot afternoon near water.\" Mia is at a beach and Karim is on a river, and both stories are on a hot afternoon. The boat fits only Karim's story, the beach only Mia's, and neither is cold or in the morning." },
     { id: "SK-TT1d-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
-      like: ["SK-TT1d-C09", "SK-TT1d-P4", "SK-TT1d-C14"],
+      like: ["SK-TT1d-C09", "SK-TT1d-P4"],
       stem: ["Story 1: In a town in Brazil, Lucas and his friend argue over a soccer ball. Lucas feels bad all night. The next day, he says he is sorry, and they play together again.", "Story 2: In a small town in Ireland, Nora snaps at her little sister for messing up her drawing. Later, Nora tells her she is sorry, and the two sisters draw a new picture together."],
       prompt: "What lesson do BOTH stories teach?",
       choices: [
@@ -2866,10 +2886,10 @@ PP.addLesson({
         { text: "Little sisters should never touch your drawings." },
         { text: "It is best to stay away from people who argue." }
       ],
-      clue: "A lesson for both stories must fit both characters. Look at what each main character does after the trouble, and how it turns out.",
+      clue: "A lesson for both stories must fit both characters. Say the lesson in words that would fit anyone.",
       hints: [
-        "A lesson for both stories must fit both characters. Look at what each main character does after the trouble, and how it turns out.",
-        "Read the last sentence of each story.",
+        "A lesson for both stories must fit both characters. Say the lesson in words that would fit anyone.",
+        "In each story, notice how the two people get along at the start and how they get along at the end.",
         "Soccer is only in Lucas's story, so a lesson about soccer fits just one story. Test each choice that is left against both stories."
       ],
       how: [
@@ -2921,7 +2941,7 @@ PP.addLesson({
       ] },
     "SK-TT1d-P4": {
       hints: [
-        "A lesson for both stories must fit Kofi AND Lucy. Look at how each story ends, after the main character changes.",
+        "A lesson for both stories must fit Kofi AND Lucy. Ask what each main character learns, then check it against both stories.",
         "Find the moment each main character changes their mind. Choose one sentence from each story for Part B.",
         "Eating too much fruit never makes anyone sick in Kofi's story, so that choice does not fit Part A. In Part B, \"Lucy held the rope tight\" happens before Lucy changes, so it cannot show what her change taught."
       ],
