@@ -132,7 +132,7 @@ PP.addLesson({
         ["## Living Upstairs"],
         ["Upstairs, there is a kitchen and a room full of beds.", "Firefighters cook meals and take turns washing dishes.", "When an alarm rings at night, bright lights flash on.", "In some stations, the firefighters slide down a shiny pole, because a pole is faster than the stairs."],
         ["## Did You Know?"],
-        ["Box: Long ago, horses pulled fire wagons through the streets.", "Today, some fire stations keep a dog as a pet."],
+        ["Box: Long ago, horses pulled fire wagons through the streets.", "The first fire hoses were made of leather."],
         ["From the pole to the boots beside the truck, a fire station is built to save time.", "When someone needs help, every second counts."]
       ],
       figures: [
@@ -281,28 +281,28 @@ PP.addLesson({
         misconception: "A common mix-up is choosing a heading that names one detail. A heading should fit the whole section.",
         why: "The answer is \"The Hive's Queen.\" All three sentences in paragraph 2 tell about the queen. \"Laying Eggs All Day\" fits only one sentence, thousands of bees is in paragraph 1, and \"Working Together\" fits the whole article, not one paragraph." },
       { id: "SK-TT2a-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
-        stem: ["Grandpa's Tomato Tips", "Tomato plants need at least six hours of sun a day. Water them deeply at the roots, not on the leaves. Tie each plant to a stake so its heavy stems do not break. Tomatoes come in red, yellow and even purple."],
+        stem: ["Grandpa's Tomato Tips", "Spread a layer of mulch around each plant to keep the soil damp. Pick off any brown, spotted leaves near the bottom. Tie each plant to a stake so its heavy stems do not break. Tomatoes come in red, yellow and even purple."],
         prompt: "Grandpa's main idea is how to help tomato plants grow. Why is \"Tomatoes come in red, yellow and even purple\" NOT a key detail?",
         choices: [
           { text: "It is true, but it does not tell how to help a tomato plant grow.", correct: true },
-          { text: "It is not true, because every kind of tomato is red." },
+          { text: "It is not about tomatoes at all." },
           { text: "It is the main idea, so it cannot also be a detail." },
-          { text: "It should come first, because colors matter most." }
+          { text: "It tells a step a gardener must do first." }
         ],
-        clue: "A key detail helps prove the main idea. A fact can be true and still not be a key detail.",
+        clue: "To decide whether a detail is a key detail, test it against the main idea: does it help prove it?",
         hints: [
-          "A key detail helps prove the main idea. A fact can be true and still not be a key detail.",
+          "To decide whether a detail is a key detail, test it against the main idea: does it help prove it?",
           "Read the first three tips and ask what each one tells a gardener to do. Then reread the last sentence and ask the same question.",
-          "The tips never say that every tomato is red, so that reason does not fit. Test the other reasons against Grandpa's main idea."
+          "The color sentence does tell about tomatoes, so \"It is not about tomatoes at all\" does not fit. Test the other reasons against Grandpa's main idea."
         ],
         how: [
           "The main idea is how to help tomato plants grow.",
-          "The first three sentences each tell a gardener what to do: give the plant sun, water the roots and tie the plant to a stake.",
+          "The first three sentences each tell a gardener what to do: spread mulch, pick off spotted leaves and tie the plant to a stake.",
           "The last sentence tells what colors tomatoes can be. That is true, but it does not help a plant grow.",
           "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\""
         ],
         misconception: "A common mix-up is thinking a detail is wrong or false when it is only off the main idea. A fact can be true and still not be a key detail.",
-        why: "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\" The other sentences each tell a gardener what to do, but the colors of tomatoes do not help a plant grow. Nothing says every tomato is red, the colors are not the main idea, and they do not belong first." }
+        why: "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\" The other sentences each tell a gardener what to do, but the colors of tomatoes do not help a plant grow. The sentence is about tomatoes, it is not the main idea, and it does not tell a step to do." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT2a-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: ["p4"],
@@ -324,7 +324,7 @@ PP.addLesson({
         why: "The answers are \"Every part of the station is planned so they can get to a fire fast\" and \"From the pole to the boots beside the truck, a fire station is built to save time.\" Both cover every section. The sentences about the doors and the pole each tell one part, the busy-building sentence does not say how the station is set up, and \"every second counts\" tells why speed matters." },
       { ref: "SK-TT2a-P3" },
       { id: "SK-TT2a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
-        prompt: "Why does the author put the facts about horses and the pet dog in a text box instead of in one of the sections?",
+        prompt: "Why does the author put the facts about horses and leather hoses in a text box instead of in one of the sections?",
         choices: [
           { text: "They are fun facts, but the article's point does not need them.", correct: true },
           { text: "They are the most important facts in the whole article." },
@@ -338,13 +338,13 @@ PP.addLesson({
           "The text box says nothing about alarms, so it is not telling what happens at night. Decide which of the other reasons fits what you noticed."
         ],
         how: [
-          "The text box tells that horses once pulled fire wagons and that some stations keep a pet dog.",
-          "The last paragraph sums up the article, and it does not mention horses or dogs. The article makes its point without them.",
+          "The text box tells that horses once pulled fire wagons and that the first fire hoses were made of leather.",
+          "The last paragraph sums up the article, and it does not mention horses or hoses. The article makes its point without them.",
           "The answer is \"They are fun facts, but the article's point does not need them.\"",
           "The box facts are not the most important ones, and they say nothing about alarms or getting dressed."
         ],
         misconception: "A common mix-up is thinking a fact set apart in a box must be the most important one. A text box often holds an extra fact.",
-        why: "The answer is \"They are fun facts, but the article's point does not need them.\" The last paragraph sums up the article without horses or dogs. The box facts are not the most important ones, and they tell nothing about alarms or getting dressed." },
+        why: "The answer is \"They are fun facts, but the article's point does not need them.\" The last paragraph sums up the article without horses or hoses. The box facts are not the most important ones, and they tell nothing about alarms or getting dressed." },
       { id: "SK-TT2a-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
         prompt: "Look at Figure 1. Why is the bottom of the pole placed where it is?",
         choices: [
@@ -356,13 +356,13 @@ PP.addLesson({
         clue: "A diagram shows where things are. Use it together with the words in the article.",
         hints: [
           "A diagram shows where things are. Use it together with the words in the article.",
-          "In Figure 1, follow the pole down from the top floor. Read every label on the bottom floor, and notice what is closest to where the pole ends.",
-          "The kitchen is on the top floor in Figure 1, so the pole cannot drop anyone next to it. Now use the section about the engine bay: why would landing in that spot help?"
+          "In Figure 1, follow the pole down from the top floor. Read every label on the bottom floor.",
+          "The kitchen is on the top floor in Figure 1, so the pole cannot drop anyone next to it. Now use what the article says about where the gear waits: why would landing in that spot help?"
         ],
         how: [
           "In Figure 1, the pole goes from the bunk room down through the floor to the bottom floor.",
           "It ends right beside the gear rack, and the gear rack is beside the fire truck.",
-          "The section about the engine bay says each firefighter's gear hangs on a rack beside the truck, ready to put on.",
+          "The article says each firefighter's gear hangs on a rack beside the truck, ready to put on.",
           "The answer is \"so firefighters land right next to their gear and the truck.\" The kitchen is upstairs, the street is outside the big doors, and the pole is close to the truck, not far away."
         ],
         misconception: "A common mix-up is using only the words or only the picture. Use the labels and the article together.",
@@ -438,22 +438,22 @@ PP.addLesson({
           { text: "Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.", correct: true },
           { text: "Paragraph A is about folding programs, and Paragraph B is about sharing cookies." },
           { text: "Paragraph A tells what happens on the big night, and Paragraph B tells how the class gets ready." },
-          { text: "Paragraph A tells why singing is fun, and Paragraph B tells why the gym is too small." }
+          { text: "Both paragraphs tell how the class gets ready for the concert." }
         ],
         clue: "To find a paragraph's main idea, ask what all of its sentences have in common. Do that for each paragraph, then compare.",
         hints: [
           "To find a paragraph's main idea, ask what all of its sentences have in common. Do that for each paragraph, then compare.",
           "List what the students do in Paragraph A. Then list what happens in Paragraph B.",
-          "Folding programs and sharing cookies are each only one sentence, so they are details, not main ideas. Now look at the first words of each paragraph to see when each one happens."
+          "Folding programs and sharing cookies are each only one sentence, so they are details, not main ideas. Test the choices that are left against every sentence in each paragraph."
         ],
         how: [
           "Paragraph A: practicing songs, folding programs and setting up chairs all happen the week before the concert. Its main idea is getting ready.",
           "Paragraph B: families arriving, singing, clapping and sharing cookies all happen on the night of the concert.",
           "The answer is \"Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.\"",
-          "Programs and cookies are single details, one choice has the paragraphs backward, and neither paragraph says singing is fun or the gym is too small."
+          "Programs and cookies are single details, one choice has the paragraphs backward, and Paragraph B is not about getting ready."
         ],
         misconception: "A common mix-up is naming one detail from each paragraph instead of what all the sentences share.",
-        why: "The answer is \"Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.\" Every sentence in Paragraph A tells about getting ready the week before, and every sentence in Paragraph B tells about the concert night. Programs and cookies are single details, and the backward choice mixes up the paragraphs." },
+        why: "The answer is \"Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.\" Every sentence in Paragraph A tells about getting ready the week before, and every sentence in Paragraph B tells about the concert night. Programs and cookies are single details, the backward choice mixes up the paragraphs, and only Paragraph A is about getting ready." },
       { id: "SK-TT2a-C14", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
         stem: ["Kayla is writing a report about how a bike works. She drew Figure 1 for her report, but she forgot to write a caption under it."],
         figure: { src: "assets/figures/tt2-c-bike.svg", label: "Figure 1",
@@ -461,21 +461,21 @@ PP.addLesson({
         prompt: "Choose the best caption for Kayla to write under Figure 1.",
         text: "Caption: {0}",
         slots: [
-          { options: ["The main parts of a bike", "Kayla riding her bike to school", "A bike race in the park"], answer: 0 }
+          { options: ["The main parts of a bike", "A bike's chain and pedal", "Kayla riding her bike to school"], answer: 0 }
         ],
-        clue: "A caption tells what a whole picture shows. Look at the picture and its labels before you choose.",
+        clue: "A caption should match what the picture shows and what the report is about. Look at the picture before you choose.",
         hints: [
-          "A caption tells what a whole picture shows. Look at the picture and its labels before you choose.",
-          "Read each label in Figure 1. Then ask what all the labels have in common.",
-          "There is only one bike in Figure 1, so it cannot show a race. Check whether the choices that are left match what you see."
+          "A caption should match what the picture shows and what the report is about. Look at the picture before you choose.",
+          "Look at the whole picture, and read each label in Figure 1.",
+          "No one is riding the bike in Figure 1, so a caption about Kayla riding does not fit. Check the two choices that are left against every label."
         ],
         how: [
           "Figure 1 shows one bike with no rider. Its labels name the seat, the handlebars, a brake lever, a pedal and the chain.",
           "A caption should tell what the whole picture shows, and Kayla's report is about how a bike works.",
-          "The answer is \"The main parts of a bike.\" There is no rider, so it is not Kayla riding to school, and there is only one bike, so it is not a race."
+          "The answer is \"The main parts of a bike.\" The chain and the pedal are only two of the five labeled parts, and there is no rider, so it is not Kayla riding to school."
         ],
-        misconception: "A common mix-up is choosing a caption that tells a story about the picture instead of what the picture really shows.",
-        why: "The answer is \"The main parts of a bike.\" Figure 1 shows one bike with labels on its seat, handlebars, brake lever, pedal and chain. No one is riding it, and there is no race." },
+        misconception: "A common mix-up is choosing a caption that names only one part of the picture instead of what the whole picture shows.",
+        why: "The answer is \"The main parts of a bike.\" Figure 1 shows one bike with labels on its seat, handlebars, brake lever, pedal and chain. A caption about the chain and pedal names only two parts, and no one is riding the bike." },
       { ref: "SK-TT2a-P5" }
     ] }
   ] },
@@ -556,11 +556,11 @@ PP.addLesson({
       hints: [
         "The main idea fits the whole article, not just one paragraph. Read the first and last paragraphs, then ask which choice covers every part.",
         "Paragraphs 2 to 5 each tell about different bees. Find the choice that is big enough to cover all of them.",
-        "The queen laying hundreds of eggs is true, but it is only in paragraph 2, so it is too small. Test the other choices the same way."
+        "Guarding the hive is true, but it is only one job in one paragraph, so it is too small. Test the other choices the same way."
       ],
       how: [
         "The first paragraph says each bee has a job, and the last paragraph says no bee could keep the hive going alone.",
-        "Paragraphs 2 to 5 each tell one job: the queen, the young workers, the older workers and the guards.",
+        "Paragraphs 2 to 5 each tell about a different kind of bee and its job.",
         "The answer is \"Honeybees in a hive each have a job, and they work together.\"",
         "The other choices are true details, but each comes from only one paragraph."
       ],
@@ -569,7 +569,7 @@ PP.addLesson({
       hints: [
         "The main idea sentence is big enough to cover the whole article.",
         "Look in the first two paragraphs. Ask which sentence could cover the queen, the young workers, the older workers and the guards.",
-        "\"Every hive has one queen\" tells about only one bee, so it is too small. Test each other sentence: does it cover every job?"
+        "\"A honeybee hive can be home to thousands of bees\" tells how many bees there are, not what they do. Test each other sentence: does it cover every job?"
       ],
       how: [
         "The article tells about the queen in paragraph 2 and about different workers in paragraphs 3 to 5.",
@@ -581,7 +581,7 @@ PP.addLesson({
       hints: [
         "A supporting detail must tell about the idea in the question: jobs that worker bees do.",
         "Reread paragraphs 1 to 4 and notice which bees each detail is about. Choose two.",
-        "The queen lays hundreds of eggs, which is a job, but the queen is not a worker bee. Check each detail that is left: is it about workers, and does it name a job?"
+        "The queen lays hundreds of eggs, which is a job, but the queen is not a worker bee. Test each detail that is left against the question."
       ],
       how: [
         "The idea is about the jobs of worker bees.",
