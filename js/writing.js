@@ -12,11 +12,32 @@
   const S = window.PP_SITE;
   const TABS = ["sources", "plan", "write", "check", "score"];
   let task = null, data = null;
+  /* Keep each task's latest work for this page visit, even when a storage
+     read/write fails. Reopening must not replace an unsaved draft with old
+     disk contents (or an empty object when storage is blocked). */
+  const session = new Map();
 
   function key() { return "pp.task." + task.id; }
   function load() {
+    const cached = session.get(task.id);
+    if (cached && cached.unsaved) {
+      data = cached.data;
+      save();   /* retry if storage became available */
+      return;
+    }
     let d = null;
-    try { d = JSON.parse(localStorage.getItem(key()) || "null"); } catch (e) { d = null; }
+    let problem = null, raw = null;
+    try { raw = localStorage.getItem(key()); }
+    catch (e) { problem = "unavailable"; }
+    if (problem && cached) {
+      data = cached.data;
+      cached.problem = problem;
+      return;
+    }
+    if (!problem && raw !== null) {
+      try { d = JSON.parse(raw); }
+      catch (e) { problem = "damaged"; }
+    }
     /* PP-003 D8: keep only fields of the right type, so damaged storage
        (for example "plan": null) cannot break the essay screen */
     const obj = x => !!x && typeof x === "object" && !Array.isArray(x);
@@ -31,8 +52,37 @@
       checks: Array.isArray(d.checks) ? d.checks.filter(i => Number.isInteger(i)) : [],
       scores
     };
+    session.set(task.id, { data, problem, unsaved: false, saved: false });
   }
-  function save() { try { localStorage.setItem(key(), JSON.stringify(data)); } catch (e) { /* storage off: keep in memory */ } }
+  function storageNotice() {
+    let note = el("w-storage-note");
+    if (!note) {
+      note = make("p", "note"); note.id = "w-storage-note";
+      note.setAttribute("role", "status");
+      el("write-grid").parentNode.insertBefore(note, el("write-grid"));
+    }
+    const entry = session.get(task.id);
+    const text = entry.problem === "unavailable"
+      ? "Saving is unavailable. Your writing is kept only for this visit. Before closing or reloading this page, copy your plan and essay into a document or onto paper."
+      : entry.problem === "damaged"
+        ? "The saved writing could not be read correctly. Use a copy you saved elsewhere if you have one. New changes will be saved here when browser storage is available."
+        : entry.saved
+          ? "Your changes are saved in this browser on this device. Clearing browser data can erase them."
+          : "Changes save in this browser on this device when storage is available. Clearing browser data can erase them.";
+    if (note.textContent !== text) note.textContent = text;
+  }
+  function save() {
+    const entry = session.get(task.id);
+    entry.data = data;
+    entry.unsaved = true;
+    try {
+      localStorage.setItem(key(), JSON.stringify(data));
+      entry.unsaved = false; entry.problem = null; entry.saved = true;
+    } catch (e) {
+      entry.problem = "unavailable"; entry.saved = false;
+    }
+    storageNotice();
+  }
 
   function words(t) { return (t.trim().match(/\S+/g) || []).length; }
   function paras(t) { return t.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean).length; }
@@ -287,6 +337,7 @@
     load();
     el("write-title").textContent = task.title;
     buildAll();
+    storageNotice();
     select("sources");
     window.PP_APP.show("write");
     window.PP_APP.setHash("#write/" + task.id);
@@ -297,6 +348,12 @@
   function init() {
     document.querySelectorAll("[data-wtab]").forEach(b => b.addEventListener("click", () => select(b.dataset.wtab)));
     PP.tablist(document.querySelector(".wtabs"));
+    window.addEventListener("beforeunload", e => {
+      const hasWork = d => d.draft.trim() || Object.values(d.plan).some(v => v.trim()) || d.checks.length || Object.keys(d.scores).length;
+      if (Array.from(session.values()).some(entry => entry.unsaved && hasWork(entry.data))) {
+        e.preventDefault(); e.returnValue = "";
+      }
+    });
   }
   window.PP_WRITING = { init, start, select, state: () => ({ id: task && task.id, data }) };
 })();

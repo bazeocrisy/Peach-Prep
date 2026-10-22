@@ -72,11 +72,23 @@
 
   /* ---------- progress (this device only) ---------- */
   const KEY = "pp.progress.v1";
-  /* a damaged value ("hello", [1,2]) loads as empty progress instead of throwing on the first save */
-  function load() { try { const v = JSON.parse(window.localStorage.getItem(KEY)); return v && typeof v === "object" && !Array.isArray(v) ? v : {}; } catch (e) { return {}; } }
+  const recordObject = v => !!v && typeof v === "object" && !Array.isArray(v);
+  /* Validate each lesson record as well as the outer map. A corrupt neighbor
+     must not erase good scores or make the first step change throw. A map
+     without a prototype also avoids treating inherited property names as data. */
+  function load() {
+    const out = Object.create(null);
+    try {
+      const v = JSON.parse(window.localStorage.getItem(KEY));
+      if (recordObject(v)) Object.keys(v).forEach(k => {
+        if (k !== "__proto__" && k !== "constructor" && k !== "prototype" && recordObject(v[k])) out[k] = v[k];
+      });
+    } catch (e) { /* storage unavailable or malformed: begin this visit empty */ }
+    return out;
+  }
   let prog = load();
   function save() { try { window.localStorage.setItem(KEY, JSON.stringify(prog)); } catch (e) { /* private mode: progress lasts this visit */ } }
-  function rec(k) { prog[k] = prog[k] || {}; return prog[k]; }
+  function rec(k) { if (!recordObject(prog[k])) prog[k] = {}; return prog[k]; }
   function mark(k, step) { const r = rec(k); if (!r[step]) { r[step] = true; save(); } }
   function passMark(max) { return Math.ceil(max * 0.8); }
   /* Local calendar date (not UTC, which is a day ahead on Georgia evenings). */
@@ -249,7 +261,7 @@
     if (r.taught || r.learned || r.practiced || r.tried || r.tries) return "started";
     return "new";
   }
-  function resetProgress() { prog = {}; save(); }
+  function resetProgress() { prog = Object.create(null); save(); }
 
   /* ---------- labels ---------- */
   const TESTED = {
@@ -826,16 +838,51 @@
 
   /* A short writing activity (writing standards). The draft is kept on this
      device. A grown-up reads it with the checklist; nothing is scored. */
+  const shortWriting = Object.create(null);
+  window.addEventListener("beforeunload", e => {
+    if (Object.keys(shortWriting).some(k => shortWriting[k].unsaved && shortWriting[k].changed)) {
+      e.preventDefault();
+      e.returnValue = "";
+    }
+  });
   function renderWrite(host, L) {
     const W = L.write;
     const k = "pp.skwrite." + keyOf(L);
-    let saved = {};
-    try { saved = JSON.parse(window.localStorage.getItem(k)) || {}; } catch (e) { saved = {}; }
+    let entry = shortWriting[k];
+    /* Prefer newer unsaved work to an older disk copy. Successful writes can
+       be loaded afresh, so clearing browser data still clears saved writing. */
+    if (!entry || !entry.unsaved) {
+      let saved = entry ? entry.saved : {}, unavailable = false, raw = null;
+      try { raw = window.localStorage.getItem(k); } catch (e) { unavailable = true; }
+      if (!unavailable) {
+        try { saved = JSON.parse(raw) || {}; } catch (e) { saved = {}; }
+      }
+      entry = { saved, unsaved: unavailable, unavailable, changed: false };
+      shortWriting[k] = entry;
+    }
+    let saved = entry.saved;
     /* damaged storage must not break the page (PP-003 D8, same guard as the essay) */
     if (!saved || typeof saved !== "object" || Array.isArray(saved)) saved = {};
     if (typeof saved.text !== "string") delete saved.text;
     if (!Array.isArray(saved.checks)) delete saved.checks;
-    const store = () => { try { window.localStorage.setItem(k, JSON.stringify(saved)); } catch (e) { /* ok */ } };
+    entry.saved = saved;
+    const notice = make("p", "note");
+    notice.setAttribute("role", "status");
+    const syncNotice = () => {
+      const text = entry.unavailable
+        ? "Browser saving is unavailable. Your writing and checklist are kept only for this visit. Copy your writing somewhere safe before reloading or closing this page. Read it with a grown-up and use the checklist together."
+        : "Your writing stays in this browser on this device. Read it with a grown-up and use the checklist together.";
+      if (notice.textContent !== text) notice.textContent = text;
+    };
+    const store = () => {
+      entry.saved = saved;
+      entry.changed = true;
+      try {
+        window.localStorage.setItem(k, JSON.stringify(saved));
+        entry.unsaved = false; entry.unavailable = false; entry.changed = false;
+      } catch (e) { entry.unsaved = true; entry.unavailable = true; }
+      syncNotice();
+    };
     const card = make("div", "write-card");
     card.appendChild(make("h3", "write-h", "Your turn to write"));
     lines(card, W.prompt, "write-prompt");
@@ -857,7 +904,8 @@
       });
       card.appendChild(ul);
     }
-    card.appendChild(make("p", "note", "Your writing stays on this device. Read it with a grown-up and use the checklist together."));
+    syncNotice();
+    card.appendChild(notice);
     host.appendChild(card);
   }
 
@@ -1239,7 +1287,7 @@
       }
       if (C.ido || C.wedo || C.youdo) {
         const det = make("details", "five-min");
-        det.appendChild(make("summary", "", "Teach it in 5 minutes (I do, We do, You do)"));
+        det.appendChild(make("summary", "", "Teach it in five minutes (I do, We do, You do)"));
         [["I do", C.ido], ["We do", C.wedo], ["You do", C.youdo], ["Everyday practice", C.everyday]].forEach(([h, t]) => {
           if (!t) return; const p = make("p", ""); p.appendChild(make("strong", "", h + ": ")); p.appendChild(document.createTextNode(t)); det.appendChild(p);
         });

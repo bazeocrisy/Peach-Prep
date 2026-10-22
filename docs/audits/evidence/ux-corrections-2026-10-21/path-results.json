@@ -1,0 +1,742 @@
+[
+  {
+    "name": "320: fresh visitor gets focused two-choice screen",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: choice layout and control targets",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: introduction before start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: preview expands and focuses first phase",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: start saves preference and focuses next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: all 101 activities unique",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: catalog and routine counts",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: every matrix lesson key resolves",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: all 53 official practice codes mapped",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: required story-elements starting point",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: parallel activities visible from start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: path layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: lesson opens and step bookmark saved",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: lesson Back returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: reload resumes lesson step",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: finished activity selects next without changing scores",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: unfinished can be revisited",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: habit recorded separately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: browse selection opens existing catalog",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: switching preserves scores and path records",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: browse preference survives reload",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: return to path remembers introduction",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: keyboard expands parallel lane",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: expanded foundations layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: Grade 3 introduction label honest",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: writing returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: browser Back to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: browser Forward reopens lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: canceled navigation keeps active test",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: accepted navigation leaves test safely",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "320: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "390: fresh visitor gets focused two-choice screen",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: choice layout and control targets",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: introduction before start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: preview expands and focuses first phase",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: start saves preference and focuses next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: all 101 activities unique",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: catalog and routine counts",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: every matrix lesson key resolves",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: all 53 official practice codes mapped",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: required story-elements starting point",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: parallel activities visible from start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: path layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: lesson opens and step bookmark saved",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: lesson Back returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: reload resumes lesson step",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: finished activity selects next without changing scores",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: unfinished can be revisited",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: habit recorded separately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: browse selection opens existing catalog",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: switching preserves scores and path records",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: browse preference survives reload",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: return to path remembers introduction",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: keyboard expands parallel lane",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: expanded foundations layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: Grade 3 introduction label honest",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: writing returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: browser Back to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: browser Forward reopens lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: canceled navigation keeps active test",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: accepted navigation leaves test safely",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "390: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "768: fresh visitor gets focused two-choice screen",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: choice layout and control targets",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: introduction before start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: preview expands and focuses first phase",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: start saves preference and focuses next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: all 101 activities unique",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: catalog and routine counts",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: every matrix lesson key resolves",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: all 53 official practice codes mapped",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: required story-elements starting point",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: parallel activities visible from start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: path layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: lesson opens and step bookmark saved",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: lesson Back returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: reload resumes lesson step",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: finished activity selects next without changing scores",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: unfinished can be revisited",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: habit recorded separately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: browse selection opens existing catalog",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: switching preserves scores and path records",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: browse preference survives reload",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: return to path remembers introduction",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: keyboard expands parallel lane",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: expanded foundations layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: Grade 3 introduction label honest",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: writing returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: browser Back to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: browser Forward reopens lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: canceled navigation keeps active test",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: accepted navigation leaves test safely",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "768: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "1366: fresh visitor gets focused two-choice screen",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: choice layout and control targets",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: introduction before start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: preview expands and focuses first phase",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: start saves preference and focuses next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: all 101 activities unique",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: catalog and routine counts",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: every matrix lesson key resolves",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: all 53 official practice codes mapped",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: required story-elements starting point",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: parallel activities visible from start",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: path layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: lesson opens and step bookmark saved",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: lesson Back returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: reload resumes lesson step",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: finished activity selects next without changing scores",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: unfinished can be revisited",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: habit recorded separately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: browse selection opens existing catalog",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: switching preserves scores and path records",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: browse preference survives reload",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: return to path remembers introduction",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: keyboard expands parallel lane",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: expanded foundations layout",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: Grade 3 introduction label honest",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: writing returns to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: browser Back to path",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: browser Forward reopens lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: canceled navigation keeps active test",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: accepted navigation leaves test safely",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "1366: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "malformed: startup usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "malformed: path usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "malformed: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "wrong-types: startup usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "wrong-types: path usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "wrong-types: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "blocked: startup usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "blocked: path usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "blocked: persistence limitation visible",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "blocked: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "quota: startup usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "quota: path usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "quota: persistence limitation visible",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "quota: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "legacy: startup usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "legacy: path usable",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "legacy: passed score not erased or converted to route completion",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "legacy: essay draft preserved",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "legacy: no page errors",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "completed: root remembers path mode",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "completed: honest finish message and no next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "completed: unchecking restores a next lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "invalid bookmark: falls back to unfinished lesson",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "invalid address: visible recovery note",
+    "pass": true,
+    "detail": null
+  }
+]
