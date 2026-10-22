@@ -70,14 +70,25 @@ def launch(p):
     return p.chromium.launch(**kw)
 
 
+BROWSERS = {}
+
+
 def page(b, w=1366, h=900, init=None, errors=None, browse=True):
-    q = b.new_page(viewport={"width": w, "height": h}, has_touch=w < 1000, is_mobile=w < 500)
+    """One browser per page: with --single-process, closing a page's context ends its browser."""
+    bb = launch(b)
+    q = bb.new_page(viewport={"width": w, "height": h}, has_touch=w < 1000, is_mobile=w < 500)
+    BROWSERS[id(q)] = bb
     q.route("**/fonts.g*/**", lambda r: r.abort())
     if browse: q.add_init_script(BROWSE)
     if init: q.add_init_script(init)
     if errors is not None: q.on("pageerror", lambda e: errors.append(str(e)))
     q.on("dialog", lambda d: d.accept())
     return q
+
+
+def close_page(q):
+    bb = BROWSERS.pop(id(q), None)
+    if bb: bb.close()
 
 
 def ready(q, hash_=""):
@@ -104,7 +115,7 @@ def item_id(q):
 
 
 with sync_playwright() as p:
-    b = launch(p)
+    b = p   # page() launches its own browser from this Playwright handle
     errors = []
 
     # ---------------- A. data: Practice Together exclusion (lead decision) and set registration ----------------
@@ -137,7 +148,7 @@ with sync_playwright() as p:
     land = q.evaluate("({cur:PP_APP.current(), step:PP_SKILLS.step(), picker:!!document.getElementById('sk-try-set-1')})")
     check("A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons) and leads to the Try step's set picker",
           tg["ids"] == reg["p"] and tg["help"] and not tg["hint"] and not tg["how"] and land == {"cur": "skill", "step": "try", "picker": True}, (tg, land))
-    q.evaluate("localStorage.clear()"); q.close()
+    q.evaluate("localStorage.clear()"); close_page(q)
 
     # ---------------- B. own-mode controls on set 1 ----------------
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); ready(q, "#skill/%s/try" % K)
@@ -286,7 +297,7 @@ with sync_playwright() as p:
           and not any(f in pr for f in ("mastered", "tries", "best", "attempts", "passedAt")), (d3, pr))
     # finish all fifteen: only `tried` appears
     for part in ("y", "y2"):
-        start_set(q, part)
+        start_set(q, part, 0)
         for i in range(5):
             st_ = q.evaluate("PP_PLAYER.state().solved[PP_PLAYER.state().pos]")
             if not st_:
@@ -299,7 +310,7 @@ with sync_playwright() as p:
     tick = q.evaluate("document.getElementById('sk-tab-try').classList.contains('is-done')")
     check("C.4 no pass from practice: after all fifteen, pp.progress.v1[k] gains only tried:true; the list says Started, not passed; the Try step is ticked",
           pr == {K: {"tried": True}} and "Started." in row["aria"] and "Passed" not in row["aria"] and not row["passed"] and tick, (pr, row, tick))
-    q.close()
+    close_page(q)
 
     # ---------------- D. constructed response (cr) via a fixture lesson registered in the page ----------------
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
@@ -325,10 +336,10 @@ with sync_playwright() as p:
     q.reload(); q.wait_for_timeout(600)
     q.evaluate("""(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],clue:'A clue.',why:'w'});
       PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],core:{rev:'1',sets:[{items:[{id:'SK-FXCR-C01',type:'cr',prompt:'Write.',sample:'S',criteria:['a','b'],clue:'c',why:'w'},mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[]},{items:[]}]}});})()""")
-    q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
+    q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try',{pos:0})"); q.wait_for_timeout(100)
     cr2 = q.evaluate("({text:document.querySelector('#q-body textarea').value, checks:[...document.querySelectorAll('#q-cr input')].map(x=>x.checked)})")
     check("D.2 cr resume: the written answer and the ticked criteria come back after a reload", cr2 == {"text": "Being honest is always the right choice.", "checks": [True, False]}, cr2)
-    q.close()
+    close_page(q)
 
     # ---------------- E. storage: blocked, full, malformed ----------------
     for name, init in (("blocked", "Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked')}})"),
@@ -352,7 +363,7 @@ with sync_playwright() as p:
             pn["cleared"] = cleared
         check("E.1 %s storage: the honest notice on the picker and in the player; no stop-and-come-back promise; practice works for the visit; no page errors%s" % (name, "; the notice clears after a later save succeeds" if name == "full" else ""),
               ok, (pn, pl, kept, errs))
-        q.close()
+        close_page(q)
     for name, raw, expect in (("bad JSON", "{not json", "Saved practice could not be read, so it starts fresh. Nothing else was changed."),
                               ("an array", "[1,2,3]", "Saved practice could not be read"),
                               ("mixed", json.dumps({"v": 1, "l": {K: {"i": {"SK-TT1c-P4": {"w": "2", "h": 9, "x": "yes", "ok": True, "r": {"v": [99]}}, "__proto__": {"w": 1}}}, "bad": "x"}}), "Some saved practice could not be read")):
@@ -369,7 +380,7 @@ with sync_playwright() as p:
         if name == "mixed":
             good = good and info["st"] == "retry" and info["rec"]["w"] == 2 and info["rec"]["h"] == 3 and info["rec"]["x"] is False and info["resp"] == '{"v":[]}'
         check("E.2 malformed pp.practice.v1 (%s): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts" % name, good, (n0, raw1 == raw, info, errs))
-        q.close()
+        close_page(q)
 
     # ---------------- F. compatibility with saved data from main ----------------
     seed = {
@@ -401,7 +412,7 @@ with sync_playwright() as p:
           mid == before and not changed and set(after) - set(before) == {"pp.practice.v1"}, (changed, set(after) - set(before)))
     check("F.2 a legacy tried:true (the old short Try) still shows Practicing, but does not tick the fifteen-question Try step",
           lab == {"state": "Practicing", "tryTick": False}, lab)
-    q.close()
+    close_page(q)
     # a lesson without core behaves exactly as before
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
     L0 = "3.T.C.1.a"
@@ -419,7 +430,7 @@ with sync_playwright() as p:
           and lt["h"] == "Try It Yourself" and "Help me unlocks after one try." in lt["intro"] and lt["picker"] == 0
           and not l1["help"] and not l1["hint"] and not l1["how"] and not l1["prev"] and l1["tag"] == "Try it yourself" and l1["check"] == "Check"
           and l2["help"] and "Help me is now on" in l2["fb"] and q.evaluate("localStorage.getItem('pp.practice.v1')") is None, (lg, lt, l1, l2))
-    q.close()
+    close_page(q)
 
     # ---------------- G. standard pages, code links, search, no writes ----------------
     errs = []
@@ -438,7 +449,7 @@ with sync_playwright() as p:
     check("G.1 every leaf, parent, 3-5. band form, grammar-chart level and Practices code opens #std/<code> with a focused h1, the official wording and page, no nested links and no sideways scroll at 320px (%d addresses)" % len(codes),
           not bad and not errs, (bad[:3], errs[:2]))
     check("G.2 rendering every standard page writes nothing: every localStorage key is byte-identical", q.evaluate(KEYS) == before, "")
-    q.close()
+    close_page(q)
     q = page(b, 1366, 900, errors=errors); ready(q, "#browse")
     ss = q.evaluate("""(()=>{PP_STD.open('3.T.SS.1.a');const a=[...document.querySelectorAll('#std-body .std-lesson-btn')].map(b=>b.dataset.lesson);
         PP_STD.open('3.T.T.1');const comps=[...document.querySelectorAll('#std-body .std-comp .std-comp-head a.std-link')].map(a=>a.dataset.std);
@@ -487,7 +498,7 @@ with sync_playwright() as p:
     check("G.7 code search shows a standard card for 3.T.T.1, 3-5.T.T.1, K-12.P.EICC.1, a GUM level and a GUM row (3-5.RA.2, GaDOE's print, resolves too); a word search does not; 3-5. finds the lessons",
           all(srch[t] == w for t, w in (("3.T.T.1", "3.T.T.1"), ("3-5.T.T.1", "3.T.T.1"), ("K-12.P.EICC.1", "K-12.P.EICC.1"), ("3.L.GC.1:M", "3.L.GC.1:M"),
               ("3.L.GC.1:R:use-action-verbs", "3.L.GC.1:R:use-action-verbs"), ("3-5.RA.2", "3.T.RA.2"), ("pronoun", None))) and nles >= 6, (srch, nles))
-    q.close()
+    close_page(q)
 
     # ---------------- H. navigation: links, direct addresses, Back/Forward ----------------
     q = page(b, 1366, 900, errors=errors); ready(q, "#browse")
@@ -521,7 +532,7 @@ with sync_playwright() as p:
     d4 = q.evaluate("[PP_APP.current(), PP_SKILLS.step()]")
     check("H.2 direct addresses: #std/3-5.T.T.1 settles on #std/3.T.T.1; a bad code shows the not-found home; #play/SK:<k>:y2/try opens set 2, whose Back opens the Try step",
           d1 == ["std", "#std/3.T.T.1"] and d2[0] in ("home", "choose") and d2[1] == "" and d2[2] is False and d3 == ["player", "SK:%s:y2" % K, True] and d4 == ["skill", "try"], (d1, d2, d3, d4))
-    q.close()
+    close_page(q)
 
     # ---------------- I. the check: navigator, flags, unanswered list, results ----------------
     q = page(b, 1366, 900, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
@@ -581,7 +592,7 @@ with sync_playwright() as p:
         return rows;})()""" % json.dumps(pt))
     okrows = all((int(r[1].split(" of ")[1]) >= 3) for r in comp if not r[2])
     check("I.5 a practice test reports an area on its own only when it has enough questions; smaller areas are grouped as Other parts", comp and okrows, comp)
-    q.close()
+    close_page(q)
 
     # ---------------- J. seven viewports: practice screen, set picker, a standard page, the check ----------------
     over = []
@@ -608,12 +619,11 @@ with sync_playwright() as p:
         nav = q.evaluate("(()=>{const n=document.getElementById('q-nav'),r=n.getBoundingClientRect();return [Math.round(r.left),Math.round(r.right)]})()")
         if OUT and w in (320, 390, 1366): q.screenshot(path=str(OUT / ("check-%dx%d.png" % (w, h))))
         if o1 > 0 or o2 > 0 or o3 > 0 or o4 > 0 or clipped or nav[0] < 0 or nav[1] > w or errs: over.append((w, h, o1, o2, o3, o4, clipped, nav, errs[:1]))
-        q.close()
+        close_page(q)
     check("J.1 at 320x568, 390x844, 844x390, 768x1024, 1024x768, 1366x768 and 1920x1080: the set picker, the practice controls (with hints and steps open), a standard page and the check navigator fit, with no sideways scroll, no clipped control and 44px targets",
           not over, over)
 
     check("K.0 no page errors in the browser runs", not errors, errors[:3])
-    b.close()
 
 # ---------------- L. check-content.js rules on mutated copies ----------------
 tmp = Path(tempfile.mkdtemp(prefix="pp-cc-"))

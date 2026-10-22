@@ -589,7 +589,7 @@ PP.addLesson({
     { id: "p5", title: "Dots on the Glass", genre: "Informational text",
       paragraphs: [
         ["The library at Hillcrest Elementary has a wall of tall windows.", "Students love to read there in the sunshine.", "But the windows caused a problem.", "Several times a week, a bird flew into the glass with a loud thump."],
-        ["First, the students stuck one big hawk-shaped sticker in the middle of the glass.", "They hoped it would scare the birds away.", "But birds kept hitting the window, just a few feet from the sticker."],
+        ["First, the students stuck one big hawk-shaped sticker in the middle of the glass.", "But birds kept hitting the window, just a few feet from the sticker."],
         ["A scientist from the nature center explained why.", "When a bird looks at a window, it sees trees and sky reflected in the glass, like in a mirror.", "To the bird, the window looks like open air.", "One sticker covered only a tiny spot.", "The rest of the glass still looked like a clear path to fly through."],
         ["So the class decided to cover the whole window with small white dots.", "They placed the dots in rows, about two inches apart.", "Now birds could tell that something solid was in the way."],
         ["Since then, the thumps have almost stopped.", "Students still read in the sunshine, and the birds stay safe outside."]

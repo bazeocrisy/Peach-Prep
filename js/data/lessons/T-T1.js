@@ -950,6 +950,453 @@ PP.addLesson({
       clue: "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
       why: "Grandma Bea is a character. Behind a house in Macon in summer is the setting. Rabbits squeezing under the gate is the problem. The wire along the gate is the solution." }
   ],
+  /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P7, P4 and P5;
+     they stay in practice, and the engine leaves them out of Practice Together, so Together shows
+     P1, P2, P6 and P3. Hints and Show me how for refs and Together items are in addons.
+     This code is shared with TS-PS; these items weight how each story part works in the plot.
+     Author log: docs/expansion-2026-10-22/batches/B1-b1a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT1b-P7" },
+      { ref: "SK-TT1b-P4" },
+      { ref: "SK-TT1b-P5" },
+      { id: "SK-TT1b-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+        stem: ["Every Friday, Mr. Lee parked his taco truck outside the community pool. One hot Friday, his helper was home sick. The line grew longer and longer, and some hungry swimmers gave up and left.", "Then Amir, a boy from the swim team, asked if he could help. He wrote down each order on a notepad while Mr. Lee cooked. By one o'clock, every person in line had lunch."],
+        prompt: "Read the story. What part does Amir play in the plot?",
+        choices: [
+          { text: "He is a helper whose actions make the solution possible.", correct: true },
+          { text: "He is the main character, and the problem is his own." },
+          { text: "He causes the problem by making the line grow so long." },
+          { text: "He is part of the setting, like the community pool." }
+        ],
+        clue: "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
+        hints: [
+          "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
+          "Find the problem first. Then find what Amir does and what happens after that.",
+          "The story is mostly about Mr. Lee and his long line, so the problem is not Amir's own. Test each choice that is left."
+        ],
+        how: [
+          "The problem: Mr. Lee's helper is sick, so the line grows long and people leave.",
+          "Amir offers to help and writes down orders while Mr. Lee cooks. After that, everyone in line gets lunch.",
+          "The answer is \"He is a helper whose actions make the solution possible.\"",
+          "The problem belongs to Mr. Lee, the line was already long before Amir came, and a person is a character, not part of the setting."
+        ],
+        misconception: "A common mix-up is thinking every important character is the main character. A helper matters to the plot because of what he helps fix.",
+        why: "The answer is \"He is a helper whose actions make the solution possible.\" The problem is Mr. Lee's: his helper is sick and the line is too long. Amir writes down orders so Mr. Lee can cook, and everyone gets lunch. The line was long before Amir came, and a person is a character, not part of the setting." },
+      { id: "SK-TT1b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p1"],
+        prompt: "In paragraph 5, the author writes, \"The footprints stopped right at the wire.\" Why does the author include this sentence?",
+        choices: [
+          { text: "It proves that the wire kept the rabbits out of the garden.", correct: true },
+          { text: "It shows that the rabbits found a new way into the garden." },
+          { text: "It shows that Jada left her own footprints near the gate." },
+          { text: "It shows that the dirt was wet because it rained that night." }
+        ],
+        clue: "Near the end of a story, an author often gives proof that the solution worked. Ask what this detail tells you about the problem.",
+        hints: [
+          "Near the end of a story, an author often gives proof that the solution worked. Ask what this detail tells you about the problem.",
+          "Think about what the footprints showed in paragraph 2. Then compare that with paragraph 5.",
+          "Every tomato is still on its vine, so the rabbits did not find a new way in. Test each choice that is left."
+        ],
+        how: [
+          "In paragraph 2, tiny footprints cross the dirt where tomatoes are missing. The footprints show where the rabbits went.",
+          "In paragraph 5, the footprints stop right at the wire, and every tomato is still there.",
+          "So the rabbits came to the gate but could not get past the wire. The answer is \"It proves that the wire kept the rabbits out of the garden.\"",
+          "The tomatoes are safe, so the rabbits found no new way in; the footprints are tiny, not Jada's; and the story never mentions rain."
+        ],
+        misconception: "A common mix-up is reading a detail near the end as a new problem. Near the end, a detail is often proof that the solution worked.",
+        why: "The answer is \"It proves that the wire kept the rabbits out of the garden.\" The rabbits' tiny footprints come up to the wire and stop, and every tomato is safe. They did not find a new way in, the footprints are not Jada's, and the story never mentions rain." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT1b-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"],
+        prompt: "How does the setting make the challenge harder for the class?",
+        choices: [
+          { text: "The room is so hot that ice will melt very fast.", correct: true },
+          { text: "The room is so dark that teams cannot see their supplies." },
+          { text: "The room is so crowded that teams have no space to work." },
+          { text: "The room is so noisy that no one can hear Ms. Banks." }
+        ],
+        clue: "The setting is where and when a story happens. Ask how the place or the time makes the problem easier or harder.",
+        hints: [
+          "The setting is where and when a story happens. Ask how the place or the time makes the problem easier or harder.",
+          "Read paragraph 1, and picture what Room 6 is like that day.",
+          "Nothing in paragraph 1 is about noise, so that choice has no support. Test each other choice against what paragraph 1 says about the room."
+        ],
+        how: [
+          "Paragraph 1 says the air conditioner broke on the hottest day of August, and Room 6 felt like an oven.",
+          "Ice melts faster when it is hot, so the setting makes keeping an ice cube frozen much harder.",
+          "The answer is \"The room is so hot that ice will melt very fast.\"",
+          "Nothing in the story says the room is dark, crowded or noisy."
+        ],
+        misconception: "A common mix-up is treating the setting as just a place. Ask how the place and the time change the problem.",
+        why: "The answer is \"The room is so hot that ice will melt very fast.\" The air conditioner broke on the hottest day of August, and the room felt like an oven. Nothing in the story says the room is dark, crowded or noisy." },
+      { id: "SK-TT1b-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Why does Ana need a new plan in paragraph 4?",
+          choices: [
+            { text: "The first cube melted, so the team has only one chance left.", correct: true },
+            { text: "Ms. Banks says that paper cups are against the rules." },
+            { text: "Bryce asks Ana to think of a better plan for him." },
+            { text: "The other teams have already finished the challenge." }
+          ] },
+        partB: { prompt: "Which TWO sentences from the story best support the answer to Part A?", pick: 2,
+          choices: [
+            { text: "\"But the sun beat down on the glass, and in ten minutes the cube was a puddle.\"", correct: true },
+            { text: "\"Now there was only one cube left.\"", correct: true },
+            { text: "\"Ana thought hard.\"" },
+            { text: "\"It can sit in the fresh air,\" he said." },
+            { text: "\"When the lunch bell rang, the other teams had cups of water.\"" }
+          ] },
+        clue: "A problem makes a character act. When a try does not work, ask what has changed and what the character has to do now.",
+        hints: [
+          "A problem makes a character act. When a try does not work, ask what has changed and what the character has to do now.",
+          "Read paragraph 3 to see how Bryce's try turns out. Then read paragraph 4.",
+          "Ms. Banks never talks about rules for cups, so that choice does not fit Part A. For Part B, choose two sentences that match your Part A answer."
+        ],
+        how: [
+          "In paragraph 3, Bryce's cube sits in the sun and turns into a puddle in ten minutes.",
+          "Paragraph 4 says there is only one cube left. If that one melts too, the team loses the challenge.",
+          "Part A: The first cube melted, so the team has only one chance left. Part B: \"But the sun beat down on the glass, and in ten minutes the cube was a puddle.\" and \"Now there was only one cube left.\"",
+          "\"Ana thought hard\" tells what she does, not why. Bryce's fresh-air line is his reason for the first try, and the lunch bell comes at the very end."
+        ],
+        misconception: "A common mix-up is choosing a sentence about thinking. The question asks why a new plan is needed, so look for what went wrong.",
+        why: "Part A: The first cube melted, so the team has only one chance left. Part B: \"But the sun beat down on the glass, and in ten minutes the cube was a puddle.\" and \"Now there was only one cube left.\" The first try failed, so Ana needs a plan that saves the last cube. Nobody talks about rules for cups, Bryce never asks her for a plan, and the other teams are still working." },
+      { id: "SK-TT1b-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"],
+        prompt: "Which sentence tells the idea that will solve the problem? Choose the sentence in the passage.",
+        targets: ["p3:3:2", "p3:4:2", "p3:4:3", "p3:5:1", "p3:7:1"],
+        answer: ["p3:4:3"], pick: 1,
+        clue: "An idea is a plan a character thinks of before acting on it. Look for words that explain a plan, not words that carry it out.",
+        hints: [
+          "An idea is a plan a character thinks of before acting on it. Look for words that explain a plan, not words that carry it out.",
+          "Look at the part of the story after the first try fails.",
+          "Wrapping the cube is something Ana does with her hands after she has the idea. Check each other sentence: does it tell what the idea is?"
+        ],
+        how: [
+          "The idea that solves the problem has to come before the last cube is wrapped.",
+          "In paragraph 4, Ana explains a plan: wool keeps her feet warm in winter, so it might keep the heat away from the ice.",
+          "The answer is that sentence in paragraph 4, where Ana says what wool might do.",
+          "\"Ana thought hard\" shows she is thinking but not what she thinks. Bryce's fresh-air line is the first try, which fails. Wrapping the cube carries out the idea, and \"You were right about the sock\" comes after the idea worked."
+        ],
+        misconception: "A common mix-up is choosing the action that carries out the plan. The question asks for the idea itself.",
+        why: "The answer is Ana's sentence in paragraph 4 about wool keeping her feet warm in winter, so maybe it can keep the heat out, too. That idea leads to the sock that saves the last cube. \"Ana thought hard\" does not say what she thinks, Bryce's fresh-air line is the first try, wrapping the cube carries out the idea, and \"You were right about the sock\" comes at the end." },
+      { id: "SK-TT1b-C09", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"], pick: 2,
+        prompt: "Which TWO details show that the problem has been solved?",
+        choices: [
+          { text: "The team's cube is still frozen when the lunch bell rings.", correct: true },
+          { text: "Bryce tells Ana that she was right about the sock.", correct: true },
+          { text: "Ana wraps the last cube in foil and tucks it in a sock." },
+          { text: "Bryce sets the first cube in a cup on the windowsill." },
+          { text: "Each team gets two ice cubes and a box of supplies." }
+        ],
+        clue: "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
+        hints: [
+          "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
+          "Read the last two paragraphs. Choose two.",
+          "Wrapping the cube is part of the plan, but it happens before anyone knows whether the plan works. Check each other detail: does it show how things turned out?"
+        ],
+        how: [
+          "The problem is keeping a cube from melting until the lunch bell.",
+          "When the bell rings, Ana unrolls the sock and finds the cube still cold and shiny. Then Bryce says she was right about the sock.",
+          "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\"",
+          "Wrapping the cube is the plan, not proof that it worked. The windowsill cube and the box of supplies come earlier in the story."
+        ],
+        misconception: "A common mix-up is choosing the action that solves the problem instead of a detail that proves it worked.",
+        why: "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\" Both show that the plan worked. Wrapping the cube is the plan itself, and the windowsill and the supplies come before the problem is solved." },
+      { id: "SK-TT1b-C10", type: "order", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"],
+        prompt: "Put these events in the order they happen in the story.",
+        steps: [
+          "Bryce sets the first cube in a cup on the windowsill.",
+          "Ana wraps the last cube in foil and tucks it in a sock.",
+          "Bryce sets the sock in a shady corner under his desk.",
+          "Ana unrolls the sock when the lunch bell rings."
+        ],
+        clue: "A plot moves from the problem, to the tries, to the solution and how it turns out. Use that pattern to put events in order.",
+        hints: [
+          "A plot moves from the problem, to the tries, to the solution and how it turns out. Use that pattern to put events in order.",
+          "Find each event in the story, and notice which paragraph it is in.",
+          "The sock cannot go into the shady corner until the cube is inside it. Use the same kind of thinking to place the other events."
+        ],
+        how: [
+          "The first try comes first: Bryce sets a cube in a cup on the windowsill (paragraph 3).",
+          "Next, Ana wraps the last cube in foil and tucks it in the sock (paragraph 5).",
+          "Then Bryce sets the sock in the shady corner, because the cube has to be inside the sock first (paragraph 5).",
+          "Last, the lunch bell rings and Ana unrolls the sock (paragraph 6)."
+        ],
+        misconception: "A common mix-up is putting the steps of the solution in the wrong order. Ask what has to happen before each step can happen.",
+        why: "The order is: Bryce sets the first cube on the windowsill, Ana wraps the last cube in foil and a sock, Bryce sets the sock in a shady corner, and Ana unrolls the sock when the lunch bell rings. That is the try that fails, the solution, and how it turns out." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT1b-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p4"],
+        prompt: "Complete the sentences about the problem in the story. Choose the best answer for each blank.",
+        text: "Dre's sign does not bring any cars because {0}. The cousins have to sell the peaches soon because {1}.",
+        slots: [
+          { options: ["the trees hide the stand from the highway", "the sign is painted in the wrong color", "the peaches are not ripe yet"], answer: 0 },
+          { options: ["the peaches will get soft and spoil", "Grandpa Joe wants to close the stand", "the cousins have to leave by noon"], answer: 0 }
+        ],
+        clue: "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
+        hints: [
+          "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
+          "For the first blank, read what Malia sees and says in paragraph 4. For the second blank, read what Grandpa says in paragraph 2.",
+          "The peaches are already ripe in paragraph 2, so the first blank is not about ripe peaches. Check each choice that is left for the first blank against what Malia sees from the highway."
+        ],
+        how: [
+          "In paragraph 4, Malia stands at the highway and looks back. All she sees are pine trees, and she says nobody can see the sign.",
+          "So the sign does not work because the trees hide the stand from the highway.",
+          "In paragraph 2, Grandpa says that if they don't sell the peaches soon, they will get soft and spoil.",
+          "The answers are the trees hide the stand from the highway and the peaches will get soft and spoil. The peaches are already ripe, the sign's color is never a problem, and nobody plans to close the stand or leave by noon."
+        ],
+        misconception: "A common mix-up is blaming the sign itself. The sign was fine; the setting kept drivers from seeing it.",
+        why: "The answers are the trees hide the stand from the highway and the peaches will get soft and spoil. From the highway, Malia can see only pine trees, so drivers never see the sign. Grandpa says the peaches will get soft and spoil if they don't sell soon. The peaches are already ripe, and nobody plans to close the stand or leave by noon." },
+      { id: "SK-TT1b-C12", type: "hottext", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
+        prompt: "Which sentence best shows that the problem has been fully solved? Choose the sentence in the passage.",
+        targets: ["p4:5:2", "p4:6:1", "p4:6:2", "p4:7:1", "p4:7:3"],
+        answer: ["p4:7:1"], pick: 1,
+        clue: "To know when a problem is fully solved, first say exactly what the problem is. Then look for the detail that shows it is completely fixed, not just getting better.",
+        hints: [
+          "To know when a problem is fully solved, first say exactly what the problem is. Then look for the detail that shows it is completely fixed, not just getting better.",
+          "Say the problem in your own words: what does Grandpa Joe need to happen to his peaches? Then look near the end of the story.",
+          "The blue truck is only the first car to come, so the problem is just starting to get better there. Check each sentence that is left: does it show the whole problem is fixed?"
+        ],
+        how: [
+          "The problem is that no cars come, so the peaches are not being sold.",
+          "The blue truck, the van and the other cars show the plan starting to work, but there could still be peaches left.",
+          "The answer is \"By sunset, every basket was empty.\" Empty baskets mean every peach was sold, so the whole problem is fixed.",
+          "Pushing the boards into the ground is the plan, not proof, and Grandpa's words praise the helpers after the problem is already fixed."
+        ],
+        misconception: "A common mix-up is choosing the first sign that a plan is working. A problem is fully solved only when the whole trouble is fixed.",
+        why: "The answer is \"By sunset, every basket was empty.\" The problem is that the peaches are not selling, and empty baskets show every peach was sold. The truck and the cars show the plan starting to work, the boards are the plan itself, and Grandpa's words come after the problem is fixed." },
+      { id: "SK-TT1b-C13", type: "match", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: [],
+        prompt: "Each sentence is the start of a new story. Match each setting to the problem it would most likely cause. Use each problem once.",
+        cols: ["Getting somewhere on time", "Not having enough water", "Carrying something heavy"],
+        rows: [
+          { text: "Keoni lives on a boat far out in a quiet bay, and the school bus picks kids up on land at 7:30.", answer: 0 },
+          { text: "Lupe wants to grow a garden in her desert town, where it has not rained for months.", answer: 1 },
+          { text: "Dion's family has to bring a new couch home, and the elevator in their tall building is broken.", answer: 2 }
+        ],
+        clue: "A setting can cause a problem. Picture each place, and ask what would be hard for someone living there.",
+        hints: [
+          "A setting can cause a problem. Picture each place, and ask what would be hard for someone living there.",
+          "Look for the most important detail in each setting: where the person is, and what is missing or broken.",
+          "A desert where it has not rained for months is a place where something is missing. Work out the other two settings the same way."
+        ],
+        how: [
+          "Keoni's home is on the water, but the bus picks kids up on land at a set time, so getting there on time is the hard part.",
+          "Lupe's town is a desert with no rain for months, so a garden would not have enough water.",
+          "Dion's family must move a couch up a tall building with no elevator, so carrying something heavy is the problem.",
+          "Each setting causes a different problem because of where the story happens and what is missing or broken there."
+        ],
+        misconception: "A common mix-up is matching by one word instead of picturing what living in that setting would be like.",
+        why: "Keoni lives on a boat, but the bus picks kids up on land at a set time, so getting somewhere on time is the problem. Lupe's desert town has had no rain for months, so her garden would not have enough water. Dion's family must bring a couch home with no elevator, so carrying something heavy is the problem." },
+      /* Compares solutions across p3 (set 2) and p4; the item carries both passages, so set 3 stands alone. */
+      { id: "SK-TT1b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p3", "p4"],
+        prompt: "How are the solutions in \"The Ice Cube Challenge\" and \"The Hidden Peach Stand\" alike?",
+        choices: [
+          { text: "In both, a child learns what is causing the problem, then fixes that cause.", correct: true },
+          { text: "In both, a grown-up steps in and solves the problem for the children." },
+          { text: "In both, the very first try works, so the children never need a new plan." },
+          { text: "In both, the children solve the problem by making something much bigger." }
+        ],
+        clue: "To compare two solutions, ask how each problem gets fixed. Then check that your answer is true for both stories.",
+        hints: [
+          "To compare two solutions, ask how each problem gets fixed. Then check that your answer is true for both stories.",
+          "In each story, find the try that does not work and then the plan that does.",
+          "In both stories the first try fails, so the choice about the first try working does not fit. Test the other choices against both stories."
+        ],
+        how: [
+          "In \"The Ice Cube Challenge,\" the first cube melts in the sun. Ana then thinks about what keeps heat out and uses foil, wool and shade.",
+          "In \"The Hidden Peach Stand,\" the sign on the stand brings no cars. Malia walks out to the highway to find out why, and then the cousins fix it.",
+          "The answer is \"In both, a child learns what is causing the problem, then fixes that cause.\"",
+          "No grown-up solves either problem, the first try fails in both stories, and in the peach story the giant sign is the try that does not work."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true for only one story. Check each choice against both stories.",
+        why: "The answer is \"In both, a child learns what is causing the problem, then fixes that cause.\" Ana works out what keeps heat away from ice, and Malia goes to the highway to see why no cars come. No grown-up solves either problem, the first try fails in both stories, and the giant sign is the try that does not work." },
+      { id: "SK-TT1b-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
+        prompt: "Which new story has a solution that works for the same reason Malia's solution works?",
+        choices: [
+          { text: "Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.", correct: true },
+          { text: "Leo's lemonade tastes too sour, so he stirs in more sugar and then sells every cup." },
+          { text: "Leo's sign keeps blowing over in the wind, so he tapes it to a heavy chair." },
+          { text: "Leo runs out of paper cups, so he borrows a big stack from his neighbor." }
+        ],
+        clue: "First say in your own words why Malia's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
+        hints: [
+          "First say in your own words why Malia's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
+          "Reread paragraphs 4 and 5 of Malia's story. Then read each new story and ask what was wrong and what the fix changes.",
+          "Leo's sign story has a sign in it, like Malia's story, but sharing a thing does not make the reason the same. Ask why each fix works, and test the stories that are left."
+        ],
+        how: [
+          "Malia's plan works because it puts the arrows out by the highway, where the drivers pass by.",
+          "Leo's stand is behind his house, where no one walks by. Moving his table to the sidewalk puts it where people pass, so it works for the same reason.",
+          "The answer is \"Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.\"",
+          "The sour lemonade and the missing cups are different problems. The sign that blows over has a sign in it, but taping it down does not put the stand where more people can see it."
+        ],
+        misconception: "A common mix-up is matching a story by a thing it shares, like a sign, instead of by why the solution works.",
+        why: "The answer is \"Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.\" Like Malia's arrows, Leo's move puts his stand where people pass by. The sour lemonade and the missing cups are different problems, and taping down a sign does not help more people find the stand." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short new scene. */
+  similar: [
+    { id: "SK-TT1b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-C04"],
+      stem: ["At the park cleanup, Ms. Diaz tried to lift a bag of leaves into the truck, but it was too heavy for her. Her neighbor, Mr. Cole, grabbed the other side. Together, they swung the bag into the truck."],
+      prompt: "What part does Mr. Cole play in this story?",
+      choices: [
+        { text: "He is a helper who makes the solution possible.", correct: true },
+        { text: "He is the main character, and the problem is his own." },
+        { text: "He causes the problem by filling the bag too full." },
+        { text: "He is part of the setting, like the park and the truck." }
+      ],
+      clue: "Characters do different jobs in a plot. Ask who has the problem, and what this character does about it.",
+      hints: [
+        "Characters do different jobs in a plot. Ask who has the problem, and what this character does about it.",
+        "Find the problem in the first sentence. Then read what Mr. Cole does.",
+        "Ms. Diaz is the one who cannot lift the bag, so the problem is not Mr. Cole's own. Test each choice that is left."
+      ],
+      how: [
+        "The problem: the bag of leaves is too heavy for Ms. Diaz to lift.",
+        "Mr. Cole grabs the other side, and together they get the bag into the truck.",
+        "The answer is \"He is a helper who makes the solution possible.\"",
+        "The problem is Ms. Diaz's, nothing says he filled the bag, and a person is a character, not the setting."
+      ],
+      why: "The answer is \"He is a helper who makes the solution possible.\" Ms. Diaz cannot lift the bag, and Mr. Cole grabs the other side so they can lift it together. The problem is hers, nothing says he filled the bag, and he is a character, not part of the setting." },
+    { id: "SK-TT1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-C07", "SK-TT1b-C06"],
+      stem: ["After a big rain, the creek behind Mia's house ran fast and high. Mia set her paper boat on the water, and it tipped right over. First she folded a new boat with a wider bottom, but the fast water tipped that one, too. Then she found a calm pool near the bank. Her boat floated there for a long time."],
+      prompt: "Why does Mia move her boat to the calm pool?",
+      choices: [
+        { text: "The fast water kept tipping her boat, even after her first fix.", correct: true },
+        { text: "Her mom said the creek was too deep for her to play in." },
+        { text: "She wanted to race her boat against a friend's boat." },
+        { text: "Her first boat floated away and never came back." }
+      ],
+      clue: "A problem makes a character act. When a try does not work, the character looks for another way.",
+      hints: [
+        "A problem makes a character act. When a try does not work, the character looks for another way.",
+        "Find Mia's first fix. What happens to that boat?",
+        "Mia's mom is not in the story, so that choice has no support. Test each choice that is left."
+      ],
+      how: [
+        "The fast creek after the rain tips Mia's boat over.",
+        "Her first fix, a wider bottom, does not work: the fast water tips that boat, too.",
+        "So she looks for calmer water. The answer is \"The fast water kept tipping her boat, even after her first fix.\"",
+        "Her mom and a friend are not in the story, and the boat tips over instead of floating away."
+      ],
+      why: "The answer is \"The fast water kept tipping her boat, even after her first fix.\" The rain made the creek run fast, and even the wider boat tipped, so Mia looks for calm water. Her mom and a friend are not in the story, and the boat tips rather than floating away." },
+    { id: "SK-TT1b-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-C13", "SK-TT1b-C11"],
+      stem: ["Nora's family moved to an apartment in a busy part of the city. The building has no yard, and the nearest park is across a wide, busy highway."],
+      prompt: "Which problem is this setting most likely to cause for Nora?",
+      choices: [
+        { text: "She may have trouble finding a safe place to play outside.", correct: true },
+        { text: "She may not have enough water to drink each day." },
+        { text: "She may get lost in a deep, dark forest near her home." },
+        { text: "She may miss the friends from her old neighborhood." }
+      ],
+      clue: "A setting can cause a problem. Picture the setting, and ask what would be hard because of the details given.",
+      hints: [
+        "A setting can cause a problem. Picture the setting, and ask what would be hard because of the details given.",
+        "Look at the two details in the second sentence: what the building does not have, and what is between Nora and the park.",
+        "There is no forest in a busy part of the city, so that choice does not fit. Test each choice that is left against the details in the setting."
+      ],
+      how: [
+        "The building has no yard, so there is no place to play right outside.",
+        "The park is across a wide, busy highway, which is hard and unsafe to cross.",
+        "The answer is \"She may have trouble finding a safe place to play outside.\"",
+        "Missing old friends could happen after any move, but these setting details do not cause it. Nothing is said about water, and there is no forest."
+      ],
+      misconception: "A common mix-up is choosing a problem that could happen anywhere instead of one caused by the setting's details.",
+      why: "The answer is \"She may have trouble finding a safe place to play outside.\" The building has no yard, and the park is across a busy highway. Missing friends could happen after any move, but the setting does not cause it, and nothing is said about water or a forest." }
+  ],
+  /* Hints and Show me how for the items kept in practice: refs P7, P4 and P5 (core set 1) and Together P1, P2, P6, P3. */
+  addons: {
+    "SK-TT1b-P1": {
+      hints: [
+        "The setting is where the story happens. Look for place words.",
+        "Read paragraph 1, and notice where Jada goes each morning.",
+        "The shed is a place Jada visits for only a moment, so it is not where the story mostly happens. Test each choice that is left."
+      ],
+      how: [
+        "Paragraph 1 says Grandma Bea grows tomatoes behind her house in Macon.",
+        "Each morning, Jada goes out to that garden.",
+        "The answer is \"in a garden behind Grandma Bea's house.\"",
+        "The shed is only a quick stop, and there is no farm stand or classroom in the story."
+      ] },
+    "SK-TT1b-P2": {
+      hints: [
+        "The problem is what goes wrong. Find the part where Jada stops and looks surprised.",
+        "Read paragraphs 2 and 3. What is missing, and what does Grandma Bea say about it?",
+        "This year Jada is old enough to help, so being too young is not the problem. Test each choice that is left."
+      ],
+      how: [
+        "In paragraph 2, half the tomatoes are gone, and tiny footprints cross the dirt.",
+        "In paragraph 3, Grandma Bea says rabbits squeeze under the gate at night.",
+        "The answer is \"Rabbits are eating the tomatoes at night.\"",
+        "Jada is old enough to help, nothing happens to the watering can, and the gate is right where it should be."
+      ],
+      misconception: "A common mix-up is naming the first thing that happens. The problem is what the rest of the story is about fixing." },
+    "SK-TT1b-P6": {
+      hints: [
+        "Clue words like then move a story to the next event. Read what comes right before and right after the clue word.",
+        "Read the end of paragraph 3 and all of paragraph 4.",
+        "Half the tomatoes are already gone before this sentence, so the problem is not just starting. Test each choice that is left."
+      ],
+      how: [
+        "Before \"Then she had an idea,\" the rabbits have already eaten half the tomatoes, so the problem has started.",
+        "Right after it, Jada acts on her idea. That is her try to fix the problem.",
+        "The answer is \"Jada is about to try a way to fix the problem.\"",
+        "The problem is not fixed yet, and no new character joins the story."
+      ] },
+    "SK-TT1b-P3": {
+      hints: [
+        "The solution is the action that fixes the problem. Find what Jada does, not what she thinks or sees.",
+        "Look at paragraphs 4 and 5.",
+        "\"Jada thought about it all day\" tells what she thinks, not what she does. Check each sentence that is left: is it an action that fixes the problem?"
+      ],
+      how: [
+        "Paragraph 4 starts with Jada thinking and then having an idea. Thinking is not the fix.",
+        "Next, she finds wire in the shed and asks Grandma to help bend it along the bottom of the gate. The wire blocks the rabbits.",
+        "In paragraph 5, she checks the garden. Those sentences tell what she sees after the fix.",
+        "The answer is the sentence about the wire fence bent along the bottom of the gate."
+      ],
+      misconception: "A common mix-up is choosing what a character thinks or sees. The solution is the action that fixes the problem." },
+    "SK-TT1b-P7": {
+      hints: [
+        "A setting includes when a story happens. Ask how the time of day changes what a character has to do.",
+        "Read paragraph 3. When do the rabbits come? Then look at the kind of fix Jada makes in paragraph 4.",
+        "Jada waters the garden in the morning, not at night, so the choice about watering in the dark does not fit. Test each choice that is left."
+      ],
+      how: [
+        "Paragraph 3 says the rabbits squeeze under the gate at night.",
+        "At night everyone is asleep, so no one is in the garden to chase the rabbits away.",
+        "So Jada needs a fix that keeps working all night by itself.",
+        "The answer is \"No one is awake to chase the rabbits, so Jada needs a fix that works while everyone sleeps.\""
+      ],
+      misconception: "A common mix-up is thinking the setting is only a place. The time, like night, can change what a character has to do." },
+    "SK-TT1b-P4": {
+      hints: [
+        "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
+        "Find each event in the story, and notice which paragraph it is in.",
+        "Jada finds the tomatoes gone before anyone tells her why. Use the same kind of thinking to place the other events."
+      ],
+      how: [
+        "First, Jada finds half the tomatoes gone (paragraph 2).",
+        "Next, Grandma Bea says rabbits come under the gate (paragraph 3).",
+        "Then Jada puts wire along the bottom of the gate (paragraph 4).",
+        "Last, every tomato is still on its vine (paragraph 5). That is problem, cause, solution, result."
+      ] },
+    "SK-TT1b-P5": {
+      hints: [
+        "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
+        "For each detail, find it in the story. Is it a person, a place and time, a trouble or a fix?",
+        "Grandma Bea is a person in the story, so she is a character. Sort the other three details the same way."
+      ],
+      how: [
+        "Grandma Bea is a person in the story, so she is a character.",
+        "Behind a house in Macon in summer tells where and when, so it is the setting.",
+        "Rabbits squeezing under the gate is what goes wrong, so it is the problem.",
+        "The wire along the bottom of the gate fixes it, so it is the solution."
+      ] }
+  },
   test: [
     { id: "SK-TT1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
       prompt: "Who is the main character in this story?",
@@ -1820,8 +2267,8 @@ PP.addLesson({
       "Compare means tell how things are alike. Contrast means tell how they are different. Clue words like both, alike and same show how things are alike. Words like but, however, unlike, different and while show how they are different.",
       "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
-      "You will often compare stories from different places and cultures, like a story from Ghana and a story from Vermont. Notice what is different about each place and way of life, and what the characters feel and learn that is the same.",
-      "Keep a chart in your head with two sides: same and different."
+      "You will often compare stories from different places and cultures, like a story from Ghana and a story from Vermont. Notice what is different about each place and way of life, and what the characters feel and learn that is the same. When a family does, eats or celebrates something special, ask what that custom means to them. Customs can look very different and still mean the same thing.",
+      "Keep a chart in your head with two sides: same and different. When you compare three stories, check each sentence against every one of them."
     ],
     words: [
       { term: "compare", means: "tell how things are alike" },
@@ -1864,6 +2311,19 @@ PP.addLesson({
         "Check that one lesson fits both stories."
       ],
       answer: "Both stories teach that working together lets you do things you cannot do alone."
+    },
+    {
+      show: [
+        "Story 1: In India, Anaya draws a bright pattern of colored powder by her front door. Her family makes one every Diwali to welcome guests.",
+        "Story 2: In Hawaii, Kaleo's family greets each visitor at the door with a lei, a necklace made of fresh flowers."
+      ],
+      ask: "How are the two customs different, and what do they both show?",
+      steps: [
+        "Find the custom in each story. Anaya's family draws a pattern with powder. Kaleo's family gives a flower necklace.",
+        "Find what each custom is for. Both happen when guests or visitors come to the door.",
+        "Compare. The families do different things, but the customs mean the same thing."
+      ],
+      answer: "The customs are different, a powder pattern and a flower necklace, but both show a family welcoming guests to their home."
     }
   ],
   parent: "After you read two stories or watch two shows, ask, \"How are the main characters alike? How are they different?\" Draw a quick two-column chart on paper and fill it in together.",

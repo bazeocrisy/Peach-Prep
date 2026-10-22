@@ -256,7 +256,7 @@
     const core = (PP.core || {})[k] || {};
     window.PP_PRACTICE.update(k, c.item.id, sim, r => {
       if (sim) r.for = run.sim.for;
-      if (c.item.type === "cr") r.cr = { text: c.ctx.resp.text || "", checks: (c.st.crChecks || []).map(Boolean), done: !!c.st.crDone };
+      if (c.item.type === "cr") r.cr = { text: c.ctx.resp.text || "", checks: (c.item.criteria || []).map((x, n) => !!(c.st.crChecks || [])[n]), done: !!c.st.crDone };
       else r.r = JSON.parse(JSON.stringify(c.ctx.resp));
       r.ord = JSON.parse(JSON.stringify(ordOf(c.ctx)));
       /* only ever up: help history is never erased by a later right answer */
