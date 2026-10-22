@@ -26,7 +26,7 @@
   <!-- numbered circles on the arrows -->
   <g font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#111" text-anchor="middle">
     <circle cx="170" cy="200" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="170" y="207">1</text>
-    <circle cx="214" cy="212" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="214" y="219">2</text>
+    <circle cx="210" cy="276" r="13" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="210" y="283">2</text>
     <circle cx="226" cy="372" r="15" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="226" y="379">3</text>
   </g>
   <!-- labels -->
