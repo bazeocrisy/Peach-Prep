@@ -951,9 +951,10 @@ mark.clue-w{background:none;color:inherit;}
 @media (min-width:640px){ .home-screen .learning-choices{align-items:start;} .choice-path{align-self:stretch;} }
 .choice-browse .btn-choice{margin-top:var(--s2);}
 .choice-chips-label{font-size:var(--fs-small);font-weight:700;color:var(--text);margin:0 0 var(--s2);}
-.choice-chips{list-style:none;margin:0 0 var(--s4);padding:0;display:flex;flex-wrap:wrap;gap:6px;}
-.choice-chip{font-family:var(--head);font-weight:600;font-size:var(--fs-label);color:var(--navy-deep);background:var(--line-soft);
-  border-left:4px solid var(--c,var(--navy));border-radius:6px;padding:4px 10px;cursor:default;}
+/* QA-18: the categories are plain text, not tiles, so nothing looks tappable */
+.choice-chips{list-style:none;margin:0 0 var(--s4);padding:0;display:flex;flex-wrap:wrap;gap:2px 0;font-size:var(--fs-small);color:var(--text);}
+.choice-chip{background:none;border:0;padding:0;font:inherit;color:inherit;}
+.choice-chip:not(:last-child)::after{content:"·" / "";margin:0 .5em;color:var(--muted);}
 @media (max-height:559px){ .choice-chips,.choice-chips-label{display:none;} }
 /* QA-08: the drift link sits after the primary, quieter */
 .np-drift{grid-column:1/-1;font-weight:600;font-size:var(--fs-small);justify-self:start;}

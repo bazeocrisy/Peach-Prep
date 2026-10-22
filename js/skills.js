@@ -415,14 +415,17 @@
           b.appendChild(body);
           const due = st === "mastered" && !isTask(k) && reviewDue(k);
           const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
-          if (st === "mastered") b.appendChild(markEl(byG ? "grownup" : "passed"));
+          /* QA-19: say when it was passed, if the date is known (never invented) */
+          const passWhen = st === "mastered" && !isTask(k) && prog[k] && prog[k].passedAt ? niceDate(prog[k].passedAt) : "";
+          const passText = st === "mastered" ? passLabel(k) + (passWhen ? " on " + passWhen : "") : "";
+          if (st === "mastered") { const pm = markEl(byG ? "grownup" : "passed"); pm.title = passText; b.appendChild(pm); }
           else if (st === "started") b.appendChild(markEl("started"));
           /* PP-004 Retained: only with PP_FLAGS.retained on (a development setting); off, nothing here changes */
           const kept = st === "mastered" && !isTask(k) && retainedShown(k);
           if (kept) b.appendChild(make("span", "sl-review sl-retained", "retained"));
           else if (due) b.appendChild(make("span", "sl-review", "review"));
           b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " +
-            (st === "mastered" ? passLabel(k) + "." + (kept ? " Retained." : due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
+            (st === "mastered" ? passText + "." + (kept ? " Retained." : due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
           b.addEventListener("click", () => openEntry(k));
           li.appendChild(b); ol.appendChild(li);
           any++; shown++; if (isTask(k)) shownTasks++;
@@ -576,7 +579,8 @@
      ["ring", "Category ring", "Lessons in that category with a passed skill check or a grown-up check."],
      ["finished", "Activities finished", "On the Learning Path: a tick you add to mark your place. It does not change any score."]
     ].forEach(([mark, name, line]) => {
-      const dt = make("dt"); const mk = make("span", "lg-mark"); mk.appendChild(markEl(mark)); dt.appendChild(mk); dt.appendChild(keepGrownUp(make("span", "lg-name"), name));
+      const dt = make("dt"); const mk = make("span", "lg-mark"); mk.appendChild(markEl(mark));
+      mk.setAttribute("aria-hidden", "true");   /* QA-17: the term beside it names it; read once */ dt.appendChild(mk); dt.appendChild(keepGrownUp(make("span", "lg-name"), name));
       dl.appendChild(dt); dl.appendChild(make("dd", "", line));
     });
     lg.appendChild(dl);

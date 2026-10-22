@@ -258,3 +258,68 @@ The logs are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172
 - `after-qa01-all-passed-390x844.png` and `-1366x768.png`
 - `after-qa02-storage-blocked-390x844.png` and `-1366x768.png`
 - `after-qa04-legend-and-list-390x844.png`
+
+---
+
+## 7. After QA-16..19 (final re-review of 595ef01)
+
+The rules were the same as before: no storage key added, changed or migrated, every render still writes nothing, and no git commands. This round edits `verification/`, as QA-16 asked. Coverage was only added. No existing check was removed or loosened (see QA-16 for the one change to `path-contrast.js`).
+
+Server: `node verification/serve.js . 8640`. Scratch scripts and logs are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/qa1619/`.
+
+### What I did, finding by finding
+
+| Finding | What I did | Evidence |
+|---|---|---|
+| **QA-17** (each legend term read twice) | **Fixed.** `js/skills.js` `buildProgress()` sets `aria-hidden="true"` on each legend's `.lg-mark` wrapper. The mark stays visible. The `<dt>` is now read as the term alone, and its `<dd>` meaning follows it. The list rows are unchanged: they still build their marks with the same `markEl()`. | In Chromium's own accessibility tree (CDP `Accessibility.getFullAXTree`, plus Playwright `aria_snapshot()`), the seven terms read exactly "Started", "Step done", "Passed the skill check", "Checked by a grown-up", "Review suggested", "Category ring", "Activities finished", each followed by its definition, at 390×844 and 1366×768. Negative control: with `aria-hidden` removed in the page, the same snapshot reads "Started Started", "✓ Step done", "✓ passed Passed the skill check". |
+| **QA-18** (category chips look tappable) | **Made plainly non-interactive.** This is the simpler and more honest option: the card's button already opens the list, and adding a second way in, which must not change the saved mode, would add behaviour for little gain. The five categories are still a `<ul>` under "Lessons are grouped in five categories:", but now as a line of plain body text: no fill, coloured edge, radius or padding, regular weight, the default cursor, and nothing focusable. A middle dot separates them visually (`content:"·" / ""`, so screen readers do not hear it). Only `css/styles.css` changed. | At 390 and 1366: five `<li>`, computed background transparent, border 0, radius 0, padding 0, weight 400, cursor `auto`, none focusable. The aria snapshot has five list items and no "·". A click on a category changes nothing (same screen, every storage key byte-identical). Screenshots: `after/after-first-visit-*.png` (all seven viewports) and `after/after-saved-work-no-mode-*.png`. |
+| **QA-19** (passed mark lost its tooltip) | **Restored, with the date.** The row's accessible name and the mark's `title` now say "Passed the skill check on October 1, 2026" (or "Checked by a grown-up on …"). The date is the stored `passedAt`, formatted by the existing `niceDate()`. With no `passedAt`, for example an undated 2.1 pass (`legacyUndated`), the text is the plain label and no date is invented. The title is extra; the information is in the button's `aria-label`, which is what assistive technology reads. | Rows with a dated pass: aria-label "…Passed the skill check on October 1, 2026." and the same `title`. Rows with a legacy undated pass end "…Passed the skill check." No page errors with a malformed (string) record. **Guard 9.8** checks that "Passed the skill check" is in the label, and **11.9** and **11.11** check "Checked by a grown-up" and the absence of "Passed the skill check". Those substrings are unchanged, and 14.4 and 14.5 ("Retained" absent) are unaffected because no month name contains it. All of these pass in the full guard below. |
+| **QA-16** (tooling) | **Done in `verification/`.** See the next section. | |
+
+Scratch check `qa1619/check.py`: **22 passed, 0 failed** (QA-17, QA-18 and QA-19 at 390×844 and 1366×768).
+
+### QA-16: `path-a11y.py` and `path-contrast.js`
+
+**The crash claim.** The header said axe `color-contrast` "exits this packaged renderer". I tested this, and it was not reproduced. I used Playwright 1.56 with headless Chromium 141.0.7390.37: the default build, and `/opt/pw-browsers/chromium-1194` with no `CHROMIUM_ARGS`. With both axe-core 4.10.2 and 4.14.0 (4.14.0 is the version named in the October 21 evidence README), `color-contrast` ran on the choice, path and browse screens at 320, 390, 768 and 1366 px. Nothing crashed, and each run took under 2.5 s. The October 21 failure may have depended on a browser build or flags that were not recorded. The header now says this, and it also says why the computed-style check is kept: axe reported QA-01 only as "incomplete".
+
+**Added to `path-a11y.py`.** The original loop is untouched: choice, intro and path at 320×640, 390×844, 768×1024 and 1366×900, with the same axe tags, `color-contrast` still excluded from that main run, and the same `path-contrast.js` check and failure rule. The script now also runs:
+- **An axe `color-contrast`-only run on each of those 12 screen/width runs.** Results go to `a11y-color-contrast-results.json`, and any violation fails the script.
+- **The browse home (`#screen-home`) at the same four viewports, in three saved states, with every `<details>` on the screen opened:**
+  - `first-browse`: browse mode, no progress
+  - `returning-progress`: two started lessons, one recent pass, one pass ten days old (review due) and a grown-up check
+  - `all-passed`: every lesson passed or grown-up checked, the QA-01 state
+
+  Each run uses axe with the same WCAG tags, color-contrast included, plus `path-contrast.js`. The script also asserts that the state really rendered, by counting list marks and the all-passed message, so the coverage cannot pass vacuously. Results go to `a11y-home-results.json`, and the screenshot to `home-all-passed-390.png`. A violation, contrast failure, unsupported item, mis-rendered state or missing run fails the script.
+
+**One change to `path-contrast.js`, which adds measurements.** Before, any background image anywhere among the ancestors made the text "unsupported". On the browse home that hit only the six category-ring counts ("3/24"). Each count sits on an opaque white disc (`.cc-ring-n`, `#fff`) in front of the ring's conic gradient. The function now ignores images that lie behind the nearest opaque solid background, because they cannot show through it. Images at or in front of that layer are still unsupported, and opacity below 1 on any ancestor still is. On choice, intro and path the results are identical to before: 0 unsupported, lowest ratio 5.38:1.
+
+**Negative control.** In the all-passed state at 390×844, injecting the QA-01 regression (`.next-panel .un-done{color:#fff}`) makes `path-contrast.js` report one failure at 1:1.
+
+**Run** (`AXE_PATH=<scratch>/axe/package/axe.min.js python3 verification/path-a11y.py http://localhost:8640/ <out>`), exit 0:
+
+| Part | Runs | Result |
+|---|---|---|
+| Main axe run (choice, intro, path) | 12 | 0 violations. Computed contrast: 0 failures, 0 unsupported, lowest 5.38:1 |
+| axe `color-contrast` only (same 12) | 12 | 0 violations, 0 incomplete |
+| Browse home, three states × four viewports | 12 | 0 axe violations (color-contrast included). Computed contrast: 7,080 text nodes, 0 failures, 0 unsupported, lowest 4.64:1. All three states rendered as seeded. axe `color-contrast` "incomplete" in each run: `.step-n` and `.lg-box`, both glyph-only legend marks (white ✓ on #17703F, 6.13:1, per 06) |
+
+### Test counts (port 8640)
+
+| Command | Result |
+|---|---|
+| `node verification/check-content.js --all` | PASS: 0 failures, the same 6 warnings |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `node verification/check-instructional-copy.js` | 28 passed |
+| `python3 verification/readability.py` | identical to the previous candidate run (125 records) |
+| `python3 verification/path.py http://localhost:8640/ <out>` | **148 passed, 0 failed** |
+| `path-a11y.py` (extended) | **36 runs (12 + 12 + 12): 0 violations, 0 contrast failures, 0 unsupported, exit 0** |
+| `python3 verification/path-headers.py http://localhost:8640/ <out>` | **48 passed, 0 failed** |
+| `CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome python3 verification/skills-recovery.py` | **67 passed, 0 failed** |
+| `CHROMIUM_PATH=… python3 verification/writing-recovery.py` | **75 passed, 0 failed** |
+| scratch `home-behaviour.py` (the 214 checks from §6, pointed at 8640) | **214 passed, 0 failed** |
+| scratch `qa1619/check.py` (QA-17 to QA-19) | **22 passed, 0 failed** |
+| **Full guard** via the fixture launcher copy (`guard-fixture.py guard /home/claude/pp-home http://localhost:8640/ <scratch>/qa1619/guard`) | **110 passed, 0 failed, exit 0** (including 9.8, 11.9 and 11.11) |
+
+**AFTER screenshots retaken** (same seeds and script as §3, port 8640): `after-first-visit-*` at all seven viewports and `after-saved-work-no-mode-390x844` and `-1366x768`. These are the screens with the category line. The other AFTER files are unchanged. QA-17 and QA-19 change nothing visible; the title tooltip shows only on hover.
+
+**Not verified:** real screen readers (VoiceOver, TalkBack, NVDA), Safari and Firefox. The accessible names were checked in Chromium's accessibility tree only.
