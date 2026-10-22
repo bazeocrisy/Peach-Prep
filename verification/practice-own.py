@@ -1,0 +1,666 @@
+#!/usr/bin/env python3
+"""Practice on my own, standard pages and test-mode improvements (expansion 2026-10-22).
+
+Covers docs/expansion-2026-10-22/01-architecture.md §2.7 sections 18-21 (in a separate file, so the
+guard stays inside its runtime budget) on the reference lesson 3.T.T.1.c:
+  - every control and status, retry, hints, Show me how, similar questions and their isolation
+  - set transitions, resume after reload, blocked / full / malformed pp.practice.v1
+  - Practice Together on a core lesson = practice minus the core refs (exactly P1-P3; lead decision)
+  - #std/<code> pages, code links (never nested), code search, no writes, direct links, Back/Forward
+  - the test navigator, the unanswered list, results (components, partial credit, revisit, retry note)
+  - the seven-viewport matrix for the practice screen, the set picker, a standard page and a check
+  - compatibility: seeded pp.progress.v1 / pp.path.v1 / pp.task.* / pp.skwrite.* stay byte-identical,
+    and a lesson without core behaves exactly as before
+  - check-content.js rules for core, similar, hints, how, cr and std-groups, on mutated copies
+
+Serve the repository first.  Run: python3 verification/practice-own.py [BASE_URL] [OUT_DIR]
+CHROMIUM_PATH optionally names a browser. Exit code 1 on any failure.
+"""
+import json, os, re, shutil, subprocess, sys, tempfile
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+ROOT = Path(__file__).resolve().parent.parent
+BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8720/"
+OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+if OUT: OUT.mkdir(parents=True, exist_ok=True)
+ARGS = ["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--disable-software-rasterizer", "--disable-seccomp-filter-sandbox",
+        "--disable-setuid-sandbox", "--no-zygote", "--single-process", "--in-process-gpu", "--disable-features=FontDataService,FontationsFontBackend"]
+K = "3.T.T.1.c"
+VIEWPORTS = [(320, 568), (390, 844), (844, 390), (768, 1024), (1024, 768), (1366, 768), (1920, 1080)]
+results = []
+
+
+def check(name, good, detail=""):
+    results.append({"name": name, "pass": bool(good), "detail": "" if good else str(detail)[:400]})
+    print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + str(detail)[:400] + "]"), flush=True)
+
+
+# answers in the engine's index space, for the item now on screen
+CORRECT = """(()=>{const c=PP_PLAYER.ctx(),it=c.item,r=c.resp;const ci=ch=>ch.map((x,i)=>x.correct?i:-1).filter(i=>i>=0);
+  if(it.type=='mc')r.v=ci(it.choices)[0]; if(it.type=='ms')r.v=ci(it.choices);
+  if(it.type=='ebsr'){r.a=ci(it.partA.choices)[0];r.b=ci(it.partB.choices);}
+  if(it.type=='dropdown')r.v=it.slots.map(s=>s.answer); if(it.type=='hottext')r.v=it.options?it.answer.map(i=>'opt:'+i):it.answer.slice();
+  if(it.type=='order')r.v=it.steps.map((s,i)=>i); if(it.type=='match')r.v=it.rows.map(x=>x.answer); if(it.type=='cr')r.text='My own answer.';
+  c.onChange();})()"""
+WRONG = """(()=>{const c=PP_PLAYER.ctx(),it=c.item,r=c.resp;const wi=ch=>ch.map((x,i)=>!x.correct?i:-1).filter(i=>i>=0);
+  if(it.type=='mc')r.v=wi(it.choices)[0]; if(it.type=='ms')r.v=wi(it.choices).slice(0,it.pick);
+  if(it.type=='ebsr'){r.a=wi(it.partA.choices)[0];r.b=wi(it.partB.choices).slice(0,it.partB.pick||1);}
+  if(it.type=='dropdown')r.v=it.slots.map(s=>s.answer===0?1:0);
+  if(it.type=='hottext'){const t=it.options?it.options.map((o,i)=>'opt:'+i):it.targets;const a=it.options?it.answer.map(i=>'opt:'+i):it.answer;r.v=t.filter(x=>a.indexOf(x)<0).slice(0,it.pick||a.length);}
+  if(it.type=='order')r.v=it.steps.map((s,i)=>i).reverse(); if(it.type=='match')r.v=it.rows.map(x=>x.answer===0?1:0);
+  c.onChange();})()"""
+PARTIAL = """(()=>{const c=PP_PLAYER.ctx(),it=c.item,r=c.resp;const ci=ch=>ch.map((x,i)=>x.correct?i:-1).filter(i=>i>=0),wi=ch=>ch.map((x,i)=>!x.correct?i:-1).filter(i=>i>=0);
+  if(it.type=='ebsr'){r.a=ci(it.partA.choices)[0];r.b=wi(it.partB.choices).slice(0,it.partB.pick||1);}
+  if(it.type=='ms'){r.v=[ci(it.choices)[0],wi(it.choices)[0]];}
+  if(it.type=='dropdown'&&it.slots.length==2){r.v=[it.slots[0].answer,it.slots[1].answer===0?1:0];}
+  if(it.type=='match'){r.v=it.rows.map(x=>x.answer);const a=r.v[0];r.v[0]=r.v[1];r.v[1]=a;}
+  c.onChange();})()"""
+KEYS = "(()=>{const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);o[k]=localStorage.getItem(k);}return o;})()"
+PRACTICE = "JSON.parse(localStorage.getItem('pp.practice.v1')||'null')"
+PROG = "JSON.parse(localStorage.getItem('pp.progress.v1')||'null')"
+BROWSE = "try{if(!localStorage.getItem('pp.path.v1'))localStorage.setItem('pp.path.v1',JSON.stringify({mode:'browse',introduced:true}))}catch(e){}"
+
+
+def launch(p):
+    kw = {"args": ARGS}
+    if os.environ.get("CHROMIUM_PATH"):
+        kw["executable_path"] = os.environ["CHROMIUM_PATH"]
+        kw["env"] = {**os.environ, "LD_LIBRARY_PATH": str(Path(kw["executable_path"]).parent), "FONTCONFIG_PATH": "/etc/fonts"}
+    return p.chromium.launch(**kw)
+
+
+def page(b, w=1366, h=900, init=None, errors=None, browse=True):
+    q = b.new_page(viewport={"width": w, "height": h}, has_touch=w < 1000, is_mobile=w < 500)
+    q.route("**/fonts.g*/**", lambda r: r.abort())
+    if browse: q.add_init_script(BROWSE)
+    if init: q.add_init_script(init)
+    if errors is not None: q.on("pageerror", lambda e: errors.append(str(e)))
+    q.on("dialog", lambda d: d.accept())
+    return q
+
+
+def ready(q, hash_=""):
+    q.goto(BASE + hash_)
+    q.wait_for_function("document.getElementById('build-badge').textContent.length>0")
+    q.wait_for_timeout(250)
+
+
+def vis(q, sel):
+    return q.evaluate("(s=>{const e=document.querySelector(s);return !!e&&!e.hidden&&e.offsetParent!==null})(%s)" % json.dumps(sel))
+
+
+def text(q, sel):
+    return q.evaluate("(s=>{const e=document.querySelector(s);return e?e.textContent:''})(%s)" % json.dumps(sel))
+
+
+def start_set(q, part, pos=None):
+    q.evaluate("PP_PLAYER.start(%s,'try'%s)" % (json.dumps("SK:%s:%s" % (K, part)), ",{pos:%d}" % pos if pos is not None else ""))
+    q.wait_for_timeout(80)
+
+
+def item_id(q):
+    return q.evaluate("PP_PLAYER.ctx().item.id")
+
+
+with sync_playwright() as p:
+    b = launch(p)
+    errors = []
+
+    # ---------------- A. data: Practice Together exclusion (lead decision) and set registration ----------------
+    q = page(b, errors=errors)
+    ready(q, "#browse")
+    reg = q.evaluate("""(k=>({p:PP.byId['SK:'+k+':p'].items.map(i=>i.id), y:['y','y2','y3'].map(x=>PP.byId['SK:'+k+':'+x].items.map(i=>i.id)),
+        own:['y','y2','y3'].map(x=>!!PP.byId['SK:'+k+':'+x].own), setNo:['y','y2','y3'].map(x=>PP.byId['SK:'+k+':'+x].setNo),
+        next:['p','y','y2','y3'].map(x=>PP.byId['SK:'+k+':'+x].next&&[PP.byId['SK:'+k+':'+x].next.id,PP.byId['SK:'+k+':'+x].next.label,!!PP.byId['SK:'+k+':'+x].next.picker]),
+        practice:PP.lessons[k].practice.map(i=>i.id), refs:[].concat(...PP.lessons[k].core.sets.map(s=>s.items.filter(x=>x.ref).map(x=>x.ref))),
+        sim:(PP.similarFor[k]||[]).map(i=>i.id), p4hints:PP.byId['SK:'+k+':y'].items[0].hints, p1hints:PP.byId['SK:'+k+':p'].items[0].hints}))(%s)""" % json.dumps(K))
+    check("A.1 Together on a core lesson is practice minus the core refs: exactly P1-P3 (lead decision)",
+          reg["p"] == ["SK-TT1c-P1", "SK-TT1c-P2", "SK-TT1c-P3"], reg["p"])
+    allcore = sum(reg["y"], [])
+    check("A.2 P4-P6 appear only in core (set 1), never in Together; fifteen core items in three sets of five",
+          all(x in allcore and x not in reg["p"] for x in ("SK-TT1c-P4", "SK-TT1c-P5", "SK-TT1c-P6")) and [len(x) for x in reg["y"]] == [5, 5, 5]
+          and len(set(allcore)) == 15 and set(reg["refs"]) == {"SK-TT1c-P4", "SK-TT1c-P5", "SK-TT1c-P6"}, reg["y"])
+    check("A.3 sets are SK:<k>:y, :y2, :y3 (own, set 1-3); Together -> picker, set 1 -> set 2 -> set 3 -> the check",
+          reg["own"] == [True, True, True] and reg["setNo"] == [1, 2, 3] and reg["next"][0] == ["SK:%s:y" % K, "Practice on my own", True]
+          and reg["next"][1][:2] == ["SK:%s:y2" % K, "Go on to set 2"] and reg["next"][2][:2] == ["SK:%s:y3" % K, "Go on to set 3"]
+          and reg["next"][3][:2] == ["SK:%s:t" % K, "Take the skill check"], reg["next"])
+    check("A.4 addons are merged at registration (hints on the ref P4 and on Together P1); the similar bank is not a set",
+          reg["p4hints"] and len(reg["p4hints"]) == 3 and reg["p1hints"] and len(reg["p1hints"]) == 3 and reg["sim"] == ["SK-TT1c-S01", "SK-TT1c-S02", "SK-TT1c-S03"]
+          and q.evaluate("!PP.sets.some(s=>s.items.some(i=>/-S0/.test(i.id)&&i.id.indexOf('SK-TT1c')===0))"), reg)
+    # Together still runs the unchanged Help me ladder, and its end leads to the set picker
+    q.evaluate("PP_SKILLS.open(%s,'practice')" % json.dumps(K)); q.click("#sk-start-practice"); q.wait_for_timeout(80)
+    tg = q.evaluate("({ids:[0,1,2].map(i=>PP_PLAYER.ctx(i).item.id), help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden})")
+    for i in range(3):
+        q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next"); q.wait_for_timeout(30)
+    q.click("#done-test"); q.wait_for_timeout(120)
+    land = q.evaluate("({cur:PP_APP.current(), step:PP_SKILLS.step(), picker:!!document.getElementById('sk-try-set-1')})")
+    check("A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons) and leads to the Try step's set picker",
+          tg["ids"] == reg["p"] and tg["help"] and not tg["hint"] and not tg["how"] and land == {"cur": "skill", "step": "try", "picker": True}, (tg, land))
+    q.evaluate("localStorage.clear()"); q.close()
+
+    # ---------------- B. own-mode controls on set 1 ----------------
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); ready(q, "#skill/%s/try" % K)
+    pk = q.evaluate("""({h:document.querySelector('#sk-panel .panel-h').textContent, sets:document.querySelectorAll('#sk-panel .own-set').length,
+        start:(document.getElementById('sk-start-try')||{}).textContent, line:document.getElementById('sk-panel').textContent})""")
+    check("B.0 the Try step is a set picker: heading, three set cards, Start set 1, the stop-and-come-back line",
+          pk["h"] == "Try It Yourself: practice on my own" and pk["sets"] == 3 and pk["start"] == "Start set 1"
+          and "Fifteen questions in three sets of five" in pk["line"] and "You can stop after any set and come back." in pk["line"], pk)
+    q.click("#sk-start-try"); q.wait_for_timeout(100)
+    c = q.evaluate("""(()=>{const ids=['q-check','q-hint','q-how','q-next','q-prev'];return {state:PP_PLAYER.state(),hash:location.hash,tag:document.getElementById('player-mode').textContent,
+        ctl:ids.map(i=>{const e=document.getElementById(i),r=e.getBoundingClientRect();return [i,!e.hidden,e.textContent,Math.round(r.height),Math.round(r.width),e.disabled]}),
+        help:!document.getElementById('q-help').hidden, sim:!document.getElementById('q-similar').hidden}})()""")
+    ctl = {x[0]: x for x in c["ctl"]}
+    check("B.1 own mode: Check my answer, Give me a hint, Show me how (shows the answer) and Next are present before any wrong answer; no Help me; targets at least 44px",
+          c["state"]["own"] and c["hash"] == "#play/SK:%s:y/try" % K and c["tag"] == "Practice on my own" and not c["help"]
+          and ctl["q-check"][1] and ctl["q-check"][2] == "Check my answer" and ctl["q-hint"][1] and ctl["q-hint"][2] == "Give me a hint"
+          and ctl["q-how"][1] and ctl["q-how"][2] == "Show me how (shows the answer)" and ctl["q-next"][1]
+          and all(x[3] >= 44 and x[4] >= 44 for x in c["ctl"] if x[1]), c)
+    check("B.2 blank: Check my answer is disabled; Try a similar question is not offered yet", ctl["q-check"][5] and not c["sim"], c)
+    # P4 (ms, 2 points): wrong twice, then hints
+    snap0 = q.evaluate(KEYS)
+    q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(40)
+    w1 = q.evaluate("({fb:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, dis:document.getElementById('q-check').disabled, how:document.getElementById('q-how-steps').hidden, outline:document.querySelectorAll('#q-body .is-hint').length})")
+    q.click("#q-check"); q.wait_for_timeout(40)
+    w2 = q.evaluate("({fb:document.getElementById('q-feedback').textContent, dis:document.getElementById('q-check').disabled, focus:document.activeElement.id})")
+    check("B.3 a wrong check says Not quite with no explanation and allows a retry; after two wrong checks Check waits for a hint or Show me how",
+          w1["fb"].startswith("Not quite") and w1["why"][:40] not in w1["fb"] and not w1["dis"] and w1["how"] and w1["outline"] == 0
+          and "Two tries used. Ask for a hint or press Show me how." in w2["fb"] and w2["dis"] and w2["focus"] == "q-hint", (w1, w2))
+    hints = []
+    for n in range(3):
+        q.click("#q-hint"); q.wait_for_timeout(40)
+        hints.append(q.evaluate("""({steps:[...document.querySelectorAll('#q-help-steps .help-step')].map(s=>[s.querySelector('.fb-label').textContent,s.querySelector('.help-text').textContent]),
+            outline:document.querySelectorAll('#q-body .is-hint').length, ruled:document.querySelectorAll('#q-body .is-ruled-out').length, check:document.getElementById('q-check').disabled,
+            label:document.getElementById('q-hint').textContent, dis:document.getElementById('q-hint').disabled, ans:PP_ITEMS[PP_PLAYER.ctx().item.type].answerText(PP_PLAYER.ctx().item,PP.byId['SK:%s:y'])})""" % K))
+    authored = q.evaluate("PP_PLAYER.ctx().item.hints")
+    check("B.4 three graduated hints in order, each the authored text, labelled Hint n of 3; no outline, nothing ruled out; a hint re-enables one check",
+          [len(h["steps"]) for h in hints] == [1, 2, 3] and [s[1] for s in hints[2]["steps"]] == authored
+          and [s[0].lower() for s in hints[2]["steps"]] == ["hint 1 of 3", "hint 2 of 3", "hint 3 of 3"]
+          and all(h["outline"] == 0 and h["ruled"] == 0 for h in hints) and not hints[0]["check"]
+          and hints[0]["label"] == "Give me another hint" and hints[2]["label"] == "No more hints" and hints[2]["dis"]
+          and not any(h["ans"].lower() in s[1].lower() for h in hints for s in h["steps"]), hints[2])
+    # Show me how reveals and marks Answer shown, permanently
+    q.click("#q-how"); q.wait_for_timeout(60)
+    hw = q.evaluate("""({box:document.getElementById('q-how-steps').innerText, steps:document.querySelectorAll('#q-how-steps .how-list li').length, how:PP_PLAYER.ctx().item.how,
+        outline:document.querySelectorAll('#q-body .is-hint').length, status:document.getElementById('q-status').textContent, focus:document.activeElement.className,
+        sim:!document.getElementById('q-similar').hidden, howBtn:!document.getElementById('q-how').hidden})""")
+    rec = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-P4"]
+    check("B.5 Show me how: numbered steps from how, the answer, the mix-up line, the key outlined; the item is Answer shown and focus moves to the steps",
+          hw["steps"] == len(hw["how"]) and "The answer:" in hw["box"] and "honest" in hw["box"] and "common mix-up" in hw["box"].lower() and hw["outline"] == 2
+          and "Answer shown" in hw["status"] and "how-h" in hw["focus"] and rec["x"] is True and rec["ok"] is False and rec["w"] == 2 and rec["h"] == 3 and not hw["howBtn"], (hw, rec))
+    q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    after = q.evaluate("({fb:document.getElementById('q-feedback').textContent, status:document.getElementById('q-status').textContent})")
+    rec = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-P4"]
+    check("B.6 a right answer after Show me how is accepted but stays Answer shown; w, h and x are never lowered; the full history is kept",
+          "counts as answer shown" in after["fb"] and "Answer shown" in after["status"] and rec["ok"] is True and rec["x"] is True and rec["w"] == 2 and rec["h"] == 3
+          and [e["t"] for e in rec["log"]] == ["check", "check", "hint", "hint", "hint", "how", "check"], (after, rec))
+    check("B.7 no pass from practice: pp.progress.v1 is untouched by own-mode actions; only pp.practice.v1 is new",
+          q.evaluate(PROG) is None and set(q.evaluate(KEYS)) - set(snap0) == {"pp.practice.v1"}, q.evaluate(KEYS).keys())
+    # similar: offered after the reveal (P4 is in S01's like); separate record; bank used up
+    simv = q.evaluate("!document.getElementById('q-similar').hidden")
+    core_before = json.dumps(q.evaluate(PRACTICE)["l"][K]["i"])
+    q.click("#q-similar"); q.wait_for_timeout(100)
+    s1 = q.evaluate("({sim:PP_PLAYER.state().sim, count:document.getElementById('q-count').textContent, next:document.getElementById('q-next').textContent, prev:document.getElementById('q-prev').textContent, simbtn:!document.getElementById('q-similar').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden})")
+    q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    st = q.evaluate(PRACTICE)["l"][K]
+    check("B.8 Try a similar question opens a separate extra question (S01), labelled not one of the fifteen, with the same controls and no further similar button",
+          simv and s1["sim"] == "SK-TT1c-S01" and s1["count"] == "Extra question (not one of the fifteen)" and s1["next"] == "Go on to question 2"
+          and s1["prev"] == "Back to question 1" and not s1["simbtn"] and s1["hint"] and s1["how"], s1)
+    check("B.9 the similar question is saved under s with for = the core item; the core record is unchanged; it is not counted in the fifteen",
+          st["s"]["SK-TT1c-S01"]["for"] == "SK-TT1c-P4" and st["s"]["SK-TT1c-S01"]["ok"] is True and st["s"]["SK-TT1c-S01"]["h"] == 1 and st["s"]["SK-TT1c-S01"]["w"] == 1
+          and json.dumps(st["i"]) == core_before and "SK-TT1c-S01" not in st["i"]
+          and q.evaluate("PP_PRACTICE.counts(%s,PP_SKILLS.coreIds(%s))" % (json.dumps(K), json.dumps(K)))["shown"] == 1, st)
+    q.click("#q-prev"); q.wait_for_timeout(60)
+    back = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:PP_PLAYER.state().sim, simbtn:!document.getElementById('q-similar').hidden})")
+    check("B.10 Back to question 1 returns to the core item; its only similar question is used, so the button is gone",
+          back == {"id": "SK-TT1c-P4", "sim": None, "simbtn": False}, back)
+    q.click("#q-next"); q.wait_for_timeout(60)
+    # P5 (order) first-try right; no similar maps to P5, so the button stays hidden (lead decision)
+    q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    p5 = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:!document.getElementById('q-similar').hidden, st:document.getElementById('q-status').textContent, focus:document.activeElement.id})")
+    check("B.11 right on the first try: status Right on the first try; a core item with no mapped similar item hides Try a similar question",
+          p5["id"] == "SK-TT1c-P5" and not p5["sim"] and "Right on the first try" in p5["st"] and p5["focus"] == "q-next", p5)
+    q.click("#q-next"); q.wait_for_timeout(40)
+    # C03 retry: wrong, right
+    q.evaluate(WRONG); q.click("#q-check"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    q.click("#q-next"); q.wait_for_timeout(40)
+    # C04: hint then right
+    q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    q.click("#q-next"); q.wait_for_timeout(40)
+    # P6: skip (Next without answering)
+    skip = q.evaluate("({id:PP_PLAYER.ctx().item.id, next:document.getElementById('q-next').textContent})")
+    q.click("#q-next"); q.wait_for_timeout(80)
+    done = q.evaluate("""({stage:!document.getElementById('stage-done').hidden, title:document.getElementById('done-title').textContent, line:document.getElementById('done-line').textContent,
+        rows:[...document.querySelectorAll('#done-summary .own-dot-word')].map(x=>x.textContent), btn:document.getElementById('done-test').textContent, back:document.getElementById('done-back').textContent})""")
+    want = ["Question 1: Answer shown", "Question 2: Right on the first try", "Question 3: Right after another try", "Question 4: Right with hints", "Question 5: Not finished"]
+    check("B.12 five statuses in words at the end of the set (shown, first try, retry, hints, not finished); a skipped item stays Not finished",
+          skip == {"id": "SK-TT1c-P6", "next": "Finish this set"} and done["stage"] and done["rows"] == want and done["title"] == "End of set 1"
+          and "One question is not finished yet" in done["line"] and "never scored" in done["line"] and done["btn"] == "Go on to set 2" and done["back"] == "Back to the lesson", done)
+    stv = q.evaluate("(k=>PP_SKILLS.coreIds(k).slice(0,5).map(id=>PP_PRACTICE.status(k,id)))(%s)" % json.dumps(K))
+    check("B.13 the stored facts derive the same five statuses", stv == ["shown", "first", "retry", "hints", "none"], stv)
+    # Forward / reload on a finished set: the already-finished stage offers Look back and Go on
+    q.reload(); q.wait_for_timeout(700)
+    ag = q.evaluate("({stage:!document.getElementById('stage-again').hidden, t:document.getElementById('again-title').textContent, a:document.getElementById('again-start').textContent, n:!document.getElementById('again-next').hidden&&document.getElementById('again-next').textContent, b:document.getElementById('again-back').textContent})")
+    check("B.14 a reload on a finished set shows the already-finished stage: Look back at this set, Go on to set 2, Back to the lesson",
+          ag == {"stage": True, "t": "You reached the end of this set", "a": "Look back at this set", "n": "Go on to set 2", "b": "Back to the lesson"}, ag)
+    q.click("#again-start"); q.wait_for_timeout(100)
+    lb = q.evaluate("({pos:PP_PLAYER.state().pos, solved:PP_PLAYER.state().solved, locked:document.querySelectorAll('#q-body .choice:disabled').length, status:document.getElementById('q-status').textContent, how:!document.getElementById('q-how-steps').hidden})")
+    check("B.15 Look back reopens set 1 at question 1 with the saved answer locked and its Answer shown status and steps",
+          lb["pos"] == 0 and lb["solved"][0] is True and lb["locked"] == 5 and "Answer shown" in lb["status"] and lb["how"], lb)
+    # set picker reflects it
+    q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(60)
+    sp = q.evaluate("""({cards:[...document.querySelectorAll('#sk-panel .own-set')].map(c=>[c.querySelector('.own-set-state').textContent,[...c.querySelectorAll('.own-dot-word')].map(x=>x.textContent).join('|'),c.querySelector('button').textContent]),
+        start:document.getElementById('sk-start-try').textContent, sum:document.querySelector('.own-summary').textContent, tick:document.getElementById('sk-tab-try').classList.contains('is-done')})""")
+    check("B.16 the set picker shows each set's status in words (dots carry a word, not only colour) and Continue set 1; extra questions are counted apart",
+          sp["cards"][0][0] == "Started: question 5 of 5" and sp["cards"][0][1] == "Answer shown|First try|After a retry|With hints|Not finished"
+          and sp["cards"][0][2] == "Continue set 1" and sp["cards"][1][0] == "Not started" and sp["start"] == "Continue set 1"
+          and "Extra questions tried: one" in sp["sum"] and not sp["tick"], sp)
+    # ---------------- C. resume after reload on set 2 ----------------
+    q.click("#sk-try-set-2"); q.wait_for_timeout(100)
+    orders = {}
+    for i in range(3):
+        if i == 1: q.click("#q-hint"); q.click("#q-hint")
+        q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(30)
+        orders[i] = q.evaluate("(c=>JSON.stringify({o:c.order,a:c.orderA,b:c.orderB,r:c.rowOrder,h:c.hotOrder,r2:c.resp}))(PP_PLAYER.ctx())")
+        q.click("#q-next"); q.wait_for_timeout(40)
+    q.evaluate(WRONG); q.wait_for_timeout(30)   # an unchecked choice on question 4
+    q4 = q.evaluate("JSON.stringify(PP_PLAYER.ctx().resp)")
+    q.goto(BASE + "#skill/%s/try" % K); q.reload(); q.wait_for_timeout(700)
+    pk2 = q.evaluate("[...document.querySelectorAll('#sk-panel .own-set')].map(c=>c.querySelector('.own-set-state').textContent)")
+    q.click("#sk-try-set-2"); q.wait_for_timeout(100)
+    rs = q.evaluate("({pos:PP_PLAYER.state().pos, resp:JSON.stringify(PP_PLAYER.ctx().resp), id:PP_PLAYER.ctx().item.id})")
+    q.click("#q-prev"); q.wait_for_timeout(40); q.click("#q-prev"); q.wait_for_timeout(40)
+    r2 = q.evaluate("({id:PP_PLAYER.ctx().item.id, steps:document.querySelectorAll('#q-help-steps .help-step').length, ord:(c=>JSON.stringify({o:c.order,a:c.orderA,b:c.orderB,r:c.rowOrder,h:c.hotOrder,r2:c.resp}))(PP_PLAYER.ctx()), locked:PP_PLAYER.state().solved[1]})")
+    check("C.1 resume: after a reload the picker says Started: question 4 of 5, and Continue opens set 2 at question 4 with its unchecked answer",
+          pk2[1] == "Started: question 4 of 5" and rs["pos"] == 3 and rs["resp"] == q4 and rs["id"] == "SK-TT1c-C09", (pk2, rs, q4))
+    check("C.2 resume restores the earlier question's answer, its choice order and its hint log (two hints shown again)",
+          r2["id"] == "SK-TT1c-C07" and r2["steps"] == 2 and r2["ord"] == orders[1] and r2["locked"] is True, (r2, orders[1]))
+    # direct address to set 3 and the mode guard: #play/SK:<k>:y3/test runs as practice and stores no pass
+    ready(q, "#play/SK:%s:y3/test" % K)
+    d3 = q.evaluate("({s:PP_PLAYER.state(), hash:location.hash, tag:document.getElementById('player-mode').textContent})")
+    for i in range(5):
+        q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next"); q.wait_for_timeout(30)
+    pr = (q.evaluate(PROG) or {}).get(K, {})
+    check("C.3 #play/SK:<k>:y3/test runs as Practice on my own (never a test) and finishing it stores no pass, try or best",
+          d3["s"]["mode"] == "practice" and d3["s"]["own"] and d3["hash"] == "#play/SK:%s:y3/try" % K and d3["tag"] == "Practice on my own"
+          and not any(f in pr for f in ("mastered", "tries", "best", "attempts", "passedAt")), (d3, pr))
+    # finish all fifteen: only `tried` appears
+    for part in ("y", "y2"):
+        start_set(q, part)
+        for i in range(5):
+            st_ = q.evaluate("PP_PLAYER.state().solved[PP_PLAYER.state().pos]")
+            if not st_:
+                q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(20)
+            q.click("#q-next"); q.wait_for_timeout(30)
+    pr = q.evaluate(PROG)
+    q.evaluate("PP_APP.landBrowse()"); q.wait_for_timeout(100)
+    row = q.evaluate("(c=>{const b=document.querySelector('#skill-list .skill-line[data-code=\"'+c+'\"]');return {aria:b.getAttribute('aria-label'),passed:!!b.querySelector('.sl-done')}})(%s)" % json.dumps(K))
+    q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(60)
+    tick = q.evaluate("document.getElementById('sk-tab-try').classList.contains('is-done')")
+    check("C.4 no pass from practice: after all fifteen, pp.progress.v1[k] gains only tried:true; the list says Started, not passed; the Try step is ticked",
+          pr == {K: {"tried": True}} and "Started." in row["aria"] and "Passed" not in row["aria"] and not row["passed"] and tick, (pr, row, tick))
+    q.close()
+
+    # ---------------- D. constructed response (cr) via a fixture lesson registered in the page ----------------
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    q.evaluate("""(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],
+        clue:'A clue.',hints:['Hint one.','Hint two.','Hint three.'],how:['Step one.','The answer is right one.'],why:'The answer is right one.'});
+      const cr={id:'SK-FXCR-C01',type:'cr',dok:3,prompt:'Write one sentence that tells the lesson of a story you know.',rows:3,sample:'Telling the truth is better than hiding a mistake.',
+        criteria:['I wrote a lesson that works for anyone.','I did not just retell what happened.'],clue:'A lesson works for anyone.',hints:['A lesson works for anyone.','Think about what the character learns.','Start with a word like always or never.'],how:['Name what the character learns.','Say it so it works for anyone.'],why:'A lesson is what anyone can learn.'};
+      PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',teach:{big:'x',points:['a','b','c'],example:{lines:['x'],note:'y'}},learn:[],parent:'p',
+        practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],test:[mc('SK-FXCR-T1',3),mc('SK-FXCR-T2',4),mc('SK-FXCR-T3',5),mc('SK-FXCR-T4',6)],
+        core:{rev:'1',sets:[{items:[cr,mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-D0'+n,10+n))},{items:[1,2,3,4,5].map(n=>mc('SK-FXCR-E0'+n,20+n))}]}});})()""")
+    q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
+    cr0 = q.evaluate("({pts:document.getElementById('q-points').textContent, check:document.getElementById('q-check').textContent, dis:document.getElementById('q-check').disabled, box:!!document.querySelector('#q-body textarea.cr-box'), label:!!document.querySelector('#q-body label.cr-label')})")
+    q.fill("#q-body textarea", "Being honest is always the right choice."); q.click("#q-check"); q.wait_for_timeout(60)
+    cr1 = q.evaluate("""({cmp:document.getElementById('q-cr').innerText, boxes:document.querySelectorAll('#q-cr input[type=checkbox]').length, status:document.getElementById('q-status').textContent,
+        score:PP_ITEMS.cr.score(PP_PLAYER.ctx().item,PP_PLAYER.ctx().resp), fb:document.getElementById('q-feedback').textContent})""")
+    q.check("#q-cr input[type=checkbox]")
+    crr = q.evaluate(PRACTICE)["l"]["FX-CR"]["i"]["SK-FXCR-C01"]
+    check("D.1 cr: Not scored, Compare with the sample shows one good answer (other answers can also be right) and the criteria; status Written and checked; never right",
+          cr0 == {"pts": "Not scored", "check": "Compare with the sample", "dis": True, "box": True, "label": True}
+          and "One good answer. Other answers can also be right" in cr1["cmp"] and cr1["boxes"] == 2 and "Written and checked against the list" in cr1["status"]
+          and cr1["score"] == {"points": 0, "max": 0} and "right" not in cr1["fb"].lower().replace("can also be right", "")
+          and crr["cr"]["done"] is True and crr["cr"]["text"] == "Being honest is always the right choice." and crr["cr"]["checks"] == [True, False] and "ok" in crr and crr["ok"] is False, (cr0, cr1, crr))
+    q.reload(); q.wait_for_timeout(600)
+    q.evaluate("""(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],clue:'A clue.',why:'w'});
+      PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],core:{rev:'1',sets:[{items:[{id:'SK-FXCR-C01',type:'cr',prompt:'Write.',sample:'S',criteria:['a','b'],clue:'c',why:'w'},mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[]},{items:[]}]}});})()""")
+    q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
+    cr2 = q.evaluate("({text:document.querySelector('#q-body textarea').value, checks:[...document.querySelectorAll('#q-cr input')].map(x=>x.checked)})")
+    check("D.2 cr resume: the written answer and the ticked criteria come back after a reload", cr2 == {"text": "Being honest is always the right choice.", "checks": [True, False]}, cr2)
+    q.close()
+
+    # ---------------- E. storage: blocked, full, malformed ----------------
+    for name, init in (("blocked", "Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked')}})"),
+                       ("full", "window.__realSet=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(/^pp\\./.test(k))throw new DOMException('full','QuotaExceededError');return window.__realSet.call(this,k,v)}")):
+        errs = []
+        q = page(b, init=init, errors=errs, browse=False)
+        q.goto(BASE + "#skill/%s/try" % K); q.wait_for_timeout(800)
+        pn = q.evaluate("({n:(document.querySelector('#sk-panel .practice-storage')||{}).textContent||'', line:document.getElementById('sk-panel').textContent})")
+        q.click("#sk-start-try"); q.wait_for_timeout(100)
+        q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+        pl = q.evaluate("({n:(document.querySelector('#q-storage .practice-storage')||{}).textContent||'', st:document.getElementById('q-status').textContent, solved:PP_PLAYER.state().solved[0]})")
+        q.click("#q-next"); q.wait_for_timeout(40); q.click("#q-prev"); q.wait_for_timeout(40)
+        kept = q.evaluate("({solved:PP_PLAYER.state().solved[0], st:document.getElementById('q-status').textContent})")
+        msg = "Saving is unavailable. Your practice answers are kept only while this page stays open. If you reload or close it, this practice starts again from the beginning."
+        ok = msg in pn["n"] and "You can stop after any set and come back." not in pn["line"] and msg in pl["n"] and pl["solved"] and "Right with hints" in pl["st"] and kept["solved"] and not errs
+        if name == "full":
+            q.evaluate("Storage.prototype.setItem=window.__realSet"); q.click("#q-hint"); q.wait_for_timeout(40)   # a later action saves
+            q.evaluate(WRONG)
+            cleared = q.evaluate("({n:(document.querySelector('#q-storage .practice-storage')||{}).hidden, v:!!localStorage.getItem('pp.practice.v1')})")
+            ok = ok and cleared == {"n": True, "v": True}
+            pn["cleared"] = cleared
+        check("E.1 %s storage: the honest notice on the picker and in the player; no stop-and-come-back promise; practice works for the visit; no page errors%s" % (name, "; the notice clears after a later save succeeds" if name == "full" else ""),
+              ok, (pn, pl, kept, errs))
+        q.close()
+    for name, raw, expect in (("bad JSON", "{not json", "Saved practice could not be read, so it starts fresh. Nothing else was changed."),
+                              ("an array", "[1,2,3]", "Saved practice could not be read"),
+                              ("mixed", json.dumps({"v": 1, "l": {K: {"i": {"SK-TT1c-P4": {"w": "2", "h": 9, "x": "yes", "ok": True, "r": {"v": [99]}}, "__proto__": {"w": 1}}}, "bad": "x"}}), "Some saved practice could not be read")):
+        errs = []
+        q = page(b, errors=errs, init="try{if(!sessionStorage.getItem('seeded')){localStorage.setItem('pp.practice.v1',%s);sessionStorage.setItem('seeded','1')}}catch(e){}" % json.dumps(raw))
+        q.goto(BASE + "#skill/%s/try" % K); q.wait_for_timeout(800)
+        n0 = q.evaluate("(document.querySelector('#sk-panel .practice-storage')||{}).textContent||''")
+        q.click("#sk-start-try"); q.wait_for_timeout(100)
+        raw1 = q.evaluate("localStorage.getItem('pp.practice.v1')")
+        info = q.evaluate("({st:PP_PRACTICE.status(%s,'SK-TT1c-P4'), rec:PP_PRACTICE.rec(%s,'SK-TT1c-P4'), resp:JSON.stringify(PP_PLAYER.ctx(0).resp)})" % (json.dumps(K), json.dumps(K)))
+        q.evaluate(WRONG); q.wait_for_timeout(30)
+        raw2 = q.evaluate("localStorage.getItem('pp.practice.v1')")
+        good = expect in n0 and raw1 == raw and not errs and raw2 != raw and isinstance(json.loads(raw2), dict)
+        if name == "mixed":
+            good = good and info["st"] == "retry" and info["rec"]["w"] == 2 and info["rec"]["h"] == 3 and info["rec"]["x"] is False and info["resp"] == '{"v":[]}'
+        check("E.2 malformed pp.practice.v1 (%s): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts" % name, good, (n0, raw1 == raw, info, errs))
+        q.close()
+
+    # ---------------- F. compatibility with saved data from main ----------------
+    seed = {
+        "pp.progress.v1": json.dumps({K: {"taught": True, "learned": True, "practiced": True, "tried": True, "tries": 1, "best": {"got": 4, "max": 8}, "bestMax": 8,
+                                          "attempts": [{"d": "2026-10-01", "got": 4, "max": 8, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}]},
+                                      "3.T.C.1.a": {"taught": True, "mastered": True, "tries": 1, "best": {"got": 7, "max": 7}, "legacyUndated": True, "firstSeenPassedAt": "2026-09-01"},
+                                      "3.L.GC.2.b": {"tries": 2, "best": {"got": 7, "max": 7}, "mastered": True, "passedAt": "2026-10-10", "passTry": 2, "passBy": "test", "passForm": "B", "lastPassAt": "2026-10-10",
+                                                     "attempts": [{"d": "2026-10-09", "got": 3, "max": 7, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}, {"d": "2026-10-10", "got": 7, "max": 7, "ok": True, "n": 2, "afterAnswers": False, "form": "B"}]},
+                                      "_ui": {"lastCat": "reading"}}),
+        "pp.path.v1": json.dumps({"mode": "browse", "introduced": True, "bookmark": {"key": K, "step": "practice"}, "finished": {"3.T.T.1.b": True}, "habits": {"K-12.P.EICC.1.a": True}}),
+        "pp.task.W-TASK-01": json.dumps({"plan": {"opinion": "I think so."}, "draft": "My draft.", "checks": [True], "scores": {"purpose": 3}}),
+        "pp.skwrite.3.T.T.1.e": json.dumps({"text": "Once upon a time.", "checks": [True, False]}),
+    }
+    q = page(b, errors=errors, browse=False)
+    q.goto(BASE); q.wait_for_timeout(300)
+    q.evaluate("s=>{localStorage.clear();for(const k in s)localStorage.setItem(k,s[k]);}", seed)
+    ready(q, "#browse")
+    before = q.evaluate(KEYS)
+    lab = q.evaluate("(k=>({state:PP_SKILLS.displayState(k).label, tryTick:(PP_SKILLS.open(k,'try'),document.getElementById('sk-tab-try').classList.contains('is-done'))}))(%s)" % json.dumps(K))
+    for h in ("#browse", "#std/3.T.T.1", "#std/" + K, "#std/3.L.GC.1", "#std/K-12.P.EICC.1", "#skill/%s/teach" % K, "#skill/%s/practice" % K, "#skill/%s/try" % K, "#skill/%s/test" % K,
+              "#parents/standards", "#parents", "#habits", "#path", "#choose", "#skill/3.L.GC.2.b/test"):
+        q.goto(BASE + h); q.wait_for_timeout(250)
+    q.evaluate("PP_APP.landBrowse()"); q.fill("#skill-search", "3-5.T.T.1"); q.wait_for_timeout(80)
+    mid = q.evaluate(KEYS)
+    start_set(q, "y"); q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.click("#q-how")
+    after = q.evaluate(KEYS)
+    changed = [k for k in before if after.get(k) != before[k]]
+    check("F.1 seeded pp.progress.v1 (2.1, PP-003, PP-004 records), pp.path.v1, pp.task.* and pp.skwrite.* stay byte-identical after every changed screen and own-mode actions",
+          mid == before and not changed and set(after) - set(before) == {"pp.practice.v1"}, (changed, set(after) - set(before)))
+    check("F.2 a legacy tried:true (the old short Try) still shows Practicing, but does not tick the fifteen-question Try step",
+          lab == {"state": "Practicing", "tryTick": False}, lab)
+    q.close()
+    # a lesson without core behaves exactly as before
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    L0 = "3.T.C.1.a"
+    lg = q.evaluate("""(k=>{const P=PP.lessons[k].practice,h=P.length>=4?Math.ceil(P.length/2):P.length;return {core:!!PP.lessons[k].core,
+        p:PP.byId['SK:'+k+':p'].items.map(i=>i.id), y:PP.byId['SK:'+k+':y'].items.map(i=>i.id), wantP:P.slice(0,h).map(i=>i.id), wantY:P.slice(h).map(i=>i.id),
+        own:!!PP.byId['SK:'+k+':y'].own, next:PP.byId['SK:'+k+':y'].next.id, y2:!!PP.byId['SK:'+k+':y2']}})(%s)""" % json.dumps(L0))
+    q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(L0)); q.wait_for_timeout(60)
+    lt = q.evaluate("({h:document.querySelector('#sk-panel .panel-h').textContent, intro:document.querySelector('#sk-panel .go-card').textContent, picker:document.querySelectorAll('.own-set').length})")
+    q.click("#sk-start-try"); q.wait_for_timeout(80)
+    l1 = q.evaluate("({help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden, prev:!document.getElementById('q-prev').hidden, tag:document.getElementById('player-mode').textContent, check:document.getElementById('q-check').textContent})")
+    q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(30)
+    l2 = q.evaluate("({help:!document.getElementById('q-help').hidden, fb:document.getElementById('q-feedback').textContent})")
+    check("F.3 a lesson without core is unchanged: ceil(n/2) Together/Try split, Try It Yourself card, Help me hidden until one wrong try, no hint/how buttons, nothing in pp.practice.v1",
+          not lg["core"] and lg["p"] == lg["wantP"] and lg["y"] == lg["wantY"] and not lg["own"] and not lg["y2"] and lg["next"] == "SK:%s:t" % L0
+          and lt["h"] == "Try It Yourself" and "Help me unlocks after one try." in lt["intro"] and lt["picker"] == 0
+          and not l1["help"] and not l1["hint"] and not l1["how"] and not l1["prev"] and l1["tag"] == "Try it yourself" and l1["check"] == "Check"
+          and l2["help"] and "Help me is now on" in l2["fb"] and q.evaluate("localStorage.getItem('pp.practice.v1')") is None, (lg, lt, l1, l2))
+    q.close()
+
+    # ---------------- G. standard pages, code links, search, no writes ----------------
+    errs = []
+    q = page(b, 320, 568, errors=errs); ready(q, "#browse")
+    q.evaluate("s=>{for(const k in s)localStorage.setItem(k,s[k]);}", seed)
+    ready(q, "#browse")
+    before = q.evaluate(KEYS)
+    codes = q.evaluate("""(()=>{const out=[];PP_STANDARDS.forEach(s=>out.push([s.code,s.official||s.text]));PP_STD_GROUPS.forEach(g=>{out.push([g.code,g.official]);out.push([g.band,g.official]);});
+        ['M','R','I','C'].forEach(l=>out.push(['3.L.GC.1:'+l,PP_STD_GROUPS.find(g=>g.code==='3.L.GC.1').official]));return out;})()""")
+    bad = []
+    for code, wording in codes:
+        r = q.evaluate("""(([c,w])=>{const ok=PP_STD.open(c);const t=document.getElementById('std-body').textContent;
+            return {ok, cur:PP_APP.current(), focus:document.activeElement.id, words:t.indexOf(w)>=0, page:/standards p\\. \\d+/.test(t), over:document.documentElement.scrollWidth-innerWidth,
+                    nested:[...document.querySelectorAll('#screen-std a.std-link')].filter(a=>a.parentElement.closest('a,button,summary')).length}})""", [code, wording])
+        if not (r["ok"] and r["cur"] == "std" and r["focus"] == "std-title" and r["words"] and r["page"] and r["over"] <= 0 and r["nested"] == 0): bad.append((code, r))
+    check("G.1 every leaf, parent, 3-5. band form, grammar-chart level and Practices code opens #std/<code> with a focused h1, the official wording and page, no nested links and no sideways scroll at 320px (%d addresses)" % len(codes),
+          not bad and not errs, (bad[:3], errs[:2]))
+    check("G.2 rendering every standard page writes nothing: every localStorage key is byte-identical", q.evaluate(KEYS) == before, "")
+    q.close()
+    q = page(b, 1366, 900, errors=errors); ready(q, "#browse")
+    ss = q.evaluate("""(()=>{PP_STD.open('3.T.SS.1.a');const a=[...document.querySelectorAll('#std-body .std-lesson-btn')].map(b=>b.dataset.lesson);
+        PP_STD.open('3.T.T.1');const comps=[...document.querySelectorAll('#std-body .std-comp .std-comp-head a.std-link')].map(a=>a.dataset.std);
+        const sug=(document.querySelector('#std-body .std-suggest')||{}).textContent||'';
+        PP_STD.open('3.T.T.1.c');const one=[...document.querySelectorAll('#std-body .std-lesson-btn')].map(b=>[b.dataset.lesson,b.textContent]);const t=document.getElementById('std-body').textContent;
+        PP_STD.open('K-12.P.EICC.1.a');const hb=document.getElementById('std-body').textContent;
+        PP_STD.open('3.L.GC.1');const lv=[...document.querySelectorAll('#std-body .std-h2')].map(h=>h.textContent);
+        return {a,comps,sug,one,t,hb,lv};})()""")
+    check("G.3 a code with several lessons lists all of them in the recommended order (3.T.SS.1.a: six lessons)",
+          ss["a"] == ["TS-SEQ", "TS-CE", "TS-PS", "TS-CC", "TS-DESC", "3.T.SS.1.a"], ss["a"])
+    check("G.4 a parent page lists its components in the recommended order with a suggested start; GUM is grouped by level; a Practices code says a grown-up observes it",
+          ss["comps"] == ["3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d", "3.T.T.1.e"] and ss["sug"].startswith("Suggested start:") and "not a placement" in ss["sug"]
+          and ss["lv"][0].startswith("Master and Reinforce") and ss["lv"][1].startswith("Introduce and Continue")
+          and "A grown-up observes this. There is no scored check" in ss["hb"], ss)
+    check("G.5 a narrow code page: one lesson button, practice (fifteen in three sets), the check with its two forms, progress labelled as this device only",
+          ss["one"] == [[K, "Start the lesson"]] and "fifteen questions in three sets of five" in ss["t"] and "two forms" in ss["t"]
+          and "It is not a Milestones score." in ss["t"] and not re.search(r"\bmaster(ed|y)\b", ss["t"], re.I), ss["one"])
+    # every visible code is a link and never nested (catalog, chips, official wording, parents, claims table, path, habits, search card)
+    places = {}
+    q.evaluate("PP_APP.landBrowse()"); q.wait_for_timeout(100)
+    places["catalog"] = q.evaluate("""({links:document.querySelectorAll('#skill-list a.std-link').length, rows:document.querySelectorAll('#skill-list .skill-line').length,
+        spanCodes:document.querySelectorAll('#skill-list span.sl-code').length, inBtn:document.querySelectorAll('#skill-list button .std-link, #skill-list button .sl-code').length})""")
+    q.evaluate("PP_SKILLS.open(%s)" % json.dumps(K)); q.evaluate("document.getElementById('sk-official').open=true")
+    places["skill"] = q.evaluate("({chips:document.querySelectorAll('#sk-tags a.sk-chip.std-link').length, spans:document.querySelectorAll('#sk-tags span.sk-chip').length, off:document.querySelectorAll('#sk-official a.std-link').length})")
+    q.evaluate("PP_PARENTS.open('standards')"); q.evaluate("document.querySelectorAll('#std-list details.std').forEach(d=>d.open=true)")
+    places["parents"] = q.evaluate("({n:document.querySelectorAll('#std-list details.std').length, links:document.querySelectorAll('#std-list .std-body a.std-link').length})")
+    q.evaluate("PP_PARENTS.open('test')")
+    places["claims"] = q.evaluate("document.querySelectorAll('#ptab-test table a.std-link').length")
+    q.evaluate("PP_APP.openHabits()")
+    places["habits"] = q.evaluate("({links:document.querySelectorAll('#habit-list a.std-link').length, rows:document.querySelectorAll('#habit-list .skill-line').length})")
+    q.evaluate("PP_PATH.open()"); q.evaluate("document.querySelectorAll('#path-content details').forEach(d=>d.open=true)")
+    places["path"] = q.evaluate("document.querySelectorAll('#path-content a.std-link').length")
+    nested = q.evaluate("[...document.querySelectorAll('a.std-link')].filter(a=>a.parentElement.closest('a,button,summary')).length")
+    check("G.6 every displayed code is a real link (catalog rows, skill chips and official wording, parent standards, claims table, path, habits) and none is nested in a link, button or summary",
+          places["catalog"]["links"] >= places["catalog"]["rows"] and places["catalog"]["spanCodes"] == 0 and places["catalog"]["inBtn"] == 0
+          and places["skill"]["chips"] == 1 and places["skill"]["spans"] == 0 and places["skill"]["off"] == 1
+          and places["parents"]["links"] == places["parents"]["n"] and places["claims"] >= 14 and places["habits"]["links"] == places["habits"]["rows"] == 53
+          and places["path"] > 80 and nested == 0, (places, nested))
+    srch = {}
+    for term, want in (("3.T.T.1", "3.T.T.1"), ("3-5.T.T.1", "3.T.T.1"), ("K-12.P.EICC.1", "K-12.P.EICC.1"), ("3.L.GC.1:M", "3.L.GC.1:M"),
+                       ("3.L.GC.1:R:use-action-verbs", "3.L.GC.1:R:use-action-verbs"), ("3-5.RA.2", "3.T.RA.2"), ("pronoun", None)):
+        q.evaluate("PP_APP.landBrowse()"); q.fill("#skill-search", term); q.wait_for_timeout(80)
+        srch[term] = q.evaluate("(()=>{const a=document.querySelector('#skill-list .std-hit a.std-link');return a?a.dataset.std:null})()")
+    q.evaluate("PP_APP.landBrowse()"); q.fill("#skill-search", "3-5.T.T.1"); q.wait_for_timeout(80)
+    nles = q.evaluate("document.querySelectorAll('#skill-list .skill-line').length")
+    check("G.7 code search shows a standard card for 3.T.T.1, 3-5.T.T.1, K-12.P.EICC.1, a GUM level and a GUM row (3-5.RA.2, GaDOE's print, resolves too); a word search does not; 3-5. finds the lessons",
+          all(srch[t] == w for t, w in (("3.T.T.1", "3.T.T.1"), ("3-5.T.T.1", "3.T.T.1"), ("K-12.P.EICC.1", "K-12.P.EICC.1"), ("3.L.GC.1:M", "3.L.GC.1:M"),
+              ("3.L.GC.1:R:use-action-verbs", "3.L.GC.1:R:use-action-verbs"), ("3-5.RA.2", "3.T.RA.2"), ("pronoun", None))) and nles >= 6, (srch, nles))
+    q.close()
+
+    # ---------------- H. navigation: links, direct addresses, Back/Forward ----------------
+    q = page(b, 1366, 900, errors=errors); ready(q, "#browse")
+    q.click('#skill-list .sl-codes a.std-link[data-std="3.T.T.1.c"]'); q.wait_for_timeout(150)
+    h1 = q.evaluate("[PP_APP.current(), location.hash, document.activeElement.id]")
+    q.click('#std-body .std-lesson-btn[data-lesson="3.T.T.1.c"]'); q.wait_for_timeout(150)
+    h2 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('skill-back').textContent]")
+    q.click("#skill-back"); q.wait_for_timeout(250)
+    h3 = q.evaluate("[PP_APP.current(), location.hash]")
+    q.go_back(); q.wait_for_timeout(250)
+    h4 = q.evaluate("[PP_APP.current(), location.hash]")
+    q.go_forward(); q.wait_for_timeout(250)
+    h5 = q.evaluate("[PP_APP.current(), location.hash]")
+    q.reload(); q.wait_for_timeout(700)
+    h6 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('std-title').textContent]")
+    q.click('#std-body .std-parent a.std-link'); q.wait_for_timeout(150)
+    h7 = q.evaluate("[PP_APP.current(), location.hash]")
+    q.click("#std-back"); q.wait_for_timeout(250)
+    h8 = q.evaluate("[PP_APP.current(), location.hash]")
+    check("H.1 catalog code -> standard page (focus on h1) -> lesson -> '← Standard 3.T.T.1.c' returns to the standard; Back to the catalog; Forward; reload; parent link; the page's Back",
+          h1 == ["std", "#std/3.T.T.1.c", "std-title"] and h2[:2] == ["skill", "#skill/3.T.T.1.c"] and h2[2] == "\u2190 Standard 3.T.T.1.c" and h3 == ["std", "#std/3.T.T.1.c"]
+          and h4 == ["home", "#browse"] and h5 == ["std", "#std/3.T.T.1.c"] and h6[:2] == ["std", "#std/3.T.T.1.c"] and h7 == ["std", "#std/3.T.T.1"] and h8 == ["std", "#std/3.T.T.1.c"],
+          (h1, h2, h3, h4, h5, h6, h7, h8))
+    ready(q, "#std/3-5.T.T.1")
+    d1 = q.evaluate("[PP_APP.current(), location.hash]")
+    ready(q, "#std/not-a-code")
+    d2 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('home-notfound').hidden]")
+    ready(q, "#play/SK:%s:y2/try" % K)
+    d3 = q.evaluate("[PP_APP.current(), PP_PLAYER.state().setId, PP_PLAYER.state().own]")
+    q.click("#player-back"); q.wait_for_timeout(200)
+    d4 = q.evaluate("[PP_APP.current(), PP_SKILLS.step()]")
+    check("H.2 direct addresses: #std/3-5.T.T.1 settles on #std/3.T.T.1; a bad code shows the not-found home; #play/SK:<k>:y2/try opens set 2, whose Back opens the Try step",
+          d1 == ["std", "#std/3.T.T.1"] and d2[0] in ("home", "choose") and d2[1] == "" and d2[2] is False and d3 == ["player", "SK:%s:y2" % K, True] and d4 == ["skill", "try"], (d1, d2, d3, d4))
+    q.close()
+
+    # ---------------- I. the check: navigator, flags, unanswered list, results ----------------
+    q = page(b, 1366, 900, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % K); q.wait_for_timeout(100)
+    n = q.evaluate("PP_PLAYER.state().total")
+    t0 = q.evaluate("""({nav:document.querySelectorAll('#q-nav .qn-btn').length, cur:(document.querySelector('#q-nav [aria-current=step]')||{}).textContent,
+        lab:[...document.querySelectorAll('#q-nav .qn-btn')].map(b=>b.getAttribute('aria-label')), hidden:['q-hint','q-how','q-similar','q-check','q-help'].filter(i=>!document.getElementById(i).hidden),
+        flag:!document.getElementById('q-flag').hidden, navName:document.getElementById('q-nav').getAttribute('aria-label')})""")
+    q.click("#q-nav .qn-btn:nth-child(3)"); q.wait_for_timeout(60)
+    q.evaluate(CORRECT); q.click("#q-flag"); q.wait_for_timeout(40)
+    t1 = q.evaluate("({pos:PP_PLAYER.state().pos, lab:document.querySelector('#q-nav .qn-btn:nth-child(3)').getAttribute('aria-label'), pressed:document.getElementById('q-flag').getAttribute('aria-pressed'), fb:document.getElementById('q-feedback').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length})")
+    check("I.1 the check has a question navigator (one button per question, aria-current, state in words) and Mark to review; no hint, Show me how, similar, Check or feedback",
+          t0["nav"] == n and t0["cur"] == "1" and t0["lab"][0] == "1, not answered" and t0["hidden"] == [] and t0["flag"] and t0["navName"] == "Questions"
+          and t1["pos"] == 2 and t1["lab"] == "3, answered, marked to review" and t1["pressed"] == "true" and t1["fb"] and t1["steps"] == 0, (t0, t1))
+    q.click("#q-nav .qn-btn:nth-child(%d)" % n); q.click("#q-next"); q.wait_for_timeout(60)
+    cf = q.evaluate("({line:document.getElementById('confirm-line').textContent, btns:[...document.querySelectorAll('#confirm-list .confirm-go')].map(b=>b.getAttribute('aria-label'))})")
+    q.click('#confirm-list .confirm-go[data-q="1"]'); q.wait_for_timeout(60)
+    back = q.evaluate("[!document.getElementById('stage-work').hidden, PP_PLAYER.state().pos]")
+    check("I.2 before submitting, the unanswered and marked questions are listed by number; each returns to its question",
+          ("left " + q.evaluate("PP.countWord(%d)" % (n - 1))) in cf["line"] and len(cf["btns"]) == n and "Go back to question 2, not answered" in cf["btns"]
+          and "Go back to question 3, marked to review" in cf["btns"] and back == [True, 1], (cf, back))
+    # answer all: right except one 2-point item partly right
+    for i in range(n):
+        q.evaluate("PP_PLAYER.ctx(%d)" % i)
+    q.evaluate("""(()=>{})()""")
+    two = q.evaluate("PP.byId['SK:%s:t'].items.findIndex(i=>i.points===2&&(i.type==='ebsr'||i.type==='ms'||i.type==='match'||(i.type==='dropdown'&&i.slots.length===2)))" % K)
+    for i in range(n):
+        q.click("#q-nav .qn-btn:nth-child(%d)" % (i + 1)); q.wait_for_timeout(20)
+        q.evaluate(PARTIAL if i == two else CORRECT)
+    q.click("#q-nav .qn-btn:nth-child(%d)" % n); q.click("#q-next"); q.wait_for_timeout(60)
+    q.click("#confirm-submit"); q.wait_for_timeout(100)
+    rs = q.evaluate("""({score:document.getElementById('res-score').textContent, partial:document.getElementById('res-partial').textContent, rows:document.querySelectorAll('#res-skills .skill-row').length,
+        rowsHidden:document.getElementById('res-skills').hidden, note:document.getElementById('res-again-note').textContent, again:document.getElementById('res-again').textContent,
+        revisit:document.getElementById('res-revisit').innerText, rv:[...document.querySelectorAll('#res-revisit .rv-btn')].map(b=>b.textContent)})""")
+    q.click("#res-review-btn"); q.wait_for_timeout(40)
+    rp = q.evaluate("[...document.querySelectorAll('#res-review .review-partial')].map(x=>x.textContent)")
+    check("I.3 results: the partial-credit line, a partial line in the review, a one-code check reports its total (no thin component rows), the retry names form B, and lessons to revisit",
+          two >= 0 and "one point of partial credit" in rs["partial"] and len(rp) == 1 and rp[0].startswith("Partial credit: 1 of 2 points.")
+          and rs["rows"] >= 1 and rs["rowsHidden"] and rs["again"] == "Take the skill check again"
+          and rs["note"] == "The next skill check uses form B, with different questions." and "Watch Me again" in rs["rv"] and "Practice on my own" in rs["rv"]
+          and "small sample" in rs["revisit"], (rs, rp))
+    one = "3.T.C.1.a"
+    q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % one); q.wait_for_timeout(80)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(WRONG); q.click("#q-next"); q.wait_for_timeout(20)
+    q.click("#confirm-submit"); q.wait_for_timeout(80)
+    note1 = q.evaluate("[document.getElementById('res-again-note').textContent, [...document.querySelectorAll('#res-revisit .rv-btn')].map(b=>b.textContent)]")
+    check("I.4 a one-form lesson's retry says it uses the same questions; a legacy lesson's revisit offers Practice Together",
+          note1[0] == "The next skill check uses the same questions as this one. This skill has one form." and "Practice Together" in note1[1], note1)
+    # a mixed form: a row is shown on its own only with at least two questions and three points
+    pt = q.evaluate("PP.sets.find(s=>s.kind==='form').id")
+    q.evaluate("PP_PLAYER.start(%s,'test')" % json.dumps(pt)); q.wait_for_timeout(80)
+    for i in range(q.evaluate("PP_PLAYER.state().total")):
+        q.evaluate(CORRECT); q.click("#q-next"); q.wait_for_timeout(10)
+    q.click("#confirm-submit"); q.wait_for_timeout(100)
+    comp = q.evaluate("""(()=>{const s=PP.byId[%s];const SK={};const rows=[...document.querySelectorAll('#res-skills .skill-row')].map(r=>[r.querySelector('.skill-name').textContent,r.querySelector('.skill-score').textContent,r.classList.contains('is-other')]);
+        return rows;})()""" % json.dumps(pt))
+    okrows = all((int(r[1].split(" of ")[1]) >= 3) for r in comp if not r[2])
+    check("I.5 a practice test reports an area on its own only when it has enough questions; smaller areas are grouped as Other parts", comp and okrows, comp)
+    q.close()
+
+    # ---------------- J. seven viewports: practice screen, set picker, a standard page, the check ----------------
+    over = []
+    for w, h in VIEWPORTS:
+        errs = []
+        q = page(b, w, h, errors=errs); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+        q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(80)
+        o1 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
+        if OUT and w in (320, 390, 1366): q.screenshot(path=str(OUT / ("picker-%dx%d.png" % (w, h))), full_page=True)
+        q.click("#sk-start-try"); q.wait_for_timeout(100)
+        if q.is_visible("#tab-question"): q.click("#tab-question")
+        q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.click("#q-hint"); q.click("#q-how"); q.wait_for_timeout(60)
+        geo = q.evaluate("""(()=>{const ids=['q-prev','q-hint','q-how','q-check','q-similar','q-next'];return ids.map(i=>{const e=document.getElementById(i);if(e.hidden)return null;const r=e.getBoundingClientRect();
+            return [i,Math.round(r.left),Math.round(r.right),Math.round(r.height),Math.round(r.width),e.scrollWidth>e.clientWidth+1]}).filter(Boolean);})()""")
+        o2 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
+        if OUT: q.screenshot(path=str(OUT / ("practice-%dx%d.png" % (w, h))), full_page=True)
+        clipped = [g for g in geo if g[1] < 0 or g[2] > w or g[3] < 44 or g[4] < 44 or g[5]]
+        q.evaluate("PP_STD.open('3.T.T.1')"); q.wait_for_timeout(60)
+        o3 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
+        if OUT and w in (320, 390, 1366): q.screenshot(path=str(OUT / ("std-%dx%d.png" % (w, h))), full_page=True)
+        q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % K); q.wait_for_timeout(80)
+        if q.is_visible("#tab-question"): q.click("#tab-question")
+        o4 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
+        nav = q.evaluate("(()=>{const n=document.getElementById('q-nav'),r=n.getBoundingClientRect();return [Math.round(r.left),Math.round(r.right)]})()")
+        if OUT and w in (320, 390, 1366): q.screenshot(path=str(OUT / ("check-%dx%d.png" % (w, h))))
+        if o1 > 0 or o2 > 0 or o3 > 0 or o4 > 0 or clipped or nav[0] < 0 or nav[1] > w or errs: over.append((w, h, o1, o2, o3, o4, clipped, nav, errs[:1]))
+        q.close()
+    check("J.1 at 320x568, 390x844, 844x390, 768x1024, 1024x768, 1366x768 and 1920x1080: the set picker, the practice controls (with hints and steps open), a standard page and the check navigator fit, with no sideways scroll, no clipped control and 44px targets",
+          not over, over)
+
+    check("K.0 no page errors in the browser runs", not errors, errors[:3])
+    b.close()
+
+# ---------------- L. check-content.js rules on mutated copies ----------------
+tmp = Path(tempfile.mkdtemp(prefix="pp-cc-"))
+for d in ("js", "verification", "docs/audits/work", "docs/expansion-2026-10-22", "assets"):
+    shutil.copytree(ROOT / d, tmp / d)
+
+
+def cc(mut_file=None, a=None, b_=None):
+    f = tmp / (mut_file or "js/data/lessons/T-T1.js")
+    orig = f.read_text()
+    if a is not None:
+        if a not in orig: return None, "mutation anchor not found: " + a[:60]
+        f.write_text(orig.replace(a, b_, 1))
+    try:
+        r = subprocess.run(["node", "verification/check-content.js", "--all"], cwd=tmp, capture_output=True, text=True)
+        return r.returncode, r.stdout
+    finally:
+        f.write_text(orig)
+
+
+base_rc, base_out = cc()
+check("L.0 check-content passes on the candidate; uncovered core items are a warning, and the derived Together ids are printed",
+      base_rc == 0 and "have no similar item" in base_out and "lesson 3.T.T.1.c: Practice Together = SK-TT1c-P1, SK-TT1c-P2, SK-TT1c-P3" in base_out, base_out[-400:])
+MUT = [
+    ("a set of four", '      { ref: "SK-TT1c-P6" }\n    ] },', '    ] },', "set 1\", \"needs exactly 5 items"),
+    ("a hint that contains the answer", '"Authors give a character words for a reason. Ask what the words tell you about the main character\'s choice and the story\'s lesson.",\n          "Reread paragraph 7.',
+     '"It is to show that what Marisol did was special, because many people would keep the money.",\n          "Reread paragraph 7.', "contains the answer"),
+    ("a core item without how", 'how: [\n          "Paragraph 1 says Kendra', 'howx: [\n          "Paragraph 1 says Kendra', "needs how"),
+    ("a core passage used by the check", 'id: "SK-TT1c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"]', 'id: "SK-TT1c-T1", type: "mc", points: 1, dok: 2, passages: ["p4"]', "which a skill check also uses"),
+    ("a ref that is not in practice", '{ ref: "SK-TT1c-P5" }', '{ ref: "SK-TT1c-P9" }', "is not in practice"),
+    ("a duplicate core id", 'id: "SK-TT1c-C04", type: "mc"', 'id: "SK-TT1c-C03", type: "mc"', "duplicate id in core"),
+    ("a similar like that is not core", 'like: ["SK-TT1c-P4", "SK-TT1c-C06"]', 'like: ["SK-TT1c-X99"]', "which is not a core item"),
+    ("two hints only", '"His thought in paragraph 3 is gloomy, but the first blank asks about his actions in paragraph 4, not his thought. For the second blank, Ms. Patel does not come until after he starts, so he is not doing it for her."\n        ],',
+     '],', "hints needs exactly 3"),
+    ("a cr item in a check", 'id: "SK-TT1c-T1", type: "mc"', 'id: "SK-TT1c-T1", type: "cr"', "cr is allowed only in core and similar"),
+    ("a missing core.rev", 'core: { rev: "1", sets: [', 'core: { sets: [', "core.rev must be a non-empty string"),
+]
+for name, a, b_, want in MUT:
+    rc, out = cc(None, a, b_)
+    check("L.%s check-content fails %s" % (name.replace(" ", "-"), name), rc == 1 and want in (out or ""), (rc, (out or "")[-300:]))
+rc, out = cc("js/data/std-groups.js", "Explain, analyze, and use narrative techniques to shape understandings.", "Explain and use narrative techniques.")
+check("L.std-groups check-content fails changed official parent wording", rc == 1 and "official wording differs" in out, (rc, out[-300:]))
+rc, out = cc("js/data/std-groups.js", '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d", "3.T.T.1.e"', '"3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d"', "order is missing")
+check("L.std-groups check-content fails an order that leaves out a component", rc == 1 and "order is missing 3.T.T.1.e" in out, (rc, out[-300:]))
+shutil.rmtree(tmp, ignore_errors=True)
+
+fails = [r for r in results if not r["pass"]]
+print("%d passed, %d failed" % (len(results) - len(fails), len(fails)))
+if OUT: (OUT / "practice-own-results.json").write_text(json.dumps(results, indent=2) + "\n")
+sys.exit(1 if fails else 0)
