@@ -119,7 +119,8 @@ PP.addLesson({
         ["Today, people are working to solve this problem.", "Some land is now kept safe so tortoises can live there.", "Workers also set small, careful fires in these pine forests.", "The fires burn away thick bushes.", "Then sunlight can reach the ground, and the low plants that tortoises eat can grow."]
       ] },
     /* B2 (expansion 2026-10-22, author b2d): p3 is used only by core set 2 and p4 only by core set 3.
-       Never used by test. NEEDS INDEPENDENT REVIEW. Pine County and Millbrook are made-up places. */
+       Never used by test. NEEDS INDEPENDENT RE-REVIEW (B2 fixes). Pine County and Millbrook are made-up places.
+       p3's Figure 1 has no caption on purpose: core C07 asks for one. */
     { id: "p3", title: "The Library on Wheels", genre: "Informational text",
       paragraphs: [
         ["Some families in Georgia live far from a library.", "In some places, the library goes out on the road to find them."],
@@ -129,11 +130,13 @@ PP.addLesson({
         ["A bookmobile is a large bus with shelves instead of seats.", "It holds about 3,000 books, plus movies and books you can listen to.", "Low shelves in the back hold picture books for young readers.", "Near the door is a small desk with a computer."],
         ["## Bookmobile or Library Building?"],
         ["Both the bus and the library building lend books for free.", "Both use the same library card, too.", "However, the building has many more books than the bus.", "The building stays in one place, while the bookmobile comes to you."],
+        ["## What Changed"],
+        ["Since the bookmobile started coming, more Pine County families borrow books.", "Because children can get new books every week, many of them read all summer.", "As a result, the county plans to buy a second bookmobile."],
         ["## Did You Know?"],
         ["Box: Long ago, the first bookmobiles were wagons pulled by horses."]
       ],
       figures: [
-        { after: 3, src: "assets/figures/ss1a-c-bookmobile-map.svg", label: "Figure 1", caption: "Bookmobile stops in Pine County",
+        { after: 3, src: "assets/figures/ss1a-c-bookmobile-map.svg", label: "Figure 1",
           alt: "Map of Pine County with an arrow that points north. A black square in the middle of the county marks the library building in the town of Millbrook. Four white circles, one near each corner of the county, mark bookmobile stops. Dashed lines show the bookmobile route from Millbrook out to each stop. The key has a scale bar for 5 miles. Each stop is more than two scale bars, or more than 10 miles, from Millbrook." }
       ] },
     { id: "p4", title: "How a Wooden Bat Is Made", genre: "Informational text",
@@ -144,7 +147,7 @@ PP.addLesson({
         ["## From Tree to Bat"],
         ["First, workers cut ash or maple logs into long, round pieces called billets.", "Next, the billets dry for many weeks until the wood is hard.", "Then a machine spins each billet while a sharp blade shapes it into a bat.", "Finally, the bat is sanded smooth and given a clear, shiny coat.", "Now it is ready to play ball!"],
         ["## Did You Know?"],
-        ["Box: A big-league player can break dozens of wooden bats in one season."]
+        ["Box: A big-league player can use dozens of wooden bats in one season."]
       ],
       figures: [
         { after: 1, src: "assets/figures/ss1a-c-bat-parts.svg", label: "Figure 1", caption: "The parts of a bat",
@@ -230,124 +233,122 @@ PP.addLesson({
       { ref: "SK-SS1a-P5" },
       { ref: "SK-SS1a-P6" },
       { ref: "SK-SS1a-P7" },
-      { id: "SK-SS1a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
-        stem: ["The author wants to add this drawing to the article."],
-        figure: { src: "assets/figures/ss1a-c-peanut-harvest.svg",
-          alt: "Drawing of a peanut field on a sunny day. Three peanut plants lie upside down on top of the soil, with their leaves on the ground and bunches of peanuts on top, up in the air. Labels name the sun, the peanuts, the leaves and the soil." },
-        prompt: "In which section would the drawing help readers most?",
+      { id: "SK-SS1a-C04", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p1"],
+        prompt: "The first paragraph ends, \"Here is how a peanut plant grows and why farmers like it.\" How are the sections after it arranged to match that sentence?",
         choices: [
-          { text: "Harvest Time", correct: true },
-          { text: "From Flower to Peanut" },
-          { text: "Why Peanuts Help the Soil" },
-          { text: "Did You Know?" }
+          { text: "Sections about how the plant grows come first, and then one tells why farmers like it.", correct: true },
+          { text: "A section about why farmers like peanuts comes first, and then the growing sections." },
+          { text: "Each section compares peanut plants with the cotton and corn that farmers grow." },
+          { text: "Each section tells about a problem that farmers have and how they fix it." }
         ],
-        clue: "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+        clue: "Authors often tell you their plan near the start. Then the headings show how they carry out that plan.",
         hints: [
-          "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
-          "Look closely at the plants in the drawing. Where are the peanuts, and where are the leaves? Then look through all of the sections.",
-          "The drawing has a label for soil, but the soil section tells what roots add to the soil, and the drawing shows no roots. Check the other sections the same way."
+          "Authors often tell you their plan near the start. Then the headings show how they carry out that plan.",
+          "Read the last sentence of the first paragraph again. Then read all of the headings, in order.",
+          "No section names a problem that farmers have to fix, so the sections are not problem and solution. Now compare the order of the headings with the order of the ideas in that last sentence."
         ],
         how: [
-          "In the drawing, the plants lie upside down on the soil, so the peanuts are up in the air under the sun.",
-          "\"Harvest Time\" tells how a machine turns the plants upside down so the peanuts face the sky, and the peanuts dry in the sun.",
-          "The answer is Harvest Time.",
-          "In \"From Flower to Peanut\" the peanuts grow under the ground, the soil section is about what roots add, and the box is one fact about Georgia."
+          "The last sentence of the first paragraph names two ideas, in this order: how a peanut plant grows, and why farmers like it.",
+          "\"From Flower to Peanut\" and \"Harvest Time\" are about the plant itself. \"Why Peanuts Help the Soil\" tells why farmers like peanuts.",
+          "The answer is \"Sections about how the plant grows come first, and then one tells why farmers like it.\" The sections carry out the plan in the same order.",
+          "Cotton and corn are named only in the last section, and no section is about a problem to fix."
         ],
-        misconception: "A common mix-up is matching one word, like soil or peanut, instead of what the whole picture shows.",
-        why: "The answer is Harvest Time. That section tells how a machine turns the plants upside down so the peanuts face the sky, and then the peanuts dry in the sun, which is just what the drawing shows. In \"From Flower to Peanut\" the peanuts are still under the ground, the soil section is about roots, and the box gives one fact about Georgia." },
-      { id: "SK-SS1a-C05", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p1"],
+        misconception: "A common mix-up is reading each section by itself. To describe how a whole text is arranged, look at all the headings together.",
+        why: "The answer is \"Sections about how the plant grows come first, and then one tells why farmers like it.\" The first paragraph promises how a peanut plant grows and why farmers like it, and the headings follow that plan in that order. Cotton and corn come up only in the last section, and no section tells a problem and a fix." },
+      { id: "SK-SS1a-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
         prompt: "Choose the words that best complete the sentences.",
         text: "The section \"Harvest Time\" comes right after \"From Flower to Peanut\" because the harvest happens {0}. So the author arranged these two sections in {1}.",
         slots: [
           { options: ["after the peanuts finish growing", "before the seeds are planted", "while the flowers are still open"], answer: 0 },
-          { options: ["the order of a peanut's year", "order from most to least important", "two groups that are alike and different"], answer: 0 }
+          { options: ["the order things happen", "order from most to least important", "two groups that are alike and different"], answer: 0 }
         ],
-        clue: "Whole sections can follow a pattern too. Think about when the things in each section happen.",
+        clue: "Whole sections can follow a pattern too. Ask why one section might come before another.",
         hints: [
-          "Whole sections can follow a pattern too. Think about when the things in each section happen.",
-          "Read the first sentence under each of the two headings. Each one names a time of year.",
-          "Seeds are planted at the very start, so the harvest cannot come before the planting. That settles one wrong answer in the first blank. For the second blank, ask what kind of order the two sections follow."
+          "Whole sections can follow a pattern too. Ask why one section might come before another.",
+          "Read the first sentence under each heading.",
+          "Seeds are planted at the very start, so the harvest cannot come before the planting. That rules out one choice in the first blank. For the second blank, ask what kind of order the two sections follow."
         ],
         how: [
           "\"From Flower to Peanut\" begins in the spring, when farmers plant the seeds.",
           "\"Harvest Time\" begins in the fall, when machines dig up the plants that have grown.",
-          "So the harvest happens after the peanuts finish growing, and the two sections are arranged in the order of a peanut's year.",
+          "So the harvest happens after the peanuts finish growing, and the two sections are arranged in the order things happen.",
           "Neither section is more important, and they are not two groups being compared."
         ],
         misconception: "A common mix-up is thinking sections can go in any order. Here the order of the sections matches the order things happen.",
-        why: "The answers are \"after the peanuts finish growing\" and \"the order of a peanut's year.\" \"From Flower to Peanut\" starts with planting in the spring, and \"Harvest Time\" starts in the fall, after the peanuts have grown. The sections follow the peanut's year from start to end." }
+        why: "The answers are \"after the peanuts finish growing\" and \"the order things happen.\" \"From Flower to Peanut\" starts with planting in the spring, and \"Harvest Time\" starts in the fall, after the peanuts have grown." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-SS1a-C06", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
         prompt: "Match each section of \"The Library on Wheels\" to the pattern it mainly uses. One pattern is not used.",
-        cols: ["Sequence", "Problem and solution", "Description", "Compare and contrast"],
+        cols: ["Sequence", "Problem and solution", "Description", "Compare and contrast", "Cause and effect"],
         rows: [
           { text: "A Long Way to Town", answer: 1 },
           { text: "Inside the Bookmobile", answer: 2 },
-          { text: "Bookmobile or Library Building?", answer: 3 }
+          { text: "Bookmobile or Library Building?", answer: 3 },
+          { text: "What Changed", answer: 4 }
         ],
         clue: "Clue words show the pattern, but read the whole section to see what job the words do.",
         hints: [
           "Clue words show the pattern, but read the whole section to see what job the words do.",
-          "Read one section at a time and find its clue words. One section has very few clue words, so ask what kind of details it gives.",
+          "Read one section at a time and find its clue words. If a section has few clue words, ask what the whole section is doing.",
           "\"Inside the Bookmobile\" has no time words like first or next, so it is not sequence. Decide which pattern fits each section."
         ],
         how: [
           "\"A Long Way to Town\" tells a trouble, a library trip that takes most of a Saturday, and a fix, the county's bookmobile. That is problem and solution.",
-          "\"Inside the Bookmobile\" gives details about one thing: its shelves, books and desk. That is description.",
+          "\"Inside the Bookmobile\" gives details about one thing, the bus. That is description.",
           "\"Bookmobile or Library Building?\" uses both, however and while to tell how two things are alike and different. That is compare and contrast.",
-          "No section tells steps in order, so sequence is not used."
+          "\"What Changed\" uses since, because and as a result to tell what happened because of the bookmobile. That is cause and effect. No section tells steps in order."
         ],
         misconception: "A common mix-up is choosing a pattern from one clue word. Words like so and but show up in many patterns, so read the whole section.",
-        why: "\"A Long Way to Town\" is problem and solution: farm families live far from the library, so the county bought a bookmobile. \"Inside the Bookmobile\" is description: it gives details about the bus. \"Bookmobile or Library Building?\" is compare and contrast: it uses both, however and while. Sequence is not used." },
-      { id: "SK-SS1a-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        why: "\"A Long Way to Town\" is problem and solution: farm families live far from the library, so the county bought a bookmobile. \"Inside the Bookmobile\" is description. \"Bookmobile or Library Building?\" is compare and contrast. \"What Changed\" is cause and effect: it tells what happened because the bookmobile came. Sequence is not used." },
+      { id: "SK-SS1a-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Figure 1 needs a caption. Choose the words that best complete the sentence.",
+        text: "The best caption for Figure 1 is {0}.",
+        slots: [{ options: ["Bookmobile stops around Pine County", "The library building in Millbrook", "What a bookmobile looks like inside"], answer: 0 }],
+        clue: "A caption tells what a picture shows. A caption for a map tells what the whole map shows.",
+        hints: [
+          "A caption tells what a picture shows. A caption for a map tells what the whole map shows.",
+          "Use the key to find what each mark on the map stands for. Then look at the whole map, not just one mark.",
+          "The square for the library building is on the map, but it is only one mark. Check the other choice the same way."
+        ],
+        how: [
+          "The key names three marks: the library building, the bookmobile stops and the route.",
+          "Most of the map shows stops spread around the county, with the route out to each one.",
+          "The answer is Bookmobile stops around Pine County.",
+          "The library is only one mark, and the map does not show the inside of the bus."
+        ],
+        misconception: "A common mix-up is choosing a caption for one part of a picture instead of the whole picture.",
+        why: "The answer is Bookmobile stops around Pine County. The map shows the stops spread around the county and the route out to each one. The library building is only one mark, and the map does not show the inside of the bus." },
+      { id: "SK-SS1a-C08", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
         prompt: "Look at Figure 1. This question has two parts. Answer Part A, then Part B.",
-        partA: { prompt: "How does the map help a reader understand the section \"A Long Way to Town\"?",
+        partA: { prompt: "How does Figure 1 help a reader understand the section \"A Long Way to Town\"?",
           choices: [
             { text: "It shows how far the bookmobile stops are from the library.", correct: true },
+            { text: "It shows that all the stops are inside the town of Millbrook." },
             { text: "It shows what the shelves inside the bookmobile look like." },
-            { text: "It shows which day of the week the bus visits each stop." },
-            { text: "It shows how many books the bookmobile can carry at once." }
+            { text: "It shows which day of the week the bus visits each stop." }
           ] },
-        partB: { prompt: "Which sentence from the article does the map help explain?",
+        partB: { prompt: "Which part of the map best supports your answer to Part A?",
           choices: [
-            { text: "\"Many families live on farms far from town.\"", correct: true },
-            { text: "\"It holds about 3,000 books, plus movies and books you can listen to.\"" },
-            { text: "\"Low shelves in the back hold picture books for young readers.\"" },
-            { text: "\"Both use the same library card, too.\"" }
+            { text: "the scale bar for 5 miles", correct: true },
+            { text: "the arrow that points north" },
+            { text: "the dashed route lines" },
+            { text: "the words PINE COUNTY at the top" }
           ] },
         clue: "A map shows where places are. Ask what the map lets you see that is hard to picture from the words alone.",
         hints: [
           "A map shows where places are. Ask what the map lets you see that is hard to picture from the words alone.",
-          "Use the key to find the black square and the white circles. Then use the scale bar to think about the space between them.",
-          "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. For Part B, choose the sentence that matches your Part A answer."
+          "Use the key to find what each mark on the map stands for.",
+          "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. For Part B, ask which part of the map lets you measure how far apart two places are."
         ],
         how: [
-          "The black square in Millbrook is the library building. The white circles near the corners of the county are the bookmobile stops.",
-          "The scale bar shows 5 miles, and each stop is more than two scale bars from Millbrook. The stops are far from the library.",
-          "Part A: It shows how far the bookmobile stops are from the library. Part B: \"Many families live on farms far from town.\"",
-          "The map shows no shelves, no days and no number of books, and it says nothing about library cards."
+          "The black square in Millbrook is the library building. The white circles near the corners of the county are the bookmobile stops, outside the town.",
+          "The scale bar shows 5 miles. Each stop is more than two scale bars from Millbrook, so the stops are far from the library.",
+          "Part A: It shows how far the bookmobile stops are from the library. Part B: the scale bar for 5 miles.",
+          "The north arrow shows direction, the dashed lines show the route, and the words name the county. None of them measures distance."
         ],
-        misconception: "A common mix-up is picking something true about the bookmobile that the map does not show.",
-        why: "Part A: It shows how far the bookmobile stops are from the library. Part B: \"Many families live on farms far from town.\" The map puts the library in the middle of the county and the stops near the edges, more than 10 miles away. It shows no shelves, days, books or cards." },
-      { id: "SK-SS1a-C08", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
-        stem: ["The author wants to add this sentence to the article:", "There is even a small rug where children can sit and read."],
-        prompt: "Choose the words that best complete the sentence.",
-        text: "The new sentence belongs in the section {0}.",
-        slots: [{ options: ["Inside the Bookmobile", "A Long Way to Town", "Bookmobile or Library Building?"], answer: 0 }],
-        clue: "To decide where a sentence belongs, find the section whose heading and sentences tell about the same thing.",
-        hints: [
-          "To decide where a sentence belongs, find the section whose heading and sentences tell about the same thing.",
-          "Ask where the rug in the new sentence would be. Then read all three headings and the sentences under them.",
-          "The new sentence says nothing about how far away the library is, so it does not fit \"A Long Way to Town.\" Check the other two sections."
-        ],
-        how: [
-          "The new sentence tells about a rug where children sit and read. The rug would be on the bus.",
-          "One section tells about the shelves, the picture books and the desk on the bus.",
-          "The answer is Inside the Bookmobile.",
-          "The other two sections tell about the long trip to town and about how the bus and the building compare."
-        ],
-        why: "The answer is Inside the Bookmobile. That section tells what is on the bus: shelves, picture books and a desk. A rug where children sit and read is one more thing on the bus. The other sections tell about the trip to town and compare the bus with the building." },
+        misconception: "A common mix-up is choosing a map part that is easy to see, like the route lines, instead of the part that answers the question.",
+        why: "Part A: It shows how far the bookmobile stops are from the library. Part B: the scale bar for 5 miles. The stops are near the corners of the county, and the scale bar shows they are more than 10 miles from Millbrook. The north arrow, the route lines and the county name do not measure distance." },
       { id: "SK-SS1a-C09", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
         stem: ["Text 1: Getting Ready for Art Night", "First, Ms. Hill's class hung their paintings in the hall. Next, they set out paper and crayons on the tables. Then they taped up signs with arrows. Last, they opened the doors for the families.", "Text 2: Why Art Night Moved", "A storm knocked out the power at school on Thursday. Because the hall was dark, art night could not happen that evening. As a result, it moved to the next Tuesday."],
         prompt: "How are the two texts organized? Choose TWO answers.",
@@ -398,29 +399,50 @@ PP.addLesson({
         why: "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\" The book holds chapters, and Chapter 4 holds sections with headings. The book is not a section, \"Did You Know?\" is a box, and the sections are not books." }
     ] },
     { title: "Set 3", items: [
-      { id: "SK-SS1a-C11", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4"],
+      { id: "SK-SS1a-C11", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
+        stem: ["The author wants to add this drawing to the article."],
+        figure: { src: "assets/figures/ss1a-c-bat-lathe.svg",
+          alt: "Drawing of a long, round piece of wood held at both ends by a machine. A curved arrow shows that the wood is spinning. A sharp blade touches the wood from below, and curls of wood fall to the floor. Labels name the billet, the blade and the wood shavings." },
+        prompt: "Choose the words that best complete the sentence.",
+        text: "The drawing would help readers most in the section {0}.",
+        slots: [{ options: ["From Tree to Bat", "Wood or Metal?", "Did You Know?"], answer: 0 }],
+        clue: "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+        hints: [
+          "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
+          "Read each label on the drawing. Then look through every section for the same words or the same action.",
+          "The drawing shows wood, but the section that compares wood with metal is about how finished bats feel and break. Check the other choices the same way."
+        ],
+        how: [
+          "The drawing shows a billet spinning while a blade cuts it, with wood shavings falling.",
+          "One section tells how a machine spins each billet while a sharp blade shapes it.",
+          "The answer is From Tree to Bat.",
+          "\"Wood or Metal?\" is about finished bats, and the box is about how many bats a player uses."
+        ],
+        misconception: "A common mix-up is matching one word, like wood, instead of what the whole picture shows.",
+        why: "The answer is From Tree to Bat. That section tells how a machine spins each billet while a sharp blade shapes it into a bat, which is what the drawing shows. \"Wood or Metal?\" is about finished bats, and the box is about how many bats a player uses." },
+      { id: "SK-SS1a-C12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4"],
         prompt: "The author tells how a wooden bat is made in time order. Why is time order a good choice for the section \"From Tree to Bat\"?",
         choices: [
-          { text: "The wood must dry before it is shaped, so the steps must come in order.", correct: true },
-          { text: "Time order shows readers which kind of bat is easier to swing." },
-          { text: "Time order explains why a wooden bat can crack in the wrong spot." },
-          { text: "Time order tells readers where ash and maple trees grow best." }
+          { text: "Each step needs the one before it, like drying before shaping.", correct: true },
+          { text: "Each step compares a wooden bat with a metal bat." },
+          { text: "Each step explains why a wooden bat can crack." },
+          { text: "Each step shows why big-league players must use wood." }
         ],
         clue: "Authors choose a pattern that fits what they want to explain. Think about why this information is told in time order.",
         hints: [
           "Authors choose a pattern that fits what they want to explain. Think about why this information is told in time order.",
-          "Reread the section \"From Tree to Bat\" from the first step to the last.",
-          "Which bat is easier to swing is told in \"Wood or Metal?\", not in the time-order section. Test the other choices against the steps."
+          "Compare the clue words in \"From Tree to Bat\" with the clue words in \"Wood or Metal?\".",
+          "\"From Tree to Bat\" never names a metal bat, so its steps do not compare wood with metal. Test the other choices against the steps."
         ],
         how: [
-          "The section starts with logs, then the billets dry, then a blade shapes them, and last the bat is sanded and coated.",
+          "The section goes from logs, to drying, to shaping with a blade, to sanding and a clear coat.",
           "The billets must dry until the wood is hard before the blade shapes them, and a bat cannot be sanded before it has a shape. The order matters.",
-          "The answer is \"The wood must dry before it is shaped, so the steps must come in order.\"",
-          "Swinging and cracking are told in \"Wood or Metal?\", and the article never says where the trees grow."
+          "The answer is \"Each step needs the one before it, like drying before shaping.\"",
+          "Cracking is told in \"Wood or Metal?\", the first paragraph tells about big-league players, and the steps never name metal."
         ],
         misconception: "A common mix-up is choosing a fact from a different section. The question asks why time order fits this section.",
-        why: "The answer is \"The wood must dry before it is shaped, so the steps must come in order.\" Making a bat goes from logs, to drying, to shaping, to sanding, and each step needs the one before it. Swinging and cracking are told in \"Wood or Metal?\", and the article never says where the trees grow." },
-      { id: "SK-SS1a-C12", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
+        why: "The answer is \"Each step needs the one before it, like drying before shaping.\" Making a bat goes from logs, to drying, to shaping, to sanding, and each step needs the one before it. Cracking is told in \"Wood or Metal?\", big-league players are in the first paragraph, and the steps never name metal." },
+      { id: "SK-SS1a-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
         prompt: "Look at Figure 1. Which sentence from the article does the diagram help a reader picture? Choose the sentence in the passage.",
         targets: ["p4:3:1", "p4:3:2", "p4:3:4", "p4:5:1", "p4:5:4"],
         answer: ["p4:3:1"], pick: 1,
@@ -428,7 +450,7 @@ PP.addLesson({
         hints: [
           "A diagram is a drawing with labels. Match the labels to the words in the article.",
           "Read the three labels in Figure 1. Then look through both sections for a sentence that names the same parts.",
-          "The sentence about a metal bat being hollow tells about the inside of a bat, and Figure 1 shows only the outside. Check the other sentences: which one names parts you can see?"
+          "The sentence about a metal bat being hollow tells about the inside of a bat, and Figure 1 shows only the outside. Check the other sentences the same way."
         ],
         how: [
           "Figure 1 labels the knob, the handle and the barrel.",
@@ -437,7 +459,7 @@ PP.addLesson({
           "The hollow inside, the wrong spot, the billets and the shiny coat are not shown in Figure 1."
         ],
         why: "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\" Figure 1 labels the handle and the barrel, so a reader can see how thin and thick they are. The diagram does not show the inside of a bat, where a bat cracks, billets or the clear coat." },
-      { id: "SK-SS1a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      { id: "SK-SS1a-C14", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Kids at Oak Ridge Elementary kept losing their jackets on the playground. At first, the teachers put up a sign that said, \"Check for your jacket before you go in.\" But the jackets kept piling up by the fence. Then a third-grade class built a lost-and-found box and painted each class's name on a shelf. After that, most jackets found their way home."],
         prompt: "Which pattern does the author mainly use in this paragraph?",
         choices: [
@@ -460,9 +482,9 @@ PP.addLesson({
         ],
         misconception: "Some clue words are tricky: then and after that show up in lots of kinds of text. Ask whether the author is showing what goes wrong or the steps of a job.",
         why: "The answer is \"a trouble and the tries to fix it.\" Kids keep losing jackets, a sign does not work, and a lost-and-found box does. The time words show the order of the tries, but the paragraph is not the steps for a job. It does not compare two things or mainly describe a place." },
-      { id: "SK-SS1a-C14", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      { id: "SK-SS1a-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Here is part of the table of contents from a book called Camping in Georgia.", "Chapter 1: Getting Ready, page 1", "• Packing Your Bag, page 2", "• Choosing a Tent, page 5", "Chapter 2: At the Campsite, page 8", "• Building a Safe Campfire, page 9", "• Storing Food Away from Bears, page 12", "Chapter 3: Exploring, page 15", "• Reading a Trail Map, page 16", "• Animals You Might See, page 19"],
-        prompt: "Jada's family is camping in the mountains. She wants to know where to put their snacks at night so a hungry bear cannot get them. Choose the words that best complete the sentence.",
+        prompt: "Jada's family is camping in the mountains. She wants to know where to put their snacks so that wild animals cannot get them at night. Choose the words that best complete the sentence.",
         text: "Jada should read Chapter {0}, in the section that starts on page {1}.",
         slots: [
           { options: ["2", "1", "3"], answer: 0 },
@@ -471,40 +493,17 @@ PP.addLesson({
         clue: "A table of contents lists the chapters and the sections inside them. Read each title and ask what that part of the book is about.",
         hints: [
           "A table of contents lists the chapters and the sections inside them. Read each title and ask what that part of the book is about.",
-          "Think about where the family will be when they put their snacks away at night. Then read every section title, not only the chapter titles.",
+          "Read every section title, not only the chapter titles.",
           "\"Animals You Might See\" names animals, but it is in the chapter about exploring, not about food. Check the other sections the same way."
         ],
         how: [
-          "Jada needs to know where to put food at night so a bear cannot get it.",
+          "Jada needs to know where to put food so wild animals cannot get it at night.",
           "Chapter 2, \"At the Campsite,\" has a section called \"Storing Food Away from Bears.\" It starts on page 12.",
           "So she should read Chapter 2, in the section that starts on page 12.",
           "\"Packing Your Bag\" is about getting ready at home, and \"Animals You Might See\" is about what you might spot while exploring."
         ],
         misconception: "A common mix-up is choosing a title that shares one word with the question, like animals or bag, instead of the one whose whole topic fits.",
-        why: "The answers are 2 and 12. Chapter 2, \"At the Campsite,\" has the section \"Storing Food Away from Bears,\" which starts on page 12. \"Animals You Might See\" is about spotting animals while exploring, and \"Packing Your Bag\" is about getting ready." },
-      { id: "SK-SS1a-C15", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-        stem: ["Ana is writing a report about a state park. She has a photo of a waterfall, facts about the trails, and a few surprising facts."],
-        prompt: "Match each thing Ana wants to show readers to the feature that would show it best. Use each feature once.",
-        cols: ["Heading", "Map", "Caption", "Text box"],
-        rows: [
-          { text: "what each part of her report will be about", answer: 0 },
-          { text: "where the three hiking trails are in the park", answer: 1 },
-          { text: "what is happening in her photo of the waterfall", answer: 2 },
-          { text: "one surprising fact that does not fit in any paragraph", answer: 3 }
-        ],
-        clue: "Each feature has its own job. Ask what each feature helps a reader see or find.",
-        hints: [
-          "Each feature has its own job. Ask what each feature helps a reader see or find.",
-          "Read each thing Ana wants to show. Picture her report: where on the page would each one go?",
-          "A caption goes with a picture, so it fits the row about her photo. Decide where the other three features go."
-        ],
-        how: [
-          "Where the trails are in the park is about places, so a map shows it best.",
-          "A caption tells what a photo shows, so it goes with the waterfall photo.",
-          "A heading tells what each part of the report is about.",
-          "A text box sets one extra fact apart from the paragraphs."
-        ],
-        why: "A heading tells what each part of the report will be about. A map shows where the trails are. A caption tells what is happening in the waterfall photo. A text box sets apart a surprising fact that does not fit in a paragraph." }
+        why: "The answers are 2 and 12. Chapter 2, \"At the Campsite,\" has the section \"Storing Food Away from Bears,\" which starts on page 12. \"Animals You Might See\" is about spotting animals while exploring, and \"Packing Your Bag\" is about getting ready." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own short text. Each `like` lists only the
@@ -534,7 +533,7 @@ PP.addLesson({
       ],
       why: "The answer is \"They follow the order things happen as tomatoes grow.\" Seeds are planted first, the plants are watered and weeded while they grow, and the tomatoes are picked last." },
     { id: "SK-SS1a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-      like: ["SK-SS1a-C06", "SK-SS1a-C13"],
+      like: ["SK-SS1a-C06", "SK-SS1a-C14"],
       stem: ["Hot lunch and a packed lunch both give you a meal at school. Both can have fruit and milk. However, hot lunch is cooked in the school kitchen, while a packed lunch is made at home. Then, at lunchtime, you eat with your class either way."],
       prompt: "Which pattern does the author mainly use in this paragraph?",
       choices: [
@@ -557,7 +556,7 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a pattern from one clue word, like then. Read the whole paragraph.",
       why: "The answer is \"how two things are alike and different.\" The paragraph is about hot lunch and a packed lunch. Both shows how they are alike, and however and while show how they are different." },
     { id: "SK-SS1a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-      like: ["SK-SS1a-C15", "SK-SS1a-P6"],
+      like: ["SK-SS1a-P6"],
       stem: ["Jamal is writing a report about the city zoo. He wants readers to see where the elephant barn is and how to walk there from the front gate."],
       prompt: "Which feature should Jamal add to his report?",
       choices: [
@@ -566,10 +565,10 @@ PP.addLesson({
         { text: "a box with a fun fact" },
         { text: "a heading for each section" }
       ],
-      clue: "Each feature has its own job. Ask which feature shows where places are.",
+      clue: "Each feature has its own job. Think about what Jamal wants his readers to be able to do.",
       hints: [
-        "Each feature has its own job. Ask which feature shows where places are.",
-        "Jamal wants readers to find their way from one place to another. Which feature helps with that?",
+        "Each feature has its own job. Think about what Jamal wants his readers to be able to do.",
+        "Read Jamal's goal again. Then read each choice and ask what it would add to his report.",
         "A heading tells what a section is about, but it cannot show a path. Test the other choices."
       ],
       how: [
@@ -578,6 +577,7 @@ PP.addLesson({
         "The answer is \"a map with a key.\""
       ],
       why: "The answer is \"a map with a key.\" A map shows where the elephant barn and the gate are, so readers can see the path between them. A caption, a fun-fact box and headings cannot show a path." }
+  ]
   ],
   /* Hints and Show me how for items kept in practice: refs P5-P7 (core set 1) and Together P1-P4. */
   addons: {
@@ -621,7 +621,7 @@ PP.addLesson({
     "SK-SS1a-P4": {
       hints: [
         "Ask what each set of clue words helps an author do.",
-        "Start with the set of words that tells about time. Then find the set that tells a reason.",
+        "Start with one set of words you are sure about. Then do the others.",
         "Both and alike show ways things are the same, so that set is not about time. Decide where the last three sets go."
       ],
       how: [
@@ -645,7 +645,7 @@ PP.addLesson({
       misconception: "A common mix-up is thinking a box repeats the main idea. A box usually adds something extra." },
     "SK-SS1a-P6": {
       hints: [
-        "A map shows where places are. Ask what the map shows that the words do not tell.",
+        "Look at the map and then at the words. Ask what each one tells you.",
         "Read the key, then find what it marks on the map. Then check whether any section tells you the same thing.",
         "The steps for growing a peanut are told in words, and a map cannot show steps. Check the other choices the same way: is it on the map, and is it already in the words?"
       ],

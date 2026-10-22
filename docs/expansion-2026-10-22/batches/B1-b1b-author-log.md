@@ -390,3 +390,55 @@ These items changed in their choices, targets, rows, slots, stem or passage.
 - **2A C-N5** (the `cr` Show me how line "You can still choose it…") is an engine finding for the lead.
 - **2A T-N6:** TS-PS p4 and 3.T.T.4.a p6 both use Double Dutch. p4 is now a driveway practice, and its key fact (hands at different speeds) is not shared.
 - I have not reviewed any of this myself, and I ran no git commands.
+
+## 9. Fixes after the B1 re-review (B1-rereview-b1b.md)
+
+**Verdicts:** 3.T.C.2.a was ACCEPTED, with SHOULD items. TS-PS needed changes (one MUST and two SHOULDs).
+
+For every item changed below, I read the clue and hints 1 to 3 together as one set and checked that they do not leave only the key. Correction to §8.4: I had judged the shared C06/C07 wording harmless, but together the two items did give away C09 (R-M1). §8.2 also listed S03 hint 2 as fixed when the new wording was equivalent to the old one (R-S2). Both are corrected here.
+
+### 9.1 Needs blind re-solve
+
+| Item | What changed | Finding |
+|---|---|---|
+| **SK-TSPS-C09** | **Re-aimed.** Prompt: "The new ropes tangle just like the old ones. What does this failed try show the team?" Key: "The ropes were never the real trouble." Distractors: "The new ropes were too short for the turners.", "Amari should jump in a little later.", "The team needs more time to practice." C06 and C07 still give the premises (Kiara's plan was new ropes; new ropes failed), but the key is the inference from them, and no distractor is killed by those premises | R-M1 (MUST) |
+| **SK-TSPS-C06** | Stem: "When the ropes first tangle, Amari wants to {0}…". The old "Before anyone tries a fix" ruled out the only fix option. Each slot now has its own distractors. Slot 0: "chant a rhyme while the turners swing" (the later solution, placed too early) and "buy a brand-new pair of ropes". Slot 1: "watch the turners swing the empty ropes" (Amari's action) and "move practice to a smoother driveway". The dud "skip the show" is gone | R-S1 |
+| **SK-TSPS-S03** | Distractor "Hang a sign…" was replaced by "Paint the ceiling above the door." (it touches the ceiling, not the cause). DOK 3 → 2 | R-S2 |
+| **SK-TC2a-C14** | Distractor D is now "The ball came too fast for anyone on the team to stop." It takes the narrator's excuse at face value, which is the item's named mix-up. The how and why were updated so they no longer state "the ball was too fast to stop" as fact | R-S3 |
+| **SK-TC2a-P3** (Together) | Part A prompt: "at first" removed ("What can a reader tell that the narrator does not say?") | R-S4 |
+
+### 9.2 Hint, how, why or label changes only
+
+**TS-PS**
+- **C06:** hint 2 is "Reread paragraphs 1 to 4, and notice who does each thing." Hint 3 rules out one option in one slot (the chant in slot 0). The how and why were updated.
+- **C08:** hint 3 now rules out "Amari has never jumped Double Dutch before". It no longer says "The new ropes tangle, too", which gave C09's premise. The how and why no longer mention the new ropes.
+- **C09:** clue, hints, how and why were rewritten. Hint 3 rules out "too short" and points to paragraphs 2 and 3. It does not say "what the team changed", because read with hint 1 that would have left only the key.
+- **C10:** hint 3 now rules out "stand too close". It no longer says worn-out ropes are not the cause, which C09's key would otherwise answer (as the re-review asked).
+- **S03:** hint 2 is "Reread the last two sentences of the story." Hint 3 rules out more mopping. The how and why were updated.
+- **P5:** the `clue` now matches hint 1 (R-N5).
+
+**3.T.C.2.a**
+- **C06:** hint 2 is "Read the first paragraph of Part 1 and the first paragraph of Part 2. Compare how each one talks about the boy." (R-S5).
+- **C12:** the sample now quotes the poem correctly: "they giggle when the dog shakes". The poem says "and giggle when I shake". The own view is now one the detail supports ("a good idea for the family… they like the clean dog and have fun at bath time"). The criteria are unchanged (R-S6).
+- **C03:** relabelled DOK 1 (R-N10). It is the lesson's only DOK 1 item.
+
+### 9.3 Re-review NOTEs not acted on, and why
+
+- **R-N1 (C10 hint 2):** not changed. The suggested "Reread paragraphs 2 and 3" would name paragraph 3, which holds only one Part B choice. That breaks the evidence-based rule (every place a hint names must hold at least two Part B choices). Paragraph 2 holds two.
+- **R-N2 (C02 distractors):** not changed. The re-reviewer judged it acceptable, and I kept to the requested scope.
+- **R-N3 (C15 word match on "chains"):** not changed. It was judged acceptable, because B is a real competitor.
+- **R-N4 (set 3 chain from C12 to C13):** not changed. It is inherent in a shared passage, and it was judged mild.
+- **R-N6 (the cause in paragraph 3 in four texts):** not changed in this round. It does not answer form A, and I note it for a later revision.
+- **R-N7, R-N8, R-N12 and R-N13:** these are for the lead:
+  - Together rehearses form A frames; these items pre-date the batch.
+  - The sign motif shared by Watch Me 3 and C14.
+  - Together P4 and form A T6.
+  - The reader-view twist (C04, C14, S01).
+- **R-N9 (C04 shape) and R-N11 (C11 how previews C12):** these were judged as passing or harmless. Not changed.
+
+### 9.4 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In these lessons, the only warnings are the extra-question coverage notices.
+- The scratch audit reports no new key overlaps.
+- Port 8732: all six own sets (`:y`, `:y2`, `:y3` for both lessons) render with no page errors.
+- No git.

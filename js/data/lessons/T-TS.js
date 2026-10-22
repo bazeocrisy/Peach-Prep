@@ -837,7 +837,7 @@ PP.addLesson({
         { text: "They stay still to keep the heat in." }
       ],
       clue: "Read paragraph 2. Find the clue words \"as a result\" and read the effect that comes after them.",
-      why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that, as a result, your brain tells your muscles to tighten and relax very fast, over and over." },
+      why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that, as a result, the muscles tighten and relax very fast, over and over." },
     { id: "SK-TSCE-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence uses a cause-and-effect clue word to explain why your teeth chatter? Choose the sentence in the passage.",
       targets: ["p1:1:2", "p1:3:1", "p1:3:2", "p1:3:3", "p1:4:2"],
@@ -864,7 +864,7 @@ PP.addLesson({
       ],
       clue: "In a chain, each effect becomes the next cause. Read paragraphs 2 and 3 in order and follow each arrow.",
       why: "The answers are \"your brain gets a message\" and \"your body makes heat.\" Cold skin sends a message to the brain. The brain makes the muscles shake. Moving muscles make heat, and that is why shivering warms you up." },
-    { id: "SK-TSCE-P5", type: "mc", points: 1, dok: 2, passages: ["p1"],
+    { id: "SK-TSCE-P5", type: "mc", points: 1, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "According to paragraph 4, what is an effect of goosebumps on a furry animal?",
       choices: [
         { text: "A layer of warm air is trapped next to its body.", correct: true },
@@ -909,7 +909,7 @@ PP.addLesson({
         clue: "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
         hints: [
           "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
-          "Reread the first sentence of paragraph 4. What does it say gives you goosebumps?",
+          "Say in a few words what paragraph 4 is about, then what paragraphs 2 and 3 are about. How does paragraph 4 fit with them?",
           "Paragraph 3, not paragraph 4, tells why teeth chatter, so that choice is not why paragraph 4 is there. Test each choice that is left against what paragraph 4 actually says."
         ],
         how: [
@@ -920,7 +920,7 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is thinking two effects of the same cause must cause each other. Shivering and goosebumps both come from cold.",
         why: "The answer is \"to tell about another effect that cold has on the body.\" Paragraph 4 begins, \"Cold can also give you goosebumps,\" so it adds a second effect of cold. It never says goosebumps cause shivering or that people need more hair, and teeth chattering is explained in paragraph 3." },
-      { id: "SK-TSCE-C04", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      { id: "SK-TSCE-C04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["The bathroom floor got wet because Marcus left the water running in the tub."],
         prompt: "Read the sentence in the box. Marcus's sister says, \"The wet floor is the cause, because the sentence tells it first.\" Which answer best explains whether she is right?",
         choices: [
@@ -929,11 +929,11 @@ PP.addLesson({
           { text: "She is right. The wet floor made Marcus leave the water running." },
           { text: "She is not right. There is no cause in this sentence, only an effect." }
         ],
-        clue: "The cause always happens first in time, even when a sentence tells it second.",
+        clue: "To check a claim about cause and effect, find the clue word. Then test the claim against what really happens.",
         hints: [
-          "The cause always happens first in time, even when a sentence tells it second.",
-          "Picture the bathroom. Think about what Marcus did and what happened to the floor.",
-          "A sentence can tell the effect first and the cause after because, so the order of the words is not the rule. Test each answer that is left: does its reason match what really happened?"
+          "To check a claim about cause and effect, find the clue word. Then test the claim against what really happens.",
+          "Find the clue word in the box. Which part comes after it, and which part comes before it?",
+          "The sentence has the clue word because, so it does tell a cause. Test each answer that is left against what happened in the bathroom."
         ],
         how: [
           "Find the clue word because. The words after it tell the cause: Marcus left the water running.",
@@ -988,8 +988,8 @@ PP.addLesson({
         clue: "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
         hints: [
           "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
-          "Reread paragraph 3 and the end of paragraph 4. Find the sentence where Morgan decides, and the clue word it begins with.",
-          "Morgan got his patent in 1923, after he built the signal, so the patent cannot be why he decided to build it. For Part B, choose the sentence that tells what happened just before he decided."
+          "Find where the article tells what Morgan decided. Then read what happened before it and after it, in paragraphs 1 to 4.",
+          "Morgan got his patent in 1923, after he built the signal, so the patent cannot be why he decided to build it. For Part B, check that your sentence shows your Part A answer."
         ],
         how: [
           "Paragraph 3 ends, \"So Morgan decided to build a better signal.\" So means the cause comes just before it.",
@@ -1004,7 +1004,7 @@ PP.addLesson({
         prompt: "The clue word in the student's sentence makes the cause and effect from paragraph 2 backward. Choose the clue word that fixes it.",
         text: "Crashes at street corners happened often {0} drivers had no warning.",
         slots: [
-          { options: ["so", "because", "until"], answer: 1 }
+          { options: ["so that", "because", "until"], answer: 1 }
         ],
         clue: "Because comes just before a cause. So comes just before an effect.",
         hints: [
@@ -1016,12 +1016,12 @@ PP.addLesson({
           "Paragraph 2 says drivers had no warning, so they did not have time to slow down, and as a result crashes happened often.",
           "So having no warning is the cause, and the crashes are the effect.",
           "In the student's sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
-          "With so, the sentence says the crashes took away the warning, which is backward. Until does not tell a cause at all."
+          "So that would mean the crashes happened in order to take away the warning, which makes no sense. Until does not tell a cause at all."
         ],
-        misconception: "A common mix-up is thinking so and because do the same job. Because points to a cause. So points to an effect.",
-        why: "The answer is because. Drivers had no warning first, and that led to the crashes, so the cause is \"drivers had no warning.\" Because comes just before a cause. With so, the sentence would say the crashes took away the warning." },
+        misconception: "A common mix-up is choosing a joining word that sounds smooth, like so that. Because points to a cause; so that tells what something is for.",
+        why: "The answer is because. Drivers had no warning first, and that led to the crashes, so the cause is \"drivers had no warning.\" Because comes just before a cause. So that would tell a purpose, and until tells when something stops." },
       { id: "SK-TSCE-C08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        prompt: "Which event in the article came first and led to all of the others?",
+        prompt: "Which of these events came first and led to all of the others?",
         choices: [
           { text: "Signals could switch from Go to Stop all at once.", correct: true },
           { text: "Drivers did not have time to slow down at corners." },
@@ -1050,9 +1050,9 @@ PP.addLesson({
           { text: "It gives the steps a reader would follow to build a signal." },
           { text: "It compares the signals of long ago with traffic lights today." }
         ],
-        clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
+        clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
         hints: [
-          "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
+          "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
           "Notice the clue words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
           "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the whole article, not just the last paragraph."
         ],
@@ -1139,9 +1139,9 @@ PP.addLesson({
           { text: "Something in nature starts a change.", answer: 1 },
           { text: "A new invention helps solve a problem.", answer: 0 }
         ],
-        clue: "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
+        clue: "Test each sentence twice: once on the signal article and once on the pine forest article. Choose both articles only if it passes both tests.",
         hints: [
-          "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
+          "Test each sentence twice: once on the signal article and once on the pine forest article. Choose both articles only if it passes both tests.",
           "In each article, look for what starts the changes and for any choice that people make.",
           "In \"A Signal That Saved Lives,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
         ],
@@ -1215,9 +1215,9 @@ PP.addLesson({
         { text: "He is right. Closing the library early made the pipe break." },
         { text: "He is not right. The sentence does not tell a cause at all." }
       ],
-      clue: "The cause always happens before the effect, even when a sentence tells it second. Because comes just before the cause.",
+      clue: "To check a claim about cause and effect, find the clue word. Then test the claim against what really happens.",
       hints: [
-        "The cause always happens before the effect, even when a sentence tells it second. Because comes just before the cause.",
+        "To check a claim about cause and effect, find the clue word. Then test the claim against what really happens.",
         "Find the clue word in the box. Read the words after it, then the words before it.",
         "The sentence has the clue word because, so it does tell a cause. Test each answer that is left: does it match what happened first?"
       ],
@@ -1230,7 +1230,7 @@ PP.addLesson({
       misconception: "A common mix-up is flipping the cause and the effect when the sentence tells the effect first.",
       why: "The answer is \"He is not right. The pipe broke first, and that made the library close.\" The words after because tell the cause. Closing a library cannot break a pipe, and because comes before a cause, not an effect." },
     { id: "SK-TSCE-S02", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p6"],
-      like: ["SK-TSCE-C06", "SK-TSCE-C10"],
+      like: ["SK-TSCE-C06"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What caused the algae in Clear Lake to grow so much?",
         choices: [
@@ -1250,7 +1250,7 @@ PP.addLesson({
       hints: [
         "A cause happens before its effect and makes it happen. Ask: Why did this happen?",
         "Find where the article first tells about the algae. Then look before it for what helped the algae grow.",
-        "The fish could not breathe after the algae grew, so that is an effect, not the cause. For Part B, choose the sentence that tells the cause."
+        "The fish could not breathe after the algae grew, so that is an effect, not the cause. For Part B, check that your sentence shows your Part A answer."
       ],
       how: [
         "Paragraph 2 says the scientists found that fertilizer had washed into the lake.",
@@ -1258,6 +1258,7 @@ PP.addLesson({
         "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\"",
         "The fish and the green water are effects, swimming did not make algae grow, and the town's request came afterward."
       ],
+      misconception: "A common mix-up is choosing an effect, like the green water or the fish, when the question asks for the cause.",
       why: "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\" The fertilizer helped the algae grow. The green water and the fish are effects, and the town's request came later." },
     { id: "SK-TSCE-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCE-P4", "SK-TSCE-C12"],
@@ -1289,12 +1290,12 @@ PP.addLesson({
     "SK-TSCE-P1": {
       hints: [
         "An effect is what happens because of something. Clue words like as a result point to it.",
-        "Think about the order in paragraph 2: cold air comes first, and something happens to the muscles at the end. Find that last step.",
+        "Find the clue words as a result in paragraph 2. Read the words after them and picture what the muscles are doing.",
         "Paragraph 2 never says the muscles rest, so that choice does not fit. Check each choice that is left against paragraph 2."
       ],
       how: [
         "Paragraph 2 tells what happens after cold air cools your skin.",
-        "As a result, your brain tells your muscles to tighten and relax very fast, over and over.",
+        "As a result, the muscles tighten and relax very fast, over and over.",
         "The answer is \"They tighten and relax very fast.\" The muscles do not rest, stay still or grow."
       ],
       misconception: "A common mix-up is choosing something that sounds possible. Use the effect the article tells after as a result." },
@@ -1308,7 +1309,8 @@ PP.addLesson({
         "The question needs two things: a cause-and-effect clue word and a reason teeth chatter.",
         "\"Since your jaw has muscles too, your teeth can chatter when you shiver\" has the clue word since, and it tells why teeth chatter.",
         "The answer is that sentence. \"That is why shivering helps warm you up\" has a clue word, but it is about getting warm, not teeth."
-      ] },
+      ],
+      misconception: "A common mix-up is choosing a sentence that is about the right topic but has no clue word, or one with a clue word that is about a different topic." },
     "SK-TSCE-P3": {
       hints: [
         "Ask: Which one happened FIRST? The cause always happens first in time, even if the sentence says it second.",
@@ -1337,7 +1339,7 @@ PP.addLesson({
     "SK-TSCE-P5": {
       hints: [
         "An effect is what happens because of something. Find the cause first, then read on for what it makes happen.",
-        "Find the sentence that tells what goosebumps do. Then read on and ask what that does for an animal with fur.",
+        "Find the cause in paragraph 4 first. Then ask what that cause makes happen for an animal with fur.",
         "Paragraph 4 never says fur falls out or grows back, so that choice is not an effect the article gives. Check each choice that is left against paragraph 4."
       ],
       how: [
@@ -1829,7 +1831,7 @@ PP.addLesson({
         hints: [
           "A try that fails can teach the characters something about the problem. Ask what the team learns when this try does not work.",
           "Reread paragraph 3.",
-          "Nothing in the story says the new ropes were too short. Test the other choices against what the team changed with this try."
+          "Nothing in the story says the new ropes were too short. Test the choices that are left against paragraphs 2 and 3."
         ],
         how: [
           "Kiara thought the ropes were just old, so the team bought new ones.",

@@ -1276,7 +1276,7 @@ PP.addLesson({
       why: "The answers are \"I knew right away that he would ruin everything.\" and \"I rolled my eyes.\" Both show the narrator is annoyed with Dev and expects him to cause trouble." },
     { id: "SK-TC2a-P3", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "The narrator says Dev is just lucky. What can a reader tell that the narrator does not say at first?",
+      partA: { prompt: "The narrator says Dev is just lucky. What can a reader tell that the narrator does not say?",
         choices: [
           { text: "Dev sells a lot because he is friendly and helpful.", correct: true },
           { text: "Dev sells a lot because his toys are brand new." },
@@ -1346,7 +1346,7 @@ PP.addLesson({
         misconception: "A common mix-up is choosing what the narrator thinks about a character. A character's own view comes from what that character says and does.",
         why: "The answers are \"He runs over to tell the first family about his truck.\" and \"He grins and thanks his sister for letting him help.\" Both show Dev is eager and glad to help. Calling him lucky and rolling her eyes are his sister's view, and the empty blanket is a fact about the sale." },
       { ref: "SK-TC2a-P5" },
-      { id: "SK-TC2a-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: [],
+      { id: "SK-TC2a-C03", type: "mc", points: 1, dok: 1, std: ["3.T.C.2.a"], passages: [],
         stem: ["The bus bumped along the road to the state park.", "\"I hope we see a deer!\" Rico said.", "His friend Ava pressed her nose to the window and smiled.", "Ms. Hart counted heads one more time."],
         prompt: "Read the part of a story in the box. Who is telling it?",
         choices: [
@@ -1434,7 +1434,7 @@ PP.addLesson({
         clue: "Each part of a story can have its own narrator. To check, ask who the I is in each part, and what that I does.",
         hints: [
           "Each part of a story can have its own narrator. To check, ask who the I is in each part, and what that I does.",
-          "Read the first paragraph of Part 2 slowly. Ask: who is sitting in the chair, and who is talking?",
+          "Read the first paragraph of Part 1 and the first paragraph of Part 2. Compare how each one talks about the boy.",
           "Both parts use the word I, so using I does not show that the narrator has changed. Check the other clues: which ones could be true only if someone new is telling Part 2?"
         ],
         how: [
@@ -1557,7 +1557,7 @@ PP.addLesson({
         why: "The answers are \"The speaker tucks a tail and slinks away.\" and \"The speaker's paws kick at the air.\" A child could hide behind a door, dislike smelling like flowers or be wrapped in a towel, but only an animal like a dog has a tail and paws." },
       { id: "SK-TC2a-C12", type: "cr", dok: 3, std: ["3.T.C.2.a"], passages: ["p5"], rows: 4,
         prompt: "How does the speaker feel about the bath? What do YOU think about it? Write two or three sentences. Use one detail from the poem to explain each view.",
-        sample: "The speaker thinks the bath is a mistake, because the speaker hides behind the door and says mud is best. I think the bath is a good idea. The people say, \"You smell so sweet!\" and they giggle while they scrub, so the bath is good for the dog and fun for the family.",
+        sample: "The speaker thinks the bath is a mistake, because the speaker hides behind the door and says mud is best. I think the bath is a good idea for the family. They say, \"You smell so sweet!\" and they giggle when the dog shakes, so they like the clean dog and have fun at bath time.",
         criteria: [
           "I told the speaker's view and a detail that shows it.",
           "I told my own view in my own words. I may agree or disagree.",
@@ -1607,7 +1607,7 @@ PP.addLesson({
           { text: "The narrator could get better by practicing, as the coach says.", correct: true },
           { text: "The narrator really is the best player on the Hawks team." },
           { text: "Tia never passes the ball to the narrator during games." },
-          { text: "The coach does not want the narrator on the team at all." }
+          { text: "The ball came too fast for anyone on the team to stop." }
         ],
         clue: "A reader can see things the narrator misses. Compare what the narrator says with what really happens.",
         hints: [
@@ -1617,12 +1617,12 @@ PP.addLesson({
         ],
         how: [
           "The narrator says nobody passed, but then admits Tia passed two times.",
-          "The ball came too fast to stop, and the coach says to practice stopping the ball.",
+          "The narrator could not stop the fast ball, and the coach says to practice stopping the ball.",
           "A reader might think the narrator could get better by practicing. The answer is \"The narrator could get better by practicing, as the coach says.\"",
-          "Being the best is only the narrator's view, Tia did pass, and nothing says the coach wants the narrator off the team."
+          "Being the best is only the narrator's view, and Tia did pass. \"The ball came too fast\" is the narrator's excuse; the coach's advice shows the narrator could learn to stop it."
         ],
         misconception: "A common mix-up is believing everything the narrator says. A reader checks the narrator's words against what really happens.",
-        why: "The answer is \"The narrator could get better by practicing, as the coach says.\" The narrator blames others, but Tia did pass twice and the ball was too fast to stop. Being the best is only the narrator's view, and nothing says the coach wants the narrator off the team." },
+        why: "The answer is \"The narrator could get better by practicing, as the coach says.\" The narrator blames others, but Tia did pass twice, and the narrator could not stop the ball. Being the best and the ball being too fast for anyone are the narrator's excuses, not what a reader sees: the coach says the narrator can practice stopping the ball." },
       { id: "SK-TC2a-C15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
         stem: ["Keisha's journal: Today we made clay pots in art class. My hands got cold and sticky, and my pot leaned to one side like it was about to tip over. I can't wait to wash this clay off.", "Marco's journal: Today we made clay pots in art class! I loved squishing the cool clay between my fingers. My pot leans a little, but Mr. Diaz says that gives it character."],
         prompt: "Read the two journal entries in the box. Keisha and Marco write about the same art class. Which TWO sentences tell how their views are different?",
