@@ -53,3 +53,19 @@ The design brief (00 §5) lists items 1 to 4 as out of scope. Items 5 to 9 were 
 
 ### 9. On-device and assistive-technology acceptance
 - Everything in 04-implementation was checked by Chromium viewport simulation, axe and scripted keyboard focus. Nothing was checked on a real iPhone, iPad or Android device, in Safari, with a screen reader or with native zoom, and no family has tried it. The original audit's open acceptance items are still open.
+
+## Added after the independent QA review (06)
+
+### 10. A reload at `#main` with no saved mode lands on the catalog (QA-15)
+- **Evidence:** `js/app.js` `route()` calls `landHome(…, !!h)`, so any non-empty unknown hash, `#main` included, takes the catalog branch. This predates the redesign. The skip link itself never changes the address (guard 12.6).
+
+### 11. The search field has no visible label (QA-15)
+- **Evidence:** `index.html`, `<label class="sr" for="skill-search">Find a lesson</label>`. The visually hidden label predates the redesign. Making it visible would add height to the browse home, which QA-03 asked to reduce.
+
+### 12. `path-a11y.py` does not cover the browse home, and its header is out of date (QA-16)
+- **Evidence:** the suite scans only `#screen-choose` and `#screen-path`. Its docstring says axe `color-contrast` "exits this packaged renderer", but QA ran it in 98 of 98 combinations.
+- **Scratch check:** the implementer ran `path-contrast.js` on `#screen-home` (seven viewports, the all-passed state, every `<details>` open) in a scratch script, with 0 failures.
+- **Suggestion:** extend the suite (a test change for the lead to own).
+
+### 13. Label-in-name on category cards and list rows (QA-14)
+- **Evidence:** axe's experimental `label-content-name-mismatch` flags the aria-label pattern on `.cat-card` and `.skill-line`. Every name starts with the visible text. The row labels are asserted by guard 9.8 and 11.11, so they were left unchanged.

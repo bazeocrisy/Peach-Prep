@@ -26,7 +26,7 @@ No framework or dependency was added. No storage key was added, removed or migra
   - A `.home-shared` slot.
   - Both buttons are still `disabled` until boot and read "Loading lessons…" until then, which gives the disabled state a visible reason.
 - **Path screen (state C):**
-  - Header: "Browse lessons" (`#path-browse`, new) and "For parents" (`data-go="parents"`). Below 640px they show the short labels "Lessons" and "Parents"; below 400px the word mark is visually hidden but still read by screen readers.
+  - Header: "Browse lessons" (`#path-browse`, new) and "For parents" (`data-go="parents"`). Below 640px they show the short labels "Lessons" and "Parents"; below 400px the word mark was visually hidden (superseded by QA-09: it now stays visible and the header tightens instead).
   - The intro (`#path-intro`) uses 03-copy's bullets and still says "not proof of mastery".
   - The intro buttons read "Start with D1 · Story elements" (`#path-start`; the label is filled from the first path entry) and "See the whole path" (`#path-preview`).
   - The old saving `.note` was removed; the support row's "Saved on this device only" carries that information now.
@@ -36,7 +36,7 @@ No framework or dependency was added. No storage key was added, removed or migra
   - `#up-next` is now the primary `.next-panel`.
   - Below it, a single secondary `[data-go=path]` button, "Try the Learning Path", now `btn-soft`. The second primary and the home's "Switch learning mode" button were removed.
   - A `.path-storage` status was added, so blocked storage is also announced on this screen.
-  - Then `#home-progress`, `#cat-cards` and a `.home-shared` slot, which holds the `#hero-*` support buttons.
+  - Then `#home-progress`, `#cat-cards` and a `.home-shared` slot, which holds the `#hero-*` support buttons. (Superseded by QA-03: the shared slot now comes after the lesson list.)
   - Search uses 03-copy §8: "Find a lesson", the placeholder "Try: pronoun, D3, 3.T.T.1" and the group label "Which lessons to show".
   - `#skill-empty` is now a card with `#skill-empty-text` and a "Clear search and filters" button (`#skill-empty-clear`).
 
@@ -94,7 +94,7 @@ No framework or dependency was added. No storage key was added, removed or migra
 - **Card content:**
   - **The bookmark is on this lesson:** "Opens at: {step} (step N of M)", using `PP_SKILLS.stepNames` and `stepIds`, so hands-on lessons say "Check (step 4 of 4)". It also shows a grown-up line for that step from `adultNote()`, adds "The skill check starts fresh each time." when the step is Test Your Knowledge, and the button reads "Continue the Learning Path".
   - **No bookmark on this lesson:** "The next lesson on the path that is not marked finished. It starts at Learn It." The button reads "Start this lesson".
-  - **Essays:** "Opens at: 1. Read (step 1 of 4)", plus "Your saved plan and draft open with it." when a draft exists.
+  - **Essays:** "Opens at: 1. Read (step 1 of 4)" (superseded by QA-07: now "(tab 1 of 5)", counted from the real tabs), plus "Your saved plan and draft open with it." when a draft exists.
   - **Drift:** if the bookmark is not on the first unfinished entry, the card adds `#path-suggested`, "Suggested next on the path: {lesson}", which opens that lesson.
   - **Path complete:** the card keeps "…does not establish mastery of every standard", and its primary action is "Browse lessons".
 - **New exports:** `browseLessons`, `introduced()`, `notice` and `storageOK()`. Nothing existing was removed.
@@ -191,7 +191,7 @@ The fixture string, the browser flags and the profile hook that collects each `o
 
 ## 5. Interpretations and anything not done
 
-- **Support-row placement on the browse home.** The brief (§2 D) lists the explainer and support links after the skill list. That list is about 10,000px tall on a phone, which would bury the parent guide and mixed practice. I kept them where the existing `.home-links` row was, after the category cards and before search, with the explainer closed. Every other item in D keeps the brief's order.
+- **Support-row placement on the browse home (reversed after QA-03).** The brief (§2 D) lists the explainer and support links after the skill list. That list is about 10,000px tall on a phone, which would bury the parent guide and mixed practice. I kept them where the existing `.home-links` row was, after the category cards and before search, with the explainer closed. Every other item in D keeps the brief's order.
 - **Header label.** The brief says "For parents", so the header uses it. The support row keeps "Parent guide", the page's own name.
 - **"Switch learning mode" on the browse home was removed.** D allows one secondary path button. The choice screen is still reachable from the path screen's "Switch learning mode" and at `#choose`. No test used the browse-home copy.
 - **The path's bottom button** ("Choose Individual Lessons") used to switch the saved mode to browse. It is now "Browse all lessons", which matches the header and keeps the mode. Switching mode stays explicit under "Switch learning mode".
@@ -200,3 +200,61 @@ The fixture string, the browser flags and the profile hook that collects each `o
 - **State B** lists lessons that are started or passed, read from `pp.progress.v1` only. Essay drafts (`pp.task.*`) and short writing (`pp.skwrite.*`) are not scanned, which also avoids enumerating `localStorage` keys when storage is blocked. The essay rows in the lesson list still mark drafts as started.
 - **The blocked-storage notice keeps its existing text** ("…only for this visit…"), which `path.py` checks. 03-copy's proposed rewrite was not applied, and the UX-001 writing notices are untouched.
 - **Not verified:** real devices, Safari, screen readers, native zoom and family use (05 §9). axe ran with `color-contrast` disabled, as `path-a11y.py` specifies, and the solid-colour contrast script ran instead. axe-core 4.10.2 was fetched with `npm pack` into the scratchpad only; it was not added to the repository.
+
+---
+
+## 6. After QA (06-independent-review.md, candidate cd18ef4)
+
+The rules were the same as before:
+- no test file edited, so no selector changed and no assertion weakened
+- no storage key added, changed or migrated, and every render still writes nothing
+- no git commands
+
+### What I did, finding by finding
+
+| Finding | What I did |
+|---|---|
+| **QA-01 MUST** (`.un-done` white on white) | **Fixed.** The legacy rules were deleted, and `.next-panel .un-done` now uses `--text` in the redesign block. I checked every leftover hero-era style and deleted the unused ones: `.hero`, `.hero-inner`, `.hero-title` (including its 640px rule), `.hero-sub`, `.hero-actions`, the `.hero-compact …` rules, `.un-label` (#E7EEF8), `.un-done` (#fff), both `.hero .un-btn` rules and the unused `.btn-ghost` (white text). The base `.brand` colour changed from #fff to `--navy-deep`. The only `color:#fff` rules left are on navy, green or plum fills. The all-passed card also gets one action, a soft "Mixed practice and practice tests" button (no primary, as before). Verified at all seven viewports: the text is visible and dark, and the existing `path-contrast.js` function, run on `#screen-home` with every `<details>` open, reports 0 failures (scratch script). |
+| **QA-02** (blocked-storage notice too low; "Your progress stays" contradicts it) | **Fixed.** On `#screen-choose` the `.path-storage` notice now sits above the welcome-back box and the choice cards. The footnote (`#choice-foot`) is hidden by `storageNotice()` whenever saving is unavailable. On `#screen-home` the notice sits above the Up next card. The element and text are unchanged, and the path screen still has exactly one `#screen-path .path-storage` (path.py). |
+| **QA-03** (search far down the browse home) | **Fixed, in the brief's order:** Up next card (and the started lessons), then the progress summary, then the category cards, then search with filters and the list, and then the explainer and support links at the bottom. A row under Up next keeps "Try the Learning Path" plus two small links: "How a lesson works" (`#home-how`, which opens and focuses the bottom explainer) and "Parent guide" (`#home-help`). The progress counts sit side by side from 640px. At short heights the browse lede is hidden and the category cards drop the "Next:" line, which brings them to one or two compact rows. Search top, in px, with my seed (QA's seed differed): 320×568 **1596** (QA measured 2365, baseline 1360); 390×844 **1462** (2126, baseline 1245); 844×390 **800** (1678, baseline 745); 1366×768 **901** (1420, baseline 729). |
+| **QA-04** (legend marks do not match the list; "Step done" looks like "Passed") | **Fixed.** One `markEl()` builder in `skills.js` makes every list mark, and the legend uses the same elements and classes. The list marks are now: <br>• passed: a green pill "✓ passed" (`.sl-done.sl-pill`) <br>• grown-up: a plum pill "✓ grown-up" <br>• review: the outlined "review" pill, unchanged <br>• started: a half-filled plum disc plus the word "Started", replacing the lone "◐" glyph <br>"Step done" in the legend is drawn as the step bar's own done badge (`.step-n`, a green disc with a white ✓), so it differs in shape and word from the "✓ passed" pill. The legend also shows a real category ring and the leaf checkbox tick. Each mark carries a word, not colour alone. The row aria-labels are unchanged (guard 9.8 and 11.11). |
+| **QA-05** (empty space in "Choose a lesson") | **Fixed.** From 640px the cards no longer stretch: the browse card is as tall as its content, and the path card stays the taller, primary card. The browse card gained a static preview, "Lessons are grouped in five categories:", with five non-interactive chips filled from `PP_CATALOG` (no new behaviour). The gap under its button is now at most 30px at 768, 1024, 1366 and 1920. |
+| **QA-06** (welcome-back links can start a check) | **Fixed.** In-progress lessons are listed first, then lessons with saved short writing, then essay drafts, then passed lessons. A passed lesson opens on its skill page at Learn It, never at its check. The aria-label still says where it opens. |
+| QA-07 (essay "step 1 of 4" vs five tabs) | **Fixed** with the real tab count: "Opens at: 1. Read (tab 1 of 5)". The label and count are read from the essay screen's own tab list. |
+| QA-08 (drift link before the primary) | **Fixed.** "Suggested next on the path" now comes after `#path-next` in DOM and tab order. It spans the card under the button at 600 weight and 15px. |
+| QA-09 (word mark hidden below 400px on the path screen) | **Fixed.** "Peach Prep" stays visible on every screen. Below 400px the two-button header tightens instead (smaller mark, 16px brand, tighter button padding). Checked at 320, 360 and 390: the word mark is visible with no overflow. |
+| QA-10 (`aside` inside `main`) | **Fixed.** `.path-alongside` is now a `<section aria-labelledby="path-alongside-title">`. The class is unchanged (path.py). |
+| QA-11 (sticky search partly covers Shift+Tab-focused rows) | **Fixed.** `scroll-padding-top:96px` applies only while the browse home is showing and search is sticky (`(min-width:640px) and (min-height:560px)`, via `html:has(#screen-home:not([hidden]))`). Other screens are unaffected. |
+| QA-12 (state B misses writing-only families) | **Fixed.** The welcome-back line also counts essay drafts (through the existing guarded `entryStatus`) and short writing, read with a guarded `getItem("pp.skwrite.<lesson>")` for each known lesson. Storage is never enumerated, so blocked storage still renders state A with no error. |
+| QA-13 (primary below the first screen at 320×568, in B, and in C4 at 320) | **Not changed.** At 320×568 the honesty bullets (not a test or placement, everyone starts at D1, any lesson stays open) are the brief's required content; removing them to lift the button about 260px would trade honesty for position. In B, the welcome-back box is the point of the state. At 844×390, which the brief names, the A and C primaries are in the first screen (checked). |
+| QA-14 (label-in-name, experimental rule) | **Not changed.** Every name begins with the visible text, so voice commands work. The aria-label pattern predates the redesign and is asserted by guard 9.8 and 11.11; changing it would touch test-checked labels. |
+| QA-15 (small items) | Hyphen wrap **fixed** ("grown-up" is kept on one line in the progress row and the legend). The others are **not changed**: the search label is visually hidden (it predates the redesign, and the placeholder plus the "Choose a lesson" text describe it); the ✓ glyph in the step disc and the build badge are glyph and label exceptions; and the `#main` reload behaviour is in `route()`, which predates this work. All three are recorded here, and the `#main` and search-label items belong in 05. |
+| QA-16 (tooling) | **Not changed in the repository,** because editing `verification/` was out of my brief. As a scratch check, I ran `path-contrast.js` on `#screen-home` (all seven viewports, the D3 state, every `<details>` open) inside `home-behaviour.py`: 0 failures. Recommendation for the lead: add `#screen-home`, including D3, to `path-a11y.py`, and correct its header's claim that axe `color-contrast` crashes the browser. |
+
+Other fixes found while re-shooting:
+- At 320px the wider word marks made the catalog's `1fr` group column overflow by 18px. The grid columns are now `minmax(0,1fr)`, and a row's marks may wrap under its title.
+- At 844×390 the compact category names broke mid-word. Those cards now use wider columns and never break inside a word.
+
+### New test counts (post-QA candidate, port 8610)
+
+| Command | Result |
+|---|---|
+| `node verification/check-content.js --all` | PASS: 0 failures, the same 6 warnings |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `python3 verification/readability.py` | byte-identical to the baseline (125 records) |
+| `node verification/check-instructional-copy.js` | 28 passed |
+| `python3 verification/path.py http://localhost:8610/ <out>` | **148 passed, 0 failed** |
+| `path-a11y.py` with `path-contrast.js` | **12 of 12 runs: 0 violations, 0 contrast failures, 0 unsupported**; lowest ratio 5.38:1 |
+| `python3 verification/path-headers.py …` | **48 passed** |
+| `skills-recovery.py` | **67 passed, 0 failed** |
+| `writing-recovery.py` | **75 passed, 0 failed** |
+| launcher copy: `path` / `path-headers` | **148 / 48 passed** |
+| scratch `home-behaviour.py`, extended with 39 checks for QA-01 to QA-12 | **214 passed, 0 failed** |
+| **Full guard via the fixture launcher copy** (`guard-fixture.py guard /home/claude/pp-home http://localhost:8610/ <out>`, background, about 35 minutes) | **110 passed, 0 failed, exit 0** |
+
+The logs are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/final-qa/`.
+
+**AFTER screenshots** were retaken for every state, with the same seeds: 25 files, as in §3. Five QA shots were added:
+- `after-qa01-all-passed-390x844.png` and `-1366x768.png`
+- `after-qa02-storage-blocked-390x844.png` and `-1366x768.png`
+- `after-qa04-legend-and-list-390x844.png`

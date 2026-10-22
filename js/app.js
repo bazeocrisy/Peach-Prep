@@ -385,6 +385,12 @@
     window.PP_SKILLS.init();
     window.PP_PATH.init();
     /* the #hero-* support buttons are built (with their listeners) in buildShared() */
+    /* QA-03: small help links near the top of the browse home; the explainer itself sits below the list */
+    el("home-how").addEventListener("click", () => {
+      const d = document.querySelector('#screen-home details.routine'); if (!d) return;
+      d.open = true; const sum = d.querySelector("summary"); sum.focus({ preventScroll: true }); d.scrollIntoView({ block: "start" });
+    });
+    el("home-help").addEventListener("click", () => { if (canLeave()) window.PP_PARENTS.open(); });
     el("clues-print").addEventListener("click", () => window.print());
     el("player-back").addEventListener("click", back);
     el("write-back") && el("write-back").addEventListener("click", back);

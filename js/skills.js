@@ -344,6 +344,28 @@
     return { id: s[0], name: s[1], n: S.indexOf(s) + 1, of: S.length };
   }
   const words = n => PP.countWord(n);
+  /* keep "grown-up" on one line (QA-15) */
+  function keepGrownUp(host, text) {
+    String(text).split(/(grown-up)/).forEach(t => { if (t) host.appendChild(t === "grown-up" ? make("span", "nowrap", t) : document.createTextNode(t)); });
+    return host;
+  }
+  /* The marks used in the lesson list, built in one place so the legend shows the
+     very same marks. Each one carries a word as well as a colour. */
+  function markEl(kind) {
+    if (kind === "passed") return make("span", "sl-done sl-pill", "✓ passed");
+    if (kind === "grownup") return make("span", "sl-done sl-pill by-grownup", "✓ grown-up");
+    if (kind === "review") return make("span", "sl-review", "review");
+    if (kind === "started") {
+      const m = make("span", "sl-started");
+      const disc = make("span", "sl-started-disc"); disc.setAttribute("aria-hidden", "true");
+      m.appendChild(disc); m.appendChild(make("span", "sl-started-word", "Started"));
+      return m;
+    }
+    if (kind === "step") { const m = make("span", "lg-step"); m.appendChild(make("span", "step-n", "✓")); return m; }
+    if (kind === "ring") { const r = make("span", "cc-ring lg-ring"); r.style.setProperty("--p", "12%"); r.appendChild(make("span", "cc-ring-n", "3/24")); return r; }
+    if (kind === "finished") { const m = make("span", "lg-box", "✓"); m.setAttribute("aria-hidden", "true"); return m; }
+    return make("span");
+  }
 
   let filter = "all", query = "", lastCode = null;
 
@@ -393,8 +415,8 @@
           b.appendChild(body);
           const due = st === "mastered" && !isTask(k) && reviewDue(k);
           const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
-          if (st === "mastered") { const ck = make("span", "sl-done" + (byG ? " by-grownup" : ""), byG ? "✓ grown-up" : "✓"); ck.title = passLabel(k); b.appendChild(ck); }
-          else if (st === "started") b.appendChild(make("span", "sl-started", "◐"));
+          if (st === "mastered") b.appendChild(markEl(byG ? "grownup" : "passed"));
+          else if (st === "started") b.appendChild(markEl("started"));
           /* PP-004 Retained: only with PP_FLAGS.retained on (a development setting); off, nothing here changes */
           const kept = st === "mastered" && !isTask(k) && retainedShown(k);
           if (kept) b.appendChild(make("span", "sl-review sl-retained", "retained"));
@@ -477,6 +499,9 @@
     if (!k) {
       text.appendChild(make("p", "np-eyebrow", "Every lesson checked"));
       text.appendChild(make("p", "un-done", "Every lesson has a passed skill check or a grown-up check on this device. Come back to a few each week to keep them fresh."));
+      const mx = make("button", "btn btn-soft", "Mixed practice and practice tests"); mx.type = "button";
+      mx.addEventListener("click", () => window.PP_APP.openMixed());
+      text.appendChild(mx);
       host.appendChild(text);
     } else {
       text.appendChild(make("p", "np-eyebrow", "Up next"));
@@ -523,7 +548,7 @@
     const rows = make("div", "hp-rows");
     function row(labelText, value, extra) {
       const r = make("div", "hp-row");
-      r.appendChild(make("span", "hp-label", labelText));
+      r.appendChild(keepGrownUp(make("span", "hp-label"), labelText));
       const v = make("span", "hp-val", value); r.appendChild(v);
       if (extra) r.appendChild(extra);
       rows.appendChild(r);
@@ -543,15 +568,15 @@
     const lg = make("details", "legend"); lg.open = wasOpen;
     lg.appendChild(make("summary", "", "What the marks mean"));
     const dl = make("dl", "legend-list");
-    [["◐", "Started", "Your child has begun this lesson. No check passed yet."],
-     ["✓", "Step done", "On a lesson's step bar: your child finished that step, such as Watch Me or a practice set."],
-     ["✓", "Passed the skill check", "Your child scored at least 80% on this site's short check, once, on this device. A good sign, not a Milestones score."],
-     ["✓ grown-up", "Checked by a grown-up", "A grown-up watched a hands-on skill and ticked the Check. It is not a scored check."],
-     ["review", "Review suggested", "It has been a week since the check was passed, or the last try did not pass."],
-     ["3/24", "Category ring", "Lessons in that category with a passed skill check or a grown-up check."],
-     ["☑", "Activities finished", "On the Learning Path: a tick you add to mark your place. It does not change any score."]
+    [["started", "Started", "In the lesson list: your child has begun this lesson. No check passed yet."],
+     ["step", "Step done", "On a lesson's step bar: your child finished that step, such as Watch Me or a practice set."],
+     ["passed", "Passed the skill check", "In the lesson list: your child scored at least 80% on this site's short check, once, on this device. A good sign, not a Milestones score."],
+     ["grownup", "Checked by a grown-up", "In the lesson list: a grown-up watched a hands-on skill and ticked the Check. It is not a scored check."],
+     ["review", "Review suggested", "In the lesson list: it has been a week since the check was passed, or the last try did not pass."],
+     ["ring", "Category ring", "Lessons in that category with a passed skill check or a grown-up check."],
+     ["finished", "Activities finished", "On the Learning Path: a tick you add to mark your place. It does not change any score."]
     ].forEach(([mark, name, line]) => {
-      const dt = make("dt"); dt.appendChild(make("span", "lg-mark", mark)); dt.appendChild(document.createTextNode(" " + name));
+      const dt = make("dt"); const mk = make("span", "lg-mark"); mk.appendChild(markEl(mark)); dt.appendChild(mk); dt.appendChild(keepGrownUp(make("span", "lg-name"), name));
       dl.appendChild(dt); dl.appendChild(make("dd", "", line));
     });
     lg.appendChild(dl);

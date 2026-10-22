@@ -47,7 +47,6 @@ button{font:inherit;color:inherit;}
 .btn-soft{background:#fff;border-color:var(--line);color:var(--navy);}
 .btn-soft:hover:not(:disabled){border-color:var(--navy);}
 .btn-help{background:var(--plum-tint);border-color:var(--plum-edge);color:var(--plum);}
-.btn-ghost{background:transparent;border-color:rgba(255,255,255,.7);color:#fff;}
 .btn-block{width:100%;}
 .btn:disabled{background:#ECE6DE;border-color:#ECE6DE;color:#8C7F70;cursor:not-allowed;}
 .nav-btn{min-height:44px;padding:8px 16px;border-radius:var(--pill);background:#fff;border:1px solid var(--line);
@@ -66,15 +65,10 @@ button{font:inherit;color:inherit;}
 .bar-spacer{width:88px;}
 
 /* ---------- home ---------- */
-.hero{background:linear-gradient(135deg,#123A6B 0%,#1E4E86 60%,#E8743B 140%);color:#fff;}
-.hero-inner{max-width:1080px;margin:0 auto;padding:28px 16px 34px;}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:1.25rem;margin:0 0 18px;color:#fff;}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:1.25rem;margin:0 0 18px;color:var(--navy-deep);}
 .brand-mark{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFB98F,#E8743B 60%,#C85A24);
   position:relative;flex:0 0 30px;}
 .brand-mark::after{content:"";position:absolute;width:12px;height:7px;background:#3E8E5A;border-radius:12px 0;top:-4px;left:15px;transform:rotate(-20deg);}
-.hero-title{color:#fff;font-size:1.75rem;font-weight:800;margin-bottom:10px;}
-.hero-sub{color:#E7EEF8;font-size:1.05rem;max-width:60ch;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
 .section-title{font-size:1.35rem;margin:28px 0 4px;}
 .section-title.small{font-size:1.15rem;}
 .section-sub{color:var(--muted);margin-bottom:14px;}
@@ -333,7 +327,6 @@ fieldset.trait{margin:0 0 12px;}
   .set-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .tool-list{grid-template-columns:repeat(3,minmax(0,1fr));}
   .parent-band{flex-direction:row;align-items:center;justify-content:space-between;}
-  .hero-title{font-size:2.2rem;}
 }
 @media (min-width:980px){
   .tabs{display:none;}
@@ -353,9 +346,6 @@ fieldset.trait{margin:0 0 12px;}
 
 /* ---------- home: every standard ---------- */
 .sr{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-.hero-compact .hero-inner{padding:22px 16px 24px;}
-.hero-compact .brand{margin-bottom:12px;}
-.hero-compact .hero-title{font-size:1.55rem;}
 .home-progress{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin:18px 0 0;box-shadow:var(--shadow);}
 .prog-line{margin:0 0 8px;}
 .prog-bar{display:block;height:10px;border-radius:var(--pill);background:var(--line-soft);overflow:hidden;}
@@ -500,10 +490,6 @@ fieldset.trait{margin:0 0 12px;}
 
 /* ---------- 2.1: IXL-style home ---------- */
 .up-next{margin-top:14px;}
-.un-label{margin:0 0 6px;color:#E7EEF8;font-weight:700;font-size:.92rem;}
-.un-done{color:#fff;font-weight:700;}
-.hero .un-btn{background:var(--peach-deep);border-color:var(--peach-deep);max-width:100%;white-space:normal;text-align:left;}
-.hero .un-btn:hover{background:var(--navy);border-color:var(--navy);}
 .cat-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0;}
 .cat-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:#fff;border:1px solid var(--line);
   border-top:6px solid var(--c,var(--navy));border-radius:var(--radius);padding:12px;cursor:pointer;box-shadow:var(--shadow);min-height:112px;}
@@ -611,7 +597,6 @@ mark.clue-w{background:none;color:inherit;}
 .ct-open{font-weight:800;font-family:var(--head);color:var(--navy-deep);}
 .tool-link{display:inline-flex;align-items:center;min-height:44px;}
 .flu-text{text-align:left;}
-.hero .un-btn{border-radius:16px;}
 @media print{
   .clue-chip{text-decoration:none;}
   .clue-tap-hint{display:none !important;}
@@ -754,8 +739,11 @@ mark.clue-w{background:none;color:inherit;}
   .has-two .head-btn{padding:8px 10px;}
 }
 @media (max-width:399px){
-  /* two header actions at 320-399px: the peach mark stays, the word mark is read but not shown */
-  .has-two .brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  /* QA-09: the word mark stays visible on every screen; two header actions get tighter instead */
+  .has-two .head-btn{padding:8px 6px;font-size:.9375rem;}
+  .has-two .head-actions{gap:0;}
+  .has-two .brand{gap:6px;font-size:1rem;}
+  .has-two .brand-mark{width:24px;height:24px;flex-basis:24px;}
 }
 .brand-name{white-space:nowrap;}
 @media (max-width:479px){ .brand-sub{display:none;} }
@@ -829,7 +817,8 @@ mark.clue-w{background:none;color:inherit;}
 .home-screen .np-btn{min-height:52px;justify-content:center;text-align:center;}
 .home-screen .un-btn{width:100%;min-height:52px;justify-content:flex-start;text-align:left;white-space:normal;overflow-wrap:anywhere;border-radius:16px;font-size:1.0625rem;margin:0 0 var(--s2);}
 @media (min-width:640px){ .home-screen .un-btn{width:auto;max-width:100%;} }
-.next-panel .np-step:last-child,.next-panel .un-done{margin-bottom:0;}
+.next-panel .np-step:last-child{margin-bottom:0;}
+.next-panel .un-done{color:var(--text);font-weight:700;margin:0 0 var(--s3);}
 .un-started{border-top:1px solid var(--line-soft);padding-top:var(--s3);}
 .un-sub{margin:0 0 var(--s2);font-family:var(--head);font-weight:700;font-size:var(--fs-label);color:var(--muted);}
 .un-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2);}
@@ -956,3 +945,55 @@ mark.clue-w{background:none;color:inherit;}
 }
 @media (prefers-reduced-motion:reduce){ .btn:active{transform:none;} }
 @media print{ .home-head,.home-shared,.next-other{display:none !important;} }
+
+/* ===================== After independent QA (06-independent-review.md) ===================== */
+/* QA-05: the secondary card no longer stretches to the path card's height; a static category preview */
+@media (min-width:640px){ .home-screen .learning-choices{align-items:start;} .choice-path{align-self:stretch;} }
+.choice-browse .btn-choice{margin-top:var(--s2);}
+.choice-chips-label{font-size:var(--fs-small);font-weight:700;color:var(--text);margin:0 0 var(--s2);}
+.choice-chips{list-style:none;margin:0 0 var(--s4);padding:0;display:flex;flex-wrap:wrap;gap:6px;}
+.choice-chip{font-family:var(--head);font-weight:600;font-size:var(--fs-label);color:var(--navy-deep);background:var(--line-soft);
+  border-left:4px solid var(--c,var(--navy));border-radius:6px;padding:4px 10px;cursor:default;}
+@media (max-height:559px){ .choice-chips,.choice-chips-label{display:none;} }
+/* QA-08: the drift link sits after the primary, quieter */
+.np-drift{grid-column:1/-1;font-weight:600;font-size:var(--fs-small);justify-self:start;}
+/* QA-03: help links near the top of the browse home */
+.next-other{align-items:center;}
+.help-links{display:inline-flex;flex-wrap:wrap;gap:0 var(--s4);margin-left:var(--s2);}
+.help-link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--head);font-weight:700;font-size:var(--fs-small);}
+#screen-home .home-shared{margin:var(--s7) 0 var(--s5);}
+/* compact progress: the counts side by side from 640px */
+@media (min-width:640px){
+  .hp-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));column-gap:var(--s5);}
+  .hp-row{border-bottom:0;}
+}
+.nowrap{white-space:nowrap;}
+/* QA-04: list marks carry a word; the legend uses the very same elements */
+.home-screen .sl-done.sl-pill,.legend .sl-done.sl-pill{width:auto;height:auto;min-height:24px;border-radius:var(--pill);padding:2px 10px;font-size:.875rem;white-space:nowrap;}
+.sl-started{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;color:var(--plum);font-family:var(--head);font-weight:700;font-size:.875rem;}
+.sl-started-disc{width:18px;height:18px;border-radius:50%;border:2px solid var(--plum);background:linear-gradient(90deg,var(--plum) 50%,transparent 50%);flex:0 0 18px;}
+.home-screen .sl-started{font-size:.875rem;}
+.lg-step .step-n{background:var(--right);color:#fff;font-weight:800;}
+.lg-box{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:4px;background:var(--leaf);color:#fff;font-weight:800;font-size:.875rem;}
+.legend-list dt{display:flex;align-items:center;gap:var(--s3);}
+.lg-mark{display:inline-flex;align-items:center;min-width:6.5em;}
+.legend .cc-ring{--c:var(--sky);}
+.lg-name{font-weight:700;}
+/* QA-11: rows focused under the sticky search bar are scrolled clear of it */
+@media (min-width:640px) and (min-height:560px){ html:has(#screen-home:not([hidden])){scroll-padding-top:96px;} }
+/* the marks now carry words: grid columns may shrink, and a row's marks may wrap under its title */
+.home-screen .cat-groups{grid-template-columns:minmax(0,1fr);}
+@media (min-width:640px){ .home-screen .cat-groups{grid-template-columns:repeat(2,minmax(0,1fr));} }
+@media (min-width:980px){ .home-screen .cat-groups{grid-template-columns:repeat(3,minmax(0,1fr));} }
+.home-screen .skill-line{flex-wrap:wrap;}
+.home-screen .skill-line .sl-body{flex:1 1 9em;}
+/* QA-03 at short heights (844x390): bring search up; the cards keep name and ring, the "Next" line hides */
+@media (max-height:559px){
+  #screen-home .home-lede{display:none;}
+  .home-screen .cat-cards{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));}
+  .home-screen .cat-card{min-height:0;padding:10px 12px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name ring";align-items:center;gap:4px 8px;}
+  .home-screen .cat-card .cc-name{grid-area:name;min-height:0;font-size:1rem;overflow-wrap:normal;hyphens:none;}
+  .home-screen .cat-card .cc-ring{grid-area:ring;}
+  .home-screen .cat-card .cc-next{display:none;}
+  .home-screen .home-progress{padding:var(--s3) var(--s4);}
+}

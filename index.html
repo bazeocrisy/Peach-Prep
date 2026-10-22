@@ -28,6 +28,7 @@
         <h1 class="home-title" id="choose-title" tabindex="-1">Help your third grader with Georgia's Grade 3 ELA skills</h1>
         <p class="home-lede">Short reading, writing and grammar lessons to do together. Free, with no login.</p>
       </div>
+      <p class="note path-storage" role="status"></p>
       <div class="welcome-back" id="choose-welcome" hidden></div>
       <h2 class="home-h2">Where would you like to start?</h2>
       <div class="learning-choices">
@@ -53,11 +54,12 @@
           <h3 class="choice-title" id="choice-browse-title">Choose a lesson</h3>
           <p>Pick one skill your child needs or is learning at school.</p>
           <p class="choice-meta">Search by word, lesson number or Georgia code, or show only the lessons on the test.</p>
+          <p class="choice-chips-label" id="choice-chips-label">Lessons are grouped in five categories:</p>
+          <ul class="choice-chips" id="choice-chips" aria-labelledby="choice-chips-label"></ul>
           <button type="button" class="btn btn-soft btn-choice" id="choose-browse" disabled>Loading lessons…</button>
         </article>
       </div>
-      <p class="choice-foot">You can switch anytime. Your progress stays.</p>
-      <p class="note path-storage" role="status"></p>
+      <p class="choice-foot" id="choice-foot">You can switch anytime. Your progress stays.</p>
       <div class="home-shared" data-shared="choose"></div>
     </div>
   </section>
@@ -113,12 +115,14 @@
         <p class="home-lede">Georgia's grade 3 ELA skills, grouped by category. Most lessons have five steps: Learn It, Watch Me, Practice Together, Try It Yourself and Test Your Knowledge. Hands-on lessons have four.</p>
       </div>
       <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
-      <div class="next-panel up-next" id="up-next"></div>
-      <div class="next-other"><button type="button" class="btn btn-soft" data-go="path">Try the Learning Path</button></div>
       <p class="note path-storage" role="status"></p>
+      <div class="next-panel up-next" id="up-next"></div>
+      <div class="next-other">
+        <button type="button" class="btn btn-soft" data-go="path">Try the Learning Path</button>
+        <span class="help-links"><button type="button" class="linkish help-link" id="home-how">How a lesson works</button><button type="button" class="linkish help-link" id="home-help">Parent guide</button></span>
+      </div>
       <div class="home-progress" id="home-progress"></div>
       <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
-      <div class="home-shared" data-shared="home"></div>
       <div class="skill-tools">
         <label class="sr" for="skill-search">Find a lesson</label>
         <input type="search" id="skill-search" class="skill-search" placeholder="Try: pronoun, D3, 3.T.T.1" autocomplete="off">
@@ -131,6 +135,7 @@
       <p class="skill-count" id="skill-count" role="status"></p>
       <div id="skill-list" class="skill-list"></div>
       <div class="skill-empty" id="skill-empty" hidden><p id="skill-empty-text">No lessons match. Try a shorter word, a lesson number like D3, or a Georgia code.</p><button type="button" class="btn btn-soft" id="skill-empty-clear">Clear search and filters</button></div>
+      <div class="home-shared" data-shared="home"></div>
 
       <h2 class="section-title small">Everyday tools</h2>
       <ul class="tool-list" id="tool-list"></ul>
