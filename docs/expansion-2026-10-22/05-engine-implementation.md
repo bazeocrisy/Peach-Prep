@@ -100,7 +100,7 @@ Each keeps its behavioural intent; only the population or the selector changes w
 |---|---|---|
 | 2.x | skip `type:"cr"` items | a constructed response is never scored by design; practice-own D.1 asserts 0 of 0 |
 | 3.x | skip `s.own` sets | own sets have no Help me ladder by design (§2.2.1); practice-own B asserts their controls (hints never outline, nothing reveals without a request) |
-| 8.1 | on own sets, press `#q-hint` three times and `#q-how` instead of `#q-help` | the same "open all help, then check for sideways scroll" on the new controls |
+| 8.1 | on own sets, press `#q-hint` three times and `#q-how` instead of `#q-help`; on a written (`cr`) core item, type a short answer before Check | the same "open all help, then answer, then check for sideways scroll" on the new controls; the guard's CORRECT helper has no `cr` case, and a `cr` item is never scored (T-C.js now has one) |
 | 9.5a/9.5b/9.5 | the journey picks a lesson **without** core | it asserts the legacy Try It Yourself ("Help me unlocks after one wrong try"). On a core lesson this intentionally changes (9.5b in the architecture): hints and Show me how are available from the start; practice-own B.1-B.5 assert the new intent, help is opt-in and never automatic |
 
 Not changed: 1.1b (no cumulative card), 4.x, 9.8/11.11 aria-labels (the row button is unchanged), 13.2 (its lesson is chosen as before; practice-own C.3 extends it to `:y3`), 14.x, 15.x, 16.3.
@@ -114,6 +114,7 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 - **Practice Together still uses the engine ladder** (clue, narrowing, walk-through). The authored hints in `addons` for P1-P3 are merged into the items but not shown in Together, because guard 3.3 asserts that ladder. Switching Together to authored hints is a separate decision.
 - **Not built:** architecture phase 4 (reviews, cumulative review, `pp.review.v1`, the coverage-map generator); `testRev` and `attempts[].rev`; the review-ledger and assessment-version hash rules; a `--release` switch that turns the migration warning into a failure; "Start this set again" (history is never erased, so nothing needs restoring).
 - **Similar coverage:** on 3.T.T.1.c, 9 of 15 core items have no similar item, so the button is hidden on them (warning, per the lead).
-- **Content:** only 3.T.T.1.c (and 3.T.SS.2.a, authored in parallel by the content team) have `core`; 85 lessons await migration.
+- **Content:** at the final run, eight lessons have `core` (3.T.T.1.c plus the content team's parallel batch: 3.T.C.2.a, 3.T.SS.2.a, 3.T.T.1.a, 3.T.T.1.b, 3.T.T.1.d, 3.T.T.4.a, TS-PS), with 120 core and 24 similar items; 85 lessons with a check await migration. practice-own.py tests 3.T.T.1.c in depth; the other seven pass check-content and are exercised by guard sections 2, 8 and 9.4 only.
+- **Guard fragility (pre-existing):** sections 11 and 13 pick lessons by `Object.keys(PP.lessons)`, which follows script load order. A guard run that overlapped the content team's rewrite of T-C.js (13:15) failed 11.5 on a lesson with two forms and then stalled in 8.1 on a new `cr` item; see §4.
 - **Testing:** Chromium only, simulated viewports. No physical devices, Safari, native zoom, screen readers or family use.
 - The `3-5.RA.2` wording discrepancy in GaDOE's own PDF (§2) should be noted to reviewers.

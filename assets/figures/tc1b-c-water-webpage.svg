@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 520" role="img" aria-labelledby="t">
+  <title id="t">A web page about water towers with tabs, a search box, a heading, a video with a play button and a caption line, and underlined words</title>
+  <!-- screen frame -->
+  <rect x="2" y="2" width="316" height="516" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
+  <path d="M2 34 H318" stroke="#444" stroke-width="2"/>
+  <rect x="3.5" y="3.5" width="313" height="29" rx="10" fill="#E6E6E6"/>
+  <g fill="#FFFFFF" stroke="#444" stroke-width="1.5"><circle cx="20" cy="18" r="6"/><circle cx="38" cy="18" r="6"/><circle cx="56" cy="18" r="6"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <!-- tabs -->
+    <rect x="12" y="46" width="84" height="34" rx="6" fill="#F4F4F4" stroke="#444" stroke-width="2"/>
+    <text x="54" y="71" text-anchor="middle">Home</text>
+    <rect x="102" y="46" width="94" height="34" rx="6" fill="#FFF0B8" stroke="#111" stroke-width="3.5"/>
+    <text x="149" y="71" text-anchor="middle" font-weight="bold">Water</text>
+    <rect x="202" y="46" width="106" height="34" rx="6" fill="#F4F4F4" stroke="#444" stroke-width="2"/>
+    <text x="255" y="71" text-anchor="middle">Weather</text>
+    <!-- search box -->
+    <rect x="12" y="92" width="296" height="36" rx="18" fill="#FFFFFF" stroke="#444" stroke-width="2"/>
+    <circle cx="34" cy="108" r="8" fill="none" stroke="#111" stroke-width="2.5"/><path d="M40 114 L48 122" stroke="#111" stroke-width="3"/>
+    <text x="58" y="118" fill="#555">Search</text>
+    <!-- heading -->
+    <text x="12" y="166" font-size="24" font-weight="bold">Down to Your Faucet</text>
+    <!-- video still: a water tower, and a play button -->
+    <rect x="12" y="180" width="296" height="140" fill="#DCEBF5" stroke="#444" stroke-width="2"/>
+    <path d="M12 300 H308 V320 H12 Z" fill="#B9D7A8"/>
+    <rect x="44" y="200" width="70" height="44" rx="20" fill="#FFFFFF" stroke="#333" stroke-width="2.5"/>
+    <g stroke="#333" stroke-width="3"><path d="M58 242 L50 300"/><path d="M100 242 L108 300"/></g>
+    <circle cx="210" cy="250" r="30" fill="#FFFFFF" stroke="#111" stroke-width="3"/>
+    <path d="M200 234 L200 266 L226 250 Z" fill="#111"/>
+    <!-- caption line under the video -->
+    <rect x="12" y="320" width="296" height="92" fill="#1E1E1E" stroke="#444" stroke-width="2"/>
+    <text x="22" y="346" fill="#FFFFFF">[water splashing]</text>
+    <text x="22" y="374" fill="#FFFFFF">NARRATOR: The tank fills</text>
+    <text x="22" y="400" fill="#FFFFFF">up at night.</text>
+    <!-- words and a link -->
+    <text x="12" y="446">Water rushes to each home.</text>
+    <text x="12" y="490" fill="#123E9C" text-decoration="underline">Next page: Using less water</text>
+  </g>
+</svg>

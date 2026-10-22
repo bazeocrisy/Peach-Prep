@@ -24,7 +24,9 @@ PP.addLesson({
       "Some texts tell steps or events in a certain order. You see this in how-to directions, recipes, life cycles and stories that walk through a day.",
       "First tells what starts it. Next and then tell the middle steps. Finally tells how it ends.",
       "Time words are clue words. When you see one, ask: What happened first? Next? Last?",
-      "If you mixed up the steps, the text would not make sense. You cannot water a seed before you plant it!"
+      "If you mixed up the steps, the text would not make sense. You cannot water a seed before you plant it!",
+      /* B2 (expansion 2026-10-22, author b2b): models the science-process and history items in core. */
+      "Science and history texts use sequence, too. A science text can tell how something in nature changes, one step after another, and each step can lead to the next. A history text tells events in time order, with dates and words like years later. Each paragraph or section can have its own job, such as asking a question or telling what happens afterward."
     ],
     words: [
       { term: "sequence", means: "the order that things happen in" },
@@ -232,10 +234,10 @@ PP.addLesson({
     big: "A cause is WHY something happens. An effect is WHAT happens because of it.",
     points: [
       "The cause comes first in time. The effect comes after it.",
-      "Clue words like because, so, since and as a result tell you a cause and an effect are close by.",
+      "Clue words like because, so, since and as a result tell you a cause and an effect are close by. Because and since come just before a cause. So and as a result come just before an effect.",
       "Sometimes a sentence tells the effect first: \"The game was canceled because it rained.\" The rain still happened first, so the rain is the cause.",
-      "Effects can chain together. One effect can become the cause of the next thing.",
-      "Science and history texts are full of causes and effects. Ask: What happened? Why did it happen?"
+      "Effects can chain together. One effect can become the cause of the next thing. To find the first cause, ask what started the whole chain. To guess the next effect, ask what this cause will make happen.",
+      "Science and history texts, and even how-to steps, are full of causes and effects. A history text tells events in time order, and in a cause-and-effect text each event also makes the next one happen. Each section can add one more cause or effect. Ask: What happened? Why did it happen?"
     ],
     words: [
       { term: "cause", means: "why something happens" },
@@ -308,6 +310,31 @@ PP.addLesson({
         ["Under the sand, sea oats have long roots.", "The roots spread out like a net, so they hold the sand in place.", "Strong winds cannot easily blow the dune away."],
         ["Dunes help people, too.", "During big storms, huge waves crash onto the beach.", "The dunes block many of the waves, so the homes and roads behind them stay safer."],
         ["Sea oats are protected in Georgia because they help keep the coast safe.", "It is against the law to pick them.", "People's feet can crush the plants, so visitors use wooden walkways to cross the dunes.", "Without the plants, the wind would blow the sand away."]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2c): p4 and p5 are used only by core (p4 set 2 and the set 3
+       compare item, p5 set 3); p6 only by the similar bank. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "The Town at the End of the Line", genre: "Informational text",
+      paragraphs: [
+        ["In the 1830s, Georgia leaders wanted a faster way to carry cotton and other goods to states in the north.", "Wagons on bumpy dirt roads were slow, and they could carry only small loads.", "So the state decided to build a railroad."],
+        ["Workers chose a spot in the forest where the new tracks would end.", "In 1837, they marked the spot with a post."],
+        ["Many workers came to build the railroad, and they needed places to sleep and eat.", "As a result, people built cabins and small stores near the post.", "The little town was called Terminus, a word that means \"the end of the line.\""],
+        ["Soon, other railroads were built to meet the first one there.", "Because trains now came from many directions, the town became a busy place to buy and sell goods.", "The stores and the train station needed more workers, so more families moved to town."],
+        ["As the town grew, its name changed, too.", "By 1847, it was called Atlanta.", "Today, Atlanta is the biggest city in Georgia, and trains still rumble through it."]
+      ] },
+    { id: "p5", title: "Fire in the Pine Forest", genre: "Informational text",
+      paragraphs: [
+        ["Long ago, tall longleaf pine trees covered much of south Georgia.", "These trees need something surprising to stay healthy: fire."],
+        ["For its first few years, a young longleaf pine looks like a clump of grass.", "Its long needles wrap around the bud at its tip, so a quick, low fire cannot easily hurt it."],
+        ["Every few years, lightning started low fires that crept across the forest floor.", "The fires burned up small oak trees and bushes.", "Because those plants were gone, sunlight could reach the ground.", "The young pines got the light they needed, so they grew tall."],
+        ["Later, people began putting out every forest fire they could.", "As a result, bushes and other trees grew thick under the pines.", "Their shade blocked the sunlight, so young longleaf pines had a hard time growing."],
+        ["Today, forest workers set small, careful fires called controlled burns.", "They wait for a day when the wind and weather are just right.", "These fires help the longleaf forest grow again."]
+      ] },
+    { id: "p6", title: "Why Did the Lake Turn Green?", genre: "Informational text",
+      paragraphs: [
+        ["Every summer, families swim and fish in Clear Lake.", "But one August, the water turned bright green, and it smelled bad."],
+        ["Scientists tested the water.", "They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.", "Fertilizer helps plants grow, and it helped tiny green living things called algae grow, too."],
+        ["Soon there was so much algae that the water looked like pea soup.", "As the algae died and rotted, it used up much of the air in the water, so some fish could not breathe."],
+        ["Now the town asks people to use less fertilizer and to sweep it off sidewalks and streets."]
       ] }
   ],
   practice: [
@@ -317,7 +344,7 @@ PP.addLesson({
         { text: "They tighten and relax very fast.", correct: true },
         { text: "They stop moving and rest." },
         { text: "They grow bigger and stronger." },
-        { text: "They pull your coat on for you." }
+        { text: "They stay still to keep the heat in." }
       ],
       clue: "Read paragraph 2. Find the clue words \"as a result\" and read the effect that comes after them.",
       why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that as a result of the cold message, your brain tells your muscles to tighten and relax very fast, over and over." },

@@ -1065,6 +1065,8 @@ with sync_playwright() as p:
                 chk("%s q%d" % (s, i + 1))
                 for k in range(3): q.click("#q-hint" if own else "#q-help")
                 if own: q.click("#q-how")
+                # a written (cr) core item is never scored: give it some text so Compare with the sample can run
+                if own: q.evaluate("(()=>{const c=PP_PLAYER.ctx();if(c.item.type==='cr'){c.resp.text='My answer.';c.onChange();}})()")
                 chk("%s q%d help" % (s, i + 1))
                 q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next")
         for t in ("test", "standards", "essay", "plan"):
