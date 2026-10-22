@@ -38,14 +38,15 @@ PP.addLesson({
   teach: {
     big: "Authors build a text with a plan: headings split it into sections, a pattern links the ideas, and features like captions and maps help you understand.",
     points: [
-      "Sequence tells steps or events in order. Look for clue words like first, next, then, after that, later and finally.",
+      "Sequence tells steps or events in order. Look for clue words like first, next, then, after that, later and finally. Authors use it when the order matters.",
       "Cause and effect tells what happened and why. Look for because, so, since, as a result, that is why and this caused.",
       "Compare tells how things are alike and different. Look for both, alike, same, but, however, unlike, different and while.",
-      "Problem and solution tells about a trouble and how it gets fixed. Look for problem, tried, but, decided, solved and finally.",
+      "Problem and solution tells about a trouble and how it gets fixed. Look for problem, tried, but, decided, solved and finally. Time words like then can show the tries in order, so read the whole paragraph before you decide.",
       "Description tells about one topic with details. Look for for example, such as, also, in addition, has and looks like. Stories have clue words too: one day, but, then, so, finally and in the end.",
-      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, and a text box sets apart an extra fact. In a book, the table of contents lists the chapters and the page where each one starts, so you know where to look."
+      "Features help you understand. Headings split a text into sections and tell what each one is about. Captions tell what a picture shows, maps show where places are, a diagram uses labels to name parts, and a text box sets apart an extra fact. Whole sections can follow a pattern too, such as the order things happen. To decide where a picture or a new sentence belongs, find the section that tells about the same thing. In a book, the table of contents lists the chapters and the page where each one starts, and a chapter can have sections inside it."
     ],
     words: [
+      { term: "chapter", means: "one of the big parts of a book; a chapter can have several sections inside it" },
       { term: "section", means: "one part of a text, often with its own heading" },
       { term: "heading", means: "a title above a section that tells what it is about" },
       { term: "cause", means: "why something happens" },
@@ -116,6 +117,38 @@ PP.addLesson({
         ["Long ago, large pine forests covered much of south Georgia, and many gopher tortoises lived there.", "Over many years, people cut down many of these forests to build towns, roads and farms.", "As a result, the tortoises lost much of their home."],
         ["## Working Together"],
         ["Today, people are working to solve this problem.", "Some land is now kept safe so tortoises can live there.", "Workers also set small, careful fires in these pine forests.", "The fires burn away thick bushes.", "Then sunlight can reach the ground, and the low plants that tortoises eat can grow."]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2d): p3 is used only by core set 2 and p4 only by core set 3.
+       Never used by test. NEEDS INDEPENDENT REVIEW. Pine County and Millbrook are made-up places. */
+    { id: "p3", title: "The Library on Wheels", genre: "Informational text",
+      paragraphs: [
+        ["Not every family in Georgia lives close to a library.", "In some places, the library goes out on the road instead."],
+        ["## A Long Way to Town"],
+        ["The main library in Pine County is in the small town of Millbrook.", "Many families live on farms far from town.", "For them, a trip to the library can take most of a Saturday.", "To fix this problem, the county bought a bookmobile.", "Now the library comes to them once a week."],
+        ["## Inside the Bookmobile"],
+        ["A bookmobile is a large bus with shelves instead of seats.", "It holds about 3,000 books, plus movies and books you can listen to.", "Low shelves in the back hold picture books for young readers.", "A small desk near the door has a computer for checking out books."],
+        ["## Bookmobile or Library Building?"],
+        ["Both the bookmobile and the library building lend books for free.", "Both use the same library card, too.", "However, the library building has many more books than the bus.", "The building stays in one place, while the bookmobile comes to you."],
+        ["## Did You Know?"],
+        ["Box: The first bookmobiles were wagons pulled by horses, more than 100 years ago."]
+      ],
+      figures: [
+        { after: 3, src: "assets/figures/ss1a-c-bookmobile-map.svg", label: "Figure 1", caption: "Bookmobile stops in Pine County",
+          alt: "Map of Pine County with an arrow that points north. A black square in the middle of the county marks the library building in the town of Millbrook. Four white circles, one near each corner of the county, mark bookmobile stops. Dashed lines show the bookmobile route from Millbrook out to each stop. The key has a scale bar for 5 miles. Each stop is more than two scale bars, or more than 10 miles, from Millbrook." }
+      ] },
+    { id: "p4", title: "How a Wooden Bat Is Made", genre: "Informational text",
+      paragraphs: [
+        ["Many young baseball players swing metal bats.", "In the big leagues, though, players must swing bats made of wood."],
+        ["## Wood or Metal?"],
+        ["Both kinds of bats have a thin handle and a thick barrel.", "A metal bat is hollow inside, so it is light and easy to swing.", "A wooden bat is solid, so it feels heavier.", "Unlike a metal bat, a wooden bat can crack if the ball hits it in the wrong spot."],
+        ["## From Tree to Bat"],
+        ["First, workers cut logs from ash or maple trees into long, round pieces called billets.", "Next, the billets dry for many weeks until the wood is hard.", "Then a machine spins each billet while a sharp blade shapes it into a bat.", "Finally, the bat is sanded smooth and covered with a clear, shiny coat."],
+        ["## Did You Know?"],
+        ["Box: A big-league player can break dozens of wooden bats in one season."]
+      ],
+      figures: [
+        { after: 1, src: "assets/figures/ss1a-c-bat-parts.svg", label: "Figure 1", caption: "The parts of a bat",
+          alt: "Diagram of a baseball bat seen from the side. Three labels point to its parts: knob, at the very end of the bat; handle, the thin part next to the knob; and barrel, the thick part at the other end." }
       ] }
   ],
   practice: [

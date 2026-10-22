@@ -30,8 +30,8 @@ PP.addLesson({
     ],
     words: [
       { term: "sequence", means: "the order that things happen in" },
-      { term: "step", means: "one thing you do, in order, to finish a job" },
-      { term: "time words", means: "clue words like first, next, then and finally that show order" }
+      { term: "step", means: "one thing that happens, in order, in a job or in a process" },
+      { term: "time words", means: "clue words like first, next, then and finally that show order, and words like later or over many years that show time passing" }
     ],
     example: {
       label: "What it looks like",
@@ -104,7 +104,7 @@ PP.addLesson({
     { id: "p4", title: "How Atlanta Got Its Name", genre: "Informational text",
       paragraphs: [
         ["## A Stake in the Ground"],
-        ["In 1837, workers began building a railroad that would run north to Tennessee.", "They needed to mark the spot where the tracks would start.", "So they drove a tall stake into the red clay.", "People called the spot Terminus, a word that means \"the end of the line.\""],
+        ["In 1837, workers began building a railroad that would run north to Tennessee.", "They needed to mark the spot where the tracks would end.", "So they drove a tall stake into the red clay.", "People called the spot Terminus, a word that means \"the end of the line.\""],
         ["## A Town Grows"],
         ["Soon, people came to work on the railroad.", "Then stores, houses and a hotel went up near the tracks.", "Before long, Terminus was a busy little town.", "In 1843, the town got a new name, Marthasville.", "It was named for Martha Lumpkin, the daughter of a former governor."],
         ["## The Name That Stuck"],
@@ -121,7 +121,7 @@ PP.addLesson({
         { text: "Shake the jar hard, up and down." }
       ],
       clue: "Find the time clue word that starts the steps. Then read the sentence that begins with it.",
-      why: "The answer is \"Let the cream sit out so it is not ice cold.\" Paragraph 2 starts that step with the clue word First. Pouring the cream comes next, then the lid, and shaking comes after that." },
+      why: "The answer is \"Let the cream sit out so it is not ice cold.\" Paragraph 2 starts that step with the clue word First. Every other step comes after it." },
     { id: "SK-TSSEQ-P2", type: "hottext", points: 1, dok: 1, passages: ["p1"],
       prompt: "Which sentence uses a clue word to tell the LAST step? Choose the sentence in the passage.",
       targets: ["p1:2:1", "p1:2:2", "p1:4:1", "p1:5:1", "p1:5:3"],
@@ -145,10 +145,12 @@ PP.addLesson({
         "Shake the jar until the cream turns into whipped cream.",
         "Hear a thump when a yellow lump forms.",
         "Pour off the buttermilk.",
-        "Spread the butter on toast."
+        "Rinse the butter in cold water."
       ],
+      /* B2 (b2b): the last step was "Spread the butter on toast", which is the key of Together item P2;
+         it is now the rinse step, so Together no longer pre-answers this core item. */
       clue: "Use the time clue words in the passage. Ask: Which one has to happen first? What comes after it?",
-      why: "The order is: pour the cream into the jar, shake until it turns into whipped cream, hear a thump when the lump forms, pour off the buttermilk, and spread the butter on toast. The time clue words in the passage show this order." },
+      why: "The order is: pour the cream into the jar, shake until it turns into whipped cream, hear a thump when the lump forms, pour off the buttermilk, and rinse the butter in cold water. The time clue words in the passage show this order." },
     { id: "SK-TSSEQ-P5", type: "mc", points: 1, dok: 3, passages: ["p1"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "What would most likely happen if you shook the jar BEFORE you screwed the lid on?",
       choices: [
@@ -163,15 +165,484 @@ PP.addLesson({
       prompt: "Read paragraphs 4 and 5. Which TWO words or phrases are time clue words that show the order of the steps?",
       pick: 2,
       choices: [
+        /* B2 (b2b): the weak distractors ("A yellow lump", "Rinse the butter") were replaced with
+           place phrases from the same paragraphs, a real when/where mix-up. P6 stays in Together. */
         { text: "Later", correct: true },
         { text: "After that", correct: true },
-        { text: "A yellow lump" },
-        { text: "The liquid" },
-        { text: "Rinse the butter" }
+        { text: "inside the jar" },
+        { text: "all around it" },
+        { text: "in cold water" }
       ],
-      clue: "Time clue words tell WHEN something happens. Look at the words that start each sentence.",
-      why: "The answers are Later and After that. They tell when each step happens. \"A yellow lump\" and \"The liquid\" name things, and \"Rinse the butter\" is a step, not a time word." }
+      clue: "Time clue words tell WHEN something happens. Words that tell WHERE are not time clue words.",
+      why: "The answers are Later and After that. They tell when each step happens. \"Inside the jar\", \"all around it\" and \"in cold water\" tell where something is or happens, not when." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2b; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try items P4 and P5 by id (they stay in
+     practice; the engine leaves them out of Together, so Together shows P1, P2, P3 and the revised P6).
+     New ids are numbered by their place in the fifteen. Hints and Show me how for refs and Together
+     items are in addons. Author log: docs/expansion-2026-10-22/batches/B2-b2b-author-log.md.
+     NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TSSEQ-P4" },
+      { id: "SK-TSSEQ-C02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p1"],
+        prompt: "Why does the author put paragraph 1 before any of the steps?",
+        choices: [
+          { text: "It tells what you need, so you can gather everything before the first step.", correct: true },
+          { text: "It tells the first step, so you know how to start shaking the cream." },
+          { text: "It tells what can go wrong, so you know how to fix a leaky jar." },
+          { text: "It tells the last step, so you know when the butter is ready to eat." }
+        ],
+        clue: "Each part of a how-to text has a job. Ask what a reader needs to know before the steps can start.",
+        hints: [
+          "Each part of a how-to text has a job. Ask what a reader needs to know before the steps can start.",
+          "Reread paragraph 1. Then compare it with the first sentence of paragraph 2.",
+          "Nothing goes wrong in paragraph 1, and no jar leaks, so it is not telling a problem. Test each choice that is left against what paragraph 1 says."
+        ],
+        how: [
+          "Paragraph 1 asks a question and then lists heavy cream, a clean jar with a tight lid and strong arms.",
+          "No step starts until paragraph 2, which begins with the clue word First.",
+          "The answer is \"It tells what you need, so you can gather everything before the first step.\"",
+          "Paragraph 1 gives no step and tells no problem, and the passage ends in paragraph 5, not paragraph 1."
+        ],
+        misconception: "A common mix-up is thinking every paragraph in a how-to text is a step. The opening paragraph often gets the reader ready instead.",
+        why: "The answer is \"It tells what you need, so you can gather everything before the first step.\" Paragraph 1 lists the cream, the jar and strong arms. The steps begin in paragraph 2 with First, and nothing goes wrong in the passage." },
+      { ref: "SK-TSSEQ-P5" },
+      { id: "SK-TSSEQ-C04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p1"],
+        stem: ["After that, pour off the buttermilk."],
+        prompt: "Read the sentence from paragraph 5 in the box. A student changes \"After that\" to \"First.\" Why would this change confuse a reader?",
+        choices: [
+          { text: "First would mean this is the starting step, but there is no buttermilk until after the shaking.", correct: true },
+          { text: "First would mean this step does not matter much, so a reader might skip it and go on." },
+          { text: "First is not a time clue word, so a reader could not tell when to do this step at all." },
+          { text: "First would mean the passage tells a story about a family instead of giving steps." }
+        ],
+        clue: "Time clue words tell where a step belongs in the order. Changing a clue word can change what a reader thinks happens when.",
+        hints: [
+          "Time clue words tell where a step belongs in the order. Changing a clue word can change what a reader thinks happens when.",
+          "Ask what the word First would tell a reader about this step. Then compare that with the order of paragraphs 2 through 5.",
+          "First is a time clue word, just like After that, so rule out the choice that says it is not. Test each choice that is left against what happens in paragraph 4."
+        ],
+        how: [
+          "After that tells the reader that pouring off the buttermilk comes after the earlier steps.",
+          "The buttermilk is named for the first time in paragraph 4, after lots of shaking makes the lump of butter.",
+          "If the step began with First, a reader would think to pour off buttermilk before there is any. The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\"",
+          "First is a time word, and changing it would not make the passage a story or make the step unimportant."
+        ],
+        misconception: "A common mix-up is thinking any time clue word can start any step. Each one tells where the step belongs in the order.",
+        why: "The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\" The buttermilk forms in paragraph 4, so this step must come after the shaking. First is a time word, so the other choices do not explain the problem." },
+      { id: "SK-TSSEQ-C05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Paragraph A: Checking out a book at our school library is easy. First, choose a book from the shelves. Next, carry it to the front desk. Then Mr. Ellis scans your card and the book. Last, he stamps a date inside the cover so you know when to bring it back.", "Paragraph B: Our art room is a colorful place. Paintings by every class cover the walls. Shelves hold jars of brushes, such as fat ones and skinny ones. In addition, a big sink in the corner is for washing up."],
+        prompt: "Read the two paragraphs in the box. How are they organized differently?",
+        choices: [
+          { text: "Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.", correct: true },
+          { text: "Paragraph A gives details about one place, and Paragraph B tells steps in the order they happen." },
+          { text: "Both paragraphs tell steps in the order they happen, and both use time words to show it." },
+          { text: "Paragraph A tells a problem and its solution, and Paragraph B compares two different rooms." }
+        ],
+        clue: "To find how a paragraph is organized, look at its clue words and ask what job they do.",
+        hints: [
+          "To find how a paragraph is organized, look at its clue words and ask what job they do.",
+          "Find the clue words in Paragraph A. Then find the clue words in Paragraph B.",
+          "The art room paragraph does not tell about a problem, so rule out the choice about a problem and a solution. Then match each paragraph to the job of its clue words."
+        ],
+        how: [
+          "Paragraph A uses the time words First, Next, Then and Last. It tells the steps for checking out a book, in order.",
+          "Paragraph B uses such as and in addition. It gives details about one place, the art room.",
+          "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\"",
+          "The choice that puts the steps in Paragraph B has the paragraphs backward, Paragraph B has no time words, and neither paragraph tells a problem and a solution."
+        ],
+        misconception: "A common mix-up is calling any paragraph with a list a sequence. A sequence needs steps that happen in order, shown with time words.",
+        why: "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\" Paragraph A uses First, Next, Then and Last for steps. Paragraph B uses such as and in addition to add details about the art room." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TSSEQ-C06", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p3"],
+        prompt: "Put the steps in the order they happen as water carves a cave.",
+        steps: [
+          "Rain soaks into the ground.",
+          "The water picks up a gas from dead leaves and roots.",
+          "The water seeps into cracks in the limestone.",
+          "The cracks grow into tunnels and rooms.",
+          "Dripping water builds stone icicles."
+        ],
+        clue: "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
+        hints: [
+          "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
+          "Find each step in the article. Paragraphs 2 through 5 tell the process from start to finish.",
+          "Rain soaking into the ground comes with the clue word First, so it goes at the start. Place the other steps by asking what each one needs to happen before it."
+        ],
+        how: [
+          "Paragraph 2: first, rain soaks into the ground. As it trickles through the soil, it picks up a gas from dead leaves and roots.",
+          "Paragraph 3: next, the water seeps into cracks in the limestone.",
+          "Paragraph 4: over thousands of years, the cracks grow into tunnels and rooms. Paragraph 5: after that, dripping water builds stone icicles.",
+          "The order is: rain soaks in, the water picks up a gas, it seeps into cracks, the cracks grow into tunnels and rooms, and dripping water builds stone icicles."
+        ],
+        misconception: "A common mix-up is putting the stone icicles before the cave. They form only after there is a cave ceiling for water to drip from.",
+        why: "The order is: rain soaks into the ground, the water picks up a gas, the water seeps into cracks in the limestone, the cracks grow into tunnels and rooms, and dripping water builds stone icicles. The clue words First, Next, Over thousands of years and After a very long time show this order." },
+      { id: "SK-TSSEQ-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Why does the rain need to pass through the soil before it can carve a cave?",
+          choices: [
+            { text: "Passing through the soil makes the water sour enough to eat away limestone.", correct: true },
+            { text: "The soil cleans the water so that it can flow faster into the cracks." },
+            { text: "The soil fills up the cracks so that the water has a path to follow." },
+            { text: "The soil keeps the water cold until it reaches the rock down below." }
+          ] },
+        partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+          choices: [
+            { text: "\"Limestone is soft enough that sour water can slowly eat it away.\"", correct: true },
+            { text: "\"First, rain falls and soaks into the ground.\"" },
+            { text: "\"Some of them become tunnels.\"" },
+            { text: "\"Drops still drip from the cave's ceiling.\"" }
+          ] },
+        clue: "In a science sequence, an early step often makes a later step possible. Ask what the early step changes.",
+        hints: [
+          "In a science sequence, an early step often makes a later step possible. Ask what the early step changes.",
+          "Reread paragraphs 2, 3 and 4. Follow what happens to the water on its way from the soil to the rock.",
+          "The article never says the soil makes the water flow faster, so rule out that choice. For Part B, check that the sentence you choose connects to your Part A answer."
+        ],
+        how: [
+          "Paragraph 2 says the water picks up a gas in the soil, and the gas turns it a little bit sour.",
+          "Paragraph 3 says limestone is soft enough that sour water can slowly eat it away.",
+          "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"Limestone is soft enough that sour water can slowly eat it away.\"",
+          "The article never says the soil cleans the water, fills the cracks or keeps the water cold."
+        ],
+        misconception: "A common mix-up is treating each step as separate. In a science process, one step changes something so the next step can happen.",
+        why: "Part A: Passing through the soil makes the water sour enough to eat away limestone. Part B: \"Limestone is soft enough that sour water can slowly eat it away.\" The gas from the soil turns the water sour, and sour water can wear away limestone. The article never says the soil cleans the water, fills the cracks or keeps it cold." },
+      { id: "SK-TSSEQ-C08", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p3"],
+        prompt: "Which TWO sentences use time words to tell that part of the process takes a VERY long time? Choose two sentences in the passage.",
+        targets: ["p3:2:1", "p3:3:1", "p3:4:1", "p3:4:3", "p3:5:1", "p3:5:4"],
+        answer: ["p3:4:1", "p3:5:4"], pick: 2,
+        clue: "Some time words tell order, like first and next. Others tell how much time passes. Look for the second kind.",
+        hints: [
+          "Some time words tell order, like first and next. Others tell how much time passes. Look for the second kind.",
+          "Read every sentence that starts with a time word, from paragraph 2 to paragraph 5. Choose two.",
+          "Finally tells which step is the last one in making the cave. It does not tell how long that step took. Check the other time words the same way."
+        ],
+        how: [
+          "First and Next tell the order of the steps. Finally tells the last step in making the cave. None of them tells how long a step takes.",
+          "Over thousands of years tells that the cracks take a very long time to grow.",
+          "After a very long time tells that the stone icicles take a long time to build up.",
+          "The answers are \"Over thousands of years, the cracks grow wider and wider.\" and \"After a very long time, the specks build up into stone icicles called stalactites.\""
+        ],
+        misconception: "A common mix-up is choosing Finally because it comes late. Finally tells which step is last, not how long it took.",
+        why: "The answers are \"Over thousands of years, the cracks grow wider and wider.\" and \"After a very long time, the specks build up into stone icicles called stalactites.\" Both tell how much time passes. First, Next and Finally tell order, and \"not done yet\" does not tell how long anything takes." },
+      { id: "SK-TSSEQ-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Choose the words that best complete the sentences about how the article is put together.",
+        text: "Paragraph 1 {0}. Paragraphs 2 through 4 {1}.",
+        slots: [
+          { options: ["asks a question that the article answers", "tells the last step in making a cave", "compares two different caves"], answer: 0 },
+          { options: ["tell the steps that turn rainwater into a cave", "describe what the inside of a cave looks like", "tell about a problem and how it was solved"], answer: 0 }
+        ],
+        clue: "Each part of an article has a job. Ask what each part adds to the whole.",
+        hints: [
+          "Each part of an article has a job. Ask what each part adds to the whole.",
+          "Say in a few words what paragraph 1 does for a reader before any step begins. Then do the same for paragraphs 2 through 4 together.",
+          "Paragraphs 2 through 4 never tell about anything going wrong, so they do not tell a problem and how it was solved. Read each sentence with the choices that are left."
+        ],
+        how: [
+          "Paragraph 1 asks, \"How did these rooms of rock get there?\" The rest of the article answers it.",
+          "Paragraphs 2 through 4 use First, Next and Finally to tell the steps from rain to a cave.",
+          "So the answers are: asks a question that the article answers; tell the steps that turn rainwater into a cave.",
+          "Paragraph 1 gives no step and names only one kind of cave, and paragraphs 2 through 4 tell no problem and do not describe the inside of a cave."
+        ],
+        misconception: "A common mix-up is thinking every paragraph in a sequence text tells a step. An opening paragraph can set up a question that the steps answer.",
+        why: "Paragraph 1 asks a question that the article answers. Paragraphs 2 through 4 tell the steps that turn rainwater into a cave. The article never compares two caves or tells a problem." },
+      { id: "SK-TSSEQ-C10", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+        stem: ["(1) In 1910, the town of Pine Ridge had no library.", "(2) That year, Ada Brooks set a shelf of her own books on her front porch and let neighbors borrow them.", "(3) In 1975, the town built a large new library on Main Street.", "(4) By 1932, so many people came to the porch that the town moved the books into an old bank building.", "(5) Today, the library on Main Street lends books, movies and even fishing poles."],
+        prompt: "A student wrote this history of a town library. One sentence is out of time order. Which change fixes the order?",
+        choices: [
+          { text: "Move sentence 4 so it comes right after sentence 2.", correct: true },
+          { text: "Move sentence 3 so it comes right after sentence 5." },
+          { text: "Move sentence 5 so it comes right after sentence 2." },
+          { text: "Move sentence 2 so it comes right after sentence 4." }
+        ],
+        clue: "In a history text, events go in time order. Dates and words like that year and today tell when each event happened.",
+        hints: [
+          "In a history text, events go in time order. Dates and words like that year and today tell when each event happened.",
+          "Write down the year or time word in each sentence. Then list them from earliest to latest.",
+          "Sentence 5 starts with Today, so it already belongs at the end. Check where each of the other years fits."
+        ],
+        how: [
+          "The times are: 1910, that year (1910), 1975, 1932 and today.",
+          "From earliest to latest, they go 1910, 1910, 1932, 1975 and today. So the 1932 sentence must come before the 1975 sentence.",
+          "The answer is \"Move sentence 4 so it comes right after sentence 2.\" Then the porch gets crowded before the town builds the new library.",
+          "Sentence 5 already belongs at the end, and moving sentence 2 or 3 would break the order."
+        ],
+        misconception: "A common mix-up is trusting the order the sentences are written in. Check the dates to see when each event really happened.",
+        why: "The answer is \"Move sentence 4 so it comes right after sentence 2.\" The events happened in 1910, 1932, 1975 and today, so the 1932 sentence belongs before the 1975 sentence. The other moves put a later event before an earlier one." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TSSEQ-C11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "What was the town called when each event happened? Match each event to the town's name at that time.",
+        cols: ["Terminus", "Marthasville", "Atlanta"],
+        rows: [
+          { text: "A hotel went up near the tracks.", answer: 0 },
+          { text: "A railroad leader said the name was too long.", answer: 1 },
+          { text: "A railroad leader suggested a name from the Western and Atlantic Railroad.", answer: 1 },
+          { text: "The town became one of the biggest cities in the South.", answer: 2 }
+        ],
+        clue: "In a history text, events go in time order. Keep track of what the town was called at each point.",
+        hints: [
+          "In a history text, events go in time order. Keep track of what the town was called at each point.",
+          "Find the two sentences that tell when the town got a new name. Each event happened either before or after them.",
+          "The hotel went up before the town got its second name, so it goes with Terminus. Sort the other events the same way."
+        ],
+        how: [
+          "The spot was called Terminus from 1837. In 1843, it got the name Marthasville. In 1845, it became Atlanta.",
+          "Stores, houses and a hotel went up before the 1843 name change, so the hotel goes with Terminus.",
+          "The railroad leader said Marthasville was too long and suggested Atlanta before the 1845 change, so both of those go with Marthasville.",
+          "Atlanta is one of the biggest cities in the South today, so that goes with Atlanta."
+        ],
+        misconception: "A common mix-up is matching an event to the name in its section heading. The railroad leader is in the section \"The Name That Stuck,\" but he spoke while the town was still Marthasville.",
+        why: "The hotel went up while the town was Terminus. The railroad leader said the name was too long and suggested Atlanta while it was still Marthasville, before the 1845 change. Being one of the biggest cities in the South is true of Atlanta today." },
+      { id: "SK-TSSEQ-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Why did a town grow up at Terminus?",
+          choices: [
+            { text: "The railroad brought workers, and stores and homes were built near the tracks.", correct: true },
+            { text: "Martha Lumpkin asked families from all over Georgia to move to the spot." },
+            { text: "A railroad leader gave the spot a shorter name that people liked better." },
+            { text: "The spot was already the capital of Georgia, so many people lived there." }
+          ] },
+        partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+          choices: [
+            { text: "\"Soon, people came to work on the railroad.\"", correct: true },
+            { text: "\"In 1843, the town got a new name, Marthasville.\"" },
+            { text: "\"In 1845, the town became Atlanta.\"" },
+            { text: "\"Today, Atlanta is the capital of Georgia and one of the biggest cities in the South.\"" }
+          ] },
+        clue: "In a history text, one event can lead to the next. Ask what happened before the town grew.",
+        hints: [
+          "In a history text, one event can lead to the next. Ask what happened before the town grew.",
+          "Reread the section \"A Town Grows.\" Pay attention to the order of the events in it.",
+          "The railroad leader gave a new name years after the town had already grown, so a later event cannot be the reason. For Part B, choose the sentence that matches your Part A answer."
+        ],
+        how: [
+          "The section \"A Town Grows\" tells events in order. Soon, people came to work on the railroad. Then stores, houses and a hotel went up near the tracks.",
+          "Before long, Terminus was a busy little town. So the railroad is what made the town grow.",
+          "Part A: The railroad brought workers, and stores and homes were built near the tracks. Part B: \"Soon, people came to work on the railroad.\"",
+          "The new names came after the town had grown, Martha Lumpkin never asks anyone to move, and the article says Atlanta is the capital today, not back then."
+        ],
+        misconception: "A common mix-up is choosing a later event as the reason for an earlier one. A cause comes before what it causes.",
+        why: "Part A: The railroad brought workers, and stores and homes were built near the tracks. Part B: \"Soon, people came to work on the railroad.\" The workers came first, then stores, houses and a hotel, and then Terminus was a busy town. The names and being the capital came later." },
+      { id: "SK-TSSEQ-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        stem: ["In 1847, Atlanta officially became a city."],
+        prompt: "A student wants to add the sentence in the box to the article. Where does it belong? Choose the sentence in the passage that it should come right after.",
+        targets: ["p4:2:1", "p4:4:3", "p4:4:4", "p4:6:1", "p4:6:3", "p4:6:4"],
+        answer: ["p4:6:3"], pick: 1,
+        clue: "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
+        hints: [
+          "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
+          "Find every date in the article. The new sentence has a date, too.",
+          "The 1837 sentence tells the earliest event in the article, and 1847 is ten years later, so the new sentence does not go right after it. Check the other dates and time words."
+        ],
+        how: [
+          "The dates in order are 1837, 1843 and 1845. Then the article ends with Today.",
+          "1847 comes after 1845 and before today.",
+          "So the new sentence goes right after \"In 1845, the town became Atlanta.\" in the section \"The Name That Stuck.\"",
+          "It cannot go after the 1837 or 1843 sentences, because the town did not become Atlanta until 1845, and the Today sentence tells about now."
+        ],
+        misconception: "A common mix-up is putting a new event at the very end. If the last sentence tells about today, an event from long ago belongs before it.",
+        why: "The answer is \"In 1845, the town became Atlanta.\" The new sentence tells about 1847, which comes after 1845 and before today, so it belongs between those two sentences in the section \"The Name That Stuck.\"" },
+      { id: "SK-TSSEQ-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+        stem: ["How to Patch a Bike Tube", "(1) First, flip the bike over so it rests on its seat and handlebars.", "(2) Next, take off the wheel and pull the flat tube out of the tire.", "(3) Then pump a little air into the tube and dip it in a tub of water.", "(4) Watch for a stream of tiny bubbles. That is where the air leaks out.", "(5) After that, dry the spot, rub it with sandpaper and press a patch over the hole.", "(6) Finally, put the tube back, fill it with air and put the wheel back on."],
+        prompt: "Read the directions in the box. Why do the directions say to pump a little air into the tube BEFORE dipping it in water?",
+        choices: [
+          { text: "Air must leak out of the hole to make the bubbles that show where it is.", correct: true },
+          { text: "A tube with some air in it is easier to pull out of the tire." },
+          { text: "The air dries the tube so that the patch will stick to it." },
+          { text: "The water would wash the patch away if the tube were flat." }
+        ],
+        clue: "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
+        hints: [
+          "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
+          "Find the step that each choice talks about, from step 2 to step 5. Then read the steps around the one the question names.",
+          "The tube is pulled out of the tire in step 2, before any air goes in, so that choice does not fit. Test each choice that is left against step 4."
+        ],
+        how: [
+          "Step 3 says to pump a little air into the tube and dip it in water.",
+          "Step 4 says to watch for tiny bubbles, because that is where the air leaks out.",
+          "Bubbles can form only if there is air inside to leak out. The answer is \"Air must leak out of the hole to make the bubbles that show where it is.\"",
+          "The tube is already out of the tire, drying happens in step 5, and the patch is not on yet when the tube goes in the water."
+        ],
+        misconception: "A common mix-up is choosing a reason that belongs to a different step. Match the reason to the step that comes right after.",
+        why: "The answer is \"Air must leak out of the hole to make the bubbles that show where it is.\" Step 4 says the bubbles show where the air leaks out, so there must be air in the tube first. The tube is already out of the tire, drying comes in step 5, and the patch goes on later." },
+      { id: "SK-TSSEQ-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        prompt: "Coach Reed wrote warm-up directions for the track team. Choose the time words that best complete them.",
+        text: "First, jog two laps around the track to warm up your muscles. {0} your legs feel loose, stretch your arms and legs for five minutes. {1}, line up with your team for the relay race.",
+        slots: [
+          { options: ["Once", "Before", "Because"], answer: 0 },
+          { options: ["Last", "Meanwhile", "First"], answer: 0 }
+        ],
+        clue: "Time words tell when each step happens. Pick words that keep the steps in order.",
+        hints: [
+          "Time words tell when each step happens. Pick words that keep the steps in order.",
+          "Read the whole warm-up once. Ask which step happens after jogging and which step ends the warm-up.",
+          "First is already used at the start, so it cannot also begin the step that ends the warm-up. Read each sentence with the words that are left."
+        ],
+        how: [
+          "Jogging comes first, and it warms up your muscles. The stretch comes after the jog.",
+          "Once means as soon as something has happened, so \"Once your legs feel loose\" puts the stretch after the jog.",
+          "Lining up for the race ends the warm-up, so that step starts with Last.",
+          "The answers are Once and Last. Before would put the stretch ahead of the jog that loosens your legs, and Meanwhile would mean lining up while you are still stretching."
+        ],
+        misconception: "A common mix-up is choosing a word that sounds like time but tells the wrong order, like Before or Meanwhile.",
+        why: "The answers are Once and Last. Once your legs feel loose from jogging, you stretch, and last you line up for the race. Before and Meanwhile would put the steps in the wrong order, and Because does not tell when." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. `like` lists only the
+     core items each one really practises (same component and task). */
+  similar: [
+    { id: "SK-TSSEQ-S01", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-P4", "SK-TSSEQ-C06"],
+      stem: ["Moving a plant to a bigger pot: First, put a few inches of fresh soil in the bottom of the new pot. Next, tip the old pot and gently slide the plant out. Then set the plant on top of the new soil. After that, add more soil around the roots and press it down. Finally, water the plant well."],
+      prompt: "Read the directions in the box. Put the steps in order.",
+      steps: [
+        "Put fresh soil in the bottom of the new pot.",
+        "Slide the plant out of the old pot.",
+        "Set the plant on the new soil.",
+        "Add more soil around the roots.",
+        "Water the plant well."
+      ],
+      clue: "Sequence means the order matters. Use the time clue words to find which step starts and which step ends.",
+      hints: [
+        "Sequence means the order matters. Use the time clue words to find which step starts and which step ends.",
+        "Find each step in the directions and the time word in front of it.",
+        "Watering comes with the clue word Finally, so it goes last. Place the other steps by asking what has to be done before each one."
+      ],
+      how: [
+        "First, put fresh soil in the new pot. Next, slide the plant out of the old pot.",
+        "Then set the plant on the new soil. After that, add more soil around the roots.",
+        "Finally, water the plant well. That is the order."
+      ],
+      misconception: "A common mix-up is setting the plant in the new pot before there is soil in the bottom. The clue word First tells which step gets the pot ready.",
+      why: "The order is: put fresh soil in the new pot, slide the plant out of the old pot, set it on the new soil, add more soil around the roots, and water it. The time words First, Next, Then, After that and Finally show this order." },
+    { id: "SK-TSSEQ-S02", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-P5", "SK-TSSEQ-C14"],
+      stem: ["(1) First, sand the birdhouse until the wood feels smooth.", "(2) Next, wipe off all the dust with a damp cloth.", "(3) Then let the wood dry for an hour, because paint slides off wet wood.", "(4) After that, brush on two coats of paint.", "(5) Finally, hang the birdhouse on a tree branch."],
+      prompt: "Read the directions in the box. What would most likely happen if you painted the birdhouse BEFORE you let the wood dry?",
+      choices: [
+        { text: "The paint might slide off the damp wood.", correct: true },
+        { text: "The dust would come back onto the wood." },
+        { text: "The birdhouse would be too heavy to hang." },
+        { text: "The wood would feel rough again." }
+      ],
+      clue: "In a sequence, one step often gets things ready for the next. Ask what job the earlier step does.",
+      hints: [
+        "In a sequence, one step often gets things ready for the next. Ask what job the earlier step does.",
+        "Read each step all the way through, not just its first words, and ask what each one is for.",
+        "Sanding makes the wood smooth, and nothing in the directions says paint would make it rough again, so that choice does not fit. Test the others against step 3."
+      ],
+      how: [
+        "Step 2 uses a damp cloth, so the wood is wet afterward.",
+        "Step 3 says to let the wood dry, because paint slides off wet wood.",
+        "So painting before it dries would put paint on wet wood. The answer is \"The paint might slide off the damp wood.\""
+      ],
+      misconception: "A common mix-up is guessing a result that has nothing to do with the skipped step. Ask what that step was for.",
+      why: "The answer is \"The paint might slide off the damp wood.\" Step 3 says to let the wood dry because paint slides off wet wood. The other results are not connected to drying." },
+    { id: "SK-TSSEQ-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C10", "SK-TSSEQ-C13"],
+      stem: ["(1) In 1950, Oak Street School opened with just two classrooms.", "(2) In 1968, a gym was added so students could play inside on rainy days.", "(3) Ten years after it opened, the school added six more classrooms.", "(4) In 2001, the old gym was turned into a library.", "(5) Today, more than 400 students go to Oak Street School."],
+      prompt: "A student wrote this history of a school. One sentence is out of time order. Which change fixes the order?",
+      choices: [
+        { text: "Move sentence 3 so it comes right after sentence 1.", correct: true },
+        { text: "Move sentence 3 so it comes right after sentence 4." },
+        { text: "Move sentence 4 so it comes right after sentence 1." },
+        { text: "Move sentence 5 so it comes right after sentence 1." }
+      ],
+      clue: "In a history text, events go in time order. Some sentences give a date, and some tell time by counting from another event.",
+      hints: [
+        "In a history text, events go in time order. Some sentences give a date, and some tell time by counting from another event.",
+        "Find the sentence that has no year. Work out what year it is talking about.",
+        "Sentence 5 starts with Today, so it already belongs at the end. Check where the other events fit."
+      ],
+      how: [
+        "Sentence 3 says ten years after the school opened. It opened in 1950, so that is 1960.",
+        "The events in order are 1950, 1960, 1968, 2001 and today.",
+        "The answer is \"Move sentence 3 so it comes right after sentence 1.\""
+      ],
+      misconception: "A common mix-up is skipping a sentence that has no year. Words like ten years after also tell when.",
+      why: "The answer is \"Move sentence 3 so it comes right after sentence 1.\" Ten years after 1950 is 1960, which comes before the 1968 gym. The other moves put later events before earlier ones." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1, P2,
+     P3 and P6. */
+  addons: {
+    "SK-TSSEQ-P1": {
+      hints: [
+        "Time clue words show the order of steps. Ask: What happened first?",
+        "Read paragraph 2. Ask which of its steps the others have to wait for.",
+        "Shaking the jar comes after the lid is on, so it is not the first step. Check each step that is left: does anything have to happen before it?"
+      ],
+      how: [
+        "Look for the time clue word that starts the steps: First.",
+        "Paragraph 2 begins with First: let the cream sit out so it is not ice cold.",
+        "The answer is \"Let the cream sit out so it is not ice cold.\" Every other choice comes after that step."
+      ],
+      misconception: "A common mix-up is choosing the first thing you picture doing, like pouring. The clue word First tells you where the steps start." },
+    "SK-TSSEQ-P2": {
+      hints: [
+        "Some time clue words tell where a set of steps ends. Ask: What happened last?",
+        "Each sentence you can choose starts with a time clue word. Say each clue word to yourself and think about where in a set of steps it belongs.",
+        "Later comes in paragraph 4, and more steps follow it, so it does not tell the last step. Test the other clue words the same way."
+      ],
+      how: [
+        "The sentences start with the clue words First, Next, Later, After that and Finally.",
+        "First starts the steps. Next, Later and After that tell middle steps.",
+        "Finally tells the end. The answer is \"Finally, spread your fresh butter on a warm piece of toast.\""
+      ],
+      misconception: "A common mix-up is choosing After that or Later because they come near the end. Only Finally tells the last step." },
+    "SK-TSSEQ-P3": {
+      hints: [
+        "Authors organize texts in different ways. Ask what the reader is supposed to learn from the order of the paragraphs.",
+        "Look at the words that begin the sentences in paragraphs 2 and 5.",
+        "Nothing goes wrong in the passage, so it is not a problem-and-solution text. Check the other choices against the words you found."
+      ],
+      how: [
+        "Paragraphs 2 through 5 start their steps with First, Next, Then, Later, After that and Finally.",
+        "Those time words show that the steps happen in a certain order.",
+        "The answer is \"It gives the steps for making butter in order.\" Nothing goes wrong, and the passage does not compare butter with whipped cream."
+      ],
+      misconception: "A common mix-up is choosing \"facts in no special order\" for any how-to text. Time words show the order matters." },
+    "SK-TSSEQ-P4": {
+      hints: [
+        "Sequence means the order matters. Use the time clue words to find which step starts the job and which ends it.",
+        "Find each step in the passage. Paragraphs 2 through 5 go in order, so note which paragraph each step comes from.",
+        "Pouring the cream into the jar happens in paragraph 2, before any shaking, so it goes first. Place the other four steps by asking which one has to happen before the next."
+      ],
+      how: [
+        "Paragraph 2: pour the cream into the jar.",
+        "Paragraph 3: shake until it turns into whipped cream. Paragraph 4 begins with Later: you hear a thump when a yellow lump forms.",
+        "Paragraph 5 begins with After that: pour off the buttermilk, then rinse the butter in cold water.",
+        "The order is: pour the cream, shake until it turns into whipped cream, hear the thump, pour off the buttermilk, and rinse the butter."
+      ],
+      misconception: "A common mix-up is putting steps in the order they are shown instead of the order they happen. Check each step against the passage." },
+    "SK-TSSEQ-P5": {
+      hints: [
+        "In a sequence, one step often gets things ready for the next. Ask what each step does for the steps after it.",
+        "Find the step the question names and the step that comes right before it in the passage.",
+        "Nothing in the passage says shaking changes how cold the cream is, so rule that choice out. Ask what job the lid step does for the shaking step."
+      ],
+      how: [
+        "Paragraph 2 ends with screwing the lid on tight. Paragraph 3 says to shake the jar hard, up and down.",
+        "The lid keeps the cream inside the jar while it is shaken.",
+        "Without the lid, shaking hard would send the cream out of the jar. The answer is \"The cream would spill out of the jar.\"",
+        "The butter would not form faster, and nothing in the passage says shaking changes the cream's temperature or color."
+      ],
+      misconception: "A common mix-up is guessing a result that sounds exciting instead of asking what job the earlier step does." },
+    "SK-TSSEQ-P6": {
+      hints: [
+        "Time clue words tell WHEN something happens. Words that tell WHERE are not time clue words.",
+        "Look at the first word or two of each sentence in paragraphs 4 and 5, and at the words that tell where. Choose two.",
+        "\"In cold water\" tells where you rinse the butter, not when, so it is not a time clue word. Check the other phrases the same way."
+      ],
+      how: [
+        "Paragraph 4 starts with Later, and paragraph 5 starts with After that. Both tell when a step happens.",
+        "\"Inside the jar\" and \"all around it\" tell where the thump and the liquid are. \"In cold water\" tells where you rinse the butter.",
+        "The answers are Later and After that."
+      ],
+      misconception: "A common mix-up is choosing a phrase that tells where. Time clue words tell when." }
+  },
   test: [
     { id: "SK-TSSEQ-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
       prompt: "What happens right AFTER Keisha and Grandpa wash the peaches?",
@@ -366,7 +837,7 @@ PP.addLesson({
         { text: "They stay still to keep the heat in." }
       ],
       clue: "Read paragraph 2. Find the clue words \"as a result\" and read the effect that comes after them.",
-      why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that as a result of the cold message, your brain tells your muscles to tighten and relax very fast, over and over." },
+      why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that, as a result, your brain tells your muscles to tighten and relax very fast, over and over." },
     { id: "SK-TSCE-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence uses a cause-and-effect clue word to explain why your teeth chatter? Choose the sentence in the passage.",
       targets: ["p1:1:2", "p1:3:1", "p1:3:2", "p1:3:3", "p1:4:2"],
@@ -404,19 +875,490 @@ PP.addLesson({
       clue: "First find what goosebumps do to the hairs. Then read on to see what that causes for an animal with fur.",
       why: "The answer is \"A layer of warm air is trapped next to its body.\" Goosebumps pull the hairs up straight. On a furry animal, this traps warm air next to its body." },
     { id: "SK-TSCE-P6", type: "ms", points: 2, dok: 1, passages: ["p1"],
-      prompt: "Read paragraphs 2 and 3. Which THREE words or phrases are clue words that show a cause and an effect?",
+      prompt: "The author uses clue words in paragraphs 2 and 3. Which THREE of these are clue words that show a cause and an effect?",
       pick: 3,
       choices: [
         { text: "As a result", correct: true },
         { text: "That is why", correct: true },
         { text: "Since", correct: true },
-        { text: "over and over" },
-        { text: "very fast" },
-        { text: "too" }
+        { text: "Then" },
+        { text: "Both" },
+        { text: "But" }
       ],
       clue: "Cause-and-effect clue words link WHY something happens to WHAT happens. Try each choice: does it join a cause to an effect?",
-      why: "The answers are As a result, That is why and Since. Each one links a cause to an effect. \"Over and over\" and \"very fast\" tell how the muscles move, and \"too\" just adds on." }
+      why: "The answers are As a result, That is why and Since. Each one links a cause to an effect in paragraphs 2 and 3. Then tells order, both tells how things are alike, and but often shows a difference or a try that did not work." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2c; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try items P4 and P5 by id (they stay in practice;
+     the engine leaves them out of Together, so Together shows P1, P2, P3 and P6). P6 (weak: implausible
+     distractors) and P1 (weak: silly distractor) were revised in place and stay in Together. New ids are
+     numbered by their place in the fifteen. Hints and Show me how for refs and Together items are in addons.
+     Author log: docs/expansion-2026-10-22/batches/B2-b2c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TSCE-P4" },
+      { ref: "SK-TSCE-P5" },
+      { id: "SK-TSCE-C03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p1"],
+        prompt: "The article is mostly about shivering. Why does the author include the section about goosebumps in paragraph 4?",
+        choices: [
+          { text: "to tell about another effect that cold has on the body", correct: true },
+          { text: "to explain that goosebumps are what cause shivering" },
+          { text: "to show that people need more hair to stay warm" },
+          { text: "to explain why your teeth chatter when you are cold" }
+        ],
+        clue: "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
+        hints: [
+          "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
+          "Reread the first sentence of paragraph 4. What does it say gives you goosebumps?",
+          "Paragraph 3, not paragraph 4, tells why teeth chatter, so that choice is not why paragraph 4 is there. Test each choice that is left against what paragraph 4 actually says."
+        ],
+        how: [
+          "The article tells what cold does to your body. Paragraphs 2 and 3 tell how cold causes shivering.",
+          "Paragraph 4 starts, \"Cold can also give you goosebumps.\" The word also shows that goosebumps are one more effect of the same cause, cold.",
+          "The answer is \"to tell about another effect that cold has on the body.\"",
+          "The article never says goosebumps cause shivering, it never tells people to grow more hair, and teeth chattering is in paragraph 3."
+        ],
+        misconception: "A common mix-up is thinking two effects of the same cause must cause each other. Shivering and goosebumps both come from cold.",
+        why: "The answer is \"to tell about another effect that cold has on the body.\" Paragraph 4 begins, \"Cold can also give you goosebumps,\" so it adds a second effect of cold. It never says goosebumps cause shivering or that people need more hair, and teeth chattering is explained in paragraph 3." },
+      { id: "SK-TSCE-C04", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["The bathroom floor got wet because Marcus left the water running in the tub."],
+        prompt: "Read the sentence in the box. Marcus's sister says, \"The wet floor is the cause, because the sentence tells it first.\" Which answer best explains whether she is right?",
+        choices: [
+          { text: "She is not right. The water ran first, and that made the floor wet.", correct: true },
+          { text: "She is right. The part a sentence tells first is always the cause." },
+          { text: "She is right. The wet floor made Marcus leave the water running." },
+          { text: "She is not right. There is no cause in this sentence, only an effect." }
+        ],
+        clue: "The cause always happens first in time, even when a sentence tells it second.",
+        hints: [
+          "The cause always happens first in time, even when a sentence tells it second.",
+          "Picture the bathroom. Think about what Marcus did and what happened to the floor.",
+          "A sentence can tell the effect first and the cause after because, so the order of the words is not the rule. Test each answer that is left: does its reason match what really happened?"
+        ],
+        how: [
+          "Find the clue word because. The words after it tell the cause: Marcus left the water running.",
+          "Ask which happened first in time. The water ran first, and then the floor got wet.",
+          "The answer is \"She is not right. The water ran first, and that made the floor wet.\"",
+          "The sentence tells the effect first, but that does not make it the cause. A wet floor cannot make water run, and the sentence does have a cause."
+        ],
+        misconception: "A common mix-up is calling the first part of a sentence the cause. Ask which thing happened first in time, not which words come first.",
+        why: "The answer is \"She is not right. The water ran first, and that made the floor wet.\" The sentence tells the effect first and the cause after the clue word because. A wet floor cannot make water run, and the sentence does have a cause." },
+      { id: "SK-TSCE-C05", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], pick: 2,
+        stem: ["How to Make a Sun Print", "1. Lay a few flat leaves on a sheet of sun-print paper.", "2. Set a clear sheet of plastic on top to hold the leaves flat.", "3. Leave the paper in bright sunlight for five minutes.", "4. Rinse the paper in water for one minute.", "Sunlight changes the paper wherever it touches it. After you rinse the paper, those parts turn dark blue. The parts under the leaves get no sunlight, so they stay white. That is how the leaf shapes appear."],
+        prompt: "Read the directions in the box. Which TWO mistakes would most likely make the leaf shapes hard to see?",
+        choices: [
+          { text: "leaving the paper in a dark room instead of in sunlight", correct: true },
+          { text: "skipping the plastic sheet on a windy day", correct: true },
+          { text: "using three leaves instead of just one" },
+          { text: "rinsing the paper in a bowl instead of a sink" },
+          { text: "choosing leaves that have pointed tips" }
+        ],
+        clue: "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
+        hints: [
+          "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
+          "Read the part after the steps. What does sunlight do to the paper, and why do the leaf shapes show up? Choose two.",
+          "The number of leaves does not change how each leaf prints, so that mistake would not hide the shapes. Test each mistake that is left against the sentences after the steps."
+        ],
+        how: [
+          "The paper changes only where sunlight touches it. The leaves block the light, so their shapes stay white.",
+          "In a dark room, no sunlight touches the paper, so no part turns blue and no shapes show.",
+          "With no plastic on a windy day, the leaves can move, and light gets under them, so the shapes blur.",
+          "The answers are \"leaving the paper in a dark room instead of in sunlight\" and \"skipping the plastic sheet on a windy day.\" The number of leaves, the bowl and pointed tips do not change where the light reaches."
+        ],
+        misconception: "A common mix-up is choosing any change to the steps. Only a change that affects the cause, where the sunlight reaches, changes the result.",
+        why: "The answers are \"leaving the paper in a dark room instead of in sunlight\" and \"skipping the plastic sheet on a windy day.\" The shapes appear because sunlight changes the paper everywhere except under the leaves. With no sunlight, nothing changes. With no plastic, the leaves can move and let light under them. The other changes do not affect where the light reaches." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TSCE-C06", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Why did people build cabins and small stores near the post?",
+          choices: [
+            { text: "The railroad workers needed food and a place to stay.", correct: true },
+            { text: "Trains were bringing goods from many directions." },
+            { text: "The state wanted to give a new town a name." },
+            { text: "The town had become the biggest city in Georgia." }
+          ] },
+        partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+          choices: [
+            { text: "\"Many workers came to build the railroad, and they needed places to sleep and eat.\"", correct: true },
+            { text: "\"In 1837, they marked the spot with a post.\"" },
+            { text: "\"The little town was called Terminus, a word that means \"the end of the line.\"\"" },
+            { text: "\"Soon, other railroads were built to meet the first one there.\"" }
+          ] },
+        clue: "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
+        hints: [
+          "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
+          "Find the sentence in paragraph 3 that tells about the cabins and stores. Look at the clue word it begins with.",
+          "Trains from many directions came after the town was built, in paragraph 4, so they cannot have caused the first cabins. For Part B, choose the sentence that tells the cause, not one that tells what happened next."
+        ],
+        how: [
+          "Paragraph 3 says, \"As a result, people built cabins and small stores near the post.\" As a result means the cause comes just before it.",
+          "The sentence before says many workers came to build the railroad, and they needed places to sleep and eat.",
+          "Part A: The railroad workers needed food and a place to stay. Part B: \"Many workers came to build the railroad, and they needed places to sleep and eat.\"",
+          "Trains from many directions and the big city came later, so they cannot be the cause. The post and the name do not tell why the cabins were built."
+        ],
+        misconception: "A common mix-up is choosing something that happened later. A cause has to happen before its effect.",
+        why: "Part A: The railroad workers needed food and a place to stay. Part B: \"Many workers came to build the railroad, and they needed places to sleep and eat.\" The next sentence begins with As a result, so the workers' needs caused the cabins and stores. The trains and the big city came later." },
+      { id: "SK-TSCE-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        stem: ["A student wrote: \"The town became a busy place to buy and sell goods, so trains came from many directions.\""],
+        prompt: "The clue word in the student's sentence makes the cause and effect from paragraph 4 backward. Choose the clue word that fixes it.",
+        text: "The town became a busy place to buy and sell goods {0} trains came from many directions.",
+        slots: [
+          { options: ["so", "because", "until"], answer: 1 }
+        ],
+        clue: "Because comes just before a cause. So comes just before an effect.",
+        hints: [
+          "Because comes just before a cause. So comes just before an effect.",
+          "Reread paragraph 4 to find out which of the two things happened first.",
+          "Until tells when something stops, not why it happens, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
+        ],
+        how: [
+          "Paragraph 4 says trains came from many directions, and that made the town a busy place to buy and sell goods.",
+          "So the trains are the cause, and the busy town is the effect.",
+          "In the sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
+          "With so, the sentence says the busy town made the trains come, which is backward. Until does not tell a cause at all."
+        ],
+        misconception: "A common mix-up is thinking so and because do the same job. Because points to a cause. So points to an effect.",
+        why: "The answer is because. The trains came first and made the town busy, so the cause is \"trains came from many directions.\" Because comes just before a cause. With so, the sentence would say the busy town made the trains come." },
+      { id: "SK-TSCE-C08", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which event in the article started all the others?",
+        choices: [
+          { text: "Georgia leaders wanted a faster way to carry goods.", correct: true },
+          { text: "Workers marked a spot in the forest with a post." },
+          { text: "Other railroads were built to meet the first one." },
+          { text: "The town was given the new name Atlanta." }
+        ],
+        clue: "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+        hints: [
+          "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+          "Put the four events in time order in your head. Then ask which one led to the next.",
+          "The new name came at the end of the chain, so it could not start the other events. Test each choice that is left: did something else have to happen before it?"
+        ],
+        how: [
+          "Paragraph 1 tells why there was a railroad at all: Georgia leaders wanted a faster way to carry goods, and wagons were too slow.",
+          "The answer is \"Georgia leaders wanted a faster way to carry goods.\"",
+          "The post and the other railroads could not happen until there was a plan for a railroad, and the new name came last."
+        ],
+        misconception: "A common mix-up is choosing an event from the middle of the chain. The first cause is the one that starts the whole chain.",
+        why: "The answer is \"Georgia leaders wanted a faster way to carry goods.\" The other choices could not happen until there was a plan for a railroad, and the new name came last." },
+      { id: "SK-TSCE-C09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which sentence best tells how the author organizes this article?",
+        choices: [
+          { text: "It tells events in time order, and each event causes the next one.", correct: true },
+          { text: "It tells events in time order, but the events do not affect each other." },
+          { text: "It gives the steps a reader would follow to build a railroad." },
+          { text: "It compares a small town long ago with a big city today." }
+        ],
+        clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
+        hints: [
+          "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
+          "Notice the clue words that join the sentences, such as so and as a result. What do they tell you about how the happenings connect?",
+          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the clue words you found."
+        ],
+        how: [
+          "The article goes in time order, from the 1830s to today.",
+          "Clue words such as so, as a result and because join each event to the one before it.",
+          "The answer is \"It tells events in time order, and each event causes the next one.\"",
+          "The events do affect each other, the article does not tell a reader how to build anything, and it does not go back and forth comparing the town and the city."
+        ],
+        misconception: "A common mix-up is calling a history text only time order. Check the clue words: they show that each event caused the next.",
+        why: "The answer is \"It tells events in time order, and each event causes the next one.\" The events go from the 1830s to today, and clue words such as so, as a result and because show how each one led to the next. It is not a how-to, and it does not compare." },
+      { id: "SK-TSCE-C10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which sentence tells an effect of the town becoming a busy place to buy and sell goods? Choose the sentence in the passage.",
+        targets: ["p4:2:2", "p4:3:2", "p4:3:3", "p4:4:1", "p4:4:2", "p4:4:3"],
+        answer: ["p4:4:3"], pick: 1,
+        clue: "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
+        hints: [
+          "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
+          "Find where the article says the town became busy. An effect can be told in the same sentence or in a later one.",
+          "The sentence about cabins and small stores tells an effect of the workers coming, which happened earlier. Check each other sentence: did the busy town make it happen?"
+        ],
+        how: [
+          "Paragraph 4 says the town became a busy place to buy and sell goods.",
+          "The next sentence says the stores and the train station needed more workers, so more families moved to town. The clue word so points to the effect.",
+          "The answer is \"The stores and the train station needed more workers, so more families moved to town.\"",
+          "The sentence that says the town became busy tells why it got busy, so it is the cause, not an effect of it. The other sentences happened before the town was busy."
+        ],
+        misconception: "A common mix-up is choosing the sentence that names the cause. The question asks what the busy town made happen next.",
+        why: "The answer is \"The stores and the train station needed more workers, so more families moved to town.\" The busy town needed more workers, and so more families came. The sentence about the busy town tells the cause itself, and the other sentences tell events that came before it." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TSCE-C11", type: "cr", dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p5"], rows: 4,
+        prompt: "Write one sentence about the article that tells an EFFECT first and its CAUSE second. Use the clue word because.",
+        sample: "A quick, low fire cannot easily hurt a young longleaf pine because its long needles wrap around the bud at its tip.",
+        criteria: [
+          "My sentence tells an effect from the article first.",
+          "I used because to start the cause.",
+          "The cause I wrote really happened first, and the article says it."
+        ],
+        clue: "To tell the effect first, start with what happened. Then write because and tell why it happened.",
+        hints: [
+          "To tell the effect first, start with what happened. Then write because and tell why it happened.",
+          "Choose any cause-and-effect link in the article. Paragraphs 2 and 5 each have one you could use.",
+          "Many sentences in the article tell the cause first and use so. You can flip one around: write the part after so first, then because, then the part before so."
+        ],
+        how: [
+          "Find a sentence with a cause and an effect, like the one in paragraph 2 about the needles and the bud.",
+          "Tell the effect first: a quick, low fire cannot easily hurt a young longleaf pine.",
+          "Then write because and the cause: its long needles wrap around the bud at its tip.",
+          "One good answer: \"A quick, low fire cannot easily hurt a young longleaf pine because its long needles wrap around the bud at its tip.\" Other answers can also be right."
+        ],
+        misconception: "A common mix-up is putting because in front of the effect. The words after because must tell what happened first.",
+        why: "Many answers can be right. A good sentence tells an effect from the article first, then because, then a cause the article gives. For example: \"A quick, low fire cannot easily hurt a young longleaf pine because its long needles wrap around the bud at its tip.\"" },
+      { id: "SK-TSCE-C12", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p5"], pick: 2,
+        prompt: "Which TWO things happened because people began putting out every forest fire they could?",
+        choices: [
+          { text: "Bushes and other trees grew thick under the pines.", correct: true },
+          { text: "Young longleaf pines had a hard time growing.", correct: true },
+          { text: "Sunlight could reach the forest floor." },
+          { text: "The young pines got light and grew tall." },
+          { text: "Lightning started low fires on the ground." }
+        ],
+        clue: "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
+        hints: [
+          "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
+          "Draw the chain as boxes with arrows. Start the first box with people putting out fires, and fill in the boxes that come after it. Choose two.",
+          "Lightning started fires long before people put them out, so lightning is not an effect here. Check each choice that is left: is it something that happened without fires, or with them?"
+        ],
+        how: [
+          "Paragraph 4 says people began putting out every forest fire they could.",
+          "As a result, bushes and other trees grew thick under the pines. That is the first effect.",
+          "Their shade blocked the sunlight, so young longleaf pines had a hard time growing. That is the next effect in the chain.",
+          "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" Sunlight on the floor and tall young pines happened when there were fires, and lightning came first."
+        ],
+        misconception: "A common mix-up is stopping after the first effect. In a chain, the next effect also happened because of the first cause.",
+        why: "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" With no fires, bushes and trees grew thick, and their shade kept the young pines from growing. Sunlight on the floor and tall pines came from the fires, and lightning started fires long before." },
+      /* Compares the set 2 and set 3 texts, so it carries both passages. */
+      { id: "SK-TSCE-C13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4", "p5"],
+        prompt: "Think about \"The Town at the End of the Line\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
+        cols: ["only The Town at the End of the Line", "only Fire in the Pine Forest", "both articles"],
+        rows: [
+          { text: "One event causes the next, like links in a chain.", answer: 2 },
+          { text: "A choice people made changed what happened later.", answer: 2 },
+          { text: "Something in nature starts a change.", answer: 1 },
+          { text: "A place gets its name from one of the events.", answer: 0 }
+        ],
+        clue: "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
+        hints: [
+          "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
+          "In each article, look for what starts the changes and for any choice that people make.",
+          "In \"The Town at the End of the Line,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
+        ],
+        how: [
+          "Both articles tell a chain: in each one, one event causes the next.",
+          "In both, people's choices change what happens later: Georgia builds a railroad, and people put out forest fires.",
+          "Only \"Fire in the Pine Forest\" has something in nature start a change: lightning starts fires.",
+          "Only \"The Town at the End of the Line\" tells how a place got its name from one of the events: Terminus means the end of the line."
+        ],
+        misconception: "A common mix-up is calling a sentence true for both when it fits only one article. Check it against each article on its own.",
+        why: "Both articles tell a chain of causes and effects, and in both, people's choices change what happens later. Only the pine forest article has something in nature, lightning, start a change. Only the town article tells how a place got its name from one of the events." },
+      { id: "SK-TSCE-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Dre's bike tires were low on air.", "When tires are low, more of the soft rubber presses flat against the road.", "That makes the bike harder to push forward, so the rider has to pedal harder.", "On Saturday, Dre fell far behind his friends on the big hill.", "That night, he pumped air into both tires until they were firm."],
+        prompt: "Read the story in the box. What will most likely happen the next time Dre rides up the big hill?",
+        choices: [
+          { text: "Pedaling will be easier, so he can keep up better with his friends.", correct: true },
+          { text: "Pedaling will be harder, because his tires are now full of air." },
+          { text: "His friends will slow down on the hill so that he can catch up." },
+          { text: "His tires will go flat again before he gets to the top of the hill." }
+        ],
+        clue: "To predict an effect, find the cause and ask what it will make happen.",
+        hints: [
+          "To predict an effect, find the cause and ask what it will make happen.",
+          "Reread the second and third sentences. They tell what low tires do to a bike. Then read what Dre does that night.",
+          "Nothing in the box says his friends will wait for him, so that is not an effect of anything in the story. Ask what changes for Dre's bike now that the tires are firm."
+        ],
+        how: [
+          "The box says low tires make a bike harder to push, so the rider has to pedal harder. That is why Dre fell behind.",
+          "That night, Dre pumps his tires until they are firm, so the cause of his trouble is gone.",
+          "The answer is \"Pedaling will be easier, so he can keep up better with his friends.\"",
+          "Full tires do not make pedaling harder, nothing says the tires will go flat, and his tires do not change how fast his friends ride."
+        ],
+        misconception: "A common mix-up is flipping the cause. Low tires made pedaling hard, so firm tires make it easier.",
+        why: "The answer is \"Pedaling will be easier, so he can keep up better with his friends.\" Low tires made the bike harder to push, and Dre has fixed that cause. Full tires do not make pedaling harder, nothing says they will go flat, and his tires do not change how his friends ride." },
+      { id: "SK-TSCE-C15", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+        stem: ["Fact 1: The hallway floor was wet from mopping.", "Fact 2: Two students slipped in the hallway."],
+        prompt: "A student wants to join the two facts in one sentence that shows the cause and the effect. Which TWO sentences do this correctly?",
+        choices: [
+          { text: "The hallway floor was wet from mopping, so two students slipped.", correct: true },
+          { text: "Two students slipped because the hallway floor was wet from mopping.", correct: true },
+          { text: "The hallway floor was wet from mopping because two students slipped." },
+          { text: "Two students slipped, so the hallway floor was wet from mopping." },
+          { text: "The hallway floor was wet from mopping, but two students slipped." }
+        ],
+        clue: "Because comes just before a cause. So comes just before an effect.",
+        hints: [
+          "Because comes just before a cause. So comes just before an effect.",
+          "First decide which fact happened first and made the other one happen. Choose two.",
+          "A sentence with but shows a difference or a surprise, not a cause, so it does not fit. Check each sentence that is left: is the clue word next to the right part?"
+        ],
+        how: [
+          "The floor was wet first, and the wet floor made the students slip. The wet floor is the cause, and slipping is the effect.",
+          "With so, the cause comes before the clue word: \"The hallway floor was wet from mopping, so two students slipped.\"",
+          "With because, the cause comes after the clue word: \"Two students slipped because the hallway floor was wet from mopping.\"",
+          "The other two sentences with so and because are backward, and but does not show a cause."
+        ],
+        misconception: "A common mix-up is thinking because and so can go anywhere. Because must sit right before the cause, and so right before the effect.",
+        why: "The answers are \"The hallway floor was wet from mopping, so two students slipped.\" and \"Two students slipped because the hallway floor was wet from mopping.\" The wet floor came first and made the students slip. So goes before the effect, and because goes before the cause. The other two are backward, and but does not show a cause." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new text. `like` lists only the core items
+     each one really practises (same component and task). */
+  similar: [
+    { id: "SK-TSCE-S01", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCE-C04", "SK-TSCE-C15"],
+      stem: ["The Oak Street library closed early on Friday because a pipe broke under the floor."],
+      prompt: "Read the sentence in the box. Ray says, \"The pipe broke because the library closed early.\" Which answer best explains whether Ray is right?",
+      choices: [
+        { text: "He is not right. The pipe broke first, and that made the library close.", correct: true },
+        { text: "He is right. The word because always comes right before the effect." },
+        { text: "He is right. Closing the library early made the pipe break." },
+        { text: "He is not right. The sentence does not tell a cause at all." }
+      ],
+      clue: "The cause always happens before the effect, even when a sentence tells it second. Because comes just before the cause.",
+      hints: [
+        "The cause always happens before the effect, even when a sentence tells it second. Because comes just before the cause.",
+        "Find the clue word in the box. Read the words after it, then the words before it.",
+        "The sentence has the clue word because, so it does tell a cause. Test each answer that is left: does it match what happened first?"
+      ],
+      how: [
+        "The words after because tell the cause: a pipe broke under the floor.",
+        "The pipe broke first, so the library had to close early. Ray has the cause and effect backward.",
+        "The answer is \"He is not right. The pipe broke first, and that made the library close.\"",
+        "Because comes before a cause, not an effect, and closing a library cannot break a pipe."
+      ],
+      misconception: "A common mix-up is flipping the cause and the effect when the sentence tells the effect first.",
+      why: "The answer is \"He is not right. The pipe broke first, and that made the library close.\" The words after because tell the cause. Closing a library cannot break a pipe, and because comes before a cause, not an effect." },
+    { id: "SK-TSCE-S02", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p6"],
+      like: ["SK-TSCE-C06", "SK-TSCE-C10"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What caused the algae in Clear Lake to grow so much?",
+        choices: [
+          { text: "Fertilizer from lawns and farms washed into the lake.", correct: true },
+          { text: "Some of the fish in the lake could not breathe." },
+          { text: "Families swam and fished in the lake every summer." },
+          { text: "The town asked people to use less fertilizer." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\"", correct: true },
+          { text: "\"But one August, the water turned bright green, and it smelled bad.\"" },
+          { text: "\"Soon there was so much algae that the water looked like pea soup.\"" },
+          { text: "\"Now the town asks people to use less fertilizer and to sweep it off sidewalks and streets.\"" }
+        ] },
+      clue: "A cause happens before its effect and makes it happen. Ask: Why did this happen?",
+      hints: [
+        "A cause happens before its effect and makes it happen. Ask: Why did this happen?",
+        "Find where the article first tells about the algae. Then look before it for what helped the algae grow.",
+        "The fish could not breathe after the algae grew, so that is an effect, not the cause. For Part B, choose the sentence that tells the cause."
+      ],
+      how: [
+        "Paragraph 2 says the scientists found that fertilizer had washed into the lake.",
+        "Fertilizer helps plants grow, and it helped the algae grow, too.",
+        "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\"",
+        "The fish and the green water are effects, swimming did not make algae grow, and the town's request came afterward."
+      ],
+      why: "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from nearby lawns and farms had washed into the lake during heavy rains.\" The fertilizer helped the algae grow. The green water and the fish are effects, and the town's request came later." },
+    { id: "SK-TSCE-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCE-P4", "SK-TSCE-C12"],
+      stem: ["Mrs. Ruiz took down the bird feeder in her yard.", "Without the seeds, fewer birds came to visit.", "The birds had been eating the green caterpillars on her tomato plants.", "With fewer birds around, more caterpillars lived and grew.", "By July, the caterpillars had chewed holes in almost every tomato leaf."],
+      prompt: "Read the story in the box. Which event is BOTH an effect of something before it AND a cause of something after it?",
+      choices: [
+        { text: "Fewer birds came to visit the yard.", correct: true },
+        { text: "Mrs. Ruiz took down the bird feeder." },
+        { text: "Caterpillars chewed holes in the leaves." },
+        { text: "The birds had been eating caterpillars." }
+      ],
+      clue: "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
+      hints: [
+        "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
+        "Draw the chain as boxes with arrows, starting with the bird feeder.",
+        "The chewed leaves come at the very end, so nothing in the story happens because of them. Check each choice that is left: does it have an arrow coming in and an arrow going out?"
+      ],
+      how: [
+        "The chain is: the feeder comes down → fewer birds visit → more caterpillars live → the leaves get chewed.",
+        "Taking down the feeder starts the chain, so it is only a cause. The chewed leaves end it, so they are only an effect.",
+        "The answer is \"Fewer birds came to visit the yard.\" It happens because the feeder came down, and it causes more caterpillars to live.",
+        "The birds eating caterpillars is a fact from before the story begins, not a link caused by the feeder."
+      ],
+      misconception: "A common mix-up is choosing the first or last event. A middle link has a cause before it and an effect after it.",
+      why: "The answer is \"Fewer birds came to visit the yard.\" It is an effect of taking down the feeder and a cause of more caterpillars living. The feeder starts the chain, the chewed leaves end it, and the birds eating caterpillars is a fact from before." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3 and P6. */
+  addons: {
+    "SK-TSCE-P1": {
+      hints: [
+        "An effect is what happens because of something. Clue words like as a result point to it.",
+        "Think about the order in paragraph 2: cold air comes first, and something happens to the muscles at the end. Find that last step.",
+        "Paragraph 2 never says the muscles rest, so that choice does not fit. Check each choice that is left against paragraph 2."
+      ],
+      how: [
+        "Paragraph 2 tells what happens after cold air cools your skin.",
+        "As a result, your brain tells your muscles to tighten and relax very fast, over and over.",
+        "The answer is \"They tighten and relax very fast.\" The muscles do not rest, stay still or grow."
+      ],
+      misconception: "A common mix-up is choosing something that sounds possible. Use the effect the article tells after as a result." },
+    "SK-TSCE-P2": {
+      hints: [
+        "Clue words like because, so, since and as a result tell why. Find a sentence that has one of these words AND is about teeth.",
+        "Read each sentence you can choose. Notice which ones have a cause-and-effect clue word.",
+        "\"Your teeth may have chattered, too\" is about teeth, but it has no clue word and does not tell why. Check the other sentences for both things the question asks for."
+      ],
+      how: [
+        "The question needs two things: a cause-and-effect clue word and a reason teeth chatter.",
+        "\"Since your jaw has muscles too, your teeth can chatter when you shiver\" has the clue word since, and it tells why teeth chatter.",
+        "The answer is that sentence. \"That is why shivering helps warm you up\" has a clue word, but it is about getting warm, not teeth."
+      ] },
+    "SK-TSCE-P3": {
+      hints: [
+        "Ask: Which one happened FIRST? The cause always happens first in time, even if the sentence says it second.",
+        "Find the clue word because. Read the words after it.",
+        "The box never says Lila's coat was too small, so that is not part of the sentence. Check each choice that is left: did it happen first?"
+      ],
+      how: [
+        "The clue word because comes just before the cause.",
+        "Lila was shivering first. That made her put on her coat.",
+        "The answer is \"Lila was shivering.\" Putting on the coat is the effect, and the other choices are not in the sentence."
+      ],
+      misconception: "A common mix-up is choosing the part the sentence tells first. Ask which part happened first in time." },
+    "SK-TSCE-P4": {
+      hints: [
+        "In a chain, each effect becomes the cause of the next thing. Follow the arrows one at a time.",
+        "Start at the first box. For each blank, find the box before it in the article and read what comes right after.",
+        "Your hairs falling out is not in the article at all, so that choice does not fit the first blank. For each blank, ask: does the article say this happens right after the box before it?"
+      ],
+      how: [
+        "Paragraph 2 says that when cold air cools your skin, your brain gets a message. That fills the first blank.",
+        "The brain then tells the muscles to tighten and relax very fast.",
+        "Paragraph 3 says muscles make heat when they move, so the second blank is \"your body makes heat.\"",
+        "\"Your skin gets colder\" goes the wrong way, because shivering warms you up."
+      ],
+      misconception: "A common mix-up is skipping a link in the chain. Each box must cause the very next one." },
+    "SK-TSCE-P5": {
+      hints: [
+        "An effect is what happens because of something. Find the cause first, then read on for what it makes happen.",
+        "Find the sentence that tells what goosebumps do. Then read on and ask what that does for an animal with fur.",
+        "Paragraph 4 never says fur falls out or grows back, so that choice is not an effect the article gives. Check each choice that is left against paragraph 4."
+      ],
+      how: [
+        "Paragraph 4 says goosebumps happen when tiny muscles pull your hairs up straight.",
+        "The next sentence says that on a furry animal, this traps a layer of warm air next to its body.",
+        "The answer is \"A layer of warm air is trapped next to its body.\"",
+        "The article never says fur falls out or skin loses hair, and stopping the muscles is not in paragraph 4."
+      ],
+      misconception: "A common mix-up is choosing something that sounds like it could happen but is not in the article." },
+    "SK-TSCE-P6": {
+      hints: [
+        "Cause-and-effect clue words link WHY something happens to WHAT happens. Try each choice: does it join a cause to an effect?",
+        "Find each clue word in paragraphs 2 and 3. Read the words on both sides of it.",
+        "Both tells how two things are alike, so it does not show a cause. Check each other word: does it tell why, or what happened because of something?"
+      ],
+      how: [
+        "As a result, That is why and Since each sit between a cause and its effect in paragraphs 2 and 3.",
+        "Each one tells why something happens or what happens because of something.",
+        "The answers are As a result, That is why and Since. Then tells order, both tells a likeness, and but often shows a difference."
+      ],
+      misconception: "A common mix-up is choosing any joining word. Then tells order, not why something happened." }
+  },
   test: [
     { id: "SK-TSCE-T1", type: "order", points: 2, dok: 2, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.2.b"],
       prompt: "Put the events in order, from the first cause to the last effect.",
@@ -1239,11 +2181,11 @@ PP.addLesson({
   teach: {
     big: "Compare means show how two things are ALIKE. Contrast means show how they are DIFFERENT.",
     points: [
-      "The author picks two things, often things people mix up, and goes back and forth between them.",
-      "Clue words like both, alike and same tell you the things are alike.",
+      "The author picks two things, often things people mix up, and goes back and forth between them. Many authors tell how the things are alike first, then tell the differences one topic at a time.",
+      "Clue words like both, alike and same tell you the things are alike. Sometimes there is no clue word, so ask: Is this true of both things?",
       "Clue words like but, however, unlike, different and while tell you the things are different.",
       "Watch for a clue word that switches from alike to different, like however.",
-      "Authors often compare to help you tell two things apart."
+      "Authors often compare to help you tell two things apart or choose between them. A fact that is true of both things cannot help you tell them apart."
     ],
     words: [
       { term: "compare", means: "tell how things are alike" },
@@ -1306,6 +2248,31 @@ PP.addLesson({
         ["Look at their teeth, too.", "When an alligator shuts its mouth, you see mostly its top teeth.", "When a crocodile shuts its mouth, you can see top and bottom teeth.", "It looks like it is grinning!"],
         ["Alligators live in fresh water, such as swamps and lakes, but crocodiles can live in salty water, too.", "Georgia has lots of alligators.", "In the United States, wild crocodiles live only in south Florida."],
         ["The next time you see a big reptile on TV, check its snout and its smile!"]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2c): p3 and p4 are used only by core (p3 set 2 and the set 3
+       compare item, p4 set 3); p5 only by the similar bank. Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "School Then and Now", genre: "Informational text",
+      paragraphs: [
+        ["Children in Georgia went to school in 1900, and children go to school today.", "Both groups of students learned to read, write and do math.", "Both had time to play outside, too."],
+        ["However, a school day in 1900 looked very different.", "Many children went to a one-room school.", "One teacher taught every grade in the same room, from the youngest children to the oldest."],
+        ["Today, most schools have many classrooms.", "Unlike the students in 1900, children today usually share a room with others their own age."],
+        ["Students in 1900 often wrote on small chalkboards called slates.", "They wiped the slates clean and used them again and again.", "Students today write on paper, and many also type on computers."],
+        ["Getting to school was different, too.", "Many children in 1900 walked a long way on dirt roads, while many children today ride a bus."],
+        ["The next time you sit at your desk, think about the children in that one-room school!"]
+      ] },
+    { id: "p4", title: "Canoe or Kayak?", genre: "Informational text",
+      paragraphs: [
+        ["On a sunny Saturday, you might see two kinds of small boats on the Chattahoochee River.", "One is a canoe, and the other is a kayak.", "From far away, they look alike."],
+        ["Both boats are long and narrow, with pointed ends.", "Both are moved by people using paddles, not by motors or sails.", "Both can float in shallow water where bigger boats cannot go."],
+        ["Up close, you can see the differences.", "A canoe is open on top, like a long bowl.", "Many kayaks are closed on top, and the paddler sits inside a small, round opening."],
+        ["The paddles are different, too.", "A canoe paddle has one flat blade at the end.", "A kayak paddle has a blade at each end, so the paddler dips one side and then the other."],
+        ["A canoe often has room for two or three people and a pile of camping gear.", "Most kayaks carry just one person.", "Which boat would you choose for your next trip?"]
+      ] },
+    { id: "p5", title: "Two Trucks That Help", genre: "Informational text",
+      paragraphs: [
+        ["When there is an emergency, you might hear a siren and see flashing lights.", "Both fire trucks and ambulances use sirens and lights to tell other drivers to move out of the way."],
+        ["However, the two trucks do different jobs.", "A fire truck carries long hoses, tall ladders and tanks of water.", "Firefighters use them to put out fires and to reach people high up in buildings."],
+        ["An ambulance carries a bed on wheels called a stretcher.", "Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.", "The crew uses them to care for sick or hurt people on the way to the hospital."]
       ] }
   ],
   practice: [
@@ -1343,7 +2310,7 @@ PP.addLesson({
         { text: "how frogs and toads are different", correct: true },
         { text: "a try that did not work out" },
         { text: "what happened first and next" },
-        { text: "an example of a kind of insect" }
+        { text: "a way frogs and toads are alike" }
       ],
       clue: "The word but has more than one job. Read the words on each side of it. Are they about two animals, or about a plan that failed?",
       why: "The answer is \"how frogs and toads are different.\" The sentence tells about frogs' legs, then but, then toads' legs. In compare and contrast, but shows a difference. In problem and solution, but shows a try that failed." },
@@ -1368,6 +2335,473 @@ PP.addLesson({
       clue: "A sentence about only one animal cannot tell how they are alike. Check whether each sentence is about frogs, toads or both.",
       why: "The answers are \"Both are amphibians.\" and \"They eat lots of insects, such as flies and mosquitoes.\" The second one comes right after \"Both animals are helpful to people,\" so \"they\" means both. \"Their legs are not the same, either\" is about both animals, but it tells a difference. The other sentences tell about only frogs or only toads." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2c; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try items P5 and P6 by id (they stay in practice;
+     the engine leaves them out of Together, so Together shows P1-P4). P4 (weak: one implausible distractor)
+     was revised in place and kept in Together, not core, because its frame mirrors form A T3. New ids are
+     numbered by their place in the fifteen. Hints and Show me how for refs and Together items are in addons.
+     Author log: docs/expansion-2026-10-22/batches/B2-b2c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TSCC-P5" },
+      { id: "SK-TSCC-C02", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
+        prompt: "Which TWO sentences tell a difference you could notice by watching how frogs and toads move? Choose two sentences in the passage.",
+        targets: ["p1:1:4", "p1:2:2", "p1:2:3", "p1:3:2", "p1:3:3", "p1:4:2", "p1:5:2"],
+        answer: ["p1:3:2", "p1:3:3"], pick: 2,
+        clue: "A difference is something true of one thing but not the other. Some differences you see by looking, and some by watching what the animals do.",
+        hints: [
+          "A difference is something true of one thing but not the other. Some differences you see by looking, and some by watching what the animals do.",
+          "Go through the passage one paragraph at a time. For each sentence, ask: is this about how they look, how they move, where they live, or how they are alike? Choose two.",
+          "Smooth, wet skin is something you could see or feel on a frog sitting still, so it is not about moving. Check each sentence that is left: does it tell what the animal does with its body?"
+        ],
+        how: [
+          "Paragraph 3 tells about the animals' legs and how they get around.",
+          "\"Most frogs have long back legs for big jumps, but toads have shorter legs.\" Watching, you would see frogs make big jumps.",
+          "\"Toads usually walk or take small hops.\" Watching, you would see toads walk or hop a little. Those are the two answers.",
+          "Skin is a way the animals look, and paragraph 4 tells where they live, not how they move."
+        ],
+        misconception: "A common mix-up is choosing any difference. The question asks only for a difference you could see when the animals move.",
+        why: "The answers are \"Most frogs have long back legs for big jumps, but toads have shorter legs.\" and \"Toads usually walk or take small hops.\" Both tell how the animals move: big jumps, or walking and small hops. The skin sentences tell how they look, and the sentence about ponds tells where they live." },
+      { ref: "SK-TSCC-P6" },
+      { id: "SK-TSCC-C04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
+        prompt: "Why does the author compare frogs and toads in this article?",
+        choices: [
+          { text: "to help readers tell apart two animals that look alike", correct: true },
+          { text: "to show readers that frogs are more helpful than toads" },
+          { text: "to explain how a tadpole grows into a frog or a toad" },
+          { text: "to tell readers where to go to find frogs and toads" }
+        ],
+        clue: "Authors compare for a reason. Ask what a reader can do after learning how two things are alike and different.",
+        hints: [
+          "Authors compare for a reason. Ask what a reader can do after learning how two things are alike and different.",
+          "Reread the first sentence and the last two sentences of the article.",
+          "Paragraph 5 says both animals are helpful, so the article does not show that one is more helpful. Check each choice that is left: is it something the whole article does, or only one sentence?"
+        ],
+        how: [
+          "The article begins, \"Frogs and toads look a lot alike.\"",
+          "Then it tells ways they are different: skin, legs and where they live. It ends by asking, \"Is it a frog or a toad?\"",
+          "The answer is \"to help readers tell apart two animals that look alike.\"",
+          "The article says both are helpful, it never tells how a tadpole grows, and it does not tell readers where to go."
+        ],
+        misconception: "A common mix-up is choosing a purpose that fits only one sentence. Think about what the whole article does.",
+        why: "The answer is \"to help readers tell apart two animals that look alike.\" The article starts by saying they look a lot alike, tells the differences, and ends by asking, \"Is it a frog or a toad?\" It says both are helpful, and it does not tell how tadpoles grow or where to go." },
+      { id: "SK-TSCC-C05", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["Kick scooters and skateboards are both fun to ride on a sidewalk.", "On both, the rider stands up and pushes off the ground with one foot.", "However, a scooter has a tall handlebar.", "The rider holds it and turns it to steer.", "A skateboard has no handlebar, so the rider leans left or right to turn.", "Most scooters roll on two wheels, while a skateboard rolls on four."],
+        prompt: "Read the paragraph in the box. Sort each fact into the right column.",
+        cols: ["Scooter only", "Both", "Skateboard only"],
+        rows: [
+          { text: "The rider stands up to ride.", answer: 1 },
+          { text: "The rider pushes off with one foot.", answer: 1 },
+          { text: "The rider steers with a handlebar.", answer: 0 },
+          { text: "The rider leans to turn.", answer: 2 },
+          { text: "It usually rolls on two wheels.", answer: 0 }
+        ],
+        clue: "Sort each fact by asking: Is it true of the scooter, the skateboard, or both?",
+        hints: [
+          "Sort each fact by asking: Is it true of the scooter, the skateboard, or both?",
+          "Find the clue words both, however and while in the box. Read what comes after each one.",
+          "The handlebar comes right after however, and the box says a skateboard has none, so steering with a handlebar is Scooter only. Sort the other facts the same way."
+        ],
+        how: [
+          "The second sentence uses on both: the rider stands up and pushes off with one foot. Those two facts go under Both.",
+          "After however, the box tells about the scooter's handlebar, which the rider turns to steer. That is Scooter only.",
+          "A skateboard has no handlebar, so the rider leans to turn. That is Skateboard only.",
+          "The clue word while shows that most scooters roll on two wheels and a skateboard rolls on four. Two wheels is Scooter only."
+        ],
+        misconception: "A common mix-up is putting a fact under one thing when the text says both. Look for the clue word both first.",
+        why: "Standing up and pushing off with one foot are true of both. Steering with a handlebar and rolling on two wheels are Scooter only. Leaning to turn is Skateboard only." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TSCC-C06", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "Choose the words that finish the sentence so it tells how the two groups of students are alike.",
+        text: "{0} students in 1900 and students today {1}.",
+        slots: [
+          { options: ["Both", "Only", "Unlike"], answer: 0 },
+          { options: ["learned to read, write and do math", "wrote on small chalkboards called slates", "rode a bus to get to school"], answer: 0 }
+        ],
+        clue: "To tell how two things are alike, use a compare clue word and a fact that is true of both.",
+        hints: [
+          "To tell how two things are alike, use a compare clue word and a fact that is true of both.",
+          "For each choice in the second blank, find it in the article. Is it about 1900, about today, or about both?",
+          "Unlike shows a difference, so it cannot start a sentence that tells how the groups are alike. Choose the second blank by checking each choice against the article."
+        ],
+        how: [
+          "A sentence about how things are alike starts with Both. Only and Unlike do not tell a likeness.",
+          "Paragraph 1 uses both to tell what the two groups share. Slates were used in 1900, and the bus is mostly today.",
+          "The finished sentence: \"Both students in 1900 and students today learned to read, write and do math.\""
+        ],
+        misconception: "A common mix-up is choosing a true fact about only one group. A likeness must be true of both.",
+        why: "The answers are Both and \"learned to read, write and do math.\" Paragraph 1 says both groups learned these things. Slates were used in 1900, and riding a bus is mostly today, so they are differences." },
+      { id: "SK-TSCC-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How was a classroom in 1900 different from most classrooms today?",
+          choices: [
+            { text: "Students of all ages learned together in one room.", correct: true },
+            { text: "Students learned math but did not learn to read." },
+            { text: "Students shared a room with others their own age." },
+            { text: "Students had no time at all to play outside." }
+          ] },
+        partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+          choices: [
+            { text: "\"One teacher taught every grade in the same room, from the youngest children to the oldest.\"", correct: true },
+            { text: "\"However, a school day in 1900 looked very different.\"" },
+            { text: "\"Students in 1900 often wrote on small chalkboards called slates.\"" },
+            { text: "\"Both had time to play outside, too.\"" }
+          ] },
+        clue: "To find a difference, find what is true of one thing but not the other. Look for a contrast clue word.",
+        hints: [
+          "To find a difference, find what is true of one thing but not the other. Look for a contrast clue word.",
+          "Reread paragraphs 2 and 3. Who was in the room with a child in 1900, and who is in the room with a child today?",
+          "Paragraph 1 says both groups had time to play outside, so that choice is not a difference. For Part B, choose the sentence that tells what the 1900 classroom was like, not one that only says there is a difference."
+        ],
+        how: [
+          "Paragraph 2 says many children in 1900 went to a one-room school, where one teacher taught every grade together.",
+          "Paragraph 3 says that today, unlike in 1900, children usually share a room with others their own age.",
+          "Part A: Students of all ages learned together in one room. Part B: \"One teacher taught every grade in the same room, from the youngest children to the oldest.\"",
+          "\"However, a school day in 1900 looked very different\" tells that there is a difference, but not what it is. Slates are about writing, not the classroom."
+        ],
+        misconception: "A common mix-up is choosing the fact about today. Read the question again: it asks what the 1900 classroom was like.",
+        why: "Part A: Students of all ages learned together in one room. Part B: \"One teacher taught every grade in the same room, from the youngest children to the oldest.\" Children today usually share a room with others their own age. Both groups learned to read and had time to play." },
+      { id: "SK-TSCC-C08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "How does the author organize the differences in paragraphs 2 to 5?",
+        choices: [
+          { text: "one topic at a time, telling about 1900 and then about today", correct: true },
+          { text: "all about schools in 1900 first, then all about schools today" },
+          { text: "in time order, from the first day of school to the last day" },
+          { text: "as problems in 1900 and the ways people solved them later" }
+        ],
+        clue: "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or go one topic at a time.",
+        hints: [
+          "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or go one topic at a time.",
+          "Look at the first sentence of paragraphs 4 and 5. What topic does each one start?",
+          "The article never tells about a problem and how people fixed it, so that choice does not fit. Test each choice that is left against paragraphs 4 and 5."
+        ],
+        how: [
+          "Paragraphs 2 and 3 are about classrooms: one room in 1900, many rooms today.",
+          "Paragraph 4 is about slates in 1900 and paper and computers today. Paragraph 5 is about getting to school: walking then, the bus today.",
+          "The answer is \"one topic at a time, telling about 1900 and then about today.\"",
+          "The author does not tell all about 1900 first, does not follow one school day in order, and does not tell problems and solutions."
+        ],
+        misconception: "A common mix-up is thinking the author tells everything about one thing first. Here each topic tells about both.",
+        why: "The answer is \"one topic at a time, telling about 1900 and then about today.\" Classrooms, slates and paper, and getting to school each get both times. The article does not tell all about 1900 first, does not follow one day in time order, and has no problems and solutions." },
+      { id: "SK-TSCC-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["(1) Schools in 1900 and schools today are alike in some ways.", "(2) Both kinds of schools have teachers and students.", "(3) In both, students learn to read and write.", "(4) Also, a school in 1900 often had just one room.", "(5) Most schools today have many rooms."],
+        prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
+        text: "Sentence {0} should begin with {1}",
+        slots: [
+          { options: ["2", "3", "4"], answer: 2 },
+          { options: ["Also,", "However,", "For example,"], answer: 1 }
+        ],
+        clue: "The first sentence says the schools are alike. Watch for the place where the writer switches to a difference.",
+        hints: [
+          "The first sentence says the schools are alike. Watch for the place where the writer switches to a difference.",
+          "For each sentence, ask: does it tell how the schools are alike, or how they are different? Then check its clue word.",
+          "For example adds an example, not a switch to a difference, so it does not fit the second blank. Find the sentence first, then try each word that is left at its start."
+        ],
+        how: [
+          "Sentences 2 and 3 tell how the schools are alike. Sentences 4 and 5 tell a difference: one room in 1900 and many rooms today.",
+          "Sentence 4 starts the difference, but it begins with Also, which adds one more likeness.",
+          "Sentence 4 should begin with However, the clue word that switches from alike to different.",
+          "For example would add an example, not a difference."
+        ],
+        misconception: "A common mix-up is keeping a clue word that adds on, like also, when the writer turns to a difference.",
+        why: "The answers are 4 and However. Sentences 2 and 3 tell likenesses, and sentence 4 begins the difference. Also adds one more likeness, and for example adds an example, so However is the clue word that shows the switch." },
+      { id: "SK-TSCC-C10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
+        prompt: "In paragraph 4, slates and paper are different. In what way are they ALIKE?",
+        choices: [
+          { text: "Students use both of them for writing.", correct: true },
+          { text: "Students can wipe both of them clean." },
+          { text: "Students type on both of them at school." },
+          { text: "Students in 1900 used both of them every day." }
+        ],
+        clue: "Things that are different can still be alike in some way. Ask: What is true of both?",
+        hints: [
+          "Things that are different can still be alike in some way. Ask: What is true of both?",
+          "Reread paragraph 4. What do students do with slates, and what do students do with paper?",
+          "Only slates can be wiped clean and used again, so that is not true of both. Check each choice that is left: is it true of slates and of paper?"
+        ],
+        how: [
+          "Paragraph 4 says students in 1900 wrote on slates. Students today write on paper.",
+          "So slates and paper are both used for writing, even though they are different things.",
+          "The answer is \"Students use both of them for writing.\"",
+          "Only slates were wiped clean, students type on computers, not on slates or paper, and the article does not say students in 1900 used paper."
+        ],
+        misconception: "A common mix-up is thinking that a likeness must use the word both. Ask what is true of both, even when no clue word says so.",
+        why: "The answer is \"Students use both of them for writing.\" Students in 1900 wrote on slates, and students today write on paper. Only slates were wiped clean, typing is done on computers, and the article does not say students in 1900 used paper." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TSCC-C11", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4"],
+        stem: ["A student made this chart about the article.", "Canoe only: open on top; a paddle with one blade", "Both: long and narrow; moved by paddles", "Kayak only: a paddle with a blade at each end; floats in shallow water"],
+        prompt: "One fact in the student's chart is in the wrong place. Find it and choose where it belongs.",
+        text: "The fact \"{0}\" is in the wrong place. It belongs under {1}.",
+        slots: [
+          { options: ["open on top", "moved by paddles", "floats in shallow water"], answer: 2 },
+          { options: ["Canoe only", "Kayak only", "Both"], answer: 2 }
+        ],
+        clue: "Check each fact in a chart against the article. A fact under Both must be true of both boats.",
+        hints: [
+          "Check each fact in a chart against the article. A fact under Both must be true of both boats.",
+          "For each fact in the chart, find the sentence in the article that tells about it. Read the clue word in that sentence.",
+          "\"Moved by paddles\" is in the right place, because the article says both boats use paddles. Check the other facts in the chart the same way."
+        ],
+        how: [
+          "Open on top and a one-blade paddle are canoe facts. A blade at each end is a kayak fact.",
+          "Long and narrow, and moved by paddles, are in paragraph 2 with the clue word both.",
+          "Paragraph 2 also says, \"Both can float in shallow water.\" The student put that fact under Kayak only.",
+          "So \"floats in shallow water\" is in the wrong place. It belongs under Both."
+        ],
+        misconception: "A common mix-up is putting a shared fact under only one thing. Check for the clue word both in the article.",
+        why: "The answers are \"floats in shallow water\" and Both. Paragraph 2 says both boats can float in shallow water, so it belongs under Both, not Kayak only. The other facts are in the right places." },
+      { id: "SK-TSCC-C12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4"],
+        prompt: "Ms. Grant wants to paddle down the river with her two children and their tent. Use the article. Which boat should she choose, and why?",
+        choices: [
+          { text: "a canoe, because it has room for more people and gear", correct: true },
+          { text: "a kayak, because its paddle has a blade at each end" },
+          { text: "a canoe, because both boats are moved with paddles" },
+          { text: "a kayak, because most kayaks are closed on top" }
+        ],
+        clue: "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+        hints: [
+          "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+          "List what Ms. Grant needs to bring. Then reread the paragraphs that tell differences between the boats.",
+          "Both boats are moved with paddles, so that reason cannot help her choose. Check each choice that is left: does its reason fit what she needs?"
+        ],
+        how: [
+          "Ms. Grant needs room for herself, two children and a tent.",
+          "Paragraph 5 says a canoe often has room for two or three people and a pile of camping gear, but most kayaks carry just one person.",
+          "The answer is \"a canoe, because it has room for more people and gear.\"",
+          "A two-blade paddle and a closed top do not help her carry her family, and both boats use paddles, so that cannot help her choose."
+        ],
+        misconception: "A common mix-up is giving a reason that is true but does not matter for the job, or one that is true of both things.",
+        why: "The answer is \"a canoe, because it has room for more people and gear.\" Ms. Grant needs room for three people and a tent, and a canoe often holds two or three people and camping gear, while most kayaks carry one person. The paddles and the closed top do not matter for her trip." },
+      /* Compares the set 2 and set 3 texts, so it carries both passages. */
+      { id: "SK-TSCC-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p3", "p4"],
+        prompt: "Think about \"School Then and Now\" and \"Canoe or Kayak?\" How are the two articles organized in the same way?",
+        choices: [
+          { text: "Each tells how two things are alike, then tells their differences one topic at a time.", correct: true },
+          { text: "Each compares something from long ago with something that people use today." },
+          { text: "Each tells which of the two things is better and gives reasons for that choice." },
+          { text: "Each tells the differences first and saves the ways the things are alike for the end." }
+        ],
+        clue: "To compare how two texts are organized, look at what each one does first and what it does after that.",
+        hints: [
+          "To compare how two texts are organized, look at what each one does first and what it does after that.",
+          "In each article, find where the author tells how the two things are alike, and where the author tells differences.",
+          "Only one of the articles is about long ago, so that choice is not true of both. Check each choice that is left against both articles."
+        ],
+        how: [
+          "\"School Then and Now\" tells how the students are alike in paragraph 1. Then it gives differences: classrooms, writing and getting to school.",
+          "\"Canoe or Kayak?\" tells how the boats are alike in paragraph 2. Then it gives differences: the tops, the paddles and how much they carry.",
+          "The answer is \"Each tells how two things are alike, then tells their differences one topic at a time.\"",
+          "Only the school article is about long ago, neither says one thing is better, and neither saves the likenesses for the end."
+        ],
+        misconception: "A common mix-up is choosing something true of only one article. A way they are organized the same must fit both.",
+        why: "The answer is \"Each tells how two things are alike, then tells their differences one topic at a time.\" The school article starts with likenesses in paragraph 1 and the boat article in paragraph 2, and then each goes through differences topic by topic. Only the school article is about long ago, and neither says which is better." },
+      { id: "SK-TSCC-C14", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+        stem: ["Facts about hail and snow:", "Both are frozen water that falls from clouds.", "Snow falls as soft, light flakes.", "Hail falls as hard balls of ice.", "Snow falls in cold weather.", "Hail often falls during thunderstorms, even on warm days."],
+        prompt: "A student is writing about hail and snow. Which TWO sentences use the facts in the box to compare and contrast them correctly?",
+        choices: [
+          { text: "Hail and snow are both frozen water that falls from clouds.", correct: true },
+          { text: "Snow falls as soft flakes, but hail falls as hard balls of ice.", correct: true },
+          { text: "Unlike snow, hail is frozen water that falls from clouds." },
+          { text: "Hail and snow are alike because both fall only in cold weather." },
+          { text: "Snow falls in cold weather, and hail also falls as soft flakes." }
+        ],
+        clue: "A compare sentence tells a fact true of both. A contrast sentence tells a fact true of only one. Check that the clue word fits the fact.",
+        hints: [
+          "A compare sentence tells a fact true of both. A contrast sentence tells a fact true of only one. Check that the clue word fits the fact.",
+          "For each sentence, find its facts in the box. Is each fact true of hail, of snow, or of both? Choose two.",
+          "Hail does not fall as soft flakes, so the sentence that says it does is not correct. Check each sentence that is left: does its clue word match the fact?"
+        ],
+        how: [
+          "The box says both are frozen water that falls from clouds. A sentence with both fits that fact.",
+          "Snow falls as soft flakes, and hail falls as hard balls of ice. That is a difference, so but fits.",
+          "The answers are \"Hail and snow are both frozen water that falls from clouds.\" and \"Snow falls as soft flakes, but hail falls as hard balls of ice.\"",
+          "Unlike cannot go with a fact that is true of both, hail can fall on warm days, and hail is not soft."
+        ],
+        misconception: "A common mix-up is using a contrast clue word, like unlike, with a fact that is true of both things.",
+        why: "The answers are \"Hail and snow are both frozen water that falls from clouds.\" and \"Snow falls as soft flakes, but hail falls as hard balls of ice.\" The first tells a fact true of both with both. The second tells a real difference with but. Unlike does not fit a shared fact, hail can fall on warm days, and hail is hard." },
+      { id: "SK-TSCC-C15", type: "cr", dok: 3, std: ["3.T.SS.1.a"], passages: [], rows: 4,
+        stem: ["Two ways to get from the Elm Street Library to Cedar Park:", "The walking path takes 25 minutes, is free, and goes past a duck pond.", "The city bus takes 10 minutes, costs one dollar, and stops right at the park gate.", "Both start at the library and end at Cedar Park."],
+        prompt: "Read the box. Write two sentences. In the first, tell one way the path and the bus are alike. In the second, tell one way they are different. Use a clue word in each sentence.",
+        sample: "Both the path and the bus go from the library to Cedar Park. However, the bus takes 10 minutes, while the path takes 25 minutes.",
+        criteria: [
+          "My first sentence tells something true of both ways.",
+          "My second sentence tells a real difference from the box.",
+          "I used a compare clue word, like both, and a contrast clue word, like however, but or while."
+        ],
+        clue: "A compare sentence tells something true of both. A contrast sentence tells something true of only one.",
+        hints: [
+          "A compare sentence tells something true of both. A contrast sentence tells something true of only one.",
+          "Look for the line in the box that tells what both ways share. Then pick one fact where the path and the bus are not the same.",
+          "For the second sentence, you could use however, but or while. Put one way on each side of the clue word."
+        ],
+        how: [
+          "Find a likeness: both start at the library and end at Cedar Park.",
+          "Find a difference: the bus takes 10 minutes, and the path takes 25 minutes. Cost and what you pass on the way are other differences.",
+          "Use both in the first sentence and a contrast clue word in the second.",
+          "One good answer: \"Both the path and the bus go from the library to Cedar Park. However, the bus takes 10 minutes, while the path takes 25 minutes.\" Other answers can also be right."
+        ],
+        misconception: "A common mix-up is writing two differences and no likeness. The first sentence must tell something true of both.",
+        why: "Many answers can be right. A good answer tells one likeness with a clue word like both and one real difference with a clue word like however, but or while. For example: \"Both the path and the bus go from the library to Cedar Park. However, the bus takes 10 minutes, while the path takes 25 minutes.\"" }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new text. `like` lists only the core items
+     each one really practises (same component and task). */
+  similar: [
+    { id: "SK-TSCC-S01", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-TSCC-C05", "SK-TSCC-C06", "SK-TSCC-C11"],
+      stem: ["Peaches and plums grow on trees in Georgia.", "Each fruit has one hard pit in the middle.", "A peach has fuzzy skin, but a plum has smooth, shiny skin.", "Most peaches are yellow or orange inside, while many plums are red or purple inside."],
+      prompt: "A student is making a chart about peaches and plums. Which TWO facts belong in the Both part of the chart?",
+      choices: [
+        { text: "grows on trees", correct: true },
+        { text: "has one hard pit in the middle", correct: true },
+        { text: "has fuzzy skin" },
+        { text: "has smooth, shiny skin" },
+        { text: "is red or purple inside" }
+      ],
+      clue: "A fact belongs under Both only if it is true of both things.",
+      hints: [
+        "A fact belongs under Both only if it is true of both things.",
+        "Read each sentence in the box. Is it about peaches, plums, or both fruits? Choose two.",
+        "Fuzzy skin comes before but, and it is about peaches only, so it does not belong under Both. Check each fact that is left the same way."
+      ],
+      how: [
+        "The first sentence says peaches and plums grow on trees, so that is true of both.",
+        "The second sentence says each fruit has one hard pit, so that is true of both too.",
+        "The answers are \"grows on trees\" and \"has one hard pit in the middle.\"",
+        "Fuzzy skin is peaches only, smooth skin is plums only, and red or purple inside is many plums."
+      ],
+      misconception: "A common mix-up is missing a likeness that uses a word like each instead of both.",
+      why: "The answers are \"grows on trees\" and \"has one hard pit in the middle.\" Both fruits grow on trees, and each has one hard pit. Fuzzy skin is peaches, smooth skin is plums, and red or purple inside is many plums." },
+    { id: "SK-TSCC-S02", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p5"],
+      like: ["SK-TSCC-C07", "SK-TSCC-C02"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How is an ambulance different from a fire truck?",
+        choices: [
+          { text: "It is made to care for people who are sick or hurt.", correct: true },
+          { text: "It uses a siren to tell other drivers to move." },
+          { text: "It carries tall ladders to reach high windows." },
+          { text: "It carries tanks of water to put out fires." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\"", correct: true },
+          { text: "\"Both fire trucks and ambulances use sirens and lights to tell other drivers to move out of the way.\"" },
+          { text: "\"A fire truck carries long hoses, tall ladders and tanks of water.\"" },
+          { text: "\"However, the two trucks do different jobs.\"" }
+        ] },
+      clue: "A difference is true of one thing but not the other. Look for a contrast clue word.",
+      hints: [
+        "A difference is true of one thing but not the other. Look for a contrast clue word.",
+        "Read paragraphs 2 and 3, which tell the job of each truck.",
+        "Paragraph 1 says both trucks use sirens, so that choice is not a difference. For Part B, choose the sentence that is about the ambulance."
+      ],
+      how: [
+        "Paragraph 2 says a fire truck carries hoses, ladders and water for putting out fires.",
+        "Paragraph 3 says an ambulance carries a stretcher and, unlike a fire truck, medical supplies for sick or hurt people.",
+        "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\"",
+        "Sirens are true of both trucks, and ladders and water are fire truck facts."
+      ],
+      why: "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with medical supplies, such as bandages and oxygen.\" Both trucks use sirens, and ladders and water tanks belong to the fire truck." },
+    { id: "SK-TSCC-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C12"],
+      stem: ["Darnell has two coats.", "His rain jacket is thin and waterproof, so rain rolls right off it.", "His puffy coat is thick and very warm, but it soaks up water when it gets wet.", "Both coats have hoods and zip up the front."],
+      prompt: "Tomorrow will be warm and rainy. Which coat should Darnell wear, and why?",
+      choices: [
+        { text: "the rain jacket, because it keeps him dry without being too warm", correct: true },
+        { text: "the puffy coat, because it has a hood to keep his head covered" },
+        { text: "the rain jacket, because it has a zipper up the front of it" },
+        { text: "the puffy coat, because it is thick and very warm to wear" }
+      ],
+      clue: "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+      hints: [
+        "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+        "Think about what tomorrow's weather needs. Then read what makes each coat different.",
+        "Both coats have hoods, so a hood cannot help him choose. Check each choice that is left: does its reason fit a warm, rainy day?"
+      ],
+      how: [
+        "Tomorrow will be warm and rainy, so Darnell needs to stay dry and not get too hot.",
+        "The rain jacket is thin and waterproof. The puffy coat is very warm and soaks up water.",
+        "The answer is \"the rain jacket, because it keeps him dry without being too warm.\"",
+        "Hoods and zippers are true of both coats, and a thick, warm coat is wrong for a warm day."
+      ],
+      misconception: "A common mix-up is choosing a reason that is true of both things, so it cannot help you choose.",
+      why: "The answer is \"the rain jacket, because it keeps him dry without being too warm.\" It is thin and waterproof, which fits a warm, rainy day. Both coats have hoods and zippers, and the thick puffy coat would be too warm and would soak up rain." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P5 and P6 (core set 1) and Together P1-P4. */
+  addons: {
+    "SK-TSCC-P1": {
+      hints: [
+        "Alike means true of both. Look for the clue word both, then check each choice against the passage.",
+        "Find each choice in the passage. Is it about frogs, about toads, or about both?",
+        "Dry, bumpy skin is a toad fact from paragraph 2, so it is not true of both. Check each choice that is left: does the passage say it about both animals?"
+      ],
+      how: [
+        "Paragraph 1 uses the clue word both to tell what frogs and toads share, including how they hatch.",
+        "The answer is \"Both hatch as tadpoles.\"",
+        "Dry, bumpy skin is only toads, long back legs are most frogs, and living far from ponds is many toads."
+      ] },
+    "SK-TSCC-P2": {
+      hints: [
+        "Paragraph 1 tells how frogs and toads are alike. Look for the clue word that turns toward differences.",
+        "Read the end of paragraph 1 and the start of paragraph 2.",
+        "\"Both are amphibians\" still tells how they are alike, so the switch has not happened yet. Find the first sentence that starts telling differences."
+      ],
+      how: [
+        "Paragraph 1 tells likenesses with the clue word both.",
+        "Paragraph 2 begins with However, a clue word that switches to differences.",
+        "The answer is \"However, they are different in some ways.\" The sentence after it tells the first difference, but it has no switch word."
+      ] },
+    "SK-TSCC-P3": {
+      hints: [
+        "Sort each fact by asking: Is it true of the frog, the toad, or both?",
+        "Find each fact in paragraphs 1 to 3. Look at the clue word near it.",
+        "Laying eggs is in paragraph 1 with the clue word both, so it goes in the middle. Sort the other facts the same way."
+      ],
+      how: [
+        "Paragraph 1 says both lay eggs, so laying eggs is Both.",
+        "Paragraph 2 says a frog has smooth, wet skin, and unlike a frog, a toad has dry, bumpy skin.",
+        "Paragraph 3 says most frogs have long back legs for big jumps. Smooth skin and long legs are Frog only, and dry, bumpy skin is Toad only."
+      ] },
+    "SK-TSCC-P4": {
+      hints: [
+        "The word but has more than one job. Read the words on each side of it.",
+        "Who is the first part of the sentence about? Who is the second part about?",
+        "Nothing in this sentence tells a plan or a try, so it does not show a try that failed. Check each choice that is left against the two parts of the sentence."
+      ],
+      how: [
+        "Before but, the sentence tells about frogs' legs. After but, it tells about toads' legs.",
+        "Long legs and shorter legs are not the same, so but shows a difference.",
+        "The answer is \"how frogs and toads are different.\" It is not a way they are alike, and it does not tell order or a failed try."
+      ],
+      misconception: "A common mix-up is thinking but always means a try failed. In compare and contrast, but shows a difference." },
+    "SK-TSCC-P5": {
+      hints: [
+        "Some clue words show a difference. Others tell why or tell order. Read the sentence with each choice.",
+        "Ask whether the two parts of the sentence tell the same thing about frogs and toads, or something different.",
+        "Because would tell why something happens, and nothing in this sentence gives a reason. Try each choice that is left at the start of the sentence."
+      ],
+      how: [
+        "Paragraph 4 says most frogs stay close to water, while many toads live far from ponds. That is a difference.",
+        "A difference needs a contrast clue word. Finally tells order, and because tells why.",
+        "The answer is Unlike: \"Unlike most frogs, many toads live far from ponds.\""
+      ],
+      misconception: "A common mix-up is choosing any clue word that sounds smooth. Pick the one that does the job: here, showing a difference." },
+    "SK-TSCC-P6": {
+      hints: [
+        "To be alike, a fact must be true of both animals. Clue words like both help, but also check who a word like they means.",
+        "For each sentence, find it in the passage and read the sentence just before it. Choose two.",
+        "\"Their legs are not the same, either\" is about both animals, but it tells a difference, so it does not show they are alike. Check each other sentence: is it about frogs, toads, or both?"
+      ],
+      how: [
+        "\"Both are amphibians\" uses the clue word both.",
+        "\"They eat lots of insects\" comes right after \"Both animals are helpful to people,\" so they means both animals.",
+        "The answers are \"Both are amphibians.\" and \"They eat lots of insects, such as flies and mosquitoes.\"",
+        "The other sentences tell about one animal or tell a difference."
+      ],
+      misconception: "A common mix-up is choosing a sentence about both animals that tells a difference. Alike means the same fact fits both." }
+  },
   test: [
     { id: "SK-TSCC-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence uses a clue word to show that the author is switching from how the animals are alike to how they are different? Choose the sentence in the passage.",
@@ -1454,11 +2888,12 @@ PP.addLesson({
       "Clue words like for example, such as, also and in addition tell you a detail is coming.",
       "The main idea is the big point the whole text makes. A detail is just one fact.",
       "To find the main idea, ask: What is this mostly about? Then check: Does every paragraph tell more about it?",
-      "Science and social studies books use this structure a lot."
+      /* B2 (b2b): extended to model headings and text boxes, which core sets 2 and 3 use. */
+      "Science and social studies books use this structure a lot. A heading names what its section is mostly about. A text box can hold a fun fact that is set apart because it is not a key detail."
     ],
     words: [
       { term: "topic", means: "who or what the text is about" },
-      { term: "detail", means: "one fact that tells more about the topic" },
+      { term: "detail", means: "one fact in a text. A key detail tells more about the main idea; some details are just interesting" },
       { term: "main idea", means: "the big point of the whole text, said in one sentence" }
     ],
     example: {
@@ -1488,6 +2923,17 @@ PP.addLesson({
         "Red is just one color, so it is one fact."
       ],
       answer: "\"Some apples are red\" is a detail. The main idea is that apples come in many colors."
+    },
+    /* B2 (b2b): models a heading and an interesting detail that is not a key detail. */
+    {
+      show: ["Heading: Grandpa's Window Box", "Grandpa's window box is full of plants he cooks with. It has parsley, chives and thyme. It also has peppers, such as tiny red ones that taste hot. A blue jay sometimes lands on the edge to look around."],
+      ask: "What is this section mostly about? Which detail does not tell more about it?",
+      steps: [
+        "Read the heading and the first sentence. They name the topic: the plants in Grandpa's window box that he cooks with.",
+        "Find the details: parsley, chives, thyme and tiny red peppers. Each one tells more about those plants.",
+        "Test the blue jay. It is fun to picture, but it is not a plant Grandpa cooks with, so it is not a key detail."
+      ],
+      answer: "The section is mostly about the cooking plants in Grandpa's window box. The blue jay is an interesting detail, but not a key detail."
     }
   ],
   parent: "Play \"Main Idea\" in the car or at dinner. One person describes something with three clues, and the other guesses what it is. Then ask, \"What did all three clues have in common?\"",
@@ -1507,6 +2953,27 @@ PP.addLesson({
         ["The live oak also keeps its leaves almost all year.", "Most oaks drop their leaves in the fall.", "A live oak drops its old leaves in the spring, just as new ones grow in.", "That is how it got the name live oak.", "It looks green and alive even in winter."],
         ["Live oaks are good for many living things.", "For example, squirrels, deer and birds eat its small acorns.", "In addition, a gray plant called Spanish moss often hangs from its branches like long beards."],
         ["Live oaks can live for hundreds of years.", "Some of the oldest ones grow near Savannah and on Georgia's islands."]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2b): p3 and p4 are used only by core (p3 set 2, p4 set 3).
+       Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "A Firehouse on Wheels", genre: "Informational text",
+      paragraphs: [
+        ["When there is a fire, firefighters cannot run back to the station for what they need.", "So a fire engine carries everything with it.", "You can think of it as a firehouse on wheels."],
+        ["## Water and Hoses"],
+        ["A fire engine has a big tank that holds hundreds of gallons of water.", "It also has a strong pump.", "The pump pushes water through long hoses that are folded on the back of the truck.", "When the tank runs low, firefighters hook a hose to a fire hydrant on the street."],
+        ["## Ladders for High Places"],
+        ["Ladders hang along the sides of the truck.", "Some are short, and some can stretch up past a second-floor window.", "Firefighters use them to reach people who are trapped upstairs.", "Long ago, many fire stations kept a spotted dog called a Dalmatian."],
+        ["## Tools for Tough Jobs"],
+        ["Firefighters need tools for jobs that water cannot do.", "They use axes to break through locked doors.", "Some trucks also carry a cutter strong enough to open a crushed car.", "In addition, every truck has a first-aid kit for people who are hurt.", "Most fire trucks are painted red, but some are yellow or white."]
+      ] },
+    { id: "p4", title: "Inside a Baseball Glove", genre: "Informational text",
+      paragraphs: [
+        ["A baseball glove may look like a big leather hand.", "But every part of it is made to help a player catch and hold the ball."],
+        ["The pocket is the deep, curved spot in the palm of the glove.", "It is where the ball lands.", "A good pocket is shaped like a shallow bowl, so the ball settles in and does not bounce out."],
+        ["Between the thumb and the first finger is the web.", "The web is made of strips of leather laced together.", "It works like a small net that traps the ball.", "Some webs also have open spaces, so a player can see the ball through them."],
+        ["Thick padding lines the inside of the glove.", "For example, extra padding sits under the palm, where the ball hits hardest.", "In addition, leather laces hold every part tightly together, so the glove keeps its shape."],
+        ["Box: Did You Know? The first baseball players did not wear gloves at all.", "They caught the ball with their bare hands!"],
+        ["Gloves come in many colors, such as brown, black and even bright blue.", "Some players write their number inside the thumb.", "But no matter how it looks, every part of a good glove works together to help a player make the catch."]
       ] }
   ],
   practice: [
