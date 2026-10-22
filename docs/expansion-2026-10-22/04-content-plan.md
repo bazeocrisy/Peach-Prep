@@ -207,16 +207,17 @@ The data shape is the UX/engine agent's decision. Suggested: keep `clue` as hint
 - After a reveal, the item is marked "answer shown". It never counts as correct independently. The next action offered is a similar question or Watch Me.
 
 **Worked example** (existing item SK-TT1c-P4, "Which TWO words best describe Marisol by the end of the story?"; key: honest, thoughtful):
-- **Hint 1:** "A trait is what a character is like inside. Look at what Marisol thinks and what she chooses to do, not only how she feels for a moment."
-- **Hint 2:** "Reread paragraphs 5 and 6. Who is Marisol thinking about, and what does she do with the money?"
-- **Hint 3:** "She worries that Mr. Okafor will be short of money, and then she gives back what was not hers. Pick one word that fits giving back what is not yours, and one that fits thinking about how someone else will feel. Greedy fits only her first wish, not the end."
+- **Hint 1:** "A trait is what a character is like inside. Look at what Marisol thinks and what she chooses, not only how she feels or wishes for a moment."
+- **Hint 2:** "Reread paragraph 5. Who is Marisol thinking about, and why does it bother her?"
+- **Hint 3:** "Greedy fits only her first wish, not the end of the story. Ask what kind of person her thoughts in paragraph 5 show, and what kind of person her choice by the end shows."
 - **Show me how (reveals the answer):**
-  1. Find her big choice: she returns the extra change.
-  2. Returning what is not yours shows she is honest.
-  3. Thinking about how Mr. Okafor will feel shows she is thoughtful.
-  4. Check the others: careless and shy have no evidence in the story.
-  
-  Answer: honest and thoughtful. Common mix-up: picking a feeling from one moment (excited) instead of a trait shown by her choices.
+  1. In paragraph 5, she thinks about Mr. Okafor working in the hot sun and coming up short. Caring how someone else will be affected shows she is thoughtful.
+  2. By the end, she has not kept money that was not hers, and Mr. Okafor thanks her for being honest. That shows she is honest.
+  3. Check the others: greedy fits only her first wish, and careless and shy have no evidence in the story.
+
+  Answer: honest and thoughtful. Common mix-up: picking a feeling or wish from one moment (wanting to keep the money) instead of a trait shown by her choices.
+
+**Why hint 3 looks like this** (B0 review fix, 2026-10-22). An earlier version of this example said "Pick one word that fits giving back what is not yours, and one that fits thinking about how someone else will feel". Those are the definitions of the two keys, so the hint gave the answer away. Hint 3 may rule out one tempting distractor with a reason (here, greedy), or restate the evidence. It then ends with a neutral question. It must never describe the key in other words, and it must never point at the evidence another item in the same set asks for: the earlier hint 2 sent the child to Marisol's action in paragraph 6, which was the key of another set 1 item.
 
 ### 4.7 Similar-question bank
 

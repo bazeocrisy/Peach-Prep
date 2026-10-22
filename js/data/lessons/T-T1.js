@@ -519,11 +519,11 @@ PP.addLesson({
   teach: {
     big: "What characters are like, what they want and how they change can teach me the lesson of the story.",
     points: [
-      "A trait is what a character is like on the inside, such as kind, bossy, brave or honest. You figure it out from what the character says and does.",
-      "Feelings and thoughts can change during a story. Look for clues like a red face or a big grin, and notice what a character thinks about. Thoughts can explain why a character makes a choice.",
-      "A motive is the reason a character does something. Ask: Why did they do that? What do they want? The clue word so often links a reason to a choice, and but often shows a feeling or a plan starting to change.",
-      "The lesson, or central message, is what the character learns and what the story teaches you. Look at how the character changes and what happens because of their choices. Words like in the end often lead you to it.",
-      "A lesson works for anyone, like \"Telling the truth is better than hiding a mistake.\" It is not just what happened in the story."
+      "A trait is what a character is like on the inside, such as kind, bossy, brave or honest. A feeling can change from moment to moment, but a trait shows up again and again in what a character does.",
+      "Actions are what a character does. Words are what a character says, and thoughts happen inside the character's head. Writers often show a feeling with a clue, like a big grin or a shaking lip. Use what just happened to decide what the clue means.",
+      "A motive is the reason a character does something. Ask: Why did they do that? What do they want? The clue word so often links a reason to a choice. Then ask: What happened because of that choice?",
+      "Other characters help, too. When someone reacts to the main character, ask what their words tell you about the main character's choice.",
+      "The lesson, or central message, is what the character learns and what the story teaches you. It works for anyone, like \"Telling the truth is better than hiding a mistake,\" and it is not just what happened. Once you know a character and a lesson, you can predict what the character would do somewhere new, compare two characters, and spot the same lesson in a different story."
     ],
     words: [
       { term: "trait", means: "what a character is like on the inside" },
@@ -539,34 +539,37 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["Every morning, Rosa saved half of her toast for the ducks at the pond. When one little duck could not push past the big ones, she tossed a piece right in front of it."],
-      ask: "What trait does Rosa show?",
+      show: ["Every morning, Rosa saved half of her toast for the ducks at the pond. When one little duck could not push past the big ones, she tossed a piece right in front of it. Then a goose honked at her, and Rosa jumped back, scared."],
+      ask: "What trait does Rosa show? What would she most likely do if she found a lost puppy?",
       steps: [
-        "List what Rosa does. She saves her toast for the ducks, and she makes sure the little duck gets some.",
-        "Ask what kind of person acts like that.",
-        "Check that the trait fits both actions, not just one."
+        "List what Rosa does again and again. She saves her toast for the ducks, and she makes sure the little duck gets some.",
+        "Jumping back from the goose shows a feeling for one moment: scared. A feeling is not what she is like inside.",
+        "Ask what kind of person acts like Rosa does every day. Check that the trait fits both of her actions.",
+        "To predict, ask what that kind of person would do somewhere new."
       ],
-      answer: "Rosa is kind and caring. She shares her food and makes sure even the smallest duck gets a piece."
+      answer: "Rosa is kind and caring. She would most likely help the puppy, maybe by giving it water or looking for its owner."
     },
     {
-      show: ["Jamal practiced free throws in his driveway every night until dark. In the last game, he had missed two shots, and his team lost by one point."],
-      ask: "Why does Jamal practice so hard?",
+      show: ["At recess, Tasha found a little boy crying by the swings. \"I can't find my class,\" he sobbed. Tasha thought, \"If I help him, I'll miss my turn at tetherball.\" She took his hand and walked him to the office. Because she did, his teacher found him right away. Later, the principal told Tasha, \"You made a scared boy feel safe today.\""],
+      ask: "Which sentence shows Tasha's action? What happened because of it, and why does the author include the principal's words?",
       steps: [
-        "A motive is a reason. Look for what happened before Jamal started practicing.",
-        "He missed two shots, and his team lost by just one point.",
-        "Connect the two: what does Jamal want to happen next time?"
+        "Sort the sentences. \"I can't find my class\" is what the boy says. \"If I help him\" is Tasha's thought. Taking his hand is an action, something she does.",
+        "Her thought shows she wants her turn at tetherball, but she helps anyway because the boy is lost and scared. That is her motive.",
+        "Find the result. Because she walks him to the office, his teacher finds him right away.",
+        "Ask why the principal speaks. Her words tell us how much Tasha's choice mattered."
       ],
-      answer: "He wants to make his shots next time, because his missed shots cost his team the last game."
+      answer: "Her action is \"She took his hand and walked him to the office.\" Because of it, the boy got back to his class. The principal's words show that Tasha's kind choice made a real difference."
     },
     {
       show: ["Lena wanted to win the art contest, so she copied a drawing from a book. Her friend Kwame drew his own dog, even though the lines were wobbly. The judge picked Kwame's picture because it was full of his own ideas. On the way home, Lena decided her next picture would be all hers."],
-      ask: "What lesson does this story teach?",
+      ask: "What lesson does this story teach? How are Lena and Kwame different, and what new situation would teach the same lesson?",
       steps: [
         "Find what Lena wants and what choice she makes. She wants to win, so she copies.",
-        "Find what happens because of that choice. Kwame's own drawing wins, not her copy.",
-        "Find how Lena changes at the end. Then say the lesson in a way that works for anyone."
+        "Find what happens because of that choice, and how Lena changes at the end. Then say the lesson in a way that works for anyone.",
+        "Compare the two characters. Lena copies to win, but Kwame uses his own ideas. A comparison has to fit what each one really does.",
+        "Test a new situation against the lesson, not the topic. A girl who makes up her own song instead of copying one shows the same lesson, even with no drawing in it."
       ],
-      answer: "Your own ideas are worth more than copying someone else's."
+      answer: "Your own ideas are worth more than copying someone else's. Lena copies and Kwame does not, and Lena changes at the end. A girl who writes her own song instead of copying one shows the same lesson."
     }
   ],
   parent: "After a story or a show, ask, \"Why did that character do that?\" and \"What did they learn?\" Then ask your child to name one thing from the story that proves it.",
@@ -606,9 +609,9 @@ PP.addLesson({
         ["He picked up a new wrapper.", "This time, he used a small spoonful and pinched the edge slowly, one fold at a time.", "His mandu was a little crooked, but it held together."],
         ["By dinnertime, Ji-ho had made twelve mandu.", "Some were lumpy, and some were almost as neat as Halmoni's.", "His family ate every single one, and Ji-ho smiled the whole time."]
       ] },
-    /* B0 (expansion 2026-10-22): passages p4-p8 are used only by core set 2 (p4), core set 3
-       (p5, plus p4 for one compare item) and the similar bank (p6-p8). Never used by test or testB.
-       NEEDS INDEPENDENT REVIEW (blind solve). */
+    /* B0 (expansion 2026-10-22): passages p4-p9 are used only by core set 1 (p9, one item),
+       core set 2 (p4), core set 3 (p5, plus p4 for one compare item) and the similar bank (p6-p8).
+       Never used by test or testB. NEEDS INDEPENDENT RE-REVIEW after the review fixes. */
     { id: "p4", title: "The Fun Run", genre: "Literary text",
       paragraphs: [
         ["Kendra had come in second at the Riverside Fun Run two years in a row.", "This year, she wanted the blue ribbon.", "Every evening, she ran laps around her backyard."],
@@ -616,7 +619,7 @@ PP.addLesson({
         ["Then she heard a thud behind her.", "Eli, the youngest runner, had tripped on a root.", "He sat in the dirt, holding his knee.", "His lip was shaking."],
         ["Kendra's legs wanted to keep going.", "\"If I stop, I'll never get the blue ribbon,\" she thought.", "Then she remembered how her own knee had stung when she fell off her bike last spring."],
         ["Kendra jogged back and held out her hand.", "\"Come on,\" she said.", "\"We can finish together.\""],
-        ["Kendra and Eli crossed the finish line last, side by side.", "When Kendra saw the blue ribbon on another girl's shirt, her cheeks burned."],
+        ["Kendra and Eli crossed the finish line last, side by side.", "When Kendra saw the blue ribbon on another girl's shirt, her shoulders sank."],
         ["Everyone in the crowd was clapping for the two of them.", "Eli's grandmother hurried over and hugged them both.", "Kendra had no ribbon, but her heart felt full."]
       ] },
     { id: "p5", title: "The Frogs of Willow Creek", genre: "Literary text",
@@ -647,8 +650,17 @@ PP.addLesson({
       paragraphs: [
         ["For weeks, Kiana had helped plan the Juniper Street picnic.", "She painted the signs and helped bake the corn bread.", "Everyone on the street was coming."],
         ["On Saturday morning, rain poured down.", "\"Now it's ruined,\" her brother groaned."],
-        ["Kiana stared out the window at the soggy tables in the park.", "Then she remembered the big covered porch at the community center.", "She called Mr. Ford, who kept the key."],
+        ["Kiana stared out the window at the soggy tables in the park.", "Then she remembered the big covered porch at the community center.", "She called Mr. Ford, who kept the key to the community center."],
         ["By noon, neighbors were sharing food and playing cards on the porch.", "Mr. Ford even brought out his old radio.", "The rain drummed on the roof above them, and nobody minded one bit."]
+      ] },
+    { id: "p9", title: "The Last Seat", genre: "Literary text",
+      paragraphs: [
+        ["After soccer practice, Malik climbed onto the city bus and dropped into the last empty seat.", "His legs ached, and his cleats felt as heavy as bricks."],
+        ["At the next stop, an older woman stepped on with two full grocery bags.", "She looked up and down the bus.", "Every seat was taken."],
+        ["Malik turned toward the window.", "\"I played hard all afternoon,\" he told himself.", "\"I earned this seat.\""],
+        ["Then the bus lurched, and the woman grabbed a pole to keep from falling.", "An orange tumbled out of her bag and rolled down the aisle."],
+        ["Malik stood up and waved her toward his seat.", "\"Please, take it,\" he said."],
+        ["The woman sank into the seat with a sigh.", "\"Thank you, young man,\" she said.", "Malik held on to the pole for the rest of the ride, and somehow his legs did not feel so tired anymore."]
       ] }
   ],
   practice: [
@@ -719,31 +731,34 @@ PP.addLesson({
   ],
   /* ---------- B0 reference lesson (expansion 2026-10-22, docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
      core: fifteen independent items in three sets of five. { ref } reuses an existing Try item by id
-     (P4, P5, P6 stay in practice unchanged; the engine must not also show them in Practice Together).
+     (P4, P5, P6 stay in practice unchanged; the engine leaves any practice item that core references
+     out of Practice Together, so Together shows P1-P3 only).
      New ids are numbered by their place in the fifteen (C03 is question 3), so C01, C02 and C05 are refs.
      Hints and Show me how steps for refs and for the Together items are in addons below.
-     Author log: docs/expansion-2026-10-22/batches/B0-author-log.md. NEEDS INDEPENDENT REVIEW (blind solve). */
+     Author log: docs/expansion-2026-10-22/batches/B0-author-log.md (see "Fixes after review").
+     NEEDS INDEPENDENT RE-REVIEW of the changed items listed there. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
       { ref: "SK-TT1c-P4" },
       { ref: "SK-TT1c-P5" },
-      { id: "SK-TT1c-C03", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: ["p1"],
-        prompt: "Which sentence shows the action that proves Marisol has made up her mind about the money? Choose the sentence in the passage.",
-        targets: ["p1:3:1", "p1:4:1", "p1:5:1", "p1:6:1", "p1:8:1"],
-        answer: ["p1:6:1"], pick: 1,
-        clue: "Actions are what a character does. An action can show what a character has decided, even before she says it out loud.",
+      { id: "SK-TT1c-C03", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: ["p9"],
+        prompt: "Which sentence shows something Malik does, not something he says or thinks, that proves he has decided to give up his seat? Choose the sentence in the passage.",
+        targets: ["p9:1:1", "p9:3:1", "p9:3:2", "p9:5:1", "p9:5:2", "p9:6:1"],
+        answer: ["p9:5:1"], pick: 1,
+        clue: "An action is something a character does with his body. What a character says or thinks is not an action, even when it tells you about a choice.",
         hints: [
-          "Actions are what a character does. An action can show what a character has decided, even before she says it out loud.",
-          "Marisol's mind starts to change in paragraph 5. Look in the paragraphs after that for something she does with her body, not something she feels.",
-          "The sentence in paragraph 8 tells what happens because of her choice, so it is a result. For each other sentence, ask: is Marisol doing something, or only feeling or saying something?"
+          "An action is something a character does with his body. What a character says or thinks is not an action, even when it tells you about a choice.",
+          "First find the moment in the story that could change Malik's mind. Then look for a sentence where Malik himself does something because of it.",
+          "Dropping into the seat is something Malik does, but it happens before the woman even gets on the bus, so it cannot prove this choice. Use the same test on the other sentences: when does it happen, and who is doing it?"
         ],
         how: [
-          "Sort the sentences. Counting the money is an action, but it happens before she decides anything. The whisper is something she says, and the heavy money is a feeling.",
-          "Not getting the sketchbook in paragraph 8 is a result of her choice, not the action that shows it.",
-          "The answer is \"Marisol turned around and walked back to the pie stand.\" Turning around is something she does, and it proves she has decided to give the money back."
+          "The moment that could change his mind comes in paragraph 4, when the woman almost falls.",
+          "Sort Malik's sentences. \"I played hard all afternoon\" is a thought, and \"Please, take it\" is speech. Dropping into the seat and turning toward the window are actions, but they come before his choice and point the other way.",
+          "The woman sinking into the seat is her action, and it happens because of his choice.",
+          "The answer is \"Malik stood up and waved her toward his seat.\" Standing up is something Malik does, and it proves he has decided to give up his seat."
         ],
-        misconception: "A common mix-up is picking the sentence where her feeling changes. A feeling can lead to a choice, but this question asks for an action.",
-        why: "The answer is \"Marisol turned around and walked back to the pie stand.\" Turning around is something she does, and it shows she has decided to return the money before she even speaks. Counting the money comes before her choice, the whisper is speech, the heavy money is a feeling, and missing the sketchbook is a result." },
+        misconception: "A common mix-up is choosing his words, \"Please, take it.\" Words can tell you about a choice, but this question asks for an action.",
+        why: "The answer is \"Malik stood up and waved her toward his seat.\" Standing up is something Malik does, and it proves he has decided to give the woman his seat. His words are speech, \"I played hard all afternoon\" is a thought, dropping into the seat and turning to the window come before his choice, and the woman sinking into the seat is her action." },
       { id: "SK-TT1c-C04", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p1"],
         prompt: "Mr. Okafor says, \"Not many people would come back.\" Why does the author include these words?",
         choices: [
@@ -755,17 +770,17 @@ PP.addLesson({
         clue: "Authors give a character words for a reason. Ask what the words tell you about the main character's choice and the story's lesson.",
         hints: [
           "Authors give a character words for a reason. Ask what the words tell you about the main character's choice and the story's lesson.",
-          "Reread paragraph 7. Think about what most people might do if they were handed extra money by mistake, and what Marisol did instead.",
-          "Mr. Okafor smiles and thanks her, so he is not upset. He dropped the change into her hand without looking, so it was not on purpose. Now decide what his words say about Marisol."
+          "Reread paragraph 7. Think about what most people might do if they were handed extra money by mistake.",
+          "Mr. Okafor smiles and thanks her, so he is not upset with her. Now think about what the words \"not many people\" tell you, and test each choice that is left against the story."
         ],
         how: [
           "Find his words in paragraph 7: he smiles and says not many people would come back.",
           "That means most people would keep the extra money. Marisol did not.",
-          "The answer is \"to show that what Marisol did was special, because many people would keep the money.\" His words point to the story's lesson about honesty.",
+          "The answer is \"to show that what Marisol did was special, because many people would keep the money.\" His words point to the story's lesson.",
           "Check the others: he is smiling, not upset; he gave the change without looking; and he never offers a free pie."
         ],
         misconception: "A common mix-up is reading his words as a fact about Mr. Okafor. The author uses them to tell us about Marisol's choice.",
-        why: "The answer is \"to show that what Marisol did was special, because many people would keep the money.\" Mr. Okafor means that most people would not return the extra change. His words make Marisol's honest choice stand out. He is smiling, not upset, he gave the change without looking, and he never offers a free pie." },
+        why: "The answer is \"to show that what Marisol did was special, because many people would keep the money.\" Mr. Okafor means that most people would not return the extra change. His words make Marisol's choice stand out. He is smiling, not upset, he gave the change without looking, and he never offers a free pie." },
       { ref: "SK-TT1c-P6" }
     ] },
     { title: "Set 2", items: [
@@ -773,24 +788,24 @@ PP.addLesson({
         prompt: "Kendra runs laps around her backyard every evening. What does this action show about her?",
         choices: [
           { text: "She works hard for something she wants.", correct: true },
-          { text: "She would rather be alone than with friends." },
-          { text: "She is worried that Eli will beat her." },
-          { text: "She does not like to sit still after supper." }
+          { text: "She wants to get stronger for soccer season." },
+          { text: "She runs whenever she feels bored at home." },
+          { text: "She is worried that Eli will beat her." }
         ],
         clue: "An action can show a trait. Ask why a character would do the same thing again and again.",
         hints: [
           "An action can show a trait. Ask why a character would do the same thing again and again.",
           "Read paragraph 1. Find Kendra's goal for this year, and connect it to the running.",
-          "Kendra does not meet Eli until race day, so she is not running to beat him. Ask: does she run just because she feels like moving, or because of something she wants?"
+          "Eli does not appear in the story until race day, so the running cannot be about him. Reread the sentence just before the one about laps, then test each choice that is left."
         ],
         how: [
           "Paragraph 1 says Kendra came in second two years in a row, and this year she wants the blue ribbon.",
           "She runs laps every evening to get ready. Doing that again and again shows she works hard for her goal.",
           "The answer is \"She works hard for something she wants.\"",
-          "Check the others: she has not met Eli yet, and nothing in the story says she wants to be alone or cannot sit still."
+          "Check the others: Eli is not in the story until the race, and nothing in the story mentions soccer or says she is bored."
         ],
         misconception: "A common mix-up is picking a reason that sounds possible but is not in the story. Tie the action to what the character wants.",
-        why: "The answer is \"She works hard for something she wants.\" Kendra came in second two years in a row and wants the blue ribbon, so she practices every evening. She has not met Eli yet, and the story never says she wants to be alone or cannot sit still." },
+        why: "The answer is \"She works hard for something she wants.\" Kendra came in second two years in a row and wants the blue ribbon, so she practices every evening. Eli is not in the story until the race, and the story never mentions soccer or says she is bored." },
       { id: "SK-TT1c-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.c"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Why does Kendra go back to help Eli?",
@@ -807,67 +822,68 @@ PP.addLesson({
             { text: "\"Kendra's legs wanted to keep going.\"" },
             { text: "\"This year, she wanted the blue ribbon.\"" }
           ] },
-        clue: "A motive is the reason a character does something. Ask what made Kendra stop, then find the sentence that proves it.",
+        clue: "A motive is the reason a character does something. Ask what made Kendra turn back, then find the sentence that proves it.",
         hints: [
-          "A motive is the reason a character does something. Ask what made Kendra stop, then find the sentence that proves it.",
-          "Reread paragraph 3. What does Kendra see when she looks back at Eli?",
-          "Paragraph 4 says her legs wanted to keep going, so she is not too tired. Her thought shows she knows that stopping means losing. Pick the reason that comes from what she sees, then the sentence that shows it."
+          "A motive is the reason a character does something. Ask what made Kendra turn back, then find the sentence that proves it.",
+          "Reread paragraph 3. What happens to Eli, and what do you notice about him?",
+          "Paragraph 4 says her legs wanted to keep going, so being too tired is not her reason. For Part B, the sentence you choose must match your Part A answer."
         ],
         how: [
-          "In paragraph 3, Eli trips, holds his knee, and his lip shakes. Kendra can see he is hurt and upset.",
+          "In paragraph 3, Eli trips, holds his knee, and his lip shakes. He is hurt and upset.",
           "Part A: She sees that he is hurt and upset.",
-          "Part B: \"His lip was shaking.\" That detail shows Eli is upset, and it comes right before Kendra goes back.",
-          "The others do not fit: her legs wanted to keep going, no grown-up calls to her, and she knows that stopping means losing the ribbon."
+          "Part B: \"His lip was shaking.\" That detail shows Eli is upset. It is what Kendra sees just before she decides what to do.",
+          "The others do not fit: her legs wanted to keep going, no grown-up calls to her, and paragraph 4 shows she still wants to win, so she is not going back to win."
         ],
         misconception: "A common mix-up is choosing a sentence about what Kendra wants for herself. The question asks why she goes back for Eli.",
-        why: "Part A: She sees that he is hurt and upset. Part B: \"His lip was shaking.\" Eli has tripped, is holding his knee, and his lip shakes, so Kendra goes back. She is not tired, because her legs wanted to keep going. No grown-up calls to her, and she thinks that stopping means she will never get the ribbon." },
+        why: "Part A: She sees that he is hurt and upset. Part B: \"His lip was shaking.\" Eli has tripped, is holding his knee, and his lip shakes, so Kendra goes back. She is not tired, because her legs wanted to keep going. No grown-up calls to her, and paragraph 4 shows she still wants to win, so winning is not why she goes back." },
       { id: "SK-TT1c-C08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p4"],
-        prompt: "How does Kendra feel at each moment? Match each moment to the feeling it shows.",
-        cols: ["eager", "unsure what to do", "disappointed", "happy"],
+        prompt: "How does Kendra feel at each moment? Match each moment to the feeling it shows. Use each feeling once.",
+        cols: ["eager", "unsure what to do", "disappointed", "proud"],
         rows: [
           { text: "when the whistle blows and she shoots ahead", answer: 0 },
-          { text: "when she hears Eli fall and slows down", answer: 1 },
+          { text: "when she sees Eli sitting in the dirt", answer: 1 },
           { text: "when she sees the ribbon on another girl's shirt", answer: 2 },
           { text: "when the crowd claps and Eli's grandmother hugs her", answer: 3 }
         ],
-        clue: "Writers often show a feeling with clues instead of naming it. Look at what a character's body does and what she thinks at each moment.",
+        clue: "Writers often show a feeling with clues instead of naming it. Look at what a character's body does and what has just happened at each moment.",
         hints: [
-          "Writers often show a feeling with clues instead of naming it. Look at what a character's body does and what she thinks at each moment.",
-          "Use paragraph 2 for the start, paragraph 4 for the middle, paragraph 6 for her cheeks and paragraph 7 for her heart.",
-          "In paragraph 4, her legs want to keep running, but she also remembers how a hurt knee feels. Two wishes are pulling at her at once. Work out the other three moments the same way."
+          "Writers often show a feeling with clues instead of naming it. Look at what a character's body does and what has just happened at each moment.",
+          "Use paragraph 2 for the start, paragraphs 3 and 4 for the middle, paragraph 6 for her shoulders and paragraph 7 for her heart.",
+          "In the middle, part of Kendra wants to keep running, but Eli is hurt behind her. Two wishes are pulling at her at once. Work out the other three moments the same way."
         ],
         how: [
           "Start: she shoots forward and takes the lead, so she is eager.",
           "Middle: her legs want to keep going, but Eli is hurt, so she is unsure what to do.",
-          "After the race: her cheeks burn when she sees the ribbon on another girl, so she is disappointed.",
-          "End: the crowd claps and her heart feels full, so she is happy."
+          "After the race: the ribbon she wanted for two years is on another girl, and her shoulders sink, so she is disappointed.",
+          "End: the crowd claps, she is hugged, and her heart feels full, so she is proud."
         ],
-        why: "When the whistle blows, Kendra is eager: she shoots forward. When Eli falls, she is unsure what to do: her legs want to run, but she remembers her own hurt knee. When she sees the ribbon on another girl, she is disappointed: her cheeks burn. When the crowd claps, she is happy: her heart feels full." },
+        misconception: "A common mix-up is reading a body clue by itself. Use what has just happened in the story to decide what the clue means.",
+        why: "When the whistle blows, Kendra is eager: she shoots forward. When she sees Eli in the dirt, she is unsure what to do: her legs want to run, but he is hurt. When she sees the ribbon she wanted on another girl, she is disappointed: her shoulders sink. When the crowd claps, she is proud: her heart feels full." },
       { id: "SK-TT1c-C09", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p4"],
-        prompt: "Which TWO sentences tell what Kendra thinks or remembers before she goes back for Eli? Choose two sentences in the passage.",
-        targets: ["p4:2:2", "p4:3:1", "p4:4:1", "p4:4:2", "p4:4:3", "p4:6:2"],
+        prompt: "Which TWO sentences show what is going on in Kendra's mind before she goes back for Eli? Choose two sentences in the passage.",
+        targets: ["p4:2:2", "p4:3:1", "p4:3:4", "p4:4:1", "p4:4:2", "p4:4:3", "p4:6:2"],
         answer: ["p4:4:2", "p4:4:3"], pick: 2,
-        clue: "Thoughts happen inside a character's head. Words like thought, knew or remembered can be clues. Something she sees, or something her body does, is not a thought.",
+        clue: "A thought happens inside a character's head. Something she sees, or something her body does, is not a thought.",
         hints: [
-          "Thoughts happen inside a character's head. Words like thought, knew or remembered can be clues. Something she sees, or something her body does, is not a thought.",
-          "Look at the paragraph where Kendra slows down, just before she jogs back. Two of its sentences happen inside her head.",
-          "One sentence in that paragraph tells what Kendra's legs want. That is her body, not a thought. Look for words going through her mind and for a memory from another time."
+          "A thought happens inside a character's head. Something she sees, or something her body does, is not a thought.",
+          "Look at the part of the story between Eli's fall and the moment Kendra jogs back.",
+          "The thud is something that happens, not something Kendra thinks. Check each sentence that is left: is it in her mind, or is it something she sees or something her body does?"
         ],
         how: [
-          "Paragraph 4 happens just before Kendra goes back.",
+          "Paragraphs 3 and 4 come between Eli's fall and Kendra going back.",
           "\"If I stop, I'll never get the blue ribbon,\" she thought. These are words in her head.",
-          "\"Then she remembered how her own knee had stung when she fell off her bike last spring.\" A memory is a thought, too.",
-          "Her legs wanting to keep going is her body. The thud and being in the lead are events, and her burning cheeks come after the race."
+          "\"Then she remembered how her own knee had stung when she fell off her bike last spring.\" A memory is in her mind, too.",
+          "Her legs wanting to keep going is her body, and Eli's shaking lip is something she sees. Being in the lead and the thud are events, and her shoulders sink after the race."
         ],
-        misconception: "A common mix-up is choosing a sentence about her body or her feelings. A thought is what goes on in her mind.",
-        why: "The answers are \"If I stop, I'll never get the blue ribbon,\" she thought, and \"Then she remembered how her own knee had stung when she fell off her bike last spring.\" The first is her thought, and the second is a memory. Her legs wanting to keep going is her body, and the other sentences are events." },
+        misconception: "A common mix-up is choosing a sentence about her body or about what she sees. A thought is what goes on in her mind.",
+        why: "The answers are \"If I stop, I'll never get the blue ribbon,\" she thought, and \"Then she remembered how her own knee had stung when she fell off her bike last spring.\" The first is her thought, and the second is a memory. Her legs wanting to keep going is her body, Eli's lip is something she sees, and the other sentences are events." },
       { id: "SK-TT1c-C10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p4"],
         prompt: "Which lesson do Kendra's choices teach the reader?",
         choices: [
           { text: "Helping someone in need matters more than winning a prize.", correct: true },
           { text: "Kendra stops running to help a boy who fell down." },
           { text: "Kendra and Eli cross the finish line in last place." },
-          { text: "If you practice every evening, you will win the race." }
+          { text: "It is better to finish first than to finish together." }
         ],
         clue: "A lesson is something anyone could learn, not just what happened. Think about what Kendra gives up, what she chooses and how she feels at the end.",
         hints: [
@@ -879,35 +895,35 @@ PP.addLesson({
           "Kendra wants the blue ribbon, but she goes back to help Eli and finishes last.",
           "At the end she has no ribbon, but everyone claps and her heart feels full.",
           "The answer is \"Helping someone in need matters more than winning a prize.\"",
-          "Two choices are true events, not lessons. Practicing did not win Kendra the race, so that lesson does not fit."
+          "Two choices are true events, not lessons. Finishing together, not finishing first, is what fills Kendra's heart, so the lesson about finishing first does not fit."
         ],
         misconception: "A common mix-up is picking a true event from the story. An event tells what happened; a lesson tells what anyone can learn from it.",
-        why: "The answer is \"Helping someone in need matters more than winning a prize.\" Kendra gives up the ribbon to help Eli, and in the end her heart feels full. Stopping to help and finishing last are events, not lessons, and practicing did not win her the race." }
+        why: "The answer is \"Helping someone in need matters more than winning a prize.\" Kendra gives up the ribbon to help Eli, and in the end her heart feels full. Stopping to help and finishing last are events, not lessons, and the story shows that finishing together mattered more to her than finishing first." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT1c-C11", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p5"], pick: 2,
         prompt: "Which TWO events happen because Tariq starts cleaning the creek?",
         choices: [
-          { text: "Ms. Patel comes to the creek with her own gloves.", correct: true },
+          { text: "Ms. Patel comes down with gloves of her own.", correct: true },
           { text: "A crew meets at the creek every weekend.", correct: true },
-          { text: "Plastic bags hang from the branches." },
-          { text: "Grandpa tells Tariq about the frogs." },
-          { text: "Tariq walks his dog along the creek." }
+          { text: "Plastic bags and old cans fill the creek." },
+          { text: "Grandpa tells Tariq that frogs used to sing there." },
+          { text: "Tariq walks his dog along the creek every Saturday." }
         ],
         clue: "A character's action can cause other things to happen. For each event, ask: did this happen before Tariq started, or because he did?",
         hints: [
           "A character's action can cause other things to happen. For each event, ask: did this happen before Tariq started, or because he did?",
-          "Tariq starts cleaning in paragraph 4. Look at what happens in the paragraphs after that. Choose two.",
-          "Grandpa's story about the frogs comes before Tariq starts, so it is a reason for his cleaning, not a result. Ask the same before-or-after question about each of the other events."
+          "Find Tariq's action. Then ask what other people do after they see it. Choose two.",
+          "Grandpa's story about the frogs happens before Tariq starts, so it is a reason for his cleaning, not a result. Ask the same before-or-after question about each of the other events."
         ],
         how: [
           "Find Tariq's action: in paragraph 4 he pulls on gloves and starts picking up trash.",
           "After that, Ms. Patel watches and comes with gloves of her own. Then more neighbors join, until a crew meets every weekend.",
-          "The answers are \"Ms. Patel comes to the creek with her own gloves\" and \"A crew meets at the creek every weekend.\"",
+          "The answers are \"Ms. Patel comes down with gloves of her own\" and \"A crew meets at the creek every weekend.\"",
           "The trash, Grandpa's story and the dog walks all come before he starts, so they are not results of his cleaning."
         ],
         misconception: "A common mix-up is choosing something that happened before the action. A result has to come after it.",
-        why: "The answers are \"Ms. Patel comes to the creek with her own gloves\" and \"A crew meets at the creek every weekend.\" Both happen after Tariq starts cleaning, because people see what he is doing and join him. The trash, Grandpa's story and the dog walks all come first." },
+        why: "The answers are \"Ms. Patel comes down with gloves of her own\" and \"A crew meets at the creek every weekend.\" Both happen after Tariq starts cleaning, because people see what he is doing and join him. The trash, Grandpa's story and the dog walks all come first." },
       { id: "SK-TT1c-C12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p5"],
         prompt: "Complete the sentences about Tariq. Choose the best answer for each blank.",
         text: "Tariq's actions in paragraph 4 show that he is {0}. He starts cleaning because he wants {1}.",
@@ -919,7 +935,7 @@ PP.addLesson({
         hints: [
           "A trait comes from what a character does, and a motive is the reason he does it. Read his actions, then ask why he does them.",
           "Paragraph 4 begins with the word Still. It tells what Tariq does right after a gloomy thought. For his reason, look back at paragraph 2.",
-          "His thought in paragraph 3 sounds gloomy, but the first blank is about his actions in paragraph 4, which go the other way. For the second blank, Ms. Patel does not come until after he starts, so he is not doing it for her."
+          "His thought in paragraph 3 is gloomy, but the first blank asks about his actions in paragraph 4, not his thought. For the second blank, Ms. Patel does not come until after he starts, so he is not doing it for her."
         ],
         how: [
           "In paragraph 3 he thinks one kid can't clean a whole creek. Still, in paragraph 4 he pulls on gloves and fills a whole bag.",
@@ -951,28 +967,29 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is choosing what a character thinks for a moment instead of what his actions show he is like.",
         why: "The answer is \"start putting the books back on the shelves, a few at a time.\" Tariq is determined: he thinks the creek is too much for one kid, but he starts anyway, one can at a time. He never waits for someone else or hands the job to others." },
-      { id: "SK-TT1c-C14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.c"], passages: ["p4", "p5"], pick: 2,
+      /* Also measures 3.T.T.1.d (compare two characters across texts). */
+      { id: "SK-TT1c-C14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.c", "3.T.T.1.d"], passages: ["p4", "p5"], pick: 2,
         prompt: "Think about Kendra in \"The Fun Run\" and Tariq in \"The Frogs of Willow Creek.\" Which TWO sentences are true about both characters?",
         choices: [
           { text: "Each one has a thought that could have stopped them.", correct: true },
           { text: "Each one does something hard to help someone or something else.", correct: true },
-          { text: "Each one gets the prize they wanted at the start." },
-          { text: "Each one works with a team from the very start." },
-          { text: "Each one does what a grown-up tells them to do." }
+          { text: "Each one practices every single evening to get ready." },
+          { text: "Each one is joined by neighbors who come to help." },
+          { text: "Each one works with a whole team from the very start." }
         ],
         clue: "To compare, find what is true for one character, then check whether it is also true for the other. A sentence must fit both.",
         hints: [
           "To compare, find what is true for one character, then check whether it is also true for the other. A sentence must fit both.",
           "Reread the middle of each story, where each character faces a tough moment. Then reread the ending of each story. Choose two.",
-          "Kendra ends the race with no ribbon, so a sentence about getting a prize does not fit her. Test each of the other sentences against both stories the same way."
+          "Some sentences are true for only one of them. For example, only one of the two trains every evening before the big day. Test each other sentence against both stories the same way."
         ],
         how: [
           "Kendra thinks she will never get the ribbon if she stops. Tariq thinks one kid can't clean a whole creek. Each one has a thought that could have stopped them.",
           "Kendra helps Eli, and Tariq helps the creek. Each one does something hard to help someone or something else.",
-          "Kendra gets no ribbon, Tariq starts alone, and no grown-up tells either of them what to do, so the other sentences fit neither or only one."
+          "Only Kendra practices every evening, and only Tariq is joined by neighbors. Neither one works with a team from the start."
         ],
         misconception: "A common mix-up is choosing a sentence that is true for only one character.",
-        why: "The answers are \"Each one has a thought that could have stopped them\" and \"Each one does something hard to help someone or something else.\" Both have a doubting thought, and both act anyway, Kendra for Eli and Tariq for the creek. Kendra gets no prize, Tariq starts alone, and no grown-up tells either one what to do." },
+        why: "The answers are \"Each one has a thought that could have stopped them\" and \"Each one does something hard to help someone or something else.\" Both have a doubting thought, and both act anyway, Kendra for Eli and Tariq for the creek. Only Kendra practices every evening, only Tariq is joined by neighbors, and neither starts with a team." },
       { id: "SK-TT1c-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p5"],
         prompt: "Which situation teaches the same lesson as \"The Frogs of Willow Creek\"?",
         choices: [
@@ -985,7 +1002,7 @@ PP.addLesson({
         hints: [
           "First say the story's lesson in your own words so it fits anyone. Then find the situation with the same lesson, even if the people and places are different.",
           "Compare how the story starts with how it ends. Who is working at first, and who is working by the end?",
-          "Two situations share things with the story, like cleaning or frogs, but sharing a topic does not make the lesson the same. For the other two, ask: does the person start alone, and what happens after that?"
+          "Two situations share things with the story, like cleaning or frogs, but sharing a topic does not make the lesson the same. Say the story's lesson aloud, then test the two situations that are left."
         ],
         how: [
           "The story's lesson: one person's small start can grow into a big change, because others join in.",
@@ -997,10 +1014,11 @@ PP.addLesson({
         why: "The answer is \"Nia plants one sunflower by the bus stop. Her neighbors like it, and soon sunflowers line the street.\" Like Tariq, Nia starts alone with something small, and others join until there is a big change. Omar's room and Bea's frogs share only a topic, and Leo waits instead of starting." }
     ] }
   ] },
-  /* Extra questions (not one of the fifteen): one per set, each on its own new short text. */
+  /* Extra questions (not one of the fifteen), each on its own new short text. Each `like` lists only
+     the core items it really practises (same component and task), so some core items have no extra question. */
   similar: [
     { id: "SK-TT1c-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: ["p6"],
-      like: ["SK-TT1c-P4", "SK-TT1c-P5", "SK-TT1c-C03", "SK-TT1c-C04", "SK-TT1c-P6"],
+      like: ["SK-TT1c-P4", "SK-TT1c-C06"],
       prompt: "What do Jaylen's actions show about him?",
       choices: [
         { text: "He keeps his promises, even when he wants to do something else.", correct: true },
@@ -1012,17 +1030,17 @@ PP.addLesson({
       hints: [
         "A trait comes from what a character does. Look at what Jaylen does when two things pull at him at once.",
         "Reread paragraphs 3 and 4. What does Jaylen do before he goes to the pool?",
-        "Jaylen does go to the pool in the end, so he does not want to stay home. The story never talks about money. Think about what he told Mrs. Brooks he would do."
+        "Jaylen does go to the pool in the end, so he does not want to stay home. Now ask yourself why he made his cousins wait, and test each choice that is left."
       ],
       how: [
-        "Jaylen promised to feed Biscuit. When his cousins call, he asks them to wait.",
+        "Jaylen told Mrs. Brooks he would feed Biscuit. When his cousins call, he asks them to wait.",
         "He feeds Biscuit, gives her water and checks the door, and only then goes to the pool.",
         "The answer is \"He keeps his promises, even when he wants to do something else.\"",
         "He does go swimming, he watches the clock so he does not forget, and nothing says he is paid."
       ],
       why: "The answer is \"He keeps his promises, even when he wants to do something else.\" Jaylen wants to go to the pool, but he feeds Biscuit first because he promised Mrs. Brooks. He does go swimming, he checks the clock so he does not forget, and the story never says he is paid." },
-    { id: "SK-TT1c-S02", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.c"], passages: ["p7"],
-      like: ["SK-TT1c-C06", "SK-TT1c-C07", "SK-TT1c-C08", "SK-TT1c-C09", "SK-TT1c-C10"],
+    { id: "SK-TT1c-S02", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p7"],
+      like: ["SK-TT1c-C07", "SK-TT1c-C12"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Why does Dante keep his hand down at first?",
         choices: [
@@ -1042,7 +1060,7 @@ PP.addLesson({
       hints: [
         "A motive is the reason a character does something. A character's thoughts often tell the reason.",
         "Reread paragraph 2. What goes through Dante's mind while his hand stays down?",
-        "His page is still empty with two minutes left, so he has not finished. Nobody in the story says not to talk. Look for the sentence that tells what he is afraid of."
+        "His page is still empty with two minutes left, so he has not finished. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [
         "In paragraph 2, Dante keeps his hand down and thinks that the class will think he is slow if he asks.",
@@ -1052,7 +1070,7 @@ PP.addLesson({
       ],
       why: "Part A: He worries the class will think he is slow. Part B: \"If I ask for help, they'll think I'm slow,\" he thought. His thought tells the reason he keeps his hand down. His page is still empty, nobody tells the class not to talk, and he asks Ruby for help instead of racing her." },
     { id: "SK-TT1c-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p8"],
-      like: ["SK-TT1c-C11", "SK-TT1c-C12", "SK-TT1c-C13", "SK-TT1c-C14", "SK-TT1c-C15"],
+      like: ["SK-TT1c-C10", "SK-TT1c-P6"],
       prompt: "Which lesson do Kiana's actions teach?",
       choices: [
         { text: "When a plan goes wrong, a new idea can still save the day.", correct: true },
@@ -1064,7 +1082,7 @@ PP.addLesson({
       hints: [
         "A lesson works for anyone. Think about the problem, what Kiana does about it and how things turn out.",
         "Paragraph 2 gives the problem. Paragraph 3 tells what Kiana thinks of and does. Paragraph 4 shows how it turns out.",
-        "One choice is only something that happens in the story, so it is not a lesson. Another is what her brother thinks, but the ending shows he was wrong. Decide between the two that are left."
+        "One choice is only something that happens in the story, so it is not a lesson. Another is what her brother thinks, but the ending shows the rain did not ruin anything. Decide between the two that are left."
       ],
       how: [
         "Problem: rain pours down on picnic day, and her brother says it is ruined.",
@@ -1080,8 +1098,8 @@ PP.addLesson({
     "SK-TT1c-P1": {
       hints: [
         "A motive is the reason a character wants or does something. Ask: what would the extra money let Marisol do?",
-        "Read paragraph 4. Listen to what Marisol whispers, and notice how long she has wanted it.",
-        "Mr. Okafor was not looking when he handed over the change, so he did not mean it as a gift. The pie is already paid for. Which choice matches what she whispers about?"
+        "Read paragraph 4. What does Marisol say the money would let her do?",
+        "Mr. Okafor was not looking when he handed over the change, so he did not mean it as a gift."
       ],
       how: [
         "In paragraph 4, Marisol whispers that now she can buy the sketchbook.",
@@ -1116,15 +1134,15 @@ PP.addLesson({
       ] },
     "SK-TT1c-P4": {
       hints: [
-        "A trait is what a character is like inside. Look at what Marisol thinks and what she chooses to do, not only how she feels for a moment.",
-        "Reread paragraphs 5 and 6. Who is Marisol thinking about, and what does she do with the money?",
-        "She worries that Mr. Okafor will come up short, and then she gives back what was not hers. Pick one word that fits giving back what is not yours, and one that fits thinking about how someone else will feel. Greedy fits only her first wish, not the end."
+        "A trait is what a character is like inside. Look at what Marisol thinks and what she chooses, not only how she feels or wishes for a moment.",
+        "Reread paragraph 5. Who is Marisol thinking about, and why does it bother her?",
+        "Greedy fits only her first wish, not the end of the story. Ask what kind of person her thoughts in paragraph 5 show, and what kind of person her choice by the end shows."
       ],
       how: [
-        "Find her big choice: she returns the extra change.",
-        "Returning what is not yours shows she is honest.",
-        "Thinking about how Mr. Okafor will feel shows she is thoughtful.",
-        "Check the others: careless and shy have no evidence in the story. The answers are honest and thoughtful."
+        "In paragraph 5, Marisol thinks about Mr. Okafor working in the hot sun and coming up short. Caring how someone else will be affected shows she is thoughtful.",
+        "By the end, she has not kept money that was not hers, and Mr. Okafor thanks her for being honest. That shows she is honest.",
+        "Check the others: greedy fits only her first wish, and careless and shy have no evidence in the story.",
+        "The answers are honest and thoughtful."
       ],
       misconception: "A common mix-up is picking a feeling or wish from one moment (wanting to keep the money) instead of a trait shown by her choices." },
     "SK-TT1c-P5": {
@@ -1143,7 +1161,7 @@ PP.addLesson({
       hints: [
         "The central message is a lesson for anyone. It comes from the character's big choice and how things turn out.",
         "Find Marisol's big choice in paragraph 6. Then read paragraph 8 to see what she gives up and how she feels.",
-        "Saving money and shopping at a market happen in the story, but they are not what Marisol learns. For Part B, pick the sentence that shows how her choice turned out, not how the mistake happened."
+        "Saving money and shopping at a market happen in the story, but they are not what Marisol learns. For Part B, skip the sentences that only explain how the mistake happened, then pick the one that fits your Part A lesson."
       ],
       how: [
         "Her big choice: she returns the five dollars, even though it means no sketchbook.",
