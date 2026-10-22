@@ -1,4 +1,4 @@
-/* Solid-color text contrast check; avoids canvas in the packaged audit browser.
+/* Solid-color text contrast check, computed from styles rather than pixels.
    Reports unsupported image/opacity backgrounds rather than claiming a result. */
 () => {
   const root = document.querySelector('.screen:not([hidden])');
@@ -17,7 +17,12 @@
     const style = getComputedStyle(e);
     if (style.visibility === 'hidden') continue;
     const ancestors = []; for (let p = e; p; p = p.parentElement) ancestors.unshift(p);
-    if (ancestors.some(p => getComputedStyle(p).backgroundImage !== 'none' || +getComputedStyle(p).opacity < 1)) { unsupported.push(text.slice(0, 70)); continue; }
+    /* An image behind a nearer opaque solid background cannot show through it (2026-10-22, QA-16:
+       the category ring's count sits on a white disc in front of its conic-gradient ring). Only images
+       at or in front of the nearest opaque solid layer are unsupported; opacity is still checked on every ancestor. */
+    let solidFrom = 0;
+    ancestors.forEach((p, i) => { const cs = getComputedStyle(p), c = rgba(cs.backgroundColor); if (c && c[3] === 1 && cs.backgroundImage === 'none') solidFrom = i; });
+    if (ancestors.some((p, i) => (i >= solidFrom && getComputedStyle(p).backgroundImage !== 'none') || +getComputedStyle(p).opacity < 1)) { unsupported.push(text.slice(0, 70)); continue; }
     let bg = [255, 255, 255, 1];
     for (const p of ancestors) { const c = rgba(getComputedStyle(p).backgroundColor); if (c) bg = over(c, bg); }
     const color = rgba(style.color); if (!color) { unsupported.push(text.slice(0, 70)); continue; }

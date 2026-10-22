@@ -28,6 +28,8 @@
     document.querySelectorAll(".path-storage").forEach(p => {
       p.textContent = storageOK ? "" : "Saving is unavailable. Your learning choice and path checklist will last only for this visit. Keep a note of your next lesson.";
     });
+    /* "Your progress stays" is untrue while saving is unavailable */
+    const foot = document.getElementById("choice-foot"); if (foot) foot.hidden = !storageOK;
   }
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify(state)); }
@@ -78,11 +80,72 @@
     const b = make("button", "btn " + (cls || "btn-soft"), label);
     b.type = "button"; b.addEventListener("click", action); return b;
   }
+  /* Catalog id and title for a path entry, e.g. "D1 · Story elements: …" (display only). */
+  function label(k) {
+    const id = window.PP_SKILLS.skillId(k);
+    return k.startsWith("task:") ? (id ? id + " · " : "") + "Essay: " + title(k) : (id ? id + " · " : "") + title(k);
+  }
+  /* The first path lesson, the same for every family (never chosen for a child). */
+  function firstLabels() {
+    const f = entries()[0]; if (!f) return;
+    const s = label(f).split(":")[0];
+    ["choose-first", "path-first"].forEach(id => { if (el(id)) el(id).textContent = s; });
+    el("path-start").textContent = "Start with " + s;
+    /* QA-05: a static preview of the five categories in the "Choose a lesson" card (not buttons) */
+    const chips = el("choice-chips");
+    if (chips && !chips.children.length) (window.PP_CATALOG || []).forEach(c => chips.appendChild(make("li", "choice-chip cat-" + c.id, c.name)));
+  }
+  /* State B: saved lesson work but no learning mode yet (families from before the
+     Learning Path). Read from pp.progress.v1 (via PP_SKILLS) only; writes nothing. */
+  function welcomeBack() {
+    const host = el("choose-welcome"); clear(host);
+    /* QA-06: lessons in progress first; a passed lesson opens on its skill page (Learn It),
+       never straight into its check. QA-12: saved short writing and essay drafts count too
+       (read with guarded getItem calls for known keys; storage is never enumerated). */
+    const S = window.PP_SKILLS;
+    const inProgress = S.startedLessons("started"), passed = S.startedLessons("mastered");
+    const writing = Object.keys(PP.lessons).filter(k => !inProgress.includes(k) && !passed.includes(k) && savedWriting(k));
+    const essays = (PP.tasks || []).map(t => "task:" + t.id).filter(k => S.entryStatus(k) === "started");
+    const lessons = inProgress.concat(writing, passed);
+    const total = lessons.length + essays.length;
+    host.hidden = !total;
+    if (!total) return;
+    const parts = [];
+    if (lessons.length) parts.push(lessons.length === 1 ? "one lesson" : PP.countWord(lessons.length) + " lessons");
+    if (essays.length) parts.push(essays.length === 1 ? "one essay" : PP.countWord(essays.length) + " essays");
+    host.appendChild(make("p", "wb-line", "Welcome back. This browser has saved work on " + parts.join(" and ") + ". Either choice below keeps it."));
+    const row = make("div", "wb-links");
+    const shown = inProgress.concat(writing).concat(essays).concat(passed).slice(0, 3);
+    shown.forEach(k => {
+      if (k.startsWith("task:")) {
+        const b = button(label(k), () => window.PP_WRITING.start(k.slice(5)), "btn-soft wb-btn");
+        b.setAttribute("aria-label", label(k) + ". Your saved draft opens with it.");
+        row.appendChild(b); return;
+      }
+      const st = passed.includes(k) ? { id: "teach", name: S.stepNames(k)[0] } : S.firstOpenStep(k);
+      const b = button(S.skillId(k) + " · " + PP.lessons[k].title.split(":")[0], () => S.open(k, st && st.id), "btn-soft wb-btn");
+      b.setAttribute("aria-label", S.skillId(k) + ", " + PP.lessons[k].title + (st ? ". Opens at " + st.name : ""));
+      row.appendChild(b);
+    });
+    host.appendChild(row);
+    if (total > 3) host.appendChild(make("p", "wb-more", "and " + (total - 3 === 1 ? "one more" : PP.countWord(total - 3) + " more") + " in the lesson list."));
+  }
+  function savedWriting(k) {
+    try { const v = JSON.parse(localStorage.getItem("pp.skwrite." + k)); return !!(v && typeof v.text === "string" && v.text.trim()); }
+    catch (e) { return false; }
+  }
   function showChoice() {
     window.PP_APP.show("choose");
-    el("choose-path").textContent = state.introduced ? "Continue My Path" : "Follow the Learning Path";
+    el("choose-path").textContent = state.introduced ? "Back to the Learning Path" : "Start the Learning Path";
+    el("choose-browse").textContent = "Choose a lesson";
+    firstLabels(); welcomeBack();
     storageNotice();
     el("choose-title").focus();
+  }
+  /* Header "Browse lessons": opens the lesson list without changing the saved mode. */
+  function browseLessons() {
+    if (!window.PP_APP.canLeave()) return;
+    window.PP_APP.setHash("#browse"); window.PP_APP.landBrowse();
   }
   function choose() {
     if (!window.PP_APP.canLeave()) return;
@@ -99,7 +162,7 @@
     window.PP_APP.setHash("#path");
     window.PP_APP.show("path");
     el("path-intro").hidden = state.introduced;
-    render(); storageNotice(); el("path-title").focus();
+    firstLabels(); render(); storageNotice(); el("path-title").focus();
   }
   function start() {
     state.mode = "path"; state.introduced = true; save(); open();
@@ -124,6 +187,18 @@
     const s = window.PP_SKILLS.status(k);
     return s === "mastered" ? "Skill check: passed. Revisit in new work later." : s === "new" ? "Skill check: not attempted yet." : "See this lesson for its practice and check results.";
   }
+  /* What a grown-up does at this step, from the lesson's real steps and kind. */
+  function adultNote(k, step) {
+    if (k.startsWith("task:")) return "Your child reads, plans and writes. A grown-up scores the finished essay with the rubric on the For parents tab.";
+    const kind = window.PP_SKILLS.lessonKind(k);
+    if (step === "learn") return "Grown-up: reveal the worked examples together, one step at a time.";
+    if (step === "practice") return kind === "fluency" ? "Grown-up: listen to the one-minute read-aloud and tap any missed words."
+      : kind === "trace" ? "Grown-up: print the tracing sheet and watch the handwriting."
+      : "Grown-up: sit side by side. Help me gives hints. Practice questions start again from the first one.";
+    if (step === "try") return "Your child answers alone. Help me opens after one wrong try. Questions start again from the first one.";
+    if (step === "test") return kind ? "Grown-up: do this step with your child, then tick the Check." : "Your child answers alone, with no hints.";
+    return "Grown-up: read the short lesson together.";
+  }
   function render() {
     const host = el("path-content"); clear(host);
     const all = entries(), k = current();
@@ -133,31 +208,77 @@
       const observed = Object.keys(window.PP_HABITS || {}).filter(c => own(state.habits, c) && state.habits[c] === true).length;
       summary.textContent = finished + " of " + all.length + " activities marked finished · " + observed + " of " + Object.keys(window.PP_HABITS || {}).length + " everyday routines tried with a grown-up. These are activity records, not mastery scores.";
     };
-    const next = make("article", "path-card path-next-card"); next.id = "path-current";
-    host.appendChild(summary); host.appendChild(next);
+    /* State C: one next-step card built from the bookmark. "Opens at" and "Continue"
+       are shown only when the bookmark is on this lesson; it reopens the step tab, not
+       a question. If the bookmark drifted from the first unfinished lesson (another
+       lesson was opened), the path's own suggestion is offered as a second link. */
+    const next = make("article", "next-panel path-next-card"); next.id = "path-current";
+    const other = make("div", "next-other");
+    const sw = button("Switch learning mode", () => choose()); sw.dataset.go = "choose";
+    const full = button("See the whole path", () => {
+      const t = el("path-full"); if (!t) return;
+      const ph = ps.find(p => p.groups.some(g => g.skills.includes(current())));
+      const d = ph && el("path-phase-" + ph.id);
+      if (d) d.open = true;
+      t.tabIndex = -1; t.focus({ preventScroll: true }); t.scrollIntoView({ block: "start" });
+    });
+    other.appendChild(full); other.appendChild(sw);
+    host.appendChild(next); host.appendChild(other); host.appendChild(summary);
     function updateNext() {
       clear(next); const key = current();
-      next.appendChild(make("p", "path-eyebrow", key ? "Your next lesson" : "Your activities are marked finished"));
+      next.hidden = other.hidden = !state.introduced;   /* first visit: the introduction above is the one start action */
       if (key) {
-        next.appendChild(make("h2", "", title(key)));
-        next.appendChild(make("p", "", "Begin with the teaching and examples, practice together, then try independently. Your place in the lesson is bookmarked."));
-        const b = button("Begin / Continue Lesson", () => openActivity(key), "btn-primary"); b.id = "path-next"; next.appendChild(b);
+        const first = all.find(x => !done(x));
+        const marked = !!(state.bookmark && state.bookmark.key === key);
+        const text = make("div", "np-text");
+        text.appendChild(make("p", "np-eyebrow", "Next on your Learning Path"));
+        text.appendChild(make("h2", "np-title", label(key)));
+        const st = stepFor(key);
+        if (key.startsWith("task:")) {
+          const draft = window.PP_SKILLS.entryStatus(key) === "started";
+          const tabs = [...document.querySelectorAll("#screen-write .wtabs [role=tab]")];
+          text.appendChild(make("p", "np-step", "Opens at: " + (tabs[0] ? tabs[0].textContent : "1. Read") + " (tab 1 of " + (tabs.length || 5) + ")" + (draft ? ". Your saved plan and draft open with it." : "")));
+        } else if (marked) {
+          const ids = window.PP_SKILLS.stepIds(key), names = window.PP_SKILLS.stepNames(key);
+          const i = Math.max(0, ids.indexOf(st));
+          text.appendChild(make("p", "np-step", "Opens at: " + names[i] + " (step " + (i + 1) + " of " + names.length + ")"));
+        } else {
+          text.appendChild(make("p", "np-step", "The next lesson on the path that is not marked finished. It starts at " + window.PP_SKILLS.stepNames(key)[0] + "."));
+        }
+        const note = adultNote(key, key.startsWith("task:") ? "" : st);
+        if (note) text.appendChild(make("p", "np-adult", note));
+        if (!key.startsWith("task:") && st === "test" && window.PP_SKILLS.stepNames(key)[window.PP_SKILLS.stepIds(key).indexOf("test")] === "Test Your Knowledge")
+          text.appendChild(make("p", "np-fresh", "The skill check starts fresh each time."));
+        next.appendChild(text);
+        const b = button(marked ? "Continue the Learning Path" : "Start this lesson", () => openActivity(key), "btn-primary np-btn"); b.id = "path-next";
+        next.appendChild(b);
+        /* QA-08: after the primary, in DOM and tab order, and visually quieter */
+        if (first && first !== key) {
+          const s = button("Suggested next on the path: " + label(first), () => openActivity(first), "linkish np-drift");
+          s.id = "path-suggested"; next.appendChild(s);
+        }
       } else {
-        next.appendChild(make("h2", "", "Keep reading, writing, and revisiting skills"));
-        next.appendChild(make("p", "", "Review check results and any everyday routines still to try. Finishing activities does not establish mastery of every standard."));
+        const text = make("div", "np-text");
+        text.appendChild(make("p", "np-eyebrow", "Learning Path: every lesson marked finished"));
+        text.appendChild(make("h2", "np-title", "Keep reading, writing, and revisiting skills"));
+        text.appendChild(make("p", "", "Marked finished means you worked through the lessons. It is not a score, and finishing activities does not establish mastery of every standard. Lessons marked “review” in the lesson list are a good place to start again."));
+        next.appendChild(text);
+        next.appendChild(button("Browse lessons", browseLessons, "btn-primary np-btn"));
       }
     }
+    const ps = phases();
     updateNext(); updateCounts();
-    const parallel = make("aside", "path-alongside");
-    parallel.appendChild(make("h2", "", "Alongside your lessons — start this week"));
+    const parallel = make("section", "path-alongside"); parallel.setAttribute("aria-labelledby", "path-alongside-title");
+    const pt = make("h2", "", "Alongside your lessons — start this week"); pt.id = "path-alongside-title";
+    parallel.appendChild(pt);
     parallel.appendChild(make("p", "", "Read aloud, work on words, practice handwriting, and talk about books together. These routines continue throughout the path."));
     const acts = make("div", "path-actions");
     acts.appendChild(button("Reading and handwriting", () => expand("P")));
     acts.appendChild(button("Everyday parent activities", () => expand("habits")));
     parallel.appendChild(acts); host.appendChild(parallel);
-    host.appendChild(make("h2", "path-section-title", "Your full path"));
+    const fullTitle = make("h2", "path-section-title", "Your full path"); fullTitle.id = "path-full";
+    host.appendChild(fullTitle);
     host.appendChild(make("p", "note", "Open any phase or lesson. Mark activities finished after working through them; uncheck to revisit. Check scores and parent observations remain separate."));
-    const ps = phases();
     ps.forEach(p => {
       const keys = p.groups.flatMap(g => g.skills);
       const det = make("details", "path-phase"); det.id = "path-phase-" + p.id;
@@ -213,7 +334,7 @@
       habits.appendChild(det);
     });
     host.appendChild(habits);
-    host.appendChild(button("Choose Individual Lessons", browse));
+    host.appendChild(button("Browse all lessons", browseLessons, "btn-soft path-browse-bottom"));
     function expand(id) {
       const d = el("path-phase-" + id); d.open = true;
       const s = d.querySelector("summary"); s.focus(); s.scrollIntoView({ block: "start" });
@@ -222,11 +343,13 @@
   function init() {
     el("choose-path").addEventListener("click", open);
     el("choose-browse").addEventListener("click", browse);
+    el("path-browse").addEventListener("click", browseLessons);
     el("path-start").addEventListener("click", start);
     el("path-preview").addEventListener("click", () => {
       const d = el("path-phase-1"); d.open = true; d.querySelector("summary").focus(); d.scrollIntoView({ block: "start" });
     });
     storageNotice();
   }
-  window.PP_PATH = { init, open, choose, showChoice, browse, track, mode: () => state.mode, entries, phases };
+  window.PP_PATH = { init, open, choose, showChoice, browse, browseLessons, track, mode: () => state.mode, entries, phases,
+    introduced: () => state.introduced, notice: storageNotice, storageOK: () => storageOK };
 })();

@@ -94,6 +94,9 @@
     el("skill-back").textContent = "← All skills";
     window.PP_SKILLS.buildList();
     show("home");
+    /* the path stays one secondary tap away; it names the return when the path was started */
+    document.querySelector('#screen-home [data-go="path"]').textContent = window.PP_PATH.introduced() ? "Back to the Learning Path" : "Try the Learning Path";
+    window.PP_PATH.notice();
     if (!focus) return;
     /* coming back from a skill: land on that skill's row, not the top of a long list */
     const last = toRow && window.PP_SKILLS.lastCode();
@@ -120,8 +123,84 @@
     el("mixed-title").focus();
   }
 
+  /* ---------- shared start-screen blocks (home redesign 2026-10-22) ----------
+     One "How a lesson works" explainer and one support-links row, built the same way
+     on the three start screens. Step names and the hands-on count come from the
+     lessons themselves. The home screen keeps its existing #hero-* ids. */
+  const SHORT = () => window.matchMedia("(max-height: 559px)").matches;
+  function routineBlock(open) {
+    const d = make("details", "routine"); d.open = open && !SHORT();
+    d.appendChild(make("summary", "routine-sum", "How a lesson works"));
+    const body = make("div", "routine-body");
+    body.appendChild(make("p", "routine-lead", "Most lessons have five short steps. Do them in order, at your child's pace. One lesson can take more than one short session."));
+    const ol = make("ol", "routine-steps");
+    [["Learn It", "Read a short lesson about the skill together."],
+     ["Watch Me", "See the skill done step by step in examples."],
+     ["Practice Together", "Answer questions side by side. Help me gives hints."],
+     ["Try It Yourself", "Your child answers alone. Help me opens after one wrong try."],
+     ["Test Your Knowledge", "The skill check: no hints, and 80% of the points to pass. It starts fresh each time."]
+    ].forEach(([name, line], i) => {
+      const li = make("li", "rs");
+      li.appendChild(make("span", "rs-n", String(i + 1)));
+      const t = make("span", "rs-text"); t.appendChild(make("span", "rs-name", name)); t.appendChild(make("span", "rs-line", line));
+      li.appendChild(t); ol.appendChild(li);
+    });
+    body.appendChild(ol);
+    const keys = Object.keys(PP.lessons || {});
+    const handsOn = keys.filter(k => window.PP_SKILLS.stepNames(k).indexOf("Check") >= 0).length;
+    const nTasks = (PP.tasks || []).length;
+    body.appendChild(make("p", "routine-except", "Some lessons are different. " +
+      (handsOn ? cap(PP.countWord(handsOn)) + " hands-on lesson" + (handsOn === 1 ? "" : "s") + ", for reading aloud and cursive, " + (handsOn === 1 ? "has" : "have") + " Learn It, Watch Me, Practice and a grown-up Check. " : "") +
+      (nTasks ? "The " + PP.countWord(nTasks) + " essay task" + (nTasks === 1 ? " has" : "s have") + " Read, Plan, Write and Check, and a For parents tab for scoring." : "")));
+    body.appendChild(make("h3", "routine-h3", "When a grown-up joins in"));
+    const ul = make("ul", "routine-adult");
+    [["Practice Together", "sit side by side and talk through each answer."],
+     ["Reading aloud", "listen to your child read, then tick the Check."],
+     ["Cursive", "watch your child write the letters, then tick the Check."],
+     ["Short writing", "read it together and use the checklist."],
+     ["Essays", "read the essay and score it in the “For parents” tab."],
+     ["“Say it out loud” cards", "talk through the answers together. These ticks are practice only and do not change the skill check."]
+    ].forEach(([who, what]) => { const li = make("li"); li.appendChild(make("strong", "", who + ": ")); li.appendChild(document.createTextNode(what)); ul.appendChild(li); });
+    body.appendChild(ul);
+    d.appendChild(body);
+    return d;
+  }
+  function cap(t) { return t.charAt(0).toUpperCase() + t.slice(1); }
+  function supportRow(prefix) {
+    const nav = make("nav", "support"); nav.setAttribute("aria-label", "Help for grown-ups");
+    nav.appendChild(make("h2", "support-title", "Help and more practice"));
+    const ul = make("ul", "support-list");
+    [["parents", "Parent guide", "The test, the essay, and how to use this site.", () => { if (canLeave()) window.PP_PARENTS.open(); }],
+     ["standards", "Georgia standards", "What each Grade 3 ELA standard asks, in plain words.", () => { if (canLeave()) window.PP_PARENTS.open("standards"); }],
+     ["habits", "Everyday habits", "Reading and writing habits to try at home.", () => openHabits()],
+     ["mixed", "Mixed practice and practice tests", "Passages that mix skills, like the real test.", () => openMixed()],
+     ["clues", "Clue Word Cheat Sheet", "Clue words for each kind of text. Printable.", () => openClues()]
+    ].forEach(([id, name, line, act]) => {
+      const li = make("li");
+      const b = make("button", "support-btn"); b.type = "button"; b.id = prefix + "-" + id;
+      b.appendChild(make("span", "sb-name", name)); b.appendChild(make("span", "sb-line", line));
+      b.addEventListener("click", act);
+      li.appendChild(b); ul.appendChild(li);
+    });
+    nav.appendChild(ul);
+    const saved = make("details", "saved");
+    saved.appendChild(make("summary", "", "Saved on this device only"));
+    saved.appendChild(make("p", "", "Progress is kept in this browser on this device. There is no account. Clearing browser data erases it, and other devices will not see it. If two children share this device, their progress is mixed together. An unfinished skill check is not saved."));
+    nav.appendChild(saved);
+    return nav;
+  }
+  function buildShared() {
+    document.querySelectorAll(".home-shared").forEach(host => {
+      clear(host);
+      const where = host.dataset.shared;
+      host.appendChild(routineBlock(where === "choose"));
+      host.appendChild(supportRow(where === "home" ? "hero" : where + "-link"));
+    });
+  }
+
   /* ---------- Home ---------- */
   function buildHome() {
+    buildShared();
     const grid = el("section-grid"); clear(grid);
     S.sections.forEach(sec => {
       const li = make("li", "section-card sec-" + sec.key);
@@ -305,11 +384,14 @@
     }));
     window.PP_SKILLS.init();
     window.PP_PATH.init();
-    el("hero-mixed").addEventListener("click", openMixed);
-    el("hero-clues").addEventListener("click", openClues);
-    el("hero-habits").addEventListener("click", openHabits);
+    /* the #hero-* support buttons are built (with their listeners) in buildShared() */
+    /* QA-03: small help links near the top of the browse home; the explainer itself sits below the list */
+    el("home-how").addEventListener("click", () => {
+      const d = document.querySelector('#screen-home details.routine'); if (!d) return;
+      d.open = true; const sum = d.querySelector("summary"); sum.focus({ preventScroll: true }); d.scrollIntoView({ block: "start" });
+    });
+    el("home-help").addEventListener("click", () => { if (canLeave()) window.PP_PARENTS.open(); });
     el("clues-print").addEventListener("click", () => window.print());
-    el("hero-parents").addEventListener("click", () => window.PP_PARENTS.open());
     el("player-back").addEventListener("click", back);
     el("write-back") && el("write-back").addEventListener("click", back);
     /* PP-003 D9: the skip link moves focus to the visible screen's heading.
