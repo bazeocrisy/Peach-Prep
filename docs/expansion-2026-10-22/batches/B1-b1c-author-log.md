@@ -312,3 +312,38 @@ Every MUST and SHOULD for 3.T.SS.2.a and 3.T.T.4.a is addressed, and the new rul
 - **Port 8733:** every core and Together item in both lessons scores right with its key, and there are no page errors.
 - **Six-word n-gram scan:** no content leaks.
 - I have not reviewed my own work.
+
+## 7. Fixes after the re-review (B1-rereview-b1c.md)
+
+The re-review accepted 3.T.T.4.a and asked for changes to 3.T.SS.2.a. This section lists every item changed in this round, and nothing else was changed.
+
+**A correction to §6.** §6 said every MUST and SHOULD was addressed. That was wrong for SK-SS2a-S02, which 2A S-S1 had listed: I did not change it in §6, and §6 does not mention it. It is fixed below (R-M1). The C13 hint 3 that §6.2 called a fix only moved the cue from hint 2 to hint 3, and the C07 hint 2 that §6.2 called a fix still pinned the key. Both are fixed below.
+
+### 7.1 Needs blind re-solve (choices changed)
+
+| Item | Change | Finding |
+|---|---|---|
+| SK-SS2a-S02 | The distractor "He needs to find a new recipe for his cornbread." was replaced with "He should make the cornbread exactly the same way next time." This survives the pleased-or-upset test, and "use a little less salt" rules it out | R-M1 |
+| SK-SS2a-S03 | The distractor "that baby box turtles grow bigger very fast" was replaced with "that a baby box turtle is round and flat". A bottle cap is round and flat, but the sentence's word *small* makes the comparison about size | R-M2 |
+
+### 7.2 Hint, how, why and teaching changes only
+
+| Item | Change | Finding |
+|---|---|---|
+| SK-SS2a-S02 | Hint 2 is now "Read everything Grandma does and says, from her first bite to her last words." Hint 3 rules out the railroad choice only, then says "Test the choices that are left against what Grandma says to do next time." The how and why now rule out the new distractor | R-M1 |
+| SK-SS2a-S03 | Hint 3 no longer says "the word the simile uses". It rules out the bottle-hiding choice, then says "Picture a bottle cap again, then test each choice that is left against the whole sentence." The how and why explain size against shape | R-M2 |
+| SK-SS2a-C13 | Hint 3 is now "…ask: does the article tell about something the anole really does that could amaze someone, the way a magic trick does?" The same-paragraph test is gone. Flies disappearing, hiding and colour change all survive it | R-S1 |
+| SK-SS2a-C07 | Hint 2 is now "Reread all of stanza 3, from its first line to Grandpa's words." It no longer says "the lines around". Stanza 3 holds both "With towers in a row" and the key | R-S2 |
+| SK-SS2a-C09 | Hint 3 is now "Try putting the word enjoy in place of like, and then the words similar to. Which one keeps the meaning of the line?" It scaffolds slot 0 only and leaves slot 1 to the child | R-S3 |
+| 3.T.SS.2.a `teach.big` | "a simile compares with like or as, a metaphor says one thing is another" became "a simile compares two different kinds of things with like or as, a metaphor says one thing is a different kind of thing" | R-S4, brief rule 7 |
+| 3.T.SS.2.a glossary, metaphor | Now "a comparison that says one thing is a different kind of thing, without like or as" | R-S4 |
+| 3.T.SS.2.a teach point 2 | "It says one thing is another" became "It says one thing is a different kind of thing." It adds "My dog is a good swimmer" alongside "The classroom was noisy" as facts that are not metaphors. The example uses no anole or hunter, so it does not pre-answer C14 | R-S4 |
+| SK-TT4a-C07 | How step 1 now ends "…are about the ropes." The clause "before the speaker jumps in" was cut, so it no longer hints at C09 | R-S5 |
+
+**Not changed.** Every other item, passage and key in both blocks. The 3.T.SS.2.b glossary in the same file (`T-SS.js`) also says "says one thing is another". It is outside my block, and I did not edit it.
+
+### 7.3 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. The only warnings in these two lessons are the similar-coverage warnings: 8 core items in 3.T.SS.2.a and 11 in 3.T.T.4.a have no similar item.
+- No passage text changed in this round, so readability is unchanged.
+- I have not reviewed my own work.

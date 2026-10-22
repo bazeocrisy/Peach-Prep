@@ -1325,17 +1325,17 @@ PP.addLesson({
   code: "3.T.SS.2.a",
   title: "Similes, metaphors and idioms",
   teach: {
-    big: "Authors use special language to help you picture things: a simile compares with like or as, a metaphor says one thing is another, and an idiom is a saying that means something different from its words.",
+    big: "Authors use special language to help you picture things: a simile compares two different kinds of things with like or as, a metaphor says one thing is a different kind of thing, and an idiom is a saying that means something different from its words.",
     points: [
       "A simile compares two different kinds of things using like or as. \"The lake was as smooth as glass\" means the lake was very smooth and flat.",
-      "A metaphor compares without like or as. It says one thing is another. \"The classroom was a zoo\" means the room was loud and wild. But \"The classroom was noisy\" is not a metaphor, because it just tells a fact.",
+      "A metaphor compares without like or as. It says one thing is a different kind of thing. \"The classroom was a zoo\" means the room was loud and wild. But \"The classroom was noisy\" and \"My dog is a good swimmer\" are not metaphors, because they just tell facts.",
       "An idiom is a saying you cannot read word for word. \"It's raining cats and dogs\" means it is raining very hard.",
       "To find the meaning, ask: How are the two things alike? Then use the sentences around it as clues. Last, ask why the author chose it: what does it help you picture or feel? Stories, poems, letters and articles all use figurative language.",
       "Not every like or as makes a simile. \"I like pizza\" does not compare anything, and \"My bike is as big as yours\" compares two things of the same kind."
     ],
     words: [
       { term: "simile", means: "a comparison of two different kinds of things that uses like or as" },
-      { term: "metaphor", means: "a comparison that says one thing is another" },
+      { term: "metaphor", means: "a comparison that says one thing is a different kind of thing, without like or as" },
       { term: "idiom", means: "a saying that means something different from its words" }
     ],
     example: {
@@ -1634,7 +1634,7 @@ PP.addLesson({
         clue: "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
         hints: [
           "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
-          "Reread stanza 3 and the lines around \"Chin up!\"",
+          "Reread all of stanza 3, from its first line to Grandpa's words.",
           "Grandpa is not asking anyone to look at the sky, and the gulls are only in stanza 2. For Part B, the line you choose must match your Part A answer."
         ],
         how: [
@@ -1679,7 +1679,7 @@ PP.addLesson({
         hints: [
           "Not every like makes a simile. A simile uses like to compare two different things.",
           "Read the line and try saying it with another word in place of like. Is anything being compared to anything else?",
-          "The line does not put two different things side by side, the way \"kids who chase a ball\" does in stanza 2. Decide what like means here, then decide what that makes the line."
+          "Try putting the word enjoy in place of like, and then the words similar to. Which one keeps the meaning of the line?"
         ],
         how: [
           "In \"I like to build a castle here,\" like tells how the speaker feels about building. It means enjoy.",
@@ -1778,7 +1778,7 @@ PP.addLesson({
         hints: [
           "Authors use metaphors to help you picture something. Ask what the two things have in common, and read the sentences around the metaphor.",
           "Ask what a magician does that amazes people. Then look for something the anole does that could seem just as surprising.",
-          "The anole does not perform for people, so one choice reads the words too literally. For each choice that is left, find the paragraph it comes from and compare it with the paragraph the metaphor is in."
+          "The anole does not perform for people, so one choice reads the words too literally. For each choice that is left, ask: does the article tell about something the anole really does that could amaze someone, the way a magic trick does?"
         ],
         how: [
           "Paragraph 2 begins by calling the anole a little magician.",
@@ -1871,21 +1871,21 @@ PP.addLesson({
         { text: "He is doing well and is close to getting it right.", correct: true },
         { text: "He should follow the railroad tracks to the store." },
         { text: "He made a big mistake and should start all over." },
-        { text: "He needs to find a new recipe for his cornbread." }
+        { text: "He should make the cornbread exactly the same way next time." }
       ],
       clue: "An idiom means something different from its words. Use what the speaker says next to find the real meaning.",
       hints: [
         "An idiom means something different from its words. Use what the speaker says next to find the real meaning.",
-        "Read what Grandma does before she speaks, and what she says will happen next time.",
-        "There is no train or track in Grandma's kitchen, so one choice reads the words too literally. Ask whether Grandma sounds pleased or upset, then test the choices that are left."
+        "Read everything Grandma does and says, from her first bite to her last words.",
+        "There is no train or track in Grandma's kitchen, so one choice reads the words too literally. Test the choices that are left against what Grandma says to do next time."
       ],
       how: [
         "There is no real track, so this is an idiom.",
         "Grandma nods, and she says one small change will make it perfect. She is pleased with his work.",
         "The answer is \"He is doing well and is close to getting it right.\"",
-        "She does not tell him to start over or find a new recipe, only to use less salt."
+        "She does not tell him to start over, and she does not say to make it exactly the same way: she says to use a little less salt."
       ],
-      why: "The answer is \"He is doing well and is close to getting it right.\" Grandma nods and says that with a little less salt it will be perfect. There are no real tracks, and she does not tell him to start over or use a new recipe." },
+      why: "The answer is \"He is doing well and is close to getting it right.\" Grandma nods and says that with a little less salt it will be perfect. There are no real tracks, she does not tell him to start over, and \"use a little less salt\" means the next pan should not be exactly the same." },
     { id: "SK-SS2a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C02", "SK-SS2a-C11"],
       stem: ["Lena wrote a report about box turtles. One sentence says, \"A baby box turtle is as small as a bottle cap.\""],
@@ -1894,22 +1894,22 @@ PP.addLesson({
         { text: "how very tiny a baby box turtle is", correct: true },
         { text: "that baby box turtles like to hide in bottles" },
         { text: "that a baby turtle's shell is made of metal" },
-        { text: "that baby box turtles grow bigger very fast" }
+        { text: "that a baby box turtle is round and flat" }
       ],
       clue: "A simile compares two different kinds of things. Ask what the two things have in common.",
       hints: [
         "A simile compares two different kinds of things. Ask what the two things have in common.",
         "Picture a bottle cap in your hand. Then read the whole sentence again, word by word.",
-        "Nothing in the sentence is about bottles as hiding places, so one choice reads the words too literally. Test the choices that are left against the word the simile uses."
+        "Nothing in the sentence is about bottles as hiding places, so one choice reads the words too literally. Picture a bottle cap again, then test each choice that is left against the whole sentence."
       ],
       how: [
         "The sentence compares a baby box turtle with a bottle cap, using as.",
         "A bottle cap fits in the palm of your hand. The word small tells which way they are alike.",
         "The answer is \"how very tiny a baby box turtle is.\"",
-        "The turtle does not hide in bottles, its shell is not metal, and the sentence says nothing about growing."
+        "The turtle does not hide in bottles, and its shell is not metal. A bottle cap is round and flat, but the sentence says small, so the comparison is about size, not shape."
       ],
       misconception: "A common mix-up is taking the comparison word for word, as if the turtle had something to do with real bottles.",
-      why: "The answer is \"how very tiny a baby box turtle is.\" A bottle cap is small enough to fit in your palm, and the sentence says the turtle is as small as one. It is not about hiding in bottles, metal shells or growing." }
+      why: "The answer is \"how very tiny a baby box turtle is.\" A bottle cap is small enough to fit in your palm, and the sentence says the turtle is as small as one. It is not about hiding in bottles or metal shells, and the word small shows it is about size, not a round, flat shape." }
   ],
   /* Hints and Show me how for the ref P5 (core set 1) and Together P1-P4. */
   addons: {

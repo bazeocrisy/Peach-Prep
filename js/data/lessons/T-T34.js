@@ -734,7 +734,7 @@ PP.addLesson({
           "\"They slap, slap, slap against the ground\" repeats a word, but it is about the ropes, not the jumper. Check the other lines the same way."
         ],
         how: [
-          "Several lines repeat words. \"Round and round\" and \"slap, slap, slap\" are about the ropes, before the speaker jumps in.",
+          "Several lines repeat words. \"Round and round\" and \"slap, slap, slap\" are about the ropes.",
           "\"Don't stop! Don't stop!\" is the speaker's friends cheering the jumper to keep going.",
           "\"I hop, hop, hop, and hop, hop, hop\" shows jump after jump after jump.",
           "The answers are \"My friends all chant, 'Don't stop! Don't stop!'\" and \"I hop, hop, hop, and hop, hop, hop.\""

@@ -1886,7 +1886,7 @@ PP.addLesson({
           "So the fixed note says the drying fact is in both texts, and the teaching fact is only in \"Baskets That Tell a Story.\""
         ],
         misconception: "A common mix-up is missing a fact that the second text tells in different words, like \"dried sweetgrass.\"",
-        why: "The answers are \"both texts\" and \"only \"Baskets That Tell a Story\".\" \"Sweetgrass\" tells about drying the grass in the sun, and the basket text says the maker uses dried sweetgrass. Only the basket text tells that grandparents teach children." }
+        why: "The drying fact is in both texts, and the teaching fact is only in \"Baskets That Tell a Story.\" \"Sweetgrass\" tells about drying the grass in the sun, and the basket text says the maker uses dried sweetgrass. Only the basket text tells that grandparents teach children." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT2c-C06", type: "match", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
