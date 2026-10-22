@@ -1643,7 +1643,7 @@ PP.addLesson({
         { text: "The bowl was too heavy for Jamal to lift." },
         { text: "Grandma wanted the bowl to stay in place." }
       ],
-      clue: "Read the sentence that starts with But in paragraph 4. It tells what happened after this try and how it happened.",
+      clue: "A try fails for a reason. The story usually tells what went wrong after the try.",
       why: "The answer is \"The ants followed the smell of the food.\" Paragraph 4 says the ants followed the smell and found the bowl again. Moving the bowl did not stop the smell, so the ants kept coming." },
     { id: "SK-TSPS-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Read the sentence from paragraph 3 in the box. What does the word \"But\" show here?",
@@ -1753,25 +1753,25 @@ PP.addLesson({
     { title: "Set 2", items: [
       { id: "SK-TSPS-C06", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
         prompt: "Amari and Kiara handle the problem in different ways. Choose the best answer for each blank.",
-        text: "Before anyone tries a fix, Amari wants to {0}. Kiara thinks the team should {1}.",
+        text: "When the ropes first tangle, Amari wants to {0}. Kiara thinks the team should {1}.",
         slots: [
-          { options: ["find out why the ropes tangle", "buy a brand-new pair of ropes", "skip the show at the fair"], answer: 0 },
-          { options: ["buy a brand-new pair of ropes", "find out why the ropes tangle", "skip the show at the fair"], answer: 0 }
+          { options: ["find out why the ropes tangle", "chant a rhyme while the turners swing", "buy a brand-new pair of ropes"], answer: 0 },
+          { options: ["buy a brand-new pair of ropes", "watch the turners swing the empty ropes", "move practice to a smoother driveway"], answer: 0 }
         ],
         clue: "Characters can handle the same problem in different ways. Look at what each girl says and does about the tangles.",
         hints: [
           "Characters can handle the same problem in different ways. Look at what each girl says and does about the tangles.",
-          "Read paragraphs 2 and 3. Who speaks in each one?",
-          "Nobody in the story wants to skip the show, so that idea fits neither blank. Test the other two ideas against what each girl says."
+          "Reread paragraphs 1 to 4, and notice who does each thing.",
+          "The chant comes in paragraph 4, after the new ropes, so it is not what Amari wanted when the ropes first tangled. Test the other choices against what each girl says and does."
         ],
         how: [
-          "In paragraph 2, Amari sits on the curb and thinks about the tangles before anyone changes anything.",
+          "In paragraph 2, Amari sits on the curb and thinks about the tangles. Watching the turners is something Amari does, not Kiara.",
           "In paragraph 3, Kiara says the ropes are just old and wants new ones.",
           "So Amari wants to \"find out why the ropes tangle,\" and Kiara thinks the team should \"buy a brand-new pair of ropes.\"",
-          "Nobody wants to skip the show."
+          "The chant comes later, in paragraph 4, and nobody talks about a different driveway."
         ],
         misconception: "A common mix-up is mixing up which character said what. Check who is speaking in each paragraph.",
-        why: "The answers are \"find out why the ropes tangle\" and \"buy a brand-new pair of ropes.\" Amari stops to think and watch before anyone tries a fix, and Kiara says the ropes are just old and wants new ones. Nobody wants to skip the show." },
+        why: "The answers are \"find out why the ropes tangle\" and \"buy a brand-new pair of ropes.\" Amari stops to think and watch when the tangles start, and Kiara says the ropes are just old and wants new ones. The chant comes later, watching is what Amari does, and nobody talks about a different driveway." },
       { id: "SK-TSPS-C07", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
         prompt: "Sort the story's events into the parts of a problem-and-solution map. Match each event to its part.",
         cols: ["the problem", "a try that did not work", "the solution", "proof that it worked"],
@@ -1807,38 +1807,38 @@ PP.addLesson({
         hints: [
           "A problem matters when it gets in the way of something the characters want. Ask what the team wants.",
           "Reread paragraph 1.",
-          "The new ropes tangle, too, so old ropes are not why the tangling matters. Test the choices that are left against paragraph 1."
+          "Nothing in the story says Amari is new to Double Dutch. Test the choices that are left against paragraph 1."
         ],
         how: [
           "Paragraph 1 says the team is getting ready for a show at the town fair.",
           "The best part of the show is when Amari jumps into the middle of the ropes, but every time she jumps in, the ropes tangle.",
           "The answer is \"The best part of their show needs Amari to jump in.\" Until the tangles stop, the team cannot do its best part.",
-          "The new ropes tangle too, nothing says Amari is new to Double Dutch, and Ms. Bell only lets them practice in her driveway."
+          "Nothing in paragraph 1 says the ropes are too old for a show, nothing says Amari is new to Double Dutch, and Ms. Bell lets them practice in her driveway."
         ],
         misconception: "A common mix-up is choosing a detail from the story that does not explain why the problem matters.",
-        why: "The answer is \"The best part of their show needs Amari to jump in.\" The team is getting ready for a show, and its best part is Amari jumping in, so the tangles get in the way. New ropes tangle too, nothing says Amari is new, and the team practices in Ms. Bell's driveway." },
+        why: "The answer is \"The best part of their show needs Amari to jump in.\" The team is getting ready for a show, and its best part is Amari jumping in, so the tangles get in the way. Paragraph 1 says nothing about old ropes, nothing says Amari is new, and the team practices in Ms. Bell's driveway." },
       { id: "SK-TSPS-C09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
-        prompt: "Why does Kiara say, \"Let's try it your way\"?",
+        prompt: "The new ropes tangle just like the old ones. What does this failed try show the team?",
         choices: [
-          { text: "Her plan of buying new ropes did not stop the tangles.", correct: true },
-          { text: "She decides that the old ropes were fine after all." },
-          { text: "She wants the team to buy even more new ropes." },
-          { text: "Ms. Bell tells her that Amari is right about the ropes." }
+          { text: "The ropes were never the real trouble.", correct: true },
+          { text: "The new ropes were too short for the turners." },
+          { text: "Amari should jump in a little later." },
+          { text: "The team needs more time to practice." }
         ],
-        clue: "A try that fails can change a character's mind. Ask what happened just before the character speaks.",
+        clue: "A try that fails can teach the characters something about the problem. Ask what the team learns when this try does not work.",
         hints: [
-          "A try that fails can change a character's mind. Ask what happened just before the character speaks.",
+          "A try that fails can teach the characters something about the problem. Ask what the team learns when this try does not work.",
           "Reread paragraph 3.",
-          "Ms. Bell never speaks in the story, so she does not tell Kiara anything. Test the other choices against the end of paragraph 3."
+          "Nothing in the story says the new ropes were too short. Test the other choices against what the team changed with this try."
         ],
         how: [
-          "In paragraph 3, Kiara thinks the ropes are just old, so the team buys new ones.",
-          "But the new ropes tangle just like the old ones. Kiara's plan did not work.",
-          "The answer is \"Her plan of buying new ropes did not stop the tangles.\" So she is ready to try Amari's idea.",
-          "She never says the old ropes were fine, she does not ask for more ropes, and Ms. Bell never speaks."
+          "Kiara thought the ropes were just old, so the team bought new ones.",
+          "The new ropes tangled just like the old ones. Changing the ropes changed nothing.",
+          "The answer is \"The ropes were never the real trouble.\" Something else was making them tangle.",
+          "Nothing says the new ropes were short, and this try changed only the ropes, not when Amari jumps or how long the team practices."
         ],
-        misconception: "A common mix-up is missing how a failed try moves the story forward. Here it changes Kiara's mind.",
-        why: "The answer is \"Her plan of buying new ropes did not stop the tangles.\" The new ropes tangle just like the old ones, so Kiara is ready to try Amari's idea. She never says the old ropes were fine or asks for more ropes, and Ms. Bell never speaks." },
+        misconception: "A common mix-up is thinking a failed try teaches nothing. When changing something does not help, that thing was not the cause.",
+        why: "The answer is \"The ropes were never the real trouble.\" The team changed only the ropes, and the tangles did not stop, so the ropes were not the cause. Nothing says the new ropes were short, and the try was not about when Amari jumps or how long the team practices." },
       { id: "SK-TSPS-C10", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "What is really causing the ropes to tangle?",
@@ -1859,7 +1859,7 @@ PP.addLesson({
         hints: [
           "Failed tries help show the real problem. When a try does not work, the thing it changed was not the real trouble.",
           "Reread paragraph 2.",
-          "The new ropes tangled just like the old ones, so worn-out ropes are not the cause. For Part B, choose the sentence that shows the cause, not one that shows something going wrong."
+          "Nothing in the story says the turners stand too close together. For Part B, choose the sentence that shows the cause, not one that shows something going wrong."
         ],
         how: [
           "New ropes still tangle, so the ropes are not the trouble.",
@@ -2045,7 +2045,7 @@ PP.addLesson({
         "Dry edges show the bread itself is not too wet, and the other sentences show the sandwich is soggy, not why."
       ],
       why: "Part A: Juice from the tomatoes soaked into the bread. Part B: \"It was wettest right under the juicy tomato slices.\" Tighter wrap did not help. The bread was wettest under the tomatoes, and once they were packed apart, the sandwich was not soggy." },
-    { id: "SK-TSPS-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+    { id: "SK-TSPS-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C14"],
       stem: ["Every time it rained, a puddle formed on the floor just inside the school's front door.", "First, the custodian put down a bigger mat, but the puddle still spread across the floor.", "Next, she mopped every hour, but the puddle came back each time.", "Then she looked up.", "Rain was dripping through a small crack in the ceiling, right above the door."],
       prompt: "Read the story in the box. Which plan would most likely solve the real problem?",
@@ -2053,22 +2053,22 @@ PP.addLesson({
         { text: "Fix the crack in the ceiling above the door.", correct: true },
         { text: "Put down two big mats instead of one." },
         { text: "Mop the floor every few minutes." },
-        { text: "Hang a sign that says, \"Watch your step!\"" }
+        { text: "Paint the ceiling above the door." }
       ],
       clue: "A good plan fixes the real problem, not only what the problem causes.",
       hints: [
         "A good plan fixes the real problem, not only what the problem causes.",
-        "For each try, ask: does it deal with the water on the floor, or with where the water comes from?",
-        "A sign could warn people, but it would not stop any water. Test the other plans: would each one stop the puddle from forming?"
+        "Reread the last two sentences of the story.",
+        "Mopping is a try that already failed, so mopping more often would not stop the puddle. Test the other plans against what the custodian sees when she looks up."
       ],
       how: [
         "A bigger mat and more mopping did not stop the puddle. They only dealt with the water after it fell.",
         "The custodian finds rain dripping through a crack in the ceiling. That is the real problem.",
         "The answer is \"Fix the crack in the ceiling above the door.\"",
-        "More mats and more mopping repeat tries that failed, and a sign does not stop the water."
+        "More mats and more mopping repeat tries that failed, and paint on the ceiling would not close the crack the rain comes through."
       ],
       misconception: "A common mix-up is choosing a bigger version of a try that already failed.",
-      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and a sign does not stop the water." }
+      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and paint would not close the crack." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1, P2, P3, P4 and P6. */
   addons: {
