@@ -341,3 +341,125 @@ The axe experimental rule `label-content-name-mismatch` flags 106 nodes on the b
 - Physical touch accuracy and viewing distance.
 - Parent and child use: no family has tried this.
 - Guard run directly without the fixture. I did not rerun it; the implementer's claim stands unverified.
+
+---
+
+## Final re-review (595ef01)
+
+**Candidate:** `595ef011fb5b065f1096dc2473c78631c5da5a7a` (`git rev-parse HEAD`). The working tree was clean.
+**Code changed since the first review (`7d05b59..595ef01`):** `index.html`, `css/styles.css`, `js/app.js`, `js/path.js`, `js/skills.js`.
+**Code not changed (confirmed by `git diff 9a5b297 595ef01`, which is empty):**
+- `js/writing.js`, `js/pp.js`, `js/engine/*` and `js/data/lessons/*`
+- `verification/`
+
+**How I checked.** I did not rely on the "After QA" section of 04. I read the diff, then re-ran everything:
+- the 14 × 7 sweep
+- 266 behaviour checks
+- keyboard
+- axe, plus my computed-contrast measurement with every home `<details>` open
+- every regression suite
+- the full guard
+- a new targeted script for each finding (`scratchpad/qa/scripts/recheck.py`)
+
+The server ran on 8620 and the results are in `scratchpad/qa/final/`. Ten new screenshots are named `qa/qa-final-*.png`.
+
+### Finding by finding
+
+| ID | Status | Evidence |
+|---|---|---|
+| **QA-01 MUST** | **FIXED** | The D3 (all passed) text is dark on white at all seven viewports. The computed-contrast check found 0 failures, with the screen's lowest ratio at 4.64:1. The card now has one soft action, "Mixed practice and practice tests", and no primary, which is correct. The leftover hero rules were deleted; a grep for `.hero`, `.btn-ghost`, `.un-label` and `.hero-title` finds no uses left in the HTML or JS. See `qa/qa-final-QA01-allpassed-390x844.png` and `qa/qa-final-QA01-allpassed-1366x768.png`. |
+| QA-02 | **FIXED** | With storage blocked, the notice now sits above the choice cards and is fully in the first view. Its top is at 288 px (390×844), 289 px (1366×768) and 158 px (844×390). "You can switch anytime. Your progress stays." is hidden when storage is blocked and visible otherwise. On the browse home the notice sits above Up next. Blocked and quota storage gave no page errors. See `qa/qa-final-QA02-storage-blocked-choose-390x844.png`. |
+| QA-03 | **PARTLY** | Search top with my D2 seed is in the table below. The "How a lesson works" link opens and focuses the explainer at the bottom, and "Parent guide" goes to `#parents`. Both are 44 px tall. Search is now 325 to 707 px higher than in cd18ef4, but still 225 to 556 px lower than on main, mostly on phones. The implementer's figures came from a different seed; mine has three "already started" buttons. **I accept this as is.** The brief's order is followed and the help links are reachable near the top. I downgrade it to a NOTE. |
+| QA-04 | **FIXED** | The legend builds each mark with the same code the lesson list uses: "◐ Started", the green step disc, "✓ passed", "✓ grown-up", "review", a real ring and the leaf tick. "Step done" (a disc) and "Passed the skill check" (a "✓ passed" pill) now differ in both shape and words, and every mark carries a word. The row aria-labels did not change (checked: "…Passed the skill check. Review suggested."). **New NOTE (QA-17):** a screen reader hears each legend term's word twice, for example "Started Started" and "✓ passed Passed the skill check". See `qa/qa-final-QA04-legend-390x844.png` and `qa/qa-final-QA04-list-marks-390x844.png`. |
+| QA-05 | **FIXED** | From 640 px wide, the "Choose a lesson" card is as tall as its content. The space is 24 px above its button and 21 px below at 768, 1024, 1366 and 1920. The new category chips are static list items. **NOTE (QA-18):** the chips look a little like buttons (filled tiles with a coloured edge), so a parent may tap them. See `qa/qa-final-QA05-first-visit-1366x768-full.png`. |
+| QA-06 | **FIXED** | In state B the in-progress lessons come first (D1, J3, N2). When a family has only passed lessons, B3, E1 and N1 each opened at **Learn It**, never at a check, and each aria-label said so. Mode and storage were unchanged after using the links. See `qa/qa-final-QA06-saved-work-390x844.png`. |
+| QA-07 | **FIXED** | The card says "Opens at: 1. Read (tab 1 of 5)", which matches the five real tabs. The saved draft loaded. |
+| QA-08 | **FIXED** | The tab order is `#path-next` and then `#path-suggested`, at 390 and 1366. The drift link is smaller and sits below the button. The drift link still opens E3 at Learn It and moves the bookmark. |
+| QA-09 | **FIXED** | "Peach Prep" shows on the path screen at every width: 92 px wide at 320 and 390, with no sideways scroll. The header buttons are 44 px tall. See `qa/qa-final-QA08-09-path-drift-320x568.png`. |
+| QA-10 | **FIXED** | axe (WCAG plus best-practice) finds 0 violations on the whole path document. The `.path-alongside` class stays, so path.py still passes. |
+| QA-11 | **FIXED** | Shift+Tab through 30 list rows leaves 0 partly covered at both 768×1024 and 1366×768. Before, it was 2 and 10. |
+| QA-12 | **FIXED** | A family with only an essay draft sees "saved work on one essay", and the link opens the task with the draft loaded. A family with only short writing sees "one lesson", which opens at Learn It. A blank short-writing draft, or corrupt `pp.task`/`pp.skwrite` JSON, shows no welcome box and gives no errors. With storage blocked the screen falls back to state A with no errors. **Small NOTE:** the essay link's aria-label reads "…skate park?. Your saved draft opens with it."; drop the full stop after the question mark. |
+| QA-13 | **NOT FIXED: reason accepted** | The primary is still below the first screen for A at 320×568, for B at every viewport, and for D3, which has no primary by design. C4 at 320 is now in view. The implementer's reason holds. The bullets that push the button down are the brief's honesty content. B's welcome box is the purpose of that state. At 844×390, which the brief names, the A and C primaries are in the first screen. |
+| QA-14 | **NOT FIXED: reason accepted** | axe still flags 106 nodes with the experimental `label-content-name-mismatch` rule. Every accessible name starts with the visible label, so voice control works. Guard 9.8 and 11.11 assert these labels. Changing them is reasonable future work, not a blocker. |
+| QA-15 | **PARTLY: reasons accepted** | "grown-up" now stays on one line in the progress rows and the legend. The list's ✓ is now a 14 px pill, so the only text under 14 px is the build badge. The visually hidden search label and the `#main` route predate the redesign and are recorded for 05. |
+| QA-16 | **NOT FIXED in the repository: reason accepted** | Editing `verification/` was outside the implementer's brief. **Lead action:** add `#screen-home`, including the all-passed state, to `path-a11y.py`'s contrast run. Also correct its header, which says axe `color-contrast` crashes the browser. It ran in 98 of 98 combinations here, and I ran it again in this round. |
+
+Search top on the browse home, in px:
+
+| Viewport | main 9a5b297 | cd18ef4 | 595ef01 |
+|---|---|---|---|
+| 320×568 | 1360 | 2365 | 2007 |
+| 390×844 | 1245 | 2126 | 1801 |
+| 844×390 | 745 | 1678 | 971 |
+| 768×1024 | not measured | not measured | 1316 |
+| 1024×768 | not measured | not measured | 1067 |
+| 1366×768 | 729 | 1420 | 1042 |
+| 1920×1080 | not measured | not measured | 1042 |
+
+### Regression sweep on 595ef01
+
+- **14 states × 7 viewports (98 combinations).** All 98 had no issues:
+  - correct landing screen
+  - every storage key byte-identical before and after a fresh load
+  - no sideways scroll or clipping
+  - no targets under 44 px
+  - no computed-contrast failures (lowest 5.38:1 on the choice and path screens, 4.64:1 on browse)
+  - no axe violations, WCAG or best-practice
+  - no page errors
+  - no numerals in prose
+
+  Every state has exactly one primary, except D3, which has none by design.
+- **Second axe run.** `color-contrast`, `target-size` and `link-in-text-block`, with every home `<details>` open: 0 violations. The only "incomplete" results are the legend's `.step-n` and `.lg-box`, white ✓ on green (#17703F is 6.13:1). A separate computed-contrast run with details open found 0 failures for A, D2 and D3 at 320 and 1366.
+- **Behaviour checks: 266 of 266 passed.** They covered:
+  - every "Opens at" claim against the step that actually opened, in C1 to C8 and on browse D2
+  - the drift link
+  - Continue wording only with a bookmark
+  - the welcome-back links
+  - first-use Start and Choose a lesson
+  - the mode-switching round trip, with drafts for both essays, short writing, `pp.dev`, a bookmark, finished ticks and habits: **every key except `pp.path.v1` byte-identical, and `finished`, `habits` and `bookmark` unchanged inside it**, at 390×844, 1366×768 and 844×390
+  - search, filters, empty results, clearing, reload, sticky search, and Back/Forward at all seven viewports
+  - 66 direct-link loads in three modes, with no page errors
+  - blocked and quota storage at 320, 390 and 1366
+  - five kinds of corrupt storage at 390 and 1366
+- **Keyboard.** I took 45 Tab stops on each of A, B, C5 and D2, at 390 and 1366. Every stop has a visible 3 px ring, at 6.9:1 to 7.21:1 against its surroundings. The ten activation checks (Enter and Space on choices, Start, Continue, Escape, the explainer, header Browse lessons, a filter, the legend, and a support link) all passed at both widths. The new help links are 44 px tall and work.
+- **Layout probes.** There is no overflow at any of the nine sizes. Search is sticky only at 640 px wide and 560 px tall or more. Category rings line up at 1024 and wider.
+- **Regression suites, run by me:**
+
+  | Suite | Result |
+  |---|---|
+  | content | 0 failures, 6 warnings |
+  | writing | 0 failures, 0 warnings |
+  | copy | 28 |
+  | `path.py` | 148/148 |
+  | `path-a11y.py` | 12/12 runs, 0 violations |
+  | `path-headers.py` | 48/48 |
+  | `skills-recovery.py` | 67/67 |
+  | `writing-recovery.py` | 75/75 |
+  | **Full guard** through my scratch fixture launcher (`qa-guard-fixture.py`, output to the scratchpad) | **110/110, exit 0** |
+
+### New items found in this round (all NOTE)
+- **QA-17:** each legend term is read twice by screen readers ("Started Started"). Give the legend mark `aria-hidden="true"`; the term next to it already names it.
+- **QA-18:** the five category chips in "Choose a lesson" look tappable but do nothing. Make them plainer (no fill), or make each one open the list scrolled to that category.
+- **QA-19:** in the list, the passed mark lost its `title` tooltip (`passLabel`). The word "passed" now covers the meaning, so this is cosmetic.
+
+No new MUST or SHOULD issue was introduced by the fixes.
+
+### Still not tested
+- Real devices: iPhone, iPad and Android.
+- Safari and WebKit, and Firefox.
+- Screen readers: VoiceOver, TalkBack and NVDA.
+- Native pinch zoom and 200% text zoom.
+- The real web fonts, which were blocked.
+- Parent and child use.
+- `guard.py` run directly without the fixture.
+
+### Verdict for 595ef01
+
+**READY FOR OWNER REVIEW.** No MUST items remain.
+- QA-01 is fixed.
+- QA-02 and QA-04 to QA-12 are fixed.
+- QA-03 is partly fixed and accepted as a NOTE.
+- QA-13 to QA-16 remain open with reasons I accept. QA-16 needs a small change by the lead in `verification/`.
+- The three new items (QA-17 to QA-19) are NOTEs.
+
+This verdict covers Chromium emulation only. It is not device, Safari, screen-reader or family acceptance. Those still have to be done before merge approval.
