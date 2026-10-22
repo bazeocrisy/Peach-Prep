@@ -169,3 +169,99 @@ warn  ... similar: 9 of 15 core items have no similar item (both lessons; accept
 PASS (0 failures)
 readability: SEQ p3 4.1, p4 4.1; DESC p3 4.1, p4 3.2
 ```
+
+## 9. Fixes after B2 review (B2-review-TS-1 = R1, B2-review-TS-2 = R2)
+
+**Corrections to this log.**
+- The FK values in §2 were wrong. The first readability run mixed up lessons that share the code 3.T.SS.1.a, and I read the wrong rows.
+- The real pre-review values were:
+  - SEQ p3: 3.2
+  - SEQ p4: 4.7 (over the limit, as R1 MUST-1 found)
+- Measured now:
+
+| Lesson | p1 | p2 | p3 | p4 |
+|---|---|---|---|---|
+| TS-SEQ | 2.0 | 3.4 | 3.2 | 4.1 (147 words) |
+| TS-DESC | 3.3 | 2.2 | 3.9 (178 words) | 3.2 |
+
+- §2's DESC p3 row and the §7 fire-engine notes are replaced by what follows.
+
+**Gates after the fixes.**
+- `check-content.js --all`: PASS, 0 failures. Only the accepted similar-coverage warnings remain on my lessons.
+- `readability.py`: all my passages are at or below 4.5.
+- `check-writing.js`: 0 failures, 0 warnings.
+- `check-instructional-copy.js`: passes.
+- Browser registration check on port 8752: all eight sets register with hints and how, and there are no page errors.
+
+### 9.1 TS-SEQ
+
+| Finding | Fix made |
+|---|---|
+| R1 MUST-1 (p4 FK 4.7) | p4 rewritten. It is now FK 4.1 |
+| R1 MUST-2 (hotel at Terminus) | The hotel is gone. p4 now says "houses and a store went up near the tracks". C11 row 1 is now "A store went up near the tracks." (Terminus). C11's hints, how and why and C12's Part A key, how and why are updated |
+| R2 SHOULD-8 (1837 vs 1838) | p4 now reads "In 1837, railroad planners chose the spot where a new railroad to Tennessee would end." and "Workers drove a stake into the red clay to mark it." It no longer says building began in 1837 |
+| R1 SHOULD-6 (Peters/Thomson merged, name origin stated as fact) | Two unnamed people: "Some railroad men said Marthasville was too long a name. Then a railroad engineer suggested a new name, Atlanta." The origin is hedged: "No one knows for sure where the name came from. It may come from the word Atlantic, as in the Western and Atlantic Railroad." C11 rows 2 and 3 now read "Some railroad men said the name was too long." and "An engineer suggested the name Atlanta." C12's distractor and hint 3 now say "engineer" |
+| R1 NOTE-16 ("busy little town") | Now "a small town". Martha Lumpkin is "a governor's daughter" |
+| C13 after the rewrite | The targets moved (the 1845 sentence is now p4:6:5) and the key moved with them. Text and logic are unchanged |
+| R1 MUST-4 (bike tube shared with 3.T.T.2.b), lead decision | C14 is a new procedure, "How to Make a Paper Snowflake", with no bikes. It asks why the folding comes before the cutting. Key: "Each cut goes through every layer, so the same shape repeats all around." New distractors, hints, how and why. Hint 3 now ends neutrally (also R1 MUST-10, R2 MUST-5) |
+| R1 MUST-10, R2 MUST-5 (C04 hint 3 points to paragraph 4) | Hint 3 now ends "For each choice that is left, ask: is that really what the word First tells a reader?" |
+| R1 SHOULD-3 (C04 absurd distractor) | "…a story about a family…" is now "First would mean this step happens at the same time as the shaking." The how is updated |
+| R1 MUST-10, SHOULD-4, R2 SHOULD-5, lead (S02 stem states the answer; DOK) | The "because paint slides off wet wood" clause is deleted. The key is now "The paint would go on wet wood and might not stick well." Hint 3 ends neutrally, and the how is rebuilt from the damp cloth in step 2. **DOK relabelled 3 → 2.** Distractors lengthened so the key is not the only long option |
+| R1 SHOULD-1 (C08 prompt echoes the key) | The prompt is now "…time words that tell how much time passes, not only the order?" |
+| R1 SHOULD-2, R2 NOTE-1 (C07 Part B best evidence missing) | The Part B key is now p3:2:3, "The gas turns the water a little bit sour, like very weak lemon juice." "Limestone is soft enough…" is no longer offered. Hint 2 names paragraphs 2 to 4, which hold three Part B choices |
+| R1 NOTE-2, R2 SHOULD-7, lead (C06 how misquote) | Step 3 now reads "Paragraph 5: after a very long time, dripping water builds stone icicles." |
+| R1 SHOULD-5 (S01 a copying task) | The box now tells the directions out of order, anchored by "as the very last step", "Before that", "until" and "Start by". Hints, how, misconception and why are rewritten |
+| R1 NOTE-15, lead (grade 1–2 Watch Me) | Watch Me 1 (Sam's cereal) is replaced with a grade 3 class-newspaper example. It shows why one step must finish before the next |
+
+### 9.2 TS-DESC
+
+| Finding | Fix made |
+|---|---|
+| R1 MUST-5, R2 SHOULD-3, lead (fire engine stays in 3.T.T.2.a) | p3 is now "A Kitchen on Wheels" (food truck), with headings Cooking Inside / Keeping Food Cold and Clean / The Serving Window. No fire, firefighter or Dalmatian text is left in TS-DESC. C06 to C10 are rewritten for the new text, keeping the same components, tasks, formats and DOK. The C08 keys are now the cowboy-wagon sentence and the bright-paint sentence. The C08 prompt is reworded away from 3.T.T.2.a's "interesting but not a key detail" wording |
+| R1 MUST-5, lead (C02 repeats TT2a-C04's "add a heading above paragraph N") | C02 now asks "What job does this sentence do in paragraph 4?" about "The pouch works like a fishing net." Key: "It names what the whole paragraph is about." C02 is now PART/MI (topic sentence). FT is still covered by C07 and C13 |
+| R1 MUST-5, SHOULD-9, lead (C13 repeats TT2a-C08's "why is this in a text box"; implausible distractors) | C13 now asks whether moving the box fact into paragraph 4 (padding) would be a good change. Key: "No. The fact is about baseball long ago, and it does not tell how padding helps a player." It has three plausible wrong reasons and stays DOK 3 (judging an edit against the main idea) |
+| R2 SHOULD-2, lead (teach point 5 overgeneralizes) | Point 5 now reads "A text box sets some facts apart: ask whether the fact in the box tells more about the main idea, or is just interesting." C13's misconception says a box can hold a key detail or just an interesting fact |
+| R2 SHOULD-4, lead (Together P3 pre-answers C04) | Together P3 now asks "What is paragraph 3 mostly about?" (key: "the pelican's sharp eyes and how it finds fish"), with a new addon. No Together item gives the whole-passage main idea any more |
+| R1 SHOULD-10 (Together P4 pre-locates C02) | Paragraph locations removed from P4's `why` and its addon hint 3. Hint 3 now rules out "a big bag". P1's `why` no longer says "diving is in paragraph 3" |
+| R2 MUST-6, lead (C05 hint 2 echoes the keys) | Hint 2 is now "Think about how the passage is built: what kind of information does each paragraph give, and do the paragraphs follow an order? Choose two." Hint 1 and the clue now name several structure patterns without defining the keys |
+| R1 MUST-11, lead (C15 hint 1 names both slot jobs) | Clue and hint 1 are now "Describing clue words have jobs. Before each blank, ask what that sentence does for the one before it." Hint 2 is now "Read the whole paragraph once…". The job names appear only in `how` |
+| R1 SHOULD-7 (C09 hint 1 narrows to the only describing word) | Hint 1 is now "Each clue word has a job. Ask what the second sentence does for the first one." |
+| R1 SHOULD-8 (C11 how rules out two C12 distractors) | C11 how step 4 is now "The other sentences each tell about only one part of a glove or one thing about it." |
+| R1 SHOULD-13 (S01 heron shares facts with 3.L.V.1.a) | S01 is now a Venus flytrap paragraph. Keys: the leaves snap shut, and the tiny hairs feel a bug. Still like P6 and C12 |
+| R1 NOTE-15, lead (grade 1–2 Watch Me) | Watch Me 1 (zebra) is replaced with a grade 3 science-museum paragraph whose main idea is stated last |
+
+**Whole-ladder check.** I read the clue and hints 1 to 3 together for every item listed above. In each one, at least two choices (or two orders) are still open after hint 3, and no hint names the place that holds only the key. For the EBSR items (SEQ C07 and C12, DESC C06), every place a hint names holds at least two Part B choices.
+
+### 9.3 Not addressed, and why
+
+- **R1 NOTE-3 (SEQ P4 changed under the same id).** For the lead to decide. I made no further change.
+- **R1 NOTE-4 (refs without `std`).** TS-DESC P5 still has no `std`. That is a results-tagging question for the lead and engine; I did not add one.
+- **R1 NOTE-6 (SEQ P5's DOK 3 label is generous).** P5 is an existing ref item. I left it.
+- **R1 NOTE-12 (no map, caption or figure).** These belong to the planned features lesson.
+- **R1 NOTE-14 (difficulty).** Not changed in this pass.
+- **Overlaps with 3.T.T.2.a that the reviews did not flag.** I found these while fixing MUST-5 and left them for the lead to rule on:
+  - DESC C11 (main idea stated in two places, choose two) uses the same frame as TT2a-C06.
+  - DESC S03 ("Which sentence does NOT support the main idea?") uses the same frame as TT2a form A item T4.
+  - DESC C04 ("add one more sentence") is close to TT2a form B item TB4.
+  - None of them shares a fact or a passage.
+- **Watch Me examples 2 and 3 in both lessons** were not flagged as grade 1–2, so they are unchanged.
+
+### 9.4 Needs a blind re-solve
+
+**TS-SEQ:**
+- p4 (rewritten), with C11, C12 and C13 on it
+- C04 (new distractor)
+- C07 (new Part B key)
+- C08 (new prompt)
+- C14 (new item)
+- S01 (new stem)
+- S02 (new stem and key)
+- Hint-only changes: C04 and C14 hint 3, S02 hint 3
+
+**TS-DESC:**
+- p3 (new passage), with all of C06 to C10
+- C02 (new item)
+- C13 (new item)
+- S01 (new item)
+- Together P3 (new item)
+- Hint-only changes: C05, C09 and C15, and the P4 addon
