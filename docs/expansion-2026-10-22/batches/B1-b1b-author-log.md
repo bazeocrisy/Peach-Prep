@@ -255,3 +255,138 @@ check-content warns about these, and the lead kept the bank at three per lesson.
    - 3.T.C.2.a C09: "\"Maybe,\" he said." is a target and a distractor. "He was still grinning when his mom paid." is not a target, because it would also be defensible.
    - 3.T.C.2.a p3 reads low (FK 1.6). Its content (an unreliable view of a crossing guard) suits grade 3.
 7. I have not reviewed any of this myself, and I ran no git commands.
+
+## 8. Fixes after the B1 reviews (2A and 2B)
+
+**Sources:**
+- B1-review-2A.md (2A)
+- B1-review-2B.md (2B)
+- the lead's message
+- the rules added to AUTHOR-BRIEF.md after the B1 reviews
+
+Every MUST and SHOULD for TS-PS and 3.T.C.2.a is addressed below. **Sections 1 to 7 above describe the first version; this section supersedes them** wherever they differ.
+
+### 8.1 Needs blind re-solve
+
+These items changed in their choices, targets, rows, slots, stem or passage.
+
+**TS-PS passages**
+
+| Item or text | What changed | Finding |
+|---|---|---|
+| **p3 "The Wobbly Table"** (rebuilt, 135 words, FK 2.8) | One failed try (Aunt Bea moves the table to the smooth floor). Niko then reasons it out loud in paragraph 3 ("If the floor is smooth, the trouble must be the table"). The cause is in paragraph 3. The last line is new | 2A T-S3: the old layout copied form A (two failed tries, "looked closely", the cause in paragraph 4) |
+| **p4 "The Tangled Ropes"** (rebuilt, 176 words, FK 3.1) | Amari works out the cause in paragraph 2, before any try. Kiara disagrees ("The ropes are just old"), and the new ropes fail in paragraph 3. Kiara changes her mind and the chant follows in paragraph 4. The result is in paragraph 5. Coach Bell, the time detail ("in two weeks") and "The problem was finally solved!" are gone. The team practises in Ms. Bell's driveway | 2A T-S3; 2B N-8 |
+| **p7 "The Soggy Sandwich"** (similar only, rebuilt, 117 words) | One failed try. Kayla finds the cause herself by peeling the sandwich open, in paragraph 3 | 2A T-S3 |
+
+**TS-PS core items**
+
+| Item | What changed | Finding |
+|---|---|---|
+| **Set 1 order** | Now P5 (ref), C02, C03, C04, C05. **P4 and P6 left core** and are now in Practice Together (P1, P2, P3, P4 and P6: five items) | 2B M-2: P4 gave away P6, and the two shared key logic. With either one in Together and the other in set 1, Together would pre-answer set 1 (the new rule), so both moved |
+| **SK-TSPS-C02** (new, p1) | mc: how Grandma helps (a character's role). The distractors are Jamal's actions | Replaces the old C03 (the pan compared with the tries), because Together P3 (the solution) would pre-answer it under the new rule |
+| **SK-TSPS-C03** (new, p3) | dropdown (2 points): the problem and Aunt Bea's try | The new layout of p3 |
+| **SK-TSPS-C04** (p3) | hot text, the real cause, rebuilt on the new p3. Targets are 1:2, 2:1, 2:3, 3:1, 3:2, 3:4 (the key) and 4:1 | The old C05 moved here |
+| **SK-TSPS-C05** (new, p3) | mc: what "but" shows in "Three legs stayed still, but the fourth leg wiggled…". The key is a difference | 2A T-S4 asked for a "but shows a difference" item. It is kept away from the cause item's Part B key |
+| **SK-TSPS-C06** (new, p4) | dropdown: Amari wants to find out why; Kiara wants new ropes (compare two characters) | Replaces the "fair in two weeks" item (2A T-S5: the frame and key of 3.T.T.1.b form A T2) |
+| **SK-TSPS-C07** (p4) | match, now four columns: problem, a try that did not work, solution, proof that it worked | Absorbs the "proof it worked" component in a sorting task. 2A T-S2 and the lead: the old C09 rehearsed form A T4 Part B |
+| **SK-TSPS-C08** (new, p4) | mc: why the tangling matters (the best part of the show needs Amari to jump in). The stakes come from a plot element, not a time detail | 2A T-S5 |
+| **SK-TSPS-C09** (new, p4) | mc, DOK 3: why Kiara says "Let's try it your way" (a failed try changes a character's mind) | Replaces the old C09 hot text (rehearsal of T4 Part B; 2A T-M1 and 2B M-1) |
+| **SK-TSPS-C10** (p4) | ebsr, the real cause, moved to the end of set 2 so no earlier item answers it. Part A has a new distractor ("Amari's sore ankles make her trip on the ropes"). Part B is the hands sentence (key), "Then she watched…", the new-ropes sentence and the problem sentence. Two Part B choices are in paragraph 2, the place hint 2 names | 2A T-S4 (C08 answered C10); the new evidence-based (Part A/Part B) rule |
+| **SK-TSPS-C12** | `points: 2` (five-step order) | 2B S-7, 2A T-N2, the new rule |
+| **SK-TSPS-C13** | New rows: the cause is found before any fix (Ropes only); someone from outside explains (Dots only); the first try does not fix the real cause (both); the text tells what happened after the solution (both) | 2A T-N1 and 2B N-8: the "at a school" row was setting trivia |
+| **SK-TSPS-C15** | Two paint-colour distractors became wrong-way explanations ("rust on the seats", "the paint was still wet"). The recess distractor is longer. Hint 2 is now "Read sentences 3 and 5." | 2A T-M2 |
+| **SK-TSPS-S02** | Rebuilt on the new p7. Part B has two choices in paragraph 3 | 2A T-S3, T-S1 |
+| **SK-TSPS-P5** (ref) | `dok` 3 → 2 (a field change only) | 2A T-S6, 2B S-6 |
+
+**3.T.C.2.a**
+
+| Item | What changed | Finding |
+|---|---|---|
+| **SK-TC2a-C04** | **Moved to a new stem** (big sister Renee and the backpack; family). Same dropdown frame. Options: "likes giving orders", "wants the narrator to be ready for school", "wants to borrow the library book". DOK 2 | 2A C-M1, 2B M-3, 2A C-S4 (C04 and C05 were twins on p3), S-6 (DOK) |
+| **SK-TC2a-C05** | Part B: "Ms. Pruitt held up her stop sign…" was replaced by "Then she went back to her spot on the corner.", so the last paragraph holds two Part B choices | 2B M-4 |
+| **SK-TC2a-C07** | Row 1 is now "The clippers sound like angry bees." It no longer primes C08's "scary and unpleasant" | lead, 2B S-5 |
+| **SK-TC2a-C08** | "He thinks he is sick and needs a doctor" was replaced by "He thinks the clippers will poke him like a needle." | 2B S-2, 2A C-M2 |
+| **SK-TC2a-C09** | The prompt is now "…shows that he is pleased with how he looks after all" (no echo of "new haircut"). Target p4:7:2 ("Same time next month, Darius?") was added | 2A C-S3 |
+| **SK-TC2a-C10** | Two off-topic distractors were replaced with perspective misreadings: "so readers can find out what Darius was thinking during the haircut" and "so readers can tell that Darius was never really nervous" | 2A C-M3, 2B S-2 |
+| **SK-TC2a-C11** | The prompt asks for clues that the speaker is "an animal, not a child". A tail and paws fit a cat too. The how still says the speaker is most likely the dog | 2A C-N1 |
+| **SK-TC2a-C12** (cr) | The prompt no longer states the speaker's view ("How does the speaker feel about the bath? What do YOU think…"). Criterion 1 is now "I told the speaker's view and a detail that shows it." The sample adds a detail for the speaker's view | 2A C-S2, lead |
+| **SK-TC2a-C13** | **Now a perspectives item:** four new one-line parts, sorted into "shows how the teller feels" or "only tells what happens". It no longer repeats C03's "I inside quotation marks" trap | 2B S-3, lead |
+| **SK-TC2a-S01** | "Grace did not want to help…" was replaced by "Jordan wants Aunt Rae to take him back to chess club." | 2A C-S5 |
+
+### 8.2 Hint, how and why changes only
+
+**TS-PS**
+- **C11:** hint 2 is now strategy only ("look for each choice in the article"). Under the new rule it must not name paragraph 3, because no distractor comes from there.
+- **C14:** hint 2 is now "List what each try changed…". The old hint 2 pointed at the camera sentences.
+- **S01 and S03:** hint 2 no longer names what Mr. Hale notices, or where the water comes from (2A T-S1). S03's `like` is now C14 only (2A T-S7).
+- **Addons**
+  - P1 and P3: hint 2 is strategy only. Neither may name a paragraph that holds no distractor (the new rule).
+  - P5: hints 1 and 2 were rewritten (2A T-S1).
+  - P3: the how no longer says the ants "could not get across", so it does not pre-answer the solution.
+
+**Teaching (TS-PS)**
+- Teach point 1 adds "ask why the problem matters". This models C08.
+- Teach point 3 adds that one character may guess the cause while another works it out. This models C06 and C09.
+- Teach point 5 adds how to compare two problem-and-solution texts. This models C13.
+- Watch Me 3 now models a sentence's job in a draft: without "They never said which foods were needed!", the list makes no sense. This models C15.
+- The lesson still has five teach points and three Watch Me examples.
+
+**3.T.C.2.a**
+- **C03:** hint 2 is "Look at each I in the box. Is it inside quotation marks or not?"
+- **C05:** hint 2 is "Reread the last paragraph." That paragraph has two Part B choices.
+- **C08:** hint 2 is "Reread the sentences just before and after this one in Part 1." Hint 3 rules out only the real-shot choice.
+- **C10:** hint 2 is "Compare what Part 1 can tell the reader with what Part 2 can tell."
+- **C14:** hint 2 is "Look at what the narrator admits after the word Well."
+- **C15:** hint 2 is "Read the two journals side by side…"
+- **C12:** hint 2 is "Find one detail in any stanza…", so it no longer steers the child towards the people's side. The how no longer says "shown above"; it says "One good answer follows."
+- **S01 and S02:** hint 2 was rewritten. The `like` lists of S02 and S03 were trimmed (2B N-9).
+- **Addons:**
+  - P3: hint 2 names paragraphs 2 to 4, which hold three Part B choices (2B N-6).
+  - P5: hint 2 drops "listen to what she says very quietly".
+- **C09:** hints 2 and 3 no longer echo "haircut".
+
+### 8.3 Tallies after the fixes
+
+**TS-PS**
+- **Formats:** mc 6 (P5, C02, C05, C08, C09, C15), dropdown 2 (C03, C06), match 2, hottext 1, ebsr 1, ms 2, order 1. That is seven formats.
+- **DOK:** DOK 3 on five items (C09, C10, C13, C14, C15); DOK 1 on none.
+- **Components:**
+  - problem: C03, C07, C08
+  - tries and clue words: C03, C05, C07
+  - why a try failed, and the real cause: P5, C04, C10, C11, C13, C14, C15. It appears in every set.
+  - solution and proof: C07, C14
+  - structure: C05, C07, C12, C13, C15
+  - character and plot role: C02, C06, C08, C09
+- **Passage load:** p1 has 2 items, p3 has 3, p4 has 6, p5 has 3, plus stems.
+- **Together:** P1, P2, P3, P4 and P6 (five items, the limit).
+
+**3.T.C.2.a**
+- **Formats:** mc 5, ms 4, match 2, dropdown 1, ebsr 1, hottext 1, cr 1.
+- **DOK:** DOK 3 on six items (P5, C10, C11, C12, C14, C15).
+- **Components:**
+  - narrator identity: C03, C06, C11
+  - narrator's view: C05, C08, C13
+  - contrast: C01, C07, C10, C15
+  - the reader's own view: C04, C10, C12, C14
+  - change: P5, C05, C09
+- **Domains:** family (C01, P5, C04); school (C03, C05, C15); community (C06 to C10); pets (C11, C12); mixed (C13); sports (C14).
+
+### 8.4 Gates
+
+- `check-content.js --all`: PASS, 0 failures. The only warnings in these lessons are the extra-question coverage notices (TS-PS 10, 3.T.C.2.a 9; the bank stays at three per lesson).
+- `readability.py`: every passage in these two lessons is under 4.5. The one "above 4.5" line in the run belongs to another 3.T.SS.1.a lesson's p4, not to TS-PS. TS-PS: p3 2.8, p4 3.1, p7 3.9.
+- `check-writing.js` and `check-instructional-copy.js`: pass.
+- Scratch audit (`scratchpad/b1b/audit.js`). Residual hits:
+  - shared distractor wording between C06 and C07 ("a brand-new pair of ropes"), with no key given away;
+  - the C11 choices and the C12 sample share a detail;
+  - the column names of the C13 match appear in its hints.
+
+  None gives an answer away.
+- Browser (port 8732): all thirty core items in `:y`, `:y2` and `:y3` render in order with no page errors.
+
+### 8.5 Notes
+
+- **C12 has four criteria** (2B N-5). I kept the fourth, which is the standard's "distinguish".
+- **2A C-N5** (the `cr` Show me how line "You can still choose it…") is an engine finding for the lead.
+- **2A T-N6:** TS-PS p4 and 3.T.T.4.a p6 both use Double Dutch. p4 is now a driveway practice, and its key fact (hands at different speeds) is not shared.
+- I have not reviewed any of this myself, and I ran no git commands.

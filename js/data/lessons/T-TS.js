@@ -1571,9 +1571,9 @@ PP.addLesson({
       paragraphs: [
         ["The Maple Street Jumpers practiced Double Dutch every afternoon in Ms. Bell's driveway.", "They were getting ready for a show at the town fair.", "The best part of the show was when Amari jumped into the middle of the ropes.", "But every time she jumped in, the two ropes tangled and slapped her ankles."],
         ["Amari sat on the curb and thought about it.", "Then she watched Imani and Kiara turn the empty ropes.", "Imani's hands swung fast, but Kiara's swung slowly.", "\"The ropes are not keeping the same beat,\" Amari said."],
-        ["Kiara shook her head.", "\"The ropes are just old,\" she said.", "\"Let's get new ones.\"", "So the team bought a brand-new pair.", "But the new ropes tangled just like the old ones."],
+        ["\"The ropes are just old,\" Kiara said.", "\"Let's get new ones.\"", "So the team bought a brand-new pair.", "But the new ropes tangled just like the old ones."],
         ["\"Let's try it your way,\" Kiara told Amari.", "The turners decided to chant a jump-rope rhyme while they turned.", "Each word of the rhyme told them when to swing, so their hands kept the same beat."],
-        ["At the fair, the ropes spun in a smooth, even pattern.", "Amari hopped in and jumped fifty times without one tangle.", "The crowd counted every jump out loud."]
+        ["At the fair, the ropes spun in a smooth, even pattern.", "Amari hopped in and jumped fifty times without one tangle."]
       ] },
     { id: "p5", title: "Dots on the Glass", genre: "Informational text",
       paragraphs: [

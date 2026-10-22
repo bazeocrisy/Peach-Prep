@@ -1582,7 +1582,7 @@ PP.addLesson({
       "Next, look for information that both texts give. That is how they are alike. Clue words like both, alike and same show this.",
       "Then look for information that only one text gives. That is how they are different, and it adds to what you know. Clue words like but, however, unlike, different and while show a difference.",
       "Last, put the facts from both texts together to answer a question that one text alone cannot answer.",
-      "Always check which text a fact came from. Test questions often ask about one text or the other."
+      "Always check which text a fact came from. Test questions often ask about one text or the other. For each fact, ask: Is it in Text 1? Is it in Text 2? Is it in both, even in different words?"
     ],
     words: [
       { term: "alike", means: "the same in some way" },
@@ -1625,6 +1625,19 @@ PP.addLesson({
         "Put the two parts in order to answer the question."
       ],
       answer: "In spring, the tree blooms with pink flowers, and in summer, the ripe peaches that grew from those flowers are picked."
+    },
+    {
+      show: [
+        "Text 1: Raccoons sleep in hollow trees during the day.",
+        "Text 2: At night, raccoons search for food. They use their nimble front paws to feel for crayfish in streams."
+      ],
+      ask: "Which text tells when raccoons look for food? What do you learn by putting the two texts together?",
+      steps: [
+        "Check each text for the fact. Text 1 tells only about sleeping. Text 2 tells that raccoons search for food at night.",
+        "Check what both texts share. Each one tells what raccoons do at a certain time of day.",
+        "Put the parts together to answer a question that neither text answers alone: what does a raccoon's whole day look like?"
+      ],
+      answer: "Only Text 2 tells when raccoons look for food: at night. Together, the texts show that raccoons sleep in hollow trees during the day and hunt for food at night."
     }
   ],
   parent: "Read two short things about the same subject, like a library book and a kids' magazine article about sharks. Ask, \"What did both of them tell us? What did only one tell us?\"",
@@ -1657,6 +1670,47 @@ PP.addLesson({
         ["As the leaves in the nest rot, they give off heat.", "This heat keeps the eggs warm.", "The mother stays close by and guards the nest from raccoons and other animals that eat eggs."],
         ["After about two months, the babies are ready to hatch.", "They make high squeaking sounds from inside their eggs.", "When the mother hears them, she digs open the nest.", "She may even carry the babies to the water in her mouth, very gently."],
         ["Baby alligators have bright yellow stripes.", "They stay near their mother for many months while they grow."]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2a): three new pairs, used only by core sets 1 (p5/p6, with two
+       items on p1/p2), 2 (p7/p8) and 3 (p9/p10). Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p5", title: "Sweetgrass", genre: "Informational text",
+      paragraphs: [
+        ["Sweetgrass is a plant that grows in sandy soil near the marshes along the coast of Georgia and South Carolina.", "Its blades are long and thin, and they bend without breaking."],
+        ["In summer, people cut the grass and lay it in the sun to dry.", "Once it is dry, sweetgrass smells sweet, a little like fresh hay.", "The smell can last for many years."]
+      ] },
+    { id: "p6", title: "Baskets That Tell a Story", genre: "Informational text",
+      paragraphs: [
+        ["On the Georgia coast, many Gullah Geechee families make sweetgrass baskets.", "Their ancestors were brought from West Africa long ago, and they kept the skill of weaving baskets from grass."],
+        ["A basket maker winds dried sweetgrass into a tight coil.", "Then she stitches the coil together with thin strips of palmetto leaf.", "Round and round it grows, until it becomes a basket."],
+        ["A large basket can take weeks to finish.", "Grandparents often teach the craft to children, so the tradition stays alive."]
+      ] },
+    { id: "p7", title: "From Old Can to New Can", genre: "Informational text",
+      paragraphs: [
+        ["An empty metal can does not have to be trash.", "Most drink cans are made of aluminum, a light metal that can be used again and again."],
+        ["First, a truck brings cans and bottles to a recycling center.", "There, everything rides along a moving belt.", "A strong magnet pulls out cans made of steel, and machines sort out the plastic and the glass."],
+        ["Next, the aluminum cans are crushed into big blocks.", "The blocks go to a factory, where the cans are shredded into tiny pieces and melted.", "The hot metal is rolled into thin sheets, and the sheets are made into new cans."],
+        ["Making a can from old cans uses much less energy than making one from rock dug out of the ground.", "A recycled can may be back on a store shelf in about two months."]
+      ] },
+    { id: "p8", title: "Three Bins at Oak Hill School", genre: "Informational text",
+      paragraphs: [
+        ["At Oak Hill School, the lunchroom used to fill eight big trash bags every day.", "Then the students came up with a plan."],
+        ["Now, at the end of the lunch line, there are three bins.", "The blue Recycle bin is for cans and plastic bottles.", "The green Compost bin is for food scraps, like banana peels and apple cores.", "The gray Trash bin is for everything else."],
+        ["Each week, the city's recycling truck picks up the cans and bottles.", "The food scraps go to the compost pile in the school garden.", "There, worms and tiny living things break the scraps down into rich, dark soil.", "The students use that soil to grow tomatoes and beans."],
+        ["Now the lunchroom fills only three trash bags a day.", "\"We used to throw almost everything away,\" said a fourth grader named Malia.", "\"Now most of it gets used again.\""]
+      ] },
+    { id: "p9", title: "A Game for a Cold Winter", genre: "Informational text",
+      paragraphs: [
+        ["In December 1891, a teacher named James Naismith had a problem.", "It was too cold for his students in Springfield, Massachusetts, to play outside.", "They were restless indoors, so he set out to invent a new indoor game."],
+        ["Naismith nailed two peach baskets to the railing of a balcony above the gym floor.", "Each basket was 10 feet off the ground.", "The players tried to toss a soccer ball into the other team's basket."],
+        ["The baskets still had their bottoms.", "Every time someone scored, a person had to climb a ladder and take the ball out.", "Then the game could start again."],
+        ["Naismith wrote 13 simple rules for his game.", "One rule said that players could not run while holding the ball.", "The students loved the game, and they soon taught it to friends in other towns."]
+      ] },
+    { id: "p10", title: "How the Basket Changed", genre: "Informational text",
+      paragraphs: [
+        ["Basketball looks different today than it did when it was invented in 1891.", "Many of the changes made the game faster."],
+        ["The first baskets were closed at the bottom.", "Later, people tried metal hoops with a net hanging below.", "At first, the nets were closed too, and someone pulled a chain to let the ball out.", "Finally, the nets were left open at the bottom, so the ball dropped right through after every basket."],
+        ["Players also learned to dribble, or bounce the ball while they moved.", "Dribbling let a player carry the ball down the court without breaking the rule about running."],
+        ["A flat board called a backboard was added behind each hoop.", "It kept fans in the balcony from reaching out and knocking the ball away.", "One thing has stayed the same, though.", "The hoop is still 10 feet off the ground."]
       ] }
   ],
   practice: [

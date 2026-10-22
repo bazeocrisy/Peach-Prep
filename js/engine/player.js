@@ -995,7 +995,7 @@
       run.pos = opts && Number.isInteger(opts.pos) ? Math.max(0, Math.min(set.items.length - 1, opts.pos)) : ss.done ? 0 : ss.pos;
     }
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.own ? "Practice on my own" : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";   /* own sets keep the Try step's tag */
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     renderPassages(set);
@@ -1026,7 +1026,7 @@
     run.own = !!set.own; run.sim = null;
     run.pos = 0; run.ctxs = []; run.state = []; run.submitted = true;
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.own ? "Practice on my own" : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";   /* own sets keep the Try step's tag */
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     const skill = set.kind === "skill";

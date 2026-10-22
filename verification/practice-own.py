@@ -170,7 +170,7 @@ with sync_playwright() as p:
         help:!document.getElementById('q-help').hidden, sim:!document.getElementById('q-similar').hidden}})()""")
     ctl = {x[0]: x for x in c["ctl"]}
     check("B.1 own mode: Check my answer, Give me a hint, Show me how (shows the answer) and Next are present before any wrong answer; no Help me; targets at least 44px",
-          c["state"]["own"] and c["hash"] == "#play/SK:%s:y/try" % K and c["tag"] == "Practice on my own" and not c["help"]
+          c["state"]["own"] and c["hash"] == "#play/SK:%s:y/try" % K and c["tag"] == "Try it yourself" and not c["help"]
           and ctl["q-check"][1] and ctl["q-check"][2] == "Check my answer" and ctl["q-hint"][1] and ctl["q-hint"][2] == "Give me a hint"
           and ctl["q-how"][1] and ctl["q-how"][2] == "Show me how (shows the answer)" and ctl["q-next"][1]
           and all(x[3] >= 44 and x[4] >= 44 for x in c["ctl"] if x[1]), c)
@@ -300,7 +300,7 @@ with sync_playwright() as p:
         q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next"); q.wait_for_timeout(30)
     pr = (q.evaluate(PROG) or {}).get(K, {})
     check("C.3 #play/SK:<k>:y3/test runs as Practice on my own (never a test) and finishing it stores no pass, try or best",
-          d3["s"]["mode"] == "practice" and d3["s"]["own"] and d3["hash"] == "#play/SK:%s:y3/try" % K and d3["tag"] == "Practice on my own"
+          d3["s"]["mode"] == "practice" and d3["s"]["own"] and d3["hash"] == "#play/SK:%s:y3/try" % K and d3["tag"] == "Try it yourself"
           and not any(f in pr for f in ("mastered", "tries", "best", "attempts", "passedAt")), (d3, pr))
     # finish all fifteen: only `tried` appears
     for part in ("y", "y2"):

@@ -1358,7 +1358,7 @@ PP.addLesson({
         clue: "To find who is telling it, look for I or we. Those words show the teller is a character only when they are not inside quotation marks.",
         hints: [
           "To find who is telling it, look for I or we. Those words show the teller is a character only when they are not inside quotation marks.",
-          "Look at each I in the box. Is it inside or outside quotation marks?",
+          "Look at each I in the box. Is it inside quotation marks or not?",
           "Rico says I, but only inside quotation marks, where he is talking. Check how the other sentences talk about the people on the bus."
         ],
         how: [
@@ -1376,9 +1376,9 @@ PP.addLesson({
           { options: ["likes giving orders", "wants the narrator to be ready for school", "wants to borrow the library book"], answer: 0 },
           { options: ["wants the narrator to be ready for school", "likes giving orders", "wants to borrow the library book"], answer: 0 }
         ],
-        clue: "The narrator's view is what the narrator says and thinks. A reader's view comes from what actually happens, even when the narrator does not say it.",
+        clue: "The teller's view is what the teller says and thinks. A reader's view comes from what actually happens, even when the teller does not say it.",
         hints: [
-          "The narrator's view is what the narrator says and thinks. A reader's view comes from what actually happens, even when the narrator does not say it.",
+          "The teller's view is what the teller says and thinks. A reader's view comes from what actually happens, even when the teller does not say it.",
           "For each blank, ask whose idea it is: is it what the narrator says, or what the story shows?",
           "Nothing in the story shows Renee wanting the library book for herself, so that idea fits neither blank. Test the other two ideas against the narrator's words and against what happens in the morning."
         ],
@@ -1497,8 +1497,8 @@ PP.addLesson({
         clue: "A character's view can change. Look for what the character does once he can see how things came out.",
         hints: [
           "A character's view can change. Look for what the character does once he can see how things came out.",
-          "Look at the end of Part 2, after the haircut is done.",
-          "Laughing at the sparrow story shows Darius is less nervous during the haircut, but it is not about how the haircut looks. Check each sentence that is left against the question."
+          "Look at the end of Part 2, after the barber is done.",
+          "Laughing at the sparrow story shows Darius is less nervous during the haircut, but it is not about how he looks. Check each sentence that is left against the question."
         ],
         how: [
           "In Part 1, Darius is sure he will come out looking silly.",

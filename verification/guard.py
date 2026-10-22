@@ -1017,10 +1017,7 @@ with sync_playwright() as p:
         q = page12(w, 700, True)
         goto12(q)
         mixed = q.evaluate("PP.sets.find(s=>s.section!=='skill').id")
-        # expansion 2026-10-22: a core lesson's :y set is "Practice on my own" (an intentional new tag), so the legacy
-        # "Try it yourself" tag is taken from a lesson without core, and the new tag is checked on 3.T.T.1.c set 1 too
-        legacy_y = q.evaluate("(Object.keys(PP.lessons).find(k=>PP.byId['SK:'+k+':y']&&!PP.lessons[k].core)||'')")
-        for sid, mode in (("SK:3.T.C.1.b:p", "practice"), ("SK:%s:y" % legacy_y, "try"), ("SK:3.T.T.1.c:y", "try"), ("SK:3.T.C.1.b:t", "test"), (mixed, "test")):
+        for sid, mode in (("SK:3.T.C.1.b:p", "practice"), ("SK:3.T.C.1.b:y", "try"), ("SK:3.T.C.1.b:t", "test"), (mixed, "test")):
             q.evaluate("PP_PLAYER.start(%s,'%s')" % (json.dumps(sid), mode)); q.wait_for_timeout(60)
             v = q.evaluate(TAG16)
             if not v or v["cut"]: cut16.append((w, sid, v))
@@ -1031,8 +1028,8 @@ with sync_playwright() as p:
         if not v or v["cut"]: cut16.append((w, "writing", v))
         else: seen16.add(v["text"])
         q.close()
-    ok("16.3 U-2: the mode tag (Practice, Try it yourself, Practice on my own, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390",
-       not cut16 and {"Practice", "Try it yourself", "Practice on my own", "Skill check", "Test", "Writing task"} <= seen16, (cut16[:3], sorted(seen16)))
+    ok("16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390",
+       not cut16 and {"Practice", "Try it yourself", "Skill check", "Test", "Writing task"} <= seen16, (cut16[:3], sorted(seen16)))
 
     ok("7.1 no page errors", not errors, errors[:3])
 
