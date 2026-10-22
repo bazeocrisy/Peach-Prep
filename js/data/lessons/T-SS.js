@@ -845,10 +845,10 @@ PP.addLesson({
     big: "Authors use special language to help you picture things: a simile compares with like or as, a metaphor says one thing is another, and an idiom is a saying that means something different from its words.",
     points: [
       "A simile compares two different things using like or as. \"The lake was as smooth as glass\" means the lake was very smooth and flat.",
-      "A metaphor compares without like or as. It says one thing is another. \"The classroom was a zoo\" means the room was loud and wild.",
+      "A metaphor compares without like or as. It says one thing is another. \"The classroom was a zoo\" means the room was loud and wild. But \"The classroom was noisy\" is not a metaphor, because it just tells a fact.",
       "An idiom is a saying you cannot read word for word. \"It's raining cats and dogs\" means it is raining very hard.",
-      "To find the meaning, ask: How are the two things alike? Then use the sentences around it as clues.",
-      "Not every like is a simile. \"I like pizza\" does not compare anything."
+      "To find the meaning, ask: How are the two things alike? Then use the sentences around it as clues. Last, ask why the author chose it: what does it help you picture or feel? Stories, poems, letters and articles all use figurative language.",
+      "Not every like or as makes a simile. \"I like pizza\" does not compare anything, and \"My bike is as big as yours\" compares two things of the same kind."
     ],
     words: [
       { term: "simile", means: "a comparison that uses like or as" },
@@ -923,6 +923,23 @@ PP.addLesson({
         ["At night, we sit by the campfire and sing songs.", "The sky is a dark blanket sprinkled with glitter.", "By the time we hit the hay, I am too tired to keep my eyes open."],
         ["I miss you and Grandma.", "I will see you in two weeks!"],
         ["Love,", "Ana"]
+      ] },
+    /* B1 (expansion 2026-10-22, author b1c): p4 and p5 are used only by core sets 2 and 3.
+       Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "Beach Morning", byline: "", genre: "Poem",
+      lines: [
+        ["The ocean is a sleepy cat", "That stretches on the sand.", "It purrs and curls around my feet", "And licks my open hand."],
+        ["The gulls are like a recess yard.", "They squawk and swoop and call.", "They chase each other round and round", "Like kids who chase a ball."],
+        ["I like to build a castle here", "With towers in a row.", "A wave rolls in and knocks it flat.", "\"Chin up!\" says Grandpa Joe."],
+        ["We build again up by the dunes", "And pat each tower tight.", "It is still standing after lunch,", "And Grandpa says, \"Just right!\""]
+      ] },
+    { id: "p5", title: "The Green Anole", genre: "Informational text",
+      paragraphs: [
+        ["If you live in Georgia, you may have spotted a small green lizard on a fence or a porch rail.", "It is called a green anole.", "Sticky pads on its toes help it climb walls and even glass."],
+        ["An anole is a little magician.", "On a sunny leaf, its skin is bright green.", "When the air turns cool, or when the lizard feels scared, its skin can turn brown in just a few minutes."],
+        ["Anoles are fast hunters.", "An anole sits very still and watches.", "When a fly lands nearby, the lizard shoots forward like a rubber band snapping.", "Then it gulps down its meal."],
+        ["A male anole has a pink flap of skin under his chin.", "To warn another male to stay away, he puffs it out and bobs his head up and down.", "The flap is a bright stop sign that says, \"This spot is mine!\""],
+        ["Next time you are outside, keep your eyes peeled.", "A brown anole on a tree trunk can be very hard to spot."]
       ] }
   ],
   practice: [
@@ -982,6 +999,496 @@ PP.addLesson({
       clue: "Picture the blades of a windmill turning in the wind. Which choice moves the same way?",
       why: "The answer is \"Her arms move around quickly and strongly.\" Windmill blades keep turning in big circles, round and round. Since Rosa also kicks hard, the metaphor shows her arms circling strongly through the water." }
   ],
+  /* ---------- B1 (expansion 2026-10-22, author b1c; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try item P5 by id.
+     P4 is NOT referenced: Together P2 (windmills is a metaphor) and P3 (butterflies is an idiom)
+     already give two of its four rows, so it stays in Practice Together (P1-P4).
+     New ids are numbered by their place in the fifteen (C02 is question 2), so C01 does not exist.
+     Hints and Show me how for P5 and for the Together items are in addons below.
+     Author log: docs/expansion-2026-10-22/batches/B1-b1c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-SS2a-P5" },
+      { id: "SK-SS2a-C02", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p1"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "In paragraph 4, Rosa's little brother is \"jumping up and down like a bouncing ball.\" What does this tell you about him?",
+          choices: [
+            { text: "He is thrilled about how Rosa did in the race.", correct: true },
+            { text: "He is playing a ball game up in the stands." },
+            { text: "He is upset that Rosa did not come in first." },
+            { text: "He is bored and wants the meet to be over." }
+          ] },
+        partB: { prompt: "Which sentence from the story best helps you understand how he feels?",
+          choices: [
+            { text: "\"She had come in third place!\"", correct: true },
+            { text: "\"It was her very first swim meet.\"" },
+            { text: "\"She did not look at the other swimmers.\"" },
+            { text: "\"She kicked hard.\"" }
+          ] },
+        clue: "A comparison with like helps you picture something. Ask how the two things are alike, then look for a clue about why it is happening.",
+        hints: [
+          "A comparison with like helps you picture something. Ask how the two things are alike, then look for a clue about why it is happening.",
+          "Picture a ball bouncing up and down. Then reread what happens to Rosa just before her brother starts jumping.",
+          "There is no ball game in the stands, so the words are about how her brother acts, not what he plays. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "A bouncing ball goes up and down again and again, fast and full of energy.",
+          "Paragraph 4 says Rosa touched the wall and came in third place, and the sentence ends with an exclamation mark. Right after that, her brother jumps up and down.",
+          "Part A: He is thrilled about how Rosa did in the race. Part B: \"She had come in third place!\"",
+          "He is not playing a game, and nothing shows he is upset or bored. The other sentences tell about the start of the meet and the race itself."
+        ],
+        misconception: "A common mix-up is reading the comparison word for word, as if there were a real ball.",
+        why: "Part A: He is thrilled about how Rosa did in the race. Part B: \"She had come in third place!\" A bouncing ball is full of energy. Right after Rosa finds out she came in third, her brother jumps up and down, which shows how excited he is for her. There is no ball game, and nothing shows he is upset or bored." },
+      { id: "SK-SS2a-C03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: ["p1"],
+        prompt: "Just before the race, the author writes that the water \"looked as cold as ice.\" Why does the author describe the water this way?",
+        choices: [
+          { text: "to show that the water seemed scary and hard to jump into", correct: true },
+          { text: "to show that the pool had frozen over during the night" },
+          { text: "to show that the water was a clear, light blue color" },
+          { text: "to show that the weather was cold on the day of the meet" }
+        ],
+        clue: "Authors choose comparisons for a reason. Ask what the comparison helps you feel, and how it fits what is happening in the story.",
+        hints: [
+          "Authors choose comparisons for a reason. Ask what the comparison helps you feel, and how it fits what is happening in the story.",
+          "Reread paragraph 1. How is Rosa feeling as she stands at the edge of the pool?",
+          "The pool has not frozen, because Rosa dives right in. Ask which of the other choices fits the way Rosa feels in paragraph 1."
+        ],
+        how: [
+          "In paragraph 1, it is Rosa's very first meet, and her heart is pounding. She is nervous.",
+          "Ice is so cold that nobody wants to jump into it. Saying the water looks that cold shows how hard the jump seems to her.",
+          "The answer is \"to show that the water seemed scary and hard to jump into.\"",
+          "The pool is not frozen, the story never tells about the weather, and the comparison is about cold, not color."
+        ],
+        misconception: "A common mix-up is reading the comparison as a fact about the water. The author uses it to show how Rosa feels.",
+        why: "The answer is \"to show that the water seemed scary and hard to jump into.\" Rosa is nervous at her first meet, and water as cold as ice is water nobody wants to jump into. The pool is not frozen, since she dives in, the story never mentions the weather, and the comparison is about cold, not color." },
+      { id: "SK-SS2a-C04", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [], pick: 2,
+        stem: ["Rosa wrote these sentences in her swim journal after practice."],
+        prompt: "Which TWO sentences from Rosa's journal use a simile?",
+        choices: [
+          { text: "My goggles fogged up like a bathroom mirror.", correct: true },
+          { text: "After practice, I was as hungry as a bear.", correct: true },
+          { text: "I like swimming on Saturday mornings best." },
+          { text: "This pool is as long as the pool at my school." },
+          { text: "Ms. Ellis said I swam faster than last week." }
+        ],
+        clue: "A simile compares two different things using like or as. Not every like or as is a simile.",
+        hints: [
+          "A simile compares two different things using like or as. Not every like or as is a simile.",
+          "For each sentence, find like or as. Then ask: are two different kinds of things being compared? Choose two.",
+          "\"I like swimming on Saturday mornings best\" uses like to mean enjoy, so it compares nothing. Test the other sentences: does each one compare two different kinds of things, or two of the same kind?"
+        ],
+        how: [
+          "Goggles fogging up are compared to a foggy bathroom mirror. Those are two different things, joined by like, so it is a simile.",
+          "Being hungry after practice is compared to a hungry bear, joined by as. That is a simile, too.",
+          "\"I like swimming\" means enjoy. \"As long as the pool at my school\" compares two pools, the same kind of thing. \"Faster than last week\" has no like or as.",
+          "The answers are \"My goggles fogged up like a bathroom mirror\" and \"After practice, I was as hungry as a bear.\""
+        ],
+        misconception: "A common mix-up is choosing every sentence that has like or as in it.",
+        why: "The answers are \"My goggles fogged up like a bathroom mirror\" and \"After practice, I was as hungry as a bear.\" Each one compares two different things with like or as. \"I like swimming\" uses like to mean enjoy, the pool sentence compares two pools, and \"faster than last week\" does not use like or as." },
+      { id: "SK-SS2a-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+        stem: ["After the meet, Coach Ellis gave Rosa a high five. \"Keep practicing,\" she said. \"At the next meet, you are going to knock it out of the park!\""],
+        prompt: "Read what Coach Ellis says. Then complete the sentences. Choose the best answer for each blank.",
+        text: "\"Knock it out of the park\" is {0}. Coach Ellis means that Rosa {1}.",
+        slots: [
+          { options: ["an idiom", "a simile", "a metaphor"], answer: 0 },
+          { options: ["will do even better at the next meet", "will hit a ball far over a fence", "will swim in a pool inside a park"], answer: 0 }
+        ],
+        clue: "First decide what kind of language the words are: a comparison with like or as, a comparison that says one thing is another, or a saying. Then use what is happening to find the meaning.",
+        hints: [
+          "First decide what kind of language the words are: a comparison with like or as, a comparison that says one thing is another, or a saying. Then use what is happening to find the meaning.",
+          "Look at what Coach Ellis does and says first: a high five and \"Keep practicing.\" Then think about what she hopes will happen at the next meet.",
+          "There is no ball and no park at a swim meet, and nothing is joined by like or as. That tells you the kind of language. For the second blank, ask what a coach who gives a high five expects."
+        ],
+        how: [
+          "Rosa is not hitting a ball, and the meet is not in a park, so the words do not mean what they say. There is no like or as, and it does not say one thing is another.",
+          "So it is an idiom, a saying with a different meaning.",
+          "Coach Ellis gives a high five and tells Rosa to keep practicing. She thinks Rosa will do great.",
+          "The answers are an idiom and will do even better at the next meet."
+        ],
+        misconception: "A common mix-up is reading the saying word for word, as if Rosa would really hit a ball.",
+        why: "The answers are an idiom and will do even better at the next meet. \"Knock it out of the park\" is a saying that means do something very well. There is no ball or park at a swim meet, and Coach Ellis is cheering Rosa on with a high five." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-SS2a-C06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: ["p4"],
+        prompt: "In stanza 1, the poet says the ocean \"purrs and curls around my feet.\" What does this help the reader picture?",
+        choices: [
+          { text: "small, gentle waves that wash softly over the speaker's feet", correct: true },
+          { text: "a real cat walking along the beach next to the speaker" },
+          { text: "big, loud waves that crash down hard onto the sand" },
+          { text: "cold water that makes the speaker shiver and step back" }
+        ],
+        clue: "A metaphor says one thing is another. Ask what the two things have in common.",
+        hints: [
+          "A metaphor says one thing is another. Ask what the two things have in common.",
+          "Picture a sleepy cat curling around your legs. How does it move, and how hard does it push?",
+          "There is no real cat on the beach, so one choice reads the words too literally. Of the others, ask which kind of water a sleepy cat would be like."
+        ],
+        how: [
+          "A sleepy cat moves slowly and gently. It stretches out, purrs and curls around you.",
+          "The poet says the ocean does the same thing around the speaker's feet and hand.",
+          "The answer is \"small, gentle waves that wash softly over the speaker's feet.\"",
+          "There is no real cat, crashing waves are not sleepy, and nothing in the poem says the water is cold."
+        ],
+        misconception: "A common mix-up is picturing a real cat instead of asking how the ocean is like one.",
+        why: "The answer is \"small, gentle waves that wash softly over the speaker's feet.\" A sleepy cat moves slowly and gently, so the ocean that purrs and curls around the speaker's feet is calm, with small waves. There is no real cat, crashing waves are not sleepy, and the poem never says the water is cold." },
+      { id: "SK-SS2a-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "When Grandpa Joe says \"Chin up!\" in stanza 3, what does he mean?",
+          choices: [
+            { text: "Don't feel bad; things will be okay.", correct: true },
+            { text: "Look up at the gulls in the sky." },
+            { text: "Hold your head still in the wind." },
+            { text: "Hurry, because it is time to go." }
+          ] },
+        partB: { prompt: "Which line from the poem best helps the reader understand what Grandpa means?",
+          choices: [
+            { text: "\"A wave rolls in and knocks it flat.\"", correct: true },
+            { text: "\"They squawk and swoop and call.\"" },
+            { text: "\"With towers in a row.\"" },
+            { text: "\"And licks my open hand.\"" }
+          ] },
+        clue: "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
+        hints: [
+          "An idiom means something different from its words. Look at what just happened to find what the speaker really means.",
+          "Reread stanza 3. What happens to the castle right before Grandpa Joe speaks?",
+          "Grandpa is not asking anyone to look at the sky, and the gulls are only in stanza 2. For Part B, the line you choose must match your Part A answer."
+        ],
+        how: [
+          "In stanza 3, a wave knocks the speaker's castle flat. Anyone would feel a little sad.",
+          "Right then, Grandpa says \"Chin up!\" People say it to cheer someone up.",
+          "Part A: Don't feel bad; things will be okay. Part B: \"A wave rolls in and knocks it flat.\"",
+          "He is not talking about the gulls, the wind or going home."
+        ],
+        misconception: "A common mix-up is reading the saying word for word, as if Grandpa wanted the speaker to lift their chin.",
+        why: "Part A: Don't feel bad; things will be okay. Part B: \"A wave rolls in and knocks it flat.\" The wave wrecks the castle, and Grandpa says \"Chin up!\" to cheer the speaker up. The gulls are in stanza 2, and nothing in stanza 3 is about the wind or going home." },
+      { id: "SK-SS2a-C08", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: ["p4"], pick: 2,
+        prompt: "In stanza 2, the poet compares the gulls to children at recess. Which TWO things do these comparisons help the reader understand about the gulls?",
+        choices: [
+          { text: "The gulls make a lot of noise.", correct: true },
+          { text: "The gulls move around fast and playfully.", correct: true },
+          { text: "The gulls are young birds that go to school." },
+          { text: "The gulls are hungry and looking for food." },
+          { text: "The gulls are afraid of the speaker." }
+        ],
+        clue: "A simile compares two different things using like. Ask how the two things are alike.",
+        hints: [
+          "A simile compares two different things using like. Ask how the two things are alike.",
+          "Think about what a recess yard sounds like, and what kids chasing a ball look like. Choose two.",
+          "The gulls are not real children, so they do not go to school. Check each other choice against what kids at recess are like."
+        ],
+        how: [
+          "A recess yard is full of shouting. That shows the gulls are noisy: they squawk and call.",
+          "Kids chasing a ball run fast and play. That shows how the gulls swoop and chase each other.",
+          "The answers are \"The gulls make a lot of noise\" and \"The gulls move around fast and playfully.\"",
+          "The gulls are birds, not students, and the poem never says they are hungry or scared."
+        ],
+        misconception: "A common mix-up is choosing a sentence that takes the comparison word for word, as if the gulls really went to school.",
+        why: "The answers are \"The gulls make a lot of noise\" and \"The gulls move around fast and playfully.\" A recess yard is loud, and kids chasing a ball move fast and play, just like the squawking, swooping gulls. The gulls do not go to school, and the poem never says they are hungry or scared." },
+      { id: "SK-SS2a-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: ["p4"],
+        prompt: "Read this line from stanza 3: \"I like to build a castle here.\" Complete the sentence. Choose the best answer for each blank.",
+        text: "In this line, the word like {0}, so the line {1}.",
+        slots: [
+          { options: ["means enjoy", "compares two things", "means almost the same as"], answer: 0 },
+          { options: ["is not a simile", "is a simile", "is a metaphor"], answer: 0 }
+        ],
+        clue: "Not every like makes a simile. A simile uses like to compare two different things.",
+        hints: [
+          "Not every like makes a simile. A simile uses like to compare two different things.",
+          "Read the line and try saying it with another word in place of like. Is anything being compared to anything else?",
+          "The line does not put two different things side by side, the way \"kids who chase a ball\" does in stanza 2. Decide what like means here, then decide what that makes the line."
+        ],
+        how: [
+          "In \"I like to build a castle here,\" like tells how the speaker feels about building. It means enjoy.",
+          "Nothing is compared to anything else, and the line does not say one thing is another.",
+          "The answers are means enjoy and is not a simile."
+        ],
+        misconception: "A common mix-up is calling every sentence with like in it a simile.",
+        why: "The answers are means enjoy and is not a simile. The speaker enjoys building castles. Nothing is being compared, so there is no simile and no metaphor in this line." },
+      { id: "SK-SS2a-C10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+        stem: ["Aunt Rena hurt her knee, so Kayla made her a get-well card. Aunt Rena wrote back with a thank-you note. Here are five sentences from her note."],
+        prompt: "Which sentence from Aunt Rena's note uses an idiom? Choose the sentence.",
+        options: [
+          "Thank you for the card you made for me.",
+          "Your drawing of my garden is as bright as a sunflower.",
+          "Your card was just what the doctor ordered!",
+          "I like the purple flowers you drew best of all.",
+          "My knee is getting better every day."
+        ],
+        answer: [2], pick: 1,
+        clue: "An idiom is a saying that means something different from its words. Look for a sentence that would sound strange if you pictured it exactly.",
+        hints: [
+          "An idiom is a saying that means something different from its words. Look for a sentence that would sound strange if you pictured it exactly.",
+          "Read each sentence word for word. Which one cannot really be true, even though Aunt Rena means it?",
+          "\"Your drawing of my garden is as bright as a sunflower\" uses as to compare two things, so it is a simile, not an idiom. Check the rest the same way."
+        ],
+        how: [
+          "The sunflower sentence uses as to compare, so it is a simile. \"I like the purple flowers\" uses like to mean enjoy.",
+          "\"Thank you for the card\" and \"My knee is getting better every day\" mean just what they say.",
+          "No doctor really ordered Kayla's card. \"Just what the doctor ordered\" is a saying that means exactly what someone needed.",
+          "The answer is \"Your card was just what the doctor ordered!\""
+        ],
+        misconception: "A common mix-up is choosing the simile. A simile uses like or as; an idiom is a saying with a different meaning.",
+        why: "The answer is \"Your card was just what the doctor ordered!\" No doctor ordered the card. The saying means the card was exactly what Aunt Rena needed to feel better. The sunflower sentence is a simile, and the other sentences mean just what they say." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-SS2a-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: ["p5"],
+        prompt: "Read paragraph 3. Complete the sentences. Choose the best answer for each blank.",
+        text: "The words \"shoots forward like a rubber band snapping\" are {0}. They help the reader understand that the anole {1}.",
+        slots: [
+          { options: ["a simile", "a metaphor", "an idiom"], answer: 0 },
+          { options: ["moves very suddenly and fast", "is made of something stretchy", "makes a loud snapping noise"], answer: 0 }
+        ],
+        clue: "Look for like or as to decide what kind of comparison it is. Then ask how the two things are alike.",
+        hints: [
+          "Look for like or as to decide what kind of comparison it is. Then ask how the two things are alike.",
+          "Reread paragraph 3. What does the anole do just before it shoots forward, and what is it trying to catch?",
+          "The anole is not made of rubber, so one meaning reads the words too literally. Use paragraph 3 to choose between the two meanings that are left."
+        ],
+        how: [
+          "The words use like to compare the anole to a rubber band, so they make a simile.",
+          "A snapping rubber band flies off all at once, very fast.",
+          "Paragraph 3 says the anole sits very still, then shoots forward when a fly lands.",
+          "The answers are a simile and moves very suddenly and fast."
+        ],
+        misconception: "A common mix-up is taking the comparison word for word, as if the anole were stretchy or made a snapping sound.",
+        why: "The answers are a simile and moves very suddenly and fast. The words use like to compare the anole to a snapping rubber band, which flies off all at once. The anole sits still, then shoots forward to catch a fly. The paragraph never says it is stretchy or makes a noise." },
+      { id: "SK-SS2a-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p5"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "In paragraph 5, the author tells readers to \"keep your eyes peeled.\" What does this mean?",
+          choices: [
+            { text: "Look very carefully as you watch.", correct: true },
+            { text: "Peel a thin layer from around your eyes." },
+            { text: "Close your eyes and listen for lizards." },
+            { text: "Stay indoors where lizards cannot reach you." }
+          ] },
+        partB: { prompt: "Which sentence from the article best helps you understand what the author means?",
+          choices: [
+            { text: "\"A brown anole on a tree trunk can be very hard to spot.\"", correct: true },
+            { text: "\"Sticky pads on its toes help it climb walls and even glass.\"" },
+            { text: "\"Then it gulps down its meal.\"" },
+            { text: "\"It is called a green anole.\"" }
+          ] },
+        clue: "An idiom does not mean what its words say. Use the sentences around it to find what it really means.",
+        hints: [
+          "An idiom does not mean what its words say. Use the sentences around it to find what it really means.",
+          "Read paragraph 5. What does the author say about finding an anole on a tree?",
+          "Nobody can really peel their eyes like a banana, so one meaning reads the words too literally. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "No one can really peel their eyes, so this is an idiom.",
+          "The next sentence says a brown anole on a tree trunk can be very hard to spot. You would have to look hard to see it.",
+          "Part A: Look very carefully as you watch. Part B: \"A brown anole on a tree trunk can be very hard to spot.\"",
+          "The author wants you to look, so closing your eyes or staying indoors does not fit."
+        ],
+        misconception: "A common mix-up is reading the saying word for word, as if it were about peeling something.",
+        why: "Part A: Look very carefully as you watch. Part B: \"A brown anole on a tree trunk can be very hard to spot.\" Nobody really peels their eyes. Because a brown anole is hard to see on a tree, you have to look carefully to find one. The other sentences tell facts about anoles but do not explain the saying." },
+      { id: "SK-SS2a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: ["p5"],
+        prompt: "In paragraph 2, the author writes, \"An anole is a little magician.\" Why does the author use this metaphor?",
+        choices: [
+          { text: "to show that its skin can change color almost like a magic trick", correct: true },
+          { text: "to show that it likes to do tricks for the people on the porch" },
+          { text: "to show that it is so small it can hide almost anywhere at all" },
+          { text: "to show that it can make flies disappear by eating them up" }
+        ],
+        clue: "Authors use metaphors to help you picture something. Ask what the two things have in common, and read the sentences around the metaphor.",
+        hints: [
+          "Authors use metaphors to help you picture something. Ask what the two things have in common, and read the sentences around the metaphor.",
+          "Read the sentences that come right after the metaphor. What are they about?",
+          "The anole does not perform for people, so one choice reads the words too literally. Another choice is about eating, which the article tells about later, in paragraph 3. Test the two choices that are left against paragraph 2."
+        ],
+        how: [
+          "Paragraph 2 begins by calling the anole a little magician.",
+          "The next sentences tell how its skin is bright green on a sunny leaf and can turn brown in a few minutes. A change like that seems like a magic trick.",
+          "The answer is \"to show that its skin can change color almost like a magic trick.\"",
+          "It does not perform for people, eating comes in paragraph 3, and paragraph 2 is about color, not size."
+        ],
+        misconception: "A common mix-up is choosing an idea from a different part of the article. Read the sentences right around the metaphor.",
+        why: "The answer is \"to show that its skin can change color almost like a magic trick.\" Right after calling the anole a magician, the author tells how its skin turns from bright green to brown. The anole does not perform for people, eating is described in paragraph 3, and paragraph 2 is not about size." },
+      { id: "SK-SS2a-C14", type: "ms", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p5"], pick: 2,
+        stem: ["Sentence A: Anoles are fast hunters.", "Sentence B: The flap is a bright stop sign that says, \"This spot is mine!\""],
+        prompt: "Read sentences A and B from the article. Which TWO statements about them are true?",
+        choices: [
+          { text: "Only sentence B compares two different things.", correct: true },
+          { text: "Sentence A tells a fact in plain words.", correct: true },
+          { text: "Both sentences are metaphors, because both use is or are." },
+          { text: "Sentence A is a simile, because it compares anoles to hunters." },
+          { text: "Sentence B means the anole holds up a real sign." }
+        ],
+        clue: "A metaphor says one thing is another thing. Not every sentence with is or are is a metaphor.",
+        hints: [
+          "A metaphor says one thing is another thing. Not every sentence with is or are is a metaphor.",
+          "For each sentence, ask: is the anole or its flap really this thing, or is the author comparing it to something else? Choose two.",
+          "Sentence B does not mean a real sign: the flap is skin under the anole's chin. Check each other statement against both sentences."
+        ],
+        how: [
+          "Sentence B says the flap is a stop sign. A flap of skin is not really a sign, so the author compares two different things. That is a metaphor.",
+          "Sentence A says anoles are fast hunters. Paragraph 3 shows they really do hunt flies, so it is a plain fact.",
+          "The answers are \"Only sentence B compares two different things\" and \"Sentence A tells a fact in plain words.\"",
+          "Using is or are does not make a metaphor by itself, and sentence A has no like or as."
+        ],
+        misconception: "A common mix-up is calling every sentence with is or are a metaphor. A metaphor must compare two different things.",
+        why: "The answers are \"Only sentence B compares two different things\" and \"Sentence A tells a fact in plain words.\" The flap is not really a sign, so sentence B is a metaphor. Anoles really do hunt, so sentence A is a fact. Is or are alone does not make a metaphor, sentence A has no like or as, and there is no real sign." },
+      { id: "SK-SS2a-C15", type: "match", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+        stem: ["Ms. Tate's class wrote about the garden they planted at the senior center.", "\"In March, the empty lot was a desert. We worked like ants all morning, carrying bags of soil and trays of seeds. By June, tomatoes and beans covered every row. Mr. Davis, who lives at the center, told us, 'You kids have green thumbs!'\""],
+        prompt: "What does each phrase mean in the class's writing? Match each phrase to its meaning.",
+        cols: ["dry and bare, with nothing growing", "worked hard together", "good at making plants grow", "tired and ready to quit"],
+        rows: [
+          { text: "the empty lot was a desert", answer: 0 },
+          { text: "We worked like ants", answer: 1 },
+          { text: "You kids have green thumbs", answer: 2 }
+        ],
+        clue: "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
+        hints: [
+          "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
+          "Think about what a real desert looks like, how ants work, and what the garden looks like by June.",
+          "Nobody's thumbs really turned green, so the last phrase is not about color. Ask what Mr. Davis sees when he says it. Then match the other two phrases the same way."
+        ],
+        how: [
+          "A desert is dry and bare. In March the lot was empty, so it was dry and bare, with nothing growing.",
+          "Ants work hard together, carrying loads. The class carried soil and seeds all morning, so they worked hard together.",
+          "By June, plants covered every row. \"Green thumbs\" is a saying for people who are good at making plants grow.",
+          "Nobody in the writing is tired or ready to quit, so that meaning is not used."
+        ],
+        misconception: "A common mix-up is taking a phrase word for word, as if the class had real green thumbs or the lot were full of sand.",
+        why: "The empty lot was a desert: dry and bare, with nothing growing. We worked like ants: worked hard together. You kids have green thumbs: good at making plants grow. Tired and ready to quit does not match any phrase." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. Each `like` lists only
+     the core items it really practises (same component and task). */
+  similar: [
+    { id: "SK-SS2a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-P5", "SK-SS2a-C06"],
+      stem: ["Every day in science class, Ms. Ortiz's students ask question after question. \"You are all sponges!\" she laughs. \"You soak up everything I teach.\""],
+      prompt: "What does Ms. Ortiz mean when she says her students are sponges?",
+      choices: [
+        { text: "They learn new things quickly and easily.", correct: true },
+        { text: "They are wet from playing in the rain." },
+        { text: "They help wipe the tables in the lab." },
+        { text: "They forget most of what she teaches." }
+      ],
+      clue: "A metaphor says one thing is another. Ask what the students and sponges have in common.",
+      hints: [
+        "A metaphor says one thing is another. Ask what the students and sponges have in common.",
+        "Think about what a sponge does with water. Then read what Ms. Ortiz says right after.",
+        "The students are not really sponges, so being wet or wiping tables reads the words too literally. Decide which of the two choices that are left fits a class that asks question after question."
+      ],
+      how: [
+        "A sponge soaks up water fast.",
+        "Ms. Ortiz says the students soak up everything she teaches, and they ask question after question.",
+        "The answer is \"They learn new things quickly and easily.\"",
+        "They are not wet, the story does not tell about cleaning, and forgetting is the opposite of soaking up."
+      ],
+      why: "The answer is \"They learn new things quickly and easily.\" A sponge soaks up water, and the students soak up what Ms. Ortiz teaches. They are not really wet or cleaning, and forgetting is the opposite of what she says." },
+    { id: "SK-SS2a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C05", "SK-SS2a-C07", "SK-SS2a-C12"],
+      stem: ["Deshawn baked his very first pan of cornbread. Grandma took a bite and nodded. Then she saw his worried face. \"You're on the right track,\" she said. \"Next time, use a little less salt, and it will be perfect.\""],
+      prompt: "What does Grandma mean when she says Deshawn is \"on the right track\"?",
+      choices: [
+        { text: "He is doing well and is close to getting it right.", correct: true },
+        { text: "He should follow the railroad tracks to the store." },
+        { text: "He made a big mistake and should start all over." },
+        { text: "He needs to find a new recipe for his cornbread." }
+      ],
+      clue: "An idiom means something different from its words. Use what the speaker says next to find the real meaning.",
+      hints: [
+        "An idiom means something different from its words. Use what the speaker says next to find the real meaning.",
+        "Read what Grandma does before she speaks, and what she says will happen next time.",
+        "There is no train or track in Grandma's kitchen, so one choice reads the words too literally. Ask whether Grandma sounds pleased or upset, then test the choices that are left."
+      ],
+      how: [
+        "There is no real track, so this is an idiom.",
+        "Grandma nods, and she says one small change will make it perfect. She is pleased with his work.",
+        "The answer is \"He is doing well and is close to getting it right.\"",
+        "She does not tell him to start over or find a new recipe, only to use less salt."
+      ],
+      why: "The answer is \"He is doing well and is close to getting it right.\" Grandma nods and says that with a little less salt it will be perfect. There are no real tracks, and she does not tell him to start over or use a new recipe." },
+    { id: "SK-SS2a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C04", "SK-SS2a-C09", "SK-SS2a-C11"],
+      stem: ["Jamal wrote these sentences for his report on box turtles."],
+      prompt: "Which sentence from Jamal's report uses a simile?",
+      choices: [
+        { text: "A baby box turtle is as small as a bottle cap.", correct: true },
+        { text: "This box turtle is as old as the one at the zoo." },
+        { text: "Box turtles like to sit in warm patches of sun." },
+        { text: "A turtle's shell is a strong house on its back." }
+      ],
+      clue: "A simile compares two different things using like or as. Check what each like or as is doing.",
+      hints: [
+        "A simile compares two different things using like or as. Check what each like or as is doing.",
+        "For each sentence, ask: are two different kinds of things being compared, and is like or as joining them?",
+        "\"Box turtles like to sit in warm patches of sun\" uses like to mean enjoy, so it compares nothing. Test the other three sentences."
+      ],
+      how: [
+        "The bottle cap sentence uses as to compare a turtle with a bottle cap, two different things. That is a simile.",
+        "The zoo sentence compares two turtles, the same kind of thing. \"Like to sit\" means enjoy.",
+        "The shell sentence says the shell is a house, with no like or as, so it is a metaphor.",
+        "The answer is \"A baby box turtle is as small as a bottle cap.\""
+      ],
+      why: "The answer is \"A baby box turtle is as small as a bottle cap.\" It uses as to compare two different things. The zoo sentence compares two turtles, \"like to sit\" means enjoy, and the shell sentence is a metaphor because it has no like or as." }
+  ],
+  /* Hints and Show me how for the ref P5 (core set 1) and Together P1-P4. */
+  addons: {
+    "SK-SS2a-P1": {
+      hints: [
+        "A simile compares two different things. Ask how the two things are alike, then check the story for clues about how Rosa feels.",
+        "Read paragraph 1. Where is Rosa standing, and what is about to happen for the very first time?",
+        "There is no real drum at the pool, so two choices take the words too literally. Of the choices left, ask which one fits a heart just before a big first race."
+      ],
+      how: [
+        "Paragraph 1 says it is Rosa's very first swim meet, and she is standing at the edge of the pool.",
+        "A pounding drum is loud and strong, beat after beat. A nervous heart beats the same way.",
+        "The answer is \"Her heart was beating hard and fast.\"",
+        "There is no real drum at the pool, and a slow, soft heartbeat does not fit someone so nervous."
+      ],
+      misconception: "A common mix-up is reading the comparison word for word, as if there were a real drum." },
+    "SK-SS2a-P2": {
+      hints: [
+        "A metaphor compares two things without like or as. It says one thing is another.",
+        "Check each sentence you can choose for the words like or as. A sentence with one of them is a simile, not a metaphor.",
+        "\"Rosa stood at the edge of the pool with her heart pounding like a drum\" uses like, so it is a simile. Check the other sentences the same way."
+      ],
+      how: [
+        "Look for like or as in each sentence.",
+        "The heart, the cold water and the bouncing brother all use like or as, so they are similes.",
+        "The answer is \"Her arms were windmills, spinning round and round.\" It says her arms were windmills, with no like or as."
+      ] },
+    "SK-SS2a-P3": {
+      hints: [
+        "An idiom does not mean what its words say. Use the clues around it to find what it really means.",
+        "Read what Ms. Ellis sees just before she speaks, and what she says right after the idiom.",
+        "There are no real butterflies at the pool, so Rosa is not excited to see butterflies. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "There are no real butterflies, so this is an idiom.",
+        "Ms. Ellis sees Rosa's worried face, and she says everyone feels this way before a race.",
+        "Part A: Rosa feels nervous about the race. Part B: \"Her coach, Ms. Ellis, saw Rosa's worried face.\"",
+        "Nothing says Rosa ate lunch or is tired, and the butterflies are not real."
+      ] },
+    "SK-SS2a-P4": {
+      hints: [
+        "Check each phrase for like or as. Then ask: does it say one thing is another, or is it a saying you cannot read word for word?",
+        "Two of the phrases use like or as. Find them first.",
+        "\"As cold as ice\" uses as to compare the water to ice, so it goes with the comparisons that use like or as. Sort the other three the same way: look for like or as first, then decide."
+      ],
+      how: [
+        "\"As cold as ice\" and \"jumping up and down like a bouncing ball\" use as or like, so they are similes.",
+        "\"Her arms were windmills\" says her arms were windmills, with no like or as, so it is a metaphor.",
+        "\"Butterflies in your stomach\" is a saying that means feeling nervous, so it is an idiom."
+      ] },
+    "SK-SS2a-P5": {
+      hints: [
+        "When an author says one thing is another, ask how the two things are alike. Picture both of them.",
+        "Picture the blades of a windmill turning in the wind. Then reread paragraph 3 to see what else Rosa does as she swims.",
+        "Windmill blades keep turning, so arms that get tired and stop do not fit. Test the other choices against paragraph 3."
+      ],
+      how: [
+        "Windmill blades turn in big circles, round and round, and they keep going.",
+        "Paragraph 3 says Rosa kicks hard, and her arms keep spinning round and round.",
+        "The answer is \"Her arms move around quickly and strongly.\"",
+        "Stiff arms, slow swimming and tired arms that stop do not match spinning windmill blades."
+      ],
+      misconception: "A common mix-up is picturing a real windmill instead of asking how Rosa's arms are like one." }
+  },
   test: [
     { id: "SK-SS2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "In paragraph 2, Dad asks, \"Why the long face?\" What does he mean?",

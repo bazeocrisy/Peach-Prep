@@ -67,6 +67,7 @@ with sync_playwright() as p:
     # ---------- 2. Engine scoring on every item ----------
     sc = pg.evaluate("""(()=>{const T=PP_ITEMS, out=[];
       PP.sets.forEach(s=>s.items.forEach(it=>{
+        if(it.type==='cr')return;   /* expansion 2026-10-22: a constructed response is never scored (practice-own.py covers it) */
         const ci=ch=>ch.map((x,i)=>x.correct?i:-1).filter(i=>i>=0);
         const r=T[it.type].blank(it);
         const blank=T[it.type].score(it,r).points;
@@ -91,7 +92,7 @@ with sync_playwright() as p:
     ok("2.3 two-part items give 1 point for Part A only", not bad, bad[:5])
     bad = [x["id"] for x in sc if not (x["ans"] and x["desc"] and x["nt"])]
     ok("2.4 every item can describe its answer, the child's answer and a review hint", not bad, bad[:5])
-    blank_place = pg.evaluate("""(()=>{const T=PP_ITEMS,out=[];PP.sets.forEach(s=>s.items.forEach(it=>{
+    blank_place = pg.evaluate("""(()=>{const T=PP_ITEMS,out=[];PP.sets.forEach(s=>s.items.forEach(it=>{if(it.type==='cr')return;
         const r=T[it.type].blank(it); const t=T[it.type].narrowText(it,r,s);
         if(/Look in\\s*[.,]|Look in\\s+and|\\(\\s*\\)/.test(t)) out.push(s.id+' '+it.id+': '+t);}));return out;})()""")
     ok("2.5 no review hint has an empty place name", not blank_place, blank_place[:3])
@@ -99,7 +100,9 @@ with sync_playwright() as p:
     # ---------- 3. Practice mode on every item ----------
     hint_fail, right_fail, wrong_fail, leak_fail = [], [], [], []
     # a skill's check sets (SK:<k>:t, and form B SK:<k>:tB, PP-004) never run in practice mode (PP-003 A3); they are covered in sections 4, 11.2 and 14
-    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&(s.part=='t'||s.part=='tB'))).map(s=>s.id)"):
+    # expansion 2026-10-22: a core lesson's "Practice on my own" sets (s.own) have no Help me ladder by design
+    # (hints and Show me how instead, 01-architecture.md §2.7); verification/practice-own.py asserts their controls.
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&(s.part=='t'||s.part=='tB'))&&!s.own).map(s=>s.id)"):
         pg.evaluate("PP_PLAYER.start('%s','practice')" % s); pg.wait_for_timeout(80)
         n = pg.evaluate("PP_PLAYER.state().total")
         for i in range(n):
@@ -265,7 +268,10 @@ with sync_playwright() as p:
                 step_fail.append(code + " " + st + " " + json.dumps(r))
     ok("9.4 every lesson renders every step (five for quiz skills)", not step_fail, step_fail[:4])
     # one full journey on a quiz lesson
-    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.byId['SK:%s:y']" % (c, c))), None)
+    # expansion 2026-10-22: this journey asserts the legacy Try It Yourself (Help me unlocks after one wrong try), so it picks a
+    # lesson without core. On a core lesson that behaviour intentionally changes (hints and Show me how from the start, set
+    # picker); verification/practice-own.py asserts the core journey with the same intent: help is opt-in, never automatic.
+    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.byId['SK:%s:y'] && !PP.lessons['%s'].core" % (c, c, c))), None)
     if qcode:
         pg.evaluate("PP_SKILLS.open('%s')" % qcode); pg.wait_for_timeout(60)
         pg.click("[data-step=learn]"); pg.wait_for_timeout(40)
@@ -1053,10 +1059,12 @@ with sync_playwright() as p:
                     chk("%s q%d" % (s, i + 1)); q.click("#q-next")
                 q.evaluate("PP_PLAYER.abandon()")
                 continue
+            own = q.evaluate("!!PP.byId['%s'].own" % s)   # expansion 2026-10-22: own sets take hints from #q-hint (no Help me)
             for i in range(q.evaluate("PP_PLAYER.state().total")):
                 if q.is_visible("#tab-question"): q.click("#tab-question")
                 chk("%s q%d" % (s, i + 1))
-                for k in range(3): q.click("#q-help")
+                for k in range(3): q.click("#q-hint" if own else "#q-help")
+                if own: q.click("#q-how")
                 chk("%s q%d help" % (s, i + 1))
                 q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next")
         for t in ("test", "standards", "essay", "plan"):

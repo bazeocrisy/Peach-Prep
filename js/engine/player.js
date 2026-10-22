@@ -189,15 +189,150 @@
       run.ctxs[i] = { item, set: run.set, resp: T[item.type].blank(item), ui: {}, locked: false,
                       onChange: onChange };
       run.state[i] = { help: 0, wrong: 0, solved: false, firstTry: null };
+      if (run.own) hydrate(run.ctxs[i], run.state[i], window.PP_PRACTICE.rec(run.set.code, item.id, false));
     }
     return run.ctxs[i];
   }
+  /* The item on screen: a core item, or an extra (similar) question shown in its place. */
+  function C() {
+    if (run.sim) return run.sim;
+    const i = run.pos; const ctx = ctxFor(i);
+    return { item: run.set.items[i], ctx, st: run.state[i] };
+  }
+
+  /* ---------- Practice on my own (expansion 2026-10-22, 01-architecture.md §2.2) ----------
+     Saved in pp.practice.v1 by js/practice.js after each child action: the response (engine index
+     space), the choice order, wrong checks, hints, Show me how, and the place. Resume restores them;
+     a damaged saved response is ignored, never trusted. */
+  const isInt = (v, n) => Number.isInteger(v) && v >= 0 && v < n;
+  const uniq = a => new Set(a).size === a.length;
+  const perm = (a, n) => Array.isArray(a) && a.length === n && uniq(a) && a.every(x => isInt(x, n));
+  function saneResp(item, r) {
+    if (!r || typeof r !== "object" || Array.isArray(r)) return false;
+    try {
+      switch (item.type) {
+        case "mc": return r.v === null || isInt(r.v, item.choices.length);
+        case "ms": return Array.isArray(r.v) && uniq(r.v) && r.v.every(x => isInt(x, item.choices.length));
+        case "ebsr": return (r.a === null || isInt(r.a, item.partA.choices.length)) && Array.isArray(r.b) && uniq(r.b) && r.b.every(x => isInt(x, item.partB.choices.length));
+        case "dropdown": return Array.isArray(r.v) && r.v.length === item.slots.length && r.v.every((x, k) => x === null || isInt(x, item.slots[k].options.length));
+        case "hottext": { const t = item.options ? item.options.map((o, i) => "opt:" + i) : (item.targets || []); return Array.isArray(r.v) && uniq(r.v) && r.v.every(x => t.indexOf(x) >= 0); }
+        case "order": return Array.isArray(r.v) && uniq(r.v) && r.v.every(x => isInt(x, item.steps.length));
+        case "match": return Array.isArray(r.v) && r.v.length === item.rows.length && r.v.every(x => x === null || isInt(x, item.cols.length));
+        case "cr": return typeof r.text === "string";
+      }
+    } catch (e) { return false; }
+    return false;
+  }
+  function saneOrd(item, o) {
+    const out = {};
+    if (!o || typeof o !== "object") return out;
+    const n = item.choices ? item.choices.length : item.steps ? item.steps.length : 0;
+    if (perm(o.order, n)) out.order = o.order.slice();
+    if (item.partA && perm(o.orderA, item.partA.choices.length)) out.orderA = o.orderA.slice();
+    if (item.partB && perm(o.orderB, item.partB.choices.length)) out.orderB = o.orderB.slice();
+    if (item.slots && Array.isArray(o.ddOrder) && o.ddOrder.length === item.slots.length && o.ddOrder.every((x, k) => perm(x, item.slots[k].options.length))) out.ddOrder = o.ddOrder.map(x => x.slice());
+    if (item.rows && perm(o.rowOrder, item.rows.length)) out.rowOrder = o.rowOrder.slice();
+    if (item.type === "hottext" && Array.isArray(o.hotOrder)) {
+      const t = item.options ? item.options.map((x, i) => "opt:" + i) : (item.targets || []);
+      if (o.hotOrder.length === t.length && uniq(o.hotOrder) && o.hotOrder.every(x => t.indexOf(x) >= 0)) out.hotOrder = o.hotOrder.slice();
+    }
+    return out;
+  }
+  function hydrate(ctx, st, rec) {
+    st.hints = 0; st.sinceHint = 0; st.shown = false; st.howOpen = false;
+    if (!rec) return;
+    if (rec.r !== undefined && saneResp(ctx.item, rec.r)) ctx.resp = JSON.parse(JSON.stringify(rec.r));
+    if (ctx.item.type === "cr" && rec.cr) { ctx.resp = { text: rec.cr.text }; st.crDone = rec.cr.done; st.crChecks = rec.cr.checks.slice(); }
+    Object.assign(ctx, saneOrd(ctx.item, rec.ord));
+    st.wrong = rec.w; st.hints = rec.h; st.shown = rec.x; st.solved = rec.ok; st.howOpen = rec.x || rec.howAfter;
+    st.sinceHint = 0;
+  }
+  const ORD_KEYS = ["order", "orderA", "orderB", "ddOrder", "hotOrder", "rowOrder"];
+  function ordOf(ctx) { const o = {}; ORD_KEYS.forEach(k => { if (ctx[k]) o[k] = ctx[k]; }); return o; }
+  /* write this item's facts after a child action (never on render) */
+  function persist(ev) {
+    if (!run.own) return;
+    const c = C(), k = run.set.code, sim = !!run.sim;
+    const core = (PP.core || {})[k] || {};
+    window.PP_PRACTICE.update(k, c.item.id, sim, r => {
+      if (sim) r.for = run.sim.for;
+      if (c.item.type === "cr") r.cr = { text: c.ctx.resp.text || "", checks: (c.st.crChecks || []).map(Boolean), done: !!c.st.crDone };
+      else r.r = JSON.parse(JSON.stringify(c.ctx.resp));
+      r.ord = JSON.parse(JSON.stringify(ordOf(c.ctx)));
+      /* only ever up: help history is never erased by a later right answer */
+      r.w = Math.max(r.w || 0, c.st.wrong || 0); r.h = Math.max(r.h || 0, c.st.hints || 0);
+      r.x = !!(r.x || c.st.shown); r.ok = !!(r.ok || c.st.solved); r.howAfter = !!(r.howAfter || c.st.howAfter);
+      r.set = run.set.setNo; r.pos = sim ? run.sim.from : run.pos;
+      if (ev) window.PP_PRACTICE.log(r, ev);
+    }, { rev: core.rev, set: run.set.setNo, pos: sim ? run.sim.from : run.pos });
+    syncStatus();
+  }
+  const hintsOf = it => (Array.isArray(it.hints) && it.hints.length ? it.hints : [it.clue]).filter(Boolean);
+  function similarFor(it) {
+    if (run.sim || !run.own) return null;
+    const bank = (PP.similarFor || {})[run.set.code] || [];
+    return bank.find(x => (x.like || []).indexOf(it.id) >= 0 && !window.PP_PRACTICE.touched(window.PP_PRACTICE.rec(run.set.code, x.id, true))) || null;
+  }
+  function itemStatus() {
+    const c = C();
+    return window.PP_PRACTICE.statusOf({ w: c.st.wrong, h: c.st.hints, x: c.st.shown, ok: c.st.solved, cr: c.item.type === "cr" ? { done: !!c.st.crDone } : undefined });
+  }
+  function syncStatus() {
+    const p = el("q-status");
+    if (!run.own) { p.hidden = true; return; }
+    const c = C(), st = itemStatus();
+    const touched = c.st.wrong || c.st.hints || c.st.shown || c.st.solved || c.st.crDone;
+    p.hidden = !touched;
+    p.textContent = touched ? "This question: " + window.PP_PRACTICE.STATUS[st] + "." + (c.st.hints ? " Hints used: " + PP.countWord(c.st.hints) + "." : "") : "";
+  }
+  function renderHints(c) {
+    const H = hintsOf(c.item);
+    for (let k = 0; k < Math.min(c.st.hints, H.length); k++) addHelp("Hint " + (k + 1) + " of " + H.length, H[k]);
+  }
+  function renderHow(c) {
+    const box = el("q-how-steps"); clear(box);
+    box.hidden = !c.st.howOpen;
+    if (!c.st.howOpen) return;
+    const it = c.item;
+    const h = make("p", "how-h", "Show me how"); h.tabIndex = -1; box.appendChild(h);
+    box.appendChild(make("p", "how-warn-line", c.st.shown ? "The answer is shown, so this question counts as answer shown. You can still choose it and check." : "You already had this one right. Here are the steps."));
+    const ol = make("ol", "how-list");
+    (Array.isArray(it.how) && it.how.length ? it.how : [it.why]).forEach(t => ol.appendChild(make("li", "", t)));
+    box.appendChild(ol);
+    if (it.type === "cr") {
+      const a = make("p", "how-answer"); a.appendChild(make("strong", "", "One good answer: ")); a.appendChild(document.createTextNode(it.sample)); box.appendChild(a);
+      box.appendChild(make("p", "note", "Other answers can also be right. Check yours against the list."));
+    } else {
+      const a = make("p", "how-answer"); a.appendChild(make("strong", "", "The answer: ")); a.appendChild(document.createTextNode(T[it.type].answerText(it, run.set))); box.appendChild(a);
+    }
+    if (it.misconception) box.appendChild(make("p", "how-mix", it.misconception));
+    T[it.type].outline(c.ctx);
+  }
+  function renderCompare(c) {
+    const box = el("q-cr"); clear(box);
+    box.hidden = !(c.item.type === "cr" && c.st.crDone);
+    if (box.hidden) return;
+    const it = c.item;
+    box.appendChild(make("p", "cr-h", "Compare with the sample"));
+    const a = make("p", "cr-sample"); a.appendChild(make("strong", "", "One good answer. Other answers can also be right: ")); a.appendChild(document.createTextNode(it.sample)); box.appendChild(a);
+    box.appendChild(make("p", "write-check-h", "Did I…"));
+    const ul = make("ul", "write-checklist");
+    c.st.crChecks = c.st.crChecks || [];
+    (it.criteria || []).forEach((t, i) => {
+      const li = make("li"); const cb = make("input"); cb.type = "checkbox"; cb.id = "crc-" + String(it.id).replace(/[^a-z0-9]/gi, "-") + "-" + i;
+      cb.checked = !!c.st.crChecks[i];
+      cb.addEventListener("change", () => { c.st.crChecks[i] = cb.checked; persist({ t: "cr-check", n: i, on: cb.checked }); });
+      const lb = make("label", "", t); lb.htmlFor = cb.id; li.appendChild(cb); li.appendChild(lb); ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    box.appendChild(make("p", "note", "Read it with a grown-up. A written answer is never scored by the site, and it is never counted as right or wrong."));
+  }
 
   function renderItem() {
-    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    const c = C(), i = run.pos, item = c.item, ctx = c.ctx, st = c.st;
     const total = run.set.items.length;
-    el("q-count").textContent = "Question " + (i + 1) + " of " + total;
-    el("q-points").textContent = item.points === 2 ? "2 points" : "1 point";
+    el("q-count").textContent = run.sim ? "Extra question (not one of the fifteen)" : "Question " + (i + 1) + " of " + total;
+    el("q-points").textContent = item.type === "cr" ? "Not scored" : item.points === 2 ? "2 points" : "1 point";
     el("q-bar").style.width = Math.round(((i + 1) / total) * 100) + "%";   /* PP-004 U-6.6: matches "Question i of n", so the last question shows 100% */
     el("q-prompt").textContent = item.prompt;
     const host = el("q-body");
@@ -208,8 +343,8 @@
     if (item.stem || item.figure) {
       const box = make("div", "q-stem");
       [].concat(item.stem || []).forEach(t => {
-        const c = /^Cursive: /.test(t);   /* reading cursive (3.F.H.3) */
-        box.appendChild(c ? make("p", "cursive", t.replace(/^Cursive: /, "")) : rich(make("p", ""), t));
+        const cur = /^Cursive: /.test(t);   /* reading cursive (3.F.H.3) */
+        box.appendChild(cur ? make("p", "cursive", t.replace(/^Cursive: /, "")) : rich(make("p", ""), t));
       });
       figures(box, item.figure);   /* item.figure: a picture this question is about */
       host.appendChild(box);
@@ -218,12 +353,17 @@
     ctx.ui = Object.assign({}, { fixed: ctx.ui.fixed, fixedRow: ctx.ui.fixedRow, aLocked: ctx.ui.aLocked });
     ctx.locked = run.mode === "practice" && st.solved;
     T[item.type].render(ctx);
+    if (ctx.locked) renderLockedState(ctx);
     /* re-apply help state after a re-render (e.g. coming Back) */
-    if (run.mode === "practice") {
-      clear(el("q-help-steps"));
-      (st.helpLog || []).forEach(h => addHelp(h.label, h.text));
-      if (st.help >= 3) T[item.type].outline(ctx);
-    } else clear(el("q-help-steps"));
+    clear(el("q-help-steps"));
+    if (run.own) { renderHints(c); renderHow(c); renderCompare(c); }
+    else {
+      el("q-how-steps").hidden = true; el("q-cr").hidden = true;
+      if (run.mode === "practice") {
+        (st.helpLog || []).forEach(h => addHelp(h.label, h.text));
+        if (st.help >= 3) T[item.type].outline(ctx);
+      }
+    }
     if (item.type !== "hottext") markSelected([]);
     /* Multi-passage forms (the Practice Test): show only the passage(s)
        this question is about. item.passages = ["p2"] or [] for none. */
@@ -246,17 +386,50 @@
       } else el("passage-note").hidden = true;
       run.lastPassages = key;
     }
+    buildNav();
     setFeedback(st.fb || null);
     syncControls();
+    syncStatus();
+    const sh = el("q-storage"); clear(sh);
+    if (run.own) sh.appendChild(window.PP_PRACTICE.notice("q-storage-note"));
     if (run.focusNote) { run.focusNote = false; el("passage-note").focus(); }
     else el("q-prompt").focus();
     window.scrollTo(0, 0);
   }
 
+  /* Test mode (expansion 2026-10-22): a question navigator. Each button names its number and state
+     in words ("3, answered"), and the state also shows as a shape, never only as a colour. */
+  function buildNav() {
+    const nav = el("q-nav"); clear(nav);
+    nav.hidden = run.mode !== "test";
+    if (nav.hidden) return;
+    const n = run.set.items.length;
+    nav.classList.toggle("is-many", n > 12);
+    run.set.items.forEach((it, i) => {
+      const c = ctxFor(i), st = run.state[i];
+      const done = T[it.type].answered(it, c.resp);
+      const b = make("button", "qn-btn" + (done ? " is-answered" : "") + (st.flag ? " is-flagged" : "") + (i === run.pos ? " is-current" : ""), String(i + 1));
+      b.type = "button";
+      b.setAttribute("aria-label", (i + 1) + ", " + (done ? "answered" : "not answered") + (st.flag ? ", marked to review" : ""));
+      if (i === run.pos) b.setAttribute("aria-current", "step");
+      b.addEventListener("click", () => { run.pos = i; renderItem(); });
+      nav.appendChild(b);
+    });
+  }
+
   function onChange() {
-    const st = run.state[run.pos];
+    const c = C(), st = c.st;
     if (run.mode === "practice" && !st.solved && st.fb && st.fb.kind !== "help") setFeedback(null);
+    if (run.own) persist();
+    else if (run.mode === "test") refreshNav();
     syncControls();
+  }
+  function refreshNav() {
+    const nav = el("q-nav"); if (nav.hidden) return;
+    const i = run.pos, it = run.set.items[i], b = nav.children[i]; if (!b) return;
+    const done = T[it.type].answered(it, ctxFor(i).resp), st = run.state[i];
+    b.classList.toggle("is-answered", done);
+    b.setAttribute("aria-label", (i + 1) + ", " + (done ? "answered" : "not answered") + (st.flag ? ", marked to review" : ""));
   }
 
   /* PP-003 RD-6: #q-feedback is the visible box only. The words are spoken from
@@ -270,7 +443,7 @@
     if (text) sayTimer = setTimeout(() => { live.textContent = text; }, 150);
   }
   function setFeedback(fb) {
-    const st = run.state[run.pos];
+    const st = C().st;
     const same = st.fb === fb;
     st.fb = fb;
     const box = el("q-feedback");
@@ -292,22 +465,42 @@
   }
 
   function syncControls() {
-    const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
+    const c = C(), i = run.pos, item = c.item, ctx = c.ctx, st = c.st;
     const answered = T[item.type].answered(item, ctx.resp);
     const last = i === run.set.items.length - 1;
-    el("q-prev").hidden = run.mode === "practice";
-    el("q-prev").disabled = i === 0;
-    if (run.mode === "practice") {
+    ["q-hint", "q-how", "q-similar", "q-flag"].forEach(id => { el(id).hidden = true; });
+    el("q-prev").hidden = run.mode === "practice" && !run.own;
+    el("q-prev").disabled = !run.sim && i === 0;
+    el("q-prev").textContent = run.sim ? "Back to question " + (run.sim.from + 1) : "Previous question";
+    if (run.own) {
+      const H = hintsOf(item);
+      el("q-help").hidden = true;
+      el("q-hint").hidden = st.solved;
+      el("q-hint").disabled = st.hints >= H.length;
+      el("q-hint").textContent = st.hints >= H.length ? "No more hints" : st.hints ? "Give me another hint" : "Give me a hint";
+      el("q-how").hidden = st.howOpen;
+      el("q-check").hidden = st.solved;
+      el("q-check").textContent = item.type === "cr" ? (st.crDone ? "Compare again" : "Compare with the sample") : "Check my answer";
+      el("q-check").disabled = !answered || (item.type !== "cr" && (st.sinceHint || 0) >= 2);
+      el("q-similar").hidden = !((st.solved || st.shown || st.crDone) && similarFor(item));
+      el("q-next").hidden = false;
+      el("q-next").textContent = run.sim ? (run.sim.from === run.set.items.length - 1 ? "Finish this set" : "Go on to question " + (run.sim.from + 2))
+        : last ? "Finish this set" : "Next question";
+    } else if (run.mode === "practice") {
       el("q-help").hidden = st.solved || (run.tryMode && st.wrong < 1 && st.help < 1);
       el("q-help").disabled = st.help >= 3;
       el("q-help").textContent = st.help === 0 ? "Help me" : st.help < 3 ? "Help me (next step)" : "Help me";
       el("q-check").hidden = st.solved;
+      el("q-check").textContent = "Check";
       el("q-check").disabled = !answered;
       el("q-next").hidden = !st.solved;
       el("q-next").textContent = last ? "Finish" : "Next question";
     } else {
       el("q-help").hidden = true;
       el("q-check").hidden = true;
+      el("q-flag").hidden = false;
+      el("q-flag").setAttribute("aria-pressed", st.flag ? "true" : "false");
+      el("q-flag").textContent = st.flag ? "Marked to review" : "Mark to review";
       el("q-next").hidden = false;
       el("q-next").disabled = false;            /* skipping is allowed, like the real test */
       el("q-next").textContent = last ? "Finish" : "Next";
@@ -338,6 +531,7 @@
   }
 
   function check() {
+    if (run.own) return checkOwn();
     const i = run.pos, item = run.set.items[i], ctx = ctxFor(i), st = run.state[i];
     if (!T[item.type].answered(item, ctx.resp)) return;
     const sc = T[item.type].score(item, ctx.resp);
@@ -366,6 +560,98 @@
     else reveal(el("q-feedback"), el("q-check").parentElement);
   }
 
+  /* Check my answer (own mode). A retry is allowed. After two wrong checks in a row, Check waits
+     until a hint is taken (one more check per hint) or Show me how is pressed. Nothing ever
+     reveals the answer unless the child asks for it. */
+  function checkOwn() {
+    const c = C(), item = c.item, ctx = c.ctx, st = c.st;
+    if (!T[item.type].answered(item, ctx.resp)) return;
+    if (item.type === "cr") {
+      st.crDone = true;
+      setFeedback({ kind: "help", label: "Compare with the sample", text: "One good answer is shown below. Other answers can also be right. Use the list to check your own writing." });
+      persist({ t: "cr" });
+      renderCompare(c); syncControls();
+      const h = el("q-cr").querySelector(".cr-h"); if (h) { h.tabIndex = -1; h.focus(); }
+      return;
+    }
+    if ((st.sinceHint || 0) >= 2) return;
+    const sc = T[item.type].score(item, ctx.resp);
+    if (sc.points === sc.max) {
+      st.solved = true; ctx.locked = true;
+      setFeedback({ kind: "right", label: "That's right!", text: (st.shown ? "You used Show me how first, so this one counts as answer shown. " : "") + item.why });
+      renderLockedState(ctx);
+      persist({ t: "check", pts: sc.points, max: sc.max });
+      syncControls();
+      (el("q-similar").hidden ? el("q-next") : el("q-similar")).focus();
+      return;
+    }
+    st.wrong++; st.sinceHint = (st.sinceHint || 0) + 1;
+    const pn = T[item.type].partialNote ? T[item.type].partialNote(item, ctx.resp) : "";
+    const part = sc.points > 0 ? "You got part of it (" + sc.points + " of " + sc.max + " points). " + (pn ? pn + " " : "") : "";
+    const H = hintsOf(item);
+    const stuck = st.sinceHint >= 2;
+    setFeedback({ kind: "try", label: "Not quite", text: part + (stuck
+      ? (st.hints < H.length ? "Two tries used. Ask for a hint or press Show me how." : "Two tries used, and every hint is shown. Press Show me how to see the answer and the steps.")
+      : "Try again" + (st.hints < H.length ? ", or ask for a hint." : ".")) });
+    persist({ t: "check", pts: sc.points, max: sc.max });
+    syncControls();
+    reveal(el("q-feedback"), el("q-check").parentElement);
+    if (stuck) (el("q-hint").disabled ? el("q-how") : el("q-hint")).focus();
+  }
+
+  /* Give me a hint: the authored hints in order (hints[0..2], or the clue alone). It never
+     outlines or narrows anything, so an early hint cannot hand over the answer. */
+  function hint() {
+    const c = C(), st = c.st, H = hintsOf(c.item);
+    if (st.solved || st.hints >= H.length) return;
+    st.hints++;
+    st.sinceHint = Math.min(st.sinceHint || 0, 1);
+    clear(el("q-help-steps")); renderHints(c);
+    if (st.fb && st.fb.kind === "try") setFeedback(null);
+    persist({ t: "hint", n: st.hints });
+    const hadFocus = document.activeElement === el("q-hint");
+    syncControls();
+    if (hadFocus && el("q-hint").disabled) {
+      const last = el("q-help-steps").lastElementChild;
+      if (last) { last.tabIndex = -1; last.focus(); }
+    }
+  }
+
+  /* Show me how: available from the start; its label says it shows the answer. Pressed before the
+     item is solved, the item counts as "Answer shown" for good. Pressed after, only the steps. */
+  function how() {
+    const c = C(), st = c.st;
+    if (st.howOpen) return;
+    st.howOpen = true;
+    if (st.solved || st.crDone) st.howAfter = true; else st.shown = true;
+    st.sinceHint = 0;
+    if (st.fb && st.fb.kind === "try") setFeedback(null);
+    persist({ t: "how", after: !!st.howAfter });
+    renderHow(c);
+    syncControls();
+    const h = el("q-how-steps").querySelector(".how-h");
+    if (h) { h.focus({ preventScroll: true }); reveal(el("q-how-steps"), el("q-next").parentElement); }
+  }
+
+  /* Try a similar question: a separate item from the lesson's reviewed bank, saved under its own id.
+     The core item's record is never changed by it, and it never counts in the fifteen. */
+  function similar() {
+    const c = C(); if (run.sim) return;
+    const it = similarFor(c.item); if (!it) return;
+    const ctx = { item: it, set: run.set, resp: T[it.type].blank(it), ui: {}, locked: false, onChange };
+    const st = { help: 0, wrong: 0, solved: false, firstTry: null };
+    hydrate(ctx, st, window.PP_PRACTICE.rec(run.set.code, it.id, true));
+    run.sim = { item: it, ctx, st, from: run.pos, for: c.item.id };
+    run.lastPassages = null;
+    renderItem();
+  }
+
+  function flag() {
+    const st = run.state[run.pos]; if (run.mode !== "test") return;
+    st.flag = !st.flag; syncControls(); buildNav();
+    el("q-flag").focus();
+  }
+
   function renderLockedState(ctx) {
     /* lock every control in the question body */
     Array.from(ctx.host.querySelectorAll("button, select")).forEach(b => { b.disabled = true; });
@@ -374,19 +660,34 @@
 
   /* ---------- navigation ---------- */
   function next() {
+    if (run.sim) { const from = run.sim.from; run.sim = null; run.pos = from; }
     const last = run.pos === run.set.items.length - 1;
     if (last) { finish(); return; }
-    run.pos++; renderItem();
+    run.pos++;
+    if (run.own) window.PP_PRACTICE.place(run.set.code, run.set.setNo, run.pos, ((PP.core || {})[run.set.code] || {}).rev);
+    renderItem();
   }
-  function prev() { if (run.pos > 0) { run.pos--; renderItem(); } }
+  function prev() {
+    if (run.sim) { run.pos = run.sim.from; run.sim = null; run.lastPassages = null; renderItem(); return; }
+    if (run.pos > 0) {
+      run.pos--;
+      if (run.own) window.PP_PRACTICE.place(run.set.code, run.set.setNo, run.pos, ((PP.core || {})[run.set.code] || {}).rev);
+      renderItem();
+    }
+  }
 
   function finish() {
     if (run.mode === "practice") return practiceDone();
     const noun = run.set.kind === "skill" ? "skill check" : "test";
-    const blank = run.set.items.map((it, i) => ctxFor(i)).filter(c => !T[c.item.type].answered(c.item, c.resp)).length;
+    const all = run.set.items.map((it, i) => ({ i, c: ctxFor(i), st: run.state[i] }));
+    const blankList = all.filter(x => !T[x.c.item.type].answered(x.c.item, x.c.resp));
+    const flagged = all.filter(x => x.st && x.st.flag);
+    const blank = blankList.length;
     el("confirm-line").textContent = blank
       ? "You left " + PP.countWord(blank) + " question" + (blank === 1 ? "" : "s") + " blank or not finished. You can go back and check, or turn in your " + noun + "."
       : "You answered every question. You can go back and check, or turn in your " + noun + ".";
+    /* expansion 2026-10-22: name the questions, each a button back to it (confirmList, after showStage) */
+    if (typeof confirmList === "function") confirmList(blankList, flagged);
     el("confirm-submit").textContent = "Turn in my " + noun;
     showStage("confirm");
     el("confirm-title").focus();
@@ -400,7 +701,28 @@
     window.scrollTo(0, 0);
   }
 
+  function confirmList(blankList, flagged) {
+    const box = el("confirm-list"); clear(box);
+    const group = (title, list, why) => {
+      if (!list.length) return;
+      box.appendChild(make("p", "confirm-h", title));
+      const ul = make("ul", "confirm-qs");
+      list.forEach(x => {
+        const li = make("li"); const b = make("button", "btn btn-soft confirm-go", "Question " + (x.i + 1));
+        b.type = "button"; b.dataset.q = String(x.i);
+        b.setAttribute("aria-label", "Go back to question " + (x.i + 1) + ", " + why);
+        b.addEventListener("click", () => { showStage("work"); run.pos = x.i; renderItem(); });
+        li.appendChild(b); ul.appendChild(li);
+      });
+      box.appendChild(ul);
+    };
+    group("Not answered yet:", blankList, "not answered");
+    group("Marked to review:", flagged, "marked to review");
+    box.hidden = !box.children.length;
+  }
+
   function practiceDone() {
+    if (run.own) return ownDone();
     const n = run.set.items.length;
     const first = run.state.filter(s => s && s.firstTry).length;
     const skill = run.set.kind === "skill";
@@ -408,12 +730,48 @@
     const nx = skill && run.set.next;
     el("done-line").textContent = "You finished " + (n === 1 ? "one question" : "all " + PP.countWord(n) + " questions") + ". You got " + first + " of " + n +
       " right on your first try without help. Asking for help is never a mistake; it is how you learn." +
-      (nx ? (nx.mode === "test" ? " When you are ready, take the skill check." : " Next, try some on your own.") : "");
+      (nx ? (nx.mode === "test" ? " When you are ready, take the skill check." : nx.picker ? " Next, practice on your own." : " Next, try some on your own.") : "");
+    el("done-summary").hidden = true;
+    el("done-title").textContent = "Great work!";
     el("done-test").hidden = skill && !nx;
     el("done-test").textContent = nx ? nx.label : "Try it as a test";
     el("done-back").textContent = skill ? "Back to the skill" : "Back to the list";
     window.PP_APP.markDone({ set: run.set.id, mode: run.tryMode ? "try" : "practice", n, first });
     showStage("done");
+    el("done-title").focus();
+  }
+  /* The end of one set of five: each question's status in words, the set's counts, and the next set. */
+  function ownSummary(box) {
+    const PR = window.PP_PRACTICE, k = run.set.code, ids = run.set.items.map(it => it.id);
+    clear(box);
+    const ol = make("ol", "own-dots own-dots-list");
+    ids.forEach((id, i) => {
+      const st = PR.status(k, id);
+      const li = make("li", "own-dot is-" + st);
+      li.appendChild(make("span", "own-dot-mark")).setAttribute("aria-hidden", "true");
+      li.appendChild(make("span", "own-dot-word", "Question " + (i + 1) + ": " + PR.STATUS[st]));
+      ol.appendChild(li);
+    });
+    box.appendChild(ol);
+    const sim = run.set.items.map(it => ((PP.similarFor || {})[k] || []).filter(x => (x.like || []).indexOf(it.id) >= 0 && PR.touched(PR.rec(k, x.id, true))).length).reduce((a, b) => a + b, 0);
+    if (sim) box.appendChild(make("p", "note", "Extra questions in this set: " + PP.countWord(sim) + ". They are kept apart and do not count in the fifteen."));
+    return ids.filter(id => PR.status(k, id) === "none").length;
+  }
+  function ownDone() {
+    const k = run.set.code, no = run.set.setNo;
+    window.PP_SKILLS.recordPractice(k, run.set.part);   /* sets `tried` only when all fifteen are finished */
+    const left = ownSummary(el("done-summary"));
+    el("done-summary").hidden = false;
+    const nx = run.set.next;
+    el("done-line").textContent = (left ? "You reached the end of set " + no + ". " + (left === 1 ? "One question is" : PP.countWord(left).charAt(0).toUpperCase() + PP.countWord(left).slice(1) + " questions are") + " not finished yet. You can look back at this set to finish " + (left === 1 ? "it" : "them") + "."
+      : "You finished set " + no + ".") + " Practice is never scored, and asking for help is how you learn." +
+      (window.PP_PRACTICE.canSave() ? " Your answers are saved on this device, so you can stop here and come back." : " Saving is unavailable, so these answers last only while this page stays open.");
+    el("done-test").hidden = !nx;
+    el("done-test").textContent = nx ? nx.label : "";
+    el("done-back").textContent = "Back to the lesson";
+    window.PP_APP.markDone({ set: run.set.id, mode: "try", own: true, n: run.set.items.length });
+    showStage("done");
+    el("done-title").textContent = left ? "End of set " + no : "Set " + no + " finished";
     el("done-title").focus();
   }
 
@@ -446,13 +804,17 @@
     /* An item counts under every area its codes belong to (once per area), so a
        question that is also tagged for evidence (3.T.RA) shows up under
        "Using evidence and sources" too. Areas can therefore overlap. */
-    const by = {};
+    /* expansion 2026-10-22: a row is reported on its own only when the sample supports it, at least
+       two questions and three points. Smaller parts are grouped, never reported as a skill result.
+       Skill checks group by Georgia code (item.comp or std); other sets by area, as before. */
+    const skillSet = run.set.kind === "skill";
+    const by = {}, order = [];
     let multi = false;
     rows.forEach(r => {
-      const areas = (r.item.std || []).map(skillOf).filter((k, i, a) => a.indexOf(k) === i);
-      if (!areas.length) areas.push("Other");
-      if (areas.length > 1) multi = true;
-      areas.forEach(k => { by[k] = by[k] || { got: 0, max: 0 }; by[k].got += r.sc.points; by[k].max += r.sc.max; });
+      const keys = (skillSet ? (r.item.comp ? [r.item.comp] : (r.item.std || [])) : (r.item.std || []).map(skillOf)).filter((k, i, a) => a.indexOf(k) === i);
+      if (!keys.length) keys.push("Other");
+      if (keys.length > 1) multi = true;
+      keys.forEach(k => { if (!by[k]) { by[k] = { got: 0, max: 0, n: 0 }; order.push(k); } by[k].got += r.sc.points; by[k].max += r.sc.max; by[k].n++; });
     });
     const host = el("res-skills"); clear(host);
     if (run.set.kind === "form") {
@@ -461,26 +823,45 @@
         "The real Grade 3 test has 60 points, including an 8-point essay. This is a practice score, not a Georgia Milestones score."));
     }
     if (multi) host.appendChild(make("p", "note", "Some questions check two areas, so they count in each one. The area scores add up to more than the total."));
-    Object.keys(by).forEach(k => {
-      const row = make("div", "skill-row");
-      row.appendChild(make("span", "skill-name", k));
-      row.appendChild(make("span", "skill-score", by[k].got + " of " + by[k].max));
+    const big = order.filter(k => by[k].n >= 2 && by[k].max >= 3), small = order.filter(k => big.indexOf(k) < 0);
+    const nameOf = k => skillSet && window.PP_SKILLS.shortCode ? window.PP_SKILLS.shortCode(k) : k;
+    const addRow = (name, v, cls) => {
+      const row = make("div", "skill-row" + (cls ? " " + cls : ""));
+      row.appendChild(make("span", "skill-name", name));
+      row.appendChild(make("span", "skill-score", v.got + " of " + v.max));
       const bar = make("span", "skill-bar"); const fill = make("span", "skill-fill");
-      fill.style.width = (by[k].max ? Math.round(100 * by[k].got / by[k].max) : 0) + "%";
+      fill.style.width = (v.max ? Math.round(100 * v.got / v.max) : 0) + "%";
       bar.appendChild(fill); row.appendChild(bar);
       host.appendChild(row);
-    });
+    };
+    big.forEach(k => addRow(nameOf(k), by[k]));
+    if (small.length) {
+      const v = { got: 0, max: 0 };
+      rows.forEach(r => { const keys = skillSet ? (r.item.comp ? [r.item.comp] : (r.item.std || [])) : (r.item.std || []).map(skillOf); if (keys.some(k => small.indexOf(k) >= 0)) { v.got += r.sc.points; v.max += r.sc.max; } });
+      addRow("Other parts (too few questions to report on their own)", v, "is-other");
+    }
+    const partialPts = rows.filter(r => r.sc.points > 0 && r.sc.points < r.sc.max).reduce((a, r) => a + r.sc.points, 0);
+    let pp = el("res-partial");
+    if (!pp) { pp = make("p", "note res-partial"); pp.id = "res-partial"; el("res-score-box").insertAdjacentElement("afterend", pp); }
+    pp.textContent = partialPts ? "This includes " + PP.countWord(partialPts) + " point" + (partialPts === 1 ? "" : "s") + " of partial credit, from two-point questions that were partly right." : "";
+    pp.hidden = !partialPts;
     const pct = max ? got / max : 0;
     el("res-guidance").textContent = run.set.kind === "skill" ? window.PP_SKILLS.afterTest(run.set, got, max)
       : pct >= 0.85 ? "Excellent work. You are ready for harder sets."
       : pct >= 0.6 ? "Good work. Practice the questions you missed, then try again."
       : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
-    el("res-skills").hidden = run.set.kind === "skill";
+    /* a skill check shows rows only when at least two parts can be reported (a one-code check has its total) */
+    el("res-skills").hidden = skillSet && big.length < 2;
     buildReview(rows);
+    buildRevisit(rows, got, max);
     el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !run.set.practiceId);
     /* PP-003 RD-10: a skill's button opens Practice Together, so it says so; the lesson check is a "skill check" */
     el("res-practice").textContent = run.set.kind === "skill" ? "Practice Together" : "Practice this set";
     el("res-again").textContent = run.set.kind === "skill" ? "Take the skill check again" : "Take the test again";
+    /* say whether the retry is a fresh form or the same questions (worked out after this attempt was recorded) */
+    el("res-again-note").textContent = isCheck(run.set)
+      ? (window.PP_SKILLS.hasFormB(run.set.code) ? "The next skill check uses form " + window.PP_SKILLS.nextForm(run.set.code) + ", with different questions." : "The next skill check uses the same questions as this one. This skill has one form.")
+      : "Taking it again uses the same questions.";
     el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
     /* PP-003 D17: after a passed skill check, lead with Back to the skill, not more practice */
     const passed = run.set.kind === "skill" && got >= Math.ceil(max * 0.8);
@@ -505,6 +886,10 @@
       head.appendChild(make("span", "review-pts", r.sc.points + " of " + r.sc.max));
       box.appendChild(head);
       box.appendChild(make("p", "review-yours", "You answered: " + T[it.type].describe(it, r.resp, run.set)));
+      if (r.sc.points > 0 && r.sc.points < r.sc.max) {
+        const pn = T[it.type].partialNote ? T[it.type].partialNote(it, r.resp) : "";
+        box.appendChild(make("p", "review-partial", "Partial credit: " + r.sc.points + " of " + r.sc.max + " points. " + pn));
+      }
       if (full) box.appendChild(make("p", "review-why", it.why));
       else {
         const ans = make("p", "review-answer", "The answer: " + T[it.type].answerText(it, run.set));
@@ -535,6 +920,36 @@
     });
   }
 
+  /* What to work on next, from the missed questions. Small samples are named as small. */
+  function buildRevisit(rows, got, max) {
+    const host = el("res-revisit"); clear(host);
+    const missed = rows.filter(r => r.sc.points < r.sc.max);
+    host.appendChild(make("h3", "rv-h", "What to work on next"));
+    if (!missed.length) host.appendChild(make("p", "", "Every question was right. Come back in about a week and try again to see if it stuck."));
+    const S = window.PP_SKILLS, keys = [];
+    if (run.set.kind === "skill") { if (missed.length) keys.push(run.set.code); }
+    else missed.forEach(r => (r.item.std || []).forEach(c => { const k = S.lessonFor(c); if (k && keys.indexOf(k) < 0) keys.push(k); }));
+    if (keys.length) {
+      host.appendChild(make("p", "", run.set.kind === "skill" ? "Go back over the lesson, then try again." : "These lessons teach the skills in the questions that were missed:"));
+      const ul = make("ul", "rv-list");
+      keys.slice(0, 6).forEach(k => {
+        const li = make("li", "rv-item");
+        li.appendChild(make("span", "rv-name", (S.skillId(k) ? S.skillId(k) + " · " : "") + PP.lessons[k].title));
+        const acts = make("span", "rv-acts");
+        const w = make("button", "btn btn-soft rv-btn", "Watch Me again"); w.type = "button"; w.addEventListener("click", () => { if (window.PP_APP.canLeave()) S.open(k, "learn"); });
+        acts.appendChild(w);
+        const own = S.isCore(k);
+        const y = make("button", "btn btn-soft rv-btn", own ? "Practice on my own" : "Practice Together"); y.type = "button";
+        y.addEventListener("click", () => { if (window.PP_APP.canLeave()) S.open(k, own ? "try" : "practice"); });
+        acts.appendChild(y);
+        li.appendChild(acts); ul.appendChild(li);
+      });
+      host.appendChild(ul);
+    }
+    host.appendChild(make("p", "note", "This was " + PP.countWord(rows.length) + " questions, a small sample. It shows what to practice next; it is not a diagnosis or a Milestones score."));
+    host.hidden = false;
+  }
+
   /* ---------- start ---------- */
   /* A skill's sets run only in their own mode. The check (:t) is always a test
      (closes #play/SK:<k>:t/practice). Practice Together (:p) and Try It Yourself (:y)
@@ -543,6 +958,7 @@
   function skillMode(set, mode) {
     if (set.kind !== "skill") return mode;
     if (set.part === "t" || set.part === "tB") return "test";   /* PP-004: form B is a check too */
+    if (set.own) return "try";   /* Practice on my own sets run only as practice (expansion 2026-10-22) */
     if (mode === "test") return set.part === "y" ? "try" : "practice";
     return mode;
   }
@@ -551,7 +967,7 @@
      log records whichever form was actually taken. */
   const isCheck = set => !!set && set.kind === "skill" && (set.part === "t" || set.part === "tB");
   const checkFor = set => (window.PP_SKILLS.checkSetId ? window.PP_SKILLS.checkSetId(set.code) : set.id);
-  function start(setId, mode) {
+  function start(setId, mode, opts) {
     const set = PP.byId[setId];
     if (!set) return;
     const switching = window.PP_APP.current() === "player";
@@ -563,9 +979,16 @@
     mode = skillMode(set, mode);
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.tryMode = mode === "try";
+    run.own = !!set.own; run.sim = null;
     run.pos = 0; run.ctxs = []; run.state = [];
+    /* resume: a set opens at its saved place, else at its first unfinished question */
+    if (run.own) {
+      const core = (PP.core || {})[set.code];
+      const ss = window.PP_PRACTICE.setState(set.code, core ? core.sets[set.setNo - 1] : set.items.map(it => it.id), set.setNo);
+      run.pos = opts && Number.isInteger(opts.pos) ? Math.max(0, Math.min(set.items.length - 1, opts.pos)) : ss.done ? 0 : ss.pos;
+    }
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.own ? "Practice on my own" : run.tryMode ? "Try it yourself" : "Practice";
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     renderPassages(set);
@@ -593,9 +1016,10 @@
     mode = skillMode(set, mode);
     run.set = set; run.mode = mode === "test" ? "test" : "practice";
     run.tryMode = mode === "try";
+    run.own = !!set.own; run.sim = null;
     run.pos = 0; run.ctxs = []; run.state = []; run.submitted = true;
     el("player-title").textContent = set.title;
-    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.tryMode ? "Try it yourself" : "Practice";
+    el("player-mode").textContent = run.mode === "test" ? (set.kind === "skill" ? "Skill check" : "Test") : run.own ? "Practice on my own" : run.tryMode ? "Try it yourself" : "Practice";
     el("screen-player").dataset.mode = run.mode;
     el("screen-player").dataset.section = set.section;
     const skill = set.kind === "skill";
@@ -609,6 +1033,15 @@
       : "Starting again begins at question 1." + (skill ? " Your skill page shows that you finished it." : "");
     el("again-start").textContent = test ? (skill ? "Take the skill check again" : "Take the test again") : "Start the practice again";
     el("again-back").textContent = skill ? "Back to the skill" : "Back to the list";
+    el("again-next").hidden = true;
+    if (run.own) {
+      /* a finished set of Practice on my own: look back (saved answers stay) or go on */
+      el("again-title").textContent = "You reached the end of this set";
+      el("again-line").textContent = "Your answers and the help you used are kept" + (window.PP_PRACTICE.canSave() ? " on this device" : " while this page stays open") + ". Looking back opens the set with them.";
+      el("again-start").textContent = "Look back at this set";
+      el("again-back").textContent = "Back to the lesson";
+      if (set.next) { el("again-next").hidden = false; el("again-next").textContent = set.next.label; }
+    }
     showStage("again");
     window.PP_APP.show("player");
     window.PP_APP.track();
@@ -624,6 +1057,11 @@
 
   function init() {
     el("q-help").addEventListener("click", help);
+    el("q-hint").addEventListener("click", hint);
+    el("q-how").addEventListener("click", how);
+    el("q-similar").addEventListener("click", similar);
+    el("q-flag").addEventListener("click", flag);
+    el("again-next").addEventListener("click", () => goNext());
     el("q-check").addEventListener("click", check);
     el("q-next").addEventListener("click", next);
     el("q-prev").addEventListener("click", prev);
@@ -646,18 +1084,22 @@
     el("res-again").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, "test"));
     /* a skill's practice and test are two different question sets */
     el("res-practice").addEventListener("click", () => start((run.set.kind === "skill" && run.set.practiceId) || run.set.id, "practice"));
-    el("done-test").addEventListener("click", () => {
+    function goNext() {
       const nx = run.set.kind === "skill" && run.set.next;
+      /* a core lesson's Practice Together leads to the Try step's set picker, so the child sees where they are */
+      if (nx && nx.picker) { window.PP_SKILLS.open(run.set.code, "try"); return; }
       if (nx) start(nx.mode === "test" && isCheck(PP.byId[nx.id]) ? checkFor(PP.byId[nx.id]) : nx.id, nx.mode); else start(run.set.id, "test");
-    });
-    el("again-start").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, run.mode === "test" ? "test" : run.tryMode ? "try" : "practice"));
+    }
+    el("done-test").addEventListener("click", goNext);
+    el("again-start").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, run.mode === "test" ? "test" : run.tryMode ? "try" : "practice", run.own ? { pos: 0 } : undefined));
     ["res-back", "done-back", "again-back"].forEach(id => el(id).addEventListener("click", () => window.PP_APP.back()));
   }
 
   window.PP_PLAYER = {
     init, start, finished, flash, markSelected, renderPassages, inProgress, abandon,
     state: () => ({ setId: run.set && run.set.id, section: run.set && run.set.section, mode: run.mode, pos: run.pos, total: run.set ? run.set.items.length : 0,
-                    help: run.state.map(s => s && s.help), solved: run.state.map(s => s && s.solved) }),
-    ctx: i => ctxFor(i === undefined ? run.pos : i)
+                    help: run.state.map(s => s && s.help), solved: run.state.map(s => s && s.solved),
+                    own: !!run.own, sim: run.sim ? run.sim.item.id : null, hints: run.state.map(s => s && s.hints), shown: run.state.map(s => s && s.shown) }),
+    ctx: i => (i === undefined && run.sim ? run.sim.ctx : ctxFor(i === undefined ? run.pos : i))
   };
 })();

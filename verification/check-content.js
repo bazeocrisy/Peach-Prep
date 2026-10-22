@@ -132,7 +132,8 @@ function checkItem(set, it, S, lessonCode) {
     if (seenItem.has(S + it.id)) F(w, "duplicate item id"); seenItem.add(S + it.id);
     ["id", "type", "prompt", "clue", "why"].forEach(k => { if (!it[k]) F(w, "missing " + k); });
     if (String(it.prompt || "").length > 220 && !it.stem) W(w, "long prompt: move the reading text into stem");
-    if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
+    if (it.type === "cr") { if (it.points !== undefined && it.points !== 0) F(w, "cr is never scored: leave points out"); }
+    else if ([1, 2].indexOf(it.points) < 0) F(w, "points must be 1 or 2");
     if (it.figure) checkFigures(w, it.figure);
     [].concat(it.stem || []).forEach(s => { if (badBold(s)) F(w, "unmatched ** in stem"); });
     /* the review screen prints hot-text sentences as plain text, so keep **bold** out of them */
@@ -217,8 +218,177 @@ function checkItem(set, it, S, lessonCode) {
         if (!Array.isArray(it.rows) || it.rows.length < 3) F(w, "match needs 3+ rows");
         (it.rows || []).forEach((r, i) => { if (!(r.answer >= 0 && r.answer < (it.cols || []).length)) F(w, "row " + (i + 1) + " answer out of range"); });
         break;
+      case "cr":
+        /* expansion 2026-10-22 (01-architecture.md §2.2.2): a constructed response, only in core and similar */
+        if (!it.allowCr) F(w, "cr is allowed only in core and similar (never in practice, test or testB)");
+        if (typeof it.sample !== "string" || !it.sample.trim()) F(w, "cr needs a sample answer");
+        if (!Array.isArray(it.criteria) || it.criteria.length < 2 || it.criteria.length > 5) F(w, "cr needs 2-5 criteria");
+        break;
       default: F(w, "unknown type " + it.type);
     }
+}
+
+/* ---------- expansion 2026-10-22: Practice on my own (core, similar, hints, how, cr, addons) ----------
+   01-architecture.md §2.6 with the lead decisions: Together on a core lesson = practice minus the {ref}
+   items (rule 10b); a core item with no similar item is a WARNING; core.rev versions the set.
+   Legacy lessons without core are unaffected, except the migration warning (rule 1). */
+const coreStats = { lessons: 0, core: 0, similar: 0, noCore: [] };
+const EXC_FILE = path.join(ROOT, "docs/expansion-2026-10-22/practice-exceptions.json");
+const EXC = (() => { try { return JSON.parse(fs.readFileSync(EXC_FILE, "utf8")); } catch (e) { return null; } })();
+const excKeys = new Set(EXC && Array.isArray(EXC.exceptions) ? EXC.exceptions.map(x => x.lesson) : []);
+const stemKey = it => norm([].concat(it.stem || []).concat(it.text ? [it.text] : []).join(" ")).toLowerCase();
+const wholeKey = it => norm(it.prompt || "").toLowerCase() + "|" + stemKey(it) + "|" + JSON.stringify([it.choices, it.rows, it.slots, it.targets, it.options, it.steps, it.partA, it.partB, it.passages]);
+function keyTexts(it, set) {
+  /* the text of the answer, for "a hint must not contain the answer" */
+  if (it.type === "mc" || it.type === "ms") return (it.choices || []).filter(c => c.correct).map(c => c.text);
+  if (it.type === "ebsr") return [].concat((it.partA.choices || []).filter(c => c.correct).map(c => c.text), (it.partB.choices || []).filter(c => c.correct).map(c => c.text));
+  if (it.type === "hottext") return (it.options ? (it.answer || []).map(i => it.options[i]) : (it.answer || []).map(r => sentenceAt(set, r))).filter(Boolean);
+  if (it.type === "dropdown") return (it.slots || []).map(s => s.options[s.answer]).filter(x => String(x).split(" ").length >= 3);
+  if (it.type === "cr") return [it.sample];
+  return [];
+}
+function checkHelp(it, w, set, need) {
+  const H = it.hints;
+  if (!Array.isArray(H)) { if (need) F(w, "needs hints: [three graduated hints]"); }
+  else {
+    if (H.length !== 3) F(w, "hints needs exactly 3 (has " + H.length + ")");
+    if (H.some(h => typeof h !== "string" || !h.trim())) F(w, "a hint is empty");
+    if (new Set(H.map(h => norm(h).toLowerCase())).size !== H.length) F(w, "hints repeat each other");
+    H.forEach((h, n) => keyTexts(it, set).forEach(t => {
+      const x = norm(t).toLowerCase().replace(/[.!?"]$/, "").replace(/^"/, "");
+      if (x.split(" ").length >= 2 && norm(h).toLowerCase().indexOf(x) >= 0) F(w, "hint " + (n + 1) + " contains the answer “" + t + "”");
+    }));
+    if (/\b(first|second|third|fourth|last|top|bottom) (choice|option)\b|\b(choice|option) [A-D]\b/i.test(H.join(" "))) F(w, "a hint refers to a choice by position, but choices are shuffled");
+    if (H.length === 3 && norm(H[0]).length > norm(H[2]).length * 1.6) W(w, "hint 1 is much longer than hint 3; the hints may not get more specific");
+    /* giveaway on hints 1 and 2: a word shared only with the key */
+    const words = t => new Set((norm(t).toLowerCase().match(/[a-z']{4,}/g) || []).filter(x => STOP.indexOf(x) < 0));
+    const ch = it.type === "mc" || it.type === "ms" ? it.choices : it.type === "ebsr" ? it.partA.choices : null;
+    if (ch) {
+      const ctxW = words((it.prompt || "") + " " + [].concat(it.stem || []).join(" "));
+      const wrongW = new Set([].concat(...ch.filter(c => !c.correct).map(c => [...words(c.text)])));
+      const keyW = new Set([].concat(...ch.filter(c => c.correct).map(c => [...words(c.text)])));
+      H.slice(0, 2).forEach((h, n) => { const hit = [...words(h)].filter(x => keyW.has(x) && !wrongW.has(x) && !ctxW.has(x)); if (hit.length) W(w, "hint " + (n + 1) + " shares “" + hit.join(", ") + "” only with the key"); });
+    }
+  }
+  const how = it.how;
+  if (!Array.isArray(how)) { if (need) F(w, "needs how: [2-5 Show me how steps]"); return; }
+  if (how.length < 2 || how.length > 5) F(w, "how needs 2-5 steps (has " + how.length + ")");
+  if (how.some(h => typeof h !== "string" || !h.trim())) F(w, "a how step is empty");
+  if (/\b(first|second|third|fourth|last|top|bottom) (choice|option)\b|\b(choice|option) [A-D]\b/i.test(how.join(" "))) F(w, "how refers to a choice by position, but choices are shuffled");
+  if ((it.type === "mc" || it.type === "ms") && need) {
+    const all = norm(how.join(" ") + " " + (it.why || "")).toLowerCase();
+    (it.choices || []).filter(c => c.correct).forEach(c => { if (all.indexOf(norm(c.text).toLowerCase().replace(/[.!?]$/, "")) < 0) F(w, "neither how nor why names the answer “" + c.text + "”"); });
+  }
+}
+function checkCore(L, S, lessonIds) {
+  const key = L.key || L.code;
+  const P = L.practice || [], byP = {}; P.forEach(it => { byP[it.id] = it; });
+  const AD = L.addons || {};
+  const merged = it => { const a = AD[it.id]; return a ? Object.assign({}, it, { hints: it.hints || a.hints, how: it.how || a.how, misconception: it.misconception || a.misconception || a.mix }) : it; };
+  const lessonSet = it => ({ passages: (L.passages || []).filter(p => (it.passages || []).indexOf(p.id) >= 0) });
+  /* addons: every key names an item of this lesson; its shape is checked on the item it joins */
+  const lessonItemIds = new Set([].concat(P, L.test || [], L.testB || [], L.similar || []).map(i => i.id));
+  if (L.core && Array.isArray(L.core.sets)) L.core.sets.forEach(s => (s.items || []).forEach(x => { if (x && x.id) lessonItemIds.add(x.id); }));
+  Object.keys(AD).forEach(id => {
+    if (!lessonItemIds.has(id)) F(S + " addons", id + " is not an item in this lesson");
+    const a = AD[id];
+    if (!a || typeof a !== "object") F(S + " addons " + id, "must be an object { hints, how, mix? }");
+    else Object.keys(a).forEach(f => { if (["hints", "how", "mix", "misconception"].indexOf(f) < 0) F(S + " addons " + id, "unknown field " + f); });
+  });
+  P.filter(it => AD[it.id]).forEach(it => checkHelp(merged(it), S + " practice " + it.id + " (addons)", lessonSet(it), false));
+  if (L.coreException) {
+    if (!L.coreException.kind || !L.coreException.rationale) F(S, "coreException needs kind and rationale");
+    if (EXC && !excKeys.has(key)) F(S, "has coreException but is not listed in practice-exceptions.json");
+  }
+  if (!L.core) {
+    if ((L.test || []).length && !L.coreException && !excKeys.has(key)) coreStats.noCore.push(key);
+    if (L.similar) F(S, "similar needs core");
+    return;
+  }
+  coreStats.lessons++;
+  const C = L.core, SC = S + " core";
+  /* 2. structure: exactly three sets of five, and a rev */
+  if (typeof C.rev !== "string" || !C.rev.trim()) F(SC, "core.rev must be a non-empty string");
+  if (!Array.isArray(C.sets) || C.sets.length !== 3) { F(SC, "needs exactly 3 sets (has " + (Array.isArray(C.sets) ? C.sets.length : 0) + ")"); return; }
+  C.sets.forEach((s, i) => { if (!Array.isArray(s.items) || s.items.length !== 5) F(SC + " set " + (i + 1), "needs exactly 5 items (has " + ((s.items || []).length) + ")"); });
+  /* 10b (lead decision): refs name practice items; Together is practice minus the refs */
+  const refs = [];
+  const all = [];
+  C.sets.forEach((s, si) => (s.items || []).forEach((x, n) => {
+    if (x && x.ref) {
+      if (!byP[x.ref]) { F(SC, "set " + (si + 1) + " ref " + x.ref + " is not in practice"); return; }
+      if (refs.indexOf(x.ref) >= 0) F(SC, "ref " + x.ref + " is used twice");
+      refs.push(x.ref);
+      all.push({ it: merged(byP[x.ref]), set: si + 1, ref: true });
+    } else if (x && x.id) all.push({ it: merged(x), set: si + 1, ref: false });
+    else F(SC, "set " + (si + 1) + " item " + (n + 1) + " needs an id or a ref");
+  }));
+  coreStats.core += all.length;
+  const together = P.filter(it => refs.indexOf(it.id) < 0);
+  if (together.length < 2 || together.length > 5) F(S, "Practice Together on a core lesson needs 2-5 items after the refs are left out (has " + together.length + ")");
+  coreStats.together = coreStats.together || {}; coreStats.together[key] = together.map(i => i.id);
+  /* 3. unique ids, SK- prefix */
+  const seenCore = new Set();
+  all.forEach(({ it, ref }) => {
+    const w = SC + " " + it.id;
+    if (!/^SK-/.test(it.id || "")) F(w, "core item ids start with SK-");
+    if (seenCore.has(it.id)) F(w, "duplicate id in core"); seenCore.add(it.id);
+    if (!ref) {
+      if (lessonIds.has(it.id) || byP[it.id]) F(w, "id is also used in practice or a check; use { ref } to reuse a practice item");
+      if (seenItem.has(it.id)) F(w, "item id used elsewhere"); seenItem.add(it.id); lessonIds.add(it.id);
+      if (!Array.isArray(it.passages)) F(w, "needs passages: [...] (use [] for none)");
+      else it.passages.forEach(pid => { if (!(L.passages || []).some(p => p.id === pid)) F(w, "unknown passage " + pid); });
+      checkItem(lessonSet(it), Object.assign({}, it, { allowCr: true }), SC, L.code);
+      if (it.std && !it.std.some(c => (L.codes || [L.code]).indexOf(c) >= 0)) F(w, "std must include one of the lesson's codes");
+    }
+    /* 4-5. three hints and Show me how on every core item (from the item or its addon) */
+    checkHelp(it, w, lessonSet(it), true);
+  });
+  /* 7. distinct practice */
+  const stems = {}, wholes = {};
+  const nameless = t => String(t).replace(/\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?\b/g, "N");
+  const trivial = {};
+  all.forEach(({ it }) => {
+    const st = stemKey(it), wh = wholeKey(it), tv = nameless(norm(it.prompt || "") + "|" + st + "|" + JSON.stringify(it.choices || it.rows || it.slots || it.steps || it.partA || []));
+    if (st && stems[st]) F(SC + " " + it.id, "shares its stem with " + stems[st]); else if (st) stems[st] = it.id;
+    if (wholes[wh]) F(SC + " " + it.id, "is the same question as " + wholes[wh]); else wholes[wh] = it.id;
+    if (trivial[tv] && trivial[tv] !== it.id) W(SC + " " + it.id, "looks like a name-swapped copy of " + trivial[tv]); else trivial[tv] = it.id;
+  });
+  /* 8. separation: core passages never in a check; no shared id or stem with a check */
+  const checks = [].concat(L.test || [], L.testB || []);
+  const checkP = new Set([].concat(...checks.map(i => i.passages || [])));
+  const checkStems = new Set(checks.map(stemKey).filter(Boolean)), checkIds = new Set(checks.map(i => i.id));
+  all.forEach(({ it }) => {
+    (it.passages || []).forEach(pid => { if (checkP.has(pid)) F(SC + " " + it.id, "uses passage " + pid + ", which a skill check also uses"); });
+    if (checkIds.has(it.id)) F(SC + " " + it.id, "shares an id with a check item");
+    const st = stemKey(it); if (st && checkStems.has(st)) F(SC + " " + it.id, "shares its stem with a check item");
+  });
+  /* 9. the similar bank */
+  const SIM = L.similar || [], SS = S + " similar";
+  coreStats.similar += SIM.length;
+  if (SIM.length && (SIM.length < 3 || SIM.length > 15)) F(SS, "needs 3-15 items (has " + SIM.length + ")");
+  if (!SIM.length) W(SS, "no similar items, so Try a similar question never appears in this lesson");
+  const coreIds = new Set(all.map(x => x.it.id)), covered = new Set();
+  SIM.forEach(raw => {
+    const it = merged(raw), w = SS + " " + it.id;
+    if (!/^SK-/.test(it.id || "")) F(w, "similar item ids start with SK-");
+    if (coreIds.has(it.id) || lessonIds.has(it.id)) F(w, "id is also used by another item in this lesson");
+    if (seenItem.has(it.id)) F(w, "item id used elsewhere"); seenItem.add(it.id); lessonIds.add(it.id);
+    if (!Array.isArray(it.like) || !it.like.length) F(w, "needs like: [core item ids it practises]");
+    (it.like || []).forEach(id => { if (!coreIds.has(id)) F(w, "like names " + id + ", which is not a core item"); else covered.add(id); });
+    if (!Array.isArray(it.passages)) F(w, "needs passages: [...] (use [] for none)");
+    else it.passages.forEach(pid => {
+      if (!(L.passages || []).some(p => p.id === pid)) F(w, "unknown passage " + pid);
+      if (checkP.has(pid)) F(w, "uses passage " + pid + ", which a skill check also uses");
+    });
+    const st = stemKey(it); if (st && stems[st]) F(w, "shares its stem with core item " + stems[st]);
+    if (wholes[wholeKey(it)]) F(w, "is the same question as core item " + wholes[wholeKey(it)]);
+    checkItem(lessonSet(it), Object.assign({}, it, { allowCr: true }), SS, L.code);
+    checkHelp(it, w, lessonSet(it), true);
+  });
+  /* lead decision: an uncovered core item is a warning, and the player hides the button on it */
+  const unc = [...coreIds].filter(id => !covered.has(id));
+  if (unc.length) W(SS, unc.length + " of " + coreIds.size + " core items have no similar item, so Try a similar question is hidden on them: " + unc.join(", "));
 }
 
 /* ---------- skill lessons (SPEC §8) ---------- */
@@ -279,6 +449,7 @@ lessons.forEach(L => {
   (L.test || []).forEach(it => (it.passages || []).forEach(pid => { if (pp.has(pid)) W(S + " " + it.id, "test reuses practice passage " + pid); }));
   const max = (L.test || []).reduce((a, i) => a + (i.points || 0), 0);
   if (max < 5 && !L.check) W(S, "test is only " + max + " points");
+  checkCore(L, S, ids);
   /* ---------- PP-004: a second, independent check form (testB, SPEC §8b) ----------
      4-6 items; the same codes as form A; the same total points (so the pass mark is the
      same); no item id shared with form A; no stem, and no whole question, identical to
@@ -440,9 +611,65 @@ tasks.forEach(t => {
   if (n.M !== 8 || n.R !== 18 || n.I !== 11 || n.C !== 4) F(C, "official grade 3 GUM counts changed: " + JSON.stringify(n) + " (expected M 8, R 18, I 11, C 4)");
 })();
 
+/* ---------- expansion 2026-10-22: standard groups (js/data/std-groups.js) against the official parent wording ---------- */
+(function () {
+  const C = "std-groups";
+  const f = path.join(ROOT, "js/data/std-groups.js");
+  if (!fs.existsSync(f)) { F(C, "js/data/std-groups.js not found"); return; }
+  run("js/data/std-groups.js");
+  const G = ctx.window.PP_STD_GROUPS;
+  let OFFP = null;
+  try { OFFP = JSON.parse(fs.readFileSync(path.join(ROOT, "docs/audits/work/official-gr3-parents.json"), "utf8")).parents; } catch (e) { F(C, "official-gr3-parents.json could not be read: " + e.message); return; }
+  if (!Array.isArray(G)) { F(C, "PP_STD_GROUPS is not a list"); return; }
+  const byOff = {}; OFFP.forEach(o => { byOff[o.code] = o; });
+  const parentOf = s => s.gum ? "3.L.GC.1" : s.code.replace(/\.[a-z]$/, "");
+  const want = {}; STD.forEach(s => { (want[parentOf(s)] = want[parentOf(s)] || []).push(s.code); });
+  const seen = new Set();
+  const lessonKeys = new Set(lessons.map(L => L.key || L.code));
+  G.forEach(g => {
+    const w = C + " " + (g.code || "?");
+    ["code", "band", "name", "official", "page", "order"].forEach(k => { if (g[k] === undefined || g[k] === "") F(w, "missing " + k); });
+    if (seen.has(g.code)) F(w, "listed twice"); seen.add(g.code);
+    const o = byOff[g.code];
+    if (!o) { F(w, "is not an official parent standard in official-gr3-parents.json"); return; }
+    if (g.official !== o.wording) F(w, "official wording differs from p. " + o.page);
+    if (g.page !== o.page) F(w, "page is " + g.page + ", official page is " + o.page);
+    if (g.band !== o.band) F(w, "band is " + g.band + ", official is " + o.band);
+    const leaves = want[g.code] || [];
+    const ord = Array.isArray(g.order) ? g.order : [];
+    if (new Set(ord).size !== ord.length) F(w, "order lists a code twice");
+    const miss = leaves.filter(c => ord.indexOf(c) < 0), extra = ord.filter(c => leaves.indexOf(c) < 0);
+    if (miss.length) F(w, "order is missing " + miss.join(", "));
+    if (extra.length) F(w, "order lists codes that are not under it: " + extra.join(", "));
+    Object.keys(g.lessons || {}).forEach(code => {
+      if (ord.indexOf(code) < 0) F(w, "lessons names " + code + ", which is not in order");
+      (g.lessons[code] || []).forEach(k => {
+        const L = lessons.find(x => (x.key || x.code) === k);
+        if (!lessonKeys.has(k)) F(w, "lessons for " + code + " names " + k + ", which is not a lesson");
+        else if (L.code !== code) F(w, "lesson " + k + " has main code " + L.code + ", not " + code);
+      });
+      const mains = lessons.filter(L => L.code === code).map(L => L.key || L.code);
+      const missL = mains.filter(k => (g.lessons[code] || []).indexOf(k) < 0);
+      if (missL.length) F(w, "lessons for " + code + " leaves out " + missL.join(", "));
+    });
+  });
+  Object.keys(want).forEach(p => { if (!seen.has(p)) F(C, "parent " + p + " has leaf codes but no group"); });
+})();
+/* expansion 2026-10-22: practice-exceptions.json (performance lessons with a documented other sequence) */
+if (EXC) (EXC.exceptions || []).forEach(x => {
+  const L = lessons.find(l => (l.key || l.code) === x.lesson);
+  if (!L) F("practice-exceptions", x.lesson + " is not a lesson");
+  else if (!x.kind || !x.rationale) F("practice-exceptions", x.lesson + " needs kind and rationale");
+  else if (L.core) F("practice-exceptions", x.lesson + " has core, so it is not an exception");
+});
+else W("practice-exceptions", "docs/expansion-2026-10-22/practice-exceptions.json not found");
+if (coreStats.noCore.length) W("core (migration)", coreStats.noCore.length + " lessons with a skill check have no core yet and are not listed as exceptions (a failure only after migration)");
+Object.keys(coreStats.together || {}).forEach(k => console.log("  info  lesson " + k + ": Practice Together = " + coreStats.together[k].join(", ") + " (practice minus the core refs)"));
+
 const items = sets.reduce((a, s) => a + s.items.length, 0);
 const litems = lessons.reduce((a, l) => a + (l.practice || []).length + (l.test || []).length + (Array.isArray(l.testB) ? l.testB.length : 0), 0);   /* testB: PP-004 */
-console.log("Checked " + sets.length + " sets (" + items + " items), " + tasks.length + " tasks and " + lessons.length + " lessons (" + litems + " items)" + (all ? " [all files]" : " [manifest]"));
+console.log("Checked " + sets.length + " sets (" + items + " items), " + tasks.length + " tasks and " + lessons.length + " lessons (" + litems + " items)" + (all ? " [all files]" : " [manifest]") +
+  "; core: " + coreStats.lessons + " lesson" + (coreStats.lessons === 1 ? "" : "s") + ", " + coreStats.core + " core items, " + coreStats.similar + " similar items");
 warns.forEach(x => console.log("  warn  " + x));
 fails.forEach(x => console.log("  FAIL  " + x));
 console.log(fails.length ? fails.length + " FAILURES" : "PASS (0 failures, " + warns.length + " warnings)");

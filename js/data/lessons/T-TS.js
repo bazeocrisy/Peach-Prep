@@ -494,7 +494,7 @@ PP.addLesson({
     big: "The author shows a problem, the things someone tries, and the solution that finally works.",
     points: [
       "The problem is what is wrong. Look for the word problem or for something that keeps going wrong.",
-      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right after a try. It tells you the try did not work.",
+      "The tries are what someone does to fix it. Some tries do not work. The word but often comes right after a try. It tells you the try did not work. But can also show a difference, so check what comes just before it.",
       "Failed tries matter. They help show what the REAL problem was.",
       "The solution is what finally fixes it. Clue words like decided, solved and finally point to it.",
       "You see this in stories and in true texts, too. A town with too much litter might add recycling bins."
@@ -531,6 +531,18 @@ PP.addLesson({
         "Ask: What finally worked? Moving the tank out of the sun. So the sun was the real problem."
       ],
       answer: "Wiping did not fix the real cause. The sunny window made the tank turn green, so it kept coming back until they moved the tank."
+    },
+    /* B1 (expansion 2026-10-22): models the real problem in a true text, a helper's role, and testing a new plan. */
+    {
+      show: ["The food bank in Clayton had a problem. Its shelves kept running out of peanut butter. First, the workers hung more signs that said, \"Please give food.\" But people still brought mostly cans of soup. Then a volunteer read the signs again. They never said which foods were needed! So the workers made a list called \"Foods We Need\" and posted it at the grocery store. The next week, jars of peanut butter filled the shelves."],
+      ask: "Why didn't more signs work? Who helped find the real problem? Would a bigger sign have worked?",
+      steps: [
+        "Find the problem and the try. The shelves run out of peanut butter. The workers hang more signs, but people still bring soup.",
+        "Ask why the try failed. The signs never said which foods were needed. That was the real problem, and the volunteer is the one who found it.",
+        "Test a new plan against the real problem. A bigger sign would help only if it said which foods were needed.",
+        "Notice the order. This true text goes problem, try, the real problem, solution and result, just like a story."
+      ],
+      answer: "More signs did not tell people which foods were needed. A volunteer found that real problem by reading the signs again. A bigger sign would work only if it listed the foods, because that is what fixes the real problem."
     }
   ],
   parent: "When something goes wrong at home, talk it through out loud: \"What's the problem? What did we try? Did it work? Why not? What finally worked?\" Let your child use the words tried, but and finally.",
@@ -553,6 +565,49 @@ PP.addLesson({
         ["Then Leo looked closely.", "He saw that rainwater ran downhill and sat in one low spot on the path.", "That low spot was the real cause of the mud."],
         ["The class decided to fill the low spot with dirt.", "Then they spread a thick layer of wood chips on top.", "Wood chips soak up some water and give shoes something to grip."],
         ["After the next storm, the class walked out to check.", "The path was dry enough to walk on.", "The problem was finally solved!"]
+      ] },
+    /* B1 (expansion 2026-10-22): p3-p5 are used only by core (p3 set 1, p4 set 2 and one set 3 compare
+       item, p5 set 3); p6 and p7 only by the similar bank. Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "The Wobbly Table", genre: "Literary text",
+      paragraphs: [
+        ["Every night at dinner, Grandma's kitchen table wobbled.", "When anyone leaned on it, soup sloshed out of the bowls."],
+        ["First, Niko tried folding a napkin and pushing it under one leg.", "But the next night, the table wobbled again, and the napkin lay flat on the floor."],
+        ["Then Grandma tried pulling the table closer to the wall, where the floor was smooth.", "But it wobbled there, too."],
+        ["After dinner, Niko lay on his back and looked up under the table.", "He gave each leg a little shake.", "Three legs stayed still, but the fourth leg wiggled back and forth.", "A screw at the top of that leg was loose."],
+        ["Grandma found her screwdriver, and Niko turned the screw until it was tight."],
+        ["The next night, Niko leaned both elbows on the table.", "Nothing moved, and not one drop of soup spilled."]
+      ] },
+    { id: "p4", title: "The Tangled Ropes", genre: "Literary text",
+      paragraphs: [
+        ["The Maple Street Jumpers had a big problem.", "In two weeks, they would jump Double Dutch at the town fair.", "But every time Amari jumped in, the two ropes tangled and slapped her ankles."],
+        ["First, the team tried a brand-new pair of ropes.", "But the new ropes tangled just like the old ones."],
+        ["Next, the two turners, Imani and Kiara, tried standing farther apart.", "That gave Amari more room, but the ropes still crossed and caught her feet."],
+        ["Coach Bell sat on the bench and watched the turners closely.", "Imani's hands swung fast, but Kiara's swung slowly.", "\"Your jumping is fine, Amari,\" Coach Bell said.", "\"The ropes are not keeping the same beat.\""],
+        ["The girls decided to chant a jump-rope rhyme while they turned.", "Each word of the rhyme told the turners when to swing, so their hands kept the same beat."],
+        ["At the fair, the ropes spun in a smooth, even pattern.", "Amari hopped in and jumped fifty times without one tangle.", "The problem was finally solved!"]
+      ] },
+    { id: "p5", title: "Dots on the Glass", genre: "Informational text",
+      paragraphs: [
+        ["The library at Hillcrest Elementary has a wall of tall windows.", "Students love to read there in the sunshine.", "But the windows caused a problem.", "Several times a week, a bird flew into the glass with a loud thump."],
+        ["First, the students stuck one big hawk-shaped sticker in the middle of the glass.", "They hoped it would scare the birds away.", "But birds kept hitting the window, just a few feet from the sticker."],
+        ["A scientist from the nature center explained why.", "When a bird looks at a window, it sees trees and sky reflected in the glass, like in a mirror.", "To the bird, the window looks like open air.", "One sticker covered only a tiny spot.", "The rest of the glass still looked like a clear path to fly through."],
+        ["So the class decided to cover the whole window with small white dots.", "They placed the dots in rows, about two inches apart.", "Now birds could tell that something solid was in the way."],
+        ["Since then, the thumps have almost stopped.", "Students still read in the sunshine, and the birds stay safe outside."]
+      ] },
+    { id: "p6", title: "The Droopy Bean Plants", genre: "Literary text",
+      paragraphs: [
+        ["Room 4 grew bean plants in paper cups on a shelf in the back corner.", "The class wanted to measure how tall the plants could grow.", "But after a week, the plants were pale and droopy."],
+        ["First, the class tried giving the plants more water.", "But the soil turned soggy, and the plants still drooped."],
+        ["Then Mr. Hale held one cup up next to the window.", "\"Look how the stems lean toward the light,\" he said.", "The back corner was the darkest spot in the room."],
+        ["The class moved the cups to the sunny windowsill.", "In three days, the leaves were green and the stems stood up tall."]
+      ] },
+    { id: "p7", title: "The Soggy Sandwich", genre: "Literary text",
+      paragraphs: [
+        ["Every day at lunch, Kayla's turkey sandwich was soggy.", "The bread was so wet that it fell apart in her hands."],
+        ["First, she tried wrapping the sandwich tighter in plastic.", "But at lunch, it was soggy again."],
+        ["Next, she packed it in a hard plastic box.", "The bread was still mushy."],
+        ["Her big brother, Jonah, watched her make lunch the next morning.", "\"You put the tomato slices right on the bread,\" he said.", "\"Tomatoes are juicy, and the juice soaks in all morning.\""],
+        ["So Kayla packed the tomatoes in a little cup and added them at lunch.", "That day, her sandwich was soft but not soggy, and she ate every bite."]
       ] }
   ],
   practice: [
@@ -613,6 +668,451 @@ PP.addLesson({
       clue: "The word but has more than one job. Read the sentence before this one. Is the author pointing out a difference between two things, or telling what happened after Jamal's plan?",
       why: "The answer is \"A try did not work.\" Jamal wiped the ants away, but they came back. In a problem-and-solution text, but often shows a failed try. In a compare-and-contrast text, but shows a difference." }
   ],
+  /* ---------- B1 core (expansion 2026-10-22, author b1b; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try items P4, P5 and P6 by id (they stay in
+     practice; the engine leaves them out of Together, so Together shows P1-P3). New ids are numbered
+     by their place in the fifteen. Hints and Show me how for refs and Together items are in addons.
+     Author log: docs/expansion-2026-10-22/batches/B1-b1b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TSPS-P4" },
+      { ref: "SK-TSPS-P5" },
+      { id: "SK-TSPS-C03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p1"],
+        prompt: "How is the pan of water different from Jamal's first two tries?",
+        choices: [
+          { text: "It stops the ants from reaching the food at all.", correct: true },
+          { text: "It gets rid of the ants that are already on the floor." },
+          { text: "It puts the food bowl in a new spot in the kitchen." },
+          { text: "It is a plan that Jamal thinks of all by himself." }
+        ],
+        clue: "To compare tries, ask what each one changes. A solution works when it keeps the problem from coming back.",
+        hints: [
+          "To compare tries, ask what each one changes. A solution works when it keeps the problem from coming back.",
+          "Reread paragraphs 3 and 4 for what each try does and what happens next. Then read paragraph 7 to see what the ants do at the pan.",
+          "Grandma gives the idea for the moat in paragraph 5, so it is not a plan Jamal thinks of alone. Test each choice that is left against all three tries."
+        ],
+        how: [
+          "Wiping took away the ants on the floor. A new line of ants came back the next morning.",
+          "Moving the bowl put the food in a new spot. The ants found it again.",
+          "The pan of water is different: the ants march up to it and cannot get across. The answer is \"It stops the ants from reaching the food at all.\"",
+          "Getting rid of the ants on the floor and moving the bowl are what the failed tries did, and the moat was Grandma's idea."
+        ],
+        misconception: "A common mix-up is choosing what one of the failed tries did. A solution is different because it stops the problem from coming back.",
+        why: "The answer is \"It stops the ants from reaching the food at all.\" Wiping the ants away and moving the bowl did not keep new ants from getting to the food, but the ants cannot get across the water. Grandma, not Jamal alone, thought of the moat." },
+      { ref: "SK-TSPS-P6" },
+      { id: "SK-TSPS-C05", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p3"],
+        prompt: "Which sentence tells the real reason the table wobbles? Choose the sentence in the passage.",
+        targets: ["p3:1:2", "p3:2:2", "p3:3:1", "p3:4:2", "p3:4:4", "p3:5:1"],
+        answer: ["p3:4:4"], pick: 1,
+        clue: "Failed tries help show the real problem. The real reason is what makes something go wrong, not what happens because of it.",
+        hints: [
+          "Failed tries help show the real problem. The real reason is what makes something go wrong, not what happens because of it.",
+          "Each try in paragraphs 2 and 3 fixes something that turns out not to be the trouble. Read on to find out what Niko learns about the table itself.",
+          "The napkin lying flat tells why the first try failed. It is not why the table wobbles. Test each other sentence: if that were changed, would the wobble stop?"
+        ],
+        how: [
+          "The tries in paragraphs 2 and 3 do not work. A napkin under one leg and a smooth floor do not stop the wobble, so a short leg or a bumpy floor is not the real trouble.",
+          "In paragraph 4, Niko shakes each leg. One leg wiggles, and he finds out why.",
+          "The answer is \"A screw at the top of that leg was loose.\" That is what makes the table wobble.",
+          "Soup sloshing is what the wobble causes. Shaking the legs is how Niko finds the cause, and tightening the screw is the solution."
+        ],
+        misconception: "A common mix-up is choosing the sentence about why a try failed (the napkin lay flat) instead of the sentence that tells the real cause of the problem.",
+        why: "The answer is \"A screw at the top of that leg was loose.\" The napkin and the move to the wall did not stop the wobble, because the trouble was a loose leg. Soup sloshing is what the wobble causes, shaking the legs is how Niko finds the cause, and tightening the screw is the solution." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TSPS-C06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
+        prompt: "Why does the author tell readers that the fair is only two weeks away?",
+        choices: [
+          { text: "to show that the team must solve the problem soon", correct: true },
+          { text: "to show that the team has lots of time to practice" },
+          { text: "to explain why the ropes keep slapping Amari's ankles" },
+          { text: "to tell readers what else will happen at the fair" }
+        ],
+        clue: "A detail about time can make a story's trouble feel bigger. Ask what this detail adds.",
+        hints: [
+          "A detail about time can make a story's trouble feel bigger. Ask what this detail adds.",
+          "Reread paragraph 1. Think about what the team has to do at the fair, and what keeps going wrong.",
+          "The ropes slap Amari's ankles because they tangle, not because of the fair, so that choice does not explain this detail. Ask what the fair being close means for the team."
+        ],
+        how: [
+          "Paragraph 1 says the team will jump Double Dutch at the town fair in two weeks.",
+          "Every time Amari jumps in, the ropes tangle. If the team cannot fix that soon, it will happen at the fair, too.",
+          "The answer is \"to show that the team must solve the problem soon.\" The date makes the problem matter.",
+          "Two weeks is not lots of time, the fair does not cause the tangles, and the story never tells what else happens at the fair."
+        ],
+        misconception: "A common mix-up is treating a time or place detail as background only. Here it tells why the problem must be solved.",
+        why: "The answer is \"to show that the team must solve the problem soon.\" The team will jump at the fair in two weeks, and the ropes tangle every time, so the problem has to be fixed fast. Two weeks is not lots of time, the fair does not cause the tangles, and the story never tells what else happens there." },
+      { id: "SK-TSPS-C07", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
+        prompt: "Sort the story's events into the parts of a problem-and-solution map. Match each event to its part.",
+        cols: ["the problem", "a try that did not work", "the solution"],
+        rows: [
+          { text: "The ropes tangle every time Amari jumps in.", answer: 0 },
+          { text: "The team gets a brand-new pair of ropes.", answer: 1 },
+          { text: "Imani and Kiara stand farther apart.", answer: 1 },
+          { text: "The turners chant a rhyme as they swing.", answer: 2 }
+        ],
+        clue: "A problem-and-solution map has three parts: what is wrong, the tries, and what finally fixes it.",
+        hints: [
+          "A problem-and-solution map has three parts: what is wrong, the tries, and what finally fixes it.",
+          "For each event, find where it happens in the story. Then read the sentence right after it to see how things turned out.",
+          "The ropes tangling is what goes wrong in paragraph 1, so it is the problem. Sort the other three events by asking: did the ropes still tangle after it?"
+        ],
+        how: [
+          "The problem: the ropes tangle every time Amari jumps in (paragraph 1).",
+          "Tries that did not work: new ropes (paragraph 2) and standing farther apart (paragraph 3). After each one, the clue word but shows the ropes still tangled.",
+          "The solution: the turners chant a rhyme as they swing (paragraph 5). After that, the ropes stop tangling."
+        ],
+        misconception: "A common mix-up is calling every try a solution. A try is the solution only if it fixes the problem.",
+        why: "The problem is that the ropes tangle every time Amari jumps in. New ropes and standing farther apart are tries that did not work, because the ropes still tangled. The solution is chanting a rhyme while they swing, because after that the ropes stop tangling." },
+      { id: "SK-TSPS-C08", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "What is really causing the ropes to tangle?",
+          choices: [
+            { text: "The turners swing their hands at different speeds.", correct: true },
+            { text: "The old ropes are too worn out to turn smoothly." },
+            { text: "The turners stand too close to each other." },
+            { text: "Amari jumps in at the wrong moment." }
+          ] },
+        partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+          choices: [
+            { text: "\"Imani's hands swung fast, but Kiara's swung slowly.\"", correct: true },
+            { text: "\"But the new ropes tangled just like the old ones.\"" },
+            { text: "\"That gave Amari more room, but the ropes still crossed and caught her feet.\"" },
+            { text: "\"Your jumping is fine, Amari,\" Coach Bell said." }
+          ] },
+        clue: "Failed tries help show the real problem. When a try does not work, the thing it changed was not the real trouble.",
+        hints: [
+          "Failed tries help show the real problem. When a try does not work, the thing it changed was not the real trouble.",
+          "Look at what each try in paragraphs 2 and 3 changes and how it turns out. Then read what Coach Bell notices in paragraph 4.",
+          "The new ropes tangled just like the old ones, so worn-out ropes are not the cause. For Part B, choose the sentence that shows the cause, not one that shows a try failing."
+        ],
+        how: [
+          "New ropes still tangle, so the ropes are not the trouble. Standing farther apart does not help either, so space is not the trouble.",
+          "Coach Bell says Amari's jumping is fine. Then she points out what she has been watching: Imani's hands swing fast, and Kiara's swing slowly.",
+          "Part A: The turners swing their hands at different speeds. Part B: \"Imani's hands swung fast, but Kiara's swung slowly.\"",
+          "\"Your jumping is fine\" rules out Amari, but it does not show the cause. The other two sentences show tries that failed."
+        ],
+        misconception: "A common mix-up is picking a sentence that shows a try failing. A failed try tells you what the problem is not; look for the sentence that tells what it is.",
+        why: "Part A: The turners swing their hands at different speeds. Part B: \"Imani's hands swung fast, but Kiara's swung slowly.\" New ropes and more space did not help, and Coach Bell says Amari's jumping is fine. What she watches shows the turners swinging at different speeds, so the ropes do not keep the same beat." },
+      { id: "SK-TSPS-C09", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
+        prompt: "Which TWO sentences show that the chant solved the problem? Choose two sentences in the passage.",
+        targets: ["p4:1:2", "p4:3:2", "p4:4:3", "p4:5:1", "p4:6:1", "p4:6:2"],
+        answer: ["p4:6:1", "p4:6:2"], pick: 2,
+        clue: "To show a solution worked, look for what happens after it. The problem should stop happening.",
+        hints: [
+          "To show a solution worked, look for what happens after it. The problem should stop happening.",
+          "Look at the part of the story after the girls decide what to do.",
+          "More room in paragraph 3 helped a little, but the ropes still crossed, so that sentence does not show a solution working. Check each other sentence against the question."
+        ],
+        how: [
+          "The girls decide to chant a rhyme in paragraph 5. That is the solution, not proof that it worked.",
+          "At the fair, the ropes spin in a smooth, even pattern, and Amari jumps fifty times without a tangle.",
+          "The answers are \"At the fair, the ropes spun in a smooth, even pattern.\" and \"Amari hopped in and jumped fifty times without one tangle.\"",
+          "More room in paragraph 3 did not stop the tangles, and the fair date and Coach Bell's words come before the solution."
+        ],
+        misconception: "A common mix-up is choosing the sentence that tells the solution. Proof that it worked comes after, when the problem stops.",
+        why: "The answers are \"At the fair, the ropes spun in a smooth, even pattern.\" and \"Amari hopped in and jumped fifty times without one tangle.\" Both happen after the chant and show the tangles have stopped. Deciding to chant is the plan itself, more room did not stop the tangles, and the other sentences come before the solution." },
+      { id: "SK-TSPS-C10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p4"],
+        prompt: "How does Coach Bell help the team solve the problem?",
+        choices: [
+          { text: "She figures out what is really going wrong before anyone tries again.", correct: true },
+          { text: "She buys the team a brand-new pair of ropes to use at the fair." },
+          { text: "She tells Imani and Kiara to stand much farther apart." },
+          { text: "She shows Amari a better way to jump into the ropes." }
+        ],
+        clue: "Characters help solve a problem in different ways. Ask what this character does that changes what happens next.",
+        hints: [
+          "Characters help solve a problem in different ways. Ask what this character does that changes what happens next.",
+          "Reread paragraph 4. What does Coach Bell do while she sits on the bench, and what does she tell the team?",
+          "The team tried the new ropes in paragraph 2, on its own. Test the other choices against paragraph 4."
+        ],
+        how: [
+          "In paragraph 4, Coach Bell sits and watches the turners closely before anyone changes anything else.",
+          "She tells Amari her jumping is fine, and she tells the team what is really wrong with the ropes.",
+          "The answer is \"She figures out what is really going wrong before anyone tries again.\" After she speaks, the girls decide on a new plan.",
+          "The team tried the new ropes and more space on its own, and Coach Bell says Amari's jumping is fine."
+        ],
+        misconception: "A common mix-up is thinking the helper must do the fixing. Here the helper finds the real problem, and the team fixes it.",
+        why: "The answer is \"She figures out what is really going wrong before anyone tries again.\" Coach Bell watches and then tells the team what is really wrong, which leads to the chant. The team tried the new ropes and more space on its own, and she says Amari's jumping is fine." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TSPS-C11", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p5"], pick: 2,
+        prompt: "Why did birds keep hitting the window after the students put up the hawk sticker? Choose TWO reasons the article gives.",
+        choices: [
+          { text: "The sticker covered only a tiny part of the glass.", correct: true },
+          { text: "The rest of the window still looked like open air.", correct: true },
+          { text: "The sticker was too dark for birds to see in the sun." },
+          { text: "The sticker was stuck on the inside of the glass." },
+          { text: "The birds were flying too fast to turn away in time." }
+        ],
+        clue: "In a true text, the author often explains why a try did not work. Find the paragraph that gives the reason, then check each choice against it.",
+        hints: [
+          "In a true text, the author often explains why a try did not work. Find the paragraph that gives the reason, then check each choice against it.",
+          "Reread what the scientist explains in paragraph 3. Choose two.",
+          "The article never says which side of the glass the sticker was on, so that choice is not a reason the article gives. Check each other choice the same way: is it in the article?"
+        ],
+        how: [
+          "Paragraph 3 says birds see trees and sky in the glass, so a window looks like open air.",
+          "It also says one sticker covered only a tiny spot, and the rest of the glass still looked like a clear path.",
+          "The answers are \"The sticker covered only a tiny part of the glass.\" and \"The rest of the window still looked like open air.\"",
+          "The article never says the sticker was too dark, which side it was on, or that the birds flew too fast."
+        ],
+        misconception: "A common mix-up is choosing a reason that sounds possible but is not in the article. Use the reason the author gives.",
+        why: "The answers are \"The sticker covered only a tiny part of the glass.\" and \"The rest of the window still looked like open air.\" The scientist explains that one sticker covered only a tiny spot, and the rest of the glass still looked like a clear path to fly through. The other reasons are not in the article." },
+      { id: "SK-TSPS-C12", type: "order", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p5"],
+        prompt: "This article is built in a problem-and-solution pattern. Put its parts in the order the author tells them.",
+        steps: [
+          "Birds keep flying into the library windows.",
+          "The students put up one hawk sticker.",
+          "A scientist explains why that did not work.",
+          "The class covers the window with rows of dots.",
+          "The thumps almost stop."
+        ],
+        clue: "Problem-and-solution texts often go in the same order: the problem, a try, why it did or did not work, the solution and the result.",
+        hints: [
+          "Problem-and-solution texts often go in the same order: the problem, a try, why it did or did not work, the solution and the result.",
+          "Find the paragraph where each part is told. Then put the parts in the same order as the paragraphs.",
+          "The thumps almost stopping is a result, so it comes after the solution, at the very end. Place the other four parts the same way."
+        ],
+        how: [
+          "Paragraph 1 gives the problem: birds keep flying into the windows.",
+          "Paragraph 2 gives the first try, the hawk sticker. In paragraph 3, a scientist explains why it did not work.",
+          "Paragraph 4 gives the solution, the rows of dots, and paragraph 5 gives the result: the thumps almost stop.",
+          "So the order is problem, try, why the try failed, solution, result."
+        ],
+        why: "The order is: birds keep flying into the library windows, the students put up one hawk sticker, a scientist explains why that did not work, the class covers the window with rows of dots, and the thumps almost stop. That is problem, try, why it failed, solution and result." },
+      /* Compares the set 2 and set 3 texts, so it carries both passages. */
+      { id: "SK-TSPS-C13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p4", "p5"],
+        prompt: "Think about \"The Tangled Ropes\" and \"Dots on the Glass.\" Is each sentence true for only one text or for both? Match each sentence.",
+        cols: ["only The Tangled Ropes", "only Dots on the Glass", "both texts"],
+        rows: [
+          { text: "Two different tries fail before the solution.", answer: 0 },
+          { text: "The first try does not fix the real cause.", answer: 2 },
+          { text: "Someone who watches or knows more finds the real cause.", answer: 2 },
+          { text: "The problem happens at a school.", answer: 1 }
+        ],
+        clue: "To compare two texts, check each sentence against one text, then the other. It is true for both only if it fits both.",
+        hints: [
+          "To compare two texts, check each sentence against one text, then the other. It is true for both only if it fits both.",
+          "In each text, reread the tries and the part that explains what is really wrong.",
+          "In \"Dots on the Glass,\" the students make only one try before the solution, so the sentence about two tries does not fit both. Sort the other sentences the same way."
+        ],
+        how: [
+          "The Tangled Ropes has two tries that fail, new ropes and more space. Dots on the Glass has only one, the hawk sticker. So two tries fit only The Tangled Ropes.",
+          "In both texts, the first try changes something, but the problem keeps happening, so it does not fix the real cause.",
+          "Coach Bell watches the turners, and a scientist explains what birds see. In both texts, someone who watches or knows more finds the real cause.",
+          "Only Dots on the Glass happens at a school, in the library at Hillcrest Elementary. The jump-rope team is getting ready for a town fair."
+        ],
+        misconception: "A common mix-up is calling a sentence true for both when it fits only one text. Check it against each text on its own.",
+        why: "Two tries fail only in The Tangled Ropes. In both texts, the first try does not fix the real cause, and someone who watches or knows more finds it: Coach Bell and the scientist. Only Dots on the Glass happens at a school." },
+      { id: "SK-TSPS-C14", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [], pick: 2,
+        stem: ["Every morning, the trash cans at Riverside Park were tipped over, and trash was spread across the grass.", "First, the workers put out bigger cans, but the bigger cans were tipped over, too.", "Next, they put up a sign that said, \"Please do not litter.\"", "But the mess was still there each morning.", "Then a worker set up a camera for one night.", "It showed raccoons climbing the cans and pushing them over to get at food scraps."],
+        prompt: "Read the story in the box. Which TWO plans would most likely solve the real problem?",
+        choices: [
+          { text: "Use cans with lids that lock so raccoons cannot open them.", correct: true },
+          { text: "Put the cans inside a locked shed each night.", correct: true },
+          { text: "Put up more signs that ask people not to litter." },
+          { text: "Buy even bigger trash cans for the park." },
+          { text: "Have the workers come earlier each morning." }
+        ],
+        clue: "A good plan fixes the real problem. Use what the failed tries and the new clue tell you about what is really causing the mess.",
+        hints: [
+          "A good plan fixes the real problem. Use what the failed tries and the new clue tell you about what is really causing the mess.",
+          "Read the last two sentences. Who is making the mess, and how? Choose two.",
+          "The sign did not work, because people were not the ones making the mess, so more signs would not help either. Test the other plans against what the camera showed."
+        ],
+        how: [
+          "Bigger cans and a sign did not stop the mess, so small cans and people littering are not the cause.",
+          "The camera shows raccoons climbing the cans and pushing them over to get food.",
+          "A plan has to keep raccoons out of the cans. The answers are \"Use cans with lids that lock so raccoons cannot open them.\" and \"Put the cans inside a locked shed each night.\"",
+          "More signs and bigger cans repeat tries that failed, and coming earlier only cleans up the mess after it happens."
+        ],
+        misconception: "A common mix-up is choosing a bigger version of a try that already failed. Doing more of a failed try will not fix the real problem.",
+        why: "The answers are \"Use cans with lids that lock so raccoons cannot open them.\" and \"Put the cans inside a locked shed each night.\" The camera shows raccoons tipping the cans to get food, so a plan must keep raccoons out. More signs and bigger cans already failed, and coming earlier only cleans up after the mess." },
+      { id: "SK-TSPS-C15", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+        stem: ["(1) The swings on the Lakeview School playground squeaked so loudly that the class next door could hear them.", "(2) First, the custodian painted the swings a bright new color.", "(3) But the squeaking did not stop.", "(4) ______", "(5) So the custodian oiled the metal chains where they hook onto the bar.", "(6) Now the swings are quiet."],
+        prompt: "A student wrote this problem-and-solution paragraph. Which sentence best fills the blank in sentence 4?",
+        choices: [
+          { text: "The paint made the swings look new, but the noise came from the dry chains.", correct: true },
+          { text: "The custodian chose blue paint because it was the class's favorite color." },
+          { text: "The squeaking was loudest at recess, when many children played." },
+          { text: "Some children said that they liked the bright new color very much." }
+        ],
+        clue: "In a problem-and-solution paragraph, each sentence has a job. After a try fails, the writer often explains why, so the solution makes sense.",
+        hints: [
+          "In a problem-and-solution paragraph, each sentence has a job. After a try fails, the writer often explains why, so the solution makes sense.",
+          "Read sentences 3 and 5. What does a reader need to know to understand why the custodian changed the plan?",
+          "The sentence about when the squeaking is loudest stays on the topic, but it does not explain the change of plan. Ask what sentence 5 needs to come just before it."
+        ],
+        how: [
+          "Sentence 3 says the paint did not stop the squeaking. Sentence 5 says the custodian oiled the chains.",
+          "The missing sentence should explain why the first try failed and point to the real problem, the chains.",
+          "The answer is \"The paint made the swings look new, but the noise came from the dry chains.\"",
+          "The other sentences tell about paint colors or when the noise is loudest, but none explains why the custodian turned to the chains."
+        ],
+        misconception: "A common mix-up is choosing a sentence that stays on the topic but does not do the job the paragraph needs.",
+        why: "The answer is \"The paint made the swings look new, but the noise came from the dry chains.\" It explains why painting failed and leads to the solution, oiling the chains. The other sentences are about paint colors or when the noise is loudest, so they do not connect the failed try to the new plan." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new text. `like` lists only the core items
+     each one really practises (same component and task). */
+  similar: [
+    { id: "SK-TSPS-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p6"],
+      like: ["SK-TSPS-P5", "SK-TSPS-C05", "SK-TSPS-C11"],
+      prompt: "Why didn't giving the plants more water help?",
+      choices: [
+        { text: "The plants needed more light, not more water.", correct: true },
+        { text: "The paper cups were too small for the plants." },
+        { text: "Mr. Hale forgot to water them on the weekend." },
+        { text: "The water in the cups was much too cold." }
+      ],
+      clue: "When a try does not work, ask what the try changed and what it did not change.",
+      hints: [
+        "When a try does not work, ask what the try changed and what it did not change.",
+        "Reread paragraphs 1 and 3. Where were the plants, and what does Mr. Hale notice about the stems?",
+        "Nothing in the story says the cups were too small. Test the other choices against what Mr. Hale notices."
+      ],
+      how: [
+        "More water made the soil soggy, but the plants still drooped, so water was not what they needed.",
+        "Mr. Hale shows that the stems lean toward the light, and the back corner is the darkest spot in the room.",
+        "The answer is \"The plants needed more light, not more water.\" On the sunny windowsill, they grew green and tall.",
+        "The story never says the cups were too small, that anyone forgot to water, or that the water was cold."
+      ],
+      misconception: "A common mix-up is picking a reason that sounds possible but is not in the story.",
+      why: "The answer is \"The plants needed more light, not more water.\" The plants sat in the darkest corner, the stems leaned toward the light, and they grew well once they were moved to the window. The other reasons are not in the story." },
+    { id: "SK-TSPS-S02", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p7"],
+      like: ["SK-TSPS-C08", "SK-TSPS-C05"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What was really making Kayla's sandwich soggy?",
+        choices: [
+          { text: "Juice from the tomatoes soaked into the bread.", correct: true },
+          { text: "The plastic wrap was not tight enough." },
+          { text: "The lunch box was not hard enough." },
+          { text: "Kayla waited too long to eat her lunch." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"Tomatoes are juicy, and the juice soaks in all morning.\"", correct: true },
+          { text: "\"But at lunch, it was soggy again.\"" },
+          { text: "\"The bread was still mushy.\"" },
+          { text: "\"Her big brother, Jonah, watched her make lunch the next morning.\"" }
+        ] },
+      clue: "Failed tries help show the real problem. If a try does not work, the thing it changed was not the cause.",
+      hints: [
+        "Failed tries help show the real problem. If a try does not work, the thing it changed was not the cause.",
+        "Look at what Kayla changes in paragraphs 2 and 3. Then read what Jonah notices in paragraph 4.",
+        "Wrapping the sandwich tighter did not help, so loose plastic is not the cause. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "Tighter plastic and a hard box did not stop the soggy bread, so the wrapping was not the trouble.",
+        "Jonah sees the tomato slices sitting right on the bread and says the juice soaks in all morning.",
+        "Part A: Juice from the tomatoes soaked into the bread. Part B: \"Tomatoes are juicy, and the juice soaks in all morning.\"",
+        "The other sentences show the tries failing or tell when Jonah watched, but they do not tell the cause."
+      ],
+      why: "Part A: Juice from the tomatoes soaked into the bread. Part B: \"Tomatoes are juicy, and the juice soaks in all morning.\" Tighter wrap and a hard box did not help. Jonah sees that the tomatoes sit on the bread, and once they are packed apart, the sandwich is not soggy." },
+    { id: "SK-TSPS-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C14", "SK-TSPS-C15"],
+      stem: ["Every time it rained, a puddle formed on the floor just inside the school's front door.", "First, the custodian put down a bigger mat, but the puddle still spread across the floor.", "Next, she mopped every hour, but the puddle came back each time.", "Then she looked up.", "Rain was dripping through a small crack in the ceiling, right above the door."],
+      prompt: "Read the story in the box. Which plan would most likely solve the real problem?",
+      choices: [
+        { text: "Fix the crack in the ceiling above the door.", correct: true },
+        { text: "Put down two big mats instead of one." },
+        { text: "Mop the floor every few minutes." },
+        { text: "Hang a sign that says, \"Watch your step!\"" }
+      ],
+      clue: "A good plan fixes the real problem, not only what the problem causes.",
+      hints: [
+        "A good plan fixes the real problem, not only what the problem causes.",
+        "Read the last sentence. Where is the water coming from?",
+        "A sign could warn people, but it would not stop any water. Test the other plans: would each one stop the puddle from forming?"
+      ],
+      how: [
+        "A bigger mat and more mopping did not stop the puddle. They only dealt with the water after it fell.",
+        "The custodian finds rain dripping through a crack in the ceiling. That is the real problem.",
+        "The answer is \"Fix the crack in the ceiling above the door.\"",
+        "More mats and more mopping repeat tries that failed, and a sign does not stop the water."
+      ],
+      misconception: "A common mix-up is choosing a bigger version of a try that already failed.",
+      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. More mats and more mopping already failed, and a sign does not stop the water." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P4-P6 (core set 1) and Together P1-P3. */
+  addons: {
+    "SK-TSPS-P1": {
+      hints: [
+        "The problem is what is wrong. Look for the word problem, or for something that keeps going wrong.",
+        "Read paragraph 1. What happens every morning?",
+        "Grandma helps Jamal later, in paragraph 5, so that choice is not the problem. Test each choice that is left against paragraph 1."
+      ],
+      how: [
+        "Paragraph 1 starts with the clue word problem.",
+        "Every morning, a long line of ants marches across the floor toward the dog's food bowl.",
+        "The answer is \"Ants keep marching to the dog's food bowl.\"",
+        "Nothing says the dog will not eat or that the floor is slippery, and Grandma does help."
+      ] },
+    "SK-TSPS-P2": {
+      hints: [
+        "A try is something a person does to fix the problem. Find the first try, then find what happens because of it.",
+        "Jamal's first try is in paragraph 3. Look at the sentences around it.",
+        "The sentence about the pan comes from the solution, not from a try that failed. Find the first try, then read on."
+      ],
+      how: [
+        "Jamal's first try is wiping the ants away with a wet paper towel (paragraph 3).",
+        "The next sentence begins with But and says a new line of ants marched right back the next morning.",
+        "The answer is \"But the next morning, a new line of ants marched right back.\"",
+        "The sentences in paragraph 4 go with the second try, and the pan is the solution."
+      ],
+      misconception: "A common mix-up is choosing a sentence about a later try. Match the result to the first try." },
+    "SK-TSPS-P3": {
+      hints: [
+        "The solution is what finally fixes the problem. Clue words like decided and finally point to it.",
+        "Read paragraphs 6 and 7.",
+        "Wiping the ants away was the first try, and the ants came back. Test each other choice: did it keep the ants away for good?"
+      ],
+      how: [
+        "In paragraph 6, Jamal and Grandma decided to set the bowl in a wide, shallow pan with water all around it.",
+        "In paragraph 7, the ants could not get across, and the problem was finally solved.",
+        "The answer is \"a pan of water all around the food bowl.\"",
+        "Moving the bowl and wiping the ants were tries that did not work, and Pepper never chases the ants."
+      ] },
+    "SK-TSPS-P4": {
+      hints: [
+        "Some clue words name a try. Others tell how the try turned out.",
+        "Read paragraph 4. What does Jamal do, and what do the ants do next?",
+        "Finally goes with the end of a story, when something works at last. Ask whether this try works, then read the sentence with each choice that is left."
+      ],
+      how: [
+        "In paragraph 4, Jamal moves the bowl. That is a try, so the first blank is tried.",
+        "The ants find the bowl again, so the try did not work. The word but shows that, so the second blank is but.",
+        "Jamal tried moving the bowl, but the ants found it again. Solved and finally belong at the end, and so or for example would not show that the try failed."
+      ],
+      misconception: "A common mix-up is choosing solved or finally for any try. Those words point to the solution, not to a try that failed." },
+    "SK-TSPS-P5": {
+      hints: [
+        "To find why a try failed, look at what happens right after the try.",
+        "Reread paragraph 4. Read the sentence that comes right after the try.",
+        "Pepper only sits and stares at the ants in paragraph 2, so she does not move the bowl. Test each choice that is left against the sentence right after the try."
+      ],
+      how: [
+        "Jamal's try in paragraph 4 is moving the bowl to the other side of the kitchen.",
+        "The next sentence says the ants followed the smell of the food and found it again.",
+        "The answer is \"The ants followed the smell of the food.\" Moving the bowl did not take away the smell, so the ants kept coming.",
+        "Nothing in the story says Pepper moved the bowl, that it was too heavy, or that Grandma wanted it to stay."
+      ],
+      misconception: "A common mix-up is picking a reason that sounds possible but is not in the story. The reason a try fails is told right after the try." },
+    "SK-TSPS-P6": {
+      hints: [
+        "The word but can do different jobs. In a problem-and-solution story, ask what comes just before it and what comes just after.",
+        "Read the sentence before the one in the box, at the start of paragraph 3. What had Jamal just done?",
+        "This but does not compare two different things, like a hot day and a cold day. Test each choice that is left against what Jamal did just before this sentence."
+      ],
+      how: [
+        "The sentence before says Jamal tried wiping the ants away with a wet paper towel.",
+        "Then But tells us that a new line of ants marched right back the next morning.",
+        "So But shows that the try did not work. The answer is \"A try did not work.\"",
+        "In a compare-and-contrast text, but can show a difference, but here nothing is being compared."
+      ],
+      misconception: "A common mix-up is thinking but always shows a difference. In a problem-and-solution story, but often shows a try that failed." }
+  },
   test: [
     { id: "SK-TSPS-T1", type: "mc", points: 1, dok: 1, passages: ["p2"], std: ["3.T.SS.1.a", "3.T.T.1.b"],
       prompt: "What is the problem in this story?",

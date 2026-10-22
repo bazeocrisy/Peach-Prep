@@ -164,6 +164,20 @@
     </div>
   </section>
 
+  <!-- ===================== STANDARD PAGE: #std/<code> (expansion 2026-10-22) ===================== -->
+  <section class="screen" id="screen-std" aria-labelledby="std-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="std-back"><span aria-hidden="true">&larr;</span> Back</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap std-wrap">
+      <p class="sk-code" id="std-eyebrow"></p>
+      <h1 class="page-title" id="std-title" tabindex="-1"></h1>
+      <div id="std-body" class="std-body"></div>
+    </div>
+  </section>
+
   <!-- ===================== CLUE WORD CHEAT SHEET ===================== -->
   <section class="screen" id="screen-clues" aria-labelledby="clues-title" hidden>
     <header class="bar">
@@ -243,24 +257,34 @@
       <div class="item-pane" id="item-pane" role="tabpanel" aria-labelledby="tab-question">
         <!-- work -->
         <div id="stage-work">
+          <nav class="q-nav" id="q-nav" aria-label="Questions" hidden></nav>
           <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
           <div class="q-track"><span id="q-bar"></span></div>
           <h2 class="q-prompt" id="q-prompt" tabindex="-1"></h2>
           <div id="q-body"></div>
           <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
+          <div id="q-how-steps" class="how-steps" hidden></div>
+          <div id="q-cr" class="cr-compare" hidden></div>
           <div id="q-feedback" class="feedback" hidden></div>
           <p id="q-say" class="sr" role="status" aria-live="polite"></p>
           <div class="q-controls">
             <button type="button" class="btn btn-soft" id="q-prev">Previous question</button>
             <button type="button" class="btn btn-help" id="q-help">Help me</button>
+            <button type="button" class="btn btn-help" id="q-hint" hidden>Give me a hint</button>
+            <button type="button" class="btn btn-soft btn-how" id="q-how" hidden>Show me how <span class="how-warn">(shows the answer)</span></button>
+            <button type="button" class="btn btn-soft" id="q-flag" aria-pressed="false" hidden>Mark to review</button>
             <button type="button" class="btn btn-primary" id="q-check">Check</button>
+            <button type="button" class="btn btn-soft" id="q-similar" hidden>Try a similar question</button>
             <button type="button" class="btn btn-primary" id="q-next">Next</button>
           </div>
+          <p class="note q-status" id="q-status" hidden></p>
+          <div id="q-storage"></div>
         </div>
         <!-- test: confirm -->
         <div id="stage-confirm" class="panel" hidden>
           <h2 class="panel-title" id="confirm-title" tabindex="-1">All done?</h2>
           <p id="confirm-line">You can go back and check your answers, or turn in your test.</p>
+          <div id="confirm-list" class="confirm-list" hidden></div>
           <div class="panel-actions">
             <button type="button" class="btn btn-primary" id="confirm-submit">Turn in my test</button>
             <button type="button" class="btn btn-soft" id="confirm-back">Go back and check</button>
@@ -274,12 +298,14 @@
           </div>
           <div class="skill-rows" id="res-skills"></div>
           <p class="guidance" id="res-guidance"></p>
+          <div id="res-revisit" class="res-revisit" hidden></div>
           <div class="panel-actions">
             <button type="button" class="btn btn-primary" id="res-practice">Practice this set</button>
             <button type="button" class="btn btn-soft" id="res-review-btn">See my answers</button>
-            <button type="button" class="btn btn-soft" id="res-again">Take the test again</button>
+            <button type="button" class="btn btn-soft" id="res-again" aria-describedby="res-again-note">Take the test again</button>
             <button type="button" class="btn btn-soft" id="res-back">Back to the list</button>
           </div>
+          <p class="note res-again-note" id="res-again-note"></p>
           <div id="res-review" class="review" hidden></div>
         </div>
         <!-- finished already: Forward or reload on a finished practice or test (PP-003 D5) -->
@@ -288,6 +314,7 @@
           <p id="again-line"></p>
           <div class="panel-actions">
             <button type="button" class="btn btn-primary" id="again-start">Start again</button>
+            <button type="button" class="btn btn-soft" id="again-next" hidden>Go on to the next set</button>
             <button type="button" class="btn btn-soft" id="again-back">Back to the list</button>
           </div>
         </div>
@@ -295,6 +322,7 @@
         <div id="stage-done" class="panel" hidden>
           <h2 class="panel-title" id="done-title" tabindex="-1">Great work!</h2>
           <p id="done-line"></p>
+          <div id="done-summary" class="done-summary" hidden></div>
           <div class="panel-actions">
             <button type="button" class="btn btn-primary" id="done-test">Try it as a test</button>
             <button type="button" class="btn btn-soft" id="done-back">Back to the list</button>
@@ -365,11 +393,14 @@
   <script src="js/data/catalog.js"></script>
   <script src="js/data/path.js"></script>
   <script src="js/engine/items.js"></script>
+  <script src="js/practice.js"></script>
   <script src="js/engine/player.js"></script>
   <script src="js/skills.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/parents.js"></script>
   <script src="js/path.js"></script>
+  <script src="js/data/std-groups.js"></script>
+  <script src="js/std.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

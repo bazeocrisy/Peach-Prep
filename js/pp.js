@@ -44,6 +44,16 @@
     if (text !== undefined && text !== null) n.textContent = text;
     return n;
   }
+  /* A Georgia code shown as a link to its standard page (#std/<code>, expansion 2026-10-22).
+     Always a sibling of other controls, never inside a button, link or summary. One delegated
+     handler in app.js opens it in place; a new tab, a copied link and a reload use the href. */
+  const stdHash = code => encodeURIComponent(code).replace(/%3A/gi, ":");
+  function stdLink(code, text, cls) {
+    const a = make("a", "std-link" + (cls ? " " + cls : ""), text === undefined ? code : text);
+    a.href = "#std/" + stdHash(code);
+    a.dataset.std = code;
+    return a;
+  }
   function clear(n) { while (n && n.firstChild) n.removeChild(n.firstChild); }
   function el(id) { return document.getElementById(id); }
 
@@ -139,7 +149,7 @@
 
   window.PP = {
     tablist, syncTabs,
-    addSet, sets, byId, addTask, tasks, taskById, make, clear, el, countWord, shuffled,
+    addSet, sets, byId, addTask, tasks, taskById, make, clear, el, countWord, shuffled, stdLink, stdHash,
     parseRef, passageOf, sentenceAt, visibleLabel, isHeading, isCaption, isBox
   };
 })();

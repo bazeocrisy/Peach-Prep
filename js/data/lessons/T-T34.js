@@ -420,9 +420,9 @@ PP.addLesson({
     points: [
       "A line is one row of words in a poem. A stanza is a group of lines, like a paragraph in a story. A space comes between stanzas.",
       "Rhyming words end with the same sound, like cat and hat. Poets often put rhyming words at the ends of lines.",
-      "To find the rhyme pattern, read the last word of each line in one stanza. Find which lines rhyme. Then check that the other stanzas use the same pattern.",
-      "Repetition means using the same word or line again. It makes an idea stand out and gives the poem a beat.",
-      "Each stanza often has its own job. One may set the scene, and the next may show what happens or how things change."
+      "To find the rhyme pattern, read the last word of each line in one stanza. Find which lines rhyme. Then check that the other stanzas use the same pattern. If a line's last word matches no other end word, that line does not rhyme with any line.",
+      "Repetition means using the same word or line again. It makes an idea stand out and gives the poem a beat. Some repeated words copy a sound. When a repeated line changes, ask what has changed in the poem.",
+      "Each stanza often has its own job. One may set the scene, and the next may show what happens or how things change. A new stanza often starts when something new happens. To compare two poems, check the same thing in each one, such as the rhyme pattern or the number of stanzas and lines."
     ],
     words: [
       { term: "line", means: "one row of words in a poem" },
@@ -457,6 +457,17 @@ PP.addLesson({
         "Ask what the repetition adds. Saying it twice, again and again, makes it feel exciting, like someone pointing and calling out."
       ],
       answer: "The repetition makes the reader feel the excitement of spotting the geese, like someone pointing up and calling out to look."
+    },
+    {
+      show: ["Stanza 1:", "The seed sleeps in the cold, dark ground.", "I water it each day.", "I sit and watch, and watch, and wait.", "Grow, little seed, I say.", "Stanza 2:", "A green sprout pokes up through the dirt.", "It reaches for the sun.", "I clap my hands and shout hooray!", "Hello, little sprout! You've begun."],
+      ask: "How is this poem built, and why does the last line change in stanza 2?",
+      steps: [
+        "Count the groups of lines: two stanzas with four lines each. Stanza 1 is about waiting. Stanza 2 starts when something new happens: the sprout comes up.",
+        "Read the end words. Day and say rhyme, and sun and begun rhyme, so lines 2 and 4 rhyme in both stanzas. Ground and wait have no partner.",
+        "Find what repeats. The last line of each stanza talks to the seed, but in stanza 2, Grow changes to Hello.",
+        "Ask why the repeated line changes. The seed has sprouted, so the speaker stops asking it to grow and greets it instead."
+      ],
+      answer: "The poem has two stanzas of four lines, and lines 2 and 4 rhyme. The last line changes from \"Grow, little seed\" to \"Hello, little sprout\" because the seed has finally sprouted."
     }
   ],
   parent: "Read a short rhyming poem or song lyric aloud together. Have your child clap once at the end of each line, call out the rhyming words, and point to any word or line that repeats.",
@@ -485,6 +496,33 @@ PP.addLesson({
     { id: "p4", title: "Snail Climb", byline: "", genre: "Poem",
       lines: [
         ["A snail crawled up our garden wall,", "As slow as slow can be.", "It inched and inched to reach the top,", "Then looked right down at me."]
+      ] },
+    /* B1 (expansion 2026-10-22, author b1c): poems p5-p8 are used only by core set 1 (p5),
+       set 2 (p6, plus p5 for one compare item) and set 3 (p7, p8). Never used by test or testB.
+       NEEDS INDEPENDENT REVIEW. */
+    { id: "p5", title: "Flip!", byline: "", genre: "Poem",
+      lines: [
+        ["Sizzle, sizzle, on the pan,", "Dad flips a pancake—yes, he can!", "It lands back down without a sound,", "A perfect circle, soft and round."],
+        ["Sizzle, sizzle, now it's me.", "I hold my breath and count to three.", "I flip it high—oh no, oh no!", "It lands half on the stove below."],
+        ["We laugh so hard we have to sit.", "The dog gets breakfast. He likes it!"]
+      ] },
+    { id: "p6", title: "Double Dutch at Recess", byline: "", genre: "Poem",
+      lines: [
+        ["The ropes go swinging, round and round.", "They slap, slap, slap against the ground.", "I rock and wait from heel to toe.", "One, two, three... and in I go!"],
+        ["My feet are quick, my braids fly high.", "I leap so high I touch the sky.", "My friends all chant, \"Don't stop! Don't stop!\"", "I hop, hop, hop, and hop, hop, hop."],
+        ["The bell rings out. The ropes fall still.", "I'm out of breath, but what a thrill!", "Tomorrow, when it's time to play,", "We'll turn the ropes again. Hooray!"]
+      ] },
+    { id: "p7", title: "Spin, Spider, Spin", byline: "", genre: "Poem",
+      lines: [
+        ["Out by the shed where the tall weeds grow,", "A spider climbs a stem so thin.", "She lets one silver thread hang low—", "Spin, spider, spin!"],
+        ["She hooks it on the garden gate.", "She circles out, then circles in.", "The sun is hot, the hour is late—", "Spin, spider, spin!"],
+        ["At dawn, the web is strung with dew.", "She sits beside the gate.", "A fly comes buzzing into view—", "Wait, spider, wait."]
+      ] },
+    { id: "p8", title: "Game Night", byline: "", genre: "Poem",
+      lines: [
+        ["At five o'clock, the ballpark's still.", "The seats are bare and gray.", "A worker sweeps the empty rows.", "Tonight the Comets play!"],
+        ["At seven o'clock, the ballpark's loud.", "The seats are packed and bright.", "The hot dogs pass from hand to hand", "Beneath the stadium light."],
+        ["At ten o'clock, the ballpark's calm.", "The crowd has gone away.", "The worker sweeps the rows once more", "And yawns, \"Good game today.\""]
       ] }
   ],
   practice: [
@@ -543,6 +581,489 @@ PP.addLesson({
       clue: "Compare the start of the poem with the end. What time is it in stanza 1? What time is it in stanza 3? Then find the line that shows the change.",
       why: "Part A: It moves from a rainy night to a sunny morning. Part B: \"The morning sun comes peeking out\". Stanza 1 says the rain drums all night, and stanza 3 ends with the morning sun drying the ground." }
   ],
+  /* ---------- B1 (expansion 2026-10-22, author b1c; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen new items in three sets of five (C01-C15, numbered by place in the fifteen).
+     No Try item is referenced: P4 (stanza jobs) and P5 (how the poem changes) are both about the same
+     three stanzas of "Tap, Tap, Tap", so either one's Show me how gives away the other. Both stay in
+     Practice Together (P1-P5), and core starts on new poems.
+     Hints and Show me how for the Together items are in addons below.
+     Author log: docs/expansion-2026-10-22/batches/B1-b1c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { id: "SK-TT4a-C01", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: ["p5"],
+        prompt: "Complete the sentences about the rhymes in \"Flip!\" Choose the best answer for each blank.",
+        text: "In \"Flip!\" the rhyming words come {0}. For example, {1} make one rhyming pair.",
+        slots: [
+          { options: ["in pairs of lines next to each other", "in every other line, like lines 1 and 3", "only in the very last stanza"], answer: 0 },
+          { options: ["sound and round", "me and no", "pan and three"], answer: 0 }
+        ],
+        clue: "To find the rhyme pattern, read the last word of each line out loud and listen for matching endings.",
+        hints: [
+          "To find the rhyme pattern, read the last word of each line out loud and listen for matching endings.",
+          "Say the four end words of stanza 1 out loud, in order. Notice where each matching pair sits.",
+          "Me and no end two lines in stanza 2, but say them aloud: they do not sound alike. Check the other word pairs, then look at where the rhyming lines sit in each stanza."
+        ],
+        how: [
+          "Stanza 1 ends with pan, can, sound and round. Pan and can rhyme, and sound and round rhyme.",
+          "Each rhyming pair is two lines right next to each other. Stanza 2 (me, three, no, below) and stanza 3 (sit, it) work the same way.",
+          "The answers are in pairs of lines next to each other and sound and round.",
+          "Me and no do not sound alike, and neither do pan and three."
+        ],
+        misconception: "A common mix-up is choosing two end words from the same stanza that only look close, like me and no. Say them aloud to check.",
+        why: "The answers are in pairs of lines next to each other and sound and round. In every stanza, lines 1 and 2 rhyme and lines 3 and 4 rhyme, such as pan and can, sound and round, and no and below. Me and no do not rhyme, and neither do pan and three." },
+      { id: "SK-TT4a-C02", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: ["p5"],
+        prompt: "Why does the poet begin stanzas 1 and 2 with the words \"Sizzle, sizzle\"?",
+        choices: [
+          { text: "to help the reader hear the pancake batter cooking in the hot pan", correct: true },
+          { text: "to show that the pancake is burning and the pan is full of smoke" },
+          { text: "to show that Dad and the speaker are singing a cooking song" },
+          { text: "to show that the speaker is afraid of the hot stove" }
+        ],
+        clue: "Repeated words can copy a sound. Say the repeated words out loud and listen.",
+        hints: [
+          "Repeated words can copy a sound. Say the repeated words out loud and listen.",
+          "Look at what is on the stove when each of those stanzas begins. What would be making a noise?",
+          "Nothing in the poem burns or smokes, and Dad's pancake lands just right. Test the other choices against what is happening at the stove."
+        ],
+        how: [
+          "Sizzle is the sound batter makes when it hits a hot pan.",
+          "The word comes at the start of stanzas 1 and 2, when a pancake is cooking each time.",
+          "The answer is \"to help the reader hear the pancake batter cooking in the hot pan.\"",
+          "Nothing burns, nobody sings, and the speaker takes a turn at the stove instead of staying away from it."
+        ],
+        misconception: "A common mix-up is reading repeated sound words as something a character says or sings.",
+        why: "The answer is \"to help the reader hear the pancake batter cooking in the hot pan.\" Sizzle is the sound of batter in a hot pan, and it starts each stanza where a pancake is cooking. Nothing burns, nobody sings, and the speaker is brave enough to try a flip." },
+      { id: "SK-TT4a-C03", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: ["p5"], pick: 2,
+        prompt: "Which TWO sentences about how \"Flip!\" is built are true?",
+        choices: [
+          { text: "The poem has three stanzas.", correct: true },
+          { text: "The last stanza has only two lines.", correct: true },
+          { text: "The poem has ten stanzas." },
+          { text: "Every stanza has four lines." },
+          { text: "The first stanza is the shortest one." }
+        ],
+        clue: "A line is one row of words. A stanza is a group of lines, with a space before the next group.",
+        hints: [
+          "A line is one row of words. A stanza is a group of lines, with a space before the next group.",
+          "First count the groups of lines by finding the spaces. Then count the lines in each group. Choose two.",
+          "The poem has ten lines in all, but a line is not a stanza, so it does not have ten stanzas. Check the other sentences against your counts."
+        ],
+        how: [
+          "There are spaces after stanza 1 and after stanza 2, so the poem has three stanzas.",
+          "Stanzas 1 and 2 have four lines each. Stanza 3 has only two lines.",
+          "The answers are \"The poem has three stanzas\" and \"The last stanza has only two lines.\"",
+          "Ten is the number of lines, not stanzas, and the first stanza is not the shortest."
+        ],
+        misconception: "A common mix-up is counting lines when the question asks about stanzas.",
+        why: "The answers are \"The poem has three stanzas\" and \"The last stanza has only two lines.\" Two spaces split the poem into three groups. The first two have four lines, and the last has two. Ten is the number of lines, not stanzas." },
+      { id: "SK-TT4a-C04", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: ["p5"],
+        prompt: "Which line shows the moment the poem takes a turn, when things stop going as planned? Choose the line in the poem.",
+        targets: ["p5:1:2", "p5:1:4", "p5:2:2", "p5:2:3", "p5:3:1"],
+        answer: ["p5:2:3"], pick: 1,
+        clue: "A poem can take a turn when something changes or goes wrong. Look for the moment the poem stops going the way it started.",
+        hints: [
+          "A poem can take a turn when something changes or goes wrong. Look for the moment the poem stops going the way it started.",
+          "Compare the way stanza 1 ends with the way stanza 3 begins. Something happens in between.",
+          "Holding a breath and counting to three shows the speaker getting ready, before anything goes wrong. Check the lines that are left: which one is the moment of change?"
+        ],
+        how: [
+          "In stanza 1, Dad's flip works, and the pancake lands as a perfect circle.",
+          "In stanza 2, the speaker gets ready and flips. Then come the words \"oh no, oh no!\"",
+          "The answer is \"I flip it high—oh no, oh no!\" That is the moment things stop going as planned.",
+          "Dad's flip and the perfect circle come before the turn, counting to three is getting ready, and the laughing comes after."
+        ],
+        misconception: "A common mix-up is choosing a line from after the turn, like the laughing. The question asks for the moment things change.",
+        why: "The answer is \"I flip it high—oh no, oh no!\" Before this line, everything goes right: Dad's pancake lands perfectly, and the speaker gets ready. With \"oh no, oh no!\" the flip goes wrong, and the poem turns. The laughing in stanza 3 comes after the turn." },
+      { id: "SK-TT4a-C05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: [],
+        stem: ["A class wrote a poem about the town parade. Here is one stanza.", "The band comes marching down Main Street,", "With shiny horns and drums that beat.", "The fire truck rolls by, red and loud,", "And we all clap and stomp our feet."],
+        prompt: "Three lines in this stanza rhyme with each other. Which line ends with a word that does not rhyme with any other line? Choose the line.",
+        options: [
+          "The band comes marching down Main Street,",
+          "With shiny horns and drums that beat.",
+          "The fire truck rolls by, red and loud,",
+          "And we all clap and stomp our feet."
+        ],
+        answer: [2], pick: 1,
+        clue: "Rhyming words end with the same sound. Read only the last word of each line.",
+        hints: [
+          "Rhyming words end with the same sound. Read only the last word of each line.",
+          "Say the four end words out loud, one at a time, and listen for the sound most of them share.",
+          "Street and beat end with the same sound, so neither of those lines is the one. Test the last two lines the same way."
+        ],
+        how: [
+          "The end words are street, beat, loud and feet.",
+          "Street, beat and feet all end with the same sound, so those three lines rhyme.",
+          "Loud does not sound like any of them.",
+          "The answer is \"The fire truck rolls by, red and loud,\""
+        ],
+        misconception: "A common mix-up is looking at the middle of a line. Rhyme patterns are about the last word of each line.",
+        why: "The answer is \"The fire truck rolls by, red and loud,\" because loud does not rhyme with any other end word. Street, beat and feet all end with the same sound, so lines 1, 2 and 4 rhyme." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT4a-C06", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: ["p6"],
+        stem: ["Suppose the last line of stanza 2 were changed to this: \"I hop and hop until I fall.\""],
+        prompt: "Why would this change break the rhyme pattern of \"Double Dutch at Recess\"?",
+        choices: [
+          { text: "Fall does not rhyme with stop, so lines 3 and 4 would no longer rhyme.", correct: true },
+          { text: "Fall does not rhyme with high, and every line must rhyme with line 1." },
+          { text: "Fall does not rhyme with sky, and lines 2 and 4 always rhyme here." },
+          { text: "Fall is a sad word, but every other line in the poem is happy." }
+        ],
+        clue: "To find the rhyme pattern, read the end words of each stanza and see which lines go together.",
+        hints: [
+          "To find the rhyme pattern, read the end words of each stanza and see which lines go together.",
+          "Say the end words of stanzas 1 and 3 out loud. Which lines rhyme in each one? Stanza 2 should match them.",
+          "A rhyme pattern is about sounds, not about whether a word is happy or sad. Use the end words of stanza 1 to test the three choices that are left."
+        ],
+        how: [
+          "Stanza 1 ends with round, ground, toe and go. Lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Stanza 3 works the same way.",
+          "In stanza 2, line 3 ends with stop. Line 4 has to rhyme with it, the way its last word does now.",
+          "The answer is \"Fall does not rhyme with stop, so lines 3 and 4 would no longer rhyme.\"",
+          "The lines rhyme in pairs, so line 4 does not need to rhyme with line 1 or line 2. A rhyme pattern is about sound, not feelings."
+        ],
+        misconception: "A common mix-up is guessing a pattern without checking it in another stanza first.",
+        why: "The answer is \"Fall does not rhyme with stop, so lines 3 and 4 would no longer rhyme.\" In every stanza, lines 1 and 2 rhyme and lines 3 and 4 rhyme. Stop and hop make the pair now, and fall would leave stop with no partner. Lines 2 and 4 do not rhyme in this poem, and a rhyme pattern is about sound, not feelings." },
+      { id: "SK-TT4a-C07", type: "hottext", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: ["p6"],
+        prompt: "Which TWO lines use repeated words to show that the jumping keeps on going? Choose two lines in the poem.",
+        targets: ["p6:1:2", "p6:1:4", "p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:3:1"],
+        answer: ["p6:2:3", "p6:2:4"], pick: 2,
+        clue: "Repetition means using the same word again. Ask what the repeated words in a line are about.",
+        hints: [
+          "Repetition means using the same word again. Ask what the repeated words in a line are about.",
+          "Find each line that repeats a word. Then ask what the repetition is about: the ropes, the counting or the jumping. Choose two.",
+          "\"They slap, slap, slap against the ground\" repeats a word, but it is about the ropes, not the jumper. Check the other lines the same way."
+        ],
+        how: [
+          "Several lines repeat words. \"Slap, slap, slap\" is the sound of the ropes, not the jumper.",
+          "\"Don't stop! Don't stop!\" is the speaker's friends cheering the jumper to keep going.",
+          "\"I hop, hop, hop, and hop, hop, hop\" shows jump after jump after jump.",
+          "The answers are \"My friends all chant, 'Don't stop! Don't stop!'\" and \"I hop, hop, hop, and hop, hop, hop.\""
+        ],
+        misconception: "A common mix-up is choosing any line that repeats a word. Ask what the repetition is about.",
+        why: "The answers are \"My friends all chant, 'Don't stop! Don't stop!'\" and \"I hop, hop, hop, and hop, hop, hop.\" The chant tells the jumper to keep going, and the hops come again and again. \"Slap, slap, slap\" repeats a word, but it is about the ropes. The other lines do not repeat words." },
+      { id: "SK-TT4a-C08", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p6"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How does the poem change in stanza 3?",
+          choices: [
+            { text: "The jumping stops, and the speaker plans to play again.", correct: true },
+            { text: "The speaker finally gets a turn to jump in the ropes." },
+            { text: "The speaker teaches a friend how to jump the ropes." },
+            { text: "The speaker trips on a rope and has to quit the game." }
+          ] },
+        partB: { prompt: "Which line from the poem best supports the answer to Part A?",
+          choices: [
+            { text: "\"We'll turn the ropes again. Hooray!\"", correct: true },
+            { text: "\"One, two, three... and in I go!\"" },
+            { text: "\"My feet are quick, my braids fly high.\"" },
+            { text: "\"The ropes go swinging, round and round.\"" }
+          ] },
+        clue: "To see how a poem changes, compare what happens in the last stanza with what happened before.",
+        hints: [
+          "To see how a poem changes, compare what happens in the last stanza with what happened before.",
+          "Read stanza 3. What does the bell do to the game, and what does the speaker say about tomorrow?",
+          "The speaker jumps in at the end of stanza 1, so stanza 3 is not about getting a first turn. For Part B, the line you choose must match your Part A answer."
+        ],
+        how: [
+          "Before stanza 3, the game is going on.",
+          "In stanza 3, the bell rings and the ropes fall still. The speaker is out of breath but thrilled, and plans to turn the ropes again tomorrow.",
+          "Part A: The jumping stops, and the speaker plans to play again. Part B: \"We'll turn the ropes again. Hooray!\"",
+          "Nobody trips, the first turn comes in stanza 1, and nobody is taught to jump."
+        ],
+        misconception: "A common mix-up is reading \"the ropes fall still\" as someone falling. It means the ropes stop moving.",
+        why: "Part A: The jumping stops, and the speaker plans to play again. Part B: \"We'll turn the ropes again. Hooray!\" The bell ends recess and the ropes stop, but the speaker wants to play again tomorrow. The first turn comes in stanza 1, nobody trips, and nobody is taught to jump." },
+      { id: "SK-TT4a-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: ["p6"],
+        prompt: "Stanza 1 ends with the line \"One, two, three... and in I go!\" Why does the poet end the first stanza there?",
+        choices: [
+          { text: "It ends the waiting part at the very moment the speaker jumps in.", correct: true },
+          { text: "It shows that the speaker gives up and walks away from the ropes." },
+          { text: "It tells the reader that recess is over and the bell has rung." },
+          { text: "It is the only line in the stanza that has a rhyming partner." }
+        ],
+        clue: "Each stanza has its own job. A poet often starts a new stanza when something new happens.",
+        hints: [
+          "Each stanza has its own job. A poet often starts a new stanza when something new happens.",
+          "Read stanza 1 from the top. What is the speaker doing in the lines before \"One, two, three\"?",
+          "The bell does not ring until stanza 3, so this stanza break is not about recess ending. Test the other choices against what the speaker is doing in stanza 1."
+        ],
+        how: [
+          "In stanza 1, the ropes swing, and the speaker rocks and waits from heel to toe.",
+          "On \"One, two, three... and in I go!\" the speaker jumps in. The waiting is over.",
+          "The answer is \"It ends the waiting part at the very moment the speaker jumps in.\" A new stanza starts a new part of the poem.",
+          "The speaker does not give up, the bell rings in stanza 3, and other lines in stanza 1 rhyme, too."
+        ],
+        misconception: "A common mix-up is thinking stanzas break just to fit a rhyme. A new stanza usually starts a new part of what happens.",
+        why: "The answer is \"It ends the waiting part at the very moment the speaker jumps in.\" Stanza 1 is about waiting for the right moment, and it stops just as the speaker jumps in, so a new part can begin. The speaker does not give up, the bell rings in stanza 3, and other lines in stanza 1 rhyme, too." },
+      { id: "SK-TT4a-C10", type: "ms", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p5", "p6"], pick: 2,
+        prompt: "Think about \"Flip!\" and \"Double Dutch at Recess.\" Which TWO sentences about how the poems are built are true?",
+        choices: [
+          { text: "Both poems have three stanzas.", correct: true },
+          { text: "Only \"Flip!\" has a stanza with just two lines.", correct: true },
+          { text: "Only \"Double Dutch at Recess\" has a stanza with just two lines." },
+          { text: "Both poems have exactly twelve lines in all." },
+          { text: "Both poems begin every stanza with the same words." }
+        ],
+        clue: "To compare, check the same thing in each poem. A sentence about both poems must be true for both.",
+        hints: [
+          "To compare, check the same thing in each poem. A sentence about both poems must be true for both.",
+          "Count the groups of lines in each poem. Then count the lines in each group. Choose two.",
+          "\"Double Dutch at Recess\" starts its stanzas with different words, such as \"The ropes\" and \"My feet,\" so the sentence about the same words is not true for both. Test the other sentences against your counts."
+        ],
+        how: [
+          "\"Flip!\" has three stanzas: four lines, four lines and two lines. That is ten lines.",
+          "\"Double Dutch at Recess\" has three stanzas of four lines each. That is twelve lines.",
+          "The answers are \"Both poems have three stanzas\" and \"Only 'Flip!' has a stanza with just two lines.\"",
+          "Only one poem has twelve lines, and neither poem begins every stanza with the same words."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true for only one of the two poems.",
+        why: "The answers are \"Both poems have three stanzas\" and \"Only \"Flip!\" has a stanza with just two lines.\" Flip! has stanzas of four, four and two lines. Double Dutch at Recess has three stanzas of four lines, twelve lines in all. Neither poem begins every stanza with the same words." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT4a-C11", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: ["p7"], pick: 2,
+        prompt: "The line \"Spin, spider, spin!\" ends stanzas 1 and 2. Which TWO things does this repeated line do?",
+        choices: [
+          { text: "It gives the stanzas the same ending, like a chant.", correct: true },
+          { text: "It shows that the spider keeps busy working on her web.", correct: true },
+          { text: "It tells the words that the spider says to the fly." },
+          { text: "It starts each new stanza with the very same words." },
+          { text: "It shows that the spider is lost in the tall weeds." }
+        ],
+        clue: "Repetition makes an idea stand out and adds a beat to a poem. Ask what the repeated line sounds like and what it tells about.",
+        hints: [
+          "Repetition makes an idea stand out and adds a beat to a poem. Ask what the repeated line sounds like and what it tells about.",
+          "Say \"Spin, spider, spin!\" out loud at the end of each of the first two stanzas. Then reread what the spider is doing in those stanzas. Choose two.",
+          "The line comes at the end of each stanza, not the start, so it does not start each stanza. Check the other choices against stanzas 1 and 2."
+        ],
+        how: [
+          "Saying the same short line at the end of stanzas 1 and 2 sounds like a chant or a cheer.",
+          "In those stanzas, the spider lets down a thread, hooks it and circles out and in. The line tells her to keep spinning while she works.",
+          "The answers are \"It gives the stanzas the same ending, like a chant\" and \"It shows that the spider keeps busy working on her web.\"",
+          "The spider never talks in the poem, the line ends the stanzas instead of starting them, and nothing says she is lost."
+        ],
+        misconception: "A common mix-up is thinking a repeated line is something a character says. Here the speaker is cheering the spider on.",
+        why: "The answers are \"It gives the stanzas the same ending, like a chant\" and \"It shows that the spider keeps busy working on her web.\" The same short line closes stanzas 1 and 2 like a chant, while the spider lets down, hooks and circles her thread. The spider never talks, the line ends the stanzas, and she is not lost." },
+      { id: "SK-TT4a-C12", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: ["p7"],
+        prompt: "In stanza 3, the last line changes to \"Wait, spider, wait.\" Why does the poet change the repeated line?",
+        choices: [
+          { text: "The web is done, so the spider stops spinning and waits for a meal.", correct: true },
+          { text: "The spider is tired out and needs to go to sleep for the night." },
+          { text: "The poet needs a word that rhymes with dew at the end of line 1." },
+          { text: "A storm in the night has washed the spider's web away." }
+        ],
+        clue: "When a repeated line changes, ask what has changed in the poem.",
+        hints: [
+          "When a repeated line changes, ask what has changed in the poem.",
+          "Read stanza 3. What does the web look like now, and what comes into view?",
+          "Nothing in stanza 3 tells about a storm; the drops on the web are dew. Ask what the spider is doing now, compared with stanzas 1 and 2."
+        ],
+        how: [
+          "In stanzas 1 and 2, the spider is busy making her web, and the line tells her to spin.",
+          "In stanza 3, the web is finished and wet with dew, and a fly comes buzzing near.",
+          "The answer is \"The web is done, so the spider stops spinning and waits for a meal.\"",
+          "Nothing says she is going to sleep, there is no storm, and wait does not sound like dew, so the change is not about rhyming with dew."
+        ],
+        misconception: "A common mix-up is thinking a repeated line changes only to make a rhyme. Ask what has changed in the poem.",
+        why: "The answer is \"The web is done, so the spider stops spinning and waits for a meal.\" At dawn the web is finished, and a fly buzzes into view. The spider has nothing left to spin, so the poet changes Spin to Wait. She is not going to sleep, there is no storm, and wait does not rhyme with dew." },
+      { id: "SK-TT4a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: ["p7"],
+        prompt: "Which stanza has the same rhyme pattern as the stanzas of \"Spin, Spider, Spin\"?",
+        choices: [
+          { text: "The library is cool and still. / The pages softly turn. / I pick a book up off the sill / With so much more to learn.", correct: true },
+          { text: "I kick the ball with all my might. / It zooms away, a blur of white. / My team jumps up and starts to cheer. / The best goal of the whole school year!" },
+          { text: "The bus comes rumbling down our street. / Its doors swing open wide. / I wave goodbye to Mom and Dad / And climb on up inside." },
+          { text: "The baker's shop smells warm and sweet, / With rolls and buns in rows. / The baker has flour on her nose. / She hands me bread to eat." }
+        ],
+        clue: "To find a rhyme pattern, read the last word of each line and find which lines rhyme. Then look for a stanza where the same lines rhyme.",
+        hints: [
+          "To find a rhyme pattern, read the last word of each line and find which lines rhyme. Then look for a stanza where the same lines rhyme.",
+          "First work out the pattern in one stanza of \"Spin, Spider, Spin\": which line rhymes with line 1, and which rhymes with line 2? Then do the same for each choice.",
+          "In the soccer stanza, might rhymes with white and cheer rhymes with year, so its rhymes come in pairs next to each other. Compare that with the spider poem, then check the other stanzas."
+        ],
+        how: [
+          "In stanza 1 of \"Spin, Spider, Spin,\" grow rhymes with low (lines 1 and 3), and thin rhymes with spin (lines 2 and 4). The other stanzas match.",
+          "In the library stanza, still rhymes with sill (lines 1 and 3), and turn rhymes with learn (lines 2 and 4).",
+          "The answer is the library stanza, which begins \"The library is cool and still.\"",
+          "The soccer stanza rhymes in pairs, the bus stanza rhymes only lines 2 and 4, and the bakery stanza rhymes lines 1 and 4 and lines 2 and 3."
+        ],
+        misconception: "A common mix-up is stopping after lines 2 and 4. Check lines 1 and 3, too, before you decide two patterns match.",
+        why: "The answer is \"The library is cool and still. / The pages softly turn. / I pick a book up off the sill / With so much more to learn.\" Like each stanza of the spider poem, lines 1 and 3 rhyme (still, sill) and lines 2 and 4 rhyme (turn, learn). The soccer stanza rhymes in pairs, the bus stanza rhymes only lines 2 and 4, and the bakery stanza rhymes lines 1 and 4 and lines 2 and 3." },
+      { id: "SK-TT4a-C14", type: "match", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: ["p8"],
+        prompt: "Match each sentence to the stanza of \"Game Night\" that it describes.",
+        cols: ["Stanza 1", "Stanza 2", "Stanza 3"],
+        rows: [
+          { text: "Fans fill the seats and pass snacks.", answer: 1 },
+          { text: "A worker gets the empty seats ready.", answer: 0 },
+          { text: "The fans are gone, and the worker cleans up.", answer: 2 }
+        ],
+        clue: "Each stanza has its own job. Read one stanza at a time and ask what is happening.",
+        hints: [
+          "Each stanza has its own job. Read one stanza at a time and ask what is happening.",
+          "In each stanza, look at the seats and at who is in the ballpark.",
+          "The seats are bare and gray in stanza 1, so the fans are not there yet. Use that to place the sentence about the fans, then place the other two."
+        ],
+        how: [
+          "Stanza 1: the seats are bare, and a worker sweeps the empty rows before the game. A worker gets the empty seats ready.",
+          "Stanza 2: the seats are packed, and hot dogs pass from hand to hand. Fans fill the seats and pass snacks.",
+          "Stanza 3: the crowd has gone away, and the worker sweeps again. The fans are gone, and the worker cleans up."
+        ],
+        misconception: "A common mix-up is mixing up the first and last stanzas, because the worker sweeps in both. Check whether the game is still to come or already over.",
+        why: "Stanza 1: a worker gets the empty seats ready. Stanza 2: fans fill the seats and pass snacks. Stanza 3: the fans are gone, and the worker cleans up. The worker sweeps in stanzas 1 and 3, but only stanza 1 comes before the game." },
+      { id: "SK-TT4a-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: ["p8"],
+        prompt: "How does the poet build the stanzas of \"Game Night\" to help the reader see how the ballpark changes?",
+        choices: [
+          { text: "Each stanza starts with almost the same line, but the time and one word change.", correct: true },
+          { text: "Each stanza starts with the very same line, word for word, all the way through." },
+          { text: "Each stanza rhymes in pairs, so lines 1 and 2 always rhyme with each other." },
+          { text: "Each stanza is longer than the one before, so the night seems to get longer." }
+        ],
+        clue: "Poets can build stanzas to match each other. Compare the same line in every stanza, and look for what stays the same and what changes.",
+        hints: [
+          "Poets can build stanzas to match each other. Compare the same line in every stanza, and look for what stays the same and what changes.",
+          "Read only the first line of each stanza, one after the other.",
+          "Every stanza has four lines, so no stanza is longer than the one before. Compare the first lines closely to test the other choices."
+        ],
+        how: [
+          "The first lines are \"At five o'clock, the ballpark's still,\" \"At seven o'clock, the ballpark's loud\" and \"At ten o'clock, the ballpark's calm.\"",
+          "They are built the same way, but the time and the describing word change: still, loud, calm. That helps the reader compare the ballpark at each time.",
+          "The answer is \"Each stanza starts with almost the same line, but the time and one word change.\"",
+          "The first lines are not exactly the same, lines 1 and 2 do not rhyme (still and gray, for example), and all three stanzas have four lines."
+        ],
+        misconception: "A common mix-up is missing small changes inside a repeated line. Read the matching lines side by side.",
+        why: "The answer is \"Each stanza starts with almost the same line, but the time and one word change.\" The first lines go from five o'clock and still, to seven o'clock and loud, to ten o'clock and calm, so the reader can compare the ballpark at each time. The lines are not word for word the same, lines 1 and 2 do not rhyme, and every stanza has four lines." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short poem. Each `like` lists only
+     the core items it really practises (same component and task). */
+  similar: [
+    { id: "SK-TT4a-S01", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [], pick: 2,
+      like: ["SK-TT4a-C01", "SK-TT4a-C03"],
+      stem: ["Stanza 1:", "Our class has a goldfish named Lou.", "He swims all day in a bowl of blue.", "He blows small bubbles, one, two, three,", "And wiggles his fins at you and me.", "Stanza 2:", "On Friday, guess who gets to take", "Lou home? It's me! I'm wide awake!"],
+      prompt: "Read the poem. Which TWO sentences about how it is built are true?",
+      choices: [
+        { text: "The rhyming lines come in pairs, one right after the other.", correct: true },
+        { text: "The second stanza has only two lines.", correct: true },
+        { text: "Lines 1 and 3 of stanza 1 rhyme with each other." },
+        { text: "The poem has six stanzas in all." },
+        { text: "Every stanza in the poem has four lines." }
+      ],
+      clue: "Count stanzas by the groups of lines. Find rhymes by reading the last word of each line.",
+      hints: [
+        "Count stanzas by the groups of lines. Find rhymes by reading the last word of each line.",
+        "Count the lines in each stanza. Then say the end words of stanza 1 out loud. Choose two.",
+        "Lou and three do not sound alike, so lines 1 and 3 do not rhyme. Check the other sentences against your counts and the end words."
+      ],
+      how: [
+        "Stanza 1 ends with Lou, blue, three and me. Lou and blue rhyme, and three and me rhyme: pairs, one right after the other.",
+        "Stanza 2 has two lines, and take rhymes with awake.",
+        "The answers are \"The rhyming lines come in pairs, one right after the other\" and \"The second stanza has only two lines.\"",
+        "The poem has two stanzas, not six, and only stanza 1 has four lines."
+      ],
+      why: "The answers are \"The rhyming lines come in pairs, one right after the other\" and \"The second stanza has only two lines.\" Lou and blue, three and me, and take and awake are pairs of lines next to each other. The poem has two stanzas, and the second has only two lines." },
+    { id: "SK-TT4a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C02"],
+      stem: ["Thump, thump, thump on the gym floor,", "I dribble to the hoop.", "Thump, thump, thump, I take my shot—", "Swish! It drops right through the loop."],
+      prompt: "Why does the poet repeat the words \"Thump, thump, thump\"?",
+      choices: [
+        { text: "to help the reader hear the ball bouncing as the speaker dribbles", correct: true },
+        { text: "to show that someone is knocking hard on the door of the gym" },
+        { text: "to show that the ball has gone flat and will not bounce at all" },
+        { text: "to show that the speaker's feet are sore from running so much" }
+      ],
+      clue: "Repeated words can copy a sound. Say them out loud and listen.",
+      hints: [
+        "Repeated words can copy a sound. Say them out loud and listen.",
+        "Read the line right after the first \"Thump, thump, thump.\" What is happening in that line?",
+        "Nobody comes to a door in this poem, so the sound is not knocking. Test the other choices against what the speaker does with the ball."
+      ],
+      how: [
+        "Thump is the sound a basketball makes when it hits the floor.",
+        "The speaker dribbles to the hoop, so the ball bounces again and again: thump, thump, thump.",
+        "The answer is \"to help the reader hear the ball bouncing as the speaker dribbles.\"",
+        "There is no door, the ball bounces and goes in, and nothing says the speaker's feet hurt."
+      ],
+      why: "The answer is \"to help the reader hear the ball bouncing as the speaker dribbles.\" Thump is the sound of a ball hitting the gym floor, and the speaker is dribbling to the hoop. There is no door, the ball is not flat, and the poem never says the speaker's feet hurt." },
+    { id: "SK-TT4a-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C12", "SK-TT4a-C08", "SK-TT4a-C04"],
+      stem: ["Stanza 1:", "The kitten naps beside the fire.", "Her nap is long and deep.", "She does not stir. She does not purr.", "Sleep, kitten, sleep.", "Stanza 2:", "A ball of yarn rolls off the chair", "And bounces by her face.", "She opens one eye, then she pounces—", "Chase, kitten, chase!"],
+      prompt: "The last line changes from \"Sleep, kitten, sleep\" to \"Chase, kitten, chase!\" Why does the poet change it?",
+      choices: [
+        { text: "The kitten wakes up and starts to play, so her nap is over.", correct: true },
+        { text: "The kitten is still asleep and is dreaming about the yarn." },
+        { text: "The poet needs a word that rhymes with chair in line 1." },
+        { text: "The kitten is scared of the yarn and runs from the room." }
+      ],
+      clue: "When a repeated line changes, ask what has changed in the poem.",
+      hints: [
+        "When a repeated line changes, ask what has changed in the poem.",
+        "Compare what the kitten does in stanza 1 with what she does in stanza 2.",
+        "Chase does not sound like chair, so the change is not about rhyming with chair. Ask what the kitten is doing when the line changes."
+      ],
+      how: [
+        "In stanza 1, the kitten is fast asleep, and the line says sleep.",
+        "In stanza 2, a ball of yarn bounces by, and she opens one eye and pounces.",
+        "The answer is \"The kitten wakes up and starts to play, so her nap is over.\"",
+        "She is awake, not dreaming, chase does not rhyme with chair, and she pounces on the yarn instead of running away."
+      ],
+      why: "The answer is \"The kitten wakes up and starts to play, so her nap is over.\" She opens one eye and pounces on the yarn, so the line changes from sleep to chase. She is not dreaming or scared, and chase does not rhyme with chair." }
+  ],
+  /* Hints and Show me how for the Practice Together items P1-P5 (no Try item is referenced by core). */
+  addons: {
+    "SK-TT4a-P1": {
+      hints: [
+        "To find the rhyme pattern, read the last word of each line in one stanza and listen for the ones that sound alike.",
+        "Start with stanza 1 and say its four end words out loud. Then check stanza 2 the same way.",
+        "Rain and chin do not sound alike, so lines 1 and 3 do not rhyme. Listen for the pair that does, then check that the other stanzas match."
+      ],
+      how: [
+        "Stanza 1 ends with rain, night, chin and tight. Night and tight rhyme: lines 2 and 4.",
+        "Stanza 2 has yard and hard, and stanza 3 has sound and ground. Lines 2 and 4 again.",
+        "The answer is \"In each stanza, lines 2 and 4 rhyme.\""
+      ] },
+    "SK-TT4a-P2": {
+      hints: [
+        "Rhyming words end with the same sound. Read only the last word of each line.",
+        "Read only stanza 2. Say each line's last word out loud, one at a time. Choose two.",
+        "The first line ends with rain, and no other line in stanza 2 ends with that sound. Listen to the other three end words."
+      ],
+      how: [
+        "Stanza 2's end words are rain, yard, up and hard.",
+        "Yard and hard end with the same sound.",
+        "The answers are \"Puddles growing in the yard.\" and \"And still the rain falls hard.\"",
+        "That matches the rest of the poem: lines 2 and 4 rhyme."
+      ] },
+    "SK-TT4a-P3": {
+      hints: [
+        "Repetition makes an idea stand out. Say the repeated line out loud and listen to it.",
+        "What do the words tap, tap, tap make you think of, and what is falling in every stanza?",
+        "The speaker is snug under a blanket, so the line is not about being afraid. Test the other choices against all three stanzas."
+      ],
+      how: [
+        "Tap, tap, tap sounds like raindrops hitting a roof.",
+        "The line comes back at the start of every stanza, so the reader hears the rain again and again.",
+        "The answer is \"to help the reader hear the steady sound of the rain again and again.\"",
+        "The rain keeps falling in stanza 2, the speaker is cozy, and the garden is drinking, not needing more."
+      ] },
+    "SK-TT4a-P4": {
+      hints: [
+        "Each stanza has its own job. Read one stanza at a time and ask what is happening.",
+        "Look at where the speaker is in stanza 1, what is outside in stanza 2, and what time of day it is in stanza 3.",
+        "The yard and the garden come up in the middle stanza, not the first one. Now decide which of the other two sentences fits the start and which fits the end."
+      ],
+      how: [
+        "Stanza 1: the speaker pulls the blanket up and snuggles in while it rains.",
+        "Stanza 2: puddles grow in the yard, and the garden drinks the rain.",
+        "Stanza 3: the rain gets softer and stops, and the morning sun comes out."
+      ] },
+    "SK-TT4a-P5": {
+      hints: [
+        "To see how a poem changes, compare how it starts with how it ends.",
+        "What time is it in stanza 1, and what time is it in stanza 3?",
+        "The poem starts at night, not on a sunny day. For Part B, the line you choose must match your Part A answer."
+      ],
+      how: [
+        "Stanza 1: rain drums on the roof all night while the speaker is in bed.",
+        "Stanza 3: the rain gets softer, stops, and the morning sun comes out.",
+        "Part A: It moves from a rainy night to a sunny morning. Part B: \"The morning sun comes peeking out\""
+      ] }
+  },
   test: [
     { id: "SK-TT4a-T1", type: "dropdown", points: 2, dok: 1, passages: ["p2"],
       prompt: "Complete the sentence about the rhyme pattern in \"My Kite.\"",

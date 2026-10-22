@@ -305,7 +305,7 @@ The player gets `run.own = !!set.own`. It runs in practice mode, so it is never 
 | **Try a similar question** | `#q-similar` | Shown after Show me how, and also after any finished item when a similar item is available. It opens a **separate** item from `L.similar` in the same player, headed "Extra question (not one of the fifteen)", with the same four controls (Similar is hidden on it). On Next it returns to the core sequence at the following item. It is recorded under the similar map, never over the core item |
 | **Next** | `#q-next` | After the item is solved or its answer shown. The child can also skip; the item stays "Not finished". **Previous** (`#q-prev`) is shown in this mode, so the child can move within a set |
 
-**Choosing a similar item.** The choice is deterministic. Take the first item in `L.similar` whose `like` includes this core id and that has not been attempted. If there is none, take the first one not attempted whose `like` includes any core id in the same set. If there is none, the button is hidden ("No more extra questions for this one").
+**Choosing a similar item.** The choice is deterministic. Take the first item in `L.similar` whose `like` includes this core id and that has not been attempted. If there is none, the button is hidden (lead decision: there is no fallback to another core item's similar question, because an extra question must practise the same component and task).
 
 **At the end of a set**, `practiceDone` (player.js:403-418) has an own-mode branch:
 - It shows the set summary by category.
@@ -518,7 +518,7 @@ These are added to `verification/check-content.js` after the lesson block (:224-
    - Core items must not share an id or stem with test items.
 9. **Similar items.**
    - Every `like` id exists in core.
-   - **Every core item is covered by at least one similar item.**
+   - Every core item is covered by at least one similar item. **Lead decision: an uncovered core item is a warning, not a failure**, and the player hides "Try a similar question" on it.
    - There are three to fifteen similar items.
    - Similar items have no id or stem shared with core.
 10. **Practice Together** on a core lesson has two to five items. Legacy lessons keep 4 to 7.

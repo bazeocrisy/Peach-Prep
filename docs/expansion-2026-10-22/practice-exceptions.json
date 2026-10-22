@@ -1,0 +1,11 @@
+{
+  "note": "Lessons that use a documented performance sequence instead of fifteen selected-response core items (04-content-plan.md §2, assignment §7). A lesson is listed here when it has, or will have, coreException. check-content.js fails a listed lesson that has core. Status: proposed by the content plan; the instructional rationale is in 04-content-plan.md.",
+  "exceptions": [
+    { "lesson": "3.F.F.1.a", "kind": "performance", "rationale": "Automaticity is a timing behaviour that selected response cannot show. Three adult-run quick-read rounds replace the fifteen." },
+    { "lesson": "3.F.F.1.b", "kind": "performance", "rationale": "Oral reading accuracy on unfamiliar text is measured by listening: three dated timed readings." },
+    { "lesson": "3.F.F.1.c", "kind": "performance", "rationale": "Phrasing and expression are heard, not selected: three rehearse-and-perform rounds with the adult checklist." },
+    { "lesson": "3.F.F.1.d", "kind": "observation", "rationale": "A child's own self-correction happens only while reading aloud: three adult-observed rounds plus the fix-up log." },
+    { "lesson": "3.F.H.4.a", "kind": "performance", "rationale": "Cursive letter formation is a motor skill: trace, then write, in three sessions with the adult checklist." },
+    { "lesson": "3.F.H.4.b", "kind": "performance", "rationale": "Spacing in cursive is a motor skill: three dictated-sentence sessions with the adult checklist." }
+  ]
+}

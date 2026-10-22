@@ -28,12 +28,40 @@
     if (!L || !L.code || lessons[keyOf(L)]) return;
     const K = keyOf(L);
     lessons[K] = L;
-    const items = l => (l || []).map(it => Object.assign({ std: [L.code] }, it, { passages: it.passages || [] }));
+    /* expansion 2026-10-22: lesson-level addons ({ <itemId>: { hints, how, mix | misconception } }) are
+       merged into the item copies here, so every set and the similar bank see one item shape.
+       An item's own fields win over its addon. */
+    const AD = L.addons && typeof L.addons === "object" ? L.addons : {};
+    const withAddon = it => {
+      const a = AD[it.id]; if (!a) return it;
+      const out = Object.assign({}, it);
+      if (!out.hints && Array.isArray(a.hints)) out.hints = a.hints;
+      if (!out.how && Array.isArray(a.how)) out.how = a.how;
+      if (!out.misconception && (a.misconception || a.mix)) out.misconception = a.misconception || a.mix;
+      return out;
+    };
+    const items = l => (l || []).map(it => Object.assign({ std: [L.code] }, withAddon(it), { passages: it.passages || [] }));
     const P = L.practice || [];
-    const half = P.length >= 4 ? Math.ceil(P.length / 2) : P.length;
     const defs = [];
-    if (P.length) defs.push(["p", "Practice Together", P.slice(0, half)]);
-    if (P.length > half) defs.push(["y", "Try It Yourself", P.slice(half)]);
+    /* Lead decision (2026-10-22): on a lesson with core, Practice Together is practice minus every item
+       that core references with { ref }, unsplit; the fifteen core items run as three "own" sets.
+       A lesson without core keeps the ceil(n/2) Together / Try split exactly as before. */
+    const C = L.core && Array.isArray(L.core.sets) && L.core.sets.length ? L.core : null;
+    const byPid = {}; P.forEach(it => { byPid[it.id] = it; });
+    const refs = new Set();
+    const coreSets = C ? C.sets.map(s => (s.items || []).map(x => {
+      if (x && x.ref) { refs.add(x.ref); return byPid[x.ref] ? Object.assign({}, byPid[x.ref], x.std ? { std: x.std } : {}) : null; }
+      return x;
+    }).filter(Boolean)) : null;
+    const half = C ? P.length : P.length >= 4 ? Math.ceil(P.length / 2) : P.length;
+    const together = C ? P.filter(it => !refs.has(it.id)) : P.slice(0, half);
+    if (together.length) defs.push(["p", "Practice Together", together]);
+    if (C) coreSets.forEach((list, i) => defs.push([i ? "y" + (i + 1) : "y", "Practice on my own, set " + (i + 1), list]));
+    else if (P.length > half) defs.push(["y", "Try It Yourself", P.slice(half)]);
+    if (C) {
+      core[K] = { rev: String(C.rev || "1"), sets: coreSets.map(list => list.map(it => it.id)) };
+      similarFor[K] = items(L.similar || []).map(it => Object.assign({}, it, { similar: true }));
+    }
     const formB = (L.test || []).length && (L.testB || []).length;   /* PP-004: a second, independent skill check */
     if ((L.test || []).length) defs.push(["t", formB ? "Skill check (form A)" : "Skill check", L.test]);   /* PP-004 U-6.7: one name for the check (step: "Test Your Knowledge") */
     /* Form B ("SK:<key>:tB") is not in the Practice -> Try -> Test chain: the site picks
@@ -49,10 +77,16 @@
     });
     defs.forEach(([k, label, list], i) => {
       const nx = defs[i + 1];
+      const own = /^y\d?$/.test(k) && !!C;
+      let next = nx ? { id: "SK:" + K + ":" + nx[0], mode: nx[0] === "t" ? "test" : /^y/.test(nx[0]) ? "try" : "practice",
+                        label: nx[0] === "t" ? "Take the skill check" : "Try it yourself" } : null;
+      /* core lesson: Together leads to the Try step's set picker; set n leads to set n+1; set 3 to the check */
+      if (C && next && k === "p") next = { id: "SK:" + K + ":y", mode: "try", label: "Practice on my own", picker: true };
+      else if (own && next && nx[0] !== "t") next.label = "Go on to set " + (Number(nx[0].slice(1)) || 1);
       PP.addSet({
         id: "SK:" + K + ":" + k, section: "skill", kind: "skill", code: K, part: k,
-        next: nx ? { id: "SK:" + K + ":" + nx[0], mode: nx[0] === "t" ? "test" : nx[0] === "y" ? "try" : "practice",
-                     label: nx[0] === "t" ? "Take the skill check" : "Try it yourself" } : null,
+        own: own || undefined, setNo: own ? (Number(k.slice(1)) || 1) : undefined,
+        next,
         practiceId: P.length ? "SK:" + K + ":p" : null,
         title: L.title + " · " + label,
         clueWords: L.clues && !L.clues.groups && L.clues.highlight !== false ? L.clues.words : null,
@@ -61,14 +95,32 @@
       });
     });
   }
+  const core = {}, similarFor = {};
   PP.addLesson = addLesson;
   PP.lessons = lessons;
+  PP.core = core; PP.similarFor = similarFor;
+  const coreIds = k => (core[k] ? [].concat(...core[k].sets) : []);
   /* the lesson for a Georgia code: the one whose main code it is, else the first that targets it */
   function lessonFor(code) {
     if (lessons[code]) return code;
     const all = Object.keys(lessons);
     return all.find(k => lessons[k].code === code) || all.find(k => codesOf(lessons[k]).indexOf(code) >= 0) || null;
   }
+
+  /* Every lesson for a Georgia code, in the recommended order (expansion 2026-10-22, #std pages):
+     main lessons first (the standard group's `lessons` order when it lists one, else catalog order),
+     then lessons that also practise the code. Read only. */
+  function lessonsFor(code) {
+    const all = Object.keys(lessons);
+    const catOrder = k => { const i = catKeys.indexOf(k); return i < 0 ? 9999 : i; };
+    const grp = (window.PP_STD_GROUPS || []).find(g => g.lessons && g.lessons[code]);
+    const pref = grp ? grp.lessons[code] : [];
+    const rank = k => { const i = pref.indexOf(k); return i < 0 ? 1000 + catOrder(k) : i; };
+    const main = all.filter(k => lessons[k].code === code).sort((a, b) => rank(a) - rank(b));
+    const also = all.filter(k => lessons[k].code !== code && codesOf(lessons[k]).indexOf(code) >= 0).sort((a, b) => catOrder(a) - catOrder(b));
+    return { main, also };
+  }
+  let catKeys = [];
 
   /* ---------- progress (this device only) ---------- */
   const KEY = "pp.progress.v1";
@@ -214,8 +266,15 @@
     r.answersSeenAt = new Date().toISOString();
     save();
   }
-  /* Test items (either form) are never practice: the player runs them in test mode only. */
-  function recordPractice(k, part) { if (isCheckPart(part)) return; mark(k, part === "y" ? "tried" : "practiced"); }
+  /* Test items (either form) are never practice: the player runs them in test mode only.
+     A core lesson's own sets (y, y2, y3) set `tried` only when all fifteen are finished
+     (pp.practice.v1); they never touch any other field, so practice can never award a pass. */
+  function recordPractice(k, part) {
+    if (isCheckPart(part)) return;
+    if (/^y\d$/.test(part) && !core[k]) return;
+    if (core[k] && /^y\d?$/.test(part)) { if (window.PP_PRACTICE && window.PP_PRACTICE.complete(k, coreIds(k))) mark(k, "tried"); return; }
+    mark(k, part === "y" ? "tried" : "practiced");
+  }
   /* Displayed states (computed, never stored; PP-004). They map onto status() without
      changing it: new -> Not started; started -> Learning (only Learn It / Watch Me) or
      Practicing (any practice, try or check attempt); mastered -> Passed the skill check
@@ -226,7 +285,7 @@
     if (st !== "mastered" && st !== "started") return { id: "new", label: "Not started" };
     const lk = lessons[k] ? k : lessonFor(k);
     const r = prog[lk] || {};
-    if (st === "started") return r.practiced || r.tried || r.tries ? { id: "practicing", label: "Practicing" } : { id: "learning", label: "Learning" };
+    if (st === "started") return r.practiced || r.tried || r.tries || ownStarted(lk) ? { id: "practicing", label: "Practicing" } : { id: "learning", label: "Learning" };
     const att = r.attempts || [], last = att[att.length - 1];
     if (FLAGS.retained && r.retainedAt && !(last && !last.ok)) return { id: "retained", label: "Retained" };
     if (reviewDue(lk)) return { id: "review", label: "Review recommended" };
@@ -259,8 +318,15 @@
     const r = prog[k] || {};
     if (r.mastered) return "mastered";
     if (r.taught || r.learned || r.practiced || r.tried || r.tries) return "started";
+    /* expansion 2026-10-22: work in Practice on my own (pp.practice.v1, read only) also counts as started */
+    if (core[k] && window.PP_PRACTICE && window.PP_PRACTICE.any(k)) return "started";
     return "new";
   }
+  /* The Try step's done tick. On a core lesson it means all fifteen are no longer "Not finished"
+     (pp.practice.v1, read only); a tried left by the old two- or three-item Try still counts
+     for "Practicing" but does not tick the fifteen-item step. */
+  const ownStarted = k => !!core[k] && !!window.PP_PRACTICE && window.PP_PRACTICE.any(k);
+  function tryDone(k, r) { return core[k] ? !!window.PP_PRACTICE && window.PP_PRACTICE.complete(k, coreIds(k)) : !!r.tried; }
   function resetProgress() { prog = Object.create(null); save(); }
 
   /* ---------- labels ---------- */
@@ -284,6 +350,7 @@
 
   /* ---------- the catalog (IXL-style): categories, lettered groups, numbered skills ---------- */
   const CAT = window.PP_CATALOG || [];
+  catKeys = [].concat(...CAT.map(c => [].concat(...c.groups.map(g => g.skills))));
   const ids = {};         /* lesson key -> "D2" */
   const catOf = {};       /* lesson key -> category id */
   (function () {
@@ -338,7 +405,7 @@
   function firstOpenStep(k) {
     if (!lessons[k]) return null;
     const r = prog[k] || {};
-    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": r.tried, test: r.mastered };
+    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": tryDone(k, r), test: r.mastered };
     const S = stepsFor(lessons[k]);
     const s = S.find(x => !done[x[0]]) || S[S.length - 1];
     return { id: s[0], name: s[1], n: S.indexOf(s) + 1, of: S.length };
@@ -372,8 +439,19 @@
   function buildList() {
     buildCards();
     const host = el("skill-list"); clear(host);
-    const q = query.trim().toLowerCase();
+    /* GaDOE prints band codes ("3-5.T.T.1"); the grade 3 form ("3.T.T.1") finds the same lessons */
+    const q = query.trim().toLowerCase().replace(/^3-5\./, "3.");
     let shown = 0, shownTasks = 0;
+    /* expansion 2026-10-22: a Georgia code (leaf, parent, band form, GUM level or a Practices code)
+       gets a card with a link to its standard page above the lessons */
+    const hit = query.trim() && window.PP_STD ? window.PP_STD.resolve(query.trim()) : null;
+    if (hit) {
+      const card = make("div", "std-hit");
+      card.appendChild(make("p", "std-hit-eyebrow", "Georgia standard"));
+      card.appendChild(make("p", "std-hit-title", window.PP_STD.label(hit.code) + " · " + window.PP_STD.name(hit.code)));
+      card.appendChild(PP.stdLink(hit.code, "Open the standard page for " + window.PP_STD.label(hit.code), "btn btn-soft std-hit-link"));
+      host.appendChild(card);
+    }
     CAT.forEach(c => {
       const sec = make("section", "cat-sec cat-" + c.id);
       sec.id = "cat-" + c.id;
@@ -408,10 +486,9 @@
           const body = make("span", "sl-body");
           const t = make("span", "sl-title", entryTitle(k));
           body.appendChild(t);
-          const meta = make("span", "sl-meta");
-          entryCodes(k).forEach(x => meta.appendChild(make("span", "sl-code", shortCode(x))));
-          if (entryOnTest(k)) meta.appendChild(make("span", "sl-test", "On test"));
-          body.appendChild(meta);
+          /* expansion 2026-10-22: the codes are links to their standard pages, so they sit beside the
+             row button (span.sl-codes below), never inside it. The button keeps its data-code and aria-label. */
+          if (entryOnTest(k)) { const meta = make("span", "sl-meta"); meta.appendChild(make("span", "sl-test", "On test")); body.appendChild(meta); }
           b.appendChild(body);
           const due = st === "mastered" && !isTask(k) && reviewDue(k);
           const byG = st === "mastered" && !isTask(k) && passKind(k) === "grownup";
@@ -427,7 +504,15 @@
           b.setAttribute("aria-label", ids[k] + ". " + entryTitle(k) + ". Georgia " + entryCodes(k).map(shortCode).join(", ") + ". " +
             (st === "mastered" ? passText + "." + (kept ? " Retained." : due ? " Review suggested." : "") : st === "started" ? "Started." : ""));
           b.addEventListener("click", () => openEntry(k));
-          li.appendChild(b); ol.appendChild(li);
+          li.className = "sl-row";
+          li.appendChild(b);
+          const cs = entryCodes(k);
+          if (cs.length) {
+            const codesEl = make("span", "sl-codes");
+            cs.forEach(x => codesEl.appendChild(PP.stdLink(x, shortCode(x), "sl-code")));
+            li.appendChild(codesEl);
+          }
+          ol.appendChild(li);
           any++; shown++; if (isTask(k)) shownTasks++;
         });
         grp.appendChild(ol);
@@ -438,7 +523,8 @@
       host.appendChild(sec);
     });
     el("skill-empty").hidden = shown > 0;
-    if (!shown) el("skill-empty-text").textContent = q && filter !== "all" ? "No lessons match “" + query.trim() + "” with this filter. Choose All, or try another word."
+    if (!shown && hit) el("skill-empty-text").textContent = "No lesson in the list matches “" + query.trim() + "”. The standard page above shows what it asks and where it is practiced.";
+    else if (!shown) el("skill-empty-text").textContent = q && filter !== "all" ? "No lessons match “" + query.trim() + "” with this filter. Choose All, or try another word."
       : q ? "No lessons match “" + query.trim() + "”. Try a shorter word, a lesson number like D3, or a Georgia code."
       : filter === "todo" ? "Every lesson here has a passed skill check or a grown-up check on this device. Choose All to see them."
       : "No lessons match. Choose All to see every lesson.";
@@ -607,10 +693,12 @@
         b.appendChild(make("span", "sl-num", String(i + 1)));
         const body = make("span", "sl-body");
         body.appendChild(make("span", "sl-title", titleOf(s)));
-        const meta = make("span", "sl-meta"); meta.appendChild(make("span", "sl-code", s.display)); body.appendChild(meta);
         b.appendChild(body);
         b.addEventListener("click", () => open(s.code));
-        li.appendChild(b); ol.appendChild(li);
+        li.className = "sl-row";
+        li.appendChild(b);
+        const codesEl = make("span", "sl-codes"); codesEl.appendChild(PP.stdLink(s.code, s.display, "sl-code")); li.appendChild(codesEl);
+        ol.appendChild(li);
       });
       grp.appendChild(ol);
       host.appendChild(grp);
@@ -679,8 +767,8 @@
     const tags = el("sk-tags"); clear(tags);
     codes.forEach(c => {
       const x = byCode[c]; if (!x) return;
-      const chip = make("span", "sk-chip"); chip.appendChild(make("span", "sk-chip-code", codeLabel(x)));
-      chip.title = x.plain; tags.appendChild(chip);
+      const chip = PP.stdLink(c, "", "sk-chip"); chip.appendChild(make("span", "sk-chip-code", codeLabel(x)));
+      chip.title = x.plain; chip.setAttribute("aria-label", "Georgia standard " + codeLabel(x) + ": open its standard page"); tags.appendChild(chip);
     });
     const anyTest = codes.some(c => onTest(byCode[c]));
     const t0 = anyTest ? TESTED.both : (TESTED[s.tested] || ["", ""]);
@@ -692,8 +780,9 @@
       const x = byCode[c]; if (!x) return;
       /* PP-004: show Georgia's exact wording (x.official, from the May 2023 Grades 3-5 standards) with its page */
       const p = make("p", "sk-off-text");
-      if (x.official) { p.appendChild(make("strong", "", codeLabel(x) + " (Georgia's official wording" + (x.page ? ", standards p. " + x.page : "") + "): ")); p.appendChild(document.createTextNode("\u201C" + x.official + "\u201D")); }
-      else { p.appendChild(make("strong", "", codeLabel(x) + " (paraphrased): ")); p.appendChild(document.createTextNode(x.text)); }
+      const lead = make("strong", ""); lead.appendChild(PP.stdLink(c, codeLabel(x)));
+      if (x.official) { lead.appendChild(document.createTextNode(" (Georgia's official wording" + (x.page ? ", standards p. " + x.page : "") + "): ")); p.appendChild(lead); p.appendChild(document.createTextNode("\u201C" + x.official + "\u201D")); }
+      else { lead.appendChild(document.createTextNode(" (paraphrased): ")); p.appendChild(lead); p.appendChild(document.createTextNode(x.text)); }
       off.appendChild(p);
     });
     off.appendChild(make("p", "note", "Georgia's K-12 English Language Arts Standards, grades 3-5" + (s.gum ? ", Grammar, Usage and Mechanics chart (grade 3 row: " + ({ M: "Master", R: "Reinforce", I: "Introduce", C: "Continue" })[s.level] + ")" : "") + "."));
@@ -715,10 +804,15 @@
     if (!(opts && opts.keepScroll)) window.scrollTo(0, 0);
     window.PP_APP.show("skill");
     setHashFor();
+    /* opened from a standard page: Back returns there (expansion 2026-10-22) */
+    const from = fromStd();
+    if (from) el("skill-back").textContent = "\u2190 Standard " + decodeStd(from);
     window.PP_APP.track();
     el("sk-title").focus();
     return true;
   }
+  function fromStd() { const st = history.state; return st && typeof st.ppFrom === "string" && /^#std\//.test(st.ppFrom) ? st.ppFrom : null; }
+  function decodeStd(h) { let c = h.slice(5); try { c = decodeURIComponent(c); } catch (e) { /* keep */ } const x = byCode[c]; return x ? codeLabel(x) : c; }
   function setHashFor(replace) { window.PP_APP.setHash("#skill/" + encodeURIComponent(cur) + (step !== "teach" ? "/" + step : ""), replace); }
 
   function go(which) {
@@ -744,7 +838,7 @@
     const host = el("sk-steps"); clear(host);
     const L = lessons[cur];
     const r = prog[cur] || {};
-    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": r.tried, test: r.mastered };
+    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": tryDone(cur, r), test: r.mastered };
     const S = stepsFor(L);
     host.style.setProperty("--steps", S.length);
     S.forEach(([k, name], i) => {
@@ -907,8 +1001,77 @@
     host.appendChild(nextBtn());
   }
 
+  /* expansion 2026-10-22: the Try step of a core lesson is a set picker for fifteen questions in three
+     sets of five (01-architecture.md §2.2). Rendering reads pp.practice.v1 and writes nothing. */
+  const SET_IDS = K => ["y", "y2", "y3"].map(p => "SK:" + K + ":" + p).filter(id => PP.byId[id]);
+  function statusList(k, ids, cls) {
+    const PR = window.PP_PRACTICE;
+    const ol = make("ol", "own-dots" + (cls ? " " + cls : ""));
+    ids.forEach((id, i) => {
+      const st = PR.status(k, id);
+      const li = make("li", "own-dot is-" + st);
+      li.appendChild(make("span", "own-dot-mark")).setAttribute("aria-hidden", "true");
+      li.appendChild(make("span", "own-dot-word", PR.SHORT[st]));
+      li.setAttribute("aria-label", "Question " + (i + 1) + ": " + PR.STATUS[st]);
+      ol.appendChild(li);
+    });
+    return ol;
+  }
+  function ownSummary(k) {
+    const PR = window.PP_PRACTICE, ids = coreIds(k), c = PR.counts(k, ids), sim = PR.similarCounts(k);
+    const box = make("div", "own-summary");
+    box.appendChild(make("h3", "own-sum-h", "All fifteen so far"));
+    const dl = make("dl", "own-sum-list");
+    [["first", c.first], ["retry", c.retry], ["hints", c.hints], ["shown", c.shown], ["cr", c.cr], ["none", c.none]].forEach(([id, n]) => {
+      if (id === "cr" && !n) return;
+      dl.appendChild(make("dt", "is-" + id, PR.STATUS[id])); dl.appendChild(make("dd", "", String(n)));
+    });
+    box.appendChild(dl);
+    box.appendChild(make("p", "note", sim.tried ? "Extra questions tried: " + words(sim.tried) + ", with " + words(sim.right) + " right without the answer shown. They are not part of the fifteen." : "Extra questions are not part of the fifteen."));
+    box.appendChild(make("p", "note", "Practice is never scored and never counts as passing. The skill check is separate."));
+    return box;
+  }
+  function renderOwn(host, L) {
+    const K = keyOf(L), PR = window.PP_PRACTICE, C = core[K];
+    host.appendChild(make("h2", "panel-h", "Try It Yourself: practice on my own"));
+    const sets = SET_IDS(K).map(id => PP.byId[id]);
+    const states = sets.map((s, i) => PR.setState(K, C.sets[i], i + 1));
+    const intro = make("div", "go-card own-intro");
+    intro.appendChild(make("p", "", "Fifteen questions in three sets of five. Do one set at a time." + (PR.canSave() ? " You can stop after any set and come back." : "")));
+    intro.appendChild(make("p", "go-note", "Each question has Check my answer, Give me a hint, and Show me how. Show me how shows the answer, so that question then counts as answer shown, not as right on your own."));
+    intro.appendChild(PR.notice());
+    const rec0 = PR.lesson(K);
+    if (rec0 && rec0.rev && rec0.rev !== C.rev) intro.appendChild(make("p", "go-note own-rev", "This practice was updated. Earlier answers are kept, but questions that changed start fresh."));
+    const firstOpen = states.findIndex(s => !s.done);
+    const all = firstOpen < 0;
+    const go = make("button", "btn btn-primary", all ? "Look back at set 1" : (states[firstOpen].started ? "Continue set " : "Start set ") + (firstOpen + 1));
+    go.type = "button"; go.id = "sk-start-try";
+    go.addEventListener("click", () => window.PP_PLAYER.start(sets[all ? 0 : firstOpen].id, "try"));
+    intro.appendChild(go);
+    if (all) intro.appendChild(make("p", "go-done", "✓ All fifteen finished. Next: the skill check."));
+    host.appendChild(intro);
+    const grid = make("ol", "own-sets");
+    sets.forEach((set, i) => {
+      const st = states[i];
+      const li = make("li", "own-set" + (st.done ? " is-done" : st.started ? " is-started" : ""));
+      li.appendChild(make("h3", "own-set-h", "Set " + (i + 1)));
+      li.appendChild(make("p", "own-set-state", st.done ? "Finished" : st.started ? "Started: question " + (st.pos + 1) + " of " + C.sets[i].length : "Not started"));
+      li.appendChild(statusList(K, C.sets[i]));
+      const b = make("button", "btn btn-soft own-set-btn", (st.done ? "Look back at set " : st.started ? "Continue set " : "Start set ") + (i + 1));
+      b.type = "button"; b.id = "sk-try-set-" + (i + 1);
+      b.addEventListener("click", () => window.PP_PLAYER.start(set.id, "try"));
+      li.appendChild(b);
+      grid.appendChild(li);
+    });
+    host.appendChild(grid);
+    host.appendChild(ownSummary(K));
+    if (L.write) renderWrite(host, L);
+    if (hasSpeak(L)) renderSpeak(host, L);
+    host.appendChild(nextBtn());
+  }
   function renderTry(host, L) {
     const K = keyOf(L);
+    if (core[K]) return renderOwn(host, L);
     const set = PP.byId["SK:" + K + ":y"];
     const count = set ? set.items.length : 0;
     const countText = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][count] || String(count);
@@ -1445,7 +1608,7 @@
       document.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
       buildList();
     }));
-    el("skill-back").addEventListener("click", () => window.PP_APP.goHome());
+    el("skill-back").addEventListener("click", () => { const f = fromStd(); if (f && window.PP_APP.stepBackTo(f)) return; window.PP_APP.goHome(); });
     el("skill-empty-clear").addEventListener("click", () => {
       inp.value = ""; query = ""; filter = "all";
       document.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", x.dataset.filter === "all" ? "true" : "false"));
@@ -1454,7 +1617,29 @@
     PP.tablist(el("sk-steps"));
   }
 
+  /* A read-only summary of one lesson for the standard pages (never writes). */
+  function info(k) {
+    const L = lessons[k]; if (!L) return null;
+    const r = prog[k] || {};
+    const t = PP.byId["SK:" + k + ":t"], tB = PP.byId["SK:" + k + ":tB"], p = PP.byId["SK:" + k + ":p"], y = PP.byId["SK:" + k + ":y"];
+    const max = t ? t.items.reduce((a, it) => a + it.points, 0) : 0;
+    const att = Array.isArray(r.attempts) ? r.attempts : [], last = att[att.length - 1];
+    return {
+      key: k, title: L.title, id: ids[k] || null, codes: codesOf(L).slice(), big: (L.teach || {}).big || "",
+      steps: stepsFor(L).map(x => ({ id: x[0], name: x[1] })),
+      together: p ? p.items.length : 0,
+      core: core[k] ? { rev: core[k].rev, sets: core[k].sets.map(a => a.slice()) } : null,
+      tryCount: !core[k] && y ? y.items.length : 0,
+      check: t ? { n: t.items.length, max, pass: passMark(max), forms: tB ? 2 : 1, next: nextForm(k) } : null,
+      write: !!L.write, speak: hasSpeak(L), activity: L.activity ? L.activity.kind : null, grownCheck: !!L.check,
+      state: displayState(k), open: firstOpenStep(k),
+      last: last && typeof last === "object" ? { d: last.d, got: last.got, max: last.max, ok: !!last.ok, form: last.form || "A" } : null
+    };
+  }
+
   window.PP_SKILLS = {
+    lessonsFor, info, codeLabel, shortCode, niceDate, coreIds, isCore: k => !!core[k], onTest: c => onTest(byCode[c]),
+    testedText: s => (TESTED[s.tested] || ["", ""]), stepBack: () => fromStd(),
     init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
     answersSeen, reviewDue, passKind, passLabel,
     nextForm, checkSetId, hasFormB, displayState,   /* PP-004 */

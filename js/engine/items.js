@@ -522,6 +522,31 @@
     answerText: it => it.rows.map(row => row.text + " → " + it.cols[row.answer]).join(";  ")
   };
 
+  /* ===== cr: a constructed response (expansion 2026-10-22, 01-architecture.md §2.2.2) =====
+     Only in core and similar (Practice on my own); check-content fails it in a test. It is NEVER
+     scored: score() is 0 of 0, and "Compare with the sample" shows one good answer and the criteria.
+     { id, type:"cr", prompt, stem?, rows, sample, criteria:[2-5], hints:[3], how:[...], why } */
+  T.cr = {
+    blank: () => ({ text: "" }),
+    render(ctx) {
+      const { item, host } = ctx;
+      const id = "cr-" + String(item.id).replace(/[^a-z0-9]/gi, "-");
+      const lab = make("label", "cr-label", "Write your answer"); lab.htmlFor = id;
+      const ta = make("textarea", "write-box cr-box"); ta.id = id; ta.rows = item.rows || 4;
+      ta.value = ctx.resp.text || ""; ta.disabled = !!ctx.locked;
+      ta.addEventListener("input", () => { ctx.resp.text = ta.value; ctx.onChange(); });
+      host.appendChild(lab); host.appendChild(ta);
+      ctx.ui.box = ta;
+    },
+    answered: (it, r) => typeof r.text === "string" && r.text.trim().length > 0,
+    score: () => ({ points: 0, max: 0 }),
+    narrow: () => "",
+    outline() {},
+    answerText: it => it.sample,
+    describe: (it, r) => r.text && r.text.trim() ? r.text.trim() : "No answer",
+    narrowText: () => ""
+  };
+
   /* ---------- review helpers: describe a response, and a text-only
      narrowing step for "Show me how" after a test ---------- */
   T.mc.describe = (it, r) => r.v === null ? "No answer" : it.choices[r.v].text;

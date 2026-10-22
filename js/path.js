@@ -195,7 +195,9 @@
     if (step === "practice") return kind === "fluency" ? "Grown-up: listen to the one-minute read-aloud and tap any missed words."
       : kind === "trace" ? "Grown-up: print the tracing sheet and watch the handwriting."
       : "Grown-up: sit side by side. Help me gives hints. Practice questions start again from the first one.";
-    if (step === "try") return "Your child answers alone. Help me opens after one wrong try. Questions start again from the first one.";
+    if (step === "try") return window.PP_SKILLS.isCore(k)
+      ? "Your child answers alone, in three sets of five. Hints and Show me how are there when needed. " + (window.PP_PRACTICE && window.PP_PRACTICE.canSave() ? "You can stop after a set; the place is kept on this device." : "Saving is unavailable, so the place is kept only while the page stays open.")
+      : "Your child answers alone. Help me opens after one wrong try. Questions start again from the first one.";
     if (step === "test") return kind ? "Grown-up: do this step with your child, then tick the Check." : "Your child answers alone, with no hints.";
     return "Grown-up: read the short lesson together.";
   }
@@ -298,6 +300,14 @@
           const b = button(title(key), () => openActivity(key)); b.dataset.pathKey = key;
           if (key === k) b.setAttribute("aria-current", "step");
           li.appendChild(b);
+          /* expansion 2026-10-22: the lesson's Georgia codes, as links beside (never inside) its button */
+          if (!key.startsWith("task:")) {
+            const L = PP.lessons[key], cs = (L.codes || [L.code]);
+            const row = make("p", "path-codes");
+            row.appendChild(make("span", "sr", "Georgia standards: "));
+            cs.forEach(c => row.appendChild(PP.stdLink(c, window.PP_SKILLS.shortCode(c), "sl-code")));
+            li.appendChild(row);
+          }
           li.appendChild(make("p", "note", resultLabel(key)));
           const id = "path-finished-" + all.indexOf(key);
           li.appendChild(completionControl(key, "Activities finished: " + title(key), "finished", id, () => {

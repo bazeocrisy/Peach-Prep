@@ -23,9 +23,19 @@
     const hr = make("tr"); headers.forEach(h => hr.appendChild(make("th", "", h)));
     const th = make("thead"); th.appendChild(hr); t.appendChild(th);
     const tb = make("tbody");
-    rows.forEach(r => { const tr = make("tr"); r.forEach((c, i) => { const td = make("td", "", c); td.dataset.label = headers[i]; tr.appendChild(td); }); tb.appendChild(tr); });
+    rows.forEach(r => { const tr = make("tr"); r.forEach((c, i) => { const td = make("td"); if (c && c.nodeType) td.appendChild(c); else td.textContent = c; td.dataset.label = headers[i]; tr.appendChild(td); }); tb.appendChild(tr); });
     t.appendChild(tb);
     const w = make("div", "table-wrap"); w.appendChild(t); return w;
+  }
+  /* expansion 2026-10-22: each parent code in a claims cell ("3.T.C.1 (a, b)") links to its standard page */
+  function codeCell(text) {
+    const span = make("span");
+    String(text).split(/(3\.[TL]\.[A-Z]+\.\d)/).forEach((part, i) => {
+      if (!part) return;
+      if (i % 2 && window.PP_STD && window.PP_STD.resolve(part)) span.appendChild(PP.stdLink(part));
+      else span.appendChild(document.createTextNode(part));
+    });
+    return span;
   }
   function h(level, text) { return make("h" + level, "ph" + level, text); }
   function p(text, cls) { return make("p", cls || "", text); }
@@ -49,7 +59,7 @@
 
     host.appendChild(h(2, "What each part covers"));
     host.appendChild(table(["Area", "What it means", "Reading part (codes)", "Writing part (codes)"],
-      S.claims.map(c => [c.claim, c.what, c.it, c.ct])));
+      S.claims.map(c => [c.claim, c.what, codeCell(c.it), codeCell(c.ct)])));
     host.appendChild(p(S.claimPoints, "note"));
 
     host.appendChild(h(2, "Kinds of thinking"));
@@ -125,7 +135,8 @@
     const all = window.PP_STANDARDS.filter(s =>
       (filt.domain === "all" || s.strand === filt.domain) &&
       (!filt.tested || ["reading", "writing", "both"].indexOf(s.tested) >= 0) &&
-      (!filt.q || (s.code + " " + s.text + " " + (s.plain || "") + " " + (s.gum || "")).toLowerCase().indexOf(filt.q) >= 0));
+      (!filt.q || (s.code + " " + s.display + " " + s.group + " " + s.text + " " + (s.plain || "") + " " + (s.gum || "")).toLowerCase().indexOf(filt.q.replace(/^3-5\./, "3.")) >= 0
+        || (s.display + " " + s.group).toLowerCase().indexOf(filt.q) >= 0));
     el("std-count").textContent = all.length + " of " + window.PP_STANDARDS.length + " standards shown";
     let group = null, box = null;
     all.forEach(s => {
@@ -165,16 +176,15 @@
       prac.appendChild(make("p", "std-ald-head", "Where to practice"));
       const pu = make("ul", "plist");
       {
-        /* the skill page for this standard: a lesson (its real steps), a habit page, or neither */
+        /* expansion 2026-10-22: the summary is the disclosure control, so the code's link is the first
+           line of the opened body (a link inside a summary would be nested). The standard page lists
+           every lesson for the code in the recommended order, so it replaces the single-lesson button. */
         const li = make("li");
-        const has = window.PP_SKILLS && window.PP_SKILLS.lessonFor ? window.PP_SKILLS.lessonFor(s.code) : (PP.lessons && PP.lessons[s.code] ? s.code : null);
-        const steps = has && window.PP_SKILLS && window.PP_SKILLS.stepNames ? window.PP_SKILLS.stepNames(has) : [];
-        const hab = !has && (window.PP_HABITS || {})[s.code];
-        const b = make("button", "linkish", has ? "Peach Prep skill lesson" + (steps.length ? ": " + steps.join(", ") : "")
-          : hab ? "Peach Prep habit page: what it looks like and ideas to try at home"
-          : "Peach Prep skill page for " + (s.gum ? "this grammar skill" : s.display));
-        b.type = "button"; b.addEventListener("click", () => window.PP_SKILLS.open(s.code));
-        li.appendChild(b); pu.appendChild(li);
+        const ls = window.PP_SKILLS.lessonsFor(s.code);
+        const n = ls.main.length;
+        li.appendChild(PP.stdLink(s.code, "Open the standard page for " + (s.gum ? "this grammar chart row" : s.display)));
+        li.appendChild(document.createTextNode(n > 1 ? " (" + PP.countWord(n) + " lessons, in the suggested order)" : n === 1 ? " (its lesson, practice and check)" : (window.PP_HABITS || {})[s.code] ? " (home ideas; a grown-up observes it)" : ""));
+        pu.appendChild(li);
       }
       setsFor(s.code).forEach(x => {
         const li = make("li");

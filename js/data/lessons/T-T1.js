@@ -6,10 +6,10 @@ PP.addLesson({
     big: "Writers show me what characters are like, where a story happens and what is going on through what characters say, what they do, and the describing words.",
     points: [
       "Dialogue is the words a character says. It goes inside quotation marks. What a character says can show how they feel or what they want.",
-      "Actions are what characters do. An action can show how a character feels without the writer telling you.",
-      "Description is the describing words that help you picture a place or a person: how it looks, sounds or feels. Description often shows the setting.",
-      "Dialogue and actions also move the plot. They can start a problem, change it or help solve it.",
-      "When you read a detail, ask: What does this show me? Is it about a character, the setting or what happens next?"
+      "Actions are what characters do. An action can show how a character feels without the writer telling you. \"He slammed the door\" shows that he is angry. \"He was angry\" only tells it.",
+      "Description is the describing words that help you picture a place or a person: how it looks, sounds or feels. Description often shows the setting, and a describing detail can tell you something about a character, too.",
+      "Dialogue and actions also move the plot. They can start a problem, change it or help solve it. Ask: What is different after this happens?",
+      "When you read a detail, ask: What does this show me? Is it about a character, the setting or what happens next? Then ask why the author put it there. A detail can be a clue that moves the plot. You can compare two stories the same way: look at how each one begins, how its characters talk and act, and how it ends."
     ],
     words: [
       { term: "dialogue", means: "the words characters say out loud" },
@@ -86,6 +86,28 @@ PP.addLesson({
         ["Imani heard a bell jingle behind the barn, and then another.", "One by one, three goats trotted around the corner.", "They bleated and pushed their noses toward the bucket."],
         ["Imani laughed and latched the gate tight.", "\"Next time,\" she said, \"I'm checking that gate first.\""],
         ["By then, the sun had burned away the fog, and the whole farm sparkled."]
+      ] },
+    /* Expansion 2026-10-22 (batch B1, author b1a): p4 is used only by core set 2 and one set 3
+       compare item (C14); p5 only by core set 3. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "The Note in the Book", genre: "Literary text",
+      paragraphs: [
+        ["The school library was Nadia's favorite room.", "Sunlight poured through the wide windows and made bright squares on the carpet.", "The only sound was the soft hum of the fish tank in the corner."],
+        ["Nadia pulled a book about sharks off the shelf.", "A folded yellow note slid out and landed by her shoe."],
+        ["She unfolded it.", "It said, \"Look under the dictionary for your next clue.\""],
+        ["Nadia's eyes lit up.", "She tiptoed past the reading table and lifted the heavy dictionary.", "Underneath was another yellow note.", "\"Ask the person who loves sharks the most,\" it said."],
+        ["Nadia looked around the room.", "Her friend Caleb only read books about trains.", "Then she noticed Mr. Webb, the librarian.", "His tie was covered with tiny gray sharks."],
+        ["\"Did you write these notes?\" Nadia asked.", "Mr. Webb grinned.", "\"Every week, I hide a puzzle for one lucky reader,\" he said.", "\"This week, the lucky reader was you.\""],
+        ["He handed her a brand-new book about sharks with a yellow bookmark inside.", "Nadia hugged it to her chest all the way back to class."]
+      ] },
+    { id: "p5", title: "Tide Pool Morning", genre: "Literary text",
+      paragraphs: [
+        ["The beach on Tybee Island was gray and still at low tide.", "Wet sand stretched far out, and the air smelled like salt and seaweed.", "Gulls cried overhead."],
+        ["Lily knelt beside a rocky pool no bigger than a bathtub.", "She leaned so close that the ends of her braids dipped into the water."],
+        ["\"Dad, look!\" she whispered.", "\"Something moved!\""],
+        ["Dad crouched beside her.", "A tiny green crab scuttled sideways and tucked itself under a rock."],
+        ["Lily reached for the rock.", "\"Wait,\" Dad said gently.", "\"That rock is the crab's house. How would you feel if a giant lifted off your roof?\""],
+        ["Lily pulled her hand back.", "She lay on her stomach and watched instead.", "After a while, the crab crept out and waved one claw, as if it were saying hello."],
+        ["Far out, the waves began to roll back in.", "\"Time to go,\" Dad said.", "\"The ocean wants its pool back.\"", "Lily waved goodbye to the crab and raced the water up the beach."]
       ] }
   ],
   practice: [
@@ -146,6 +168,467 @@ PP.addLesson({
       clue: "First, check who is speaking in each line. Then think about how Mateo feels at the end, when the lights come back on.",
       why: "The answer is the sentence where Mateo asks, \"Can we keep them off a little longer?\" Mateo wants the lights to stay off so the music can go on. That shows he had fun. The lines in paragraph 3 are Abuela's words, and \"Abuela!\" is Mateo calling for help when he is scared." }
   ],
+  /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
+     core: fifteen independent items in three sets of five. { ref } reuses an existing Try item (P4, P5);
+     they stay in practice, and the engine leaves them out of Practice Together, so Together shows P1-P3.
+     New ids are numbered by their place in the fifteen. Hints and Show me how for refs and Together
+     items are in addons. Author log: docs/expansion-2026-10-22/batches/B1-b1a-author-log.md.
+     NEEDS INDEPENDENT REVIEW (blind solve). */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT1a-P4" },
+      { ref: "SK-TT1a-P5" },
+      { id: "SK-TT1a-C03", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: ["p1"],
+        prompt: "In paragraph 4, Abuela plays \"a song she used to sing as a girl in Puerto Rico.\" What does this detail tell the reader about Abuela?",
+        choices: [
+          { text: "She is sharing a song from her own childhood with Mateo.", correct: true },
+          { text: "She has just come home from a long trip to Puerto Rico." },
+          { text: "She learned the song from Mateo's favorite TV show." },
+          { text: "She wants Mateo to start taking guitar lessons soon." }
+        ],
+        clue: "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
+        hints: [
+          "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
+          "Reread the last sentence of paragraph 4. Think about when in her life Abuela first sang this song.",
+          "The story never talks about a trip, so the choice about coming home from Puerto Rico has no support. Test each choice that is left against the words in the question."
+        ],
+        how: [
+          "Paragraph 4 says Abuela plays a song she used to sing as a girl in Puerto Rico.",
+          "\"As a girl\" means when she was a child. So the song comes from Abuela's own childhood, and now she is sharing it with Mateo.",
+          "The answer is \"She is sharing a song from her own childhood with Mateo.\"",
+          "Check the others: the story never mentions a trip, the TV is off because the power is out, and nobody talks about lessons."
+        ],
+        misconception: "A common mix-up is reading a detail about a place as news about a trip. Ask what the detail tells you about the character.",
+        why: "The answer is \"She is sharing a song from her own childhood with Mateo.\" \"As a girl\" means Abuela sang this song when she was a child in Puerto Rico. The story never mentions a trip, the TV is off because the power is out, and no one talks about lessons." },
+      { id: "SK-TT1a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: ["p1"],
+        prompt: "The author wants to add one more describing sentence at the end of paragraph 4. It should help the reader picture the room once the flashlight is set up. Which sentence fits best?",
+        choices: [
+          { text: "Soft yellow light glowed on the ceiling like a tiny moon.", correct: true },
+          { text: "Abuela had learned to play the guitar a long time ago." },
+          { text: "\"Where did you get that old guitar?\" Mateo asked." },
+          { text: "Mateo pulled his blanket up over his head." }
+        ],
+        clue: "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the room.",
+        hints: [
+          "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the room.",
+          "Reread paragraph 4 to see what Abuela does with the flashlight. The new sentence has to fit right after that.",
+          "The line in quotation marks is dialogue, so it does not describe the room. Check each sentence that is left: does it help you picture the room itself?"
+        ],
+        how: [
+          "The job is to describe the room, so the new sentence must tell how the room looks, sounds or feels.",
+          "In paragraph 4, Abuela stands the flashlight up so that its light shines on the ceiling. A sentence about that light fits right after it.",
+          "The answer is \"Soft yellow light glowed on the ceiling like a tiny moon.\" It helps the reader see the dark room glowing.",
+          "Check the others: the guitar sentence tells about Abuela, the question is dialogue, and pulling the blanket over his head is an action, not a picture of the room."
+        ],
+        misconception: "A common mix-up is choosing a sentence about a character when the job is to describe the place.",
+        why: "The answer is \"Soft yellow light glowed on the ceiling like a tiny moon.\" It describes how the room looks once the flashlight shines on the ceiling. The guitar sentence tells about Abuela, the question is dialogue, and pulling up the blanket is an action." },
+      { id: "SK-TT1a-C05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+        stem: ["The score was tied with one minute left in the game. Jamal ran up and kicked the ball as hard as he could. It sailed over the goal, over the fence and into Mrs. Green's pond. Every player on the field froze."],
+        prompt: "Read the story. How does Jamal's kick move the plot forward?",
+        choices: [
+          { text: "It starts a new problem, because the ball lands in Mrs. Green's pond.", correct: true },
+          { text: "It shows that Jamal is the strongest kicker on his whole team." },
+          { text: "It solves the problem, because the kick wins the game for the team." },
+          { text: "It helps the reader picture the weather on the day of the game." }
+        ],
+        clue: "An action can move the plot by starting a problem, changing it or solving it. Ask what is different after the character acts.",
+        hints: [
+          "An action can move the plot by starting a problem, changing it or solving it. Ask what is different after the character acts.",
+          "Read the last two sentences. Where does the ball end up, and how do the players react?",
+          "The ball goes over the goal, not into it, so the kick does not win the game. Test the choices that are left against what happens after the kick."
+        ],
+        how: [
+          "Before the kick, the game is tied and everyone is playing.",
+          "After the kick, the ball is in Mrs. Green's pond and every player freezes. Now there is something new to fix.",
+          "The answer is \"It starts a new problem, because the ball lands in Mrs. Green's pond.\"",
+          "Check the others: the ball misses the goal, so nobody wins yet; a strong kick tells about Jamal, not about the plot; and nothing describes the weather."
+        ],
+        misconception: "A common mix-up is choosing what an action shows about a character when the question asks how it moves the plot.",
+        why: "The answer is \"It starts a new problem, because the ball lands in Mrs. Green's pond.\" The kick misses the goal and lands in the pond, and every player freezes, so now there is a new problem. It does not win the game, it is about the plot rather than how strong Jamal is, and nothing describes the weather." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT1a-C06", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: ["p4"],
+        prompt: "Which sentence uses description to help the reader picture how quiet the library is? Choose the sentence in the passage.",
+        targets: ["p4:1:1", "p4:1:2", "p4:1:3", "p4:4:2", "p4:5:4"],
+        answer: ["p4:1:3"], pick: 1,
+        clue: "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
+        hints: [
+          "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
+          "Paragraph 1 is about the library itself. Read each of its sentences and ask what it tells you about the room.",
+          "Tiptoeing is quiet, but it is something Nadia does, so it is an action, not description. Check each other sentence: does it describe the room, and does it tell you how quiet the room is?"
+        ],
+        how: [
+          "Description tells how a place looks, sounds or feels. Paragraph 1 describes the library.",
+          "The sunlight sentence helps you see the room, but bright light does not tell you how quiet it is. \"Nadia's favorite room\" tells how she feels about the library.",
+          "The answer is \"The only sound was the soft hum of the fish tank in the corner.\" If a soft hum is the only sound, the room must be very quiet.",
+          "Tiptoeing is an action, and the sentence about the tie describes Mr. Webb, not the room."
+        ],
+        misconception: "A common mix-up is choosing an action that is quiet, like tiptoeing. Description tells about the place itself.",
+        why: "The answer is \"The only sound was the soft hum of the fish tank in the corner.\" If a soft hum is the only sound, the library is very quiet. The sunlight sentence is about how the room looks, tiptoeing is an action, and the tie describes Mr. Webb." },
+      { id: "SK-TT1a-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How does Nadia feel right after she reads the first note?",
+          choices: [
+            { text: "She is curious and excited.", correct: true },
+            { text: "She is worried that she will get in trouble." },
+            { text: "She is annoyed that someone wrote in a book." },
+            { text: "She is bored with the book about sharks." }
+          ] },
+        partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+          choices: [
+            { text: "\"Nadia's eyes lit up.\"", correct: true },
+            { text: "\"She unfolded it.\"" },
+            { text: "\"Nadia looked around the room.\"" },
+            { text: "\"A folded yellow note slid out and landed by her shoe.\"" }
+          ] },
+        clue: "The writer does not name Nadia's feeling. Look for a clue about what her face or body does, and use what has just happened to decide what it means.",
+        hints: [
+          "The writer does not name Nadia's feeling. Look for a clue about what her face or body does, and use what has just happened to decide what it means.",
+          "Read paragraphs 3 and 4. What does the note ask Nadia to do, and what does she do next?",
+          "Nothing in the story says Nadia could get in trouble, so worry does not fit. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "In paragraph 3, the note tells Nadia where to find her next clue. It is the start of a puzzle.",
+          "Then her eyes light up. When someone's eyes light up, they are excited about something, and she goes straight off to find the next clue.",
+          "Part A: She is curious and excited. Part B: \"Nadia's eyes lit up.\"",
+          "Nothing says she could get in trouble, and she is too busy following clues to be bored or annoyed. The other sentences tell what Nadia does or what happens, not how she feels."
+        ],
+        misconception: "A common mix-up is choosing a sentence that only tells what a character does, like unfolding the note. Look for the clue that shows a feeling.",
+        why: "Part A: She is curious and excited. Part B: \"Nadia's eyes lit up.\" Eyes that light up show excitement, and she goes straight off to look for the next clue. Nothing says she could get in trouble, and the other sentences tell what she does or what happens, not how she feels." },
+      { id: "SK-TT1a-C08", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: ["p4"],
+        prompt: "What do Mr. Webb's words in paragraph 6 show about him?",
+        choices: [
+          { text: "He likes to turn reading into a game for his students.", correct: true },
+          { text: "He is upset that Nadia found all of his notes so fast." },
+          { text: "He wants Nadia to stop reading books about sharks." },
+          { text: "He forgot where he had hidden the notes in the library." }
+        ],
+        clue: "Dialogue can show what a character is like. Ask what kind of person would say these words.",
+        hints: [
+          "Dialogue can show what a character is like. Ask what kind of person would say these words.",
+          "Reread what Mr. Webb says in paragraph 6. Notice what he does just before he speaks.",
+          "In paragraph 7 he hands Nadia another book about sharks, so he does not want her to stop reading them. Test each choice that is left against his words."
+        ],
+        how: [
+          "Mr. Webb grins and says, \"Every week, I hide a puzzle for one lucky reader.\"",
+          "Someone who hides a puzzle every week, and calls the reader who finds it lucky, enjoys making reading fun, like a game.",
+          "The answer is \"He likes to turn reading into a game for his students.\"",
+          "Check the others: he grins, so he is not upset; he gives her a new shark book; and he knew just where his notes were."
+        ],
+        misconception: "A common mix-up is judging a character by the topic of a scene instead of by what the character's own words show.",
+        why: "The answer is \"He likes to turn reading into a game for his students.\" He grins and says he hides a puzzle for one lucky reader every week. He is not upset, he gives Nadia another shark book, and he knew where every note was." },
+      { id: "SK-TT1a-C09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: ["p4"],
+        prompt: "How does each detail move the plot? Match each detail to what it does in the story.",
+        cols: ["Starts the mystery", "Gives Nadia her next step", "Solves the mystery"],
+        rows: [
+          { text: "A folded yellow note slides out of the shark book.", answer: 0 },
+          { text: "\"Look under the dictionary for your next clue.\"", answer: 1 },
+          { text: "\"Ask the person who loves sharks the most.\"", answer: 1 },
+          { text: "\"Every week, I hide a puzzle for one lucky reader.\"", answer: 2 }
+        ],
+        clue: "Events and words can move a plot. Ask: does this start the puzzle, keep it going, or end it?",
+        hints: [
+          "Events and words can move a plot. Ask: does this start the puzzle, keep it going, or end it?",
+          "Find where each detail comes in the story: near the start, in the middle or near the end.",
+          "The note slides out before Nadia knows there is any puzzle at all. Work out the other three the same way: what does Nadia know or do after each one?"
+        ],
+        how: [
+          "The note sliding out of the book comes first. Before it, nothing strange has happened, so it starts the mystery.",
+          "The words in each of the two notes tell Nadia where to look or whom to ask next, so each one gives her the next step.",
+          "Mr. Webb's words explain who has been hiding the notes and why, so they solve the mystery.",
+          "So the note sliding out starts the mystery, both notes give her the next step, and Mr. Webb's words solve it."
+        ],
+        misconception: "A common mix-up is thinking the first clue starts the mystery. The mystery starts when the note appears; the words inside it tell Nadia what to do next.",
+        why: "The note sliding out of the shark book starts the mystery. The words in the two notes each give Nadia her next step: look under the dictionary, then find the person who loves sharks. Mr. Webb's words solve the mystery, because they tell who hid the notes and why." },
+      { id: "SK-TT1a-C10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p4"],
+        prompt: "Why does the author describe Mr. Webb's tie in paragraph 5?",
+        choices: [
+          { text: "It is the clue Nadia uses to figure out who wrote the notes.", correct: true },
+          { text: "It shows what Mr. Webb wears to work every single day." },
+          { text: "It shows that Mr. Webb is trying to hide from Nadia." },
+          { text: "It tells the reader that Caleb likes trains more than sharks." }
+        ],
+        clue: "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
+        hints: [
+          "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
+          "Reread the second note in paragraph 4. Then reread paragraph 5.",
+          "The story never says what Mr. Webb wears on other days, so that choice has no support. Test each choice that is left against what Nadia does right after she sees the tie."
+        ],
+        how: [
+          "The second note says, \"Ask the person who loves sharks the most.\"",
+          "Nadia looks around. Caleb only reads about trains. Then she notices that Mr. Webb's tie is covered with tiny gray sharks.",
+          "Right after that, she asks Mr. Webb whether he wrote the notes. The tie is the clue that points her to him.",
+          "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The story never says what he wears on other days, he is not hiding, and the train sentence is about Caleb, not the tie."
+        ],
+        misconception: "A common mix-up is thinking a describing detail is there only to tell what something looks like. Here it is a clue that moves the plot.",
+        why: "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The note says to ask the person who loves sharks the most, and the shark tie points Nadia to Mr. Webb. The story never says what he wears on other days, he is not hiding, and the train sentence is about Caleb." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT1a-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
+        stem: ["At the school bake sale, one lumpy muffin sat alone on the table. Desmond frowned at it. \"Nobody wants the ugly one,\" he mumbled.", "Mrs. Ruffin from next door picked it up. \"Lumpy ones always taste the best,\" she said, and she paid for it with a smile.", "Desmond grinned and set the SOLD OUT sign on the empty table."],
+        prompt: "Read the story. Then complete the sentences. Choose the best answer for each blank.",
+        text: "Mrs. Ruffin's words show that she is {0}. Her words move the plot forward because {1}.",
+        slots: [
+          { options: ["kind", "picky", "impatient"], answer: 0 },
+          { options: ["the last muffin gets sold", "the bake sale has to close early", "Desmond decides to bake new muffins"], answer: 0 }
+        ],
+        clue: "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
+        hints: [
+          "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
+          "Compare how Desmond feels before Mrs. Ruffin speaks with how he feels after she speaks.",
+          "Mrs. Ruffin picks the lumpy muffin on purpose, so she is not being picky about how muffins look. For the second blank, find what is on the table at the start and what is on it at the end."
+        ],
+        how: [
+          "Desmond thinks nobody wants the lumpy muffin. Mrs. Ruffin says lumpy ones taste the best and buys it with a smile.",
+          "Saying something nice that makes Desmond feel better shows that she is kind.",
+          "Because she buys it, the last muffin is sold, the table is empty, and Desmond grins.",
+          "The answers are kind and the last muffin gets sold. She chooses the lumpy one on purpose, so she is not picky, and nothing says the sale closes early or that Desmond bakes more."
+        ],
+        misconception: "A common mix-up is judging a character by one word, like \"lumpy,\" instead of by what the whole line does for the other character.",
+        why: "The answers are kind and the last muffin gets sold. Mrs. Ruffin says something nice about the lumpy muffin and buys it with a smile, so Desmond goes from frowning to grinning. Her words lead to the last muffin being sold and the table being empty." },
+      { id: "SK-TT1a-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p5"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How do Dad's words in paragraph 5 change what happens next?",
+          choices: [
+            { text: "Lily leaves the rock alone, so she gets to see the crab come out.", correct: true },
+            { text: "Lily lifts the rock, and the crab runs off into the ocean." },
+            { text: "Lily gets scared of the crab and runs back up the beach." },
+            { text: "Lily asks Dad to take a picture of the crab under the rock." }
+          ] },
+        partB: { prompt: "Which sentence from the story best shows the result of Dad's words?",
+          choices: [
+            { text: "\"After a while, the crab crept out and waved one claw, as if it were saying hello.\"", correct: true },
+            { text: "\"A tiny green crab scuttled sideways and tucked itself under a rock.\"" },
+            { text: "\"Lily reached for the rock.\"" },
+            { text: "\"Lily waved goodbye to the crab and raced the water up the beach.\"" }
+          ] },
+        clue: "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
+        hints: [
+          "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
+          "Read paragraph 5. Then read paragraph 6 to see what Lily does and what happens because of it.",
+          "Lily never lifts the rock, so that choice does not fit Part A. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "In paragraph 5, Lily reaches for the rock, and Dad tells her that it is the crab's house.",
+          "In paragraph 6, she pulls her hand back and watches. After a while, the crab comes out and waves a claw.",
+          "Part A: Lily leaves the rock alone, so she gets to see the crab come out. Part B: \"After a while, the crab crept out and waved one claw, as if it were saying hello.\"",
+          "Check the others: she never lifts the rock, she is not scared, and nobody takes a picture. The crab hiding and Lily reaching happen before Dad speaks."
+        ],
+        misconception: "A common mix-up is choosing an event that happens before the words. A result has to come after them.",
+        why: "Part A: Lily leaves the rock alone, so she gets to see the crab come out. Part B: \"After a while, the crab crept out and waved one claw, as if it were saying hello.\" Dad's words make Lily pull her hand back and watch, and because she waits, the crab comes out. The crab hiding and Lily reaching come before Dad speaks." },
+      { id: "SK-TT1a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p5"],
+        prompt: "Read this sentence from paragraph 7: \"Far out, the waves began to roll back in.\" How does this description help the story?",
+        choices: [
+          { text: "It shows the visit is ending, because water will soon cover the pool.", correct: true },
+          { text: "It warns that a big storm is about to hit the beach." },
+          { text: "It shows that Lily is afraid of the big ocean waves." },
+          { text: "It explains how the crab built its home under the rock." }
+        ],
+        clue: "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
+        hints: [
+          "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
+          "Compare the beach in paragraph 1 with the beach in paragraph 7. What has changed?",
+          "Nothing in the story tells about a storm, so that choice has no support. Read what Dad and Lily do right after this sentence, and test the choices that are left."
+        ],
+        how: [
+          "In paragraph 1, the beach is at low tide, so the water is far out and the rocky pools are uncovered.",
+          "In paragraph 7, the waves roll back in. The tide is coming up, and soon the tide pool will be under water.",
+          "Right after, Dad says it is time to go, and Lily races the water up the beach.",
+          "The answer is \"It shows the visit is ending, because water will soon cover the pool.\" There is no storm, Lily is having fun rather than feeling afraid, and the sentence says nothing about how the crab's home was made."
+        ],
+        misconception: "A common mix-up is thinking description only tells what a place looks like. Here it signals that the story is about to end.",
+        why: "The answer is \"It shows the visit is ending, because water will soon cover the pool.\" The story starts at low tide, and now the water is coming back, so Dad says it is time to go. There is no storm, Lily races the water for fun, and nothing explains how the crab's home was made." },
+      /* Compares how two texts are built (p4 from set 2 and p5); the item carries both passages, so set 3 stands alone. */
+      { id: "SK-TT1a-C14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p4", "p5"], pick: 2,
+        prompt: "Think about how \"The Note in the Book\" and \"Tide Pool Morning\" are written. Which TWO sentences are true about BOTH stories?",
+        choices: [
+          { text: "Each story begins by describing the place where it happens.", correct: true },
+          { text: "Each story ends with an action that shows how the main character feels.", correct: true },
+          { text: "In each story, a grown-up hides something for the child to find." },
+          { text: "In each story, a grown-up tells the child not to touch something." },
+          { text: "Each story ends with a brand-new problem for the main character." }
+        ],
+        clue: "To compare how two stories are written, look at the same part of each story, like the beginning or the ending. A sentence must be true for both.",
+        hints: [
+          "To compare how two stories are written, look at the same part of each story, like the beginning or the ending. A sentence must be true for both.",
+          "Reread the first paragraph and the last paragraph of each story. Choose two.",
+          "Only one story has a grown-up who hides notes, so that sentence fits just one story. Check each other sentence against both stories the same way."
+        ],
+        how: [
+          "Beginnings: \"The Note in the Book\" opens with the sunny, quiet library, and \"Tide Pool Morning\" opens with the gray beach at low tide. Each one begins by describing the place.",
+          "Endings: Nadia hugs her new book to her chest, and Lily waves to the crab and races the water. Each story ends with an action that shows how the child feels.",
+          "The answers are \"Each story begins by describing the place where it happens.\" and \"Each story ends with an action that shows how the main character feels.\"",
+          "Only Mr. Webb hides something, and only Dad tells the child not to touch something. Neither story ends with a new problem."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true for only one of the two stories.",
+        why: "The answers are \"Each story begins by describing the place where it happens.\" and \"Each story ends with an action that shows how the main character feels.\" Both open with a description of the place, and both end with the child doing something that shows a feeling. Only Mr. Webb hides notes, only Dad says not to touch, and neither story ends with a new problem." },
+      { id: "SK-TT1a-C15", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [], pick: 2,
+        stem: ["A writer is working on a story about Jada. Jada sewed a square for her neighborhood's new quilt, and she is proud of it. The writer wants to show Jada's feeling instead of just telling it."],
+        prompt: "Which TWO sentences would best show that Jada is proud?",
+        choices: [
+          { text: "Jada held up her square so everyone in the room could see it.", correct: true },
+          { text: "Jada grinned from ear to ear as she pinned her square to the quilt.", correct: true },
+          { text: "Jada felt very proud of the square that she had sewn." },
+          { text: "Jada's square had stripes of red, yellow and bright green." },
+          { text: "\"Where should I put my square?\" Jada asked the others." }
+        ],
+        clue: "Writers show a feeling with what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
+        hints: [
+          "Writers show a feeling with what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
+          "Picture each sentence. Can you see what Jada does, or are you only told about her? Choose two.",
+          "The stripes help you picture the square, but they do not show anything about Jada's feelings. Check each other sentence the same way."
+        ],
+        how: [
+          "Showing means the reader sees what a character does and can tell the feeling without being told.",
+          "Holding her square up for everyone to see, and grinning from ear to ear, are actions that show pride.",
+          "The answers are \"Jada held up her square so everyone in the room could see it.\" and \"Jada grinned from ear to ear as she pinned her square to the quilt.\"",
+          "\"Jada felt very proud\" tells the feeling instead of showing it. The stripes describe the square, and her question does not show a feeling."
+        ],
+        misconception: "A common mix-up is choosing the sentence that names the feeling. Naming a feeling tells it; an action shows it.",
+        why: "The answers are \"Jada held up her square so everyone in the room could see it.\" and \"Jada grinned from ear to ear as she pinned her square to the quilt.\" Both are actions that show pride. \"Jada felt very proud\" only tells the feeling, the stripes describe the square, and her question does not show a feeling." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short new scene. `like` lists only the
+     core items each one really practises. */
+  similar: [
+    { id: "SK-TT1a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-P4", "SK-TT1a-C04"],
+      stem: ["Rain dripped from the roof of the bus stop. Brianna hugged her backpack and stamped her cold feet. \"The bus is late again,\" she groaned. Then a yellow bus splashed around the corner."],
+      prompt: "Which sentence from the story is description that helps you picture the setting?",
+      choices: [
+        { text: "Rain dripped from the roof of the bus stop.", correct: true },
+        { text: "Brianna hugged her backpack and stamped her cold feet." },
+        { text: "\"The bus is late again,\" she groaned." },
+        { text: "Then a yellow bus splashed around the corner." }
+      ],
+      clue: "Description helps you picture a place. Dialogue is in quotation marks, and an action is something a character does.",
+      hints: [
+        "Description helps you picture a place. Dialogue is in quotation marks, and an action is something a character does.",
+        "For each sentence, ask: is it about the place, about what Brianna does or says, or about something that happens next?",
+        "The line in quotation marks is dialogue, so it is not description. Check each sentence that is left the same way."
+      ],
+      how: [
+        "Brianna hugging her backpack and stamping her feet are actions. The line in quotation marks is dialogue.",
+        "The bus splashing around the corner is an event that moves the story along.",
+        "The answer is \"Rain dripped from the roof of the bus stop.\" It helps you see and hear the rainy bus stop, which is the setting."
+      ],
+      misconception: "A common mix-up is choosing an action that has a describing word in it, like cold feet. Ask whether the sentence is mostly about the place or about what a character does.",
+      why: "The answer is \"Rain dripped from the roof of the bus stop.\" It helps you picture the wet bus stop where the story happens. Hugging her backpack is an action, the line in quotation marks is dialogue, and the bus coming is an event." },
+    { id: "SK-TT1a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C08", "SK-TT1a-C11"],
+      stem: ["Rico missed his third shot in a row. He kicked at the gym floor. Coach Pam jogged over and tossed him the ball. \"Even great players miss,\" she said. \"Keep your eyes on the hoop, not on your feet.\""],
+      prompt: "What do Coach Pam's words show about her?",
+      choices: [
+        { text: "She helps her players get better instead of scolding them.", correct: true },
+        { text: "She is angry that Rico keeps missing his shots." },
+        { text: "She thinks Rico should quit the team for good." },
+        { text: "She wants to take all the shots for the team herself." }
+      ],
+      clue: "Dialogue can show what a character is like. Ask what kind of person would say these words to someone who is upset.",
+      hints: [
+        "Dialogue can show what a character is like. Ask what kind of person would say these words to someone who is upset.",
+        "Read both things Coach Pam says. What does each one do for Rico?",
+        "She tosses Rico the ball, so she does not want him to quit. Test each choice that is left against her words."
+      ],
+      how: [
+        "Rico is upset after missing three shots.",
+        "Coach Pam tells him that even great players miss, and then she gives him a tip.",
+        "The answer is \"She helps her players get better instead of scolding them.\" Her words calm him and help him improve.",
+        "She is not angry, she gives him the ball to keep trying, and she never takes a shot herself."
+      ],
+      why: "The answer is \"She helps her players get better instead of scolding them.\" She tells Rico that even great players miss, and she gives him a tip. She is not angry, she tosses him the ball, and she never shoots herself." },
+    { id: "SK-TT1a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C12", "SK-TT1a-C05", "SK-TT1a-C09"],
+      stem: ["Ms. Tran's class was painting a mural on the wall by the playground. Halfway through, the blue paint ran out. \"I guess we have to stop,\" Ms. Tran sighed. Then Marco raised his hand. \"My aunt has extra paint at her shop down the street,\" he said. That afternoon, his aunt carried in two big cans of blue."],
+      prompt: "How do Marco's words move the plot forward?",
+      choices: [
+        { text: "They give the class a way to get more paint and keep going.", correct: true },
+        { text: "They start the problem, because the class runs out of paint." },
+        { text: "They show that Marco does not want to paint the mural." },
+        { text: "They tell the reader where the playground is at the school." }
+      ],
+      clue: "Dialogue can start a problem, change it or help solve it. Ask what changes after a character speaks.",
+      hints: [
+        "Dialogue can start a problem, change it or help solve it. Ask what changes after a character speaks.",
+        "Find the problem first. Then read what happens after Marco speaks.",
+        "The paint runs out before Marco says anything, so his words do not start the problem. Test each choice that is left."
+      ],
+      how: [
+        "The problem: the blue paint runs out, and Ms. Tran thinks they must stop.",
+        "Marco says his aunt has extra paint. That afternoon, she brings two cans.",
+        "The answer is \"They give the class a way to get more paint and keep going.\"",
+        "The paint ran out before he spoke, he wants to help, and his words say nothing about where the playground is."
+      ],
+      misconception: "A common mix-up is choosing the event that starts a problem when the words come later and help fix it.",
+      why: "The answer is \"They give the class a way to get more paint and keep going.\" After Marco speaks, his aunt brings two cans of paint. The paint ran out before he spoke, he wants to help, and he says nothing about the playground." }
+  ],
+  /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
+  addons: {
+    "SK-TT1a-P1": {
+      hints: [
+        "Description helps you picture the setting. Ask what the sound words and the weather words help you picture.",
+        "Read paragraph 1 again. What do you hear, and what is hitting the windows?",
+        "Mateo is in the middle of his favorite show when the screen goes black, so he is not bored. Test each choice that is left against paragraph 1."
+      ],
+      how: [
+        "Paragraph 1 says thunder booms over Atlanta and rain beats against the windows.",
+        "Then the screen goes black and the whole room goes dark, which can happen in a big storm.",
+        "The answer is \"A strong storm is going on outside.\"",
+        "Mateo is enjoying his show, Abuela is not in paragraph 1, and the story says the apartment is in Atlanta, a city."
+      ],
+      misconception: "A common mix-up is choosing a detail about a character when the question asks what the description of the place shows." },
+    "SK-TT1a-P2": {
+      hints: [
+        "The writer does not say how Mateo feels. Look at what his voice and his body do right after the room goes dark.",
+        "Read paragraph 2. Choose two sentences for Part B.",
+        "Tapping his feet happens later, once the music is playing, so it does not show how he first feels. For Part B, both sentences must match your Part A answer."
+      ],
+      how: [
+        "Right after the lights go out, Mateo's voice comes out high and squeaky.",
+        "He pulls his blanket up to his chin. A squeaky voice and hiding under a blanket show fear.",
+        "Part A: He feels scared. Part B: \"His voice came out high and squeaky.\" and \"He pulled his blanket up to his chin.\"",
+        "The room going dark is the setting, not his feeling, and tapping and singing come later."
+      ],
+      misconception: "A common mix-up is choosing a sentence about the setting, like the room going dark, as proof of a feeling." },
+    "SK-TT1a-P3": {
+      hints: [
+        "Dialogue can show what a character is like. Read what Abuela says and how she says it.",
+        "Read paragraph 3. Notice what she does as she speaks, and then what she does next in paragraph 4.",
+        "Abuela never tells Mateo to go to bed, so that choice has no support. Test each choice that is left against her words."
+      ],
+      how: [
+        "Abuela says the storm took their show, and she says it with a wink.",
+        "Then she says they will just make their own, and soon she is playing her guitar.",
+        "The answer is \"She stays calm and turns the problem into fun.\"",
+        "Someone who winks is not upset or worried, and she never mentions bed."
+      ] },
+    "SK-TT1a-P4": {
+      hints: [
+        "Dialogue is what a character says, inside quotation marks. An action is something a character does. Description helps you picture the place.",
+        "For each sentence, look for quotation marks first. Then ask: is someone doing something, or is it a picture of the place?",
+        "\"So we will just make our own\" is in quotation marks, so it is dialogue. Sort the other three sentences the same way."
+      ],
+      how: [
+        "\"So we will just make our own\" is in quotation marks. Abuela says it, so it is dialogue.",
+        "Tapping his feet and pulling up his blanket are things Mateo does, so they are actions.",
+        "Thunder booming and rain beating on the windows help you picture the stormy night, so that sentence is description.",
+        "So: dialogue, action, description, action."
+      ],
+      misconception: "A common mix-up is calling any sentence about a character dialogue. Dialogue must be the character's own words in quotation marks." },
+    "SK-TT1a-P5": {
+      hints: [
+        "Dialogue is the words a character says. First check who is speaking in each line.",
+        "Think about how Mateo feels by the end of the night. Then find a line he says that matches that feeling.",
+        "The two lines in paragraph 3 are Abuela's words, not Mateo's. Check each line that is left: does it show that Mateo had fun?"
+      ],
+      how: [
+        "The two lines in paragraph 3 are spoken by Abuela.",
+        "\"Abuela!\" is Mateo calling out when the lights first go out and he is scared.",
+        "When the lights come back on, Mateo asks, \"Can we keep them off a little longer?\" He wants the music night to keep going.",
+        "The answer is that last line: it shows Mateo enjoyed the night with Abuela."
+      ],
+      misconception: "A common mix-up is choosing a line that someone else says. Check who is speaking first." }
+  },
   test: [
     { id: "SK-TT1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "What does the description in paragraph 1 show about the setting?",
@@ -304,12 +787,11 @@ PP.addLesson({
   teach: {
     big: "Most stories have four parts: who it is about, where and when it happens, the problem, and how the problem gets solved.",
     points: [
-      "Characters are the people or animals in the story. The main character is the one the story is mostly about.",
+      "Characters are the people or animals in the story. The main character is the one the story is mostly about. Other characters have jobs in the plot, too: one might cause the trouble, and a helper might make the solution possible.",
       "The setting is where and when the story happens, like a farm on a rainy morning.",
-      "The problem is what goes wrong or what a character wants but cannot get yet.",
-      "The solution is how the problem is fixed by the end. Look near the end of the story to find it.",
+      "The problem is what goes wrong or what a character wants but cannot get yet. The solution is how the problem is fixed by the end. Near the end, look for proof that the fix worked, and check that the whole problem is fixed, not just part of it.",
       "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution. To sum up any story, say: Somebody (the main character) Wanted something, But (the problem), So (what the character does), Then (how it ends).",
-      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix."
+      "Story parts work together to make things happen. Ask: How does the place or the time change what happens? How does the problem make the character act? A rainy night, a faraway place or not having enough time can cause the trouble or make it harder to fix. When a first try does not work, ask what is really causing the problem."
     ],
     words: [
       { term: "character", means: "a person or animal in a story" },
@@ -375,6 +857,28 @@ PP.addLesson({
         ["\"Where did you read it last?\" his dad asked.", "Omar closed his eyes and thought.", "He had read it on the porch swing while it rained on Tuesday."],
         ["Omar hurried outside.", "There, tucked under the swing's cushion, was the book.", "It was a little damp but not ruined."],
         ["Omar dried it with a towel and set it on top of his shoes so he would not forget it.", "On Friday morning, he handed it to Ms. Park at the library desk right on time."]
+      ] },
+    /* Expansion 2026-10-22 (batch B1, author b1a): p3 is used only by core set 2 and one set 3
+       compare item (C14); p4 only by core set 3. Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "The Ice Cube Challenge", genre: "Literary text",
+      paragraphs: [
+        ["The air conditioner at Pine Street School broke on the hottest day of August.", "Room 6 felt like an oven, even with every window open."],
+        ["\"Here is today's science challenge,\" said Ms. Banks.", "\"Keep your ice cube from melting until the lunch bell rings.\"", "Each team got two ice cubes and a box of supplies: paper cups, foil, tape and an old wool sock."],
+        ["Bryce set his team's first cube in a paper cup on the sunny windowsill.", "\"It can sit in the fresh air,\" he said.", "But the sun beat down on the glass, and in ten minutes the cube was a puddle."],
+        ["Now there was only one cube left.", "Ana thought hard.", "\"Wool keeps my feet warm in winter, so maybe it can keep the heat out, too,\" she said slowly."],
+        ["She wrapped the last cube in foil and tucked it inside the sock.", "Then Bryce set the sock in a shady corner under his desk."],
+        ["When the lunch bell rang, the other teams had cups of water.", "Ana unrolled the sock.", "Inside sat a small ice cube, still cold and shiny."],
+        ["\"You were right about the sock,\" Bryce said.", "Ms. Banks smiled and gave their team the first gold star of the year."]
+      ] },
+    { id: "p4", title: "The Hidden Peach Stand", genre: "Literary text",
+      paragraphs: [
+        ["Grandpa Joe's peach stand sat at the end of a long dirt road outside Fort Valley, Georgia.", "Tall pine trees hid it from the highway."],
+        ["One July morning, the stand was piled high with ripe peaches.", "But by noon, not one car had come down the road.", "\"If we don't sell these soon, they'll get soft and spoil,\" Grandpa sighed."],
+        ["Malia and her cousin Dre wanted to help.", "First, Dre painted PEACHES in giant red letters on a sign and hung it on the front of the stand.", "They waited and waited.", "Still, no cars came."],
+        ["Malia walked all the way out to the highway and looked back.", "All she could see were pine trees.", "\"Nobody can see our sign from here,\" she called."],
+        ["So the cousins painted big arrows on three old boards.", "They pushed the boards into the ground beside the highway, right where the dirt road began."],
+        ["Within an hour, a blue truck turned onto the dirt road.", "Then came a van, and then two more cars."],
+        ["By sunset, every basket was empty.", "Grandpa Joe gave each cousin the last two peaches.", "\"Best helpers in Georgia,\" he said."]
       ] }
   ],
   practice: [

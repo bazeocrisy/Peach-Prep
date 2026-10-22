@@ -663,10 +663,10 @@ PP.addLesson({
     big: "The narrator is the voice telling the story. The narrator has a point of view, and I can have a different one.",
     points: [
       "A narrator's point of view is how the narrator thinks and feels about what happens. In a poem, the voice is called the speaker, and the speaker has a point of view too.",
-      "Find the narrator's feeling words, like boring, ruined or the best. They tell you the narrator's view.",
-      "You, the reader, may see things differently. Look at what actually happens, not only at what the narrator says.",
+      "Find the narrator's feeling words, like boring, ruined or the best. They tell you the narrator's view. Comparisons count, too: \"My knees shook like leaves\" shows the narrator is scared.",
+      "You, the reader, may see things differently. Look at what actually happens, not only at what the narrator says. A narrator's view may change by the end, or it may stay the same even when a reader sees things another way.",
       "Different characters or speakers can see the same thing in different ways. One may love the rain while another hates it. Notice each one's view.",
-      "To find the narrator, ask: Who is telling this? If the teller says I or we about themself, outside of quotation marks, the narrator is a character in the story. If not, the narrator is an outsider who tells about the characters by name or with he, she and they."
+      "To find the narrator, ask: Who is telling this? If the teller says I or we about themself, outside of quotation marks, the narrator is a character in the story. If not, the narrator is an outsider who tells about the characters by name or with he, she and they. Sometimes you need clues, like wings or a beak, to tell who the I is. A story can also have two parts, each told by a different narrator."
     ],
     words: [
       { term: "narrator", means: "the voice that tells the story" },
@@ -701,6 +701,18 @@ PP.addLesson({
         "Think about your own view. You might agree with Tasha, or you might think rain can be fun."
       ],
       answer: "Tasha thinks rain ruins Saturdays. A reader might think, like her brother, that rain can be fun."
+    },
+    /* B1 (expansion 2026-10-22): models two narrators, what a second narrator adds, and the reader's own view. */
+    {
+      show: ["Part 1: I made breakfast in bed for Mom! The toast got a little black on one side, but I covered it with jam. I think it was the best surprise ever.", "Part 2: My son woke me at six o'clock with burned toast and a giant smile. Jam was dripping onto my blanket. Still, I ate every bite. It was the sweetest morning I've had all year."],
+      ask: "Who tells each part? How do their views of the breakfast differ, and what do you think?",
+      steps: [
+        "Find the I in each part. In Part 1, the I makes breakfast for Mom, so a child is telling it. In Part 2, the I says \"my son,\" so Mom is telling it.",
+        "Find each view. The child thinks it was the best surprise ever. Mom sees burned toast and dripping jam, but she still calls it the sweetest morning.",
+        "Notice what Part 2 adds. Mom tells things the child left out, like the jam on the blanket.",
+        "Decide your own view, and use a detail. You might think the toast was not great, but the surprise was kind."
+      ],
+      answer: "A child tells Part 1, and Mom tells Part 2. The child thinks the breakfast was perfect. Mom knows it was messy, but she loved it anyway. A reader might think the food was not great, but the kindness made it special."
     }
   ],
   parent: "While you read together, stop and ask: Who is telling this story? How do they feel? Do you agree? Try telling a family event from someone else's point of view, like the dog's.",
@@ -720,6 +732,34 @@ PP.addLesson({
         ["A heron stood on one leg near the shore.", "Grandpa pointed at it and smiled, but I only yawned.", "To me, it was just a bird standing still, which was exactly what we were doing."],
         ["Grandpa poured warm cocoa into two cups and told me about fishing with his own father when he was my age.", "I thought it was the most boring morning of my whole life."],
         ["Then my pole jerked so hard I almost dropped it.", "I pulled and pulled, and a shiny fish flopped into the boat.", "Grandpa cheered.", "Okay, maybe the morning was a little bit fun."]
+      ] },
+    /* B1 (expansion 2026-10-22): p3-p5 are used only by core (p3 set 1, p4 set 2, p5 set 3).
+       Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "Ms. Pruitt's Corner", genre: "Literary text",
+      paragraphs: [
+        ["Ms. Pruitt is the crossing guard at the corner by our school, and she is the grumpiest person in town.", "Every morning, she stands in her orange vest and watches us ride our bikes."],
+        ["\"Walk your bikes across!\" she calls whenever we zoom up to the corner.", "My friend Lamar says she just likes to boss kids around.", "I think so, too."],
+        ["Last Tuesday, my bike chain popped off right in the middle of the crosswalk.", "Ms. Pruitt held up her stop sign until every car stopped.", "Then she pushed my bike to the curb and put the chain back on.", "She even wiped the grease off my hands with a tissue."],
+        ["\"Cars come around that corner fast,\" she said.", "\"I don't want to see any of you get hurt.\""],
+        ["Then she went back to her spot on the corner.", "She didn't smile at me once.", "See? Grumpy."]
+      ] },
+    { id: "p4", title: "The Big Red Chair", genre: "Literary text",
+      paragraphs: [
+        ["## Part 1"],
+        ["I do not like haircuts.", "The clippers buzz like angry bees, and little hairs tickle my neck.", "On Saturday, Mom walked me into Mr. Odom's barbershop anyway."],
+        ["I climbed into the big red chair and held on to the arms.", "In the mirror, my face looked like I was about to get a shot.", "I was sure I would come out looking silly."],
+        ["## Part 2"],
+        ["The boy in my chair that morning held on so tight that his arms shook.", "I have cut hair on this street for thirty years, and I know a nervous customer when I see one."],
+        ["So I told him about the time a sparrow flew into my shop and landed on a man's head.", "He laughed so hard that he forgot to hold on.", "After that, he sat as still as a statue.", "That's a brave boy, I thought."],
+        ["When I turned the chair toward the mirror, he touched his new haircut and grinned.", "\"Same time next month, Darius?\" I asked.", "\"Maybe,\" he said.", "He was still grinning when his mom paid."]
+      ] },
+    { id: "p5", title: "Bath Day", genre: "Poem", lexile: "not measured (poem)",
+      paragraphs: null,
+      lines: [
+        ["They say the word. I know that word.", "I've heard it all before.", "I tuck my tail and slink away", "to hide behind the door."],
+        ["They find me there and lift me up.", "My paws kick at the air.", "The water's warm, the soap is pink,", "and bubbles everywhere!"],
+        ["They scrub behind my floppy ears", "and giggle when I shake.", "Why smell like flowers? Mud is best!", "This bath is a mistake."],
+        ["Now I am wrapped up in a towel.", "They say, \"You smell so sweet!\"", "As soon as they let go of me,", "I'll find some mud. A treat!"]
       ] }
   ],
   practice: [
@@ -779,6 +819,478 @@ PP.addLesson({
       clue: "Compare paragraph 1 with paragraph 5. What does the narrator admit at the end?",
       why: "The answer is \"She starts to see that Dev's talking helped.\" At the start, she thinks he will ruin everything. At the end, she quietly says, \"I guess talking to people helps.\"" }
   ],
+  /* ---------- B1 core (expansion 2026-10-22, author b1b; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five. { ref } reuses Try item P5 by id. Try item P4 (the snow poem)
+     is NOT in core: form A item T6 uses the same frame, so P4 now sits in Practice Together with
+     P1-P3 (the engine shows practice minus refs there). Hints and Show me how for P1-P5 are in addons.
+     C12 is a constructed response (type "cr", never scored; 01 §2.2.2).
+     Author log: docs/expansion-2026-10-22/batches/B1-b1b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { id: "SK-TC2a-C01", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p1"], pick: 2,
+        prompt: "Dev and the narrator see the yard sale in different ways. Which TWO details show how Dev himself feels about the yard sale?",
+        choices: [
+          { text: "He runs over to tell the first family about his truck.", correct: true },
+          { text: "He grins and thanks his sister for letting him help.", correct: true },
+          { text: "His sister tells herself that he was just lucky." },
+          { text: "His sister rolls her eyes when he talks about the truck." },
+          { text: "His blanket is almost empty by the middle of the day." }
+        ],
+        clue: "A character's point of view is how that character thinks and feels. Look at what Dev himself does and says, not at what his sister thinks about him.",
+        hints: [
+          "A character's point of view is how that character thinks and feels. Look at what Dev himself does and says, not at what his sister thinks about him.",
+          "Skim the story for each time Dev acts or speaks. Choose two.",
+          "Calling Dev lucky is the sister's thought about him, not Dev's own feeling. Check the other choices: does each one show how Dev feels, or is it a fact about the sale or about his sister?"
+        ],
+        how: [
+          "Dev runs over to tell the first family about his truck. That shows he is eager and happy to be there.",
+          "At the end, Dev grins and says, \"Thanks for letting me help, Sis.\" He enjoyed helping.",
+          "The answers are \"He runs over to tell the first family about his truck.\" and \"He grins and thanks his sister for letting him help.\"",
+          "Calling him lucky and rolling her eyes show the sister's view. An almost empty blanket is a fact about the sale, not a feeling."
+        ],
+        misconception: "A common mix-up is choosing what the narrator thinks about a character. A character's own view comes from what that character says and does.",
+        why: "The answers are \"He runs over to tell the first family about his truck.\" and \"He grins and thanks his sister for letting him help.\" Both show Dev is eager and glad to help. Calling him lucky and rolling her eyes are his sister's view, and the empty blanket is a fact about the sale." },
+      { ref: "SK-TC2a-P5" },
+      { id: "SK-TC2a-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: [],
+        stem: ["The bus bumped along the road to the state park.", "\"I hope we see a deer!\" Rico said.", "His friend Ava pressed her nose to the window and smiled.", "Ms. Hart counted heads one more time."],
+        prompt: "Read the part of a story in the box. Who is telling it?",
+        choices: [
+          { text: "someone outside the story", correct: true },
+          { text: "Rico, a boy on the bus" },
+          { text: "Ava, Rico's friend" },
+          { text: "Ms. Hart, the teacher" }
+        ],
+        clue: "To find who is telling it, look for I or we. Those words show the teller is a character only when they are not inside quotation marks.",
+        hints: [
+          "To find who is telling it, look for I or we. Those words show the teller is a character only when they are not inside quotation marks.",
+          "Find the one sentence with the word I. Look at the marks around it, and check who says it.",
+          "Rico says I, but only inside quotation marks, where he is talking. Check how the other sentences talk about the people on the bus."
+        ],
+        how: [
+          "The only I is inside quotation marks. That is Rico talking, not the narrator telling the story.",
+          "The other sentences call everyone by name or by his and her: Rico said, his friend Ava, Ms. Hart counted.",
+          "The teller never says I or we outside quotation marks. The answer is \"someone outside the story.\""
+        ],
+        misconception: "A common mix-up is choosing a character who says I inside quotation marks. Words inside quotation marks are a character talking, not the narrator.",
+        why: "The answer is \"someone outside the story.\" The only I is inside quotation marks, where Rico is talking. Everything else tells about Rico, Ava and Ms. Hart by name or with his and her, so the teller is outside the story." },
+      { id: "SK-TC2a-C04", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: ["p3"],
+        prompt: "Complete the sentences about Ms. Pruitt. Choose the best answer for each blank.",
+        text: "The narrator thinks Ms. Pruitt calls out to the kids because she {0}. A reader might think she calls out because she {1}.",
+        slots: [
+          { options: ["likes to boss kids around", "is worried they will get hurt", "wants the corner all to herself"], answer: 0 },
+          { options: ["is worried they will get hurt", "likes to boss kids around", "wants the corner all to herself"], answer: 0 }
+        ],
+        clue: "The narrator's view is what the narrator says and thinks. A reader's view comes from what actually happens, even when the narrator does not say it.",
+        hints: [
+          "The narrator's view is what the narrator says and thinks. A reader's view comes from what actually happens, even when the narrator does not say it.",
+          "For the first blank, reread paragraph 2 for what Lamar says and what the narrator thinks of it. For the second blank, reread what Ms. Pruitt says in paragraph 4.",
+          "Nothing in the story shows Ms. Pruitt wanting the corner for herself. Test the other two ideas against paragraph 2 and paragraph 4."
+        ],
+        how: [
+          "In paragraph 2, Lamar says she just likes to boss kids around, and the narrator says, \"I think so, too.\" That is the narrator's view.",
+          "In paragraph 4, Ms. Pruitt says cars come around the corner fast and she does not want anyone to get hurt. She also stops the cars and fixes the chain.",
+          "So the first blank is \"likes to boss kids around\" and the second blank is \"is worried they will get hurt.\"",
+          "Nothing in the story shows that she wants the corner to herself."
+        ],
+        misconception: "A common mix-up is putting the reader's view in the narrator's blank. The narrator tells only what the narrator thinks; a reader also sees what Ms. Pruitt does and says.",
+        why: "The answers are \"likes to boss kids around\" and \"is worried they will get hurt.\" The narrator agrees with Lamar that she likes to boss kids around. But Ms. Pruitt says she does not want anyone to get hurt, so a reader might think she calls out to keep the kids safe." },
+      { id: "SK-TC2a-C05", type: "ebsr", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "At the end of the story, how does the narrator see Ms. Pruitt?",
+          choices: [
+            { text: "Ms. Pruitt is still a grump.", correct: true },
+            { text: "Ms. Pruitt is kind and cares about kids." },
+            { text: "Ms. Pruitt is the best guard in town." },
+            { text: "Ms. Pruitt is too busy to help anyone." }
+          ] },
+        partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+          choices: [
+            { text: "\"See? Grumpy.\"", correct: true },
+            { text: "\"She even wiped the grease off my hands with a tissue.\"" },
+            { text: "\"Ms. Pruitt held up her stop sign until every car stopped.\"" },
+            { text: "\"Then she pushed my bike to the curb and put the chain back on.\"" }
+          ] },
+        clue: "The narrator's view is what the narrator says or thinks, even when the story shows something else. Look at the narrator's own words, not only at what Ms. Pruitt does.",
+        hints: [
+          "The narrator's view is what the narrator says or thinks, even when the story shows something else. Look at the narrator's own words, not only at what Ms. Pruitt does.",
+          "Reread the last paragraph. Then compare it with how the narrator sees Ms. Pruitt in paragraph 1.",
+          "Wiping the grease off the narrator's hands is something Ms. Pruitt does. It may change how a reader sees her, but Part A asks about the narrator. Test the other choices against the narrator's own words."
+        ],
+        how: [
+          "In paragraphs 3 and 4, Ms. Pruitt stops the cars and fixes the chain. These actions might make a reader see her another way.",
+          "But the narrator ends with \"See? Grumpy.\" The narrator still sees her the way paragraph 1 does.",
+          "Part A: Ms. Pruitt is still a grump. Part B: \"See? Grumpy.\"",
+          "Her helpful actions can shape a reader's view, not the narrator's. Nothing calls her the best guard or too busy to help."
+        ],
+        misconception: "A common mix-up is thinking the narrator must change when the reader's view changes. Here the narrator's view stays the same.",
+        why: "Part A: Ms. Pruitt is still a grump. Part B: \"See? Grumpy.\" Even after she stops the cars and fixes the chain, the narrator ends by calling her grumpy. Her helpful actions might change a reader's view, but they do not change the narrator's." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TC2a-C06", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p4"], pick: 2,
+        prompt: "Part 2 of the story has a new narrator. Which TWO clues show this?",
+        choices: [
+          { text: "In Part 2, the boy getting the haircut is called he.", correct: true },
+          { text: "The I in Part 2 has cut hair on this street for thirty years.", correct: true },
+          { text: "The narrator in Part 2 uses the word I." },
+          { text: "Part 2 tells a funny story about a sparrow." },
+          { text: "Part 2 happens on the same Saturday morning." }
+        ],
+        clue: "Each part of a story can have its own narrator. To check, ask who the I is in each part, and what that I does.",
+        hints: [
+          "Each part of a story can have its own narrator. To check, ask who the I is in each part, and what that I does.",
+          "Read the first paragraph of Part 2 slowly. Ask: who is sitting in the chair, and who is talking?",
+          "Both parts use the word I, so using I does not show that the narrator has changed. Check the other clues: which ones could be true only if someone new is telling Part 2?"
+        ],
+        how: [
+          "In Part 1, the boy says I: \"I do not like haircuts.\"",
+          "In Part 2, the boy is called he: \"He laughed so hard that he forgot to hold on.\" And the I has cut hair on this street for thirty years, so the I is the barber, Mr. Odom.",
+          "The answers are \"In Part 2, the boy getting the haircut is called he.\" and \"The I in Part 2 has cut hair on this street for thirty years.\"",
+          "Both parts use I, and the sparrow story and the day do not tell who is talking."
+        ],
+        misconception: "A common mix-up is thinking the I is the same person all the way through. In a story with two parts, check who the I is in each part.",
+        why: "The answers are \"In Part 2, the boy getting the haircut is called he.\" and \"The I in Part 2 has cut hair on this street for thirty years.\" In Part 1 the boy is the I; in Part 2 he is called he, and the I is the barber. Both parts use I, and the sparrow and the day do not show who is telling." },
+      { id: "SK-TC2a-C07", type: "match", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p4"],
+        prompt: "Darius and Mr. Odom see the haircut in different ways. Match each idea to the person who thinks it.",
+        cols: ["Darius, in Part 1", "Mr. Odom"],
+        rows: [
+          { text: "Haircuts buzz and tickle, so they are no fun.", answer: 0 },
+          { text: "A nervous customer needs something to laugh about.", answer: 1 },
+          { text: "This haircut will make me look silly.", answer: 0 },
+          { text: "The boy in the chair is brave.", answer: 1 }
+        ],
+        clue: "Characters can see the same thing in different ways. To match each idea, ask who in the story would think it.",
+        hints: [
+          "Characters can see the same thing in different ways. To match each idea, ask who in the story would think it.",
+          "Part 1 tells what Darius thinks before the haircut. Part 2 tells what the barber notices and thinks.",
+          "Mr. Odom never says the clippers bother him, so the idea about buzzing and tickling is not his. Sort the other ideas the same way: whose words or thoughts in the story match each one?"
+        ],
+        how: [
+          "Part 1: Darius says the clippers buzz like angry bees and the hairs tickle, and he is sure he will come out looking silly. Those two ideas are his.",
+          "Part 2: Mr. Odom knows a nervous customer when he sees one, so he tells a funny story to help. The idea about something to laugh about is his.",
+          "He also thinks, \"That's a brave boy.\" That idea is his, too.",
+          "The two see the same haircut in different ways: Darius thinks about how it feels and how he will look, and Mr. Odom sees a nervous boy who needs help to relax."
+        ],
+        misconception: "A common mix-up is giving every idea to the narrator you met first. Check whose words or thoughts each idea matches.",
+        why: "Darius thinks haircuts buzz and tickle and that this one will make him look silly. Mr. Odom thinks a nervous customer needs something to laugh about, which is why he tells the sparrow story, and he thinks the boy is brave." },
+      { id: "SK-TC2a-C08", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p4"],
+        prompt: "In Part 1, Darius says, \"In the mirror, my face looked like I was about to get a shot.\" What does this tell you about how he sees the haircut?",
+        choices: [
+          { text: "He expects it to be scary and unpleasant.", correct: true },
+          { text: "He thinks he is sick and needs a doctor." },
+          { text: "He thinks Mr. Odom will give him a shot." },
+          { text: "He is excited to see how he will look." }
+        ],
+        clue: "Narrators often show their view with a comparison. Ask how a person usually feels at the moment being compared.",
+        hints: [
+          "Narrators often show their view with a comparison. Ask how a person usually feels at the moment being compared.",
+          "Think about how most kids feel right before they get a shot. Then reread the sentences around this one in Part 1.",
+          "Darius is in a barbershop, not a doctor's office, so nobody is really giving him a shot. Ask what the comparison tells about his feelings, then test the choices that are left."
+        ],
+        how: [
+          "Most kids feel nervous or scared right before a shot.",
+          "Darius says his face looked like that, and the next sentence says he was sure he would come out looking silly.",
+          "So he expects the haircut to be scary and unpleasant. The answer is \"He expects it to be scary and unpleasant.\"",
+          "Nobody is giving him a real shot, and nothing in Part 1 shows he is excited."
+        ],
+        misconception: "A common mix-up is reading a comparison as if it really happened. A comparison shows how the narrator feels.",
+        why: "The answer is \"He expects it to be scary and unpleasant.\" Darius compares his face to a kid about to get a shot, which shows he dreads the haircut. He is in a barbershop, so no one is giving him a real shot, and nothing in Part 1 shows he is excited." },
+      { id: "SK-TC2a-C09", type: "hottext", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p4"],
+        prompt: "In Part 1, Darius is sure he will come out looking silly. Which sentence in Part 2 shows that he likes his new haircut after all? Choose the sentence in the passage.",
+        targets: ["p4:5:1", "p4:6:2", "p4:6:3", "p4:6:4", "p4:7:1", "p4:7:3"],
+        answer: ["p4:7:1"], pick: 1,
+        clue: "A character's view can change. Look for what the character does once he can see how things came out.",
+        hints: [
+          "A character's view can change. Look for what the character does once he can see how things came out.",
+          "Look at the end of Part 2, after the haircut is done.",
+          "Laughing at the sparrow story shows Darius is less nervous during the haircut, but it is not about how the haircut looks. Check each sentence that is left against the question."
+        ],
+        how: [
+          "In Part 1, Darius is sure he will come out looking silly.",
+          "At the mirror, he touches his new haircut and grins. A grin at the mirror shows he likes what he sees.",
+          "The answer is \"When I turned the chair toward the mirror, he touched his new haircut and grinned.\"",
+          "\"Maybe\" does not tell how he feels about the haircut. Laughing and sitting still happen before he sees it, and the brave thought is about how he sits, not how his hair looks."
+        ],
+        misconception: "A common mix-up is choosing a sentence from the middle of the haircut. The question asks how Darius feels about the finished haircut.",
+        why: "The answer is \"When I turned the chair toward the mirror, he touched his new haircut and grinned.\" He grins at his new look, so he no longer thinks he looks silly. Laughing and sitting still happen before he sees the haircut, \"Maybe\" does not tell how he feels about it, and the brave thought is about how he sits, not how his hair looks." },
+      { id: "SK-TC2a-C10", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: ["p4"],
+        prompt: "Why does the author have Mr. Odom tell Part 2 instead of Darius?",
+        choices: [
+          { text: "so readers can see how Darius looked to someone else, not only how he felt", correct: true },
+          { text: "so readers can learn the steps for giving someone a haircut at home" },
+          { text: "so readers can tell that Mr. Odom does not like haircuts either" },
+          { text: "so readers can find out why Darius's mom chose this barbershop" }
+        ],
+        clue: "When an author switches narrators, the new narrator can tell things the first one cannot. Ask what Part 2 shows that Part 1 does not.",
+        hints: [
+          "When an author switches narrators, the new narrator can tell things the first one cannot. Ask what Part 2 shows that Part 1 does not.",
+          "Look at what Mr. Odom notices about the boy in his chair, and at what he thinks about him.",
+          "Mr. Odom never tells how to cut hair step by step, so the story is not teaching that. Test the other choices against what Part 2 adds."
+        ],
+        how: [
+          "Part 1 shows only what Darius himself thinks and feels before the haircut.",
+          "Part 2 shows Darius from the outside: his arms shake, he laughs at the sparrow story, and he sits as still as a statue.",
+          "The answer is \"so readers can see how Darius looked to someone else, not only how he felt.\"",
+          "Part 2 gives no haircut steps, nothing shows Mr. Odom dislikes haircuts, and the story never says why Mom chose this shop."
+        ],
+        misconception: "A common mix-up is thinking a second narrator only repeats the story. A new narrator lets readers see things the first narrator could not.",
+        why: "The answer is \"so readers can see how Darius looked to someone else, not only how he felt.\" Part 1 gives only Darius's own thoughts. Part 2 shows him from the outside, through the barber's eyes. It gives no haircut steps, nothing shows Mr. Odom dislikes haircuts, and the story never says why Mom chose the shop." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TC2a-C11", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: ["p5"], pick: 2,
+        prompt: "The poem never says who the speaker is. Which TWO clues show that the speaker is a dog?",
+        choices: [
+          { text: "The speaker tucks a tail and slinks away.", correct: true },
+          { text: "The speaker's paws kick at the air.", correct: true },
+          { text: "The speaker hides behind the door." },
+          { text: "The speaker does not want to smell like flowers." },
+          { text: "The speaker is wrapped up in a towel." }
+        ],
+        clue: "When a poem does not name its speaker, use clues. Ask what the speaker has and does that only some creatures have or do.",
+        hints: [
+          "When a poem does not name its speaker, use clues. Ask what the speaker has and does that only some creatures have or do.",
+          "Find each choice in the poem. For each one, ask: could a child in a bathtub do or have this, too? Choose two.",
+          "Hiding behind the door is something a child could do, so it does not prove the speaker is a dog. Check the other choices the same way."
+        ],
+        how: [
+          "Many lines could fit a child: hiding behind a door, not wanting to smell like flowers, being wrapped in a towel.",
+          "Only an animal like a dog has a tail to tuck and paws to kick.",
+          "The answers are \"The speaker tucks a tail and slinks away.\" and \"The speaker's paws kick at the air.\"",
+          "So the speaker is the family's dog, and they are the people giving the bath."
+        ],
+        misconception: "A common mix-up is choosing a clue that fits more than one kind of speaker. The best clues fit only one.",
+        why: "The answers are \"The speaker tucks a tail and slinks away.\" and \"The speaker's paws kick at the air.\" A child could hide behind a door, dislike smelling like flowers or be wrapped in a towel, but only an animal like a dog has a tail and paws." },
+      { id: "SK-TC2a-C12", type: "cr", dok: 3, std: ["3.T.C.2.a"], passages: ["p5"], rows: 4,
+        prompt: "The speaker thinks the bath is a mistake. What do YOU think about the bath? Write two or three sentences. Tell the speaker's view, tell your own view, and use one detail from the poem to explain your view.",
+        sample: "The speaker thinks the bath is a mistake and would rather smell like mud. I think the bath is a good idea. The people say, \"You smell so sweet!\" and they giggle while they scrub, so they are taking good care of their dog and having fun.",
+        criteria: [
+          "I told the speaker's view of the bath.",
+          "I told my own view in my own words. I may agree or disagree.",
+          "I used a detail from the poem to explain my view.",
+          "I made clear which view is the speaker's and which view is mine."
+        ],
+        clue: "Your view can be different from the speaker's. First say what the speaker thinks, then say what you think.",
+        hints: [
+          "Your view can be different from the speaker's. First say what the speaker thinks, then say what you think.",
+          "Look at what the people in the poem do and say in stanzas 3 and 4. Those details can help explain a view.",
+          "You can start like this: The speaker thinks the bath is ___. I think ___ because in the poem ___."
+        ],
+        how: [
+          "Find the speaker's view: stanza 3 says the bath is a mistake, and in stanza 4 the speaker plans to find mud.",
+          "Decide your own view. You may agree or disagree, but say it in your own words.",
+          "Pick one detail that supports your view, such as the people saying, \"You smell so sweet!\"",
+          "Put it together: the speaker's view, then yours, then the detail. One good answer is shown above. Other answers can also be right."
+        ],
+        why: "Many answers can be right. A good answer tells the speaker's view (the bath is a mistake; mud is best), gives the writer's own view, and backs it up with a detail from the poem, such as the people giggling or saying \"You smell so sweet!\"" },
+      { id: "SK-TC2a-C13", type: "match", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: [],
+        prompt: "Read each short part of a story. Who is telling it? Match each part to the kind of narrator.",
+        cols: ["a character in the story", "a narrator outside the story"],
+        rows: [
+          { text: "We raced to the park, and my sister won by one step.", answer: 0 },
+          { text: "Marcus kicked the ball and yelled, \"I did it!\"", answer: 1 },
+          { text: "The puppy wagged its tail as Lena opened the gate.", answer: 1 },
+          { text: "When Grandma called my name, I ran down the stairs.", answer: 0 }
+        ],
+        clue: "Ask who is telling each part. I, me, my and we outside quotation marks mean the teller is in the story.",
+        hints: [
+          "Ask who is telling each part. I, me, my and we outside quotation marks mean the teller is in the story.",
+          "Look for I, me, my or we in each part. Then check whether those words are inside quotation marks.",
+          "In the part about Marcus, the word I is inside quotation marks, so it is Marcus talking, not the teller. Sort the other three parts the same way."
+        ],
+        how: [
+          "\"We raced to the park, and my sister won\": we and my are not in quotation marks, so a character is telling it.",
+          "Marcus: the I is inside quotation marks, and the teller calls him Marcus, so the narrator is outside the story.",
+          "The puppy and Lena: there is no I or we at all, so the narrator is outside the story.",
+          "\"When Grandma called my name, I ran\": my and I are the teller's own words, so a character is telling it."
+        ],
+        misconception: "A common mix-up is calling any part with I in it a character narrator. Check whether the I is inside quotation marks.",
+        why: "A character tells the park race (we, my) and the stairs (my, I). A narrator outside the story tells about Marcus, whose I is inside quotation marks, and about the puppy and Lena, which has no I at all." },
+      { id: "SK-TC2a-C14", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: [],
+        stem: ["I am the best player on the Hawks.", "Today I scored zero goals, but that is only because nobody passed to me.", "Well, Tia passed to me two times, but the ball came too fast.", "Coach says I should practice stopping the ball with my foot.", "Coach does not know what she is talking about."],
+        prompt: "Read the part of a story in the box. What might a reader think that the narrator does not?",
+        choices: [
+          { text: "The narrator could get better by practicing, as the coach says.", correct: true },
+          { text: "The narrator really is the best player on the Hawks team." },
+          { text: "Tia never passes the ball to the narrator during games." },
+          { text: "The coach does not want the narrator on the team at all." }
+        ],
+        clue: "A reader can see things the narrator misses. Compare what the narrator says with what really happens.",
+        hints: [
+          "A reader can see things the narrator misses. Compare what the narrator says with what really happens.",
+          "Look at what happens with Tia's passes, and at what the coach tells the narrator to do.",
+          "Being the best player is what the narrator says, not what a reader can see in the scene. Check the other choices against what really happens."
+        ],
+        how: [
+          "The narrator says nobody passed, but then admits Tia passed two times.",
+          "The ball came too fast to stop, and the coach says to practice stopping the ball.",
+          "A reader might think the narrator could get better by practicing. The answer is \"The narrator could get better by practicing, as the coach says.\"",
+          "Being the best is only the narrator's view, Tia did pass, and nothing says the coach wants the narrator off the team."
+        ],
+        misconception: "A common mix-up is believing everything the narrator says. A reader checks the narrator's words against what really happens.",
+        why: "The answer is \"The narrator could get better by practicing, as the coach says.\" The narrator blames others, but Tia did pass twice and the ball was too fast to stop. Being the best is only the narrator's view, and nothing says the coach wants the narrator off the team." },
+      { id: "SK-TC2a-C15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
+        stem: ["Keisha's journal: Today we made clay pots in art class. My hands got cold and sticky, and my pot leaned to one side like it was about to tip over. I can't wait to wash this clay off.", "Marco's journal: Today we made clay pots in art class! I loved squishing the cool clay between my fingers. My pot leans a little, but Mr. Diaz says that gives it character."],
+        prompt: "Read the two journal entries in the box. Keisha and Marco write about the same art class. Which TWO sentences tell how their views are different?",
+        choices: [
+          { text: "Keisha dislikes how the clay feels, but Marco enjoys it.", correct: true },
+          { text: "Keisha is unhappy that her pot leans, but Marco does not mind.", correct: true },
+          { text: "Both of them made clay pots that lean to one side." },
+          { text: "Marco wants to wash the clay off as fast as he can." },
+          { text: "Keisha thinks Mr. Diaz likes her pot the best." }
+        ],
+        clue: "To compare two views, look at what each writer thinks about the same things.",
+        hints: [
+          "To compare two views, look at what each writer thinks about the same things.",
+          "In each journal, find what the writer says about the clay and about the pot. Choose two.",
+          "Both pots lean, so that sentence tells how the two pots are alike, not how the views differ. Check the other sentences against both journals."
+        ],
+        how: [
+          "Keisha's hands are cold and sticky, and she can't wait to wash the clay off. Marco loved squishing the cool clay.",
+          "Keisha's pot leans like it is about to tip over. Marco's leans too, but he likes that it gives the pot character.",
+          "The answers are \"Keisha dislikes how the clay feels, but Marco enjoys it.\" and \"Keisha is unhappy that her pot leans, but Marco does not mind.\"",
+          "Both pots leaning is a way they are alike. Keisha, not Marco, wants to wash the clay off, and nothing says Mr. Diaz likes Keisha's pot best."
+        ],
+        misconception: "A common mix-up is choosing something true about both writers. A difference has to be true for one and not the other.",
+        why: "The answers are \"Keisha dislikes how the clay feels, but Marco enjoys it.\" and \"Keisha is unhappy that her pot leans, but Marco does not mind.\" Both pots lean, which is a way they are alike. Keisha is the one who wants to wash the clay off, and Mr. Diaz talks only about Marco's pot." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. `like` lists only the core
+     items each one really practises. */
+  similar: [
+    { id: "SK-TC2a-S01", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: [],
+      like: ["SK-TC2a-C04", "SK-TC2a-C14"],
+      stem: ["Dear Aunt Rae,", "Mom made me go to the chess club at the library on Saturday. Chess is the most boring game ever invented. A girl named Grace showed me how the horse piece jumps over the others. Then I beat a fifth grader in my very first game, and everyone clapped. Anyway, I am probably not going back.", "Love, Jordan"],
+      prompt: "Read the letter in the box. What might a reader think about the chess club that Jordan does not say?",
+      choices: [
+        { text: "Jordan had a good time and did well at chess.", correct: true },
+        { text: "Chess club was boring for everyone who went." },
+        { text: "Grace did not want to help Jordan learn chess." },
+        { text: "Jordan lost every game he played on Saturday." }
+      ],
+      clue: "A letter writer is a narrator, too. Compare what Jordan says about chess with what really happens at the club.",
+      hints: [
+        "A letter writer is a narrator, too. Compare what Jordan says about chess with what really happens at the club.",
+        "Look at what Grace does and at what happens in Jordan's first game.",
+        "Jordan calls chess boring, but that is Jordan's view, and the question asks what a reader might think. Check the other choices against what happens."
+      ],
+      how: [
+        "Jordan says chess is boring and he is probably not going back.",
+        "But Grace teaches him a move, he beats a fifth grader in his first game, and everyone claps.",
+        "A reader might think Jordan had fun and did well. The answer is \"Jordan had a good time and did well at chess.\"",
+        "Nothing shows others were bored, Grace did help, and Jordan won his first game."
+      ],
+      misconception: "A common mix-up is choosing the narrator's own view instead of what the details show a reader.",
+      why: "The answer is \"Jordan had a good time and did well at chess.\" Jordan calls chess boring, but Grace helps him, he wins his first game and everyone claps. Nothing shows others were bored, Grace did help, and he did not lose every game." },
+    { id: "SK-TC2a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: [],
+      like: ["SK-TC2a-C11", "SK-TC2a-C03", "SK-TC2a-C06"],
+      stem: ["My roots dig deep beneath the yard.", "My branches reach up high.", "The children climb me after school", "and swing up toward the sky."],
+      prompt: "Read the poem in the box. Who is the speaker?",
+      choices: [
+        { text: "a tree in the yard", correct: true },
+        { text: "a child who climbs after school" },
+        { text: "a bird that lives in the branches" },
+        { text: "a narrator who is not in the poem" }
+      ],
+      clue: "When a poem does not name its speaker, use clues about what the speaker has and does.",
+      hints: [
+        "When a poem does not name its speaker, use clues about what the speaker has and does.",
+        "Look at what the speaker says it has in the first two lines.",
+        "The speaker says my and me, so the speaker is in the poem, not outside it. Check the other choices against the clues."
+      ],
+      how: [
+        "The speaker says my roots dig deep and my branches reach up high.",
+        "The children climb me, so the speaker is not one of the children.",
+        "Only a tree has roots and branches. The answer is \"a tree in the yard.\"",
+        "A bird might live in branches, but it does not have roots."
+      ],
+      misconception: "A common mix-up is choosing someone who appears in the poem, like the children, instead of the I who is speaking.",
+      why: "The answer is \"a tree in the yard.\" The speaker has roots and branches, and the children climb it. The speaker says my and me, so it is not an outside narrator, and a bird has no roots." },
+    { id: "SK-TC2a-S03", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: [], pick: 2,
+      like: ["SK-TC2a-C15", "SK-TC2a-C07", "SK-TC2a-C01"],
+      stem: ["Desmond and his grandma looked at the new mural on the library wall.", "\"It's so loud and bright that it hurts my eyes,\" Grandma said.", "Desmond grinned. \"It looks like a party! I could stare at it all day.\""],
+      prompt: "Read the story in the box. Which TWO sentences tell how Desmond and Grandma see the mural differently?",
+      choices: [
+        { text: "Grandma thinks the colors are too bright, but Desmond loves them.", correct: true },
+        { text: "Desmond wants to keep looking, but Grandma wants to look away.", correct: true },
+        { text: "Both of them think the mural is very bright." },
+        { text: "Desmond thinks the mural should be painted over." },
+        { text: "Grandma thinks the mural looks like a party." }
+      ],
+      clue: "To compare two views, find what each person says about the same thing.",
+      hints: [
+        "To compare two views, find what each person says about the same thing.",
+        "Read what Grandma says, then what Desmond says. Choose two.",
+        "Both of them notice that the mural is bright, so that sentence tells how they are alike. Check the other sentences against each person's words."
+      ],
+      how: [
+        "Grandma says the mural is so bright it hurts her eyes.",
+        "Desmond says it looks like a party, and he could stare at it all day.",
+        "The answers are \"Grandma thinks the colors are too bright, but Desmond loves them.\" and \"Desmond wants to keep looking, but Grandma wants to look away.\"",
+        "Both noticing the brightness is a way they are alike, and Desmond, not Grandma, says it looks like a party."
+      ],
+      why: "The answers are \"Grandma thinks the colors are too bright, but Desmond loves them.\" and \"Desmond wants to keep looking, but Grandma wants to look away.\" Both notice the brightness, which is how they are alike. Desmond says it looks like a party, and he never says to paint it over." }
+  ],
+  /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1-P4. */
+  addons: {
+    "SK-TC2a-P1": {
+      hints: [
+        "To find the narrator, ask who is telling the story. Look for I, me and my outside quotation marks.",
+        "Read paragraph 1 for how the narrator talks about Dev. Then read what Dev calls the narrator at the end.",
+        "The narrator says I and my, so the teller is a character, not someone outside the story. Decide which character fits both clues."
+      ],
+      how: [
+        "The narrator says \"my little brother, Dev,\" so the narrator is in the story and is older than Dev.",
+        "At the end, Dev says, \"Thanks for letting me help, Sis.\"",
+        "The answer is Dev's big sister. She is a character, so the teller is not someone outside the story, and she is not Dev or Mom."
+      ] },
+    "SK-TC2a-P2": {
+      hints: [
+        "A narrator's view shows in what the narrator thinks or does, not in plain facts.",
+        "Look at paragraphs 1 and 2, before anyone buys anything. Choose two.",
+        "\"Dev is six, and he talks to everybody\" is a fact about Dev. It does not show how the narrator feels about him. Check the other sentences."
+      ],
+      how: [
+        "\"I knew right away that he would ruin everything\" shows the narrator expects trouble from Dev.",
+        "\"I rolled my eyes\" shows the narrator is annoyed.",
+        "The answers are those two sentences. The others tell facts: Mom's plan, Dev's age and the family laughing."
+      ] },
+    "SK-TC2a-P3": {
+      hints: [
+        "A reader can see things the narrator does not say. Look at what Dev actually does, not at what the narrator calls it.",
+        "Reread paragraph 3. What does Dev do for the older woman?",
+        "Nothing in the story says Mom tells people to buy, so that choice does not fit Part A. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "The narrator says Dev was just lucky.",
+        "But Dev shows the older woman the puzzles and tells her which ones have all their pieces. He is friendly and helpful.",
+        "Part A: Dev sells a lot because he is friendly and helpful. Part B: \"He told her which ones had all their pieces.\"",
+        "His toys are not called new, Mom does not tell people to buy, and nothing is given away free."
+      ],
+      misconception: "A common mix-up is trusting the narrator's word (lucky) instead of what the story shows." },
+    "SK-TC2a-P4": {
+      hints: [
+        "In a poem, the voice is called the speaker. Find what the speaker says, then find what the other person does.",
+        "Read line 3 for the sister and line 4 for the speaker.",
+        "The two people do not feel the same way, so the choices that say they both feel the same do not fit. Decide which of the other two matches the frown and the words in line 4."
+      ],
+      how: [
+        "Line 3: the sister frowns out at the yard. A frown shows she is unhappy.",
+        "Line 4: the speaker says, \"I can't wait to play!\" That shows excitement.",
+        "The answer is \"The speaker is excited about the snow, but the sister is unhappy about it.\""
+      ] },
+    "SK-TC2a-P5": {
+      hints: [
+        "A narrator's view can change. Compare what the narrator thinks at the beginning with what she says at the end.",
+        "Reread paragraph 1, then paragraph 5. Listen to what she says very quietly.",
+        "At the end she does not say Dev ruined anything, so the choice that says she still thinks so does not fit. Test the choices that are left against her words in paragraph 5."
+      ],
+      how: [
+        "Paragraph 1: she knew right away that Dev would ruin everything.",
+        "Paragraph 5: after Dev sells more, she says very quietly, \"I guess talking to people helps.\"",
+        "The answer is \"She starts to see that Dev's talking helped.\"",
+        "Nothing says Dev should never help again or that the sale was a waste, and she no longer says he ruined it."
+      ],
+      misconception: "A common mix-up is choosing the narrator's view from the beginning. The question asks how her view changes by the end." }
+  },
   test: [
     { id: "SK-TC2a-T6", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the poem. How is the speaker's view of the wind different from Dad's view?",

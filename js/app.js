@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["choose", "path", "home", "skill", "mixed", "clues", "habits", "section", "player", "parents", "write"];
+  const SCREENS = ["choose", "path", "home", "skill", "std", "mixed", "clues", "habits", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -137,7 +137,7 @@
     [["Learn It", "Read a short lesson about the skill together."],
      ["Watch Me", "See the skill done step by step in examples."],
      ["Practice Together", "Answer questions side by side. Help me gives hints."],
-     ["Try It Yourself", "Your child answers alone. Help me opens after one wrong try."],
+     ["Try It Yourself", "Your child answers alone. In most lessons, Help me opens after one wrong try. Lessons with fifteen practice questions in three sets offer hints and Show me how at any time, and you can stop after a set."],
      ["Test Your Knowledge", "The skill check: no hints, and 80% of the points to pass. It starts fresh each time."]
     ].forEach(([name, line], i) => {
       const li = make("li", "rs");
@@ -306,7 +306,7 @@
   }
 
   const TITLE = { choose: "choose-title", path: "path-title", home: "home-title", mixed: "mixed-title", clues: "clues-title", habits: "habits-title", section: "section-title",
-                  parents: "parents-title", skill: "sk-title", player: "player-title", write: "write-title" };
+                  parents: "parents-title", skill: "sk-title", std: "std-title", player: "player-title", write: "write-title" };
   function route() {
     routing = true;
     const ret = pendingReturn; pendingReturn = null;
@@ -329,6 +329,11 @@
         if (ret && ret.kind === "parents") window.PP_PARENTS.open(ret.tab, ret.state);
         else window.PP_PARENTS.open(parts[1]);
         return;
+      }
+      /* expansion 2026-10-22: a standard page; the band form (3-5.T.T.1) settles on the grade 3 address */
+      if (parts[0] === "std") {
+        let code = ""; try { code = decodeURIComponent(parts.slice(1).join("/")); } catch (e) { code = ""; }
+        if (code && window.PP_STD.open(code, { routed: true })) return;
       }
       if (parts[0] === "skill") {
         let st = pendingStep || parts[2]; pendingStep = null;
@@ -384,6 +389,16 @@
     }));
     window.PP_SKILLS.init();
     window.PP_PATH.init();
+    window.PP_STD.init();
+    /* expansion 2026-10-22: every a.std-link opens its standard page in place (one delegated handler).
+       The href still works for a new tab, a copied link and a reload. */
+    document.addEventListener("click", e => {
+      const a = e.target && e.target.closest && e.target.closest("a.std-link");
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      if (current === "player" || current === "write") replaceNext = false;
+      window.PP_STD.open(a.dataset.std);
+    });
     /* the #hero-* support buttons are built (with their listeners) in buildShared() */
     /* QA-03: small help links near the top of the browse home; the explainer itself sits below the list */
     el("home-how").addEventListener("click", () => {
@@ -427,6 +442,7 @@
     returnTo = current === "parents" ? { kind: "parents", tab: window.PP_PARENTS.tab(), state: window.PP_PARENTS.snapshot(), hash } :
                current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), hash } :
                current === "section" ? { kind: "section", key: sectionKey, hash } :
+               current === "std" ? { kind: "std", code: window.PP_STD.current(), hash } :
                current === "home" || current === "clues" || current === "habits" || current === "path" ? { kind: current, hash } : returnTo;
   }
   function back() {
@@ -448,10 +464,11 @@
     if (r && r.kind === "clues") { window.PP_SKILLS.buildClues(); setHash("#clues"); show("clues"); el("clues-title").focus(); return; }
     if (r && r.kind === "habits") { window.PP_SKILLS.buildHabits(); setHash("#habits"); show("habits"); el("habits-title").focus(); return; }
     if (r && r.kind === "skill") { window.PP_SKILLS.open(r.code, skillStep); return; }
+    if (r && r.kind === "std") { window.PP_STD.open(r.code); return; }
     if (current === "player" && ps.section === "skill") {
       /* opened straight from an address (no page to return to): the skill's matching step */
       const set = PP.byId[ps.setId];
-      window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", t: "test", tB: "test" })[set.part]); return;
+      window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", y2: "try", y3: "try", t: "test", tB: "test" })[set.part]); return;
     }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));
@@ -459,6 +476,6 @@
   }
   function track() { lastHash = location.hash; }
 
-  window.PP_APP = { landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, current: () => current };
+  window.PP_APP = { landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, stepBackTo, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();
