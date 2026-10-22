@@ -278,7 +278,7 @@ The three core sets are registered as **`SK:<key>:y`** (set 1), **`SK:<key>:y2`*
 
 Each core set carries `own: true`, `part: "y" | "y2" | "y3"` and `setNo: 1 to 3`.
 
-**Practice Together** on a lesson with `core` becomes **all** of `L.practice`, with no halving. Its `next` points to the Try step's set picker. That is `PP_SKILLS.open(k, "try")`, not set 1 directly, so the child sees where they are. A lesson without `core` keeps today's split exactly, so lessons can move over one batch at a time.
+**Practice Together** on a lesson with `core` becomes `L.practice` **minus every item that `core` references with `{ref}`**, with no halving (lead decision, 2026-10-22; this replaces the earlier "all of `L.practice`"). On 3.T.T.1.c that is exactly P1 to P3; P4 to P6 appear only in core set 1. check-content enforces it (rule 10b) and `verification/practice-own.py` checks it in the browser. Lesson-level `addons` (keyed by item id, `{hints, how, mix?}` where `mix` or `misconception` is the mix-up line) are merged into practice, core and similar items at registration. A core item with no mapped similar item hides "Try a similar question"; check-content reports that as a warning, not a failure (rule 9). `core.rev` versions the core set. Its `next` points to the Try step's set picker. That is `PP_SKILLS.open(k, "try")`, not set 1 directly, so the child sees where they are. A lesson without `core` keeps today's split exactly, so lessons can move over one batch at a time.
 
 #### The Try step panel: a set picker
 
@@ -522,6 +522,7 @@ These are added to `verification/check-content.js` after the lesson block (:224-
    - There are three to fifteen similar items.
    - Similar items have no id or stem shared with core.
 10. **Practice Together** on a core lesson has two to five items. Legacy lessons keep 4 to 7.
+    - **10b (lead decision).** Together on a core lesson is `practice` minus the `{ref}` items. Every `ref` must name an item in `practice`, no item may be referenced twice, and a referenced item must not also appear as a full core item. The checker prints the Together ids it derives, so a reviewer can confirm that 3.T.T.1.c shows exactly P1 to P3.
 11. **Review ledger.** `docs/expansion-2026-10-22/review-ledger.json` maps `lessonKey → { core:{rev, hash, reviewers:[…], date}, similar:{…} }`.
     - The checker computes a SHA-256 hash of each lesson's core and similar items (ids and content) with Node `crypto`.
     - A **mismatch, or a missing entry, fails with `--release`** and warns otherwise.
