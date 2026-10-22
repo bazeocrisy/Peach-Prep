@@ -126,11 +126,11 @@ PP.addLesson({
        Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
     { id: "p4", title: "Ready in a Flash", genre: "Informational text",
       paragraphs: [
-        ["A fire station is a busy building.", "Firefighters may spend a whole day and a whole night there.", "Every part of the station is planned so they can get to a fire fast."],
+        ["A fire station is a busy building.", "Firefighters may spend a whole day and night there.", "Every part of the station is planned so they can get to a fire fast."],
         ["## The Engine Bay"],
         ["The fire trucks wait in a big room called the engine bay.", "Its wide doors open right onto the street.", "Each firefighter's boots, pants and coat hang on a rack beside the truck.", "The pants are already tucked into the boots.", "A firefighter can step in, pull them up and be dressed in less than a minute."],
         ["## Living Upstairs"],
-        ["Upstairs, there is a kitchen and a room full of beds.", "Firefighters cook meals together and take turns washing the dishes.", "When an alarm rings at night, bright lights flash on.", "In some stations, the firefighters slide down a shiny pole, because a pole is faster than the stairs."],
+        ["Upstairs, there is a kitchen and a room full of beds.", "Firefighters cook meals and take turns washing dishes.", "When an alarm rings at night, bright lights flash on.", "In some stations, the firefighters slide down a shiny pole, because a pole is faster than the stairs."],
         ["## Did You Know?"],
         ["Box: Long ago, horses pulled fire wagons through the streets.", "Today, some fire stations keep a dog as a pet."],
         ["From the pole to the boots beside the truck, a fire station is built to save time.", "When someone needs help, every second counts."]
@@ -141,9 +141,9 @@ PP.addLesson({
       ] },
     { id: "p5", title: "The Vine That Grew and Grew", genre: "Informational text",
       paragraphs: [
-        ["Drive along a country road in Georgia in summer, and you may see trees covered in green leaves from top to bottom.", "Those leaves may not belong to the trees at all.", "They may belong to a vine called kudzu."],
+        ["Drive along a country road in Georgia in summer, and you may see trees covered in leaves from top to bottom.", "Those leaves may not belong to the trees.", "They may belong to a vine called kudzu."],
         ["## A Plan to Help"],
-        ["Kudzu first came to the United States from Japan more than 100 years ago.", "In the 1930s, heavy rains were washing away the soil on many Southern farms.", "Kudzu's roots grip the dirt, so farmers were paid to plant it to hold the soil in place."],
+        ["Kudzu first came to the United States from Japan more than 100 years ago.", "In the 1930s, heavy rains washed away the soil on many Southern farms.", "Kudzu's roots grip the dirt, so farmers were paid to plant it to hold the soil in place."],
         ["## A Plan Gone Wrong"],
         ["Kudzu liked the hot, wet Southern summers a little too much.", "In summer, a kudzu vine can grow about a foot in one day.", "It climbs over trees, fences and even old barns.", "The thick leaves block the sunlight, so the trees underneath can die."],
         ["## Did You Know?"],
@@ -884,20 +884,20 @@ PP.addLesson({
        technical procedure) are used only by core sets 2 and 3. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
     { id: "p4", title: "The Wheel That Topped a Tower", genre: "Informational text",
       paragraphs: [
-        ["In 1889, a world's fair was held in Paris, France.", "For the fair, workers built the Eiffel Tower, the tallest tower in the world at that time.", "People came from all over to see it."],
-        ["A few years later, the city of Chicago planned its own world's fair for 1893.", "The planners wanted something even more amazing than the tower in Paris.", "So they asked builders to send in their best ideas."],
-        ["An engineer named George Ferris drew a plan for a giant wheel that would turn slowly in the sky.", "Riders would sit in cars hanging from its edge.", "Many people laughed at his plan.", "They said a wheel that big would fall down."],
-        ["Ferris did not give up.", "He showed the planners how strong steel parts would hold the wheel together.", "At last, they said yes.", "Workers built the wheel all through the cold winter."],
-        ["In June 1893, the wheel turned for the first time.", "It was taller than a 20-story building.", "It had 36 cars, and each car could hold about 60 people."],
-        ["The wheel stayed strong all summer, even on windy days.", "Because it was safe, people stopped worrying and lined up to ride.", "Since then, wheels like his have been built all over the world, and they are still called Ferris wheels."]
+        ["In 1889, a world's fair was held in Paris, France.", "Workers built the Eiffel Tower for it, the tallest tower in the world then.", "People came from all over to see it."],
+        ["A few years later, Chicago planned its own world's fair for 1893.", "The planners wanted something even more amazing than the tower in Paris.", "So they asked builders for their best ideas."],
+        ["An engineer named George Ferris drew a plan for a giant turning wheel.", "Many people laughed at his plan.", "They said a wheel that big would fall down."],
+        ["Ferris did not give up.", "He showed the planners how strong steel parts would hold it together.", "At last, they said yes.", "Workers built the wheel all winter."],
+        ["In June 1893, the wheel turned for the first time.", "It was taller than a 20-story building.", "It had 36 cars, and each one held about 60 people."],
+        ["The wheel stayed strong all summer, even on windy days.", "Because it was safe, people stopped worrying and lined up to ride.", "Today, wheels like it, called Ferris wheels, are all over the world."]
       ] },
     { id: "p5", title: "How to Patch a Bike Tube", genre: "Informational text",
       paragraphs: [
-        ["A flat tire can stop a bike ride.", "Often the problem is a tiny hole in the tube.", "The tube is the soft rubber ring inside the tire that holds the air.", "With a grown-up's help, you can patch the hole yourself."],
-        ["First, take the wheel off the bike and let out any air that is left.", "Next, use two flat tools called tire levers to pry one edge of the tire off the rim.", "Then pull the tube out."],
-        ["Now find the hole.", "Pump a little air into the tube and hold it near your ear.", "Listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water.", "Bubbles will rise from the spot where the air is escaping."],
-        ["When you find the hole, dry the tube.", "Rub the spot with sandpaper so the glue can grip.", "Spread a thin layer of glue over the hole and wait until it looks dull.", "Then press the patch on hard and hold it for a minute."],
-        ["Finally, tuck the tube back inside the tire, push the tire onto the rim and pump it up.", "Put the wheel back on the bike, and you are ready to ride again."]
+        ["A flat tire can stop a bike ride.", "Often the problem is a tiny hole in the tube.", "The tube is the rubber ring inside the tire that holds the air.", "A grown-up can help you patch it."],
+        ["First, take the wheel off and let out any air.", "Next, use two flat tools called tire levers to pry the tire off the rim.", "Then pull the tube out."],
+        ["Now find the hole.", "Pump a little air into the tube and hold it near your ear.", "Listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water.", "Bubbles will rise where the air escapes."],
+        ["When you find the hole, dry the tube.", "Rub the spot with sandpaper so the glue can grip.", "Spread thin glue over the hole and wait until it looks dull.", "Then press the patch on hard and hold it for a minute."],
+        ["Finally, tuck the tube back in, push the tire onto the rim and pump it up.", "Put the wheel back on, and you are ready to ride."]
       ] }
   ],
   practice: [
@@ -1070,7 +1070,7 @@ PP.addLesson({
           "A very tall tower is built for a fair in Paris.",
           "Chicago's planners ask builders to send in ideas.",
           "George Ferris draws a plan for a giant wheel.",
-          "Workers build the wheel through the cold winter.",
+          "Workers build the wheel all winter.",
           "The wheel turns for the first time."
         ],
         clue: "In a series of historical events, look for dates and time words like later, at last and since then.",
@@ -1086,7 +1086,7 @@ PP.addLesson({
           "So the order is: the tower, the planners ask for ideas, Ferris draws his plan, workers build the wheel, the wheel turns."
         ],
         misconception: "A common mix-up is guessing the order from what seems likely. Use the dates and the time words.",
-        why: "The order is: a very tall tower is built for a fair in Paris, Chicago's planners ask builders to send in ideas, George Ferris draws a plan for a giant wheel, workers build the wheel through the cold winter, and the wheel turns for the first time. The article tells these events in this order, from 1889 to June 1893." },
+        why: "The order is: a very tall tower is built for a fair in Paris, Chicago's planners ask builders to send in ideas, George Ferris draws a plan for a giant wheel, workers build the wheel all winter, and the wheel turns for the first time. The article tells these events in this order, from 1889 to June 1893." },
       { id: "SK-TT2b-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Why did the Chicago planners ask builders to send in their best ideas?",
@@ -1099,9 +1099,9 @@ PP.addLesson({
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
             { text: "\"The planners wanted something even more amazing than the tower in Paris.\"", correct: true },
-            { text: "\"A few years later, the city of Chicago planned its own world's fair for 1893.\"" },
+            { text: "\"A few years later, Chicago planned its own world's fair for 1893.\"" },
             { text: "\"People came from all over to see it.\"" },
-            { text: "\"Workers built the wheel all through the cold winter.\"" }
+            { text: "\"Workers built the wheel all winter.\"" }
           ] },
         clue: "A cause is why something happens. Ask what the planners wanted, and why they wanted it.",
         hints: [
@@ -1163,13 +1163,13 @@ PP.addLesson({
         why: "The answer is \"to show that Ferris kept going even when people doubted him.\" Right after people laugh, the article says Ferris did not give up, and the planners said yes. The wheel was built, the planners did not dislike the tower, and people did ride it." },
       { id: "SK-TT2b-C10", type: "hottext", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4"],
         prompt: "The author says people stopped worrying because the wheel was safe. Which sentence shows how people could tell it was safe? Choose the sentence in the passage.",
-        targets: ["p4:3:4", "p4:4:2", "p4:5:1", "p4:5:3", "p4:6:1"],
+        targets: ["p4:3:3", "p4:4:2", "p4:5:1", "p4:5:3", "p4:6:1"],
         answer: ["p4:6:1"], pick: 1,
         clue: "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
         hints: [
           "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
           "Look at what happens after the wheel starts turning. Which sentences tell about the wheel itself?",
-          "\"He showed the planners how strong steel parts would hold the wheel together\" happens before the wheel is built, and only the planners see it. Check the sentences that are left."
+          "\"He showed the planners how strong steel parts would hold it together\" happens before the wheel is built, and only the planners see it. Check the sentences that are left."
         ],
         how: [
           "People had said a wheel that big would fall down. To stop worrying, they needed to see that it would not.",
@@ -1219,7 +1219,7 @@ PP.addLesson({
         ],
         how: [
           "After the wheel is off, the tire still covers the tube, so the tube cannot come out yet.",
-          "The article says to use two tire levers to pry one edge of the tire off the rim. Then you pull the tube out.",
+          "The article says to use two tire levers to pry the tire off the rim. Then you pull the tube out.",
           "The answer is \"Pry one edge of the tire off the rim with tire levers.\"",
           "Pumping comes at the very end, and the sandpaper comes after you find the hole."
         ],
@@ -1675,21 +1675,22 @@ PP.addLesson({
        items on p1/p2), 2 (p7/p8) and 3 (p9/p10). Never used by test. NEEDS INDEPENDENT REVIEW. */
     { id: "p5", title: "Sweetgrass", genre: "Informational text",
       paragraphs: [
-        ["Sweetgrass is a plant that grows in sandy soil near the marshes along the coast of Georgia and South Carolina.", "Its blades are long and thin, and they bend without breaking."],
+        ["Sweetgrass is a plant that grows in sandy soil near the marshes along the coast of Georgia and South Carolina.", "It grows in thick clumps that can be as tall as a third grader.", "Its blades are long and thin, and they bend without breaking."],
+        ["In late summer, the plant sends up soft, pink, feathery tops.", "Small birds and rabbits often hide in the tall, thick clumps."],
         ["In summer, people cut the grass and lay it in the sun to dry.", "Once it is dry, sweetgrass smells sweet, a little like fresh hay.", "The smell can last for many years."]
       ] },
     { id: "p6", title: "Baskets That Tell a Story", genre: "Informational text",
       paragraphs: [
-        ["On the Georgia coast, many Gullah Geechee families make sweetgrass baskets.", "Their ancestors were brought from West Africa long ago, and they kept the skill of weaving baskets from grass."],
+        ["On the Georgia coast, many Gullah Geechee families make sweetgrass baskets.", "Long ago, their ancestors were brought here from West Africa.", "They kept the skill of weaving baskets from grass."],
         ["A basket maker winds dried sweetgrass into a tight coil.", "Then she stitches the coil together with thin strips of palmetto leaf.", "Round and round it grows, until it becomes a basket."],
-        ["A large basket can take weeks to finish.", "Grandparents often teach the craft to children, so the tradition stays alive."]
+        ["Some baskets are made to hold bread or fruit.", "Others are made to be looked at, like a painting.", "A large basket can take weeks to finish.", "Grandparents often teach the craft to children, so the tradition stays alive."]
       ] },
     { id: "p7", title: "From Old Can to New Can", genre: "Informational text",
       paragraphs: [
         ["An empty metal can does not have to be trash.", "Most drink cans are made of aluminum, a light metal that can be used again and again."],
-        ["First, a truck brings cans and bottles to a recycling center.", "There, everything rides along a moving belt.", "A strong magnet pulls out cans made of steel, and machines sort out the plastic and the glass."],
+        ["First, a truck brings cans and bottles to a recycling center.", "There, everything rides along a moving belt.", "A strong magnet pulls out steel cans.", "Machines sort out the plastic and glass."],
         ["Next, the aluminum cans are crushed into big blocks.", "The blocks go to a factory, where the cans are shredded into tiny pieces and melted.", "The hot metal is rolled into thin sheets, and the sheets are made into new cans."],
-        ["Making a can from old cans uses much less energy than making one from rock dug out of the ground.", "A recycled can may be back on a store shelf in about two months."]
+        ["Making a can from old cans takes much less energy than digging up rock to make a new one.", "A recycled can may be back on a store shelf in about two months."]
       ] },
     { id: "p8", title: "Three Bins at Oak Hill School", genre: "Informational text",
       paragraphs: [
@@ -1776,6 +1777,483 @@ PP.addLesson({
       clue: "A sentence that combines both passages needs one idea from each passage.",
       why: "The answer is \"Hummingbirds are tiny, fast flyers that travel far south each fall.\" Fast flying comes from Tiny Flyers, and the trip south comes from The Long Trip South. Hovering is only from Tiny Flyers, the trip and return are only from The Long Trip South, and neither passage says they catch spiders on the trip." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2a; pattern: 3.T.T.1.c) ----------
+     No refs: P4 and P5 are pre-answered by P1 and P3 (energy, fat, the trip south), so all five practice
+     items stay in Practice Together, and the fifteen are new. Set 1 uses p1/p2 for two items that Together
+     does not touch (Georgia, the blurred wings) and a new short pair (p5/p6). Sets 2 and 3 use new pairs.
+     Author log: docs/expansion-2026-10-22/batches/B2-b2a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { id: "SK-TT2c-C01", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p1", "p2"],
+        prompt: "Both passages tell that hummingbirds can be found in the same state. Choose the sentence from each passage that tells this.",
+        targets: ["p1:1:1", "p1:1:2", "p1:3:2", "p2:1:1", "p2:3:1", "p2:4:2"],
+        answer: ["p1:1:1", "p2:1:1"], pick: 2,
+        clue: "Information in both texts is a fact that each text tells, even when the words are different.",
+        hints: [
+          "Information in both texts is a fact that each text tells, even when the words are different.",
+          "Choose one sentence from Tiny Flyers and one from The Long Trip South. The two sentences you choose must name the same place.",
+          "The sentence about Mexico and Central America names places, but Tiny Flyers never names them, so it cannot be a fact in both. Now find a place that both passages name."
+        ],
+        how: [
+          "Tiny Flyers says the ruby-throated hummingbird is the one people see most often in Georgia.",
+          "The Long Trip South says hummingbirds zip around gardens all over Georgia in spring and summer.",
+          "The answers are \"The ruby-throated hummingbird is the hummingbird that people see most often in Georgia.\" and \"In spring and summer, hummingbirds zip around gardens all over Georgia.\"",
+          "Mexico and Central America are named only in The Long Trip South."
+        ],
+        misconception: "A common mix-up is choosing two sentences from the same passage. A fact in both texts needs one sentence from each.",
+        why: "The answers are \"The ruby-throated hummingbird is the hummingbird that people see most often in Georgia.\" and \"In spring and summer, hummingbirds zip around gardens all over Georgia.\" Each passage names Georgia. Mexico and Central America are only in The Long Trip South, and the other sentences name no state." },
+      { id: "SK-TT2c-C02", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: ["p1", "p2"],
+        prompt: "Which question is answered in Tiny Flyers but NOT in The Long Trip South?",
+        choices: [
+          { text: "Why do a hummingbird's wings look like a blur?", correct: true },
+          { text: "Why must hummingbird feeders be cleaned often?" },
+          { text: "What do hummingbirds eat besides nectar?" },
+          { text: "How many eggs does a hummingbird lay?" }
+        ],
+        clue: "To track where a fact comes from, check each text one at a time. Is it here? Is it also in the other text?",
+        hints: [
+          "To track where a fact comes from, check each text one at a time. Is it here? Is it also in the other text?",
+          "For each question, look for its answer in both passages, and keep track of what you find.",
+          "Neither passage tells how many eggs a hummingbird lays, so that question is not answered at all. Check the other questions the same way."
+        ],
+        how: [
+          "Tiny Flyers says the wings beat so fast that they look like a blur. The Long Trip South never tells about the wings.",
+          "Cleaning feeders is only in The Long Trip South. Both passages say hummingbirds eat insects. Neither tells about eggs.",
+          "The answer is \"Why do a hummingbird's wings look like a blur?\""
+        ],
+        misconception: "A common mix-up is choosing a question that both texts answer. The question must be answered in only one of them.",
+        why: "The answer is \"Why do a hummingbird's wings look like a blur?\" Only Tiny Flyers tells that the wings beat so fast they look like a blur. Feeders are only in The Long Trip South, both passages tell about eating insects, and neither tells about eggs." },
+      { id: "SK-TT2c-C03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: ["p5", "p6"],
+        prompt: "Which detail is told ONLY in \"Baskets That Tell a Story\"?",
+        choices: [
+          { text: "A large basket can take weeks to finish.", correct: true },
+          { text: "Sweetgrass smells a little like fresh hay." },
+          { text: "Sweetgrass blades bend without breaking." },
+          { text: "Sweetgrass grows in sandy soil." }
+        ],
+        clue: "A detail told in only one text is new information. Check each detail in Text 1, then in Text 2.",
+        hints: [
+          "A detail told in only one text is new information. Check each detail in Text 1, then in Text 2.",
+          "Read both texts and note which details are about the plant itself and which are about the baskets.",
+          "The hay smell is told in \"Sweetgrass,\" so it is not only in the basket text. Check the other details the same way."
+        ],
+        how: [
+          "\"Sweetgrass\" tells where the grass grows, that it bends without breaking and that it smells like hay.",
+          "\"Baskets That Tell a Story\" tells who makes the baskets, how they are made and how long a large one takes.",
+          "The answer is \"A large basket can take weeks to finish.\""
+        ],
+        misconception: "A common mix-up is choosing a detail about the same topic from the other text. Check where each detail really is.",
+        why: "The answer is \"A large basket can take weeks to finish.\" Only the basket text tells this. The hay smell, the bending blades and the sandy soil are all told in \"Sweetgrass.\"" },
+      { id: "SK-TT2c-C04", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: ["p5", "p6"],
+        prompt: "Use both texts. Why is sweetgrass a good material for these baskets?",
+        choices: [
+          { text: "Its blades bend without breaking, so they can be wound into a tight coil.", correct: true },
+          { text: "It grows in sandy soil, so the baskets can carry sand without leaking." },
+          { text: "It is stitched with palmetto, so it never needs to be dried in the sun." },
+          { text: "Its sweet smell keeps bugs away from the finished baskets for years." }
+        ],
+        clue: "To answer with two texts, find one piece of the answer in each text and put them together.",
+        hints: [
+          "To answer with two texts, find one piece of the answer in each text and put them together.",
+          "Look in each text for a fact about the grass that matters when someone makes a basket.",
+          "Neither text says the smell keeps bugs away, so that reason is not supported. Test the other reasons: does each part come from one of the texts, and does it make sense?"
+        ],
+        how: [
+          "\"Sweetgrass\" says the blades are long and thin and bend without breaking.",
+          "\"Baskets That Tell a Story\" says the basket maker winds the grass into a tight coil.",
+          "Put them together. The answer is \"Its blades bend without breaking, so they can be wound into a tight coil.\"",
+          "Sandy soil has nothing to do with carrying sand, palmetto is for stitching, and neither text says the smell keeps bugs away."
+        ],
+        misconception: "A common mix-up is joining two true facts that do not explain each other. The two parts must fit together.",
+        why: "The answer is \"Its blades bend without breaking, so they can be wound into a tight coil.\" Text 1 tells that the blades bend, and Text 2 tells that the basket maker winds them into a coil. The soil, the palmetto and the smell do not explain why the grass works for baskets." },
+      { id: "SK-TT2c-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p5", "p6"],
+        stem: ["Leo's note: Only \"Sweetgrass\" tells that the grass is dried before it is used. Only \"Sweetgrass\" tells who teaches the craft to children."],
+        prompt: "Leo's note has two mistakes. Choose the words that fix it.",
+        text: "The fact that the grass is dried is in {0}. The fact about who teaches the craft is in {1}.",
+        slots: [
+          { options: ["both texts", "only \"Sweetgrass\"", "only \"Baskets That Tell a Story\""], answer: 0 },
+          { options: ["both texts", "only \"Sweetgrass\"", "only \"Baskets That Tell a Story\""], answer: 2 }
+        ],
+        clue: "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
+        hints: [
+          "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
+          "For each fact, search \"Sweetgrass\" first. Then search the basket text.",
+          "\"Sweetgrass\" tells about the plant and how it is dried, but it never mentions grandparents or children. Use that to fix the second blank, and check the first blank yourself."
+        ],
+        how: [
+          "\"Sweetgrass\" says people lay the grass in the sun to dry. The basket text says the basket maker winds dried sweetgrass. So drying is in both texts.",
+          "Only the basket text tells that grandparents teach the craft to children.",
+          "So the fixed note says the drying fact is in both texts, and the teaching fact is only in \"Baskets That Tell a Story.\""
+        ],
+        misconception: "A common mix-up is missing a fact that the second text tells in different words, like \"dried sweetgrass.\"",
+        why: "The answers are \"both texts\" and \"only \"Baskets That Tell a Story\".\" \"Sweetgrass\" tells about drying the grass in the sun, and the basket text says the maker uses dried sweetgrass. Only the basket text tells that grandparents teach children." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT2c-C06", type: "match", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
+        prompt: "Which passage tells each piece of information? Match each one to a passage, or to Both.",
+        cols: ["From Old Can to New Can", "Three Bins at Oak Hill School", "Both"],
+        rows: [
+          { text: "how a magnet helps sort cans", answer: 0 },
+          { text: "how many trash bags the lunchroom fills now", answer: 1 },
+          { text: "that cans can be used again", answer: 2 },
+          { text: "what goes in each bin", answer: 1 },
+          { text: "how soon a recycled can can be back on a shelf", answer: 0 }
+        ],
+        clue: "For each row, search one passage and then the other. A row goes under Both only when each passage tells it.",
+        hints: [
+          "For each row, search one passage and then the other. A row goes under Both only when each passage tells it.",
+          "Keep a list as you read: things only about the recycling center, things only about the school, and things both passages tell.",
+          "Only the school passage tells about the three bins, so \"what goes in each bin\" goes under its title. Sort the other rows the same way."
+        ],
+        how: [
+          "The magnet and the two months are told only in \"From Old Can to New Can.\"",
+          "The trash bags and the three bins are told only in \"Three Bins at Oak Hill School.\"",
+          "Both passages tell that cans can be used again: one says aluminum can be used again and again, and the other puts cans in a Recycle bin, and Malia says most of it gets used again."
+        ],
+        misconception: "A common mix-up is putting a fact under Both because it fits the topic of both passages. Each passage must really tell it.",
+        why: "The magnet and how soon a can is back on a shelf are only in \"From Old Can to New Can.\" The trash bags and the bins are only in \"Three Bins at Oak Hill School.\" Both passages tell that cans can be used again." },
+      { id: "SK-TT2c-C07", type: "order", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
+        prompt: "Use both passages. Put the steps in order to show what happens to a can that a student at Oak Hill drops in the Recycle bin.",
+        steps: [
+          "A student drops the can into the blue Recycle bin.",
+          "The can rides along a moving belt at the recycling center.",
+          "The can is crushed into a big block with other cans.",
+          "The can is shredded and melted at a factory.",
+          "The metal is rolled into sheets and made into a new can."
+        ],
+        clue: "To follow something through two texts, start with the text where the journey begins, then keep going in the other text.",
+        hints: [
+          "To follow something through two texts, start with the text where the journey begins, then keep going in the other text.",
+          "Start with the school passage. Then use the time words First and Next in the other passage.",
+          "The can has to leave the school before anything happens at the recycling center, so dropping it in the bin comes first. Put the other four in order yourself."
+        ],
+        how: [
+          "The journey starts at Oak Hill: a student drops the can into the blue Recycle bin.",
+          "\"From Old Can to New Can\" picks up the story: at the recycling center, the can rides along a moving belt. Next, it is crushed into a block.",
+          "At a factory, it is shredded and melted, and the metal is rolled into sheets and made into a new can."
+        ],
+        misconception: "A common mix-up is using only one passage. The school passage tells where the can starts, and the can passage tells what happens next.",
+        why: "The order is: a student drops the can into the blue Recycle bin, the can rides along a moving belt at the recycling center, it is crushed into a big block, it is shredded and melted at a factory, and the metal is rolled into sheets and made into a new can. The first step comes from the school passage, and the rest come from the can passage." },
+      { id: "SK-TT2c-C08", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How does \"Three Bins at Oak Hill School\" add to what \"From Old Can to New Can\" tells about using things again?",
+          choices: [
+            { text: "It shows that food scraps, not only cans, can be turned into something useful.", correct: true },
+            { text: "It explains how a magnet pulls steel cans off a moving belt." },
+            { text: "It tells how much energy is saved by recycling a can." },
+            { text: "It explains that aluminum is a light kind of metal." }
+          ] },
+        partB: { prompt: "Which sentence from \"Three Bins at Oak Hill School\" best supports the answer to Part A?",
+          choices: [
+            { text: "\"There, worms and tiny living things break the scraps down into rich, dark soil.\"", correct: true },
+            { text: "\"The blue Recycle bin is for cans and plastic bottles.\"" },
+            { text: "\"Then the students came up with a plan.\"" },
+            { text: "\"Now the lunchroom fills only three trash bags a day.\"" }
+          ] },
+        clue: "When a second text adds to a first, it gives new information that the first text does not have.",
+        hints: [
+          "When a second text adds to a first, it gives new information that the first text does not have.",
+          "Think about what the school does with things that are not cans. For Part B, choose one sentence.",
+          "The magnet is in the can passage, so it is not something the school passage adds. For Part B, the sentence must match your Part A answer."
+        ],
+        how: [
+          "The can passage tells only about cans and other things that get recycled.",
+          "The school passage adds food scraps: they go to a compost pile, where worms turn them into rich soil for the garden.",
+          "Part A: It shows that food scraps, not only cans, can be turned into something useful. Part B: \"There, worms and tiny living things break the scraps down into rich, dark soil.\"",
+          "The other Part A choices tell about things in the can passage, so they are not new information."
+        ],
+        misconception: "A common mix-up is choosing information from the first text. The question asks what the second text adds.",
+        why: "Part A: It shows that food scraps, not only cans, can be turned into something useful. Part B: \"There, worms and tiny living things break the scraps down into rich, dark soil.\" The can passage never mentions food scraps. The magnet and the light metal are from the can passage, and the school passage says nothing about energy." },
+      { id: "SK-TT2c-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
+        prompt: "Use both passages. Why is it better for a student at Oak Hill to put an empty can in the Recycle bin than in the Trash bin?",
+        choices: [
+          { text: "The can can become a new can, which takes less energy than making one from rock.", correct: true },
+          { text: "Worms in the compost pile can turn the can into rich, dark soil." },
+          { text: "The can will be sent back to the lunchroom to be filled again." },
+          { text: "Cans left in the Trash bin will make the blue bin too full." }
+        ],
+        clue: "Some questions need a fact from each text. Find where the can goes in one text and what happens to it in the other.",
+        hints: [
+          "Some questions need a fact from each text. Find where the can goes in one text and what happens to it in the other.",
+          "Find what the school passage says about its bins. Then find what the can passage says is good about recycling.",
+          "Worms break down food scraps, not cans, so that reason does not fit. Check the other reasons against both passages."
+        ],
+        how: [
+          "The school passage says cans go in the blue Recycle bin to be recycled.",
+          "The can passage says a recycled can becomes a new can, and making it from old cans uses much less energy than making one from rock.",
+          "The answer is \"The can can become a new can, which takes less energy than making one from rock.\"",
+          "Worms are for food scraps, and neither passage says cans go back to the lunchroom or that trash fills the blue bin."
+        ],
+        misconception: "A common mix-up is mixing up the bins. Cans go to recycling, and only food scraps go to the compost pile.",
+        why: "The answer is \"The can can become a new can, which takes less energy than making one from rock.\" The school passage puts cans in the Recycle bin, and the can passage tells what recycling does and why it saves energy. Worms break down food scraps, and neither passage says cans return to the lunchroom." },
+      { id: "SK-TT2c-C10", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p7", "p8"],
+        prompt: "Both passages tell that a truck is part of recycling. Choose the sentence from each passage that tells this.",
+        targets: ["p7:2:1", "p7:2:3", "p7:3:2", "p8:2:1", "p8:3:1", "p8:3:2"],
+        answer: ["p7:2:1", "p8:3:1"], pick: 2,
+        clue: "Information in both texts can be told in different words. Look for the same idea in each text.",
+        hints: [
+          "Information in both texts can be told in different words. Look for the same idea in each text.",
+          "Choose one sentence from each passage. Look for the sentences that tell how things travel from one place to another.",
+          "\"The blocks go to a factory\" tells how cans travel, but it does not say what carries them. Check the other sentences for what does the carrying."
+        ],
+        how: [
+          "\"From Old Can to New Can\" says, \"First, a truck brings cans and bottles to a recycling center.\"",
+          "\"Three Bins at Oak Hill School\" says, \"Each week, the city's recycling truck picks up the cans and bottles.\"",
+          "Those two sentences are the answers. The other sentences tell about the magnet, the factory, the bins and the compost."
+        ],
+        misconception: "A common mix-up is choosing a sentence about moving things that never names a truck.",
+        why: "The answers are \"First, a truck brings cans and bottles to a recycling center.\" and \"Each week, the city's recycling truck picks up the cans and bottles.\" Each passage names a truck. The other sentences tell about the magnet, the factory, the bins and the compost pile." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT2c-C11", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: ["p9", "p10"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Use both passages. Why don't basketball games today have to stop after every basket?",
+          choices: [
+            { text: "The net is open at the bottom, so the ball drops through and no one has to climb up for it.", correct: true },
+            { text: "Players now use a soccer ball, which bounces back out of the basket on its own." },
+            { text: "The backboard knocks the ball back out of the basket after each score." },
+            { text: "Fans in the balcony reach out and catch the ball for the players." }
+          ] },
+        partB: { prompt: "Which TWO sentences, one from each passage, best support the answer to Part A?", pick: 2,
+          choices: [
+            { text: "\"Every time someone scored, a person had to climb a ladder and take the ball out.\"", correct: true },
+            { text: "\"Finally, the nets were left open at the bottom, so the ball dropped right through after every basket.\"", correct: true },
+            { text: "\"Naismith nailed two peach baskets to the railing of a balcony above the gym floor.\"" },
+            { text: "\"A flat board called a backboard was added behind each hoop.\"" },
+            { text: "\"It kept fans in the balcony from reaching out and knocking the ball away.\"" }
+          ] },
+        clue: "To answer with two texts, find what one text says about the past and what the other says about the change.",
+        hints: [
+          "To answer with two texts, find what one text says about the past and what the other says about the change.",
+          "Find why the first game had to stop in \"A Game for a Cold Winter.\" Then find what changed in \"How the Basket Changed.\" For Part B, choose one sentence from each passage.",
+          "The backboard was added to stop fans from knocking the ball away, not to bounce the ball out. For Part B, the two sentences must work together to answer Part A."
+        ],
+        how: [
+          "In the first game, someone had to climb a ladder to get the ball out after every score.",
+          "Later, the nets were left open at the bottom, so the ball dropped right through.",
+          "Part A: The net is open at the bottom, so the ball drops through and no one has to climb up for it. Part B: \"Every time someone scored, a person had to climb a ladder and take the ball out.\" and \"Finally, the nets were left open at the bottom, so the ball dropped right through after every basket.\"",
+          "The backboard keeps fans from knocking the ball away, and neither passage says fans catch the ball or that the ball bounces out by itself."
+        ],
+        misconception: "A common mix-up is answering from one passage only. The question needs the old problem from one passage and the change from the other.",
+        why: "Part A: The net is open at the bottom, so the ball drops through and no one has to climb up for it. Part B: \"Every time someone scored, a person had to climb a ladder and take the ball out.\" and \"Finally, the nets were left open at the bottom, so the ball dropped right through after every basket.\" The first passage tells the old problem, and the second tells the change that fixed it. The backboard was for the fans, not for getting the ball out." },
+      { id: "SK-TT2c-C12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p9", "p10"],
+        prompt: "Both passages tell two of the same facts. Choose the words that complete the sentence.",
+        text: "Both passages tell that the game {0}, and that the hoop or basket {1}.",
+        slots: [
+          { options: ["was invented in 1891", "was first played with a soccer ball", "was first played outdoors"], answer: 0 },
+          { options: ["was 10 feet off the ground", "had a backboard behind it", "had a net open at the bottom"], answer: 0 }
+        ],
+        clue: "A fact is in both texts only if each text tells it, even in different words.",
+        hints: [
+          "A fact is in both texts only if each text tells it, even in different words.",
+          "For each choice, check \"A Game for a Cold Winter\" first, then \"How the Basket Changed.\"",
+          "Only \"How the Basket Changed\" tells about the backboard, so the backboard choice is not in both. Check the choices for the first blank yourself."
+        ],
+        how: [
+          "\"A Game for a Cold Winter\" says the game began in December 1891, and \"How the Basket Changed\" says it was invented in 1891.",
+          "The first passage says each basket was 10 feet off the ground, and the second says the hoop is still 10 feet off the ground.",
+          "The soccer ball is only in the first passage, and the backboard and the open net are only in the second. Neither says the game was played outdoors."
+        ],
+        misconception: "A common mix-up is choosing a true fact from only one passage. Check that each passage tells it.",
+        why: "The answers are \"was invented in 1891\" and \"was 10 feet off the ground.\" Each passage tells both facts. The soccer ball is only in the first passage, the backboard and the open net are only in the second, and the game was invented to be played indoors." },
+      { id: "SK-TT2c-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: ["p9", "p10"],
+        prompt: "How does \"How the Basket Changed\" help explain one of Naismith's rules?",
+        choices: [
+          { text: "It tells how players learned to dribble, so they could move the ball without running while holding it.", correct: true },
+          { text: "It tells that the rule about running was dropped when the backboard was added." },
+          { text: "It tells that players ran much faster once the nets were left open at the bottom." },
+          { text: "It tells that fans in the balcony made up the rule about running with the ball." }
+        ],
+        clue: "When a second text adds to a first, look for a place where it explains or builds on something the first text said.",
+        hints: [
+          "When a second text adds to a first, look for a place where it explains or builds on something the first text said.",
+          "Find the rule about running in \"A Game for a Cold Winter.\" Then read \"How the Basket Changed\" and ask which change has to do with that rule.",
+          "The backboard was added to stop fans, and the second passage never says a rule was dropped. Test the other choices against what the second passage says."
+        ],
+        how: [
+          "\"A Game for a Cold Winter\" says one rule was that players could not run while holding the ball.",
+          "\"How the Basket Changed\" says players learned to dribble, and dribbling let a player carry the ball without breaking the rule about running.",
+          "The answer is \"It tells how players learned to dribble, so they could move the ball without running while holding it.\"",
+          "The rule was not dropped, the open nets are not about running, and fans did not make the rules."
+        ],
+        misconception: "A common mix-up is choosing a change that is in the second passage but has nothing to do with the rule.",
+        why: "The answer is \"It tells how players learned to dribble, so they could move the ball without running while holding it.\" The first passage gives the rule, and the second explains how dribbling works with it. The rule was not dropped, the nets and the fans have nothing to do with it." },
+      { id: "SK-TT2c-C14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p9", "p10"],
+        stem: ["Jamal's notes: \"A Game for a Cold Winter\" tells that someone pulled a chain to let the ball out of the net. \"How the Basket Changed\" tells how many rules Naismith wrote."],
+        prompt: "Jamal mixed up which passage tells each fact. Choose the words that fix his notes.",
+        text: "The chain is told about in {0}. The number of rules is told about in {1}.",
+        slots: [
+          { options: ["\"How the Basket Changed\"", "\"A Game for a Cold Winter\"", "both passages"], answer: 0 },
+          { options: ["\"How the Basket Changed\"", "\"A Game for a Cold Winter\"", "both passages"], answer: 1 }
+        ],
+        clue: "Before you say which text tells a fact, check each text. Do not guess from the topic.",
+        hints: [
+          "Before you say which text tells a fact, check each text. Do not guess from the topic.",
+          "Search both passages for the word chain. Then search both passages for a number of rules.",
+          "The first passage tells about the very first game, when the baskets were peach baskets with no nets. Use that to decide the first blank, and check the second blank yourself."
+        ],
+        how: [
+          "The chain is in the second passage: at first the nets were closed, and someone pulled a chain to let the ball out.",
+          "The number of rules is in the first passage: Naismith wrote 13 simple rules.",
+          "So the chain is told about in \"How the Basket Changed,\" and the number of rules is told about in \"A Game for a Cold Winter.\""
+        ],
+        misconception: "A common mix-up is guessing from the topic. Both passages are about early basketball, so check where each fact really is.",
+        why: "The answers are \"How the Basket Changed\" for the chain and \"A Game for a Cold Winter\" for the number of rules. The chain is part of the changes to the nets, and the 13 rules are part of the first game." },
+      { id: "SK-TT2c-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: [],
+        stem: ["Note 1, from Ms. Diaz: Our class trip to the Science Center is on Friday. The bus leaves at 8:30, so please be at school by 8:15. Wear sneakers, because we will walk on a nature trail.", "Note 2, from the Science Center: Welcome, students! After a rain, our nature trail can be very muddy. We do not sell lunch here, so please bring a packed lunch."],
+        prompt: "Kiri reads both notes. Which plan uses information from BOTH notes?",
+        choices: [
+          { text: "Wear old sneakers that can get muddy, and bring a packed lunch.", correct: true },
+          { text: "Wear sneakers, and get to school by 8:15 to catch the bus." },
+          { text: "Wear sandals for the trail, and bring a packed lunch." },
+          { text: "Buy lunch at the Science Center, and wear sneakers." }
+        ],
+        clue: "To use two texts together, take one useful fact from each and check that nothing in either text goes against your plan.",
+        hints: [
+          "To use two texts together, take one useful fact from each and check that nothing in either text goes against your plan.",
+          "List what Note 1 asks students to do. Then list what Note 2 adds.",
+          "Note 2 says lunch is not sold there, so buying lunch at the Science Center will not work. Test the other plans against both notes."
+        ],
+        how: [
+          "Note 1 says to wear sneakers for the nature trail and to be at school by 8:15.",
+          "Note 2 adds that the trail can be muddy and that students must bring a packed lunch.",
+          "The answer is \"Wear old sneakers that can get muddy, and bring a packed lunch.\" It uses facts from both notes.",
+          "Getting to school by 8:15 uses only Note 1, sandals go against Note 1, and buying lunch goes against Note 2."
+        ],
+        misconception: "A common mix-up is choosing a plan that is correct but uses only one note.",
+        why: "The answer is \"Wear old sneakers that can get muddy, and bring a packed lunch.\" Sneakers come from Note 1, and the mud and the packed lunch come from Note 2. The 8:15 plan uses only Note 1, sandals go against Note 1, and buying lunch goes against Note 2." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short pair. */
+  similar: [
+    { id: "SK-TT2c-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C01", "SK-TT2c-C10", "SK-TT2c-C12"],
+      stem: ["Text 1: In fall, gray squirrels bury acorns in the ground, one at a time, in many different spots.", "Text 2: In winter, squirrels dig up the acorns they buried. They find many of them by smell. Acorns they forget may sprout into new oak trees."],
+      prompt: "Which fact is in BOTH texts?",
+      choices: [
+        { text: "Squirrels bury acorns in the ground.", correct: true },
+        { text: "Squirrels find acorns by smell." },
+        { text: "Forgotten acorns can grow into trees." },
+        { text: "Squirrels bury acorns one at a time." }
+      ],
+      clue: "A fact in both texts can be told in different words. Check each fact in Text 1, then in Text 2.",
+      hints: [
+        "A fact in both texts can be told in different words. Check each fact in Text 1, then in Text 2.",
+        "Text 2 does not use the word bury in the same way. Look for words that mean the acorns were buried.",
+        "Finding acorns by smell is only in Text 2, so it is not in both. Check the other facts."
+      ],
+      how: [
+        "Text 1 says squirrels bury acorns. Text 2 says squirrels dig up the acorns they buried.",
+        "The answer is \"Squirrels bury acorns in the ground.\"",
+        "Smell and new trees are only in Text 2, and one at a time is only in Text 1."
+      ],
+      why: "The answer is \"Squirrels bury acorns in the ground.\" Text 1 tells it, and Text 2 tells it with the words \"the acorns they buried.\" Smell and new oak trees are only in Text 2, and one at a time is only in Text 1." },
+    { id: "SK-TT2c-S02", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C04", "SK-TT2c-C09", "SK-TT2c-C11", "SK-TT2c-C13"],
+      stem: ["Text 1: A polar bear's thick fur looks white, like the snow and ice around it.", "Text 2: Seals rest on the sea ice near holes in the ice. A seal watches for danger and slips into the water if it sees something coming."],
+      prompt: "Use both texts. How might a polar bear's white fur help it hunt seals?",
+      choices: [
+        { text: "It blends in with the ice, so a watching seal may not see the bear coming.", correct: true },
+        { text: "It keeps the bear warm while it swims under the sea ice." },
+        { text: "It helps the bear find the holes that seals use in the ice." },
+        { text: "It scares the seals, so they stay on top of the ice." }
+      ],
+      clue: "Find one fact in each text, then ask how the two facts work together.",
+      hints: [
+        "Find one fact in each text, then ask how the two facts work together.",
+        "Text 1 tells what the fur looks like. Text 2 tells what a seal does when it sees something coming.",
+        "Neither text says the fur keeps the bear warm in the water, so that reason is not supported. Test the other reasons against both texts."
+      ],
+      how: [
+        "Text 1: the white fur looks like the snow and ice.",
+        "Text 2: a seal watches for danger and slips away if it sees something.",
+        "Together: the answer is \"It blends in with the ice, so a watching seal may not see the bear coming.\""
+      ],
+      why: "The answer is \"It blends in with the ice, so a watching seal may not see the bear coming.\" Text 1 tells that the fur looks like the ice, and Text 2 tells that seals escape when they see danger. Neither text says the fur keeps the bear warm, finds holes or scares seals." },
+    { id: "SK-TT2c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C02", "SK-TT2c-C03", "SK-TT2c-C05", "SK-TT2c-C14"],
+      stem: ["Text 1: Dolphins are mammals, so they breathe air. They breathe through a blowhole on top of the head.", "Text 2: Dolphins must come up to breathe even while they rest. Scientists think a dolphin rests one half of its brain at a time, so the other half can help it swim up for air."],
+      prompt: "Which fact is told ONLY in Text 2?",
+      choices: [
+        { text: "A dolphin may rest one half of its brain at a time.", correct: true },
+        { text: "Dolphins need to breathe air." },
+        { text: "A dolphin has a blowhole on top of its head." },
+        { text: "Dolphins are mammals." }
+      ],
+      clue: "Check each fact in both texts. A fact told only in Text 2 is new information.",
+      hints: [
+        "Check each fact in both texts. A fact told only in Text 2 is new information.",
+        "Read Text 1 first and mark what it tells. Then see what Text 2 adds.",
+        "Both texts tell that dolphins breathe air, so that fact is in both. Check the other facts."
+      ],
+      how: [
+        "Text 1 tells that dolphins are mammals, breathe air and have a blowhole.",
+        "Text 2 also tells that they breathe, and it adds how they rest.",
+        "The answer is \"A dolphin may rest one half of its brain at a time.\""
+      ],
+      why: "The answer is \"A dolphin may rest one half of its brain at a time.\" Only Text 2 tells how a dolphin rests. Breathing air is in both texts, and the blowhole and being mammals are only in Text 1." }
+  ],
+  /* Hints and Show me how for Practice Together (P1-P5); core has no refs. */
+  addons: {
+    "SK-TT2c-P1": {
+      hints: [
+        "For each choice, ask, \"Is this in Tiny Flyers? Is it also in The Long Trip South?\"",
+        "Read the last paragraph of Tiny Flyers and the second paragraph of The Long Trip South. Then check each choice.",
+        "Flying backward is told only in Tiny Flyers, so it is not in both. Check the other choices the same way."
+      ],
+      how: [
+        "Tiny Flyers says flying so fast uses a lot of energy, so a hummingbird must eat many times a day.",
+        "The Long Trip South says the birds eat extra food and store it as fat for energy.",
+        "The answer is \"Hummingbirds need a lot of food for energy.\"",
+        "Flying backward and the nickel are only in Tiny Flyers, and the Gulf of Mexico is only in The Long Trip South."
+      ] },
+    "SK-TT2c-P2": {
+      hints: [
+        "Check each piece of information in one passage, then in the other. Mark Both only if you find it in each passage.",
+        "Make two quick lists as you read: what Tiny Flyers tells and what The Long Trip South tells.",
+        "Hovering is told only in Tiny Flyers, so that row goes under Tiny Flyers. Sort the other rows the same way."
+      ],
+      how: [
+        "Hovering and how the bird got its name are in Tiny Flyers.",
+        "Where the birds go for winter and the feeders in spring are in The Long Trip South.",
+        "Drinking nectar is in both: Tiny Flyers says they lap up nectar, and The Long Trip South says they drink extra nectar."
+      ] },
+    "SK-TT2c-P3": {
+      hints: [
+        "Find what the second passage says about energy. It must be new information that the first passage does not give.",
+        "Read the second passage and find a fact that Tiny Flyers does not give. For Part B, choose one sentence.",
+        "The humming sound and hovering are told in Tiny Flyers, so they do not add anything new. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "Tiny Flyers says flying uses a lot of energy.",
+        "The Long Trip South adds that the birds store extra food as fat for the trip.",
+        "Part A: It explains that the birds store extra food as fat to use on their trip. Part B: \"Their bodies store the extra food as fat.\"",
+        "Neither passage says sugar water keeps the birds warm."
+      ] },
+    "SK-TT2c-P4": {
+      hints: [
+        "The report is about why, not what or how. Look in both passages for sentences that tell what food does for a hummingbird.",
+        "Look in both passages. Ask of each sentence: does it tell what food does for the bird, or only what or how it eats? Choose two.",
+        "The hovering sentence tells how a hummingbird eats, not why it needs so much food. Check the other sentences the same way."
+      ],
+      how: [
+        "Tiny Flyers: \"Flying so fast uses a lot of energy.\"",
+        "The Long Trip South: \"The fat gives them energy for the journey.\"",
+        "Together they explain why hummingbirds need so much food. The other sentences tell how, what or when."
+      ] },
+    "SK-TT2c-P5": {
+      hints: [
+        "A sentence that combines both passages needs one idea from each passage.",
+        "For each choice, find where each part of the sentence comes from.",
+        "Hovering in front of flowers is told only in Tiny Flyers, so that choice uses only one passage. Check the other choices the same way."
+      ],
+      how: [
+        "Tiny Flyers tells that hummingbirds are tiny, fast flyers.",
+        "The Long Trip South tells that they travel far south each fall.",
+        "The answer is \"Hummingbirds are tiny, fast flyers that travel far south each fall.\"",
+        "One choice uses only Tiny Flyers, one uses only The Long Trip South, and neither passage says they catch spiders on the trip."
+      ] }
+  },
   test: [
     { id: "SK-TT2c-T1", type: "mc", points: 1, dok: 3, passages: ["p3", "p4"],
       prompt: "Which statement uses information from BOTH passages?",

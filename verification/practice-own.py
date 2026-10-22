@@ -351,10 +351,20 @@ with sync_playwright() as p:
         how:document.getElementById('q-how-steps').getBoundingClientRect().bottom, crTop:document.getElementById('q-cr').getBoundingClientRect().top,
         crBottom:document.getElementById('q-cr').getBoundingClientRect().bottom, fbTop:document.getElementById('q-feedback').getBoundingClientRect().top,
         btnTop:document.getElementById('q-check').getBoundingClientRect().top, status:document.getElementById('q-status').textContent})""")
-    check("D.3 Show me how on a written item: compare wording (no 'choose it'), refreshed after Compare; the checklist is below the steps and the feedback's 'shown above' is true",
-          "Compare your answer with the sample, then press Compare with the sample" in h0 and "choose" not in h0
-          and h1["line"].endswith("Compare your answer with the sample and the checklist below.") and "choose" not in h1["all"]
+    check("D.3 Show me how on a written item: the sample and the criteria, compare wording (no 'choose'), refreshed after Compare; the checklist is below the steps and the feedback's 'shown above' is true",
+          "Compare your own writing with them. Then press Compare with the sample to tick the checklist." in h0 and "choose" not in h0
+          and h1["line"].endswith("You can tick the checklist below.") and "choose" not in h1["all"].lower()
+          and "One good answer:" in h1["all"] and "I wrote a lesson that works for anyone." in h1["all"]
           and "shown above" in h1["fb"] and h1["how"] <= h1["crTop"] and h1["crBottom"] <= h1["fbTop"] and "Answer shown" in h1["status"], (h0, h1))
+    close_page(q)
+    # D.4 the authored written item 3.T.C.2.a C12 (reported by its author): the same type-aware Show me how
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    c12 = q.evaluate("""(()=>{const sid=['y','y2','y3'].map(p=>'SK:3.T.C.2.a:'+p).find(id=>PP.byId[id]&&PP.byId[id].items.some(i=>i.id==='SK-TC2a-C12'));
+        if(!sid)return null;const pos=PP.byId[sid].items.findIndex(i=>i.id==='SK-TC2a-C12');PP_PLAYER.start(sid,'try',{pos});
+        document.getElementById('q-how').click();const it=PP_PLAYER.ctx().item;const t=document.getElementById('q-how-steps').textContent;
+        return {type:it.type, t, sample:t.indexOf(it.sample)>=0, crit:(it.criteria||[]).every(c=>t.indexOf(c)>=0), choose:/choose/i.test(t), status:document.getElementById('q-status').textContent};})()""")
+    check("D.4 3.T.C.2.a C12 (cr): Show me how shows its sample and every criterion, with no 'choose' wording, and marks it Answer shown",
+          c12 is not None and (c12["type"] == "cr" and c12["sample"] and c12["crit"] and not c12["choose"] and "Answer shown" in c12["status"]), c12)
     close_page(q)
 
     # ---------------- E. storage: blocked, full, malformed ----------------

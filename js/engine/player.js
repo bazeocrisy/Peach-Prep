@@ -299,8 +299,8 @@
        hints, these steps, the compare box (#q-cr), the feedback, then the buttons. */
     const cr = it.type === "cr";
     box.appendChild(make("p", "how-warn-line", c.st.shown
-      ? (cr ? "This shows one good answer, so this question counts as answer shown. Compare your answer with the sample" +
-              (c.st.crDone ? " and the checklist below." : ", then press Compare with the sample to see the checklist.")
+      ? (cr ? "This shows one good answer and what a good answer does, so this question counts as answer shown. Compare your own writing with them." +
+              (c.st.crDone ? " You can tick the checklist below." : " Then press Compare with the sample to tick the checklist.")
             : "The answer is shown, so this question counts as answer shown. You can still choose it and check.")
       : (cr ? "You already compared your answer. Here are the steps." : "You already had this one right. Here are the steps.")));
     const ol = make("ol", "how-list");
@@ -309,6 +309,10 @@
     if (it.type === "cr") {
       const a = make("p", "how-answer"); a.appendChild(make("strong", "", "One good answer: ")); a.appendChild(document.createTextNode(it.sample)); box.appendChild(a);
       box.appendChild(make("p", "note", "Other answers can also be right."));
+      if ((it.criteria || []).length) {
+        box.appendChild(make("p", "how-crit-h", "A good answer:"));
+        const ul = make("ul", "how-crit"); it.criteria.forEach(t => ul.appendChild(make("li", "", t))); box.appendChild(ul);
+      }
     } else {
       const a = make("p", "how-answer"); a.appendChild(make("strong", "", "The answer: ")); a.appendChild(document.createTextNode(T[it.type].answerText(it, run.set))); box.appendChild(a);
     }

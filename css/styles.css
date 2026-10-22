@@ -1107,3 +1107,5 @@ a.sk-chip:hover{border-color:var(--peach-deep);text-decoration:underline;}
 .rv-acts{display:flex;flex-wrap:wrap;gap:8px;}
 .rv-btn{min-height:44px;white-space:normal;}
 .skill-row.is-other .skill-name{font-style:italic;}
+.how-crit-h{margin:6px 0 2px;font-weight:700;}
+.how-crit{margin:0 0 6px;padding-left:1.3em;}
