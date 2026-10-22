@@ -87,23 +87,28 @@ The review-ledger and assessment-version hashes (architecture rules 11-12) and a
 | J (1) | the seven viewports for the picker, the practice controls (hints and steps open), a std page and the check navigator: no sideways scroll, no clipped control, 44px targets |
 | K, L (13) | no page errors; check-content passes on the candidate and **fails** ten mutated copies (set of four, hint with the answer, missing how, core passage in the check, bad ref, duplicate id, bad `like`, two hints, `cr` in a check, missing `rev`) and two mutated std-groups (wording, order) |
 
-### Existing gates (final source)
+### Existing gates (final candidate)
 
-| Command | Result |
+Content agents were editing lesson files throughout, so the final candidate was **frozen**: the worktree was copied at 18:02:46 to `…/scratchpad/eng/snap/`, its checksums written to `…/scratchpad/eng/snap-md5.txt`, served on 8720, and every suite below ran against that copy. The guard run ended with the snapshot unchanged. After the runs, every engine, data and test file this work owns (`js/*.js`, `js/engine/*`, `js/data/std-groups.js`, `index.html`, `css/styles.css`, `verification/guard.py`, `check-content.js`, `practice-own.py`) was compared byte for byte with the worktree and is identical. Lesson files edited by the content team after 18:02:46 are **not** covered by these results.
+
+| Command (run in the snapshot) | Result |
 |---|---|
-| `node verification/check-content.js --all` | PASS, 0 failures (warnings: legacy content warnings, uncovered similar items on 3.T.T.1.c and 3.T.SS.2.a, the migration summary) |
-| `node verification/check-content.js` (manifest) | PASS, 0 failures, 16 warnings |
+| `node verification/check-content.js --all` | PASS, 0 failures, 25 warnings; 17 core lessons, 255 core items, 51 similar items |
+| `node verification/check-content.js` (manifest) | PASS, 0 failures, 25 warnings |
 | `node verification/check-writing.js` | 0 failures, 0 warnings |
-| `python3 verification/readability.py` | runs; report only |
+| `python3 verification/readability.py` | runs (report only), exit 0 |
 | `node verification/check-instructional-copy.js` | 28 assertions passed |
+| `python3 verification/practice-own.py http://127.0.0.1:8720/ <scratch>/eng/f-own` | **67 passed, 0 failed** |
 | `guard-fixture.py path` (scratch copy of the launcher) | 148 passed, 0 failed |
 | `guard-fixture.py path-headers` | 48 passed, 0 failed |
 | `AXE_PATH=… python3 verification/path-a11y.py` | 12 + 12 + 12 runs, 0 violations, 0 contrast failures, lowest 4.64:1 (same as the redesign baseline) |
 | `python3 verification/skills-recovery.py` | 67 passed, 0 failed |
 | `PP_WRITING_TEST_PORT=8721 python3 verification/writing-recovery.py` | 75 passed, 0 failed |
-| Full guard, `guard-fixture.py guard . http://127.0.0.1:8720/ <scratch>/eng/out-guard` | GUARD_RESULT |
+| **Full guard**, `guard-fixture.py guard . http://127.0.0.1:8720/ <scratch>/eng/f-guard` | **110 passed, 0 failed, exit 0** |
 
-The launcher copy is `…/scratchpad/eng/guard-fixture.py`, a byte copy of the redesign's scratch launcher (port, root and output folder as arguments); its output went to the scratchpad, so no committed evidence was overwritten.
+Logs: `…/scratchpad/eng/f-*.log`. The launcher copy is `…/scratchpad/eng/guard-fixture.py`, a byte copy of the redesign's scratch launcher (port, root and output folder as arguments); its output went to the scratchpad, so no committed evidence was overwritten.
+
+**Earlier guard runs (for the record).** Two runs on the live worktree overlapped the content team's rewrites of T-C.js, T-SS.js, T-TS.js and T-T1.js. The first failed 11.5 (its lesson, picked by load order, briefly had two forms) and then stalled in 8.1 on a new `cr` item, which led to the `cr` handling in 8.1. The second failed 16.3 after 3.T.C.1.b moved to core, which led to keeping the "Try it yourself" tag (see "Reviewer fixes after B0 review"). Neither failure remains on the frozen candidate.
 
 ## 5. Guard changes, with reasons
 
@@ -127,7 +132,7 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 - **Practice Together still uses the engine ladder** (clue, narrowing, walk-through). The authored hints in `addons` for P1-P3 are merged into the items but not shown in Together, because guard 3.3 asserts that ladder. Switching Together to authored hints is a separate decision.
 - **Not built:** architecture phase 4 (reviews, cumulative review, `pp.review.v1`, the coverage-map generator); `testRev` and `attempts[].rev`; the review-ledger and assessment-version hash rules; a `--release` switch that turns the migration warning into a failure; "Start this set again" (history is never erased, so nothing needs restoring).
 - **Similar coverage:** on 3.T.T.1.c, 9 of 15 core items have no similar item, so the button is hidden on them (warning, per the lead).
-- **Content:** at the final run, eight lessons have `core` (3.T.T.1.c plus the content team's parallel batch: 3.T.C.2.a, 3.T.SS.2.a, 3.T.T.1.a, 3.T.T.1.b, 3.T.T.1.d, 3.T.T.4.a, TS-PS), with 120 core and 24 similar items; 85 lessons with a check await migration. practice-own.py tests 3.T.T.1.c in depth; the other seven pass check-content and are exercised by guard sections 2, 8 and 9.4 only.
-- **Guard fragility (pre-existing):** sections 11 and 13 pick lessons by `Object.keys(PP.lessons)`, which follows script load order. A guard run that overlapped the content team's rewrite of T-C.js (13:15) failed 11.5 on a lesson with two forms and then stalled in 8.1 on a new `cr` item; see §4.
+- **Content:** in the tested snapshot, 17 lessons have `core` (255 core items, 51 similar items), most authored in parallel by the content team; check-content still reports lessons with a check and no core as one migration warning. practice-own.py tests 3.T.T.1.c in depth and 3.T.C.2.a C12 for the written type; the other core lessons pass check-content and are exercised by guard sections 2, 8 and 9.4 only.
+- **Guard fragility (pre-existing):** sections 11, 13 and 16 pick lessons by `Object.keys(PP.lessons)` order or by fixed key (3.T.C.1.b). As lessons move to core or gain form B, those picks can land on a different kind of lesson. practice-own.py now finds its "lesson without core" dynamically for this reason; the guard's own picks were left as they are.
 - **Testing:** Chromium only, simulated viewports. No physical devices, Safari, native zoom, screen readers or family use.
 - The `3-5.RA.2` wording discrepancy in GaDOE's own PDF (§2) should be noted to reviewers.
