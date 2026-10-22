@@ -527,28 +527,28 @@ PP.addLesson({
         "Webbed feet and quacking are true but are not about staying dry, and the paragraph never says a duck finds food with its beak."
       ],
       why: "The answers are \"The duck spreads oil over its feathers so water rolls off\" and \"Its outer feathers overlap like shingles on a roof.\" Both show how the feathers keep a duck dry. Webbed feet and quacking are not about staying dry, and finding food is not in the paragraph." },
-    { id: "SK-TT2a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
-      like: ["SK-TT2a-C03"],
-      stem: ["On Mondays at the Elm Street library, a teacher helps kids with their homework. On Wednesdays, kids build towers and bridges in the building club. On Fridays, they can watch a movie or borrow a board game. In summer, there is a reading contest with prizes."],
-      prompt: "No sentence states the main idea. Which sentence best tells what the paragraph is mostly about?",
+    { id: "SK-TT2a-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C13"],
+      stem: ["Paragraph A: In March, neighbors at the Cedar Avenue garden rake the beds and mix in old leaves to feed the soil. They build a low fence to keep rabbits out. Then they plant rows of seeds.", "Paragraph B: By August, the beds are full of tomatoes, peppers and okra. Neighbors fill baskets every morning. On the last Saturday of summer, they share the food at a big picnic."],
+      prompt: "How are the main ideas of Paragraph A and Paragraph B different?",
       choices: [
-        { text: "The Elm Street library offers kids different activities all year.", correct: true },
-        { text: "On Mondays, a teacher helps kids with their homework." },
-        { text: "Kids should read more books during the summer." },
-        { text: "The building club meets at the library on Wednesdays." }
+        { text: "Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.", correct: true },
+        { text: "Paragraph A is about a fence, and Paragraph B is about a picnic." },
+        { text: "Paragraph A tells what the garden gives later, and Paragraph B tells how it gets ready." },
+        { text: "Both paragraphs tell how the neighbors get the garden ready." }
       ],
-      clue: "When no sentence states the main idea, find what every sentence has in common.",
+      clue: "Find what all the sentences in each paragraph have in common. Then compare the two paragraphs.",
       hints: [
-        "When no sentence states the main idea, find what every sentence has in common.",
-        "Look at the words that start each sentence, and at what kids do in each one.",
-        "The homework help is only one sentence, so it is a detail. Test the other choices against every sentence."
+        "Find what all the sentences in each paragraph have in common. Then compare the two paragraphs.",
+        "List what the neighbors do in Paragraph A. Then list what happens in Paragraph B.",
+        "The fence and the picnic are each only one sentence, so they are details, not main ideas. Test the choices that are left against every sentence."
       ],
       how: [
-        "Each sentence tells something kids can do at the library: homework help, a building club, movies and games, and a reading contest.",
-        "These happen on different days and in summer, too.",
-        "The answer is \"The Elm Street library offers kids different activities all year.\" The homework help and the building club are single details, and the paragraph never says kids should read more."
+        "Paragraph A: raking, feeding the soil, building a fence and planting all happen in March to get the garden ready.",
+        "Paragraph B: the full beds, the baskets and the picnic all happen later, when the garden gives food.",
+        "The answer is \"Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.\""
       ],
-      why: "The answer is \"The Elm Street library offers kids different activities all year.\" Every sentence names something to do at the library. Homework help and the building club are single details, and the paragraph does not tell kids what they should do." }
+      why: "The answer is \"Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.\" Every sentence in Paragraph A is about getting ready, and every sentence in Paragraph B is about what grows. The fence and the picnic are single details, one choice is backward, and Paragraph B is not about getting ready." }
   ],
   /* Hints and Show me how for the refs (P3, P4, P5, P7) and for Practice Together (P1, P2, P6). */
   addons: {
@@ -886,7 +886,7 @@ PP.addLesson({
       paragraphs: [
         ["In 1889, a world's fair was held in Paris, France.", "Workers built the Eiffel Tower for it, the tallest tower in the world then.", "People came from all over to see it."],
         ["A few years later, Chicago planned its own world's fair for 1893.", "The planners wanted something even more amazing than the tower in Paris.", "So they asked builders for their best ideas."],
-        ["An engineer named George Ferris drew a plan for a giant turning wheel.", "Many people laughed at his plan.", "They said a wheel that big would fall down."],
+        ["An engineer named George Ferris drew a plan for a giant turning wheel.", "Many people doubted his plan.", "They said a wheel that big would fall down."],
         ["Ferris did not give up.", "He showed the planners how strong steel parts would hold it together.", "At last, they said yes.", "Workers built the wheel all winter."],
         ["In June 1893, the wheel turned for the first time.", "It was taller than a 20-story building.", "It had 36 cars, and each one held about 60 people."],
         ["The wheel stayed strong all summer, even on windy days.", "Because it was safe, people stopped worrying and lined up to ride.", "Today, wheels like it, called Ferris wheels, are all over the world."]
@@ -1121,7 +1121,7 @@ PP.addLesson({
         prompt: "Did each event happen before or after the wheel turned for the first time? Match each event to the right time.",
         cols: ["Before the wheel first turned", "After the wheel first turned"],
         rows: [
-          { text: "Many people laugh at Ferris's plan.", answer: 0 },
+          { text: "Many people doubt Ferris's plan.", answer: 0 },
           { text: "Ferris shows the planners how strong steel parts would hold the wheel.", answer: 0 },
           { text: "People line up to ride the wheel.", answer: 1 },
           { text: "Wheels like his are built in other places.", answer: 1 }
@@ -1130,37 +1130,37 @@ PP.addLesson({
         hints: [
           "Time words and the order of the paragraphs show when events happen. Find the moment the wheel first turns, then sort each event.",
           "Find the sentence that tells when the wheel turned for the first time. Then decide whether each event comes in an earlier paragraph or a later one.",
-          "People laughing at the plan happens before the wheel is even built, so it goes before. Sort the other three the same way."
+          "People doubting the plan happens before the wheel is even built, so it goes before. Sort the other three the same way."
         ],
         how: [
           "The wheel turns for the first time in June 1893, in paragraph 5.",
-          "Before that, in paragraphs 3 and 4, people laugh at the plan and Ferris shows the planners the steel parts.",
+          "Before that, in paragraphs 3 and 4, people doubt the plan and Ferris shows the planners the steel parts.",
           "After that, in paragraph 6, people line up to ride, and since then wheels like his have been built all over the world."
         ],
         misconception: "A common mix-up is sorting by what seems important instead of by when it happened.",
-        why: "Before the wheel first turned, people laughed at the plan and Ferris showed the planners the steel parts (paragraphs 3 and 4). After it turned in June 1893, people lined up to ride, and wheels like his were built all over the world (paragraph 6)." },
+        why: "Before the wheel first turned, people doubted the plan and Ferris showed the planners the steel parts (paragraphs 3 and 4). After it turned in June 1893, people lined up to ride, and wheels like his were built all over the world (paragraph 6)." },
       { id: "SK-TT2b-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4"],
-        prompt: "Why does the author tell that many people laughed at Ferris's plan?",
+        prompt: "Why does the author tell that many people doubted Ferris's plan?",
         choices: [
-          { text: "to show that Ferris kept going even when people doubted him", correct: true },
-          { text: "to show that the wheel was a funny idea that was never built" },
-          { text: "to show that the planners did not like the tower in Paris" },
+          { text: "to show that Ferris kept going even when others thought he would fail", correct: true },
+          { text: "to show that the wheel was only an idea and was never built" },
+          { text: "to show that the planners wanted a wheel instead of a tower" },
           { text: "to show that riders were too scared to get on the wheel" }
         ],
-        clue: "In a series of events, one event can set up the next. Ask what happens right after people laugh.",
+        clue: "In a series of events, one event can set up the next. Ask what happens right after people doubt the plan.",
         hints: [
-          "In a series of events, one event can set up the next. Ask what happens right after people laugh.",
-          "Keep reading after the people laugh, and follow what happens to the plan.",
-          "Workers do build the wheel, so it is not an idea that was never built. Test the other choices against what comes next."
+          "In a series of events, one event can set up the next. Ask what happens right after people doubt the plan.",
+          "Keep reading after the people doubt the plan, and follow what happens to it.",
+          "Workers do build the wheel, so it was not only an idea. Test the other choices against what comes next."
         ],
         how: [
-          "In paragraph 3, many people laugh and say the wheel would fall down.",
+          "In paragraph 3, many people doubt the plan and say the wheel would fall down.",
           "Paragraph 4 begins, \"Ferris did not give up.\" He shows the planners the steel parts, and they say yes.",
-          "The answer is \"to show that Ferris kept going even when people doubted him.\"",
-          "The wheel was built, the planners wanted to top the tower, not dislike it, and later people lined up to ride."
+          "The answer is \"to show that Ferris kept going even when others thought he would fail.\"",
+          "The wheel was built, the planners wanted something more amazing than the tower, not a swap, and later people lined up to ride."
         ],
         misconception: "A common mix-up is reading one event by itself. Ask how it connects to the event that comes next.",
-        why: "The answer is \"to show that Ferris kept going even when people doubted him.\" Right after people laugh, the article says Ferris did not give up, and the planners said yes. The wheel was built, the planners did not dislike the tower, and people did ride it." },
+        why: "The answer is \"to show that Ferris kept going even when others thought he would fail.\" Right after people doubt the plan, the article says Ferris did not give up, and the planners said yes. The wheel was built, the planners did not trade a tower for a wheel, and people did ride it." },
       { id: "SK-TT2b-C10", type: "hottext", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4"],
         prompt: "The author says people stopped worrying because the wheel was safe. Which sentence shows how people could tell it was safe? Choose the sentence in the passage.",
         targets: ["p4:3:3", "p4:4:2", "p4:5:1", "p4:5:3", "p4:6:1"],
@@ -1209,13 +1209,13 @@ PP.addLesson({
         prompt: "Dev left out a step. Choose the step that belongs in the blank.",
         text: "Step 2: {0}",
         slots: [
-          { options: ["Pry one edge of the tire off the rim with tire levers.", "Pump the tire up until it feels hard again.", "Rub the spot with sandpaper so the glue can grip."], answer: 0 }
+          { options: ["Pry one edge of the tire off the rim with tire levers.", "Pump the tire up until it feels hard again.", "Rub the spot with sandpaper."], answer: 0 }
         ],
         clue: "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
         hints: [
           "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
           "Read Dev's steps 1 and 3. Then reread the article's steps in order and find what Dev skipped.",
-          "Sandpaper is used after the hole is found, so it cannot be step 2. Check whether the other choice that is left could happen before the tube comes out."
+          "Sandpaper is used after the hole is found, so it cannot be step 2. Check the two choices that are left: which one could happen before the tube comes out?"
         ],
         how: [
           "After the wheel is off, the tire still covers the tube, so the tube cannot come out yet.",
@@ -1225,7 +1225,7 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is choosing a real step from the wrong place in the procedure.",
         why: "The answer is \"Pry one edge of the tire off the rim with tire levers.\" The tire covers the tube, so it has to be pried off before the tube can come out. Pumping comes at the end, and sanding comes after the hole is found." },
-      { id: "SK-TT2b-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p5"],
+      { id: "SK-TT2b-C13", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p5"],
         prompt: "What would most likely happen if someone skipped rubbing the spot with sandpaper?",
         choices: [
           { text: "The glue might not grip, so the patch could peel off and let air out.", correct: true },

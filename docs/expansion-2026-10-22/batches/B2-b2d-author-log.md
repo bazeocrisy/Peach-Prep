@@ -13,7 +13,8 @@ This log describes the lessons **as they stand after the fixes for B2-review-SC-
 - `js/data/lessons/T-C.js`, in the 3.T.C.1.b block only:
   - `teach.points` 1, 5 and 7 extended (still seven points);
   - new passages p3 and p4;
-  - one sentence of existing passage p1 shortened (§5.2);
+  - existing passage p1 edited: the lodge sentence shortened (§5.2), and the intro and "Busy Builders" rewritten (§5.4);
+  - the stem fact and addon `how` of Together item P9 (§5.4);
   - Together item SK-TC1b-P4: its three distractors and its `why` (weak item);
   - the `why` of P5, so that it quotes the shortened p1 sentence;
   - `core`, `similar` and `addons`.
@@ -37,7 +38,7 @@ Nothing in `test`, `learn`, `clues` or `coach` changed. No existing id changed. 
 | `check-writing.js` | 0 failures, 0 warnings |
 | `check-instructional-copy.js` | 28 assertions passed |
 | Six-word n-gram scan | Scope: all new and changed text, against every other lesson, set and task, plus my lessons' tests, Learn It and Teach. Hits are shared directions and alt-text style only. Further searches by hand found no other use of the new facts (beaver underwater time, the recycled-can energy fact) |
-| Browser smoke test, port 8754, widths 390 and 1366 | Practice Together = SS1a P1-P4 and TC1b P1, P8, P9, P10, P4. All thirty core items in `:y`, `:y2` and `:y3` check right with their key, and all three hints show. No page error and no sideways scroll. New and changed figures were rendered and looked at |
+| Browser smoke test, port 8754, widths 390 and 1366 | Practice Together = SS1a P1-P4 and TC1b P1, P8, P9, P10, P6. All thirty core items in `:y`, `:y2` and `:y3` check right with their key, and all three hints show. No page error and no sideways scroll. New and changed figures were rendered and looked at |
 
 ## 1. 3.T.SS.1.a "How a text is put together: sections, patterns and features"
 
@@ -182,20 +183,50 @@ I also claimed that the harvest drawing I swapped in fixed the collision. It did
 
 ## 4. Hint and leakage notes
 
-- **Whole ladders.** I read every core and similar item's clue and three hints together, against its choices. I reworked TC1b C03, S01 and S02 and SS1a S01, where the ladder taken together left only the key (§5).
+- **Whole ladders.** In both rounds I read every core and similar item's clue and three hints together, against its choices. I used the brief's definition of "live": a choice is live only if the hints' own logic leaves a real reason to pick it.
+  - Reworked in round 1: TC1b C03, S01 and S02; SS1a S01.
+  - Reworked in round 2 (§5.4): TC1b C03, C05, C07, C10, C13 and C14, and S01 and S03.
 - **Hint 2 naming a place.** Every hint 2 that names a section names one that the prompt already names, or one that also holds wrong choices.
 - **EBSR SS1a C08.** Its Part B choices are all parts of the map, and no hint names a text place.
-- **Hint 3 settles at most one blank, row or step.**
+- **Hint 3 settles at most one blank or step.**
   - SS1a C08 hint 3 settles Part B: it says which part of the map measures distance.
   - TC1b C08 hint 3 settles the last step.
-  - TC1b P6 hint 3 settles the heading row.
 - **Order inside sets.** No earlier `how` or `why` states a later item's answer in the same set:
   - SS1a set 1: C04's `how` does not state C05's order.
-  - TC1b set 2: C07's new key does not state the order, and C08 is the order item.
-  - TC1b set 3: the hot-text item now comes before the diagram-vs-photo item.
-- **Together and set 1.** No Together item shares a row or an answer with a set 1 core item:
-  - SS1a: C04 is now a whole-text arrangement item, so P3 no longer pre-teaches it.
-  - TC1b: C05 is now a student in class, not a ranger.
+  - TC1b set 2: C07's key does not state the order, and C08 is the order item.
+  - TC1b set 3: the hot-text item comes before the diagram-vs-photo item.
+- **Together against every core item** (TC1b Together is now P1, P8, P9, P10, P6):
+  - P6's speaker row ("slows down and stops for a moment right before an important fact") had stated C14's first key, so C14 was rewritten (§5.4).
+  - P6's bold row ("makes one printed word stand out") does not give P4's key (important, and explained in the glossary).
+  - P6's box row does not answer C03, which asks which new fact fits a box.
+  - P9's key (emphasis) does not answer C05 (a new part starting) or C14 (keeping track of parts).
+  - P10's `why` states the Teach rule that brackets name a sound, which C10 applies. I treat a Teach rule repeated in Together as teaching, not as a pre-answer, because C10's key ("[pump humming]") is not in P10. The same holds for P10's link and C13.
+  - SS1a: C04 is a whole-text arrangement item, so Together P3 no longer pre-teaches it.
+
+### 4.1 TC1b: choices left live after each hint (round 2)
+
+K = key. Letters follow the order of the choices in the data. "h1-h3" means the clue and all three hints read together.
+
+| Item | Choices | After h1 | After h2 | After h3 (whole ladder) |
+|---|---|---|---|---|
+| P5 | K1, K2 + three other targets | all | all | K1, K2, bark sentence, tail sentence |
+| P4 | K, A box, B heading, C topic of article | K, B, C | K, B, C | K, C |
+| C03 | K, A branches, B dry room, C tail slap | all | all (h2 only shows what kind of fact the box already holds) | K, A, B |
+| C04 (pick 2) | K1, K2, A defines lodge, B animals, C order | all | all | K1, K2, A, C |
+| C05 | K, A repeat lodge line, B point at book, C skip heading | all | K, A, C (B is not heard) | K, A, C |
+| C06 | K gravity, faucets, showers, pipe | all | all | K, faucets (pipe and showers each appear once) |
+| C07 | K, pump, gallons | all | K, gallons (the stem asks for the whole diagram) | K, gallons |
+| C08 | 4 steps | all orders | all orders | last step fixed; first three still to order |
+| C09 (pick 2) | K1, K2, A heading, B labels, C fact box | all | all | K1, K2, B, C |
+| C10 | K, NARRATOR line, PUMP: line | all | all | K, PUMP: (the misconception that a name shows what makes the noise) |
+| C11 | K + four targets | all | all | K, lane line, dark line, flags |
+| C12 | K, A winning, B speed, C backstroke | all | all | K, C |
+| C13 (pick 2) | K1, K2, A heading, B photo, C box | all | all | K1, K2, B, C |
+| C14 (pick 2) | K1, K2, A numbers on card, B box on card, C one long sentence | all | K1, K2, C | K1, K2, C |
+| C15 | K, A crowd, B Maya next, C podcast ends | all | K, A, C | K, C |
+| S01 | K, ticket, seat, stop | all | all | K, seat, stop |
+| S02 | K, search, link, Visit tab | all | all | K, search, Visit tab |
+| S03 | K, darker headings, faster, skip | all | K, faster | K, faster |
 
 ## 5. Fixes after B2 review
 
@@ -241,19 +272,29 @@ I also claimed that the harvest drawing I swapped in fixed the collision. It did
 | SC-2 NOTE (C14 DOK) | Relabelled DOK 2 |
 | SC-1 NOTE-5 (water-tower circle 2 overlaps the leg) | Circle 2 moved beside the down pipe, clear of the leg |
 
-### 5.3 Findings not addressed, and why
+### 5.3 Findings not addressed, and why (updated in round 2)
 - **SC-1 NOTE-5, cosmetic.** The north arrow on the Pine County map still touches the county's clipped corner. Fixing it needs the map redrawn, and it does not affect any answer.
-- **SC-1 NOTE-3 and SC-2 NOTE: P6's own prompt gives away its speaker row.** P6 is a pre-existing ref. Changing it needs a new id, and the lead deferred the split.
-- **SC-2 TC-SHOULD-2, second half: "Busy Builders" walks through TS-CE T1's sticks → dam → pond chain.** The lead's instruction covered only the lodge sentence. That section predates B2 and is the base of Together P1 and P8, so I left it for the lead.
+- **Together P10's figure** (`tc1b-beaver-webpage.svg`, pre-existing, not one of my figures) still says "NARRATOR: The dam slows the rushing water." That is one step of TS-CE T1's chain, not the chain. I did not edit a figure outside my prefix. The lead may want it changed.
+- **p1 is still about beavers**, as TS-CE's form A passage p2 is. Both passages predate B2. Only the shared cause chain and the lodge cause clause were in scope.
 - **SC-2 NOTE: SS1a teach point 6 is heavy (seven sentences).** Unchanged. Trimming it is better done when the code is split.
 - **SC-2 SS-SHOULD-10, remainder: SS1a C13 and TC1b P5 share a frame.** See §5.1.
 - **Split cautions** (SC-2 §5): recorded for the lead. Nothing was moved.
 
+### 5.4 Second round (lead, after the B2 reviews)
+
+| Request | Fix made |
+|---|---|
+| **"Busy Builders" follows TS-CE form A T1's sticks → dam → pond chain** | The section now reads: "Beavers cut down small trees with their strong front teeth. They eat the soft bark and leaves. Then they drag the branches into the water to use for building." The intro no longer says "turn streams into ponds". Dam and pond are gone from p1. Together P9's ranger fact ("a beaver's dam can make a whole new pond") is now "a beaver's front teeth are orange, because they have iron in them". Items that rest on the section were checked and updated: P5 still has its two non-key targets there (the tree and bark sentences), and its addon `how` was updated; the P1 addon hint 3 and `how` were updated; C03's "Busy Builders" distractor is now "A beaver drags branches into the water to build with." P8 is unchanged: its dam caption is still a wrong caption for the tree picture |
+| **P6 cannot stay in core** | P6 is out of core and unchanged in `practice`. The revised weak item **P4** (bold word plus glossary) takes its slot as a ref. Together is now P1, P8, P9, P10 and P6. C04's hint 3 used to say the glossary explains lodge, which is P4's key. It now rules out the animals distractor instead. To keep mc at six, **C07** became a one-slot dropdown with the same key and two of its distractors; the shower distractor was dropped |
+| **Whole-ladder "live" check** (§4.1) | **C03 h2** is now "Read the box that is already in the article. What kind of fact is in it?" (the old h2's section test left only the key). **C05 h1 and h2** are now "Think about the difference between reading a page and listening to someone read it." and "Read each choice and picture what the classmates would hear." **C07 h1** is shortened to "A caption tells what a picture shows." **C10 h3** now rules out the NARRATOR line (nobody is talking), so the PUMP: misconception stays live. **C13 h1 and h2** no longer state the "needs a screen" test. **S01 h2** is neutral |
+| **Together P6's row gave C14's key** (found by the Together check) | **C14 is rewritten.** It is now about helping listeners keep track of the parts of a talk. Keys: "Say at the start, 'I have three rules to share.'" and "Say 'first,' 'next' and 'last' before the rules." Distractors: numbers or a box on her own card, and one long sentence. Teach point 7 now says "Words like first, next and last help listeners keep track of the parts." **S03 is rewritten** to match (Omar says what his next part is about); `like` is C05 and C14 |
+| **Topic check across all lessons** (brief) | S01's recycling topic collided with the recycling passages in T-T2.js (blue bin, truck, energy saved), so **S01 is now about a train article** ("Riding the Train"; key: the fastest trains can go over 200 miles an hour). Grep checks also found no other use of: train, orange beaver teeth, bark and branches, bookmobile, water tower, swimming-pool markings, lathe or billet |
+
 ## 6. Needs blind re-solve
 
-These items changed their choices, keys, stem, passage or figure:
+These items changed their choices, keys, stem, passage or figure, in either round:
 
-- **3.T.SS.1.a**
+- **3.T.SS.1.a** (round 1)
   - SK-SS1a-C04 (new item)
   - SK-SS1a-C05 (slot 2 key)
   - SK-SS1a-C06 (new row and column; p3 changed)
@@ -265,20 +306,24 @@ These items changed their choices, keys, stem, passage or figure:
   - SK-SS1a-C13 (formerly C12: p4's box sentence changed)
   - SK-SS1a-C15 (formerly C14: the stem changed)
 - **3.T.C.1.b**
-  - SK-TC1b-P5 (ref: p1 sentence shortened)
-  - SK-TC1b-C03 (new item)
+  - SK-TC1b-P5 (ref: p1 changed in both rounds; "Busy Builders" rewritten in round 2)
+  - SK-TC1b-P4 (now a core ref; distractors revised in round 1)
+  - SK-TC1b-C03 (new in round 1; one distractor changed in round 2)
   - SK-TC1b-C04 (a key and two distractors changed)
   - SK-TC1b-C05 (stem and one distractor changed)
-  - SK-TC1b-C07 (key changed)
+  - SK-TC1b-C07 (key changed; now a dropdown with three options)
   - SK-TC1b-C08 (figure changed: circle 2 moved)
   - SK-TC1b-C09 (new item)
   - SK-TC1b-C10 (new item)
   - SK-TC1b-C11 (formerly C12: p4 changed, target is now p4:1:1)
   - SK-TC1b-C12 (formerly C11: key changed, p4 changed)
-  - SK-TC1b-S01 (new item)
+  - SK-TC1b-C14 (rewritten in round 2: new stem, keys and distractors)
+  - SK-TC1b-S01 (new item in round 1, new topic in round 2)
+  - SK-TC1b-S03 (rewritten in round 2)
+  - Together P9 (practice, not core): its stem fact changed. A Together re-check is enough
 
 Changed in their hints only (a ladder re-check is enough):
 - SS1a: S01, S03, and the P4 and P6 addons
-- TC1b: C06, S02, S03
+- TC1b: C06, C13, S02, and the P1 addon
 
-Unchanged: SS1a C09, C14 (formerly C13; DOK label only), S02 (`like` only); TC1b C13, C14 (DOK label only), C15.
+Unchanged: SS1a C09, C14 (formerly C13; DOK label only), S02 (`like` only); TC1b C15. TC1b P6 is unchanged and is now in Together.
