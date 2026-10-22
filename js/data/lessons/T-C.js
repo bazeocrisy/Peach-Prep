@@ -276,9 +276,9 @@ PP.addLesson({
   passages: [
     { id: "p1", title: "Life in a Beaver Pond", genre: "Informational text",
       paragraphs: [
-        ["Beavers are some of the best builders in nature.", "They turn streams into ponds, and they build their own homes."],
+        ["Beavers are some of the best builders in nature.", "They cut wood, carry it through the water and build their own homes."],
         ["## Busy Builders"],
-        ["Beavers cut down small trees with their strong front teeth.", "They push sticks, rocks and mud into a stream to build a wall called a dam.", "The dam slows the water and makes a pond."],
+        ["Beavers cut down small trees with their strong front teeth.", "They eat the soft bark and leaves.", "Then they drag the branches into the water to use for building."],
         ["## A Home with a Secret Door"],
         ["In the pond, beavers build a home called a **lodge**.", "A lodge is a dome made of sticks and mud.", "Its doors are under the water.", "The room inside stays dry above the water."],
         ["## Did You Know?"],
@@ -362,7 +362,7 @@ PP.addLesson({
       clue: "A caption tells what the picture shows. Look at the picture first: what is the beaver doing, and where is it? Cross out captions about things you cannot see.",
       why: "The answer is \"A beaver chews through a small tree with its strong front teeth.\" The picture shows the beaver's teeth on a deep notch in a tree, with wood chips on the ground. There is no water in the picture, so the captions about the tail, the lodge and the dam do not fit it." },
     { id: "SK-TC1b-P9", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["A park ranger gives a talk about beavers at a Georgia state park. Here is part of what she says:", "\"Beavers build dams with sticks and mud. Now, listen closely. This next part is important. A beaver's dam can make a whole new pond!\""],
+      stem: ["A park ranger gives a talk about beavers at a Georgia state park. Here is part of what she says:", "\"Beavers have very strong front teeth. Now, listen closely. This next part is important. A beaver's front teeth are orange, because they have iron in them!\""],
       prompt: "Why does the ranger say, \"Listen closely. This next part is important\"?",
       choices: [
         { text: "to tell listeners that the next fact matters a lot", correct: true },
@@ -414,21 +414,21 @@ PP.addLesson({
       why: "A heading tells what a section is about. A text box gives an extra fact set apart. A bold word stands out from the printed words around it. In a talk, the speaker's voice does that job: slowing down and stopping for a moment tells listeners an important fact is coming." }
   ],
   /* ---------- B2 (expansion 2026-10-22, author b2d; 01-architecture.md §2.2-2.3) ----------
-     core: fifteen independent items in three sets of five. { ref } reuses the Try items P5 and P6
-     (they stay in practice). P4 was flagged weak: its distractors were revised in place and it stays in
-     Practice Together, which is now P1, P8, P9, P10 and P4. New ids are numbered by their place in the fifteen.
+     core: fifteen independent items in three sets of five. { ref } reuses the practice items P5 and P4
+     (they stay in practice). P4 was flagged weak: its distractors were revised in place, and it is used in core
+     set 1 in place of P6, whose prompt gives away its own speaking row. Practice Together is P1, P8, P9, P10 and P6. New ids are numbered by their place in the fifteen.
      BROAD CODE: this lesson still covers all five modes (print, visual, digital, auditory, spoken). The author
      log names which items would move to the planned digital/auditory/spoken lesson.
      Author log: docs/expansion-2026-10-22/batches/B2-b2d-author-log.md. NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
       { ref: "SK-TC1b-P5" },
-      { ref: "SK-TC1b-P6" },
+      { ref: "SK-TC1b-P4" },
       { id: "SK-TC1b-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"],
         prompt: "The author found four more facts about beavers. Which one would fit best in the \"Did You Know?\" box instead of in a section?",
         choices: [
           { text: "A beaver can stay underwater for about fifteen minutes.", correct: true },
-          { text: "A beaver's dam is built from sticks, rocks and mud." },
+          { text: "A beaver drags branches into the water to build with." },
           { text: "A beaver lodge has a dry room above the water." },
           { text: "A beaver slaps its tail on the water to warn others." }
         ],
@@ -439,12 +439,12 @@ PP.addLesson({
           "The tail slap is the whole idea of \"Tail Talk,\" so taking it out of that section would hurt it. Check the other facts the same way."
         ],
         how: [
-          "\"Busy Builders\" needs the dam, the lodge section needs the dry room, and \"Tail Talk\" needs the tail slap. Each of those facts is part of its section's big idea.",
+          "\"Busy Builders\" needs the branches, the lodge section needs the dry room, and \"Tail Talk\" needs the tail slap. Each of those facts is part of its section's big idea.",
           "Staying underwater for about fifteen minutes is fun to know, but no section needs it to make sense.",
           "The answer is \"A beaver can stay underwater for about fifteen minutes.\""
         ],
         misconception: "A common mix-up is putting an important fact in the box. The box is for extra facts; the big ideas stay in the sections.",
-        why: "The answer is \"A beaver can stay underwater for about fifteen minutes.\" It is a fun extra fact that no section needs. The dam, the dry room and the tail slap are each part of a section's big idea, so they belong in their sections." },
+        why: "The answer is \"A beaver can stay underwater for about fifteen minutes.\" It is a fun extra fact that no section needs. The branches, the dry room and the tail slap are each part of a section's big idea, so they belong in their sections." },
       { id: "SK-TC1b-C04", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"], pick: 2,
         prompt: "How does the heading \"A Home with a Secret Door\" help the reader? Choose TWO answers.",
         choices: [
@@ -458,7 +458,7 @@ PP.addLesson({
         hints: [
           "A heading is a small title over a section. Think about the jobs a heading can do for a reader.",
           "Read the heading, then read the sentences under it. Choose two.",
-          "The bold word lodge is explained by the sentences and the glossary, not by the heading. Test the other choices against the heading's own words."
+          "The heading's words name a home and a door, and no other animal, so it does not name the animals in the pond. Test the other choices against the heading's own words."
         ],
         how: [
           "The sentences under the heading tell about the lodge, which is where beavers live.",
@@ -516,15 +516,11 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is choosing a word from the heading. The bold word is the key word that the section explains.",
         why: "The answer is gravity. The section explains it (\"the force that pulls things toward the ground\"), and it is the big idea: gravity pulls the water down to each home. Faucets, showers and pipes are everyday words the section does not explain." },
-      { id: "SK-TC1b-C07", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
+      { id: "SK-TC1b-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
         stem: ["Figure 1 has no caption yet. The author wants a caption that tells what the whole diagram shows."],
-        prompt: "Which caption should the author add to Figure 1?",
-        choices: [
-          { text: "How a water tower gets water to a home", correct: true },
-          { text: "A pump at the bottom of a water tower" },
-          { text: "Some towers hold a million gallons" },
-          { text: "A family turns on the shower at dawn" }
-        ],
+        prompt: "Choose the words that best complete the sentence.",
+        text: "Figure 1 should have the caption {0}.",
+        slots: [{ options: ["How a water tower gets water to a home", "A pump at the bottom of a water tower", "Some towers hold a million gallons"], answer: 0 }],
         clue: "A caption tells what a picture shows. A caption for a diagram tells what the whole drawing is about.",
         hints: [
           "A caption tells what a picture shows. A caption for a diagram tells what the whole drawing is about.",
@@ -535,10 +531,10 @@ PP.addLesson({
           "Figure 1 shows a pump, a tank, pipes, a home and three numbered arrows between them.",
           "A caption for the whole diagram has to cover all of those parts and the arrows.",
           "The answer is \"How a water tower gets water to a home.\"",
-          "The pump is only one part, the diagram shows no gallons, and no one in the diagram is taking a shower."
+          "The pump is only one part, and the diagram shows no gallons; that fact is in the box."
         ],
         misconception: "A common mix-up is choosing a caption for one part of a diagram, or a true fact that the diagram does not show.",
-        why: "The answer is \"How a water tower gets water to a home.\" The diagram shows the pump, the tank, the pipes, the home and arrows between them, so the caption must tell about the whole trip. The pump is only one part, the gallons fact is in the box, and the diagram shows no shower." },
+        why: "The answer is \"How a water tower gets water to a home.\" The diagram shows the pump, the tank, the pipes, the home and arrows between them, so the caption must tell about the whole trip. The pump is only one part, and the gallons fact is in the box, not in the diagram." },
       { id: "SK-TC1b-C08", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
         prompt: "Use Figure 1 and the article. Put the steps of the water's trip in order.",
         steps: [
@@ -722,26 +718,26 @@ PP.addLesson({
   similar: [
     { id: "SK-TC1b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
       like: ["SK-TC1b-C03"],
-      stem: ["An article called \"Our School Recycles\" has three sections: \"Sorting Cans,\" \"Sorting Paper\" and \"Where It All Goes.\" It also has a \"Did You Know?\" box."],
+      stem: ["An article called \"Riding the Train\" has three sections: \"Buying a Ticket,\" \"Finding Your Seat\" and \"Getting Off at Your Stop.\" It also has a \"Did You Know?\" box."],
       prompt: "Which fact would fit best in the box?",
       choices: [
-        { text: "One recycled can saves enough energy to run a TV for three hours.", correct: true },
-        { text: "Cans go in the blue bin, and paper goes in the green bin." },
-        { text: "Each class sorts its paper every Friday afternoon." },
-        { text: "A truck takes the full bins to a recycling center." }
+        { text: "The fastest trains in the world can go over 200 miles an hour.", correct: true },
+        { text: "Buy your ticket at the window or a machine before you get on." },
+        { text: "Look at the number on your ticket to find your seat." },
+        { text: "Listen for the name of your stop, then walk to the door." }
       ],
       clue: "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
       hints: [
         "A text box is set apart from the sections. Think about what kind of fact an author puts there.",
         "Read the three section headings. Think about what each section must explain.",
-        "Which bin cans go in is part of how to sort cans, so that fact belongs in \"Sorting Cans.\" Check the others."
+        "Where to buy a ticket is part of buying a ticket, so that fact belongs in \"Buying a Ticket.\" Check the others."
       ],
       how: [
-        "The bins and the Friday sorting belong in the sorting sections, and the truck belongs in \"Where It All Goes.\"",
-        "The energy fact is surprising, but no section needs it.",
-        "The answer is \"One recycled can saves enough energy to run a TV for three hours.\""
+        "The ticket fact belongs in \"Buying a Ticket,\" the seat number in \"Finding Your Seat,\" and listening for your stop in \"Getting Off at Your Stop.\"",
+        "The speed fact is surprising, but no section needs it to explain how to ride.",
+        "The answer is \"The fastest trains in the world can go over 200 miles an hour.\""
       ],
-      why: "The answer is \"One recycled can saves enough energy to run a TV for three hours.\" It is a fun extra fact. The bins, the Friday sorting and the truck each belong in one of the three sections." },
+      why: "The answer is \"The fastest trains in the world can go over 200 miles an hour.\" It is a fun extra fact that no section needs. The ticket, the seat number and listening for your stop each belong in one of the three sections." },
     { id: "SK-TC1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
       like: ["SK-TC1b-C09"],
       stem: ["A web page about the Riverside Zoo has three tabs at the top: Home, Animals and Visit. It also has a search box, a video of the lions with a play button, and underlined words at the bottom that say Next page: Zoo map."],
@@ -787,19 +783,19 @@ PP.addLesson({
       ],
       why: "The answer is to slow down and say, \"Here is an important word: silk.\" Listeners hear his voice, not his paper. Darker letters are on his own paper, and reading the word faster or skipping it makes it easy to miss." }
   ],
-  /* Hints and Show me how for items kept in practice: refs P5, P6 (core set 1) and Together P1, P8, P9, P10, P4. */
+  /* Hints and Show me how for items kept in practice: refs P5, P4 (core set 1) and Together P1, P8, P9, P10, P6. */
   addons: {
     "SK-TC1b-P1": {
       hints: [
         "Headings tell what each section is about. Read each heading and ask which section would explain the question.",
         "Read all four headings before you choose. Then skim the sentences under the one you pick to check it.",
-        "\"Busy Builders\" is about cutting trees and building dams, not about warning other beavers. Check the other headings."
+        "\"Busy Builders\" is about cutting trees and gathering branches, not about warning other beavers. Check the other headings."
       ],
       how: [
         "The question is about how beavers warn each other.",
         "Under \"Tail Talk,\" a beaver slaps its tail on the water, and the loud smack warns other beavers.",
         "The answer is Tail Talk.",
-        "\"Busy Builders\" is about dams, \"A Home with a Secret Door\" is about the lodge, and the box is about teeth."
+        "\"Busy Builders\" is about cutting trees, \"A Home with a Secret Door\" is about the lodge, and the box is about teeth."
       ] },
     "SK-TC1b-P8": {
       hints: [
@@ -821,7 +817,7 @@ PP.addLesson({
       ],
       how: [
         "Listeners cannot see bold print, so a speaker uses words to point out an important part.",
-        "Right after \"Listen closely,\" the ranger tells a big fact: a dam can make a whole new pond.",
+        "Right after \"Listen closely,\" the ranger tells a big fact: a beaver's front teeth are orange because they have iron in them.",
         "The answer is \"to tell listeners that the next fact matters a lot.\"",
         "She keeps talking, she does not ask a question, and the words do not name a place."
       ] },
@@ -858,7 +854,7 @@ PP.addLesson({
         "Figure 1 has two labels: dry room and door under water.",
         "\"Its doors are under the water.\" tells about the door.",
         "\"The room inside stays dry above the water.\" tells about the dry room.",
-        "The other sentences tell about trees, the dam and the tail, which Figure 1 does not label."
+        "The other sentences tell about trees, bark and the tail, which Figure 1 does not label."
       ] },
     "SK-TC1b-P6": {
       hints: [

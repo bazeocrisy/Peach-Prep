@@ -525,3 +525,146 @@ As in B0, the checker treats this as a warning.
 - `python3 verification/readability.py`: no passage text changed in this round. All my passages are 158–180 words.
 - Scratch audit (`scratchpad/b1a/audit.js`): 0 problems.
 - No git was run. No server was needed this round. I have not reviewed my own work.
+
+## 10. Fixes after the second B1 re-review
+
+**Source:** B1-rereview-b1a-2.md and the lead's message. This section lists only changes that were actually made.
+
+### 10.1 Corrections to §9
+
+- **§9.4 counted live options wrongly.** It counted the choices no hint names. The right count is the choices a child who has read every hint could still defend. On the right count, four items each left only the key: 1.a C10, 1.a Together P1, 1.d C14 and 1.d S03. The claims "3 live" for those items were wrong.
+- **§9.4's table left out 1.a Together P2**, although its method paragraph said P2 was checked. On the right count, P2's ladder left only the Part B keys.
+- **§9.2 was only partly true.** It said "P5 no longer pre-answers any core item". That is true of P5. But Together P3 and P6, and set 1's own P7 and P4, pre-answered the new C03's blank 2.
+- **§9.5 had a stale count.** 1.d has 8 core items with no similar item, not 7. C14 lost coverage when it was dropped from S03's `like`.
+- **§9.3 overstated the 1.d C11 change.** It implied that h3 no longer settles blank 2. It does: h3 still removes "middle of winter", the only same-story distractor in blank 2. That is within the one-blank limit. The §9 change altered only h3's closing sentence.
+
+### 10.2 Needs blind re-solve
+
+| Lesson | Item | What changed |
+|---|---|---|
+| 1.a | **C10** | The distractor "It shows that Mr. Webb is dressed up for a special day." became "It is the clue that tells Nadia where the next note is hidden." (MUST-A1) |
+| 1.a | **Together P1** | The distractor "The apartment is far away from the city." became "The TV in the apartment is broken." (SHOULD-A1) |
+| 1.b | **C03** | Blank 2 is rewritten (MUST-B1). The text is now "…The author says that every summer Grandma Bea grew tomatoes behind her house, so the reader can tell that {1}."<br>Options:<br>• "the garden matters to her, so losing the tomatoes is a real problem" (key)<br>• "her tomatoes always grow well, so nothing can go wrong this year"<br>• "Grandma Bea sells her tomatoes at a market every summer"<br>Blank 1 is unchanged |
+| 1.b | **Together P5** | The Solution row "wire bent along the bottom of the gate" became "Jada blocks the space under the gate.", so it no longer copies P4's step 3 (NOTE-1) |
+| 1.d | **P4 (ref, practice item)** | Part B (MUST-D1): "The first big snow of the year covered Pine Hill in Vermont." became "The next morning, he filled a basket and carried it down the road." Each story now has two Part B choices.<br>Part A (found by my own ladder check, below): "Playing outside is more fun in the winter." became "Keeping your things for yourself keeps you happy." |
+| 1.d | **S03** | The distractor "Little sisters should never touch your drawings." became "Sharing your things keeps people from getting upset." (SHOULD-D1) |
+
+**Why P4 does not use the reviewer's mango sentence.** I first put in the reviewer's sentence, "He gave a mango to every child he met." I then took it out. It is the answer to 1.d C03, blank 1 ("giving a mango to every child he meets"), and C03 comes later in set 1, so P4 would have shown the child C03's answer. P4 uses Kofi's other turning-point sentence instead. C03 is back to its earlier text, so it has no net change.
+
+That sentence ("The next morning, he filled a basket…") is also C04's Part B key. P4's `how` never mentions time, so it does not answer C04's question about how long the stories last.
+
+### 10.3 Hint, clue, how and why changes
+
+| Lesson | Item | Change |
+|---|---|---|
+| 1.a | Together P1 | `clue` and h1: "Ask what the describing words in paragraph 1 help you picture." h2: "Read paragraph 1 again, and list everything that happens there." The `why` and `how` explain the TV distractor |
+| 1.a | Together P2 | `clue` (practice field) and h1: "The writer does not say how Mateo feels. Look for sentences that show a feeling without naming it." h2: "Read paragraphs 1, 2 and 5." h3 rules out "The whole room went dark", which is in h2's range (MUST-A2) |
+| 1.a | C10 | h2: "Reread paragraphs 4 to 6." The `how` and `why` explain the new distractor: no third note is ever found |
+| 1.b | C03 | `clue` and h1: "Details at the start of a story set things up. Ask who the story follows, and what the first paragraph tells you about the people in it." h3 rules out "nothing can go wrong". The `how`, `why` and misconception are rewritten |
+| 1.b | C04 | `clue` and h1: "Characters do different jobs in a plot. Ask who has the problem, and what each person does about it." (SHOULD-B1) |
+| 1.b | S01 | `clue` and h1: "Authors add a character for a reason. Ask what job this character does in the story." Added a misconception line: "A common mix-up is thinking that whoever finishes the job is the main character." (SHOULD-B2) |
+| 1.b | Together P5 | The `why` and `how4` follow the new Solution row |
+| 1.d | P4 | `how4` and `why` explain both turning-point sentences and the backward "keeping things" lesson |
+| 1.d | C14 | h2: "Reread the middle and the end of each story. What changes for each child?" h3 now rules out Kim (the goat wins), not Jalen (MUST-D2) |
+| 1.d | S03 | The `how` and `why` explain the "sharing" distractor |
+
+### 10.4 Whole-ladder check, hint by hint
+
+**The rule.** A choice counts as live only if a child who has read the `clue` and h1 to h3 still has a real reason to pick it. In every changed item, the `clue` is the same as h1.
+
+**3.T.T.1.a**
+
+**Together P1.** Choices: storm (key), bored, Abuela cooking, TV broken.
+- After h1 (describing words): all four.
+- After h2 (list everything that happens in ¶1): Abuela cooking is out, because she is not in ¶1. Storm, bored and TV broken remain.
+- After h3: bored is out.
+- **Live: storm and TV broken.** The screen does go black, so a child who misreads why has a reason to pick "TV broken".
+
+**Together P2.**
+- *Part B* choices: two keys, room dark, tapping, singing.
+  - After h1 (shows a feeling without naming it): room dark is weak, because it shows no feeling.
+  - After h2 (¶1, 2, 5): all five are in range.
+  - After h3: room dark is out.
+  - **Live: the two keys, tapping and singing.** A child who reads Part A as "excited" has a reason to pick tapping or singing. Telling the times apart is what the item tests, and no hint does it for the child.
+- *Part A*: **live: scared and excited.**
+
+**C10.** Choices: key (who wrote the notes), wears every day, hiding, where the next note is.
+- After h1 (how the detail moves the story): "wears every day" is out.
+- After h2 (¶4–6): no change.
+- After h3: hiding is out.
+- **Live: "who wrote the notes" and "where the next note is".** Both are plot functions. The child has to see in ¶6 that Nadia asks a person.
+
+**3.T.T.1.b**
+
+**C03.**
+- *Blank 1:* h1 and h2 ("who the story follows") settle it. That is the one blank allowed.
+- *Blank 2* choices: key, "nothing can go wrong", "sells at a market".
+  - After h3: "nothing can go wrong" is out.
+  - **Live: the key and "sells at a market".** "Every summer" invites the selling misreading, and nothing in Together or set 1 rules it out.
+- *Against Together and earlier set 1 items:*
+  - P1 says the garden is behind her house, which does not rule out selling.
+  - P2 says the rabbits are the problem. It does not say why the problem matters.
+  - P3, P6, P5, P7 and P4 say nothing about Grandma Bea's feelings or about selling.
+  - Neither blank 2 answer is pre-answered.
+
+**C04.** Choices: helper (key), main character, caused it, has the problem.
+- After h1 (who has the problem): "has the problem" is out, because the problem is Ms. Lin's.
+- After h3: "caused it" is out.
+- **Live: helper and main character.** The main character choice is the named misconception.
+
+**S01.** Choices: key, messy park, main character, filled the bag.
+- After h1 (what job this character does): no change.
+- After h3: messy park is out.
+- **Live: the key and main character.** "Filled the bag" is weak but not ruled out.
+
+**3.T.T.1.d**
+
+**P4.**
+- *Part A* choices: key, "new things safe and clean", "too much fruit makes you sick", "keeping your things keeps you happy".
+  - After h1 (must fit both stories): "safe and clean" is out, because it fits only Lucy.
+  - After h3: fruit is out.
+  - **Live: the key and "keeping your things".** Both characters start out keeping their things, so on the surface it fits both.
+- *Part B*:
+  - After h2 (the moment each character changes): the basket and the sled-pulling sentences are in range, and both keys stay in play.
+  - After h3: rope is out.
+  - **Live: two per story.** Kofi: the key and the basket. Lucy: the key and the sled-pulling.
+
+**C14.** Choices: Tomás (key), Lena, Jalen, Kim.
+- After h1 (say the lesson): no change.
+- After h2 (what changes for each child): Lena is out, because nothing changes in a weekly routine.
+- After h3: Kim is out.
+- **Live: Tomás and Jalen.** Jalen's move is a big change, so it tempts.
+
+**S03.** Choices: key, soccer, sharing, stay away.
+- After h1 (fits both): no change.
+- After h2 (how they get along at the start and the end): "stay away" is out, because they get along again.
+- After h3: soccer is out.
+- **Live: the key and sharing.** Each story starts with a quarrel over a thing (a ball, a drawing).
+
+### 10.5 Together and earlier set items against each core answer
+
+**1.a set 1** (P4, P5, C03, C04, C05) against Together P1–P3:
+- Together P1 no longer uses the word "description", so it does not label P4's Description row.
+- Together P3 asks about Abuela's words "So we will just make our own". That line is P4's Dialogue row, but it is in quotation marks either way. Weak overlap, left as it is.
+- Nothing in Together answers P5, C03, C04 or C05.
+
+**1.b set 1** (P7, P4, C03, C04, C05) against Together P1, P2, P6, P3 and P5:
+- C03: see 10.4.
+- P4 is rehearsed by Together's `how` steps, but the order itself is not given (the re-review keeps this a NOTE). The Solution row no longer copies P4's step.
+- P7's `why` ("Jada makes something that blocks the gate all night long") and P3's `why` both state the conclusion that C05's footprint sentence proves. They do not say that this sentence is the proof, which is the step C05 tests. Accepted as in the re-review, NOTE-2.
+
+**1.d set 1** (P4, P5, C03, C04, C05) against Together P1–P3:
+- Together P1 and P3 cue P4's sharing lesson without answering it (re-review NOTE-1).
+- P3's rows no longer answer P5.
+- Within the set, P4's Part B now shows the basket sentence, which is C04's Part B key. P4 does not say anything about time, so C04's question is not answered.
+- P4 no longer shows C03's answer (10.2).
+
+### 10.6 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In my lessons, the only warnings are similar coverage and the two older ones (SK-TT1a-T5, SK-TT1d-P1). The core items with no similar item are:
+  - 1.a: 8
+  - 1.b: 10
+  - 1.d: 8
+- `python3 verification/readability.py`: no passage text changed in this round.
+- Scratch audit (`scratchpad/b1a/audit.js`): 0 problems. Core points are 1.a 22, 1.b 23 and 1.d 24, with no DOK 1 items.
+- No git was run. I have not reviewed my own work.

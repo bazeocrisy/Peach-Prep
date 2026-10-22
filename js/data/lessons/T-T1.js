@@ -120,10 +120,10 @@ PP.addLesson({
         { text: "A strong storm is going on outside.", correct: true },
         { text: "Mateo is bored with his favorite show." },
         { text: "Abuela is busy cooking in the kitchen." },
-        { text: "The apartment is far away from the city." }
+        { text: "The TV in the apartment is broken." }
       ],
-      clue: "Ask what the sound words and the weather words in paragraph 1 help you picture.",
-      why: "The answer is \"A strong storm is going on outside.\" Thunder booms and rain beats against the windows, and then the power goes out. Mateo is watching his favorite show, so he is not bored, and the story says the apartment is in Atlanta." },
+      clue: "Ask what the describing words in paragraph 1 help you picture.",
+      why: "The answer is \"A strong storm is going on outside.\" Thunder booms and rain beats against the windows, and then the power goes out. Mateo is watching his favorite show, so he is not bored. The screen goes black because the whole room loses power, not because the TV is broken." },
     { id: "SK-TT1a-P2", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "How does Mateo feel when the lights first go out?",
@@ -141,7 +141,7 @@ PP.addLesson({
           { text: "\"Mateo tapped his feet to the beat.\"" },
           { text: "\"Soon he sang along, even louder than the thunder.\"" }
         ] },
-      clue: "The writer does not say how Mateo feels. Look at what his voice and his body do right after the room goes dark.",
+      clue: "The writer does not say how Mateo feels. Look for sentences that show a feeling without naming it.",
       why: "Part A: He feels scared. Part B: \"His voice came out high and squeaky.\" and \"He pulled his blanket up to his chin.\" A squeaky voice and pulling the blanket up to his chin show fear. The room going dark is the setting, not Mateo's feeling, and tapping and singing happen later, when he is having fun." },
     { id: "SK-TT1a-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What do Abuela's words in paragraph 3 show about her?",
@@ -349,22 +349,22 @@ PP.addLesson({
           { text: "It is the clue Nadia uses to figure out who wrote the notes.", correct: true },
           { text: "It shows what Mr. Webb wears to work every single day." },
           { text: "It shows that Mr. Webb is trying to hide from Nadia." },
-          { text: "It shows that Mr. Webb is dressed up for a special day." }
+          { text: "It is the clue that tells Nadia where the next note is hidden." }
         ],
         clue: "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
         hints: [
           "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
-          "Reread paragraph 5. What does Nadia do right after she notices the tie?",
+          "Reread paragraphs 4 to 6.",
           "Mr. Webb grins and answers Nadia's question, so he is not hiding from her. Test each choice that is left against the story."
         ],
         how: [
           "The second note says, \"Ask the person who loves sharks the most.\"",
           "Nadia looks around. Caleb only reads about trains. Then she notices that Mr. Webb's tie is covered with tiny gray sharks.",
-          "Right after that, she asks Mr. Webb whether he wrote the notes. The tie is the clue that points her to him.",
-          "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The story never says what he wears on other days or that it is a special day, and he is not hiding."
+          "Right after that, she asks Mr. Webb whether he wrote the notes. The tie points her to a person, not to another hiding place.",
+          "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The tie does not lead to another note: no third note is ever found. The story never says what he wears on other days, and he is not hiding."
         ],
         misconception: "A common mix-up is thinking a describing detail is there only to tell what something looks like. Here it is a clue that moves the plot.",
-        why: "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The note says to ask the person who loves sharks the most, and the shark tie points Nadia to Mr. Webb. The story never says what he wears on other days or that it is a special day, and he is not hiding." }
+        why: "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The note says to ask the person who loves sharks the most, and the shark tie points Nadia to Mr. Webb. No third note is ever found, the story never says what he wears on other days, and he is not hiding." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT1a-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
@@ -569,22 +569,22 @@ PP.addLesson({
   addons: {
     "SK-TT1a-P1": {
       hints: [
-        "Ask what the sound words and the weather words in paragraph 1 help you picture.",
-        "Read paragraph 1 again. Which words tell about sounds, and which tell about the weather?",
+        "Ask what the describing words in paragraph 1 help you picture.",
+        "Read paragraph 1 again, and list everything that happens there.",
         "Mateo is in the middle of his favorite show when the screen goes black, so he is not bored. Test each choice that is left against paragraph 1."
       ],
       how: [
         "Paragraph 1 says thunder booms over Atlanta and rain beats against the windows.",
         "Then the screen goes black and the whole room goes dark, which can happen in a big storm.",
         "The answer is \"A strong storm is going on outside.\"",
-        "Mateo is enjoying his show, Abuela is not in paragraph 1, and the story says the apartment is in Atlanta, a city."
+        "Mateo is enjoying his show, and Abuela is not in paragraph 1. The screen goes black at the same moment the whole room goes dark, so the power is out; the TV is not broken."
       ],
       misconception: "A common mix-up is choosing a detail about a character when the question asks what the details about the place show." },
     "SK-TT1a-P2": {
       hints: [
-        "The writer does not say how Mateo feels. Look at what his voice and his body do right after the room goes dark.",
-        "Read paragraphs 1 and 2. Choose two sentences for Part B.",
-        "Tapping his feet happens later, once the music is playing, so it does not show how he first feels. For Part B, both sentences must match your Part A answer."
+        "The writer does not say how Mateo feels. Look for sentences that show a feeling without naming it.",
+        "Read paragraphs 1, 2 and 5. Choose two sentences for Part B.",
+        "\"The whole room went dark\" tells about the room, not about Mateo. For Part B, both sentences must match your Part A answer."
       ],
       how: [
         "Right after the lights go out, Mateo's voice comes out high and squeaky.",
@@ -947,10 +947,10 @@ PP.addLesson({
         { text: "Grandma Bea", answer: 0 },
         { text: "behind a house in Macon in summer", answer: 1 },
         { text: "Rabbits get into the garden and eat the tomatoes.", answer: 2 },
-        { text: "wire bent along the bottom of the gate", answer: 3 }
+        { text: "Jada blocks the space under the gate.", answer: 3 }
       ],
       clue: "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
-      why: "Grandma Bea is a character. Behind a house in Macon in summer tells where and when, so it is the setting. Rabbits getting in and eating the tomatoes is the trouble the rest of the story is about fixing, so it is the problem. The wire along the gate fixes it, so it is the solution." }
+      why: "Grandma Bea is a character. Behind a house in Macon in summer tells where and when, so it is the setting. Rabbits getting in and eating the tomatoes is the trouble the rest of the story is about fixing, so it is the problem. Blocking the space under the gate fixes it, so it is the solution." }
   ],
   /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
      core: fifteen independent items in three sets of five. { ref } reuses the Try items P7 and P4;
@@ -964,25 +964,25 @@ PP.addLesson({
       { ref: "SK-TT1b-P4" },
       { id: "SK-TT1b-C03", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p1"],
         prompt: "Read paragraph 1 again. Then complete the sentences. Choose the best answer for each blank.",
-        text: "In this story, Jada is {0}. The author says that this year Jada was old enough to help, so the reader can expect that {1}.",
+        text: "In this story, Jada is {0}. The author says that every summer Grandma Bea grew tomatoes behind her house, so the reader can tell that {1}.",
         slots: [
           { options: ["the main character", "a helper who comes in near the end", "the one who causes the problem"], answer: 0 },
-          { options: ["Jada will be the one who solves the problem", "the rabbits are new to the garden this year", "Grandma Bea will rest while Jada works"], answer: 0 }
+          { options: ["the garden matters to her, so losing the tomatoes is a real problem", "her tomatoes always grow well, so nothing can go wrong this year", "Grandma Bea sells her tomatoes at a market every summer"], answer: 0 }
         ],
-        clue: "People in a story do different jobs in the plot. A detail near the start of a story can set up the job someone will do later.",
+        clue: "Details at the start of a story set things up. Ask who the story follows, and what the first paragraph tells you about the people in it.",
         hints: [
-          "People in a story do different jobs in the plot. A detail near the start of a story can set up the job someone will do later.",
+          "Details at the start of a story set things up. Ask who the story follows, and what the first paragraph tells you about the people in it.",
           "Read paragraph 1 again. Ask who the rest of the story follows.",
-          "Nothing in the story says the rabbits are new this year, so that choice does not fit the second blank. Test each choice that is left for the second blank against the whole story."
+          "Half of the tomatoes are gone in paragraph 2, so something does go wrong this year. Test each choice that is left for the second blank against the whole story."
         ],
         how: [
-          "Paragraph 1 says that this year, Jada was old enough to help in Grandma Bea's garden.",
           "The rest of the story follows Jada: she finds the trouble, thinks about it all day and checks the garden the next morning. So she is the main character.",
-          "Telling the reader she is old enough to help sets up her job in the plot: she will be the one who solves the problem.",
-          "The answers are the main character and Jada will be the one who solves the problem. Nothing says the rabbits are new, and Grandma Bea helps rather than rests."
+          "Paragraph 1 says Grandma Bea grows tomatoes every summer. Something she does year after year is something she cares about.",
+          "So when half the tomatoes disappear, it is a real problem worth fixing. The answers are the main character and the garden matters to her, so losing the tomatoes is a real problem.",
+          "Half the tomatoes do go missing, so things can go wrong this year. The story never says Grandma Bea sells her tomatoes; it only says she grows them behind her house."
         ],
-        misconception: "A common mix-up is thinking a detail at the start is only background. Ask what job it sets up for a character later in the story.",
-        why: "The answers are the main character and Jada will be the one who solves the problem. The story follows Jada from start to end, and saying she is old enough to help sets her up to fix the trouble. Nothing says the rabbits are new, and Grandma Bea helps rather than rests." },
+        misconception: "A common mix-up is thinking a detail at the start is only background. Ask what it tells you about why the problem matters.",
+        why: "The answers are the main character and the garden matters to her, so losing the tomatoes is a real problem. The story follows Jada from start to end. Growing tomatoes every summer shows the garden means a lot to Grandma Bea, so losing them matters. Half the tomatoes do go missing, and the story never says Grandma Bea sells them." },
       { id: "SK-TT1b-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
         stem: ["On Saturday morning, Ms. Lin wanted to read the new dragon book at the library's story hour. But when she opened it, only a whisper came out, because she had lost her voice. The children on the rug grew restless, and a few got up to leave.", "Then Amir, a fourth grader, offered to read the book aloud while Ms. Lin turned the pages and showed the pictures. Soon every child on the rug was listening."],
         prompt: "Read the story. What part does Amir play in the plot?",
@@ -992,9 +992,9 @@ PP.addLesson({
           { text: "He causes the problem by making the children restless." },
           { text: "He has the problem, because he wants to read to the children." }
         ],
-        clue: "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
+        clue: "Characters do different jobs in a plot. Ask who has the problem, and what each person does about it.",
         hints: [
-          "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
+          "Characters do different jobs in a plot. Ask who has the problem, and what each person does about it.",
           "Find the problem first. Then find what Amir does and what happens after that.",
           "The children were restless before Amir spoke up, so he did not cause the problem. Test each choice that is left."
         ],
@@ -1281,9 +1281,9 @@ PP.addLesson({
         { text: "He is the main character, because the bag gets into the truck when he helps." },
         { text: "He is the one who filled the bag too full." }
       ],
-      clue: "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
+      clue: "Authors add a character for a reason. Ask what job this character does in the story.",
       hints: [
-        "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
+        "Authors add a character for a reason. Ask what job this character does in the story.",
         "Find the problem in the first sentence. Then read what Mr. Cole does.",
         "The story never says the park is messy, so that choice has no support. Test each choice that is left."
       ],
@@ -1293,6 +1293,7 @@ PP.addLesson({
         "If he were not there, the bag would still be on the ground. The answer is \"Without him, Ms. Reyes could not finish the job.\"",
         "The story never says the park is messy, nothing says he filled the bag, and the story is about Ms. Reyes and her job, so he is a helper, not the main character."
       ],
+      misconception: "A common mix-up is thinking that whoever finishes the job is the main character.",
       why: "The answer is \"Without him, Ms. Reyes could not finish the job.\" She cannot lift the bag alone, and he grabs the other side so they can lift it together. Nothing says the park is messy or that he filled the bag, and helping does not make him the main character." },
     { id: "SK-TT1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
       like: ["SK-TT1b-C07"],
@@ -1430,7 +1431,7 @@ PP.addLesson({
         "Grandma Bea is a person in the story, so she is a character.",
         "Behind a house in Macon in summer tells where and when, so it is the setting.",
         "Rabbits getting in and eating the tomatoes is the trouble the rest of the story is about fixing, so it is the problem.",
-        "The wire along the bottom of the gate fixes it, so it is the solution."
+        "Blocking the space under the gate keeps the rabbits out, so it is the solution."
       ],
       misconception: "A common mix-up is naming the first thing that happens as the problem. The problem is what the rest of the story is about fixing." }
   },
@@ -2480,7 +2481,7 @@ PP.addLesson({
           { text: "Sharing with others can make life better.", correct: true },
           { text: "New things should be kept safe and clean." },
           { text: "Eating too much fruit can make you sick." },
-          { text: "Playing outside is more fun in the winter." }
+          { text: "Keeping your things for yourself keeps you happy." }
         ] },
       partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
         choices: [
@@ -2488,10 +2489,10 @@ PP.addLesson({
           { text: "\"It was the best ride of the day.\"", correct: true },
           { text: "\"Lucy pulled the sled over to her friends.\"" },
           { text: "\"Lucy held the rope tight.\"" },
-          { text: "\"The first big snow of the year covered Pine Hill in Vermont.\"" }
+          { text: "\"The next morning, he filled a basket and carried it down the road.\"" }
         ] },
       clue: "A lesson for both stories must fit Kofi AND Lucy. Ask what each main character learns, then check it against both stories.",
-      why: "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\" Both endings show that things got better after the character shared. The other choices fit only one story, or neither." },
+      why: "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\" Both endings show that things got better after the character shared. Both characters start out keeping their things for themselves, and it makes them unhappy, so that lesson is backward. The other choices fit only one story, or neither." },
     { id: "SK-TT1d-P5", type: "mc", points: 1, dok: 3, passages: ["p1", "p2"],
       prompt: "How is the way Kofi learns his lesson different from the way Lucy learns hers?",
       choices: [
@@ -2785,8 +2786,8 @@ PP.addLesson({
         clue: "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
         hints: [
           "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
-          "Reread the part where each child is handed a job, and the last paragraph of each story.",
-          "Jalen's family moves, like Bataa's family, but moving to a new town is not the lesson. Say the lesson aloud, then test the stories that are left."
+          "Reread the middle and the end of each story. What changes for each child?",
+          "Kim's goat is the one that wins, so Kim's story is about the goat's prize. Say the lesson aloud, then test the stories that are left."
         ],
         how: [
           "In \"Moving Day on the Grassland,\" Father hands Bataa the reins and says he is old enough to help. At the end, Bataa is tired but proud.",
@@ -2883,7 +2884,7 @@ PP.addLesson({
       choices: [
         { text: "Saying sorry can help fix a hurt friendship.", correct: true },
         { text: "Soccer is more fun when you play with friends." },
-        { text: "Little sisters should never touch your drawings." },
+        { text: "Sharing your things keeps people from getting upset." },
         { text: "It is best to stay away from people who argue." }
       ],
       clue: "A lesson for both stories must fit both characters. Say the lesson in words that would fit anyone.",
@@ -2896,10 +2897,10 @@ PP.addLesson({
         "Lucas argues with his friend, says he is sorry the next day, and they play together again.",
         "Nora snaps at her sister, says she is sorry, and they draw a new picture together.",
         "The answer is \"Saying sorry can help fix a hurt friendship.\"",
-        "Soccer fits only Lucas's story, the drawing rule fits only Nora's, and both characters go back to the person instead of staying away."
+        "Soccer fits only Lucas's story. Sharing is not what fixes either story: the trouble is fixed when each one says sorry. Both characters go back to the person instead of staying away."
       ],
       misconception: "A common mix-up is choosing a lesson about a topic in only one of the stories.",
-      why: "The answer is \"Saying sorry can help fix a hurt friendship.\" Lucas and Nora each say sorry, and each one is close again with the other person. Soccer fits only Lucas's story, the drawing rule fits only Nora's, and neither character stays away." }
+      why: "The answer is \"Saying sorry can help fix a hurt friendship.\" Lucas and Nora each say sorry, and each one is close again with the other person. Soccer fits only Lucas's story, sharing is not what fixes either story, and neither character stays away." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {
@@ -2949,7 +2950,7 @@ PP.addLesson({
         "At the end of Kofi's story, sharing his mangoes fills his days with friends.",
         "At the end of Lucy's story, the three friends ride together, and it is the best ride of the day.",
         "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\"",
-        "Keeping new things clean, getting sick and winter fun fit only one story or neither. Lucy pulling the sled to her friends is the moment she shares, but it does not show that her day got better."
+        "Keeping new things clean and getting sick fit only one story or neither. Two sentences come at the turning point, \"The next morning, he filled a basket and carried it down the road\" and \"Lucy pulled the sled over to her friends,\" but neither one tells how things turned out afterward. Both characters start out keeping their things for themselves, and that makes them unhappy, so that lesson is backward."
       ],
       misconception: "A common mix-up is choosing a lesson that fits only one story. Check it against both." },
     "SK-TT1d-P5": {
