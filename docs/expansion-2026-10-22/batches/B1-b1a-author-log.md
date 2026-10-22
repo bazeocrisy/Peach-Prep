@@ -38,7 +38,7 @@ All passages are original and are never used by `test` or `testB`. None comes fr
 | 1.a | p4 | The Note in the Book | 179 / 2.9 | school (library) | C06–C10, C14 |
 | 1.a | p5 | Tide Pool Morning | 165 / 1.8 | nature (Tybee Island) | C12–C14 |
 | 1.b | p3 | The Ice Cube Challenge | 180 / 1.8 | school / science | C06–C10, C14 |
-| 1.b | p4 | The Hidden Peach Stand | 178 / 2.2 | community / farm (Fort Valley, GA) | C11, C12, C14, C15 |
+| 1.b | p4 | The Back Row (replaced "The Hidden Peach Stand" after review) | 178 / 2.0 | school / community (a play in an old gym) | C11, C12, C14, C15 |
 | 1.d | p5 + p6 | Leap into the New Year (Denmark) + Noodles on the Last Night (Japan) | 166 / 2.9 + 175 / 2.6 | family celebrations | set 2 (C06–C10) |
 | 1.d | p7 + p8 | Moving Day on the Grassland (Mongolia) + Bringing the Sheep Home (Norway) | 156 / 3.4 + 168 / 2.8 | nature / ways of life | set 3 (C11–C15) |
 
@@ -160,12 +160,12 @@ The items weight function, not naming, as the matrix asks.
 | 7 | SK-TT1b-C07 | 2 | PROB → try | evidence | ebsr | 2 | 3 | p3 ¶3–4 | a failed try forces a new plan. Part B is pick 2 |
 | 8 | SK-TT1b-C08 | 2 | CHAR (whose idea solves it) | evidence | hottext | 1 | 2 | p3 ¶4 | the idea, told apart from the action that carries it out, thinking with no content, and the failed try |
 | 9 | SK-TT1b-C09 | 2 | SOL (proof) | evidence | ms | 2 | 2 | p3 ¶6–7 | proof the plan worked, told apart from the plan itself |
-| 10 | SK-TT1b-C10 | 2 | SEQ | construct (order) | order | 1 | 2 | p3 | orders the try and the steps of the solution. Steps must follow from each other (cube in sock before shade) |
-| 11 | SK-TT1b-C11 | 3 | SET → PROB, and why it matters | construct | dropdown | 2 | 2 | p4 ¶2, ¶4 | the setting causes the failure, and the stakes (the peaches will spoil) |
-| 12 | SK-TT1b-C12 | 3 | SOL (fully solved) | evidence | hottext | 1 | 3 | p4 ¶5–7 | told apart from partial progress (the first truck) |
+| 10 | SK-TT1b-C10 | 2 | SEQ | construct (order) | order | 2 | 2 | p3 | five steps: the failed try, the new plan in its needed order, and how it turns out |
+| 11 | SK-TT1b-C11 | 3 | SET → PROB, and why it matters | construct | dropdown | 2 | 2 | p4 | the setting (the fans) makes the first try fail, and the stakes (the play is tonight) |
+| 12 | SK-TT1b-C12 | 3 | CHAR (helper) | evidence | ebsr | 2 | 3 | p4 ¶5 | the custodian helps carry out the fix once Malia finds the cause. Distractors: finds the cause, causes it, main character |
 | 13 | SK-TT1b-C13 | 3 | SET → PROB | transfer (apply) | match | 2 | 2 | three new stems | each new setting matched to the problem it causes, one to one |
-| 14 | SK-TT1b-C14 | 3 | SOL across stories | compare | mc | 1 | 3 | p3 + p4 | both children find the cause and then fix it |
-| 15 | SK-TT1b-C15 | 3 | SOL logic | transfer | mc | 1 | 3 | p4 + four situations | the same reason it works (being seen). One distractor shares only a thing (a sign) |
+| 14 | SK-TT1b-C14 | 3 | SOL across stories | compare | mc | 1 | 3 | p3 + p4 | in both, a child works out why the first try failed and picks a fix for that reason |
+| 15 | SK-TT1b-C15 | 3 | SOL logic | transfer | mc | 1 | 3 | p4 + four situations | the same reason it works (move the listeners away from the noise). Distractors share "not hearing" or "a stage" |
 
 Tallies:
 - **Components:**
@@ -313,3 +313,118 @@ These are flagged by me, not resolved.
 10. **1.b Together.** Together has four items (P1, P2, P6, P3), because the existing split gave Together four.
 
 I have not reviewed my own work.
+
+
+**Note:** §1 to §7 were written before review. The 1.b rows for p4 and C10 to C15 were updated in place. Everything else changed after review is listed in §8.
+
+## 8. Fixes after B1 review
+
+**Sources:**
+- B1-review-1A.md (1A) and B1-review-1B.md (1B);
+- the lead's message;
+- the rules added to AUTHOR-BRIEF.md after the reviews.
+
+Every MUST and SHOULD in both reviews was addressed. NOTEs were applied where they were cheap and safe.
+
+**What the reviews found.** Both blind solves agreed on all keys (54 of 54). The faults were hint ladders, leaks between items, Together items that pre-answered set 1, and gaps in the teaching.
+
+### 8.1 Needs blind re-solve
+
+These items or passages had a choice, a target, a row, a step or a passage sentence changed.
+
+| Lesson | Item or text | What changed | Finding |
+|---|---|---|---|
+| 1.a | **SK-TT1a-C03** | New prompt with no quotation ("What does the last sentence of paragraph 4 tell the reader about Abuela?"). New key wording ("She is sharing a special song from her own childhood with Mateo."). Three new distractors taken from the text (homesick, misses the TV show, louder than the thunder) | 1A SHOULD-A1, 1B SHOULD-2, lead (weak distractors). The key avoids "fun", so it does not repeat Together P3's key |
+| 1.a | **SK-TT1a-C13** | The distractor "explains how the crab built its home" became "shows that the crab is about to come out of its home again" | 1A SHOULD-A3 |
+| 1.a | **p5 and SK-TT1a-C12** | "a rocky pool" became "a tide pool on the sandbar". The crab now hides under "a clump of oyster shells", so "rock" became "shells" in the passage and in C12's choices. The last sentence adds "laughing" (it was added before review, after the log was written) | 1A NOTE-5, 1B NOTE-2 (Tybee has sandbar pools) |
+| 1.a | **SK-TT1a-C15** | The character's name changed from Jada to Talia. Nothing else changed | 1B NOTE-4 (the name is reused in 1.b) |
+| 1.b | **p4, now "The Back Row"** | A new passage replaces "The Hidden Peach Stand". It has a different context (a school play in an old gym where loud fans drown out the actors), a helper who is not family (the custodian), and no produce and no reward | lead, 1B SHOULD-12 (p4 retold p1's storyline: a grandparent's produce is in danger and the reward is produce and praise) |
+| 1.b | **SK-TT1b-C11** | Rebuilt on the new p4. Blank 1: why shouting fails (the fans). Blank 2: why it is urgent (the play is that night) | the rework; 1A NOTE-1 (weak distractor) |
+| 1.b | **SK-TT1b-C12** | **Now a character-function EBSR**: "What part does Mr. Oduya play in the plot?" Part B has two choices from his paragraph. It replaces the "fully solved" hot text, which shared a frame with C09 | 1A SHOULD-B3 (the character component was thin), 1B SHOULD-9 |
+| 1.b | **SK-TT1b-C14** | New text pair (p3 + new p4). The key is "In both, a child works out why the first try failed and picks a fix for that reason." New distractors | the rework, 1B NOTE-6 |
+| 1.b | **SK-TT1b-C15** | New transfer on the new p4: moving away from the noise. The title echo ("hidden", "stand") is gone. Distractors: asking for a repeat, a piano out of tune, standing on a box | 1A SHOULD-B2, 1B SHOULD-11 |
+| 1.b | **SK-TT1b-C04** | The stem moves from a taco truck to a library story hour, so selling food no longer appears three times. The setting distractor became the named misconception ("the main character, because he is the one who fixes the problem"), and "has the problem" was added | 1A SHOULD-B5, 1B SHOULD-12 |
+| 1.b | **SK-TT1b-C06** | Three new distractors that the text invites: the bright windowsill, "only one cube each", and "only foil and a sock" | 1A SHOULD-B4, 1B SHOULD-8 |
+| 1.b | **SK-TT1b-C09** | The "supplies" distractor became "At the lunch bell, the other teams have only cups of water." That is from ¶6 and does not prove this team's success | 1A MUST-B1, 1B MUST-5 |
+| 1.b | **SK-TT1b-C10** | Now **five steps and 2 points**: windowsill, wrap, shade, unroll, gold star. No step names C07's or C08's key | 1A MUST-B2, 1B MUST-7, new brief rule (order items with four or more steps are worth 2) |
+| 1.b | **SK-TT1b-P5 (ref, practice item)** | New rows: Jada (Character), "summer mornings in Macon" (Setting), "Half of the little tomatoes are gone." (Problem) and Grandma Bea (Character). The Solution column is now deliberately unused, and h2 tells the child that a part may be left over. No row is now answered by Together P1 to P3, and the "rabbits at night" row is gone, which removes the clash with P7 | 1A MUST-B3, 1B SHOULD-10, lead |
+| 1.b | **SK-TT1b-S01** | New frame: "Why does the author include Mr. Cole in the story?" The key is "Without him, Ms. Reyes could not finish the job." It no longer copies C04's choices. `like` is now C04 and C12 | 1A SHOULD-B1, 1B SHOULD-13 |
+| 1.d | **p6, p7 and p8 endings** | The new passages no longer end with an adult praising the child, which rehearsed form A T1's key. The new endings:<br>p6: "Grandma nodded, and Haruto thought, 'Now it is my bell, too.'"<br>p7: "He had not lost a single lamb."<br>p8: "Every one was home. That night, Ingrid fell asleep still hearing the clink, clink of the bell."<br>p8 ¶5 now says Ingrid "proudly led" the ewe | lead, 1A NOTE-5, 1B SHOULD-12 |
+| 1.d | **SK-TT1d-C12** | Two targets added that are about the sheep acting, not the child: p7 ¶6:2 "The sheep spread out to eat." and p8 ¶5:4 "One by one, the other sheep followed." The p8 ¶6:3 target is now the falling-asleep sentence | 1A MUST-D1, 1B MUST-9 |
+| 1.d | **SK-TT1d-P4 (ref, practice item), Part B** | "Flies buzzed around the tree." became "Lucy pulled the sled over to her friends." That is a distractor from after Lucy changes, but it does not show the lesson | 1A MUST-D3, 1B MUST-8 |
+| 1.d | **SK-TT1d-P3 (Together, practice item)** | New rows:<br>"A neighbor brings the main character a bowl of soup." (Kofi)<br>"Snow covers the hill." (Lucy)<br>"The main character decides to share." (Both)<br>"Someone asks the main character to share." (Both)<br>Together no longer answers core P5 ("waste" against "no fun") | 1A MUST-D4, lead |
+| 1.d | **SK-TT1d-C04, Part B** | "Flies buzzed around the tree." became "That afternoon, his neighbor Ama brought him a bowl of warm groundnut soup." It has a time word, but alone it does not show more than one day | 1A SHOULD-D2, 1B SHOULD-15 |
+| 1.d | **SK-TT1d-C05** | New distractors that half fit: "food that will spoil … a sled that will break" and "Both … was given to them as a gift". "Old and worn" stays | 1A SHOULD-D4, lead |
+| 1.d | **SK-TT1d-C06** | The distractor "a warm summer evening" became "the first night of a new year", a misreading of "last night of the year". h2 no longer points to the first paragraphs | 1B SHOULD-8, lead |
+
+### 8.2 Hint, how and why changes only
+
+| Lesson | Item | Change | Finding |
+|---|---|---|---|
+| 1.a | P5 addon | h2: "First find the lines that Mateo says. For each one, ask how he feels at that moment." h3 rules out only "Abuela!" | 1A MUST-A1 |
+| 1.a | C06 | h3 rules out "Nadia's favorite room", which is inside h2's range, instead of tiptoeing | 1A NOTE-2, 1B SHOULD-6 |
+| 1.a | C09 | h2: "For each detail, ask what Nadia knows, or what she does, right after it." It no longer maps start, middle and end onto the columns | 1B MUST-1 |
+| 1.a | C10 | h2: "Reread paragraph 5. What does Nadia do right after she notices the tie?" h3 rules out "every day", then points back to the note | 1B SHOULD-3 |
+| 1.a | C11 | h3 keeps the "picky" elimination for blank 1. For blank 2 it says only "ask what changes after she pays" | 1A SHOULD-A2, 1B SHOULD-4 |
+| 1.a | C12 | h2: "Find Dad's words. Ask what he wants Lily to think about when he asks his question." It names no paragraph and does not describe the key. h3 rules out "Lily never lifts the shells" for Part A and "Lily reached for the shells" (it comes before Dad speaks) for Part B | 1A MUST-A2, 1B MUST-2 |
+| 1.a | C13 | h3 ends with "What does the tide coming back mean for the beach?" | 1A SHOULD-A3 |
+| 1.a | C14 | h1 names no location. h2: "Take one sentence at a time. Check it against [story 1], then against [story 2]." h3 rules out "a brand-new problem" | 1A SHOULD-A4, 1B MUST-3 |
+| 1.a | S01 | `like` is now C06 and P4 | 1A SHOULD-A5, lead |
+| 1.b | C05 | h1: "Ask what this sentence tells you about the rabbits, and compare it with what the footprints showed before." It no longer states "proof". h2 points to paragraph 2 | 1B MUST-4 |
+| 1.b | C08 | The `how` and `why` no longer say that "You were right about the sock" comes "after the idea worked". That had labelled one of C09's keys | 1B MUST-6 |
+| 1.b | C09 | h2: "Read from the moment the cube is wrapped to the end of the story." Its range now holds the wrapping step and the other teams' water as well as the keys | 1A MUST-B1, 1B MUST-5 |
+| 1.b | P4 addon and P4 `why` | h2: "Ask which event is the trouble, which one explains it, which one fixes it, and which one shows how it turned out." The `how` and `why` no longer end with "problem, cause, solution, result", which had given P5's Solution row | 1B MUST-7, 1B SHOULD-10 |
+| 1.b | P5 addon | New `how` and misconception that match the new rows | follows the P5 change |
+| 1.b | S02 | `like` is now C07 only. h2: "Find the problem and each try." | 1A NOTE-6, 1B SHOULD-14 |
+| 1.b | Teach point 1 | "a helper might make the solution possible" became "some characters help fix it", so the wording is no longer C04's key | 1A SHOULD-B5 |
+| 1.d | P4 addon | h2: "Find the moment each main character changes their mind." It names no paragraph. h3 rules out "Lucy held the rope tight" (it comes before she changes). The `how` explains the new distractor | 1A MUST-D3, 1B MUST-8 |
+| 1.d | P3 addon | New hints and `how` that match the new rows | follows the P3 change |
+| 1.d | C07 | Every Part B choice now has the same format, with no outer quotation marks | 1A NOTE-1 |
+| 1.d | C08 | h2: "Look at what each family does near midnight." The hint no longer points to the grandparent row | 1A SHOULD-D3 |
+| 1.d | C09 | The `how`, `why` and h2 follow the new p6 ending (Haruto's thought) | follows the endings |
+| 1.d | C10 | h3 rules out Grandpa's wobble, which is inside h2's range, instead of the fireworks | 1A NOTE-3, 1B SHOULD-6 |
+| 1.d | C11 | h3 rules out "the middle of winter" and ends "Which choice that is left matches Ingrid's story?" It settles only one blank | 1A SHOULD-D1, new brief rule |
+| 1.d | C14 | h2: "Ask what each child is given to do, and how the child feels after doing it." The `how` follows the new p8 ending | 1B SHOULD-12 |
+| 1.d | C15 | h2 points to the first paragraphs and asks where each family lives and whether that place stays put. It no longer names ¶3, which held only the Part B key | 1A MUST-D2, 1B SHOULD-15 |
+| 1.d | S01 | h2: "Find what each child does with the animal." | 1B SHOULD-14 |
+
+### 8.3 Teaching (still within five teach points and three Watch Me examples)
+
+**1.a:** Watch Me 1, the foggy lake, duplicated Together P1. I replaced it with two tiny stories (muddy paw prints, red yarn). The new example models:
+- why an author describes a detail: it is a clue that moves the plot (C10, C13);
+- comparing two texts by testing one sentence against each story (C14).
+
+It shares no fact with the core items. This answers 1A NOTE-7 and 1B SHOULD-1.
+
+**1.b:** Watch Me 2, the snowy bus, was a setting example that duplicated Together P1. I replaced it with a proof example: the newspaper soaked by the sprinkler. It steps through why a first sign of success is not enough and what shows the problem is fully fixed (C05, C09). This answers 1B SHOULD-5.
+
+**1.d:**
+- Teach point 2 now asks "Where and when does it happen, and how much time goes by?" (1A SHOULD-D5).
+- Watch Me 1 adds a fourth step, which is still within the limit: Kai's story is set on a summer day and Greta's in winter. This models "when" as part of the setting for C04 and C11.
+
+### 8.4 Not changed, with reasons
+
+**The number of times the child reads 1.b p1.** It is still four Together items plus four core items, on p1.
+- Moving P5 to Together would make Together five items, all on p1, and the child would still read p1 eight times.
+- C05 is the only core item on p1 about proof that the solution worked.
+- The overlap with Together was the real problem, and it has been removed. The lead may still decide to drop a ref.
+
+**Weak distractors on 1.a C05, C07 and C10.** The lead did not list them. Each is plausible enough, and changing them would add more items to re-solve.
+
+**1.b C13 (easy).** It is kept as it is. It is the transfer item, and it is DOK 2.
+
+**The Similar bank.** The core items with no similar item are:
+- 1.a: 8 items (unchanged)
+- 1.b: 10 items. S01 now covers C12, but S02 no longer lists C06.
+- 1.d: 7 items
+
+As in B0, the checker treats this as a warning.
+
+### 8.5 Gates after the fixes
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In my lessons, the only warnings left are the similar-coverage warnings and two that were already there (SK-TT1a-T5, SK-TT1d-P1).
+- `python3 verification/readability.py`: every passage of mine is 158 to 180 words and FK 1.9 to 3.4. The new 1.b p4 is 178 words, FK 2.0.
+- Scratch audit (`scratchpad/b1a/audit.js`): 0 problems. No hint contains or echoes a key.
+- Points: 1.a 22, 1.b 23 (C10 is now 2 points), 1.d 24.
+- Smoke test on port 8731: every route for the three lessons loads with no page errors.
+- No git was run. I have not reviewed my own work.

@@ -2795,7 +2795,7 @@ PP.addLesson({
         clue: "To compare two cultures, look at how each family lives, not just at what happens on one day.",
         hints: [
           "To compare two cultures, look at how each family lives, not just at what happens on one day.",
-          "Read the first paragraph of each story. What kind of home does each family have, and does it stay in one place?",
+          "Read the first paragraph of each story. Where does each family live, and does that place stay put?",
           "Both families keep sheep, so the choice about goats and horses does not fit. For Part B, the sentence must match your Part A answer."
         ],
         how: [
