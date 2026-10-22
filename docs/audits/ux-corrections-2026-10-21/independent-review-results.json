@@ -1,0 +1,593 @@
+{
+  "results": [
+    {
+      "name": "blocked: accurate unsaved notice",
+      "pass": true,
+      "detail": "Saving is unavailable. Your writing is kept only for this visit. Before closing or reloading this page, copy your plan and essay into a document or onto paper."
+    },
+    {
+      "name": "blocked: separate task is empty",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: newest plan/draft/checks/scores survive reopen",
+      "pass": true,
+      "detail": {
+        "plan": {
+          "opinion": "My opinion for independent review",
+          "ev0": "Evidence from the first source",
+          "end": "My concluding statement"
+        },
+        "draft": "My newest essay.\n\nIt must survive reopening.",
+        "checks": [
+          0
+        ],
+        "scores": {
+          "purpose": 2
+        }
+      }
+    },
+    {
+      "name": "blocked: second task preserves its own draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: explicit reset clears task one",
+      "pass": true,
+      "detail": {
+        "plan": {},
+        "draft": "",
+        "checks": [],
+        "scores": {}
+      }
+    },
+    {
+      "name": "blocked: reset does not clear neighboring task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: successful write clears failed-read notice",
+      "pass": true,
+      "detail": "Your changes are saved in this browser on this device. Clearing browser data can erase them."
+    },
+    {
+      "name": "read-throws: separate task is empty",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: newest plan/draft/checks/scores survive reopen",
+      "pass": true,
+      "detail": {
+        "plan": {
+          "opinion": "My opinion for independent review",
+          "ev0": "Evidence from the first source",
+          "end": "My concluding statement"
+        },
+        "draft": "My newest essay.\n\nIt must survive reopening.",
+        "checks": [
+          0
+        ],
+        "scores": {
+          "purpose": 2
+        }
+      }
+    },
+    {
+      "name": "read-throws: second task preserves its own draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: explicit reset clears task one",
+      "pass": true,
+      "detail": {
+        "plan": {},
+        "draft": "",
+        "checks": [],
+        "scores": {}
+      }
+    },
+    {
+      "name": "read-throws: reset does not clear neighboring task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: accurate unsaved notice",
+      "pass": true,
+      "detail": "Saving is unavailable. Your writing is kept only for this visit. Before closing or reloading this page, copy your plan and essay into a document or onto paper."
+    },
+    {
+      "name": "quota: separate task is empty",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: newest plan/draft/checks/scores survive reopen",
+      "pass": true,
+      "detail": {
+        "plan": {
+          "opinion": "My opinion for independent review",
+          "ev0": "Evidence from the first source",
+          "end": "My concluding statement"
+        },
+        "draft": "My newest essay.\n\nIt must survive reopening.",
+        "checks": [
+          0
+        ],
+        "scores": {
+          "purpose": 2
+        }
+      }
+    },
+    {
+      "name": "quota: second task preserves its own draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: explicit reset clears task one",
+      "pass": true,
+      "detail": {
+        "plan": {},
+        "draft": "",
+        "checks": [],
+        "scores": {}
+      }
+    },
+    {
+      "name": "quota: reset does not clear neighboring task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: accurate unsaved notice",
+      "pass": true,
+      "detail": "Saving is unavailable. Your writing is kept only for this visit. Before closing or reloading this page, copy your plan and essay into a document or onto paper."
+    },
+    {
+      "name": "stale-quota: separate task is empty",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: newest plan/draft/checks/scores survive reopen",
+      "pass": true,
+      "detail": {
+        "plan": {
+          "opinion": "My opinion for independent review",
+          "ev0": "Evidence from the first source",
+          "end": "My concluding statement"
+        },
+        "draft": "My newest essay.\n\nIt must survive reopening.",
+        "checks": [
+          0
+        ],
+        "scores": {
+          "purpose": 2
+        }
+      }
+    },
+    {
+      "name": "stale-quota: second task preserves its own draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: explicit reset clears task one",
+      "pass": true,
+      "detail": {
+        "plan": {},
+        "draft": "",
+        "checks": [],
+        "scores": {}
+      }
+    },
+    {
+      "name": "stale-quota: reset does not clear neighboring task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "storage restored: latest in-memory task persists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "storage restored: warning clears after successful write",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "working storage: all fields survive reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "later read failure: clean extended cache retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "later read failure: clean short writing cache retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "later read failure: saved data is not falsely represented as future persistence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: short writing survives lesson return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: short writing checkbox preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: short writing warns about browser close",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked: short writing lesson isolation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: short writing survives lesson return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: short writing checkbox preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-throws: short writing lesson isolation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: short writing survives lesson return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: short writing checkbox preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: short writing warns about browser close",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: short writing lesson isolation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: short writing survives lesson return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: short writing checkbox preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: short writing warns about browser close",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-quota: short writing lesson isolation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed True: tab usable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed True: valid neighboring record unchanged",
+      "pass": true,
+      "detail": {
+        "mastered": true,
+        "best": 8,
+        "bestMax": 8,
+        "tries": 2,
+        "passedAt": "2026-10-01",
+        "attempts": [
+          {
+            "n": 1,
+            "d": "2026-10-01",
+            "got": 8,
+            "max": 8,
+            "ok": true,
+            "form": "A"
+          }
+        ]
+      }
+    },
+    {
+      "name": "malformed True: engagement never invents scored pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed 'wrong': tab usable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed 'wrong': valid neighboring record unchanged",
+      "pass": true,
+      "detail": {
+        "mastered": true,
+        "best": 8,
+        "bestMax": 8,
+        "tries": 2,
+        "passedAt": "2026-10-01",
+        "attempts": [
+          {
+            "n": 1,
+            "d": "2026-10-01",
+            "got": 8,
+            "max": 8,
+            "ok": true,
+            "form": "A"
+          }
+        ]
+      }
+    },
+    {
+      "name": "malformed 'wrong': engagement never invents scored pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed 42: tab usable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed 42: valid neighboring record unchanged",
+      "pass": true,
+      "detail": {
+        "mastered": true,
+        "best": 8,
+        "bestMax": 8,
+        "tries": 2,
+        "passedAt": "2026-10-01",
+        "attempts": [
+          {
+            "n": 1,
+            "d": "2026-10-01",
+            "got": 8,
+            "max": 8,
+            "ok": true,
+            "form": "A"
+          }
+        ]
+      }
+    },
+    {
+      "name": "malformed 42: engagement never invents scored pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed None: tab usable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed None: valid neighboring record unchanged",
+      "pass": true,
+      "detail": {
+        "mastered": true,
+        "best": 8,
+        "bestMax": 8,
+        "tries": 2,
+        "passedAt": "2026-10-01",
+        "attempts": [
+          {
+            "n": 1,
+            "d": "2026-10-01",
+            "got": 8,
+            "max": 8,
+            "ok": true,
+            "form": "A"
+          }
+        ]
+      }
+    },
+    {
+      "name": "malformed None: engagement never invents scored pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed []: tab usable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed []: valid neighboring record unchanged",
+      "pass": true,
+      "detail": {
+        "mastered": true,
+        "best": 8,
+        "bestMax": 8,
+        "tries": 2,
+        "passedAt": "2026-10-01",
+        "attempts": [
+          {
+            "n": 1,
+            "d": "2026-10-01",
+            "got": 8,
+            "max": 8,
+            "ok": true,
+            "form": "A"
+          }
+        ]
+      }
+    },
+    {
+      "name": "malformed []: engagement never invents scored pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "path checklist does not write scored progress",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "adult ticks alone do not score a pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "retained stays off",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "practice URL loophole stays closed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "new check starts A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "form A: clean response at start",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "form A: successful scored attempt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "form B: clean response at start",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "form B: successful scored attempt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "form B then rotates to A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "correct graph explanation compares picked values",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "count boundaries",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "768x1024: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "768x1024: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x768: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x768: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x1080: writing notice/layout no sideways overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x1080: warning exposed as status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no uncaught page errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "page_errors": [],
+  "environment": "Chromium 131 desktop-context simulation; not actual-device acceptance"
+}

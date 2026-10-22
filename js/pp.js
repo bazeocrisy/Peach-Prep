@@ -47,6 +47,14 @@
   function clear(n) { while (n && n.firstChild) n.removeChild(n.firstChild); }
   function el(id) { return document.getElementById(id); }
 
+  /* Instructional counts use words below ten. Scores, standard codes and
+     numbered navigation deliberately keep their own numeric formatting. */
+  function countWord(n) {
+    return Number.isInteger(n) && n >= 0 && n < 10
+      ? ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"][n]
+      : String(n);
+  }
+
   /* Fisher-Yates on a copy. */
   function shuffled(arr) {
     const a = arr.slice();
@@ -131,7 +139,7 @@
 
   window.PP = {
     tablist, syncTabs,
-    addSet, sets, byId, addTask, tasks, taskById, make, clear, el, shuffled,
+    addSet, sets, byId, addTask, tasks, taskById, make, clear, el, countWord, shuffled,
     parseRef, passageOf, sentenceAt, visibleLabel, isHeading, isCaption, isBox
   };
 })();

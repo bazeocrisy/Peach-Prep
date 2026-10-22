@@ -1,0 +1,657 @@
+{
+  "writing": {
+    "passed": 75,
+    "failed": 0,
+    "results": [
+      {
+        "name": "normal: successful-save notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: all fields survive reload",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: clean cache sees valid disk update",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: clean cache sees explicit disk clear",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: read failure preserves clean cached work",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "normal: no page errors",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "blocked-getter: read failure disclosed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: honest unsaved notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: unsaved work has unload protection",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: saving recovery clears failure notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: recovered storage gets latest fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: other unsaved task still protected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: saving all tasks removes unload warning",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "blocked-getter: no page errors",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "quota: honest unsaved notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: unsaved work has unload protection",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: saving recovery clears failure notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: recovered storage gets latest fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: other unsaved task still protected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: saving all tasks removes unload warning",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "quota: no page errors",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "stale-disk: honest unsaved notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: unsaved work has unload protection",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: saving recovery clears failure notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: recovered storage gets latest fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: other unsaved task still protected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: saving all tasks removes unload warning",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "stale-disk: no page errors",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "read-error: read failure disclosed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: honest unsaved notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: unsaved work has unload protection",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: saving recovery clears failure notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: recovered storage gets latest fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: other unsaved task still protected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: saving all tasks removes unload warning",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "read-error: no page errors",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "damaged-json: distinguish damaged JSON",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: successful-save notice",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: second task starts independently",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: all fields survive mode/task return",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: current essay never reverts to disk",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: canceled reset preserves all fields",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: confirmed reset clears cached task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: resetting one task preserves other task",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "damaged-json: no page errors",
+        "pass": true,
+        "detail": []
+      }
+    ]
+  },
+  "skills": {
+    "checks": [
+      {
+        "name": "True: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "True: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "True: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "True: category retained",
+        "pass": true
+      },
+      {
+        "name": "True: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "True: no errors",
+        "pass": true
+      },
+      {
+        "name": "False: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "False: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "False: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "False: category retained",
+        "pass": true
+      },
+      {
+        "name": "False: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "False: no errors",
+        "pass": true
+      },
+      {
+        "name": "'bad': opening never passes",
+        "pass": true
+      },
+      {
+        "name": "'bad': Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "'bad': neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "'bad': category retained",
+        "pass": true
+      },
+      {
+        "name": "'bad': no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "'bad': no errors",
+        "pass": true
+      },
+      {
+        "name": "42: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "42: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "42: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "42: category retained",
+        "pass": true
+      },
+      {
+        "name": "42: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "42: no errors",
+        "pass": true
+      },
+      {
+        "name": "None: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "None: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "None: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "None: category retained",
+        "pass": true
+      },
+      {
+        "name": "None: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "None: no errors",
+        "pass": true
+      },
+      {
+        "name": "[]: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "[]: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "[]: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "[]: category retained",
+        "pass": true
+      },
+      {
+        "name": "[]: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "[]: no errors",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: opening never passes",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: Watch Me opens",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: neighbor untouched",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: category retained",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: no invented pass or Retained",
+        "pass": true
+      },
+      {
+        "name": "[1, 2]: no errors",
+        "pass": true
+      },
+      {
+        "name": "blocked: no unload warning before changes",
+        "pass": true
+      },
+      {
+        "name": "blocked: accurate notice",
+        "pass": true
+      },
+      {
+        "name": "blocked: unload protects unsaved writing",
+        "pass": true
+      },
+      {
+        "name": "blocked: other lesson isolated",
+        "pass": true
+      },
+      {
+        "name": "blocked: text retained through mode/lesson change",
+        "pass": true
+      },
+      {
+        "name": "blocked: checklist retained",
+        "pass": true
+      },
+      {
+        "name": "quota: no unload warning before changes",
+        "pass": true
+      },
+      {
+        "name": "quota: accurate notice",
+        "pass": true
+      },
+      {
+        "name": "quota: unload protects unsaved writing",
+        "pass": true
+      },
+      {
+        "name": "quota: other lesson isolated",
+        "pass": true
+      },
+      {
+        "name": "quota: text retained through mode/lesson change",
+        "pass": true
+      },
+      {
+        "name": "quota: checklist retained",
+        "pass": true
+      },
+      {
+        "name": "quota: notice recovers after successful save",
+        "pass": true
+      },
+      {
+        "name": "normal: no unload warning before changes",
+        "pass": true
+      },
+      {
+        "name": "normal: no false unavailable warning",
+        "pass": true
+      },
+      {
+        "name": "normal: other lesson isolated",
+        "pass": true
+      },
+      {
+        "name": "normal: text retained through mode/lesson change",
+        "pass": true
+      },
+      {
+        "name": "normal: checklist retained",
+        "pass": true
+      },
+      {
+        "name": "normal: reload preserved text",
+        "pass": true
+      },
+      {
+        "name": "normal: externally cleared saved writing stays cleared",
+        "pass": true
+      },
+      {
+        "name": "malformed-writing: no unload warning before changes",
+        "pass": true
+      },
+      {
+        "name": "malformed-writing: no false unavailable warning",
+        "pass": true
+      },
+      {
+        "name": "malformed-writing: other lesson isolated",
+        "pass": true
+      },
+      {
+        "name": "malformed-writing: text retained through mode/lesson change",
+        "pass": true
+      },
+      {
+        "name": "malformed-writing: checklist retained",
+        "pass": true
+      }
+    ],
+    "passed": 67,
+    "failed": 0
+  }
+}

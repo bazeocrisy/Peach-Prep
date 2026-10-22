@@ -385,7 +385,7 @@
     const noun = run.set.kind === "skill" ? "skill check" : "test";
     const blank = run.set.items.map((it, i) => ctxFor(i)).filter(c => !T[c.item.type].answered(c.item, c.resp)).length;
     el("confirm-line").textContent = blank
-      ? "You left " + blank + " question" + (blank > 1 ? "s" : "") + " blank or not finished. You can go back and check, or turn in your " + noun + "."
+      ? "You left " + PP.countWord(blank) + " question" + (blank === 1 ? "" : "s") + " blank or not finished. You can go back and check, or turn in your " + noun + "."
       : "You answered every question. You can go back and check, or turn in your " + noun + ".";
     el("confirm-submit").textContent = "Turn in my " + noun;
     showStage("confirm");
@@ -406,7 +406,7 @@
     const skill = run.set.kind === "skill";
     if (skill) window.PP_SKILLS.recordPractice(run.set.code, run.set.part);
     const nx = skill && run.set.next;
-    el("done-line").textContent = "You finished all " + n + " questions. You got " + first + " of " + n +
+    el("done-line").textContent = "You finished " + (n === 1 ? "one question" : "all " + PP.countWord(n) + " questions") + ". You got " + first + " of " + n +
       " right on your first try without help. Asking for help is never a mistake; it is how you learn." +
       (nx ? (nx.mode === "test" ? " When you are ready, take the skill check." : " Next, try some on your own.") : "");
     el("done-test").hidden = skill && !nx;

@@ -1,0 +1,552 @@
+[
+  {
+    "name": "1.1 home: five category cards and every catalog skill as a tappable line",
+    "pass": true,
+    "detail": "(5, 101, 101)"
+  },
+  {
+    "name": "1.1c every non-habit Georgia standard has a lesson",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "1.1b mixed practice screen has the four section cards",
+    "pass": true,
+    "detail": "4"
+  },
+  {
+    "name": "1.2 every manifest set loaded",
+    "pass": true,
+    "detail": "{'title': 'Peach Prep \u00b7 Georgia Milestones practice, Grade 3 ELA', 'cards': 5, 'rows': 101, 'want': 101, 'std': 147, 'scards': 4, 'covered': True, 'foot': '\\n      Peach Prep is a free, independent practice site. It is not affiliated with or endorsed by the Georgia Department of Education. All passages and questions are original practice material, not actual test items. Progress is saved only on this device.\\n      Peach Prep 2.2.0-rc (PP-003)\\n    ', 'build': 'Peach Prep 2.2.0-rc (PP-003)', 'se"
+  },
+  {
+    "name": "1.2b every manifest lesson file loaded",
+    "pass": true,
+    "detail": "{'n': 99}"
+  },
+  {
+    "name": "1.3 every manifest task loaded",
+    "pass": true,
+    "detail": "{'title': 'Peach Prep \u00b7 Georgia Milestones practice, Grade 3 ELA', 'cards': 5, 'rows': 101, 'want': 101, 'std': 147, 'scards': 4, 'covered': True, 'foot': '\\n      Peach Prep is a free, independent practice site. It is not affiliated with or endorsed by the Georgia Department of Education. All passages and questions are original practice material, not actual test items. Progress is saved only on this device.\\n      Peach Prep 2.2.0-rc (PP-003)\\n    ', 'build': 'Peach Prep 2.2.0-rc (PP-003)', 'se"
+  },
+  {
+    "name": "1.4 not-affiliated disclaimer on Home",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "1.5 build badge shown",
+    "pass": true,
+    "detail": "Peach Prep 2.2.0-rc (PP-003)"
+  },
+  {
+    "name": "2.1 the correct response earns full points on every item (1223 items)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "2.2 an empty response earns 0 on every item",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "2.3 two-part items give 1 point for Part A only",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "2.4 every item can describe its answer, the child's answer and a review hint",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "2.5 no review hint has an empty place name",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "3.1 a wrong Check says try again (every item)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "3.2 a wrong Check never shows the walk-through",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "3.3 Help me: clue, then narrowing that never rules out the answer, then walk-through; child still answers",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "3.4 the correct answer after help is accepted, and every set reaches its done panel",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "4.2 leaving a test in progress asks first",
+    "pass": true,
+    "detail": "['Leave this test? Your answers will not be saved.']"
+  },
+  {
+    "name": "4.3 a test question can be skipped, like the real test",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "4.4 a reload returns to the same practice set",
+    "pass": true,
+    "detail": "{'screen': 'player', 'set': 'SK:3.T.C.1.a:p'}"
+  },
+  {
+    "name": "4.5 Back from a set opened in the parent guide returns to the guide",
+    "pass": true,
+    "detail": "{'screen': 'parents', 'tab': 'standards'}"
+  },
+  {
+    "name": "4.1 tests: no hints, full marks when right, 0 when wrong, skill rows, Show me how holds the answer to step 3",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "5.1 the test tab shows 60 points, 49 items, 41 scored",
+    "pass": true,
+    "detail": "The test at a glanceThe Grade 3 English Language Arts test is worth 60 points. It has 49 questions; 41 count toward the "
+  },
+  {
+    "name": "5.2 the test tab links official sources and says not affiliated",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "5.3 every standard is listed",
+    "pass": true,
+    "detail": "{'count': '147 of 147 standards shown', 'n': 147, 'total': 147}"
+  },
+  {
+    "name": "5.4 'only what is on the test' shows exactly the assessed standards",
+    "pass": true,
+    "detail": "{'n': 69, 'want': 69, 'badges': True}"
+  },
+  {
+    "name": "5.5 a tested standard shows GaDOE's Proficient descriptors verbatim",
+    "pass": true,
+    "detail": "Explain how narrative techniqu"
+  },
+  {
+    "name": "5.6 grammar-chart rows: Master/Reinforce on the test (writing part only, per the blueprint), Introduce/Continue not",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "5.7 essay tab: 3 rubric traits and the 11-line Writer's Checklist",
+    "pass": true,
+    "detail": "{'items': 11, 'traits': 3}"
+  },
+  {
+    "name": "6.1 W-TASK-01: plan and draft are kept after a reload",
+    "pass": true,
+    "detail": "{'o': 'I think yes.', 'd': 'First paragraph here.\\n\\nSecond paragraph here.'}"
+  },
+  {
+    "name": "6.2 W-TASK-01: word and paragraph count",
+    "pass": true,
+    "detail": "6 words \u00b7 2 paragraphs \u00b7 Keep going. A very short essay may not earn full points."
+  },
+  {
+    "name": "6.3 W-TASK-01: the official checklist has 11 lines",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "6.4 W-TASK-01: rubric total adds to 7 of 8",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "6.5 W-TASK-01: a model essay is available to parents",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "6.1 W-TASK-02: plan and draft are kept after a reload",
+    "pass": true,
+    "detail": "{'o': 'I think yes.', 'd': 'First paragraph here.\\n\\nSecond paragraph here.'}"
+  },
+  {
+    "name": "6.2 W-TASK-02: word and paragraph count",
+    "pass": true,
+    "detail": "6 words \u00b7 2 paragraphs \u00b7 Keep going. A very short essay may not earn full points."
+  },
+  {
+    "name": "6.3 W-TASK-02: the official checklist has 11 lines",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "6.4 W-TASK-02: rubric total adds to 7 of 8",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "6.5 W-TASK-02: a model essay is available to parents",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "9.1 search narrows the list to matching skills",
+    "pass": true,
+    "detail": "6"
+  },
+  {
+    "name": "9.2 'On the test' shows only tested skills, and every tested standard is there",
+    "pass": true,
+    "detail": "{'n': 76, 'bad': [], 'covered': True}"
+  },
+  {
+    "name": "9.3 lessons are loaded",
+    "pass": true,
+    "detail": "99"
+  },
+  {
+    "name": "9.4 every lesson renders every step (five for quiz skills)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "9.5a Practice Together leads to Try It Yourself, where Help me starts hidden",
+    "pass": true,
+    "detail": "({'done': True, 't': 'Try it yourself'}, {'s': {'setId': 'SK:3.T.C.1.a:y', 'section': 'skill', 'mode': 'practice', 'pos': 0, 'total': 2, 'help': [0], 'solved': [False]}, 'help': False})"
+  },
+  {
+    "name": "9.5b in Try It Yourself, Help me unlocks after one wrong try",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set",
+    "pass": true,
+    "detail": "('Take the skill check', 'SK:3.T.C.1.a:t')"
+  },
+  {
+    "name": "9.6 a failed check says how many points pass it; a passing check says it passed",
+    "pass": true,
+    "detail": "(\"Not yet, and that's OK. Learning takes a few tries. Go back to Watch Me or Practice Together, then try the skill check again after you practice. (You need 6 or more points to pass.)\", '\u2713 Passed! You passed the skill check. It now shows a check mark on the skill list. Come back in about a week and try it again to see if it stuck.')"
+  },
+  {
+    "name": "9.7 Back from a skill test returns to the skill's Test step, with all five steps checked",
+    "pass": true,
+    "detail": "{'cur': 'skill', 'code': '3.T.C.1.a', 'step': 'test', 'done': 5}"
+  },
+  {
+    "name": "9.7b one phone Back from there leaves that skill (no duplicate history entry)",
+    "pass": true,
+    "detail": "('#skill/3.T.C.1.a/test', ['skill', '#skill/3.F.H.4.b/test'])"
+  },
+  {
+    "name": "9.8 All skills returns home on that skill's row, now marked Passed the skill check",
+    "pass": true,
+    "detail": "{'cur': 'home', 'focus': '3.T.C.1.a', 'txt': \"G1. Author's purpose and audience. Georgia 3.T.C.1.a. Passed the skill check.\"}"
+  },
+  {
+    "name": "9.9 progress is kept on the device after a reload",
+    "pass": true,
+    "detail": "mastered"
+  },
+  {
+    "name": "9.10 a skill page address opens that skill and step",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "9.11 standards without a lesson open an honest page (no empty steps)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "9.12 fluency timer: one minute, 100 words read, 1 missed = 99 words correct per minute, 99% accuracy",
+    "pass": true,
+    "detail": "99 words correct per minute \u00b7 99% accuracy (1 missed of 100)A typical third grader in the fall reads about 83 words corr"
+  },
+  {
+    "name": "9.13 grown-up check: 'Checked by a grown-up' only after every line is checked",
+    "pass": true,
+    "detail": "(True, False)"
+  },
+  {
+    "name": "9.14 the cursive font loads from the site itself",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "10.1 Show clue words highlights the clue words in a practice passage",
+    "pass": true,
+    "detail": "('TS-SEQ', {'vis': True, 'marks': 13}, True)"
+  },
+  {
+    "name": "10.2 the clue-word button is off in tests",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "10.3 the Clue Word Cheat Sheet shows the six structures",
+    "pass": true,
+    "detail": "{'rows': 6, 'scr': 'clues'}"
+  },
+  {
+    "name": "10.4 Everyday habits lists every K-12 practice",
+    "pass": true,
+    "detail": "{'n': 53, 'want': 53}"
+  },
+  {
+    "name": "10.5 Up next names a skill with its id",
+    "pass": true,
+    "detail": "{'t': 'D1 \u00b7 Story elements: characters, setting, problem and solution'}"
+  },
+  {
+    "name": "11.1 opening a lesson from the skill list writes no progress",
+    "pass": true,
+    "detail": "None"
+  },
+  {
+    "name": "11.2 #play/SK:<k>:t/practice runs as a check (no Help me) and never records practice",
+    "pass": true,
+    "detail": "({'s': {'setId': 'SK:3.T.C.1.a:t', 'section': 'skill', 'mode': 'test', 'pos': 0, 'total': 5, 'help': [0], 'solved': [False]}, 'help': False, 'hash': '#play/SK:3.T.C.1.a:t/test'}, {'tries': 1, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'attempts': [{'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}], 'passedAt': '2026-10-21', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21'})"
+  },
+  {
+    "name": "11.3 a pass stores passedAt, passTry, passBy, lastPassAt and one attempt per try; mastered/best/tries unchanged in meaning",
+    "pass": true,
+    "detail": "{'tries': 2, 'best': {'got': 8, 'max': 8}, 'bestMax': 8, 'attempts': [{'d': '2026-10-21', 'got': 0, 'max': 8, 'ok': False, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 8, 'max': 8, 'ok': True, 'n': 2, 'afterAnswers': True, 'form': 'A'}], 'answersSeenAt': '2026-10-22T00:30:12.752Z', 'mastered': True, 'passedAt': '2026-10-21', 'passTry': 2, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21'}"
+  },
+  {
+    "name": "11.4 See my answers is recorded, and the next pass is flagged afterAnswers",
+    "pass": true,
+    "detail": "[{'d': '2026-10-21', 'got': 0, 'max': 8, 'ok': False, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 8, 'max': 8, 'ok': True, 'n': 2, 'afterAnswers': True, 'form': 'A'}]"
+  },
+  {
+    "name": "11.5 the skill page shows the pass honestly: date, 'Passed on try 2', 'after seeing the answers'",
+    "pass": true,
+    "detail": "Test Your Knowledge (the skill check)6 questions, 8 points, no hints. Score 7 or more to pass the skill check.\u2713 Passed the skill check on October 21, 2026. Best score: 8 of 8.For grown-ups: passed on try 2. The check uses the same questions each time.For grown-ups: passed after seeing the answers on"
+  },
+  {
+    "name": "11.6 a first-try pass without seeing answers: passTry 1, afterAnswers false",
+    "pass": true,
+    "detail": "{'tries': 1, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'attempts': [{'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}], 'passedAt': '2026-10-21', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21'}"
+  },
+  {
+    "name": "11.7 a fail after a pass keeps the pass, logs ok:false, and shows 'review'",
+    "pass": true,
+    "detail": "({'tries': 2, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'attempts': [{'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 0, 'max': 7, 'ok': False, 'n': 2, 'afterAnswers': False, 'form': 'A'}], 'passedAt': '2026-10-21', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21'}, {'aria': 'L4. Making posters and slides with words, pictures and sound. Georgia 3.T.C.1.c. Passed the skill che"
+  },
+  {
+    "name": "11.8 a 2.1 record loads intact: old fields unchanged, legacyUndated + firstSeenPassedAt added, no invented passedAt",
+    "pass": true,
+    "detail": "{'3.T.C.2.a': {'taught': True, 'tries': 2, 'best': {'got': 7, 'max': 7}, 'mastered': True, 'legacyUndated': True, 'firstSeenPassedAt': '2026-10-21'}, '_ui': {'lastCat': 'reading'}, '3.F.F.1.b': {'checks': [True, True, True, True, True], 'mastered': True, 'legacyUndated': True, 'firstSeenPassedAt': '2026-10-21'}}"
+  },
+  {
+    "name": "11.9 old passes are labelled honestly: 'Passed the skill check' for a check, 'Checked by a grown-up' for a hands-on check, no review yet",
+    "pass": true,
+    "detail": "({'aria': \"E3. Point of view: the narrator's view and yours. Georgia 3.T.C.2.a. Passed the skill check.\", 'review': False}, {'aria': 'B3. Reading accurately. Georgia 3.F.F.1.b. Checked by a grown-up.', 'review': False})"
+  },
+  {
+    "name": "11.10 'review' shows 10 days after a pass, not 2 days after; the page says so; rendering changes nothing stored",
+    "pass": true,
+    "detail": "({'aria': \"G1. Author's purpose and audience. Georgia 3.T.C.1.a. Passed the skill check. Review suggested.\", 'review': True}, {'aria': 'F1. Text features: headings, bold words, text boxes and diagrams. Georgia 3.T.C.1.b. Passed the skill check.', 'review': False}, 'Test Your Knowledge (the skill check)5 questions, 7 points, no hints. Score 6 or more to pass the skill check.\u2713 Passed the skill check on October 11, 2026 (on an older version of this check).For grown', '2 of 74 skills that are on the"
+  },
+  {
+    "name": "11.11 grown-up check: passBy 'grownup', mastered kept for counts, labelled 'Checked by a grown-up' (not 'Passed the skill check')",
+    "pass": true,
+    "detail": "(None, {'checks': [True, True, True, True, True], 'mastered': True, 'passBy': 'grownup', 'passedAt': '2026-10-21', 'lastPassAt': '2026-10-21'}, {'aria': 'B3. Reading accurately. Georgia 3.F.F.1.b. Checked by a grown-up.', 'review': False})"
+  },
+  {
+    "name": "11.12 fluency timer says it is a home practice tool, not a test or screener",
+    "pass": true,
+    "detail": "Read aloud for one minuteA home practice tool, not a school reading test. Schools use passages that are checked for difficulty and more than one reading, so treat this number as a rough guide.Pick a p"
+  },
+  {
+    "name": "11.13 fluency verdict is for this one reading and notes passages differ",
+    "pass": true,
+    "detail": "99 words correct per minute \u00b7 99% accuracy (1 missed of 100)A typical third grader in the fall reads about 83 words correct per minute on a first reading (the 50th percentile, or median, of national grade 3 norms for a first reading of a new passage: Hasbrouck and Tindal, 2017). For this one reading"
+  },
+  {
+    "name": "11.14 grown-up observations (expression 1-3, pauses, self-corrections from the second tap, retell) are saved with the reading and shown as 'Grown-up observed'",
+    "pass": true,
+    "detail": "({'d': '2026-10-21', 'wcpm': 99, 'acc': 99, 'p': 1, 'obs': {'selfFix': 1, 'expr': 2, 'pauses': 'sometimes', 'retell': 'partly'}}, 'ober 21, 2026: 99 words correct per minute, 99% accuracy \u00b7 Grown-up observed: expression and phrasing 2 of 3, paused at punctuation: sometimes, 1 self-correction, told what it was mostly about: partly')"
+  },
+  {
+    "name": "11.15 no 'mastered' or 'mastery' in home, skill, results or parent text (GUM 'Master' labels allowed)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "11.16 the parent plan says a skill check is not a Georgia Milestones score",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "11.17 the skill page says a passed check is not a Milestones score, near the Proficient descriptors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "11.18 cursive word gap is about one lowercase o wide in the model and on the tracing sheet",
+    "pass": true,
+    "detail": "[0.875, 1.0046875]"
+  },
+  {
+    "name": "12.1 D1: Next and the step tabs land with the step heading visible just below the sticky step bar (390 and 1366)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "12.2 D4: after the in-page Back from a set, a section or an essay, one phone Back moves on (no dead press)",
+    "pass": true,
+    "detail": "('#reading', '#mixed', '#mixed', '#clues', ['', 'home'], '#clues')"
+  },
+  {
+    "name": "12.3 D5: Forward or reload on a finished practice or test shows a 'you finished this' screen (not question 1); Start again starts at question 1; nothing stored changes",
+    "pass": true,
+    "detail": "('done', ['again', '#play/SK:3.T.T.1.b:p/practice', 'Start the practice again'], 'again', ['work', 0], ['again', 'Your score was 7 of 7 points. That was a pass. Your skill page keeps your best score. Starting again begins a new skill check at question 1.'], True, True)"
+  },
+  {
+    "name": "12.4 D7: after a correct Check, focus moves to Next, and Enter goes on",
+    "pass": true,
+    "detail": "('q-next', 1)"
+  },
+  {
+    "name": "12.5 D8: damaged essay storage (null, wrong types, not an object) loads without errors and the essay still works",
+    "pass": true,
+    "detail": "([['plan', 'Yes.'], ['plan', 'Yes.'], ['plan', 'Yes.'], ['plan', 'Yes.']], [])"
+  },
+  {
+    "name": "12.6 D9: the skip link focuses the screen's heading and does not change the page",
+    "pass": true,
+    "detail": "[['home-title', '', 'home'], ['sk-title', '#skill/3.T.T.1.b/learn', 'skill']]"
+  },
+  {
+    "name": "12.7 D15: step, essay and parent tabs: one Tab stop, aria-controls a tabpanel, ArrowRight selects the next tab",
+    "pass": true,
+    "detail": "[{'tabbable': 1, 'ctl': True, 'moved': True}, {'tabbable': 1, 'ctl': True, 'moved': True}, {'tabbable': 1, 'ctl': True, 'moved': True}]"
+  },
+  {
+    "name": "12.8 D16: a bad address shows Home with a 'not found' note and a clean address",
+    "pass": true,
+    "detail": "[['home', '', True], ['home', '', True], ['home', '', True]]"
+  },
+  {
+    "name": "13.1 RD-1/RD-7/RD-8: the fluency result sits fully below the sticky step bar with focus on it (320/390/768/1366); no long live region; words carry aria-pressed",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "13.2 RD-4: #play/SK:<k>:p/test and :y/test run as practice or try, and finishing them stores no pass, try or best score",
+    "pass": true,
+    "detail": "('3.T.C.1.a', [])"
+  },
+  {
+    "name": "13.3 RD-9: no figure alt text or SVG title lists what is NOT in the picture (29 alts, 29 titles)",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "13.4 RE-3 bestMax: an old best (5 of 6) is not shown next to a 7-point check; a new best stores bestMax and shows 'of 7'; render writes nothing",
+    "pass": true,
+    "detail": "('5 questions, 7 points, no hints. Score 6 or more to pass the skill check.\u2713 Passed the skill check (on an older version of this check).This pass was saved before the site kept dates, so its date is not known.Take the skil', {'tries': 1, 'best': {'got': 5, 'max': 6}, 'mastered': True, 'legacyUndated': True, 'firstSeenPassedAt': '2026-10-21'}, 7, '5 questions, 7 points, no hints. Score 6 or more to pass the skill check.\u2713 Passed the skill check. Best score: 7 of 7.This pass was saved before the si"
+  },
+  {
+    "name": "13.5 RE-11: undated legacy passes do not all turn 'review' a week after the update",
+    "pass": true,
+    "detail": "{'row': False, 'due': False}"
+  },
+  {
+    "name": "13.6 RD-2/RD-3/RD-10/RD-11: focus after the grown-up check, the third Show me how and a bad address; 'Not yet' wording and labels",
+    "pass": true,
+    "detail": "{'grownup': True, 'notyet': ['Practice Together', 'Take the skill check again', True], 'showhow': True, 'notfound': 'home-notfound'}"
+  },
+  {
+    "name": "14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "14.1 form order: first check A, then the other form after every attempt (B, A, B); a review after a pass uses the other form; one-form lessons always use A",
+    "pass": true,
+    "detail": "(['SK:3.L.GC.2.b:t', 'SK:3.L.GC.2.b:tB', 'SK:3.L.GC.2.b:t', 'SK:3.L.GC.2.b:tB'], {'nothing': 'SK:3.L.GC.2.b:t', '2.1 record': 'SK:3.L.GC.2.b:tB', 'PP-003 pass (no form logged)': 'SK:3.L.GC.2.b:tB', 'pass on B': 'SK:3.L.GC.2.b:t'}, 'SK:3.T.C.1.a:t', 'SK:3.T.C.1.a:t')"
+  },
+  {
+    "name": "14.2 each attempt records its form (new field only); a pass on form B counts as 'Passed the skill check' exactly as before",
+    "pass": true,
+    "detail": "({'tries': 4, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'attempts': [{'d': '2026-10-21', 'got': 0, 'max': 7, 'ok': False, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 2, 'afterAnswers': False, 'form': 'B'}, {'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 3, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 0, 'max': 7, 'ok': False, 'n': 4, 'afterAnswers': False, 'form': 'B'}], 'mastered': True, 'passedAt': '2026-10"
+  },
+  {
+    "name": "14.3 SK:<k>:tB never runs as practice and never records practice; Try It Yourself's 'Take the skill check' opens the form the site picks",
+    "pass": true,
+    "detail": "({'s': {'setId': 'SK:3.L.GC.2.b:tB', 'section': 'skill', 'mode': 'test', 'pos': 0, 'total': 5, 'help': [0], 'solved': [False]}, 'help': False, 'hash': '#play/SK:3.L.GC.2.b:tB/test', 'tag': 'Skill check'}, 'test', {'tries': 1, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'attempts': [{'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'B'}], 'passedAt': '2026-10-21', 'passTry': 1, 'passBy': 'test', 'passForm': 'B', 'lastPassAt': '2026-10-21'"
+  },
+  {
+    "name": "14.4 with PP_FLAGS.retained off (default, and frozen), a valid later pass on form B 10 days on stores no retainedAt/retainedForm and shows no 'Retained'",
+    "pass": true,
+    "detail": "(False, False, 'SK:3.L.GC.2.b:tB', {'tries': 2, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'passedAt': '2026-10-11', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21', 'attempts': [{'d': '2026-10-11', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 2, 'afterAnswers': False, 'form': 'B'}]}, {'ret': False, 'aria': 'T7. Mix your sentences and keep verbs in the same time"
+  },
+  {
+    "name": "14.5a flag on: no Retained on the same form, before 7 days, after that form's answers were seen, from time alone, or from an undated 2.1 pass",
+    "pass": true,
+    "detail": "{'flag': True, 'same form': {'tries': 2, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'passedAt': '2026-10-11', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21', 'attempts': [{'d': '2026-10-11', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 2, 'afterAnswers': False, 'form': 'A'}]}, 'pick 3 days': 'SK:3.L.GC.2.b:tB', '3 days': {'tries': 2, 'best': {'got': 7, 'max': 7"
+  },
+  {
+    "name": "14.5b flag on: a pass on the other form 10 days after the first pass, without seeing its answers, stores retainedAt (today) and retainedForm B and shows 'Retained'; flag also via localStorage pp.dev",
+    "pass": true,
+    "detail": "{'pick valid': 'SK:3.L.GC.2.b:tB', 'valid': {'tries': 2, 'best': {'got': 7, 'max': 7}, 'bestMax': 7, 'mastered': True, 'passedAt': '2026-10-11', 'passTry': 1, 'passBy': 'test', 'passForm': 'A', 'lastPassAt': '2026-10-21', 'attempts': [{'d': '2026-10-11', 'got': 7, 'max': 7, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}, {'d': '2026-10-21', 'got': 7, 'max': 7, 'ok': True, 'n': 2, 'afterAnswers': False, 'form': 'B'}], 'retainedAt': '2026-10-21', 'retainedForm': 'B'}, 'row': {'ret': True,"
+  },
+  {
+    "name": "14.6 a seeded 2.1 record and a seeded PP-003 record load unchanged with the flag off and on (2.1 gains only PP-003's legacyUndated/firstSeenPassedAt); rendering writes nothing",
+    "pass": true,
+    "detail": "{'2.1 dev=False': [True, True, ['firstSeenPassedAt', 'legacyUndated'], True, 'mastered', 'SK:3.L.GC.2.b:tB'], 'PP-003 dev=False': [True, True, 'mastered', 'SK:3.L.GC.2.b:tB', 'review'], '2.1 dev=True': [True, True, ['firstSeenPassedAt', 'legacyUndated'], True, 'mastered', 'SK:3.L.GC.2.b:tB'], 'PP-003 dev=True': [True, True, 'mastered', 'SK:3.L.GC.2.b:tB', 'review']}"
+  },
+  {
+    "name": "15.1 GUM1-1 shows the speaking card on Try It Yourself (not on Practice Together), with 3 labelled checkboxes and the honest label; rendering writes nothing",
+    "pass": true,
+    "detail": "(None, {'text': 'Say it out loud (with a grown-up)Practice with a grown-up. This is not part of the skill check.Grown-up: during a short talk (at dinner or in the car), ask a few everyday questions out loud, like \"What did you do at recess?\" or \"What should we make for lunch?\" Listen to each answer. If it is only a few words, like \"the swings,\" ask your child to say it again as a whole sentence. Tick each line that is true.Answered at least 3 questions in complete spoken sentences, each with a w"
+  },
+  {
+    "name": "15.2 ticking with the keyboard stores only speakChecks {ticks, d}; status stays Not started; the tick is shown again after a reload",
+    "pass": true,
+    "detail": "({'speakChecks': {'ticks': [True, False, False], 'd': '2026-10-21'}}, ['new', 'new'], {'text': 'Say it out loud (with a grown-up)Practice with a grown-up. This is not part of the skill check.Grown-up: during a short talk (at dinner or in the car), ask a few everyday questions out loud, like \"What did you do at recess?\" or \"What should we make for lunch?\" Listen to each answer. If it is only a few words, like \"the swings,\" ask your child to say it again as a whole sentence. Tick each line that is"
+  },
+  {
+    "name": "15.3 on a passed skill, ticking every line changes nothing but speakChecks: mastered, passBy and status are unchanged",
+    "pass": true,
+    "detail": "({'tries': 1, 'best': {'got': 6, 'max': 6}, 'bestMax': 6, 'mastered': True, 'passedAt': '2026-10-18', 'passTry': 1, 'passBy': 'test', 'lastPassAt': '2026-10-18', 'attempts': [{'d': '2026-10-18', 'got': 6, 'max': 6, 'ok': True, 'n': 1, 'afterAnswers': False, 'form': 'A'}], 'speakChecks': {'ticks': [True, True, True], 'd': '2026-10-21'}}, ['mastered', 'passed', 'test'], ['mastered', 'passed', 'test'])"
+  },
+  {
+    "name": "15.4 lessons without speaking data show no speaking card on any step",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "16.1 U-1: every text box in passages (19 sets) and in Learn It / Watch Me examples (1 lessons) is role=note, named 'Text box', with a hidden 'Text box:' lead-in; drawn unlike the green 'Answer:' box (own tint, thick left edge), text contrast >= 4.5:1",
+    "pass": true,
+    "detail": "([], 54, [('rgb(237, 243, 253)', 12.0, 5)], 'rgb(233, 246, 239)')"
+  },
+  {
+    "name": "16.2 U-1: on SK-TC1b-T2 (\"How does the text box add to the article?\") the accessibility tree has one visible note named \"Text box\" that starts \"Text box: A monarch\"",
+    "pass": true,
+    "detail": "('SK-TC1b-T2', '- note \"Text box\":\\n  - paragraph: \"Text box: A monarch can taste with its feet. When it lands on a leaf, its feet can tell if the plant is milkweed.\"')"
+  },
+  {
+    "name": "16.3 U-2: the mode tag (Practice, Try it yourself, Skill check, Test, Writing task) is whole, not clipped, at 320/360/375/390",
+    "pass": true,
+    "detail": "([], ['Practice', 'Skill check', 'Test', 'Try it yourself', 'Writing task'])"
+  },
+  {
+    "name": "7.1 no page errors",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "name": "8.1 no sideways scroll at 320/375/390 on any screen",
+    "pass": true,
+    "detail": "[]"
+  }
+]

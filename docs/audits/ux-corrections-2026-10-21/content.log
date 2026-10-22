@@ -1,0 +1,8 @@
+Checked 15 sets (147 items), 2 tasks and 99 lessons (1076 items) [all files]
+  warn  PT-1 PT-1-14: Part A: clue shares “bright” only with the key
+  warn  lesson 3.L.V.3.b test SK-V3b-T1: slot 0: clue shares “blew” only with the key
+  warn  lesson 3.L.V.3.b test SK-V3b-T1: slot 1: clue shares “blue” only with the key
+  warn  lesson 3.T.T.1.a test SK-TT1a-T5: choices: clue shares “priya” only with the key
+  warn  lesson 3.T.T.1.d practice SK-TT1d-P1: choices: clue shares “something” only with the key
+  warn  lesson 3.T.T.1.e test SK-TT1e-T5: choices: clue shares “back” only with the key
+PASS (0 failures, 6 warnings)

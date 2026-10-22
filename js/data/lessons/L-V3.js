@@ -270,7 +270,7 @@ PP.addLesson({
         { text: "turned brown" }
       ],
       clue: "Read the title of the graph and the words at the bottom. Then compare the bar for week 3 with the bar for week 4.",
-      why: "The answer is \"became fewer.\" The graph counts buckets of pecans picked each week. Week 3 has 8 buckets, but week 4 has only 4 buckets. After week 3 there were fewer pecans left to pick, so dwindled means became fewer. The bars do not get bigger or stay the same after week 3, and the graph does not show color."
+      why: "The answer is \"became fewer.\" The graph counts buckets of pecans picked each week. Week 3 has eight buckets, but week 4 has only four buckets. The family picked fewer buckets of pecans after week 3, so dwindled means became fewer. The bars do not get bigger or stay the same after week 3, and the graph does not show color."
     },
     { id: "SK-V3a-TB2", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Lighter has more than one meaning. What does lighter mean in paragraph 3?",

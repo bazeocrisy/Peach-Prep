@@ -1,0 +1,18 @@
+[
+  {
+    "fixture": "original-launcher",
+    "initial_screen": "home",
+    "errors": [
+      {
+        "message": "Failed to read the 'localStorage' property from 'Window': Access is denied for this document.",
+        "stack": "SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at <anonymous>:8:7",
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "fixture": "guarded-launcher",
+    "initial_screen": "home",
+    "errors": []
+  }
+]

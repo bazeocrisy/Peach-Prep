@@ -561,7 +561,11 @@
   T.ebsr.partialNote = (it, r) => "Part A is right. Check Part B again.";
   T.ms.partialNote = (it, r) => "At least one of your choices is right.";
   T.dropdown.partialNote = (it, r) => "One blank is right.";
-  T.match.partialNote = (it, r) => it.rows.filter((row, i) => r.v[i] === row.answer).length + " of " + it.rows.length + " rows are right.";
+  T.match.partialNote = (it, r) => {
+    const right = PP.countWord(it.rows.filter((row, i) => r.v[i] === row.answer).length);
+    return right.charAt(0).toUpperCase() + right.slice(1) + " of " + PP.countWord(it.rows.length) +
+      " row" + (it.rows.length === 1 ? " is" : "s are") + " right.";
+  };
   T.order.partialNote = () => "You are close. Two of them are in the wrong places.";
   T.hottext.partialNote = () => "One of your sentences is right.";
 

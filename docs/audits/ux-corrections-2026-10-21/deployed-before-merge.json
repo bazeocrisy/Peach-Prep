@@ -1,0 +1,671 @@
+{
+  "base": "https://bazeocrisy.github.io/Peach-Prep/",
+  "expected_commit": null,
+  "method": "canonical URL byte-hash comparison with no-cache request header",
+  "assets": [
+    {
+      "path": "assets/figures/ra1b-notes-table.svg",
+      "status": 200,
+      "sha256": "8d5c5b170a23fb1344070d8a0850c2e9b1d2321af59c97dec7cd9bed401d7fc5",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:32 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/ra1b-web-moon.svg",
+      "status": 200,
+      "sha256": "5d4129227947c4cec37f3dec745957e0effc4e320792d17085a97a8baeb1f486",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:32 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/ra1b-web-pumpkin.svg",
+      "status": 200,
+      "sha256": "6441f2464f0119b2ff0009c2fd3a51547e450dba59b66178a6419ae69ec20b23",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:32 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/ss1a-georgia-river.svg",
+      "status": 200,
+      "sha256": "0a68c751efb6c7260349b4d349239d7d5ca102a11620472b5c2c941c7c68219d",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:33 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/ss1a-peanut-map.svg",
+      "status": 200,
+      "sha256": "4196f1781b33b4afa6b4f70ded527f84fb42e02d0e985f6d2bf58463310d9875",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:32 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/ss1a-tortoise-burrow.svg",
+      "status": 200,
+      "sha256": "195800e793db25eb226582972ddefe441eafc90831371ab18c7796bbff21b854",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:32 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-beaver-lodge.svg",
+      "status": 200,
+      "sha256": "2f2d824b9f4a9d408d6798e5225110fa258c46a41cf5b0768343b4c5a3be2e42",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-beaver-tree.svg",
+      "status": 200,
+      "sha256": "1268a35e8e77738062d6e144581f8bd7b6ed6ce6128597d6532d3f9bba47edc1",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-beaver-webpage.svg",
+      "status": 200,
+      "sha256": "b690f357871231d6f58bfea93f0b979487c5eb8136f16949e9cb7d48cf880e88",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-frog-webpage.svg",
+      "status": 200,
+      "sha256": "e904c59b6b7533af5f0fb67b07f90c840384e5d36c30f496b035ae31502a7a62",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-frog.svg",
+      "status": 200,
+      "sha256": "07df3b80603ec992992b7cd704516f48bf1993109ea9c30ca28e4c80ff2cc65c",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-monarch-cycle.svg",
+      "status": 200,
+      "sha256": "948db1f361ba584f746df7887675f058e5ef6ea6fd6b3af29e2c677586115926",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:36 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-monarch-flower.svg",
+      "status": 200,
+      "sha256": "15532035c0340ad36187aec0f387707d96f3e230b0987434928d849439b095eb",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-monarch-video.svg",
+      "status": 200,
+      "sha256": "f0b109e0e4bdb99db464382bf8336a2509121fbd7af132187ee598b5e19bdf14",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-monarch-webpage.svg",
+      "status": 200,
+      "sha256": "9d975a9b992b747275bb239522995be634cb20d3fd19981ead1ee31c9429f25d",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tc1b-plant-parts.svg",
+      "status": 200,
+      "sha256": "d1392c3ea8632bea85e690d2f5ce9567ae9c93d841e8bce06dd2ce2502154238",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tt2a-armadillo.svg",
+      "status": 200,
+      "sha256": "702464077f65bc17f022ecac9bc6f8cdd61decef4172a25b84c3b45eabbf47a4",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tt2a-b-tree-trunk.svg",
+      "status": 200,
+      "sha256": "89c5d001dc35b23cf1bbafca1481ee7b77a32bdcca709ab087480feff8f09cd0",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:39 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tt2a-camel.svg",
+      "status": 200,
+      "sha256": "7328ac8d1a7db7034cf1bddd1942a900f7f534b8d51594f4032a83ed0ed3ffca",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/tt2a-honeycomb.svg",
+      "status": 200,
+      "sha256": "fc057246f12d1e2e396cef9c1138d5d5b181de79a5a0cdad650ea083294debfa",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-b-balloon-parts.svg",
+      "status": 200,
+      "sha256": "30998af11cdf0b9dea115958612588ad640d66c9d67d5621afb642b28ce92835",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-b-pecan-graph.svg",
+      "status": 200,
+      "sha256": "2a8d7ff66ad4611f99d24a45e3143e357ac88a760c692c837ca89df21e180239",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-heron.svg",
+      "status": 200,
+      "sha256": "b2d741c9b0e5b316368047d83b00593a39385e227468ce4d29395678f051cc4d",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-rainfall-graph.svg",
+      "status": 200,
+      "sha256": "cb43211e78b08483a383c195f012fb77c28ce0b0d6bf80031a5afedf83e175fc",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:42 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-tree-ladder.svg",
+      "status": 200,
+      "sha256": "e147d033ba5bc475e73ad51b47dc468109e6d3e4ad7b0c72931343eae2e4b840",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3a-visitors-graph.svg",
+      "status": 200,
+      "sha256": "465fcb04c58fec54df0278d3a786ba502efd1778fb790873bb510061c6d9d62c",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3d-app-bark.svg",
+      "status": 200,
+      "sha256": "4985a00f266ac5384cb7156c5166a86c7dd0f54d0c15ff2c90ea4c13442394af",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3d-app-bright.svg",
+      "status": 200,
+      "sha256": "e0eb8c75bd0419ea2768dfdf75cd88967335b8c0fdf0318cde36f681c621d3fb",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "assets/figures/v3d-app-spring.svg",
+      "status": 200,
+      "sha256": "638ba260a6d0e4a9b86d8ac1a6b80f68ec6e9233931ab9b6ecf07b938c16e6d8",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "css/styles.css",
+      "status": 200,
+      "sha256": "c741881079bee8e8bd917a576c82c7829cef9aecafcab59b93f6a27f09bed4df",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:45 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "fonts/OFL-Playwrite.txt",
+      "status": 200,
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "fonts/playwrite-us-trad-guides-latin-400-normal.woff2",
+      "status": 200,
+      "sha256": "e0404f1120c2f5749a2c73af7f261379c01885105fc8a8fd5aac7ef7fa4009f6",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "fonts/playwrite-us-trad-latin-400-normal.woff2",
+      "status": 200,
+      "sha256": "f7b3e5abfd828f1bdec4bb6bcf4e1420ea8c407ffcd2363d9f8984210359a949",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "ce883046bc1b8ef861822feb11faa2e5fa2fc621a7588f7622615deb70519fa9",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/app.js",
+      "status": 200,
+      "sha256": "fe24f3a76878d0e3bb3981813b11d417e3232d27090d2f2a86dcc855b7dcbfe7",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/alds.js",
+      "status": 200,
+      "sha256": "27118663246c3812a6d597f8c9fd9b9b7c1ec887ad3e7ed1c02a65231283b70a",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:48 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/catalog.js",
+      "status": 200,
+      "sha256": "d14fb2d9f0b28c6df00fbb73ce73877595121513a0519c6c45b22a1b56004cc0",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/habits.js",
+      "status": 200,
+      "sha256": "9a5f17b06be10c1c617d53cf9f2842afccf1694d9e7bee2289616e93a7a23132",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/F-FH.js",
+      "status": 200,
+      "sha256": "2cef9e5779d83b8a0a58665ace914bacbca51436f354f547bec4c8d7f7468c42",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/F-PF.js",
+      "status": 200,
+      "sha256": "e96c5a6834e8053d628c0af868d4fb3c1bfad202404b5441a3e163b690063403",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GC2.js",
+      "status": 200,
+      "sha256": "2f5f2625183fda87f2949de16e358c9a8635e0ea1990f0aaa32c2ca9405c19c0",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GUM1.js",
+      "status": 200,
+      "sha256": "607ad90fb9ac4ae3fa080bec5495c6de200f9683e6cb2ec43f162e2dabc17875",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:50 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GUM2.js",
+      "status": 200,
+      "sha256": "2c07865f6d7679eb7b74d1dc8d6c1df4f1a2a71d95badc94bd087a455ea3c260",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GUM3.js",
+      "status": 200,
+      "sha256": "13871d6149b5e086eb443564dcdbd5c93689cda18e825aadf4673bf819f19fa5",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GUM4.js",
+      "status": 200,
+      "sha256": "6628d2a91f32fbff9cd902f4f5366e258f686a88eaa1039026ba1bddf09debdf",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-GUM5.js",
+      "status": 200,
+      "sha256": "355294b369c7780996a1ec89503972f72f1f10dd7868414372a6d3a85009fd17",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-V12.js",
+      "status": 200,
+      "sha256": "0c54195da34dab532c08d0fdee3f3728eec8dcbb07f152779deb3410a77abb4a",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/L-V3.js",
+      "status": 200,
+      "sha256": "438dd160c9c59079d0c7c27a709bc8f4c931d2d8347c3b336d02aeb53dc53f89",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:33:53 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-C.js",
+      "status": 200,
+      "sha256": "3d1e60bcb055af35363f932cfa0313737c85e8931bd7e20fb4f8d1c963f8c29b",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-RA.js",
+      "status": 200,
+      "sha256": "fefad4f037de844d0d1728e70c0480490415ab365dbd252bb6c19ea372078f6e",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-SS.js",
+      "status": 200,
+      "sha256": "cf1490d8ae5a4c858690fc318d2e098925f551afe1c71f0624f0f7cf0337dd94",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-T1.js",
+      "status": 200,
+      "sha256": "a724e2dce3e042ed67237846821ef620472c61dbf3d2ce19b5903e150b3d06d1",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-T2.js",
+      "status": 200,
+      "sha256": "ecd4be60ae90d53ed6133e17eddbd313901615b12f428dbb765bc979a53b66fe",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-T34.js",
+      "status": 200,
+      "sha256": "a06786a07ea445d57b0efdcb4501a242689dc710d17dde73a9a524a186202d41",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:56 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/lessons/T-TS.js",
+      "status": 200,
+      "sha256": "b3e84f58f7594dec056d20f776b56c58432e19905f719adae948a1f2d362a6bd",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/manifest.js",
+      "status": 200,
+      "sha256": "deeee801117dc0f341135d79ea7ee6c60a1717e3d9627852f31789ff427c9262",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/path.js",
+      "status": 200,
+      "sha256": "53b147433671a66357d98f9d7ddc29839059f6f4c8ba78072445d43dfc23c0f5",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-GRM-01.js",
+      "status": 200,
+      "sha256": "f513db7ed5f576af775b8a5ec66b6e8ea454907ad911474b111c89950a557435",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-GRM-02.js",
+      "status": 200,
+      "sha256": "7891e720876999ebb7aac70041cc42e872e649dc3b6f13df6b1620838623812a",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-GRM-03.js",
+      "status": 200,
+      "sha256": "01de61a2f739c9f8aeef794c4f99f820becbf3810a14f0d6db6bb40c70c9eefe",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:33:59 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-VOC-01.js",
+      "status": 200,
+      "sha256": "295212970526236ec90d2fc3e515638c59a56fc6a04d8845419224052514c8c6",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-VOC-02.js",
+      "status": 200,
+      "sha256": "10d1e992a716a2c04ff00a7b38a507118ac45e89b6f910a7bb4d8f7f6df4a2c5",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/L-VOC-03.js",
+      "status": 200,
+      "sha256": "373e168fd01e6c67c7016839f39d9c2fa1ee28a7fb9fb36b0099e48bf26ea090",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/PT-1.js",
+      "status": 200,
+      "sha256": "9daba7de2ba31e0bee629dd70d7becbd0fabbf7240b7092bd49d58b5fcfddec4",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-INF-01.js",
+      "status": 200,
+      "sha256": "e16a44be6332415c1f355dd2f7f305a43269b15090b6effa31f5a7412242c4c4",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-INF-02.js",
+      "status": 200,
+      "sha256": "ffb5932cfc1316af366ed5e31c4eab7171da7c7829b52261cd73c839307b16ad",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:02 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-LIT-01.js",
+      "status": 200,
+      "sha256": "c291134362defc5eeb3e477dcb2a3ae5bd140324a70451805e2e068ff2a46a30",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-LIT-02.js",
+      "status": 200,
+      "sha256": "e967b283c3c628ca6006f96a9f78d9ee12461383f24f128aed94daea8acfbd87",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-OPN-01.js",
+      "status": 200,
+      "sha256": "5cb4246a1be973eb5d85a2f55d9ec8de097a90166c51fa51c6f6b06768fc34d9",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/R-POE-01.js",
+      "status": 200,
+      "sha256": "103df822034c06cf7c29443725190642814bae44a104bd9337c3eff5db0677a2",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/W-REV-01.js",
+      "status": 200,
+      "sha256": "bf4884a6d1eb56f0057046c1c74dbe94f280913aaeddf1d733fbc44154de40df",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/sets/W-REV-02.js",
+      "status": 200,
+      "sha256": "8dd584c33da95462554fb1a513e5d2455447f6da3aadf1c5e6b9b1739909368a",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:05 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/site.js",
+      "status": 200,
+      "sha256": "b9f295bae140382046476a570845c01a3d26192f18ce77d927be1837a5dc0a39",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/standards.js",
+      "status": 200,
+      "sha256": "4266fcf13e4e8296eded930dfabf08d43416737af0fe3e3d44fa055f37de243b",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/tasks/W-TASK-01.js",
+      "status": 200,
+      "sha256": "145b434f72eae2fd0628a2b506d66f96be93492433570747d75eebe9f6a2778d",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/data/tasks/W-TASK-02.js",
+      "status": 200,
+      "sha256": "d4fcbe5dde7b0aaba8cc61c44fd0b7d09556dbad4b297478436ccfd3a920012b",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/engine/items.js",
+      "status": 200,
+      "sha256": "0130750b615e5860fae172fa88e06ff08e3d75c406d50f48e4d9795764938a6a",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/engine/player.js",
+      "status": 200,
+      "sha256": "2fef56c1d8349be3409d44f0b419c8c52bf45a7c11f2db45cfb7d70d2497bb7c",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:34:07 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/parents.js",
+      "status": 200,
+      "sha256": "b36a88804b62da1374553fb71f27fad94046cd28b0840b21b09f64dea792379f",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:10 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/path.js",
+      "status": 200,
+      "sha256": "51ca1ed6b50106674366051b5995ea59352d7078760366b46c40795136445480",
+      "matches": true,
+      "date": "Thu, 22 Oct 2026 00:34:10 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/pp.js",
+      "status": 200,
+      "sha256": "7929fa3f4ce65c82444e83e6af499669f86733aa925b7a13f0cff96090c90094",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:34:10 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/skills.js",
+      "status": 200,
+      "sha256": "e823a4a93e924605d43c9be71fc7577a5376c0b71c9b82cf1bd28af448f2b33b",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:34:10 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    },
+    {
+      "path": "js/writing.js",
+      "status": 200,
+      "sha256": "ee3328d0bd15fb644e68df779355b29a9adbd9a562a60c720538ed536f652470",
+      "matches": false,
+      "date": "Thu, 22 Oct 2026 00:34:10 GMT",
+      "last_modified": "Wed, 21 Oct 2026 20:46:47 GMT"
+    }
+  ]
+}
