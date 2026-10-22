@@ -428,3 +428,100 @@ As in B0, the checker treats this as a warning.
 - Points: 1.a 22, 1.b 23 (C10 is now 2 points), 1.d 24.
 - Smoke test on port 8731: every route for the three lessons loads with no page errors.
 - No git was run. I have not reviewed my own work.
+
+## 9. Fixes after the B1 re-review
+
+**Source:** B1-rereview-b1a.md and the lead's message. Every MUST and SHOULD in the re-review is addressed below. Only the changes listed here were made.
+
+**Superseded rows.** §3 and §8 still describe 1.b core 1.3 as the ref P5. That ref has been removed from core; see 9.2.
+
+### 9.1 Needs blind re-solve
+
+| Lesson | Item | What changed |
+|---|---|---|
+| 1.a | **SK-TT1a-C10** | The distractor "It tells the reader that Caleb likes trains more than sharks." became "It shows that Mr. Webb is dressed up for a special day." (SHOULD-A1) |
+| 1.b | **SK-TT1b-C03 (new; core 1.3)** | A new two-slot dropdown on p1, DOK 3, 2 points. It replaces the ref P5 (MUST-B1).<br>Text: "In this story, Jada is {0}. The author says that this year Jada was old enough to help, so the reader can expect that {1}."<br>Blank 1 key: "the main character". Blank 2 key: "Jada will be the one who solves the problem".<br>It asks what job an opening detail sets up. It does not ask for Together's Macon setting or the tomato problem |
+| 1.b | **SK-TT1b-C04** | The stem now gives Ms. Lin a goal and a try: "Ms. Lin wanted to read the new dragon book at the library's story hour. But when she opened it, only a whisper came out, because she had lost her voice." The choices are unchanged (SHOULD-B1) |
+| 1.b | **SK-TT1b-C11** | Two distractors changed (MUST-B2):<br>• Blank 1: "the first graders keep talking during the play" became "the actors are not shouting loudly enough".<br>• Blank 2: "the fans are about to break down" became "the last practice is almost over". |
+| 1.b | **SK-TT1b-S01** | The distractor "He explains why the leaves fell off the trees." became "He is the main character, because the bag gets into the truck when he helps." (SHOULD-B2) |
+| 1.b | **SK-TT1b-P5 (now Together, not core)** | The rows are now: Grandma Bea (Character), "behind a house in Macon in summer" (Setting), "Rabbits get into the garden and eat the tomatoes." (Problem), and "wire bent along the bottom of the gate" (Solution).<br>The Problem row is the trouble the story is about fixing, so it now agrees with `coach.mixup`. It does not say "at night", so it does not clash with P7. |
+| 1.d | **SK-TT1d-C11** | The blank 1 key "wide, grassy land in the spring" became "open grassland in the spring", so it is no longer copied word for word from p7 ¶1 (SHOULD-D4) |
+
+### 9.2 Structure
+
+- **1.b core set 1** is now P7 (ref), P4 (ref), C03 (new), C04 and C05.
+  - P5 is no longer referenced by `core`, so it falls back into Practice Together. Together is now P1, P2, P6, P3 and P5, which is five items, the maximum.
+  - Inside Together, P5 restates what P1 to P3 teach. That is guided practice, and it no longer pre-answers any core item.
+- **1.b core totals:** 23 points. The formats are mc 6, order 2, dropdown 2, ebsr 2, hottext 1, ms 1 and match 1. DOK: 9 items at DOK 2 and 6 at DOK 3.
+- **The p1 read count is unchanged.** The child reads p1 in five Together items and four core items. The re-review (§7.1) accepts the count once P5 is out of core.
+- **The 1.b block comment** now says the refs are P7 and P4.
+
+### 9.3 Hint, clue, how and why changes
+
+| Lesson | Item | Change | Finding |
+|---|---|---|---|
+| 1.a | P5 (ref) | `clue` (practice field): "Dialogue is the words a character says. First check who is speaking in each line." It no longer points to the end of the story.<br>h2: "Read the lines in paragraphs 2, 3 and 6. For each one, ask who says it and how that person feels."<br>h3 rules out "Well, the storm took our show" (Abuela). | MUST-A1 |
+| 1.a | C10 | h3: "Mr. Webb grins and answers Nadia's question, so he is not hiding from her. Test each choice that is left against the story." The `how` and `why` follow the new distractor | SHOULD-A1 |
+| 1.a | Together P1 | The prompt (practice field) is now "What do the details in paragraph 1 help the reader understand?" The `clue` and h1 drop the word "description". h2 asks which words are about sounds and which are about the weather. The misconception is reworded | SHOULD-A2, NOTE |
+| 1.a | Together P2 | h2: "Read paragraphs 1 and 2. Choose two sentences for Part B." The `clue` (practice field) no longer names paragraph 2. The whole-ladder check below found that | SHOULD-A3 |
+| 1.b | C03 | `clue` and h1: "People in a story do different jobs in the plot. A detail near the start of a story can set up the job someone will do later."<br>h2 settles blank 1 only: "Ask who the rest of the story follows."<br>h3 rules out "the rabbits are new" for blank 2, which leaves two choices there. | MUST-B1 |
+| 1.b | C04 | The `how` and `why` say the goal and the problem are Ms. Lin's | SHOULD-B1 |
+| 1.b | C11 | h2 for blank 1: "read what happens after the actors shout". h2 for blank 2: "look for a time clue in the story. There is more than one." h3 still rules out "do not know their lines". The `how` and `why` follow the new distractors | MUST-B2 |
+| 1.b | C12 | The Part A prompt is now "What is Mr. Oduya's job in the plot?", so it no longer repeats C04's prompt | NOTE-2 |
+| 1.b | S01 | h3 now rules out "messy park". The `how` and `why` follow the new distractor | SHOULD-B2 |
+| 1.b | P5 (Together) | New hints, `how` and `why` that match the new rows. The misconception is `coach.mixup` | MUST-B1 |
+| 1.b | Teach point 5 | Adds: "To tell whether two fixes work for the same reason, say what each fix changes, not what it looks like." | SHOULD-B3 |
+| 1.d | P4 (ref) | `clue` (practice field) and h1: "A lesson for both stories must fit Kofi AND Lucy. Ask what each main character learns, then check it against both stories." | MUST-D1 |
+| 1.d | C11 | h3 now ends "Test the other choices for each blank against the first paragraphs." It no longer settles blank 2 | SHOULD-D4 |
+| 1.d | C12 | h3: "Sitting up tall in the saddle shows how Bataa feels; no sheep move. Check each other sentence against the question." | SHOULD-D3 |
+| 1.d | C14 | h2: "Reread the part where each child is handed a job, and the last paragraph of each story." | SHOULD-D1 |
+| 1.d | C15 | h2: "Read the first paragraph of each story. What does each one tell you about how the family lives?" It drops "does that place stay put" | SHOULD-D2 |
+| 1.d | S03 | `clue` and h1: "…Say the lesson in words that would fit anyone." h2: "In each story, notice how the two people get along at the start and how they get along at the end." This replaces "Read the last sentence of each story". `like` drops C14 | SHOULD-D5, NOTE-4 |
+
+### 9.4 Whole-ladder check
+
+**Method.** For each item changed in this round, I printed the `clue`, the three hints and the choices together, and asked whether they leave only the key. The items checked were:
+- 1.a: P1, P2, P5, C10
+- 1.b: C03, C04, C11, C12, S01, P5
+- 1.d: P4, C11, C12, C14, C15, S03
+
+**The one new problem it found.** 1.a P2's practice `clue` still sent the child to paragraph 2, where both Part B keys are. I fixed it (see 9.3).
+
+**What is left standing after the whole ladder:**
+
+| Lesson | Item | Live options after `clue` and h1–h3 |
+|---|---|---|
+| 1.a | P1 | 3 |
+| 1.a | P5 | 3 targets |
+| 1.a | C10 | 3 |
+| 1.b | C03 | blank 2: 2 (blank 1 is settled by h2, which is the one blank allowed) |
+| 1.b | C04 | 3 |
+| 1.b | C11 | blank 1: 2; blank 2: 3 |
+| 1.b | C12 | Part A: 3 |
+| 1.b | S01 | 3 |
+| 1.d | P4 | Part A: 3; Part B: 4 |
+| 1.d | C11 | blank 1: 3; blank 2: 2 |
+| 1.d | C12 | 2 in each story |
+| 1.d | C14 | 3 |
+| 1.d | C15 | Part A: 3 |
+| 1.d | S03 | 3 |
+
+**A limit I am flagging.**
+- 1.a C10's h1 ("how the detail helps the story move along") is a strategy for author's-purpose questions, and it favours the key over the two "what he wears" distractors.
+- Both of those distractors stay live, because each is a fair reading of the tie on its own.
+
+### 9.5 Not changed
+
+- **1.a P5's structure.** Mateo speaks only twice in p1, so this item is easy by design. The new ladder keeps three targets live.
+- **The similar bank** (warning level; the lead's call). The core items with no similar item are:
+  - 1.a: 8 items
+  - 1.b: 10 items
+  - 1.d: 7 items
+- **1.d C06**, which is close to a lookup. The re-review accepts DOK 2 for a set opener.
+
+### 9.6 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In my lessons, the only warnings are similar-coverage and the two older ones (SK-TT1a-T5, SK-TT1d-P1).
+- `python3 verification/readability.py`: no passage text changed in this round. All my passages are 158–180 words.
+- Scratch audit (`scratchpad/b1a/audit.js`): 0 problems.
+- No git was run. No server was needed this round. I have not reviewed my own work.
