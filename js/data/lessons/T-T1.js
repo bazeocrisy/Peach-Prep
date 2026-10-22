@@ -115,14 +115,14 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-TT1a-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "What does the description in paragraph 1 help the reader understand?",
+      prompt: "What do the details in paragraph 1 help the reader understand?",
       choices: [
         { text: "A strong storm is going on outside.", correct: true },
         { text: "Mateo is bored with his favorite show." },
         { text: "Abuela is busy cooking in the kitchen." },
         { text: "The apartment is far away from the city." }
       ],
-      clue: "Description helps you picture the setting. Look for sound words and weather words in paragraph 1.",
+      clue: "Ask what the sound words and the weather words in paragraph 1 help you picture.",
       why: "The answer is \"A strong storm is going on outside.\" Thunder booms and rain beats against the windows, and then the power goes out. Mateo is watching his favorite show, so he is not bored, and the story says the apartment is in Atlanta." },
     { id: "SK-TT1a-P2", type: "ebsr", points: 2, dok: 3, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -168,7 +168,7 @@ PP.addLesson({
       prompt: "Which line of dialogue shows that Mateo enjoyed the night with Abuela? Choose the sentence in the passage.",
       targets: ["p1:2:1", "p1:3:2", "p1:3:3", "p1:6:2"],
       answer: ["p1:6:2"], pick: 1,
-      clue: "First, check who is speaking in each line. Then think about how Mateo feels at the end, when the lights come back on.",
+      clue: "Dialogue is the words a character says. First check who is speaking in each line.",
       why: "The answer is the sentence where Mateo asks, \"Can we keep them off a little longer?\" Mateo wants the lights to stay off so the music can go on. That shows he had fun. The lines in paragraph 3 are Abuela's words, and \"Abuela!\" is Mateo calling for help when he is scared." }
   ],
   /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
@@ -349,22 +349,22 @@ PP.addLesson({
           { text: "It is the clue Nadia uses to figure out who wrote the notes.", correct: true },
           { text: "It shows what Mr. Webb wears to work every single day." },
           { text: "It shows that Mr. Webb is trying to hide from Nadia." },
-          { text: "It tells the reader that Caleb likes trains more than sharks." }
+          { text: "It shows that Mr. Webb is dressed up for a special day." }
         ],
         clue: "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
         hints: [
           "Authors put a describing detail in a story for a reason. Ask how the detail helps the story move along.",
           "Reread paragraph 5. What does Nadia do right after she notices the tie?",
-          "The story never says what Mr. Webb wears on other days, so that choice has no support. Then think back to what the second note told Nadia to look for."
+          "Mr. Webb grins and answers Nadia's question, so he is not hiding from her. Test each choice that is left against the story."
         ],
         how: [
           "The second note says, \"Ask the person who loves sharks the most.\"",
           "Nadia looks around. Caleb only reads about trains. Then she notices that Mr. Webb's tie is covered with tiny gray sharks.",
           "Right after that, she asks Mr. Webb whether he wrote the notes. The tie is the clue that points her to him.",
-          "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The story never says what he wears on other days, he is not hiding, and the train sentence is about Caleb, not the tie."
+          "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The story never says what he wears on other days or that it is a special day, and he is not hiding."
         ],
         misconception: "A common mix-up is thinking a describing detail is there only to tell what something looks like. Here it is a clue that moves the plot.",
-        why: "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The note says to ask the person who loves sharks the most, and the shark tie points Nadia to Mr. Webb. The story never says what he wears on other days, he is not hiding, and the train sentence is about Caleb." }
+        why: "The answer is \"It is the clue Nadia uses to figure out who wrote the notes.\" The note says to ask the person who loves sharks the most, and the shark tie points Nadia to Mr. Webb. The story never says what he wears on other days or that it is a special day, and he is not hiding." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT1a-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
@@ -569,8 +569,8 @@ PP.addLesson({
   addons: {
     "SK-TT1a-P1": {
       hints: [
-        "Description helps you picture the setting. Ask what the sound words and the weather words help you picture.",
-        "Read paragraph 1 again. What do you hear, and what is hitting the windows?",
+        "Ask what the sound words and the weather words in paragraph 1 help you picture.",
+        "Read paragraph 1 again. Which words tell about sounds, and which tell about the weather?",
         "Mateo is in the middle of his favorite show when the screen goes black, so he is not bored. Test each choice that is left against paragraph 1."
       ],
       how: [
@@ -579,11 +579,11 @@ PP.addLesson({
         "The answer is \"A strong storm is going on outside.\"",
         "Mateo is enjoying his show, Abuela is not in paragraph 1, and the story says the apartment is in Atlanta, a city."
       ],
-      misconception: "A common mix-up is choosing a detail about a character when the question asks what the description of the place shows." },
+      misconception: "A common mix-up is choosing a detail about a character when the question asks what the details about the place show." },
     "SK-TT1a-P2": {
       hints: [
         "The writer does not say how Mateo feels. Look at what his voice and his body do right after the room goes dark.",
-        "Read paragraph 2. Choose two sentences for Part B.",
+        "Read paragraphs 1 and 2. Choose two sentences for Part B.",
         "Tapping his feet happens later, once the music is playing, so it does not show how he first feels. For Part B, both sentences must match your Part A answer."
       ],
       how: [
@@ -621,8 +621,8 @@ PP.addLesson({
     "SK-TT1a-P5": {
       hints: [
         "Dialogue is the words a character says. First check who is speaking in each line.",
-        "First find the lines that Mateo says. For each one, ask how he feels at that moment.",
-        "\"Abuela!\" is Mateo calling out right after the room goes dark. Ask how he feels then, and check each other line the same way."
+        "Read the lines in paragraphs 2, 3 and 6. For each one, ask who says it and how that person feels.",
+        "\"Well, the storm took our show\" is Abuela talking, so it tells how she feels, not Mateo. Check each line that is left."
       ],
       how: [
         "The two lines in paragraph 3 are spoken by Abuela.",
