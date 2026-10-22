@@ -2371,9 +2371,9 @@ PP.addLesson({
           { text: "to explain how a tadpole grows into a frog or a toad" },
           { text: "to tell readers where to go to find frogs and toads" }
         ],
-        clue: "Authors compare for a reason. Ask what a reader can do after learning how two things are alike and different.",
+        clue: "Authors compare for a reason. Ask what a reader can do after learning the likenesses and the differences.",
         hints: [
-          "Authors compare for a reason. Ask what a reader can do after learning how two things are alike and different.",
+          "Authors compare for a reason. Ask what a reader can do after learning the likenesses and the differences.",
           "Reread the first sentence and the last two sentences of the article.",
           "Paragraph 5 says both animals are helpful, so the article does not show that one is more helpful. Check each choice that is left: is it something the whole article does, or only one sentence?"
         ],
@@ -2470,10 +2470,10 @@ PP.addLesson({
           { text: "in time order, from the first day of school to the last day" },
           { text: "as problems in 1900 and the ways people solved them later" }
         ],
-        clue: "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or go one topic at a time.",
+        clue: "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or switch back and forth between the two things.",
         hints: [
-          "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or go one topic at a time.",
-          "Look at the first sentence of paragraphs 4 and 5. What topic does each one start?",
+          "Authors can organize a comparison in different ways. They may tell all about one thing and then the other, or switch back and forth between the two things.",
+          "Look at the first sentence of paragraphs 4 and 5. What does each paragraph start to tell about?",
           "The article never tells about a problem and how people fixed it, so that choice does not fit. Test each choice that is left against paragraphs 4 and 5."
         ],
         how: [
