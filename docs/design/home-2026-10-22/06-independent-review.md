@@ -463,3 +463,167 @@ No new MUST or SHOULD issue was introduced by the fixes.
 - The three new items (QA-17 to QA-19) are NOTEs.
 
 This verdict covers Chromium emulation only. It is not device, Safari, screen-reader or family acceptance. Those still have to be done before merge approval.
+
+---
+
+## Final re-check (182389d)
+
+**Candidate:** `182389d23d2c4b06870d2c003e44da2c1585e5ef` (`git rev-parse HEAD`). The working tree was clean.
+**Changes since 595ef01:**
+- 038995c: QA-16 to QA-19.
+- af488c0: 09, the guard-entry investigation.
+- 4e04fcb and 182389d: guard entry seeding, and the new `first-visit.py`.
+
+**Code changed:** `js/skills.js` (legend `aria-hidden`, pass date), `css/styles.css` (the category line), `verification/guard.py`, `verification/path-a11y.py`, `verification/path-contrast.js` and the new `verification/first-visit.py`.
+
+**Code not changed:** `index.html`, `js/path.js`, `js/app.js`, `js/writing.js`, `js/pp.js`, `js/engine/*` and `js/data/lessons/*`.
+
+**How I checked.** I used none of the write-ups (04 §7, the guard-entry section, 09) as evidence. Everything below comes from my own runs:
+- the candidate on port 8620
+- main 9a5b297 in a scratch worktree on port 8621, removed afterwards
+- mutants in scratch copies on ports 8630 to 8641, deleted afterwards
+
+Logs and scripts are in `scratchpad/qa/recheck3/`.
+
+### 1. QA-16 to QA-19
+
+| ID | Status | Evidence |
+|---|---|---|
+| QA-16 | **FIXED** | `path-a11y.py` now covers `#screen-home` in three states (first browse, returning with progress, all passed) at 320, 390, 768 and 1366, with every `<details>` open, axe (colour-contrast included) and the computed check. It also checks that each state actually rendered, so it cannot pass on an empty page. Its header no longer claims that axe colour-contrast crashes. My run: 36 runs, 0 violations, 0 contrast failures, exit 0. **Negative control:** in a scratch copy with the QA-01 regression planted (`.next-panel .un-done{color:#fff}`), `path-a11y.py` **exits 1**, reporting 4 all-passed runs with 1 contrast failure at 1:1. axe still reported **0 violations** in those runs, so the computed check is what catches it. |
+| QA-16: the `path-contrast.js` change | **Safe** | I planted seven cases in the all-passed state at 390×844 and ran both the new function and main's version (table below). The change makes the check measure more text, and every image case that should stay unmeasured still does. |
+| QA-17 | **FIXED** | The legend's accessibility snapshot reads each term once ("Started", "Step done", "Passed the skill check", …), each followed by its definition, at 390 and 1366. |
+| QA-18 | **FIXED** | The categories are now a plain line of text separated by middle dots (the dots are not read aloud). Each item has a transparent background, no border, radius or padding, weight 400, the default cursor, tabIndex −1, and no link or button inside. Clicking one leaves the screen and every storage key unchanged. See `qa/qa-recheck-QA18-category-line-390x844.png` and `qa/qa-recheck-QA18-category-line-1366x768.png`. |
+| QA-19 | **FIXED** | A dated pass has the aria-label and `title` "Passed the skill check on October 22, 2026", or "Checked by a grown-up on …". The pass on October 1, which is due for review, reads "…on October 1, 2026. Review suggested." An undated pass reads just "Passed the skill check." No date is invented: `firstSeenPassedAt` is not used. Guard 9.8, 11.9 and 11.11 still pass. |
+
+The seven planted cases for `path-contrast.js`:
+
+| Planted case | New version | Main's version |
+|---|---|---|
+| No plant (control) | 0 failures, 0 unsupported | 0 failures, **6 unsupported** (the ring counts could not be measured) |
+| White text on white (the QA-01 regression) | **1 failure (1:1)** | 1 failure |
+| Grey `#e6e6e6` ring counts (the image sits behind an opaque white disc) | **5 failures (1.25:1)** | 0 failures, 6 unsupported. Main could not see this |
+| Low-contrast text with an image in front of the nearest opaque layer | unsupported | unsupported |
+| An image on a transparent wrapper inside the opaque panel | unsupported | unsupported |
+| A gradient over the colour on the panel itself | unsupported | unsupported |
+| Opacity 0.3 on an ancestor | unsupported | unsupported |
+
+`path-a11y.py` fails on any unsupported item, so none of these can pass silently.
+
+### 2. The guard change
+- **Diff against main 9a5b297.** All 109 `ok(` lines are byte-identical, and so are the 110 check names. With the three `new_page` sites normalised, the remaining differences are:
+  - the docstring
+  - the `BROWSE_SEED` string and `newpage()` helper
+  - the `print_results()` refactor
+  - the crash hook
+
+  No assertion, wait or data changed.
+- **Seed unit test.** The seed fills only a missing key:
+  - Fresh storage: it saves browse mode and the page lands on `#screen-home`.
+  - An existing path-mode value: unchanged (`screen-path`).
+  - A corrupt value: not overwritten.
+- **Plain `python3 verification/guard.py http://localhost:8620/`** (no launcher, fresh storage): **110 passed, 0 failed, exit 0.**
+- **Plain guard on main** (main's own `guard.py` against main): **reproduced.** A `TimeoutError` occurs at `guard.py` line 241, `pg.fill("#skill-search", "pronoun")` ("element is not visible"), with exit 1 and no results printed. This matches 09: the failure is a test-entry assumption and is present on main.
+- **Mutation 1** (scratch copy: search ignores the query, and the pass label changed): guard **exits 1**. The new crash hook prints "guard crashed; results gathered so far:" with 39 passes, then the traceback at line 272. guard's own section 9 code throws when the list is unfiltered and includes essay rows. So the regression is caught, and the crash reporting works.
+- **Mutation 2** (the pass label changed to "Passed check", nothing else): plain guard ran to the end. **108 passed, 2 failed, exit 1.** The failures are 9.8 ("…now marked Passed the skill check") and 11.9 ("old passes are labelled honestly"). With browse mode seeded at entry, the assertions still bite.
+
+### 3. `first-visit.py`
+- **Review.** The checks are behavioural, not trivially true:
+  - real clicks and keypresses
+  - a storage write spy that records key names only
+  - storage snapshots before and after
+  - loading held back by routing `js/data/lessons/**`
+  - blocked and quota storage
+  - all seven viewports, using geometry
+  - exact copy strings
+
+  Where the PP-003 migration writes on load, the suite asserts that migration separately (8.7a, 8.21a) and does not count it as the panel's write. Three checks are weaker:
+  - 8.15's first clause accepts either `None` or the draft. Its second clause is strict, so the check still holds.
+  - 3.3 uses a forced click on a disabled button, which proves only that nothing happens.
+  - 4.11 to 4.14 assert current behaviour that the implementer recorded as a finding. They will need updating if the lead changes that behaviour.
+- **Run:** **124 passed, 0 failed, exit 0** (55 s).
+- **Mutation testing.** I made seven app mutations, each in a fresh scratch copy, and every one was caught:
+
+  | Mutation | Failing checks |
+  |---|---|
+  | M1: passed lessons listed first | 8.4, 8.6, 8.8, 8.11 to 8.15 (8 fail) |
+  | M2: a passed lesson opens at its last step (the check) | 8.13, 8.14 |
+  | M3: "Your progress stays" never hidden | 6.3 blocked, 6.3 quota |
+  | M4: header Browse lessons saves browse mode | 11.2, 11.3 |
+  | M5: the choice screen writes a key on render | 1.4, 2.1, 2.2, 4.10, 8.7a, 8.7, 8.21 ×2 (9 fail) |
+  | M6: next-step card shown before Start | 10.2, 10.3, 10.4 |
+  | M7: welcome-back count as a numeral | 8.3, 8.10 |
+
+### 4. Regression sweep on 182389d
+- **14 states × 7 viewports (98 combinations): 0 issues.**
+  - correct landing screen
+  - every key byte-identical before and after a load
+  - no overflow or clipping
+  - targets at least 44 px
+  - one primary per state (D3 none, by design)
+  - computed contrast lowest 4.64:1, with no failures
+  - axe WCAG and best-practice: 0 violations
+  - no page errors
+  - no numerals in prose; "mastery" appears only in negations
+- **axe `color-contrast`, `target-size` and `link-in-text-block`, with details open:** 98 of 98 combinations, 0 violations. "Incomplete" results: only the legend's `.step-n` and `.lg-box` (white ✓ on green, 6.13:1).
+- **Computed contrast with every `<details>` open:** A, B, C5, D2 and D3 at all seven viewports, 35 of 35 runs with 0 failures and 0 unsupported.
+- **Behaviour flows: 266 of 266 passed.** They cover:
+  - the "Opens at" targets
+  - the welcome-back links
+  - first use
+  - the mode-switching round trip with drafts for both essays, short writing, `pp.dev`, a bookmark, finished ticks and habits: every non-path key byte-identical and the path state preserved, at three viewports
+  - browsing at seven viewports
+  - 66 direct links
+  - blocked, quota and five kinds of corrupt storage
+- **Keyboard:**
+  - Visible ring on every one of 45 stops in A, B, C5 and D2 at 390 and 1366, at 6.9:1 to 7.21:1.
+  - All ten activations passed.
+  - The "Choose a lesson" card has 24 px above its button and 21 px below.
+  - Search is sticky only at 640 px wide and 560 px tall or more.
+  - No overflow at any size.
+- **Suites:**
+
+  | Suite | Result |
+  |---|---|
+  | content | 0 failures, 6 warnings |
+  | writing | 0 failures, 0 warnings |
+  | copy | 28 |
+  | `path.py` | 148/148 |
+  | `path-a11y.py` | 36 runs, 0 violations, 0 contrast failures |
+  | `path-headers.py` | 48/48 |
+  | `skills-recovery.py` | 67/67 |
+  | `writing-recovery.py` | 75/75 |
+  | `first-visit.py` | 124/124 |
+  | plain guard | 110/110 |
+
+### 5. The five findings in 04 (guard-entry section §4)
+
+| # | Finding | On main 9a5b297? | Blocks this PR? |
+|---|---|---|---|
+| 1 | An unknown address on a fresh visit (`#no-such-page`, `#skill/no-such-lesson`, `#play/NOPE/test`) shows the browse home, with the not-found note focused and the address dropped | **Yes, identical** | No. Product decision for later |
+| 2 | "← All skills" on `#parents`, `#mixed`, `#clues` and `#habits` with no saved mode, while Back goes to the choice screen | **Yes, identical** | No. A small label fix for later |
+| 3 | `#mixed`, `#clues` and `#habits` opened directly leave focus on BODY | **Yes, identical** | No. Pre-existing focus gap; worth a follow-up |
+| 4 | Malformed progress entries are dropped on load | **Yes, identical.** With `{"3.F.P.4.a":"oops","3.L.V.3.a":[1],"3.T.T.1.b":{"mastered":true}}` (an undated pass, which triggers the PP-003 migration), both builds rewrite the map to only `3.T.T.1.b`, plus `legacyUndated`/`firstSeenPassedAt`. With a dated pass (no migration), both keep all three keys untouched. From reading the code: any later save drops the unusable entries in the same way, because `load()` filters them out, as UX-002 designed. I confirmed this by reading the code, not by a separate run. No page errors on either build | No. It predates the redesign; the redesign does not touch `load()`, `save()` or the migration. The dropped values were unusable. Record it against the "never clear storage" rule as a known UX-002/PP-003 behaviour |
+| 5 | `#browse` on a fresh visit opens the list and saves no mode, so the plain address shows the choice screen again | **Yes, identical** | No. Consistent with "Browse lessons does not change the saved mode" |
+
+### 6. New items in this round
+None at MUST or SHOULD. One NOTE: guard mutation 1 above shows that a broken search makes guard crash rather than record a failed 9.1. The crash hook now makes this visible (39 results printed, exit 1), so it is acceptable.
+
+### 7. Still not tested
+- Real devices: iPhone, iPad and Android.
+- Safari and WebKit, and Firefox.
+- Screen readers. The legend and labels were checked only in Chromium's accessibility tree.
+- Native pinch zoom and 200% text zoom.
+- The real web fonts, which were blocked.
+- Parent and child use.
+
+### Verdict for 182389d
+
+**READY FOR OWNER REVIEW. No MUST items remain.**
+- QA-16 to QA-19 are fixed.
+- The guard change keeps every assertion, and the plain guard passes 110/110.
+- The plain-guard timeout is reproduced on main, as 09 says.
+- `first-visit.py` is a real behavioural suite: it passes 124/124 and caught all seven mutations.
+- The full regression sweep is clean.
+- All five findings in 04 are present on main in identical form, and none blocks this PR.
+
+This verdict covers Chromium emulation only. Merge approval still needs real-device, Safari, screen-reader and family checks, or the owner's explicit acceptance of those gaps.

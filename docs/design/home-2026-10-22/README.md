@@ -1,9 +1,10 @@
 # Home and starting-experience redesign (2026-10-22)
 
-**Status: ready for owner review. Not merged and not deployed.** Production (`main`) is unchanged.
+**Status: ready for owner review. Draft, not merged and not deployed.** Production (`main`) is unchanged.
 
 - **Branch:** `design/home-start-experience`
-- **Candidate:** `595ef01`
+- **Final tested commit:** `182389d`. Later commits change only this folder.
+- **Independent verdict:** ready for owner review, with no must-fix items left (06, "Final re-check (182389d)"). This is Chromium testing only.
 - **Baseline:** `main` 9a5b297 ("Peach Prep 2.2.0-rc (PP-003)")
 
 ## What changed for a parent
@@ -31,16 +32,21 @@ Nothing a family has saved is changed or migrated. Every route, lesson ID, score
 | `05-out-of-scope.md` | Issues found but deliberately not changed |
 | `06-independent-review.md` | Independent QA findings QA-01 to QA-19 and how each was handled, plus the final re-review |
 | `07-coverage-ledger.csv` | Screen, state and viewport coverage, with gaps |
-| `08-test-results.md` | Test results tied to `595ef01` |
+| `08-test-results.md` | Test results tied to `182389d`, and the limits of acceptance |
+| `09-guard-entry-investigation.md` | Why the plain guard run timed out, and the test-side fix |
 | `before/` | The site before the redesign, at all seven viewports |
 | `after/` | The redesigned site, at all seven viewports |
 | `qa/` | The reviewer's own evidence |
 
+## Closed since the last version of this page
+- **QA-16:** `path-a11y.py` now covers the browse home.
+- **QA-17:** each legend term is read once.
+- **QA-18:** the category chips are plain text.
+- **QA-19:** the passed date is in the visible text.
+- **Guard timeout:** this was a test-entry assumption, not an app regression, and it also happened on `main`. It is fixed on the test side with no assertions changed. First-visit behaviour now has its own suite. See `09-guard-entry-investigation.md` and `08-test-results.md`.
+
 ## Open items (none blocking)
-- **QA-16:** extend `path-a11y.py`'s contrast run to the browse home, including the all-passed state. The reviewer ran this check ad hoc: 0 failures.
-- **QA-17:** a screen reader hears each legend term twice.
-- **QA-18:** the category chips in the "Choose a lesson" card look tappable but are not.
-- **QA-19:** the passed mark lost its hover tooltip.
+- **First-visit findings:** `05-out-of-scope.md` items 14–18. They behave the same as on `main`, and two of them need an owner decision.
 - **QA-03:** search on the browse home sits somewhat lower than on `main`, because the Up next card and progress summary now come first.
 - `05-out-of-scope.md` lists the rest. Highlights:
   - "Review recommended" vs "Review suggested"
@@ -51,7 +57,7 @@ Nothing a family has saved is changed or migrated. Every route, lesson ID, score
 ## Still to check by hand before merging
 - A real phone and tablet: iPhone Safari and an Android browser. Check the real fonts, tap targets and the landscape phone layout.
 - A screen reader pass on the three start screens: VoiceOver or TalkBack.
-- One parent and child session: a first visit, choosing the path, one lesson step, then a return visit.
+- One parent and child session: a first visit, choosing the path, one lesson step, then a return visit. "A parent understands it in about twenty seconds" is a design goal. It has not been tested with any parent.
 
 ## How to preview without touching production
 GitHub Pages serves only `main`, so there is no safe hosted preview. To preview locally:

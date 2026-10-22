@@ -69,3 +69,28 @@ The design brief (00 §5) lists items 1 to 4 as out of scope. Items 5 to 9 were 
 
 ### 13. Label-in-name on category cards and list rows (QA-14)
 - **Evidence:** axe's experimental `label-content-name-mismatch` flags the aria-label pattern on `.cat-card` and `.skill-line`. Every name starts with the visible text. The row labels are asserted by guard 9.8 and 11.11, so they were left unchanged.
+
+### 12a. Status of 12
+Fixed in `038995c`. `path-a11y.py` now covers the browse home in three saved states (36 runs). See 04 "After QA-16..19".
+
+## Added with the first-visit suite (`182389d`)
+These are the findings from 04 "Guard entry fix and first-visit suite" §4. The independent final re-check (06, "Final re-check (182389d)") confirmed that all five behave identically on `main`, so none is a regression from this redesign. The app was not changed for any of them.
+
+### 14. An unknown address on a fresh visit shows the browse home, not the choice screen
+- **Evidence:** `#no-such-page`, `#skill/no-such-lesson` and `#play/<bad>` land on `#screen-home`, with the not-found note focused. Nothing is saved, and a reload shows the choice screen. The cause is `route()` → `landHome(…, !!h)`, the same cause as item 10.
+- **Owner decision:** should a first-time visitor with a bad link see the choice screen plus a not-found note? `first-visit.py` 4.11–4.14 assert today's behaviour and would need updating.
+
+### 15. "← All skills" opens the choice screen when no mode is saved
+- **Evidence:** on `#parents`, `#mixed`, `#clues` and `#habits` with no saved mode, `show()` sets the back label from `PP_PATH.mode() === "path"`, but `goHome()` → `landHome()` sends a visitor with no mode to `showChoice()`. The label and the destination disagree.
+
+### 16. Direct `#mixed`, `#clues` and `#habits` leave focus on the page body
+- **Evidence:** other deep links focus their title. These three focus nothing. This was observed but not asserted, and it is not specific to first visits.
+
+### 17. The PP-003 undated-pass migration drops malformed sibling records when it runs
+- **Evidence:** given `pp.progress.v1 = {"3.F.P.4.a":"oops","3.T.T.1.b":{"mastered":true}}`, the load rewrites the map, and the non-object `"oops"` entry is gone. Nothing changes when the migration has nothing to do.
+- **Same on `main`:** the re-check reproduced the same drop on `main`. Reading the code shows that later saves would drop such an entry too; this was not run separately.
+- **Impact:** the dropped value was unusable either way, so no family's real progress is lost.
+- **Why it is listed:** the brief's "never clear storage" rule. A fix would need its own compatibility test, so it belongs in a separate change.
+
+### 18. `#browse` with fresh storage saves no mode
+- **Evidence:** a reload of the plain address shows the choice screen again. This matches the header button's rule, "do not change the saved mode", and is asserted by `first-visit.py` 4.13–4.14. Listed so the owner knows it is deliberate.
