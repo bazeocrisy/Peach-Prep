@@ -323,6 +323,28 @@
     return { total: ks.length, done: ks.filter(k => status(k) === "mastered").length, essays: all.filter(k => isTask(k) && PP.taskById[k.slice(5)]).length };
   }
 
+  /* Lessons with saved work (started or passed), in catalog order. Read from
+     pp.progress.v1 as loaded; never writes. */
+  function startedLessons(only) {
+    const out = [];
+    CAT.forEach(c => c.groups.forEach(g => g.skills.forEach(k => {
+      if (!lessons[k] || out.includes(k)) return;
+      const st = status(k);
+      if (only ? st === only : st !== "new") out.push(k);
+    })));
+    return out;
+  }
+  /* The first step whose done mark is not set (same marks as the step bar). */
+  function firstOpenStep(k) {
+    if (!lessons[k]) return null;
+    const r = prog[k] || {};
+    const done = { teach: r.taught, learn: r.learned, practice: r.practiced, "try": r.tried, test: r.mastered };
+    const S = stepsFor(lessons[k]);
+    const s = S.find(x => !done[x[0]]) || S[S.length - 1];
+    return { id: s[0], name: s[1], n: S.indexOf(s) + 1, of: S.length };
+  }
+  const words = n => PP.countWord(n);
+
   let filter = "all", query = "", lastCode = null;
 
   function buildList() {
@@ -391,14 +413,19 @@
       host.appendChild(sec);
     });
     el("skill-empty").hidden = shown > 0;
+    if (!shown) el("skill-empty-text").textContent = q && filter !== "all" ? "No lessons match “" + query.trim() + "” with this filter. Choose All, or try another word."
+      : q ? "No lessons match “" + query.trim() + "”. Try a shorter word, a lesson number like D3, or a Georgia code."
+      : filter === "todo" ? "Every lesson here has a passed skill check or a grown-up check on this device. Choose All to see them."
+      : "No lessons match. Choose All to see every lesson.";
     const cnt = el("skill-count");
     /* essays are listed but are not skills with a check, so they are counted apart
        (this is why "On the test" lists more rows than the progress line counts) */
     const nSk = shown - shownTasks;
     const parts = [];
-    if (nSk) parts.push(nSk + " skill" + (nSk > 1 ? "s" : ""));
-    if (shownTasks) parts.push(shownTasks + " essay task" + (shownTasks > 1 ? "s" : ""));
-    cnt.textContent = (q || filter !== "all") && shown ? parts.join(" and ") + " match" + (shown > 1 ? "" : "es") + "." : "";
+    if (nSk) parts.push(words(nSk) + " lesson" + (nSk > 1 ? "s" : ""));
+    if (shownTasks) parts.push(words(shownTasks) + " essay task" + (shownTasks > 1 ? "s" : ""));
+    const cntText = parts.join(" and ") + " match" + (shown > 1 ? "" : "es") + ".";
+    cnt.textContent = (q || filter !== "all") && shown ? cntText.charAt(0).toUpperCase() + cntText.slice(1) : "";
     buildProgress();
   }
 
@@ -415,9 +442,10 @@
       ring.appendChild(make("span", "cc-ring-n", st.done + "/" + st.total));
       b.appendChild(ring);
       const nx = nextIn(c);
-      const ess = st.essays ? "+" + st.essays + " essay" + (st.essays > 1 ? "s" : "") : "";
-      b.appendChild(make("span", "cc-next", (nx ? "Next: " + ids[nx] + " " + lessons[nx].title.split(":")[0] : "All checks passed") + (ess ? " · " + ess : "")));
-      b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " checks passed." + (ess ? " Plus " + st.essays + " essay task" + (st.essays > 1 ? "s" : "") + ", scored by a grown-up." : "") + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
+      const ess = st.essays ? "plus " + words(st.essays) + " essay" + (st.essays > 1 ? "s" : "") : "";
+      b.appendChild(make("span", "cc-next", (nx ? "Next: " + ids[nx] + " " + lessons[nx].title.split(":")[0] : "Every lesson passed or checked") + (ess ? " · " + ess : "")));
+      /* the ring counts every "mastered" status, which includes grown-up checks */
+      b.setAttribute("aria-label", c.name + ". " + st.done + " of " + st.total + " lessons passed or checked by a grown-up." + (ess ? " Plus " + words(st.essays) + " essay task" + (st.essays > 1 ? "s" : "") + ", scored by a grown-up." : "") + (nx ? " Next: " + ids[nx] + ", " + lessons[nx].title + "." : ""));
       b.addEventListener("click", () => {
         rec("_ui").lastCat = c.id; save();
         buildUpNext();
@@ -442,29 +470,93 @@
     const order = [pref].concat(CAT.map(c => c.id).filter(x => x !== pref));
     let k = null, cat = null;
     for (const id of order) { const c = CAT.find(x => x.id === id); k = c && nextIn(c); if (k) { cat = c; break; } }
-    if (!k) { host.appendChild(make("p", "un-done", "Your child has passed every check on this device. Come back to skills over the next weeks to make sure they stick.")); return; }
-    host.appendChild(make("p", "un-label", "Up next in " + cat.name));
-    const b = make("button", "btn btn-primary un-btn", ids[k] + " · " + lessons[k].title);
-    b.type = "button"; b.id = "up-next-btn";
-    b.addEventListener("click", () => open(k));
-    host.appendChild(b);
+    /* State D: one primary "Up next" (a suggestion computed from passes, never a resume
+       point: browse mode saves no last lesson), then up to three started lessons, each
+       opening at its first unfinished step. */
+    const text = make("div", "np-text");
+    if (!k) {
+      text.appendChild(make("p", "np-eyebrow", "Every lesson checked"));
+      text.appendChild(make("p", "un-done", "Every lesson has a passed skill check or a grown-up check on this device. Come back to a few each week to keep them fresh."));
+      host.appendChild(text);
+    } else {
+      text.appendChild(make("p", "np-eyebrow", "Up next"));
+      const b = make("button", "btn btn-primary un-btn", ids[k] + " · " + lessons[k].title);
+      b.type = "button"; b.id = "up-next-btn";
+      const begun = status(k) === "started" ? firstOpenStep(k) : null;
+      b.addEventListener("click", () => open(k, begun ? begun.id : undefined));
+      text.appendChild(b);
+      const opened = (prog._ui || {}).lastCat === cat.id;
+      text.appendChild(make("p", "np-step", "The first lesson without a passed check in " + cat.name + (opened ? ", the category you opened last." : ".") +
+        (begun ? " Already started: it opens at " + begun.name + "." : "")));
+      host.appendChild(text);
+    }
+    const started = startedLessons("started").filter(x => x !== k).slice(0, 3);
+    if (started.length) {
+      const box = make("div", "un-started");
+      box.appendChild(make("p", "un-sub", "Lessons already started"));
+      const ul = make("ul", "un-list");
+      started.forEach(x => {
+        const st = firstOpenStep(x);
+        const li = make("li");
+        const sb = make("button", "btn btn-soft un-started-btn");
+        sb.type = "button"; sb.dataset.code = x;
+        sb.appendChild(make("span", "usb-title", ids[x] + " · " + lessons[x].title.split(":")[0]));
+        sb.appendChild(make("span", "usb-step", "Opens at " + st.name));
+        sb.addEventListener("click", () => open(x, st.id));
+        li.appendChild(sb); ul.appendChild(li);
+      });
+      box.appendChild(ul); host.appendChild(box);
+    }
   }
 
+  /* Progress summary: each kind of mark counted and labelled separately. */
   function buildProgress() {
-    const host = el("home-progress"); clear(host);
+    const host = el("home-progress");
+    const wasOpen = !!host.querySelector("details.legend[open]");   /* rebuilt on every search keystroke */
+    clear(host);
     const testedKeys = Object.keys(lessons).filter(k => lessonOnTest(lessons[k]));
-    const done = testedKeys.filter(k => status(k) === "mastered").length;
-    const p = make("p", "prog-line");
-    p.appendChild(make("strong", "", done + " of " + testedKeys.length));
-    p.appendChild(document.createTextNode(" skills that are on the test have a passed skill check on this device."));
-    const nTasks = PP.tasks.length;
-    if (nTasks) p.appendChild(document.createTextNode(" The " + nTasks + " essay task" + (nTasks > 1 ? "s are" : " is") + " scored by a grown-up, so " + (nTasks > 1 ? "they are" : "it is") + " not counted here."));
+    const done = testedKeys.filter(k => status(k) === "mastered" && passKind(k) === "test").length;
+    const grown = Object.keys(lessons).filter(k => status(k) === "mastered" && passKind(k) === "grownup").length;
+    const started = Object.keys(lessons).filter(k => status(k) === "started").length;
     const due = Object.keys(lessons).filter(reviewDue).length;
-    if (due) p.appendChild(document.createTextNode(" " + due + " passed skill" + (due > 1 ? "s are" : " is") + " due for a review."));
-    host.appendChild(p);
+    host.appendChild(make("h2", "hp-title", "Progress on this device"));
+    const rows = make("div", "hp-rows");
+    function row(labelText, value, extra) {
+      const r = make("div", "hp-row");
+      r.appendChild(make("span", "hp-label", labelText));
+      const v = make("span", "hp-val", value); r.appendChild(v);
+      if (extra) r.appendChild(extra);
+      rows.appendChild(r);
+    }
     const bar = make("span", "prog-bar"); const fill = make("span", "prog-fill");
     fill.style.width = (testedKeys.length ? Math.round(100 * done / testedKeys.length) : 0) + "%";
-    bar.appendChild(fill); host.appendChild(bar);
+    bar.appendChild(fill);
+    row("Lessons on the test with a passed skill check", done + " of " + testedKeys.length, bar);
+    row("Lessons started, no check passed yet", String(started));
+    if (grown) row("Hands-on lessons checked by a grown-up", String(grown));
+    host.appendChild(rows);
+    const notes = make("p", "hp-note");
+    if (due) notes.appendChild(document.createTextNode((due === 1 ? "One passed skill is" : cap(words(due)) + " passed skills are") + " due for a review. "));
+    const nTasks = PP.tasks.length;
+    if (nTasks) notes.appendChild(document.createTextNode("The " + words(nTasks) + " essay task" + (nTasks > 1 ? "s are" : " is") + " scored by a grown-up, so " + (nTasks > 1 ? "they are" : "it is") + " not counted here."));
+    host.appendChild(notes);
+    const lg = make("details", "legend"); lg.open = wasOpen;
+    lg.appendChild(make("summary", "", "What the marks mean"));
+    const dl = make("dl", "legend-list");
+    [["◐", "Started", "Your child has begun this lesson. No check passed yet."],
+     ["✓", "Step done", "On a lesson's step bar: your child finished that step, such as Watch Me or a practice set."],
+     ["✓", "Passed the skill check", "Your child scored at least 80% on this site's short check, once, on this device. A good sign, not a Milestones score."],
+     ["✓ grown-up", "Checked by a grown-up", "A grown-up watched a hands-on skill and ticked the Check. It is not a scored check."],
+     ["review", "Review suggested", "It has been a week since the check was passed, or the last try did not pass."],
+     ["3/24", "Category ring", "Lessons in that category with a passed skill check or a grown-up check."],
+     ["☑", "Activities finished", "On the Learning Path: a tick you add to mark your place. It does not change any score."]
+    ].forEach(([mark, name, line]) => {
+      const dt = make("dt"); dt.appendChild(make("span", "lg-mark", mark)); dt.appendChild(document.createTextNode(" " + name));
+      dl.appendChild(dt); dl.appendChild(make("dd", "", line));
+    });
+    lg.appendChild(dl);
+    lg.appendChild(make("p", "note", "Standards coverage in the Parent guide describes this site: which Georgia standards have a lesson here. It does not describe what your child knows. All marks are saved on this device only."));
+    host.appendChild(lg);
   }
 
   /* Everyday habits: Georgia's K-12 Practices, on their own page. */
@@ -1325,6 +1417,11 @@
       buildList();
     }));
     el("skill-back").addEventListener("click", () => window.PP_APP.goHome());
+    el("skill-empty-clear").addEventListener("click", () => {
+      inp.value = ""; query = ""; filter = "all";
+      document.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", x.dataset.filter === "all" ? "true" : "false"));
+      buildList(); inp.focus();
+    });
     PP.tablist(el("sk-steps"));
   }
 
@@ -1334,6 +1431,10 @@
     nextForm, checkSetId, hasFormB, displayState,   /* PP-004 */
     current: () => cur, step: () => step, lastCode: () => lastCode,
     stepNames: k => (lessons[k] ? stepsFor(lessons[k]).map(x => x[1]) : []),
+    stepIds: k => (lessons[k] ? stepsFor(lessons[k]).map(x => x[0]) : []),
+    /* home redesign (read-only helpers; none of them writes storage) */
+    lessonKind: k => (lessons[k] && lessons[k].activity && !PP.byId["SK:" + k + ":p"] ? lessons[k].activity.kind : null),
+    startedLessons, firstOpenStep, entryStatus,
     lessonCount: () => Object.keys(lessons).length
   };
 })();

@@ -16,85 +16,113 @@
   <main id="main">
 
   <!-- Choice and path contain no account or placement assessment. -->
-  <section class="screen" id="screen-choose" aria-labelledby="choose-title">
-    <div class="wrap path-wrap">
-      <p class="brand">Peach Prep · Grade 3 ELA</p>
-      <h1 class="page-title" id="choose-title" tabindex="-1">How would you like to learn?</h1>
-      <p class="page-sub">Choose a suggested route or pick a skill. You can switch anytime.</p>
+  <section class="screen home-screen" id="screen-choose" aria-labelledby="choose-title">
+    <header class="home-head">
+      <div class="home-head-in">
+        <p class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Peach Prep</span><span class="brand-sub">Grade 3 ELA</span></p>
+        <div class="head-actions"><button type="button" class="head-btn" data-go="parents">For parents</button></div>
+      </div>
+    </header>
+    <div class="home-wrap">
+      <div class="home-hero">
+        <h1 class="home-title" id="choose-title" tabindex="-1">Help your third grader with Georgia's Grade 3 ELA skills</h1>
+        <p class="home-lede">Short reading, writing and grammar lessons to do together. Free, with no login.</p>
+      </div>
+      <div class="welcome-back" id="choose-welcome" hidden></div>
+      <h2 class="home-h2">Where would you like to start?</h2>
       <div class="learning-choices">
-        <article class="path-card">
-          <p class="path-eyebrow">A little guidance</p>
-          <h2>Follow the Learning Path</h2>
-          <p>Start with stories and sentences, then build toward research and writing. See what to work on next.</p>
-          <button type="button" class="btn btn-primary" id="choose-path" disabled>Follow the Learning Path</button>
+        <article class="choice-card choice-path" aria-labelledby="choice-path-title">
+          <svg class="route-art" viewBox="0 0 160 72" width="160" height="72" aria-hidden="true" focusable="false">
+            <path d="M10 58 C 42 58, 40 18, 78 18 S 112 56, 134 44" fill="none" stroke="#123A6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+            <circle cx="10" cy="58" r="6" fill="#2F7A4F"/>
+            <circle cx="78" cy="18" r="6" fill="#FFFFFF" stroke="#123A6B" stroke-width="3"/>
+            <circle cx="146" cy="44" r="12" fill="#E8743B"/>
+            <path d="M146 32c1.5-5 6-7.5 11-6.5-1 4.5-5 8-11 6.5z" fill="#3E8E5A"/>
+          </svg>
+          <p class="choice-tag">Recommended</p>
+          <h3 class="choice-title" id="choice-path-title">Follow the Learning Path</h3>
+          <p>A suggested order of lessons, from stories and sentences to research and essays.</p>
+          <ul class="choice-points">
+            <li>It is not a test, and it does not place your child.</li>
+            <li>Every family starts at the same first lesson: <span id="choose-first">D1 · Story elements</span>.</li>
+            <li>You can still choose any lesson anytime.</li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-choice" id="choose-path" disabled>Loading lessons…</button>
         </article>
-        <article class="path-card">
-          <p class="path-eyebrow">Your choice</p>
-          <h2>Choose Individual Lessons</h2>
-          <p>Pick a skill your child needs or match what they are learning at school. Every lesson stays available.</p>
-          <button type="button" class="btn btn-soft" id="choose-browse" disabled>Choose Individual Lessons</button>
+        <article class="choice-card choice-browse" aria-labelledby="choice-browse-title">
+          <h3 class="choice-title" id="choice-browse-title">Choose a lesson</h3>
+          <p>Pick one skill your child needs or is learning at school.</p>
+          <p class="choice-meta">Search by word, lesson number or Georgia code, or show only the lessons on the test.</p>
+          <button type="button" class="btn btn-soft btn-choice" id="choose-browse" disabled>Loading lessons…</button>
         </article>
       </div>
-      <p class="note">No login needed. Progress is saved in this browser on this device when storage is available. Shared use is not separate child tracking.</p>
+      <p class="choice-foot">You can switch anytime. Your progress stays.</p>
       <p class="note path-storage" role="status"></p>
+      <div class="home-shared" data-shared="choose"></div>
     </div>
   </section>
-  <section class="screen" id="screen-path" aria-labelledby="path-title" hidden>
-    <header class="bar path-bar">
-      <button type="button" class="nav-btn" data-go="choose">Switch learning mode</button>
-      <button type="button" class="nav-btn" data-go="parents">Parent guide</button>
+  <section class="screen home-screen" id="screen-path" aria-labelledby="path-title" hidden>
+    <header class="home-head">
+      <div class="home-head-in has-two">
+        <p class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Peach Prep</span><span class="brand-sub">Grade 3 ELA</span></p>
+        <div class="head-actions">
+          <button type="button" class="head-btn" id="path-browse"><span class="lbl-long">Browse lessons</span><span class="lbl-short">Lessons</span></button>
+          <button type="button" class="head-btn" data-go="parents"><span class="lbl-long">For parents</span><span class="lbl-short">Parents</span></button>
+        </div>
+      </div>
     </header>
-    <div class="wrap path-wrap">
-      <h1 class="page-title" id="path-title" tabindex="-1">Your Learning Path</h1>
-      <p class="page-sub">A suggested route through Grade 3 ELA. Work at your own pace; every lesson stays available.</p>
+    <div class="home-wrap path-wrap">
+      <div class="home-hero is-compact">
+        <h1 class="home-title" id="path-title" tabindex="-1">Your Learning Path</h1>
+        <p class="home-lede">A suggested order through Grade 3 ELA. Work at your own pace; every lesson stays available.</p>
+      </div>
       <div id="path-intro" hidden>
-        <article class="path-card">
-          <h2>How your learning path works</h2>
-          <ul>
-            <li>Begin with stories and sentences, then build toward research and writing.</li>
-            <li>Use Learn It, Watch Me, Practice Together, Try It Yourself, and a check. A lesson can take more than one session.</li>
-            <li>Begin reading aloud, handwriting, and everyday habits alongside your lessons. A grown-up helps observe these activities.</li>
-            <li>Mark activities finished when you have worked through them. This is a bookmark, not proof of mastery; check results stay separate.</li>
-            <li>You can open another lesson or switch modes anytime without clearing your progress.</li>
+        <article class="choice-card choice-path path-intro-card" aria-labelledby="path-intro-title">
+          <h2 class="choice-title" id="path-intro-title">How the Learning Path works</h2>
+          <ul class="choice-points">
+            <li>Lessons come in a suggested order. It is not a test, and it does not place your child.</li>
+            <li>The path starts with <span id="path-first">D1 · Story elements</span>. You can skip ahead or go back anytime.</li>
+            <li>Each lesson has a few short steps. One lesson can take more than one sitting.</li>
+            <li>Tick “Activities finished” when you are done, and the path moves on. The tick is a bookmark, not proof of mastery; check results stay separate.</li>
+            <li>You can open any lesson or switch modes anytime without clearing your progress.</li>
           </ul>
           <div class="path-actions">
-            <button type="button" class="btn btn-primary" id="path-start">Start My Path</button>
-            <button type="button" class="btn btn-soft" id="path-preview">View the Full Path</button>
+            <button type="button" class="btn btn-primary" id="path-start">Start the first lesson</button>
+            <button type="button" class="btn btn-soft" id="path-preview">See the whole path</button>
           </div>
         </article>
       </div>
-      <p class="note">Saved in this browser on this device. Clearing browser data can erase progress. No account or cross-device saving yet.</p>
       <p class="note path-storage" role="status"></p>
       <div id="path-content"></div>
+      <div class="home-shared" data-shared="path"></div>
     </div>
   </section>
 
   <!-- ===================== HOME: every standard ===================== -->
-  <section class="screen" id="screen-home" aria-labelledby="home-title" hidden>
-    <header class="hero hero-compact">
-      <div class="hero-inner">
-        <p class="brand"><span class="brand-mark" aria-hidden="true"></span>Peach Prep</p>
-        <h1 id="home-title" class="hero-title" tabindex="-1">Georgia Milestones · Grade 3 ELA</h1>
-        <p class="hero-sub">Georgia's grade 3 ELA skills, in learning order. Most have five steps: Learn It, Watch Me, Practice Together, Try It Yourself, Test.</p>
-        <div class="up-next" id="up-next"></div>
+  <section class="screen home-screen" id="screen-home" aria-labelledby="home-title" hidden>
+    <header class="home-head">
+      <div class="home-head-in">
+        <p class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Peach Prep</span><span class="brand-sub">Grade 3 ELA</span></p>
+        <div class="head-actions"><button type="button" class="head-btn" data-go="parents">For parents</button></div>
       </div>
     </header>
 
-    <div class="wrap">
-      <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
-      <div class="path-actions browse-mode"><button type="button" class="btn btn-primary" data-go="path">Follow the Learning Path</button><button type="button" class="btn btn-soft" data-go="choose">Switch learning mode</button></div>
-      <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
-      <div class="home-links">
-        <button type="button" class="hl-btn" id="hero-mixed">Practice tests and mixed practice</button>
-        <button type="button" class="hl-btn" id="hero-clues">Clue Word Cheat Sheet</button>
-        <button type="button" class="hl-btn" id="hero-habits">Everyday habits</button>
-        <button type="button" class="hl-btn" id="hero-parents">Parent guide</button>
+    <div class="home-wrap">
+      <div class="home-hero is-compact">
+        <h1 class="home-title" id="home-title" tabindex="-1">Grade 3 ELA lessons</h1>
+        <p class="home-lede">Georgia's grade 3 ELA skills, grouped by category. Most lessons have five steps: Learn It, Watch Me, Practice Together, Try It Yourself and Test Your Knowledge. Hands-on lessons have four.</p>
       </div>
+      <p class="notfound" id="home-notfound" role="status" hidden>That page wasn't found, so here is the home page.</p>
+      <div class="next-panel up-next" id="up-next"></div>
+      <div class="next-other"><button type="button" class="btn btn-soft" data-go="path">Try the Learning Path</button></div>
+      <p class="note path-storage" role="status"></p>
       <div class="home-progress" id="home-progress"></div>
+      <nav class="cat-cards" id="cat-cards" aria-label="Categories"></nav>
+      <div class="home-shared" data-shared="home"></div>
       <div class="skill-tools">
-        <label class="sr" for="skill-search">Find a skill</label>
-        <input type="search" id="skill-search" class="skill-search" placeholder="Find a skill: pronoun, B3, 3.T.T.1" autocomplete="off">
-        <div class="seg" role="group" aria-label="Which skills to show">
+        <label class="sr" for="skill-search">Find a lesson</label>
+        <input type="search" id="skill-search" class="skill-search" placeholder="Try: pronoun, D3, 3.T.T.1" autocomplete="off">
+        <div class="seg" role="group" aria-label="Which lessons to show">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="test" aria-pressed="false">On the test</button>
           <button type="button" data-filter="todo" aria-pressed="false">Not passed yet</button>
@@ -102,7 +130,7 @@
       </div>
       <p class="skill-count" id="skill-count" role="status"></p>
       <div id="skill-list" class="skill-list"></div>
-      <p class="muted" id="skill-empty" hidden>No skills match. Try a different word or code.</p>
+      <div class="skill-empty" id="skill-empty" hidden><p id="skill-empty-text">No lessons match. Try a shorter word, a lesson number like D3, or a Georgia code.</p><button type="button" class="btn btn-soft" id="skill-empty-clear">Clear search and filters</button></div>
 
       <h2 class="section-title small">Everyday tools</h2>
       <ul class="tool-list" id="tool-list"></ul>
