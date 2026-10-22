@@ -137,7 +137,9 @@ Batches B5 to B8 are large but formulaic. The lead may split B7 and B8 in two, s
 
 `js/skills.js` splits `practice` at `ceil(n/2)`. Appending items to `practice` would silently move existing items from Try into Together, and it would change what the saved sets `SK:<key>:p` and `SK:<key>:y` mean. **The fifteen core items must live in a new field**, for example `core: [[5 ids/items], [5], [5]]` with `similar: [...]`, under a new, versioned progress key.
 - Reused Try items keep their IDs and are referenced from `core`.
-- `practice` stays unchanged, so Together keeps its current items.
+- `practice` stays unchanged.
+- **Superseded by lead decision (01-architecture.md rule 10b):** on a lesson that has `core`, Practice Together shows `practice` minus the items that `core` references. So Together can change from the old `ceil(n/2)` split. For example, in 3.T.T.2.b and 3.T.T.2.c the old Try items move into Together.
+  - **Saved data:** Together progress is only a `practiced` flag under the same set id. The B2-review-T2-2 reviewer confirmed that its meaning is unchanged.
 - Choice order is shuffled once per sitting (`js/engine/items.js`). Resume must save that order, or re-derive it deterministically.
 
 ### 4.2 Set architecture
