@@ -1749,7 +1749,7 @@ PP.addLesson({
           choices: [
             { text: "\"An anole that has turned brown on a tree trunk can be very hard to spot.\"", correct: true },
             { text: "\"Sticky pads on its toes help it climb walls and even glass.\"" },
-            { text: "\"When the air turns cool, or when the lizard feels scared, its skin can turn brown in just a few minutes.\"" },
+            { text: "\"To warn another male to stay away, he puffs it out and bobs his head up and down.\"" },
             { text: "\"It is called a green anole.\"" }
           ] },
         clue: "An idiom does not mean what its words say. Use the sentences around it to find what it really means.",
@@ -1762,10 +1762,10 @@ PP.addLesson({
           "No one can really peel their eyes, so this is an idiom.",
           "The next sentence says an anole that has turned brown on a tree trunk can be very hard to spot. You would have to look hard to see it.",
           "Part A: Look very carefully as you watch. Part B: \"An anole that has turned brown on a tree trunk can be very hard to spot.\"",
-          "The author wants you to look, so closing your eyes or staying indoors does not fit. The color sentence explains how an anole turns brown, not why you need to look carefully."
+          "The author wants you to look, so closing your eyes or staying indoors does not fit. The other sentences tell facts about anoles, not why you need to look carefully."
         ],
         misconception: "A common mix-up is reading the saying word for word, as if it were about peeling something.",
-        why: "Part A: Look very carefully as you watch. Part B: \"An anole that has turned brown on a tree trunk can be very hard to spot.\" Nobody really peels their eyes. Because an anole that has turned brown is hard to see on a tree, you have to look carefully to find one. The color sentence tells how an anole changes, but not why you must look carefully, and the other sentences tell other facts." },
+        why: "Part A: Look very carefully as you watch. Part B: \"An anole that has turned brown on a tree trunk can be very hard to spot.\" Nobody really peels their eyes. Because an anole that has turned brown is hard to see on a tree, you have to look carefully to find one. The other sentences tell facts about how anoles climb, warn each other and get their names, not why you must look carefully." },
       { id: "SK-SS2a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: ["p5"],
         prompt: "In paragraph 2, the author writes, \"An anole is a little magician.\" Why does the author use this metaphor?",
         choices: [
@@ -1887,28 +1887,29 @@ PP.addLesson({
       ],
       why: "The answer is \"He is doing well and is close to getting it right.\" Grandma nods and says that with a little less salt it will be perfect. There are no real tracks, and she does not tell him to start over or use a new recipe." },
     { id: "SK-SS2a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
-      like: ["SK-SS2a-C04", "SK-SS2a-C09", "SK-SS2a-C11"],
-      stem: ["Jamal wrote these sentences for his report on box turtles."],
-      prompt: "Which sentence from Jamal's report uses a simile?",
+      like: ["SK-SS2a-C02", "SK-SS2a-C11"],
+      stem: ["Lena wrote a report about box turtles. One sentence says, \"A baby box turtle is as small as a bottle cap.\""],
+      prompt: "What does this simile help the reader understand?",
       choices: [
-        { text: "A baby box turtle is as small as a bottle cap.", correct: true },
-        { text: "This box turtle is as old as the one at the zoo." },
-        { text: "Box turtles like to sit in warm patches of sun." },
-        { text: "A turtle's shell is a strong house on its back." }
+        { text: "how very tiny a baby box turtle is", correct: true },
+        { text: "that baby box turtles like to hide in bottles" },
+        { text: "that a baby turtle's shell is made of metal" },
+        { text: "that baby box turtles grow bigger very fast" }
       ],
-      clue: "A simile compares two different kinds of things using like or as. Check what each like or as is doing.",
+      clue: "A simile compares two different kinds of things. Ask what the two things have in common.",
       hints: [
-        "A simile compares two different kinds of things using like or as. Check what each like or as is doing.",
-        "For each sentence, ask: are two different kinds of things being compared, and is like or as joining them?",
-        "\"Box turtles like to sit in warm patches of sun\" uses like to mean enjoy, so it compares nothing. Test the other three sentences."
+        "A simile compares two different kinds of things. Ask what the two things have in common.",
+        "Picture a bottle cap in your hand. Then read the whole sentence again, word by word.",
+        "Nothing in the sentence is about bottles as hiding places, so one choice reads the words too literally. Test the choices that are left against the word the simile uses."
       ],
       how: [
-        "The bottle cap sentence uses as to compare a turtle with a bottle cap, two different things. That is a simile.",
-        "The zoo sentence compares two turtles, the same kind of thing. \"Like to sit\" means enjoy.",
-        "The shell sentence says the shell is a house, with no like or as, so it is a metaphor.",
-        "The answer is \"A baby box turtle is as small as a bottle cap.\""
+        "The sentence compares a baby box turtle with a bottle cap, using as.",
+        "A bottle cap fits in the palm of your hand. The word small tells which way they are alike.",
+        "The answer is \"how very tiny a baby box turtle is.\"",
+        "The turtle does not hide in bottles, its shell is not metal, and the sentence says nothing about growing."
       ],
-      why: "The answer is \"A baby box turtle is as small as a bottle cap.\" It uses as to compare two different things. The zoo sentence compares two turtles, \"like to sit\" means enjoy, and the shell sentence is a metaphor because it has no like or as." }
+      misconception: "A common mix-up is taking the comparison word for word, as if the turtle had something to do with real bottles.",
+      why: "The answer is \"how very tiny a baby box turtle is.\" A bottle cap is small enough to fit in your palm, and the sentence says the turtle is as small as one. It is not about hiding in bottles, metal shells or growing." }
   ],
   /* Hints and Show me how for the ref P5 (core set 1) and Together P1-P4. */
   addons: {
@@ -1939,7 +1940,7 @@ PP.addLesson({
     "SK-SS2a-P3": {
       hints: [
         "An idiom does not mean what its words say. Use the clues around it to find what it really means.",
-        "Try each Part A meaning in place of the idiom. Which one fits what Ms. Ellis says about everyone before a race?",
+        "Try each Part A meaning in place of the idiom. Which one fits the words Ms. Ellis says next?",
         "There are no real butterflies at the pool, so Rosa is not excited to see butterflies. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [

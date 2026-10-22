@@ -803,13 +803,13 @@ PP.addLesson({
       ] },
     /* B2 (expansion 2026-10-22, author b2c): p4 and p5 are used only by core (p4 set 2 and the set 3
        compare item, p5 set 3); p6 only by the similar bank. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
-    { id: "p4", title: "Lights for the Farm", genre: "Informational text",
+    { id: "p4", title: "A Signal That Saved Lives", genre: "Informational text",
       paragraphs: [
-        ["In the 1920s, most cities in Georgia had electric lights.", "But most farms far from town did not.", "Power companies said building long power lines out to a few farms cost too much."],
-        ["So farm families kept doing their work by hand.", "They carried water from wells in heavy buckets, and they read at night by the light of oil lamps."],
-        ["In 1935, the United States government began lending money to help build power lines in the country.", "Farmers joined together in groups to share the cost.", "As a result, power lines finally stretched out to farms."],
-        ["Because farms now had electricity, families could use electric pumps to bring water inside.", "Chores that once took hours took only minutes, so children had more time for school and play."],
-        ["Today, almost every home in Georgia has electric power."]
+        ["In the early 1900s, more and more cars filled the streets of big cities.", "Horses, wagons and people on foot shared the same roads.", "Many street corners had a signal with just two words: Stop and Go."],
+        ["The signal could switch from Go to Stop all at once.", "Because drivers had no warning, they did not have time to slow down.", "As a result, crashes at street corners happened often."],
+        ["Garrett Morgan, an inventor in Ohio, saw one of these crashes.", "A car hit a horse and wagon, and people were hurt.", "So Morgan decided to build a better signal."],
+        ["His signal had a third sign that stopped cars in every direction for a moment.", "That short pause gave drivers time to slow down and clear the corner before the other road got Go.", "In 1923, he got a patent, a paper from the government that said the idea was his."],
+        ["Traffic lights today work in a similar way.", "The yellow light warns drivers that the light will soon turn red, so streets are safer for all."]
       ] },
     { id: "p5", title: "Fire in the Pine Forest", genre: "Informational text",
       paragraphs: [
@@ -822,7 +822,7 @@ PP.addLesson({
     { id: "p6", title: "Why Did the Lake Turn Green?", genre: "Informational text",
       paragraphs: [
         ["Every summer, families swim and fish in Clear Lake.", "But one August, the water turned bright green.", "It smelled bad, too."],
-        ["Scientists tested the water.", "They found that fertilizer from lawns and farms had washed into the lake when it rained hard.", "Fertilizer helps plants grow.", "It helped tiny green living things called algae grow, too."],
+        ["Scientists tested the water.", "They found that fertilizer from lawns and farms had washed into the lake when it rained hard.", "Fertilizer helps plants grow.", "It helped tiny plant-like living things called algae grow, too."],
         ["Soon the lake was so full of algae that it looked like pea soup.", "When the algae died and rotted, it used up much of the air in the water, so some fish could not breathe."],
         ["Now the town asks people to use less fertilizer and to sweep it off sidewalks and streets."]
       ] }
@@ -971,117 +971,117 @@ PP.addLesson({
     { title: "Set 2", items: [
       { id: "SK-TSCE-C06", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
-        partA: { prompt: "Why did power companies in the 1920s not build power lines out to most farms?",
+        partA: { prompt: "Why did Garrett Morgan decide to build a better signal?",
           choices: [
-            { text: "Long lines out to only a few farms cost too much.", correct: true },
-            { text: "Farm families did not want lights in their homes." },
-            { text: "The government told the companies not to build them." },
-            { text: "Farmers had already built power lines of their own." }
+            { text: "He saw one of the crashes at a street corner.", correct: true },
+            { text: "He wanted to get a patent from the government." },
+            { text: "He wanted cars to get through corners faster." },
+            { text: "Drivers asked him to invent a yellow light." }
           ] },
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
-            { text: "\"Power companies said building long power lines out to a few farms cost too much.\"", correct: true },
-            { text: "\"In the 1920s, most cities in Georgia had electric lights.\"" },
-            { text: "\"Farmers joined together in groups to share the cost.\"" },
-            { text: "\"As a result, power lines finally stretched out to farms.\"" }
+            { text: "\"Garrett Morgan, an inventor in Ohio, saw one of these crashes.\"", correct: true },
+            { text: "\"In 1923, he got a patent, a paper from the government that said the idea was his.\"" },
+            { text: "\"Many street corners had a signal with just two words: Stop and Go.\"" },
+            { text: "\"Traffic lights today work in a similar way.\"" }
           ] },
-        clue: "To find a cause, ask: Why did this happen? The cause can be told in the same sentence as the effect.",
+        clue: "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
         hints: [
-          "To find a cause, ask: Why did this happen? The cause can be told in the same sentence as the effect.",
-          "Reread paragraph 1. Find what the power companies said.",
-          "Nothing in the article says farm families did not want lights, so that choice is not the cause. For Part B, choose the sentence that tells why there were no lines, not one about later years."
+          "To find a cause, ask: Why did this happen? Look for a clue word near the effect.",
+          "Reread paragraph 3 and the end of paragraph 4. Find the sentence where Morgan decides, and the clue word it begins with.",
+          "Morgan got his patent in 1923, after he built the signal, so the patent cannot be why he decided to build it. For Part B, choose the sentence that tells what happened just before he decided."
         ],
         how: [
-          "Paragraph 1 says cities had electric lights, but most farms far from town did not.",
-          "The next sentence tells why: power companies said building long power lines out to a few farms cost too much.",
-          "Part A: Long lines out to only a few farms cost too much. Part B: \"Power companies said building long power lines out to a few farms cost too much.\"",
-          "The article never says families did not want lights or that the government said no, and farmers did not build their own lines."
+          "Paragraph 3 ends, \"So Morgan decided to build a better signal.\" So means the cause comes just before it.",
+          "Just before, the article says Morgan saw one of the crashes, and people were hurt.",
+          "Part A: He saw one of the crashes at a street corner. Part B: \"Garrett Morgan, an inventor in Ohio, saw one of these crashes.\"",
+          "The patent came later, the article never says he wanted cars to go faster, and no one asked him for a yellow light."
         ],
-        misconception: "A common mix-up is choosing a reason that sounds possible but is not in the article. Use the cause the author gives.",
-        why: "Part A: Long lines out to only a few farms cost too much. Part B: \"Power companies said building long power lines out to a few farms cost too much.\" That is why most farms had no power. The other reasons are not in the article, and the sentences about farmers sharing the cost and lines reaching farms tell what happened later." },
+        misconception: "A common mix-up is choosing something that happened later. A cause has to happen before its effect.",
+        why: "Part A: He saw one of the crashes at a street corner. Part B: \"Garrett Morgan, an inventor in Ohio, saw one of these crashes.\" Paragraph 3 then says, \"So Morgan decided to build a better signal.\" The patent came later, and the other reasons are not in the article." },
       { id: "SK-TSCE-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        stem: ["A student wrote: \"Children had more time for school and play, so chores that once took hours took only minutes.\""],
-        prompt: "The clue word in the student's sentence makes the cause and effect from paragraph 4 backward. Choose the clue word that fixes it.",
-        text: "Children had more time for school and play {0} chores that once took hours took only minutes.",
+        stem: ["A student wrote: \"Crashes at street corners happened often, so drivers had no warning.\""],
+        prompt: "The clue word in the student's sentence makes the cause and effect from paragraph 2 backward. Choose the clue word that fixes it.",
+        text: "Crashes at street corners happened often {0} drivers had no warning.",
         slots: [
           { options: ["so", "because", "until"], answer: 1 }
         ],
         clue: "Because comes just before a cause. So comes just before an effect.",
         hints: [
           "Because comes just before a cause. So comes just before an effect.",
-          "Reread paragraph 4 to find out which of the two things happened first.",
+          "Reread paragraph 2 to find out which of the two things happened first.",
           "Until tells when something stops, not why it happens, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
         ],
         how: [
-          "Paragraph 4 says chores that once took hours took only minutes, so children had more time for school and play.",
-          "So the quicker chores are the cause, and the extra time is the effect.",
+          "Paragraph 2 says drivers had no warning, so they did not have time to slow down, and as a result crashes happened often.",
+          "So having no warning is the cause, and the crashes are the effect.",
           "In the student's sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
-          "With so, the sentence says the extra time made the chores quicker, which is backward. Until does not tell a cause at all."
+          "With so, the sentence says the crashes took away the warning, which is backward. Until does not tell a cause at all."
         ],
         misconception: "A common mix-up is thinking so and because do the same job. Because points to a cause. So points to an effect.",
-        why: "The answer is because. The chores got quicker first, and that gave children more time, so the cause is \"chores that once took hours took only minutes.\" Because comes just before a cause. With so, the sentence would say the extra time made the chores quicker." },
+        why: "The answer is because. Drivers had no warning first, and that led to the crashes, so the cause is \"drivers had no warning.\" Because comes just before a cause. With so, the sentence would say the crashes took away the warning." },
       { id: "SK-TSCE-C08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        prompt: "Which event in the article is BOTH an effect of power lines reaching farms AND a cause of something that happened after it?",
+        prompt: "Which event in the article came first and led to all of the others?",
         choices: [
-          { text: "Families could use electric pumps to bring water inside.", correct: true },
-          { text: "Children had more time for school and for play." },
-          { text: "Farmers joined together in groups to share the cost." },
-          { text: "Farm families read at night by the light of oil lamps." }
+          { text: "Signals could switch from Go to Stop all at once.", correct: true },
+          { text: "Drivers did not have time to slow down at corners." },
+          { text: "Morgan decided that he would build a better signal." },
+          { text: "Morgan got a patent saying the idea was his." }
         ],
-        clue: "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
+        clue: "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
         hints: [
-          "In a chain, a middle link is an effect of the link before it and a cause of the link after it.",
-          "Draw the chain from the article as boxes with arrows. Start with the 1920s and keep going to the end.",
-          "Oil lamps were used before the power lines came, so they cannot be an effect of the lines. Check each choice that is left: does it have an arrow coming in from the power lines and an arrow going out?"
+          "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+          "Draw the chain from the article as boxes with arrows. Then look at which box has no arrow coming into it from these choices.",
+          "The patent came at the very end of the chain, so it could not start the other events. Test each choice that is left: did something else have to happen before it?"
         ],
         how: [
-          "The power lines reach farms in paragraph 3. Paragraph 4 tells what happened because of that.",
-          "Because farms had electricity, families could use electric pumps to bring water inside. Chores got quicker, so children had more time.",
-          "The answer is \"Families could use electric pumps to bring water inside.\" It is an effect of the power lines and a cause of quicker chores.",
-          "Extra time for children is only an effect at the end of the chain. Farmers sharing the cost came before the lines, and oil lamps were used before power came."
+          "Paragraph 2 says the old signal could switch from Go to Stop all at once, with no warning.",
+          "Because of that, drivers could not slow down in time, crashes happened, Morgan saw one, and he built a better signal.",
+          "The answer is \"Signals could switch from Go to Stop all at once.\"",
+          "Drivers having no time to slow down came from the sudden switch, and Morgan's decision and his patent came later."
         ],
-        misconception: "A common mix-up is choosing the last event in the chain. A middle link has a cause before it and an effect after it.",
-        why: "The answer is \"Families could use electric pumps to bring water inside.\" The power lines made the pumps possible, and the pumps made chores quicker. Extra time for children ends the chain, farmers shared the cost before the lines came, and oil lamps came before electricity." },
+        misconception: "A common mix-up is choosing an event from the middle of the chain. The first cause is the one that starts the whole chain.",
+        why: "The answer is \"Signals could switch from Go to Stop all at once.\" The sudden switch meant drivers had no time to slow down, which led to the crashes and to Morgan's new signal. The other choices came after it." },
       { id: "SK-TSCE-C09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
         prompt: "Which sentence best tells how the author organizes this article?",
         choices: [
           { text: "It tells events in time order and shows how one led to another.", correct: true },
           { text: "It tells events in time order, but they do not affect each other." },
-          { text: "It gives the steps a reader would follow to build a power line." },
-          { text: "It compares life on a farm with life in a city in the 1920s." }
+          { text: "It gives the steps a reader would follow to build a signal." },
+          { text: "It compares the signals of long ago with traffic lights today." }
         ],
         clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
         hints: [
           "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect. A text can also use two of these at once.",
-          "Notice the clue words that join the sentences, such as so and as a result. What do they tell you about how the happenings connect?",
-          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the whole article, not just paragraph 1."
+          "Notice the clue words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
+          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the whole article, not just the last paragraph."
         ],
         how: [
-          "The article goes in time order, from the 1920s to 1935 to today.",
-          "Clue words such as so, as a result and because join each happening to the one before it.",
+          "The article goes in time order, from the early 1900s to 1923 to today.",
+          "Clue words such as because, as a result and so join each happening to the one before it.",
           "The answer is \"It tells events in time order and shows how one led to another.\"",
-          "The events do affect each other, the article is not a how-to, and only paragraph 1 mentions cities, so the article as a whole is not a comparison."
+          "The events do affect each other, the article is not a how-to, and only the last paragraph talks about today, so the article as a whole is not a comparison."
         ],
         misconception: "A common mix-up is calling a history text only time order, or naming the pattern of one paragraph. Check the clue words across the whole article.",
-        why: "The answer is \"It tells events in time order and shows how one led to another.\" The events go from the 1920s to today, and clue words such as so, as a result and because show how each one led to the next. It is not a how-to, and only paragraph 1 mentions cities." },
-      { id: "SK-TSCE-C10", type: "hottext", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
-        prompt: "Which TWO sentences tell effects of farms having no electricity? Choose two sentences in the passage.",
-        targets: ["p4:1:2", "p4:1:3", "p4:2:1", "p4:2:2", "p4:3:3", "p4:4:2"],
-        answer: ["p4:2:1", "p4:2:2"], pick: 2,
+        why: "The answer is \"It tells events in time order and shows how one led to another.\" The events go from the early 1900s to today, and clue words such as because, as a result and so show how each one led to the next. It is not a how-to, and only the last paragraph talks about today." },
+      { id: "SK-TSCE-C10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4"],
+        prompt: "Which sentence tells an effect of Morgan's new signal? Choose the sentence in the passage.",
+        targets: ["p4:1:3", "p4:2:2", "p4:2:3", "p4:3:3", "p4:4:1", "p4:4:2"],
+        answer: ["p4:4:2"], pick: 1,
         clue: "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
         hints: [
           "An effect happens after its cause and because of it. Find the cause in the passage first, then read on.",
-          "Find where the article says farms did not have power. An effect can be told in the same paragraph or a later one. Choose two.",
-          "The sentence about chores taking only minutes tells an effect of having electricity, not of having none. Check each other sentence: did having no power make it happen?"
+          "Find where the article tells about Morgan's signal. An effect can be told in the same paragraph or a later one.",
+          "The sentence about crashes happening often tells an effect of the OLD signal, not Morgan's. Check each other sentence: did Morgan's signal make it happen?"
         ],
         how: [
-          "Paragraph 1 says most farms far from town did not have electric lights.",
-          "Because of that, farm families kept doing their work by hand. They carried water in heavy buckets and read by oil lamps.",
-          "The answers are \"So farm families kept doing their work by hand.\" and \"They carried water from wells in heavy buckets, and they read at night by the light of oil lamps.\"",
-          "The sentence about the power companies tells why there was no power, so it is a cause. Lines reaching farms and quicker chores came later, once there was power."
+          "Paragraph 4 says Morgan's signal had a third sign that stopped cars in every direction for a moment.",
+          "The next sentence tells what that pause did: it gave drivers time to slow down and clear the corner.",
+          "The answer is \"That short pause gave drivers time to slow down and clear the corner before the other road got Go.\"",
+          "The sentence about the third sign tells what the signal is, not what it caused. The other sentences are about the old signal or come before Morgan built his."
         ],
-        misconception: "A common mix-up is choosing a sentence that tells the cause, or an effect of a later event. Ask: did having no power make this happen?",
-        why: "The answers are \"So farm families kept doing their work by hand.\" and \"They carried water from wells in heavy buckets, and they read at night by the light of oil lamps.\" Both happened because farms had no electricity. The power companies' reason is a cause, and the later sentences tell what happened once power came." }
+        misconception: "A common mix-up is choosing the sentence that names the cause itself. The question asks what the new signal made happen.",
+        why: "The answer is \"That short pause gave drivers time to slow down and clear the corner before the other road got Go.\" Morgan's signal paused traffic, and that pause gave drivers time. The sentence about the third sign tells what the signal is, and the other sentences tell about the old signal or come before Morgan's." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TSCE-C11", type: "cr", dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p5"], rows: 4,
@@ -1131,28 +1131,28 @@ PP.addLesson({
         why: "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" With no fires, bushes and trees grew thick, and their shade kept the young pines from growing. Sunlight on the floor and tall pines came from the fires, and lightning started fires long before." },
       /* Compares the set 2 and set 3 texts, so it carries both passages. */
       { id: "SK-TSCE-C13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4", "p5"],
-        prompt: "Think about \"Lights for the Farm\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
-        cols: ["only Lights for the Farm", "only Fire in the Pine Forest", "both articles"],
+        prompt: "Think about \"A Signal That Saved Lives\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
+        cols: ["only A Signal That Saved Lives", "only Fire in the Pine Forest", "both articles"],
         rows: [
           { text: "One event causes the next, like links in a chain.", answer: 2 },
           { text: "A choice people made changed what happened later.", answer: 2 },
           { text: "Something in nature starts a change.", answer: 1 },
-          { text: "Family life gets easier at the end.", answer: 0 }
+          { text: "A new invention helps solve a problem.", answer: 0 }
         ],
         clue: "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
         hints: [
           "To compare two texts, check each sentence against one article, then the other. It is true for both only if it fits both.",
           "In each article, look for what starts the changes and for any choice that people make.",
-          "In \"Lights for the Farm,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
+          "In \"A Signal That Saved Lives,\" nothing in nature starts a change; people do. Sort the other sentences the same way, one article at a time."
         ],
         how: [
           "Both articles tell a chain: in each one, one event causes the next.",
-          "In both, people's choices change what happens later: farmers share the cost of power lines, and people put out forest fires.",
+          "In both, people's choices change what happens later: Morgan decides to build a better signal, and people put out forest fires.",
           "Only \"Fire in the Pine Forest\" has something in nature start a change: lightning starts fires.",
-          "Only \"Lights for the Farm\" ends with family life getting easier: chores take minutes, and children have more time."
+          "Only \"A Signal That Saved Lives\" tells about a new invention that helps solve a problem: Morgan's signal."
         ],
         misconception: "A common mix-up is calling a sentence true for both when it fits only one article. Check it against each article on its own.",
-        why: "Both articles tell a chain of causes and effects, and in both, people's choices change what happens later. Only the pine forest article has something in nature, lightning, start a change. Only the farm article ends with family life getting easier." },
+        why: "Both articles tell a chain of causes and effects, and in both, people's choices change what happens later. Only the pine forest article has something in nature, lightning, start a change. Only the signal article tells about a new invention that helps solve a problem." },
       { id: "SK-TSCE-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Dre's bike tires were low on air.", "When tires are low, more of the soft rubber presses flat against the road.", "That makes the bike harder to push forward, so the rider has to pedal harder.", "On Saturday, Dre fell far behind his friends on the big hill.", "That night, he pumped air into both tires until they were firm."],
         prompt: "Read the story in the box. What will most likely happen the next time Dre rides up the big hill?",
@@ -1260,7 +1260,7 @@ PP.addLesson({
       ],
       why: "Part A: Fertilizer from lawns and farms washed into the lake. Part B: \"They found that fertilizer from lawns and farms had washed into the lake when it rained hard.\" The fertilizer helped the algae grow. The green water and the fish are effects, and the town's request came later." },
     { id: "SK-TSCE-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
-      like: ["SK-TSCE-P4", "SK-TSCE-C08", "SK-TSCE-C12"],
+      like: ["SK-TSCE-P4", "SK-TSCE-C12"],
       stem: ["Mrs. Ruiz took down the bird feeder in her yard.", "Without the seeds, fewer birds came to visit.", "The birds had been eating the green caterpillars on her tomato plants.", "With fewer birds around, more caterpillars lived and grew.", "By July, the caterpillars had chewed holes in almost every tomato leaf."],
       prompt: "Read the story in the box. Which event is BOTH an effect of something before it AND a cause of something after it?",
       choices: [
@@ -3005,7 +3005,7 @@ PP.addLesson({
         { text: "how pelicans build nests for their eggs" }
       ],
       clue: "Ask: What is this mostly about? Pick the answer that fits every paragraph, not just one sentence.",
-      why: "The answer is \"how a brown pelican's body helps it catch fish.\" Paragraph 1 says its whole body is built for catching fish, and the rest of the passage tells more about this. The feet are only one detail, and the passage never talks about nests." },
+      why: "The answer is \"how a brown pelican's body helps it catch fish.\" Every paragraph tells more about this. The feet are only one detail, and the passage never talks about nests." },
     /* B2 (b2b): P4 was off-skill literal recall (why the bill tips down); it now asks for the main
        idea of one paragraph, against a literal misreading and details from other paragraphs. It stays
        in Together. */
@@ -3454,9 +3454,9 @@ PP.addLesson({
         "The feet are only in paragraph 5, so that choice is just one detail. Test the other choices against every paragraph."
       ],
       how: [
-        "Paragraph 1 says the pelican's whole body is built for catching fish.",
-        "Check it: the rest of the passage tells more about that.",
-        "The answer is \"how a brown pelican's body helps it catch fish.\" The feet are one detail, and nests and the coast are not what the passage is about."
+        "Test each choice: does it fit every paragraph, or only one part?",
+        "Nests are never in the passage, Georgia's coast is in one sentence, and the paddling feet are in one paragraph.",
+        "The answer is \"how a brown pelican's body helps it catch fish.\" It is the only choice that fits the whole passage."
       ],
       misconception: "A common mix-up is picking one fun detail as the main idea. The main idea must fit the whole passage." },
     "SK-TSDESC-P4": {

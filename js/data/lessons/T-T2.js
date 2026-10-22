@@ -23,8 +23,8 @@ PP.addLesson({
       "Look at the title, the first paragraph and the last paragraph. Authors often put the main idea there on purpose, so readers can find it.",
       "Key details are facts that explain or prove the main idea. Clue words like for example, such as, also, in addition, has and looks like often point to a detail. Ask, \"Does this fact help show the main idea?\"",
       "Some details are fun to read but are not key details. If a fact does not tell more about the main idea, it is not a key detail.",
-      "Check your main idea. It should fit the whole text, not just one paragraph.",
-      "Authors also design an article to help you find and understand the facts. A heading names a section. A text box sets apart an extra fact. A photo or drawing has a caption that tells what it shows. A diagram uses labels to name the parts. Ask, \"What does this part of the page help me understand?\""
+      "Check your main idea. It should fit the whole text, not just one paragraph. Sometimes no sentence states it. Then list what every sentence tells about and say what they have in common. To compare two paragraphs, find the main idea of each one first.",
+      "Authors also design an article to help you find and understand the facts. A heading names a section. A text box sets apart an extra fact. A photo or drawing has a caption that tells what it shows. A diagram uses labels to name the parts. Ask, \"What does this part of the page help me understand?\" To choose a heading, ask what every sentence in the section is about. To choose a caption, ask what the whole picture shows."
     ],
     words: [
       { term: "topic", means: "what a text is about, in a word or two" },
@@ -230,6 +230,416 @@ PP.addLesson({
       clue: "Read the words under Figure 1. Then read each word that has a line pointing into the picture. Ask what job each kind of words does.",
       why: "The answers are \"what the whole diagram shows\" and \"what is inside some of the cells.\" The caption, \"Wax cells in a honeycomb,\" names the whole picture. The labels \"cell with an egg,\" \"honey\" and \"pollen\" each point to what is inside some of the cells." },
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2a; pattern: 3.T.T.1.c) ----------
+     Refs: P4 and P7 (set 1), P3 (set 2) and P5 (set 3). Practice Together is therefore P1, P2 and P6.
+     P3 and P5 are kept out of set 1 because each gives the other away, and P5's why would pre-answer P4.
+     New ids are numbered by their place in the fifteen. Author log:
+     docs/expansion-2026-10-22/batches/B2-b2a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT2a-P4" },
+      { ref: "SK-TT2a-P7" },
+      { id: "SK-TT2a-C03", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+        stem: ["On Saturdays, the empty lot on Pecan Street fills up early. Farmers set up tables of peaches, beans and fresh eggs. A baker sells warm bread, and a man plays the fiddle by the gate. Neighbors bring their own bags and stop to talk with friends."],
+        prompt: "No sentence in this paragraph states the main idea. Choose the answer that best tells what the paragraph is mostly about.",
+        text: "The paragraph is mostly about {0}.",
+        slots: [
+          { options: ["a busy market where neighbors shop and visit", "a man who plays the fiddle by the gate", "farmers who sell peaches and beans"], answer: 0 }
+        ],
+        clue: "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
+        hints: [
+          "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
+          "Read the paragraph one sentence at a time. Who is in each sentence, and what are they doing?",
+          "The fiddle player is in only one sentence, so he is a detail, not the main idea. Test the choices that are left against every sentence."
+        ],
+        how: [
+          "The sentences tell about farmers at their tables, a baker, a fiddle player and neighbors who shop and talk.",
+          "All of them are part of one Saturday market on the empty lot.",
+          "The answer is \"a busy market where neighbors shop and visit.\" The fiddle player and the farmers are each only one detail."
+        ],
+        misconception: "A common mix-up is choosing one detail as the main idea. The main idea covers every sentence.",
+        why: "The answer is \"a busy market where neighbors shop and visit.\" Every sentence tells about something at the Saturday market: the farmers, the baker, the fiddle player and the neighbors. The fiddle player and the farmers are each only one detail." },
+      { id: "SK-TT2a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p1"],
+        prompt: "The author wants to add a heading above paragraph 2. Which heading fits paragraph 2 best?",
+        choices: [
+          { text: "The Hive's Queen", correct: true },
+          { text: "Laying Eggs All Day" },
+          { text: "Thousands of Bees" },
+          { text: "Working Together" }
+        ],
+        clue: "A heading names what a whole section is about. Read every sentence in the section, then ask what they all tell about.",
+        hints: [
+          "A heading names what a whole section is about. Read every sentence in the section, then ask what they all tell about.",
+          "Reread paragraph 2 and count its sentences. A good heading has to fit all three, not just one.",
+          "\"Working Together\" fits the whole article, so it is too big for one paragraph. Test the headings that are left against all three sentences."
+        ],
+        how: [
+          "Paragraph 2 has three sentences: every hive has one queen, she is bigger than the other bees, and her job is to lay eggs.",
+          "Every one of those sentences is about the queen.",
+          "The answer is \"The Hive's Queen.\" Laying eggs fits only one sentence, thousands of bees is in paragraph 1, and working together fits the whole article."
+        ],
+        misconception: "A common mix-up is choosing a heading that names one detail. A heading should fit the whole section.",
+        why: "The answer is \"The Hive's Queen.\" All three sentences in paragraph 2 tell about the queen. \"Laying Eggs All Day\" fits only one sentence, thousands of bees is in paragraph 1, and \"Working Together\" fits the whole article, not one paragraph." },
+      { id: "SK-TT2a-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
+        stem: ["Grandpa's Tomato Tips", "Tomato plants need at least six hours of sun a day. Water them deeply at the roots, not on the leaves. Tie each plant to a stake so its heavy stems do not break. Tomatoes come in red, yellow and even purple."],
+        prompt: "Grandpa's main idea is how to help tomato plants grow. Why is \"Tomatoes come in red, yellow and even purple\" NOT a key detail?",
+        choices: [
+          { text: "It is true, but it does not tell how to help a tomato plant grow.", correct: true },
+          { text: "It is not true, because every kind of tomato is red." },
+          { text: "It is the main idea, so it cannot also be a detail." },
+          { text: "It should come first, because colors matter most." }
+        ],
+        clue: "A key detail helps prove the main idea. A fact can be true and still not be a key detail.",
+        hints: [
+          "A key detail helps prove the main idea. A fact can be true and still not be a key detail.",
+          "Read the first three tips and ask what each one tells a gardener to do. Then reread the last sentence and ask the same question.",
+          "The tips never say that every tomato is red, so that reason does not fit. Test the other reasons against Grandpa's main idea."
+        ],
+        how: [
+          "The main idea is how to help tomato plants grow.",
+          "The first three sentences each tell a gardener what to do: give the plant sun, water the roots and tie the plant to a stake.",
+          "The last sentence tells what colors tomatoes can be. That is true, but it does not help a plant grow.",
+          "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\""
+        ],
+        misconception: "A common mix-up is thinking a detail is wrong or false when it is only off the main idea. A fact can be true and still not be a key detail.",
+        why: "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\" The other sentences each tell a gardener what to do, but the colors of tomatoes do not help a plant grow. Nothing says every tomato is red, the colors are not the main idea, and they do not belong first." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT2a-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: ["p4"],
+        prompt: "The author states the main idea of this article in two places. Choose the TWO sentences that state it.",
+        targets: ["p4:1:1", "p4:1:3", "p4:3:2", "p4:5:4", "p4:8:1", "p4:8:2"],
+        answer: ["p4:1:3", "p4:8:1"], pick: 2,
+        clue: "The main idea is what the whole article is about. A sentence that states it should fit every section, not just one.",
+        hints: [
+          "The main idea is what the whole article is about. A sentence that states it should fit every section, not just one.",
+          "Read the headings first so you know what each section tells. Then look for sentences big enough to cover all of the sections. Choose two.",
+          "\"When someone needs help, every second counts\" is a strong ending, but it tells why speed matters, not what the station is like. Test each other sentence: does it cover the engine bay and the upstairs?"
+        ],
+        how: [
+          "The sections tell about the engine bay and the rooms upstairs.",
+          "Two sentences cover both: \"Every part of the station is planned so they can get to a fire fast\" in the first paragraph, and \"From the pole to the boots beside the truck, a fire station is built to save time\" in the last paragraph.",
+          "The other sentences tell about only one part, like the doors or the pole, or they give a reason why speed matters."
+        ],
+        misconception: "A common mix-up is choosing a sentence about one part, like the pole. A main idea sentence covers the whole article.",
+        why: "The answers are \"Every part of the station is planned so they can get to a fire fast\" and \"From the pole to the boots beside the truck, a fire station is built to save time.\" Both cover every section. The sentences about the doors and the pole each tell one part, the busy-building sentence does not say how the station is set up, and \"every second counts\" tells why speed matters." },
+      { ref: "SK-TT2a-P3" },
+      { id: "SK-TT2a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
+        prompt: "Why does the author put the facts about horses and the pet dog in a text box instead of in one of the sections?",
+        choices: [
+          { text: "They are fun facts, but the article's point does not need them.", correct: true },
+          { text: "They are the most important facts in the whole article." },
+          { text: "They tell what happens when an alarm rings late at night." },
+          { text: "They explain how firefighters get dressed in under a minute." }
+        ],
+        clue: "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
+        hints: [
+          "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
+          "Read the text box. Then read the last paragraph, which sums up the article, and notice which facts it talks about.",
+          "The text box says nothing about alarms, so it is not telling what happens at night. Decide which of the other reasons fits what you noticed."
+        ],
+        how: [
+          "The text box tells that horses once pulled fire wagons and that some stations keep a pet dog.",
+          "The last paragraph sums up the article, and it does not mention horses or dogs. The article makes its point without them.",
+          "The answer is \"They are fun facts, but the article's point does not need them.\"",
+          "The box facts are not the most important ones, and they say nothing about alarms or getting dressed."
+        ],
+        misconception: "A common mix-up is thinking a fact set apart in a box must be the most important one. A text box often holds an extra fact.",
+        why: "The answer is \"They are fun facts, but the article's point does not need them.\" The last paragraph sums up the article without horses or dogs. The box facts are not the most important ones, and they tell nothing about alarms or getting dressed." },
+      { id: "SK-TT2a-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
+        prompt: "Look at Figure 1. Why is the bottom of the pole placed where it is?",
+        choices: [
+          { text: "so firefighters land right next to their gear and the truck", correct: true },
+          { text: "so firefighters land right next to the kitchen" },
+          { text: "so firefighters land outside on the street" },
+          { text: "so the pole stays far away from the fire truck" }
+        ],
+        clue: "A diagram shows where things are. Use it together with the words in the article.",
+        hints: [
+          "A diagram shows where things are. Use it together with the words in the article.",
+          "In Figure 1, follow the pole down from the top floor. Read every label on the bottom floor, and notice what is closest to where the pole ends.",
+          "The kitchen is on the top floor in Figure 1, so the pole cannot drop anyone next to it. Now use the section about the engine bay: why would landing in that spot help?"
+        ],
+        how: [
+          "In Figure 1, the pole goes from the bunk room down through the floor to the bottom floor.",
+          "It ends right beside the gear rack, and the gear rack is beside the fire truck.",
+          "The section about the engine bay says each firefighter's gear hangs on a rack beside the truck, ready to put on.",
+          "The answer is \"so firefighters land right next to their gear and the truck.\" The kitchen is upstairs, the street is outside the big doors, and the pole is close to the truck, not far away."
+        ],
+        misconception: "A common mix-up is using only the words or only the picture. Use the labels and the article together.",
+        why: "The answer is \"so firefighters land right next to their gear and the truck.\" Figure 1 shows the pole ending beside the gear rack, which is beside the truck, and the article says the gear waits there. The kitchen is upstairs, the street is outside the doors, and the pole is close to the truck." },
+      { id: "SK-TT2a-C10", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
+        stem: ["New sentence: Each fire truck is parked facing the big doors, so it can drive straight out."],
+        prompt: "The author wants to add the new sentence to the article. Choose the best answer for each blank.",
+        text: "The new sentence belongs in the section {0}. It is {1}.",
+        slots: [
+          { options: ["\"The Engine Bay\"", "\"Living Upstairs\"", "\"Did You Know?\""], answer: 0 },
+          { options: ["a key detail, because it shows how the trucks can leave quickly", "not a key detail, because it is only a fun fact", "a key detail, because it tells where the firefighters sleep"], answer: 0 }
+        ],
+        clue: "A heading names what its section is about. A key detail helps prove the main idea, and a text box holds extra facts.",
+        hints: [
+          "A heading names what its section is about. A key detail helps prove the main idea, and a text box holds extra facts.",
+          "Read each heading. Then reread the new sentence and ask what part of the station it is about.",
+          "The new sentence says nothing about beds or meals, so it does not belong in \"Living Upstairs.\" For the second blank, think about what parking a truck this way does when a call comes."
+        ],
+        how: [
+          "The new sentence is about the trucks. The trucks wait in the engine bay, so the sentence belongs in that section.",
+          "A truck that faces the doors can drive straight out when a call comes, so it helps the trucks leave quickly.",
+          "That fits the article's big point, so it is a key detail, not an extra fact for the text box.",
+          "The answers are \"The Engine Bay\" and \"a key detail, because it shows how the trucks can leave quickly.\""
+        ],
+        misconception: "A common mix-up is putting any new fact in the text box. A fact that helps prove the main idea belongs in a section.",
+        why: "The answers are \"The Engine Bay\" and \"a key detail, because it shows how the trucks can leave quickly.\" The trucks wait in the engine bay, and parking them facing the doors lets them drive straight out. That fits the article's point, so it is a key detail, not a fun fact, and it is not about where firefighters sleep." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT2a-C11", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p5"],
+        prompt: "Which sentence tells what the whole article is mostly about? Choose the sentence in the passage.",
+        targets: ["p5:1:1", "p5:1:3", "p5:3:3", "p5:5:1", "p5:9:1", "p5:9:3"],
+        answer: ["p5:9:3"], pick: 1,
+        clue: "The main idea fits the whole article, not just one section. Authors often state it near the beginning or at the end.",
+        hints: [
+          "The main idea fits the whole article, not just one section. Authors often state it near the beginning or at the end.",
+          "Read the headings to see what each section is about. The sentence you choose must fit every section.",
+          "\"Today, people work hard to stop kudzu from spreading\" fits only the last section, so it is too small. Test the other sentences the same way: does each one fit every heading?"
+        ],
+        how: [
+          "The headings show three parts: why kudzu was planted, how the plan went wrong and how people keep kudzu back.",
+          "The last sentence of the article covers all three parts.",
+          "The answer is \"Kudzu was planted to help the land, but now people must work to protect the land from it.\"",
+          "The other sentences each fit only one part, like the farmers planting it or people working to stop it."
+        ],
+        misconception: "A common mix-up is choosing a sentence that fits one section, like the last one. The main idea covers the whole article.",
+        why: "The answer is \"Kudzu was planted to help the land, but now people must work to protect the land from it.\" It covers why kudzu was planted, how it became a problem and what people do now. The other sentences each fit only the opening or one section." },
+      { id: "SK-TT2a-C12", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p5"],
+        prompt: "A student says the main idea of \"The Vine That Grew and Grew\" is \"Kudzu flowers can be made into jelly.\" Why is the student wrong?",
+        choices: [
+          { text: "The jelly fact is only in the text box, and no section is about it.", correct: true },
+          { text: "The article never tells anything about kudzu flowers." },
+          { text: "Jelly is made from fruit, so the fact in the article must be wrong." },
+          { text: "Only a heading can tell the main idea of an article." }
+        ],
+        clue: "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
+        hints: [
+          "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
+          "Find where the article tells about the flowers. Notice how that part looks on the page, and check whether any other part of the article tells about jelly.",
+          "The article does tell about kudzu flowers, so the student is not wrong about that. Decide which of the other reasons matches what you found."
+        ],
+        how: [
+          "The flowers and the jelly are told about only in the text box under \"Did You Know?\"",
+          "The sections tell why kudzu was planted, how it spread and how people fight it. None of them is about jelly.",
+          "The answer is \"The jelly fact is only in the text box, and no section is about it.\"",
+          "The article does tell about the flowers, it says people really make jelly from them, and a main idea does not have to be a heading."
+        ],
+        misconception: "A common mix-up is taking a fun fact as the main idea because it is interesting. Ask whether the whole article is about it.",
+        why: "The answer is \"The jelly fact is only in the text box, and no section is about it.\" The jelly appears only in the text box. The article does tell about the flowers, it says people use them for jelly, and a main idea can be stated in a sentence, not only in a heading." },
+      { id: "SK-TT2a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
+        stem: ["Paragraph A: The week before the spring concert, Mr. Bell's class gets busy. Students practice their songs every morning. They fold paper programs and write each singer's name inside. On Thursday, they help set up rows of chairs in the gym.", "Paragraph B: On the night of the concert, families fill the gym. The class sings four songs, and two students play the drums. At the end, everyone claps and cheers. Afterward, the singers share cookies with their families."],
+        prompt: "How are the main ideas of Paragraph A and Paragraph B different?",
+        choices: [
+          { text: "Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.", correct: true },
+          { text: "Paragraph A is about folding programs, and Paragraph B is about sharing cookies." },
+          { text: "Paragraph A tells what happens on the big night, and Paragraph B tells how the class gets ready." },
+          { text: "Paragraph A tells why singing is fun, and Paragraph B tells why the gym is too small." }
+        ],
+        clue: "To find a paragraph's main idea, ask what all of its sentences have in common. Do that for each paragraph, then compare.",
+        hints: [
+          "To find a paragraph's main idea, ask what all of its sentences have in common. Do that for each paragraph, then compare.",
+          "List what the students do in Paragraph A. Then list what happens in Paragraph B.",
+          "Folding programs and sharing cookies are each only one sentence, so they are details, not main ideas. Now look at the first words of each paragraph to see when each one happens."
+        ],
+        how: [
+          "Paragraph A: practicing songs, folding programs and setting up chairs all happen the week before the concert. Its main idea is getting ready.",
+          "Paragraph B: families arriving, singing, clapping and sharing cookies all happen on the night of the concert.",
+          "The answer is \"Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.\"",
+          "Programs and cookies are single details, one choice has the paragraphs backward, and neither paragraph says singing is fun or the gym is too small."
+        ],
+        misconception: "A common mix-up is naming one detail from each paragraph instead of what all the sentences share.",
+        why: "The answer is \"Paragraph A tells how the class gets ready, and Paragraph B tells what happens on the big night.\" Every sentence in Paragraph A tells about getting ready the week before, and every sentence in Paragraph B tells about the concert night. Programs and cookies are single details, and the backward choice mixes up the paragraphs." },
+      { id: "SK-TT2a-C14", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+        stem: ["Kayla is writing a report about how a bike works. She drew Figure 1 for her report, but she forgot to write a caption under it."],
+        figure: { src: "assets/figures/tt2-c-bike.svg", label: "Figure 1",
+          alt: "Drawing of a bike seen from the side, with no rider on it. Five labels with lines point to the seat, the handlebars, a brake lever, a pedal and the chain." },
+        prompt: "Choose the best caption for Kayla to write under Figure 1.",
+        text: "Caption: {0}",
+        slots: [
+          { options: ["The main parts of a bike", "Kayla riding her bike to school", "A bike race in the park"], answer: 0 }
+        ],
+        clue: "A caption tells what a whole picture shows. Look at the picture and its labels before you choose.",
+        hints: [
+          "A caption tells what a whole picture shows. Look at the picture and its labels before you choose.",
+          "Read each label in Figure 1. Then ask what all the labels have in common.",
+          "There is only one bike in Figure 1, so it cannot show a race. Check whether the choices that are left match what you see."
+        ],
+        how: [
+          "Figure 1 shows one bike with no rider. Its labels name the seat, the handlebars, a brake lever, a pedal and the chain.",
+          "A caption should tell what the whole picture shows, and Kayla's report is about how a bike works.",
+          "The answer is \"The main parts of a bike.\" There is no rider, so it is not Kayla riding to school, and there is only one bike, so it is not a race."
+        ],
+        misconception: "A common mix-up is choosing a caption that tells a story about the picture instead of what the picture really shows.",
+        why: "The answer is \"The main parts of a bike.\" Figure 1 shows one bike with labels on its seat, handlebars, brake lever, pedal and chain. No one is riding it, and there is no race." },
+      { ref: "SK-TT2a-P5" }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. */
+  similar: [
+    { id: "SK-TT2a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C04"],
+      stem: ["Every morning before the first stop, Ms. Greene walks all the way around her school bus. She looks at each tire. She tests the lights, the horn and the stop sign arm. Then she makes sure the back door opens in case of an emergency."],
+      prompt: "Which heading best fits this paragraph?",
+      choices: [
+        { text: "Safety Checks Before the Ride", correct: true },
+        { text: "The Stop Sign Arm" },
+        { text: "Riding the Bus Home" },
+        { text: "How Tires Are Made" }
+      ],
+      clue: "A heading names what a whole section is about. It has to fit every sentence.",
+      hints: [
+        "A heading names what a whole section is about. It has to fit every sentence.",
+        "List what Ms. Greene looks at in each sentence, and notice when she does it.",
+        "\"The Stop Sign Arm\" is only one of the things she checks, so it is too small. Test the other headings against every sentence."
+      ],
+      how: [
+        "Ms. Greene checks the tires, the lights, the horn, the stop sign arm and the back door.",
+        "She does all of this before the first stop, to make sure the bus is safe.",
+        "The answer is \"Safety Checks Before the Ride.\" The stop sign arm is one detail, and nothing tells about riding home or making tires."
+      ],
+      why: "The answer is \"Safety Checks Before the Ride.\" Every sentence tells something Ms. Greene checks before the first stop. The stop sign arm is only one detail, and the paragraph does not tell about riding home or how tires are made." },
+    { id: "SK-TT2a-S02", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TT2a-P3", "SK-TT2a-P4"],
+      stem: ["A duck's feathers are built to keep it dry. Near its tail, a duck has a gland that makes oil. The duck uses its beak to spread the oil over its feathers, so water rolls right off. Its outer feathers also overlap like shingles on a roof. Ducks have webbed feet for paddling, and many ducks quack loudly."],
+      prompt: "Which TWO details best support the main idea of this paragraph?",
+      choices: [
+        { text: "The duck spreads oil over its feathers so water rolls off.", correct: true },
+        { text: "Its outer feathers overlap like shingles on a roof.", correct: true },
+        { text: "Ducks have webbed feet for paddling." },
+        { text: "Many ducks quack loudly." },
+        { text: "A duck uses its beak to find food." }
+      ],
+      clue: "First say the main idea. Then keep only the details that help prove it.",
+      hints: [
+        "First say the main idea. Then keep only the details that help prove it.",
+        "The first sentence tells the main idea. Test each detail against it. Choose two.",
+        "Webbed feet help a duck paddle, but they do not keep it dry. Test the other details the same way."
+      ],
+      how: [
+        "The main idea: a duck's feathers are built to keep it dry.",
+        "The oil makes water roll off, and the overlapping feathers work like a roof.",
+        "The answers are \"The duck spreads oil over its feathers so water rolls off\" and \"Its outer feathers overlap like shingles on a roof.\"",
+        "Webbed feet and quacking are true but are not about staying dry, and the paragraph never says a duck finds food with its beak."
+      ],
+      why: "The answers are \"The duck spreads oil over its feathers so water rolls off\" and \"Its outer feathers overlap like shingles on a roof.\" Both show how the feathers keep a duck dry. Webbed feet and quacking are not about staying dry, and finding food is not in the paragraph." },
+    { id: "SK-TT2a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C03"],
+      stem: ["On Mondays at the Elm Street library, a teacher helps kids with their homework. On Wednesdays, kids build towers and bridges in the building club. On Fridays, they can watch a movie or borrow a board game. In summer, there is a reading contest with prizes."],
+      prompt: "No sentence states the main idea. Which sentence best tells what the paragraph is mostly about?",
+      choices: [
+        { text: "The Elm Street library offers kids different activities all year.", correct: true },
+        { text: "On Mondays, a teacher helps kids with their homework." },
+        { text: "Kids should read more books during the summer." },
+        { text: "The building club meets at the library on Wednesdays." }
+      ],
+      clue: "When no sentence states the main idea, find what every sentence has in common.",
+      hints: [
+        "When no sentence states the main idea, find what every sentence has in common.",
+        "Look at the words that start each sentence, and at what kids do in each one.",
+        "The homework help is only one sentence, so it is a detail. Test the other choices against every sentence."
+      ],
+      how: [
+        "Each sentence tells something kids can do at the library: homework help, a building club, movies and games, and a reading contest.",
+        "These happen on different days and in summer, too.",
+        "The answer is \"The Elm Street library offers kids different activities all year.\" The homework help and the building club are single details, and the paragraph never says kids should read more."
+      ],
+      why: "The answer is \"The Elm Street library offers kids different activities all year.\" Every sentence names something to do at the library. Homework help and the building club are single details, and the paragraph does not tell kids what they should do." }
+  ],
+  /* Hints and Show me how for the refs (P3, P4, P5, P7) and for Practice Together (P1, P2, P6). */
+  addons: {
+    "SK-TT2a-P1": {
+      hints: [
+        "The main idea fits the whole article, not just one paragraph. Read the first and last paragraphs, then ask which choice covers every part.",
+        "Paragraphs 2 to 5 each tell about different bees. Find the choice that is big enough to cover all of them.",
+        "The queen laying hundreds of eggs is true, but it is only in paragraph 2, so it is too small. Test the other choices the same way."
+      ],
+      how: [
+        "The first paragraph says each bee has a job, and the last paragraph says no bee could keep the hive going alone.",
+        "Paragraphs 2 to 5 each tell one job: the queen, the young workers, the older workers and the guards.",
+        "The answer is \"Honeybees in a hive each have a job, and they work together.\"",
+        "The other choices are true details, but each comes from only one paragraph."
+      ],
+      misconception: "A common mix-up is choosing one true fact as the main idea. The main idea covers every paragraph." },
+    "SK-TT2a-P2": {
+      hints: [
+        "The main idea sentence is big enough to cover the whole article.",
+        "Look in the first two paragraphs. Ask which sentence could cover the queen, the young workers, the older workers and the guards.",
+        "\"Every hive has one queen\" tells about only one bee, so it is too small. Test each other sentence: does it cover every job?"
+      ],
+      how: [
+        "The article tells about the queen in paragraph 2 and about different workers in paragraphs 3 to 5.",
+        "The sentence must cover all of them and the idea that they work together.",
+        "The answer is \"Each bee has a job, and by working together, the bees keep the whole hive alive.\"",
+        "The other sentences tell how many bees there are, that the bees are busy, or about only the queen or only the workers."
+      ] },
+    "SK-TT2a-P3": {
+      hints: [
+        "A supporting detail must tell about the idea in the question: jobs that worker bees do.",
+        "Reread paragraphs 1 to 4 and notice which bees each detail is about. Choose two.",
+        "The queen lays hundreds of eggs, which is a job, but the queen is not a worker bee. Check each detail that is left: is it about workers, and does it name a job?"
+      ],
+      how: [
+        "The idea is about the jobs of worker bees.",
+        "Paragraph 3 says young workers clean the hive and feed the baby bees. Paragraph 4 says older workers gather nectar and pollen.",
+        "The answers are \"Young workers clean the hive and feed the baby bees\" and \"Older workers gather nectar and pollen from flowers.\"",
+        "The queen details are not about workers, and thousands of bees is not a job."
+      ],
+      misconception: "A common mix-up is choosing a true detail about the wrong bee. The question asks only about worker bees." },
+    "SK-TT2a-P4": {
+      hints: [
+        "For each detail, ask, \"Does this show a bee doing a job for the hive?\"",
+        "Find each detail in the article. Read the sentences around it to see whether it tells about a job.",
+        "Fanning wings to cool the hive is a job, so it is a key detail. Work out the other three rows the same way."
+      ],
+      how: [
+        "The main idea is that the bees each have a job and work together.",
+        "Fanning wings, building wax cells and guarding the door are each a job, so they are key details.",
+        "Having five eyes is a fun fact, but it is not a job, so it is not a key detail."
+      ],
+      misconception: "A common mix-up is calling every true fact a key detail. A key detail has to help prove the main idea." },
+    "SK-TT2a-P5": {
+      hints: [
+        "Read only paragraph 4. Ask what most of its sentences are about.",
+        "Reread paragraph 4 sentence by sentence. Which sentence does not fit with the others? For Part B, choose two.",
+        "Young workers are in paragraph 3, not paragraph 4, so that choice cannot be the main idea of paragraph 4. For Part B, the sentences you choose must match your Part A answer."
+      ],
+      how: [
+        "Most of paragraph 4 tells how older workers gather nectar and pollen and turn the nectar into honey for winter.",
+        "Part A: Older worker bees gather food from flowers and make honey for the hive.",
+        "Part B: \"The workers gather a sweet liquid called nectar and a yellow powder called pollen\" and \"Back at the hive, the bees turn the nectar into honey.\"",
+        "\"A honeybee has five eyes\" is in paragraph 4, but it is not about gathering food. The honey is saved for winter, and young workers are in paragraph 3."
+      ],
+      misconception: "A common mix-up is choosing a sentence only because it is in the right paragraph. It must also support the main idea." },
+    "SK-TT2a-P6": {
+      hints: [
+        "A diagram helps you see something the words tell about. Read the caption first.",
+        "The caption says what the diagram shows. Find the paragraphs that tell about the same thing.",
+        "Figure 1 has no flowers or guard bees in it, so it cannot show how they work. Test each choice that is left against the labels."
+      ],
+      how: [
+        "The caption says Figure 1 shows wax cells in a honeycomb.",
+        "Paragraph 3 says young workers build little wax rooms called cells, but it does not say what they look like. The diagram shows their six sides.",
+        "The answer is \"It shows the six-sided shape of the wax cells that the workers build.\"",
+        "The diagram shows no flowers, no guards and no queen."
+      ] },
+    "SK-TT2a-P7": {
+      hints: [
+        "A caption and a label do different jobs. Ask what each kind of words tells you.",
+        "Read the words under Figure 1. Then read each word that has a line pointing into the picture.",
+        "Nothing in Figure 1 tells who wrote the article, so the caption does not tell that. For the labels, look at where each line points."
+      ],
+      how: [
+        "The caption, \"Wax cells in a honeycomb,\" names what the whole diagram shows.",
+        "The labels \"cell with an egg,\" \"honey\" and \"pollen\" each point to what is inside a cell.",
+        "So the caption tells what the whole diagram shows, and the labels tell what is inside some of the cells."
+      ],
+      misconception: "A common mix-up is mixing up a caption and a label. The caption names the whole picture; a label names one part." }
+  },
   test: [
     { id: "SK-TT2a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "What is this article mostly about?",
