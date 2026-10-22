@@ -141,7 +141,7 @@ PP.addLesson({
           { text: "\"Mateo tapped his feet to the beat.\"" },
           { text: "\"Soon he sang along, even louder than the thunder.\"" }
         ] },
-      clue: "The writer does not say how Mateo feels. Look at paragraph 2 for what his voice and his body do right after the room goes dark.",
+      clue: "The writer does not say how Mateo feels. Look at what his voice and his body do right after the room goes dark.",
       why: "Part A: He feels scared. Part B: \"His voice came out high and squeaky.\" and \"He pulled his blanket up to his chin.\" A squeaky voice and pulling the blanket up to his chin show fear. The room going dark is the setting, not Mateo's feeling, and tapping and singing happen later, when he is having fun." },
     { id: "SK-TT1a-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What do Abuela's words in paragraph 3 show about her?",
