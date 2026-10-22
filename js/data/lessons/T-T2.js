@@ -1040,28 +1040,28 @@ PP.addLesson({
         misconception: "A common mix-up is keeping the steps in the order they are written. A procedure works only if each step is ready for the next one.",
         why: "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\" The knots hold the string inside the cups, so they must be tied before the string is pulled tight. The holes must come first, and there is nothing to test until the phone is made." },
       { id: "SK-TT2b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
-        stem: ["In the early 1900s, cars, horses, wagons and people all shared busy city streets. Early traffic signals switched from Stop straight to Go, with no warning in between, and crashes happened often. Garrett Morgan saw a bad crash at a street corner in Cleveland, Ohio. Soon after, he invented a signal that gave drivers a warning before it changed, so they had time to slow down. A yellow light today does a similar job."],
+        stem: ["In the 1860s, the only way to cross the East River between Brooklyn and New York City was by boat. In some winters, ice stopped the boats. So leaders decided to build a bridge. An engineer named John Roebling planned it, but he was hurt in an accident and died before the building began. His son, Washington Roebling, took over. Then Washington became very sick from working deep under the river, and he had to stay in his room. His wife, Emily, carried his instructions to the workers every day. In 1883, the Brooklyn Bridge opened, and Emily was the first person to ride across it."],
         prompt: "Which sentence best tells how the events in this text are connected?",
         choices: [
-          { text: "Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.", correct: true },
-          { text: "Morgan's new signal came first, and the busy streets and the crashes came after it." },
-          { text: "The streets were busy, so the city took away all of its traffic signals." },
-          { text: "Morgan saw a crash, so he decided that cars should stay out of Cleveland." }
+          { text: "Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.", correct: true },
+          { text: "The bridge opened first, and after that the river froze and the boats stopped running." },
+          { text: "Emily planned the bridge, so John and Washington Roebling carried her instructions." },
+          { text: "Washington got sick, so the leaders decided that they did not need a bridge after all." }
         ],
         clue: "In a series of historical events, ask what happened first and what each event led to.",
         hints: [
           "In a series of historical events, ask what happened first and what each event led to.",
-          "Find the problem the text tells about first. Then find what Morgan did and when he did it.",
-          "Morgan's signal came after the crash, not before it, so a choice that puts his signal first has the order wrong. Test the other choices: does each one match what really led to what?"
+          "Find each thing that went wrong in the text. Then find what happened because of it.",
+          "The bridge opened at the very end, in 1883, so a choice that puts the opening first has the order wrong. Test the other choices: does each one match who did what?"
         ],
         how: [
-          "The problem comes first: busy streets and signals with no warning, so crashes happened often.",
-          "Morgan saw a bad crash. Soon after, he invented a signal that warned drivers before it changed.",
-          "The answer is \"Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.\"",
-          "His signal came after the crashes, the text never says signals were taken away, and it never says cars were kept out of Cleveland."
+          "First problem: ice sometimes stopped the boats, so leaders decided to build a bridge.",
+          "Next problems: John Roebling died, so his son took over. Then Washington got sick, so Emily carried his instructions to the workers.",
+          "The answer is \"Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.\"",
+          "The bridge opened last, John planned it, not Emily, and the bridge was still built."
         ],
-        misconception: "A common mix-up is flipping the order: the problem has to come before the invention that solves it.",
-        why: "The answer is \"Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.\" The crashes came first, and seeing one led Morgan to invent his signal. The text never says signals were taken away or that cars were kept out of the city." }
+        misconception: "A common mix-up is flipping the order: a problem has to come before the step it leads to.",
+        why: "The answer is \"Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.\" Each event caused the next one, and the bridge opened at the end, in 1883. John Roebling planned it, not Emily, and the bridge was still built." },
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT2b-C06", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
@@ -1248,28 +1248,28 @@ PP.addLesson({
         misconception: "A common mix-up is picking an effect that is not connected to the skipped step. Use the reason the text gives.",
         why: "The answer is \"The glue might not grip, so the patch could peel off and let air out.\" The article says the sandpaper is there so the glue can grip. Skipping it would not make a hole, the bubbles come earlier, and the tire size does not change." },
       { id: "SK-TT2b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
-        stem: ["Lightning heats the air around it in a flash. The hot air spreads out so fast that it makes a loud boom. That boom is thunder. Light moves much faster than sound, so you see the flash before you hear the boom."],
+        stem: ["Bakers mix yeast into bread dough. Yeast is a tiny living thing. It eats the sugar in the dough and gives off a gas. The gas makes thousands of tiny bubbles. The bubbles stretch the dough, so it puffs up, or rises. When the bread bakes, the bubbles leave little holes inside."],
         prompt: "Which chain shows how the ideas in this text are connected?",
         choices: [
-          { text: "Lightning heats the air, so the air spreads out fast, so there is a loud boom.", correct: true },
-          { text: "There is a loud boom, so the air spreads out fast, so lightning heats the air." },
-          { text: "Lightning heats the air, so light moves faster, so there is a loud boom." },
-          { text: "Light moves faster than sound, so the air spreads out, so lightning flashes." }
+          { text: "Yeast eats sugar, so it gives off gas, so bubbles make the dough rise.", correct: true },
+          { text: "The dough rises, so yeast eats sugar, so it gives off a gas." },
+          { text: "Bubbles leave holes, so yeast eats sugar, so the dough rises." },
+          { text: "Yeast eats sugar, so the bread bakes, so the bubbles give off gas." }
         ],
         clue: "In a cause-and-effect chain, each effect becomes the cause of the next thing. The cause always happens first.",
         hints: [
           "In a cause-and-effect chain, each effect becomes the cause of the next thing. The cause always happens first.",
-          "Find the first thing that happens in the text. Then ask what happens because of it, and what happens because of that.",
-          "A chain that starts with the boom has the order backward, because the boom comes last. Check the other chains link by link."
+          "Find the first thing the yeast does in the text. Then ask what happens because of it, and what happens because of that.",
+          "A chain that starts with the dough rising has the order backward, because the rising comes after the bubbles. Check the other chains link by link."
         ],
         how: [
-          "First, lightning heats the air around it.",
-          "Because the air is so hot, it spreads out very fast, and that makes a loud boom: thunder.",
-          "The answer is \"Lightning heats the air, so the air spreads out fast, so there is a loud boom.\"",
-          "Light moving fast explains why you see the flash first, but it does not cause the boom or the lightning."
+          "First, the yeast eats the sugar in the dough and gives off a gas.",
+          "The gas makes tiny bubbles, and the bubbles stretch the dough, so it rises.",
+          "The answer is \"Yeast eats sugar, so it gives off gas, so bubbles make the dough rise.\"",
+          "The holes are left only at the end, when the bread bakes, and baking does not make the bubbles give off gas."
         ],
         misconception: "A common mix-up is flipping a cause and its effect. The cause always happens first, even if it is told second.",
-        why: "The answer is \"Lightning heats the air, so the air spreads out fast, so there is a loud boom.\" Each link causes the next. The boom comes last, so it cannot start the chain, and the speed of light explains why you see the flash first, not what makes the boom." },
+        why: "The answer is \"Yeast eats sugar, so it gives off gas, so bubbles make the dough rise.\" Each link causes the next. The dough rises after the bubbles form, the holes come last, when the bread bakes, and baking is not what makes the gas." },
       { id: "SK-TT2b-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4", "p5"],
         prompt: "How is the way \"How to Patch a Bike Tube\" tells its ideas different from the way \"The Wheel That Topped a Tower\" tells its ideas?",
         choices: [
