@@ -2230,7 +2230,7 @@ PP.addLesson({
   teach: {
     big: "Compare means show how two things are ALIKE. Contrast means show how they are DIFFERENT.",
     points: [
-      "The author picks two things, often things people mix up, and goes back and forth between them. Many authors tell how the things are alike first, then tell the differences one topic at a time.",
+      "The author picks two things, often things people mix up. Some authors tell all about one thing and then all about the other. Others go topic by topic, telling about both things for each topic.",
       "Clue words like both, alike and same tell you the things are alike. Sometimes there is no clue word, so ask: Is this true of both things?",
       "Clue words like but, however, unlike, different and while tell you the things are different.",
       "Watch for a clue word that switches from alike to different, like however.",
@@ -2250,14 +2250,14 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["Cats and dogs are both pets. Both have fur. But a cat says meow, and a dog says woof."],
-      ask: "How are cats and dogs the same? How are they different?",
+      show: ["Mia needs a backpack for a long hike in the woods.", "The red backpack and the blue backpack both have two zippers and a pocket for a water bottle.", "However, the red backpack has thick, padded straps, while the blue backpack has thin straps."],
+      ask: "Which backpack should Mia choose for her hike, and why?",
       steps: [
-        "Find the clue word both. It tells how they are the same.",
-        "Find the clue word but. Here it tells how they are different.",
-        "Read what comes after each clue word."
+        "Find what Mia needs: a pack she can carry for a long time.",
+        "Find the clue word both. Zippers and a bottle pocket are true of both packs, so they cannot help her choose.",
+        "Find the difference after however and while. Ask which difference matters for a long hike."
       ],
-      answer: "They are the same because both are pets and both have fur. They are different because a cat says meow and a dog says woof."
+      answer: "The red backpack. Its padded straps will hurt less on a long hike. The zippers and the pocket are the same on both packs, so they cannot help her choose."
     },
     {
       show: ["A bike and a car both have wheels. However, a bike has two wheels. Unlike a bike, a car has four."],
@@ -2317,11 +2317,11 @@ PP.addLesson({
         ["The paddles are different, too.", "A canoe paddle has one flat blade at the end.", "A kayak paddle has a blade at each end, so the paddler dips one side and then the other."],
         ["A canoe often has room for two or three people and a pile of camping gear.", "Most kayaks carry just one person.", "Which boat would you choose for your next trip?"]
       ] },
-    { id: "p5", title: "Two Trucks That Help", genre: "Informational text",
+    { id: "p5", title: "Two Trucks That Clear the Road", genre: "Informational text",
       paragraphs: [
-        ["In an emergency, you might hear a siren and see flashing lights.", "Fire trucks and ambulances both use sirens and lights.", "They tell other drivers to move out of the way."],
-        ["However, the two trucks do different jobs.", "A fire truck carries long hoses, tall ladders and tanks of water.", "Firefighters use them to put out fires and to reach people high up in buildings."],
-        ["An ambulance carries a bed on wheels called a stretcher.", "Unlike a fire truck, it is filled with things like bandages to help people who are hurt.", "The crew cares for sick or hurt people on the way to the hospital."]
+        ["Some trucks have a special job: keeping roads clear.", "A street sweeper and a snowplow both drive slowly along city streets.", "Both clear things off the road so cars can drive safely."],
+        ["However, the two trucks work in different ways.", "A street sweeper has round brushes underneath that spin and sweep up dirt, leaves and trash.", "Then a strong vacuum sucks it all into a tank inside the truck."],
+        ["A snowplow has a wide metal blade on its front.", "Unlike a street sweeper, it pushes snow to the side of the road instead of picking it up.", "Many snowplows also spread salt behind them to help melt ice."]
       ] }
   ],
   practice: [
@@ -2348,10 +2348,10 @@ PP.addLesson({
         { text: "has smooth, wet skin", answer: 0 },
         { text: "lays eggs", answer: 1 },
         { text: "has dry, bumpy skin", answer: 2 },
-        { text: "most stay close to water", answer: 0 }
+        { text: "hatches as a tadpole", answer: 1 }
       ],
       clue: "Use the clue words. Both and alike point to the middle column. Unlike and but point to a difference.",
-      why: "Smooth, wet skin and staying close to water are frog facts. Dry, bumpy skin is a toad fact. Laying eggs is true of both animals." },
+      why: "Smooth, wet skin is a frog fact. Dry, bumpy skin is a toad fact. Laying eggs and hatching as a tadpole are true of both animals." },
     { id: "SK-TSCC-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "The sentence in the box tells about paragraph 2. What does the word \"but\" show here?",
       stem: ["A frog's skin is smooth and wet, but a toad's skin is dry and bumpy."],
@@ -2363,14 +2363,14 @@ PP.addLesson({
       ],
       clue: "The word but has more than one job. Read the words on each side of it. Are they about two animals, or about a plan that failed?",
       why: "The answer is \"how frogs and toads are different.\" The sentence tells about a frog's skin, then but, then a toad's skin. In compare and contrast, but shows a difference. In problem and solution, but shows a try that failed." },
-    { id: "SK-TSCC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
+    { id: "SK-TSCC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Choose the clue word that best completes the sentence.",
       text: "{0} most frogs, many toads live far from ponds.",
       slots: [
-        { options: ["Unlike", "Because", "Finally"], answer: 0 }
+        { options: ["Unlike", "Because", "Like"], answer: 0 }
       ],
-      clue: "This sentence tells how two animals live in different places. Pick the clue word that shows a difference.",
-      why: "The answer is Unlike. Unlike most frogs, many toads live far from ponds. Unlike is a contrast clue word. Because tells why, and finally tells order." },
+      clue: "Read the sentence with each choice. Ask what the two parts of the sentence tell about frogs and toads.",
+      why: "The answer is Unlike. Unlike most frogs, many toads live far from ponds. Paragraph 4 says most frogs stay close to water, so the two animals live in different places. Unlike shows a difference. Like would say they are the same, and because tells why." },
     { id: "SK-TSCC-P6", type: "ms", points: 2, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Which TWO sentences tell how frogs and toads are ALIKE?",
       pick: 2,
@@ -2423,7 +2423,7 @@ PP.addLesson({
         clue: "Authors compare for a reason. Ask what a reader can do after learning the likenesses and the differences.",
         hints: [
           "Authors compare for a reason. Ask what a reader can do after learning the likenesses and the differences.",
-          "Reread the first sentence and the last two sentences of the article.",
+          "Think about what each paragraph does. Then ask what a reader can do after reading all of them.",
           "Paragraph 5 says both animals are helpful, so the article does not show that one is more helpful. Check each choice that is left: is it something the whole article does, or only one sentence?"
         ],
         how: [
@@ -2534,7 +2534,7 @@ PP.addLesson({
         misconception: "A common mix-up is thinking the author tells everything about one thing first. Here each topic tells about both.",
         why: "The answer is \"one topic at a time, telling about 1900 and then about today.\" Classrooms, slates and paper, and getting to school each get both times. The article does not tell all about 1900 first, does not follow one day in time order, and has no problems and solutions." },
       { id: "SK-TSCC-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-        stem: ["(1) Schools in 1900 and schools today are alike in some ways.", "(2) Both kinds of schools have teachers and students.", "(3) In both, students learn to read and write.", "(4) Also, a school in 1900 often had just one room.", "(5) Most schools today have many rooms."],
+        stem: ["(1) Schools in 1900 and schools today are alike in some ways.", "(2) Both kinds of schools have teachers and students.", "(3) Also, in both, students learn to read and write.", "(4) In addition, a school in 1900 often had just one room.", "(5) Most schools today have many rooms."],
         prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
         text: "Sentence {0} should begin with {1}",
         slots: [
@@ -2549,12 +2549,12 @@ PP.addLesson({
         ],
         how: [
           "Sentences 2 and 3 tell how the schools are alike. Sentences 4 and 5 tell a difference: one room in 1900 and many rooms today.",
-          "Sentence 4 starts the difference, but it begins with Also, which adds one more likeness.",
+          "Sentence 4 starts the difference, but it begins with In addition, which adds one more likeness. Sentences 2 and 3 begin with Both and Also, which fit because they do tell likenesses.",
           "Sentence 4 should begin with However, the clue word that switches from alike to different.",
           "For example would add an example, not a difference."
         ],
-        misconception: "A common mix-up is keeping a clue word that adds on, like also, when the writer turns to a difference.",
-        why: "The answers are 4 and However. Sentences 2 and 3 tell likenesses, and sentence 4 begins the difference. Also adds one more likeness, and for example adds an example, so However is the clue word that shows the switch." },
+        misconception: "A common mix-up is keeping a clue word that adds on, like also or in addition, when the writer turns to a difference.",
+        why: "The answers are 4 and However. Sentences 2 and 3 tell likenesses, so Both and Also fit there. Sentence 4 begins the difference, but In addition adds one more likeness. Also would add a likeness too, and for example adds an example, so However is the clue word that shows the switch." },
       { id: "SK-TSCC-C10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
         prompt: "In paragraph 4, slates and paper are different. In what way are they ALIKE?",
         choices: [
@@ -2566,7 +2566,7 @@ PP.addLesson({
         clue: "Things that are different can still be alike in some way. Ask: What is true of both?",
         hints: [
           "Things that are different can still be alike in some way. Ask: What is true of both?",
-          "Reread paragraph 4. What do students do with slates, and what do students do with paper?",
+          "Reread paragraph 4. List what it says about slates and what it says about paper.",
           "Only slates can be wiped clean and used again, so that is not true of both. Check each choice that is left: is it true of slates and of paper?"
         ],
         how: [
@@ -2726,33 +2726,34 @@ PP.addLesson({
     { id: "SK-TSCC-S02", type: "ebsr", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p5"],
       like: ["SK-TSCC-C07", "SK-TSCC-C02"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "How is an ambulance different from a fire truck?",
+      partA: { prompt: "How is a snowplow different from a street sweeper?",
         choices: [
-          { text: "It is made to care for people who are sick or hurt.", correct: true },
-          { text: "It uses a siren to tell other drivers to move." },
-          { text: "It carries tall ladders to reach high windows." },
-          { text: "It carries tanks of water to put out fires." }
+          { text: "It pushes what it clears to the side of the road.", correct: true },
+          { text: "It drives slowly along the streets of a city." },
+          { text: "It sweeps up leaves with brushes that spin." },
+          { text: "It sucks up dirt into a tank inside the truck." }
         ] },
       partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
         choices: [
-          { text: "\"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\"", correct: true },
-          { text: "\"Fire trucks and ambulances both use sirens and lights.\"" },
-          { text: "\"A fire truck carries long hoses, tall ladders and tanks of water.\"" },
-          { text: "\"However, the two trucks do different jobs.\"" }
+          { text: "\"Unlike a street sweeper, it pushes snow to the side of the road instead of picking it up.\"", correct: true },
+          { text: "\"Both clear things off the road so cars can drive safely.\"" },
+          { text: "\"A street sweeper has round brushes underneath that spin and sweep up dirt, leaves and trash.\"" },
+          { text: "\"However, the two trucks work in different ways.\"" }
         ] },
       clue: "A difference is true of one thing but not the other. Look for a contrast clue word.",
       hints: [
         "A difference is true of one thing but not the other. Look for a contrast clue word.",
-        "Read paragraphs 2 and 3, which tell the job of each truck.",
-        "Paragraph 1 says both trucks use sirens, so that choice is not a difference. For Part B, choose the sentence that is about the ambulance."
+        "Read paragraphs 2 and 3, which tell how each truck does its job.",
+        "Paragraph 1 says both trucks drive slowly, so that choice is not a difference. For Part B, choose a sentence that tells something only one of the trucks does, then check that it matches your Part A answer."
       ],
       how: [
-        "Paragraph 2 says a fire truck carries hoses, ladders and water for putting out fires.",
-        "Paragraph 3 says an ambulance carries a stretcher and, unlike a fire truck, things like bandages for people who are hurt.",
-        "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\"",
-        "Sirens are true of both trucks, and ladders and water are fire truck facts."
+        "Paragraph 2 says a street sweeper sweeps up dirt and leaves and sucks them into a tank.",
+        "Paragraph 3 says a snowplow, unlike a street sweeper, pushes snow to the side of the road instead of picking it up.",
+        "Part A: It pushes what it clears to the side of the road. Part B: \"Unlike a street sweeper, it pushes snow to the side of the road instead of picking it up.\"",
+        "Driving slowly is true of both trucks, and the brushes and the tank belong to the street sweeper."
       ],
-      why: "Part A: It is made to care for people who are sick or hurt. Part B: \"Unlike a fire truck, it is filled with things like bandages to help people who are hurt.\" Both trucks use sirens, and ladders and water tanks belong to the fire truck." },
+      misconception: "A common mix-up is choosing a fact about the other truck. Read the question again: it asks what the snowplow does.",
+      why: "Part A: It pushes what it clears to the side of the road. Part B: \"Unlike a street sweeper, it pushes snow to the side of the road instead of picking it up.\" Both trucks drive slowly, and the brushes and the tank belong to the street sweeper." },
     { id: "SK-TSCC-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C12"],
       stem: ["Darnell has two coats.", "His rain jacket is thin and waterproof, so rain rolls right off it.", "His puffy coat is thick and very warm, but it soaks up water when it gets wet.", "Both coats have hoods and zip up the front."],
@@ -2790,29 +2791,32 @@ PP.addLesson({
         "Paragraph 1 uses the clue word both to tell what frogs and toads share, including how they hatch.",
         "The answer is \"Both hatch as tadpoles.\"",
         "Each of the other choices is true of only one of the animals."
-      ] },
+      ],
+      misconception: "A common mix-up is choosing a true fact about only one animal. Alike means the passage says it about both." },
     "SK-TSCC-P2": {
       hints: [
         "Paragraph 1 tells how frogs and toads are alike. Look for the clue word that turns toward differences.",
         "Read the end of paragraph 1 and the start of paragraph 2.",
-        "\"Both are amphibians\" still tells how they are alike, so the switch has not happened yet. Find the first sentence that starts telling differences."
+        "\"Both lay eggs, and both hatch as tadpoles\" still tells how they are alike, so the switch has not happened yet. Find the first sentence that starts telling differences."
       ],
       how: [
         "Paragraph 1 tells likenesses with the clue word both.",
         "Paragraph 2 begins with However, a clue word that switches to differences.",
         "The answer is \"However, they are different in some ways.\" The sentence after it tells the first difference, but it has no switch word."
-      ] },
+      ],
+      misconception: "A common mix-up is choosing the first sentence that tells a difference. The switch is the sentence with the clue word that turns toward differences." },
     "SK-TSCC-P3": {
       hints: [
         "Sort each fact by asking: Is it true of the frog, the toad, or both?",
-        "Find each fact in paragraphs 1, 2 and 4. Look at the clue word near it.",
+        "Find each fact in paragraphs 1 and 2. Look at the clue word near it.",
         "Laying eggs is in paragraph 1 with the clue word both, so it goes in the middle. Sort the other facts the same way."
       ],
       how: [
-        "Paragraph 1 says both lay eggs, so laying eggs is Both.",
+        "Paragraph 1 says both lay eggs, and both hatch as tadpoles, so those two facts are Both.",
         "Paragraph 2 says a frog has smooth, wet skin, and unlike a frog, a toad has dry, bumpy skin.",
-        "Paragraph 4 says most frogs stay close to water, while many toads live far from ponds. Smooth skin and staying close to water are Frog only, and dry, bumpy skin is Toad only."
-      ] },
+        "So smooth, wet skin is Frog only, and dry, bumpy skin is Toad only."
+      ],
+      misconception: "A common mix-up is putting a fact under one animal when the passage says both. Look for the clue word both first." },
     "SK-TSCC-P4": {
       hints: [
         "The word but has more than one job. Read the words on each side of it.",
@@ -2827,13 +2831,13 @@ PP.addLesson({
       misconception: "A common mix-up is thinking but always means a try failed. In compare and contrast, but shows a difference." },
     "SK-TSCC-P5": {
       hints: [
-        "Some clue words show a difference. Others tell why or tell order. Read the sentence with each choice.",
-        "Ask whether the two parts of the sentence tell the same thing about frogs and toads, or something different.",
+        "Read the sentence with each choice. Ask what the two parts of the sentence tell about frogs and toads.",
+        "Find where the passage tells where frogs and toads live. Does it say they live in the same kind of place?",
         "Because would tell why something happens, and nothing in this sentence gives a reason. Try each choice that is left at the start of the sentence."
       ],
       how: [
         "Paragraph 4 says most frogs stay close to water, while many toads live far from ponds. That is a difference.",
-        "A difference needs a contrast clue word. Finally tells order, and because tells why.",
+        "A difference needs a contrast clue word. Like would say the animals are the same, and because tells why.",
         "The answer is Unlike: \"Unlike most frogs, many toads live far from ponds.\""
       ],
       misconception: "A common mix-up is choosing any clue word that sounds smooth. Pick the one that does the job: here, showing a difference." },

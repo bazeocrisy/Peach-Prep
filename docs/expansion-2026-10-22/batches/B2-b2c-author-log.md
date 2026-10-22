@@ -34,7 +34,7 @@ All are original and never used by `test` or `testB`.
 | TS-CE | p6 | Why Did the Lake Turn Green? | 109 / 3.6 | nature / community | S02 only |
 | TS-CC | p3 | School Then and Now (1900 and today) | 157 / 4.4 | school / history | C06, C07, C08, C10, C13 |
 | TS-CC | p4 | Canoe or Kayak? (Chattahoochee River) | 161 / 3.9 | sports / recreation, nature | C11, C12, C13 |
-| TS-CC | p5 | Two Trucks That Help (fire truck and ambulance) | 106 / 4.4 | community | S02 only |
+| TS-CC | p5 | Two Trucks That Clear the Road (street sweeper and snowplow; replaced the fire truck text after the B2 review) | 108 / 4.1 | community | S02 only |
 
 Short new stems: TS-CE C04 (bathroom), C05 (sun-print how-to), C14 (bike tires), C15 (wet hallway), S01 (library pipe), S03 (bird feeder). TS-CC C05 (scooter and skateboard), C09 (student draft), C11 (student chart), C14 (hail and snow facts), C15 (path or bus), S01 (peaches and plums), S03 (two coats).
 
@@ -70,7 +70,7 @@ Short new stems: TS-CE C04 (bathroom), C05 (sun-print how-to), C14 (bike tires),
 | 1 | SK-TSCE-P4 (ref) | 1 | E | construct | dropdown | 2 | 2 | p1 | The only item that builds a science chain |
 | 2 | SK-TSCE-P5 (ref) | 1 | B | identify | mc | 1 | 2 | p1 | One effect, stated in paragraph 4 |
 | 3 | SK-TSCE-C03 | 1 | F/B | explain (why a section is there) | mc | 1 | 3 | p1 | The job of the goosebumps section. Distractor: two effects of the same cause must cause each other |
-| 4 | SK-TSCE-C04 | 1 | D | explain (judge a claim) | mc | 1 | 3 | stem (home) | Judges a sibling's claim that "the first part is the cause" |
+| 4 | SK-TSCE-C04 | 1 | D | explain (judge a claim) | mc | 1 | 2 | stem (home) | Judges a sibling's claim that "the first part is the cause" |
 | 5 | SK-TSCE-C05 | 1 | F/A | transfer (technical procedure) | ms | 2 | 3 | stem (sun print) | Which mistakes would change the result. Only changes to where the light reaches matter |
 | 6 | SK-TSCE-C06 | 2 | A | use evidence | ebsr | 2 | 2 | p4 | Why Morgan decided. Distractors that come later (the patent) |
 | 7 | SK-TSCE-C07 | 2 | C/D | edit | dropdown | 1 | 2 | p4 (stem holds the student's sentence) | Fixes a backward "so" with "because" |
@@ -86,7 +86,7 @@ Short new stems: TS-CE C04 (bathroom), C05 (sun-print how-to), C14 (bike tires),
 **Tallies**
 - **Points:** 20 scored, plus the cr item.
 - **Formats:** seven. mc 6 (the limit), ms 3, dropdown 2, ebsr 1, hottext 1, match 1, cr 1. Eight items use technology-enhanced formats.
-- **DOK:** DOK 3 on nine items (3, 4, 5, 8, 9, 11, 12, 13, 14), DOK 2 on six, DOK 1 on none.
+- **DOK:** DOK 3 on eight items (3, 5, 8, 9, 11, 12, 13, 14), DOK 2 on seven, DOK 1 on none. Item 4 was relabelled DOK 2 after the B2 review.
 - **Tasks:**
   - identify: 2, 8, 9
   - explain: 3, 4
@@ -177,10 +177,10 @@ Short new stems: TS-CE C04 (bathroom), C05 (sun-print how-to), C14 (bike tires),
 | Id | `like` | Comp | Format | DOK | Text |
 |---|---|---|---|---|---|
 | SK-TSCE-S01 | C04, C15 | D | mc | 3 | stem (library pipe), judge a claim |
-| SK-TSCE-S02 | C06, C10 | A (with evidence) | ebsr | 2 | p6 (green lake) |
+| SK-TSCE-S02 | C06 (C10 dropped after the B2 review) | A (with evidence) | ebsr | 2 | p6 (green lake) |
 | SK-TSCE-S03 | P4, C12 | E (middle link) | mc | 3 | stem (bird feeder) |
 | SK-TSCC-S01 | C05, C06, C11 | E | ms | 2 | stem (peaches and plums) |
-| SK-TSCC-S02 | C07, C02 | B (with evidence) | ebsr | 2 | p5 (two trucks) |
+| SK-TSCC-S02 | C07, C02 | B (with evidence) | ebsr | 2 | p5 (street sweeper and snowplow) |
 | SK-TSCC-S03 | C12 | F (choose for a purpose) | mc | 3 | stem (two coats) |
 
 Nine core items in each lesson have no extra question, so check-content gives its warning. The bank stays at three per lesson, as the lead decided.
@@ -259,3 +259,65 @@ Together is now TS-CE P1, P2, P3 and P6, and TS-CC P1 to P4: four items each.
 10. **TS-CE p4:** check that the Garrett Morgan facts are fair for grade 3.
 
 I have not reviewed any of this myself, and I ran no git commands.
+
+## 9. Fixes after B2 review
+
+The reviews are B2-review-TS-1.md (R1) and B2-review-TS-2.md (R2). Only the TS-CE and TS-CC blocks were edited. Every ladder below was re-read as a whole (clue plus hints 1 to 3) after the change.
+
+### TS-CE
+
+| Item | Finding | Fix made |
+|---|---|---|
+| P1 (Together) | R1 MUST-7 (lead): the brain link that P4 asks for | The `why`, hint 2 and how no longer mention the brain. They say only that, as a result, the muscles tighten and relax very fast. Hint 2 is now the "as a result" strategy |
+| P2 (Together) | R2 NOTE-4: no misconception line | Added a misconception line |
+| P5 (ref) | R2 SHOULD-6: hint 2 led to the only sentence about a furry animal. R1 NOTE-4: no `std` | Hint 2 is now "Find the cause in paragraph 4 first. Then ask what that cause makes happen for an animal with fur." Added `std: ["3.T.SS.1.a", "3.T.T.2.b"]` |
+| C03 | R1 MUST-8, R2 MUST-2: hint 2 pointed to 4:1, the key's basis | Hint 2 is now "Say in a few words what paragraph 4 is about, then what paragraphs 2 and 3 are about. How does paragraph 4 fit with them?" |
+| C04 | R2 MUST-1: hint 1 settled the claim. R1 NOTE-6: DOK label generous | Clue and hint 1 are now a neutral strategy ("…find the clue word. Then test the claim against what really happens."). Hint 2 asks which part comes before and after the clue word. Hint 3 now rules out the "no cause in this sentence" choice instead of the rule-based "She is right" choice. Relabelled DOK 2 |
+| C06 | R1 MUST-9, R2 MUST-3: hint 2 named a place with one Part B choice and pointed to "So". Hint 3 described the key | Hint 2: "Find where the article tells what Morgan decided. Then read what happened before it and after it, in paragraphs 1 to 4." That range holds all four Part B choices. Hint 3 keeps the patent rule-out, then: "For Part B, check that your sentence shows your Part A answer." |
+| C07 | R1 MUST-10, R2 MUST-4: the stem's own word "so" was an option, so hint 3 left only the key | Options are now "so that / because / until". After hint 3 rules out until, two live options remain. The how, `why` and misconception were rewritten for "so that" (a purpose, not a cause). R2 suggested "as a result", but it reads badly in the one-sentence frame, so I used "so that" instead |
+| C08 | R2 NOTE-2: "in the article came first" was not literally true | Prompt: "Which of these events came first and led to all of the others?" |
+| C09 | R2 SHOULD-6: hint 1's "two of these at once" plus hint 2 pointed at the key | Dropped that sentence from the clue and hint 1 |
+| C13 | R1 NOTE-7: hint 1 was the same as TS-PS C13's | Clue and hint 1: "Test each sentence twice: once on the signal article and once on the pine forest article. Choose both articles only if it passes both tests." |
+| S01 | R2 MUST-1: hint 1 settled the claim | Same neutral clue and hint 1 as C04 |
+| S02 | R1 MUST-10, R2 NOTE-5: hint 3 left only the key. No misconception line. R2 NOTE-5: `like` C10 was loose | Hint 3 Part B is now "check that your sentence shows your Part A answer." Added a misconception line. `like` is now C06 only |
+
+### TS-CC
+
+| Item | Finding | Fix made |
+|---|---|---|
+| Teach point 1 | R2 SHOULD-1: it stated C13's key and gave only one pattern | Now: "Some authors tell all about one thing and then all about the other. Others go topic by topic, telling about both things for each topic." The alike-first sentence is gone |
+| Watch Me 1 | R1 SHOULD-14: kindergarten-like (cats and dogs). Nothing modelled choosing for a purpose | Replaced with Mia choosing a backpack for a long hike. It models crossing out shared facts (both) and using the difference that matters (however, while). It does not use boats, coats, paths or buses. There are still three Watch Me examples |
+| P1 (Together) | R2 NOTE-4 | Added a misconception line |
+| P2 (Together) | R1 MUST-6 (lead): hint 3 quoted "Both are amphibians", a P6 key. R2 NOTE-4 | Hint 3 now rules out "Both lay eggs, and both hatch as tadpoles" (a P2 target, not a P6 choice). Added a misconception line |
+| P3 (Together) | My own re-check: the row "most stay close to water", added in the earlier fix, set up P5's habitat difference (P5 is set 1, item 1) | The row is now "hatches as a tadpole" (Both). The hints and how now name paragraphs 1 and 2 only. Added a misconception line |
+| P5 (ref) | R1 SHOULD-11, R2 NOTE-7: "Finally" was not grammatical, so only one option was live. Hint 1 named each option's job. The clue named the answer's job. R1 NOTE-4: no `std` | Options are now "Unlike / Because / Like". The clue and hint 1 are now "Read the sentence with each choice. Ask what the two parts of the sentence tell about frogs and toads." Hint 2 sends the child to where the passage tells where the animals live. The `why` and how were updated. Added `std` |
+| C04 | R1 SHOULD-12, R2 MUST-2: hint 2 pointed to the key's sentences | Hint 2: "Think about what each paragraph does. Then ask what a reader can do after reading all of them." |
+| C09 | R2 MUST-4: the stem's word "Also," was an option, and slot 1 was trivial | The draft now opens sentence 2 with Both, sentence 3 with "Also," (correct) and sentence 4 with "In addition," (wrong). Slot 1 is now a real choice among three clue-word sentences. Slot 2 is "Also, / However, / For example,", so the stem's wrong word is not offered. The how, `why` and misconception were updated |
+| C10 | R2 MUST-2: hint 2 asked the key question | Hint 2: "Reread paragraph 4. List what it says about slates and what it says about paper." |
+| p5 and S02 | R1 MUST-5, R2 SHOULD-3, lead decision: the fire truck text overlapped TS-DESC p3 and 3.T.T.2.a | p5 is now "Two Trucks That Clear the Road" (street sweeper and snowplow). S02 was rewritten on it: Part A "How is a snowplow different from a street sweeper?" Hint 3 ends "choose a sentence that tells something only one of the trucks does, then check that it matches your Part A answer," which leaves two Part B choices. Added a misconception line. Before choosing the topic, I grepped all lessons for snowplow, sweeper, recycling (used by 3.T.T.2.c) and bus (used by my own C15) |
+
+### Items that need a blind re-solve
+
+- **TS-CE:**
+  - Changed choices or prompt: C07, C08.
+  - Help only: P1, P2, P5, C03, C04, C06, C09, C13, S01, S02.
+- **TS-CC:**
+  - Changed choices or text: P5, C09, S02 (with its new passage p5).
+  - Changed rows: Together P3.
+  - Help only: P1, P2, C04, C10.
+  - Teaching: teach point 1, Watch Me 1.
+
+### Findings not addressed, and why
+
+- **R1 MUST-3 (Morgan and 3.T.T.2.b C05).** The lead decided that Morgan stays in TS-CE and that the 3.T.T.2.b author changes their item.
+- **R1 NOTE-9 (bike contexts in TS-SEQ C14 and TS-CE C14).** This is a NOTE, and the lead's MUST-4 fix sits with the TS-SEQ author. I left TS-CE C14 unchanged.
+- **R1 NOTE-6 (TS-CE C12 DOK).** I kept DOK 3, because the second key is two links from the cause (fires stop, then thick brush, then shade, then pines struggle).
+- **R1 NOTE-12 (no map or caption).** This is outside these two lessons.
+- **Similar coverage.** TS-CE now has ten core items with no similar item, up from nine, because C10 was dropped from S02's `like`. TS-CC still has nine.
+
+### Gates after these fixes
+
+- `check-content.js --all`: PASS, 0 failures. The only warnings in my lessons are the similar-coverage notices.
+- `check-writing.js` and `check-instructional-copy.js`: pass.
+- `readability.py`: TS-CE p4 4.3, p5 4.0, p6 3.6. TS-CC p3 4.4, p4 3.9, p5 4.1.
+- N-gram scan: only shared lesson phrasing remains. The one match from teach point 1 ("all about one thing and then") is between my own teach point and C08's distractor, in the same lesson.

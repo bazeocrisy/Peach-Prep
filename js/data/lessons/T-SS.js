@@ -131,7 +131,7 @@ PP.addLesson({
         ["## Bookmobile or Library Building?"],
         ["Both the bus and the library building lend books for free.", "Both use the same library card, too.", "However, the building has many more books than the bus.", "The building stays in one place, while the bookmobile comes to you."],
         ["## What Changed"],
-        ["Since the bookmobile started coming, more Pine County families borrow books.", "Because children can get new books every week, many of them read all summer.", "As a result, the county plans to buy a second bookmobile."],
+        ["Since the bookmobile started coming, more families borrow books.", "Because kids can get new books each week, many of them read all summer.", "As a result, the county wants to buy a second bus."],
         ["## Did You Know?"],
         ["Box: Long ago, the first bookmobiles were wagons pulled by horses."]
       ],
@@ -577,7 +577,6 @@ PP.addLesson({
         "The answer is \"a map with a key.\""
       ],
       why: "The answer is \"a map with a key.\" A map shows where the elephant barn and the gate are, so readers can see the path between them. A caption, a fun-fact box and headings cannot show a path." }
-  ]
   ],
   /* Hints and Show me how for items kept in practice: refs P5-P7 (core set 1) and Together P1-P4. */
   addons: {

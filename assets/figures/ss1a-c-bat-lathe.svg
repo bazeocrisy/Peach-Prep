@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 272" role="img" aria-labelledby="t">
+  <title id="t">Drawing of a machine holding a piece of wood, with three labels: billet, blade and wood shavings</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#123E9C"/></marker>
+  </defs>
+  <!-- machine ends holding the wood -->
+  <rect x="8" y="70" width="34" height="80" rx="4" fill="#D6D6D6" stroke="#111" stroke-width="3"/>
+  <rect x="278" y="70" width="34" height="80" rx="4" fill="#D6D6D6" stroke="#111" stroke-width="3"/>
+  <path d="M42 110 L56 104 V116 Z" fill="#555" stroke="#111" stroke-width="2"/>
+  <path d="M278 110 L264 104 V116 Z" fill="#555" stroke="#111" stroke-width="2"/>
+  <!-- the billet: a long round piece of wood, partly shaped -->
+  <path d="M56 92 H150 Q190 96 264 92 V128 Q190 124 150 128 H56 Z" fill="#E8C99B" stroke="#4A2E16" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#B58B5A" stroke-width="1.5" fill="none"><path d="M70 100 H140"/><path d="M80 120 H150"/><path d="M170 104 H250"/></g>
+  <!-- spin arrow -->
+  <path d="M96 84 Q110 62 128 80" fill="none" stroke="#123E9C" stroke-width="3.5" marker-end="url(#a)"/>
+  <!-- blade under the wood -->
+  <path d="M150 196 L176 132 L198 196 Z" fill="#FFFFFF" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="140" y="196" width="68" height="16" fill="#555" stroke="#111" stroke-width="2"/>
+  <!-- wood shavings falling -->
+  <g fill="none" stroke="#B58B5A" stroke-width="3" stroke-linecap="round">
+    <path d="M218 150 q8 6 0 12 q-8 6 0 12"/><path d="M236 170 q8 6 0 12 q-8 6 0 12"/><path d="M220 204 q8 6 0 12"/>
+  </g>
+  <path d="M0 236 H320" stroke="#4A3A22" stroke-width="3"/>
+  <!-- labels -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="176" y="40">billet</text><path d="M200 46 L200 90" stroke="#111" stroke-width="2"/>
+    <text x="40" y="200">blade</text><path d="M98 194 L160 176" stroke="#111" stroke-width="2"/>
+    <text x="150" y="264" font-size="21">wood shavings</text><path d="M226 246 L228 220" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>
