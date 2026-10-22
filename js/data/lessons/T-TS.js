@@ -1107,7 +1107,7 @@ PP.addLesson({
         misconception: "A common mix-up is putting because in front of the effect. The words after because must tell what happened first.",
         why: "Many answers can be right. A good sentence tells an effect from the article first, then because, then a cause the article gives. For example: \"A quick, low fire cannot easily hurt a young longleaf pine because its long needles wrap around the bud at its tip.\"" },
       { id: "SK-TSCE-C12", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p5"], pick: 2,
-        prompt: "Which TWO things happened because people began putting out every forest fire they could?",
+        prompt: "Which TWO things happened in the forest once fires no longer burned through it?",
         choices: [
           { text: "Bushes and other trees grew thick under the pines.", correct: true },
           { text: "Young longleaf pines had a hard time growing.", correct: true },
@@ -1118,17 +1118,17 @@ PP.addLesson({
         clue: "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
         hints: [
           "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
-          "Draw the chain as boxes with arrows. Start the first box with people putting out fires, and fill in the boxes that come after it. Choose two.",
-          "Lightning started fires long before people put them out, so lightning is not an effect here. Check each choice that is left: is it something that happened without fires, or with them?"
+          "Draw the chain as boxes with arrows. Start the first box with the fires stopping, and fill in the boxes that come after it. Choose two.",
+          "Lightning started fires, so lightning cannot be an effect of fires stopping. Check each choice that is left: is it something that happened without fires, or with them?"
         ],
         how: [
-          "Paragraph 4 says people began putting out every forest fire they could.",
-          "As a result, bushes and other trees grew thick under the pines. That is the first effect.",
+          "In paragraph 4, the fires stop burning through the forest.",
+          "With no fires, bushes and other trees grew thick under the pines. That is the first effect.",
           "Their shade blocked the sunlight, so young longleaf pines had a hard time growing. That is the next effect in the chain.",
-          "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" Sunlight on the floor and tall young pines happened when there were fires, and lightning came first."
+          "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" Sunlight on the floor and tall young pines happened when there were fires, and lightning starts fires."
         ],
         misconception: "A common mix-up is stopping after the first effect. In a chain, the next effect also happened because of the first cause.",
-        why: "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" With no fires, bushes and trees grew thick, and their shade kept the young pines from growing. Sunlight on the floor and tall pines came from the fires, and lightning started fires long before." },
+        why: "The answers are \"Bushes and other trees grew thick under the pines.\" and \"Young longleaf pines had a hard time growing.\" With no fires, bushes and trees grew thick, and their shade kept the young pines from growing. Sunlight on the floor and tall pines came from the fires, and lightning starts fires; it is not caused by fires stopping." },
       /* Compares the set 2 and set 3 texts, so it carries both passages. */
       { id: "SK-TSCE-C13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p4", "p5"],
         prompt: "Think about \"A Signal That Saved Lives\" and \"Fire in the Pine Forest.\" Is each sentence true for only one article or for both? Match each sentence.",
@@ -2282,7 +2282,7 @@ PP.addLesson({
       choices: [
         { text: "Both hatch as tadpoles.", correct: true },
         { text: "Both have dry, bumpy skin." },
-        { text: "Both have long back legs." },
+        { text: "Both have smooth, wet skin." },
         { text: "Both live far from ponds." }
       ],
       clue: "Look for the clue word that tells how two things are alike. Then check each choice against the passage.",
@@ -2300,13 +2300,13 @@ PP.addLesson({
         { text: "has smooth, wet skin", answer: 0 },
         { text: "lays eggs", answer: 1 },
         { text: "has dry, bumpy skin", answer: 2 },
-        { text: "has long back legs for big jumps", answer: 0 }
+        { text: "most stay close to water", answer: 0 }
       ],
       clue: "Use the clue words. Both and alike point to the middle column. Unlike and but point to a difference.",
-      why: "Smooth, wet skin and long back legs for big jumps are frog facts. Dry, bumpy skin is a toad fact. Laying eggs is true of both animals." },
+      why: "Smooth, wet skin and staying close to water are frog facts. Dry, bumpy skin is a toad fact. Laying eggs is true of both animals." },
     { id: "SK-TSCC-P4", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Read the sentence from paragraph 3 in the box. What does the word \"but\" show here?",
-      stem: ["Most frogs have long back legs for big jumps, but toads have shorter legs."],
+      prompt: "The sentence in the box tells about paragraph 2. What does the word \"but\" show here?",
+      stem: ["A frog's skin is smooth and wet, but a toad's skin is dry and bumpy."],
       choices: [
         { text: "how frogs and toads are different", correct: true },
         { text: "a try that did not work out" },
@@ -2314,7 +2314,7 @@ PP.addLesson({
         { text: "a way frogs and toads are alike" }
       ],
       clue: "The word but has more than one job. Read the words on each side of it. Are they about two animals, or about a plan that failed?",
-      why: "The answer is \"how frogs and toads are different.\" The sentence tells about frogs' legs, then but, then toads' legs. In compare and contrast, but shows a difference. In problem and solution, but shows a try that failed." },
+      why: "The answer is \"how frogs and toads are different.\" The sentence tells about a frog's skin, then but, then a toad's skin. In compare and contrast, but shows a difference. In problem and solution, but shows a try that failed." },
     { id: "SK-TSCC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
       prompt: "Choose the clue word that best completes the sentence.",
       text: "{0} most frogs, many toads live far from ponds.",
@@ -2741,7 +2741,7 @@ PP.addLesson({
       how: [
         "Paragraph 1 uses the clue word both to tell what frogs and toads share, including how they hatch.",
         "The answer is \"Both hatch as tadpoles.\"",
-        "Dry, bumpy skin is only toads, long back legs are most frogs, and living far from ponds is many toads."
+        "Each of the other choices is true of only one of the animals."
       ] },
     "SK-TSCC-P2": {
       hints: [
@@ -2757,13 +2757,13 @@ PP.addLesson({
     "SK-TSCC-P3": {
       hints: [
         "Sort each fact by asking: Is it true of the frog, the toad, or both?",
-        "Find each fact in paragraphs 1 to 3. Look at the clue word near it.",
+        "Find each fact in paragraphs 1, 2 and 4. Look at the clue word near it.",
         "Laying eggs is in paragraph 1 with the clue word both, so it goes in the middle. Sort the other facts the same way."
       ],
       how: [
         "Paragraph 1 says both lay eggs, so laying eggs is Both.",
         "Paragraph 2 says a frog has smooth, wet skin, and unlike a frog, a toad has dry, bumpy skin.",
-        "Paragraph 3 says most frogs have long back legs for big jumps. Smooth skin and long legs are Frog only, and dry, bumpy skin is Toad only."
+        "Paragraph 4 says most frogs stay close to water, while many toads live far from ponds. Smooth skin and staying close to water are Frog only, and dry, bumpy skin is Toad only."
       ] },
     "SK-TSCC-P4": {
       hints: [
@@ -2772,8 +2772,8 @@ PP.addLesson({
         "Nothing in this sentence tells a plan or a try, so it does not show a try that failed. Check each choice that is left against the two parts of the sentence."
       ],
       how: [
-        "Before but, the sentence tells about frogs' legs. After but, it tells about toads' legs.",
-        "Long legs and shorter legs are not the same, so but shows a difference.",
+        "Before but, the sentence tells about a frog's skin. After but, it tells about a toad's skin.",
+        "Smooth, wet skin and dry, bumpy skin are not the same, so but shows a difference.",
         "The answer is \"how frogs and toads are different.\" It is not a way they are alike, and it does not tell order or a failed try."
       ],
       misconception: "A common mix-up is thinking but always means a try failed. In compare and contrast, but shows a difference." },

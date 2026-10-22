@@ -511,7 +511,7 @@ PP.addLesson({
      core items it really practises, so some core items have no extra question. */
   similar: [
     { id: "SK-SS1a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-      like: ["SK-SS1a-C04"],
+      like: ["SK-SS1a-C05"],
       stem: ["An article called \"Growing Tomatoes\" has three sections, in this order:", "Planting the Seeds", "Watering and Weeding", "Picking Time"],
       prompt: "Why did the author put the sections in this order?",
       choices: [

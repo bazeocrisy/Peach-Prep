@@ -432,7 +432,8 @@ with sync_playwright() as p:
     close_page(q)
     # a lesson without core behaves exactly as before
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
-    L0 = "3.T.C.1.a"
+    # the first lesson without core (content is being migrated in batches, so it is found, not named)
+    L0 = q.evaluate("Object.keys(PP.lessons).find(k=>!PP.lessons[k].core&&PP.byId['SK:'+k+':y']&&PP.byId['SK:'+k+':t'])")
     lg = q.evaluate("""(k=>{const P=PP.lessons[k].practice,h=P.length>=4?Math.ceil(P.length/2):P.length;return {core:!!PP.lessons[k].core,
         p:PP.byId['SK:'+k+':p'].items.map(i=>i.id), y:PP.byId['SK:'+k+':y'].items.map(i=>i.id), wantP:P.slice(0,h).map(i=>i.id), wantY:P.slice(h).map(i=>i.id),
         own:!!PP.byId['SK:'+k+':y'].own, next:PP.byId['SK:'+k+':y'].next.id, y2:!!PP.byId['SK:'+k+':y2']}})(%s)""" % json.dumps(L0))
@@ -591,7 +592,7 @@ with sync_playwright() as p:
           and rs["rows"] >= 1 and rs["rowsHidden"] and rs["again"] == "Take the skill check again"
           and rs["note"] == "The next skill check uses form B, with different questions." and "Watch Me again" in rs["rv"] and "Practice on my own" in rs["rv"]
           and "small sample" in rs["revisit"], (rs, rp))
-    one = "3.T.C.1.a"
+    one = q.evaluate("Object.keys(PP.lessons).find(k=>!PP.lessons[k].core&&PP.byId['SK:'+k+':t']&&!PP.byId['SK:'+k+':tB']&&PP.byId['SK:'+k+':p'])")
     q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % one); q.wait_for_timeout(80)
     for i in range(q.evaluate("PP_PLAYER.state().total")):
         q.evaluate(WRONG); q.click("#q-next"); q.wait_for_timeout(20)

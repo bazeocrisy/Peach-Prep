@@ -192,7 +192,7 @@ PP.addLesson({
         clue: "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
         hints: [
           "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
-          "Look closely at the words after \"used to sing\" in that sentence. Then ask who is listening to the song now.",
+          "Look closely at the words after \"used to sing\" in that sentence. Then ask who is listening now.",
           "Nothing in the story says Abuela is sad or wants to leave, so the choice about being homesick has no support. Test each choice that is left against paragraph 4."
         ],
         how: [
@@ -790,7 +790,7 @@ PP.addLesson({
   teach: {
     big: "Most stories have four parts: who it is about, where and when it happens, the problem, and how the problem gets solved.",
     points: [
-      "Characters are the people or animals in the story. The main character is the one the story is mostly about. Other characters have jobs in the plot, too: one might cause the trouble, and a helper might make the solution possible.",
+      "Characters are the people or animals in the story. The main character is the one the story is mostly about. Other characters have jobs in the plot, too: one might cause the trouble, and some characters help fix it.",
       "The setting is where and when the story happens, like a farm on a rainy morning.",
       "The problem is what goes wrong or what a character wants but cannot get yet. The solution is how the problem is fixed by the end. Near the end, look for proof that the fix worked, and check that the whole problem is fixed, not just part of it.",
       "Clue words help you follow a story. One day often starts the action. But often shows the problem. Then and so show what the character tries. Finally and in the end lead you to the solution. To sum up any story, say: Somebody (the main character) Wanted something, But (the problem), So (what the character does), Then (how it ends).",
@@ -822,14 +822,14 @@ PP.addLesson({
       answer: "Maya wanted to win the spelling bee, but she kept missing long words, so she practiced every night with her grandpa. Then she spelled every word right and won."
     },
     {
-      show: ["The snow was so deep on the mountain road that the bus could not move. Inside, Mr. Diaz handed out crackers while the children sang songs. Two hours later, a snowplow cleared the road, and the bus rolled on to the ski lodge."],
-      ask: "What is the setting of this story?",
+      show: ["Every morning, the sprinkler soaked the Pham family's newspaper on the front walk. Dad moved the sprinkler to the back of the yard. The next morning, Mai picked up the paper, and it was dry. By the end of the week, every paper had been dry, and Dad read the news at breakfast again."],
+      ask: "How do you know the problem is fully fixed?",
       steps: [
-        "The setting tells where. Look for place words: the mountain road, inside the bus.",
-        "The setting also tells when. Look for clues about time or weather: deep snow, so it is winter.",
-        "Put the where and the when together."
+        "Say the problem: the newspaper gets soaked every morning.",
+        "Find the first sign that the fix works: the next morning, the paper is dry.",
+        "Ask whether the whole problem is fixed. One dry morning could be luck. A dry paper every day for a week, and Dad reading at breakfast again, shows it is really fixed."
       ],
-      answer: "A bus on a snowy mountain road in winter."
+      answer: "The paper stays dry every morning for a whole week, and Dad reads the news at breakfast again. That proves the fix worked, not just once."
     },
     {
       show: ["The Ruiz family set up their tent at a lake deep in the woods. The nearest store was an hour away. At supper, Ben opened the cooler and groaned. He had forgotten the hot dog buns! So Ben looked in the food box and found a pack of tortillas. The family wrapped their hot dogs in tortillas, and everyone said it was the best supper of the trip."],
@@ -862,7 +862,7 @@ PP.addLesson({
         ["Omar dried it with a towel and set it on top of his shoes so he would not forget it.", "On Friday morning, he handed it to Ms. Park at the library desk right on time."]
       ] },
     /* Expansion 2026-10-22 (batch B1, author b1a): p3 is used only by core set 2 and one set 3
-       compare item (C14); p4 only by core set 3. Never used by test. NEEDS INDEPENDENT REVIEW. */
+       compare item (C14); p4 (\"The Back Row\", reworked after B1 review) only by core set 3. Never used by test. NEEDS INDEPENDENT REVIEW. */
     { id: "p3", title: "The Ice Cube Challenge", genre: "Literary text",
       paragraphs: [
         ["The air conditioner at Pine Street School broke on the hottest day of August, and Room 6 felt like an oven."],
@@ -873,15 +873,14 @@ PP.addLesson({
         ["At the lunch bell, the other teams had cups of water.", "Ana unrolled the sock.", "Inside sat a small ice cube, still cold and shiny."],
         ["\"You were right about the sock,\" Bryce said.", "Ms. Banks gave their team a gold star."]
       ] },
-    { id: "p4", title: "The Hidden Peach Stand", genre: "Literary text",
+    { id: "p4", title: "The Back Row", genre: "Literary text",
       paragraphs: [
-        ["Grandpa Joe's peach stand sat at the end of a long dirt road outside Fort Valley, Georgia.", "Tall pine trees hid it from the highway."],
-        ["One July morning, the stand was piled high with ripe peaches.", "But by noon, not one car had come down the road.", "\"If we don't sell these soon, they'll get soft and spoil,\" Grandpa sighed."],
-        ["Malia and her cousin Dre wanted to help.", "First, Dre painted PEACHES in giant red letters on a sign for the stand.", "Still, no cars came."],
-        ["Malia walked out to the highway and looked back.", "All she could see were pine trees.", "\"Nobody can see our sign from here,\" she called."],
-        ["So the cousins painted big arrows on three old boards.", "They pushed the boards into the ground beside the highway, right where the dirt road began."],
-        ["Within an hour, a blue truck turned onto the dirt road.", "Then came a van, and then two more cars."],
-        ["By sunset, every basket was empty.", "Grandpa Joe gave each cousin the last two peaches.", "\"Best helpers in Georgia,\" he said."]
+        ["The third graders at Oak Ridge School were putting on a play.", "They would perform it in the old gym, where two giant fans roared at the back to keep the room cool."],
+        ["At the last practice, the first graders watched from the back rows.", "Halfway through the first scene, a girl in the last row raised her hand.", "\"We can't hear anything!\" she called."],
+        ["The play was that same night.", "So the actors shouted their lines until their throats hurt.", "The first graders still shook their heads."],
+        ["Malia climbed down from the stage and sat in the last row.", "From there, the actors' voices were lost under the roar of the fans.", "\"It's not our voices,\" she said. \"It's the fans.\""],
+        ["Mr. Oduya, the custodian, could not turn the fans off, because the gym would get too hot.", "Instead, he helped the class carry every row of chairs to the front half of the gym, far from the fans."],
+        ["That night, the gym was packed.", "Even the families in the very back row laughed at every joke."]
       ] }
   ],
   practice: [
@@ -940,18 +939,18 @@ PP.addLesson({
         "Every tomato is still on its vine."
       ],
       clue: "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
-      why: "The order is: Jada finds half the tomatoes gone, Grandma Bea says rabbits come under the gate, Jada puts wire along the gate, and then every tomato is still on its vine. That is problem, cause, solution, result." },
+      why: "The order is: Jada finds half the tomatoes gone, Grandma Bea says rabbits come under the gate, Jada puts wire along the gate, and then every tomato is still on its vine." },
     { id: "SK-TT1b-P5", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each detail from the story to the story part it shows.",
       cols: ["Character", "Setting", "Problem", "Solution"],
       rows: [
-        { text: "Grandma Bea", answer: 0 },
-        { text: "behind a house in Macon in summer", answer: 1 },
-        { text: "Rabbits squeeze under the gate at night.", answer: 2 },
-        { text: "wire bent along the bottom of the gate", answer: 3 }
+        { text: "Jada", answer: 0 },
+        { text: "summer mornings in Macon", answer: 1 },
+        { text: "Half of the little tomatoes are gone.", answer: 2 },
+        { text: "Grandma Bea", answer: 0 }
       ],
       clue: "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
-      why: "Grandma Bea is a character. Behind a house in Macon in summer is the setting. Rabbits squeezing under the gate is the problem. The wire along the gate is the solution." }
+      why: "Jada and Grandma Bea are both characters. Summer mornings in Macon tell where and when, so they are the setting. Half of the tomatoes being gone is what goes wrong, so it is the problem. None of these details is the solution." }
   ],
   /* ---------- Expansion 2026-10-22, batch B1 (author b1a). Pattern: 3.T.T.1.c (B0 reference). ----------
      core: fifteen independent items in three sets of five. { ref } reuses the Try items P7, P4 and P5;
@@ -965,28 +964,28 @@ PP.addLesson({
       { ref: "SK-TT1b-P4" },
       { ref: "SK-TT1b-P5" },
       { id: "SK-TT1b-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
-        stem: ["Every Friday, Mr. Lee parked his taco truck outside the community pool. One hot Friday, his helper was home sick. The line grew longer and longer, and some hungry swimmers gave up and left.", "Then Amir, a boy from the swim team, asked if he could help. He wrote down each order on a notepad while Mr. Lee cooked. By one o'clock, every person in line had lunch."],
+        stem: ["On Saturday morning, the library's story hour was about to begin, but Ms. Lin, the reader, had lost her voice. The children on the rug grew restless, and a few got up to leave.", "Then Amir, a fourth grader, offered to read the book aloud while Ms. Lin turned the pages and showed the pictures. Soon every child on the rug was listening."],
         prompt: "Read the story. What part does Amir play in the plot?",
         choices: [
           { text: "He is a helper whose actions make the solution possible.", correct: true },
-          { text: "He is the main character, and the problem is his own." },
-          { text: "He causes the problem by making the line grow so long." },
-          { text: "He is part of the setting, like the community pool." }
+          { text: "He is the main character, because he is the one who fixes the problem." },
+          { text: "He causes the problem by making the children restless." },
+          { text: "He has the problem, because he wants to read to the children." }
         ],
         clue: "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
         hints: [
           "Characters do different jobs in a plot. One has the problem, one may cause it, and another may help fix it.",
           "Find the problem first. Then find what Amir does and what happens after that.",
-          "The story is mostly about Mr. Lee and his long line, so the problem is not Amir's own. Test each choice that is left."
+          "The children were restless before Amir spoke up, so he did not cause the problem. Test each choice that is left."
         ],
         how: [
-          "The problem: Mr. Lee's helper is sick, so the line grows long and people leave.",
-          "Amir offers to help and writes down orders while Mr. Lee cooks. After that, everyone in line gets lunch.",
+          "The problem: Ms. Lin has lost her voice, so the children get restless and some start to leave.",
+          "Amir offers to read aloud while Ms. Lin shows the pictures. After that, every child is listening.",
           "The answer is \"He is a helper whose actions make the solution possible.\"",
-          "The problem belongs to Mr. Lee, the line was already long before Amir came, and a person is a character, not part of the setting."
+          "The story is about Ms. Lin's story hour, so the problem is hers. Helping fix a problem does not make someone the main character, and the children were restless before Amir spoke."
         ],
-        misconception: "A common mix-up is thinking every important character is the main character. A helper matters to the plot because of what he helps fix.",
-        why: "The answer is \"He is a helper whose actions make the solution possible.\" The problem is Mr. Lee's: his helper is sick and the line is too long. Amir writes down orders so Mr. Lee can cook, and everyone gets lunch. The line was long before Amir came, and a person is a character, not part of the setting." },
+        misconception: "A common mix-up is thinking that whoever fixes the problem must be the main character. A helper matters to the plot because of what he helps fix.",
+        why: "The answer is \"He is a helper whose actions make the solution possible.\" The problem is Ms. Lin's: she has lost her voice and the children are restless. Amir reads aloud so the story hour can go on. Helping does not make him the main character, and he did not cause the restlessness." },
       { id: "SK-TT1b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p1"],
         prompt: "In paragraph 5, the author writes, \"The footprints stopped right at the wire.\" Why does the author include this sentence?",
         choices: [
@@ -995,10 +994,10 @@ PP.addLesson({
           { text: "It shows that Jada left her own footprints near the gate." },
           { text: "It shows that the dirt was wet because it rained that night." }
         ],
-        clue: "Near the end of a story, an author often gives proof that the solution worked. Ask what this detail tells you about the problem.",
+        clue: "Ask what this sentence tells you about the rabbits, and compare it with what the footprints showed before.",
         hints: [
-          "Near the end of a story, an author often gives proof that the solution worked. Ask what this detail tells you about the problem.",
-          "Think about what the footprints showed in paragraph 2. Then compare that with paragraph 5.",
+          "Ask what this sentence tells you about the rabbits, and compare it with what the footprints showed before.",
+          "Find the footprints in paragraph 2. Where were they, and what was missing there?",
           "Every tomato is still on its vine, so the rabbits did not find a new way in. Test each choice that is left."
         ],
         how: [
@@ -1015,24 +1014,24 @@ PP.addLesson({
         prompt: "How does the setting make the challenge harder for the class?",
         choices: [
           { text: "The room is so hot that ice will melt very fast.", correct: true },
-          { text: "The room is so dark that teams cannot see their supplies." },
-          { text: "The room is so crowded that teams have no space to work." },
-          { text: "The room is so noisy that no one can hear Ms. Banks." }
+          { text: "The sun is so bright on the windowsill that no one can see the cube." },
+          { text: "The teams get only one ice cube each, so they have no extra." },
+          { text: "The teams have only foil and a sock, so they have nothing cold to use." }
         ],
         clue: "The setting is where and when a story happens. Ask how the place or the time makes the problem easier or harder.",
         hints: [
           "The setting is where and when a story happens. Ask how the place or the time makes the problem easier or harder.",
-          "Read paragraph 1, and picture what Room 6 is like that day.",
-          "Nothing in paragraph 1 is about noise, so that choice has no support. Test each other choice against what paragraph 1 says about the room."
+          "Find the details that tell where and when the story happens.",
+          "Each team gets two cubes, not one, so that choice misreads the story. Test each choice that is left."
         ],
         how: [
           "Paragraph 1 says the air conditioner broke on the hottest day of August, and Room 6 felt like an oven.",
           "Ice melts faster when it is hot, so the setting makes keeping an ice cube frozen much harder.",
           "The answer is \"The room is so hot that ice will melt very fast.\"",
-          "Nothing in the story says the room is dark, crowded or noisy."
+          "The bright windowsill is where Bryce puts one cube, not the trouble the whole class has; each team gets two cubes; and the foil and sock are supplies, not the setting."
         ],
         misconception: "A common mix-up is treating the setting as just a place. Ask how the place and the time change the problem.",
-        why: "The answer is \"The room is so hot that ice will melt very fast.\" The air conditioner broke on the hottest day of August, and the room felt like an oven. Nothing in the story says the room is dark, crowded or noisy." },
+        why: "The answer is \"The room is so hot that ice will melt very fast.\" The air conditioner broke on the hottest day of August, and the room felt like an oven. The windowsill is only where one cube was put, each team gets two cubes, and the foil and sock are supplies, not the setting." },
       { id: "SK-TT1b-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p3"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Why does Ana need a new plan in paragraph 4?",
@@ -1078,10 +1077,10 @@ PP.addLesson({
           "The idea that solves the problem has to come before the last cube is wrapped.",
           "In paragraph 4, Ana explains a plan: wool keeps her feet warm in winter, so it might keep the heat away from the ice.",
           "The answer is that sentence in paragraph 4, where Ana says what wool might do.",
-          "\"Ana thought hard\" shows she is thinking but not what she thinks. Bryce's fresh-air line is the first try, which fails. Wrapping the cube carries out the idea, and \"You were right about the sock\" comes after the idea worked."
+          "\"Ana thought hard\" shows she is thinking but not what she thinks. Bryce's fresh-air line is the first try, which fails. Wrapping the cube carries out the idea, and \"You were right about the sock\" comes at the end of the story, after the cube is unwrapped, so it is not the idea itself."
         ],
         misconception: "A common mix-up is choosing the action that carries out the plan. The question asks for the idea itself.",
-        why: "The answer is Ana's sentence in paragraph 4 about wool keeping her feet warm in winter, so maybe it can keep the heat out, too. That idea leads to the sock that saves the last cube. \"Ana thought hard\" does not say what she thinks, Bryce's fresh-air line is the first try, wrapping the cube carries out the idea, and \"You were right about the sock\" comes at the end." },
+        why: "The answer is Ana's sentence in paragraph 4 about wool keeping her feet warm in winter, so maybe it can keep the heat out, too. That idea leads to the sock that saves the last cube. \"Ana thought hard\" does not say what she thinks, Bryce's fresh-air line is the first try, wrapping the cube carries out the idea, and \"You were right about the sock\" comes at the end of the story, so it is not the idea itself." },
       { id: "SK-TT1b-C09", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"], pick: 2,
         prompt: "Which TWO details show that the problem has been solved?",
         choices: [
@@ -1089,85 +1088,98 @@ PP.addLesson({
           { text: "Bryce tells Ana that she was right about the sock.", correct: true },
           { text: "Ana wraps the last cube in foil and tucks it in a sock." },
           { text: "Bryce sets the first cube in a cup on the windowsill." },
-          { text: "Each team gets two ice cubes, some foil and a sock." }
+          { text: "At the lunch bell, the other teams have only cups of water." }
         ],
         clue: "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
         hints: [
           "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
-          "Read the last two paragraphs. Choose two.",
-          "Wrapping the cube is part of the plan, but it happens before anyone knows whether the plan works. Check each other detail: does it show how things turned out?"
+          "Read from the moment the cube is wrapped to the end of the story. Choose two.",
+          "Wrapping the cube is part of the plan, but it happens before anyone knows whether the plan works. Check each other detail: does it show how things turned out for this team?"
         ],
         how: [
           "The problem is keeping a cube from melting until the lunch bell.",
           "When the bell rings, Ana unrolls the sock and finds the cube still cold and shiny. Then Bryce says she was right about the sock.",
           "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\"",
-          "Wrapping the cube is the plan, not proof that it worked. The windowsill cube and the supplies come earlier in the story."
+          "Wrapping the cube is the plan, not proof that it worked. The windowsill cube comes earlier, and the other teams' water shows only that their cubes melted, not that this team's plan worked."
         ],
         misconception: "A common mix-up is choosing the action that solves the problem instead of a detail that proves it worked.",
-        why: "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\" Both show that the plan worked. Wrapping the cube is the plan itself, and the windowsill and the supplies come before the problem is solved." },
-      { id: "SK-TT1b-C10", type: "order", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"],
+        why: "The answers are \"The team's cube is still frozen when the lunch bell rings.\" and \"Bryce tells Ana that she was right about the sock.\" Both show that the plan worked. Wrapping the cube is the plan itself, the windowsill comes earlier, and the other teams' water tells about them, not this team." },
+      { id: "SK-TT1b-C10", type: "order", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p3"],
         prompt: "Put these events in the order they happen in the story.",
         steps: [
           "Bryce sets the first cube in a cup on the windowsill.",
           "Ana wraps the last cube in foil and tucks it in a sock.",
           "Bryce sets the sock in a shady corner under his desk.",
-          "Ana unrolls the sock when the lunch bell rings."
+          "Ana unrolls the sock when the lunch bell rings.",
+          "Ms. Banks gives the team a gold star."
         ],
         clue: "A plot moves from the problem, to the tries, to the solution and how it turns out. Use that pattern to put events in order.",
         hints: [
           "A plot moves from the problem, to the tries, to the solution and how it turns out. Use that pattern to put events in order.",
-          "Find each event in the story, and notice which paragraph it is in.",
-          "The sock cannot go into the shady corner until the cube is inside it. Use the same kind of thinking to place the other events."
+          "Ask which event is the try that fails, which ones carry out the new plan, and which ones show how it turned out.",
+          "The windowsill cube is the try that fails, so it comes before the new plan. Use the same kind of thinking to place the other events."
         ],
         how: [
-          "The first try comes first: Bryce sets a cube in a cup on the windowsill (paragraph 3).",
-          "Next, Ana wraps the last cube in foil and tucks it in the sock (paragraph 5).",
-          "Then Bryce sets the sock in the shady corner, because the cube has to be inside the sock first (paragraph 5).",
-          "Last, the lunch bell rings and Ana unrolls the sock (paragraph 6)."
+          "The try that fails comes first: Bryce sets a cube in a cup on the windowsill.",
+          "Next comes the new plan. Ana wraps the last cube and tucks it in the sock, and only then can Bryce set the sock in the shady corner.",
+          "Then the lunch bell rings, and Ana unrolls the sock.",
+          "Last, Ms. Banks gives the team a gold star."
         ],
-        misconception: "A common mix-up is putting the steps of the solution in the wrong order. Ask what has to happen before each step can happen.",
-        why: "The order is: Bryce sets the first cube on the windowsill, Ana wraps the last cube in foil and a sock, Bryce sets the sock in a shady corner, and Ana unrolls the sock when the lunch bell rings. That is the try that fails, the solution, and how it turns out." }
+        misconception: "A common mix-up is putting the steps of the new plan in the wrong order. Ask what has to happen before each step can happen.",
+        why: "The order is: Bryce sets the first cube on the windowsill, Ana wraps the last cube in foil and a sock, Bryce sets the sock in a shady corner, Ana unrolls the sock when the lunch bell rings, and Ms. Banks gives the team a gold star. That is the try that fails, the new plan, and how it turns out." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT1b-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p4"],
         prompt: "Complete the sentences about the problem in the story. Choose the best answer for each blank.",
-        text: "Dre's sign does not bring any cars because {0}. The cousins have to sell the peaches soon because {1}.",
+        text: "Shouting does not fix the problem because {0}. The class has to fix the problem quickly because {1}.",
         slots: [
-          { options: ["the trees hide the stand from the highway", "the sign is painted in the wrong color", "the peaches are not ripe yet"], answer: 0 },
-          { options: ["the peaches will get soft and spoil", "Grandpa Joe wants to close the stand", "the cousins have to leave by noon"], answer: 0 }
+          { options: ["the fans drown out the actors' voices in the back", "the actors do not know their lines yet", "the first graders keep talking during the play"], answer: 0 },
+          { options: ["the play is that same night", "the fans are about to break down", "the first graders have to go home soon"], answer: 0 }
         ],
         clue: "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
         hints: [
           "A setting can cause a problem. A problem can also have a reason it must be fixed soon. Think about both as you read.",
-          "For the first blank, read what Malia sees and says in paragraph 4. For the second blank, read what Grandpa says in paragraph 2.",
-          "The peaches are already ripe in paragraph 2, so the first blank is not about ripe peaches. Check each choice that is left for the first blank against what Malia sees from the highway."
+          "For the first blank, find out what Malia learns when she sits where the first graders sat. For the second blank, ask what is happening later that day.",
+          "The actors shout every line, so they do know their lines. Check each choice that is left for the first blank against what Malia hears from the last row."
         ],
         how: [
-          "In paragraph 4, Malia stands at the highway and looks back. All she sees are pine trees, and she says nobody can see the sign.",
-          "So the sign does not work because the trees hide the stand from the highway.",
-          "In paragraph 2, Grandpa says that if they don't sell the peaches soon, they will get soft and spoil.",
-          "The answers are the trees hide the stand from the highway and the peaches will get soft and spoil. The peaches are already ripe, the sign's color is never a problem, and nobody plans to close the stand or leave by noon."
+          "When Malia sits in the last row, the actors' voices are lost under the roar of the fans. Shouting cannot fix that, because the fans are louder.",
+          "So the first answer is the fans drown out the actors' voices in the back.",
+          "The play is that same night, so the class must fix the problem quickly.",
+          "The actors know their lines, nobody says the first graders talked, the fans are not breaking, and no one has to go home."
         ],
-        misconception: "A common mix-up is blaming the sign itself. The sign was fine; the setting kept drivers from seeing it.",
-        why: "The answers are the trees hide the stand from the highway and the peaches will get soft and spoil. From the highway, Malia can see only pine trees, so drivers never see the sign. Grandpa says the peaches will get soft and spoil if they don't sell soon. The peaches are already ripe, and nobody plans to close the stand or leave by noon." },
-      { id: "SK-TT1b-C12", type: "hottext", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
-        prompt: "Which sentence best shows that the problem has been fully solved? Choose the sentence in the passage.",
-        targets: ["p4:5:2", "p4:6:1", "p4:6:2", "p4:7:1", "p4:7:3"],
-        answer: ["p4:7:1"], pick: 1,
-        clue: "To know when a problem is fully solved, first say exactly what the problem is. Then look for the detail that shows it is completely fixed, not just getting better.",
+        misconception: "A common mix-up is blaming the actors. Their voices were fine; the setting kept the back rows from hearing.",
+        why: "The answers are the fans drown out the actors' voices in the back and the play is that same night. From the last row, Malia hears only the roar of the fans, and the play is that night. The actors know their lines, nobody talks during the play, and the fans are not breaking." },
+      { id: "SK-TT1b-C12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "What part does Mr. Oduya play in the plot?",
+          choices: [
+            { text: "He helps carry out the fix once Malia finds the cause.", correct: true },
+            { text: "He finds out what is really causing the problem." },
+            { text: "He causes the problem by keeping the fans running." },
+            { text: "He is the main character, because he moves the chairs." }
+          ] },
+        partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+          choices: [
+            { text: "\"Instead, he helped the class carry every row of chairs to the front half of the gym, far from the fans.\"", correct: true },
+            { text: "\"Mr. Oduya, the custodian, could not turn the fans off, because the gym would get too hot.\"" },
+            { text: "\"Halfway through the first scene, a girl in the last row raised her hand.\"" },
+            { text: "\"So the actors shouted their lines until their throats hurt.\"" }
+          ] },
+        clue: "Characters do different jobs in a plot. One may find out what is wrong, and another may do the work to set it right.",
         hints: [
-          "To know when a problem is fully solved, first say exactly what the problem is. Then look for the detail that shows it is completely fixed, not just getting better.",
-          "Say the problem in your own words: what does Grandpa Joe need to happen to his peaches? Then look near the end of the story.",
-          "The blue truck is only the first car to come, so the problem is just starting to get better there. Check each sentence that is left: does it show the whole problem is fixed?"
+          "Characters do different jobs in a plot. One may find out what is wrong, and another may do the work to set it right.",
+          "Find the paragraph where Mr. Oduya appears, and read every sentence in it.",
+          "Mr. Oduya never sits in the last row, so he is not the one who finds the cause. For Part B, the sentence must match your Part A answer."
         ],
         how: [
-          "The problem is that no cars come, so the peaches are not being sold.",
-          "The blue truck, the van and the other cars show the plan starting to work, but there could still be peaches left.",
-          "The answer is \"By sunset, every basket was empty.\" Empty baskets mean every peach was sold, so the whole problem is fixed.",
-          "Pushing the boards into the ground is the plan, not proof, and Grandpa's words praise the helpers after the problem is already fixed."
+          "Malia sits in the last row and finds out what is causing the problem.",
+          "Mr. Oduya cannot turn the fans off, so instead he helps the class carry the chairs to the front of the gym.",
+          "Part A: He helps carry out the fix once Malia finds the cause. Part B: \"Instead, he helped the class carry every row of chairs to the front half of the gym, far from the fans.\"",
+          "He does not find the cause, the fans were running before he came, and the story is mostly about Malia and her class, so he is not the main character. The sentence about turning the fans off tells what he cannot do, not how he helps."
         ],
-        misconception: "A common mix-up is choosing the first sign that a plan is working. A problem is fully solved only when the whole trouble is fixed.",
-        why: "The answer is \"By sunset, every basket was empty.\" The problem is that the peaches are not selling, and empty baskets show every peach was sold. The truck and the cars show the plan starting to work, the boards are the plan itself, and Grandpa's words come after the problem is fixed." },
+        misconception: "A common mix-up is thinking that the character who does the most work is the main character. A helper matters because of what he helps fix.",
+        why: "Part A: He helps carry out the fix once Malia finds the cause. Part B: \"Instead, he helped the class carry every row of chairs to the front half of the gym, far from the fans.\" Malia finds the cause, and Mr. Oduya helps move the chairs. He did not cause the problem, and he is a helper, not the main character." },
       { id: "SK-TT1b-C13", type: "match", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: [],
         prompt: "Each sentence is the start of a new story. Match each setting to the problem it would most likely cause. Use each problem once.",
         cols: ["Getting somewhere on time", "Not having enough water", "Carrying something heavy"],
@@ -1192,12 +1204,12 @@ PP.addLesson({
         why: "Keoni lives on a boat, but the bus picks kids up on land at a set time, so getting somewhere on time is the problem. Lupe's desert town has had no rain for months, so her garden would not have enough water. Dion's family must bring a couch home with no elevator, so carrying something heavy is the problem." },
       /* Compares solutions across p3 (set 2) and p4; the item carries both passages, so set 3 stands alone. */
       { id: "SK-TT1b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p3", "p4"],
-        prompt: "How are the solutions in \"The Ice Cube Challenge\" and \"The Hidden Peach Stand\" alike?",
+        prompt: "How are the solutions in \"The Ice Cube Challenge\" and \"The Back Row\" alike?",
         choices: [
-          { text: "In both, a child figures out what is causing the problem, then fixes that cause.", correct: true },
-          { text: "In both, a grown-up steps in and solves the problem for the children." },
+          { text: "In both, a child works out why the first try failed and picks a fix for that reason.", correct: true },
+          { text: "In both, the children fix the problem by making something louder or bigger." },
           { text: "In both, the very first try works, so the children never need a new plan." },
-          { text: "In both, the children solve the problem by making something much bigger." }
+          { text: "In both, the children give up and ask a teacher to fix the problem for them." }
         ],
         clue: "To compare two solutions, ask how each problem gets fixed. Then check that your answer is true for both stories.",
         hints: [
@@ -1206,64 +1218,64 @@ PP.addLesson({
           "In both stories the first try fails, so the choice about the first try working does not fit. Test the other choices against both stories."
         ],
         how: [
-          "In \"The Ice Cube Challenge,\" the first cube melts in the sun. Ana then thinks about what keeps heat out and uses foil, wool and shade.",
-          "In \"The Hidden Peach Stand,\" the sign on the stand brings no cars. Malia walks out to the highway to find out why, and then the cousins fix it.",
-          "The answer is \"In both, a child figures out what is causing the problem, then fixes that cause.\"",
-          "No grown-up solves either problem, the first try fails in both stories, and in the peach story the giant sign is the try that does not work."
+          "In \"The Ice Cube Challenge,\" the first cube melts in the sun. Ana works out that heat is the trouble and uses foil, wool and shade to keep heat away.",
+          "In \"The Back Row,\" shouting does not help. Malia sits in the last row to find out why, and then the class fixes that.",
+          "The answer is \"In both, a child works out why the first try failed and picks a fix for that reason.\"",
+          "Shouting louder is the try that fails in the play story, the first try fails in both stories, and no teacher fixes either problem."
         ],
         misconception: "A common mix-up is choosing a sentence that is true for only one story. Check each choice against both stories.",
-        why: "The answer is \"In both, a child figures out what is causing the problem, then fixes that cause.\" Ana works out what keeps heat away from ice, and Malia goes to the highway to see why no cars come. No grown-up solves either problem, the first try fails in both stories, and the giant sign is the try that does not work." },
+        why: "The answer is \"In both, a child works out why the first try failed and picks a fix for that reason.\" Ana works out that heat melts the ice, and Malia finds out why shouting does not help. Making things louder is the try that fails, the first try fails in both stories, and no teacher fixes either problem." },
       { id: "SK-TT1b-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p4"],
-        prompt: "Which new story has a solution that works for the same reason Malia's solution works?",
+        prompt: "Which new story has a solution that works for the same reason the class's solution works?",
         choices: [
-          { text: "Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.", correct: true },
-          { text: "Leo's lemonade tastes too sour, so he stirs in more sugar and then sells every cup." },
-          { text: "Leo's sign keeps blowing over in the wind, so he tapes it to a heavy chair." },
-          { text: "Leo runs out of paper cups, so he borrows a big stack from his neighbor." }
+          { text: "Omari can't hear his piano teacher over the washing machine, so they move the lesson to a room far from it.", correct: true },
+          { text: "Omari's piano sounds out of tune, so his teacher calls someone to come and fix the strings." },
+          { text: "Omari can't hear his teacher, so he asks her to say each direction again, more slowly." },
+          { text: "Omari's family can't see him on the stage, so he stands on a box while he sings." }
         ],
-        clue: "First say in your own words why Malia's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
+        clue: "First say in your own words why the class's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
         hints: [
-          "First say in your own words why Malia's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
-          "Reread paragraphs 4 and 5 of Malia's story. Then read each new story and ask what was wrong and what the fix changes.",
-          "Leo's sign story has a sign in it, like Malia's story, but sharing a thing does not make the reason the same. Ask why each fix works, and test the stories that are left."
+          "First say in your own words why the class's plan works. Then find the new story whose plan works for the same reason, even if the people and things are different.",
+          "Reread how the class fixes the problem. Then read each new story and ask what was wrong and what the fix changes.",
+          "Omari's stage story has a stage, like the play, but sharing a place does not make the reason the same. Ask why each fix works, and test the stories that are left."
         ],
         how: [
-          "Malia's plan works because it puts the arrows out by the highway, where the drivers pass by.",
-          "Leo's stand is behind his house, where no one walks by. Moving his table to the sidewalk puts it where people pass, so it works for the same reason.",
-          "The answer is \"Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.\"",
-          "The sour lemonade and the missing cups are different problems. The sign that blows over has a sign in it, but taping it down does not put the stand where more people can see it."
+          "The class's plan works because it moves the listeners away from what was making it hard to hear.",
+          "Omari's lesson moves to a room far from the washing machine, so its noise can no longer cover his teacher's voice. That works for the same reason.",
+          "The answer is \"Omari can't hear his piano teacher over the washing machine, so they move the lesson to a room far from it.\"",
+          "Asking his teacher to repeat herself does not move him away from the noise. The out-of-tune piano is a different problem, and the box helps people see, not hear."
         ],
-        misconception: "A common mix-up is matching a story by a thing it shares, like a sign, instead of by why the solution works.",
-        why: "The answer is \"Leo's lemonade stand is hidden behind his house, so he moves his table out to the sidewalk.\" Like Malia's arrows, Leo's move puts his stand where people pass by. The sour lemonade and the missing cups are different problems, and taping down a sign does not help more people find the stand." }
+        misconception: "A common mix-up is matching a story by a shared thing, like a stage or not hearing, instead of by why the fix works.",
+        why: "The answer is \"Omari can't hear his piano teacher over the washing machine, so they move the lesson to a room far from it.\" Like the chairs moved away from the fans, the lesson moves away from the noise. Repeating the directions does not get away from the noise, the piano problem is different, and the box helps people see." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own short new scene. */
   similar: [
     { id: "SK-TT1b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
-      like: ["SK-TT1b-C04"],
-      stem: ["At the park cleanup, Ms. Diaz tried to lift a bag of leaves into the truck, but it was too heavy for her. Her neighbor, Mr. Cole, grabbed the other side. Together, they swung the bag into the truck."],
-      prompt: "What part does Mr. Cole play in this story?",
+      like: ["SK-TT1b-C04", "SK-TT1b-C12"],
+      stem: ["At the park cleanup, Ms. Reyes tried to lift a bag of leaves into the truck, but it was too heavy for her. Her neighbor, Mr. Cole, grabbed the other side. Together, they swung the bag into the truck."],
+      prompt: "Why does the author include Mr. Cole in the story?",
       choices: [
-        { text: "He is a helper who makes the solution possible.", correct: true },
-        { text: "He is the main character, and the problem is his own." },
-        { text: "He causes the problem by filling the bag too full." },
-        { text: "He is part of the setting, like the park and the truck." }
+        { text: "Without him, Ms. Reyes could not finish the job.", correct: true },
+        { text: "He shows the reader how messy the park is." },
+        { text: "He explains why the leaves fell off the trees." },
+        { text: "He is the one who filled the bag too full." }
       ],
-      clue: "Characters do different jobs in a plot. Ask who has the problem, and what this character does about it.",
+      clue: "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
       hints: [
-        "Characters do different jobs in a plot. Ask who has the problem, and what this character does about it.",
+        "Authors add a character for a reason. Ask what would happen in the story if this character were not there.",
         "Find the problem in the first sentence. Then read what Mr. Cole does.",
-        "Ms. Diaz is the one who cannot lift the bag, so the problem is not Mr. Cole's own. Test each choice that is left."
+        "Nothing in the story says who filled the bag, so that choice has no support. Test each choice that is left."
       ],
       how: [
-        "The problem: the bag of leaves is too heavy for Ms. Diaz to lift.",
+        "The problem: the bag of leaves is too heavy for Ms. Reyes to lift.",
         "Mr. Cole grabs the other side, and together they get the bag into the truck.",
-        "The answer is \"He is a helper who makes the solution possible.\"",
-        "The problem is Ms. Diaz's, nothing says he filled the bag, and a person is a character, not the setting."
+        "If he were not there, the bag would still be on the ground. The answer is \"Without him, Ms. Reyes could not finish the job.\"",
+        "He never talks about how messy the park is or why leaves fall, and nothing says he filled the bag."
       ],
-      why: "The answer is \"He is a helper who makes the solution possible.\" Ms. Diaz cannot lift the bag, and Mr. Cole grabs the other side so they can lift it together. The problem is hers, nothing says he filled the bag, and he is a character, not part of the setting." },
+      why: "The answer is \"Without him, Ms. Reyes could not finish the job.\" She cannot lift the bag alone, and he grabs the other side so they can lift it together. He does not describe the park, explain the leaves or fill the bag." },
     { id: "SK-TT1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
-      like: ["SK-TT1b-C07", "SK-TT1b-C06"],
+      like: ["SK-TT1b-C07"],
       stem: ["After a big rain, the creek behind Mia's house ran fast and high. Mia set her paper boat on the water, and it tipped right over. First she folded a new boat with a wider bottom, but the fast water tipped that one, too. Then she found a calm pool near the bank. Her boat floated there for a long time."],
       prompt: "Why does Mia move her boat to the calm pool?",
       choices: [
@@ -1275,7 +1287,7 @@ PP.addLesson({
       clue: "A problem makes a character act. When a try does not work, the character looks for another way.",
       hints: [
         "A problem makes a character act. When a try does not work, the character looks for another way.",
-        "Find Mia's first fix. What happens to that boat?",
+        "Find the problem and each try.",
         "Mia's mom is not in the story, so that choice has no support. Test each choice that is left."
       ],
       how: [
@@ -1378,29 +1390,29 @@ PP.addLesson({
     "SK-TT1b-P4": {
       hints: [
         "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
-        "Find each event in the story, and notice which paragraph it is in.",
+        "Ask which event is the trouble, which one explains it, which one fixes it, and which one shows how it turned out.",
         "Jada finds the tomatoes gone before anyone tells her why. Use the same kind of thinking to place the other events."
       ],
       how: [
         "First, Jada finds half the tomatoes gone (paragraph 2).",
         "Next, Grandma Bea says rabbits come under the gate (paragraph 3).",
         "Then Jada puts wire along the bottom of the gate (paragraph 4).",
-        "Last, every tomato is still on its vine (paragraph 5). That is problem, cause, solution, result."
+        "Last, every tomato is still on its vine (paragraph 5)."
       ],
       misconception: "A common mix-up is putting the explanation of the problem before the problem itself. A character has to find the trouble before anyone can explain it." },
     "SK-TT1b-P5": {
       hints: [
         "Ask four questions: Who? Where and when? What goes wrong? How is it fixed?",
-        "For each detail, find it in the story. Is it a person, a place and time, a trouble or a fix?",
-        "Grandma Bea is a person in the story, so she is a character. Sort the other three details the same way."
+        "For each detail, find it in the story. Is it a person, a place and time, a trouble or a fix? A story part can be used more than once, and one may not be used at all.",
+        "Jada is a person in the story, so she is a character. Sort the other three details the same way."
       ],
       how: [
-        "Grandma Bea is a person in the story, so she is a character.",
-        "Behind a house in Macon in summer tells where and when, so it is the setting.",
-        "Rabbits squeezing under the gate is what goes wrong, so it is the problem.",
-        "The wire along the bottom of the gate fixes it, so it is the solution."
+        "Jada and Grandma Bea are people in the story, so both are characters.",
+        "Summer mornings in Macon tell where and when, so they are the setting.",
+        "Half of the little tomatoes being gone is what goes wrong, so it is the problem.",
+        "None of the four details fixes the trouble, so the Solution column is not used."
       ],
-      misconception: "A common mix-up is calling a character the problem. Grandma Bea is in the story, but the trouble is the rabbits." }
+      misconception: "A common mix-up is thinking every story part must be used once. Sort each detail by what it is, even if a part is left over." }
   },
   test: [
     { id: "SK-TT1b-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
@@ -2270,7 +2282,7 @@ PP.addLesson({
     big: "When I compare two stories, I look at the same parts in both, like the characters, settings and lessons, and tell how they are alike and how they are different.",
     points: [
       "Compare means tell how things are alike. Contrast means tell how they are different. Clue words like both, alike and same show how things are alike. Words like but, however, unlike, different and while show how they are different.",
-      "Look at the same part in both stories. Who is the main character? Where does it happen? What events happen, and what is the problem? What is the lesson?",
+      "Look at the same part in both stories. Who is the main character? Where and when does it happen, and how much time goes by? What events happen, and what is the problem? What is the lesson?",
       "Two stories can have very different characters and settings but teach the same lesson.",
       "You will often compare stories from different places and cultures, like a story from Ghana and a story from Vermont. Notice what is different about each place and way of life, and what the characters feel and learn that is the same. When a family does, eats or celebrates something special, ask what that custom means to them. Customs can look very different and still mean the same thing.",
       "Keep a chart in your head with two sides: same and different. When you compare three stories, check each sentence against every one of them."
@@ -2300,9 +2312,10 @@ PP.addLesson({
       steps: [
         "Find what each character does when something goes wrong. Kai builds again. Greta builds again.",
         "That is how they are alike: neither one gives up.",
-        "Now find each setting. Kai is on a warm, sunny beach. Greta is in a snowy yard."
+        "Now find each setting. Kai is on a warm, sunny beach. Greta is in a snowy yard.",
+        "A setting is also when. Kai's story happens on a warm summer day, but Greta's happens in the middle of a snowy winter."
       ],
-      answer: "Kai and Greta both keep trying after their work gets knocked down. Kai is on a sunny beach, but Greta is in a snowy yard."
+      answer: "Kai and Greta both keep trying after their work gets knocked down. Kai is on a sunny beach in summer, but Greta is in a snowy yard in winter."
     },
     {
       show: [
@@ -2387,7 +2400,7 @@ PP.addLesson({
         ["\"Why are the noodles so long?\" he asked.", "\"Long noodles stand for a long, healthy life,\" Grandma said.", "\"We eat them on the last night of the year and hope the new year will be good.\""],
         ["Near midnight, the family walked to the temple at the end of their street.", "A huge bronze bell hung there, and people took turns ringing it.", "The deep sound rolled through the cold air."],
         ["Grandpa lifted Haruto up so he could pull the thick rope.", "BONG!", "Haruto felt the sound hum in his chest."],
-        ["On the walk home, Haruto held Grandma's hand.", "\"Next year, can I ring the bell again?\" he asked.", "Grandma smiled and said, \"It is your family's bell, too.\""]
+        ["On the walk home, Haruto held Grandma's hand.", "\"Next year, can I ring the bell again?\" he asked.", "Grandma nodded, and Haruto thought, \"Now it is my bell, too.\""]
       ] },
     { id: "p7", title: "Moving Day on the Grassland", genre: "Literary text",
       paragraphs: [
@@ -2396,7 +2409,7 @@ PP.addLesson({
         ["The whole family took the ger apart.", "They rolled up the felt walls, tied the poles together and loaded everything onto an old truck."],
         ["Then Father handed Bataa the reins of a small gray horse.", "\"You are old enough to help herd the sheep,\" he said.", "Bataa sat up tall in the saddle."],
         ["All day, Bataa rode behind the flock.", "When a lamb wandered toward the river, he trotted after it and turned it back."],
-        ["At sunset, they reached a valley green with new grass.", "The sheep spread out to eat.", "Bataa slid off his horse, tired but proud.", "\"Good work, herder,\" Father said."]
+        ["At sunset, they reached a valley green with new grass.", "The sheep spread out to eat.", "Bataa slid off his horse, tired but proud.", "He had not lost a single lamb."]
       ] },
     { id: "p8", title: "Bringing the Sheep Home", genre: "Literary text",
       paragraphs: [
@@ -2404,8 +2417,8 @@ PP.addLesson({
         ["\"The sheep must come down before winter,\" Grandma said.", "\"Tomorrow, you will help us find them.\""],
         ["Early the next morning, Ingrid, Grandma and two neighbors hiked up a steep, rocky trail.", "Ingrid listened for bells.", "Some of the sheep wore bells, so people could find them among the rocks."],
         ["High on the mountain, Ingrid heard a clink.", "Behind a big rock stood a ewe, a mother sheep, with a bell around her neck.", "Four more sheep waited behind her."],
-        ["\"The others follow the bell sheep,\" Grandma had told her.", "So Ingrid took hold of the ewe's collar and led her down the trail.", "Clink, clink.", "One by one, the other sheep followed."],
-        ["At the farm gate, Grandma counted the sheep and smiled.", "\"You found the bell sheep all by yourself,\" she said.", "Ingrid grinned all the way to the barn."]
+        ["\"The others follow the bell sheep,\" Grandma had told her.", "So Ingrid took hold of the ewe's collar and proudly led her down the trail.", "Clink, clink.", "One by one, the other sheep followed."],
+        ["At the farm gate, Grandma counted the sheep.", "Every one was home.", "That night, Ingrid fell asleep still hearing the clink, clink of the bell."]
       ] }
   ],
   practice: [
@@ -2433,13 +2446,13 @@ PP.addLesson({
       prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
       cols: ["Kofi's story", "Lucy's story", "Both stories"],
       rows: [
-        { text: "Food goes to waste because it is not shared.", answer: 0 },
-        { text: "Playing alone turns out to be no fun.", answer: 1 },
+        { text: "A neighbor brings the main character a bowl of soup.", answer: 0 },
+        { text: "Snow covers the hill.", answer: 1 },
         { text: "The main character decides to share.", answer: 2 },
-        { text: "Neighbors bring the main character gifts.", answer: 0 }
+        { text: "Someone asks the main character to share.", answer: 2 }
       ],
       clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-      why: "Food going to waste and neighbors bringing gifts happen only in Kofi's story. Playing alone being no fun happens only in Lucy's story. In both stories, the main character decides to share." },
+      why: "Only Kofi's neighbor, Ama, brings a bowl of soup. Only Lucy's story has snow on a hill. In both stories, someone asks the main character to share (the children at the fence, and Sofia), and in both the main character decides to share." },
     { id: "SK-TT1d-P4", type: "ebsr", points: 2, dok: 3, passages: ["p1", "p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "What lesson do BOTH stories teach?",
@@ -2453,7 +2466,7 @@ PP.addLesson({
         choices: [
           { text: "\"Sharing his mangoes had filled his days with friends.\"", correct: true },
           { text: "\"It was the best ride of the day.\"", correct: true },
-          { text: "\"Flies buzzed around the tree.\"" },
+          { text: "\"Lucy pulled the sled over to her friends.\"" },
           { text: "\"Lucy held the rope tight.\"" },
           { text: "\"The first big snow of the year covered Pine Hill in Vermont.\"" }
         ] },
@@ -2514,7 +2527,7 @@ PP.addLesson({
         partB: { prompt: "Which sentence from \"Kofi's Mangoes\" best supports the answer to Part A?",
           choices: [
             { text: "\"The next morning, he filled a basket and carried it down the road.\"", correct: true },
-            { text: "\"Flies buzzed around the tree.\"" },
+            { text: "\"That afternoon, his neighbor Ama brought him a bowl of warm groundnut soup.\"" },
             { text: "\"Her brother gave Kofi a whistle he had carved.\"" },
             { text: "\"Kofi smiled.\"" }
           ] },
@@ -2528,17 +2541,17 @@ PP.addLesson({
           "In \"Kofi's Mangoes,\" Kofi eats mangoes for breakfast, lunch and dinner. Then the story says \"the next morning\" and \"that afternoon.\" So it lasts more than one day.",
           "In \"The Red Sled,\" Lucy sleds after the first big snow, rides again and again, and then has \"the best ride of the day.\" It all happens in one day.",
           "Part A: Kofi's story lasts more than one day, but Lucy's story happens in one day. Part B: \"The next morning, he filled a basket and carried it down the road.\"",
-          "The flies, the whistle and Kofi's smile do not tell when anything happens."
+          "\"That afternoon\" tells a time, but by itself it could be the same day. The whistle and Kofi's smile do not tell when anything happens."
         ],
         misconception: "A common mix-up is thinking a setting is only a place. When a story happens, and how long it lasts, is part of the setting too.",
-        why: "Part A: Kofi's story lasts more than one day, but Lucy's story happens in one day. Part B: \"The next morning, he filled a basket and carried it down the road.\" Kofi's story moves on to the next morning and that afternoon, but Lucy's sledding all happens on one snowy day. The other sentences do not tell when anything happens." },
+        why: "Part A: Kofi's story lasts more than one day, but Lucy's story happens in one day. Part B: \"The next morning, he filled a basket and carried it down the road.\" Kofi's story moves on to the next morning and that afternoon, but Lucy's sledding all happens on one snowy day. \"That afternoon\" alone could be the same day, and the other sentences do not tell when anything happens." },
       { id: "SK-TT1d-C05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: ["p1", "p2"],
         prompt: "Kofi will not share his mangoes, and Lucy will not share her sled. How is what Kofi keeps different from what Lucy keeps?",
         choices: [
           { text: "Kofi has more mangoes than he can use, but Lucy has just one sled.", correct: true },
-          { text: "Kofi has just one mango left, but Lucy has many sleds to use." },
+          { text: "Kofi keeps food that will spoil, but Lucy keeps a sled that will break." },
           { text: "Kofi's mangoes are brand-new, but Lucy's sled is old and worn." },
-          { text: "Kofi's mangoes belong to Ama, but Lucy's sled belongs to Ben." }
+          { text: "Both of them keep something that was given to them as a gift." }
         ],
         clue: "To contrast, look at the same part of both stories and tell how it is different. Here, look at the thing each character keeps.",
         hints: [
@@ -2550,10 +2563,10 @@ PP.addLesson({
           "Kofi's tree grows more fruit than anyone could count. He eats mangoes at every meal, and there are still too many.",
           "Lucy has one brand-new red sled.",
           "The answer is \"Kofi has more mangoes than he can use, but Lucy has just one sled.\"",
-          "Lucy's sled is new, Kofi has far more than one mango, the mangoes are Kofi's, not Ama's, and the sled is Lucy's, not Ben's."
+          "Mangoes do spoil, but nothing says Lucy's sled will break. The sled is new, not old, and neither story says anything was a gift."
         ],
         misconception: "A common mix-up is mixing up which detail belongs to which story. Check each half of the choice against its own story.",
-        why: "The answer is \"Kofi has more mangoes than he can use, but Lucy has just one sled.\" Kofi's tree grows more fruit than anyone could count, but Lucy has one brand-new sled. The sled is not old, Kofi has far more than one mango, and the things belong to Kofi and Lucy, not to Ama or Ben." }
+        why: "The answer is \"Kofi has more mangoes than he can use, but Lucy has just one sled.\" Kofi's tree grows more fruit than anyone could count, but Lucy has one brand-new sled. Nothing says the sled will break, the sled is new, not old, and neither story says anything was a gift." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT1d-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
@@ -2562,22 +2575,22 @@ PP.addLesson({
           { text: "Both stories happen on the last night of the year.", correct: true },
           { text: "Both stories happen in a city beside a harbor." },
           { text: "Both stories happen in a grandparents' wooden house." },
-          { text: "Both stories happen on a warm summer evening." }
+          { text: "Both stories happen on the first night of a new year." }
         ],
         clue: "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
         hints: [
           "To compare settings, look at where and when each story happens. A choice must be true for both stories.",
-          "Read the first paragraph of each story.",
+          "Find when each story happens, and check that your answer fits both stories.",
           "Only Freja's story has a harbor, so that choice is true for just one story. Check the other choices against both stories."
         ],
         how: [
           "\"Leap into the New Year\" happens in an apartment in Copenhagen, Denmark, on the last night of the year.",
           "\"Noodles on the Last Night\" happens at a grandparents' house in Kyoto, Japan, on the last night of the year.",
           "The answer is \"Both stories happen on the last night of the year.\"",
-          "Only Freja's story has a harbor, only Haruto's story has a wooden house, and both nights are cold, not summer evenings."
+          "Only Freja's story has a harbor, and only Haruto's story has a wooden house. Both stories lead up to midnight, the end of the old year, so they happen on the last night, not on the first night of the new year."
         ],
         misconception: "A common mix-up is choosing a detail that is true for only one of the stories.",
-        why: "The answer is \"Both stories happen on the last night of the year.\" Freja is in Denmark and Haruto is in Japan, but both stories take place on that same night. Only Freja's story has a harbor, only Haruto's has a wooden house, and both nights are cold." },
+        why: "The answer is \"Both stories happen on the last night of the year.\" Freja is in Denmark and Haruto is in Japan, but both stories take place on that same night. Only Freja's story has a harbor, only Haruto's has a wooden house, and both happen before the new year begins, not on its first night." },
       { id: "SK-TT1d-C07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "How are Freja and Haruto alike?",
@@ -2593,7 +2606,7 @@ PP.addLesson({
             { text: "\"Why are the noodles so long?\" he asked.", correct: true },
             { text: "\"Is it time yet?\" she asked." },
             { text: "\"Next year, can I ring the bell again?\" he asked." },
-            { text: "\"She checked the clock on the wall again and again.\"" }
+            { text: "She checked the clock on the wall again and again." }
           ] },
         clue: "To compare two characters, find something each one says or does. Then check that it is true for both.",
         hints: [
@@ -2621,7 +2634,7 @@ PP.addLesson({
         clue: "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
         hints: [
           "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-          "Look at what each family does near midnight, and at who is with each child.",
+          "Look at what each family does near midnight.",
           "Freja's family does not go to a temple, so the bell belongs to only one story. Sort the other details the same way."
         ],
         how: [
@@ -2643,17 +2656,17 @@ PP.addLesson({
         clue: "A shared message must fit both stories. Look at how each story ends and what each child feels about the family's custom.",
         hints: [
           "A shared message must fit both stories. Look at how each story ends and what each child feels about the family's custom.",
-          "Read the last paragraph of each story. What do the children say, and what does Grandma say?",
+          "Read the last paragraph of each story. What does each child say or think?",
           "The two families do very different things, so a message saying every family celebrates the same way does not fit. Test the other choices against both endings."
         ],
         how: [
           "At the end of Freja's story, she says she is glad the family did it together.",
-          "At the end of Haruto's story, he asks to ring the bell again, and Grandma tells him it is his family's bell, too.",
+          "At the end of Haruto's story, he asks to ring the bell again next year, and he thinks, \"Now it is my bell, too.\"",
           "Both children feel part of the family because they joined in. The answer is \"Taking part in a family tradition can help you feel you belong.\"",
           "Staying up late fits only Freja's story, and food fits only Haruto's. The families do different things, so the message about every family celebrating the same way does not fit."
         ],
         misconception: "A common mix-up is choosing a message that fits only one story, like one about food.",
-        why: "The answer is \"Taking part in a family tradition can help you feel you belong.\" Freja is glad her family jumped together, and Haruto's grandma tells him the bell is his family's bell, too. Staying up late fits only Freja's story, food fits only Haruto's, and the families celebrate in different ways." },
+        why: "The answer is \"Taking part in a family tradition can help you feel you belong.\" Freja is glad her family jumped together, and Haruto thinks that the bell is now his bell, too. Staying up late fits only Freja's story, food fits only Haruto's, and the families celebrate in different ways." },
       { id: "SK-TT1d-C10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p5", "p6"],
         prompt: "Haruto's grandma says the long noodles \"stand for a long, healthy life.\" Which part of Freja's story is MOST like this?",
         choices: [
@@ -2666,7 +2679,7 @@ PP.addLesson({
         hints: [
           "To compare customs from two cultures, look past what people do and ask what the custom means to the family.",
           "Reread paragraph 3 of Haruto's story. Then reread the paragraphs of Freja's story that come before midnight.",
-          "The fireworks come after midnight and do not tell what anything means, so that choice does not fit. Test each choice that is left against Grandma's words."
+          "Grandpa wobbling on his chair is funny, but it does not tell what a custom means. Test each choice that is left against Grandma's words."
         ],
         how: [
           "Grandma's words tell what the noodles mean: a long, healthy life, and a hope for a good new year.",
@@ -2689,7 +2702,7 @@ PP.addLesson({
         hints: [
           "A setting tells where and when. Find the place and the season in each story, and keep the two stories apart.",
           "Read the first paragraph of each story.",
-          "Grandma says the sheep must come down before winter, so Ingrid's story does not happen in the middle of winter. Use the first paragraph of Bataa's story to fill the other blank."
+          "Grandma says the sheep must come down before winter, so Ingrid's story does not happen in the middle of winter. Which choice that is left matches Ingrid's story?"
         ],
         how: [
           "\"Moving Day on the Grassland\" begins in spring, on the wide, grassy land of Mongolia.",
@@ -2701,22 +2714,22 @@ PP.addLesson({
         why: "The answers are wide, grassy land in the spring and steep mountains in early fall. Bataa's family moves every spring across the grassland of Mongolia. Ingrid's sheep come down from the mountains of Norway in September, before winter starts." },
       { id: "SK-TT1d-C12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: ["p7", "p8"],
         prompt: "Choose ONE sentence from each story that shows the main character guiding the sheep. Choose two sentences in the passages.",
-        targets: ["p7:3:1", "p7:4:3", "p7:5:2", "p8:3:1", "p8:5:2", "p8:6:3"],
+        targets: ["p7:3:1", "p7:4:3", "p7:5:2", "p7:6:2", "p8:3:1", "p8:5:2", "p8:5:4", "p8:6:3"],
         answer: ["p7:5:2", "p8:5:2"], pick: 2,
         clue: "An action is something a character does. To compare two characters, find one action for each one that fits the question.",
         hints: [
           "An action is something a character does. To compare two characters, find one action for each one that fits the question.",
-          "Look in the middle of each story, once the sheep are on the move.",
-          "Sitting up tall in the saddle happens before Bataa moves any sheep. Check each other sentence: is the child moving the sheep?"
+          "In each story, find the part where the child is with the sheep.",
+          "Falling asleep that night does not move any sheep. Check each other sentence: is the child the one moving the sheep, or are the sheep doing something on their own?"
         ],
         how: [
           "In paragraph 5 of Bataa's story, a lamb wanders toward the river, and he trots after it and turns it back.",
           "In paragraph 5 of Ingrid's story, she takes hold of the bell sheep's collar and leads her down the trail.",
           "The answers are those two sentences, one from each story.",
-          "Sitting up tall happens before the sheep move. Taking the ger apart is a job for the whole family, hiking up comes before Ingrid finds the sheep, and her grin comes at the very end."
+          "Sitting up tall happens before the sheep move. In \"The sheep spread out to eat\" and \"the other sheep followed,\" the sheep act, not the child. Taking the ger apart is a family job, hiking up comes before Ingrid finds the sheep, and falling asleep comes at the very end."
         ],
         misconception: "A common mix-up is choosing a sentence about how a character feels instead of what the character does.",
-        why: "The answers are the sentence where Bataa trots after a lamb and turns it back, and the sentence where Ingrid takes hold of the ewe's collar and leads her down the trail. Both children guide the sheep. Sitting up tall, taking the ger apart, hiking up the trail and grinning at the barn do not show anyone moving sheep." },
+        why: "The answers are the sentence where Bataa trots after a lamb and turns it back, and the sentence where Ingrid takes hold of the ewe's collar and leads her down the trail. Both children guide the sheep. Sitting up tall, taking the ger apart, hiking up the trail and falling asleep do not show the child moving sheep, and in the sentences about the sheep spreading out and following, the sheep are the ones acting." },
       { id: "SK-TT1d-C13", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p7", "p8"], pick: 2,
         stem: ["Story 3: In a village in Kenya, the dry season has come, and the stream near Wanjiru's home has dried up. Every morning, Wanjiru and her older brother walk the family's goats to a water hole far away. Wanjiru keeps the smallest goat close to her side the whole way."],
         prompt: "Think about \"Moving Day on the Grassland,\" \"Bringing the Sheep Home\" and Story 3. Which TWO sentences are true about ALL THREE stories?",
@@ -2752,12 +2765,12 @@ PP.addLesson({
         clue: "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
         hints: [
           "Start by saying the lesson both stories share, in words that fit anyone. Then find the new story with the same lesson, even if it has no sheep in it.",
-          "In each story, look at what a grown-up says to the child, and at how the child feels at the end.",
+          "Ask what each child is given to do, and how the child feels after doing it.",
           "Jalen's family moves, like Bataa's family, but moving to a new town is not the lesson. Say the lesson aloud, then test the stories that are left."
         ],
         how: [
           "In \"Moving Day on the Grassland,\" Father hands Bataa the reins and says he is old enough to help. At the end, Bataa is tired but proud.",
-          "In \"Bringing the Sheep Home,\" Grandma tells Ingrid she will help find the sheep. At the end, Ingrid grins after Grandma says she found the bell sheep all by herself.",
+          "In \"Bringing the Sheep Home,\" Grandma tells Ingrid she will help find the sheep. Ingrid finds the bell sheep and proudly leads her down the trail.",
           "The shared lesson: being trusted with a real job can make you proud. Tomás steers the boat for the first time and beams, so his story teaches the same lesson.",
           "The ducks story and the fair story have animals, and Jalen's story has a move, but those only match a topic."
         ],
@@ -2782,7 +2795,7 @@ PP.addLesson({
         clue: "To compare two cultures, look at how each family lives, not just at what happens on one day.",
         hints: [
           "To compare two cultures, look at how each family lives, not just at what happens on one day.",
-          "Read the first paragraph of each story, and paragraph 3 of Bataa's story.",
+          "Read the first paragraph of each story. What kind of home does each family have, and does it stay in one place?",
           "Both families keep sheep, so the choice about goats and horses does not fit. For Part B, the sentence must match your Part A answer."
         ],
         how: [
@@ -2810,7 +2823,7 @@ PP.addLesson({
       clue: "To contrast, look at the same part of both stories, here what each child does with the animal, and tell how it is different.",
       hints: [
         "To contrast, look at the same part of both stories, here what each child does with the animal, and tell how it is different.",
-        "Read the last sentence of each story.",
+        "Find what each child does with the animal.",
         "Sam is on a farm and Amina is at a market, so the choice that swaps the places mixes up the stories. Test each choice that is left."
       ],
       how: [
@@ -2897,26 +2910,26 @@ PP.addLesson({
     "SK-TT1d-P3": {
       hints: [
         "For each detail, check the first story, then the second. If it happens in both, it goes in Both stories.",
-        "Look at what happens in the middle and at the end of each story.",
-        "Neighbors bring Kofi soup and a whistle, but no one brings Lucy a gift, so that detail belongs to one story. Sort the other details the same way."
+        "Read the start and the end of each story. A detail may be true for both.",
+        "Ama brings Kofi soup, but no one brings Lucy food, so that detail belongs to one story. Sort the other details the same way."
       ],
       how: [
-        "Only Kofi's mangoes rot, so food going to waste belongs to Kofi's story.",
-        "Only Lucy finds that playing alone is no fun.",
-        "Neighbors bring gifts only to Kofi.",
-        "Both main characters decide to share, so that detail goes in Both stories."
+        "Ama brings Kofi a bowl of warm groundnut soup, so the soup belongs to Kofi's story.",
+        "Snow covers Pine Hill only in Lucy's story. Kofi's story is in the hot season.",
+        "Children ask Kofi for a mango, and Sofia asks Lucy for a turn, so someone asks in both stories.",
+        "Both main characters decide to share, so that detail goes in Both stories, too."
       ] },
     "SK-TT1d-P4": {
       hints: [
         "A lesson for both stories must fit Kofi AND Lucy. Look at how each story ends, after the main character changes.",
-        "Read the last paragraph of each story. Choose one sentence from each story for Part B.",
-        "Eating too much fruit never makes anyone sick in Kofi's story, so that choice does not fit. For Part B, the two sentences must match your Part A answer, one from each story."
+        "Find the moment each main character changes their mind. Choose one sentence from each story for Part B.",
+        "Eating too much fruit never makes anyone sick in Kofi's story, so that choice does not fit Part A. In Part B, \"Lucy held the rope tight\" happens before Lucy changes, so it cannot show what her change taught."
       ],
       how: [
         "At the end of Kofi's story, sharing his mangoes fills his days with friends.",
         "At the end of Lucy's story, the three friends ride together, and it is the best ride of the day.",
         "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\"",
-        "Keeping new things clean, getting sick and winter fun fit only one story or neither."
+        "Keeping new things clean, getting sick and winter fun fit only one story or neither. Lucy pulling the sled to her friends is the moment she shares, but it does not show that her day got better."
       ],
       misconception: "A common mix-up is choosing a lesson that fits only one story. Check it against both." },
     "SK-TT1d-P5": {

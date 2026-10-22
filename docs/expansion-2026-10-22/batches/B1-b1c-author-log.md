@@ -240,3 +240,75 @@ These are the risks I can see. They are not resolved here.
 - **Two lesson-level changes to Together:** 3.T.SS.2.a Together grows from 3 to 4 items, and 3.T.T.4.a Together grows from 3 to 5. See the reuse decisions. Every Together item now has addons.
 - **No `cr` items.** The standard says "discuss and explain", so a constructed-response explanation of a technique would fit. I left it out to keep these lessons scored-format only. Consider adding one later.
 - **I have not reviewed any of this myself.**
+
+## 6. Fixes after review (B1-review-2A and B1-review-2B, lead message of 2026-10-22)
+
+Every MUST and SHOULD for 3.T.SS.2.a and 3.T.T.4.a is addressed, and the new rules appended to AUTHOR-BRIEF.md are applied. §1 to §5 above describe the first version. Where they differ, this section wins.
+
+**Ids.** Changed items keep their ids. B0 did the same, because rev "1" has never been released or recorded.
+
+### 6.1 Needs blind re-solve (choices, targets, rows, slots or passage changed)
+
+| Item or text | Change | Finding |
+|---|---|---|
+| **3.T.SS.2.a p4, stanza 2 line 1** | "The gulls are like a recess yard." became "The gulls are like a recess crowd." The first version compared birds to a place | Lead, 2B N-2. Affects C06 to C09; C08 directly |
+| **3.T.SS.2.a p5, paragraph 5** | "A brown anole on a tree trunk…" became "An anole that has turned brown on a tree trunk can be very hard to spot." This avoids the brown anole, a separate species established in Georgia | 2A S-S4. Affects C11 to C14; C12 directly |
+| SS2a-C02 | Part B: "She kicked hard." was replaced with "When Rosa touched the wall, she pulled off her goggles." Paragraph 4 now holds two Part B choices | 2B M-4, 2A S-S1 |
+| SS2a-C05 | Slot 1: "will swim in a pool inside a park" was replaced with "should rest and skip the next meet", a non-literal misreading that "Keep practicing" rules out | 2B M-5 |
+| SS2a-C12 | The Part B key text follows the passage change. "Then it gulps down its meal." was replaced with the paragraph 4 sentence "To warn another male to stay away, he puffs it out and bobs his head up and down." A paragraph 2 colour sentence was **not** used, because it would pre-answer C13, whose key is the colour change | 2B M-4, 2A S-S1, AUTHOR-BRIEF rule 5 |
+| SS2a-S01 | The stem no longer explains itself. "You soak up everything I teach." was removed, so "ask question after question" carries the clue | 2A S-S3 |
+| SS2a-S03 | **Rewritten.** It is now "what does 'as small as a bottle cap' help the reader understand?", a describe item. It no longer has TB4's design (like meaning enjoy, a metaphor, an idiom) or the same-kind trap. The writer is now Lena, not Jamal. `like` is C02 and C11 | Lead, 2A S-S2, 2B M-6 |
+| **3.T.T.4.a p5 "Flip!", stanza 3** | "The dog gets breakfast. He likes it!" became "The dog gets breakfast: every bit!" (sit and bit) | Lead, 2B N-1. Affects C01 to C04 and C10 |
+| TT4a-C01 | Slot 1: "pan and three" was replaced with "pan and sound" (lines 1 and 3), which tests the every-other-line misconception | 2B S-2 |
+| TT4a-C04 | Target p5:2:1 ("Sizzle, sizzle, now it's me.") was added, so stanza 2 holds three targets. 2:4 is still left out, because it would be a second key | 2A P-M1, 2B M-7 |
+| TT4a-C07 | Target p6:1:1 ("The ropes go swinging, round and round.") was added. It repeats a word but is about the ropes, so it still competes after hint 3 rules out "slap" | 2A P-M2, 2B M-8 |
+| TT4a-C08 | Part B now has two stanza 3 lines (the key, and "I'm out of breath, but what a thrill!") and two stanza 2 lines ("My feet are quick…" and "I hop, hop, hop…"). The stanza 1 lines were dropped | 2B M-4, 2A P-M3, AUTHOR-BRIEF rule 4 |
+| TT4a-C10 | **Rewritten.** It no longer repeats C03's frame and key (stanza and line counts). It now compares how the two poets use repeated words. Keys: "Both poets repeat a word that copies a sound" (sizzle, slap) and "Only the pancake poem begins two stanzas with the same two words." Distractors: the reverse "only", a repeated end line in both poems, and "neither repeats a word inside a line" | 2B S-4, lead |
+| TT4a-C14 | **Rewritten** as a two-slot dropdown: "Stanza 1 {before / during / after the game}, and stanza 3 {…}." It no longer copies the "Match each sentence to the stanza" frame of form A T4, form B TB4 and Together P4 | 2A P-S2, lead |
+
+### 6.2 Hint, how, why and label changes only (ladder audit and same-set leakage)
+
+| Item | Change | Finding |
+|---|---|---|
+| SS2a-C02 | Hint 2 is now "Reread paragraph 4 from the beginning", which holds two Part B choices. The how and why rule out the goggles sentence | 2B M-4 |
+| SS2a-C03 | Hint 2 is now "What else does the author tell you about Rosa there?" Hint 3 rules out "frozen" and stops | 2A S-M1 |
+| SS2a-C05 | Hint 2 is now "Reread everything Coach Ellis does and says, not just the saying." Hint 3 settles part of slot 0 only: "not a simile; decide whether it says one thing is another, or is a saying" | 2A S-M1, 2B M-5, brief rule 2 |
+| SS2a-C06 | Hint 2 is now "Picture a sleepy cat. Then reread stanza 1 for what the ocean does." Hint 3 rules out the literal cat only | 2A S-M1, 2B S-1 |
+| SS2a-C07 | Hint 2 is now "Reread stanza 3 and the lines around 'Chin up!'" Stanza 3 holds two Part B choices | 2B M-4, 2A S-S1 |
+| SS2a-C08 | Hint 2 is now "Reread stanza 2. What do the gulls do in each line?" The how and why say "recess crowd" | 2A S-M1, 2B S-1 |
+| SS2a-C12 | Hint 2 is now strategy only: "Try each Part A meaning in place of the idiom…" It names no place | 2B M-4, brief rule 4 |
+| SS2a-C13 | Hint 2 is now "Ask what a magician does that amazes people…". Hint 3 rules out the literal choice, then has the child check which paragraph each remaining choice comes from | 2A S-S1, 2B S-1 |
+| SS2a-C15 | Hint 2 is now "Find each phrase in the writing, and read the sentence around it." | 2A S-M1 |
+| SS2a-P3 (Together) | Hint 2 is now "Try each Part A meaning in place of the idiom. Which one fits the words Ms. Ellis says next?" | 2B N-6 |
+| SS2a teaching | **Glossary:** a simile is "a comparison of two different kinds of things that uses like or as." **Teach point 1:** "two different kinds of things." **Watch Me 1, new step 3:** fur and a cloud are different kinds; "Her fur was as soft as her sister's" would not be a simile. C04's key and its "as long as the pool" distractor now match what the lesson teaches | Lead, 2B M-6, brief rule 7 |
+| TT4a-C01 | Hint 2 points to stanza 2, not stanza 1, whose pair is a slot 1 key. The why no longer claims that every stanza has lines 3 and 4. The how and why no longer mention the last stanza's pair, which would hint at C03 | 2A P-S1, 2B N-3, brief rule 5 |
+| TT4a-C02 | Hint 2 is now "Say 'Sizzle, sizzle' out loud. Then reread stanzas 1 and 2." | 2A P-S1 |
+| TT4a-C03 | DOK relabelled 2 → **1**. The lesson now has one DOK 1 item | Lead, 2A P-S3, 2B S-6 |
+| TT4a-C04 | Hint 2 is now strategy only: "Read the poem in order. At each line, ask: is everything still going as planned?" | 2A P-M1, 2B M-7 |
+| TT4a-C07 | The how and why describe both stanza 1 rope lines | follows the target change |
+| TT4a-C08 | Hint 2 is now "Compare stanza 3 with stanza 2. What is different?" Hint 3 now rules out the trip ("It is the ropes that fall still"). **"The first turn comes in stanza 1" was removed** from hint 3, how and why, so C08 no longer gives away C09 | 2A P-M3, 2B M-4 and M-9 |
+| TT4a-C09 | Hint 2 is now "Ask what part of the game stanza 1 is about, and what part stanza 2 is about." | 2B S-1, 2A P-S1 |
+| TT4a-C11 | Hint 1 is now strategy only: "Repetition can add a beat, and it can make an idea stand out." Hint 2 is "Reread stanzas 1 and 2, and say the repeated line each time." | 2A P-M4 |
+| TT4a-C12 | Hint 2 is now "Compare what the spider is doing in stanza 3 with what she does in stanzas 1 and 2." Hint 3 rules out the storm only | 2A P-S1, 2B S-1 |
+| TT4a-S02 and S03 | Hint 2 no longer answers the item. S03's `like` is now C12 only | 2A P-S1 and P-N3 |
+| TT4a-P5 (Together) | Hint 2 is now "Check both halves of each Part A choice: the start of the poem and the end." It names no stanza | 2B N-6, brief rule 4 |
+| TT4a teaching | Teach point 3 adds "If you change an end word, check whether its partner still rhymes." This prepares C06 | 2B S-8 |
+
+### 6.3 Not changed, with reasons
+
+- **2B N-10 (TT4a-C12).** "Wait" rhymes with "gate", so the "dew" distractor is kept as the reviewer asked.
+- **The other DOK labels in 3.T.T.4.a.** The reviews offered C05 as DOK 1, but the lead asked only for C03.
+
+**Leak checks I added myself, against the new brief rules:**
+- C12's colour distractor would have given away C13.
+- C10 now names the poems by topic, so its keys can be quoted without nested quotation marks.
+- C10's how cites only "oh no, oh no" for repetition inside a line, not C07's keys.
+
+### 6.4 Gates after the fixes
+
+- `node verification/check-content.js --all`: PASS, 0 failures. The only warnings in these two lessons are the similar-coverage warnings: 8 core items in 3.T.SS.2.a and 11 in 3.T.T.4.a have no similar item.
+- `python3 verification/readability.py`: 3.T.SS.2.a p5 is now 173 words, FK 3.3. Two 3.T.SS.1.a passages read above 4.5; they are not in my blocks.
+- `check-writing.js` and `check-instructional-copy.js` pass.
+- **Port 8733:** every core and Together item in both lessons scores right with its key, and there are no page errors.
+- **Six-word n-gram scan:** no content leaks.
+- I have not reviewed my own work.

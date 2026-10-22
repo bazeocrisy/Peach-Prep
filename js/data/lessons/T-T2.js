@@ -799,7 +799,7 @@ PP.addLesson({
   teach: {
     big: "Facts in a text are connected: some happen in order, one after another, and some happen because of something else.",
     points: [
-      "Sequence is the order in which things happen. Words like first, next, then, after that, later and finally help you follow the order.",
+      "Sequence is the order in which things happen. Words like first, next, then, after that, later and finally help you follow the order. A text can tell steps you follow, like a how-to, or events that happened in the past, like a history. Both are told in time order.",
       "A cause is why something happens. An effect is what happens because of it.",
       "Words like because, so, since, as a result, that is why and this caused often point to a cause and an effect.",
       "One effect can cause the next thing to happen, like a chain.",
@@ -838,6 +838,17 @@ PP.addLesson({
         "Read what comes after Because. That is the cause."
       ],
       answer: "The ice could last for months because the sawdust kept warm air away from it."
+    },
+    {
+      show: ["How to make ice pops: 1. Pour juice into the molds. 2. Push a stick into each mold. 3. Pull the ice pops out of the molds. 4. Put the molds in the freezer overnight."],
+      ask: "One step is in the wrong place. Which one, and where should it go? How is a text like this different from a text about history?",
+      steps: [
+        "Picture doing each step in order. Pouring the juice and pushing in the sticks work.",
+        "Step 3 says to pull the ice pops out, but the juice has not frozen yet. That step cannot work there.",
+        "Ask what has to happen first: the pops must freeze. So pulling them out has to come after the freezer.",
+        "A how-to tells steps for you to do. A history text tells events that already happened, in the order they happened. Both use time order."
+      ],
+      answer: "Step 3 belongs at the end: pour the juice, push in the sticks, freeze overnight, then pull the pops out. A how-to gives steps to follow, and a history text tells past events in order."
     }
   ],
   parent: "When you cook or do a chore together, talk through the steps with first, next, then and finally. When something changes, like ice melting in a glass, ask, \"What caused that?\"",
@@ -868,6 +879,25 @@ PP.addLesson({
         ["Because the riders changed horses so often, the mail never had to slow down.", "As a result, a letter could cross the West in about 10 days."],
         ["The Pony Express did not last long, though.", "At the same time, workers were putting up a telegraph line across the country.", "A telegraph sends messages through wires in just minutes.", "The line was finished in October 1861.", "People did not need riders to carry their news now, so the Pony Express closed two days later."],
         ["The Pony Express ran for only about 19 months.", "Still, people today remember the riders who kept the mail moving."]
+      ] },
+    /* B2 (expansion 2026-10-22, author b2a): p4 (a series of historical events) and p5 (steps in a
+       technical procedure) are used only by core sets 2 and 3. Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "The Wheel That Topped a Tower", genre: "Informational text",
+      paragraphs: [
+        ["In 1889, a world's fair was held in Paris, France.", "For the fair, workers built the Eiffel Tower, the tallest tower in the world at that time.", "People came from all over to see it."],
+        ["A few years later, the city of Chicago planned its own world's fair for 1893.", "The planners wanted something even more amazing than the tower in Paris.", "So they asked builders to send in their best ideas."],
+        ["An engineer named George Ferris drew a plan for a giant wheel that would turn slowly in the sky.", "Riders would sit in cars hanging from its edge.", "Many people laughed at his plan.", "They said a wheel that big would fall down."],
+        ["Ferris did not give up.", "He showed the planners how strong steel parts would hold the wheel together.", "At last, they said yes.", "Workers built the wheel all through the cold winter."],
+        ["In June 1893, the wheel turned for the first time.", "It was taller than a 20-story building.", "It had 36 cars, and each car could hold about 60 people."],
+        ["The wheel stayed strong all summer, even on windy days.", "Because it was safe, people stopped worrying and lined up to ride.", "Since then, wheels like his have been built all over the world, and they are still called Ferris wheels."]
+      ] },
+    { id: "p5", title: "How to Patch a Bike Tube", genre: "Informational text",
+      paragraphs: [
+        ["A flat tire can stop a bike ride.", "Often the problem is a tiny hole in the tube.", "The tube is the soft rubber ring inside the tire that holds the air.", "With a grown-up's help, you can patch the hole yourself."],
+        ["First, take the wheel off the bike and let out any air that is left.", "Next, use two flat tools called tire levers to pry one edge of the tire off the rim.", "Then pull the tube out."],
+        ["Now find the hole.", "Pump a little air into the tube and hold it near your ear.", "Listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water.", "Bubbles will rise from the spot where the air is escaping."],
+        ["When you find the hole, dry the tube.", "Rub the spot with sandpaper so the glue can grip.", "Spread a thin layer of glue over the hole and wait until it looks dull.", "Then press the patch on hard and hold it for a minute."],
+        ["Finally, tuck the tube back inside the tire, push the tire onto the rim and pump it up.", "Put the wheel back on the bike, and you are ready to ride again."]
       ] }
   ],
   practice: [
@@ -936,6 +966,476 @@ PP.addLesson({
       clue: "Find the paragraph where the caterpillar hatches. Read its sentences in order.",
       why: "The answer is \"First, it eats its own eggshell.\" The signal word First shows this happens before it starts eating milkweed leaves." }
   ],
+  /* ---------- B2 core (expansion 2026-10-22, author b2a; pattern: 3.T.T.1.c) ----------
+     One ref: P4 (set 1). P5 and P6 stay in Practice Together (P1, P2, P3, P5, P6), because P1, P3 and P5
+     pre-answer them (the order of the stages, the bad taste, the wet wings). Set 2 practises a series of
+     historical events (p4), set 3 a technical procedure (p5) plus a science chain. Author log:
+     docs/expansion-2026-10-22/batches/B2-b2a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT2b-P4" },
+      { id: "SK-TT2b-C02", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p1"],
+        prompt: "Which sentence tells what the caterpillar does just before its skin splits open one last time? Choose the sentence in the passage.",
+        targets: ["p1:3:3", "p1:5:1", "p1:5:3", "p1:5:4", "p1:6:1"],
+        answer: ["p1:5:1"], pick: 1,
+        clue: "Scientific ideas often happen in stages. Find the stage the question names, then look at what comes right before it.",
+        hints: [
+          "Scientific ideas often happen in stages. Find the stage the question names, then look at what comes right before it.",
+          "Find the sentence that says the skin splits one last time. The sentences around it tell the stages just before and just after.",
+          "\"When the skin gets too tight, the caterpillar wiggles out of it\" tells about the earlier times the skin comes off, not the last time. Check which of the other sentences comes before the last split."
+        ],
+        how: [
+          "Paragraph 5 tells the last time the skin comes off: \"Its skin splits open one last time.\"",
+          "The sentence right before it tells what the caterpillar does first.",
+          "The answer is \"When the caterpillar is full grown, it hangs upside down from a leaf or a stem.\"",
+          "The skin hardening and the body changing come after the split, the chrysalis opening comes much later, and wiggling out of a tight skin happens earlier, several times."
+        ],
+        misconception: "A common mix-up is choosing a sentence that comes right after the stage instead of right before it.",
+        why: "The answer is \"When the caterpillar is full grown, it hangs upside down from a leaf or a stem.\" It comes just before \"Its skin splits open one last time.\" The hardening skin and the changing body come after, the chrysalis opens much later, and wiggling out of a tight skin happens earlier." },
+      { id: "SK-TT2b-C03", type: "ms", points: 2, dok: 1, std: ["3.T.T.2.b"], passages: ["p1"], pick: 3,
+        prompt: "Which THREE words or phrases from paragraph 6 help show the order in which things happen?",
+        choices: [
+          { text: "After one or two weeks", correct: true },
+          { text: "At first", correct: true },
+          { text: "Then", correct: true },
+          { text: "cracks open" },
+          { text: "wet and crumpled" },
+          { text: "to find flowers" }
+        ],
+        clue: "Time-order words tell when something happens, like next, later or in the end. They are not the actions themselves.",
+        hints: [
+          "Time-order words tell when something happens, like next, later or in the end. They are not the actions themselves.",
+          "Read paragraph 6 slowly. For each choice, ask: does it tell when, or does it tell what happens or what something is like? Choose three.",
+          "\"Wet and crumpled\" tells what the wings look like, not when something happens. Check each of the other choices the same way."
+        ],
+        how: [
+          "Time-order words tell when. Action words tell what happens.",
+          "\"After one or two weeks\" tells how long before the chrysalis opens. \"At first\" tells how the wings are at the start. \"Then\" tells what comes next.",
+          "The answers are \"After one or two weeks,\" \"At first\" and \"Then.\"",
+          "\"Cracks open\" is an action, \"wet and crumpled\" describes the wings, and \"to find flowers\" tells why the butterfly flies off."
+        ],
+        misconception: "A common mix-up is choosing an action word. Time-order words tell when, not what happens.",
+        why: "The answers are \"After one or two weeks,\" \"At first\" and \"Then.\" Each one tells when something happens. \"Cracks open\" is an action, \"wet and crumpled\" describes the wings, and \"to find flowers\" tells why the butterfly flies." },
+      { id: "SK-TT2b-C04", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
+        stem: ["How to Make a Cup Phone", "1. Poke a small hole in the bottom of two paper cups.", "2. Push one end of a long string through each hole.", "3. Pull the string tight and talk into one cup while a friend listens.", "4. Tie a big knot in each end of the string, inside the cups."],
+        prompt: "One step in these directions is in the wrong place. Which change fixes the directions, and why?",
+        choices: [
+          { text: "Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.", correct: true },
+          { text: "Move step 1 after step 2, because the string has to be in the cups before the holes are poked." },
+          { text: "Move step 3 to the beginning, because you should test your voice before you make the phone." },
+          { text: "Leave the steps as they are, because the knots can be tied after you finish talking." }
+        ],
+        clue: "Steps in a procedure must be in an order that works. Picture yourself doing each step, one at a time.",
+        hints: [
+          "Steps in a procedure must be in an order that works. Picture yourself doing each step, one at a time.",
+          "Act out the steps in your head in the order they are written. Stop at the first step that would not work.",
+          "The holes have to be poked before the string can go through them, so step 1 is in the right place. Now ask whether the string would stay in the cups at each later step."
+        ],
+        how: [
+          "Steps 1 and 2 work: you poke the holes, then push the string through them.",
+          "In step 3 you pull the string tight, but nothing holds the ends inside the cups yet, so the string would slip out.",
+          "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\"",
+          "The string cannot go through holes that are not poked yet, there is no phone to test before you make it, and the knots are needed before you talk, not after."
+        ],
+        misconception: "A common mix-up is keeping the steps in the order they are written. A procedure works only if each step is ready for the next one.",
+        why: "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\" The knots hold the string inside the cups, so they must be tied before the string is pulled tight. The holes must come first, and there is nothing to test until the phone is made." },
+      { id: "SK-TT2b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
+        stem: ["In the early 1900s, cars, horses, wagons and people all shared busy city streets. Early traffic signals switched from Stop straight to Go, with no warning in between, and crashes happened often. Garrett Morgan saw a bad crash at a street corner in Cleveland, Ohio. Soon after, he invented a signal that gave drivers a warning before it changed, so they had time to slow down. A yellow light today does a similar job."],
+        prompt: "Which sentence best tells how the events in this text are connected?",
+        choices: [
+          { text: "Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.", correct: true },
+          { text: "Morgan's new signal came first, and the busy streets and the crashes came after it." },
+          { text: "The streets were busy, so the city took away all of its traffic signals." },
+          { text: "Morgan saw a crash, so he decided that cars should stay out of Cleveland." }
+        ],
+        clue: "In a series of historical events, ask what happened first and what each event led to.",
+        hints: [
+          "In a series of historical events, ask what happened first and what each event led to.",
+          "Find the problem the text tells about first. Then find what Morgan did and when he did it.",
+          "Morgan's signal came after the crash, not before it, so a choice that puts his signal first has the order wrong. Test the other choices: does each one match what really led to what?"
+        ],
+        how: [
+          "The problem comes first: busy streets and signals with no warning, so crashes happened often.",
+          "Morgan saw a bad crash. Soon after, he invented a signal that warned drivers before it changed.",
+          "The answer is \"Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.\"",
+          "His signal came after the crashes, the text never says signals were taken away, and it never says cars were kept out of Cleveland."
+        ],
+        misconception: "A common mix-up is flipping the order: the problem has to come before the invention that solves it.",
+        why: "The answer is \"Signals gave no warning, crashes happened, and that led Morgan to invent a warning signal.\" The crashes came first, and seeing one led Morgan to invent his signal. The text never says signals were taken away or that cars were kept out of the city." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT2b-C06", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
+        prompt: "Put these events in the order they happened, from first to last.",
+        steps: [
+          "A very tall tower is built for a fair in Paris.",
+          "Chicago's planners ask builders to send in ideas.",
+          "George Ferris draws a plan for a giant wheel.",
+          "Workers build the wheel through the cold winter.",
+          "The wheel turns for the first time."
+        ],
+        clue: "In a series of historical events, look for dates and time words like later, at last and since then.",
+        hints: [
+          "In a series of historical events, look for dates and time words like later, at last and since then.",
+          "Each paragraph moves forward in time. Find which paragraph each event comes from.",
+          "The tower in Paris was built for a fair in 1889, years before Chicago's fair, so it comes first. Put the other four in order the same way."
+        ],
+        how: [
+          "Paragraph 1 is about 1889: the tower is built in Paris.",
+          "Paragraph 2 says a few years later, Chicago's planners ask for ideas. In paragraph 3, Ferris draws his plan.",
+          "Paragraph 4 ends with workers building the wheel through the winter, and paragraph 5 says it turned for the first time in June 1893.",
+          "So the order is: the tower, the planners ask for ideas, Ferris draws his plan, workers build the wheel, the wheel turns."
+        ],
+        misconception: "A common mix-up is guessing the order from what seems likely. Use the dates and the time words.",
+        why: "The order is: a very tall tower is built for a fair in Paris, Chicago's planners ask builders to send in ideas, George Ferris draws a plan for a giant wheel, workers build the wheel through the cold winter, and the wheel turns for the first time. The article tells these events in this order, from 1889 to June 1893." },
+      { id: "SK-TT2b-C07", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Why did the Chicago planners ask builders to send in their best ideas?",
+          choices: [
+            { text: "They hoped to top what Paris had built for its fair.", correct: true },
+            { text: "They wanted to hold their fair before Paris held one." },
+            { text: "The tower in Paris had fallen down in a storm." },
+            { text: "George Ferris had already shown them his wheel." }
+          ] },
+        partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+          choices: [
+            { text: "\"The planners wanted something even more amazing than the tower in Paris.\"", correct: true },
+            { text: "\"A few years later, the city of Chicago planned its own world's fair for 1893.\"" },
+            { text: "\"People came from all over to see it.\"" },
+            { text: "\"Workers built the wheel all through the cold winter.\"" }
+          ] },
+        clue: "A cause is why something happens. Ask what the planners wanted, and why they wanted it.",
+        hints: [
+          "A cause is why something happens. Ask what the planners wanted, and why they wanted it.",
+          "Reread paragraph 2. What did the planners want their fair to have? For Part B, choose one sentence.",
+          "The article never says the tower in Paris fell, so that reason does not fit. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "Paragraph 2 says the planners wanted something even more amazing than the tower in Paris. That is why they asked for ideas.",
+          "Part A: They hoped to top what Paris had built for its fair.",
+          "Part B: \"The planners wanted something even more amazing than the tower in Paris.\" The word So in the next sentence links this reason to asking for ideas.",
+          "Paris held its fair first, in 1889, the tower never fell, and Ferris drew his plan only after the planners asked."
+        ],
+        misconception: "A common mix-up is choosing a sentence that tells when something happened instead of why.",
+        why: "Part A: They hoped to top what Paris had built for its fair. Part B: \"The planners wanted something even more amazing than the tower in Paris.\" The next sentence begins with So, which links this reason to asking for ideas. Paris held its fair first, the tower did not fall, and Ferris drew his plan only after the planners asked." },
+      { id: "SK-TT2b-C08", type: "match", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
+        prompt: "Did each event happen before or after the wheel turned for the first time? Match each event to the right time.",
+        cols: ["Before the wheel first turned", "After the wheel first turned"],
+        rows: [
+          { text: "Many people laugh at Ferris's plan.", answer: 0 },
+          { text: "Ferris shows the planners how strong steel parts would hold the wheel.", answer: 0 },
+          { text: "People line up to ride the wheel.", answer: 1 },
+          { text: "Wheels like his are built in other places.", answer: 1 }
+        ],
+        clue: "Time words and the order of the paragraphs show when events happen. Find the moment the wheel first turns, then sort each event.",
+        hints: [
+          "Time words and the order of the paragraphs show when events happen. Find the moment the wheel first turns, then sort each event.",
+          "Find the sentence that tells when the wheel turned for the first time. Then decide whether each event comes in an earlier paragraph or a later one.",
+          "People laughing at the plan happens before the wheel is even built, so it goes before. Sort the other three the same way."
+        ],
+        how: [
+          "The wheel turns for the first time in June 1893, in paragraph 5.",
+          "Before that, in paragraphs 3 and 4, people laugh at the plan and Ferris shows the planners the steel parts.",
+          "After that, in paragraph 6, people line up to ride, and since then wheels like his have been built all over the world."
+        ],
+        misconception: "A common mix-up is sorting by what seems important instead of by when it happened.",
+        why: "Before the wheel first turned, people laughed at the plan and Ferris showed the planners the steel parts (paragraphs 3 and 4). After it turned in June 1893, people lined up to ride, and wheels like his were built all over the world (paragraph 6)." },
+      { id: "SK-TT2b-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4"],
+        prompt: "Why does the author tell that many people laughed at Ferris's plan?",
+        choices: [
+          { text: "to show that Ferris kept going even when people doubted him", correct: true },
+          { text: "to show that the wheel was a funny idea that was never built" },
+          { text: "to show that the planners did not like the tower in Paris" },
+          { text: "to show that riders were too scared to get on the wheel" }
+        ],
+        clue: "In a series of events, one event can set up the next. Ask what happens right after people laugh.",
+        hints: [
+          "In a series of events, one event can set up the next. Ask what happens right after people laugh.",
+          "Keep reading after the people laugh, and follow what happens to the plan.",
+          "Workers do build the wheel, so it is not an idea that was never built. Test the other choices against what comes next."
+        ],
+        how: [
+          "In paragraph 3, many people laugh and say the wheel would fall down.",
+          "Paragraph 4 begins, \"Ferris did not give up.\" He shows the planners the steel parts, and they say yes.",
+          "The answer is \"to show that Ferris kept going even when people doubted him.\"",
+          "The wheel was built, the planners wanted to top the tower, not dislike it, and later people lined up to ride."
+        ],
+        misconception: "A common mix-up is reading one event by itself. Ask how it connects to the event that comes next.",
+        why: "The answer is \"to show that Ferris kept going even when people doubted him.\" Right after people laugh, the article says Ferris did not give up, and the planners said yes. The wheel was built, the planners did not dislike the tower, and people did ride it." },
+      { id: "SK-TT2b-C10", type: "hottext", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4"],
+        prompt: "The author says people stopped worrying because the wheel was safe. Which sentence shows how people could tell it was safe? Choose the sentence in the passage.",
+        targets: ["p4:3:4", "p4:4:2", "p4:5:1", "p4:5:3", "p4:6:1"],
+        answer: ["p4:6:1"], pick: 1,
+        clue: "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
+        hints: [
+          "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
+          "Look at what happens after the wheel starts turning. Which sentences tell about the wheel itself?",
+          "\"He showed the planners how strong steel parts would hold the wheel together\" happens before the wheel is built, and only the planners see it. Check the sentences that are left."
+        ],
+        how: [
+          "People had said a wheel that big would fall down. To stop worrying, they needed to see that it would not.",
+          "Paragraph 6 says the wheel stayed strong all summer, even on windy days. Everyone could see that.",
+          "The answer is \"The wheel stayed strong all summer, even on windy days.\"",
+          "The steel parts were shown only to the planners, the first turn and the 36 cars do not show it is safe, and the sentence about falling down is the worry itself."
+        ],
+        misconception: "A common mix-up is choosing the worry instead of what ended it. Look for the cause that changed people's minds.",
+        why: "The answer is \"The wheel stayed strong all summer, even on windy days.\" Seeing it stand up to the wind showed it was safe, so people stopped worrying. The steel parts were shown only to the planners, the first turn and the cars do not prove safety, and \"would fall down\" is the worry." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT2b-C11", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p5"],
+        prompt: "Put the steps for patching a bike tube in order, from first to last.",
+        steps: [
+          "Take the wheel off and let out the air.",
+          "Pull the tube out of the tire.",
+          "Find the hole by listening or by looking for bubbles.",
+          "Rub the spot with sandpaper and spread on glue.",
+          "Press the patch onto the tube."
+        ],
+        clue: "Steps in a procedure use time words like first, next, then and finally. Each step gets things ready for the next one.",
+        hints: [
+          "Steps in a procedure use time words like first, next, then and finally. Each step gets things ready for the next one.",
+          "Find the time word that begins each part of the article, and match each step to its part.",
+          "You cannot find the hole until the tube is out of the tire, so pulling the tube out comes before finding the hole. Put the other steps in order the same way."
+        ],
+        how: [
+          "Paragraph 2 starts with First: take the wheel off. It ends with pulling the tube out.",
+          "Paragraph 3 begins, \"Now find the hole.\"",
+          "Paragraph 4 says to rub the spot with sandpaper and spread the glue, then press the patch on.",
+          "So the order is: take the wheel off, pull the tube out, find the hole, sandpaper and glue, press the patch on."
+        ],
+        misconception: "A common mix-up is putting a step before the step that gets it ready, like finding the hole before the tube is out.",
+        why: "The order is: take the wheel off and let out the air, pull the tube out of the tire, find the hole by listening or by looking for bubbles, rub the spot with sandpaper and spread on glue, and press the patch onto the tube. Each step gets things ready for the next one." },
+      { id: "SK-TT2b-C12", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p5"],
+        stem: ["Dev wrote the first steps from memory:", "1. Take the wheel off the bike and let out the air.", "2. ________", "3. Pull the tube out.", "4. Find the hole."],
+        prompt: "Dev left out a step. Choose the step that belongs in the blank.",
+        text: "Step 2: {0}",
+        slots: [
+          { options: ["Pry one edge of the tire off the rim with tire levers.", "Pump the tire up until it feels hard again.", "Rub the spot with sandpaper so the glue can grip."], answer: 0 }
+        ],
+        clue: "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
+        hints: [
+          "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
+          "Read Dev's steps 1 and 3. Then reread the article's steps in order and find what Dev skipped.",
+          "Sandpaper is used after the hole is found, so it cannot be step 2. Check whether the other choice that is left could happen before the tube comes out."
+        ],
+        how: [
+          "After the wheel is off, the tire still covers the tube, so the tube cannot come out yet.",
+          "The article says to use two tire levers to pry one edge of the tire off the rim. Then you pull the tube out.",
+          "The answer is \"Pry one edge of the tire off the rim with tire levers.\"",
+          "Pumping comes at the very end, and the sandpaper comes after you find the hole."
+        ],
+        misconception: "A common mix-up is choosing a real step from the wrong place in the procedure.",
+        why: "The answer is \"Pry one edge of the tire off the rim with tire levers.\" The tire covers the tube, so it has to be pried off before the tube can come out. Pumping comes at the end, and sanding comes after the hole is found." },
+      { id: "SK-TT2b-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p5"],
+        prompt: "What would most likely happen if someone skipped rubbing the spot with sandpaper?",
+        choices: [
+          { text: "The glue might not grip, so the patch could peel off and let air out.", correct: true },
+          { text: "The glue would make a second hole somewhere else in the tube." },
+          { text: "The bubbles would stop rising from the hole in the bowl of water." },
+          { text: "The tire would be too big to push back onto the rim of the wheel." }
+        ],
+        clue: "In a procedure, many steps have a reason. Words like so and because often tell why a step matters.",
+        hints: [
+          "In a procedure, many steps have a reason. Words like so and because often tell why a step matters.",
+          "Reread the steps in paragraph 4. Ask what each step does for the step after it.",
+          "Sandpaper does not make holes, so skipping it would not make a new one. Test the other results: which one could really happen?"
+        ],
+        how: [
+          "The article says to rub the spot with sandpaper so the glue can grip.",
+          "If the glue cannot grip, the patch may not stick well, and air could leak out again.",
+          "The answer is \"The glue might not grip, so the patch could peel off and let air out.\"",
+          "Sandpaper does not make holes, the bubbles are used before this step, and the tire fits the rim either way."
+        ],
+        misconception: "A common mix-up is picking an effect that is not connected to the skipped step. Use the reason the text gives.",
+        why: "The answer is \"The glue might not grip, so the patch could peel off and let air out.\" The article says the sandpaper is there so the glue can grip. Skipping it would not make a hole, the bubbles come earlier, and the tire size does not change." },
+      { id: "SK-TT2b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
+        stem: ["Lightning heats the air around it in a flash. The hot air spreads out so fast that it makes a loud boom. That boom is thunder. Light moves much faster than sound, so you see the flash before you hear the boom."],
+        prompt: "Which chain shows how the ideas in this text are connected?",
+        choices: [
+          { text: "Lightning heats the air, so the air spreads out fast, so there is a loud boom.", correct: true },
+          { text: "There is a loud boom, so the air spreads out fast, so lightning heats the air." },
+          { text: "Lightning heats the air, so light moves faster, so there is a loud boom." },
+          { text: "Light moves faster than sound, so the air spreads out, so lightning flashes." }
+        ],
+        clue: "In a cause-and-effect chain, each effect becomes the cause of the next thing. The cause always happens first.",
+        hints: [
+          "In a cause-and-effect chain, each effect becomes the cause of the next thing. The cause always happens first.",
+          "Find the first thing that happens in the text. Then ask what happens because of it, and what happens because of that.",
+          "A chain that starts with the boom has the order backward, because the boom comes last. Check the other chains link by link."
+        ],
+        how: [
+          "First, lightning heats the air around it.",
+          "Because the air is so hot, it spreads out very fast, and that makes a loud boom: thunder.",
+          "The answer is \"Lightning heats the air, so the air spreads out fast, so there is a loud boom.\"",
+          "Light moving fast explains why you see the flash first, but it does not cause the boom or the lightning."
+        ],
+        misconception: "A common mix-up is flipping a cause and its effect. The cause always happens first, even if it is told second.",
+        why: "The answer is \"Lightning heats the air, so the air spreads out fast, so there is a loud boom.\" Each link causes the next. The boom comes last, so it cannot start the chain, and the speed of light explains why you see the flash first, not what makes the boom." },
+      { id: "SK-TT2b-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: ["p4", "p5"],
+        prompt: "How is the way \"How to Patch a Bike Tube\" tells its ideas different from the way \"The Wheel That Topped a Tower\" tells its ideas?",
+        choices: [
+          { text: "The tube text gives steps for a reader to follow, and the wheel text tells events that already happened.", correct: true },
+          { text: "The tube text tells events from long ago, and the wheel text gives steps for a reader to follow." },
+          { text: "Both texts give steps for a reader to follow, one after another, from first to last." },
+          { text: "The tube text uses no time words at all, but the wheel text uses many time words." }
+        ],
+        clue: "Some texts tell steps you can do yourself. Others tell events from the past. Both can use time words.",
+        hints: [
+          "Some texts tell steps you can do yourself. Others tell events from the past. Both can use time words.",
+          "Look at the verbs in each text. Are they telling you what to do, or telling what someone did?",
+          "The tube text uses words like First, Next and Finally, so it does use time words. Check the other choices against both texts."
+        ],
+        how: [
+          "The tube text tells the reader what to do: take the wheel off, pull the tube out, find the hole.",
+          "The wheel text tells what people did long ago, from 1889 to 1893.",
+          "The answer is \"The tube text gives steps for a reader to follow, and the wheel text tells events that already happened.\"",
+          "One choice has the two texts backward, the wheel text does not give steps for you to do, and the tube text uses First, Next and Finally."
+        ],
+        misconception: "A common mix-up is thinking that any text with time words is a set of steps. A history also goes in time order.",
+        why: "The answer is \"The tube text gives steps for a reader to follow, and the wheel text tells events that already happened.\" The tube text tells you what to do, and the wheel text tells what people did from 1889 to 1893. Both use time order, and the tube text has First, Next and Finally." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. */
+  similar: [
+    { id: "SK-TT2b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C04", "SK-TT2b-C12"],
+      stem: ["How to Plant a Tree Seedling", "1. Dig a hole twice as wide as the roots.", "2. Fill the hole with soil and press it down gently.", "3. Set the seedling in the hole.", "4. Water the soil well."],
+      prompt: "One step is in the wrong place. Which change fixes the directions?",
+      choices: [
+        { text: "Move step 3 before step 2, because the seedling must be in the hole before the soil goes in.", correct: true },
+        { text: "Move step 4 to the beginning, because the soil should be wet before you dig the hole." },
+        { text: "Move step 1 to the end, because the hole can be dug after the seedling is planted." },
+        { text: "Leave the steps as they are, because the soil can be lifted out again later." }
+      ],
+      clue: "Picture doing each step in order. Stop at the first step that would not work.",
+      hints: [
+        "Picture doing each step in order. Stop at the first step that would not work.",
+        "Look at steps 2 and 3. Ask what is in the hole at each step.",
+        "You cannot plant before the hole is dug, so step 1 is in the right place. Check the other changes."
+      ],
+      how: [
+        "Step 1 works: you dig the hole.",
+        "Step 2 fills the hole with soil, but the seedling is not in it yet. Then step 3 has nowhere to put it.",
+        "The answer is \"Move step 3 before step 2, because the seedling must be in the hole before the soil goes in.\""
+      ],
+      why: "The answer is \"Move step 3 before step 2, because the seedling must be in the hole before the soil goes in.\" The seedling has to go in first, and then the soil fills in around it. The hole must be dug first, and watering comes last." },
+    { id: "SK-TT2b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C05", "SK-TT2b-C07"],
+      stem: ["In 1905, the streets of Maple Grove were dirt. After every rain, wagons sank deep in the mud, and farmers could not bring their crops to town. So in 1908, the town paved Main Street with red bricks. After that, wagons rolled through even in wet weather, and new shops opened along the street."],
+      prompt: "What caused the town to pave Main Street with bricks?",
+      choices: [
+        { text: "Wagons sank in the mud, so farmers could not get their crops to town.", correct: true },
+        { text: "New shops on Main Street wanted the street to look red." },
+        { text: "The bricks were left over after the new shops were built." },
+        { text: "Farmers asked the town to keep the streets made of dirt." }
+      ],
+      clue: "A cause happens first. Look for a signal word that links the problem to what the town did.",
+      hints: [
+        "A cause happens first. Look for a signal word that links the problem to what the town did.",
+        "Find the sentence that begins with So. Then read the sentence just before it.",
+        "The new shops opened after the street was paved, so they cannot be the cause. Check the other choices."
+      ],
+      how: [
+        "The sentence about the bricks begins with So, which means it is an effect.",
+        "The sentence before it tells the cause: wagons sank in the mud, and farmers could not bring their crops to town.",
+        "The answer is \"Wagons sank in the mud, so farmers could not get their crops to town.\""
+      ],
+      why: "The answer is \"Wagons sank in the mud, so farmers could not get their crops to town.\" The word So shows that paving the street was the town's answer to the mud. The shops opened after the paving, and nothing says the bricks were left over or that farmers wanted dirt." },
+    { id: "SK-TT2b-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C14"],
+      stem: ["Heat moves from hot things to cooler things. If you leave a metal spoon in a bowl of hot soup, heat moves from the soup into the spoon. The heat travels up the metal, so after a few minutes the handle feels warm. Heat does not move through wood as easily, so a wooden spoon's handle stays cooler."],
+      prompt: "Why does the handle of the metal spoon get warm?",
+      choices: [
+        { text: "Heat moves from the soup into the metal and travels up to the handle.", correct: true },
+        { text: "The handle gets warm first, and then it heats up the soup." },
+        { text: "The wooden spoon sends its heat into the metal spoon." },
+        { text: "The soup cools down because the metal spoon is cold." }
+      ],
+      clue: "In a cause-and-effect chain, follow the heat one step at a time.",
+      hints: [
+        "In a cause-and-effect chain, follow the heat one step at a time.",
+        "Find where the heat starts and where it goes next.",
+        "The soup is hot first, so the handle cannot heat the soup. Check the other choices."
+      ],
+      how: [
+        "Heat moves from hot things to cooler things, so it moves from the hot soup into the spoon.",
+        "It travels up the metal to the handle.",
+        "The answer is \"Heat moves from the soup into the metal and travels up to the handle.\""
+      ],
+      why: "The answer is \"Heat moves from the soup into the metal and travels up to the handle.\" The heat starts in the soup and moves up the metal. The handle does not heat the soup, the wooden spoon is a different spoon, and the text does not say the soup cools because of the spoon." }
+  ],
+  /* Hints and Show me how for the ref (P4) and for Practice Together (P1, P2, P3, P5, P6). */
+  addons: {
+    "SK-TT2b-P1": {
+      hints: [
+        "Use the signal words and the paragraph order. The article starts at the very beginning of a monarch's life.",
+        "Each paragraph tells one stage. Read the first sentence of each paragraph to keep track.",
+        "The mother lays the egg before anything else can happen, so that step comes first. Put the other four in order the same way."
+      ],
+      how: [
+        "Paragraph 1: the mother lays an egg on milkweed. Paragraph 2: a caterpillar hatches and eats its eggshell.",
+        "Paragraph 3: it sheds its tight skin several times. Paragraph 5: its new skin hardens into a chrysalis.",
+        "Paragraph 6: a butterfly climbs out and waits for its wings to dry."
+      ] },
+    "SK-TT2b-P2": {
+      hints: [
+        "The question asks why. Look for a signal word that points to a cause.",
+        "Think about what a caterpillar needs as soon as it hatches. Then check what the article says her babies can eat.",
+        "The article never says milkweed keeps eggs warm, so that reason does not fit. Check the other reasons against the article."
+      ],
+      how: [
+        "Paragraph 1 says she chooses milkweed because it is the only kind of plant her babies can eat.",
+        "The word because points to the cause.",
+        "The answer is \"Milkweed is the only kind of plant her caterpillars can eat.\"",
+        "The article does not say milkweed keeps eggs warm, hides them from birds or has the most flowers."
+      ] },
+    "SK-TT2b-P3": {
+      hints: [
+        "Follow the chain one link at a time: the leaves, the poison, the caterpillar, and then what happens next.",
+        "Follow the poison from the leaf into the caterpillar's body. What does it do there, and what happens because of that?",
+        "The article says the poison does not hurt the caterpillar, so it does not get sick. For Part B, the sentence must explain why your Part A answer happens."
+      ],
+      how: [
+        "The leaves have poison. It stays in the caterpillar's body and makes it taste bad.",
+        "Part A: Many birds will not eat monarchs.",
+        "Part B: \"Instead, it stays in the caterpillar's body and makes it taste bad.\" The bad taste is why birds leave monarchs alone.",
+        "The poison does not hurt the caterpillar, and the other sentences are about other stages."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is true but explains a different stage of the monarch's life." },
+    "SK-TT2b-P4": {
+      hints: [
+        "In each sentence, decide which part is the cause and which part is the effect.",
+        "So comes before an effect. Because comes before a cause. Try each word in the blank and read the sentence aloud.",
+        "In the first sentence, eating a lot happens first and growing fast comes after it. Work out the second blank the same way."
+      ],
+      how: [
+        "First sentence: eating a lot is the cause, and growing fast is the effect. So comes before an effect, so the word is so.",
+        "Second sentence: the skin not growing is the cause of the skin getting too tight. Because comes before a cause, so the word is because.",
+        "The answers are so and because."
+      ],
+      misconception: "A common mix-up is flipping the cause and the effect when the effect comes first in the sentence." },
+    "SK-TT2b-P5": {
+      hints: [
+        "For each cause, ask, \"So what happens next?\"",
+        "Find each cause in the article, then read the sentence after it.",
+        "When the skin gets too tight, the caterpillar wiggles out of the old skin. Match the other two causes the same way."
+      ],
+      how: [
+        "Paragraph 3: when the skin gets too tight, the caterpillar wiggles out of the old skin.",
+        "Paragraph 4: because the monarch tastes bad, many birds leave it alone.",
+        "Paragraph 6: because its wings are wet, the butterfly waits before flying."
+      ] },
+    "SK-TT2b-P6": {
+      hints: [
+        "Signal words like first, then and next tell the order of events.",
+        "Find the paragraph where the caterpillar hatches. Read its sentences in order.",
+        "The hatching itself is not something the caterpillar does after it hatches, so skip that sentence. Check the other sentences in that paragraph for a signal word."
+      ],
+      how: [
+        "Paragraph 2 says a caterpillar hatches from the egg.",
+        "The next sentence starts with the signal word First: it eats its own eggshell. Then it munches on milkweed.",
+        "The answer is \"First, it eats its own eggshell.\""
+      ] }
+  },
   test: [
     { id: "SK-TT2b-T1", type: "order", points: 2, dok: 2, passages: ["p2"],
       prompt: "Put the steps of the water cycle in order.",
