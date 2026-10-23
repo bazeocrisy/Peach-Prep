@@ -466,3 +466,98 @@ The CC-S11 overlap is driven by the sentence numerals "(1)" to "(5)" and by the 
 | 3.T.T.2.c | S05 | none | none | **ACCEPT** (igloo fact stands; optional "sometimes") |
 
 Sources: https://en.wikipedia.org/wiki/Igloo (fetched). Jar-garden, rock-painting and juice-pop checks rest on common knowledge and the section 10.7 sources (search hits).
+
+## 12. Final check of S11/S07/S10/S05
+
+Reviewer: independent, new to these four items (did not write them, did not do sections 10 or 11). Date: 2026-10-23. Read-only: no lesson edited, no git run. Scripts and outputs: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/r12/` (`load.js`, `strip.js`, `stripped.json`, `blind-answers.txt`, `jac.js`). Items are as they stand today. Section 11 described earlier versions (CC-S11 was Also/Likewise/However/In contrast); this section governs.
+
+### 12.1 Blind solve
+
+- `load.js` runs `T-TS.js` and `T-T2.js` in a Node `vm` with a mock `PP.addLesson`, indexed by `key` or `code`. `strip.js` printed id, type, points, stem, prompt, text, passages, and only shuffled option text (seeded RNG, rows and columns shuffled too). It removed `answer`, `why`, `hints`, `how`, `clue`, `like`, `misconception`. Grep of `stripped.json` for why/hint/how/clue/answer/correct/key hit only prose ("how the blocks", "the cause and effect backward"), no fields.
+- I saved my answers to `blind-answers.txt` before printing any key: S11 while = difference, Like = likeness, Unlike = difference, Both = likeness; S07 "so"; S10 "raises a question for the reader to think about" and "tells the last step and what you get"; S05 dome = "only Text 1", heat = "both texts".
+- **Agreement: 4 of 4 items, 8 of 8 answer slots (S11 has four rows, S10 and S05 two blanks, S07 one blank). I would defend every key.**
+- **Blindness: S11 is not fully blind.** While probing the data shape I printed the `cols` and `rows` of SK-TSCC-S11 and so saw its answer flags (Like 0, while 1, Unlike 1, Both 0) before solving. S07, S10 and S05 were blind (I only listed field names and the option array of slot 0 shape, with no key values, before solving). I did solve S11 from the text as well, and the sorting is plain, but treat S11's agreement as weaker evidence.
+
+### 12.2 Keys beside why, how and hints
+
+- S11: key, `why` and `how` agree. `how` 1 and 2 name the right sentences.
+- **S07: `how` line 4 is wrong.** It says: "Because, the word Dan used, put the cause after the clue word, which made his sentence backward." In Dan's sentence the word after "because" is "it grew taller than the fence", which is the EFFECT. The `how` line 3 says the effect comes after the clue word, so line 4 contradicts it and teaches the opposite of Teach ("Because and since come just before a cause"). A child who reads the steps in order is told two opposite things. Key and `why` are right.
+- S10: key, `why` and `how` agree. `how` 3 repeats the key but only after the reasoning (acceptable at the end of the ladder).
+- S05: key, `why` and `how` agree; `how` cites the right sentences. `why` says Text 2 "says the same thing with the pockets of air", which is accurate.
+
+### 12.3 Live choices after the clue and hints 1 to 3 (hand recount)
+
+The clue equals hint 1 in all four items.
+
+| Item | Start | H1 + clue | H2 | H3 | Live |
+|---|---|---|---|---|---|
+| S11 | 4 rows x 2 | none | none ("the same, or not the same?" is generic) | **gives the "while" row**: "ask whether bouncing and swinging are the same thing" | 3 rows x 2 free, 1 row effectively solved |
+| S07 | 3 | none | none | no option named; describes the key's function ("which clue word tells the reader that the first part led to the second"). "and" only joins and "until" is time, so a child who applies it has 1 left | 3 on paper, 1 in effect |
+| S10 | 3 x 3 | none | slot 1: "does it tell anything to do" removes "gives the first step" if applied; slot 2: "see how it ends" removes nothing | removes "compares juice pops with ice cream" (slot 2) | slot 1: 3 (2 with H2); slot 2: 2 |
+| S05 | 3 x 3 | none | none ("search Text 1 first, then Text 2") | asks which text says how the blocks are set; heat fact left to the child | 9 |
+
+### 12.4 Similarity of S11 to C09 (my own script, `jac.js`)
+
+Metric: word-set Jaccard over the lowercased letters-and-apostrophes tokens of stem, prompt, cols, row text, text and slots, for C09 and S11.
+
+| Measure | Value |
+|---|---|
+| All tokens | **0.165** (ceiling 0.21) |
+| Function words dropped (the, a, an, and, of, to, is, are, in, it) | 0.092 |
+| Stem only | 0.123 |
+| Shared option strings (C09: 2/3/4, Also, However, For example; S11: likeness, difference, Like, while, Unlike, Both) | **0** (limit 1) |
+
+S11 is within the bar on both counts. The earlier fault (0.228, two shared options) is gone. `like` mapping is still loose (C09 finds the wrong clue word in a paragraph; S11 sorts clue words by what they show): same skill, different task. NOTE.
+
+### 12.5 Words in S11 against what the lesson teaches
+
+Checked `teach`, `learn` and `clues` of TS-CC.
+- **Both:** taught (clue words "both, alike, same"; Learn It "Find the clue word both"; example BOTH).
+- **while:** taught as a difference word (teach point 3, clues.words, Learn It "after however and while").
+- **Unlike:** taught as a difference word (teach point 3, example "UNLIKE baseball pitchers", Learn It).
+- **Like:** **not taught as a clue word.** The only "like" in teach is the phrase "Clue words like both, alike and same" where it means "such as". "Alike" is taught, but a sentence-opening "Like a swing set, ..." is not. A child can get the row from the sentence ("burn off energy" is true of both), so it is not unfair, but it is the one word the lesson never names.
+- The column labels "a likeness" and "a difference" are also new. The lesson says "alike" and "different"; "likeness" appears zero times in teach, learn or clues. Grade 3 suitability: "likeness" is on the high side.
+
+### 12.6 Hint 3 of S11 and S07
+
+- **S11 H3 gives a row.** "Look at the two parts of Sentence 5, on each side of the comma. Ask whether bouncing and swinging are the same thing" settles "while" (a difference) because bouncing and swinging are plainly not the same. It does not narrow to the whole key (three rows remain), but a quarter of a 2-point item is given. SHOULD.
+- **S07 H3 narrows in effect.** It no longer names an eliminated option, which is better than the version section 11 saw, but "which clue word tells the reader that the first part led to the second" is the definition of "so" and also echoes `how` and `why` ("that led to"). With "and" a joiner and "until" a time word, one option is left. SHOULD (the B0 pattern). Fix: end H3 at "Decide which part of the sentence is the cause and which is the effect, then say the sentence with each clue word and listen for one thing making the other happen."
+- Also H2 of S07 says "Reread the stem". "Stem" is test-maker language; a child sees a story and a sentence. NOTE: use "the story".
+
+### 12.7 S10: freezer, slush and juice-pop order
+
+Paper cup, juice, freeze about one hour until slushy, push the stick into the slush, freeze a few more hours until solid, peel the paper and eat. This is the standard method and it is physically right: a stick pushed into liquid juice would fall over or float, so adding it at the slush stage is the realistic order. Section 11's NOTE about a stick "in the middle of the juice" no longer applies. Grape juice has a lower freezing point than water but freezes solid in a home freezer within a few hours; "very cold freezer" is fine. The paragraph jobs are right: P1 asks a question and gives no step, P3 ends with the last step and eating the pop. Teach (TS-SEQ point 5) says "each paragraph or section can have its own job, such as asking a question", so the lesson models what the item asks.
+
+### 12.8 S05 facts and teaching
+
+- Wikipedia Igloo, fetched 2026-10-23 (https://en.wikipedia.org/wiki/Igloo): air pockets in snow make it an insulator; body heat and a qulliq lamp warm the inside; the sleeping platform is raised and beds used hides and caribou furs; the dome is built of compacted snow blocks; the smallest igloos were temporary hunting shelters used rarely. The item's "sometimes built igloos as shelters when they went hunting" is accurately hedged. "A circle that curves up to make a dome" is fair (the shape is a catenary, not claimed otherwise).
+- Teach for 3.T.T.2.c ends with "Is it in Text 1? Is it in Text 2? Is it in both, even in different words?" That is exactly the S05 task, including the "different words" case (Text 2 says "tiny pockets of air, so it holds in heat").
+- Official wording ("Integrate and explain information from two texts on the same topic...") fits: the child locates a fact across two texts. Two blanks, 2 points, DOK 2 are consistent with the lesson's other two-blank items. Passage and note agree: Text 2 never mentions the blocks or the dome.
+
+### 12.9 Findings
+
+**MUST**
+- **SK-TSCE-S07, `how` line 4.** It says "Because ... put the cause after the clue word, which made his sentence backward." In Dan's sentence the word after "because" is the effect; that is why the sentence is backward, and it contradicts `how` line 3 and the lesson's rule that "because" comes just before a cause. Evidence: sentence "Dan watered the sunflower every day because it grew taller than the fence." Fix: "Dan's word, because, put the effect after it, which made his sentence backward."
+
+**SHOULD**
+- **SK-TSCC-S11, H3 gives the "while" row.** Fix: "Choose one clue word and test its sentence: is it true of both things, or does it say they are not the same?"
+- **SK-TSCC-S11, "Like" is not a taught clue word.** Fix: add "like" (as in "Like a swing set, ...") to `clues.words` and teach point 2, or use "Also" style taught words. Optionally relabel the columns "alike" and "different" to match the lesson.
+- **SK-TSCE-S07, H3 narrows to "so" in effect** (12.6). Fix as given there.
+
+**NOTE**
+- S11 `like` (C09) is a looser match (12.4).
+- S07 H2 "stem" is jargon; S07 "until" gives a smooth sentence but a time relation, so the prompt (cause and effect backward) still makes "so" the one answer.
+- S10: slot 1 stays at 3 live options after H3 unless the child applies H2; the three-option pool is easy for a grade 3 reader (the distractors "lists the tools in a box" and "compares ... with ice cream" are weak) but it is a legitimate DOK 2.
+- S05: "two mistakes" means 4 of 9 combinations are known wrong before reading; same shape as C05.
+- Points and DOK: S11 2/DOK 2, S07 1/DOK 2, S10 2/DOK 2, S05 2/DOK 2. All consistent with their cores. No choose-two items here.
+
+### 12.10 Verdict per lesson
+
+| Lesson | Item | MUST | SHOULD | Verdict |
+|---|---|---|---|---|
+| TS-CC | S11 | none | H3 gives a row; "Like" untaught (and "likeness" label) | **ACCEPT** after the two small fixes are folded in; the section 11 blocker (Jaccard, shared options) is cleared (0.165, 0) |
+| TS-CE | S07 | `how` line 4 states the opposite of the lesson | H3 narrows in effect | **NOT ACCEPT** until `how` line 4 is corrected (one sentence); then accept |
+| TS-SEQ | S10 | none | none | **ACCEPT** (physical order of the juice pop is right) |
+| 3.T.T.2.c | S05 | none | none | **ACCEPT** (igloo facts verified, teach covers the task) |
+
+Sources: https://en.wikipedia.org/wiki/Igloo (fetched 2026-10-23). Juice-pop method rests on common knowledge.
