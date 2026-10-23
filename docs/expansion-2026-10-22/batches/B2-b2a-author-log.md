@@ -285,3 +285,104 @@ This section replaces §3–§5 wherever they differ. Ids still follow position 
   - C01, C03, C05, C14 (new), S01 (new);
   - passages p5 and p6 (sweetgrass wording) and p10 ("cord");
   - C04, which uses p5 and p6.
+
+## 11. Fixes after the B2 re-review (B2-rereview-T2.md)
+
+3.T.T.2.c was accepted. I also made the optional 2.c SHOULD fixes (C04 and S02) and the N7 wording change. Gates after these fixes:
+- `check-content.js --all`: PASS, 0 failures. The only warnings in my lessons are the similar-coverage lines.
+- `readability.py`: new passages are FK 2.7–4.4. 2.b p5 is now 180 words at FK 2.7.
+- `check-writing.js`: 0 failures.
+- Six-word n-gram scan: only the generic text-box opener hit remains.
+
+### 11.1 Corrections to §10 (the reviewer's log findings)
+
+1. **§10.2 overstated the live choices** for 2.a C05 (after hint 3), C08 (after hint 2) and C09 (after hint 3). In those versions, only the key was really left. The ladders are now rewritten (§11.2), and §11.3 replaces those rows.
+2. **§10.3's topic search left out 2.a C03.** C03 was unchanged in that round, and it reused the SK-SS1d-P4 market and the L-GRM-03-6 fiddle player. C03 now has a new topic, and §11.4 searches every item's topic, changed or not.
+3. **§10.4 left out R1's note that 2.b p5 is FK 1.9.** I have now joined some very short sentences, and p5 is FK 2.7. No item refers to p5 by sentence number.
+
+### 11.2 What changed
+
+| Finding | Fix made |
+|---|---|
+| MUST-1, 2.a C03 | New topic: Saturday helpers at the Birch Street animal shelter. The options are "helpers caring for the animals at a busy shelter" (key), "a girl who reads a story to a shy puppy" and "a family that takes home a gray cat". There are no farmers, market, peaches or fiddle |
+| MUST-2, 2.a C09 | Hint 3 now stops after ruling out the kitchen, and the gear is not named. The street distractor is now "so firefighters land right next to the big doors" |
+| MUST-3, 2.a C12 | Hint 2 is now location-only: "Find every place in the article that tells about kudzu flowers." "Only a heading can tell the main idea" is replaced by "The jelly fact is in the last part of the article, so it is only a detail." That is false, because "Keeping Kudzu Back" comes after the box |
+| MUST-4, 2.b S01 | Hint 2 is now "Act out the steps in order, one at a time, and stop at the first step you could not do." |
+| MUST-5, 2.b S02 | Hint 2 is now "Find the sentence that tells what the town did. Then look before it and after it for the reason." |
+| SHOULD-1, 2.a C05 | Hint 2 is now "Read all four tips one at a time." The dead distractor is replaced by the misconception "It is not true, so it cannot be one of the key details." I lengthened the distractors to match the key, which clears the checker's length warning |
+| SHOULD-1, 2.a C08 | Hint 2 is now "Read the text box. Then read the headings and notice what each section is about." |
+| SHOULD-2, 2.a C04 | Hint 2 is now "Reread paragraph 2." Hint 3 is kept |
+| SHOULD-3, 2.a C10 | Slot 2's absurd option is replaced by "not a key detail, because the article already tells about the doors" |
+| SHOULD-3, 2.b C04 | "Move step 3 to the beginning…" is replaced by "Move step 2 after step 4, because the knots must be tied before the string goes through the holes." Hint 3 now ends after ruling out step 1 |
+| SHOULD-4, 2.b C05 | Hint 2 is now "List the events in the order the text tells them." The dead distractor is replaced by "Ice led John Roebling to get hurt, and the bridge opening led Emily to help." Hint 3 now ends "Check each link in the other choices against the text." |
+| SHOULD-5, 2.b C10 | Hint 2 is now "Reread paragraphs 4 to 6. Which sentences tell about the wheel itself?" This keeps the steel-parts sentence live |
+| SHOULD-6, 2.c C04 | The sandy-soil choice is replaced by "Its pink tops are soft, so they make the basket's handle." |
+| SHOULD-7, 2.c S02 | Hint 2 is now "Find one fact about the bear in Text 1 and one fact about the seal in Text 2." |
+| N6, 2.b p5 | FK raised from 1.9 to 2.7 by joining short sentences, 180 words |
+| N7, 2.c p6 | "rice farms" is now "rice plantations" |
+
+### 11.3 Choices left after each hint (changed items)
+
+"Live" follows the brief's definition: a choice is live if a child who has followed every hint so far, and its logic, would still have a real reason to pick it. The clue is not shown in own mode, so only hints 1–3 count.
+
+| Item | All choices | After h1 | After h2 | After h3 |
+|---|---|---|---|---|
+| 2.a C03 | K, girl-and-puppy, family-takes-cat | 3 | 3 | K, family-takes-cat |
+| 2.a C04 | K, Laying Eggs All Day, Thousands of Bees, Working Together | 4 | 3 (Thousands is not in ¶2) | K, Laying Eggs All Day |
+| 2.a C05 | K, not-about-tomatoes, not-true, a-step | 4 | 4 | K, not-true, a-step |
+| 2.a C08 | K, most-important, alarm, dressed | 4 | 4 (the headings show sections, not the box's role) | K, most-important, dressed |
+| 2.a C09 | K, kitchen, big-doors, far-from-truck | 4 | 4 | K, big-doors, far-from-truck (the child must still check the bottom-floor labels) |
+| 2.a C10 slot 2 | K, only-a-fun-fact, already-tells-doors | 3 | 3 | 3 (hint 3 rules out "Living Upstairs" in slot 1 only) |
+| 2.a C12 | K, never-flowers, jelly-from-fruit, last-part | 4 | 4 (location only) | K, jelly-from-fruit, last-part |
+| 2.b C04 | K, step-1-after-2, step-2-after-4, leave-as-is | 4 | 4 | K, step-2-after-4, leave-as-is |
+| 2.b C05 | K, opened-first, Emily-planned, ice-hurt-John | 4 | 4 | K, Emily-planned, ice-hurt-John |
+| 2.b C10 | 3:3, 4:2, 5:1, 5:3, 6:1 | 5 | 4:2, 5:1, 5:3, 6:1 | 4:2, 5:3, 6:1 |
+| 2.b S01 | K, water-first, dig-last, leave-as-is | 4 | 4 | K, water-first, leave-as-is |
+| 2.b S02 | K, shops-wanted-red, leftover-bricks, farmers-wanted-dirt | 4 | 4 (the after-sentence about new shops is live) | K, leftover-bricks, farmers-wanted-dirt |
+| 2.c C04 | K, pink-tops-handle, palmetto-never-dried, smell-keeps-bugs | 4 | 4 | K, pink-tops-handle, palmetto-never-dried |
+| 2.c S02 | K, warm-swimming, finds-holes, scares-seals | 4 | 4 | K, finds-holes, scares-seals |
+
+**Within-set checks for the changed items:**
+- **2.a set 1:** Together P1, P2 and P6 do not mention the shelter, tomatoes or headings for paragraph 2. P4 and P7 (earlier in the set) do not state C03, C04 or C05 answers.
+- **2.a set 2:** C06's how does not mention the box or the pole's position.
+- **2.a set 3:** C11's how does not mention the box.
+- **2.b set 1:** P4's why does not touch C04 or C05.
+
+### 11.4 Cross-lesson topic search (every item, changed or not; all of `js/data` except T-T2.js)
+
+- **No hits:**
+  - animal shelter as a setting (only passing mentions: "We chose a puppy at the animal shelter", a persuade sentence, a habitat definition);
+  - Birch Street, mulch, stop sign arm, Cedar Avenue, fire hose, kudzu, Ferris, tire lever, cup phone;
+  - Brooklyn, yeast, Maple Grove, metal spoon, sweetgrass, aluminum, Naismith, chipmunk, polar bear, seal, ice pop.
+- **Benign hits (different facts or passing words):**
+  - ducks in TS-CE's beaver pond (my S02 is duck feathers and oil);
+  - paper cups in T-T1 and TS-CE (ice cube and bean plants, not a cup phone);
+  - "seedlings" as a vocabulary word in L-V12;
+  - basketball (a T-C podcast script, and a gym-closet heading item in TS-DESC);
+  - "nature trail" in a T-C poster, and "science center" in a T-RA source list;
+  - raccoons tipping trash cans in TS-CE (my 2.c Watch Me says raccoons sleep in hollow trees and hunt at night, a different fact);
+  - "Kayla" as a name in several lessons;
+  - "Morgan" only in TS-CE, which is no longer in 2.b;
+  - fire station: a T-TS comment and one L-GUM2 sentence;
+  - concert: grammar sentences in L-GUM5, L-GUM2 and T-C.
+
+### 11.5 Findings not addressed, and why
+
+- **N1, 2.b C13** stays a near-literal lookup at DOK 2. The reviewer accepted it.
+- **N2, 2.c C05** keeps "has two mistakes". The reviewer accepted it, and 2.c is accepted.
+- **N3, bike topic in 2.a C14 and 2.b p5.** The key facts differ, and the lead kept the bike tube in 2.b. A non-bike figure would need a new SVG and a new review. I left this for the lead to decide.
+- **N4, recycling-bin colours** differ from TS-DESC S02's. No key fact is shared.
+- **N5, pre-existing overlaps** (bees, monarchs, hummingbirds) are outside this batch. They are for the PP-004 follow-up.
+- **N8, Together addon hints** are not rendered in Together mode today. This is an engine matter, not content, and I made no change. 2.a P6's addon hint 2 (R2 NOTE-5) is unchanged for the same reason.
+- **N9, the fire-station "street" label** has no leader line. The reviewer accepted it.
+- **N10** is player behaviour, not content.
+- **04-content-plan §4.1's out-of-date sentence** about Together is still a lead action. It is not my file.
+
+### 11.6 Needs blind re-solve
+
+- **MUST items:** 2.a C03, C09 and C12; 2.b S01 and S02.
+- **Also changed:**
+  - 2.a C04, C05, C08 and C10 (slot 2);
+  - 2.b C04, C05 and C10;
+  - 2.c C04 and S02;
+  - the passage text in 2.b p5 (joined sentences) and 2.c p6 ("rice plantations").
