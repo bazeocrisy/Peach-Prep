@@ -356,3 +356,113 @@ I compared every six-word run in each item's stem, prompt, text and options with
 | TS-CC | S11 | S11 | **NOT ACCEPT** (near-copy of C09; Jaccard 0.40, shared frame, options and hints) |
 
 Sources: https://en.wikipedia.org/wiki/Igloo ; https://kids.britannica.com/students/article/rattlesnake/313149 ; https://www.britannica.com/animal/rattlesnake (search hit) ; https://home.nps.gov/para/learn/nature/western-rattlesnake.htm (search hit) ; https://makezine.com/projects/mason-jar-terrarium/ (search hit) ; https://onelittleproject.com/how-to-make-a-terrarium/ (search hit).
+
+
+## 11. Last blind re-solve
+
+Reviewer: independent, new to these items. Date: 2026-10-23. Read-only: no lesson edited, no git run. Items solved: TS-SEQ S06 and S10, TS-CC S11, TS-CE S07, 3.T.T.2.b S13, 3.T.T.2.c S05. Scripts and outputs: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/r/` (`load.js`, `blind.js`, `stripped.json`, `answers.txt`, `keys.js`, `sim.js`, `sim2.js`, `ctx.js`).
+
+Section 10 described earlier versions of several of these items (S06 was a story-of-events item, S10 a time-words item, CC-S11 a dropdown). This section is about the items as they now stand; where it differs from section 10, this one governs.
+
+### 11.1 Blind solve
+
+- `load.js` runs `T-TS.js` and `T-T2.js` in a Node `vm` sandbox with a mock `PP.addLesson`. `blind.js` printed only id, type, points, DOK, stem, prompt, text, rows, columns and option text. It removed `answer`, `correct`, `why`, `hints`, `how`, `clue`, `misconception`, `like` and `std`. Option lists were shuffled with a seeded RNG. I grepped the stripped JSON for answer, correct, why, hint, clue, how and key before reading it. The hits were stem or prompt words ("clue word", "how the blocks"), not fields.
+- I saved my answers in `answers.txt`, then ran `keys.js`, then read `like` items, the earlier reviews and the rest of this file.
+- **Agreement: 6 of 6 items, 8 of 8 blanks or rows (the match item has four rows).** My answers: SEQ-S06 Paragraph A, "one more step"; SEQ-S10 "raises a question" and "tells the last step and what you get"; CE-S07 "so"; CC-S11 Also and Likewise are likenesses, However and In contrast are differences; T2b-S13 "Spread a layer of soil"; T2c-S05 "only Text 1" for the dome, "both texts" for the heat.
+- **Blindness: almost complete.** While probing the data shape I printed a 800-character slice of TS-SEQ's core set 1 with long strings shortened. It covered core items C02 and C04, which are not among the six items or their paired core items, and it showed the choices array with a `correct` flag on C02. No target item, no paired core item (C05, C09, C07, C12, C05) and no key for a target was visible before I saved the answers.
+
+### 11.2 Keys beside why, how and hints
+
+All six keys match their `why` and `how`. No hint states a key in the key's words. Details:
+- SEQ-S06: `how` is right: A is steps (First, Next, Then), B is details about one place. The hint ladder never mentions "Paragraph A".
+- SEQ-S10: `how` is right. The note that the first paragraph of a how-to can set up a question first matches the item.
+- CE-S07: `why` and `how` agree. `how` 3 ("the answer is so") reads awkwardly because the key is the word "so". NOTE.
+- CC-S11: `why` and `how` agree.
+- T2b-S13: `how` 1 ("rocks alone cannot hold the plants") is an inference the directions do not state. NOTE (same as section 10).
+- T2c-S05: `why` and `how` agree and cite the right sentences.
+
+### 11.3 Live choices after the clue and hints 1 to 3 (hand recount)
+
+The clue equals hint 1 in all six items.
+
+| Item | Start | H1 + clue | H2 | H3 | Live |
+|---|---|---|---|---|---|
+| SEQ-S06 | 4 | none | none ("a sentence that starts with Last" restates the prompt) | removes "tells what the rock looks like" | 3 |
+| SEQ-S10 | 3 x 3 | none | slot 1: "does it tell anything to do" removes "gives the first step" in effect; slot 2: "how it ends" removes nothing | removes "compares juice pops with ice cream" (slot 2) | slot 1: 3 (2 if the child applies H2); slot 2: 2 |
+| CE-S07 | 3 | none | none | removes "until" | 2 (and, so), and the end of H3 describes only "so" (see SHOULD) |
+| CC-S11 | 4 rows x 2 | none | none | **gives row 2 outright**: "round and flat against tall, so those two are not the same" | 3 rows x 2 = 8 combinations left, one row solved |
+| T2b-S13 | 3 | none | none (find the gap between the card and the directions) | removes "close the lid" | 2 |
+| T2c-S05 | 3 x 3 | none | none ("Text 1 first, then Text 2") | none (asks which text sets the blocks) | 9 |
+
+### 11.4 Similarity to the paired core item (my own script, `sim.js` and `sim2.js`)
+
+Metric: word-set Jaccard over passage, stem, prompt, text, options, rows and columns, with punctuation stripped. The "no stopwords" column drops a 60-word list of function words. Bar: 0.21 or less and at most one shared option string.
+
+| Item | Core | Jaccard | No stopwords | Shared options | Result |
+|---|---|---|---|---|---|
+| SEQ-S06 | C05 | 0.184 | 0.116 | 0 | within the bar |
+| SEQ-S10 | C09 | 0.195 | 0.165 | 0 | within the bar |
+| CE-S07 | C07 | 0.142 | 0.112 | 1 ("until") | within the bar |
+| CC-S11 | C09 | **0.228** | 0.155 | **2** ("Also,", "However,") | **over the bar on both counts** |
+| T2b-S13 | C12 | 0.204 | 0.144 | 0 | within the bar, 0.006 under the ceiling |
+| T2c-S05 | C05 | 0.201 | 0.123 | 1 ("both texts") | within the bar |
+
+The CC-S11 overlap is driven by the sentence numerals "(1)" to "(5)" and by the clue words "Also," and "However,", which are the key words of C09. The task type differs (match against dropdown), which softens it. The number is still over the stated bar, so I record it. No other target item scored above 0.21 against any core or practice item in its own lesson (best matches: SEQ-S10 0.23 against C02 by raw count is a shared how-to frame, not a clone; CC-S11 0.23 is the C09 pair).
+
+### 11.5 Ladder, giveaways, and honesty of `like`
+
+- **No hint names a location that only the key occupies.** SEQ-S06 H2 mentions "Last", which is in the prompt. T2c-S05 H2 names both texts in turn. T2b-S13 H2 names no step.
+- **CC-S11 H3 solves a row.** It says sentence 3 tells "round and flat" against "tall", "so those two are not the same", which is the key for However. A quarter of a 2-point item is given away. SHOULD.
+- **CC-S11 rows alternate** likeness, difference, likeness, difference (answers 0, 1, 0, 1). A guesser who sees the first two rows gets the last two. SHOULD: reorder the rows.
+- **CC-S11 teaches words the lesson never teaches.** `clues.words`, Learn It and Teach contain both, alike, same, but, however, unlike, different, while. They do not contain also, likewise, in contrast or in addition (zero hits in teach, learn, parent and coach). C09 already uses "Also," and "In addition,"; S11 adds "Likewise," and "In contrast,". A third grader who has met only the listed words must guess two of the four rows. SHOULD: add the likeness and contrast words to `clues.words` and Teach, or use the listed words.
+- **CE-S07 H3 narrows to the key.** It removes "until" by name and then asks "which clue word shows that the second part is the result". Of the two words left, only "so" shows a result. This is the pattern B0 flagged. SHOULD: end H3 at "Decide which part is the cause" and leave the choosing to the child. Also "until" is not clearly wrong: "Dan watered the sunflower every day until it grew taller than the fence" is a smooth sentence, though it states a time, not a cause. The prompt says to fix cause and effect, which makes "until" wrong, so the key stands. NOTE.
+- **SEQ-S10 slot 2** has a distractor ("compares juice pops with ice cream") that H3 names as absent. That is a fair elimination, not a narrowing to the key, because "adds a fun fact" remains. Slot 1 has three live options after H3 unless the child follows H2.
+- **T2c-S05 `like` is honest.** C05 has the same two-blank form with the same option pool; the keys are different (C05: both, only second; S05: only first, both). The Learn It rule "Is it in Text 1? Text 2? Both?" models it.
+- **SEQ-S06 `like` (C05)** asks a different question on the same stimulus design (which paragraph, against how the paragraphs differ). It is the same skill, applied in a fresh way. Honest.
+- **SEQ-S10 `like` (C09)** has the same form (what the first and last paragraphs do) and the same skill. Honest, and the section 10 concern about `like` pointing at the wrong skill is resolved.
+- **CE-S07 `like` (C07)** is the same task ("the clue word makes cause and effect backward; choose the one that fixes it") with new content. Honest, but it is the closest in kind of the six.
+- **CC-S11 `like` (C09)** is a looser match: C09 finds a wrong clue word in a paragraph, S11 sorts clue words by what they show. Related skill, different task. NOTE.
+- **T2b-S13 `like` (C12)** is the same task with new content. Honest.
+- **No pre-answering.** The topics rock painting, gym lines, grape juice pop, trampoline and swing set, sunflower, jar garden and igloo appear in no other item of these two files except where noted: "gym" is in unrelated items (TS 1968 school timeline, a picnic CR sample, T2 basketball and notes passages), and "sunflower" appears only in this item's own `why`. No core item, Together item or form A or form B item contains the key text of a target item.
+- **Learn It and Watch Me cover the skills.** TS-CE Teach says "Because and since come just before a cause. So and as a result come just before an effect", which is exactly the S07 rule. TS-SEQ Teach says each paragraph can have its own job, such as asking a question (S10). 3.T.T.2.c Teach says to ask "Is it in Text 1? Text 2? Both?" (S05). The only gap is the CC clue words above.
+
+### 11.6 Facts (checked)
+
+- **Igloo (T2c-S05).** Wikipedia (https://en.wikipedia.org/wiki/Igloo, fetched): snow is an insulator because it traps air; heat from body heat, a stove or a lamp (the qulliq) warms the inside; the sleeping platform is raised and beds were made of snow, skins and caribou furs; the dome is raised from blocks leaning on each other. It says the smallest igloos were temporary shelters used for one or two nights and only occasionally on hunting trips on open sea ice. So "People in the far north built igloos as shelters when they went hunting" is true but a little general: igloos were used on hunting trips, but only sometimes, and most winter dwellings were larger. NOTE: "sometimes built igloos as shelters when they went hunting" is exact. The "circle that curves up to make a dome" is fair; the article does not describe a spiral, which is not claimed. Verdict: the hunting-shelter fact stands.
+- **Rock painting and gym (SEQ-S06).** Nothing factual to check beyond ordinary school life: wash and dry a rock, paint one color, add dots and stripes, then set it in the sun to dry. Gym floor lines for basketball and four square are common. Fine.
+- **Juice pop (SEQ-S10).** A paper cup, a stick and a freezer is the usual method. In practice the stick will not stand in liquid juice until the juice is partly frozen. NOTE: the text says "stand a wooden stick in the middle of the juice". Harmless for a sequence item, and a third grader will not object.
+- **Jar garden (T2b-S13).** Rocks for drainage, then soil, then plants, then a little water and a lid matches standard terrarium instructions (the same sources as section 10.7). Fine.
+- **Trampoline and swing set (CC-S11).** "Round and flat" fits the common round backyard trampoline; rectangular ones exist. A backyard swing set is tall with chains. Fine. NOTE.
+- **Sunflower (CE-S07).** A sunflower that outgrows a low fence in a few weeks is plausible (section 10.7).
+
+### 11.7 Findings
+
+**MUST**
+- None that is a wrong key, a two-answer item or a hint that states the key. The only measured fail is CC-S11 below, which I rate by the brief's own bar (0.21, one shared option).
+
+**SHOULD**
+- **SK-TSCC-S11, over the stated bar.** Jaccard 0.228 against C09, with two shared options ("Also,", "However,"). Also H3 gives away row 2 (However), the rows alternate 0, 1, 0, 1, and Likewise and In contrast are never taught. Fix, all small: replace "Also," with a word that is not in C09 and add the likeness and contrast words to `clues.words` and Teach; reorder the rows (for example In contrast, Likewise, However, Also); rewrite H3 to "Choose one clue word and test its sentence: is it true of both things, or does it say they are not the same?"
+- **SK-TSCE-S07, hint 3.** It names the eliminated option and then describes the key's function. Fix: stop H3 at "Decide which part is the cause and which is the result", and leave out "which clue word shows that the second part is the result".
+- **SK-TSCC-S11, `like`.** C09 is a find-the-wrong-word task; S11 is a sort. Either say so in the lesson notes or pick a closer core item. (Low priority; fold into the fix above.)
+
+**NOTE**
+- SEQ-S06: the "Paragraph B, because it tells about a place" distractor is weak, since "set the rock in the sun" does not read as a place at all. Both B-options are reasonably plausible to a child because B has "In addition", which is a list-like word. Ladder: H3 leaves 3 of 4 options.
+- SEQ-S06 and C05 share the A (steps) / B (one place, "such as", "In addition") shape. Different question; within the bar.
+- SEQ-S10: stick realism (11.6). Slot 1 has three live options after H3.
+- CE-S07: the `how` line "so the answer is so" reads awkwardly.
+- T2b-S13: the two wrong options are both eliminated by position alone, so the item tests the order of steps only. DOK 2 is generous for a missing-step lookup that has one step between two named ones; the lesson's other items carry the harder work. `how` 1 asserts an inference.
+- T2c-S05: "two mistakes" means each blank's current value is wrong, so 4 of 9 combinations remain before any reading. C05 has the same shape.
+- Points and DOK: SEQ-S10, CC-S11 and T2c-S05 are 2 points; SEQ-S06, CE-S07 and T2b-S13 are 1 point. All are DOK 2. No choose-two items here. Consistent with the cores.
+- Grade 3 suitability: all six are at grade level. Nothing kindergarten-like. The CC-S11 word "Likewise" and "In contrast" are on the high side without Teach support, as above.
+
+### 11.8 Verdict per lesson
+
+| Lesson | Item | MUST | SHOULD | Verdict |
+|---|---|---|---|---|
+| TS-SEQ | S06, S10 | none | none | **ACCEPT** (NOTEs only; S10's section 10 MUST on hint 2 is fixed, S06 is now within the bar at 0.184) |
+| TS-CC | S11 | none | over the stated bar (0.228, two shared options), H3 gives a row, alternating rows, untaught clue words | **NOT ACCEPT** until the small fixes in 11.7 are made; no key or logic error |
+| TS-CE | S07 | none | H3 narrows to the key | **ACCEPT** (fix H3 when convenient) |
+| 3.T.T.2.b | S13 | none | none | **ACCEPT** (0.204, 0.006 under the ceiling) |
+| 3.T.T.2.c | S05 | none | none | **ACCEPT** (igloo fact stands; optional "sometimes") |
+
+Sources: https://en.wikipedia.org/wiki/Igloo (fetched). Jar-garden, rock-painting and juice-pop checks rest on common knowledge and the section 10.7 sources (search hits).
