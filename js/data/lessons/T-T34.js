@@ -1724,31 +1724,29 @@ PP.addLesson({
       misconception: "A common mix-up is picking the sentence that sounds like a choir. Evidence has to show the reason it supports.",
       why: "Blank 1 needs \"For instance\" because the next sentence is an example of listening. Blank 2 needs \"singers have to hear the voices beside them so that all the voices blend,\" because that shows how singing together builds listening. The robes and music room sentences are not about listening." },
     { id: "SK-TT3c-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C13"],
-      stem: [
-        "A student is writing about adding a water fountain near the playground."
-      ],
+      stem: ["A student is writing about adding a bike rack near the front door."],
       prompt: "Which TWO sentences use a linking word correctly?",
       choices: [
-        { text: "We should add a water fountain since the playground gets very hot in the summer.", correct: true },
-        { text: "A fountain would keep us cool. Also, it would save us from running inside for a drink.", correct: true },
-        { text: "We should add a water fountain, but the playground gets very hot in the summer." },
-        { text: "A fountain would keep us cool. Instead, it would save us from running inside for a drink." },
-        { text: "We should add a water fountain, until the playground gets very hot in the summer." }
+        { text: "We should add a bike rack since many students ride their bikes to school.", correct: true },
+        { text: "A rack would keep bikes neat. Also, it would stop bikes from blocking the doorway.", correct: true },
+        { text: "We should add a bike rack, but many students ride their bikes to school." },
+        { text: "A rack would keep bikes neat. Instead, it would stop bikes from blocking the doorway." },
+        { text: "We should add a bike rack, until many students ride their bikes to school." }
       ],
       clue: "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, tells about time or replaces the first idea.",
       hints: [
         "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, tells about time or replaces the first idea.",
         "Read each version aloud, and ask how the second part connects to the first. Choose two.",
-        "\"Until\" tells about time, but a hot playground is not a time the fountain waits for. Look at the choices that are left."
+        "\"Until\" tells about time, but riding bikes is not a time the rack waits for. Look at the choices that are left."
       ],
       how: [
         "For each version, decide how the second idea connects to the first.",
-        "A hot playground explains why the school should add a fountain, so \"since\" fits. Saving a trip inside is a second good thing a fountain does, so \"Also\" fits.",
-        "The answers are: We should add a water fountain since the playground gets very hot in the summer. And: A fountain would keep us cool. Also, it would save us from running inside for a drink.",
-        "\"But\" shows a difference, \"until\" tells about time, and \"Instead\" would mean the fountain replaces keeping us cool."
+        "Many students riding bikes explains why the school should add a rack, so \"since\" fits. Keeping the doorway clear is a second good thing a rack does, so \"Also\" fits.",
+        "The answers are: We should add a bike rack since many students ride their bikes to school. And: A rack would keep bikes neat. Also, it would stop bikes from blocking the doorway.",
+        "\"But\" shows a difference, \"until\" tells about time, and \"Instead\" would mean the rack replaces keeping bikes neat."
       ],
       misconception: "A common mix-up is choosing a linking word because it sounds familiar. The word must match how the two ideas connect.",
-      why: "The answers are \"We should add a water fountain since the playground gets very hot in the summer\" and \"A fountain would keep us cool. Also, it would save us from running inside for a drink.\" Since explains why, and also adds another good thing. But shows a difference, until tells time, and instead would replace the first idea." },
+      why: "The answers are \"We should add a bike rack since many students ride their bikes to school\" and \"A rack would keep bikes neat. Also, it would stop bikes from blocking the doorway.\" Since explains why, and also adds another good thing. But shows a difference, until tells time, and instead would replace the first idea." },
     { id: "SK-TT3c-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C14"],
       stem: [
         "(1) Our school should add a sandbox for the little kids. (2) Digging and building in sand helps young children use their hands and plan ahead. (3) Last week, a kindergartner at our school built a tunnel and then fixed it when it fell. (4) A sandbox would let the smallest kids share a quiet corner of the yard. (5) Sandboxes are nice."

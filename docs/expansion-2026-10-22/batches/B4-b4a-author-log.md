@@ -96,8 +96,80 @@ Teach edits: added "sound word"; tip mentions ordering and matching.
 
 ## Findings not addressed
 - 3.T.T.2.b (accepted lesson, not edited) has a "How to Make a Cup Phone" stem at T-T2.js ~line 1389 that duplicates the SS.1.b can-telephone topic, and paired hummingbird passages overlapping SS.1.d. Outside my four blocks; reported to the coordinator.
-- 4.b p4 "Swim Day" shares the setting (swimming) with a 3.T.T.3.a opinion Watch Me on learning to swim; different text type and point, kept.
+- (Resolved after review: 4.b p4 is now "Dance Class", so the swimming overlap is gone.)
 - Hint 1 on order items names the pattern the prompt already states, so honest live counts start at 8, not 24 (C01 4.b).
 
+## Fixes after review
+
+Reviews: B4-review-T1e-T2d.md and B4-review-T3c-T4b.md. Every MUST and every SHOULD below was changed unless listed under "Not changed". Measured near-copy check: my own script (jac.js, whole item text of stem, prompt, text, choices, steps, rows, columns; hints, how and why excluded; each similar item against every core item, every practice ref and every other similar item). Result for all four lessons: 0 pairs over 0.21 and 0 pairs with more than one shared option.
+
+### 3.T.T.1.e
+- S01 rebuilt: new scene (Rosa and cousin Dev), options share none with P5 (A moment later / To begin with / Long before that; In the end / At first / Earlier).
+- S11 rebuilt: new key reason ("It starts the action with Kofi at the wall."), new distractor reasons (explains how a wall is built, tells how the story ends, gives an opinion); the "where the story happens" reason is gone.
+- C02 (P4) and C12 and S02, S12 order ladders: hint 2 no longer fixes first and last; hint 3 now settles one sentence only.
+- C09 and S09 rows are no longer in job order; S09 columns reworded.
+- C10 and S10 clue no longer says "show how the character feels", so the weak blank-2 choice stays live.
+- Learn It words: setting and problem now appear once. The splice guard bug (new text contained old text) is fixed by dropping that pair from the builder.
+- Watch Me: pancake example now also removes an off-topic sentence; Carlos example now models a beginning that is also dialogue.
+- Prompts reworded on S01-S04, S07, S09, S12, S14 to reach the measured ceiling.
+
+### 3.T.T.2.d
+- S15 rebuilt: new topic (tape measures), drafts labeled "first draft" and "second draft", options share none with C15.
+- C05 (P4) and S05: the clue and hint 1 now say "ask of each choice: does it sum up the main idea of the whole draft?" and no longer name the wrong types. Hint 3 removes the "Next" choice only.
+- Peanut facts: grepped T-C.js, L-V3.js, T-RA.js and T-SS.js for flower above ground, peg, pod, legume, harvest, combine, drying, Georgia, not-true-nut. p1 stays as is. No new item restates them: C02 now supports a new paragraph about peanut products (cooking oil), C03 orders the steps of making peanut butter, C04 defines "protein". Addon text for P1-P6 was trimmed so it no longer retells the growth or harvest facts (the quoted answer sentences of the existing practice items remain).
+- C03 no longer models C04 (different topics); hint 3 places one sentence.
+- C10: stem no longer names a sentence; the key is worded as a caption, so the figure decides.
+- C13: hint 3 now says the figure shows magnets pulling or not pulling four objects.
+- C09: second key replaced with "Even in dim light at dawn or dusk, this yellow is easy to spot." (closer to sentence 3).
+- Watch Me: cheetah example now also fixes a weak introduction; lighthouse example now also shows a definition.
+- Similar prompts reworded (S01, S04, S05, S07-S09, S11-S15); S01 rows no longer in job order and use new introduction and conclusion sentences.
+
+### 3.T.T.3.c
+- S12: new topic (choir), new sentence; the accepted 3.a soccer sentence is gone.
+- S02, S08, S12 rebuilt with different keys and options: since / For instance; Besides / So; For instance, (with comma). S02 and C02 share no option; S08 and C08 share none.
+- S11 rebuilt with different jobs (says what the writer wants, tells why, proves the reason, sums up the piece) and no row numbers. C11 rows are now unnumbered and in mixed order.
+- S13 rebuilt: since / Also keys; decoys but, instead, until; topic bike rack. S04 rebuilt: new topic and connectors (One reason / Another reason / So).
+- C11, S11, P5, S04 hint 3 settle at most one row or step.
+- C09: sentence 5 reworded to be clearly about drivers; sentence 6 (the reason) added as a distractor, so the key pair is not the only paragraph-3 pair. C08's quoted sentence 5 matches.
+- Learn It: first example adds an introduction, second names the linking word.
+- Prompts and distractors reworded on S03, S05-S07, S09, S10, S14 (S10 and S14 no longer reuse the "First," decoy).
+
+### 3.T.T.4.b
+- p3 stanza 1 replaced (At half past seven, I stand and wait / My backpack by my feet / A yellow bus comes up the hill / And stops across the street). Nothing now matches the 4.a stanza. C06 asks about stanza 1 only; C07 no longer lists stanza 3 twice (the decoy is line 2 of stanza 2); C09's decoy is stanza 1 line 3.
+- C13 how fixed. p4 is now "Dance Class" (the swim setting is gone), with a stanza 4 distractor added to Part B. C11, C12, C13, C14 rewritten for it. C12 no longer names a feeling.
+- C01 punctuation cue removed (lines 1 to 3 end with commas) and the second pair now has a logic cue ("And we sit down when the soup is done"); hint 3 places the pair order only.
+- S10 distractor now ends with "barn" (no slant rhyme). S11 stem now includes the distractor line. S15 option A no longer repeats C15. S05 and S13 are no longer the same scene (S13 is a parade). S05 has two exclamation-mark decoys and a method hint 3.
+- C04, C14, S04 poems now show " / " between lines. C04 line 4 now reads "I sell them fast, I sell the lot" (no tense shift).
+- C08, S08, C09, S09 hint wording no longer solves a row or names the key's noise.
+- S04, S14, S01, S06 reworked to different task shapes: S14 is now a word-pair choice, S04 uses new wording, S01 and S06 reworded.
+- Teach: "sound word" appears once in the words list. Watch Me now mentions action and sound words, ordering and revising a line.
+
+### Hand-recounted live choices (clue, then hints 1 to 3, honestly applied)
+| Item | After clue | After hint 2 | After hint 3 |
+|---|---|---|---|
+| 1.e C02 (P4, 3 sentences) | 6 orders | 6 | 2 |
+| 1.e C12 (4 sentences) | 24 | 24 | 6 |
+| 1.e C10 blank 2 | 3 | 3 | 2 |
+| 2.d C05 (P4) and S05 | 4 | 4 | 3 |
+| 2.d C02 | 4 | 4 | 3 |
+| 2.d C03 (4 sentences) | 24 | 24 | 6 |
+| 2.d C04 | 3 | 3 | 2 |
+| 2.d C09 (pick 2 of 5) | 10 pairs | 10 | 6 |
+| 2.d C10 | 4 | 4 | 3 |
+| 2.d S15 | 4 | 4 | 3 |
+| 3.c C09 (pick 2 of 6) | 15 pairs | 15 | 6 |
+| 3.c C11 and S11 (4 rows) | 24 | 24 | 24 |
+| 3.c S04 (5 sentences) | 120 | 120 | 24 |
+| 4.b C01 | 8 rhyme-valid orders (1 by logic) | 8 | 4 |
+| 4.b C07 | 5 | 5 | 4 |
+| 4.b C13 Part B | 4 | 2 (stanza 4) | 2 |
+| 4.b S05 | 4 | 4 | 3 |
+
+### Not changed
+- 1.e S12 (paper boat on a creek) still resembles a 1.b item; different text type, noted only.
+- 4.a legacy line "I pull my blanket to my chin" in 4.b P6 and 4.a is legacy content; not touched.
+- The 2.b Cup Phone stem and the hummingbird passages remain reported, not edited.
+- Match columns in 1.e C09 and 3.c C11 still use the taught job names; only S09 and S11 use new wording.
+
 ## Skeptical blind re-solve first
-1.e C09, C10, C13, C15, S09, S14; 2.d C09, C12, C13, C15; 3.c C07, C09, C12, C14; 4.b C01 (order uniqueness), C07, C10, C12, C13, C15; plus the facts (school bus yellow, stop arm, magnets and poles, peanut harvest).
+1.e C09, C10, C13, C15, S01, S09, S11, S14; 2.d C02, C03, C04, C09, C10, C12, C13, C15, S15; 3.c C07, C09, C11, S11, S13; 4.b C01 (order uniqueness), C07, C10, C12, C13 (new p4), C15, S05, S10, S14; plus the facts (school bus yellow, stop arm, magnets and poles, peanut harvest).
