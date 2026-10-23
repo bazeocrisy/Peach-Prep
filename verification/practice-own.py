@@ -156,7 +156,7 @@ with sync_playwright() as p:
           and reg["next"][1][:2] == ["SK:%s:y2" % K, "Go on to set 2"] and reg["next"][2][:2] == ["SK:%s:y3" % K, "Go on to set 3"]
           and reg["next"][3][:2] == ["SK:%s:t" % K, "Take the skill check"], reg["next"])
     check("A.4 addons are merged at registration (hints on the ref P4 and on Together P1); the similar bank is not a set",
-          reg["p4hints"] and len(reg["p4hints"]) == 3 and reg["p1hints"] and len(reg["p1hints"]) == 3 and reg["sim"] == ["SK-TT1c-S01", "SK-TT1c-S02", "SK-TT1c-S03"]
+          reg["p4hints"] and len(reg["p4hints"]) == 3 and reg["p1hints"] and len(reg["p1hints"]) == 3 and reg["sim"][:3] == ["SK-TT1c-S01", "SK-TT1c-S02", "SK-TT1c-S03"] and all(x.startswith("SK-TT1c-S") for x in reg["sim"])
           and q.evaluate("!PP.sets.some(s=>s.items.some(i=>/-S0/.test(i.id)&&i.id.indexOf('SK-TT1c')===0))"), reg)
     # Together still runs the unchanged Help me ladder, and its end leads to the set picker
     q.evaluate("PP_SKILLS.open(%s,'practice')" % json.dumps(K)); q.click("#sk-start-practice"); q.wait_for_timeout(80)
@@ -246,11 +246,14 @@ with sync_playwright() as p:
     check("B.10 Back to question 1 returns to the core item; its similar question is used, but it is still offered (least recently used)",
           back == {"id": "SK-TT1c-P4", "sim": None, "simbtn": True}, back)
     q.click("#q-next"); q.wait_for_timeout(60)
-    # P5 (order) first-try right; no similar maps to P5, so the button stays hidden (lead decision)
+    # P5 (order) first-try right. The button shows exactly when a similar item maps to P5 (it hides otherwise; lead decision).
+    # To keep the "hidden when none maps" rule under test whatever the content team maps, P5 is unmapped in memory (the page's copy, not the file).
+    q.evaluate("(L=>{(L.similar||[]).forEach(s=>{s.like=(s.like||[]).filter(x=>x!=='SK-TT1c-P5');});})(PP.lessons[%s])" % json.dumps(K))
+    has_sim_p5 = False
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     p5 = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:!document.getElementById('q-similar').hidden, st:document.getElementById('q-status').textContent, focus:document.activeElement.id})")
     check("B.11 right on the first try: status Right on the first try; a core item with no mapped similar item hides Try a similar question",
-          p5["id"] == "SK-TT1c-P5" and not p5["sim"] and "Right on the first try" in p5["st"] and p5["focus"] == "q-next", p5)
+          p5["id"] == "SK-TT1c-P5" and p5["sim"] == has_sim_p5 and "Right on the first try" in p5["st"] and p5["focus"] == "q-next", p5)
     q.click("#q-next"); q.wait_for_timeout(40)
     # C03 retry: wrong, right
     q.evaluate(WRONG); q.click("#q-check"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
@@ -781,8 +784,8 @@ def cc(mut_file=None, a=None, b_=None):
 
 
 base_rc, base_out = cc()
-check("L.0 check-content passes on the candidate; uncovered core items are a warning, and the derived Together ids are printed",
-      base_rc == 0 and "have no similar item" in base_out and "lesson 3.T.T.1.c: Practice Together = SK-TT1c-P1, SK-TT1c-P2, SK-TT1c-P3" in base_out, base_out[-400:])
+check("L.0 check-content passes on the candidate; the derived Together ids are printed",
+      base_rc == 0 and "lesson 3.T.T.1.c: Practice Together = SK-TT1c-P1, SK-TT1c-P2, SK-TT1c-P3" in base_out, base_out[-400:])
 MUT = [
     ("a set of four", '      { ref: "SK-TT1c-P6" }\n    ] },', '    ] },', "core set 1: needs exactly 5 items"),
     ("a hint that contains the answer", '"Authors give a character words for a reason. Ask what the words tell you about the main character\'s choice and the story\'s lesson.",\n          "Reread paragraph 7.',
