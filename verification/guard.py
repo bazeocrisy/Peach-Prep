@@ -5,12 +5,42 @@ Usage:  python3 verification/guard.py [BASE_URL]   (default http://127.0.0.1:835
 Serve first:  node verification/serve.js . 8350
 Exit code 1 on any failure. Font CDN requests are blocked on purpose
 (the build sandbox cannot reach them), so they are not counted.
+
+Entry mode: since the Learning Path, a fresh visitor gets the first-visit
+choice screen (#screen-choose), not the browse home. This suite tests the
+browse home on purpose, so every page it opens gets the same browse-mode
+init script as launch-ux-regression.py: it seeds pp.path.v1 =
+{mode:'browse',introduced:true} only when the key is missing, and never
+overwrites a value a check has set. First-visit behaviour (no seed at all)
+is covered by verification/first-visit.py and verification/path.py.
 """
 import sys, json, re
 from playwright.sync_api import sync_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8350/"
 results = []
+
+# Same init script as launch-ux-regression.py (see the docstring above).
+# Init scripts also run on about:blank, which has no storage origin, hence the try.
+BROWSE_SEED = "try { if(!localStorage.getItem('pp.path.v1'))localStorage.setItem('pp.path.v1',JSON.stringify({mode:'browse',introduced:true})); } catch(e) { /* no storage origin, e.g. about:blank */ }"
+def newpage(browser, **kw):
+    q = browser.new_page(**kw); q.add_init_script(BROWSE_SEED); return q
+
+def print_results():
+    fails = [r for r in results if not r[0]]
+    for good, name, detail in results:
+        print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + detail + "]"))
+    print("%d passed, %d failed" % (len(results) - len(fails), len(fails)))
+    return fails
+
+# On an uncaught exception, show how far the run got before the traceback (exit code stays 1).
+_default_hook = sys.excepthook
+def _crash_hook(t, v, tb):
+    print("guard crashed; results gathered so far:", flush=True)
+    print_results(); sys.stdout.flush()
+    _default_hook(t, v, tb)
+sys.excepthook = _crash_hook
+
 def ok(name, cond, detail=""):
     results.append((bool(cond), name, str(detail)[:200]))
 
@@ -37,7 +67,7 @@ WRONG = """(()=>{const c=PP_PLAYER.ctx(),it=c.item,r=c.resp;
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    pg = b.new_page(viewport={"width": 1366, "height": 900})
+    pg = newpage(b, viewport={"width": 1366, "height": 900})
     pg.route("**/fonts.g*/**", lambda r: r.abort())
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
@@ -531,7 +561,7 @@ with sync_playwright() as p:
 
     # ---------- 12. PP-003 UX fixes (docs/audits/PP-003-UX-FUNCTIONAL-AUDIT.md D1, D4, D5, D7, D8, D9, D15, D16) ----------
     def page12(w, h, phone):
-        q = b.new_page(viewport={"width": w, "height": h}, is_mobile=phone, has_touch=phone)
+        q = newpage(b, viewport={"width": w, "height": h}, is_mobile=phone, has_touch=phone)
         q.route("**/fonts.g*/**", lambda r: r.abort())
         q.on("pageerror", lambda e: errors.append("[12 %d] %s" % (w, e)))
         q.on("dialog", lambda d: d.accept())
@@ -1036,7 +1066,7 @@ with sync_playwright() as p:
     # ---------- 8. Phone widths: no sideways scroll on any screen ----------
     over = []
     for w in (320, 375, 390):
-        q = b.new_page(viewport={"width": w, "height": 740}); q.route("**/fonts.g*/**", lambda r: r.abort())
+        q = newpage(b, viewport={"width": w, "height": 740}); q.route("**/fonts.g*/**", lambda r: r.abort())
         q.goto(BASE); q.wait_for_timeout(500)
         def chk(tag):
             o = q.evaluate("document.documentElement.scrollWidth-document.documentElement.clientWidth")
@@ -1081,8 +1111,6 @@ with sync_playwright() as p:
     ok("8.1 no sideways scroll at 320/375/390 on any screen", not over, over[:6])
     b.close()
 
-fails = [r for r in results if not r[0]]
-for good, name, detail in results:
-    print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + detail + "]"))
-print("%d passed, %d failed" % (len(results) - len(fails), len(fails)))
+sys.excepthook = _default_hook
+fails = print_results()
 sys.exit(1 if fails else 0)

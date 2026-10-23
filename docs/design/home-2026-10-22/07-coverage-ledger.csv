@@ -805,3 +805,408 @@ state,viewport,what was checked,result,evidence file,gaps
 [595ef01] regression: full guard via QA scratch fixture launcher,n/a,guard.py unchanged,PASS 110/110 exit 0,,
 [595ef01] regression: untouched correction files,n/a,"git diff 9a5b297..595ef01 on writing.js, pp.js, engine/*, data/lessons/*, verification/",PASS empty diff,,
 [595ef01] NOT TESTED,all,"real devices, Safari/WebKit, Firefox, screen readers, native zoom/200% text, real web fonts, families",NOT TESTED,,
+[182389d] A-first-visit,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,320x568,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,390x844,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,844x390,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,768x1024,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,1024x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,1366x768,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] A-first-visit,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] B-saved-no-mode,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C1-path-step,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C2-path-check,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3-path-handson,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C3b-path-handson-check,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C4-path-essay,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C5-path-drift,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C6-path-complete,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C7-path-nobookmark,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] C8-path-badstep,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 5.38:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D1-browse-none,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D2-browse-started,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] D3-browse-allpassed,1920x1080,landing screen; storage byte-identical before/after load; overflow/clip; primaries; targets>=44; computed contrast (min 4.64:1); axe wcag2a/aa/21/22aa+best-practice; axe colour-contrast/target-size with details open; copy scan,PASS,,Chromium emulation; fonts blocked
+[182389d] flow:continue,390x844,"C1-path-step (390, 844): card says ""Opens at: Practice Together (step 3 of 5)"" -> opened tab ""Practice Together""",PASS,,
+[182389d] flow:continue,390x844,"C1-path-step (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,390x844,"C1-path-step (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C1-path-step (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C2-path-check (390, 844): card says ""Opens at: Test Your Knowledge (step 5 of 5)"" -> opened tab ""Test Your Knowledge""",PASS,,
+[182389d] flow:continue,390x844,"C2-path-check (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,390x844,"C2-path-check (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C2-path-check (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C3-path-handson (390, 844): card says ""Opens at: Practice (step 3 of 4)"" -> opened tab ""Practice""",PASS,,
+[182389d] flow:continue,390x844,"C3-path-handson (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice', 'Check']",PASS,,
+[182389d] flow:continue,390x844,"C3-path-handson (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C3-path-handson (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C3b-path-handson-check (390, 844): card says ""Opens at: Check (step 4 of 4)"" -> opened tab ""Check""",PASS,,
+[182389d] flow:continue,390x844,"C3b-path-handson-check (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice', 'Check']",PASS,,
+[182389d] flow:continue,390x844,"C3b-path-handson-check (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C3b-path-handson-check (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C4-path-essay (390, 844): card says ""Opens at: 1. Read (tab 1 of 5)"" -> opened tab ""1. Read""",PASS,,
+[182389d] flow:continue,390x844,"C4-path-essay (390, 844): essay real tabs ['1. Read', '2. Plan', '3. Write', '4. Check', 'For parents'] vs ""of 5""",PASS,,
+[182389d] flow:continue,390x844,"C4-path-essay (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C4-path-essay (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C5-path-drift (390, 844): card says ""Opens at: Try It Yourself (step 4 of 5)"" -> opened tab ""Try It Yourself""",PASS,,
+[182389d] flow:continue,390x844,"C5-path-drift (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,390x844,"C5-path-drift (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"drift link opens suggested lesson E3 at Learn It (390, 844)",PASS,,
+[182389d] flow:continue,,drift link moves bookmark to suggested lesson,PASS,,
+[182389d] flow:continue,390x844,"C5-path-drift (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C7-path-nobookmark (390, 844): no ""Opens at"" -> opened ""Learn It"" ; card: Next on your Learning Path /  / D1 · Story elements: characters, setting, problem and solution /  / The next lesson on the path that is not marked finished. It starts at Learn It. /  / Grown-up: read ",PASS,,
+[182389d] flow:continue,390x844,"C7-path-nobookmark (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C7-path-nobookmark (390, 844): no page errors",PASS,,
+[182389d] flow:continue,390x844,"C8-path-badstep (390, 844): card says ""Opens at: Learn It (step 1 of 5)"" -> opened tab ""Learn It""",PASS,,
+[182389d] flow:continue,390x844,"C8-path-badstep (390, 844): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,390x844,"C8-path-badstep (390, 844): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,390x844,"C8-path-badstep (390, 844): no page errors",PASS,,
+[182389d] flow:browse-next,390x844,"Up next "". Already started: it opens at Watch Me."" opens Watch Me (390, 844)",PASS,,
+[182389d] flow:browse-next,390x844,"started 3.T.T.1.b ""Opens at Practice Together"" -> Practice Together (390, 844)",PASS,,
+[182389d] flow:browse-next,390x844,"started 3.T.SS.1.b ""Opens at Try It Yourself"" -> Try It Yourself (390, 844)",PASS,,
+[182389d] flow:browse-next,390x844,"started 3.L.GC.2.a ""Opens at Watch Me"" -> Watch Me (390, 844)",PASS,,
+[182389d] flow:browse-next,390x844,"opening lessons from browse home writes nothing (390, 844)",PASS,,
+[182389d] flow:welcome-back,390x844,"""D1 · Story elements"" aria ""blem and solution. Opens at Practice Together"" -> screen-skill Practice Together (390, 844)",PASS,,
+[182389d] flow:welcome-back,390x844,"""J3 · Organize your writing to fit your reader"" aria "" to fit your reader. Opens at Try It Yourself"" -> screen-skill Try It Yourself (390, 844)",PASS,,
+[182389d] flow:welcome-back,390x844,"""N2 · Context clues"" aria ""arby words to find meaning. Opens at Watch Me"" -> screen-skill Watch Me (390, 844)",PASS,,
+[182389d] flow:welcome-back,390x844,"Back after welcome link returns to choice screen (390, 844)",PASS,,
+[182389d] flow:welcome-back,390x844,"welcome links keep mode and storage (390, 844)",PASS,,
+[182389d] flow:continue,1366x768,"C1-path-step (1366, 768): card says ""Opens at: Practice Together (step 3 of 5)"" -> opened tab ""Practice Together""",PASS,,
+[182389d] flow:continue,1366x768,"C1-path-step (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,1366x768,"C1-path-step (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C1-path-step (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C2-path-check (1366, 768): card says ""Opens at: Test Your Knowledge (step 5 of 5)"" -> opened tab ""Test Your Knowledge""",PASS,,
+[182389d] flow:continue,1366x768,"C2-path-check (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,1366x768,"C2-path-check (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C2-path-check (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C3-path-handson (1366, 768): card says ""Opens at: Practice (step 3 of 4)"" -> opened tab ""Practice""",PASS,,
+[182389d] flow:continue,1366x768,"C3-path-handson (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice', 'Check']",PASS,,
+[182389d] flow:continue,1366x768,"C3-path-handson (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C3-path-handson (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C3b-path-handson-check (1366, 768): card says ""Opens at: Check (step 4 of 4)"" -> opened tab ""Check""",PASS,,
+[182389d] flow:continue,1366x768,"C3b-path-handson-check (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice', 'Check']",PASS,,
+[182389d] flow:continue,1366x768,"C3b-path-handson-check (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C3b-path-handson-check (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C4-path-essay (1366, 768): card says ""Opens at: 1. Read (tab 1 of 5)"" -> opened tab ""1. Read""",PASS,,
+[182389d] flow:continue,1366x768,"C4-path-essay (1366, 768): essay real tabs ['1. Read', '2. Plan', '3. Write', '4. Check', 'For parents'] vs ""of 5""",PASS,,
+[182389d] flow:continue,1366x768,"C4-path-essay (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C4-path-essay (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C5-path-drift (1366, 768): card says ""Opens at: Try It Yourself (step 4 of 5)"" -> opened tab ""Try It Yourself""",PASS,,
+[182389d] flow:continue,1366x768,"C5-path-drift (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,1366x768,"C5-path-drift (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"drift link opens suggested lesson E3 at Learn It (1366, 768)",PASS,,
+[182389d] flow:continue,,drift link moves bookmark to suggested lesson,PASS,,
+[182389d] flow:continue,1366x768,"C5-path-drift (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C7-path-nobookmark (1366, 768): no ""Opens at"" -> opened ""Learn It"" ; card: Next on your Learning Path /  / D1 · Story elements: characters, setting, problem and solution /  / The next lesson on the path that is not marked finished. It starts at Learn It. /  / Grown-up: read ",PASS,,
+[182389d] flow:continue,1366x768,"C7-path-nobookmark (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C7-path-nobookmark (1366, 768): no page errors",PASS,,
+[182389d] flow:continue,1366x768,"C8-path-badstep (1366, 768): card says ""Opens at: Learn It (step 1 of 5)"" -> opened tab ""Learn It""",PASS,,
+[182389d] flow:continue,1366x768,"C8-path-badstep (1366, 768): step N of M matches real step bar ['Learn It', 'Watch Me', 'Practice Together', 'Try It Yourself', 'Test Your Knowledge']",PASS,,
+[182389d] flow:continue,1366x768,"C8-path-badstep (1366, 768): Continue wording only with bookmark",PASS,,
+[182389d] flow:continue,1366x768,"C8-path-badstep (1366, 768): no page errors",PASS,,
+[182389d] flow:browse-next,1366x768,"Up next "". Already started: it opens at Watch Me."" opens Watch Me (1366, 768)",PASS,,
+[182389d] flow:browse-next,1366x768,"started 3.T.T.1.b ""Opens at Practice Together"" -> Practice Together (1366, 768)",PASS,,
+[182389d] flow:browse-next,1366x768,"started 3.T.SS.1.b ""Opens at Try It Yourself"" -> Try It Yourself (1366, 768)",PASS,,
+[182389d] flow:browse-next,1366x768,"started 3.L.GC.2.a ""Opens at Watch Me"" -> Watch Me (1366, 768)",PASS,,
+[182389d] flow:browse-next,1366x768,"opening lessons from browse home writes nothing (1366, 768)",PASS,,
+[182389d] flow:welcome-back,1366x768,"""D1 · Story elements"" aria ""blem and solution. Opens at Practice Together"" -> screen-skill Practice Together (1366, 768)",PASS,,
+[182389d] flow:welcome-back,1366x768,"""J3 · Organize your writing to fit your reader"" aria "" to fit your reader. Opens at Try It Yourself"" -> screen-skill Try It Yourself (1366, 768)",PASS,,
+[182389d] flow:welcome-back,1366x768,"""N2 · Context clues"" aria ""arby words to find meaning. Opens at Watch Me"" -> screen-skill Watch Me (1366, 768)",PASS,,
+[182389d] flow:welcome-back,1366x768,"Back after welcome link returns to choice screen (1366, 768)",PASS,,
+[182389d] flow:welcome-back,1366x768,"welcome links keep mode and storage (1366, 768)",PASS,,
+[182389d] flow:first-use,390x844,"Start the Learning Path shows intro, mode not saved yet (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"intro: only one primary visible (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"See the whole path opens phase 1 and focuses it (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"Start saves mode path, focuses #path-next (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"fresh path card says Start this lesson, not Continue (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"Back from path goes to screen-path (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"Choose a lesson saves mode browse and shows list (390, 844)",PASS,,
+[182389d] flow:first-use,390x844,"Choose a lesson focus lands on home-title (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"round trip screens/modes (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"choice label after introduced = ""Back to the Learning Path"" (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"every non-path key byte-identical after switching (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"path finished/habits/bookmark kept (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"Continue after round trip opened Try It Yourself (390, 844)",PASS,,
+[182389d] flow:mode-switch,390x844,"no page errors (390, 844)",PASS,,
+[182389d] flow:first-use,1366x768,"Start the Learning Path shows intro, mode not saved yet (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"intro: only one primary visible (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"See the whole path opens phase 1 and focuses it (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"Start saves mode path, focuses #path-next (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"fresh path card says Start this lesson, not Continue (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"Back from path goes to screen-path (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"Choose a lesson saves mode browse and shows list (1366, 768)",PASS,,
+[182389d] flow:first-use,1366x768,"Choose a lesson focus lands on home-title (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"round trip screens/modes (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"choice label after introduced = ""Back to the Learning Path"" (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"every non-path key byte-identical after switching (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"path finished/habits/bookmark kept (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"Continue after round trip opened Try It Yourself (1366, 768)",PASS,,
+[182389d] flow:mode-switch,1366x768,"no page errors (1366, 768)",PASS,,
+[182389d] flow:first-use,844x390,"Start the Learning Path shows intro, mode not saved yet (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"intro: only one primary visible (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"See the whole path opens phase 1 and focuses it (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"Start saves mode path, focuses #path-next (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"fresh path card says Start this lesson, not Continue (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"Back from path goes to screen-path (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"Choose a lesson saves mode browse and shows list (844, 390)",PASS,,
+[182389d] flow:first-use,844x390,"Choose a lesson focus lands on home-title (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"round trip screens/modes (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"choice label after introduced = ""Back to the Learning Path"" (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"every non-path key byte-identical after switching (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"path finished/habits/bookmark kept (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"Continue after round trip opened Try It Yourself (844, 390)",PASS,,
+[182389d] flow:mode-switch,844x390,"no page errors (844, 390)",PASS,,
+[182389d] flow:browse,320x568,"search results/messages (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"Clear search and filters restores list and focuses search (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"reload: search/filter reset to All, screen screen-home (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"filters on one row, >=44px, sticky=static (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"category card scrolls to its section (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (320, 568)",PASS,,
+[182389d] flow:browse,320x568,"no page errors (320, 568)",PASS,,
+[182389d] flow:browse,390x844,"search results/messages (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"Clear search and filters restores list and focuses search (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"reload: search/filter reset to All, screen screen-home (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"filters on one row, >=44px, sticky=static (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"category card scrolls to its section (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (390, 844)",PASS,,
+[182389d] flow:browse,390x844,"no page errors (390, 844)",PASS,,
+[182389d] flow:browse,844x390,"search results/messages (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"Clear search and filters restores list and focuses search (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"reload: search/filter reset to All, screen screen-home (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"filters on one row, >=44px, sticky=static (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"category card scrolls to its section (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (844, 390)",PASS,,
+[182389d] flow:browse,844x390,"no page errors (844, 390)",PASS,,
+[182389d] flow:browse,768x1024,"search results/messages (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"Clear search and filters restores list and focuses search (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"reload: search/filter reset to All, screen screen-home (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"filters on one row, >=44px, sticky=sticky (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"category card scrolls to its section (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (768, 1024)",PASS,,
+[182389d] flow:browse,768x1024,"no page errors (768, 1024)",PASS,,
+[182389d] flow:browse,1024x768,"search results/messages (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"Clear search and filters restores list and focuses search (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"reload: search/filter reset to All, screen screen-home (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"filters on one row, >=44px, sticky=sticky (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"category card scrolls to its section (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (1024, 768)",PASS,,
+[182389d] flow:browse,1024x768,"no page errors (1024, 768)",PASS,,
+[182389d] flow:browse,1366x768,"search results/messages (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"Clear search and filters restores list and focuses search (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"reload: search/filter reset to All, screen screen-home (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"filters on one row, >=44px, sticky=sticky (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"category card scrolls to its section (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (1366, 768)",PASS,,
+[182389d] flow:browse,1366x768,"no page errors (1366, 768)",PASS,,
+[182389d] flow:browse,1920x1080,"search results/messages (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"Clear search and filters restores list and focuses search (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"filter+query empty message ""No lessons match “zzqx” with this filter. Choose All, or try another word."" (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"reload: search/filter reset to All, screen screen-home (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"filters on one row, >=44px, sticky=sticky (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"category card scrolls to its section (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"Back from lesson -> screen-home; Forward -> screen-skill #skill/3.L.V.3.a/learn (1920, 1080)",PASS,,
+[182389d] flow:browse,1920x1080,"no page errors (1920, 1080)",PASS,,
+[182389d] flow:routes,390x844,none |  | screen-choose |  | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #choose | screen-choose | #choose | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #path | screen-path | #path | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #browse | screen-home | #browse | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #skill/3.T.T.1.b/practice | screen-skill | #skill/3.T.T.1.b/practice | Practice Together | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #skill/3.F.F.1.b/test | screen-skill | #skill/3.F.F.1.b/test | Check | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #skill/3.T.T.1.b/bogus | screen-skill | #skill/3.T.T.1.b | Learn It | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #skill/NOPE | screen-home |  | None | True | None,PASS,,
+[182389d] flow:routes,390x844,none | #play/SK:3.T.T.1.b:p/practice | screen-player | #play/SK:3.T.T.1.b:p/practice | Read the passage | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #play/SK:3.T.T.1.b:t/test | screen-player | #play/SK:3.T.T.1.b:t/test | Read the passage | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #write/W-TASK-01 | screen-write | #write/W-TASK-01 | 1. Read | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #write/NOPE | screen-home |  | None | True | None,PASS,,
+[182389d] flow:routes,390x844,none | #parents | screen-parents | #parents | The test | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #parents/standards | screen-parents | #parents/standards | Every standard | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #parents/plan | screen-parents | #parents/plan | How to use | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #clues | screen-clues | #clues | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #habits | screen-habits | #habits | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #mixed | screen-mixed | #mixed | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #reading | screen-section | #reading | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #main | screen-home |  | None | False | None,PASS,,
+[182389d] flow:routes,390x844,none | #no-such-page | screen-home |  | None | True | None,PASS,,
+[182389d] flow:routes,390x844,none | #skill/%E0%A4%A | screen-home |  | None | True | None,PASS,,
+[182389d] flow:routes,390x844,path |  | screen-path | #path | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #choose | screen-choose | #choose | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #path | screen-path | #path | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #browse | screen-home | #browse | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #skill/3.T.T.1.b/practice | screen-skill | #skill/3.T.T.1.b/practice | Practice Together | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #skill/3.F.F.1.b/test | screen-skill | #skill/3.F.F.1.b/test | Check | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #skill/3.T.T.1.b/bogus | screen-skill | #skill/3.T.T.1.b | Learn It | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #skill/NOPE | screen-home |  | None | True | path,PASS,,
+[182389d] flow:routes,390x844,path | #play/SK:3.T.T.1.b:p/practice | screen-player | #play/SK:3.T.T.1.b:p/practice | Read the passage | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #play/SK:3.T.T.1.b:t/test | screen-player | #play/SK:3.T.T.1.b:t/test | Read the passage | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #write/W-TASK-01 | screen-write | #write/W-TASK-01 | 1. Read | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #write/NOPE | screen-home |  | None | True | path,PASS,,
+[182389d] flow:routes,390x844,path | #parents | screen-parents | #parents | The test | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #parents/standards | screen-parents | #parents/standards | Every standard | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #parents/plan | screen-parents | #parents/plan | How to use | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #clues | screen-clues | #clues | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #habits | screen-habits | #habits | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #mixed | screen-mixed | #mixed | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #reading | screen-section | #reading | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #main | screen-home |  | None | False | path,PASS,,
+[182389d] flow:routes,390x844,path | #no-such-page | screen-home |  | None | True | path,PASS,,
+[182389d] flow:routes,390x844,path | #skill/%E0%A4%A | screen-home |  | None | True | path,PASS,,
+[182389d] flow:routes,390x844,browse |  | screen-home |  | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #choose | screen-choose | #choose | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #path | screen-path | #path | None | False | path,PASS,,
+[182389d] flow:routes,390x844,browse | #browse | screen-home | #browse | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #skill/3.T.T.1.b/practice | screen-skill | #skill/3.T.T.1.b/practice | Practice Together | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #skill/3.F.F.1.b/test | screen-skill | #skill/3.F.F.1.b/test | Check | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #skill/3.T.T.1.b/bogus | screen-skill | #skill/3.T.T.1.b | Learn It | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #skill/NOPE | screen-home |  | None | True | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #play/SK:3.T.T.1.b:p/practice | screen-player | #play/SK:3.T.T.1.b:p/practice | Read the passage | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #play/SK:3.T.T.1.b:t/test | screen-player | #play/SK:3.T.T.1.b:t/test | Read the passage | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #write/W-TASK-01 | screen-write | #write/W-TASK-01 | 1. Read | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #write/NOPE | screen-home |  | None | True | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #parents | screen-parents | #parents | The test | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #parents/standards | screen-parents | #parents/standards | Every standard | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #parents/plan | screen-parents | #parents/plan | How to use | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #clues | screen-clues | #clues | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #habits | screen-habits | #habits | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #mixed | screen-mixed | #mixed | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #reading | screen-section | #reading | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #main | screen-home |  | None | False | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #no-such-page | screen-home |  | None | True | browse,PASS,,
+[182389d] flow:routes,390x844,browse | #skill/%E0%A4%A | screen-home |  | None | True | browse,PASS,,
+[182389d] flow:storage,320x568,"blocked-getter (320, 568): notice on every home screen, lesson opened Learn It, no errors",PASS,,
+[182389d] flow:storage,390x844,"blocked-getter (390, 844): notice on every home screen, lesson opened Learn It, no errors",PASS,,
+[182389d] flow:storage,1366x768,"blocked-getter (1366, 768): notice on every home screen, lesson opened Learn It, no errors",PASS,,
+[182389d] flow:storage,320x568,"quota-setItem (320, 568): notice on every home screen, lesson opened Watch Me, no errors",PASS,,
+[182389d] flow:storage,390x844,"quota-setItem (390, 844): notice on every home screen, lesson opened Watch Me, no errors",PASS,,
+[182389d] flow:storage,1366x768,"quota-setItem (1366, 768): notice on every home screen, lesson opened Watch Me, no errors",PASS,,
+[182389d] flow:storage,390x844,"corrupt bad-json-all (390, 844): lands screen-choose, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,1366x768,"corrupt bad-json-all (1366, 768): lands screen-choose, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,390x844,"corrupt wrong-types (390, 844): lands screen-choose, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,1366x768,"corrupt wrong-types (1366, 768): lands screen-choose, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,390x844,"corrupt malformed-nested (390, 844): lands screen-path, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,1366x768,"corrupt malformed-nested (1366, 768): lands screen-path, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,390x844,"corrupt bookmark-unknown-key (390, 844): lands screen-path, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,1366x768,"corrupt bookmark-unknown-key (1366, 768): lands screen-path, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,390x844,"corrupt browse-malformed-progress (390, 844): lands screen-home, opens lesson, steps work, no errors",PASS,,
+[182389d] flow:storage,1366x768,"corrupt browse-malformed-progress (1366, 768): lands screen-home, opens lesson, steps work, no errors",PASS,,
+[182389d] keyboard tab order: A-first-visit,390x844,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard tab order: B-saved-no-mode,390x844,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard tab order: C5-path-drift,390x844,45 Tab stops; ring visible; ring contrast,PASS (min 6.90:1),,
+[182389d] keyboard tab order: D2-browse-started,390x844,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard activation,390x844,"Enter on Start the Learning Path -> intro; Space on Start with D1 -> focus #path-next; Enter on #path-next opens lesson; Escape returns to path; Enter toggles How a lesson works (path screen, starts closed); Enter on header Browse lessons -> list; Space on filter sets aria-pressed; Space opens legend; legend stays open while typing; Enter on Parent guide support link",PASS,,
+[182389d] keyboard tab order: A-first-visit,1366x768,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard tab order: B-saved-no-mode,1366x768,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard tab order: C5-path-drift,1366x768,45 Tab stops; ring visible; ring contrast,PASS (min 6.90:1),,
+[182389d] keyboard tab order: D2-browse-started,1366x768,45 Tab stops; ring visible; ring contrast,PASS (min 7.21:1),,
+[182389d] keyboard activation,1366x768,"Enter on Start the Learning Path -> intro; Space on Start with D1 -> focus #path-next; Enter on #path-next opens lesson; Escape returns to path; Enter toggles How a lesson works (path screen, starts closed); Enter on header Browse lessons -> list; Space on filter sets aria-pressed; Space opens legend; legend stays open while typing; Enter on Parent guide support link",PASS,,
+[182389d] layout probes,320x568,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 419, 'pathH': 497} sticky=static cover=0% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,390x844,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 350, 'pathH': 445} sticky=static cover=0% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,844x390,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 20, 'below': 17, 'cardH': 187, 'pathH': 224} sticky=static cover=0% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,768x1024,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 374, 'pathH': 507} sticky=sticky cover=6% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,1024x768,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 352, 'pathH': 400} sticky=sticky cover=8% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,1366x768,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 327, 'pathH': 371} sticky=sticky cover=8% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,1920x1080,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 24, 'below': 21, 'cardH': 327, 'pathH': 371} sticky=sticky cover=6% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,1366x500,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 20, 'below': 17, 'cardH': 164, 'pathH': 227} sticky=static cover=0% small=['p#build-badge.build'] overflow=False",,
+[182389d] layout probes,568x320,"card gap, sticky search, cover, small text, overflow","MEASURED: gap={'above': 20, 'below': 17, 'cardH': 162, 'pathH': 224} sticky=static cover=0% small=['p#build-badge.build'] overflow=False",,
+[182389d] finding QA-16,4 viewports,path-a11y.py covers #screen-home in 3 states; header corrected; planted QA-01 regression makes it exit 1,FIXED,,
+[182389d] finding QA-16 path-contrast.js change,390x844,"7 planted cases, new vs main version","PASS: white-on-white and grey ring counts caught as failures; image in front of nearest opaque layer, image on transparent wrapper, gradient over colour and opacity 0.3 still reported unsupported (and unsupported fails path-a11y)",,
+[182389d] finding QA-17,390/1366,legend aria snapshot,FIXED: each term read once,,
+[182389d] finding QA-18,390/1366,"category line styling, focusability, click","FIXED: plain text, not focusable, click changes nothing",qa/qa-recheck-QA18-category-line-1366x768.png,
+[182389d] finding QA-19,390/1366,row aria-label and mark title,"FIXED: dated passes say ""on <date>""; undated pass has no date (none invented)",,
+[182389d] guard.py diff vs 9a5b297,n/a,ok() names and lines; non-ok diff,"PASS: all 109 ok() lines identical; only entry seed helper, 3 new_page sites, docstring, crash reporting",,
+[182389d] guard seed unit test,1366,seed fills only a missing key,PASS: fresh -> browse; path mode kept; corrupt value not overwritten,,
+[182389d] plain guard.py on candidate,guard viewports,python3 verification/guard.py http://localhost:8620/ (no launcher),PASS 110/110 exit 0,,
+[182389d] plain guard.py on main 9a5b297,1366,"main guard against main, fresh storage","REPRODUCED: TimeoutError at line 241 pg.fill(""#skill-search""), exit 1",,
+[182389d] plain guard.py on mutant,guard viewports,candidate with passLabel text and search query broken,PASS (caught): mutant 1 (search + label) crashed at line 272 with 39 results printed, exit 1; mutant 2 (label only) 108 passed, 2 failed (9.8, 11.9), exit 1,,
+[182389d] first-visit.py,7 viewports,124 checks,PASS 124/124 exit 0,,
+[182389d] first-visit.py mutation testing,n/a,7 app mutations in scratch copies,"PASS: every mutation caught (M1 8 fails, M2 2, M3 2, M4 2, M5 9, M6 3, M7 2)",,
+[182389d] 04 finding 1 (unknown hash -> browse home),390,main vs candidate,PRE-EXISTING on main; not blocking,,
+"[182389d] 04 finding 2 (back label ""All skills"" with no mode)",390,main vs candidate,PRE-EXISTING on main; not blocking,,
+[182389d] 04 finding 3 (#mixed/#clues/#habits focus BODY),390,main vs candidate,PRE-EXISTING on main; not blocking,,
+[182389d] 04 finding 4 (migration drops malformed siblings),n/a,main vs candidate with and without migration trigger,"PRE-EXISTING on main, identical result; not blocking",,
+[182389d] 04 finding 5 (#browse fresh saves no mode),390,main vs candidate,PRE-EXISTING on main; by design; not blocking,,
+[182389d] regression: content/writing/copy,n/a,checkers,PASS 0 failures 6 warnings / 0 / 28,,
+[182389d] regression: path.py,n/a,,PASS 148/148,,
+[182389d] regression: path-a11y.py,4 viewports,36 runs,"PASS 0 violations, 0 contrast failures, exit 0",,
+[182389d] regression: path-headers / skills-recovery / writing-recovery,n/a,,"PASS 48/48, 67/67, 75/75",,
+[182389d] NOT TESTED,all,"real devices, Safari/WebKit, Firefox, screen readers, native zoom, real fonts, families",NOT TESTED,,

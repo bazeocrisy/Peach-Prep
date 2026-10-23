@@ -323,3 +323,60 @@ Scratch check `qa1619/check.py`: **22 passed, 0 failed** (QA-17, QA-18 and QA-19
 **AFTER screenshots retaken** (same seeds and script as §3, port 8640): `after-first-visit-*` at all seven viewports and `after-saved-work-no-mode-390x844` and `-1366x768`. These are the screens with the category line. The other AFTER files are unchanged. QA-17 and QA-19 change nothing visible; the title tooltip shows only on hover.
 
 **Not verified:** real screen readers (VoiceOver, TalkBack, NVDA), Safari and Firefox. The accessible names were checked in Chromium's accessibility tree only.
+
+## Guard entry fix and first-visit suite
+
+2026-10-22. Implements the fix recommended in `09-guard-entry-investigation.md` §4 and covers its §5 list. **No app code was changed** (`index.html`, `js/`, `css/` untouched). Server: `node verification/serve.js . 8650`, run from `/home/claude/pp-home`. Default Playwright Chromium for the guard, path and first-visit runs. Logs: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/fv/`.
+
+### 1. `verification/guard.py`
+
+- New helper `newpage(browser, **kw)` adds `BROWSE_SEED` as an init script on every page. The script text is copied exactly from `launch-ux-regression.py`: it sets `pp.path.v1 = {mode:'browse',introduced:true}` only when the key is missing, so it never overwrites a value a check has set. It comes back after each of guard's `localStorage.clear(); goto(...)` resets.
+- All three `b.new_page(...)` sites use it: the main page, the section 8 phone-width sweep and the section 12 `page12` helper. `grep new_page verification/guard.py` now finds only the helper.
+- The docstring explains why. Since the Learning Path, a fresh visitor gets the choice screen, so guard tests the browse home on purpose. First-visit behaviour is covered by `first-visit.py` (and `path.py`).
+- Hardening: if guard crashes, a `sys.excepthook` prints "guard crashed; results gathered so far:" and the PASS/FAIL list before the traceback. The exit code is still 1. The normal end-of-run printing is unchanged.
+- No assertion was changed, removed or loosened. There are still 110 checks with the same names.
+- `launch-ux-regression.py guard` still works: its seed fills only a missing key, and its `Browser.new_page` patch is what `newpage` calls.
+
+### 2. `verification/first-visit.py` (new)
+
+It never seeds `pp.path.v1`. Every scenario uses a new browser context with empty storage. Saved work is written only as `pp.progress.v1`, `pp.task.*` or `pp.skwrite.*` on the open page, followed by a reload. A write spy (an init script that wraps `Storage.prototype.setItem/removeItem` and records key names only) shows what the app writes. **124 checks.**
+
+| § | Covers (09 §5 item) |
+|---|---|
+| 1 | Item 1: "Choose a lesson" from a fresh visit lands on the browse home with search and the list visible, saves `{mode:'browse', introduced:false}` as the only key written, sets the address to `#browse`, and survives a reload of `#browse` and of the plain address. |
+| 2 | Item 2: a fresh load and a reload write nothing (the storage self-check's own set/remove aside), and the reload shows the choice screen with the title focused. |
+| 3 | Item 3: with `js/data/lessons/**` held, both buttons are disabled and read "Loading lessons…", the choice screen is already showing, and a forced click saves nothing. After release, they are enabled with their real labels. |
+| 4 | Item 4: `#skill/<code>` and `#skill/<code>/<step>`, `#parents`, `#mixed`, `#path`, `#choose`, `#no-such-page`, `#skill/no-such-lesson` and `#browse` with fresh storage. Current behaviour is asserted (see findings). |
+| 5 | Item 5: the choice screen at all seven brief viewports. No horizontal scroll; every control on `#screen-choose` (buttons, links, summaries) is at least 44×44 px; the hero and both cards are visible and within the page width; the title starts in the first screen. |
+| 6 | Item 6: the `.path-storage` notice on `#screen-choose` with blocked and quota storage, "Your progress stays" (`#choice-foot`) hidden, the welcome panel hidden, and "Choose a lesson" still working. Working storage: an empty notice, and the foot is shown. |
+| 7 | Item 7: Tab from the focused title goes to `#choose-path`, then `#choose-browse`, then on into the shared help. Enter and Space work on each button. |
+| 8 | Item 8: the welcome-back panel. Hidden when fresh. The path.py legacy fixture reads "one lesson and one essay". "four lessons and one essay", "two lessons and one essay", "one lesson", "two essays", "14 lessons" (numerals from ten). Order: in progress (catalog order), then short writing, then essays, then passed. Three links at most, then "and two more", "and one more" or "and 11 more in the lesson list.". aria-labels ("Opens at Practice Together", "Opens at Learn It", "Your saved draft opens with it."). An in-progress lesson opens at its first open step; a fully stepped passed lesson opens at Teach; the essay opens its saved draft, unchanged. Opening a lesson saves no mode. Rendering the panel writes nothing. Malformed progress (unparseable, array, a bad record next to a good one) gives no page errors and a hidden panel or a good-record-only panel. |
+| 9 | Item 9: the labels "Start the Learning Path" and "Choose a lesson", and "Back to the Learning Path" once introduced; `#choose-first` is "D1 · Story elements"; "Lessons are grouped in five categories:" with five static chips in catalog order; the shared routine block (`[data-shared=choose]`, `details.routine`, the five step names); "Recommended" is on the path card only. |
+| 10 | Item 10: before Start, `#path-current` and the see/switch row are hidden, the only start action is `#path-start` ("Start with D1 · Story elements"), and nothing is saved. After Start, both show and `{mode:'path', introduced:true}` is saved. |
+| 11 | Header **Browse lessons** (`#path-browse`): from path mode it opens the list at `#browse` and keeps path mode; the plain address then still opens the path. From browse mode, "Try the Learning Path", then the intro, then Browse lessons keeps browse mode. |
+| 12 | No page errors in any scenario. |
+
+### 3. Results (port 8650)
+
+| Command | Result |
+|---|---|
+| `node verification/check-content.js --all` | PASS: 0 failures, the same 6 warnings |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `node verification/check-instructional-copy.js` | 28 passed |
+| `python3 verification/path.py http://localhost:8650/ <out>` | **148 passed, 0 failed**, exit 0 |
+| `AXE_PATH=<scratch>/axe/package/axe.min.js python3 verification/path-a11y.py http://localhost:8650/ <out>` | **36 runs (12 + 12 + 12): 0 violations, 0 contrast failures**, exit 0 |
+| `python3 verification/path-headers.py http://localhost:8650/ <out>` | **48 passed, 0 failed**, exit 0 |
+| `CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome python3 verification/skills-recovery.py` | **67 passed, 0 failed**, exit 0 |
+| `CHROMIUM_PATH=… python3 verification/writing-recovery.py` | **75 passed, 0 failed**, exit 0 |
+| **`python3 verification/guard.py http://localhost:8650/`**: plain, fresh storage, no fixture launcher | **110 passed, 0 failed, exit 0** (`PASS 9.1 search narrows the list to matching skills`) |
+| `python3 verification/first-visit.py http://localhost:8650/` | **124 passed, 0 failed**, exit 0 |
+
+The first draft of `first-visit.py` failed two checks: 8.7 and 8.21 ("bad record"). The cause was the test, not the app. The panel writes nothing. The write came from `skills.js`'s existing PP-003 additive migration on page load, which adds `legacyUndated`/`firstSeenPassedAt` to a pass that has no date. The suite now asserts that migration separately (8.7a, 8.21a: additive, every saved field kept). It then re-renders the panel with `PP_PATH.showChoice()` and asserts zero writes and an unchanged snapshot.
+
+### 4. Findings (recorded, app not changed)
+
+1. **An unknown address on a fresh visit shows the browse home, not the choice screen.** `#no-such-page`, `#skill/no-such-lesson` and `#play/<bad>` land on `#screen-home` with the not-found note focused and the address dropped. Nothing is saved, and a reload shows the choice screen. `route()` calls `landHome(…, browse = !!h)`, so any non-empty bad hash takes the browse branch. This is arguably sensible, because the note sits on the browse home. But a first-time visitor never sees the choice, and the not-found note has no counterpart on `#screen-choose`. The lead should decide.
+2. **The back button reads "← All skills" on `#parents`, `#mixed`, `#clues` and `#habits` with no saved mode, but it opens the choice screen.** `show()` labels it from `PP_PATH.mode() === "path"`, so "no mode" gets the browse label, while `goHome()` → `landHome()` sends a no-mode visitor to `showChoice()`. The label is a small mismatch.
+3. **`#mixed`, `#clues` and `#habits` opened directly leave focus on `BODY`.** The other deep links focus their title. This is not specific to the first visit, and was observed only, not asserted.
+4. **The PP-003 migration drops malformed sibling records when it fires.** With `pp.progress.v1 = {"3.F.P.4.a":"oops","3.T.T.1.b":{"mastered":true}}`, the load rewrites the map as `{"3.T.T.1.b":{…,"legacyUndated":true,…}}` and the non-object `"oops"` entry is gone. It is untouched when the migration has nothing to do. This is long-standing (PP-003 / UX-002), not new in the redesign, and the dropped value was unusable anyway. It is noted only because of the brief's "never clear storage" rule.
+5. `#browse` with fresh storage opens the lesson list and saves no mode, so the plain address shows the choice screen again. That is consistent with the header button's "do not change the saved mode", and is asserted as such (4.13, 4.14).
