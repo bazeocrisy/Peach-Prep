@@ -122,3 +122,36 @@ SHOULD:
 NOTE: T-N1, T-N2, T-N3, T-N4, R-N1, R-N2, R-N3.
 
 Decision for the lead: accept both lessons. Apply R-S1 and T-S1 now if the edits are cheap, because both are one- or two-line changes. Ids and `core.rev`: the author asked whether to bump. Changed items have different hints, `how` and some choices. If no learner data exists, as the author says, no bump is needed.
+
+
+## Final spot re-solve
+
+Reviewer: independent (not the author). Scope: the six changed items, Watch Me 3 (T-T34) and the new fourth Learn It step (RA1a). Nothing in the lessons was edited and no git was run.
+
+**Blind-solve method and honesty.** Node script `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/solve.js` loaded the lesson modules and printed the prompt, stem and passage ref with choices or targets shuffled (seeded LCG), with keys, why, hints, how and clue stripped. Answers were saved to `scratchpad/ans.txt` before the keys were extracted. It was not fully blind in one respect: before solving I read the author log's fix table, which says what changed in each item (for example, which distractor was replaced). It gave no keys. I did not open the lesson source for these items before solving.
+
+**Agreement: 6 of 6.**
+
+| Item | My answer | Key |
+|---|---|---|
+| TT3a C06 | p3:1:3 ("I think every player...") | p3:1:3 |
+| TT3a C15 | "Last month, two dogs ... ran into the street." | same |
+| TT3a S10 | "At Pine Grove School, kids paid better attention..." | same |
+| RA1a C06 (2 pts) | scientists' ideas + holding breath works | same |
+| RA1a S05 (2 pts) | how meerkats know bark meanings + how the guard is chosen | same |
+| RA1a S07 (2 pts) | what inside keeps heat in + why soup stays hot | same |
+
+**Checks**
+- **C06 vs C07.** C06 targets are now the opening sentence (1:1), the key (1:3), First (2:1), Also (3:1), Some people say (4:1) and But (4:2). The "bench" and "Everyone knows" sentences, and the other C07 fact choices, are gone. The one C07 choice that survives is the paraphrase of 4:1, "The best players should play the most...". It is a wrong answer in C06 and it is the sentence hint 3 names, so it tells a child nothing about C06's key. Knowing from C07 that it is an opinion does not point at 1:3. C07's key facts (coach gave same time, only five came back) are not in C06. Not a giveaway. The "more than one opinion" wording is gone, and the C06 prompt now says "the main opinion that ... whole piece is about", which has one defensible answer (1:3). Hint 3 leaves 5 of 6 targets, which is not narrowing to the key.
+- **C15 and S10.** The new distractors ("Dogs are such happy, playful animals." and "Breakfast is such a cozy, tasty way to start the day.") are plausible opinions. They are no longer the sort of "sounds sure" sentence that is always wrong. Each item still has a vague opinion, an "I think" sentence, an irrelevant fact and the one specific example, so the key is still the only defensible choice. Hint 3 names only the "I think" or pancake sentence and leaves 3 choices, and no hint echoes the key's wording.
+- **RA1a C06, S05 and S07.** The topic is now in the prompt, which fixes the old problem of an off-topic distractor being picked out only by the hint. Each has exactly the keyed answers: two unanswered questions on the topic, the answered ones as distractors, and one off-topic question. The new S07 distractor, "How tall is a typical soup thermos?", is about thermoses but not about how one keeps soup hot, so it is a good near-miss and not a second answer. Hint 3 names only one wrong choice in each, and the key counts match the author's estimates (5/5/4, 5/5/4, 5/5/4 with the 3-left ladder).
+- **Watch Me 3 (school garden).** Reason: "gardening teaches kids to care for living things". Evidence: the fourth graders watered beans every day and the teacher said no one had to be reminded. The steps (find the reason, read the sentences after it, test against the reason) match what core C15 and S10 require. Sentences are short and grade-3 readable. The reading buddies clash with W-TASK-01 is gone.
+- **Fourth Learn It step (squirrels).** "Check the text again. Does it already answer your new question? If it does, ask a different one." is the move the RA1a core items test (answered questions are not worth researching). The squirrel text says "many of the nuts", not "all", so the example question really is unanswered. Readable at grade 3.
+
+**Findings**
+- MUST: none.
+- SHOULD: none.
+- NOTE R-A (garden topic): the garden topic is not unique in `js/data`, so the author's claim holds only for this reason and evidence. Other garden uses are `js/data/sets/R-OPN-01.js` (a full opinion passage; reasons are science, healthy food and teamwork, not caring for living things), the 3.T.T.3.c Learn It in T-T34.js lines 52-60 ("Our school should have a garden", reason "would help students learn"), `js/data/lessons/T-C.js` (Rosa's garden letter) and some L-/T-SS items (narrative or grammar). None repeats the Watch Me 3 reason, the evidence or an item. The closest are 3.T.T.3.c, which is a neighbouring lesson in the same file, and R-OPN-01. Two options: leave it, or switch Watch Me 3 to a non-garden topic (a class pet or a longer recess, for example) if the lead wants every opinion example in the 3.T.T.3 family to have a different topic. No learner-facing error either way.
+- NOTE R-B: the squirrel step 4 ends with "Lin's question about the nuts nobody digs up is still open", which nearly restates the answer sentence. It is a worked example, so this is fine, but if it is trimmed, "Lin's new question is still open." works as well.
+
+**Verdict: ACCEPTED** (3.T.T.3.a and 3.T.RA.1.a, for the changed items and the two new examples). Six of six keys agree, no giveaways were introduced, and the SHOULD findings from the earlier re-review are resolved. The solve was not fully blind in the narrow sense above.
