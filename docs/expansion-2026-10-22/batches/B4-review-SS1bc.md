@@ -319,3 +319,148 @@ No claim in either lesson is false.
 - Scratch files in `scratchpad/ss2/`: `blind.js`, `blind.txt`, `maps.json`, `myans.json`, `cmp.js`, `full.js`, `full_b.txt`, `full_c.txt`, `wm.js`, `jac.js`, `topics.sh`, `br.py`, `shot.py`, `s_b9.png`, `s_b9_p.png`.
 - Topic duplicate check: `topics.sh` greps all `js/data` outside the 1.b and 1.c blocks (`T-SS.js` lines 1017 to 3528) for each topic and its variants (rain stick, paper chain, cup, pet show, hula hoop, bracelet, oatmeal, pinecone, paper boat, frogs and toads, pillow fort, whales, guitar, zoo, tablet, school bus, splash day, sunscreen, dandelion, soccer, climbing wall, skiing, shoe shop, forecast, road work, leash, rowboat and others). Only R2-S7 and R2-S8 turned up as echoes, and no key-fact duplicate was found.
 - Re-check list for the author after the three MUSTs: S09 `why`, `how` and H3 (1.b); P6, S08, their `like` and `how` (1.c); then re-run `wm.js` and `jac.js` for those items.
+
+
+---
+
+# Third review (2026-10-23)
+
+**Reviewer:** third independent reviewer. I did not author these lessons and did not write the first or second review. I edited no lesson and ran no git. I started no server, so there is no pid to kill. I wrote only this section and scratch files under `scratchpad/ss1bc3/`. Scope: every core item (refs resolved), Together item and S01-S15 in 3.T.SS.1.b and 3.T.SS.1.c, then the round-2 fixes (author log sections 9 and 9.1) against R2-M1, R2-M2 and R2-M3.
+
+## Verdicts
+
+| Lesson | Verdict | Blocking findings |
+|---|---|---|
+| 3.T.SS.1.b | **ACCEPT** | none (MUST: 0, SHOULD: 3, NOTE: 4) |
+| 3.T.SS.1.c | **ACCEPT** | none (MUST: 0, SHOULD: 4, NOTE: 4) |
+
+All three second-review MUSTs are fixed. No key is wrong, no item has a second defensible key that I can argue to be better than the keyed one (one close call in 1.c S01, R3-S3), and no core or Together item paraphrases a Watch Me example. The SHOULDs are the ones the author said he left open.
+
+| Id | Sev | Lesson | One line |
+|---|---|---|---|
+| R3-S1 | SHOULD | 1.b | Key is the longest option in 9 of 16 single-answer items and in all 4 pick-two items |
+| R3-S2 | SHOULD | 1.b | P4 still uses a "Next, ..." step distractor (as Watch Me 3 does) and its hint 3 names the cue |
+| R3-S3 | SHOULD | 1.c | S01: "In addition" is a weak but arguable third answer; S01 still reuses C07's word pair and four of its options (R2-S11) |
+| R3-S4 | SHOULD | 1.c | S08 prompt states the relation ("one more thing") and "Also" is the only adder offered; the log's overlap count with P6 is wrong |
+| R3-S5 | SHOULD | both | Raw whole-text twin Jaccard is over 0.21 for 1.b S15 and 1.c S06, S15 (and with passages for 1.b S02, S03, S06, S09); content-word Jaccard is fine (R2-S6 still open) |
+| R3-S6 | SHOULD | 1.b | C08 and S08: the key is the only option with no word from the photo line (R2-S12 still open) |
+| R3-S7 | SHOULD | 1.c | Dev appears as a soup eater (P6) and as the soccer writer (p4: C11, C13, C14) |
+
+(R3-S7 is a SHOULD only because a name should mean one story. It is cosmetic. The 1.c count is therefore 4 SHOULD.)
+
+---
+
+## 1. Blind solve
+
+**Method.**
+- `scratchpad/ss1bc3/ld.js` loads `T-SS.js` in a Node `vm` sandbox with a stub `PP.addLesson`. `blind.js` prints, for each lesson, the Together items, the 14 (1.b) or 13 (1.c) non-ref core items and S01-S15, with passages (sentence-numbered), stems and prompts. It shuffles choices, slot options, steps, columns and hottext options with a seeded LCG. The seed is new: item-id hash xor 9137 (the earlier reviews used other seeds). Hottext targets such as `p5:2:3` are resolved to the sentence text.
+- The print has no `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like` or `std`. Neither lesson has a figure, so there is no alt text (the script would print it if one existed). `grep` of the output for those words found only ordinary prose.
+- Output: `scratchpad/ss1bc3/blind.txt` (647 lines, 68 unique items). My answers: `scratchpad/ss1bc3/myans.json`, saved before `cmp.js` read any key.
+- Order of work: brief, content brief, blind print, answers saved, then keys. I read the author log and the earlier reviews only after the comparison. A shape probe of field names (not values) ran after my answers were saved.
+
+**Result: 68 of 68 agree (100%).** 1.b 34 of 34 (P1-P5, C02-C15, S01-S15). 1.c 34 of 34 (P1-P6, C03-C15, S01-S15). The solve was fully blind: I had seen no key, `why` or hint for any item before I answered. (The 1.a figure `alt:` lines I saw while locating line numbers belong to another lesson.)
+
+**Close calls while solving** (all resolved to the key, all defensible):
+- 1.b C03: the add-a-step item. After sentence 4 is the only place where a coil exists and rice does not. Option A (after 5, "the rice can help hold the coil flat") is the strongest distractor; a child who thinks you can still press the coil with rice at the bottom could argue it. See N1.
+- 1.b S09 (the R2-M1 item): A and E are true, B, C and D false. I checked each statement against both drafts and against the on-screen sentence numbers. Three-true is gone.
+- 1.c S01: As a result and Therefore. In addition is the only distractor a child could argue (R3-S3).
+- 1.c S12: However and Although are the only pair with the same job. Checked each pair.
+
+## 2. Round-2 fixes, one by one
+
+| Finding | Status | Evidence |
+|---|---|---|
+| **R2-M1** 1.b S09 option C | **Fixed** | Option C is now "Nora's page tells readers what to do first, next and last." It is false for Nora's page (no steps; the passage has no first/next/last) and it does not rely on the sentence labels. The three true-looking statements are down to two: A (cook while reading / plan an outing) and E (Zane ends with cleanup; Nora has no steps). B ("Both ... about to start cooking") and the new C-statement ("a clear heading placed over each part") are false. `why`, `how` and hint 3 now say "Nora's page does not tell readers what to do first, next and last". No sentence-label argument remains. C09's "numbered list" statement is false either way and is not a second key. |
+| **R2-M2** 1.c P6 against Watch Me 1 | **Fixed** | P6 is "Dev ate two bowls of soup ____ he was very hungry", pick two from also / since / because / although / instead; key because + since. Watch Me 1 is "Mia stayed inside ____ it was raining hard", options because / although / for example. Different scene, different reason (hunger, not weather), different frame, ms against a single blank, and different distractors. The same relation (a reason) is modelled in Watch Me 1 by design: the lesson must require what Watch Me models, and Watch Me never shows "since" as an option. Content-word Jaccard of P6 against the Watch Me example is under 0.1. A grep of `js/data` for "soup" finds only unrelated passages (T-T1 groundnut soup, L-GUM3 punctuation sentence). Hint 1 ("Is being hungry a reason, a surprise or an addition?") does not name the key words. |
+| **R2-M3** 1.c S08 against C08 and P6 | **Fixed** (see R3-S4) | S08 is now single-answer mc, 1 point, "Ben plays the drums. ____ he sings in the school choir.", key Also, others Therefore / Although / Instead. Against C08 ("The gym has a climbing wall. ____ it has a basketball court.", pick two, Also + In addition): shared exact options = 1 (Also), content-word Jaccard 0.03 (raw 0.08/0.09). Format, point value and distractors differ. Against P6: different format, different key (Also is a distractor in P6), content-word Jaccard 0.13. It is no longer a re-skin of P6. |
+
+Other round-2 claims checked and confirmed:
+- C14 sentence 8 is "Coach hands out cold water after every drill." so only In addition fits blank 1 (R2-S9 fixed). For example is not defensible any more.
+- C15 uses soap bubbles and a breeze; no dandelion text (R2-S8 fixed). A grep of `js/data` for "bubble" finds only T-T2 (tyre patch test, yeast) and T-T34 (goldfish poem), no soap-bubble passage.
+- P5 (1.b) rows are kazoo, bike beside scooter, pond dried up; S01 cause row is "why a balloon pops". `kazoo`: no hits anywhere. Balloon appears only in L-V3 (hot-air balloon passage) and T-T1 (simile), neither about popping. Bike/scooter appear only in T-T34 (a scooter-ride poem) and L-GUM5 (a comma sentence). Fixed (R2-S5, R2-S7).
+- "Next," distractor removed from C07, C15 and S07 (kept in P4; see R3-S2). S15 key no longer begins "Now you have" (R2-S3 fixed). P1 and P3 hint 2 no longer narrow (R2-S4 fixed; see section 4).
+- S02, S13 hint 2 and C14, S14 hint 3 no longer state the relation (R2-S10 fixed). S08's "cheer-stopper" is gone with the old item (R2-S13).
+- Gates the author reports (check-content, check-writing, check-instructional-copy) I did not re-run; I confirmed `T-SS.js` loads and every item's points match its type (single 1; ms, match, order 2; dropdown = number of slots). DOK values 1 to 3, DOK 1 only on 1.c P1, P4, S02.
+
+## 3. Findings
+
+### MUST
+
+None.
+
+### SHOULD
+
+**R3-S1 (1.b). The key is the longest option too often.**
+- Single-answer items where the key is strictly the longest: P1 (60 against 56), P2 (30/26), P3 (43/36), C03 (96/87), C14 (97/83), S02 (72/66), S03 (81/77), S12 (89/79), S14 (73/72). That is 9 of 16 (56 percent against 25 by chance). In the four pick-two items (C04, C09, S04, S09) the key pair holds the longest option every time (C09 91 against 67; S09 81 against 64). 1.c is near chance (3 of 15: C05, C13, S13).
+- The gaps are small (1 to 6 characters) in P1, P2, S03, S14 and S02, and clear in C14 (+14), S12 (+10), C03 (+9), P3 (+7), C09 (+24). The author lengthened S09 and S15 only.
+- Fix, when next touched: lengthen two or three distractors in C14, S12, C03 and C09 to within about 5 characters of the key, or shorten those keys. Not blocking: precedent in B4-review-C1c.md N2 treated 5 of 8 as a NOTE.
+
+**R3-S2 (1.b). P4 keeps the "Next," step distractor, and hint 3 names it.**
+- P4 option C is "Next, find another pinecone that is even bigger than the first." Watch Me 3 uses "Next, add a spoonful of honey" as the step-adding distractor. P4 hint 3: "A sentence that starts with Next adds one more step." A child who watched Watch Me 3 can cross out P4 C by the word alone, and the hint teaches a word test.
+- Fix: begin the distractor with an imperative that is not "Next" ("Find another pinecone that is even bigger than the first."), and change hint 3 to "A closing does not tell the reader to do one more step." Because P4 is a Together item (guided), I rate this SHOULD.
+
+**R3-S3 (1.c). S01: a weak third answer, and the C07 overlap (R2-S11) is still open.**
+- "The wind blew all night. ____, leaves covered the yard." Key Therefore + As a result. In addition is the one distractor with an argument ("a second fact about the night"). It is a poor sentence, and hint 3 only rules out However, so a careful child is left with In addition live.
+- S01's key pair is exactly C07's pair, and 4 of its 5 options (Therefore, As a result, However, In addition) are C07's options. Content-word Jaccard against C07 is 0.18 (raw 0.22). S01's `like` is P6 (reason words) and shares one option with it, so the C07 overlap is not shown in sequence, but a child who used Show me how on C07 gets the same two words.
+- Fix: use a clearly unrelated fifth option (for example Instead, already present, plus For example in place of In addition), or make the key a contrast pair, and add one clause to hint 3 for the removed word.
+
+**R3-S4 (1.c). S08 is easy by construction, and the log's overlap count is wrong.**
+- The prompt says "tells one more thing Ben does", which names the relation, and Also is the only adder in the list (Therefore, Although, Instead are other jobs). The key is also the shortest option (4 against 9 or more characters). A child needs no reading of the two sentences. C08 (pick two) asks for the same job with two adders and is the harder twin.
+- The log (9.1) says "Shared with P6: 1 (instead...)". Case-insensitively S08 and P6 share three options: also, although, instead. Case-sensitively they share none (P6 is lower case). Either way the log's "1 (instead)" is not what the data shows. This breaks nothing: the rule in the coordinator's note was about the twin (C08), and that pair shares exactly one (Also).
+- The log's older claim that "no similar item has its twin's key (0 of 15)" is no longer true for S08: its key (Also) is half of C08's key.
+- Fix (optional): prompt "Which word best connects the two sentences?" so the relation is left to the child, and keep In addition out of the options. Correct the log.
+
+**R3-S5 (both). Raw whole-text twin Jaccard above the 0.21 ceiling (R2-S6, not done).**
+- My script (`jac.js`, lower-cased word tokens, numbers kept) on the twin (`like`) pairs:
+  - 1.b S15 against C15: word-set 0.23, multiset 0.25. S06 against C06 with passages: multiset 0.23. S03 against C03 with passages: 0.23/0.28. S02 against C02 with passages: 0.23/0.25. S09 against C09 with passages: 0.24/0.27.
+  - 1.c S06 against C06: word-set 0.24, multiset 0.12. S15 against C15: 0.23/0.22.
+  - Everything else is at or under 0.21.
+- With stop words removed (`jac2.js`, same items) every twin is at or below 0.17 in both measures (1.b S11 0.17/0.15, 1.c S03 0.17/0.16). The excess is made of frames ("Which sentence is best", "sentences 2 and 3", "wants to join").
+- Non-twin pairs (not displayed together, so NOTE only): content-word 1.c S11 against C08 0.24, S03 against C07 0.23, S07 against P6 0.22. Shared exact options with core or Together items run up to 4 (S01 and C07, S14 and P4, S15 and P4) and 6 case-insensitive tokens (S07 and P6), which follows from a closed vocabulary of about nine linking words.
+- Fix when next touched: vary the frame ("Which sentence ends it best?", "Pia wants to combine sentences 2 and 3") in 1.b S15 and 1.c S06, S15.
+
+**R3-S6 (1.b). C08 and S08: only the key shares no words with the photo line (R2-S12, not done).**
+- C08: the key shares 0 content words with the photo sentence, and each decoy reuses 2 to 5 (free ball, bandana, learn to catch a ball). S08: key 0, decoys reuse slide, pool, whole day. A test-wise reader who has been told a caption "says it in new words" picks the one option with no shared word without looking at the picture.
+- This is a fair test of the idea. Fix if wanted: make one decoy in each a fresh but wrong description ("A sleepy cat naps in a red scarf").
+
+**R3-S7 (1.c). One name, two stories.** P6's "Dev" (soup) is also the writer of passage p4 (soccer: C11, C13, C14). A child sees "Dev" in Set 1 and again in Set 3. Rename the P6 eater (for example Ravi). Cosmetic.
+
+### NOTE
+
+- **N1 (1.b C03 physical model).** The key says the coil is pressed before the rice goes in. A real rain stick can be pressed after rice is poured, so option A ("after sentence 5, because the rice can help hold the coil flat") is the one distractor a thoughtful child could defend. The key's reason ("before the rice gets in the way") and hint 3 settle it inside the item. Per https://www.giftofcuriosity.com/diy-rain-stick-craft/ the foil goes in before the rice. Keep.
+- **N2 (what is live after hints 1 to 3, my count from the hint text).**
+  - 1.b: Together P1 3, P2 3, P3 3, P4 3, P5 two rows left. Core C02 3, C03 3, C04 6 pairs, C05 24 orders (step 1 given), C06 2+2, C07 3, C08 3, C09 6 pairs, C10 2+3, C11 6 of 7, C12 3, C13 two rows left, C14 3, C15 3. Similar S01 two rows, S02 3, S03 3, S04 6 pairs, S05 6 orders, S06 2+3, S07 3, S08 3, S09 6 pairs, S10 2+3, S11 7, S12 3, S13 two rows, S14 3, S15 3.
+  - 1.c: Together P1 2, P2 2, P3 3, P4 2, P5 one row given, P6 6 pairs. Core C03 2, C04 3, C05 3, C06 3, C07 3+3, C08 6 pairs, C09 3, C10 3, C11 3, C12 6 pairs, C13 3, C14 3+3, C15 3+3. Similar S01 6 pairs, S02 2, S03 2, S04 3, S05 3, S06 3, S07 3+3, S08 3, S09 3, S10 3, S11 3, S12 6 pairs, S13 3, S14 3+3, S15 3+3.
+  - No item has fewer than two live choices after hint 3, and no hint 3 reveals the key or echoes its wording. Hint 2 never narrows to the key (P1 and P3 fixed). Hints 1 and 2 never give the relation in S02, S13, C14 and S14 (fixed).
+- **N3 (key against `why`, `how` and hints, every item).** Read side by side for all 68 items and the 11 addons. The keyed text matches `why` and `how` everywhere, including the changed ones: 1.b S09, S15, S01, P5, C07, C15, S07; 1.c P6, S08, C15, C14, S02, S13, S14. No explanation contradicts the display.
+- **N4 (official wording, points, DOK, grade level).** 1.b `official`: "Design texts using a variety of text structures and features, according to purpose and audience." The 15 core items cover steps, compare, cause and effect, sections and headings, captions, numbered lists, photos, titles, tables, opening and closing, and purpose and reader. 1.c `official`: "Use conjunctions and transition words or phrases, such as although and since, to add cohesion and link ideas and information." Since (P6, C06, S14), although (P2, C15, S06, S07), because, However, Therefore, In addition, As a result, For example and Also are all required. Learn It and Watch Me model reason, contrast and example; Therefore, In addition and However appear as extra steps and in teach points. Points match type. Passages are 100 to 118 words. Nothing is kindergarten-like.
+- **N5 (Watch Me against core and Together).** 1.b: bean seed steps, squirrel heading and fruit salad closing; no core item reuses their topics. The closing items share the lesson's closing idea (restate, not a fact, not a step) with Watch Me 3 by design. 1.c: Mia/rain, Ben/steep hill, bats. P2 (Sofia rode in the rain, although) shares the "did it anyway" shape with Watch Me 2 but not a scene, and is a different format. No paraphrase.
+- **N6 (topic duplicates over all of `js/data`).** Method: `scratchpad/ss1bc3/topics.sh` copies `js/data` with the 1.b and 1.c blocks of `T-SS.js` (lines 1012 to 3525) blanked, then greps variants. Searched: rain stick/rainstick/foil/coil, kazoo, bubble, balloon, pinecone/bird feeder/cardinal, oatmeal/oats/porridge, hula/hoop, bracelet/bead, paper chain, pet show/ribbon, snow leopard, soup, sunscreen/sunburn, soccer, climbing wall/basketball court, drums/choir, volleyball/tennis, tablet, zoo/science museum, leaves covered, game room, shoe shop, Willow Park/Oak Street, storm drain/flood, whale, guitar, scooter, pond dry up, school bus, splash day/rec center/lifeguard, pillow fort/camper, rowboat/canoe, wash a cup/sponge, winter sports/skiing/skating, ice melted/pet fish/red fruits, leash/Scout, road work/different road, tools that measure, forecast, knee pads/sneakers, make a bed, bean seed/squirrel. Result: no duplicated passage or key fact. Incidental overlaps only: T-SS 1.a "Why Puddles Dry Up" (a different row and skill from P5's pond row); sets/L-GRM-03.js:62 "Since the old bridge needed repairs ... a different road" (a fragment lesson, different skill, not the C07 sentence); T-SS 1.d bird feeder and leaves-covering-the-grass distractors; T-T34 and T-T1 climbing wall pieces (different skill); T-RA "How to Make a Bird Feeder" link box.
+- **N7 (browser).** I did not run the browser pass. The second review's N7 covered all 30 core items at 390x844 with no page errors and the changed items are text-only edits (no new control type), so I rate the layout risk low; the lead's gates should include one page load of each lesson.
+- **N8 (1.b S08 detail).** The caption key says "laughing swimmers"; the photo line says two children racing down a slide. Nothing in the other options competes, so it is harmless, but "laughing" is not in the photo description.
+
+## 4. Per-item checks the brief asked for
+
+- **Key beside explanation.** Done for all 68 items (N3).
+- **Live choices after hints 1 to 3.** Done (N2). P2 and P4 in 1.c and S02, S03 in 1.c end at 2 live (the minimum). 1.c C03 also ends at 2.
+- **Longest-key cue.** 1.b R3-S1; 1.c near chance (C05 74 against 64, C13 73 against 62, S13 66 against 56).
+- **Word-match keys.** My overlap script (`cue.js`, content words shared with prompt + stem + passage): keys are the strict maximum in 1.b P1, P3, P4, C12, S12 (5 of 16 single items, about chance; the inverted cue in the caption items is R3-S6) and in 1.c C13, S13 (2 of 15). No item where the key is the only option with any overlap except the two captions (inverted).
+- **Similar against core.** Twin pairs: content-word set and multiset Jaccard at most 0.17 in both lessons (1.b S11 0.17, 1.c S03 0.17). Raw numbers: R3-S5. Shared exact options with the twin: 1.b 0 in all 15; 1.c at most 1 (S01 against P6, S02 against P4, S03 against C03, S08 against C08, S11 against C11, S14 against C14, S15 against C15). Against any core or Together item: up to 4 in 1.c (R3-S3, R3-S5).
+- **Core or Together item paraphrasing Watch Me.** None (N5).
+- **Topic duplicates.** None blocking (N6).
+
+## 5. Facts verified
+
+All scenes are invented everyday events. The factual and technique claims I checked on the web:
+- Pinecone feeder order (string on, peanut butter, roll in seed, hang), and cardinals/sugar-water feeders: https://www.farmandfleet.com/blog/pine-cone-bird-feeder/ (fetched; string is tied before the peanut butter, seed is rolled on the sticky cone, then hang). Also listed by search: https://birds.cornell.edu/k12/make-your-own-feeder and https://carnegiemnh.org/make-your-own-pinecone-bird-feeder/. Hummingbird sugar-water feeders appear in T-T2 and are standard.
+- Soap bubbles pop on dry or rough surfaces and can float on air: https://www.k5learning.com/blog/why-bubbles-pop (fetched). The page also says a sharp breeze can pop them; the passage only says a breeze can carry them, which is true of a gentle breeze.
+- Stovetop oatmeal with about one cup of water to half a cup of oats and a few minutes of stirring: https://feelgoodfoodie.net/recipe/how-to-make-oatmeal/ (search result; the first reviewer fetched it).
+- Hula hoop technique (hold against the back, push round, move hips in a circle): https://www.healthline.com/health/exercise-fitness/hula-hoop-benefits and https://dna.strongeru.com/how-to-hula-hoop/ (search results).
+- Rain stick order (cap one end, coil of foil in, rice, cap the other end): https://www.giftofcuriosity.com/diy-rain-stick-craft/ (second review fetched it).
+No claim in either lesson is false.
+
+## 6. Housekeeping
+
+- No server started, nothing to kill. No git. No lesson edited.
+- Scratch files in `scratchpad/ss1bc3/`: `ld.js`, `blind.js`, `blind.txt`, `maps.json`, `myans.json`, `cmp.js`, `full.js`, `full.txt`, `cue.js`, `jac.js`, `jac2.js`, `topics.sh` and `tmpjs/` (a blanked copy of `js/data` for the topic grep).
+- If the author does touch the lessons again, re-run for: 1.b P4 and C03-C14 key lengths (R3-S1, R3-S2); 1.c S01, S08, S06, S15 and the P6 eater's name (R3-S3, R3-S4, R3-S5, R3-S7).
