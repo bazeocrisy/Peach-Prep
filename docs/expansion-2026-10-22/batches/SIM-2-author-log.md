@@ -114,7 +114,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSCE-S04 | SK-TSCE-P5 | mc/1/2 | find an effect stated in a paragraph | why a pond freezes from the top | all 4 / all 4 / key / freezes solid to bottom / fish swim up (the 'ice sinks' one ruled out) | pond ice |
 | SK-TSCE-S05 | SK-TSCE-C03 | mc/1/3 | why an author includes a section: another effect of the same cause | another effect of the same cause (hot sidewalk and puddle) | 4 / 4 / 3 (hint 3 rules out the dark-color choice) | sidewalk, puddle |
 | SK-TSCE-S06 | SK-TSCE-C05 | ms/2/3 | find the steps whose mistakes would hide the result | mistakes that would stop the lava lamp blobs rising (no tablet, no water) | 5 / 5 / 4 (hint 3 rules out the color choice) | lava lamp |
-| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so, with and and until | 3 / 3 / 3 (hint 3 no longer names a choice) | sunflower |
+| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so, with and and until | 3 / 3 / 3 (hint 3 is a read-it-aloud strategy and rules out nothing) | sunflower |
 | SK-TSCE-S08 | SK-TSCE-C08 | mc/1/3 | find the first cause in a chain of events | ice on Oak Road | all 4 / all 4 / key / bus drove slowly / school started later (the late bus is ruled out as an effect) | ice on the road, school start |
 | SK-TSCE-S09 | SK-TSCE-C09 | mc/1/3 | how the author organizes a paragraph: events that lead to one another | how a paragraph is organized (foggy school bus) | 4 / 4 / 3 (hint 3 rules out the how-to choice) | fog, school bus |
 | SK-TSCE-S10 | SK-TSCE-C10 | mc/1/2 | find the sentence that tells an effect of a change | a speed bump near a school | all 4 / all 4 / key / bumps were added (cause) / drivers could see kids (not caused by bump) / the school (setting) | speed bump |
@@ -135,7 +135,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSCC-S08 | SK-TSCC-C07 | mc/1/2 | pick the sentence that best shows two things are alike | a ukulele and a banjo | all 4 / all 4 / key / banjo round body / ukulele soft sound (the Hawaii one) ... | ukulele, banjo |
 | SK-TSCC-S09 | SK-TSCC-C08 | mc/1/3 | how the differences are organized: one topic at a time | a subway train and a trolley | all 4 / all 4 / key / all of one then all of other / most to least important (oldest to newest ruled out) | subway, trolley |
 | SK-TSCC-S10 | SK-TSCC-C10 | mc/1/2 | find how two different things are alike | how paper and a screen are alike (typewriter and laptop): a letter shows up for each key | 4 / 4 / 3 (hint 3 rules out quick fixing) | typewriter, laptop |
-| SK-TSCC-S11 | SK-TSCC-C09 | match/2/2 | find the sentence that starts with the wrong clue word | match clue words Like, while, Unlike, Both to likeness or difference (trampoline, swing set) | all 4 rows open / all 4 rows open / all 4 rows open (hint 3 only points to the two parts of sentence 5) | trampoline, swing set |
+| SK-TSCC-S11 | SK-TSCC-C09 | match/2/2 | find the sentence that starts with the wrong clue word | match taught clue words while, Both, same, Unlike to alike or different (trampoline, swing set) | all 4 rows open / all 4 rows open / all 4 rows open (hint 3 names no row) | trampoline, swing set |
 | SK-TSCC-S12 | SK-TSCC-C11 | dropdown/2/3 | find the fact in the wrong part of a chart | a rowboat and a sailboat | slot 1: all 3; slot 2: all 3 / slot 1: all 3; slot 2: all 3 / slot 1: mast / oars (floats ruled out); slot 2: all 3 | rowboat, sailboat |
 | SK-TSCC-S13 | SK-TSCC-C13 | mc/1/3 | tell how two texts are organized in the same way | tangerines and oranges; paper books and e-books | all 4 / all 4 / key / differences first then likenesses / steps (the problem and fix one ruled out) | tangerine, e-book |
 | SK-TSCC-S14 | SK-TSCC-C14 | ms/2/2 | two sentences that compare and contrast correctly | an island and a peninsula | all 5 / all 5 / key / key / unlike misuse / both by boat (false) ... (swap ruled out? the 'people walk' one) | island, peninsula |
@@ -248,5 +248,15 @@ All edits are inside my own similar items and the passages p7, p11, p12 of 3.T.T
 - **3.T.T.2.c S05 (NOTE):** Text 1 now says people "sometimes built igloos as shelters when they went hunting".
 
 **Needs blind re-solve (this round):** TS-CC S11 (new words, new order); TS-CE S07 (hint 3 only); TS-SEQ S10 (stem wording); 3.T.T.2.c S05 (text only).
+
+**Gates after this round:** check-content PASS with 0 failures; check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk on port 8832 (server stopped) 15 of 15 in all nine lessons, no page errors.
+
+
+## Fixes after the final check
+
+- **TS-CE S07 (MUST):** how line 4 now says that "because" points to a cause, but the part after it in Dan's sentence is the effect, which made the sentence backward. This now agrees with how line 3 and the lesson rule. **SHOULD:** hint 3 is now a strategy ("Try each clue word in the sentence and read it aloud. Ask whether the sentence then says what Dan really did and what happened after") and rules out nothing. Live 3 / 3 / 3 (and, so, until).
+- **TS-CC S11 (SHOULD):** every clue word and label is now taught in the lesson's clue list. The rows are while, Both, same and Unlike (answers different, alike, alike, different) and the columns are "alike" and "different". Like and "a likeness" are gone. Hint 3 names no row ("Pick one clue word and reread only its sentence..."). Shared options with C09: none. Word Jaccard with C09 by my own script: 0.200; the reviewer's metric scored the earlier version 0.165 against my 0.18, so it should stay under 0.21. Live: 4 rows open at every step.
+
+**Needs blind re-solve (this round):** TS-CE S07 (how and hint 3 only); TS-CC S11 (new words and labels).
 
 **Gates after this round:** check-content PASS with 0 failures; check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk on port 8832 (server stopped) 15 of 15 in all nine lessons, no page errors.

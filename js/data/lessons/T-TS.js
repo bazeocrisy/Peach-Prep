@@ -1674,13 +1674,13 @@ PP.addLesson({
       hints: [
         "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
         "Reread the stem to find out which of the two things happened first and made the other happen.",
-        "Decide which part of the sentence is the cause. Then ask which clue word tells the reader that the first part led to the second."
+        "Try each clue word in the sentence and read it aloud. Ask whether the sentence then says what Dan really did and what happened after."
       ],
       how: [
         "Dan watered the plant every day, and that helped it grow tall.",
         "So watering is the cause, and growing taller is the effect.",
         "In Dan's sentence, the effect comes after the clue word, so the answer is so. And only joins the two parts, and until tells when something stops.",
-        "Because, the word Dan used, put the cause after the clue word, which made his sentence backward."
+        "Because, the word Dan used, points to a cause, but the part after it is the effect. That made his sentence backward."
       ],
       misconception: "A common mix-up is leaving the effect after a word that points to a cause. Check which part of the sentence is the cause.",
       why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. And only joins the two parts, and until tells when something stops." },
@@ -3855,27 +3855,27 @@ PP.addLesson({
       why: "The answer is \"Each key the writer presses makes a letter show up on both of them.\" Paper and a screen both show a letter for each key that is pressed. Quick fixing and printing belong to the laptop, and typing a page again belongs to the typewriter." },
     { id: "SK-TSCC-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C09"],
-      stem: ["(1) A trampoline and a swing set are fun to have in a backyard.", "(2) Both need a grown-up to check that they are safe.", "(3) Like a swing set, a trampoline helps kids burn off extra energy.", "(4) Unlike a swing set, a trampoline is round and flat.", "(5) A trampoline lets you bounce, while a swing set lets you swing."],
+      stem: ["(1) A trampoline and a swing set are fun to have in a backyard.", "(2) Both need a grown-up to check that they are safe.", "(3) A trampoline lets you bounce, while a swing set lets you swing.", "(4) They are the same in one more way: each one helps kids burn off extra energy.", "(5) Unlike a swing set, a trampoline is round and flat."],
       prompt: "Match each clue word from the paragraph to what it shows.",
-      cols: ["a likeness", "a difference"],
+      cols: ["alike", "different"],
       rows: [
-        { text: "Like", answer: 0 },
         { text: "while", answer: 1 },
-        { text: "Unlike", answer: 1 },
-        { text: "Both", answer: 0 }
+        { text: "Both", answer: 0 },
+        { text: "same", answer: 0 },
+        { text: "Unlike", answer: 1 }
       ],
       clue: "A clue word tells how its sentence connects to the other things in the paragraph. Reread each sentence that has a clue word in it.",
       hints: [
         "A clue word tells how its sentence connects to the other things in the paragraph. Reread each sentence that has a clue word in it.",
         "For each clue word, ask what its sentence says about the trampoline and the swing set: the same, or not the same?",
-        "Look at the two parts of Sentence 5, on each side of the comma. Ask whether bouncing and swinging are the same thing, then sort the other clue words the same way."
+        "Pick one clue word and reread only its sentence. Ask whether the two things in it are the same or not the same, then do the same for the other clue words."
       ],
       how: [
-        "Sentences 2 and 3 tell things that are true of both: both need a safety check, and both help kids burn off energy. So Both and Like show a likeness.",
-        "Sentences 4 and 5 tell things that are not the same: round and flat, and bouncing against swinging. So Unlike and while show a difference."
+        "Sentences 2 and 4 tell things that are true of both: both need a safety check, and each one helps kids burn off energy. So Both and same show that the things are alike.",
+        "Sentences 3 and 5 tell things that are not the same: bouncing against swinging, and round and flat. So while and Unlike show that the things are different."
       ],
       misconception: "A common mix-up is sorting a clue word by how it sounds. Check what its sentence says about the two things.",
-      why: "Both and Like show a likeness, because their sentences tell what is true of both. Unlike and while show a difference, because their sentences tell how the two things are not the same." },
+      why: "Both and same show that the things are alike, because their sentences tell what is true of both. While and Unlike show that the things are different, because their sentences tell how the two things are not the same." },
     { id: "SK-TSCC-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C11"],
       stem: ["A rowboat is a small boat. A person sits in it and pulls two oars to move forward. A sailboat is also a boat, but it has a tall pole called a mast. A big cloth sail is raised on the mast, and the wind pushes the sail. Both kinds of boats float on water and can carry people.", "A student made this chart about the text.", "Rowboat only: moved with oars", "Both: floats on water; has a tall mast", "Sailboat only: moved by the wind; has a cloth sail"],
