@@ -265,3 +265,105 @@ readability: SEQ p3 4.1, p4 4.1; DESC p3 4.1, p4 3.2
 - S01 (new item)
 - Together P3 (new item)
 - Hint-only changes: C05, C09 and C15, and the P4 addon
+
+## 10. Fixes after the B2 re-review (B2-rereview-TS.md)
+
+**Gates.**
+- `check-content.js --all`: PASS, 0 failures. Only the accepted similar-coverage warnings remain on my lessons.
+- `readability.py`: no passage is flagged. Mine are:
+
+| Lesson | p1 | p2 | p3 | p4 |
+|---|---|---|---|---|
+| TS-SEQ | 2.0 | 3.4 | 3.2 | 4.1 |
+| TS-DESC | 3.3 | 2.2 | 3.6 (172 words) | 3.2 |
+
+- "Live" follows the brief: a choice is live only if a child who has read the hints so far still has a real reason to pick it.
+
+### 10.1 Changes, with live choices after each hint
+
+**MUST-1. DESC C14: the cactus is replaced by a seahorse** (the cactus shared its key fact with the 3.T.C.1.b Watch Me).
+- I grepped every lesson, set and task file for seahorse and sea horse first. There are no hits.
+- Stem details: the curly tail holds on to seaweed; the skin changes color; bony plates make it a crunchy meal; the snout sucks up shrimp.
+- Choices:
+  - K: a body that helps it stay safe and get food
+  - A: has to hide from crabs (fits three details but leaves out food; a near-miss)
+  - B: the tail is the most useful part (one detail)
+  - C: "First, a baby seahorse hatches…" (a sequence)
+- Live choices:
+  - Hint 1: K, A, B, C
+  - Hint 2 ("what each sentence tells about"): K, A, B. C is still live for a child who does not yet see it is a sequence.
+  - Hint 3 (rules out C): K, A, B
+
+**MUST-2. SEQ C04.** I replaced "does not matter much" with a second starting-step choice that has a wrong reason: "First would mean this is the starting step, but the lump of butter forms after the buttermilk is poured off." Paragraph 4 contradicts it, because the lump and the buttermilk form together. Hint 3 now ends "Check each reason that is left against the order of paragraphs 2 to 5." The how and why are updated.
+- Live choices:
+  - Hint 1: all four
+  - Hint 2 (what First would tell a reader): K, the lump distractor, "not a time clue word". "At the same time" is out, because First never means that.
+  - Hint 3 (rules out "not a time clue word"): K and the lump distractor. Deciding between them takes checking paragraphs 4 and 5.
+
+**MUST-3. SEQ C08.** Hint 1's example words are now "then and after that". Neither is a target. Hint 2 is now "Read every sentence you can choose, from paragraph 2 to paragraph 5, and find its time words." It no longer drops "The water is not done yet."
+- Live choices:
+  - Hint 1: all six
+  - Hint 2: all six
+  - Hint 3 (rules out Finally): the two keys, First, Next, and "not done yet". The child must still decide that First and Next tell only order, and that "yet" does not tell how long.
+
+**SHOULD-1. SEQ C02.** The prompt is now "Why does the author begin with paragraph 1?", so it no longer rules out the first-step and last-step choices. Clue and hint 1 are now "Ask what paragraph 1 gives the reader." Hint 3 is unchanged.
+- Live choices:
+  - Hint 1: all four
+  - Hint 2 (compare paragraph 1 with paragraph 2's first sentence): K, "first step", "what can go wrong"
+  - Hint 3 (rules out "what can go wrong"): K and "first step". The child must still see that the First step is in paragraph 2. "Last step" is weak from hint 2 on.
+
+**SHOULD-2. SEQ C10.** "Move sentence 3 so it comes right after sentence 5" is now "…right after sentence 1".
+- Live choices:
+  - Hint 2 (list the dates): K, "3 after 1", "2 after 4". "5 after 2" is still live for a child who has not placed Today.
+  - Hint 3 (rules out moving sentence 5): K, "3 after 1" and "2 after 4". Each must be checked against the date list.
+
+**SHOULD-3. SEQ C06.** Hint 2 is now "Find each step in the article and note its paragraph." It no longer says paragraphs 2 to 5 tell the process, which was C09's second-slot key. (Teach point 5 still mentions paragraph jobs; the reviewer called that teaching, a NOTE.)
+
+**SHOULD-4. DESC P6 (ref, set 1 item 1).**
+- Hint 3 now rules out "The brown pelican is a large bird".
+- The weak "You can see it on Georgia's coast" is now "It flies low over the waves" (from paragraph 1), a near-miss about flying. The why and how are updated. Same id, as decided for SEQ P4.
+- Live choices:
+  - Hint 1: all five
+  - Hint 2: all five
+  - Hint 3: the two keys, "flies low" and "feet work like paddles" (pick two from four)
+- Together P1's `why` says the feet are for moving, which makes "paddles" weaker for a child who did P1 (re-review NOTE-4 kind).
+
+**SHOULD-5. DESC C11.** Hint 2 is now "…the whole glove, or only one part of it?"
+- Live choices:
+  - Hint 2: the two keys, "looks like a big leather hand" (the named misconception) and "many colors"
+  - Hint 3 (rules out the pocket): the same four. "One part" no longer removes the look sentences.
+
+**SHOULD-9. DESC p3 and C08.** The sentence is now "Long ago, kitchens on wagons fed cowboys on long cattle drives." It no longer claims these were the first food trucks.
+- It is still a fun-fact key of C08. The C08 how and why are updated.
+- The C10 distractor and how now say "the wagon kitchens of long ago".
+
+**SHOULD-10. DESC S02.** Recycling is replaced by a gym closet: a place for each kind of ball. I grepped "gym closet", "dodgeball" and "foam ball" first; there are no hits. The heading "A Home for Every Ball" avoids 3.T.T.2.c's bin wording. `like` is now C07 only, because C02 is no longer a heading item.
+- Live choices:
+  - Hint 2: all four
+  - Hint 3 (rules out "Why Exercise Is Good for You"): K, "A Rack for Basketballs" (one detail), "How to Play Dodgeball" (word match)
+
+**DESC P5.** Added `std: ["3.T.SS.1.a"]`.
+
+**Re-review §6: DESC C04's "pictures of pelicans" distractor.** Changed to "Young brown pelicans have brown heads instead of white ones." It is true and about pelicans, but not about catching fish. The how and why are updated.
+- Live choices:
+  - Hint 2: all four
+  - Hint 3 (rules out hatching): K, nests, head color
+
+**NOTE-6. DESC S01.** "Some people grow flytraps on sunny windowsills" is now "Its roots hold it in the sandy soil.", a body part that does not catch anything. The stem, how and why are updated.
+- Live choices:
+  - Hint 3 (rules out where it grows): the two keys, the goddess name and the roots. The roots are the real near-miss.
+
+### 10.2 Same-set and Together checks for the changed items
+
+- **SEQ C04 and P4.** P4 (set 1 item 1) shows the yellow lump forming before the buttermilk is poured off, so a child who has solved P4 can rule out C04's new distractor. P4 does not state C04's key. This is the distractor-only kind of link in re-review NOTE-4.
+- **DESC C14.** No earlier set 3 item, and no Together item, mentions a seahorse or the "safe and get food" idea.
+- **DESC S02 and SEQ C05.** Both are school places, but they share no facts (the art room and the library are in SEQ C05).
+
+### 10.3 Findings not addressed
+
+- **NOTE-1 (Together ladders leave only the key; SEQ P1 and P6, DESC P2 and P4).** Not changed. Together uses the engine's legacy ladder, which shows the clue, then narrows, then reveals the answer. The reviewer marks it as by design.
+- **NOTE-4 (earlier items pre-eliminate a later distractor).** DESC C08's how still calls the wagon kitchens a fun fact before C10. That is C08's own answer, so I cannot remove it.
+- **NOTE-5 (SEQ C14's key echoes step 4).** Left as is. The reviewer found it acceptable.
+- **NOTE-10.** Left as is: "a small oven and a deep fryer" is generic, and the snowflake fold makes eight sides, not six. Neither affects a key.
+- **R1 NOTE-6 (SEQ P5's DOK 3 is generous).** Unchanged. P5 is a ref and was out of scope for these fixes.
+- **The CE, CC and TS-PS findings** belong to other authors and were not touched.
