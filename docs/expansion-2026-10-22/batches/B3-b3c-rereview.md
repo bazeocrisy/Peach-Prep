@@ -207,3 +207,115 @@ Scope: section 9 of `B3-b3c-author-log.md` ("Fixes after B3 re-review"): 3.T.RA.
 - 3.T.RA.2.a: **ACCEPTED**, with optional SHOULD-2 and SHOULD-3.
 
 Sources: https://www.livescience.com/9729-knuckle-cracking-ig-nobel-prize.html, https://ocean.si.edu/node/107233 (both fetched); https://mythresults.com/episode85 (first review).
+
+
+## Blind re-solve (post-polish)
+
+Scope: 3.T.C.1.a C07; 3.T.C.2.c P8, C07, S08; 3.T.RA.2.b C05, C12, S14; 3.T.RA.2.a S09, S14. Read-only on lessons; no git. Date: 2026-10-23. Reviewer: independent (not the author; not the earlier spot re-solve).
+
+### Method, and how blind it was
+- Script: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/extract.js` loads `T-C.js` and `T-RA.js` in a `vm` sandbox with a mock `PP.addLesson`, picks only the nine items, resolves passage ids to passage text, and shuffles choices (and dropdown options, and EBSR Part A/B choices) with a seeded LCG (seed 20261023). It emits only: id, type, points, prompt, passage text, stimulus (`stem`), and choice or option text. It drops `correct`, `answer`, `key`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `std` and `dok`.
+- Before reading, I grepped the output JSON (`/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/stripped.json`) for `key|hint|clue|why|how|correct|answer`. The only hits were ordinary words inside prompts and options ("how street lamps are made today", "how electric lights work", "Why can Ms. Greene...").
+- Answers were saved to `.../scratchpad/my-answers.json` (set read-only) BEFORE I printed any key, clue, hint, how or why.
+- **Fully blind for the keys.** Limits: I saw the passage `genre` strings (they are part of the passage object), and I saw the item `points` (which shows that EBSR and dropdown are 2-point).
+- Author log not read.
+
+### Agreement
+- **9 of 9 items agree (11 of 11 scored answers: C07 Part A and B, S08 both blanks, C05 both blanks).**
+- One answer carried a stated doubt: RA2b S14. I chose the result sentence ("When he was old, both of his hands were just as healthy") but wrote down that "One doctor cracked the knuckles on only his left hand for 60 years" was a rival. The key matches my first choice. See RA2b S14 below.
+- Shuffled order: keys landed in four different positions across the seven mc/ebsr choice sets. No positional pattern observed.
+
+### Facts verified (URLs fetched)
+- Roly-poly / pill bug: terrestrial crustacean, seven pairs of legs, needs damp places, eats decaying leaves and plant matter, rolls into a ball. https://ask.ifas.ufl.edu/publication/IN1099/pdf (UF/IFAS). All C07 passage claims hold, and "pill bug" is a true second name.
+- Peach trees: about 18 to 24 inches a year; standard trees top out near 20 to 25 feet. Ten feet a year is impossible. https://www.hgtv.com/gardening/edible-gardening/growing-perfect-peaches and https://www.epicgardening.com/peach-trees/ (mature heights).
+- Bulls and red: cattle are colour-blind to red; the MythBusters bull charged flags and dummies of every colour and went after moving people. https://www.livescience.com/33700-bulls-charge-red.html. Matches p5 of RA2b.
+- Knuckle test: Dr. Donald Unger cracked the knuckles of his left hand, not his right, for sixty years, and found no arthritis. https://www.livescience.com/9729-knuckle-cracking-ig-nobel-prize.html. The article does not give hand-by-hand results, but "both hands were just as healthy" is a faithful kid-level summary.
+- Narwhal: tusk is a tooth that grows through the upper lip; one study suggests it senses changes (saltiness) in the water; about 15 percent of females have an elongated tusk, so "most females do not" is right; "Scientists think" is the right hedge. https://ocean.si.edu/node/107233
+- Lamplighters: workers made nightly rounds lighting gas street lamps by hand with long poles; 1895 is in range. https://wtop.com/250-years-of-america/2026/05/america-250-how-gas-streetlights-transformed-american-cities/
+- "No dryers" in 1908: automatic home dryers arrived in 1938 (Hamilton "June Day"); earlier devices were hand-cranked or stove-heated. https://www.hunker.com/13410374/the-history-of-the-clothes-dryer. The key's claim is true.
+- Official wording (`js/data/standards.js`): 3.T.C.1.a "Determine the purpose (e.g., entertain, inform, persuade) and target audience of a text." 3.T.C.2.c "With adult support, identify the context in which a text is written (e.g., time period, individual, situational)." 3.T.RA.2.a "Refer to specific passages from a text to support an idea, answer, or opinion." 3.T.RA.2.b "Determine what makes a source text credible and relevant and identify examples."
+
+### Comparison table
+
+| Item | My answer | Key | Match | Pts / DOK | Live choices after clue + h1 to h3 |
+|---|---|---|---|---|---|
+| 3.T.C.1.a C07 (EBSR) | A: children who like to explore outside. B: "Have you ever played in your yard..." | same | yes | 2 / 2 | Part A: 3 (h3 removes teachers; gardeners and scientists stay, each has a fact that tempts). Part B: 4 (h3 only says match Part A). Pass. |
+| 3.T.C.2.c P8 | driven a bus for years | same | yes | 1 / 2 | Practice item: clue only. 4 nominally, but 3 rivals invent a source the passage never gives. See P8 finding. |
+| 3.T.C.2.c C07 | rain kept the wash from drying; no dryers | same | yes | 1 / 2 | 3 (key, irons/steam, wind). h3 removes "plants". The irons and wind rivals both appear in paragraphs 3 and 5, which h2 tells the child to reread, so they are real rivals. Pass. |
+| 3.T.C.2.c S08 (dropdown) | by an author today, who imagined Emmett; a night with a lamplighter in 1895 | same | yes | 2 / 2 | Blank 1: 3 after h3 (key, "real boy", "uncle"); h2 then pushes to key. Blank 2: effectively 1 (see S08 finding). |
+| 3.T.RA.2.a S09 | Scientists think the tusk can pick up changes... | same | yes | 1 / 2 | 2 (key, "tooth grows through lip"). Minimum. |
+| 3.T.RA.2.a S14 | "It's okay, we'll go slower," ... | same | yes | 1 / 2 | 3 (h3 removes the Rosa sentence; key, "showed her how", "learned at five"). Pass. |
+| 3.T.RA.2.b C05 (dropdown) | no name or source; number that cannot be true | same | yes | 2 / 2 | Blank 1: 2 to 3 (key, "paid to say nice things" plausible for a "fan"; "sell a product" weak). Blank 2: 1 (see finding). |
+| 3.T.RA.2.b C12 | "The bulls charged all three flags..." | same | yes | 1 / 3 | 2 (key, flag set-up). h2 drops the weight sentence (para 4); h3 drops the belief. Minimum, pass. |
+| 3.T.RA.2.b S14 | "When he was old, both of his hands were just as healthy." | same | yes | 1 / 3 | 3 by letter (sentences 2, 3, 4); h3 gives the how-versus-what test that picks 4. Pass, directive. |
+
+### Word-match check
+- C1a C07: Part A key shares no phrase with the passage ("explore outside" is a paraphrase of "played in your yard"). Part B key is the only option that speaks to the reader, which is the point of the item. No isolating word.
+- 2c P8: the key repeats the note almost verbatim ("had to stop fast many times"), and the three rivals are sources the passage never mentions. A child who only matches words gets it right. Finding S-1.
+- 2c C07: the key repeats "rained", "hung", "kitchen" from paragraph 4, but the irons and wind rivals also repeat passage words. Key is the longest choice (two-part). NOTE.
+- 2c S08: "imagine" (box) is in the key's "imagined"; the rival "real boy named Emmett in 1895" also repeats box words. Not isolating.
+- RA2a S09: no phrase shared between the idea ("find out what is happening around it") and the key. "Tusk" is in three choices. Good.
+- RA2a S14: none ("patient" and "sister" do not appear). Key is the only choice with quoted speech, and the longest. NOTE.
+- RA2b C05: blank 1 key "who they are / how they know" is only paraphrased by the signature and "Trust me". Blank 2 "number" matches "ten feet" by meaning only. No isolating word.
+- RA2b C12: key shares "red" and "flag" with the set-up rival. Fine.
+- RA2b S14: "healthy" vs "ruins your hands": no overlap. Good.
+
+### Findings
+
+**3.T.C.1.a C07**
+- SHOULD-1: Part A is given away by the passage genre line "Informational text (kids' magazine article)" for p3, if the app shows the genre under the title (the passage objects carry it; the shared passage schema prints it in other lessons). A child can answer Part A from "kids'" alone. Fix: change p3's genre to "Informational text (magazine article)". This also keeps C06, C08 and C09 (same passage) clean.
+- NOTE: Part A and Part B are consistent; no rival sentence addresses the reader (the closing "hold it gently in your open hand" is not offered). Good design.
+- NOTE: facts all verified.
+
+**3.T.C.2.c P8**
+- SHOULD-2: all three rivals ("read a story in the newsletter", "has fallen herself as a rider", "saw a news video") invent evidence the passage lacks, and the key is the one choice that restates the note. Add one rival that uses the note's own words but gets the reason wrong, e.g. "She has watched riders stand up on her bus for years." The box then does the work (15 years as a driver, not as a rider).
+- NOTE: the clue ("what she says she has seen") does not match the note, which says she has had to stop fast; change "seen" to "had to do".
+
+**3.T.C.2.c C07**
+- SHOULD-3 (optional): paragraph 4 already says it rained and the clothes hung in the kitchen, so a child can answer by matching the sentence before Papa's remark. The "no dryers" half of the key is what makes it situational context. This is acceptable for grade 3 and "with adult support", but the item would test the standard better if a rival also used "rain" (e.g. "It rained, so Mama brought the garden inside to keep it dry"). NOTE-level otherwise.
+- NOTE: the paragraph numbering (box and heading not counted) is consistent with the prompt, h2 and `how`.
+
+**3.T.C.2.c S08**
+- SHOULD-4: blank 2 is a free point. "How street lamps are made today", "a boy who got lost in the dark" and "how electric lights work" are not about anything in the diary, whereas the key repeats "lamp" and "1895". The mirror item C08 has stronger rivals ("what washday is like for families today"). Fix: use rivals a child could mistake, such as "a night spent with a lamplighter today", "how Emmett's uncle got his job", "how gas lamps were put out in the morning".
+- Blank 1 is sound: the box says "Imagine that a boy named Emmett wrote it", and the `how` says so too. h2 ("find historical fiction and imagine") is directive; it does not name the key, but the key shares "imagine".
+- `like` C08 is an honest mapping (same two-blank structure, new setting).
+
+**3.T.RA.2.a S09**
+- Accepted. SHOULD-5 (optional, carried over): h3's "what the tusk is, or what job it does" is the discriminator and sets the child on the key, and only two choices remain. Moving the job-versus-what-it-is step out of h3 would leave one more live choice. Not required.
+- Fact and hedge verified.
+
+**3.T.RA.2.a S14**
+- NOTE: the key is the longest and the only quoted speech; the h3 phrase has already been softened. No change needed.
+- `like` C13 honest.
+
+**3.T.RA.2.b C05**
+- SHOULD-6: blank 2 rivals ("a date that is out of date", "a picture that is blurry") name features the post does not have (it has no date and no picture). A child can rule them out by looking, and the only thing left in the post that can be wrong is the number. Same family of problem as the earlier polarity fault, now a presence fault. Fix: use rivals that are in the post, e.g. "a claim about trees, not about peaches", "a sentence that says 'Trust me'", "a screen name instead of a real name". Better still, keep "a number that cannot be true" as the key and make two rivals about the post's own words that are not the main problem.
+- Blank 1: the clue says "who made it or its words", and h3 aims at the signature; the key is close to solved by h3 (Is it a name you could look up, or only a screen name?). It does not echo the key wording. NOTE.
+- Fact verified: peach trees do not grow ten feet a year.
+
+**3.T.RA.2.b C12**
+- Accepted. NOTE: p5 byline names "Dr. Ray Holt", a made-up author for a made-up page; fine as long as no real book is implied. "As much as a small car" is generous for bulls, but within range.
+- The strongest doubt sentence in the passage ("But bulls cannot see red the way people do") is correctly left out of the choices.
+
+**3.T.RA.2.b S14**
+- NOTE (carried over, not raised to SHOULD): by h3 the child has the criterion "what he found", so the ladder is directive; it does not name a choice. One more point: sentence 4 depends on sentences 2 and 3 for its meaning, and sentence 2 ("cracked ... left hand for 60 years") is arguably evidence too. "BEST reason" justifies the key, and the `how` explains it. Keep.
+- Fact verified.
+
+### Cross-checks
+- Points and DOK: EBSR and both dropdowns are 2 points; the six mc items are 1 point. DOK 2 for all except RA2b C12 and S14 (DOK 3), which fits "doubt a claim from a test".
+- Grade-3 suitability: vocabulary is fine (crustacean is glossed in the passage; "situational" appears only in hints).
+- Distinctness: S08 mirrors C08, S14 (RA2b) mirrors C12, and both are declared `like` items. No pair differs only by names or numbers.
+- Set-level giveaways: none found between these items; keys do not repeat between lessons.
+
+### Summary and verdicts
+- MUST: none.
+- SHOULD: 1 (C1a genre label "kids'"), 2 (2c P8 rivals), 3 (2c C07, optional), 4 (2c S08 blank 2), 5 (RA2a S09 h3, optional), 6 (RA2b C05 blank 2 rivals).
+
+| Lesson | Verdict |
+|---|---|
+| 3.T.C.1.a | **ACCEPT** (fix SHOULD-1 before release; one-word edit to the p3 genre) |
+| 3.T.C.2.c | **ACCEPT** (SHOULD-2 and SHOULD-4 recommended; both are distractor rewrites) |
+| 3.T.RA.2.a | **ACCEPT** (SHOULD-5 optional) |
+| 3.T.RA.2.b | **ACCEPT** (SHOULD-6 recommended: C05 blank 2 rivals) |
+
+No lesson needs another full review round. Items outside the nine were not checked in this pass.

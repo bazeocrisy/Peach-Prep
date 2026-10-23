@@ -21,5 +21,10 @@ window.PP_ACCEPTED = [
   "3.T.SS.1.a",
   "3.T.C.1.b",
   "3.T.T.3.a",
-  "3.T.RA.1.a"
+  "3.T.RA.1.a",
+  "3.T.C.1.a",
+  "3.T.C.2.c",
+  "3.T.RA.1.b",
+  "3.T.RA.2.a",
+  "3.T.RA.2.b"
 ];
