@@ -455,3 +455,44 @@ Live choices after each hint:
 **Weak spots for the reviewers:**
 - RA2a S09, S12 and S14, and RA2b S14, keep only one or two wrong choices live after H3. They meet the rule, but only narrowly.
 - RA2a S14 is the tightest: after H3, only "hit the target" is left as a distractor. Its pull is weak, because it shows skill, not thanks.
+
+## 8. Fixes after B3 review
+
+Edited only 3.T.RA.1.b, 3.T.RA.2.a and 3.T.RA.2.b in `js/data/lessons/T-RA.js`. No git was run. This section replaces the live-choice tables above for the items named here. In particular, the earlier tables for RA2b C04 and C05 were wrong. Counts below use the review rule: a choice is live if a child who has read hints 1-3 and the clue still has a real reason to pick it.
+
+### 8.1 MUST fixes
+
+| Item | What changed | Live after H1 / H2 / H3 |
+|---|---|---|
+| RA2b C04 (mc) | Hint 2 no longer rules out Excerpt B ("picture each excerpt on a real farm; which parts would you expect to see, which would be hard to believe?"). Hint 3 still removes only the "no numbers" choice. | 4 / 4 / 3 (key, "exact time", "every peach") |
+| RA2b C05 (dropdown) | Hint 2 only says to look at the signature and at what the post claims. Hint 3 now touches blank 1 only (the signature "PeachFan", does it say who the writer is or how they know). It says nothing about the number, and no longer says "scientist or farmer". | Blank 1: 3 / 3 / 2. Blank 2: 3 / 3 / 3. At most one blank is settled. |
+| RA2a S11 (ms) | Lemur "take turns watching" fact removed. The key is now "Lemurs in a group huddle close together to stay warm" (PBS Nature fact sheet: "groups will huddle together" to keep warm) plus grooming (same page). Why, hints, how, answer text and clue updated. | 5 / 5 / 4 (two keys, Madagascar, what they eat) |
+| RA2b p5 and C12 | Paragraph 3 rewritten to match the source (mythresults.com, MythBusters episode 85): a TV show put red, blue and white flags near bulls, the bulls charged all three and did not pick red, and bulls went after people who moved around. The "scientists" and "still cape was not charged" claims are gone. C12 key is now "The bulls charged all three flags, and they did not pick the red one." Why, hints and how rewritten. Paragraph 4 and C11 unchanged. | 4 / 3 (paragraphs 1 and 3: key, set-up sentence, the belief) / 3. Hint 3 no longer names the belief, so a paragraph 1 choice stays live. |
+
+### 8.2 SHOULD fixes
+
+| Item | What changed | Live after H1 / H2 / H3 |
+|---|---|---|
+| RA2b C09 (mc) | Hint 2 now says "find each sentence and ask what question it helps answer", with no memory/not-memory sort. Hint 3 removes only the sound-test sentence. | 4 / 4 / 3 |
+| Right whale p7 (RA1b) | "Fewer than 400" replaced by "Only a few hundred of them are left in the world." (NOAA Ocean Service: about 400 in 2018; NOAA 2025 report 384.) Hint text in the dependent item updated. No number to expire. | no change in counts |
+| RA2a C13 (hottext) | Opinion changed from "thankful" to "good at learning from advice", so no word in the question matches the key. Key is now p6:4:2 ("After that, every time the ball came near, she kept her eyes on it."). Targets now include Dani's tip (3:3), nodding (4:1), the dive (4:4) and the thanks (5:3). Hints, how and why rewritten. | 6 / 6 / 4 (4:1, 4:2, 4:4, 5:3) |
+| RA2a S14 (mc) | Replaced the archery "thanks" item with a bike item. Opinion "Rosa does not give up" has no word shared with the key ("She got back on and pushed off again until she rode all the way down the block."). | 4 / 4 / 3 (key, "wobbled and fell", Cam showed her) |
+| RA2a S09, S12; RA2b S14 (thin hint 3) | Each hint 3 now adds a new step: S09 asks whether each tusk sentence tells what the tusk is or what it can do; S12 asks whether each sentence gives the tip or shows someone following it; RA2b S14 asks whether each doctor sentence tells how he checked or what he found. | S09: 4 / 3 / 2 (key, "what the tusk is"). S12: 4 / 3 / 2 (key, sentence 2). RA2b S14: 4 / 3 / 3 (key, sentences 2 and 3). These remain narrow; they meet the rule of two. |
+| RA1b C10 (mc) | The two weak choices ("write his own guess", "ask a classmate") replaced by "copy the number from a post that does not say who wrote it" and "use how long a blue whale lives, because all whales are alike". How, why and misconception updated. Hint 3 still removes only the calf-length choice. | 4 / 4 / 3 (key, anonymous post, blue whale) |
+| Manatee (RA2b S08 excerpt X) | "about 20 minutes" changed to "as long as 20 minutes when it is resting". Dependent hints and how were checked and still fit. | no change in counts |
+| Clue wording | Lemur clue changed from "act together" to "treat each other", and C04 hint 2 uses "parts" instead of "details", so no clue or hint shares a rare word only with the key (check-content warnings cleared). | n/a |
+
+### 8.3 Not changed
+- RA2b p3 is still 77 words by design (see N3 in the review).
+- RA2b has no Part A/B item; the review accepts this.
+- RA1b has seven teach points; pre-existing, accepted.
+- Guide dog "several months": left, the review calls it acceptable.
+- The right-whale passage should still be re-checked for facts once a year.
+
+### 8.4 Needs blind re-solve
+RA1b C10; RA2a C13, S09, S11, S12, S14; RA2b C04, C05, C09, C12, S14, and S08 (manatee wording). Also re-read RA2b p5 for the new paragraph 3.
+
+### 8.5 Gates after the fixes
+- `check-content.js --all`: PASS (0 failures). The only warnings in these lessons: RA2b p3 short.
+- `check-writing.js`: 0 failures, 0 warnings. `check-instructional-copy.js`: 28 assertions passed.
+- `readability.py`: all RA passages are at or under FK 4.5 (RA2a p5 4.2 is the highest; RA2b p2 4.3).

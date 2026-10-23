@@ -576,7 +576,292 @@ PP.addLesson({
         "A map shows where places are, and a key explains its symbols.",
         "The answer is \"a map with a key.\""
       ],
-      why: "The answer is \"a map with a key.\" A map shows where the elephant barn and the gate are, so readers can see the path between them. A caption, a fun-fact box and headings cannot show a path." }
+      why: "The answer is \"a map with a key.\" A map shows where the elephant barn and the gate are, so readers can see the path between them. A caption, a fun-fact box and headings cannot show a path." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-SS1a-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-P5"],
+      stem: ["An article called \"Cranberry Bogs\" tells how farmers grow cranberries in low, wet fields. Near the end is a box with the title \"Did You Know?\" The box says, \"Cranberries have little pockets of air inside. That is why they bounce when you drop them. It is also why they float in water.\" The rest of the article is about how farmers plant the vines and pick the berries."],
+      prompt: "Why does the author include the \"Did You Know?\" box?",
+      choices: [
+        { text: "to add an interesting fact about cranberries", correct: true },
+        { text: "to tell how to cook cranberries at home" },
+        { text: "to show where the cranberry bogs are found" },
+        { text: "to name the main steps in picking the berries" }
+      ],
+      clue: "A text feature has a job. Ask what kind of information a box like this gives that the main article does not.",
+      hints: [
+        "A text feature has a job. Ask what kind of information a box like this gives that the main article does not.",
+        "Reread what the box says. Is it a step, a place, or something else?",
+        "The box says nothing about cooking, so that job does not fit. Test the other choices against what the box says."
+      ],
+      how: [
+        "The box says cranberries have tiny air pockets, so they bounce and float.",
+        "That is a fun extra fact. It is not a step for the farmers.",
+        "The answer is \"to add an interesting fact about cranberries.\"",
+        "The box does not tell how to cook, where bogs are, or the steps of picking."
+      ],
+      misconception: "A common mix-up is thinking a box must repeat the main idea of the article. It adds a small extra fact.",
+      why: "The answer is \"to add an interesting fact about cranberries.\" The box tells about air pockets that make cranberries bounce and float. It does not tell how to cook them, where bogs are, or the steps of picking." },
+    { id: "SK-SS1a-S05", type: "mc", points: 1, dok: 1, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-P7"],
+      stem: ["Here is the table of contents from a book called Skyscrapers Go Up.", "Chapter 1: Digging the Deep Hole, page 2", "Chapter 2: Building the Steel Frame, page 9", "Chapter 3: Lifting Beams With Cranes, page 15", "Chapter 4: Windows and Elevators, page 21"],
+      prompt: "In which chapter would you look to find out how workers raise the heavy steel beams high into the air?",
+      choices: [
+        { text: "Chapter 3: Lifting Beams With Cranes", correct: true },
+        { text: "Chapter 1: Digging the Deep Hole" },
+        { text: "Chapter 2: Building the Steel Frame" },
+        { text: "Chapter 4: Windows and Elevators" }
+      ],
+      clue: "A table of contents lists what each chapter is about. Match your question to a title.",
+      hints: [
+        "A table of contents lists what each chapter is about. Match your question to a title.",
+        "Find the key words in the question. Then look for the same idea in the titles.",
+        "Digging a hole happens on the ground, so it does not tell how beams are raised. Check the other titles."
+      ],
+      how: [
+        "The question asks how workers raise heavy steel beams high into the air.",
+        "Chapter 3 is about lifting beams with cranes.",
+        "The answer is \"Chapter 3: Lifting Beams With Cranes.\"",
+        "The other chapters are about digging, the frame itself, and windows."
+      ],
+      why: "The answer is \"Chapter 3: Lifting Beams With Cranes.\" Cranes are what lift beams into the air. The other chapters are about digging, the steel frame, and windows and elevators." },
+    { id: "SK-SS1a-S06", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C04"],
+      stem: ["An article about starfish begins, \"Here is how a starfish moves along the sea floor and how it can grow back a lost arm.\" After the first paragraph, the article has three sections. The first is called \"Tiny Tube Feet.\" The next is called \"Walking Across the Sand.\" The last is called \"Growing a New Arm.\" Each section has a few short paragraphs and a picture."],
+      prompt: "How are the sections arranged to match the first paragraph?",
+      choices: [
+        { text: "The two sections about moving come first, and then one tells about growing a new arm.", correct: true },
+        { text: "The section about growing a new arm comes first, and then two tell about moving." },
+        { text: "Each section tells about a different kind of starfish." },
+        { text: "All three sections tell about how a starfish eats." }
+      ],
+      clue: "An opening sentence can be a map of the article. Match each part of the sentence to a section.",
+      hints: [
+        "An opening sentence can be a map of the article. Match each part of the sentence to a section.",
+        "List the two things the first sentence promises, in order. Then read the three section names.",
+        "None of the section names is about eating, so a choice about eating does not fit. Compare the order of the sections with the order in the first sentence."
+      ],
+      how: [
+        "The first sentence promises two things in order: how a starfish moves, and how it can grow back a lost arm.",
+        "\"Tiny Tube Feet\" and \"Walking Across the Sand\" are about moving. \"Growing a New Arm\" comes last.",
+        "The answer is \"The two sections about moving come first, and then one tells about growing a new arm.\"",
+        "No section is about eating or about different kinds of starfish."
+      ],
+      misconception: "A common mix-up is choosing the right topics in the wrong order. The sections follow the order of the opening sentence.",
+      why: "The answer is \"The two sections about moving come first, and then one tells about growing a new arm.\" The first sentence names moving and then growing back an arm, and the sections follow that order. No section is about eating or about different kinds of starfish." },
+    { id: "SK-SS1a-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C07"],
+      stem: ["A student is writing an article called \"Sand Dunes.\" It tells how wind blows grains of sand up one side of a hill and lets them fall down the other side. The student adds a photo of a tall sand dune. In the photo, thin lines of blowing sand drift off the top of the hill. No people are in the photo."],
+      prompt: "The photo needs a caption. Choose the words that best complete the sentence.",
+      text: "The best caption for the photo is {0}.",
+      slots: [
+        { options: ["Wind blowing sand off the top of a dune", "A family building a sand castle", "Tall grass growing by the sea"], answer: 0 }
+      ],
+      clue: "A caption is a short line under a picture. It tells what the picture shows.",
+      hints: [
+        "A caption is a short line under a picture. It tells what the picture shows.",
+        "Look at what is in the photo, and what is not. Then match a caption to it.",
+        "No people are in the photo, so a caption that names people does not fit. Check the other caption against the photo."
+      ],
+      how: [
+        "The photo shows a tall sand dune with thin lines of blowing sand drifting off the top.",
+        "A caption should tell what the photo shows and fit the article.",
+        "The answer is \"Wind blowing sand off the top of a dune.\"",
+        "The photo has no people and no tall grass."
+      ],
+      why: "The answer is \"Wind blowing sand off the top of a dune.\" The photo shows blowing sand drifting off a tall dune, and the article is about how wind moves sand. The photo has no people and no tall grass." },
+    { id: "SK-SS1a-S08", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C08"],
+      stem: ["A park guide has a map of Canyon Trail. In the corner of the map is a scale that says, \"1 inch = 2 miles.\" A scale tells how real distances are shown on a map. On the map, the line for Canyon Trail is 3 inches long. It starts at the parking lot and ends at a lookout over the canyon."],
+      prompt: "Use the map scale. How long is Canyon Trail in real life?",
+      choices: [
+        { text: "6 miles", correct: true },
+        { text: "3 miles" },
+        { text: "2 miles" },
+        { text: "5 miles" }
+      ],
+      clue: "A map scale tells how much real distance one inch stands for. Use it for each inch of the trail.",
+      hints: [
+        "A map scale tells how much real distance one inch stands for. Use it for each inch of the trail.",
+        "Find how many inches long the trail is on the map. Then think about how far each inch is in real life.",
+        "The trail is 3 inches long on the map, and the number 3 is the length on the map, not in real life. Use the scale for each inch."
+      ],
+      how: [
+        "The scale says 1 inch stands for 2 miles.",
+        "The trail is 3 inches long, so there are 3 groups of 2 miles.",
+        "The answer is 6 miles.",
+        "The numbers 3 and 2 are in the text, but each one is only part of the work."
+      ],
+      misconception: "A common mix-up is choosing a number from the text. Use the scale for each inch.",
+      why: "The answer is 6 miles. Each inch stands for 2 miles, and the trail is 3 inches long, so it is 3 groups of 2 miles. The numbers 3 and 2 appear in the text, but the length in real life needs the scale." },
+    { id: "SK-SS1a-S09", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-SS1a-C09"],
+      stem: ["Text 1: Warm Plants in Winter", "Frost kept killing the plants in Mr. Cruz's garden. He tried covering them with sheets, but the cold still got through. Then he built a greenhouse with glass walls. The glass let in sunlight and kept the warm air inside, and the plants lived.", "Text 2: Marimba and Harmonica", "A marimba and a harmonica both make music. A marimba has wooden bars that a player hits with sticks. A harmonica is small enough to hold in one hand, and a player blows into it."],
+      prompt: "How are the two texts organized? Choose TWO answers.",
+      choices: [
+        { text: "Text 1 tells a problem and how it was fixed.", correct: true },
+        { text: "Text 2 tells how two things are alike and different.", correct: true },
+        { text: "Text 1 tells the steps for building a greenhouse." },
+        { text: "Text 2 tells what happened and why." },
+        { text: "Both texts describe what a greenhouse looks like." }
+      ],
+      clue: "Look for the clue words in each text. They tell you how the author put the ideas together.",
+      hints: [
+        "Look for the clue words in each text. They tell you how the author put the ideas together.",
+        "Read Text 1 and list what goes wrong and what happens next. Then read Text 2 and list what is the same and what is not. Choose two.",
+        "Text 1 has a glass greenhouse, but it never numbers steps for building one. Decide which pattern each text uses."
+      ],
+      how: [
+        "Text 1 starts with frost killing the plants, a trouble. Then Mr. Cruz tries sheets and a greenhouse, and the plants live.",
+        "Text 2 uses both for a likeness and a description of each instrument for the differences.",
+        "The answers are \"Text 1 tells a problem and how it was fixed.\" and \"Text 2 tells how two things are alike and different.\"",
+        "Text 1 does not teach how to build, Text 2 has no cause and effect, and only Text 1 mentions a greenhouse."
+      ],
+      misconception: "A common mix-up is naming the topic of a text instead of how it is put together.",
+      why: "The answers are \"Text 1 tells a problem and how it was fixed.\" and \"Text 2 tells how two things are alike and different.\" Text 1 begins with frost killing plants and ends when the greenhouse fixes it. Text 2 uses both for a likeness and then describes how the instruments differ." },
+    { id: "SK-SS1a-S10", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-SS1a-C10"],
+      stem: ["\"Down the Canyon\" is Chapter 5 of a book called Wild Places. The chapter has two parts. One part is called \"Rock Walls.\" The other part is called \"The River Below.\" The next chapter in the book is Chapter 6, \"Into the Desert.\" Each chapter starts on a new page, and each part has its own heading. A reader can find a part by its heading."],
+      prompt: "Which TWO sentences use the words chapter and section correctly?",
+      choices: [
+        { text: "Rock Walls is a section of Chapter 5.", correct: true },
+        { text: "Wild Places is a book that has chapters, and Chapter 5 is one of them.", correct: true },
+        { text: "Rock Walls is a chapter that has Wild Places inside it." },
+        { text: "Chapter 6 is a section of \"The River Below.\"" },
+        { text: "Chapter 5 is a section inside Rock Walls." }
+      ],
+      clue: "A book is split into big parts, and those parts can be split again. Think about which part holds which.",
+      hints: [
+        "A book is split into big parts, and those parts can be split again. Think about which part holds which.",
+        "For each choice, ask: which part is the bigger one, and which part is inside it? Choose two.",
+        "A section is smaller than a chapter, so a choice that puts a chapter inside a section is not correct. Check the other choices the same way."
+      ],
+      how: [
+        "A book is the biggest part. It holds chapters, and a chapter holds sections.",
+        "Rock Walls is one part of Chapter 5, so it is a section. Chapter 5 is one of the chapters in Wild Places.",
+        "The answers are \"Rock Walls is a section of Chapter 5.\" and \"Wild Places is a book that has chapters, and Chapter 5 is one of them.\"",
+        "The other sentences put a bigger part inside a smaller part."
+      ],
+      misconception: "A common mix-up is switching the words chapter and section. A section is a smaller part inside a chapter.",
+      why: "The answers are \"Rock Walls is a section of Chapter 5.\" and \"Wild Places is a book that has chapters, and Chapter 5 is one of them.\" A book holds chapters, and a chapter holds sections. The other sentences put a bigger part inside a smaller part." },
+    { id: "SK-SS1a-S11", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C11"],
+      stem: ["An article about steamboats has three sections. They are called \"Rivers Before Steamboats,\" \"How Steam Turns the Wheel,\" and \"Life on Board.\" The author wants to add a drawing. It shows a boiler, a pipe and a paddle wheel on the back of a boat. Arrows show steam going from the boiler, through the pipe, to the wheel. No people are in the drawing."],
+      prompt: "The author wants to add this drawing to the article. Choose the words that best complete the sentence.",
+      text: "The drawing would help readers most in the section {0}.",
+      slots: [
+        { options: ["How Steam Turns the Wheel", "Rivers Before Steamboats", "Life on Board"], answer: 0 }
+      ],
+      clue: "A drawing should go where it helps the reader picture what the words say. Match the parts in the drawing to a section.",
+      hints: [
+        "A drawing should go where it helps the reader picture what the words say. Match the parts in the drawing to a section.",
+        "Look at the parts and the arrows in the drawing. Then ask which section name uses the same idea.",
+        "No people are in the drawing, so one section does not fit. Check the section names that are left."
+      ],
+      how: [
+        "The drawing shows a boiler, a pipe and a paddle wheel, with arrows for steam moving to the wheel.",
+        "That shows how steam turns the wheel, so it matches that section.",
+        "The answer is \"How Steam Turns the Wheel.\"",
+        "The drawing does not show a river before boats, and it has no people on board."
+      ],
+      why: "The answer is \"How Steam Turns the Wheel.\" The drawing shows steam moving from the boiler to the paddle wheel, so it helps readers picture that section. It does not show a river before boats, and it has no people on board." },
+    { id: "SK-SS1a-S12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C12"],
+      stem: ["In the section \"A Year in the Orchard,\" the author tells what happens to an apple orchard, one season after another. In winter, workers trim the trees. In spring, white flowers bloom. In summer, small green apples grow bigger. In fall, workers pick the red apples and carry them away in crates. Then the trees rest, and the year starts again."],
+      prompt: "The author tells about the orchard in time order. Why is time order a good choice for this section?",
+      choices: [
+        { text: "Flowers must bloom before apples can grow.", correct: true },
+        { text: "It compares two kinds of apple trees." },
+        { text: "It tells how a problem in the orchard was fixed." },
+        { text: "It shows which season is the most important." }
+      ],
+      clue: "Think about how an orchard really changes. Ask whether any two parts could swap places.",
+      hints: [
+        "Think about how an orchard really changes. Ask whether any two parts could swap places.",
+        "Read the seasons in order. Could you swap any two of them and still tell the story?",
+        "The section names no trouble to fix, so a choice about a fix does not fit. Test the other choices."
+      ],
+      how: [
+        "The orchard changes in one order: trimmed trees, flowers, growing apples, picked apples.",
+        "Flowers must bloom before apples can grow, so the order matters.",
+        "The answer is \"Flowers must bloom before apples can grow.\"",
+        "The section does not compare trees, fix a problem, or rank the seasons."
+      ],
+      misconception: "A common mix-up is choosing a reason about importance. Time order shows that each step needs the one before.",
+      why: "The answer is \"Flowers must bloom before apples can grow.\" The orchard changes in a set order, and flowers must bloom before apples can grow. The section does not compare trees, fix a problem or rank the seasons." },
+    { id: "SK-SS1a-S13", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C13"],
+      stem: ["An article called \"Reading a Thermometer\" has this diagram. It shows a glass tube with numbers up the side. A round bulb is at the bottom. A red line rises inside the tube. Labels point to the bulb, the tube and the red line.", "The article has these sentences:", "(1) Temperature tells how warm or cold something is.", "(2) The red line rises inside the tube when the bulb gets warm.", "(3) Look at the thermometer each morning before school.", "(4) Thermometers are sold in many stores."],
+      prompt: "Which sentence from the article does the diagram help a reader picture?",
+      choices: [
+        { text: "Sentence 2", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 3" },
+        { text: "Sentence 4" }
+      ],
+      clue: "A diagram shows how parts look and work. Find the sentence that talks about those parts.",
+      hints: [
+        "A diagram shows how parts look and work. Find the sentence that talks about those parts.",
+        "Look at the labels in the diagram. Then find the sentence that uses the same parts.",
+        "Sentence 4 is about stores, and the diagram shows no stores. Check the other sentences for the parts named in the labels."
+      ],
+      how: [
+        "The diagram labels the bulb, the tube and the red line.",
+        "Sentence 2 talks about the red line, the tube and the bulb, so the diagram helps a reader picture it.",
+        "The answer is Sentence 2.",
+        "The other sentences are about temperature in general, a morning habit and stores."
+      ],
+      misconception: "A common mix-up is choosing the sentence about the main topic. The diagram helps most with the sentence that names its labeled parts.",
+      why: "The answer is Sentence 2. The diagram labels the bulb, the tube and the red line, and Sentence 2 names all three. The other sentences are about temperature in general, a morning habit and stores." },
+    { id: "SK-SS1a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C14"],
+      stem: ["A weather vane sits on top of a barn. It has an arrow with a wide, flat tail. When the wind blows, it pushes against the tail. Because the tail is flat, the wind pushes it away. As a result, the arrow swings around and points into the wind. That is why a weather vane can show which way the wind is blowing."],
+      prompt: "Which pattern does the author mainly use in this paragraph?",
+      choices: [
+        { text: "what happens and why it happens", correct: true },
+        { text: "how two things are alike and different" },
+        { text: "steps in the order they are done" },
+        { text: "a trouble and how it gets fixed" }
+      ],
+      clue: "Clue words show the pattern. Read the whole paragraph and see what job the clue words do.",
+      hints: [
+        "Clue words show the pattern. Read the whole paragraph and see what job the clue words do.",
+        "List the clue words in the paragraph. Ask what they connect.",
+        "The paragraph is about one object, so it does not compare two things. Test the other choices against the clue words."
+      ],
+      how: [
+        "The paragraph uses the words because, as a result and that is why.",
+        "Those words connect a cause, wind pushing the flat tail, to an effect, the arrow pointing into the wind.",
+        "The answer is \"what happens and why it happens.\"",
+        "There are no steps to do, and no trouble is fixed."
+      ],
+      misconception: "A common mix-up is choosing a pattern by the topic. Use the clue words to find how the ideas connect.",
+      why: "The answer is \"what happens and why it happens.\" The words because, as a result and that is why connect the wind pushing the tail to the arrow pointing into the wind. The paragraph does not compare two things, give steps or fix a trouble." },
+    { id: "SK-SS1a-S15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-SS1a-C15"],
+      stem: ["Here is part of the table of contents from a book called Life in the Rainforest.", "Chapter 1: The Forest Floor, page 1", "• Fallen Leaves, page 2", "• Mushrooms and Insects, page 5", "Chapter 2: The Rainy Weather, page 9", "• Why It Rains So Much, page 10", "• Storms in the Afternoon, page 14", "Chapter 3: The Canopy, page 17", "• Birds in the Trees, page 18", "• Monkeys at Play, page 21"],
+      prompt: "Leo is reading about a rainforest. He wants to know why it rains there almost every day. Choose the words that best complete the sentence.",
+      text: "Leo should read Chapter {0}, in the section that starts on page {1}.",
+      slots: [
+        { options: ["2", "1", "3"], answer: 0 },
+        { options: ["10", "14", "5"], answer: 0 }
+      ],
+      clue: "A table of contents lists chapters and the sections inside them. Read each title and ask what that part is about.",
+      hints: [
+        "A table of contents lists chapters and the sections inside them. Read each title and ask what that part is about.",
+        "Read every section title, not only the chapter titles.",
+        "\"Storms in the Afternoon\" is about when storms come, but it is not about the reason for the rain. Check the other sections the same way."
+      ],
+      how: [
+        "Leo wants to know why it rains so much in the rainforest.",
+        "Chapter 2, \"The Rainy Weather,\" has a section called \"Why It Rains So Much.\" It starts on page 10.",
+        "So he should read Chapter 2, in the section that starts on page 10.",
+        "\"Fallen Leaves\" is about the ground, and \"Birds in the Trees\" is about animals in the canopy."
+      ],
+      misconception: "A common mix-up is choosing a section that shares one idea, like storms, instead of the one whose whole title answers the question.",
+      why: "The answers are 2 and 10. Chapter 2, \"The Rainy Weather,\" has the section \"Why It Rains So Much,\" which starts on page 10. \"Storms in the Afternoon\" tells about when storms come, not why it rains so much." }
   ],
   /* Hints and Show me how for items kept in practice: refs P5-P7 (core set 1) and Together P1-P4. */
   addons: {

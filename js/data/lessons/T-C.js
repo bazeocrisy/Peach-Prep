@@ -1570,7 +1570,292 @@ PP.addLesson({
         "Saying what the next part is about lets listeners hear that a new part is starting, the way a heading does on a page.",
         "The answer is to say, \"Next, I will tell you how spiders spin webs.\""
       ],
-      why: "The answer is to say, \"Next, I will tell you how spiders spin webs.\" Listeners hear his voice, not his paper. Darker headings are on his own paper, and reading the headings faster or skipping them makes the change easy to miss." }
+      why: "The answer is to say, \"Next, I will tell you how spiders spin webs.\" Listeners hear his voice, not his paper. Darker headings are on his own paper, and reading the headings faster or skipping them makes the change easy to miss." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TC1b-S04", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-P5"],
+      stem: ["An article called \"A Doctor's Listening Tool\" has a diagram of a stethoscope. Labels point to the ear tips, the tube and the chest piece. Here are four sentences from the article.", "(1) Doctors have used stethoscopes for over two hundred years.", "(2) The chest piece is placed on the patient, and sound travels up the tube to the ear tips.", "(3) Some doctors wear a white coat to their work.", "(4) A child can ask to listen to his or her own heartbeat."],
+      prompt: "Which sentence tells about the parts that the labels in the diagram point to?",
+      choices: [
+        { text: "Sentence 2", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 3" },
+        { text: "Sentence 4" }
+      ],
+      clue: "A diagram's labels name parts. Find the sentence that uses the same names.",
+      hints: [
+        "A diagram's labels name parts. Find the sentence that uses the same names.",
+        "Read the three labels. Then look for a sentence that says what those parts do.",
+        "Sentence 3 is about a coat, and no label points to a coat. Check the other sentences for the labeled parts."
+      ],
+      how: [
+        "The labels are ear tips, tube and chest piece.",
+        "Sentence 2 names the chest piece, the tube and the ear tips, and tells how sound moves through them.",
+        "The answer is Sentence 2.",
+        "The other sentences are about how long doctors have used the tool, a white coat, and a child's heartbeat."
+      ],
+      why: "The answer is Sentence 2. It names the chest piece, the tube and the ear tips, which are the parts the labels point to. The other sentences tell about the past, a coat and a child's heartbeat." },
+    { id: "SK-TC1b-S05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-P4"],
+      stem: ["In the part called \"Baking the Clay,\" the word **kiln** is printed in dark, bold letters. At the back of the book is a glossary. It says: kiln: a very hot oven that bakes clay until it is hard. The part says, \"Potters put their bowls in a kiln for a whole day.\" A student asks why the word looks so different from the words next to it."],
+      prompt: "How does the bold print help the reader?",
+      choices: [
+        { text: "It shows an important word that the glossary explains.", correct: true },
+        { text: "It shows the word is hard to say out loud." },
+        { text: "It shows that the section is ending." },
+        { text: "It shows the word is the name of a person." }
+      ],
+      clue: "Authors make a word look different on purpose. Think about what a reader can do with a bold word.",
+      hints: [
+        "Authors make a word look different on purpose. Think about what a reader can do with a bold word.",
+        "Look for the place where the stem tells more about the word kiln.",
+        "Nothing in the stem says the word is hard to say, so that job does not fit. Test the other choices."
+      ],
+      how: [
+        "The word kiln is in bold, and the glossary at the back tells what it means.",
+        "So the bold print points the reader to a word that matters and is explained.",
+        "The answer is \"It shows an important word that the glossary explains.\"",
+        "Bold print does not show how to say a word, where a section ends, or that a word is a name."
+      ],
+      misconception: "A common mix-up is thinking bold print is only decoration. It tells the reader to notice an important word.",
+      why: "The answer is \"It shows an important word that the glossary explains.\" The glossary tells what kiln means. Bold print does not show how to say a word, where a section ends, or that a word is a name." },
+    { id: "SK-TC1b-S06", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
+      like: ["SK-TC1b-C04"],
+      stem: ["A park magazine has an article about a zip line. One section has the heading \"Flying Through the Trees.\" Under the heading, the author tells about a ride across a forest. A rider hangs from a cable and glides high above the ground. The ride is fast and quiet. The section ends with the rider landing on a wooden platform."],
+      prompt: "How does the heading \"Flying Through the Trees\" help the reader? Choose TWO answers.",
+      choices: [
+        { text: "It tells that the section is about riding above a forest.", correct: true },
+        { text: "It makes the reader want to find out what the ride is like.", correct: true },
+        { text: "It tells how to build a zip line." },
+        { text: "It lists all the safety rules for riders." },
+        { text: "It tells the reader the name of the park." }
+      ],
+      clue: "A heading gives a small preview of the section. Think about what the reader learns and feels.",
+      hints: [
+        "A heading gives a small preview of the section. Think about what the reader learns and feels.",
+        "Compare the heading with the sentences under it. Choose two jobs the heading does.",
+        "The heading names no park, so that job does not fit. Check each choice against the heading and the section."
+      ],
+      how: [
+        "The heading says \"Flying Through the Trees,\" and the section tells about a ride high above a forest.",
+        "So the heading tells what the section is about, and \"flying\" makes the reader curious about the ride.",
+        "The answers are \"It tells that the section is about riding above a forest.\" and \"It makes the reader want to find out what the ride is like.\"",
+        "The section does not tell how to build a zip line, list safety rules, or name the park."
+      ],
+      misconception: "A common mix-up is choosing a job the section never does. A heading only gives a preview of what the section tells.",
+      why: "The answers are \"It tells that the section is about riding above a forest.\" and \"It makes the reader want to find out what the ride is like.\" The heading names the topic and its word \"flying\" makes the reader curious. The section does not tell how to build a zip line, list safety rules or name the park." },
+    { id: "SK-TC1b-S07", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C06"],
+      stem: ["The author is writing a section called \"A Wheel That Helps You Lift.\" It tells how a pulley works. A pulley is a wheel with a groove, and a rope runs over it. When you pull down on one end of the rope, the other end goes up. This makes it easier to raise a heavy bucket from a well. The author wants to print one word in bold, so readers know it is the key word of the section."],
+      prompt: "Which word should the author print in bold?",
+      choices: [
+        { text: "pulley", correct: true },
+        { text: "rope" },
+        { text: "bucket" },
+        { text: "heavy" }
+      ],
+      clue: "The bold word should be the one the whole section is about. Ask which word the section would not make sense without.",
+      hints: [
+        "The bold word should be the one the whole section is about. Ask which word the section would not make sense without.",
+        "Read the section title again. Then see which choice names the thing the section teaches.",
+        "The word heavy only describes the bucket, so it is not the main idea. Test the other choices against the title."
+      ],
+      how: [
+        "The section title is \"A Wheel That Helps You Lift,\" and the text explains how a pulley works.",
+        "A reader needs to know this one word to understand the whole section.",
+        "The answer is \"pulley.\"",
+        "A rope and a bucket are only parts of the story, and heavy only describes the bucket."
+      ],
+      misconception: "A common mix-up is choosing a word that is easy to see in a picture. The bold word should name what the whole section teaches.",
+      why: "The answer is \"pulley.\" The section is about how a pulley works, so that is the key word for readers to notice. A rope and a bucket are only parts of the story, and heavy only describes the bucket." },
+    { id: "SK-TC1b-S08", type: "dropdown", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C07"],
+      stem: ["An article explains how a ramp helps a person in a wheelchair get into a building. The article has a diagram. It shows a short set of steps next to a long, gentle slope. An arrow runs up the slope to a door at the top. Labels point to the slope, the handrail and the door. The author wants a caption that tells what the whole diagram shows."],
+      prompt: "The diagram has no caption yet. Choose the words that best complete the sentence.",
+      text: "The diagram should have the caption {0}.",
+      slots: [
+        { options: ["How a ramp helps a wheelchair reach a door", "The handrail on the left side", "A short set of steps"], answer: 0 }
+      ],
+      clue: "A caption for a whole diagram should name the big idea, not one small part.",
+      hints: [
+        "A caption for a whole diagram should name the big idea, not one small part.",
+        "Look at what all the labels and the arrow show together.",
+        "A handrail is only one label, so that caption is about one part. Compare the other captions with the whole diagram."
+      ],
+      how: [
+        "The diagram shows a slope, a handrail and a door, with an arrow going up the slope.",
+        "A caption should tell what all of that shows together.",
+        "The answer is \"How a ramp helps a wheelchair reach a door.\"",
+        "The handrail and the steps are each only one small part of the diagram."
+      ],
+      why: "The answer is \"How a ramp helps a wheelchair reach a door.\" It names what the whole diagram shows. The handrail and the steps are each only one small part." },
+    { id: "SK-TC1b-S09", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C08"],
+      stem: ["A diagram in a book shows how a drawbridge lets a tall boat pass. Arrow 1 points from a bell to a worker in a small tower. Arrow 2 points from the worker to a lever, and the road lifts. Arrow 3 points to the boat sailing through the gap. Each arrow has a number next to it, so a reader can follow the trip."],
+      prompt: "Use the diagram. Put the steps of the drawbridge's job in order.",
+      steps: [
+        "A bell rings to tell the worker a boat is coming.",
+        "The worker pulls the lever.",
+        "The road lifts up like two doors.",
+        "The boat sails through the gap."
+      ],
+      clue: "Numbers and arrows on a diagram can show an order. Follow them from the smallest number to the largest.",
+      hints: [
+        "Numbers and arrows on a diagram can show an order. Follow them from the smallest number to the largest.",
+        "Find the three numbered arrows. Match each one to a step. One step has no arrow of its own.",
+        "The boat cannot sail through before the road lifts, because arrow 3 comes last. Put the other three steps in order."
+      ],
+      how: [
+        "Arrow 1 goes from the bell to the worker: a bell rings to tell the worker a boat is coming.",
+        "Arrow 2 goes from the worker to the lever, and the road lifts. So the worker pulls the lever, and then the road lifts up.",
+        "Arrow 3 points to the boat sailing through the gap."
+      ],
+      why: "The order is: a bell rings to tell the worker a boat is coming, the worker pulls the lever, the road lifts up like two doors, and the boat sails through the gap. Arrows 1, 2 and 3 show those steps in that order." },
+    { id: "SK-TC1b-S10", type: "dropdown", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C10"],
+      stem: ["A web page about a playground has a video of two children on a seesaw. Words appear under the video as it plays. These are called captions. They tell what people say, and they also name important sounds. Later in the video, the wooden seesaw hits the ground with a loud thump, and nobody is talking."],
+      prompt: "Choose the words that best complete the sentence.",
+      text: "The caption line should show the line {0}.",
+      slots: [
+        { options: ["[seesaw thumps]", "[children are playing]", "[the video ends]"], answer: 0 }
+      ],
+      clue: "A caption can name a sound so that a reader who cannot hear still knows what is happening.",
+      hints: [
+        "A caption can name a sound so that a reader who cannot hear still knows what is happening.",
+        "Find the sound in the stem. Then look for the line that names that sound.",
+        "Nothing in the stem says the video ends at that moment, so one line does not fit. Compare the other lines with the sound."
+      ],
+      how: [
+        "Nobody is talking, but the seesaw makes a loud thump.",
+        "A caption in brackets can name that sound so the reader knows it happened.",
+        "The answer is \"[seesaw thumps].\"",
+        "The line about children playing does not name the sound, and the video does not end then."
+      ],
+      why: "The answer is \"[seesaw thumps].\" The only sound at that moment is the seesaw hitting the ground, and a caption in brackets names it. The other lines do not name the sound, and the video does not end then." },
+    { id: "SK-TC1b-S11", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C11"],
+      stem: ["An article called \"Reading a Tree Trunk\" has a diagram of a tree trunk cut across. Labels point to the bark, the rings and the center. Here are four sentences from the article.", "(1) The bark is the thin outside layer that protects the tree.", "(2) Each ring shows one year of growth.", "(3) The roots hold the tree in the ground and take in water.", "(4) The center of the trunk is the oldest part."],
+      prompt: "Which sentence names a part of the tree that the diagram does NOT show?",
+      choices: [
+        { text: "Sentence 3", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 2" },
+        { text: "Sentence 4" }
+      ],
+      clue: "Compare each sentence with the labels. Look for a part the labels do not name.",
+      hints: [
+        "Compare each sentence with the labels. Look for a part the labels do not name.",
+        "Write the three labels. Then find the part named in each sentence.",
+        "The rings are a labeled part, so the sentence about them is shown in the diagram. Check the other sentences the same way."
+      ],
+      how: [
+        "The labels name the bark, the rings and the center.",
+        "Sentences 1, 2 and 4 each tell about one of those parts.",
+        "Sentence 3 tells about the roots, and no label points to the roots.",
+        "The answer is Sentence 3."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is hard to picture. Check which parts the labels name.",
+      why: "The answer is Sentence 3. It names the roots, and no label points to the roots. The other sentences tell about the bark, the rings and the center, which the labels name." },
+    { id: "SK-TC1b-S12", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C12"],
+      stem: ["An article explains how a toaster makes bread brown. The author could have used a photo of a toaster on a kitchen counter. Instead, the author drew a diagram of the inside. Labels point to the red wires, the spring and the lever that pushes the bread down. A photo would show only the shiny outside of the toaster."],
+      prompt: "Why is the diagram a better choice for this article than the photo?",
+      choices: [
+        { text: "Its labels name the hidden parts inside.", correct: true },
+        { text: "It shows the exact color of a real toaster." },
+        { text: "It makes the toaster look larger on the page." },
+        { text: "It shows what a kitchen counter looks like." }
+      ],
+      clue: "Match the picture to the job of the article. Ask what a reader needs to see to learn about a toaster.",
+      hints: [
+        "Match the picture to the job of the article. Ask what a reader needs to see to learn about a toaster.",
+        "Read what the photo would show and what the diagram shows. Which one shows what is inside?",
+        "The stem says the photo shows a shiny outside, so a color is the photo's strength, not the diagram's. Test the other choices."
+      ],
+      how: [
+        "The article is about how a toaster works, so a reader needs to see what is inside.",
+        "A photo would show only the outside. The diagram shows the wires, spring and lever, with labels.",
+        "The answer is \"Its labels name the hidden parts inside.\"",
+        "The diagram is not about color, size or the kitchen."
+      ],
+      misconception: "A common mix-up is thinking a photo is always better because it looks real. The better picture is the one that shows what the article teaches.",
+      why: "The answer is \"Its labels name the hidden parts inside.\" The article is about how a toaster works, and the photo would show only the outside. The diagram is not about color, size or the kitchen." },
+    { id: "SK-TC1b-S13", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
+      like: ["SK-TC1b-C13"],
+      stem: ["The Greenway Park Newsletter comes two ways. One way is a printed paper that people pick up at the park gate. The other way is a web page. Both have headlines, photos with captions and a calendar box of upcoming days. The web page can also do some things that paper cannot do. A reader can use it on a phone or on a computer."],
+      prompt: "Which TWO features could be on the web page but NOT in the printed paper?",
+      choices: [
+        { text: "a play button for a video of the new playground opening", correct: true },
+        { text: "a Sign Up button that opens a form for the soccer league", correct: true },
+        { text: "a headline above each story" },
+        { text: "a photo with a caption underneath" },
+        { text: "a calendar box that lists the upcoming days" }
+      ],
+      clue: "Ask which features need a screen to work. A feature that can move or open something needs one.",
+      hints: [
+        "Ask which features need a screen to work. A feature that can move or open something needs one.",
+        "The stem says both ways already have some features. Cross those out first, then choose two.",
+        "A calendar box is named in the stem as being in both ways, so it is not web-only. Check the other choices the same way."
+      ],
+      how: [
+        "The stem says both ways have headlines, photos with captions and a calendar box.",
+        "A video with a play button and a Sign Up button that opens a form need a screen to work.",
+        "The answers are \"a play button for a video of the new playground opening\" and \"a Sign Up button that opens a form for the soccer league.\"",
+        "Headlines, captions and calendar boxes can be printed on paper."
+      ],
+      misconception: "A common mix-up is choosing a feature the text says is in both. Cross out the shared features first.",
+      why: "The answers are \"a play button for a video of the new playground opening\" and \"a Sign Up button that opens a form for the soccer league.\" Both need a screen to work. Headlines, captions and calendar boxes are in both the paper and the web page." },
+    { id: "SK-TC1b-S14", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
+      like: ["SK-TC1b-C14"],
+      stem: ["Theo is giving a talk to his class about keeping a garden healthy. He has three tips. He wants his listeners to keep track of which tip he is on. They will only hear his voice, and nothing will be written on the board. Theo has practiced his talk at home, and he plans to speak in a clear, calm voice."],
+      prompt: "Which TWO things should Theo do?",
+      choices: [
+        { text: "Say at the start, \"I have three tips to share.\"", correct: true },
+        { text: "Say \"second\" and \"finally\" before the later tips.", correct: true },
+        { text: "Hold up a page with the word Tip in bold print." },
+        { text: "Talk very fast so the talk is over soon." },
+        { text: "Whisper each tip so listeners lean in." }
+      ],
+      clue: "Listeners cannot see headings or bold print. Think about words that tell where a talk is going.",
+      hints: [
+        "Listeners cannot see headings or bold print. Think about words that tell where a talk is going.",
+        "For each choice, ask: will the words help a listener keep track of the tips? Choose two.",
+        "The stem says nothing will be written, so a page with bold print is not something listeners can use. Check the other choices."
+      ],
+      how: [
+        "Listeners only hear Theo, so he needs to say words that show the parts of his talk.",
+        "Saying how many tips he has tells listeners what to expect. Words like second and finally tell which tip is next.",
+        "The answers are \"Say at the start, \"I have three tips to share.\"\" and \"Say \"second\" and \"finally\" before the later tips.\"",
+        "Talking fast or whispering does not help listeners keep track of the tips."
+      ],
+      misconception: "A common mix-up is choosing a way to look different, like bold print. Listeners need words they can hear.",
+      why: "The answers are \"Say at the start, \"I have three tips to share.\"\" and \"Say \"second\" and \"finally\" before the later tips.\" Listeners hear the words, so counting the tips and saying which tip is next helps them keep track. Bold print cannot be heard, and talking fast or whispering does not show the parts." },
+    { id: "SK-TC1b-S15", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      like: ["SK-TC1b-C15"],
+      stem: ["Here is part of the script for a school podcast about a student named Nia. The podcast is about her day. Words in [brackets] name sounds, and a name with a colon shows who is talking.", "[alarm clock ringing]", "HOST: Good morning! Today, Nia tells how she gets ready for school.", "NIA: I always jump out of bed when I hear that ringing."],
+      prompt: "Why does the podcast play an alarm clock sound right before the host starts to speak?",
+      choices: [
+        { text: "to tell listeners the story begins in the morning", correct: true },
+        { text: "to tell listeners that the story is over" },
+        { text: "to show that the host is angry" },
+        { text: "to tell listeners to stop listening" }
+      ],
+      clue: "A sound in a podcast is added for a reason. Ask what the sound helps listeners know or feel.",
+      hints: [
+        "A sound in a podcast is added for a reason. Ask what the sound helps listeners know or feel.",
+        "Read the lines right after the sound. What time of day do they tell about?",
+        "The host says good morning in a happy voice, so a choice about anger does not fit. Test the other choices against the lines after the sound."
+      ],
+      how: [
+        "The alarm clock rings at the very start of the script.",
+        "The next lines say good morning and tell how Nia gets ready for school.",
+        "The answer is \"to tell listeners the story begins in the morning.\"",
+        "The sound comes at the start, so it does not mean the story is over or tell listeners to stop."
+      ],
+      misconception: "A common mix-up is thinking a sound is only noise. A sound can tell listeners where, when or how to feel.",
+      why: "The answer is \"to tell listeners the story begins in the morning.\" The alarm clock rings at the start, and the host then says good morning. The sound comes at the start, so it does not mean the story is over, show anger or tell listeners to stop." }
   ],
   /* Hints and Show me how for items kept in practice: refs P5, P4 (core set 1) and Together P1, P8, P9, P10, P6. */
   addons: {

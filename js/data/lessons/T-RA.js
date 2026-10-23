@@ -1133,7 +1133,7 @@ PP.addLesson({
         ["The North Atlantic right whale is Georgia's state marine mammal.", "A grown right whale can be about 50 feet long.", "That is longer than a school bus."],
         ["Each fall, many mother right whales swim south from cold northern waters.", "They come to the warm, calm water near the coasts of Georgia and Florida.", "There, in the winter, each mother gives birth to one calf."],
         ["A right whale has no teeth.", "Instead, long plates called baleen hang down from its top jaw.", "The whale swims with its mouth open.", "The baleen catches tiny animals and lets the water flow back out."],
-        ["Right whales are in danger.", "Fewer than 400 of them are left in the world.", "Ships and fishing ropes are their biggest dangers.", "People are working on fishing ropes that break more easily, so a whale caught in one can pull free."]
+        ["Right whales are in danger.", "Only a few hundred of them are left in the world.", "Ships and fishing ropes are their biggest dangers.", "People are working on fishing ropes that break more easily, so a whale caught in one can pull free."]
       ] },
     { id: "p8", title: "A Call with a Whale Scientist", byline: "Source 2: a student's notes from a phone call", genre: "Informational text",
       paragraphs: [
@@ -1336,7 +1336,7 @@ PP.addLesson({
         hints: [
           "A sentence helps only if it answers the research question. A sentence can be true, and even be about danger, and still not tell how anyone helps.",
           "Each source has one sentence that answers the question. In Source 1, reread the paragraph about dangers. In Source 2, reread the paragraph about ships.",
-          "The sentence that says fewer than 400 right whales are left only counts the whales. Counting them does not keep them safe. Decide about the other sentences in those two paragraphs."
+          "The sentence that says only a few hundred right whales are left only counts the whales. Counting them does not keep them safe. Decide about the other sentences in those two paragraphs."
         ],
         how: [
           "Kai's question asks what people do to keep the whales safe.",
@@ -1394,24 +1394,24 @@ PP.addLesson({
         prompt: "Kai also wants to know how long right whales live. Neither source tells him. What should Kai do next?",
         choices: [
           { text: "Look for another credible source, such as a whale research center's web page.", correct: true },
-          { text: "Write his own best guess in the notes table, so that the table is not empty." },
+          { text: "Copy the number from a post that does not say who wrote it, because it names a number of years." },
           { text: "Use the length of a new calf, because it is a number about right whales." },
-          { text: "Ask a classmate to guess, because a person can be a source of facts." }
+          { text: "Use how long a blue whale lives, because all whales are alike." }
         ],
         clue: "When your sources do not answer a question, you need more facts, not a guess. Ask where Kai could find facts he can trust.",
         hints: [
           "When your sources do not answer a question, you need more facts, not a guess. Ask where Kai could find facts he can trust.",
           "Reread Kai's question. For each answer, ask two things: would it really tell him how long right whales live, and could he trust it?",
-          "The length of a new calf is a true number from Source 2, but it tells how long a calf is, not how long a whale lives. Use the trust question on the other three answers."
+          "The length of a new calf is a true number from Source 2, but it tells how long a calf is, not how long a whale lives. Use both questions on the other three answers."
         ],
         how: [
           "Kai's two sources do not tell how long right whales live, so he needs another source.",
-          "A guess, his own or a classmate's, is not a checked fact. A classmate is a person, but not a person who knows about whales.",
+          "A post that does not say who wrote it gives a number, but Kai cannot tell if the writer knows whales. A blue whale is a different whale, so its facts may not fit right whales.",
           "The length of a calf is a fact, but it does not answer his question.",
           "The answer is \"Look for another credible source, such as a whale research center's web page.\""
         ],
-        misconception: "A common mix-up is filling a gap with a guess or with a fact that does not fit. Good researchers look for another source they can trust.",
-        why: "The answer is \"Look for another credible source, such as a whale research center's web page.\" When sources leave a question unanswered, a researcher finds another source made by people who know the facts. A guess is not a checked fact, and the calf's length does not tell how long whales live." }
+        misconception: "A common mix-up is filling a gap with a fact that does not fit or a source nobody can check. Good researchers look for another source they can trust.",
+        why: "The answer is \"Look for another credible source, such as a whale research center's web page.\" When sources leave a question unanswered, a researcher finds another source made by people who know the facts. A post with no writer is not a source Kai can trust, a blue whale is a different animal, and the calf's length does not tell how long whales live." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-RA1b-C11", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p9", "p10"], pick: 2,
@@ -2654,23 +2654,23 @@ PP.addLesson({
         misconception: "A common mix-up is choosing proof because it is a true fact from the right part of the story. Proof has to show the answer, not just be true.",
         why: "The answer is \"Lena's, because Simone's own question shows she wants more practice.\" The score is true, but it is about the team's game, not what Simone wants, and losing does not always make players want to practice. Length does not make proof better." },
       { id: "SK-RA2a-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p6"],
-        prompt: "Simone's dad says, \"Simone is a thankful teammate.\" Which sentence BEST supports his opinion? Choose the sentence in the passage.",
-        targets: ["p6:3:1", "p6:4:1", "p6:4:4", "p6:5:2", "p6:5:3"],
-        answer: ["p6:5:3"], pick: 1,
-        clue: "Thankful means showing that you are glad someone helped you. The opinion is about Simone, so the proof must show something Simone does or says.",
+        prompt: "Simone's dad says, \"Simone is good at learning from advice.\" Which sentence BEST supports his opinion? Choose the sentence in the passage.",
+        targets: ["p6:3:1", "p6:3:3", "p6:4:1", "p6:4:2", "p6:4:4", "p6:5:3"],
+        answer: ["p6:4:2"], pick: 1,
+        clue: "Learning from advice means hearing a tip and then changing what you do. The opinion is about Simone, so the proof must show something Simone does.",
         hints: [
-          "Thankful means showing that you are glad someone helped you. The opinion is about Simone, so the proof must show something Simone does or says.",
-          "Reread paragraph 5, after the game.",
-          "Dani jogging over shows that Dani is kind, but it does not show anything about Simone. Look closely at what Simone does and says after the game."
+          "Learning from advice means hearing a tip and then changing what you do. The opinion is about Simone, so the proof must show something Simone does.",
+          "Reread paragraphs 3 and 4, the tip and what comes after it.",
+          "Dani's words are the tip itself, not Simone learning from it. For each sentence about Simone, ask: does it show her doing what the tip said?"
         ],
         how: [
-          "Thankful means showing you are glad someone helped you.",
-          "After the game, Simone runs over to Dani. Running over by itself does not show thanks.",
-          "Then Simone tells Dani that she is thankful for the tip. That is the proof.",
-          "Dani jogging over shows Dani's kindness, nodding shows Simone listening, and the dive shows her skill."
+          "Learning from advice means hearing a tip and then doing something about it.",
+          "Dani's tip is to watch the ball, not the kicker's feet. Dani's words are the advice, not Simone learning.",
+          "Simone nodding shows she heard it, and diving shows her skill. But only one sentence shows her doing what the tip said: after that, every time the ball came near, she kept her eyes on it.",
+          "The answer is \"After that, every time the ball came near, she kept her eyes on it.\""
         ],
-        misconception: "A common mix-up is choosing a sentence about Dani's kindness. The opinion is about Simone, so the proof must show Simone.",
-        why: "The answer is the sentence where Simone says, \"Thanks for your tip.\" Thanking Dani shows she is glad Dani helped her. Running over to Dani, nodding and diving do not show thanks, and Dani jogging over is about Dani." },
+        misconception: "A common mix-up is choosing the sentence where Simone nods or says thanks. Hearing a tip, or being polite about it, is not the same as using it.",
+        why: "The answer is \"After that, every time the ball came near, she kept her eyes on it.\" It shows Simone doing what Dani's tip said. Dani's tip is the advice itself, nodding only shows she listened, the dive shows her skill, and thanking Dani shows she is polite." },
       { id: "SK-RA2a-C14", type: "ms", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: [], pick: 2,
         stem: ["**The Reading Dog**", "(1) Every Tuesday, a calm dog named Waffles visits the Oak Street Library.", "(2) Kids who used to be too shy to read out loud now read to Waffles in loud, clear voices.", "(3) Waffles has been a library dog for four years.", "(4) One boy said, \"Waffles never laughs when I mix up a word, so I'm not scared to try.\"", "(5) Teachers say that some of these kids now raise their hands to read in class, too."],
         prompt: "The librarian says, \"Reading to Waffles helps shy kids feel brave.\" Which TWO sentences are true but do NOT support her idea? Choose two answers.",
@@ -2914,7 +2914,7 @@ PP.addLesson({
       hints: [
         "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk sensing.",
         "Three sentences are about the tusk. Read those three closely.",
-        "Which narwhals have tusks tells who has one, not what it does. Check the other two sentences about the tusk."
+        "Which narwhals have tusks tells who has one, not what it does. For each of the other two sentences about the tusk, ask: does it tell what the tusk is, or what the tusk can do?"
       ],
       how: [
         "The idea is that the tusk helps the narwhal sense the water.",
@@ -2951,25 +2951,25 @@ PP.addLesson({
       stem: ["Ty's opinion: \"Ring-tailed lemurs are good at living in groups.\""],
       prompt: "Which TWO facts BEST support Ty's opinion? Choose two answers.",
       choices: [
-        { text: "Lemurs in a group take turns watching for danger while the others eat.", correct: true },
+        { text: "Lemurs in a group huddle close together to stay warm.", correct: true },
         { text: "Lemurs in a group clean each other's fur.", correct: true },
         { text: "Ring-tailed lemurs have black-and-white striped tails." },
         { text: "Ring-tailed lemurs live on the island of Madagascar." },
         { text: "Ring-tailed lemurs eat fruit, leaves and flowers." }
       ],
-      clue: "An opinion needs facts that show it. Look for facts about how lemurs act together, not just facts about lemurs.",
+      clue: "An opinion needs facts that show it. Look for facts about how lemurs treat each other, not just facts about lemurs.",
       hints: [
-        "An opinion needs facts that show it. Look for facts about how lemurs act together, not just facts about lemurs.",
+        "An opinion needs facts that show it. Look for facts about how lemurs treat each other, not just facts about lemurs.",
         "Read each fact and picture the lemurs it tells about. Choose two.",
         "Striped tails tell how lemurs look, not how they live together. Check the other four facts."
       ],
       how: [
         "Ty's opinion is that lemurs are good at living in groups.",
-        "Taking turns watching for danger and cleaning each other's fur show lemurs helping one another in a group.",
+        "Huddling together to stay warm and cleaning each other's fur show lemurs helping one another in a group.",
         "Tails, where they live and what they eat are true, but they do not show group life.",
-        "The answers are \"Lemurs in a group take turns watching for danger while the others eat.\" and \"Lemurs in a group clean each other's fur.\""
+        "The answers are \"Lemurs in a group huddle close together to stay warm.\" and \"Lemurs in a group clean each other's fur.\""
       ],
-      why: "The answers are \"Lemurs in a group take turns watching for danger while the others eat.\" and \"Lemurs in a group clean each other's fur.\" Both show lemurs helping each other. The other facts tell how they look, where they live and what they eat." },
+      why: "The answers are \"Lemurs in a group huddle close together to stay warm.\" and \"Lemurs in a group clean each other's fur.\" Both show lemurs helping each other. The other facts tell how they look, where they live and what they eat." },
     { id: "SK-RA2a-S12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C11"],
       stem: ["(1) Mia kept wobbling when she tried to spin in ballet class.", "(2) Her teacher said, \"Pick one spot on the wall, and look at it each time you turn.\"", "(3) On her next try, Mia kept her eyes on the clock each time she turned.", "(4) Her spin was smooth and steady.", "(5) Mia's ballet shoes were pink."],
@@ -2984,7 +2984,7 @@ PP.addLesson({
       hints: [
         "The answer is about Mia using the tip. The proof must show Mia doing what her teacher said.",
         "Read sentences 2, 3 and 4.",
-        "Sentence 4 tells how the spin turned out, not what Mia did. Compare sentences 2 and 3."
+        "Sentence 4 tells how the spin turned out, not what Mia did. For the other sentences, ask whether each one gives the tip or shows someone following it."
       ],
       how: [
         "The teacher's tip is in sentence 2: look at one spot each time you turn.",
@@ -3020,27 +3020,27 @@ PP.addLesson({
       why: "The answer is \"Sam's, because sentence 2 shows Ana asking for help with serving.\" The oranges are a team snack and do not show what Ana wants, and the order of the sentences does not make one better proof." },
     { id: "SK-RA2a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C13"],
-      stem: ["(1) Leo's sister Dee showed him how to hold a bow at archery camp.", "(2) Leo aimed slowly and hit the target.", "(3) He ran to Dee and said, \"Thanks for showing me!\"", "(4) Dee smiled and handed him another arrow."],
-      prompt: "Opinion: \"Leo is thankful for his sister's help.\" Which sentence BEST supports this opinion?",
+      stem: ["(1) Rosa's brother Cam showed her how to ride a bike without training wheels.", "(2) On her first try, Rosa wobbled and fell.", "(3) She got back on and pushed off again until she rode all the way down the block.", "(4) Cam clapped and cheered."],
+      prompt: "Opinion: \"Rosa does not give up.\" Which sentence BEST supports this opinion?",
       choices: [
-        { text: "He ran to Dee and said, \"Thanks for showing me!\"", correct: true },
-        { text: "Leo's sister Dee showed him how to hold a bow at archery camp." },
-        { text: "Dee smiled and handed him another arrow." },
-        { text: "Leo aimed slowly and hit the target." }
+        { text: "She got back on and pushed off again until she rode all the way down the block.", correct: true },
+        { text: "On her first try, Rosa wobbled and fell." },
+        { text: "Cam clapped and cheered." },
+        { text: "Rosa's brother Cam showed her how to ride a bike without training wheels." }
       ],
-      clue: "The opinion is about Leo, so the proof must show something Leo says or does that shows thanks.",
+      clue: "The opinion is about Rosa, so the proof must show something Rosa does that fits the opinion.",
       hints: [
-        "The opinion is about Leo, so the proof must show something Leo says or does that shows thanks.",
-        "Two sentences tell what Leo does. Read them closely.",
-        "Dee handing him an arrow is something Dee does, not Leo. Check the other three sentences."
+        "The opinion is about Rosa, so the proof must show something Rosa does that fits the opinion.",
+        "Read all four sentences and ask who each one is about.",
+        "Cam clapping is about Cam, not Rosa. For the other three, ask what each one shows Rosa doing."
       ],
       how: [
-        "The opinion is that Leo is thankful.",
-        "In sentence 3, Leo runs to Dee and thanks her. That shows he is thankful.",
-        "Sentences 1 and 4 tell what Dee does, and hitting the target shows skill, not thanks.",
-        "The answer is: He ran to Dee and said, \"Thanks for showing me!\""
+        "The opinion is that Rosa does not give up.",
+        "Sentence 2 shows something hard happening to her, but it does not show what she does about it.",
+        "Sentence 3 shows her getting back on and trying again until she makes it. That is not giving up.",
+        "Sentences 1 and 4 are about Cam. The answer is \"She got back on and pushed off again until she rode all the way down the block.\""
       ],
-      why: "The answer is: He ran to Dee and said, \"Thanks for showing me!\" Thanking Dee shows he is glad she helped. The other sentences tell what Dee does or how well Leo aims." },
+      why: "The answer is \"She got back on and pushed off again until she rode all the way down the block.\" It shows what Rosa does after she falls. Falling shows the bike was hard, not that she kept going, and the other two sentences are about Cam." },
     { id: "SK-RA2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: [], pick: 2,
       like: ["SK-RA2a-C14"],
       stem: ["**Idea:** Solar panels help our school save money.", "(1) Last year, our school put solar panels on its roof.", "(2) The panels have cut the school's electric bill in half.", "(3) The panels are dark blue and shaped like rectangles.", "(4) The money the school saves now pays for new library books.", "(5) The principal says the school will save even more next year."],
@@ -3303,7 +3303,7 @@ PP.addLesson({
       paragraphs: [
         ["In some old cartoons, a bull gets angry when it sees a red cape.", "Many people believe that the color red makes bulls charge."],
         ["But bulls cannot see red the way people do.", "Scientists have found that cattle can see blue and yellow, but red does not stand out to them the way it does to people."],
-        ["To test the idea, one team of scientists showed bulls a red cape, a blue cape and a white cape.", "When a cape stayed still, the bulls did not charge at it, even if it was red.", "When a cape waved back and forth, the bulls charged, no matter what color it was."],
+        ["To test the idea, a TV show put a red flag, a blue flag and a white flag near bulls.", "The bulls charged all three flags, and they did not pick the red one.", "The show also saw that bulls went after people who moved around."],
         ["So it is the movement, not the color, that gets a bull's attention.", "Bulls are also very strong.", "A grown bull can weigh as much as a small car."]
       ] }
   ],
@@ -3431,7 +3431,7 @@ PP.addLesson({
         clue: "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
         hints: [
           "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
-          "Read Excerpt B again, slowly. Picture what it says happening on every farm across a whole state.",
+          "Read both excerpts slowly. Picture each one happening on a real farm. Which parts would you expect to see, and which would be hard to believe?",
           "Having no numbers does not make an excerpt better or worse. A number can be fine if it makes sense. Compare the reasons that are left."
         ],
         how: [
@@ -3453,8 +3453,8 @@ PP.addLesson({
         clue: "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
         hints: [
           "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
-          "Look at how the post is signed and at the words \"Trust me, I just know trees.\" Then look at the number in the post.",
-          "The post never says the writer is a scientist or a farmer, so neither of those can go in the first blank. Now check the number to fill in the second blank."
+          "Look at how the post is signed and at what it claims.",
+          "For the first blank, read the signature again. It is only \"PeachFan.\" Does it tell you who the writer is or how they know? The second blank is still yours to decide."
         ],
         how: [
           "The post is signed only \"PeachFan,\" and the writer says, \"Trust me, I just know trees.\" That does not tell who they are or how they know.",
@@ -3534,8 +3534,8 @@ PP.addLesson({
         clue: "A source can be credible and still not fit every question. Read the sister's question word by word, then find the sentence that helps answer it.",
         hints: [
           "A source can be credible and still not fit every question. Read the sister's question word by word, then find the sentence that helps answer it.",
-          "Find each sentence in Source 2. Decide whether it is about the memory test or about something else.",
-          "The sentence about the scientists' sound test tells how they studied memory, not how to keep a fish healthy. Check the other three."
+          "Find each sentence in Source 2 and ask what question it helps answer.",
+          "The sentence about the scientists' sound test tells how they studied one thing, not how to care for a fish. Check the other three."
         ],
         how: [
           "The sister's question is about keeping a pet goldfish healthy.",
@@ -3595,8 +3595,8 @@ PP.addLesson({
       { id: "SK-RA2b-C12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: ["p5"],
         prompt: "A game website says, \"Bulls go wild when they see red!\" Which sentence from \"Bulls and the Color Red\" gives the BEST reason to doubt it?",
         choices: [
-          { text: "\"When a cape stayed still, the bulls did not charge at it, even if it was red.\"", correct: true },
-          { text: "\"To test the idea, one team of scientists showed bulls a red cape, a blue cape and a white cape.\"" },
+          { text: "\"The bulls charged all three flags, and they did not pick the red one.\"", correct: true },
+          { text: "\"To test the idea, a TV show put a red flag, a blue flag and a white flag near bulls.\"" },
           { text: "\"Many people believe that the color red makes bulls charge.\"" },
           { text: "\"A grown bull can weigh as much as a small car.\"" }
         ],
@@ -3604,16 +3604,16 @@ PP.addLesson({
         hints: [
           "To doubt a claim, look for a sentence that shows a reason it may not be true.",
           "Read paragraph 1, and then read about the test in paragraph 3.",
-          "\"Many people believe that the color red makes bulls charge\" agrees with the website, so it gives no reason to doubt it. Look closely at the two sentences from paragraph 3."
+          "A sentence gives a reason to doubt a claim only if it tells what happened when someone checked the claim. Ask this of each answer, and remember that a belief that agrees with the website is not a check."
         ],
         how: [
           "A reason to doubt a claim shows that the claim may not be true.",
-          "In paragraph 3, a cape that stayed still did not make the bulls charge, even when it was red. If red made bulls go wild, they would have charged at the still red cape.",
-          "Showing the three capes only tells how the test was set up, not what happened. The belief in paragraph 1 agrees with the website, and a bull's weight is about something else.",
-          "The answer is \"When a cape stayed still, the bulls did not charge at it, even if it was red.\""
+          "In paragraph 3, the bulls charged all three flags and did not pick the red one. If red made bulls go wild, they would have gone after the red flag first.",
+          "Putting out the three flags only tells how the test was set up, not what happened. The sentence about people who moved tells what else bulls go after, not whether red makes them charge. The belief in paragraph 1 agrees with the website, and a bull's weight is about something else.",
+          "The answer is \"The bulls charged all three flags, and they did not pick the red one.\""
         ],
         misconception: "A common mix-up is choosing the sentence that tells how a test was set up. What happened in the test is what gives a reason to doubt.",
-        why: "The answer is \"When a cape stayed still, the bulls did not charge at it, even if it was red.\" If red made bulls go wild, they would have charged at the still red cape, but they did not. The sentence about the three capes only tells how the test was set up, the belief agrees with the website, and a bull's weight is off topic." },
+        why: "The answer is \"The bulls charged all three flags, and they did not pick the red one.\" If red made bulls go wild, they would have gone after the red flag first, but they did not. The sentence about the three flags only tells how the test was set up, the sentence about moving people does not test red, the belief agrees with the website, and a bull's weight is off topic." },
       { id: "SK-RA2b-C13", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
         stem: ["**Keeping Ladybugs in Your Garden**", "A web page from the Cedar Hill Nature Center",
           "Written by Ms. Rena Vance, who has studied garden insects for twelve years",
@@ -3848,7 +3848,7 @@ PP.addLesson({
     { id: "SK-RA2b-S08", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.2.b"], passages: [],
       like: ["SK-RA2b-C14"],
       stem: ["Omar's question: \"What do manatees eat?\"",
-        "**Excerpt X,** from a sea scientist's article: \"A manatee can rest underwater for about 20 minutes before it comes up for air.\"",
+        "**Excerpt X,** from a sea scientist's article: \"A manatee can stay underwater for as long as 20 minutes when it is resting before it comes up for air.\"",
         "**Excerpt Y,** from a post signed \"SeaCowFan\": \"Manatees eat a million pounds of sea grass every single hour!\""],
       prompt: "Complete Omar's notes about the two excerpts.",
       text: "Excerpt X is {0}. Excerpt Y is {1}.",
@@ -3993,7 +3993,7 @@ PP.addLesson({
       hints: [
         "To doubt a claim, look for what happened when someone checked it.",
         "Read sentences 2, 3 and 4, about the doctor.",
-        "Sentence 1 tells what many people say, and it agrees with the post. Look closely at the doctor's sentences."
+        "Sentence 1 tells what many people say, and it agrees with the post. For each of the doctor's sentences, ask: does it tell how he checked the idea, or what he found?"
       ],
       how: [
         "The post says cracking your knuckles ruins your hands.",
