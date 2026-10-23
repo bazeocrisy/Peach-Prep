@@ -245,3 +245,114 @@ Three MUSTs remain, none of them a wrong key: T2b-S13 (two of three options are 
 - https://nationalzoo.si.edu/animals/giant-anteater (tongue about 2 feet, up to 150 flicks a minute, young ride on the back up to a year)
 - https://en.wikipedia.org/wiki/Common_wombat (about 1 m long, 27 kg average, up to 35 kg; nocturnal; grass)
 - https://museumsvictoria.com.au/article/can-wombats-run-at-40kmh/ (40 km/h in short bursts, not peer reviewed)
+
+---
+
+## 10. Final blind re-solve
+
+Reviewer: independent, blind re-solve of the seven items the last round changed. Date: 2026-10-23. Read-only: no lesson edited, no git run. Scripts and outputs: `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/` (`load.js`, `blind.js`, `stripped.json`, `myanswers.json`, `keys.js`, `full.js`, `sim2.js`, `leak.js`).
+
+### 10.1 Blind solve
+
+- `load.js` runs `T-T2.js` and `T-TS.js` in a Node `vm` sandbox with a mock `PP.addLesson` (it collects an array, because the five TS lessons all share the code `3.T.SS.1.a`). `blind.js` extracts SK-TT2b-S13, SK-TT2c-S05, SK-TT2c-S07, SK-TSSEQ-S06, SK-TSSEQ-S10, SK-TSCE-S07 and SK-TSCC-S11. It prints only stem, prompt, text, options, rows and columns, with every option list or row list shuffled by a seeded RNG (seed 12345). It drops `answer`, `correct`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `std`, `dok` and `sample`.
+- I grepped `stripped.json` for answer, correct, why, hint, how, clue, misconception and key before reading it. The hits were ordinary words in the stems ("How to Make a Jar Garden", "how the blocks", "the main difference in how"). No field name or flag was in the print.
+- I wrote my answers to `myanswers.json` before running `keys.js`, which prints the stored keys. I read the explanations, hints, `like` items and the earlier reviews only after that.
+- **Result: 7 of 7 agree with the stored key.** `keys.js` printed DIFF for T2c-S07 only because the row object came out in a different key order. All five rows match.
+- **Blindness: complete.** Before solving, I printed only key names, array lengths, item ids and lesson titles, and the data shape (types, no strings). I never printed a key, `why`, hint, `how`, clue, or any core item before the answers were saved. The paired core items were first printed after the answers file existed.
+
+My answers: T2b-S13 soil; T2c-S05 "only Text 1" and "both texts"; T2c-S07 rings T1, pits T2, night T2, buzzing T1, warning Both; SEQ-S06 "A events, B describes one place"; SEQ-S10 "First, Next, Then and After a few hours"; CE-S07 "so"; CC-S11 sentence 5, "On the other hand,".
+
+### 10.2 Key against why, how and hints
+
+All seven keys match their `why` and `how` text. No hint states a key in the key's words.
+- T2b-S13: `how` says "rocks alone cannot hold [the plants]". The directions do not say that; it is an inference. NOTE.
+- T2c-S05: `why` is right (Text 1 sets the blocks in a circle; both texts tell that snow holds heat; Text 2 gives the air pockets).
+- T2c-S07: `how` matches. Text 1 "The sound warns other animals" and Text 2 "shake its rattle as a warning" justify Both.
+- SEQ-S06: "one morning" is now right (10:00 to 11:00); the earlier "afternoon" slip is fixed.
+- CE-S07: `why` and `how` agree. `how` item 4 explains why "because" is backward.
+- CC-S11: `why`/`how` agree. Sentence 5 is a difference, and "Likewise" adds a likeness. Sentence 4 ("However ... but") is correct.
+
+### 10.3 Live choices after the clue and hints 1 to 3 (hand recount)
+
+The clue is identical to hint 1 in all seven items.
+
+| Item | Start | H1+clue | H2 | H3 | Live |
+|---|---|---|---|---|---|
+| T2b-S13 | 3 | none | none | removes "close the lid" (last step, stated by name) | 2 |
+| T2c-S05 | 3 x 3 | none | none | none (asks which text sets the blocks; no option removed) | 9 combinations |
+| T2c-S07 | 5 rows x 3 | none | key words only | none (sends the reader to the "hunt" row; removes nothing) | 15 |
+| SEQ-S06 | 4 | none | none | removes "steps for making something / compares two gyms" | 3 |
+| SEQ-S10 | 4 | "words that tell when" | "words that begin the sentences" | removes "juice, cup, stick and freezer" | 3 on paper; **1 in practice** (see MUST) |
+| CE-S07 | 3 | none | none | removes "until" | 2 (but, so) |
+| CC-S11 | 3 x 3 | none | none | removes "As a result" for blank 2 | 3 x 2 = 6 |
+
+The earlier problems with settled blanks are gone: T2c-S05 H3 and T2c-S07 H3 no longer settle a blank or a row, and CE-S07 no longer loses its option to the prompt.
+
+### 10.4 Near-copy against the paired core item
+
+Metric, as in SIM-1: word-set Jaccard over passage, stem, prompt, text and options. The brief's bar for accepted items is 0.21 or less with at most one shared option (`sim2.js`; the table counts distinct option strings).
+
+| Item | Core | Jaccard | Shared distinct options | Result |
+|---|---|---|---|---|
+| T2b-S13 | C12 | 0.23 | 0 | just over; frame words only (see SHOULD) |
+| T2c-S05 | C05 | 0.20 | 1 ("both texts") | within the bar |
+| T2c-S07 | C07 | 0.14 | 1 ("Both") | within the bar |
+| SEQ-S06 | C05 | 0.29 | 0 | over the bar |
+| SEQ-S10 | C09 | 0.16 | 0 | within the bar (a new question, not the old clone) |
+| CE-S07 | C07 | 0.14 | 1 ("until") | within the bar |
+| CC-S11 | C09 | **0.40** | **2** (numerals "3" and "4") | **over the bar; same prompt and text frame word for word** |
+
+### 10.5 Pre-answering and 6-gram leakage (`leak.js`)
+
+I compared every six-word run in each item's stem, prompt, text and options with every string in the other 5 lessons' files, except the item's own `why`, `how`, hints, clue and misconception.
+- No item states a core, Together, form A or form B answer. The overlaps are all frame prompts ("Choose the words that fix it", "Match each one to ...", "Choose the clue word that fixes it") or the item's own teaching note.
+- SEQ-S10: "show the order of the steps" also appears in the Learn It note ("The words in CAPS are time words. They show the order of the steps"), in Practice P6 ("Which TWO words or phrases are time clue words that show the order of the steps?") and in test item T4. The skill is modeled and practiced elsewhere; this item is a third copy of the same skill. Not a pre-answer, but see the `like` note below.
+- CC-S11 shares "both need a grown-up to" with the SK-TSCC-S15 sample answer. Not an answer leak (S15 is a written answer), but both sit in one lesson. NOTE.
+- Topic words: "trampoline", "igloo", "rattlesnake", "jar garden", "grape juice" appear nowhere else. "Sunflower" is in TT2d-C09 and TSPS-S15, a different lesson. "Swing set" is in TSDESC-C15. Different tasks; NOTE.
+
+### 10.6 Word-match keys
+
+- T2c-S07: rows 1, 3, 4 and 5 are near-verbatim to one text ("made of hard, hollow rings", "hunt mostly at night", "pits on its face", "buzzing sound"). A reader who matches words finds four single-text rows, and the one left over is Both, which is the only row that needs inference. The C07 core has the same shape (2, 2, 1). NOTE.
+- SEQ-S10: the key is the only choice made of sentence openers. The other three are nouns, verbs and adjectives, so the item does not test anything beyond naming time words, and the Learn It note already shows the answer. See MUST.
+- CE-S07: "but" is not a possible fit for any reading of the sentence, so the live pair is really one choice plus "so". SHOULD.
+- CC-S11: "On the other hand" is the only option that marks a difference; once sentence 5 is chosen, "Likewise" cannot be the fix (it is the existing word), so blank 2 is settled by the premise plus H3. SHOULD.
+
+### 10.7 Facts (checked)
+
+- Igloo: Wikipedia confirms snow insulates because trapped air pockets, body heat or a lamp can warm it, and beds are raised and covered with skins and furs (https://en.wikipedia.org/wiki/Igloo). The same page says igloos were mostly short-stay shelters, used on hunting trips only rarely, so "built igloos to stay warm on long trips" (T2c-S05 Text 1) is loose. NOTE: "to stay warm on hunting trips" would be safer.
+- Rattlesnake: Britannica Kids confirms the heat-sensing pit between eye and nostril, and the warning rattle (https://kids.britannica.com/students/article/rattlesnake/313149). It calls the rattle "dried skin" and does not mention "mostly at night" or mice. The hollow keratin segments, nocturnal hunting in hot weather and a diet of mice and small rodents are standard (Britannica, https://www.britannica.com/animal/rattlesnake; National Park Service, https://home.nps.gov/para/learn/nature/western-rattlesnake.htm). I saw those two pages only as search hits, not their text. NOTE.
+- Jar garden: layers of pebbles, then soil, then plants, with a lid, match the usual instructions (https://makezine.com/projects/mason-jar-terrarium/, https://onelittleproject.com/how-to-make-a-terrarium/; search hits only). Fine.
+- Sunflower: a seed watered daily can pass a fence in "a few weeks" only if the fence is low. Plausible for a story. NOTE.
+- Trampoline and swing set: no factual claim beyond common knowledge.
+
+### 10.8 Findings
+
+**MUST**
+- **SK-TSSEQ-S10: hint 2 and the clue lead to the key.** The clue says "Look for the words that tell when." Hint 2 says "Read Paragraphs 2 and 3 and look at the words that begin the sentences." The openers of those sentences are exactly First, Next, Then and After a few hours, so a child who follows hint 2 against the four choices has one choice left. This is hint 2 narrowing to the key. Fix: hint 2 should send the child to the paragraphs without naming where the words sit (for example, "Read Paragraphs 2 and 3 slowly and say what each step is."). Move "tell when" out of the clue or out of H3.
+- **SK-TSCC-S11: a near-copy of C09.** The prompt and the text frame are word for word the core's ("A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it." / "Sentence {0} should begin with {1}"). It shares the numerals "3" and "4", and Jaccard is 0.40 against a bar of 0.21. Hints 2 and 3 are the core's with the nouns changed ("does it tell how they are alike, or how they are different? Then check its clue word"; "... tells an effect, not a difference, so it does not fit the second blank. Find the sentence first, then try each word that is left at its start"). The key logic is the same (a likeness word placed where the paragraph turns to a difference, replaced by a contrast word), and the distractor design matches. A child who has just worked C09 can answer from memory. Fix: change the task, for example "Which clue word best joins the two sentences?" or a paragraph with a missing clue word, and write new hints. If the frame stays, use options that share no string with C09 (not 2, 3, 4 or 3, 4, 5), and change the error type (a contrast word where a likeness word is needed).
+
+**SHOULD**
+- **SK-TSSEQ-S06: a close sibling of C05** (Jaccard 0.29, over the bar). Same two-paragraph A and B frame, an equivalent key ("A sequence, B description"), and the same distractor design (reversed, "both", a made-up structure plus a comparison). The new part is that Paragraph A is a story of events and not steps, which is a fair step up. Change Paragraph B's genre (use cause and effect or comparison), or use a different pairing, so the key is not the same shape. Distractor 4 ("steps for making something ... compares two gyms") is silly for a recess story. H2 still leaves a coin flip between the key and its reversal.
+- **SK-TSSEQ-S10: `like` is C09, which asks what each paragraph does.** S10 asks which words show order. The skill matches P6 and the T4 test item, and the Learn It note models it. Set `like` to the item it actually follows, or ask something that needs more than naming opener words (for example, which word tells that a step happened later in time).
+- **SK-TSCE-S07:** hint 3 repeats C07's hint 3 almost word for word ("Until tells when something stops, not why ... Decide which part ... is the cause, then check which side of the clue word it is on"). "But" cannot fit, so after H3 the item is a one-way choice. Replace "but" with a plausible clue word (for example "while" or "after") and rewrite H3.
+- **SK-TSCC-S11 (also):** blank 2 is settled by the premise and H3 (see 10.6). Part of the fix above.
+- **SK-TT2b-S13: Jaccard 0.23**, just over the bar, because both items use the same wording "left out a step. Choose the step that belongs in the blank" and "Step 2: {0}". The content and options are new. Vary the prompt wording.
+
+**NOTE**
+- T2c-S05: H3 now asks "Which text says how the blocks are set?", which settles the dome blank only if the child answers it, and it is a fair prompt. "Two mistakes" removes one option per blank, leaving 4 of 9 combinations before any reading; the core C05 has the same shape.
+- T2c-S07: Both is found by elimination; see 10.6.
+- T2b-S13: `how` item 1 asserts something the directions do not say. Rosa's card has no later steps now, so the stem no longer gives away the wrong options (the earlier MUST is fixed).
+- Facts: see 10.7.
+- Points and DOK: S05, S07 and S11 are 2 points; the other four are 1. All are DOK 2. Choose-two does not occur here. Consistent with the cores.
+
+### 10.9 Verdict per lesson
+
+| Lesson | Items | MUST | Verdict |
+|---|---|---|---|
+| 3.T.T.2.b | S13 | none | **ACCEPT** (SHOULD: vary the prompt wording; the old two-options-on-the-card MUST is fixed) |
+| 3.T.T.2.c | S05, S07 | none | **ACCEPT** (NOTEs only; the earlier H3 SHOULDs are fixed) |
+| TS-SEQ | S06, S10 | S10 | **NOT ACCEPT** (fix S10 hint 2; S06 is a close sibling of C05 and should be reworked too) |
+| TS-CE | S07 | none | **ACCEPT** (SHOULD: "but" and the C07 hint copy; the earlier MUST is fixed) |
+| TS-CC | S11 | S11 | **NOT ACCEPT** (near-copy of C09; Jaccard 0.40, shared frame, options and hints) |
+
+Sources: https://en.wikipedia.org/wiki/Igloo ; https://kids.britannica.com/students/article/rattlesnake/313149 ; https://www.britannica.com/animal/rattlesnake (search hit) ; https://home.nps.gov/para/learn/nature/western-rattlesnake.htm (search hit) ; https://makezine.com/projects/mason-jar-terrarium/ (search hit) ; https://onelittleproject.com/how-to-make-a-terrarium/ (search hit).

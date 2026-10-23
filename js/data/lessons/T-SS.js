@@ -2141,22 +2141,22 @@ PP.addLesson({
       cols: ["a large title that names the event", "a photo with a caption", "headings above short sections"],
       rows: [
         { text: "a driver who passes a sign for the school play and reads it for only a second", answer: 0 },
-        { text: "a reader who has never seen a tapir", answer: 1 },
+        { text: "a reader who has never seen an axolotl", answer: 1 },
         { text: "a reader who wants only the facts about food on a long page about owls", answer: 2 }
       ],
       clue: "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
       hints: [
         "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
         "Start with the row you are most sure about, then use each feature only once.",
-        "A reader who has never seen a tapir needs to see one. Match the other two rows after that."
+        "A reader who has never seen an axolotl needs to see one. Match the other two rows after that."
       ],
       how: [
         "The driver reads for only a second, so the biggest words must say what the sign is about.",
-        "A reader who has never seen a tapir needs to see one, and a caption tells what the photo shows.",
+        "A reader who has never seen an axolotl needs to see one, and a caption tells what the photo shows.",
         "A reader who wants only one part of a long page can use headings to find that part.",
-        "The matches are: driver with the large title, tapir reader with the photo and caption, food-facts reader with the headings."
+        "The matches are: driver with the large title, axolotl reader with the photo and caption, food-facts reader with the headings."
       ],
-      why: "The driver needs a large title that names the event. The reader who has never seen a tapir needs a photo with a caption. The reader who wants only the food facts needs headings above short sections to find that part."
+      why: "The driver needs a large title that names the event. The reader who has never seen an axolotl needs a photo with a caption. The reader who wants only the food facts needs headings above short sections to find that part."
     },
     {
       id: "SK-SS1b-S14",
@@ -5989,44 +5989,35 @@ PP.addLesson({
   code: "3.T.SS.2.b",
   title: "Use figurative language in your writing: similes, metaphors, idioms and more",
   teach: {
-    big: "You can make your writing come alive with figurative language: a simile with like or as, a metaphor that says one thing is another, an idiom, and more, as long as it fits what you mean.",
+    big: "You can make your writing come alive with figurative language: a simile compares two different kinds of things with like or as, a metaphor compares them without like or as, an idiom is a saying that means something different from its words, and personification gives a thing a person's actions. Use each one only when it fits what you mean.",
     points: [
       "First decide what you want your reader to picture or feel. Is it fast, loud, quiet, happy or scared?",
-      "Think of something that is very fast, loud or quiet. Then compare: \"as quiet as a mouse.\" Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
+      "Think of something that is very fast, loud or quiet. Then compare two different kinds of things: \"as quiet as a mouse.\" Make sure the comparison fits. A slow bus is \"as slow as a turtle,\" not \"as fast as a jet.\"",
       "Use an idiom only when its meaning matches. \"A piece of cake\" means easy, so it fits an easy test, not a hard one.",
-      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know.",
-      "Similes, metaphors and idioms are not the only kinds of figurative language. You can also give a thing a person's actions, like \"The wind whispered through the trees.\" Use it only if it fits what you mean."
+      "A comparison shows how two ideas are alike. It helps your reader connect a new idea to one they already know. \"The sun was a golden coin in the sky\" shows that the sun and a coin are both round and shiny.",
+      "Personification is another kind of figurative language. It gives a thing, an animal or an idea a person's actions, like \"The wind whispered through the trees.\" Use it only if the action fits what you mean."
     ],
     words: [
-      { term: "simile", means: "a comparison that uses like or as" },
-      { term: "metaphor", means: "a comparison that says one thing is another" },
-      { term: "idiom", means: "a saying that means something different from its words" }
+      { term: "simile", means: "a comparison of two different kinds of things that uses like or as" },
+      { term: "metaphor", means: "a comparison of two different kinds of things, without like or as" },
+      { term: "idiom", means: "a saying that means something different from its words" },
+      { term: "personification", means: "giving a thing, an animal or an idea a person's actions" }
     ],
     example: {
       label: "Before and after",
-      lines: ["Before: The hallway was quiet.", "After: The hallway was as quiet as a library at night."],
-      note: "The writer wanted the reader to feel how quiet it was. A library at night is about as quiet as a place can be, so the simile fits."
+      lines: ["Before: The hallway was quiet.", "After: The hallway was as quiet as a sleeping cat."],
+      note: "The writer wanted the reader to feel how quiet it was. A hallway and a cat are different kinds of things, and a sleeping cat makes almost no sound, so the simile fits."
     },
     tip: "On the test, you may choose the best simile or idiom to add to a student's draft, or the best place to add one. Check that the comparison matches what the writer means."
   },
   learn: [
-    {
-      show: ["Our new puppy runs very fast."],
-      ask: "Which simile fits best: \"like a rocket\" or \"like a snail\"?",
-      steps: [
-        "Name what the writer wants to show: the puppy is very fast.",
-        "Think about each thing. A rocket is very fast. A snail is very slow.",
-        "Pick the one that matches the meaning."
-      ],
-      answer: "\"Like a rocket\" fits: \"Our new puppy runs like a rocket.\" A snail would show the opposite."
-    },
     {
       show: ["The thick fog covered the whole town."],
       ask: "How could you change this into a metaphor?",
       steps: [
         "Ask what fog is like. It is soft and gray, and it covers everything.",
         "Think of something else that is soft and covers things, like a blanket.",
-        "A metaphor says the fog is that thing, without like or as."
+        "A metaphor compares two different kinds of things, fog and a blanket, without like or as."
       ],
       answer: "\"The fog was a soft gray blanket over the whole town.\""
     },
@@ -6039,13 +6030,23 @@ PP.addLesson({
         "Only one idiom matches the meaning."
       ],
       answer: "\"A piece of cake\" fits: \"For Jada, the math quiz was a piece of cake.\""
+    },
+    {
+      show: ["The old clock ticked in the empty hall."],
+      ask: "How could you give the clock a person's actions to make the hall feel lonely?",
+      steps: [
+        "Ask what the clock is doing: it makes a steady sound in an empty hall.",
+        "Think of something a person does alone, like talking quietly to themselves.",
+        "Give the clock that action. The action should fit the feeling."
+      ],
+      answer: "\"The old clock muttered to itself in the empty hall.\" A clock cannot really mutter, but the action makes the hall feel lonely."
     }
   ],
   write: {
     prompt: "Write 4 to 6 sentences about a storm, a busy place or an animal you know. Use at least one simile, one metaphor and one idiom. Circle each one.",
     checklist: [
       "I used a simile with like or as.",
-      "I used a metaphor that says one thing is another.",
+      "I used a metaphor that compares two different kinds of things without like or as.",
       "I used an idiom that fits what I mean.",
       "Each comparison helps my reader picture or understand my idea."
     ],
@@ -6065,7 +6066,84 @@ PP.addLesson({
         ["(5) When it was my turn, I walked out onto the stage.", "(6) I could hardly see the people in the crowd.", "(7) I counted to four and started to play.", "(8) My drumsticks moved very fast."],
         ["(9) When I finished, everyone clapped and cheered.", "(10) The sound of all that clapping was loud.", "(11) I felt proud."],
         ["(12) Next year, I want to play an even harder song."]
-      ] }
+      ] },
+    /* B4b:passages:start */
+    {
+      id: "p3",
+      draft: true,
+      title: "Fireworks Night",
+      byline: "Lena's first draft",
+      genre: "Student draft (narrative)",
+      paragraphs: [
+        [
+          "(1) On the Fourth of July, my family walked to the park to watch the fireworks.",
+          "(2) The grass was covered with blankets and chairs.",
+          "(3) We found a spot near the big oak tree and waited for it to get dark."
+        ],
+        [
+          "(4) Then the first firework flew up with a loud boom.",
+          "(5) It burst into red and gold sparks.",
+          "(6) The sparks tiptoed slowly down through the dark sky.",
+          "(7) The crowd gasped and clapped."
+        ],
+        [
+          "(8) The grand finale lit up the whole sky at once.",
+          "(9) The booms were so loud that I felt them in my chest.",
+          "(10) When it was over, my ears were ringing, and I was very happy."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      draft: true,
+      title: "From the Tallest Building",
+      byline: "Jabari's first draft",
+      genre: "Student draft (narrative)",
+      paragraphs: [
+        [
+          "(1) My uncle works on the top floor of the tallest building in our city.",
+          "(2) Last weekend, I rode the elevator up to visit him.",
+          "(3) My ears popped as we rose higher and higher in the glass elevator."
+        ],
+        [
+          "(4) From his window, the cars on the street looked very small.",
+          "(5) The people on the sidewalk looked tiny, too.",
+          "(6) The river curved through the city.",
+          "(7) The wind shook the glass a little, but I felt safe."
+        ],
+        [
+          "(8) We stayed with him until the sun set.",
+          "(9) The lights came on across the city.",
+          "(10) I did not want to go home that night."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      draft: true,
+      title: "Grandma's Quilt",
+      byline: "Zoe's first draft",
+      genre: "Student draft (narrative)",
+      paragraphs: [
+        [
+          "(1) My grandma gave me a quilt for my birthday last year.",
+          "(2) She made it from pieces of my old clothes.",
+          "(3) I can see my first yellow raincoat and my favorite blue shirt from first grade."
+        ],
+        [
+          "(4) On cold nights, I pull the quilt up to my chin.",
+          "(5) It keeps me warm.",
+          "(6) The wind blows hard outside my window.",
+          "(7) I fall asleep before the heater clicks off, and I sleep all night."
+        ],
+        [
+          "(8) Grandma says every quilt tells a story.",
+          "(9) I think mine tells the story of me growing up.",
+          "(10) I will keep it forever and ever."
+        ]
+      ]
+    }
+/* B4b:passages:end */
   ],
   practice: [
     { id: "SK-SS2b-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -6103,7 +6181,7 @@ PP.addLesson({
         { text: "It was raining cats and dogs.", answer: 2 },
         { text: "The thunder was as loud as a marching band.", answer: 0 }
       ],
-      clue: "Look for like or as first. Then ask: does the sentence say one thing is another, or is it a saying you cannot read word for word?",
+      clue: "Look for like or as first. Then ask: does the sentence compare two different kinds of things without like or as, or is it a saying you cannot read word for word?",
       why: "The wolf and the marching band sentences are similes because they use like or as. \"The puddles were shiny mirrors\" is a metaphor. \"Raining cats and dogs\" is an idiom that means raining very hard." },
     { id: "SK-SS2b-P5", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Mei wants to add this sentence: \"The raindrops danced and drummed on our roof.\" Where is the best place to add it?",
@@ -6116,6 +6194,970 @@ PP.addLesson({
       clue: "The new sentence is about rain falling. Find the sentence where the rain starts.",
       why: "The answer is after sentence 4. Sentence 4 says, \"Then the rain began,\" so the dancing raindrops come right after it. By sentence 7 the storm is gone, and in sentence 1 the rain has not started. This sentence gives the raindrops a person's actions, dancing and drumming, which is another kind of figurative language." }
   ],
+  /* B4b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses practice items P4 and P5 (so Together is P1, P2 and P3).
+     p3, p4 and p5 are used only by core; the similar bank uses short stems. Never used by test.
+     The glossary now matches 3.T.SS.2.a: a simile and a metaphor each compare two different kinds of things, with and without like or as.
+     Personification and comparisons that show a relationship between ideas are now taught and practised.
+     Author log: docs/expansion-2026-10-22/batches/B4-b4b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-SS2b-P4" },
+      {
+        id: "SK-SS2b-C02",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p3"],
+        prompt: "Lena wants to add a simile to sentence 5 to help the reader picture the sparks. Which revision is best?",
+        choices: [
+          { text: "It burst into red and gold sparks like a shower of falling stars.", correct: true },
+          { text: "It burst into red and gold sparks like a very big firework." },
+          { text: "It burst into red and gold sparks like a pile of gray ashes." },
+          { text: "It burst into red and gold sparks as the crowd watched." }
+        ],
+        clue: "A simile compares two different kinds of things using like or as. Check that the comparison fits.",
+        hints: [
+          "A simile compares two different kinds of things using like or as. Check that the comparison fits.",
+          "Sentence 5 is about bright, shining sparks. Ask what each choice compares the sparks to, and whether the two are different kinds of things.",
+          "One choice compares a firework to another firework. Test the other three the same way."
+        ],
+        how: [
+          "Sentence 5 says the firework burst into red and gold sparks, so the simile should make the reader picture bright, shining sparks.",
+          "Falling stars are a different kind of thing from sparks, and they are bright, so the comparison fits.",
+          "The answer is \"It burst into red and gold sparks like a shower of falling stars.\"",
+          "A very big firework compares a firework to a firework, gray ashes are dull, and \"as the crowd watched\" uses as to tell when, not to compare."
+        ],
+        misconception: "A common mix-up is choosing any sentence with like or as. A simile has to compare two different kinds of things, and the comparison has to fit.",
+        why: "The answer is \"It burst into red and gold sparks like a shower of falling stars.\" Stars and sparks are different kinds of things, and both are bright. A firework compared to a firework is the same kind of thing, gray ashes are dull, and \"as the crowd watched\" uses as to tell when."
+      },
+      {
+        id: "SK-SS2b-C03",
+        type: "dropdown",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p3"],
+        prompt: "Lena wants to replace sentence 7 with an idiom that shows how excited the crowd was. Choose the idiom that fits best.",
+        text: "The crowd {0}.",
+        slots: [
+          { options: ["went wild", "hit the road", "cut corners"], answer: 0 }
+        ],
+        clue: "An idiom is a saying that means something different from its words. Think about what each saying really means.",
+        hints: [
+          "An idiom is a saying that means something different from its words. Think about what each saying really means.",
+          "Sentence 7 is about people who are excited. Say what each idiom means in your own words.",
+          "One of the idioms is about leaving a place. Decide between the other two."
+        ],
+        how: [
+          "Sentence 7 says the crowd gasped and clapped, so the crowd was very excited.",
+          "\"Went wild\" means got very excited and loud.",
+          "\"Hit the road\" means to leave, and \"cut corners\" means to skip steps.",
+          "The answer is went wild."
+        ],
+        misconception: "A common mix-up is picking the idiom whose words sound like the scene. Choose by what the saying means, not by what the words say.",
+        why: "The answer is went wild. That idiom means got very excited and loud, which matches a crowd that gasped and clapped. Hit the road means to leave, and cut corners means to skip steps."
+      },
+      {
+        id: "SK-SS2b-C04",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p3"],
+        pick: 1,
+        prompt: "Read the paragraph that begins with sentence 4. Select the sentence that gives something a person's actions.",
+        targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4"],
+        answer: ["p3:2:3"],
+        clue: "Personification gives a thing a person's actions. Ask what a person can do that a thing really cannot.",
+        hints: [
+          "Personification gives a thing a person's actions. Ask what a person can do that a thing really cannot.",
+          "Read each sentence and ask who or what is doing the action. Is it a thing doing something only a person does?",
+          "A crowd of people can really gasp and clap. Check the other three sentences."
+        ],
+        how: [
+          "Personification means a thing does something only a person does.",
+          "A firework can fly up and burst for real, and a crowd can gasp and clap for real.",
+          "Sentence 6 says the sparks tiptoed. Only a person can tiptoe, so the sparks are given a person's action.",
+          "The answer is sentence 6: \"The sparks tiptoed slowly down through the dark sky.\""
+        ],
+        misconception: "A common mix-up is choosing the sentence with the most action. Personification is a thing doing something only a person does.",
+        why: "The answer is sentence 6, \"The sparks tiptoed slowly down through the dark sky.\" Sparks cannot really tiptoe, so the writer gives them a person's action. Fireworks can fly and burst, and a crowd can gasp and clap."
+      },
+      {
+        id: "SK-SS2b-C05",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p3"],
+        prompt: "Lena wants the reader to picture many bursts opening all at once. Which revision of sentence 8 does that best?",
+        choices: [
+          { text: "The grand finale was a garden of flowers blooming all at once.", correct: true },
+          { text: "The grand finale was a single candle in the dark." },
+          { text: "The grand finale was a slow, quiet snowfall." },
+          { text: "The grand finale was a very big finale in the sky." }
+        ],
+        clue: "A metaphor compares two different kinds of things without like or as. It should make the reader picture what the writer means.",
+        hints: [
+          "A metaphor compares two different kinds of things without like or as. It should make the reader picture what the writer means.",
+          "Decide what Lena wants the reader to picture: many bursts, together, all at once. Ask what each choice compares the finale to.",
+          "One choice does not compare the finale to anything else. Test the other three against many bursts opening at once."
+        ],
+        how: [
+          "Lena wants the reader to see many bursts opening at the same time.",
+          "A garden of flowers blooming all at once is a different kind of thing, and many blooms opening together match many bursts.",
+          "The answer is \"The grand finale was a garden of flowers blooming all at once.\"",
+          "A single candle is only one small light, a slow quiet snowfall is the opposite of loud bursts, and a very big finale compares nothing."
+        ],
+        misconception: "A common mix-up is choosing a comparison because it sounds pretty. It must also show what the writer wants the reader to picture.",
+        why: "The answer is \"The grand finale was a garden of flowers blooming all at once.\" It compares the finale to many flowers opening together, like many bursts. A single candle is one small light, a slow quiet snowfall is the opposite, and a very big finale does not compare anything."
+      }
+    ] },
+    { title: "Set 2", items: [
+      { ref: "SK-SS2b-P5" },
+      {
+        id: "SK-SS2b-C07",
+        type: "ms",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p4"],
+        pick: 2,
+        prompt: "Jabari wants to replace sentence 4 with a metaphor that shows how small the cars looked. Which TWO sentences would work?",
+        choices: [
+          { text: "From his window, the cars were ants crawling along a line.", correct: true },
+          { text: "From his window, the cars were crumbs scattered on a gray table.", correct: true },
+          { text: "From his window, the cars were as small as ants." },
+          { text: "From his window, the cars were big trucks rolling by." },
+          { text: "From his window, the cars looked very small." }
+        ],
+        clue: "A metaphor compares two different kinds of things without like or as. It should show that the cars looked small.",
+        hints: [
+          "A metaphor compares two different kinds of things without like or as. It should show that the cars looked small.",
+          "Check each choice for two things. Does it say the cars are something else without like or as? Is that something small?",
+          "One choice uses the word as to compare, so it is a simile. Decide which of the other four fit."
+        ],
+        how: [
+          "A metaphor has no like or as, so the sentence must say the cars are something else.",
+          "Ants crawling along a line and crumbs scattered on a table are small, and they are different kinds of things from cars.",
+          "The answers are \"From his window, the cars were ants crawling along a line\" and \"From his window, the cars were crumbs scattered on a gray table.\"",
+          "\"As small as ants\" uses as, so it is a simile. Big trucks are not small, and \"looked very small\" does not compare."
+        ],
+        misconception: "A common mix-up is choosing the simile because it also fits. This question asks for a metaphor, which has no like or as.",
+        why: "The answers are \"From his window, the cars were ants crawling along a line\" and \"From his window, the cars were crumbs scattered on a gray table.\" Each says the cars are something small, without like or as. \"As small as ants\" is a simile, big trucks are not small, and \"looked very small\" does not compare anything."
+      },
+      {
+        id: "SK-SS2b-C08",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p4"],
+        prompt: "Jabari wants to add a simile to sentence 6 and to sentence 9. Choose the best words for each blank.",
+        text: "The river curved through the city like {0}. The lights came on across the city like {1}.",
+        slots: [
+          { options: ["a silver ribbon", "a sleeping bear", "a square box"], answer: 0 },
+          {
+            options: ["a sky full of stars", "a pile of dull rocks", "a dark empty field"],
+            answer: 0
+          }
+        ],
+        clue: "A simile compares two different kinds of things. For each blank, ask what the river or the lights look like.",
+        hints: [
+          "A simile compares two different kinds of things. For each blank, ask what the river or the lights look like.",
+          "For the river, think about its shape: it curves. For the lights, think about what they do when they come on.",
+          "A sleeping bear and a square box do not curve like a river. Use that to settle the first blank, then think about the lights."
+        ],
+        how: [
+          "A river that curves is long and bendy, and it can shine in the light.",
+          "A silver ribbon is long, bendy and shiny, so it fits the first blank.",
+          "Lights coming on across a city shine in many small spots, like stars in the sky. The second blank is a sky full of stars.",
+          "Dull rocks and a dark empty field are not bright, so they do not fit."
+        ],
+        misconception: "A common mix-up is picking a comparison for one word, like bear for sleep. The comparison must fit the way the thing looks in the sentence.",
+        why: "The answers are a silver ribbon and a sky full of stars. A winding river is long, bendy and shiny like a ribbon. City lights shine in many small spots like stars. A sleeping bear, a square box, dull rocks and a dark empty field do not match."
+      },
+      {
+        id: "SK-SS2b-C09",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: [],
+        pick: 1,
+        prompt: "Select the sentence that has a metaphor.",
+        stem: ["Jabari wrote five different sentences about the elevator ride."],
+        options: [
+          "The elevator was an arrow shot straight up the tower.",
+          "The elevator was as smooth as ice.",
+          "The elevator was as fast as the one at my school.",
+          "The elevator was very smooth and fast.",
+          "The elevator hummed a happy song."
+        ],
+        answer: [0],
+        clue: "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the elevator is something else.",
+        hints: [
+          "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the elevator is something else.",
+          "First set aside any sentence that has like or as. Then ask whether each remaining sentence says the elevator is a different kind of thing.",
+          "One sentence gives the elevator a person's action, and one just describes it. Check the others."
+        ],
+        how: [
+          "A metaphor says one thing is a different kind of thing, without like or as.",
+          "\"As smooth as ice\" uses as, so it is a simile. \"As fast as the one at my school\" compares two elevators, which are the same kind of thing.",
+          "\"Very smooth and fast\" only describes, and \"hummed a happy song\" gives the elevator a person's action.",
+          "The answer is \"The elevator was an arrow shot straight up the tower.\""
+        ],
+        misconception: "A common mix-up is choosing any sentence that compares. A metaphor has no like or as and compares two different kinds of things.",
+        why: "The answer is \"The elevator was an arrow shot straight up the tower.\" It says the elevator is an arrow, a different kind of thing, without like or as. \"As smooth as ice\" is a simile, the other elevator is the same kind of thing, \"very smooth and fast\" only describes, and \"hummed a happy song\" is personification."
+      },
+      {
+        id: "SK-SS2b-C10",
+        type: "match",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: [],
+        prompt: "Match each situation to the idiom a writer could use to describe it. One idiom will not be used.",
+        cols: ["once in a blue moon", "spill the beans", "bite off more than you can chew", "head over heels"],
+        rows: [
+          { text: "Ana sees her faraway cousin only one time every few years.", answer: 0 },
+          { text: "Lia told everyone about the surprise party before she was supposed to.", answer: 1 },
+          { text: "Eli signed up for five clubs and now has no time to finish any of them.", answer: 2 }
+        ],
+        clue: "An idiom means something different from its words. Read each situation and say what is happening in your own words.",
+        hints: [
+          "An idiom means something different from its words. Read each situation and say what is happening in your own words.",
+          "Start with the situation you are most sure about. Use each idiom once, and one idiom is left over.",
+          "Telling a secret too soon is one of the situations. Match the other two after that."
+        ],
+        how: [
+          "Seeing a cousin only every few years means it happens very rarely. \"Once in a blue moon\" means rarely.",
+          "Telling about a surprise party too soon is telling a secret. \"Spill the beans\" means to tell a secret.",
+          "Signing up for too many clubs is taking on too much. \"Bite off more than you can chew\" means to take on more than you can handle.",
+          "\"Head over heels\" means very much in love, so it is not used."
+        ],
+        misconception: "A common mix-up is matching by a word in the situation, like clubs or cousin. Match by what the idiom means.",
+        why: "Seeing a cousin only every few years is once in a blue moon. Telling about a surprise too soon is to spill the beans. Signing up for too many clubs is to bite off more than you can chew. Head over heels means very much in love, so it matches none of them."
+      }
+    ] },
+    { title: "Set 3", items: [
+      {
+        id: "SK-SS2b-C11",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p5"],
+        prompt: "Zoe wants to replace sentence 5 with a metaphor that shows how warm the quilt kept her. Which sentence is best?",
+        choices: [
+          { text: "The quilt was a snug nest around me.", correct: true },
+          { text: "The quilt was a sheet of ice around me." },
+          { text: "The quilt was like a snug nest around me." },
+          { text: "The quilt kept me warm and snug all night." }
+        ],
+        clue: "A metaphor compares two different kinds of things without like or as. It also has to show what the writer means.",
+        hints: [
+          "A metaphor compares two different kinds of things without like or as. It also has to show what the writer means.",
+          "Zoe wants to show warmth. Check each choice for no like or as, for a comparison, and for a warm feeling.",
+          "One choice says the quilt is something cold. Test the other three the same way."
+        ],
+        how: [
+          "Sentence 5 says the quilt keeps Zoe warm, so the metaphor should show warmth.",
+          "A snug nest is a different kind of thing from a quilt, and a nest is warm and cozy.",
+          "The answer is \"The quilt was a snug nest around me.\"",
+          "A sheet of ice is cold, \"like a snug nest\" uses like so it is a simile, and \"kept me warm and snug\" does not compare anything."
+        ],
+        misconception: "A common mix-up is choosing the version with like. That is a simile; a metaphor says the quilt is the nest.",
+        why: "The answer is \"The quilt was a snug nest around me.\" It says the quilt is a nest, a warm and cozy place, without like or as. A sheet of ice is cold, the \"like a snug nest\" version is a simile, and \"kept me warm and snug\" compares nothing."
+      },
+      {
+        id: "SK-SS2b-C12",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.2.b"],
+        passages: ["p5"],
+        prompt: "Zoe wants to replace sentence 3 with a comparison that shows how her quilt connects to her memories. Which revision shows that best?",
+        choices: [
+          { text: "The quilt was a scrapbook made of cloth, with a memory in every patch.", correct: true },
+          { text: "The quilt was a snowy field dotted with blue and yellow flowers." },
+          { text: "The quilt was a tall tree full of singing birds and green leaves." },
+          { text: "The quilt was a big square of cloth sewn from many small patches." }
+        ],
+        clue: "A good comparison shows a relationship between two ideas. Ask what Zoe wants the reader to understand about her quilt.",
+        hints: [
+          "A good comparison shows a relationship between two ideas. Ask what Zoe wants the reader to understand about her quilt.",
+          "The quilt comes from Zoe's old clothes. Ask which comparison links the quilt to remembering, not just to how it looks.",
+          "Two choices describe how the quilt looks in a pretty way. Check which comparison is about holding memories."
+        ],
+        how: [
+          "Sentence 2 says the quilt was made from pieces of Zoe's old clothes, so each patch holds a memory.",
+          "A scrapbook is a book that holds memories. The quilt works the same way, so the comparison shows how the two ideas connect.",
+          "The answer is \"The quilt was a scrapbook made of cloth, with a memory in every patch.\"",
+          "A snowy field and a tree are only about how the quilt looks, and a big square of cloth does not compare anything."
+        ],
+        misconception: "A common mix-up is choosing the prettiest picture. The best comparison links the quilt to what the writer wants to say about it.",
+        why: "The answer is \"The quilt was a scrapbook made of cloth, with a memory in every patch.\" A scrapbook holds memories, and so does a quilt made from old clothes, so the comparison shows how the two ideas connect. The snowy field and the tree are only pretty pictures, and the big square of cloth is not a comparison."
+      },
+      {
+        id: "SK-SS2b-C13",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: ["p5"],
+        prompt: "Zoe wants to replace sentence 6 with a sentence that gives the wind a person's actions to show how cold and stormy it was outside. Which sentence is best?",
+        choices: [
+          { text: "The wind knocked on my window and begged to come in.", correct: true },
+          { text: "The wind was as cold as a freezer." },
+          { text: "The wind marched across the room to my bed." },
+          { text: "The wind blows hard outside my window." }
+        ],
+        clue: "Personification gives a thing a person's actions. The sentence also has to fit what Zoe means: a cold, stormy night outside.",
+        hints: [
+          "Personification gives a thing a person's actions. The sentence also has to fit what Zoe means: a cold, stormy night outside.",
+          "Check each choice for two things. Does the wind do something only a person does? Does the action fit a cold night outside her window?",
+          "One choice compares with as, and one just tells a fact. Decide between the other two."
+        ],
+        how: [
+          "Sentence 6 is about wind outside Zoe's window on a cold night.",
+          "Knocking and begging are things a person does. They show the wind trying to get in, which fits a cold, stormy night.",
+          "The answer is \"The wind knocked on my window and begged to come in.\"",
+          "\"As cold as a freezer\" is a simile, \"marched across the room\" puts the wind inside, and \"blows hard\" is a plain fact."
+        ],
+        misconception: "A common mix-up is choosing any sentence where the wind does something. The action must be a person's, and it must fit the place and the feeling.",
+        why: "The answer is \"The wind knocked on my window and begged to come in.\" Knocking and begging are things a person does, and they fit wind outside the window on a cold night. \"As cold as a freezer\" is a simile, \"marched across the room\" puts the wind inside, and \"blows hard\" is a plain fact."
+      },
+      {
+        id: "SK-SS2b-C14",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.2.b"],
+        passages: [],
+        prompt: "Complete the sentences with the best comparison for each blank.",
+        text: "At noon, our lunchroom is {0}. Everyone talks at once, and the noise bounces off the walls. By one o'clock, everyone has gone outside, and the room is as {1} as a sleeping cat.",
+        slots: [
+          { options: ["a beehive", "a frozen pond", "a sleeping bear"], answer: 0 },
+          { options: ["quiet", "loud", "busy"], answer: 0 }
+        ],
+        clue: "A comparison has to fit what the sentences around it say. Read the sentences after each blank for clues.",
+        hints: [
+          "A comparison has to fit what the sentences around it say. Read the sentences after each blank for clues.",
+          "For the first blank, ask what the lunchroom is like at noon. For the second blank, ask what the room is like when everyone has gone.",
+          "A frozen pond and a sleeping bear are not noisy or busy. Use that to settle the first blank, then think about the cat."
+        ],
+        how: [
+          "The lunchroom at noon is full of people talking and noise, so the first comparison should be busy and noisy.",
+          "A beehive is full of busy, buzzing bees, so it fits.",
+          "By one o'clock everyone is gone, and a sleeping cat makes almost no sound, so the room is as quiet as a sleeping cat.",
+          "A frozen pond and a sleeping bear are still and quiet, so they do not fit noon."
+        ],
+        misconception: "A common mix-up is choosing a comparison without reading the clues around it. The sentences next to the blank tell what the comparison should show.",
+        why: "The answers are a beehive and quiet. At noon the lunchroom is busy and noisy like a beehive. After everyone has gone, the room is as quiet as a sleeping cat. A frozen pond and a sleeping bear are still and quiet, so they do not fit the noisy lunchroom."
+      },
+      {
+        id: "SK-SS2b-C15",
+        type: "hottext",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.2.b"],
+        passages: [],
+        pick: 2,
+        prompt: "Select the TWO comparisons that do not fit what Rafael wants to show.",
+        stem: ["Rafael wants to show that a baby chick is tiny and sleepy."],
+        options: [
+          "The chick was as tiny as a button.",
+          "The chick's peeping was a roaring lion.",
+          "The chick was a ball of fluff asleep in the straw.",
+          "The chick ran like a race car around the barn.",
+          "The chick yawned like a sleepy kitten."
+        ],
+        answer: [1, 3],
+        clue: "A comparison fits when it shows what the writer wants to show. Rafael wants the chick to seem tiny and sleepy.",
+        hints: [
+          "A comparison fits when it shows what the writer wants to show. Rafael wants the chick to seem tiny and sleepy.",
+          "Read each comparison and ask what it makes the reader picture. Is it tiny, sleepy, or something else?",
+          "Three of the comparisons show a small or sleepy chick. Look for the two that show something else."
+        ],
+        how: [
+          "Rafael wants the reader to picture a tiny, sleepy chick.",
+          "A button is tiny, a ball of fluff asleep is sleepy, and a yawning kitten is sleepy, so those three fit.",
+          "A roaring lion is big and loud, and a race car is fast. Neither shows a tiny, sleepy chick.",
+          "The answers are \"The chick's peeping was a roaring lion\" and \"The chick ran like a race car around the barn.\""
+        ],
+        misconception: "A common mix-up is choosing a comparison because it is exciting. Each comparison must match what the writer wants to show.",
+        why: "The answers are \"The chick's peeping was a roaring lion\" and \"The chick ran like a race car around the barn.\" A roaring lion is big and loud, and a race car is fast. The writer wants a tiny, sleepy chick, which the button, the sleeping ball of fluff and the yawning kitten show."
+      }
+    ] }
+  ] },
+  similar: [
+    {
+      id: "SK-SS2b-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-P4"],
+      prompt: "Wyatt wrote some new sentences for his story. Match each one to the kind of figurative language it uses.",
+      cols: ["Simile", "Metaphor", "Idiom"],
+      rows: [
+        { text: "The baby giggled like a bubbling brook.", answer: 0 },
+        { text: "My bedroom is a messy jungle.", answer: 1 },
+        { text: "We are in the same boat.", answer: 2 },
+        { text: "The tower was as tall as a mountain.", answer: 0 }
+      ],
+      clue: "Look for like or as first. Then ask whether the sentence compares different things or is a saying you cannot read word for word.",
+      hints: [
+        "Look for like or as first. Then ask whether the sentence compares different things or is a saying you cannot read word for word.",
+        "Start with the sentences that have like or as. Then decide about the other two.",
+        "A bedroom cannot really be a jungle, so one sentence compares without like or as. Decide the last one."
+      ],
+      how: [
+        "\"Like a bubbling brook\" and \"as tall as a mountain\" use like and as to compare different things, so they are similes.",
+        "\"My bedroom is a messy jungle\" compares a room to a jungle without like or as, so it is a metaphor.",
+        "\"We are in the same boat\" is a saying that means we have the same problem, so it is an idiom."
+      ],
+      why: "The brook and mountain sentences are similes because they use like or as. \"My bedroom is a messy jungle\" is a metaphor. \"In the same boat\" is an idiom that means having the same problem."
+    },
+    {
+      id: "SK-SS2b-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C02"],
+      prompt: "Wyatt wants to add a simile to sentence 3 to help the reader picture the flame. Which revision is best?",
+      stem: [
+        "(1) Last night, our power went out.",
+        "(2) We lit a candle and sat on the floor.",
+        "(3) The flame was small and orange.",
+        "(4) We told stories until we fell asleep."
+      ],
+      choices: [
+        { text: "The flame was small and orange, like a leaf swaying in the dark.", correct: true },
+        { text: "The flame was small and orange, like another candle in the dark." },
+        { text: "The flame was small and orange, like a big block of cold ice." },
+        { text: "The flame was small and orange, as we waited for the lights." }
+      ],
+      clue: "A simile compares two different kinds of things using like or as. Check that the comparison fits.",
+      hints: [
+        "A simile compares two different kinds of things using like or as. Check that the comparison fits.",
+        "Sentence 3 is about a small, orange, flickering flame. Ask what each choice compares the flame to, and whether the two are different kinds of things.",
+        "One choice compares a flame to another flame. Test the other three the same way."
+      ],
+      how: [
+        "Sentence 3 says the flame was small and orange, so the simile should show a small flickering light.",
+        "A leaf swaying in the dark is a different kind of thing, and it moves a little like a flickering flame.",
+        "The answer is \"The flame was small and orange, like a leaf swaying in the dark.\"",
+        "Another candle is the same kind of thing, a block of ice is cold, and \"as we waited\" uses as to tell when."
+      ],
+      why: "The answer is \"The flame was small and orange, like a leaf swaying in the dark.\" A leaf and a flame are different kinds of things, and a swaying leaf matches a flickering flame. Another candle is the same kind of thing, ice is cold, and \"as we waited\" tells when."
+    },
+    {
+      id: "SK-SS2b-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C03"],
+      prompt: "Wyatt wants to replace sentence 5 with an idiom that shows the class was listening closely. Choose the idiom that fits best.",
+      text: "When Ms. Rivera began the story, the whole class was {0}.",
+      slots: [
+        { options: ["all ears", "out of the blue", "by the book"], answer: 0 }
+      ],
+      clue: "An idiom is a saying that means something different from its words. Think about what each saying really means.",
+      hints: [
+        "An idiom is a saying that means something different from its words. Think about what each saying really means.",
+        "The sentence is about students listening. Say what each idiom means in your own words.",
+        "One of the idioms is about something that happens suddenly. Decide between the other two."
+      ],
+      how: [
+        "The class is listening to a story, so the idiom should mean listening closely.",
+        "\"All ears\" means listening very closely.",
+        "\"Out of the blue\" means suddenly, and \"by the book\" means following the rules.",
+        "The answer is all ears."
+      ],
+      why: "The answer is all ears. That idiom means listening very closely, which fits a class listening to a story. Out of the blue means suddenly, and by the book means following the rules."
+    },
+    {
+      id: "SK-SS2b-S04",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      pick: 1,
+      like: ["SK-SS2b-C04"],
+      prompt: "Select the sentence that gives something a person's actions.",
+      stem: ["Ravi wrote five sentences about a night at home."],
+      options: [
+        "The moon smiled down on our quiet street.",
+        "The moon was full and bright.",
+        "The dog barked at the moon.",
+        "Mom turned off the porch light.",
+        "A cloud drifted slowly across the sky."
+      ],
+      answer: [0],
+      clue: "Personification gives a thing a person's actions. Ask what a person can do that a thing really cannot.",
+      hints: [
+        "Personification gives a thing a person's actions. Ask what a person can do that a thing really cannot.",
+        "Read each sentence and ask who or what is doing the action. Is it a thing doing something only a person does?",
+        "A dog really barks and a mom really turns off a light. Check the other three sentences."
+      ],
+      how: [
+        "Personification means a thing does something only a person does.",
+        "A dog can bark, a mom can turn off a light and a cloud can drift, so those are real actions.",
+        "\"The moon was full and bright\" only describes. The moon smiling is something only a person does.",
+        "The answer is \"The moon smiled down on our quiet street.\""
+      ],
+      why: "The answer is \"The moon smiled down on our quiet street.\" A moon cannot smile, so the writer gives it a person's action. The dog and the mom do real things, a cloud really drifts, and \"full and bright\" only describes."
+    },
+    {
+      id: "SK-SS2b-S05",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C05"],
+      prompt: "Wyatt wants the reader to picture many kids moving together in one direction. Which revision of sentence 2 does that best?",
+      stem: [
+        "(1) The bell rang, and school was over.",
+        "(2) The hallway filled with kids.",
+        "(3) We all headed toward the front doors."
+      ],
+      choices: [
+        { text: "The hallway was a river of kids flowing toward the doors.", correct: true },
+        { text: "The hallway was an empty field with one small bird." },
+        { text: "The hallway was a quiet little room." },
+        { text: "The hallway was a very crowded hallway full of kids." }
+      ],
+      clue: "A metaphor compares two different kinds of things without like or as. It should make the reader picture what the writer means.",
+      hints: [
+        "A metaphor compares two different kinds of things without like or as. It should make the reader picture what the writer means.",
+        "Decide what Wyatt wants the reader to picture: many kids, all moving the same way. Ask what each choice compares the hallway to.",
+        "One choice does not compare the hallway to anything else. Test the other three against many kids moving together."
+      ],
+      how: [
+        "Wyatt wants the reader to see many kids moving the same way.",
+        "A river is a different kind of thing, and it flows with many drops moving together in one direction.",
+        "The answer is \"The hallway was a river of kids flowing toward the doors.\"",
+        "An empty field with one bird shows few, a quiet little room is not busy, and \"a very crowded hallway\" compares nothing."
+      ],
+      why: "The answer is \"The hallway was a river of kids flowing toward the doors.\" It compares the hallway to a river, where everything moves together in one direction. An empty field with one bird is the opposite, a quiet little room shows few kids, and a crowded hallway compares nothing."
+    },
+    {
+      id: "SK-SS2b-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-P5"],
+      prompt: "Wyatt wants to add this sentence: \"The feeder swayed happily under the little bird's weight.\" Where is the best place to add it?",
+      stem: [
+        "(1) Yesterday, I filled the bird feeder with seeds.",
+        "(2) Then I sat by the window and waited.",
+        "(3) Soon, a small brown sparrow landed on the feeder.",
+        "(4) It pecked at the seeds one by one.",
+        "(5) After a few minutes, the sparrow flew away."
+      ],
+      choices: [
+        { text: "after sentence 3", correct: true },
+        { text: "after sentence 1" },
+        { text: "after sentence 2" },
+        { text: "after sentence 5" }
+      ],
+      clue: "Find the sentence that the new sentence is about. It should come right after the sentence it adds to.",
+      hints: [
+        "Find the sentence that the new sentence is about. It should come right after the sentence it adds to.",
+        "The new sentence is about the feeder and the bird. Look for the sentence where the bird first appears.",
+        "The bird has not arrived by sentence 1 or 2, and it has flown away by sentence 5. Decide where it is on the feeder."
+      ],
+      how: [
+        "The new sentence says the feeder swayed under the bird's weight.",
+        "The bird lands on the feeder in sentence 3.",
+        "The answer is after sentence 3. The swaying comes right after the bird lands.",
+        "In sentences 1 and 2 there is no bird yet, and in sentence 5 the bird has flown away."
+      ],
+      why: "The answer is after sentence 3. Sentence 3 says the sparrow landed on the feeder, so the feeder swaying comes right after it. In sentences 1 and 2 no bird has come yet, and by sentence 5 the sparrow has flown away. The new sentence gives the feeder a feeling, which is personification."
+    },
+    {
+      id: "SK-SS2b-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS2b-C07"],
+      prompt: "Ines wants to replace sentence 2 with a metaphor that shows how bright the moon was. Which TWO sentences would work?",
+      stem: [
+        "(1) We stepped outside after dinner.",
+        "(2) The full moon was very bright.",
+        "(3) We played tag in the yard until bedtime."
+      ],
+      choices: [
+        { text: "The moon was a round lantern hanging over the yard.", correct: true },
+        { text: "The moon was a glowing pearl in the night sky.", correct: true },
+        { text: "The moon was as bright as a flashlight." },
+        { text: "The moon was a dull gray stone in the grass." },
+        { text: "The moon was very big and round tonight." }
+      ],
+      clue: "A metaphor compares two different kinds of things without like or as. It should show that the moon was bright.",
+      hints: [
+        "A metaphor compares two different kinds of things without like or as. It should show that the moon was bright.",
+        "Check each choice for two things. Does it say the moon is something else without like or as? Is that something bright?",
+        "One choice uses the word as to compare, so it is a simile. Decide which of the other four fit."
+      ],
+      how: [
+        "A metaphor has no like or as, so the sentence must say the moon is something else.",
+        "A lantern and a glowing pearl give off a soft light, and they are different kinds of things from the moon.",
+        "The answers are \"The moon was a round lantern hanging over the yard\" and \"The moon was a glowing pearl in the night sky.\"",
+        "\"As bright as a flashlight\" uses as. A dull gray stone is not bright, and \"very big and round\" does not compare."
+      ],
+      why: "The answers are \"The moon was a round lantern hanging over the yard\" and \"The moon was a glowing pearl in the night sky.\" Each says the moon is a bright thing without like or as. \"As bright as a flashlight\" is a simile, a dull stone is not bright, and \"very big and round\" does not compare."
+    },
+    {
+      id: "SK-SS2b-S08",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C08"],
+      prompt: "Ines wants to add a simile to sentence 2 and to sentence 5. Choose the best words for each blank.",
+      text: "The road wound up the hill like {0}. The stars shone over the farm like {1}.",
+      slots: [
+        {
+          options: ["a long gray snake", "a stack of plates", "a round red ball"],
+          answer: 0
+        },
+        {
+          options: ["thousands of tiny lamps", "a heavy wool coat", "a puddle of mud"],
+          answer: 0
+        }
+      ],
+      clue: "A simile compares two different kinds of things. For each blank, ask what the road or the stars look like.",
+      hints: [
+        "A simile compares two different kinds of things. For each blank, ask what the road or the stars look like.",
+        "For the road, think about its shape: it winds. For the stars, think about what they do at night.",
+        "A stack of plates and a round red ball do not wind like a road. Use that to settle the first blank, then think about the stars."
+      ],
+      how: [
+        "A road that winds up a hill is long and bendy.",
+        "A long gray snake is long and bendy, so it fits the first blank.",
+        "Stars shine in many small spots, like tiny lamps. The second blank is thousands of tiny lamps.",
+        "A heavy wool coat and a puddle of mud do not shine, so they do not fit."
+      ],
+      why: "The answers are a long gray snake and thousands of tiny lamps. A winding road is long and bendy like a snake. Stars shine in many small spots like tiny lamps. A stack of plates, a red ball, a wool coat and a puddle of mud do not match."
+    },
+    {
+      id: "SK-SS2b-S09",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      pick: 1,
+      like: ["SK-SS2b-C09"],
+      prompt: "Select the sentence that has a metaphor.",
+      stem: ["Mara wrote five different sentences about a ride on the swings."],
+      options: [
+        "The swing was a bird gliding through the air.",
+        "The swing flew like a paper plane.",
+        "The swing was as high as the slide.",
+        "The swing went very high.",
+        "The swing sang a squeaky song."
+      ],
+      answer: [0],
+      clue: "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the swing is something else.",
+      hints: [
+        "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the swing is something else.",
+        "First set aside any sentence that has like or as. Then ask whether each remaining sentence says the swing is a different kind of thing.",
+        "One sentence gives the swing a person's action, and one just describes it. Check the others."
+      ],
+      how: [
+        "A metaphor says one thing is a different kind of thing, without like or as.",
+        "\"Flew like a paper plane\" uses like, so it is a simile. \"As high as the slide\" compares two playground things of the same kind.",
+        "\"Went very high\" only describes, and \"sang a squeaky song\" gives the swing a person's action.",
+        "The answer is \"The swing was a bird gliding through the air.\""
+      ],
+      why: "The answer is \"The swing was a bird gliding through the air.\" It says the swing is a bird, a different kind of thing, without like or as. \"Like a paper plane\" is a simile, the slide is the same kind of thing, \"went very high\" only describes, and \"sang a squeaky song\" is personification."
+    },
+    {
+      id: "SK-SS2b-S10",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C10"],
+      prompt: "Match each situation to the idiom a writer could use to describe it. One idiom will not be used.",
+      cols: ["cost an arm and a leg", "out of the blue", "on thin ice", "head in the clouds"],
+      rows: [
+        { text: "The new game console was very expensive.", answer: 0 },
+        { text: "Rain began to fall with no warning on a sunny day.", answer: 1 },
+        { text: "Sam stared out the window and forgot to do his work.", answer: 3 }
+      ],
+      clue: "An idiom means something different from its words. Read each situation and say what is happening in your own words.",
+      hints: [
+        "An idiom means something different from its words. Read each situation and say what is happening in your own words.",
+        "Start with the situation you are most sure about. Use each idiom once, and one idiom is left over.",
+        "Something happening with no warning is one of the situations. Match the other two after that."
+      ],
+      how: [
+        "A very expensive game console is described by \"cost an arm and a leg,\" which means cost a lot.",
+        "Rain with no warning is \"out of the blue,\" which means suddenly.",
+        "Sam staring out the window and forgetting his work has his \"head in the clouds,\" which means daydreaming.",
+        "\"On thin ice\" means in a risky situation, so it is not used."
+      ],
+      why: "A very expensive console cost an arm and a leg. Rain with no warning came out of the blue. Sam daydreaming has his head in the clouds. On thin ice means in a risky situation, so it matches none of them."
+    },
+    {
+      id: "SK-SS2b-S11",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C11"],
+      prompt: "Gabe wants to replace sentence 3 with a metaphor that shows how hot the pavement was. Which sentence is best?",
+      stem: [
+        "(1) It was the hottest day of the summer.",
+        "(2) Gabe walked across the playground in his sandals.",
+        "(3) The pavement felt very hot.",
+        "(4) He hurried to the shade."
+      ],
+      choices: [
+        { text: "The pavement was a hot griddle under his feet.", correct: true },
+        { text: "The pavement was a cold bowl of ice under his feet." },
+        { text: "The pavement was like a hot griddle under his feet." },
+        { text: "The pavement was very hot under his feet." }
+      ],
+      clue: "A metaphor compares two different kinds of things without like or as. It also has to show what the writer means.",
+      hints: [
+        "A metaphor compares two different kinds of things without like or as. It also has to show what the writer means.",
+        "Gabe wants to show heat. Check each choice for no like or as, for a comparison, and for a hot feeling.",
+        "One choice says the pavement is something cold. Test the other three the same way."
+      ],
+      how: [
+        "Sentence 3 says the pavement felt very hot, so the metaphor should show heat.",
+        "A hot griddle is a different kind of thing from pavement, and it is very hot.",
+        "The answer is \"The pavement was a hot griddle under his feet.\"",
+        "A bowl of ice is cold, \"like a hot griddle\" uses like so it is a simile, and \"very hot\" does not compare anything."
+      ],
+      why: "The answer is \"The pavement was a hot griddle under his feet.\" It says the pavement is a griddle, which is very hot, without like or as. A bowl of ice is cold, the \"like a hot griddle\" version is a simile, and \"very hot\" compares nothing."
+    },
+    {
+      id: "SK-SS2b-S12",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C12"],
+      prompt: "Tia wants to replace sentence 3 with a comparison that shows how books connect to adventure. Which revision shows that best?",
+      stem: [
+        "(1) Our school library is my favorite place.",
+        "(2) I walk past rows and rows of books.",
+        "(3) There are shelves of stories about every kind of place."
+      ],
+      choices: [
+        { text: "The shelves were rows of doors, and each book opened a new world.", correct: true },
+        { text: "The shelves were rows of dusty fence posts along a road." },
+        { text: "The shelves were a parking lot full of shiny cars." },
+        { text: "The shelves were tall and held hundreds of books on them." }
+      ],
+      clue: "A good comparison shows a relationship between two ideas. Ask what Tia wants the reader to understand about books.",
+      hints: [
+        "A good comparison shows a relationship between two ideas. Ask what Tia wants the reader to understand about books.",
+        "Tia wants to link books to adventure. Ask which comparison shows books taking you somewhere new, not just how the shelves look.",
+        "Two choices are about how shelves look or what they hold. Check which comparison is about going to new places."
+      ],
+      how: [
+        "Tia wants the reader to see that books lead to adventure.",
+        "A door opens to a new place, and a book opens a new world, so the comparison shows how the two ideas connect.",
+        "The answer is \"The shelves were rows of doors, and each book opened a new world.\"",
+        "Fence posts and a parking lot are only about how the shelves look, and \"tall and held hundreds of books\" does not compare anything."
+      ],
+      why: "The answer is \"The shelves were rows of doors, and each book opened a new world.\" A door opens to a new place, and a book opens a new world, so the comparison shows how the two ideas connect. Fence posts and a parking lot are not about adventure, and \"tall and held hundreds of books\" is not a comparison."
+    },
+    {
+      id: "SK-SS2b-S13",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C13"],
+      prompt: "Ivy wants to add a sentence that gives the old porch swing a person's actions to show how worn it was. Which sentence is best?",
+      stem: [
+        "(1) My grandpa's porch swing is very old.",
+        "(2) Every summer, we sit on it together.",
+        "(3) The chains hold it up to the roof."
+      ],
+      choices: [
+        { text: "The old porch swing groaned and complained every time I sat down.", correct: true },
+        { text: "The old porch swing was as creaky as a rusty gate." },
+        { text: "The old porch swing jogged down the street to my house." },
+        { text: "The old porch swing hangs on two long chains." }
+      ],
+      clue: "Personification gives a thing a person's actions. The sentence also has to fit what Ivy means: the swing is old and worn.",
+      hints: [
+        "Personification gives a thing a person's actions. The sentence also has to fit what Ivy means: the swing is old and worn.",
+        "Check each choice for two things. Does the swing do something only a person does? Does the action fit an old, worn swing?",
+        "One choice compares with as, and one just tells a fact. Decide between the other two."
+      ],
+      how: [
+        "Ivy wants to show that the swing is old and worn out.",
+        "Groaning and complaining are things a person does. They match the creaking sounds of an old swing.",
+        "The answer is \"The old porch swing groaned and complained every time I sat down.\"",
+        "\"As creaky as a rusty gate\" is a simile, \"jogged down the street\" does not fit a swing on a porch, and \"hangs on two long chains\" is a plain fact."
+      ],
+      why: "The answer is \"The old porch swing groaned and complained every time I sat down.\" Groaning and complaining are things a person does, and they fit the creaks of an old swing. The rusty gate is a simile, jogging down the street does not fit a swing, and the chains are a plain fact."
+    },
+    {
+      id: "SK-SS2b-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      like: ["SK-SS2b-C14"],
+      prompt: "Complete the sentences with the best comparison for each blank.",
+      text: "At dinnertime, our kitchen is {0}. Pots bang, plates clatter and everyone talks at once. After dinner, everyone leaves, and the kitchen is as {1} as an empty cave.",
+      slots: [
+        { options: ["a circus", "a sleeping bear", "a quiet museum"], answer: 0 },
+        { options: ["quiet", "noisy", "crowded"], answer: 0 }
+      ],
+      clue: "A comparison has to fit what the sentences around it say. Read the sentences after each blank for clues.",
+      hints: [
+        "A comparison has to fit what the sentences around it say. Read the sentences after each blank for clues.",
+        "For the first blank, ask what the kitchen is like at dinnertime. For the second blank, ask what it is like when everyone has gone.",
+        "A sleeping bear and a quiet museum are not noisy or busy. Use that to settle the first blank, then think about the cave."
+      ],
+      how: [
+        "At dinnertime the kitchen is full of banging pots and talking, so the first comparison should be busy and noisy.",
+        "A circus is full of noise and action, so it fits.",
+        "After dinner everyone leaves, and an empty cave is very quiet, so the kitchen is as quiet as an empty cave.",
+        "A sleeping bear and a quiet museum are still and quiet, so they do not fit dinnertime."
+      ],
+      why: "The answers are a circus and quiet. At dinnertime the kitchen is busy and noisy like a circus. After everyone leaves, it is as quiet as an empty cave. A sleeping bear and a quiet museum are still and quiet, so they do not fit the noisy kitchen."
+    },
+    {
+      id: "SK-SS2b-S15",
+      type: "hottext",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.2.b"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS2b-C15"],
+      prompt: "Select the TWO comparisons that do not fit what Tomas wants to show.",
+      stem: ["Tomas wants to show that his grandma's kitchen is warm and cozy."],
+      options: [
+        "The kitchen was a warm hug on a cold day.",
+        "The kitchen was as cozy as a nest.",
+        "The kitchen was a frozen lake.",
+        "The kitchen was a cold, empty cave.",
+        "The kitchen glowed like a lantern in the dark."
+      ],
+      answer: [2, 3],
+      clue: "A comparison fits when it shows what the writer wants to show. Tomas wants the kitchen to seem warm and cozy.",
+      hints: [
+        "A comparison fits when it shows what the writer wants to show. Tomas wants the kitchen to seem warm and cozy.",
+        "Read each comparison and ask what it makes the reader picture. Is it warm and cozy, or something else?",
+        "Three of the comparisons show a warm, cozy place. Look for the two that show something else."
+      ],
+      how: [
+        "Tomas wants the reader to picture a warm, cozy kitchen.",
+        "A warm hug, a nest and a glowing lantern are warm and cozy, so those three fit.",
+        "A frozen lake and a cold, empty cave are cold, so they do not fit.",
+        "The answers are \"The kitchen was a frozen lake\" and \"The kitchen was a cold, empty cave.\""
+      ],
+      why: "The answers are \"The kitchen was a frozen lake\" and \"The kitchen was a cold, empty cave.\" Both show a cold place. The warm hug, the nest and the glowing lantern all show the warm, cozy kitchen Tomas wants."
+    }
+  ],
+  addons: {
+    "SK-SS2b-P1": {
+      hints: [
+        "A simile compares two different kinds of things using like or as. Check that a choice really compares.",
+        "Read each choice and ask what it compares the sky to, and whether that thing is dark.",
+        "One choice compares the sky to something white, which is the opposite. Decide among the other three."
+      ],
+      how: [
+        "Sentence 2 says the sky turned dark, so the simile should show how dark.",
+        "A cave is a different kind of thing from the sky, and it is very dark.",
+        "The answer is \"The sky turned as dark as a cave.\"",
+        "\"Dark as the storm came\" uses as to tell when, not to compare. White milk shows the opposite, and \"very, very, very dark\" does not compare."
+      ],
+      misconception: "A common mix-up is choosing any sentence with the word as. A simile has to compare two different kinds of things."
+    },
+    "SK-SS2b-P2": {
+      hints: [
+        "A metaphor compares two different kinds of things without like or as, and the comparison has to fit.",
+        "Check each choice for no like or as, and then ask whether the thing it names is loud.",
+        "One choice uses like, so it is a simile. Decide between the other three by asking which names something loud."
+      ],
+      how: [
+        "A metaphor says the thunder is something else, with no like or as.",
+        "A giant drum is a different kind of thing, and a giant drum is loud.",
+        "The answer is \"Soon the thunder was a giant drum shaking the house.\"",
+        "The whisper uses like and is quiet, a tiny far-off bell is quiet, and \"the thunder started, and Pepper got scared\" does not compare."
+      ],
+      misconception: "A common mix-up is choosing a comparison that has no like or as but shows the wrong feeling. The comparison must fit too."
+    },
+    "SK-SS2b-P3": {
+      hints: [
+        "An idiom is a saying that means something different from its words. Think about what each saying really means.",
+        "Sentence 10 says Mei was splashing in puddles. Say what each idiom means in your own words.",
+        "One of the idioms is about being sick, so it does not fit a happy day. Decide between the other two."
+      ],
+      how: [
+        "Mei is splashing in the puddles and having fun, so the idiom should mean very happy.",
+        "\"On cloud nine\" means very happy.",
+        "\"Under the weather\" means sick, and \"in hot water\" means in trouble.",
+        "The answer is on cloud nine."
+      ],
+      misconception: "A common mix-up is choosing the idiom with weather words because the story is about a storm. Choose by what the saying means."
+    },
+    "SK-SS2b-P4": {
+      hints: [
+        "Look for like or as first. Then ask whether the sentence compares different things or is a saying you cannot read word for word.",
+        "Start with the sentences that have like or as. Then decide about the other two.",
+        "Puddles cannot really be mirrors, so one sentence compares without like or as. Decide the last one."
+      ],
+      how: [
+        "\"The wolf\" and \"the marching band\" sentences use like and as to compare different things, so they are similes.",
+        "\"The puddles were shiny mirrors\" compares puddles to mirrors without like or as, so it is a metaphor.",
+        "\"Raining cats and dogs\" is a saying that means raining very hard, so it is an idiom."
+      ],
+      misconception: "A common mix-up is calling every comparison a simile. A simile has like or as; a metaphor does not."
+    },
+    "SK-SS2b-P5": {
+      hints: [
+        "Find the part of the story that the new sentence is about. It should come right after the sentence it adds to.",
+        "The new sentence is about raindrops falling. Look for the sentence where the rain begins.",
+        "By the last paragraph the storm is gone, and in the first paragraph the rain has not begun. Decide where the rain starts."
+      ],
+      how: [
+        "The new sentence is about raindrops dancing and drumming on the roof.",
+        "Sentence 4 says the rain began.",
+        "The answer is after sentence 4, because the raindrops are falling right then.",
+        "By sentence 7 the storm is gone, and in sentence 1 the rain has not started."
+      ],
+      misconception: "A common mix-up is putting a sentence where it sounds nice instead of where it fits the story's order."
+    }
+  },
+/* B4b:core:end */
   test: [
     { id: "SK-SS2b-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Andre wants to revise sentence 8 with a simile that shows how fast his drumsticks moved. Which revision is best?",
