@@ -279,7 +279,7 @@ PP.addLesson({
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
             { text: "\"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"", correct: true },
-            { text: "\"It is a crustacean (krus-TAY-shun), like a crab or a shrimp.\"" },
+            { text: "\"A roly-poly is not really a bug at all.\"" },
             { text: "\"Roly-polies eat dead leaves and old, rotting plants.\"" },
             { text: "\"It has seven pairs of legs, so it has fourteen legs in all.\"" }
           ] },
@@ -293,7 +293,7 @@ PP.addLesson({
           "The article begins by asking whether you have ever played in your yard and found a roly-poly. That question speaks to a child.",
           "The other three sentences only tell facts about the roly-poly. They are true, but they do not show who is reading.",
           "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"",
-          "The crab and shrimp fact could tempt a reader to pick scientists, and the leaves fact could tempt a reader to pick gardeners, but the author never talks to scientists, gardeners or teachers."
+          "The crab and shrimp comparison in the passage could tempt a reader to pick scientists, and the leaves fact could tempt a reader to pick gardeners, but the author never talks to scientists, gardeners or teachers."
         ],
         misconception: "A common mix-up is thinking a text full of science facts must be for scientists. Look at how the author talks to the reader.",
         why: "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\" The author talks to a reader who plays in the yard and finds bugs. The other sentences only give facts about the roly-poly, and the author never talks to scientists, gardeners or teachers." },
@@ -3427,11 +3427,11 @@ PP.addLesson({
       choices: [
         { text: "She has driven a bus for years and has had to stop fast many times.", correct: true },
         { text: "She read a story in the newsletter about a bus that stopped fast." },
-        { text: "She learned it from a bus-safety video that she watched at school." },
-        { text: "A rider once told her about a fall on a bus, and she never forgot it." }
+        { text: "She once saw a news video of a bus that stopped fast, and a rider fell." },
+        { text: "She has fallen herself while standing on a bus as a rider." }
       ],
       clue: "Read the note in the box. What is Ms. Greene's job, and how long has she done it? Then find what she says she has seen.",
-      why: "The answer is \"She has driven a bus for years and has had to stop fast many times.\" The box tells her individual context: she has been a bus driver for 15 years. Her own experience is why she can be sure. She wrote for the newsletter, she did not read about it there. Her note says she herself has had to stop fast many times, so she did not just hear it from a video or from a rider."},
+      why: "The answer is \"She has driven a bus for years and has had to stop fast many times.\" The box tells her individual context: she has been a bus driver for 15 years. Her own experience is why she can be sure. She wrote for the newsletter, she did not read about it there. Her note says she herself has had to stop fast many times, and the box says she is the driver, not a rider who fell. She did not learn it from a news video."},
     { id: "SK-TC2c-P9", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Read \"A Sign for Field Day.\" Why did Leo tell everyone to meet in the gym?",
       choices: [
@@ -3532,9 +3532,9 @@ PP.addLesson({
           { text: "The hot irons on the stove had made the whole kitchen steamy and warm for days." },
           { text: "The wind had blown the kitchen door open and scattered wet leaves all over the room." }
         ],
-        clue: "Situational context is what was happening at the time. It can explain why someone says something.",
+        clue: "Situational context is what was happening at the time, and what people had back then. Both can explain why someone says something.",
         hints: [
-          "Situational context is what was happening at the time. It can explain why someone says something.",
+          "Situational context is what was happening at the time, and what people had back then. Both can explain why someone says something.",
           "Reread paragraphs 3 to 5.",
           "Nothing in the report says Mama brought plants inside, so that choice has no support. Check the other choices."
         ],
@@ -3913,7 +3913,7 @@ PP.addLesson({
       why: "The answers are \"A block of ice keeps the food cold in an icebox.\" and \"Supper is cooked on a wood stove.\" Today most homes have refrigerators and gas or electric stoves. Setting the table, eating together and reading the news still happen." },
     { id: "SK-TC2c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-C08"],
-      stem: ["Box: This diary is historical fiction. Imagine that a boy named Emmett wrote it in 1895. His uncle's job was to light the town's gas street lamps by hand each evening.", "Tonight I walked with Uncle Ray on his rounds. He carried a long pole with a tiny flame on the end. At each lamp he reached up and turned a small key, and the street began to glow."],
+      stem: ["Box: This diary is historical fiction. Imagine that a boy named Emmett wrote it in 1895. His uncle's job was to light the town's gas street lamps by hand each evening.", "Tonight I walked with Uncle Ray on his rounds. He carried a long pole with a tiny flame on the end. At each lamp he reached up and pulled a small chain, and the street began to glow."],
       prompt: "Read the box and the diary. Then choose the best answer for each blank.",
       text: "The diary was written {0}. It tells about {1}.",
       slots: [
@@ -4174,7 +4174,7 @@ PP.addLesson({
         "The box says Ms. Greene has driven a school bus in Georgia for 15 years.",
         "Her note says she has had to stop fast many times, and a rider who is standing can fall.",
         "The answer is \"She has driven a bus for years and has had to stop fast many times.\"",
-        "She wrote the newsletter piece, not read it. Her own note says she has had to stop fast many times, so she did not just hear about falls from a video or from a rider."
+        "She wrote the newsletter piece, not read it. Her own note says she has had to stop fast many times, so she did not learn it from a news video or from falling as a rider. Nothing in the box says she has ever been a rider who fell."
       ],
       misconception: "A common mix-up is choosing where a text was printed instead of what the writer has lived through." },
     "SK-TC2c-P9": {

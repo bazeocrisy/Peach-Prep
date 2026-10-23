@@ -335,3 +335,20 @@ Terms with no hits elsewhere: late bus, Homework Club, fishing derby, paper hat,
 | `python3 verification/readability.py` (read) | 1.a p3 FK 3.2, p4 3.5. 2.c p5 FK 3.9, p6 FK 3.0 (152 words; the new journal replaced the stars text). All at or below 4.5. 2.c p1 FK 4.3 and the legacy p3 FK 0.3 are unchanged |
 | Lesson file syntax | `node -e` load of T-C.js after every change; always valid. Pre-fix copy: `scratchpad/T-C.pre-fix.js` |
 | Browser | Not rerun this pass. The first pass had Playwright smoke tests (109 of 109 and the in-order run); the changed items need the in-order sitting run again |
+
+## Polish after re-review
+
+Four SHOULD fixes from B3-b3a-rereview.md. Keys, ids and the core 15 (3x5) are unchanged. Pre-edit copy: `scratchpad/T-C.pre-polish.js`.
+
+| Item | Change | Live choices after h1-h3 + clue |
+|---|---|---|
+| 1.a C07 Part B (SHOULD-1) | The "(krus-TAY-shun)" choice is now the plain fact "A roly-poly is not really a bug at all." The respelling stays in passage p3, so the audience clue is intact. The `how` line about scientists now says "crab and shrimp comparison in the passage". | 4 of 4 (h3 removes only Part A "teachers") |
+| 2.c S08 (SHOULD-2) | "turned a small key" is now "pulled a small chain". Key unchanged. | slot 1: 3 (as before); slot 2: about 2 (unchanged) |
+| 2.c P8 (SHOULD-3) | Rivals are now: newsletter story (removed by h3), "once saw a news video of a bus that stopped fast, and a rider fell", and "has fallen herself while standing on a bus as a rider". The box and her own note exclude both only on careful reading: she is the driver, and nothing says she fell or saw a video. `why` and `how` reworded to match. | 3 (key + news video + fell as rider) |
+| 2.c C07 (SHOULD-4) | Clue and h1 now: "Situational context is what was happening at the time, and what people had back then. Both can explain why someone says something." Names the situation and the time-period fact without naming rain, dryers or the key. | 3 (unchanged) |
+
+Gates: check-content --all PASS (0 failures, 11 warnings, none naming these lessons); check-writing 0 failures; check-instructional-copy 28 assertions passed. Browser not rerun.
+
+### Needs blind re-solve
+- 3.T.C.1.a: C07 (Part B new choice).
+- 3.T.C.2.c: P8 (new rivals), C07 (clue), S08 (chain wording).

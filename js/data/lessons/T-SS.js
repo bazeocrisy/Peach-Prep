@@ -1708,6 +1708,21 @@ PP.addLesson({
         ["Anoles are fast hunters.", "An anole sits very still and watches.", "When a fly lands nearby, the lizard shoots forward like a rubber band snapping.", "Then it gulps down its meal."],
         ["A male anole has a pink flap of skin under his chin.", "To warn another male to stay away, he puffs it out and bobs his head up and down.", "The flap is a bright stop sign that says, \"This spot is mine!\""],
         ["Next time you are outside, keep your eyes peeled.", "An anole that has turned brown on a tree trunk can be very hard to spot."]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p6 and p7 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p6", title: "Raking Leaves", genre: "Literary text",
+      paragraphs: [
+        ["On Saturday, Ozzie and his dad raked the leaves in their front yard.", "Red and yellow leaves covered the grass from the porch to the street."],
+        ["They worked for hours.", "Ozzie made one big pile, and then another.", "The wind tugged at his hat.", "Soon his arms felt tired, and his nose was cold."],
+        ["The sun sank low behind the houses.", "Dad looked at the two piles and rubbed his back.", "\"Let's call it a day,\" he said.", "\"We can finish tomorrow.\""],
+        ["Ozzie jumped into the biggest pile with a shout.", "Then they went inside for hot soup, and Mom had the table ready."]
+      ] },
+    { id: "p7", title: "Swings for the School Yard", genre: "Literary text",
+      paragraphs: [
+        ["Tess's school needed new swings.", "The old ones had rusted.", "A new set would cost four hundred dollars."],
+        ["Tess sold painted rocks at lunch and earned five dollars.", "Her fingers were still sticky with paint.", "She ran to show Ms. Doyle, the school secretary."],
+        ["Ms. Doyle smiled.", "\"Thank you, Tess,\" she said.", "\"Five dollars is a drop in the bucket, but it is a good start.\""],
+        ["So the whole school joined in.", "Families came to a pancake breakfast, and every class held a sale.", "After two months, the jar was full.", "The new swings went up on the playground, and Tess went first."]
       ] }
   ],
   practice: [
@@ -2193,7 +2208,314 @@ PP.addLesson({
         "The turtle does not hide in bottles, and its shell is not metal. A bottle cap is round and flat, but the sentence says small, so the comparison is about size, not shape."
       ],
       misconception: "A common mix-up is taking the comparison word for word, as if the turtle had something to do with real bottles.",
-      why: "The answer is \"how very tiny a baby box turtle is.\" A bottle cap is small enough to fit in your palm, and the sentence says the turtle is as small as one. It is not about hiding in bottles or metal shells, and the word small shows it is about size, not a round, flat shape." }
+      why: "The answer is \"how very tiny a baby box turtle is.\" A bottle cap is small enough to fit in your palm, and the sentence says the turtle is as small as one. It is not about hiding in bottles or metal shells, and the word small shows it is about size, not a round, flat shape." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-SS2a-S04", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C03"],
+      stem: ["Ned walked into his new school on the first day. The hallway was as long as a football field. His classroom was at the very end, and his feet felt heavy."],
+      prompt: "Why does the author say the hallway was \"as long as a football field\"?",
+      choices: [
+        { text: "to show that the hallway seemed very long to Ned", correct: true },
+        { text: "to show that students play football in the hallway" },
+        { text: "to show that the hallway is outside on a field" },
+        { text: "to show that Ned walked down the hallway fast" }
+      ],
+      clue: "A simile compares two things. Ask what the comparison helps the reader notice about the hallway.",
+      hints: [
+        "A simile compares two things. Ask what the comparison helps the reader notice about the hallway.",
+        "Think about how big a football field is. Then think about how Ned feels as he walks.",
+        "Nothing says that anyone plays a game in the hallway, so one choice can go. Test the rest against how Ned feels."
+      ],
+      how: [
+        "The author compares the hallway to a football field, and a football field is very long.",
+        "Ned's feet feel heavy, and his classroom is at the very end, so the hallway seems long to him.",
+        "The answer is \"to show that the hallway seemed very long to Ned.\"",
+        "The hallway is inside the school, nobody plays football there, and the text does not say Ned walks fast."
+      ],
+      misconception: "A common mix-up is taking the comparison word for word, as if there were a real football field in the school.",
+      why: "The answer is \"to show that the hallway seemed very long to Ned.\" A football field is very long, and Ned's feet feel heavy. The hallway is inside the school, nobody plays football there, and Ned is not walking fast." },
+    { id: "SK-SS2a-S05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [], pick: 2,
+      like: ["SK-SS2a-C04"],
+      stem: ["Dana wrote these in her book after the play."],
+      prompt: "Which TWO sentences from Dana's notebook use a simile?",
+      choices: [
+        { text: "My costume felt as stiff as cardboard.", correct: true },
+        { text: "The crowd cheered like a roaring wave.", correct: true },
+        { text: "The play began at seven o'clock." },
+        { text: "Our show was longer than last year's." },
+        { text: "My cousin sat in the front row." }
+      ],
+      clue: "A simile compares two different things using like or as. Check each sentence for one of those words and a comparison.",
+      hints: [
+        "A simile compares two different things using like or as. Check each sentence for one of those words and a comparison.",
+        "Look for the words like and as. Then ask whether the sentence compares two different kinds of things.",
+        "\"Longer than last year's\" compares two shows of the same kind, so it is not a simile. Check the rest the same way."
+      ],
+      how: [
+        "A simile uses like or as to compare two different things.",
+        "The costume is compared to cardboard, and the cheering crowd is compared to a roaring wave.",
+        "The answers are \"My costume felt as stiff as cardboard.\" and \"The crowd cheered like a roaring wave.\"",
+        "The other sentences tell a time, a seat, or a comparison of two shows that are alike."
+      ],
+      misconception: "A common mix-up is choosing any sentence that compares. A simile compares two different things with like or as.",
+      why: "The answers are \"My costume felt as stiff as cardboard.\" and \"The crowd cheered like a roaring wave.\" Each one uses like or as to compare two different things. The other sentences tell a time and a seat, or compare one show with another show." },
+    { id: "SK-SS2a-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C06"],
+      stem: ["At sunrise, no wind moved across the lake. The lake was a mirror, and every pine tree on the shore showed upside down in the water."],
+      prompt: "The author says, \"The lake was a mirror.\" What does this help the reader picture?",
+      choices: [
+        { text: "calm, smooth water that shows what is above it", correct: true },
+        { text: "a lake with a glass frame around it" },
+        { text: "rough water that crashes against the shore" },
+        { text: "a lake that is too shallow to swim in" }
+      ],
+      clue: "A metaphor says one thing is another. Ask what a mirror does and how the lake is like it.",
+      hints: [
+        "A metaphor says one thing is another. Ask what a mirror does and how the lake is like it.",
+        "Think about what you see when you look into a mirror. Then think about what appears in the water.",
+        "No wind moves across the lake, so one choice can go. Check the rest against what shows in the water."
+      ],
+      how: [
+        "A mirror is flat and smooth, and it shows a picture of whatever is in front of it.",
+        "The lake shows the pine trees upside down, so its water must be smooth and still.",
+        "The answer is \"calm, smooth water that shows what is above it.\"",
+        "The lake has no frame, the wind is not moving, and the text does not say it is shallow."
+      ],
+      misconception: "A common mix-up is picturing a real mirror. The author means the lake acts like one.",
+      why: "The answer is \"calm, smooth water that shows what is above it.\" A mirror shows a clear picture, and the lake shows the pine trees upside down. There is no wind, so the water is not rough, and nothing says the lake has a frame or is shallow." },
+    { id: "SK-SS2a-S07", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p6"],
+      like: ["SK-SS2a-C07"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "When Dad says, \"Let's call it a day,\" what does he mean?",
+        choices: [
+          { text: "They should stop working for now.", correct: true },
+          { text: "They should call a friend to help." },
+          { text: "They should start raking all over again." },
+          { text: "They should wait for the day to end." }
+        ] },
+      partB: { prompt: "Which sentence from the story best helps the reader understand what Dad means?",
+        choices: [
+          { text: "\"We can finish tomorrow.\"", correct: true },
+          { text: "\"Ozzie made one big pile, and then another.\"" },
+          { text: "\"Red and yellow leaves covered the grass from the porch to the street.\"" },
+          { text: "\"Ozzie jumped into the biggest pile with a shout.\"" }
+        ] },
+      clue: "An idiom is a saying that does not mean its words. Use what the characters are doing to work out what it means.",
+      hints: [
+        "An idiom is a saying that does not mean its words. Use what the characters are doing to work out what it means.",
+        "Think about what Ozzie and Dad have been doing all day and what they plan to do next.",
+        "Dad does not plan to phone anyone, so you can drop that choice. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "Nobody is making a call, and a day cannot be called like a phone. The saying must mean something else.",
+        "Ozzie and Dad have raked for hours, and they are tired. Dad says the job can be finished later.",
+        "Part A: They should stop working for now. Part B: \"We can finish tomorrow.\"",
+        "They do not start over, and they do not wait for the day to end."
+      ],
+      misconception: "A common mix-up is reading the saying word for word, as if Dad wanted to make a phone call.",
+      why: "Part A: They should stop working for now. Part B: \"We can finish tomorrow.\" Dad says the rest of the raking can wait, so \"call it a day\" means stop for now. Nobody calls a friend, starts over, or waits for the day to end." },
+    { id: "SK-SS2a-S08", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [], pick: 2,
+      like: ["SK-SS2a-C08"],
+      stem: ["Mom blew soap bubbles on the porch. The bubbles were tiny dancers, floating and turning over the steps."],
+      prompt: "The author compares the bubbles to dancers. Which TWO things does this comparison help the reader understand about the bubbles?",
+      choices: [
+        { text: "The bubbles move in a lively way.", correct: true },
+        { text: "The bubbles float and turn in the air.", correct: true },
+        { text: "The bubbles are learning a new dance." },
+        { text: "The bubbles are heavy and drop straight down." },
+        { text: "The bubbles are hiding from the girl." }
+      ],
+      clue: "A comparison helps the reader picture how something acts. Ask how real dancers behave.",
+      hints: [
+        "A comparison helps the reader picture how something acts. Ask how real dancers behave.",
+        "Think about how dancers behave. Then think about what bubbles do on a breezy day.",
+        "Bubbles cannot learn a dance, so one choice can go. Test the rest against how dancers move."
+      ],
+      how: [
+        "Dancers move in a lively way, and they twirl and turn.",
+        "The author says the bubbles float and turn, so the bubbles move like dancers.",
+        "The answers are \"The bubbles move in a lively way.\" and \"The bubbles float and turn in the air.\"",
+        "Bubbles do not learn dances, they float instead of dropping, and nothing in the text says they are hiding."
+      ],
+      misconception: "A common mix-up is thinking the bubbles are really dancing. The comparison tells how they move.",
+      why: "The answers are \"The bubbles move in a lively way.\" and \"The bubbles float and turn in the air.\" Dancers move in a lively way and turn, and the bubbles float and turn. Bubbles do not learn dances, drop straight down, or hide." },
+    { id: "SK-SS2a-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C09"],
+      stem: ["Felix is great at climbing trees. His sister says, \"Felix can climb like a squirrel.\""],
+      prompt: "Read what Felix's sister says. Complete the sentence. Choose the best answer for each blank.",
+      text: "In this sentence, the word like {0}, so the sentence {1}.",
+      slots: [
+        { options: ["means enjoy", "compares two things", "tells where"], answer: 1 },
+        { options: ["is a metaphor", "is not a simile", "is a simile"], answer: 2 }
+      ],
+      clue: "Sometimes like tells what someone enjoys, and sometimes it sets one thing beside another. Ask which one this sentence does.",
+      hints: [
+        "Sometimes like tells what someone enjoys, and sometimes it sets one thing beside another. Ask which one this sentence does.",
+        "Look at Felix and the squirrel in the sentence. Is one being matched to the other, or is one just enjoyed?",
+        "A metaphor says one thing is another without using like or as, so one choice for the second blank does not fit."
+      ],
+      how: [
+        "Felix and a squirrel are two different things, and the sentence matches how they climb.",
+        "So like compares two things.",
+        "A comparison that uses like is a simile. The answers are compares two things and is a simile.",
+        "The sentence does not say Felix enjoys anything, and a metaphor would not use like."
+      ],
+      misconception: "A common mix-up is thinking every like means enjoy. Check what the word does in the sentence.",
+      why: "The answers are compares two things and is a simile. The sentence matches how Felix climbs with how a squirrel climbs, and it uses like to do it. It does not say Felix enjoys anything, and a metaphor would not use like." },
+    { id: "SK-SS2a-S10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C10"],
+      stem: ["Cleo's team won the school spelling bee. Her teacher, Mr. Lund, wrote a note home. Here are five sentences from his note."],
+      prompt: "Which sentence from Mr. Lund's note uses an idiom? Choose the sentence.",
+      options: [
+        "The bee began at nine o'clock.",
+        "Cleo's team spelled every word right.",
+        "The silver cup was as shiny as a new coin.",
+        "Cleo was over the moon when they won.",
+        "I am proud of every child who took part."
+      ],
+      answer: [3], pick: 1,
+      clue: "An idiom is a saying that means something different from its words. Look for a sentence that would sound strange if you pictured it exactly.",
+      hints: [
+        "An idiom is a saying that means something different from its words. Look for a sentence that would sound strange if you pictured it exactly.",
+        "Read each sentence word for word. Which one cannot really be true, even though Mr. Lund means it?",
+        "\"The silver cup was as shiny as a new coin\" uses as to compare two things, so it is a simile, not an idiom. Check the rest the same way."
+      ],
+      how: [
+        "The cup sentence uses as to compare, so it is a simile.",
+        "The time, the spelling and the proud feelings all mean just what they say.",
+        "Nobody can be over the moon. \"Over the moon\" is a saying that means very happy.",
+        "The answer is \"Cleo was over the moon when they won.\""
+      ],
+      misconception: "A common mix-up is choosing the simile. A simile uses like or as; an idiom is a saying with a different meaning.",
+      why: "The answer is \"Cleo was over the moon when they won.\" Nobody really goes over the moon; the saying means very happy. The cup sentence is a simile, and the other sentences mean just what they say." },
+    { id: "SK-SS2a-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C11"],
+      stem: ["Rhys watched the storm from the window. The dark clouds rolled across the sky like a herd of gray elephants."],
+      prompt: "Read the sentences. Then complete the sentences. Choose the best answer for each blank.",
+      text: "The words \"like a herd of gray elephants\" are {0}. They help the reader understand that the clouds {1}.",
+      slots: [
+        { options: ["an idiom", "a simile", "a metaphor"], answer: 1 },
+        { options: ["have long trunks and big ears", "are huge and heavy and move slowly", "make a loud trumpeting sound"], answer: 1 }
+      ],
+      clue: "First decide what kind of language the words are: a comparison with like or as, a comparison without them, or a saying. Then ask what the two share.",
+      hints: [
+        "First decide what kind of language the words are: a comparison with like or as, a comparison without them, or a saying. Then ask what the two share.",
+        "Look for a small word that joins the clouds and the elephants. Then think about what elephants are like.",
+        "Clouds do not really have trunks, so one choice for the second blank can go. Check the other two against what a herd of elephants is like."
+      ],
+      how: [
+        "The words join clouds and elephants with like, so it is a comparison with like. That is a simile.",
+        "Elephants are huge and heavy, and a herd moves slowly across the land.",
+        "The answers are a simile and are huge and heavy and move slowly.",
+        "Clouds do not have trunks or ears, and the sentence says nothing about a sound."
+      ],
+      misconception: "A common mix-up is thinking the clouds really look like elephants with trunks. The comparison is about size and weight.",
+      why: "The answers are a simile and are huge and heavy and move slowly. The words use like to compare clouds with a herd of elephants, which are big, heavy and slow. Clouds have no trunks or ears, and nothing is said about a sound." },
+    { id: "SK-SS2a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p7"],
+      like: ["SK-SS2a-C12"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "In paragraph 3, Ms. Doyle says that five dollars is \"a drop in the bucket.\" What does this mean?",
+        choices: [
+          { text: "It is only a small part of what is needed.", correct: true },
+          { text: "It is far too much money for one student." },
+          { text: "It is the wrong kind of money for swings." },
+          { text: "It is water that should go in a bucket." }
+        ] },
+      partB: { prompt: "Which sentence from the story best helps you understand what Ms. Doyle means?",
+        choices: [
+          { text: "\"A new set would cost four hundred dollars.\"", correct: true },
+          { text: "\"The old ones had rusted.\"" },
+          { text: "\"She ran to show Ms. Doyle, the school secretary.\"" },
+          { text: "\"Families came to a pancake breakfast, and every class held a sale.\"" }
+        ] },
+      clue: "An idiom is a saying that does not mean its words. Think about how the money Tess earned compares with what the school needs.",
+      hints: [
+        "An idiom is a saying that does not mean its words. Think about how the money Tess earned compares with what the school needs.",
+        "Think about how much money Tess has and how much money the school needs.",
+        "No water or bucket is in this story, so you can drop one choice. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "A drop of water is tiny next to a whole bucket.",
+        "Five dollars is a small amount next to the cost of a new set of swings.",
+        "Part A: It is only a small part of what is needed. Part B: \"A new set would cost four hundred dollars.\"",
+        "Ms. Doyle thanks Tess and calls it a good start, so she does not think it is too much or the wrong kind of money."
+      ],
+      misconception: "A common mix-up is picturing a real bucket. The saying is about how small something is next to what is needed.",
+      why: "Part A: It is only a small part of what is needed. Part B: \"A new set would cost four hundred dollars.\" Five dollars is tiny next to four hundred. Ms. Doyle calls it a good start, so she does not mean that it is too much or the wrong kind of money." },
+    { id: "SK-SS2a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C13"],
+      stem: ["Wes got his first library card today. When he walked in, he saw rows and rows of books. The library was a treasure chest, and every shelf held something new to find."],
+      prompt: "Why does the author say, \"The library was a treasure chest\"?",
+      choices: [
+        { text: "to show that the library is full of exciting things to find", correct: true },
+        { text: "to show that the library keeps its books locked in a box" },
+        { text: "to show that the library sells gold coins at the desk" },
+        { text: "to show that the library is a very old building" }
+      ],
+      clue: "A metaphor says one thing is another. Ask what people hope to find in a treasure chest.",
+      hints: [
+        "A metaphor says one thing is another. Ask what people hope to find in a treasure chest.",
+        "Think about how someone feels when opening a treasure chest. Then think about how Wes feels in the library.",
+        "Nothing says that the library sells coins, so one choice can go. Test the rest against what is on every shelf."
+      ],
+      how: [
+        "A treasure chest holds things that are exciting to find.",
+        "Every shelf in the library holds something new for Wes to find, so the library is full of treasure for him.",
+        "The answer is \"to show that the library is full of exciting things to find.\"",
+        "No books are locked up, no coins are sold, and nothing says the building is old."
+      ],
+      misconception: "A common mix-up is thinking the library really holds a chest. The metaphor shows what Wes finds there.",
+      why: "The answer is \"to show that the library is full of exciting things to find.\" A treasure chest holds things that are exciting to find, and every shelf holds something new for Wes. Nothing says the books are locked up, coins are sold, or the building is old." },
+    { id: "SK-SS2a-S14", type: "ms", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: [], pick: 2,
+      like: ["SK-SS2a-C14"],
+      stem: ["Sentence A: Fog is a gray curtain over the town.", "Sentence B: Fog forms when warm air meets cool air."],
+      prompt: "Read sentences A and B. Which TWO statements about them are true?",
+      choices: [
+        { text: "Only sentence A compares two different things.", correct: true },
+        { text: "Sentence B tells a fact in plain words.", correct: true },
+        { text: "Both sentences are metaphors, because both are about fog." },
+        { text: "Sentence B is a simile, because it compares warm air and cool air." },
+        { text: "Sentence A means a real curtain hangs over the town." }
+      ],
+      clue: "A metaphor says that one object is another. A sentence that only gives information does not. Check each sentence.",
+      hints: [
+        "A metaphor says that one object is another. A sentence that only gives information does not. Check each sentence.",
+        "Ask what each sentence is really about. Does it match fog with something else, or does it just tell about fog?",
+        "A simile needs the word like or as. Check which statement says that, and then decide whether the sentence has it."
+      ],
+      how: [
+        "Sentence A says fog is a curtain, so it matches fog with something different.",
+        "Sentence B tells how fog forms, in plain words with no comparison.",
+        "The answers are \"Only sentence A compares two different things.\" and \"Sentence B tells a fact in plain words.\"",
+        "Sentence B is not a metaphor or a simile, and no real curtain hangs over the town."
+      ],
+      misconception: "A common mix-up is thinking that a sentence is figurative just because it is about the same thing. Look for a real comparison.",
+      why: "The answers are \"Only sentence A compares two different things.\" and \"Sentence B tells a fact in plain words.\" Sentence A says fog is a curtain, which is a metaphor. Sentence B tells how fog forms, and it has no like or as. No real curtain hangs over the town." },
+    { id: "SK-SS2a-S15", type: "match", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      like: ["SK-SS2a-C15"],
+      stem: ["Room 4 wrote about the day the fans broke at their school.", "\"On Monday, our classroom was a furnace. We were all in the same boat, because no fan in the building worked. Our teacher, Ms. Lane, was a bundle of energy, and she kept us busy with word games.\""],
+      prompt: "What does each phrase mean in the class's writing? Match each phrase to its meaning.",
+      cols: ["lively and always moving", "very hot", "afraid and wanting to leave", "having the same problem"],
+      rows: [
+        { text: "our classroom was a furnace", answer: 1 },
+        { text: "We were all in the same boat", answer: 3 },
+        { text: "Ms. Lane was a bundle of energy", answer: 0 }
+      ],
+      clue: "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
+      hints: [
+        "Each phrase is a comparison or a saying. Ask how the two things are alike, or what the saying really means, and use the sentences around it.",
+        "Find each phrase in the writing, and read the sentence around it.",
+        "Nobody is really in a boat, so that phrase is about something the class shares. Then match the other two phrases the same way."
+      ],
+      how: [
+        "A furnace is very hot. The fans are broken, so the classroom is very hot.",
+        "No fan worked for anyone, so everyone had the same problem. \"In the same boat\" is a saying for that.",
+        "Ms. Lane keeps the class busy with games. A bundle of energy is a person who is lively and always moving.",
+        "Nobody in the writing is afraid or wants to leave, so that meaning is not used."
+      ],
+      misconception: "A common mix-up is taking a phrase word for word, as if the class were in a real boat or a real furnace.",
+      why: "Our classroom was a furnace: very hot. We were all in the same boat: having the same problem. Ms. Lane was a bundle of energy: lively and always moving. Afraid and wanting to leave does not match any phrase." }
   ],
   /* Hints and Show me how for the ref P5 (core set 1) and Together P1-P4. */
   addons: {
