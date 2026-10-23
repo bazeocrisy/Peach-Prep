@@ -184,3 +184,34 @@ Reviews: B4-review-T1e-T2d.md and B4-review-T3c-T4b.md. Every MUST and every SHO
 
 ## Skeptical blind re-solve first
 1.e C09, C10, C13, C15, S01, S09, S11, S14; 2.d C02, C03, C04, C09, C10, C12, C13, C15, S15; 3.c C07, C09, C11, S11, S13; 4.b C01 (order uniqueness), C07, C10, C12, C13 (new p4), C15, S05, S10, S14; plus the facts (school bus yellow, stop arm, magnets and poles, peanut harvest).
+
+## Second review fixes (3.T.T.3.c and 3.T.T.4.b), and third-review SHOULDs for 1.e / 2.d
+
+Measured with word-set (jac.js), 3+ letter word-set (jac3.js) and a new multiset "bag" script (jacbag.js, sharedbag.js). Every similar item against its `like` core item: 3.c max bag 0.203 (S03~P6), 4.b max bag 0.204 (S08~C08); word-set and 3+ letter word-set show 0 pairs over 0.21 in both lessons. check-content PASS (0 failures), check-writing 0 failures, check-instructional-copy passed, readability: 3.c passages FK 2.2-4.5. Non-`like` pairs in 4.b (S04~S14, S07~C08, S08~C04, S08~P3, S06~S08) can still sit at 0.22-0.24 on the multiset measure, because rhyme-pattern items share the same frame words; none share an option.
+
+### 3.T.T.3.c
+- S09 (MUST): options (5) and (6) are now exactly the stem sentences ("(5) Everyone likes parks.", "(6) I hope our neighbors will join me."). How and why already described those sentences.
+- S04 (MUST): sentence 2 is now "I think our school should add another one." so it cannot open the paragraph; one order remains. How and why updated.
+- C09 (SHOULD): p3 sentence 8 now reads "Our crossing guard, Mr. Greene, says the smallest children often freeze at the curb because they are not sure drivers see them." It supports reason 2 (younger students feel safe) and not reason 1. The same sentence changed in the C-dropdown text that quotes it, and in C09 how/why.
+- S01 and S06, S10, S14, S15 (SHOULD, Jaccard): S01 stem, key and distractors reworded (bag 0.222 -> under 0.21); S06 prompt and key reworded; S10 and S15 prompts and one stem sentence; S14 key, "Yesterday" for "Last week", "young kids".
+- S07 (SHOULD, overlap with accepted 3.a): topic changed from a Sunday pool to a monthly school book swap. New reasons: new books without spending money; meet classmates who like the same stories. Hints, how, why rewritten.
+- Street renamed Elm Street -> Cedar Road in p3 title, text and C06/C07/C09-area items (SHOULD S3c-C). S06 street "Mill Road" -> "Mill Lane".
+
+### 3.T.T.4.b
+- P6 (MUST): line 3 "I pull my blanket to my chin" -> "I tuck my toes beneath the quilt" (stem in the lesson file; how line in the addons). Hint 3 now names one choice only ("Shout out loud is a loud, busy action").
+- S12 (MUST, same rhyme idea): stem line 3 and all choices rebuilt on "My blanket's warm, my pillow's deep," with deep/sleep/leap; key "And soon I'm drifting off to sleep." how/why updated.
+- S08 (MUST): row 1 is now a duck stanza (pond, glass, water, dash; no rhymes). Prompt and column labels reworded; "cat" -> "kitten" in row 2 to move away from C08.
+- C07 (SHOULD): prompt no longer states the pattern: "Every stanza in this poem should follow the same rhyme pattern. One stanza breaks it. Choose the last line of that stanza." Five targets unchanged.
+- C13 Part B (SHOULD): the "My shoes are off, my socks are damp," distractor became "We turn around, we twirl and spin." (stanza 1, clearly lively). Hint 3 and how/why updated.
+- p3 (SHOULD, overlap with accepted 4.a C13): bus scene replaced by a ferry ride, "The Morning Ferry". Stanzas rebuilt (feet/meet, shore/more, know/school break, bright/sight). Sound word is now "chug"; C06, C07, C09 and C10 text, how and why updated; C10 choices now "The boat is full of ...".
+- S01, S04, S08, S14, S15, S02 (SHOULD, Jaccard): prompts reworded; S15 moved from a farm visit (which shared wide/side and other words with C15) to a camping poem (pink/drink; high/sky; new/too).
+
+### 1.e / 2.d third-review SHOULDs (same pass)
+- 1.e C11 and S11 hint 3 now "An opinion ... could begin an essay, but this is a story. Look at the choices that are left."
+- 2.d C04: the stem gains a context sentence, "Coaches tell players to eat foods with protein after practice." (no "grow"); hint 2 and how updated.
+- 2.d S03: jelly sandwich replaced by a bean seed becoming a plant (4 steps, unique order); prompt reworded so it is under 0.21 against C03.
+
+### Changed items for the third blind review
+3.c: S09, S04, C09 (+ the dropdown that quotes sentence 8), S01, S06, S07, S10, S14, S15, C06 and the Cedar Road items.
+4.b: p3 and C06, C07, C09, C10; P6; S12; S08; C13; S01, S02, S04, S14, S15.
+1.e: C11, S11. 2.d: C04, S03.
