@@ -628,28 +628,28 @@ PP.addLesson({
       why: "The answer is \"First would mean this is the starting step, but there is no sandwich to press until the marshmallow is on the chocolate.\" The pressing needs the marshmallow and chocolate in place. The chocolate goes on the cracker before the pressing, and First is a time word that never means at the same time." },
     { id: "SK-TSSEQ-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C05"],
-      stem: ["Paragraph A: Recess did not go as planned on Tuesday. At ten o'clock, dark clouds rolled over the school. Soon after, rain tapped on the windows. Then the whole class lined up and walked inside. By eleven, the sun was out again.", "Paragraph B: Our gym is a big and noisy place. Bright lines on the floor mark the games, such as the ones for basketball and for four square. In addition, a tall rope hangs from the ceiling."],
-      prompt: "Read the two paragraphs. What is the main difference in how they are organized?",
+      stem: ["Paragraph A: Painting a rock is easy. First, wash the rock and let it dry. Next, paint the whole rock one color. Then add dots and stripes with a thin brush.", "Paragraph B: Our gym is a big and noisy place. Bright lines on the floor mark the games, such as the ones for basketball and for four square. In addition, a tall rope hangs from the ceiling."],
+      prompt: "A student wants to add this sentence: \"Last, set the rock in the sun so the paint can dry.\" Which paragraph should it go in?",
       choices: [
-        { text: "Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.", correct: true },
-        { text: "Paragraph A describes one place, and Paragraph B tells what happened from one time to the next." },
-        { text: "Both paragraphs tell what happened from one time to the next, with time words in each." },
-        { text: "Paragraph A gives steps for making something, and Paragraph B compares two gyms." }
+        { text: "Paragraph A, because it tells one more step after the others", correct: true },
+        { text: "Paragraph A, because it tells what the rock looks like" },
+        { text: "Paragraph B, because it tells about a place" },
+        { text: "Paragraph B, because the gym has a last detail, too" }
       ],
-      clue: "To find how a paragraph is organized, look at the words that connect its sentences and ask what job they do.",
+      clue: "A new sentence has to fit the way its paragraph is organized. Find out how each paragraph is organized first.",
       hints: [
-        "To find how a paragraph is organized, look at the words that connect its sentences and ask what job they do.",
-        "List the connecting words in Paragraph A. Then list the connecting words in Paragraph B.",
-        "Paragraph A is about one morning and makes nothing, so it does not give steps for making something. Then match each paragraph to the job of its connecting words."
+        "A new sentence has to fit the way its paragraph is organized. Find out how each paragraph is organized first.",
+        "Look at the connecting words in each paragraph. Then decide where a sentence that starts with Last would fit.",
+        "The new sentence tells something to do, not how the rock looks, so one choice does not fit. Test the others against the connecting words."
       ],
       how: [
-        "Paragraph A uses At ten o'clock, Soon after, Then and By eleven. It tells what happened at the school, from one time to the next.",
+        "Paragraph A uses First, Next and Then. It tells the steps for painting a rock, in order.",
         "Paragraph B uses such as and in addition. It gives details about one place, the gym.",
-        "The answer is \"Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.\"",
-        "One choice has the paragraphs backward, Paragraph B has no time words, and neither paragraph gives steps or compares two gyms."
+        "The new sentence starts with Last and tells one more thing to do, so it goes with the steps in Paragraph A.",
+        "The answer is \"Paragraph A, because it tells one more step after the others.\" The sentence does not describe the rock, and it does not give a detail about the gym."
       ],
-      misconception: "A common mix-up is thinking every paragraph with time words gives steps. Time words can also tell what happened first, next and last.",
-      why: "The answer is \"Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.\" Paragraph A uses At ten o'clock, Soon after, Then and By eleven. Paragraph B uses such as and in addition to add details about the gym." },
+      misconception: "A common mix-up is putting a sentence where the topic matches. Put it where the way the paragraph is organized matches.",
+      why: "The answer is \"Paragraph A, because it tells one more step after the others.\" Paragraph A uses First, Next and Then for steps, and the new sentence starts with Last. Paragraph B gives details about the gym, and the new sentence does not describe the rock." },
     { id: "SK-TSSEQ-S07", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C06"],
       stem: ["How Sea Salt Is Made", "Sea salt starts in the ocean. First, workers let seawater flow into shallow pools by the shore. Next, the sun warms the pools, and the water slowly dries up into the air. After many days, a crust of white salt is left on the bottom. Then workers rake the salt into piles. Finally, the salt is washed, dried and packed into bags."],
@@ -723,30 +723,29 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is choosing Finally because it comes late. Finally tells which step is last, not how long it took.",
       why: "The answers are \"six hours\" and \"about ten minutes.\" Both tell how much time passes. First, Next and Finally tell only the order." },
-    { id: "SK-TSSEQ-S10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+    { id: "SK-TSSEQ-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C09"],
-      stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you stand a wooden stick in the middle of the juice.", "Paragraph 3: Then you set the cup in the freezer. After a few hours, the juice is solid, and you can peel off the paper and eat it."],
-      prompt: "Which words from Paragraphs 2 and 3 show the order of the steps?",
-      choices: [
-        { text: "First, Next, Then and After a few hours", correct: true },
-        { text: "juice, cup, stick and freezer" },
-        { text: "pour, stand, set and peel" },
-        { text: "small, wooden, solid and sweet" }
+      stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you stand a wooden stick in the middle of the juice.", "Paragraph 3: Then you set the cup in the freezer. After a few hours, the juice is solid, and you can peel off the paper and eat your juice pop."],
+      prompt: "Choose the words that tell what the first and last paragraphs do.",
+      text: "The first paragraph {0}. The last paragraph {1}.",
+      slots: [
+        { options: ["raises a question for the reader to think about", "gives the first step of the job", "lists the tools in a box"], answer: 0 },
+        { options: ["tells the last step and what you get", "adds a fun fact about juice", "compares juice pops with ice cream"], answer: 0 }
       ],
-      clue: "Some words tell what is happening, and other words tell when it happens. Look for the words that tell when.",
+      clue: "Each paragraph in a how-to text has a job. Think about where the paragraph sits in the text.",
       hints: [
-        "Some words tell what is happening, and other words tell when it happens. Look for the words that tell when.",
-        "Read Paragraphs 2 and 3 and look at the words that begin the sentences.",
-        "The words juice, cup, stick and freezer name things in the steps. They do not tell when anything happens. Test the other choices the same way."
+        "Each paragraph in a how-to text has a job. Think about where the paragraph sits in the text.",
+        "Reread the first paragraph and decide whether it tells anything to do. Then reread the last paragraph and see how it ends.",
+        "The text never mentions ice cream, so one choice does not fit the last paragraph. Test the others against what each paragraph says."
       ],
       how: [
-        "Paragraph 2 begins with First and Next. Paragraph 3 begins with Then and After a few hours.",
-        "Those words tell when each step happens, so they show the order.",
-        "The answer is \"First, Next, Then and After a few hours.\"",
-        "The other choices name things, tell what the steps do, or describe things. None of them tells when."
+        "The first paragraph asks what happens to leftover juice in a freezer. It gives no step and lists no tools.",
+        "The last paragraph begins with Then, tells the final step, and ends with eating the juice pop.",
+        "The answers are \"raises a question for the reader to think about\" and \"tells the last step and what you get.\"",
+        "The first step is in Paragraph 2, the text has no fun fact, and it never mentions ice cream."
       ],
-      misconception: "A common mix-up is choosing the action words, like pour and set. They tell what to do, not when to do it.",
-      why: "The answer is \"First, Next, Then and After a few hours.\" Those words tell when each step happens. Juice, cup, stick and freezer name things, pour, stand, set and peel tell what to do, and small, wooden, solid and sweet describe things." },
+      misconception: "A common mix-up is thinking the first paragraph of a how-to text must give the first step. It can set up a question first.",
+      why: "The answers are \"raises a question for the reader to think about\" and \"tells the last step and what you get.\" Paragraph 1 asks a question and gives no step. Paragraph 3 tells the last step and ends with eating the juice pop. The text has no tool box, no fun fact and no ice cream." },
     { id: "SK-TSSEQ-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C11"],
       stem: ["Long ago, a farm family dug a pond to give water to their cows. People called it Dell Pond. In 1950, the town bought the land. Then the town gave the place a new name, Dell Park. Families came to picnic and fish. In 1975, the town added a boat dock and a walking path. Then the town changed the name again, to Lake Dell Park. Today, kids learn to paddle a kayak there."],
@@ -1669,22 +1668,22 @@ PP.addLesson({
       prompt: "Dan's sentence has the cause and effect backward. Choose the clue word that fixes it.",
       text: "Dan watered the sunflower every day {0} it grew taller than the fence.",
       slots: [
-        { options: ["but", "so", "until"], answer: 1 }
+        { options: ["and", "so", "until"], answer: 1 }
       ],
       clue: "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
       hints: [
         "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
         "Reread the stem to find out which of the two things happened first and made the other happen.",
-        "Until tells when something stops, not why, so it does not fit. Decide which part is the cause, then check which side of the clue word it is on."
+        "Until tells when something stops, so it does not fit. Decide which part is the cause, then ask which clue word shows that the second part is the result."
       ],
       how: [
         "Dan watered the plant every day, and that helped it grow tall.",
         "So watering is the cause, and growing taller is the effect.",
-        "In Dan's sentence, the effect comes after the clue word, so the answer is so. But shows a difference, and until tells when something stops.",
+        "In Dan's sentence, the effect comes after the clue word, so the answer is so. And only joins the two parts, and until tells when something stops.",
         "Because, the word Dan used, put the cause after the clue word, which made his sentence backward."
       ],
       misconception: "A common mix-up is leaving the effect after a word that points to a cause. Check which part of the sentence is the cause.",
-      why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. But shows a difference, and until tells when something stops." },
+      why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. And only joins the two parts, and until tells when something stops." },
     { id: "SK-TSCE-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C08"],
       stem: ["One cold night in January, the puddles on Oak Road froze. In the morning, the road was slick and shiny in the early sun. Cars crept along it. The bus driver drove very slowly, so the bus came to school late. Many kids were late. Because of that, the principal moved the start of school to a later time for the week."],
@@ -3854,29 +3853,29 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is choosing a fact about only one of the two things. A likeness must be true of both.",
       why: "The answer is \"Each key the writer presses makes a letter show up on both of them.\" Paper and a screen both show a letter for each key that is pressed. Quick fixing and printing belong to the laptop, and typing a page again belongs to the typewriter." },
-    { id: "SK-TSCC-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+    { id: "SK-TSCC-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C09"],
-      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) However, a trampoline is round and flat, but a swing set is tall with chains.", "(5) Likewise, a trampoline lets you bounce, but a swing set lets you swing back and forth."],
-      prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
-      text: "Sentence {0} should begin with {1}",
-      slots: [
-        { options: ["3", "4", "5"], answer: 2 },
-        { options: ["Likewise,", "On the other hand,", "As a result,"], answer: 1 }
+      stem: ["(1) A trampoline and a swing set are both fun in a backyard.", "(2) Also, both need a grown-up to check that they are safe.", "(3) However, a trampoline is round and flat, but a swing set is tall with chains.", "(4) Likewise, both help kids burn off extra energy.", "(5) In contrast, a trampoline lets you bounce, while a swing set lets you swing."],
+      prompt: "Match each clue word from the paragraph to what it shows.",
+      cols: ["a likeness", "a difference"],
+      rows: [
+        { text: "Also,", answer: 0 },
+        { text: "However,", answer: 1 },
+        { text: "Likewise,", answer: 0 },
+        { text: "In contrast,", answer: 1 }
       ],
-      clue: "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Check each one against its sentence.",
+      clue: "A clue word tells how its sentence connects to the ones before it. Reread each sentence that a clue word begins.",
       hints: [
-        "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Check each one against its sentence.",
-        "For each sentence, ask: does it tell how they are alike, or how they are different? Then check its clue word.",
-        "As a result tells an effect, not a difference, so it does not fit the second blank. Find the sentence first, then try each word that is left at its start."
+        "A clue word tells how its sentence connects to the ones before it. Reread each sentence that a clue word begins.",
+        "For each clue word, ask what its sentence says about the trampoline and the swing set: the same, or not the same?",
+        "Sentence 3 says one is round and flat and the other is tall, so those two are not the same. Sort the other clue words the same way."
       ],
       how: [
-        "Sentences 2 and 3 tell likenesses: both are fun, and both need a safety check. Sentences 4 and 5 tell differences: round and flat versus tall with chains, and bouncing versus swinging.",
-        "Sentence 4 begins with However, which fits a difference. Sentence 5 also tells a difference, but it begins with Likewise, a word that adds one more likeness.",
-        "Sentence 5 should begin with On the other hand, a clue word that shows a difference.",
-        "As a result would tell an effect, not a difference."
+        "Sentences 2 and 4 tell things that are true of both: both need a safety check, and both help kids burn off energy. So Also and Likewise show a likeness.",
+        "Sentences 3 and 5 tell things that are not the same: round and flat against tall, and bouncing against swinging. So However and In contrast show a difference."
       ],
-      misconception: "A common mix-up is keeping a clue word that adds a likeness, like likewise or also, when the writer is still telling differences.",
-      why: "The answers are 5 and On the other hand. Sentence 5 tells a difference between bouncing and swinging, but Likewise adds a likeness. As a result would tell an effect, so On the other hand shows the difference." },
+      misconception: "A common mix-up is sorting a clue word by how it sounds. Check what its sentence says about the two things.",
+      why: "Also and Likewise show a likeness, because their sentences tell what is true of both. However and In contrast show a difference, because their sentences tell how the two things are not the same." },
     { id: "SK-TSCC-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C11"],
       stem: ["A rowboat is a small boat. A person sits in it and pulls two oars to move forward. A sailboat is also a boat, but it has a tall pole called a mast. A big cloth sail is raised on the mast, and the wind pushes the sail. Both kinds of boats float on water and can carry people.", "A student made this chart about the text.", "Rowboat only: moved with oars", "Both: floats on water; has a tall mast", "Sailboat only: moved by the wind; has a cloth sail"],

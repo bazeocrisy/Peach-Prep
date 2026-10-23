@@ -1468,7 +1468,7 @@ PP.addLesson({
           },
           { text: "Next, the judges will pick the winners and hand out all of the ribbons and prizes." },
           { text: "Some pets learn new tricks very quickly, and others need a lot of patience and time." },
-          { text: "Many families in our town have a dog or a cat, and some have fish or birds too." }
+          { text: "Lots of neighbors have a dog or a cat, and some have fish or birds too." }
         ],
         clue: "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
         hints: [
@@ -1480,10 +1480,10 @@ PP.addLesson({
           "A closing wraps up the whole piece, not just the last section.",
           "Isaiah's piece tells neighbors about a show they can come to.",
           "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It looks back at the whole piece and ends it.",
-          "The sentence about the judges adds news that the last section already gave, and the sentences about tricks and families add new details instead of wrapping up."
+          "The sentence about the judges adds news that the last section already gave, and the sentences about tricks and neighbors add new details instead of wrapping up."
         ],
         misconception: "A common mix-up is choosing a sentence that adds one more fact. A closing wraps up; it does not start something new.",
-        why: "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It wraps up the whole piece and speaks to the readers. The judges sentence repeats news from the last section, and the sentences about tricks and families add new details."
+        why: "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It wraps up the whole piece and speaks to the readers. The judges sentence repeats news from the last section, and the sentences about tricks and neighbors add new details."
       },
       {
         id: "SK-SS1b-C08",
@@ -3685,26 +3685,26 @@ PP.addLesson({
     {
       id: "p5",
       draft: true,
-      title: "Why Recess Matters",
+      title: "Why Music Class Matters",
       byline: "Nia's first draft",
       genre: "Student draft (opinion)",
       paragraphs: [
         [
-          "(1) Recess is an important part of the school day.",
-          "(2) It gives kids a break from hard work and a chance to play outside."
+          "(1) Music class is an important part of our school week.",
+          "(2) It gives kids a chance to try something new each time."
         ],
         [
-          "(3) Recess helps our bodies stay healthy.",
-          "(4) We run, jump and climb on the playground.",
-          "(5) The recess bell rings at ten o'clock.",
-          "(6) Moving our bodies makes us strong.",
-          "(7) Some kids trade stickers at the picnic table.",
-          "(8) Fresh air helps us feel awake and ready to learn."
+          "(3) Music class lets us be creative.",
+          "(4) We make up our own songs and clap our own beats.",
+          "(5) The music room is at the end of the hall.",
+          "(6) We invent new sounds on drums and bells.",
+          "(7) Our teacher wears a bright red scarf.",
+          "(8) Sometimes we change the words of a song to make it ours."
         ],
         [
-          "(9) Recess also helps us get along with others.",
-          "(10) We make up new games together.",
-          "(11) We learn to take turns and share the ball with everyone."
+          "(9) Music class also helps us work together.",
+          "(10) We play in a group, and everyone has a part.",
+          "(11) We listen to each other so we all play at the same time."
         ]
       ]
     },
@@ -4109,17 +4109,17 @@ PP.addLesson({
         clue: "Find the topic sentence of the paragraph. Then test every other sentence against it.",
         hints: [
           "Find the topic sentence of the paragraph. Then test every other sentence against it.",
-          "The topic sentence is about how recess helps our bodies. Ask of each sentence: does it tell how recess helps our bodies?",
-          "Several sentences tell what kids do or feel outside. Look for the two that are about recess but not about our bodies."
+          "The topic sentence is about how music class lets us be creative. Ask of each sentence: does it show being creative?",
+          "Several sentences tell what kids make up or invent. Look for the two that are about music class but not about being creative."
         ],
         how: [
-          "Sentence 3 is the topic sentence: recess helps our bodies stay healthy.",
-          "Sentences 4, 6 and 8 each show that: running and climbing, getting strong, and feeling awake.",
-          "Sentence 5 tells when the bell rings, and sentence 7 tells about trading stickers. Both are about recess, but neither is about our bodies.",
-          "The answers are sentence 5, \"The recess bell rings at ten o'clock,\" and sentence 7, \"Some kids trade stickers at the picnic table.\""
+          "Sentence 3 is the topic sentence: music class lets us be creative.",
+          "Sentences 4, 6 and 8 each show that: making up songs and beats, inventing sounds, and changing the words of a song.",
+          "Sentence 5 tells where the music room is, and sentence 7 tells what the teacher wears. Both are about music class, but neither shows being creative.",
+          "The answers are sentence 5, \"The music room is at the end of the hall,\" and sentence 7, \"Our teacher wears a bright red scarf.\""
         ],
-        misconception: "A common mix-up is keeping a sentence because it is about recess. It also has to be about the idea of its paragraph.",
-        why: "The answers are sentence 5, \"The recess bell rings at ten o'clock,\" and sentence 7, \"Some kids trade stickers at the picnic table.\" The paragraph is about how recess helps our bodies. The bell and the stickers are about recess, but they do not tell how it helps our bodies."
+        misconception: "A common mix-up is keeping a sentence because it is about music class. It also has to be about the idea of its paragraph.",
+        why: "The answers are sentence 5, \"The music room is at the end of the hall,\" and sentence 7, \"Our teacher wears a bright red scarf.\" The paragraph is about how music class lets us be creative. The room and the scarf are about music class, but they do not show being creative."
       },
       {
         id: "SK-SS1d-C12",
@@ -4130,25 +4130,25 @@ PP.addLesson({
         passages: ["p5"],
         prompt: "Nia wants to add one more detail to the paragraph that begins with sentence 9. Which sentence fits best?",
         choices: [
-          { text: "We learn to work out problems, like who goes first.", correct: true },
-          { text: "The bell tells us when it is time to line up." },
-          { text: "Many kids bring jump ropes from home." },
-          { text: "Recess comes right after lunch on most days." }
+          { text: "We take turns leading the group so everyone has a chance.", correct: true },
+          { text: "Many kids bring recorders from home to practice." },
+          { text: "Music class comes right after lunch on most days." },
+          { text: "The drums are kept in a big closet by the door." }
         ],
         clue: "Name the main idea of that paragraph before you choose. The new detail has to tell more about that idea.",
         hints: [
           "Name the main idea of that paragraph before you choose. The new detail has to tell more about that idea.",
-          "The topic sentence says recess helps us get along with others. Ask which sentence shows kids getting along.",
-          "Three of the choices are facts about recess but not about getting along. Check each one against the topic sentence."
+          "The topic sentence says music class helps us work together. Ask which sentence shows kids working together.",
+          "Three of the choices are facts about music class but not about working together. Check each one against the topic sentence."
         ],
         how: [
-          "Sentence 9 says recess helps us get along with others. Sentences 10 and 11 show kids making games and taking turns.",
-          "A new detail must also show kids getting along.",
-          "The answer is \"We learn to work out problems, like who goes first.\" Working out who goes first is a way of getting along.",
-          "The bell, the jump ropes and the time of recess are about recess but not about getting along."
+          "Sentence 9 says music class helps us work together. Sentences 10 and 11 show kids playing in a group and listening to each other.",
+          "A new detail must also show kids working together.",
+          "The answer is \"We take turns leading the group so everyone has a chance.\" Taking turns to lead is a way of working together.",
+          "Recorders from home, the time of the class and a closet for the drums are about music class but not about working together."
         ],
-        misconception: "A common mix-up is choosing any sentence about recess. The detail must fit the idea of this paragraph.",
-        why: "The answer is \"We learn to work out problems, like who goes first.\" The paragraph is about how recess helps us get along with others, and working out who goes first shows that. The bell, the jump ropes and the time of recess are not about getting along."
+        misconception: "A common mix-up is choosing any sentence about music class. The detail must fit the idea of this paragraph.",
+        why: "The answer is \"We take turns leading the group so everyone has a chance.\" The paragraph is about how music class helps us work together, and taking turns to lead shows that. The recorders, the time of the class and the drum closet are not about working together."
       },
       {
         id: "SK-SS1d-C13",
@@ -4427,27 +4427,27 @@ PP.addLesson({
       pick: 1,
       like: ["SK-SS1d-C06"],
       prompt: "Select the sentence that does not belong in this paragraph.",
-      stem: ["Topic sentence: The band room is full of music on Tuesdays."],
+      stem: ["Topic sentence: The gym is full of action on Friday afternoons."],
       options: [
-        "Drummers tap out a fast beat.",
-        "Trumpet players warm up with loud notes.",
-        "The cafeteria is full of noise at lunch.",
-        "Our band teacher hands out new sheet music."
+        "Kids shoot baskets at the far hoop.",
+        "Two teams race from wall to wall.",
+        "The art room smells like fresh paint.",
+        "Our gym teacher blows a loud whistle to start each game."
       ],
       answer: [2],
       clue: "Find the topic sentence. Then test each sentence: does it tell more about that idea?",
       hints: [
         "Find the topic sentence. Then test each sentence: does it tell more about that idea?",
         "Say the topic sentence in your own words. Three of the sentences show it. One is about a different place.",
-        "Two sentences are about people playing instruments. Look at the others and ask where each one happens."
+        "Two sentences are about kids playing games. Look at the others and ask where each one happens."
       ],
       how: [
-        "The topic sentence says the band room is full of music on Tuesdays.",
-        "Drummers, trumpet players and sheet music all happen in the band room.",
-        "The cafeteria sentence is about noise at lunch, not music in the band room.",
-        "The answer is \"The cafeteria is full of noise at lunch.\""
+        "The topic sentence says the gym is full of action on Friday afternoons.",
+        "Shooting baskets, racing and the whistle all happen in the gym.",
+        "The art room sentence is about a smell in a different room, not action in the gym.",
+        "The answer is \"The art room smells like fresh paint.\""
       ],
-      why: "The answer is \"The cafeteria is full of noise at lunch.\" The paragraph is about music in the band room. The drummers, the trumpet players and the sheet music are all part of band practice, but the cafeteria noise is somewhere else."
+      why: "The answer is \"The art room smells like fresh paint.\" The paragraph is about action in the gym. The baskets, the races and the whistle are all part of gym games, but the art room smell is somewhere else."
     },
     {
       id: "SK-SS1d-S07",
@@ -4692,7 +4692,7 @@ PP.addLesson({
       stem: [
         "(1) Our class planted tulips by the front door.",
         "(2) We dug small holes and dropped in the bulbs.",
-        "(3) We covered them with soil and gave them water.",
+        "(3) We tucked the bulbs under a layer of dirt and watered them.",
         "(4) Later that day, we built a bird feeder from a milk carton.",
         "(5) We hung it on the maple tree."
       ],

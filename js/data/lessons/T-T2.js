@@ -1951,16 +1951,16 @@ PP.addLesson({
       why: "The order is: poke a pencil through the middle of a paper plate, tape the plate down in a sunny spot, draw a line on the pencil's shadow at 9:00, come back each hour and draw a new line, and use the lines to tell the time." },
     { id: "SK-TT2b-S13", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-C12"],
-      stem: ["How to Make a Jar Garden: First, put a layer of small rocks in the bottom of a clean jar. The rocks let extra water drain away from the roots. Next, spread a thick layer of soil over the rocks. Then dig small holes and plant tiny plants, like moss and ferns. Finally, sprinkle a little water on the plants and close the lid.", "Rosa wrote the first three steps from memory:", "1. Put small rocks in the jar.", "2. ________", "3. Plant the tiny plants."],
-      prompt: "Rosa left out a step. Choose the step that belongs in the blank.",
-      text: "Step 2: {0}",
+      stem: ["How to Make a Jar Garden: First, put a layer of small rocks in the bottom of a clean jar. The rocks let extra water drain away from the roots. Next, spread a thick layer of soil over the rocks. Then dig small holes and plant tiny plants, like moss and ferns. Finally, sprinkle a little water on the plants and close the lid.", "Rosa made a card to help her remember the directions. It shows steps 1 to 3:", "1. Put small rocks in the jar.", "2. ________", "3. Plant the tiny plants."],
+      prompt: "One step is missing from Rosa's card. Which step belongs in the blank?",
+      text: "The missing step is: {0}",
       slots: [
         { options: ["Spread a layer of soil over the rocks.", "Sprinkle a little water on the plants.", "Close the lid on the jar."], answer: 0 }
       ],
-      clue: "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
+      clue: "Each step in a procedure sets up the one after it. Ask what the step after the blank needs.",
       hints: [
-        "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
-        "Read Rosa's steps 1 and 3. Then reread the directions in order and find what she skipped.",
+        "Each step in a procedure sets up the one after it. Ask what the step after the blank needs.",
+        "Compare Rosa's card with the directions, one step at a time, and find the gap.",
         "Closing the lid is the very last thing you do, so it cannot be step 2. Check the two choices that are left: could you do each one right after the rocks and before planting?"
       ],
       how: [
@@ -2897,7 +2897,7 @@ PP.addLesson({
       why: "The answer is \"Alpacas hum to each other.\" Only Text 2 tells it. The colors and the mountains are told only in Text 1, and both texts say that farmers cut the wool off." },
     { id: "SK-TT2c-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
       like: ["SK-TT2c-C05"],
-      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos to stay warm on long trips. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 2 tells that snow holds in heat. Both texts tell how the blocks are set to make the dome."],
+      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos as shelters when they went hunting. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 2 tells that snow holds in heat. Both texts tell how the blocks are set to make the dome."],
       prompt: "Ben's note has two mistakes. Choose the words that fix it.",
       text: "The fact about how the blocks make a dome is in {0}. The fact that snow holds in heat is in {1}.",
       slots: [
