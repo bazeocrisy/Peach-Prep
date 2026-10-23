@@ -126,7 +126,7 @@ In-order assignment: TC2a-C01 -> TC2a-S04; TC2a-P5 -> TC2a-S05; TC2a-C03 -> TC2a
 | SK-TC2a-S09 | TC2a-C09 | hottext, 1, 2 | p8 "The Dentist's Chair" | 6 / 6 / 5 sentences |
 | SK-TC2a-S10 | TC2a-C10 | mc, 1, 3 | p8 "The Dentist's Chair" | 4 / 4 / 4 |
 | SK-TC2a-S11 | TC2a-C11 | ms, 2, 3 | p9 "Puddle Day" | 5 / 5 / 4 |
-| SK-TC2a-S12 | TC2a-C12 | cr, undefined, 3 | p9 "Puddle Day" | n/a (written answer, no choices) |
+| SK-TC2a-S12 | TC2a-C12 | cr, no points, 3 | p9 "Puddle Day" | n/a (written answer, no choices) |
 | SK-TC2a-S13 | TC2a-C13 | match, 2, 2 | stem:  | 4 / 4 / 4 rows |
 | SK-TC2a-S14 | TC2a-C14 | mc, 1, 3 | stem: I am the best block builder in the class. Today my tower fell over, but only because the table shook. Mia s... | 4 / 4 / 3 |
 | SK-TC2a-S15 | TC2a-C15 | ms, 2, 3 | stem: Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't ... | 5 / 5 / 4 |
