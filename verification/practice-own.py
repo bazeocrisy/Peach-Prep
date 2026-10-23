@@ -242,8 +242,9 @@ with sync_playwright() as p:
           and q.evaluate("PP_PRACTICE.counts(%s,PP_SKILLS.coreIds(%s))" % (json.dumps(K), json.dumps(K)))["shown"] == 1, st)
     q.click("#q-prev"); q.wait_for_timeout(60)
     back = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:PP_PLAYER.state().sim, simbtn:!document.getElementById('q-similar').hidden})")
-    check("B.10 Back to question 1 returns to the core item; its only similar question is used, so the button is gone",
-          back == {"id": "SK-TT1c-P4", "sim": None, "simbtn": False}, back)
+    # lead decision 2026-10-23: a used similar question is offered again (least recently used), as a new attempt
+    check("B.10 Back to question 1 returns to the core item; its similar question is used, but it is still offered (least recently used)",
+          back == {"id": "SK-TT1c-P4", "sim": None, "simbtn": True}, back)
     q.click("#q-next"); q.wait_for_timeout(60)
     # P5 (order) first-try right; no similar maps to P5, so the button stays hidden (lead decision)
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
@@ -661,6 +662,53 @@ with sync_playwright() as p:
         close_page(q)
     check("J.1 at 320x568, 390x844, 844x390, 768x1024, 1024x768, 1366x768 and 1920x1080: the set picker, the practice controls (with hints and steps open), a standard page and the check navigator fit, with no sideways scroll, no clipped control and 44px targets",
           not over, over)
+
+    # ---------------- N. which similar question is offered (lead decision 2026-10-23) ----------------
+    FXS = """(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Similar fixture '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],
+        clue:'A clue.',hints:['Hint one.','Hint two.','Hint three.'],how:['Step one.','The answer is right one.'],why:'The answer is right one.'});
+      const C=[...Array(15)].map((x,i)=>mc('SK-FXS-C'+String(i+1).padStart(2,'0'),i+1));
+      const all=C.map(c=>c.id);
+      PP.addLesson({key:'FX-SIM',code:'3.T.T.1.c',title:'Similar fixture',teach:{big:'x',points:['a','b','c'],example:{lines:['x'],note:'y'}},learn:[],parent:'p',
+        practice:[mc('SK-FXS-P1',90),mc('SK-FXS-P2',91)],test:[mc('SK-FXS-T1',92),mc('SK-FXS-T2',93),mc('SK-FXS-T3',94),mc('SK-FXS-T4',95)],
+        core:{rev:'1',sets:[{items:C.slice(0,5)},{items:C.slice(5,10)},{items:C.slice(10,15)}]},
+        similar:[Object.assign(mc('SK-FXS-S1',60),{like:all}),Object.assign(mc('SK-FXS-S2',61),{like:['SK-FXS-C01','SK-FXS-C02']}),Object.assign(mc('SK-FXS-S3',62),{like:['SK-FXS-C03']})]});})()"""
+    def sim_pass(qq, sets=("y", "y2", "y3")):
+        """Every core item in order: answer it right, then take its similar question if offered. Returns [(core, similar or None)]."""
+        out = []
+        for part in sets:
+            qq.evaluate("PP_PLAYER.start('SK:FX-SIM:%s','try',{pos:0})" % part); qq.wait_for_timeout(60)
+            for i in range(5):
+                cid = qq.evaluate("PP_PLAYER.ctx().item.id")
+                if not qq.evaluate("PP_PLAYER.state().solved[PP_PLAYER.state().pos]"):
+                    qq.evaluate(CORRECT); qq.click("#q-check"); qq.wait_for_timeout(20)
+                if qq.is_visible("#q-similar"):
+                    qq.click("#q-similar"); qq.wait_for_timeout(40)
+                    sid = qq.evaluate("PP_PLAYER.state().sim")
+                    locked = qq.evaluate("PP_PLAYER.state().sim && !document.getElementById('q-check').hidden")
+                    qq.evaluate(CORRECT); qq.click("#q-check"); qq.wait_for_timeout(20)
+                    out.append((cid, sid, locked))
+                else:
+                    out.append((cid, None, None))
+                qq.click("#q-next"); qq.wait_for_timeout(30)
+        return out
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); q.evaluate(FXS)
+    p1 = sim_pass(q)
+    st1 = q.evaluate(PRACTICE)["l"]["FX-SIM"]["s"]
+    check("N.1 one sitting, all fifteen in order: every core item offers an extra question; an unused one in its own list comes first (C01 S1, C02 S2, C03 S3), then the least recently used one; each is a new, answerable attempt",
+          all(x[1] for x in p1) and all(x[2] for x in p1) and [x[1] for x in p1[:3]] == ["SK-FXS-S1", "SK-FXS-S2", "SK-FXS-S3"]
+          and all(x[1] in ("SK-FXS-S1",) for x in p1[3:])
+          and len(st1["SK-FXS-S1"].get("past", [])) == 10 and st1["SK-FXS-S1"]["ok"] is True, ([x[1] for x in p1], {k: len(v.get("past", [])) for k, v in st1.items()}))
+    core1 = json.dumps(q.evaluate(PRACTICE)["l"]["FX-SIM"]["i"])
+    q.reload(); q.wait_for_timeout(700); q.evaluate(FXS)
+    p2 = sim_pass(q, ("y",))
+    st2 = q.evaluate(PRACTICE)["l"]["FX-SIM"]
+    s2 = st2["s"]
+    check("N.2 a second sitting after finishing the set: the button is still there on every item, offering the least recently used question in each item's list as a new attempt; earlier attempts stay in past; core records are unchanged",
+          all(x[1] and x[2] for x in p2) and p2[0][1] == "SK-FXS-S2" and p2[2][1] == "SK-FXS-S3"
+          and len(s2["SK-FXS-S2"].get("past", [])) == 1 and s2["SK-FXS-S2"]["past"][0]["ok"] is True and s2["SK-FXS-S2"]["for"] == "SK-FXS-C01"
+          and len(s2["SK-FXS-S3"].get("past", [])) == 1 and json.dumps(st2["i"]) == core1
+          and q.evaluate("PP_PRACTICE.counts('FX-SIM',PP_SKILLS.coreIds('FX-SIM')).first") == 15, ([x[1] for x in p2], {k: len(v.get("past", [])) for k, v in s2.items()}))
+    close_page(q)
 
     # ---------------- M. review fixes: ENG-06 changed questions, ENG-10 targets, ENG-11 names ----------------
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")

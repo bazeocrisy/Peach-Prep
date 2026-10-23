@@ -264,14 +264,22 @@
       r.x = !!(r.x || c.st.shown); r.ok = !!(r.ok || c.st.solved); r.howAfter = !!(r.howAfter || c.st.howAfter);
       r.set = run.set.setNo; r.pos = sim ? run.sim.from : run.pos;
       if (ev) window.PP_PRACTICE.log(r, ev);
-    }, { rev: core.rev, set: run.set.setNo, pos: sim ? run.sim.from : run.pos });
+    }, { rev: core.rev, set: run.set.setNo, pos: sim ? run.sim.from : run.pos }, { again: sim && run.sim.again });
+    if (sim) run.sim.again = false;   /* only the first save of a repeated attempt starts a new record */
     syncStatus();
   }
   const hintsOf = it => (Array.isArray(it.hints) && it.hints.length ? it.hints : [it.clue]).filter(Boolean);
+  /* Which extra question to offer (lead decision, 2026-10-23): among the similar items whose `like` names this
+     core item, the first one not used yet; when every one has been used (an earlier sitting, or a second pass),
+     the one used least recently. It is never taken from another core item's list. */
   function similarFor(it) {
     if (run.sim || !run.own) return null;
-    const bank = (PP.similarFor || {})[run.set.code] || [];
-    return bank.find(x => (x.like || []).indexOf(it.id) >= 0 && !window.PP_PRACTICE.touched(window.PP_PRACTICE.rec(run.set.code, x.id, true))) || null;
+    const PR = window.PP_PRACTICE, k = run.set.code;
+    const mine = ((PP.similarFor || {})[k] || []).filter(x => (x.like || []).indexOf(it.id) >= 0);
+    const fresh = mine.find(x => !PR.touched(PR.rec(k, x.id, true)));
+    if (fresh) return fresh;
+    const when = x => { const r = PR.rec(k, x.id, true) || {}; return typeof r.t === "number" ? r.t : (Date.parse(r.d || "") || 0); };
+    return mine.reduce((best, x) => (!best || when(x) < when(best) ? x : best), null);
   }
   function itemStatus() {
     const c = C();
@@ -651,8 +659,11 @@
     const it = similarFor(c.item); if (!it) return;
     const ctx = { item: it, set: run.set, resp: T[it.type].blank(it), ui: {}, locked: false, onChange };
     const st = { help: 0, wrong: 0, solved: false, firstTry: null };
-    hydrate(ctx, st, window.PP_PRACTICE.rec(run.set.code, it.id, true));
-    run.sim = { item: it, ctx, st, from: run.pos, for: c.item.id };
+    const prev = window.PP_PRACTICE.rec(run.set.code, it.id, true);
+    const again = window.PP_PRACTICE.touched(prev);
+    /* a used one is a new attempt (its earlier attempts are kept in `past` on the first save); an unused one may have a saved draft */
+    hydrate(ctx, st, again ? null : prev);
+    run.sim = { item: it, ctx, st, from: run.pos, for: c.item.id, again };
     run.lastPassages = null;
     renderItem();
   }

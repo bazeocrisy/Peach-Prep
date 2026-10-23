@@ -145,7 +145,7 @@
   }
 
   /* ---------- writing (only after a child's action) ---------- */
-  function update(k, id, similar, fn, place) {
+  function update(k, id, similar, fn, place, opts) {
     if (!data.l[k]) data.l[k] = cleanLesson({});
     const L = data.l[k];
     const bag = L[similar ? "s" : "i"];
@@ -153,10 +153,17 @@
       const old = Object.assign({}, bag[id]); delete old.prev;
       bag[id] = cleanRec({ w: 0, h: 0, prev: old }, similar);
     }
+    /* a similar question offered again starts a new attempt; the earlier attempts are kept, never erased,
+       in `past` (newest last, at most ten). The record's own fields keep their meaning: the latest attempt. */
+    if (opts && opts.again && bag[id] && touched(bag[id])) {
+      const old = Object.assign({}, bag[id]); const past = Array.isArray(old.past) ? old.past : []; delete old.past;
+      bag[id] = cleanRec({ w: 0, h: 0, past: past.concat([old]).slice(-10) }, similar);
+    }
     const r = bag[id] || (bag[id] = cleanRec({ w: 0, h: 0 }, similar));
     if (sigs[k] && sigs[k][id]) r.sig = sigs[k][id];
     fn(r);
     r.d = today();
+    r.t = Date.now();   /* additive: when it was last used, for choosing the least recently used similar question */
     if (Array.isArray(r.log) && r.log.length > 40) r.log = r.log.slice(-40);
     if (place) { if (place.rev) L.rev = place.rev; if (place.set) L.at = { set: place.set, pos: place.pos || 0 }; }
     save();

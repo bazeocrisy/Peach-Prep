@@ -2622,27 +2622,32 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is choosing the sentence about the kick or the save itself. The question asks what helps her make the save.",
         why: "Part A: She uses Dani's tip and keeps her eyes on the ball. Part B: \"After that, every time the ball came near, she kept her eyes on it.\" Dani told her to watch the ball, and this sentence shows her doing it before the save. The gloves come at the start, the kick is hard, and the story does not tell about cheering." },
-      { id: "SK-RA2a-C12", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: ["p6"],
-        prompt: "Complete the sentences about the end of the story. Choose the best answer for each blank.",
-        text: "After the game, Simone shows that she {0}. The best proof is the sentence {1}",
-        slots: [
-          { options: ["wants to get better at playing goalie", "never wants to play goalie again", "is angry that her team lost"], answer: 0 },
-          { options: ["\"Can you help me practice goalie next week?\"", "\"The Falcons lost the game, 2 to 1.\"", "\"Simone dove and pushed it away with her fingertips.\""], answer: 0 }
+      /* B3 fix (coordinator): revised in place, keeping the id, into the lesson's compare task. Was a two-slot dropdown. */
+      { id: "SK-RA2a-C12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.a"], passages: ["p6"],
+        stem: ["Two students answered the question \"What does Simone want after the game?\"",
+          "**Kai:** She wants to get better at playing goalie. Proof: \"The Falcons lost the game, 2 to 1.\"",
+          "**Lena:** She wants to get better at playing goalie. Proof: \"Can you help me practice goalie next week?\""],
+        prompt: "Kai and Lena give the same answer but different proof. Compare their proof. Whose proof BETTER supports the answer, and why?",
+        choices: [
+          { text: "Lena's, because Simone's own question shows she wants more practice.", correct: true },
+          { text: "Kai's, because the score tells exactly how the game ended." },
+          { text: "Kai's, because losing a game always makes players want to practice." },
+          { text: "Lena's, because her proof is a longer sentence than Kai's." }
         ],
-        clue: "First decide what Simone wants after the game. Then pick the sentence that shows it, not just a true sentence from near the end.",
+        clue: "Both students give the same answer, so compare their proof. Ask which sentence proves what Simone wants, not just something true from the end of the story.",
         hints: [
-          "First decide what Simone wants after the game. Then pick the sentence that shows it, not just a true sentence from near the end.",
-          "Reread paragraph 5, after the game.",
-          "The Falcons losing is true, but it tells what happened to the team, not what Simone wants. Decide what she wants, then choose the proof."
+          "Both students give the same answer, so compare their proof. Ask which sentence proves what Simone wants, not just something true from the end of the story.",
+          "Reread paragraph 5. Find Kai's proof sentence and Lena's proof sentence in it.",
+          "A longer sentence is not better proof just because it is longer. Compare the reasons in the other three answers."
         ],
         how: [
-          "After the game, Simone runs over to Dani and asks for help practicing goalie next week.",
-          "Asking for more practice shows she wants to get better at playing goalie.",
-          "The score tells what happened to the team, and the dive is about the save during the game.",
-          "The answers: she wants to get better at playing goalie, and the proof is \"Can you help me practice goalie next week?\""
+          "The answer both students give is that Simone wants to get better at playing goalie.",
+          "Kai's proof, the score, is true, but it tells how the game ended for the team. It does not show what Simone wants.",
+          "Lena's proof is Simone asking Dani for help practicing goalie next week. Asking for practice shows she wants to get better.",
+          "The answer is \"Lena's, because Simone's own question shows she wants more practice.\""
         ],
-        misconception: "A common mix-up is choosing a true sentence from the end of the story, like the score, that does not show what Simone wants.",
-        why: "The answers are \"wants to get better at playing goalie\" and \"Can you help me practice goalie next week?\" Asking for more practice shows she wants to improve. She does not quit, the story never says she is angry, the score is about the team, and the dive happens during the game." },
+        misconception: "A common mix-up is choosing proof because it is a true fact from the right part of the story. Proof has to show the answer, not just be true.",
+        why: "The answer is \"Lena's, because Simone's own question shows she wants more practice.\" The score is true, but it is about the team's game, not what Simone wants, and losing does not always make players want to practice. Length does not make proof better." },
       { id: "SK-RA2a-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p6"],
         prompt: "Simone's dad says, \"Simone is a thankful teammate.\" Which sentence BEST supports his opinion? Choose the sentence in the passage.",
         targets: ["p6:3:1", "p6:4:1", "p6:4:4", "p6:5:2", "p6:5:3"],
@@ -2826,7 +2831,7 @@ PP.addLesson({
       ],
       why: "The answer is \"So lions rest for up to 20 hours a day.\" Twenty hours is most of a day. The energy sentence gives a reason, but it does not show the resting, and hunting in groups and the mane are about other things." },
     { id: "SK-RA2a-S06", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [],
-      like: ["SK-RA2a-C10", "SK-RA2a-C12"],
+      like: ["SK-RA2a-C10"],
       stem: ["(1) Lila's puppet show was on Friday.", "(2) Every day after school, she practiced her lines in front of a mirror.", "(3) Her puppet had purple yarn hair.", "(4) On Friday, she said every line without a mistake."],
       prompt: "Complete the answer. Choose the best answer for each blank.",
       text: "Lila does well on Friday because she {0}. The best proof is sentence {1}.",
@@ -2983,28 +2988,31 @@ PP.addLesson({
         "The answer is \"On her next try, Mia kept her eyes on the clock each time she turned.\""
       ],
       why: "The answer is \"On her next try, Mia kept her eyes on the clock each time she turned.\" It shows Mia doing what her teacher said. Sentence 2 only gives the tip, sentence 4 tells the result, and sentence 1 is before the tip." },
-    { id: "SK-RA2a-S13", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+    { id: "SK-RA2a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C12"],
-      stem: ["(1) Ana's volleyball team lost its first game of the season.", "(2) Afterward, Ana asked the coach to help her practice serving.", "(3) Her sneakers squeaked on the gym floor.", "(4) The team ate oranges after the game."],
-      prompt: "Complete the sentences. Choose the best answer for each blank.",
-      text: "After the game, Ana shows that she {0}. The best proof is sentence {1}.",
-      slots: [
-        { options: ["wants to get better at serving", "wants to quit the team", "is hungry for a snack"], answer: 0 },
-        { options: ["2", "3", "4"], answer: 0 }
+      stem: ["(1) Ana's volleyball team lost its first game of the season.", "(2) Afterward, Ana asked the coach to help her practice serving.", "(3) Her sneakers squeaked on the gym floor.", "(4) The team ate oranges after the game.",
+        "**Jo:** Ana wants to get better at serving. Proof: sentence 4.",
+        "**Sam:** Ana wants to get better at serving. Proof: sentence 2."],
+      prompt: "Jo and Sam give the same answer but different proof. Whose proof BETTER supports the answer, and why?",
+      choices: [
+        { text: "Sam's, because sentence 2 shows Ana asking for help with serving.", correct: true },
+        { text: "Jo's, because sentence 4 tells what happened after the game." },
+        { text: "Jo's, because eating oranges shows Ana is ready to play more." },
+        { text: "Sam's, because sentence 2 comes before sentence 4." }
       ],
-      clue: "First decide what Ana wants after the game. Then pick the sentence that shows it, not just a true sentence about the game.",
+      clue: "Both give the same answer, so compare the proof. Ask which sentence shows what Ana wants.",
       hints: [
-        "First decide what Ana wants after the game. Then pick the sentence that shows it, not just a true sentence about the game.",
-        "Read all four sentences, and say what each one tells.",
-        "Squeaky sneakers tell about the gym floor, not about what Ana wants. Decide what she wants, then choose between the other two sentences."
+        "Both give the same answer, so compare the proof. Ask which sentence shows what Ana wants.",
+        "Read sentence 2 and sentence 4 again, and say what each one tells.",
+        "Coming earlier in the text does not make a sentence better proof. Compare the reasons in the other three answers."
       ],
       how: [
-        "After the game, Ana asks the coach to help her practice serving.",
-        "Asking for practice shows she wants to get better at serving.",
-        "The oranges are a team snack, and the sneakers are about the floor.",
-        "The answers: she wants to get better at serving, and sentence 2 proves it."
+        "The answer is that Ana wants to get better at serving.",
+        "Sentence 4 tells that the team ate oranges. It does not show what Ana wants.",
+        "Sentence 2 shows Ana asking the coach to help her practice serving. That shows she wants to get better.",
+        "The answer is \"Sam's, because sentence 2 shows Ana asking for help with serving.\""
       ],
-      why: "The answers are \"wants to get better at serving\" and sentence 2. Asking for help with serving shows she wants to improve. Nothing shows she wants to quit, and the oranges and sneakers do not tell what she wants." },
+      why: "The answer is \"Sam's, because sentence 2 shows Ana asking for help with serving.\" The oranges are a team snack and do not show what Ana wants, and the order of the sentences does not make one better proof." },
     { id: "SK-RA2a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C13"],
       stem: ["(1) Leo's sister Dee showed him how to hold a bow at archery camp.", "(2) Leo aimed slowly and hit the target.", "(3) He ran to Dee and said, \"Thanks for showing me!\"", "(4) Dee smiled and handed him another arrow."],

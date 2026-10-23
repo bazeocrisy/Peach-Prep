@@ -182,19 +182,19 @@ Producing your own quote is shown only by the unscored `cr` items C15 and S08.
 | 9 | C09 | 2 | O | use evidence | ms ×2 | 2 | 2 | p5 | Clever, against plain food facts |
 | 10 | C10 | 2 | A | construct | dropdown 2 | 2 | 2 | stem (rain barrel, school) | Answer plus sentence number |
 | 11 | C11 | 3 | A | use evidence | ebsr | 2 | 3 | p6 | What helps the save |
-| 12 | C12 | 3 | I | construct | dropdown 2 | 2 | 2 | p6 | Claim plus proof |
+| 12 | C12 | 3 | A | compare | mc | 1 | 3 | p6 + two students' answers | Same answer, two different proofs; which supports it better (revised, §7) |
 | 13 | C13 | 3 | O | use evidence | hottext | 1 | 2 | p6 | Opinion about Simone, not Dani |
 | 14 | C14 | 3 | X | transfer | ms ×2 | 2 | 3 | stem (library dog, community) | Two non-supporting sentences |
 | 15 | C15 | 3 | O | construct | cr (unscored) | – | 3 | p6 | The child writes an opinion and a quote |
 
 **Tallies:**
-- Points: 25.
-- Formats: hottext 4, mc 3, ebsr 3, ms 2, dropdown 2, cr 1.
-- DOK: level 2 on ten items, level 3 on five, and no level 1.
-- Verbs: use evidence (many), identify (C03), edit (C07), construct (C10, C12, C15), transfer (C14), explain and infer (C08, C11).
+- Points: 24.
+- Formats: hottext 4, mc 4, ebsr 3, ms 2, dropdown 1, cr 1.
+- DOK: level 2 on nine items, level 3 on six, and no level 1.
+- Verbs: use evidence (many), identify (C03), edit (C07), construct (C10, C15), compare (C12), transfer (C14), explain and infer (C08, C11).
 - Domains: nature 6, family 2, sports 4, school 1, community 1.
-- Components: I 4, A 4, O 4, X 3.
-- **Shortfall:** there is no explicit compare item. See §5.
+- Components: I 3, A 5, O 4, X 3.
+- **Compare:** C12 (see §7).
 
 **Similar bank** (15):
 
@@ -212,7 +212,7 @@ Producing your own quote is shown only by the unscored `cr` items C15 and S08.
 | S10 | C08 | coral reef |
 | S11 | C09 | lemurs |
 | S12 | C11 | ballet |
-| S13 | C12 | volleyball |
+| S13 | C12 | volleyball (compare two proofs) |
 | S14 | C13 | archery |
 | S15 | C14 | solar panels |
 
@@ -231,7 +231,7 @@ Producing your own quote is shown only by the unscored `cr` items C15 and S08.
 | C09 | all 5 | para 3: two keys, clams, one-fourth | two keys, one-fourth (pick 2) |
 | C10 | slots open | slots open | slot 2: 3 or 4 live; slot 1: 3 live |
 | C11 | all | Part B para 4: 4:1, 4:2✓, 4:3 | Part A: key, gloves, cheers. Part B: 3 |
-| C12 | open | slot 2: key, score (para 5), dive | slot 2: key, dive; slot 1: 3 |
+| C12 (revised) | all 4 | all 4 (H2 names paragraph 5, which holds both students' proof sentences) | key, "score tells how the game ended", "losing always makes players practice" |
 | C13 | all 5 | para 5: 5:2, 5:3✓ | 5:2, 5:3 |
 | C14 | all 5 | all 5 | sentences 1✓, 2, 3✓, 5 (pick 2) |
 | Together P1 | all | para 2: 2:1, 2:2, 2:3✓ | 2:1, 2:3 |
@@ -382,11 +382,11 @@ There are no shared key facts.
 
 ## 6. Not done, or for the reviewers
 
-- **RA2a has no explicit "compare" task.** Compare is required once in each fifteen (§4.4). The C04 before/after change is the nearest. A reviewer may judge that a gap.
+- **RA2a compare gap:** fixed by revising C12 (§7).
 - **RA2b uses no EBSR.** It meets the minimums of at least four formats and at least three technology-enhanced formats.
 - **The C13 hint ladder in 3.T.RA.2.a is tight.** After hint 2 (paragraph 5), only 5:2 and the key remain live. That meets the rule, but only just.
 - **3.T.RA.1.b already had seven teach points,** above the limit of five. I added none; I added one glossary word.
-- **The 17 similar items added last** (RA1b S12-S15, RA2a S09-S15, RA2b S10-S15) each have one `like` entry, a fresh topic I grepped first, and the same hint pattern: hint 2 neutral, hint 3 rules out one choice. Their live-choice analysis is not tabled. They need the same blind review as the rest.
+- **The 17 similar items added last** (RA1b S12-S15, RA2a S09-S15, RA2b S10-S15) each have one `like` entry, a fresh topic I grepped first, and the same hint pattern: hint 2 neutral, hint 3 rules out one choice. Their live-choice analysis is in §7.2. They need the same blind review as the rest.
 - **The live-choice tables are my own analysis.** Reviewers should redo them blind.
 - **p3 in 3.T.RA.2.b is under 100 words** (77) on purpose, as a short excerpt. check-content warns about it.
 - **Facts simplified for grade 3, for a reviewer to check:**
@@ -396,3 +396,62 @@ There are no shared key facts.
   - A goldfish sound-conditioning memory lasting months.
   - A sea otter eats about one-fourth of its own weight in food each day.
 - **The smoke test sets each answer through the engine's response object,** as practice-own.py does, and then presses Check. It does not click each choice by hand.
+
+## 7. Fixes after the coordinator's notes (pre-review)
+
+### 7.1 3.T.RA.2.a now has a compare task (C12)
+
+**SK-RA2a-C12** was revised in place. The id and set 3 are kept, as the coordinator asked. Because the id stayed the same while the item changed, `core.rev` was not bumped. A lead may want to bump it.
+
+**What it was and what it is now:**
+- It was a two-slot dropdown: claim plus proof.
+- It is now an mc item, 1 point, DOK 3, on p6. Two students give the same answer to "What does Simone want after the game?":
+  - Kai's proof is "The Falcons lost the game, 2 to 1."
+  - Lena's proof is "Can you help me practice goalie next week?"
+- The child compares the two proofs and chooses whose supports the answer better, and why. The key is "Lena's, because Simone's own question shows she wants more practice."
+
+**Coverage of the official wording.** The item still practises "support an answer". Component A now has five items, I has three, O has four and X has three, so each of the four parts still appears at least twice.
+
+**Ladder (clue = hint 1):**
+- H1 (compare the proof, not the answer): all 4 live.
+- H2 (paragraph 5 holds both proof sentences): all 4 live. H2 names a paragraph, but it does not point at the key, because both proofs are there.
+- H3 rules out "Lena's, because her proof is longer". Live after H3: the key, "Kai's, score tells how the game ended" and "Kai's, losing always makes players practice".
+
+**Earlier items in set 3.** C11 (the save) does not touch paragraph 5's proof. C13 comes after C12. Its targets still leave out 5:4, and C12's `how` does not mention "Thanks for your tip".
+
+**Its similar item.**
+- **S13** (volleyball) was revised to the same compare task. Jo cites sentence 4, the oranges, and Sam cites sentence 2, asking the coach for help. The child picks whose proof is better and why. It is mc, 1 point, DOK 3, with `like: [C12]`.
+- **S06** (puppet show) was a claim-plus-proof dropdown. It no longer matches C12's task, so its `like` is now only C10.
+
+**Checks:**
+- `check-content --all`: PASS, 0 failures, and no warnings on C12 or S13. I reworded one word in the clue to clear a "shares a word with the key" warning.
+- Hint smoke for 3.T.RA.2.a at 1366: 15 of 15 core items accepted their key and showed all three hints.
+- Repeated the one-sitting browser check for 3.T.RA.2.a: all 15 core items worked in order. "Try a similar question" appeared on every one, and C12 got S13. Each similar item was answered correctly, there were no page errors, and the server was stopped.
+
+### 7.2 Live choices for the 17 similar items added last (clue = hint 1)
+
+Live choices after each hint:
+
+| Item | After H1 | After H2 | After H3 |
+|---|---|---|---|
+| RA1b S12 (toucan; dropdown) | slot 1: 3, slot 2: 3 | 3 / 3. H2 asks the child to find the cool-off part, but names no source | slot 1: key, "reach fruit". Slot 2: 3 (one option out of slot 1, no blank settled) |
+| RA1b S13 (karate; ms ×2) | all 5 | all 5 | book, email, KickKing, ad |
+| RA1b S14 (hedgehog; match) | all rows open | all open | the spiky-ball row settled; three rows open |
+| RA1b S15 (climbing; mc) | all 4 | all 4. H2 names Coach Lin's three notes, which hold the key, note 2 and note 4 | key, "note 2: a person, not a book", "note 4: not a scientist" |
+| RA2a S09 (narwhal; mc) | all 4 | sentences 2, 3, 4 (the tusk sentences) | key (3), sentence 2 (what the tusk is) |
+| RA2a S10 (coral; mc) | all 4 | all 4 | key, where reefs grow, corals are animals |
+| RA2a S11 (lemurs; ms ×2) | all 5 | all 5 | two keys, Madagascar, what they eat |
+| RA2a S12 (ballet; mc) | all 4 | sentences 2, 3, 4 | key (3), sentence 2 (the tip itself) |
+| RA2a S13 (volleyball; mc, revised) | all 4 | all 4 (H2 names sentences 2 and 4, the two proofs) | key, "Jo's: what happened after the game", "Jo's: oranges show she's ready" |
+| RA2a S14 (archery; mc) | all 4 | Leo's sentences 2 and 3 (key and target) | key, "hit the target" |
+| RA2a S15 (solar; ms ×2) | all 5 | all 5 | sentences 1✓, 3✓, 4, 5 (pick 2) |
+| RA2b S10 (ski page; ms ×2) | all 5 | all 5 | two keys, flat skis, December |
+| RA2b S11 (cello; mc) | all 4 | all 4 | key, wood, how the player sits |
+| RA2b S12 (snowboard; match) | all rows open | open | the ShredDude row settled; four rows open |
+| RA2b S13 (marathon; ms ×2) | all 5 | all 5 | two keys, shoes, sore legs |
+| RA2b S14 (knuckles; mc) | all 4 | sentences 2, 3, 4 | key (4), sentences 2 and 3 (how he tested) |
+| RA2b S15 (sushi; ms ×2) | all 5 | all 5 | two keys, fun topic, newer web page |
+
+**Weak spots for the reviewers:**
+- RA2a S09, S12 and S14, and RA2b S14, keep only one or two wrong choices live after H3. They meet the rule, but only narrowly.
+- RA2a S14 is the tightest: after H3, only "hit the target" is left as a distractor. Its pull is weak, because it shows skill, not thanks.
