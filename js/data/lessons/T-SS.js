@@ -3631,25 +3631,25 @@ PP.addLesson({
     {
       id: "p4",
       draft: true,
-      title: "Recycling at Our School",
+      title: "Our School Read-a-Thon",
       byline: "Ria's first draft",
       genre: "Student draft (informational)",
       paragraphs: [
         [
-          "(1) Our school started a recycling program this year.",
-          "(2) Every class now has a blue bin for paper, and the hallway has bins for cans and bottles."
+          "(1) Our school held a read-a-thon this year.",
+          "(2) Every student got a reading log, and the whole month was set aside for reading."
         ],
         [
-          "(3) Recycling turns old things into new things.",
-          "(4) Old paper can be made into new paper.",
-          "(5) Metal cans can be melted and made into new cans.",
-          "(6) Our custodian empties the trash cans every night.",
-          "(7) Glass bottles can become new bottles, too."
+          "(3) A reading log helps us keep track of the books we read.",
+          "(4) We write the title of each book on a new line.",
+          "(5) We write the day and the number of pages we read.",
+          "(6) Our librarian keeps the books on a cart with a squeaky wheel.",
+          "(7) We color a star next to each book we finish."
         ],
         [
-          "(8) Students sort paper, cans and bottles into the right bins.",
-          "(9) Two helpers carry the full bins to the big truck each Friday.",
-          "(10) Everyone checks that nothing is in the wrong bin before the truck comes."
+          "(8) Students read a little every day and mark their logs.",
+          "(9) Two helpers add up the pages and color the big chart each Friday.",
+          "(10) Everyone cheers when the chart climbs higher."
         ]
       ]
     },
@@ -3930,13 +3930,13 @@ PP.addLesson({
           "Sentence 3 is the topic sentence, so it is not the answer. Test the other four one at a time."
         ],
         how: [
-          "Sentence 3 is the topic sentence: recycling turns old things into new things.",
-          "Sentences 4, 5 and 7 each tell an old thing that becomes a new one: paper, cans and bottles.",
-          "Sentence 6 says the custodian empties the trash cans. It shares the word cans, but it is about cleaning up, not about making new things.",
-          "The answer is sentence 6: \"Our custodian empties the trash cans every night.\""
+          "Sentence 3 is the topic sentence: a reading log helps us keep track of the books we read.",
+          "Sentences 4, 5 and 7 each tell something we put in the log: the title, the day and pages, and a star for each book.",
+          "Sentence 6 says the librarian keeps the books on a cart. It shares the word books, but it is about where books are kept, not about the log.",
+          "The answer is sentence 6: \"Our librarian keeps the books on a cart with a squeaky wheel.\""
         ],
         misconception: "A common mix-up is keeping a sentence because it uses the same word as a detail. Check the idea, not just the words.",
-        why: "The answer is sentence 6, \"Our custodian empties the trash cans every night.\" The paragraph is about recycling turning old things into new things. The custodian sentence shares the word cans, but it is about emptying trash, not about making new things."
+        why: "The answer is sentence 6, \"Our librarian keeps the books on a cart with a squeaky wheel.\" The paragraph is about how the reading log keeps track of books. The cart sentence shares the word books, but it is about where books are kept, not about the log."
       },
       {
         id: "SK-SS1d-C07",
@@ -3947,10 +3947,10 @@ PP.addLesson({
         passages: ["p4"],
         prompt: "The paragraph that begins with sentence 8 needs a topic sentence. Which sentence should Ria add before sentence 8?",
         choices: [
-          { text: "Everyone at our school helps with recycling.", correct: true },
-          { text: "Paper, cans and glass bottles can all be recycled." },
-          { text: "Two helpers carry the full bins to the big truck." },
-          { text: "Every classroom has a blue bin for paper in it." }
+          { text: "Everyone at our school helps with the read-a-thon.", correct: true },
+          { text: "Books, magazines and comic books all count as reading." },
+          { text: "Two helpers add up the pages and color the chart." },
+          { text: "Every student gets a reading log to fill in each day." }
         ],
         clue: "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
         hints: [
@@ -3959,13 +3959,13 @@ PP.addLesson({
           "One choice covers only one of the three details. Check the other three the same way."
         ],
         how: [
-          "Sentence 8 tells what students do: they sort. Sentence 9 tells what two helpers do. Sentence 10 tells what the whole group does.",
-          "All three tell about jobs people do in the program.",
-          "The answer is \"Everyone at our school helps with recycling.\"",
-          "The helpers sentence is only one detail, the bin sentence belongs in the first paragraph, and what can be recycled is not about jobs."
+          "Sentence 8 tells what students do: they read and mark their logs. Sentence 9 tells what two helpers do. Sentence 10 tells what the whole group does.",
+          "All three tell about jobs people do in the read-a-thon.",
+          "The answer is \"Everyone at our school helps with the read-a-thon.\"",
+          "The helpers sentence is only one detail, the log sentence belongs in the first paragraph, and what counts as reading is not about jobs."
         ],
-        misconception: "A common mix-up is choosing a sentence about recycling in general. The topic sentence has to match what this paragraph's details show.",
-        why: "The answer is \"Everyone at our school helps with recycling.\" Sorting, carrying bins and checking are all jobs people do. The helpers sentence covers only one detail, the bin sentence belongs in the first paragraph, and the materials sentence is not about jobs."
+        misconception: "A common mix-up is choosing a sentence about reading in general. The topic sentence has to match what this paragraph's details show.",
+        why: "The answer is \"Everyone at our school helps with the read-a-thon.\" Reading, adding up pages and cheering are all jobs people do. The helpers sentence covers only one detail, the log sentence belongs in the first paragraph, and the sentence about what counts as reading is not about jobs."
       },
       {
         id: "SK-SS1d-C08",
@@ -3974,27 +3974,27 @@ PP.addLesson({
         dok: 3,
         std: ["3.T.SS.1.d"],
         passages: ["p4"],
-        prompt: "Ria wants to add facts about how families can recycle at home. What should she do?",
+        prompt: "Ria wants to add facts about how families can read together at home. What should she do?",
         choices: [
-          { text: "Start a new paragraph with a topic sentence about recycling at home.", correct: true },
-          { text: "Add the facts to the paragraph about turning old things into new things." },
-          { text: "Add the facts after sentence 2, since the first paragraph is about the program." },
-          { text: "Add the facts to the paragraph about sorting, since both are about recycling." }
+          { text: "Start a new paragraph with a topic sentence about reading at home.", correct: true },
+          { text: "Add the facts to the paragraph about how the reading log works." },
+          { text: "Add the facts after sentence 2, since the first paragraph is about the read-a-thon." },
+          { text: "Add the facts to the paragraph about the jobs, since both are about reading." }
         ],
         clue: "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
         hints: [
           "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
           "Name the idea of each of the three paragraphs. Then say the idea of the new facts in a few words and compare.",
-          "One choice puts the facts in the paragraph about sorting because both are about recycling. Ask whether that reason makes every sentence belong together."
+          "One choice puts the facts in the paragraph about the jobs because both are about reading. Ask whether that reason makes every sentence belong together."
         ],
         how: [
-          "The three paragraphs are about the new school program, how recycling makes new things, and the jobs students have.",
-          "Facts about recycling at home are a new idea: they are not about the school, how things are remade, or school jobs.",
-          "A new idea needs its own paragraph with its own topic sentence. The answer is \"Start a new paragraph with a topic sentence about recycling at home.\"",
+          "The three paragraphs are about the new school read-a-thon, how the reading log works, and the jobs people have.",
+          "Facts about reading at home are a new idea: they are not about the school event, the log, or the jobs.",
+          "A new idea needs its own paragraph with its own topic sentence. The answer is \"Start a new paragraph with a topic sentence about reading at home.\"",
           "Adding the facts to any of the other paragraphs would put a sentence in a paragraph with a different idea."
         ],
-        misconception: "A common mix-up is thinking everything about recycling belongs in one paragraph. A paragraph stays on one idea, not one big subject.",
-        why: "The answer is \"Start a new paragraph with a topic sentence about recycling at home.\" Recycling at home is a new idea, different from the school program, how things are remade and the students' jobs. Each of the other choices would put the facts in a paragraph about something else."
+        misconception: "A common mix-up is thinking everything about reading belongs in one paragraph. A paragraph stays on one idea, not one big subject.",
+        why: "The answer is \"Start a new paragraph with a topic sentence about reading at home.\" Reading at home is a new idea, different from the school event, the log and the jobs. Each of the other choices would put the facts in a paragraph about something else."
       },
       {
         id: "SK-SS1d-C09",
@@ -4410,7 +4410,7 @@ PP.addLesson({
       clue: "Find the topic sentence. Then hold each sentence up against it.",
       hints: [
         "Find the topic sentence. Then hold each sentence up against it.",
-        "Say the topic sentence in your own words. Then ask of each sentence whether it shows what it describes.",
+        "Say the topic sentence in your own words. Then ask of each sentence whether it tells about the action in the gym.",
         "Blowing a whistle to start a game shows action in the gym. Check the other three sentences the same way."
       ],
       how: [
@@ -4660,7 +4660,7 @@ PP.addLesson({
       std: ["3.T.SS.1.d"],
       passages: [],
       like: ["SK-SS1d-C14"],
-      prompt: "Rosa wants a new paragraph to start at sentence 3. Why would that be a poor choice?",
+      prompt: "Rosa wants to begin a new paragraph at sentence 3. Why would that not work well?",
       stem: [
         "(1) Our class planted tulips by the front door.",
         "(2) We dug small holes and dropped in the bulbs.",
@@ -4671,22 +4671,22 @@ PP.addLesson({
       choices: [
         { text: "Sentence 3 still tells about planting the tulips, so the idea has not changed.", correct: true },
         { text: "A new paragraph should begin only after exactly two sentences." },
-        { text: "Sentence 3 is about the weather, which is not part of this draft." },
-        { text: "The word dirt means the writer has finished the whole draft." }
+        { text: "Sentence 3 has more words than sentence 2, so it needs its own paragraph." },
+        { text: "Sentence 3 brings in dirt, which is a new idea for the draft." }
       ],
       clue: "Think about what makes a paragraph start. Look at what the draft is about before and after the spot Rosa picked.",
       hints: [
         "Think about what makes a paragraph start. Look at what the draft is about before and after the spot Rosa picked.",
         "Say what sentences 1, 2 and 3 are about. Ask whether the topic shifts anywhere in them.",
-        "The draft never talks about the weather, so one choice describes something that is not there. Test the other three."
+        "A paragraph starts when the idea changes, not when a sentence has more words. Test the other three."
       ],
       how: [
-        "Sentences 1, 2 and 3 are all about planting the tulips: choosing the spot, digging holes and covering the bulbs.",
+        "Sentences 1, 2 and 3 are all about planting the tulips: digging holes, dropping in the bulbs and covering them.",
         "The topic does not change until sentence 4, which is about a bird feeder.",
         "A paragraph starts when the idea changes. The answer is \"Sentence 3 still tells about planting the tulips, so the idea has not changed.\"",
-        "There is no rule about two sentences, the draft does not mention weather, and one word cannot end a draft."
+        "There is no rule about two sentences, a sentence with more words does not need its own paragraph, and dirt is part of planting."
       ],
-      why: "The answer is \"Sentence 3 still tells about planting the tulips, so the idea has not changed.\" The topic first changes at sentence 4. A paragraph does not start after a set number of sentences, sentence 3 is not about weather, and a single word cannot end a draft."
+      why: "The answer is \"Sentence 3 still tells about planting the tulips, so the idea has not changed.\" The topic first changes at sentence 4. A paragraph does not start after a set number of sentences, a sentence with more words does not need its own paragraph, and dirt is part of planting."
     },
     {
       id: "SK-SS1d-S15",
@@ -4733,7 +4733,7 @@ PP.addLesson({
       hints: [
         "A paragraph stays on one idea. Find the idea in the topic sentence, then check every other sentence against it.",
         "Say the idea in a few words. Then read each sentence and ask whether it tells about that idea.",
-        "Three of the four sentences tell about how a carousel moves. Ask which one is about something that is not a carousel."
+        "Sentence 3 is the topic sentence, so it is not the answer. Test the other three."
       ],
       how: [
         "Sentence 3 is the topic sentence: a carousel moves because of a simple plan.",
@@ -4747,7 +4747,7 @@ PP.addLesson({
       hints: [
         "A topic sentence has to cover all of the details in its paragraph. Read them all before you choose.",
         "Name what each of sentences 7, 8 and 9 tells about. Ask what they have in common.",
-        "Two choices are about other things in the draft, and one is only a fact about fairs. Choose the idea all three details share."
+        "One choice is about the motor, which belongs in the paragraph about moving. Check the other three."
       ],
       how: [
         "Sentence 7 tells the kinds of animals, sentence 8 tells how each one is held up, and sentence 9 tells how they move.",
@@ -4761,7 +4761,7 @@ PP.addLesson({
       hints: [
         "Name the main idea of that paragraph first. The new detail has to tell more about that idea.",
         "The paragraph is about moving. Ask which sentence adds one more thing about it.",
-        "Three of the choices are true about carousels but are not about moving. Check each one against the topic sentence."
+        "The tickets are a fact about fairs, not about moving. Check the other three."
       ],
       how: [
         "Sentence 3 says a carousel moves because of a simple plan.",
@@ -4774,7 +4774,7 @@ PP.addLesson({
     "SK-SS1d-P4": {
       hints: [
         "Find the sentence that names the big idea the others can tell about. Then ask which sentence is about something else.",
-        "The topic sentence says what the market is like. Ask which two sentences show that, and which one is about a different place or time.",
+        "The topic sentence says what the market is like. Ask which two sentences show that, and which one is about something other than the market's busyness.",
         "One sentence is about a bus, not about the market. Match the other three after that."
       ],
       how: [
@@ -4789,7 +4789,7 @@ PP.addLesson({
       hints: [
         "The first sentence is the topic sentence. Test every other sentence: is it about the class garden in spring?",
         "Say the idea of the paragraph in your own words. Then read each sentence and ask whether it shows the garden being busy.",
-        "Planting, watering and picking are things the class does in the garden. Look for the two sentences that are about something else."
+        "The sentence about leaves is about a different season. Check the other four."
       ],
       how: [
         "The topic sentence says the class garden is busy in the spring.",
