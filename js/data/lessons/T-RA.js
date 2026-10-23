@@ -2051,10 +2051,10 @@ PP.addLesson({
     points: [
       "Read both sources and find the big idea of each one.",
       "Pick the facts that matter most. Leave out tiny details.",
-      "Choose sources you can trust, like a library book, a museum or a science website.",
+      "Choose sources you can trust, like a library book, a museum or a science website. Check who wrote it and whether it names its sources.",
       "Use your own words. Do not copy whole sentences.",
       "A summary tells only what the sources say. Leave out your opinions and facts that are not in your sources.",
-      "Use linking words like also and in addition, or time words like in the fall, to join ideas from both sources."
+      "Use linking words like also and in addition, or time words like first, next, later and at last, to join ideas from both sources."
     ],
     words: [
       { term: "summary", means: "a short telling of the most important ideas" },
@@ -2084,22 +2084,22 @@ PP.addLesson({
         "Find the big idea of Source 1: penguins live in a very cold place, and their bodies help keep them warm.",
         "Find the big idea of Source 2: penguins huddle together to stay warm.",
         "Look for what the two ideas share. Both are about staying warm in the cold.",
-        "Write the ideas in your own words, and join them with a linking word like also."
+        "Write the ideas in your own words, not copied word for word. Then join them with a linking word like also."
       ],
       answer: "Emperor penguins live in a very cold place where thick feathers and fat keep them warm. They also huddle together in winter to stay warm."
     },
     {
       show: [
         "Dev's summary about penguins:",
-        "(1) Emperor penguins live in icy Antarctica. (2) Their feathers and fat keep them warm. (3) In winter, they also huddle in big groups. (4) I think penguins are funny when they waddle."
+        "(1) Emperor penguins live in icy Antarctica. (2) Their feathers and fat keep them warm. (3) In winter, they also huddle in big groups. (4) I think penguins are funny when they waddle. (5) Penguins are birds that cannot fly."
       ],
-      ask: "Which sentence should Dev take out of his summary?",
+      ask: "Which TWO sentences should Dev take out of his summary?",
       steps: [
         "Check each sentence against the sources. Sentences 1, 2 and 3 all tell facts from the sources.",
         "Look for words like \"I think.\" They show an opinion.",
-        "A summary tells what the sources say, not what the writer thinks."
+        "Sentence 5 may be true, but neither source says it. A summary tells only what the sources say."
       ],
-      answer: "Dev should take out sentence 4, because it is his opinion and not a fact from the sources."
+      answer: "Dev should take out sentence 4, because it is his opinion, and sentence 5, because it is a fact that is not in the sources."
     },
     {
       show: [
@@ -2195,7 +2195,7 @@ PP.addLesson({
       clue: "A summary of two sources needs a big idea from each one. Check whether each choice uses both sources, and whether it tells facts or feelings.",
       why: "The answer is \"Monarchs grow up eating milkweed, and many fly south to Mexico each fall.\" It joins the big idea of Source 1 (growing up on milkweed) with the big idea of Source 2 (the trip south). The chrysalis sentence is one small detail, the sentence about resting in tall trees uses only Source 2, and the sentence that starts with I think is an opinion." },
     { id: "SK-RA1c-P2", type: "mc", points: 1, dok: 2, passages: ["p1", "p2"],
-      stem: ["Leah's notes from Source 1:", "• Monarchs lay eggs on milkweed.", "• Caterpillars eat only milkweed.", "• Milkweed juice tastes bad to birds."],
+      stem: ["Leah's notes from Source 1:", "• Monarchs start life as tiny eggs.", "• Caterpillars eat only milkweed.", "• Milkweed juice tastes bad to birds."],
       prompt: "Leah's notes are all about milkweed. Which fact from Source 2 should she add to these notes?",
       choices: [
         { text: "In spring, monarchs lay eggs on milkweed as they fly north.", correct: true },
@@ -2232,7 +2232,7 @@ PP.addLesson({
         { text: "The butterfly that comes out of the chrysalis is orange and black." },
         { text: "That is all I have to say about monarch butterflies today." }
       ],
-      clue: "A good ending wraps up the big ideas. It does not add a new fact or a small detail.",
+      clue: "A good ending wraps up the big ideas. Think about what each source is mostly about.",
       why: "The answer is \"Both sources show that a monarch's life is full of changes and travel.\" It wraps up both big ideas: changing from egg to butterfly, and the long trip. The milkweed sentence adds a fact that is not in the sources, the orange and black sentence is a small detail, and \"That is all I have to say\" does not tell the reader anything." }
   ],
   /* ---------- B4 core (expansion 2026-10-22, author b4c; 01-architecture.md §2.2-2.3) ----------
@@ -2366,14 +2366,14 @@ PP.addLesson({
         misconception: "A common mix-up is including every fact about the animal. Include the facts that answer the question the summary asks.",
         why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain why dragonflies fly so well. Where they stay, how they rest and that they cannot sting are about other topics." },
       { id: "SK-RA1c-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p5", "p6"],
-        stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Dragonflies usually live close to ponds, because that is where they find mates."],
+        stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Most dragonflies stay close to ponds and streams."],
         prompt: "Which sentence in Dev's draft is copied word for word from a source?",
         options: [
           "(1) A dragonfly spends the first part of its life underwater and later flies in the air.",
           "(2) A young dragonfly, called a nymph, lives in the water and eats tiny fish.",
           "(3) An adult dragonfly can steer each of its four wings on its own.",
           "(4) A dragonfly catches mosquitoes, flies and other small insects in the air.",
-          "(5) Dragonflies usually live close to ponds, because that is where they find mates."
+          "(5) Most dragonflies stay close to ponds and streams."
         ],
         answer: [3], pick: 1,
         clue: "Own words means saying an idea your way instead of copying it. A copied sentence matches a source word for word.",
@@ -2398,11 +2398,11 @@ PP.addLesson({
           "Then the adult takes to the air and can hover and fly backward.",
           "At last, it hunts mosquitoes and flies in the air."
         ],
-        clue: "Time words, like later, then and at last, show the order of ideas. Look for them in each sentence.",
+        clue: "Time words show the order. One sentence has no time word, and it usually comes first.",
         hints: [
-          "Time words, like later, then and at last, show the order of ideas. Look for them in each sentence.",
-          "Think about what happens first in a dragonfly's life, and what must happen before it can hunt in the air.",
-          "The sentence that starts with Later tells about leaving the water, so it comes right after the sentence about the nymph. Place the other two."
+          "Time words show the order. One sentence has no time word, and it usually comes first.",
+          "Say the whole story of a dragonfly's life to yourself. Then match each sentence to a part of the story.",
+          "The sentence that tells how a dragonfly begins has no time word, so it starts the summary. Place the other three."
         ],
         how: [
           "Start with the sentence that has no time word and tells how life begins: \"A dragonfly begins life underwater as a nymph.\"",
@@ -2443,52 +2443,56 @@ PP.addLesson({
       { id: "SK-RA1c-C11", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: ["p7", "p8"],
         prompt: "Kayla is writing a summary of both sources. Which opening sentence best sums up the big ideas of BOTH?",
         choices: [
-          { text: "A warm-up gets the body ready for sports, and kids can do a short, easy one before they play.", correct: true },
+          { text: "A warm-up gets the body ready for sports, and kids can do a short, easy warm-up and cool-down.", correct: true },
           { text: "Warm muscles can stretch and move more easily than cold muscles do, as Source 1 says." },
-          { text: "After a game, kids should walk slowly for five to ten minutes to cool down." },
+          { text: "After a game, kids should walk slowly for five to ten minutes to cool down and rest." },
           { text: "Every player should always warm up before every game of every sport and never skip it." }
         ],
-        clue: "A summary of two sources needs a big idea from each one. Look for a sentence that covers both and sticks to what the sources say.",
+        clue: "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
         hints: [
-          "A summary of two sources needs a big idea from each one. Look for a sentence that covers both and sticks to what the sources say.",
-          "Ask what Source 1 is mostly about and what Source 2 is mostly about. Then read each choice.",
+          "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
+        "Read each choice and ask which of the two sources it comes from.",
           "\"Every player should always warm up before every game of every sport\" says more than the sources do. Check the other choices."
         ],
         how: [
           "Source 1 is mostly about why a warm-up helps the body, and Source 2 is mostly about how to do a short warm-up and a cool-down.",
-          "A good opening sentence covers both ideas. The answer is \"A warm-up gets the body ready for sports, and kids can do a short, easy one before they play.\"",
+          "A good opening sentence covers both ideas. The answer is \"A warm-up gets the body ready for sports, and kids can do a short, easy warm-up and cool-down.\"",
           "The sentence about warm muscles uses only Source 1, and the sentence about walking after a game uses only Source 2.",
           "The sentence that says every player must always warm up goes beyond what the sources say."
         ],
         misconception: "A common mix-up is choosing a sentence from only one source. An opening sentence for a two-source summary covers both.",
-        why: "The answer is \"A warm-up gets the body ready for sports, and kids can do a short, easy one before they play.\" It joins the big idea of Source 1 with the big idea of Source 2. The warm muscles sentence uses only Source 1, the walking sentence uses only Source 2, and the \"every player\" sentence says more than the sources do." },
-      { id: "SK-RA1c-C12", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p7"],
-        prompt: "Kayla is making notes for a summary of Source 1. Which detail is the LEAST important, so she can leave it out?",
-        choices: [
-          { text: "Some players like to listen to music while they warm up.", correct: true },
-          { text: "Easy movement makes your heart beat faster." },
-          { text: "More blood and oxygen reach your muscles." },
-          { text: "Warm muscles can stretch and move more easily than cold ones." }
+        why: "The answer is \"A warm-up gets the body ready for sports, and kids can do a short, easy warm-up and cool-down.\" It joins the big idea of Source 1 with the big idea of Source 2. The warm muscles sentence uses only Source 1, the walking sentence uses only Source 2, and the \"every player\" sentence says more than the sources do." },
+      { id: "SK-RA1c-C12", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p7"],
+        stem: ["Kayla is making notes for a summary of Source 1. Here is her list.", "(1) A warm-up gets the body ready for hard work. (2) Easy movement makes your heart beat faster. (3) More blood and oxygen reach your muscles. (4) Some players like to listen to music while they warm up. (5) Warm muscles can stretch and move more easily than cold ones."],
+        prompt: "Which numbered sentence is the LEAST important detail, so Kayla can leave it out?",
+        options: [
+          "(1) A warm-up gets the body ready for hard work.",
+          "(2) Easy movement makes your heart beat faster.",
+          "(3) More blood and oxygen reach your muscles.",
+          "(4) Some players like to listen to music while they warm up.",
+          "(5) Warm muscles can stretch and move more easily than cold ones."
         ],
+        answer: [3], pick: 1,
         clue: "Important facts help explain the big idea. Tiny details can be left out.",
         hints: [
           "Important facts help explain the big idea. Tiny details can be left out.",
-          "First decide the big idea of Source 1. Then ask whether each fact helps explain it.",
-          "The fact about warm muscles explains what a warm-up does for the body. Check the other three the same way."
+          "First decide the big idea of Source 1. Then ask whether each numbered sentence helps explain it.",
+          "Sentence 5 explains what a warm-up does for the body. Check the other sentences the same way."
         ],
         how: [
           "The big idea of Source 1 is that a warm-up gets the body ready to work hard.",
-          "A fast heartbeat, more blood and oxygen, and muscles that stretch easily all explain how the body gets ready.",
-          "Listening to music is a tiny detail about what some players like. The answer is \"Some players like to listen to music while they warm up.\""
+          "Sentences 1, 2, 3 and 5 all explain how the body gets ready: a faster heartbeat, more blood and oxygen, and muscles that stretch easily.",
+          "Sentence 4 is a tiny detail about what some players like.",
+          "The answer is sentence 4: \"Some players like to listen to music while they warm up.\""
         ],
         misconception: "A common mix-up is keeping every fact. A summary keeps the facts that explain the big idea and leaves out tiny details.",
-        why: "The answer is \"Some players like to listen to music while they warm up.\" It is a small detail about what some players like. The other three facts explain how a warm-up gets the body ready." },
+        why: "The answer is sentence 4, \"Some players like to listen to music while they warm up.\" It is a small detail about what some players like. The other four sentences explain how a warm-up gets the body ready." },
       { id: "SK-RA1c-C13", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
         stem: ["Mr. Ruiz's class is writing about where their town gets its drinking water. Kayla already has one source, a page from the town's water department."],
         prompt: "Which second source should Kayla use?",
         choices: [
-          { text: "a page from a state agency that tells how drinking water is cleaned, with the date it was updated", correct: true },
-          { text: "an ad for bottled water that says tap water is bad and that you should buy it" },
+          { text: "a state agency page that tells where drinking water comes from and how it is cleaned", correct: true },
+          { text: "an ad for bottled water that says tap water is bad, so you should buy it" },
           { text: "a post by a stranger who writes, \"I think the water comes from a big lake somewhere\"" },
           { text: "a funny cartoon about a talking water drop who goes on a long trip" }
         ],
@@ -2500,15 +2504,15 @@ PP.addLesson({
         ],
         how: [
           "Kayla needs a source with facts from people who know about drinking water.",
-          "A state agency knows how drinking water is cleaned, and its page shows when it was updated. The answer is \"a page from a state agency that tells how drinking water is cleaned, with the date it was updated.\"",
+          "A state agency knows where drinking water comes from and how it is cleaned. The answer is \"a state agency page that tells where drinking water comes from and how it is cleaned.\"",
           "The ad wants to sell bottled water, the stranger is only guessing, and the cartoon is made up."
         ],
         misconception: "A common mix-up is trusting a source because it is fun or because it says what you already think. Trust a source whose writer knows the topic.",
-        why: "The answer is \"a page from a state agency that tells how drinking water is cleaned, with the date it was updated.\" An agency that works with drinking water shares facts. The ad tries to sell, the stranger guesses, and the cartoon is made up." },
+        why: "The answer is \"a state agency page that tells where drinking water comes from and how it is cleaned.\" An agency that works with drinking water shares facts. The ad tries to sell, the stranger guesses, and the cartoon is made up." },
       { id: "SK-RA1c-C14", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [],
-        stem: ["Source 1 (school newsletter): Room 7 counted forty plastic bottles in the trash each day. A bottle that can be filled again keeps bottles out of the trash.", "Source 2 (nurse's page): Students who carry a water bottle drink more water during the day. Students who drink enough water often pay better attention."],
+        stem: ["Source 1 (school newsletter): Room 7 draws with sidewalk chalk at recess. The rain washes the drawings away.", "Source 2 (principal's page): Students who draw near the wall keep the walkway clear. Each child also carries the chalk back to the room."],
         prompt: "Noah is joining ideas from both sources in his summary. Choose the best words for each blank.",
-        text: "A bottle that can be filled again keeps trash out of the bin. {0}, students who carry one drink more water. {1} students drink enough water, they often pay better attention.",
+        text: "Room 7 draws with sidewalk chalk at recess. {0}, each child carries the chalk back to the room. {1} students draw near the wall, the walkway stays clear.",
         slots: [
           { options: ["In addition", "Instead", "Last year", "Because"], answer: 0 },
           { options: ["When", "Although", "Unless", "Before"], answer: 0 }
@@ -2517,16 +2521,16 @@ PP.addLesson({
         hints: [
           "Linking words show how two ideas fit together. Ask whether the next idea adds to the first, happens later or is different.",
           "Say each sentence with the missing words. Ask which choice makes the ideas from the two sources fit together.",
-          "\"Last year\" would put the idea in the wrong time, because both sources talk about now. Test the other choices in both blanks."
+          "\"Last year\" would put the idea in the wrong time, because neither source says the chalk was carried last year. Test the other choices in both blanks."
         ],
         how: [
-          "The newsletter idea is about less trash. The nurse's idea is a second benefit, so it adds to the first.",
-          "The first blank is \"In addition,\" because the second sentence adds one more good thing.",
-          "The second blank is \"When,\" because the attention comes whenever students drink enough water.",
-          "\"Instead\" and \"Although\" would show a difference, \"Unless\" and \"Before\" change the meaning, and \"Because\" does not fit the first blank."
+          "The first sentence says what Room 7 does. The principal's page adds one more thing each child does.",
+          "The first blank is \"In addition,\" because the second sentence adds one more thing. \"Last year\" puts it at the wrong time, and \"Instead\" and \"Because\" change the meaning.",
+          "The second blank is \"When,\" because the walkway stays clear whenever students draw near the wall.",
+          "\"Although,\" \"Unless\" and \"Before\" change the meaning."
         ],
         misconception: "A common mix-up is choosing a linking word that sounds fancy. Pick the one that shows how the two ideas really fit together.",
-        why: "The answers are \"In addition\" and \"When.\" The nurse's page gives a second benefit, so In addition joins it to the newsletter idea. The attention comes when students drink enough water. The other words change the meaning." },
+        why: "The answers are \"In addition\" and \"When.\" The principal's page gives one more thing each child does, so In addition joins it to the newsletter idea. The walkway stays clear when students draw near the wall. The other words change the meaning." },
       { id: "SK-RA1c-C15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: ["p7", "p8"], pick: 2,
         stem: ["Here is Kayla's draft summary.", "(1) A warm-up gets the body ready for hard work. (2) It makes the heart beat faster and sends more blood to the muscles. (3) Cool-downs are the best part of any practice. (4) The first Olympic Games took place in ancient Greece. (5) A good warm-up for kids takes about five to ten minutes. (6) After play, gentle walking helps the heart and breathing slow down."],
         prompt: "Kayla's summary should use only facts from the two sources, with no opinions. Which TWO sentences should she take out? Choose two answers.",
@@ -2561,24 +2565,24 @@ PP.addLesson({
     { id: "SK-RA1c-S01", type: "dropdown", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-P4"],
       stem: ["Source A: A new termite colony starts with one king and one queen.", "Source B: Over the years, the queen lays thousands of eggs, and the colony grows."],
-      prompt: "Mia wants to join an idea from Source A to an idea from Source B. Choose the words that best begin the second sentence.",
+      prompt: "Pick the words that should begin Mia's second sentence.",
       text: "A new termite colony starts with a king and a queen. {0} the queen lays thousands of eggs, and the colony grows.",
       slots: [
-        { options: ["Over the years,", "For example,", "Instead,", "At first,"], answer: 0 }
+        { options: ["Over the years,", "Last week,", "However,", "At first,"], answer: 0 }
       ],
       clue: "Time words show when things happen. Ask when the second sentence happens compared with the first.",
       hints: [
         "Time words show when things happen. Ask when the second sentence happens compared with the first.",
         "Read the first sentence and the second sentence. Notice which one tells how the colony begins.",
-        "\"For example\" would mean the second sentence is one case of the first. Test the other choices."
+        "\"However\" would mean the second sentence disagrees with the first. Test the other choices."
       ],
       how: [
         "The first sentence tells how a colony starts, and the second tells what happens after that.",
         "Source B says the queen lays thousands of eggs over the years. The time words are \"Over the years,\"",
-        "\"For example\" gives an example, \"Instead\" changes the idea, and \"At first\" would put the egg laying at the start."
+        "\"Last week\" puts the egg laying at the wrong time, \"However\" shows a difference, and \"At first\" would put the egg laying at the start."
       ],
       misconception: "A common mix-up is choosing a time word for the wrong moment. Ask when the second idea happens.",
-      why: "The answer is \"Over the years,\" because Source B says the queen lays thousands of eggs over the years, after the colony starts. For example would give an example, instead would change the idea, and at first would put the idea at the start." },
+      why: "The answer is \"Over the years,\" because Source B says the queen lays thousands of eggs over the years, after the colony starts. Last week would put the idea at the wrong time, however would show a difference, and at first would put the idea at the start." },
     { id: "SK-RA1c-S02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-P5"],
       stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia."],
@@ -2586,30 +2590,30 @@ PP.addLesson({
       choices: [
         { text: "Both sources show that the platypus is an unusual mammal built for life in water.", correct: true },
         { text: "A platypus has webbed feet, and it uses them to push through the water." },
-        { text: "Many other animals live in Australia too, such as kangaroos and koalas." },
+        { text: "Many people visit zoos to see animals from Australia and other far-away places." },
         { text: "That is everything that I know about the platypus, so this is the end." }
       ],
-      clue: "A good ending wraps up the big ideas of both sources. It does not add a new fact or a tiny detail.",
+      clue: "A good ending wraps up the big ideas. Think about what each source is mostly about.",
       hints: [
-        "A good ending wraps up the big ideas of both sources. It does not add a new fact or a tiny detail.",
-        "Ask what Source A is mostly about and what Source B is mostly about. Then read the endings.",
+        "A good ending wraps up the big ideas. Think about what each source is mostly about.",
+        "Read each ending and ask which parts of the sources it is about.",
         "\"That is everything I know\" tells the reader nothing about the platypus. Check the other three endings."
       ],
       how: [
         "Source A is about a mammal that lays eggs. Source B is about the bill and feet that help it live in water.",
         "A good ending joins both ideas: \"Both sources show that the platypus is an unusual mammal built for life in water.\"",
-        "The webbed feet sentence is one small detail, the sentence about other animals adds a new idea, and \"That is everything that I know about the platypus, so this is the end\" says nothing about the platypus."
+        "The webbed feet sentence is one small detail, the sentence about zoo visitors adds a new idea, and \"That is everything that I know about the platypus, so this is the end\" says nothing about the platypus."
       ],
       misconception: "A common mix-up is ending with one small detail. An ending wraps up the big ideas of both sources.",
       why: "The answer is \"Both sources show that the platypus is an unusual mammal built for life in water.\" It wraps up the egg laying from Source A and the bill and feet from Source B. The other choices are a detail, a new idea or nothing." },
     { id: "SK-RA1c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C03"],
       stem: ["Source B says: \"Termites eat wood. Their tunnels can weaken the beams of a house.\""],
-      prompt: "Jo wants to write this idea in her own words. Which sentence keeps the meaning and does NOT copy the source?",
+      prompt: "Jo is summarizing. Which sentence says the idea differently but means the same thing?",
       choices: [
         { text: "Termites chew through wood, and the holes they make can make a house weaker.", correct: true },
         { text: "Termites eat wood. Their tunnels can weaken the beams of a house." },
-        { text: "Termites make a house stronger by eating the wood in its beams." },
+        { text: "Termites sometimes eat wood, but their tunnels never hurt a house or its beams." },
         { text: "Termites are the worst bugs, and nobody should let them in." }
       ],
       clue: "Own words means saying an idea your way instead of copying it. The meaning must stay the same.",
@@ -2621,34 +2625,34 @@ PP.addLesson({
       how: [
         "The source says termites eat wood and that their tunnels can make the beams of a house weaker.",
         "The answer says the same thing with new words: \"Termites chew through wood, and the holes they make can make a house weaker.\"",
-        "One choice copies the source word for word, one says the opposite, and one is an opinion."
+        "One choice copies the source word for word, one says the tunnels never hurt, and one is an opinion."
       ],
       misconception: "A common mix-up is thinking that a changed sentence is in your own words even when the meaning changed.",
-      why: "The answer is \"Termites chew through wood, and the holes they make can make a house weaker.\" It keeps the meaning and uses new words. One choice copies, one says the opposite, and one is an opinion." },
+      why: "The answer is \"Termites chew through wood, and the holes they make can make a house weaker.\" It keeps the meaning and uses new words. One choice copies, one says the tunnels never hurt, and one is an opinion." },
     { id: "SK-RA1c-S04", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C04"],
-      stem: ["Dina is writing a summary about weather satellites. She finds five sources."],
-      prompt: "Which TWO sources can Dina trust for facts about weather satellites? Choose two answers.",
+      stem: ["Dina needs facts about weather satellites, and she has five possible sources."],
+      prompt: "Pick the TWO sources that Dina should rely on. Choose two answers.",
       choices: [
         { text: "a page from a national weather agency that explains how satellites track storms", correct: true },
         { text: "a kids' encyclopedia article by a space scientist, with the date it was written", correct: true },
-        { text: "a post by someone who writes, \"I think satellites control the weather\"" },
-        { text: "an ad for a phone that says its camera is better than any satellite" },
-        { text: "a comic strip about a satellite that tells jokes" }
+        { text: "a chapter in a cookbook written by a famous chef who is very good at baking" },
+        { text: "a company's own web page that says its satellite phone is the best one you can buy" },
+        { text: "a blog post called Satellite Secrets, with no author and no date shown anywhere" }
       ],
       clue: "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
       hints: [
         "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
-        "For each choice, find who made it and what it wants to do: teach, sell or entertain.",
-        "A comic strip with a joking satellite is made up for fun. Check the other four choices."
+        "For each choice, find who wrote it, what that person knows about, and what the source wants.",
+        "A chef knows about food, not satellites. Check the other four choices."
       ],
       how: [
         "A source Dina can trust is made by someone who knows weather satellites and wants to share facts.",
         "A national weather agency and a space scientist both know the topic. The answers are \"a page from a national weather agency that explains how satellites track storms\" and \"a kids' encyclopedia article by a space scientist, with the date it was written.\"",
-        "The post is only a guess, the ad wants to sell a phone, and the comic is made up."
+        "The chef knows baking, not satellites. The company wants to sell a phone. The blog shows no author and no date, so no one can check who wrote it."
       ],
-      misconception: "A common mix-up is trusting a source that is funny or sounds sure. Trust a source whose writer knows the topic.",
-      why: "The answers are \"a page from a national weather agency that explains how satellites track storms\" and \"a kids' encyclopedia article by a space scientist, with the date it was written.\" Both come from people who know the topic. The post guesses, the ad sells, and the comic is made up." },
+      misconception: "A common mix-up is trusting a source that sounds sure. Trust a source whose writer knows the topic and can be named.",
+      why: "The answers are \"a page from a national weather agency that explains how satellites track storms\" and \"a kids' encyclopedia article by a space scientist, with the date it was written.\" Both come from people who know the topic. The chef knows a different subject, the company wants to sell, and the blog shows no author or date." },
     { id: "SK-RA1c-S05", type: "hottext", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C05"],
       stem: ["Source A: A comet is a ball of ice and dust that travels around the Sun.", "Source B: When a comet gets near the Sun, its ice turns to gas. The gas forms a long tail that points away from the Sun.", "Here is Dina's draft summary. Her teacher says it may use only facts from the two sources.", "(1) A comet is a ball of ice and dust. (2) It travels around the Sun. (3) The planet Mars has two small moons. (4) Near the Sun, a comet's ice turns to gas. (5) The gas forms a long tail that points away from the Sun."],
@@ -2677,14 +2681,14 @@ PP.addLesson({
       why: "The answer is sentence 3, \"The planet Mars has two small moons.\" It is true, but neither source tells it. Every other sentence sums up something in Source A or Source B." },
     { id: "SK-RA1c-S06", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C06"],
-      stem: ["Source A: A tree adds a new ring to its trunk every year. The rings are circles inside the trunk. You can see them when a tree is cut down.", "Source B: The width of a ring shows what the weather was like that year. Wide rings mean plenty of rain. Narrow rings mean a dry year."],
+      stem: ["Source A: A tree adds a new ring to its trunk every year. The rings are circles inside the trunk. You can see them when a tree is cut down.", "Source B: The width of a ring can show what the weather was like that year. Wide rings often mean plenty of rain. Narrow rings often mean a dry year."],
       prompt: "Sam is making a note card for each source. Which TWO sentences give the big idea of a whole source? Choose two answers.",
       choices: [
         { text: "Source A: A tree adds one new ring every year.", correct: true },
-        { text: "Source B: The width of a ring shows what the weather was like.", correct: true },
+        { text: "Source B: The width of a ring can show what the weather was like.", correct: true },
         { text: "Source A: You can see the rings when a tree is cut down." },
-        { text: "Source B: Wide rings mean plenty of rain." },
-        { text: "Source B: Narrow rings mean a dry year." }
+        { text: "Source B: Wide rings often mean plenty of rain." },
+        { text: "Source B: Narrow rings often mean a dry year." }
       ],
       clue: "The big idea of a source is what the whole source is mostly about. Details only help explain it.",
       hints: [
@@ -2695,15 +2699,15 @@ PP.addLesson({
       how: [
         "Source A is mostly about the way a tree adds one ring every year.",
         "Source B is mostly about how the width of a ring shows the weather that year.",
-        "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring shows what the weather was like.\"",
+        "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring can show what the weather was like.\"",
         "The other sentences are details or examples, such as when you can see the rings and what wide or narrow rings mean."
       ],
       misconception: "A common mix-up is picking a true detail. The big idea sums up the whole source.",
-      why: "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring shows what the weather was like.\" Each one sums up a whole source. The other sentences are details or examples." },
+      why: "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring can show what the weather was like.\" Each one sums up a whole source. The other sentences are details or examples." },
     { id: "SK-RA1c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C07"],
       stem: ["Source B: A platypus has webbed feet and thick fur that keeps water out. It hunts for food in streams in Australia. A male platypus has a sharp spur on each back foot.", "Anil's summary will explain why a platypus is such a good swimmer."],
-      prompt: "Which TWO facts from Source B should Anil include? Choose two answers.",
+      prompt: "Pick the TWO facts that Anil needs. Choose two answers.",
       choices: [
         { text: "It has webbed feet.", correct: true },
         { text: "Its thick fur keeps water out.", correct: true },
@@ -2726,14 +2730,13 @@ PP.addLesson({
       why: "The answers are \"It has webbed feet.\" and \"Its thick fur keeps water out.\" Both help explain why a platypus swims well. Where it hunts, the spur and laying eggs are about other topics." },
     { id: "SK-RA1c-S08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C08"],
-      stem: ["Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming.", "Dina's teacher says a summary must be in the writer's own words. Here is Dina's draft.", "(1) A satellite is an object that goes around Earth. (2) Some satellites are built by people and sent into space. (3) Weather satellites photograph clouds from far above. (4) The pictures help forecasters tell when storms are coming. (5) That helps people get ready for bad weather."],
+      stem: ["Source A: A satellite is an object that goes around Earth. Some satellites are built by people and sent into space.", "Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming.", "Dina's teacher says a summary must be in the writer's own words. Here is Dina's draft.", "(1) A satellite is a machine that circles Earth. (2) People build some satellites and launch them into space. (3) Weather satellites photograph clouds from far above. (4) The pictures help forecasters tell when storms are coming."],
       prompt: "Which sentence in Dina's draft is copied word for word from Source B?",
       options: [
-        "(1) A satellite is an object that goes around Earth.",
-        "(2) Some satellites are built by people and sent into space.",
+        "(1) A satellite is a machine that circles Earth.",
+        "(2) People build some satellites and launch them into space.",
         "(3) Weather satellites photograph clouds from far above.",
-        "(4) The pictures help forecasters tell when storms are coming.",
-        "(5) That helps people get ready for bad weather."
+        "(4) The pictures help forecasters tell when storms are coming."
       ],
       answer: [3], pick: 1,
       clue: "Own words means saying an idea your way instead of copying it. A copied sentence matches the source word for word.",
@@ -2744,7 +2747,7 @@ PP.addLesson({
       ],
       how: [
         "Own words means a sentence should not match the source word for word.",
-        "Compare each sentence with Source B. Sentences 1, 2, 3 and 5 change the words.",
+        "Compare each sentence with Source B. Sentences 1, 2 and 3 change the words.",
         "Sentence 4 matches Source B exactly: \"The pictures help forecasters tell when storms are coming.\"",
         "The answer is sentence 4. Dina should say that idea a new way."
       ],
@@ -2753,26 +2756,26 @@ PP.addLesson({
     { id: "SK-RA1c-S09", type: "order", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C09"],
       stem: ["Source A: A tree starts as a tiny seed. The seed sprouts into a small tree.", "Source B: Each year, the tree adds one new ring to its trunk. The rings can be counted to find out how old the tree is."],
-      prompt: "Put Sam's four summary sentences in the best order. Use the time words to help.",
+      prompt: "Arrange the four sentences of Sam's summary so that it reads in order.",
       steps: [
         "A tree begins as a tiny seed.",
-        "Next, the seed sprouts into a small tree.",
-        "Then, each year, the tree adds one new ring to its trunk.",
-        "At last, the rings can be counted to find out how old the tree is."
+        "Soon, the seed sprouts into a small tree.",
+        "After that, each year, the tree adds one new ring to its trunk.",
+        "In the end, the rings can be counted to find out how old the tree is."
       ],
-      clue: "Time words, like next, then and at last, show the order of ideas. Look for them in each sentence.",
+      clue: "Time words show the order. One sentence has no time word, and it usually comes first.",
       hints: [
-        "Time words, like next, then and at last, show the order of ideas. Look for them in each sentence.",
-        "Think about what has to happen first before a tree can grow, and what can only happen after the tree has many years of rings.",
-        "The sentence that starts with Next tells about the sprout, so it comes right after the seed sentence. Place the other two."
+        "Time words show the order. One sentence has no time word, and it usually comes first.",
+        "Say the whole story of a tree's life to yourself. Then match each sentence to a part of the story.",
+        "The sentence that tells how a tree begins has no time word, so it starts the summary. Place the other three."
       ],
       how: [
         "Start with the sentence that has no time word and tells how a tree begins: \"A tree begins as a tiny seed.\"",
-        "Next, the seed sprouts. Then the tree adds a ring each year. At last, the rings can be counted.",
-        "The order is: begins as a seed; Next, sprouts; Then, adds a ring each year; At last, rings are counted."
+        "Soon, the seed sprouts. After that, the tree adds a ring each year. In the end, the rings can be counted.",
+        "The order is: begins as a seed; Soon, sprouts; After that, adds a ring each year; In the end, rings are counted."
       ],
       misconception: "A common mix-up is putting the last idea first because it sounds important. A summary follows the order the ideas happen in.",
-      why: "The order is: \"A tree begins as a tiny seed.\", then \"Next, the seed sprouts into a small tree.\", then \"Then, each year, the tree adds one new ring to its trunk.\", then \"At last, the rings can be counted to find out how old the tree is.\" The time words show the order." },
+      why: "The order is: \"A tree begins as a tiny seed.\", then \"Soon, the seed sprouts into a small tree.\", then \"After that, each year, the tree adds one new ring to its trunk.\", then \"In the end, the rings can be counted to find out how old the tree is.\" The time words show the order." },
     { id: "SK-RA1c-S10", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C10"],
       stem: ["Source A: Termites live in large groups called colonies. Each colony has a queen who lays eggs.", "Source B: Termites eat wood. Their tunnels can weaken the beams of a house.", "Here is Jo's draft summary.", "(1) Termites live in large groups called colonies. (2) Each colony has a queen who lays eggs. (3) Termites are the scariest bugs in the whole world. (4) Termites eat wood. (5) Their tunnels can weaken the beams of a house."],
@@ -2809,10 +2812,10 @@ PP.addLesson({
         { text: "Weather satellites take pictures of clouds." },
         { text: "Every house in the world should have a weather satellite." }
       ],
-      clue: "A summary of two sources needs a big idea from each one. Look for a sentence that covers both and sticks to what the sources say.",
+      clue: "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
       hints: [
-        "A summary of two sources needs a big idea from each one. Look for a sentence that covers both and sticks to what the sources say.",
-        "Ask what Source A is mostly about and what Source B is mostly about. Then read each choice.",
+        "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
+        "Read each choice and ask which of the two sources it comes from.",
         "\"Every house should have a weather satellite\" says more than the sources do. Check the other choices."
       ],
       how: [
@@ -2851,46 +2854,46 @@ PP.addLesson({
       prompt: "Which second source should Sam use?",
       choices: [
         { text: "a library book by a tree scientist, with a list of sources at the back", correct: true },
-        { text: "an ad for a garden shop that says its trees live forever" },
-        { text: "a comment by a stranger who writes, \"I guess you cut the tree and count\"" },
-        { text: "a silly song about a tree that dances" }
+        { text: "a page about how to grow tomatoes, written by a gardening expert in town" },
+        { text: "a company's own page that sells a tree tool and says its tool is the best" },
+        { text: "an old pamphlet about trees with no date and no author named anywhere" }
       ],
       clue: "A source you can trust shares facts from someone who knows the topic. Ask who made it and what it wants.",
       hints: [
         "A source you can trust shares facts from someone who knows the topic. Ask who made it and what it wants.",
-        "For each choice, ask three questions. Who made it? Do they know about trees? Do they want to teach, sell or joke?",
-        "A song about a dancing tree is made up for fun. Check the other three choices."
+        "For each choice, ask three questions. Who made it? Does that person know about the age of trees? What does the source want?",
+        "A gardening expert knows plants, but the page is about tomatoes. Check the other three choices."
       ],
       how: [
-        "Sam needs a source with facts from someone who knows about trees.",
+        "Sam needs a source with facts from someone who knows about trees and how to tell their age.",
         "A tree scientist knows how trees grow, and the book lists its sources. The answer is \"a library book by a tree scientist, with a list of sources at the back.\"",
-        "The ad wants to sell trees, the stranger is only guessing, and the song is made up."
+        "The tomato page is about a different topic, the company wants to sell a tool, and the pamphlet gives no author or date."
       ],
-      misconception: "A common mix-up is trusting a source that says what you already think. Trust a source whose writer knows the topic.",
-      why: "The answer is \"a library book by a tree scientist, with a list of sources at the back.\" A scientist who studies trees shares facts. The ad tries to sell, the stranger guesses, and the song is made up." },
+      misconception: "A common mix-up is trusting a source that is about plants in general. Trust a source whose writer knows this topic and can be named.",
+      why: "The answer is \"a library book by a tree scientist, with a list of sources at the back.\" A scientist who studies trees shares facts and names the sources. The tomato page is about a different topic, the company tries to sell, and the pamphlet names no author or date." },
     { id: "SK-RA1c-S14", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C14"],
-      stem: ["Source 1 (school newsletter): Our school planted twelve trees this spring. Trees give shade on hot days.", "Source 2 (city page): Trees also give homes to birds and squirrels. New trees grow strong when they are watered every week."],
-      prompt: "Ravi is joining ideas from both sources in his summary. Choose the best words for each blank.",
-      text: "The new trees give shade on hot days. {0}, they give homes to birds and squirrels. {1} the trees are watered every week, they grow strong.",
+      stem: ["Source 1 (school newsletter): Room 9 keeps its recess balls in a crate by the door.", "Source 2 (principal's page): Balls left outside often roll away or go flat. Starting next week, every class will get its own crate."],
+      prompt: "Pick the words that make Ravi's summary flow from one source to the other.",
+      text: "{0} balls left outside often roll away or go flat, Room 9 keeps its recess balls in a crate. {1}, every class will get its own crate.",
       slots: [
-        { options: ["Also", "Instead", "Yesterday", "For example"], answer: 0 },
-        { options: ["When", "Although", "Unless", "Before"], answer: 0 }
+        { options: ["Since", "Even though", "Next week", "For example"], answer: 0 },
+        { options: ["Next week", "Yesterday", "However", "Last month"], answer: 0 }
       ],
-      clue: "Linking words show how two ideas fit together. Ask whether the next idea adds to the first, happens later or is different.",
+      clue: "Linking words show how two ideas fit together. Ask which idea is the reason for the other, and which one happens later.",
       hints: [
-        "Linking words show how two ideas fit together. Ask whether the next idea adds to the first, happens later or is different.",
+        "Linking words show how two ideas fit together. Ask which idea is the reason for the other, and which one happens later.",
         "Say each sentence with the missing words. Ask which choice makes the ideas from the two sources fit together.",
-        "\"Yesterday\" would put the idea in the wrong time, because neither source says it happened yesterday. Test the other choices in both blanks."
+        "\"Yesterday\" would put the crates in the past, but the principal's page talks about the future. Test the other choices in both blanks."
       ],
       how: [
-        "The newsletter idea is about shade. The city page idea is a second good thing about trees, so it adds to the first.",
-        "The first blank is \"Also,\" because the second sentence adds one more good thing.",
-        "The second blank is \"When,\" because the trees grow strong whenever they are watered every week.",
-        "\"Instead\" and \"Although\" would show a difference, \"For example\" does not fit, and \"Unless\" and \"Before\" change the meaning."
+        "The principal's page gives the reason for the crate: balls left outside roll away or go flat.",
+        "The first blank is \"Since,\" because the rolling away is the reason Room 9 uses a crate.",
+        "The second blank is \"Next week,\" because the principal's page says the other classes get crates starting next week.",
+        "\"Even though\" and \"For example\" do not give a reason, and \"Yesterday,\" \"However\" and \"Last month\" do not match the time on the page."
       ],
       misconception: "A common mix-up is choosing a linking word that sounds fancy. Pick the one that shows how the two ideas really fit together.",
-      why: "The answers are \"Also\" and \"When.\" The city page gives a second good thing about trees, so Also joins it to the newsletter idea. The trees grow strong when they are watered every week. The other words change the meaning." },
+      why: "The answers are \"Since\" and \"Next week.\" Balls roll away or go flat, which is the reason for the crate, and the principal's page says every class gets a crate starting next week. The other words change the meaning or the time." },
     { id: "SK-RA1c-S15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C15"],
       stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia.", "Here is Anil's draft summary.", "(1) The platypus is a mammal that lays eggs. (2) It has a flat bill and webbed feet. (3) The platypus is the funniest-looking animal on Earth. (4) Kangaroos also live in Australia. (5) It hunts for food in streams."],
@@ -2971,8 +2974,8 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a time word for the wrong moment. Ask when the second idea happens." },
     "SK-RA1c-P5": {
       hints: [
-        "A good ending wraps up the big ideas. It does not add a new fact or a tiny detail.",
-        "Ask what Source 1 is mostly about and what Source 2 is mostly about. Then read the endings.",
+        "A good ending wraps up the big ideas. Think about what each source is mostly about.",
+        "Read each ending and ask what it tells the reader about monarchs.",
         "\"That is all I have to say\" tells the reader nothing about monarchs. Check the other three endings."
       ],
       how: [

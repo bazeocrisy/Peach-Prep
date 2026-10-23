@@ -3866,7 +3866,7 @@ PP.addLesson({
         hints: [
           "A topic sentence tells the main idea. It has to cover every detail, not just one.",
           "List what the details show: clouds, wind, thunder and rain. Ask what they all show together.",
-          "One choice is only about a single detail and one is about a whole season. Ask which choice covers all four details and nothing more."
+          "One choice is only about a single detail. Check the other three the same way."
         ],
         how: [
           "The details are dark clouds, wind, thunder and the first drops of rain.",
@@ -3898,7 +3898,7 @@ PP.addLesson({
         hints: [
           "A detail tells more about the topic sentence. Ask what this topic sentence says about Biscuit.",
           "The topic sentence says Biscuit is easy to care for. Ask which sentences tell what the class does to care for him.",
-          "Two of the choices are about guinea pigs or class pets but not about taking care of Biscuit. Decide which choices are left."
+          "One choice is about how Biscuit got his name, not how he is cared for. Decide among the other four."
         ],
         how: [
           "The topic sentence says Biscuit is easy to care for, so a detail must show how he is cared for.",
@@ -3955,8 +3955,8 @@ PP.addLesson({
         clue: "Find the topic sentence of the paragraph. Then test each sentence: does it tell more about that idea?",
         hints: [
           "Find the topic sentence of the paragraph. Then test each sentence: does it tell more about that idea?",
-          "Say the topic sentence in your own words. Three of the details show that idea. One only shares a word with it.",
-          "Two of the details start with something old and tell what it becomes. Look for the sentence that does not do that."
+          "Say the topic sentence in your own words. Then test each detail against it.",
+          "Sentence 3 is the topic sentence, so it is not the answer. Test the other four one at a time."
         ],
         how: [
           "Sentence 3 is the topic sentence: recycling turns old things into new things.",
@@ -3985,7 +3985,7 @@ PP.addLesson({
         hints: [
           "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
           "Name what each detail tells: what students do, what two helpers do, and what the whole group does. Ask what they have in common.",
-          "One choice covers only one of the three details. Another is about what can be recycled, not about what people do."
+          "One choice covers only one of the three details. Check the other three the same way."
         ],
         how: [
           "Sentence 8 tells what students do: they sort. Sentence 9 tells what two helpers do. Sentence 10 tells what the whole group does.",
@@ -4014,7 +4014,7 @@ PP.addLesson({
         hints: [
           "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
           "Name the idea of each of the three paragraphs. Then say the idea of the new facts in a few words and compare.",
-          "Two of the choices use the reason that everything is about recycling. Ask whether that reason makes every sentence belong in the same paragraph."
+          "One choice puts the facts in the paragraph about sorting because both are about recycling. Ask whether that reason makes every sentence belong together."
         ],
         how: [
           "The three paragraphs are about the new school program, how recycling makes new things, and the jobs students have.",
@@ -4048,7 +4048,7 @@ PP.addLesson({
         hints: [
           "A detail tells more about the topic sentence. Ask what the topic sentence says about Monday mornings.",
           "The topic sentence says the post office is busy. Ask which sentence shows the post office being busy.",
-          "Only one choice is about people inside the post office on a Monday morning. Check the other two against that idea."
+          "Stamp pictures are about the stamps, not about the post office being busy. Decide between the other two."
         ],
         how: [
           "The topic sentence says the post office is a busy place on Monday mornings.",
@@ -4110,7 +4110,7 @@ PP.addLesson({
         hints: [
           "Find the topic sentence of the paragraph. Then test every other sentence against it.",
           "The topic sentence is about how music class lets us be creative. Ask of each sentence: does it show being creative?",
-          "Several sentences tell what kids make up or invent. Look for the two that are about music class but not about being creative."
+          "Sentence 3 is the topic sentence, so it is not one of the answers. Test the other five against it."
         ],
         how: [
           "Sentence 3 is the topic sentence: music class lets us be creative.",
@@ -4139,7 +4139,7 @@ PP.addLesson({
         hints: [
           "Name the main idea of that paragraph before you choose. The new detail has to tell more about that idea.",
           "The topic sentence says music class helps us work together. Ask which sentence shows kids working together.",
-          "Three of the choices are facts about music class but not about working together. Check each one against the topic sentence."
+          "One choice tells when the class happens, which is not about working together. Check the other three."
         ],
         how: [
           "Sentence 9 says music class helps us work together. Sentences 10 and 11 show kids playing in a group and listening to each other.",
@@ -4251,7 +4251,7 @@ PP.addLesson({
         hints: [
           "Find the topic sentence and the idea of the first part of the draft. Then look for a sentence that is about something else and for a place where the idea changes.",
           "Check each sentence against the topic sentence. Then find where the draft moves from one idea to another.",
-          "Look at sentences 2 and 3 together: they are both about summer at the park. Decide which sentences are left that could be a problem."
+          "Sentence 3 is a summer detail that fits the topic sentence, so it should stay. Check the other four choices."
         ],
         how: [
           "The topic sentence says the park near the house is fun in summer. Sentences 2 and 3 show summer fun.",
@@ -4345,7 +4345,7 @@ PP.addLesson({
       hints: [
         "A topic sentence tells what the paragraph is about. It has to cover every detail, not just one.",
         "List what the details show: cooks, servers and a greeter. Ask what they all show together.",
-        "Two of the choices are about only one detail each. Ask which choice covers all three workers."
+        "One choice is about only one detail. Check the other three the same way."
       ],
       how: [
         "The details are cooks chopping, servers carrying plates and a greeter at the door.",
@@ -4377,7 +4377,7 @@ PP.addLesson({
       hints: [
         "A detail tells more about the topic sentence. Ask what this topic sentence says about the playground.",
         "The topic sentence says the playground is made for climbing. Ask which sentences tell a way to climb.",
-        "Two of the choices are about the school but not about climbing. Decide which choices are left."
+        "One choice is about the old playground, not about climbing. Decide among the other four."
       ],
       how: [
         "The topic sentence says the playground is made for climbing, so a detail must show climbing.",
@@ -4439,7 +4439,7 @@ PP.addLesson({
       hints: [
         "Find the topic sentence. Then test each sentence: does it tell more about that idea?",
         "Say the topic sentence in your own words. Three of the sentences show it. One is about a different place.",
-        "Two sentences are about kids playing games. Look at the others and ask where each one happens."
+        "Shooting baskets happens in a gym. Check the other three sentences the same way."
       ],
       how: [
         "The topic sentence says the gym is full of action on Friday afternoons.",
@@ -4503,7 +4503,7 @@ PP.addLesson({
       hints: [
         "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
         "Say the idea of each paragraph, then the idea of the new facts, and compare.",
-        "Two of the choices use a reason that is not about the idea of the paragraph. Ask whether being on the same farm makes every sentence belong together."
+        "One choice puts the facts in the paragraph about the cows because both are on the farm. Ask whether being on the same farm makes every sentence belong together."
       ],
       how: [
         "One paragraph is about the cows and the other is about the chickens.",
@@ -4537,7 +4537,7 @@ PP.addLesson({
       hints: [
         "A detail tells more about the topic sentence. Ask what the topic sentence says about winter mornings.",
         "The topic sentence says it is hard to get out of bed. Ask which sentence shows why.",
-        "Only one choice tells how the bed and the floor feel on a winter morning. Check the other two against that idea."
+        "The winter holidays are about a date, not about getting out of bed. Decide between the other two."
       ],
       how: [
         "The topic sentence says winter mornings are the hardest time to get out of bed.",
@@ -4604,7 +4604,7 @@ PP.addLesson({
       hints: [
         "Test every sentence against the topic sentence. Does it tell how a good listener pays attention?",
         "The topic sentence is about a good listener. Ask which sentences show what a listener does.",
-        "Several sentences show what a listener does with her eyes, head or voice. Look for the two that are about talking, not listening."
+        "The sentence about keeping her eyes on the speaker shows what a listener does. Test the other four."
       ],
       how: [
         "The topic sentence is about a good listener paying close attention.",
@@ -4636,7 +4636,7 @@ PP.addLesson({
       hints: [
         "Name the main idea of the paragraph first. The new detail has to tell more about that idea.",
         "The topic sentence says helping Grandpa in the workshop is a favorite job. Ask which sentence shows a way the child helps.",
-        "Three of the choices are about Grandpa, tools or family but not about helping in the workshop. Check each one against the topic sentence."
+        "One choice is about a truck, not about helping in the workshop. Check the other three."
       ],
       how: [
         "The topic sentence says helping Grandpa in his workshop is the writer's favorite job.",
@@ -4748,7 +4748,7 @@ PP.addLesson({
       hints: [
         "Look for a sentence about something else and a place where the idea changes.",
         "Check each sentence against the idea of its part of the draft. Then find where the draft moves from one idea to another.",
-        "Sentences 2 and 3 are both about the parade. Decide which sentences are left that could be a problem."
+        "Sentence 3 is a parade detail that fits the topic sentence, so it should stay. Check the other four choices."
       ],
       how: [
         "The topic sentence says the town has a big fall parade. Sentences 2 and 3 show the parade.",
@@ -6398,11 +6398,11 @@ PP.addLesson({
           "The elevator hummed a happy song."
         ],
         answer: [0],
-        clue: "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the elevator is something else.",
+        clue: "A metaphor compares two different kinds of things without like or as.",
         hints: [
-          "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the elevator is something else.",
-          "First set aside any sentence that has like or as. Then ask whether each remaining sentence says the elevator is a different kind of thing.",
-          "One sentence gives the elevator a person's action, and one just describes it. Check the others."
+          "A metaphor compares two different kinds of things without like or as.",
+          "Ask of each sentence: does it say the elevator is a different kind of thing?",
+          "One sentence compares with as to ice, so it is a simile. Check the other four."
         ],
         how: [
           "A metaphor says one thing is a different kind of thing, without like or as.",
@@ -6491,7 +6491,7 @@ PP.addLesson({
         hints: [
           "A good comparison shows a relationship between two ideas. Ask what Zoe wants the reader to understand about her quilt.",
           "The quilt comes from Zoe's old clothes. Ask which comparison links the quilt to remembering, not just to how it looks.",
-          "Two choices describe how the quilt looks in a pretty way. Check which comparison is about holding memories."
+          "One choice describes the quilt as a snowy field, which is only about how it looks. Check the other three."
         ],
         how: [
           "Sentence 2 says the quilt was made from pieces of Zoe's old clothes, so each patch holds a memory.",
@@ -6520,7 +6520,7 @@ PP.addLesson({
         hints: [
           "Personification gives a thing a person's actions. The sentence also has to fit what Zoe means: a cold, stormy night outside.",
           "Check each choice for two things. Does the wind do something only a person does? Does the action fit a cold night outside her window?",
-          "One choice compares with as, and one just tells a fact. Decide between the other two."
+          "One choice compares with as, so it is a simile and gives the wind no person's actions. Check the other three."
         ],
         how: [
           "Sentence 6 is about wind outside Zoe's window on a cold night.",
@@ -6581,7 +6581,7 @@ PP.addLesson({
         hints: [
           "A comparison fits when it shows what the writer wants to show. Rafael wants the chick to seem tiny and sleepy.",
           "Read each comparison and ask what it makes the reader picture. Is it tiny, sleepy, or something else?",
-          "Three of the comparisons show a small or sleepy chick. Look for the two that show something else."
+          "The comparison to a button shows something tiny, so it fits. Check the other four."
         ],
         how: [
           "Rafael wants the reader to picture a tiny, sleepy chick.",
@@ -6709,7 +6709,7 @@ PP.addLesson({
       hints: [
         "Personification gives a thing a person's actions. Ask what a person can do that a thing really cannot.",
         "Read each sentence and ask who or what is doing the action. Is it a thing doing something only a person does?",
-        "A dog really barks and a mom really turns off a light. Check the other three sentences."
+        "A dog really barks, so that sentence is not personification. Check the other four."
       ],
       how: [
         "Personification means a thing does something only a person does.",
@@ -6779,7 +6779,7 @@ PP.addLesson({
       hints: [
         "Find the sentence that the new sentence is about. It should come right after the sentence it adds to.",
         "The new sentence is about the feeder and the bird. Look for the sentence where the bird first appears.",
-        "The bird has not arrived by sentence 1 or 2, and it has flown away by sentence 5. Decide where it is on the feeder."
+        "The bird has not arrived yet in sentence 1. Decide among the other choices."
       ],
       how: [
         "The new sentence says the feeder swayed under the bird's weight.",
@@ -6881,8 +6881,8 @@ PP.addLesson({
       clue: "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the swing is something else.",
       hints: [
         "A metaphor compares two different kinds of things without like or as. Look for a sentence that says the swing is something else.",
-        "First set aside any sentence that has like or as. Then ask whether each remaining sentence says the swing is a different kind of thing.",
-        "One sentence gives the swing a person's action, and one just describes it. Check the others."
+        "Ask of each sentence: does it say the swing is a different kind of thing?",
+        "One sentence compares with like to a paper plane, so it is a simile. Check the other four."
       ],
       how: [
         "A metaphor says one thing is a different kind of thing, without like or as.",
@@ -6980,7 +6980,7 @@ PP.addLesson({
       hints: [
         "A good comparison shows a relationship between two ideas. Ask what Tia wants the reader to understand about books.",
         "Tia wants to link books to adventure. Ask which comparison shows books taking you somewhere new, not just how the shelves look.",
-        "Two choices are about how shelves look or what they hold. Check which comparison is about going to new places."
+        "One choice describes the shelves as fence posts, which is only about how they look. Check the other three."
       ],
       how: [
         "Tia wants the reader to see that books lead to adventure.",
@@ -7014,7 +7014,7 @@ PP.addLesson({
       hints: [
         "Personification gives a thing a person's actions. The sentence also has to fit what Ivy means: the swing is old and worn.",
         "Check each choice for two things. Does the swing do something only a person does? Does the action fit an old, worn swing?",
-        "One choice compares with as, and one just tells a fact. Decide between the other two."
+        "One choice compares with as, so it is a simile and gives the swing no person's actions. Check the other three."
       ],
       how: [
         "Ivy wants to show that the swing is old and worn out.",
@@ -7075,7 +7075,7 @@ PP.addLesson({
       hints: [
         "A comparison fits when it shows what the writer wants to show. Tomas wants the kitchen to seem warm and cozy.",
         "Read each comparison and ask what it makes the reader picture. Is it warm and cozy, or something else?",
-        "Three of the comparisons show a warm, cozy place. Look for the two that show something else."
+        "The warm hug shows a warm, cozy place, so it fits. Check the other four."
       ],
       how: [
         "Tomas wants the reader to picture a warm, cozy kitchen.",
@@ -7145,8 +7145,8 @@ PP.addLesson({
     "SK-SS2b-P5": {
       hints: [
         "Find the part of the story that the new sentence is about. It should come right after the sentence it adds to.",
-        "The new sentence is about raindrops falling. Look for the sentence where the rain begins.",
-        "By the last paragraph the storm is gone, and in the first paragraph the rain has not begun. Decide where the rain starts."
+        "The new sentence is about raindrops falling on the roof. Ask in which part of the story the rain is falling.",
+        "In the first paragraph the rain has not begun yet. Decide among the other choices."
       ],
       how: [
         "The new sentence is about raindrops dancing and drumming on the roof.",
