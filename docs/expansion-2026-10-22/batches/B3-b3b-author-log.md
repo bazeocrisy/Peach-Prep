@@ -463,3 +463,19 @@ Changed items kept their ids and `core.rev` stays "1". The architecture says mat
 - The RA1a write-task checklist is unchanged (indexes are stored).
 - Facts for the reviewer to check: koala sleep range, arctic tern migration claim, thermos, meerkat barks.
 - The guard and path scripts were not run.
+
+## Fixes after B3 re-review (SHOULDs)
+
+Source: B3-b3b-rereview.md (both lessons accepted, 0 MUST). No git was run.
+
+| Finding | Change | Live choices after H1 / H2 / H3 (my estimate) |
+|---|---|---|
+| T-S1, TT3a C06 | Prompt is now "Which sentence states the main opinion that Darnell's whole piece is about?" Targets p3:1:2 (bench) and p3:3:2 (Everyone knows) replaced by p3:3:1 ("Also, kids who get to play...") and p3:4:2 ("But kids join the league..."). The remaining targets no longer include any C07 choice except the "Some people say..." sentence that hint 3 names. `how` and `why` rewritten to describe the First, Also and But sentences instead of the bench and Everyone knows sentences. | 6 / 6 / 5 |
+| T-S2, TT3a C15 and S10 | The always-wrong "Everyone knows..." distractor is now a vague friendly opinion: "Dogs are such happy, playful animals." (C15) and "Breakfast is such a cozy, tasty way to start the day." (S10). Hints, `how`, `why` and misconception updated. The "I think" distractors stay, since hint 3 names them. C06 and C07 still contain "Everyone knows" because it belongs to the passage. | C15 4 / 4 / 3; S10 4 / 4 / 3 |
+| T-S3, TT3a Watch Me 3 | Topic changed from reading buddies (clashed with W-TASK-01) to a school garden: reason "gardening teaches kids to care for living things", evidence "fourth graders watered beans every day without reminders". Topic search: no other "garden" hit in a lesson that uses this reason or evidence (F-PF has a different class-garden reading passage). | not an item |
+| R-S1, RA C06 and S05 | Prompts now say "questions about hiccups" and "questions about meerkats". | C06 5 / 5 / 4; S05 5 / 5 / 4 |
+| R-S2, RA Learn It | Added a fourth step to the squirrel example: check whether the text already answers the new question; if it does, ask a different one. | not an item |
+| R-N2, RA S07 | Weak distractor "When was the first thermos made?" replaced by "How tall is a typical soup thermos?", with `how` and `why` updated. | 5 / 5 / 4 |
+
+Needs blind re-solve: TT3a C06, C15, S10; RA1a C06, S05, S07. Watch Me 3 and the Learn It step need a read.
+Changed items still keep their ids and `core.rev` "1" (see the earlier note to the lead).

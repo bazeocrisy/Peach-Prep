@@ -3786,7 +3786,298 @@ PP.addLesson({
         "The answer is \"Pine cones come in many shapes and sizes.\" It is about pine trees, but not about winter."
       ],
       misconception: "A common mix-up is keeping any sentence about the same topic. A key detail must tell more about the main idea.",
-      why: "The answer is \"Pine cones come in many shapes and sizes.\" It is about pines, but it does not tell how they handle winter. The needles, branches and bark all do." }
+      why: "The answer is \"Pine cones come in many shapes and sizes.\" It is about pines, but it does not tell how they handle winter. The needles, branches and bark all do." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TSDESC-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C02"],
+      stem: ["A platypus's bill is a tool for finding food. The bill looks like a duck's, but it is soft and rubbery. Under water, a platypus closes its eyes and its ears. Then it sweeps its bill from side to side. The bill can feel the tiny shakes in the water that shrimp and worms make. This lets the platypus find a meal in the dark mud of a creek."],
+      prompt: "The paragraph begins, \"A platypus's bill is a tool for finding food.\" What job does this sentence do in the paragraph?",
+      choices: [
+        { text: "It names what the whole paragraph is about.", correct: true },
+        { text: "It gives the last step in finding food." },
+        { text: "It tells a fun fact that does not fit the paragraph." },
+        { text: "It compares the bill with a duck's bill." }
+      ],
+      clue: "A first sentence often has a special job. Ask how it connects to the sentences that follow it.",
+      hints: [
+        "A first sentence often has a special job. Ask how it connects to the sentences that follow it.",
+        "Read the rest of the paragraph. What do all the other sentences tell about?",
+        "The first sentence tells no step, so it is not the last step in finding food. Test the other choices against all of the sentences."
+      ],
+      how: [
+        "The first sentence says the bill is a tool for finding food.",
+        "Every other sentence tells more about the bill: how it looks, how the platypus sweeps it and what it can feel.",
+        "The answer is \"It names what the whole paragraph is about.\"",
+        "It is not a step, it fits the paragraph, and the comparison with a duck is in the second sentence."
+      ],
+      misconception: "A common mix-up is thinking the first sentence is only a fun fact. Often it names the idea that the other sentences explain.",
+      why: "The answer is \"It names what the whole paragraph is about.\" The first sentence names the bill, and the other sentences tell more about how it is used. It is not a step or an extra fact, and the duck comparison is in the second sentence." },
+    { id: "SK-TSDESC-S05", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSDESC-P5"],
+      stem: ["Here is a paragraph about wombats. One sentence is shown below the paragraph. Wombats live in Australia. A wombat is about as big as a small dog. A wombat has strong claws for digging a long burrow. By day, a wombat rests in its burrow. At night, it comes out to eat grass."],
+      prompt: "Choose the clue word that best completes the sentence.",
+      text: "It {0} has thick fur that keeps it warm.",
+      slots: [
+        { options: ["also", "never", "only"], answer: 0 }
+      ],
+      clue: "Clue words show how sentences connect. Ask what the second sentence does with the first.",
+      hints: [
+        "Clue words show how sentences connect. Ask what the second sentence does with the first.",
+        "Read both sentences. Does the second one add another detail about the wombat, or does it change the subject?",
+        "The second sentence says the fur keeps the wombat warm, so a word that means not ever does not fit. Try each word that is left in the sentence."
+      ],
+      how: [
+        "Both sentences tell about the wombat's body. The first tells about its claws, and the second tells about its fur.",
+        "The second sentence adds one more detail, so it needs a clue word that adds.",
+        "The answer is also. Never says the wombat does not have fur, and only would mean the fur is the one thing it has."
+      ],
+      misconception: "A common mix-up is choosing a word that sounds fine but changes the meaning. Read the whole sentence with each word.",
+      why: "The answer is also. The second sentence adds one more detail about the wombat's body. Never would say the wombat has no fur, and only would leave out the claws." },
+    { id: "SK-TSDESC-S06", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TSDESC-C05"],
+      stem: ["A covered bridge is a bridge with a roof and walls. The floor is made of thick wooden boards. Long beams under the floor hold it up. The roof keeps rain and snow off the boards, so the wood lasts longer. Some covered bridges have a window in the side, so travelers can look at the creek below. Many of these old bridges are still standing today."],
+      prompt: "Which TWO clues show that this paragraph is organized as a description?",
+      choices: [
+        { text: "The first sentence names the topic.", correct: true },
+        { text: "Each later sentence tells about one part of the bridge.", correct: true },
+        { text: "The sentences tell the steps of building a bridge in order." },
+        { text: "The paragraph tells a trouble and the tries that fix it." },
+        { text: "Every sentence compares the bridge with a metal bridge." }
+      ],
+      clue: "Text structures have patterns. Steps in order, a trouble and its fix, a comparison, and one subject with details are some of them.",
+      hints: [
+        "Text structures have patterns. Steps in order, a trouble and its fix, a comparison, and one subject with details are some of them.",
+        "Read the paragraph and ask what it keeps telling about, from the first sentence to the last. Choose two.",
+        "There are no time words like first or next, so the paragraph does not tell steps. Test the other clues against the whole paragraph."
+      ],
+      how: [
+        "The first sentence names the topic, a covered bridge.",
+        "Each sentence after it tells about one part: the floor, the beams, the roof and the window.",
+        "The answers are \"The first sentence names the topic.\" and \"Each later sentence tells about one part of the bridge.\"",
+        "There are no steps, no trouble and no metal bridge in the paragraph."
+      ],
+      misconception: "A common mix-up is calling a paragraph a comparison or a trouble and fix without finding those in the text. Look at what the whole paragraph does.",
+      why: "The answers are \"The first sentence names the topic.\" and \"Each later sentence tells about one part of the bridge.\" That is the pattern of a description. The paragraph has no steps, no trouble to fix and no metal bridge." },
+    { id: "SK-TSDESC-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C06"],
+      stem: ["An okapi is a shy animal that lives in the forests of Africa. Its body is made to hide in the shadows. Its coat is dark brown and soft like velvet, so it blends in with the tree trunks. The stripes on its legs look like patches of light between the leaves. A baby okapi can stand up an hour after it is born."],
+      prompt: "Choose the words that best complete the sentences about the paragraph.",
+      text: "The paragraph is mostly about how an okapi's body {0}. A detail that supports this is its {1}.",
+      slots: [
+        { options: ["helps it hide in the shadows", "feels like soft velvet", "helps a baby stand up quickly"], answer: 0 },
+        { options: ["striped legs that look like patches of light", "baby that can stand up an hour after birth", "home in the forests of Africa"], answer: 0 }
+      ],
+      clue: "The main idea is the big point of a paragraph. A supporting detail helps prove it.",
+      hints: [
+        "The main idea is the big point of a paragraph. A supporting detail helps prove it.",
+        "Find the sentence that tells what the okapi's body is made to do. Then ask which details show that.",
+        "A baby standing up quickly is a fun fact about only one part of the paragraph, so it is not what the paragraph is mostly about. Test the other choices for each blank."
+      ],
+      how: [
+        "The second sentence says the okapi's body is made to hide in the shadows. The rest of the paragraph shows how.",
+        "The coat blends in with trunks, and the striped legs look like patches of light. So the first answer is \"helps it hide in the shadows.\"",
+        "The second answer is \"striped legs that look like patches of light,\" because the stripes help the okapi hide.",
+        "The velvet feel is one detail, and the baby and the forest home do not help it hide."
+      ],
+      misconception: "A common mix-up is choosing a true detail that does not prove the main idea.",
+      why: "The answers are \"helps it hide in the shadows\" and \"striped legs that look like patches of light.\" The coat and the striped legs help the okapi blend in. The soft feel, the baby standing up and the forest home do not show how it hides." },
+    { id: "SK-TSDESC-S08", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TSDESC-C08"],
+      stem: ["(1) A rhino has thick, gray skin that keeps it safe.", "(2) The skin is so tough that thorns cannot cut it.", "(3) A rhino's horn is made of the same stuff as your fingernails.", "(4) Mud baths keep the sun and biting flies away from a rhino's skin.", "(5) A rhino can run as fast as a person on a racing bike."],
+      prompt: "The main idea is that a rhino's skin keeps it safe. Which TWO sentences are fun facts that a reader could leave out without losing the main idea?",
+      choices: [
+        { text: "Sentence 3", correct: true },
+        { text: "Sentence 5", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 2" },
+        { text: "Sentence 4" }
+      ],
+      clue: "A fun fact is true and interesting, but the main idea does not need it. Test each sentence against the main idea.",
+      hints: [
+        "A fun fact is true and interesting, but the main idea does not need it. Test each sentence against the main idea.",
+        "For each sentence, ask: does it tell how the skin keeps the rhino safe? Choose two.",
+        "Sentence 2 shows how the skin keeps the rhino safe from thorns, so it is a key detail, not a fun fact. Test the other sentences the same way."
+      ],
+      how: [
+        "The main idea is that a rhino's skin keeps it safe.",
+        "Sentence 2 shows tough skin that thorns cannot cut. Sentence 4 shows mud baths that protect the skin. Sentence 1 states the main idea.",
+        "The horn and the running speed are interesting, but they do not tell how the skin keeps the rhino safe.",
+        "The answers are Sentence 3 and Sentence 5."
+      ],
+      misconception: "A common mix-up is leaving out the main idea sentence or a key detail because it seems less exciting than a fun fact.",
+      why: "The answers are Sentence 3 and Sentence 5. The horn and the running speed are true and interesting, but they are not about the skin. Sentences 1, 2 and 4 state or prove the main idea about the skin." },
+    { id: "SK-TSDESC-S09", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C09"],
+      stem: ["A tapir is a shy animal that lives in the forests of South America. It looks a bit like a pig with a short trunk. A tapir has strong legs for walking through thick forest. It has tough, thick skin that keeps off thorns. At night, it eats leaves and fruit, and it sleeps in the shade by day. Its babies have white spots and stripes."],
+      prompt: "The author wants to start the fourth sentence, \"It has tough, thick skin that keeps off thorns,\" with a clue word. Which revision connects it to the sentence before it best?",
+      choices: [
+        { text: "Also, it has tough, thick skin that keeps off thorns.", correct: true },
+        { text: "However, it has tough, thick skin that keeps off thorns." },
+        { text: "As a result, it has tough, thick skin that keeps off thorns." },
+        { text: "Next, it has tough, thick skin that keeps off thorns." }
+      ],
+      clue: "A clue word shows how two sentences connect. Ask what the second sentence does: add, show a difference, show a result or show the next step.",
+      hints: [
+        "A clue word shows how two sentences connect. Ask what the second sentence does: add, show a difference, show a result or show the next step.",
+        "Both sentences tell about the tapir's body. Does the second sentence go against the first, or add one more thing?",
+        "The skin is not a result of having strong legs, so a result word does not fit. Test the other words."
+      ],
+      how: [
+        "The first sentence tells about the tapir's legs. The second tells about its skin.",
+        "Both are parts of the tapir's body, and the second adds one more part.",
+        "The answer is \"Also, it has tough, thick skin that keeps off thorns.\"",
+        "However shows a difference, As a result shows a result, and Next shows a step."
+      ],
+      misconception: "A common mix-up is picking a clue word that sounds strong, like however, without checking what the sentences do.",
+      why: "The answer is \"Also, it has tough, thick skin that keeps off thorns.\" The second sentence adds one more part of the tapir's body. However shows a difference, As a result shows a result of strong legs, and Next shows a step." },
+    { id: "SK-TSDESC-S10", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSDESC-C10"],
+      stem: ["A Tour of Pages & Co.", "Picture Books: The low shelves by the window hold picture books. A soft rug is on the floor for little readers.", "Chapter Books: The tall shelves in the middle hold chapter books for older readers.", "The Back Room: A cozy room in the back has cookbooks and craft books. A big table is there for reading."],
+      prompt: "Why did the author organize \"A Tour of Pages & Co.\" as a description with headings, instead of using time words like first and next?",
+      choices: [
+        { text: "The author is telling about the different parts of one shop, and no part has to come before another.", correct: true },
+        { text: "The author is telling the steps a worker follows, and each step needs its own heading." },
+        { text: "The author is telling how the shop fixed a problem with its books." },
+        { text: "The author is comparing the shop of long ago with a shop of today." }
+      ],
+      clue: "Authors pick a structure that fits what they want to tell. Ask what the reader learns from each section.",
+      hints: [
+        "Authors pick a structure that fits what they want to tell. Ask what the reader learns from each section.",
+        "Read the headings one at a time, and say what each section tells about.",
+        "The sections do not tell about a trouble, so the choice about a problem does not fit. Test the other choices against the headings."
+      ],
+      how: [
+        "The headings name three parts of one shop: the picture books, the chapter books and the back room.",
+        "Each section describes what is in that part. One part does not have to come before another.",
+        "The answer is \"The author is telling about the different parts of one shop, and no part has to come before another.\"",
+        "There are no worker steps, no problem and no comparison of long ago and today."
+      ],
+      misconception: "A common mix-up is thinking headings always mean steps. Headings can also sort details about one topic.",
+      why: "The answer is \"The author is telling about the different parts of one shop, and no part has to come before another.\" Each section describes one part of the shop. The text has no worker steps, no problem and no comparison of long ago and today." },
+    { id: "SK-TSDESC-S11", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TSDESC-C11"],
+      stem: ["(1) A tarantula is a big, hairy spider. It lives in warm places.", "(2) Its body is built for hunting at night.", "(3) Tiny hairs on its legs feel the shakes that a bug makes.", "(4) Strong fangs hold the bug while the tarantula eats.", "(5) From its hairy legs to its fangs, a tarantula is made to catch food in the dark.", "(6) Some tarantulas live for twenty years, which is longer than most pets."],
+      prompt: "Which TWO sentences tell the main idea of the whole passage?",
+      choices: [
+        { text: "Sentence 2", correct: true },
+        { text: "Sentence 5", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 3" },
+        { text: "Sentence 4" },
+        { text: "Sentence 6" }
+      ],
+      clue: "The main idea is what the whole passage is about. A sentence that states it covers all of the details.",
+      hints: [
+        "The main idea is what the whole passage is about. A sentence that states it covers all of the details.",
+        "Read the details about the legs and the fangs. Which sentences are big enough to cover all of them? Choose two.",
+        "Sentence 6 does not tell about hunting, so it is a fun fact. Test the other sentences: does each one cover both the legs and the fangs?"
+      ],
+      how: [
+        "The details tell how the legs feel shakes and how the fangs hold food. Both help the tarantula hunt.",
+        "Sentence 2 says the body is built for hunting at night. Sentence 5 says from the legs to the fangs, it is made to catch food in the dark.",
+        "The answers are Sentence 2 and Sentence 5.",
+        "Sentence 1 names the topic. Sentences 3 and 4 each tell one detail, and Sentence 6 is a fun fact."
+      ],
+      misconception: "A common mix-up is choosing the first sentence because it comes first. A sentence that only names the topic is not the main idea.",
+      why: "The answers are Sentence 2 and Sentence 5. Both cover the legs and the fangs. Sentence 1 only names the topic, Sentences 3 and 4 each tell one detail, and Sentence 6 is a fun fact." },
+    { id: "SK-TSDESC-S12", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TSDESC-C12"],
+      stem: ["A capybara is a big animal that lives near rivers and lakes in South America. Its body is built for life near water. It has webbed toes that help it paddle. Its eyes, ears and nose sit high on its head, so it can swim with them above the water. Capybaras live in big family groups. A capybara can weigh as much as a grown woman. It eats grass and bark."],
+      prompt: "Which TWO details best support the main idea that a capybara's body is built for life near water?",
+      choices: [
+        { text: "It has webbed toes that help it paddle.", correct: true },
+        { text: "Its eyes, ears and nose sit high on its head, so it can swim with them above the water.", correct: true },
+        { text: "Capybaras live in big family groups." },
+        { text: "A capybara can weigh as much as a grown woman." },
+        { text: "It eats grass and bark." }
+      ],
+      clue: "Key details prove the main idea. Test each detail: does it show how the body fits life near water?",
+      hints: [
+        "Key details prove the main idea. Test each detail: does it show how the body fits life near water?",
+        "Read the sentences after the first two. Which ones tell about parts of the capybara's body and what they do for it? Choose two.",
+        "Living in family groups tells how capybaras live together, not about their bodies. Test the other details the same way."
+      ],
+      how: [
+        "The main idea is that a capybara's body is built for life near water.",
+        "Two details show body parts that help in water: webbed toes for paddling, and eyes, ears and nose high on the head for swimming.",
+        "The answers are \"It has webbed toes that help it paddle.\" and \"Its eyes, ears and nose sit high on its head, so it can swim with them above the water.\"",
+        "Family groups and food are not body parts, and its weight does not help it in the water."
+      ],
+      misconception: "A common mix-up is choosing any true fact from the passage. A key detail must help prove the main idea.",
+      why: "The answers are \"It has webbed toes that help it paddle.\" and \"Its eyes, ears and nose sit high on its head, so it can swim with them above the water.\" Both show how its body fits life near water. Family groups, weight and food do not." },
+    { id: "SK-TSDESC-S13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C13"],
+      stem: ["Paragraph 3: A pangolin's body is covered with hard scales. If a lion comes close, the pangolin rolls into a tight ball. Then the scales on the outside protect its soft belly. A lion may sniff and paw at the ball, but it cannot bite through the scales.", "Text box: Did You Know? The word pangolin comes from a word that means \"something that rolls up.\""],
+      prompt: "A student wants to move the fact in the text box into Paragraph 3. Would that be a good change?",
+      choices: [
+        { text: "No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.", correct: true },
+        { text: "Yes. The fact shows how the scales protect a pangolin's soft belly." },
+        { text: "Yes. Every fact in a passage belongs inside a paragraph, not in a box." },
+        { text: "No. A text box must always hold the main idea of the whole passage." }
+      ],
+      clue: "A text box sets some facts apart. Ask whether the fact in the box tells more about the paragraph's idea, or is just interesting.",
+      hints: [
+        "A text box sets some facts apart. Ask whether the fact in the box tells more about the paragraph's idea, or is just interesting.",
+        "Say in a few words what Paragraph 3 is about. Then read the fact in the box again.",
+        "A text box does not have to hold the main idea, so the last choice does not fit. Test the others against Paragraph 3."
+      ],
+      how: [
+        "Paragraph 3 is about how the scales protect the pangolin.",
+        "The box fact tells where the word pangolin comes from. It does not tell how the scales protect it.",
+        "The answer is \"No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.\"",
+        "Facts can sit in a box, and a box does not have to hold the main idea."
+      ],
+      misconception: "A common mix-up is deciding by the box alone. A box can hold an extra fact, so check the fact against the paragraph.",
+      why: "The answer is \"No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.\" Paragraph 3 is about the scales. A box can hold an extra fact, and it does not have to hold the main idea." },
+    { id: "SK-TSDESC-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C14"],
+      stem: ["(1) ______", "(2) When a hungry fish bites it, it squirts out sticky threads. The threads tangle the fish.", "(3) It can push out part of its body to confuse an enemy. The part grows back later.", "(4) Its rough, bumpy skin can turn soft or hard in a moment.", "(5) In addition, some kinds squirt out a bad-tasting liquid. A sea cucumber moves slowly, so it needs these tricks."],
+      prompt: "A student wrote this description of a sea cucumber. Which sentence would best fill the blank as the main idea sentence?",
+      choices: [
+        { text: "A sea cucumber has strange ways to stay safe from enemies.", correct: true },
+        { text: "A sea cucumber lives on the bottom of the sea." },
+        { text: "A sea cucumber's rough skin is its most useful body part." },
+        { text: "First, a sea cucumber hides under a rock." }
+      ],
+      clue: "A main idea sentence names the topic and the big point. Every detail after it should tell more about that point.",
+      hints: [
+        "A main idea sentence names the topic and the big point. Every detail after it should tell more about that point.",
+        "Read sentences 2 to 5 and say what they all tell about.",
+        "Sentence 4 is only about the skin, so a main idea sentence about skin is too small. Test the other choices against all four sentences."
+      ],
+      how: [
+        "Sentence 2 squirts threads, sentence 3 pushes out part of its body, sentence 4 changes its skin and sentence 5 squirts a liquid.",
+        "All of them are ways a sea cucumber stays safe from enemies.",
+        "The answer is \"A sea cucumber has strange ways to stay safe from enemies.\"",
+        "Where it lives is not explained by the details, the skin is only one detail, and First is a time word for a step."
+      ],
+      misconception: "A common mix-up is choosing a sentence that fits only one detail. A main idea sentence covers all of them.",
+      why: "The answer is \"A sea cucumber has strange ways to stay safe from enemies.\" Every detail is a way it stays safe. Where it lives is not explained by the details, the skin is only one detail, and First begins a step." },
+    { id: "SK-TSDESC-S15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
+      like: ["SK-TSDESC-C15"],
+      stem: ["A student is writing a description of the class library corner. Here is the paragraph with two blanks."],
+      prompt: "Choose the clue words that best complete the paragraph.",
+      text: "Our library corner has a spot for every reader. Soft pillows lie on the floor for kids who like to curl up. {0}, a lamp hangs over a table for kids who like to sit up. The shelves hold many kinds of books, {1} funny stories and books about space.",
+      slots: [
+        { options: ["Also", "However", "Because"], answer: 0 },
+        { options: ["such as", "so", "but"], answer: 0 }
+      ],
+      clue: "Clue words in a description add details and give examples. Read each sentence with each word.",
+      hints: [
+        "Clue words in a description add details and give examples. Read each sentence with each word.",
+        "For the first blank, ask whether the lamp sentence adds another place for readers or goes against the pillows. For the second blank, ask what follows the word.",
+        "The lamp does not go against the pillows, so a word that shows a difference does not fit the first blank. Try each word that is left in the second blank."
+      ],
+      how: [
+        "The pillows are one thing for readers. The lamp and table are one more thing, so the first blank needs a word that adds.",
+        "The shelves hold many kinds of books, and funny stories and books about space are examples, so the second blank needs a word that gives examples.",
+        "The answers are Also and such as.",
+        "However shows a difference, Because shows a reason, so shows a result and but shows a difference."
+      ],
+      misconception: "A common mix-up is choosing a clue word that sounds smooth. Ask what the sentence does: add, give an example, or show a difference.",
+      why: "The answers are Also and such as. Also adds the lamp and table to the pillows. Such as introduces examples of the kinds of books. However, because, so and but show a difference, a reason or a result." }
   ],
   /* Hints and Show me how for items kept in practice: refs P6 and P5 (core set 1) and Together P1-P4
      (P1 and P4 revised). */

@@ -50,7 +50,8 @@ PP.addLesson({
       steps: [
         "Find what Lin just learned: squirrels bury nuts and dig up many of them later.",
         "Look for a word that makes you wonder. The text says \"many\" of the nuts, not all of them.",
-        "Turn that wondering into a new question that starts with a question word."
+        "Turn that wondering into a new question that starts with a question word.",
+        "Check the text again. Does it already answer your new question? If it does, ask a different one. Lin's question about the nuts nobody digs up is still open."
       ],
       answer: "A good dig-deeper question is \"What happens to the nuts that squirrels never dig up?\""
     },
@@ -254,7 +255,7 @@ PP.addLesson({
     ] },
     { title: "Set 2", items: [
       { id: "SK-RA1a-C06", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: ["p3"], pick: 2,
-        prompt: "Jamal read the whole article. Now he wants questions to research next. Which TWO questions would still be worth researching after reading this article?",
+        prompt: "Jamal read the whole article. Now he wants questions to research next. Which TWO questions about hiccups would still be worth researching after reading this article?",
         choices: [
           { text: "What ideas do scientists have about why we hiccup?", correct: true },
           { text: "How well does holding your breath work to stop hiccups?", correct: true },
@@ -582,7 +583,7 @@ PP.addLesson({
     { id: "SK-RA1a-S05", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: [], pick: 2,
       like: ["SK-RA1a-C06"],
       stem: ["Ty read this short text:", "Meerkats live in groups called mobs. While the group digs for food, one meerkat stands on a high spot as a guard. If the guard sees a hawk, it gives a loud bark. Then the others run into their burrows."],
-      prompt: "Ty wants questions to research next. Which TWO questions would still be worth researching after reading this text?",
+      prompt: "Ty wants questions to research next. Which TWO questions about meerkats would still be worth researching after reading this text?",
       choices: [
         { text: "How do meerkats decide which one will be the guard?", correct: true },
         { text: "How do the other meerkats know what each kind of bark means?", correct: true },
@@ -632,7 +633,7 @@ PP.addLesson({
       options: [
         "What inside a thermos keeps the heat from getting out?",
         "Why does soup in a thermos stay hot for hours?",
-        "When was the first thermos made?",
+        "How tall is a typical soup thermos?",
         "How do ovens get so hot?",
         "How much does a thermos cost at the store?"
       ],
@@ -647,9 +648,9 @@ PP.addLesson({
         "Nadia's topic is not just a thermos. It is how a thermos keeps soup hot.",
         "What keeps the heat in and why the soup stays hot for hours are both about keeping soup hot.",
         "The answers are \"What inside a thermos keeps the heat from getting out?\" and \"Why does soup in a thermos stay hot for hours?\"",
-        "The first thermos and the price are about a thermos, but not about keeping soup hot."
+        "How tall a thermos is and the price are about a thermos, but not about keeping soup hot."
       ],
-      why: "The answers are \"What inside a thermos keeps the heat from getting out?\" and \"Why does soup in a thermos stay hot for hours?\" Both are about keeping soup hot. The first thermos and the price are about a thermos but not that topic, and ovens are a different topic." },
+      why: "The answers are \"What inside a thermos keeps the heat from getting out?\" and \"Why does soup in a thermos stay hot for hours?\" Both are about keeping soup hot. How tall a thermos is and the price are about a thermos but not that topic, and ovens are a different topic." },
     { id: "SK-RA1a-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C12"],
       stem: ["Ella read this: \"Koalas live in Australia. They eat the leaves of eucalyptus trees, and they sleep 18 to 22 hours a day.\"", "Her question is \"How big is a baby koala when it is born?\""],

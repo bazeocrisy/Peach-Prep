@@ -48,14 +48,14 @@ PP.addLesson({
       answer: "The writer tells the worry, that the sharpeners would be too noisy, and then answers it: they are quiet, and they would be used only before class."
     },
     {
-      show: ["Our class should have a reading buddy day each week. Reading buddies help younger kids get better at reading. Last month, the first graders who read with us learned many new words. Their teacher also said they read more smoothly."],
-      ask: "What evidence supports the reason that reading buddies help younger kids?",
+      show: ["Our school should plant a garden each spring. Gardening teaches kids to care for living things. Last year, the fourth graders who planted beans watered them every day. Their teacher said no one had to be reminded."],
+      ask: "What evidence supports the reason that gardening teaches kids to care for living things?",
       steps: [
-        "Find the reason first: reading buddies help younger kids get better at reading.",
+        "Find the reason first: gardening teaches kids to care for living things.",
         "Read the sentences after the reason. Look for facts or examples.",
-        "Check each one. Does it prove that the younger kids got better? Learning new words and reading more smoothly both do."
+        "Check each one. Does it prove that kids learned to care for the plants? Watering every day without reminders does."
       ],
-      answer: "The first graders learned many new words, and their teacher said they read more smoothly."
+      answer: "The fourth graders watered the beans every day, and their teacher said no one had to be reminded."
     }
   ],
   parent: "When you see an ad, a sign or a review together, ask: What does the writer want you to think? What reasons do they give? Then sort a few sentences into facts you could check and opinions people might disagree with.",
@@ -221,8 +221,8 @@ PP.addLesson({
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT3a-C06", type: "hottext", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"],
-        prompt: "Darnell gives more than one opinion. Which sentence states the main opinion that his whole piece is about? Choose the sentence in the passage.",
-        targets: ["p3:1:1", "p3:1:2", "p3:1:3", "p3:2:1", "p3:3:2", "p3:4:1"],
+        prompt: "Which sentence states the main opinion that Darnell's whole piece is about? Choose the sentence in the passage.",
+        targets: ["p3:1:1", "p3:1:3", "p3:2:1", "p3:3:1", "p3:4:1", "p3:4:2"],
         answer: ["p3:1:3"], pick: 1,
         clue: "The main opinion is the idea that all of the author's reasons support.",
         hints: [
@@ -234,10 +234,10 @@ PP.addLesson({
           "Paragraphs 2 and 3 each start with a reason, after the words First and Also.",
           "Both reasons explain why every player should get the same time to play, and the last paragraph asks for the same thing.",
           "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\"",
-          "The sentence about sitting on the bench and the sentence that starts with Everyone knows are smaller ideas inside the piece. Neither one is what both reasons support."
+          "The sentences that start with First and Also are reasons, and the sentence that starts with But is part of his reply to other people. None of them is what both reasons support."
         ],
         misconception: "A common mix-up is choosing the first sentence that tells what someone thinks. The main opinion is the one every reason supports.",
-        why: "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and the Everyone knows sentence are smaller ideas, the First sentence is a reason, and the best players playing most is what other people say." },
+        why: "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\" Both reasons and the ending support it. The First and Also sentences are reasons, the But sentence is part of his reply, and the best players playing most is what other people say." },
       { id: "SK-TT3a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"], pick: 2,
         prompt: "Which TWO of these ideas from the passage are facts that could be checked?",
         choices: [
@@ -428,7 +428,7 @@ PP.addLesson({
         prompt: "Which sentence would be the strongest evidence for Malik's reason?",
         choices: [
           { text: "Last month, two dogs that were running loose at the ball field ran into the street.", correct: true },
-          { text: "Everyone knows that dogs are the very best pets a family can ever have." },
+          { text: "Dogs are such happy, playful animals." },
           { text: "Our town has three parks, one swimming pool and a big lake with a dock." },
           { text: "I think the dog owners in our town would be very happy with a dog park." }
         ],
@@ -442,10 +442,10 @@ PP.addLesson({
           "Malik's reason is that dogs need a safe place to run without a leash.",
           "Two loose dogs running into the street is a real event that someone could check, and it shows that running loose is not safe now.",
           "The answer is \"Last month, two dogs that were running loose at the ball field ran into the street.\"",
-          "\"Everyone knows\" and \"I think\" tell what someone thinks, so they are opinions, not proof. The parks and pool are facts, but they do not show anything about dogs."
+          "The sentence about happy dogs and the \"I think\" sentence tell what someone thinks, so they are opinions, not proof. The parks and pool are facts, but they do not show anything about dogs."
         ],
-        misconception: "A common mix-up is picking a sentence that sounds sure, like \"Everyone knows ...\". A sentence can sound sure and still be an opinion.",
-        why: "The answer is \"Last month, two dogs that were running loose at the ball field ran into the street.\" It is a fact that could be checked, and it shows why dogs need a safe place to run. The best pets and the happy owners are opinions, and the parks and pool do not tell about dogs." }
+        misconception: "A common mix-up is picking a sentence that sounds sure or friendly. A sentence can sound nice and still be an opinion, not proof.",
+        why: "The answer is \"Last month, two dogs that were running loose at the ball field ran into the street.\" It is a fact that could be checked, and it shows why dogs need a safe place to run. The happy dogs and the happy owners are opinions, and the parks and pool do not tell about dogs." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own new short text. Each `like` lists only
@@ -674,7 +674,7 @@ PP.addLesson({
       prompt: "Which sentence would be the strongest evidence for this reason?",
       choices: [
         { text: "At Pine Grove School, kids paid better attention once breakfast was served in class.", correct: true },
-        { text: "Everyone knows that breakfast is the most important meal of the whole day." },
+        { text: "Breakfast is such a cozy, tasty way to start the day." },
         { text: "Our school cafeteria has 12 long tables and one very big kitchen." },
         { text: "I think pancakes with syrup are the very best breakfast food of all." }
       ],
@@ -688,9 +688,9 @@ PP.addLesson({
         "The reason is that kids learn better when they are not hungry.",
         "What happened at another school once breakfast was served in class is an example someone could check, and it is about learning.",
         "The answer is \"At Pine Grove School, kids paid better attention once breakfast was served in class.\"",
-        "\"Everyone knows\" and \"I think\" tell what someone thinks, so they are not proof. The tables are a fact about the cafeteria, not about learning."
+        "The cozy-breakfast sentence and the \"I think\" sentence tell what someone thinks, so they are not proof. The tables are a fact about the cafeteria, not about learning."
       ],
-      why: "The answer is \"At Pine Grove School, kids paid better attention once breakfast was served in class.\" It is a checkable example about learning. The other three are an opinion that sounds sure, an unrelated fact and a food opinion." },
+      why: "The answer is \"At Pine Grove School, kids paid better attention once breakfast was served in class.\" It is a checkable example about learning. The other three are a cozy opinion, an unrelated fact and a food opinion." },
     { id: "SK-TT3a-S11", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: [],
       like: ["SK-TT3a-C10"],
       stem: ["Opinion: Every third grader should learn to read a map."],
