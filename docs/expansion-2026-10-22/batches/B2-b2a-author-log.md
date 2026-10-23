@@ -386,3 +386,47 @@ This section replaces §3–§5 wherever they differ. Ids still follow position 
   - 2.b C04, C05 and C10;
   - 2.c C04 and S02;
   - the passage text in 2.b p5 (joined sentences) and 2.c p6 ("rice plantations").
+
+## 12. Fixes after the second re-review (B2-rereview-T2-2.md)
+
+Both 3.T.T.2.a and 3.T.T.2.b were accepted. I made the reviewer's two SHOULD fixes and the NOTE-5 trim.
+- **`check-content.js --all`:** PASS, 0 failures. The only warnings in my lessons are the similar-coverage lines.
+- **`readability.py`:** 2.b p4 is now 179 words at FK 3.0.
+
+### 12.1 Correction to §11.3
+
+§11.3 overstated two ladders. After hint 3, only the key was left in each:
+- **2.a C03:** hint 3's one-sentence rule also removed "a family that takes home a gray cat".
+- **2.b S02:** hint 3's shops-came-later fact also removed the leftover-bricks choice, and "farmers wanted dirt" contradicted the effect the question asks about.
+
+Section 12.3 replaces those two rows.
+
+### 12.2 What changed
+
+| Finding | Fix made |
+|---|---|
+| SHOULD-1, 2.a C03 | Added a fourth option, broad but wrong: "animals waiting for new homes at the shelter". Animals appear in every sentence, so the one-sentence rule cannot remove it, but the option leaves out the helpers. Hint 3 is unchanged. The how and why now explain why it is wrong |
+| SHOULD-2, 2.b S02 | Replaced "Farmers asked the town to keep the streets made of dirt" with "Too many wagons crowded Main Street, so the town wanted a wider road." Wagons and the street are both in the text, so the shops-came-later fact cannot remove it, but crowding is not the problem the text gives. The why now covers it |
+| NOTE-5, 2.b p4 | "At last, they said yes." is now "They said yes." That brings p4 to 179 words. C06's hint 1 and clue named the time words "at last" and "since then", which are no longer in p4, so they now say "a few years later and today". No item quoted the removed words |
+
+### 12.3 Choices left after each hint (changed items)
+
+| Item | All choices | After h1 | After h2 | After h3 |
+|---|---|---|---|---|
+| 2.a C03 | K, girl-and-puppy, family-takes-cat, animals-waiting | 4 | 4 | K, animals-waiting (the one-sentence rule removes the girl and the family) |
+| 2.b S02 | K, shops-wanted-red, leftover-bricks, wagons-crowded | 4 | 4 | K, wagons-crowded (the shops-came-later fact removes the shops and the leftover bricks) |
+| 2.b C06 (order, hint 1 wording only) | 5 steps | open | open | first step fixed |
+
+**Within-set checks:**
+- **2.a set 1:** C03's new option is not stated or answered by P4, P7, C04 or C05, or by Together P1, P2 or P6.
+- **2.b:** S02 is a similar item, and nothing in core set 1 or set 2 mentions Maple Grove.
+
+### 12.4 Findings not addressed
+
+- **NOTE-1, weak distractors on sound items** (2.a C05 and C12; 2.b S01 and S03). The reviewer rated these as no finding, since each item still keeps two live choices. I left them as they are.
+- **NOTE-2, close ladders on 2.a P3 and P5.** The reviewer accepted both, and I made no change.
+- Everything listed in §11.5 still stands.
+
+### 12.5 Needs blind re-solve
+
+2.a C03 and 2.b S02. The keys are unchanged. Each now has one new distractor.

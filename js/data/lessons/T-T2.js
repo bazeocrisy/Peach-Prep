@@ -244,7 +244,7 @@ PP.addLesson({
         prompt: "No sentence in this paragraph states the main idea. Choose the answer that best tells what the paragraph is mostly about.",
         text: "The paragraph is mostly about {0}.",
         slots: [
-          { options: ["helpers caring for the animals at a busy shelter", "a girl who reads a story to a shy puppy", "a family that takes home a gray cat"], answer: 0 }
+          { options: ["helpers caring for the animals at a busy shelter", "a girl who reads a story to a shy puppy", "a family that takes home a gray cat", "animals waiting for new homes at the shelter"], answer: 0 }
         ],
         clue: "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
         hints: [
@@ -255,10 +255,10 @@ PP.addLesson({
         how: [
           "The sentences tell about teenagers walking dogs, a grandfather filling bowls and sweeping, a girl reading to a puppy and a family taking home a cat.",
           "Most of them are helpers doing jobs for the animals at the shelter.",
-          "The answer is \"helpers caring for the animals at a busy shelter.\" The girl and the family taking home a cat are each only one detail."
+          "The answer is \"helpers caring for the animals at a busy shelter.\" The girl and the family taking home a cat are each only one detail. Animals are in many sentences, but the paragraph is about what the helpers do for them, not about the animals waiting."
         ],
         misconception: "A common mix-up is choosing one detail as the main idea. The main idea covers every sentence.",
-        why: "The answer is \"helpers caring for the animals at a busy shelter.\" The first sentence says the shelter is full of helpers, and the others show them walking dogs, filling bowls, sweeping and reading. The girl with the puppy and the family with the cat are each one detail." },
+        why: "The answer is \"helpers caring for the animals at a busy shelter.\" The first sentence says the shelter is full of helpers, and the others show them walking dogs, filling bowls, sweeping and reading. The girl with the puppy and the family with the cat are each one detail, and the animals waiting for homes leaves out the helpers, who are in every sentence." },
       { id: "SK-TT2a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p1"],
         prompt: "The author wants to add a heading above paragraph 2. Which heading fits paragraph 2 best?",
         choices: [
@@ -887,7 +887,7 @@ PP.addLesson({
         ["In 1889, a world's fair was held in Paris, France.", "Workers built the Eiffel Tower for it, the tallest tower in the world then.", "People came from all over to see it."],
         ["A few years later, Chicago planned its own world's fair for 1893.", "The planners wanted something even more amazing than the tower in Paris.", "So they asked builders for their best ideas."],
         ["An engineer named George Ferris drew a plan for a giant turning wheel.", "Many people doubted his plan.", "They said a wheel that big would fall down."],
-        ["Ferris did not give up.", "He showed the planners how strong steel parts would hold it together.", "At last, they said yes.", "Workers built the wheel all winter."],
+        ["Ferris did not give up.", "He showed the planners how strong steel parts would hold it together.", "They said yes.", "Workers built the wheel all winter."],
         ["In June 1893, the wheel turned for the first time.", "It was taller than a 20-story building.", "It had 36 cars, and each one held about 60 people."],
         ["The wheel stayed strong all summer, even on windy days.", "Because it was safe, people stopped worrying and lined up to ride.", "Today, wheels like it, called Ferris wheels, are all over the world."]
       ] },
@@ -1073,9 +1073,9 @@ PP.addLesson({
           "Workers build the wheel all winter.",
           "The wheel turns for the first time."
         ],
-        clue: "In a series of historical events, look for dates and time words like later, at last and since then.",
+        clue: "In a series of historical events, look for dates and time words like a few years later and today.",
         hints: [
-          "In a series of historical events, look for dates and time words like later, at last and since then.",
+          "In a series of historical events, look for dates and time words like a few years later and today.",
           "Each paragraph moves forward in time. Find which paragraph each event comes from.",
           "The tower in Paris was built for a fair in 1889, years before Chicago's fair, so it comes first. Put the other four in order the same way."
         ],
@@ -1326,7 +1326,7 @@ PP.addLesson({
         { text: "Wagons sank in the mud, so farmers could not get their crops to town.", correct: true },
         { text: "New shops on Main Street wanted the street to look red." },
         { text: "The bricks were left over after the new shops were built." },
-        { text: "Farmers asked the town to keep the streets made of dirt." }
+        { text: "Too many wagons crowded Main Street, so the town wanted a wider road." }
       ],
       clue: "A cause happens first. Look for a signal word that links the problem to what the town did.",
       hints: [
@@ -1339,7 +1339,7 @@ PP.addLesson({
         "The sentence before it tells the cause: wagons sank in the mud, and farmers could not bring their crops to town.",
         "The answer is \"Wagons sank in the mud, so farmers could not get their crops to town.\""
       ],
-      why: "The answer is \"Wagons sank in the mud, so farmers could not get their crops to town.\" The word So shows that paving the street was the town's answer to the mud. The shops opened after the paving, and nothing says the bricks were left over or that farmers wanted dirt." },
+      why: "The answer is \"Wagons sank in the mud, so farmers could not get their crops to town.\" The word So shows that paving the street was the town's answer to the mud. The shops opened after the paving, nothing says the bricks were left over, and the text says the wagons sank in mud, not that the street was crowded." },
     { id: "SK-TT2b-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-C14"],
       stem: ["Heat moves from hot things to cooler things. If you leave a metal spoon in a bowl of hot soup, heat moves from the soup into the spoon. The heat travels up the metal, so after a few minutes the handle feels warm. Heat does not move through wood as easily, so a wooden spoon's handle stays cooler."],
