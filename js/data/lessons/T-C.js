@@ -128,7 +128,7 @@ PP.addLesson({
         { text: "families who give seeds and tools" },
         { text: "kids who do not like vegetables" }
       ],
-      clue: "A letter names the person it is written to. Look at the very top.",
+      clue: "A letter names the person it is written to. Ask who Rosa is talking to as she asks for things.",
       why: "The answer is the school principal. The letter begins \"Dear Principal Okafor,\" and asks the principal to say yes. The other people are only talked about in the letter." },
     { id: "SK-TC1a-P3", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Rosa asks the principal for a garden in two places. Choose the two sentences in the letter.",
@@ -186,7 +186,7 @@ PP.addLesson({
         clue: "Purpose and audience go together. Ask what Rosa wants this time, and who will read the note.",
         hints: [
           "Purpose and audience go together. Ask what Rosa wants this time, and who will read the note.",
-          "Reread the letter. Find what Rosa asked the principal for, and what her class promised to do.",
+          "Reread the letter. Notice who Rosa wrote to and what she asked that reader to do.",
           "The bean plant story is made up for fun, so it does not ask anyone for help. Check each choice that is left."
         ],
         how: [
@@ -253,9 +253,9 @@ PP.addLesson({
           { text: "to tell a story about a child who finds a roly-poly" },
           { text: "to show readers how to keep a roly-poly as a pet" }
         ],
-        clue: "Ask what the whole article mostly does. One paragraph may tell you to do something, but check what most of the paragraphs do.",
+        clue: "Ask what the whole article mostly does. Does it give information, ask the reader to act, or tell a story?",
         hints: [
-          "Ask what the whole article mostly does. One paragraph may tell you to do something, but check what most of the paragraphs do.",
+          "Ask what the whole article mostly does. Does it give information, ask the reader to act, or tell a story?",
           "Make a quick list: what does each paragraph give the reader? Start with paragraph 1.",
           "No one in the article has a name or a problem to solve, so it is not a story. Check the other choices against your list."
         ],
@@ -279,24 +279,24 @@ PP.addLesson({
         partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
           choices: [
             { text: "\"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"", correct: true },
-            { text: "\"It has seven pairs of legs, so it has fourteen legs in all.\"" },
-            { text: "\"That is why you find roly-polies in dark, wet places, like under logs and piles of leaves.\"" },
-            { text: "\"If you find a roly-poly, hold it gently in your open hand.\"" }
+            { text: "\"It is a crustacean (krus-TAY-shun), like a crab or a shrimp.\"" },
+            { text: "\"Roly-polies eat dead leaves and old, rotting plants.\"" },
+            { text: "\"It has seven pairs of legs, so it has fourteen legs in all.\"" }
           ] },
         clue: "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
         hints: [
           "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
-          "Reread the whole article, and notice each place where the author speaks to you.",
+          "Reread the whole article from start to finish. Part B asks for the sentence that fits your Part A answer best.",
           "Teachers are never mentioned in the article, so that Part A choice has no support. For Part B, choose the sentence that shows your Part A answer."
         ],
         how: [
           "The article begins by asking whether you have ever played in your yard and found a roly-poly. That question speaks to a child.",
-          "Other sentences also say you, like where you find roly-polies and how to hold one, but any reader could do those things. Playing in your yard is what a child does.",
+          "The other three sentences only tell facts about the roly-poly. They are true, but they do not show who is reading.",
           "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"",
-          "The facts about crabs, legs and soil are true, but the author never talks to scientists, gardeners or teachers."
+          "The crab and shrimp fact could tempt a reader to pick scientists, and the leaves fact could tempt a reader to pick gardeners, but the author never talks to scientists, gardeners or teachers."
         ],
         misconception: "A common mix-up is thinking a text full of science facts must be for scientists. Look at how the author talks to the reader.",
-        why: "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\" The author talks to a reader who plays in the yard and finds bugs. Finding roly-polies and holding one could be done by any reader, and the author never talks to scientists, gardeners or teachers." },
+        why: "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\" The author talks to a reader who plays in the yard and finds bugs. The other sentences only give facts about the roly-poly, and the author never talks to scientists, gardeners or teachers." },
       { id: "SK-TC1a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: ["p3"],
         prompt: "In paragraph 4, the author writes that a roly-poly's hard back \"works like a bike helmet.\" Why does the author compare it to a bike helmet?",
         choices: [
@@ -458,7 +458,7 @@ PP.addLesson({
         clue: "Ask why the author wrote the poem: to teach, to persuade or to give readers something to enjoy. Then ask who would care about it most.",
         hints: [
           "Ask why the author wrote the poem: to teach, to persuade or to give readers something to enjoy. Then ask who would care about it most.",
-          "Find a line that is funny, and a word that tells whose team it is.",
+          "Find a line that shows the purpose, and a word or detail that shows who the poem is for.",
           "You can start like this: The author wrote this poem to ___ because ___. It is for ___ because the poem says ___."
         ],
         how: [
@@ -527,11 +527,11 @@ PP.addLesson({
         { text: "to inform readers about ostriches", correct: true },
         { text: "to persuade readers to visit a zoo" },
         { text: "to entertain readers with an ostrich story" },
-        { text: "to explain how to raise ostriches on a farm" }
+        { text: "to show readers how to care for ostriches at a zoo" }
       ],
-      clue: "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+      clue: "Check what the whole text mostly does. Does it give information, ask the reader to act, or tell a story?",
       hints: [
-        "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+        "Check what the whole text mostly does. Does it give information, ask the reader to act, or tell a story?",
         "Read the first three sentences, then the last one.",
         "There is no character and no problem, so it is not a story. Check the other choices."
       ],
@@ -541,7 +541,7 @@ PP.addLesson({
         "Most of the text teaches facts, so the answer is \"to inform readers about ostriches.\""
       ],
       misconception: "A common mix-up is naming the purpose of one line instead of the whole text.",
-      why: "The answer is \"to inform readers about ostriches.\" Three of the four sentences give facts. The zoo line is only one line, there is no story, and nothing tells how to raise ostriches." },
+      why: "The answer is \"to inform readers about ostriches.\" Three of the four sentences give facts. The zoo line is only one line, there is no story, and nothing tells how to care for ostriches." },
     { id: "SK-TC1a-S03", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
       like: ["SK-TC1a-C13", "SK-TC1a-C03"],
       stem: ["Mr. Dunn wrote this in a note to families:", "Please send a coat with your child each day, because recess is held outside unless it rains."],
@@ -641,11 +641,11 @@ PP.addLesson({
       why: "The answers are \"teaches readers how to make something\" and \"remind readers to ask before they take something.\" The steps teach how to fold a hat, and the last sentence reminds readers to ask first. Nothing tries to sell papers or make readers laugh." },
     { id: "SK-TC1a-S07", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: [],
       like: ["SK-TC1a-C10"],
-      stem: ["Dario is writing a report about flamingos for the class science board. Its purpose is to inform.", "(1) Flamingos are tall pink birds. (2) They often stand on one leg, even when they sleep. (3) Their pink color comes from the tiny shrimp and plants they eat. (4) Flamingos are the prettiest birds, and you should paint your room pink! (5) A flamingo eats with its head upside down."],
+      stem: ["Dario is writing a report about flamingos for the class science board. Its purpose is to inform.", "(1) Flamingos are tall pink birds. (2) They often stand on one leg. (3) Their pink color comes from the tiny shrimp and plants they eat. (4) Flamingos are the prettiest birds, and you should paint your room pink! (5) A flamingo eats with its head upside down."],
       prompt: "Which sentence should Dario take out because it does not fit the report's purpose?",
       options: [
         "(1) Flamingos are tall pink birds.",
-        "(2) They often stand on one leg, even when they sleep.",
+        "(2) They often stand on one leg.",
         "(3) Their pink color comes from the tiny shrimp and plants they eat.",
         "(4) Flamingos are the prettiest birds, and you should paint your room pink!",
         "(5) A flamingo eats with its head upside down."
@@ -661,7 +661,7 @@ PP.addLesson({
         "The report's purpose is to inform, so each sentence should give a true fact about flamingos.",
         "Sentence 4 gives the writer's opinion and tells the reader to paint a room. That is persuading, so it does not fit.",
         "The answer is sentence 4: \"Flamingos are the prettiest birds, and you should paint your room pink!\"",
-        "Sleeping on one leg and eating upside down sound strange, but they are true facts."
+        "Standing on one leg and eating upside down sound strange, but they are true facts."
       ],
       misconception: "A common mix-up is taking out a strange but true fact. A surprising fact still informs.",
       why: "The answer is sentence 4, \"Flamingos are the prettiest birds, and you should paint your room pink!\" It gives an opinion and tells the reader to act, so it persuades. Standing on one leg and eating upside down are surprising, but they are true facts." },
@@ -691,7 +691,7 @@ PP.addLesson({
       why: "The answer is \"so readers can picture how strong an ant is for its size.\" A kid lifting a car is something readers can imagine, and it shows how much an ant carries for its size. It does not say kids are stronger or that ants are big, and it is not a story." },
     { id: "SK-TC1a-S09", type: "match", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
       like: ["SK-TC1a-C09"],
-      stem: ["Article: A shooting star is not really a star. It is a tiny bit of space rock that burns up as it zooms into the air around Earth. As it burns, it makes a bright streak. Most are no bigger than a grain of sand.", "Poem: Shooting star, so quick and bright, / streaking past me in the night, / slow down, star, and let me see / where you're rushing off to be!"],
+      stem: ["Article: A shooting star is not really a star. It is a tiny bit of space rock that burns up as it zooms into the air around Earth. As it burns, it makes a bright streak. Many are no bigger than a grain of sand.", "Poem: Shooting star, so quick and bright, / streaking past me in the night, / slow down, star, and let me see / where you're rushing off to be!"],
       prompt: "Read the article and the poem in the box. Match each sentence to the text it tells about: the article, the poem, or both.",
       cols: ["the article", "the poem", "both"],
       rows: [
@@ -699,7 +699,7 @@ PP.addLesson({
         { text: "It uses rhyming lines that are fun to read aloud.", answer: 1 },
         { text: "It tells about a bright streak in the sky.", answer: 2 },
         { text: "It talks to the shooting star as if it could listen.", answer: 1 },
-        { text: "It tells how big most shooting stars are.", answer: 0 }
+        { text: "It tells how small many shooting stars are.", answer: 0 }
       ],
       clue: "Check each sentence against the article and against the poem. A sentence can fit one text or both.",
       hints: [
@@ -708,21 +708,21 @@ PP.addLesson({
         "The article says a shooting star makes a bright streak, and the poem says it is streaking past and bright, so the streak sentence fits both. Sort the other sentences the same way."
       ],
       how: [
-        "Only the article teaches facts: what a shooting star really is, and that most are as small as a grain of sand.",
+        "Only the article teaches facts: what a shooting star really is, and that many are as small as a grain of sand.",
         "Only the poem rhymes (bright and night, see and be) and talks to the star: \"slow down, star.\"",
         "Both tell about a bright streak in the sky.",
         "So the article's main purpose is to inform, and the poem's main purpose is to entertain."
       ],
       misconception: "A common mix-up is thinking two texts on the same topic have the same purpose. Ask what each text mostly does.",
-      why: "The article explains what a shooting star is and how small most are. The poem rhymes and talks to the star. Both tell about a bright streak. The article informs, and the poem entertains." },
+      why: "The article explains what a shooting star is and how small many are. The poem rhymes and talks to the star. Both tell about a bright streak. The article informs, and the poem entertains." },
     { id: "SK-TC1a-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
       like: ["SK-TC1a-C11"],
-      stem: ["Text 1, a sign on the classroom door: Kindergarten buddies, come on in! Find your reading partner and sit on the blue rug.", "Text 2, in the class newsletter: Every Friday, our third graders read picture books to their kindergarten buddies. Ask your child which book they shared this week!"],
+      stem: ["Text 1, a sign by the gym door: Walking Club, line up here! Pick up your card, then walk three laps around the track.", "Text 2, in the school newsletter: Every Tuesday, Mr. Lyle leads the Walking Club before school. Ask your child how many laps they walked this week!"],
       prompt: "Read both texts in the box. Then choose the best answer for each blank.",
       text: "Text 1 is mostly for {0}. Text 2 is mostly for {1}.",
       slots: [
-        { options: ["kindergarten buddies", "families who read the newsletter", "third-grade readers", "the school principal"], answer: 0 },
-        { options: ["families who read the newsletter", "kindergarten buddies", "third-grade readers", "the school principal"], answer: 0 }
+        { options: ["students in the Walking Club", "families who read the newsletter", "Mr. Lyle, who leads the club", "the school principal"], answer: 0 },
+        { options: ["families who read the newsletter", "students in the Walking Club", "Mr. Lyle, who leads the club", "the school principal"], answer: 0 }
       ],
       clue: "The same topic can be written for different readers. For each text, ask who it talks to.",
       hints: [
@@ -731,13 +731,13 @@ PP.addLesson({
         "Neither text talks to the principal, so that choice fits neither blank. Test the other choices in each blank."
       ],
       how: [
-        "Text 1 says \"Kindergarten buddies, come on in!\" and tells them where to sit. It talks to the little buddies.",
+        "Text 1 says \"Walking Club, line up here!\" and tells walkers what to do. It talks to the students in the club.",
         "Text 2 is in the newsletter and says \"Ask your child.\" It talks to families.",
-        "So the first blank is \"kindergarten buddies\" and the second blank is \"families who read the newsletter.\"",
-        "The third graders are in both texts, but neither text is mostly for them."
+        "So the first blank is \"students in the Walking Club\" and the second blank is \"families who read the newsletter.\"",
+        "Mr. Lyle is in Text 2, but only as the person who leads the club. Neither text talks to him."
       ],
       misconception: "A common mix-up is thinking the people a text tells about are its audience. Ask who the text talks to.",
-      why: "The answers are \"kindergarten buddies\" and \"families who read the newsletter.\" Text 1 invites the buddies in, and Text 2 tells families to ask their child. The third graders appear in both, but neither text is mostly for them." },
+      why: "The answers are \"students in the Walking Club\" and \"families who read the newsletter.\" Text 1 tells walkers where to line up, and Text 2 tells families to ask their child. Mr. Lyle is only the leader, and neither text talks to the principal." },
     { id: "SK-TC1a-S11", type: "cr", dok: 3, std: ["3.T.C.1.a"], passages: [], rows: 4,
       like: ["SK-TC1a-C14"],
       stem: ["Riddle Corner", "Why did the cookie go to the doctor? It was feeling crumby!", "What do you call a sleeping dinosaur? A dino-snore!", "Send us your best riddle, and we may print it next week!"],
@@ -798,9 +798,9 @@ PP.addLesson({
         { text: "to tell a story about a child who looks in a mirror" },
         { text: "to show readers how to keep their eyes healthy" }
       ],
-      clue: "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+      clue: "Check what the whole text mostly does. Does it give information, ask the reader to act, or tell a story?",
       hints: [
-        "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+        "Check what the whole text mostly does. Does it give information, ask the reader to act, or tell a story?",
         "Read the first four sentences, then the last one.",
         "No one in the text has a name or a problem, so it is not a story. Check the other choices."
       ],
@@ -876,7 +876,7 @@ PP.addLesson({
     "SK-TC1a-P2": {
       hints: [
         "A letter names the person it is written to. Look for who the writer is talking to.",
-        "Look at the very top of the letter. Then look at who Rosa asks to say yes.",
+        "Check how the letter begins, and who Rosa asks to say yes.",
         "Rosa is a student in Ms. Hart's class, but she is not writing to her class. Check the other choices."
       ],
       how: [
@@ -2033,6 +2033,38 @@ PP.addLesson({
         ["They find me there and lift me up.", "My paws kick at the air.", "The water's warm, the soap is pink,", "and bubbles everywhere!"],
         ["They scrub behind my floppy ears", "and giggle when I shake.", "Why smell like flowers? Mud is best!", "This bath is a mistake."],
         ["Now I am wrapped up in a towel.", "They say, \"You smell so sweet!\"", "As soon as they let go of me,", "I'll find some mud. A treat!"]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p6 to p9 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p6", title: "The Orange Sweater", genre: "Literary text",
+      paragraphs: [
+        ["For my birthday, Grandma gave me a sweater she knitted herself.", "It was bright orange with a green stripe, and it itched my neck like a bunch of ants."],
+        ["\"Try it on!\" Grandma said.", "She hummed a tune and clapped her hands.", "I pulled it over my head, and everyone in the room smiled at me.", "I wanted to disappear."],
+        ["\"You look wonderful,\" Grandma beamed.", "I thought I looked like a traffic cone."],
+        ["On Monday, the wind howled, and the air turned freezing.", "At recess, everyone else shivered by the fence.", "I was the only one still warm.", "\"Nice sweater,\" my friend Teo said, and he stood close to me out of the wind."],
+        ["That night, I called Grandma.", "\"Thanks for the sweater,\" I said.", "\"It's the warmest thing I own.\"", "I could hear her grin through the phone."]
+      ] },
+    { id: "p7", title: "The Substitute", genre: "Literary text",
+      paragraphs: [
+        ["Our teacher, Ms. Hale, was out sick, and a substitute walked in.", "Mr. Gage stood tall and stern like a statue.", "\"No talking,\" he said.", "I decided right then that he was the strictest teacher alive."],
+        ["At recess, my pencil snapped.", "Mr. Gage sharpened it for me and set it on my desk.", "Then he told the class a joke about a goat that wore a hat, and everybody laughed."],
+        ["At the end of the day, he gave each of us a sticker.", "Mine said, \"Great job.\"", "I put it in my pocket and shrugged.", "A sticker doesn't change a thing.", "Mr. Gage is still the strictest teacher alive."]
+      ] },
+    { id: "p8", title: "The Dentist's Chair", genre: "Literary text",
+      paragraphs: [
+        ["## Part 1"],
+        ["I do not like going to the dentist.", "The big chair tips back like a spaceship seat, and the bright light shines right in my eyes."],
+        ["On Tuesday, Mom walked me into Dr. Amoah's office anyway.", "I gripped the arms of the chair and stared at the ceiling.", "I was sure it was going to hurt."],
+        ["## Part 2"],
+        ["I have cleaned children's teeth for thirty years, and I know a worried patient when I see one.", "The girl in my chair gripped the arms so tight that her knuckles turned pale."],
+        ["So I told her about the parrot at my cousin's house that shouted, \"Open wide!\" whenever I visited.", "She listened with wide eyes and let go of the arms."],
+        ["When I handed her the mirror, she smiled at her sparkling teeth.", "\"See you in six months, Zadie?\" I asked.", "\"Okay,\" she said."]
+      ] },
+    { id: "p9", title: "Puddle Day", genre: "Poem", lexile: "not measured (poem)",
+      paragraphs: null,
+      lines: [
+        ["The morning's wet, the worms are near.", "I tilt my head. I use my ear.", "I poke my beak into the ground", "and pull one up without a sound."],
+        ["A puddle! Splash! I flap my wings", "and sprinkle drops on all the things.", "My nest is wet. My feathers, too!", "What a perfect day! Cheep, cheep! Woo-hoo!"],
+        ["The clouds pull back. The sun comes through.", "I fluff my feathers, bright and new.", "Tomorrow I will hunt once more", "for worms along the garden floor."]
       ] }
   ],
   practice: [
@@ -2501,7 +2533,296 @@ PP.addLesson({
         "The answers are \"Grandma thinks the colors are too bright, but Desmond loves them.\" and \"Desmond wants to keep looking, but Grandma wants to look away.\"",
         "Both noticing the brightness is a way they are alike, and Desmond, not Grandma, says it looks like a party."
       ],
-      why: "The answers are \"Grandma thinks the colors are too bright, but Desmond loves them.\" and \"Desmond wants to keep looking, but Grandma wants to look away.\" Both notice the brightness, which is how they are alike. Desmond says it looks like a party, and he never says to paint it over." }
+      why: "The answers are \"Grandma thinks the colors are too bright, but Desmond loves them.\" and \"Desmond wants to keep looking, but Grandma wants to look away.\" Both notice the brightness, which is how they are alike. Desmond says it looks like a party, and he never says to paint it over." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TC2a-S04", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p6"], pick: 2,
+      like: ["SK-TC2a-C01"],
+      prompt: "Grandma and the narrator see the sweater in different ways. Which TWO details show how Grandma herself feels about the sweater?",
+      choices: [
+        { text: "She hums a tune and claps her hands when he opens it.", correct: true },
+        { text: "She beams and tells him that he looks wonderful.", correct: true },
+        { text: "He says that it itches his neck like a bunch of ants." },
+        { text: "He thinks that he looks like a traffic cone." },
+        { text: "He tells her that it is the warmest thing he owns." }
+      ],
+      clue: "A narrator tells the story, but other characters have their own feelings. Look for what Grandma says and does.",
+      hints: [
+        "A narrator tells the story, but other characters have their own feelings. Look for what Grandma says and does.",
+        "Find the sentences about Grandma. Ask whether each one tells what she does or says, or what the narrator thinks.",
+        "The itch is the narrator's own feeling, so it does not show how Grandma feels. Check each choice that is left."
+      ],
+      how: [
+        "The narrator hates the sweater at first, so his thoughts show his own view.",
+        "Grandma's feelings show in what she does and says. She hums a tune and claps her hands, and she beams and says he looks wonderful.",
+        "The answers are \"She hums a tune and claps her hands when he opens it.\" and \"She beams and tells him that he looks wonderful.\"",
+        "The itch, the traffic cone and \"the warmest thing I own\" are all the narrator's own thoughts or words."
+      ],
+      misconception: "A common mix-up is choosing what the narrator thinks. The question asks about Grandma's own feelings.",
+      why: "The answers are \"She hums a tune and claps her hands when he opens it.\" and \"She beams and tells him that he looks wonderful.\" Both show Grandma's own happiness. The itch, the traffic cone and the warm sweater are all what the narrator thinks or says." },
+    { id: "SK-TC2a-S05", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: ["p6"],
+      like: ["SK-TC2a-P5"],
+      prompt: "How does the narrator's view of the sweater change by the end of the story?",
+      choices: [
+        { text: "He sees that the sweater keeps him warm and was made with care.", correct: true },
+        { text: "He decides that Grandma should never knit again." },
+        { text: "He still thinks that he looks like a traffic cone." },
+        { text: "He wants to give the sweater back to Grandma." }
+      ],
+      clue: "A narrator's view can change. Compare what the narrator says at the start with what he says at the end.",
+      hints: [
+        "A narrator's view can change. Compare what the narrator says at the start with what he says at the end.",
+        "Find the narrator's first view of the sweater. Then find what he tells Grandma at the end.",
+        "He thanks Grandma on the phone, so he does not want to give it back. Test each choice that is left against his last words."
+      ],
+      how: [
+        "At the start, the sweater itches, and the narrator thinks he looks like a traffic cone.",
+        "On a freezing day, he is the only one who is warm, and a friend says, \"Nice sweater.\"",
+        "At the end, he calls Grandma and says it is the warmest thing he owns. The answer is \"He sees that the sweater keeps him warm and was made with care.\"",
+        "He thanks her instead of wanting to give it back, and nothing says she should stop knitting."
+      ],
+      misconception: "A common mix-up is thinking the narrator's view stays the same. Compare his words at the start and at the end.",
+      why: "The answer is \"He sees that the sweater keeps him warm and was made with care.\" He first dislikes it, but in the cold he is the only one still warm, and he thanks Grandma. He does not want to give it back, and nothing says she should stop knitting." },
+    { id: "SK-TC2a-S06", type: "ebsr", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p7"],
+      like: ["SK-TC2a-C05"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "At the end of the story, how does the narrator see Mr. Gage?",
+        choices: [
+          { text: "Mr. Gage is still the strictest teacher alive.", correct: true },
+          { text: "Mr. Gage is kind and funny." },
+          { text: "Mr. Gage is the best teacher in the school." },
+          { text: "Mr. Gage is too busy to help anyone." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"Mr. Gage is still the strictest teacher alive.\"", correct: true },
+          { text: "\"Mr. Gage sharpened it for me and set it on my desk.\"" },
+          { text: "\"Then he told the class a joke about a goat that wore a hat, and everybody laughed.\"" },
+          { text: "\"Mine said, 'Great job.'\"" }
+        ] },
+      clue: "A narrator's view can stay the same even when the story shows something else. Look for the narrator's own words at the end.",
+      hints: [
+        "A narrator's view can stay the same even when the story shows something else. Look for the narrator's own words at the end.",
+        "Read the end of the story. Ask what the narrator thinks about Mr. Gage, not what Mr. Gage does.",
+        "Mr. Gage's kind actions show what a reader might think, but the question asks about the narrator. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "Mr. Gage sharpens a pencil, tells a joke and hands out stickers. Those are things he does.",
+        "But the narrator shrugs at the sticker and says that it does not change a thing.",
+        "Part A: Mr. Gage is still the strictest teacher alive. Part B: \"Mr. Gage is still the strictest teacher alive.\"",
+        "The narrator does not say Mr. Gage is kind, funny or the best teacher, and nothing says he is too busy to help."
+      ],
+      misconception: "A common mix-up is choosing what Mr. Gage does. The question asks how the narrator sees him.",
+      why: "Part A: Mr. Gage is still the strictest teacher alive. Part B: \"Mr. Gage is still the strictest teacher alive.\" The narrator's view does not change, even though Mr. Gage does kind things. The narrator never calls him kind, funny or the best teacher." },
+    { id: "SK-TC2a-S07", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p8"], pick: 2,
+      like: ["SK-TC2a-C06"],
+      prompt: "Part 2 of the story has a new narrator. Which TWO clues show this?",
+      choices: [
+        { text: "In Part 2, the girl in the chair is called she.", correct: true },
+        { text: "The I in Part 2 has cleaned children's teeth for thirty years.", correct: true },
+        { text: "The narrator in Part 2 uses the word I." },
+        { text: "Part 2 tells a funny story about a parrot." },
+        { text: "Part 2 happens in the same office." }
+      ],
+      clue: "When a new narrator tells part of a story, the person named I changes. Look at who is I and who is named she or he.",
+      hints: [
+        "When a new narrator tells part of a story, the person named I changes. Look at who is I and who is named she or he.",
+        "Compare who the I is in Part 1 with who the I is in Part 2.",
+        "Both parts use the word I, so that choice does not show a new narrator. Check each choice that is left."
+      ],
+      how: [
+        "In Part 1, the I is a girl who is afraid of the dentist.",
+        "In Part 2, the girl in the chair is called she, and the I says he has cleaned children's teeth for thirty years. The I is someone else.",
+        "The answers are \"In Part 2, the girl in the chair is called she.\" and \"The I in Part 2 has cleaned children's teeth for thirty years.\"",
+        "Both parts use I, the parrot story does not tell who the narrator is, and the office is the same in both parts."
+      ],
+      misconception: "A common mix-up is thinking that the word I shows a new narrator. Both parts use I; ask who it is.",
+      why: "The answers are \"In Part 2, the girl in the chair is called she.\" and \"The I in Part 2 has cleaned children's teeth for thirty years.\" Together they show that the I in Part 2 is the dentist. Both parts use I, the parrot story does not name the narrator, and the office is the same." },
+    { id: "SK-TC2a-S08", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p7"],
+      like: ["SK-TC2a-C08"],
+      prompt: "In paragraph 1, the narrator says that Mr. Gage \"stood tall and stern like a statue.\" What does this tell you about how the narrator sees him?",
+      choices: [
+        { text: "He sees Mr. Gage as stiff and unfriendly.", correct: true },
+        { text: "He thinks Mr. Gage is made of stone." },
+        { text: "He thinks Mr. Gage makes statues for a job." },
+        { text: "He wants to take a picture of Mr. Gage." }
+      ],
+      clue: "A comparison can show how a narrator feels. Ask what a statue is like, and why the narrator picked it.",
+      hints: [
+        "A comparison can show how a narrator feels. Ask what a statue is like, and why the narrator picked it.",
+        "Read the sentence around the comparison. What else does the narrator say about Mr. Gage?",
+        "The narrator is comparing, not saying that Mr. Gage is really stone. Test each choice that is left against the words around it."
+      ],
+      how: [
+        "A statue stands still and stiff and does not smile.",
+        "The narrator says Mr. Gage stood \"tall and stern\" like one, and then decides that he is the strictest teacher alive.",
+        "The answer is \"He sees Mr. Gage as stiff and unfriendly.\"",
+        "Nothing says Mr. Gage is made of stone or makes statues, and nothing says the narrator wants a picture."
+      ],
+      misconception: "A common mix-up is reading a comparison word for word. A comparison shows how the narrator feels.",
+      why: "The answer is \"He sees Mr. Gage as stiff and unfriendly.\" The narrator compares him to a statue, which stands stiff and does not smile. Mr. Gage is not made of stone, nothing says he makes statues, and no one wants a picture." },
+    { id: "SK-TC2a-S09", type: "hottext", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p8"],
+      like: ["SK-TC2a-C09"],
+      prompt: "In Part 1, Zadie is sure it is going to hurt. Which sentence in Part 2 shows that she feels better by the end? Choose the sentence in the passage.",
+      targets: ["p8:5:2", "p8:6:1", "p8:6:2", "p8:7:1", "p8:7:2", "p8:7:3"],
+      answer: ["p8:7:1"], pick: 1,
+      clue: "A narrator can show how another person feels by what that person does. Look for something Zadie does that shows she is no longer afraid.",
+      hints: [
+        "A narrator can show how another person feels by what that person does. Look for something Zadie does that shows she is no longer afraid.",
+        "Read the sentences that tell what Zadie does, from when she grips the arms to the end of the visit.",
+        "Gripping the arms shows how afraid she is, so it does not show she feels better. Check each sentence that is left."
+      ],
+      how: [
+        "At the start of Part 2, Zadie grips the arms so tight that her knuckles turn pale. She is still scared.",
+        "Then she listens to a story and lets go of the arms. She is calming down, but she is still in the chair.",
+        "At the end, when the dentist hands her the mirror, she smiles at her sparkling teeth. That shows she feels good about the visit.",
+        "The answer is \"When I handed her the mirror, she smiled at her sparkling teeth.\""
+      ],
+      misconception: "A common mix-up is choosing a sentence from earlier in Part 2, when she is still afraid.",
+      why: "The answer is \"When I handed her the mirror, she smiled at her sparkling teeth.\" A smile at the end shows she feels better. Gripping the arms shows fear, and listening to the story and letting go show she is calming down, but not yet pleased." },
+    { id: "SK-TC2a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: ["p8"],
+      like: ["SK-TC2a-C10"],
+      prompt: "Why does the author have Dr. Amoah tell Part 2 instead of Zadie?",
+      choices: [
+        { text: "so readers can see how Zadie looked to someone else and what he did to help", correct: true },
+        { text: "so readers can learn the steps for cleaning teeth at home" },
+        { text: "so readers can find out what Zadie was thinking in the chair" },
+        { text: "so readers can tell that Zadie was never really worried" }
+      ],
+      clue: "An author can switch narrators to show something the first narrator cannot. Ask what Dr. Amoah can see that Zadie cannot say.",
+      hints: [
+        "An author can switch narrators to show something the first narrator cannot. Ask what Dr. Amoah can see that Zadie cannot say.",
+        "Compare what Part 1 tells about Zadie with what Part 2 tells about her.",
+        "Part 1 already told what Zadie was thinking. Test each choice that is left against what Part 2 adds."
+      ],
+      how: [
+        "Part 1 is told by Zadie, so readers learn she is afraid and what she thinks.",
+        "In Part 2, Dr. Amoah describes how Zadie's knuckles look and how he helps her calm down.",
+        "The answer is \"so readers can see how Zadie looked to someone else and what he did to help.\"",
+        "Part 2 does not teach tooth cleaning at home, Zadie's thoughts were already told in Part 1, and she was worried."
+      ],
+      misconception: "A common mix-up is thinking a new narrator repeats what the first one said. A new narrator adds what the first one could not see.",
+      why: "The answer is \"so readers can see how Zadie looked to someone else and what he did to help.\" Part 1 told what Zadie felt. Part 2 adds how she looked and how the dentist helped. It does not teach tooth cleaning, and it does not say she was never worried." },
+    { id: "SK-TC2a-S11", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: ["p9"], pick: 2,
+      like: ["SK-TC2a-C11"],
+      prompt: "The poem never says who the speaker is. Which TWO clues show that the speaker is an animal, not a child?",
+      choices: [
+        { text: "The speaker pokes a beak into the ground.", correct: true },
+        { text: "The speaker flaps wings in the puddle.", correct: true },
+        { text: "The speaker pulls a worm up from the ground." },
+        { text: "The speaker listens by tilting a head." },
+        { text: "The speaker is happy about the wet morning." }
+      ],
+      clue: "A poem can tell who the speaker is through clues. Look for body parts or actions that only an animal would have.",
+      hints: [
+        "A poem can tell who the speaker is through clues. Look for body parts or actions that only an animal would have.",
+        "Read each stanza and ask what the speaker has or does. Could a child have or do it?",
+        "A child can be happy about rain, so that choice cannot show the speaker is an animal. Check each choice that is left."
+      ],
+      how: [
+        "A child has a nose and mouth, not a beak, and does not have wings.",
+        "The speaker pokes a beak into the ground and flaps wings in a puddle. Only a bird has those.",
+        "The answers are \"The speaker pokes a beak into the ground.\" and \"The speaker flaps wings in the puddle.\"",
+        "A child could pull a worm up, tilt a head to listen, or feel happy in the rain."
+      ],
+      misconception: "A common mix-up is choosing an action a child could do, like pulling up a worm. Look for a body part only an animal has.",
+      why: "The answers are \"The speaker pokes a beak into the ground.\" and \"The speaker flaps wings in the puddle.\" Only a bird has a beak and wings. A child could pull up a worm, tilt a head to listen or be happy about the rain." },
+    { id: "SK-TC2a-S12", type: "cr", dok: 3, std: ["3.T.C.2.a"], passages: ["p9"], rows: 4,
+      like: ["SK-TC2a-C12"],
+      prompt: "How does the speaker feel about the wet morning? What do YOU think about it? Write two or three sentences. Use one detail from the poem to explain each view.",
+      sample: "The speaker loves the wet morning, because the speaker says it is a perfect day and shouts, \"Woo-hoo!\" I think a wet morning would be fun for a bird, but I would not like it for a walk to school, because in the poem the nest and the feathers get wet.",
+      criteria: [
+        "I told the speaker's view and a detail that shows it.",
+        "I told my own view in my own words. I may agree or disagree.",
+        "I used a detail from the poem to explain my view.",
+        "I made clear which view is the speaker's and which view is mine."
+      ],
+      clue: "Your view can be different from the speaker's. First say what the speaker thinks, then say what you think.",
+      hints: [
+        "Your view can be different from the speaker's. First say what the speaker thinks, then say what you think.",
+        "Find one detail in the poem that shows the speaker's view, and one that helps explain what you think.",
+        "You can start like this: The speaker thinks the morning is ___ because ___. I think ___ because in the poem ___."
+      ],
+      how: [
+        "Find the speaker's view and a detail that shows it, such as shouting \"Woo-hoo!\" or calling it a perfect day.",
+        "Decide your own view. You may agree or disagree, but say it in your own words.",
+        "Pick one detail from the poem that supports your view. It can come from either stanza.",
+        "Put it together: the speaker's view and its detail, then your view and its detail. One good answer follows. Other answers can also be right."
+      ],
+      why: "Many answers can be right. A good answer tells the speaker's view with a detail (a perfect day, \"Woo-hoo!\"), gives the writer's own view, and backs it up with a detail from the poem." },
+    { id: "SK-TC2a-S13", type: "match", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: [],
+      like: ["SK-TC2a-C13"],
+      prompt: "Read each short part of a story. Does the teller show how they feel about what happens, or only tell what happens? Match each part.",
+      cols: ["shows how the teller feels", "only tells what happens"],
+      rows: [
+        { text: "The soup was so delicious that I asked for a third bowl.", answer: 0 },
+        { text: "The train left the station at nine and reached the city at noon.", answer: 1 },
+        { text: "Our dog barked at the mail carrier, and then he ran in a circle.", answer: 1 },
+        { text: "I could not stand the loud, screechy music in the store.", answer: 0 }
+      ],
+      clue: "Words such as delicious or could not stand show a feeling. Telling only what happens does not.",
+      hints: [
+        "Words such as delicious or could not stand show a feeling. Telling only what happens does not.",
+        "For each part, look for words that show what the teller thinks or feels, not just what happens.",
+        "The train sentence only gives times and places, with no feeling at all. Sort the other three the same way."
+      ],
+      how: [
+        "\"So delicious that I asked for a third bowl\" shows how the teller feels about the soup.",
+        "The train and the barking dog are told as events, with no feeling words.",
+        "\"Could not stand the loud, screechy music\" shows the teller dislikes it.",
+        "So: shows, only tells, only tells, shows."
+      ],
+      misconception: "A common mix-up is thinking that a lively action shows a feeling. The dog running in a circle is just what happens.",
+      why: "The soup sentence and the music sentence show how the teller feels. The train sentence and the dog sentence only tell what happens." },
+    { id: "SK-TC2a-S14", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: [],
+      like: ["SK-TC2a-C14"],
+      stem: ["I am the best block builder in the class.", "Today my tower fell over, but only because the table shook.", "Mia says my base was too narrow.", "Mia just wants to copy my idea."],
+      prompt: "Read the part of a story in the box. What might a reader think that the narrator does not?",
+      choices: [
+        { text: "A wider base would have made the tower stronger.", correct: true },
+        { text: "The narrator really is the best builder in the class." },
+        { text: "Mia wants to copy the narrator's idea." },
+        { text: "Nobody in the class can build a tower." }
+      ],
+      clue: "A reader can notice things the narrator leaves out. Ask what the narrator says and what the other character says.",
+      hints: [
+        "A reader can notice things the narrator leaves out. Ask what the narrator says and what the other character says.",
+        "Compare what the narrator blames with what Mia says about the base.",
+        "The narrator is the one who says Mia wants to copy the idea, so that is the narrator's view, not the reader's. Test each choice that is left."
+      ],
+      how: [
+        "The narrator blames the shaking table and says Mia just wants to copy the idea.",
+        "Mia says the base was too narrow, which could be the real reason the tower fell.",
+        "A reader can see that advice may be helpful. The answer is \"A wider base would have made the tower stronger.\"",
+        "Bragging and blaming Mia are the narrator's views, and nothing says nobody can build a tower."
+      ],
+      misconception: "A common mix-up is choosing something the narrator already says. The question asks what the reader might think instead.",
+      why: "The answer is \"A wider base would have made the tower stronger.\" Mia's advice could explain the fall, though the narrator ignores it. Being the best builder and Mia copying are the narrator's own claims, and nothing says nobody can build a tower." },
+    { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
+      like: ["SK-TC2a-C15"],
+      stem: ["Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't wait to go home.", "Jorge's postcard: We went to the farm today! The barn smelled strong, but I loved feeding the goat. I wish we could stay all week."],
+      prompt: "Read the two postcards in the box. Ivy and Jorge write about the same trip. Which TWO sentences tell how their views are different?",
+      choices: [
+        { text: "Ivy dislikes the barn and the goat, but Jorge enjoys the animals.", correct: true },
+        { text: "Ivy wants to go home, but Jorge wants to stay longer." , correct: true },
+        { text: "Both of them visited a farm with a goat." },
+        { text: "Jorge says a goat chewed his sleeve." },
+        { text: "Ivy says she loved feeding the goat." }
+      ],
+      clue: "Two people can see the same event in different ways. Look for sentences that tell what each one thinks, and are different.",
+      hints: [
+        "Two people can see the same event in different ways. Look for sentences that tell what each one thinks, and are different.",
+        "Read each postcard and find what the writer says about the barn, the goat and going home. Compare them.",
+        "A sentence that is true for both children tells what is the same, not what is different. Check each choice that is left."
+      ],
+      how: [
+        "Ivy says the barn smelled terrible, a goat chewed her sleeve, and she can't wait to go home.",
+        "Jorge says he loved feeding the goat and wishes they could stay all week.",
+        "The answers are \"Ivy dislikes the barn and the goat, but Jorge enjoys the animals.\" and \"Ivy wants to go home, but Jorge wants to stay longer.\"",
+        "Visiting a farm with a goat is the same for both, and the sleeve and feeding details are mixed up between the writers."
+      ],
+      misconception: "A common mix-up is choosing what is the same, or swapping the writers. Check who says what.",
+      why: "The answers are \"Ivy dislikes the barn and the goat, but Jorge enjoys the animals.\" and \"Ivy wants to go home, but Jorge wants to stay longer.\" Both sentences tell how their views differ. Visiting the farm is the same for both, and the sleeve and feeding details belong to different writers." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1-P4. */
   addons: {
@@ -2632,12 +2953,11 @@ PP.addLesson({
   teach: {
     big: "Knowing when, where, who and why a text was written helps me understand what the writer says.",
     points: [
-      "Look for clues about context: a date, a place, the writer's name, or a note in a box.",
+      "Look for clues about context: a date, a place, the writer's name, or a note in a box. Then ask: How does knowing this help me understand the text?",
       "Time period: when was it written? Long ago, many things were different, like lights, travel and how people got news.",
       "Individual context: who is the writer? Think about the writer's background, job and experiences. A firefighter, a scientist and a child know different things, so each one writes in a different way.",
       "Situational context: what was happening when or where the writer wrote? A storm, a holiday or a big change can be the reason a text was written, and it can explain what the writer says.",
-      "A real letter or diary was written at the time it shows. Historical fiction is written today but pretends to be written long ago. Use the date and any note in a box to learn its pretend time and place.",
-      "Ask: How does knowing this help me understand the text?"
+      "A real letter or diary was written at the time it shows. Historical fiction is written today but pretends to be written long ago. Use the date and any note in a box to learn its pretend time and place."
     ],
     words: [
       { term: "context", means: "the time, place and situation in which something was written" },
@@ -2750,12 +3070,12 @@ PP.addLesson({
       ] },
     { id: "p6", title: "Two More Short Texts", genre: "Short texts (journal, note)",
       paragraphs: [
-        ["## Elijah's Journal"],
-        ["Box: Elijah has lived in a big city his whole life.", "This summer, he visited his uncle's cabin in the mountains of north Georgia.", "He wrote this in his journal."],
-        ["July 9.", "I could not believe the sky tonight.", "There were so many stars that it looked like someone spilled sugar on a black table.", "The sky at home never looks like this.", "Uncle Booker just yawned and said, \"It looks like this every clear night up here.\""],
+        ["## Imara's Journal"],
+        ["Box: Imara has lived in a house beside the train tracks her whole life.", "Her cousin Jabari came to stay for the weekend.", "She wrote this in her journal."],
+        ["Saturday.", "Jabari jumped out of bed three times last night.", "He said the big train shook the whole house.", "I did not even wake up.", "Jabari just stared at me and said, \"How do you sleep with that noise?\""],
         ["## A Note from Coach Petty"],
-        ["Box: Coach Petty wrote this note to families in April.", "A killdeer, a bird that lays its eggs right on the ground, had made a nest of pebbles near home plate on the ball field.", "Killdeer eggs take about four weeks to hatch."],
-        ["Dear Families,", "Starting today, recess will be on the blacktop, not on the ball field.", "Please remind your child to stay behind the orange cones.", "We should be back on the field by the end of May.", "Thank you!", "Coach Petty"]
+        ["Box: Coach Petty wrote this note to families in early April.", "A killdeer, a bird that lays its eggs right on the ground, had made a nest of pebbles near home plate on the ball field.", "Killdeer eggs take about four weeks to hatch."],
+        ["Dear Families,", "Starting today, recess will be on the blacktop, not on the ball field.", "Please remind your child to stay behind the orange cones.", "We should be back on the field by the first week of May.", "Thank you!", "Coach Petty"]
       ] }
   ],
   practice: [
@@ -2777,7 +3097,7 @@ PP.addLesson({
         { text: "The lamp was a gift from her cousin." },
         { text: "Electric lights would hurt her eyes." }
       ],
-      clue: "Read the text box before the letter. What did most farms not have in 1928?",
+      clue: "Read the text box before the letter. It tells what life was like back then.",
       why: "The answer is \"Her farm did not have electric lights.\" The letter is dated 1928, and the text box says most farm families did not have electricity back then, so they used oil lamps for light." },
     { id: "SK-TC2c-P7", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "What was happening in Ella's life that led her to write this letter?",
@@ -2787,7 +3107,7 @@ PP.addLesson({
         { text: "Papa needed help to plow the cotton field, and he asked Hattie to come." },
         { text: "Ella had hurt her eyes from reading, and she could not read anymore." }
       ],
-      clue: "Letters often say early on why the writer is writing. Read the first paragraph after \"Dear Cousin Hattie.\"",
+      clue: "Letters often say early on why the writer is writing. Ask what happened before Ella picked up her pen.",
       why: "The answer is \"Hattie had sent her a book for her birthday, and Ella wanted to thank her.\" That is the situation: Ella starts with \"Thank you for the book you sent for my birthday.\" Nothing in the letter says her family is moving. Papa and Walter plow the field themselves. Papa only says she will hurt her eyes, and she says she cannot stop reading."},
     { id: "SK-TC2c-P6", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Read \"Dr. Ruiz's Field Notebook.\" Why are Dr. Ruiz's notes full of numbers and short facts?",
@@ -2797,7 +3117,7 @@ PP.addLesson({
         { text: "She was in a hurry because a big storm was coming." },
         { text: "She wanted to tell her friends a funny story about frogs." }
       ],
-      clue: "Read the note in the box. Who is the writer, and what is her job? How would a person with that job write?",
+      clue: "Read the note in the box. Who is the writer? Think about how her background shapes what she does.",
       why: "The answer is \"She is a scientist, so she writes exact counts to keep track of the frogs.\" The box tells you who the writer is. Scientists count and record facts so they can compare them later. The notes are not written to a friend, they give no clue about a storm, and they are not a funny story." },
     { id: "SK-TC2c-P4", type: "ebsr", points: 2, dok: 2, passages: ["p1"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -2822,11 +3142,11 @@ PP.addLesson({
       choices: [
         { text: "She has driven a bus for years and has had to stop fast many times.", correct: true },
         { text: "She read a story in the newsletter about a bus that stopped fast." },
-        { text: "She is a student who rides the bus to school every morning." },
-        { text: "She is a school nurse who helps riders after they get hurt." }
+        { text: "She learned it from a bus-safety video that she watched at school." },
+        { text: "A rider once told her about a fall on a bus, and she never forgot it." }
       ],
       clue: "Read the note in the box. What is Ms. Greene's job, and how long has she done it? Then find what she says she has seen.",
-      why: "The answer is \"She has driven a bus for years and has had to stop fast many times.\" The box tells her individual context: she has been a bus driver for 15 years. Her own experience is why she can be sure. She wrote for the newsletter, she did not read about it there. The box says she drives the bus, so she is not a student rider or a nurse."},
+      why: "The answer is \"She has driven a bus for years and has had to stop fast many times.\" The box tells her individual context: she has been a bus driver for 15 years. Her own experience is why she can be sure. She wrote for the newsletter, she did not read about it there. Her note says she herself has had to stop fast many times, so she did not just hear it from a video or from a rider."},
     { id: "SK-TC2c-P9", type: "mc", points: 1, dok: 2, passages: ["p3"],
       prompt: "Read \"A Sign for Field Day.\" Why did Leo tell everyone to meet in the gym?",
       choices: [
@@ -2842,7 +3162,7 @@ PP.addLesson({
      Fifteen items in three sets of five. { ref } reuses Try items P4, P8 and P9 by id, so Practice
      Together is P1, P2, P7 and P6 (practice minus refs). Hints and Show me how for those seven are in addons.
      C10 is a constructed response (type "cr", never scored; 01 §2.2.2). "With adult support" stays in the
-     parent note and the habit cards; it is not turned into a scored item.
+     parent note; it is not turned into a scored item.
      Author log: docs/expansion-2026-10-22/batches/B3-b3a-author-log.md. NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
@@ -2920,12 +3240,12 @@ PP.addLesson({
         misconception: "A common mix-up is choosing something that sounds old but is still done today. Check each detail against today.",
         why: "The answers are \"Each shirt is scrubbed clean on a washboard by hand.\" and \"The wash water is boiled in a pot over a fire.\" Today a machine heats the water and does the scrubbing. Children still help, people still use soap, and some clothes still get ironed." },
       { id: "SK-TC2c-C07", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: ["p5"],
-        prompt: "In paragraph 4, Papa says the kitchen was like walking through a jungle. What was happening that made him say this?",
+        prompt: "In paragraph 4, Papa says the kitchen was like walking through a jungle. Which context best explains why the kitchen looked that way?",
         choices: [
-          { text: "Rain had kept the wet clothes inside, hanging all over the kitchen.", correct: true },
-          { text: "Mama had filled the kitchen with tall green plants from the yard." },
-          { text: "The hot irons on the stove made the kitchen steamy and warm." },
-          { text: "The wind had blown the kitchen door open during the storm." }
+          { text: "Rain kept the wash from drying outside, and homes had no dryers, so it hung in the kitchen.", correct: true },
+          { text: "Mama had filled the kitchen with tall green plants that she brought in from the yard." },
+          { text: "The hot irons on the stove had made the whole kitchen steamy and warm for days." },
+          { text: "The wind had blown the kitchen door open and scattered wet leaves all over the room." }
         ],
         clue: "Situational context is what was happening at the time. It can explain why someone says something.",
         hints: [
@@ -2935,12 +3255,12 @@ PP.addLesson({
         ],
         how: [
           "Paragraph 4 says it rained last Monday, so the wet clothes hung all over the kitchen for three days.",
-          "Walking through rows of hanging clothes is like pushing through vines and leaves in a jungle.",
-          "So the situation was the rain. The answer is \"Rain had kept the wet clothes inside, hanging all over the kitchen.\"",
+          "Today a dryer could finish the job in an hour. In 1908, homes had no dryers, so wet clothes had to dry on a line, and rain kept them from drying outside.",
+          "Walking through rows of hanging clothes is like pushing through vines and leaves in a jungle. The answer is \"Rain kept the wash from drying outside, and homes had no dryers, so it hung in the kitchen.\"",
           "The irons are for Tuesday, the wind blew the sheets on washday, and nothing says plants were brought in."
         ],
         misconception: "A common mix-up is reading a comparison as if it really happened. Find the situation that explains what was said.",
-        why: "The answer is \"Rain had kept the wet clothes inside, hanging all over the kitchen.\" Because it rained, the clothes hung inside for three days, and walking through them felt like a jungle. The irons are for Tuesday, the wind blew the sheets outside, and no plants were brought in." },
+        why: "The answer is \"Rain kept the wash from drying outside, and homes had no dryers, so it hung in the kitchen.\" Because it rained, the clothes hung inside for three days, and walking through them felt like a jungle. The irons are for Tuesday, the wind blew the sheets outside, and no plants were brought in." },
       { id: "SK-TC2c-C08", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: ["p5"],
         prompt: "Read the box above the report again. Then choose the best answer for each blank.",
         text: "The report was written {0}. It tells about {1}.",
@@ -3009,34 +3329,34 @@ PP.addLesson({
     ] },
     { title: "Set 3", items: [
       { id: "SK-TC2c-C11", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: ["p6"],
-        prompt: "Read \"Elijah's Journal.\" Why is Elijah so amazed by the sky, when Uncle Booker is not?",
+        prompt: "Read \"Imara's Journal.\" Why does the train wake Jabari but not Imara?",
         choices: [
-          { text: "Elijah has always lived in a city, where far fewer stars show at night.", correct: true },
-          { text: "Elijah had never been allowed to stay up late enough to see stars." },
-          { text: "It was the first clear night of the whole summer in the mountains." },
-          { text: "Uncle Booker cannot see the stars as well as Elijah can see them." }
+          { text: "Imara has lived by the tracks all her life, so she is used to it.", correct: true },
+          { text: "Imara went to sleep much later than Jabari did that night." },
+          { text: "The train that night was much quieter than the other trains." },
+          { text: "Jabari had never seen a train before he came to visit her." }
         ],
-        clue: "Individual context is who the writer is: his background and his experiences. Ask how the two people's experiences are different.",
+        clue: "Individual context is who the writer is: her background and her experiences. Ask what in the writer's past could explain her reaction.",
         hints: [
-          "Individual context is who the writer is: his background and his experiences. Ask how the two people's experiences are different.",
+          "Individual context is who the writer is: her background and her experiences. Ask what in the writer's past could explain her reaction.",
           "Read the text box and the whole journal entry.",
-          "Uncle Booker says the sky looks like this every clear night, so this was not the first clear night. Check the other choices."
+          "Jabari says the big train shook the whole house, so it was not a quiet train. Check the other choices."
         ],
         how: [
-          "The box says Elijah has lived in a big city his whole life. City lights make it hard to see most stars.",
-          "Uncle Booker is used to the mountain sky, where it is dark enough to see this many stars all the time.",
-          "That is why the sky amazes Elijah but not his uncle. The answer is \"Elijah has always lived in a city, where far fewer stars show at night.\"",
-          "Nothing says Elijah never stays up late or that his uncle's eyes are weak, and his uncle says every clear night looks like this."
+          "The box says Imara has lived beside the train tracks her whole life. A sound you hear every day starts to feel normal.",
+          "Jabari is not used to the noise, so the train woke him again and again. Imara slept through it.",
+          "The answer is \"Imara has lived by the tracks all her life, so she is used to it.\"",
+          "Nothing says Imara went to bed late or that Jabari had never seen a train, and Jabari says the big train shook the whole house, so it was not a quiet train."
         ],
-        misconception: "A common mix-up is looking only at what happened that night. Who the writer is, and where he comes from, can explain his feelings.",
-        why: "The answer is \"Elijah has always lived in a city, where far fewer stars show at night.\" The box tells his individual context: a whole life in a big city. Uncle Booker sees this sky every clear night, nothing says Elijah never stays up late, and nothing says his uncle's eyes are weak." },
+        misconception: "A common mix-up is looking only at what happened that night. Who the writer is, and what her life has been like, can explain how she reacts.",
+        why: "The answer is \"Imara has lived by the tracks all her life, so she is used to it.\" The box tells her individual context. Nothing says she went to bed late or that Jabari had never seen a train, and the big train shook the whole house, so it was not quiet." },
       { id: "SK-TC2c-C12", type: "ebsr", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: ["p6"],
         prompt: "Read \"A Note from Coach Petty.\" This question has two parts. Answer Part A, then Part B.",
-        partA: { prompt: "Why does Coach Petty think the class should be back on the field by the end of May?",
+        partA: { prompt: "Why does Coach Petty think the class should be back on the field by the first week of May?",
           choices: [
             { text: "By then, the killdeer eggs will have hatched.", correct: true },
             { text: "By then, the rainy spring weather will be over." },
-            { text: "By then, the school year will have ended." },
+            { text: "By then, the baby birds will be able to fly." },
             { text: "By then, workers will have fixed home plate." }
           ] },
         partB: { prompt: "Which sentence best supports the answer to Part A?",
@@ -3054,12 +3374,12 @@ PP.addLesson({
         ],
         how: [
           "The box tells the situation: a killdeer made a nest near home plate, and its eggs take about four weeks to hatch.",
-          "Coach Petty wrote in April. About four weeks later is near the end of May, when the chicks should be out of the nest.",
+          "Coach Petty wrote in early April. About four weeks later is the first week of May, when the chicks should be out of the nest.",
           "Part A: By then, the killdeer eggs will have hatched. Part B: \"Killdeer eggs take about four weeks to hatch.\"",
-          "The nest sentence tells why the field is closed, not when it opens again. Nothing says rain or a broken home plate is the problem, and the class will be back on the field before the school year ends."
+          "The nest sentence tells why the field is closed, not when it opens again. Nothing says rain or a broken home plate is the problem, and nothing says the birds must be able to fly."
         ],
         misconception: "A common mix-up is guessing a usual reason, like the weather, instead of reading the situation in the box.",
-        why: "Part A: By then, the killdeer eggs will have hatched. Part B: \"Killdeer eggs take about four weeks to hatch.\" Coach Petty wrote in April, so the eggs should hatch near the end of May. The nest sentence tells why the field is closed, not when it opens, and nothing is said about rain or workers." },
+        why: "Part A: By then, the killdeer eggs will have hatched. Part B: \"Killdeer eggs take about four weeks to hatch.\" Coach Petty wrote in early April, so the eggs should hatch around the first week of May. The nest sentence tells why the field is closed, not when it opens, and nothing is said about rain or workers." },
       { id: "SK-TC2c-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
         stem: ["Box: This postcard is historical fiction. Imagine that a boy wrote it in 1935, while he was visiting his aunt in Savannah, Georgia."],
         prompt: "Read the box. Which sentence could the boy NOT have written on his postcard in 1935?",
@@ -3079,7 +3399,7 @@ PP.addLesson({
         ],
         how: [
           "Streetcars, radios, cameras and corner stores were all around in 1935.",
-          "Home computers did not exist until about fifty years later.",
+          "Home computers did not exist until the 1970s, about forty years later.",
           "The answer is \"We looked up the movie times on Aunt Lou's computer.\"",
           "Radios and cameras may seem new, but many families had them in the 1930s."
         ],
@@ -3161,7 +3481,7 @@ PP.addLesson({
       why: "The answer is \"He has brought mail to many homes with dogs for years.\" The box tells his job and how long he has done it, and his note says it has happened to him many times. He writes for the newsletter, nothing says he owns a dog, and he is not new." },
     { id: "SK-TC2c-S02", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-P4", "SK-TC2c-C13"],
-      stem: ["Box: This story is historical fiction. It is set in 1925, in a small town. Back then, most homes in small towns had no telephone. A town might have only a few, like the one at the general store.", "Ma held baby Ruthie close. \"Her fever is so high,\" she said. \"Run to Mr. Hill's store, quick! Ask him to call Dr. Bell.\""],
+      stem: ["Box: This story is historical fiction. It is set in 1925, in a small town. Back then, many homes in small towns had no telephone. A town might have only a few, like the one at the general store.", "Ma held baby Ruthie close. \"Her fever is so high,\" she said. \"Run to Mr. Hill's store, quick! Ask him to call Dr. Bell.\""],
       prompt: "Read the story in the box. Why does Ma send someone to the store to call the doctor?",
       choices: [
         { text: "Their home had no telephone, so they had to use the store's.", correct: true },
@@ -3176,13 +3496,13 @@ PP.addLesson({
         "Nothing in the story says the doctor works at the store, so that choice has no support. Check the other choices."
       ],
       how: [
-        "The box says the story is set in 1925, when most homes in small towns had no telephone.",
+        "The box says the story is set in 1925, when many homes in small towns had no telephone.",
         "The store had one, so the family had to go there to call.",
         "The answer is \"Their home had no telephone, so they had to use the store's.\"",
         "Ma asks Mr. Hill to call, not to sell medicine, and nothing says only he knows Dr. Bell."
       ],
       misconception: "A common mix-up is thinking people long ago could do things the way we do today. The box tells you what was different.",
-      why: "The answer is \"Their home had no telephone, so they had to use the store's.\" The box says most homes in small towns had no phone in 1925. Ma asks Mr. Hill to call, not to sell medicine, and nothing says the doctor works there or that only Mr. Hill knows him." },
+      why: "The answer is \"Their home had no telephone, so they had to use the store's.\" The box says many homes in small towns had no phone in 1925. Ma asks Mr. Hill to call, not to sell medicine, and nothing says the doctor works there or that only Mr. Hill knows him." },
     { id: "SK-TC2c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-P9", "SK-TC2c-C12", "SK-TC2c-C15"],
       stem: ["Box: Mr. Price wrote this note on a morning when a skunk was found sleeping under the school's front steps. Workers were on their way to move it to the woods.", "Dear Families, Please drop off your children at the side door today. Do not use the front steps until lunch. Thank you!"],
@@ -3283,7 +3603,7 @@ PP.addLesson({
       why: "The answer is \"With so many birds eating, the seed ran out quickly.\" Thirty goldfinches eat a lot. His job explains his short notes, and nothing says the tray fell or that he forgot to fill it." },
     { id: "SK-TC2c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [], pick: 2,
       like: ["SK-TC2c-C06"],
-      stem: ["Box: This story is historical fiction. It is set in 1922, in a city in Georgia. Back then, most homes had no refrigerator.", "Every other day, the iceman carried a big block of ice into our kitchen and set it in the icebox. Mama cooked supper on a wood stove. I set the table with our blue plates, and we all ate together. After supper, Papa read the newspaper out loud."],
+      stem: ["Box: This story is historical fiction. It is set in 1922, in a small town in Georgia. Back then, most homes had no refrigerator.", "Every other day, the iceman carried a big block of ice into our kitchen and set it in the icebox. Mama cooked supper on a wood stove. I set the table with our blue plates, and we all ate together. After supper, Papa read the newspaper out loud."],
       prompt: "Read the story in the box. Which TWO things in the story are different from how most families live today?",
       choices: [
         { text: "A block of ice keeps the food cold in an icebox.", correct: true },
@@ -3308,12 +3628,12 @@ PP.addLesson({
       why: "The answers are \"A block of ice keeps the food cold in an icebox.\" and \"Supper is cooked on a wood stove.\" Today most homes have refrigerators and gas or electric stoves. Setting the table, eating together and reading the news still happen." },
     { id: "SK-TC2c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-C08"],
-      stem: ["Box: This diary is historical fiction. Imagine that a boy named Otis wrote it in 1895, at his family's mill by the river.", "Today Papa let me pour the corn into the big stone wheel. The river turned the wheel, and the corn came out as fine yellow meal."],
+      stem: ["Box: This diary is historical fiction. Imagine that a boy named Emmett wrote it in 1895. His uncle's job was to light the town's gas street lamps by hand each evening.", "Tonight I walked with Uncle Ray on his rounds. He carried a long pole with a tiny flame on the end. At each lamp he reached up and turned a small key, and the street began to glow."],
       prompt: "Read the box and the diary. Then choose the best answer for each blank.",
       text: "The diary was written {0}. It tells about {1}.",
       slots: [
-        { options: ["by an author today, who imagined Otis", "by a real boy named Otis in 1895", "by Otis's papa, who ran the mill", "by a newspaper writer in 1895"], answer: 0 },
-        { options: ["life at a river mill in 1895", "how mills are built today", "how corn is grown on a farm", "a trip down the river by boat"], answer: 0 }
+        { options: ["by an author today, who imagined Emmett", "by a real boy named Emmett in 1895", "by Emmett's uncle, who lit the lamps", "by a newspaper writer in 1895"], answer: 0 },
+        { options: ["a night with a lamp lighter in 1895", "how street lamps are made today", "how electric lights work", "a boy who got lost in the dark"], answer: 0 }
       ],
       clue: "Read the box before the text. It tells what kind of text this is and when it is set.",
       hints: [
@@ -3322,13 +3642,13 @@ PP.addLesson({
         "Nothing says a newspaper writer wrote it, so that choice does not fit the first blank. Test the other choices for each blank."
       ],
       how: [
-        "The box says the diary is historical fiction and asks you to imagine that Otis wrote it in 1895.",
-        "Historical fiction is written by an author today but set in the past. So an author today imagined Otis.",
-        "The first blank is \"by an author today, who imagined Otis\" and the second blank is \"life at a river mill in 1895.\"",
-        "Otis is made up, and the diary is about grinding corn at the mill, not building mills, farming or a boat trip."
+        "The box says the diary is historical fiction and asks you to imagine that Emmett wrote it in 1895.",
+        "Historical fiction is written by an author today but set in the past. So an author today imagined Emmett.",
+        "The first blank is \"by an author today, who imagined Emmett\" and the second blank is \"a night with a lamp lighter in 1895.\"",
+        "Emmett is made up, and the diary is about lighting street lamps by hand, not making lamps, electric lights or a boy lost in the dark."
       ],
       misconception: "A common mix-up is thinking historical fiction is a real old paper. The box tells you it was made up and set long ago.",
-      why: "The answers are \"by an author today, who imagined Otis\" and \"life at a river mill in 1895.\" The box says it is historical fiction, so an author imagined Otis. The diary shows the mill grinding corn, not farming, building or a boat trip." },
+      why: "The answers are \"by an author today, who imagined Emmett\" and \"a night with a lamp lighter in 1895.\" The box says it is historical fiction, so an author imagined Emmett. The diary shows a man lighting street lamps by hand, not making lamps, electric lights or a boy lost in the dark." },
     { id: "SK-TC2c-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-C14"],
       stem: ["Box: Ms. Rowe sells umbrellas and raincoats at her shop downtown.", "Ms. Rowe's notebook: Rain again today! The shop was full all morning.", "Box: Theo is eight. His first baseball game was planned for today.", "Theo's diary: Rain again. No game. I stared out the window all day."],
@@ -3569,7 +3889,7 @@ PP.addLesson({
         "The box says Ms. Greene has driven a school bus in Georgia for 15 years.",
         "Her note says she has had to stop fast many times, and a rider who is standing can fall.",
         "The answer is \"She has driven a bus for years and has had to stop fast many times.\"",
-        "She wrote the newsletter piece, and the box says she drives the bus, so she is not a student or a nurse."
+        "She wrote the newsletter piece, not read it. Her own note says she has had to stop fast many times, so she did not just hear about falls from a video or from a rider."
       ],
       misconception: "A common mix-up is choosing where a text was printed instead of what the writer has lived through." },
     "SK-TC2c-P9": {

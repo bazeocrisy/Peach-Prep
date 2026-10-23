@@ -1585,7 +1585,300 @@ PP.addLesson({
         "The birds eating caterpillars is a fact from before the story begins, not a link caused by the feeder."
       ],
       misconception: "A common mix-up is choosing the first or last event. A middle link has a cause before it and an effect after it.",
-      why: "The answer is \"Fewer birds came to visit the yard.\" It is an effect of taking down the feeder and a cause of more caterpillars living. The feeder starts the chain, the chewed leaves end it, and the birds eating caterpillars is a fact from before." }
+      why: "The answer is \"Fewer birds came to visit the yard.\" It is an effect of taking down the feeder and a cause of more caterpillars living. The feeder starts the chain, the chewed leaves end it, and the birds eating caterpillars is a fact from before." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TSCE-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-P5"],
+      stem: ["When a pond gets very cold, the water at the top freezes first. Ice is lighter than water, so the ice floats instead of sinking. The sheet of ice acts like a blanket. It keeps the cold wind off the water below. As a result, the water under the ice stays a little warmer, and it does not freeze. Fish and frogs live in that water until spring."],
+      prompt: "According to the paragraph, what is an effect of the sheet of ice floating on the pond?",
+      choices: [
+        { text: "The water under the ice stays a little warmer and does not freeze.", correct: true },
+        { text: "The whole pond freezes solid from the top to the bottom." },
+        { text: "The ice sinks to the bottom and covers the fish." },
+        { text: "The fish swim up and break through the ice." }
+      ],
+      clue: "First find what the ice does. Then read on to see what that causes for the water below.",
+      hints: [
+        "First find what the ice does. Then read on to see what that causes for the water below.",
+        "Look for the clue words as a result. They point to an effect.",
+        "The paragraph says the ice floats, so a choice in which the ice sinks goes against the text. Test the other choices against what the ice does."
+      ],
+      how: [
+        "The ice floats and acts like a blanket. It keeps the cold wind off the water below.",
+        "The words as a result tell the effect: the water under the ice stays a little warmer and does not freeze.",
+        "The answer is \"The water under the ice stays a little warmer and does not freeze.\"",
+        "The pond does not freeze solid, the ice does not sink, and the fish do not break through the ice."
+      ],
+      misconception: "A common mix-up is choosing an effect that sounds likely but is not in the paragraph. Use the text.",
+      why: "The answer is \"The water under the ice stays a little warmer and does not freeze.\" The paragraph says as a result of the ice blanket, the water below stays warmer. The pond does not freeze solid, the ice floats instead of sinking, and the fish live in the water under the ice." },
+    { id: "SK-TSCE-S05", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C03"],
+      stem: ["Why Does a Dog Pant?", "Paragraph 1: A dog cannot sweat through most of its skin the way you can. When a dog gets hot, it opens its mouth and pants. Air moves over its wet tongue. The air takes some heat away, so the dog cools off.", "Paragraph 2: Heat can also make a dog sweat a little through the pads of its paws. You may see wet paw prints on a hot floor. A dog's paws give off only a small amount of sweat, so they cool the dog only a little."],
+      prompt: "The article is mostly about panting. Why does the author include Paragraph 2 about wet paw prints?",
+      choices: [
+        { text: "to tell about another effect that heat has on a dog's body", correct: true },
+        { text: "to explain that sweaty paws are what make a dog pant" },
+        { text: "to show that dogs need to pant less than people sweat" },
+        { text: "to explain why a dog's tongue gets wet when it pants" }
+      ],
+      clue: "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
+      hints: [
+        "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
+        "Say in a few words what Paragraph 1 is about, then what Paragraph 2 is about. How does Paragraph 2 fit with Paragraph 1?",
+        "Paragraph 1, not Paragraph 2, tells about the wet tongue, so that choice is not why Paragraph 2 is there. Test each choice that is left against what Paragraph 2 says."
+      ],
+      how: [
+        "The article tells what heat does to a dog. Paragraph 1 tells how panting cools a dog.",
+        "Paragraph 2 starts, \"Heat can also make a dog sweat a little.\" The word also shows that sweating is one more effect of the same cause, heat.",
+        "The answer is \"to tell about another effect that heat has on a dog's body.\"",
+        "The article never says sweaty paws cause panting, and the wet tongue is explained in Paragraph 1."
+      ],
+      misconception: "A common mix-up is thinking two effects of the same cause must cause each other. Panting and sweating both come from heat.",
+      why: "The answer is \"to tell about another effect that heat has on a dog's body.\" Paragraph 2 begins, \"Heat can also make a dog sweat a little,\" so it adds a second effect of heat. It never says sweaty paws make a dog pant, and the wet tongue is in Paragraph 1." },
+    { id: "SK-TSCE-S06", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], pick: 2,
+      like: ["SK-TSCE-C05"],
+      stem: ["How to Make a Lava Lamp", "1. Fill a clear bottle one-quarter full of water. Add a few drops of food coloring.", "2. Pour in cooking oil until the bottle is almost full.", "3. Wait until the oil and water have separated.", "4. Drop in half of a fizzy tablet.", "Oil is lighter than water, so it floats on top and does not mix. The tablet makes gas bubbles. The bubbles carry blobs of colored water up through the oil. When the bubbles pop at the top, the blobs sink back down. That is how the lamp seems to move."],
+      prompt: "Read the directions. Which TWO mistakes would most likely stop the colored blobs from rising?",
+      choices: [
+        { text: "dropping in no fizzy tablet at all", correct: true },
+        { text: "stirring the oil and water together so they are all mixed up", correct: true },
+        { text: "using three drops of coloring instead of two" },
+        { text: "using a tall bottle instead of a short one" },
+        { text: "using blue coloring instead of red" }
+      ],
+      clue: "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
+      hints: [
+        "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
+        "Read the part after the steps. What lifts the colored water, and what keeps the oil and water apart? Choose two.",
+        "The color of the coloring does not change how the blobs move, so that mistake would not stop them. Test each mistake that is left against the sentences after the steps."
+      ],
+      how: [
+        "The tablet makes gas bubbles, and the bubbles carry blobs of colored water up. With no tablet, nothing lifts the blobs.",
+        "The oil floats and does not mix with water. If the two are stirred together, there are no separate layers, and the blobs have nothing to rise through.",
+        "The answers are \"dropping in no fizzy tablet at all\" and \"stirring the oil and water together so they are all mixed up.\"",
+        "Extra coloring, a taller bottle or a different color do not change what lifts the blobs."
+      ],
+      misconception: "A common mix-up is choosing any change to the steps. Only a change that affects the cause of the rising changes the result.",
+      why: "The answers are \"dropping in no fizzy tablet at all\" and \"stirring the oil and water together so they are all mixed up.\" The tablet makes the bubbles that lift the blobs, and the oil must stay in a separate layer. The amount of coloring, the bottle height and the color do not change that." },
+    { id: "SK-TSCE-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C07"],
+      stem: ["Plants need light to make their food. Ana keeps a small plant on a windowsill in her room. The plant leans toward the window. Its stem bends that way, and its leaves turn to catch the light. When Ana turns the pot around, the plant slowly bends back toward the window. Ana wrote: \"The plant on the windowsill leans toward the window, so it needs light.\""],
+      prompt: "The clue word in the Ana's sentence makes the cause and effect backward. Choose the clue word that fixes it.",
+      text: "The plant on the windowsill leans toward the window {0} it needs light.",
+      slots: [
+        { options: ["so", "because", "when"], answer: 1 }
+      ],
+      clue: "Because comes just before a cause. So comes just before an effect.",
+      hints: [
+        "Because comes just before a cause. So comes just before an effect.",
+        "Reread the first lines of the stem to find out which of the two things happens first and makes the other happen.",
+        "When tells the time something happens, not why, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
+      ],
+      how: [
+        "The plant needs light, and that makes it lean toward the window to catch light.",
+        "So needing light is the cause, and leaning is the effect.",
+        "In the Ana's sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
+        "So would put the effect after the clue word, and when does not tell a cause at all."
+      ],
+      misconception: "A common mix-up is choosing the clue word the student used. Check which part of the sentence is the cause.",
+      why: "The answer is because. The plant needs light first, and that is why it leans toward the window, so the cause is \"it needs light.\" Because comes just before a cause. So would make needing light the effect, and when tells time." },
+    { id: "SK-TSCE-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C08"],
+      stem: ["One cold night in January, the puddles on Oak Road froze. In the morning, the road was slick and shiny in the early sun. Cars crept along it. The bus driver drove very slowly, so the bus came to school late. Many kids were late. Because of that, the principal moved the start of school to a later time for the week."],
+      prompt: "Which of these events came first and led to all of the others?",
+      choices: [
+        { text: "The puddles on Oak Road froze.", correct: true },
+        { text: "The bus driver drove very slowly." },
+        { text: "The bus came to school late." },
+        { text: "The principal moved the start of school later." }
+      ],
+      clue: "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+      hints: [
+        "In a chain of events, the first cause starts everything else. Ask: Without this, would any of the rest have happened?",
+        "Draw the chain as boxes with arrows. Then look at which box has no arrow coming into it from these choices.",
+        "The principal's change came at the very end of the chain, so it could not start the other events. Test each choice that is left: did something else have to happen before it?"
+      ],
+      how: [
+        "The chain is: puddles freeze, the road is slick, the driver drives slowly, the bus is late, the principal moves the start time.",
+        "The first box in the chain is the puddles freezing.",
+        "The answer is \"The puddles on Oak Road froze.\"",
+        "Slow driving, the late bus and the later start all came after it."
+      ],
+      misconception: "A common mix-up is choosing an event from the middle of the chain. The first cause is the one that starts the whole chain.",
+      why: "The answer is \"The puddles on Oak Road froze.\" The frozen puddles made the road slick, the driver slowed down, the bus was late and the principal moved the start time. Each of the other choices came after it." },
+    { id: "SK-TSCE-S09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C09"],
+      stem: ["The Reyes family has a small farm outside town. One summer, no rain fell on the farm for six weeks. Because the soil was so dry, the corn plants grew small and thin. As a result, the Reyes family had much less corn to sell at the market. So they planted a different crop the next year, one that needs less water."],
+      prompt: "Which sentence best tells how the author organizes this paragraph?",
+      choices: [
+        { text: "It tells events in order and shows how one led to another.", correct: true },
+        { text: "It tells events in order, but they do not affect each other." },
+        { text: "It gives the steps a reader would follow to grow corn." },
+        { text: "It compares a dry summer with a rainy summer on the farm." }
+      ],
+      clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
+      hints: [
+        "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
+        "Notice the clue words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
+        "The paragraph does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the paragraph."
+      ],
+      how: [
+        "The paragraph goes in time order, from one summer to the next year.",
+        "Clue words such as because, as a result and so join each happening to the one before it.",
+        "The answer is \"It tells events in order and shows how one led to another.\"",
+        "The events do affect each other, the paragraph is not a how-to, and it never describes a rainy summer."
+      ],
+      misconception: "A common mix-up is calling a text time order only. Check the clue words to see whether one event causes the next.",
+      why: "The answer is \"It tells events in order and shows how one led to another.\" Because, as a result and so show that each event caused the next. The paragraph is not a how-to, and it never describes a rainy summer." },
+    { id: "SK-TSCE-S10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C10"],
+      stem: ["Cars used to speed down Hill Street, right past the school. Kids did not feel safe crossing the street. Parents wrote to the town to ask for help. So the town added two speed bumps to the road. A car must slow down to go over a speed bump. Now drivers go slowly near the school, and kids cross safely."],
+      prompt: "Which sentence tells an effect of the speed bumps?",
+      choices: [
+        { text: "Now drivers go slowly near the school, and kids cross safely.", correct: true },
+        { text: "So the town added two speed bumps to the road." },
+        { text: "Cars used to speed down Hill Street, right past the school." },
+        { text: "Kids did not feel safe crossing." }
+      ],
+      clue: "An effect happens after its cause and because of it. Find the cause in the text first, then read on.",
+      hints: [
+        "An effect happens after its cause and because of it. Find the cause in the text first, then read on.",
+        "Find where the text tells about the speed bumps. An effect is told after the cause.",
+        "The sentence about cars speeding tells the problem that happened before the speed bumps, so it is not their effect. Check each other sentence: did the speed bumps make it happen?"
+      ],
+      how: [
+        "The cause is the speed bumps the town added.",
+        "A car must slow down to go over a speed bump. So the last sentence tells what changed because of them: drivers go slowly, and kids cross safely.",
+        "The answer is \"Now drivers go slowly near the school, and kids cross safely.\"",
+        "The sentence about adding the bumps is the cause, and the sentences about speeding and feeling unsafe tell the problem from before."
+      ],
+      misconception: "A common mix-up is choosing the sentence that names the cause itself. The question asks what the speed bumps made happen.",
+      why: "The answer is \"Now drivers go slowly near the school, and kids cross safely.\" The speed bumps made drivers slow down. Adding the bumps is the cause, and the speeding and the unsafe feeling came before them." },
+    { id: "SK-TSCE-S11", type: "cr", dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], rows: 4,
+      like: ["SK-TSCE-C11"],
+      stem: ["The class picnic was planned for Saturday at noon. The children brought sandwiches and fruit. Dark clouds rolled over the park, and soon thunder rumbled. Mr. Lee did not want the children to stand in the open field during the storm. So he moved the class picnic into the gym, and everyone ate their lunch there while the rain fell."],
+      prompt: "Write one sentence about the text that tells an EFFECT first and its CAUSE second. Use the clue word because.",
+      sample: "Mr. Lee moved the class picnic into the gym because thunder rumbled over the park.",
+      criteria: [
+        "My sentence tells an effect from the text first.",
+        "I used because to start the cause.",
+        "The cause I wrote really happened first, and the text says it."
+      ],
+      clue: "To tell the effect first, start with what happened. Then write because and tell why it happened.",
+      hints: [
+        "To tell the effect first, start with what happened. Then write because and tell why it happened.",
+        "Choose any cause-and-effect link in the text. The sentences with So and Soon each have one you could use.",
+        "The text tells the cause first and uses so. You can flip it around: write the part after so first, then because, then the part before so."
+      ],
+      how: [
+        "Find a sentence with a cause and an effect, like the one about Mr. Lee and the field.",
+        "Tell the effect first: Mr. Lee moved the class picnic into the gym.",
+        "Then write because and the cause: thunder rumbled over the park.",
+        "One good answer: \"Mr. Lee moved the class picnic into the gym because thunder rumbled over the park.\" Other answers can also be right."
+      ],
+      misconception: "A common mix-up is putting because in front of the effect. The words after because must tell what happened first.",
+      why: "Many answers can be right. A good sentence tells an effect from the text first, then because, then a cause the text gives. For example: \"Mr. Lee moved the class picnic into the gym because thunder rumbled over the park.\"" },
+    { id: "SK-TSCE-S12", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], pick: 2,
+      like: ["SK-TSCE-C12"],
+      stem: ["For years, Mr. Hale cut the grass in the field behind his barn every week. This spring, he stopped. Tall grass and wildflowers grew in the field. By June, the field was full of color. Bees came to the wildflowers to sip their sweet nectar. The barn behind the field is painted red, and it stands on a low hill."],
+      prompt: "Which TWO things happened because Mr. Hale stopped cutting the grass?",
+      choices: [
+        { text: "Tall grass and wildflowers grew in the field.", correct: true },
+        { text: "Bees came to the wildflowers to sip nectar.", correct: true },
+        { text: "The grass was cut every week." },
+        { text: "The barn behind the field was painted red." },
+        { text: "Mr. Hale bought a new tool for the field." }
+      ],
+      clue: "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
+      hints: [
+        "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
+        "Draw the chain as boxes with arrows. Start the first box with Mr. Hale stopping, and fill in the boxes that come after it. Choose two.",
+        "Cutting the grass every week happened before he stopped, so it cannot be an effect of stopping. Check each choice that is left against the chain you drew."
+      ],
+      how: [
+        "Mr. Hale stopped cutting the grass. That is the first cause.",
+        "With no cutting, tall grass and wildflowers grew. That is the first effect.",
+        "The wildflowers made nectar, and bees came to sip it. That is the next effect in the chain.",
+        "The answers are \"Tall grass and wildflowers grew in the field.\" and \"Bees came to the wildflowers to sip nectar.\" The weekly cutting came before, and nothing says Mr. Hale bought a tool or painted the barn."
+      ],
+      misconception: "A common mix-up is stopping after the first effect. In a chain, the next effect also happened because of the first cause.",
+      why: "The answers are \"Tall grass and wildflowers grew in the field.\" and \"Bees came to the wildflowers to sip nectar.\" With no cutting, tall grass and flowers grew, and the flowers brought the bees. The weekly cutting happened before he stopped, and the red barn and a new tool are not effects." },
+    { id: "SK-TSCE-S13", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSCE-C13"],
+      stem: ["Text 1: The Cracked Sidewalk. A tree grew beside Pine Street. Its roots spread under the sidewalk and pushed up on the cement. Because the roots kept growing, the cement cracked. A child tripped on the crack. So the city cut a path for the roots and fixed the sidewalk.", "Text 2: The Flooded Parking Lot. Heavy rain fell for two days. Leaves clogged the drain in the parking lot. As a result, the water had nowhere to go, and it covered the cars' tires. So the workers cleared the drain."],
+      prompt: "Is each sentence true for only one text or for both? Match each sentence.",
+      cols: ["only Text 1", "only Text 2", "both texts"],
+      rows: [
+        { text: "One event causes the next, like links in a chain.", answer: 2 },
+        { text: "People fixed the problem after it happened.", answer: 2 },
+        { text: "A growing plant starts the problem.", answer: 0 },
+        { text: "Heavy rain starts the problem.", answer: 1 }
+      ],
+      clue: "Test each sentence twice: once on Text 1 and once on Text 2. Choose both texts only if it passes both tests.",
+      hints: [
+        "Test each sentence twice: once on Text 1 and once on Text 2. Choose both texts only if it passes both tests.",
+        "In each text, look for what starts the problem and for what people do at the end.",
+        "In Text 1, nothing about rain starts the problem; roots do. Sort the other sentences the same way, one text at a time."
+      ],
+      how: [
+        "Both texts tell a chain of causes and effects: in each one, one event causes the next.",
+        "In both, people fix the problem at the end: the city fixes the sidewalk, and the workers clear the drain.",
+        "Only Text 1 has a growing plant start the problem: the roots keep growing.",
+        "Only Text 2 has heavy rain start the problem."
+      ],
+      misconception: "A common mix-up is calling a sentence true for both when it fits only one text. Check it against each text on its own.",
+      why: "Both texts tell a chain of causes and effects, and in both, people fix the problem at the end. Only Text 1 has a growing plant, the tree roots, start the problem. Only Text 2 has heavy rain start the problem." },
+    { id: "SK-TSCE-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCE-C14"],
+      stem: ["Water on iron makes it rust. Rust is a crumbly orange coat that weakens the metal. Last fall, Grandpa left his wheelbarrow out in the rain. By winter, its sides had rusty holes. In spring, he scraped off the rust and painted the metal. Water cannot touch the iron under the paint. Now he keeps the wheelbarrow in the shed when it rains."],
+      prompt: "Read the story. What will most likely happen to the wheelbarrow next fall?",
+      choices: [
+        { text: "It will stay strong, because paint and the shed keep the water off.", correct: true },
+        { text: "It will get new rusty holes, because paint makes iron rust faster." },
+        { text: "It will turn orange, because the shed is made of iron." },
+        { text: "It will get lighter, because Grandpa scraped off the rust." }
+      ],
+      clue: "To predict an effect, find the cause and ask what it will make happen.",
+      hints: [
+        "To predict an effect, find the cause and ask what it will make happen.",
+        "Reread the first two sentences. They tell what makes iron rust. Then read what Grandpa does in the spring.",
+        "Nothing in the story says paint makes iron rust, so that is not an effect of anything in the story. Ask what changes for the wheelbarrow now that water is kept off."
+      ],
+      how: [
+        "The story says water makes iron rust. That is why the wheelbarrow got holes.",
+        "In spring, Grandpa paints the metal, so water cannot touch the iron, and he keeps the wheelbarrow in the shed when it rains.",
+        "The answer is \"It will stay strong, because paint and the shed keep the water off.\"",
+        "Paint does not make iron rust, the shed is not made of iron, and scraping off rust does not make the wheelbarrow rust again."
+      ],
+      misconception: "A common mix-up is flipping the cause. Water made the iron rust, so keeping water away keeps it from rusting.",
+      why: "The answer is \"It will stay strong, because paint and the shed keep the water off.\" Water makes iron rust, and Grandpa has taken away the water. Paint does not make iron rust, the shed is not iron, and scraping the rust off does not bring it back." },
+    { id: "SK-TSCE-S15", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-TSCE-C15"],
+      stem: ["Kofi helps his aunt on her small farm. One evening, he forgot to close the gate. In the morning, the goats were in the garden, and they had eaten all the lettuce. Kofi wrote down two facts about that day for his aunt to read.", "Fact 1: Kofi forgot to close the gate.", "Fact 2: The goats got into the garden."],
+      prompt: "A student wants to join the two facts in one sentence that shows the cause and the effect. Which TWO sentences do this correctly?",
+      choices: [
+        { text: "Kofi forgot to close the gate, so the goats got into the garden.", correct: true },
+        { text: "The goats got into the garden because Kofi forgot to close the gate.", correct: true },
+        { text: "Kofi forgot to close the gate because the goats got into the garden." },
+        { text: "The goats got into the garden, so Kofi forgot to close the gate." },
+        { text: "Kofi forgot to close the gate, but the goats got into the garden." }
+      ],
+      clue: "Because comes just before a cause. So comes just before an effect.",
+      hints: [
+        "Because comes just before a cause. So comes just before an effect.",
+        "First decide which fact happened first and made the other one happen. Choose two.",
+        "A sentence with but shows a difference or a surprise, not a cause, so it does not fit. Check each sentence that is left: is the clue word next to the right part?"
+      ],
+      how: [
+        "The gate was left open first, and that let the goats in. Forgetting the gate is the cause, and the goats getting in is the effect.",
+        "With so, the cause comes before the clue word: \"Kofi forgot to close the gate, so the goats got into the garden.\"",
+        "With because, the cause comes after the clue word: \"The goats got into the garden because Kofi forgot to close the gate.\"",
+        "The other sentence with so and the other sentence with because are backward, and but does not show a cause."
+      ],
+      misconception: "A common mix-up is thinking because and so can go anywhere. Because must sit right before the cause, and so right before the effect.",
+      why: "The answers are \"Kofi forgot to close the gate, so the goats got into the garden.\" and \"The goats got into the garden because Kofi forgot to close the gate.\" The open gate came first and let the goats in. So goes before the effect, and because goes before the cause. The other two are backward, and but does not show a cause." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3 and P6. */
   addons: {
@@ -1901,6 +2194,23 @@ PP.addLesson({
         ["The next day, Kayla peeled the soggy sandwich open before she ate it.", "The bread was dry at the edges.", "It was wettest right under the juicy tomato slices."],
         ["\"It's the tomatoes!\" she told her big brother, Jonah, that night.", "So the next morning, she packed the tomatoes in a little cup and added them at lunch."],
         ["That day, her sandwich was soft but not soggy, and she ate every bite.", "Jonah started packing his tomatoes in a cup, too."]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p8 and p9 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p8", title: "The Slow Sink", genre: "Literary text",
+      paragraphs: [
+        ["The sink in Room 7 had a problem.", "After the class washed paintbrushes, the water drained so slowly that it sat in the bowl for an hour."],
+        ["First, Ms. Rudd poured hot water down the drain.", "The sink gurgled, but the water still sat there."],
+        ["Next, the class tried a plunger.", "Splash! Gray water splashed on the floor, and the sink was just as slow as before."],
+        ["Then Mr. Okon, the custodian, knelt down and looked at the curved pipe under the sink.", "\"Water drains slowly when something blocks the pipe,\" he said."],
+        ["He unscrewed the pipe over a bucket and tipped it.", "Out slid a clump of paint-stained bristles."],
+        ["Mr. Okon screwed the pipe back on.", "Ms. Rudd turned on the water, and it swirled down the drain in seconds.", "Then she put a small screen over the drain to catch any more bristles."]
+      ] },
+    { id: "p9", title: "Lights Out for Sea Turtles", genre: "Informational text",
+      paragraphs: [
+        ["On the beaches of Georgia, baby sea turtles hatch at night.", "They should crawl toward the bright, open ocean.", "But on some beaches, many hatchlings crawled the wrong way.", "They headed toward the lights of the hotels."],
+        ["First, a beach town asked one hotel to turn off its lights.", "But hatchlings still crawled toward the road.", "Scientists explained why.", "White lights from many buildings and street lamps glowed at once, and hatchlings follow bright light.", "One hotel was only a small part of the glow."],
+        ["So the town changed the lights on the whole beach.", "Lamps got shields so the light shone down, and the bulbs were changed to dim amber.", "Hatchlings cannot see amber light as well."],
+        ["Now most hatchlings find the ocean on their own."]
       ] }
   ],
   practice: [
@@ -2372,7 +2682,303 @@ PP.addLesson({
         "A bucket only catches the water after it drips, and the crack keeps leaking. More mopping repeats a try that failed. Wiping shoes would help only if the water came in on shoes, but it drips from the ceiling."
       ],
       misconception: "A common mix-up is choosing a plan that only deals with the water, like a bucket or more mopping, instead of fixing where the water comes from.",
-      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. A bucket only catches the drips while the crack keeps leaking, more mopping already failed, and wiping shoes does not help, because the water drips from the ceiling, not from shoes." }
+      why: "The answer is \"Fix the crack in the ceiling above the door.\" The rain drips through the crack, so fixing it stops the puddle. A bucket only catches the drips while the crack keeps leaking, more mopping already failed, and wiping shoes does not help, because the water drips from the ceiling, not from shoes." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TSPS-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C02"],
+      stem: ["Every morning, the front steps at Isaac's house were covered in ice. First, Isaac shoveled them, but a thin sheet of ice stayed. Next, he poured hot water on the steps, but the water froze again. Then his neighbor, Mr. Adams, said, \"Sprinkle salt on the steps at night. Salt makes ice melt, even when it is cold.\" Isaac tried it, and the steps were clear the next day."],
+      prompt: "Read the story. How does Mr. Adams help solve the problem?",
+      choices: [
+        { text: "He shares a fact about salt that gives Isaac a new plan.", correct: true },
+        { text: "He shovels the steps for Isaac every morning." },
+        { text: "He pours hot water on the ice to melt it." },
+        { text: "He buys Isaac a pair of boots with better grip." }
+      ],
+      clue: "A helper can solve a problem by knowing a new idea. Ask what Mr. Adams tells Isaac that Isaac did not know.",
+      hints: [
+        "A helper can solve a problem by knowing a new idea. Ask what Mr. Adams tells Isaac that Isaac did not know.",
+        "Read what Isaac tried first. Then read what Mr. Adams says and what Isaac does next.",
+        "Isaac, not Mr. Adams, is the one who shovels and pours hot water. Test each choice that is left against what Mr. Adams says."
+      ],
+      how: [
+        "Isaac's first two tries, shoveling and hot water, do not work.",
+        "Then Mr. Adams tells him that salt makes ice melt, even when it is cold, and to sprinkle it at night.",
+        "Isaac follows the new plan, and the steps are clear. The answer is \"He shares a fact about salt that gives Isaac a new plan.\"",
+        "Mr. Adams does not shovel, pour water or buy boots."
+      ],
+      misconception: "A common mix-up is choosing one of the tries that did not work. The helper brings a new plan.",
+      why: "The answer is \"He shares a fact about salt that gives Isaac a new plan.\" His tip about salt is what clears the steps. Isaac is the one who shovels and pours hot water, and Mr. Adams does not buy boots." },
+    { id: "SK-TSPS-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C03"],
+      stem: ["Whenever the wind blew, the door of Room 5 slammed shut with a bang. Everyone jumped. Maya set a heavy book in the doorway to hold the door open. The book slid across the floor, and the door slammed again."],
+      prompt: "Complete the sentences about the story. Choose the best answer for each blank.",
+      text: "The problem in the story is that {0}. Maya's try is to {1}.",
+      slots: [
+        { options: ["the door slams shut when the wind blows", "the heavy book is too big for the doorway", "the floor is slippery in Room 5"], answer: 0 },
+        { options: ["use a book to hold the door open", "close the window next to the door", "ask everyone to stand away from the door"], answer: 0 }
+      ],
+      clue: "The problem is what goes wrong. A try is what a character does to fix it.",
+      hints: [
+        "The problem is what goes wrong. A try is what a character does to fix it.",
+        "Find the sentence that tells what keeps happening. Then find what Maya does about it.",
+        "The book is Maya's try, not the problem. Match the other parts of each sentence the same way."
+      ],
+      how: [
+        "What keeps going wrong is that the door slams when the wind blows, and everyone jumps.",
+        "Maya's try is to put a heavy book in the doorway to hold the door open.",
+        "The answers are \"the door slams shut when the wind blows\" and \"use a book to hold the door open.\"",
+        "The book is what she uses to fix the problem, not the problem, and nobody closes the window or moves away."
+      ],
+      misconception: "A common mix-up is calling the try the problem. The problem is what goes wrong; the try is the fix.",
+      why: "The answers are \"the door slams shut when the wind blows\" and \"use a book to hold the door open.\" The slamming door is the problem, and the book in the doorway is Maya's try. Nobody closes the window or asks people to move." },
+    { id: "SK-TSPS-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C05"],
+      stem: ["Three of the clocks in the hall showed noon, but the fourth showed ten."],
+      prompt: "Read the sentence in the box. What does the word \"but\" show here?",
+      choices: [
+        { text: "One clock is different from the other three.", correct: true },
+        { text: "A try to fix the clocks did not work." },
+        { text: "Something happened before the clocks were checked." },
+        { text: "The clocks have been fixed and now match." }
+      ],
+      clue: "The word \"but\" can show that a thing does not match what came before it. Ask what is being set against what.",
+      hints: [
+        "The word \"but\" can show that a thing does not match what came before it. Ask what is being set against what.",
+        "Read the part before the word \"but\" and the part after it. Ask how they compare.",
+        "No one tries to fix anything in this sentence. Test each choice that is left against the two parts."
+      ],
+      how: [
+        "Before the word \"but,\" three clocks show noon.",
+        "After it, the fourth clock shows ten. The word \"but\" sets one clock against the other three.",
+        "The answer is \"One clock is different from the other three.\"",
+        "No one tries to fix a clock, and the sentence does not say anything about when the clocks were checked or that they match."
+      ],
+      misconception: "A common mix-up is thinking \"but\" always shows a failed try. It can also show that one thing is different.",
+      why: "The answer is \"One clock is different from the other three.\" Three clocks show noon, but one shows ten. No one tries to fix a clock, the sentence does not say when they were checked, and they do not match." },
+    { id: "SK-TSPS-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C06"],
+      stem: ["Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ladder with Mr. Fox and looked at the ceiling. She saw a gap where the roof met the wall."],
+      prompt: "Zane and Thea handle the problem in different ways. Choose the best answer for each blank.",
+      text: "When the water drips, Zane wants to {0}. Thea thinks the class should {1}.",
+      slots: [
+        { options: ["set out more buckets", "paint the ceiling a new color", "move the art room to the gym"], answer: 0 },
+        { options: ["find out where the water gets in", "set out more buckets", "close the art room for the year"], answer: 1 }
+      ],
+      clue: "Two characters can handle one problem in different ways. Find what each one does.",
+      hints: [
+        "Two characters can handle one problem in different ways. Find what each one does.",
+        "Read what Zane does first. Then read what Thea does and what she looks at.",
+        "Thea does not set out buckets; Zane does. Check the other choices against what each one does."
+      ],
+      how: [
+        "Zane sets out more buckets to catch the drips.",
+        "Thea climbs a ladder to look at the ceiling. She wants to find where the water gets in.",
+        "The answers are \"set out more buckets\" and \"find out where the water gets in.\"",
+        "Nobody paints, moves the room or closes it for the year."
+      ],
+      misconception: "A common mix-up is giving both characters the same plan. Check who does what.",
+      why: "The answers are \"set out more buckets\" and \"find out where the water gets in.\" Zane puts out buckets, and Thea looks at the ceiling for the gap. Nobody paints the ceiling, moves the room or closes it." },
+    { id: "SK-TSPS-S08", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C07"],
+      stem: ["Every morning, the sticky notes on Tyree's bulletin board fell off. First, he pressed each note down harder, but they fell again. Then he wiped the dusty board with a damp cloth and pressed each note on. The notes stayed up all week."],
+      prompt: "Sort the story's events into the parts of a problem-and-solution map. Match each event to its part.",
+      cols: ["the problem", "a try that did not work", "the solution", "proof that it worked"],
+      rows: [
+        { text: "The sticky notes fall off the board.", answer: 0 },
+        { text: "Tyree presses each note down harder.", answer: 1 },
+        { text: "Tyree wipes the dusty board and presses the notes on.", answer: 2 },
+        { text: "The notes stay up all week.", answer: 3 }
+      ],
+      clue: "A problem-and-solution map has the problem, the tries that failed, the solution and the proof. Ask what job each event does.",
+      hints: [
+        "A problem-and-solution map has the problem, the tries that failed, the solution and the proof. Ask what job each event does.",
+        "For each event, ask: is it what goes wrong, a fix that fails, a fix that works, or a sign that the fix worked?",
+        "The notes falling is what goes wrong, so that event is the problem. Sort the other three the same way."
+      ],
+      how: [
+        "The notes falling off every morning is what goes wrong, so it is the problem.",
+        "Pressing harder is a fix that fails, because the notes fall again.",
+        "Wiping the dusty board and pressing the notes on is the fix that works, so it is the solution.",
+        "The notes staying up all week shows that the fix worked, so it is the proof."
+      ],
+      misconception: "A common mix-up is mixing up the solution and the proof. The solution is what Tyree does; the proof is what shows the problem has stopped.",
+      why: "The notes falling off is the problem. Pressing harder is a try that did not work. Wiping the dusty board and pressing the notes on is the solution. The notes staying up all week is the proof that it worked." },
+    { id: "SK-TSPS-S09", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C08"],
+      stem: ["The freezer in the school kitchen broke. The school picnic was in two days. All of the ice-cream cups for the picnic were inside the freezer."],
+      prompt: "Why is the broken freezer such a big problem for the picnic?",
+      choices: [
+        { text: "The ice cream will melt before the picnic starts.", correct: true },
+        { text: "The freezer is too old for anyone to fix." },
+        { text: "The kitchen cannot make lunch for the students." },
+        { text: "The school picnic has been moved to next month." }
+      ],
+      clue: "A problem is big when it stops something that matters. Ask what the broken freezer will cause.",
+      hints: [
+        "A problem is big when it stops something that matters. Ask what the broken freezer will cause.",
+        "Read what the freezer holds and what is happening in two days.",
+        "The story does not say the picnic is moved or that lunch is canceled. Test each choice that is left against what the freezer holds."
+      ],
+      how: [
+        "The freezer keeps things cold. It holds the ice-cream cups for the picnic.",
+        "The picnic is in two days, so the ice cream cannot stay frozen without a working freezer.",
+        "The answer is \"The ice cream will melt before the picnic starts.\"",
+        "The story does not say the freezer is too old, that lunch is canceled, or that the picnic is moved."
+      ],
+      misconception: "A common mix-up is choosing a result the story never says. Use only what the story tells you.",
+      why: "The answer is \"The ice cream will melt before the picnic starts.\" The ice-cream cups for the picnic are inside the broken freezer. The story does not say it is too old to fix, that lunch is canceled or that the picnic is moved." },
+    { id: "SK-TSPS-S10", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C09"],
+      stem: ["Wren's cardboard fort fell down every time the wind blew from the left. First, she taped the corners tighter, but the fort fell down again."],
+      prompt: "Wren's tighter tape does not work. What does this failed try show?",
+      choices: [
+        { text: "Something other than loose corners is making the fort fall.", correct: true },
+        { text: "Wren should use even more tape on the corners." },
+        { text: "The wind will stop blowing from the left soon." },
+        { text: "The fort needs a new coat of paint." }
+      ],
+      clue: "A try that does not work can show what the real trouble is not. Ask what Wren fixed and whether it helped.",
+      hints: [
+        "A try that does not work can show what the real trouble is not. Ask what Wren fixed and whether it helped.",
+        "Ask what the tape fixed. Then ask what the story says still happened.",
+        "More of the same try would not help if the fort still falls. Test each choice that is left."
+      ],
+      how: [
+        "Wren taped the corners tighter, so she was fixing loose corners.",
+        "The fort still fell. That means loose corners were not the real trouble.",
+        "The answer is \"Something other than loose corners is making the fort fall.\"",
+        "More tape would be the same try again, nothing says the wind will stop, and paint has nothing to do with falling."
+      ],
+      misconception: "A common mix-up is trying the same fix again. A failed try tells you to look for a different cause.",
+      why: "The answer is \"Something other than loose corners is making the fort fall.\" Tighter tape fixed the corners, and the fort still fell. More tape would be the same try, nothing says the wind will stop, and paint does not help a fort stand." },
+    { id: "SK-TSPS-S11", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p8"],
+      like: ["SK-TSPS-C10"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What is really making the sink drain so slowly?",
+        choices: [
+          { text: "A clump of bristles is blocking the pipe.", correct: true },
+          { text: "The hot water is not hot enough to flow." },
+          { text: "The plunger left gray water in the bowl." },
+          { text: "The class washed too many brushes at once." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"Out slid a clump of paint-stained bristles.\"", correct: true },
+          { text: "\"Splash! Gray water splashed on the floor, and the sink was just as slow as before.\"" },
+          { text: "\"The sink gurgled, but the water still sat there.\"" },
+          { text: "\"Ms. Rudd turned on the water, and it swirled down the drain in seconds.\"" }
+        ] },
+      clue: "The real cause is the thing that, once it is fixed, ends the problem. Look for what was found and removed.",
+      hints: [
+        "The real cause is the thing that, once it is fixed, ends the problem. Look for what was found and removed.",
+        "Read what happens after the first two tries fail.",
+        "The plunger and the hot water were tries, not causes. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "The hot water and the plunger do not help, so neither is the real cause.",
+        "Mr. Okon opens the curved pipe, and a clump of paint-stained bristles slides out. After that, the water drains in seconds.",
+        "Part A: A clump of bristles is blocking the pipe. Part B: \"Out slid a clump of paint-stained bristles.\"",
+        "The water, the plunger and the number of brushes are not shown to be the cause."
+      ],
+      misconception: "A common mix-up is choosing a sentence about a try that failed. The real cause is what is found and removed.",
+      why: "Part A: A clump of bristles is blocking the pipe. Part B: \"Out slid a clump of paint-stained bristles.\" Once the bristles are out, the water drains in seconds. The hot water and plunger were tries, and nothing shows that the number of brushes caused it." },
+    { id: "SK-TSPS-S12", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p9"], pick: 2,
+      like: ["SK-TSPS-C11"],
+      prompt: "Why did hatchlings keep crawling toward the road after the hotel turned off its lights? Choose TWO reasons the article gives.",
+      choices: [
+        { text: "Many buildings and street lamps were still glowing at once.", correct: true },
+        { text: "One hotel was only a small part of the glow.", correct: true },
+        { text: "The hotel turned its lights back on at midnight." },
+        { text: "The ocean was too far away for hatchlings to find." },
+        { text: "The road was shiny and wet after the rain." }
+      ],
+      clue: "To find reasons an article gives, look for the sentences that explain why the first try did not work.",
+      hints: [
+        "To find reasons an article gives, look for the sentences that explain why the first try did not work.",
+        "Find where the scientists explain why. Choose two reasons from what they say.",
+        "The article never says the hotel turned its lights back on. Check each other choice against what the scientists say."
+      ],
+      how: [
+        "The town first asked one hotel to turn off its lights, but hatchlings still crawled toward the road.",
+        "Scientists explained that white lights from many buildings and street lamps glowed at once. One hotel was only a small part of the glow.",
+        "The answers are \"Many buildings and street lamps were still glowing at once.\" and \"One hotel was only a small part of the glow.\"",
+        "The article does not say the lights came back on, that the ocean was too far, or that the road was wet."
+      ],
+      misconception: "A common mix-up is choosing a reason the article never gives. Use only what the scientists say.",
+      why: "The answers are \"Many buildings and street lamps were still glowing at once.\" and \"One hotel was only a small part of the glow.\" The scientists gave both reasons. The article never says the lights came back on, that the ocean was too far or that the road was wet." },
+    { id: "SK-TSPS-S13", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p9"],
+      like: ["SK-TSPS-C12"],
+      prompt: "This article is built in a problem-and-solution pattern. Put its parts in the order the author tells them.",
+      steps: [
+        "Baby sea turtles crawl toward lights instead of the ocean.",
+        "A hotel turns off its lights.",
+        "Scientists explain why that did not fix the problem.",
+        "The town shields lamps and changes the bulbs.",
+        "Most hatchlings find the ocean on their own."
+      ],
+      clue: "A problem-and-solution article often goes: the problem, a first try, why it failed, the solution and the result.",
+      hints: [
+        "A problem-and-solution article often goes: the problem, a first try, why it failed, the solution and the result.",
+        "Read the article from top to bottom. Each paragraph tells the next part.",
+        "The article ends by telling what happens now that the problem is solved. Place the other four one at a time."
+      ],
+      how: [
+        "The article opens with the problem: hatchlings crawl toward lights instead of the ocean.",
+        "Next, one hotel turns off its lights, and scientists explain why that was not enough.",
+        "Then the town shields the lamps and changes the bulbs on the whole beach.",
+        "Last, most hatchlings find the ocean on their own."
+      ],
+      misconception: "A common mix-up is putting the scientists' explanation before the first try. The explanation comes after the try fails.",
+      why: "The order is: baby sea turtles crawl toward lights; a hotel turns off its lights; scientists explain why that did not fix it; the town shields lamps and changes the bulbs; most hatchlings find the ocean." },
+    { id: "SK-TSPS-S14", type: "match", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: ["p8", "p9"],
+      like: ["SK-TSPS-C13"],
+      prompt: "Think about \"The Slow Sink\" and \"Lights Out for Sea Turtles.\" Is each sentence true for only one text or for both? Match each sentence.",
+      cols: ["only The Slow Sink", "only Lights Out for Sea Turtles", "both texts"],
+      rows: [
+        { text: "The real cause is found by opening something up and looking inside.", answer: 0 },
+        { text: "Scientists explain why the first try did not work.", answer: 1 },
+        { text: "A first try does not fix the real cause.", answer: 2 },
+        { text: "The text tells what happens after the solution.", answer: 2 }
+      ],
+      clue: "To compare two texts, check each sentence against the first text, then against the second text.",
+      hints: [
+        "To compare two texts, check each sentence against the first text, then against the second text.",
+        "For each sentence, ask: can I find this in the sink story, in the turtle article, or in both?",
+        "Mr. Okon opens the pipe, but no one opens anything in the turtle article. Check the other three sentences against both texts."
+      ],
+      how: [
+        "Only in \"The Slow Sink\" does someone open something up and look inside: Mr. Okon unscrews the pipe.",
+        "Only in the turtle article do scientists explain why a try did not work.",
+        "In both texts, the first try does not fix the real cause, and both tell what happens after the solution.",
+        "So: only the sink, only the turtle article, both, both."
+      ],
+      misconception: "A common mix-up is choosing one text when the sentence is true for both. Check each sentence against both texts.",
+      why: "Opening the pipe is only in \"The Slow Sink.\" Scientists explaining why the try failed is only in the turtle article. In both texts, the first try does not fix the real cause, and each tells what happens after the solution." },
+    { id: "SK-TSPS-S15", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
+      like: ["SK-TSPS-C15"],
+      stem: ["(1) The wheels on the cafeteria cart squealed so loudly that students covered their ears.", "(2) First, the cook rolled the cart more slowly.", "(3) But the squealing did not stop.", "(4) ______", "(5) So the cook put a drop of oil on each wheel post.", "(6) Now the cart rolls quietly."],
+      prompt: "A student wrote this problem-and-solution paragraph. Which sentence best fills the blank in sentence 4?",
+      choices: [
+        { text: "Rolling slowly did not change the noise, which came from the dry wheel posts.", correct: true },
+        { text: "The cook saw crumbs on the floor, so the floor seemed to be the noisy part." },
+        { text: "The cart was empty, so nobody could hear it squeal." },
+        { text: "The squealing was loudest at lunch, when many students were talking." }
+      ],
+      clue: "The missing sentence connects the failed try to the solution. Ask what it explains about why the first try did not work.",
+      hints: [
+        "The missing sentence connects the failed try to the solution. Ask what it explains about why the first try did not work.",
+        "Look at sentence 5. What does the cook fix, and what does that tell you about the cause?",
+        "A sentence about crumbs and floors does not match what the cook fixes in sentence 5. Test each choice that is left."
+      ],
+      how: [
+        "Sentence 2 is the cook's first try, and sentence 3 says it did not work.",
+        "Sentence 5 says the cook oils the wheel posts, so the real cause must be the wheel posts.",
+        "The answer is \"Rolling slowly did not change the noise, which came from the dry wheel posts.\" It explains why the first try failed and leads to sentence 5.",
+        "A noisy floor, an empty cart and lunchtime talking do not lead to oiling the wheel posts."
+      ],
+      misconception: "A common mix-up is choosing a sentence that adds a detail but does not connect the failed try to the solution.",
+      why: "The answer is \"Rolling slowly did not change the noise, which came from the dry wheel posts.\" It explains why the first try failed and leads to oiling the wheel posts. The crumbs, the empty cart and the lunchtime talking do not connect to the fix." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1, P2, P3, P4 and P6. */
   addons: {
@@ -3079,7 +3685,292 @@ PP.addLesson({
         "Hoods and zippers are true of both coats, and a thick, warm coat is wrong for a warm day."
       ],
       misconception: "A common mix-up is choosing a reason that is true of both things, so it cannot help you choose.",
-      why: "The answer is \"the rain jacket, because it keeps him dry without being too warm.\" It is thin and waterproof, which fits a warm, rainy day. Both coats have hoods and zippers, and the thick puffy coat would be too warm and would soak up rain." }
+      why: "The answer is \"the rain jacket, because it keeps him dry without being too warm.\" It is thin and waterproof, which fits a warm, rainy day. Both coats have hoods and zippers, and the thick puffy coat would be too warm and would soak up rain." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TSCC-S04", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-P5"],
+      stem: ["Centipedes and millipedes are small creatures with many legs. Both live in damp places under logs and rocks. A centipede has one pair of legs on each part of its body. It runs fast and hunts bugs. A millipede has two pairs of legs on each part of its body. It moves slowly and eats dead leaves."],
+      prompt: "Choose the clue word that best completes the sentence.",
+      text: "{0} a centipede, a millipede moves slowly and eats dead leaves.",
+      slots: [
+        { options: ["Unlike", "Because", "Like"], answer: 0 }
+      ],
+      clue: "Clue words show how ideas relate. Ask what the two parts of the sentence tell about the two animals.",
+      hints: [
+        "Clue words show how ideas relate. Ask what the two parts of the sentence tell about the two animals.",
+        "Reread what each animal does. Does the sentence tell how they are the same or how they are different?",
+        "A centipede runs fast, so the sentence is not saying the two animals are the same. Read the sentence with each word that is left."
+      ],
+      how: [
+        "A centipede runs fast and hunts bugs. A millipede moves slowly and eats dead leaves.",
+        "So the sentence tells a difference between the two animals.",
+        "The answer is Unlike. Like would say they are the same, and because would give a reason."
+      ],
+      misconception: "A common mix-up is choosing a word that sounds smooth. First decide whether the sentence tells a likeness or a difference.",
+      why: "The answer is Unlike. Unlike a centipede, a millipede moves slowly and eats dead leaves. The centipede runs fast and hunts bugs, so the two animals are different. Like would say they are the same, and because would give a reason." },
+    { id: "SK-TSCC-S05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-TSCC-P6"],
+      stem: ["Ice skates and roller skates both help people glide. Ice skates have thin metal blades, and they are used on a frozen rink. Roller skates have wheels, and they are used on smooth floors or sidewalks. Both kinds of skates are worn on the feet and fastened with laces or straps. A skater leans and pushes to move along. Kids often learn to skate with a friend."],
+      prompt: "Which TWO sentences tell how ice skates and roller skates are ALIKE?",
+      choices: [
+        { text: "Both are worn on the feet and fastened with laces or straps.", correct: true },
+        { text: "Both help people glide along a smooth surface.", correct: true },
+        { text: "Ice skates have thin metal blades." },
+        { text: "Roller skates have wheels." },
+        { text: "Ice skates are used on a frozen rink." }
+      ],
+      clue: "Alike means the same. Look for facts that are true of both things.",
+      hints: [
+        "Alike means the same. Look for facts that are true of both things.",
+        "For each choice, ask: is this true of ice skates, of roller skates, or of both? Choose two.",
+        "The metal blades are true of only ice skates, so that choice tells a difference. Check the other choices the same way."
+      ],
+      how: [
+        "A likeness is a fact true of both kinds of skates.",
+        "The text says both kinds are worn on the feet and fastened with laces or straps, and both help people glide.",
+        "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide along a smooth surface.\"",
+        "The blades, the wheels and the frozen rink each belong to only one kind of skate."
+      ],
+      misconception: "A common mix-up is choosing a true fact about one kind of skate. A likeness must be true of both.",
+      why: "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide along a smooth surface.\" Each is true of both kinds of skates. The blades, the wheels and the frozen rink are true of only one kind." },
+    { id: "SK-TSCC-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C04"],
+      stem: ["Seals and sea lions look a lot alike. Both have smooth bodies, and both swim in the sea. But you can tell them apart. A sea lion has small flaps for ears, and its long front flippers work like legs on land. A seal has no ear flaps, only tiny holes, and its flippers are short, so it wiggles across the ground on its belly. A sea lion also barks loudly, but a seal makes quiet grunts."],
+      prompt: "Why does the author compare seals and sea lions?",
+      choices: [
+        { text: "to help readers tell apart two animals that look alike", correct: true },
+        { text: "to show that sea lions are better swimmers than seals" },
+        { text: "to teach readers how to take care of a pet seal" },
+        { text: "to prove that seals are louder than sea lions" }
+      ],
+      clue: "Authors compare things for a reason. Ask what the reader learns by seeing two things side by side.",
+      hints: [
+        "Authors compare things for a reason. Ask what the reader learns by seeing two things side by side.",
+        "Read the first three sentences. What does the author say about how they look, and what does the author say next?",
+        "Nothing in the text says either animal swims better, so that reason does not fit. Check the other choices against the whole text."
+      ],
+      how: [
+        "The text begins by saying the two animals look a lot alike.",
+        "Then it says, \"But you can tell them apart,\" and lists differences in ears, flippers and sounds.",
+        "The answer is \"to help readers tell apart two animals that look alike.\"",
+        "The text does not rank their swimming, it is not about pets, and it says sea lions bark loudly while seals grunt quietly."
+      ],
+      misconception: "A common mix-up is choosing a reason the text never gives. Use what the author says right after the likeness.",
+      why: "The answer is \"to help readers tell apart two animals that look alike.\" The text says they look alike and then lists differences. It does not compare their swimming or tell about pets, and it says sea lions are the louder ones." },
+    { id: "SK-TSCC-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C06"],
+      stem: ["A frisbee is a flat, round disk. A boomerang is a bent piece of wood. A player flicks a frisbee, and it spins and sails through the air. A thrown boomerang spins and flies, too. A frisbee flies straight and lands far away. A well-thrown boomerang curves in the air and comes back to the thrower."],
+      prompt: "Choose the words that finish the sentence so it tells how a frisbee and a boomerang are alike.",
+      text: "{0} a frisbee and a boomerang {1}.",
+      slots: [
+        { options: ["Both", "Neither", "Only"], answer: 0 },
+        { options: ["spin as they fly through the air", "land far away from the thrower", "are shaped like a flat, round disk"], answer: 0 }
+      ],
+      clue: "To tell how things are alike, use a fact that is true of both of them.",
+      hints: [
+        "To tell how things are alike, use a fact that is true of both of them.",
+        "Find the facts about the frisbee. Then find out whether the boomerang has the same fact.",
+        "A frisbee is a flat, round disk, but a boomerang is bent, so the shape is not true of both. Check the other choices for the second blank."
+      ],
+      how: [
+        "A frisbee spins and sails through the air. A boomerang spins and flies, too.",
+        "So both spin as they fly. The first blank needs a word that means the fact is true of both, so the answers are \"Both\" and \"spin as they fly through the air.\"",
+        "A frisbee lands far away, but a boomerang comes back, and only the frisbee is a flat, round disk."
+      ],
+      misconception: "A common mix-up is using a fact that is true of only one thing. A likeness must be true of both.",
+      why: "The answers are Both and \"spin as they fly through the air.\" The text says a frisbee spins as it sails and a boomerang spins as it flies. A frisbee lands far away, a boomerang comes back, and only the frisbee is a flat, round disk." },
+    { id: "SK-TSCC-S08", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C07"],
+      stem: ["A ukulele is a small, light instrument from Hawaii. It has four nylon strings. A banjo has a round body covered with a thin skin, and it has metal strings. A ukulele player plucks the strings with a thumb or a finger. A banjo player plucks or strums, too. A ukulele makes a soft, sweet sound. A banjo makes a bright, twangy sound."],
+      prompt: "Which sentence from the text best shows how a ukulele and a banjo are ALIKE?",
+      choices: [
+        { text: "A banjo player plucks or strums, too.", correct: true },
+        { text: "A ukulele makes a soft, sweet sound." },
+        { text: "A banjo has a round body covered with a thin skin." },
+        { text: "A ukulele is a small, light instrument from Hawaii." }
+      ],
+      clue: "To show two things are alike, find a sentence that tells something both of them do or have.",
+      hints: [
+        "To show two things are alike, find a sentence that tells something both of them do or have.",
+        "Check each sentence: does it tell about only the ukulele, only the banjo, or both?",
+        "The soft, sweet sound belongs to only the ukulele, so that sentence shows a difference. Check the other sentences."
+      ],
+      how: [
+        "A ukulele player plucks the strings. The next sentence says a banjo player plucks or strums, too.",
+        "So the two instruments are played in a like way.",
+        "The answer is \"A banjo player plucks or strums, too.\"",
+        "The soft sound, the round body and the Hawaii sentence each tell about only one instrument."
+      ],
+      misconception: "A common mix-up is choosing a sentence about one instrument. A likeness sentence must fit both.",
+      why: "The answer is \"A banjo player plucks or strums, too.\" It follows the sentence that says a ukulele player plucks the strings, so both are played by plucking. The soft sound, the round body and Hawaii each fit only one instrument." },
+    { id: "SK-TSCC-S09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C08"],
+      stem: ["Subway trains and trolleys both carry people through a city. They ride in different places. A subway train runs in tunnels under the ground. A trolley rolls on tracks set in the street, so it shares the road with cars. They also get their power in different ways. A subway train gets its power from a rail on the ground. A trolley gets its power from a wire above it."],
+      prompt: "How does the author organize the differences?",
+      choices: [
+        { text: "by kind of difference, covering both vehicles before moving to the next difference", correct: true },
+        { text: "all of the facts about the subway, and then all of the facts about the trolley" },
+        { text: "from the most important difference to the least important difference" },
+        { text: "from the oldest kind of vehicle to the newest kind of vehicle" }
+      ],
+      clue: "Look at how the author arranges the facts. Are they grouped by vehicle, or grouped some other way?",
+      hints: [
+        "Look at how the author arranges the facts. Are they grouped by vehicle, or grouped some other way?",
+        "Find the two differences the author names. Then see what is told about each vehicle for each difference.",
+        "The text never says which vehicle is older, so the choice about oldest to newest does not fit. Test the other choices against the order of the facts."
+      ],
+      how: [
+        "The first difference is where they ride: the subway in tunnels, the trolley in the street.",
+        "The second difference is how they get power: the subway from a rail, the trolley from a wire.",
+        "The answer is \"by kind of difference, covering both vehicles before moving to the next difference.\"",
+        "The facts are not grouped by vehicle, the text does not rank the differences, and it gives no dates."
+      ],
+      misconception: "A common mix-up is thinking the facts are grouped by vehicle. Here each difference is covered for both vehicles before the next one.",
+      why: "The answer is \"by kind of difference, covering both vehicles before moving to the next difference.\" The text covers where they ride for both, then how they get power for both. It does not group all the subway facts first, rank the differences or give dates." },
+    { id: "SK-TSCC-S10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C10"],
+      stem: ["In 1950, a writer typed on a typewriter. Each key hit an inked ribbon and printed a letter on a sheet of paper. If the writer made a mistake, the page had to be typed again. Today, a writer can use a laptop. Each key makes a letter appear on a screen. The writer can fix a mistake in a moment. Then the writer can print the page or save it."],
+      prompt: "A typewriter's paper and a laptop's screen are different. In what way are they ALIKE?",
+      choices: [
+        { text: "The writer reads the typed words on both of them.", correct: true },
+        { text: "The writer can fix a mistake on both of them in a moment." },
+        { text: "The writer must type the whole page again to fix a mistake on both." },
+        { text: "The writer can save the words for later on both of them." }
+      ],
+      clue: "Two different things can still be alike. Ask what job each one does for the writer.",
+      hints: [
+        "Two different things can still be alike. Ask what job each one does for the writer.",
+        "Find what the paper does for the writer. Then find what the screen does.",
+        "Fixing a mistake in a moment is told only about the laptop, so it is not true of both. Check the other choices."
+      ],
+      how: [
+        "The letters the writer types are printed on paper, or they appear on a screen.",
+        "In both cases, the writer can read the words that were typed.",
+        "The answer is \"The writer reads the typed words on both of them.\"",
+        "Quick fixing and saving are told only about the laptop, and typing a page again is told only about the typewriter."
+      ],
+      misconception: "A common mix-up is choosing a fact about only one of the two things. A likeness must be true of both.",
+      why: "The answer is \"The writer reads the typed words on both of them.\" Paper and a screen both show the words that were typed. Quick fixing and saving belong to the laptop, and typing a page again belongs to the typewriter." },
+    { id: "SK-TSCC-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C09"],
+      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) Likewise, a trampoline is round and flat, but a swing set is tall with chains.", "(5) A trampoline lets you bounce, and a swing set lets you swing."],
+      prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
+      text: "Sentence {0} should begin with {1}",
+      slots: [
+        { options: ["2", "3", "4"], answer: 2 },
+        { options: ["Likewise,", "On the other hand,", "As a result,"], answer: 1 }
+      ],
+      clue: "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Watch for the switch.",
+      hints: [
+        "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Watch for the switch.",
+        "For each sentence, ask: does it tell how they are alike, or how they are different? Then check its clue word.",
+        "As a result tells an effect, not a difference, so it does not fit the second blank. Find the sentence first, then try each word that is left at its start."
+      ],
+      how: [
+        "Sentences 2 and 3 tell likenesses: both are fun, and both need a safety check. Sentences 4 and 5 tell differences: round and flat versus tall with chains, and bouncing versus swinging.",
+        "Sentence 4 starts the differences, but it begins with Likewise, a word that adds one more likeness.",
+        "Sentence 4 should begin with On the other hand, a clue word that switches from alike to different.",
+        "As a result would tell an effect, not a difference."
+      ],
+      misconception: "A common mix-up is keeping a clue word that adds a likeness, like likewise or also, when the writer turns to a difference.",
+      why: "The answers are 4 and On the other hand. Sentences 2 and 3 tell likenesses. Sentence 4 turns to a difference, but Likewise adds a likeness. As a result would tell an effect, so On the other hand shows the switch." },
+    { id: "SK-TSCC-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C11"],
+      stem: ["A rowboat is a small boat. A person sits in it and pulls two oars to move forward. A sailboat is also a boat, but it has a tall pole called a mast. A big cloth sail is raised on the mast, and the wind pushes the sail. Both kinds of boats float on water and can carry people.", "A student made this chart about the text.", "Rowboat only: moved with oars", "Both: floats on water; has a tall mast", "Sailboat only: moved by the wind; has a cloth sail"],
+      prompt: "One fact in the student's chart is in the wrong place. Find it and choose where it belongs.",
+      text: "The fact \"{0}\" is in the wrong place. It belongs under {1}.",
+      slots: [
+        { options: ["floats on water", "has a tall mast", "moved with oars"], answer: 1 },
+        { options: ["Rowboat only", "Both", "Sailboat only"], answer: 2 }
+      ],
+      clue: "A chart sorts facts into only one thing, only the other, or both. Test each fact in the chart against the text.",
+      hints: [
+        "A chart sorts facts into only one thing, only the other, or both. Test each fact in the chart against the text.",
+        "For each fact in the chart, ask: is it true of the rowboat, the sailboat, or both?",
+        "Floating on water is true of both boats, and it is under Both, so it is in the right place. Check the other facts, then choose where the wrong one belongs."
+      ],
+      how: [
+        "Both boats float on water, so that fact is under Both correctly.",
+        "The text says only the sailboat has a tall mast. A rowboat is moved with oars and has no mast.",
+        "So the fact \"has a tall mast\" is in the wrong place. It belongs under Sailboat only."
+      ],
+      misconception: "A common mix-up is trusting a chart without checking. Test each fact against the text.",
+      why: "The answers are \"has a tall mast\" and Sailboat only. The text says only the sailboat has a mast. Floating on water is true of both boats, and being moved with oars is true of only the rowboat." },
+    { id: "SK-TSCC-S13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSCC-C13"],
+      stem: ["Text 1: Tangerines and oranges are both citrus fruits. Both grow on trees and have juicy sections. A tangerine is small, and its peel comes off easily. An orange is bigger, and its peel is thicker. A tangerine tastes sweet, but an orange is a little more sour.", "Text 2: Paper books and e-books both let you read stories. Both can have pictures. A paper book is made of pages that you turn. An e-book is read on a screen, and one screen can hold hundreds of books. You can write in a paper book with a pencil, but you cannot write in an e-book."],
+      prompt: "How are the two texts organized in the same way?",
+      choices: [
+        { text: "Each tells how two things are alike, and then tells how they are different.", correct: true },
+        { text: "Each tells how two things are different, and then tells how they are alike." },
+        { text: "Each tells the steps for making something, one after another." },
+        { text: "Each tells about a problem and how it was solved." }
+      ],
+      clue: "To compare how two texts are built, find what each one does first and what it does next.",
+      hints: [
+        "To compare how two texts are built, find what each one does first and what it does next.",
+        "Read the first two sentences of each text. Then look at the clue words in the rest, such as but and a difference.",
+        "Neither text has steps with words like first and next, so the choice about steps does not fit. Test the other choices against both texts."
+      ],
+      how: [
+        "Text 1 begins with what tangerines and oranges share. Then it tells how they differ in size, peel and taste.",
+        "Text 2 begins with what paper books and e-books share. Then it tells how they differ in pages, screens and writing.",
+        "The answer is \"Each tells how two things are alike, and then tells how they are different.\"",
+        "Neither text begins with differences, tells steps, or tells a problem."
+      ],
+      misconception: "A common mix-up is reversing the order. Check which comes first in each text, the likenesses or the differences.",
+      why: "The answer is \"Each tells how two things are alike, and then tells how they are different.\" Both texts start with likenesses and then give differences. Neither tells steps or a problem, and neither starts with differences." },
+    { id: "SK-TSCC-S14", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
+      like: ["SK-TSCC-C14"],
+      stem: ["Here are facts about an island and a peninsula. Both are land next to water. An island has water on all sides. A peninsula is joined to more land on one side. You get to an island by boat or bridge. You can walk to a peninsula over land. Maps show both kinds of land with a line around the edge. Some have towns, and some have only trees and birds."],
+      prompt: "A student is writing about an island and a peninsula. Which TWO sentences use the facts in the box to compare and contrast them correctly?",
+      choices: [
+        { text: "An island and a peninsula are both pieces of land next to water.", correct: true },
+        { text: "An island has water on all sides, but a peninsula is joined to a bigger piece of land.", correct: true },
+        { text: "Unlike an island, a peninsula is a piece of land next to water." },
+        { text: "An island and a peninsula are alike because both can be reached only by boat." },
+        { text: "An island is joined to a bigger piece of land, and a peninsula also has water on all sides." }
+      ],
+      clue: "A compare sentence tells a fact true of both. A contrast sentence tells a fact true of only one. Check that the clue word fits the fact.",
+      hints: [
+        "A compare sentence tells a fact true of both. A contrast sentence tells a fact true of only one. Check that the clue word fits the fact.",
+        "For each sentence, find its facts in the box. Is each fact true of an island, a peninsula, or both? Choose two.",
+        "People can walk to a peninsula over land, so a sentence that says both are reached only by boat is not correct. Check each sentence that is left: does its clue word match the fact?"
+      ],
+      how: [
+        "The box says both are pieces of land next to water. A sentence with both fits that fact.",
+        "An island has water on all sides, and a peninsula is joined to a bigger piece of land. That is a difference, so but fits.",
+        "The answers are \"An island and a peninsula are both pieces of land next to water.\" and \"An island has water on all sides, but a peninsula is joined to a bigger piece of land.\"",
+        "Unlike cannot go with a fact true of both, and one sentence swaps the two facts."
+      ],
+      misconception: "A common mix-up is using a contrast clue word, like unlike, with a fact that is true of both things.",
+      why: "The answers are \"An island and a peninsula are both pieces of land next to water.\" and \"An island has water on all sides, but a peninsula is joined to a bigger piece of land.\" The first tells a fact true of both. The second tells a real difference with but. Unlike does not fit a shared fact, a peninsula can be walked to, and one sentence swaps the facts." },
+    { id: "SK-TSCC-S15", type: "cr", dok: 3, std: ["3.T.SS.1.a"], passages: [], rows: 4,
+      like: ["SK-TSCC-C15"],
+      stem: ["Two ways to warm a bowl of soup:", "On the stove, a pot of soup takes about eight minutes. You must stir it so it does not stick, and a grown-up must help.", "In the microwave, a bowl of soup takes about two minutes. You do not need to stir it the whole time, and the bowl gets hot, so a grown-up must help.", "Both ways make the soup hot enough to eat."],
+      prompt: "Read the box. Write two sentences. In the first, tell one way the stove and the microwave are alike. In the second, tell one way they are different. Use a clue word in each sentence.",
+      sample: "Both the stove and the microwave make soup hot, and both need a grown-up to help. However, the microwave takes about two minutes, while the stove takes about eight.",
+      criteria: [
+        "My first sentence tells something true of both ways.",
+        "My second sentence tells a real difference from the box.",
+        "I used a compare clue word, like both, and a contrast clue word, like however, but or while."
+      ],
+      clue: "A compare sentence tells something true of both. A contrast sentence tells something true of only one.",
+      hints: [
+        "A compare sentence tells something true of both. A contrast sentence tells something true of only one.",
+        "Look for what the stove and the microwave share. Then pick one fact where they are not the same.",
+        "For the second sentence, you could use however, but or while. Put one way on each side of the clue word."
+      ],
+      how: [
+        "Find a likeness: both make the soup hot enough to eat, and both need a grown-up to help.",
+        "Find a difference: the microwave takes about two minutes, and the stove takes about eight. Stirring is another difference.",
+        "Use both in the first sentence and a contrast clue word in the second.",
+        "One good answer: \"Both the stove and the microwave make soup hot, and both need a grown-up to help. However, the microwave takes about two minutes, while the stove takes about eight.\" Other answers can also be right."
+      ],
+      misconception: "A common mix-up is writing two differences and no likeness. The first sentence must tell something true of both.",
+      why: "Many answers can be right. A good answer tells one likeness with a clue word like both and one real difference with a clue word like however, but or while. For example: \"Both the stove and the microwave make soup hot, and both need a grown-up to help. However, the microwave takes about two minutes, while the stove takes about eight.\"" }
   ],
   /* Hints and Show me how for items kept in practice: refs P5 and P6 (core set 1) and Together P1-P4. */
   addons: {

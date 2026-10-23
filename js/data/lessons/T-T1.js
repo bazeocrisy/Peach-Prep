@@ -3382,6 +3382,51 @@ PP.addLesson({
         ["High on the mountain, Ingrid heard a clink.", "Behind a big rock stood a ewe, a mother sheep, with a bell around her neck.", "Four more sheep waited behind her."],
         ["\"The others follow the bell sheep,\" Grandma had told her.", "So Ingrid took hold of the ewe's collar and proudly led her down the trail.", "Clink, clink.", "One by one, the other sheep followed."],
         ["At the farm gate, Grandma counted the sheep.", "Every one was home.", "That night, Ingrid fell asleep still hearing the clink, clink of the bell."]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p9 to p14 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p9", title: "Twenty-One Days", genre: "Literary text",
+      paragraphs: [
+        ["Mr. Sims's class had a new project: hatching chicks.", "He set a dozen eggs in a warm box called an incubator and hung a calendar beside it."],
+        ["Every morning, Lani crossed off one more square on the calendar.", "\"Twenty-one days,\" she told her friends.", "\"That is how long it takes.\""],
+        ["The class turned the eggs twice a day.", "Lani drew a picture of the eggs each Friday.", "For a long time, nothing seemed to change."],
+        ["On day twenty-one, a tiny crack ran across the biggest egg.", "Then came a peep!", "A damp, fuzzy chick tumbled out, and the whole class cheered."]
+      ] },
+    { id: "p10", title: "The Birthday Card Dash", genre: "Literary text",
+      paragraphs: [
+        ["At three o'clock, Cass remembered that Grandma's birthday card was still on her desk.", "The mail truck would stop at the corner mailbox at five."],
+        ["Cass grabbed a pen and wrote fast.", "She sealed the envelope, stuck on a stamp and ran out the door.", "Her sneakers slapped the sidewalk."],
+        ["The mailbox was six blocks away.", "A dog barked at a fence, and she nearly dropped the card, but she kept running."],
+        ["At ten minutes to five, Cass slid the card into the mailbox.", "She leaned on the post to catch her breath.", "A minute later, the mail truck rumbled around the corner."]
+      ] },
+    { id: "p11", title: "The Lantern Walk", genre: "Literary text",
+      paragraphs: [
+        ["On the night of the Mid-Autumn Festival, Linh carried a round paper lantern down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
+        ["\"Why do we carry lanterns?\" Linh asked her grandfather."],
+        ["\"The lanterns are round like the full moon,\" Grandfather said.", "\"Tonight the moon is at its brightest, so we make our own small moons to walk beside it.\""],
+        ["Linh looked up.", "A huge, glowing moon hung over the rooftops.", "She lifted her lantern high so it would shine as bright as the sky."],
+        ["Back home, the family shared mooncakes on the balcony.", "\"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\""]
+      ] },
+    { id: "p12", title: "Eight Candles", genre: "Literary text",
+      paragraphs: [
+        ["On the first night of Hanukkah, Noa helped her father set the menorah in the front window.", "It had nine little holders for candles."],
+        ["\"Do you know why we light one more candle each night?\" Father asked."],
+        ["\"Long ago, a small jar of oil burned for eight days,\" Father said.", "\"We add a candle each night to remember that bright miracle.\""],
+        ["Noa struck a match.", "A small flame leaped up on the first candle and glowed in the window glass."],
+        ["Neighbors walking past slowed down to look at the warm light.", "\"Next year,\" Noa said, \"I will light the first candle by myself.\""]
+      ] },
+    { id: "p13", title: "House on the Lake", genre: "Literary text",
+      paragraphs: [
+        ["Sophea lived on Tonle Sap, a huge lake in Cambodia.", "Her house did not sit on the ground.", "It floated on the water, tied to long posts."],
+        ["When the rains came, the lake rose, and her house rose with it.", "When the dry season came, the water sank, and the house sank too."],
+        ["Sophea's school was a boat.", "Each morning, she paddled a small wooden canoe across the water to class.", "Her best friend waved from the next floating house."],
+        ["Her mother kept a pot of herbs on the porch and hung fish to dry on a line.", "\"Our home moves with the lake,\" Sophea liked to say."]
+      ] },
+    { id: "p14", title: "Behind the Dike", genre: "Literary text",
+      paragraphs: [
+        ["Pieter lived in a small town in the Netherlands, where much of the land lies lower than the sea.", "A long, grassy wall called a dike kept the water out."],
+        ["His house stood on solid ground, and it never moved.", "Behind the house, a canal ran between rows of green fields."],
+        ["Each morning, Pieter rode his bike along a path by the canal to school.", "Windmills turned slowly in the distance."],
+        ["His father checked the dike every week to be sure it was strong.", "\"Our home stays dry because we take care of the wall,\" Pieter liked to say."]
       ] }
   ],
   practice: [
@@ -3842,7 +3887,325 @@ PP.addLesson({
         "Soccer fits only Lucas's story. Sharing is not what fixes either story: the trouble is fixed when each one says sorry. Both characters go back to the person instead of staying away."
       ],
       misconception: "A common mix-up is choosing a lesson about a topic in only one of the stories.",
-      why: "The answer is \"Saying sorry can help fix a hurt friendship.\" Lucas and Nora each say sorry, and each one is close again with the other person. Soccer fits only Lucas's story, sharing is not what fixes either story, and neither character stays away." }
+      why: "The answer is \"Saying sorry can help fix a hurt friendship.\" Lucas and Nora each say sorry, and each one is close again with the other person. Soccer fits only Lucas's story, sharing is not what fixes either story, and neither character stays away." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT1d-S04", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-P5"],
+      stem: ["Story 1: Otis left the cap off his marker. The next day, the marker was dry, and he could not color his map. After that, he always snapped the cap on.", "Story 2: Sia's grandmother showed her how to snap the cap on a marker so it will not dry out. Sia always did, and her markers lasted all year."],
+      prompt: "How is the way Otis learns to cap his marker different from the way Sia learns?",
+      choices: [
+        { text: "Otis learns after something goes wrong, but Sia learns from advice.", correct: true },
+        { text: "Otis learns from a book at school, but Sia learns from a friend." },
+        { text: "Otis learns from his sister, but Sia learns by losing a marker." },
+        { text: "Both of them learn by watching a classmate snap on a cap." }
+      ],
+      clue: "To compare how two characters learn, ask in each story what happens right before the character changes.",
+      hints: [
+        "To compare how two characters learn, ask in each story what happens right before the character changes.",
+        "In each story, find the event that comes before the character always snaps the cap on.",
+        "Neither story mentions a book or a classmate. Test each choice that is left against what happens in both stories."
+      ],
+      how: [
+        "In Story 1, Otis finds a dry marker and cannot color his map. After that, he always snaps the cap on.",
+        "In Story 2, Sia's grandmother shows her how to snap the cap on. Sia does it, and her markers last.",
+        "The answer is \"Otis learns after something goes wrong, but Sia learns from advice.\"",
+        "Neither story has a book, a sister or a classmate teaching the lesson, and Sia never loses a marker."
+      ],
+      misconception: "A common mix-up is mixing up the two stories. Check each choice against Story 1 and then against Story 2.",
+      why: "The answer is \"Otis learns after something goes wrong, but Sia learns from advice.\" Otis finds his marker dry, and Sia's grandmother shows her what to do. Neither story has a book or a classmate teaching the lesson, and Sia never loses a marker." },
+    { id: "SK-TT1d-S05", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p9", "p10"],
+      like: ["SK-TT1d-C04"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How is the time in the two stories different?",
+        choices: [
+          { text: "Lani's story lasts three weeks, but Cass's story happens in one afternoon.", correct: true },
+          { text: "Lani's story happens in one morning, but Cass's story lasts a week." },
+          { text: "Both stories last for a few weeks." },
+          { text: "Lani's story happens at night, but Cass's story happens in the morning." }
+        ] },
+      partB: { prompt: "Which TWO sentences from \"Twenty-One Days\" best support the answer to Part A?", pick: 2,
+        choices: [
+          { text: "\"Twenty-one days,\" she told her friends.", correct: true },
+          { text: "On day twenty-one, a tiny crack ran across the biggest egg.", correct: true },
+          { text: "The class turned the eggs twice a day." },
+          { text: "Then came a peep!" },
+          { text: "Lani drew a picture of the eggs each Friday." }
+        ] },
+      clue: "To compare the time in two stories, look for clues about how long each one lasts. Compare the clues.",
+      hints: [
+        "To compare the time in two stories, look for clues about how long each one lasts. Compare the clues.",
+        "Find the time words in each story, like the hours on the clock or the number of days. Then choose two sentences for Part B.",
+        "Cass's story has clock times like three o'clock and five o'clock, so it cannot last a week. For Part B, your sentences must match your Part A answer."
+      ],
+      how: [
+        "In \"The Birthday Card Dash,\" the story starts at three o'clock and ends a little before five. It happens in one afternoon.",
+        "In \"Twenty-One Days,\" the class waits twenty-one days for the eggs to hatch. That is three weeks.",
+        "Part A: Lani's story lasts three weeks, but Cass's story happens in one afternoon. Part B: \"Twenty-one days,\" she told her friends. and On day twenty-one, a tiny crack ran across the biggest egg.",
+        "Turning the eggs, drawing pictures and the peep do not tell how much time passes."
+      ],
+      misconception: "A common mix-up is choosing a sentence about what happens instead of one that tells how long it takes.",
+      why: "Part A: Lani's story lasts three weeks, but Cass's story happens in one afternoon. Part B: \"Twenty-one days,\" she told her friends. and \"On day twenty-one, a tiny crack ran across the biggest egg.\" Both sentences count days. Turning eggs, drawing pictures and the peep do not tell how much time passes." },
+    { id: "SK-TT1d-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C05"],
+      stem: ["Story 1: Alma got a new box of colored pencils. When her friend Jo asked to borrow one, Alma said no. \"They're all mine,\" she said.", "Story 2: Quinn had an old glove that his dad used as a boy. When his cousin asked to try it on, Quinn said no. \"It's too special,\" he said."],
+      prompt: "Alma will not share her pencils, and Quinn will not share his glove. How is what Alma keeps different from what Quinn keeps?",
+      choices: [
+        { text: "Alma keeps something new, but Quinn keeps something old that is special.", correct: true },
+        { text: "Alma keeps food that will spoil, but Quinn keeps a toy that will break." },
+        { text: "Alma's pencils were a gift from Jo, but Quinn's glove was a gift from his cousin." },
+        { text: "Both of them keep something that belongs to someone else." }
+      ],
+      clue: "To compare what two characters keep, look at what each thing is like and where it came from.",
+      hints: [
+        "To compare what two characters keep, look at what each thing is like and where it came from.",
+        "Read each story again. What does the story say about the pencils, and what does it say about the glove?",
+        "Neither story mentions food or a toy. Test each choice that is left against both stories."
+      ],
+      how: [
+        "Alma's pencils came in a new box, so they are brand new.",
+        "Quinn's glove is old. His dad used it as a boy, and Quinn calls it special.",
+        "The answer is \"Alma keeps something new, but Quinn keeps something old that is special.\"",
+        "Neither story has food or a toy, neither thing was a gift from Jo or the cousin, and each child keeps something of their own."
+      ],
+      misconception: "A common mix-up is choosing a detail that sounds true for one story but is not in either one. Check the story.",
+      why: "The answer is \"Alma keeps something new, but Quinn keeps something old that is special.\" Alma's pencils are in a new box, and Quinn's glove is old and was his dad's. Neither story has food or a toy, neither was a gift from the one who asked, and each keeps something of their own." },
+    { id: "SK-TT1d-S07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p11", "p12"],
+      like: ["SK-TT1d-C07"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How are Linh and Noa alike?",
+        choices: [
+          { text: "Each one plans to do more with the custom next year.", correct: true },
+          { text: "Each one is afraid of the dark." },
+          { text: "Each one is visiting a grandparent in another city." },
+          { text: "Each one carries a light through the street." }
+        ] },
+      partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
+        choices: [
+          { text: "\"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\"", correct: true },
+          { text: "\"Next year,\" Noa said, \"I will light the first candle by myself.\"", correct: true },
+          { text: "Back home, the family shared mooncakes on the balcony." },
+          { text: "Neighbors walking past slowed down to look at the warm light." },
+          { text: "Candles glowed inside lanterns all around her." }
+        ] },
+      clue: "To find how two characters are alike, look at what each one says or does near the end. Then use the answer to find the sentences.",
+      hints: [
+        "To find how two characters are alike, look at what each one says or does near the end. Then use the answer to find the sentences.",
+        "Read the last paragraph of each story. Ask what each girl says she will do.",
+        "Neither girl is afraid of anything in her story. For Part B, choose one sentence from each story that matches your Part A answer."
+      ],
+      how: [
+        "Linh's story ends with her saying what she will do next year: tell her little cousin why people carry lanterns.",
+        "Noa's story ends with her saying she will light the first candle by herself next year.",
+        "Part A: Each one plans to do more with the custom next year. Part B: Linh's \"Next year\" sentence and Noa's \"Next year\" sentence.",
+        "The mooncakes, the neighbors and the glowing candles are things that happen, not plans for next year."
+      ],
+      misconception: "A common mix-up is choosing a detail true for one story, like carrying a light. The answer must be true for both girls.",
+      why: "Part A: Each one plans to do more with the custom next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Neither girl is afraid or visiting another city, and only Linh carries a light through the street." },
+    { id: "SK-TT1d-S08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C08"],
+      stem: ["Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the stems. They set the flowers by a photo of Dani's great-grandma.", "Story 2: In Sweden, Elsa and her grandma made straw stars. Elsa twisted the straw. Her grandma tied on red ribbon. They hung the stars on the tree."],
+      prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
+      cols: ["Story 1", "Story 2", "Both stories"],
+      rows: [
+        { text: "A child and a grandparent make decorations together.", answer: 2 },
+        { text: "The decorations are made of straw.", answer: 1 },
+        { text: "A photo of a family member is part of the holiday.", answer: 0 },
+        { text: "The family puts the finished decorations in a special place.", answer: 2 }
+      ],
+      clue: "To sort details, check each one against Story 1, then against Story 2. If it is true for both, choose both.",
+      hints: [
+        "To sort details, check each one against Story 1, then against Story 2. If it is true for both, choose both.",
+        "For each detail, find the matching words in the stories. Ask whether you can find them in one story or in both.",
+        "Elsa's ornaments are straw. Check the other three details against both stories the same way."
+      ],
+      how: [
+        "A child and a grandparent make decorations in both stories, so that is true for both.",
+        "Only Elsa and her grandmother braid straw, so that detail belongs to Story 2.",
+        "Only Dani's story mentions a photo, so that belongs to Story 1.",
+        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family puts the decorations in a special place, so that is both."
+      ],
+      misconception: "A common mix-up is picking one story when the detail fits both. Check each detail against both stories.",
+      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family puts the finished decorations in a special place, so that is true for both." },
+    { id: "SK-TT1d-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C09"],
+      stem: ["Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, small orange fruit hung from the branches.", "Story 2: In a town in Italy, Luca set bread dough by the warm stove. He wanted to bake it right away, but he waited for it to rise. The loaf came out light and tall."],
+      prompt: "What message do the two stories share?",
+      choices: [
+        { text: "Waiting patiently can lead to something good.", correct: true },
+        { text: "Fruit and bread are the best foods to share." },
+        { text: "It is best to do every job as fast as you can." },
+        { text: "A plant grows better than bread dough." }
+      ],
+      clue: "To find a message two stories share, ask what each main character does and what happens because of it.",
+      hints: [
+        "To find a message two stories share, ask what each main character does and what happens because of it.",
+        "Compare what Sora does for years with what Luca does by the stove. What do both of them have to do before they see the result?",
+        "One of the choices is about rushing, but both children wait. Test each choice that is left against both stories."
+      ],
+      how: [
+        "Sora waters her seed for years before the fruit appears.",
+        "Luca wants to bake right away, but he waits, and the loaf is light and tall.",
+        "Both children wait, and both get a good result. The answer is \"Waiting patiently can lead to something good.\"",
+        "Neither story says fruit or bread is best, and neither child hurries."
+      ],
+      misconception: "A common mix-up is choosing a message about one detail, like food. A shared message fits what both characters do.",
+      why: "The answer is \"Waiting patiently can lead to something good.\" Sora waits years for fruit, and Luca waits for his dough to rise. Neither story says fruit or bread is best, neither child rushes, and the stories do not compare plants with dough." },
+    { id: "SK-TT1d-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p11", "p12"],
+      like: ["SK-TT1d-C10"],
+      prompt: "Linh's grandfather says the lanterns are \"round like the full moon.\" Which part of Noa's story is MOST like this?",
+      choices: [
+        { text: "Father explains why a candle is added each night.", correct: true },
+        { text: "Noa strikes a match to light the first candle." },
+        { text: "Neighbors slow down to look at the warm light." },
+        { text: "Noa helps set the menorah in the front window." }
+      ],
+      clue: "To find a part that is most like another, first say what the part does in its own story.",
+      hints: [
+        "To find a part that is most like another, first say what the part does in its own story.",
+        "Ask what Grandfather's words do for Linh. Then look for a part of Noa's story that does the same job for Noa.",
+        "Lighting a candle and setting the menorah are things Noa does. Check each choice that is left against what Grandfather's words do."
+      ],
+      how: [
+        "Linh asks why people carry lanterns, and her grandfather tells her they are round like the full moon. His words explain what the custom means.",
+        "In Noa's story, Father asks if she knows why a candle is added each night, and then he tells her about the oil that lasted eight days.",
+        "So the part most like Grandfather's words is Father's explanation. The answer is \"Father explains why a candle is added each night.\"",
+        "Striking a match, neighbors looking and setting the menorah are actions, not explanations."
+      ],
+      misconception: "A common mix-up is choosing an event that sounds festive. Match the job the part does: it explains the custom.",
+      why: "The answer is \"Father explains why a candle is added each night.\" Grandfather's words explain what the lanterns mean, and Father's words explain what the candles mean. Striking a match, neighbors looking and setting the menorah are actions." },
+    { id: "SK-TT1d-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C11"],
+      stem: ["Story 1: On a snowy hill in Switzerland, Greta pulled her sled to the top. The air was freezing, and her breath made little clouds.", "Story 2: On a sunny beach in Brazil, Paulo carried his kite to the edge of the water. The sand was warm, and the waves were calm."],
+      prompt: "Complete the sentences about the settings. Choose the best answer for each blank.",
+      text: "Story 1 happens {0}. Story 2 happens {1}.",
+      slots: [
+        { options: ["on a snowy hill in the cold", "on a sandy beach in the heat", "in a busy city in the rain"], answer: 0 },
+        { options: ["on a snowy hill in the cold", "on a sandy beach in the heat", "in a quiet forest in the fall"], answer: 1 }
+      ],
+      clue: "A setting is where and when a story happens. Look for details about the place and the weather in each story.",
+      hints: [
+        "A setting is where and when a story happens. Look for details about the place and the weather in each story.",
+        "Find the first sentence of each story. Then check the weather words in the second sentence.",
+        "Neither story is set in a city or a forest. Match each story to the choices that are left."
+      ],
+      how: [
+        "Story 1 starts on a snowy hill in Switzerland, and the air is freezing, so it happens in the cold.",
+        "Story 2 starts on a sunny beach in Brazil, and the sand is warm, so it happens in the heat.",
+        "The answers are on a snowy hill in the cold, and on a sandy beach in the heat.",
+        "There is no city or forest in either story."
+      ],
+      misconception: "A common mix-up is matching the settings to the wrong stories. Check the place words in each story.",
+      why: "The answers are on a snowy hill in the cold, and on a sandy beach in the heat. Greta's story has a snowy hill and freezing air, and Paulo's story has a sunny beach and warm sand. Neither story is set in a city or a forest." },
+    { id: "SK-TT1d-S12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [], pick: 2,
+      like: ["SK-TT1d-C12"],
+      stem: ["Here are sentences from two stories about children who mend things. Hoang is on a fishing boat in Vietnam. Ruth is on a farm in Nebraska."],
+      prompt: "Choose ONE sentence from each story that shows the main character working carefully. Choose two sentences.",
+      options: [
+        "Hoang pulled the torn net onto his lap.",
+        "Hoang wove each new knot slowly, one loop at a time.",
+        "The boat rocked gently on the warm water.",
+        "When Hoang finished, the net was strong.",
+        "Ruth walked along the fence with a hammer and a bag of nails.",
+        "Ruth checked each nail twice before she hit it with the hammer.",
+        "The cows watched from the far side of the field.",
+        "By sunset, the fence stood straight again."
+      ],
+      answer: [1, 5],
+      clue: "Working carefully means taking time and checking each step. Look for words that show how the character works.",
+      hints: [
+        "Working carefully means taking time and checking each step. Look for words that show how the character works.",
+        "Look for words like slowly, twice and each. Choose one sentence for Hoang and one for Ruth.",
+        "The sentences about the boat and the cows tell about the setting, not about how the character works. Check each sentence that is left for each story."
+      ],
+      how: [
+        "Hoang's story: pulling the net onto his lap only starts the job, and the net being strong tells the result. Weaving each knot slowly, one loop at a time, shows care.",
+        "Ruth's story: walking with a hammer starts the job, and the fence standing straight is the result. Checking each nail twice shows care.",
+        "The answers are \"Hoang wove each new knot slowly, one loop at a time.\" and \"Ruth checked each nail twice before she hit it with the hammer.\"",
+        "The boat rocking and the cows watching are about the setting."
+      ],
+      misconception: "A common mix-up is choosing a sentence about the result. A finished job does not show how it was done.",
+      why: "The answers are \"Hoang wove each new knot slowly, one loop at a time.\" and \"Ruth checked each nail twice before she hit it with the hammer.\" Both show care in how the work is done. Starting the job, the results and the setting sentences do not show careful work." },
+    { id: "SK-TT1d-S13", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: [], pick: 2,
+      like: ["SK-TT1d-C13"],
+      stem: ["Story 1: In Peru, Rosa helps her aunt sell potatoes at a market. She weighs each bag and calls out the price.", "Story 2: In Thailand, Noi helps her father sell fruit from a boat. She hands up the fruit to buyers on the bridge every morning.", "Story 3: In Poland, Piotr helps his grandmother sell honey at a stall. He stacks the jars and counts the coins."],
+      prompt: "Think about all three stories. Which TWO sentences are true about ALL THREE stories?",
+      choices: [
+        { text: "A child helps a family member sell food.", correct: true },
+        { text: "The selling happens at a place where people come to buy and sell.", correct: true },
+        { text: "A child sells food from a boat." },
+        { text: "The market is open only on the weekend." },
+        { text: "A child counts coins." }
+      ],
+      clue: "To find what is true about three stories, check one sentence at a time against each story. It must be true for all three.",
+      hints: [
+        "To find what is true about three stories, check one sentence at a time against each story. It must be true for all three.",
+        "Check each sentence against Story 1, then Story 2, then Story 3. Choose two.",
+        "Only Noi is on a boat. Check each sentence that is left against all three stories."
+      ],
+      how: [
+        "Rosa helps her aunt, Noi helps her father, and Piotr helps his grandmother. Each child helps a family member sell food.",
+        "A Saturday market, a river market and a stall all show a place where people come to buy and sell.",
+        "The answers are \"A child helps a family member sell food.\" and \"The selling happens at a place where people come to buy and sell.\"",
+        "Only Noi is on a boat, Noi sells every morning, and only Piotr counts coins."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is true for only one or two of the three stories.",
+      why: "The answers are \"A child helps a family member sell food.\" and \"The selling happens at a place where people come to buy and sell.\" Both are true for all three stories. Only Noi is on a boat, Noi sells every morning, and only Piotr counts coins." },
+    { id: "SK-TT1d-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
+      like: ["SK-TT1d-C14"],
+      stem: ["Story 1: In a town in Egypt, Salma's neighbor fixed her bike chain. The next day, she baked him a small cake to say thank you. He smiled all day.", "Story 2: In a city in Canada, Owen was late, and the bus driver waited for him. The next day, Owen brought her a drawing. She hung it by her mirror."],
+      prompt: "Which new story teaches the same lesson as BOTH stories above?",
+      choices: [
+        { text: "A teacher helps Maya with math, and Maya leaves her a thank-you note.", correct: true },
+        { text: "Jay's team wins the game, and the whole team goes out for pizza." },
+        { text: "Lena finds a coin on the sidewalk and drops it into a jar at home." },
+        { text: "Omar's dog learns a new trick and gets a treat for it." }
+      ],
+      clue: "To find a new story with the same lesson, first say the lesson of the two stories. Then look for a story where a character acts the same way.",
+      hints: [
+        "To find a new story with the same lesson, first say the lesson of the two stories. Then look for a story where a character acts the same way.",
+        "In each story, ask what the child does after a grown-up lends a hand. Then look for that same kind of action in the new stories.",
+        "Finding a coin does not have a child answering anyone's help. Test each choice that is left."
+      ],
+      how: [
+        "In both stories, a grown-up helps a child, and the child thanks the helper the next day with a gift. The lesson is that thanking people who help you matters.",
+        "In the new stories, only one has someone helping a child and the child thanking the helper.",
+        "The answer is \"A teacher helps Maya with math, and Maya leaves her a thank-you note.\"",
+        "A pizza party, finding a coin and a dog's treat have no child thanking a helper."
+      ],
+      misconception: "A common mix-up is choosing a story with a similar topic or a happy ending. The lesson has to match.",
+      why: "The answer is \"A teacher helps Maya with math, and Maya leaves her a thank-you note.\" Like Salma and Owen, Maya thanks someone who helped her. A pizza party, a found coin and a treat for a dog do not show a child thanking a helper." },
+    { id: "SK-TT1d-S15", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p13", "p14"],
+      like: ["SK-TT1d-C15"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How is the way of life of Sophea's family different from the way of life of Pieter's family?",
+        choices: [
+          { text: "Sophea's family lives on a house that floats, but Pieter's family lives on firm land.", correct: true },
+          { text: "Sophea's family lives in a big city, but Pieter's family lives on a farm." },
+          { text: "Sophea's family moves to a new lake each year, but Pieter's family stays put." },
+          { text: "Sophea's family has no school nearby, but Pieter's family has one." }
+        ] },
+      partB: { prompt: "Which sentence from \"House on the Lake\" best supports the answer to Part A?",
+        choices: [
+          { text: "\"When the rains came, the lake rose, and her house rose with it.\"", correct: true },
+          { text: "\"Each morning, she paddled a small wooden canoe across the water to class.\"" },
+          { text: "\"Sophea's school was a boat.\"" },
+          { text: "\"Her mother kept a pot of herbs on the porch and hung fish to dry on a line.\"" }
+        ] },
+      clue: "To compare ways of life, ask where each family lives and how their home is different. Find the details in each story.",
+      hints: [
+        "To compare ways of life, ask where each family lives and how their home is different. Find the details in each story.",
+        "Find the sentence in each story that tells whether the home stays still or moves. Then pick a sentence for Part B that shows the difference.",
+        "Neither story is set in a big city. For Part B, your sentence must show the difference in your Part A answer."
+      ],
+      how: [
+        "In \"House on the Lake,\" Sophea's house floats on the water and rises and sinks with the lake.",
+        "In \"Behind the Dike,\" Pieter's house stands on solid ground and never moves.",
+        "Part A: Sophea's family lives on a house that floats, but Pieter's family lives on firm land. Part B: \"When the rains came, the lake rose, and her house rose with it.\"",
+        "Neither story is set in a big city, neither family moves each year, and both children get to school."
+      ],
+      misconception: "A common mix-up is choosing a detail about daily life, like school, instead of how the homes are different.",
+      why: "Part A: Sophea's family lives on a house that floats, but Pieter's family lives on firm land. Part B: \"When the rains came, the lake rose, and her house rose with it.\" The floating house moves with the water, and Pieter's house never moves. Neither story is set in a big city, neither family moves each year, and both children get to school." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {

@@ -274,3 +274,64 @@ Terms with no hits elsewhere: late bus, Homework Club, fishing derby, paper hat,
 **Not done.**
 - No reviewer has blind-solved the 24 new items.
 - I did not check the "Start this set again" path or a second sitting, where similar items are already used. With exactly fifteen per lesson, there is no spare item for a second recovery on the same core item.
+
+## 10. Fixes after B3 review (author b3a, second pass)
+
+**Scope.** Only `js/data/lessons/T-C.js`, inside the 3.T.C.1.a and 3.T.C.2.c blocks, plus this log. No new figures. No ids changed. Core is still exactly 15 (5, 5, 5) in both lessons, every core item keeps its own unused similar item (15 similar items per lesson, `like` lists unchanged), and every Together item keeps its addon. I did not run git and I did not review my own work: the items below need a fresh blind solve.
+
+**Method for the counts.** "Live" is the AUTHOR-BRIEF definition: a choice stays live only if a child who has read the clue and hints 1 to N would still have a real reason to pick it. Format: live after h1 / h2 / h3, with what h3 removes.
+
+### 3.T.C.1.a
+
+| Item | Finding | What I changed | Live after h1 / h2 / h3 |
+|---|---|---|---|
+| C06 | MUST-1 | Clue and hint 1 now ask neutrally: "Does it give information, ask the reader to act, or tell a story?" The "one paragraph may tell you to do something" warning stays only in `how` and `misconception`. h2 and h3 unchanged (h3 removes the story choice) | 4 / 4 / 3: key, hunt, keep-as-pet |
+| S02, S13 | SHOULD-1 | Same neutral wording in clue and hint 1. S02's weak distractor "raise ostriches on a farm" became "show readers how to care for ostriches at a zoo", so it is a real how-to rival tied to the zoo line (`why` updated) | S02 4 / 4 / 3: key, visit-a-zoo, care-at-zoo. S13 4 / 4 / 3: key, buy-a-mirror, eye-health tips |
+| C07 | MUST-2 | Part B rewritten so exactly one sentence speaks to a child (the yard question). The other three are plain facts: the crustacean sentence, the dead-leaves sentence and the legs sentence. The two "you" sentences ("That is why you find..." and "If you find a roly-poly, hold it gently...") are gone. h2 no longer says "where the author speaks to you": it now says "Reread the whole article from start to finish. Part B asks for the sentence that fits your Part A answer best." `how` and `why` updated | A 4 / 4 / 3 (teachers out). B 4 / 4 / 4. The three fact sentences are live because each backs a Part A rival: crustacean backs scientists, dead leaves backs gardeners, legs backs scientists. Every region h2 names holds all four Part B choices. Honest caveat: only the key addresses the reader, so a reviewer should check the three fact choices are not too weak |
+| S10 | MUST-3 | Topic changed from reading buddies to a school Walking Club (sign by the gym door; newsletter with Mr. Lyle). Audience answers kept: Text 1 for students in the club, Text 2 for families. Decoys: Mr. Lyle (the leader, named only in Text 2) and the principal. Searched `js/data` for buddy/buddies (hits are T-T34, W-TASK-01 and the old S10 only), walking club, laps, sticker, track, Mr. Webb (T-T1 librarian, so the name was dropped), Mr. Lyle, Walking Club. No topic hit | each slot 4 / 4 / 3 (principal out of both) |
+| C03 | F-8 | h2 no longer names the key's content: "Reread the letter. Notice who Rosa wrote to and what she asked that reader to do." | 4 / 4 / 3 (story out): key, use-the-grass, bean fact |
+| S09 | F-17 | "Most are no bigger than a grain of sand" became "Many are...". Row text, `how` and `why` updated to "many" | unchanged (4 rows x 3 columns open after h3) |
+| S07 | flamingo | "even when they sleep" removed (now "They often stand on one leg."). `how` and `why` say "standing on one leg". Feeding head down is kept | unchanged, 5 / 5 / 4 |
+| P2 (Together) | F-11 | Clue was "Look at the very top". Now "Ask who Rosa is talking to as she asks for things." Addon h2 now "Check how the letter begins, and who Rosa asks to say yes." | clue-only: 4 live (all four people appear in the letter) |
+| C14 | note | h2 no longer hands over both answers: "Find a line that shows the purpose, and a word or detail that shows who the poem is for." | n/a (cr) |
+
+### 3.T.C.2.c
+
+| Item | Finding | What I changed | Live after h1 / h2 / h3 |
+|---|---|---|---|
+| P8 (ref, edited in place) | MUST-4 | Dropped "student who rides the bus" and "school nurse", which the box contradicts. New rivals: "She learned it from a bus-safety video that she watched at school" and "A rider once told her about a fall on a bus, and she never forgot it". Both fit the box and are ruled out only by reading her own note ("I have had to stop fast many times"). `why` and the addon `how` rewritten. Hints unchanged (h3 removes the newsletter choice) | 4 / 4 / 3: key, video, rider. Honest caveat: video and rider are weaker than the key, but neither is contradicted by the box |
+| C11 (and passage p6) | MUST-6 | Elijah and the stars are gone. New scene: Imara has lived beside the train tracks her whole life, and her cousin Jabari is woken by the big train. The item asks why the train wakes him but not her. Rivals: she went to sleep later; the train was quiet that night; he had never seen a train. h3 removes the quiet-train choice (the journal says it shook the whole house). Key shortened so it is not much longer than the others. Names checked across `js/data`; "train" and "tracks" hits (T-RA Dion item, T-SS) share no scene or key fact | 4 / 4 / 3: key, later-bedtime, never-seen-a-train |
+| S08 | MUST-5 | Topic changed from the 1895 mill to an 1895 boy walking the rounds with his uncle, who lights the town's gas street lamps by hand. No mill, corn or meal. (A blacksmith was my first idea, but `T-TS.js` now has a mill with a blacksmith shop, so I did not use it.) Searched street lamp, lamplighter, lamp lighter: only a turtle-lights item in T-TS. Names: Emmett, Uncle Ray (a name only in grammar items) | slot 1 4 / 4 / 3 (newspaper writer out); slot 2 4 / 4 / 4 |
+| C07 | F-9 | Re-aimed so the key is no longer a copy of the sentence before it. The key now adds a time-period step: rain kept the wash from drying outside, and homes in 1908 had no dryers, so it hung in the kitchen. Distractors lengthened to match. `how` and `why` updated. This is still a mix of situation (rain) and time period (no dryer); a reviewer should judge whether it now practises the standard better | 4 / 4 / 3 (plants out) |
+| C12 | F-10 | Box and note now say early April and the first week of May. That makes four weeks true. The weak "school year will have ended" rival is gone; it is replaced by "the baby birds will be able to fly" (a real rival: the box says eggs hatch, not that chicks fly). `how`, `why` and the Part A prompt updated | A 4 / 4 / 3 (workers out). B 4 / 4 / 4 |
+| C13 | F-12 | `how` now says "until the 1970s, about forty years later" | unchanged |
+| S02 | F-17 | "most homes in small towns had no telephone" became "many homes", in the box, `how` and `why`. No number is claimed | unchanged |
+| S07 | F-17 | "a city in Georgia" became "a small town in Georgia" | unchanged |
+| Teach points | F-13 | Merged the first and last points: "Look for clues about context: ... Then ask: How does knowing this help me understand the text?" Now five points. Watch Me still three | n/a |
+| P2, P7, P6 (Together) | F-11 | Clues reworded to strategy only: P2 "It tells what life was like back then"; P7 "Ask what happened before Ella picked up her pen"; P6 "Who is the writer? Think about how her background shapes what she does" | clue-only: 4 live each |
+| Code comment | F-18 | Removed the claim that "With adult support" stays in "the habit cards" (`js/data/habits.js` has no card for 3.T.C.2.c). It stays in the parent note only | n/a |
+
+### Needs blind re-solve (fresh reviewer, no log first)
+- **3.T.C.1.a:** C03 (h2 only), C06, C07 (whole item, especially Part B), S02, S13, S09, S07, S10, P2 (Together clue), C14 (h2).
+- **3.T.C.2.c:** P8 (new choices), C07 (re-aimed), C11 (new passage text and item), C12 (new dates and rival), C13 (`how` only), S02, S07, S08 (new text and item), Together P2, P6, P7 (clues).
+- Passage p6 changed, so the whole of 2.c set 3 should be re-read for flow.
+
+### Findings not addressed, and why
+- **F-16, modelling gaps.** 1.a has no Watch Me for the "author's reason for a comparison" task (C08, S08), and 2.c has none for "could the writer have written this in that year" (C13, S14). Both lessons are at the five-point and three-example limits, so any addition means swapping an existing example. I left that to the lead.
+- **F-15, 1.a C09 and S09 h3** settles the only "both" row. Legal under the rules, so I did not change it.
+- **2.c C08 and C13 are close to DOK 1,** and the review accepted them. I did not make C13's distractors harder.
+- **1.a teach point 3** still quotes "Bring a water bottle" and "Please come early", which sit near form A page p2. This was in the baseline text and is a note in the review, so I left it.
+- **2.c P4, P9** and the situational "read the box" hints are inherent to the skill (NOTE).
+- **03-practice-inventory.csv weak-item flags** for these two lessons: I still have not checked this beyond my earlier statement. Unconfirmed.
+- **Superseded statements earlier in this log:** section 5 counts for 1.a C06, C07 and 2.c P8, C11, C12, section 6 and 9 "no hits" lists (kindergarten buddies, cabin/stars, mill), section 4's "home computers fifty years later" and the habit-card claim in the section 1 table are replaced by this section.
+- **Facts I added that a reviewer may want to confirm:** clothes dryers were not in homes in 1908 (reasoning step in 2.c C07); killdeer chicks leave the nest soon after hatching but do not fly for weeks (the "baby birds will be able to fly" rival in 2.c C12); a large freight train can shake a house beside the tracks (fiction detail in 2.c C11).
+
+### Gates after this pass
+| Check | Result |
+|---|---|
+| `node verification/check-content.js --all` | PASS (0 failures, 15 warnings). My first pass raised word-overlap warnings on C06, S13, P6 and C11 (clue shares a word only with the key; key much longer than the others). I fixed all of them, and no warning names 3.T.C.1.a or 3.T.C.2.c now |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `node verification/check-instructional-copy.js` | 28 assertions passed |
+| `python3 verification/readability.py` (read) | 1.a p3 FK 3.2, p4 3.5. 2.c p5 FK 3.9, p6 FK 3.0 (152 words; the new journal replaced the stars text). All at or below 4.5. 2.c p1 FK 4.3 and the legacy p3 FK 0.3 are unchanged |
+| Lesson file syntax | `node -e` load of T-C.js after every change; always valid. Pre-fix copy: `scratchpad/T-C.pre-fix.js` |
+| Browser | Not rerun this pass. The first pass had Playwright smoke tests (109 of 109 and the in-order run); the changed items need the in-order sitting run again |
