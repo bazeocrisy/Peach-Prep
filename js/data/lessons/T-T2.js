@@ -3462,23 +3462,23 @@ PP.addLesson({
         choices: [
           { text: "Peanuts can be pressed to make cooking oil.", correct: true },
           { text: "Farmers use large machines to work in their fields." },
-          { text: "Georgia is in the southeastern part of the United States." },
+          { text: "Peanut shells are rough and tan, with faint ridges along the sides." },
           { text: "Rosa's class visited a farm last spring." }
         ],
         clue: "A sentence that supports an idea gives more information about that same idea. Ask what idea the new first sentence promises to explain.",
         hints: [
           "A sentence that supports an idea gives more information about that same idea. Ask what idea the new first sentence promises to explain.",
-          "Reread the new first sentence and look for the words foods and products. Then ask which choice gives an example of that.",
-          "A sentence about the machines on a farm tells how farmers work, not what peanuts are used for. Look at the choices that are left."
+          "Reread the new first sentence and look for the words foods and products. Then ask which choice gives an example of something made from peanuts, not just a fact about them.",
+          "A sentence about the machines on a farm tells how farmers work, not what is made from peanuts. Look at the choices that are left."
         ],
         how: [
           "The new sentence says peanuts are used to make other foods and products, so a supporting sentence has to give an example of something made from peanuts.",
           "Cooking oil is a product made from peanuts. It gives the reader a real example of the idea.",
           "The answer is: Peanuts can be pressed to make cooking oil.",
-          "Farm machines, the location of Georgia and Rosa's class trip are all true or harmless, but none of them tells what is made from peanuts."
+          "The farm machines, the rough shells and Rosa's class trip are all true or harmless, but none of them tells what is made from peanuts."
         ],
         misconception: "A common mix-up is picking any sentence about farms or peanut places. A supporting sentence must tell more about the exact idea it supports.",
-        why: "The answer is: Peanuts can be pressed to make cooking oil. It gives an example of a product made from peanuts, which supports the new first sentence. The other sentences are about farm machines, the location of Georgia and a class trip, so they do not give an example." },
+        why: "The answer is: Peanuts can be pressed to make cooking oil. It gives an example of a product made from peanuts, which supports the new first sentence. The other sentences are about farm machines, the look of peanut shells and a class trip, so they do not give an example." },
       { id: "SK-TT2d-C03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
         prompt: "Rosa wants to add four sentences after sentence 9 to tell how peanut butter is made. Put them in the order that makes the most sense.",
         steps: [
@@ -3503,32 +3503,32 @@ PP.addLesson({
         why: "The order is: The peanuts are roasted in a hot oven until they turn golden; after they cool, their thin skins are rubbed off; a machine grinds the peanuts into a thick, smooth paste; the paste is scooped into jars and sealed. Each step needs the one before it." },
       { id: "SK-TT2d-C04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
         stem: [
-          "Rosa wants to add this sentence after sentence 9: \"Peanuts have a lot of protein, which helps kids grow strong.\""
+          "Rosa wants to add this sentence after sentence 9: \"Peanuts have a lot of protein, and so do eggs, beans and fish.\""
         ],
         prompt: "She also wants to tell what the word protein means. Choose the best answer for the blank.",
         text: "Protein is {0}.",
         slots: [
           { options: [
-              "a part of food that helps the body grow and stay strong",
-              "a kind of sticky oil that coats a food",
-              "a mineral that is found in salty water"
+              "a part of food that helps muscles and bones grow",
+              "a part of food that gives the body quick energy",
+              "a part of food that makes it taste sweet"
             ],
             answer: 0 }
         ],
-        clue: "A definition tells what a word means. Use the way the word is used in the sentence to figure it out.",
+        clue: "A definition tells what a word means. Use the examples around the word to figure out what kind of thing it is.",
         hints: [
-          "A definition tells what a word means. Use the way the word is used in the sentence to figure it out.",
-          "Read Rosa's new sentence again. Ask what the sentence says protein does for kids.",
-          "Oil that coats a food does not help anyone grow strong. Look at the choices that are left."
+          "A definition tells what a word means. Use the examples around the word to figure out what kind of thing it is.",
+          "Read Rosa's new sentence again. Ask what eggs, beans, fish and peanuts have in common as foods.",
+          "Eggs, fish and beans are not sweet, and they have protein, so a sweet taste cannot be what protein is. Look at the choices that are left."
         ],
         how: [
-          "Rosa's sentence says peanuts have protein, which helps kids grow strong.",
-          "That shows protein is something in food that helps the body.",
-          "The answer is: Protein is a part of food that helps the body grow and stay strong.",
-          "Sticky oil on a food has nothing to do with growing strong, and a mineral in salty water is not part of a food that kids eat."
+          "Rosa's sentence names peanuts, eggs, beans and fish as foods that have protein, so protein is something found inside foods.",
+          "These foods are the ones people eat to grow and stay strong, and protein is the part of them that builds muscles and bones.",
+          "The answer is: Protein is a part of food that helps muscles and bones grow.",
+          "Quick energy comes mostly from sugar, not from protein, and a sweet taste does not describe eggs, beans or fish."
         ],
-        misconception: "A common mix-up is choosing a word that sounds like food science. Use the words around the word protein to find what it does.",
-        why: "The answer is: Protein is a part of food that helps the body grow and stay strong. Rosa's sentence says protein helps kids grow strong. A sticky oil on a food and a mineral in salty water do not match what the sentence says protein does." },
+        misconception: "A common mix-up is choosing the meaning that sounds like any good thing about food. Use what you know about the foods in the examples.",
+        why: "The answer is: Protein is a part of food that helps muscles and bones grow. Peanuts, eggs, beans and fish are foods with protein, and protein builds the body. Quick energy comes mostly from sugar, and eggs, beans and fish are not sweet." },
       { ref: "SK-TT2d-P4" }
     ] },
     { title: "Set 2", items: [
@@ -3629,7 +3629,6 @@ PP.addLesson({
         stem: ["Amina drew Figure 1 to go with her draft."],
         figure: { src: "assets/figures/tt2d-bus-stopped.svg",
           label: "Figure 1",
-          caption: "A school bus that has stopped",
           alt: "Drawing of a school bus seen from the side. Two red lights flash on top of the bus, and a stop sign on an arm swings out from the left side. Labels point to the red lights and the stop arm." },
         prompt: "Which caption should Amina write under Figure 1?",
         choices: [
@@ -3830,16 +3829,16 @@ PP.addLesson({
     { id: "SK-TT2d-S03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C03"],
       prompt: "A student wrote four sentences about making a jelly sandwich. Put them in the order that makes the most sense.",
       steps: [
-        "First, lay two slices of bread on a plate.",
-        "Next, spread jelly on one slice with a knife.",
-        "Then press the two slices together.",
-        "Last, cut the sandwich in half and enjoy it."
+        "Lay two slices of bread on a plate.",
+        "Spread jelly on one slice with a knife.",
+        "Press the two slices together.",
+        "Cut the sandwich in half and enjoy it."
       ],
       clue: "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
       hints: [
         "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
-        "Look for clue words such as first, next, then and last in the sentences. Then check that each step makes sense after the one before it.",
-        "The slices cannot be pressed together until jelly is on one of them, so the pressing comes after the spreading. Use that to place two of the sentences, then decide where the others go."
+        "Ask what each step needs to already be done. Which steps could not happen without another one first?",
+        "A sandwich cannot be cut in half until it has been put together. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
         "The bread has to be on the plate before anything can be spread on it, so laying the slices comes first.",
@@ -3847,8 +3846,8 @@ PP.addLesson({
         "Last, the sandwich is cut and eaten.",
         "The order is: lay two slices of bread on a plate, spread jelly, press the slices together, cut the sandwich in half."
       ],
-      misconception: "A common mix-up is ignoring clue words. Words like first and last show where a step belongs.",
-      why: "The order is: First, lay two slices of bread on a plate; next, spread jelly on one slice with a knife; then press the two slices together; last, cut the sandwich in half and enjoy it. Each step needs the one before it." },
+      misconception: "A common mix-up is putting the cutting early because it is the last thing you see. Check what each step needs first.",
+      why: "The order is: Lay two slices of bread on a plate; spread jelly on one slice with a knife; press the two slices together; cut the sandwich in half and enjoy it. Each step needs the one before it." },
     { id: "SK-TT2d-S04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C04"],
       stem: [
         "A student wrote this sentence about pencils: \"The ferrule holds the eraser on the end of the pencil.\""
@@ -3881,7 +3880,7 @@ PP.addLesson({
       ],
       prompt: "Sentence 4 is a weak ending. Which choice wraps up the abacus draft best?",
       choices: [
-        { text: "With beads that slide on rods, an abacus helps people count and add.", correct: true },
+        { text: "Beads on rods make an abacus a simple way to count.", correct: true },
         { text: "Next, I will tell you how a calculator works." },
         { text: "Some abaci have ten rods, and some have more than ten." },
         { text: "I think that counting on my fingers is much easier." }
@@ -3895,11 +3894,11 @@ PP.addLesson({
       how: [
         "A conclusion reminds the reader of the main idea without starting anything new.",
         "Sentences 1 to 3 all tell about how an abacus uses beads on rods to help people count.",
-        "The answer is: With beads that slide on rods, an abacus helps people count and add.",
+        "The answer is: Beads on rods make an abacus a simple way to count.",
         "The calculator sentence starts a new topic, the sentence about ten rods adds a new fact, and the finger sentence is an opinion about something else."
       ],
       misconception: "A common mix-up is choosing a true sentence about abaci. A conclusion must wrap up the topic instead of adding a fact.",
-      why: "The answer is: With beads that slide on rods, an abacus helps people count and add. It wraps up the main idea of the draft. The calculator sentence starts a new topic, the ten rods sentence adds a new fact, and the finger sentence is an opinion." },
+      why: "The answer is: Beads on rods make an abacus a simple way to count. It wraps up the main idea of the draft. The calculator sentence starts a new topic, the ten rods sentence adds a new fact, and the finger sentence is an opinion." },
     { id: "SK-TT2d-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C06"],
       stem: [
         "(1) I like gadgets.",
@@ -4017,7 +4016,6 @@ PP.addLesson({
       stem: ["A student drew Figure 1 for a report about windsocks."],
       figure: { src: "assets/figures/tt2d-windsock.svg",
         label: "Figure 1",
-        caption: "A windsock",
         alt: "Drawing of a windsock on a tall pole. The cloth cone points to the right. Labels point to the pole, the wide end of the cone and the narrow end of the cone." },
       prompt: "Which caption should the student write under Figure 1?",
       choices: [
@@ -4107,37 +4105,37 @@ PP.addLesson({
       why: "Blank 1 needs \"Maple syrup is a sweet food that people make from tree sap,\" because it names the whole topic. Blank 2 needs \"Now you know that sap from maple trees becomes sweet syrup,\" because it wraps up what the reader learned. The other choices are about a different food, the writer, a new topic or an opinion." },
     { id: "SK-TT2d-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C13"],
       stem: [
-        "(1) Some things float in water, and some things sink.",
-        "(2) A cork and an apple float on top of the water.",
-        "(3) A rock and a coin sink to the bottom.",
-        "(4) Many people like to swim in a lake or a pool.",
-        "(5) Boats can float even though they are very heavy."
+        "Some things float in water, and some things sink.",
+        "A cork and an apple float on top of the water.",
+        "A rock and a coin sink to the bottom.",
+        "Many people like to swim in a lake or a pool.",
+        "Boats can float even though they are very heavy."
       ],
       figure: { src: "assets/figures/tt2d-sink-float.svg",
         label: "Figure 1",
         caption: "Four objects in a tank of water",
         alt: "Drawing of a tank of water with four objects. A cork and an apple float at the top of the water. A rock and a coin rest on the bottom. Each object has a label." },
-      prompt: "Figure 1 will sit beside this draft. Pick the TWO sentences it helps explain.",
+      prompt: "Pick the two lines that Figure 1 helps explain.",
       choices: [
-        { text: "(2) A cork and an apple float on top of the water.", correct: true },
-        { text: "(3) A rock and a coin sink to the bottom.", correct: true },
-        { text: "(4) Many people like to swim in a lake or a pool." },
-        { text: "(5) Boats can float even though they are very heavy." }
+        { text: "A cork and an apple float on top of the water.", correct: true },
+        { text: "A rock and a coin sink to the bottom.", correct: true },
+        { text: "Many people like to swim in a lake or a pool." },
+        { text: "Boats can float even though they are very heavy." }
       ],
-      clue: "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
+      clue: "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the lines that tell the same facts.",
       hints: [
-        "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
-        "Study Figure 1 and write down what it shows. Then read the sentences one at a time and ask whether each matches. Choose two.",
+        "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the lines that tell the same facts.",
+        "Study Figure 1 and write down what it shows. Then read the lines one at a time and ask whether each matches. Choose two.",
         "Figure 1 shows a tank with four small objects, and it has no boats. Look at the choices that are left."
       ],
       how: [
         "Figure 1 shows a tank of water with four objects. A cork and an apple float at the top, and a rock and a coin rest at the bottom.",
-        "Sentence 2 says a cork and an apple float, and sentence 3 says a rock and a coin sink.",
-        "The answers are sentence 2 and sentence 3.",
-        "Sentence 4 is about swimming, and sentence 5 is about boats. The figure does not show either."
+        "The line about the cork and the apple matches the top of the tank, and the line about the rock and the coin matches the bottom.",
+        "The answers are \"A cork and an apple float on top of the water.\" and \"A rock and a coin sink to the bottom.\"",
+        "The swimming line and the boat line are not shown in the figure."
       ],
-      misconception: "A common mix-up is choosing any sentence about floating. A figure helps explain only the facts that it actually shows.",
-      why: "The answers are \"(2) A cork and an apple float on top of the water.\" and \"(3) A rock and a coin sink to the bottom.\" Figure 1 shows exactly those four objects. The swimming and boat sentences are not shown." },
+      misconception: "A common mix-up is choosing any line about floating. A figure helps explain only the facts that it actually shows.",
+      why: "The answers are \"A cork and an apple float on top of the water.\" and \"A rock and a coin sink to the bottom.\" Figure 1 shows exactly those four objects. The swimming and boat lines are not shown." },
     { id: "SK-TT2d-S14", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C14"],
       stem: [
         "(1) A harbor is a safe place for boats near the shore.",

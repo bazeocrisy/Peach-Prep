@@ -2654,7 +2654,7 @@ PP.addLesson({
       hints: [
         "Purpose is why the poster is made. Audience is who will read it. Each idea should fit both.",
         "Check each idea two ways. Does it invite people to come? Can a walker read or see it quickly?",
-        "A photo with no words cannot tell neighbors the day, time or place. Check the other four ideas the same two ways."
+        "A tiny map cannot be read from the sidewalk. Check the other four ideas the same two ways."
       ],
       how: [
         "The purpose is to get neighbors to come to the fair, and they will pass the poster as they walk.",
@@ -2848,15 +2848,15 @@ PP.addLesson({
     hints: [
       "Purpose is what the writer wants a notice to do. Decide what Mr. Duran wants readers to do.",
       "Compare what each notice's picture and words ask readers to do.",
-      "\"Congratulations\" is for people who already performed, but Mr. Duran needs helpers before the concert. Check the other choices."
+      "A thank-you for last year's concert looks back, but Mr. Duran needs helpers for this Thursday. Check the other choices."
     ],
     how: [
       "Mr. Duran wants three people to come and set up chairs.",
-      "The first notice shows the chairs, tells the day and time, and asks readers to sign up. The answer is \"a picture of tall stacks of folding chairs, and the words: Helpers needed Thursday at two o'clock. Sign up here!\"",
-      "The notice that congratulates singers is for after the concert, the gold star notice invites people to look back at last year, and the program notice tells about the concert but does not ask for helpers."
+      "The notice with the stacks of chairs tells the day and time and asks readers to sign up. The answer is \"a picture of tall stacks of folding chairs, and the words: Helpers needed Thursday at two o'clock. Sign up here!\"",
+      "The thank-you notice looks back at last year, the gym-doors notice only says when chairs will be set up, and the program notice tells about the concert. None of them asks for helpers."
     ],
     misconception: "A common mix-up is choosing a notice about the same event. A notice has to ask readers to do what the writer needs.",
-    why: "The answer is \"a picture of tall stacks of folding chairs, and the words: Helpers needed Thursday at two o'clock. Sign up here!\" It asks readers to do the job Mr. Duran needs done. The other notices congratulate, look back or give information, but none asks for helpers." },
+    why: "The answer is \"a picture of tall stacks of folding chairs, and the words: Helpers needed Thursday at two o'clock. Sign up here!\" It asks readers to do the job Mr. Duran needs done. The other notices thank people for last year, announce when chairs will be set up, or tell about the concert, but none asks for helpers." },
         { id: "SK-TC1c-S14", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
     like: ["SK-TC1c-C14"],
     stem: ["Ms. Cole's class is making a slide show about the school walk-a-thon for families who could not come. Slide 3 shows a photo. Three third graders stand at a table. They hand cups of water to walkers. The walk-a-thon was on a Saturday in October."],

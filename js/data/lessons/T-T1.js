@@ -4557,7 +4557,7 @@ PP.addLesson({
         ],
         prompt: "Which sentence should replace Zora's first sentence to make a better beginning?",
         choices: [
-          { text: "The bus door squeaked open, and I climbed the steps alone for the very first time.", correct: true },
+          { text: "The bus door squeaked open, and I climbed the steps with my heart thumping.", correct: true },
           { text: "A school bus is a big yellow vehicle that takes children to school each day." },
           { text: "Riding the bus was a lot of fun, and I liked it very much." },
           { text: "The ride from my house to school takes about twenty minutes in the morning." }
@@ -4570,12 +4570,12 @@ PP.addLesson({
         ],
         how: [
           "A good beginning puts a character in a place and starts the action.",
-          "\"The bus door squeaked open, and I climbed the steps alone for the very first time\" has a character, a place, a sound and a first-time moment that makes the reader curious.",
-          "The answer is: The bus door squeaked open, and I climbed the steps alone for the very first time.",
+          "\"The bus door squeaked open, and I climbed the steps with my heart thumping\" has a character, a place, a sound and a feeling that makes the reader curious.",
+          "The answer is: The bus door squeaked open, and I climbed the steps with my heart thumping.",
           "The sentence about what a bus is gives a fact, \"Riding the bus was a lot of fun\" gives away how it turns out, and the twenty-minute ride is a fact that does not start the story."
         ],
         misconception: "A common mix-up is choosing a sentence that explains the topic. In a story, the beginning starts the action.",
-        why: "The answer is: The bus door squeaked open, and I climbed the steps alone for the very first time. It shows a character in a place at the start of the action. The other sentences give facts or tell how the story turns out, so they do not start the story." },
+        why: "The answer is: The bus door squeaked open, and I climbed the steps with my heart thumping. It shows a character in a place at the start of the action. The other sentences give facts or tell how the story turns out, so they do not start the story." },
       { ref: "SK-TT1e-P6" }
     ] },
     { title: "Set 2", items: [
@@ -4699,11 +4699,11 @@ PP.addLesson({
           { text: "\"I like scavenger hunts better than any other game.\" It tells the reader what the writer thinks." },
           { text: "\"Maple Park is the biggest park in our town.\" It tells the reader where the story happens." }
         ],
-        clue: "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+        clue: "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
         hints: [
-          "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+          "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
           "Read the whole draft to see what kind of story it is. Then ask which choice would start the story best.",
-          "An opinion about scavenger hunts could begin an essay, but a story needs a character in a moment. Look at the choices that are left."
+          "An opinion about scavenger hunts could begin an essay, but a story needs a character doing something. Look at the choices that are left."
         ],
         how: [
           "Ask what the beginning should do: put a character in a place and start the action.",
@@ -4815,7 +4815,7 @@ PP.addLesson({
   similar: [
     { id: "SK-TT1e-S01", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P5"],
       prompt: "Rosa is playing hide-and-seek. Pick the word that fits each blank so the search happens in order.",
-      text: "(1) Rosa covered her eyes and counted to twenty. (2) {0} she checked behind the curtain. (3) Then she peeked inside the closet. (4) {1} she spotted her cousin Dev's sneakers poking out from under the bed.",
+      text: "(1) First, Rosa covered her eyes and counted to twenty. (2) {0} she checked behind the curtain. (3) Then she peeked inside the closet. (4) {1} she spotted her cousin Dev's sneakers poking out from under the bed.",
       slots: [
         { options: ["A moment later,", "To begin with,", "Long before that,"], answer: 0 },
         { options: ["In the end,", "At first,", "Earlier,"], answer: 0 }
@@ -4828,7 +4828,7 @@ PP.addLesson({
       ],
       how: [
         "Sentence 1 is the start: Rosa counts. So the first search in sentence 2 comes after that, and it needs a word that moves forward in time.",
-        "Blank 1 is \"A moment later,\". \"To begin with\" would make the search the start, but counting came first, and \"Long before that\" goes backward.",
+        "Blank 1 is \"A moment later,\". \"To begin with\" is a start word, but sentence 1 already begins with First, and \"Long before that\" goes backward.",
         "Sentence 4 is where Rosa finds Dev, so it is the end of the search, and it needs \"In the end,\".",
         "\"At first\" is a start word, and \"Earlier\" goes backward."
       ],
@@ -4938,7 +4938,7 @@ PP.addLesson({
       ],
       prompt: "Which sentence should replace sentence 2 to show that Jamal is scared?",
       choices: [
-        { text: "His hands trembled, and he kept peeking at the crowd through the curtain.", correct: true },
+        { text: "His hands trembled, and he kept peeking through the curtain.", correct: true },
         { text: "He smiled and waved at his grandmother in the front row." },
         { text: "Jamal was very, very scared about the play." },
         { text: "The curtain was thick and red, with gold stars sewn on it." }
@@ -4951,11 +4951,11 @@ PP.addLesson({
       ],
       how: [
         "Telling names the feeling, like scared. Showing uses a body clue or an action.",
-        "Trembling hands and peeking at the crowd are clues that someone is scared before a play.",
-        "The answer is: His hands trembled, and he kept peeking at the crowd through the curtain.",
+        "Trembling hands and peeking through the curtain are clues that someone is scared before a play.",
+        "The answer is: His hands trembled, and he kept peeking through the curtain.",
         "Smiling and waving show a happy feeling, \"very, very scared\" still tells, and the curtain description is about the stage, not Jamal."
       ],
-      why: "The answer is: His hands trembled, and he kept peeking at the crowd through the curtain. Trembling and peeking show that Jamal is scared without naming it. A smile shows a different feeling, \"very, very scared\" still tells, and the curtain is not about Jamal." },
+      why: "The answer is: His hands trembled, and he kept peeking through the curtain. Trembling and peeking show that Jamal is scared without naming it. A smile shows a different feeling, \"very, very scared\" still tells, and the curtain is not about Jamal." },
     { id: "SK-TT1e-S07", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C07"],
       stem: [
         "(1) Tasha pushed her wagon of old toys to the corner for the yard sale.",
@@ -5057,27 +5057,27 @@ PP.addLesson({
       stem: [
         "Kofi is writing about his first time on the climbing wall at the gym. His first sentence is: \"This is a story about climbing.\""
       ],
-      prompt: "Which choice would make the best new first sentence for Kofi's story? Read the job each choice says it does.",
+      prompt: "Which choice would make the best new first sentence for Kofi's story?",
       choices: [
-        { text: "\"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall.", correct: true },
+        { text: "\"I gripped the first purple hold and looked up.\" It starts the action with Kofi.", correct: true },
         { text: "\"A climbing wall has holds that climbers grab and step on.\" It explains how a wall is built." },
         { text: "\"Kofi was proud when he finally reached the top.\" It tells how the story ends." },
         { text: "\"Climbing is the best sport in the whole world.\" It gives the writer's opinion." }
       ],
-      clue: "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+      clue: "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
       hints: [
-        "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
-        "Think about what kind of story this is. Then ask which choice would make you want to read on.",
-        "An opinion about a sport could begin an essay, but a story needs a character in a moment. Look at the choices that are left."
+        "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
+        "Think about what kind of story this is. Then ask which choice would best start the story.",
+        "An opinion about a sport could begin an essay, but a story needs a character doing something. Look at the choices that are left."
       ],
       how: [
         "A story's beginning should put a character in a place and start the action.",
-        "\"I gripped the first purple hold and looked up at the very top\" shows Kofi at the start of his climb and makes the reader wonder what will happen.",
-        "The answer is \"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall.",
+        "\"I gripped the first purple hold and looked up\" shows Kofi at the start of his climb and makes the reader wonder what will happen.",
+        "The answer is \"I gripped the first purple hold and looked up.\" It starts the action with Kofi.",
         "The others explain the wall, give away the ending or share an opinion. None of them starts the story."
       ],
       misconception: "A common mix-up is picking a sentence that sounds exciting but belongs at the end. A beginning starts the action; it does not tell how the story turns out.",
-      why: "The answer is: \"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall. The other choices explain how a wall is built, tell how the story ends or give an opinion, so they do not start the story." },
+      why: "The answer is: \"I gripped the first purple hold and looked up.\" It starts the action with Kofi. The other choices explain how a wall is built, tell how the story ends or give an opinion, so they do not start the story." },
     { id: "SK-TT1e-S12", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C12"],
       prompt: "Kai is writing about his paper boat. Sort his sentences into the order the events would really happen.",
       steps: [
@@ -5101,13 +5101,13 @@ PP.addLesson({
       why: "The order is: Kai folded the paper boat; he set it on the water; a breeze pushed it across the ripples; it bumped the far bank and Kai cheered. Each step needs the one before it." },
     { id: "SK-TT1e-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], pick: 2, like: ["SK-TT1e-C13"],
       stem: ["Rosa is writing about a birthday party at the bowling alley."],
-      prompt: "Which TWO sentences use details about what Rosa sees or hears to help the reader picture the bowling alley?",
+      prompt: "Pick two sentences that help a reader see or hear the bowling alley.",
       choices: [
-        { text: "Pins crashed with a loud crack, and the whole alley smelled like popcorn.", correct: true },
-        { text: "The shiny floor was so slick that my shoes squeaked with every step.", correct: true },
-        { text: "We bowled on Saturday afternoon." },
-        { text: "My team had six players on it." },
-        { text: "Bowling is a game played with ten pins." }
+        { text: "Pins crashed with a loud crack, and the alley smelled like popcorn.", correct: true },
+        { text: "The slick floor made my shoes squeak with every step.", correct: true },
+        { text: "We went bowling on Saturday afternoon, and it lasted about two hours." },
+        { text: "My team had six players, and we took turns in order." },
+        { text: "Bowling is a game played by rolling a ball at ten pins." }
       ],
       clue: "Details help the reader see, hear or feel what is happening. Ask whether a sentence only says what happened or helps you picture it.",
       hints: [
@@ -5117,11 +5117,11 @@ PP.addLesson({
       ],
       how: [
         "Look for words that make a picture or a sound: how things look, sound, smell or feel.",
-        "\"Pins crashed with a loud crack\" and \"the whole alley smelled like popcorn\" use hearing and smell. \"The shiny floor was so slick that my shoes squeaked\" uses sight and sound.",
+        "\"Pins crashed with a loud crack\" and \"the alley smelled like popcorn\" use hearing and smell. \"The slick floor made my shoes squeak\" uses sight and sound.",
         "The answers are the pins-and-popcorn sentence and the slick-floor sentence.",
         "Saturday afternoon, six players and ten pins are plain facts. They do not help the reader picture the alley."
       ],
-      why: "The answers are \"Pins crashed with a loud crack, and the whole alley smelled like popcorn\" and \"The shiny floor was so slick that my shoes squeaked with every step.\" They use sounds, smells and sights. The other sentences only give plain facts." },
+      why: "The answers are \"Pins crashed with a loud crack, and the alley smelled like popcorn\" and \"The slick floor made my shoes squeak with every step.\" They use sounds, smells and sights. The other sentences only give plain facts." },
     { id: "SK-TT1e-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: [], pick: 2, like: ["SK-TT1e-C14"],
       stem: [
         "(1) Malik worked all week on a model rocket for launch day.",

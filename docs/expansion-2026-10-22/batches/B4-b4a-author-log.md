@@ -144,6 +144,17 @@ Reviews: B4-review-T1e-T2d.md and B4-review-T3c-T4b.md. Every MUST and every SHO
 - S04, S14, S01, S06 reworked to different task shapes: S14 is now a word-pair choice, S04 uses new wording, S01 and S06 reworded.
 - Teach: "sound word" appears once in the words list. Watch Me now mentions action and sound words, ordering and revising a line.
 
+### Second review fixes (3.T.T.1.e and 3.T.T.2.d)
+- 1.e S01: sentence 1 now starts "First,", so "To begin with," is no longer a second answer in slot 1.
+- 2.d C02: one distractor is now about peanuts but not about products ("Peanut shells are rough and tan, with faint ridges along the sides."); the Georgia distractor is gone.
+- 2.d C04: the stem no longer contains the key idea. Context is now "Peanuts have a lot of protein, and so do eggs, beans and fish." Distractors are plausible (quick energy; sweet taste), and the key is no longer the longest option.
+- 2.d C10 and S10: the figure's printed caption is removed, so only "Figure 1" shows under the picture.
+- 1.e S11: the prompt no longer tells the child to read the job text; the key is shortened. C11 and S11 hints no longer echo "moment" or "read on".
+- 1.e S13 and 2.d S13: prompts reworded, numerals removed from the 2.d stem, 1.e keys shortened and distractors lengthened. Measured with both whole-text and 3-letter-word sets: 0 pairs over 0.21 in either lesson.
+- 1.e S06 and 2.d S05 keys shortened; 1.e C04 key no longer repeats "alone" and "first time"; 2.d S03 steps no longer begin with First, Next, Then, Last, and hints now ask what each step needs.
+- Gates after this round: check-content PASS (0 failures), check-writing and check-instructional-copy clean.
+- For a third blind review: 1.e S01, S06, S11, S13, C04; 2.d C02, C04, C10, S03, S05, S10, S13.
+
 ### Hand-recounted live choices (clue, then hints 1 to 3, honestly applied)
 | Item | After clue | After hint 2 | After hint 3 |
 |---|---|---|---|
