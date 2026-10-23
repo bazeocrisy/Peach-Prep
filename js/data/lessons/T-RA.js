@@ -275,7 +275,7 @@ PP.addLesson({
         prompt: "Kim read the whole article. Which TWO questions are clarifying questions about something in it?",
         choices: [
           { text: "What are vocal cords, and where are they in my body?", correct: true },
-          { text: "What does the article mean when it says the diaphragm squeezes \"on its own\"?", correct: true },
+          { text: "What does the article mean when it says the diaphragm squeezes on its own?", correct: true },
           { text: "Do horses get the hiccups too, or only dogs and cats?" },
           { text: "Can a person get the hiccups while sleeping at night?" },
           { text: "Are hiccups the most annoying thing that can happen?" }
@@ -289,11 +289,11 @@ PP.addLesson({
         how: [
           "The article uses the words vocal cords but never tells what they are. A question about them clears that up.",
           "It also says the diaphragm squeezes \"on its own,\" which may be hard to picture. Asking what that means clears it up.",
-          "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes 'on its own'?\"",
+          "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes on its own?\"",
           "The questions about horses and about sleeping ask something new that the article does not cover, so they dig deeper."
         ],
         misconception: "A common mix-up is thinking every question about the article clarifies it. A clarifying question is about a part you read but did not understand.",
-        why: "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes 'on its own'?\" Both are about parts of the article that may not be clear. The horse and sleeping questions dig deeper, and the most annoying thing is an opinion." },
+        why: "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes on its own?\" Both are about parts of the article that may not be clear. The horse and sleeping questions dig deeper, and the most annoying thing is an opinion." },
       { id: "SK-RA1a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: ["p3"],
         stem: ["Jamal read paragraph 4. Then he wrote this dig-deeper question: \"Can eating too fast bring on hiccups?\"", "But the article already answers that question."],
         prompt: "Which question would be a better dig-deeper question for Jamal?",

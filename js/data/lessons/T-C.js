@@ -50,6 +50,19 @@ PP.addLesson({
         "Does the text give true facts about a topic? Yes. It teaches about the octopus."
       ],
       answer: "The purpose is to inform readers about the octopus."
+    },
+    /* B3 (expansion 2026-10-22, author b3a): models one topic written for two audiences, and how the
+       words change for each reader (core C03, C11, C13 and C15 ask for this). */
+    {
+      show: ["Note 1: Dear families, Art Night is on Thursday from 6:00 to 7:00 in the cafeteria. Come and see the paintings your children made this fall.", "Note 2: Hey, artists! Thursday is Art Night. Stand by your painting and tell your family how you made it."],
+      ask: "Both notes are about Art Night. Who is each note for, and how can you tell?",
+      steps: [
+        "Look at who each note talks to. Note 1 says \"Dear families.\" Note 2 says \"Hey, artists!\"",
+        "Look at what each note asks the reader to do. Families are asked to come and look. The artists are asked to stand by their paintings and explain them.",
+        "Look at the words. Note 1 gives the time and the place in a calm way. Note 2 is short and cheerful.",
+        "The topic is the same, but the writer chose different words for each audience."
+      ],
+      answer: "Note 1 is for the families who will come to look, and Note 2 is for the students who made the art. The greeting and what each note asks the reader to do show who each one is for."
     }
   ],
   parent: "When you see a sign, a flyer, a letter or the back of a food box, ask your child: Why did someone write this? Who is it for? Have your child point to the words that show it.",
