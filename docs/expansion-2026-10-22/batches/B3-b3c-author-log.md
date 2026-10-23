@@ -8,16 +8,16 @@
 - **3.T.RA.1.b:**
   - new passages p7 to p10
   - one new `teach.words` entry (personal communication)
-  - `core`, `similar` (11) and `addons`
+  - `core`, `similar` (15) and `addons`
 - **3.T.RA.2.a:**
   - new passages p4 to p6
-  - `core`, `similar` (8) and `addons`
+  - `core`, `similar` (15) and `addons`
 - **3.T.RA.2.b:**
   - new passages p3 to p5
   - two new `teach.words` entries (credible, relevant)
   - `teach.points[3]` extended by one clause ("for example by testing an idea that many people believe"), which models C07; there are still five points
   - Together item SK-RA2b-P5 revised in place (weak item, see §4)
-  - `core`, `similar` (9) and `addons`
+  - `core`, `similar` (15) and `addons`
 
 No existing id changed. No Watch Me example was added.
 
@@ -31,6 +31,7 @@ No existing id changed. No Watch Me example was added.
 | `python3 verification/readability.py` | I read the output, and nothing in the whole site is flagged. New passages: RA1b p7 3.6, p8 2.7, p9 4.0, p10 2.4; RA2a p4 1.9, p5 4.2, p6 3.0; RA2b p3 2.9, p4 3.9, p5 3.7 |
 | `node verification/check-writing.js` | 0 failures, 0 warnings |
 | `node verification/check-instructional-copy.js` | 28 assertions passed |
+| Similar items in one sitting (coordinator's rule) | A node simulation of the engine's `similarFor` (the first `like` match not yet used) gives every core item its own similar item in all three lessons. In the browser (port 8813, one page, one sitting), I worked all 45 core items in set order. For each one, I answered it, checked that "Try a similar question" was visible, opened the similar item, answered it (all were right) and moved on. The button appeared on every core item, Next always returned to the next core item, and there were no page errors. Script: `scratchpad/b3c/simbrowser.py`. Assignment: RA1b C01→S04, P4→S03, P7→S06, C04→S05, P5→S08, C06→S10, C07→S01, C08→S12, C09→S02, C10→S09, C11→S07, C12→S13, C13→S14, C14→S15, C15→S11; RA2a P3→S07, P4→S01, C03→S04, C04→S02, C05→S03, C06→S09, C07→S05, C08→S10, C09→S11, C10→S06, C11→S12, C12→S13, C13→S14, C14→S15, C15→S08; RA2b P4→S03, C02→S01, C03→S02, C04→S04, C05→S05, C06→S10, C07→S06, C08→S07, C09→S11, C10→S12, C11→S13, C12→S14, C13→S15, C14→S08, C15→S09. Each lesson is now at the limit of 15 similar items. The server was stopped |
 | Browser smoke, `serve.js . 8813`, Playwright Chromium, 390×844 and 1366×900 | Practice Together is RA1b P1, P8, P3, P6; RA2a P1, P2; and RA2b P1, P2, P3, P5. In all 45 core items (`:y`, `:y2`, `:y3`), at both widths, "Give me a hint" was pressed three times: hints 1, 2 and 3 appeared, and the button then read "No more hints". The key was entered and checked, and every scored item said "That's right!". The three `cr` items showed "Compare with the sample" and "Written and checked against the list". There were 0 page errors, apart from the font request that the script blocks on purpose. The server was stopped afterwards. Script: `scratchpad/b3c/smoke.py` (output in `smoke.out`). Note: at 390 the script's first `cr` test looked for the sample text in the wrong place and flagged RA2a-C15; the feedback text shows the correct behaviour |
 
 ## 1. 3.T.RA.1.b "Finding, choosing and sorting facts from sources"
@@ -88,7 +89,7 @@ No existing id changed. No Watch Me example was added.
 - Domains: farming and science 5, nature 5, community 4, self 1.
 - Each component appears at least twice: L 5, N 2, S 3, O 3, C 4, P 3. The exception is T, which appears once by nature.
 
-**Similar bank** (11 items; every core id is in at least one `like`):
+**Similar bank** (15 items; in core order, each core item gets its own unused similar item, see §0):
 
 | Id | like | Text |
 |---|---|---|
@@ -103,6 +104,10 @@ No existing id changed. No Watch Me example was added.
 | S09 | C10 | hockey pucks |
 | S10 | C06 | kangaroo joey |
 | S11 | C15 (cr) | own topic |
+| S12 | C08 | toucans |
+| S13 | C12 | karate |
+| S14 | C13 | hedgehogs |
+| S15 | C14 | rock climbing |
 
 ### 1.2 Live choices after each hint (clue = hint 1)
 
@@ -191,7 +196,7 @@ Producing your own quote is shown only by the unscored `cr` items C15 and S08.
 - Components: I 4, A 4, O 4, X 3.
 - **Shortfall:** there is no explicit compare item. See §5.
 
-**Similar bank** (8):
+**Similar bank** (15):
 
 | Id | like | Text |
 |---|---|---|
@@ -203,6 +208,13 @@ Producing your own quote is shown only by the unscored `cr` items C15 and S08.
 | S06 | C10, C12 | puppet show |
 | S07 | P3 | elephant seals |
 | S08 | C15 (cr) | ice skating |
+| S09 | C06 | narwhal |
+| S10 | C08 | coral reef |
+| S11 | C09 | lemurs |
+| S12 | C11 | ballet |
+| S13 | C12 | volleyball |
+| S14 | C13 | archery |
+| S15 | C14 | solar panels |
 
 ### 2.2 Live choices after each hint
 
@@ -278,7 +290,7 @@ The test passages p1 and p2 (elephants) are not used. The excerpt-pair frame del
 - Domains: farming 5, pets and science 5, farm animals 2, nature 1, sports 1, self 1.
 - There is no EBSR in this lesson.
 
-**Similar bank** (9):
+**Similar bank** (15):
 
 | Id | like | Text |
 |---|---|---|
@@ -291,6 +303,12 @@ The test passages p1 and p2 (elephants) are not used. The excerpt-pair frame del
 | S07 | C12, C08 | llamas |
 | S08 | C14 | manatees |
 | S09 | C15 (cr) | own topic |
+| S10 | C06 | ski shop page |
+| S11 | C09 | cello |
+| S12 | C10 | snowboarding |
+| S13 | C11 | marathon |
+| S14 | C12 | knuckle cracking |
+| S15 | C13 | sushi rice |
 
 ### 3.2 Live choices after each hint
 
@@ -368,6 +386,7 @@ There are no shared key facts.
 - **RA2b uses no EBSR.** It meets the minimums of at least four formats and at least three technology-enhanced formats.
 - **The C13 hint ladder in 3.T.RA.2.a is tight.** After hint 2 (paragraph 5), only 5:2 and the key remain live. That meets the rule, but only just.
 - **3.T.RA.1.b already had seven teach points,** above the limit of five. I added none; I added one glossary word.
+- **The 17 similar items added last** (RA1b S12-S15, RA2a S09-S15, RA2b S10-S15) each have one `like` entry, a fresh topic I grepped first, and the same hint pattern: hint 2 neutral, hint 3 rules out one choice. Their live-choice analysis is not tabled. They need the same blind review as the rest.
 - **The live-choice tables are my own analysis.** Reviewers should redo them blind.
 - **p3 in 3.T.RA.2.b is under 100 words** (77) on purpose, as a short excerpt. check-content warns about it.
 - **Facts simplified for grade 3, for a reviewer to check:**

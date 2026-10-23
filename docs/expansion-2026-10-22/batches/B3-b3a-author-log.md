@@ -21,12 +21,13 @@
 
 | Check | Result |
 |---|---|
-| `node verification/check-content.js --all` | PASS, 0 failures, 33 warnings (final run, after the other agent fixed T-RA.js). In my lessons the only warnings are the informational "N of 15 core items have no similar item" (1.a: 9, 2.c: 8) |
+| `node verification/check-content.js --all` | PASS, 0 failures, 26 warnings (final run, after the similar items were added; §9). **My lessons have no warnings at all**, so neither shows a similar-coverage warning |
 | `python3 verification/readability.py` | I read the output. New passages: 1.a p3 FK 3.2 (175 words), p4 FK 3.5 (126); 2.c p5 FK 3.9 (165), p6 FK 3.4 (160). None above 4.5 |
 | `node verification/check-writing.js` | 0 failures, 0 warnings |
 | `node verification/check-instructional-copy.js` | 28 assertions passed |
-| Six-word n-gram scan of my four passages, all new stems and the new Watch Me against every lesson, set and task (`scratchpad/b3a/ngram.js`) | 3 hits, all the house historical-fiction box opener ("is historical fiction. Imagine that a…"), shared with 2.c p1/p2 by design. No content hits |
-| Browser smoke, `node verification/serve.js . 8811`, Playwright Chromium (`scratchpad/b3a/smoke.py`, log `smoke.log`) | **85 of 85 pass.** Set picker shows three sets in both lessons; every Together item checks correct and has merged addon hints; for all 30 core items, the three authored hints show in order as "Hint 1 of 3" to "Hint 3 of 3", then "No more hints"; every scored key scores full marks in the engine and the Check shows "That's right!"; both `cr` items show the compare-with-sample box, score 0 of 0, and get the "Written and checked" status; all six similar items' keys score full marks and have 3 hints and 2+ how steps; no page errors. The only console errors are the Google Fonts requests the script blocks on purpose. Server stopped |
+| Six-word n-gram scan of my four passages, all 44 new stems (core and similar) and the new Watch Me against every lesson, set and task (`scratchpad/b3a/ngram.js`) | 8 hits, all the house historical-fiction box opener ("Box: This … is historical fiction. Imagine that a…"), shared with 2.c p1/p2 by design. No content hits |
+| Similar-question browser checks (`smoke-sim.py`, `smoke-sim-each.py`; §9) | **118 of 118** in one sitting (all fifteen core items in order, per lesson) and **32 of 32** item by item from fresh state. The button shows on every core item, and the item it opens lists that core item in `like` |
+| Browser smoke, `node verification/serve.js . 8811`, Playwright Chromium (`scratchpad/b3a/smoke.py`, log `smoke.log`) | **109 of 109 pass** (final run, with all 30 similar items). Set picker shows three sets in both lessons; every Together item checks correct and has merged addon hints; for all 30 core items, the three authored hints show in order as "Hint 1 of 3" to "Hint 3 of 3", then "No more hints"; every scored key scores full marks in the engine and the Check shows "That's right!"; both `cr` items show the compare-with-sample box, score 0 of 0, and get the "Written and checked" status; all 30 similar items' keys score full marks and have 3 hints and 2+ how steps; no page errors. The only console errors are the Google Fonts requests the script blocks on purpose. Server stopped |
 
 **Note on the final gate run.** For a while, check-content.js crashed while loading `js/data/lessons/T-RA.js` line 2228, a mid-edit by another agent. I waited until that file loaded again. The final run passes, and the warning count changed only because of other lessons.
 
@@ -115,7 +116,7 @@ No ids changed. `practice` order and `test` are unchanged. No weak items were fl
 - **Domains:** family 6 (P4, C06–C10), school 3, community 3, science 1, nature 1 (C02 mixed). Exactly 6 family, which is the cap.
 - **Components:** TP 6, IND 5, SIT 5 (C02 counts for all three). Every set touches all three. Texts: p1, p3, p5, p6 and 4 stems; p5 carries 5.
 
-### Similar bank (three per lesson, each on a fresh stem)
+### Similar bank (first three per lesson; S04 onward are in §9)
 
 | Id | like | Task / component | Live after h1/h2/h3 |
 |---|---|---|---|
@@ -160,7 +161,8 @@ No ids changed. `practice` order and `test` are unchanged. No weak items were fl
 
 ## 7. Not done, risks and open points (honest list)
 
-- **Similar coverage is partial:** 9 of 15 (1.a) and 8 of 15 (2.c) core items have no mapped similar item, so "Try a similar question" is hidden on them (a warning by design: three per lesson, 04 §4.7).
+- **Similar items: done** (§9). Each lesson now has 15, the most allowed, so the similar bank cannot grow further without a lead decision. A child gets one extra question per core item per sitting. Once the set is restarted, the engine marks those items as used. I did not test what happens after "Start this set again".
+  - 1.a S11 and 2.c S11 are written answers (`cr`), because the core items they mirror (C14 and C10) are `cr`.
 - **Close calls a reviewer should weigh:**
   - 1.a C07 Part B: "If you find a roly-poly, hold it gently in your open hand" could be argued to speak to a child too. I judged "played in your yard" the best evidence.
   - 1.a S02: the "raise ostriches on a farm" distractor is weak.
@@ -176,4 +178,99 @@ No ids changed. `practice` order and `test` are unchanged. No weak items were fl
 - I did not review my own work, and I did not run git.
 
 ## 8. Scratch files
-`/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b3a/`: `smoke.py`, `smoke.log`, `ngram.js`, `serve.log`. The topic replacement script is `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b3a-topics.py`.
+`/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b3a/`: `smoke.py`, `smoke.log`, `smoke-sim.py`, `smoke-sim.log`, `smoke-sim-each.py`, `smoke-sim-each.log`, `ngram.js`, `sim-1a.js`, `sim-1a-b.js`, `sim-2c.js`, `sim-2c-b.js` (the source text of the inserted similar items), `serve*.log`. The topic replacement script is `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b3a-topics.py`.
+
+## 9. Coordinator follow-up: a similar item for every core item (ENG-07)
+
+**What was asked.** First: every core item needs at least one similar item that honestly lists it in `like`, with no similar-coverage warning. Second: because the engine offers only a similar item not yet used in the sitting, every core item must still have one available when the child reaches it in order. The cap is 15 per lesson.
+
+**What I did.** I added 12 similar items to 1.a (S04–S15) and 12 to 2.c (S04–S15). Each lesson now has 15, the cap. Nothing in core, Together, test or the existing S01–S03 changed.
+- **The first nine new 1.a items (S04–S12) and eight new 2.c items (S04–S11)** cover the core items that had no similar item.
+- **Seven more** (1.a S13–S15; 2.c S12–S15) are second similar items. They cover core items whose only similar item is shared with an earlier core item in the same set: 1.a C06, C07 and C13; 2.c C11, C12, C13 and C15. My first in-order run showed that those seven lost the button once the shared item was used.
+
+Every `like` lists only core items that practise the same component with the same task. Every item is on a fresh short stem (no passage) and follows the hint rules in §5: hint 3 removes one weak distractor, settles at most one blank or row, and leaves a real competitor.
+
+### Which similar item each core item gets in one sitting (from `smoke-sim.log`)
+
+| 1.a core → similar | 2.c core → similar |
+|---|---|
+| P4 → S04 | P4 → S02 |
+| P5 → S02 | C02 → S04 |
+| C03 → S03 | P8 → S01 |
+| C04 → S01 | C04 → S06 |
+| C05 → S06 | P9 → S03 |
+| C06 → S13 | C06 → S07 |
+| C07 → S14 | C07 → S05 |
+| C08 → S08 | C08 → S08 |
+| C09 → S09 | C09 → S10 |
+| C10 → S07 | C10 → S11 |
+| C11 → S10 | C11 → S12 |
+| C12 → S05 | C12 → S13 |
+| C13 → S15 | C13 → S14 |
+| C14 → S11 | C14 → S09 |
+| C15 → S12 | C15 → S15 |
+
+All 15 similar items in each lesson are used exactly once in that run.
+
+### The new items
+
+| Id | like | Format | DOK | Stem (fresh context) | Live after h1 / h2 / h3 (h3 removes) |
+|---|---|---|---|---|---|
+| SK-TC1a-S04 | P4 | mc | 3 | late-bus letter (school) | 4/4/3 (bus-ride story): key, bus facts, "club will close" warning |
+| SK-TC1a-S05 | C12 | mc | 2 | fishing-derby poster and news (community) | 4/4/3 (asks for next year): key, how to catch a bass, the boot story |
+| SK-TC1a-S06 | C05 | dropdown ×2 | 2 | paper hat directions (everyday) | slot 1 4/4/3 (funny story); slot 2 4/4/4 |
+| SK-TC1a-S07 | C10 | hottext options, 1 of 5 | 2 | flamingo report draft (science) | 5/5/4 (sentence 1): (2), (3), (4), (5) |
+| SK-TC1a-S08 | C08 | mc | 3 | ant carrying a crumb (nature) | 4/4/3 (story): key, "kids are stronger", "ants as big as cars" |
+| SK-TC1a-S09 | C09 | match 5×3 | 2 | shooting-star article and poem (science) | h3 settles the streak row; 4 rows × 3 columns open |
+| SK-TC1a-S10 | C11 | dropdown ×2 | 2 | kindergarten-buddy sign and newsletter (school) | each slot 4/4/3 (principal, out of both); no blank settled |
+| SK-TC1a-S11 | C14 | cr | 3 | riddle page (kids' magazine) | n/a: h3 is a sentence frame |
+| SK-TC1a-S12 | C15 | mc | 3 | two shopping-cart signs (community) | 4/4/3 (cart story): key, A-more-facts, A-dents |
+| SK-TC1a-S13 | C06 | mc | 2 | pupils of the eye, with a "try it" line (science) | 4/4/3 (story): key, buy a mirror, eye-health tips |
+| SK-TC1a-S14 | C07 | mc | 2 | loose tooth (family) | 4/4/3 (adults' 32 teeth): key, baby-teeth fact, "kids lose a tooth at six" fact |
+| SK-TC1a-S15 | C13 | mc | 3 | museum "do not touch" sign rewritten for kindergartners (community) | 4/4/3 ("art is the best"): key, old-paintings fact, formal "refrain" version |
+| SK-TC2c-S04 | C02 | match 5×3 | 2 | five fresh context clues | h3 settles the nurse row; 4 rows × 3 columns open |
+| SK-TC2c-S05 | C07 | mc | 2 | waxed hall, "like a skating rink" (school) | 4/4/3 (skating trip): key, "turned into a rink", cold hall |
+| SK-TC2c-S06 | C04 | mc | 2 | goldfinch field notes (nature) | 4/4/3 (tray fell): key, forgot to fill it, "scientist writes short notes" |
+| SK-TC2c-S07 | C06 | ms 2 of 5 | 2 | 1922 icebox and wood stove (family history) | 5/5/4 (eat together): keys, child sets the table, parent reads the news |
+| SK-TC2c-S08 | C08 | dropdown ×2 | 2 | 1895 mill diary, historical fiction box (history) | slot 1 4/4/3 (newspaper writer); slot 2 4/4/4 |
+| SK-TC2c-S09 | C14 | dropdown ×2 | 2 | umbrella seller and a boy's rained-out game (community) | slot 1 4/4/3 (plants); slot 2 4/4/4 |
+| SK-TC2c-S10 | C09 | ms 2 of 5 | 3 | moving-day diary: what Dad would write (family) | 5/5/4 (the new house): keys, packing books, taping boxes |
+| SK-TC2c-S11 | C10 | cr | 3 | 1910 telegram, paid by the word (history) | n/a: h3 is a sentence frame |
+| SK-TC2c-S12 | C11 | mc | 2 | girl from Alaska in a Florida January (individual) | 4/4/3 (snow): key, heavy coat, "hottest day ever" |
+| SK-TC2c-S13 | C12 | mc | 2 | roof work and "until Friday" (school) | 4/4/3 (October): key, written on Monday, "new roof" (explains why, not how long) |
+| SK-TC2c-S14 | C13 | hottext options, 1 of 5 | 2 | 1950 train letter, historical fiction box | 5/5/4 (train window): phone, dining car, punched ticket, mailing at the station |
+| SK-TC2c-S15 | C15 | mc | 3 | "knock softly" note (community) | 4/4/3 (lived five years): key, rainy Tuesday, painted doorbell |
+
+**Leak checks.**
+- No similar item shares a stem, passage, key fact or answer with a core item, a Together item, a check item or a Watch Me in its lesson.
+- Two similar items deliberately reuse another item's key idea as a distractor. 2.c S06 uses "the writer's job explains short notes" (Together P6's key), and 2.c S09 uses "plants need water" (C14's key). The how explains why each does not fit.
+- Similar items appear only after their core item is finished, so they cannot pre-answer a core item.
+
+**Topic search for the new items.** `grep -rli` over `js/data` before writing, with every hit read in context. Collisions found and avoided:
+- a hot metal slide (T-T34 shade opinion)
+- sea otters (T-RA)
+- a food truck (T-TS)
+- crickets in rhyming lines (T-T34, R-POE-01)
+- a lost-and-found box (T-SS)
+- dandelion seeds carried by wind (F-FH)
+- hiccups (T-RA)
+- a chorus or music club (T-T34)
+- penguins (T-RA)
+- a hot-air balloon (L-V3)
+- goosebumps (T-TS)
+- summer camp (T-RA)
+- a lighthouse (T-T2, L-GC2)
+- the "Fun Run" (3.T.T.1.c p4)
+- 1890 (already a row in my own C02; S08 uses 1895)
+
+Terms with no hits elsewhere: late bus, Homework Club, fishing derby, paper hat, flamingo, shooting star or meteor, kindergarten buddies, riddle page, cart rack, pupil, loose tooth or baby teeth, telegram, killdeer, waxed hall, goldfinch, iceman, mill diary, Alaska, doorbell, rental truck, and the new names (Rina, Mr. Abel, Dario, Tova, Mrs. Bell, Mr. Sims, the Mensah family, Otis, Ms. Rowe, Uncle Jay).
+
+**Gates after this change.**
+- `check-content.js --all`: PASS, 0 failures, and no warnings in my lessons.
+- `readability.py`: unchanged, because similar items use stems, not passages.
+- `check-writing.js`: 0/0. `check-instructional-copy.js`: 28 passed.
+- Browser: the core smoke passes 109 of 109; the in-order run passes 118 of 118; the fresh-state run passes 32 of 32. The server is stopped.
+
+**Not done.**
+- No reviewer has blind-solved the 24 new items.
+- I did not check the "Start this set again" path or a second sitting, where similar items are already used. With exactly fifteen per lesson, there is no spare item for a second recovery on the same core item.

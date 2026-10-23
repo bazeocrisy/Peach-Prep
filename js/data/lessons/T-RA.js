@@ -1783,7 +1783,102 @@ PP.addLesson({
         "For each, write who made it or who the person is, and how they know the facts.",
         "Compare with the sample and the checklist. Your topic can be very different."
       ],
-      why: "Many plans can be right. A strong plan has one question, one source to read, one person to ask and a reason to trust each one." }
+      why: "Many plans can be right. A strong plan has one question, one source to read, one person to ask and a reason to trust each one." },
+    { id: "SK-RA1b-S12", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C08"],
+      stem: ["**Source 1, a library book:** A toucan's huge bill helps it reach fruit at the ends of thin branches.",
+        "**Source 2, notes from a zoo talk:** The keeper said a toucan's bill lets extra heat leave its body on hot days.",
+        "**Rosa's question:** How does a toucan stay cool?"],
+      prompt: "Complete Rosa's notes table with a note in her own words and where she found it.",
+      text: "Fact: {0} Where I found it: {1}",
+      slots: [
+        { options: ["Its big bill lets off heat when the day is hot.", "Its big bill helps it reach fruit on thin branches.", "It stays in the shade of thin branches all day."], answer: 0 },
+        { options: ["Source 1, the library book", "Source 2, the zoo talk", "both sources"], answer: 1 }
+      ],
+      clue: "A good note says the same thing as the source in a few of your own words, and it answers the question. Then it tells where the fact came from.",
+      hints: [
+        "A good note says the same thing as the source in a few of your own words, and it answers the question. Then it tells where the fact came from.",
+        "Read both sources. Find the part that tells about staying cool, then check which source it is in.",
+        "Neither source says the toucan stays in the shade, so that note does not match. Decide between the other two notes, then fill in the source."
+      ],
+      how: [
+        "Source 2 says the bill lets extra heat leave the toucan's body on hot days.",
+        "So the note is \"Its big bill lets off heat when the day is hot.\" It came from Source 2, the zoo talk.",
+        "Reaching fruit is true, but it does not tell how the toucan stays cool, and the shade is not in either source."
+      ],
+      why: "The answers are \"Its big bill lets off heat when the day is hot.\" and \"Source 2, the zoo talk.\" Only the keeper tells about the bill and heat. Reaching fruit does not answer the question, and the shade is not in either source." },
+    { id: "SK-RA1b-S13", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [], pick: 2,
+      like: ["SK-RA1b-C12"],
+      prompt: "Jada wants facts about how karate students earn new belts. Which TWO sources can she trust? Choose two answers.",
+      choices: [
+        { text: "a book by a woman who has taught karate for many years", correct: true },
+        { text: "an email answer from the head teacher at a karate school", correct: true },
+        { text: "a post by \"KickKing,\" who writes, \"My friend told me you just buy the belts\"" },
+        { text: "an ad that says, \"Buy our black belt today, no practice needed!\"" },
+        { text: "a cartoon about a karate cat who wins every match" }
+      ],
+      clue: "Ask who made each source. Does the person know about karate, or are they guessing, selling something or telling a made-up story?",
+      hints: [
+        "Ask who made each source. Does the person know about karate, or are they guessing, selling something or telling a made-up story?",
+        "In each answer, find the words that tell who made the source and what that person does. Choose two.",
+        "The cartoon is a made-up story, so it is not a fact source. Check who made each of the other four."
+      ],
+      how: [
+        "A woman who has taught karate for many years knows how belts are earned, so her book is credible.",
+        "The head teacher at a karate school knows too. An email is personal communication, and it counts when the writer knows the topic.",
+        "\"KickKing\" repeats what a friend said, the ad is selling a belt, and the cartoon is made up.",
+        "The answers are \"a book by a woman who has taught karate for many years\" and \"an email answer from the head teacher at a karate school.\""
+      ],
+      why: "The answers are \"a book by a woman who has taught karate for many years\" and \"an email answer from the head teacher at a karate school.\" Both come from people who teach karate. The post repeats a friend's words, the ad is selling, and the cartoon is made up." },
+    { id: "SK-RA1b-S14", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C13"],
+      stem: ["Max is writing about hedgehogs. He has two note cards: \"What a hedgehog eats\" and \"How a hedgehog stays safe.\""],
+      prompt: "Match each fact to the note card where it belongs.",
+      cols: ["What a hedgehog eats", "How a hedgehog stays safe"],
+      rows: [
+        { text: "It hunts for beetles and worms at night.", answer: 0 },
+        { text: "It rolls into a tight, spiky ball.", answer: 1 },
+        { text: "It snacks on slugs in gardens.", answer: 0 },
+        { text: "Its spines stand up when it is scared.", answer: 1 }
+      ],
+      clue: "Read the two headings. For each fact, ask: is this about food, or about keeping away from danger?",
+      hints: [
+        "Read the two headings. For each fact, ask: is this about food, or about keeping away from danger?",
+        "Picture what the hedgehog is doing in each fact before you choose a card.",
+        "Rolling into a spiky ball keeps a hedgehog away from danger, so it goes on the card about staying safe. Sort the other three."
+      ],
+      how: [
+        "Hunting beetles and worms and snacking on slugs are about food. They go on \"What a hedgehog eats.\"",
+        "Rolling into a spiky ball and spines standing up are about staying safe. They go on \"How a hedgehog stays safe.\""
+      ],
+      why: "Beetles, worms and slugs are food, so those facts go on \"What a hedgehog eats.\" Rolling into a ball and raising its spines keep it safe, so those go on \"How a hedgehog stays safe.\"" },
+    { id: "SK-RA1b-S15", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C14"],
+      stem: ["**Ivy's notes table**", "**Question:** How do rock climbers stay safe?",
+        "**Note 1.** They wear helmets to protect their heads. (Where I found it: the climbing gym's web page)",
+        "**Note 2.** A partner holds a rope tied to the climber. (Where I found it: Coach Lin)",
+        "**Note 3.** Coach Lin's favorite color is green. (Where I found it: Coach Lin)",
+        "**Note 4.** Climbers check their knots before every climb. (Where I found it: Coach Lin)"],
+      prompt: "Ivy wants to take one note out of her table. Which note should she remove, and why?",
+      choices: [
+        { text: "Note 3, because it is true but does not tell how climbers stay safe.", correct: true },
+        { text: "Note 2, because it came from a person and not from a book." },
+        { text: "Note 1, because a gym's web page can never be trusted." },
+        { text: "Note 4, because Coach Lin is a coach and not a scientist." }
+      ],
+      clue: "Check each note two ways. Does it help answer the question? Can Ivy trust where it came from?",
+      hints: [
+        "Check each note two ways. Does it help answer the question? Can Ivy trust where it came from?",
+        "Three notes come from Coach Lin. Read those three and ask what each one is about.",
+        "The climbing gym runs climbs every day, so its web page can be trusted. Test the reasons in the other answers."
+      ],
+      how: [
+        "Ivy's question asks how climbers stay safe.",
+        "Helmets, a partner on the rope and checking knots all keep climbers safe, and each comes from someone who knows climbing.",
+        "Coach Lin's favorite color is true, but it does not keep anyone safe.",
+        "The answer is \"Note 3, because it is true but does not tell how climbers stay safe.\""
+      ],
+      why: "The answer is \"Note 3, because it is true but does not tell how climbers stay safe.\" A coach is a good source about climbing, a gym's web page can be trusted, and a person you talk to can be a source." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4, P7, P5 (core set 1) and Together P1, P8, P3, P6. */
   addons: {
@@ -2794,7 +2889,169 @@ PP.addLesson({
         "Tell how that sentence supports your opinion.",
         "Compare with the sample and the checklist. Other sentences can also support a good answer."
       ],
-      why: "There is more than one good answer. A strong answer gives an opinion, quotes one sentence exactly and explains how it supports the opinion." }
+      why: "There is more than one good answer. A strong answer gives an opinion, quotes one sentence exactly and explains how it supports the opinion." },
+    { id: "SK-RA2a-S09", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C06"],
+      stem: ["(1) A narwhal is a whale that lives in icy Arctic water.", "(2) Its long tusk is really a tooth that grows out through its lip.", "(3) Scientists think the tusk can feel changes in the water around it.", "(4) Most male narwhals have a tusk, but most females do not."],
+      prompt: "Which sentence BEST supports the idea that a narwhal's tusk helps it sense the water around it?",
+      choices: [
+        { text: "Scientists think the tusk can feel changes in the water around it.", correct: true },
+        { text: "Its long tusk is really a tooth that grows out through its lip." },
+        { text: "A narwhal is a whale that lives in icy Arctic water." },
+        { text: "Most male narwhals have a tusk, but most females do not." }
+      ],
+      clue: "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk sensing.",
+      hints: [
+        "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk sensing.",
+        "Three sentences are about the tusk. Read those three closely.",
+        "Which narwhals have tusks tells who has one, not what it does. Check the other two sentences about the tusk."
+      ],
+      how: [
+        "The idea is that the tusk helps the narwhal sense the water.",
+        "Sentence 3 says scientists think the tusk can feel changes in the water. Feeling changes is sensing.",
+        "Sentence 2 tells what the tusk is, sentence 4 tells which narwhals have one, and sentence 1 tells where they live.",
+        "The answer is \"Scientists think the tusk can feel changes in the water around it.\""
+      ],
+      why: "The answer is \"Scientists think the tusk can feel changes in the water around it.\" Feeling changes in the water is sensing. The other sentences tell what the tusk is, who has one and where narwhals live." },
+    { id: "SK-RA2a-S10", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C08"],
+      stem: ["(1) Coral reefs grow in warm, shallow, clear ocean water near land.", "(2) When a big fish swims near, small fish dart into cracks in the reef.", "(3) Corals are tiny animals, even though they look like plants.", "(4) Some coral reefs have been growing for thousands of years."],
+      prompt: "Answer: A coral reef gives small fish a place to hide. Which sentence BEST supports this answer?",
+      choices: [
+        { text: "When a big fish swims near, small fish dart into cracks in the reef.", correct: true },
+        { text: "Coral reefs grow in warm, shallow, clear ocean water near land." },
+        { text: "Corals are tiny animals, even though they look like plants." },
+        { text: "Some coral reefs have been growing for thousands of years." }
+      ],
+      clue: "Proof for an answer shows the answer happening. Look for a sentence that shows small fish hiding.",
+      hints: [
+        "Proof for an answer shows the answer happening. Look for a sentence that shows small fish hiding.",
+        "Read each sentence and ask who or what it is about.",
+        "How old some reefs are is true, but it does not show fish hiding. Check the other three sentences."
+      ],
+      how: [
+        "The answer to prove is that small fish hide in the reef.",
+        "Sentence 2 says small fish dart into cracks when a big fish comes near. That is hiding.",
+        "Where reefs grow and what corals are do not show fish hiding.",
+        "The answer is \"When a big fish swims near, small fish dart into cracks in the reef.\""
+      ],
+      why: "The answer is \"When a big fish swims near, small fish dart into cracks in the reef.\" It shows small fish hiding. The other sentences tell where reefs grow, what corals are and how old reefs can be." },
+    { id: "SK-RA2a-S11", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+      like: ["SK-RA2a-C09"],
+      stem: ["Ty's opinion: \"Ring-tailed lemurs are good at living in groups.\""],
+      prompt: "Which TWO facts BEST support Ty's opinion? Choose two answers.",
+      choices: [
+        { text: "Lemurs in a group take turns watching for danger while the others eat.", correct: true },
+        { text: "Lemurs in a group clean each other's fur.", correct: true },
+        { text: "Ring-tailed lemurs have black-and-white striped tails." },
+        { text: "Ring-tailed lemurs live on the island of Madagascar." },
+        { text: "Ring-tailed lemurs eat fruit, leaves and flowers." }
+      ],
+      clue: "An opinion needs facts that show it. Look for facts about how lemurs act together, not just facts about lemurs.",
+      hints: [
+        "An opinion needs facts that show it. Look for facts about how lemurs act together, not just facts about lemurs.",
+        "Read each fact and picture the lemurs it tells about. Choose two.",
+        "Striped tails tell how lemurs look, not how they live together. Check the other four facts."
+      ],
+      how: [
+        "Ty's opinion is that lemurs are good at living in groups.",
+        "Taking turns watching for danger and cleaning each other's fur show lemurs helping one another in a group.",
+        "Tails, where they live and what they eat are true, but they do not show group life.",
+        "The answers are \"Lemurs in a group take turns watching for danger while the others eat.\" and \"Lemurs in a group clean each other's fur.\""
+      ],
+      why: "The answers are \"Lemurs in a group take turns watching for danger while the others eat.\" and \"Lemurs in a group clean each other's fur.\" Both show lemurs helping each other. The other facts tell how they look, where they live and what they eat." },
+    { id: "SK-RA2a-S12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C11"],
+      stem: ["(1) Mia kept wobbling when she tried to spin in ballet class.", "(2) Her teacher said, \"Pick one spot on the wall, and look at it each time you turn.\"", "(3) On her next try, Mia kept her eyes on the clock each time she turned.", "(4) Her spin was smooth and steady.", "(5) Mia's ballet shoes were pink."],
+      prompt: "Answer: Mia spins smoothly because she uses her teacher's tip. Which sentence BEST shows Mia using the tip?",
+      choices: [
+        { text: "On her next try, Mia kept her eyes on the clock each time she turned.", correct: true },
+        { text: "Her teacher said, \"Pick one spot on the wall, and look at it each time you turn.\"" },
+        { text: "Her spin was smooth and steady." },
+        { text: "Mia kept wobbling when she tried to spin in ballet class." }
+      ],
+      clue: "The answer is about Mia using the tip. The proof must show Mia doing what her teacher said.",
+      hints: [
+        "The answer is about Mia using the tip. The proof must show Mia doing what her teacher said.",
+        "Read sentences 2, 3 and 4.",
+        "Sentence 4 tells how the spin turned out, not what Mia did. Compare sentences 2 and 3."
+      ],
+      how: [
+        "The teacher's tip is in sentence 2: look at one spot each time you turn.",
+        "Sentence 3 shows Mia doing it: she keeps her eyes on the clock each time she turns.",
+        "Sentence 2 is the tip, not Mia using it, and sentence 4 is the result.",
+        "The answer is \"On her next try, Mia kept her eyes on the clock each time she turned.\""
+      ],
+      why: "The answer is \"On her next try, Mia kept her eyes on the clock each time she turned.\" It shows Mia doing what her teacher said. Sentence 2 only gives the tip, sentence 4 tells the result, and sentence 1 is before the tip." },
+    { id: "SK-RA2a-S13", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C12"],
+      stem: ["(1) Ana's volleyball team lost its first game of the season.", "(2) Afterward, Ana asked the coach to help her practice serving.", "(3) Her sneakers squeaked on the gym floor.", "(4) The team ate oranges after the game."],
+      prompt: "Complete the sentences. Choose the best answer for each blank.",
+      text: "After the game, Ana shows that she {0}. The best proof is sentence {1}.",
+      slots: [
+        { options: ["wants to get better at serving", "wants to quit the team", "is hungry for a snack"], answer: 0 },
+        { options: ["2", "3", "4"], answer: 0 }
+      ],
+      clue: "First decide what Ana wants after the game. Then pick the sentence that shows it, not just a true sentence about the game.",
+      hints: [
+        "First decide what Ana wants after the game. Then pick the sentence that shows it, not just a true sentence about the game.",
+        "Read all four sentences, and say what each one tells.",
+        "Squeaky sneakers tell about the gym floor, not about what Ana wants. Decide what she wants, then choose between the other two sentences."
+      ],
+      how: [
+        "After the game, Ana asks the coach to help her practice serving.",
+        "Asking for practice shows she wants to get better at serving.",
+        "The oranges are a team snack, and the sneakers are about the floor.",
+        "The answers: she wants to get better at serving, and sentence 2 proves it."
+      ],
+      why: "The answers are \"wants to get better at serving\" and sentence 2. Asking for help with serving shows she wants to improve. Nothing shows she wants to quit, and the oranges and sneakers do not tell what she wants." },
+    { id: "SK-RA2a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C13"],
+      stem: ["(1) Leo's sister Dee showed him how to hold a bow at archery camp.", "(2) Leo aimed slowly and hit the target.", "(3) He ran to Dee and said, \"Thanks for showing me!\"", "(4) Dee smiled and handed him another arrow."],
+      prompt: "Opinion: \"Leo is thankful for his sister's help.\" Which sentence BEST supports this opinion?",
+      choices: [
+        { text: "He ran to Dee and said, \"Thanks for showing me!\"", correct: true },
+        { text: "Leo's sister Dee showed him how to hold a bow at archery camp." },
+        { text: "Dee smiled and handed him another arrow." },
+        { text: "Leo aimed slowly and hit the target." }
+      ],
+      clue: "The opinion is about Leo, so the proof must show something Leo says or does that shows thanks.",
+      hints: [
+        "The opinion is about Leo, so the proof must show something Leo says or does that shows thanks.",
+        "Two sentences tell what Leo does. Read them closely.",
+        "Dee handing him an arrow is something Dee does, not Leo. Check the other three sentences."
+      ],
+      how: [
+        "The opinion is that Leo is thankful.",
+        "In sentence 3, Leo runs to Dee and thanks her. That shows he is thankful.",
+        "Sentences 1 and 4 tell what Dee does, and hitting the target shows skill, not thanks.",
+        "The answer is: He ran to Dee and said, \"Thanks for showing me!\""
+      ],
+      why: "The answer is: He ran to Dee and said, \"Thanks for showing me!\" Thanking Dee shows he is glad she helped. The other sentences tell what Dee does or how well Leo aims." },
+    { id: "SK-RA2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+      like: ["SK-RA2a-C14"],
+      stem: ["**Idea:** Solar panels help our school save money.", "(1) Last year, our school put solar panels on its roof.", "(2) The panels have cut the school's electric bill in half.", "(3) The panels are dark blue and shaped like rectangles.", "(4) The money the school saves now pays for new library books.", "(5) The principal says the school will save even more next year."],
+      prompt: "Which TWO sentences are true but do NOT support the idea? Choose two answers.",
+      choices: [
+        { text: "Last year, our school put solar panels on its roof.", correct: true },
+        { text: "The panels are dark blue and shaped like rectangles.", correct: true },
+        { text: "The panels have cut the school's electric bill in half." },
+        { text: "The money the school saves now pays for new library books." },
+        { text: "The principal says the school will save even more next year." }
+      ],
+      clue: "A sentence supports an idea only if it shows the idea. Ask of each sentence: does it show the school saving money?",
+      hints: [
+        "A sentence supports an idea only if it shows the idea. Ask of each sentence: does it show the school saving money?",
+        "Read each sentence and say in your own words what it is about. Choose two.",
+        "A smaller electric bill means the school pays less, so sentence 2 does support the idea. Check the other four."
+      ],
+      how: [
+        "The idea is that the panels help the school save money.",
+        "A smaller bill, money for library books and saving more next year all show saving money.",
+        "When the panels were put up and how they look are true, but they do not show any money saved.",
+        "The answers are \"Last year, our school put solar panels on its roof.\" and \"The panels are dark blue and shaped like rectangles.\""
+      ],
+      why: "The answers are \"Last year, our school put solar panels on its roof.\" and \"The panels are dark blue and shaped like rectangles.\" They tell when and how the panels look, not that money is saved. The other three show the school saving money." }
   ],
   /* Hints and Show me how for items kept in practice: refs P3, P4 (core set 1) and Together P1, P2. */
   addons: {
@@ -3616,7 +3873,149 @@ PP.addLesson({
         "Tell what shows the problem.",
         "Compare with the sample and the checklist. Other answers can also be right."
       ],
-      why: "Many answers can be right. A strong answer names a source, says which problem it has and tells what shows the problem." }
+      why: "Many answers can be right. A strong answer names a source, says which problem it has and tells what shows the problem." },
+    { id: "SK-RA2b-S10", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
+      like: ["SK-RA2b-C06"],
+      stem: ["A page from a ski shop's website:", "(1) Skiers wear goggles to protect their eyes from snow and sun.", "(2) Everyone knows our ski wax makes you the fastest skier on any mountain!", "(3) Skis are long and flat, so they slide over the snow.", "(4) Our ski school teaches every kid to ski perfectly in just ten minutes.", "(5) Many ski hills open in December."],
+      prompt: "Which TWO sentences are the clearest warning signs that this page may not be credible? Choose two answers.",
+      choices: [
+        { text: "Everyone knows our ski wax makes you the fastest skier on any mountain!", correct: true },
+        { text: "Our ski school teaches every kid to ski perfectly in just ten minutes.", correct: true },
+        { text: "Skiers wear goggles to protect their eyes from snow and sun." },
+        { text: "Skis are long and flat, so they slide over the snow." },
+        { text: "Many ski hills open in December." }
+      ],
+      clue: "Read each sentence and ask: Does it make sense? Does it promise too much? Is it trying to sell something?",
+      hints: [
+        "Read each sentence and ask: Does it make sense? Does it promise too much? Is it trying to sell something?",
+        "Read every sentence on the page before you choose. Choose two.",
+        "Goggles that protect eyes from snow and sun make sense, so that sentence is a plain fact. Check the other four."
+      ],
+      how: [
+        "\"Everyone knows\" and \"the fastest skier on any mountain\" are selling words that promise too much.",
+        "Teaching every kid to ski perfectly in ten minutes cannot be true.",
+        "Goggles, flat skis and hills opening in December are plain facts that make sense.",
+        "The answers are \"Everyone knows our ski wax makes you the fastest skier on any mountain!\" and \"Our ski school teaches every kid to ski perfectly in just ten minutes.\""
+      ],
+      why: "The answers are \"Everyone knows our ski wax makes you the fastest skier on any mountain!\" and \"Our ski school teaches every kid to ski perfectly in just ten minutes.\" Both promise too much to sell something. The other sentences make sense." },
+    { id: "SK-RA2b-S11", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C09"],
+      prompt: "June's question is \"Why does a cello sound so low?\" All four excerpts come from a book by a music teacher. Which excerpt is MOST relevant to her question?",
+      choices: [
+        { text: "\"A cello's long, thick strings shake slowly, and slow shaking makes low sounds.\"", correct: true },
+        { text: "\"Cellos are made of wood, such as spruce and maple, and then varnished.\"" },
+        { text: "\"A cello player sits on a chair and holds the cello between the knees.\"" },
+        { text: "\"The first cellos were made in Italy about 500 years ago, long before radios.\"" }
+      ],
+      clue: "The book can be trusted, so check the topic. June's question asks WHY the notes of a cello are so low.",
+      hints: [
+        "The book can be trusted, so check the topic. June's question asks WHY the notes of a cello are so low.",
+        "Read each excerpt and say what it is about: the sound, the wood, the player or the history.",
+        "Where the first cellos were made is history, not sound. Check the other three excerpts."
+      ],
+      how: [
+        "June's question asks why a cello sounds low.",
+        "The excerpt about long, thick strings shaking slowly explains the low sound.",
+        "The wood, how the player sits and the history are true, but they do not explain the low sound.",
+        "The answer is \"A cello's long, thick strings shake slowly, and slow shaking makes low sounds.\""
+      ],
+      why: "The answer is \"A cello's long, thick strings shake slowly, and slow shaking makes low sounds.\" It explains the low sound. The other excerpts are about wood, how to sit and history." },
+    { id: "SK-RA2b-S12", type: "match", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C10"],
+      prompt: "Nico finds sources about snowboarding. Match each source to the best description of it.",
+      cols: ["Can trust: people who know snowboarding made it", "Do not trust: it is trying to sell something", "Do not trust: it does not say who wrote it or how they know"],
+      rows: [
+        { text: "a book by a snowboard coach who has taught for 20 years", answer: 0 },
+        { text: "a store sign: \"Our boards make you a champion overnight! Sale today!\"", answer: 1 },
+        { text: "a post signed \"ShredDude\" with no other name", answer: 2 },
+        { text: "a safety page by the ski patrol team at a mountain", answer: 0 },
+        { text: "a sticker on a board box that says, \"Never fall again!\"", answer: 1 }
+      ],
+      clue: "For each source, ask who made it and why. Do they know snowboarding, are they selling, or can you not tell who they are?",
+      hints: [
+        "For each source, ask who made it and why. Do they know snowboarding, are they selling, or can you not tell who they are?",
+        "In each row, find the words that tell who made the source. Then look for words that sell, like sales or big promises.",
+        "A post signed only \"ShredDude\" does not say who wrote it or how they know, so it goes in the last group. Sort the other four."
+      ],
+      how: [
+        "The coach's book and the ski patrol's safety page come from people who know snowboarding.",
+        "The store sign and the box sticker make big promises to sell boards.",
+        "\"ShredDude\" does not say who wrote the post or how they know."
+      ],
+      why: "The coach's book and the ski patrol page can be trusted. The store sign and the box sticker are trying to sell. The \"ShredDude\" post does not say who wrote it or how they know." },
+    { id: "SK-RA2b-S13", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
+      like: ["SK-RA2b-C11"],
+      stem: ["**A page from a running club's guide:** A marathon is a race that is about 26 miles long. Runners grab cups of water at stations along the way. Many runners train for months before a marathon."],
+      prompt: "Which TWO questions could this page help answer? Choose two answers.",
+      choices: [
+        { text: "How long is a marathon?", correct: true },
+        { text: "How do runners get water during a marathon?", correct: true },
+        { text: "Who won the very first marathon?" },
+        { text: "What kind of shoes are best for a marathon?" },
+        { text: "Why do runners' legs feel sore after a race?" }
+      ],
+      clue: "A source is relevant to a question only if it gives facts that answer it. Check each question against the page.",
+      hints: [
+        "A source is relevant to a question only if it gives facts that answer it. Check each question against the page.",
+        "For each question, try to find a sentence in the page that answers it. Choose two.",
+        "The page never names a winner, so it cannot answer the question about the first marathon. Check the other four."
+      ],
+      how: [
+        "The page says a marathon is about 26 miles long. That answers \"How long is a marathon?\"",
+        "It says runners grab cups of water at stations. That answers \"How do runners get water during a marathon?\"",
+        "The page does not tell about winners, shoes or sore legs."
+      ],
+      why: "The answers are \"How long is a marathon?\" and \"How do runners get water during a marathon?\" The page tells the length and the water stations. It says nothing about winners, shoes or sore legs." },
+    { id: "SK-RA2b-S14", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C12"],
+      stem: ["(1) Many people say that cracking your knuckles will hurt your hands when you grow up.", "(2) One doctor cracked the knuckles on only his left hand for 60 years.", "(3) He never cracked the knuckles on his right hand.", "(4) When he was old, both of his hands were just as healthy."],
+      prompt: "A post says, \"Cracking your knuckles ruins your hands!\" Which sentence gives the BEST reason to doubt the post?",
+      choices: [
+        { text: "When he was old, both of his hands were just as healthy.", correct: true },
+        { text: "One doctor cracked the knuckles on only his left hand for 60 years." },
+        { text: "He never cracked the knuckles on his right hand." },
+        { text: "Many people say that cracking your knuckles will hurt your hands when you grow up." }
+      ],
+      clue: "To doubt a claim, look for what happened when someone checked it.",
+      hints: [
+        "To doubt a claim, look for what happened when someone checked it.",
+        "Read sentences 2, 3 and 4, about the doctor.",
+        "Sentence 1 tells what many people say, and it agrees with the post. Look closely at the doctor's sentences."
+      ],
+      how: [
+        "The post says cracking your knuckles ruins your hands.",
+        "The doctor cracked one hand's knuckles for 60 years and not the other's.",
+        "Sentence 4 tells what happened: both hands were just as healthy. That gives a reason to doubt the post.",
+        "Sentences 2 and 3 tell how he tested it, not what he found. The answer is \"When he was old, both of his hands were just as healthy.\""
+      ],
+      why: "The answer is \"When he was old, both of his hands were just as healthy.\" If cracking ruined hands, his left hand would be worse. Sentences 2 and 3 tell how he tested it, and sentence 1 agrees with the post." },
+    { id: "SK-RA2b-S15", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
+      like: ["SK-RA2b-C13"],
+      stem: ["**How to Make Sushi Rice**", "A web page from the Bayside Cooking School",
+        "Written by Chef Kenji Mori, who has made sushi for 25 years",
+        "\"We cooked rice for different amounts of time and tasted each batch. Rice cooked for 20 minutes held together best.\"",
+        "At the top of the page is a cartoon fish with a big smile."],
+      prompt: "Which TWO details make this web page credible? Choose two answers.",
+      choices: [
+        { text: "It was written by a chef who has made sushi for 25 years.", correct: true },
+        { text: "It tells how the facts were found: by cooking and tasting batches of rice.", correct: true },
+        { text: "It has a cartoon fish with a big smile at the top." },
+        { text: "It is about sushi, which is fun to eat." },
+        { text: "It is a web page, so it is newer than a book." }
+      ],
+      clue: "Credible means you can trust it. Ask what would make you believe a page, and what only makes it nice to look at.",
+      hints: [
+        "Credible means you can trust it. Ask what would make you believe a page, and what only makes it nice to look at.",
+        "Read every line of the source, from the title down to the picture. Choose two.",
+        "A smiling cartoon makes a page fun, but it does not make the facts true. Check the other four details."
+      ],
+      how: [
+        "Chef Mori has made sushi for 25 years, so he knows about it.",
+        "The page tells how the facts were found: the school cooked and tasted batches of rice.",
+        "A cartoon, a fun topic and being a web page do not make a source credible.",
+        "The answers are \"It was written by a chef who has made sushi for 25 years.\" and \"It tells how the facts were found: by cooking and tasting batches of rice.\""
+      ],
+      why: "The answers are \"It was written by a chef who has made sushi for 25 years.\" and \"It tells how the facts were found: by cooking and tasting batches of rice.\" Who wrote it and how the facts were found make it credible; a cartoon, a fun topic and being new do not." }
   ],
   /* Hints and Show me how for items kept in practice: ref P4 (core set 1) and Together P1, P2, P3, P5. */
   addons: {
