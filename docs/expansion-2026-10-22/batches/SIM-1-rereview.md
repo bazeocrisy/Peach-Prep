@@ -198,3 +198,172 @@ Closed: **TSPS-S07** (slot 1 key is now `find out where the water gets in`, conf
 - **Points and DOK.** Every choose-two, hot-text pick-two, ebsr, two-slot dropdown and match is 2 points; one-answer items are 1; order items 1 or 2 by length. TT4a-S04 is DOK 1 for 2 points (as its core). Standards fields match the lesson codes. `like` maps to the core item of the same type except SS2a-S09 and TT4a-S11, noted.
 - **Official wording.** The items test the retained standard wording; no item tests a skill the lesson does not teach. I did not re-read Learn It and Watch Me; they were not changed.
 - **Grade 3.** Passages and options are grade-appropriate; nothing is kindergarten-like. The added concept words ("stanza", "idiom", "simile") are taught in the lessons.
+
+---
+
+## Final blind re-solve (independent reviewer, 2026-10-23)
+
+**Role.** I did not take part in the authoring or in any earlier SIM-1 review. I changed no lesson or code file and ran no git. Scripts and output are in the scratchpad `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/` (`load.js`, `blind.js`, `blind.json`, `myanswers.json`, `keys.json`, `cmp.js`, `full.js`, `jac2.js`, `leak.js`).
+
+### F1. Blind solve and agreement
+
+- **Method.** `load.js` evaluates `T-T1.js`, `T-TS.js`, `T-C.js`, `T-SS.js` and `T-T34.js` in a `vm` sandbox with a mock `PP.addLesson`. `blind.js` selects 24 new similar items: TS-PS S07, S14; 3.T.T.1.a S06, S09, S11, S12, S15; 3.T.T.1.c S11; 3.T.T.1.d S07, S08, S14, S15; 3.T.C.2.a S09, S13, S14, S15; 3.T.SS.2.a S05, S07, S12; 3.T.T.1.b S12; 3.T.T.4.a S08, S09, S10, S14. It prints each item's stem and prompt, plus every passage the items use (including the new 1.a p6 "The Fire Tower" and 1.d p11 "The Lantern Walk", and the TT4a-S10 scooter stanza, which sits in the stem). Choices, hot-text options, dropdown options and match rows are shuffled with a seeded generator. Hot-text targets are tagged inside the passage. The script strips `correct`, `answer`, `like`, `why`, `how`, `hints`, `clue`, `misconception` and the order keys. I grepped `blind.json` for those words before reading it: the only hits were the ordinary words "answer", "why" and "how" inside prompts and passage text, and no key field.
+- **Order.** I wrote all 24 answers to `myanswers.json`, and only then ran `cmp.js`. I printed the keys, the hints, `how` and `why` after that. I read this file after solving.
+- **How blind.** Fully blind for the 24 items. One slip, disclosed: before writing the loader I printed the first 3,000 characters of `T-TS.js`, which showed the header of TS-SEQ (not one of the 24). I looked at no key or hint before saving my answers.
+- **Result: 24 of 24 agree (100%).** Every part of every ebsr, both slots of both dropdowns where there are two, and every match row agrees with the key.
+- **Close calls where I still matched the key:** TC2a-S15 "liked the space room best" (Mia says "amazing", not "best"), TT4a-S14 slot 2 (see M1), TT1b-S12 Part B ("Grandpa came in and listened" also helps), TT4a-S09 Part B ("I sit and sigh" is a rival to the plan line), TT1d-S08 row 3.
+
+### F2. Keyed text beside `why`, `how` and hints
+
+- **TS-PS S07 (confirmed unambiguous).** Slot 1 key is `find out where the water gets in`, slot 0 key is `set out more buckets`. `how` and `why` quote the same two phrases. Nobody paints, moves or closes the room. The only quirk is in S2 below.
+- **TS-PS S14 (confirmed unambiguous).**
+  - Row 1, "A part is added after the fix to catch any new clump", is **only The Slow Sink**. The screen over the drain is added after the pipe is fixed. In the turtle article the shields and amber bulbs are the fix itself, and nothing is added afterward.
+  - Row 2, "Someone explains the real cause after the first tries fail", is **both texts**. In the Sink, Mr. Okon explains after the hot water and the plunger fail. In the turtle article, "Scientists explained why" comes after the one-hotel try fails.
+  - Rows 3 (both) and 4 (only turtles) are also clean. `how`, `why` and the keys agree on all four rows.
+- All other `how` and `why` texts agree with their keys. The exceptions are the three small mismatches in S3.
+
+### F3. Findings
+
+**MUST**
+
+- **M1. TT4a-S14 (dropdown), slot 2 has two defensible answers, and hint 3 argues from a fact that is not in the stanza.**
+  - Stanza 3 reads "In March, the pear tree's branches bare. The buds are small and tight." The slot 2 options are "full of fruit", "after the leaves have fallen" and "only small buds have grown". A careful child can say that March, with bare branches, is a tree "after the leaves have fallen". The item's own `how` says "The branches are bare, but the buds are small and tight."
+  - Hint 3 tries to remove that option with "In stanza 3, no leaves lie on the ground". The option says nothing about the ground, and stanza 3 never mentions the ground either way. It then points the child to "the buds and the branches", which names the key's distinctive word.
+  - The stanza 3 line "branches bare" is also a sentence fragment.
+  - **Fix:** change stanza 3 so it cannot be read as the leaves-fallen stage (for example "In March, the pear tree's twigs are brown. / The buds are small and tight."), or replace the distractor with one that stanza 3 cannot support (for example "shows the tree covered in snow"). Rewrite hint 3 to "Stanza 3 gives the month and tells what is on the twigs. Match that to each choice." Fix the `misconception`: the stanzas do go in order of the year (July, November, March), so "starts in the middle of the cycle" is wrong.
+
+**SHOULD**
+
+- **S1. TS-PS S14 vs C13 (0.39 without passage text, 0.20 with it).**
+  - Same prompt sentence, same three columns, and four rows that mirror C13's concepts one for one. "Someone explains the real cause" is C13's row 2 with a new key. "A part is added after the fix" echoes C13's "what happened after the solution".
+  - It passes the ceiling only because the two passages are included. A child who remembers C13 learns the row topics, not the keys.
+  - **Fix:** replace row 2 with a different property (for example, "The problem comes back at least once after a fix").
+  - Hint 3 completes row 1 ("Nothing in the turtle article is a clump"). That is allowed under 04 §4.5, as in B0 C08.
+- **S2. TS-PS S07.**
+  - The stem says Thea "saw a gap where the roof met the wall", yet the key is "find out where the water gets in". She has already found it. Use "fix the gap where the roof meets the wall" as the key and drop "find out" from `how`.
+  - Hint 3 ("some choices are plans nobody in the story makes") leaves one choice in slot 0 (buckets) and two in slot 1. It is categorical, not explicit, so it is a SHOULD. Rewrite it to complete slot 0 ("Zane's plan is the one on the floor") and ask about slot 1.
+  - The prompt and frame are C06's sentence with names changed ("X and Y handle the problem in different ways"). Whole text is 0.27 against C06; with the passage it is 0.15. Rephrase the prompt.
+- **S3. TT1d-S08 (match).**
+  - Row 1 says "part of the holiday", but neither story names a holiday. Start each story with "For [holiday]" or reword the row.
+  - Row 3, "put on display", is a stretch for "set the flowers by a photo". Use "The decorations end up in the family's home".
+  - Hint 3 gives row 2 outright ("Elsa's ornaments are straw"). That is an allowed completed row.
+- **S4. TT1d-S15.** Part A key "lives on a house that floats" should be "in a house that floats". Whole text is 0.23 against C15 (0.20 with the passages). Hint 3 removes the swapped-details option by name.
+- **S5. TT1a-S15 vs C15 (0.213).** Same writer frame ("A writer is working on a story about X ... show, not tell ... Which TWO sentences would best show"), and the telling option ("felt very proud" and "was very crowded") is the same trap. It sits 0.003 over the 0.21 ceiling. The keys are new. Change the frame or the task.
+- **S6. TT4a-S09 vs C08 (0.215 with the passage, 0.30 without).** Part A is identical ("How does the poem change in stanza 3?"). The key skeleton is the same ("The jumping stops, and the speaker plans to play again" becomes "The cone is gone, and the speaker plans to buy another"). Part B's key is again the plan line, and the shared-with-a-friend distractors mirror each other. A child can answer from C08's reveal. Also, "the cone is gone" happens in stanza 2, not as a change in stanza 3. **Fix:** ask what the speaker does in stanza 3 that is different from stanza 2, with four new options.
+- **S7. TT4a-S14 vs C14.** Both are "Stanza 1 {0}, and stanza 3 {1}" with the same three options in both slots. The keys fall in the same positions as C14 (first option, then third). The July, November and March months do not change the pattern. Reorder the stanzas or ask about stanza 2.
+- **S8. TT4a-S08 vs C07 (0.26 without passage text).** The prompt is C07's ("Which TWO lines use repeated words to show ... Choose two lines"), and the two keys follow C07's "hop, hop, hop" skeleton. The new "Honk! Honk!" rival is good. Reword the prompt.
+- **S9. TC2a-S15.** The keyed "Both of them liked the space room best" overstates Mia's note ("amazing", with no ranking). Change her note to "the space room was the best part". The skeleton (two notes, "both think") is C15's design with a different task. Hint 3 removes the snack choice by name.
+- **S10. TT1c-S11 vs C11.** Same prompt frame ("Which TWO events happen because X puts up/starts ...") and the same trap kinds. The "walks his dog past the fence every day" distractor is the creek item's dog walker. Jaccard is 0.19, which passes. Still no distractor that follows the box and is not caused by it (the first review's SHOULD).
+- **S11. SS2a-S05.**
+  - By hint 2 the child sorts "compares two things", and by hint 3 "uses like". That leaves exactly the two keys. Add a trap that uses "like" as a verb.
+  - It mirrors C04's design (a simile pair in a journal).
+- **S12. SS2a-S07 Part B.** Hint 2 asks what they "plan to do next", which points to the one future sentence. Reword to "what Dad says right after".
+- **S13. TC2a-S13.** Now only the quotation marks and adjacency identify the speakers (the "shouted" tags are gone), which is better. The item still tests who is speaking more than whose view it is. Hint 3 removes the unused "a neighbor" column, which leaves three columns for three rows.
+- **S14. TT1d-S14 and TC2a-S14.** Both are fine, but hint 2 describes the lesson's shape (S14 of 1d: "what the child does the day after getting help"; S14 of C2a: "what Pilar's body does"). Each leaves two live choices after the hints. Treat as a recommended tightening.
+
+**NOTE**
+
+- N1. TT1a-S12: Part B's key repeats Part A's key wording ("counts the signs out loud"). Part A's distractor "waits on the fourth step until Naomi comes back" is odd, because Naomi is beside him. p6 is used by S04, S08, S10 and S12 (four items, within the limit of seven).
+- N2. TT4a-S10: the key is the only option about the scooter, and "ran out of words" is weak. Hint 3 states "the scooter stops in the last line", which gives the connection. `how` for S09 says "tomorrow", but the poem says "every day".
+- N3. TT1b-S12: Part B's rival "Grandpa came in and listened" is a real helper detail, and the key (cup and card) is clearly stronger.
+- N4. Names Dani and Dara recur (TT1a-S11 and TT1d-S08).
+- N5. TT1a-S11 is 0.207 against C11, at the ceiling.
+
+### F4. Live-choice recount (hand count, after clue and hints 1 to 3)
+
+"Explicit" counts choices left after the choices the hints name as ruled out. "Strategy" counts choices left if a child follows every hint literally. I counted by hand from the options and the hint text.
+
+| Item | Start | Explicit | Strategy | Call |
+|---|---|---|---|---|
+| TSPS S07 | 3 + 3 | 1 + 2 | 1 + 1 | SHOULD (slot 0 left by category) |
+| TSPS S14 | 4 rows | 3 rows (row 1 completed) | 3 | pass |
+| TT1a S06 | 4 | 3 | 2 | pass |
+| TT1a S09 | 4 rows | 3 rows | 3 | pass |
+| TT1a S11 | 3 + 3 | 2 + 3 | 2 + 1 | pass |
+| TT1a S12 | 4 + 4 | 3 + 4 | 3 + 3 | pass |
+| TT1a S15 | 5 pick 2 | 4 | 3 | pass |
+| TT1c S11 | 5 pick 2 | 4 | 2 | SHOULD (all three distractors are one kind) |
+| TT1d S07 | 4 + 5 | 3 + 5 | 3 + 3 | pass |
+| TT1d S08 | 4 rows | 3 rows | 3 | pass |
+| TT1d S14 | 4 | 3 | 2 | pass |
+| TT1d S15 | 4 + 4 | 3 + 4 | 3 + 2 | pass |
+| TC2a S09 | 6 | 4 after hint 2 and 3 on 7:2 | 2 | NOTE |
+| TC2a S13 | 3 rows x 4 | 3 cols | 3 | SHOULD (S13) |
+| TC2a S14 | 4 | 3 | 2 | pass |
+| TC2a S15 | 5 pick 2 | 4 | 3 | pass |
+| SS2a S05 | 5 pick 2 | 4 | 2 | SHOULD (S11) |
+| SS2a S07 | 4 + 4 | 3 + 4 | 3 + 1 | SHOULD (S12) |
+| SS2a S12 | 4 + 4 | 3 + 4 | 3 + 2 | pass |
+| TT1b S12 | 4 + 4 | 3 + 4 | 3 + 2 | pass |
+| TT4a S08 | 5 pick 2 | 4 | 2 | NOTE (the Honk rival is the only real distractor) |
+| TT4a S09 | 4 + 4 | 3 + 4 | 3 + 2 | pass |
+| TT4a S10 | 4 | 3 | 2 | NOTE |
+| TT4a S14 | 3 + 3 | 3 + 2 | 3 + 1 | **MUST** (M1) |
+
+No hint 3 states the key by name. In TSPS S07 slot 0 and TT4a-S14 the hints come closest. **Ladders that point at the key:** TT4a-S14 hint 3 (names "the buds"), TC2a-S14 hint 2 (Pilar's body points to shyness), SS2a-S07 and S12 hint 2 (the future plan; the two amounts). All of these point at the evidence rather than state the key, and they are SHOULD at most.
+
+### F5. Near-copy similarity against the paired `like` core item
+
+Word-set Jaccard on all item text with the passage text included (the convention of the earlier reviews), then without it. Shared options (exact strings) are **0** for all 24.
+
+| Item | With passage | Without | Call |
+|---|---|---|---|
+| TC2a-S12 (cr) | 0.283 | 0.51 | NOTE (shares the instruction by design; not one of my 24) |
+| TT4a-S09 | 0.215 | 0.296 | SHOULD (S6) |
+| TT1a-S15 | 0.213 | 0.213 | SHOULD (S5) |
+| TT1a-S11 | 0.207 | 0.207 | NOTE |
+| TT1d-S15 | 0.196 | 0.231 | SHOULD |
+| TT1d-S07 | 0.194 | 0.182 | pass |
+| TSPS-S14 | 0.197 | 0.387 | SHOULD (S1) |
+| TT1b-S12 | 0.190 | 0.210 | pass |
+| TT1c-S11 | 0.186 | 0.197 | SHOULD (S10) |
+| TT4a-S14 | 0.178 | 0.208 | SHOULD (S7) |
+| TSPS-S07 | 0.152 | 0.267 | SHOULD |
+| TC2a-S09, TT4a-S08, SS2a-S07, TT1d-S08, TT1a-S09, TT1a-S12, TT1a-S06, TC2a-S13, S14, S15, SS2a-S05, S12, TT4a-S10, TT1d-S14 | 0.09 to 0.18 | 0.09 to 0.28 | pass or SHOULD as listed |
+
+Other similar items in the eight lessons over 0.21 (with passage text): **none besides TC2a-S12**. Without passage text, 38 other similar items sit over 0.21 because of shared prompt frames; most are the match labels and the dropdown frames, as in the earlier reviews. I list none of them as a finding.
+
+### F6. Pre-answers and duplicates
+
+- **5-gram search** of every key string of the 24 items against every teach, learn, parent, core, practice, Together, test, testB and addon text in the same lesson, and then against every item in all other lessons (passages excluded): five hits, none a pre-answer.
+  - TT1a-S15: "all the way to the", in a form-B item and a SS1c learn sentence. This is an ordinary phrase.
+  - TT1a-S12: "out loud as he climbs", in the sibling S10 and S08. This is the same passage (see N1).
+  - TT1c-S11: "with a thank you note", in an unrelated SS2a core item.
+  - SS2a-S12: "only a small part of", in a TSPS item.
+  - TT4a-S09: "and the speaker plans to", a skeleton clash with C08 (S6).
+  - TSPS-S14: "before the problem is solved", in TT1b-S10.
+- **Topics and key facts:** a keyword search of every lesson string (passages, learn, core, practice, test, testB, addons) found no other use of the fire tower, lantern/Mid-Autumn, Hanukkah/menorah, Tonle Sap, dike, the slow sink, Ice Cream Truck, Pear Tree, "call it a day" or "a drop in the bucket" outside the new content. The overlaps are the settings only: sea turtles (3.T.C.2.c and a table of contents in SS1a, neither about lights), swings (T3a, T3c, and a squeaky-swing TSPS core item), scooter (TS-CC core and an SS2a simile), cricket (3.T.C.1.c and 3.T.T.4.b tests). No key fact repeats.
+- **Learn It and teach coverage.** Each skill tested is taught in the lesson's `teach` and `learn`. The lessons cover trait, showing, perspective, idiom, simile, metaphor, stanza and repetition. TS-PS teach never says "different ways to handle one problem" in those words, though it teaches the try and cause steps (NOTE).
+
+### F7. Facts (WebSearch/WebFetch)
+
+- **Star-shaped red paper lantern, Mid-Autumn Festival, Hanoi (TT1d p11).**
+  - The star lantern (đèn ông sao) is "a traditional Vietnamese toy often used in Mid-Autumn Festival", made from bamboo and coloured paper: https://en.wikipedia.org/wiki/Star_lantern
+  - Children carry star lanterns in processions, and the design is easy to hold: https://silkpathhotel.com/vietnam-mid-autumn-festival-the-story-of-vietnamese-lanterns/
+  - Lantern processions are held under the full moon, and children eat mooncakes (bánh trung thu): https://en.wikipedia.org/wiki/T%E1%BA%BFt_Trung_Thu and https://en.wikipedia.org/wiki/Mid-Autumn_Festival
+  - I could not confirm the colour red in the pages I fetched. The earlier re-review cites vietnam.travel for "the commonest lantern is a red star". NOTE: the shell is usually coloured cellophane, so "paper" is a simplification. Grandfather's reason ("for the moon ... walk beside it") reads as a family's explanation, not a claim about the origin. Acceptable.
+- **Hanukkah (TT1d p12).** A nine-branched menorah (eight lights plus the shamash), one more light each night, the oil lasting eight days, placed at a prominent window: https://en.wikipedia.org/wiki/Hanukkah. All consistent. The passage skips the shamash; fine at grade 3.
+- **Tonle Sap (TT1d p13).** At Chong Kneas the houses "float directly on the water, rising and falling with the changing water levels"; boats are the children's transport to school: https://bestregardsfromfar.com/2017/08/19/cambodia-floating-village/. Water level rises about 10 m with the monsoon: https://en.wikipedia.org/wiki/Tonl%C3%A9_Sap. A school that is a boat is plausible but my fetched sources describe boats that take children to school rather than the school itself being a boat (NOTE). Some villages use stilts, not floats, but the passage names a floating house.
+- **Netherlands dike (TT1d p14).** Levees keep the sea out of land below sea level: https://en.wikipedia.org/wiki/Dike_(construction). I could not confirm weekly inspections or grass cover from the fetched page (NOTE, plausible).
+- **Mexico and Sweden (TT1d S08).** Ofrendas carry family photos and tissue paper flowers: https://www.npr.org/2022/11/01/1133041841/dia-de-los-muertos-ofrenda-altar. Straw star ornaments tied with red cord are a traditional Swedish tree decoration: https://webshop.skansen.se/en/seasons-holidays/christmas/christmas-ornaments-tree-decorations/straw-star-ornament. Both are consistent with the item.
+- **Sea turtles (TS-PS p9).** Hatchlings crawl "towards the brightest horizon", and artificial lights disorient them; red or amber LEDs are used as sea-turtle-safe lighting: https://en.wikipedia.org/wiki/Sea_turtle. The "Georgia" setting needs no species claim.
+- **Idioms (SS2a).** "Call it a day" and "a drop in the bucket" are standard figures of speech. No new fact needs checking in the other lessons (fire tower stairs and signs, ice cream truck, scooter and pear tree are fiction and setting only).
+
+### F8. Standards, points, DOK
+
+All 24 items map to the retained official wording. Points are correct: choose-two, ebsr, match and two-slot dropdowns are 2; single-answer mc and hot-text pick-one are 1. DOK is plausible (TC2a-S13 is DOK 2 for a 3-row match). TC2a-S09's Lio-wish question and TC2a-S15's two-note task sit inside "describe different perspectives of the narrator or speakers". TT1c-S11 asks about events caused by a character's action, which is the same reach as its core C11. The grade-3 level is right; nothing is kindergarten-like, though some TSPS S07 distractors ("move the art room to the gym", "close the art room for the year") are silly.
+
+### F9. Verdict per lesson
+
+| Lesson | Items reviewed | Verdict | Reason |
+|---|---|---|---|
+| 3.T.T.1.a | S06, S09, S11, S12, S15, p6 | **ACCEPT** | no MUST; S15 slightly over 0.21 (S5) |
+| 3.T.T.1.b | S12 | **ACCEPT** | no MUST |
+| 3.T.T.1.c | S11 | **ACCEPT** | no MUST; S10 recommended |
+| 3.T.T.1.d | S07, S08, S14, S15, p11 | **ACCEPT** | no MUST; S3 and S4 recommended |
+| TS-PS | S07, S14 | **ACCEPT** | keys unambiguous (rows 1 and 2 confirmed); S1 and S2 recommended |
+| 3.T.C.2.a | S09, S13, S14, S15 | **ACCEPT** | no MUST; S9 and S13 recommended |
+| 3.T.SS.2.a | S05, S07, S12 | **ACCEPT** | no MUST; S11 and S12 recommended |
+| 3.T.T.4.a | S08, S09, S10, S14 | **NOT ACCEPT** | M1 (S14 has two defensible slot 2 answers and a misleading hint 3); S6 and S7 should be fixed with it |
+
+One MUST in 24 items.

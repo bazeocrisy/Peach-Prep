@@ -1303,7 +1303,7 @@ PP.addLesson({
         passages: ["p3"],
         prompt: "Dara's draft starts with the list of supplies. She wants to add an opening before sentence 1. Which sentence is best?",
         choices: [
-          { text: "A rain stick makes a sound like soft rain, and you can make one in a few steps.", correct: true },
+          { text: "Here is how to turn a plain tube into a toy that sounds like a shower.", correct: true },
           { text: "A cardboard tube can be long or short, and many come with paper towels inside." },
           { text: "Rice is a grain that grows in wet fields and feeds many people each day." },
           { text: "Rain falls from clouds and gives plants the water they need to grow." }
@@ -1317,11 +1317,11 @@ PP.addLesson({
         how: [
           "Read the draft: every step is about making a rain stick and what it sounds like.",
           "An opening tells the reader what the piece will teach, so the reader knows what is coming.",
-          "The answer is \"A rain stick makes a sound like soft rain, and you can make one in a few steps.\" It names what the reader will make.",
+          "The answer is \"Here is how to turn a plain tube into a toy that sounds like a shower.\" It names what the reader will make.",
           "The other sentences are about tubes, rice or rain, but none of them says what Dara's piece will teach."
         ],
         misconception: "A common mix-up is choosing a true fact that uses the same words as the draft. An opening has to tell what this piece will teach.",
-        why: "The answer is \"A rain stick makes a sound like soft rain, and you can make one in a few steps.\" It tells the reader what the piece will teach. The other sentences use words from the draft, but they are about tubes, rice or rain in general, so they do not get the reader ready for these steps."
+        why: "The answer is \"Here is how to turn a plain tube into a toy that sounds like a shower.\" It tells the reader what the piece will teach. The other sentences use words from the draft, but they are about tubes, rice or rain in general, so they do not get the reader ready for these steps."
       },
       {
         id: "SK-SS1b-C03",
@@ -1625,10 +1625,10 @@ PP.addLesson({
         passages: ["p5"],
         prompt: "Why is a compare plan a good fit for Tia's piece?",
         choices: [
-          { text: "Her readers want to see how walking and riding the bus are alike and different.", correct: true },
-          { text: "Her readers need to learn the steps for getting ready for school in order." },
-          { text: "Her readers need to learn what caused kids to start going to school." },
-          { text: "Her readers need a picture to go with every sentence in the draft." }
+          { text: "Her readers want to see how two ways of getting to school stack up.", correct: true },
+          { text: "Her readers need to learn the steps for riding the bus, in order." },
+          { text: "Her readers need to learn what caused kids to start walking." },
+          { text: "Her readers need a picture to go with every sentence about riding or walking." }
         ],
         clue: "A plan should fit what the reader needs from the piece. Ask what Tia wants her reader to understand.",
         hints: [
@@ -1639,11 +1639,11 @@ PP.addLesson({
         how: [
           "Look at what each paragraph does: paragraph 1 names two ways, paragraph 2 is about walking, and paragraph 3 is about riding the bus.",
           "A compare plan gives each thing its own section so the reader can see how they are alike and different.",
-          "The answer is \"Her readers want to see how walking and riding the bus are alike and different.\"",
+          "The answer is \"Her readers want to see how two ways of getting to school stack up.\"",
           "The draft has no steps, never tells what caused anything, and does not need a picture for every sentence."
         ],
         misconception: "A common mix-up is choosing a plan because it is a plan you know, such as steps, instead of the one that matches the job.",
-        why: "The answer is \"Her readers want to see how walking and riding the bus are alike and different.\" Tia gives each way its own paragraph so readers can compare them. The draft has no steps, never tells what caused anything, and does not need a picture for every sentence."
+        why: "The answer is \"Her readers want to see how two ways of getting to school stack up.\" Tia gives each way its own paragraph so readers can compare them. The draft has no steps, never tells what caused anything, and does not need a picture for every sentence."
       },
       {
         id: "SK-SS1b-C13",
@@ -1723,7 +1723,7 @@ PP.addLesson({
           "(5) The hoop should stay up for a few seconds at first."
         ],
         choices: [
-          { text: "Keep practicing, and soon you can keep the hoop spinning for a long time.", correct: true },
+          { text: "Stay with it, and soon the ring will whirl around you for a long time.", correct: true },
           { text: "Next, pick up a second hoop and try to spin both of them at once." },
           { text: "Hula hoops are usually made of plastic and come in many bright colors." },
           { text: "Some people spin a hoop around an arm or a leg just for fun." }
@@ -1737,11 +1737,11 @@ PP.addLesson({
         how: [
           "A closing wraps up a how-to after the steps are done.",
           "By sentence 5 the reader has spun the hoop, so the piece is ready to end.",
-          "The answer is \"Keep practicing, and soon you can keep the hoop spinning for a long time.\" It encourages the reader and ends the piece.",
+          "The answer is \"Stay with it, and soon the ring will whirl around you for a long time.\" It encourages the reader and ends the piece.",
           "The other sentences add another step, a fact about hoops or a new trick, so they do not wrap up."
         ],
         misconception: "A common mix-up is adding one more step or fact at the end. A closing wraps up what the reader has done.",
-        why: "The answer is \"Keep practicing, and soon you can keep the hoop spinning for a long time.\" It wraps up the how-to and cheers the reader on. A second hoop adds a step, and the sentences about plastic and spinning on an arm add new facts instead of ending the piece."
+        why: "The answer is \"Stay with it, and soon the ring will whirl around you for a long time.\" It wraps up the how-to and cheers the reader on. A second hoop adds a step, and the sentences about plastic and spinning on an arm add new facts instead of ending the piece."
       }
     ] }
   ] },
@@ -1936,7 +1936,7 @@ PP.addLesson({
       like: ["SK-SS1b-C07"],
       prompt: "Which sentence would end Nora's flyer best?",
       choices: [
-        { text: "Come to Splash Day and cool off with your whole family!", correct: true },
+        { text: "Bring your family, and we will see you in the water!", correct: true },
         { text: "Next, the lifeguard will blow a whistle to start the big races." },
         { text: "Foam noodles are long, soft tubes that float well on the water." },
         { text: "Many kids in our town learn to swim before they finish school." }
@@ -1949,10 +1949,10 @@ PP.addLesson({
       ],
       how: [
         "The flyer invites families to an event, so the last sentence should wrap that up.",
-        "The answer is \"Come to Splash Day and cool off with your whole family!\" It speaks to the readers and ends the flyer.",
+        "The answer is \"Bring your family, and we will see you in the water!\" It speaks to the readers and ends the flyer.",
         "The whistle sentence adds a new event, and the sentences about noodles and swimming add new facts."
       ],
-      why: "The answer is \"Come to Splash Day and cool off with your whole family!\" It wraps up the whole piece and speaks to the readers. The other sentences add a new event or new facts instead of ending the piece."
+      why: "The answer is \"Bring your family, and we will see you in the water!\" It wraps up the whole piece and speaks to the readers. The other sentences add a new event or new facts instead of ending the piece."
     },
     {
       id: "SK-SS1b-S08",
@@ -2159,8 +2159,8 @@ PP.addLesson({
       ],
       choices: [
         { text: "Give the zoo and the museum a section each, with the same kinds of facts.", correct: true },
-        { text: "Number the things to put in a lunch bag, one line for each thing." },
-        { text: "Trace each place back to its first year, one year at a time, with dates." },
+        { text: "Number the things to pack for the zoo trip, one line for each thing." },
+        { text: "Trace the museum back to its first year, one year at a time, with dates." },
         { text: "Retell a funny afternoon at the zoo from start to end, in a story." }
       ],
       clue: "Decide what the page has to help the class do. Is it teach an action, or help them choose?",
@@ -2383,7 +2383,7 @@ PP.addLesson({
         "Read both ideas: Mia stayed inside. It was raining hard.",
         "Ask how they connect. The rain is why Mia stayed inside. That is a reason.",
         "A reason needs because or since. Try it: Mia stayed inside because it was raining hard. It makes sense.",
-        "To tell what happened because of the rain, a new sentence can begin with As a result: It was raining hard. As a result, Mia stayed inside."
+        "To tell what happened because of the rain, a new sentence can begin with Therefore or As a result: It was raining hard. Therefore, Mia stayed inside."
       ],
       answer: "Because fits best: \"Mia stayed inside because it was raining hard.\""
     },
@@ -2510,15 +2510,15 @@ PP.addLesson({
       clue: "Would most people go for a bike ride in hard rain? If the second idea is a surprise, which linking word shows that?",
       why: "The answer is \"Although it rained hard last Saturday, we still rode to the park.\" Riding in hard rain is a surprise, and although joins two ideas that do not seem to go together. The rain was not the reason they rode, so because and since do not fit." },
     { id: "SK-SS1c-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
-      prompt: "Sofia wants to add a sentence after sentence 5 that gives an example. Which sentence is best?",
+      prompt: "Sofia wants to add a sentence after sentence 5 that supports it. Which sentence is best?",
       choices: [
         { text: "For example, I can now pedal all the way up Oak Street hill.", correct: true },
         { text: "Although my legs are strong, I can pedal up Oak Street hill." },
-        { text: "Since it was sunny, I rode my bike to school today." },
-        { text: "Also, my sister has a bike with a bright green bell." }
+        { text: "For example, I rode my bike to school today because it was sunny." },
+        { text: "For example, my sister has a bike with a bright green bell." }
       ],
-      clue: "Reread sentence 5. The new sentence must show one example of that idea, and its linking word must do the right job.",
-      why: "The answer is \"For example, I can now pedal all the way up Oak Street hill.\" Pedaling up a hill is one example of Sofia's legs getting stronger. Although does not fit, because strong legs climbing a hill is no surprise. The sunny day and the sister's bell are not about getting stronger." },
+      clue: "Reread sentence 5. Find the sentence that shows one case of that idea; a linking word alone does not make a sentence fit.",
+      why: "The answer is \"For example, I can now pedal all the way up Oak Street hill.\" Pedaling up a hill is one example of Sofia's legs getting stronger. Although does not fit, because strong legs climbing a hill is no surprise. The sunny day and the sister's bell are not about getting stronger, even with For example in front of them." },
     { id: "SK-SS1c-P4", type: "dropdown", points: 1, dok: 1, passages: ["p1"],
       prompt: "Choose the word or words that best connect sentence 6 to the paragraph before it.",
       text: "{0}, biking is fun to do with my friends.",
@@ -2909,7 +2909,7 @@ PP.addLesson({
         hints: [
           "Linking words show how ideas connect. Decide how each new idea is connected to the idea before it.",
           "For the first blank, ask whether Coach's choice adds to the fun, goes against it or is one example of it. For the second, ask why Dev cannot wait.",
-          "Practice being so much fun is the reason Dev cannot wait, and the blank starts that sentence. Decide the first blank yourself."
+          "Start with the second blank. Ask whether the fun of practice explains why Dev cannot wait, and test each word."
         ],
         how: [
           "Sentence 7 tells about fun games and cheering. Coach letting the team pick a game is one more good thing, so the word adds an idea: In addition.",
@@ -2937,7 +2937,7 @@ PP.addLesson({
         hints: [
           "Linking words show how ideas connect. Decide how each sentence is connected to the one before it.",
           "For the first blank, ask what the seeds being light causes. For the second, ask whether the two ideas about where seeds land go together or go against each other.",
-          "In the second sentence, some seeds cannot grow, but many do. Decide the first blank yourself."
+          "Start with the second blank. Ask whether some seeds not growing agrees with many seeds growing, and test each word."
         ],
         how: [
           "Dandelion seeds are very light, so the wind can carry them. The second idea happens because of the first, so the word shows a result: As a result.",
@@ -2960,54 +2960,53 @@ PP.addLesson({
       passages: [],
       pick: 2,
       like: ["SK-SS1c-P6"],
-      prompt: "Which TWO words could fill the blank so the sentence makes sense?",
-      stem: "The pond froze ____ the nights were so cold.",
+      prompt: "Pick the TWO linking words that fit the blank.",
+      stem: "The wind blew all night. ____, leaves covered the yard.",
       choices: [
-        { text: "because", correct: true },
-        { text: "since", correct: true },
-        { text: "although" },
-        { text: "also" },
-        { text: "for example" }
+        { text: "Therefore", correct: true },
+        { text: "As a result", correct: true },
+        { text: "However" },
+        { text: "In addition" },
+        { text: "Instead" }
       ],
-      clue: "Ask how the cold nights connect to the pond freezing. Is it a reason, a surprise or an example?",
+      clue: "Think about what the wind did to the yard. Then decide how the second sentence connects to the first.",
       hints: [
-        "Ask how the cold nights connect to the pond freezing. Is it a reason, a surprise or an example?",
-        "Choose two words. Try each word in the blank and read the whole sentence.",
-        "Although would mean the cold nights were a surprise. Check the other four words."
+        "Think about what the wind did to the yard. Then decide how the second sentence connects to the first.",
+        "Choose two. Put each word at the start of the second sentence and read both sentences out loud.",
+        "However would make leaves in the yard a surprise after a windy night. Check the other four words."
       ],
       how: [
-        "The cold nights are why the pond froze, so the blank needs a word that gives a reason.",
-        "Because and since both give a reason.",
-        "Although would show a surprise, also would add an idea, and for example would give an example."
+        "The wind blowing all night is why leaves covered the yard.",
+        "A word that tells what happened because of something is Therefore. As a result does the same job.",
+        "However shows a surprise, In addition adds an idea, and Instead takes the place of an idea."
       ],
-      why: "The answers are because and since. The cold nights are the reason the pond froze, and both words give a reason. Although would make the cold a surprise, which does not make sense."
+      why: "The answers are Therefore and As a result. The windy night caused the leaves to cover the yard, and both words tell what happened because of something. However, In addition and Instead do other jobs."
     },
     {
       id: "SK-SS1c-S02",
       type: "dropdown",
       points: 1,
-      dok: 2,
+      dok: 1,
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-P4"],
-      prompt: "Choose the word that best connects the second sentence to the first.",
-      text: "Mia likes to paint. {0}, she likes to draw.",
+      prompt: "Which linking word ties these two ideas together?",
+      text: "Many pets need daily care. {0}, a dog needs a walk every day.",
       slots: [
-        { options: ["Also", "For example", "Instead"], answer: 0 }
+        { options: ["For example", "Therefore", "Since"], answer: 0 }
       ],
-      clue: "Ask how the second idea connects to the first. Does it add, give an example or take its place?",
+      clue: "Ask what the second sentence does with the first one: gives a reason, tells a result or shows one case.",
       hints: [
-        "Ask how the second idea connects to the first. Does it add, give an example or take its place?",
-        "Read the two sentences together with each word. Say what Mia likes in each version.",
-        "Instead would mean Mia stopped liking to paint. Decide between the other two."
+        "Ask what the second sentence does with the first one: gives a reason, tells a result or shows one case.",
+        "A walk every day is one kind of care. Say what that makes the second sentence.",
+        "Therefore would mean the daily care caused the dog's walk. Decide between the other two words."
       ],
       how: [
-        "Both sentences tell something Mia likes.",
-        "The second sentence adds another thing she likes, so it needs an adding word.",
-        "The answer is Also.",
-        "Drawing is not an example of painting, and Instead would mean she does not paint."
+        "The first sentence names a big idea: pets need daily care.",
+        "The second sentence tells one case of that idea: a dog needs a walk.",
+        "A word that introduces one case is For example. The answer is For example."
       ],
-      why: "The answer is Also. Painting and drawing are two things Mia likes, so Also adds another idea. For example needs drawing to be one kind of painting, and Instead would take painting away."
+      why: "The answer is For example. A daily walk is one kind of daily care, so the second sentence gives an example. Therefore tells a result, and Since gives a reason."
     },
     {
       id: "SK-SS1c-S03",
@@ -3017,24 +3016,24 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C03"],
-      prompt: "Choose the linking word that shows a difference between the two sentences.",
-      text: "The pool was open all day. {0}, the water was too cold for swimming.",
+      prompt: "Choose the best linking word for the blank.",
+      text: "The shoe shop sells boots and sandals. {0}, it sells rain hats.",
       slots: [
-        { options: ["However", "For example", "As a result"], answer: 0 }
+        { options: ["In addition", "Instead", "Therefore"], answer: 0 }
       ],
-      clue: "A linking word shows how two sentences connect. Ask whether the second sentence goes along with the first, adds to it or goes against it.",
+      clue: "Read the two sentences and say what the shop sells in each one.",
       hints: [
-        "A linking word shows how two sentences connect. Ask whether the second sentence goes along with the first, adds to it or goes against it.",
-        "Read the two sentences together. Say in your own words how the second one connects to the first.",
-        "As a result would tell what happens because the pool was open. Ask whether cold water happens because of that."
+        "Read the two sentences and say what the shop sells in each one.",
+        "Ask whether rain hats take the place of boots, come from boots, or are one more thing the shop sells.",
+        "Instead would mean the shop stopped selling boots. Decide between the other two words."
       ],
       how: [
-        "An open pool makes you expect people to swim.",
-        "The second sentence says the water was too cold for swimming. That goes against what you expect.",
-        "A word that shows a difference is However. The answer is However.",
-        "For example would give an example of the pool being open, and As a result would tell what the open pool caused."
+        "The first sentence names two things the shop sells.",
+        "The second sentence names one more thing it sells.",
+        "A word that adds one more thing is In addition. The answer is In addition.",
+        "Instead would take away the boots, and Therefore would say the boots caused the rain hats."
       ],
-      why: "The answer is However. An open pool makes you expect swimming, but cold water goes against that, so the second sentence shows a difference. For example gives an example, and As a result tells a result."
+      why: "The answer is In addition. Rain hats are one more thing the shop sells, so the word adds an idea. Instead would take the place of the boots, and Therefore would give a result."
     },
     {
       id: "SK-SS1c-S04",
@@ -3044,31 +3043,27 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C04"],
-      prompt: "Jo wants sentence 3 to show that Ravi's practice caused his good score. Which revision is best?",
-      stem: [
-        "(1) Ravi practiced his spelling words every night.",
-        "(2) He made flash cards and read them out loud.",
-        "(3) He got every word right on Friday's test."
-      ],
+      prompt: "Which beginning makes sentence 2 fit sentence 1 best?",
+      stem: ["(1) The forecast said it would rain all day.", "(2) The sun came out before lunch."],
       choices: [
-        { text: "As a result, he got every word right on Friday's test.", correct: true },
-        { text: "For example, he got every word right on Friday's test." },
-        { text: "However, he got every word right on Friday's test." },
-        { text: "In addition, he got every word right on Friday's test." }
+        { text: "However, the sun came out before lunch.", correct: true },
+        { text: "Therefore, the sun came out before lunch." },
+        { text: "For example, the sun came out before lunch." },
+        { text: "Also, the sun came out before lunch." }
       ],
-      clue: "Linking words show how ideas connect. Decide what connection you want to show, then choose the word that shows it.",
+      clue: "Say what sentence 1 leads you to expect. Then see how sentence 2 compares with that.",
       hints: [
-        "Linking words show how ideas connect. Decide what connection you want to show, then choose the word that shows it.",
-        "Read sentences 1 to 3. Ask which sentences tell what Ravi did and which tells what happened next.",
-        "A word for a difference would make a good score sound like a surprise. Test each of the other words the same way."
+        "Say what sentence 1 leads you to expect. Then see how sentence 2 compares with that.",
+        "Read the two sentences together. Ask whether sun is what a rainy forecast makes you expect.",
+        "A forecast of rain does not cause sun, so one kind of word cannot fit. Test the other three words."
       ],
       how: [
-        "Sentences 1 and 2 tell what Ravi did to practice.",
-        "Sentence 3 tells what happened because of it: a perfect score.",
-        "A word that shows a result is As a result. The answer is \"As a result, he got every word right on Friday's test.\"",
-        "For example gives an example, However shows a surprise, and In addition adds a separate idea."
+        "Sentence 1 leads you to expect a rainy day.",
+        "Sentence 2 says the sun came out. That is not what you expect, so it is a surprise.",
+        "A word that shows a surprise is However. The answer is \"However, the sun came out before lunch.\"",
+        "Therefore would say the forecast caused the sun, For example would make sun a case of rain, and Also would add a matching idea."
       ],
-      why: "The answer is \"As a result, he got every word right on Friday's test.\" The practice caused the good score, so a result word fits. For example, However and In addition show other connections."
+      why: "The answer is \"However, the sun came out before lunch.\" A forecast of rain makes you expect rain, so sun is a surprise, and However shows that. The other words show a result, an example or an added idea."
     },
     {
       id: "SK-SS1c-S05",
@@ -3078,30 +3073,27 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C05"],
-      prompt: "In sentence 2, the writer begins with For example. What does this tell the reader?",
-      stem: [
-        "(1) Many sports use a ball.",
-        "(2) For example, soccer, baseball and tennis are all played with one."
-      ],
+      prompt: "What job do the words In addition do at the start of sentence 2?",
+      stem: ["(1) Our library has many kinds of books.", "(2) In addition, it has a room full of games."],
       choices: [
-        { text: "Sentence 2 names some of the sports that sentence 1 talks about.", correct: true },
-        { text: "Sentence 2 gives the reason many sports use a ball." },
-        { text: "Sentence 2 tells what happened because many sports use a ball." },
-        { text: "Sentence 2 says something that goes against sentence 1." }
+        { text: "They bring in a second thing the library has.", correct: true },
+        { text: "They point to one kind of book the library has." },
+        { text: "They explain why the library has so many books." },
+        { text: "They make the game room seem unexpected." }
       ],
-      clue: "Read both sentences. Ask how the second one is connected to the first one.",
+      clue: "Say what each sentence tells in your own words. Then ask what sentence 2 does for sentence 1.",
       hints: [
-        "Read both sentences. Ask how the second one is connected to the first one.",
-        "Say sentence 1 in your own words. Then ask what sentence 2 does with it: gives a reason, tells a result, goes against it or shows some cases of it.",
-        "Soccer, baseball and tennis are not the reason many sports use a ball. Test the other three choices."
+        "Say what each sentence tells in your own words. Then ask what sentence 2 does for sentence 1.",
+        "Say what each sentence tells about the library. Ask whether sentence 2 repeats, explains, or goes beyond sentence 1.",
+        "A room of games is not a kind of book, so one choice cannot be right. Test the other three."
       ],
       how: [
-        "Sentence 1 says many sports use a ball.",
-        "Sentence 2 names soccer, baseball and tennis, which are sports that use a ball.",
-        "For example introduces some of the sports from the group. The answer is \"Sentence 2 names some of the sports that sentence 1 talks about.\"",
-        "The names are not a reason, a result or a difference."
+        "Sentence 1 tells about the books the library has.",
+        "Sentence 2 tells about something else it has: a room of games.",
+        "In addition brings in one more thing. The answer is \"They bring in a second thing the library has.\"",
+        "A game room is not a kind of book, it does not explain the books, and it is not a surprise."
       ],
-      why: "The answer is \"Sentence 2 names some of the sports that sentence 1 talks about.\" For example tells the reader that these sports belong to the group. They are not a reason, a result or a difference."
+      why: "The answer is \"They bring in a second thing the library has.\" In addition adds another idea of the same kind. A game room is not a kind of book, it does not explain why there are books, and it is not a surprise."
     },
     {
       id: "SK-SS1c-S06",
@@ -3111,32 +3103,32 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C06"],
-      prompt: "Pia wants to join sentences 2 and 3 to show the reason Luis ran. Which is best?",
+      prompt: "Pia wants to join sentences 2 and 3 into one sentence. Which is best?",
       stem: [
-        "(1) Every morning, Luis packs his bag the night before.",
-        "(2) Luis ran to the bus stop.",
-        "(3) He was afraid he would miss the bus.",
-        "(4) He made it just in time."
+        "(1) Jo had been looking forward to Sam's party all week.",
+        "(2) She felt sick that morning.",
+        "(3) She went to the party.",
+        "(4) She came home early."
       ],
       choices: [
-        { text: "Luis ran to the bus stop since he was afraid he would miss the bus.", correct: true },
-        { text: "Although Luis ran to the bus stop, he was afraid he would miss the bus." },
-        { text: "Luis ran to the bus stop. For example, he was afraid he would miss the bus." },
-        { text: "Luis ran to the bus stop. In addition, he was afraid he would miss the bus." }
+        { text: "Although Jo felt sick that morning, she went to the party.", correct: true },
+        { text: "Jo felt sick that morning because she went to the party." },
+        { text: "Jo felt sick that morning. For example, she went to the party." },
+        { text: "Jo felt sick that morning. Therefore, she went to the party." }
       ],
-      clue: "Linking words show how ideas connect. Pick the word that matches the connection the writer wants to show.",
+      clue: "Read both ideas. Decide how they connect before you look at the linking words.",
       hints: [
-        "Linking words show how ideas connect. Pick the word that matches the connection the writer wants to show.",
-        "Read sentences 2 and 3. Ask which one tells what Luis does and which one tells why.",
-        "Although would show a surprise. Ask whether it is a surprise that someone runs when afraid of missing a bus. Test the other three the same way."
+        "Read both ideas. Decide how they connect before you look at the linking words.",
+        "Feeling sick usually keeps people home. Ask whether going to the party fits that or goes against it.",
+        "Going to a party does not make a person sick, so one choice gets the cause backward. Test the other three."
       ],
       how: [
-        "Sentence 2 tells what Luis does: he runs to the bus stop.",
-        "Sentence 3 tells why: he is afraid he will miss the bus.",
-        "A word that gives a reason is since. The answer is \"Luis ran to the bus stop since he was afraid he would miss the bus.\"",
-        "Although would show a surprise, For example would name an example, and In addition would add a separate idea."
+        "Feeling sick makes you expect to stay home.",
+        "Going to the party anyway goes against that, so the ideas need a surprise word.",
+        "A word that shows a surprise inside one sentence is Although. The answer is \"Although Jo felt sick that morning, she went to the party.\"",
+        "Because would make the party the cause of feeling sick, For example would make going an example of being sick, and Therefore would make it a result of being sick."
       ],
-      why: "The answer is \"Luis ran to the bus stop since he was afraid he would miss the bus.\" Being afraid of missing the bus is the reason he ran, and since gives a reason. Although, For example and In addition show other connections."
+      why: "The answer is \"Although Jo felt sick that morning, she went to the party.\" Going to a party while sick is a surprise, and Although joins ideas that do not seem to go together. The other choices show a cause, an example or a result that makes no sense."
     },
     {
       id: "SK-SS1c-S07",
@@ -3146,24 +3138,24 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C07"],
-      prompt: "Complete the story. Choose the best linking word for each blank.",
-      text: "The store was closed on Monday. {0}, we went shopping on Tuesday. The line on Tuesday was very long. {1}, we waited a long time.",
+      prompt: "Fill in both blanks with the best linking words.",
+      text: "{0} the wind was cold, we played outside all afternoon. We packed apples for the trip. {1}, we packed a bag of nuts.",
       slots: [
-        { options: ["Therefore", "However", "For example"], answer: 0 },
-        { options: ["As a result", "In addition", "However"], answer: 0 }
+        { options: ["Although", "Since", "Instead"], answer: 0 },
+        { options: ["Also", "Instead", "Because"], answer: 0 }
       ],
-      clue: "Linking words show how two ideas connect. Decide how each second sentence is connected to the sentence before it.",
+      clue: "Decide how each part connects to the part before it.",
       hints: [
-        "Linking words show how two ideas connect. Decide how each second sentence is connected to the sentence before it.",
-        "For each blank, ask whether the second idea happened because of the first, goes against it, adds to it or gives an example.",
-        "Ask why the family shopped on Tuesday. Your answer shows how the first two sentences connect. Then use the same question on the last two."
+        "Decide how each part connects to the part before it.",
+        "Read the first sentence with each word. Ask whether the cold wind is why they played outside or something that was against it.",
+        "Look at the second blank alone. Read the sentence with each word and listen for the one that makes sense."
       ],
       how: [
-        "The store was closed Monday, so the family went on Tuesday because of that. The word shows a result: Therefore.",
-        "A long line makes people wait, so the waiting happened because of the line. That is also a result: As a result.",
-        "However would show a surprise, For example would give an example, and In addition would add a new idea."
+        "A cold wind makes you expect people to go inside, but the family played outside. The ideas do not seem to go together, so the first word is Although.",
+        "Apples are one thing they packed, and nuts are one more. The second word adds an idea: Also.",
+        "Since would make the cold the reason for playing outside, Instead would take something away, and Because would give a reason."
       ],
-      why: "The answers are Therefore and As a result. The closed store caused the Tuesday trip, and the long line caused the long wait. The other words show a surprise, an example or an added idea."
+      why: "The answers are Although and Also. Playing outside in a cold wind is a surprise, so Although fits. Packing nuts is one more thing they packed besides apples, so Also fits. The other words give a reason or take something away."
     },
     {
       id: "SK-SS1c-S08",
@@ -3174,27 +3166,27 @@ PP.addLesson({
       passages: [],
       pick: 2,
       like: ["SK-SS1c-C08"],
-      prompt: "Which TWO words could begin the second sentence to add another idea?",
-      stem: ["Our school has a music room. ____ it has an art room."],
+      prompt: "Pick the TWO words that make the sentence say why the class cheered.",
+      stem: "The class cheered ____ the team won.",
       choices: [
-        { text: "Also", correct: true },
-        { text: "In addition", correct: true },
-        { text: "However" },
-        { text: "As a result" },
-        { text: "For example" }
+        { text: "because", correct: true },
+        { text: "since", correct: true },
+        { text: "although" },
+        { text: "also" },
+        { text: "instead" }
       ],
-      clue: "Read both sentences and decide what the second one does with the first: adds to it, goes against it, gives an example or tells a result.",
+      clue: "The sentence needs a word that tells why. Ask what made the class cheer.",
       hints: [
-        "Read both sentences and decide what the second one does with the first: adds to it, goes against it, gives an example or tells a result.",
-        "Choose two words. Try each word at the start of the second sentence and read both sentences aloud.",
-        "The art room is not a result of the music room, so As a result does not fit. Check the other four."
+        "The sentence needs a word that tells why. Ask what made the class cheer.",
+        "Choose two. Say the whole sentence with each word in the blank.",
+        "Although would make winning a surprise cheer-stopper, which does not fit. Check the other four."
       ],
       how: [
-        "The first sentence tells one room the school has. The second tells another room it has. It adds to the first.",
-        "The words that add another idea are Also and In addition.",
-        "However shows a difference, As a result shows a result, and For example gives an example of the music room."
+        "The team winning is what made the class cheer.",
+        "Because and since both tell why something happened.",
+        "Although shows a surprise, also adds an idea, and instead takes the place of an idea."
       ],
-      why: "The answers are Also and In addition. Both sentences tell about a room the school has, so the second one adds another idea. However, As a result and For example show other connections."
+      why: "The answers are because and since. The team winning is the reason the class cheered, and both words give a reason. Although, also and instead do other jobs."
     },
     {
       id: "SK-SS1c-S09",
@@ -3205,27 +3197,27 @@ PP.addLesson({
       passages: [],
       pick: 1,
       like: ["SK-SS1c-C09"],
-      prompt: "Select the pair of sentences that uses the word However correctly.",
+      prompt: "Select the pair of sentences where As a result is used correctly.",
       options: [
-        "We built a sandcastle. However, a wave knocked it down.",
-        "Sam ran very fast. However, he won the race.",
-        "It was a sunny day. However, we had fun at the park.",
-        "Our puppy was sleepy. However, she fell asleep."
+        "A storm blew down the old tree. As a result, the path was blocked.",
+        "Our class has a pet turtle. As a result, we have a plant too.",
+        "Some birds fly south. As a result, geese are birds.",
+        "The soup was too hot. As a result, we ate it right away."
       ],
       answer: [0],
-      clue: "A linking word has to match how the two sentences really connect. Ask what the first sentence leads you to expect.",
+      clue: "As a result must tell what happened because of the first sentence. Check each second sentence against that.",
       hints: [
-        "A linking word has to match how the two sentences really connect. Ask what the first sentence leads you to expect.",
-        "Read each pair and say what you would expect to happen next. Then see whether the second sentence is what you expected or a surprise.",
-        "Winning after running very fast is just what you would expect. Check the other three pairs the same way."
+        "As a result must tell what happened because of the first sentence. Check each second sentence against that.",
+        "Read each pair and ask whether the first sentence is the cause of the second.",
+        "A class having a plant is not caused by having a turtle. Check the other three pairs the same way."
       ],
       how: [
-        "However shows that the second sentence goes against what you expect.",
-        "Building a sandcastle makes you expect it to stay, but a wave knocked it down. That is a surprise.",
-        "Running fast and winning, a sunny day and fun, and being sleepy and falling asleep are all what you would expect.",
-        "The answer is \"We built a sandcastle. However, a wave knocked it down.\""
+        "As a result tells that the second sentence happened because of the first.",
+        "A fallen tree on the path is why the path was blocked. That is a cause and a result.",
+        "A pet turtle does not cause a plant, birds flying south does not make geese birds, and hot soup does not make people eat right away.",
+        "The answer is \"A storm blew down the old tree. As a result, the path was blocked.\""
       ],
-      why: "The answer is \"We built a sandcastle. However, a wave knocked it down.\" You expect a sandcastle to stay, so the wave is a surprise. In the other pairs the second sentence is just what you would expect, so However does not fit."
+      why: "The answer is \"A storm blew down the old tree. As a result, the path was blocked.\" The tree falling caused the blocked path. In the other pairs the first sentence does not cause the second, so As a result does not fit."
     },
     {
       id: "SK-SS1c-S10",
@@ -3235,27 +3227,27 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C10"],
-      prompt: "Which words best finish the second sentence?",
-      stem: ["Many foods have lots of water in them. For example, ____"],
+      prompt: "Which words would best complete the sentence?",
+      stem: ["Our class cleaned the playground. In addition, ____"],
       choices: [
-        { text: "a slice of watermelon is mostly water.", correct: true },
-        { text: "foods can be hot or cold." },
-        { text: "that is why people drink juice." },
-        { text: "we also eat foods with seeds." }
+        { text: "we planted flowers by the gate.", correct: true },
+        { text: "that is why it looks so neat." },
+        { text: "the playground is a place to run and play." },
+        { text: "the playground was very messy." }
       ],
-      clue: "For example is followed by one thing that belongs to the group the first sentence names. Ask what the group is.",
+      clue: "In addition brings in one more thing. Ask what the first sentence tells, and what a second thing could be.",
       hints: [
-        "For example is followed by one thing that belongs to the group the first sentence names. Ask what the group is.",
-        "Say the group in a few words. Then test each choice: is it one thing in that group?",
-        "A sentence about foods being hot or cold is about foods in general, not about one food with lots of water. Check the other three choices."
+        "In addition brings in one more thing. Ask what the first sentence tells, and what a second thing could be.",
+        "Say what the class did in the first sentence. Then test each choice: is it another thing the class did?",
+        "A sentence about why the playground looks neat gives a result instead of another job. Check the other three choices."
       ],
       how: [
-        "The first sentence names a group: foods with lots of water in them.",
-        "For example needs one food from that group.",
-        "Watermelon is mostly water, so it is one of those foods. The answer is \"a slice of watermelon is mostly water.\"",
-        "The other choices talk about temperature, give a result or talk about seeds instead."
+        "The first sentence tells one thing the class did: cleaned the playground.",
+        "In addition needs a second thing the class did.",
+        "Planting flowers by the gate is another job. The answer is \"we planted flowers by the gate.\"",
+        "The other choices give a result, tell what the playground is for, or tell how it looked before."
       ],
-      why: "The answer is \"a slice of watermelon is mostly water.\" Watermelon is one food with lots of water in it. Hot or cold, drinking juice and seeds are not examples of foods with lots of water."
+      why: "The answer is \"we planted flowers by the gate.\" Planting flowers is one more thing the class did. A result, a use for the playground and how messy it was are not more things the class did."
     },
     {
       id: "SK-SS1c-S11",
@@ -3265,27 +3257,27 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C11"],
-      prompt: "Nia's teacher wants sentence 2 to show that the practice caused Nia to learn the song. Which word should begin sentence 2?",
-      stem: ["(1) Nia practiced the piano for twenty minutes each day.", "(2) She learned her new song."],
+      prompt: "Which words should begin sentence 2?",
+      stem: ["(1) Mia loves winter sports.", "(2) Skiing and skating are two of them."],
       choices: [
-        { text: "Therefore", correct: true },
-        { text: "For example" },
-        { text: "However" },
-        { text: "Also" }
+        { text: "For example", correct: true },
+        { text: "Instead" },
+        { text: "As a result" },
+        { text: "In addition" }
       ],
-      clue: "Choose the word after you decide how sentence 2 connects to sentence 1.",
+      clue: "Decide how sentence 2 connects to sentence 1 before you read the choices.",
       hints: [
-        "Choose the word after you decide how sentence 2 connects to sentence 1.",
-        "Read sentences 1 and 2 together. Ask which one tells what Nia did and which one tells what came after.",
-        "A word for a surprise would make learning the song sound unexpected, but the teacher says the practice caused it. Test the other three words."
+        "Decide how sentence 2 connects to sentence 1 before you read the choices.",
+        "Read both sentences. Ask what skiing and skating are, in relation to winter sports.",
+        "Skiing and skating are not caused by Mia's love of sports. Test the other three choices."
       ],
       how: [
-        "Sentence 1 says Nia practiced every day.",
-        "Sentence 2 says she learned her new song. The teacher wants it to show the practice is the cause.",
-        "A word that shows a result is Therefore. The answer is Therefore.",
-        "For example gives an example, However shows a surprise, and Also adds a separate idea."
+        "Sentence 1 names a group: winter sports.",
+        "Sentence 2 names skiing and skating, which belong to that group.",
+        "Words that introduce members of a group are For example. The answer is For example.",
+        "Instead would take the place of the group, As a result would give a result, and In addition would bring in a separate idea."
       ],
-      why: "The answer is Therefore. Practice led to learning the song, so a result word fits. For example, However and Also show other connections."
+      why: "The answer is For example. Skiing and skating are two of the winter sports, so the second sentence gives examples. Instead, As a result and In addition show other connections."
     },
     {
       id: "SK-SS1c-S12",
@@ -3296,26 +3288,27 @@ PP.addLesson({
       passages: [],
       pick: 2,
       like: ["SK-SS1c-C12"],
-      prompt: "Which TWO sentences use linking words that do the same job?",
+      prompt: "Pick the two sentences where the words that join ideas work alike.",
       choices: [
-        { text: "The ice was thin. As a result, the skaters stayed off it.", correct: true },
-        { text: "The bell rang. Therefore, the students lined up.", correct: true },
-        { text: "I like sports. For example, I play soccer on Saturdays." },
-        { text: "The hill was steep. However, Omar climbed it quickly." },
-        { text: "Our room has a rug. In addition, it has two bookshelves." }
+        { text: "The sky was cloudy. However, no rain fell.", correct: true },
+        { text: "Although the water was cold, Sam jumped in.", correct: true },
+        { text: "Birds can fly. For example, geese fly south each fall." },
+        { text: "The cake was big. Therefore, everyone got a slice." },
+        { text: "Our school has a gym. In addition, it has a pool." }
       ],
-      clue: "Linking words do different jobs: some tell what happened because of something, some add, some show a difference and some give an example. Name the job in each sentence.",
+      clue: "First, name the job of the linking word in each sentence. Then look for two sentences with the same job.",
       hints: [
-        "Linking words do different jobs: some tell what happened because of something, some add, some show a difference and some give an example. Name the job in each sentence.",
-        "Choose two. Say the job of the linking word in each sentence in your own words, then look for two that match.",
-        "For example brings in one thing from a group. It does not tell what happened because of something. Check the other four sentences."
+        "First, name the job of the linking word in each sentence. Then look for two sentences with the same job.",
+        "Choose two. Ask of each: does it add, give an example, tell a result or show a surprise?",
+        "Therefore tells what happened because of something, and it appears only once here. Check the other four sentences."
       ],
       how: [
-        "As a result tells what happened because the ice was thin. Therefore tells what happened because the bell rang. Both show a result.",
-        "However shows a difference, In addition adds a second thing, and For example names one sport as an example.",
-        "The answers are \"The ice was thin. As a result, the skaters stayed off it.\" and \"The bell rang. Therefore, the students lined up.\""
+        "Clouds make you expect rain, but no rain fell. However shows a surprise.",
+        "Cold water makes you expect Sam to stay out, but he jumped in. Although shows a surprise.",
+        "For example gives a case, Therefore tells a result, and In addition adds a thing.",
+        "The answers are \"The sky was cloudy. However, no rain fell.\" and \"Although the water was cold, Sam jumped in.\""
       ],
-      why: "The answers are \"The ice was thin. As a result, the skaters stayed off it.\" and \"The bell rang. Therefore, the students lined up.\" Both linking words tell what happened because of something. However, In addition and For example do other jobs."
+      why: "The answers are \"The sky was cloudy. However, no rain fell.\" and \"Although the water was cold, Sam jumped in.\" However and Although both show a surprise. For example gives a case, Therefore tells a result, and In addition adds a thing."
     },
     {
       id: "SK-SS1c-S13",
@@ -3325,30 +3318,27 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C13"],
-      prompt: "Why does the writer begin sentence 2 with However?",
-      stem: [
-        "(1) The hike was very long, and the trail was steep.",
-        "(2) However, the hikers still smiled at the top."
-      ],
+      prompt: "What is the job of As a result at the start of sentence 2?",
+      stem: ["(1) The class forgot to water the plant.", "(2) As a result, its leaves turned brown."],
       choices: [
-        { text: "It shows that smiling is a surprise after the long, steep hike.", correct: true },
-        { text: "It gives an example of a long, steep hike." },
-        { text: "It tells what happened because of the long, steep hike." },
-        { text: "It adds one more reason the hike was hard." }
+        { text: "It says the leaves turned brown because the plant was not watered.", correct: true },
+        { text: "It makes the brown leaves seem unexpected to the reader." },
+        { text: "It names one case of forgetting to water the plant." },
+        { text: "It lists another job that the class forgot to do." }
       ],
-      clue: "A linking word tells the reader how two sentences connect. Ask what the first sentence leads you to expect.",
+      clue: "A linking word tells how the second sentence connects to the first. Say what each sentence tells.",
       hints: [
-        "A linking word tells the reader how two sentences connect. Ask what the first sentence leads you to expect.",
-        "Read sentences 1 and 2 together. Ask whether the second one is what you expect to come next.",
-        "Sentence 2 does not add another reason the hike was hard. Test the other three choices."
+        "A linking word tells how the second sentence connects to the first. Say what each sentence tells.",
+        "Ask what is the cause and what is the effect in these two sentences.",
+        "Brown leaves are not another thing the class forgot, so one choice does not fit. Test the other three."
       ],
       how: [
-        "Sentence 1 says the hike was long and steep.",
-        "You might expect tired, unhappy hikers. Sentence 2 says they still smiled. That is a surprise.",
-        "However shows a surprise. The answer is \"It shows that smiling is a surprise after the long, steep hike.\"",
-        "Smiling is not an example of a hike, not a result of it and not another reason it was hard."
+        "Sentence 1 tells what the class did not do: water the plant.",
+        "Sentence 2 tells what happened to the plant: its leaves turned brown.",
+        "As a result shows that the second sentence is an effect. The answer is \"It says the leaves turned brown because the plant was not watered.\"",
+        "Brown leaves are not a surprise, not an example of forgetting and not another thing forgotten."
       ],
-      why: "The answer is \"It shows that smiling is a surprise after the long, steep hike.\" After a hard hike you expect tired hikers, so smiling is a surprise, and However shows that."
+      why: "The answer is \"It says the leaves turned brown because the plant was not watered.\" As a result tells what happened because of something. Brown leaves are not a surprise, an example or another thing the class forgot."
     },
     {
       id: "SK-SS1c-S14",
@@ -3358,25 +3348,24 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C14"],
-      prompt: "Choose the best linking word for each blank.",
-      text: "Our class made cards for the nurse. {0}, we made a poster. {1} we worked together, we finished early.",
+      prompt: "Pick the best linking word for each blank.",
+      text: "The library was quiet. {0}, I finished my homework early. {1} I finished early, I read a book.",
       slots: [
-        { options: ["In addition", "However", "For example"], answer: 0 },
-        { options: ["Because", "Although", "In addition"], answer: 0 }
+        { options: ["Therefore", "Instead", "For example"], answer: 0 },
+        { options: ["Since", "Instead", "Also"], answer: 0 }
       ],
-      clue: "Linking words show how ideas connect. Decide how each new idea is connected to the idea before it.",
+      clue: "Decide how each part connects to the part before it.",
       hints: [
-        "Linking words show how ideas connect. Decide how each new idea is connected to the idea before it.",
-        "For the first blank, ask whether the poster adds to the cards, goes against them or is one example of them. For the second, ask why the class finished early.",
-        "Working together is the reason the class finished early, and the blank starts that sentence. Decide the first blank yourself."
+        "Decide how each part connects to the part before it.",
+        "For each blank, read the sentence with each choice and ask which one makes sense.",
+        "Work on the second blank first. Ask whether finishing early explains why the writer read a book."
       ],
       how: [
-        "The cards are one thing the class made. The poster is one more thing, so the word adds an idea: In addition.",
-        "Working together is the reason the class finished early.",
-        "A word that gives a reason at the start of a sentence is Because. The answers are In addition and Because.",
-        "However and Although would show a surprise, and For example would give an example."
+        "A quiet library makes it easy to work, so the homework got done early because of that. The first word tells a result: Therefore.",
+        "Finishing early is why there was time to read a book. A word that gives a reason is Since.",
+        "Instead would take something away, and For example and Also do not make the sentences fit."
       ],
-      why: "The answers are In addition and Because. The poster is one more thing the class made, so In addition fits. Working together is the reason they finished early, so Because fits."
+      why: "The answers are Therefore and Since. The quiet library led to finishing homework early, so Therefore fits. Finishing early is the reason for reading a book, so Since fits. Instead, For example and Also do not make the sentences fit."
     },
     {
       id: "SK-SS1c-S15",
@@ -3386,24 +3375,24 @@ PP.addLesson({
       std: ["3.T.SS.1.c"],
       passages: [],
       like: ["SK-SS1c-C15"],
-      prompt: "Complete the paragraph. Choose the best linking word for each blank.",
-      text: "Cactus plants live in dry places. {0}, they store water in their thick stems. {1} the desert is very hot, cactus plants can still grow there.",
+      prompt: "Fill each gap in the paragraph with the word that links the ideas best.",
+      text: "Many sports use a net. {0}, tennis and volleyball are played over one. Volleyball players wear sneakers. {1}, many wear knee pads.",
       slots: [
-        { options: ["As a result", "However", "For example"], answer: 0 },
-        { options: ["Although", "Because", "In addition"], answer: 0 }
+        { options: ["For example", "Therefore", "Instead"], answer: 0 },
+        { options: ["Also", "Since", "Instead"], answer: 0 }
       ],
-      clue: "Linking words show how ideas connect. Decide how each sentence is connected to the one before it.",
+      clue: "Decide how each sentence connects to the one before it.",
       hints: [
-        "Linking words show how ideas connect. Decide how each sentence is connected to the one before it.",
-        "For the first blank, ask what living in dry places causes. For the second, ask whether a hot desert and growing there go together or go against each other.",
-        "A very hot desert is a hard place to grow, yet cactus plants grow there. Decide the first blank yourself."
+        "Decide how each sentence connects to the one before it.",
+        "For the first blank, ask what tennis and volleyball are in relation to sports that use a net. For the second, ask what knee pads are in relation to sneakers.",
+        "Start with the second blank. Read the sentence with each word and listen for the one that fits."
       ],
       how: [
-        "Cactus plants live where water is rare, so they store water in their stems. The second idea happens because of the first: As a result.",
-        "A hot desert is hard to grow in, but cactus plants can grow there. Those ideas go against each other, so the sentence starts with Although.",
-        "The answers are As a result and Although."
+        "Tennis and volleyball are two sports that use a net, so the first word introduces them as cases: For example.",
+        "Knee pads are one more thing many volleyball players wear. A word that adds an idea is Also.",
+        "Therefore would give a result, Instead would take something away, and Since would give a reason."
       ],
-      why: "The answers are As a result and Although. Living in dry places is why cactus plants store water, so the first blank is a result. A very hot desert and growing there go against each other, so the second blank shows a surprise."
+      why: "The answers are For example and Also. Tennis and volleyball are examples of sports that use a net, and knee pads are one more thing volleyball players wear. Therefore, Since and Instead do not fit."
     }
   ],
   addons: {
@@ -3435,15 +3424,15 @@ PP.addLesson({
     },
     "SK-SS1c-P3": {
       hints: [
-        "A new sentence that gives an example has to show one case of the idea before it, and its first word has to show that.",
+        "A sentence that supports an idea has to show one case of it, whatever word it begins with.",
         "Reread sentence 5. Find the sentence that gives one case of what it says.",
-        "Since it was sunny, I rode my bike to school today is about a sunny day, not about getting stronger. Check the other three sentences against sentence 5."
+        "Riding to school on a sunny day is not about getting stronger, even with For example in front of it. Check the other three sentences against sentence 5."
       ],
       how: [
         "Sentence 5 says Sofia's legs get a little stronger every week.",
         "Pedaling all the way up a hill is one example of stronger legs.",
         "The answer is \"For example, I can now pedal all the way up Oak Street hill.\"",
-        "Although does not fit because strong legs climbing a hill is no surprise, and the sunny day and the sister's bell are not about getting stronger."
+        "Although does not fit because strong legs climbing a hill is no surprise, and the sunny day and the sister's bell are not about getting stronger, even with For example in front of them."
       ]
     },
     "SK-SS1c-P4": {

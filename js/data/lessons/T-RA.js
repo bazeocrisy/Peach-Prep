@@ -2181,6 +2181,19 @@ PP.addLesson({
       paragraphs: [
         ["A good warm-up for kids takes about five to ten minutes.", "Try an easy jog or a brisk walk.", "Then swing your arms in big circles.", "Start slowly, and then go a little faster.", "You should be warm, but not tired, when the game begins.", "Take your time with each move."],
         ["After you play, do a cool-down.", "Walk or move gently for five to ten minutes.", "A cool-down helps your heart and breathing slow down, so you do not feel dizzy.", "A cool-down is just as easy as a warm-up.", "Keep moving until your breathing feels calm again.", "Then you can sit and rest."]
+      ] },
+    { id: "p9", title: "An Axolotl Never Leaves the Water", byline: "Source 1", genre: "Informational text",
+      paragraphs: [
+        ["An axolotl is a kind of salamander.", "It lives its whole life in the water."],
+        ["It keeps feathery gills on the sides of its head.", "The gills let it breathe underwater.", "It also has lungs, and sometimes it swims up for a gulp of air."],
+        ["Axolotls live in lakes and canals near Mexico City.", "They hide in plants and mud while the sun is up.", "They hunt at night for worms, insects and small fish.", "An axolotl opens its mouth and sucks in its food with a gulp of water."],
+        ["An axolotl has a long tail and a wide mouth.", "Its skin is smooth and wet, and it has no scales."]
+      ] },
+    { id: "p10", title: "Axolotls Can Regrow Body Parts", byline: "Source 2", genre: "Informational text",
+      paragraphs: [
+        ["An axolotl has a special power.", "If it loses a leg, a new leg grows back.", "The new leg heals without a scar."],
+        ["An axolotl can also regrow parts of its heart and its brain.", "Scientists study axolotls to learn how this works.", "They hope what they learn can one day help people heal."],
+        ["In the wild, axolotls are in trouble.", "They live in only a few lakes and canals near Mexico City.", "Over the years, the lakes where they live have grown smaller.", "Dirty water and fewer wild places have made them rare.", "Fewer than one thousand may be left in the wild.", "People are working to clean the water and keep them safe."]
       ] }
   ],
   practice: [
@@ -2243,64 +2256,102 @@ PP.addLesson({
      NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
-      { ref: "SK-RA1c-P4" },
-      { ref: "SK-RA1c-P5" },
-      { id: "SK-RA1c-C03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p2"],
-        stem: ["Source 2 says: \"So many butterflies cover the branches that the trees look orange.\""],
-        prompt: "Leah wants to write this idea in her own words. Which sentence for her summary keeps the meaning and does NOT copy Source 2?",
+      { id: "SK-RA1c-C01", type: "dropdown", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p9"],
+        prompt: "Kai wants to join two ideas from Source 1. Choose the words that best begin the second sentence.",
+        text: "Axolotls hunt for worms and small fish at night. {0} they hide in plants and mud.",
+        slots: [
+          { options: ["During the day,", "Last winter,", "For example,", "Instead,"], answer: 0 }
+        ],
+        clue: "Think about when each thing happens. The right words tell the reader the time.",
+        hints: [
+          "Think about when each thing happens. The right words tell the reader the time.",
+          "Read the first sentence and then the second. Ask whether they happen at the same time or at different times.",
+          "\"Last winter\" would put the hiding in the past, but the passage tells what axolotls do every day. Test the other choices."
+        ],
+        how: [
+          "The first sentence tells what axolotls do at night, and the second tells what they do at another time.",
+          "Source 1 says they hide in plants and mud while the sun is up. The time words are \"During the day,\"",
+          "\"Last winter\" is the wrong time, \"For example\" gives an example, and \"Instead\" changes the idea."
+        ],
+        misconception: "A common mix-up is choosing a time word for the wrong moment. Ask when the second idea happens.",
+        why: "The answer is \"During the day,\" because Source 1 says axolotls hide in plants and mud while the sun is up, and they hunt at night. Last winter is the wrong time, for example gives an example, and instead changes the idea." },
+      { id: "SK-RA1c-C02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: ["p9", "p10"],
+        prompt: "Which sentence would be the best ending for Kai's summary?",
         choices: [
-          { text: "Huge numbers of monarchs rest on the tree branches, so the trees seem to turn orange.", correct: true },
-          { text: "So many butterflies cover the branches that the trees look orange." },
-          { text: "A few monarchs rest in each tree, so the trees look a little orange." },
-          { text: "The orange trees in Mexico are the prettiest sight in the world." }
+          { text: "Both sources show that axolotls are special water animals that need help.", correct: true },
+          { text: "An axolotl hunts for worms, insects and small fish when it is dark outside." },
+          { text: "Salamanders belong to the same group of animals as frogs and toads." },
+          { text: "Those are all of the facts about axolotls that I had time to write." }
+        ],
+        clue: "A good ending wraps up the big ideas. Think about what each source is mostly about.",
+        hints: [
+          "A good ending wraps up the big ideas. Think about what each source is mostly about.",
+          "Read each ending and ask what it tells the reader about axolotls.",
+          "\"Those are all of the facts I had time to write\" tells the reader nothing about axolotls. Check the other three endings."
+        ],
+        how: [
+          "Source 1 is about an animal that lives in water. Source 2 is about its power to regrow parts and its trouble in the wild.",
+          "A good ending wraps up both ideas: \"Both sources show that axolotls are special water animals that need help.\"",
+          "The hunting sentence is one detail from Source 1, the sentence about frogs and toads adds a new fact, and \"Those are all of the facts about axolotls that I had time to write\" tells nothing about axolotls."
+        ],
+        misconception: "A common mix-up is ending with one small detail. An ending wraps up the big ideas of both sources.",
+        why: "The answer is \"Both sources show that axolotls are special water animals that need help.\" It wraps up the big ideas of both sources. The other choices give one detail, add a new fact or say nothing about axolotls." },
+      { id: "SK-RA1c-C03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p10"],
+        stem: ["Source 2 says: \"If it loses a leg, a new leg grows back. The new leg heals without a scar.\""],
+        prompt: "Kai wants to write this idea in his own words. Which sentence for his summary keeps the meaning and does NOT copy Source 2?",
+        choices: [
+          { text: "An axolotl can grow a replacement for a lost leg, and the spot heals with no scar.", correct: true },
+          { text: "If it loses a leg, a new leg grows back. The new leg heals without a scar." },
+          { text: "An axolotl that loses a leg never gets it back, and a scar forms on the spot." },
+          { text: "Growing back a leg is the coolest trick that any animal in the world can do." }
         ],
         clue: "Own words means saying an idea your way instead of copying it. The meaning must stay the same.",
         hints: [
           "Own words means saying an idea your way instead of copying it. The meaning must stay the same.",
-          "Compare each choice with the sentence in the box. Ask two questions: does it use the same words, and does it tell the same idea?",
-          "The sentence about a few monarchs changes how many butterflies there are. Check the other choices the same way."
+          "Compare each choice with the sentences in the box. Ask two questions: does it use the same words, and does it tell the same idea?",
+          "The sentence that says the leg never grows back changes what the source says. Check the other choices the same way."
         ],
         how: [
-          "The sentence in the box says so many butterflies cover the branches that the trees look orange.",
-          "A summary should say that idea in new words and keep the meaning. \"Huge numbers of monarchs rest on the tree branches, so the trees seem to turn orange\" does both.",
-          "The answer is \"Huge numbers of monarchs rest on the tree branches, so the trees seem to turn orange.\"",
-          "One choice copies the source word for word, one changes how many butterflies there are, and one is an opinion."
+          "The sentences in the box say a lost leg grows back and heals without a scar.",
+          "A summary should say that idea in new words and keep the meaning. \"An axolotl can grow a replacement for a lost leg, and the spot heals with no scar\" does both.",
+          "The answer is \"An axolotl can grow a replacement for a lost leg, and the spot heals with no scar.\"",
+          "One choice copies the source word for word, one says the leg never grows back, and one is an opinion."
         ],
         misconception: "A common mix-up is thinking that copying keeps the meaning safest. A summary says the idea in your own words.",
-        why: "The answer is \"Huge numbers of monarchs rest on the tree branches, so the trees seem to turn orange.\" It keeps the meaning and uses new words. One choice copies the source, one changes the number of butterflies, and one is an opinion." },
+        why: "The answer is \"An axolotl can grow a replacement for a lost leg, and the spot heals with no scar.\" It keeps the meaning and uses new words. One choice copies the source, one changes the meaning, and one is an opinion." },
       { id: "SK-RA1c-C04", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
-        stem: ["Leah wants two more sources for her summary about how monarch butterflies live. She finds five."],
-        prompt: "Which TWO sources can Leah trust for facts about monarchs? Choose two answers.",
+        stem: ["Kai wants two more sources for his summary about axolotls. He finds five."],
+        prompt: "Which TWO sources can Kai trust for facts about axolotls? Choose two answers.",
         choices: [
-          { text: "a web page from a wildlife agency, written by a scientist who studies butterflies", correct: true },
-          { text: "a library book by a butterfly expert, with the author's name and a list of sources", correct: true },
-          { text: "a video by a stranger who says, \"I heard monarchs live for ten years\"" },
-          { text: "an ad for a butterfly garden kit that says it is the best on Earth" },
-          { text: "a story about a talking butterfly named Max who tells about his trip" }
+          { text: "a page from a zoo's website, written by a keeper who cares for axolotls", correct: true },
+          { text: "a science magazine article by an amphibian scientist, with its sources listed", correct: true },
+          { text: "a page about dogs, written by a famous dog trainer" },
+          { text: "a pet supply company's page that says its tank is the best home for any pet" },
+          { text: "a post with no name on it that says axolotls are gone from the Earth" }
         ],
-        clue: "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
+        clue: "A source you can trust gives facts, and the writer knows the topic. Ask who made it and why.",
         hints: [
-          "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
-          "For each choice, find who made it and what it wants to do: teach, sell or entertain.",
-          "A talking butterfly is made up, so it cannot be a source of facts. Check the other four choices."
+          "A source you can trust gives facts, and the writer knows the topic. Ask who made it and why.",
+          "For each source, ask who made it, what that person knows about, and what the source wants.",
+          "A dog trainer knows about dogs, not axolotls. Check the other four choices."
         ],
         how: [
-          "A source Leah can trust is made by someone who knows monarchs and wants to share facts.",
-          "The wildlife agency page is written by a scientist, and the library book names its expert author and its sources. The answers are \"a web page from a wildlife agency, written by a scientist who studies butterflies\" and \"a library book by a butterfly expert, with the author's name and a list of sources.\"",
-          "The stranger's video repeats something he heard, the ad wants to sell a kit, and the talking butterfly story is made up."
+          "A source Kai can trust is made by someone who knows axolotls and shares facts.",
+          "A zoo keeper cares for axolotls, and an amphibian scientist studies them and lists sources. The answers are \"a page from a zoo's website, written by a keeper who cares for axolotls\" and \"a science magazine article by an amphibian scientist, with its sources listed.\"",
+          "The dog trainer knows a different animal, the company wants to sell a tank, and the post has no name, so no one can check it."
         ],
-        misconception: "A common mix-up is trusting a source because it is exciting or easy to find. Trust a source because the writer knows the topic and shares facts.",
-        why: "The answers are \"a web page from a wildlife agency, written by a scientist who studies butterflies\" and \"a library book by a butterfly expert, with the author's name and a list of sources.\" Both come from people who know monarchs. The video repeats a rumor, the ad tries to sell, and the talking butterfly story is made up." },
-      { id: "SK-RA1c-C05", type: "hottext", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: ["p1", "p2"],
-        stem: ["Leah's teacher says a summary may use only facts from the two sources. Here is Leah's draft.", "(1) Monarch butterflies begin life as tiny eggs on milkweed plants. (2) The caterpillars eat milkweed leaves and grow for about two weeks. (3) Then each caterpillar makes a green case, and a butterfly comes out. (4) A monarch has four wings, two on each side. (5) In the fall, many monarchs fly south to the mountains of Mexico. (6) In spring, they fly north again and lay eggs on milkweed along the way."],
-        prompt: "Which sentence should Leah take out of her summary?",
+        misconception: "A common mix-up is trusting a source because it sounds sure or comes from an expert. The writer must know this topic, and the source should be one you can check.",
+        why: "The answers are \"a page from a zoo's website, written by a keeper who cares for axolotls\" and \"a science magazine article by an amphibian scientist, with its sources listed.\" Both come from people who know axolotls. The dog trainer knows a different animal, the company wants to sell, and the post has no name." },
+      { id: "SK-RA1c-C05", type: "hottext", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: ["p9", "p10"],
+        stem: ["Kai's teacher says a summary may use only facts from the two sources. Here is Kai's draft.", "(1) An axolotl is a salamander that lives its whole life in water. (2) It keeps feathery gills on the sides of its head. (3) It hunts at night for worms, insects and small fish. (4) Frogs and toads are also amphibians. (5) If an axolotl loses a leg, a new one grows back. (6) Fewer than one thousand may be left in the wild."],
+        prompt: "Which sentence should Kai take out of his summary?",
         options: [
-          "(1) Monarch butterflies begin life as tiny eggs on milkweed plants.",
-          "(2) The caterpillars eat milkweed leaves and grow for about two weeks.",
-          "(3) Then each caterpillar makes a green case, and a butterfly comes out.",
-          "(4) A monarch has four wings, two on each side.",
-          "(5) In the fall, many monarchs fly south to the mountains of Mexico.",
-          "(6) In spring, they fly north again and lay eggs on milkweed along the way."
+          "(1) An axolotl is a salamander that lives its whole life in water.",
+          "(2) It keeps feathery gills on the sides of its head.",
+          "(3) It hunts at night for worms, insects and small fish.",
+          "(4) Frogs and toads are also amphibians.",
+          "(5) If an axolotl loses a leg, a new one grows back.",
+          "(6) Fewer than one thousand may be left in the wild."
         ],
         answer: [3], pick: 1,
         clue: "A summary tells only what the sources say, even when an extra fact is true.",
@@ -2312,11 +2363,11 @@ PP.addLesson({
         how: [
           "A summary may use only facts that the two sources give.",
           "Sentences 1, 2, 3, 5 and 6 are all in Source 1 or Source 2.",
-          "Neither source says anything about a monarch's wings. Sentence 4 may be true, but it does not come from the sources.",
-          "The answer is sentence 4: \"A monarch has four wings, two on each side.\""
+          "Neither source says anything about frogs and toads. Sentence 4 may be true, but it does not come from the sources.",
+          "The answer is sentence 4: \"Frogs and toads are also amphibians.\""
         ],
         misconception: "A common mix-up is keeping a sentence because it is true. A summary also leaves out true facts that are not in the sources.",
-        why: "The answer is sentence 4, \"A monarch has four wings, two on each side.\" It is a true fact, but neither source tells it. Every other sentence sums up something in Source 1 or Source 2." }
+        why: "The answer is sentence 4, \"Frogs and toads are also amphibians.\" It is a true fact, but neither source tells it. Every other sentence sums up something in Source 1 or Source 2." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-RA1c-C06", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: ["p5", "p6"], pick: 2,
@@ -2350,21 +2401,21 @@ PP.addLesson({
           { text: "It can fly forward, hover and even fly backward.", correct: true },
           { text: "Most dragonflies stay near ponds and streams." },
           { text: "A resting dragonfly holds its wings out flat." },
-          { text: "A dragonfly cannot sting people." }
+          { text: "It catches mosquitoes, flies and other small insects in the air." }
         ],
         clue: "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
         hints: [
           "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
-          "Reread the sentence in the box. Then look in Source 2 for facts about flying.",
-          "A fact about how a dragonfly rests does not explain how it flies. Check the other four choices."
+          "Reread the sentence in the box. Then look in Source 2 for facts that match it.",
+          "A fact about how a dragonfly rests does not explain why it flies so well. Check the other four choices."
         ],
         how: [
           "Dev's summary is about why dragonflies fly so well, so each fact must help explain that.",
           "A dragonfly can move each of its four wings by itself, and that lets it fly forward, hover and fly backward. The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\"",
-          "Where dragonflies stay, how they rest and whether they sting are true, but they do not explain how well they fly."
+          "Where dragonflies stay, how they rest and what they catch are true, but they do not explain how well they fly."
         ],
         misconception: "A common mix-up is including every fact about the animal. Include the facts that answer the question the summary asks.",
-        why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain why dragonflies fly so well. Where they stay, how they rest and that they cannot sting are about other topics." },
+        why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain why dragonflies fly so well. Where they stay, how they rest and what they catch are about other topics." },
       { id: "SK-RA1c-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p5", "p6"],
         stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Dragonflies usually live in places close to water."],
         prompt: "Which sentence in Dev's draft is copied word for word from a source?",
@@ -2563,7 +2614,7 @@ PP.addLesson({
      the core item each one really practises. */
   similar: [
     { id: "SK-RA1c-S01", type: "dropdown", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
-      like: ["SK-RA1c-P4"],
+      like: ["SK-RA1c-C01"],
       stem: ["Source A: A new termite colony starts with one king and one queen.", "Source B: After many seasons, the queen lays thousands of eggs, and the colony grows."],
       prompt: "Pick the words that should begin Mia's second sentence.",
       text: "A new termite colony starts with a king and a queen. {0} the queen lays thousands of eggs, and the colony grows.",
@@ -2584,7 +2635,7 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a time word for the wrong moment. Ask when the second idea happens.",
       why: "The answer is \"Over the years,\" because Source B says the queen lays thousands of eggs over the years, after the colony starts. Last week would put the idea at the wrong time, however would show a difference, and at first would put the idea at the start." },
     { id: "SK-RA1c-S02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
-      like: ["SK-RA1c-P5"],
+      like: ["SK-RA1c-C02"],
       stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia."],
       prompt: "Which closing line wraps up what the two platypus sources show?",
       choices: [
@@ -2635,7 +2686,7 @@ PP.addLesson({
       prompt: "Which TWO would be good places to learn that? Choose two answers.",
       choices: [
         { text: "the weather bureau's own explainer, signed by one of its forecasters", correct: true },
-        { text: "a science museum's guide to space tools, written by its staff astronomers", correct: true },
+        { text: "the kids' page of a national space agency, which explains how weather satellites see clouds", correct: true },
         { text: "a magazine from 1958, before any weather satellite had been launched" },
         { text: "a travel blog about the best beaches to visit in the summer months" },
         { text: "a classmate's note that says satellites are basically magic in the sky" }
@@ -2648,11 +2699,11 @@ PP.addLesson({
       ],
       how: [
         "Dina needs facts about how satellites help forecasters, from people who know the topic.",
-        "A weather bureau explainer is signed by a forecaster, and a science museum guide is written by astronomers. The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"a science museum's guide to space tools, written by its staff astronomers.\"",
+        "A weather bureau explainer is signed by a forecaster, and a space agency's kids' page is made by people who run weather satellites. The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"the kids' page of a national space agency, which explains how weather satellites see clouds.\"",
         "The 1958 magazine came before weather satellites, the travel blog is about beaches, and the classmate's note is just a guess."
       ],
       misconception: "A common mix-up is trusting a place because it is easy to find. Choose places whose writers know the topic and fit the question.",
-      why: "The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"a science museum's guide to space tools, written by its staff astronomers.\" Both are written by people who know the topic. The 1958 magazine is too old, the travel blog is off topic, and the note is a guess." },
+      why: "The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"the kids' page of a national space agency, which explains how weather satellites see clouds.\" Both are written by people who know the topic. The 1958 magazine is too old, the travel blog is off topic, and the note is a guess." },
     { id: "SK-RA1c-S05", type: "hottext", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C05"],
       stem: ["Source A: A comet is a ball of ice and dust that travels around the Sun.", "Source B: When a comet gets near the Sun, its ice turns to gas. The gas forms a long tail that points away from the Sun.", "Dina's summary, which may use only what the sources say:", "(1) A comet is a ball of ice and dust. (2) It travels around the Sun. (3) The planet Mars has two small moons. (4) Near the Sun, a comet's ice turns to gas. (5) The gas forms a long tail that points away from the Sun."],
@@ -2706,11 +2757,11 @@ PP.addLesson({
       why: "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring can show what the weather was like.\" Each one sums up a whole source. The other sentences are details or examples." },
     { id: "SK-RA1c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C07"],
-      stem: ["Source B: A platypus has webbed feet and thick fur that keeps water out. It hunts for food in streams in Australia. A male platypus has a sharp spur on each back foot.", "Anil is writing about what helps a platypus swim well."],
+      stem: ["Source B: A platypus paddles with its short, webbed front feet. Its back feet steer like rudders. It hunts for food in streams in Australia. A male platypus has a sharp spur on each back foot.", "Anil is writing about what helps a platypus swim well."],
       prompt: "Pick the TWO facts that Anil needs. Choose two answers.",
       choices: [
-        { text: "It has webbed feet.", correct: true },
-        { text: "Its thick fur keeps water out.", correct: true },
+        { text: "It paddles with its webbed front feet.", correct: true },
+        { text: "Its back feet steer it like rudders.", correct: true },
         { text: "It hunts for food in streams in Australia." },
         { text: "A male platypus has a sharp spur on each back foot." },
         { text: "It lays eggs instead of giving birth." }
@@ -2718,16 +2769,16 @@ PP.addLesson({
       clue: "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
       hints: [
         "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
-        "Reread the last sentence in the box. Then look in Source B for facts about swimming.",
+        "Reread the last sentence in the box. Then look in Source B for facts that match it.",
         "A fact about a spur on the back foot does not explain swimming. Check the other four choices."
       ],
       how: [
-        "Anil's summary is about why a platypus swims well, so each fact must help explain that.",
-        "Webbed feet push against the water, and thick fur that keeps water out helps the platypus stay dry. The answers are \"It has webbed feet.\" and \"Its thick fur keeps water out.\"",
-        "Where it hunts, the spur on a male's foot and laying eggs are true, but they do not explain why it swims well."
+        "Anil is writing about what helps a platypus swim well, so each fact must help explain that.",
+        "Webbed front feet paddle it forward, and back feet steer like rudders. The answers are \"It paddles with its webbed front feet.\" and \"Its back feet steer it like rudders.\"",
+        "Where it hunts, the spur on a male's foot and laying eggs are true, but they do not explain how it swims."
       ],
       misconception: "A common mix-up is including every fact about the animal. Include the facts that answer the question the summary asks.",
-      why: "The answers are \"It has webbed feet.\" and \"Its thick fur keeps water out.\" Both help explain why a platypus swims well. Where it hunts, the spur and laying eggs are about other topics." },
+      why: "The answers are \"It paddles with its webbed front feet.\" and \"Its back feet steer it like rudders.\" Both explain how a platypus swims well. Where it hunts, the spur and laying eggs are about other topics." },
     { id: "SK-RA1c-S08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C08"],
       stem: ["Source A: A satellite is an object that goes around Earth. Some satellites are built by people and sent into space.", "Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming.", "Dina's draft, which must be in her own words:", "(1) A satellite is a machine that circles Earth. (2) People build some satellites and launch them into space. (3) Weather satellites photograph clouds from far above. (4) The pictures help forecasters tell when storms are coming."],
@@ -2805,7 +2856,7 @@ PP.addLesson({
     { id: "SK-RA1c-S11", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C11"],
       stem: ["Source A: A satellite is an object that circles Earth. Some satellites are built by people and sent into space.", "Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming."],
-      prompt: "Dina is writing a summary of both sources. Which opening sentence best sums up the big ideas of BOTH?",
+      prompt: "Which first sentence would start a summary that covers both of Dina's sources?",
       choices: [
         { text: "Satellites circle Earth, and weather ones help forecasters see storms.", correct: true },
         { text: "Some satellites are built by people." },
@@ -2828,7 +2879,7 @@ PP.addLesson({
     { id: "SK-RA1c-S12", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C12"],
       stem: ["Source A: A comet is a ball of ice and dust that travels around the Sun. When a comet gets near the Sun, its ice turns to gas. Some comets are named after the people who found them."],
-      prompt: "Mina is making notes for a summary of Source A. Which detail is the LEAST important, so she can leave it out?",
+      prompt: "Mina must cut one fact from her notes on Source A. Which one matters least?",
       choices: [
         { text: "Some comets are named after the people who found them.", correct: true },
         { text: "A comet is a ball of ice and dust in space." },

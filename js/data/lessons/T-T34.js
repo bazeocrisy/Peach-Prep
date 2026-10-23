@@ -984,21 +984,22 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["Topic: Should our class read outside on sunny days?", "Sentence 1: Some classes at our school read outside.", "Sentence 2: I think our class should read outside on sunny days.", "Sentence 3: Do you like to read on sunny days?"],
-      ask: "Which sentence is the best opinion statement for this topic?",
+      show: ["Topic: Should our class read outside on sunny days?", "Sentence 0: Reading is something our class does every day.", "Sentence 1: Some classes at our school read outside.", "Sentence 2: I think our class should read outside on sunny days.", "Sentence 3: Do you like to read on sunny days?"],
+      ask: "Which sentence is the best opinion statement for this topic, and which one introduces it?",
       steps: [
+        "An introduction tells the reader what the topic is. Sentence 0 names reading, so it introduces the topic.",
         "An opinion statement tells what the writer thinks or wants. Look for clue words like I think and should.",
         "Sentence 1 is a fact about other classes. It does not say what the writer wants.",
         "Sentence 3 is a question. A question can start an essay, but it does not tell the reader your opinion."
       ],
-      answer: "Sentence 2 is the best opinion statement, because it clearly tells what the writer thinks the class should do."
+      answer: "Sentence 2 is the best opinion statement, because it clearly tells what the writer thinks the class should do. Sentence 0 introduces the topic."
     },
     {
       show: ["Opinion: Our school should have a garden.", "Reason you are given: A garden would help students learn.", "Fact from a passage: Students in a garden can watch seeds sprout and grow."],
-      ask: "How can you explain this reason with evidence?",
+      ask: "How can you explain this reason with evidence, and which linking word joins the pieces?",
       steps: [
         "Start with the reason you were given: A garden would help students learn.",
-        "Add because, and then tell the fact in your own words: because we could watch seeds sprout and grow.",
+        "Add because, and then tell the fact in your own words: because we could watch seeds sprout and grow. Because joins a reason to the fact that explains it. In addition would add another reason instead.",
         "Add one more sentence that tells why the fact matters: Seeing it for ourselves would help us remember."
       ],
       answer: "A garden would help students learn because we could watch seeds sprout and grow. Seeing it for ourselves would help us remember."
@@ -1044,7 +1045,7 @@ PP.addLesson({
     { id: "p3", draft: true, title: "A Crossing Sign on Elm Street", byline: "Nia's first draft", genre: "Student draft (opinion)",
       paragraphs: [
         ["(1) Many students at Hillcrest Elementary walk to school on Elm Street.", "(2) At the corner by the park, there is no sign to tell drivers that children are crossing."],
-        ["(3) A sign would help drivers see us.", "(4) Cars often drive past quickly when children are waiting at the corner.", "(5) Last Monday, a car did not slow down until my little brother stepped back from the curb."],
+        ["(3) A sign would help drivers see us.", "(4) Cars often drive past quickly when children are waiting at the corner.", "(5) Last Monday, two cars drove past without slowing down while we waited at the corner."],
         ["(6) A sign would make younger students feel safe.", "(7) They would know that drivers have been told to watch for them.", "(8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down."],
         ["(9) A sign is a good idea."]
       ] },
@@ -1231,7 +1232,7 @@ PP.addLesson({
         why: "The answers are \"A sign would give our crossing guard some help when the corner gets busy\" and \"A sign would help parents feel good about letting younger kids walk to school.\" Each tells why a sign is a good idea. The lanes sentence is a fact, the question asks something, and \"the busiest street\" does not say why a sign helps." },
       { id: "SK-TT3c-C08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: ["p3"],
         prompt: "Nia wants to link her ideas in paragraphs 2 to 4. Choose the best word or words for each blank.",
-        text: "(5) Last Monday, a car did not slow down until my little brother stepped back from the curb. (6) {0}, a sign would make younger students feel safe. (8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down. {1}, a crossing sign is a good idea for Elm Street.",
+        text: "(5) Last Monday, two cars drove past without slowing down while we waited at the corner. (6) {0}, a sign would make younger students feel safe. (8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down. {1}, a crossing sign is a good idea for Elm Street.",
         slots: [
           { options: ["In addition", "For example", "However"], answer: 0 },
           { options: ["Therefore", "Before that", "Instead"], answer: 0 }
@@ -1252,19 +1253,19 @@ PP.addLesson({
         why: "Blank 1 needs \"In addition\" because sentence 6 adds a second reason. Blank 2 needs \"Therefore\" because the last sentence sums up the reasons. \"For example,\" \"However,\" \"Before that\" and \"Instead\" do not show how these sentences connect." },
       { id: "SK-TT3c-C09", type: "hottext", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: ["p3"], pick: 2,
         prompt: "Sentence 6 gives a reason: \"A sign would make younger students feel safe.\" Which TWO sentences are evidence that supports this reason? Choose the two sentences.",
-        targets: ["p3:2:2", "p3:2:3", "p3:3:2", "p3:3:3", "p3:4:1"],
+        targets: ["p3:2:2", "p3:2:3", "p3:3:1", "p3:3:2", "p3:3:3", "p3:4:1"],
         answer: ["p3:3:2", "p3:3:3"],
         clue: "Evidence is a fact, an example or an expert's words that helps prove a reason. Ask which sentences explain why younger students would feel safe.",
         hints: [
           "Evidence is a fact, an example or an expert's words that helps prove a reason. Ask which sentences explain why younger students would feel safe.",
           "Find the reason in sentence 6, and read the sentences before and after it. Choose two.",
-          "Sentence 9 sums up the whole draft, so it is not evidence for one reason. Check the sentences that are left."
+          "Sentence 9 sums up the whole draft, and sentence 6 is the reason itself. Check the sentences that are left."
         ],
         how: [
           "The reason is that a sign would make younger students feel safe, so the evidence must explain why.",
           "Sentence 7 says they would know drivers have been told to watch for them, and sentence 8 says the crossing guard thinks a bright sign would remind drivers to slow down.",
           "The answers are sentence 7 and sentence 8.",
-          "Sentences 4 and 5 are evidence for the first reason, about drivers seeing students, and sentence 9 sums up the whole draft."
+          "Sentence 6 is the reason itself, sentences 4 and 5 are evidence for the first reason about drivers seeing students, and sentence 9 sums up the whole draft."
         ],
         misconception: "A common mix-up is choosing evidence for the wrong reason. Match each piece of evidence to the reason it explains.",
         why: "The answers are sentence 7, \"They would know that drivers have been told to watch for them,\" and sentence 8, \"Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down.\" Both explain why younger students would feel safe. Sentences 4 and 5 support the first reason, and sentence 9 is the ending." },
@@ -1301,16 +1302,16 @@ PP.addLesson({
           "wraps up the opinion and reasons"
         ],
         rows: [
-          { text: "(1) My family has a shelf full of board games, but we hardly ever play them.", answer: 0 },
-          { text: "(2) I think my family should have game night every Friday.", answer: 1 },
-          { text: "(3) Game night would bring us closer together.", answer: 2 },
-          { text: "(8) So let's start game night this Friday, because it brings us together and helps us practice math.", answer: 3 }
+          { text: "So let's start game night this Friday, because it brings us together and helps us practice math.", answer: 3 },
+          { text: "Game night would bring us closer together.", answer: 2 },
+          { text: "My family has a shelf full of board games, but we hardly ever play them.", answer: 0 },
+          { text: "I think my family should have game night every Friday.", answer: 1 }
         ],
         clue: "An opinion piece has an introduction, an opinion, reasons and a conclusion. Ask what job each sentence does.",
         hints: [
           "An opinion piece has an introduction, an opinion, reasons and a conclusion. Ask what job each sentence does.",
           "For each sentence, ask whether it tells the topic, tells what the writer wants, tells why, or sums up the whole draft.",
-          "Sentence 2 uses I think and should, so it tells what the writer wants. Match that row first, then work out the other three."
+          "Look for the words I think or should. They show what the writer wants. Then work out the other rows."
         ],
         how: [
           "Sentence 1 tells about the games on the shelf, so it introduces the topic.",
@@ -1430,7 +1431,7 @@ PP.addLesson({
         "(2) We could add carrots, cucumbers, beans and apples.",
         "(3) Our school should add one next to the lunch line."
       ],
-      prompt: "Which sentence should be added before sentence 1 to introduce the topic?",
+      prompt: "Pick the opening line that names the subject of this whole draft.",
       choices: [
         { text: "Lunch is the time when students sit down to eat and talk with friends.", correct: true },
         { text: "I think students should be allowed to eat dessert every single day." },
@@ -1453,32 +1454,32 @@ PP.addLesson({
       why: "The answer is: Lunch is the time when students sit down to eat and talk with friends. It tells the reader the topic of the whole draft. The dessert sentence is a different opinion, the carrot sentence is a detail, and the long line sentence is about a different problem." },
     { id: "SK-TT3c-S02", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C02"],
       stem: [
-        "(1) Our class should write a class newspaper.",
-        "(2) A newspaper would give every student a chance to share news."
+        "(1) Our class should write its own newspaper.",
+        "(2) A newspaper would let every student share what is going on."
       ],
-      prompt: "Choose the best word or words for each blank.",
-      text: "(3) {0}, a student who loves sports could report on the big game. (4) {1}, the whole class would learn what is happening in each other's lives.",
+      prompt: "Fill each blank with the linking word or words that fit.",
+      text: "(3) {0} every student could write a story, the paper would have news from every corner of our class. (4) {1}, a student who loves sports could report on the championship soccer game.",
       slots: [
-        { options: ["For example", "However", "Before that"], answer: 0 },
-        { options: ["As a result", "Instead", "In conclusion"], answer: 0 }
+        { options: ["Since", "Although", "Before"], answer: 0 },
+        { options: ["For instance", "Meanwhile", "In the end"], answer: 0 }
       ],
-      clue: "Linking words show how ideas connect. Ask how the next sentence connects to the one before it: does it show one case of the idea, show a different idea, or tell what happened because of it?",
+      clue: "Linking words show how ideas connect. Ask how each new sentence connects to the ideas around it: does it give a reason, show a contrast, or give an example?",
       hints: [
-        "Linking words show how ideas connect. Ask how the next sentence connects to the one before it: does it show one case of the idea, show a different idea, or tell what happened because of it?",
-        "Read sentences 2 to 4 in order. For each blank, decide how the sentence with the blank connects to the sentence before it.",
-        "\"Before that\" sends the reader back in time, but sentence 3 is a case of sharing news. Check the other words for that blank, and work out the second blank yourself."
+        "Linking words show how ideas connect. Ask how each new sentence connects to the ideas around it: does it give a reason, show a contrast, or give an example?",
+        "Read sentences 2 to 4 in order. For each blank, decide how that sentence connects to the idea before it.",
+        "\"Although\" shows a contrast, but sentence 3 gives a reason the paper would have news from everywhere. Check the other words for the first blank, and work out the second blank yourself."
       ],
       how: [
-        "Sentence 2 says a newspaper gives every student a chance to share news. Sentence 3 shows one student sharing news, so it is an example.",
-        "Blank 1: \"For example\" connects an example to the idea before it. \"However\" shows a different idea, and \"Before that\" goes back in time.",
-        "Blank 2: the class would learn about each other because students share news, so \"As a result\" shows that one thing leads to the other.",
-        "\"Instead\" would mean the class learns something else, and \"In conclusion\" belongs at the end of the whole draft."
+        "Sentence 3 says why the paper would have news from every corner of the class: every student could write a story.",
+        "Blank 1: \"Since\" joins a reason to what happens because of it. \"Although\" shows a contrast, and \"Before\" is about time.",
+        "Blank 2: a sports student reporting on the big game is one case of a student sharing news, so \"For instance\" introduces an example.",
+        "\"Meanwhile\" tells about something happening at the same time, and \"In the end\" sums up."
       ],
       misconception: "A common mix-up is choosing a linking word that sounds like an essay word. The word must match how the two sentences connect.",
-      why: "Blank 1 needs \"For example\" because sentence 3 is an example of sharing news. Blank 2 needs \"As a result\" because the class learns about each other after students share. \"However,\" \"Before that,\" \"Instead\" and \"In conclusion\" do not fit." },
+      why: "Blank 1 needs \"Since\" because every student writing a story is the reason the paper would have news from everywhere. Blank 2 needs \"For instance\" because the sports reporter is an example. \"Although,\" \"Before,\" \"Meanwhile\" and \"In the end\" do not fit how the sentences connect." },
     { id: "SK-TT3c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P6"],
       stem: ["Opinion: Our school should put a shade tent next to the ball field."],
-      prompt: "Read Dev's opinion in the box. Dev needs to think of a reason on his own. Which sentence is the best reason to support his opinion?",
+      prompt: "Which choice gives the best reason to back up this opinion?",
       choices: [
         { text: "Players and fans could rest out of the hot sun between games.", correct: true },
         { text: "Our school has a field with a long white fence around it." },
@@ -1500,38 +1501,38 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a sentence that repeats the opinion with strong words. A reason says why.",
       why: "The answer is: Players and fans could rest out of the hot sun between games. It tells why a shade tent is a good idea. The fence sentence is a fact, \"I truly believe\" repeats the opinion, and the shirts sentence is only a detail." },
     { id: "SK-TT3c-S04", type: "order", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P5"],
-      prompt: "Kayla is writing an opinion paragraph. Put her sentences in the best order.",
+      prompt: "Tomas's paragraph is out of order. Rearrange it so it reads from opening to ending.",
       steps: [
-        "Our class has finished many books this year.",
-        "I think our class should start a book swap.",
-        "First, a swap would let us try new stories without spending money.",
-        "Also, it would help us make friends who like the same books.",
-        "For these reasons, a book swap would be great for our class."
+        "Our playground has only one basketball hoop.",
+        "I think our school should add a second hoop.",
+        "One reason is that long lines keep students waiting for a turn.",
+        "Another reason is that two games could go on at once.",
+        "So a second hoop would help everyone play more."
       ],
-      clue: "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
+      clue: "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Ask which job each sentence does.",
       hints: [
-        "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
-        "Find the sentence that tells about the books without saying what Kayla wants. Then look for the sentence that says what she wants.",
-        "The linking words First and Also come before the reasons, and the sentence with For these reasons comes after them. Use that to place three of the sentences, then decide the first two."
+        "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Ask which job each sentence does.",
+        "Ask which sentence names the topic, which says what the writer wants, which gives the reasons and which sums up.",
+        "The sentence that begins with So sums up the paragraph, so it belongs at the end. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
-        "The first sentence introduces the topic: the books the class has finished.",
+        "The first sentence introduces the topic: the playground has one hoop.",
         "The second sentence states the opinion with I think and should.",
-        "First and Also begin the reasons in that order, and For these reasons wraps up at the end.",
-        "The order is: finished many books, I think we should start a book swap, First, Also, For these reasons."
+        "One reason and Another reason give the two reasons in that order, and So wraps up at the end.",
+        "The order is: one hoop, I think we should add a second, one reason, another reason, so."
       ],
       misconception: "A common mix-up is putting the opinion last. The opinion comes near the beginning, and the conclusion says it again at the end.",
-      why: "The order is: our class has finished many books (introduces the topic), I think our class should start a book swap (the opinion), First (reason 1), Also (reason 2), and For these reasons (the conclusion)." },
+      why: "The order is: our playground has only one basketball hoop (introduces the topic), I think our school should add a second hoop (the opinion), one reason is that long lines keep students waiting (reason 1), another reason is that two games could go on at once (reason 2), and so a second hoop would help everyone play more (the conclusion)." },
     { id: "SK-TT3c-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P4"],
       stem: [
         "(1) Our school should start a drama club. (2) Acting helps students learn to speak clearly in front of others. (3) A club would also give shy students a safe place to try new things. (4) Acting is fun."
       ],
-      prompt: "Sentence 4 is a weak conclusion. Which sentence should replace sentence 4?",
+      prompt: "Which choice would make a stronger ending than sentence 4?",
       choices: [
         { text: "A drama club would help us speak clearly and feel brave, so our school should start one.", correct: true },
         { text: "First, acting helps students learn to speak clearly in front of others." },
-        { text: "Some plays have only two actors, and others have a very large cast." },
-        { text: "My favorite costume is the purple cape with gold stars on it." }
+        { text: "Some stage plays use only two actors, while grand shows fill the theater with a huge cast and an orchestra." },
+        { text: "My favorite costume is the purple cape with gold stars and a silver crown." }
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
       hints: [
@@ -1552,12 +1553,12 @@ PP.addLesson({
         "(1) Many students wait at the bus stop on Mill Road every morning.",
         "(2) When it rains, there is no roof to keep them dry."
       ],
-      prompt: "The writer's introduction does not tell the reader her opinion. Which sentence should be added after sentence 2 to state her opinion?",
+      prompt: "Which sentence belongs after sentence 2 to tell readers what the writer thinks should be done?",
       choices: [
         { text: "I think our town should build a bus shelter at the stop on Mill Road.", correct: true },
         { text: "Buses are big, and they stop at many corners in our town." },
         { text: "Have you ever waited outside on a cold or windy morning?" },
-        { text: "The stop on Mill Road is next to a gas station and a mailbox." }
+        { text: "The stop on Mill Road sits beside a gas station, a mailbox and a faded yellow fence." }
       ],
       clue: "An opinion statement tells what the writer thinks should happen. It is not a fact, a question or a detail about the place.",
       hints: [
@@ -1574,14 +1575,16 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a sentence that sounds like part of the story. An opinion statement says what the writer wants.",
       why: "The answer is: I think our town should build a bus shelter at the stop on Mill Road. The words I think and should tell what the writer wants. The buses sentence is a fact, the question does not tell her opinion, and the gas station sentence is a detail." },
     { id: "SK-TT3c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C07"],
-      stem: ["Opinion: Our town should open the community pool on Sundays."],
-      prompt: "Which TWO sentences give a reason why opening the pool on Sundays is a good idea?",
+      stem: [
+        "Opinion: Our town should open the community swimming pool on Sundays, not only on weekdays and Saturdays."
+      ],
+      prompt: "Select two reasons that support the opinion in the box.",
       choices: [
         { text: "Families who work on Saturdays could swim together on their day off.", correct: true },
         { text: "Kids would have a cool place to play during the hot summer afternoons.", correct: true },
-        { text: "The pool has a blue slide, a deep end and a small shallow end." },
+        { text: "The pool has a blue slide, a diving board, a deep end and a tiny wading corner." },
         { text: "Would you like to splash around in cool water on a hot day?" },
-        { text: "I think Sundays are the best day of the whole week." }
+        { text: "I think Sundays are the finest day of the whole calendar." }
       ],
       clue: "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
       hints: [
@@ -1599,37 +1602,37 @@ PP.addLesson({
       why: "The answers are \"Families who work on Saturdays could swim together on their day off\" and \"Kids would have a cool place to play during the hot summer afternoons.\" Each tells why opening the pool is a good idea. The slide sentence is a fact, the question asks something, and the Sunday sentence does not say why." },
     { id: "SK-TT3c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C08"],
       stem: ["(1) Our school should open a school store."],
-      prompt: "Choose the best word or words for each blank.",
-      text: "(2) A store would teach students about money. (3) {0}, a student could count change when she buys a pencil. (4) A store would also raise money for new books. (5) {1}, a school store is a great idea.",
+      prompt: "Which word best links the sentences at each blank?",
+      text: "(2) A store would teach students about money. A student could count coins and give back change when a classmate buys a pencil or an eraser. (3) {0}, a store would raise money for new books. (4) {1}, a school store is a great idea.",
       slots: [
-        { options: ["For example", "However", "Instead"], answer: 0 },
-        { options: ["Therefore", "Before that", "For example"], answer: 0 }
+        { options: ["Besides", "Long ago", "However"], answer: 0 },
+        { options: ["So", "Long before", "Otherwise"], answer: 0 }
       ],
-      clue: "Linking words show how ideas connect. Ask how the next sentence connects to the one before it: does it show one case of the idea, show a different idea, add a reason or sum up?",
+      clue: "Linking words show how ideas connect. Ask whether the next sentence adds another reason, shows a different idea, goes back in time or sums up.",
       hints: [
-        "Linking words show how ideas connect. Ask how the next sentence connects to the one before it: does it show one case of the idea, show a different idea, add a reason or sum up?",
+        "Linking words show how ideas connect. Ask whether the next sentence adds another reason, shows a different idea, goes back in time or sums up.",
         "Read the sentence before each blank and the sentence after it. For each blank, decide how the two connect.",
-        "\"Before that\" sends the reader back in time, but the last sentence sums up what came before it. Check the other words for that blank, and work out the first blank yourself."
+        "\"Long ago\" goes back in time, but sentence 3 adds a reason now. Check the other words for the first blank, and work out the second blank yourself."
       ],
       how: [
-        "Sentence 2 says a store would teach about money, and sentence 3 shows one way: counting change.",
-        "Blank 1: \"For example\" connects the example to the reason. \"However\" shows a different idea, and \"Instead\" means a change of plan.",
-        "Blank 2: the last sentence sums up the reasons, so \"Therefore\" shows a result of everything before it.",
-        "\"Before that\" goes back in time, and \"For example\" would make the ending an example instead of a conclusion."
+        "Sentence 2 gives one reason: a store would teach students about money.",
+        "Blank 1: sentence 3 adds a second reason, so \"Besides\" fits. \"Long ago\" goes back in time, and \"However\" shows a different idea.",
+        "Blank 2: the last sentence sums up the reasons, so \"So\" shows a result of everything before it.",
+        "\"Long before\" is a time phrase, and \"Otherwise\" would mean something bad happens if the school has no store."
       ],
       misconception: "A common mix-up is using the same linking word every time. Each word must match how those two sentences connect.",
-      why: "Blank 1 needs \"For example\" because counting change is an example of learning about money. Blank 2 needs \"Therefore\" because the last sentence sums up the reasons. The other words do not show how these sentences connect." },
+      why: "Blank 1 needs \"Besides\" because sentence 3 adds a second reason. Blank 2 needs \"So\" because the last sentence sums up the reasons. \"Long ago,\" \"However,\" \"Long before\" and \"Otherwise\" do not show how these sentences connect." },
     { id: "SK-TT3c-S09", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C09"],
       stem: [
         "(1) Our neighborhood should have a park clean-up day. (2) A clean park would be safer for children. (3) Last week, my cousin stepped on a piece of broken glass near the swings. (4) Volunteers could pick up glass and trash before anyone gets hurt. (5) Everyone likes parks. (6) I hope our neighbors will join me."
       ],
-      prompt: "Sentence 2 gives a reason. Which TWO sentences are evidence that supports this reason?",
+      prompt: "Sentence 2 is a reason. Pick the TWO sentences that prove it with facts or examples.",
       choices: [
         { text: "(3) Last week, my cousin stepped on a piece of broken glass near the swings.", correct: true },
         { text: "(4) Volunteers could pick up glass and trash before anyone gets hurt.", correct: true },
         { text: "(1) Our neighborhood should have a park clean-up day." },
-        { text: "(5) Everyone likes parks." },
-        { text: "(6) I hope our neighbors will join me." }
+        { text: "(5) Picnics, kites and frisbees make parks popular places." },
+        { text: "(6) I hope many neighbors bring gloves and garbage bags." }
       ],
       clue: "Evidence is a fact, an example or an expert's words that helps prove a reason. Ask which sentences explain why a clean park is safer.",
       hints: [
@@ -1647,138 +1650,135 @@ PP.addLesson({
       why: "The answers are \"(3) Last week, my cousin stepped on a piece of broken glass near the swings.\" and \"(4) Volunteers could pick up glass and trash before anyone gets hurt.\" Both support the reason that a clean park is safer. Sentence 1 is the opinion, sentence 5 is a general statement, and sentence 6 is a wish." },
     { id: "SK-TT3c-S10", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C10"],
       stem: [
-        "(1) My family should take a walk after dinner. (2) A walk would help us get exercise. (3) It would also give us time to talk without screens. (4) Walks are nice."
+        "(1) My family should take a walk after dinner. (2) A walk would help us get exercise. (3) Without screens, we could chat about our days. (4) Walks are nice."
       ],
-      prompt: "Sentence 4 is a weak conclusion. Which sentence should replace sentence 4?",
+      prompt: "Pick the last line that would work best in place of \"Walks are nice.\"",
       choices: [
         { text: "A walk would give us exercise and talk time, so my family should take one each night.", correct: true },
-        { text: "First, a walk would help my family get some exercise after dinner." },
-        { text: "Our neighbor walks her dog down the hill and around the corner." },
+        { text: "Also, a walk would give us time to talk without screens." },
+        { text: "Our neighbor walks her spotted terrier down the hill, past the bakery and around the corner." },
         { text: "I like to wear my red sneakers whenever I go outside to walk." }
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
       hints: [
         "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
         "Reread sentences 1 to 3 to find the opinion and the two reasons. Then check which choice wraps up all of them.",
-        "A sentence that begins with \"First,\" starts a reason over instead of ending the draft. Look at the choices that are left."
+        "A sentence that repeats one reason, such as the one about talking, does not sum up both of them. Look at the choices that are left."
       ],
       how: [
         "A conclusion repeats the opinion and sums up the reasons.",
         "The opinion is that the family should walk after dinner, and the reasons are exercise and time to talk.",
         "The answer is: A walk would give us exercise and talk time, so my family should take one each night.",
-        "The First sentence starts a reason over, the neighbor sentence is a new detail, and the red sneakers sentence is about the writer's shoes."
+        "The \"Also\" sentence repeats one reason, the neighbor sentence is a new detail, and the red sneakers sentence is about the writer's shoes."
       ],
       misconception: "A common mix-up is choosing a sentence that is about walks. A conclusion must say the opinion again and sum up the reasons.",
-      why: "The answer is: A walk would give us exercise and talk time, so my family should take one each night. It repeats the opinion and sums up both reasons. The First sentence starts over, the neighbor sentence is a new detail, and the sneakers sentence is about the writer's shoes." },
+      why: "The answer is: A walk would give us exercise and talk time, so my family should take one each night. It repeats the opinion and sums up both reasons. The \"Also\" sentence repeats one reason, the neighbor sentence is a new detail, and the sneakers sentence is about the writer's shoes." },
     { id: "SK-TT3c-S11", type: "match", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C11"],
-      prompt: "What job does each sentence do in this draft about a morning stretch break? Match each sentence to its job. Use each job once.",
-      cols: [
-        "introduces the topic",
-        "states the opinion",
-        "gives a reason",
-        "wraps up the opinion and reasons"
-      ],
+      prompt: "Here are four sentences from a stretch-break draft. Link each to the job it does, using every job once.",
+      cols: ["says what the writer wants", "tells why", "proves the reason", "sums up the piece"],
       rows: [
-        { text: "(1) Our class sits at desks for most of the morning.", answer: 0 },
-        { text: "(2) I think our class should take a stretch break every day.", answer: 1 },
-        { text: "(3) A stretch break would help us feel more awake.", answer: 2 },
-        { text: "(6) So a stretch break would help us stay awake and focus, and our class should have one.", answer: 3 }
+        { text: "After we stretched for two minutes on Tuesday, nearly every hand in the room shot up during reading time.", answer: 2 },
+        { text: "I think our class should take a short stretch break every single morning.", answer: 0 },
+        { text: "So a short stretch break would keep us awake, and our class should take one.", answer: 3 },
+        { text: "A stretch break would help our sleepy bodies feel more awake.", answer: 1 }
       ],
-      clue: "An opinion piece has an introduction, an opinion, reasons and a conclusion. Ask what job each sentence does.",
+      clue: "An opinion piece has an opinion, reasons, evidence and a conclusion. Ask what job each sentence does.",
       hints: [
-        "An opinion piece has an introduction, an opinion, reasons and a conclusion. Ask what job each sentence does.",
-        "For each sentence, ask whether it tells the topic, tells what the writer wants, tells why, or sums up the whole draft.",
-        "Sentence 2 uses I think and should, so it tells what the writer wants. Match that row first, then work out the other three."
+        "An opinion piece has an opinion, reasons, evidence and a conclusion. Ask what job each sentence does.",
+        "For each sentence, ask whether it says what the writer wants, tells why, shows an example that proves the reason, or sums up the draft.",
+        "Look for the words I think or should. They show what the writer wants. Then work out the other rows."
       ],
       how: [
-        "Sentence 1 tells about sitting at desks, so it introduces the topic.",
-        "Sentence 2 says what the writer wants, with I think and should, so it states the opinion.",
-        "Sentence 3 tells why a stretch break is a good idea, so it gives a reason.",
-        "Sentence 6 repeats the opinion and sums up the reasons, so it wraps up the draft."
+        "\"I think our class should take a short stretch break every single morning\" says what the writer wants, so it states the opinion.",
+        "\"A stretch break would help our sleepy bodies feel more awake\" tells why, so it gives a reason.",
+        "\"After we stretched for two minutes on Tuesday, nearly every hand in the room shot up during reading time\" is an example that proves the reason, so it gives evidence.",
+        "\"So a short stretch break would keep us awake, and our class should take one\" repeats the opinion and sums up, so it closes the piece."
       ],
-      misconception: "A common mix-up is calling the first sentence the opinion. The introduction tells the topic, and the opinion says what the writer wants.",
-      why: "Sentence 1 introduces the topic, sentence 2 states the opinion, sentence 3 gives a reason, and sentence 6 wraps up the opinion and reasons. Each sentence does a different job." },
+      misconception: "A common mix-up is calling the evidence a reason. A reason says why, and evidence is the example or fact that proves it.",
+      why: "The \"I think\" sentence states the opinion, the sentence about sleepy bodies feeling more awake gives a reason, the sentence about hands shooting up during reading time gives evidence, and the \"So\" sentence closes the piece. Each sentence does a different job." },
     { id: "SK-TT3c-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C12"],
-      stem: ["(1) Our soccer team should practice twice a week."],
-      prompt: "The writer wants to add evidence after sentence 2 to explain how practice would help the team pass better. Choose the best answer for each blank.",
-      text: "(2) More practice would help us pass the ball better. {0}, {1}",
+      stem: ["(1) Our school should start a choir."],
+      prompt: "Finish the evidence for sentence 2 by filling both blanks.",
+      text: "(2) Singing together would help us listen to one another. {0} {1}",
       slots: [
-        { options: ["For example", "However", "Before that"], answer: 0 },
+        { options: ["For instance,", "In the past,", "At last,"], answer: 0 },
         { options: [
-            "players who practice passing each week learn where their teammates will run.",
-            "our team wears blue shirts with white numbers on the back.",
-            "the coach has a whistle that makes a very loud sound."
+            "singers have to hear the voices beside them so that all the voices blend.",
+            "our robes would be blue with a gold stripe on each sleeve.",
+            "the music room has two pianos and a big window."
           ],
           answer: 0 }
       ],
       clue: "Evidence is a fact or a detail that helps explain a reason. It must connect to the reason, and the linking word must show how it connects.",
       hints: [
         "Evidence is a fact or a detail that helps explain a reason. It must connect to the reason, and the linking word must show how it connects.",
-        "Read sentence 2 again. Ask what the writer must show to prove that practice helps with passing.",
-        "A sentence about the color of the shirts tells about the uniform, not about passing. Look at the choices that are left, and work out the first blank yourself."
+        "Read sentence 2 again. Ask what the writer must show to prove that singing together helps students listen.",
+        "A sentence about the color of the robes tells about clothing, not about listening. Look at the choices that are left, and work out the first blank yourself."
       ],
       how: [
-        "The reason in sentence 2 is that practice helps the team pass better. The evidence must show passing getting better.",
-        "Learning where teammates will run is how practice improves passing, and it is an example, so \"For example\" links them.",
-        "Blank 2: players who practice passing each week learn where their teammates will run.",
-        "The shirt sentence and the whistle sentence are about the team but not about passing."
+        "The reason in sentence 2 is that singing together helps students listen to one another. The evidence must show listening.",
+        "Hearing the voices beside you so that all the voices blend is an example of listening, so \"For instance\" links them.",
+        "Blank 2: singers have to hear the voices beside them so that all the voices blend.",
+        "The robes sentence and the music room sentence are about the choir but not about listening."
       ],
-      misconception: "A common mix-up is picking the sentence that sounds like soccer. Evidence has to show the reason it supports.",
-      why: "Blank 1 needs \"For example\" because the next sentence is an example of better passing. Blank 2 needs \"players who practice passing each week learn where their teammates will run,\" because that shows how practice helps passing. The shirt and whistle sentences are not about passing." },
+      misconception: "A common mix-up is picking the sentence that sounds like a choir. Evidence has to show the reason it supports.",
+      why: "Blank 1 needs \"For instance\" because the next sentence is an example of listening. Blank 2 needs \"singers have to hear the voices beside them so that all the voices blend,\" because that shows how singing together builds listening. The robes and music room sentences are not about listening." },
     { id: "SK-TT3c-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C13"],
-      stem: ["A student is writing about having a pizza night on Fridays."],
-      prompt: "The student is trying out ways to link her ideas. Which TWO versions use a linking word that fits?",
-      choices: [
-        { text: "We should have pizza night because everyone in my family loves pizza.", correct: true },
-        { text: "Pizza night would be fun. In addition, it would save us time on a busy day.", correct: true },
-        { text: "We should have pizza night, but everyone in my family loves pizza." },
-        { text: "Pizza night would be fun. For example, it would save us time on a busy day." },
-        { text: "We should have pizza night, or everyone in my family loves pizza." }
+      stem: [
+        "A student is writing about adding a water fountain near the playground."
       ],
-      clue: "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, gives an example or gives a choice.",
+      prompt: "Which TWO sentences use a linking word correctly?",
+      choices: [
+        { text: "We should add a water fountain since the playground gets very hot in the summer.", correct: true },
+        { text: "A fountain would keep us cool. Also, it would save us from running inside for a drink.", correct: true },
+        { text: "We should add a water fountain, but the playground gets very hot in the summer." },
+        { text: "A fountain would keep us cool. Instead, it would save us from running inside for a drink." },
+        { text: "We should add a water fountain, until the playground gets very hot in the summer." }
+      ],
+      clue: "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, tells about time or replaces the first idea.",
       hints: [
-        "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, gives an example or gives a choice.",
+        "A linking word has to match how two ideas connect. Ask whether the second idea explains why, adds another idea, shows a difference, tells about time or replaces the first idea.",
         "Read each version aloud, and ask how the second part connects to the first. Choose two.",
-        "\"Or\" gives a choice, but loving pizza is not a choice to make instead of having pizza night. Look at the choices that are left."
+        "\"Until\" tells about time, but a hot playground is not a time the fountain waits for. Look at the choices that are left."
       ],
       how: [
         "For each version, decide how the second idea connects to the first.",
-        "Everyone loving pizza explains why the family should have pizza night, so \"because\" fits. Saving time is a second reason, so \"In addition\" fits.",
-        "The answers are: We should have pizza night because everyone in my family loves pizza. And: Pizza night would be fun. In addition, it would save us time on a busy day.",
-        "\"But\" shows a difference, \"or\" gives a choice, and saving time is not an example of fun."
+        "A hot playground explains why the school should add a fountain, so \"since\" fits. Saving a trip inside is a second good thing a fountain does, so \"Also\" fits.",
+        "The answers are: We should add a water fountain since the playground gets very hot in the summer. And: A fountain would keep us cool. Also, it would save us from running inside for a drink.",
+        "\"But\" shows a difference, \"until\" tells about time, and \"Instead\" would mean the fountain replaces keeping us cool."
       ],
       misconception: "A common mix-up is choosing a linking word because it sounds familiar. The word must match how the two ideas connect.",
-      why: "The answers are \"We should have pizza night because everyone in my family loves pizza\" and \"Pizza night would be fun. In addition, it would save us time on a busy day.\" Because explains why, and in addition adds a reason. But, or and for example do not fit." },
+      why: "The answers are \"We should add a water fountain since the playground gets very hot in the summer\" and \"A fountain would keep us cool. Also, it would save us from running inside for a drink.\" Since explains why, and also adds another good thing. But shows a difference, until tells time, and instead would replace the first idea." },
     { id: "SK-TT3c-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C14"],
       stem: [
-        "(1) Our school should add a sandbox for the little kids. (2) Digging and building in sand helps young children use their hands and plan. (3) Last week, a kindergartner at our school built a tunnel and then fixed it when it fell. (4) A sandbox would also give the little kids a calm place to play together. (5) Two children could share one bucket and take turns. (6) Sandboxes are nice."
+        "(1) Our school should add a sandbox for the little kids. (2) Digging and building in sand helps young children use their hands and plan ahead. (3) Last week, a kindergartner at our school built a tunnel and then fixed it when it fell. (4) A sandbox would let the smallest kids share a quiet corner of the yard. (5) Sandboxes are nice."
       ],
-      prompt: "Sentence 6 is a weak conclusion. Which sentence should replace sentence 6?",
+      prompt: "Which closing line should take the place of sentence 5?",
       choices: [
         { text: "A sandbox would help little kids learn and play together, so our school should add one.", correct: true },
-        { text: "First, digging and building in sand helps young children use their hands and plan." },
-        { text: "Sand can be wet or dry, and some sand is white while some is brown." },
+        { text: "Another reason is that digging in sand helps young children use their hands and plan." },
+        { text: "Beach sand can be damp or powdery, and some grains look white while others look tan." },
         { text: "I hope my little sister gets a red bucket and a yellow shovel." }
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
       hints: [
         "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
         "Find the opinion in sentence 1 and the two reasons in sentences 2 and 4. Then check which choice wraps up all of them.",
-        "A sentence that begins with \"First,\" starts a reason over instead of ending the draft. Look at the choices that are left."
+        "A sentence that begins with \"Another reason\" starts a reason over instead of ending the draft. Look at the choices that are left."
       ],
       how: [
         "A conclusion repeats the opinion and sums up the reasons.",
         "The opinion is to add a sandbox, and the reasons are learning with hands and playing together.",
         "The answer is: A sandbox would help little kids learn and play together, so our school should add one.",
-        "The First sentence starts over with one reason, the sentence about wet and dry sand adds a new fact, and the bucket sentence is a personal wish."
+        "The \"Another reason\" sentence starts over with one reason, the sentence about wet and dry sand adds a new fact, and the bucket sentence is a personal wish."
       ],
       misconception: "A common mix-up is choosing a sentence that mentions sand. A conclusion must say the opinion again and sum up both reasons.",
-      why: "The answer is: A sandbox would help little kids learn and play together, so our school should add one. It repeats the opinion and sums up both reasons. The First sentence starts over, the sand sentence adds a new fact, and the bucket sentence is a personal wish." },
+      why: "The answer is: A sandbox would help little kids learn and play together, so our school should add one. It repeats the opinion and sums up both reasons. The \"Another reason\" sentence starts over, the sand sentence adds a new fact, and the bucket sentence is a personal wish." },
     { id: "SK-TT3c-S15", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C15"],
       stem: [
         "(1) Our school should build a nature trail behind the gym. (2) A trail would give classes a place to look at plants and insects. (3) Students could draw what they find and write about it."
       ],
-      prompt: "The writer wants to add one more sentence after sentence 3 to explain her reason. Which sentence fits best?",
+      prompt: "Which sentence would best explain the writer's reason if it came after sentence 3?",
       choices: [
         { text: "Seeing real plants up close would help us remember what we learn.", correct: true },
         { text: "Many families like to walk on trails on the weekend." },
@@ -1856,8 +1856,8 @@ PP.addLesson({
     "SK-TT3c-P5": {
       hints: [
         "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
-        "Find the sentence that tells about the corner without saying what Jada wants. Then look for the sentence that says what she wants.",
-        "The linking words First and Also come before the reasons, and the sentence with For all these reasons comes after them. Use that to place three of the sentences, then decide the first two."
+        "Ask which sentence names the topic, which says what the writer wants, which gives the reasons and which sums up.",
+        "The sentence that begins with For all these reasons sums up the draft, so it belongs near the end. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
         "The first sentence introduces the topic: the empty corner by the window.",

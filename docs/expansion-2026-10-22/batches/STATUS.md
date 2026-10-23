@@ -33,4 +33,5 @@
 
 ## Similar-question banks (added after the core items were accepted)
 - SIM-2 (S04-S15 on the nine B2 lessons): independently re-solved blind. Accepted: 3.T.T.2.a, 3.T.T.2.b, 3.T.T.2.c, TS-SEQ, TS-DESC, TS-CE, 3.T.SS.1.a, 3.T.C.1.b. TS-SEQ/TS-DESC/TS-CE/TS-CC similar banks: last edits (TS-CE S07 how line and hint 3; TS-CC S11 rebuilt again after §12) are NOT yet blind re-solved; include in the final sweep.
-- SIM-1 (S04-S15 on the eight B0/B1 lessons): fixes applied after SIM-1-review.md; blind re-review in progress.
+- SIM-1 (S04-S15 on the eight B0/B1 lessons): final blind re-solve (SIM-1-rereview.md) accepted 3.T.T.1.a, 1.b, 1.c, 1.d, TS-PS, 3.T.C.2.a, 3.T.SS.2.a; 3.T.T.4.a S14 ambiguity being fixed.
+- B4 lessons (3.T.T.1.e, 2.d, 3.c, 4.b, 3.T.SS.1.b/1.c/1.d/2.b, 3.T.C.1.c, 3.T.RA.1.c): written; each has had at least one independent review with MUSTs; fixes in progress; none ACCEPTED yet.
