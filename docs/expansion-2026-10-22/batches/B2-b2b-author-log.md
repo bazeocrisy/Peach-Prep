@@ -367,3 +367,76 @@ readability: SEQ p3 4.1, p4 4.1; DESC p3 4.1, p4 3.2
 - **NOTE-10.** Left as is: "a small oven and a deep fryer" is generic, and the snowflake fold makes eight sides, not six. Neither affects a key.
 - **R1 NOTE-6 (SEQ P5's DOK 3 is generous).** Unchanged. P5 is a ref and was out of scope for these fixes.
 - **The CE, CC and TS-PS findings** belong to other authors and were not touched.
+
+## 11. Fixes after the B2 final check (B2-rereview-TS-2.md)
+
+**Gate.** `check-content.js --all`: PASS, 0 failures. The only warnings on my lessons are the accepted similar-coverage ones: SEQ 9, and DESC now 10, because S02's `like` became C07 only in §10. No passage text changed in this round, so the FK values in §10 still stand.
+
+**Correction to §10.1 (SEQ C02).**
+- I claimed that K and "first step" were live after hint 3. That was overstated.
+- Hint 2 sends the child to paragraph 2's first sentence, which begins "First,". Together P1's `why` says the same. So "first step" is not live after hint 2.
+- "Last step" was never live.
+- So after hint 3 only the key was left.
+
+### 11.1 SEQ C02 (SHOULD-1)
+
+I replaced "It tells the last step, so you know when the butter is ready to eat." with a near-miss tied to paragraph 1's opening question: "It asks a question, so you know the passage will explain why cream turns into butter." Paragraph 1 does ask a question, but the passage never explains why cream turns into butter. Show me how step 4 now says so.
+
+Live choices:
+- **Hint 1** ("ask what paragraph 1 gives the reader"): all four.
+- **Hint 2** (compare paragraph 1 with paragraph 2's first sentence):
+  - live: the key, the question near-miss, "what can go wrong"
+  - out: "first step", because paragraph 2 starts with First
+- **Hint 3** (rules out "what can go wrong"):
+  - live: the key and the question near-miss
+  - The child still has to see that the passage tells how, not why.
+
+### 11.2 SEQ S03 (SHOULD-3)
+
+The reviewer's suggested distractor, "Move sentence 3 so it comes right after sentence 2", would leave the paragraph unchanged in the old stem, because sentence 3 already came right after sentence 2. To get the near-miss they wanted, I moved the undated sentence to position 4:
+
+1. 1950
+2. 1968
+3. 2001
+4. "Ten years after it opened…"
+5. Today
+
+Choices:
+- K: move sentence 4 after sentence 1
+- the near-miss: move sentence 4 after sentence 2 (1960 after 1968)
+- move sentence 3 after sentence 1 (2001 before 1968)
+- move sentence 5 after sentence 1
+
+I checked that no single move other than the key gives time order. The how and why are updated.
+
+Live choices:
+- **Hint 1:** all four.
+- **Hint 2** (find the undated sentence and work out its year):
+  - live: K and "4 after 2"
+  - weak: "3 after 1", once the dates are listed
+  - "5 after 1" is still live until Today is placed
+- **Hint 3** (rules out moving sentence 5):
+  - live: K and "4 after 2"
+  - The child must still compare 1960 with 1968.
+
+### 11.3 DESC C14 (SHOULD-2)
+
+The new big idea is life among sea plants:
+- The bony-plates sentence is gone.
+- The details are now: the tail wraps around sea grass; the skin matches the plants; the tall shape looks like a plant stem; the snout reaches between the leaves for shrimp.
+- Key: "A seahorse's body is made for life among the plants of the sea."
+- The "stay safe and get food" wording is gone, so the key no longer mirrors 3.T.T.2.a form A T1 ("helps it find food and stay safe").
+- "Sea grass" appears in no other lesson.
+
+Live choices:
+- **Hint 1:** all four.
+- **Hint 2** (what each sentence tells about):
+  - live: K; "has to hide from crabs" (fits the color and shape sentences); "the tail is the most useful part" (fits sentence 2 only)
+  - "First, a baby seahorse hatches…" is still live for a child who has not yet spotted the sequence
+- **Hint 3** (rules out the hatching sentence):
+  - live: K, the hiding near-miss and the tail choice
+  - The child must test each one against all four sentences.
+
+### 11.4 Not addressed
+
+Nothing for TS-SEQ or TS-DESC: the final check raised only these three SHOULDs for my lessons. Its NOTEs on CC items belong to the other author.
