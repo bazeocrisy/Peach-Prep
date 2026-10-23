@@ -656,3 +656,80 @@ I found no factual error in the core, similar or Together items.
 3. C07: stem "how" and a clearly off-topic A (S2, S5).
 4. S11, C11, C13: lengthen one distractor (S3).
 5. Move one axolotl and one dragonfly item to new topics (S4).
+
+
+---
+
+# Fifth review (3.T.RA.1.c, js/data/lessons/T-RA.js)
+
+Reviewer: independent (did not write the content). Files not edited. No git. No servers started.
+
+## Verdict: ACCEPT (0 MUST, 4 SHOULD, 5 NOTE)
+
+The MUST of the fourth review (C02, the "frogs and toads" distractor also appearing in C05) is fixed: C02's distractor is now "Both sources show that axolotls make the best pets for young children." and "frogs and toads" appears only in C05. I found no MUST in the four changed items (C02, C07, S02, S11) or elsewhere in the lesson.
+
+## 1. Blind solve
+
+Method: Node `vm` sandbox, my own scripts in `scratchpad/b4r6/` (`ld.js`, `blind.js`, `cmp.js`; one run covers both lessons). It prints the five Together items (P1-P5), the 15 core items and the 15 similar items, with seeded-shuffled choices, passages, stems and prompts, and with no key, `why`, hints, `how`, `clue`, `misconception` or `like`. Sentence-level hottext targets are shown as numbered options in shuffled order. I saved my answers to `scratchpad/b4r6/myans.saved.json` before extracting any key.
+
+- Agreement: **35 of 35** in this lesson (70 of 70 across both lessons).
+- Honesty: blind to keys, `why`, hints and `how` of the current text. I did not read the RA.1.c fourth-review section or the author log before solving; I read only the tail of the C.1.c review (which has no RA content). So this lesson's solve is fully blind.
+- Easiest by elimination: P3, S10, S05 (the opinion or off-source sentence is plain), S12.
+
+## 2. The four changed items (RA.1.c)
+
+| Item | Result |
+|---|---|
+| C02 | Fixed. Options: key "Both sources show that axolotls are special water animals that need help." (73), the hunting detail (75), pets claim (70), "Those are all of the facts ... I had time to write" (67). The frame "Both sources show that" now appears on two options, so it is no longer a tell. Key is not the longest. One defensible answer. h3 rules out the filler line only (3 live). `how` says "a claim that neither source makes" for the pets option. |
+| C07 | Fixed. Stem "how an adult dragonfly moves through the air". Key pair B (four wings, each moved alone) and E (forward, hover, backward). Distractors: resting wings, ponds, and the eyes fact (60, the longest). The verbatim "catches mosquitoes" sentence now occurs only in C08 and C10. No second defensible pair. h3 rules out the resting fact (4 of 5 live). |
+| S02 | Key reworded (no "Both sources show"), and the distractor "Both sources show that the platypus is the fastest swimmer in all of Australia." carries the frame. Good anti-cue. But the key is the longest (83 against 79, 71, 70). See S1. |
+| S11 | Key is now the shortest (70 against 72, 82, 93). The key joins both sources; the other three use one source or go beyond. Good. |
+
+## 3. Per-item checks (5 Together, 15 core, 15 similar)
+
+- **Key beside explanation (script `kbe.js`).** For all 30 core and similar items, the key text appears in both `why` and `how`; no distractor text appears in the first 160 characters of `why`. Together items have no `how` by design. Passed.
+- **Live choices after hints 1-3.** I read all 90 hints. Every h3 rules out at most one option, or gives a method (C05, C10, C12, C15, S05, S10 name one sentence that fits; C09 and S09 name the first sentence). None narrows to the key. Live counts: C02 3, C07 4 of 5, S02 3, S11 3 (agree with the author's recount).
+- **Longest-key cue (script `chk.js`).** Keys that are longest or tied-longest among mc items: S02 (**+4**), S12 (tie, 54/54), P1 (+2), P2 (+2), P5 (+4, legacy). Not longest: C02, C03, C11, C13, S03, S11, S13. C13 is 84 against 85, 84, 66. The author's lengthening worked.
+- **Paired Jaccard (my own multiset scripts, `jac.js`).** Content-word Jaccard against the paired core item: maximum 0.151 (S14~C14), 0.118 (S02~C02), 0.108 (S01~C01). All-words maximum 0.180 (S05~C05). Options-only maximum 0.194 (S02~C02, no longer inflated). Exact shared options: 0 in all 15 pairs. Every pair passes all four measures at 0.21.
+- **DOK and points.** All choose-two, two-blank dropdown and order items are 2 points; the rest 1. Pairs match on DOK and points except S12 (mc) against C12 (hottext), which is a format difference only. No mismatches.
+- **Alignment.** `official`: "Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic." The items cover credible sources (C04, C13, S04, S13), relevant and accurate facts (C05, C06, C07, C12, S05-S07, S10, S12, S15), own words (C03, C08, S03, S08), linking and order (C01, C09, C14, S01, S09, S14) and wrap-up sentences (C02, C11, S02, S11).
+- **Grade 3.** Sources are short, about 100 words each, and the vocabulary is third-grade. C13 and C15 are the heaviest.
+- **Distinctness.** No two items differ only by names or numbers. Axolotl, dragonfly and warm-up passages each host five or four items on different skills.
+- **Learn It and Watch Me.** The three Watch Me examples (penguin summary with linking words; Dev's opinion and not-in-sources; Noah's red panda source) model big idea, linking, removing opinion and not-in-source facts, and credibility. They do not model: copy against own words (C03, C08, S03, S08), ordering with time words (C09, S09), and a closing sentence (C02, S02, C11, S11). The teach points mention each, and the example box shows time words. See S3.
+
+## 4. Findings
+
+**SHOULD**
+
+- **S1. S02, the key is the longest.** 83 characters against 79, 71 and 70. The author lengthened the others to get C02 right, but S02 was changed to a longer, more elaborate key. *Fix:* shorten the key ("A platypus is a mammal unlike most others, built for life in water." is 66) or lengthen the "everything that I know" option.
+- **S2. P5 still teaches the "Both sources show that" cue.** The only option beginning "Both sources show" is the key, and it is the longest (70 against 66, 65, 58). The author left P5 alone because it is a Together item that every child sees first. With C02 and S02 now using the frame on a distractor, the cue works against children who learn it from P5, which is an unintended trap. *Fix:* give one P5 distractor the frame, for example "Both sources show that milkweed grows in many fields and along the roads."
+- **S3. Watch Me gap.** Copy against own words (4 items), time-word order (4 items) and wrap-up sentences (4 items) are not modeled in the three Watch Me examples. The child meets them for the first time in the core. *Fix:* add one Watch Me, for example Source: "Penguins huddle together to stay warm." and "Which sentence is in the writer's own words?" with a paraphrase and a copy.
+- **S4. Set variety.** Set 1 is axolotl for all five items (C01-C05). Set 2 is dragonfly for all five. Set 3 is warm-up for four. A child who finds one topic hard, or who has seen the passage in another form, loses a whole set. Not changed (the author log says so). *Fix:* use a second topic in one item of each set, as the fourth review asked.
+
+**NOTE**
+
+- **N1. Order items reveal their first position.** C09 and S09 h3: "The sentence that tells how a dragonfly begins has no time word, so it starts the summary." It gives away one position of four, and `how` is consistent. Fine for a scaffold.
+- **N2. S02 inference.** "its body is built for life in water" is a synthesis, not a stated fact. The sources give webbed feet, a flat bill and hunting in streams. Reasonable for a grade-3 closing line, but if you want sources-only strictness say "its feet and bill help it hunt in streams."
+- **N3. Ms items C04 and S04 use "sources" that mix traits** (anonymous, selling, wrong topic, outdated). Each wrong choice fails on one clear trait. No fix needed.
+- **N4. C14 h3 helps blank 1 only.** Blank 2 ("When") has no scaffold, and the hint cannot help twice. 3 live and 4 live. Acceptable.
+- **N5. Topic reuse across lessons.** Monarch/milkweed: Together P1-P5 and `write` here, but also 3.T.C.1.b (43 mentions, "Milkweed is the only plant a monarch caterpillar eats.") and 3.T.T.2.b (33). The same fact set is taught in three lessons. Platypus, axolotl, satellite, termite (one anteater sentence in 3.T.T.2.c), tree rings (3.T.T.2.a, 3.T.SS.2.a use "rings" for other things), comets (the "Comets" team name in 3.T.T.4.a only), dragonfly (similes in 3.T.SS.2.b and a poem in 3.T.T.4.b) and warm-up (3.T.SS.1.a directions) are not duplicates. No identical sentence of 6+ words appears in another lesson's passages (script `dupsent.js`). For core and similar items there is no duplicate topic; only the Together set repeats the monarch.
+
+## 5. Facts (WebFetch / WebSearch)
+
+| Claim | Result | URL |
+|---|---|---|
+| Platypus: mammal that lays eggs; webbed front feet propel it; back feet help steer and stop; males have a spur on each hind leg; found in Australia, feeds on lake and stream bottoms | Supported | https://kids.britannica.com/students/article/platypus/276463 |
+| Axolotl: aquatic salamander, keeps gills, regrows limbs without scarring and parts of heart, spine and brain; wild population in Xochimilco canals near Mexico City; fewer than 1,000 estimated | Supported (the page says "doesn't develop lungs"; axolotls have lungs and gulp air, so the passage sentence stands; the passage's "fewer than one thousand may be left" matches the estimates) | https://www.conservation.org/axolotl-facts |
+| Dragonfly: starts life underwater as a wingless nymph that lives up to several years; wings move together or separately; hover, fly backward; eat mosquitoes | Supported | https://rangerrick.org/ranger_rick/dragonflies/ |
+| Dragonfly rests with wings held out to the sides ("out flat") | Supported in substance (page says "out to the sides") | same |
+| Tree rings: one ring per year; wide rings wet or warm years, narrow rings dry or cold years | Supported | https://archive.epa.gov/climatechange//kids/documents/tree-rings.pdf |
+| First weather satellite TIROS-1, 1960 (so a 1958 magazine predates any weather satellite) | Supported | https://scijinks.gov/news/celebrating-the-worlds-first-meteorological-satellite-tiros-1 |
+| Comet: ice and dust, ice turns to gas near the Sun, tail points away; termite colony started by a king and queen; warm-up and cool-down | Standard; searches run, pages not fetched | |
+
+I found no factual error. Monarch facts were verified in earlier rounds.
+
+## 6. What to change (all optional; verdict stands)
+1. S02: shorten the key (S1).
+2. P5: give a distractor the "Both sources show" frame (S2).
+3. Add a Watch Me for own words, order and the closing sentence (S3).
+4. Use a second topic in one item per set (S4).

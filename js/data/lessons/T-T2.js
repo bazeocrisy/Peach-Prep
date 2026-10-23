@@ -3503,7 +3503,7 @@ PP.addLesson({
         why: "The order is: The peanuts are roasted in a hot oven until they turn golden; after they cool, their thin skins are rubbed off; a machine grinds the peanuts into a thick, smooth paste; the paste is scooped into jars and sealed. Each step needs the one before it." },
       { id: "SK-TT2d-C04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
         stem: [
-          "Rosa wants to add this sentence after sentence 9: \"Peanuts have a lot of protein, and so do eggs, beans and fish.\""
+          "Rosa wants to add these sentences after sentence 9: \"Coaches tell players to eat foods with protein after practice. Peanuts have a lot of protein, and so do eggs, beans and fish.\""
         ],
         prompt: "She also wants to tell what the word protein means. Choose the best answer for the blank.",
         text: "Protein is {0}.",
@@ -3518,11 +3518,11 @@ PP.addLesson({
         clue: "A definition tells what a word means. Use the examples around the word to figure out what kind of thing it is.",
         hints: [
           "A definition tells what a word means. Use the examples around the word to figure out what kind of thing it is.",
-          "Read Rosa's new sentence again. Ask what eggs, beans, fish and peanuts have in common as foods.",
+          "Read Rosa's new sentences again. Ask why a coach would want players to eat these foods after practice.",
           "Eggs, fish and beans are not sweet, and they have protein, so a sweet taste cannot be what protein is. Look at the choices that are left."
         ],
         how: [
-          "Rosa's sentence names peanuts, eggs, beans and fish as foods that have protein, so protein is something found inside foods.",
+          "Rosa's sentences say coaches want players to eat foods with protein after practice, and name peanuts, eggs, beans and fish as foods that have it, so protein is something found inside foods that helps a body.",
           "These foods are the ones people eat to grow and stay strong, and protein is the part of them that builds muscles and bones.",
           "The answer is: Protein is a part of food that helps muscles and bones grow.",
           "Quick energy comes mostly from sugar, not from protein, and a sweet taste does not describe eggs, beans or fish."
@@ -3827,27 +3827,27 @@ PP.addLesson({
       misconception: "A common mix-up is picking any true fact about the topic. A supporting sentence must tell more about the exact idea it supports.",
       why: "The answer is: A quick tug on the string makes it spin back up to your hand. It tells more about how a yo-yo goes up and down. The other sentences are about materials, toy boxes or other toys." },
     { id: "SK-TT2d-S03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C03"],
-      prompt: "A student wrote four sentences about making a jelly sandwich. Put them in the order that makes the most sense.",
+      prompt: "A science page tells how a bean seed becomes a plant, but its steps got mixed up. Arrange them from first to last.",
       steps: [
-        "Lay two slices of bread on a plate.",
-        "Spread jelly on one slice with a knife.",
-        "Press the two slices together.",
-        "Cut the sandwich in half and enjoy it."
+        "A bean seed is pushed into damp soil.",
+        "Water soaks in, and the seed swells up.",
+        "A tiny root grows down from the seed.",
+        "A green shoot pushes up through the soil."
       ],
       clue: "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
       hints: [
         "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
         "Ask what each step needs to already be done. Which steps could not happen without another one first?",
-        "A sandwich cannot be cut in half until it has been put together. Use that to place that one sentence, then decide where the others go."
+        "A seed cannot soak up water from the soil until it is in the soil. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
-        "The bread has to be on the plate before anything can be spread on it, so laying the slices comes first.",
-        "Then the jelly is spread, and then the slices are pressed together.",
-        "Last, the sandwich is cut and eaten.",
-        "The order is: lay two slices of bread on a plate, spread jelly, press the slices together, cut the sandwich in half."
+        "The seed has to be in the soil before water can soak into it, so planting comes first.",
+        "Then the seed swells up, and a root grows down from the swollen seed.",
+        "Last, the green shoot pushes up through the soil, above the root.",
+        "The order is: the seed is pushed into damp soil, water soaks in and it swells, a root grows down, a shoot pushes up."
       ],
-      misconception: "A common mix-up is putting the cutting early because it is the last thing you see. Check what each step needs first.",
-      why: "The order is: Lay two slices of bread on a plate; spread jelly on one slice with a knife; press the two slices together; cut the sandwich in half and enjoy it. Each step needs the one before it." },
+      misconception: "A common mix-up is putting the green shoot early because it is the part you can see. Check what each step needs first.",
+      why: "The order is: A bean seed is pushed into damp soil; water soaks in, and the seed swells up; a tiny root grows down from the seed; a green shoot pushes up through the soil. Each step needs the one before it." },
     { id: "SK-TT2d-S04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C04"],
       stem: [
         "A student wrote this sentence about pencils: \"The ferrule holds the eraser on the end of the pencil.\""

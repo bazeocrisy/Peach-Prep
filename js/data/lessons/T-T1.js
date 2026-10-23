@@ -4703,7 +4703,7 @@ PP.addLesson({
         hints: [
           "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
           "Read the whole draft to see what kind of story it is. Then ask which choice would start the story best.",
-          "An opinion about scavenger hunts could begin an essay, but a story needs a character doing something. Look at the choices that are left."
+          "An opinion about scavenger hunts could begin an essay, but this is a story. Look at the choices that are left."
         ],
         how: [
           "Ask what the beginning should do: put a character in a place and start the action.",
@@ -5068,7 +5068,7 @@ PP.addLesson({
       hints: [
         "A strong beginning introduces the character and the place. Compare what each choice does for a story.",
         "Think about what kind of story this is. Then ask which choice would best start the story.",
-        "An opinion about a sport could begin an essay, but a story needs a character doing something. Look at the choices that are left."
+        "An opinion about a sport could begin an essay, but this is a story. Look at the choices that are left."
       ],
       how: [
         "A story's beginning should put a character in a place and start the action.",

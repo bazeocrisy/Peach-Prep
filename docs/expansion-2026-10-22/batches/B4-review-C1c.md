@@ -599,3 +599,93 @@ I found no factual error in the core, similar or Together items.
 6. S12: two near-miss decoys (S4).
 7. Move one kaleidoscope item; make C09 differ from C04 (S5).
 8. C06 decoy and C10 line should not share the store idea (S6).
+
+
+---
+
+# Fifth review (3.T.C.1.c, js/data/lessons/T-C.js)
+
+Reviewer: independent (did not write the content). Files not edited. No git. No servers started.
+
+## Verdict: ACCEPT (0 MUST, 6 SHOULD, 6 NOTE)
+
+The two MUSTs of the fourth review (S13 explanation describing notices that do not exist; S05 h3 echoing the key) are fixed. I found no MUST in the eight items changed after the fourth review or anywhere else in the lesson.
+
+## 1. Blind solve
+
+Method: Node `vm` sandbox, my own scripts in `scratchpad/b4r6/` (`ld.js`, `blind.js`, `cmp.js`). It prints every Together item (P1-P5), the 15 core items (`{ref}` resolved, so C01-C15 have no refs here) and the 15 similar items, with seeded-shuffled choices, the passages, the stems and the prompts. Keys, `why`, `hints`, `how`, `clue`, `misconception`, `like` were not printed. I wrote my answers to `scratchpad/b4r6/myans.saved.json` before extracting any key.
+
+- Agreement: 35 of 35 in C.1.c, 70 of 70 across both lessons. The script showed two "disagreements" (C09, S09); both are my answers listed in shuffled display order against the stored row order. Row by row they match.
+- Honesty note: the solve was blind to the keys, `why`, hints and `how` of the current text. It was **not fully blind** to the fourth review: I read the tail of this file first (the brief said not to read the author log, which I did not open until after the solve; this file is not the log). That tail names the old keys of S13, S05, C01, S10, S12, S14 and C14. I solved those from the current text and they still match, but treat those seven as "re-solved with a hint of where to look" rather than clean.
+- The easiest items to solve by elimination were S06, S11, S02 (a wrong choice is absurd) and S10.
+
+## 2. The eight changed items (C.1.c)
+
+| Item | Result |
+|---|---|
+| S13 | Fixed. h3 now says a thank-you for last year looks back while Mr. Duran needs helpers this Thursday (rules out one). `how` has three steps, each about a notice that is on screen (stacks of chairs; thank-you; gym doors; program). No "Congratulations", "gold star" or "first notice" left. `why` quotes the key. Key (112 characters) is no longer the longest (thank-you 118). One defensible answer: the gym-doors notice only announces. |
+| S05 | Fixed. h3 rules out the tiny map and no longer restates a key. 4 of 5 live. `how` still says "a photo with no words cannot tell the day, time or place", but `how` is shown after the answer. |
+| S12 | Better. Near-misses now exist (five-year-olds pressing paper into a box; nine-year-olds kicking a ball). Key pair A + D, both defensible, and no wrong pair can be argued. 4 of 5 live after h3. Key A is the longest of five (71 against 62/62/66/66); in a choose-two item that is a weak cue. |
+| C01 | Better. Key reworded (84) and not the longest (jar 86). Decoys reuse slide words. DOK 2. See S4 for h3. |
+| C06 | Better. The store decoy is gone, so nothing sets up C10. Key (66) ties with the hats decoy (66); the longest is the reading-children decoy (76). See S3. |
+| S10 | New prompt, and the off-purpose line is now the principal's favorite colour. Key (66) is longest by 2 of 5 (64, 61). Content Jaccard with C10 0.045. Easier than C10 (the C10 off-purpose line is subtle, this one is silly). |
+| C14 | Fixed. Key 83, second 82, longest 94 (the unsupported "rode to the park every summer" caption). Key still shares 7 content words with the stem against 0-1 (normal for a caption item; see N3). |
+| S14 | Key now the shortest (76 against 92/96/96). See S2. |
+
+## 3. Per-item checks (all 15 core, 15 similar, 5 Together)
+
+- **Key beside explanation (script `kbe.js`).** For every core and similar item, the key text appears in `why` and in `how`, and no distractor text appears in the first 160 characters of `why`. Together items have no `how` (by design). Passed for all 30.
+- **Live choices after hints 1-3.** I read each h1-h3. Every h3 rules out at most one option (or, for C09, S09, C10, S10, gives a method or one row). No ladder narrows to the key. Live counts: C01 3, C06 3, S12 4 of 5, S13 3, S05 4 of 5, S14 3, C14 3 in blank 1 and 4 in blank 2, S10 and C10 4 of 5. These agree with the author's recount.
+- **Longest-key cue (script `chk.js`, character counts).** Keys that are longest or tied-longest among single-answer items: C02 (+1, tie), C03 (+1), C13 (**+4**: 78 against 72/74/66), S01 (+4), S03 (+6), S06 (+7), S10 (+2). Not longest: C01, C06, C11, C14, S02, S08, S11, S13, S14. The author fixed the ones the fourth review named except C13 (still +4).
+- **Paired Jaccard (my own multiset scripts, `jac.js`).** Four measures per `like` pair: all words, options only, stem only, content words (stop words removed). Content-word Jaccard: maximum 0.149 (S07~C07), then 0.145 (S02~C02), 0.136 (S12~C12). All-words Jaccard: maximum 0.248 (S02~C02 and S07~C07), then 0.235 (S12~C12) and 0.216 (S13~C13). Those four are above the project's 0.21 line only on my all-words measure, and the excess is function words and the prompt frame ("A ... playing a ...", "Pick the TWO ... Choose two answers", "the words"). Options-only maximum 0.321 (S02) for the same reason. Exact shared options: 0 in all 15 pairs. I treat this as NOTE N1, not a finding. S10 and S15 are the most distinct pairs (all-words 0.068 and 0.166).
+- **DOK and points.** All choose-two, two-blank dropdown and match items are 2 points; the rest 1. No mismatches inside the lesson, but S01 is DOK 3 and its core pair C01 is now DOK 2 (see S5).
+- **Alignment.** `official`: "Create multimodal texts, using features of pre-selected modes for a specific purpose and audience." Picture, caption, label, sound, audience and off-purpose-line items all fit.
+- **Grade 3.** Nothing kindergarten-like. C13 and C15 are still long stems for a 1-point item (NOTE, as before).
+- **Learn It and Watch Me.** They model picture-to-words, removing an off-purpose line, caption, label, sound and a changed audience (Sam's kindergarten poster). They do not model "choose the TWO ideas for the purpose" (C05, S05, C12, S12) or "which notice does the writer need" (C13, S13). Both are easy transfers from the purpose step. NOTE N4.
+
+## 4. Findings
+
+**SHOULD**
+
+- **S1. C13 (and S03, S01, S06): the key is still the longest.** C13 key 78 against 72, 74 and 66. S03 key 69 against 62, 63, 37. S01 61 against 57, 49, 49. S06 44 against 31, 33, 37. In three of the six core mc items the key is within 1 character of the longest or is the longest. *Fix:* lengthen one C13 distractor to 80 or more (for example add "this week" to option B), and shorten the S03 key or lengthen a distractor.
+- **S2. S14, the closest distractor is not clearly worse.** Option B is "Three children stand behind a table at the school on a sunny morning, smiling at the camera." The stem gives no sunny morning or smiling, so B is invented, but a child cannot check that, and B contains who, where and a time of day. "Tells the most" is therefore a judgment call between B and the key (who, what, when). *Fix:* ask "Which caption tells the families what the children are doing and when?", or make the B details visibly unsupported. This is the only item where I think a careful third grader could defend a second answer, which is why I list it first among the SHOULDs.
+- **S3. C06, decoy C carries its own refutation and is the longest.** "children reading quietly at desks in a classroom, with no pinwheels in sight" (76 characters) tells the reader it is wrong. The same pattern exists in C05 ("printed in tiny numbers", "with no pictures") and S05 ("with no words on it", "cannot be read from the sidewalk"). A child can eliminate on the negative tag without comparing to the poster. *Fix:* in C06 say "children reading quietly at desks in a classroom"; in S05 drop "that cannot be read from the sidewalk" from the map option.
+- **S4. C01 h3 states the property the key meets.** "A jar of glass pieces shows the glass but not the mirrors." That makes "mirrors" the test, and the key is the only choice with two mirrors. It also helps C05 (set 1). It still leaves 3 live. *Fix:* "A jar of glass pieces shows glass, but the slide is about more than glass. Check the other three pictures against the whole slide."
+- **S5. S01 is DOK 3 but its core pair C01 was lowered to DOK 2.** Picture-to-slide matching is the same task. S11 is DOK 2 and its pair C11 is DOK 3 for the same sound-to-slide task (C02 and S02 are DOK 2). *Fix:* S01 to 2; C11 to 2 or S11 to 3.
+- **S6. Set variety.** Set 1: kaleidoscope in C01, C03, C04, C05 (four of five). Set 2: C06-C10 are all Imani's pinwheel poster. C04 (hottext) and C09 (match) test the same label rule. Not changed, as the author log says. A child who misreads the kaleidoscope loses most of set 1. *Fix:* move one kaleidoscope item to another topic, as the fourth review asked.
+
+**NOTE**
+
+- **N1. Jaccard.** See section 3: my all-words measure exceeds 0.21 for S02, S07, S12, S13, but content words are at most 0.149 and shared options are 0.
+- **N2. S09 h3 gives away the whole Wing row.** "A wing is a wide, flat piece on the side of the crane, not the front." One row of four, so the ladder still holds. S04 h2 and h3 both rule out "Orchid".
+- **N3. Caption items are word-match solvable.** Keys of C03, C14, S03, S08, S14 repeat the stem's own words (S14 key shares 9 content words with the stem against 4/4/2). This is inherent to "caption that tells what the photo shows"; the distractors (opinion, general fact, unsupported detail) are good. Not a defect.
+- **N4. C07 and the Watch Me.** C07's key ("one big picture for each step and only a few words") restates Sam's example ("one big picture and a few easy words"). Teaching and then testing the same rule is what Watch Me is for; I would only add a different audience in the Watch Me (not kindergarten) if you want transfer.
+- **N5. C10 vs line 8.** Line 8 ("The wind pushes on the paper and makes it turn") is explanation, not an invitation, and `how`/`why` say the other lines "invite children, tell the steps or tell what they will take home", which does not describe line 8. Line 5 (store sale) still wins clearly, because it sends readers elsewhere. Add "or explain how it works" to the `why`.
+- **N6. S08 and S04 differ in format from their core pair** (S08 is a 1-point mc, C08 is choose-two for 2 points; S04 mc, C04 hottext). They test the same skill, so the mapping is honest.
+
+## 5. Topic duplicates (`topics.js`, `dupsent.js` across js/data/lessons with variants)
+
+- Kaleidoscope, accordion, pinwheel, orchid, teapot, walk-a-thon, herb plants: only in 3.T.C.1.c.
+- Peanut: 3.T.C.1.c (Together P1-P5 and write only, no core or similar), and also 3.T.T.1.e, 3.T.T.2.d, 3.T.RA.1.b, 3.T.SS.1.a, 3.T.SS.1.b, 3.L.V.3.a, 3.L.V.3.d. Two sentences of p1 are identical to 3.L.V.3.d: "Georgia grows more peanuts than any other state." and "In the fall, farmers use a machine to dig up the plants." Together only; NOTE.
+- Wolves: C11 only here; 3.T.RA.2.b, 3.T.SS.2.b use wolves in other ways (howling comparison, simile). No duplicate item.
+- Raincoat (S03), blueberry (S01), drums (S02), kickball (C12), origami (S09): occur in other lessons as a word or an unrelated item; no duplicate.
+
+## 6. Facts (WebFetch / WebSearch)
+
+| Claim | Result | URL |
+|---|---|---|
+| Accordion: moving air over metal reeds makes the sound | Supported (fourth review) | https://kids.britannica.com/students/article/accordion/315777 |
+| Kaleidoscope: tube, mirrors, loose coloured glass, repeated reflections | Supported (fourth review) | https://science.howstuffworks.com/kaleidoscope.htm |
+| Peanut: yellow flower, peg grows down, pod forms underground; plants dug, inverted and dried; pods picked by a machine; peanuts are legumes; Georgia the top state | Supported (fourth review) | https://nationalpeanutboard.org/news/how-peanuts-grow/ |
+| Wolves: packs; howls carry for miles | Supported (fourth review) | https://kids.nationalgeographic.com/animals/mammals/facts/gray-wolf |
+| Orchid petals, crane parts (beak, wings), teapot spout and handle, leaf veins and blade | Standard; not fetched in this pass | |
+
+I found no factual error.
+
+## 7. What to change (all optional; verdict stands)
+1. S14: reword the prompt or make the B details visibly unsupported (S2).
+2. C13: lengthen a distractor; S03: shorten the key (S1).
+3. C06 and S05: drop the self-refuting tails (S3).
+4. C01 h3: do not state the "mirrors" rule (S4).
+5. S01 DOK to 2; C11 or S11 DOK (S5).
+6. Move one kaleidoscope item (S6).
