@@ -386,7 +386,9 @@ Only the TS-CE and TS-CC blocks were edited. "Live" is used as the brief defines
 
 ### Findings not addressed, and why
 
-- **NOTE-1, the Together ladder for TS-CE P1.** The clue ("Read paragraph 2. Find the clue words 'as a result' and read the effect that comes after them.") leaves only the key. P1 is a DOK 1 Together item. In Together, the engine's ladder shows the clue, then narrows the choices, then walks through the answer, by design. I left the clue as the lesson's taught strategy. The lead may want a neutral clue.
+- **NOTE-1, the Together ladder for TS-CE P1: now addressed at the lead's request.** The clue was "Read paragraph 2. Find the clue words 'as a result' and read the effect that comes after them." That named the paragraph and the clue word that sit right before the key. The clue is now: "An effect is what happens because of something. Find the cause in the question, then look in the article for a cause-and-effect clue word that leads to what it makes happen." It keeps the taught strategy (find the cause, then follow a clue word to its effect) but names no paragraph, no clue word and no choice.
+  - **Live after the clue:** all four choices ("They tighten and relax very fast.", "They stop moving and rest.", "They grow bigger and stronger.", "They stay still to keep the heat in."). The clue rules none out. A child still has to find the paragraph and read it to choose.
+  - The id, key, choices and `why` are unchanged. The addon hints (own mode only) are unchanged.
 - **NOTE-8, legacy Together frames that match form A.** CC P4 matches T3, and CE P3 matches T2. Both predate the expansion. They rehearse a frame, not an answer, so I left them.
 - **NOTE-4, the other pre-eliminations listed in the re-review.** CC C06's how removes one C07 distractor ("learned math but not read"). It states no key, so I left it. I changed the closest case, C07 to C10.
 - **The re-review's SEQ and DESC findings.** They belong to the other author.

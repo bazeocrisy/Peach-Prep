@@ -844,7 +844,7 @@ PP.addLesson({
         { text: "They grow bigger and stronger." },
         { text: "They stay still to keep the heat in." }
       ],
-      clue: "Read paragraph 2. Find the clue words \"as a result\" and read the effect that comes after them.",
+      clue: "An effect is what happens because of something. Find the cause in the question, then look in the article for a cause-and-effect clue word that leads to what it makes happen.",
       why: "The answer is \"They tighten and relax very fast.\" Paragraph 2 says that, as a result, the muscles tighten and relax very fast, over and over." },
     { id: "SK-TSCE-P2", type: "hottext", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which sentence uses a cause-and-effect clue word to explain why your teeth chatter? Choose the sentence in the passage.",
