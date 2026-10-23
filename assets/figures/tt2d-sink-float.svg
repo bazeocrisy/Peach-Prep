@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="t">
+  <title id="t">Drawing of a tank of water with four objects. A cork and an apple float at the top of the water. A rock and a coin rest on the bottom. Each object has a label.</title>
+  <rect width="320" height="280" fill="#fff"/>
+  <rect x="20" y="60" width="280" height="190" fill="#f1f1f1" stroke="#333" stroke-width="4"/>
+  <path d="M24 84 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t36 0" fill="none" stroke="#555" stroke-width="3"/>
+  <rect x="64" y="70" width="40" height="22" rx="4" fill="#d9c9a3" stroke="#333" stroke-width="3"/>
+  <circle cx="226" cy="76" r="17" fill="#fff" stroke="#333" stroke-width="3"/><path d="M226 59 q4 -10 10 -12" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M96 244 l12 -26 l34 -4 l16 22 l-6 10 z" fill="#bbb" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="236" cy="238" r="12" fill="#ddd" stroke="#333" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111" text-anchor="middle">
+    <text x="84" y="34">cork</text><text x="226" y="34">apple</text>
+    <text x="126" y="276" >rock</text><text x="236" y="276">coin</text>
+  </g>
+</svg>

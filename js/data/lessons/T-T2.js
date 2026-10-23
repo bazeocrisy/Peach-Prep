@@ -3280,7 +3280,7 @@ PP.addLesson({
     big: "A good informational piece names the topic at the start, teaches facts in the middle, and wraps up at the end.",
     points: [
       "The introduction tells the reader what the topic is. It can start with something interesting, but it must make the topic clear.",
-      "The middle gives facts, details and definitions. A picture or diagram with a caption can also help explain a fact. Choose one that shows the facts in that part of your writing. Every sentence should be about the topic.",
+      "The middle gives facts, details and definitions. A picture or diagram with a caption can also help explain a fact. Choose one that shows the facts in that part of your writing. Every sentence should be about the topic. When facts tell steps, put them in the order they happen.",
       "A definition tells what a word means, like \"A burrow is a hole an animal digs for its home.\"",
       "If a sentence is about something else, like your own pet or your lunch, it does not belong. Take it out.",
       "The conclusion wraps up. It reminds the reader of the topic or the most important idea. It does not start a new topic."
@@ -3301,7 +3301,7 @@ PP.addLesson({
       ],
       note: "The first sentence names the topic: frogs change as they grow. The middle sentences give facts. The last sentence wraps up the same idea without starting anything new."
     },
-    tip: "On the Milestones, you will read a student's draft and choose the best introduction, the best fact to add, the best conclusion, or the sentence that does not belong. Reread the sentences around that spot before you choose."
+    tip: "On the Milestones, you will read a student's draft and choose the best introduction, the best fact to add, the best conclusion, or the sentence that does not belong. You may also put facts in order or match a picture to the sentences it explains. Reread the sentences around that spot before you choose."
   },
   learn: [
     {
@@ -3369,7 +3369,23 @@ PP.addLesson({
         ["(4) Most bats sleep during the day.", "(5) They hang upside down in caves, trees, or old buildings.", "(6) At night, they wake up and fly out to find food.", "(7) Many bats eat insects such as moths and beetles.", "(8) My sister wants to get a pet hamster."],
         ["(9) Bats have a special way to find food in the dark.", "(10) A bat makes high squeaks as it flies.", "(11) The sounds bounce off a moth and come back to the bat as echoes.", "(12) By listening to the echoes, the bat can tell where the moth is."],
         ["(13) Bats are cool, and that is the end."]
+      ] },
+    /* B4-b4a passages begin */
+    { id: "p3", draft: true, title: "The Yellow School Bus", byline: "Amina's first draft", genre: "Student draft (informational)",
+      paragraphs: [
+        ["(1) I am writing about a vehicle that many kids ride to school every day in the United States."],
+        ["(2) A school bus is painted a bright yellow color.", "(3) That color is easy for other drivers to see.", "(4) Before the bus stops, its yellow lights flash to warn drivers to slow down.", "(5) When the bus stops, its red lights flash and a stop arm swings out from the side.", "(6) Drivers must stop and wait until the bus starts moving again."],
+        ["(7) My uncle drives a red pickup truck with a loud horn.", "(8) Inside the bus, the seats are tall and padded to help keep riders safe."],
+        ["(9) That is all about school buses."]
+      ] },
+    { id: "p4", draft: true, title: "Magnets", byline: "Kofi's first draft", genre: "Student draft (informational)",
+      paragraphs: [
+        ["(1) Here is my report."],
+        ["(2) A magnet pulls on objects made of iron or steel.", "(3) Paper clips and steel nails stick to a magnet.", "(4) Objects made of plastic, wood or glass do not stick to a magnet.", "(5) My cousin got a new puppy last week."],
+        ["(6) Every magnet has two poles.", "(7) One is the north pole, and the other is the south pole.", "(8) A north pole and a south pole pull toward each other.", "(9) Our lunch at school today was pizza and fruit.", "(10) Two north poles push each other away."],
+        ["(11) That is all I know about magnets."]
       ] }
+    /* B4-b4a passages end */
   ],
   practice: [
     { id: "SK-TT2d-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -3425,11 +3441,832 @@ PP.addLesson({
         { text: "a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\"", correct: true },
         { text: "a photo of a jar of peanut butter on a kitchen table, with the caption \"Peanut butter is made from peanuts\"" },
         { text: "a drawing of a farmer on a tractor in a peanut field, with the caption \"Farmers dig up peanuts in the fall\"" },
-        { text: "a drawing of a bowl of popcorn next to a movie ticket, with the caption \"My favorite movie snack\"" }
+        { text: "a map of Georgia with one star on it, with the caption \"Where many peanuts grow\"" }
       ],
       clue: "Reread sentences 4 and 5. What happens there that is hard to picture? Which picture would let the reader see it?",
-      why: "The answer is a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\". Sentences 4 and 5 tell how a peg pushes into the soil and grows a shell under the ground, and the diagram lets readers see that. The peanut butter photo is about peanuts but not about how they grow. The farmer drawing goes with sentence 6, not 4 and 5. The popcorn drawing is not about peanuts at all." }
+      why: "The answer is a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\". Sentences 4 and 5 tell how a peg pushes into the soil and grows a shell under the ground, and the diagram lets readers see that. The peanut butter photo is about peanuts but not about how they grow. The farmer drawing goes with sentence 6, not 4 and 5. The map of Georgia goes with sentence 9, which is about Georgia farmers, not with sentences 4 and 5." }
   ],
+  /* ---------- B4-b4a begin ---------- */
+  /* ---------- B4 (expansion 2026-10-22, author b4a; docs/expansion-2026-10-22/01-architecture.md 2.2-2.3) ----------
+     Selected-response core (the Milestones assesses this standard through revise/edit items). The write task stays
+     OUTSIDE the fifteen: it is adult-scored and never awards a pass. Set 1 reuses P4 and P5 by { ref } on Rosa's
+     draft (p1) plus three new items; set 2 uses p3 (school bus, with Figure 1); set 3 uses p4 (magnets, with Figure 1)
+     plus a two-draft stem on bike helmets. Practice Together is P1, P2, P3 and P6. Hints and Show me how for P1-P6 are in addons.
+     Author log: docs/expansion-2026-10-22/batches/B4-b4a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT2d-P5" },
+      { id: "SK-TT2d-C02", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
+        prompt: "Rosa wants to add a sentence after sentence 5 that supports the idea in sentence 2, \"Peanuts grow in a surprising way.\" Which sentence fits best?",
+        choices: [
+          { text: "The flower is above the ground, but the peanut is under it.", correct: true },
+          { text: "Peanuts are roasted and packed into jars, bags and cans." },
+          { text: "Many farmers also grow cotton and corn on their land." },
+          { text: "Some stores sell peanuts that are still in their shells." }
+        ],
+        clue: "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 2 promises to explain.",
+        hints: [
+          "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 2 promises to explain.",
+          "Reread sentences 2 to 5 and follow the plant step by step. Then ask which choice tells more about those steps.",
+          "A sentence about how peanuts are packed or sold tells about food, not about how the plant grows. Look at the choices that are left."
+        ],
+        how: [
+          "Sentence 2 says peanuts grow in a surprising way, so a supporting sentence has to tell about growing.",
+          "Sentences 3 to 5 follow the plant from a flower, to a peg, to a shell under the soil. The surprise is that the peanut forms under the ground while the flower is above it.",
+          "The answer is: The flower is above the ground, but the peanut is under it.",
+          "Packing peanuts in jars, growing cotton and corn, and selling peanuts in shells are all true, but none of them explains how a peanut plant grows."
+        ],
+        misconception: "A common mix-up is picking any true fact about peanuts. A supporting sentence must tell more about the exact idea it supports.",
+        why: "The answer is: The flower is above the ground, but the peanut is under it. It tells more about the surprising way peanuts grow. The other sentences are true, but they are about packing, other crops or selling peanuts, not about how the plant grows." },
+      { id: "SK-TT2d-C03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
+        prompt: "Rosa wants to add four sentences after sentence 6 to tell what happens next at harvest time. Put them in the order that makes the most sense.",
+        steps: [
+          "When the plants are dry, a machine called a combine picks them up.",
+          "The combine pulls the pods off the dry plants.",
+          "Warm air blows through the pods to dry them even more.",
+          "Last, the dry pods are ready to be shelled or stored."
+        ],
+        clue: "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
+        hints: [
+          "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
+          "Reread sentence 6 to see where the harvest story stands now. Then look for clue words, like when, last and even more, in the new sentences.",
+          "The pods cannot be dried until they have been pulled off the plants. Use that to place two of the sentences, then decide where the others go."
+        ],
+        how: [
+          "Sentence 6 ends with the plants drying in the sun, so the first new step starts when the plants are dry.",
+          "Next the combine pulls the pods off the dry plants, because there is nothing to dry until the pods are off.",
+          "Then warm air dries the pods even more, and last the dry pods are ready.",
+          "The order is: the combine picks up the plants, it pulls off the pods, warm air dries the pods, the dry pods are ready."
+        ],
+        misconception: "A common mix-up is putting the last step first because it sounds like a finish. Clue words like last and even more show where a step belongs.",
+        why: "The order is: When the plants are dry, a machine called a combine picks them up; the combine pulls the pods off the dry plants; warm air blows through the pods to dry them even more; last, the dry pods are ready to be shelled or stored. Each step needs the one before it." },
+      { id: "SK-TT2d-C04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p1"],
+        stem: [
+          "Rosa wants to add this sentence after sentence 6: \"Farmers harvest peanuts in the fall.\""
+        ],
+        prompt: "She also wants to tell what the word harvest means. Choose the best answer for the blank.",
+        text: "To harvest a crop means {0}.",
+        slots: [
+          { options: ["to gather the crop when it is ready", "to put seeds into the soil", "to dig up plants and throw them away"], answer: 0 }
+        ],
+        clue: "A definition tells what a word means. Use the way the word is used in the sentences to figure it out.",
+        hints: [
+          "A definition tells what a word means. Use the way the word is used in the sentences to figure it out.",
+          "Read sentence 6 and Rosa's new sentence together. Ask what farmers do with the peanut plants in the fall.",
+          "Putting seeds into the soil happens when a crop starts to grow, not in the fall. Look at the choices that are left."
+        ],
+        how: [
+          "The new sentence says farmers harvest peanuts in the fall, and sentence 6 says they dig up the plants and let them dry.",
+          "That shows harvest is something done to a crop that has finished growing.",
+          "The answer is: To harvest a crop means to gather the crop when it is ready.",
+          "Putting seeds into the soil is planting. Throwing the plants away does not fit, because the farmers dry them and keep the peanuts."
+        ],
+        misconception: "A common mix-up is choosing a word that sounds like farm work. Use the sentences around the word to find what the farmers are really doing.",
+        why: "The answer is: To harvest a crop means to gather the crop when it is ready. Farmers dig up and dry the plants in the fall to get the peanuts. Putting seeds in the soil is planting, and throwing the plants away does not fit what the farmers do." },
+      { ref: "SK-TT2d-P4" }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT2d-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p3"],
+        prompt: "Sentence 1 does not tell the reader exactly what Amina's draft is about. Which sentence should replace it as a better introduction?",
+        choices: [
+          { text: "School buses have special parts that help keep kids safe.", correct: true },
+          { text: "Cars, trucks and buses all have wheels and drive on roads." },
+          { text: "My bus stop is at the end of my street, near a big oak tree." },
+          { text: "That is why a school bus is a safe way for kids to get to school." }
+        ],
+        clue: "An introduction names the topic of the whole draft. It should fit everything that comes after it, not just one small part.",
+        hints: [
+          "An introduction names the topic of the whole draft. It should fit everything that comes after it, not just one small part.",
+          "Skim the four paragraphs and notice what they share. Then check each choice against that.",
+          "A sentence that begins with \"That is why\" wraps up what came before it, so it sounds like an ending. Look at the choices that are left."
+        ],
+        how: [
+          "An introduction tells the topic of the whole draft.",
+          "Paragraph 2 is about the paint, lights and stop arm, and paragraph 3 is about the seats. They all tell about parts that help a bus keep riders safe.",
+          "The answer is: School buses have special parts that help keep kids safe.",
+          "The sentence about wheels is about many vehicles, the oak tree sentence is about Amina's bus stop, and \"That is why\" sounds like a conclusion."
+        ],
+        misconception: "A common mix-up is choosing the choice that mentions buses without checking it fits the whole draft. An introduction must name the topic everything else is about.",
+        why: "The answer is: School buses have special parts that help keep kids safe. It names the topic and leads into the facts about the paint, lights, stop arm and seats. The wheels sentence is about many vehicles, the oak tree sentence is about Amina's stop, and the \"That is why\" sentence sounds like an ending." },
+      { id: "SK-TT2d-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p3"],
+        prompt: "Amina wants to add a sentence after sentence 5 that tells what a stop arm is. Choose the best answer for the blank.",
+        text: "A stop arm is {0}.",
+        slots: [
+          { options: [
+              "a sign that swings out from the bus to tell drivers to stop",
+              "a door at the side of the bus that swings out so riders can climb on",
+              "a flashing light that warns drivers the bus will stop soon",
+              "a long bar that lifts to let the bus into the school lot"
+            ],
+            answer: 0 }
+        ],
+        clue: "A definition tells what a word means. Look for the job the thing does, not only where it is.",
+        hints: [
+          "A definition tells what a word means. Look for the job the thing does, not only where it is.",
+          "Read sentences 4, 5 and 6 together. Ask what the stop arm does when it swings out and what drivers must do.",
+          "Sentence 4 already tells about the yellow lights that flash before the bus stops, so that is a different part from the stop arm. Look at the choices that are left."
+        ],
+        how: [
+          "Sentence 5 says a stop arm swings out from the side when the bus stops, and sentence 6 says drivers must stop and wait.",
+          "So the stop arm is a sign, and its job is to tell drivers to stop.",
+          "The answer is: A stop arm is a sign that swings out from the bus to tell drivers to stop.",
+          "A door that swings out is about riders getting on, the flashing light is the yellow light from sentence 4, and a bar that lifts does not match anything in the draft."
+        ],
+        misconception: "A common mix-up is choosing the choice that uses the same action words, like swings out. A definition must tell what the thing is and what it does.",
+        why: "The answer is: A stop arm is a sign that swings out from the bus to tell drivers to stop. Sentence 5 says it swings out when the bus stops, and sentence 6 says drivers must stop. A door is for riders, the flashing light is the yellow light, and a bar that lifts is not in the draft." },
+      { id: "SK-TT2d-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p3"], pick: 1,
+        prompt: "One sentence in Amina's draft does not belong. Choose the sentence that she should take out.",
+        targets: ["p3:2:3", "p3:2:5", "p3:3:1", "p3:3:2", "p3:4:1"],
+        answer: ["p3:3:1"],
+        clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about school buses?",
+        hints: [
+          "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about school buses?",
+          "Read each sentence with the one before it and the one after it. A sentence that belongs connects to its neighbors.",
+          "Sentence 8 is about the seats inside the bus, so it gives a fact about the topic. Check the sentences that are left."
+        ],
+        how: [
+          "The topic is school buses, so each sentence should tell about them.",
+          "Sentence 4 is about the yellow lights, sentence 6 is about what drivers must do, and sentence 9 wraps up the draft about buses.",
+          "The answer is sentence 7: \"My uncle drives a red pickup truck with a loud horn.\"",
+          "It is about a pickup truck, not a school bus, so it does not teach the reader about the topic."
+        ],
+        misconception: "A common mix-up is keeping a sentence because it mentions a vehicle. A sentence belongs only if it teaches about school buses.",
+        why: "The answer is sentence 7, \"My uncle drives a red pickup truck with a loud horn.\" It is about a pickup truck, not a school bus. Sentences 4, 6, 8 and 9 are all about school buses." },
+      { id: "SK-TT2d-C09", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: ["p3"], pick: 2,
+        stem: [
+          "(2) A school bus is painted a bright yellow color.",
+          "(3) That color is easy for other drivers to see."
+        ],
+        prompt: "Which TWO sentences could Amina add after sentence 3 to give facts that support sentence 3?",
+        choices: [
+          { text: "Black letters show up clearly on yellow paint, even in dim light.", correct: true },
+          { text: "The bright color stands out from far away, so drivers notice a bus.", correct: true },
+          { text: "The first school buses were wagons that were pulled by horses down dirt roads." },
+          { text: "Some school buses are built to carry more riders than other buses can carry." },
+          { text: "Yellow is the same color as lemons, sunflowers and ripe bananas." }
+        ],
+        clue: "A fact that supports a sentence gives more information about the same idea. Ask what idea sentence 3 is about.",
+        hints: [
+          "A fact that supports a sentence gives more information about the same idea. Ask what idea sentence 3 is about.",
+          "Reread sentences 2 and 3, and check each choice against the idea in sentence 3. Choose two.",
+          "The wagons pulled by horses tell how school buses began, not why the color helps drivers. Look at the choices that are left."
+        ],
+        how: [
+          "Sentence 3 says the color is easy for other drivers to see, so the added facts must tell more about how the color helps them see a bus.",
+          "Black letters on yellow paint can be read even in dim light, and a bright color stands out from far away. Both tell why drivers can see a bus.",
+          "The answers are: Black letters show up clearly on yellow paint, even in dim light. And: The bright color stands out from far away, so drivers notice a bus.",
+          "The horse wagons, the riders each bus can carry and the lemon-and-banana colors are true or harmless, but none of them tells how the color helps drivers see a bus."
+        ],
+        misconception: "A common mix-up is choosing a fact because it mentions school buses or the color yellow. A supporting fact must tell more about the same idea.",
+        why: "The answers are \"Black letters show up clearly on yellow paint, even in dim light\" and \"The bright color stands out from far away, so drivers notice a bus.\" Both tell why the color is easy to see. The wagon, rider and fruit sentences do not explain how the color helps drivers." },
+      { id: "SK-TT2d-C10", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p3"],
+        stem: ["Amina drew Figure 1 to go next to sentence 5 in her draft."],
+        figure: { src: "assets/figures/tt2d-bus-stopped.svg",
+          label: "Figure 1",
+          caption: "A school bus that has stopped",
+          alt: "Drawing of a school bus seen from the side. Two red lights flash on top of the bus, and a stop sign on an arm swings out from the left side. Labels point to the red lights and the stop arm." },
+        prompt: "Which caption should Amina write under Figure 1?",
+        choices: [
+          { text: "When a bus stops, red lights flash and the stop arm swings out.", correct: true },
+          { text: "Yellow lights flash before a bus stops to warn other drivers." },
+          { text: "The seats inside a school bus are tall and padded." },
+          { text: "A school bus is painted a bright yellow color." }
+        ],
+        clue: "A caption tells what a picture shows. It should match what you can see in the picture, and it should help explain the draft.",
+        hints: [
+          "A caption tells what a picture shows. It should match what you can see in the picture, and it should help explain the draft.",
+          "Study Figure 1 and read its labels. Then compare what you see with the sentences in paragraphs 2 and 3.",
+          "The picture shows the outside of the bus, and the seats are inside. Look at the choices that are left."
+        ],
+        how: [
+          "Read the labels first. Figure 1 labels red lights and a stop arm.",
+          "Sentence 5 says that when the bus stops, its red lights flash and a stop arm swings out, so the picture shows what sentence 5 describes.",
+          "The answer is: When a bus stops, red lights flash and the stop arm swings out.",
+          "Yellow lights are about the moment before a stop, and the picture labels red lights. The seats are inside the bus, and the paint color is not labeled in the picture."
+        ],
+        misconception: "A common mix-up is picking a true sentence about buses. A caption must describe what this picture shows.",
+        why: "The answer is: When a bus stops, red lights flash and the stop arm swings out. Figure 1 labels red lights and a stop arm, and sentence 5 explains them. The yellow lights come before the stop, the seats are inside the bus, and the picture does not show the paint color." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT2d-C11", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: ["p4"], pick: 2,
+        prompt: "Two sentences in Kofi's draft do not belong. Choose the TWO sentences he should take out.",
+        targets: ["p4:2:2", "p4:2:4", "p4:3:2", "p4:3:4", "p4:3:5"],
+        answer: ["p4:2:4", "p4:3:4"],
+        clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about magnets?",
+        hints: [
+          "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about magnets?",
+          "Read the sentences in paragraphs 2 and 3 one at a time. Choose two.",
+          "Sentence 10 tells how two poles act, so it is about magnets. Check the sentences that are left."
+        ],
+        how: [
+          "The topic is magnets, so each sentence should teach about them.",
+          "Sentence 3 names things a magnet pulls, sentence 7 names the poles, and sentence 10 tells what two north poles do. Those all teach about magnets.",
+          "The answers are sentence 5, \"My cousin got a new puppy last week,\" and sentence 9, \"Our lunch at school today was pizza and fruit.\"",
+          "One is about a puppy and one is about lunch, so neither teaches the reader about magnets."
+        ],
+        misconception: "A common mix-up is stopping after finding one sentence. Read the whole draft, because more than one sentence can be off the topic.",
+        why: "The answers are sentence 5, \"My cousin got a new puppy last week,\" and sentence 9, \"Our lunch at school today was pizza and fruit.\" Neither one is about magnets. Sentences 3, 7 and 10 each teach a fact about magnets." },
+      { id: "SK-TT2d-C12", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.d"], passages: ["p4"],
+        prompt: "Kofi wants a better first sentence and a better last sentence for his draft. Choose the best answer for each blank.",
+        text: "First sentence: {0} Last sentence: {1}",
+        slots: [
+          { options: [
+              "Magnets are objects that pull on some metals and have two poles.",
+              "Refrigerators, toys and many tools use magnets in different ways.",
+              "I played with a magnet in the science room at school."
+            ],
+            answer: 0 },
+          { options: [
+              "Now you know that magnets pull on some metals and that their poles pull or push each other.",
+              "Next, I will write about the strongest magnets in the whole world.",
+              "Magnets are the best toys in the world because they are so much fun."
+            ],
+            answer: 0 }
+        ],
+        clue: "An introduction names the topic of the whole draft, and a conclusion wraps up what the reader learned. Neither one starts a new topic or gives only one small part.",
+        hints: [
+          "An introduction names the topic of the whole draft, and a conclusion wraps up what the reader learned. Neither one starts a new topic or gives only one small part.",
+          "Read sentences 2 to 10 and decide what the two big ideas are. Then test each choice for both blanks.",
+          "A sentence that begins with \"Next, I will write about\" starts a new topic, so it cannot wrap up this draft. Look at the choices that are left for the second blank, and work out the first blank yourself."
+        ],
+        how: [
+          "The first blank needs a sentence that names the topic of the whole draft, and the second blank needs one that wraps it up.",
+          "Blank 1: the draft tells what magnets pull and about poles. \"Magnets are objects that pull on some metals and have two poles\" names the topic and fits both parts.",
+          "Blank 2: \"Now you know that magnets pull on some metals and that their poles pull or push each other\" sums up what the reader learned.",
+          "Using magnets on refrigerators is only one small part, and the science room sentence is about Kofi. \"Next, I will write about\" starts something new, and calling magnets the best toys is an opinion."
+        ],
+        misconception: "A common mix-up is choosing a sentence that mentions magnets without checking its job. The first sentence must name the whole topic, and the last must wrap it up.",
+        why: "Blank 1 needs \"Magnets are objects that pull on some metals and have two poles,\" because it names the whole topic. Blank 2 needs \"Now you know that magnets pull on some metals and that their poles pull or push each other,\" because it wraps up what the reader learned. The other choices give one small part, talk about Kofi, start a new topic or give an opinion." },
+      { id: "SK-TT2d-C13", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: ["p4"], pick: 2,
+        figure: { src: "assets/figures/tt2d-magnet-test.svg",
+          label: "Figure 1",
+          caption: "Testing four objects with a magnet",
+          alt: "Four small test pictures. A magnet pulls a paper clip and a steel nail. A magnet does not pull a plastic cup or a wood block. Each picture is labeled pulled or not pulled." },
+        prompt: "Kofi wants to put Figure 1 next to his draft. Which TWO sentences does Figure 1 help explain? Choose the two sentences.",
+        targets: ["p4:2:2", "p4:2:3", "p4:3:2", "p4:3:3", "p4:3:5"],
+        answer: ["p4:2:2", "p4:2:3"],
+        clue: "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
+        hints: [
+          "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
+          "Study Figure 1 and write down what it shows. Then read the sentences in paragraphs 2 and 3 one at a time and ask whether each matches.",
+          "Sentence 8 is about two poles, and Figure 1 shows only one magnet and four objects. Check the sentences that are left."
+        ],
+        how: [
+          "Figure 1 shows a magnet being tested with four objects. A paper clip and a steel nail are pulled, and a plastic cup and a wood block are not.",
+          "Sentence 3 says paper clips and steel nails stick to a magnet, and sentence 4 says objects made of plastic, wood or glass do not.",
+          "The answers are sentence 3 and sentence 4.",
+          "Sentences 7, 8 and 10 are about poles. The figure does not show a north pole or a south pole."
+        ],
+        misconception: "A common mix-up is choosing any sentence about magnets. A figure helps explain only the facts that it actually shows.",
+        why: "The answers are sentence 3, \"Paper clips and steel nails stick to a magnet,\" and sentence 4, \"Objects made of plastic, wood or glass do not stick to a magnet.\" Figure 1 shows the paper clip and nail pulled and the plastic cup and wood block not pulled. The sentences about poles are not shown in the figure." },
+      { id: "SK-TT2d-C14", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: ["p4"],
+        prompt: "Kofi wants to add a sentence after sentence 6 that tells what a pole is. Which sentence fits best?",
+        choices: [
+          { text: "A pole is an end of a magnet, where its pull is strongest.", correct: true },
+          { text: "Magnets come in many shapes, such as bars, rings and horseshoes." },
+          { text: "A pole is also a long stick that holds up a flag or a sign." },
+          { text: "The Earth has a north pole and a south pole too." }
+        ],
+        clue: "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
+        hints: [
+          "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
+          "Reread sentences 6 and 7 to see how the word pole is used in this draft. Then check each choice.",
+          "A pole that holds up a flag is a different meaning of the word from the one in this draft. Look at the choices that are left."
+        ],
+        how: [
+          "Sentence 6 says every magnet has two poles, and sentence 7 names them north and south. The new sentence must tell what a pole is on a magnet.",
+          "The ends of a magnet are where its pull is strongest, so they are its poles.",
+          "The answer is: A pole is an end of a magnet, where its pull is strongest.",
+          "The shapes sentence is about magnets but does not define a pole. The flag pole is a different meaning, and the Earth sentence is about the planet, not a magnet."
+        ],
+        misconception: "A common mix-up is picking a sentence that uses the word pole. A definition has to give the meaning that fits the draft.",
+        why: "The answer is: A pole is an end of a magnet, where its pull is strongest. It tells what a pole is on a magnet. The shapes sentence does not define pole, a flag pole is a different meaning, and the Earth sentence is about the planet." },
+      { id: "SK-TT2d-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.d"], passages: [],
+        stem: [
+          "Two students wrote about bike helmets.",
+          "Draft A: (1) I will tell you a few things. (2) A helmet has a hard shell that spreads out a hit. (3) Soft foam inside slows the head down. (4) A helmet helps keep a rider's head safe.",
+          "Draft B: (1) Bike helmets protect the head when a rider falls. (2) A hard shell spreads out a hit. (3) Soft foam inside slows the head down. (4) My bike is blue and has a basket. (5) A helmet helps keep a rider's head safe."
+        ],
+        prompt: "Which statement tells what each draft needs?",
+        choices: [
+          { text: "Draft A needs a better introduction, and Draft B has a sentence that should be taken out.", correct: true },
+          { text: "Draft A has a sentence that should be taken out, and Draft B needs a better introduction." },
+          { text: "Draft A needs a better conclusion, and Draft B has a sentence that should be taken out." },
+          { text: "Each draft has a sentence that should be taken out." }
+        ],
+        clue: "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
+        hints: [
+          "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
+          "Read the first sentence and the last sentence of each draft. Then read the sentences in between and ask whether each one is about helmets.",
+          "Draft B's first sentence names its topic, helmets. Look at the choices that are left."
+        ],
+        how: [
+          "Check the parts one at a time for each draft.",
+          "Draft A's first sentence, \"I will tell you a few things,\" does not name the topic, so it needs a better introduction. All of its other sentences are about helmets.",
+          "Draft B starts well and ends well, but \"My bike is blue and has a basket\" is not about helmets.",
+          "The answer is: Draft A needs a better introduction, and Draft B has a sentence that should be taken out."
+        ],
+        misconception: "A common mix-up is looking for the same problem in both drafts. Each draft can have a different part that needs work.",
+        why: "The answer is: Draft A needs a better introduction, and Draft B has a sentence that should be taken out. Draft A never names helmets in its first sentence. Draft B names helmets, but sentence 4 is about the writer's bike. Both drafts end with a good conclusion." }
+    ] }
+  ] },
+  similar: [
+    { id: "SK-TT2d-S01", type: "match", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-P5"],
+      prompt: "A student is writing about hourglasses. Match each sentence to the part of the draft where it belongs.",
+      cols: ["Introduction", "Middle (fact or detail)", "Conclusion"],
+      rows: [
+        { text: "Have you ever watched sand run through a tiny hole? Read on to learn about hourglasses.", answer: 0 },
+        { text: "An hourglass has two glass bulbs joined by a narrow neck.", answer: 1 },
+        { text: "The sand takes the same amount of time to fall each time the bulbs are turned over.", answer: 1 },
+        { text: "Now you know how an hourglass uses falling sand to measure time.", answer: 2 }
+      ],
+      clue: "Ask what job each sentence does. Does it open the topic, teach a fact, or wrap up what the reader learned?",
+      hints: [
+        "Ask what job each sentence does. Does it open the topic, teach a fact, or wrap up what the reader learned?",
+        "Read each sentence by itself and ask whether it would work as the first sentence of a draft, a fact in the middle, or the last sentence.",
+        "The sentence about the glass bulbs and the narrow neck gives a fact about what an hourglass is made of, so it belongs in the middle. Match the other rows yourself."
+      ],
+      how: [
+        "A question to the reader that says \"Read on\" opens the topic, so it is the introduction.",
+        "The sentences about the two glass bulbs and about the sand taking the same time are facts, so they belong in the middle.",
+        "\"Now you know how an hourglass uses falling sand to measure time\" wraps up what the reader learned, so it is the conclusion.",
+        "So the matches are: the question is the introduction, the bulbs and sand-time sentences are middle facts, and the \"Now you know\" sentence is the conclusion."
+      ],
+      misconception: "A common mix-up is putting a fact in the introduction because it is about the topic. The introduction opens the topic, and facts belong in the middle.",
+      why: "The question that says \"Read on\" opens the topic, so it is the introduction. The sentences about the glass bulbs and about the sand taking the same time are facts for the middle. \"Now you know how an hourglass uses falling sand to measure time\" wraps up, so it is the conclusion." },
+    { id: "SK-TT2d-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C02"],
+      stem: [
+        "(1) A sundial tells time with a shadow.",
+        "(2) It has a flat plate and a flat piece that stands up from the plate.",
+        "(3) When the sun shines, the standing piece makes a shadow on the plate."
+      ],
+      prompt: "Which sentence could be added after sentence 3 to support sentence 1?",
+      choices: [
+        { text: "As the sun moves across the sky, the shadow moves across the plate.", correct: true },
+        { text: "Some sundials are made of stone, and some are made of metal." },
+        { text: "Clocks and watches also tell people what time it is." },
+        { text: "Many gardens have a sundial in the middle of the flower beds." }
+      ],
+      clue: "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 1 states.",
+      hints: [
+        "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 1 states.",
+        "Reread sentences 1 to 3 and picture a sundial in the sun. Then ask which choice tells more about how the shadow tells time.",
+        "A sentence about what sundials are made of tells about the material, not about how a sundial tells time. Look at the choices that are left."
+      ],
+      how: [
+        "Sentence 1 says a sundial tells time with a shadow, so a supporting sentence must tell more about the shadow and the time.",
+        "The sun moves across the sky during the day, so the shadow moves across the plate. That movement is how the shadow shows the time.",
+        "The answer is: As the sun moves across the sky, the shadow moves across the plate.",
+        "Stone and metal, clocks and watches, and gardens may be true, but they do not explain how the shadow tells time."
+      ],
+      misconception: "A common mix-up is picking any true fact about the topic. A supporting sentence must tell more about the exact idea it supports.",
+      why: "The answer is: As the sun moves across the sky, the shadow moves across the plate. It tells more about how a shadow tells time. The other sentences are about materials, clocks or gardens." },
+    { id: "SK-TT2d-S03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C03"],
+      prompt: "A student wrote four sentences about growing a bean plant in a cup. Put them in the order that makes the most sense.",
+      steps: [
+        "First, fill a clear cup with soil.",
+        "Next, push a bean seed into the soil with your finger.",
+        "Then pour a little water on the soil.",
+        "Last, set the cup in a sunny window and watch for a sprout."
+      ],
+      clue: "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
+      hints: [
+        "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
+        "Look for clue words such as first, next, then and last in the sentences. Then check that each step makes sense after the one before it.",
+        "A seed has to be in the soil before you pour water on it, so the watering comes after the seed is pushed in. Use that to place two of the sentences, then decide where the others go."
+      ],
+      how: [
+        "The cup has to be filled before anything can go into it, so filling the cup comes first.",
+        "Then the seed is pushed into the soil, and then the soil is watered.",
+        "Last, the cup goes in a sunny window to wait for a sprout.",
+        "The order is: fill the cup with soil, push in the seed, pour water, set the cup in a sunny window."
+      ],
+      misconception: "A common mix-up is ignoring clue words. Words like first and last show where a step belongs.",
+      why: "The order is: First, fill a clear cup with soil; next, push a bean seed into the soil; then pour a little water on the soil; last, set the cup in a sunny window. Each step needs the one before it." },
+    { id: "SK-TT2d-S04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C04"],
+      stem: [
+        "A student wrote this sentence about pencils: \"The ferrule holds the eraser on the end of the pencil.\""
+      ],
+      prompt: "She also wants to tell what the word ferrule means. Choose the best answer for the blank.",
+      text: "A ferrule is {0}.",
+      slots: [
+        { options: ["a metal band that holds the eraser in place", "a soft tip that makes dark marks on paper", "a small tool that sharpens the pencil"], answer: 0 }
+      ],
+      clue: "A definition tells what a word means. Use the way the word is used in the sentence to figure it out.",
+      hints: [
+        "A definition tells what a word means. Use the way the word is used in the sentence to figure it out.",
+        "Read the sentence about the ferrule again. Ask what the ferrule does and where it is on the pencil.",
+        "A tool that sharpens the pencil is not part of the pencil, so it cannot be something on the end that holds the eraser. Look at the choices that are left."
+      ],
+      how: [
+        "The sentence says the ferrule holds the eraser on the end of the pencil, so it is a part of the pencil.",
+        "A part that holds something in place is a band that wraps around it.",
+        "The answer is: A ferrule is a metal band that holds the eraser in place.",
+        "The soft tip that makes dark marks is the lead, and the sharpener is a separate tool."
+      ],
+      misconception: "A common mix-up is picking the pencil part you already know. Use what the sentence says the word does.",
+      why: "The answer is: A ferrule is a metal band that holds the eraser in place. The sentence says the ferrule holds the eraser on the end of the pencil. The tip that makes marks is the lead, and a sharpener is a separate tool." },
+    { id: "SK-TT2d-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-P4"],
+      stem: [
+        "(1) Sloths are slow animals that live in rain forest trees.",
+        "(2) A sloth hangs upside down from a branch and moves very slowly.",
+        "(3) It eats leaves, and it may sleep for many hours a day.",
+        "(4) That is all."
+      ],
+      prompt: "Which sentence would be the best conclusion to replace sentence 4?",
+      choices: [
+        { text: "A slow, quiet life in the trees is just right for a sloth.", correct: true },
+        { text: "Next, I will tell you about monkeys that jump from tree to tree." },
+        { text: "Rain forest trees need a lot of rain to grow tall." },
+        { text: "I think that monkeys are more fun to watch than sloths." }
+      ],
+      clue: "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or is about a different animal.",
+      hints: [
+        "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or is about a different animal.",
+        "Reread sentences 1 to 3 and think about the big idea they share. Then compare each choice with it.",
+        "A sentence that begins with \"Next, I will tell you about\" starts a new topic. Look at the choices that are left."
+      ],
+      how: [
+        "A conclusion reminds the reader of the main idea without starting anything new.",
+        "Sentences 1 to 3 all tell about the slow life of a sloth in the trees.",
+        "The answer is: A slow, quiet life in the trees is just right for a sloth.",
+        "The monkey sentences are about another animal, and the sentence about trees needing rain adds a new fact instead of wrapping up."
+      ],
+      misconception: "A common mix-up is choosing a sentence about the same place. A conclusion must wrap up the topic, which is the sloth.",
+      why: "The answer is: A slow, quiet life in the trees is just right for a sloth. It wraps up the main idea of the draft. The monkey sentences are about another animal, and the sentence about rain adds a new fact." },
+    { id: "SK-TT2d-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C06"],
+      stem: [
+        "(1) I like looking at things.",
+        "(2) A telescope has curved pieces of glass called lenses inside a long tube.",
+        "(3) The lenses make faraway things look closer.",
+        "(4) People use telescopes to look at the moon and the stars."
+      ],
+      prompt: "Which sentence should replace sentence 1 as a better introduction?",
+      choices: [
+        { text: "A telescope is a tool that helps people see faraway things.", correct: true },
+        { text: "Binoculars and cameras can also make faraway things look closer." },
+        { text: "My grandfather gave me a telescope for my birthday last year." },
+        { text: "In the end, telescopes help people learn about the sky." }
+      ],
+      clue: "An introduction names the topic of the whole draft. It should fit everything that comes after it, not just one small part.",
+      hints: [
+        "An introduction names the topic of the whole draft. It should fit everything that comes after it, not just one small part.",
+        "Read sentences 2 to 4 and notice what they share. Then check each choice against that.",
+        "A sentence that begins with \"In the end\" sounds like a conclusion. Look at the choices that are left."
+      ],
+      how: [
+        "An introduction tells the topic of the whole draft.",
+        "Sentences 2 to 4 tell what is inside a telescope, how it works and what people look at with it. All of them are about telescopes.",
+        "The answer is: A telescope is a tool that helps people see faraway things.",
+        "The sentence about binoculars and cameras is about other tools, the grandfather sentence is about the writer, and \"In the end\" sounds like an ending."
+      ],
+      misconception: "A common mix-up is choosing the choice that names a similar tool. The introduction must name the topic of this draft.",
+      why: "The answer is: A telescope is a tool that helps people see faraway things. It names the topic and fits the facts that follow. The binoculars sentence is about other tools, the birthday sentence is about the writer, and \"In the end\" sounds like a conclusion." },
+    { id: "SK-TT2d-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C07"],
+      stem: [
+        "A student wrote this sentence about ice: \"A glacier slowly slides downhill over many years.\""
+      ],
+      prompt: "She wants to add a sentence that tells what a glacier is. Choose the best answer for the blank.",
+      text: "A glacier is {0}.",
+      slots: [
+        { options: [
+            "a huge mass of ice that moves very slowly over land",
+            "a small pond that freezes on a cold night",
+            "a heavy rain that falls on top of a mountain",
+            "a thin sheet of frost on a window"
+          ],
+          answer: 0 }
+      ],
+      clue: "A definition tells what a word means. Look for what the thing is and what it does.",
+      hints: [
+        "A definition tells what a word means. Look for what the thing is and what it does.",
+        "Read the student's sentence again. Ask what the thing is doing and how fast it moves.",
+        "A pond that freezes on a cold night is small and does not slide downhill. Look at the choices that are left."
+      ],
+      how: [
+        "The sentence says a glacier slowly slides downhill over many years, so it is something large that moves slowly.",
+        "A huge mass of ice that moves very slowly over land fits both parts.",
+        "The answer is: A glacier is a huge mass of ice that moves very slowly over land.",
+        "A pond, a rain and frost on a window do not slide downhill over many years."
+      ],
+      misconception: "A common mix-up is choosing any choice about cold weather. A definition must match what the sentence says the thing does.",
+      why: "The answer is: A glacier is a huge mass of ice that moves very slowly over land. The sentence says a glacier slides downhill over many years. A frozen pond, a heavy rain and frost on a window do not." },
+    { id: "SK-TT2d-S08", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C08"],
+      stem: [
+        "(1) A coral reef is a rocky structure under the sea.",
+        "(2) It is built by tiny animals called polyps.",
+        "(3) Many fish hide among the coral.",
+        "(4) My brother is learning to play the trumpet.",
+        "(5) Sea turtles and crabs also visit the reef."
+      ],
+      prompt: "Which sentence does not belong in this informational draft?",
+      choices: [
+        { text: "(4) My brother is learning to play the trumpet.", correct: true },
+        { text: "(2) It is built by tiny animals called polyps." },
+        { text: "(3) Many fish hide among the coral." },
+        { text: "(5) Sea turtles and crabs also visit the reef." }
+      ],
+      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about coral reefs?",
+      hints: [
+        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about coral reefs?",
+        "Read each sentence with the one before it and the one after it. A sentence that belongs connects to its neighbors.",
+        "Sentence 5 tells which animals visit the reef, so it gives a fact about the topic. Check the sentences that are left."
+      ],
+      how: [
+        "The topic is coral reefs, so each sentence should teach about them.",
+        "Sentence 2 tells who builds a reef, sentence 3 tells about fish that hide in it, and sentence 5 tells about other visitors. All of them are about the reef.",
+        "The answer is sentence 4: \"My brother is learning to play the trumpet.\"",
+        "It is about the writer's brother and music, not about coral reefs."
+      ],
+      misconception: "A common mix-up is keeping a sentence because it is a true statement. A sentence belongs only if it teaches about the topic.",
+      why: "The answer is: (4) My brother is learning to play the trumpet. It is about the writer's brother, not about coral reefs. Sentences 2, 3 and 5 each give a fact about the reef." },
+    { id: "SK-TT2d-S09", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C09"],
+      stem: [
+        "(1) Windmills use the wind to do work.",
+        "(2) The wind pushes on the long blades, and the blades turn."
+      ],
+      prompt: "Which TWO sentences could be added after sentence 2 to give facts that support sentence 1?",
+      choices: [
+        { text: "Some windmills use the turning blades to pump water out of the ground.", correct: true },
+        { text: "Other windmills use the turning blades to grind grain into flour.", correct: true },
+        { text: "Many windmills have four blades, and some have more than four." },
+        { text: "Windmills are tall, and people can see them from far away." },
+        { text: "Wind can also blow leaves across the yard." }
+      ],
+      clue: "A fact that supports a sentence gives more information about the same idea. Ask what idea sentence 1 is about.",
+      hints: [
+        "A fact that supports a sentence gives more information about the same idea. Ask what idea sentence 1 is about.",
+        "Reread sentences 1 and 2, and check each choice against the idea in sentence 1. Choose two.",
+        "The number of blades tells what a windmill looks like, not what work it does. Look at the choices that are left."
+      ],
+      how: [
+        "Sentence 1 says windmills use the wind to do work, so the added facts must tell what work a windmill does.",
+        "Pumping water out of the ground and grinding grain into flour are two jobs a windmill can do with its turning blades.",
+        "The answers are: Some windmills use the turning blades to pump water out of the ground. And: Other windmills use the turning blades to grind grain into flour.",
+        "The number of blades, how tall a windmill is and wind blowing leaves tell about looks or wind, not about work a windmill does."
+      ],
+      misconception: "A common mix-up is choosing a fact because it mentions windmills or wind. A supporting fact must tell more about the same idea.",
+      why: "The answers are \"Some windmills use the turning blades to pump water out of the ground\" and \"Other windmills use the turning blades to grind grain into flour.\" Both tell what work windmills do. The other sentences tell about blades, height or wind." },
+    { id: "SK-TT2d-S10", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C10"],
+      stem: ["A student drew Figure 1 for a report about hot-air balloons."],
+      figure: { src: "assets/figures/tt2d-balloon-parts.svg",
+        label: "Figure 1",
+        caption: "A hot-air balloon",
+        alt: "Drawing of a hot-air balloon with a large round balloon on top, a small flame called a burner under it, and a basket hanging below. Labels point to the balloon, the burner and the basket." },
+      prompt: "Which caption should the student write under Figure 1?",
+      choices: [
+        { text: "The main parts of a hot-air balloon", correct: true },
+        { text: "A family riding in a hot-air balloon at sunrise" },
+        { text: "How hot air makes a balloon rise" },
+        { text: "Where hot-air balloons are made" }
+      ],
+      clue: "A caption tells what a picture shows. It should match what you can see.",
+      hints: [
+        "A caption tells what a picture shows. It should match what you can see.",
+        "Study Figure 1 and read its labels. Then compare what the labels name with what each caption says.",
+        "Figure 1 has no people in it. Look at the choices that are left."
+      ],
+      how: [
+        "Read the labels first. Figure 1 labels a balloon, a burner and a basket.",
+        "Labels that name parts show a picture of the parts of one thing.",
+        "The answer is: The main parts of a hot-air balloon.",
+        "There is no family in the picture, the picture does not show how hot air makes the balloon rise, and it does not show where balloons are made."
+      ],
+      misconception: "A common mix-up is choosing a caption that fits the topic. A caption must describe what this picture shows.",
+      why: "The answer is: The main parts of a hot-air balloon. Figure 1 labels the balloon, the burner and the basket. The picture has no family, does not show how the balloon rises and does not show where balloons are made." },
+    { id: "SK-TT2d-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C11"],
+      stem: [
+        "(1) A weather vane shows which way the wind is blowing.",
+        "(2) It sits on a tall pole high above the roof.",
+        "(3) My shoes are wet from the puddle.",
+        "(4) The arrow part of the vane turns until it points into the wind.",
+        "(5) Yesterday we ate noodles for dinner."
+      ],
+      prompt: "Which TWO sentences do not belong in this informational draft?",
+      choices: [
+        { text: "(3) My shoes are wet from the puddle.", correct: true },
+        { text: "(5) Yesterday we ate noodles for dinner.", correct: true },
+        { text: "(2) It sits on a tall pole high above the roof." },
+        { text: "(4) The arrow part of the vane turns until it points into the wind." }
+      ],
+      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about weather vanes?",
+      hints: [
+        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about weather vanes?",
+        "Read the sentences one at a time. Choose two.",
+        "Sentence 4 tells how the arrow turns, so it is about the weather vane. Look at the choices that are left."
+      ],
+      how: [
+        "The topic is weather vanes, so each sentence should teach about them.",
+        "Sentence 2 tells where a weather vane sits, and sentence 4 tells how it turns.",
+        "The answers are sentence 3, \"My shoes are wet from the puddle,\" and sentence 5, \"Yesterday we ate noodles for dinner.\"",
+        "One is about wet shoes and one is about dinner, so neither teaches about weather vanes."
+      ],
+      misconception: "A common mix-up is stopping after finding one sentence. More than one sentence can be off the topic.",
+      why: "The answers are \"(3) My shoes are wet from the puddle.\" and \"(5) Yesterday we ate noodles for dinner.\" Neither is about weather vanes. Sentences 2 and 4 tell facts about a weather vane." },
+    { id: "SK-TT2d-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C12"],
+      stem: [
+        "(2) Maple syrup comes from the sap of maple trees.",
+        "(3) People collect the sap in buckets or tubes.",
+        "(4) Then they boil the sap until it turns into thick syrup."
+      ],
+      prompt: "A student wants a better first sentence and a better last sentence for this draft. Choose the best answer for each blank.",
+      text: "First sentence: {0} Last sentence: {1}",
+      slots: [
+        { options: [
+            "Maple syrup is a sweet food that people make from tree sap.",
+            "Pancakes taste good with many kinds of toppings.",
+            "I had maple syrup on my waffles this morning."
+          ],
+          answer: 0 },
+        { options: [
+            "Now you know that sap from maple trees becomes sweet syrup.",
+            "Next, I will write about how to cook pancakes.",
+            "Maple syrup is the very best food on any breakfast table."
+          ],
+          answer: 0 }
+      ],
+      clue: "An introduction names the topic of the whole draft, and a conclusion wraps up what the reader learned. Neither one starts a new topic or gives only one small part.",
+      hints: [
+        "An introduction names the topic of the whole draft, and a conclusion wraps up what the reader learned. Neither one starts a new topic or gives only one small part.",
+        "Read sentences 2 to 4 and decide what the big idea is. Then test each choice for both blanks.",
+        "A sentence that begins with \"Next, I will write about\" starts a new topic, so it cannot wrap up this draft. Look at the choices that are left for the second blank, and work out the first blank yourself."
+      ],
+      how: [
+        "The first blank needs a sentence that names the topic of the whole draft, and the second blank needs one that wraps it up.",
+        "Blank 1: the draft tells how syrup is made from sap. \"Maple syrup is a sweet food that people make from tree sap\" names that topic.",
+        "Blank 2: \"Now you know that sap from maple trees becomes sweet syrup\" sums up what the reader learned.",
+        "The pancake sentence is about a different food, the waffle sentence is about the writer, \"Next, I will write about\" starts something new, and \"the very best food\" is an opinion."
+      ],
+      misconception: "A common mix-up is choosing a sentence that mentions syrup without checking its job. The first sentence must name the whole topic, and the last must wrap it up.",
+      why: "Blank 1 needs \"Maple syrup is a sweet food that people make from tree sap,\" because it names the whole topic. Blank 2 needs \"Now you know that sap from maple trees becomes sweet syrup,\" because it wraps up what the reader learned. The other choices are about a different food, the writer, a new topic or an opinion." },
+    { id: "SK-TT2d-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C13"],
+      stem: [
+        "(1) Some things float in water, and some things sink.",
+        "(2) A cork and an apple float on top of the water.",
+        "(3) A rock and a coin sink to the bottom.",
+        "(4) Many people like to swim in a lake or a pool.",
+        "(5) Boats can float even though they are very heavy."
+      ],
+      figure: { src: "assets/figures/tt2d-sink-float.svg",
+        label: "Figure 1",
+        caption: "Four objects in a tank of water",
+        alt: "Drawing of a tank of water with four objects. A cork and an apple float at the top of the water. A rock and a coin rest on the bottom. Each object has a label." },
+      prompt: "A student wants to put Figure 1 next to this draft. Which TWO sentences does Figure 1 help explain?",
+      choices: [
+        { text: "(2) A cork and an apple float on top of the water.", correct: true },
+        { text: "(3) A rock and a coin sink to the bottom.", correct: true },
+        { text: "(4) Many people like to swim in a lake or a pool." },
+        { text: "(5) Boats can float even though they are very heavy." }
+      ],
+      clue: "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
+      hints: [
+        "A figure helps explain facts that are hard to picture. Look at what the figure shows, then find the sentences that tell the same facts.",
+        "Study Figure 1 and write down what it shows. Then read the sentences one at a time and ask whether each matches. Choose two.",
+        "Figure 1 shows a tank with four small objects, and it has no boats. Look at the choices that are left."
+      ],
+      how: [
+        "Figure 1 shows a tank of water with four objects. A cork and an apple float at the top, and a rock and a coin rest at the bottom.",
+        "Sentence 2 says a cork and an apple float, and sentence 3 says a rock and a coin sink.",
+        "The answers are sentence 2 and sentence 3.",
+        "Sentence 4 is about swimming, and sentence 5 is about boats. The figure does not show either."
+      ],
+      misconception: "A common mix-up is choosing any sentence about floating. A figure helps explain only the facts that it actually shows.",
+      why: "The answers are \"(2) A cork and an apple float on top of the water.\" and \"(3) A rock and a coin sink to the bottom.\" Figure 1 shows exactly those four objects. The swimming and boat sentences are not shown." },
+    { id: "SK-TT2d-S14", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C14"],
+      stem: [
+        "(1) The top of a rain forest is called the canopy.",
+        "(2) Many birds and monkeys spend their lives there."
+      ],
+      prompt: "A student wants to add a sentence after sentence 1 that tells what the canopy is. Which sentence fits best?",
+      choices: [
+        { text: "The canopy is the layer of leaves and branches high above the forest floor.", correct: true },
+        { text: "A canopy is also a cloth cover that is stretched over a bed." },
+        { text: "Rain forests are warm places where it rains a lot." },
+        { text: "The forest floor is covered with dead leaves and soft soil." }
+      ],
+      clue: "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
+      hints: [
+        "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
+        "Reread sentences 1 and 2 to see how the word canopy is used in this draft. Then check each choice.",
+        "A cloth cover over a bed is a different meaning of the word from the one in this draft. Look at the choices that are left."
+      ],
+      how: [
+        "Sentence 1 says the canopy is the top of a rain forest, and sentence 2 says birds and monkeys live there.",
+        "So the canopy is the high layer of leaves and branches.",
+        "The answer is: The canopy is the layer of leaves and branches high above the forest floor.",
+        "The bed cover is a different meaning, the sentence about warm rain is about the whole forest, and the forest floor is the bottom layer, not the top."
+      ],
+      misconception: "A common mix-up is picking a sentence that uses the word. A definition has to give the meaning that fits the draft.",
+      why: "The answer is: The canopy is the layer of leaves and branches high above the forest floor. It tells what the canopy is in a rain forest. A bed cover is a different meaning, the warm rain sentence is about the whole forest, and the forest floor is the bottom layer." },
+    { id: "SK-TT2d-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C15"],
+      stem: [
+        "Two students wrote about smoke alarms.",
+        "Draft A: (1) A smoke alarm is a small device that warns people about smoke. (2) It makes a loud sound when it senses smoke. (3) My cat likes to nap on the couch. (4) A smoke alarm helps keep a family safe.",
+        "Draft B: (1) Let me tell you something. (2) It makes a loud sound when it senses smoke. (3) Families should test their alarms once a month. (4) A smoke alarm helps keep a family safe."
+      ],
+      prompt: "Which statement tells what each draft needs?",
+      choices: [
+        { text: "Draft A has a sentence that should be taken out, and Draft B needs a better introduction.", correct: true },
+        { text: "Draft A needs a better introduction, and Draft B has a sentence that should be taken out." },
+        { text: "Draft A needs a better conclusion, and Draft B has a sentence that should be taken out." },
+        { text: "Each draft has a sentence that should be taken out." }
+      ],
+      clue: "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
+      hints: [
+        "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
+        "Read the first sentence and the last sentence of each draft. Then read the sentences in between and ask whether each one is about smoke alarms.",
+        "Both drafts end with the same sentence, which wraps up the topic. Look at the choices that are left."
+      ],
+      how: [
+        "Check the parts one at a time for each draft.",
+        "Draft A's first sentence names smoke alarms, but \"My cat likes to nap on the couch\" is not about smoke alarms.",
+        "Draft B's other sentences are all about smoke alarms, but \"Let me tell you something\" does not name the topic, so it needs a better introduction.",
+        "The answer is: Draft A has a sentence that should be taken out, and Draft B needs a better introduction."
+      ],
+      misconception: "A common mix-up is looking for the same problem in both drafts. Each draft can have a different part that needs work.",
+      why: "The answer is: Draft A has a sentence that should be taken out, and Draft B needs a better introduction. Draft A includes a sentence about a cat. Draft B's first sentence does not name the topic. Both drafts end with a good conclusion." }
+  ],
+  addons: {
+    "SK-TT2d-P1": {
+      hints: [
+        "An introduction names the topic of the whole draft. Read the whole draft and decide what every paragraph is about.",
+        "Look at sentences 2 to 9 and find the idea that shows up in every paragraph. Then check each choice against it.",
+        "A sentence that begins with \"In the end\" sounds like it belongs at the end of a draft. Look at the choices that are left."
+      ],
+      how: [
+        "An introduction tells the reader the topic of the whole draft.",
+        "Rosa's paragraphs are about how peanuts grow, what they are, and where they grow, so the topic is peanuts.",
+        "The answer is: Peanuts are a popular food, and there is a lot to learn about them.",
+        "The sandwich sentence is about Rosa's family, the farmer sentence is about farmers, and \"In the end\" sounds like a conclusion."
+      ],
+      misconception: "A common mix-up is choosing a sentence about a part of the topic. An introduction must name the topic of the whole draft." },
+    "SK-TT2d-P2": {
+      hints: [
+        "Sentence 7 tells what peanuts are not. The new sentence should tell what they are.",
+        "Reread sentence 7 and the words \"not really nuts.\" Ask which choice finishes that thought.",
+        "Pecans are real nuts, so a sentence about them does not tell what peanuts are. Look at the choices that are left."
+      ],
+      how: [
+        "Sentence 7 says peanuts are not really nuts, so the next sentence should say what they are.",
+        "They are legumes, which are plants that grow seeds in pods, like peas. That also tells what the word legumes means.",
+        "The answer is: They are legumes, which are plants that grow seeds in pods, like peas.",
+        "Cooking peanuts, people who cannot eat them and pecans do not finish the thought."
+      ],
+      misconception: "A common mix-up is choosing a fact because it is about peanuts. The new sentence must answer the question that sentence 7 raises." },
+    "SK-TT2d-P3": {
+      hints: [
+        "The topic is peanuts. Ask of each sentence: does it teach the reader about peanuts?",
+        "Read sentences 2 to 9 one at a time, and read each with the sentence before it.",
+        "Sentence 9 is about Georgia farmers and their peanuts, so it is about the topic. Check the sentences that are left."
+      ],
+      how: [
+        "The topic is peanuts, so each sentence should teach about them.",
+        "Sentence 3 is about the flowers, sentence 4 is about the peg, and sentence 7 says peanuts are not really nuts. All of them teach about peanuts.",
+        "The answer is sentence 8: \"My best friend likes to eat apples with her lunch.\"",
+        "It is about apples and Rosa's friend, not about peanuts."
+      ],
+      misconception: "A common mix-up is keeping a sentence because it is about food. A sentence belongs only if it teaches about the topic." },
+    "SK-TT2d-P4": {
+      hints: [
+        "A conclusion wraps up the whole topic. It does not start something new or add a brand-new fact.",
+        "Read sentences 2 to 9, and think about the big idea they share. Then compare each choice with it.",
+        "A sentence that begins with \"Next,\" starts a new topic. Look at the choices that are left."
+      ],
+      how: [
+        "A conclusion reminds the reader of the topic and the most important idea.",
+        "Rosa's draft tells how a peanut grows from a flower to a shell underground.",
+        "The answer is: From a yellow flower to a shell underground, peanuts are amazing plants.",
+        "The sandwich sentence starts a new topic, the warm weather sentence adds a new fact, and the apple sentence is an opinion about a different food."
+      ],
+      misconception: "A common mix-up is choosing a true fact about peanuts. A conclusion wraps up the draft instead of adding a new fact." },
+    "SK-TT2d-P5": {
+      hints: [
+        "Ask what job each sentence does: open the topic, give a fact, or wrap up what the reader learned.",
+        "Read each sentence by itself and ask whether it would work as the first sentence of a draft, a fact in the middle, or the last sentence.",
+        "The sentence about roasting and boiling gives a fact about what people do with peanuts, so it belongs in the middle. Match the other rows yourself."
+      ],
+      how: [
+        "A sentence that asks the reader a question and says \"Read on\" opens the topic, so it is the introduction.",
+        "Warm weather and sandy soil, and roasting, boiling and peanut butter, are facts, so they belong in the middle.",
+        "\"Now you know why peanuts are such a special plant\" wraps up what the reader learned, so it is the conclusion.",
+        "So the matches are: the question is the introduction, the two fact sentences are the middle, and the \"Now you know\" sentence is the conclusion."
+      ],
+      misconception: "A common mix-up is putting a fact in the introduction because it names the topic. The introduction opens the topic, and facts belong in the middle." },
+    "SK-TT2d-P6": {
+      hints: [
+        "A picture with a caption should help explain the facts it sits next to. Ask what sentences 4 and 5 say.",
+        "Reread sentences 4 and 5, then ask what each choice's picture would show a reader about those sentences.",
+        "The farmer in the field goes with sentence 6, where farmers dig up the plants. Look at the choices that are left."
+      ],
+      how: [
+        "Sentences 4 and 5 tell how a peg grows down into the soil and a shell grows underground. That is hard to picture in words.",
+        "A diagram that shows the plant above and below the ground, with labels, lets the reader see it.",
+        "The answer is: a diagram of a peanut plant above and below the ground, labeled flower, peg and shell, with the caption \"How a peanut grows\".",
+        "The jar of peanut butter does not show how peanuts grow, the farmer goes with sentence 6, and the map of Georgia goes with sentence 9."
+      ],
+      misconception: "A common mix-up is choosing a picture that is about peanuts. The picture must help explain the sentences it sits next to." }
+  },
+  /* B4-b4a end ---------- */
   test: [
     { id: "SK-TT2d-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Kenji wants to add an opening sentence that tells the reader what his whole draft will be about. Which sentence should he add before sentence 1?",

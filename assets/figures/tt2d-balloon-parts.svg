@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="t">
+  <title id="t">Drawing of a hot-air balloon with a large round balloon on top, a small flame called a burner under it, and a basket hanging below. Labels point to the balloon, the burner and the basket.</title>
+  <rect width="320" height="300" fill="#fff"/>
+  <ellipse cx="160" cy="90" rx="72" ry="80" fill="#e4e4e4" stroke="#333" stroke-width="3"/>
+  <path d="M130 14 C110 60 112 120 140 166 M190 14 C210 60 208 120 180 166 M160 10 L160 170" fill="none" stroke="#777" stroke-width="2"/>
+  <path d="M140 168 L130 214 M180 168 L190 214" stroke="#333" stroke-width="3"/>
+  <path d="M160 182 C150 194 154 202 160 208 C166 202 170 194 160 182 Z" fill="#fff" stroke="#111" stroke-width="3"/>
+  <rect x="128" y="214" width="64" height="40" rx="5" fill="#d0d0d0" stroke="#333" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="244" y="60">balloon</text><path d="M240 54 L200 70" stroke="#111" stroke-width="2"/><circle cx="198" cy="71" r="3.5"/>
+    <text x="214" y="204">burner</text><path d="M210 198 L170 196" stroke="#111" stroke-width="2"/><circle cx="168" cy="196" r="3.5"/>
+    <text x="214" y="250">basket</text><path d="M210 244 L194 240" stroke="#111" stroke-width="2"/><circle cx="192" cy="240" r="3.5"/>
+  </g>
+</svg>

@@ -3561,19 +3561,20 @@ PP.addLesson({
     points: [
       "The topic sentence tells what the paragraph is about. It is often the first sentence.",
       "Detail sentences give facts, examples or reasons about that one idea.",
-      "A sentence about something else does not belong, even if it uses some of the same words.",
-      "When you move to a new idea, start a new paragraph.",
-      "A closing sentence can wrap up the idea at the end."
+      "A sentence about something else does not belong, even if it uses some of the same words or sounds close to the topic.",
+      "When you move to a new idea, start a new paragraph with its own topic sentence.",
+      "A closing sentence wraps up the idea at the end. It does not add a brand-new fact."
     ],
     words: [
       { term: "paragraph", means: "a group of sentences about one main idea" },
       { term: "topic sentence", means: "the sentence that tells what the paragraph is about" },
-      { term: "detail", means: "a sentence that tells more about the main idea" }
+      { term: "detail", means: "a sentence that tells more about the main idea" },
+      { term: "closing sentence", means: "the last sentence, which wraps up the main idea" }
     ],
     example: {
       label: "Example",
-      lines: ["Our town's fall festival has something for everyone. Little kids can ride ponies and paint pumpkins. Older kids can get lost in the corn maze. Grown-ups enjoy the music and the pie contest."],
-      note: "The first sentence is the topic sentence: the festival has something for everyone. Every other sentence names a group of people and what they enjoy. Nothing is off topic."
+      lines: ["Our town's fall festival has something for everyone. Little kids can ride ponies and paint pumpkins. Older kids can get lost in the corn maze. Grown-ups enjoy the music and the pie contest. Everyone goes home happy and full of pie."],
+      note: "The first sentence is the topic sentence: the festival has something for everyone. Every other sentence names a group of people and what they enjoy. The last sentence is a closing sentence: it wraps up the idea without adding a new fact."
     },
     tip: "On the test, you may choose the sentence that does not belong, the best topic sentence, or the best detail to add to a paragraph in a student's draft."
   },
@@ -3599,14 +3600,14 @@ PP.addLesson({
       answer: "\"Our snow day was full of fun\" fits best, because it covers every detail in the paragraph."
     },
     {
-      show: ["Topic sentence: Soccer practice helps our team get better."],
-      ask: "Which detail belongs in this paragraph: \"We run drills to make our passes sharper\" or \"My favorite color is green\"?",
+      show: ["I get dressed and eat breakfast. I brush my teeth and pack my bag. After school, I play at the park. I kick a ball with my friends."],
+      ask: "Where should a new paragraph begin?",
       steps: [
-        "Read the topic sentence and name the idea: practice helps the team improve.",
-        "Ask of each detail: Does it show how practice helps the team?",
-        "Running drills to pass better shows the team getting better. A favorite color does not."
+        "The first two sentences are about getting ready in the morning.",
+        "Look for the sentence where the idea changes.",
+        "\"After school, I play at the park\" starts a new idea, so a new paragraph begins there."
       ],
-      answer: "\"We run drills to make our passes sharper\" belongs, because it shows how practice helps the team get better."
+      answer: "A new paragraph begins at \"After school, I play at the park,\" because the idea changes from the morning to after school."
     }
   ],
   write: {
@@ -3634,7 +3635,100 @@ PP.addLesson({
         ["(2) The morning was full of races.", "(3) First, we hopped across the grass in the sack race.", "(4) Then we raced while carrying eggs on spoons.", "(5) My big brother says the high school has a real track.", "(6) The last race was a relay, and my team won."],
         ["(7) After lunch, we cooled off with water games.", "(8) We tossed water balloons back and forth with partners.", "(9) The teachers sprayed us with garden hoses.", "(10) Everyone was soaked and laughing."],
         ["(11) I can't wait for next year's Field Day!"]
-      ] }
+      ] },
+    /* B4b:passages:start */
+    {
+      id: "p3",
+      draft: true,
+      title: "A Busy Day at Our House",
+      byline: "Mina's first draft",
+      genre: "Student draft (narrative)",
+      paragraphs: [
+        [
+          "(1) Our house is a busy place all day long.",
+          "(2) In the morning, Mom makes eggs and toast while I pack my bag.",
+          "(3) My little brother hunts for his backpack under the couch.",
+          "(4) Dad fills our water bottles and checks the clock.",
+          "(5) At eight o'clock, we all rush out the door.",
+          "(6) When the sun goes down, our house gets calm and quiet.",
+          "(7) We eat dinner together and tell about our day.",
+          "(8) Then I read a book while my brother builds with blocks.",
+          "(9) By bedtime, the only sound is the soft ticking of the clock."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      draft: true,
+      title: "Recycling at Our School",
+      byline: "Ria's first draft",
+      genre: "Student draft (informational)",
+      paragraphs: [
+        [
+          "(1) Our school started a recycling program this year.",
+          "(2) Every class now has a blue bin for paper, and the hallway has bins for cans and bottles."
+        ],
+        [
+          "(3) Recycling turns old things into new things.",
+          "(4) Old paper can be made into new paper.",
+          "(5) Metal cans can be melted and made into new cans.",
+          "(6) Our custodian empties the trash cans every night.",
+          "(7) Glass bottles can become new bottles, too."
+        ],
+        [
+          "(8) Students sort paper, cans and bottles into the right bins.",
+          "(9) Two helpers carry the full bins to the big truck each Friday.",
+          "(10) Everyone checks that nothing is in the wrong bin before the truck comes."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      draft: true,
+      title: "Why Recess Matters",
+      byline: "Nia's first draft",
+      genre: "Student draft (opinion)",
+      paragraphs: [
+        [
+          "(1) Recess is an important part of the school day.",
+          "(2) It gives kids a break from hard work and a chance to play outside."
+        ],
+        [
+          "(3) Recess helps our bodies stay healthy.",
+          "(4) We run, jump and climb on the playground.",
+          "(5) The recess bell rings at ten o'clock.",
+          "(6) Moving our bodies makes us strong.",
+          "(7) Some kids trade stickers at the picnic table.",
+          "(8) Fresh air helps us feel awake and ready to learn."
+        ],
+        [
+          "(9) Recess also helps us get along with others.",
+          "(10) We make up new games together.",
+          "(11) We learn to take turns and share the ball with everyone."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      draft: true,
+      title: "Jo's Saturday",
+      byline: "Jo's first draft",
+      genre: "Student draft (narrative)",
+      paragraphs: [
+        [
+          "(1) My Saturday starts early with chores at home.",
+          "(2) First, I feed the cat and make my bed.",
+          "(3) Then I help Mom carry the groceries into the kitchen.",
+          "(4) We put the milk and eggs in the fridge, and I wipe the table.",
+          "(5) After lunch, I walk to the library for story hour.",
+          "(6) The librarian reads a funny book about a goat who eats a hat.",
+          "(7) Afterward, I pick three books to take home.",
+          "(8) I read the first one on the front steps.",
+          "(9) The sun is warm, and a soft breeze flips the pages for me."
+        ]
+      ]
+    }
+/* B4b:passages:end */
   ],
   practice: [
     { id: "SK-SS1d-P1", type: "hottext", points: 1, dok: 2, passages: ["p1"],
@@ -3670,23 +3764,1074 @@ PP.addLesson({
         { text: "The Saturday farmers market is a busy place.", answer: 0 },
         { text: "Farmers sell peaches, beans and fresh eggs.", answer: 1 },
         { text: "Shoppers crowd around every table.", answer: 1 },
-        { text: "My cousin just got a new puppy.", answer: 2 }
+        { text: "Farmers get up very early to pick their fruit and vegetables.", answer: 2 }
       ],
       clue: "Find the sentence that names the big idea the others can tell about. Then ask which sentence is about something else.",
-      why: "\"The Saturday farmers market is a busy place\" is the topic sentence. The farmers selling food and the shoppers crowding every table are details that show how busy the market is. The cousin's puppy does not belong because it is not about the market." },
+      why: "\"The Saturday farmers market is a busy place\" is the topic sentence. The farmers selling food and the shoppers crowding every table are details that show how busy the market is. Farmers getting up early to pick their food is about work before the market opens, not about how busy the market is, so it does not belong." },
     { id: "SK-SS1d-P5", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Read the paragraph. Which TWO sentences do not belong?",
-      stem: "Our class garden is busy in the spring. We plant bean and squash seeds in long rows. My favorite food is spaghetti with meatballs. Every morning, two students water the plants. The new swings on the playground are fast. By May, the first green beans are ready to pick.",
+      stem: "Our class garden is busy in the spring. We plant bean and squash seeds in long rows. The lunchroom serves green beans on Fridays. Every morning, two students water the plants. Red and yellow leaves fall on the playground each autumn. By May, the first green beans are ready to pick.",
       choices: [
-        { text: "My favorite food is spaghetti with meatballs.", correct: true },
-        { text: "The new swings on the playground are fast.", correct: true },
+        { text: "The lunchroom serves green beans on Fridays.", correct: true },
+        { text: "Red and yellow leaves fall on the playground each autumn.", correct: true },
         { text: "We plant bean and squash seeds in long rows." },
         { text: "Every morning, two students water the plants." },
         { text: "By May, the first green beans are ready to pick." }
       ],
       clue: "The first sentence is the topic sentence. Test each other sentence: is it about the class garden in spring?",
-      why: "The answers are \"My favorite food is spaghetti with meatballs\" and \"The new swings on the playground are fast.\" Neither one is about the class garden. Planting, watering and picking beans all tell about the busy garden." }
+      why: "The answers are \"The lunchroom serves green beans on Fridays\" and \"Red and yellow leaves fall on the playground each autumn.\" The first one mentions beans and the second one mentions plants, but neither is about the class garden in spring. Planting, watering and picking beans all tell about the busy garden." }
   ],
+  /* B4b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
+     core: fifteen independent items in three sets of five. No { ref }: all five practice items (P1 to P5) stay in Together.
+     p3, p4 and p5 are used only by core; p6 only by the similar bank. Never used by test.
+     Practice P4 and P5 were revised so the unrelated sentences are near-topic (they share a place, a word or a subject with the paragraph).
+     Closing sentences and starting a new paragraph, taught in the lesson but never practised, are now in core.
+     Author log: docs/expansion-2026-10-22/batches/B4-b4b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      {
+        id: "SK-SS1d-C01",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p1"],
+        prompt: "Aaliyah wants to replace sentence 10 with a closing sentence that wraps up her whole draft. Which sentence is best?",
+        choices: [
+          { text: "Hummingbirds may be tiny, but the way they fly and eat is amazing.", correct: true },
+          { text: "Female hummingbirds build their nests all by themselves." },
+          { text: "Hummingbirds sip sweet nectar from flowers and eat tiny insects." },
+          { text: "Next, I will write about eagles and owls." }
+        ],
+        clue: "A closing sentence comes at the end and wraps up the main idea. It should not start something new.",
+        hints: [
+          "A closing sentence comes at the end and wraps up the main idea. It should not start something new.",
+          "Decide what the whole draft is about. Then ask of each choice: does it wrap up that idea, or does it add a fact, repeat a detail or look ahead?",
+          "A sentence that tells what you will write next is looking ahead, not wrapping up. Test the other three the same way."
+        ],
+        how: [
+          "The draft is about the amazing things hummingbirds can do, like how they fly and how they eat.",
+          "A closing sentence wraps up that idea in a new way.",
+          "The answer is \"Hummingbirds may be tiny, but the way they fly and eat is amazing.\"",
+          "The nest sentence adds a new fact, the nectar sentence repeats one detail, and the eagles sentence starts a new topic."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is true about hummingbirds. A closing sentence has to wrap up the whole idea, not add one more fact.",
+        why: "The answer is \"Hummingbirds may be tiny, but the way they fly and eat is amazing.\" It wraps up the whole draft. The nest sentence adds a new fact, the nectar sentence repeats one detail, and the eagles sentence starts a new topic."
+      },
+      {
+        id: "SK-SS1d-C02",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p3"],
+        pick: 1,
+        prompt: "Mina's draft is one long block. Select the sentence where a new paragraph should begin.",
+        targets: ["p3:1:2", "p3:1:3", "p3:1:4", "p3:1:5", "p3:1:6", "p3:1:7", "p3:1:8", "p3:1:9"],
+        answer: ["p3:1:6"],
+        clue: "A new paragraph begins when the writer starts a new idea. Ask what idea the first sentences share.",
+        hints: [
+          "A new paragraph begins when the writer starts a new idea. Ask what idea the first sentences share.",
+          "Say in a few words what the first part of the draft is about. Then look for the sentence where the draft starts to be about something else.",
+          "Sentences 2, 3 and 4 all tell about the same busy time. Decide which of the sentences after them starts a new idea."
+        ],
+        how: [
+          "Sentence 1 says the house is busy all day, and sentences 2 to 5 tell about the busy morning.",
+          "Sentence 6 says the house gets calm and quiet when the sun goes down. That is a new idea: the evening.",
+          "Sentences 7, 8 and 9 give details about the quiet evening.",
+          "The new paragraph begins at sentence 6: \"When the sun goes down, our house gets calm and quiet.\""
+        ],
+        misconception: "A common mix-up is starting a new paragraph where a new person or object shows up. Look for a new idea, not a new word.",
+        why: "The answer is sentence 6, \"When the sun goes down, our house gets calm and quiet.\" Sentences 2 to 5 are about the busy morning, and sentence 6 starts a new idea, the quiet evening, so it begins a new paragraph."
+      },
+      {
+        id: "SK-SS1d-C03",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        prompt: "The paragraph is missing a topic sentence. Which sentence would be the best topic sentence?",
+        stem: [
+          "____ Dark clouds roll across the sky. The wind picks up and shakes the trees. Thunder rumbles far away. Soon the first big drops of rain begin to fall."
+        ],
+        choices: [
+          { text: "A summer storm can arrive very quickly.", correct: true },
+          { text: "Summer is the warmest season of the year." },
+          { text: "Thunder is a loud rumbling sound." },
+          { text: "Rain helps the grass and flowers grow." }
+        ],
+        clue: "A topic sentence tells the main idea. It has to cover every detail, not just one.",
+        hints: [
+          "A topic sentence tells the main idea. It has to cover every detail, not just one.",
+          "List what the details show: clouds, wind, thunder and rain. Ask what they all show together.",
+          "One choice is only about a single detail and one is about a whole season. Ask which choice covers all four details and nothing more."
+        ],
+        how: [
+          "The details are dark clouds, wind, thunder and the first drops of rain.",
+          "All of them show a storm arriving, one thing after another.",
+          "The answer is \"A summer storm can arrive very quickly.\"",
+          "Thunder is only one detail, summer is a whole season, and rain helping plants is about what happens after."
+        ],
+        misconception: "A common mix-up is choosing a sentence that uses a word from the paragraph, like thunder. The topic sentence must cover all of the details.",
+        why: "The answer is \"A summer storm can arrive very quickly.\" Clouds, wind, thunder and rain all show a storm coming. Thunder is only one detail, summer is a whole season, and rain helping the grass is not what these details are about."
+      },
+      {
+        id: "SK-SS1d-C04",
+        type: "ms",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        pick: 2,
+        prompt: "Which TWO sentences would be good details to add to this paragraph?",
+        stem: ["Our class guinea pig, Biscuit, is easy to care for. ____"],
+        choices: [
+          { text: "We fill his water bottle every morning.", correct: true },
+          { text: "He eats a small scoop of hay and pellets each day.", correct: true },
+          { text: "We chose Biscuit's name by voting." },
+          { text: "Guinea pigs first lived in South America long ago." },
+          { text: "Some classes keep a fish tank instead." }
+        ],
+        clue: "A detail tells more about the topic sentence. Ask what this topic sentence says about Biscuit.",
+        hints: [
+          "A detail tells more about the topic sentence. Ask what this topic sentence says about Biscuit.",
+          "The topic sentence says Biscuit is easy to care for. Ask which sentences tell what the class does to care for him.",
+          "Two of the choices are about guinea pigs or class pets but not about taking care of Biscuit. Decide which choices are left."
+        ],
+        how: [
+          "The topic sentence says Biscuit is easy to care for, so a detail must show how he is cared for.",
+          "Filling his water bottle every morning is a way of caring for him.",
+          "Feeding him a small scoop of hay and pellets each day is another way.",
+          "The answers are \"We fill his water bottle every morning\" and \"He eats a small scoop of hay and pellets each day.\" Naming him, where guinea pigs came from and fish tanks are not about caring for Biscuit."
+        ],
+        misconception: "A common mix-up is choosing any sentence about guinea pigs. A detail has to tell more about this paragraph's idea, which is caring for Biscuit.",
+        why: "The answers are \"We fill his water bottle every morning\" and \"He eats a small scoop of hay and pellets each day.\" Both show how the class cares for Biscuit. Choosing his name, where guinea pigs came from and other classes' fish tanks are not about caring for him."
+      },
+      {
+        id: "SK-SS1d-C05",
+        type: "order",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        prompt: "Put these sentences in the best order to make one paragraph about giving a dog a bath.",
+        steps: [
+          "Giving our dog a bath was a messy job.",
+          "First, Dad filled a tub with warm water and called Max over.",
+          "Next, we scrubbed his fur with sudsy soap.",
+          "Then Max shook hard and sprayed water on all of us.",
+          "In the end, Max was clean, and we were soaked."
+        ],
+        clue: "A paragraph starts with the sentence that tells what it is about. It ends with a sentence that wraps it up.",
+        hints: [
+          "A paragraph starts with the sentence that tells what it is about. It ends with a sentence that wraps it up.",
+          "Look for the time words, such as First, Next and Then. They show the order of the details.",
+          "The sentence that tells what the whole paragraph is about comes first. Now place the other four."
+        ],
+        how: [
+          "The topic sentence goes first: \"Giving our dog a bath was a messy job.\"",
+          "The details follow in time order: First, Dad filled the tub. Next, they scrubbed his fur. Then Max shook.",
+          "The closing sentence, \"In the end, Max was clean, and we were soaked,\" wraps up the paragraph, so it goes last.",
+          "The order is: topic sentence, First, Next, Then, In the end."
+        ],
+        misconception: "A common mix-up is putting the sentence with the most exciting event first. A paragraph begins with the topic sentence and ends with the closing sentence.",
+        why: "The topic sentence comes first, then the details in time order: First, Next, Then. The closing sentence, which begins In the end, goes last because it wraps up the paragraph."
+      }
+    ] },
+    { title: "Set 2", items: [
+      {
+        id: "SK-SS1d-C06",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p4"],
+        pick: 1,
+        prompt: "Read the paragraph that begins with sentence 3. Select the sentence that does not belong in that paragraph.",
+        targets: ["p4:2:1", "p4:2:2", "p4:2:3", "p4:2:4", "p4:2:5"],
+        answer: ["p4:2:4"],
+        clue: "Find the topic sentence of the paragraph. Then test each sentence: does it tell more about that idea?",
+        hints: [
+          "Find the topic sentence of the paragraph. Then test each sentence: does it tell more about that idea?",
+          "Say the topic sentence in your own words. Three of the details show that idea. One only shares a word with it.",
+          "Two of the details start with something old and tell what it becomes. Look for the sentence that does not do that."
+        ],
+        how: [
+          "Sentence 3 is the topic sentence: recycling turns old things into new things.",
+          "Sentences 4, 5 and 7 each tell an old thing that becomes a new one: paper, cans and bottles.",
+          "Sentence 6 says the custodian empties the trash cans. It shares the word cans, but it is about cleaning up, not about making new things.",
+          "The answer is sentence 6: \"Our custodian empties the trash cans every night.\""
+        ],
+        misconception: "A common mix-up is keeping a sentence because it uses the same word as a detail. Check the idea, not just the words.",
+        why: "The answer is sentence 6, \"Our custodian empties the trash cans every night.\" The paragraph is about recycling turning old things into new things. The custodian sentence shares the word cans, but it is about emptying trash, not about making new things."
+      },
+      {
+        id: "SK-SS1d-C07",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p4"],
+        prompt: "The paragraph that begins with sentence 8 needs a topic sentence. Which sentence should Ria add before sentence 8?",
+        choices: [
+          { text: "Everyone at our school helps with recycling.", correct: true },
+          { text: "Paper, cans and glass bottles can all be recycled." },
+          { text: "Two helpers carry the full bins to the big truck." },
+          { text: "Every classroom has a blue bin for paper in it." }
+        ],
+        clue: "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
+        hints: [
+          "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
+          "Name what each detail tells: what students do, what two helpers do, and what the whole group does. Ask what they have in common.",
+          "One choice covers only one of the three details. Another is about what can be recycled, not about what people do."
+        ],
+        how: [
+          "Sentence 8 tells what students do: they sort. Sentence 9 tells what two helpers do. Sentence 10 tells what the whole group does.",
+          "All three tell about jobs people do in the program.",
+          "The answer is \"Everyone at our school helps with recycling.\"",
+          "The helpers sentence is only one detail, the bin sentence belongs in the first paragraph, and what can be recycled is not about jobs."
+        ],
+        misconception: "A common mix-up is choosing a sentence about recycling in general. The topic sentence has to match what this paragraph's details show.",
+        why: "The answer is \"Everyone at our school helps with recycling.\" Sorting, carrying bins and checking are all jobs people do. The helpers sentence covers only one detail, the bin sentence belongs in the first paragraph, and the materials sentence is not about jobs."
+      },
+      {
+        id: "SK-SS1d-C08",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.1.d"],
+        passages: ["p4"],
+        prompt: "Ria wants to add facts about how families can recycle at home. What should she do?",
+        choices: [
+          { text: "Start a new paragraph with a topic sentence about recycling at home.", correct: true },
+          { text: "Add the facts to the paragraph about turning old things into new things." },
+          { text: "Add the facts after sentence 2, since the first paragraph is about the program." },
+          { text: "Add the facts to the paragraph about sorting, since both are about recycling." }
+        ],
+        clue: "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
+        hints: [
+          "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
+          "Name the idea of each of the three paragraphs. Then say the idea of the new facts in a few words and compare.",
+          "Two of the choices use the reason that everything is about recycling. Ask whether that reason makes every sentence belong in the same paragraph."
+        ],
+        how: [
+          "The three paragraphs are about the new school program, how recycling makes new things, and the jobs students have.",
+          "Facts about recycling at home are a new idea: they are not about the school, how things are remade, or school jobs.",
+          "A new idea needs its own paragraph with its own topic sentence. The answer is \"Start a new paragraph with a topic sentence about recycling at home.\"",
+          "Adding the facts to any of the other paragraphs would put a sentence in a paragraph with a different idea."
+        ],
+        misconception: "A common mix-up is thinking everything about recycling belongs in one paragraph. A paragraph stays on one idea, not one big subject.",
+        why: "The answer is \"Start a new paragraph with a topic sentence about recycling at home.\" Recycling at home is a new idea, different from the school program, how things are remade and the students' jobs. Each of the other choices would put the facts in a paragraph about something else."
+      },
+      {
+        id: "SK-SS1d-C09",
+        type: "dropdown",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        prompt: "Choose the best detail to complete the paragraph.",
+        text: "The post office is a busy place on Monday mornings. Workers sort big piles of letters and packages. {0} Trucks line up at the back door to be loaded.",
+        slots: [
+          {
+            options: [
+              "Customers wait in a long line to mail boxes and buy stamps.",
+              "Stamps come in many colors and pictures.",
+              "Mail carriers walk many miles to deliver letters."
+            ],
+            answer: 0
+          }
+        ],
+        clue: "A detail tells more about the topic sentence. Ask what the topic sentence says about Monday mornings.",
+        hints: [
+          "A detail tells more about the topic sentence. Ask what the topic sentence says about Monday mornings.",
+          "The topic sentence says the post office is busy. Ask which sentence shows the post office being busy.",
+          "Only one choice is about people inside the post office on a Monday morning. Check the other two against that idea."
+        ],
+        how: [
+          "The topic sentence says the post office is a busy place on Monday mornings.",
+          "The other details show the busy work: workers sorting mail and trucks lining up.",
+          "A long line of customers shows another busy part of the post office. The answer is \"Customers wait in a long line to mail boxes and buy stamps.\"",
+          "Stamp pictures are not about being busy, and carriers walking to deliver letters happens outside the post office."
+        ],
+        misconception: "A common mix-up is choosing a sentence about mail in general. The detail must show the post office being busy.",
+        why: "The answer is \"Customers wait in a long line to mail boxes and buy stamps.\" It shows another busy part of the post office on Monday morning. Stamp pictures and carriers walking their routes do not show the post office being busy."
+      },
+      {
+        id: "SK-SS1d-C10",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        pick: 1,
+        prompt: "Select the sentence that would be the best closing sentence for this paragraph.",
+        stem: [
+          "Learning to whistle took me all summer. At first, only air came out of my mouth. Then Grandpa showed me how to shape my lips. By August, I could whistle a whole song."
+        ],
+        options: [
+          "Now I can whistle a whole song, and I am glad I kept trying.",
+          "Grandpa's favorite song is about a train.",
+          "At first, only air came out of my mouth.",
+          "Many people can whistle with their lips."
+        ],
+        answer: [0],
+        clue: "A closing sentence wraps up the main idea. It does not add a new fact or repeat a detail.",
+        hints: [
+          "A closing sentence wraps up the main idea. It does not add a new fact or repeat a detail.",
+          "Say the main idea of the paragraph in a few words. Then ask which sentence wraps it up.",
+          "One sentence only repeats a detail from the middle of the paragraph. Check the other three the same way."
+        ],
+        how: [
+          "The paragraph is about how learning to whistle took all summer.",
+          "A closing sentence wraps up that idea. It tells how the story ends or how the writer feels.",
+          "The answer is \"Now I can whistle a whole song, and I am glad I kept trying.\"",
+          "The song about a train is a new fact, the air sentence repeats the beginning, and whistling with lips is a general fact."
+        ],
+        misconception: "A common mix-up is choosing the sentence with the most details. A closing sentence wraps up; it does not add or repeat.",
+        why: "The answer is \"Now I can whistle a whole song, and I am glad I kept trying.\" It wraps up the paragraph about learning to whistle. The train song is a new fact, the air sentence repeats a detail, and whistling with lips is a general fact."
+      }
+    ] },
+    { title: "Set 3", items: [
+      {
+        id: "SK-SS1d-C11",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p5"],
+        pick: 2,
+        prompt: "Read the paragraph that begins with sentence 3. Select the TWO sentences that do not belong in that paragraph.",
+        targets: ["p5:2:1", "p5:2:2", "p5:2:3", "p5:2:4", "p5:2:5", "p5:2:6"],
+        answer: ["p5:2:3", "p5:2:5"],
+        clue: "Find the topic sentence of the paragraph. Then test every other sentence against it.",
+        hints: [
+          "Find the topic sentence of the paragraph. Then test every other sentence against it.",
+          "The topic sentence is about how recess helps our bodies. Ask of each sentence: does it tell how recess helps our bodies?",
+          "Several sentences tell what kids do or feel outside. Look for the two that are about recess but not about our bodies."
+        ],
+        how: [
+          "Sentence 3 is the topic sentence: recess helps our bodies stay healthy.",
+          "Sentences 4, 6 and 8 each show that: running and climbing, getting strong, and feeling awake.",
+          "Sentence 5 tells when the bell rings, and sentence 7 tells about trading stickers. Both are about recess, but neither is about our bodies.",
+          "The answers are sentence 5, \"The recess bell rings at ten o'clock,\" and sentence 7, \"Some kids trade stickers at the picnic table.\""
+        ],
+        misconception: "A common mix-up is keeping a sentence because it is about recess. It also has to be about the idea of its paragraph.",
+        why: "The answers are sentence 5, \"The recess bell rings at ten o'clock,\" and sentence 7, \"Some kids trade stickers at the picnic table.\" The paragraph is about how recess helps our bodies. The bell and the stickers are about recess, but they do not tell how it helps our bodies."
+      },
+      {
+        id: "SK-SS1d-C12",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: ["p5"],
+        prompt: "Nia wants to add one more detail to the paragraph that begins with sentence 9. Which sentence fits best?",
+        choices: [
+          { text: "We learn to work out problems, like who goes first.", correct: true },
+          { text: "The bell tells us when it is time to line up." },
+          { text: "Many kids bring jump ropes from home." },
+          { text: "Recess comes right after lunch on most days." }
+        ],
+        clue: "Name the main idea of that paragraph before you choose. The new detail has to tell more about that idea.",
+        hints: [
+          "Name the main idea of that paragraph before you choose. The new detail has to tell more about that idea.",
+          "The topic sentence says recess helps us get along with others. Ask which sentence shows kids getting along.",
+          "Three of the choices are facts about recess but not about getting along. Check each one against the topic sentence."
+        ],
+        how: [
+          "Sentence 9 says recess helps us get along with others. Sentences 10 and 11 show kids making games and taking turns.",
+          "A new detail must also show kids getting along.",
+          "The answer is \"We learn to work out problems, like who goes first.\" Working out who goes first is a way of getting along.",
+          "The bell, the jump ropes and the time of recess are about recess but not about getting along."
+        ],
+        misconception: "A common mix-up is choosing any sentence about recess. The detail must fit the idea of this paragraph.",
+        why: "The answer is \"We learn to work out problems, like who goes first.\" The paragraph is about how recess helps us get along with others, and working out who goes first shows that. The bell, the jump ropes and the time of recess are not about getting along."
+      },
+      {
+        id: "SK-SS1d-C13",
+        type: "match",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        prompt: "Match each group of sentences to the topic sentence that fits it best.",
+        cols: [
+          "Summer is my favorite season.",
+          "Lunchtime is the busiest time at school.",
+          "Story time is the best part of our day.",
+          "Popsicles come in many flavors."
+        ],
+        rows: [
+          {
+            text: "We swim at the pool. We eat cold fruit on the porch. The days stay bright until bedtime.",
+            answer: 0
+          },
+          { text: "Kids line up with trays. Servers scoop rice and ladle soup. The room is loud and full.", answer: 1 },
+          { text: "Our teacher reads a chapter out loud. She does funny voices. We beg for one more page.", answer: 2 }
+        ],
+        clue: "A topic sentence tells the main idea of all the sentences in its group. Read a group and ask what all the sentences tell about.",
+        hints: [
+          "A topic sentence tells the main idea of all the sentences in its group. Read a group and ask what all the sentences tell about.",
+          "Start with the group you are most sure about. Every group has exactly one topic sentence that fits it, and one topic sentence is left over.",
+          "The group about a pool and a bright evening is about a season. Match the other two groups after that."
+        ],
+        how: [
+          "The first group tells about swimming, cold fruit and long bright days. These show summer.",
+          "The second group tells about trays, servers and a loud room. These show lunchtime at school.",
+          "The third group tells about a chapter read out loud and begging for more. These show story time.",
+          "The leftover sentence, about popsicles, is not the idea of any group."
+        ],
+        misconception: "A common mix-up is matching by one word, like cold fruit and popsicles. The topic sentence has to cover the whole group.",
+        why: "The group about swimming and long bright days goes with summer. The group about trays, servers and a loud room goes with lunchtime. The group about a chapter read out loud goes with story time. The sentence about popsicles does not match any group."
+      },
+      {
+        id: "SK-SS1d-C14",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        prompt: "Lena starts a new paragraph at sentence 4. Why is that a good choice?",
+        stem: [
+          "(1) Our class visited the pet store on Monday.",
+          "(2) We watched fish swim in a huge tank.",
+          "(3) A worker let us pet a soft bunny.",
+          "(4) On Tuesday, we toured the bookstore next door.",
+          "(5) A worker showed us shelves of picture books and a cozy reading nook."
+        ],
+        choices: [
+          { text: "Sentence 4 begins a new idea, the visit to a different store.", correct: true },
+          { text: "A paragraph can have no more than three sentences." },
+          { text: "Sentences 4 and 5 are longer than the sentences before them." },
+          { text: "The words On Tuesday always start a new paragraph." }
+        ],
+        clue: "A new paragraph starts when the writer moves on to something new. Ask what each part of the draft is about.",
+        hints: [
+          "A new paragraph starts when the writer moves on to something new. Ask what each part of the draft is about.",
+          "Say what sentences 1 to 3 are about. Then say what sentences 4 and 5 are about, and compare.",
+          "One choice gives a rule about how many sentences a paragraph can have. Ask whether the idea or the number of sentences decides where a paragraph starts."
+        ],
+        how: [
+          "Sentences 1 to 3 are about the visit to the pet store.",
+          "Sentences 4 and 5 are about a different visit, to the bookstore.",
+          "A new idea begins at sentence 4. The answer is \"Sentence 4 begins a new idea, the visit to a different store.\"",
+          "There is no rule about three sentences, sentence length does not decide it, and a time word like On Tuesday does not always start a paragraph."
+        ],
+        misconception: "A common mix-up is following a rule about length or a certain word. A new paragraph starts when the idea changes.",
+        why: "The answer is \"Sentence 4 begins a new idea, the visit to a different store.\" The first three sentences are about the pet store, and sentences 4 and 5 are about the bookstore. Paragraphs do not have a limit of three sentences, length does not decide it, and a time word does not always start a paragraph."
+      },
+      {
+        id: "SK-SS1d-C15",
+        type: "ms",
+        points: 2,
+        dok: 3,
+        std: ["3.T.SS.1.d"],
+        passages: [],
+        pick: 2,
+        prompt: "Wen's draft is one paragraph, but it has two problems. Which TWO changes would fix them?",
+        stem: [
+          "(1) The park near our house is a fun place in summer.",
+          "(2) We swim in the cool pond.",
+          "(3) Dad grills corn and burgers by the picnic tables.",
+          "(4) In winter, the pond freezes, and the park looks very different.",
+          "(5) The water park downtown has tall slides.",
+          "(6) We skate on the ice and drink hot chocolate."
+        ],
+        choices: [
+          { text: "Take out sentence 5, because it is not about the park near the house.", correct: true },
+          { text: "Begin a new paragraph at sentence 4, because it starts a new idea about winter.", correct: true },
+          { text: "Take out sentence 3, because cooking is not about swimming." },
+          { text: "Begin a new paragraph at sentence 3, because it starts to talk about food." },
+          { text: "Begin a new paragraph at sentence 6, because skating is a new idea." }
+        ],
+        clue: "Find the topic sentence and the idea of the first part of the draft. Then look for a sentence that is about something else and for a place where the idea changes.",
+        hints: [
+          "Find the topic sentence and the idea of the first part of the draft. Then look for a sentence that is about something else and for a place where the idea changes.",
+          "Check each sentence against the topic sentence. Then find where the draft moves from one idea to another.",
+          "Look at sentences 2 and 3 together: they are both about summer at the park. Decide which sentences are left that could be a problem."
+        ],
+        how: [
+          "The topic sentence says the park near the house is fun in summer. Sentences 2 and 3 show summer fun.",
+          "Sentence 4 moves to a new idea, winter at the park, so a new paragraph should begin there. Sentence 6 is a detail of winter.",
+          "Sentence 5 is about a water park downtown, not the park near the house.",
+          "The answers are \"Take out sentence 5, because it is not about the park near the house\" and \"Begin a new paragraph at sentence 4, because it starts a new idea about winter.\""
+        ],
+        misconception: "A common mix-up is thinking a new paragraph starts whenever a new thing is mentioned. It starts when the idea changes.",
+        why: "The answers are \"Take out sentence 5, because it is not about the park near the house\" and \"Begin a new paragraph at sentence 4, because it starts a new idea about winter.\" Sentence 5 is about a different park. Sentence 3 is a summer detail, and sentence 6 belongs with the winter idea."
+      }
+    ] }
+  ] },
+  similar: [
+    {
+      id: "SK-SS1d-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C01"],
+      prompt: "Which sentence is the best closing sentence for this paragraph?",
+      stem: [
+        "Saturday chores keep our house running. I water the plants on the porch. My sister folds the clean towels. Dad washes the car, and Mom sweeps the floors."
+      ],
+      choices: [
+        { text: "When we all pitch in, the house is clean by lunch.", correct: true },
+        { text: "Next Saturday we are going to the park." },
+        { text: "My sister folds the clean towels." },
+        { text: "Our porch has a swing and two chairs." }
+      ],
+      clue: "A closing sentence comes at the end and wraps up the main idea. It should not start something new.",
+      hints: [
+        "A closing sentence comes at the end and wraps up the main idea. It should not start something new.",
+        "Decide what the paragraph is about. Then ask of each choice: does it wrap up that idea, or does it add, repeat or look ahead?",
+        "A sentence that repeats a detail from the middle does not wrap up anything. Test the other three the same way."
+      ],
+      how: [
+        "The paragraph is about everyone doing chores on Saturday.",
+        "A closing sentence wraps that idea up.",
+        "The answer is \"When we all pitch in, the house is clean by lunch.\"",
+        "The park sentence looks ahead, the towels sentence repeats a detail, and the porch sentence adds a new fact."
+      ],
+      why: "The answer is \"When we all pitch in, the house is clean by lunch.\" It wraps up the idea of everyone doing chores. The park sentence looks ahead, the towels sentence repeats a detail, and the porch sentence adds a new fact."
+    },
+    {
+      id: "SK-SS1d-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: ["p6"],
+      pick: 1,
+      like: ["SK-SS1d-C02"],
+      prompt: "Jo's draft is one long block. Select the sentence where a new paragraph should begin.",
+      targets: ["p6:1:2", "p6:1:3", "p6:1:4", "p6:1:5", "p6:1:6", "p6:1:7", "p6:1:8", "p6:1:9"],
+      answer: ["p6:1:5"],
+      clue: "A new paragraph begins when the writer starts a new idea. Ask what idea the first sentences share.",
+      hints: [
+        "A new paragraph begins when the writer starts a new idea. Ask what idea the first sentences share.",
+        "Say in a few words what the first part of the draft is about. Then look for the sentence where the draft starts to be about something else.",
+        "Sentences 2, 3 and 4 all tell about the same part of the day. Decide which of the sentences after them starts a new idea."
+      ],
+      how: [
+        "Sentence 1 says the day starts with chores at home, and sentences 2 to 4 tell about those chores.",
+        "Sentence 5 says Jo walks to the library after lunch. That is a new idea: story hour at the library.",
+        "Sentences 6 to 9 tell what happens after that.",
+        "The new paragraph begins at sentence 5: \"After lunch, I walk to the library for story hour.\""
+      ],
+      why: "The answer is sentence 5, \"After lunch, I walk to the library for story hour.\" Sentences 2 to 4 are chores at home, and sentence 5 starts a new idea, the trip to the library, so it begins a new paragraph."
+    },
+    {
+      id: "SK-SS1d-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C03"],
+      prompt: "The paragraph is missing a topic sentence. Which sentence would be the best topic sentence?",
+      stem: [
+        "____ Cooks chop vegetables in the back. Servers carry hot plates to the tables. A man at the front desk greets every family that walks in."
+      ],
+      choices: [
+        { text: "The restaurant on Main Street is busy every night.", correct: true },
+        { text: "Chopping vegetables takes a sharp knife." },
+        { text: "Families like to eat out on Fridays." },
+        { text: "Hot plates should be carried with care." }
+      ],
+      clue: "A topic sentence tells what the paragraph is about. It has to cover every detail, not just one.",
+      hints: [
+        "A topic sentence tells what the paragraph is about. It has to cover every detail, not just one.",
+        "List what the details show: cooks, servers and a greeter. Ask what they all show together.",
+        "Two of the choices are about only one detail each. Ask which choice covers all three workers."
+      ],
+      how: [
+        "The details are cooks chopping, servers carrying plates and a greeter at the door.",
+        "All of them show people working hard in the same place.",
+        "The answer is \"The restaurant on Main Street is busy every night.\"",
+        "The knife and the plates are single details, and families eating out on Fridays is about customers, not the workers."
+      ],
+      why: "The answer is \"The restaurant on Main Street is busy every night.\" Cooks, servers and a greeter all show a busy restaurant. The knife and the hot plates are single details, and eating out on Fridays is about families, not these workers."
+    },
+    {
+      id: "SK-SS1d-S04",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS1d-C04"],
+      prompt: "Which TWO sentences would be good details to add to this paragraph?",
+      stem: ["The new playground at our school is made for climbing. ____"],
+      choices: [
+        { text: "A tall rope net leads up to a small tower.", correct: true },
+        { text: "Kids can pull themselves across the bars hand over hand.", correct: true },
+        { text: "The old playground was torn down last summer." },
+        { text: "Our school was built many years ago." },
+        { text: "The cafeteria has new tables." }
+      ],
+      clue: "A detail tells more about the topic sentence. Ask what this topic sentence says about the playground.",
+      hints: [
+        "A detail tells more about the topic sentence. Ask what this topic sentence says about the playground.",
+        "The topic sentence says the playground is made for climbing. Ask which sentences tell a way to climb.",
+        "Two of the choices are about the school but not about climbing. Decide which choices are left."
+      ],
+      how: [
+        "The topic sentence says the playground is made for climbing, so a detail must show climbing.",
+        "A rope net that leads up to a tower is something to climb.",
+        "Pulling yourself across bars hand over hand is another way to climb.",
+        "The answers are \"A tall rope net leads up to a small tower\" and \"Kids can pull themselves across the bars hand over hand.\" The old playground, the school's age and the cafeteria tables are not about climbing."
+      ],
+      why: "The answers are \"A tall rope net leads up to a small tower\" and \"Kids can pull themselves across the bars hand over hand.\" Both show ways to climb. The old playground, the school's age and the new cafeteria tables are not about climbing."
+    },
+    {
+      id: "SK-SS1d-S05",
+      type: "order",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C05"],
+      prompt: "Put these sentences in the best order to make one paragraph about a walk to the store.",
+      steps: [
+        "Our walk to the corner store was full of surprises.",
+        "First, a fluffy orange cat jumped out of a bush.",
+        "Next, we heard a loud song from an open window.",
+        "Then a boy rolled by on a bright green scooter.",
+        "At the store, we talked about everything we had seen."
+      ],
+      clue: "A paragraph starts with the sentence that tells what it is about. It ends with a sentence that wraps it up.",
+      hints: [
+        "A paragraph starts with the sentence that tells what it is about. It ends with a sentence that wraps it up.",
+        "Look for the time words, such as First, Next and Then. They show the order of the details.",
+        "The sentence that tells what the whole paragraph is about comes first. Now place the other four."
+      ],
+      how: [
+        "The topic sentence goes first: \"Our walk to the corner store was full of surprises.\"",
+        "The details follow in time order: First the cat, Next the song, Then the scooter.",
+        "The sentence that begins At the store wraps up the walk, so it goes last.",
+        "The order is: topic sentence, First, Next, Then, At the store."
+      ],
+      why: "The topic sentence comes first, then the surprises in time order: First, Next, Then. The sentence that begins At the store wraps up the paragraph, so it goes last."
+    },
+    {
+      id: "SK-SS1d-S06",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      pick: 1,
+      like: ["SK-SS1d-C06"],
+      prompt: "Select the sentence that does not belong in this paragraph.",
+      stem: ["Topic sentence: The band room is full of music on Tuesdays."],
+      options: [
+        "Drummers tap out a fast beat.",
+        "Trumpet players warm up with loud notes.",
+        "The cafeteria is full of noise at lunch.",
+        "Our band teacher hands out new sheet music."
+      ],
+      answer: [2],
+      clue: "Find the topic sentence. Then test each sentence: does it tell more about that idea?",
+      hints: [
+        "Find the topic sentence. Then test each sentence: does it tell more about that idea?",
+        "Say the topic sentence in your own words. Three of the sentences show it. One is about a different place.",
+        "Two sentences are about people playing instruments. Look at the others and ask where each one happens."
+      ],
+      how: [
+        "The topic sentence says the band room is full of music on Tuesdays.",
+        "Drummers, trumpet players and sheet music all happen in the band room.",
+        "The cafeteria sentence is about noise at lunch, not music in the band room.",
+        "The answer is \"The cafeteria is full of noise at lunch.\""
+      ],
+      why: "The answer is \"The cafeteria is full of noise at lunch.\" The paragraph is about music in the band room. The drummers, the trumpet players and the sheet music are all part of band practice, but the cafeteria noise is somewhere else."
+    },
+    {
+      id: "SK-SS1d-S07",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C07"],
+      prompt: "Ben's paragraph needs a topic sentence. Which sentence should Ben add at the beginning?",
+      stem: [
+        "____ He sharpens pencils before class. He wipes the board at the end of the day. He passes out papers for the teacher."
+      ],
+      choices: [
+        { text: "Ben is a big helper in our classroom.", correct: true },
+        { text: "Ben wipes the board clean every day." },
+        { text: "Ben's desk is by the window." },
+        { text: "Our classroom is on the second floor." }
+      ],
+      clue: "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
+      hints: [
+        "The topic sentence must cover all of the details in its paragraph. Read them all before you choose.",
+        "Name what each detail tells about Ben. Ask what they have in common.",
+        "One choice covers only one of the three details. Ask which choice covers all of them."
+      ],
+      how: [
+        "The details are sharpening pencils, wiping the board and passing out papers.",
+        "All of them are ways Ben helps in the classroom.",
+        "The answer is \"Ben is a big helper in our classroom.\"",
+        "Wiping the board is only one detail, and the desk and the floor are not about helping."
+      ],
+      why: "The answer is \"Ben is a big helper in our classroom.\" Sharpening pencils, wiping the board and passing out papers are all ways of helping. Wiping the board is only one detail, and the desk and the floor are not about helping."
+    },
+    {
+      id: "SK-SS1d-S08",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C08"],
+      prompt: "Leo wants to add facts about the corn maze. What should he do?",
+      stem: [
+        "Leo wrote two paragraphs about a visit to a farm. One is about the cows. The other is about the chickens."
+      ],
+      choices: [
+        { text: "Start a new paragraph with a topic sentence about the corn maze.", correct: true },
+        { text: "Add the facts to the paragraph about the cows, since both are on the farm." },
+        { text: "Add the facts to the paragraph about the chickens, since it comes last." },
+        { text: "Add the facts to the beginning of the paragraph about the cows." }
+      ],
+      clue: "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
+      hints: [
+        "Ask what each paragraph in the draft is about. Then ask whether the new facts fit one of those ideas or are a new idea.",
+        "Say the idea of each paragraph, then the idea of the new facts, and compare.",
+        "Two of the choices use a reason that is not about the idea of the paragraph. Ask whether being on the same farm makes every sentence belong together."
+      ],
+      how: [
+        "One paragraph is about the cows and the other is about the chickens.",
+        "The corn maze is a new idea. It is not about the cows or the chickens.",
+        "A new idea needs its own paragraph. The answer is \"Start a new paragraph with a topic sentence about the corn maze.\"",
+        "Adding the facts to either animal paragraph would put them in a paragraph about something else."
+      ],
+      why: "The answer is \"Start a new paragraph with a topic sentence about the corn maze.\" The maze is a new idea, different from the cows and the chickens. Adding the facts to an animal paragraph would put them in a paragraph about something else."
+    },
+    {
+      id: "SK-SS1d-S09",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C09"],
+      prompt: "Choose the best detail to complete the paragraph.",
+      text: "Winter mornings are the hardest time to get out of bed. {0} My alarm clock rings, but I pull the covers over my head.",
+      slots: [
+        {
+          options: [
+            "My blankets feel warm, but the floor feels icy.",
+            "The winter holidays are in December.",
+            "Snow falls in many parts of the country."
+          ],
+          answer: 0
+        }
+      ],
+      clue: "A detail tells more about the topic sentence. Ask what the topic sentence says about winter mornings.",
+      hints: [
+        "A detail tells more about the topic sentence. Ask what the topic sentence says about winter mornings.",
+        "The topic sentence says it is hard to get out of bed. Ask which sentence shows why.",
+        "Only one choice tells how the bed and the floor feel on a winter morning. Check the other two against that idea."
+      ],
+      how: [
+        "The topic sentence says winter mornings are the hardest time to get out of bed.",
+        "A detail should show why it is hard, like the warm bed and the cold floor.",
+        "The answer is \"My blankets feel warm, but the floor feels icy.\"",
+        "The winter holidays and snow in many places are not about getting out of bed."
+      ],
+      why: "The answer is \"My blankets feel warm, but the floor feels icy.\" It shows why getting out of bed is hard. The holidays and the snow in many places are not about getting out of bed."
+    },
+    {
+      id: "SK-SS1d-S10",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      pick: 1,
+      like: ["SK-SS1d-C10"],
+      prompt: "Select the sentence that would be the best closing sentence for this paragraph.",
+      stem: [
+        "Baking my first loaf of bread took three tries. The first loaf came out flat. The second loaf was burnt on the bottom. The third loaf rose tall and smelled wonderful."
+      ],
+      options: [
+        "Now my family asks for my bread every Sunday.",
+        "Bread dough needs flour, water, salt and yeast.",
+        "The first loaf came out flat.",
+        "My neighbor owns a bakery on the corner."
+      ],
+      answer: [0],
+      clue: "A closing sentence wraps up the main idea. It does not add a new fact or repeat a detail.",
+      hints: [
+        "A closing sentence wraps up the main idea. It does not add a new fact or repeat a detail.",
+        "Say the main idea of the paragraph in a few words. Then ask which sentence wraps it up.",
+        "One sentence only repeats a detail from the middle of the paragraph. Check the other three the same way."
+      ],
+      how: [
+        "The paragraph is about how baking the first loaf took three tries.",
+        "A closing sentence wraps that up by telling how things ended up.",
+        "The answer is \"Now my family asks for my bread every Sunday.\"",
+        "The sentence about dough is a general fact, the flat loaf repeats a detail, and the neighbor's bakery is a new fact."
+      ],
+      why: "The answer is \"Now my family asks for my bread every Sunday.\" It wraps up the story of learning to bake bread. The dough sentence is a general fact, the flat loaf repeats a detail, and the bakery is a new fact."
+    },
+    {
+      id: "SK-SS1d-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS1d-C11"],
+      prompt: "Select the TWO sentences that do not belong in this paragraph.",
+      stem: ["Topic sentence: A good listener pays close attention."],
+      options: [
+        "A good listener keeps her eyes on the speaker.",
+        "She nods to show she understands.",
+        "Our teacher talks to the class every morning.",
+        "She asks a question when the speaker is finished.",
+        "People talk on the phone every day."
+      ],
+      answer: [2, 4],
+      clue: "Test every sentence against the topic sentence. Does it tell how a good listener pays attention?",
+      hints: [
+        "Test every sentence against the topic sentence. Does it tell how a good listener pays attention?",
+        "The topic sentence is about a good listener. Ask which sentences show what a listener does.",
+        "Several sentences show what a listener does with her eyes, head or voice. Look for the two that are about talking, not listening."
+      ],
+      how: [
+        "The topic sentence is about a good listener paying close attention.",
+        "Keeping her eyes on the speaker, nodding and asking a question after are things a listener does.",
+        "The sentences about the teacher talking each morning and people talking on the phone are about talking, not listening.",
+        "The answers are \"Our teacher talks to the class every morning\" and \"People talk on the phone every day.\""
+      ],
+      why: "The answers are \"Our teacher talks to the class every morning\" and \"People talk on the phone every day.\" The paragraph is about what a good listener does. Both of those sentences are about talking, not about listening."
+    },
+    {
+      id: "SK-SS1d-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C12"],
+      prompt: "Which sentence is the best detail to add to this paragraph?",
+      stem: [
+        "Helping Grandpa in his workshop is my favorite weekend job. He lets me sort the nails into jars. He shows me how to measure a board twice."
+      ],
+      choices: [
+        { text: "I hand him screws while he builds a shelf.", correct: true },
+        { text: "Grandpa's old truck is parked in the driveway." },
+        { text: "Hammers have been used for a very long time." },
+        { text: "My cousin visits on the holidays." }
+      ],
+      clue: "Name the main idea of the paragraph first. The new detail has to tell more about that idea.",
+      hints: [
+        "Name the main idea of the paragraph first. The new detail has to tell more about that idea.",
+        "The topic sentence says helping Grandpa in the workshop is a favorite job. Ask which sentence shows a way the child helps.",
+        "Three of the choices are about Grandpa, tools or family but not about helping in the workshop. Check each one against the topic sentence."
+      ],
+      how: [
+        "The topic sentence says helping Grandpa in his workshop is the writer's favorite job.",
+        "The details show jobs the child does: sorting nails and learning to measure.",
+        "The answer is \"I hand him screws while he builds a shelf.\" It is another way of helping.",
+        "The truck, the hammers and the cousin are not about helping in the workshop."
+      ],
+      why: "The answer is \"I hand him screws while he builds a shelf.\" It shows another way the writer helps in the workshop. The truck, the hammers and the cousin are not about helping."
+    },
+    {
+      id: "SK-SS1d-S13",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C13"],
+      prompt: "Match each group of sentences to the topic sentence that fits it best.",
+      cols: [
+        "Fall brings many changes to our yard.",
+        "Saturday mornings are slow at our house.",
+        "Our new puppy has lots of energy.",
+        "Acorns are a kind of nut."
+      ],
+      rows: [
+        { text: "The leaves turn red and gold. Acorns drop on the roof. Dad rakes big piles.", answer: 0 },
+        { text: "We sleep late. Dad makes pancakes. Nobody rushes anywhere.", answer: 1 },
+        { text: "He chases his tail. He races around the yard. He leaps at every bug.", answer: 2 }
+      ],
+      clue: "A topic sentence tells the main idea of all the sentences in its group. Read a group and ask what all the sentences tell about.",
+      hints: [
+        "A topic sentence tells the main idea of all the sentences in its group. Read a group and ask what all the sentences tell about.",
+        "Start with the group you are most sure about. Every group has exactly one topic sentence that fits it, and one topic sentence is left over.",
+        "The group about sleeping late and nobody rushing is about a time of the week. Match the other two groups after that."
+      ],
+      how: [
+        "The first group tells about leaves, acorns and raking. These show the changes of fall in the yard.",
+        "The second group tells about sleeping late and pancakes. These show a slow Saturday morning.",
+        "The third group tells about chasing, racing and leaping. These show a puppy with lots of energy.",
+        "The leftover sentence, about acorns being a nut, is not the idea of any group."
+      ],
+      why: "The group about leaves, acorns and raking goes with fall. The group about sleeping late and pancakes goes with slow Saturday mornings. The group about chasing and leaping goes with the puppy. The sentence about acorns being a nut does not match any group."
+    },
+    {
+      id: "SK-SS1d-S14",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      like: ["SK-SS1d-C14"],
+      prompt: "Rosa starts a new paragraph at sentence 4. Why is that a good choice?",
+      stem: [
+        "(1) Our class planted tulips by the front door.",
+        "(2) We dug small holes and dropped in the bulbs.",
+        "(3) We covered them with soil and gave them water.",
+        "(4) Later that day, we built a bird feeder from a milk carton.",
+        "(5) We hung it on the maple tree."
+      ],
+      choices: [
+        { text: "Sentence 4 begins a new idea, building a bird feeder.", correct: true },
+        { text: "A paragraph can have no more than three sentences." },
+        { text: "Sentences 4 and 5 are longer than the sentences before them." },
+        { text: "The words Later that day always start a new paragraph." }
+      ],
+      clue: "A new paragraph starts when the writer moves on to something new. Ask what each part of the draft is about.",
+      hints: [
+        "A new paragraph starts when the writer moves on to something new. Ask what each part of the draft is about.",
+        "Say what sentences 1 to 3 are about. Then say what sentences 4 and 5 are about, and compare.",
+        "One choice gives a rule about how many sentences a paragraph can have. Ask whether the idea or the number of sentences decides where a paragraph starts."
+      ],
+      how: [
+        "Sentences 1 to 3 are about planting tulips.",
+        "Sentences 4 and 5 are about building and hanging a bird feeder.",
+        "A new idea begins at sentence 4. The answer is \"Sentence 4 begins a new idea, building a bird feeder.\"",
+        "There is no rule about three sentences, sentence length does not decide it, and a time phrase does not always start a paragraph."
+      ],
+      why: "The answer is \"Sentence 4 begins a new idea, building a bird feeder.\" The first three sentences are about planting tulips, and sentences 4 and 5 are about the feeder. A paragraph is not limited to three sentences, length does not decide it, and a time phrase does not always start a paragraph."
+    },
+    {
+      id: "SK-SS1d-S15",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: ["3.T.SS.1.d"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS1d-C15"],
+      prompt: "Ari's draft is one paragraph, but it has two problems. Which TWO changes would fix them?",
+      stem: [
+        "(1) Our town has a big fall parade.",
+        "(2) Bands march down the main street playing loud music.",
+        "(3) Kids on bikes follow with streamers on their handlebars.",
+        "(4) The next morning, the town cleans up.",
+        "(5) The town pool opens in June.",
+        "(6) Workers sweep the street and pick up confetti."
+      ],
+      choices: [
+        { text: "Take out sentence 5, because it is not about the parade or the cleanup.", correct: true },
+        {
+          text: "Begin a new paragraph at sentence 4, because it starts a new idea about the next morning.",
+          correct: true
+        },
+        { text: "Take out sentence 3, because bikes are not part of a band." },
+        { text: "Begin a new paragraph at sentence 3, because it starts to talk about kids." },
+        { text: "Begin a new paragraph at sentence 6, because sweeping is a new idea." }
+      ],
+      clue: "Look for a sentence about something else and a place where the idea changes.",
+      hints: [
+        "Look for a sentence about something else and a place where the idea changes.",
+        "Check each sentence against the idea of its part of the draft. Then find where the draft moves from one idea to another.",
+        "Sentences 2 and 3 are both about the parade. Decide which sentences are left that could be a problem."
+      ],
+      how: [
+        "The topic sentence says the town has a big fall parade. Sentences 2 and 3 show the parade.",
+        "Sentence 4 moves to the next morning, a new idea, so a new paragraph should begin there. Sentence 6 is a detail of the cleanup.",
+        "Sentence 5 is about the town pool, not the parade or the cleanup.",
+        "The answers are \"Take out sentence 5, because it is not about the parade or the cleanup\" and \"Begin a new paragraph at sentence 4, because it starts a new idea about the next morning.\""
+      ],
+      why: "The answers are \"Take out sentence 5, because it is not about the parade or the cleanup\" and \"Begin a new paragraph at sentence 4, because it starts a new idea about the next morning.\" Sentence 5 is about the pool. Sentence 3 is a parade detail, and sentence 6 belongs with the cleanup."
+    }
+  ],
+  addons: {
+    "SK-SS1d-P1": {
+      hints: [
+        "A paragraph stays on one idea. Find the idea in the topic sentence, then check every other sentence against it.",
+        "Say the idea in a few words. Then read each sentence and ask whether it tells about that idea.",
+        "Three of the four sentences tell about how hummingbirds fly. Ask which one is about something at a person's home."
+      ],
+      how: [
+        "Sentence 3 is the topic sentence: hummingbirds can fly in ways most birds cannot.",
+        "Sentences 4 and 5 give examples: hovering and flying backward.",
+        "Sentence 6 is about a feeder on a porch. It does not tell how hummingbirds fly.",
+        "The answer is sentence 6: \"My grandma has a pretty red bird feeder on her porch.\""
+      ],
+      misconception: "A common mix-up is choosing a sentence that sounds odd. Test each sentence against the topic sentence."
+    },
+    "SK-SS1d-P2": {
+      hints: [
+        "A topic sentence has to cover all of the details in its paragraph. Read them all before you choose.",
+        "Name what each of sentences 7, 8 and 9 tells about. Ask what they have in common.",
+        "Two choices belong with other paragraphs in the draft, and one is only a body part. Choose the idea all three details share."
+      ],
+      how: [
+        "Sentence 7 is about nectar, sentence 8 is about insects and sentence 9 is about eating many times a day.",
+        "All three are about what hummingbirds eat and how often.",
+        "The answer is \"Hummingbirds spend a lot of their time eating.\"",
+        "Beaks are only one body part, flying belongs in the earlier paragraph, and flying south is about a different idea."
+      ],
+      misconception: "A common mix-up is choosing a sentence about hummingbirds in general. The topic sentence has to match the details in this paragraph."
+    },
+    "SK-SS1d-P3": {
+      hints: [
+        "Name the main idea of that paragraph first. The new detail has to tell more about that idea.",
+        "The paragraph is about the ways hummingbirds fly. Ask which sentence adds one more thing about flying.",
+        "Three of the choices are true about hummingbirds but are not about flying. Check each one against the topic sentence."
+      ],
+      how: [
+        "Sentence 3 says hummingbirds can fly in ways most birds cannot.",
+        "A new detail should tell one more thing about how they fly.",
+        "The answer is \"Their wings beat so fast that they make a humming sound.\" Fast wings are part of flying.",
+        "Nests, feeders and eggs are not about flying."
+      ],
+      misconception: "A common mix-up is choosing a detail because it is about hummingbirds. It also has to fit the idea of this paragraph."
+    },
+    "SK-SS1d-P4": {
+      hints: [
+        "Find the sentence that names the big idea the others can tell about. Then ask which sentence is about something else.",
+        "The topic sentence says what the market is like. Ask which two sentences show that, and which one is about a different place or time.",
+        "One sentence is about farmers but not about the market. Match the other three after that."
+      ],
+      how: [
+        "\"The Saturday farmers market is a busy place\" names the big idea, so it is the topic sentence.",
+        "Farmers selling peaches, beans and fresh eggs, and shoppers crowding every table, show how busy the market is, so they are details.",
+        "Farmers getting up early to pick their food happens before the market. It is about the farmers' work, not about how busy the market is.",
+        "That sentence does not belong."
+      ],
+      misconception: "A common mix-up is calling a sentence a detail because it mentions farmers. A detail has to tell about the topic sentence's idea."
+    },
+    "SK-SS1d-P5": {
+      hints: [
+        "The first sentence is the topic sentence. Test every other sentence: is it about the class garden in spring?",
+        "Say the idea of the paragraph in your own words. Then read each sentence and ask whether it shows the garden being busy.",
+        "Planting, watering and picking are things the class does in the garden. Look for the two sentences that are about something else."
+      ],
+      how: [
+        "The topic sentence says the class garden is busy in the spring.",
+        "Planting seeds, watering every morning and picking the first beans are all garden work.",
+        "The lunchroom serving green beans is about lunch, and leaves falling in autumn is about a different season.",
+        "The answers are \"The lunchroom serves green beans on Fridays\" and \"Red and yellow leaves fall on the playground each autumn.\""
+      ],
+      misconception: "A common mix-up is keeping a sentence because it mentions beans or plants. Check the idea, not just the words."
+    }
+  },
+/* B4b:core:end */
   test: [
     { id: "SK-SS1d-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Read the paragraph that begins with sentence 2. Select the sentence that does not belong in that paragraph.",
@@ -4537,23 +5682,23 @@ PP.addLesson({
       prompt: "Read the sentences. Then complete the sentences. Choose the best answer for each blank.",
       text: "The words \"like a herd of gray elephants\" are {0}. They help the reader understand that the clouds {1}.",
       slots: [
-        { options: ["an idiom", "a simile", "a metaphor"], answer: 1 },
+        { options: ["a comparison that uses like", "a comparison that says one thing is another", "a saying that means something else"], answer: 0 },
         { options: ["have long trunks and big ears", "are huge and heavy and move slowly", "make a loud trumpeting sound"], answer: 1 }
       ],
-      clue: "First decide what kind of language the words are: a comparison with like or as, a comparison without them, or a saying. Then ask what the two share.",
+      clue: "First decide what kind of language the words are. Then ask what the two things share.",
       hints: [
-        "First decide what kind of language the words are: a comparison with like or as, a comparison without them, or a saying. Then ask what the two share.",
+        "First decide what kind of language the words are. Then ask what the two things share.",
         "Look for a small word that joins the clouds and the elephants. Then think about what elephants are like.",
         "Clouds do not really have trunks, so one choice for the second blank can go. Check the other two against what a herd of elephants is like."
       ],
       how: [
-        "The words join clouds and elephants with like, so it is a comparison with like. That is a simile.",
+        "The words join clouds and elephants with like, so it is a comparison that uses like. That is a simile.",
         "Elephants are huge and heavy, and a herd moves slowly across the land.",
-        "The answers are a simile and are huge and heavy and move slowly.",
+        "The answers are a comparison that uses like and are huge and heavy and move slowly.",
         "Clouds do not have trunks or ears, and the sentence says nothing about a sound."
       ],
       misconception: "A common mix-up is thinking the clouds really look like elephants with trunks. The comparison is about size and weight.",
-      why: "The answers are a simile and are huge and heavy and move slowly. The words use like to compare clouds with a herd of elephants, which are big, heavy and slow. Clouds have no trunks or ears, and nothing is said about a sound." },
+      why: "The answers are a comparison that uses like and are huge and heavy and move slowly. The words use like to compare clouds with a herd of elephants, which are big, heavy and slow. Clouds have no trunks or ears, and nothing is said about a sound." },
     { id: "SK-SS2a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: ["p7"],
       like: ["SK-SS2a-C12"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -4620,9 +5765,9 @@ PP.addLesson({
         { text: "Sentence A means that a real cat got out of a bag." },
         { text: "Only sentence B uses figurative language." }
       ],
-      clue: "An idiom is a saying that does not mean its words. A plain sentence does mean its words. Check each sentence.",
+      clue: "Some sentences use a saying whose words do not match what is meant. Plain sentences do not. Check each sentence.",
       hints: [
-        "An idiom is a saying that does not mean its words. A plain sentence does mean its words. Check each sentence.",
+        "Some sentences use a saying whose words do not match what is meant. Plain sentences do not. Check each sentence.",
         "Picture each sentence word for word. Which one would be strange if it were really true?",
         "Sentence B has no like or as, and it does not say that one thing is another, so it is not a simile. Check the rest the same way."
       ],

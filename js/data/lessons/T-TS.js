@@ -2936,25 +2936,25 @@ PP.addLesson({
       prompt: "Think about \"The Slow Sink\" and \"Lights Out for Sea Turtles.\" Is each sentence true for only one text or for both? Match each sentence.",
       cols: ["only The Slow Sink", "only Lights Out for Sea Turtles", "both texts"],
       rows: [
-        { text: "The real cause is found by opening something up and looking inside.", answer: 0 },
-        { text: "Scientists explain why the first try did not work.", answer: 1 },
-        { text: "A first try does not fix the real cause.", answer: 2 },
-        { text: "The text tells what happens after the solution.", answer: 2 }
+        { text: "Something is added to stop the problem from coming back.", answer: 2 },
+        { text: "The real cause is something stuck inside a pipe.", answer: 0 },
+        { text: "Many separate sources add up to one big problem.", answer: 1 },
+        { text: "More than one try is made before the problem is solved.", answer: 2 }
       ],
-      clue: "To compare two texts, check each sentence against the first text, then against the second text.",
+      clue: "To compare two texts, check each sentence against one text, then the other. It is true for both only if it fits both.",
       hints: [
-        "To compare two texts, check each sentence against the first text, then against the second text.",
-        "For each sentence, ask: can I find this in the sink story, in the turtle article, or in both?",
-        "Mr. Okon opens the pipe, but no one opens anything in the turtle article. Check the other three sentences against both texts."
+        "To compare two texts, check each sentence against one text, then the other. It is true for both only if it fits both.",
+        "In each text, reread the tries, the part that tells the cause, and the ending.",
+        "Nothing in the turtle article is stuck inside a pipe, so that sentence does not fit it. Sort the other sentences the same way."
       ],
       how: [
-        "Only in \"The Slow Sink\" does someone open something up and look inside: Mr. Okon unscrews the pipe.",
-        "Only in the turtle article do scientists explain why a try did not work.",
-        "In both texts, the first try does not fix the real cause, and both tell what happens after the solution.",
-        "So: only the sink, only the turtle article, both, both."
+        "Only in \"The Slow Sink\" is the cause stuck in a pipe: a clump of bristles blocks it.",
+        "Only in the turtle article do many lights, from hotels and street lamps, add up to one big glow that confuses the hatchlings.",
+        "Both texts add something at the end: a screen over the drain, and shields on the lamps.",
+        "Both texts also try more than one thing: hot water and a plunger, and one hotel and then the whole beach."
       ],
-      misconception: "A common mix-up is choosing one text when the sentence is true for both. Check each sentence against both texts.",
-      why: "Opening the pipe is only in \"The Slow Sink.\" Scientists explaining why the try failed is only in the turtle article. In both texts, the first try does not fix the real cause, and each tells what happens after the solution." },
+      misconception: "A common mix-up is choosing one text when the sentence fits both. Check each sentence against both texts.",
+      why: "The stuck-in-a-pipe cause is only in \"The Slow Sink,\" and the many sources of light are only in the turtle article. Both texts add something to stop the problem from coming back (a screen, lamp shields), and both make more than one try before the solution." },
     { id: "SK-TSPS-S15", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C15"],
       stem: ["(1) The sunflower seeds in the school garden never sprouted.", "(2) First, the class watered the seeds twice a day.", "(3) But the soil stayed bare.", "(4) Then Mr. Hallam dug a small hole and found the seeds buried far too deep.", "(5) ______", "(6) Soon, green shoots pushed up through the soil."],
