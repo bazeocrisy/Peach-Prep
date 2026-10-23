@@ -1174,13 +1174,14 @@ PP.addLesson({
       genre: "Student draft (how-to)",
       paragraphs: [
         [
-          "(1) You need oats, water, a small pot, a spoon and a grown-up helper.",
+          "(1) You need oats, water, a small pot, a bowl, a spoon and a grown-up helper.",
           "(2) Pour one cup of water into the pot, and ask the grown-up to heat it on the stove until it bubbles."
         ],
         [
           "(3) Stir in half a cup of oats, and turn the heat down low.",
           "(4) Cook the oatmeal for five minutes, and stir it now and then so it does not stick.",
-          "(5) Pour the oatmeal into a bowl, and eat it with a spoon."
+          "(5) Pour the oatmeal into a bowl, and eat it with a spoon.",
+          "(6) Wash the pot, the bowl and the spoon with warm soapy water when you are finished."
         ]
       ]
     },

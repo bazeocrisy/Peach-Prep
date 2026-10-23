@@ -580,28 +580,28 @@ PP.addLesson({
        Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
     { id: "SK-TSSEQ-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C02"],
-      stem: ["Make a Paper Pinwheel", "Paragraph 1: You can make a pinwheel. It spins in the wind. You need a square of paper, a pencil, a push pin and scissors.", "Paragraph 2: First, cut from each corner of the paper almost to the middle. Next, bend every other point into the middle. Then push the pin through all the points and into the side of the pencil."],
+      stem: ["Make a Sock Puppet", "Paragraph 1: A sock puppet can tell a story or sing a silly song. Anyone can make one in about ten minutes. It turns a lonely old sock into a new friend.", "Paragraph 2: First, find a clean sock, two buttons and a little glue. Next, glue the buttons on the toe of the sock for eyes. Then put your hand in the sock and open and close your fingers to make the puppet talk."],
       prompt: "Why does the author begin with Paragraph 1?",
       choices: [
-        { text: "It lists what you need, so you can gather everything before the first step.", correct: true },
-        { text: "It tells the first step, so you know how to start cutting the paper." },
-        { text: "It tells what can go wrong, so you know how to fix a pinwheel that will not spin." },
-        { text: "It asks a question, so you know the text will explain why wind makes a pinwheel spin." }
+        { text: "It tells what you will make and why it is fun, so you want to read the steps.", correct: true },
+        { text: "It names the things to collect, so you can gather them before you begin." },
+        { text: "It gives the first step, so you know how to start gluing." },
+        { text: "It warns about a mistake, so you know how to fix a torn sock." }
       ],
-      clue: "Each part of a how-to text has a job. Ask what the first paragraph gives the reader.",
+      clue: "Each part of a how-to text has a job. Ask what Paragraph 1 gives the reader before any step starts.",
       hints: [
-        "Each part of a how-to text has a job. Ask what the first paragraph gives the reader.",
-        "Reread Paragraph 1. Then compare it with the first sentence of Paragraph 2.",
-        "Nothing goes wrong in Paragraph 1, so it is not telling a problem. Test each choice that is left against what Paragraph 1 says."
+        "Each part of a how-to text has a job. Ask what Paragraph 1 gives the reader before any step starts.",
+        "Reread Paragraph 1. Then look at how Paragraph 2 begins.",
+        "Nothing goes wrong in Paragraph 1, so it is not warning about a mistake. Test each choice that is left against what Paragraph 1 says."
       ],
       how: [
-        "Paragraph 1 says what you can make and lists a square of paper, a pencil, a push pin and scissors.",
-        "No step begins until Paragraph 2, which starts with the clue word First.",
-        "The answer is \"It lists what you need, so you can gather everything before the first step.\"",
-        "Paragraph 1 gives no step, tells no problem and asks no question."
+        "Paragraph 1 says what a sock puppet can do and that anyone can make one in about ten minutes.",
+        "It names no things to collect and gives no step. The things to collect come in Paragraph 2, which starts with First.",
+        "The answer is \"It tells what you will make and why it is fun, so you want to read the steps.\"",
+        "Paragraph 1 has no step and no mistake."
       ],
-      misconception: "A common mix-up is thinking every paragraph in a how-to text is a step. The opening paragraph often gets the reader ready.",
-      why: "The answer is \"It lists what you need, so you can gather everything before the first step.\" Paragraph 1 names the paper, the pencil, the pin and the scissors. The steps begin in Paragraph 2 with First, and Paragraph 1 asks no question." },
+      misconception: "A common mix-up is thinking the first paragraph of a how-to text must list what you need. Check what this paragraph really says.",
+      why: "The answer is \"It tells what you will make and why it is fun, so you want to read the steps.\" Paragraph 1 tells what a sock puppet can do and how quickly you can make one. The things to collect and the steps are in Paragraph 2, and nothing goes wrong in Paragraph 1." },
     { id: "SK-TSSEQ-S05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C04"],
       stem: ["How to Make a S'more", "First, hold a marshmallow on a long stick over the fire. Keep it there until it turns golden brown. Next, set a square of chocolate on a cracker. Then slide the hot marshmallow onto the chocolate. After that, press a second cracker on top. Now eat it while it is warm!", "Sentence from the directions: After that, press a second cracker on top."],
@@ -628,28 +628,28 @@ PP.addLesson({
       why: "The answer is \"First would mean this is the starting step, but there is no sandwich to press until the marshmallow is on the chocolate.\" The pressing needs the marshmallow and chocolate in place. The chocolate goes on the cracker before the pressing, and First is a time word that never means at the same time." },
     { id: "SK-TSSEQ-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C05"],
-      stem: ["Paragraph A: Making play dough is easy. First, mix two cups of flour and one cup of salt in a bowl. Next, stir in one cup of warm water. Then add a few drops of food coloring. Last, squeeze and fold the dough until it is smooth.", "Paragraph B: Our music room is a loud and happy place. Drums of every size line one wall. A shelf holds shiny triangles, such as small ones and big ones. In addition, a piano stands in the corner."],
-      prompt: "Read the two paragraphs. How are they organized differently?",
+      stem: ["Paragraph A: Recess did not go as planned on Tuesday. At ten o'clock, dark clouds rolled over the school. Soon after, rain tapped on the windows. Then the whole class lined up and walked inside. By eleven, the sun was out again.", "Paragraph B: Our gym is a big and noisy place. Bright lines on the floor mark the games, such as the ones for basketball and for four square. In addition, a tall rope hangs from the ceiling."],
+      prompt: "Read the two paragraphs. What is the main difference in how they are organized?",
       choices: [
-        { text: "Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.", correct: true },
-        { text: "Paragraph A gives details about one place, and Paragraph B tells steps in the order they happen." },
-        { text: "Both paragraphs tell steps in the order they happen, and both use time words." },
-        { text: "Paragraph A tells a problem and its fix, and Paragraph B compares two rooms." }
+        { text: "Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.", correct: true },
+        { text: "Paragraph A describes one place, and Paragraph B tells what happened from one time to the next." },
+        { text: "Both paragraphs tell what happened from one time to the next, with time words in each." },
+        { text: "Paragraph A gives steps for making something, and Paragraph B compares two gyms." }
       ],
-      clue: "To find how a paragraph is organized, look at its clue words and ask what job they do.",
+      clue: "To find how a paragraph is organized, look at the words that connect its sentences and ask what job they do.",
       hints: [
-        "To find how a paragraph is organized, look at its clue words and ask what job they do.",
-        "Find the clue words in Paragraph A. Then find the clue words in Paragraph B.",
-        "The music room paragraph does not tell about a problem, so rule out the choice about a problem and a fix. Then match each paragraph to the job of its clue words."
+        "To find how a paragraph is organized, look at the words that connect its sentences and ask what job they do.",
+        "List the connecting words in Paragraph A. Then list the connecting words in Paragraph B.",
+        "Paragraph A is about one afternoon and makes nothing, so it does not give steps for making something. Then match each paragraph to the job of its connecting words."
       ],
       how: [
-        "Paragraph A uses First, Next, Then and Last. It tells the steps for making play dough, in order.",
-        "Paragraph B uses such as and in addition. It gives details about one place, the music room.",
-        "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\"",
-        "One choice has the paragraphs backward, Paragraph B has no time words, and neither paragraph tells a problem."
+        "Paragraph A uses At ten o'clock, Soon after, Then and By eleven. It tells what happened at the school, from one time to the next.",
+        "Paragraph B uses such as and in addition. It gives details about one place, the gym.",
+        "The answer is \"Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.\"",
+        "One choice has the paragraphs backward, Paragraph B has no time words, and neither paragraph gives steps or compares two gyms."
       ],
-      misconception: "A common mix-up is calling any paragraph with a list a sequence. A sequence needs steps in order, shown with time words.",
-      why: "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\" Paragraph A uses First, Next, Then and Last. Paragraph B uses such as and in addition to add details about the music room." },
+      misconception: "A common mix-up is thinking every paragraph with time words gives steps. Time words can also tell what happened first, next and last.",
+      why: "The answer is \"Paragraph A tells what happened from one time to the next, and Paragraph B describes one place.\" Paragraph A uses At ten o'clock, Soon after, Then and By eleven. Paragraph B uses such as and in addition to add details about the gym." },
     { id: "SK-TSSEQ-S07", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C06"],
       stem: ["How Sea Salt Is Made", "Sea salt starts in the ocean. First, workers let seawater flow into shallow pools by the shore. Next, the sun warms the pools, and the water slowly dries up into the air. After many days, a crust of white salt is left on the bottom. Then workers rake the salt into piles. Finally, the salt is washed, dried and packed into bags."],
@@ -725,12 +725,12 @@ PP.addLesson({
       why: "The answers are \"six hours\" and \"about ten minutes.\" Both tell how much time passes. First, Next and Finally tell only the order." },
     { id: "SK-TSSEQ-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C09"],
-      stem: ["Paragraph 1: What happens to your leftover apple cores and carrot peels? In a worm bin, they turn into rich soil. Worms do the work.", "Paragraph 2: First, you put the scraps on top of damp paper in a box. Next, the worms crawl up and nibble the soft scraps.", "Paragraph 3: Then the worms leave tiny brown crumbs behind. After a few months, the box holds dark, rich soil that is ready for a garden."],
+      stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you stand a wooden stick in the middle of the juice.", "Paragraph 3: Then you set the cup in the freezer. After a few hours, the juice is solid, and you can peel off the paper and eat it."],
       prompt: "Choose the words that best complete the sentences about how the text is put together.",
       text: "Paragraph 1 {0}. Paragraphs 2 and 3 {1}.",
       slots: [
-        { options: ["asks a question that the text answers", "tells the last step of the job", "compares two kinds of bins"], answer: 0 },
-        { options: ["tell the steps that turn scraps into soil", "describe what the worms look like", "tell about a problem and how it was solved"], answer: 0 }
+        { options: ["asks a question that the text answers", "tells the last step of the job", "compares two kinds of juice"], answer: 0 },
+        { options: ["tell the steps that turn juice into a pop", "describe what the freezer looks like", "tell about a problem and how it was solved"], answer: 0 }
       ],
       clue: "Each part of a text has a job. Ask what each part adds to the whole.",
       hints: [
@@ -739,21 +739,21 @@ PP.addLesson({
         "Paragraphs 2 and 3 never tell about anything going wrong, so they do not tell a problem and how it was solved. Read each sentence with the choices that are left."
       ],
       how: [
-        "Paragraph 1 asks, \"What happens to your leftover apple cores and carrot peels?\" The rest of the text answers it.",
-        "Paragraphs 2 and 3 use First, Next, Then and After a few months to tell the steps from scraps to soil.",
-        "So the answers are: asks a question that the text answers; tell the steps that turn scraps into soil.",
-        "Paragraph 1 gives no last step and compares no bins, and Paragraphs 2 and 3 do not describe the worms or tell a problem."
+        "Paragraph 1 asks, \"What happens to a cup of leftover grape juice in a very cold freezer?\" The rest of the text answers it.",
+        "Paragraphs 2 and 3 use First, Next, Then and After a few hours to tell the steps from juice to a pop.",
+        "So the answers are: asks a question that the text answers; tell the steps that turn juice into a pop.",
+        "Paragraph 1 gives no last step and compares no kinds of juice, and Paragraphs 2 and 3 do not describe the freezer or tell a problem."
       ],
       misconception: "A common mix-up is thinking every paragraph in a sequence text tells a step. An opening paragraph can set up a question that the steps answer.",
-      why: "Paragraph 1 asks a question that the text answers. Paragraphs 2 and 3 tell the steps that turn scraps into soil. The text never compares two bins, describes the worms or tells a problem." },
+      why: "Paragraph 1 asks a question that the text answers. Paragraphs 2 and 3 tell the steps that turn juice into a pop. The text never compares kinds of juice, describes the freezer or tells a problem." },
     { id: "SK-TSSEQ-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C11"],
-      stem: ["Long ago, a farm family dug a pond to give water to their cows. People called it Dell Pond. In 1950, the town bought the land and built a picnic area next to the pond. The town gave the place a new name, Dell Park. Families came to picnic and fish. In 1975, the town added a boat dock and a walking path. Then the town changed the name again, to Lake Dell Park. Today, kids learn to paddle a kayak there."],
+      stem: ["Long ago, a farm family dug a pond to give water to their cows. People called it Dell Pond. In 1950, the town bought the land. Then the town gave the place a new name, Dell Park. Families came to picnic and fish. In 1975, the town added a boat dock and a walking path. Then the town changed the name again, to Lake Dell Park. Today, kids learn to paddle a kayak there."],
       prompt: "What was the place called when each event happened? Match each event to its name at that time.",
       cols: ["Dell Pond", "Dell Park", "Lake Dell Park"],
       rows: [
         { text: "The cows drank the water.", answer: 0 },
-        { text: "A picnic area was built.", answer: 0 },
+        { text: "The town bought the land.", answer: 0 },
         { text: "Families came to picnic and fish.", answer: 1 },
         { text: "Kids learn to paddle a kayak.", answer: 2 }
       ],
@@ -766,11 +766,11 @@ PP.addLesson({
       how: [
         "The place was called Dell Pond until 1950. In 1950, it became Dell Park. After 1975, it was Lake Dell Park.",
         "The cows drank from the pond before the town bought the land, so that goes with Dell Pond.",
-        "The picnic area was built in 1950, just before the new name, while it was still Dell Pond. Families came to picnic and fish after the name changed, so that goes with Dell Park.",
+        "The town bought the land in 1950, and only then did it give the place a new name, so the place was still Dell Pond. Families came to picnic and fish after the name changed, so that goes with Dell Park.",
         "Kids paddling kayaks today fits Lake Dell Park."
       ],
       misconception: "A common mix-up is matching an event to the newest name it is told next to. Check when the name changed.",
-      why: "The cows drank the water and the picnic area was built while it was still Dell Pond. Families came to picnic and fish after it became Dell Park. Kids paddling kayaks today fits Lake Dell Park." },
+      why: "The cows drank the water and the town bought the land while it was still Dell Pond. Families came to picnic and fish after it became Dell Park. Kids paddling kayaks today fits Lake Dell Park." },
     { id: "SK-TSSEQ-S12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C12"],
       stem: ["In 1884, a railroad company built a depot beside Alder Creek so farmers could ship their crops. Farmers soon drove their wagons to the depot. Some of them stayed to work there. Then a blacksmith shop and a store opened across the road. In 1895, the people built a school. By 1900, the little place was a town with forty families. In 1962, the depot closed, but the town kept its name."],
@@ -821,7 +821,7 @@ PP.addLesson({
       why: "The answer is Sentence 2. The new event happened in 1950, which comes after 1925 and before 1988. Sentence 1 is too early, and Sentences 3 and 4 are later." },
     { id: "SK-TSSEQ-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C14"],
-      stem: ["How to Make a Grilled Cheese Sandwich", "(1) First, spread butter on the outside of two slices of bread.", "(2) Next, put one slice in a warm pan, with the buttered side down.", "(3) Then add a slice of cheese. Set the other slice on top, with its buttered side up.", "(4) After that, cook it until the bottom is golden. Then turn it over.", "(5) Finally, cook the other side until the cheese melts."],
+      stem: ["How to Make a Grilled Cheese Sandwich", "(1) First, spread butter on the outside of two slices of bread.", "(2) Next, put one slice in a warm pan, with the buttered side down.", "(3) Then add a slice of cheese. Set the other slice on top, with its buttered side up.", "(4) After that, cook it until the buttered bottom is golden and crisp. Then turn it over.", "(5) Finally, cook the other side until the cheese melts."],
       prompt: "Why do the directions say to butter the bread BEFORE the sandwich goes in the pan?",
       choices: [
         { text: "The butter on the outside cooks into the bread, so both sides turn golden and crisp.", correct: true },
@@ -845,27 +845,27 @@ PP.addLesson({
       why: "The answer is \"The butter on the outside cooks into the bread, so both sides turn golden and crisp.\" The buttered sides go against the warm pan, and the steps cook each side until it is golden. The directions never say the butter slows the cheese, goes on the pan or thickens the bread." },
     { id: "SK-TSSEQ-S15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C15"],
-      stem: ["Mr. Cruz and his class made fresh salsa for a school picnic. He wrote the directions on the board so that every student could follow them. Here is part of what he wrote."],
+      stem: ["Nia's grandmother showed her how to make a bed. Nia wrote the directions on a card so that she would not forget them. Here is part of what she wrote."],
       prompt: "Choose the time words that best complete the directions.",
-      text: "First, wash and chop three ripe tomatoes. {0} the tomatoes are chopped, stir in a spoonful of chopped onion. {1}, squeeze in the juice of one lime and serve.",
+      text: "First, pull the bottom sheet tight over the mattress. {0} the sheet is smooth, spread the blanket on top. {1}, set the pillow at the head of the bed.",
       slots: [
-        { options: ["Once", "Before", "Because"], answer: 0 },
-        { options: ["Last", "Meanwhile", "First"], answer: 0 }
+        { options: ["Before", "After", "While"], answer: 1 },
+        { options: ["Meanwhile", "Earlier", "Finally"], answer: 2 }
       ],
       clue: "Time words tell when each step happens. Pick words that keep the steps in order.",
       hints: [
         "Time words tell when each step happens. Pick words that keep the steps in order.",
-        "Read the whole set of directions once. Ask which step happens after chopping and which step ends the job.",
-        "First is already used at the start, so it cannot also begin the step that ends the job. Read each sentence with the words that are left."
+        "Read the whole card once. Ask which step comes after the sheet is smooth and which step ends the job.",
+        "Setting the pillow down is not something Nia does at the same time as another step. Read each sentence with the words that are left."
       ],
       how: [
-        "Chopping the tomatoes comes first. The onion goes in after the tomatoes are chopped.",
-        "Once means as soon as something has happened, so \"Once the tomatoes are chopped\" puts the onion after the chopping.",
-        "Squeezing in the lime and serving ends the job, so that step starts with Last.",
-        "The answers are Once and Last. Before would put the onion ahead of the chopping, and Meanwhile would mean squeezing the lime at the same time as stirring."
+        "Pulling the sheet tight comes first. The blanket goes on after the sheet is smooth.",
+        "After means later than something that has happened, so \"After the sheet is smooth\" puts the blanket after the sheet.",
+        "Setting the pillow down ends the job, so that step starts with Finally.",
+        "The answers are After and Finally. Before would spread the blanket ahead of the smoothing, and Earlier would put the pillow before the sheet."
       ],
-      misconception: "A common mix-up is choosing a word that sounds like time but gives the wrong order, like Before or Meanwhile.",
-      why: "The answers are Once and Last. Once the tomatoes are chopped, you stir in the onion, and last you squeeze in the lime. Before and Meanwhile would put the steps in the wrong order, and Because does not tell when." }
+      misconception: "A common mix-up is choosing a word that sounds like time but gives the wrong order, like Before or Earlier.",
+      why: "The answers are After and Finally. After the sheet is smooth, you spread the blanket, and finally you set the pillow down. Before and Earlier would put the steps in the wrong order, and Meanwhile and While mean at the same time." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1, P2,
      P3 and P6. */

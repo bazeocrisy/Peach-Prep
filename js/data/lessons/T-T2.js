@@ -164,16 +164,16 @@ PP.addLesson({
         ["Its back legs are long and strong.", "A tarsier can leap from tree to tree and grab a bug in the air."],
         ["From its big eyes to its strong legs, a tarsier is built to catch food at night.", "Tarsiers sleep in the day, often holding on to a tree trunk."]
       ] },
-    { id: "p7", title: "Up, Up and Away", genre: "Informational text",
+    { id: "p7", title: "A Home in the Treetops", genre: "Informational text",
       paragraphs: [
-        ["A hot air balloon has no engine and no wings.", "Still, it can float high over fields and towns.", "The secret is hot air."],
-        ["## Hot Air Rises"],
-        ["Under the big cloth balloon hangs a basket for the riders.", "Above the basket, a burner shoots out a flame.", "The flame heats the air inside the balloon.", "Hot air is lighter than cool air, so it rises and lifts the balloon."],
-        ["## Going Up and Coming Down"],
-        ["To go higher, the pilot turns up the flame.", "To come down, the pilot lets the air inside cool off.", "The pilot cannot steer like a driver, so the balloon goes where the wind blows."],
+        ["A bald eagle builds its nest high in a tall tree.", "The nest is made of big sticks.", "It can be as wide as a bed."],
+        ["## Building the Nest"],
+        ["Both parents carry sticks in their feet.", "They lay soft grass and moss on top.", "The eggs and chicks stay warm and safe inside."],
+        ["## A Nest That Grows"],
+        ["Each year, the eagles come back to the same nest.", "They add more sticks.", "After many years, the nest can weigh more than a thousand pounds."],
         ["## Did You Know?"],
-        ["Box: The first riders in a hot air balloon were a sheep, a duck and a rooster.", "They flew in France in 1783."],
-        ["With only a flame and the wind, a hot air balloon can take people on a quiet ride in the sky."]
+        ["Box: A young bald eagle has brown feathers.", "Its head does not turn white until it is about five years old."],
+        ["A bald eagle's nest is a safe home that grows bigger every year."]
       ] },
     { id: "p8", title: "A Hippo's Hot Day", genre: "Informational text",
       paragraphs: [
@@ -727,29 +727,29 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is choosing any true fact from the text. A supporting detail must help prove the idea.",
       why: "The answers are \"She builds a soft nest of leaves for the two of them each night.\" and \"She carries the baby on her chest and later on her back.\" Both are jobs the mother does for her baby. The silverbacks, the food and the forests are true facts, but they are not about caring for a baby." },
-    { id: "SK-TT2a-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p7"],
+    { id: "SK-TT2a-S09", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p7"],
       like: ["SK-TT2a-C08"],
-      prompt: "Why does the author put the fact about the first balloon riders in a text box instead of in one of the sections?",
+      prompt: "The author wants to add one more fact to the \"Did You Know?\" box. Which fact fits the box best?",
       choices: [
-        { text: "It is a fun fact, but the article's point does not need it.", correct: true },
-        { text: "It is the most important fact in the whole article." },
-        { text: "It tells how a pilot makes the balloon go higher." },
-        { text: "It explains how the pilot steers the balloon to a field." }
+        { text: "An eagle's eyes are about as big as a person's eyes.", correct: true },
+        { text: "The eagles lay soft grass and moss on top of the sticks." },
+        { text: "Each year, the eagles add more sticks to the same nest." },
+        { text: "A bald eagle builds its nest high in a tall tree." }
       ],
-      clue: "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
+      clue: "A text box holds an extra fact that the sections do not need. Ask which choice is not already part of the article.",
       hints: [
-        "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
-        "Read the text box. Then read the headings and the last paragraph, and notice what the article keeps talking about.",
-        "The text box never mentions a flame or a burner, so it does not tell how a balloon goes higher. Decide which of the other reasons fits what you noticed."
+        "A text box holds an extra fact that the sections do not need. Ask which choice is not already part of the article.",
+        "Read the sections again. For each choice, ask whether the article already tells it.",
+        "The soft grass and moss are already told in \"Building the Nest,\" so that fact has a home. Check the other three the same way."
       ],
       how: [
-        "The text box tells that a sheep, a duck and a rooster were the first riders, in 1783.",
-        "The sections and the last paragraph tell how hot air lifts the balloon and how it goes up and down. They never need the animals.",
-        "The answer is \"It is a fun fact, but the article's point does not need it.\"",
-        "The animal fact is not the most important one, it does not tell about the flame, and the article says the pilot cannot steer like a driver."
+        "The box in the article holds a fun fact about the color of a young eagle's head. The sections do not need it.",
+        "Three choices are already told in the article: the grass and moss, the sticks added each year, and the nest in a tall tree.",
+        "The fact about the eyes is new, and no section needs it. It is a fun extra fact.",
+        "The answer is \"An eagle's eyes are about as big as a person's eyes.\""
       ],
-      misconception: "A common mix-up is thinking a fact in a box must be the most important one. A text box often holds an extra fact.",
-      why: "The answer is \"It is a fun fact, but the article's point does not need it.\" The article explains how hot air lifts a balloon without using the animal riders. The box fact is not the most important one, it says nothing about the flame, and the pilot cannot steer like a driver." },
+      misconception: "A common mix-up is choosing a fact the sections already tell. The box holds an extra fact.",
+      why: "The answer is \"An eagle's eyes are about as big as a person's eyes.\" It is a new, fun fact that no section needs. The grass and moss, the sticks added each year and the nest in a tall tree are already told in the article." },
     { id: "SK-TT2a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
       like: ["SK-TT2a-C09"],
       stem: ["Nia and her grandpa built a tree house in the big tree behind their home. Nia likes to eat lunch up there, but it is hard to climb a ladder while holding a full plate.", "Figure 1 shows the tree house from the side. A ladder leans on the trunk and goes up to a trap door in the floor. On the other side of the tree house is a window. A rope runs from a small wheel above the window down to a bucket. The bucket hangs just over a little picnic table on the ground."],
@@ -817,27 +817,27 @@ PP.addLesson({
       why: "The answer is \"By eating dead animals, vultures help keep fields and roads clean and stop germs from spreading.\" It covers finding food and the body built for the job. The other sentences describe the bird, fit one section, sit in the box, or say the job is important without saying what it is." },
     { id: "SK-TT2a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p10"],
       like: ["SK-TT2a-C12"],
-      prompt: "A student says the main idea of \"Life on the Sea Floor\" is \"Some lobsters are bright blue.\" Why is the student wrong?",
+      prompt: "A student says the main idea of \"Life on the Sea Floor\" is \"A lobster has one thick claw and one thin claw.\" Why is the student wrong?",
       choices: [
-        { text: "The blue lobster fact is only in the text box, and no section is about it.", correct: true },
-        { text: "The article never tells what color lobsters are." },
-        { text: "Lobsters cannot be blue, so the fact in the box must be wrong." },
-        { text: "The box is the very last part of the article, so it is only an ending." }
+        { text: "It is one detail from one section, not what the whole article is about.", correct: true },
+        { text: "The article never tells anything about a lobster's claws." },
+        { text: "The claw fact is only in the text box, and no section is about it." },
+        { text: "A lobster's claws are really the same size, so the fact is false." }
       ],
-      clue: "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
+      clue: "The main idea is what every part of the article tells about. A fact from only one section does not fit every part.",
       hints: [
-        "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
-        "Find every place in the article that tells about a lobster's color. Then read the headings.",
-        "The article does tell what color lobsters are, so the student is not wrong about that. Decide which of the other reasons matches what you found."
+        "The main idea is what every part of the article tells about. A fact from only one section does not fit every part.",
+        "Find every place the article tells about claws. Then notice what else the article tells about.",
+        "The text box is about the color of lobsters, not about claws. Decide which of the other reasons matches what you found."
       ],
       how: [
-        "The color of lobsters is told only in the text box under \"Did You Know?\"",
-        "The sections tell about the two kinds of claws and how a lobster smells its food. None of them is about color.",
-        "The answer is \"The blue lobster fact is only in the text box, and no section is about it.\"",
-        "The article does tell the colors, it says blue lobsters are real, and a paragraph comes after the box, so the box is not the end."
+        "The claws are told about in one section, \"Claws for Every Job.\"",
+        "The other sections tell how a lobster smells the water, and the first and last paragraphs say a lobster is built to find food. The claws are only one part.",
+        "The answer is \"It is one detail from one section, not what the whole article is about.\"",
+        "The article does tell about the claws and says they are not the same, and the text box is about color."
       ],
-      misconception: "A common mix-up is taking a surprising fact as the main idea. Ask whether the whole article is about it.",
-      why: "The answer is \"The blue lobster fact is only in the text box, and no section is about it.\" The sections are about claws and smell. The article does tell lobster colors, it says blue ones are real, and the last paragraph comes after the box." },
+      misconception: "A common mix-up is taking a true fact from one section as the main idea. Ask whether the whole article is about it.",
+      why: "The answer is \"It is one detail from one section, not what the whole article is about.\" The claws are only one section. The article also tells how a lobster smells its food, it does say the claws are not the same, and the text box is about color." },
     { id: "SK-TT2a-S14", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
       like: ["SK-TT2a-C14"],
       stem: ["Lena is writing a report about how a drum set works. She drew a drum set. Nobody is sitting at it. Five lines point to words. The words name a big bass drum, a foot pedal that hits it, a snare drum, a shiny cymbal and two drumsticks. Lena will put the picture next to her first page. But she forgot to write a caption under it."],
@@ -1262,7 +1262,7 @@ PP.addLesson({
       ] },
     { id: "p8", title: "A Gift That Needed a Base", genre: "Informational text",
       paragraphs: [
-        ["In 1876, the people of France planned a gift for the United States.", "It was a giant copper statue of a woman holding a torch.", "The French would build the statue, and the Americans would build the base it would stand on."],
+        ["In the 1870s, the people of France planned a gift for the United States.", "It was a giant copper statue of a woman holding a torch.", "The French would build the statue, and the Americans would build the base it would stand on."],
         ["Building the statue in France took years.", "Then workers took it apart and packed it into more than 200 crates.", "A ship carried the crates across the ocean."],
         ["In America, the base was not done.", "The builders had run out of money.", "Without a base, the statue could not stand."],
         ["A newspaper owner named Joseph Pulitzer wanted to help.", "His newspaper promised to print the name of every person who gave money, even if the gift was only a penny.", "Children sent coins from their piggy banks.", "In five months, more than 120,000 people gave money."],
@@ -1737,25 +1737,25 @@ PP.addLesson({
     { id: "SK-TT2b-S04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-P4"],
       stem: ["When you heat water in a kettle, it gets hotter and hotter. At last it boils, and some of it turns into steam. Steam takes up much more room than water. The steam needs a way out, so it rushes up the spout. On top of the spout is a whistle with a tiny hole. As the steam squeezes through the hole, the air shakes very fast. That shaking makes a high, loud sound. Now you know the water is ready."],
-      prompt: "Use the text. Choose the signal word that best completes each sentence.",
-      text: "Steam rushes up the spout {0} it needs a way out. The air in the whistle shakes very fast, {1} you hear a loud sound.",
+      prompt: "Use the text. Choose the signal words that best complete the sentences.",
+      text: "The steam needs a way out. {0} it rushes up the spout. The air in the whistle shakes very fast. {1} you hear a loud sound.",
       slots: [
-        { options: ["so", "because", "but"], answer: 1 },
-        { options: ["so", "because", "but"], answer: 0 }
+        { options: ["As a result,", "Before that,", "In spite of this,"], answer: 0 },
+        { options: ["Meanwhile,", "Because of this,", "Instead,"], answer: 1 }
       ],
-      clue: "Signal words show how ideas connect. Because comes just before a cause. So comes just before an effect.",
+      clue: "Signal words show how ideas connect. Some show that one thing makes the next thing happen. Others show time or a surprise.",
       hints: [
-        "Signal words show how ideas connect. Because comes just before a cause. So comes just before an effect.",
-        "For each sentence, find the same idea in the text. Ask which part happens first and makes the other part happen.",
-        "In the first sentence, needing a way out is what makes the steam rush up the spout, so that part is the cause. Choose the word that comes just before a cause."
+        "Signal words show how ideas connect. Some show that one thing makes the next thing happen. Others show time or a surprise.",
+        "For each pair of sentences, find the same idea in the text. Ask whether the second sentence happens because of the first.",
+        "In the second pair, the shaking air and the sound do not just happen at the same time, because one makes the other. Use that test on the other words."
       ],
       how: [
-        "The steam needs a way out, and that makes it rush up the spout. Needing a way out is the cause, and it comes after the blank, so the word is because.",
-        "The air shaking makes the loud sound. The shaking is the cause, and the sound is the effect after the blank, so the word is so.",
-        "The answers are because and so. But shows a difference, not a cause."
+        "The steam needs a way out, and that makes it rush up the spout. The second sentence is the effect, so the first blank is \"As a result,\".",
+        "The air shaking makes the loud sound. The sound is the effect again, so the second blank is \"Because of this,\".",
+        "The answers are \"As a result,\" and \"Because of this,\". Before that and meanwhile tell about time, and in spite of this and instead show a surprise or a switch."
       ],
-      misconception: "A common mix-up is using the same signal word the text used. Check where the cause sits in the new sentence.",
-      why: "The answers are because and so. In the first sentence, the cause (the steam needs a way out) comes after the blank, so because fits. In the second, the effect (you hear a loud sound) comes after the blank, so so fits. But shows a difference." },
+      misconception: "A common mix-up is choosing a word that tells about time when the text tells about cause and effect.",
+      why: "The answers are \"As a result,\" and \"Because of this,\". Needing a way out makes the steam rush up the spout, and the shaking air makes the loud sound. Words like before that and meanwhile tell about time, and in spite of this and instead show a surprise or a switch." },
     { id: "SK-TT2b-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p6"],
       like: ["SK-TT2b-C02"],
       prompt: "Which sentence tells what happens to the beans just before they are roasted? Choose the sentence in the passage.",
@@ -1859,28 +1859,28 @@ PP.addLesson({
       why: "Part A: His factory could build each car faster, so it cost less to make. Part B: \"Because the cars were faster to build, they cost less to make.\" The next sentence begins with So and tells that Ford lowered the price. The car was simple, each worker did one job, and the sales came after the price went down." },
     { id: "SK-TT2b-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-C08"],
-      stem: ["Wilbur and Orville Wright ran a bike shop in Dayton, Ohio. They read about people trying to fly, and they wanted to try, too. First, they built gliders, planes with no engine. They tested the gliders on the windy sand hills of Kitty Hawk, North Carolina. Many tests did not go well, so they built a wind tunnel to test wing shapes. Then they built a plane with an engine. On December 17, 1903, Orville flew it for 12 seconds. A plane with an engine had carried a person through the air! Soon, people around the world read about the flight. Later, the brothers built better planes that could stay up for half an hour."],
+      stem: ["Wilbur and Orville Wright ran a bike shop in Dayton, Ohio. They read about people trying to fly, and they wanted to try, too. First, they built gliders, planes with no engine. They tested the gliders on the windy sand hills of Kitty Hawk, North Carolina. Many tests did not go well, so they built a wind tunnel to test wing shapes. Then they built a plane with an engine. On December 17, 1903, Orville flew it for 12 seconds. A plane with an engine had carried a person through the air! Later that same day, Wilbur flew the plane for almost a minute. Later, the brothers built better planes that could stay up for half an hour."],
       prompt: "Did each event happen before or after the first flight with an engine? Match each event to the right time.",
       cols: ["Before the first engine flight", "After the first engine flight"],
       rows: [
         { text: "The brothers test gliders at Kitty Hawk.", answer: 0 },
         { text: "The brothers build a wind tunnel.", answer: 0 },
-        { text: "People around the world read about the flight.", answer: 1 },
+        { text: "Wilbur flies the plane for almost a minute.", answer: 1 },
         { text: "The brothers build planes that stay up for half an hour.", answer: 1 }
       ],
-      clue: "Dates and time words like first, then, soon and later show when events happen. Find the first engine flight, then sort each event.",
+      clue: "Dates and time words like first, then and later show when events happen. Find the first engine flight, then sort each event.",
       hints: [
-        "Dates and time words like first, then, soon and later show when events happen. Find the first engine flight, then sort each event.",
+        "Dates and time words like first, then and later show when events happen. Find the first engine flight, then sort each event.",
         "Find the sentence with the date of the first engine flight. Then decide whether each event is told before it or after it, and check its time word.",
         "Testing the gliders happens before the brothers even build a plane with an engine, so it goes before. Sort the other three the same way."
       ],
       how: [
         "The first engine flight is on December 17, 1903.",
         "Before that, the brothers test gliders at Kitty Hawk, and when tests go badly they build a wind tunnel. Then they build the plane.",
-        "After the flight, soon people read about it, and later the brothers build planes that stay up for half an hour."
+        "After the flight, later that same day, Wilbur flies the plane for almost a minute. Later still, the brothers build planes that stay up for half an hour."
       ],
       misconception: "A common mix-up is sorting by what seems most important instead of by when it happened.",
-      why: "Before the first engine flight, the brothers tested gliders at Kitty Hawk and built a wind tunnel. After the flight on December 17, 1903, people around the world read about it, and later the brothers built planes that could stay up for half an hour." },
+      why: "Before the first engine flight, the brothers tested gliders at Kitty Hawk and built a wind tunnel. After the flight on December 17, 1903, Wilbur flew the plane for almost a minute that same day, and later the brothers built planes that could stay up for half an hour." },
     { id: "SK-TT2b-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-C09"],
       stem: ["In the early 1800s, it was slow and hard to move goods from the Great Lakes to New York City. Wagons bumped along muddy roads for weeks. Governor DeWitt Clinton had a plan: dig a long canal, a river made by people, across New York State. Many people laughed at the idea. They called it \"Clinton's Ditch\" and said it was a waste of money. Clinton kept pushing for his plan. Workers dug for eight years, mostly with shovels and horses. In 1825, the Erie Canal opened. Boats pulled by mules could now carry goods much faster and for much less money."],
@@ -1961,7 +1961,7 @@ PP.addLesson({
       hints: [
         "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
         "Read Rosa's steps 1 and 3. Then reread the directions in order and find what she skipped.",
-        "Closing the lid is the very last thing you do, so it cannot be step 2. Check the two choices that are left: which one must happen before you can plant?"
+        "Closing the lid is the very last thing you do, so it cannot be step 2. Check the two choices that are left: could you do each one right after the rocks and before planting?"
       ],
       how: [
         "After the rocks go in, the plants need something to grow in, but rocks alone cannot hold them.",
@@ -2374,12 +2374,12 @@ PP.addLesson({
     { id: "p11", title: "The Giant Anteater", genre: "Informational text",
       paragraphs: [
         ["A giant anteater is a large animal that lives in the grasslands and forests of South America.", "It has a long, thin snout, and it has no teeth at all.", "Its coat is gray, with a wide black stripe across its shoulders."],
-        ["An anteater finds its food by smell.", "When it smells an ant nest, it uses the strong claws on its front feet to tear the nest open.", "Then it pokes its snout inside.", "It licks up the ants with a tongue that is longer than a grown-up's arm."],
+        ["An anteater finds its food by smell.", "When it smells an ant nest, it uses the strong claws on its front feet to tear the nest open.", "Then it pokes its snout inside.", "It licks up the ants with a tongue that can be two feet long."],
         ["A mother anteater carries her baby on her back.", "The baby rides there for almost a year."]
       ] },
     { id: "p12", title: "Quick Tongue, Many Ants", genre: "Informational text",
       paragraphs: [
-        ["An anteater does not stay long at one nest.", "It eats for only a minute or two, and then it walks on.", "That leaves enough ants behind to rebuild the nest, so the anteater can come back another day."],
+        ["An anteater does not stay long at one nest.", "It eats for less than a minute at each nest, and then it walks on.", "That leaves enough ants behind to rebuild the nest, so the anteater can come back another day."],
         ["The tongue does most of the work.", "An anteater can flick its tongue in and out about 150 times in one minute.", "The tongue is sticky, so the ants cling to it."],
         ["In one day, a giant anteater can eat thousands of ants and termites.", "Because it eats so many, it must spend much of the day looking for food.", "It also sleeps up to fifteen hours each day."]
       ] }
@@ -2897,26 +2897,26 @@ PP.addLesson({
       why: "The answer is \"Alpacas hum to each other.\" Only Text 2 tells it. The colors and the mountains are told only in Text 1, and both texts say that farmers cut the wool off." },
     { id: "SK-TT2c-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
       like: ["SK-TT2c-C05"],
-      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos to stay warm on long trips. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 1 tells that snow holds in heat. Only Text 1 tells where the people sleep."],
+      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos to stay warm on long trips. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 2 tells that snow holds in heat. Both texts tell how the blocks are set to make the dome."],
       prompt: "Ben's note has two mistakes. Choose the words that fix it.",
-      text: "The fact that snow holds in heat is in {0}. The fact about where people sleep is in {1}.",
+      text: "The fact about how the blocks make a dome is in {0}. The fact that snow holds in heat is in {1}.",
       slots: [
-        { options: ["both texts", "only Text 1", "only Text 2"], answer: 0 },
-        { options: ["both texts", "only Text 1", "only Text 2"], answer: 2 }
+        { options: ["both texts", "only Text 1", "only Text 2"], answer: 1 },
+        { options: ["both texts", "only Text 1", "only Text 2"], answer: 0 }
       ],
       clue: "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
       hints: [
         "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
         "For each fact, search Text 1 first. Then search Text 2.",
-        "Text 1 never says anything about beds or benches. Use that to fix the second blank, and check the first blank yourself."
+        "Text 2 never says how the blocks are set. Decide what that means for the dome fact, and check the heat fact yourself."
       ],
       how: [
-        "Search Text 1 for snow holding in heat. It says so. Search Text 2. It says the snow holds in heat, too. So the fact is in both texts.",
-        "Search Text 1 for where people sleep. It never says. Text 2 says people sleep on a raised bench covered with furs.",
-        "The answers are \"both texts\" and \"only Text 2.\""
+        "Search Text 1 for how the blocks are set. It says they are set in a circle that curves up to make a dome. Search Text 2. It never says. So the dome fact is in only Text 1.",
+        "Search Text 1 for snow holding in heat. It says so. Search Text 2. It says the snow holds in heat, too. So the heat fact is in both texts.",
+        "The answers are \"only Text 1\" and \"both texts.\""
       ],
       misconception: "A common mix-up is trusting a note without checking. Search each text for the fact yourself.",
-      why: "The answers are both texts and only Text 2. Text 1 says snow holds in heat, and Text 2 says the same thing with the pockets of air. Only Text 2 tells that people sleep on a raised bench of snow." },
+      why: "The answers are only Text 1 and both texts. Only Text 1 tells how the blocks are set in a circle to make a dome. Text 1 says snow holds in heat, and Text 2 says the same thing with the pockets of air." },
     { id: "SK-TT2c-S06", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: [],
       like: ["SK-TT2c-C06"],
       stem: ["Text 1: A wind turbine looks like a giant fan on a tall pole. When the wind blows, it spins the long blades. The spinning turns a machine inside that makes electricity. Some turbines are taller than a 30-story building.", "Text 2: The town of Pine Bluff put up six wind turbines on a hill outside town. Now the town makes much of its own electricity. It pays less to buy electricity from far away, so it had money left to fix up its park."],
@@ -2956,7 +2956,7 @@ PP.addLesson({
       hints: [
         "For each row, search one text and then the other. A row goes under Both only when each text tells it.",
         "Look in each text for the key words of the row, like rings, night, warning, pits or buzzing.",
-        "Text 1 never says when rattlesnakes hunt, so the night row is not under Text 1 or Both. Sort the other rows yourself."
+        "Text 1 never says when rattlesnakes hunt, so the night row does not go under Text 1. Sort the other rows yourself."
       ],
       how: [
         "Text 1 tells about the rings and the buzzing sound. Text 2 does not mention them.",
@@ -3027,7 +3027,7 @@ PP.addLesson({
         choices: [
           { text: "\"An anteater can flick its tongue in and out about 150 times in one minute.\"", correct: true },
           { text: "\"The tongue is sticky, so the ants cling to it.\"" },
-          { text: "\"It eats for only a minute or two, and then it walks on.\"" },
+          { text: "\"It eats for less than a minute at each nest, and then it walks on.\"" },
           { text: "\"It also sleeps up to fifteen hours each day.\"" }
         ] },
       clue: "When a second text adds to a first, it gives new information that the first text does not have.",
