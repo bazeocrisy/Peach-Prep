@@ -3510,7 +3510,7 @@ PP.addLesson({
         slots: [
           { options: [
               "a part of food that helps muscles and bones grow",
-              "a part of food that gives the body quick energy",
+              "a part of food that gives it a bright color",
               "a part of food that makes it taste sweet"
             ],
             answer: 0 }
@@ -3525,10 +3525,10 @@ PP.addLesson({
           "Rosa's sentences say coaches want players to eat foods with protein after practice, and name peanuts, eggs, beans and fish as foods that have it, so protein is something found inside foods that helps a body.",
           "These foods are the ones people eat to grow and stay strong, and protein is the part of them that builds muscles and bones.",
           "The answer is: Protein is a part of food that helps muscles and bones grow.",
-          "Quick energy comes mostly from sugar, not from protein, and a sweet taste does not describe eggs, beans or fish."
+          "Eggs, beans, fish and peanuts are not all one bright color, so protein cannot be a color, and a sweet taste does not describe eggs, beans or fish."
         ],
         misconception: "A common mix-up is choosing the meaning that sounds like any good thing about food. Use what you know about the foods in the examples.",
-        why: "The answer is: Protein is a part of food that helps muscles and bones grow. Peanuts, eggs, beans and fish are foods with protein, and protein builds the body. Quick energy comes mostly from sugar, and eggs, beans and fish are not sweet." },
+        why: "The answer is: Protein is a part of food that helps muscles and bones grow. Peanuts, eggs, beans and fish are foods with protein, and protein builds the body. Eggs, beans, fish and peanuts are not one bright color, so color is not what protein is, and eggs, beans and fish are not sweet." },
       { ref: "SK-TT2d-P4" }
     ] },
     { title: "Set 2", items: [

@@ -3228,7 +3228,7 @@ PP.addLesson({
       { ref: "SK-TT4b-P5" },
       { id: "SK-TT4b-C04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [],
         prompt: "A poem about a lemonade stand rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the poem rhymes and makes sense.",
-        text: "I set my lemonade stand up, / I pour the juice into each {0}. / The line is long, the sun is hot, / I sell them fast, I sell the {1}.",
+        text: "I set my lemonade stand up, / I pour the juice into each {0}. / The line is long, the sun is hot, / I sell them fast, I sell a {1}.",
         slots: [
           { options: ["cup", "pup", "glass"], answer: 0 },
           { options: ["lot", "knot", "most"], answer: 0 }
@@ -3242,7 +3242,7 @@ PP.addLesson({
         how: [
           "Blank 1 must rhyme with up. Blank 2 must rhyme with hot.",
           "Blank 1: cup rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass makes sense but does not rhyme.",
-          "Blank 2: lot rhymes with hot, and \"I sell the lot\" means she sold all of them. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
+          "Blank 2: lot rhymes with hot, and \"I sell a lot\" means she sold many. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
           "So the answers are cup and lot."
         ],
         misconception: "A common mix-up is choosing the word that makes sense without checking the rhyme, or the reverse. Each blank needs both.",
@@ -3674,7 +3674,7 @@ PP.addLesson({
       prompt: "Which rhyme pattern belongs with each stanza? Link them.",
       cols: ["Two pairs of rhymes", "One rhyme joins lines 2 and 4", "No rhymes at all"],
       rows: [
-        { text: "A duck floats on the quiet pond, / Its feathers shine like glass. / A ripple spreads across the water, / And little minnows dash.", answer: 2 },
+        { text: "A duck floats on the quiet pond, / Its feathers shine like silk. / A ripple spreads across the water, / And little minnows dash.", answer: 2 },
         { text: "I pour the milk, I stir the cup, / I drink it fast and finish up. / The kitten jumps up on Grandma's lap, / And curls into a little nap.", answer: 0 },
         { text: "My teddy bear sits on my bed, / He listens to my song. / I tell him secrets, one by one, / And he hums right along.", answer: 1 }
       ],
@@ -3685,13 +3685,13 @@ PP.addLesson({
         "Say the end words of lines 2 and 4 in each stanza. Then decide which pattern each stanza fits."
       ],
       how: [
-        "The duck stanza ends with pond, glass, water, dash. None of those words rhyme.",
+        "The duck stanza ends with pond, silk, water, dash. None of those words rhyme.",
         "The milk stanza ends with cup, up, lap, nap. Cup and up rhyme, and lap and nap rhyme, so lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
         "The teddy bear stanza ends with bed, song, one, along. Song and along rhyme, and they are lines 2 and 4.",
         "So the matches are: duck with no rhymes, milk with pairs, and teddy bear with lines 2 and 4."
       ],
       misconception: "A common mix-up is calling every stanza that has a rhyme the pairs pattern. Check exactly which lines match.",
-      why: "The duck stanza has no rhymes (pond, glass, water, dash). The milk stanza rhymes in pairs (cup and up, lap and nap). The teddy bear stanza rhymes in lines 2 and 4 (song and along)." },
+      why: "The duck stanza has no rhymes (pond, silk, water, dash). The milk stanza rhymes in pairs (cup and up, lap and nap). The teddy bear stanza rhymes in lines 2 and 4 (song and along)." },
     { id: "SK-TT4b-S09", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C09"],
       stem: [
         "The sun peeks in; it's early day,",

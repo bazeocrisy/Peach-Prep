@@ -215,3 +215,9 @@ Measured with word-set (jac.js), 3+ letter word-set (jac3.js) and a new multiset
 3.c: S09, S04, C09 (+ the dropdown that quotes sentence 8), S01, S06, S07, S10, S14, S15, C06 and the Cedar Road items.
 4.b: p3 and C06, C07, C09, C10; P6; S12; S08; C13; S01, S02, S04, S14, S15.
 1.e: C11, S11. 2.d: C04, S03.
+
+### Late fixes (after acceptance of 3.c, 4.b, 1.e)
+- 2.d C04: the "quick energy" distractor is now "a part of food that gives it a bright color" (key is not the longest; options 48/43/37 characters or fewer than the key). Hint 3 still rules out only the sweet option. How and why updated.
+- 4.b C04: line 4 now "I sell them fast, I sell a {1}." (the idiom "the lot" is gone); how and why updated.
+- 4.b S08 row 1: "glass" -> "silk" so the duck stanza has no near-rhyme with "dash".
+- Not done (optional): 4.b C10 key separation (the sleepy stanza rhyming is intentional, the feeling decides) and 3.c S10 walk-after-dinner overlap with 3.a C14.
