@@ -2409,7 +2409,7 @@ PP.addLesson({
         hints: [
           "A difference is something true of one thing but not the other. Some differences you see by looking, and some by watching what the animals do.",
           "Go through paragraphs 2 to 4 one sentence at a time. Choose two.",
-          "Smooth, wet skin is something you could see or feel on a frog sitting still, so it is not about moving. Check each sentence that is left: does it tell what the animal does with its body?"
+          "Smooth, wet skin is something you could see or feel on a frog sitting still, so it is not about moving. Check each sentence that is left against the question."
         ],
         how: [
           "Paragraph 3 tells about the animals' legs and how they get around.",

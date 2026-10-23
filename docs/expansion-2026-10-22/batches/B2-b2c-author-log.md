@@ -321,3 +321,77 @@ The reviews are B2-review-TS-1.md (R1) and B2-review-TS-2.md (R2). Only the TS-C
 - `check-writing.js` and `check-instructional-copy.js`: pass.
 - `readability.py`: TS-CE p4 4.3, p5 4.0, p6 3.6. TS-CC p3 4.4, p4 3.9, p5 4.1.
 - N-gram scan: only shared lesson phrasing remains. The one match from teach point 1 ("all about one thing and then") is between my own teach point and C08's distractor, in the same lesson.
+
+## 10. Fixes after the B2 re-review (B2-rereview-TS.md)
+
+Only the TS-CE and TS-CC blocks were edited. "Live" is used as the brief defines it: a choice is live only if a child who has read the clue and hints 1 to 3 would still have a real reason to pick it. The lists below give the choices left after each hint. In Practice Together the player shows only the clue, so I checked the clue as well as the hints.
+
+### Changes
+
+| Finding | Item | Change |
+|---|---|---|
+| MUST-4 | TS-CE C09 | Hint 3 now ends "…so it is not a how-to. Check each choice that is left against the article." The tail about "the whole article, not just the last paragraph" is gone. |
+| MUST-5 | TS-CE C12 | Hint 3 keeps the lightning rule-out and now ends "Check each choice that is left against the chain you drew." The with-fires or without-fires question is gone. |
+| MUST-6 | TS-CC P5 (ref) | Hint 2 is now only "Find where the passage tells where frogs and toads live." The yes/no question is gone. The clue (shown in Together) is "Read the sentence with each choice. Ask what the two parts of the sentence tell about frogs and toads." It names no option's job and decides nothing. |
+| SHOULD-6 | TS-CC C02 | Hint 2: "Go through paragraphs 2 to 4 one sentence at a time. Choose two." |
+| (own whole-ladder check) | TS-CC C02 | Hint 3 ended with "does it tell what the animal does with its body?". Like SHOULD-8, that test removed both remaining non-keys. It now ends "Check each sentence that is left against the question." |
+| SHOULD-7 | TS-CC C07 | Hint 2: "Reread paragraphs 2 and 3." |
+| NOTE-4 | TS-CC C07 | How step 4 no longer says "Slates are about writing" (C10's key comes next). It now says "The sentence about slates tells a different difference." |
+| SHOULD-8 | TS-CC C12 | Hint 3 no longer repeats hint 1's rule-out ("both moved with paddles"). It rules out the two-blade paddle reason instead, then ends "Check each choice that is left against the article." The closing "does its reason fit what she needs?" test is gone. |
+| SHOULD-8 | TS-CC S03 | Hint 3 is now "A hood and a zipper are on both coats, as hint 1 says. Check each choice that is left against the box." The closing "warm, rainy day" test is gone. |
+| NOTE-7 | TS-CE S01 | Relabelled DOK 2, to match its twin C04. |
+
+### Live choices, hint by hint
+
+**TS-CE C09** (key: time order, and shows how one led to another)
+- After hint 1: all four. Hint 1 only lists the kinds of structure.
+- After hint 2: three are left: the key, the how-to, and the comparison. The hint's question about how the clue words connect rules out "time order, but they do not affect each other".
+- After hint 3: two are left: the key and "It compares the signals of long ago with traffic lights today". The how-to is ruled out. The comparison stays live: paragraph 5 does compare old signals with today's lights, and nothing in the hints rules it out.
+
+**TS-CE C12** (keys: bushes grew thick; young pines had a hard time growing)
+- After hint 1: all five.
+- After hint 2: all five. The child draws the chain, starting from the fires stopping, but the hint names no box.
+- After hint 3: four are left: the two keys, "Sunlight could reach the forest floor" and "The young pines got light and grew tall". Lightning is ruled out. The two paragraph 3 effects of fire stay live, and they are the item's misconception.
+
+**TS-CC P5** (key: Unlike)
+- Clue and hint 1: all three. Neither names a job.
+- After hint 2: all three. The hint points to where the passage tells where the animals live, but asks nothing about it.
+- After hint 3: two are left, Unlike and Like. Because is ruled out. The child must still read the passage and decide whether the two places are the same or different.
+
+**TS-CC C02** (keys: p1:3:2 and p1:3:3)
+- After hint 1: all seven targets.
+- After hint 2: five are left: p1:2:2, p1:2:3, p1:3:2, p1:3:3 and p1:4:2. Limiting the search to paragraphs 2 to 4 removes p1:1:4 and p1:5:2. Both are likenesses, not differences, so a reason to choose them was already weak.
+- After hint 3: four are left: the two keys, dry, bumpy skin (p1:2:3) and where the animals live (p1:4:2). Smooth, wet skin is ruled out.
+
+**TS-CC C07**
+- Part A (key: students of all ages learned together in one room):
+  - After hint 1: all four.
+  - After hint 2: all four. The hint only names paragraphs 2 and 3.
+  - After hint 3: three are left: the key, "learned math but did not learn to read" and "shared a room with others their own age". "No time at all to play" is ruled out.
+- Part B (key: the one-teacher sentence):
+  - After hint 2: all four. Paragraphs 2 and 3 hold the key and "However, a school day…"; the other two are elsewhere.
+  - After hint 3: two are left, the key and the slates sentence. Hint 3's Part B line removes "However…", which says only that there is a difference, and "Both had time to play", which is not about the 1900 classroom.
+
+**TS-CC C12** (key: a canoe, because it has room for more people and gear)
+- After hint 1: three are left: the key, the two-blade paddle and the closed top. Hint 1's rule, that a fact true of both cannot help, removes "both boats are moved with paddles".
+- After hint 2: three. It lists what Ms. Grant needs and sends the child to the paragraphs about differences.
+- After hint 3: two are left: the key and "a kayak, because most kayaks are closed on top". The two-blade paddle is ruled out.
+
+**TS-CC S03** (key: the rain jacket keeps him dry without being too warm)
+- After hint 1: two are left: the key and "the puffy coat, because it is thick and very warm". Hint 1's rule removes the hood and zipper reasons, which are true of both.
+- After hint 2: two. It points to the weather and to what is different about each coat.
+- After hint 3: two. It only confirms the hood and zipper are shared, as hint 1 already said, and rules out nothing new.
+
+**TS-CE S01:** DOK label only. The hints did not change.
+
+### Findings not addressed, and why
+
+- **NOTE-1, the Together ladder for TS-CE P1.** The clue ("Read paragraph 2. Find the clue words 'as a result' and read the effect that comes after them.") leaves only the key. P1 is a DOK 1 Together item. In Together, the engine's ladder shows the clue, then narrows the choices, then walks through the answer, by design. I left the clue as the lesson's taught strategy. The lead may want a neutral clue.
+- **NOTE-8, legacy Together frames that match form A.** CC P4 matches T3, and CE P3 matches T2. Both predate the expansion. They rehearse a frame, not an answer, so I left them.
+- **NOTE-4, the other pre-eliminations listed in the re-review.** CC C06's how removes one C07 distractor ("learned math but not read"). It states no key, so I left it. I changed the closest case, C07 to C10.
+- **The re-review's SEQ and DESC findings.** They belong to the other author.
+
+### Gates
+
+- `check-content.js --all`: PASS, 0 failures. The only warnings in my lessons are the accepted similar-coverage notices (TS-CE 10 core items without a similar item, TS-CC 9).
+- No passage text changed in this round, so the readability results in §9 still hold.
