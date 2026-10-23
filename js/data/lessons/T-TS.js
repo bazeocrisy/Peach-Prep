@@ -191,16 +191,16 @@ PP.addLesson({
     { title: "Set 1", items: [
       { ref: "SK-TSSEQ-P4" },
       { id: "SK-TSSEQ-C02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: ["p1"],
-        prompt: "Why does the author put paragraph 1 before any of the steps?",
+        prompt: "Why does the author begin with paragraph 1?",
         choices: [
           { text: "It tells what you need, so you can gather everything before the first step.", correct: true },
           { text: "It tells the first step, so you know how to start shaking the cream." },
           { text: "It tells what can go wrong, so you know how to fix a leaky jar." },
           { text: "It tells the last step, so you know when the butter is ready to eat." }
         ],
-        clue: "Each part of a how-to text has a job. Ask what a reader needs to know before the steps can start.",
+        clue: "Each part of a how-to text has a job. Ask what paragraph 1 gives the reader.",
         hints: [
-          "Each part of a how-to text has a job. Ask what a reader needs to know before the steps can start.",
+          "Each part of a how-to text has a job. Ask what paragraph 1 gives the reader.",
           "Reread paragraph 1. Then compare it with the first sentence of paragraph 2.",
           "Nothing goes wrong in paragraph 1, and no jar leaks, so it is not telling a problem. Test each choice that is left against what paragraph 1 says."
         ],
@@ -218,7 +218,7 @@ PP.addLesson({
         prompt: "Read the sentence from paragraph 5 in the box. A student changes \"After that\" to \"First.\" Why would this change confuse a reader?",
         choices: [
           { text: "First would mean this is the starting step, but there is no buttermilk until after the shaking.", correct: true },
-          { text: "First would mean this step does not matter much, so a reader might skip it and go on." },
+          { text: "First would mean this is the starting step, but the lump of butter forms after the buttermilk is poured off." },
           { text: "First is not a time clue word, so a reader could not tell when to do this step at all." },
           { text: "First would mean this step happens at the same time as the shaking." }
         ],
@@ -226,16 +226,16 @@ PP.addLesson({
         hints: [
           "Time clue words tell where a step belongs in the order. Changing a clue word can change what a reader thinks happens when.",
           "Ask what the word First would tell a reader about this step. Then compare that with the order of paragraphs 2 through 5.",
-          "First is a time clue word, just like After that, so rule out the choice that says it is not. For each choice that is left, ask: is that really what the word First tells a reader?"
+          "First is a time clue word, just like After that, so rule out the choice that says it is not. Check each reason that is left against the order of paragraphs 2 to 5."
         ],
         how: [
           "After that tells the reader that pouring off the buttermilk comes after the earlier steps.",
           "The buttermilk is named for the first time in paragraph 4, after lots of shaking makes the lump of butter.",
           "If the step began with First, a reader would think to pour off buttermilk before there is any. The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\"",
-          "First is a time word. It tells that a step comes before the others, not that it happens at the same time as another step or that it does not matter."
+          "Paragraph 4 tells that the lump of butter and the buttermilk form together, before anything is poured off, so the other starting-step reason is wrong. First never means at the same time, and it is a time word."
         ],
         misconception: "A common mix-up is thinking any time clue word can start any step. Each one tells where the step belongs in the order.",
-        why: "The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\" The buttermilk forms in paragraph 4, so this step must come after the shaking. First is a time word, so the other choices do not explain the problem." },
+        why: "The answer is \"First would mean this is the starting step, but there is no buttermilk until after the shaking.\" The buttermilk forms in paragraph 4, so this step must come after the shaking. The lump forms with the buttermilk, not after it is poured off, and First is a time word that never means at the same time." },
       { id: "SK-TSSEQ-C05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Paragraph A: Checking out a book at our school library is easy. First, choose a book from the shelves. Next, carry it to the front desk. Then Mr. Ellis scans your card and the book. Last, he stamps a date inside the cover so you know when to bring it back.", "Paragraph B: Our art room is a colorful place. Paintings by every class cover the walls. Shelves hold jars of brushes, such as fat ones and skinny ones. In addition, a big sink in the corner is for washing up."],
         prompt: "Read the two paragraphs in the box. How are they organized differently?",
@@ -273,7 +273,7 @@ PP.addLesson({
         clue: "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
         hints: [
           "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
-          "Find each step in the article. Paragraphs 2 through 5 tell the process from start to finish.",
+          "Find each step in the article and note its paragraph.",
           "Rain soaking into the ground comes with the clue word First, so it goes at the start. Place the other steps by asking what each one needs to happen before it."
         ],
         how: [
@@ -318,10 +318,10 @@ PP.addLesson({
         prompt: "Which TWO sentences use time words that tell how much time passes, not only the order? Choose two sentences in the passage.",
         targets: ["p3:2:1", "p3:3:1", "p3:4:1", "p3:4:3", "p3:5:1", "p3:5:4"],
         answer: ["p3:4:1", "p3:5:4"], pick: 2,
-        clue: "Some time words tell order, like first and next. Others tell how much time passes. Look for the second kind.",
+        clue: "Some time words tell order, like then and after that. Others tell how much time passes. Look for the second kind.",
         hints: [
-          "Some time words tell order, like first and next. Others tell how much time passes. Look for the second kind.",
-          "Read every sentence that starts with a time word, from paragraph 2 to paragraph 5. Choose two.",
+          "Some time words tell order, like then and after that. Others tell how much time passes. Look for the second kind.",
+          "Read every sentence you can choose, from paragraph 2 to paragraph 5, and find its time words. Choose two.",
           "Finally tells which step is the last one in making the cave. It does not tell how long that step took. Check the other time words the same way."
         ],
         how: [
@@ -358,7 +358,7 @@ PP.addLesson({
         prompt: "A student wrote this history of a town library. One sentence is out of time order. Which change fixes the order?",
         choices: [
           { text: "Move sentence 4 so it comes right after sentence 2.", correct: true },
-          { text: "Move sentence 3 so it comes right after sentence 5." },
+          { text: "Move sentence 3 so it comes right after sentence 1." },
           { text: "Move sentence 5 so it comes right after sentence 2." },
           { text: "Move sentence 2 so it comes right after sentence 4." }
         ],
@@ -3023,7 +3023,7 @@ PP.addLesson({
       paragraphs: [
         ["A food truck may look small from the outside.", "But inside, it holds a whole kitchen on wheels.", "Cooks can drive it to a park or a ball game and start cooking right away."],
         ["## Cooking Inside"],
-        ["A food truck has tools for cooking many kinds of food.", "It has a flat, hot grill for burgers and pancakes.", "It also has a small oven and a deep fryer.", "A fan in the roof pulls smoke and heat out of the truck.", "The first food trucks in America were wagons that carried food to cowboys on long cattle drives."],
+        ["A food truck has tools for cooking many kinds of food.", "It has a flat, hot grill for burgers and pancakes.", "It also has a small oven and a deep fryer.", "A fan in the roof pulls smoke and heat out of the truck.", "Long ago, kitchens on wagons fed cowboys on long cattle drives."],
         ["## Keeping Food Cold and Clean"],
         ["A refrigerator under the counter keeps milk, meat and vegetables cold so they do not spoil.", "A tank holds clean water for cooking.", "In addition, every truck has a sink so workers can wash their hands and the pans."],
         ["## The Serving Window"],
@@ -3083,7 +3083,7 @@ PP.addLesson({
       ],
       clue: "Ask: What do all the sentences in paragraph 2 tell about? A choice that fits only part of one sentence is a detail.",
       why: "The answer is \"the pelican's long bill and the pouch under it.\" All three sentences tell about the bill and its pouch. The pouch only looks like a big bag; the pelican does not carry a bag. The other two choices tell about things the pelican does, not about what it has." },
-    { id: "SK-TSDESC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"],
+    { id: "SK-TSDESC-P5", type: "dropdown", points: 1, dok: 2, passages: ["p1"], std: ["3.T.SS.1.a"],
       prompt: "Choose the clue word that best completes the sentences.",
       text: "A pelican has sharp eyes. It {0} has webbed feet.",
       slots: [
@@ -3097,12 +3097,12 @@ PP.addLesson({
       choices: [
         { text: "It folds its wings and dives headfirst into the sea.", correct: true },
         { text: "It scoops up water and fish at the same time.", correct: true },
-        { text: "You can see it on Georgia's coast." },
+        { text: "It flies low over the waves." },
         { text: "Its feet work like paddles." },
         { text: "The brown pelican is a large bird." }
       ],
       clue: "Each choice is a detail. Ask about each one: Does this tell how the bird gets its food, or something else about it?",
-      why: "The answers are \"It folds its wings and dives headfirst into the sea.\" and \"It scoops up water and fish at the same time.\" Diving and scooping are how the pelican gets fish. The other details tell where it lives, how it swims and how big it is." }
+      why: "The answers are \"It folds its wings and dives headfirst into the sea.\" and \"It scoops up water and fish at the same time.\" Diving and scooping are how the pelican gets fish. The other details tell how it flies along the coast, how it swims and how big it is." }
   ],
   /* ---------- B2 core (expansion 2026-10-22, author b2b; 01-architecture.md §2.2-2.3) ----------
      Fifteen items in three sets of five. { ref } reuses Try items P6 and P5 by id (they stay in
@@ -3143,7 +3143,7 @@ PP.addLesson({
         choices: [
           { text: "A small hook at the tip of the bill helps a pelican hold slippery fish.", correct: true },
           { text: "Brown pelicans build nests of sticks on small islands near the coast." },
-          { text: "Many people like to take pictures of pelicans when they visit the beach." },
+          { text: "Young brown pelicans have brown heads instead of white ones." },
           { text: "First, a young pelican hatches from its egg, and then it learns to fly." }
         ],
         clue: "A key detail tells more about the main idea. A detail can be true and interesting but still not tell more about the big point.",
@@ -3156,10 +3156,10 @@ PP.addLesson({
           "The main idea is that the pelican's whole body is built for catching fish.",
           "A hook on the bill is a part of the body that helps the pelican hold on to fish, so it fits.",
           "The answer is \"A small hook at the tip of the bill helps a pelican hold slippery fish.\"",
-          "Nests and pictures are about pelicans, but not about catching fish, and the hatching sentence tells steps."
+          "Nests and the color of young pelicans' heads are about pelicans, but not about catching fish, and the hatching sentence tells steps."
         ],
         misconception: "A common mix-up is choosing any true fact about the topic. A key detail must tell more about the main idea, not just about the same animal.",
-        why: "The answer is \"A small hook at the tip of the bill helps a pelican hold slippery fish.\" The main idea is that the pelican's body is built for catching fish, and the hook is one more body part that helps. Nests and pictures are about pelicans but not about catching fish, and the hatching sentence tells steps in order." },
+        why: "The answer is \"A small hook at the tip of the bill helps a pelican hold slippery fish.\" The main idea is that the pelican's body is built for catching fish, and the hook is one more body part that helps. Nests and head color are about pelicans but not about catching fish, and the hatching sentence tells steps in order." },
       { id: "SK-TSDESC-C05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: ["p1"], pick: 2,
         prompt: "Which TWO clues show that this passage is organized as a description?",
         choices: [
@@ -3251,11 +3251,11 @@ PP.addLesson({
         how: [
           "Each heading names one section's topic. A key detail tells more about the topic of its section.",
           "The fan goes with cooking. The refrigerator and the sink go with keeping food cold and clean. The big window goes with serving.",
-          "The cowboy wagons are a fun fact about long ago, and the bright paint does not help the truck cook, store or serve food.",
-          "The answers are \"The first food trucks in America were wagons that carried food to cowboys on long cattle drives.\" and \"Many food trucks are painted with bright pictures and big letters.\""
+          "The wagon kitchens are a fun fact about long ago, and the bright paint does not help the truck cook, store or serve food.",
+          "The answers are \"Long ago, kitchens on wagons fed cowboys on long cattle drives.\" and \"Many food trucks are painted with bright pictures and big letters.\""
         ],
         misconception: "A common mix-up is thinking every true sentence in a passage is a key detail. Some are there because they are fun to know.",
-        why: "The answers are \"The first food trucks in America were wagons that carried food to cowboys on long cattle drives.\" and \"Many food trucks are painted with bright pictures and big letters.\" Both are interesting, but neither tells about cooking, storing or serving food. The fan, the refrigerator, the sink and the window are key details." },
+        why: "The answers are \"Long ago, kitchens on wagons fed cowboys on long cattle drives.\" and \"Many food trucks are painted with bright pictures and big letters.\" Both are interesting, but neither tells about cooking, storing or serving food. The fan, the refrigerator, the sink and the window are key details." },
       { id: "SK-TSDESC-C09", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p3"],
         stem: ["A food truck has tools for cooking many kinds of food.", "It has a flat, hot grill for burgers and pancakes."],
         prompt: "Read the two sentences from the section \"Cooking Inside\" in the box. The author wants to start the second sentence with a clue word. Which revision connects the two sentences best?",
@@ -3285,7 +3285,7 @@ PP.addLesson({
           { text: "The author is telling about the parts of one thing, and the parts do not happen in an order.", correct: true },
           { text: "The author is telling the steps a cook follows, and each step needs its own heading." },
           { text: "The author is telling how cooks solved a problem with smoke inside the truck." },
-          { text: "The author is comparing the first cowboy wagons with the food trucks of today." }
+          { text: "The author is comparing the wagon kitchens of long ago with the food trucks of today." }
         ],
         clue: "Authors pick a structure that fits what they want to tell. Ask what the reader learns from each section.",
         hints: [
@@ -3297,7 +3297,7 @@ PP.addLesson({
           "Each heading names a different kind of thing, and the sections could be read in any order without changing what they mean.",
           "Nothing in one section has to happen before something in another section, so time words would not fit.",
           "The answer is \"The author is telling about the parts of one thing, and the parts do not happen in an order.\"",
-          "There are no steps, no problem being solved, and the cowboy wagons are one fun fact, not a comparison."
+          "There are no steps, no problem being solved, and the wagon kitchens are one fun fact, not a comparison."
         ],
         misconception: "A common mix-up is thinking headings always mean steps. Headings can also sort details about one topic.",
         why: "The answer is \"The author is telling about the parts of one thing, and the parts do not happen in an order.\" The sections tell about cooking, keeping food cold and clean, and serving, and none has to come before another. The passage has no steps, no problem and no comparison of old and new." }
@@ -3310,7 +3310,7 @@ PP.addLesson({
         clue: "The main idea is the big point the whole passage makes. A detail tells about only one part.",
         hints: [
           "The main idea is the big point the whole passage makes. A detail tells about only one part.",
-          "Read each sentence you can choose and ask: does it tell about the whole glove, or only one part or one look? Choose two.",
+          "Read each sentence you can choose and ask: does it tell about the whole glove, or only one part of it? Choose two.",
           "\"It is where the ball lands\" tells about only the pocket, so it is a detail. Test each other sentence the same way."
         ],
         how: [
@@ -3368,29 +3368,30 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is deciding by the box alone. A box can hold a key detail or just an interesting fact, so check the fact against the main idea.",
         why: "The answer is \"No. The fact is about baseball long ago, and it does not tell how padding helps a player.\" Paragraph 4 is about padding, and the box fact is not. The box never mentions padding, facts can sit in a box, and a box does not have to hold the main idea." },
+      /* B2 re-review fix (MUST-1): the cactus shared its key fact with the 3.T.C.1.b Watch Me. */
       { id: "SK-TSDESC-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
-        stem: ["(1) ______", "(2) Its thick, green stem stores water, like a canteen.", "(3) Instead of wide, flat leaves, it has sharp spines, so less water dries up into the air.", "(4) A waxy skin also keeps water from escaping.", "(5) In addition, its roots spread out wide, just under the ground, to soak up rain quickly."],
-        prompt: "A student wrote this description of a cactus. Which sentence would best fill the blank as the main idea sentence?",
+        stem: ["(1) ______", "(2) Its curly tail wraps around seaweed, so the waves cannot carry it away.", "(3) Its skin can change color to match the plants around it.", "(4) Hard, bony plates under its skin make it a crunchy meal that many animals skip.", "(5) In addition, its long, thin snout sucks up tiny shrimp like a straw."],
+        prompt: "A student wrote this description of a seahorse. Which sentence would best fill the blank as the main idea sentence?",
         choices: [
-          { text: "A cactus has a body that is built to save water in a dry desert.", correct: true },
-          { text: "A cactus has sharp spines that can poke anyone who touches it." },
-          { text: "Many people like to grow small cactus plants in pots at home." },
-          { text: "First, a cactus grows from a tiny seed in the warm desert sand." }
+          { text: "A seahorse has a body that helps it stay safe and get food in the sea.", correct: true },
+          { text: "A seahorse has to hide from crabs and other hungry sea animals." },
+          { text: "A seahorse's curly tail is the most useful part of its whole body." },
+          { text: "First, a baby seahorse hatches and floats away on the waves." }
         ],
         clue: "A main idea sentence names the topic and the big point. Every detail sentence after it should tell more about that point.",
         hints: [
           "A main idea sentence names the topic and the big point. Every detail sentence after it should tell more about that point.",
           "Read sentences 2 through 5, and ask what each one tells about.",
-          "Spines are named in only one sentence, so the choice about spines that poke is just one detail. Test each other choice against all four sentences."
+          "The sentence about a baby seahorse hatching starts a sequence, so it does not fit a description. Test each choice that is left against all four sentences."
         ],
         how: [
-          "Sentence 2 is about storing water. Sentence 3 is about spines that let less water dry up. Sentence 4 is about skin that keeps water in. Sentence 5 is about roots that soak up rain.",
-          "All four tell how a cactus gets or keeps water.",
-          "The answer is \"A cactus has a body that is built to save water in a dry desert.\"",
-          "Poking spines is one detail, growing cactus plants in pots is off the topic, and the seed sentence starts a sequence."
+          "Sentence 2: the tail holds on. Sentence 3: the skin hides it. Sentence 4: the bony plates protect it. Sentence 5: the snout sucks up food.",
+          "Three sentences tell how the body keeps the seahorse safe, and one tells how it gets food.",
+          "The answer is \"A seahorse has a body that helps it stay safe and get food in the sea.\" It is the only choice that fits all four sentences.",
+          "Hiding fits only some of the sentences and leaves out the snout, the tail is only one detail, and the hatching sentence starts a sequence."
         ],
-        misconception: "A common mix-up is choosing a sentence about one interesting detail. A main idea sentence must fit every detail that follows it.",
-        why: "The answer is \"A cactus has a body that is built to save water in a dry desert.\" The stem, spines, skin and roots all help the cactus get or keep water. Poking spines is one detail, pots are off the topic, and the seed sentence starts a sequence." },
+        misconception: "A common mix-up is choosing a sentence that fits most of the details. A main idea sentence must fit every detail that follows it.",
+        why: "The answer is \"A seahorse has a body that helps it stay safe and get food in the sea.\" The tail, skin and plates keep it safe, and the snout gets food. Hiding leaves out the food, the tail is one detail, and the hatching sentence starts a sequence." },
       { id: "SK-TSDESC-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         prompt: "A student is writing a description of the school playground. Choose the clue words that best complete the paragraph.",
         text: "Our playground has something for everyone. It has a tall slide and two swing sets for kids who like to move. {0}, there is a quiet bench under an oak tree for kids who want to read. Games are painted on the blacktop, {1} hopscotch and four square.",
@@ -3420,14 +3421,14 @@ PP.addLesson({
     /* B2 review fix (SHOULD-13): was a heron, which shares facts with 3.L.V.1.a "Life in the Salt Marsh". */
     { id: "SK-TSDESC-S01", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
       like: ["SK-TSDESC-P6", "SK-TSDESC-C12"],
-      stem: ["(1) The Venus flytrap is a plant that catches insects.", "(2) Each of its leaves can snap shut like a trap.", "(3) Tiny hairs on the inside of each leaf can feel a bug walking across.", "(4) Flytraps grow in wet, sandy places in North and South Carolina.", "(5) The plant is named after a goddess from old stories.", "(6) Some people grow flytraps on sunny windowsills."],
+      stem: ["(1) The Venus flytrap is a plant that catches insects.", "(2) Each of its leaves can snap shut like a trap.", "(3) Tiny hairs on the inside of each leaf can feel a bug walking across.", "(4) Flytraps grow in wet, sandy places in North and South Carolina.", "(5) The plant is named after a goddess from old stories.", "(6) Its roots hold it in the sandy soil."],
       prompt: "Read the paragraph in the box. Which TWO details tell about a part of the flytrap that helps it catch insects?",
       choices: [
         { text: "Each of its leaves can snap shut like a trap.", correct: true },
         { text: "Tiny hairs on the inside of each leaf can feel a bug walking across.", correct: true },
         { text: "Flytraps grow in wet, sandy places in North and South Carolina." },
         { text: "The plant is named after a goddess from old stories." },
-        { text: "Some people grow flytraps on sunny windowsills." }
+        { text: "Its roots hold it in the sandy soil." }
       ],
       clue: "Key details tell more about the idea in the question. Ask about each one: does it tell about a part of the plant that does the catching?",
       hints: [
@@ -3439,33 +3440,34 @@ PP.addLesson({
         "The leaves are a part of the plant, and they snap shut like a trap.",
         "The tiny hairs are a part of the leaf, and they feel when a bug walks across.",
         "The answers are \"Each of its leaves can snap shut like a trap.\" and \"Tiny hairs on the inside of each leaf can feel a bug walking across.\"",
-        "Where it grows, how it got its name and where people keep it are true, but they are not parts that catch insects."
+        "Where it grows and how it got its name do not tell about catching insects. The roots are a part of the plant, but they hold it in the soil; they do not catch anything."
       ],
       misconception: "A common mix-up is choosing a true detail that fits the topic but not the question. Read the question's key words: a part that helps it catch insects.",
-      why: "The answers are \"Each of its leaves can snap shut like a trap.\" and \"Tiny hairs on the inside of each leaf can feel a bug walking across.\" The hairs feel the bug and the leaves close on it. Where it grows, its name and windowsills are not about catching insects." },
+      why: "The answers are \"Each of its leaves can snap shut like a trap.\" and \"Tiny hairs on the inside of each leaf can feel a bug walking across.\" The hairs feel the bug and the leaves close on it. Where it grows and its name are not about catching insects, and the roots hold the plant in the soil." },
+    /* B2 re-review fix (SHOULD-10): recycling bins belong to 3.T.T.2.c. */
     { id: "SK-TSDESC-S02", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
-      like: ["SK-TSDESC-C02", "SK-TSDESC-C07"],
-      stem: ["The recycling center has a big bin for each kind of item.", "Blue bins hold paper and flat cardboard boxes.", "Green bins hold glass jars and bottles.", "In addition, yellow bins take metal cans."],
+      like: ["SK-TSDESC-C07"],
+      stem: ["The gym closet has a place for each kind of ball.", "A tall rack holds the basketballs.", "A mesh bag holds the soccer balls.", "In addition, a wide basket on the floor holds soft foam balls for dodgeball."],
       prompt: "Read the section in the box. Which heading fits this section best?",
       choices: [
-        { text: "A Bin for Every Kind", correct: true },
-        { text: "Blue Bins for Paper" },
-        { text: "How to Sort Trash at Home" },
-        { text: "Why Recycling Helps the Earth" }
+        { text: "A Home for Every Ball", correct: true },
+        { text: "A Rack for Basketballs" },
+        { text: "How to Play Dodgeball" },
+        { text: "Why Exercise Is Good for You" }
       ],
       clue: "A heading names what a section is mostly about. Ask what all the sentences in the section tell about.",
       hints: [
         "A heading names what a section is mostly about. Ask what all the sentences in the section tell about.",
         "Say in a few words what each of the four sentences is about.",
-        "Blue bins are named in only one sentence, so that heading fits just one detail. Check the other headings against all four sentences."
+        "The section never tells why exercise is good for you, so that heading does not fit. Check the other headings against all four sentences."
       ],
       how: [
-        "The first sentence says there is a bin for each kind of item.",
-        "The other sentences name the bins for paper, glass and cans.",
-        "The answer is \"A Bin for Every Kind.\" The section never tells how to sort trash at home or why recycling helps."
+        "The first sentence says the gym closet has a place for each kind of ball.",
+        "The other sentences name where the basketballs, soccer balls and foam balls go.",
+        "The answer is \"A Home for Every Ball.\" The basketball rack is one detail, and the section never tells how to play dodgeball or why exercise is good for you."
       ],
       misconception: "A common mix-up is choosing a heading that fits only one sentence. A heading must fit the whole section.",
-      why: "The answer is \"A Bin for Every Kind.\" Every sentence tells about a bin for one kind of item. Blue bins are one detail, and the section does not tell about sorting at home or why recycling helps." },
+      why: "The answer is \"A Home for Every Ball.\" Every sentence tells where one kind of ball is kept. The basketball rack is one detail, and the section does not tell how to play a game or why exercise helps." },
     { id: "SK-TSDESC-S03", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
       like: ["SK-TSDESC-C04", "SK-TSDESC-C08"],
       stem: ["(1) Pine trees are built to handle cold, snowy winters.", "(2) Their needles are thin and waxy, so snow slides off.", "(3) Their branches bend under heavy snow instead of snapping.", "(4) Pine cones come in many shapes and sizes.", "(5) Thick bark also helps keep the trunk from freezing."],
@@ -3558,13 +3560,13 @@ PP.addLesson({
       hints: [
         "Key details tell more about the main idea. Ask about each detail: does it tell how the bird gets its food, or something else about it?",
         "Find each choice in the passage, and note which paragraph it comes from. Choose two.",
-        "\"Its feet work like paddles\" tells how the pelican moves across the water, not how it gets food. Check the other choices the same way."
+        "\"The brown pelican is a large bird\" tells its size, not how it gets food. Check the other choices the same way."
       ],
       how: [
         "The question asks how a pelican catches fish.",
         "Paragraph 3: it folds its wings and dives headfirst into the sea. Paragraph 4: the pouch scoops up water and fish at the same time.",
         "The answers are \"It folds its wings and dives headfirst into the sea.\" and \"It scoops up water and fish at the same time.\"",
-        "Where it lives, how its feet paddle and how big it is do not tell how it catches fish."
+        "Flying low over the waves (paragraph 1), how its feet paddle and how big it is do not tell how it catches fish."
       ],
       misconception: "A common mix-up is choosing a true detail that tells about the topic but not about the question. Each answer must tell how the pelican catches fish." }
   },
