@@ -3594,12 +3594,12 @@ PP.addLesson({
   },
   parent: "At dinner, name a topic like \"our kitchen\" or \"weekends\" and take turns saying one sentence about it. If someone drifts off topic, the others call \"Off topic!\" and that person tries again.",
   passages: [
-    { id: "p1", draft: true, title: "How Hot Air Balloons Fly", byline: "Aaliyah's first draft", genre: "Student draft (informational)",
+    { id: "p1", draft: true, title: "How a Carousel Works", byline: "Aaliyah's first draft", genre: "Student draft (informational)",
       paragraphs: [
-        ["(1) Hot air balloons are big, bright bags that carry people high into the sky.", "(2) Most balloons lift off early in the morning, when the wind is light."],
-        ["(3) A hot air balloon floats because of a simple idea.", "(4) A burner heats the air inside the big bag.", "(5) Hot air is lighter than the cooler air around it, so the balloon rises.", "(6) My cousin has a toy boat that floats in the tub."],
-        ["(7) The riders stand in a basket that hangs under the bag.", "(8) The pilot stays in the basket too and runs the burner.", "(9) Most baskets are made of woven wicker, which is light and strong."],
-        ["(10) These tall, bright balloons are so much fun to watch in the morning sky."]
+        ["(1) A carousel is a ride with painted animals that go around in a circle.", "(2) You can find one at many fairs and parks."],
+        ["(3) A carousel moves because of a simple plan.", "(4) A motor turns the big round floor.", "(5) The animals stand on the floor, so they go around with it.", "(6) My cousin has a toy top that spins on the table."],
+        ["(7) The animals come in many kinds, such as horses, lions and rabbits.", "(8) Each animal is held up by a shiny pole.", "(9) The poles slide up and down, so the animals seem to gallop."],
+        ["(10) These bright carousels are so much fun to ride at the fair."]
       ] },
     { id: "p2", draft: true, title: "Field Day", byline: "Carlos's first draft", genre: "Student draft (narrative)",
       paragraphs: [
@@ -3707,28 +3707,28 @@ PP.addLesson({
       prompt: "Read the paragraph that begins with sentence 3. Select the sentence that does not belong in that paragraph.",
       targets: ["p1:2:1", "p1:2:2", "p1:2:3", "p1:2:4"],
       answer: ["p1:2:4"], pick: 1,
-      clue: "Sentence 3 is the topic sentence. Check each other sentence: does it tell about how a hot air balloon floats?",
-      why: "The answer is sentence 6, \"My cousin has a toy boat that floats in the tub.\" The paragraph is about how a hot air balloon floats. A toy boat in a tub is not about a balloon." },
+      clue: "Sentence 3 is the topic sentence. Check each other sentence: does it tell about how a carousel moves?",
+      why: "The answer is sentence 6, \"My cousin has a toy top that spins on the table.\" The paragraph is about how a carousel moves. A toy top on a table is not about a carousel." },
     { id: "SK-SS1d-P2", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "The paragraph that begins with sentence 7 needs a topic sentence. Which sentence should Aaliyah add before sentence 7?",
       choices: [
-        { text: "The riders and the pilot travel in a basket.", correct: true },
-        { text: "A burner heats the air so the balloon can rise." },
-        { text: "Some towns hold a balloon race each summer." },
-        { text: "Balloon bags are sewn from strong, light cloth." }
+        { text: "The animals are what make a carousel fun to ride.", correct: true },
+        { text: "A motor turns the floor so the ride can go around." },
+        { text: "Some fairs sell a ticket for each ride." },
+        { text: "Many carousels play lively music." }
       ],
       clue: "Read sentences 7, 8 and 9. What do all three tell about? The topic sentence must cover all of them.",
-      why: "The answer is \"The riders and the pilot travel in a basket.\" Sentences 7 to 9 tell about the basket, who stands in it and what it is made of. The burner belongs in the paragraph about floating, and the race and the cloth are about other things." },
+      why: "The answer is \"The animals are what make a carousel fun to ride.\" Sentences 7 to 9 tell about the kinds of animals, the poles and the galloping. The motor belongs in the paragraph about moving, and the tickets and the music are about other things." },
     { id: "SK-SS1d-P3", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Which detail would best fit in the paragraph that begins with sentence 3?",
       choices: [
-        { text: "As the air in the bag gets hotter, the balloon lifts off the ground.", correct: true },
-        { text: "Baskets are woven from long, thin strips of wicker." },
-        { text: "Some balloons are painted with bright stripes and stars." },
-        { text: "Many riders take photos of the fields far below." }
+        { text: "When the motor stops, the floor and the animals stop too.", correct: true },
+        { text: "The horses have manes carved from wood." },
+        { text: "Some riders wave to their families as they pass." },
+        { text: "Tickets are sold at a small booth by the gate." }
       ],
-      clue: "Name the main idea of that paragraph first. Then pick the detail that tells more about that idea, not just about balloons in general.",
-      why: "The answer is \"As the air in the bag gets hotter, the balloon lifts off the ground.\" That paragraph is about how a balloon floats, and hotter air is part of floating. Wicker baskets, painted stripes and photos are true but are not about floating." },
+      clue: "Name the main idea of that paragraph first. Then pick the detail that tells more about that idea, not just about carousels in general.",
+      why: "The answer is \"When the motor stops, the floor and the animals stop too.\" That paragraph is about how a carousel moves, and the motor stopping is part of moving. Carved manes, waving riders and tickets are true but are not about moving." },
     { id: "SK-SS1d-P4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "These four sentences come from one paragraph. Match each sentence to the job it does.",
       cols: ["Topic sentence", "Detail", "Does not belong"],
@@ -3771,10 +3771,10 @@ PP.addLesson({
         passages: ["p1"],
         prompt: "Aaliyah wants to replace sentence 10 with a closing sentence that wraps up her whole draft. Which sentence is best?",
         choices: [
-          { text: "Hot air balloons look gentle, but a simple trick lifts them high.", correct: true },
-          { text: "Most baskets are made of woven wicker." },
-          { text: "Some towns hold a balloon race each summer." },
-          { text: "Next, I will write about airplanes and helicopters." }
+          { text: "A carousel only goes in circles, but it makes every ride feel special.", correct: true },
+          { text: "Each animal is held up by a shiny pole." },
+          { text: "Some fairs have a ride just for little kids." },
+          { text: "Next, I will write about roller coasters and Ferris wheels." }
         ],
         clue: "A closing sentence comes at the end and wraps up the main idea. It should not start something new.",
         hints: [
@@ -3783,13 +3783,13 @@ PP.addLesson({
           "A sentence that tells what you will write next is looking ahead, not wrapping up. Test the other three the same way."
         ],
         how: [
-          "The draft is about how a hot air balloon floats and carries riders.",
+          "The draft is about how a carousel moves and what riders find on it.",
           "A closing sentence wraps up that idea in a new way.",
-          "The answer is \"Hot air balloons look gentle, but a simple trick lifts them high.\"",
-          "The wicker sentence repeats one detail, the race sentence adds a new fact, and the airplanes sentence starts a new topic."
+          "The answer is \"A carousel only goes in circles, but it makes every ride feel special.\"",
+          "The pole sentence repeats one detail, the little-kids sentence adds a new fact, and the roller coasters sentence starts a new topic."
         ],
-        misconception: "A common mix-up is choosing a sentence that is true about balloons. A closing sentence has to wrap up the whole idea, not add one more fact.",
-        why: "The answer is \"Hot air balloons look gentle, but a simple trick lifts them high.\" It wraps up the whole draft. The wicker sentence repeats one detail, the race sentence adds a new fact, and the airplanes sentence starts a new topic."
+        misconception: "A common mix-up is choosing a sentence that is true about carousels. A closing sentence has to wrap up the whole idea, not add one more fact.",
+        why: "The answer is \"A carousel only goes in circles, but it makes every ride feel special.\" It wraps up the whole draft. The pole sentence repeats one detail, the little-kids sentence adds a new fact, and the roller coasters sentence starts a new topic."
       },
       {
         id: "SK-SS1d-C02",
@@ -4734,43 +4734,43 @@ PP.addLesson({
       hints: [
         "A paragraph stays on one idea. Find the idea in the topic sentence, then check every other sentence against it.",
         "Say the idea in a few words. Then read each sentence and ask whether it tells about that idea.",
-        "Three of the four sentences tell about how a balloon floats. Ask which one is about something that is not a balloon."
+        "Three of the four sentences tell about how a carousel moves. Ask which one is about something that is not a carousel."
       ],
       how: [
-        "Sentence 3 is the topic sentence: a hot air balloon floats because of a simple idea.",
-        "Sentences 4 and 5 explain the idea: a burner heats the air, and hot air is lighter.",
-        "Sentence 6 is about a toy boat in a tub. It does not tell how a balloon floats.",
-        "The answer is sentence 6: \"My cousin has a toy boat that floats in the tub.\""
+        "Sentence 3 is the topic sentence: a carousel moves because of a simple plan.",
+        "Sentences 4 and 5 explain the plan: a motor turns the floor, and the animals ride on it.",
+        "Sentence 6 is about a toy top on a table. It does not tell how a carousel moves.",
+        "The answer is sentence 6: \"My cousin has a toy top that spins on the table.\""
       ],
-      misconception: "A common mix-up is keeping a sentence because it uses the word floats. Test each sentence against the topic sentence."
+      misconception: "A common mix-up is keeping a sentence because it uses a word like spins. Test each sentence against the topic sentence."
     },
     "SK-SS1d-P2": {
       hints: [
         "A topic sentence has to cover all of the details in its paragraph. Read them all before you choose.",
         "Name what each of sentences 7, 8 and 9 tells about. Ask what they have in common.",
-        "Two choices are about other paragraphs or other things in the draft, and one is only a cloth fact. Choose the idea all three details share."
+        "Two choices are about other things in the draft, and one is only a fact about fairs. Choose the idea all three details share."
       ],
       how: [
-        "Sentence 7 tells where the riders stand, sentence 8 tells who else is in the basket, and sentence 9 tells what the basket is made of.",
-        "All three are about the basket and who rides in it.",
-        "The answer is \"The riders and the pilot travel in a basket.\"",
-        "The burner belongs in the paragraph about floating, the race is a new fact, and the cloth is only about the bag."
+        "Sentence 7 tells the kinds of animals, sentence 8 tells how each one is held up, and sentence 9 tells how they move.",
+        "All three are about the animals you ride.",
+        "The answer is \"The animals are what make a carousel fun to ride.\"",
+        "The motor belongs in the paragraph about moving, the tickets are a fact about fairs, and the music is about something else."
       ],
-      misconception: "A common mix-up is choosing a sentence about balloons in general. The topic sentence has to match the details in this paragraph."
+      misconception: "A common mix-up is choosing a sentence about carousels in general. The topic sentence has to match the details in this paragraph."
     },
     "SK-SS1d-P3": {
       hints: [
         "Name the main idea of that paragraph first. The new detail has to tell more about that idea.",
-        "The paragraph is about floating. Ask which sentence adds one more thing about it.",
-        "Three of the choices are true about balloons but are not about floating. Check each one against the topic sentence."
+        "The paragraph is about moving. Ask which sentence adds one more thing about it.",
+        "Three of the choices are true about carousels but are not about moving. Check each one against the topic sentence."
       ],
       how: [
-        "Sentence 3 says a hot air balloon floats because of a simple idea.",
-        "A new detail should tell one more thing about how it floats.",
-        "The answer is \"As the air in the bag gets hotter, the balloon lifts off the ground.\" Hotter air is part of floating.",
-        "Wicker baskets, painted stripes and photos are not about floating."
+        "Sentence 3 says a carousel moves because of a simple plan.",
+        "A new detail should tell one more thing about how it moves.",
+        "The answer is \"When the motor stops, the floor and the animals stop too.\" The motor is what makes it move.",
+        "Carved manes, waving riders and tickets are not about moving."
       ],
-      misconception: "A common mix-up is choosing a detail because it is about balloons. It also has to fit the idea of this paragraph."
+      misconception: "A common mix-up is choosing a detail because it is about carousels. It also has to fit the idea of this paragraph."
     },
     "SK-SS1d-P4": {
       hints: [

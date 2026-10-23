@@ -367,3 +367,98 @@ All 24 items map to the retained official wording. Points are correct: choose-tw
 | 3.T.T.4.a | S08, S09, S10, S14 | **NOT ACCEPT** | M1 (S14 has two defensible slot 2 answers and a misleading hint 3); S6 and S7 should be fixed with it |
 
 One MUST in 24 items.
+
+
+## Sweep: last edits (independent blind re-solve, 2026-10-23)
+
+**Role.** Independent reviewer; I did not write or review these items before. Read-only: no lesson or code file changed, no git. Scripts and output are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/sweep/` (`load.js`, `T.js`, `blind.js`, `stripped.json`, `myans.json`, `key.js`, `jac.js`, `pc.js`). This section covers the SIM-1 items in the sweep: 3.T.T.4.a S14, S09, S08, S10; TS-PS S07, S14; 3.T.T.1.a S15, S11; 3.T.T.1.d S08; 3.T.C.2.a S15. (TS-CE S07 and TS-CC S11 are in the same sweep in `SIM-2-rereview.md`.)
+
+### Blind solve
+
+- `load.js` runs `T-T1.js`, `T-TS.js`, `T-C.js`, `T-SS.js`, `T-T34.js` in a `vm` sandbox with a mock `PP.addLesson` (lessons indexed by `key` or `code`). `blind.js` printed 12 items (these 10 plus TS-CE S07 and TS-CC S11) with passages (all passage text, no figures in these items), seeded-shuffled choices, options, slot options and match rows, and no `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception` or `like`. I grepped `stripped.json` for correct/answer/why/hint/how/clue/misconception/like before reading it: the only hits were ordinary prompt words ("Choose the best answer", "Why might the poet", "Scientists explained why").
+- I wrote my answers to `myans.json` (made read-only) before running `key.js`, which was the first time I printed any key, `why`, `how` or hint.
+- **Agreement: 12 of 12 items, every blank, row and pick agrees with the key (10 of 10 here).**
+- **Blindness.** Fully blind for the 12 items, with two disclosures. While finding the data shape I printed field names, and `s2.js` also printed the first 300 characters of the choices of 3.T.T.4.a **S01** (with its `correct` flags) and the first 300 characters of a core item of that lesson. Neither is in the sweep. I looked at no key or hint of a swept item before saving.
+- **One uncertain call, which I flag:** 3.T.T.1.d S08 row 1 ("The finished decorations end up in the family's home"). I wrote "Both (home not stated)". The key agrees, but only by inference (see M1).
+- Close calls where I still matched: 4.a S08 ("Honk! Honk!" is a real repeated-word rival, ruled out only by "goes on"), TS-PS S14 row 3 ("removes or changes the cause" is true of both because of the "or"), C2a S15 ("found the long line hard to wait in" is inferred for Mia).
+
+### Findings
+
+**MUST**
+
+- **M1. 3.T.T.1.d S08 (match), row 1 has no support in the text.** Row "The finished decorations end up in the family's home" is keyed **Both stories**. Story 1 says "They set the flowers by a photo of Dani's great-grandma." Story 2 says "They hung the stars on the tree." Neither story says where the decorations are (a home, a yard, a town square). `how` line 4 and `why` say "Each family keeps the finished decorations in the home", which is a claim that is not in the passage. A careful child can say "can't tell" or "Story 1 only", so there is not one defensible answer (2-point item, one of four rows). The first re-review's S3 asked for this wording as a replacement for "put on display" but did not say to add the setting. **Fix:** put the place in both stories ("...by a photo of Dani's great-grandma on a shelf in their living room" / "They hung the stars on the tree in their living room."), or replace the row with a stated fact, for example "A grandparent helps with the finished piece" or "Something is tied or twisted by hand." Re-measure against C08 afterward.
+- **M2. 3.T.T.1.a S11 (dropdown) vs C11: near-copy over the 0.21 ceiling.** Word-set Jaccard **0.225** (all-words **0.247**), up from the 0.207 recorded above (N5), so an edit pushed it over. It is also the whole skeleton, not only the number: the text is C11's word for word ("X's words show that she is {0}. Her words move the plot forward because {1}."), the prompt is identical ("Read the story. Then complete the sentences. Choose the best answer for each blank."), the story is the same shape (a child is stuck, an older person says something kind, the child finishes the task), and the distractors are C11's kinds (an impossible negative personality word, "the event is called off", "X decides to do it herself/bake new ones"). Both keys sit at option index 0 in the data, as in C11. A child who remembers C11 answers S11 from the pattern. **Fix:** change the frame as well as the story: ask one blank about what the words show and one about what Dani does next, or ask "Which TWO..." about the dialogue; shift the key positions; replace "bored" with a plausible rival (for example "nervous"); re-measure to 0.18 or lower.
+
+**SHOULD**
+
+- **3.T.T.4.a S10 (mc), hint 3 echoes the key.** Hint 3: "The scooter stops in the last line, so the ride does not go on all day. Test each choice that is left." The key is "A short line makes the reader pause, just as the scooter does." The hint supplies the action ("stops") that the key matches, and the stem's last line is the word "Stop." On paper three choices are left; in effect the rhyme and "ran out of words" options fall to the same word, so one is left. Allowed in form (restate the evidence, rule out one distractor with a reason), but the key is the only option about the scooter. **Fix:** "Read the stanza aloud and listen to how the last line ends compared with the lines before it. The ride does not go on all day, so one choice can go." Word-set 0.209 and all-words 0.237 against C09 are at the ceiling; the frame ("Why does the poet end/make the last line...") mirrors C09's. Reword the prompt.
+- **3.T.T.4.a S08 (hottext), the key echoes the prompt, and hints 2 and 3 together leave the key.** The prompt says "something goes on and on"; the key line is "The road goes on, and on, and on." A child can match words. The prompt is still C07's frame ("Which TWO lines use repeated words to show that ... Choose two lines"), and the two keys follow C07's "hop, hop, hop" pattern. Hint 3 names "Honk! Honk!" as the decoy, so after hint 2 (find the repeated word) and hint 3, the two keys are the only repeated-word lines left (each hint alone leaves 3 and 4 options). **Fix:** prompt "...to show that something lasts a long time"; hint 3 "Repeating a word only fits if the thing being described keeps going. Ask that about each line that repeats."
+- **3.T.T.4.a S09 (ebsr), skeleton still C08's.** Part A's new question is good, but the key is again "the speaker plans ahead", Part B's key is again the plan line in the last stanza, and the distractors mirror C08's (a friend/driver talk, an action that does not happen). Word-set 0.207 (at the ceiling by 0.003), all-words 0.259. Hint 1 ("compare what happens in the last stanza...") points to a location, which 04 §4.5 rule 1 forbids; the prompt already names stanza 3. **Fix:** make Part A about stanza 2 (what the speaker's actions in stanzas 1 and 2 build toward), keep the plan out of the key, and give hint 1 as a strategy ("To see how a poem changes, compare what is happening at two different points").
+- **3.T.T.4.a S14 (dropdown), frame still C14's.** "Stanza 1 {0}, and stanza 3 {1}." with the same three options in both slots, as in C14 (earlier S7, still open). Word-set 0.186 passes; all-words is **0.217**. The July/November/March change is real, but the "snow" distractor cannot attach to July or March (the poem's November stanza is not asked), so it never tempts; the item is a gift of two blanks. **Fix:** ask about stanza 2 and one other stanza, or give the two slots different option lists; swap "snow" for a rival such as "shows the tree when the leaves are turning colors".
+- **TS-PS S07 (dropdown), Thea's plan is not stated.** The story ends "She saw a gap where the roof met the wall." The blank says "Thea thinks the class should {1}". The key follows from the gap, but nobody says it. Add a line: "'We should fix that gap,' said Thea." Distractors "move the art room to the gym" and "close the art room for the year" are silly. Hint 3 completes slot 0 ("the one he carries out on the floor"), which 04 §4.5 allows ("complete one of two slots").
+- **TS-PS S14 (match), row 2 is solved by vocabulary.** "...to catch any new clump" is a word that appears only in "The Slow Sink", and hint 3 says so. The row therefore tests nothing about structure. Word-set 0.203 passes (0.314 without passages); one shared option ("both texts") is at the limit of 1. **Fix:** replace "clump" with a structural property, for example "The first try does not work."
+- **3.T.C.2.a S15 (ms), `why` overstates Mia's note.** `why`: "Mia and Theo both say the wait was tiring." Mia never says "tired"; she says "The line was long, and my feet hurt." The keyed "found the long line hard to wait in" is a fair inference, and the other four choices are all false on a plain reading, so the key is unique. **Fix:** Mia: "The line was long, and my feet hurt from standing." and change `why` to "both found the wait hard".
+- **3.T.T.4.a S09 `how`/stanza wording (NOTE-level, listed here for the author):** "I'll save my coins from every day" is a forced line for the rhyme; "every day" reads oddly.
+
+**NOTE**
+
+- 3.T.T.1.a S15: passes (0.161, shared options 0). The writer frame is no longer C15's. Hint 3 names the clock as a decoy (allowed). After hint 2 and hint 3 three choices are left (two keys and the grandmother).
+- 3.T.T.1.d S08: hint 3 gives row 4 ("Elsa's ornaments are straw"); allowed as a completed row. 0.154, one shared option ("Both stories"), at the limit. Names Dani and Dara recur (TT1a S11 and TT1d S08).
+- 3.T.C.2.a S15: the official wording is "Describe different perspectives of the narrator or speakers and distinguish them from their own", and this item finds what the two speakers share; the two false options ("Mia liked waiting", "Theo's feet") do test the difference. DOK 3 is high for two short notes; DOK 2 is more honest.
+- 3.T.T.4.a S14: stanza 2 and `misconception` ("choosing the stanza that sounds most like winter") refer to a choice the item does not ask for. The M1 of the first section is closed: March stanza reads "twigs are brown / buds are small and tight", no option fits two stanzas, and hint 3 is the wording recommended there.
+- 3.T.T.4.a S10: `why` says "The long, quick lines"; the lines are ordinary length.
+- TS-PS S07 and S14, 4.a S14, 1.a S11, 1.d S08: grade 3 level is right; nothing kindergarten-like.
+
+### Hand recount of live choices (after the clue and hints 1 to 3)
+
+Clue equals hint 1 in all items. "Effect" means the count if the child applies the hint literally to the options. 04 §4.5 requires only that hint 3 alone not leave one option.
+
+| Item | Start | After h1 + clue | After h2 | After h3 (on paper) | In effect |
+|---|---|---|---|---|---|
+| 4.a S14 | 3 and 3 | 3, 3 | 3, 3 (months named) | 3, 3 | blank 2: 1 ("on the twigs" reaches only the buds option) |
+| 4.a S09 | A 4, B 4 | 4, 4 | 4, 4 | A 3 (driver removed), B 4 | A 3, B 2 once A is chosen |
+| 4.a S08 | 5, pick 2 | 5 | 3 (repeaters) | 4 (Honk removed) | 2 = the key (h2 + h3 together) |
+| 4.a S10 | 4 | 4 | 4 | 3 (all-day removed) | 1 ("Stop." disposes of rhyme and "ran out of words") |
+| TS-PS S07 | 3 and 3 | 3, 3 | 3, 3 | slot 1: 1 completed, slot 2: 3 | slot 2: 1 (only one choice involves the gap) |
+| TS-PS S14 | 4 rows x 3 | 12 | 12 | row 2 completed, 3 rows x 3 | 3 rows x 3 |
+| 1.a S15 | 5, pick 2 | 5 | 3 (telling option dropped by "only say how") | 4 on paper (clock removed) | 3 (two keys, grandmother) |
+| 1.a S11 | 3 and 3 | 3, 3 | 3, 3 | slot 1: 2 (bossy removed), slot 2: 3 | slot 2: 1 (Dani swims is the only one that follows "ask what Dani does next") |
+| 1.d S08 | 4 rows x 3 | 12 | 12 | row 4 completed, 3 rows x 3 | 3 rows x 3 |
+| C2a S15 | 5, pick 2 | 5 | 5 | 4 (snack removed) | 2 once "both" is checked against each note |
+
+No item has hint 3 alone leaving one option. Hint 3 completes a slot or row in TS-PS S07, TS-PS S14 and 1.d S08, which §4.5 allows. Items with a narrowing in effect: 4.a S10, S08 (hints combined), S14 slot 2, and 1.a S11 slot 2.
+
+### Near-copy similarity against the paired core item
+
+Metric: word-set Jaccard over lowercase letters-and-apostrophes tokens of stem, prompt, text, all options, rows, columns and the passage text the student sees (numbers such as "(1)" and "2" are not counted, as in the earlier re-reviews), and the same with a multiset ("all words", min over max). Shared options are exact strings. Ceiling 0.21 and at most 1 shared option.
+
+| Item vs core | Word-set | All words | Without passages (set) | Shared options | Call |
+|---|---|---|---|---|---|
+| 4.a S14 vs C14 | 0.186 | 0.217 | 0.193 | 0 | pass on set; SHOULD (frame) |
+| 4.a S09 vs C08 | 0.207 | 0.259 | 0.272 | 0 | at ceiling; SHOULD |
+| 4.a S10 vs C09 | 0.209 | 0.237 | 0.239 | 0 | at ceiling; SHOULD |
+| 4.a S08 vs C07 | 0.180 | 0.160 | 0.260 | 0 | pass; SHOULD (prompt) |
+| TS-PS S07 vs C06 | 0.147 | 0.150 | 0.207 | 0 | pass |
+| TS-PS S14 vs C13 | 0.203 | 0.249 | 0.314 | 1 ("both texts") | pass at the limits |
+| 1.a S15 vs C15 | 0.161 | 0.147 | 0.161 | 0 | pass |
+| **1.a S11 vs C11** | **0.225** | **0.247** | 0.225 | 0 | **over: MUST (M2)** |
+| 1.d S08 vs C08 | 0.154 | 0.162 | 0.266 | 1 ("Both stories") | pass at the limit |
+| C2a S15 vs C15 | 0.192 | 0.186 | 0.192 | 0 | pass |
+
+### Facts
+
+- Ofrenda with family photos and paper flowers (1.d S08, Story 1), and Swedish straw star ornaments for the tree (Story 2): consistent with the sources cited in the section above (https://www.npr.org/2022/11/01/1133041841/dia-de-los-muertos-ofrenda-altar and https://webshop.skansen.se/en/seasons-holidays/christmas/christmas-ornaments-tree-decorations/straw-star-ornament). My own search this session returned the same Skansen page and a Punchbowl guide to Swedish decorations (https://partyideas.punchbowl.com/p/a-guide-to-swedish-christmas-decorations), but I could not fetch them. Neither source covers where the decorations are placed, which is M1.
+- Sea turtles (TS-PS S14): the search returned WABE (https://www.wabe.org/experts-lights-for-new-buc-ees-exit-deadly-to-coastal-georgias-baby-sea-turtles/), NFWF (https://www.nfwf.org/node/3407/new-lighting-gives-sea-turtle-hatchlings-new-lease-life) and Scientific American (https://www.scientificamerican.com/blog/image-of-the-week/the-lure-of-light/), all about hatchlings drawn to artificial lights and turtle-safe lighting. **I could not fetch any of them** (the fetch tool hit its limit), so the amber and shields details rest on the earlier re-review's Wikipedia check, not mine.
+- Pear tree (4.a S14): the search returned UGA Extension pear pages (https://fieldreport.caes.uga.edu/wp-content/uploads/2025/08/C-742_6.pdf); fetch failed. Fruit in July is early for pears (most are harvested late summer); in a poem it is acceptable. NOTE, unverified.
+
+### Verdict per lesson (swept items)
+
+| Lesson | Items | Verdict | Reason |
+|---|---|---|---|
+| 3.T.T.1.a | S15, S11 | **NOT ACCEPT** | S15 accept; S11 M2 (near-copy of C11, 0.225, same frame) |
+| 3.T.T.1.d | S08 | **NOT ACCEPT** | M1 (row 1 not supported by the stories) |
+| TS-PS | S07, S14 | **ACCEPT** | no MUST; SHOULDs: Thea's plan unstated (S07), row 2 by vocabulary (S14) |
+| 3.T.C.2.a | S15 | **ACCEPT** | no MUST; SHOULD: `why` overstates Mia's note |
+| 3.T.T.4.a | S14, S09, S08, S10 | **ACCEPT** | the earlier MUST is closed (one defensible answer per blank: July is fruit, March is buds, snow fits neither); SHOULDs on S10 hint 3, S08 prompt echo, S09 skeleton, S14 frame |
+
+Two MUSTs in the 10 swept items (1.d S08, 1.a S11).
