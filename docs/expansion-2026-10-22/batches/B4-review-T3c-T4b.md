@@ -227,3 +227,203 @@ Add a linking-word example and an introduction example.
 3. Fix pre-answers and giveaways: M4b-2, M3c-4, S4b-3, S4b-5.
 4. Rewrite the similar items over the ceiling (M3c-2, M3c-3, M3c-5, M4b-4). Vary the task type and the decoy logic, not just the topic.
 5. Hint, `words` and display changes: S3c-3, S4b-2, S4b-6, S4b-7, S4b-8.
+
+---
+
+# Second review (fix round, 2026-10-23)
+
+**Scope:** `js/data/lessons/T-T34.js`, lessons 3.T.T.3.c and 3.T.T.4.b as they stand after the fix round: 15 core items each (refs resolved), 15 similar items each, Together P1-P3 (3.c) and P1-P4 (4.b), addons, passages (including the Dance Class poem), Learn It and Watch Me. No lesson edits, no git.
+**Scratch files** (all in the session scratchpad): `load.js`, `blind.js`, `blind-3c.txt`, `blind-4b.txt`, `maps.json`, `answers-second.json`, `compare.js`, `dump.js`, `dump-3c.txt`, `dump-4b.txt`, `jac.js`, `dup.js`, `dup2.js`, `testchk.js`, `browse.py`, `browse.json`, `shots/`.
+
+## S1. Blind solve
+
+- **Method.** A Node `vm` sandbox with a mock `PP.addLesson` loaded the lesson file. `blind.js` resolved every `{ref}` and printed core, Together and similar items with a seeded shuffle (choices, dropdown options, steps, match columns, hottext targets). It stripped `correct`, `answer`, `clue`, `hints`, `how`, `why`, `misconception`, `like`, `std`. Hottext targets were resolved to sentence text, because the engine does the same. Passages (drafts and poems, with stanza.line numbers) were printed in full. The stripped text was grepped for the stripped key names; the only hits were ordinary words inside items. I saved `answers-second.json` **before** running any key extraction, and only then ran `compare.js`.
+- **Result: 67 of 67 agree** (3.c: 15 core + 3 Together + 15 similar = 33; 4.b: 15 core + 4 Together + 15 similar = 34). No disagreement, no item where I changed my answer after seeing a key.
+- **Honest disclosure on blindness.**
+  - The solve of the items was blind. I printed only field names and array lengths of the data first (no values), and a `grep -i together` of the lesson source showed me three comment lines from the 3.a block (not 3.c or 4.b answers).
+  - After my answers were saved and compared, a `grep -i jaccard` over `docs/` showed me single lines from this file's first review and from the SIM-1 author log. I read the full first review only after the solve and the dumps.
+- **Close calls while solving** (each resolved to the key, each noted below): 3.c C09 (which two sentences support reason 2), 3.c C13 ("because" also fits, "For example" does not), 3.c S04 (opinion-first order reads fine), 4.b C13 Part B (two stanza-4 lines), 4.b C10 (D also rhymes in lines 2 and 4).
+
+## S2. Verdicts
+
+| Lesson | Verdict |
+|---|---|
+| 3.T.T.3.c | **CHANGES REQUIRED** (2 MUST: S09 option labels, S04 order) |
+| 3.T.T.4.b | **CHANGES REQUIRED** (2 MUST: P6 line duplicates accepted 4.a, S08 row 1 near-copies a 4.a poem) |
+
+The fix round did close most of the first review: S02/S08/S11/S12/S13 are no longer clones, the C11 sentence numbers are gone, the C06/C07 pre-answer is gone, the C13 `how` now matches the poem, S10 "town" became "barn", dropdown poems now show " / " line separators, and the p3 and Swim Day topics were replaced. What is left is small, but two items in each lesson are still defects by the MUST definition.
+
+## S3. Findings: 3.T.T.3.c
+
+### MUST
+
+**M3c-A. S09: two options carry sentence numbers that do not match the stem.**
+- Stem: "(5) Everyone likes parks. (6) I hope our neighbors will join me."
+- Option C is labelled "(5) Picnics, kites and frisbees make parks popular places." Option E is labelled "(6) I hope many neighbors bring gloves and garbage bags."
+- A child who checks "(5)" or "(6)" against the draft finds different sentences. Options A, B and D match the stem. `why` and `how4` describe the stem's sentences ("sentence 5 is a general statement, sentence 6 is a wish"), not the options. I found this with a script that compares every "(n) ..." option to the numbered stem text; these are the only two mismatches in either lesson.
+- **Fix:** make the options exactly the stem sentences ("(5) Everyone likes parks." and "(6) I hope our neighbors will join me."), or drop the numbers from the options and put the new sentences in the stem.
+
+**M3c-B. S04 has two defensible orders.**
+- "Our playground has only one basketball hoop." and "I think our school should add a second hoop." can swap. "I think our school should add a second hoop. Our playground has only one basketball hoop. One reason is..." is a good paragraph, and many real opinion paragraphs open that way. Neither sentence points back to the other.
+- Its paired core item P5 does not have this problem, because "turn it into a reading corner" needs the corner named first. C01 and S01 of 4.b are forced by "Then" and "And".
+- The key rests on the lesson's convention (introduce, then opinion), but the prompt only says "from opening to ending". Valid orders: 2 (4 positions fixed, the first two swappable).
+- **Fix:** give sentence 5 an antecedent, for example "I think our school should add another one." That makes it unreadable as the first sentence and leaves exactly one order.
+
+### SHOULD
+
+**S3c-A. C09 key (8) fits reason 1 at least as well as reason 2.** "Mr. Greene says a bright sign would remind drivers to slow down" is about drivers (reason 1, "help drivers see us"), not about younger students feeling safe. The key is defensible only because (7) and (8) follow the quoted reason in the same paragraph, which is what the teach points say ("evidence usually comes right after the reason"). The distractors (4), (5) are now clearly reason 1, so there is one defensible pair, but (8) is weak. **Fix:** make (8) about the youngest children ("Mr. Greene says the youngest children are the ones who wait longest at the corner").
+
+**S3c-B. S07 reuses the reasoning of accepted 3.a.** "Our town should open X on weekends" with reasons "families who work ... could do it together" and "kids would have a place to play". 3.a p1 (library on Saturdays: "many families are busy during the week... we would have time to go together") and the 3.a gym passage ("open the school gym on Saturdays... families could exercise together") use the same move. No sentence matches, so SHOULD, but the key reason ("Families who work on Saturdays could swim together on their day off") is the 3.a library reason with a pool. **Fix:** change the topic type (a shade tent is used already in S03; try a school garden watering schedule or a longer library loan) or the reasons.
+
+**S3c-C. C06 sets the crossing-sign petition on Elm Street.** Accepted 3.a uses "Our town should paint bike lanes on Elm Street" (Nora, with an Elm Street counter-argument). Same street, same genre (town safety petition), similar names (Nora, Nia). Not a copied sentence. **Fix:** rename the street (Maple Lane, Cedar Road).
+
+**S3c-D. P5 "reading corner" is next to 3.a's "A Reading Tent for Room 6".** P5 is one of the fifteen (core set 1). Different proposal, same classroom-reading idea. Low risk, but change it if S3c-C is changed.
+
+**S3c-E. All-words (multiset) Jaccard above 0.21 on S01 (0.222).** S06 (0.211) and S15 (0.210) sit on the line. The word-set measure the first review used is at or under the ceiling for all 15 (table in S5). Close, not a copy.
+
+**S3c-F. Learn It and Watch Me model three of about ten task types.** They show an opinion statement with introduction, evidence with "because", and a conclusion. Not modelled: choosing a linking word in a gap (C02, C08, C12, P3), choose-two linking versions (C13), ordering (P5), matching jobs (C11), the evidence-from-a-draft pick (C09, C14B). The 3.c teach points name the linking words, so the content is there; no worked example shows the "which relationship?" thinking.
+
+### NOTE
+
+- **N3c-A.** C11 hint 3 ("Look for the words I think or should") still points to one row. It states a method, not a row number, so it is acceptable now.
+- **N3c-B.** C13 key pair is "because" (B) and "In addition" (A). "For example" fails only because maths is not an example of togetherness; HOW4 says so. Defensible, and a good decoy.
+- **N3c-C.** S11 row 3 ("So a short stretch break would ... our class should take one") also says what the writer wants; the item is still unique because each job is used once. Acceptable.
+- **N3c-D.** C07 key (A, B) is exactly the two reasons; D ("busiest street") is a claim with no why. Fine.
+- **N3c-E.** FK (heuristic, sentence counts from the numbered sentences): p1 3.9, p2 3.6, p3 4.0, p4 4.5, p5 2.2. p4 is at the 4.5 ceiling.
+- **N3c-F.** "Since" now appears as a keyed word (S02, S13), so the official list (because, therefore, since, for example) is fully covered.
+
+## S4. Findings: 3.T.T.4.b
+
+### MUST
+
+**M4b-A. P6 (core set 1) repeats an accepted 4.a line.** P6 stem line 3 is "I pull my blanket to my chin". 4.a "Tap, Tap, Tap" (p1, stanza 1) has exactly "I pull my blanket to my chin / And snuggle in, warm and tight", and a 4.a hottext item quotes it. The setting is the same too (a rainy night, going to bed). `dup2.js` reports the line at Jaccard 1.00 against 3.T.T.4.a. The first review filed this as N4b-3 ("legacy, change with the next 4.a edit"). P6 is one of the fifteen core items and the fix round touched this lesson, so I now rate it MUST. S12 repeats the same rhyme word and idea ("I pull my quilt up to my chin").
+- **Fix:** only lines 2 and 4 rhyme in P6, so line 3 is free: change it to a new line ("I snuggle deep beneath my quilt," or similar) and leave the choices alone. Change S12 line 3 ("I pull my quilt up to my chin") the same way, but check that its chin/begin rhyme pair (lines 3 and 4 are the pair in S12) is rebuilt with new end words.
+
+**M4b-B. S08 row 1 is a near-copy of the first line of accepted 4.a "Snail Climb".**
+- 4.a p4: "A snail crawled up our garden wall, / As slow as slow can be."
+- 4.b S08 row 1: "A snail climbs up the garden wall, / It moves so slowly, bit by bit."
+- Same subject, same verb idea (crawled/climbs), same end word (wall), same noun phrase ("garden wall"). Five of seven words are shared, the same scene follows.
+- **Fix:** change the creature and place (a ladybug on a window sill; a duck on the pond) and keep "nothing rhymes".
+
+### SHOULD
+
+**S4b-A. p3 "The Morning Bus" still shares a scene with accepted 4.a.** The fix rewrote the stanza (no shared lines now), but 4.a C13 still offers "The bus comes rumbling down our street. / Its doors swing open wide..." and p3 keeps the school bus, "street" as a line-4 rhyme, "rumble" as the C09 key word, and the same lesson task (name the rhyme pattern of a bus stanza: C06 here, C13 there). 4.a is accepted, so the overlap is in this lesson's court. I rate it SHOULD (no shared sentence or rhyme pair; the first review rated the earlier, near-identical stanza MUST). **Fix:** move p3 to a different journey (a walk to the library, a ferry), or change 4.a's distractor at the next 4.a edit.
+
+**S4b-B. C07 prompt gives away C06.** C07: "In every stanza, line 4 should rhyme with line 2." C06 (the item before it, same passage) asks which pattern stanza 1 uses, answer "Lines 2 and 4 rhyme". "Next question" is enabled before C06 is answered (screenshots), and Previous question lets the child read C07 first. The first review's complaint (C06 pre-answers C07) is fixed, but the reverse now holds. **Fix:** C07: "Every stanza in this poem should follow the same rhyme pattern. One stanza breaks it. Choose the line that breaks it" (and keep the five targets).
+
+**S4b-C. C13 Part B now has a second plausible stanza-4 line.** Fixing the first review's S4b-5 added "My shoes are off, my socks are damp," as a stanza-4 distractor. After hints 2 and 3 two choices are live (A "I close my eyes with one last smile," vs C). The key is the better line (eyes closing is sleep), but "shoes are off" reads as relaxed to many third graders, and `how4` calls it "only tells how the dancer looks", which is a stretch. **Fix:** make the distractor a stanza-4 line that is clearly not calm ("I flop down hard and let out a shout") or put the key against two non-stanza-4 lines only if the first review's concern is dropped.
+
+**S4b-D. P6 and C10 hint 3 leave two live choices.** P6 ("Jump up and shout are loud, busy words") removes B and C, leaving A and D. C10 ("sleepy friends and dim lights have a quiet feeling") removes C and D, leaving A and B. Hint 3 must not narrow to the key; it does not, but a coin flip on the next click is thin scaffolding. **Fix:** P6 hint 3 can name one of the two; C10 hint 3 can name only one sleepy stanza.
+
+**S4b-E. Learn It and Watch Me do not model most of the 4.b tasks.** The three examples are: write a rhyming line 2, finish a stanza whose lines 2 and 4 rhyme, check a second stanza against the first. Not modelled: action words (C11, S11), sound words (C09, S09), ordering lines (C01, S01), feeling of an ending (C13, S13), revise a line that does not rhyme (C12, S12), choose a stanza that keeps pattern and feeling (C10, C15). The teach points mention several of them.
+
+**S4b-F. Official wording is about rhyme.** "Use rhyme in at least two stanzas to achieve an intended effect." Four items (C09, C11, S09, S11) test sound or action words, and C13/S13 test feeling, not rhyme. The teach text ties them to "engage audiences", so this is not a defect, but 4 of 30 items rest on that reading.
+
+**S4b-G. All-words (multiset) Jaccard above 0.21:** S08 0.265, S15 0.260, S04 0.238, S01 0.215. Their word-set values are 0.193, 0.210, 0.203, 0.181. S08 and S15 are at the ceiling on word-set as well as over it on all-words, mostly through the shared frame ("Lines 1 and 2 match...", "The ... , / ..."). Not clones (different task content, 0 shared options), but S08 and C08 use the same three patterns and nearly the same column labels.
+
+### NOTE
+
+- **N4b-A.** Dance Class (p4) is not used anywhere else in `js/data` (grep for "Dance Class" returns only this file). Its stanza 3 is meant to have a non-rhyming pair (C12); stanzas 1, 2 and 4 rhyme in pairs and the C11/C13/C14 items agree with the text. The choir (S12), moon watch, game night and buddy bench settings are also absent elsewhere. Common props (recess, farm, bread) appear in other lessons only incidentally.
+- **N4b-B.** 4.a has "Game Night" (a ballpark poem) and a "kettle sings" stanza; 3.c C11-C13 use "game night" for a family evening and 4.b S09 uses "The kettle whistles". Different meanings and sentences, not duplicates.
+- **N4b-C.** C01 order has one valid arrangement by connectives alone: "Then" and "And" lines cannot open a pair, so Grandpa's line is first, the "And hums" line second, "Then I set the bowls" before "And we sit down". With no punctuation cue except the final period on line 4, the answer follows from logic. Fair. S01 is unique by the same connectives plus "find a book" before "read".
+- **N4b-D.** S05 option D ends with "sound", the same word as stem line 2 (identical rhyme). `clue` says every choice rhymes with "sound"; fine, but it is a repeat of the word.
+- **N4b-E.** S10: "around" and "barn" are no longer a near-rhyme risk; "barn" is a clean non-rhyme. S14 "night" with "white" is a rhyme but nonsense after "the sun's warm"; the item holds.
+- **N4b-F.** S13 offers two "calm and sleepy" choices for a parade poem, so the real choice is between the two "excited" options (one line each). That makes S13 easier than C13 (four feelings). Acceptable for a similar item.
+- **N4b-G.** Dropdown poems now show " / " between lines (C04, C14 screenshots). Line breaks would be nicer, but the question wording "lines 1 and 2" can be followed.
+- **N4b-H.** FK (poems counted by sentence punctuation; all passages): p1 2.2, p2 2.4, p3 3.8, p4 3.4. All pass.
+
+## S5. Measurements and checks
+
+**Word-set Jaccard, whole item text (prompt, stem, text, options, slot options, steps, rows, cols; passage left out), each similar item against its `like` core item. Ceiling 0.21, at most one shared option.** `jac.js`. "All-words" is the multiset version; "content" excludes stop words.
+
+| 3.c similar | Core | Word-set | All-words | Content | Shared options |
+|---|---|---|---|---|---|
+| S01 | C01 | 0.204 | 0.222 | 0.125 | 0 |
+| S02 | C02 | 0.208 | 0.176 | 0.153 | 0 |
+| S03 | P6 | 0.192 | 0.203 | 0.105 | 0 |
+| S04 | P5 | 0.176 | 0.176 | 0.068 | 0 |
+| S05 | P4 | 0.189 | 0.146 | 0.129 | 0 |
+| S06 | C06 | 0.183 | 0.211 | 0.105 | 0 |
+| S07 | C07 | 0.162 | 0.179 | 0.082 | 0 |
+| S08 | C08 | 0.196 | 0.188 | 0.143 | 1 |
+| S09 | C09 | 0.116 | 0.076 | 0.094 | 0 |
+| S10 | C10 | 0.126 | 0.161 | 0.050 | 0 |
+| S11 | C11 | 0.204 | 0.174 | 0.123 | 0 |
+| S12 | C12 | 0.198 | 0.202 | 0.103 | 0 |
+| S13 | C13 | 0.169 | 0.110 | 0.093 | 0 |
+| S14 | C14 | 0.157 | 0.149 | 0.083 | 0 |
+| S15 | C15 | 0.200 | 0.210 | 0.141 | 0 |
+
+| 4.b similar | Core | Word-set | All-words | Content | Shared options |
+|---|---|---|---|---|---|
+| S01 | C01 | 0.181 | 0.215 | 0.138 | 0 |
+| S02 | C02 | 0.154 | 0.161 | 0.095 | 0 |
+| S03 | P5 | 0.189 | 0.164 | 0.122 | 0 |
+| S04 | C04 | 0.203 | 0.238 | 0.123 | 0 |
+| S05 | P6 | 0.113 | 0.164 | 0.086 | 0 |
+| S06 | C06 | 0.148 | 0.184 | 0.064 | 0 |
+| S07 | C07 | 0.098 | 0.082 | 0.091 | 0 |
+| S08 | C08 | 0.193 | 0.265 | 0.118 | 0 |
+| S09 | C09 | 0.122 | 0.113 | 0.077 | 0 |
+| S10 | C10 | 0.188 | 0.169 | 0.160 | 0 |
+| S11 | C11 | 0.149 | 0.109 | 0.121 | 0 |
+| S12 | C12 | 0.169 | 0.133 | 0.145 | 0 |
+| S13 | C13 | 0.169 | 0.165 | 0.156 | 0 |
+| S14 | C14 | 0.141 | 0.143 | 0.088 | 0 |
+| S15 | C15 | 0.210 | 0.260 | 0.176 | 0 |
+
+By word-set, all 30 are at or under 0.21 (largest 0.210: 4.b S15; 0.208: 3.c S02; 0.204: S01, S11). Shared options: at most one (3.c S08, the one shared option). By all-words (multiset), seven items exceed or touch 0.21 (S3c-E, S4b-G).
+
+**Key agreement.** 67 of 67 against my blind answers. Keyed text read next to `why`, `how`, hints and clue for all 30 core, 30 similar and 7 Together items (the engine also marks every key correct in the browser run below). `why` and `how` agree with the keys everywhere; the first review's wrong `how` (C13 "dry hair") is fixed ("takes off their shoes, flops down by a lamp, closes their eyes"). The only text/key mismatch is M3c-A (option labels).
+
+**Hand recount of live choices after clue/H1, H2 and H3, all 30 core items.** The engine never rules out choices (`hint()` only reveals text; `ruleOut` is not called on hints, and the browser run shows the same live count after each hint), so the counts follow the hint prose. Clue/H1 and H2 remove nothing in any item.
+
+| 3.c core | Choices | After H3 | 4.b core | Choices | After H3 |
+|---|---|---|---|---|---|
+| C01 | 4 | 3 | C01 order | 4 lines | pair order fixed, rhyme still to place |
+| C02 | 3 + 3 | 2 + 3 | C02 | 4 | 3 |
+| P6 | 4 | 3 | P5 | 4 | 3 |
+| P5 order | 5 | 1 placed (last) | C04 | 3 + 3 | 2 + 3 |
+| P4 | 4 | 3 | P6 | 4 | **2** |
+| C06 | 4 | 3 | C06 | 4 | 3 |
+| C07 (pick 2) | 5 | 4 | C07 | 5 | 4 |
+| C08 | 3 + 3 | 3 + 2 | C08 match | 3 rows | method only |
+| C09 (pick 2) | 6 | 4 | C09 | 5 | 4 |
+| C10 | 4 | 3 | C10 | 4 | **2** |
+| C11 match | 4 rows | 3 (row 4 cued) | C11 (pick 2) | 5 | 4 |
+| C12 | 3 + 3 | 3 + 2 | C12 | 4 | 3 |
+| C13 (pick 2) | 5 | 4 | C13 ebsr | 4 + 4 | 4 + 3 (2 after H2) |
+| C14 ebsr | 4 + 4 | 3 + 4 | C14 | 3 + 3 | 2 + 3 |
+| C15 | 4 | 3 | C15 (pick 2) | 5 | 4 |
+
+No item is narrowed to the key. The closest calls are 4.b P6, C10 and C13 Part B (two live; S4b-C, S4b-D). No hint echoes the key's wording: the only hint that names key-related content is C01 (4.b) H3, which tells the child the stove comes first (it is a scaffold, not the answer; the rhyme work remains).
+
+**Word-match keys.** None. Keys share words with their passages, and so do the distractors (3.c C01, C15, S15; 4.b C10).
+
+**Ladders pointing at the key.** None (H1 = clue everywhere; H2 names a place to look; H3 removes one or two distractors).
+
+**Order items.** 3.c P5: unique ("it" needs the corner first). 3.c S04: **two valid orders** (M3c-B). 4.b C01: one valid order (N4b-C). 4.b S01: one valid order. 3.c P5/S04 hint 3 places one sentence.
+
+**Slant rhymes.** 4.b S10 "around/barn": clean non-rhyme. S04 "eyes" and "street" are exact rhymes with nonsense meanings (keyed against). S05 "sound/sound" is an identical rhyme (N4b-D). C07 "know/school" is a clear non-rhyme. "pear/chair", "hello/below", "wide/inside", "chin/begin", "cold/gold" are exact rhymes.
+
+**Dropdown poems.** C04 and C14 (screenshots at 390 x 844) show " / " between lines; blanks sit inline at the line ends. Readable.
+
+**Duplicates.** `dup.js`, `dup2.js` compared every string of both lessons with 3.a, 4.a and every other file under `js/data`. Hint and `why` boilerplate matches are by design. Content hits: P6 chin line (M4b-A), S08 snail line (M4b-B), p3 bus scene (S4b-A), Elm Street (S3c-C), S07 reasoning (S3c-B), P5 reading corner (S3c-D). Dance Class, choir (as a draft topic), moon watch, game night, buddy bench, crossing sign: no match elsewhere. 3.c recess is also the topic of other SS/R items only as a prop. Form A tests (`T1`-`T6`) share no option with core or similar items; 3.c T4 shares only the stem sentence "Sentence 10 is a weak conclusion."
+
+**Standards and points.** 3.c official wording ("introduce the topic, state an opinion, supply reasons... linking words (because, therefore, since, for example)... concluding statement") is covered by C01, C06/C11, C07/C09/C14, C02/C08/C12/C13, C05-style conclusions (P4, C10, C14). 4.b official wording (rhyme in at least two stanzas for an intended effect) is covered by C01, C02, C04, C06-C08, C10, C12, C14, C15; see S4b-F. Points: choose-two, ebsr, order, match, two-blank dropdown = 2; mc and single hottext = 1. DOK values are sensible. Grade 3 suitability: vocabulary and syntax are grade 3 (the longest words are "explode", "circles", "blossom"-level).
+
+**Facts.** The claims in the items are plain language facts: "rumble" and "whistle" as sound words (https://prod-bytebunny.merriam-webster.com/dictionary/rumble, https://www.grammarly.com/blog/literary-devices/onomatopoeia/), "pear/chair", "wide/inside" and "hello/below" as rhymes (checked by sound, not by a source), the moon changing shape from week to week and "the moon is much smaller than the sun" (true as a decoy statement). No invented people or schools are real; "Riverbend", "Hillcrest" appear in other T-lessons as names of fictional schools (reuse, not a problem).
+
+## S6. Browser check (390 x 844, Playwright, `node verification/serve.js /home/claude/pp-content 8791`, server killed by pid)
+
+- All 15 core items of each lesson (three sets of five, via `#skill/<code>/try`): the key (set through the engine) is marked "That's right" in 30 of 30; no page errors; the only console errors are the Google Fonts requests that the harness blocks on purpose.
+- `scrollWidth` equals `clientWidth` (390) on every item: no horizontal scroll.
+- Hints: three hints appear in order and the number of live choices does not change after any hint (consistent with the recount above).
+- Screens looked at: 3.c C09 (hottext, six sentences, passage and Question tabs), 4.b C01 (order, empty slots then four lines), 4.b C04 and C14 (dropdown poems with " / " separators, blank selects inline), plus passage tabs. Layout is fine at phone width. New in this round: nothing wrong with C09, C11, C13, C14 (3.c) or C01, C06, C07, C11, C13, C14 (4.b); the defects are in text (S09 labels, S04 order, P6 and S08 duplicates).
+
+## S7. Order of work for the author
+
+1. MUST: S09 option labels (3.c); S04 antecedent (3.c); P6 line and S12 echo (4.b); S08 snail row (4.b).
+2. SHOULD, content: C09 sentence (8); C07 prompt wording (4.b); C13 Part B distractor (4.b); P6/C10 hint 3 (4.b); Elm Street and S07 overlap with 3.a (3.c); p3 bus scene (4.b).
+3. SHOULD, measurement: S01 (3.c), S08/S15/S04 (4.b) all-words overlap.
+4. SHOULD, teaching: add Learn It examples for linking-word gaps (3.c) and for action/sound words and feeling (4.b).

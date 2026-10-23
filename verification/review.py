@@ -375,12 +375,12 @@ with sync_playwright() as p:
 
     # ---------------- R.19 RR-04: the question navigator shows every button at the seven viewports ----------------
     nav_bad = []
+    q = page(b, 1366, 900); ready(q, "#review")
+    nav_id = q.evaluate("(()=>{PP_REVIEW.build();return Object.keys(PP.byId).filter(k=>/^(RV|CR)-/.test(k)&&PP.byId[k].items.length<=12).sort((a,c)=>PP.byId[c].items.length-PP.byId[a].items.length)[0]})()")
+    q.close()
     for (w, h) in VIEWPORTS:
-        q = page(b, w, h); ready(q, "#play/CR-lit/test"); q.reload(); q.wait_for_timeout(700)
-        try:
-            q.wait_for_function("PP_PLAYER.state().total>0", timeout=5000)
-        except Exception:
-            ready(q, "#std/3.T.T.1"); q.click("#std-review .rv-start"); q.wait_for_timeout(300)
+        q = page(b, w, h); ready(q, "#play/" + nav_id + "/test"); q.reload(); q.wait_for_timeout(700)
+        q.wait_for_function("PP_PLAYER.state().total>0", timeout=5000)
         m = q.evaluate("""(()=>{const n=document.getElementById('q-nav');if(!n||n.hidden)return null;const b=[...n.querySelectorAll('.qn-btn')],r=n.getBoundingClientRect();
            return {count:b.length,scrolls:n.scrollWidth>n.clientWidth+1,wraps:getComputedStyle(n).flexWrap==='wrap',
              clipped:b.filter(x=>{const c=x.getBoundingClientRect();return c.right>r.right+1||c.left<r.left-1}).length,page:document.documentElement.scrollWidth-innerWidth}})()""")
