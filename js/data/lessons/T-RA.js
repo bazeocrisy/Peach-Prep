@@ -9,12 +9,13 @@ PP.addLesson({
       "Start with question words like who, what, where, when, why and how. They lead to bigger answers than yes-or-no questions.",
       "Stay on your topic. A question about cats will not help a report about bees.",
       "A question like \"Which pet is best?\" asks for an opinion, so it has no one right answer. Ask about facts instead.",
-      "After you learn something, ask a new question to dig deeper into it."
+      "After you learn something, ask a new question. A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new, to learn more."
     ],
     words: [
       { term: "topic", means: "what your research is about" },
       { term: "research", means: "looking for facts to learn about a topic" },
-      { term: "dig-deeper question", means: "a new question that grows out of something you just learned" }
+      { term: "dig-deeper question", means: "a new question that grows out of something you just learned" },
+      { term: "clarifying question", means: "a question that clears up a word or idea you read but did not understand" }
     ],
     example: {
       label: "Example: the topic is sharks",
@@ -52,6 +53,17 @@ PP.addLesson({
         "Turn that wondering into a new question that starts with a question word."
       ],
       answer: "A good dig-deeper question is \"What happens to the nuts that squirrels never dig up?\""
+    },
+    /* B3 (author b3b): a clarifying-question example (coverage matrix: "clarify" was not modelled). */
+    {
+      show: ["In winter, an arctic fox has thick white fur. In spring, it sheds its winter coat and grows a thin brown one."],
+      ask: "Mo read this and did not understand the word sheds. What clarifying question can he ask? Once he understands, what dig-deeper question could he ask?",
+      steps: [
+        "Find the part that is not clear. Mo knows what fur is, but not what sheds means.",
+        "Ask a clarifying question about just that part: \"What does it mean when an animal sheds its coat?\"",
+        "Once he learns that the old fur falls out, he can ask something new that the text does not tell. That is a dig-deeper question."
+      ],
+      answer: "Clarifying question: \"What does it mean when an animal sheds its coat?\" Dig-deeper question: \"Why does the fox grow a white coat for winter and a brown one for summer?\""
     }
   ],
   write: {
@@ -64,7 +76,7 @@ PP.addLesson({
     ],
     rows: 5
   },
-  parent: "When your child wonders about something, write the question down together. Look up the answer in a library book, then ask, \"What do we want to know next?\"",
+  parent: "When your child wonders about something, write the question down together. Look up the answer in a library book, then ask, \"What do we want to know next?\" Choosing a topic and writing questions about it is checked by you, with the writing checklist or the sample on the last practice set. The site never scores that writing.",
   passages: [
     { id: "p1", title: "Busy Honeybees", genre: "Informational text",
       paragraphs: [
@@ -81,6 +93,23 @@ PP.addLesson({
         ["Owls have large eyes that help them see in dim light.", "But an owl cannot move its eyes the way you can.", "Instead, it turns its whole head to look around.", "An owl can turn its head much farther than a person can."],
         ["Many owls fly almost without a sound.", "Their feathers have soft edges that quiet the air as they flap.", "A mouse may not hear an owl coming."],
         ["Owls often swallow small animals whole.", "Later, they cough up a small ball of fur and bones called a pellet.", "Scientists study pellets to learn what owls eat."]
+      ] },
+    /* B3 (expansion 2026-10-22, author b3b): p3 is used only by core set 2, p4 only by core set 3.
+       Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "Hic! Why We Hiccup", genre: "Informational text",
+      paragraphs: [
+        ["Have you ever had the hiccups?", "Babies get them, kids get them, and grown-ups get them, too.", "Even some animals, like dogs and cats, can hiccup."],
+        ["A hiccup starts with your diaphragm.", "The diaphragm is a big muscle under your lungs.", "It helps you breathe in and out."],
+        ["Sometimes the diaphragm suddenly squeezes on its own.", "You gulp in air very fast.", "Then the opening between your vocal cords snaps shut.", "That snap makes the hic sound."],
+        ["Eating too fast can bring on hiccups.", "So can drinking a fizzy drink or getting very excited."],
+        ["Most hiccups stop on their own after a few minutes.", "Some people hold their breath or sip cold water to try to stop them.", "Scientists are still not sure why our bodies hiccup at all."]
+      ] },
+    { id: "p4", title: "Older Than the Dinosaurs", genre: "Informational text",
+      paragraphs: [
+        ["On spring nights, horseshoe crabs crawl out of the ocean onto sandy beaches.", "They have lived on Earth for more than 400 million years.", "They were here long before the first dinosaurs."],
+        ["A horseshoe crab is not really a crab.", "It is more closely related to spiders and scorpions.", "Its hard shell is shaped like a horseshoe, and that is how it got its name."],
+        ["Each spring, a female digs nests in the wet sand.", "She lays thousands of tiny green eggs.", "Shorebirds called red knots stop at the beaches to eat the eggs.", "The birds need this food to finish their long trip north."],
+        ["Horseshoe crabs help people, too.", "Their blood is blue!", "Doctors use something in it to check that medicines and shots are free of harmful germs."]
       ] }
   ],
   practice: [
@@ -138,6 +167,449 @@ PP.addLesson({
       clue: "Read each question, then look for a sentence that answers it. If you cannot find one, it is not answered.",
       why: "The article answers \"What is the queen bee's job?\" (her job is to lay eggs) and \"What shape is each wax cell?\" (each cell has six sides). It never tells how big a queen is, where bees go in winter, or how people build hives." }
   ],
+  /* ---------- B3 (expansion 2026-10-22, author b3b; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen items in three sets of five. Set 1 reuses the Try items P5 and P4 by { ref } and adds C02 and
+     C04 on "Busy Honeybees" and C05 on a short stem. Set 2 uses p3 ("Hic! Why We Hiccup", science) plus two
+     short stems (sports, school). Set 3 uses p4 ("Older Than the Dinosaurs", nature) plus short stems
+     (community, family) and one constructed response.
+     The official wording asks for questions about a SELF-SELECTED topic. A selected-response item can only show
+     that a child recognises a good question about a topic someone else chose, so that part is shown by C14 (cr,
+     never scored; the child and a grown-up compare it with a sample and a checklist) and by the existing
+     write task, which a grown-up checks. Nothing here scores open-ended work automatically.
+     Practice Together is P1-P3. Hints and Show me how for P1-P5 are in addons below.
+     Author log: docs/expansion-2026-10-22/batches/B3-b3b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-RA1a-P5" },
+      { id: "SK-RA1a-C02", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p1"],
+        stem: ["After reading \"Busy Honeybees,\" Maya wants to research how worker bees find their food."],
+        prompt: "Build a research question for Maya. Choose the best answer for each blank.",
+        text: "{0} worker bees {1}?",
+        slots: [
+          { options: ["How do", "Do", "Is it true that"], answer: 0 },
+          { options: ["choose which flowers to visit", "build their wax cells", "look the cutest of all bugs"], answer: 0 }
+        ],
+        clue: "A research question asks about your topic and leads to an answer you can look up.",
+        hints: [
+          "A research question asks about your topic and leads to an answer you can look up.",
+          "Say Maya's topic in your own words. Then try each choice in each blank and read the whole question out loud.",
+          "\"Build their wax cells\" is a fact about bees, but it is not about how worker bees find their food. Check the other choices in each blank."
+        ],
+        how: [
+          "Maya's topic is how worker bees find their food.",
+          "\"Do\" and \"Is it true that\" start questions that can be answered with yes or no. \"How do\" leads to a bigger answer with facts.",
+          "Choosing which flowers to visit is part of finding food. Looking cute is an opinion, and building wax cells is a different topic.",
+          "The answers are How do and choose which flowers to visit: \"How do worker bees choose which flowers to visit?\""
+        ],
+        misconception: "A common mix-up is choosing a yes-or-no start. \"Do worker bees ...\" can be answered with one word, so Maya would learn very little.",
+        why: "The answers are How do and choose which flowers to visit. \"How do worker bees choose which flowers to visit?\" is on Maya's topic and needs a fact answer. Do and Is it true that lead to yes or no, wax cells are a different topic, and looking the cutest is an opinion." },
+      { ref: "SK-RA1a-P4" },
+      { id: "SK-RA1a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: ["p1"],
+        stem: ["Ana read this sentence in \"Busy Honeybees\": \"As they move from flower to flower, they carry pollen.\"", "She did not know what pollen is. But the question she wrote down was \"Why do bees like flowers?\""],
+        prompt: "Which question should Ana ask instead, to clear up what she did not understand?",
+        choices: [
+          { text: "What is pollen, and what does it look like?", correct: true },
+          { text: "How do bees carry pollen on their bodies from flower to flower?" },
+          { text: "Why do plants need pollen to make fruit and seeds?" },
+          { text: "Do bees carry pollen to every flower in a garden?" }
+        ],
+        clue: "A clarifying question clears up a word or idea you read but did not understand.",
+        hints: [
+          "A clarifying question clears up a word or idea you read but did not understand.",
+          "Reread the sentence Ana read, and find the word she did not know.",
+          "The question about plants making fruit asks something new to learn more, so it digs deeper instead of clearing up the word. Check each choice that is left."
+        ],
+        how: [
+          "Ana did not know what pollen is. A clarifying question asks about exactly that.",
+          "The answer is \"What is pollen, and what does it look like?\"",
+          "How bees carry pollen and whether they carry it to every flower both skip over the part she did not understand. Why plants need pollen digs deeper, which is better once she knows the word."
+        ],
+        misconception: "A common mix-up is asking a dig-deeper question before clearing up the confusing word. First make sure you understand what you read.",
+        why: "The answer is \"What is pollen, and what does it look like?\" It asks about the word Ana did not know. The other questions use the word pollen as if she already understood it: how bees carry it, whether they carry it everywhere, and why plants need it." },
+      { id: "SK-RA1a-C05", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+        stem: ["Dion chose his own topic for a library project: how trains stay on their tracks.", "He wrote five questions."],
+        prompt: "Which TWO questions fit Dion's topic? Choose two questions.",
+        options: [
+          "How do train wheels stay on the rails?",
+          "What keeps a train from tipping over on a sharp curve?",
+          "When was the first train built in Georgia?",
+          "How do airplanes stay up in the sky?",
+          "How much does a ticket for a long train ride cost?"
+        ],
+        answer: [0, 1], pick: 2,
+        clue: "A question fits your topic when its answer would help you learn about that exact topic.",
+        hints: [
+          "A question fits your topic when its answer would help you learn about that exact topic.",
+          "Say Dion's topic in your own words. Then read each question. Choose two.",
+          "The airplane question asks how something stays up, but it is about airplanes, not trains. Check each question that is left."
+        ],
+        how: [
+          "Dion's topic is not just trains. It is how trains stay on their tracks.",
+          "Wheels staying on the rails and not tipping over on a curve are both about staying on the track.",
+          "The answers are \"How do train wheels stay on the rails?\" and \"What keeps a train from tipping over on a sharp curve?\"",
+          "The first train in Georgia and ticket prices are about trains, but not about staying on the tracks. Airplanes are a different topic."
+        ],
+        misconception: "A common mix-up is choosing any question with the right word in it, like train. Check that it fits the exact topic.",
+        why: "The answers are \"How do train wheels stay on the rails?\" and \"What keeps a train from tipping over on a sharp curve?\" Both are about how trains stay on their tracks. The first train in Georgia and ticket prices are about trains but not that topic, and airplanes are a different topic." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-RA1a-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p3"],
+        prompt: "Jamal's research question is \"Which living things can get the hiccups?\" Which TWO sentences in the article answer his question? Choose two sentences.",
+        targets: ["p3:1:1", "p3:1:2", "p3:1:3", "p3:2:1", "p3:5:1", "p3:5:2"],
+        answer: ["p3:1:2", "p3:1:3"], pick: 2,
+        clue: "To check whether a text answers your question, find the exact sentences that give the answer.",
+        hints: [
+          "To check whether a text answers your question, find the exact sentences that give the answer.",
+          "Look through the article for each sentence that tells who or what gets hiccups. Choose two.",
+          "The first sentence asks the reader a question. It does not tell who gets hiccups. Check the other sentences."
+        ],
+        how: [
+          "Jamal wants to know which living things get hiccups, so the answer must name them.",
+          "One sentence names babies, kids and grown-ups. The next one names animals like dogs and cats.",
+          "The answers are \"Babies get them, kids get them, and grown-ups get them, too.\" and \"Even some animals, like dogs and cats, can hiccup.\"",
+          "The sentence about people holding their breath tells what people do to stop hiccups, not who gets them."
+        ],
+        misconception: "A common mix-up is choosing a sentence that only uses a word from the question. Check that it really gives the answer.",
+        why: "The answers are \"Babies get them, kids get them, and grown-ups get them, too.\" and \"Even some animals, like dogs and cats, can hiccup.\" Together they name the living things that get hiccups. The other sentences tell what a hiccup is, how long it lasts and what people try, not who gets them." },
+      { id: "SK-RA1a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p3"], pick: 2,
+        prompt: "Kim read the whole article. Which TWO questions are clarifying questions about something in it?",
+        choices: [
+          { text: "What are vocal cords, and where are they in my body?", correct: true },
+          { text: "What does the article mean when it says the diaphragm squeezes \"on its own\"?", correct: true },
+          { text: "Do horses get the hiccups too, or only dogs and cats?" },
+          { text: "Can a person get the hiccups while sleeping at night?" },
+          { text: "Are hiccups the most annoying thing that can happen?" }
+        ],
+        clue: "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+        hints: [
+          "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+          "For each question, find the part of the article it is about, if there is one. Choose two.",
+          "The question about the most annoying thing asks for an opinion, so it is not a clarifying question. Check each question that is left."
+        ],
+        how: [
+          "The article uses the words vocal cords but never tells what they are. A question about them clears that up.",
+          "It also says the diaphragm squeezes \"on its own,\" which may be hard to picture. Asking what that means clears it up.",
+          "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes 'on its own'?\"",
+          "The questions about horses and about sleeping ask something new that the article does not cover, so they dig deeper."
+        ],
+        misconception: "A common mix-up is thinking every question about the article clarifies it. A clarifying question is about a part you read but did not understand.",
+        why: "The answers are \"What are vocal cords, and where are they in my body?\" and \"What does the article mean when it says the diaphragm squeezes 'on its own'?\" Both are about parts of the article that may not be clear. The horse and sleeping questions dig deeper, and the most annoying thing is an opinion." },
+      { id: "SK-RA1a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: ["p3"],
+        stem: ["Jamal read paragraph 4. Then he wrote this dig-deeper question: \"Can eating too fast bring on hiccups?\"", "But the article already answers that question."],
+        prompt: "Which question would be a better dig-deeper question for Jamal?",
+        choices: [
+          { text: "Why does eating too fast make the diaphragm squeeze?", correct: true },
+          { text: "Can drinking a fizzy drink bring on hiccups, too?" },
+          { text: "Why do people yawn when they get very sleepy?" },
+          { text: "Is it rude to eat your food too fast at the table?" }
+        ],
+        clue: "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+        hints: [
+          "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+          "Reread paragraph 4, and say what Jamal learned there.",
+          "Paragraph 4 already says that fizzy drinks can bring on hiccups, so that question would not teach Jamal anything new. Check each choice that is left."
+        ],
+        how: [
+          "Jamal learned that eating too fast can bring on hiccups. The article does not say why.",
+          "A good dig-deeper question stays on that idea and asks what the article leaves out.",
+          "The answer is \"Why does eating too fast make the diaphragm squeeze?\"",
+          "Yawning is a new question, but it leaves the idea he just learned. Whether eating fast is rude asks for an opinion."
+        ],
+        misconception: "A common mix-up is choosing any new question. A dig-deeper question grows out of what you just learned.",
+        why: "The answer is \"Why does eating too fast make the diaphragm squeeze?\" It stays on what Jamal learned and asks what the article does not explain. The fizzy drink question is already answered, yawning is a different idea, and being rude is an opinion." },
+      { id: "SK-RA1a-C09", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+        stem: ["Imani plays basketball. She chose her own research topic: why a basketball bounces.", "Her first question was \"Is basketball the best sport?\""],
+        prompt: "Which question should Imani write instead, so that she can research her topic?",
+        choices: [
+          { text: "What makes a basketball bounce back up after it hits the floor?", correct: true },
+          { text: "Who is the best basketball player of all time?" },
+          { text: "Does a basketball bounce when you drop it on the floor?" },
+          { text: "Do I like playing basketball more than playing soccer?" }
+        ],
+        clue: "A research question asks something you can find out by reading, watching or asking an expert.",
+        hints: [
+          "A research question asks something you can find out by reading, watching or asking an expert.",
+          "Say Imani's topic in your own words. Then read each choice.",
+          "\"Do I like playing basketball more than playing soccer?\" is about Imani's own feelings, so no book could answer it. Check each choice that is left."
+        ],
+        how: [
+          "Imani's topic is why a basketball bounces. \"Is basketball the best sport?\" asks for an opinion, and it is not about bouncing.",
+          "A better question is about bouncing and has a fact answer that she can look up.",
+          "The answer is \"What makes a basketball bounce back up after it hits the floor?\"",
+          "The best player of all time is an opinion, even though it starts with who. Whether a ball bounces is a yes-or-no question that she already knows."
+        ],
+        misconception: "A common mix-up is thinking a question that starts with who, what or how must ask for facts. \"Who is the best ...?\" still asks for an opinion.",
+        why: "The answer is \"What makes a basketball bounce back up after it hits the floor?\" It is on her topic and asks for facts. The best player is an opinion, whether a ball bounces is a yes-or-no question she knows, and what she likes is about her feelings." },
+      { id: "SK-RA1a-C10", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: [],
+        stem: ["Nia and Leo are researching how lunch is made at their school.", "Nia asked: \"How do the cooks make lunch for 400 students in one morning?\"", "Leo asked: \"Do the cooks make our lunch at school?\""],
+        prompt: "Whose question would help them more with their research, and why?",
+        choices: [
+          { text: "Nia's, because its answer would be full of facts that they do not know yet.", correct: true },
+          { text: "Leo's, because a yes-or-no answer is quick and easy to find." },
+          { text: "Leo's, because it is about their own school, so it fits the topic better." },
+          { text: "Nia's, because it has a number in it, so it must ask for a fact." }
+        ],
+        clue: "A good research question leads to an answer that teaches you something new.",
+        hints: [
+          "A good research question leads to an answer that teaches you something new.",
+          "Read both questions again. Then read the reason in each choice, not only the name.",
+          "Having a number in it does not make a question better. Check each choice that is left."
+        ],
+        how: [
+          "Leo's question can be answered with one word, yes or no, so they would learn very little.",
+          "Nia's question needs a long answer about steps, tools and timing. That teaches them something new.",
+          "The answer is \"Nia's, because its answer would be full of facts that they do not know yet.\"",
+          "Both questions are about their own school, and a quick answer is not the goal of research."
+        ],
+        misconception: "A common mix-up is picking the question that is easiest to answer. Research questions should lead to answers that teach you more.",
+        why: "The answer is \"Nia's, because its answer would be full of facts that they do not know yet.\" Leo's yes-or-no question would teach them very little. Both questions are about their school, and a number does not make a question better." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-RA1a-C11", type: "order", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: ["p4"],
+        prompt: "Ava asked four questions about horseshoe crabs. Each new question grew out of the answer to the one before it. Put her questions in order, from first to last.",
+        steps: [
+          "When do horseshoe crabs come out of the ocean onto beaches?",
+          "What do horseshoe crabs do on the beach in the spring?",
+          "What animals eat horseshoe crab eggs?",
+          "How far do red knots fly on their trip north?"
+        ],
+        clue: "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
+        hints: [
+          "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
+          "Find the question that could start the chain. Then use the article to find its answer, and look for the question that grows out of that answer.",
+          "The question about red knots flying north could only come after Ava learned about red knots. Use the article to put the other three in order."
+        ],
+        how: [
+          "First, Ava asks when horseshoe crabs come onto beaches. The article answers: on spring nights.",
+          "That answer leads to what they do on the beach in the spring. The article answers: the females dig nests and lay eggs.",
+          "The eggs lead to what animals eat them: red knots. Then she asks how far red knots fly north, which the article does not tell.",
+          "The order is: when they come onto beaches, what they do there in the spring, what eats the eggs, how far red knots fly."
+        ],
+        misconception: "A common mix-up is putting the biggest or most interesting question first. Each question must grow out of the answer before it.",
+        why: "The order is: when horseshoe crabs come onto beaches, what they do there in the spring, what animals eat the eggs, and how far red knots fly north. Each answer in the article (spring nights, eggs, red knots) leads to the next question, and the last one goes past the article." },
+      { id: "SK-RA1a-C12", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p4"],
+        stem: ["Ava's next question is \"How big can a horseshoe crab grow?\""],
+        prompt: "Complete the sentence about Ava's research. Choose the best answer for each blank.",
+        text: "Ava will need {0}, because the article {1}.",
+        slots: [
+          { options: ["another source", "to read paragraph 2 again", "to ask a friend what they think"], answer: 0 },
+          { options: ["never tells how big they grow", "tells it in paragraph 2", "is too old to trust"], answer: 0 }
+        ],
+        clue: "Before you research, check whether the text you have already answers your question.",
+        hints: [
+          "Before you research, check whether the text you have already answers your question.",
+          "Look through every paragraph of the article for anything about how big a horseshoe crab is.",
+          "Asking a friend what they think gives an opinion, not a fact. Check the other choices in each blank."
+        ],
+        how: [
+          "Paragraph 2 tells what the shell is shaped like, but not how big the crab is. No other paragraph tells its size either.",
+          "When a text does not answer your question, you need another source, such as a science book or an expert.",
+          "The answers are another source and never tells how big they grow.",
+          "Nothing in the article says it is old or hard to trust. The problem is only that it does not cover size."
+        ],
+        misconception: "A common mix-up is thinking a paragraph about the shell must also tell its size. Check that the words really answer your question.",
+        why: "The answers are another source and never tells how big they grow. The article tells about the shell's shape, but never the crab's size, so Ava must look somewhere else. Paragraph 2 does not answer it, a friend's opinion is not a fact, and nothing says the article cannot be trusted." },
+      { id: "SK-RA1a-C13", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+        stem: ["Omar read this sign at Stone Creek Park:", "\"This stone bridge was built in 1936 by young workers in the CCC. They cut the stone from the hill behind you.\""],
+        prompt: "Omar wrote four questions. Is each one a clarifying question or a dig-deeper question? Match each question.",
+        cols: ["clears up something I did not understand", "digs deeper to learn more"],
+        rows: [
+          { text: "What does CCC stand for?", answer: 0 },
+          { text: "What other bridges did these workers build in Georgia?", answer: 1 },
+          { text: "Which hill does the sign mean when it says \"the hill behind you\"?", answer: 0 },
+          { text: "How did the workers move such heavy stones without big trucks?", answer: 1 }
+        ],
+        clue: "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+        hints: [
+          "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+          "Reread the sign, and find any words or parts that a reader might not understand.",
+          "The question about what CCC stands for is about letters on the sign that the sign never explains. Decide the other three the same way."
+        ],
+        how: [
+          "The sign uses the letters CCC but never says what they mean, and \"the hill behind you\" may not be clear to someone standing there. Questions about those parts clear them up.",
+          "Other bridges and how the stones were moved are not on the sign at all. Those questions ask something new.",
+          "Clarifying: \"What does CCC stand for?\" and \"Which hill does the sign mean when it says 'the hill behind you'?\" Dig deeper: \"What other bridges did these workers build in Georgia?\" and \"How did the workers move such heavy stones without big trucks?\""
+        ],
+        misconception: "A common mix-up is calling any question about the sign a clarifying question. Clarifying questions are about parts you read but did not understand.",
+        why: "\"What does CCC stand for?\" and the question about which hill clear up parts of the sign that are not clear. The questions about other bridges and moving the stones dig deeper, because the sign does not talk about those things at all." },
+      { id: "SK-RA1a-C14", type: "cr", dok: 3, std: ["3.T.RA.1.a"], passages: [], rows: 5,
+        prompt: "Choose a topic YOU want to learn about. Write your topic. Then write one research question about it. Last, write one more question that clears up something or digs deeper into your first question.",
+        sample: "My topic: why cats purr. My research question: How does a cat make its purring sound? My next question: Do big cats, like lions, purr too?",
+        criteria: [
+          "I wrote a topic that I chose myself.",
+          "My research question asks about facts I could look up, not about what people like best.",
+          "My research question starts with a word like how, why or what, so the answer is more than yes or no.",
+          "My last question clears up something or digs deeper into my first question."
+        ],
+        clue: "Pick something you really wonder about, like an animal, a place, a sport or how a thing works.",
+        hints: [
+          "Pick something you really wonder about, like an animal, a place, a sport or how a thing works.",
+          "Turn your wondering into a question that starts with how, why or what. Check that a book or an expert could answer it.",
+          "For your last question, pretend you found the answer to your first one. What would you still wonder about? You can start like this: Now I want to know ___."
+        ],
+        how: [
+          "Choose a topic that you care about. It is your choice, so there is no wrong topic.",
+          "Write a question about your topic that a book, a video or an expert could answer with facts.",
+          "Think about what the answer might teach you, and write a new question that grows out of it, or one that clears up a word you might not know.",
+          "Check your work with the list. One good answer follows, and other answers can also be right."
+        ],
+        why: "Many answers can be right. A good answer names a topic the writer chose, asks a fact question that needs more than yes or no, and adds a second question that clears up something or digs deeper into the first. A grown-up can look at it with you; it is never scored." },
+      { id: "SK-RA1a-C15", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [], pick: 2,
+        stem: ["Zuri's great-grandma made a quilt by hand long ago.", "Zuri chose her own topic: how people made quilts long ago."],
+        prompt: "Which TWO questions would be good research questions for Zuri's topic?",
+        choices: [
+          { text: "How did people sew quilts by hand before there were sewing machines?", correct: true },
+          { text: "Where did families long ago get the cloth for their quilts?", correct: true },
+          { text: "Did people long ago sleep under quilts on cold nights?" },
+          { text: "Is a quilt nicer to sleep under than a plain blanket?" },
+          { text: "Who is the best quilt maker in all of Georgia?" }
+        ],
+        clue: "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
+        hints: [
+          "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
+          "Say Zuri's topic in your own words. Then read each question. Choose two.",
+          "\"Did people long ago sleep under quilts on cold nights?\" can be answered with yes, and Zuri already knows that from her great-grandma's quilt. Check each question that is left."
+        ],
+        how: [
+          "Zuri's topic is how people made quilts long ago.",
+          "Sewing by hand and getting cloth are both parts of making a quilt, and a book or an expert could answer them with facts.",
+          "The answers are \"How did people sew quilts by hand before there were sewing machines?\" and \"Where did families long ago get the cloth for their quilts?\"",
+          "Nicer and best tell what people think, so people would give different answers. Those are opinion questions, even the one that starts with who."
+        ],
+        misconception: "A common mix-up is choosing a question because it starts with who or what. \"Who is the best ...?\" still asks for an opinion.",
+        why: "The answers are \"How did people sew quilts by hand before there were sewing machines?\" and \"Where did families long ago get the cloth for their quilts?\" Both ask for facts about making quilts long ago. Sleeping under quilts is a yes-or-no question she knows, and nicer and best are opinions." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. Each `like` lists only
+     the core items it really practises (same component and task). */
+  similar: [
+    { id: "SK-RA1a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C04", "SK-RA1a-C07"],
+      stem: ["Mila read this at a museum: \"This fossil shows a fish that lived in a sea that once covered part of Georgia.\"", "She stopped. She did not know what kind of thing a fossil is."],
+      prompt: "Which question would clear up what Mila did not understand?",
+      choices: [
+        { text: "What exactly is a fossil, and how does one form?", correct: true },
+        { text: "How old is the fish fossil in this museum?" },
+        { text: "Which museum in Georgia is the most fun to visit?" },
+        { text: "Do fish still live in the sea near Georgia today?" }
+      ],
+      clue: "A clarifying question clears up a word or idea you read but did not understand.",
+      hints: [
+        "A clarifying question clears up a word or idea you read but did not understand.",
+        "Find the word Mila did not know. Then read each choice.",
+        "Which museum is the most fun asks for an opinion, so it cannot clear anything up. Check each choice that is left."
+      ],
+      how: [
+        "Mila did not know what a fossil is.",
+        "A clarifying question asks about exactly that part.",
+        "The answer is \"What exactly is a fossil, and how does one form?\" The age of the fossil and fish in the sea today are questions that dig deeper or go to a new idea."
+      ],
+      why: "The answer is \"What exactly is a fossil, and how does one form?\" It asks about the word she did not know. The age of the fossil and fish living today are new questions, and the most fun museum is an opinion." },
+    { id: "SK-RA1a-S02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-P4", "SK-RA1a-C08", "SK-RA1a-C11"],
+      stem: ["Kai read that a baseball has 108 stitches.", "The stitches help a pitcher grip the ball."],
+      prompt: "Which question would help Kai dig deeper into what he just learned?",
+      choices: [
+        { text: "How do the stitches change the way a thrown ball moves?", correct: true },
+        { text: "How many stitches does a baseball have?" },
+        { text: "Who is the best pitcher on Kai's team this year?" },
+        { text: "How are soccer balls made in a factory?" }
+      ],
+      clue: "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+      hints: [
+        "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+        "Say what Kai just learned in your own words.",
+        "Kai already knows that a baseball has 108 stitches, so asking how many would not teach him anything new. Check each choice that is left."
+      ],
+      how: [
+        "Kai learned that a baseball has 108 stitches that help a pitcher grip it.",
+        "A dig-deeper question stays on the stitches and asks something new about them.",
+        "The answer is \"How do the stitches change the way a thrown ball moves?\" The best pitcher is an opinion, and soccer balls are a different topic."
+      ],
+      why: "The answer is \"How do the stitches change the way a thrown ball moves?\" It stays on the stitches and asks something new. The number of stitches is already known, the best pitcher is an opinion, and soccer balls are a different topic." },
+    { id: "SK-RA1a-S03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C09", "SK-RA1a-C10", "SK-RA1a-C15"],
+      stem: ["Rosa chose her own topic: how a submarine goes down under the water and comes back up."],
+      prompt: "Which question would be the best research question for Rosa's topic?",
+      choices: [
+        { text: "What makes a submarine sink down and then rise back up?", correct: true },
+        { text: "Is riding in a submarine scarier than riding in a plane?" },
+        { text: "Do submarines go under the water?" },
+        { text: "How do whales hold their breath for so long?" }
+      ],
+      clue: "A research question asks about your topic and leads to an answer you can look up.",
+      hints: [
+        "A research question asks about your topic and leads to an answer you can look up.",
+        "Say Rosa's topic in your own words. Then read each choice.",
+        "Whales holding their breath is a fact question, but it is about whales, not submarines. Check each choice that is left."
+      ],
+      how: [
+        "Rosa's topic is how a submarine goes down and comes back up.",
+        "The best question is on that topic and needs a fact answer.",
+        "The answer is \"What makes a submarine sink down and then rise back up?\" Scarier is an opinion, and whether submarines go under water is a yes-or-no question she already knows."
+      ],
+      why: "The answer is \"What makes a submarine sink down and then rise back up?\" It fits her topic and asks for facts. Scarier is an opinion, the yes-or-no question teaches her nothing new, and whales are a different topic." }
+  ],
+  /* Hints and Show me how for the Practice Together items P1-P3 and the core refs P4 and P5. */
+  addons: {
+    "SK-RA1a-P1": {
+      hints: [
+        "A good research question is about your exact topic and needs a real answer, not just yes or no.",
+        "Say Kenji's topic in your own words. Then read each choice.",
+        "Everyone already knows that honey is sweet and sticky, so that question would not teach Kenji anything. Check each choice that is left."
+      ],
+      how: [
+        "Kenji's topic is how honeybees make honey.",
+        "\"Do honeybees make honey?\" is a yes-or-no question he already knows. Where bees build hives is a different topic.",
+        "The answer is \"How do bees turn nectar into honey?\""
+      ] },
+    "SK-RA1a-P2": {
+      hints: [
+        "A text answers a question only if you can point to a sentence that gives the answer.",
+        "Take one question at a time, and look through the article for a sentence that answers it.",
+        "The article never tells how beekeepers keep from getting stung. Check each question that is left."
+      ],
+      how: [
+        "Paragraph 4 says a worker does a special dance that shows the other bees which way to fly.",
+        "The article never tells how long a queen lives or which flowers make the sweetest honey.",
+        "The answer is \"How do bees show other bees where flowers are?\""
+      ] },
+    "SK-RA1a-P3": {
+      hints: [
+        "A research question asks for facts you can look up. If the answer is a feeling or depends on who you ask, it is not a research question.",
+        "For each question, ask: could a book or an expert answer this with facts?",
+        "\"Do I like the taste of honey?\" depends on who you ask, so it is not a research question. Sort the other three the same way."
+      ],
+      how: [
+        "Books and experts can explain why bees visit flowers and how bees make wax.",
+        "Scarier and do I like are about feelings, so people would give different answers.",
+        "Good research questions: why bees visit flowers and how bees make wax. Not research questions: bees being scarier than wasps and liking the taste of honey."
+      ] },
+    "SK-RA1a-P4": {
+      hints: [
+        "A dig-deeper question stays on the idea you just learned and asks something new about it.",
+        "Reread paragraph 4 to see what Rosa already knows about the dance.",
+        "\"Would I be good at dancing like a bee?\" is about Rosa, not about bees. Check each choice that is left."
+      ],
+      how: [
+        "Rosa learned that a worker does a special dance to show other bees where flowers are.",
+        "The article says the dance shows how far to go, but not how it shows that.",
+        "The answer is \"How does the dance show the bees how far to fly?\"",
+        "She already knows that workers dance when they find flowers, and the queen is a different idea."
+      ] },
+    "SK-RA1a-P5": {
+      hints: [
+        "A text answers a question only if you can point to a sentence that gives the answer.",
+        "Take one question at a time. Look through the article for a sentence that answers it. Choose two.",
+        "The article never tells where bees go in the winter. Check each question that is left."
+      ],
+      how: [
+        "Paragraph 2 says the queen's job is to lay eggs.",
+        "Paragraph 3 says each wax cell has six sides.",
+        "The answers are \"What is the queen bee's job?\" and \"What shape is each wax cell?\"",
+        "The article never tells how big a queen is or how people build beehives."
+      ] }
+  },
   test: [
     { id: "SK-RA1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which question can the article \"Hunters of the Night\" answer?",

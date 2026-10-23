@@ -231,3 +231,101 @@ The All About Birds ID page (allaboutbirds.org/guide/Brown_Pelican/id) was block
 | **TS-CC** | **CHANGES REQUIRED** | MUST-1 (C12 hint 3), MUST-2 (C03/P6 hint 3) | none |
 
 Every key is right, and every item has one defensible answer. All passages are within FK 4.5, and nothing leaks into test or testB. Both MUSTs are single-hint edits. MUST-1 also moves one sentence from hint 1 to hint 3.
+
+## 9. Round 2 re-check
+
+**Scope:** the TS-CC MUST fixes (b2c §11) and the SEQ/DESC SHOULD fixes (b2b §11). I re-read the live data, not only the logs. I regenerated `b2rr-ts2/ladder-*.txt` from T-TS.js as last saved at 05:25:34. I wrote nothing outside this file and `b2rr-ts2/`, and ran no git. These items had been seen already, so this round is a ladder and correctness check, not a blind solve.
+
+### 9.1 TS-CC
+
+**CC C12 (MUST-1): cleared.**
+- Hint 1 (and the clue) is now strategy only: "To choose between two things, use a difference that matters for the job."
+- Hint 3 now carries the "true of both" rule-out: "Both boats are moved with paddles, so that fact cannot help her choose. Check each choice that is left against the article."
+- The key-echoing test ("how many people or bags a boat can hold") is gone from every hint.
+- Live choices:
+  - after hint 1: all four
+  - after hint 2: all four (it lists Ms. Grant's needs and points to the difference paragraphs, but names nothing)
+  - after hint 3: the key, "a kayak, because its paddle has a blade at each end" and "a kayak, because most kayaks are closed on top"
+- Both kayak reasons are real differences from the article. Nothing in the ladder says which difference matters, so judging that is still the child's work. The key is unchanged and correct.
+
+**CC C03, ref P6 (MUST-2): cleared.**
+- Hint 3 now rules out "A frog has smooth, wet skin" instead of "Their legs are not the same, either".
+- Live choices (pick two):
+  - after hint 1: the two keys and "Their legs are not the same, either". Hint 1's both-rule removes the two one-animal sentences.
+  - after hint 2: the same three
+  - after hint 3: the same three
+- "Their legs…" stays live: it is about both animals but tells a difference, which is the named misconception.
+- Hint 1's "check who a word like they means" applies to both "They eat…" and "Their legs…", so it does not single out a key.
+- Hint 3 now names a choice that hint 1 has already removed, so it adds no new scaffold. Harmless.
+
+**CC C02 (corrected claim): accurate.** b2c §11 now gives three live choices after hint 3: the two keys and "where they live" (p1:4:2). It no longer counts dry, bumpy skin. That matches NOTE-2. The item passes, narrowly.
+
+**Log check (b2c §11).** Both changes are in the data as described. The three corrections to §10 (C12, C02 and the P5 clue "shown in Together") are accurate. The unaddressed NOTEs (Together P1 `why`, S03 hint 3) are listed with reasons.
+
+### 9.2 TS-SEQ and TS-DESC
+
+**SEQ C02 (SHOULD-1): cleared.**
+- "It tells the last step…" is replaced by "It asks a question, so you know the passage will explain why cream turns into butter."
+- Paragraph 1 does open with a question ("Did you know you can make butter in a jar?"), but the passage tells how, never why. So this is a real near-miss, and the key stays the only defensible answer.
+- Live choices:
+  - after hint 1: all four
+  - after hint 2: the key, the question choice and "what can go wrong". "First step" is out once paragraph 2's "First," is seen.
+  - after hint 3: the key and the question choice
+- How step 4 explains the near-miss. The `why` does not mention it, which is optional.
+- The corrected §10.1 claim in b2b §11 is accurate.
+
+**SEQ S03 (SHOULD-3): cleared. The stem is correct and has exactly one valid fix.**
+- The author was right that my suggested distractor was a no-op in the old stem: sentence 3 already came right after sentence 2. My error.
+- The new stem order is: (1) 1950; (2) 1968; (3) 2001; (4) "Ten years after it opened" = 1960; (5) Today. Each claim is self-consistent:
+  - two classrooms, then six more
+  - the gym in 1968
+  - the old gym became a library in 2001
+- I brute-forced all 20 single moves ("move sentence a right after sentence b") plus every move to the front. Only "Move sentence 4 so it comes right after sentence 1" gives time order (1950, 1960, 1968, 2001, today). That is the key.
+- Live choices:
+  - after hint 2: the key and "4 after 2" (1960 after 1968), plus "5 after 1" until Today is placed
+  - after hint 3: the key and "4 after 2", which needs the 1960 against 1968 comparison
+- The how and why match the new numbering.
+- New NOTE-11: "Move sentence 4 so it comes right after sentence 2" is word for word C10's key, in the same lesson. A child copying the C10 pattern would pick the wrong answer. That makes it a stronger distractor, not a giveaway. Acceptable.
+
+**DESC C14 (SHOULD-2): cleared. The key is defensible and echoes no check item.**
+- Stem details:
+  - (2) the tail wraps around sea grass
+  - (3) the skin matches the plants
+  - (4) the tall, thin shape looks like a plant stem
+  - (5) the snout reaches between the leaves for shrimp
+- Key: "A seahorse's body is made for life among the plants of the sea."
+  - Every detail ties a body part to the plants, so the key fits all four.
+  - "Has to hide from crabs…" fits (3) and (4) only, and the paragraph never mentions crabs.
+  - "The curly tail is the most useful part" is one detail and makes a claim the paragraph does not.
+  - One defensible answer.
+- Live choices after hint 3 (which rules out the hatching sentence): the key, the hiding near-miss and the tail choice.
+- The how and why match the new details.
+- **Check-item echo.** I scanned the correct choices of every form A and form B item in all of `js/data/lessons/*.js` for body, made for, built for, plants, sea grass and seahorse (`b2rr-ts2/chk-keys.js`). Four keys match a word. Only 3.T.T.2.a T1 ("how an armadillo's body helps it find food and stay safe") is near the old wording. The new key shares none of its content: no food, no safety, no bony plates.
+- A frame-level likeness remains: the armadillo passage opens "An armadillo's body is made for digging and for staying safe". That is the same "X's body is made for…" pattern that TS-DESC's own pelican passage uses ("built for catching fish"). It is the description structure the lesson teaches, so it is a NOTE, not a finding.
+- "Sea grass", "seagrass", "sea plants" and "made for life" occur in no other lesson, set or task.
+- **Facts:**
+  - The tail holds on to underwater grasses: [CBF](https://www.cbf.org/blogs/save-the-bay/2022/01/miniature-marvels-lined-seahorses.html).
+  - Color change and hiding among seagrass blades: [Project Seahorse FAQs](https://projectseahorse.org/saving-seahorses/seahorse-faqs/); [BBC Wildlife, "Seahorses hide among blades of seagrass"](https://discoverwildlife.com/animal-facts/fish/why-do-seahorses-look-like-horses).
+  - The upright body blends with upright seagrass blades: [NBC News, study co-author Peter Teske](https://www.nbcnews.com/id/wbna30600080) ("the upright sea grass blades would have improved their camouflage").
+  - The snout sucks in minute crustaceans: [BBC Wildlife](https://discoverwildlife.com/animal-facts/fish/why-do-seahorses-look-like-horses); [CBF](https://www.cbf.org/blogs/save-the-bay/2022/01/miniature-marvels-lined-seahorses.html).
+  - "Reaches between the leaves" is a reasonable grade-3 rendering. No source says it in those words, and no key depends on it.
+
+**Log check (b2b §11).** All three changes are in the data as described. The S03 "no other single move works" claim is confirmed by brute force.
+
+### 9.3 Gates after round 2
+
+| Gate | Result |
+|---|---|
+| `check-content.js --all` | **PASS, 0 failures, 26 warnings.** The four lessons show only the accepted similar-coverage notices (SEQ 9, CE 10, CC 9, DESC 10). The extra warning against §7 is the migration count line (75 lessons instead of 76), outside these lessons |
+| `readability.py` | No passage flagged. No passage text changed this round; C14 and S03 are stems |
+
+### 9.4 Verdicts after round 2
+
+| Lesson | Verdict | Open items |
+|---|---|---|
+| **TS-SEQ** | **ACCEPTED** | NOTEs only |
+| **TS-DESC** | **ACCEPTED** | NOTEs only |
+| **TS-CE** | **ACCEPTED** | NOTEs only (unchanged this round) |
+| **TS-CC** | **ACCEPTED** | NOTEs only. MUST-1 and MUST-2 are cleared |
+
+The verdicts in §8 are superseded by this table.
