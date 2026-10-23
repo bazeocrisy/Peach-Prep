@@ -247,11 +247,11 @@ K = key. "−X" means that hint removes X.
 | C05 slot 1 | K after growing; before planting; while flowers open | all | all | −before planting: K, while flowers |
 | C05 slot 2 | K order things happen; importance; alike/different | all | all | "what kind of order" weakens alike/different: K, importance |
 | C06 (match) | four rows × five columns | all | all | sequence removed for one row; all rows open |
-| C07 | K stops around the county; library building; inside the bus | "whole map" removes inside the bus: K, library | K, library | −inside the bus: K, library (the "one mark" mix-up stays live) |
+| C07 | K stops around the county; library building; inside the bus | all (round 4: the clue and hint 1 no longer say "whole map") | all (round 4: hint 2 no longer says "not just one mark") | −inside the bus: K, library (the "one mark" mix-up is live). Correction: before round 4, the "whole map" wording in hint 1 and "not just one mark" in hint 2 together removed the library caption, so this row was wrong |
 | C08 Part A | K how far; all stops in Millbrook; shelves; days | all | all | −days: K, all stops in Millbrook, shelves |
 | C08 Part B | K scale bar; north arrow; route lines; county name | all | all | "the part that shows the idea in your Part A answer": all four, until the child has decided Part A |
 | C09 (pick 2) | K1, K2; Text 1 problem; Text 2 compares; both describe | all | all | −compares: K1, K2, problem, describe |
-| C10 (pick 2) | K1, K2; book is a section; "Did You Know?" is Ch 4's title; "Inside the Bookmobile" is Ch 4's title | the definition removes "book is a section": K1, K2, DYK, Inside | same | −DYK: K1, K2, Inside (only the stem refutes Inside) |
+| C10 (pick 2) | K1, K2; book is a section; "Did You Know?" is Ch 4's title; "Inside the Bookmobile" is Ch 4's title | the definition removes "book is a section": K1, K2, DYK, Inside | same | −DYK, for a box-only reason (one fact cannot fill a chapter): K1, K2, Inside; only the stem refutes Inside. Correction: before round 4, hint 3's reason ("a heading inside the article, not the title of a whole chapter") also removed Inside, so this row was wrong |
 | C11 | K From Tree to Bat; Wood or Metal?; Did You Know? | the label-matching test weakens DYK | K, Wood or Metal? | −DYK: K, Wood or Metal? ("wood shavings" keeps the word-match mix-up live) |
 | C12 | K needs the one before; compares; crack; big-league | all | all | −compares: K, crack, big-league |
 | C13 (hot text) | K 3:1; 3:2 hollow; 3:4 crack; 3:5 cup in the barrel; 5:1 billets; 5:4 coat | "names a labelled part": K, 3:5 | K, 3:5 | −hollow: K, 3:5 (the cup sentence names the barrel, but the diagram shows no cup) |
@@ -259,7 +259,7 @@ K = key. "−X" means that hint removes X.
 | C15 slot 1 | K Ch 2; Ch 1; Ch 3 | all | all | −Ch 3: K, Ch 1 |
 | C15 slot 2 | K 12; 2; 19 | all | all | −19: K, 2 |
 | S01 | K order of growing; fun; compare; problem | all | all | −problem: K, fun, compare |
-| S02 | K alike/different; trouble; steps; what happened and why | all | all | −steps: K, trouble, why |
+| S02 | K alike/different; trouble; steps; what happened and why | all | all (round 4: hint 2 is now "List the clue words. Then ask what job they do together.") | −steps: K, trouble, why |
 | S03 | K map with key; caption; box; heading | all | all | −heading: K, caption, box |
 
 Together, and earlier items in the same set, were checked against each core answer (re-review §3.3). The new C04 `how` and `why` now agree with Together P3: "Harvest Time" follows the peanut "from planting to harvest".
@@ -331,9 +331,9 @@ Together, and earlier items in the same set, were checked against each core answ
 | Finding | Fix made |
 |---|---|
 | MUST-1, SS1a C08 hint 3 settled Part B, and through it Part A | Hint 3 is now: "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. Check the other Part A choices against the map. For Part B, choose the part of the map that shows the idea in your Part A answer." Part A keeps three live choices and Part B four |
-| MUST-2, SS1a C07 hint 3 removed the only plausible distractor | Hint 3 now removes the weak option: "A map has no picture of the inside of the bus, so that caption does not fit. Check the other choices against the whole map." The library-building caption (the "one mark" mix-up) stays live |
+| MUST-2, SS1a C07 hint 3 removed the only plausible distractor | Hint 3 now removes the weak option: "A map has no picture of the inside of the bus, so that caption does not fit. Check the other choices against the whole map." Correction: the claim that the library-building caption stayed live was wrong at this point. Hint 1 ("whole map") and hint 2 ("not just one mark") still removed it. Fixed in §5.6 |
 | MUST-2, SS1a C11 hint 3, the same fault | Hint 3: "The 'Did You Know?' box tells how many bats a player uses, not how a bat is made. Check the other choices the same way." "Wood or Metal?" stays live |
-| MUST-3, SS1a C10 | The distractor "Each section of Chapter 4 is a different book." is replaced by "'Inside the Bookmobile' is the title of Chapter 4." Hint 1 is trimmed to its first sentence. Hint 3 keeps "Did You Know?". I also made hint 2 neutral ("Read the stem again. Then look at the headings in the article."), because the old "the headings name its parts", together with hint 3's "which part is bigger" test, would have killed the new distractor. Hint 3 now ends "Test the other sentences against the stem." `how` and `why` were updated |
+| MUST-3, SS1a C10 | The distractor "Each section of Chapter 4 is a different book." is replaced by "'Inside the Bookmobile' is the title of Chapter 4." Hint 1 is trimmed to its first sentence. Hint 3 keeps "Did You Know?". Correction: its reason ("the heading of a box inside the article, not the title of a whole chapter") also removed the new distractor; fixed in §5.6. I also made hint 2 neutral ("Read the stem again. Then look at the headings in the article."), because the old "the headings name its parts", together with hint 3's "which part is bigger" test, would have killed the new distractor. Hint 3 now ends "Test the other sentences against the stem." `how` and `why` were updated |
 | SHOULD-1, SS1a C13 (the strategy alone found the key) | **Passage change:** p4's "Wood or Metal?" paragraph has a new last sentence, "Some bats have a small cup cut into the end of the barrel." (cupped bats are real). It is a new target, p4:3:5. It names a labelled part (the barrel) but describes something the diagram does not show. `how` and `why` were updated. No existing reference shifts |
 | SHOULD-2, SS1a C04 `how` and `why` contradicted Together P3 | Both now say "'From Flower to Peanut' and 'Harvest Time' follow the peanut from planting to harvest." |
 | SHOULD-5, no SS1a ladder table | Added as §4.2. §4's C08 sentence is corrected |
@@ -354,6 +354,18 @@ Together, and earlier items in the same set, were checked against each core answ
 - **§5.3: a whole cause/effect item, or a cause/effect similar item mapped to C06.** Not done. Coverage is at the minimum (C06 row, C09), and the re-review rates that acceptable.
 - **NOTE-4: P7 is the only DOK 1 item.** Left as set 1's warm-up locate item.
 - **NOTE-6 and NOTE-7** describe acceptable priming. No change.
+
+### 5.6 Round 4 (B2-rereview-SC-2)
+
+| Finding | Fix made |
+|---|---|
+| MUST-1, SS1a C07 (the whole ladder left only the key) | The clue and hint 1 are now "A caption tells what a picture shows. Read the map before you read the captions." Hint 2 is now "Use the key to find what each mark on the map stands for." (the "not just one mark" sentence is gone). Hint 3 is unchanged. After h3, the key and the library-building caption are live. No key or choice changed |
+| MUST-2, SS1a C10 (hint 3's reason also removed the new distractor) | Hint 3 now gives a box-only reason: "'Did You Know?' is a box with one short fact, and one fact cannot fill a whole chapter. Test the other sentences against the stem." The reason does not transfer to a section heading, so "'Inside the Bookmobile' is the title of Chapter 4" stays live and can be refuted only by the stem. After h3, three choices are live for pick two. No key or choice changed |
+| SHOULD-1, TC1b C03 ("four more facts" gave it away) | **Prompt reworded:** "Here are four facts about beavers. Which one would fit best in the 'Did You Know?' box instead of in a section?" Choices, key, hints, `how` and `why` are unchanged. I chose the prompt fix over the reviewer's preferred option (new section facts as distractors) because two of the suggested new facts, the tail slap heard far across the water and carrying a branch while swimming, are themselves fun extra facts. Each could be argued as box-worthy, which would put a second defensible answer into an accepted item. The recognition shortcut the reviewer noted ("which one isn't in the article yet?") still exists, but the prompt no longer states that only one fact is new. The lead may prefer the new-facts version, and it would then need a blind re-check |
+| NOTE-1, SS1a S02 hint 2 (optional) | Hint 2 is now "List the clue words. Then ask what job they do together." |
+| Log: §4.2 rows for C07 and C10, and the §5.5 claims about them | Corrected: both rows and both §5.5 rows now say what was wrong and point to this section |
+
+**Findings not addressed in round 4:** none of the MUST or SHOULD findings. NOTE-2 (TC1b P5 keys repeat the label words) needs no action, as the reviewer says.
 
 ## 6. Needs blind re-solve
 
@@ -393,6 +405,8 @@ These items changed their choices, keys, stem, passage or figure, in either roun
 - SK-TC1b-P5: one target swapped.
 - SK-TC1b-C03: key wording changed ("up to fifteen minutes"). The answer is the same choice.
 - Together items changed in round 3 (not core): SS1a P2 (hint only), TC1b P8 (one distractor), P9 (stem fact), P10 (two distractors and the figure).
+
+**Round 4 additions:** TC1b C03's prompt is reworded; its choices and key are unchanged, so a read-through is enough. SS1a C07, C10 and S02 changed in their hints only.
 
 Changed in their hints only (a ladder re-check is enough):
 - SS1a: S01, S03, the P2, P4 and P6 addons, and (round 3) C04 (`how` and `why`), C07, C08 and C11

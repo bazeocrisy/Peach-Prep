@@ -240,25 +240,25 @@ PP.addLesson({
       { ref: "SK-TT2a-P4" },
       { ref: "SK-TT2a-P7" },
       { id: "SK-TT2a-C03", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
-        stem: ["On Saturdays, the empty lot on Pecan Street fills up early. Farmers set up tables of peaches, beans and fresh eggs. A baker sells warm bread, and a man plays the fiddle by the gate. Neighbors bring their own bags and stop to talk with friends."],
+        stem: ["On Saturday mornings, the Birch Street animal shelter is full of helpers. Two teenagers walk the dogs around the block. A grandfather fills every water bowl and sweeps the cat room. A girl sits on the floor and reads a story to a shy puppy. Before lunch, a family takes home a gray cat."],
         prompt: "No sentence in this paragraph states the main idea. Choose the answer that best tells what the paragraph is mostly about.",
         text: "The paragraph is mostly about {0}.",
         slots: [
-          { options: ["a busy market where neighbors shop and visit", "a man who plays the fiddle by the gate", "farmers who sell peaches and beans"], answer: 0 }
+          { options: ["helpers caring for the animals at a busy shelter", "a girl who reads a story to a shy puppy", "a family that takes home a gray cat"], answer: 0 }
         ],
         clue: "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
         hints: [
           "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
           "Read the paragraph one sentence at a time. Who is in each sentence, and what are they doing?",
-          "The fiddle player is in only one sentence, so he is a detail, not the main idea. Test the choices that are left against every sentence."
+          "The girl and the puppy are in only one sentence, so they are a detail, not the main idea. Test the choices that are left against every sentence."
         ],
         how: [
-          "The sentences tell about farmers at their tables, a baker, a fiddle player and neighbors who shop and talk.",
-          "All of them are part of one Saturday market on the empty lot.",
-          "The answer is \"a busy market where neighbors shop and visit.\" The fiddle player and the farmers are each only one detail."
+          "The sentences tell about teenagers walking dogs, a grandfather filling bowls and sweeping, a girl reading to a puppy and a family taking home a cat.",
+          "Most of them are helpers doing jobs for the animals at the shelter.",
+          "The answer is \"helpers caring for the animals at a busy shelter.\" The girl and the family taking home a cat are each only one detail."
         ],
         misconception: "A common mix-up is choosing one detail as the main idea. The main idea covers every sentence.",
-        why: "The answer is \"a busy market where neighbors shop and visit.\" Every sentence tells about something at the Saturday market: the farmers, the baker, the fiddle player and the neighbors. The fiddle player and the farmers are each only one detail." },
+        why: "The answer is \"helpers caring for the animals at a busy shelter.\" The first sentence says the shelter is full of helpers, and the others show them walking dogs, filling bowls, sweeping and reading. The girl with the puppy and the family with the cat are each one detail." },
       { id: "SK-TT2a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p1"],
         prompt: "The author wants to add a heading above paragraph 2. Which heading fits paragraph 2 best?",
         choices: [
@@ -270,7 +270,7 @@ PP.addLesson({
         clue: "A heading names what a whole section is about. Read every sentence in the section, then ask what they all tell about.",
         hints: [
           "A heading names what a whole section is about. Read every sentence in the section, then ask what they all tell about.",
-          "Reread paragraph 2 and count its sentences. A good heading has to fit all three, not just one.",
+          "Reread paragraph 2.",
           "\"Working Together\" fits the whole article, so it is too big for one paragraph. Test the headings that are left against all three sentences."
         ],
         how: [
@@ -285,15 +285,15 @@ PP.addLesson({
         prompt: "Grandpa's main idea is how to help tomato plants grow. Why is \"Tomatoes come in red, yellow and even purple\" NOT a key detail?",
         choices: [
           { text: "It is true, but it does not tell how to help a tomato plant grow.", correct: true },
-          { text: "It is not about tomatoes at all." },
-          { text: "It is the main idea, so it cannot also be a detail." },
-          { text: "It tells a step a gardener must do first." }
+          { text: "It is not about tomatoes or tomato plants at all." },
+          { text: "It is not true, so it cannot be one of the key details." },
+          { text: "It tells a step that a gardener must do before planting." }
         ],
         clue: "To decide whether a detail is a key detail, test it against the main idea: does it help prove it?",
         hints: [
           "To decide whether a detail is a key detail, test it against the main idea: does it help prove it?",
-          "Read the first three tips and ask what each one tells a gardener to do. Then reread the last sentence and ask the same question.",
-          "The color sentence does tell about tomatoes, so \"It is not about tomatoes at all\" does not fit. Test the other reasons against Grandpa's main idea."
+          "Read all four tips one at a time.",
+          "The color sentence does tell about tomatoes, so \"It is not about tomatoes or tomato plants at all\" does not fit. Test the other reasons against Grandpa's main idea."
         ],
         how: [
           "The main idea is how to help tomato plants grow.",
@@ -302,7 +302,7 @@ PP.addLesson({
           "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\""
         ],
         misconception: "A common mix-up is thinking a detail is wrong or false when it is only off the main idea. A fact can be true and still not be a key detail.",
-        why: "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\" The other sentences each tell a gardener what to do, but the colors of tomatoes do not help a plant grow. The sentence is about tomatoes, it is not the main idea, and it does not tell a step to do." }
+        why: "The answer is \"It is true, but it does not tell how to help a tomato plant grow.\" The other sentences each tell a gardener what to do, but the colors of tomatoes do not help a plant grow. The sentence is about tomatoes, nothing says it is untrue, and it does not tell a step to do." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT2a-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: ["p4"],
@@ -334,7 +334,7 @@ PP.addLesson({
         clue: "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
         hints: [
           "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
-          "Read the text box. Then read the last paragraph, which sums up the article, and notice which facts it talks about.",
+          "Read the text box. Then read the headings and notice what each section is about.",
           "The text box says nothing about alarms, so it is not telling what happens at night. Decide which of the other reasons fits what you noticed."
         ],
         how: [
@@ -350,30 +350,30 @@ PP.addLesson({
         choices: [
           { text: "so firefighters land right next to their gear and the truck", correct: true },
           { text: "so firefighters land right next to the kitchen" },
-          { text: "so firefighters land outside on the street" },
+          { text: "so firefighters land right next to the big doors" },
           { text: "so the pole stays far away from the fire truck" }
         ],
         clue: "A diagram shows where things are. Use it together with the words in the article.",
         hints: [
           "A diagram shows where things are. Use it together with the words in the article.",
           "In Figure 1, follow the pole down from the top floor. Read every label on the bottom floor.",
-          "The kitchen is on the top floor in Figure 1, so the pole cannot drop anyone next to it. Now use what the article says about where the gear waits: why would landing in that spot help?"
+          "The kitchen is on the top floor in Figure 1, so the pole cannot drop anyone next to it. Check the other choices against the labels on the bottom floor."
         ],
         how: [
           "In Figure 1, the pole goes from the bunk room down through the floor to the bottom floor.",
           "It ends right beside the gear rack, and the gear rack is beside the fire truck.",
           "The article says each firefighter's gear hangs on a rack beside the truck, ready to put on.",
-          "The answer is \"so firefighters land right next to their gear and the truck.\" The kitchen is upstairs, the street is outside the big doors, and the pole is close to the truck, not far away."
+          "The answer is \"so firefighters land right next to their gear and the truck.\" The kitchen is upstairs, the big doors are on the far side of the truck, and the pole is close to the truck, not far away."
         ],
         misconception: "A common mix-up is using only the words or only the picture. Use the labels and the article together.",
-        why: "The answer is \"so firefighters land right next to their gear and the truck.\" Figure 1 shows the pole ending beside the gear rack, which is beside the truck, and the article says the gear waits there. The kitchen is upstairs, the street is outside the doors, and the pole is close to the truck." },
+        why: "The answer is \"so firefighters land right next to their gear and the truck.\" Figure 1 shows the pole ending beside the gear rack, which is beside the truck, and the article says the gear waits there. The kitchen is upstairs, the big doors are on the far side of the truck, and the pole is close to the truck." },
       { id: "SK-TT2a-C10", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.a"], passages: ["p4"],
         stem: ["New sentence: Each fire truck is parked facing the big doors, so it can drive straight out."],
         prompt: "The author wants to add the new sentence to the article. Choose the best answer for each blank.",
         text: "The new sentence belongs in the section {0}. It is {1}.",
         slots: [
           { options: ["\"The Engine Bay\"", "\"Living Upstairs\"", "\"Did You Know?\""], answer: 0 },
-          { options: ["a key detail, because it shows how the trucks can leave quickly", "not a key detail, because it is only a fun fact", "a key detail, because it tells where the firefighters sleep"], answer: 0 }
+          { options: ["a key detail, because it shows how the trucks can leave quickly", "not a key detail, because it is only a fun fact", "not a key detail, because the article already tells about the doors"], answer: 0 }
         ],
         clue: "A heading names what its section is about. A key detail helps prove the main idea, and a text box holds extra facts.",
         hints: [
@@ -388,7 +388,7 @@ PP.addLesson({
           "The answers are \"The Engine Bay\" and \"a key detail, because it shows how the trucks can leave quickly.\""
         ],
         misconception: "A common mix-up is putting any new fact in the text box. A fact that helps prove the main idea belongs in a section.",
-        why: "The answers are \"The Engine Bay\" and \"a key detail, because it shows how the trucks can leave quickly.\" The trucks wait in the engine bay, and parking them facing the doors lets them drive straight out. That fits the article's point, so it is a key detail, not a fun fact, and it is not about where firefighters sleep." }
+        why: "The answers are \"The Engine Bay\" and \"a key detail, because it shows how the trucks can leave quickly.\" The trucks wait in the engine bay, and parking them facing the doors lets them drive straight out. That fits the article's point, so it is a key detail, not a fun fact. The article mentions the doors, but not that the trucks face them." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT2a-C11", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p5"],
@@ -415,22 +415,22 @@ PP.addLesson({
           { text: "The jelly fact is only in the text box, and no section is about it.", correct: true },
           { text: "The article never tells anything about kudzu flowers." },
           { text: "Jelly is made from fruit, so the fact in the article must be wrong." },
-          { text: "Only a heading can tell the main idea of an article." }
+          { text: "The jelly fact is in the last part of the article, so it is only a detail." }
         ],
         clue: "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
         hints: [
           "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
-          "Find where the article tells about the flowers. Notice how that part looks on the page, and check whether any other part of the article tells about jelly.",
+          "Find every place in the article that tells about kudzu flowers.",
           "The article does tell about kudzu flowers, so the student is not wrong about that. Decide which of the other reasons matches what you found."
         ],
         how: [
           "The flowers and the jelly are told about only in the text box under \"Did You Know?\"",
           "The sections tell why kudzu was planted, how it spread and how people fight it. None of them is about jelly.",
           "The answer is \"The jelly fact is only in the text box, and no section is about it.\"",
-          "The article does tell about the flowers, it says people really make jelly from them, and a main idea does not have to be a heading."
+          "The article does tell about the flowers, it says people really make jelly from them, and the text box is not the last part of the article: \"Keeping Kudzu Back\" comes after it."
         ],
         misconception: "A common mix-up is taking a fun fact as the main idea because it is interesting. Ask whether the whole article is about it.",
-        why: "The answer is \"The jelly fact is only in the text box, and no section is about it.\" The jelly appears only in the text box. The article does tell about the flowers, it says people use them for jelly, and a main idea can be stated in a sentence, not only in a heading." },
+        why: "The answer is \"The jelly fact is only in the text box, and no section is about it.\" The jelly appears only in the text box. The article does tell about the flowers, it says people use them for jelly, and the text box comes before the last section, not at the end." },
       { id: "SK-TT2a-C13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
         stem: ["Paragraph A: The week before the spring concert, Mr. Bell's class gets busy. Students practice their songs every morning. They fold paper programs and write each singer's name inside. On Thursday, they help set up rows of chairs in the gym.", "Paragraph B: On the night of the concert, families fill the gym. The class sings four songs, and two students play the drums. At the end, everyone claps and cheers. Afterward, the singers share cookies with their families."],
         prompt: "How are the main ideas of Paragraph A and Paragraph B different?",
@@ -893,9 +893,9 @@ PP.addLesson({
       ] },
     { id: "p5", title: "How to Patch a Bike Tube", genre: "Informational text",
       paragraphs: [
-        ["A flat tire can stop a bike ride.", "Often the problem is a tiny hole in the tube.", "The tube is the rubber ring inside the tire that holds the air.", "A grown-up can help you patch it."],
+        ["A flat tire can stop a bike ride, and often the problem is a tiny hole in the tube.", "The tube is the rubber ring inside the tire that holds the air.", "A grown-up can help you patch it."],
         ["First, take the wheel off and let out any air.", "Next, use two flat tools called tire levers to pry the tire off the rim.", "Then pull the tube out."],
-        ["Now find the hole.", "Pump a little air into the tube and hold it near your ear.", "Listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water.", "Bubbles will rise where the air escapes."],
+        ["Now find the hole.", "Pump a little air into the tube, hold it near your ear and listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water, and bubbles will rise where the air escapes."],
         ["When you find the hole, dry the tube.", "Rub the spot with sandpaper so the glue can grip.", "Spread thin glue over the hole and wait until it looks dull.", "Then press the patch on hard and hold it for a minute."],
         ["Finally, tuck the tube back in, push the tire onto the rim and pump it up.", "Put the wheel back on, and you are ready to ride."]
       ] }
@@ -1022,23 +1022,23 @@ PP.addLesson({
         choices: [
           { text: "Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.", correct: true },
           { text: "Move step 1 after step 2, because the string has to be in the cups before the holes are poked." },
-          { text: "Move step 3 to the beginning, because you should test your voice before you make the phone." },
+          { text: "Move step 2 after step 4, because the knots must be tied before the string goes through the holes." },
           { text: "Leave the steps as they are, because the knots can be tied after you finish talking." }
         ],
         clue: "Steps in a procedure must be in an order that works. Picture yourself doing each step, one at a time.",
         hints: [
           "Steps in a procedure must be in an order that works. Picture yourself doing each step, one at a time.",
           "Act out the steps in your head in the order they are written. Stop at the first step that would not work.",
-          "The holes have to be poked before the string can go through them, so step 1 is in the right place. Now ask whether the string would stay in the cups at each later step."
+          "The holes have to be poked before the string can go through them, so step 1 is in the right place."
         ],
         how: [
           "Steps 1 and 2 work: you poke the holes, then push the string through them.",
           "In step 3 you pull the string tight, but nothing holds the ends inside the cups yet, so the string would slip out.",
           "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\"",
-          "The string cannot go through holes that are not poked yet, there is no phone to test before you make it, and the knots are needed before you talk, not after."
+          "The string cannot go through holes that are not poked yet, a knotted string end will not fit through a small hole, and the knots are needed before you talk, not after."
         ],
         misconception: "A common mix-up is keeping the steps in the order they are written. A procedure works only if each step is ready for the next one.",
-        why: "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\" The knots hold the string inside the cups, so they must be tied before the string is pulled tight. The holes must come first, and there is nothing to test until the phone is made." },
+        why: "The answer is \"Move step 4 before step 3, because the string will slip out if it is pulled before the knots are tied.\" The knots hold the string inside the cups, so they must be tied before the string is pulled tight. The holes must come first, and the string must go through the holes before its ends are knotted." },
       { id: "SK-TT2b-C05", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
         stem: ["In the 1860s, the only way to cross the East River between Brooklyn and New York City was by boat. In some winters, ice stopped the boats. So leaders decided to build a bridge. An engineer named John Roebling planned it, but he was hurt in an accident and died before the building began. His son, Washington Roebling, took over. Then Washington became very sick from working deep under the river, and he had to stay in his room. His wife, Emily, carried his instructions to the workers every day. In 1883, the Brooklyn Bridge opened, and Emily was the first person to ride across it."],
         prompt: "Which sentence best tells how the events in this text are connected?",
@@ -1046,22 +1046,22 @@ PP.addLesson({
           { text: "Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.", correct: true },
           { text: "The bridge opened first, and after that the river froze and the boats stopped running." },
           { text: "Emily planned the bridge, so John and Washington Roebling carried her instructions." },
-          { text: "Washington got sick, so the leaders decided that they did not need a bridge after all." }
+          { text: "Ice led John Roebling to get hurt, and the bridge opening led Emily to help." }
         ],
         clue: "In a series of historical events, ask what happened first and what each event led to.",
         hints: [
           "In a series of historical events, ask what happened first and what each event led to.",
-          "Find each thing that went wrong in the text. Then find what happened because of it.",
-          "The bridge opened at the very end, in 1883, so a choice that puts the opening first has the order wrong. Test the other choices: does each one match who did what?"
+          "List the events in the order the text tells them.",
+          "The bridge opened at the very end, in 1883, so a choice that puts the opening first has the order wrong. Check each link in the other choices against the text."
         ],
         how: [
           "First problem: ice sometimes stopped the boats, so leaders decided to build a bridge.",
           "Next problems: John Roebling died, so his son took over. Then Washington got sick, so Emily carried his instructions to the workers.",
           "The answer is \"Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.\"",
-          "The bridge opened last, John planned it, not Emily, and the bridge was still built."
+          "The bridge opened last, John planned it, not Emily, and the text never says ice hurt John or that Emily helped after the opening."
         ],
         misconception: "A common mix-up is flipping the order: a problem has to come before the step it leads to.",
-        why: "The answer is \"Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.\" Each event caused the next one, and the bridge opened at the end, in 1883. John Roebling planned it, not Emily, and the bridge was still built." },
+        why: "The answer is \"Each problem led to a next step: ice led to a bridge plan, and Washington's illness led Emily to help.\" Each event caused the next one, and the bridge opened at the end, in 1883. John Roebling planned it, not Emily, the text does not say ice caused John's accident, and Emily helped before the bridge opened." },
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT2b-C06", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p4"],
@@ -1168,7 +1168,7 @@ PP.addLesson({
         clue: "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
         hints: [
           "An effect needs a cause. Ask what people could see or learn that would make them trust the wheel.",
-          "Look at what happens after the wheel starts turning. Which sentences tell about the wheel itself?",
+          "Reread paragraphs 4 to 6. Which sentences tell about the wheel itself?",
           "\"In June 1893, the wheel turned for the first time\" tells when the wheel started, not how people could tell it was safe. Check the sentences that are left."
         ],
         how: [
@@ -1309,7 +1309,7 @@ PP.addLesson({
       clue: "Picture doing each step in order. Stop at the first step that would not work.",
       hints: [
         "Picture doing each step in order. Stop at the first step that would not work.",
-        "Look at steps 2 and 3. Ask what is in the hole at each step.",
+        "Act out the steps in order, one at a time, and stop at the first step you could not do.",
         "You cannot plant before the hole is dug, so step 1 is in the right place. Check the other changes."
       ],
       how: [
@@ -1331,7 +1331,7 @@ PP.addLesson({
       clue: "A cause happens first. Look for a signal word that links the problem to what the town did.",
       hints: [
         "A cause happens first. Look for a signal word that links the problem to what the town did.",
-        "Find the sentence that begins with So. Then read the sentence just before it.",
+        "Find the sentence that tells what the town did. Then look before it and after it for the reason.",
         "The new shops opened after the street was paved, so they cannot be the cause. Check the other choices."
       ],
       how: [
@@ -1681,7 +1681,7 @@ PP.addLesson({
       ] },
     { id: "p6", title: "Baskets That Tell a Story", genre: "Informational text",
       paragraphs: [
-        ["Along the coasts of Georgia and South Carolina, many Gullah Geechee families make sweetgrass baskets.", "Long ago, their ancestors were taken from West Africa and forced to work as enslaved people on rice farms.", "They kept the skill of weaving baskets from grass and passed it down."],
+        ["Along the coasts of Georgia and South Carolina, many Gullah Geechee families make sweetgrass baskets.", "Long ago, their ancestors were taken from West Africa and forced to work as enslaved people on rice plantations.", "They kept the skill of weaving baskets from grass and passed it down."],
         ["A basket maker winds dried sweetgrass into a tight coil.", "Then she sews the coil with thin strips of palmetto leaf.", "Round and round it grows until it is a basket."],
         ["Some baskets are made to hold bread or fruit.", "Others are made to be looked at, like a painting.", "A large basket can take weeks to finish.", "It is slow work.", "Grandparents teach children how to make the baskets, so the skill lives on."]
       ] },
@@ -1848,7 +1848,7 @@ PP.addLesson({
         prompt: "Use both texts. Why is sweetgrass a good material for these baskets?",
         choices: [
           { text: "Its blades bend without breaking, so they can be wound into a tight coil.", correct: true },
-          { text: "It grows in sandy soil, so the baskets can carry sand without leaking." },
+          { text: "Its pink tops are soft, so they make the basket's handle." },
           { text: "It is stitched with palmetto, so it never needs to be dried in the sun." },
           { text: "Its sweet smell keeps bugs away from the finished baskets for years." }
         ],
@@ -1862,10 +1862,10 @@ PP.addLesson({
           "\"Sweetgrass\" says the blades are long and thin and bend without breaking.",
           "\"Baskets That Tell a Story\" says the basket maker winds the grass into a tight coil.",
           "Put them together. The answer is \"Its blades bend without breaking, so they can be wound into a tight coil.\"",
-          "Sandy soil has nothing to do with carrying sand, palmetto is for stitching, and neither text says the smell keeps bugs away."
+          "Neither text says the pink tops are used for handles, palmetto is for stitching, and neither text says the smell keeps bugs away."
         ],
         misconception: "A common mix-up is joining two true facts that do not explain each other. The two parts must fit together.",
-        why: "The answer is \"Its blades bend without breaking, so they can be wound into a tight coil.\" Text 1 tells that the blades bend, and Text 2 tells that the basket maker winds them into a coil. The soil, the palmetto and the smell do not explain why the grass works for baskets." },
+        why: "The answer is \"Its blades bend without breaking, so they can be wound into a tight coil.\" Text 1 tells that the blades bend, and Text 2 tells that the basket maker winds them into a coil. The pink tops, the palmetto and the smell do not explain why the grass works for baskets." },
       { id: "SK-TT2c-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: ["p5", "p6"],
         stem: ["Leo's note: Only \"Sweetgrass\" tells that the grass is dried before it is used. Only \"Sweetgrass\" tells who teaches the craft to children."],
         prompt: "Leo's note has two mistakes. Choose the words that fix it.",
@@ -2167,7 +2167,7 @@ PP.addLesson({
       clue: "Find one fact in each text, then ask how the two facts work together.",
       hints: [
         "Find one fact in each text, then ask how the two facts work together.",
-        "Text 1 tells what the fur looks like. Text 2 tells what a seal does when it sees something coming.",
+        "Find one fact about the bear in Text 1 and one fact about the seal in Text 2.",
         "Neither text says the fur keeps the bear warm in the water, so that reason is not supported. Test the other reasons against both texts."
       ],
       how: [

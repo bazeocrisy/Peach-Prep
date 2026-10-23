@@ -425,7 +425,7 @@ PP.addLesson({
       { ref: "SK-TC1b-P5" },
       { ref: "SK-TC1b-P4" },
       { id: "SK-TC1b-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"],
-        prompt: "The author found four more facts about beavers. Which one would fit best in the \"Did You Know?\" box instead of in a section?",
+        prompt: "Here are four facts about beavers. Which one would fit best in the \"Did You Know?\" box instead of in a section?",
         choices: [
           { text: "A beaver can stay underwater for up to fifteen minutes.", correct: true },
           { text: "A beaver drags branches into the water to build with." },

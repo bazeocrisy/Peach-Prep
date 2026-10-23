@@ -305,10 +305,10 @@ PP.addLesson({
         prompt: "Figure 1 needs a caption. Choose the words that best complete the sentence.",
         text: "The best caption for Figure 1 is {0}.",
         slots: [{ options: ["Bookmobile stops around Pine County", "The library building in Millbrook", "What a bookmobile looks like inside"], answer: 0 }],
-        clue: "A caption tells what a picture shows. A caption for a map tells what the whole map shows.",
+        clue: "A caption tells what a picture shows. Read the map before you read the captions.",
         hints: [
-          "A caption tells what a picture shows. A caption for a map tells what the whole map shows.",
-          "Use the key to find what each mark on the map stands for. Then look at the whole map, not just one mark.",
+          "A caption tells what a picture shows. Read the map before you read the captions.",
+          "Use the key to find what each mark on the map stands for.",
           "A map has no picture of the inside of the bus, so that caption does not fit. Check the other choices against the whole map."
         ],
         how: [
@@ -387,7 +387,7 @@ PP.addLesson({
         hints: [
           "A book is split into chapters, and a chapter can be split into smaller sections.",
           "Read the stem again. Then look at the headings in the article. Choose two.",
-          "\"Did You Know?\" is the heading of a box inside the article, not the title of a whole chapter. Test the other sentences against the stem."
+          "\"Did You Know?\" is a box with one short fact, and one fact cannot fill a whole chapter. Test the other sentences against the stem."
         ],
         how: [
           "The book is the biggest part. Chapter 4 is one part of the book.",
@@ -545,7 +545,7 @@ PP.addLesson({
       clue: "Clue words show the pattern, but read the whole paragraph to see what job the words do.",
       hints: [
         "Clue words show the pattern, but read the whole paragraph to see what job the words do.",
-        "Count the topics the paragraph is about. Then list its clue words.",
+        "List the clue words. Then ask what job they do together.",
         "The word then appears once, but the paragraph does not tell steps for a job. Test the other choices."
       ],
       how: [
