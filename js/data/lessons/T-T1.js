@@ -4353,14 +4353,6 @@ PP.addLesson({
       { term: "time words", means: "words like first, next and finally that show the order of events" },
       { term: "ending", means: "the part that wraps up the story's problem" },
       { term: "setting", means: "when and where the story happens" },
-      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
-      { term: "setting", means: "when and where the story happens" },
-      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
-      { term: "setting", means: "when and where the story happens" },
-      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
-      { term: "setting", means: "when and where the story happens" },
-      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
-      { term: "setting", means: "when and where the story happens" },
       { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" }
     ],
     example: {
@@ -4391,22 +4383,24 @@ PP.addLesson({
     {
       show: [
         "Then she stirred the batter until it was smooth.",
+        "My uncle drives a blue truck.",
         "First, Mia cracked two eggs into a bowl.",
         "Finally, the pancakes sizzled in the hot pan."
       ],
-      ask: "What order should these sentences go in?",
+      ask: "Which sentence does not belong, and what order should the rest go in?",
       steps: [
-        "Look for time words: First, Then and Finally.",
+        "Read every sentence and ask if it helps tell about the pancakes. The sentence about the truck wanders off, so take it out.",
+        "Look for time words in the rest: First, Then and Finally.",
         "First comes at the start and Finally comes at the end, so Then goes in the middle.",
         "Check that it makes sense: you crack eggs, then stir the batter, then cook it."
       ],
       answer: "First, Mia cracked two eggs into a bowl. Then she stirred the batter until it was smooth. Finally, the pancakes sizzled in the hot pan."
     },
     {
-      show: ["Carlos and his dog, Max, were at the park. Max slipped out of his collar and ran off. Carlos looked everywhere."],
-      ask: "What line of dialogue could you add to show how Carlos feels?",
+      show: ["Plain beginning: This story is about Carlos and his dog, Max, at the park."],
+      ask: "What line of dialogue could begin the story and show how Carlos feels?",
       steps: [
-        "Think about how Carlos feels. His dog is lost, so he is worried.",
+        "A beginning should put the character in a moment. Picture Max slipping out of his collar and running off.",
         "Think about what a worried person would say or shout right then.",
         "Put his exact words in quotation marks, and tell who is speaking."
       ],
