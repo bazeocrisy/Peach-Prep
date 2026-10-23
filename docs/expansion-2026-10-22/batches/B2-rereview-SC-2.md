@@ -214,3 +214,37 @@ Both are the same kind of error the earlier review found: a hint was checked in 
 |---|---|---|---|---|
 | 3.T.SS.1.a | 2 (MUST-1 C07 whole ladder; MUST-2 C10 h3 logic) | none | 1, 4 | **CHANGES REQUIRED.** Both fixes are hint-only, change no key or choice, and need only a ladder re-check, not a blind re-solve. |
 | 3.T.C.1.b | 0 | SHOULD-1 (C03 distractors and prompt) | 2, 3 | **ACCEPTED.** SHOULD-1 is recommended. If C03's choices change, it needs a blind re-check. |
+
+## 6. Round 4 re-check (ladder only)
+
+**What I checked:** the author's round-4 fixes, listed in B2-b2d-author-log.md §5.6. Both lesson files were re-saved at 05:07:19. I reloaded the data and reprinted the four items with `b2rr-sc2/ladder.js` (output in `b2rr-sc2/r4-SS.txt` and `r4-TC.txt`). `check-content.js --all` still returns PASS, with 0 failures. No key or choice changed in any of the four items, so a ladder check is enough.
+
+K = key. "−X" means that step removes X.
+
+| Item | Choices | Clue + h1 | h2 | After h3 (whole ladder) | Result |
+|---|---|---|---|---|---|
+| SS1a C07 | K stops around county; library building; inside the bus | "A caption tells what a picture shows. Read the map before you read the captions." All live | "Use the key to find what each mark on the map stands for." All live | −inside the bus: **K, library building** | **MUST-1 cleared** (see NOTE-5) |
+| SS1a C10 (pick 2) | K1, K2; book is a section; DYK is Ch 4's title; "Inside the Bookmobile" is Ch 4's title | the definition (book > chapter > section): −book. Left: K1, K2, DYK, Inside | "Read the stem again. Then look at the headings in the article." No change | −DYK, for a box-only reason ("one fact cannot fill a whole chapter"), which does not carry over to a section heading: **K1, K2, Inside** (only the stem refutes Inside) | **MUST-2 cleared.** Three live for pick two |
+| SS1a S02 | K alike/different; trouble; steps; what happened and why | all | "List the clue words. Then ask what job they do together." Neutral, all live | −steps: **K, trouble, what happened and why** | **NOTE-1 cleared** |
+| TC1b C03 | K up to fifteen minutes; branches; dry room; tail slap | all | "What kind of fact is in the box?" All live | −tail slap: **K, branches, dry room** | ladder ok |
+
+**NOTE-5 (new, optional). C07 hint 3 still ends "Check the other choices against the whole map."** This only tells the child to do the check; it does not say what the check finds. To reject the library caption, the child still has to see that the map shows more than one mark, which is the item's own reasoning. So the library caption stays live. To remove the last trace of the old "whole map" steer, the hint could end "Check the other choices against the map."
+
+**C03: does the new prompt work, with no second defensible answer?**
+- **Yes.** The prompt now reads "Here are four facts about beavers. Which one would fit best in the 'Did You Know?' box instead of in a section?"
+- It is now accurate. The old "four more facts" falsely implied that all four facts were new.
+- Each wrong choice is the main idea of a named section:
+  - branches → "Busy Builders";
+  - dry room → "A Home with a Secret Door";
+  - tail slap → "Tail Talk".
+- None of the three can reasonably go in the box instead, because taking it out would leave a gap in its section. Only the underwater fact belongs to no section. The `how`, `why` and misconception still match.
+- **The recognition shortcut remains** ("which one isn't already in the article?"). It leads to the right answer by reasoning close to the intended one (the box holds a fact the sections do not cover), and the prompt no longer points to it. I accept the author's reason for not adding new section facts as distractors: two of my suggested facts were themselves box-worthy and could have created a second defensible answer. **SHOULD-1 is cleared** to the level of a NOTE.
+
+**The log is accurate.** §5.6 matches the data for all four items. The corrected §4.2 rows for C07, C10 and S02 now match my tables above.
+
+### Round 4 verdicts
+
+| Lesson | MUST | SHOULD | Verdict |
+|---|---|---|---|
+| 3.T.SS.1.a | 0 (MUST-1 and MUST-2 cleared) | none | **ACCEPTED.** NOTE-5 is optional. |
+| 3.T.C.1.b | 0 | 0 (SHOULD-1 cleared to the level of a NOTE) | **ACCEPTED** |
