@@ -1734,49 +1734,49 @@ PP.addLesson({
       why: "The order is: Emre hears chirping that keeps him awake; he puts his pillow over his head but still hears it; he and Grandpa wait for the chirping to start again; they carry the cricket out to the porch." },
     { id: "SK-TT1b-S06", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
       like: ["SK-TT1b-C03"],
-      prompt: "Read paragraph 1 again. Then complete the sentences. Choose the best answer for each blank.",
-      text: "In this story, Emre is {0}. The author says Emre has to wake up at six for a class trip, so the reader can tell that {1}.",
+      prompt: "Read paragraphs 1 and 2 again. Then complete the sentences. Choose the best answer for each blank.",
+      text: "In this story, the chirping cricket is {0}. The author says Emre must wake up at six, so the reader can tell that the cricket {1}.",
       slots: [
-        { options: ["the main character", "a helper who comes in near the end", "the one who causes the problem"], answer: 0 },
-        { options: ["a good night of sleep matters to him, so the noise is a real problem", "he always wakes up early, so noise never bothers him", "the class trip has been called off, so he can sleep late"], answer: 0 }
+        { options: ["the cause of the problem", "the main character", "a helper who comes in near the end"], answer: 0 },
+        { options: ["stops Emre from getting enough sleep", "helps Emre get ready faster", "wakes Emre up right on time"], answer: 0 }
       ],
-      clue: "Think about whose trouble the story follows. A detail near the start can show what a person in the story needs.",
+      clue: "Think about who or what makes the trouble in the story. A detail near the start can show what a person needs.",
       hints: [
-        "Think about whose trouble the story follows. A detail near the start can show what a person in the story needs.",
+        "Think about who or what makes the trouble in the story. A detail near the start can show what a person needs.",
         "Reread paragraph 1. What does Emre need to do the next morning?",
-        "The chirping comes from the cricket, so Emre does not cause the problem. For the second blank, think about what a person who must wake up at six needs."
+        "The cricket is there from the first chirp, so it is not a helper who comes in near the end. For the second blank, think about what a person who must wake up at six needs."
       ],
       how: [
-        "The story follows Emre from the first paragraph to the last, and it is his sleep that is ruined, so he is the main character.",
-        "Paragraph 1 says he has a class trip and must wake up at six. He needs sleep.",
-        "So the noisy cricket is a real problem for him.",
-        "The answers are the main character and a good night of sleep matters to him. The trip is still on, and the noise keeps him awake."
+        "The trouble starts with the first chirp, and the cricket makes it. The story follows Emre, not the cricket.",
+        "Paragraph 1 says that Emre must wake up at six. He needs to sleep.",
+        "So the noisy cricket keeps him from getting enough sleep.",
+        "The answers are the cause of the problem and stops Emre from getting enough sleep. The cricket does not help him get ready or wake him on time."
       ],
-      misconception: "A common mix-up is thinking a detail at the start is just filler. Here it shows why the problem matters.",
-      why: "The answers are the main character and a good night of sleep matters to him, so the noise is a real problem. Emre must wake up at six for the trip. The cricket, not Emre, causes the noise, the trip is still on, and the noise keeps him awake." },
+      misconception: "A common mix-up is thinking a detail at the start is only background. Here it shows why the cricket is a problem.",
+      why: "The answers are the cause of the problem and stops Emre from getting enough sleep. The chirping begins the trouble, and Emre must wake up at six for the trip. The cricket is not the main character or a helper, and it does not help Emre get ready or wake him on time." },
     { id: "SK-TT1b-S07", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
       like: ["SK-TT1b-C05"],
       prompt: "At the end of the story, the author writes, \"The room was quiet at last.\" Why does the author include this sentence?",
       choices: [
-        { text: "It proves that moving the cricket fixed the problem.", correct: true },
+        { text: "It shows that moving the cricket fixed the problem.", correct: true },
         { text: "It shows that the cricket will come back to the room." },
         { text: "It shows that Emre is afraid of the quiet." },
         { text: "It shows that Grandpa was angry about the noise." }
       ],
-      clue: "Authors often end with a detail that shows whether the fix worked. Ask what changed since the trouble started.",
+      clue: "Authors choose the last sentence on purpose. Ask why this sentence is the one that ends the story.",
       hints: [
-        "Authors often end with a detail that shows whether the fix worked. Ask what changed since the trouble started.",
+        "Authors choose the last sentence on purpose. Ask why this sentence is the one that ends the story.",
         "Compare the room in paragraph 2 with the room in the last paragraph.",
         "Nothing says Grandpa was angry, so that choice has no support. Test each choice that is left against how the story ends."
       ],
       how: [
         "At the start, the room is filled with loud chirping that keeps Emre awake.",
         "At the end, the cricket is out on the porch, the room is quiet, and Emre falls asleep in minutes.",
-        "The answer is \"It proves that moving the cricket fixed the problem.\"",
+        "The answer is \"It shows that moving the cricket fixed the problem.\"",
         "The cricket is set free outside, Emre falls asleep, and Grandpa is calm and helpful."
       ],
       misconception: "A common mix-up is reading a quiet ending as something scary. Compare it with how the problem began.",
-      why: "The answer is \"It proves that moving the cricket fixed the problem.\" The room was loud with chirping, and now it is quiet and Emre sleeps. The cricket was set free outside, Emre is not afraid, and Grandpa helps calmly." },
+      why: "The answer is \"It shows that moving the cricket fixed the problem.\" The room was loud with chirping, and now it is quiet and Emre sleeps. The cricket was set free outside, Emre is not afraid, and Grandpa helps calmly." },
     { id: "SK-TT1b-S08", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
       like: ["SK-TT1b-C06"],
       stem: ["On Friday, Ms. Vega's class played a bean bag game. Each team stood ten steps from a bucket and tried to toss as many bean bags into it as they could. Ms. Vega set up the game on the hilltop behind the school, where a strong wind blew all afternoon."],
@@ -1790,8 +1790,8 @@ PP.addLesson({
       clue: "A setting can make a challenge harder. Picture the place, and ask what in it gets in the way.",
       hints: [
         "A setting can make a challenge harder. Picture the place, and ask what in it gets in the way.",
-        "Reread the last sentence of the story. What is true about the hilltop?",
-        "The story does not say how many bean bags each team gets or how big the bucket is. Test each choice that is left against the details in the story."
+        "Reread the story and list what is special about the place where they play.",
+        "The story does not say the bucket is small, so that choice has no support. Test each choice that is left against the details in the story."
       ],
       how: [
         "The game is to toss bean bags into a bucket from ten steps away.",
@@ -1901,7 +1901,7 @@ PP.addLesson({
       why: "Part A: He is a helper who works with Emre to free the cricket. Part B: \"Emre held a cup upside down over the spot while Grandpa slid a card underneath.\" Grandpa helps with the fix. Emre has the problem, and nothing says Grandpa let the cricket in." },
     { id: "SK-TT1b-S13", type: "match", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: [],
       like: ["SK-TT1b-C13"],
-      prompt: "Each sentence is the start of a new story. Match each setting to the problem it would most likely cause. Use each problem once.",
+      prompt: "Each sentence starts a new story. Match each setting to the problem it would likely cause.",
       cols: ["Staying warm", "Sending a message", "Finding the way"],
       rows: [
         { text: "Dina's family is camping on a snowy mountain, and the night will be far below freezing.", answer: 0 },
@@ -1934,8 +1934,8 @@ PP.addLesson({
       clue: "To compare two solutions, ask for each story what the child tried and who gave the plan that worked.",
       hints: [
         "To compare two solutions, ask for each story what the child tried and who gave the plan that worked.",
-        "In each story, find the try that does not work. Then find the person who speaks next.",
-        "In both stories, someone besides the child speaks up with a plan. Test each choice that is left against both stories."
+        "Compare what the child tries at the start with how each problem is finally solved.",
+        "Nobody goes to a teacher in either story. Test each choice that is left against both stories."
       ],
       how: [
         "In \"The Midnight Cricket,\" Emre covers his head with a pillow, and it does not work. Then Grandpa explains how to find the cricket.",
@@ -1947,7 +1947,7 @@ PP.addLesson({
       why: "The answer is \"In both, a first try fails, and a family member's idea fixes it.\" Emre's pillow fails and Grandpa's idea works, and Idris's tries fail and Dara's idea works. Neither child fixes it alone, neither problem goes away by itself, and no teacher is asked." },
     { id: "SK-TT1b-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
       like: ["SK-TT1b-C15"],
-      prompt: "Which new story has a solution that works for the same reason Grandpa's idea works in \"The Midnight Cricket\"?",
+      prompt: "Which new story has a fix that works for the same reason as Grandpa's idea in \"The Midnight Cricket\"?",
       choices: [
         { text: "Remy's bike clicks, so he finds the loose spoke by listening, then tightens it.", correct: true },
         { text: "Remy's bike clicks, so he turns up his music until he cannot hear the clicking." },
@@ -2868,9 +2868,9 @@ PP.addLesson({
       prompt: "Which TWO sentences show what is going on in Rafa's mind before he pulls his hand back? Choose two sentences in the passage.",
       targets: ["p11:3:1", "p11:3:3", "p11:4:1", "p11:4:2", "p11:4:3", "p11:5:1"],
       answer: ["p11:4:1", "p11:4:2"],
-      clue: "A character's mind holds thoughts and memories. Look for sentences that tell what Rafa thinks or remembers.",
+      clue: "Think about what is going on inside Rafa's head. Look for sentences about the inside, not the outside.",
       hints: [
-        "A character's mind holds thoughts and memories. Look for sentences that tell what Rafa thinks or remembers.",
+        "Think about what is going on inside Rafa's head. Look for sentences about the inside, not the outside.",
         "Read the sentences between the moment Rafa gets upset and the moment he pulls his hand back.",
         "A tight jaw shows how Rafa looks on the outside, but it does not tell what he thinks or remembers. Check each sentence that is left."
       ],
@@ -2913,22 +2913,22 @@ PP.addLesson({
         { text: "A neighbor builds a second box for the extra books.", correct: true },
         { text: "Amira loves to read." },
         { text: "The nearest library is a long bus ride away." },
-        { text: "Her street has lots of kids and almost no books." }
+        { text: "Amira nails the box to her fence." }
       ],
-      clue: "An effect happens because of a cause. Look for events that come after Amira puts up the box, not before.",
+      clue: "An effect happens because of a cause. Find the cause, and then look for events that come after it.",
       hints: [
-        "An effect happens because of a cause. Look for events that come after Amira puts up the box, not before.",
-        "Find the moment Amira nails up the box. Things that were already true cannot happen because of it.",
+        "An effect happens because of a cause. Find the cause, and then look for events that come after it.",
+        "Find the moment Amira nails up the box. Nothing can be caused by itself, or by things that were already true.",
         "Amira's love of reading is true before the box goes up, so it cannot be an effect. Check each other choice the same way."
       ],
       how: [
         "Amira nails up the box on Saturday. Everything that happens because of it must come after.",
         "Mr. Alder leaves a book with a note, and later a neighbor builds a second box because the first one is too full.",
         "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\"",
-        "Loving to read, the far library and the street with few books were all true before she put up the box."
+        "Loving to read and the far library were true before she put up the box, and nailing up the box is the cause, not a result."
       ],
       misconception: "A common mix-up is choosing a fact from the start of the story. Those are reasons for the box, not results of it.",
-      why: "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\" Both happen after the box goes up. Amira's love of reading, the faraway library and the street with few books were true before." },
+      why: "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\" Both happen after the box goes up. Amira's love of reading and the faraway library were true before, and nailing up the box is the cause, not an effect." },
     { id: "SK-TT1c-S12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: [],
       like: ["SK-TT1c-C12"],
       stem: ["Odessa's neighbor, Mr. Pike, broke his arm. Every afternoon, Odessa took his trash can to the curb. She brought it back after the truck came. She never asked for anything. She did not tell her friends."],
@@ -2941,7 +2941,7 @@ PP.addLesson({
       clue: "What a character does again and again shows what the character is like. Ask why she keeps doing it and what she gets from it.",
       hints: [
         "What a character does again and again shows what the character is like. Ask why she keeps doing it and what she gets from it.",
-        "Look at the last sentence of the story. What does Odessa not do?",
+        "Reread the story and notice each thing Odessa does.",
         "A selfish person does not give up a part of every afternoon for a neighbor. For the second blank, ask what Odessa gets in return."
       ],
       how: [
@@ -2980,7 +2980,7 @@ PP.addLesson({
       like: ["SK-TT1c-C14"],
       prompt: "Think about Tobias in \"The Borrowed Boots\" and Amira in \"The Little Library.\" Which TWO sentences are true about both characters?",
       choices: [
-        { text: "Each one worries about something before the story ends well.", correct: true },
+        { text: "Each one has a doubt before the story ends well.", correct: true },
         { text: "Each one feels better because of how other people act." , correct: true },
         { text: "Each one says sorry for something that went wrong." },
         { text: "Each one gets help from a cousin." },
@@ -2993,13 +2993,13 @@ PP.addLesson({
         "Only Tobias says sorry in his story. Check each sentence that is left against both characters."
       ],
       how: [
-        "Tobias worries about the scuff, and Amira thinks that nobody will care about a box of books. Each one has a worry before the good ending.",
+        "Tobias worries about the scuff, and Amira thinks that nobody will care about a box of books. Each one has a doubt before the good ending.",
         "Tobias feels better when Cedric laughs, and Amira smiles when neighbors fill the box and kids come. Each feels better because of what others do.",
-        "The answers are \"Each one worries about something before the story ends well.\" and \"Each one feels better because of how other people act.\"",
+        "The answers are \"Each one has a doubt before the story ends well.\" and \"Each one feels better because of how other people act.\"",
         "Only Tobias says sorry or has a cousin, and Amira's neighbors help her."
       ],
       misconception: "A common mix-up is choosing a sentence that is true for only one of the two characters.",
-      why: "The answers are \"Each one worries about something before the story ends well.\" and \"Each one feels better because of how other people act.\" Both are true for Tobias and Amira. Only Tobias says sorry or has a cousin, and Amira gets help from neighbors." },
+      why: "The answers are \"Each one has a doubt before the story ends well.\" and \"Each one feels better because of how other people act.\" Both are true for Tobias and Amira. Only Tobias says sorry or has a cousin, and Amira gets help from neighbors." },
     { id: "SK-TT1c-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p12"],
       like: ["SK-TT1c-C15"],
       prompt: "Which situation teaches the same lesson as \"The Marble Run\"?",
@@ -3388,7 +3388,7 @@ PP.addLesson({
       paragraphs: [
         ["Mr. Sims's class had a new project: hatching chicks.", "He set a dozen eggs in a warm box called an incubator and hung a calendar beside it."],
         ["Every morning, Lani crossed off one more square on the calendar.", "\"Twenty-one days,\" she told her friends.", "\"That is how long it takes.\""],
-        ["The class turned the eggs twice a day.", "Lani drew a picture of the eggs each Friday.", "For a long time, nothing seemed to change."],
+        ["The class turned the eggs three times a day.", "Lani drew a picture of the eggs each Friday.", "For a long time, nothing seemed to change."],
         ["On day twenty-one, a tiny crack ran across the biggest egg.", "Then came a peep!", "A damp, fuzzy chick tumbled out, and the whole class cheered."]
       ] },
     { id: "p10", title: "The Birthday Card Dash", genre: "Literary text",
@@ -3402,7 +3402,7 @@ PP.addLesson({
       paragraphs: [
         ["On the night of the Mid-Autumn Festival, Linh carried a round paper lantern down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
         ["\"Why do we carry lanterns?\" Linh asked her grandfather."],
-        ["\"The lanterns are round like the full moon,\" Grandfather said.", "\"Tonight the moon is at its brightest, so we make our own small moons to walk beside it.\""],
+        ["\"The lanterns are for the moon,\" Grandfather said.", "\"Tonight the moon is at its brightest, so we carry our small lights to walk beside it.\""],
         ["Linh looked up.", "A huge, glowing moon hung over the rooftops.", "She lifted her lantern high so it would shine as bright as the sky."],
         ["Back home, the family shared mooncakes on the balcony.", "\"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\""]
       ] },
@@ -3924,18 +3924,18 @@ PP.addLesson({
           { text: "Both stories last for a few weeks." },
           { text: "Lani's story happens at night, but Cass's story happens in the morning." }
         ] },
-      partB: { prompt: "Which TWO sentences from \"Twenty-One Days\" best support the answer to Part A?", pick: 2,
+      partB: { prompt: "Which TWO sentences from \"Twenty-One Days\" give the best support for the answer to Part A?", pick: 2,
         choices: [
           { text: "\"Twenty-one days,\" she told her friends.", correct: true },
           { text: "On day twenty-one, a tiny crack ran across the biggest egg.", correct: true },
-          { text: "The class turned the eggs twice a day." },
+          { text: "The class turned the eggs three times a day." },
           { text: "Then came a peep!" },
           { text: "Lani drew a picture of the eggs each Friday." }
         ] },
       clue: "To compare the time in two stories, look for clues about how long each one lasts. Compare the clues.",
       hints: [
         "To compare the time in two stories, look for clues about how long each one lasts. Compare the clues.",
-        "Find the time words in each story, like the hours on the clock or the number of days. Then choose two sentences for Part B.",
+        "Find the time words in each story. Then choose two sentences for Part B.",
         "Cass's story has clock times like three o'clock and five o'clock, so it cannot last a week. For Part B, your sentences must match your Part A answer."
       ],
       how: [
@@ -3988,10 +3988,10 @@ PP.addLesson({
           { text: "Neighbors walking past slowed down to look at the warm light." },
           { text: "Candles glowed inside lanterns all around her." }
         ] },
-      clue: "To find how two characters are alike, look at what each one says or does near the end. Then use the answer to find the sentences.",
+      clue: "To find how two characters are alike, look for something that both of them do or feel. Then use the answer to find the sentences.",
       hints: [
-        "To find how two characters are alike, look at what each one says or does near the end. Then use the answer to find the sentences.",
-        "Read the last paragraph of each story. Ask what each girl says she will do.",
+        "To find how two characters are alike, look for something that both of them do or feel. Then use the answer to find the sentences.",
+        "Read the last three sentences of each story. What do the two girls have in common?",
         "Neither girl is afraid of anything in her story. For Part B, choose one sentence from each story that matches your Part A answer."
       ],
       how: [
@@ -4040,8 +4040,8 @@ PP.addLesson({
       clue: "To find a message two stories share, ask what each main character does and what happens because of it.",
       hints: [
         "To find a message two stories share, ask what each main character does and what happens because of it.",
-        "Compare what Sora does for years with what Luca does by the stove. What do both of them have to do before they see the result?",
-        "One of the choices is about rushing, but both children wait. Test each choice that is left against both stories."
+        "Compare what Sora does for years with what Luca does by the stove. What do the two have in common?",
+        "Neither story says that fruit or bread is the best food. Test each choice that is left against both stories."
       ],
       how: [
         "Sora waters her seed for years before the fruit appears.",
@@ -4053,50 +4053,50 @@ PP.addLesson({
       why: "The answer is \"Waiting patiently can lead to something good.\" Sora waits years for fruit, and Luca waits for his dough to rise. Neither story says fruit or bread is best, neither child rushes, and the stories do not compare plants with dough." },
     { id: "SK-TT1d-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: ["p11", "p12"],
       like: ["SK-TT1d-C10"],
-      prompt: "Linh's grandfather says the lanterns are \"round like the full moon.\" Which part of Noa's story is MOST like this?",
+      prompt: "How is the light in Noa's story different from the light in Linh's story?",
       choices: [
-        { text: "Father explains why a candle is added each night.", correct: true },
-        { text: "Noa strikes a match to light the first candle." },
-        { text: "Neighbors slow down to look at the warm light." },
-        { text: "Noa helps set the menorah in the front window." }
+        { text: "Noa's light stays in one window, but Linh's light moves down the street.", correct: true },
+        { text: "Noa's light is made by electricity, but Linh's light is made by fire." },
+        { text: "Noa's light lasts one night, but Linh's light lasts eight nights." },
+        { text: "Noa's light is out on the street, but Linh's light is in a window." }
       ],
-      clue: "To find a part that is most like another, first say what the part does in its own story.",
+      clue: "To compare one detail in two stories, find what each story says about that detail. Then look for the way they differ.",
       hints: [
-        "To find a part that is most like another, first say what the part does in its own story.",
-        "Ask what Grandfather's words do for Linh. Then look for a part of Noa's story that does the same job for Noa.",
-        "Lighting a candle and setting the menorah are things Noa does. Check each choice that is left against what Grandfather's words do."
+        "To compare one detail in two stories, find what each story says about that detail. Then look for the way they differ.",
+        "Find where each girl's light is and what happens to it.",
+        "Neither story has electric lights, so that choice has no support. Test each choice that is left against both stories."
       ],
       how: [
-        "Linh asks why people carry lanterns, and her grandfather tells her they are round like the full moon. His words explain what the custom means.",
-        "In Noa's story, Father asks if she knows why a candle is added each night, and then he tells her about the oil that lasted eight days.",
-        "So the part most like Grandfather's words is Father's explanation. The answer is \"Father explains why a candle is added each night.\"",
-        "Striking a match, neighbors looking and setting the menorah are actions, not explanations."
+        "In Linh's story, she carries a lantern down the street, and other lanterns glow all around her.",
+        "In Noa's story, the menorah is set in the front window, and neighbors see its light as they walk past.",
+        "The answer is \"Noa's light stays in one window, but Linh's light moves down the street.\"",
+        "Both lights come from candles, Noa's candles are added one at a time over eight nights while Linh's night is a single festival night, and Noa's light is in the window, not out on the street."
       ],
-      misconception: "A common mix-up is choosing an event that sounds festive. Match the job the part does: it explains the custom.",
-      why: "The answer is \"Father explains why a candle is added each night.\" Grandfather's words explain what the lanterns mean, and Father's words explain what the candles mean. Striking a match, neighbors looking and setting the menorah are actions." },
+      misconception: "A common mix-up is switching the two stories. Check where each girl's light is.",
+      why: "The answer is \"Noa's light stays in one window, but Linh's light moves down the street.\" Linh carries her lantern along the street, and Noa's menorah sits in the front window. Both lights come from candles, and the places are not reversed." },
     { id: "SK-TT1d-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C11"],
-      stem: ["Story 1: On a snowy hill in Switzerland, Greta pulled her sled to the top. The air was freezing, and her breath made little clouds.", "Story 2: On a sunny beach in Brazil, Paulo carried his kite to the edge of the water. The sand was warm, and the waves were calm."],
+      stem: ["Story 1: Greta pulled her sled up the long hill. The ground was white, and her mittens were stiff with frost.", "Story 2: Paulo carried his kite across the sand. The sun was hot on his shoulders, and the waves were calm."],
       prompt: "Complete the sentences about the settings. Choose the best answer for each blank.",
       text: "Story 1 happens {0}. Story 2 happens {1}.",
       slots: [
-        { options: ["on a snowy hill in the cold", "on a sandy beach in the heat", "in a busy city in the rain"], answer: 0 },
-        { options: ["on a snowy hill in the cold", "on a sandy beach in the heat", "in a quiet forest in the fall"], answer: 1 }
+        { options: ["in a cold, snowy place", "in a hot, sandy place", "in a busy city in the rain"], answer: 0 },
+        { options: ["in a cold, snowy place", "in a hot, sandy place", "in a quiet forest in the fall"], answer: 1 }
       ],
-      clue: "A setting is where and when a story happens. Look for details about the place and the weather in each story.",
+      clue: "A setting is where and when a story happens. Use the details about the ground and the weather to work out the kind of place.",
       hints: [
-        "A setting is where and when a story happens. Look for details about the place and the weather in each story.",
-        "Find the first sentence of each story. Then check the weather words in the second sentence.",
+        "A setting is where and when a story happens. Use the details about the ground and the weather to work out the kind of place.",
+        "Find the words about the ground and the weather in each story.",
         "Neither story is set in a city or a forest. Match each story to the choices that are left."
       ],
       how: [
-        "Story 1 starts on a snowy hill in Switzerland, and the air is freezing, so it happens in the cold.",
-        "Story 2 starts on a sunny beach in Brazil, and the sand is warm, so it happens in the heat.",
-        "The answers are on a snowy hill in the cold, and on a sandy beach in the heat.",
+        "Story 1 has a white ground, a sled, and mittens stiff with frost. That is a cold, snowy place.",
+        "Story 2 has sand, a hot sun, and calm waves. That is a hot, sandy place.",
+        "The answers are in a cold, snowy place and in a hot, sandy place.",
         "There is no city or forest in either story."
       ],
-      misconception: "A common mix-up is matching the settings to the wrong stories. Check the place words in each story.",
-      why: "The answers are on a snowy hill in the cold, and on a sandy beach in the heat. Greta's story has a snowy hill and freezing air, and Paulo's story has a sunny beach and warm sand. Neither story is set in a city or a forest." },
+      misconception: "A common mix-up is matching the settings to the wrong stories. Check the details in each story.",
+      why: "The answers are in a cold, snowy place and in a hot, sandy place. Greta's story has a white ground, a sled and frosty mittens, and Paulo's story has sand, a hot sun and calm waves. Neither story is set in a city or a forest." },
     { id: "SK-TT1d-S12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [], pick: 2,
       like: ["SK-TT1d-C12"],
       stem: ["Here are sentences from two stories about children who mend things. Hoang is on a fishing boat in Vietnam. Ruth is on a farm in Nebraska."],
@@ -4112,10 +4112,10 @@ PP.addLesson({
         "By sunset, the fence stood straight again."
       ],
       answer: [1, 5],
-      clue: "Working carefully means taking time and checking each step. Look for words that show how the character works.",
+      clue: "Working carefully means going step by step and not rushing. Look for words that show how the character works.",
       hints: [
-        "Working carefully means taking time and checking each step. Look for words that show how the character works.",
-        "Look for words like slowly, twice and each. Choose one sentence for Hoang and one for Ruth.",
+        "Working carefully means going step by step and not rushing. Look for words that show how the character works.",
+        "Look for words that show how fast or how carefully each character works. Choose one sentence for Hoang and one for Ruth.",
         "The sentences about the boat and the cows tell about the setting, not about how the character works. Check each sentence that is left for each story."
       ],
       how: [
@@ -4145,7 +4145,7 @@ PP.addLesson({
       ],
       how: [
         "Rosa helps her aunt, Noi helps her father, and Piotr helps his grandmother. Each child helps a family member sell food.",
-        "A Saturday market, a river market and a stall all show a place where people come to buy and sell.",
+        "A market, a boat that sells to buyers on a bridge, and a stall are all places where people come to buy and sell.",
         "The answers are \"A child helps a family member sell food.\" and \"The selling happens at a place where people come to buy and sell.\"",
         "Only Noi is on a boat, Noi sells every morning, and only Piotr counts coins."
       ],
@@ -4195,7 +4195,7 @@ PP.addLesson({
       clue: "To compare ways of life, ask where each family lives and how their home is different. Find the details in each story.",
       hints: [
         "To compare ways of life, ask where each family lives and how their home is different. Find the details in each story.",
-        "Find the sentence in each story that tells whether the home stays still or moves. Then pick a sentence for Part B that shows the difference.",
+        "Find the sentences in each story that tell about the family's home. Then pick a sentence for Part B that shows the difference.",
         "Neither story is set in a big city. For Part B, your sentence must show the difference in your Part A answer."
       ],
       how: [

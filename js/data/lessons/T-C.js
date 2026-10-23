@@ -3104,20 +3104,20 @@ PP.addLesson({
         ["At recess, my pencil snapped.", "Mr. Gage sharpened it for me and set it on my desk.", "Then he told the class a joke about a goat that wore a hat, and everybody laughed."],
         ["At the end of the day, he gave each of us a sticker.", "Mine said, \"Great job.\"", "I put it in my pocket and shrugged.", "A sticker doesn't change a thing.", "Mr. Gage is still the strictest teacher alive."]
       ] },
-    { id: "p8", title: "The Dentist's Chair", genre: "Literary text",
+    { id: "p8", title: "The Tall Wall", genre: "Literary text",
       paragraphs: [
         ["## Part 1"],
-        ["I do not like going to the dentist.", "The big chair tips back like a spaceship seat, and the bright light shines right in my eyes."],
-        ["On Tuesday, Mom walked me into Dr. Amoah's office anyway.", "I gripped the arms of the chair and stared at the ceiling.", "I was sure it was going to hurt."],
+        ["My little brother Lio copies everything I do.", "When I wear my red cap, he wears his.", "When I hum, he hums."],
+        ["On Sunday at the park, I climbed the tall wall, and Lio started up right behind me.", "\"Stop following me!\" I said.", "Lio sat down in the dirt and would not look up.", "I rolled my eyes."],
         ["## Part 2"],
-        ["I have cleaned children's teeth for thirty years, and I know a worried patient when I see one.", "The girl in my chair gripped the arms so tight that her knuckles turned pale."],
-        ["So I told her about the parrot at my cousin's house that shouted, \"Open wide!\" whenever I visited.", "She listened with wide eyes and let go of the arms."],
-        ["When I handed her the mirror, she smiled at her sparkling teeth.", "\"See you in six months, Zadie?\" I asked.", "\"Okay,\" she said."]
+        ["I copy my sister because she is the bravest kid I know.", "She climbs the tall wall and never looks down."],
+        ["On Sunday, I wanted to climb like her.", "But when she told me to stop, my face got hot, and I sat in the dirt."],
+        ["Then Ines came back down.", "\"Put your foot on the green rock,\" she said.", "I did, and I made it all the way to the top.", "\"Nice job, Lio,\" she said, and I put on my red cap to match her."]
       ] },
     { id: "p9", title: "Puddle Day", genre: "Poem", lexile: "not measured (poem)",
       paragraphs: null,
       lines: [
-        ["The morning's wet, the worms are near.", "I tilt my head. I use my ear.", "I poke my beak into the ground", "and pull one up without a sound."],
+        ["The morning's wet, the worms are near.", "I tilt my head. I look and hear.", "I poke my beak into the ground", "and pull one up without a sound."],
         ["A puddle! Splash! I flap my wings", "and sprinkle drops on all the things.", "My nest is wet. My feathers, too!", "What a perfect day! Cheep, cheep! Woo-hoo!"],
         ["The clouds pull back. The sun comes through.", "I fluff my feathers, bright and new.", "Tomorrow I will hunt once more", "for worms along the garden floor."]
       ] }
@@ -3599,7 +3599,7 @@ PP.addLesson({
         { text: "She beams and tells him that he looks wonderful.", correct: true },
         { text: "He says that it itches his neck like a bunch of ants." },
         { text: "He thinks that he looks like a traffic cone." },
-        { text: "He tells her that it is the warmest thing he owns." }
+        { text: "She tells him that she bought the sweater at a store." }
       ],
       clue: "A narrator tells the story, but other characters have their own feelings. Look for what Grandma says and does.",
       hints: [
@@ -3611,10 +3611,10 @@ PP.addLesson({
         "The narrator hates the sweater at first, so his thoughts show his own view.",
         "Grandma's feelings show in what she does and says. She hums a tune and claps her hands, and she beams and says he looks wonderful.",
         "The answers are \"She hums a tune and claps her hands when he opens it.\" and \"She beams and tells him that he looks wonderful.\"",
-        "The itch, the traffic cone and \"the warmest thing I own\" are all the narrator's own thoughts or words."
+        "The itch and the traffic cone are the narrator's own thoughts, and Grandma knitted the sweater herself."
       ],
       misconception: "A common mix-up is choosing what the narrator thinks. The question asks about Grandma's own feelings.",
-      why: "The answers are \"She hums a tune and claps her hands when he opens it.\" and \"She beams and tells him that he looks wonderful.\" Both show Grandma's own happiness. The itch, the traffic cone and the warm sweater are all what the narrator thinks or says." },
+      why: "The answers are \"She hums a tune and claps her hands when he opens it.\" and \"She beams and tells him that he looks wonderful.\" Both show Grandma's own happiness. The itch and the traffic cone are what the narrator thinks, and Grandma knitted the sweater herself." },
     { id: "SK-TC2a-S05", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: ["p6"],
       like: ["SK-TC2a-P5"],
       prompt: "How does the narrator's view of the sweater change by the end of the story?",
@@ -3638,61 +3638,61 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is thinking the narrator's view stays the same. Compare his words at the start and at the end.",
       why: "The answer is \"He sees that the sweater keeps him warm and was made with care.\" He first dislikes it, but in the cold he is the only one still warm, and he thanks Grandma. He does not want to give it back, and nothing says she should stop knitting." },
-    { id: "SK-TC2a-S06", type: "ebsr", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p7"],
+    { id: "SK-TC2a-S06", type: "ebsr", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: ["p7"],
       like: ["SK-TC2a-C05"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "At the end of the story, how does the narrator see Mr. Gage?",
+      partA: { prompt: "How is the narrator's view of Mr. Gage different from what a reader may think?",
         choices: [
-          { text: "Mr. Gage is still the strictest teacher alive.", correct: true },
-          { text: "Mr. Gage is kind and funny." },
-          { text: "Mr. Gage is the best teacher in the school." },
-          { text: "Mr. Gage is too busy to help anyone." }
+          { text: "The narrator thinks he is strict, but a reader may also see him as kind.", correct: true },
+          { text: "The narrator and a reader both think he is only strict." },
+          { text: "The narrator thinks he is kind, but a reader may think he is strict." },
+          { text: "The narrator thinks he is funny, but a reader may think he is dull." }
         ] },
-      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+      partB: { prompt: "Which sentence from the story best shows why a reader may see Mr. Gage as kind?",
         choices: [
-          { text: "\"Mr. Gage is still the strictest teacher alive.\"", correct: true },
-          { text: "\"Mr. Gage sharpened it for me and set it on my desk.\"" },
-          { text: "\"Then he told the class a joke about a goat that wore a hat, and everybody laughed.\"" },
-          { text: "\"Mine said, 'Great job.'\"" }
+          { text: "\"Mr. Gage sharpened it for me and set it on my desk.\"", correct: true },
+          { text: "\"No talking,\" he said." },
+          { text: "\"A sticker doesn't change a thing.\"" },
+          { text: "\"Mr. Gage is still the strictest teacher alive.\"" }
         ] },
-      clue: "A narrator's view can stay the same even when the story shows something else. Look for the narrator's own words at the end.",
+      clue: "A narrator's words and a character's actions can point in different directions. Compare the two.",
       hints: [
-        "A narrator's view can stay the same even when the story shows something else. Look for the narrator's own words at the end.",
-        "Read the end of the story. Ask what the narrator thinks about Mr. Gage, not what Mr. Gage does.",
-        "Mr. Gage's kind actions show what a reader might think, but the question asks about the narrator. For Part B, the sentence must match your Part A answer."
+        "A narrator's words and a character's actions can point in different directions. Compare the two.",
+        "Think about what the narrator says about Mr. Gage. Then think about what Mr. Gage does during the day.",
+        "The narrator never says that Mr. Gage is kind, so one choice for Part A cannot describe the narrator. For Part B, the sentence must match your Part A answer."
       ],
       how: [
-        "Mr. Gage sharpens a pencil, tells a joke and hands out stickers. Those are things he does.",
-        "But the narrator shrugs at the sticker and says that it does not change a thing.",
-        "Part A: Mr. Gage is still the strictest teacher alive. Part B: \"Mr. Gage is still the strictest teacher alive.\"",
-        "The narrator does not say Mr. Gage is kind, funny or the best teacher, and nothing says he is too busy to help."
+        "The narrator calls Mr. Gage the strictest teacher alive, even at the end.",
+        "But Mr. Gage also sharpens a broken pencil, tells a joke, and gives each child a sticker. A reader may see those as kind.",
+        "Part A: The narrator thinks he is strict, but a reader may also see him as kind. Part B: \"Mr. Gage sharpened it for me and set it on my desk.\"",
+        "The narrator never calls him kind or funny, and the narrator and the reader do not see him in exactly the same way."
       ],
-      misconception: "A common mix-up is choosing what Mr. Gage does. The question asks how the narrator sees him.",
-      why: "Part A: Mr. Gage is still the strictest teacher alive. Part B: \"Mr. Gage is still the strictest teacher alive.\" The narrator's view does not change, even though Mr. Gage does kind things. The narrator never calls him kind, funny or the best teacher." },
+      misconception: "A common mix-up is thinking the reader must agree with the narrator. A reader can notice what the narrator leaves out.",
+      why: "Part A: The narrator thinks he is strict, but a reader may also see him as kind. Part B: \"Mr. Gage sharpened it for me and set it on my desk.\" The narrator keeps calling him the strictest teacher alive, but his actions are kind. The narrator never calls him kind or funny." },
     { id: "SK-TC2a-S07", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: ["p8"], pick: 2,
       like: ["SK-TC2a-C06"],
-      prompt: "Part 2 of the story has a new narrator. Which TWO clues show this?",
+      prompt: "Two different people tell this story. Which TWO details show who tells Part 2?",
       choices: [
-        { text: "In Part 2, the girl in the chair is called she.", correct: true },
-        { text: "The I in Part 2 has cleaned children's teeth for thirty years.", correct: true },
-        { text: "The narrator in Part 2 uses the word I." },
-        { text: "Part 2 tells a funny story about a parrot." },
-        { text: "Part 2 happens in the same office." }
+        { text: "The I in Part 2 sat in the dirt after being told to stop.", correct: true },
+        { text: "The I in Part 2 calls the older sister the bravest kid he knows.", correct: true },
+        { text: "Both parts use the word I." },
+        { text: "Both parts tell about the same Sunday." },
+        { text: "Part 2 mentions the tall wall." }
       ],
-      clue: "When a new narrator tells part of a story, the person named I changes. Look at who is I and who is named she or he.",
+      clue: "To find out who tells a part of a story, look at what the I does and says about the other people.",
       hints: [
-        "When a new narrator tells part of a story, the person named I changes. Look at who is I and who is named she or he.",
-        "Compare who the I is in Part 1 with who the I is in Part 2.",
-        "Both parts use the word I, so that choice does not show a new narrator. Check each choice that is left."
+        "To find out who tells a part of a story, look at what the I does and says about the other people.",
+        "Compare the I in Part 1 with the I in Part 2. What does each one do, and what does each one say about the other?",
+        "Both parts use the word I, so that cannot show who is telling Part 2. Check each choice that is left."
       ],
       how: [
-        "In Part 1, the I is a girl who is afraid of the dentist.",
-        "In Part 2, the girl in the chair is called she, and the I says he has cleaned children's teeth for thirty years. The I is someone else.",
-        "The answers are \"In Part 2, the girl in the chair is called she.\" and \"The I in Part 2 has cleaned children's teeth for thirty years.\"",
-        "Both parts use I, the parrot story does not tell who the narrator is, and the office is the same in both parts."
+        "In Part 1, the I is the older sister. She tells Lio to stop following her.",
+        "In Part 2, the I is the one who was told to stop. He sat in the dirt, and he says his sister is the bravest kid he knows. So the I in Part 2 is Lio.",
+        "The answers are \"The I in Part 2 sat in the dirt after being told to stop.\" and \"The I in Part 2 calls the older sister the bravest kid he knows.\"",
+        "Both parts use I, both tell about the same Sunday, and both mention the wall, so those details do not show who is telling."
       ],
-      misconception: "A common mix-up is thinking that the word I shows a new narrator. Both parts use I; ask who it is.",
-      why: "The answers are \"In Part 2, the girl in the chair is called she.\" and \"The I in Part 2 has cleaned children's teeth for thirty years.\" Together they show that the I in Part 2 is the dentist. Both parts use I, the parrot story does not name the narrator, and the office is the same." },
+      misconception: "A common mix-up is thinking the word I always means the same person. Ask who the I is in each part.",
+      why: "The answers are \"The I in Part 2 sat in the dirt after being told to stop.\" and \"The I in Part 2 calls the older sister the bravest kid he knows.\" Together they show that Lio, the little brother, tells Part 2. Both parts use I, tell about the same Sunday, and mention the wall." },
     { id: "SK-TC2a-S08", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p7"],
       like: ["SK-TC2a-C08"],
       prompt: "In paragraph 1, the narrator says that Mr. Gage \"stood tall and stern like a statue.\" What does this tell you about how the narrator sees him?",
@@ -3718,46 +3718,46 @@ PP.addLesson({
       why: "The answer is \"He sees Mr. Gage as stiff and unfriendly.\" The narrator compares him to a statue, which stands stiff and does not smile. Mr. Gage is not made of stone, nothing says he makes statues, and no one wants a picture." },
     { id: "SK-TC2a-S09", type: "hottext", points: 1, dok: 2, std: ["3.T.C.2.a"], passages: ["p8"],
       like: ["SK-TC2a-C09"],
-      prompt: "In Part 1, Zadie is sure it is going to hurt. Which sentence in Part 2 shows that she feels better by the end? Choose the sentence in the passage.",
-      targets: ["p8:5:2", "p8:6:1", "p8:6:2", "p8:7:1", "p8:7:2", "p8:7:3"],
-      answer: ["p8:7:1"], pick: 1,
-      clue: "A narrator can show how another person feels by what that person does. Look for something Zadie does that shows she is no longer afraid.",
+      prompt: "Which sentence near the end of Part 2 shows that Lio still wants to be like his sister? Choose the sentence in the passage.",
+      targets: ["p8:5:2", "p8:6:2", "p8:7:1", "p8:7:2", "p8:7:3", "p8:7:4"],
+      answer: ["p8:7:4"], pick: 1,
+      clue: "A narrator can show a wish by what he does. Look for something Lio does near the end that shows how he sees his sister.",
       hints: [
-        "A narrator can show how another person feels by what that person does. Look for something Zadie does that shows she is no longer afraid.",
-        "Read the sentences that tell what Zadie does, from when she grips the arms to the end of the visit.",
-        "Gripping the arms shows how afraid she is, so it does not show she feels better. Check each sentence that is left."
+        "A narrator can show a wish by what he does. Look for something Lio does near the end that shows how he sees his sister.",
+        "Read the sentences from when Ines comes back down to the end of the story.",
+        "Making it to the top is something Lio does, but it does not show that he wants to be like her. Check each sentence that is left."
       ],
       how: [
-        "At the start of Part 2, Zadie grips the arms so tight that her knuckles turn pale. She is still scared.",
-        "Then she listens to a story and lets go of the arms. She is calming down, but she is still in the chair.",
-        "At the end, when the dentist hands her the mirror, she smiles at her sparkling teeth. That shows she feels good about the visit.",
-        "The answer is \"When I handed her the mirror, she smiled at her sparkling teeth.\""
+        "In Part 2, Lio explains that he copies his sister because she is brave.",
+        "At the end, Ines helps him to the top and says, \"Nice job, Lio.\"",
+        "Then he puts on his red cap, the same kind she wears. That is the sentence that shows he still wants to be like her.",
+        "The answer is \"\\\"Nice job, Lio,\\\" she said, and I put on my red cap to match her.\" Climbing to the top and Ines's advice are things that happen, but they do not show his wish."
       ],
-      misconception: "A common mix-up is choosing a sentence from earlier in Part 2, when she is still afraid.",
-      why: "The answer is \"When I handed her the mirror, she smiled at her sparkling teeth.\" A smile at the end shows she feels better. Gripping the arms shows fear, and listening to the story and letting go show she is calming down, but not yet pleased." },
+      misconception: "A common mix-up is choosing the sentence where Lio reaches the top. That shows what he does, not what he wishes.",
+      why: "The answer is the sentence where Lio puts on his red cap to match his sister. Copying what she wears shows he still wants to be like her. Reaching the top and Ines's advice happen in the story, but they do not show his wish." },
     { id: "SK-TC2a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: ["p8"],
       like: ["SK-TC2a-C10"],
-      prompt: "Why does the author have Dr. Amoah tell Part 2 instead of Zadie?",
+      prompt: "What does the reader learn from Lio's part of the story that Ines's part cannot show?",
       choices: [
-        { text: "so readers can see how Zadie looked to someone else and what he did to help", correct: true },
-        { text: "so readers can learn the steps for cleaning teeth at home" },
-        { text: "so readers can find out what Zadie was thinking in the chair" },
-        { text: "so readers can tell that Zadie was never really worried" }
+        { text: "why Lio copies his sister, because he admires her", correct: true },
+        { text: "that Ines was never annoyed by Lio at all" },
+        { text: "the steps for climbing a tall wall safely" },
+        { text: "that Lio does not want to climb the wall" }
       ],
-      clue: "An author can switch narrators to show something the first narrator cannot. Ask what Dr. Amoah can see that Zadie cannot say.",
+      clue: "When a story has two narrators, each part shows what that narrator knows. Ask what Lio can tell the reader that Ines cannot.",
       hints: [
-        "An author can switch narrators to show something the first narrator cannot. Ask what Dr. Amoah can see that Zadie cannot say.",
-        "Compare what Part 1 tells about Zadie with what Part 2 tells about her.",
-        "Part 1 already told what Zadie was thinking. Test each choice that is left against what Part 2 adds."
+        "When a story has two narrators, each part shows what that narrator knows. Ask what Lio can tell the reader that Ines cannot.",
+        "Compare what Part 1 says about why Lio follows Ines with what Part 2 says.",
+        "Part 2 gives no climbing steps, so that choice has no support. Test each choice that is left against what Lio says he wants."
       ],
       how: [
-        "Part 1 is told by Zadie, so readers learn she is afraid and what she thinks.",
-        "In Part 2, Dr. Amoah describes how Zadie's knuckles look and how he helps her calm down.",
-        "The answer is \"so readers can see how Zadie looked to someone else and what he did to help.\"",
-        "Part 2 does not teach tooth cleaning at home, Zadie's thoughts were already told in Part 1, and she was worried."
+        "In Part 1, Ines thinks Lio just copies her, and she is annoyed.",
+        "Only Lio can tell what is inside his own head. In Part 2, he says he copies her because she is the bravest kid he knows.",
+        "The answer is \"why Lio copies his sister, because he admires her.\"",
+        "Ines is annoyed in Part 1, Part 2 gives no climbing steps, and Lio does want to climb."
       ],
-      misconception: "A common mix-up is thinking a new narrator repeats what the first one said. A new narrator adds what the first one could not see.",
-      why: "The answer is \"so readers can see how Zadie looked to someone else and what he did to help.\" Part 1 told what Zadie felt. Part 2 adds how she looked and how the dentist helped. It does not teach tooth cleaning, and it does not say she was never worried." },
+      misconception: "A common mix-up is thinking a second narrator only repeats the story. Each narrator knows what only he or she can know.",
+      why: "The answer is \"why Lio copies his sister, because he admires her.\" Ines cannot see inside Lio's head, so only his part can tell why he follows her. Ines is annoyed in Part 1, Part 2 gives no climbing steps, and Lio wants to climb." },
     { id: "SK-TC2a-S11", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: ["p9"], pick: 2,
       like: ["SK-TC2a-C11"],
       prompt: "The poem never says who the speaker is. Which TWO clues show that the speaker is an animal, not a child?",
@@ -3768,9 +3768,9 @@ PP.addLesson({
         { text: "The speaker listens by tilting a head." },
         { text: "The speaker is happy about the wet morning." }
       ],
-      clue: "A poem can tell who the speaker is through clues. Look for body parts or actions that only an animal would have.",
+      clue: "A poem can tell who the speaker is through clues. Look at what the speaker has and does.",
       hints: [
-        "A poem can tell who the speaker is through clues. Look for body parts or actions that only an animal would have.",
+        "A poem can tell who the speaker is through clues. Look at what the speaker has and does.",
         "Read each stanza and ask what the speaker has or does. Could a child have or do it?",
         "A child can be happy about rain, so that choice cannot show the speaker is an animal. Check each choice that is left."
       ],
@@ -3807,52 +3807,52 @@ PP.addLesson({
       why: "Many answers can be right. A good answer tells the speaker's view with a detail (a perfect day, \"Woo-hoo!\"), gives the writer's own view, and backs it up with a detail from the poem." },
     { id: "SK-TC2a-S13", type: "match", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: [],
       like: ["SK-TC2a-C13"],
-      prompt: "Read each short part of a story. Does the teller show how they feel about what happens, or only tell what happens? Match each part.",
-      cols: ["shows how the teller feels", "only tells what happens"],
+      stem: ["Ollie's kite fell into the pond.", "\"This is the worst day ever!\" Ollie shouted.", "His dad smiled. \"It will dry by lunch,\" he said.", "The kite floated on the water like a bright paper boat."],
+      prompt: "Match each sentence from the story to the one whose view it shows.",
+      cols: ["the narrator", "Ollie", "a neighbor", "Ollie's dad"],
       rows: [
-        { text: "The soup was so delicious that I asked for a third bowl.", answer: 0 },
-        { text: "The train left the station at nine and reached the city at noon.", answer: 1 },
-        { text: "Our dog barked at the mail carrier, and then he ran in a circle.", answer: 1 },
-        { text: "I could not stand the loud, screechy music in the store.", answer: 0 }
+        { text: "This is the worst day ever!", answer: 1 },
+        { text: "It will dry by lunch.", answer: 3 },
+        { text: "The kite floated on the water like a bright paper boat.", answer: 0 }
       ],
-      clue: "Words such as delicious or could not stand show a feeling. Telling only what happens does not.",
+      clue: "A point of view belongs to whoever says or thinks it. Ask who is speaking in each sentence.",
       hints: [
-        "Words such as delicious or could not stand show a feeling. Telling only what happens does not.",
-        "For each part, look for words that show what the teller thinks or feels, not just what happens.",
-        "The train sentence only gives times and places, with no feeling at all. Sort the other three the same way."
+        "A point of view belongs to whoever says or thinks it. Ask who is speaking in each sentence.",
+        "Look for quotation marks and for the words that tell who is speaking.",
+        "No neighbor is in this story, so that choice is not used. Match the other three the same way."
       ],
       how: [
-        "\"So delicious that I asked for a third bowl\" shows how the teller feels about the soup.",
-        "The train and the barking dog are told as events, with no feeling words.",
-        "\"Could not stand the loud, screechy music\" shows the teller dislikes it.",
-        "So: shows, only tells, only tells, shows."
+        "Quotation marks show that a character is speaking. The words after them tell who it is.",
+        "Ollie shouts, \"This is the worst day ever!\" and his dad says, \"It will dry by lunch.\"",
+        "The sentence about the kite has no quotation marks, so it is the narrator describing the scene.",
+        "A neighbor never speaks, so that choice is not used."
       ],
-      misconception: "A common mix-up is thinking that a lively action shows a feeling. The dog running in a circle is just what happens.",
-      why: "The soup sentence and the music sentence show how the teller feels. The train sentence and the dog sentence only tell what happens." },
+      misconception: "A common mix-up is thinking every sentence is the narrator's. Words in quotation marks belong to the character who says them.",
+      why: "\"This is the worst day ever!\" shows Ollie's view, \"It will dry by lunch\" shows his dad's view, and the sentence about the paper boat is the narrator's own description. No neighbor speaks in the story." },
     { id: "SK-TC2a-S14", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: [],
       like: ["SK-TC2a-C14"],
-      stem: ["I am the best block builder in the class.", "Today my tower fell over, but only because the table shook.", "Mia says my base was too narrow.", "Mia just wants to copy my idea."],
-      prompt: "Read the part of a story in the box. What might a reader think that the narrator does not?",
+      stem: ["The new girl, Pilar, sat alone at lunch.", "I waved, but she only looked at her tray.", "\"She thinks she is too good for us,\" I told my friends.", "Pilar held her lunch bag tight, and her ears turned pink."],
+      prompt: "Read the part of a story in the box. What might a reader think about Pilar that the narrator does not?",
       choices: [
-        { text: "A wider base would have made the tower stronger.", correct: true },
-        { text: "The narrator really is the best builder in the class." },
-        { text: "Mia wants to copy the narrator's idea." },
-        { text: "Nobody in the class can build a tower." }
+        { text: "Pilar may be too shy to talk to anyone yet.", correct: true },
+        { text: "Pilar may be better than everyone else at school." },
+        { text: "Pilar may have waved back at the narrator." },
+        { text: "Pilar may not want any lunch at all." }
       ],
-      clue: "A reader can notice things the narrator leaves out. Ask what the narrator says and what the other character says.",
+      clue: "A reader can notice clues that the narrator misses. Compare what the narrator says with what Pilar does.",
       hints: [
-        "A reader can notice things the narrator leaves out. Ask what the narrator says and what the other character says.",
-        "Compare what the narrator blames with what Mia says about the base.",
-        "The narrator is the one who says Mia wants to copy the idea, so that is the narrator's view, not the reader's. Test each choice that is left."
+        "A reader can notice clues that the narrator misses. Compare what the narrator says with what Pilar does.",
+        "Look at what Pilar's body does in the last sentence.",
+        "The narrator already says that Pilar thinks she is too good, so that is the narrator's view, not the reader's. Test each choice that is left."
       ],
       how: [
-        "The narrator blames the shaking table and says Mia just wants to copy the idea.",
-        "Mia says the base was too narrow, which could be the real reason the tower fell.",
-        "A reader can see that advice may be helpful. The answer is \"A wider base would have made the tower stronger.\"",
-        "Bragging and blaming Mia are the narrator's views, and nothing says nobody can build a tower."
+        "The narrator thinks Pilar is stuck-up because she did not wave back.",
+        "But Pilar holds her bag tight and her ears turn pink. Those are signs of feeling shy or nervous.",
+        "A reader might think Pilar is too shy to talk. The answer is \"Pilar may be too shy to talk to anyone yet.\"",
+        "The story says she only looked at her tray, so she did not wave, and nothing says she is better than others or does not want lunch."
       ],
-      misconception: "A common mix-up is choosing something the narrator already says. The question asks what the reader might think instead.",
-      why: "The answer is \"A wider base would have made the tower stronger.\" Mia's advice could explain the fall, though the narrator ignores it. Being the best builder and Mia copying are the narrator's own claims, and nothing says nobody can build a tower." },
+      misconception: "A common mix-up is believing everything the narrator says. A reader checks the narrator's words against what happens.",
+      why: "The answer is \"Pilar may be too shy to talk to anyone yet.\" The narrator says she thinks she is too good, but her tight grip and pink ears are signs of shyness. Pilar did not wave, and nothing says she is better than others or does not want lunch." },
     { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
       like: ["SK-TC2a-C15"],
       stem: ["Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't wait to go home.", "Jorge's postcard: We went to the farm today! The barn smelled strong, but I loved feeding the goat. I wish we could stay all week."],

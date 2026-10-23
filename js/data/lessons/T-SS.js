@@ -4459,14 +4459,14 @@ PP.addLesson({
       why: "Part A: They should stop working for now. Part B: \"We can finish tomorrow.\" Dad says the rest of the raking can wait, so \"call it a day\" means stop for now. Nobody calls a friend, starts over, or waits for the day to end." },
     { id: "SK-SS2a-S08", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [], pick: 2,
       like: ["SK-SS2a-C08"],
-      stem: ["Mom blew soap bubbles on the porch. The bubbles were tiny dancers, floating and turning over the steps."],
+      stem: ["Mom blew soap bubbles on the porch. The bubbles were tiny dancers over the steps."],
       prompt: "The author compares the bubbles to dancers. Which TWO things does this comparison help the reader understand about the bubbles?",
       choices: [
         { text: "The bubbles move in a lively way.", correct: true },
-        { text: "The bubbles float and turn in the air.", correct: true },
+        { text: "The bubbles drift and twirl gracefully.", correct: true },
         { text: "The bubbles are learning a new dance." },
         { text: "The bubbles are heavy and drop straight down." },
-        { text: "The bubbles are hiding from the girl." }
+        { text: "The bubbles are hiding from Mom." }
       ],
       clue: "A comparison helps the reader picture how something acts. Ask how real dancers behave.",
       hints: [
@@ -4475,36 +4475,36 @@ PP.addLesson({
         "Bubbles cannot learn a dance, so one choice can go. Test the rest against how dancers move."
       ],
       how: [
-        "Dancers move in a lively way, and they twirl and turn.",
-        "The author says the bubbles float and turn, so the bubbles move like dancers.",
-        "The answers are \"The bubbles move in a lively way.\" and \"The bubbles float and turn in the air.\"",
+        "Dancers move in a lively way, and they glide and twirl.",
+        "Bubbles over the steps drift and twirl, so they move like dancers.",
+        "The answers are \"The bubbles move in a lively way.\" and \"The bubbles drift and twirl gracefully.\"",
         "Bubbles do not learn dances, they float instead of dropping, and nothing in the text says they are hiding."
       ],
       misconception: "A common mix-up is thinking the bubbles are really dancing. The comparison tells how they move.",
-      why: "The answers are \"The bubbles move in a lively way.\" and \"The bubbles float and turn in the air.\" Dancers move in a lively way and turn, and the bubbles float and turn. Bubbles do not learn dances, drop straight down, or hide." },
-    { id: "SK-SS2a-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
+      why: "The answers are \"The bubbles move in a lively way.\" and \"The bubbles drift and twirl gracefully.\" Dancers move in a lively way and turn, and the bubbles drift and twirl. Bubbles do not learn dances, drop straight down, or hide." },
+    { id: "SK-SS2a-S09", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C09"],
-      stem: ["Felix is great at climbing trees. His sister says, \"Felix can climb like a squirrel.\""],
-      prompt: "Read what Felix's sister says. Complete the sentence. Choose the best answer for each blank.",
-      text: "In this sentence, the word like {0}, so the sentence {1}.",
-      slots: [
-        { options: ["means enjoy", "compares two things", "tells where"], answer: 1 },
-        { options: ["is a metaphor", "is not a simile", "is a simile"], answer: 2 }
+      prompt: "Which sentence uses the word like to make a simile?",
+      choices: [
+        { text: "The old truck rumbled like thunder.", correct: true },
+        { text: "We like to play chess after dinner." },
+        { text: "I would like a glass of water, please." },
+        { text: "Which book do you like best?" }
       ],
-      clue: "Sometimes like tells what someone enjoys, and sometimes it sets one thing beside another. Ask which one this sentence does.",
+      clue: "Some sentences use like to tell what someone wants or enjoys, and others use it to compare two different things. Check what like does in each sentence.",
       hints: [
-        "Sometimes like tells what someone enjoys, and sometimes it sets one thing beside another. Ask which one this sentence does.",
-        "Look at Felix and the squirrel in the sentence. Is one being matched to the other, or is one just enjoyed?",
-        "A metaphor says one thing is another without using like or as, so one choice for the second blank does not fit."
+        "Some sentences use like to tell what someone wants or enjoys, and others use it to compare two different things. Check what like does in each sentence.",
+        "For each sentence, ask whether like joins two different things.",
+        "Asking for a glass of water uses like to say what someone wants, so it is not a comparison. Check the rest the same way."
       ],
       how: [
-        "Felix and a squirrel are two different things, and the sentence matches how they climb.",
-        "So like compares two things.",
-        "A comparison that uses like is a simile. The answers are compares two things and is a simile.",
-        "The sentence does not say Felix enjoys anything, and a metaphor would not use like."
+        "A simile uses like or as to compare two different things.",
+        "In \"The old truck rumbled like thunder,\" the truck's sound is compared with thunder.",
+        "The answer is \"The old truck rumbled like thunder.\"",
+        "In the other sentences, like tells what someone enjoys, wants or prefers. It does not compare two things."
       ],
-      misconception: "A common mix-up is thinking every like means enjoy. Check what the word does in the sentence.",
-      why: "The answers are compares two things and is a simile. The sentence matches how Felix climbs with how a squirrel climbs, and it uses like to do it. It does not say Felix enjoys anything, and a metaphor would not use like." },
+      misconception: "A common mix-up is thinking every sentence with like is a simile. Check what the word does.",
+      why: "The answer is \"The old truck rumbled like thunder.\" It uses like to compare the truck's sound with thunder. In the other sentences, like tells what someone enjoys, wants or prefers." },
     { id: "SK-SS2a-S10", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C10"],
       stem: ["Cleo's team won the school spelling bee. Her teacher, Mr. Lund, wrote a note home. Here are five sentences from his note."],
@@ -4571,10 +4571,10 @@ PP.addLesson({
           { text: "\"She ran to show Ms. Doyle, the school secretary.\"" },
           { text: "\"Families came to a pancake breakfast, and every class held a sale.\"" }
         ] },
-      clue: "An idiom is a saying that does not mean its words. Think about how the money Tess earned compares with what the school needs.",
+      clue: "An idiom is a saying that does not mean its words. Reread what the school wants to buy and what Tess has earned.",
       hints: [
-        "An idiom is a saying that does not mean its words. Think about how the money Tess earned compares with what the school needs.",
-        "Think about how much money Tess has and how much money the school needs.",
+        "An idiom is a saying that does not mean its words. Reread what the school wants to buy and what Tess has earned.",
+        "Think about the two amounts of money in the story.",
         "No water or bucket is in this story, so you can drop one choice. For Part B, the sentence must match your Part A answer."
       ],
       how: [
@@ -4611,29 +4611,29 @@ PP.addLesson({
       why: "The answer is \"to show that the library is full of exciting things to find.\" A treasure chest holds things that are exciting to find, and every shelf holds something new for Wes. Nothing says the books are locked up, coins are sold, or the building is old." },
     { id: "SK-SS2a-S14", type: "ms", points: 2, dok: 3, std: ["3.T.SS.2.a"], passages: [], pick: 2,
       like: ["SK-SS2a-C14"],
-      stem: ["Sentence A: Fog is a gray curtain over the town.", "Sentence B: Fog forms when warm air meets cool air."],
+      stem: ["Sentence A: Jules let the cat out of the bag about the surprise party.", "Sentence B: Jules told the secret about the surprise party."],
       prompt: "Read sentences A and B. Which TWO statements about them are true?",
       choices: [
-        { text: "Only sentence A compares two different things.", correct: true },
-        { text: "Sentence B tells a fact in plain words.", correct: true },
-        { text: "Both sentences are metaphors, because both are about fog." },
-        { text: "Sentence B is a simile, because it compares warm air and cool air." },
-        { text: "Sentence A means a real curtain hangs over the town." }
+        { text: "Sentence A is an idiom, and no real cat is in the story.", correct: true },
+        { text: "Both sentences mean that Jules gave away the secret.", correct: true },
+        { text: "Sentence B is a simile, because it compares a secret to a party." },
+        { text: "Sentence A means that a real cat got out of a bag." },
+        { text: "Only sentence B uses figurative language." }
       ],
-      clue: "A metaphor says that one object is another. A sentence that only gives information does not. Check each sentence.",
+      clue: "An idiom is a saying that does not mean its words. A plain sentence does mean its words. Check each sentence.",
       hints: [
-        "A metaphor says that one object is another. A sentence that only gives information does not. Check each sentence.",
-        "Ask what each sentence is really about. Does it match fog with something else, or does it just tell about fog?",
-        "A simile needs the word like or as. Check which statement says that, and then decide whether the sentence has it."
+        "An idiom is a saying that does not mean its words. A plain sentence does mean its words. Check each sentence.",
+        "Picture each sentence word for word. Which one would be strange if it were really true?",
+        "Sentence B has no like or as, and it does not say that one thing is another, so it is not a simile. Check the rest the same way."
       ],
       how: [
-        "Sentence A says fog is a curtain, so it matches fog with something different.",
-        "Sentence B tells how fog forms, in plain words with no comparison.",
-        "The answers are \"Only sentence A compares two different things.\" and \"Sentence B tells a fact in plain words.\"",
-        "Sentence B is not a metaphor or a simile, and no real curtain hangs over the town."
+        "In sentence A, \"let the cat out of the bag\" is a saying. Nobody lets a real cat out, so it is an idiom.",
+        "The saying means to give away a secret. Sentence B says the same thing in plain words.",
+        "The answers are \"Sentence A is an idiom, and no real cat is in the story.\" and \"Both sentences mean that Jules gave away the secret.\"",
+        "Sentence B has no comparison, so it is not a simile, and it is plain language. A real cat is not part of the story."
       ],
-      misconception: "A common mix-up is thinking that a sentence is figurative just because it is about the same thing. Look for a real comparison.",
-      why: "The answers are \"Only sentence A compares two different things.\" and \"Sentence B tells a fact in plain words.\" Sentence A says fog is a curtain, which is a metaphor. Sentence B tells how fog forms, and it has no like or as. No real curtain hangs over the town." },
+      misconception: "A common mix-up is reading an idiom word for word. A saying can mean something else.",
+      why: "The answers are \"Sentence A is an idiom, and no real cat is in the story.\" and \"Both sentences mean that Jules gave away the secret.\" The saying means to give away a secret, which is what sentence B says plainly. Sentence B is not a simile, and no real cat is in the bag." },
     { id: "SK-SS2a-S15", type: "match", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C15"],
       stem: ["Room 4 wrote about the day the fans broke at their school.", "\"On Monday, our classroom was a furnace. We were all in the same boat, because no fan in the building worked. Our teacher, Ms. Lane, was a bundle of energy, and she kept us busy with word games.\""],

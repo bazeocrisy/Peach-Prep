@@ -2695,11 +2695,11 @@ PP.addLesson({
         { text: "He pours hot water on the ice to melt it." },
         { text: "He buys Isaac a pair of boots with better grip." }
       ],
-      clue: "A helper can solve a problem by knowing a new idea. Ask what Mr. Adams tells Isaac that Isaac did not know.",
+      clue: "Characters help solve a problem in different ways. Ask what this character does that changes what happens next.",
       hints: [
-        "A helper can solve a problem by knowing a new idea. Ask what Mr. Adams tells Isaac that Isaac did not know.",
+        "Characters help solve a problem in different ways. Ask what this character does that changes what happens next.",
         "Read what Isaac tried first. Then read what Mr. Adams says and what Isaac does next.",
-        "Isaac, not Mr. Adams, is the one who shovels and pours hot water. Test each choice that is left against what Mr. Adams says."
+        "Isaac, not Mr. Adams, is the one who shovels the steps. Test each choice that is left against what Mr. Adams says."
       ],
       how: [
         "Isaac's first two tries, shoveling and hot water, do not work.",
@@ -2722,7 +2722,7 @@ PP.addLesson({
       hints: [
         "The problem is what goes wrong. A try is what a character does to fix it.",
         "Find the sentence that tells what keeps happening. Then find what Maya does about it.",
-        "The book is Maya's try, not the problem. Match the other parts of each sentence the same way."
+        "Nothing in the story says the floor is the trouble, so one choice for the first blank can go. Check the other choices against the story."
       ],
       how: [
         "What keeps going wrong is that the door slams when the wind blows, and everyone jumps.",
@@ -2734,28 +2734,28 @@ PP.addLesson({
       why: "The answers are \"the door slams shut when the wind blows\" and \"use a book to hold the door open.\" The slamming door is the problem, and the book in the doorway is Maya's try. Nobody closes the window or asks people to move." },
     { id: "SK-TSPS-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C05"],
-      stem: ["Three of the clocks in the hall showed noon, but the fourth showed ten."],
+      stem: ["Nell wiped the muddy paw prints from the floor, but her dog ran in and left more."],
       prompt: "Read the sentence in the box. What does the word \"but\" show here?",
       choices: [
-        { text: "One clock is different from the other three.", correct: true },
-        { text: "A try to fix the clocks did not work." },
-        { text: "Something happened before the clocks were checked." },
-        { text: "The clocks have been fixed and now match." }
+        { text: "The wiping did not solve the problem.", correct: true },
+        { text: "Two things in the sentence are being compared." },
+        { text: "The writer is explaining what happened earlier." },
+        { text: "The floor stays clean from now on." }
       ],
-      clue: "The word \"but\" can show that a thing does not match what came before it. Ask what is being set against what.",
+      clue: "The word but can do different jobs. Read the part before it and the part after it, and ask how they fit together.",
       hints: [
-        "The word \"but\" can show that a thing does not match what came before it. Ask what is being set against what.",
-        "Read the part before the word \"but\" and the part after it. Ask how they compare.",
-        "No one tries to fix anything in this sentence. Test each choice that is left against the two parts."
+        "The word but can do different jobs. Read the part before it and the part after it, and ask how they fit together.",
+        "Ask what Nell did before the word but, and what happened after it.",
+        "The sentence says the dog left more prints, so the floor does not stay clean. Test each choice that is left against the two parts."
       ],
       how: [
-        "Before the word \"but,\" three clocks show noon.",
-        "After it, the fourth clock shows ten. The word \"but\" sets one clock against the other three.",
-        "The answer is \"One clock is different from the other three.\"",
-        "No one tries to fix a clock, and the sentence does not say anything about when the clocks were checked or that they match."
+        "Before the word but, Nell wipes the paw prints away.",
+        "After it, her dog runs in and leaves more prints, so the mess is back.",
+        "The answer is \"The wiping did not solve the problem.\" Here but shows that a try did not work.",
+        "The sentence does not compare two things, it does not go back to an earlier time, and the floor does not stay clean."
       ],
-      misconception: "A common mix-up is thinking \"but\" always shows a failed try. It can also show that one thing is different.",
-      why: "The answer is \"One clock is different from the other three.\" Three clocks show noon, but one shows ten. No one tries to fix a clock, the sentence does not say when they were checked, and they do not match." },
+      misconception: "A common mix-up is thinking but always shows a difference. Here it shows that a try did not work.",
+      why: "The answer is \"The wiping did not solve the problem.\" Nell cleans the floor, but the dog leaves more prints right after. The sentence does not compare two things, it does not tell about an earlier time, and the floor does not stay clean." },
     { id: "SK-TSPS-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C06"],
       stem: ["Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ladder with Mr. Fox and looked at the ceiling. She saw a gap where the roof met the wall."],
@@ -2763,7 +2763,7 @@ PP.addLesson({
       text: "When the water drips, Zane wants to {0}. Thea thinks the class should {1}.",
       slots: [
         { options: ["set out more buckets", "paint the ceiling a new color", "move the art room to the gym"], answer: 0 },
-        { options: ["find out where the water gets in", "set out more buckets", "close the art room for the year"], answer: 1 }
+        { options: ["find out where the water gets in", "set out more buckets", "close the art room for the year"], answer: 0 }
       ],
       clue: "Two characters can handle one problem in different ways. Find what each one does.",
       hints: [
@@ -2818,7 +2818,7 @@ PP.addLesson({
       hints: [
         "A problem is big when it stops something that matters. Ask what the broken freezer will cause.",
         "Read what the freezer holds and what is happening in two days.",
-        "The story does not say the picnic is moved or that lunch is canceled. Test each choice that is left against what the freezer holds."
+        "The story does not say the picnic is moved. Test each choice that is left against what the freezer holds."
       ],
       how: [
         "The freezer keeps things cold. It holds the ice-cream cups for the picnic.",
@@ -2838,9 +2838,9 @@ PP.addLesson({
         { text: "The wind will stop blowing from the left soon." },
         { text: "The fort needs a new coat of paint." }
       ],
-      clue: "A try that does not work can show what the real trouble is not. Ask what Wren fixed and whether it helped.",
+      clue: "When a try fails, a character finds out more. Ask what Wren fixed and what she finds out when it did not help.",
       hints: [
-        "A try that does not work can show what the real trouble is not. Ask what Wren fixed and whether it helped.",
+        "When a try fails, a character finds out more. Ask what Wren fixed and what she finds out when it did not help.",
         "Ask what the tape fixed. Then ask what the story says still happened.",
         "More of the same try would not help if the fort still falls. Test each choice that is left."
       ],
@@ -2869,11 +2869,11 @@ PP.addLesson({
           { text: "\"The sink gurgled, but the water still sat there.\"" },
           { text: "\"Ms. Rudd turned on the water, and it swirled down the drain in seconds.\"" }
         ] },
-      clue: "The real cause is the thing that, once it is fixed, ends the problem. Look for what was found and removed.",
+      clue: "The real cause is the thing that, once it is fixed, ends the problem. Ask what changed right before the water drained.",
       hints: [
-        "The real cause is the thing that, once it is fixed, ends the problem. Look for what was found and removed.",
+        "The real cause is the thing that, once it is fixed, ends the problem. Ask what changed right before the water drained.",
         "Read what happens after the first two tries fail.",
-        "The plunger and the hot water were tries, not causes. For Part B, the sentence must match your Part A answer."
+        "The hot water was a try, not a cause, so it cannot be the answer to Part A. For Part B, the sentence must match your Part A answer."
       ],
       how: [
         "The hot water and the plunger do not help, so neither is the real cause.",
@@ -2957,28 +2957,28 @@ PP.addLesson({
       why: "Opening the pipe is only in \"The Slow Sink.\" Scientists explaining why the try failed is only in the turtle article. In both texts, the first try does not fix the real cause, and each tells what happens after the solution." },
     { id: "SK-TSPS-S15", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C15"],
-      stem: ["(1) The wheels on the cafeteria cart squealed so loudly that students covered their ears.", "(2) First, the cook rolled the cart more slowly.", "(3) But the squealing did not stop.", "(4) ______", "(5) So the cook put a drop of oil on each wheel post.", "(6) Now the cart rolls quietly."],
-      prompt: "A student wrote this problem-and-solution paragraph. Which sentence best fills the blank in sentence 4?",
+      stem: ["(1) The sunflower seeds in the school garden never sprouted.", "(2) First, the class watered the seeds twice a day.", "(3) But the soil stayed bare.", "(4) Then Mr. Hallam dug a small hole and found the seeds buried far too deep.", "(5) ______", "(6) Soon, green shoots pushed up through the soil."],
+      prompt: "A student wrote this problem-and-solution paragraph. Which sentence best fills the blank in sentence 5?",
       choices: [
-        { text: "Rolling slowly did not change the noise, which came from the dry wheel posts.", correct: true },
-        { text: "The cook saw crumbs on the floor, so the floor seemed to be the noisy part." },
-        { text: "The cart was empty, so nobody could hear it squeal." },
-        { text: "The squealing was loudest at lunch, when many students were talking." }
+        { text: "So the class replanted the seeds just under the surface.", correct: true },
+        { text: "So the class watered the seeds three times a day." },
+        { text: "So the class bought bright new seed packets." },
+        { text: "So the class dug up the seeds and threw them away." }
       ],
-      clue: "The missing sentence connects the failed try to the solution. Ask what it explains about why the first try did not work.",
+      clue: "A solution should match the cause of the problem. Ask what Mr. Hallam found, and which fix would deal with it.",
       hints: [
-        "The missing sentence connects the failed try to the solution. Ask what it explains about why the first try did not work.",
-        "Look at sentence 5. What does the cook fix, and what does that tell you about the cause?",
-        "A sentence about crumbs and floors does not match what the cook fixes in sentence 5. Test each choice that is left."
+        "A solution should match the cause of the problem. Ask what Mr. Hallam found, and which fix would deal with it.",
+        "Reread what the class tried first and what Mr. Hallam found. Which fix would be different from the first try?",
+        "Sentence 6 says shoots pushed up, so the seeds were not thrown away. Test each choice that is left against what Mr. Hallam found."
       ],
       how: [
-        "Sentence 2 is the cook's first try, and sentence 3 says it did not work.",
-        "Sentence 5 says the cook oils the wheel posts, so the real cause must be the wheel posts.",
-        "The answer is \"Rolling slowly did not change the noise, which came from the dry wheel posts.\" It explains why the first try failed and leads to sentence 5.",
-        "A noisy floor, an empty cart and lunchtime talking do not lead to oiling the wheel posts."
+        "Sentences 2 and 3 show the first try, watering, and say that it did not work.",
+        "In sentence 4, Mr. Hallam finds the real cause: the seeds are buried far too deep.",
+        "The answer is \"So the class replanted the seeds just under the surface.\" It fixes the cause, and green shoots appear in sentence 6.",
+        "Watering more repeats the first try, new packets have nothing to do with the cause, and throwing the seeds away would not make shoots appear."
       ],
-      misconception: "A common mix-up is choosing a sentence that adds a detail but does not connect the failed try to the solution.",
-      why: "The answer is \"Rolling slowly did not change the noise, which came from the dry wheel posts.\" It explains why the first try failed and leads to oiling the wheel posts. The crumbs, the empty cart and the lunchtime talking do not connect to the fix." }
+      misconception: "A common mix-up is choosing a bigger version of the first try. A fix has to deal with the cause.",
+      why: "The answer is \"So the class replanted the seeds just under the surface.\" Mr. Hallam found that the seeds were buried too deep, and replanting them near the top fixes that. More watering repeats the failed try, new packets do not matter, and throwing the seeds away would not make shoots appear." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1, P2, P3, P4 and P6. */
   addons: {
