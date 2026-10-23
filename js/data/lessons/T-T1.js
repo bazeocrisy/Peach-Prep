@@ -3425,7 +3425,7 @@ PP.addLesson({
       paragraphs: [
         ["Pieter lived in a small town in the Netherlands, where much of the land lies lower than the sea.", "A long, grassy wall called a dike kept the water out."],
         ["His house stood on solid ground, and it never moved.", "Behind the house, a canal ran between rows of green fields."],
-        ["Each morning, Pieter rode his bike along a path by the canal to school.", "Windmills turned slowly in the distance."],
+        ["Each morning, Pieter rode his bike along a path by the canal to school.", "Windmills turned slowly in the distance.", "Sheep nibbled the grass along the way."],
         ["His father checked the dike every week to be sure it was strong.", "\"Our home stays dry because we take care of the wall,\" Pieter liked to say."]
       ] }
   ],

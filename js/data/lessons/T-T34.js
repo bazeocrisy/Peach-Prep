@@ -1270,6 +1270,13 @@ PP.addLesson({
         ["At five o'clock, the ballpark's still.", "The seats are bare and gray.", "A worker sweeps the empty rows.", "Tonight the Comets play!"],
         ["At seven o'clock, the ballpark's loud.", "The seats are packed and bright.", "The hot dogs pass from hand to hand", "Beneath the stadium light."],
         ["At ten o'clock, the ballpark's calm.", "The crowd has gone away.", "The worker sweeps the rows once more", "And yawns, \"Good game today.\""]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p9 is used only by a similar item. NEEDS INDEPENDENT REVIEW. */
+    { id: "p9", title: "The Ice Cream Truck", byline: "", genre: "Poem",
+      lines: [
+        ["The afternoon is hot and slow.", "I hear a tune. I jump up. Go!", "The ice cream truck is down our street.", "I run to find a frosty treat."],
+        ["I count my coins. I count them twice.", "The driver says, \"That's the price.\"", "I choose a cone with sprinkles on.", "I lick it fast, and then it's gone."],
+        ["The truck rolls on. The song grows small.", "I sit and sigh by the garden wall.", "Tomorrow I will save my pay", "And wait right here for the truck to play."]
       ] }
   ],
   practice: [
@@ -1749,7 +1756,305 @@ PP.addLesson({
         "The answer is \"The kitten wakes up and starts to play, so her nap is over.\"",
         "She is awake, not dreaming, chase does not rhyme with chair, and she pounces on the yarn instead of running away."
       ],
-      why: "The answer is \"The kitten wakes up and starts to play, so her nap is over.\" She opens one eye and pounces on the yarn, so the line changes from sleep to chase. She is not dreaming or scared, and chase does not rhyme with chair." }
+      why: "The answer is \"The kitten wakes up and starts to play, so her nap is over.\" She opens one eye and pounces on the yarn, so the line changes from sleep to chase. She is not dreaming or scared, and chase does not rhyme with chair." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT4a-S04", type: "ms", points: 2, dok: 1, std: ["3.T.T.4.a"], passages: [], pick: 2,
+      like: ["SK-TT4a-C03"],
+      stem: ["Stanza 1:", "The hammock hangs between two trees.", "It sways me in the summer breeze.", "Stanza 2:", "A bee goes buzzing by my ear.", "A robin lands and hops up near.", "My book slides down onto the grass.", "I watch the slow white clouds all pass.", "Stanza 3:", "My eyes are heavy, soft and slow.", "Off to dreamland I will go.", "The hammock rocks. The day is done.", "I nap until the setting sun."],
+      prompt: "Read the poem. Which TWO sentences about how it is built are true?",
+      choices: [
+        { text: "The poem has three stanzas.", correct: true },
+        { text: "The first stanza is the shortest one.", correct: true },
+        { text: "The poem has four stanzas in all." },
+        { text: "Every stanza has the same number of lines." },
+        { text: "The last stanza is the shortest one." }
+      ],
+      clue: "A stanza is a group of lines. Count the groups, and then count the lines in each group.",
+      hints: [
+        "A stanza is a group of lines. Count the groups, and then count the lines in each group.",
+        "Count the stanzas. Then count the lines in each one, and compare the groups.",
+        "The stanzas do not all have the same number of lines, so one choice can go. Check the rest against your counts."
+      ],
+      how: [
+        "A stanza is a group of lines. This poem has three groups.",
+        "Stanza 1 has two lines. Stanzas 2 and 3 have four lines each.",
+        "The answers are \"The poem has three stanzas.\" and \"The first stanza is the shortest one.\"",
+        "The poem does not have four stanzas, the stanzas are not all the same length, and the last stanza has four lines."
+      ],
+      misconception: "A common mix-up is thinking every stanza must have the same number of lines. Count each group.",
+      why: "The answers are \"The poem has three stanzas.\" and \"The first stanza is the shortest one.\" The poem has three groups of lines. Stanza 1 has two lines, and stanzas 2 and 3 have four lines each, so the last stanza is not the shortest." },
+    { id: "SK-TT4a-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C04"],
+      stem: ["Read this poem about tying shoes.", "I cross the laces, loop them through,", "And pull them snug, the way you do.", "My shoes are tied. I'm set to race,", "I'm first one standing at the place.", "I start to run across the yard.", "My legs are quick. I'm trying hard.", "But what is this? My lace comes loose!", "I trip! I tumble! What's the use?", "I sit down on the grass and grin.", "I tie them up and try again."],
+      prompt: "Which line shows the moment the poem takes a turn, when things stop going as planned? Choose the line.",
+      options: [
+        "I cross the laces, loop them through,",
+        "I'm first one standing at the place.",
+        "My legs are quick. I'm trying hard.",
+        "But what is this? My lace comes loose!",
+        "I tie them up and try again."
+      ],
+      answer: [3], pick: 1,
+      clue: "A poem takes a turn when something changes, such as a plan going wrong. Look for the moment good news changes.",
+      hints: [
+        "A poem takes a turn when something changes, such as a plan going wrong. Look for the moment good news changes.",
+        "Ask which lines tell about things going well and which tell about something going wrong.",
+        "The last line shows the speaker trying again, which comes after the turn. Check the rest the same way."
+      ],
+      how: [
+        "At first, the speaker ties the shoes, is ready to race, and runs fast.",
+        "Then something changes, and the plan goes wrong.",
+        "The line \"But what is this? My lace comes loose!\" is the moment of the turn.",
+        "The first three lines show things going well. \"I tie them up and try again\" comes after the turn."
+      ],
+      misconception: "A common mix-up is choosing a line from the happy start or the ending. The turn is the moment the plan goes wrong.",
+      why: "The answer is \"But what is this? My lace comes loose!\" Before this line, the speaker is tied up, quick and ready to race. This is the moment things stop going as planned. The last line comes after the turn." },
+    { id: "SK-TT4a-S06", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C05"],
+      stem: ["A class wrote a poem about a garage sale. Here is one stanza.", "Our garage sale is open wide,", "With books and toys on every side.", "A bike for sale—it still can roll,", "Come try it out and take a ride."],
+      prompt: "Three lines in this stanza rhyme with each other. Which line ends with a word that does not rhyme with any other line? Choose the line.",
+      options: [
+        "Our garage sale is open wide,",
+        "With books and toys on every side.",
+        "A bike for sale—it still can roll,",
+        "Come try it out and take a ride."
+      ],
+      answer: [2], pick: 1,
+      clue: "Say the last word of each line out loud. Find the words that sound alike at the end.",
+      hints: [
+        "Say the last word of each line out loud. Find the words that sound alike at the end.",
+        "Look for the lines whose last words sound most alike, and then look for a third one that matches.",
+        "Wide and side sound alike, so line 1 cannot be the line that does not rhyme. Check the others the same way."
+      ],
+      how: [
+        "The last words are wide, side, roll and ride.",
+        "Wide, side and ride all end with the same sound.",
+        "Roll does not end with that sound, so it does not rhyme with any other line.",
+        "The answer is \"A bike for sale—it still can roll,\""
+      ],
+      why: "The answer is \"A bike for sale—it still can roll,\" The words wide, side and ride all end with the same sound. Roll does not sound like any other end word." },
+    { id: "SK-TT4a-S07", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C06"],
+      stem: ["Here is stanza 1 of a poem called \"Yo-Yo.\"", "My yo-yo drops down to the floor.", "It zips right back, then down once more.", "I loop it out and watch it spin,", "Then pull it up—I always win!", "Suppose the last line were changed to this: \"Then pull it up and bring it home.\""],
+      prompt: "Why would this change break the rhyme pattern of the stanza?",
+      choices: [
+        { text: "Home does not rhyme with spin, so lines 3 and 4 would no longer rhyme.", correct: true },
+        { text: "Home does not rhyme with floor, and every line must rhyme with line 1." },
+        { text: "Home does not rhyme with more, and lines 2 and 4 always rhyme here." },
+        { text: "Home is too long a word to end a line in this stanza." }
+      ],
+      clue: "A rhyme pattern depends on the last word of each line. Compare the new last word with the end words of the other lines.",
+      hints: [
+        "A rhyme pattern depends on the last word of each line. Compare the new last word with the end words of the other lines.",
+        "Say the end word of each line out loud. Then ask which line the old last word rhymed with.",
+        "A word's length does not decide whether it rhymes, so one choice can go. Check the rest by saying each end word."
+      ],
+      how: [
+        "The end words of the stanza are floor, more, spin and win.",
+        "Floor and more rhyme, and spin and win rhyme, so lines come in pairs.",
+        "If line 4 ended with home, it would not rhyme with spin, so lines 3 and 4 would no longer rhyme.",
+        "Line 4 never rhymed with line 1 or line 2, and the length of a word does not matter."
+      ],
+      misconception: "A common mix-up is thinking every line must rhyme with line 1. Here the lines rhyme in pairs.",
+      why: "The answer is \"Home does not rhyme with spin, so lines 3 and 4 would no longer rhyme.\" The stanza rhymes in pairs: floor and more, spin and win. Home would break the second pair. Line 4 never rhymed with line 1 or line 2, and a word's length does not decide a rhyme." },
+    { id: "SK-TT4a-S08", type: "hottext", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C07"],
+      stem: ["Here are five lines from a poem about a long car ride."],
+      prompt: "Which TWO lines use repeated words to show that something goes on and on? Choose two lines.",
+      options: [
+        "We pack the bags and close the door.",
+        "The road goes on, and on, and on.",
+        "The sky is gray, the clouds hang low.",
+        "We sing, sing, sing from dusk to dawn.",
+        "At last we see my uncle's gate."
+      ],
+      answer: [1, 3], pick: 2,
+      clue: "Repeated words can make a long, steady feeling, as if something never ends. Look for a word that is said again and again.",
+      hints: [
+        "Repeated words can make a long, steady feeling, as if something never ends. Look for a word that is said again and again.",
+        "Read each line and look for a word that is said more than once in the same line.",
+        "\"We pack the bags and close the door\" has no repeated word, so you can drop it. Check the others the same way."
+      ],
+      how: [
+        "A repeated word makes the reader feel that something keeps happening.",
+        "In \"The road goes on, and on, and on,\" the words on and on are repeated, so the road seems endless.",
+        "In \"We sing, sing, sing from dusk to dawn,\" the word sing is repeated, so the singing goes on for hours.",
+        "The other three lines have no repeated words."
+      ],
+      why: "The answers are \"The road goes on, and on, and on.\" and \"We sing, sing, sing from dusk to dawn.\" Each line repeats a word to show that something goes on for a long time. The other lines have no repeated words." },
+    { id: "SK-TT4a-S09", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p9"],
+      like: ["SK-TT4a-C08"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How does the poem change in stanza 3?",
+        choices: [
+          { text: "The cone is gone, and the speaker plans to buy another.", correct: true },
+          { text: "The speaker shares the cone with a friend at the wall." },
+          { text: "The truck stops and gives the speaker a free treat." },
+          { text: "The speaker drops the cone and cries all afternoon." }
+        ] },
+      partB: { prompt: "Which line from the poem best supports the answer to Part A?",
+        choices: [
+          { text: "\"Tomorrow I will save my pay\"", correct: true },
+          { text: "\"I count my coins. I count them twice.\"" },
+          { text: "\"I choose a cone with sprinkles on.\"" },
+          { text: "\"I run to find a frosty treat.\"" }
+        ] },
+      clue: "To see how a poem changes, compare what happens in the last stanza with what happened before.",
+      hints: [
+        "To see how a poem changes, compare what happens in the last stanza with what happened before.",
+        "Compare stanza 3 with stanza 2. What is different?",
+        "Nobody shares the cone in this poem, so you can drop one choice. For Part B, the line you choose must match your Part A answer."
+      ],
+      how: [
+        "In stanza 2, the speaker buys a cone and eats it fast.",
+        "In stanza 3, the truck rolls away, and the speaker sighs. The speaker will save money and wait for the truck tomorrow.",
+        "Part A: The cone is gone, and the speaker plans to buy another. Part B: \"Tomorrow I will save my pay\"",
+        "No friend is there, the truck does not stop again, and the speaker does not drop the cone."
+      ],
+      misconception: "A common mix-up is choosing a line about buying the cone. Those lines are from stanza 2, before the change.",
+      why: "Part A: The cone is gone, and the speaker plans to buy another. Part B: \"Tomorrow I will save my pay\" In stanza 3, the truck drives away and the speaker plans to save money and wait for it. Nobody shares the cone, the truck does not stop again, and the cone is not dropped." },
+    { id: "SK-TT4a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C09"],
+      stem: ["Here is stanza 1 of a poem called \"Popcorn.\"", "The oil is warm. The kernels wait.", "I shake the pot. I count to eight.", "Then pop! Then pop! Then pop, pop, pop!", "The lid jumps up! The corn won't stop!"],
+      prompt: "Stanza 1 ends with the line \"The lid jumps up! The corn won't stop!\" Why does the poet end the first stanza there?",
+      choices: [
+        { text: "It ends the quiet waiting with a burst of loud, fast popping.", correct: true },
+        { text: "It shows that the cook gives up and takes the pot away." },
+        { text: "It tells the reader that the snack is ready and everyone is eating." },
+        { text: "It is the only line in the stanza that has a rhyming partner." }
+      ],
+      clue: "A poet ends a stanza where something important happens. Ask what changes between the start of the stanza and its last line.",
+      hints: [
+        "A poet ends a stanza where something important happens. Ask what changes between the start of the stanza and its last line.",
+        "Compare how the stanza starts with how it ends. What is the speaker doing at first, and what is happening at the end?",
+        "Every line in the stanza has a rhyming partner, so one choice can go. Test the rest against what happens just before the last line."
+      ],
+      how: [
+        "At the start, the oil is warm and the kernels wait. It is quiet, and the speaker counts.",
+        "Then the popping begins, and the lid jumps up. The stanza ends at that exciting moment.",
+        "The answer is \"It ends the quiet waiting with a burst of loud, fast popping.\"",
+        "Nobody gives up or eats yet, and every line in the stanza rhymes with another line."
+      ],
+      why: "The answer is \"It ends the quiet waiting with a burst of loud, fast popping.\" The stanza begins with warm oil and waiting, and the last line shows the corn popping so fast that the lid jumps. Nobody gives up or eats yet, and every line rhymes with another line." },
+    { id: "SK-TT4a-S11", type: "ms", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: [], pick: 2,
+      like: ["SK-TT4a-C10"],
+      stem: ["Poem A: The Cat", "Purr, purr, purr by the fire,", "Purr, purr, purr in the sun.", "The cat stretches out on the rug", "And naps till the day is done.", "Poem B: Sprinkler Day", "Splash, splash, splash goes the sprinkler spray,", "I jump, jump, jump through the cold.", "The grass is wet, the sun is hot,", "And I feel brave and bold."],
+      prompt: "Think about Poem A and Poem B. Which TWO sentences about how the poets use repeated words are true?",
+      choices: [
+        { text: "Both poets repeat a word that copies a sound.", correct: true },
+        { text: "Only Poem A begins two lines with the same words.", correct: true },
+        { text: "Only Poem B begins two lines with the same words." },
+        { text: "Both poets end every line with the same repeated word." },
+        { text: "Neither poet repeats a word inside a line." }
+      ],
+      clue: "Look at where each repeated word sits, at the start of a line or inside a line, and what kind of word it is.",
+      hints: [
+        "Look at where each repeated word sits, at the start of a line or inside a line, and what kind of word it is.",
+        "Read each poem again. List the words that are said more than once, and note which lines they are in.",
+        "Both poems repeat words inside lines, so one choice can go. Check the others against your list."
+      ],
+      how: [
+        "Poem A repeats purr, which is the sound a cat makes. Poem B repeats splash, which is the sound of water.",
+        "Poem A begins lines 1 and 2 with the same words. Poem B does not.",
+        "The answers are \"Both poets repeat a word that copies a sound.\" and \"Only Poem A begins two lines with the same words.\"",
+        "Neither poem ends every line with the same word, and both repeat words inside lines."
+      ],
+      why: "The answers are \"Both poets repeat a word that copies a sound.\" and \"Only Poem A begins two lines with the same words.\" Purr and splash both copy sounds. Poem A begins two lines with Purr, purr, purr, but Poem B does not. Both poems repeat words inside lines, and neither ends every line with the same word." },
+    { id: "SK-TT4a-S12", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [], pick: 2,
+      like: ["SK-TT4a-C11"],
+      stem: ["Stanza 1:", "Out by the fence, the dirt is deep.", "The puppy sniffs and starts to scratch.", "His paws fly fast, his ears flop wide—", "Dig, puppy, dig!", "Stanza 2:", "The hole is big, the pile is high.", "He kicks the dirt in every direction.", "A bone is buried, brown and old—", "Dig, puppy, dig!"],
+      prompt: "The line \"Dig, puppy, dig!\" ends stanzas 1 and 2. Which TWO things does this repeated line do?",
+      choices: [
+        { text: "It gives both stanzas the same last line, like a chant.", correct: true },
+        { text: "It shows that the puppy keeps working at the hole.", correct: true },
+        { text: "It tells what the puppy says to the bone." },
+        { text: "It starts each new stanza with the same words." },
+        { text: "It shows that the puppy is lost and wants to go home." }
+      ],
+      clue: "A repeated line can do more than one job. It can tie the stanzas together, and it can show an action that goes on and on.",
+      hints: [
+        "A repeated line can do more than one job. It can tie the stanzas together, and it can show an action that goes on and on.",
+        "Look at where the line sits in each stanza, and think about what the puppy is doing in both.",
+        "The line comes at the end of each stanza, not at the start, so one choice can go. Check the rest against what the puppy does."
+      ],
+      how: [
+        "The line \"Dig, puppy, dig!\" is the last line of both stanzas, so the stanzas end the same way, like a chant.",
+        "The puppy is digging in stanza 1 and still digging in stanza 2, so the line shows that he is hard at work.",
+        "The answers are \"It gives both stanzas the same last line, like a chant.\" and \"It shows that the puppy keeps working at the hole.\"",
+        "The line is not something the puppy says to the bone, it ends the stanzas instead of starting them, and the puppy is not lost."
+      ],
+      why: "The answers are \"It gives both stanzas the same last line, like a chant.\" and \"It shows that the puppy keeps working at the hole.\" The line ends both stanzas and shows the puppy digging in each one. It does not start the stanzas, it is not said to the bone, and the puppy is not lost." },
+    { id: "SK-TT4a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C13"],
+      stem: ["Here is a stanza from a poem.", "The sun comes up behind the hill.", "The roosters crow and call.", "I jump out of my bed with joy", "And hurry down the hall."],
+      prompt: "Which stanza has the same rhyme pattern as the stanza above?",
+      choices: [
+        { text: "We bake a cake for Dad's birthday. / The frosting's bright and blue. / We sprinkle on a hundred dots / And sing a song for you.", correct: true },
+        { text: "The garden smells of mint and rose. / The bees are on the vine. / I water every row that grows / And everything looks fine." },
+        { text: "I tie my boots and grab my hat. / I whistle for the cat. / The snow is white and cold and deep. / It's time to play, not sleep." },
+        { text: "The ship sails out across the bay. / The waves are bright and gay. / The sailors sing along the way / And watch the dolphins play." }
+      ],
+      clue: "To find a rhyme pattern, say the last word of each line and find which lines rhyme. Then look for a stanza where the same lines rhyme.",
+      hints: [
+        "To find a rhyme pattern, say the last word of each line and find which lines rhyme. Then look for a stanza where the same lines rhyme.",
+        "First find which lines rhyme in the stanza above. Then do the same for each choice.",
+        "In the stanza above, line 1 does not rhyme with any other line. A choice where lines 1 and 3 rhyme does not match."
+      ],
+      how: [
+        "In the stanza above, call and hall rhyme: lines 2 and 4. Hill and joy do not rhyme with anything.",
+        "The right answer must also have lines 2 and 4 rhyming, with lines 1 and 3 not rhyming.",
+        "In the cake stanza, blue and you rhyme, and birthday and dots do not.",
+        "The garden stanza rhymes lines 1 and 3 and lines 2 and 4. The boots stanza rhymes lines 1 and 2 and lines 3 and 4. In the ship stanza, all four lines rhyme."
+      ],
+      misconception: "A common mix-up is choosing a stanza with a different pattern because it also has rhymes. Compare which lines rhyme.",
+      why: "The answer is \"We bake a cake for Dad's birthday. / The frosting's bright and blue. / We sprinkle on a hundred dots / And sing a song for you.\" In the stanza above, only lines 2 and 4 rhyme (call and hall). In the cake stanza, blue and you rhyme in lines 2 and 4, and lines 1 and 3 do not. The other stanzas rhyme in different lines." },
+    { id: "SK-TT4a-S14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C14"],
+      stem: ["Stanza 1:", "In March, the pear tree's branches bare.", "The buds are small and tight.", "A robin hops from twig to twig", "And sings in the cool light.", "Stanza 2:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 3:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around."],
+      prompt: "Complete the sentence about the jobs of the stanzas in \"The Pear Tree.\" Choose the best answer for each blank.",
+      text: "Stanza 1 {0}, and stanza 3 {1}.",
+      slots: [
+        { options: ["shows the tree when it is full of fruit", "shows the tree before it has many leaves", "shows the tree after the leaves have fallen"], answer: 1 },
+        { options: ["shows the tree before it has many leaves", "shows the tree after the leaves have fallen", "shows the tree when it is full of fruit"], answer: 1 }
+      ],
+      clue: "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
+      hints: [
+        "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
+        "Read the first words of each stanza. They tell you when each part happens.",
+        "In stanza 2, the tree is full of leaves and fruit. Stanza 3 does not show that, so one choice for the second blank can go."
+      ],
+      how: [
+        "Stanza 1 is set in March. The branches are bare, and the buds are small and tight.",
+        "Stanza 2 is set in July, when the tree is thick with leaves and has fruit.",
+        "Stanza 3 is set in November, when the leaves have fallen.",
+        "The answers are \"shows the tree before it has many leaves\" and \"shows the tree after the leaves have fallen.\""
+      ],
+      why: "The answers are shows the tree before it has many leaves and shows the tree after the leaves have fallen. Stanza 1 shows bare branches and tiny buds. Stanza 2 shows the full tree, and stanza 3 shows the leaves on the ground." },
+    { id: "SK-TT4a-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
+      like: ["SK-TT4a-C15"],
+      stem: ["Stanza 1:", "At dawn, the harbor's calm.", "The docks are bare and gray.", "A fisher ties a net to a post", "To start the busy day.", "Stanza 2:", "At noon, the harbor's loud.", "The docks are packed and bright.", "The boats unload their silver fish", "Beneath the sun's high light.", "Stanza 3:", "At dusk, the harbor's hushed.", "The docks are bare once more.", "The fisher folds the empty net", "And locks the wooden door."],
+      prompt: "How does the poet build the stanzas of \"Harbor Day\" to help the reader see how the harbor changes?",
+      choices: [
+        { text: "Each stanza begins with a similar line, but the time of day and one word change.", correct: true },
+        { text: "Each stanza begins with the very same line, word for word, all the way through." },
+        { text: "Each stanza rhymes in pairs, so lines 1 and 2 always rhyme with each other." },
+        { text: "Each stanza is longer than the one before, so the day seems to grow." }
+      ],
+      clue: "To see how a poet builds stanzas, compare them with each other. Look at how they start, how they rhyme, and how long they are.",
+      hints: [
+        "To see how a poet builds stanzas, compare them with each other. Look at how they start, how they rhyme, and how long they are.",
+        "Put the stanzas side by side. What stays the same in each one, and what changes?",
+        "All three stanzas have four lines, so one choice can go. Test the rest by comparing the stanzas."
+      ],
+      how: [
+        "The stanzas start with \"At dawn, the harbor's calm,\" \"At noon, the harbor's loud,\" and \"At dusk, the harbor's hushed.\" Most words stay the same, and the time of day and one word change.",
+        "That shows the harbor changing from quiet, to busy, to quiet again.",
+        "The answer is \"Each stanza begins with a similar line, but the time of day and one word change.\"",
+        "The first lines are not the very same, every stanza has four lines, and lines 1 and 2 do not rhyme."
+      ],
+      misconception: "A common mix-up is thinking every stanza starts with the very same line. Look closely at the first words.",
+      why: "The answer is \"Each stanza begins with a similar line, but the time of day and one word change.\" Dawn, noon and dusk show the harbor going from calm to loud to hushed. The first lines are not word for word the same, all three stanzas have four lines, and lines 1 and 2 do not rhyme." }
   ],
   /* Hints and Show me how for the Practice Together items P1-P5 (no Try item is referenced by core). */
   addons: {
