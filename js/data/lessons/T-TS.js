@@ -3849,7 +3849,7 @@ PP.addLesson({
       clue: "Text structures have patterns. Steps in order, a trouble and its fix, a comparison, and one subject with details are some of them.",
       hints: [
         "Text structures have patterns. Steps in order, a trouble and its fix, a comparison, and one subject with details are some of them.",
-        "Read the paragraph and ask what it keeps telling about, from the first sentence to the last. Choose two.",
+        "Read the paragraph and ask what it keeps telling about, from beginning to end. Choose two.",
         "There are no time words like first or next, so the paragraph does not tell steps. Test the other clues against the whole paragraph."
       ],
       how: [
@@ -4012,7 +4012,7 @@ PP.addLesson({
       stem: ["Paragraph 3: A pangolin's body is covered with hard scales. If a lion comes close, the pangolin rolls into a tight ball. Then the scales on the outside protect its soft belly. A lion may sniff and paw at the ball, but it cannot bite through the scales.", "Text box: Did You Know? The word pangolin comes from a word that means \"something that rolls up.\""],
       prompt: "A student wants to move the fact in the text box into Paragraph 3. Would that be a good change?",
       choices: [
-        { text: "No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.", correct: true },
+        { text: "No. The fact is about the animal's name, not how the scales protect it.", correct: true },
         { text: "Yes. The fact shows how the scales protect a pangolin's soft belly." },
         { text: "Yes. Every fact in a passage belongs inside a paragraph, not in a box." },
         { text: "No. A text box must always hold the main idea of the whole passage." }
@@ -4021,16 +4021,16 @@ PP.addLesson({
       hints: [
         "A text box sets some facts apart. Ask whether the fact in the box tells more about the paragraph's idea, or is just interesting.",
         "Say in a few words what Paragraph 3 is about. Then read the fact in the box again.",
-        "A text box does not have to hold the main idea, so the last choice does not fit. Test the others against Paragraph 3."
+        "A text box does not have to hold the main idea, so the choice that says it must does not fit. Test the others against Paragraph 3."
       ],
       how: [
         "Paragraph 3 is about how the scales protect the pangolin.",
         "The box fact tells where the word pangolin comes from. It does not tell how the scales protect it.",
-        "The answer is \"No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.\"",
+        "The answer is \"No. The fact is about the animal's name, not how the scales protect it.\"",
         "Facts can sit in a box, and a box does not have to hold the main idea."
       ],
       misconception: "A common mix-up is deciding by the box alone. A box can hold an extra fact, so check the fact against the paragraph.",
-      why: "The answer is \"No. The fact is about where the animal's name comes from, and it does not tell how the scales protect it.\" Paragraph 3 is about the scales. A box can hold an extra fact, and it does not have to hold the main idea." },
+      why: "The answer is \"No. The fact is about the animal's name, not how the scales protect it.\" Paragraph 3 is about the scales. A box can hold an extra fact, and it does not have to hold the main idea." },
     { id: "SK-TSDESC-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
       like: ["SK-TSDESC-C14"],
       stem: ["(1) ______", "(2) When a hungry fish bites it, it squirts out sticky threads. The threads tangle the fish.", "(3) It can push out part of its body to confuse an enemy. The part grows back later.", "(4) Its rough, bumpy skin can turn soft or hard in a moment.", "(5) In addition, some kinds squirt out a bad-tasting liquid. A sea cucumber moves slowly, so it needs these tricks."],
