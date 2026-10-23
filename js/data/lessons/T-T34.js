@@ -3021,6 +3021,7 @@ PP.addLesson({
       { term: "rhyme", means: "words that end with the same sound, like bee and tree" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
+      { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" }
     ],
     examples: [

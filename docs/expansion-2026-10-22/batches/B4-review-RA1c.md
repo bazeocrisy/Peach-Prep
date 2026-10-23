@@ -421,3 +421,114 @@ C09 and S09 ladders (generic clue, strategy H2, H3 settles one sentence); S14 re
 After MUST-1 to MUST-3 and SHOULD-1, a re-solve of S03, S04, S13 and C08 is enough.
 
 **Verdict: CHANGES REQUIRED.**
+
+
+# Third review (3.T.RA.1.c)
+
+**Reviewer:** independent, did not author or earlier-review this lesson. No lesson edited, no git. Scratch: `scratchpad/r3/` (same scripts as the C.1.c third review).
+
+## Verdict: CHANGES REQUIRED
+
+One MUST: the monarch topic is already taught in three other lessons. Keys, scoring, hint wording and the phone sitting are sound; the rest are SHOULDs.
+
+| Id | Sev | One line |
+|---|---|---|
+| M1 | MUST | Monarch and milkweed are not a new topic: T-T2 3.T.T.2.b, T-C 3.T.C.1.b and L-V3 3.L.V.3.d teach the same facts |
+| S1 | SHOULD | S12 is 0.253 and S11 0.215 (all words) against C12 and C11; the S12 frame is identical |
+| S2 | SHOULD | C07: after h2 and h3 only the two keys are live (S07 is fine) |
+| S3 | SHOULD | S07: the second key ("fur keeps water out") does not answer "swims well"; the `how` admits it is about staying dry |
+| S4 | SHOULD | S04: the museum guide to "space tools" by astronomers is a weak fit for weather satellites |
+| S5 | SHOULD | P3 h1 names the key's category; C01 clue and h2 point at the key's phrase |
+| S6 | SHOULD | The key is the longest option in six of the seven core mc/ms items |
+| S7 | SHOULD | Learn It and Watch Me do not model dates and relevance (S13, S04), a closing or opening sentence (C02, C11, S02, S11), or "when/if" (C14, S14) |
+
+## 1. Blind solve
+
+Same method as the C.1.c third review: `vm` sandbox, mock `PP.addLesson`, refs resolved (C01 = P4, C02 = P5), seeded shuffles of choices, options, slot options and the four order steps, and all keys, `answer`, `why`, hints, `how`, `clue`, `misconception`, `like` and `std` stripped. The stripped JSON had zero hits for those key names. I printed the passages and items, wrote `myans-RA.txt`, and only then printed any key. I did not read the teach or Watch Me text, the author log or the earlier reviews before that.
+
+**Agreement: 35 of 35**, including the order items C09 (D, B, C, A) and S09 (A, B, D, C) and the two-slot dropdowns C14 and S14. The solve was fully blind. Every item had one defensible answer. The slowest were S07 (see S3), S04 (see S4) and C14 blank 1.
+
+## 2. Keyed text beside why, how and hints (all 35)
+
+I read the key beside `why`, `how`, hints and clue for every item. All match. Every hint that names a choice names one that exists. No hint copies a key. C08's `how` step 4 ("Dev should say the same idea a new way") is fine.
+
+## 3. Hand recount of live choices after clue and hints 1-3 (core)
+
+| Item | Live | Note |
+|---|---|---|
+| C01 | 3 of 4 | h3 removes "For example"; clue "later in the year" and h2 "words that tell when the trip begins" lead to "In the fall," (S5) |
+| C02 | 3 of 4 | removes "That is all I have to say" |
+| C03 | 3 of 4 by hints; 2 once h1 ("instead of copying") is applied | the copy and "A few monarchs" go; the opinion is left (not a hint problem) |
+| C04 | 4 of 5 | removes the talking butterfly |
+| C05 | 5 of 6 | h3 clears (5) |
+| C06 | 4 of 5 | removes "Most dragonflies stay near ponds" |
+| C07 | **2 of 5** | h2 says to look for facts about flying; h3 removes the resting fact; "ponds" and "sting" are not about flying (S2) |
+| C08 | 4 of 5 | h3 clears (2) |
+| C09 | position 1 given | h3 says the sentence with no time word starts it; accepted earlier (NOTE-2) |
+| C10 | 5 of 6 | h3 clears (5); the clue defines opinion as how the writer feels |
+| C11 | 3 of 4 | h2 "which of the two sources" nearly settles it; h3 removes "Every player" |
+| C12 | 4 of 5 | clears (5) |
+| C13 | 3 of 4 | removes the cartoon |
+| C14 | 3 of 4 in blank 1, 4 of 4 in blank 2 | removes "Last year" |
+| C15 | 5 of 6 | clears (6) |
+
+## 4. Similarity (own `jac.js`, same method as in the C.1.c third review)
+
+| Pair | All words | Content words | Shared options |
+|---|---|---|---|
+| S12/C12 | **0.253** | 0.191 | 0 |
+| S11/C11 | **0.215** | 0.182 | 0 |
+| S09/C09 | 0.187 | 0.115 | 0 |
+| S14/C14 | 0.170 | 0.156 | 1 ("Instead", allowed) |
+| the rest | 0.128 to 0.167 | | 0 |
+
+## 5. Findings
+
+### MUST
+**M1. The monarch is not a new topic.** I searched all lessons, sets and tasks in `js/data`. Passages on the same facts exist in `T-T2.js` 3.T.T.2.b "From Egg to Butterfly" (egg on milkweed; the toxin that makes birds leave monarchs alone), `T-C.js` 3.T.C.1.b p2 "The Monarch's Long Trip", and `L-V3.js` 3.L.V.3.d p1 "The Life of a Monarch Butterfly" (egg on a milkweed leaf; caterpillar; chrysalis). RA.1.c p1 and p2 repeat those facts, including the juice that birds dislike. Sidewalk chalk, recess balls, platypus, comets, satellites, tree rings and termites are not in any other passage (termites and "comet" appear in T-T2 and T-T34 only in unrelated lines); dragonflies and warm-ups likewise occur only here. Fix: move the p1 and p2 topic (and the Together set) to an unused animal, for example a salmon's trip upstream. If the plan allows a topic to recur across skill families, downgrade to SHOULD.
+
+### SHOULD
+**S1. S12 and S11 are over the 0.21 ceiling on the all-words measure.** S12 has the same frame as C12 ("is making notes for a summary of Source A. Which detail is the LEAST important"). Fix: reword S12's frame, and give S11 a different prompt stem.
+
+**S2. C07's ladder leaves only the two keys.** With "facts about flying" in h2 and the resting fact removed in h3, no other choice is about flying. Fix: h3 should not remove the one plausible decoy ("holds its wings out flat" mentions wings); say instead "Check each fact: does it tell how the dragonfly flies, or something else about it?"
+
+**S3. S07: the second key does not answer the question.** The stem asks for what helps a platypus "swim well". Keys are "webbed feet" and "thick fur keeps water out". `how` step 2 says the fur "helps the platypus stay dry", which is not swimming. "It hunts for food in streams" is a fair alternative reading. Fix: ask "what helps a platypus stay dry and move through water" or replace the fur sentence with "Its flat bill helps it feel food in the water" (check against the source).
+
+**S4. S04: a weak fit.** Key 2 is "a science museum's guide to space tools, written by its staff astronomers". Astronomers and "space tools" do not obviously cover weather satellites, and the item's own clue says the source must "fit your question". Fix: "a science museum's guide to weather satellites, written by its staff scientists".
+
+**S5. Two ladders point at the key.** P3 h1 says "Look for a sentence that tells about the writer instead", and only one choice is first person. C01's clue ("what happens later in the year") and h2 ("the words that tell when the long trip begins") lead to "In the fall,". Fix: P3 h1 as strategy only ("A summary tells only what the sources say. Ask of each sentence: is this from a source?"); C01 h2 "Read the second sentence and ask when it happens in a monarch's year."
+
+**S6. Key length.** In the core, the key is the longest option in C02, C03, C04, C06, C07 and C11 and tied in C13, with margins of 4 to 17 characters (C03 85 against 68; C04 82 against 69). Fix: lengthen two decoys per item. Several keys also use the only "Both sources" / "and" frame (C02, C11, S02, S11).
+
+**S7. Learn It and Watch Me.** They model joining, big ideas, cutting, own words and trust. They do not model: date and relevance (S13's "this year's date", S04's 1958 magazine, C13's topic check; the teach point says only "who wrote it and whether it names its sources"); a closing or opening sentence (C02, C11, S02, S11, P1, P5); `when` and `if` (C14, S14: the teach point lists "also, in addition, first, next, later, at last"); picking facts that answer a question (C07, S07). Fix: add "Check the date and that the page answers your question" to teach point 3 and one `steps` line each for the closing sentence and `when`/`if`.
+
+### NOTE
+- **N1. C09 and S09 h3** give position 1; accepted in the earlier NOTE-2. After h1 and h3 the time words settle the rest.
+- **N2. "Cut a sentence" items.** C05 (not in the sources), C10 (opinion), C12 (tiny detail) and C15 (both) are four of fifteen. C15 is C05 and C10 joined. The reasons differ, so I accept it.
+- **N3. C08 (2)** keeps "young dragonfly called a nymph" from Source 1 almost word for word; the key (4) is unique, but the `why` says the others use "new words". Cosmetic.
+- **N4. C14 blank 2.** "Before students draw near the wall, the walkway stays clear" parses, though it changes the meaning; "When" is unique by meaning. S14 slot 2 ("If") is fine.
+- **N5. C03.** "seem to turn orange" changes "look orange" slightly (turn implies change). Acceptable for grade 3.
+- **N6. Opinion items** (C10 "most amazing", S10 "scariest", P3 "I wish") are marked by a feeling word; easy but fair. C06 big-idea key for Source 2 is the only choice that sums a whole source.
+- **N7. Source labels.** C14, S14 and the passages say "Source 1 / 2"; most similar items say "Source A / B". Unchanged since the last round.
+- **N8. Alignment.** Official wording: "Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic." Credibility C04, C13, S04, S13; relevance C06, C07, C12, S06, S07, S12; accuracy and sourcing C05, C10, C15; summarizing C01-C03, C08, C09, C11, C14. Points: choose-two, two-slot dropdown and order are 2; the rest 1. DOK fits (C14 DOK 3 is generous).
+- **N9. Item-text FK** (my `fk.js`; options get a full stop): over 4.5 are C02 4.6, C03 5.4, C04 4.7, C05 4.6, C08 5.0, C10 5.2, C11 5.7, S02 4.8, S04 5.0, S08 5.7, S11 5.5, S13 4.9, P1 5.7, P3 5.3, P5 4.6. The long, unpunctuated draft lines drive it, as the earlier review said. Passages with the repo formula: p1 3.8, p2 3.9, p3 2.6, p4 2.7, p5 3.1, p6 3.4, p7 3.6, p8 1.7.
+- **N10. Grade 3.** Nothing too young; "nymph", "chrysalis", "forecasters" are glossed.
+
+## 6. Facts
+| Claim | Result | URL |
+|---|---|---|
+| Milkweed toxins make monarchs unpalatable; birds learn to avoid them; migration south in fall; caterpillar stage about 2 to 3 weeks, chrysalis about 10 to 12 days | Supported (the page gives 2 to 3 weeks; the passage says "about two weeks"; fine) | https://wvdnr.gov/monarch-butterfly/ |
+| A sun compass guides monarchs to Mexico | Supported | https://journeynorth.org/resources/monarch-navigation |
+| Nymph stage lasts up to four years; each of four wings moves independently; hovers and flies backward | Supported ("months or even years" fits) | https://www.iowadnr.gov/news-release/2019-08-08/6-cool-things-you-should-know-about-dragonflies |
+| Platypus lays eggs, webbed feet, dense waterproof fur, male spur on the ankle, hunts in streams | Supported (the page says "ankle" for the spur, not "back foot"; fine at grade 3) | https://australian.museum/learn/animals/mammals/platypus/ |
+| First weather satellite was TIROS-1 in 1960, so a 1958 magazine predates it | Supported | https://nesdis.noaa.gov/content/60-years-ago-today-first-successful-weather-satellite-was-launched |
+| Mars has two small moons; a comet's tail points away from the Sun | Search only (NASA/StarDate results), standard facts | |
+| Tree rings: one per year; width reflects the weather | Standard (not re-fetched) | |
+
+## 7. Browser (390 x 844)
+`node verification/serve.js . 8731`, Playwright with touch and mobile emulation. All 15 core items in order through three sets (C09 order and the ten-line hot texts included): every item rendered, with the "Read the passage / Question" tabs for passage items. No horizontal scroll (also after three hints), no control under 44 px, three hints on every item, "That's right!" for the correct response on all 15, no page errors. Screenshots in `scratchpad/r3/shots/` (`RA-y*-*.png`).
+
+## 8. What to change
+1. New topic for p1 and p2 (M1).
+2. Reword S12 and S11 frames (S1); fix the C07, P3 and C01 ladders (S2, S5).
+3. S07, S04 key fit (S3, S4); lengthen decoys (S6); Learn It lines (S7).

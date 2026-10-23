@@ -4394,7 +4394,7 @@ PP.addLesson({
         "First comes at the start and Finally comes at the end, so Then goes in the middle.",
         "Check that it makes sense: you crack eggs, then stir the batter, then cook it."
       ],
-      answer: "First, Mia cracked two eggs into a bowl. Then she stirred the batter until it was smooth. Finally, the pancakes sizzled in the hot pan."
+      answer: "Take out \"My uncle drives a blue truck.\" The rest go: First, Mia cracked two eggs into a bowl. Then she stirred the batter until it was smooth. Finally, the pancakes sizzled in the hot pan."
     },
     {
       show: ["Plain beginning: This story is about Carlos and his dog, Max, at the park."],
@@ -4643,9 +4643,9 @@ PP.addLesson({
         prompt: "What job does each sentence do in Imani's story? Match each sentence to its job. Use each job once.",
         cols: ["sets the scene", "shows the problem", "shows how the problem gets solved"],
         rows: [
+          { text: "(8) I took a deep breath and kept playing.", answer: 2 },
           { text: "(1) On Thursday night, our whole third-grade class played recorders at the school concert in the gym.", answer: 0 },
-          { text: "(5) Halfway through, my fingers slipped, and a loud squeak filled the gym.", answer: 1 },
-          { text: "(8) I took a deep breath and kept playing.", answer: 2 }
+          { text: "(5) Halfway through, my fingers slipped, and a loud squeak filled the gym.", answer: 1 }
         ],
         clue: "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does for the story.",
         hints: [
@@ -4673,9 +4673,9 @@ PP.addLesson({
             ],
             answer: 0 }
         ],
-        clue: "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+        clue: "An ending should wrap up the story's problem. Time words show when events happen.",
         hints: [
-          "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+          "An ending should wrap up the story's problem. Time words show when events happen.",
           "Reread sentences 5 to 8 to remember the problem and what Imani did about it. Then check how each blank connects to the sentence before it.",
           "A new problem, like something dropping, starts a different story instead of wrapping up this one. Work out the first blank on your own."
         ],
@@ -4722,8 +4722,8 @@ PP.addLesson({
         clue: "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
         hints: [
           "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
-          "Ask what each sentence needs to already be true. Which one needs nothing before it, and which one cannot happen until the very end?",
-          "The feather cannot slip off the branch until something has touched it. Use that to place two of the sentences, then decide where the others go."
+          "Ask what each sentence needs to already be true before it can happen. Think about which sentences depend on another one.",
+          "The catch is the last moment, because the feather has to fall before anyone can catch it. Use that to place that one sentence, then decide where the others go."
         ],
         how: [
           "Maya needs a tool before she can use it, so she finds the stick first.",
@@ -4812,27 +4812,27 @@ PP.addLesson({
   ] },
   similar: [
     { id: "SK-TT1e-S01", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P5"],
-      prompt: "Choose the best time word for each blank to show the order of events.",
-      text: "(1) Eli closed his eyes and counted to twenty. (2) {0} he looked behind the couch. (3) Then he looked under the table. (4) {1} he lifted the lid of the laundry basket and found his cousin Nia curled up inside.",
+      prompt: "Rosa is playing hide-and-seek. Pick the word that fits each blank so the search happens in order.",
+      text: "(1) Rosa covered her eyes and counted to twenty. (2) {0} she checked behind the curtain. (3) Then she peeked inside the closet. (4) {1} she spotted her cousin Dev's sneakers poking out from under the bed.",
       slots: [
-        { options: ["Next,", "Finally,", "Before that,"], answer: 0 },
-        { options: ["Finally,", "First,", "At first,"], answer: 0 }
+        { options: ["A moment later,", "To begin with,", "Long before that,"], answer: 0 },
+        { options: ["In the end,", "At first,", "Earlier,"], answer: 0 }
       ],
       clue: "Time words show where an event fits in the order of the story. Ask what has already happened before each blank.",
       hints: [
         "Time words show where an event fits in the order of the story. Ask what has already happened before each blank.",
         "Read sentences 1 to 4 in order. Decide which blank is an early step and which one is near the end of the search.",
-        "\"Before that\" sends the reader back in time, but the story is moving forward. Check the other words for that blank, and work out the second blank yourself."
+        "A word that sends the reader back in time does not fit a story that is moving forward. Check the other words for the first blank, and work out the second blank yourself."
       ],
       how: [
-        "Sentence 1 is the start: Eli counts. So the first search in sentence 2 comes after that, and it needs a word for a next step.",
-        "Blank 1 is \"Next,\". Finally would put the end of the search too early.",
-        "Sentence 4 is where Eli finds Nia, so it is the end of the search, and it needs \"Finally,\".",
-        "First and At first are start words, and Before that goes backward."
+        "Sentence 1 is the start: Rosa counts. So the first search in sentence 2 comes after that, and it needs a word that moves forward in time.",
+        "Blank 1 is \"A moment later,\". \"To begin with\" would make the search the start, but counting came first, and \"Long before that\" goes backward.",
+        "Sentence 4 is where Rosa finds Dev, so it is the end of the search, and it needs \"In the end,\".",
+        "\"At first\" is a start word, and \"Earlier\" goes backward."
       ],
-      why: "Blank 1 needs \"Next,\" because the search comes after Eli counts. Blank 2 needs \"Finally,\" because he finds Nia at the end of the search. First and At first belong at the start, and Before that goes backward." },
+      why: "Blank 1 needs \"A moment later,\" because the search comes after Rosa counts. Blank 2 needs \"In the end,\" because she finds Dev at the end of the search. \"To begin with\" and \"At first\" belong at the start, and \"Long before that\" and \"Earlier\" go backward." },
     { id: "SK-TT1e-S02", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P4"],
-      prompt: "A student wants to add these four sentences to a story about a picnic. Put them in the order that makes the most sense.",
+      prompt: "Arrange the four picnic sentences from the first event to the last.",
       steps: [
         "Dad set the big watermelon on the picnic table.",
         "He sliced it into thick, juicy wedges.",
@@ -4842,8 +4842,8 @@ PP.addLesson({
       clue: "Put the events in the order they would really happen. Ask what has to happen before the next thing can happen.",
       hints: [
         "Put the events in the order they would really happen. Ask what has to happen before the next thing can happen.",
-        "Picture each moment. Which sentence needs nothing before it, and which one is the result of an earlier action?",
-        "You cannot grab a wedge until the watermelon has been cut. Use that to place two of the sentences, then decide where the others go."
+        "Picture each moment. Which sentences depend on something that has to happen earlier?",
+        "Juice cannot run down a chin until someone has taken a bite. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
         "First the watermelon has to be on the table, because everything else is done with it.",
@@ -4857,7 +4857,7 @@ PP.addLesson({
         "(1) Nia reached the top of the treehouse ladder.",
         "(2) She looked down and shouted for her dad to come see."
       ],
-      prompt: "Which version of sentence 2 shows Nia's exact words?",
+      prompt: "Which choice rewrites sentence 2 so the reader hears what Nia actually says?",
       choices: [
         { text: "She looked down and shouted, \"Dad, come see how high I am!\"", correct: true },
         { text: "She looked down and shouted that her dad should come see how high she was." },
@@ -4881,7 +4881,7 @@ PP.addLesson({
       stem: [
         "Marcus is writing a story about the day he got lost at the state fair. His first sentence is: \"This story is about the day I got lost.\""
       ],
-      prompt: "Which sentence should replace Marcus's first sentence to make a better beginning?",
+      prompt: "Which opening line would pull a reader into Marcus's story better than his first sentence?",
       choices: [
         { text: "A band started up by the cotton candy stand, and my family was gone.", correct: true },
         { text: "The state fair has rides, games and lots of good food to eat." },
@@ -4962,7 +4962,7 @@ PP.addLesson({
         "(4) A neighbor stopped and bought a stuffed bear.",
         "(5) Tasha put the coins in a jar with a grin."
       ],
-      prompt: "Which sentence does not belong in this story?",
+      prompt: "One sentence wanders away from this story. Which one should the writer cut?",
       choices: [
         { text: "(3) My teacher drives a blue truck.", correct: true },
         { text: "(2) She wrote the prices on a big sign with a purple marker." },
@@ -5007,12 +5007,12 @@ PP.addLesson({
       ],
       why: "The answer is: \"Hurry, Mia! Our car is the red one!\" Kayla called. It fits the moment, because the gate just opened, and it moves the story forward. The closing time and the spaghetti line do not fit, and the ride has not ended." },
     { id: "SK-TT1e-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C09"],
-      prompt: "What job does each sentence do in a story about Maya's magic show? Match each sentence to its job. Use each job once.",
-      cols: ["sets the scene", "shows the problem", "shows how the problem gets solved"],
+      prompt: "Maya wrote about her magic show. Link each of her sentences to the job it does, and use every job one time.",
+      cols: ["tells when and where", "shows what goes wrong", "shows the fix"],
       rows: [
-        { text: "On Saturday, Maya set up a table for her magic show in the living room.", answer: 0 },
         { text: "Halfway through the show, the card she needed slipped off the table.", answer: 1 },
-        { text: "Maya picked up the card with a smile and kept the trick going.", answer: 2 }
+        { text: "Maya picked up the card with a smile and kept the trick going.", answer: 2 },
+        { text: "On Saturday, Maya set up a table for her magic show in the living room.", answer: 0 }
       ],
       clue: "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does.",
       hints: [
@@ -5039,9 +5039,9 @@ PP.addLesson({
           ],
           answer: 0 }
       ],
-      clue: "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+      clue: "An ending should wrap up the story's problem. Time words show when events happen.",
       hints: [
-        "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+        "An ending should wrap up the story's problem. Time words show when events happen.",
         "Think about Nia's problem in sentences 1 and 2, and how the night light changed things. Then check how each blank connects to the sentence before it.",
         "A sentence that gives a fact about sleepovers does not show how Nia feels. Work out the first blank on your own."
       ],
@@ -5055,28 +5055,29 @@ PP.addLesson({
       stem: [
         "Kofi is writing about his first time on the climbing wall at the gym. His first sentence is: \"This is a story about climbing.\""
       ],
-      prompt: "Which choice is the best new first sentence, and why?",
+      prompt: "Which choice would make the best new first sentence for Kofi's story? Read the job each choice says it does.",
       choices: [
-        { text: "\"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious.", correct: true },
-        { text: "\"A climbing wall has holds that climbers grab and step on.\" It teaches the reader about climbing walls." },
-        { text: "\"Climbing is the best sport in the whole world.\" It tells the reader what the writer thinks." },
-        { text: "\"The gym is on Main Street, next to the library.\" It tells the reader where the story happens." }
+        { text: "\"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall.", correct: true },
+        { text: "\"A climbing wall has holds that climbers grab and step on.\" It explains how a wall is built." },
+        { text: "\"Kofi was proud when he finally reached the top.\" It tells how the story ends." },
+        { text: "\"Climbing is the best sport in the whole world.\" It gives the writer's opinion." }
       ],
       clue: "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
       hints: [
         "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
-        "Think about what kind of story this is. Then ask which choice would start the action best.",
+        "Think about what kind of story this is. Then ask which choice would make you want to read on.",
         "An opinion about a sport could begin an essay, but a story needs a character in a moment. Look at the choices that are left."
       ],
       how: [
         "A story's beginning should put a character in a place and start the action.",
         "\"I gripped the first purple hold and looked up at the very top\" shows Kofi at the start of his climb and makes the reader wonder what will happen.",
-        "The answer is \"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious.",
-        "The others explain climbing walls, give an opinion or only name where the gym is. None of them starts the story."
+        "The answer is \"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall.",
+        "The others explain the wall, give away the ending or share an opinion. None of them starts the story."
       ],
-      why: "The answer is: \"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious. It puts Kofi at the start of his climb. The others explain, give an opinion or name a location, so they do not start the story." },
+      misconception: "A common mix-up is picking a sentence that sounds exciting but belongs at the end. A beginning starts the action; it does not tell how the story turns out.",
+      why: "The answer is: \"I gripped the first purple hold and looked up at the very top.\" It starts the action with Kofi at the wall. The other choices explain how a wall is built, tell how the story ends or give an opinion, so they do not start the story." },
     { id: "SK-TT1e-S12", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C12"],
-      prompt: "A student wants to add these four sentences to a story about a paper boat. Put them in the order that makes the most sense.",
+      prompt: "Kai is writing about his paper boat. Sort his sentences into the order the events would really happen.",
       steps: [
         "Kai folded a sheet of paper into a boat.",
         "He carried it to the creek and set it on the water.",
@@ -5086,8 +5087,8 @@ PP.addLesson({
       clue: "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
       hints: [
         "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
-        "Ask what each sentence needs to already be true. Which one needs nothing before it, and which one cannot happen until the very end?",
-        "The boat cannot be pushed by a breeze until it is on the water. Use that to place two of the sentences, then decide where the others go."
+        "Ask what each sentence needs to already be true before it can happen. Think about which sentences depend on another one.",
+        "A boat has to exist before anything can happen to it. Use that to place that one sentence, then decide where the others go."
       ],
       how: [
         "Kai has to make the boat before anything else can happen to it.",
@@ -5121,10 +5122,10 @@ PP.addLesson({
       why: "The answers are \"Pins crashed with a loud crack, and the whole alley smelled like popcorn\" and \"The shiny floor was so slick that my shoes squeaked with every step.\" They use sounds, smells and sights. The other sentences only give plain facts." },
     { id: "SK-TT1e-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: [], pick: 2, like: ["SK-TT1e-C14"],
       stem: [
-        "(1) Malik spent all week building a model rocket.",
+        "(1) Malik worked all week on a model rocket for launch day.",
         "(2) At launch time, the rocket tipped over and fell in the grass."
       ],
-      prompt: "Which TWO sentences could be added after sentence 2 to show how Malik feels, using words he says or things he does?",
+      prompt: "Malik's rocket falls over. Choose TWO sentences that show his feelings through something he says or does.",
       choices: [
         { text: "\"Not again!\" Malik groaned.", correct: true },
         { text: "He knelt in the grass and slowly picked up the broken pieces.", correct: true },
@@ -5213,8 +5214,8 @@ PP.addLesson({
     "SK-TT1e-P4": {
       hints: [
         "Put the events in the order they would really happen. Ask what has to happen before each next thing can happen.",
-        "Picture each moment. Which sentence needs nothing before it, and which one could happen only after the others?",
-        "The door cannot be pulled open all the way until someone has seen that it is open a crack. Use that to place two of the sentences."
+        "Picture each moment. Which sentences depend on something that has to happen earlier?",
+        "Pulling the door open all the way is the big action of this part. Think about where the big action belongs, then place the other two."
       ],
       how: [
         "The children have to get to the kitchen before anything else in this part can happen.",

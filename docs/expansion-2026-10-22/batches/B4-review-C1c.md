@@ -337,3 +337,128 @@ Orchid petals, blueberry colours and drum cadence were not searched; they are st
 1. S15: rewrite the stem so it does not name the keys, and change the topic (M1, M2).
 2. C15: do not repeat the stem's definition phrases in the slide (S1).
 3. C06 decoys with "pinwheel"; C09 h3; C10 and S10 off-topic line; C12 key wording; C04 decoy; S02 and S11 decoys and S11 DOK; S05 and S07 frames; C14 sentence length (S2-S9).
+
+
+# Third review (3.T.C.1.c)
+
+**Reviewer:** independent, did not author or earlier-review this lesson. No lesson edited, no git. Scratch: `scratchpad/r3/` (`load.js`, `strip.js`, `show.js`, `cmp.js`, `keyed.js`, `jac.js`, `echo.js`, `fk.js`, `browse.py`, `shots/`).
+
+## Verdict: CHANGES REQUIRED
+
+Two MUSTs (a stale hint that quotes a choice that does not exist, and a reused topic), plus SHOULDs. Keys, scoring, ladders and the phone sitting are sound.
+
+| Id | Sev | One line |
+|---|---|---|
+| M1 | MUST | S15 hint 3 quotes "Race it fast!"; the choice is "Pour it slowly!" |
+| S1 | SHOULD | S15 is not an honest `like` for C15; it repeats the S04/S09 label-form skill |
+| S2 | SHOULD | S06 and S12 are 0.225 word-set Jaccard against C06 and C12 (ceiling 0.21); S12 reuses the "adult frowning" decoy |
+| M2 | MUST | Peanut growth is already taught in T-SS (3.T.SS.1.a), T-T2 (3.T.T.2.d) and L-V3 (3.L.V.3.d); p1 repeats the same facts |
+| S4 | SHOULD | S03, S08, S14 (and C14): the key copies the stem's photo description; S13's key is the only option with "helpers", "chairs", "Thursday" |
+| S5 | SHOULD | C13 hint 3 states the key's criterion ("tells neighbors to come on Saturday") |
+| S6 | SHOULD | C03 and C08 are the same item shape (photo, description, caption; same four decoy roles) |
+| S7 | SHOULD | Learn It / Watch Me do not model sounds, "too general" labels, or a timed sign |
+
+## 1. Blind solve
+
+I loaded T-C.js in a Node `vm` sandbox with a mock `PP.addLesson`. I resolved `{ref}` (C01 = P4, C02 = P5), and printed C01-C15, S01-S15 and P1-P5 with seeded shuffles of choices, options, slot options, match rows and order steps. I stripped `correct`, `answer`, `targets`, `why`, `hints`, `how`, `clue`, `misconception`, `like` and `std`. I grepped the stripped JSON for those key names (zero hits) before reading it. I saved `myans-C.txt` before I printed any key. I did not read the teach or Watch Me text, the author log or the earlier reviews until after that.
+
+**Agreement: 35 of 35.** C10 (hot text on the poster's numbered lines) matched too: I chose line 5, the key is `p3:3:1`. The solve was fully blind. Every item had one defensible answer. The slower ones were C12 (A and C over D), C04 and S09 (Beak against two "too general" rows).
+
+## 2. Keyed text beside why, how and hints (all 35 items)
+
+I read key, `why`, `how`, hints and clue together for every item. `why` and `how` match the key, and no `how` is wrong.
+- **Stale hint.** S15 h3 reads `"Race it fast!" tells a person what to do`. No such choice exists; the choice is "Pour it slowly!". See M1.
+- **Step shape.** C08 `how` has no "The answer is ..." step. HOW3 explains the decoys and HOW4 repeats one. Every other item states the answer. NOTE.
+- **Hints and clue.** No hint or clue contains the key's wording, except C13 (S5) and the passage-word echoes in P2 ("dug up").
+
+## 3. Hand recount of live choices after clue and hints 1-3 (core)
+
+"Live" means not named as wrong by a hint. Hint 3 removes exactly one decoy in every core item, and none narrows to the key.
+
+| Item | Live | Note |
+|---|---|---|
+| C01 | 3 of 4 | h3 removes the harvest field |
+| C02 | 2 of 3 | h3 removes bees; h2 "who does the work" cues the machine (a 50/50, same as P5) |
+| C03 | 3 of 4 | removes the pattern fact |
+| C04 | 3 of 5 | h3 removes "Tube"; h1 ("a word or two") removes the sentence |
+| C05 | 4 of 5 | removes the sale sign |
+| C06 | 3 of 4 | removes the shelf box |
+| C07 | 2 of 3 in blank 1 and 3 of 3 in blank 2 | |
+| C08 | 3 of 4 | removes "prettiest" |
+| C09 | no row named | strategy only |
+| C10 | 9 of 10 | h3 clears line 2 |
+| C11 | 3 of 4 | removes the wind |
+| C12 | 4 of 5 | removes the frowning adult |
+| C13 | 3 of 4 | h3 is not an elimination, see S5 |
+| C14 | 3 of 4 | removes the faded photo |
+| C15 | 4 of 5 | removes the stalk |
+
+## 4. Similarity (own `jac.js`: word-set Jaccard of the similar item against its `like` core item, stem + prompt + text + options; the core passage is not added)
+
+All 15 share 0 options. I list both measures: all words, then content words (stop words removed).
+
+| Pair | All | Content |
+|---|---|---|
+| S03/C03 | 0.207 | 0.143 |
+| S06/C06 | **0.225** | 0.125 |
+| S07/C07 | 0.200 | 0.136 |
+| S12/C12 | **0.225** | 0.165 |
+| S09/C09 | 0.190 | 0.095 |
+| all others | 0.127 to 0.183 | |
+
+Only S06 and S12 are over 0.21, and only on the all-words measure (S2). S03 is at the edge.
+
+## 5. Findings
+
+### MUST
+**M1. S15 hint 3 quotes a choice that is not there.** Hint 3 is `"Race it fast!" tells a person what to do, and a label names a part. Check the other four choices.` The decoy is "Pour it slowly!". It looks like a leftover from an earlier draft. It can send a child looking for a missing option, and it is the same fault as the RA S03 hint in the previous round. Fix: `"Pour it slowly!" tells a person what to do, and a label names a part. Check the other four choices.`
+
+### SHOULD
+**S1. S15 is not an honest parallel for C15.** C15 asks which parts of the drawing the slide's words are about (a two-from-five selection tied to the text). S15 asks which labels are written the way labels should be (a name, not a sentence, not a command, not the whole thing). That is C04, C09, S04 and S09 again, which already use the "long sentence, too long" decoy. Three similar items (S04, S09, S15) therefore drill label form, and none drills C15's skill. Fix: re-point `like` for S15 and make a new S15 that gives two sentences of slide text and asks which two parts to label. The teapot's handle and spout work for that.
+
+**S2. S06 and S12 are over the 0.21 ceiling on the all-words measure (0.225 each).** S12 also reuses C12's decoy shape ("an adult frowning at a long list on a clipboard" against "an adult frowning at a stack of papers on a desk", plus older children in uniform). Fix: change S12's decoy roles. For example, swap the adult for a picture of an empty field with a closed gate. Vary the S06 and S12 prompts.
+
+**M2. Peanut growth is not a new topic (rated MUST because the brief makes topic duplication across `js/data` a check).** If the plan allows a topic to recur across skill families, downgrade this to SHOULD. I searched every lesson, set and task in `js/data`. Passages on the same facts exist in `T-SS.js` 3.T.SS.1.a "Peanuts: From Flower to Farm" (flowers, the peg, underground), `T-T2.js` 3.T.T.2.d "Peanuts" (flowers first), and `L-V3.js` 3.L.V.3.d "How Peanuts Grow" (Georgia leads; legumes with beans and peas; peg). C.1.c p1 repeats the peg, the yellow flowers, the Georgia fact and the bean-and-pea family. The other topics in the brief's list (teapot, kaleidoscope, pinwheel, orchid, origami crane, walk-a-thon, sidewalk chalk, recess balls) occur only in the two lessons under review. Wolves occur in T-C only. Kickball appears in T-T34 as a one-line example. Fix: move p1 to a topic that is unused, for example another farm crop. If the author keeps peanuts, they should say why in the log.
+
+**S4. Caption keys copy the stem; S13's key is the only option with the stem's nouns.** For S03, S08 and S14 the key is the photo description with a verb, and the decoys share almost none of it (S03 key has 10 stem trigrams; S14 key has 10 and is the longest option; S08 has 6). C14 is the same (5 trigrams). That follows from "a caption tells what the picture shows" (earlier N1). But a child can solve S03 and S08 by copying words with no sense of purpose. S13 is stronger: the stem says "three helpers to set up chairs ... Thursday"; only the key says "Helpers needed Thursday" and shows chairs. Fix: describe the photos in the stem with different words from the key (rain slicker against "raincoat"), and give two S13 decoys the nouns "helpers" or "chairs" (for example "Thank you, helpers, for stacking chairs last week!").
+
+**S5. C13 hint 3 states the key's criterion.** It says to "ask whether it tells neighbors to come on Saturday". The key says "invite neighbors to come and buy". The hint removes no decoy and names the property of the key. Fix: `Sign B's picture shows happy students. Ask whether a neighbor who sees Sign B would know when and where to go.`
+
+**S6. C03 and C08 are twins.** Both are "a photo of a girl holding something; which caption?", with four decoy roles (a fact the photo cannot show, an opinion, a sentence about someone else or the poster, the key). They sit in different sets, and S03 and S08 follow the same template. Fix: make C08 an "audience" caption (a short caption for a reader who cannot see the photo), or ask for the caption with a missing detail.
+
+**S7. Learn It and Watch Me.** They model picture fit, the off-purpose line, a caption, a one-word label and a change of audience, and the teach example shows a sound. They never ask for a sound, a "too general" label (S09 "Crane", "Part of a crane"), choose-two, or a sign for readers who pass quickly (S07). C02, C11, S02, S11, P5, S07 and S09 therefore rest on one teach line. Fix: add one `steps` line on sound fit to Learn 1 and one on "too general" to Learn 2. (Earlier N9 accepted this; I raise it because 7 of 35 items depend on it.)
+
+### NOTE
+- **N1. Word-match keys.** C11's key is the only option with "valley" (the passage says "hills and valleys"). S06's key "children singing" echoes "Sing with us!". S02, S11 and S01 echo the slide noun, as in the earlier N-notes.
+- **N2. Key length.** In the core, the key is the longest or tied for longest in C01, C03, C05, C06, C12, C13 and C15. The margins are 1 to 23 characters, and are clear only in C12 (89 against 68) and C13 (78 against 66).
+- **N3. Distractor caricatures.** C05, S05 and S12 decoys carry their own fault in the text ("tiny numbers", "cannot be read from the sidewalk", "No Visitors"), while the keys do not. That is easy for grade 3. Fine for DOK 2; the DOK 3 labels on C05 and S05 are generous.
+- **N4. C10 and S10.** The off-topic line is on topic but is not a purpose line ("sold in many toy stores", "school was built many years ago"). Good, and an improvement on the earlier puppy lines. C10 is dok3 but behaves as DOK 2.
+- **N5. C12.** D (a close-up of a kickball) is weak but arguable; the stem asks for the readers, so A and C hold.
+- **N6. S04.** The orchid has petals and sepals; "soft, colorful pieces" is fine at grade 3. The "orchid" and "origami" topics are used only here.
+- **N7. S09.** A crane's beak is a small pinched fold; "narrow, pointed piece in front" is unique (no head choice is offered). See the earlier N6.
+- **N8. S07 and C07.** Wrong options are easy ("hidden behind the words"); fine.
+- **N9. Together P1-P5.** Keys echo the slides; P3's "cotton boll" is a good decoy. H3 for P5 and C02 is the same text.
+- **N10. Alignment.** Official wording is "Create multimodal texts, using features of pre-selected modes for a specific purpose and audience." Picture, caption, label, sound and audience items fit. All items are choose-from-options, and write-on-paper is in `write`. Points: choose-two, two-blank dropdown and the match are 2; the rest 1. DOK is reasonable.
+- **N11. Item-text FK** (my `fk.js`, stop at each option): C03 5.8, C14 5.2, C05 4.9, C06 4.6, S12 4.5. The rest are under 4.5. Passages (repo formula): p1 4.0, p2 2.6, p3 2.9, p4 3.8.
+
+## 6. Facts
+| Claim | Result | URL |
+|---|---|---|
+| Georgia is the top peanut state (about half of U.S. production) | Supported | https://www.georgiaencyclopedia.org/articles/business-economy/peanuts/ |
+| Peanut is a legume (same family as beans and peas) | Supported; the page says "legume family" | same |
+| Peg, flower and harvest steps | Standard; this page does not describe them (not re-checked) | |
+| Wolf howls carry for miles, packs are families | Search results only (NPS, NatGeo pages); the earlier review checked National Geographic | https://kids.nationalgeographic.com/animals/mammals/facts/gray-wolf |
+| Kaleidoscope, pinwheel, crane parts, leaf parts | Checked by the earlier review's sources | see the first review |
+| First weather satellite 1960 (TIROS-1), so a 1958 magazine predates it (RA lesson, shared check) | Supported | https://nesdis.noaa.gov/content/60-years-ago-today-first-successful-weather-satellite-was-launched |
+
+## 7. Browser (390 x 844)
+`node verification/serve.js . 8731`, Playwright, touch and mobile emulation. I ran all 15 core items in order through sets 1-3.
+- Every item rendered, and passage items show "Read the passage / Question" tabs. No horizontal scroll on any item, before or after three hints. No control under 44 px.
+- Three hints appeared on every item. The correct response gave "That's right!" on all 15. No page errors.
+- C10 (ten lines) and C09 (match) fit. Screenshots `scratchpad/r3/shots/C-y2-5.png` and `C-y2-4-h.png`. Only the wrapping of the "Show me how (shows the answer)" button looks awkward; that is the player, not the lesson.
+
+## 8. What to change
+1. S15: fix the h3 quote (M1) and re-point or rewrite it (S1).
+2. S06, S12: lower the overlap; vary the S12 decoys (S2).
+3. p1: new topic (M2).
+4. Caption stems and S13 decoys (S4); C13 h3 (S5); C08 shape (S6); Learn It lines (S7).

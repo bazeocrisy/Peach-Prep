@@ -1023,7 +1023,7 @@ PP.addLesson({
       "How-to writing tells steps in the order the reader should do them. Order words like first, next and last help.",
       "Writing about a topic can be split into sections. Each section tells about one part, and a heading names that part. To compare two things, give each one its own section. To explain why, give each reason its own section.",
       "Features help your reader. A heading names a section, a caption tells what a picture shows, and a numbered list makes steps easy to follow.",
-      "Start by telling your topic, and end with a closing that wraps it up."
+      "Start with an opening that tells your reader what the piece is about, and end with a closing that wraps it up."
     ],
     words: [
       { term: "purpose", means: "the job your writing does, like teaching or telling facts" },
@@ -1059,14 +1059,14 @@ PP.addLesson({
       answer: "\"What Squirrels Eat\" fits best, because every sentence tells about the food squirrels eat."
     },
     {
-      show: ["Ana is writing directions for first graders on how to wash their hands. She has five steps."],
-      ask: "Which feature would help her readers most: a numbered list, a map, or a chart of germ names?",
+      show: ["How to Make a Fruit Salad", "Wash and cut up some fruit.", "Put the pieces in a big bowl.", "Stir gently and serve."],
+      ask: "A student needs a closing sentence. Which is best: \"Grapes grow on vines in warm places,\" \"Next, add a spoonful of honey,\" or \"Now you have a fresh treat to share with your family\"?",
       steps: [
-        "Think about the reader. First graders need directions that are easy to follow.",
-        "Think about the job. Directions are steps, so the order matters.",
-        "A numbered list shows each step and its order clearly."
+        "Name what a closing does. It wraps up the whole piece, so the reader feels finished.",
+        "Test the choices. A fact about grapes is a new detail, and \"Next, add a spoonful of honey\" adds a step after the steps are done.",
+        "Pick the sentence that goes back to what the reader made and speaks to the reader."
       ],
-      answer: "A numbered list, because it shows young readers each step in the right order."
+      answer: "\"Now you have a fresh treat to share with your family,\" because it wraps up the piece instead of adding a fact or a step."
     }
   ],
   write: {
@@ -1099,23 +1099,23 @@ PP.addLesson({
     {
       id: "p3",
       draft: true,
-      title: "Make a Can Telephone",
+      title: "Make a Rain Stick",
       byline: "Dara's first draft",
       genre: "Student draft (how-to)",
       paragraphs: [
         [
-          "(1) You need two clean empty cans, a long piece of string and a grown-up helper.",
-          "(2) Ask the grown-up to cover any sharp edges with tape."
+          "(1) You need a long cardboard tube, two paper circles, a roll of tape, a sheet of foil, a cup of rice and a grown-up helper.",
+          "(2) Ask the grown-up to cut the foil so it is as long as the tube."
         ],
         [
-          "(3) First, ask the grown-up to poke a small hole in the bottom of each can.",
-          "(4) Next, push one end of the string through the hole in each can.",
-          "(5) Then walk apart until the string is tight."
+          "(3) First, tape one paper circle over one end of the tube.",
+          "(4) Next, roll the foil into a loose coil and slide it into the tube.",
+          "(5) Then pour in a handful of rice."
         ],
         [
-          "(6) Now one friend talks into a can while the other friend holds a can to an ear.",
-          "(7) The voice shakes the string, and the shaking carries the sound to the other can.",
-          "(8) The string must stay tight, or the sound will not travel."
+          "(6) Now tape the other circle over the open end.",
+          "(7) Turn the tube slowly, and the rice falls past the foil.",
+          "(8) It makes a sound like soft rain."
         ]
       ]
     },
@@ -1222,12 +1222,13 @@ PP.addLesson({
         [
           "(3) A paper book never needs to be charged, so it works anywhere.",
           "(4) You can flip back to a page you liked and find it fast.",
-          "(5) A tablet can hold hundreds of books at one time."
+          "(5) You can write your name inside the cover of your own book."
         ],
         [
           "(6) A tablet has a light, so you can read in a dark room.",
-          "(7) You can make the words bigger with one tap.",
-          "(8) Some tablets also let you look up a word right away."
+          "(7) A paper book can be passed to a friend when you finish it.",
+          "(8) A tablet can hold hundreds of books at one time.",
+          "(9) Some tablets also let you look up a word right away."
         ]
       ]
     }
@@ -1278,12 +1279,12 @@ PP.addLesson({
       prompt: "Match each writing job to the plan that fits it best.",
       cols: ["Steps in order", "Compare", "Cause and effect"],
       rows: [
-        { text: "telling how to fold a paper boat", answer: 0 },
-        { text: "telling how frogs and toads are alike and different", answer: 1 },
-        { text: "telling why a pond dried up last summer", answer: 2 }
+        { text: "a page that helps a friend fold a paper boat", answer: 0 },
+        { text: "a page that sets frogs next to toads", answer: 1 },
+        { text: "a page about what made a pond dry up last summer", answer: 2 }
       ],
-      clue: "For each job, ask: Is the writer teaching steps, showing alike and different, or telling why something happened?",
-      why: "Folding a boat is a how-to, so it needs steps in order. Frogs and toads are two things side by side, so that is compare. Why a pond dried up asks for a reason, so that is cause and effect." }
+      clue: "For each page, ask: Is the writer teaching steps, setting two things side by side, or telling what made something happen?",
+      why: "Helping a friend fold a boat is a how-to, so it needs steps in order. Frogs next to toads are two things side by side, so that is compare. What made a pond dry up asks for a reason, so that is cause and effect." }
   ],
   /* B4b:core:start */
   /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
@@ -1302,25 +1303,25 @@ PP.addLesson({
         passages: ["p3"],
         prompt: "Dara's draft starts with the list of supplies. She wants to add an opening before sentence 1. Which sentence is best?",
         choices: [
-          { text: "A can telephone lets two friends talk across a yard, and you can make one fast.", correct: true },
-          { text: "Cans are made of metal, and many people save them to use again later." },
-          { text: "Homemade toys are fun to play with, and kids have made them for many years." },
-          { text: "Phones help people talk, send messages and take pictures from far away." }
+          { text: "A rain stick makes a sound like soft rain, and you can make one in a few steps.", correct: true },
+          { text: "A cardboard tube can be long or short, and many come with paper towels inside." },
+          { text: "Rice is a grain that grows in wet fields and feeds many people each day." },
+          { text: "Rain falls from clouds and gives plants the water they need to grow." }
         ],
         clue: "An opening comes first and gets the reader ready. Ask what a reader needs to know before they start.",
         hints: [
           "An opening comes first and gets the reader ready. Ask what a reader needs to know before they start.",
           "Read the whole draft once. Then say in your own words what Dara wants her reader to be able to do at the end.",
-          "A sentence about real phones is about a different thing than Dara's piece. Check each of the other three against what you said in your own words."
+          "A sentence about where rain comes from is about a different thing than Dara's piece. Check each of the other three against what you said in your own words."
         ],
         how: [
-          "Read the draft: every step is about making a can telephone and using it.",
+          "Read the draft: every step is about making a rain stick and what it sounds like.",
           "An opening tells the reader what the piece will teach, so the reader knows what is coming.",
-          "The answer is \"A can telephone lets two friends talk across a yard, and you can make one fast.\" It names what the reader will make.",
-          "The other sentences are about cans, toys or phones, but none of them says what Dara's piece will teach."
+          "The answer is \"A rain stick makes a sound like soft rain, and you can make one in a few steps.\" It names what the reader will make.",
+          "The other sentences are about tubes, rice or rain, but none of them says what Dara's piece will teach."
         ],
-        misconception: "A common mix-up is choosing a true fact about the topic. An opening has to tell what this piece will teach.",
-        why: "The answer is \"A can telephone lets two friends talk across a yard, and you can make one fast.\" It tells the reader what the piece will teach. The other sentences are about cans, toys or phones in general, so they do not get the reader ready for these steps."
+        misconception: "A common mix-up is choosing a true fact that uses the same words as the draft. An opening has to tell what this piece will teach.",
+        why: "The answer is \"A rain stick makes a sound like soft rain, and you can make one in a few steps.\" It tells the reader what the piece will teach. The other sentences use words from the draft, but they are about tubes, rice or rain in general, so they do not get the reader ready for these steps."
       },
       {
         id: "SK-SS1b-C03",
@@ -1329,32 +1330,30 @@ PP.addLesson({
         dok: 3,
         std: ["3.T.SS.1.b"],
         passages: ["p3"],
-        prompt: "Dara adds this step: \"Tie a big knot in the end of the string inside each can.\" Where should it go, and why?",
+        prompt: "Dara adds this step: \"Press the foil coil against the inside of the tube so it holds its shape.\" Where should it go, and why?",
         choices: [
           {
-            text: "After sentence 4, because the string must be through the hole before its end can be tied inside the can.",
+            text: "After sentence 4, because the coil has to be in the tube first, before the rice gets in the way.",
             correct: true
           },
-          {
-            text: "After sentence 3, because the steps about the cans should stay together before the string comes in."
-          },
-          { text: "After sentence 5, because the knot holds the string once the two friends have walked apart." },
-          { text: "After sentence 6, because a knot is a finishing touch once the telephone is working." }
+          { text: "After sentence 3, because the tube should be ready before anything else is put near it." },
+          { text: "After sentence 5, because the rice can help hold the coil flat against the tube wall." },
+          { text: "After sentence 6, because the tube is closed and the coil is ready to be pressed." }
         ],
         clue: "In a how-to, each step needs the step before it to be done. Ask what the reader has already done.",
         hints: [
           "In a how-to, each step needs the step before it to be done. Ask what the reader has already done.",
-          "Picture holding a can and the string. Reread sentences 3, 4 and 5 and say where the string is at the end of each one.",
-          "After sentence 3, no string is in a can yet. Decide among the places that are left."
+          "Picture holding the tube. Say what is inside it at the end of each of sentences 3, 4 and 5.",
+          "After sentence 3, the foil is not in the tube yet. Decide among the places that are left."
         ],
         how: [
-          "Find where the string first goes into a can. Sentence 4 pushes the string through the hole.",
-          "Only then is there a string end inside the can to tie. After sentence 3 the string is not in the can yet.",
-          "The knot also has to be done before the friends pull the string tight in sentence 5, or the string would slip out.",
-          "The answer is \"After sentence 4, because the string must be through the hole before its end can be tied inside the can.\""
+          "Find where the coil first goes into the tube. Sentence 4 slides it in.",
+          "Only then is there a coil inside the tube to press. After sentence 3 the coil is not in the tube yet.",
+          "The pressing also has to be done before the rice goes in with sentence 5, or the rice would be in the way.",
+          "The answer is \"After sentence 4, because the coil has to be in the tube first, before the rice gets in the way.\""
         ],
-        misconception: "A common mix-up is grouping steps by the object they use (the cans) instead of by what has to happen first.",
-        why: "The answer is \"After sentence 4, because the string must be through the hole before its end can be tied inside the can.\" The knot cannot be tied until the string is in the can, and it has to hold before the friends pull the string tight. After sentence 3 there is no string in the can yet, and after sentences 5 and 6 the string is already being pulled and used."
+        misconception: "A common mix-up is putting a step where it sounds neat instead of where the reader has what the step needs.",
+        why: "The answer is \"After sentence 4, because the coil has to be in the tube first, before the rice gets in the way.\" The coil cannot be pressed until it is in the tube, and the rice has to wait. After sentence 3 there is no coil in the tube yet, and after sentences 5 and 6 the rice is already inside."
       },
       {
         id: "SK-SS1b-C04",
@@ -1364,28 +1363,28 @@ PP.addLesson({
         std: ["3.T.SS.1.b"],
         passages: [],
         pick: 2,
-        prompt: "Dara's readers will follow her steps while they hold the cans in their hands. Which TWO features would help them most?",
+        prompt: "Dara's readers will follow her steps while they hold the tube in their hands. Which TWO features would help them most?",
         choices: [
           { text: "a numbered list for the steps", correct: true },
           { text: "a small drawing beside each step, with a caption", correct: true },
           { text: "a large heading above every sentence" },
-          { text: "a long paragraph about how sound travels" },
-          { text: "a chart that compares different kinds of cans" }
+          { text: "a long paragraph about how rain forms" },
+          { text: "a chart that compares kinds of rice" }
         ],
         clue: "A feature is chosen for the reader, not just for looks. Think about what this reader is doing while they read.",
         hints: [
           "A feature is chosen for the reader, not just for looks. Think about what this reader is doing while they read.",
           "Choose two. For each feature, say what job it does for a reader, and then decide whether these readers need that job done.",
-          "A chart of different cans gives facts about cans, but Dara's readers are making a telephone, not choosing a can. Check the other four."
+          "A chart of rice kinds gives facts about rice, but Dara's readers are making a rain stick, not choosing rice. Check the other four."
         ],
         how: [
           "Dara's readers are busy doing the steps, so they need to find their place fast and see what to do.",
           "A numbered list shows each step and its order, so a reader can look away and find the place again.",
           "A drawing with a short caption shows what a step looks like.",
-          "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" A heading over every sentence would crowd the page, and facts about sound or cans do not help someone follow steps."
+          "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" A heading over every sentence would crowd the page, and facts about rain or rice do not help someone follow steps."
         ],
         misconception: "A common mix-up is choosing a feature that gives facts about the topic. These readers need help doing the steps.",
-        why: "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" Readers who are holding the cans need to find the next step fast and see what to do. A heading over every sentence, a paragraph about sound and a chart of cans do not help them follow the steps."
+        why: "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" Readers who are holding the tube need to find the next step fast and see what to do. A heading over every sentence, a paragraph about rain and a chart of rice do not help them follow the steps."
       },
       {
         id: "SK-SS1b-C05",
@@ -1462,10 +1461,7 @@ PP.addLesson({
         passages: ["p4"],
         prompt: "Isaiah wants to add a closing sentence after sentence 9. Which sentence is best?",
         choices: [
-          {
-            text: "Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.",
-            correct: true
-          },
+          { text: "Whether you bring a pet or not, we hope to see you there for a fun day.", correct: true },
           { text: "Next, the judges will pick the winners and hand out all of the ribbons and prizes." },
           { text: "Some pets learn new tricks very quickly, and others need a lot of patience and time." },
           { text: "Lots of neighbors have a dog or a cat, and some have fish or birds too." }
@@ -1479,11 +1475,11 @@ PP.addLesson({
         how: [
           "A closing wraps up the whole piece, not just the last section.",
           "Isaiah's piece tells neighbors about a show they can come to.",
-          "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It looks back at the whole piece and ends it.",
+          "The answer is \"Whether you bring a pet or not, we hope to see you there for a fun day.\" It looks back at the whole piece and ends it.",
           "The sentence about the judges adds news that the last section already gave, and the sentences about tricks and neighbors add new details instead of wrapping up."
         ],
         misconception: "A common mix-up is choosing a sentence that adds one more fact. A closing wraps up; it does not start something new.",
-        why: "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It wraps up the whole piece and speaks to the readers. The judges sentence repeats news from the last section, and the sentences about tricks and neighbors add new details."
+        why: "The answer is \"Whether you bring a pet or not, we hope to see you there for a fun day.\" It wraps up the whole piece and speaks to the readers. The judges sentence repeats news from the last section, and the sentences about tricks and neighbors add new details."
       },
       {
         id: "SK-SS1b-C08",
@@ -1496,26 +1492,26 @@ PP.addLesson({
         prompt: "Isaiah wants to put this photo on his flyer. Select the sentence that would make the best caption.",
         stem: ["A photo from last year's pet show shows a brown dog in a red bandana jumping to catch a ball."],
         options: [
-          "A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.",
-          "Dogs need food, water and exercise every day.",
-          "The Cherry Lane Pet Show is on the second Saturday of May.",
-          "Pet shows are held in many towns each year."
+          "A leaping pup in a bright scarf grabs its toy in midair.",
+          "Every dog at the show gets a free ball and a red bandana.",
+          "A dog can learn to catch a ball after a few weeks of practice.",
+          "The Cherry Lane Pet Show is on the second Saturday of May."
         ],
         answer: [0],
         clue: "A caption sits next to a picture and tells what the picture shows.",
         hints: [
           "A caption sits next to a picture and tells what the picture shows.",
-          "Read the sentence about the photo. Then read each choice and ask: does it tell about this picture, or about something else?",
+          "Read the sentence about the photo. Then read each choice and ask: does it tell what is happening in this picture, or something else?",
           "The date of the show is useful on a flyer, but it does not tell what this photo shows. Check the other three the same way."
         ],
         how: [
           "A caption tells what is happening in the picture.",
-          "The photo shows a brown dog in a red bandana jumping to catch a ball.",
-          "The answer is \"A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.\" It matches the picture.",
-          "The other sentences are true about dogs, the show or pet shows, but they do not describe this photo."
+          "The photo shows a dog in a bandana in the air with a ball. A caption can say this in different words.",
+          "The answer is \"A leaping pup in a bright scarf grabs its toy in midair.\" A pup is a young dog, a scarf is a bandana and a toy is a ball, so it matches the picture.",
+          "The other sentences use words from the photo, such as dog, ball and bandana, but they tell about prizes, practice or the date, not about this photo."
         ],
-        misconception: "A common mix-up is choosing a useful fact about the event. A caption has to match the picture next to it.",
-        why: "The answer is \"A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.\" A caption tells what the picture shows, and this sentence describes the photo. The other sentences give facts about dogs, the date or pet shows, not about this picture."
+        misconception: "A common mix-up is choosing the sentence that repeats the most words from the photo. A caption has to match what the picture shows, even in different words.",
+        why: "The answer is \"A leaping pup in a bright scarf grabs its toy in midair.\" It describes what the photo shows in different words. The other sentences use words from the photo, but they tell about a free ball and bandana, how a dog learns to catch, or the date, not about this picture."
       },
       {
         id: "SK-SS1b-C09",
@@ -1525,19 +1521,16 @@ PP.addLesson({
         std: ["3.T.SS.1.b"],
         passages: ["p3", "p4"],
         pick: 2,
-        prompt: "Think about Dara's can telephone draft and Isaiah's pet show draft. Which TWO sentences tell how their plans are different?",
+        prompt: "Think about Dara's rain stick draft and Isaiah's pet show draft. Which TWO sentences tell how their plans are different?",
         choices: [
+          { text: "Dara lists steps in the order to do them, but Isaiah groups facts into sections.", correct: true },
           {
-            text: "Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections.",
+            text: "Dara writes for readers who make something, but Isaiah writes for neighbors who want facts.",
             correct: true
           },
-          {
-            text: "Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.",
-            correct: true
-          },
-          { text: "Isaiah's draft has a numbered list, but Dara's draft does not." },
+          { text: "Isaiah's draft has a numbered list, but Dara's does not." },
           { text: "Dara's draft compares two things, but Isaiah's draft tells a story." },
-          { text: "Isaiah's draft uses the words first, next and then, but Dara's draft does not." }
+          { text: "Isaiah's draft uses first, next and then, but Dara's does not." }
         ],
         clue: "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
         hints: [
@@ -1548,11 +1541,11 @@ PP.addLesson({
         how: [
           "Dara's draft is a how-to: steps in order, for readers who are doing the job as they read.",
           "Isaiah's draft tells facts about an event, grouped into sections, for neighbors who want to know about it.",
-          "The answers are \"Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections\" and \"Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.\"",
+          "The answers are \"Dara lists steps in the order to do them, but Isaiah groups facts into sections\" and \"Dara writes for readers who make something, but Isaiah writes for neighbors who want facts.\"",
           "Neither draft has a numbered list, neither compares two things or tells a story, and the words first, next and then are in Dara's draft, not Isaiah's."
         ],
         misconception: "A common mix-up is choosing a statement that sounds like a plan but is false for one of the drafts. Check each statement against both.",
-        why: "The answers are \"Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections\" and \"Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.\" Neither draft has a numbered list, neither compares two things or tells a story, and Dara's draft is the one that uses first, next and then."
+        why: "The answers are \"Dara lists steps in the order to do them, but Isaiah groups facts into sections\" and \"Dara writes for readers who make something, but Isaiah writes for neighbors who want facts.\" Neither draft has a numbered list, neither compares two things or tells a story, and Dara's draft is the one that uses first, next and then."
       },
       {
         id: "SK-SS1b-C10",
@@ -1761,25 +1754,25 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-P5"],
-      prompt: "Match each writing job to the plan that fits it best.",
-      cols: ["Steps in order", "Compare", "Cause and effect"],
+      prompt: "Which plan suits each article? Give every plan to one article.",
+      cols: ["Numbered steps", "Side-by-side sections", "Reasons and results"],
       rows: [
-        { text: "telling how to build a pillow fort", answer: 0 },
-        { text: "telling how a basketball and a soccer ball are alike and different", answer: 1 },
-        { text: "telling why puddles disappear on a sunny day", answer: 2 }
+        { text: "an article that sets a rowboat beside a canoe", answer: 1 },
+        { text: "an article on what makes puddles vanish on a sunny day", answer: 2 },
+        { text: "an article that guides a new camper through building a pillow fort", answer: 0 }
       ],
-      clue: "Ask what the writer is doing for the reader: teaching how, showing alike and different, or telling why.",
+      clue: "Read each article and say what the reader should be able to do or understand at the end.",
       hints: [
-        "Ask what the writer is doing for the reader: teaching how, showing alike and different, or telling why.",
-        "Start with the row whose job you are most sure about, and use each plan once.",
-        "Telling why puddles disappear asks for a reason, not a list of steps. Match the other two rows."
+        "Read each article and say what the reader should be able to do or understand at the end.",
+        "Begin with the article you are surest about. Each plan goes with one article only.",
+        "Vanishing puddles need an explanation, and an explanation is not a list of steps. Pair the other two articles after that."
       ],
       how: [
-        "Building a fort teaches how to do something, so the steps go in order.",
-        "A basketball and a soccer ball are two things side by side, so the plan is compare.",
-        "Why puddles disappear asks for a reason, so the plan is cause and effect."
+        "A rowboat beside a canoe is two things shown together, so it needs side-by-side sections.",
+        "What makes puddles vanish asks for a cause and its result, so the plan is reasons and results.",
+        "Guiding a camper through a fort is a how-to, so it needs numbered steps."
       ],
-      why: "Building a pillow fort is a how-to, so it needs steps in order. A basketball and a soccer ball are two things to compare. Why puddles disappear asks for a reason, so it is cause and effect."
+      why: "The rowboat and canoe article puts two things side by side. The puddle article explains reasons and results. The fort article teaches a job, so it needs numbered steps."
     },
     {
       id: "SK-SS1b-S02",
@@ -1789,26 +1782,26 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p6"],
       like: ["SK-SS1b-C02"],
-      prompt: "Zane's draft starts with the list of supplies. He wants to add an opening before sentence 1. Which sentence is best?",
+      prompt: "Zane's draft begins with a list of supplies. Which sentence could he put before it to tell readers what they will learn?",
       choices: [
-        { text: "Oatmeal is a warm breakfast that you can cook in only a few minutes.", correct: true },
-        { text: "Oats are a kind of grain that grows in fields on many farms." },
-        { text: "Breakfast is the first meal of the day, and many kids eat it at home." },
-        { text: "A stove has burners that get very hot when a grown-up turns them on." }
+        { text: "Hot oatmeal is a breakfast you can cook yourself with a grown-up's help.", correct: true },
+        { text: "Oats are small, flat grains that people have eaten for many years." },
+        { text: "A bowl and a spoon are two things that almost every kitchen has." },
+        { text: "Water bubbles when it gets hot, and a pot gets hot too." }
       ],
-      clue: "An opening is the first thing a reader sees. Ask what the reader should know before they start.",
+      clue: "Before the supplies, a reader wants to know what the page is for. Think about the first thing a reader should learn.",
       hints: [
-        "An opening is the first thing a reader sees. Ask what the reader should know before they start.",
-        "Read the whole draft, and say in your own words what the reader will be able to make at the end.",
-        "A sentence about stoves is a safety fact, not a sentence about what the piece teaches. Check the other three."
+        "Before the supplies, a reader wants to know what the page is for. Think about the first thing a reader should learn.",
+        "Imagine a reader who has not seen the page. Ask which sentence would make that reader say, I get it, I know what this page is for.",
+        "A sentence that only describes a kitchen thing does not say what the page teaches. Check the other three the same way."
       ],
       how: [
-        "Every step in Zane's draft is about cooking oatmeal.",
-        "An opening tells the reader what the piece will teach.",
-        "The answer is \"Oatmeal is a warm breakfast that you can cook in only a few minutes.\"",
-        "Facts about oats, breakfast or stoves are true, but none says what this piece will teach."
+        "Zane's draft is a how-to for cooking oatmeal.",
+        "An opening says what the reader will do, so the reader is ready for the supplies.",
+        "The answer is \"Hot oatmeal is a breakfast you can cook yourself with a grown-up's help.\" It tells what the reader will make.",
+        "The other sentences are about oats, kitchen tools or hot water, but they do not tell what the page teaches."
       ],
-      why: "The answer is \"Oatmeal is a warm breakfast that you can cook in only a few minutes.\" It tells the reader what the piece will teach. The sentences about oats, breakfast and stoves are true, but they do not get the reader ready for these steps."
+      why: "The answer is \"Hot oatmeal is a breakfast you can cook yourself with a grown-up's help.\" It tells the reader what the page will teach. The sentences about oats, a bowl and a spoon, and hot water use words from the draft but do not get the reader ready for the steps."
     },
     {
       id: "SK-SS1b-S03",
@@ -1818,26 +1811,26 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p6"],
       like: ["SK-SS1b-C03"],
-      prompt: "Zane adds this step: \"Let the oatmeal cool for a few minutes.\" Where should it go, and why?",
+      prompt: "Zane wonders if he can put sentence 5 before sentence 4. Why can he not?",
       choices: [
-        { text: "After sentence 4, because the oatmeal is hot only after it has finished cooking.", correct: true },
-        { text: "After sentence 2, because the pot should cool down before any oats go in." },
-        { text: "After sentence 3, because the oats should rest for a few minutes before they cook." },
-        { text: "After sentence 5, because the oatmeal can cool down while the reader eats it." }
+        { text: "The oatmeal has to finish cooking in the pot before it can be poured into a bowl.", correct: true },
+        { text: "The grown-up helps with sentence 5, so it has to come right after sentence 2." },
+        { text: "The reader has to wash the bowl in sentence 5 before pouring in the oatmeal." },
+        { text: "The bowl is not on the list of supplies, so it cannot be used until later." }
       ],
-      clue: "In a how-to, each step needs the step before it to be done. Ask what has to be true before this step makes sense.",
+      clue: "In a how-to, a step can move only if it does not need the step before it. Ask what sentence 5 needs.",
       hints: [
-        "In a how-to, each step needs the step before it to be done. Ask what has to be true before this step makes sense.",
-        "Picture the oatmeal in the pot. Reread sentences 2, 3 and 4 and ask when the oatmeal is ready to eat.",
-        "After sentence 5 the reader is already eating. Decide among the places that are left."
+        "In a how-to, a step can move only if it does not need the step before it. Ask what sentence 5 needs.",
+        "Picture the pot. Say what is in it when sentence 3 ends, and what is in it when sentence 4 ends.",
+        "The bowl is on the list in sentence 1, so one reason is not true. Check the other three against the draft."
       ],
       how: [
-        "Find when the oatmeal is hot and ready. Sentence 4 cooks it for five minutes.",
-        "Only after it is cooked does it need to cool. Before sentence 4 it is still water and oats.",
-        "Sentence 5 says to eat it, so the cooling has to come before that.",
-        "The answer is \"After sentence 4, because the oatmeal is hot only after it has finished cooking.\""
+        "Sentence 5 pours the oatmeal into a bowl. That needs finished oatmeal.",
+        "The oatmeal is finished only after the five minutes of cooking in sentence 4.",
+        "The answer is \"The oatmeal has to finish cooking in the pot before it can be poured into a bowl.\"",
+        "The grown-up helps in sentence 2, washing the bowl is in sentence 6, and the bowl is on the list in sentence 1."
       ],
-      why: "The answer is \"After sentence 4, because the oatmeal is hot only after it has finished cooking.\" The cooling step has to come after the cooking and before the eating. Before sentence 4 there is nothing to cool yet, and after sentence 5 the reader is already eating."
+      why: "The answer is \"The oatmeal has to finish cooking in the pot before it can be poured into a bowl.\" Pouring needs finished oatmeal, and sentence 4 is where it cooks. The grown-up helps in sentence 2, the bowl is washed in sentence 6, and the bowl is on the list of supplies."
     },
     {
       id: "SK-SS1b-S04",
@@ -1848,27 +1841,27 @@ PP.addLesson({
       passages: [],
       pick: 2,
       like: ["SK-SS1b-C04"],
-      prompt: "Zane's readers will follow the oatmeal steps in a kitchen, with wet hands and a hot pot to watch. Which TWO features would help them most?",
+      prompt: "Tomas is writing about three kinds of whales. Classmates will come back to look up facts for a quiz. Pick the TWO features that serve these readers best.",
       choices: [
-        { text: "numbered steps that are easy to find again", correct: true },
-        { text: "a small drawing beside the steps, with a caption", correct: true },
-        { text: "a paragraph about where oats are grown" },
-        { text: "a long list of other breakfast foods" },
-        { text: "a title in tiny print at the bottom of the page" }
+        { text: "a heading for each whale's part", correct: true },
+        { text: "a table that puts all three whales' facts side by side", correct: true },
+        { text: "directions with a number on each line" },
+        { text: "a big picture with no words near it" },
+        { text: "a story about a trip to the sea" }
       ],
-      clue: "A feature is chosen for the reader. Think about what this reader is doing and what they cannot do while they cook.",
+      clue: "Think about how these readers use the page: they come back to look something up, not to read once from start to end.",
       hints: [
-        "A feature is chosen for the reader. Think about what this reader is doing and what they cannot do while they cook.",
-        "Choose two. Say what job each feature does for a reader, and then decide whether these readers need that job done.",
-        "A title in tiny print at the bottom would be hard for any reader to use. Check the other four."
+        "Think about how these readers use the page: they come back to look something up, not to read once from start to end.",
+        "Choose two. Ask of each feature: does it help someone find one fact fast?",
+        "Nothing on this page is a job to do, so numbered directions do not fit. Check the other four."
       ],
       how: [
-        "Zane's readers are cooking, so they look at the page for only a moment.",
-        "Numbered steps let them find their place again fast.",
-        "A drawing with a caption shows what a step should look like.",
-        "The answers are \"numbered steps that are easy to find again\" and \"a small drawing beside the steps, with a caption.\" Facts about oats or other foods do not help them cook."
+        "The classmates come back to find a fact, so they need to find the right part quickly.",
+        "A heading for each whale tells them where to look.",
+        "A table puts the same kinds of facts for all three whales side by side, so they can see them at once.",
+        "The answers are \"a heading for each whale's part\" and \"a table that puts all three whales' facts side by side.\" Directions, a picture with no words and a story do not help someone look up facts."
       ],
-      why: "The answers are \"numbered steps that are easy to find again\" and \"a small drawing beside the steps, with a caption.\" Readers who are cooking need to find their place fast and see what a step looks like. Facts about where oats grow or other foods do not help them follow the steps."
+      why: "The answers are \"a heading for each whale's part\" and \"a table that puts all three whales' facts side by side.\" Readers who return to look things up need to find a part fast and see facts side by side. Numbered directions, a picture with no words and a story do not help with that."
     },
     {
       id: "SK-SS1b-S05",
@@ -1878,16 +1871,16 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-C05"],
-      prompt: "Rosa is teaching a friend to wash a cup. Put her steps in the best order.",
+      prompt: "Rosa shows a friend how to wash a cup. Arrange her steps so they make sense.",
       steps: [
         "Put a little soap on a wet sponge.",
         "Scrub the inside and the outside of the cup.",
         "Rinse all the soap off with water.",
         "Dry the cup with a clean towel."
       ],
-      clue: "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+      clue: "Each action in a how-to leans on the one before it. Ask which action has to happen before the others can.",
       hints: [
-        "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+        "Each action in a how-to leans on the one before it. Ask which action has to happen before the others can.",
         "Look at what each step needs. Ask what you must already have before you can do it.",
         "Drying only makes sense once the cup is clean and rinsed, so it comes last. Now order the other three steps."
       ],
@@ -1907,8 +1900,8 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p7"],
       like: ["SK-SS1b-C06"],
-      prompt: "Nora wants a heading for each of her two long sections. Choose the best heading for each.",
-      text: "Above sentences 3 to 5: {0}. Above sentences 6 to 8: {1}.",
+      prompt: "Nora wants a title over each of her two body paragraphs. Which title fits each one?",
+      text: "Sentences 3 to 5 need {0}. Sentences 6 to 8 need {1}.",
       slots: [
         {
           options: ["Fun for Little Kids", "Foam Noodles", "The Last Saturday in June"],
@@ -1919,17 +1912,17 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "A heading names what a whole section is about, so it must fit every sentence in that section.",
+      clue: "A title over a paragraph has to fit all of its sentences, not just one.",
       hints: [
-        "A heading names what a whole section is about, so it must fit every sentence in that section.",
-        "Read sentences 3 to 5 as one group, then sentences 6 to 8 as another. Say who each group is about.",
-        "One sentence about foam noodles, or one about a lifeguard, is not enough to name a section. A heading must fit all of the sentences under it."
+        "A title over a paragraph has to fit all of its sentences, not just one.",
+        "Read each group of sentences by itself and say who it is about.",
+        "A title about one thing, such as noodles, covers only one sentence. Pick titles that cover the whole group."
       ],
       how: [
         "Sentences 3 to 5 tell what little kids can do.",
         "Sentences 6 to 8 tell what bigger kids can do.",
         "The answers are \"Fun for Little Kids\" and \"Fun for Bigger Kids.\"",
-        "Foam noodles and a lifeguard each fit only one sentence, and the date and the cost are in the first paragraph."
+        "\"Foam Noodles\" and \"A Lifeguard on Duty\" each fit only one sentence, and the date and the cost are in the first paragraph."
       ],
       why: "The answers are Fun for Little Kids and Fun for Bigger Kids. Sentences 3 to 5 are about little kids, and sentences 6 to 8 are about bigger kids. Foam noodles and a lifeguard each fit only one sentence."
     },
@@ -1941,24 +1934,23 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p7"],
       like: ["SK-SS1b-C07"],
-      prompt: "Nora wants to add a closing sentence after sentence 8. Which sentence is best?",
+      prompt: "Which sentence would end Nora's flyer best?",
       choices: [
         { text: "Come to Splash Day and cool off with your whole family!", correct: true },
         { text: "Next, the lifeguard will blow a whistle to start the big races." },
         { text: "Foam noodles are long, soft tubes that float well on the water." },
         { text: "Many kids in our town learn to swim before they finish school." }
       ],
-      clue: "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
+      clue: "A last sentence should leave the reader with the point of the flyer.",
       hints: [
-        "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
-        "Read all three paragraphs, not only the last one. Ask what the entire piece is for.",
-        "Sentence 7 already tells about the lifeguard, so the closing should not bring up the lifeguard again. Test the other three against what the whole piece is for."
+        "A last sentence should leave the reader with the point of the flyer.",
+        "Ask what Nora wants people to do after reading about the event.",
+        "A sentence that starts with Next brings in a new event instead of ending. Check the other three the same way."
       ],
       how: [
-        "A closing wraps up the whole piece.",
-        "Nora's piece invites families to an event.",
-        "The answer is \"Come to Splash Day and cool off with your whole family!\"",
-        "The races sentence adds a new event, and the noodles and swimming sentences add new facts."
+        "The flyer invites families to an event, so the last sentence should wrap that up.",
+        "The answer is \"Come to Splash Day and cool off with your whole family!\" It speaks to the readers and ends the flyer.",
+        "The whistle sentence adds a new event, and the sentences about noodles and swimming add new facts."
       ],
       why: "The answer is \"Come to Splash Day and cool off with your whole family!\" It wraps up the whole piece and speaks to the readers. The other sentences add a new event or new facts instead of ending the piece."
     },
@@ -1971,30 +1963,28 @@ PP.addLesson({
       passages: [],
       pick: 1,
       like: ["SK-SS1b-C08"],
-      prompt: "Nora wants to put this photo on her flyer. Select the sentence that would make the best caption.",
-      stem: [
-        "A photo from last year's Splash Day shows two children sliding down a red slide into a shallow pool."
-      ],
+      prompt: "Nora needs a few words to go under this photo. Which choice tells what the photo shows?",
+      stem: ["Last summer, someone snapped two children racing down a red slide into a shallow pool."],
       options: [
-        "Two kids splash down a slide at last year's Splash Day.",
-        "Splash Day is on the last Saturday in June.",
-        "Slides are made of smooth, hard plastic.",
-        "Swimming pools are cleaned every week."
+        "A pair of laughing swimmers zoom down to the water below.",
+        "Each rider on the red slide earns a sticker.",
+        "A slide into a shallow pool is safe for little children.",
+        "Splash Day lasts the whole day, so families may stay."
       ],
       answer: [0],
-      clue: "A caption sits next to a picture and tells what the picture shows.",
+      clue: "Words under a picture tell what the picture shows.",
       hints: [
-        "A caption sits next to a picture and tells what the picture shows.",
-        "Read the sentence about the photo. Then read each choice and ask: does it tell about this picture, or about something else?",
-        "The date of the event is useful on a flyer, but it does not tell what this photo shows. Check the other three the same way."
+        "Words under a picture tell what the picture shows.",
+        "Picture the photo. Then ask of each choice: could I point to this in the photo?",
+        "How long Splash Day lasts is helpful news, but it is not something you can see in the photo. Check the other three."
       ],
       how: [
-        "A caption tells what is happening in the picture.",
-        "The photo shows two children sliding down a slide into a pool.",
-        "The answer is \"Two kids splash down a slide at last year's Splash Day.\"",
-        "The others are facts about the date, slides or pools, not about this photo."
+        "The words under a photo should tell what is happening in it.",
+        "The photo shows two children going down a slide toward a pool.",
+        "The answer is \"A pair of laughing swimmers zoom down to the water below.\" Two children are a pair, and sliding into the pool is zooming down to the water.",
+        "The other sentences use words from the photo, such as slide and pool, but they tell about a sticker, safety or how long the day lasts."
       ],
-      why: "The answer is \"Two kids splash down a slide at last year's Splash Day.\" A caption tells what the picture shows. The other sentences give the date or facts about slides and pools, not about this photo."
+      why: "The answer is \"A pair of laughing swimmers zoom down to the water below.\" It describes what the photo shows in new words. The other sentences use words from the photo, but they tell about a sticker, safety for little children, or how long the day lasts."
     },
     {
       id: "SK-SS1b-S09",
@@ -2005,33 +1995,27 @@ PP.addLesson({
       passages: ["p6", "p7"],
       pick: 2,
       like: ["SK-SS1b-C09"],
-      prompt: "Think about Zane's oatmeal draft and Nora's Splash Day draft. Which TWO sentences tell how their plans are different?",
+      prompt: "Pick the TWO true statements about Zane's oatmeal page and Nora's Splash Day page.",
       choices: [
-        {
-          text: "Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections.",
-          correct: true
-        },
-        {
-          text: "Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.",
-          correct: true
-        },
-        { text: "Nora's draft has a numbered list, but Zane's draft does not." },
-        { text: "Zane's draft compares two foods, but Nora's draft tells a story." },
-        { text: "Nora's draft uses the words first, next and then, but Zane's draft does not." }
+        { text: "Zane's page finishes with cleanup, while Nora's has no steps in it.", correct: true },
+        { text: "Zane's readers will cook while they read, while Nora's will plan a family outing.", correct: true },
+        { text: "Both pages have a heading over each part." },
+        { text: "Both pages were written for kids who are about to cook." },
+        { text: "Nora's page puts a number in front of every sentence." }
       ],
-      clue: "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
+      clue: "Each statement is about both pages. Check it against Zane's page, and then against Nora's.",
       hints: [
-        "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
-        "Choose two. Look at how each draft is organized and who each draft is written for.",
-        "Neither draft has a numbered list. Check the other four statements against both drafts the same way."
+        "Each statement is about both pages. Check it against Zane's page, and then against Nora's.",
+        "Choose two. Ask how each page ends and what each reader will do with it.",
+        "Neither page has headings, so the statement about headings cannot be true. Check the other four the same way."
       ],
       how: [
-        "Zane's draft is a how-to with steps in order for a person who is cooking.",
-        "Nora's draft tells facts about an event, in sections, for families.",
-        "The answers are \"Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections\" and \"Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.\"",
-        "Neither draft has a numbered list, compares two foods or tells a story, and neither uses the words first, next and then."
+        "Zane's last sentence says to wash the pot, the bowl and the spoon. Nora's page tells about the event and has no steps.",
+        "Zane's readers cook as they read. Nora's readers read about a day out they might plan.",
+        "The answers are \"Zane's page finishes with cleanup, while Nora's has no steps in it\" and \"Zane's readers will cook while they read, while Nora's will plan a family outing.\"",
+        "Neither page has headings, no numbers are in front of Nora's sentences, and only Zane's is for cooks."
       ],
-      why: "The answers are \"Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections\" and \"Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.\" Neither draft has a numbered list, compares two foods or tells a story, and neither uses first, next and then."
+      why: "The answers are \"Zane's page finishes with cleanup, while Nora's has no steps in it\" and \"Zane's readers will cook while they read, while Nora's will plan a family outing.\" Neither page has headings, no numbers are in front of Nora's sentences, and only Zane's page is for cooks."
     },
     {
       id: "SK-SS1b-S10",
@@ -2041,38 +2025,38 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-C10"],
-      prompt: "Complete Ana's plan. Choose the best answer for each blank.",
+      prompt: "Complete Ana's plan.",
       stem: [
-        "Ms. Reyes asks Ana to make a page that shows how a drum and a guitar are alike and different. Classmates will study the page before a music quiz."
+        "Ana's teacher asked for a page that sets a drum beside a guitar. Classmates will study it before a music quiz."
       ],
-      text: "Ana's job is to show how two things are alike and different, so her piece should use {0}. Her classmates will study it, so {1} would help them most.",
+      text: "{0} is the plan Ana needs. For studying, {1} is what her classmates need.",
       slots: [
         {
-          options: [
-            "a compare plan with a section for each",
-            "steps in order",
-            "a plan for explaining why something happens"
-          ],
+          options: ["A section for each instrument", "Directions to carry out", "A set of causes and results"],
           answer: 0
         },
         {
-          options: ["a heading above each section", "a numbered list of steps", "a long paragraph with no breaks"],
+          options: [
+            "a heading above each instrument's part",
+            "a photo of a big crowd",
+            "a long note on how bands began"
+          ],
           answer: 0
         }
       ],
-      clue: "First name the writer's job. The job picks the plan. Then think about how the reader will use the page.",
+      clue: "Name Ana's job first. The job picks the plan. Then think about how classmates will use the page.",
       hints: [
-        "First name the writer's job. The job picks the plan. Then think about how the reader will use the page.",
-        "Read the sentence again. The first blank is about the job, and the second blank is about the reader.",
-        "Ana is not teaching how to do something, so one choice for the first blank does not match her job."
+        "Name Ana's job first. The job picks the plan. Then think about how classmates will use the page.",
+        "The first blank is about the job. The second blank is about studying.",
+        "Ana is not teaching an action, so one choice for the first blank does not fit her job."
       ],
       how: [
-        "Ana's job is to show how two things are alike and different, so the plan is compare, with a section for each.",
-        "Classmates will study the page, so they need to find each part quickly.",
-        "The answers are \"a compare plan with a section for each\" and \"a heading above each section.\"",
-        "Steps and a why plan do other jobs, and a long paragraph with no breaks is hard to study."
+        "Ana is setting two things side by side, so each instrument gets its own section.",
+        "Classmates studying the page need to find each instrument's part fast, and headings help them.",
+        "The answers are \"A section for each instrument\" and \"a heading above each instrument's part.\"",
+        "Directions and a set of causes do other jobs, and a crowd photo or band history does not help with a quiz on these two instruments."
       ],
-      why: "The answers are a compare plan with a section for each, and a heading above each section. Ana is comparing two things, so each gets a section, and headings help classmates find each part. Steps and a why plan do other jobs."
+      why: "The answers are a section for each instrument, and a heading above each instrument's part. Ana is comparing two things, so each gets its own section, and headings help classmates find each part. Directions and a set of causes do other jobs."
     },
     {
       id: "SK-SS1b-S11",
@@ -2083,22 +2067,22 @@ PP.addLesson({
       passages: ["p8"],
       pick: 1,
       like: ["SK-SS1b-C11"],
-      prompt: "One sentence in Omar's draft is in the wrong paragraph. Select that sentence.",
-      targets: ["p8:1:2", "p8:2:1", "p8:2:2", "p8:2:3", "p8:3:1", "p8:3:2", "p8:3:3"],
-      answer: ["p8:2:3"],
-      clue: "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
+      prompt: "Find the line Omar put under the wrong idea, and select it.",
+      targets: ["p8:1:2", "p8:2:1", "p8:2:2", "p8:2:3", "p8:3:1", "p8:3:2", "p8:3:3", "p8:3:4"],
+      answer: ["p8:3:2"],
+      clue: "Each paragraph holds ideas about one thing. Look for a sentence that is about something else.",
       hints: [
-        "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
-        "Say in a few words what each paragraph is about. Then ask of each sentence: does it belong with its paragraph?",
-        "A paper book never needing to be charged is about paper books, and it sits in the paper-books paragraph. Check the other sentences against their own paragraphs."
+        "Each paragraph holds ideas about one thing. Look for a sentence that is about something else.",
+        "Say in a few words what each paragraph is about. Then check each sentence against its own paragraph.",
+        "A tablet having a light fits a paragraph about tablets, so it can stay. Check the other sentences against their own paragraphs."
       ],
       how: [
-        "Paragraph 2 begins with paper books, and paragraph 3 is about tablets.",
-        "A book never needing a charge and flipping back to a page are about paper books.",
-        "Sentence 5 says a tablet can hold hundreds of books. That is about tablets, so it is in the wrong paragraph.",
-        "The answer is \"A tablet can hold hundreds of books at one time.\""
+        "Paragraph 2 is about paper books, and paragraph 3 is about tablets.",
+        "Sentences about a light, hundreds of books and looking up a word are about tablets.",
+        "The sentence that says a paper book can be passed to a friend is about paper books, so it is in the wrong paragraph.",
+        "The answer is \"A paper book can be passed to a friend when you finish it.\""
       ],
-      why: "The answer is \"A tablet can hold hundreds of books at one time.\" The second paragraph is about paper books, but this sentence is about tablets, so it belongs in the third paragraph."
+      why: "The answer is \"A paper book can be passed to a friend when you finish it.\" The third paragraph is about tablets, but this sentence is about paper books, so it belongs in the second paragraph."
     },
     {
       id: "SK-SS1b-S12",
@@ -2108,26 +2092,29 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p8"],
       like: ["SK-SS1b-C12"],
-      prompt: "Why is a compare plan a good fit for Omar's piece?",
+      prompt: "How does Omar's draft help a reader choose between paper books and tablets?",
       choices: [
-        { text: "His readers want to see how paper books and tablets are alike and different.", correct: true },
-        { text: "His readers need the steps for turning on a tablet, in order." },
-        { text: "His readers need to learn what caused books to be invented." },
-        { text: "His readers need a picture to go with every sentence in the draft." }
+        {
+          text: "Each kind of reading gets its own paragraph, so a reader can weigh one against the other.",
+          correct: true
+        },
+        { text: "Every sentence in the draft is a step that comes right after the one before it." },
+        { text: "The draft starts with a cause in one paragraph and ends with its result." },
+        { text: "The draft lists the supplies a reader needs to have before starting." }
       ],
-      clue: "A plan should fit what the reader needs from the piece. Ask what Omar wants his reader to understand.",
+      clue: "Decide what a reader who must choose between two things needs from a page.",
       hints: [
-        "A plan should fit what the reader needs from the piece. Ask what Omar wants his reader to understand.",
-        "Read the whole draft and notice what each paragraph does for the reader.",
-        "The draft is not a list of steps, so a plan for steps in order would not fit. Test the other choices against what Omar's paragraphs do."
+        "Decide what a reader who must choose between two things needs from a page.",
+        "Look at how the paragraphs are arranged, and ask what that arrangement lets a reader do.",
+        "The draft has no supplies, so one choice cannot describe it. Test the other three against the paragraphs."
       ],
       how: [
-        "Look at what each paragraph does: one gives two ways to read, one tells about books and one tells about tablets.",
-        "A compare plan gives each thing its own section.",
-        "The answer is \"His readers want to see how paper books and tablets are alike and different.\"",
-        "The draft has no steps, never tells how books were invented, and does not need a picture for every sentence."
+        "Paragraph 2 gives good points about paper books, and paragraph 3 gives good points about tablets.",
+        "With the two kinds side by side, a reader can weigh one against the other.",
+        "The answer is \"Each kind of reading gets its own paragraph, so a reader can weigh one against the other.\"",
+        "The draft has no steps, no cause and result, and no list of supplies."
       ],
-      why: "The answer is \"His readers want to see how paper books and tablets are alike and different.\" Omar gives each way of reading its own paragraph. The draft has no steps, does not tell how books began, and does not need a picture for every sentence."
+      why: "The answer is \"Each kind of reading gets its own paragraph, so a reader can weigh one against the other.\" That plan helps a reader choose. The draft has no steps, no cause and result, and no list of supplies."
     },
     {
       id: "SK-SS1b-S13",
@@ -2137,26 +2124,26 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-C13"],
-      prompt: "Match each reader to the feature that would help that reader most. Use each feature once.",
-      cols: ["a large title that names the event", "a photo with a caption", "headings above short sections"],
+      prompt: "Which feature solves each reader's problem? Link every feature to one reader.",
+      cols: ["a numbered list", "words under a picture that tell what it shows", "a heading above each section"],
       rows: [
-        { text: "a driver who passes a sign for the school play and reads it for only a second", answer: 0 },
-        { text: "a reader who has never seen an axolotl", answer: 1 },
-        { text: "a reader who wants only the facts about food on a long page about owls", answer: 2 }
+        { text: "someone staring at a strange tool in a photo, unsure of its name", answer: 1 },
+        { text: "someone skimming a weather article, hunting for the storm part", answer: 2 },
+        { text: "a child gluing paper who keeps losing her place", answer: 0 }
       ],
-      clue: "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
+      clue: "For each reader, say the problem in a few words. Then ask which feature fixes that problem.",
       hints: [
-        "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
-        "Start with the row you are most sure about, then use each feature only once.",
-        "A reader who has never seen an axolotl needs to see one. Match the other two rows after that."
+        "For each reader, say the problem in a few words. Then ask which feature fixes that problem.",
+        "Begin with the reader whose problem you can name fastest. Use each feature once.",
+        "The reader who sees a strange tool needs to learn what it is. Pair the other two after that."
       ],
       how: [
-        "The driver reads for only a second, so the biggest words must say what the sign is about.",
-        "A reader who has never seen an axolotl needs to see one, and a caption tells what the photo shows.",
-        "A reader who wants only one part of a long page can use headings to find that part.",
-        "The matches are: driver with the large title, axolotl reader with the photo and caption, food-facts reader with the headings."
+        "A reader who does not know the name of the tool in a photo needs words under the picture to say what it is.",
+        "A reader who wants only the part on storms can use headings to find it.",
+        "A child with busy hands needs to find her place again, and numbers show each step.",
+        "The pairs are: the strange-tool reader with the words under the picture, the storm reader with the headings, and the child with the numbered list."
       ],
-      why: "The driver needs a large title that names the event. The reader who has never seen an axolotl needs a photo with a caption. The reader who wants only the food facts needs headings above short sections to find that part."
+      why: "The reader who does not know the tool needs words under the picture. The reader who wants only the storms needs a heading above each section. The child with busy hands needs a numbered list to find her place."
     },
     {
       id: "SK-SS1b-S14",
@@ -2166,32 +2153,29 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-C14"],
-      prompt: "Which plan fits Luis's job and his readers best?",
+      prompt: "Which plan would help the class decide?",
       stem: [
-        "Luis wants to write a page for his class that helps them decide whether to visit the zoo or the science museum on a class trip."
+        "Luis's class must pick between a zoo trip and a science museum trip. Luis offers to make a guide for them."
       ],
       choices: [
-        {
-          text: "Compare the two places, with one section for the zoo and one section for the museum.",
-          correct: true
-        },
-        { text: "List the steps for packing a lunch for the trip, in the order a person does them." },
-        { text: "Explain what caused the zoo and the museum to be built, with a heading for each cause." },
-        { text: "Tell one story about a trip Luis took, and leave out headings and sections." }
+        { text: "Give the zoo and the museum a section each, with the same kinds of facts.", correct: true },
+        { text: "Number the things to put in a lunch bag, one line for each thing." },
+        { text: "Trace each place back to its first year, one year at a time, with dates." },
+        { text: "Retell a funny afternoon at the zoo from start to end, in a story." }
       ],
-      clue: "First name the writer's job. Is he teaching how to do something, comparing, or explaining why something happens?",
+      clue: "Decide what the page has to help the class do. Is it teach an action, or help them choose?",
       hints: [
-        "First name the writer's job. Is he teaching how to do something, comparing, or explaining why something happens?",
-        "Read the four plans slowly. For each one, ask what question the finished page would answer for Luis's classmates.",
-        "A page of packing steps would teach how to pack a lunch, but that is not Luis's job. Test the other three plans."
+        "Decide what the page has to help the class do. Is it teach an action, or help them choose?",
+        "For each plan, ask what the class would know after reading it, and whether that helps them choose.",
+        "A list for packing helps after the choice is made, not before. Test the other three plans."
       ],
       how: [
-        "Luis's classmates must choose between two places, so they need to see how the places are alike and different.",
-        "A section for each place lets them look at one place at a time.",
-        "The answer is \"Compare the two places, with one section for the zoo and one section for the museum.\"",
-        "Packing steps, the causes of building and one story do not help classmates choose."
+        "The class has to choose between two places, so the page must let them weigh one against the other.",
+        "A section for each place, with the same kinds of facts, lets them do that.",
+        "The answer is \"Give the zoo and the museum a section each, with the same kinds of facts.\"",
+        "A packing list, a history by year and a story about one afternoon do not line up the two places."
       ],
-      why: "The answer is \"Compare the two places, with one section for the zoo and one section for the museum.\" Classmates choosing between two places need to see how they are alike and different. Packing steps, why the places were built and one story do not help them choose."
+      why: "The answer is \"Give the zoo and the museum a section each, with the same kinds of facts.\" Classmates choosing between two places need to line the places up. A packing list, a history by year and a story about one afternoon do not do that."
     },
     {
       id: "SK-SS1b-S15",
@@ -2201,32 +2185,31 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: [],
       like: ["SK-SS1b-C15"],
-      prompt: "Kai wants to add a closing after sentence 4. Which sentence is best?",
+      prompt: "Kai wants a closing for his steps. Which sentence works best?",
       stem: [
-        "(1) Jumping rope is a good way to get your heart pumping.",
-        "(2) First, hold one handle in each hand and let the rope rest behind your feet.",
-        "(3) Next, swing the rope up and over your head.",
-        "(4) Then hop over it when it reaches your feet."
+        "(1) A bead bracelet is easy to make, and it fits any wrist.",
+        "(2) Begin by cutting a string long enough to wrap around your wrist twice.",
+        "(3) Now slide beads onto the string, one by one.",
+        "(4) Last, tie the two ends with a tight knot."
       ],
       choices: [
-        { text: "Practice a little each day, and soon you can jump again and again without a stop.", correct: true },
-        { text: "Next, ask a friend to hold one end while you try a much longer rope." },
-        { text: "Jump ropes are usually made of plastic or cord and come in many colors." },
-        { text: "Some players cross their arms in front of them to try a harder jump." }
+        { text: "Now you have a bracelet that is ready to wear or to give to a friend.", correct: true },
+        { text: "Add a few more beads if the string still looks bare." },
+        { text: "Some beads are made of glass, and some are made of wood or clay." },
+        { text: "A watch goes around your wrist and tells you the time." }
       ],
-      clue: "A closing wraps up the whole piece.",
+      clue: "The last line of a how-to should leave the reader feeling the job is done.",
       hints: [
-        "A closing wraps up the whole piece.",
-        "Ask what a reader should feel or be ready to do after finishing these steps.",
-        "Asking a friend to hold a rope would add one more step, but the steps are already finished by sentence 4. Test the other three against what a closing does."
+        "The last line of a how-to should leave the reader feeling the job is done.",
+        "Ask what the reader has at the end of sentence 4, and what the reader might do with it.",
+        "The steps are finished, so a sentence that tells you to add more beads brings back a step. Test the other three the same way."
       ],
       how: [
-        "A closing wraps up a how-to after the steps are done.",
-        "By sentence 4 the reader has done every step, so the piece is ready to end.",
-        "The answer is \"Practice a little each day, and soon you can jump again and again without a stop.\"",
-        "The other sentences add another step or new facts, so they do not wrap up."
+        "By sentence 4 the bracelet is finished, so the closing should wrap that up.",
+        "The answer is \"Now you have a bracelet that is ready to wear or to give to a friend.\" It tells the reader what they made and ends the piece.",
+        "The sentence about adding beads brings back a step, and the sentences about beads and a watch add new facts."
       ],
-      why: "The answer is \"Practice a little each day, and soon you can jump again and again without a stop.\" It wraps up the how-to and encourages the reader. The sentence about a friend and a longer rope adds a step, and the sentences about the materials and crossed arms add new facts."
+      why: "The answer is \"Now you have a bracelet that is ready to wear or to give to a friend.\" It wraps up the how-to. The sentence about adding beads brings back a step, and the sentences about beads and a watch add new facts instead of ending the piece."
     }
   ],
   addons: {
@@ -2288,14 +2271,14 @@ PP.addLesson({
     },
     "SK-SS1b-P5": {
       hints: [
-        "For each job, ask what the writer is doing for the reader: teaching steps, showing alike and different, or telling why.",
+        "For each page, ask what the writer is doing for the reader: teaching steps, setting two things side by side, or telling what made something happen.",
         "Start with the row you are most sure about. Use each plan once.",
-        "Telling why a pond dried up asks for a reason, not for steps or a side-by-side. Match the other two rows after that."
+        "A page about what made a pond dry up asks for a reason, not for steps or a side-by-side. Match the other two rows after that."
       ],
       how: [
-        "Folding a paper boat teaches how to do something, so the plan is steps in order.",
-        "Frogs and toads are two things side by side, so the plan is compare.",
-        "Why a pond dried up asks for a reason, so the plan is cause and effect."
+        "Helping a friend fold a paper boat teaches how to do something, so the plan is steps in order.",
+        "Frogs next to toads are two things side by side, so the plan is compare.",
+        "What made a pond dry up asks for a reason, so the plan is cause and effect."
       ]
     }
   },
