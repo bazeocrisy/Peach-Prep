@@ -2570,25 +2570,25 @@ PP.addLesson({
           "**Excerpt B:** \"Every peach in Georgia is picked at exactly 3:00 in the morning, all on the very same day!\""],
         prompt: "Jamal can judge these excerpts only by their words. Which excerpt is more believable, and why?",
         choices: [
-          { text: "Excerpt A, because its details are careful and could really be true.", correct: true },
+          { text: "Excerpt A, because its details are careful and make sense.", correct: true },
           { text: "Excerpt B, because it gives an exact time, so it must be right." },
           { text: "Excerpt B, because it says every peach, so it tells more facts." },
           { text: "Excerpt A, because it does not use any numbers at all." }
         ],
-        clue: "When you cannot tell who wrote something, read its words. Could the facts really be true? Do they promise too much?",
+        clue: "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
         hints: [
-          "When you cannot tell who wrote something, read its words. Could the facts really be true? Do they promise too much?",
-          "Read Excerpt B again, slowly. Picture what it says really happening on every farm across a whole state.",
+          "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
+          "Read Excerpt B again, slowly. Picture what it says happening on every farm across a whole state.",
           "Having no numbers does not make an excerpt better or worse. A number can be fine if it makes sense. Compare the reasons that are left."
         ],
         how: [
           "Neither excerpt tells who wrote it, so Jamal has to judge the words.",
           "Excerpt B says every peach in Georgia is picked at 3:00 in the morning on the same day. That could not really happen. It promises too much.",
           "Excerpt A gives careful details that make sense: how a ripe peach looks and how workers pick it.",
-          "The answer is \"Excerpt A, because its details are careful and could really be true.\" An exact time does not make a fact true."
+          "The answer is \"Excerpt A, because its details are careful and make sense.\" An exact time does not make a fact true."
         ],
         misconception: "A common mix-up is trusting a sentence because it sounds exact, like 3:00 in the morning. Ask whether it could really be true.",
-        why: "The answer is \"Excerpt A, because its details are careful and could really be true.\" Excerpt A tells how a ripe peach looks and how workers pick it, which makes sense. Excerpt B says every peach in a whole state is picked at the same hour on the same day, which could not happen. An exact time or the word every does not make a fact true, and numbers are fine when they make sense." },
+        why: "The answer is \"Excerpt A, because its details are careful and make sense.\" Excerpt A tells how a ripe peach looks and how workers pick it, which makes sense. Excerpt B says every peach in a whole state is picked at the same hour on the same day, which could not happen. An exact time or the word every does not make a fact true, and numbers are fine when they make sense." },
       { id: "SK-RA2b-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
         stem: ["A post on a fruit fans' web page says: \"Peach trees grow ten feet taller every year! Trust me, I just know trees.\" The post is signed \"PeachFan.\""],
         prompt: "Jamal decides not to use this post. Complete his reason.",
@@ -2790,7 +2790,7 @@ PP.addLesson({
         why: "The answers are \"It was written by someone who has studied garden insects for twelve years.\" and \"It tells how the facts were found: by counting aphids every week for two summers.\" Who wrote it and how the facts were found make the page credible. A cartoon, a fun topic and being a web page do not." },
       { id: "SK-RA2b-C14", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.2.b"], passages: [],
         stem: ["Bree's question: \"Why do tennis balls have fuzz?\"",
-          "**Excerpt X,** from a tennis coach's guide: \"Stretch your arms and legs for five minutes before every match.\"",
+          "**Excerpt X,** from a tennis coach's guide: \"Drink water during every break in a long match.\"",
           "**Excerpt Y,** from a post signed \"AceKid\": \"The fuzz makes a tennis ball fly 1,000 miles an hour, every single time!\""],
         prompt: "Complete Bree's notes about the two excerpts.",
         text: "Excerpt X is {0}. Excerpt Y is {1}.",
@@ -2805,12 +2805,12 @@ PP.addLesson({
           "A tennis coach knows about the sport, so Excerpt X can be trusted. Now decide whether it fits Bree's question, and then judge Excerpt Y."
         ],
         how: [
-          "Excerpt X comes from a tennis coach, so it is credible. But it is about stretching, not fuzz, so it is not relevant.",
+          "Excerpt X comes from a tennis coach, so it is credible. But it is about drinking water, not fuzz, so it is not relevant.",
           "Excerpt Y is about fuzz, so it is relevant. But the writer gives no real name, and \"1,000 miles an hour, every single time\" is impossible, so it is not credible.",
           "The answers: X is credible but not relevant, and Y is relevant but not credible."
         ],
         misconception: "A common mix-up is checking only one thing. A good source must be credible AND relevant.",
-        why: "The answers are \"credible but not relevant\" and \"relevant but not credible.\" A coach's stretching tip can be trusted, but it does not tell why tennis balls have fuzz. The post is about fuzz, but its writer gives no name and its number is impossible." },
+        why: "The answers are \"credible but not relevant\" and \"relevant but not credible.\" A coach's tip about drinking water can be trusted, but it does not tell why tennis balls have fuzz. The post is about fuzz, but its writer gives no name and its number is impossible." },
       /* Constructed response: never scored. */
       { id: "SK-RA2b-C15", type: "cr", dok: 3, std: ["3.T.RA.2.b"], passages: [], rows: 4,
         stem: ["Pick a topic you would like to learn more about."],
@@ -2860,9 +2860,9 @@ PP.addLesson({
       like: ["SK-RA2b-C03", "SK-RA2b-C09", "SK-RA2b-C11"],
       prompt: "Theo's question is \"Why do cats purr?\" All four excerpts come from a book by an animal doctor. Which excerpt is relevant to his question?",
       choices: [
-        { text: "\"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\"", correct: true },
+        { text: "\"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\"", correct: true },
         { text: "\"A cat's whiskers help it feel its way through dark, narrow places.\"" },
-        { text: "\"Lions can roar loudly, but most house cats cannot roar at all.\"" },
+        { text: "\"Lions can roar very loudly, but most house cats cannot roar at all.\"" },
         { text: "\"Most house cats sleep for twelve hours or more every single day.\"" }
       ],
       clue: "The book can be trusted, so check the topic. Theo's question asks WHY cats purr.",
@@ -2875,9 +2875,9 @@ PP.addLesson({
         "Theo's question asks why cats purr.",
         "The excerpt about feeling calm and safe gives reasons cats purr.",
         "Roaring is a different sound, and whiskers and sleep are other topics.",
-        "The answer is \"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\""
+        "The answer is \"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\""
       ],
-      why: "The answer is \"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\" It gives reasons cats purr. Roaring is a different sound, and whiskers and sleep are other topics." },
+      why: "The answer is \"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\" It gives reasons cats purr. Roaring is a different sound, and whiskers and sleep are other topics." },
     { id: "SK-RA2b-S03", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
       like: ["SK-RA2b-C13", "SK-RA2b-C10", "SK-RA2b-P4"],
       prompt: "Lena is writing a report on how to care for a pet rabbit. Which TWO sources would be credible? Choose two answers.",
