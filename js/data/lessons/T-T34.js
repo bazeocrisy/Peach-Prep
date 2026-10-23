@@ -2665,14 +2665,14 @@ PP.addLesson({
     { id: "SK-TT4a-S09", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p9"],
       like: ["SK-TT4a-C08"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "How does the poem change in stanza 3?",
+      partA: { prompt: "What does the speaker do in stanza 3 that is different from stanza 2?",
         choices: [
-          { text: "The cone is gone, and the speaker plans to buy another.", correct: true },
-          { text: "The speaker shares the cone with a friend at the wall." },
-          { text: "The truck stops and gives the speaker a free treat." },
-          { text: "The speaker drops the cone and cries all afternoon." }
+          { text: "The speaker decides to save the coins.", correct: true },
+          { text: "The speaker stops to talk with the driver." },
+          { text: "The speaker runs after the truck." },
+          { text: "The speaker counts the coins twice." }
         ] },
-      partB: { prompt: "Which line from the poem best supports the answer to Part A?",
+      partB: { prompt: "Which line from the poem shows what you chose in Part A?",
         choices: [
           { text: "\"I'll save my coins from every day\"", correct: true },
           { text: "\"I count my coins. I count them twice.\"" },
@@ -2682,17 +2682,17 @@ PP.addLesson({
       clue: "To see how a poem changes, compare what happens in the last stanza with what happened before.",
       hints: [
         "To see how a poem changes, compare what happens in the last stanza with what happened before.",
-        "Compare stanza 3 with stanza 2. What is different?",
-        "Nobody shares the cone in this poem, so you can drop one choice. For Part B, the line you choose must match your Part A answer."
+        "Read what the speaker does in stanza 2. Then read what the speaker does in stanza 3.",
+        "The speaker does not talk with the driver in stanza 3, so one choice for Part A can go. For Part B, the line you choose must match your Part A answer."
       ],
       how: [
-        "In stanza 2, the speaker buys a cone and eats it fast.",
-        "In stanza 3, the truck rolls away, and the speaker sighs. The speaker will save money and wait for the truck tomorrow.",
-        "Part A: The cone is gone, and the speaker plans to buy another. Part B: \"I'll save my coins from every day\"",
-        "No friend is there, the truck does not stop again, and the speaker does not drop the cone."
+        "In stanza 2, the speaker counts coins, buys a cone and eats it fast.",
+        "In stanza 3, the truck rolls away, and the speaker sighs. The speaker decides to save coins every day and wait for the truck.",
+        "Part A: The speaker decides to save the coins. Part B: \"I'll save my coins from every day\"",
+        "The speaker does not talk with the driver or run after the truck, and counting the coins happens in stanza 2, not stanza 3."
       ],
-      misconception: "A common mix-up is choosing a line about buying the cone. Those lines are from stanza 2, before the change.",
-      why: "Part A: The cone is gone, and the speaker plans to buy another. Part B: \"I'll save my coins from every day\" In stanza 3, the truck drives away and the speaker plans to save money and wait for it. Nobody shares the cone, the truck does not stop again, and the cone is not dropped." },
+      misconception: "A common mix-up is choosing a line about the coins from stanza 2. Those lines come before the change.",
+      why: "Part A: The speaker decides to save the coins. Part B: \"I'll save my coins from every day\" In stanza 3, the truck drives away and the speaker plans to save money and wait for it. The speaker does not talk with the driver or run after the truck, and counting the coins happens in stanza 2." },
     { id: "SK-TT4a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C09"],
       stem: ["Here is stanza 2 of a poem called \"The Scooter Ride.\"", "I grip the bars and push off slow.", "The scooter picks up speed on the hill.", "Faster, faster, down I go,", "Past the fence and past the mill.", "Stop."],
@@ -2792,27 +2792,27 @@ PP.addLesson({
       why: "The answer is \"We bake a cake for Dad's birthday. / The frosting's bright and blue. / We sprinkle on a hundred dots / And sing a song for you.\" In the stanza above, only lines 2 and 4 rhyme (call and hall). In the cake stanza, blue and you rhyme in lines 2 and 4, and lines 1 and 3 do not. The other stanzas rhyme in different lines." },
     { id: "SK-TT4a-S14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C14"],
-      stem: ["Stanza 1:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 2:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around.", "Stanza 3:", "In March, the pear tree's branches bare.", "The buds are small and tight.", "A robin hops from twig to twig", "And sings in the cool light."],
+      stem: ["Stanza 1:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 2:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around.", "Stanza 3:", "In March, the pear tree's twigs are brown.", "The buds are small and tight.", "A robin hops from branch to branch", "And sings in the cool light."],
       prompt: "Complete the sentence about what the stanzas of \"The Pear Tree\" show. Choose the best answer for each blank.",
       text: "Stanza 1 {0}, and stanza 3 {1}.",
       slots: [
-        { options: ["shows the tree when it is full of fruit", "shows the tree after the leaves have fallen", "shows the tree when only small buds have grown"], answer: 0 },
-        { options: ["shows the tree when it is full of fruit", "shows the tree after the leaves have fallen", "shows the tree when only small buds have grown"], answer: 2 }
+        { options: ["shows the tree covered in snow", "shows the tree when it is full of fruit", "shows the tree when only small buds have grown"], answer: 1 },
+        { options: ["shows the tree when only small buds have grown", "shows the tree when it is full of fruit", "shows the tree covered in snow"], answer: 0 }
       ],
       clue: "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
       hints: [
         "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
-        "Read the first words of each stanza. They tell you when each part happens.",
-        "In stanza 3, no leaves lie on the ground, so one choice for the second blank can go. Check the other choices against the buds and the branches."
+        "Read the first words of each stanza. They tell you the month.",
+        "Stanza 3 gives the month and tells what is on the twigs. Match that to each choice."
       ],
       how: [
         "Stanza 1 is set in July. The leaves are thick, and the fruit hangs soft and sweet.",
         "Stanza 2 is set in November, when the leaves have fallen and cover the ground.",
-        "Stanza 3 is set in March. The branches are bare, but the buds are small and tight.",
-        "The answers are \"shows the tree when it is full of fruit\" and \"shows the tree when only small buds have grown.\""
+        "Stanza 3 is set in March. The twigs are brown, and the buds are small and tight.",
+        "The answers are \"shows the tree when it is full of fruit\" and \"shows the tree when only small buds have grown.\" Snow is not in the poem."
       ],
-      misconception: "A common mix-up is thinking the stanzas go in the order of the year. This poem starts in the middle of the cycle, so read the months.",
-      why: "The answers are shows the tree when it is full of fruit and shows the tree when only small buds have grown. Stanza 1 is July, with thick leaves and sweet fruit. Stanza 2 is November, with leaves on the ground. Stanza 3 is March, with bare branches and tiny buds." },
+      misconception: "A common mix-up is choosing the stanza that sounds most like winter. Match each stanza to its month and the details it gives.",
+      why: "The answers are shows the tree when it is full of fruit and shows the tree when only small buds have grown. Stanza 1 is July, with thick leaves and sweet fruit. Stanza 3 is March, with brown twigs and small, tight buds. The poem never mentions snow." },
     { id: "SK-TT4a-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C15"],
       stem: ["Stanza 1:", "The candle flame is tall and bright.", "It lights the whole dark room.", "I watch the dancing shadows tonight", "And push away the gloom.", "Stanza 2:", "The wax is low. The flame is small.", "The shadows creep in near.", "I watch them crawl along the wall.", "Stanza 3:", "One tiny spark, a final glow.", "Then still.", "Stanza 4:", "Dark."],
@@ -3019,9 +3019,6 @@ PP.addLesson({
       { term: "stanza", means: "a group of lines in a poem" },
       { term: "rhyme pattern", means: "which lines rhyme with each other" },
       { term: "rhyme", means: "words that end with the same sound, like bee and tree" },
-      { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
-      { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
-      { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" }
     ],
     examples: [
@@ -3045,8 +3042,8 @@ PP.addLesson({
       steps: [
         "Find the word you need to rhyme with. Line 1 ends with sand.",
         "Make a list of words that rhyme with sand: hand, land, band, grand.",
-        "Pick a word that fits a beach. Hand works, because you can hold a seashell in your hand.",
-        "Write a line that makes sense and ends with that word."
+        "Pick a word that fits a beach. Hand works, because you can hold a seashell in your hand. Then write a line that makes sense and ends with that word.",
+        "Action words and sound words, like splash or crash, make a line feel lively. Lines that are out of order can be put back by matching the end words that rhyme, and then thinking about what happens first."
       ],
       answer: "Line 2 could be \"I hold a seashell in my hand.\""
     },
@@ -3067,7 +3064,8 @@ PP.addLesson({
       steps: [
         "Find the pattern in stanza 1. The end words are Road, deep, coats, asleep. Deep and asleep rhyme, so lines 2 and 4 rhyme.",
         "Check stanza 2 the same way. The end words are holes, away, still, someday.",
-        "Away and someday rhyme, and they are lines 2 and 4."
+        "Away and someday rhyme, and they are lines 2 and 4.",
+        "If a stanza broke the pattern, you would revise its last line or add a new stanza with a new ending word that rhymes with its partner."
       ],
       answer: "Yes. In both stanzas, lines 2 and 4 rhyme, so stanza 2 keeps the pattern."
     }
@@ -3101,17 +3099,17 @@ PP.addLesson({
     /* B4-b4a passages begin */
     { id: "p3", title: "The Morning Bus", byline: "Malia's first draft", genre: "Student draft (poem)",
       lines: [
-        ["The bus rolls up at half past seven,", "Its yellow doors swing wide.", "I wave goodbye and climb the steps", "And find a seat inside."],
+        ["At half past seven, I stand and wait,", "My backpack by my feet.", "A yellow bus comes up the hill", "And stops across the street."],
         ["We rumble past the corner shop,", "The baker's bright red door,", "The tall old tree, the quiet park,", "The bridge we cross once more."],
         ["The windows fog, and someone sings", "A silly song we know.", "We bounce along the bumpy road", "Until we reach the school."],
         ["The driver smiles and says good morning,", "Her voice is warm and bright.", "We hop down at the front gate", "And wave until she's out of sight."]
       ] },
-    { id: "p4", title: "Swim Day", byline: "Caleb's first draft", genre: "Student draft (poem)",
+    { id: "p4", title: "Dance Class", byline: "Caleb's first draft", genre: "Student draft (poem)",
       lines: [
-        ["The whistle blows, we line up tall,", "Then jump right in from the pool wall.", "The water's cool against my toes,", "It sprays up high and wets my nose."],
-        ["I kick my feet and stretch out wide,", "I glide across from side to side.", "My coach calls out, \"You're doing great!\"", "I smile and swim to reach the gate."],
-        ["The sun is hot, the day is long,", "The lifeguard hums a happy song.", "We climb out, dripping, one by one,", "We wrap up in our towels and rest."],
-        ["My hair is wet, my feet are bare,", "I smell like soap and summer air.", "I close my eyes with one last smile,", "And rest my head and dream a while."]
+        ["The music starts, we stand up tall,", "We wait to hear the teacher call.", "She claps her hands, we all begin,", "We turn around, we twirl and spin."],
+        ["I kick my feet and stretch out wide,", "I glide across from side to side.", "My teacher calls out, \"That looks great!\"", "I smile and stand up proud and straight."],
+        ["The floor is warm, the day is long,", "Our teacher hums a happy song.", "We bow and wave, one by one,", "We put our shoes away and rest."],
+        ["My shoes are off, my socks are damp,", "I flop down by the evening lamp.", "I close my eyes with one last smile,", "And rest my head and dream a while."]
       ] }
     /* B4-b4a passages end */
   ],
@@ -3188,24 +3186,24 @@ PP.addLesson({
         prompt: "A poem about making soup rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Put the four lines in the order that makes the best stanza.",
         steps: [
           "Grandpa lights the stove at noon,",
-          "And hums a quiet, happy tune.",
+          "And hums a quiet, happy tune,",
           "Then I set the bowls out, one by one,",
-          "Because the soup is nearly done."
+          "And we sit down when the soup is done."
         ],
         clue: "In this pattern, lines that rhyme sit side by side. Listen to the last word of each line to find the pairs.",
         hints: [
           "In this pattern, lines that rhyme sit side by side. Listen to the last word of each line to find the pairs.",
           "Say each line out loud and notice which lines end with the same sound. Then think about what happens first and what happens next.",
-          "A line that begins with \"And\" joins on to the line before it, so it cannot be the first line of its pair."
+          "The soup cannot be done until the stove is lit. Use that to decide which pair comes first, then use the rhymes to finish."
         ],
         how: [
           "Find the pairs by their end words: noon and tune rhyme, and one and done rhyme.",
           "Each pair sits together, because lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
-          "Grandpa has to light the stove before he hums, and the bowls are set out while the soup is nearly done, so the stove pair comes first.",
-          "The order is: Grandpa lights the stove at noon, And hums a quiet happy tune, Then I set the bowls out one by one, Because the soup is nearly done."
+          "Grandpa has to light the stove before the soup can be done, so the stove pair comes first. A line that begins with And joins on to the line before it, so each And line comes second in its pair.",
+          "The order is: Grandpa lights the stove at noon, And hums a quiet happy tune, Then I set the bowls out one by one, And we sit down when the soup is done."
         ],
         misconception: "A common mix-up is putting lines in an order that tells the story but ignores the rhyme. Both the rhyme pairs and the story order must work.",
-        why: "The order is: Grandpa lights the stove at noon; And hums a quiet, happy tune; Then I set the bowls out, one by one; Because the soup is nearly done. Noon and tune rhyme, and one and done rhyme, and the story goes from lighting the stove to setting the bowls." },
+        why: "The order is: Grandpa lights the stove at noon; And hums a quiet, happy tune; Then I set the bowls out, one by one; And we sit down when the soup is done. Noon and tune rhyme, and one and done rhyme, and the story goes from lighting the stove to sitting down to eat." },
       { id: "SK-TT4b-C02", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: ["p1"],
         prompt: "Jaylen wants stanza 2, line 3 to sound louder and more exciting. Which line should replace \"The leaves go flying everywhere\" and still rhyme with line 4?",
         choices: [
@@ -3231,7 +3229,7 @@ PP.addLesson({
       { ref: "SK-TT4b-P5" },
       { id: "SK-TT4b-C04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [],
         prompt: "A poem about a lemonade stand rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the poem rhymes and makes sense.",
-        text: "I set my lemonade stand up, I pour the juice into each {0}. The line is long, the sun is hot, I sell them all, I sold the {1}.",
+        text: "I set my lemonade stand up, / I pour the juice into each {0}. / The line is long, the sun is hot, / I sell them fast, I sell the {1}.",
         slots: [
           { options: ["cup", "pup", "glass"], answer: 0 },
           { options: ["lot", "knot", "most"], answer: 0 }
@@ -3245,16 +3243,16 @@ PP.addLesson({
         how: [
           "Blank 1 must rhyme with up. Blank 2 must rhyme with hot.",
           "Blank 1: cup rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass makes sense but does not rhyme.",
-          "Blank 2: lot rhymes with hot, and \"I sold the lot\" means she sold all of them. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
+          "Blank 2: lot rhymes with hot, and \"I sell the lot\" means she sold all of them. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
           "So the answers are cup and lot."
         ],
         misconception: "A common mix-up is choosing the word that makes sense without checking the rhyme, or the reverse. Each blank needs both.",
-        why: "Blank 1 needs \"cup\": it rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass does not rhyme. Blank 2 needs \"lot\": it rhymes with hot, and \"I sold the lot\" means all of them. Knot rhymes but does not fit, and most does not rhyme." },
+        why: "Blank 1 needs \"cup\": it rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass does not rhyme. Blank 2 needs \"lot\": it rhymes with hot, and \"I sell the lot\" means all of them. Knot rhymes but does not fit, and most does not rhyme." },
       { ref: "SK-TT4b-P6" }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TT4b-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: ["p3"],
-        prompt: "Look at stanzas 1, 2 and 4 of \"The Morning Bus.\" Which sentence describes the rhyme pattern they use?",
+        prompt: "Look at stanza 1 of \"The Morning Bus.\" Which sentence describes the rhyme pattern it uses?",
         choices: [
           { text: "Lines 2 and 4 rhyme.", correct: true },
           { text: "Lines 1 and 2 rhyme, and lines 3 and 4 rhyme." },
@@ -3264,35 +3262,35 @@ PP.addLesson({
         clue: "A rhyme pattern tells which lines end with the same sound. Say the last word of each line out loud and listen for matches.",
         hints: [
           "A rhyme pattern tells which lines end with the same sound. Say the last word of each line out loud and listen for matches.",
-          "Choose stanza 1, and say the last word of all four lines. Then check that the same lines match in stanzas 2 and 4.",
-          "In stanza 1, the last words of lines 1 and 2 are seven and wide, which do not match. Look at the choices that are left."
+          "Say the last word of all four lines in stanza 1. Then decide which lines end with the same sound.",
+          "In stanza 1, the last words of lines 1 and 2 are wait and feet, which do not match. Look at the choices that are left."
         ],
         how: [
-          "Start with stanza 1 and list the last word of each line: seven, wide, steps, inside.",
-          "Wide and inside rhyme, and they are lines 2 and 4. Seven and steps do not rhyme with anything.",
-          "Stanzas 2 and 4 do the same: door and more, bright and sight.",
+          "List the last word of each line in stanza 1: wait, feet, hill, street.",
+          "Feet and street rhyme, and they are lines 2 and 4. Wait and hill do not rhyme with anything.",
+          "Lines 1 and 2 do not rhyme, and lines 1 and 3 do not rhyme.",
           "The answer is: Lines 2 and 4 rhyme."
         ],
         misconception: "A common mix-up is thinking every poem rhymes in pairs. Check which lines really match.",
-        why: "The answer is: Lines 2 and 4 rhyme. In stanza 1, wide and inside rhyme; in stanza 2, door and more rhyme; in stanza 4, bright and sight rhyme. Lines 1 and 2 do not rhyme, lines 1 and 3 do not rhyme, and the poem does have rhymes." },
+        why: "The answer is: Lines 2 and 4 rhyme. In stanza 1, feet and street rhyme, and they are lines 2 and 4. Wait and hill do not rhyme with anything, so lines 1 and 2 do not rhyme, lines 1 and 3 do not rhyme, and the stanza does have a rhyme." },
       { id: "SK-TT4b-C07", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: ["p3"], pick: 1,
         prompt: "In every stanza, line 4 should rhyme with line 2. In one stanza, line 4 does not rhyme with line 2. Choose that line 4.",
-        targets: ["p3:1:4", "p3:2:4", "p3:3:2", "p3:3:4", "p3:4:4"],
+        targets: ["p3:1:4", "p3:2:2", "p3:2:4", "p3:3:4", "p3:4:4"],
         answer: ["p3:3:4"],
         clue: "Compare the last word of line 2 with the last word of line 4 in each stanza. Do they sound alike?",
         hints: [
           "Compare the last word of line 2 with the last word of line 4 in each stanza. Do they sound alike?",
           "Check the stanzas one at a time, and say each pair of end words out loud.",
-          "In stanza 1, wide and inside rhyme, so that line 4 follows the pattern. Check the lines that are left."
+          "In stanza 1, feet and street rhyme, so that line 4 follows the pattern. Check the lines that are left."
         ],
         how: [
           "Check each stanza by saying the end words of lines 2 and 4.",
-          "Stanza 1: wide and inside rhyme. Stanza 2: door and more rhyme. Stanza 4: bright and sight rhyme.",
+          "Stanza 1: feet and street rhyme. Stanza 2: door and more rhyme. Stanza 4: bright and sight rhyme.",
           "Stanza 3: line 2 ends with know, and line 4 ends with school. Those do not rhyme.",
           "The answer is stanza 3, line 4: \"Until we reach the school.\""
         ],
         misconception: "A common mix-up is choosing line 2, because it is the other word in the pair. The question asks for line 4.",
-        why: "The answer is stanza 3, line 4: \"Until we reach the school.\" Line 2 ends with know, and school does not rhyme with it. In the other stanzas, wide and inside, door and more, and bright and sight rhyme." },
+        why: "The answer is stanza 3, line 4: \"Until we reach the school.\" Line 2 ends with know, and school does not rhyme with it. In the other stanzas, feet and street, door and more, and bright and sight rhyme." },
       { id: "SK-TT4b-C08", type: "match", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [],
         prompt: "Match each stanza to the rhyme pattern it uses.",
         cols: [
@@ -3309,7 +3307,7 @@ PP.addLesson({
         hints: [
           "To find a rhyme pattern, say the last word of each line and listen for matches. Then write down which lines matched.",
           "For each stanza, list the four end words. Then compare line 1 with line 2, line 3 with line 4, and line 2 with line 4.",
-          "In the lunch box stanza, bag and plum have nothing that matches them. Match that row first, then work out the other two."
+          "Say the end words of lines 2 and 4 in each stanza. Then decide which pattern each stanza fits."
         ],
         how: [
           "The cat stanza ends with mat, hat, door, more. Mat and hat rhyme, and door and more rhyme, so lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
@@ -3321,19 +3319,19 @@ PP.addLesson({
         why: "The cat stanza rhymes in pairs (mat and hat, door and more). The lunch box stanza rhymes in lines 2 and 4 (pear and chair). The clock stanza has no rhymes (wall, desk, wide, today)." },
       { id: "SK-TT4b-C09", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: ["p3"], pick: 1,
         prompt: "The poet wants readers to hear the bus. Which line has a word that sounds like the noise it names? Choose the line.",
-        targets: ["p3:1:2", "p3:2:1", "p3:2:3", "p3:3:3", "p3:4:2"],
+        targets: ["p3:1:3", "p3:2:1", "p3:2:3", "p3:3:3", "p3:4:2"],
         answer: ["p3:2:1"],
         clue: "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
         hints: [
           "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
-          "Read the lines out loud. Listen for a word that makes the noise of something heavy moving.",
-          "\"Swing wide\" tells about a motion, not a noise. Look at the lines that are left."
+          "Read each line aloud and listen for a word that makes its own noise.",
+          "\"Comes up the hill\" tells about a motion, not a noise. Look at the lines that are left."
         ],
         how: [
           "A sound word makes the sound of the thing it names.",
           "In stanza 2, \"rumble\" sounds like the low noise a heavy bus makes as it rolls along.",
           "The answer is stanza 2, line 1: \"We rumble past the corner shop,\"",
-          "\"Swing wide\" is an action, \"quiet park\" is a quiet place, \"bumpy road\" tells how the road feels, and \"warm and bright\" tells about a voice."
+          "\"Comes up the hill\" is an action, \"quiet park\" is a quiet place, \"bumpy road\" tells how the road feels, and \"warm and bright\" tells about a voice."
         ],
         misconception: "A common mix-up is choosing any action word. A sound word sounds like the noise it names.",
         why: "The answer is stanza 2, line 1, \"We rumble past the corner shop,\" because rumble sounds like the noise of a bus. The other lines tell about actions, places or how things look or feel." },
@@ -3363,50 +3361,50 @@ PP.addLesson({
     ] },
     { title: "Set 3", items: [
       { id: "SK-TT4b-C11", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: ["p4"], pick: 2,
-        prompt: "Which TWO lines in \"Swim Day\" use action words that help the reader picture someone swimming?",
+        prompt: "Which TWO lines in \"Dance Class\" use action words that help the reader picture someone dancing?",
         choices: [
           { text: "\"I kick my feet and stretch out wide,\"", correct: true },
           { text: "\"I glide across from side to side.\"", correct: true },
-          { text: "\"The sun is hot, the day is long,\"" },
-          { text: "\"The lifeguard hums a happy song.\"" },
-          { text: "\"My hair is wet, my feet are bare,\"" }
+          { text: "\"The floor is warm, the day is long,\"" },
+          { text: "\"Our teacher hums a happy song.\"" },
+          { text: "\"My shoes are off, my socks are damp,\"" }
         ],
-        clue: "Action words tell what someone does, like leap or reach. Look for lines that show someone moving in the water.",
+        clue: "Action words tell what someone does, like leap or reach. Look for lines that show someone moving on the dance floor.",
         hints: [
-          "Action words tell what someone does, like leap or reach. Look for lines that show someone moving in the water.",
-          "Read the lines in stanzas 2 to 4 one at a time. Ask whether each line shows a swimmer moving. Choose two.",
-          "\"The sun is hot\" tells about the weather, not about someone swimming. Look at the choices that are left."
+          "Action words tell what someone does, like leap or reach. Look for lines that show someone moving on the dance floor.",
+          "Read the lines in stanzas 2 to 4 one at a time. Ask whether each line shows a dancer moving. Choose two.",
+          "\"The floor is warm\" tells about the room, not about someone dancing. Look at the choices that are left."
         ],
         how: [
-          "Look for words that show a swimmer moving in the water.",
-          "Kick and stretch show the swimmer's arms and legs, and glide shows how the swimmer moves across the pool.",
+          "Look for words that show a dancer moving.",
+          "Kick and stretch show the dancer's feet and arms, and glide shows how the dancer moves across the floor.",
           "The answers are \"I kick my feet and stretch out wide,\" and \"I glide across from side to side.\"",
-          "The sun line is about weather, the lifeguard line is about someone who is humming, and the wet hair line tells how the swimmer looks afterward."
+          "The floor line is about the room, the teacher line is about someone who is humming, and the socks line tells how the dancer looks afterward."
         ],
-        misconception: "A common mix-up is choosing a line just because it is about the pool day. The question asks for action words that show swimming.",
-        why: "The answers are \"I kick my feet and stretch out wide,\" and \"I glide across from side to side.\" Kick, stretch and glide are action words that show a swimmer moving. The other lines tell about the weather, the lifeguard's humming or how the swimmer looks." },
+        misconception: "A common mix-up is choosing a line just because it is about the pool day. The question asks for action words that show dancing.",
+        why: "The answers are \"I kick my feet and stretch out wide,\" and \"I glide across from side to side.\" Kick, stretch and glide are action words that show a dancer moving. The other lines tell about the room, the teacher's humming or how the dancer looks." },
       { id: "SK-TT4b-C12", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.b"], passages: ["p4"],
-        prompt: "In stanza 3 of \"Swim Day,\" lines 3 and 4 do not rhyme. Which pair of lines should replace them so the stanza rhymes in pairs and still feels calm after swimming?",
+        prompt: "In stanza 3 of \"Dance Class,\" lines 3 and 4 do not rhyme. Which pair of lines should replace them so the stanza rhymes in pairs and fits the end of class?",
         choices: [
-          { text: "We climb out, dripping, one by one, / And wrap up warm in towels, all done.", correct: true },
-          { text: "We climb out, dripping, one by one, / We wrap up in our towels and rest." },
-          { text: "We climb out, dripping, one by one, / And jump back in to have more fun." },
-          { text: "We climb out, dripping, one by one, / And throw our towels on the floor." }
+          { text: "We bow and wave, one by one, / And pack our bags, all done.", correct: true },
+          { text: "We bow and wave, one by one, / We put our shoes away and rest." },
+          { text: "We bow and wave, one by one, / And start another dance for fun." },
+          { text: "We bow and wave, one by one, / And toss our shoes across the floor." }
         ],
         clue: "A good revision has to rhyme in the right place AND keep the feeling the poem needs. Check both for each choice.",
         hints: [
           "A good revision has to rhyme in the right place AND keep the feeling the poem needs. Check both for each choice.",
-          "Say the last words of the two new lines in each choice out loud, then decide how each pair of lines would feel in a poem about the end of a swim day.",
+          "Say the last words of the two new lines in each choice out loud, then decide how each pair of lines would fit the end of a dance class.",
           "One choice keeps the old line 4, which is the line that does not rhyme. Look at the choices that are left."
         ],
         how: [
-          "The pattern is that lines 3 and 4 rhyme, and stanza 3 comes at the calm end of the day.",
-          "\"One by one\" and \"all done\" rhyme, and wrapping up warm in towels fits a calm end.",
-          "The answer is: We climb out, dripping, one by one, / And wrap up warm in towels, all done.",
-          "The pair that ends \"towels and rest\" keeps the old line that does not rhyme, \"more fun\" rhymes but starts the swimming again, and \"on the floor\" does not rhyme with one."
+          "The pattern is that lines 3 and 4 rhyme, and stanza 3 comes at the end of class.",
+          "\"One by one\" and \"all done\" rhyme, and packing bags fits the end of class.",
+          "The answer is: We bow and wave, one by one, / And pack our bags, all done.",
+          "The pair that ends \"shoes away and rest\" keeps the old line that does not rhyme, \"for fun\" rhymes but starts another dance, and \"across the floor\" does not rhyme with one."
         ],
-        misconception: "A common mix-up is picking a pair that rhymes without checking the feeling. The pair must rhyme AND fit the calm end of the day.",
-        why: "The answer is: We climb out, dripping, one by one, / And wrap up warm in towels, all done. One and done rhyme, and wrapping up warm is calm. One choice keeps the line that does not rhyme, one rhymes but starts the fun again, and one does not rhyme." },
+        misconception: "A common mix-up is picking a pair that rhymes without checking that it fits. The pair must rhyme AND fit the end of class.",
+        why: "The answer is: We bow and wave, one by one, / And pack our bags, all done. One and done rhyme, and packing bags fits the end of class. One choice keeps the line that does not rhyme, one rhymes but starts another dance, and one does not rhyme." },
       { id: "SK-TT4b-C13", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.b"], passages: ["p4"],
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Which feeling does the poet most want the reader to have at the end of \"Swim Day\"?",
@@ -3419,27 +3417,27 @@ PP.addLesson({
         partB: { prompt: "Which line from the poem best shows that feeling?",
           choices: [
             { text: "\"I close my eyes with one last smile,\"", correct: true },
-            { text: "\"The whistle blows, we line up tall,\"" },
+            { text: "\"The music starts, we stand up tall,\"" },
             { text: "\"I kick my feet and stretch out wide,\"" },
-            { text: "\"It sprays up high and wets my nose.\"" }
+            { text: "\"My shoes are off, my socks are damp,\"" }
           ] },
         clue: "The feeling of a poem comes from its words. Pay attention to what the speaker does and sees at the very end.",
         hints: [
           "The feeling of a poem comes from its words. Pay attention to what the speaker does and sees at the very end.",
           "Reread stanza 4 and say what the speaker is doing. For Part B, choose a line that matches the feeling you chose.",
-          "The stanza about the whistle is about getting ready to start, not about the end. Look at the choices that are left in Part B, and make them match Part A."
+          "The first stanza is about getting ready to start, not about the end. Look at the choices that are left in Part B, and make them match Part A."
         ],
         how: [
-          "The ending is in stanza 4, where the speaker has dry hair, smells like soap, closes her eyes and rests.",
+          "The ending is in stanza 4, where the speaker takes off their shoes, flops down by a lamp, closes their eyes and rests.",
           "Those words are quiet and slow, so the feeling is calm and sleepy.",
           "Part A: calm and sleepy. Part B: \"I close my eyes with one last smile,\"",
-          "The whistle line is the start of the day, \"kick my feet\" is a splashy action, and \"sprays up high\" is a lively line from the start."
+          "The music line is the start of the class, \"kick my feet\" is a lively action, and the damp socks line only tells how the dancer looks."
         ],
         misconception: "A common mix-up is choosing the feeling of the whole poem instead of the ending. Part A asks about the end.",
-        why: "Part A: calm and sleepy. Part B: \"I close my eyes with one last smile,\" Stanza 4 has the speaker resting and dreaming, which is quiet and slow. The other lines are from the lively start of the poem." },
+        why: "Part A: calm and sleepy. Part B: \"I close my eyes with one last smile,\" Stanza 4 has the speaker resting and dreaming, which is quiet and slow. The other lines are from the lively start of the poem or only tell how the dancer looks." },
       { id: "SK-TT4b-C14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: ["p4"],
-        prompt: "Caleb wants to add a fifth stanza to \"Swim Day.\" Lines 1 and 2 rhyme. Choose the best word for each blank so the lines rhyme and make sense.",
-        text: "We ride home with the windows {0}, The sun is setting over {1}.",
+        prompt: "Caleb wants to add a fifth stanza to \"Dance Class.\" Lines 1 and 2 rhyme. Choose the best word for each blank so the lines rhyme and make sense.",
+        text: "We ride home with the windows {0}, / The sun is setting over {1}.",
         slots: [
           { options: ["down", "frown", "up"], answer: 0 },
           { options: ["town", "gown", "sky"], answer: 0 }
@@ -3690,7 +3688,7 @@ PP.addLesson({
       hints: [
         "To find a rhyme pattern, say the last word of each line and listen for matches. Then write down which lines matched.",
         "For each stanza, list the four end words. Then compare line 1 with line 2, line 3 with line 4, and line 2 with line 4.",
-        "In the teddy bear stanza, bed and one have nothing that matches them. Match that row first, then work out the other two."
+        "Say the end words of lines 2 and 4 in each stanza. Then decide which pattern each stanza fits."
       ],
       how: [
         "The snail stanza ends with wall, bit, brown, behind. None of those words rhyme.",
@@ -3717,7 +3715,7 @@ PP.addLesson({
       clue: "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
       hints: [
         "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
-        "Read the four lines out loud. Listen for a word that makes a high, steady noise.",
+        "Read each line aloud and listen for a word that makes its own noise.",
         "\"Soft and brown\" tells how something looks and feels, not a noise. Look at the lines that are left."
       ],
       how: [
@@ -3739,7 +3737,7 @@ PP.addLesson({
       choices: [
         { text: "My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found.", correct: true },
         { text: "My sock is old and wearing thin, / The hole is big and wide. / I put it in the drawer to rest, / And leave it there to hide." },
-        { text: "My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / He waves it through the town." },
+        { text: "My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / He waves it past the barn." },
         { text: "My sock is old and wearing thin, / The hole is big and wide. / I put it in the drawer to rest, / And never wear it again." }
       ],
       clue: "When you write for an audience, you choose words that give the listeners the feeling you want. The stanza must also keep the same rhyme pattern.",
@@ -3752,10 +3750,10 @@ PP.addLesson({
         "The poem's pattern is that lines 2 and 4 rhyme, and the new stanza should make classmates laugh.",
         "The dog stanza has lines 2 and 4 that rhyme (around and found), and a dog parading with a sock like a flag is funny.",
         "The answer is: My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found.",
-        "The old sock stanzas feel dull, not funny. The other dog stanza is funny, but town does not rhyme with around."
+        "The old sock stanzas feel dull, not funny. The other dog stanza is funny, but barn does not rhyme with around."
       ],
       misconception: "A common mix-up is choosing the stanza with the right feeling without checking the rhyme. It needs both.",
-      why: "The answer is: My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found. Around and found rhyme in lines 2 and 4, and the dog parading with a sock is funny. The old sock stanzas feel dull, and the other dog stanza ends with town, which does not rhyme with around." },
+      why: "The answer is: My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found. Around and found rhyme in lines 2 and 4, and the dog parading with a sock is funny. The old sock stanzas feel dull, and the other dog stanza ends with barn, which does not rhyme with around." },
     { id: "SK-TT4b-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [], pick: 2, like: ["SK-TT4b-C11"],
       stem: [
         "The dog jumps up and dashes out,",
@@ -3875,7 +3873,7 @@ PP.addLesson({
         { text: "We feed the chickens corn and seeds, / They flap and peck and cheer. / My cousins laugh, I laugh out loud, / The happiest day all year.",
           correct: true },
         { text: "The barn is old, the roof has holes, / The wind blows cold and thin. / I stand alone out in the field, / And wish I could go in." },
-        { text: "We pick red apples from the trees, / Each one a juicy prize. / We fill our baskets to the top, / And eat them with a spoon." },
+        { text: "We pick red apples from the trees, / Each one a juicy prize. / We fill our baskets to the top, / And hope it will not rain." },
         { text: "The goats come running up to me, / They jump and play with glee. / We feed the chickens corn and seeds, / And do some happy deeds." }
       ],
       clue: "To keep a poem's pattern, find which lines rhyme in the first stanza. To keep its feeling, read the words each stanza uses.",

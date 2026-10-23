@@ -863,8 +863,8 @@ PP.addLesson({
       why: "The answers are \"Each story begins with a word that copies a sound.\" and \"Each story ends with the main character's own words.\" Both open with a sound word, and both end with the child speaking. Only Wren gets help fixing something, neither begins with a question, and only Corbin is at school." },
     { id: "SK-TT1a-S15", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [], pick: 2,
       like: ["SK-TT1a-C15"],
-      stem: ["A writer is working on a story about Jonah at a train station on a busy morning. The writer wants the reader to see how crowded the station is, not just be told."],
-      prompt: "Which TWO sentences would best show that the station is crowded?",
+      stem: ["Jonah wrote a story about a train station on a busy morning. His teacher says, \"I cannot picture the crowd yet.\" Jonah wants to add two sentences with details a reader can picture."],
+      prompt: "Which TWO sentences would help the reader picture the crowd?",
       choices: [
         { text: "People pressed together on the platform, and Jonah had to turn sideways to squeeze past.", correct: true },
         { text: "A line of travelers reached from the ticket window all the way to the front doors.", correct: true },
@@ -872,10 +872,10 @@ PP.addLesson({
         { text: "The big clock on the wall showed ten past eight." },
         { text: "Jonah's grandmother was waiting by the ticket window." }
       ],
-      clue: "Writers show what a place is like with details you can picture, instead of naming it. Look for sentences where you can see the crowd without being told.",
+      clue: "Details you can picture help a reader see a place. Look for sentences with something a reader could see happening in the crowd.",
       hints: [
-        "Writers show what a place is like with details you can picture, instead of naming it. Look for sentences where you can see the crowd without being told.",
-        "Picture each sentence. Can you see what is happening in the station, or are you only told how it is? Choose two.",
+        "Details you can picture help a reader see a place. Look for sentences with something a reader could see happening in the crowd.",
+        "Picture each sentence. Does it show something happening in the station, or does it only say how the station is? Choose two.",
         "The clock tells the time, but it shows nothing about the crowd. Check each other sentence the same way."
       ],
       how: [
@@ -3400,7 +3400,7 @@ PP.addLesson({
       ] },
     { id: "p11", title: "The Lantern Walk", genre: "Literary text",
       paragraphs: [
-        ["On the night of the Mid-Autumn Festival, Linh carried a red paper lantern shaped like a star down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
+        ["On the night of the Mid-Autumn Festival, Linh carried a paper lantern shaped like a star down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
         ["\"Why do we carry lanterns?\" Linh asked her grandfather."],
         ["\"The lanterns are for the moon,\" Grandfather said.", "\"Tonight the moon is at its brightest, so we carry our small lights to walk beside it.\""],
         ["Linh looked up.", "A huge, glowing moon hung over the rooftops.", "She lifted her lantern high so it would shine as bright as the sky."],
@@ -3426,7 +3426,7 @@ PP.addLesson({
         ["Pieter lived in a small town in the Netherlands, where much of the land lies lower than the sea.", "A long, grassy wall called a dike kept the water out."],
         ["His house stood on solid ground, and it never moved.", "Behind the house, a canal ran between rows of green fields."],
         ["Each morning, Pieter rode his bike along a path by the canal to school.", "Windmills turned slowly in the distance.", "Sheep nibbled the grass along the way."],
-        ["His father checked the dike every week to be sure it was strong.", "\"Our home stays dry because we take care of the wall,\" Pieter liked to say."]
+        ["His father often checked the dike to be sure it was strong.", "\"Our home stays dry because we take care of the wall,\" Pieter liked to say."]
       ] }
   ],
   practice: [
@@ -4010,8 +4010,8 @@ PP.addLesson({
       rows: [
         { text: "A child and a grandparent make decorations together.", answer: 2 },
         { text: "The decorations are made of straw.", answer: 1 },
-        { text: "A photo of a family member is part of the holiday.", answer: 0 },
-        { text: "The finished decorations are put on display.", answer: 2 }
+        { text: "A photo of a family member is part of the activity.", answer: 0 },
+        { text: "The finished decorations end up in the family's home.", answer: 2 }
       ],
       clue: "To sort details, check each one against Story 1, then against Story 2. If it is true for both, choose both.",
       hints: [
@@ -4023,10 +4023,10 @@ PP.addLesson({
         "A child and a grandparent make decorations in both stories, so that is true for both.",
         "Only Elsa and her grandmother braid straw, so that detail belongs to Story 2.",
         "Only Dani's story mentions a photo, so that belongs to Story 1.",
-        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family puts the finished decorations on display, so that is both."
+        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family keeps the finished decorations in the home, so that is both."
       ],
       misconception: "A common mix-up is picking one story when the detail fits both. Check each detail against both stories.",
-      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family puts the finished decorations on display, so that is true for both." },
+      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family keeps the finished decorations in the home, so that is true for both." },
     { id: "SK-TT1d-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C09"],
       stem: ["Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, small orange fruit hung from the branches.", "Story 2: In a town in Italy, Luca set bread dough by the warm stove. He wanted to bake it right away, but he waited for it to rise. The loaf came out light and tall."],

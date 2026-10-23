@@ -148,3 +148,35 @@ Similar items over 0.21 on that measure: none in 3.T.C.1.c (range 0.10 to 0.19).
 - Hand recount after clue and hints 1-3: P4 3; P5 3; C03 3; C04 4; C05 5; C06 4; C07 4; C08 4; C09 6 orders; C10 5; C11 3; C12 4; C13 3; C14 3 and 4; C15 5.
 
 Needs blind re-solve: C1c S15, C15, C04, C06, C10, S10, C12; RA1c S03, S04, S13, S14, C08, S01.
+
+## Fixes after the third review (both lessons)
+
+Gates: check-content PASS (0 failures; no warnings for either lesson), check-writing 0 failures, check-instructional-copy 28 passed, readability: every passage in both lessons is over 100 words and FK 4.0 or lower (new p9 3.3, p10 3.2).
+
+Topic duplicates (lead ruling: duplicates are MUST)
+- 3.T.C.1.c: the core no longer uses the peanut passage. The refs to P4 and P5 are gone. C01 is a new picture-for-slide item (kaleidoscope Slide 4) and C02 a new sound item (accordion slide). Peanut text, hints and how now appear only in the legacy passage p1, practice P1-P5 and their addons, so Practice Together is P1-P5. No core or similar item mentions peanuts or pegs (grep 0). The peg and flower claims in the legacy text were checked: Utah State University Extension, https://extension.usu.edu/yardandgarden/research/peanuts-in-the-garden ("a structure called a peg that forms the pod extends underneath the soil surface"; pods mature underground).
+- 3.T.RA.1.c: the core no longer uses monarchs or milkweed. P4 and P5 refs are gone; set 1 is five new items on a new pair, p9 "An Axolotl Never Leaves the Water" and p10 "Axolotls Can Regrow Body Parts" (grep: axolotl appears nowhere else). Monarch and milkweed text remains only in p1/p2, practice P1-P5 and their addons (Together). Core and similar mention neither (grep 0). S01 now `like` C01 and S02 `like` C02.
+- Axolotl facts verified: https://www.conservation.org/axolotl-facts (salamander that keeps its frilly gills, canals and lake near Mexico City, eats worms and insects, regrows limbs and parts of heart and brain, critically endangered, fewer than 1,000 in the wild) and https://animals.sandiegozoo.org/node/546 (feathery gills, also lungs, hides by day and hunts at night, suction feeding).
+- Accordion: air moving over reeds makes the sound, with the bellows pulled open and pushed closed (standard; not separately fetched).
+- Platypus (S07 rebuilt): front webbed feet paddle, hind feet steer like rudders, https://australian.museum/learn/animals/mammals/platypus/. The old "fur keeps water out" key is gone.
+
+3.T.C.1.c changes
+- S15 hint 3 quoted a choice that no longer existed. S15 is rebuilt as a real `like` for C15: teapot parts defined by look in the stem, the slide describing jobs in other words, choose the spout and the handle. It no longer repeats the label-form skill of S04 and S09.
+- C08 is now a choose-two caption item (2 points), so it no longer twins C03; C13 hint 3 no longer states the key's criterion; S03, S08, S14 decoys now reuse the stem's nouns (puddles, blanket, walkers); S13's decoys now contain helpers, chairs and Thursday.
+- Key lengths varied: the key is the longest option in 4 of 10 core mc/ms items (was 7 of 10).
+- Learn It: Lena's example now includes the timing of a sign; Malik's example now includes a too-general label and a matching sound.
+
+3.T.RA.1.c changes
+- C07 has a flying decoy (what a dragonfly catches), so more than the two keys stay live after hints 2 and 3. S07's second key now answers swimming (back feet steer). S04's second key is a space agency's kids' page about weather satellites.
+- P3 hints no longer describe the key. Key lengths are mixed (the key is longest in 4 of 8 core mc/ms items).
+- Learn It / teach: the teach text now names when and if, the closing and opening sentence of a summary, and checking the date and relevance of a source.
+
+Jaccard for every similar item, measured against its core item by four numbers (word set of words over two letters, word set of all words, each with and without the core passage text). Over 0.21 now: none in 3.T.C.1.c (highest S15 0.218 before rewording, now below 0.21) and none in 3.T.RA.1.c (S11 and S12 reworded, highest now under 0.21). Shared options: 0 for all 30.
+
+Live choices after clue and hints 1-3 (hand recount):
+- C.1.c: C01 3; C02 3; C03 3; C04 3; C05 4; C06 3; C07 2 and 3; C08 4 (choose two of five, one removed); C09 2 per row; C10 9; C11 3; C12 4; C13 3; C14 3; C15 4.
+- RA.1.c: C01 3; C02 3; C03 3; C04 4; C05 5; C06 4; C07 4; C08 4; C09 6 orders; C10 5; C11 3; C12 4; C13 3; C14 3 and 4; C15 5.
+
+Not done: item-text reading level above about 4.5 on several long stems (only C14 was simplified); a separate Learn It example for a two-blank linking item.
+
+Needs blind re-solve: C.1.c C01, C02, C08 (now choose two), S15, S12, S13; RA.1.c C01 to C05 (all new, axolotl), C07, S07, S04.

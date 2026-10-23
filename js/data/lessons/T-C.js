@@ -2195,7 +2195,7 @@ PP.addLesson({
         stem: ["Tessa's Slide 4 is called \"Mirrors Make Patterns.\" It says: Inside a kaleidoscope, mirrors reflect the glass pieces again and again. A few bits of glass can look like a big pattern."],
         prompt: "Which picture would fit Slide 4 best?",
         choices: [
-          { text: "a few glass bits beside two mirrors, with the same bits shown again and again as a pattern", correct: true },
+          { text: "a few glass bits beside two mirrors, shown again and again as a pattern", correct: true },
           { text: "a glass jar full of colored pieces of glass sitting on a shelf in a store" },
           { text: "a girl turning a kaleidoscope with the tube held up to her eye" },
           { text: "a mirror hanging on a wall in a hallway next to a coat rack" }
@@ -2209,11 +2209,11 @@ PP.addLesson({
         how: [
           "The slide is called \"Mirrors Make Patterns,\" and it says the mirrors reflect the glass pieces again and again.",
           "A good picture lets the reader see that: a few glass bits and mirrors, with the bits shown again and again as a pattern.",
-          "The answer is \"a few glass bits beside two mirrors, with the same bits shown again and again as a pattern.\"",
+          "The answer is \"a few glass bits beside two mirrors, shown again and again as a pattern.\"",
           "The jar shows glass but no mirrors, the girl turning the tube is from a different slide, and the hallway mirror has no glass pieces."
         ],
         misconception: "A common mix-up is picking a picture of the same toy that does not show what the slide says.",
-        why: "The answer is \"a few glass bits beside two mirrors, with the same bits shown again and again as a pattern.\" It shows what the slide tells about. The jar, the girl and the hallway mirror are about kaleidoscopes or mirrors, but none shows the patterns the mirrors make." },
+        why: "The answer is \"a few glass bits beside two mirrors, shown again and again as a pattern.\" It shows what the slide tells about. The jar, the girl and the hallway mirror are about kaleidoscopes or mirrors, but none shows the patterns the mirrors make." },
       { id: "SK-TC1c-C02", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
         stem: ["Ben's slide is called \"The Accordion Breathes.\" It says: A player pulls the accordion open and pushes it closed. Air moves over small metal strips inside, and that makes the sound."],
         prompt: "Which sound should Ben play with this slide?",
@@ -2360,7 +2360,7 @@ PP.addLesson({
         choices: [
           { text: "A girl blows on her pinwheel to make it spin.", correct: true },
           { text: "The paper blades blur as a girl in a green shirt blows on them.", correct: true },
-          { text: "Come make a pinwheel at the craft table on Saturday." },
+          { text: "Come make a pinwheel at the craft table in the town park on Saturday morning." },
           { text: "The wind pushes on the paper and makes it turn." },
           { text: "Pinwheels are the prettiest toys in the whole town." }
         ],
@@ -2449,7 +2449,7 @@ PP.addLesson({
         choices: [
           { text: "children about seven years old kicking a red ball and laughing", correct: true },
           { text: "a group of smiling children in matching shirts standing with their arms around each other", correct: true },
-          { text: "older children in team jackets playing a serious game on a big field" },
+          { text: "older children in team jackets playing a serious game on a big field at a school in the next town" },
           { text: "a close-up of a kickball rolling away across an empty field" },
           { text: "an adult frowning at a long list on a clipboard" }
         ],
@@ -2472,8 +2472,8 @@ PP.addLesson({
         prompt: "It is Wednesday, and the sale is on Saturday. Which sign should Mr. Hale hang by the road, and why?",
         choices: [
           { text: "Sign A, because its picture and words invite neighbors to come and buy a plant", correct: true },
-          { text: "Sign B, because its picture shows happy students" },
-          { text: "Sign B, because its words tell how much money the class raised" },
+          { text: "Sign B, because its picture shows smiling students standing beside a bus" },
+          { text: "Sign B, because its words tell how much money the class raised for the bus" },
           { text: "Either sign, because both tell neighbors about the class's project" }
         ],
         clue: "Purpose is what the writer wants a sign to do. Decide what Mr. Hale wants neighbors to do this week.",
@@ -3900,7 +3900,7 @@ PP.addLesson({
       why: "The answer is \"Pilar may be too shy to talk to anyone yet.\" The narrator says she thinks she is too good, but her tight grip and pink ears are signs of shyness. Pilar did not wave, and nothing says she is better than others or does not want lunch." },
     { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
       like: ["SK-TC2a-C15"],
-      stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the space room was amazing. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was the best part. Next time I will bring a snack."],
+      stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the space room was the best part of the whole day. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was my favorite thing. Next time I will bring a snack."],
       prompt: "Mia and Theo each wrote a note about the same trip. Choose the TWO sentences that show something they both think.",
       choices: [
         { text: "Both of them found the long line hard to wait in.", correct: true },
@@ -3917,7 +3917,7 @@ PP.addLesson({
       ],
       how: [
         "Mia says the line was long and her feet hurt. Theo says he got tired waiting in line. Both found the wait hard.",
-        "Mia calls the space room amazing, and Theo calls it the best part. Both liked it best.",
+        "Mia calls the space room the best part of the whole day, and Theo calls it his favorite thing. Both liked it best.",
         "The answers are \"Both of them found the long line hard to wait in.\" and \"Both of them liked the space room best.\"",
         "Only Theo plans to bring a snack, Mia does not say she liked the line, and the sore feet belong to Mia, not Theo."
       ],
