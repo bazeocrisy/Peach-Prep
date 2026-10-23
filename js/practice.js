@@ -15,7 +15,7 @@
    Status is DERIVED from w, h, x and ok, never stored as a label. w, h and x only ever go up,
    so a later right answer never erases the help that came before it.
    Nothing here writes pp.progress.v1, and nothing here can record a pass.
-   Rendering never writes: only a child's action calls update().
+   Rendering never writes, and nothing is written on page load: only a child's action calls update().
    Storage failure (blocked or full): the state stays in memory for this page visit and the
    notice says so honestly. A damaged stored value is read as empty and left untouched until
    the first save that follows a child's action. */
@@ -69,12 +69,19 @@
       if (isObj(v)) Object.keys(v).forEach(k => { if (k !== "l" && !BAD(k)) data[k] = v[k]; });
       data.v = 1;
     }
-    /* a read can succeed while writes fail (private mode, quota): test once, like path.js */
-    try { window.localStorage.setItem("pp.practice.storage-check", "1"); window.localStorage.removeItem("pp.practice.storage-check"); }
-    catch (e) { available = false; }
+    /* ENG-02: nothing is written on page load. A read can succeed while writes fail (private mode,
+       quota), so until practice's own first save the answer comes from path.js's existing probe
+       (pp.path.storage-check, the one key a fresh load may write); after that, from the save itself. */
   })();
+  let saved = false;
+  function writable() {
+    if (!available) return false;
+    if (saved) return true;
+    return !(window.PP_PATH && window.PP_PATH.storageOK && !window.PP_PATH.storageOK());
+  }
 
   function save() {
+    saved = true;
     try { window.localStorage.setItem(KEY, JSON.stringify(data)); available = true; unsaved = false; damaged = false; partial = false; }
     catch (e) { available = false; unsaved = true; }
     document.querySelectorAll(".practice-storage").forEach(syncNotice);
@@ -84,7 +91,15 @@
 
   /* ---------- reading (never writes) ---------- */
   const lesson = k => data.l[k] || null;
-  function rec(k, id, similar) { const L = lesson(k); return L ? (L[similar ? "s" : "i"][id] || null) : null; }
+  /* ENG-06: a signature of each core and similar question (prompt, choices, key, passages ...), set by
+     skills.js at registration. A record saved for a different version of the question is "stale": it is
+     read as not started, and its facts are kept on this device (as prev) when the child next saves. */
+  const sigs = Object.create(null);
+  function setSigs(k, map) { sigs[k] = map; }
+  const stale = (k, id, r) => !!(r && typeof r.sig === "string" && sigs[k] && sigs[k][id] && r.sig !== sigs[k][id]);
+  function raw(k, id, similar) { const L = lesson(k); return L ? (L[similar ? "s" : "i"][id] || null) : null; }
+  function rec(k, id, similar) { const r = raw(k, id, similar); return r && !stale(k, id, r) ? r : null; }
+  function changed(k) { const L = lesson(k); if (!L) return 0; return ["i", "s"].reduce((n, f) => n + Object.keys(L[f]).filter(id => stale(k, id, L[f][id])).length, 0); }
   const touched = r => !!r && (r.ok || r.x || r.w > 0 || r.h > 0 || r.howAfter || (r.cr && (r.cr.done || !!r.cr.text)) || r.r !== undefined);
   /* one definition, used everywhere (§2.2.3) */
   const STATUS = {
@@ -134,7 +149,12 @@
     if (!data.l[k]) data.l[k] = cleanLesson({});
     const L = data.l[k];
     const bag = L[similar ? "s" : "i"];
+    if (bag[id] && stale(k, id, bag[id])) {
+      const old = Object.assign({}, bag[id]); delete old.prev;
+      bag[id] = cleanRec({ w: 0, h: 0, prev: old }, similar);
+    }
     const r = bag[id] || (bag[id] = cleanRec({ w: 0, h: 0 }, similar));
+    if (sigs[k] && sigs[k][id]) r.sig = sigs[k][id];
     fn(r);
     r.d = today();
     if (Array.isArray(r.log) && r.log.length > 40) r.log = r.log.slice(-40);
@@ -152,7 +172,7 @@
 
   /* ---------- honest notice ---------- */
   function noticeText() {
-    if (!available) return "Saving is unavailable. Your practice answers are kept only while this page stays open. If you reload or close it, this practice starts again from the beginning.";
+    if (!writable()) return "Saving is unavailable. Your practice answers are kept only while this page stays open. If you reload or close it, this practice starts again from the beginning.";
     if (damaged) return "Saved practice could not be read, so it starts fresh. Nothing else was changed.";
     if (partial) return "Some saved practice could not be read, so those questions start fresh. Nothing else was changed.";
     return "";
@@ -167,7 +187,7 @@
   }
 
   window.PP_PRACTICE = {
-    KEY, STATUS, SHORT, statusOf, status, rec, lesson, setState, any, complete, counts, similarCounts, touched,
-    update, log, place, notice, noticeText, canSave: () => available, damaged: () => damaged
+    KEY, STATUS, SHORT, statusOf, status, rec, raw, changed, setSigs, lesson, setState, any, complete, counts, similarCounts, touched,
+    update, log, place, notice, noticeText, canSave: () => writable(), damaged: () => damaged
   };
 })();

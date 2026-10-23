@@ -52,6 +52,10 @@
     const a = make("a", "std-link" + (cls ? " " + cls : ""), text === undefined ? code : text);
     a.href = "#std/" + stdHash(code);
     a.dataset.std = code;
+    /* ENG-11: grammar-chart rows share one code (3.L.GC.1) and one level word, so their links would all
+       read alike. The accessible name adds the row's skill after the visible words (label in name). */
+    const row = code.indexOf(":") > 0 && (window.PP_STANDARDS || []).find(s => s.code === code);
+    if (row && row.gum && a.textContent && a.textContent.indexOf(row.gum) < 0) a.setAttribute("aria-label", a.textContent + ": " + row.gum);
     return a;
   }
   function clear(n) { while (n && n.firstChild) n.removeChild(n.firstChild); }

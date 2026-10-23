@@ -61,6 +61,12 @@
     if (C) {
       core[K] = { rev: String(C.rev || "1"), sets: coreSets.map(list => list.map(it => it.id)) };
       similarFor[K] = items(L.similar || []).map(it => Object.assign({}, it, { similar: true }));
+      /* ENG-06: one signature per question, so a changed question is detected even when its id is kept */
+      if (window.PP_PRACTICE && window.PP_PRACTICE.setSigs) {
+        const map = {};
+        [].concat(...coreSets, L.similar || []).forEach(it => { map[it.id] = questionSig(it, L.passages || []); });
+        window.PP_PRACTICE.setSigs(K, map);
+      }
     }
     const formB = (L.test || []).length && (L.testB || []).length;   /* PP-004: a second, independent skill check */
     if ((L.test || []).length) defs.push(["t", formB ? "Skill check (form A)" : "Skill check", L.test]);   /* PP-004 U-6.7: one name for the check (step: "Test Your Knowledge") */
@@ -96,6 +102,17 @@
     });
   }
   const core = {}, similarFor = {};
+  /* What makes a question the same question: its type, words, choices, key and passages. Hints,
+     Show me how and explanations can be edited without resetting a child's saved answer. */
+  const SIG_FIELDS = ["type", "prompt", "stem", "text", "choices", "partA", "partB", "slots", "rows", "cols", "steps", "targets", "answer", "options", "pick", "points", "sample", "criteria", "figure"];
+  function questionSig(it, passages) {
+    const o = {}; SIG_FIELDS.forEach(f => { if (it[f] !== undefined) o[f] = it[f]; });
+    o.p = (it.passages || []).map(pid => passages.find(p => p.id === pid) || pid);
+    const str = JSON.stringify(o);
+    let h = 0x811c9dc5;   /* FNV-1a, 32 bit */
+    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return ("0000000" + h.toString(16)).slice(-8);
+  }
   PP.addLesson = addLesson;
   PP.lessons = lessons;
   PP.core = core; PP.similarFor = similarFor;
@@ -768,7 +785,7 @@
     codes.forEach(c => {
       const x = byCode[c]; if (!x) return;
       const chip = PP.stdLink(c, "", "sk-chip"); chip.appendChild(make("span", "sk-chip-code", codeLabel(x)));
-      chip.title = x.plain; chip.setAttribute("aria-label", "Georgia standard " + codeLabel(x) + ": open its standard page"); tags.appendChild(chip);
+      chip.title = x.plain; chip.setAttribute("aria-label", codeLabel(x) + (x.gum ? ": " + x.gum : "") + ". Open the Georgia standard page"); tags.appendChild(chip);
     });
     const anyTest = codes.some(c => onTest(byCode[c]));
     const t0 = anyTest ? TESTED.both : (TESTED[s.tested] || ["", ""]);
@@ -1041,7 +1058,10 @@
     intro.appendChild(make("p", "go-note", "Each question has Check my answer, Give me a hint, and Show me how. Show me how shows the answer, so that question then counts as answer shown, not as right on your own."));
     intro.appendChild(PR.notice());
     const rec0 = PR.lesson(K);
-    if (rec0 && rec0.rev && rec0.rev !== C.rev) intro.appendChild(make("p", "go-note own-rev", "This practice was updated. Earlier answers are kept, but questions that changed start fresh."));
+    /* ENG-06: say only what the code does. Changed questions are detected by their signature. */
+    const nChanged = PR.changed(K);
+    if (nChanged) intro.appendChild(make("p", "go-note own-rev", "This practice was updated. " + (nChanged === 1 ? "One question" : cap(words(nChanged)) + " questions") + " changed, so " + (nChanged === 1 ? "it starts" : "they start") + " fresh. Your earlier answers to the other questions are kept."));
+    else if (rec0 && rec0.rev && rec0.rev !== C.rev) intro.appendChild(make("p", "go-note own-rev", "This practice was updated. Your earlier answers are kept."));
     const firstOpen = states.findIndex(s => !s.done);
     const all = firstOpen < 0;
     const go = make("button", "btn btn-primary", all ? "Look back at set 1" : (states[firstOpen].started ? "Continue set " : "Start set ") + (firstOpen + 1));

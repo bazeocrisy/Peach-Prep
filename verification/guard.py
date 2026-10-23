@@ -128,14 +128,45 @@ with sync_playwright() as p:
     ok("2.5 no review hint has an empty place name", not blank_place, blank_place[:3])
 
     # ---------- 3. Practice mode on every item ----------
-    hint_fail, right_fail, wrong_fail, leak_fail = [], [], [], []
+    hint_fail, right_fail, wrong_fail, leak_fail, own_hint_fail = [], [], [], [], []
     # a skill's check sets (SK:<k>:t, and form B SK:<k>:tB, PP-004) never run in practice mode (PP-003 A3); they are covered in sections 4, 11.2 and 14
-    # expansion 2026-10-22: a core lesson's "Practice on my own" sets (s.own) have no Help me ladder by design
-    # (hints and Show me how instead, 01-architecture.md §2.7); verification/practice-own.py asserts their controls.
-    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&(s.part=='t'||s.part=='tB'))&&!s.own).map(s=>s.id)"):
-        pg.evaluate("PP_PLAYER.start('%s','practice')" % s); pg.wait_for_timeout(80)
+    # expansion 2026-10-22 (ENG-03): a core lesson's "Practice on my own" sets (s.own) run here too, item by item, with the
+    # same 3.1, 3.2 and 3.4 assertions. They have no Help me ladder by design (01-architecture.md §2.2.1), so 3.3 stays on
+    # the ladder sets and 3.3b asserts the own-mode hints: each authored hint in order, nothing narrowed, outlined or revealed.
+    for s in pg.evaluate("PP.sets.filter(s=>!(s.kind=='skill'&&(s.part=='t'||s.part=='tB'))).map(s=>s.id)"):
+        own = pg.evaluate("!!PP.byId[%s].own" % json.dumps(s))
+        pg.evaluate("PP_PLAYER.start(%s,'practice',{pos:0})" % json.dumps(s)); pg.wait_for_timeout(80)
         n = pg.evaluate("PP_PLAYER.state().total")
         for i in range(n):
+            if own:
+                iid = pg.evaluate("PP_PLAYER.ctx().item.id")
+                cr = pg.evaluate("PP_PLAYER.ctx().item.type==='cr'")
+                if not cr:
+                    pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
+                    fb = pg.evaluate("({cls:document.getElementById('q-feedback').className, txt:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, how:!document.getElementById('q-how-steps').hidden})")
+                    if "is-try" not in fb["cls"]: wrong_fail.append(s + " " + iid)
+                    if (fb["why"] and fb["why"][:40] in fb["txt"]) or fb["how"]: leak_fail.append(s + " " + iid)
+                want = pg.evaluate("(it=>(it.hints&&it.hints.length?it.hints:[it.clue]))(PP_PLAYER.ctx().item)")
+                seen = []
+                for k in range(len(want)):
+                    pg.click("#q-hint"); pg.wait_for_timeout(20)
+                    seen.append(pg.evaluate("""({steps:[...document.querySelectorAll('#q-help-steps .help-step .help-text')].map(x=>x.textContent),
+                        ruled:document.querySelectorAll('#q-body .is-ruled-out').length, outline:document.querySelectorAll('#q-body .is-hint').length,
+                        how:!document.getElementById('q-how-steps').hidden, picked:JSON.stringify(PP_PLAYER.ctx().resp)})"""))
+                last = seen[-1] if seen else None
+                if not (last and last["steps"] == want and all(x["ruled"] == 0 and x["outline"] == 0 and not x["how"] for x in seen)
+                        and [len(x["steps"]) for x in seen] == list(range(1, len(want) + 1))
+                        and pg.evaluate("document.getElementById('q-hint').disabled")):
+                    own_hint_fail.append(s + " " + iid + " " + json.dumps([len(want), [len(x["steps"]) for x in seen], last and {k: last[k] for k in ("ruled", "outline", "how")}]))
+                if cr:
+                    pg.evaluate("(()=>{const c=PP_PLAYER.ctx();c.resp.text='My answer.';c.onChange();})()"); pg.click("#q-check"); pg.wait_for_timeout(30)
+                    good = pg.evaluate("document.getElementById('q-status').textContent.indexOf('Written and checked')>=0 && !document.getElementById('q-cr').hidden")
+                else:
+                    pg.evaluate(CORRECT); pg.click("#q-check"); pg.wait_for_timeout(30)
+                    good = "is-right" in pg.evaluate("document.getElementById('q-feedback').className")
+                if not good: right_fail.append(s + " " + iid)
+                pg.click("#q-next"); pg.wait_for_timeout(40)
+                continue
             iid = pg.evaluate("PP_PLAYER.ctx().item.id")
             # a wrong answer: feedback says try again and does not reveal
             pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
@@ -173,6 +204,7 @@ with sync_playwright() as p:
     ok("3.1 a wrong Check says try again (every item)", not wrong_fail, wrong_fail[:5])
     ok("3.2 a wrong Check never shows the walk-through", not leak_fail, leak_fail[:5])
     ok("3.3 Help me: clue, then narrowing that never rules out the answer, then walk-through; child still answers", not hint_fail, hint_fail[:3])
+    ok("3.3b Practice on my own: every authored hint in order, one per press, with nothing narrowed, outlined or revealed (every own item)", not own_hint_fail, own_hint_fail[:3])
     ok("3.4 the correct answer after help is accepted, and every set reaches its done panel", not right_fail, right_fail[:5])
 
     # ---------- 4. Test mode ----------
@@ -300,9 +332,19 @@ with sync_playwright() as p:
     # one full journey on a quiz lesson
     # expansion 2026-10-22: this journey asserts the legacy Try It Yourself (Help me unlocks after one wrong try), so it picks a
     # lesson without core. On a core lesson that behaviour intentionally changes (hints and Show me how from the start, set
-    # picker); verification/practice-own.py asserts the core journey with the same intent: help is opt-in, never automatic.
-    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.byId['SK:%s:y'] && !PP.lessons['%s'].core" % (c, c, c))), None)
-    if qcode:
+    # picker). ENG-04: the same journey also runs on a core lesson (checks "9.5a-core" ... "9.10-core", same steps and intent:
+    # help is opt-in and never automatic), and if no lesson without core is left the legacy names FAIL instead of vanishing.
+    def own_set_through(sid):
+        pg.evaluate("PP_PLAYER.start(%s,'try',{pos:0})" % json.dumps(sid)); pg.wait_for_timeout(60)
+        for i in range(pg.evaluate("PP_PLAYER.state().total")):
+            if pg.evaluate("PP_PLAYER.ctx().item.type==='cr'"):
+                pg.evaluate("(()=>{const c=PP_PLAYER.ctx();c.resp.text='My answer.';c.onChange();})()"); pg.click("#q-check")
+            elif not pg.evaluate("PP_PLAYER.state().solved[PP_PLAYER.state().pos]"):
+                pg.evaluate(CORRECT); pg.click("#q-check")
+            pg.click("#q-next"); pg.wait_for_timeout(20)
+    def journey(qcode, core):
+        sx = "-core" if core else ""
+        nm = lambda n, t: n + sx + " " + t + (" [core lesson %s]" % qcode if core else "")
         pg.evaluate("PP_SKILLS.open('%s')" % qcode); pg.wait_for_timeout(60)
         pg.click("[data-step=learn]"); pg.wait_for_timeout(40)
         for _ in range(12):
@@ -314,17 +356,42 @@ with sync_playwright() as p:
             pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
         dn = pg.evaluate("({done:!document.getElementById('stage-done').hidden, t:document.getElementById('done-test').textContent})")
         pg.click("#done-test"); pg.wait_for_timeout(80)
-        intry = pg.evaluate("({s:PP_PLAYER.state(), help:!document.getElementById('q-help').hidden})")
-        ok("9.5a Practice Together leads to Try It Yourself, where Help me starts hidden", dn["done"] and "yourself" in dn["t"].lower() and intry["s"]["setId"] == "SK:%s:y" % qcode and not intry["help"], (dn, intry))
+        if core:
+            pick = pg.evaluate("({cur:PP_APP.current(), step:PP_SKILLS.step(), sets:document.querySelectorAll('#sk-panel .own-set').length})")
+            pg.click("#sk-start-try"); pg.wait_for_timeout(80)
+        intry = pg.evaluate("({s:PP_PLAYER.state(), help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('q-how-steps').hidden})")
+        if core:
+            ok(nm("9.5a", "Practice Together leads to the Try step's set picker; on my own, Help me is absent and hints and Show me how are offered, nothing shown yet"),
+               dn["done"] and "on my own" in dn["t"].lower() and pick == {"cur": "skill", "step": "try", "sets": 3} and intry["s"]["setId"] == "SK:%s:y" % qcode
+               and not intry["help"] and intry["hint"] and intry["how"] and intry["steps"] == 0 and not intry["open"], (dn, pick, intry))
+        else:
+            ok("9.5a Practice Together leads to Try It Yourself, where Help me starts hidden", dn["done"] and "yourself" in dn["t"].lower() and intry["s"]["setId"] == "SK:%s:y" % qcode and not intry["help"], (dn, intry))
         pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
-        ok("9.5b in Try It Yourself, Help me unlocks after one wrong try", pg.evaluate("!document.getElementById('q-help').hidden"))
+        if core:
+            w = pg.evaluate("({hint:!document.getElementById('q-hint').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('q-how-steps').hidden, outline:document.querySelectorAll('#q-body .is-hint').length})")
+            ok(nm("9.5b", "after one wrong try, help stays opt-in: a hint is offered but nothing is shown or outlined on its own"), w == {"hint": True, "steps": 0, "open": False, "outline": 0}, w)
+        else:
+            ok("9.5b in Try It Yourself, Help me unlocks after one wrong try", pg.evaluate("!document.getElementById('q-help').hidden"))
         pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
-        for i in range(1, intry["s"]["total"]):
-            pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
+        if core:
+            for i in range(1, intry["s"]["total"]):
+                if pg.evaluate("PP_PLAYER.ctx().item.type==='cr'"):
+                    pg.evaluate("(()=>{const c=PP_PLAYER.ctx();c.resp.text='My answer.';c.onChange();})()"); pg.click("#q-check")
+                else:
+                    pg.evaluate(CORRECT); pg.click("#q-check")
+                pg.click("#q-next"); pg.wait_for_timeout(20)
+            own_set_through("SK:%s:y2" % qcode); own_set_through("SK:%s:y3" % qcode)
+            want_t = pg.evaluate("PP_SKILLS.checkSetId(%s)" % json.dumps(qcode))
+        else:
+            for i in range(1, intry["s"]["total"]):
+                pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
+            want_t = "SK:%s:t" % qcode
         dn2 = pg.evaluate("document.getElementById('done-test').textContent")
         pg.click("#done-test"); pg.wait_for_timeout(80)
         intest = pg.evaluate("PP_PLAYER.state()")
-        ok("9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set", "skill check" in dn2 and intest["setId"] == "SK:%s:t" % qcode and intest["mode"] == "test", (dn2, intest["setId"]))
+        ok(nm("9.5", ("set 3 of Practice on my own finishes and 'Take the skill check' opens the check the site picks" if core else "Try It Yourself finishes and 'Take the skill check' opens the separate test set")) if core
+           else "9.5 Try It Yourself finishes and 'Take the skill check' opens the separate test set",
+           "skill check" in dn2 and intest["setId"] == want_t and intest["mode"] == "test", (dn2, intest["setId"], want_t))
         for i in range(intest["total"]):
             pg.evaluate(WRONG); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
@@ -334,23 +401,34 @@ with sync_playwright() as p:
             pg.evaluate(CORRECT); pg.click("#q-next"); pg.wait_for_timeout(20)
         pg.click("#confirm-submit"); pg.wait_for_timeout(60)
         g2 = pg.text_content("#res-guidance")
-        ok("9.6 a failed check says how many points pass it; a passing check says it passed", "points to pass" in g1 and "passed the skill check" in g2, (g1, g2))
+        ok(nm("9.6", "a failed check says how many points pass it; a passing check says it passed") if core else "9.6 a failed check says how many points pass it; a passing check says it passed",
+           "points to pass" in g1 and "passed the skill check" in g2, (g1, g2))
         pg.click("#res-back"); pg.wait_for_timeout(80)
         bk = pg.evaluate("({cur:PP_APP.current(), code:PP_SKILLS.current(), step:PP_SKILLS.step(), done:document.querySelectorAll('#sk-steps .step-btn.is-done').length})")
-        ok("9.7 Back from a skill test returns to the skill's Test step, with all five steps checked", bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 5, bk)
+        ok(nm("9.7", "Back from a skill test returns to the skill's Test step, with all five steps checked") if core else "9.7 Back from a skill test returns to the skill's Test step, with all five steps checked",
+           bk["cur"] == "skill" and bk["code"] == qcode and bk["step"] == "test" and bk["done"] == 5, bk)
         h0 = pg.evaluate("location.hash"); pg.go_back(); pg.wait_for_timeout(250)
         h1 = pg.evaluate("[PP_APP.current(), location.hash]")
         same = h1[0] == "skill" and pg.evaluate("PP_SKILLS.current()") == qcode
-        ok("9.7b one phone Back from there leaves that skill (no duplicate history entry)", not same, (h0, h1))
+        ok(nm("9.7b", "one phone Back from there leaves that skill (no duplicate history entry)") if core else "9.7b one phone Back from there leaves that skill (no duplicate history entry)", not same, (h0, h1))
         pg.go_forward(); pg.wait_for_timeout(250)
         pg.click("#skill-back"); pg.wait_for_timeout(80)
         hm = pg.evaluate("""(c=>({cur:PP_APP.current(), focus:document.activeElement.dataset.code, txt:document.activeElement.getAttribute('aria-label')||''}))('%s')""" % qcode)
-        ok("9.8 All skills returns home on that skill's row, now marked Passed the skill check", hm["cur"] == "home" and hm["focus"] == qcode and "Passed the skill check" in hm["txt"], hm)
+        ok(nm("9.8", "All skills returns home on that skill's row, now marked Passed the skill check") if core else "9.8 All skills returns home on that skill's row, now marked Passed the skill check",
+           hm["cur"] == "home" and hm["focus"] == qcode and "Passed the skill check" in hm["txt"], hm)
         pg.reload(); pg.wait_for_timeout(700)
         kept = pg.evaluate("PP_SKILLS.status('%s')" % qcode)
-        ok("9.9 progress is kept on the device after a reload", kept == "mastered", kept)
+        ok(nm("9.9", "progress is kept on the device after a reload") if core else "9.9 progress is kept on the device after a reload", kept == "mastered", kept)
         pg.goto(BASE + "#skill/" + qcode + "/learn"); pg.wait_for_timeout(700)
-        ok("9.10 a skill page address opens that skill and step", pg.evaluate("PP_APP.current()=='skill' && PP_SKILLS.step()=='learn'"))
+        ok(nm("9.10", "a skill page address opens that skill and step") if core else "9.10 a skill page address opens that skill and step", pg.evaluate("PP_APP.current()=='skill' && PP_SKILLS.step()=='learn'"))
+    qcode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.byId['SK:%s:y'] && !PP.lessons['%s'].core" % (c, c, c))), None)
+    if qcode: journey(qcode, False)
+    else:
+        for n in ("9.5a", "9.5b", "9.5", "9.6", "9.7", "9.7b", "9.8", "9.9", "9.10"):
+            ok(n + " legacy journey: a quiz lesson without core is needed for this check (none is left; retire or rewrite it)", False, "no lesson without core")
+    ccode = next((c for c in lessons if pg.evaluate("!!PP.byId['SK:%s:t'] && !!PP.lessons['%s'].core && PP.byId['SK:%s:y'].items[0].type!=='cr'" % (c, c, c))), None)
+    if ccode: journey(ccode, True)
+    else: ok("9.5-core a quiz lesson with core exists for the core journey", False, "no core lesson")
     # pending and habit pages
     pend = pg.evaluate("PP_STANDARDS.filter(s=>!PP_SKILLS.lessonFor(s.code)).map(s=>s.code)")
     pf = []

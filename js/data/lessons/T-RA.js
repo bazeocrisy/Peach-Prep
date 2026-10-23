@@ -2190,28 +2190,28 @@ PP.addLesson({
       why: "The answer is: \"What if it nose-dives on the very first throw?\" he whispered to his friend Bo. Asking what will happen if something goes wrong shows he is worried. Writing his name and the start time do not show a feeling, and the smile is Bo's." },
     { id: "SK-RA2a-S03", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [], pick: 2,
       like: ["SK-RA2a-C05", "SK-RA2a-C09", "SK-RA2a-C13"],
-      stem: ["Mr. Park's opinion: \"The new dog park is a great place for dogs.\""],
-      prompt: "Which TWO facts BEST support Mr. Park's opinion? Choose two answers.",
+      stem: ["Mrs. Ito's opinion: \"The new bike trail is a great place for families.\""],
+      prompt: "Which TWO facts BEST support Mrs. Ito's opinion? Choose two answers.",
       choices: [
-        { text: "It has a big fenced field where dogs can run without a leash.", correct: true },
-        { text: "It has a water fountain made just for dogs.", correct: true },
-        { text: "It opened on a sunny Saturday in June." },
-        { text: "Its parking lot has spaces for twelve cars." },
+        { text: "The trail is wide enough for a parent and a child to ride side by side.", correct: true },
+        { text: "There are benches and water fountains along the trail every mile.", correct: true },
+        { text: "The trail opened on a sunny Saturday in June." },
+        { text: "The trail was paid for with money from the town." },
         { text: "The town also built a new library last year." }
       ],
-      clue: "An opinion is supported by facts that show it. Ask of each fact: does this make the park better for dogs?",
+      clue: "An opinion is supported by facts that show it. Ask of each fact: does this make the trail better for families?",
       hints: [
-        "An opinion is supported by facts that show it. Ask of each fact: does this make the park better for dogs?",
-        "Read each fact and picture a dog at the park. Choose two.",
-        "The new library is about the town, not the dog park. Check the other four facts."
+        "An opinion is supported by facts that show it. Ask of each fact: does this make the trail better for families?",
+        "Read each fact and picture a family riding on the trail. Choose two.",
+        "The new library is about the town, not the bike trail. Check the other four facts."
       ],
       how: [
-        "Mr. Park's opinion is that the park is great for dogs.",
-        "A big fenced field lets dogs run off the leash, and a fountain made for dogs gives them water. Both make the park good for dogs.",
-        "The opening day and the parking lot are true, but they do not make the park better for dogs. The library is not about the park.",
-        "The answers are \"It has a big fenced field where dogs can run without a leash.\" and \"It has a water fountain made just for dogs.\""
+        "Mrs. Ito's opinion is that the trail is great for families.",
+        "A trail wide enough for a parent and child to ride together, with benches and water along the way, is good for families.",
+        "The opening day and who paid for it are true, but they do not make the trail better for families. The library is not about the trail.",
+        "The answers are \"The trail is wide enough for a parent and a child to ride side by side.\" and \"There are benches and water fountains along the trail every mile.\""
       ],
-      why: "The answers are \"It has a big fenced field where dogs can run without a leash.\" and \"It has a water fountain made just for dogs.\" Both show the park is good for dogs. The opening day and the parking lot do not, and the library is about the town." }
+      why: "The answers are \"The trail is wide enough for a parent and a child to ride side by side.\" and \"There are benches and water fountains along the trail every mile.\" Both show the trail is good for families. The opening day and who paid for it do not, and the library is about the town." }
   ],
   /* Hints and Show me how for items kept in practice: refs P3, P4 (core set 1) and Together P1, P2. */
   addons: {
@@ -2858,26 +2858,26 @@ PP.addLesson({
       why: "The answer is \"This plant food makes any tomato grow as big as a beach ball overnight!\" It promises something impossible to sell plant food. The other sentences make sense, and one tells how the facts were found." },
     { id: "SK-RA2b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: [],
       like: ["SK-RA2b-C03", "SK-RA2b-C09", "SK-RA2b-C11"],
-      prompt: "Theo's question is \"Why do cats purr?\" All four excerpts come from a book by an animal doctor. Which excerpt is relevant to his question?",
+      prompt: "Theo's question is \"Why do dogs pant?\" All four excerpts come from a book by an animal doctor. Which excerpt is relevant to his question?",
       choices: [
-        { text: "\"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\"", correct: true },
-        { text: "\"A cat's whiskers help it feel its way through dark, narrow places.\"" },
-        { text: "\"Lions can roar very loudly, but most house cats cannot roar at all.\"" },
-        { text: "\"Most house cats sleep for twelve hours or more every single day.\"" }
+        { text: "\"Dogs pant to cool off, because panting lets heat leave the body.\"", correct: true },
+        { text: "\"A dog's wet nose helps it pick up all kinds of smells.\"" },
+        { text: "\"Wolves howl to call one another, but most pet dogs seldom howl.\"" },
+        { text: "\"Most pet dogs sleep for twelve hours or more each day.\"" }
       ],
-      clue: "The book can be trusted, so check the topic. Theo's question asks WHY cats purr.",
+      clue: "The book can be trusted, so check the topic. Theo's question asks WHY dogs pant.",
       hints: [
-        "The book can be trusted, so check the topic. Theo's question asks WHY cats purr.",
-        "Two excerpts are about sounds that cats make. Read those two closely.",
-        "Sleep and whiskers are not about sounds at all. Compare the two sound excerpts with Theo's question, word by word."
+        "The book can be trusted, so check the topic. Theo's question asks WHY dogs pant.",
+        "Two excerpts are about breathing or making sounds. Read those two closely.",
+        "Sleep and a wet nose are not about breathing or sounds. Compare the other two excerpts with Theo's question, word by word."
       ],
       how: [
-        "Theo's question asks why cats purr.",
-        "The excerpt about feeling calm and safe gives reasons cats purr.",
-        "Roaring is a different sound, and whiskers and sleep are other topics.",
-        "The answer is \"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\""
+        "Theo's question asks why dogs pant.",
+        "The excerpt about cooling off gives the reason dogs pant.",
+        "Howling is a different thing dogs and wolves do, and smells and sleep are other topics.",
+        "The answer is \"Dogs pant to cool off, because panting lets heat leave the body.\""
       ],
-      why: "The answer is \"Cats often purr when they feel calm and safe, and sometimes when they are hurt.\" It gives reasons cats purr. Roaring is a different sound, and whiskers and sleep are other topics." },
+      why: "The answer is \"Dogs pant to cool off, because panting lets heat leave the body.\" It gives the reason dogs pant. Howling is something different, and smells and sleep are other topics." },
     { id: "SK-RA2b-S03", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
       like: ["SK-RA2b-C13", "SK-RA2b-C10", "SK-RA2b-P4"],
       prompt: "Lena is writing a report on how to care for a pet rabbit. Which TWO sources would be credible? Choose two answers.",
