@@ -2695,27 +2695,28 @@ PP.addLesson({
       why: "Part A: The cone is gone, and the speaker plans to buy another. Part B: \"I'll save my coins from every day\" In stanza 3, the truck drives away and the speaker plans to save money and wait for it. Nobody shares the cone, the truck does not stop again, and the cone is not dropped." },
     { id: "SK-TT4a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C09"],
-      stem: ["Here is stanza 1 of a poem called \"Popcorn.\"", "The oil is warm. The kernels wait.", "I shake the pot. I count to eight.", "Then pop! Then pop! Then pop, pop, pop!", "The lid jumps up! The corn won't stop!"],
-      prompt: "Stanza 1 ends with the line \"The lid jumps up! The corn won't stop!\" Why does the poet end the first stanza there?",
+      stem: ["Here is stanza 2 of a poem called \"The Scooter Ride.\"", "I grip the bars and push off slow.", "The scooter picks up speed on the hill.", "Faster, faster, down I go,", "Past the fence and past the mill.", "Stop."],
+      prompt: "The last line of this stanza is only one word long. Why might the poet make the last line so short?",
       choices: [
-        { text: "It ends the quiet waiting with a burst of loud, fast popping.", correct: true },
-        { text: "It shows that the cook gives up and takes the pot away." },
-        { text: "It tells the reader that the snack is ready and everyone is eating." },
-        { text: "It is the only line in the stanza that has a rhyming partner." }
+        { text: "A short line makes the reader pause, just as the scooter does.", correct: true },
+        { text: "It shows that the poet ran out of words to use." },
+        { text: "It makes the last line rhyme with the first line." },
+        { text: "It tells the reader that the ride goes on all day." }
       ],
-      clue: "A poet ends a stanza where something important happens. Ask what changes between the start of the stanza and its last line.",
+      clue: "A poet can use the length of a line to match what is happening. Ask what happens in the last line.",
       hints: [
-        "A poet ends a stanza where something important happens. Ask what changes between the start of the stanza and its last line.",
-        "Compare how the stanza starts with how it ends. What is the speaker doing at first, and what is happening at the end?",
-        "Every line in the stanza has a rhyming partner, so one choice can go. Test the rest against what happens just before the last line."
+        "A poet can use the length of a line to match what is happening. Ask what happens in the last line.",
+        "Read the stanza out loud. Notice how the last line sounds different from the lines before it.",
+        "The scooter stops in the last line, so the ride does not go on all day. Test each choice that is left."
       ],
       how: [
-        "At the start, the oil is warm and the kernels wait. It is quiet, and the speaker counts.",
-        "Then the popping begins, and the lid jumps up. The stanza ends at that exciting moment.",
-        "The answer is \"It ends the quiet waiting with a burst of loud, fast popping.\"",
-        "Nobody gives up or eats yet, and every line in the stanza rhymes with another line."
+        "The first four lines tell about a fast ride. The scooter picks up speed, and the speaker goes faster and faster.",
+        "The last line is only one word, \"Stop.\" A very short line makes the reader pause.",
+        "The answer is \"A short line makes the reader pause, just as the scooter does.\"",
+        "The poet did not run out of words, \"Stop\" does not rhyme with \"slow,\" and the ride ends instead of going on all day."
       ],
-      why: "The answer is \"It ends the quiet waiting with a burst of loud, fast popping.\" The stanza begins with warm oil and waiting, and the last line shows the corn popping so fast that the lid jumps. Nobody gives up or eats yet, and every line rhymes with another line." },
+      misconception: "A common mix-up is thinking a short line means the poet ran out of things to say. A poet can choose a short line to match the action.",
+      why: "The answer is \"A short line makes the reader pause, just as the scooter does.\" The long, quick lines match the fast ride, and the one-word last line makes the reader stop, just as the scooter stops. The poet did not run out of words, \"Stop\" does not rhyme with \"slow,\" and the ride does not go on all day." },
     { id: "SK-TT4a-S11", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C10"],
       stem: ["Poem A: The Cat", "Purr, purr, purr by the fire,", "Purr, purr, purr in the sun.", "The cat stretches out on the rug", "And naps till the day is done.", "Poem B: Sprinkler Day", "Splash, splash, splash goes the sprinkler spray,", "I jump, jump, jump through the cold.", "The grass is wet, the sun is hot,", "And I feel brave and bold."],

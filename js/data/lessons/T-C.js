@@ -2121,7 +2121,7 @@ PP.addLesson({
       paragraphs: [
         ["(1) Make a Pinwheel!"],
         ["(2) Come to the craft table at the town park on Saturday morning, any time between nine and noon.", "(3) You will fold and cut a square of bright paper, and you can pick any color you like.", "(4) A grown-up helper will show you each step, so you can make it all by yourself."],
-        ["(5) My cousin just got a new puppy named Biscuit.", "(6) Helpers will attach your pinwheel to a stick.", "(7) Hold it up to the wind and watch it spin!"],
+        ["(5) Pinwheels are sold in many toy stores.", "(6) Helpers will attach your pinwheel to a stick.", "(7) Hold it up to the wind and watch it spin!"],
         ["(8) The wind pushes on the paper and makes it turn.", "(9) Every child takes a pinwheel home at the end.", "(10) Come early and pick your favorite color!"]
       ] },
     { id: "p4", draft: true, title: "Wolves Talk", byline: "Mateo's slide show draft for his third-grade class", genre: "Student draft (slide show)",
@@ -2220,24 +2220,25 @@ PP.addLesson({
         options: [
           "Glass pieces",
           "Mirrors",
-          "Turn the tube",
+          "Colors",
+          "Tube",
           "These small bits of glass tumble around and make the colors when the tube turns."
         ],
         answer: [0], pick: 1,
         clue: "A label is a word or two that names the part an arrow points to. Ask what the arrow points to.",
         hints: [
           "A label is a word or two that names the part an arrow points to. Ask what the arrow points to.",
-          "Reread what the arrow points to. Then compare it with the two parts that Slide 3 says are inside the tube.",
-          "\"Turn the tube\" tells a reader what to do, but a label names a part. Check the other three choices."
+          "Reread what the arrow points to. Then ask which part of the kaleidoscope that is.",
+          "The arrow points to one small part, not to the whole kaleidoscope, so \"Tube\" cannot be the label. Check the other choices."
         ],
         how: [
           "A label is a word or two that names the part an arrow points to.",
           "The arrow points to the tiny bits that tumble around. Slide 3 says those are the small pieces of colored glass.",
           "The answer is \"Glass pieces.\"",
-          "\"Mirrors\" names a part that does not tumble, \"Turn the tube\" is a direction, and the long sentence is a caption, not a label."
+          "\"Mirrors\" names a part that does not tumble, \"Colors\" is not a part, \"Tube\" names the whole thing, and the long sentence is a caption, not a label."
         ],
         misconception: "A common mix-up is choosing the longest choice because it tells the most. A label is a word or two.",
-        why: "The answer is \"Glass pieces.\" The arrow points to the tiny bits that tumble, and Slide 3 says those are pieces of colored glass. \"Mirrors\" names a different part, \"Turn the tube\" is a direction, and the long sentence is too long for a label." },
+        why: "The answer is \"Glass pieces.\" The arrow points to the tiny bits that tumble, and Slide 3 says those are pieces of colored glass. \"Mirrors\" names a different part, \"Colors\" is not a part, \"Tube\" names the whole kaleidoscope, and the long sentence is too long for a label." },
             { id: "SK-TC1c-C05", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
         stem: ["Tessa's purpose is to teach her third-grade classmates how a kaleidoscope works. She has room for one more slide, Slide 5, and she is thinking about ideas."],
         prompt: "Which TWO ideas for Slide 5 fit Tessa's purpose and her audience? Choose two answers.",
@@ -2269,23 +2270,23 @@ PP.addLesson({
         choices: [
           { text: "children holding bright paper pinwheels up to the wind at the park", correct: true },
           { text: "children at a craft table making paper hats with scissors and glue" },
-          { text: "a craft table at the town park, empty and covered by a gray tarp" },
-          { text: "a child flying a kite on a windy day while a grown-up watches" }
+          { text: "a pinwheel lying broken on the grass beside an empty craft table" },
+          { text: "a box of pinwheels on a store shelf, with no children in sight" }
         ],
         clue: "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
         hints: [
           "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
           "Read the title and the numbered lines of the poster. Picture the scene a family would find if they followed the poster.",
-          "A table covered by a gray tarp shows nobody making anything, and the poster invites children to make something. Check the other three pictures against the poster's words."
+          "A box on a store shelf shows no children making anything, and the poster invites children to make something. Check the other three pictures against the poster's words."
         ],
         how: [
           "The title is \"Make a Pinwheel!\" and the lines invite children to a craft table to fold paper, get a stick and hold the pinwheel up to the wind.",
           "A good picture shows the same thing: children with pinwheels.",
           "The answer is \"children holding bright paper pinwheels up to the wind at the park.\"",
-          "Paper hats are a different craft, the empty table shows nobody making anything, and the kite is a wind toy that the poster never mentions."
+          "Paper hats are a different craft, the broken pinwheel by an empty table shows nobody making anything, and the boxed pinwheels on a shelf show no children."
         ],
-        misconception: "A common mix-up is choosing a picture of the same place or the same weather that does not match the poster's message.",
-        why: "The answer is \"children holding bright paper pinwheels up to the wind at the park.\" It shows what the poster invites children to make. Paper hats are a different craft, the empty table shows nobody, and the kite is not on the poster." },
+        misconception: "A common mix-up is choosing a picture that has the same objects but does not show the poster's message.",
+        why: "The answer is \"children holding bright paper pinwheels up to the wind at the park.\" It shows what the poster invites children to make. Paper hats are a different craft, the broken pinwheel shows nobody, and the boxed pinwheels show no children." },
             { id: "SK-TC1c-C07", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: ["p3"],
         prompt: "Imani's cousin wants a copy of the poster for children ages three to five, who cannot read yet. Choose the best answer for each blank.",
         text: "For these children, the poster should have {0}. A grown-up can help by {1}.",
@@ -2344,7 +2345,7 @@ PP.addLesson({
         hints: [
           "A label is a word or two that names the exact part an arrow points to. Check each label two ways: how long it is and what part it names.",
           "Reread the box to find what the arrow points to. Then say each label's meaning in your own words.",
-          "The paper blades are the part that spins, not the part a child holds. Sort the other three labels."
+          "Check each label's length first. Then ask which part the arrow points to, and whether the label names it."
         ],
         how: [
           "The arrow points to the part a child holds in one hand. A good label names that part in a word or two.",
@@ -2362,16 +2363,16 @@ PP.addLesson({
         hints: [
           "Every word on a poster should help its purpose. Ask what this poster is for before you decide.",
           "Read each numbered line in order. For each one, ask what it adds to the poster.",
-          "Line 6 tells how the pinwheel gets its stick, so it fits. Check the other lines the same way."
+          "Line 2 tells where and when to come, so it fits. Check the other lines the same way."
         ],
         how: [
           "The title, \"Make a Pinwheel!\", and most of the lines invite children to the craft table and tell what they will do there.",
-          "Line 5 tells about a cousin's new puppy. It does not help a child decide to come and make a pinwheel.",
-          "The answer is line 5: \"My cousin just got a new puppy named Biscuit.\"",
+          "Line 5 says that pinwheels are sold in many toy stores. It is about pinwheels, but it does not help a child decide to come and make one.",
+          "The answer is line 5: \"Pinwheels are sold in many toy stores.\"",
           "Line 10, \"Come early and pick your favorite color!\", is not a step, but it still invites children to the table."
         ],
-        misconception: "A common mix-up is taking out a line that is not a step. Ask whether the line fits the poster's purpose.",
-        why: "The answer is line 5, \"My cousin just got a new puppy named Biscuit.\" The poster invites children to make a pinwheel, and the puppy has nothing to do with that. The other lines invite children, tell the steps or tell what they will take home." }
+        misconception: "A common mix-up is keeping a line because it mentions pinwheels. Ask whether the line helps the poster's purpose.",
+        why: "The answer is line 5, \"Pinwheels are sold in many toy stores.\" The poster invites children to make a pinwheel at the craft table, and where pinwheels are sold does not help with that. The other lines invite children, tell the steps or tell what they will take home." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-TC1c-C11", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: ["p4"],
@@ -2400,11 +2401,11 @@ PP.addLesson({
         stem: ["The Willow Lane Rec Club is making a flyer to get six- and seven-year-olds to join its kickball team.", "Words on the flyer: Kick, run and make new friends! Sign up on Saturday at the park."],
         prompt: "Which TWO pictures fit the flyer's words and its readers best? Choose two answers.",
         choices: [
-          { text: "children close to the readers' age kicking a red ball and laughing", correct: true },
+          { text: "children about seven years old kicking a red ball and laughing", correct: true },
           { text: "a group of smiling children in matching shirts standing with their arms around each other", correct: true },
-          { text: "teenagers in team jackets playing a game in a big stadium" },
+          { text: "older children in team jackets playing a serious game on a big field" },
           { text: "a close-up of a kickball rolling away across an empty field" },
-          { text: "a frowning adult checking a long list on a clipboard" }
+          { text: "an adult frowning at a long list on a clipboard" }
         ],
         clue: "Pictures should match the flyer's words and the people who will read it. Ask what the words promise and who will see the flyer.",
         hints: [
@@ -2414,12 +2415,12 @@ PP.addLesson({
         ],
         how: [
           "The words promise action (kick and run) and friendship (new friends). The readers are six and seven years old.",
-          "A picture of children their age kicking a ball and laughing shows the action.",
-          "A group of smiling children in matching shirts with their arms around each other shows the new friends. The answers are \"children close to the readers' age kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\"",
-          "The teenagers in a stadium are not the readers' age, the rolling ball shows no friends, and the frowning adult with a clipboard shows no fun."
+          "A picture of children about seven years old kicking a ball and laughing shows the action.",
+          "A group of smiling children in matching shirts with their arms around each other shows the new friends. The answers are \"children about seven years old kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\"",
+          "The older children are not the readers' age and look serious, the rolling ball shows no friends, and the frowning adult shows no fun."
         ],
         misconception: "A common mix-up is choosing a picture about the sport but not about the readers. The picture should show people like them having fun.",
-        why: "The answers are \"children close to the readers' age kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\" They show the action and the friendship that the flyer promises. The teenagers in a stadium, the rolling ball and the frowning adult do not." },
+        why: "The answers are \"children about seven years old kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\" They show the action and the friendship that the flyer promises. The older children, the rolling ball and the frowning adult do not." },
       { id: "SK-TC1c-C13", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
         stem: ["Mr. Hale's class is selling small herb plants to pay for a field trip bus. He made two signs.", "Sign A: a picture of a table covered with little plants in paper cups. Words: Plant sale! Saturday at nine o'clock in the school courtyard. Come buy a plant!", "Sign B: a picture of smiling students standing next to a yellow bus. Words: Thank you, neighbors, for buying our plants! Our class raised $140 for the bus."],
         prompt: "It is Wednesday, and the sale is on Saturday. Which sign should Mr. Hale hang by the road, and why?",
@@ -2444,13 +2445,13 @@ PP.addLesson({
         misconception: "A common mix-up is thinking any sign about the project will do. A sign has to match what the writer wants readers to do now.",
         why: "The answer is \"Sign A, because its picture and words invite neighbors to come and buy a plant.\" The sale is on Saturday, and Sign A tells the day, time and place. Sign B thanks people after a sale is over, so it would not bring anyone to the sale." },
       { id: "SK-TC1c-C14", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
-        stem: ["Jada's family is making a slide show for her grandmother's birthday party. Slide 6 shows an old photo of her grandmother at age eight. She is standing next to a small yellow bicycle in front of the house where she grew up. The relatives at the party have never seen this photo."],
+        stem: ["Jada's family is making a slide show for her grandmother's birthday. Slide 6 shows an old photo. In it, her grandmother is eight years old. She stands by a small yellow bicycle in front of the house where she grew up. The relatives have never seen this photo."],
         prompt: "Which caption will help the relatives understand the photo best?",
         options: [
-          "Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.",
-          "This photograph is very old, and its colors have faded a little over the years.",
-          "Grandma has always loved riding bicycles, and her favorite color was yellow.",
-          "Bicycles are a fun way to travel, and they are a good way to get exercise."
+          "Grandma at age eight, with her small yellow bicycle at the house where she grew up.",
+          "This photograph is very old, and its colors have faded.",
+          "Grandma has always loved bicycles, and her favorite color was yellow.",
+          "Bicycles are a fun way to travel and to get exercise."
         ],
         answer: [0], pick: 1,
         clue: "A caption tells what the picture shows. It can also give details that readers who were not there need.",
@@ -2461,14 +2462,14 @@ PP.addLesson({
         ],
         how: [
           "The relatives have never seen this photo, so the caption should tell them who is in it, how old she is and where she is.",
-          "The answer is \"Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.\"",
+          "The answer is \"Grandma at age eight, with her small yellow bicycle at the house where she grew up.\"",
           "The caption about faded colors tells about the photograph, not the picture. The caption about always loving bicycles claims something the photo does not show.",
           "The caption about bicycles and exercise is about bicycles in general, so it says nothing about this photo."
         ],
         misconception: "A common mix-up is choosing a caption that is true about the topic. A caption has to tell what is in this picture.",
-        why: "The answer is \"Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.\" It tells the relatives who, how old and where. The other captions talk about the paper, a claim the photo does not show, or bicycles in general." },
+        why: "The answer is \"Grandma at age eight, with her small yellow bicycle at the house where she grew up.\" It tells the relatives who, how old and where. The other captions talk about the paper, a claim the photo does not show, or bicycles in general." },
             { id: "SK-TC1c-C15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
-        stem: ["Zuri is making a slide about leaves. Her drawing shows five parts: the veins (thin lines that look like tiny tubes), the blade (the wide, flat part), the stalk (the thin stem that joins the leaf to a branch), the edge (the outside border) and the tip (the pointed end).", "Her slide says: Tiny tubes carry water through the leaf. The wide, flat part catches sunlight."],
+        stem: ["Zuri is making a slide about leaves. Her drawing shows five parts: the veins (the thin lines that spread out across the leaf), the blade (the broad green part), the stalk (the thin stem at the bottom), the edge (the border around the leaf) and the tip (the pointed end).", "Her slide says: Water moves through the leaf along fine paths. The big green surface takes in sunlight."],
         prompt: "Zuri has room for only two labels. Which TWO labels fit the words on her slide best? Choose two answers.",
         choices: [
           { text: "veins", correct: true },
@@ -2480,17 +2481,17 @@ PP.addLesson({
         clue: "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
         hints: [
           "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
-          "Read the two sentences on the slide. For each one, ask which part of the drawing does the job it tells about.",
-          "The stalk joins the leaf to a branch, and the slide says nothing about joining. Check the other parts the same way."
+          "Read the two sentences on the slide. For each one, ask which part of the drawing it is about.",
+          "The stalk is a thin stem at the bottom, and the slide says nothing about a stem. Check the other parts the same way."
         ],
         how: [
           "A label should point out a part that the slide's words talk about.",
-          "The first sentence is about tiny tubes that carry water, which are the veins. The second is about the wide, flat part that catches sunlight, which is the blade.",
+          "The first sentence is about the fine paths that water moves along, which are the thin lines called veins. The second is about the big green surface that takes in sunlight, which is the blade.",
           "The answers are \"veins\" and \"blade.\"",
-          "The stalk, the edge and the tip are real parts of the leaf, but the slide says nothing about joining, borders or points, so labeling them would only add clutter."
+          "The stalk, the edge and the tip are real parts of the leaf, but the slide says nothing about a stem, a border or a point, so labeling them would only add clutter."
         ],
         misconception: "A common mix-up is labeling every part of the drawing. Label the parts the words are about.",
-        why: "The answers are \"veins\" and \"blade.\" The slide's two sentences describe the job of those two parts. The stalk, the edge and the tip are real parts of a leaf, but the slide does not talk about them." }
+        why: "The answers are \"veins\" and \"blade.\" The slide's two sentences are about the thin lines that carry water and the broad green part that takes in sunlight. The stalk, the edge and the tip are real parts of a leaf, but the slide does not talk about them." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own short text. One extra question for each core
@@ -2529,7 +2530,7 @@ PP.addLesson({
         { text: "a steady drumbeat from a marching band", correct: true },
         { text: "a flute playing a slow song" },
         { text: "a crowd clapping at the end of a show" },
-        { text: "a referee blowing a whistle" }
+        { text: "a drum solo with fast, wild rhythms that keep changing" }
       ],
       clue: "A sound should match what the slide is about. Ask what the slide is telling the reader.",
       hints: [
@@ -2541,10 +2542,10 @@ PP.addLesson({
         "The slide says the drummers play a steady beat that helps every player step together.",
         "The sound that matches is a steady drumbeat.",
         "The answer is \"a steady drumbeat from a marching band.\"",
-        "A flute, clapping and a whistle can go with a band or a game, but none of them is the beat the slide tells about."
+        "A flute, clapping and a wild drum solo can go with a band, but none of them is the steady beat the slide tells about."
       ],
       misconception: "A common mix-up is choosing a sound from the same setting. The sound has to match what the slide says.",
-      why: "The answer is \"a steady drumbeat from a marching band.\" The slide is about the beat that keeps the band together. A flute, clapping and a whistle are different sounds." },
+      why: "The answer is \"a steady drumbeat from a marching band.\" The slide is about the beat that keeps the band together. A flute, clapping and a wild drum solo are different sounds." },
     { id: "SK-TC1c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C03"],
       stem: ["Naomi's slide show about a rainy week has a photo of a girl in a yellow raincoat jumping over a puddle on her way to school. Under it she has typed only:", "Rain."],
@@ -2595,7 +2596,7 @@ PP.addLesson({
     { id: "SK-TC1c-S05", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
       like: ["SK-TC1c-C05"],
       stem: ["Ana's class is making a poster to invite neighbors to a Fall Fair at the school on Saturday. The neighbors are people of all ages who walk by the school gate."],
-      prompt: "Which TWO ideas for the poster fit its purpose and its readers? Choose two answers.",
+      prompt: "Pick the TWO things Ana's class should put on the poster. Choose two answers.",
       choices: [
         { text: "big words that tell the day, the time and the place", correct: true },
         { text: "a picture of families laughing at a game booth", correct: true },
@@ -2644,7 +2645,7 @@ PP.addLesson({
     { id: "SK-TC1c-S07", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C07"],
       stem: ["The school is hanging a banner over the road to tell drivers about the Fall Fair. Drivers pass the banner quickly."],
-      prompt: "Choose the best answer for each blank.",
+      prompt: "Fill in each blank so that the banner works for drivers.",
       text: "The banner should use {0}. The picture should be {1}.",
       slots: [
         { options: ["a few big words", "many small words", "a long list of games"], answer: 0 },
@@ -2714,13 +2715,13 @@ PP.addLesson({
     why: "\"Beak\" names the exact part. \"Crane\" and \"Part of a crane\" are too general, because they do not say which part. \"Wing\" names a different part." },
     { id: "SK-TC1c-S10", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C10"],
-      stem: ["Ben's class is making a poster for the school Open House. Here is the text.", "(1) Visit Our Open House! (2) Families can see every classroom on Tuesday after school. (3) You can look at our science projects and our reading corner. (4) My dog likes to chew on crayons. (5) Come say hello to your teacher!"],
+      stem: ["Ben's class is making a poster for the school Open House. Here is the text.", "(1) Visit Our Open House! (2) Families can see every classroom on Tuesday after school. (3) You can look at our science projects and our reading corner. (4) Our school was built many years ago. (5) Come say hello to your teacher!"],
       prompt: "Which numbered line does not fit the purpose of the poster?",
       options: [
         "(1) Visit Our Open House!",
         "(2) Families can see every classroom on Tuesday after school.",
         "(3) You can look at our science projects and our reading corner.",
-        "(4) My dog likes to chew on crayons.",
+        "(4) Our school was built many years ago.",
         "(5) Come say hello to your teacher!"
       ],
       answer: [3], pick: 1,
@@ -2733,18 +2734,18 @@ PP.addLesson({
       how: [
         "The poster is meant to get families to visit the Open House.",
         "Lines 1, 2, 3 and 5 invite families, say when to come or tell what they will see.",
-        "Line 4 is about a dog chewing crayons. It does not help families decide to come.",
-        "The answer is line 4: \"My dog likes to chew on crayons.\""
+        "Line 4 is about when the school was built. It does not help families decide to come.",
+        "The answer is line 4: \"Our school was built many years ago.\""
       ],
       misconception: "A common mix-up is leaving in a funny line. Every line should help the poster's purpose.",
-      why: "The answer is line 4, \"My dog likes to chew on crayons.\" The poster is meant to invite families to the Open House, and this line has nothing to do with that. The other lines invite families or tell what they will see." },
-    { id: "SK-TC1c-S11", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      why: "The answer is line 4, \"Our school was built many years ago.\" The poster is meant to invite families to the Open House, and this line does not help with that. The other lines invite families or tell what they will see." },
+    { id: "SK-TC1c-S11", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C11"],
       stem: ["Dara's slide is called \"The Bell Tells Us.\" It says: A school bell rings to tell students when a class begins. It rings again to tell them when the day is over."],
       prompt: "Which sound should Dara play with this slide?",
       choices: [
         { text: "a school bell ringing in a hallway", correct: true },
-        { text: "a basketball bouncing in a gym" },
+        { text: "a ship's bell ringing slowly out at sea" },
         { text: "a teacher reading a story aloud" },
         { text: "lockers closing in a busy hall" }
       ],
@@ -2752,16 +2753,16 @@ PP.addLesson({
       hints: [
         "A sound should match what the slide is about, not only the place. Ask what the slide says happens.",
         "Read both sentences on the slide. Say the one thing they tell about.",
-        "A basketball bouncing is a sound from a school, but the slide does not mention games. Check the other choices."
+        "A bell ringing at sea is a bell sound, but the slide is about a school. Check the other choices."
       ],
       how: [
         "Both sentences are about the bell and what it tells students.",
         "The sound that matches is a school bell ringing.",
         "The answer is \"a school bell ringing in a hallway.\"",
-        "A basketball, a story and lockers are all school sounds, but the slide is about the bell."
+        "A ship's bell is a bell sound but not a school one, and a story and lockers are school sounds that are not the bell."
       ],
       misconception: "A common mix-up is choosing any sound from the same place. The sound has to match what the slide says.",
-      why: "The answer is \"a school bell ringing in a hallway.\" The slide is about the bell. A basketball, a story and lockers are also school sounds, but they are not what the slide tells about." },
+      why: "The answer is \"a school bell ringing in a hallway.\" The slide is about the bell. A ship's bell is the wrong place, and a story and lockers are not what the slide tells about." },
         { id: "SK-TC1c-S12", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
     like: ["SK-TC1c-C12"],
     stem: ["An origami club at the town park wants new members, ages eight and nine. Its flyer will say: Fold, crease and make something new!"],
@@ -2812,7 +2813,7 @@ PP.addLesson({
     why: "The answer is \"a picture of tall stacks of folding chairs, and the words: Helpers needed Thursday at two o'clock. Sign up here!\" It asks readers to do the job Mr. Duran needs done. The other notices congratulate, look back or give information, but none asks for helpers." },
         { id: "SK-TC1c-S14", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
     like: ["SK-TC1c-C14"],
-    stem: ["Ms. Cole's class is making a slide show about the school walk-a-thon for the families who could not come. Slide 3 shows a photo of three third graders at a table, handing paper cups of water to walkers. The walk-a-thon was on a Saturday in October."],
+    stem: ["Ms. Cole's class is making a slide show about the school walk-a-thon for families who could not come. Slide 3 shows a photo. Three third graders stand at a table. They hand cups of water to walkers. The walk-a-thon was on a Saturday in October."],
     prompt: "Which caption tells the families the most about the photo?",
     options: [
       "On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.",
@@ -2835,29 +2836,29 @@ PP.addLesson({
     misconception: "A common mix-up is choosing a caption that is true but says very little. A caption should tell readers who were not there what they are looking at.",
     why: "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.\" It tells who, what and when. The other captions say too little, give a general fact or could go under any photo." },
         { id: "SK-TC1c-S15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
-    like: ["SK-TC1c-C15"],
-    stem: ["Priya draws a scooter for a slide about riding safely. One arrow points to a wheel, and one arrow points to the handlebar. She tries out five labels."],
-    prompt: "Which TWO labels are written the way good labels should be? Choose two answers.",
-    choices: [
-      { text: "Wheel", correct: true },
-      { text: "Handlebar", correct: true },
-      { text: "Ride it fast!" },
-      { text: "Scooter" },
-      { text: "This is the long bar that you hold on to when you steer the scooter." }
-    ],
-    clue: "A label is a word or two that names the part an arrow points to.",
-    hints: [
-      "A label is a word or two that names the part an arrow points to.",
-      "Check each choice three ways: is it short, does it name a part, and does it match one of the two arrows?",
-      "\"Ride it fast!\" tells a rider what to do, and a label names a part. Check the other four choices."
-    ],
-    how: [
-      "A good label is a word or two that names the exact part an arrow points to.",
-      "One arrow points to a wheel and one to the handlebar, so the answers are \"Wheel\" and \"Handlebar.\"",
-      "\"Ride it fast!\" is a direction, \"Scooter\" names the whole picture, and the long sentence is too long for a label."
-    ],
-    misconception: "A common mix-up is choosing a label that sounds important. A label names one part in a word or two.",
-    why: "The answers are \"Wheel\" and \"Handlebar.\" Each is a word that names a part an arrow points to. \"Ride it fast!\" is a direction, \"Scooter\" names the whole picture, and the long sentence is too long." }
+      like: ["SK-TC1c-C15"],
+      stem: ["Priya draws a toy boat for a slide about sailing. One arrow points to the big cloth that catches the wind. One arrow points to the small cloth that waves at the very top. She tries out five labels."],
+      prompt: "Which TWO labels are written the way good labels should be? Choose two answers.",
+      choices: [
+        { text: "Sail", correct: true },
+        { text: "Flag", correct: true },
+        { text: "Race it fast!" },
+        { text: "Boat" },
+        { text: "This is the big cloth that catches the wind and pushes the boat across the water." }
+      ],
+      clue: "A label is a word or two that names the part an arrow points to.",
+      hints: [
+        "A label is a word or two that names the part an arrow points to.",
+        "Check each choice three ways: is it short, does it name a part, and does that part match what one of the arrows points to?",
+        "\"Race it fast!\" tells a sailor what to do, and a label names a part. Check the other four choices."
+      ],
+      how: [
+        "A good label is a word or two that names the exact part an arrow points to.",
+        "One arrow points to the big cloth that catches the wind, which is the sail. The other points to the small cloth at the top, which is the flag. The answers are \"Sail\" and \"Flag.\"",
+        "\"Race it fast!\" is a direction, \"Boat\" names the whole picture, and the long sentence is too long for a label."
+      ],
+      misconception: "A common mix-up is choosing a label that sounds important. A label names one part in a word or two.",
+      why: "The answers are \"Sail\" and \"Flag.\" Each is a word that names the part an arrow points to. \"Race it fast!\" is a direction, \"Boat\" names the whole picture, and the long sentence is too long." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {
@@ -3853,7 +3854,7 @@ PP.addLesson({
     { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
       like: ["SK-TC2a-C15"],
       stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the space room was amazing. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was the best part. Next time I will bring a snack."],
-      prompt: "Read the two notes in the box. Mia and Theo went on the same trip. Which TWO sentences tell what their views have in common?",
+      prompt: "Mia and Theo each wrote a note about the same trip. Choose the TWO sentences that show something they both think.",
       choices: [
         { text: "Both of them found the long line hard to wait in.", correct: true },
         { text: "Both of them liked the space room best.", correct: true },

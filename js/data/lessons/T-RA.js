@@ -2069,7 +2069,7 @@ PP.addLesson({
         "Source 2: Tiny green living things called algae grow in a sloth's fur. The green color helps a sloth hide among the leaves.",
         "Summary: Sloths are slow animals that live in rain forest trees, and green algae in their fur help them hide."
       ],
-      note: "The summary uses one big idea from each source and joins them in one sentence. It does not add opinions like \"Sloths are cute.\""
+      note: "The summary uses one big idea from each source and joins them in one sentence. It does not add opinions like \"Sloths are cute.\" To show order, use time words: First, sloths live in trees. Later, algae grow in their fur."
     },
     tip: "On the test, writing questions may ask you to choose the best summary sentence, pick a fact from a second source to add to notes, or find a sentence that does not belong."
   },
@@ -2084,7 +2084,7 @@ PP.addLesson({
         "Find the big idea of Source 1: penguins live in a very cold place, and their bodies help keep them warm.",
         "Find the big idea of Source 2: penguins huddle together to stay warm.",
         "Look for what the two ideas share. Both are about staying warm in the cold.",
-        "Write the ideas in your own words, not copied word for word. Then join them with a linking word like also."
+        "Write the ideas in your own words, not copied word for word. Leave out tiny details, such as how tall a penguin is. Then join the ideas with a linking word like also, or a time word like first or later."
       ],
       answer: "Emperor penguins live in a very cold place where thick feathers and fat keep them warm. They also huddle together in winter to stay warm."
     },
@@ -2366,14 +2366,14 @@ PP.addLesson({
         misconception: "A common mix-up is including every fact about the animal. Include the facts that answer the question the summary asks.",
         why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain why dragonflies fly so well. Where they stay, how they rest and that they cannot sting are about other topics." },
       { id: "SK-RA1c-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p5", "p6"],
-        stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Most dragonflies stay close to ponds and streams."],
+        stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Dragonflies usually live in places close to water."],
         prompt: "Which sentence in Dev's draft is copied word for word from a source?",
         options: [
           "(1) A dragonfly spends the first part of its life underwater and later flies in the air.",
           "(2) A young dragonfly, called a nymph, lives in the water and eats tiny fish.",
           "(3) An adult dragonfly can steer each of its four wings on its own.",
           "(4) A dragonfly catches mosquitoes, flies and other small insects in the air.",
-          "(5) Most dragonflies stay close to ponds and streams."
+          "(5) Dragonflies usually live in places close to water."
         ],
         answer: [3], pick: 1,
         clue: "Own words means saying an idea your way instead of copying it. A copied sentence matches a source word for word.",
@@ -2564,7 +2564,7 @@ PP.addLesson({
   similar: [
     { id: "SK-RA1c-S01", type: "dropdown", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-P4"],
-      stem: ["Source A: A new termite colony starts with one king and one queen.", "Source B: Over the years, the queen lays thousands of eggs, and the colony grows."],
+      stem: ["Source A: A new termite colony starts with one king and one queen.", "Source B: After many seasons, the queen lays thousands of eggs, and the colony grows."],
       prompt: "Pick the words that should begin Mia's second sentence.",
       text: "A new termite colony starts with a king and a queen. {0} the queen lays thousands of eggs, and the colony grows.",
       slots: [
@@ -2578,7 +2578,7 @@ PP.addLesson({
       ],
       how: [
         "The first sentence tells how a colony starts, and the second tells what happens after that.",
-        "Source B says the queen lays thousands of eggs over the years. The time words are \"Over the years,\"",
+        "Source B says the queen lays thousands of eggs after many seasons, which means over the years. The time words are \"Over the years,\"",
         "\"Last week\" puts the egg laying at the wrong time, \"However\" shows a difference, and \"At first\" would put the egg laying at the start."
       ],
       misconception: "A common mix-up is choosing a time word for the wrong moment. Ask when the second idea happens.",
@@ -2586,7 +2586,7 @@ PP.addLesson({
     { id: "SK-RA1c-S02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-P5"],
       stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia."],
-      prompt: "Which sentence would be the best ending for a summary of both sources?",
+      prompt: "Which closing line wraps up what the two platypus sources show?",
       choices: [
         { text: "Both sources show that the platypus is an unusual mammal built for life in water.", correct: true },
         { text: "A platypus has webbed feet, and it uses them to push through the water." },
@@ -2620,7 +2620,7 @@ PP.addLesson({
       hints: [
         "Own words means saying an idea your way instead of copying it. The meaning must stay the same.",
         "Compare each choice with the sentences in the box. Ask two questions: does it use the same words, and does it tell the same idea?",
-        "The sentence about making a house stronger changes what termites do to a house. Check the other choices the same way."
+        "The sentence that says the tunnels never hurt a house changes what termites do to it. Check the other choices the same way."
       ],
       how: [
         "The source says termites eat wood and that their tunnels can make the beams of a house weaker.",
@@ -2631,32 +2631,32 @@ PP.addLesson({
       why: "The answer is \"Termites chew through wood, and the holes they make can make a house weaker.\" It keeps the meaning and uses new words. One choice copies, one says the tunnels never hurt, and one is an opinion." },
     { id: "SK-RA1c-S04", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C04"],
-      stem: ["Dina needs facts about weather satellites, and she has five possible sources."],
-      prompt: "Pick the TWO sources that Dina should rely on. Choose two answers.",
+      stem: ["Dina wants to learn how satellites help forecasters track storms. Here are five places she could look."],
+      prompt: "Which TWO would be good places to learn that? Choose two answers.",
       choices: [
-        { text: "a page from a national weather agency that explains how satellites track storms", correct: true },
-        { text: "a kids' encyclopedia article by a space scientist, with the date it was written", correct: true },
-        { text: "a chapter in a cookbook written by a famous chef who is very good at baking" },
-        { text: "a company's own web page that says its satellite phone is the best one you can buy" },
-        { text: "a blog post called Satellite Secrets, with no author and no date shown anywhere" }
+        { text: "the weather bureau's own explainer, signed by one of its forecasters", correct: true },
+        { text: "a science museum's guide to space tools, written by its staff astronomers", correct: true },
+        { text: "a magazine from 1958, before any weather satellite had been launched" },
+        { text: "a travel blog about the best beaches to visit in the summer months" },
+        { text: "a classmate's note that says satellites are basically magic in the sky" }
       ],
-      clue: "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
+      clue: "Choose places where people who know the topic share facts that fit your question.",
       hints: [
-        "A source you can trust gives facts, and it comes from someone who knows the topic. Ask who made it and why.",
-        "For each choice, find who wrote it, what that person knows about, and what the source wants.",
-        "A chef knows about food, not satellites. Check the other four choices."
+        "Choose places where people who know the topic share facts that fit your question.",
+        "For each place, ask who made it, how much that person knows about satellites, and whether it fits the question.",
+        "A travel blog about beaches is about a different topic. Check the other four places."
       ],
       how: [
-        "A source Dina can trust is made by someone who knows weather satellites and wants to share facts.",
-        "A national weather agency and a space scientist both know the topic. The answers are \"a page from a national weather agency that explains how satellites track storms\" and \"a kids' encyclopedia article by a space scientist, with the date it was written.\"",
-        "The chef knows baking, not satellites. The company wants to sell a phone. The blog shows no author and no date, so no one can check who wrote it."
+        "Dina needs facts about how satellites help forecasters, from people who know the topic.",
+        "A weather bureau explainer is signed by a forecaster, and a science museum guide is written by astronomers. The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"a science museum's guide to space tools, written by its staff astronomers.\"",
+        "The 1958 magazine came before weather satellites, the travel blog is about beaches, and the classmate's note is just a guess."
       ],
-      misconception: "A common mix-up is trusting a source that sounds sure. Trust a source whose writer knows the topic and can be named.",
-      why: "The answers are \"a page from a national weather agency that explains how satellites track storms\" and \"a kids' encyclopedia article by a space scientist, with the date it was written.\" Both come from people who know the topic. The chef knows a different subject, the company wants to sell, and the blog shows no author or date." },
+      misconception: "A common mix-up is trusting a place because it is easy to find. Choose places whose writers know the topic and fit the question.",
+      why: "The answers are \"the weather bureau's own explainer, signed by one of its forecasters\" and \"a science museum's guide to space tools, written by its staff astronomers.\" Both are written by people who know the topic. The 1958 magazine is too old, the travel blog is off topic, and the note is a guess." },
     { id: "SK-RA1c-S05", type: "hottext", points: 1, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C05"],
-      stem: ["Source A: A comet is a ball of ice and dust that travels around the Sun.", "Source B: When a comet gets near the Sun, its ice turns to gas. The gas forms a long tail that points away from the Sun.", "Here is Dina's draft summary. Her teacher says it may use only facts from the two sources.", "(1) A comet is a ball of ice and dust. (2) It travels around the Sun. (3) The planet Mars has two small moons. (4) Near the Sun, a comet's ice turns to gas. (5) The gas forms a long tail that points away from the Sun."],
-      prompt: "Which sentence should Dina take out of her summary?",
+      stem: ["Source A: A comet is a ball of ice and dust that travels around the Sun.", "Source B: When a comet gets near the Sun, its ice turns to gas. The gas forms a long tail that points away from the Sun.", "Dina's summary, which may use only what the sources say:", "(1) A comet is a ball of ice and dust. (2) It travels around the Sun. (3) The planet Mars has two small moons. (4) Near the Sun, a comet's ice turns to gas. (5) The gas forms a long tail that points away from the Sun."],
+      prompt: "Which numbered sentence does not belong?",
       options: [
         "(1) A comet is a ball of ice and dust.",
         "(2) It travels around the Sun.",
@@ -2730,8 +2730,8 @@ PP.addLesson({
       why: "The answers are \"It has webbed feet.\" and \"Its thick fur keeps water out.\" Both help explain why a platypus swims well. Where it hunts, the spur and laying eggs are about other topics." },
     { id: "SK-RA1c-S08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C08"],
-      stem: ["Source A: A satellite is an object that goes around Earth. Some satellites are built by people and sent into space.", "Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming.", "Dina's teacher says a summary must be in the writer's own words. Here is Dina's draft.", "(1) A satellite is a machine that circles Earth. (2) People build some satellites and launch them into space. (3) Weather satellites photograph clouds from far above. (4) The pictures help forecasters tell when storms are coming."],
-      prompt: "Which sentence in Dina's draft is copied word for word from Source B?",
+      stem: ["Source A: A satellite is an object that goes around Earth. Some satellites are built by people and sent into space.", "Source B: Weather satellites take pictures of clouds. The pictures help forecasters tell when storms are coming.", "Dina's draft, which must be in her own words:", "(1) A satellite is a machine that circles Earth. (2) People build some satellites and launch them into space. (3) Weather satellites photograph clouds from far above. (4) The pictures help forecasters tell when storms are coming."],
+      prompt: "Which numbered sentence matches Source B exactly?",
       options: [
         "(1) A satellite is a machine that circles Earth.",
         "(2) People build some satellites and launch them into space.",
@@ -2778,8 +2778,8 @@ PP.addLesson({
       why: "The order is: \"A tree begins as a tiny seed.\", then \"Soon, the seed sprouts into a small tree.\", then \"After that, each year, the tree adds one new ring to its trunk.\", then \"In the end, the rings can be counted to find out how old the tree is.\" The time words show the order." },
     { id: "SK-RA1c-S10", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C10"],
-      stem: ["Source A: Termites live in large groups called colonies. Each colony has a queen who lays eggs.", "Source B: Termites eat wood. Their tunnels can weaken the beams of a house.", "Here is Jo's draft summary.", "(1) Termites live in large groups called colonies. (2) Each colony has a queen who lays eggs. (3) Termites are the scariest bugs in the whole world. (4) Termites eat wood. (5) Their tunnels can weaken the beams of a house."],
-      prompt: "Which sentence should Jo take out because it is an opinion, not a fact from the sources?",
+      stem: ["Source A: Termites live in large groups called colonies. Each colony has a queen who lays eggs.", "Source B: Termites eat wood. Their tunnels can weaken the beams of a house.", "Jo's draft:", "(1) Termites live in large groups called colonies. (2) Each colony has a queen who lays eggs. (3) Termites are the scariest bugs in the whole world. (4) Termites eat wood. (5) Their tunnels can weaken the beams of a house."],
+      prompt: "Which numbered sentence is Jo's opinion and not a source fact?",
       options: [
         "(1) Termites live in large groups called colonies.",
         "(2) Each colony has a queen who lays eggs.",
@@ -2850,54 +2850,54 @@ PP.addLesson({
       why: "The answer is \"Some comets are named after the people who found them.\" It is a small detail about names. The other three facts explain what a comet is and what it does." },
     { id: "SK-RA1c-S13", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C13"],
-      stem: ["Sam's class is writing about how scientists can tell how old a tree is. Sam already has one source, a page from a forest science department."],
-      prompt: "Which second source should Sam use?",
+      stem: ["Sam wants to know how scientists tell the age of a tree."],
+      prompt: "Which source would help Sam the most?",
       choices: [
-        { text: "a library book by a tree scientist, with a list of sources at the back", correct: true },
-        { text: "a page about how to grow tomatoes, written by a gardening expert in town" },
-        { text: "a company's own page that sells a tree tool and says its tool is the best" },
-        { text: "an old pamphlet about trees with no date and no author named anywhere" }
+        { text: "an article by a forest scientist that shows how tree rings are counted, with this year's date", correct: true },
+        { text: "a dated page by a named writer at a tree-care company, mostly about its pruning services" },
+        { text: "a page by a forest scientist about how tall redwood trees can grow in a hundred years" },
+        { text: "an old encyclopedia from 1890 that says nobody can ever tell how old a tree is" }
       ],
-      clue: "A source you can trust shares facts from someone who knows the topic. Ask who made it and what it wants.",
+      clue: "A source you can trust shares facts from someone who knows the topic. It also has to answer your question.",
       hints: [
-        "A source you can trust shares facts from someone who knows the topic. Ask who made it and what it wants.",
-        "For each choice, ask three questions. Who made it? Does that person know about the age of trees? What does the source want?",
-        "A gardening expert knows plants, but the page is about tomatoes. Check the other three choices."
+        "A source you can trust shares facts from someone who knows the topic. It also has to answer your question.",
+        "For each choice, ask who wrote it, whether that person knows the topic, and whether the page answers Sam's question.",
+        "The page about redwoods is by a scientist, but it answers a question about height. Check the other three choices."
       ],
       how: [
-        "Sam needs a source with facts from someone who knows about trees and how to tell their age.",
-        "A tree scientist knows how trees grow, and the book lists its sources. The answer is \"a library book by a tree scientist, with a list of sources at the back.\"",
-        "The tomato page is about a different topic, the company wants to sell a tool, and the pamphlet gives no author or date."
+        "Sam needs facts about how the age of a tree is found, from someone who knows trees.",
+        "The forest scientist's article shows how tree rings are counted and is current. The answer is \"an article by a forest scientist that shows how tree rings are counted, with this year's date.\"",
+        "The tree-care page mostly sells services, the redwood page answers a question about height, and the 1890 encyclopedia is out of date."
       ],
-      misconception: "A common mix-up is trusting a source that is about plants in general. Trust a source whose writer knows this topic and can be named.",
-      why: "The answer is \"a library book by a tree scientist, with a list of sources at the back.\" A scientist who studies trees shares facts and names the sources. The tomato page is about a different topic, the company tries to sell, and the pamphlet names no author or date." },
+      misconception: "A common mix-up is trusting any page by an expert. A source also has to answer the question you are asking.",
+      why: "The answer is \"an article by a forest scientist that shows how tree rings are counted, with this year's date.\" It comes from an expert and answers Sam's question. The tree-care page mostly sells, the redwood page is about height, and the 1890 encyclopedia is out of date." },
     { id: "SK-RA1c-S14", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C14"],
       stem: ["Source 1 (school newsletter): Room 9 keeps its recess balls in a crate by the door.", "Source 2 (principal's page): Balls left outside often roll away or go flat. Starting next week, every class will get its own crate."],
       prompt: "Pick the words that make Ravi's summary flow from one source to the other.",
-      text: "{0} balls left outside often roll away or go flat, Room 9 keeps its recess balls in a crate. {1}, every class will get its own crate.",
+      text: "Room 9 keeps its recess balls in a crate by the door. {0}, every class will get its own crate. {1} balls are left outside, they often roll away or go flat.",
       slots: [
-        { options: ["Since", "Even though", "Next week", "For example"], answer: 0 },
-        { options: ["Next week", "Yesterday", "However", "Last month"], answer: 0 }
+        { options: ["Next week", "Yesterday", "Instead", "Last month"], answer: 0 },
+        { options: ["If", "Even though", "Soon", "However"], answer: 0 }
       ],
-      clue: "Linking words show how two ideas fit together. Ask which idea is the reason for the other, and which one happens later.",
+      clue: "Linking words show how two ideas fit together. Ask which idea happens later and which one depends on something else.",
       hints: [
-        "Linking words show how two ideas fit together. Ask which idea is the reason for the other, and which one happens later.",
+        "Linking words show how two ideas fit together. Ask which idea happens later and which one depends on something else.",
         "Say each sentence with the missing words. Ask which choice makes the ideas from the two sources fit together.",
         "\"Yesterday\" would put the crates in the past, but the principal's page talks about the future. Test the other choices in both blanks."
       ],
       how: [
-        "The principal's page gives the reason for the crate: balls left outside roll away or go flat.",
-        "The first blank is \"Since,\" because the rolling away is the reason Room 9 uses a crate.",
-        "The second blank is \"Next week,\" because the principal's page says the other classes get crates starting next week.",
-        "\"Even though\" and \"For example\" do not give a reason, and \"Yesterday,\" \"However\" and \"Last month\" do not match the time on the page."
+        "The newsletter tells what Room 9 does now. The principal's page tells what will happen to every class later.",
+        "The first blank is \"Next week,\" because Source 2 says every class gets a crate starting next week.",
+        "The second blank is \"If,\" because balls roll away or go flat when they are left outside.",
+        "\"Yesterday\" and \"Last month\" put the crates in the past, \"Instead\" changes the idea, and \"Even though,\" \"Soon\" and \"However\" do not fit the second sentence."
       ],
       misconception: "A common mix-up is choosing a linking word that sounds fancy. Pick the one that shows how the two ideas really fit together.",
-      why: "The answers are \"Since\" and \"Next week.\" Balls roll away or go flat, which is the reason for the crate, and the principal's page says every class gets a crate starting next week. The other words change the meaning or the time." },
+      why: "The answers are \"Next week\" and \"If.\" The principal's page says every class gets a crate starting next week, and balls roll away or go flat when they are left outside. The other words change the meaning or the time." },
     { id: "SK-RA1c-S15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C15"],
-      stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia.", "Here is Anil's draft summary.", "(1) The platypus is a mammal that lays eggs. (2) It has a flat bill and webbed feet. (3) The platypus is the funniest-looking animal on Earth. (4) Kangaroos also live in Australia. (5) It hunts for food in streams."],
-      prompt: "Anil's summary should use only facts from the two sources, with no opinions. Which TWO sentences should he take out? Choose two answers.",
+      stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia.", "Anil's draft:", "(1) The platypus is a mammal that lays eggs. (2) It has a flat bill and webbed feet. (3) The platypus is the funniest-looking animal on Earth. (4) Kangaroos also live in Australia. (5) It hunts for food in streams."],
+      prompt: "Which TWO numbered sentences are not allowed in a summary? Choose two answers.",
       choices: [
         { text: "(1) The platypus is a mammal that lays eggs." },
         { text: "(2) It has a flat bill and webbed feet." },
