@@ -30,3 +30,7 @@
 | B4–B9 | see 04-content-plan.md | NOT STARTED | — |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
+
+## Similar-question banks (added after the core items were accepted)
+- SIM-2 (S04-S15 on the nine B2 lessons): independently re-solved blind. Accepted: 3.T.T.2.a, 3.T.T.2.b, 3.T.T.2.c, TS-SEQ, TS-DESC, TS-CE, 3.T.SS.1.a, 3.T.C.1.b. TS-CC S11 still being reworked (SIM-2-rereview.md §11).
+- SIM-1 (S04-S15 on the eight B0/B1 lessons): fixes applied after SIM-1-review.md; blind re-review in progress.
