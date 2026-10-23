@@ -2191,14 +2191,14 @@ PP.addLesson({
      Author log: docs/expansion-2026-10-22/batches/B4-b4c-author-log.md. NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
-      { id: "SK-TC1c-C01", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      { id: "SK-TC1c-C01", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
         stem: ["Tessa's Slide 4 is called \"Mirrors Make Patterns.\" It says: Inside a kaleidoscope, mirrors reflect the glass pieces again and again. A few bits of glass can look like a big pattern."],
         prompt: "Which picture would fit Slide 4 best?",
         choices: [
-          { text: "a few glass bits beside two mirrors, shown again and again as a pattern", correct: true },
-          { text: "a glass jar full of colored pieces of glass sitting on a shelf in a store" },
+          { text: "two mirrors with a few glass bits between them, and the same bits repeated in a ring", correct: true },
+          { text: "a glass jar full of colored glass pieces that look the same from every side of the jar" },
           { text: "a girl turning a kaleidoscope with the tube held up to her eye" },
-          { text: "a mirror hanging on a wall in a hallway next to a coat rack" }
+          { text: "a mirror on a hallway wall showing a coat rack again and again in a long row" }
         ],
         clue: "A picture should match the words on its slide. Ask what the reader needs to see.",
         hints: [
@@ -2208,12 +2208,12 @@ PP.addLesson({
         ],
         how: [
           "The slide is called \"Mirrors Make Patterns,\" and it says the mirrors reflect the glass pieces again and again.",
-          "A good picture lets the reader see that: a few glass bits and mirrors, with the bits shown again and again as a pattern.",
-          "The answer is \"a few glass bits beside two mirrors, shown again and again as a pattern.\"",
-          "The jar shows glass but no mirrors, the girl turning the tube is from a different slide, and the hallway mirror has no glass pieces."
+          "A good picture lets the reader see that: mirrors, a few glass bits, and the same bits repeated.",
+          "The answer is \"two mirrors with a few glass bits between them, and the same bits repeated in a ring.\"",
+          "The jar shows glass but no mirrors, the girl turning the tube is from a different slide, and the hallway mirror repeats a coat rack, not glass pieces."
         ],
         misconception: "A common mix-up is picking a picture of the same toy that does not show what the slide says.",
-        why: "The answer is \"a few glass bits beside two mirrors, shown again and again as a pattern.\" It shows what the slide tells about. The jar, the girl and the hallway mirror are about kaleidoscopes or mirrors, but none shows the patterns the mirrors make." },
+        why: "The answer is \"two mirrors with a few glass bits between them, and the same bits repeated in a ring.\" It shows what the slide tells about. The jar, the girl and the hallway mirror are about kaleidoscopes or mirrors, but none shows glass bits repeated by mirrors." },
       { id: "SK-TC1c-C02", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
         stem: ["Ben's slide is called \"The Accordion Breathes.\" It says: A player pulls the accordion open and pushes it closed. Air moves over small metal strips inside, and that makes the sound."],
         prompt: "Which sound should Ben play with this slide?",
@@ -2317,22 +2317,22 @@ PP.addLesson({
           { text: "children holding bright paper pinwheels up to the wind at the park", correct: true },
           { text: "children at a craft table making paper hats with scissors and glue" },
           { text: "a pinwheel lying broken on the grass beside an empty craft table" },
-          { text: "a box of pinwheels on a store shelf, with no children in sight" }
+          { text: "children reading quietly at desks in a classroom, with no pinwheels in sight" }
         ],
         clue: "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
         hints: [
           "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
           "Read the title and the numbered lines of the poster. Picture the scene a family would find if they followed the poster.",
-          "A box on a store shelf shows no children making anything, and the poster invites children to make something. Check the other three pictures against the poster's words."
+          "A picture of children reading shows no pinwheels and no craft. Check the other three pictures against the poster's words."
         ],
         how: [
           "The title is \"Make a Pinwheel!\" and the lines invite children to a craft table to fold paper, get a stick and hold the pinwheel up to the wind.",
           "A good picture shows the same thing: children with pinwheels.",
           "The answer is \"children holding bright paper pinwheels up to the wind at the park.\"",
-          "Paper hats are a different craft, the broken pinwheel by an empty table shows nobody making anything, and the boxed pinwheels on a shelf show no children."
+          "Paper hats are a different craft, the broken pinwheel by an empty table shows nobody making anything, and the children reading at desks show no pinwheels."
         ],
         misconception: "A common mix-up is choosing a picture that has the same objects but does not show the poster's message.",
-        why: "The answer is \"children holding bright paper pinwheels up to the wind at the park.\" It shows what the poster invites children to make. Paper hats are a different craft, the broken pinwheel shows nobody, and the boxed pinwheels show no children." },
+        why: "The answer is \"children holding bright paper pinwheels up to the wind at the park.\" It shows what the poster invites children to make. Paper hats are a different craft, the broken pinwheel shows nobody, and the reading children show no pinwheels." },
             { id: "SK-TC1c-C07", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: ["p3"],
         prompt: "Imani's cousin wants a copy of the poster for children ages three to five, who cannot read yet. Choose the best answer for each blank.",
         text: "For these children, the poster should have {0}. A grown-up can help by {1}.",
@@ -2495,8 +2495,8 @@ PP.addLesson({
         prompt: "Which caption will help the relatives understand the photo best?",
         options: [
           "Grandma at age eight, with her small yellow bicycle at the house where she grew up.",
-          "This photograph is very old, and its colors have faded.",
-          "Grandma has always loved bicycles, and her favorite color was yellow.",
+          "This photograph is very old, and its colors have faded since the day it was taken.",
+          "Grandma has always loved bicycles, and she rode to the park every summer with her best friend.",
           "Bicycles are a fun way to travel and to get exercise."
         ],
         answer: [0], pick: 1,
@@ -2509,7 +2509,7 @@ PP.addLesson({
         how: [
           "The relatives have never seen this photo, so the caption should tell them who is in it, how old she is and where she is.",
           "The answer is \"Grandma at age eight, with her small yellow bicycle at the house where she grew up.\"",
-          "The caption about faded colors tells about the photograph, not the picture. The caption about always loving bicycles claims something the photo does not show.",
+          "The caption about faded colors tells about the photograph, not the picture. The caption about riding to the park every summer claims something the photo does not show.",
           "The caption about bicycles and exercise is about bicycles in general, so it says nothing about this photo."
         ],
         misconception: "A common mix-up is choosing a caption that is true about the topic. A caption has to tell what is in this picture.",
@@ -2761,13 +2761,13 @@ PP.addLesson({
     why: "\"Beak\" names the exact part. \"Crane\" and \"Part of a crane\" are too general, because they do not say which part. \"Wing\" names a different part." },
     { id: "SK-TC1c-S10", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C10"],
-      stem: ["Ben's class is making a poster for the school Open House. Here is the text.", "(1) Visit Our Open House! (2) Families can see every classroom on Tuesday after school. (3) You can look at our science projects and our reading corner. (4) Our school was built many years ago. (5) Come say hello to your teacher!"],
-      prompt: "Which numbered line does not fit the purpose of the poster?",
+      stem: ["Ben's class is making a poster for the school Open House. Here is the text.", "(1) Visit Our Open House! (2) Families can see every classroom on Tuesday after school. (3) You can look at our science projects and our reading corner. (4) Our principal's favorite color is green, and so are her shoes. (5) Come say hello to your teacher!"],
+      prompt: "Ben wants to cut the one line that does not help the poster. Which line should go?",
       options: [
         "(1) Visit Our Open House!",
         "(2) Families can see every classroom on Tuesday after school.",
         "(3) You can look at our science projects and our reading corner.",
-        "(4) Our school was built many years ago.",
+        "(4) Our principal's favorite color is green, and so are her shoes.",
         "(5) Come say hello to your teacher!"
       ],
       answer: [3], pick: 1,
@@ -2780,11 +2780,11 @@ PP.addLesson({
       how: [
         "The poster is meant to get families to visit the Open House.",
         "Lines 1, 2, 3 and 5 invite families, say when to come or tell what they will see.",
-        "Line 4 is about when the school was built. It does not help families decide to come.",
-        "The answer is line 4: \"Our school was built many years ago.\""
+        "Line 4 is about the principal's favorite color. It does not help families decide to come.",
+        "The answer is line 4: \"Our principal's favorite color is green, and so are her shoes.\""
       ],
       misconception: "A common mix-up is leaving in a funny line. Every line should help the poster's purpose.",
-      why: "The answer is line 4, \"Our school was built many years ago.\" The poster is meant to invite families to the Open House, and this line does not help with that. The other lines invite families or tell what they will see." },
+      why: "The answer is line 4, \"Our principal's favorite color is green, and so are her shoes.\" The poster is meant to invite families to the Open House, and this line does not help with that. The other lines invite families or tell what they will see." },
     { id: "SK-TC1c-S11", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
       like: ["SK-TC1c-C11"],
       stem: ["Dara's slide is called \"The Bell Tells Us.\" It says: A school bell rings to tell students when a class begins. It rings again to tell them when the day is over."],
@@ -2817,8 +2817,8 @@ PP.addLesson({
       { text: "children about nine years old folding colorful paper squares at a table", correct: true },
       { text: "a paper crane and a paper boat sitting side by side on a table", correct: true },
       { text: "teenagers in uniforms practicing a marching routine on a field" },
-      { text: "a quiet room with a closed door and a sign that says No Visitors" },
-      { text: "an adult frowning at a stack of papers on a desk" }
+      { text: "children about five years old pressing paper into a box at a table" },
+      { text: "children about nine years old kicking a ball across a grassy field" }
     ],
     clue: "Pictures should match the notice's words and the people who will read it. Ask what the words promise.",
     hints: [
@@ -2830,10 +2830,10 @@ PP.addLesson({
       "The words promise folding paper to make something new. The readers are eight and nine years old.",
       "Children their age folding colorful paper shows the activity.",
       "A paper crane and a paper boat show what a child can make. The answers are \"children about nine years old folding colorful paper squares at a table\" and \"a paper crane and a paper boat sitting side by side on a table.\"",
-      "The marching teenagers, the closed door and the frowning adult do not show the fun of folding paper."
+      "The marching teenagers are too old, the five-year-olds are too young and are not folding, and the children kicking a ball show a different activity."
     ],
     misconception: "A common mix-up is choosing a picture of the right place but the wrong readers or activity. The picture should show what the words promise.",
-    why: "The answers are \"children about nine years old folding colorful paper squares at a table\" and \"a paper crane and a paper boat sitting side by side on a table.\" They show the folding and the new things the notice promises. The other pictures do not." },
+    why: "The answers are \"children about nine years old folding colorful paper squares at a table\" and \"a paper crane and a paper boat sitting side by side on a table.\" They show the folding and the new things the notice promises. The other pictures show the wrong ages or a different activity." },
         { id: "SK-TC1c-S13", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
     like: ["SK-TC1c-C13"],
     stem: ["Mr. Duran needs three helpers to set up chairs in the gym before the school concert on Thursday. He is making a notice for the hallway wall."],
@@ -2862,10 +2862,10 @@ PP.addLesson({
     stem: ["Ms. Cole's class is making a slide show about the school walk-a-thon for families who could not come. Slide 3 shows a photo. Three third graders stand at a table. They hand cups of water to walkers. The walk-a-thon was on a Saturday in October."],
     prompt: "Which caption tells the families the most about the photo?",
     options: [
-      "On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.",
-      "Three children stand behind a table at the school.",
-      "Walkers need to drink water on a long walk on a warm day.",
-      "Everyone had a great time, and it was a very good day."
+      "On a Saturday in October, three third graders hand cups of water to walkers.",
+      "Three children stand behind a table at the school on a sunny morning, smiling at the camera.",
+      "Walkers need to drink water on a long walk, and cold water helps them feel better on a warm day.",
+      "Everyone had a great time, and it was a very good day for the whole school and all the families."
     ],
     answer: [0], pick: 1,
     clue: "A caption tells what the picture shows. It can also tell readers who, what, where and when.",
@@ -2876,11 +2876,11 @@ PP.addLesson({
     ],
     how: [
       "The families were not at the walk-a-thon, so the caption should tell who is in the photo, what they are doing and when it happened.",
-      "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.\"",
+      "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers.\"",
       "The caption about three children at a table leaves out what they are doing and when. The caption about drinking water is a general fact, and the caption about a great time could go under any photo."
     ],
     misconception: "A common mix-up is choosing a caption that is true but says very little. A caption should tell readers who were not there what they are looking at.",
-    why: "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.\" It tells who, what and when. The other captions say too little, give a general fact or could go under any photo." },
+    why: "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers.\" It tells who, what and when. The other captions say too little, give a general fact or could go under any photo." },
         { id: "SK-TC1c-S15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
       like: ["SK-TC1c-C15"],
       stem: ["A teapot drawing for a slide has these parts: lid (a cover on top), spout (a narrow piece that sticks out), handle (a curved piece on the side), base (a flat bottom) and knob (a bump on the lid).", "The slide text: Hot tea leaves the pot through this opening. A person grips the loop to lift it."],

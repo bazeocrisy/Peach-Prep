@@ -180,3 +180,30 @@ Live choices after clue and hints 1-3 (hand recount):
 Not done: item-text reading level above about 4.5 on several long stems (only C14 was simplified); a separate Learn It example for a two-blank linking item.
 
 Needs blind re-solve: C.1.c C01, C02, C08 (now choose two), S15, S12, S13; RA.1.c C01 to C05 (all new, axolotl), C07, S07, S04.
+
+## Fixes after the fourth review (both lessons)
+
+MUSTs
+- C.1.c S13: hint 3, how (steps 2 and 3) and why now describe only the four real notices (chairs sign-up key; thank-you for last year's concert; gym-doors "chairs will be set up" announcement; program). No "Congratulations", "gold star" or "first notice" wording remains. Hint 3 now says a thank-you for last year looks back while Mr. Duran needs helpers this Thursday (one distractor).
+- C.1.c S05: hint 3 now rules out the tiny map ("cannot be read from the sidewalk") and no longer restates a key.
+- RA.1.c C02: the frogs-and-toads distractor is gone. It is now "Both sources show that axolotls make the best pets for young children." (a wrong claim in the key's frame); how and why say "a claim the sources do not support". "Frogs and toads" now appears only in C05.
+
+SHOULDs done
+- C.1.c C01: key reworded (no longer repeats the slide's phrases); decoys reuse slide words (jar "look the same from every side of the jar", hallway mirror showing a coat rack "again and again"); DOK set to 2 (same as C02). Key is no longer the longest.
+- C.1.c C14: two wrong captions lengthened (an unsupported "rode to the park every summer" claim is the longest), so the key is not the longest. S14: key shortened ("...hand cups of water to walkers."), the three wrong captions lengthened; key is now the shortest.
+- C.1.c S10: new prompt ("Ben wants to cut the one line that does not help the poster. Which line should go?") and a different kind of off-purpose line (the principal's favorite color).
+- C.1.c S12: the closed-door and frowning-adult photos are replaced by near-misses (children about five pressing paper into a box; children about nine kicking a ball). how and why updated.
+- C.1.c C06: the store-shelf decoy is replaced by children reading at desks with no pinwheels; h3, how and why updated, so nothing sets up C10's toy-store key.
+- RA.1.c C07: stem now asks how a dragonfly "moves through the air"; option A is replaced by the eyes fact (spotting an insect), so the verbatim "catches mosquitoes" sentence appears only in C08 and C10. h3, how and why updated.
+- RA.1.c S02: key reworded (no "Both sources show that"), and the zoo decoy is replaced by "Both sources show that the platypus is the fastest swimmer in all of Australia." C02 now has the same kind of decoy. P5 (Together, legacy) was NOT changed.
+- RA.1.c keys not the longest: S11 distractors lengthened (key is now the shortest); C11, C13, C03, S13 one distractor each lengthened.
+
+NOT done (say so)
+- Set variety (kaleidoscope x4 in set 1, one poster in set 2; RA axolotl x5 and dragonfly x5) and C09/C04 label-rule overlap: not changed.
+- P5 "Both sources show that" key frame: unchanged.
+
+Gates: check-content PASS (0 failures, 9 warnings, none for my lessons); check-writing 0 failures; check-instructional-copy 28 passed. Jaccard (sim3.js, four measures): no similar item at or over 0.21 in either lesson (max 0.200, C.1.c S07); shared options 0.
+
+Live choices after hints 1-3 (hand recount, unchanged from earlier except as noted): C.1.c C01 3; C06 3 (reading-children decoy named in h3); S12 4 live of 5 after h3; S13 3; S05 4. RA.1.c C02 3; C07 4.
+
+Needs blind re-solve: C.1.c S13, S05, S12, C01, C06, S10, C14, S14; RA.1.c C02, C07, S02, S11.

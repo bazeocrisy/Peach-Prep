@@ -2280,7 +2280,7 @@ PP.addLesson({
         choices: [
           { text: "Both sources show that axolotls are special water animals that need help.", correct: true },
           { text: "An axolotl hunts for worms, insects and small fish when it is dark outside." },
-          { text: "Salamanders belong to the same group of animals as frogs and toads." },
+          { text: "Both sources show that axolotls make the best pets for young children." },
           { text: "Those are all of the facts about axolotls that I had time to write." }
         ],
         clue: "A good ending wraps up the big ideas. Think about what each source is mostly about.",
@@ -2292,10 +2292,10 @@ PP.addLesson({
         how: [
           "Source 1 is about an animal that lives in water. Source 2 is about its power to regrow parts and its trouble in the wild.",
           "A good ending wraps up both ideas: \"Both sources show that axolotls are special water animals that need help.\"",
-          "The hunting sentence is one detail from Source 1, the sentence about frogs and toads adds a new fact, and \"Those are all of the facts about axolotls that I had time to write\" tells nothing about axolotls."
+          "The hunting sentence is one detail from Source 1, the sentence about pets is a claim that neither source makes, and \"Those are all of the facts about axolotls that I had time to write\" tells nothing about axolotls."
         ],
         misconception: "A common mix-up is ending with one small detail. An ending wraps up the big ideas of both sources.",
-        why: "The answer is \"Both sources show that axolotls are special water animals that need help.\" It wraps up the big ideas of both sources. The other choices give one detail, add a new fact or say nothing about axolotls." },
+        why: "The answer is \"Both sources show that axolotls are special water animals that need help.\" It wraps up the big ideas of both sources. The other choices give one detail, make a claim the sources do not support or say nothing about axolotls." },
       { id: "SK-RA1c-C03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p10"],
         stem: ["Source 2 says: \"If it loses a leg, a new leg grows back. The new leg heals without a scar.\""],
         prompt: "Kai wants to write this idea in his own words. Which sentence for his summary keeps the meaning and does NOT copy Source 2?",
@@ -2303,7 +2303,7 @@ PP.addLesson({
           { text: "An axolotl can grow a replacement for a lost leg, and the spot heals with no scar.", correct: true },
           { text: "If it loses a leg, a new leg grows back. The new leg heals without a scar." },
           { text: "An axolotl that loses a leg never gets it back, and a scar forms on the spot." },
-          { text: "Growing back a leg is the coolest trick that any animal in the world can do." }
+          { text: "Growing back a leg is the coolest trick that any animal in the whole world can do at all." }
         ],
         clue: "Own words means saying an idea your way instead of copying it. The meaning must stay the same.",
         hints: [
@@ -2394,28 +2394,28 @@ PP.addLesson({
         misconception: "A common mix-up is picking a true detail. The big idea sums up the whole source.",
         why: "The answers are \"Source 1: A dragonfly lives first underwater and then in the air.\" and \"Source 2: An adult dragonfly is a skilled flier that hunts in the air.\" Each one sums up a whole source. The other sentences are details from one paragraph." },
       { id: "SK-RA1c-C07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: ["p6"], pick: 2,
-        stem: ["Dev's summary will explain why adult dragonflies are such good fliers."],
+        stem: ["Dev's summary will explain how an adult dragonfly moves through the air."],
         prompt: "Which TWO facts from Source 2 should Dev include? Choose two answers.",
         choices: [
           { text: "It has four wings, and it can move each wing by itself.", correct: true },
           { text: "It can fly forward, hover and even fly backward.", correct: true },
           { text: "Most dragonflies stay near ponds and streams." },
           { text: "A resting dragonfly holds its wings out flat." },
-          { text: "It catches mosquitoes, flies and other small insects in the air." }
+          { text: "Its two large eyes help it spot a tiny insect from far away." }
         ],
         clue: "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
         hints: [
           "Important facts answer the question your summary is asking. Facts about other topics can be left out.",
           "Reread the sentence in the box. Then look in Source 2 for facts that match it.",
-          "A fact about how a dragonfly rests does not explain why it flies so well. Check the other four choices."
+          "A fact about how a dragonfly rests does not explain how it moves through the air. Check the other four choices."
         ],
         how: [
-          "Dev's summary is about why dragonflies fly so well, so each fact must help explain that.",
+          "Dev's summary is about how a dragonfly moves through the air, so each fact must help explain that.",
           "A dragonfly can move each of its four wings by itself, and that lets it fly forward, hover and fly backward. The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\"",
-          "Where dragonflies stay, how they rest and what they catch are true, but they do not explain how well they fly."
+          "Where dragonflies stay, how they rest and how they spot insects are true, but they do not explain how a dragonfly moves through the air."
         ],
         misconception: "A common mix-up is including every fact about the animal. Include the facts that answer the question the summary asks.",
-        why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain why dragonflies fly so well. Where they stay, how they rest and what they catch are about other topics." },
+        why: "The answers are \"It has four wings, and it can move each wing by itself.\" and \"It can fly forward, hover and even fly backward.\" Both explain how a dragonfly moves through the air. Where they stay, how they rest and how they spot insects are about other topics." },
       { id: "SK-RA1c-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: ["p5", "p6"],
         stem: ["Dev's teacher says a summary must be in the writer's own words. Here is Dev's draft.", "(1) A dragonfly spends the first part of its life underwater and later flies in the air. (2) A young dragonfly, called a nymph, lives in the water and eats tiny fish. (3) An adult dragonfly can steer each of its four wings on its own. (4) A dragonfly catches mosquitoes, flies and other small insects in the air. (5) Dragonflies usually live in places close to water."],
         prompt: "Which sentence in Dev's draft is copied word for word from a source?",
@@ -2495,7 +2495,7 @@ PP.addLesson({
         prompt: "Kayla is writing a summary of both sources. Which opening sentence best sums up the big ideas of BOTH?",
         choices: [
           { text: "A warm-up gets the body ready for sports, and kids can do a short, easy warm-up and cool-down.", correct: true },
-          { text: "Warm muscles can stretch and move more easily than cold muscles do, as Source 1 says." },
+          { text: "Warm muscles can stretch and move more easily than cold muscles do, as Source 1 says about warming up." },
           { text: "After a game, kids should walk slowly for five to ten minutes to cool down and rest." },
           { text: "Every player should always warm up before every game of every sport and never skip it." }
         ],
@@ -2543,7 +2543,7 @@ PP.addLesson({
         prompt: "Which second source should Kayla use?",
         choices: [
           { text: "a state agency page that tells where drinking water comes from and how it is cleaned", correct: true },
-          { text: "an ad for bottled water that says tap water is bad, so you should buy it" },
+          { text: "an ad for bottled water that says tap water is bad, so everyone should buy it instead" },
           { text: "a post by a stranger who writes, \"I think the water comes from a big lake somewhere\"" },
           { text: "a funny cartoon about a talking water drop who goes on a long trip" }
         ],
@@ -2639,9 +2639,9 @@ PP.addLesson({
       stem: ["Source A: A platypus is a mammal that lays eggs. Very few mammals do that.", "Source B: A platypus has a flat bill and webbed feet. It hunts for food in streams in Australia."],
       prompt: "Which closing line wraps up what the two platypus sources show?",
       choices: [
-        { text: "Both sources show that the platypus is an unusual mammal built for life in water.", correct: true },
+        { text: "A platypus is a mammal unlike most others, and its body is built for life in water.", correct: true },
         { text: "A platypus has webbed feet, and it uses them to push through the water." },
-        { text: "Many people visit zoos to see animals from Australia and other far-away places." },
+        { text: "Both sources show that the platypus is the fastest swimmer in all of Australia." },
         { text: "That is everything that I know about the platypus, so this is the end." }
       ],
       clue: "A good ending wraps up the big ideas. Think about what each source is mostly about.",
@@ -2652,11 +2652,11 @@ PP.addLesson({
       ],
       how: [
         "Source A is about a mammal that lays eggs. Source B is about the bill and feet that help it live in water.",
-        "A good ending joins both ideas: \"Both sources show that the platypus is an unusual mammal built for life in water.\"",
-        "The webbed feet sentence is one small detail, the sentence about zoo visitors adds a new idea, and \"That is everything that I know about the platypus, so this is the end\" says nothing about the platypus."
+        "A good ending joins both ideas: \"A platypus is a mammal unlike most others, and its body is built for life in water.\"",
+        "The webbed feet sentence is one small detail, the \"fastest swimmer\" sentence is a claim neither source makes, and \"That is everything that I know about the platypus, so this is the end\" says nothing about the platypus."
       ],
       misconception: "A common mix-up is ending with one small detail. An ending wraps up the big ideas of both sources.",
-      why: "The answer is \"Both sources show that the platypus is an unusual mammal built for life in water.\" It wraps up the egg laying from Source A and the bill and feet from Source B. The other choices are a detail, a new idea or nothing." },
+      why: "The answer is \"A platypus is a mammal unlike most others, and its body is built for life in water.\" It wraps up the egg laying from Source A and the bill and feet from Source B. The other choices are a detail, a claim the sources do not make, or nothing." },
     { id: "SK-RA1c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.c"], passages: [],
       like: ["SK-RA1c-C03"],
       stem: ["Source B says: \"Termites eat wood. Their tunnels can weaken the beams of a house.\""],
@@ -2859,15 +2859,15 @@ PP.addLesson({
       prompt: "Which first sentence would start a summary that covers both of Dina's sources?",
       choices: [
         { text: "Satellites circle Earth, and weather ones help forecasters see storms.", correct: true },
-        { text: "Some satellites are built by people." },
-        { text: "Weather satellites take pictures of clouds." },
-        { text: "Every house in the world should have a weather satellite." }
+        { text: "Some satellites are built by people and sent into space to circle Earth." },
+        { text: "Weather satellites take pictures of clouds that help forecasters tell when storms are coming." },
+        { text: "Every house in the world should have its own weather satellite for storm pictures." }
       ],
       clue: "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
       hints: [
         "A summary of two sources needs a big idea from each one. Ask what each source is mostly about.",
         "Read each choice and ask which of the two sources it comes from.",
-        "\"Every house should have a weather satellite\" says more than the sources do. Check the other choices."
+        "\"Every house should have its own weather satellite\" says more than the sources do. Check the other choices."
       ],
       how: [
         "Source A is mostly about what a satellite is, and Source B is mostly about how weather satellites help forecasters.",
@@ -2905,7 +2905,7 @@ PP.addLesson({
       prompt: "Which source would help Sam the most?",
       choices: [
         { text: "an article by a forest scientist that shows how tree rings are counted, with this year's date", correct: true },
-        { text: "a dated page by a named writer at a tree-care company, mostly about its pruning services" },
+        { text: "a dated page by a named writer at a tree-care company, mostly about its pruning and planting services" },
         { text: "a page by a forest scientist about how tall redwood trees can grow in a hundred years" },
         { text: "an old encyclopedia from 1890 that says nobody can ever tell how old a tree is" }
       ],
