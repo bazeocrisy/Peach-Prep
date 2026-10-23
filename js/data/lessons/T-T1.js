@@ -192,8 +192,8 @@ PP.addLesson({
         clue: "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
         hints: [
           "A describing detail can tell you about a character, not only about a place. Ask what this detail tells you about who Abuela is.",
-          "Look closely at the words after \"used to sing\" in that sentence. Then ask who is listening now.",
-          "Nothing in the story says Abuela is sad or wants to leave, so the choice about being homesick has no support. Test each choice that is left against paragraph 4."
+          "Look closely at the words after \"used to sing\" in that sentence.",
+          "It is Mateo, not Abuela, who sings louder than the thunder, so that choice does not fit. Test each choice that is left against paragraph 4."
         ],
         how: [
           "Paragraph 4 says Abuela plays a song she used to sing as a girl in Puerto Rico. \"As a girl\" means when she was a child.",
@@ -207,24 +207,24 @@ PP.addLesson({
         prompt: "The author wants to add one more describing sentence at the end of paragraph 4. It should help the reader picture the room once the flashlight is set up. Which sentence fits best?",
         choices: [
           { text: "Soft yellow light glowed on the ceiling like a tiny moon.", correct: true },
-          { text: "Abuela had learned to play the guitar a long time ago." },
+          { text: "Abuela's old guitar had a long scratch across the front." },
           { text: "\"Where did you get that old guitar?\" Mateo asked." },
           { text: "Mateo pulled his blanket up over his head." }
         ],
         clue: "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the room.",
         hints: [
           "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the room.",
-          "Reread paragraph 4 to see what Abuela does with the flashlight. The new sentence has to fit right after that.",
+          "Reread paragraph 4. The new sentence has to fit right after its last sentence.",
           "The line in quotation marks is dialogue, so it does not describe the room. Check each sentence that is left: does it help you picture the room itself?"
         ],
         how: [
           "The job is to describe the room, so the new sentence must tell how the room looks, sounds or feels.",
           "In paragraph 4, Abuela stands the flashlight up so that its light shines on the ceiling. A sentence about that light fits right after it.",
           "The answer is \"Soft yellow light glowed on the ceiling like a tiny moon.\" It helps the reader see the dark room glowing.",
-          "Check the others: the guitar sentence tells about Abuela, the question is dialogue, and pulling the blanket over his head is an action, not a picture of the room."
+          "Check the others: the scratch describes the guitar, not the room, the question is dialogue, and pulling the blanket over his head is an action, not a picture of the room."
         ],
         misconception: "A common mix-up is choosing a sentence about a character when the job is to describe the place.",
-        why: "The answer is \"Soft yellow light glowed on the ceiling like a tiny moon.\" It describes how the room looks once the flashlight shines on the ceiling. The guitar sentence tells about Abuela, the question is dialogue, and pulling up the blanket is an action." },
+        why: "The answer is \"Soft yellow light glowed on the ceiling like a tiny moon.\" It describes how the room looks once the flashlight shines on the ceiling. The scratch describes the guitar, not the room, the question is dialogue, and pulling up the blanket is an action." },
       { id: "SK-TT1a-C05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
         stem: ["The score was tied with one minute left in the game. Jamal ran up and kicked the ball as hard as he could. It sailed over the goal, over the fence and into Mrs. Green's pond. Every player on the field froze."],
         prompt: "Read the story. How does Jamal's kick move the plot forward?",
@@ -238,7 +238,7 @@ PP.addLesson({
         hints: [
           "An action can move the plot by starting a problem, changing it or solving it. Ask what is different after the character acts.",
           "Read the last two sentences. Where does the ball end up, and how do the players react?",
-          "The ball goes over the goal, not into it, so the kick does not win the game. Test the choices that are left against what happens after the kick."
+          "How hard Jamal kicks tells about Jamal, not about the plot. Test the choices that are left against what happens after the kick."
         ],
         how: [
           "Before the kick, the game is tied and everyone is playing.",
@@ -309,7 +309,7 @@ PP.addLesson({
         clue: "Dialogue can show what a character is like. Ask what kind of person would say these words.",
         hints: [
           "Dialogue can show what a character is like. Ask what kind of person would say these words.",
-          "Reread what Mr. Webb says in paragraph 6. Notice what he does just before he speaks.",
+          "Reread what Mr. Webb says in paragraph 6.",
           "In paragraph 7 he hands Nadia another book about sharks, so he does not want her to stop reading them. Test each choice that is left against his words."
         ],
         how: [
@@ -553,8 +553,8 @@ PP.addLesson({
       clue: "Dialogue can start a problem, change it or help solve it. Ask what changes after a character speaks.",
       hints: [
         "Dialogue can start a problem, change it or help solve it. Ask what changes after a character speaks.",
-        "Find the problem first. Then read what happens after Marco speaks.",
-        "The paint runs out before Marco says anything, so his words do not start the problem. Test each choice that is left."
+        "Find the problem first. Then ask what changes because of Marco's words.",
+        "Marco talks about paint, not about where the playground is, so that choice does not fit. Test each choice that is left."
       ],
       how: [
         "The problem: the blue paint runs out, and Ms. Tran thinks they must stop.",
@@ -1014,11 +1014,11 @@ PP.addLesson({
           { text: "It shows that Jada left her own footprints near the gate." },
           { text: "It shows that the dirt was wet because it rained that night." }
         ],
-        clue: "Ask what this sentence tells you about the rabbits, and compare it with what the footprints showed before.",
+        clue: "Ask what this sentence tells you, and compare it with what the footprints showed before.",
         hints: [
-          "Ask what this sentence tells you about the rabbits, and compare it with what the footprints showed before.",
+          "Ask what this sentence tells you, and compare it with what the footprints showed before.",
           "Find the footprints in paragraph 2. Where were they, and what was missing there?",
-          "Every tomato is still on its vine, so the rabbits did not find a new way in. Test each choice that is left."
+          "The story never says it rained, so that choice has no support. Test each choice that is left."
         ],
         how: [
           "In paragraph 2, tiny footprints cross the dirt where tomatoes are missing. The footprints show where the rabbits went.",
@@ -1114,7 +1114,7 @@ PP.addLesson({
         hints: [
           "A solution fixes the problem. To prove a problem is solved, look for what shows the plan worked, not for the plan itself.",
           "Read from the moment the cube is wrapped to the end of the story. Choose two.",
-          "Wrapping the cube is part of the plan, but it happens before anyone knows whether the plan works. Check each other detail: does it show how things turned out for this team?"
+          "Wrapping the cube is part of the plan, but it happens before anyone knows whether the plan works. Check each other detail: does it prove the plan worked?"
         ],
         how: [
           "The problem is keeping a cube from melting until the lunch bell.",
@@ -1411,7 +1411,7 @@ PP.addLesson({
     "SK-TT1b-P4": {
       hints: [
         "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
-        "Ask which event is the trouble, which one explains it, which one fixes it, and which one shows how it turned out.",
+        "For each event, ask what has to happen before it can happen.",
         "Jada finds the tomatoes gone before anyone tells her why. Use the same kind of thinking to place the other events."
       ],
       how: [
@@ -2526,7 +2526,7 @@ PP.addLesson({
         hints: [
           "Two characters can do the same kind of thing in different ways. Find exactly what each one does once they decide to share.",
           "Find the part of each story where the main character first shares.",
-          "The story never says Kofi goes to a market, so that choice does not fit the first blank. Use the last paragraph of \"The Red Sled\" to test each choice for the second blank."
+          "The story never says Kofi goes to a market, so that choice does not fit the first blank. For the second blank, check what happens to the sled after Lucy decides to share."
         ],
         how: [
           "Kofi gives a mango to every child he meets on the road.",
@@ -2699,8 +2699,8 @@ PP.addLesson({
         clue: "To compare customs from two cultures, look past what people do and ask what the custom means to the family.",
         hints: [
           "To compare customs from two cultures, look past what people do and ask what the custom means to the family.",
-          "Reread paragraph 3 of Haruto's story. Then reread the paragraphs of Freja's story that come before midnight.",
-          "Grandpa wobbling on his chair is funny, but it does not tell what a custom means. Test each choice that is left against Grandma's words."
+          "Reread paragraph 3 of Haruto's story. Then reread all of Freja's story.",
+          "Freja checking the clock shows she can hardly wait, but it does not tell what a custom means. Test each choice that is left against Grandma's words."
         ],
         how: [
           "Grandma's words tell what the noodles mean: a long, healthy life, and a hope for a good new year.",
@@ -2855,7 +2855,7 @@ PP.addLesson({
       ],
       why: "The answer is \"Sam cares for the bird until it can leave, but Amina keeps the kitten.\" Sam feeds the bird until it can fly away, and Amina's family keeps the kitten as a pet. One choice swaps the places, Sam does not keep the bird, and neither story says who helps." },
     { id: "SK-TT1d-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.d"], passages: [],
-      like: ["SK-TT1d-C06", "SK-TT1d-C04", "SK-TT1d-C11"],
+      like: ["SK-TT1d-C06", "SK-TT1d-C11"],
       stem: ["Story 1: On a hot afternoon in Australia, Mia's family eats lunch on the beach under a big umbrella.", "Story 2: On a hot afternoon in Egypt, Karim's family eats lunch on a boat on the Nile River."],
       prompt: "How are the settings of the two stories alike?",
       choices: [
@@ -2948,7 +2948,7 @@ PP.addLesson({
       ],
       how: [
         "At the end of Kofi's story, sharing his mangoes fills his days with friends.",
-        "At the end of Lucy's story, the three friends ride together, and it is the best ride of the day.",
+        "At the end of Lucy's story, it is the best ride of the day.",
         "Part A: Sharing with others can make life better. Part B: \"Sharing his mangoes had filled his days with friends.\" and \"It was the best ride of the day.\"",
         "Keeping new things clean and getting sick fit only one story or neither. Two sentences come at the turning point, \"The next morning, he filled a basket and carried it down the road\" and \"Lucy pulled the sled over to her friends,\" but neither one tells how things turned out afterward. Both characters start out keeping their things for themselves, and that makes them unhappy, so that lesson is backward."
       ],
