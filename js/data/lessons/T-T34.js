@@ -3242,11 +3242,11 @@ PP.addLesson({
         how: [
           "Blank 1 must rhyme with up. Blank 2 must rhyme with hot.",
           "Blank 1: cup rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass makes sense but does not rhyme.",
-          "Blank 2: lot rhymes with hot, and \"I sell a lot\" means she sold many. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
+          "Blank 2: lot rhymes with hot, and \"I sell a lot\" means she sold many. Knot rhymes but does not fit, and most does not rhyme or make sense there.",
           "So the answers are cup and lot."
         ],
         misconception: "A common mix-up is choosing the word that makes sense without checking the rhyme, or the reverse. Each blank needs both.",
-        why: "Blank 1 needs \"cup\": it rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass does not rhyme. Blank 2 needs \"lot\": it rhymes with hot, and \"I sell the lot\" means all of them. Knot rhymes but does not fit, and most does not rhyme." },
+        why: "Blank 1 needs \"cup\": it rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass does not rhyme. Blank 2 needs \"lot\": it rhymes with hot, and \"I sell a lot\" means she sold many cups. Knot rhymes but does not fit, and most does not rhyme." },
       { ref: "SK-TT4b-P6" }
     ] },
     { title: "Set 2", items: [

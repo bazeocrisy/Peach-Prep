@@ -619,3 +619,26 @@ Stem now: "Coaches tell players to eat foods with protein after practice. Peanut
 ## F6. Result
 
 No MUST in any of the four items. Fix R-2d-1 if time allows. Everything else in the third-review SHOULD pass for 1.e and 2.d holds.
+
+---
+
+## Late fix check (2.d C04 distractor, reviewed 2026-10-23)
+
+**Method.** Blind solve of 2.d C04 and S04 in a Node vm sandbox (keys, why, hints, how, clue stripped; choices seeded-shuffled), answers saved to `b4r7/answers.json` before keys were extracted. Agreement 2/2 (C04, S04). Honesty note: not a naive solve. I knew from the earlier round which distractor had been replaced, and I had read my own earlier F4 text, but the new wording was seen only in the stripped print, and the answer file was written before any key was printed.
+
+**C04 now:** blank "Protein is {0}." options: "a part of food that helps muscles and bones grow" (key) / "a part of food that gives it a bright color" / "a part of food that makes it taste sweet". Stem: coaches tell players to eat protein foods after practice; peanuts, eggs, beans and fish have it.
+
+- **Blind key agreement.** Agree.
+- **Key beside explanation.** `why` and `how` both name the keyed choice, agree with the key flag, and quote no distractor as the answer. Consistent.
+- **Second defensible answer.** None. The old risk (protein as "quick energy") is gone. Neither remaining distractor can be defended from the text or from nutrition facts.
+- **Key defensible.** Yes. Protein builds and repairs body tissue (muscle, bone, skin): https://kidshealth.org/HumanaOhio/en/kids/protein-def.html and https://pubs.nmsu.edu/_e/E143/ (from the earlier round, "builds, repairs, and maintains all body tissues, including bones, muscles..."). A web search this round turned up only commercial pages, so I rely on those two sources. "Muscles and bones grow" is a grade-3 level statement of that.
+- **Live choices after hints 1-3.** H1 (definition, use the examples) and H2 (why a coach wants these eaten after practice) leave all three. H3 removes "sweet" (eggs, beans, fish are not sweet) and says "look at the choices that are left": two remain, key and "bright color". H3 does not name or echo the key. The live choice is real but weak: "bright color" is easy to reject. NOTE, not a fault, because the commonest B0 fault (H3 leaving only the key) does not occur.
+- **Longest-key cue.** Key is the longest option (48 vs 43 and 40 characters). The margin is small and the paired S04 key is also longest (43 vs 41 and 37), so a test-wise child could use length. NOTE; if cheap, pad one distractor ("a part of food that gives it a bright color you can see").
+- **Jaccard vs paired S04.** Word set 0.108, multiset 0.151. Distinct (ferrule on a pencil vs protein in food). Both use the "a [noun] that ..." definition frame, as `like` says.
+- **Fair at grade 3?** Yes, now fairer than before. The stem gives a category cue (foods coaches recommend, after practice), the examples are common foods, and both wrong choices can be ruled out from the examples. It still uses some outside knowledge, which is what a vocabulary-in-context item about an unfamiliar science word asks, and the how steps show how to reason it out. DOK 2 fits.
+- **Official wording.** Unchanged: developing a topic with definitions (the `official` text for 2.d). Fits.
+- **Residual NOTE.** `how` step 4 says eggs, beans, fish and peanuts "are not all one bright color". True, and it is a reasonable elimination, but egg yolk is yellow, so "not one bright color" is the safest phrasing, which is what the text says.
+
+**Verdict for this item: ACCEPT.** No MUST or SHOULD. R-2d-1 from F4 is closed.
+
+No lesson file was edited and no git command or server was run.

@@ -545,3 +545,42 @@ H1 is a strategy, H2 a place to look, H3 removes one distractor or places one it
 4. NOTE: C12/S12 shared hint 3; 4.a echo in S13 and S09.
 
 No lesson file was edited and no git command or server was run.
+
+---
+
+## Late fix check (4.b C04 line 4 and S08 row 1, reviewed 2026-10-23)
+
+**Method.** Blind solve of 4.b C04, S04, C08 and S08 in a Node vm sandbox (key, why, hints, how and clue stripped; options and rows seeded-shuffled), answers saved to `b4r7/answers.json` before any key was read. Agreement 6/6 slots and matches (C04 2 blanks, S04 2 blanks, C08 3 rows, S08 3 rows). Honesty: I knew which lines had been edited, but the solve was done from the stripped print and saved before keys were extracted.
+
+### C04 (line 4 now "I sell them fast, I sell a {1}.")
+
+- **Blind key agreement.** Agree: cup, lot.
+- **Scansion and rhyme.** Poem: "I set my lemonade stand up, / I pour the juice into each cup, / The line is long, the sun is hot, / I sell them fast, I sell a lot." Each line has eight syllables with a steady beat, up/cup and hot/lot rhyme cleanly. Scans and rhymes.
+- **Idiom.** "I sell a lot" is ordinary US English and grade-3 accessible. R4-3 is closed in the poem line.
+- **Second defensible answer.** None. Blank 2: "knot" rhymes but "I sell a knot" makes no sense at a lemonade stand; "most" does not rhyme and "I sell a most" is ungrammatical. Blank 1: "glass" makes sense but does not rhyme with "up"; "pup" rhymes and makes no sense.
+- **Live choices after hints 1-3.** H3 ("Nobody pours juice into a pup, so cross that word out") removes one choice in blank 1, leaving cup and glass; blank 2 stays at three. H3 does not name or echo the key (it never says rhyme-with-sense for cup or lot). Live. Pass.
+- **Longest-key cue.** Blank 1 key "cup" is the shortest (3 vs 3 and 5); blank 2 key "lot" is the shortest (3 vs 4 and 4). No cue in the key's favor.
+- **Jaccard vs S04.** Word set 0.145, multiset 0.164. Same dropdown frame, different poem and decoys. Fine.
+
+**MUST (T4b-L1). `why` still quotes the old line.** `why` says: "'I sell the lot' means all of them." The poem now reads "I sell a lot". Students see `why` after answering, so it contradicts the passage. Fix: "'I sell a lot' means she sold many cups."
+
+**SHOULD (T4b-L2). `how` step 3 calls "most" a meaning fit.** `how` says "most fits the meaning but does not rhyme." With the new line, "I sell a most" does not fit the meaning either (this is what R4-3 itself said). Fix: "Knot rhymes but does not fit, and most does not rhyme and does not make sense ('I sell a most')." `why` ("most does not rhyme") is correct as it stands.
+
+### S08 (row 1 "silk" replaces "glass")
+
+- **Blind key agreement.** Agree on all three rows.
+- **Row 1 now:** "A duck floats on the quiet pond, / Its feathers shine like silk. / A ripple spreads across the water, / And little minnows dash." End words pond, silk, water, dash: no rhyme, no near rhyme between lines 2 and 4 (the old "glass/dash" assonance is gone). "Like silk" is a simple simile; grade-3 level.
+- **Cross-stanza.** "silk" echoes "milk" in the stanza on the milk and the kitten, but "milk" is mid-line there, not an end word, so it is not an end-word match inside either stanza. NOTE only.
+- **One defensible answer.** Yes: duck = no rhymes, milk = two pairs (cup/up, lap/nap), teddy bear = lines 2 and 4 (song/along; bed and one do not rhyme).
+- **`how` and `why`** list pond, silk, water, dash and agree with the stanza. Key beside explanation: consistent.
+- **Hints unchanged.** H3 ("Say the end words of lines 2 and 4 in each stanza. Then decide which pattern each stanza fits") narrows nothing; all three columns stay live.
+- **Jaccard vs C08.** Word set 0.158, multiset 0.204 (under the 0.21 line already used in this review). Same task, different stanzas; `like` is honest. Key positions differ (S08 answers 2,0,1 vs C08 0,1,2).
+- **Points.** 2, DOK 2, as before.
+
+### Verdict for this check
+
+C04 key and poem are sound; S08 is clean. The explanation text for C04 is stale against the edited line.
+
+**CHANGES REQUIRED** for 4.b C04: fix `why` (T4b-L1, MUST) and `how` step 3 (T4b-L2, SHOULD). After those two text edits the three items are accepted without re-solve; S08 needs nothing.
+
+No lesson file was edited and no git command or server was run.
