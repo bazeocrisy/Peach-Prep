@@ -22,6 +22,7 @@ This log describes the lessons **as they stand after the fixes for B2-review-SC-
   - `ss1a-c-bookmobile-map.svg`, `ss1a-c-bat-parts.svg`, `ss1a-c-bat-lathe.svg`;
   - `tc1b-c-water-tower.svg`, `tc1b-c-water-webpage.svg`, `tc1b-c-pool-lanes.svg`.
 - `ss1a-c-peanut-harvest.svg`, from the first round, was deleted.
+- Round 3: the pre-existing `tc1b-beaver-webpage.svg` (Together P10) was edited with the lead's permission: two text lines and its title (§5.5).
 
 Nothing in `test`, `learn`, `clues` or `coach` changed. No existing id changed. Neither lesson has a form B.
 
@@ -183,14 +184,15 @@ I also claimed that the harvest drawing I swapped in fixed the collision. It did
 
 ## 4. Hint and leakage notes
 
-- **Whole ladders.** In both rounds I read every core and similar item's clue and three hints together, against its choices. I used the brief's definition of "live": a choice is live only if the hints' own logic leaves a real reason to pick it.
+- **Whole ladders.** I used the brief's definition of "live": a choice is live only if the hints' own logic leaves a real reason to pick it.
+  - Correction (round 3): before round 3 I had written out the "choices left" table for TC1b only (§4.1), although this section claimed whole-ladder checks for both lessons. The re-review's three SS1a MUSTs were ladder failures that an SS1a table would have caught. The SS1a table is now §4.2.
   - Reworked in round 1: TC1b C03, S01 and S02; SS1a S01.
   - Reworked in round 2 (§5.4): TC1b C03, C05, C07, C10, C13 and C14, and S01 and S03.
 - **Hint 2 naming a place.** Every hint 2 that names a section names one that the prompt already names, or one that also holds wrong choices.
 - **EBSR SS1a C08.** Its Part B choices are all parts of the map, and no hint names a text place.
 - **Hint 3 settles at most one blank or step.**
-  - SS1a C08 hint 3 settles Part B: it says which part of the map measures distance.
   - TC1b C08 hint 3 settles the last step.
+  - Correction (round 3): my earlier claim that SS1a C08's hint 3 "settles Part B" and was within the rule was wrong. In an EBSR item, settling Part B with "how far" also settled Part A. Hint 3 now settles neither part (§5.5).
 - **Order inside sets.** No earlier `how` or `why` states a later item's answer in the same set:
   - SS1a set 1: C04's `how` does not state C05's order.
   - TC1b set 2: C07's key does not state the order, and C08 is the order item.
@@ -209,7 +211,7 @@ K = key. Letters follow the order of the choices in the data. "h1-h3" means the 
 
 | Item | Choices | After h1 | After h2 | After h3 (whole ladder) |
 |---|---|---|---|---|
-| P5 | K1, K2 + three other targets | all | all | K1, K2, bark sentence, tail sentence |
+| P5 | K1, K2 + three other targets | all | K1, K2, and the two other sentences that say "water" (branches, tail) | K1, K2, branches sentence, tail sentence (round 3: the bark target was replaced by the branches sentence; earlier I wrongly counted the bark sentence as live) |
 | P4 | K, A box, B heading, C topic of article | K, B, C | K, B, C | K, C |
 | C03 | K, A branches, B dry room, C tail slap | all | all (h2 only shows what kind of fact the box already holds) | K, A, B |
 | C04 (pick 2) | K1, K2, A defines lodge, B animals, C order | all | all | K1, K2, A, C |
@@ -227,6 +229,40 @@ K = key. Letters follow the order of the choices in the data. "h1-h3" means the 
 | S01 | K, ticket, seat, stop | all | all | K, seat, stop |
 | S02 | K, search, link, Visit tab | all | all | K, search, Visit tab |
 | S03 | K, darker headings, faster, skip | all | K, faster | K, faster |
+
+### 4.2 SS1a: choices left live after each hint (round 3)
+
+K = key. "−X" means that hint removes X.
+
+| Item | Choices | After h1 | After h2 | After h3 (whole ladder) |
+|---|---|---|---|---|
+| P1 (Together) | K steps; two plants alike; problem; soil | all | all | −alike: K, problem, soil |
+| P2 (Together, hot text) | K 7:3; 7:1; 7:2 | all | all | hint 3 tests 7:1 ("only what the plants are like"): K, 7:2 |
+| P3 (Together) | K gather; soil; flower | all | all | −flower: K, soil |
+| P4 (Together, match) | four rows | all | all | the compare row is settled; three rows open |
+| P5 | K extra fact; planting steps; why underground; like cotton | all | all | −steps: K, underground, cotton |
+| P6 | K where; steps; roots; drying days | all | all | −steps: K, roots, days |
+| P7 | K Ch 3; Ch 2; Ch 1; Ch 4 | all | all | −Ch 2: K, Ch 1, Ch 4 |
+| C04 | K plant first, then why; reversed; compare; problem | all | all | −problem: K, reversed, compare |
+| C05 slot 1 | K after growing; before planting; while flowers open | all | all | −before planting: K, while flowers |
+| C05 slot 2 | K order things happen; importance; alike/different | all | all | "what kind of order" weakens alike/different: K, importance |
+| C06 (match) | four rows × five columns | all | all | sequence removed for one row; all rows open |
+| C07 | K stops around the county; library building; inside the bus | "whole map" removes inside the bus: K, library | K, library | −inside the bus: K, library (the "one mark" mix-up stays live) |
+| C08 Part A | K how far; all stops in Millbrook; shelves; days | all | all | −days: K, all stops in Millbrook, shelves |
+| C08 Part B | K scale bar; north arrow; route lines; county name | all | all | "the part that shows the idea in your Part A answer": all four, until the child has decided Part A |
+| C09 (pick 2) | K1, K2; Text 1 problem; Text 2 compares; both describe | all | all | −compares: K1, K2, problem, describe |
+| C10 (pick 2) | K1, K2; book is a section; "Did You Know?" is Ch 4's title; "Inside the Bookmobile" is Ch 4's title | the definition removes "book is a section": K1, K2, DYK, Inside | same | −DYK: K1, K2, Inside (only the stem refutes Inside) |
+| C11 | K From Tree to Bat; Wood or Metal?; Did You Know? | the label-matching test weakens DYK | K, Wood or Metal? | −DYK: K, Wood or Metal? ("wood shavings" keeps the word-match mix-up live) |
+| C12 | K needs the one before; compares; crack; big-league | all | all | −compares: K, crack, big-league |
+| C13 (hot text) | K 3:1; 3:2 hollow; 3:4 crack; 3:5 cup in the barrel; 5:1 billets; 5:4 coat | "names a labelled part": K, 3:5 | K, 3:5 | −hollow: K, 3:5 (the cup sentence names the barrel, but the diagram shows no cup) |
+| C14 | K trouble and tries; steps of a job; compare; describe | all | all | −compare: K, steps, describe |
+| C15 slot 1 | K Ch 2; Ch 1; Ch 3 | all | all | −Ch 3: K, Ch 1 |
+| C15 slot 2 | K 12; 2; 19 | all | all | −19: K, 2 |
+| S01 | K order of growing; fun; compare; problem | all | all | −problem: K, fun, compare |
+| S02 | K alike/different; trouble; steps; what happened and why | all | all | −steps: K, trouble, why |
+| S03 | K map with key; caption; box; heading | all | all | −heading: K, caption, box |
+
+Together, and earlier items in the same set, were checked against each core answer (re-review §3.3). The new C04 `how` and `why` now agree with Together P3: "Harvest Time" follows the peanut "from planting to harvest".
 
 ## 5. Fixes after B2 review
 
@@ -257,7 +293,7 @@ K = key. Letters follow the order of the choices in the data. "h1-h3" means the 
 | Finding | Fix made |
 |---|---|
 | SC-1 MUST-3 (C04 hint 1 states the key) | Hint 1: "A heading is a small title over a section. Think about the jobs a heading can do for a reader." Key 2 is now "It makes the reader want to find out the secret." (SC-1 NOTE-2). Two distractors are new: "names the animals that share the pond", replacing P6's row wording, and "tells the order of the steps in the section" |
-| SC-2 TC-MUST-1, TC-SHOULD-3 and TC-SHOULD-4 (C05 hint 2; ranger setting shared with P9; weak distractors) | The setting is now Andre reading to his class. Hint 2: "Think about what job a heading does on the page. Then picture the classmates listening to each choice." The new spoken-but-wrong distractor is "Say, 'A lodge is a beaver's home,' one more time." It replaces "read faster" |
+| SC-2 TC-MUST-1, TC-SHOULD-3 and TC-SHOULD-4 (C05 hint 2; ranger setting shared with P9; weak distractors) | The setting is now Andre reading to his class. Hint 2 was first changed to "Think about what job a heading does on the page…"; round 2 (§5.4) replaced it with "Read each choice and picture what the classmates would hear." The new spoken-but-wrong distractor is "Say, 'A lodge is a beaver's home,' one more time." It replaces "read faster" |
 | SC-1 MUST-2 (C06 hint 3 test leaves only the key) | Hint 1 is trimmed to "…names the big idea of its section." Hint 3 now rules out only pipe, for a reason that does not apply to the other words (it appears once, as the water's path) |
 | SC-2 TC-MUST-2 and SC-1 SHOULD-8 (S02 hints) | Hint 1: "…Ask what Ty wants to do." Hint 2: "Read Ty's goal again. Then read each choice and picture what would happen." S02 `like` is now C09 only (SC-2 TC-SHOULD-5) |
 | SC-1 SHOULD-8 (S03 hint 1) | Hint 1: "Think about how Omar's classmates will take in his report." Hint 2: "…will the listeners notice it?" |
@@ -288,7 +324,36 @@ K = key. Letters follow the order of the choices in the data. "h1-h3" means the 
 | **P6 cannot stay in core** | P6 is out of core and unchanged in `practice`. The revised weak item **P4** (bold word plus glossary) takes its slot as a ref. Together is now P1, P8, P9, P10 and P6. C04's hint 3 used to say the glossary explains lodge, which is P4's key. It now rules out the animals distractor instead. To keep mc at six, **C07** became a one-slot dropdown with the same key and two of its distractors; the shower distractor was dropped |
 | **Whole-ladder "live" check** (§4.1) | **C03 h2** is now "Read the box that is already in the article. What kind of fact is in it?" (the old h2's section test left only the key). **C05 h1 and h2** are now "Think about the difference between reading a page and listening to someone read it." and "Read each choice and picture what the classmates would hear." **C07 h1** is shortened to "A caption tells what a picture shows." **C10 h3** now rules out the NARRATOR line (nobody is talking), so the PUMP: misconception stays live. **C13 h1 and h2** no longer state the "needs a screen" test. **S01 h2** is neutral |
 | **Together P6's row gave C14's key** (found by the Together check) | **C14 is rewritten.** It is now about helping listeners keep track of the parts of a talk. Keys: "Say at the start, 'I have three rules to share.'" and "Say 'first,' 'next' and 'last' before the rules." Distractors: numbers or a box on her own card, and one long sentence. Teach point 7 now says "Words like first, next and last help listeners keep track of the parts." **S03 is rewritten** to match (Omar says what his next part is about); `like` is C05 and C14 |
-| **Topic check across all lessons** (brief) | S01's recycling topic collided with the recycling passages in T-T2.js (blue bin, truck, energy saved), so **S01 is now about a train article** ("Riding the Train"; key: the fastest trains can go over 200 miles an hour). Grep checks also found no other use of: train, orange beaver teeth, bark and branches, bookmobile, water tower, swimming-pool markings, lathe or billet |
+| **Topic check across all lessons** (brief) | S01's recycling topic collided with the recycling passages in T-T2.js (blue bin, truck, energy saved), so **S01 is now about a train article** ("Riding the Train"; key: the fastest trains can go over 200 miles an hour). Grep checks found no train topic or train key fact (correction: "train" does appear in passing in T-T1, L-GUM2, L-GUM4 and L-V12), and no other use of bark and branches, bookmobile, water tower, swimming-pool markings, lathe or billet |
+
+### 5.5 Round 3 (B2-rereview-SC)
+
+| Finding | Fix made |
+|---|---|
+| MUST-1, SS1a C08 hint 3 settled Part B, and through it Part A | Hint 3 is now: "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. Check the other Part A choices against the map. For Part B, choose the part of the map that shows the idea in your Part A answer." Part A keeps three live choices and Part B four |
+| MUST-2, SS1a C07 hint 3 removed the only plausible distractor | Hint 3 now removes the weak option: "A map has no picture of the inside of the bus, so that caption does not fit. Check the other choices against the whole map." The library-building caption (the "one mark" mix-up) stays live |
+| MUST-2, SS1a C11 hint 3, the same fault | Hint 3: "The 'Did You Know?' box tells how many bats a player uses, not how a bat is made. Check the other choices the same way." "Wood or Metal?" stays live |
+| MUST-3, SS1a C10 | The distractor "Each section of Chapter 4 is a different book." is replaced by "'Inside the Bookmobile' is the title of Chapter 4." Hint 1 is trimmed to its first sentence. Hint 3 keeps "Did You Know?". I also made hint 2 neutral ("Read the stem again. Then look at the headings in the article."), because the old "the headings name its parts", together with hint 3's "which part is bigger" test, would have killed the new distractor. Hint 3 now ends "Test the other sentences against the stem." `how` and `why` were updated |
+| SHOULD-1, SS1a C13 (the strategy alone found the key) | **Passage change:** p4's "Wood or Metal?" paragraph has a new last sentence, "Some bats have a small cup cut into the end of the barrel." (cupped bats are real). It is a new target, p4:3:5. It names a labelled part (the barrel) but describes something the diagram does not show. `how` and `why` were updated. No existing reference shifts |
+| SHOULD-2, SS1a C04 `how` and `why` contradicted Together P3 | Both now say "'From Flower to Peanut' and 'Harvest Time' follow the peanut from planting to harvest." |
+| SHOULD-5, no SS1a ladder table | Added as §4.2. §4's C08 sentence is corrected |
+| NOTE-1, Together P2 hint 3 (dormant) | Hint 3 is now the reviewer's: "Read the first sentence again. Does it tell what happens later, or only what the plants are like?" |
+| SHOULD-3, TC1b P9 fact was wrong | The ranger now says "A beaver's front teeth have iron in them, and that makes them extra strong!" (iron-rich enamel strengthens the teeth; the orange colour is not from iron, per the Chemistry World source in the re-review). The P9 addon `how` was updated. P9's key is unchanged |
+| SHOULD-4, TC1b P8 and P10 kept the dam link | **P8:** the dam caption is now "A beaver floats on its back in the pond." (`why` and addon `how` updated). **Figure `tc1b-beaver-webpage.svg`:** the narrator line is now "NARRATOR: Beavers carry branches in their mouths.", the sentence is now "Beavers cut and carry wood.", and the title and P10's alt text say "a pile of branches". **P10 slot 2 distractors:** "play the video about branches" and "tell what the word branch means". No dam or pond remains anywhere in TC1b |
+| SHOULD-1, TC1b P5 | The bark target p1:3:2 is replaced by p1:3:3 ("Then they drag the branches into the water to use for building."), which mentions water but is not a labelled part. The addon `how` was updated |
+| NOTE-8, Teach point 7 echoed C14's "keep track" | It now says "Words like first, next and last help listeners follow along." |
+| Log inaccuracies (re-review §4, items 1 to 4) | All four are corrected: C08 in §4; the missing SS1a table (§4.2); P5's live count in §4.1; the train wording in §5.4; and the superseded C05 hint 2 quote in §5.2 |
+
+**Keys:** one key's wording changed in round 3, with the lead's approval. In TC1b C03 (NOTE-8), "A beaver can stay underwater for about fifteen minutes." became "…for up to fifteen minutes.", to match the source. The `how` and `why` were changed to match. The fact is not in passage p1, so no passage changed. The answer and choice position are unchanged. No other key changed. **Passages changed:** SS1a p4 (one sentence added). **Figures changed:** `tc1b-beaver-webpage.svg` (two text lines and the title). **Distractors changed:** SS1a C10 (one); TC1b P8 (one) and P10 slot 2 (two). **Targets changed:** SS1a C13 (one added); TC1b P5 (one swapped).
+
+**Findings not addressed in round 3, and why:**
+- **NOTE-2, cosmetic.** The north arrow on the bookmobile map still touches the clipped corner. The nearest stop is still about 10.5 miles, so it only just clears "more than 10 miles".
+- **NOTE-3.** Together P10 still uses form A's T8 and T9 frames (pre-existing Together item). The re-review flags it for the lead, not as a B2 fault.
+- **§5.2 optional: strengthen TC1b P4 with a second glossary distractor.** Not done. TC1b is accepted, and the change would alter an accepted core item's choices.
+- **§5.3 optional: add a competing structural reason to SS1a C12.** Not done. It would change a choice of an item that passed the blind solve. The lead can request it.
+- **§5.3: a whole cause/effect item, or a cause/effect similar item mapped to C06.** Not done. Coverage is at the minimum (C06 row, C09), and the re-review rates that acceptable.
+- **NOTE-4: P7 is the only DOK 1 item.** Left as set 1's warm-up locate item.
+- **NOTE-6 and NOTE-7** describe acceptable priming. No change.
 
 ## 6. Needs blind re-solve
 
@@ -322,8 +387,15 @@ These items changed their choices, keys, stem, passage or figure, in either roun
   - SK-TC1b-S03 (rewritten in round 2)
   - Together P9 (practice, not core): its stem fact changed. A Together re-check is enough
 
+**Round 3 additions:**
+- SK-SS1a-C10: one distractor changed. A blind re-check is advised.
+- SK-SS1a-C13: p4 gained a target sentence.
+- SK-TC1b-P5: one target swapped.
+- SK-TC1b-C03: key wording changed ("up to fifteen minutes"). The answer is the same choice.
+- Together items changed in round 3 (not core): SS1a P2 (hint only), TC1b P8 (one distractor), P9 (stem fact), P10 (two distractors and the figure).
+
 Changed in their hints only (a ladder re-check is enough):
-- SS1a: S01, S03, and the P4 and P6 addons
+- SS1a: S01, S03, the P2, P4 and P6 addons, and (round 3) C04 (`how` and `why`), C07, C08 and C11
 - TC1b: C06, C13, S02, and the P1 addon
 
 Unchanged: SS1a C09, C14 (formerly C13; DOK label only), S02 (`like` only); TC1b C15. TC1b P6 is unchanged and is now in Together.

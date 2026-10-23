@@ -1062,7 +1062,7 @@ PP.addLesson({
         hints: [
           "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
           "Notice the clue words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
-          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the whole article, not just the last paragraph."
+          "The article does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the article."
         ],
         how: [
           "The article goes in time order, from the early 1900s to 1923 to today.",
@@ -1127,7 +1127,7 @@ PP.addLesson({
         hints: [
           "Follow the chain link by link. An effect of an effect still goes back to the first cause.",
           "Draw the chain as boxes with arrows. Start the first box with the fires stopping, and fill in the boxes that come after it. Choose two.",
-          "Lightning started fires, so lightning cannot be an effect of fires stopping. Check each choice that is left: is it something that happened without fires, or with them?"
+          "Lightning started fires, so lightning cannot be an effect of fires stopping. Check each choice that is left against the chain you drew."
         ],
         how: [
           "In paragraph 4, the fires stop burning through the forest.",
@@ -1213,7 +1213,7 @@ PP.addLesson({
   /* Extra questions (not one of the fifteen), each on its own new text. `like` lists only the core items
      each one really practises (same component and task). */
   similar: [
-    { id: "SK-TSCE-S01", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [],
+    { id: "SK-TSCE-S01", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCE-C04", "SK-TSCE-C15"],
       stem: ["The Oak Street library closed early on Friday because a pipe broke under the floor."],
       prompt: "Read the sentence in the box. Ray says, \"The pipe broke because the library closed early.\" Which answer best explains whether Ray is right?",
@@ -2408,7 +2408,7 @@ PP.addLesson({
         clue: "A difference is something true of one thing but not the other. Some differences you see by looking, and some by watching what the animals do.",
         hints: [
           "A difference is something true of one thing but not the other. Some differences you see by looking, and some by watching what the animals do.",
-          "Go through the passage one paragraph at a time. For each sentence, ask: is this about how they look, how they move, where they live, or how they are alike? Choose two.",
+          "Go through paragraphs 2 to 4 one sentence at a time. Choose two.",
           "Smooth, wet skin is something you could see or feel on a frog sitting still, so it is not about moving. Check each sentence that is left: does it tell what the animal does with its body?"
         ],
         how: [
@@ -2508,14 +2508,14 @@ PP.addLesson({
         clue: "To find a difference, find what is true of one thing but not the other. Look for a contrast clue word.",
         hints: [
           "To find a difference, find what is true of one thing but not the other. Look for a contrast clue word.",
-          "Reread paragraphs 2 and 3. Who was in the room with a child in 1900, and who is in the room with a child today?",
+          "Reread paragraphs 2 and 3.",
           "Paragraph 1 says both groups had time to play outside, so that choice is not a difference. For Part B, choose the sentence that tells what the 1900 classroom was like, not one that only says there is a difference."
         ],
         how: [
           "Paragraph 2 says many children in 1900 went to a one-room school, where one teacher taught every grade together.",
           "Paragraph 3 says that today, unlike in 1900, children usually share a room with others their own age.",
           "Part A: Students of all ages learned together in one room. Part B: \"One teacher taught every grade in the same room, from the youngest children to the oldest.\"",
-          "\"However, a school day in 1900 looked very different\" tells that there is a difference, but not what it is. Slates are about writing, not the classroom."
+          "\"However, a school day in 1900 looked very different\" tells that there is a difference, but not what it is. The sentence about slates tells a different difference."
         ],
         misconception: "A common mix-up is choosing the fact about today. Read the question again: it asks what the 1900 classroom was like.",
         why: "Part A: Students of all ages learned together in one room. Part B: \"One teacher taught every grade in the same room, from the youngest children to the oldest.\" Children today usually share a room with others their own age. Both groups learned to read and had time to play." },
@@ -2621,7 +2621,7 @@ PP.addLesson({
         hints: [
           "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
           "List what Ms. Grant needs to bring. Then reread the paragraphs that tell differences between the boats.",
-          "Both boats are moved with paddles, so that reason cannot help her choose. Check each choice that is left: does its reason fit what she needs?"
+          "A paddle with two blades does not change how many people or bags a boat can hold, so that reason does not help her. Check each choice that is left against the article."
         ],
         how: [
           "Ms. Grant needs room for herself, two children and a tent.",
@@ -2776,7 +2776,7 @@ PP.addLesson({
       hints: [
         "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
         "Think about what tomorrow's weather needs. Then read what makes each coat different.",
-        "Both coats have hoods, so a hood cannot help him choose. Check each choice that is left: does its reason fit a warm, rainy day?"
+        "A hood and a zipper are on both coats, as hint 1 says. Check each choice that is left against the box."
       ],
       how: [
         "Tomorrow will be warm and rainy, so Darnell needs to stay dry and not get too hot.",
@@ -2840,7 +2840,7 @@ PP.addLesson({
     "SK-TSCC-P5": {
       hints: [
         "Read the sentence with each choice. Ask what the two parts of the sentence tell about frogs and toads.",
-        "Find where the passage tells where frogs and toads live. Does it say they live in the same kind of place?",
+        "Find where the passage tells where frogs and toads live.",
         "Because would tell why something happens, and nothing in this sentence gives a reason. Try each choice that is left at the start of the sentence."
       ],
       how: [

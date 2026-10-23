@@ -427,7 +427,7 @@ PP.addLesson({
       { id: "SK-TC1b-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"],
         prompt: "The author found four more facts about beavers. Which one would fit best in the \"Did You Know?\" box instead of in a section?",
         choices: [
-          { text: "A beaver can stay underwater for about fifteen minutes.", correct: true },
+          { text: "A beaver can stay underwater for up to fifteen minutes.", correct: true },
           { text: "A beaver drags branches into the water to build with." },
           { text: "A beaver lodge has a dry room above the water." },
           { text: "A beaver slaps its tail on the water to warn others." }
@@ -440,11 +440,11 @@ PP.addLesson({
         ],
         how: [
           "\"Busy Builders\" needs the branches, the lodge section needs the dry room, and \"Tail Talk\" needs the tail slap. Each of those facts is part of its section's big idea.",
-          "Staying underwater for about fifteen minutes is fun to know, but no section needs it to make sense.",
-          "The answer is \"A beaver can stay underwater for about fifteen minutes.\""
+          "Staying underwater for up to fifteen minutes is fun to know, but no section needs it to make sense.",
+          "The answer is \"A beaver can stay underwater for up to fifteen minutes.\""
         ],
         misconception: "A common mix-up is putting an important fact in the box. The box is for extra facts; the big ideas stay in the sections.",
-        why: "The answer is \"A beaver can stay underwater for about fifteen minutes.\" It is a fun extra fact that no section needs. The branches, the dry room and the tail slap are each part of a section's big idea, so they belong in their sections." },
+        why: "The answer is \"A beaver can stay underwater for up to fifteen minutes.\" It is a fun extra fact that no section needs. The branches, the dry room and the tail slap are each part of a section's big idea, so they belong in their sections." },
       { id: "SK-TC1b-C04", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p1"], pick: 2,
         prompt: "How does the heading \"A Home with a Secret Door\" help the reader? Choose TWO answers.",
         choices: [
