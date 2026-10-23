@@ -1019,9 +1019,9 @@ PP.addLesson({
   teach: {
     big: "Before you write, pick a plan that fits your job and your reader: steps in order for how-to, sections with headings for a topic, and features that help the reader.",
     points: [
-      "First think about your job. Are you teaching how to do something, or telling facts about a topic? Then think about who will read it.",
+      "First think about your job. Are you teaching how to do something, telling facts about a topic, comparing two things, or explaining why something happens? Then think about who will read it.",
       "How-to writing tells steps in the order the reader should do them. Order words like first, next and last help.",
-      "Writing about a topic can be split into sections. Each section tells about one part, and a heading names that part.",
+      "Writing about a topic can be split into sections. Each section tells about one part, and a heading names that part. To compare two things, give each one its own section. To explain why, give each reason its own section.",
       "Features help your reader. A heading names a section, a caption tells what a picture shows, and a numbered list makes steps easy to follow.",
       "Start by telling your topic, and end with a closing that wraps it up."
     ],
@@ -1094,7 +1094,143 @@ PP.addLesson({
         ["(3) You can borrow much more than books at the library.", "(4) Kids can check out movies, puzzles and even board games.", "(5) You can keep most things for two weeks."],
         ["(6) The library also plans special activities for kids.", "(7) On Saturday mornings, a librarian reads stories out loud.", "(8) On Wednesdays, kids can join a building-block club.", "(9) In the summer, there is a reading contest with prizes."],
         ["(10) Next time you need something fun to do, visit the Pine Hill Library!"]
-      ] }
+      ] },
+    /* B4b:passages:start */
+    {
+      id: "p3",
+      draft: true,
+      title: "Make a Can Telephone",
+      byline: "Dara's first draft",
+      genre: "Student draft (how-to)",
+      paragraphs: [
+        [
+          "(1) You need two clean empty cans, a long piece of string and a grown-up helper.",
+          "(2) Ask the grown-up to cover any sharp edges with tape."
+        ],
+        [
+          "(3) First, ask the grown-up to poke a small hole in the bottom of each can.",
+          "(4) Next, push one end of the string through the hole in each can.",
+          "(5) Then walk apart until the string is tight."
+        ],
+        [
+          "(6) Now one friend talks into a can while the other friend holds a can to an ear.",
+          "(7) The voice shakes the string, and the shaking carries the sound to the other can.",
+          "(8) The string must stay tight, or the sound will not travel."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      draft: true,
+      title: "The Cherry Lane Pet Show",
+      byline: "Isaiah's first draft",
+      genre: "Student draft (informational)",
+      paragraphs: [
+        [
+          "(1) The Cherry Lane Pet Show is coming on the second Saturday of May.",
+          "(2) Neighbors of every age can bring a pet or just come to watch."
+        ],
+        [
+          "(3) Pets will be shown in three groups.",
+          "(4) Dogs and cats go in the first group.",
+          "(5) Fish, birds and other small pets go in the second group.",
+          "(6) The third group is for pets that can do a trick."
+        ],
+        [
+          "(7) Every pet that comes gets a ribbon.",
+          "(8) The judges will also give a prize for the best trick.",
+          "(9) The grand prize is a big bag of pet treats."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      draft: true,
+      title: "Walk or Ride?",
+      byline: "Tia's first draft",
+      genre: "Student draft (informational)",
+      paragraphs: [
+        [
+          "(1) Kids in our town get to school in two main ways, and both of them work well.",
+          "(2) Some kids walk to school, and some kids ride the big yellow school bus."
+        ],
+        [
+          "(3) Walking is good exercise, and it helps kids wake up before class.",
+          "(4) Walkers can talk with their friends on the way to school.",
+          "(5) The bus picks kids up near home and takes them right to the school door."
+        ],
+        [
+          "(6) Riding the bus is a good choice when the weather is rainy or very cold.",
+          "(7) Kids who ride the bus can look over their homework on the way.",
+          "(8) Everyone who rides must stay in a seat until the bus stops."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      draft: true,
+      title: "Make Oatmeal",
+      byline: "Zane's first draft",
+      genre: "Student draft (how-to)",
+      paragraphs: [
+        [
+          "(1) You need oats, water, a small pot, a spoon and a grown-up helper.",
+          "(2) Pour one cup of water into the pot, and ask the grown-up to heat it on the stove until it bubbles."
+        ],
+        [
+          "(3) Stir in half a cup of oats, and turn the heat down low.",
+          "(4) Cook the oatmeal for five minutes, and stir it now and then so it does not stick.",
+          "(5) Pour the oatmeal into a bowl, and eat it with a spoon."
+        ]
+      ]
+    },
+    {
+      id: "p7",
+      draft: true,
+      title: "Splash Day at the Rec Center",
+      byline: "Nora's first draft",
+      genre: "Student draft (informational)",
+      paragraphs: [
+        [
+          "(1) Splash Day is coming to the town rec center on the last Saturday of June, and everyone is invited.",
+          "(2) It is free, and the whole family can come for the whole day."
+        ],
+        [
+          "(3) Little kids can play in the shallow pool with a grown-up close by.",
+          "(4) They can float on foam noodles and kick their feet.",
+          "(5) There is also a sprinkler area with a short slide."
+        ],
+        [
+          "(6) Bigger kids can race across the deep end of the pool.",
+          "(7) They can try the diving board while a lifeguard watches.",
+          "(8) A lifeguard is always on duty near the deep end."
+        ]
+      ]
+    },
+    {
+      id: "p8",
+      draft: true,
+      title: "Books or Tablets?",
+      byline: "Omar's first draft",
+      genre: "Student draft (informational)",
+      paragraphs: [
+        [
+          "(1) Kids today read in two main ways, and each way has good points.",
+          "(2) Some kids read paper books, and some kids read on a tablet."
+        ],
+        [
+          "(3) A paper book never needs to be charged, so it works anywhere.",
+          "(4) You can flip back to a page you liked and find it fast.",
+          "(5) A tablet can hold hundreds of books at one time."
+        ],
+        [
+          "(6) A tablet has a light, so you can read in a dark room.",
+          "(7) You can make the words bigger with one tap.",
+          "(8) Some tablets also let you look up a word right away."
+        ]
+      ]
+    }
+/* B4b:passages:end */
   ],
   practice: [
     { id: "SK-SS1b-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -1133,7 +1269,7 @@ PP.addLesson({
         { text: "A pinecone feeder is a simple way to help hungry birds all winter.", correct: true },
         { text: "Cardinals are bright red, and they sing loud, clear songs." },
         { text: "Next, find another pinecone that is even bigger than the first." },
-        { text: "My sister likes to fold paper into the shape of a bird." }
+        { text: "Some people hang feeders filled with sugar water for other kinds of birds." }
       ],
       clue: "A closing wraps up the whole piece. Reread sentence 1 to remember the main idea.",
       why: "The answer is \"A pinecone feeder is a simple way to help hungry birds all winter.\" It goes back to the main idea in sentence 1 and wraps up the piece. The other sentences add a new step or a new detail instead of closing." },
@@ -1148,6 +1284,1021 @@ PP.addLesson({
       clue: "For each job, ask: Is the writer teaching steps, showing alike and different, or telling why something happened?",
       why: "Folding a boat is a how-to, so it needs steps in order. Frogs and toads are two things side by side, so that is compare. Why a pond dried up asks for a reason, so that is cause and effect." }
   ],
+  /* B4b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses a practice item (P5 stays in practice, so Together is P1-P4).
+     p3-p5 are used only by core; p6-p8 only by the similar bank. Never used by test. Author log: docs/expansion-2026-10-22/batches/B4-b4b-author-log.md.
+     NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-SS1b-P5" },
+      {
+        id: "SK-SS1b-C02",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: ["p3"],
+        prompt: "Dara's draft starts with the list of supplies. She wants to add an opening before sentence 1. Which sentence is best?",
+        choices: [
+          { text: "A can telephone lets two friends talk across a yard, and you can make one fast.", correct: true },
+          { text: "Cans are made of metal, and many people save them to use again later." },
+          { text: "Homemade toys are fun to play with, and kids have made them for many years." },
+          { text: "Phones help people talk, send messages and take pictures from far away." }
+        ],
+        clue: "An opening comes first and gets the reader ready. Ask what a reader needs to know before they start.",
+        hints: [
+          "An opening comes first and gets the reader ready. Ask what a reader needs to know before they start.",
+          "Read the whole draft once. Then say in your own words what Dara wants her reader to be able to do at the end.",
+          "A sentence about real phones is about a different thing than Dara's piece. Check each of the other three against what you said in your own words."
+        ],
+        how: [
+          "Read the draft: every step is about making a can telephone and using it.",
+          "An opening tells the reader what the piece will teach, so the reader knows what is coming.",
+          "The answer is \"A can telephone lets two friends talk across a yard, and you can make one fast.\" It names what the reader will make.",
+          "The other sentences are about cans, toys or phones, but none of them says what Dara's piece will teach."
+        ],
+        misconception: "A common mix-up is choosing a true fact about the topic. An opening has to tell what this piece will teach.",
+        why: "The answer is \"A can telephone lets two friends talk across a yard, and you can make one fast.\" It tells the reader what the piece will teach. The other sentences are about cans, toys or phones in general, so they do not get the reader ready for these steps."
+      },
+      {
+        id: "SK-SS1b-C03",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.1.b"],
+        passages: ["p3"],
+        prompt: "Dara adds this step: \"Tie a big knot in the end of the string inside each can.\" Where should it go, and why?",
+        choices: [
+          {
+            text: "After sentence 4, because the string must be through the hole before its end can be tied inside the can.",
+            correct: true
+          },
+          {
+            text: "After sentence 3, because the steps about the cans should stay together before the string comes in."
+          },
+          { text: "After sentence 5, because the knot holds the string once the two friends have walked apart." },
+          { text: "After sentence 6, because a knot is a finishing touch once the telephone is working." }
+        ],
+        clue: "In a how-to, each step needs the step before it to be done. Ask what the reader has already done.",
+        hints: [
+          "In a how-to, each step needs the step before it to be done. Ask what the reader has already done.",
+          "Picture holding a can and the string. Reread sentences 3, 4 and 5 and say where the string is at the end of each one.",
+          "After sentence 3, no string is in a can yet. Decide among the places that are left."
+        ],
+        how: [
+          "Find where the string first goes into a can. Sentence 4 pushes the string through the hole.",
+          "Only then is there a string end inside the can to tie. After sentence 3 the string is not in the can yet.",
+          "The knot also has to be done before the friends pull the string tight in sentence 5, or the string would slip out.",
+          "The answer is \"After sentence 4, because the string must be through the hole before its end can be tied inside the can.\""
+        ],
+        misconception: "A common mix-up is grouping steps by the object they use (the cans) instead of by what has to happen first.",
+        why: "The answer is \"After sentence 4, because the string must be through the hole before its end can be tied inside the can.\" The knot cannot be tied until the string is in the can, and it has to hold before the friends pull the string tight. After sentence 3 there is no string in the can yet, and after sentences 5 and 6 the string is already being pulled and used."
+      },
+      {
+        id: "SK-SS1b-C04",
+        type: "ms",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        pick: 2,
+        prompt: "Dara's readers will follow her steps while they hold the cans in their hands. Which TWO features would help them most?",
+        choices: [
+          { text: "a numbered list for the steps", correct: true },
+          { text: "a small drawing beside each step, with a caption", correct: true },
+          { text: "a large heading above every sentence" },
+          { text: "a long paragraph about how sound travels" },
+          { text: "a chart that compares different kinds of cans" }
+        ],
+        clue: "A feature is chosen for the reader, not just for looks. Think about what this reader is doing while they read.",
+        hints: [
+          "A feature is chosen for the reader, not just for looks. Think about what this reader is doing while they read.",
+          "Choose two. For each feature, say what job it does for a reader, and then decide whether these readers need that job done.",
+          "A chart of different cans gives facts about cans, but Dara's readers are making a telephone, not choosing a can. Check the other four."
+        ],
+        how: [
+          "Dara's readers are busy doing the steps, so they need to find their place fast and see what to do.",
+          "A numbered list shows each step and its order, so a reader can look away and find the place again.",
+          "A drawing with a short caption shows what a step looks like.",
+          "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" A heading over every sentence would crowd the page, and facts about sound or cans do not help someone follow steps."
+        ],
+        misconception: "A common mix-up is choosing a feature that gives facts about the topic. These readers need help doing the steps.",
+        why: "The answers are \"a numbered list for the steps\" and \"a small drawing beside each step, with a caption.\" Readers who are holding the cans need to find the next step fast and see what to do. A heading over every sentence, a paragraph about sound and a chart of cans do not help them follow the steps."
+      },
+      {
+        id: "SK-SS1b-C05",
+        type: "order",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        prompt: "Mina is teaching a friend to make a paper chain. Put her steps in the best order.",
+        steps: [
+          "Cut a sheet of paper into long strips.",
+          "Glue the ends of one strip together to make a ring.",
+          "Slide the next strip through the ring.",
+          "Glue the ends of that strip together to make a second ring.",
+          "Keep adding rings until the chain is as long as you want."
+        ],
+        clue: "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+        hints: [
+          "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+          "Look at the words strip and ring in each step. Ask what you must already have before you can do each one.",
+          "Cutting strips must come first, because without strips there is nothing to glue. Now decide the order of the other four steps."
+        ],
+        how: [
+          "The first step needs nothing else: cut the strips.",
+          "Next, one strip is glued into a ring, because the next strip needs a ring to slide through.",
+          "Then the next strip goes through the ring, and its ends are glued to make a second ring.",
+          "Last, keep adding rings until the chain is long enough. The order is: cut strips, glue one ring, slide the next strip through, glue the second ring, keep adding rings."
+        ],
+        misconception: "A common mix-up is putting a step that adds to the chain before the first ring exists.",
+        why: "The order is: cut strips; glue one strip into a ring; slide the next strip through the ring; glue it into a second ring; keep adding rings. Each step needs the one before it."
+      }
+    ] },
+    { title: "Set 2", items: [
+      {
+        id: "SK-SS1b-C06",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: ["p4"],
+        prompt: "Isaiah wants a heading for each of his two long sections. Choose the best heading for each.",
+        text: "Above sentences 3 to 6: {0}. Above sentences 7 to 9: {1}.",
+        slots: [
+          {
+            options: ["Three Groups of Pets", "Pets That Do Tricks", "Meet Your Neighbors"],
+            answer: 0
+          },
+          {
+            options: ["Ribbons and Prizes", "Pets That Do Tricks", "Prizes for Dogs and Cats"],
+            answer: 0
+          }
+        ],
+        clue: "A heading names what a whole section is about, so it must fit every sentence in that section.",
+        hints: [
+          "A heading names what a whole section is about, so it must fit every sentence in that section.",
+          "Read sentences 3 to 6 as one group, then sentences 7 to 9 as another. Say what each group tells about.",
+          "One sentence about tricks is not enough to name a section. A heading must fit all of the sentences under it, not just one."
+        ],
+        how: [
+          "Sentences 3 to 6 name the groups that pets will be shown in.",
+          "Sentences 7 to 9 tell about the ribbon every pet gets and the prizes the judges give.",
+          "The answers are \"Three Groups of Pets\" and \"Ribbons and Prizes.\"",
+          "\"Pets That Do Tricks\" fits only one sentence in each section, and \"Meet Your Neighbors\" is not about either section."
+        ],
+        misconception: "A common mix-up is choosing a heading that fits one sentence. A heading has to cover the whole section.",
+        why: "The answers are Three Groups of Pets and Ribbons and Prizes. Sentences 3 to 6 are about the three groups of pets, and sentences 7 to 9 are about the ribbon and the prizes. Pets That Do Tricks fits only one sentence in each section."
+      },
+      {
+        id: "SK-SS1b-C07",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: ["p4"],
+        prompt: "Isaiah wants to add a closing sentence after sentence 9. Which sentence is best?",
+        choices: [
+          {
+            text: "Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.",
+            correct: true
+          },
+          { text: "Next, the judges will pick the winners and hand out all of the ribbons and prizes." },
+          { text: "Some pets learn new tricks very quickly, and others need a lot of patience and time." },
+          { text: "Many families in our town have a dog or a cat, and some have fish or birds too." }
+        ],
+        clue: "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
+        hints: [
+          "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
+          "Read all three sections, not only the last one. Ask what the whole piece is for.",
+          "Sentence 8 already tells what the judges give out, so the closing should not bring up the judges again. Test the other three against what the whole piece is for."
+        ],
+        how: [
+          "A closing wraps up the whole piece, not just the last section.",
+          "Isaiah's piece tells neighbors about a show they can come to.",
+          "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It looks back at the whole piece and ends it.",
+          "The sentence about the judges adds news that the last section already gave, and the sentences about tricks and families add new details instead of wrapping up."
+        ],
+        misconception: "A common mix-up is choosing a sentence that adds one more fact. A closing wraps up; it does not start something new.",
+        why: "The answer is \"Come to the Cherry Lane Pet Show and share a fun day with your neighbors and their pets.\" It wraps up the whole piece and speaks to the readers. The judges sentence repeats news from the last section, and the sentences about tricks and families add new details."
+      },
+      {
+        id: "SK-SS1b-C08",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        pick: 1,
+        prompt: "Isaiah wants to put this photo on his flyer. Select the sentence that would make the best caption.",
+        stem: ["A photo from last year's pet show shows a brown dog in a red bandana jumping to catch a ball."],
+        options: [
+          "A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.",
+          "Dogs need food, water and exercise every day.",
+          "The Cherry Lane Pet Show is on the second Saturday of May.",
+          "Pet shows are held in many towns each year."
+        ],
+        answer: [0],
+        clue: "A caption sits next to a picture and tells what the picture shows.",
+        hints: [
+          "A caption sits next to a picture and tells what the picture shows.",
+          "Read the sentence about the photo. Then read each choice and ask: does it tell about this picture, or about something else?",
+          "The date of the show is useful on a flyer, but it does not tell what this photo shows. Check the other three the same way."
+        ],
+        how: [
+          "A caption tells what is happening in the picture.",
+          "The photo shows a brown dog in a red bandana jumping to catch a ball.",
+          "The answer is \"A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.\" It matches the picture.",
+          "The other sentences are true about dogs, the show or pet shows, but they do not describe this photo."
+        ],
+        misconception: "A common mix-up is choosing a useful fact about the event. A caption has to match the picture next to it.",
+        why: "The answer is \"A brown dog jumps to catch a ball at last year's Cherry Lane Pet Show.\" A caption tells what the picture shows, and this sentence describes the photo. The other sentences give facts about dogs, the date or pet shows, not about this picture."
+      },
+      {
+        id: "SK-SS1b-C09",
+        type: "ms",
+        points: 2,
+        dok: 3,
+        std: ["3.T.SS.1.b"],
+        passages: ["p3", "p4"],
+        pick: 2,
+        prompt: "Think about Dara's can telephone draft and Isaiah's pet show draft. Which TWO sentences tell how their plans are different?",
+        choices: [
+          {
+            text: "Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections.",
+            correct: true
+          },
+          {
+            text: "Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.",
+            correct: true
+          },
+          { text: "Isaiah's draft has a numbered list, but Dara's draft does not." },
+          { text: "Dara's draft compares two things, but Isaiah's draft tells a story." },
+          { text: "Isaiah's draft uses the words first, next and then, but Dara's draft does not." }
+        ],
+        clue: "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
+        hints: [
+          "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
+          "Choose two. Look at how each draft is organized and who each draft is written for.",
+          "Neither draft has a numbered list. Check the other four statements against both drafts the same way."
+        ],
+        how: [
+          "Dara's draft is a how-to: steps in order, for readers who are doing the job as they read.",
+          "Isaiah's draft tells facts about an event, grouped into sections, for neighbors who want to know about it.",
+          "The answers are \"Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections\" and \"Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.\"",
+          "Neither draft has a numbered list, neither compares two things or tells a story, and the words first, next and then are in Dara's draft, not Isaiah's."
+        ],
+        misconception: "A common mix-up is choosing a statement that sounds like a plan but is false for one of the drafts. Check each statement against both.",
+        why: "The answers are \"Dara's draft puts steps in the order a reader does them, but Isaiah's draft groups facts into sections\" and \"Dara writes for readers who will do the steps while they read, but Isaiah writes for neighbors who want facts about an event.\" Neither draft has a numbered list, neither compares two things or tells a story, and Dara's draft is the one that uses first, next and then."
+      },
+      {
+        id: "SK-SS1b-C10",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        prompt: "Complete Leo's plan. Choose the best answer for each blank.",
+        stem: [
+          "Ms. Reyes asks Leo to make a page that teaches kids how to set a table for dinner. Kids will read the page while they work."
+        ],
+        text: "Leo's job is to teach kids how to set a table, so his piece should use {0}. The kids will follow it while they work, so {1} would help them most.",
+        slots: [
+          {
+            options: [
+              "steps in order",
+              "sections that compare two things",
+              "a plan for explaining why something happens"
+            ],
+            answer: 0
+          },
+          {
+            options: ["a numbered list of the steps", "a long paragraph about tables", "a chart of dinner foods"],
+            answer: 0
+          }
+        ],
+        clue: "First name the writer's job. The job picks the plan. Then think about what the reader is doing.",
+        hints: [
+          "First name the writer's job. The job picks the plan. Then think about what the reader is doing.",
+          "Read the sentence again. The first blank is about the job, and the second blank is about the reader.",
+          "Leo is not comparing two things, so one choice for the first blank does not match his job."
+        ],
+        how: [
+          "Leo's job is to teach how to do something, so the plan is steps in order.",
+          "The kids are working as they read, so they need to find the next step fast.",
+          "The answers are \"steps in order\" and \"a numbered list of the steps.\"",
+          "Comparing and explaining why do other jobs, and a paragraph about tables or a chart of foods does not help someone set a table."
+        ],
+        misconception: "A common mix-up is picking a plan or feature about the topic instead of one that matches the job and the reader.",
+        why: "The answers are steps in order and a numbered list of the steps. Leo is teaching how to do something, so the steps go in order, and readers who are working need a numbered list to find the next step. The other plans do other jobs, and a long paragraph or a chart does not help someone set a table."
+      }
+    ] },
+    { title: "Set 3", items: [
+      {
+        id: "SK-SS1b-C11",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: ["p5"],
+        pick: 1,
+        prompt: "One sentence in Tia's draft is in the wrong paragraph. Select that sentence.",
+        targets: ["p5:1:2", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1", "p5:3:2", "p5:3:3"],
+        answer: ["p5:2:3"],
+        clue: "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
+        hints: [
+          "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
+          "Say in a few words what each paragraph is about. Then ask of each sentence: does it belong with its paragraph?",
+          "The last sentence of the draft is about what happens on the bus, and it sits in the paragraph about the bus. Check the other sentences against their own paragraphs."
+        ],
+        how: [
+          "Paragraph 1 tells about the two ways. Paragraph 2 begins with walking. Paragraph 3 is about riding the bus.",
+          "Check each sentence against its paragraph. \"Walking is good exercise\" and \"Walkers can talk with their friends on the way to school\" are both about walking.",
+          "Sentence 5 says the bus picks kids up near home. That is about riding the bus, so it is in the wrong paragraph.",
+          "The answer is \"The bus picks kids up near home and takes them right to the school door.\" It belongs with sentences 6 to 8."
+        ],
+        misconception: "A common mix-up is choosing a sentence because it sounds different from its neighbors. Look at the idea of the paragraph.",
+        why: "The answer is \"The bus picks kids up near home and takes them right to the school door.\" The second paragraph is about walking, but this sentence is about the bus, so it belongs in the paragraph about riding. Every other sentence is in the paragraph it fits."
+      },
+      {
+        id: "SK-SS1b-C12",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.1.b"],
+        passages: ["p5"],
+        prompt: "Why is a compare plan a good fit for Tia's piece?",
+        choices: [
+          { text: "Her readers want to see how walking and riding the bus are alike and different.", correct: true },
+          { text: "Her readers need to learn the steps for getting ready for school in order." },
+          { text: "Her readers need to learn what caused kids to start going to school." },
+          { text: "Her readers need a picture to go with every sentence in the draft." }
+        ],
+        clue: "A plan should fit what the reader needs from the piece. Ask what Tia wants her reader to understand.",
+        hints: [
+          "A plan should fit what the reader needs from the piece. Ask what Tia wants her reader to understand.",
+          "Read the whole draft and notice what each paragraph does for the reader.",
+          "The draft is not a list of steps, so a plan for steps in order would not fit. Test the other choices against what Tia's paragraphs do."
+        ],
+        how: [
+          "Look at what each paragraph does: paragraph 1 names two ways, paragraph 2 is about walking, and paragraph 3 is about riding the bus.",
+          "A compare plan gives each thing its own section so the reader can see how they are alike and different.",
+          "The answer is \"Her readers want to see how walking and riding the bus are alike and different.\"",
+          "The draft has no steps, never tells what caused anything, and does not need a picture for every sentence."
+        ],
+        misconception: "A common mix-up is choosing a plan because it is a plan you know, such as steps, instead of the one that matches the job.",
+        why: "The answer is \"Her readers want to see how walking and riding the bus are alike and different.\" Tia gives each way its own paragraph so readers can compare them. The draft has no steps, never tells what caused anything, and does not need a picture for every sentence."
+      },
+      {
+        id: "SK-SS1b-C13",
+        type: "match",
+        points: 2,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        prompt: "Match each reader to the feature that would help that reader most. Use each feature once.",
+        cols: ["a large title that names the event", "a photo with a caption", "headings above short sections"],
+        rows: [
+          { text: "a neighbor who walks past a flyer and reads for only a second", answer: 0 },
+          { text: "a reader who has never seen a snow leopard", answer: 1 },
+          { text: "a reader who wants the facts about only one part of a long page", answer: 2 }
+        ],
+        clue: "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
+        hints: [
+          "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
+          "Start with the row you are most sure about, then use each feature only once.",
+          "A reader who has never seen a snow leopard needs to see one. Match the other two rows after that."
+        ],
+        how: [
+          "The neighbor reads for only a second, so the biggest words must say what the flyer is about.",
+          "A reader who has never seen a snow leopard needs to see one, and a caption tells what the photo shows.",
+          "A reader looking for one part of a long page can use headings to find that part.",
+          "The matches are: the passing neighbor with the large title, the snow leopard reader with the photo and caption, and the reader looking for one part with the headings."
+        ],
+        misconception: "A common mix-up is matching by the word in the feature (heading, title) instead of by what the reader needs.",
+        why: "The neighbor who reads for a second needs a large title that names the event. The reader who has never seen a snow leopard needs a photo with a caption. The reader who wants one part of a long page needs headings above short sections to find it."
+      },
+      {
+        id: "SK-SS1b-C14",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        prompt: "Which plan fits Elena's job and her readers best?",
+        stem: ["Elena wants to write a page for her neighbors about why their street floods after a heavy rain."],
+        choices: [
+          {
+            text: "Tell what happens on the street, then explain each cause in its own short section with a heading.",
+            correct: true
+          },
+          { text: "List the steps for cleaning out a storm drain, in the order a person does them." },
+          { text: "Compare the street with a street in another town, with one section for each street." },
+          { text: "Tell one story about a rainy day, and leave out headings and sections." }
+        ],
+        clue: "First name the writer's job. Is she teaching how to do something, comparing, or explaining the reasons for something?",
+        hints: [
+          "First name the writer's job. Is she teaching how to do something, comparing, or explaining the reasons for something?",
+          "Read the four plans slowly. For each one, ask what question the finished page would answer for Elena's neighbors.",
+          "A page of steps would teach neighbors how to clean a drain, but that is not Elena's job. Test the other three plans."
+        ],
+        how: [
+          "Elena's job is to explain why something happens, so her readers need the causes.",
+          "A short section for each cause, with a heading, lets a neighbor find and understand each reason.",
+          "The answer is \"Tell what happens on the street, then explain each cause in its own short section with a heading.\"",
+          "Cleaning steps, a comparison with another street and a single story do not explain the causes."
+        ],
+        misconception: "A common mix-up is picking a plan that is about the same topic but does a different job, such as steps for fixing the drain.",
+        why: "The answer is \"Tell what happens on the street, then explain each cause in its own short section with a heading.\" Elena's job is to explain why the street floods, so each cause gets its own section. Steps for cleaning a drain, a comparison with another town and a story do not explain the reasons."
+      },
+      {
+        id: "SK-SS1b-C15",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: ["3.T.SS.1.b"],
+        passages: [],
+        prompt: "Jun wants to add a closing after sentence 5. Which sentence is best?",
+        stem: [
+          "(1) A flying disc is fun to throw with a friend.",
+          "(2) First, hold the disc flat with your fingers curled under the edge.",
+          "(3) Next, stand sideways to your friend.",
+          "(4) Then swing your arm and let go of the disc.",
+          "(5) The disc should spin and glide through the air."
+        ],
+        choices: [
+          { text: "Keep practicing, and soon your throws will sail straight to your friend.", correct: true },
+          { text: "Next, take a second disc out of the bag and throw that one too." },
+          { text: "Flying discs are usually made of plastic and come in many colors." },
+          { text: "Some people throw a disc with their other hand to try something new." }
+        ],
+        clue: "A closing wraps up the whole piece.",
+        hints: [
+          "A closing wraps up the whole piece.",
+          "Ask what a reader should feel or be ready to do after finishing these steps.",
+          "The steps are already finished by sentence 5, so a sentence that starts with Next would add one more step. Test the other three against what a closing does."
+        ],
+        how: [
+          "A closing wraps up a how-to after the steps are done.",
+          "By sentence 5 the reader has thrown the disc, so the piece is ready to end.",
+          "The answer is \"Keep practicing, and soon your throws will sail straight to your friend.\" It encourages the reader and ends the piece.",
+          "The other sentences add another step, a fact about discs or a new tip, so they do not wrap up."
+        ],
+        misconception: "A common mix-up is adding one more step or fact at the end. A closing wraps up what the reader has done.",
+        why: "The answer is \"Keep practicing, and soon your throws will sail straight to your friend.\" It wraps up the how-to and cheers the reader on. A second disc adds a step, and the sentences about plastic and the other hand add new facts instead of ending the piece."
+      }
+    ] }
+  ] },
+  similar: [
+    {
+      id: "SK-SS1b-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-P5"],
+      prompt: "Match each writing job to the plan that fits it best.",
+      cols: ["Steps in order", "Compare", "Cause and effect"],
+      rows: [
+        { text: "telling how to build a pillow fort", answer: 0 },
+        { text: "telling how a basketball and a soccer ball are alike and different", answer: 1 },
+        { text: "telling why puddles disappear on a sunny day", answer: 2 }
+      ],
+      clue: "Ask what the writer is doing for the reader: teaching how, showing alike and different, or telling why.",
+      hints: [
+        "Ask what the writer is doing for the reader: teaching how, showing alike and different, or telling why.",
+        "Start with the row whose job you are most sure about, and use each plan once.",
+        "Telling why puddles disappear asks for a reason, not a list of steps. Match the other two rows."
+      ],
+      how: [
+        "Building a fort teaches how to do something, so the steps go in order.",
+        "A basketball and a soccer ball are two things side by side, so the plan is compare.",
+        "Why puddles disappear asks for a reason, so the plan is cause and effect."
+      ],
+      why: "Building a pillow fort is a how-to, so it needs steps in order. A basketball and a soccer ball are two things to compare. Why puddles disappear asks for a reason, so it is cause and effect."
+    },
+    {
+      id: "SK-SS1b-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: ["p6"],
+      like: ["SK-SS1b-C02"],
+      prompt: "Zane's draft starts with the list of supplies. He wants to add an opening before sentence 1. Which sentence is best?",
+      choices: [
+        { text: "Oatmeal is a warm breakfast that you can cook in only a few minutes.", correct: true },
+        { text: "Oats are a kind of grain that grows in fields on many farms." },
+        { text: "Breakfast is the first meal of the day, and many kids eat it at home." },
+        { text: "A stove has burners that get very hot when a grown-up turns them on." }
+      ],
+      clue: "An opening is the first thing a reader sees. Ask what the reader should know before they start.",
+      hints: [
+        "An opening is the first thing a reader sees. Ask what the reader should know before they start.",
+        "Read the whole draft, and say in your own words what the reader will be able to make at the end.",
+        "A sentence about stoves is a safety fact, not a sentence about what the piece teaches. Check the other three."
+      ],
+      how: [
+        "Every step in Zane's draft is about cooking oatmeal.",
+        "An opening tells the reader what the piece will teach.",
+        "The answer is \"Oatmeal is a warm breakfast that you can cook in only a few minutes.\"",
+        "Facts about oats, breakfast or stoves are true, but none says what this piece will teach."
+      ],
+      why: "The answer is \"Oatmeal is a warm breakfast that you can cook in only a few minutes.\" It tells the reader what the piece will teach. The sentences about oats, breakfast and stoves are true, but they do not get the reader ready for these steps."
+    },
+    {
+      id: "SK-SS1b-S03",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.1.b"],
+      passages: ["p6"],
+      like: ["SK-SS1b-C03"],
+      prompt: "Zane adds this step: \"Let the oatmeal cool for a few minutes.\" Where should it go, and why?",
+      choices: [
+        { text: "After sentence 4, because the oatmeal is hot only after it has finished cooking.", correct: true },
+        { text: "After sentence 2, because the pot should cool down before any oats go in." },
+        { text: "After sentence 3, because the oats should rest for a few minutes before they cook." },
+        { text: "After sentence 5, because the oatmeal can cool down while the reader eats it." }
+      ],
+      clue: "In a how-to, each step needs the step before it to be done. Ask what has to be true before this step makes sense.",
+      hints: [
+        "In a how-to, each step needs the step before it to be done. Ask what has to be true before this step makes sense.",
+        "Picture the oatmeal in the pot. Reread sentences 2, 3 and 4 and ask when the oatmeal is ready to eat.",
+        "After sentence 5 the reader is already eating. Decide among the places that are left."
+      ],
+      how: [
+        "Find when the oatmeal is hot and ready. Sentence 4 cooks it for five minutes.",
+        "Only after it is cooked does it need to cool. Before sentence 4 it is still water and oats.",
+        "Sentence 5 says to eat it, so the cooling has to come before that.",
+        "The answer is \"After sentence 4, because the oatmeal is hot only after it has finished cooking.\""
+      ],
+      why: "The answer is \"After sentence 4, because the oatmeal is hot only after it has finished cooking.\" The cooling step has to come after the cooking and before the eating. Before sentence 4 there is nothing to cool yet, and after sentence 5 the reader is already eating."
+    },
+    {
+      id: "SK-SS1b-S04",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      pick: 2,
+      like: ["SK-SS1b-C04"],
+      prompt: "Zane's readers will follow the oatmeal steps in a kitchen, with wet hands and a hot pot to watch. Which TWO features would help them most?",
+      choices: [
+        { text: "numbered steps that are easy to find again", correct: true },
+        { text: "a small drawing beside the steps, with a caption", correct: true },
+        { text: "a paragraph about where oats are grown" },
+        { text: "a long list of other breakfast foods" },
+        { text: "a title in tiny print at the bottom of the page" }
+      ],
+      clue: "A feature is chosen for the reader. Think about what this reader is doing and what they cannot do while they cook.",
+      hints: [
+        "A feature is chosen for the reader. Think about what this reader is doing and what they cannot do while they cook.",
+        "Choose two. Say what job each feature does for a reader, and then decide whether these readers need that job done.",
+        "A title in tiny print at the bottom would be hard for any reader to use. Check the other four."
+      ],
+      how: [
+        "Zane's readers are cooking, so they look at the page for only a moment.",
+        "Numbered steps let them find their place again fast.",
+        "A drawing with a caption shows what a step should look like.",
+        "The answers are \"numbered steps that are easy to find again\" and \"a small drawing beside the steps, with a caption.\" Facts about oats or other foods do not help them cook."
+      ],
+      why: "The answers are \"numbered steps that are easy to find again\" and \"a small drawing beside the steps, with a caption.\" Readers who are cooking need to find their place fast and see what a step looks like. Facts about where oats grow or other foods do not help them follow the steps."
+    },
+    {
+      id: "SK-SS1b-S05",
+      type: "order",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-C05"],
+      prompt: "Rosa is teaching a friend to make toast. Put her steps in the best order.",
+      steps: [
+        "Put a slice of bread in the toaster.",
+        "Push the lever down.",
+        "Wait until the toast pops up.",
+        "Spread butter on the warm toast."
+      ],
+      clue: "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+      hints: [
+        "In a how-to, each step builds on the steps before it. Ask which step has to happen before the others can.",
+        "Look at what each step needs. Ask what you must already have before you can do it.",
+        "Spreading butter needs toast to spread it on, so it comes after the toast is ready. Now order the other three steps."
+      ],
+      how: [
+        "There must be bread in the toaster before anything can happen to it.",
+        "Then the lever goes down, and the reader waits for the toast to pop up.",
+        "Only when the toast is ready can the butter go on.",
+        "The order is: put bread in, push the lever, wait for the pop, spread butter."
+      ],
+      why: "The order is: put a slice of bread in the toaster; push the lever down; wait until the toast pops up; spread butter on the warm toast. Each step needs the one before it."
+    },
+    {
+      id: "SK-SS1b-S06",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: ["p7"],
+      like: ["SK-SS1b-C06"],
+      prompt: "Nora wants a heading for each of her two long sections. Choose the best heading for each.",
+      text: "Above sentences 3 to 5: {0}. Above sentences 6 to 8: {1}.",
+      slots: [
+        {
+          options: ["Fun for Little Kids", "Foam Noodles", "The Last Saturday in June"],
+          answer: 0
+        },
+        {
+          options: ["Fun for Bigger Kids", "A Lifeguard on Duty", "Splash Day Is Free"],
+          answer: 0
+        }
+      ],
+      clue: "A heading names what a whole section is about, so it must fit every sentence in that section.",
+      hints: [
+        "A heading names what a whole section is about, so it must fit every sentence in that section.",
+        "Read sentences 3 to 5 as one group, then sentences 6 to 8 as another. Say who each group is about.",
+        "One sentence about foam noodles, or one about a lifeguard, is not enough to name a section. A heading must fit all of the sentences under it."
+      ],
+      how: [
+        "Sentences 3 to 5 tell what little kids can do.",
+        "Sentences 6 to 8 tell what bigger kids can do.",
+        "The answers are \"Fun for Little Kids\" and \"Fun for Bigger Kids.\"",
+        "Foam noodles and a lifeguard each fit only one sentence, and the date and the cost are in the first paragraph."
+      ],
+      why: "The answers are Fun for Little Kids and Fun for Bigger Kids. Sentences 3 to 5 are about little kids, and sentences 6 to 8 are about bigger kids. Foam noodles and a lifeguard each fit only one sentence."
+    },
+    {
+      id: "SK-SS1b-S07",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: ["p7"],
+      like: ["SK-SS1b-C07"],
+      prompt: "Nora wants to add a closing sentence after sentence 8. Which sentence is best?",
+      choices: [
+        { text: "Come to Splash Day and cool off with your whole family!", correct: true },
+        { text: "Next, the lifeguard will blow a whistle to start the big races." },
+        { text: "Foam noodles are long, soft tubes that float well on the water." },
+        { text: "Many kids in our town learn to swim before they finish school." }
+      ],
+      clue: "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
+      hints: [
+        "A closing comes at the very end. Ask what it should do for the reader after they have read everything.",
+        "Read all three paragraphs, not only the last one. Ask what the entire piece is for.",
+        "Sentence 7 already tells about the lifeguard, so the closing should not bring up the lifeguard again. Test the other three against what the whole piece is for."
+      ],
+      how: [
+        "A closing wraps up the whole piece.",
+        "Nora's piece invites families to an event.",
+        "The answer is \"Come to Splash Day and cool off with your whole family!\"",
+        "The races sentence adds a new event, and the noodles and swimming sentences add new facts."
+      ],
+      why: "The answer is \"Come to Splash Day and cool off with your whole family!\" It wraps up the whole piece and speaks to the readers. The other sentences add a new event or new facts instead of ending the piece."
+    },
+    {
+      id: "SK-SS1b-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      pick: 1,
+      like: ["SK-SS1b-C08"],
+      prompt: "Nora wants to put this photo on her flyer. Select the sentence that would make the best caption.",
+      stem: [
+        "A photo from last year's Splash Day shows two children sliding down a red slide into a shallow pool."
+      ],
+      options: [
+        "Two kids splash down a slide at last year's Splash Day.",
+        "Splash Day is on the last Saturday in June.",
+        "Slides are made of smooth, hard plastic.",
+        "Swimming pools are cleaned every week."
+      ],
+      answer: [0],
+      clue: "A caption sits next to a picture and tells what the picture shows.",
+      hints: [
+        "A caption sits next to a picture and tells what the picture shows.",
+        "Read the sentence about the photo. Then read each choice and ask: does it tell about this picture, or about something else?",
+        "The date of the event is useful on a flyer, but it does not tell what this photo shows. Check the other three the same way."
+      ],
+      how: [
+        "A caption tells what is happening in the picture.",
+        "The photo shows two children sliding down a slide into a pool.",
+        "The answer is \"Two kids splash down a slide at last year's Splash Day.\"",
+        "The others are facts about the date, slides or pools, not about this photo."
+      ],
+      why: "The answer is \"Two kids splash down a slide at last year's Splash Day.\" A caption tells what the picture shows. The other sentences give the date or facts about slides and pools, not about this photo."
+    },
+    {
+      id: "SK-SS1b-S09",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: ["3.T.SS.1.b"],
+      passages: ["p6", "p7"],
+      pick: 2,
+      like: ["SK-SS1b-C09"],
+      prompt: "Think about Zane's oatmeal draft and Nora's Splash Day draft. Which TWO sentences tell how their plans are different?",
+      choices: [
+        {
+          text: "Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections.",
+          correct: true
+        },
+        {
+          text: "Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.",
+          correct: true
+        },
+        { text: "Nora's draft has a numbered list, but Zane's draft does not." },
+        { text: "Zane's draft compares two foods, but Nora's draft tells a story." },
+        { text: "Nora's draft uses the words first, next and then, but Zane's draft does not." }
+      ],
+      clue: "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
+      hints: [
+        "To compare, find what is true about one draft, then check the other draft. A statement has to be true about both drafts.",
+        "Choose two. Look at how each draft is organized and who each draft is written for.",
+        "Neither draft has a numbered list. Check the other four statements against both drafts the same way."
+      ],
+      how: [
+        "Zane's draft is a how-to with steps in order for a person who is cooking.",
+        "Nora's draft tells facts about an event, in sections, for families.",
+        "The answers are \"Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections\" and \"Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.\"",
+        "Neither draft has a numbered list, compares two foods or tells a story, and neither uses the words first, next and then."
+      ],
+      why: "The answers are \"Zane's draft puts steps in the order a reader does them, but Nora's draft groups facts into sections\" and \"Zane writes for readers who will cook as they read, but Nora writes for families who want facts about an event.\" Neither draft has a numbered list, compares two foods or tells a story, and neither uses first, next and then."
+    },
+    {
+      id: "SK-SS1b-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-C10"],
+      prompt: "Complete Ana's plan. Choose the best answer for each blank.",
+      stem: [
+        "Ms. Reyes asks Ana to make a page that shows how a drum and a guitar are alike and different. Classmates will study the page before a music quiz."
+      ],
+      text: "Ana's job is to show how two things are alike and different, so her piece should use {0}. Her classmates will study it, so {1} would help them most.",
+      slots: [
+        {
+          options: [
+            "a compare plan with a section for each",
+            "steps in order",
+            "a plan for explaining why something happens"
+          ],
+          answer: 0
+        },
+        {
+          options: ["a heading above each section", "a numbered list of steps", "a long paragraph with no breaks"],
+          answer: 0
+        }
+      ],
+      clue: "First name the writer's job. The job picks the plan. Then think about how the reader will use the page.",
+      hints: [
+        "First name the writer's job. The job picks the plan. Then think about how the reader will use the page.",
+        "Read the sentence again. The first blank is about the job, and the second blank is about the reader.",
+        "Ana is not teaching how to do something, so one choice for the first blank does not match her job."
+      ],
+      how: [
+        "Ana's job is to show how two things are alike and different, so the plan is compare, with a section for each.",
+        "Classmates will study the page, so they need to find each part quickly.",
+        "The answers are \"a compare plan with a section for each\" and \"a heading above each section.\"",
+        "Steps and a why plan do other jobs, and a long paragraph with no breaks is hard to study."
+      ],
+      why: "The answers are a compare plan with a section for each, and a heading above each section. Ana is comparing two things, so each gets a section, and headings help classmates find each part. Steps and a why plan do other jobs."
+    },
+    {
+      id: "SK-SS1b-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: ["p8"],
+      pick: 1,
+      like: ["SK-SS1b-C11"],
+      prompt: "One sentence in Omar's draft is in the wrong paragraph. Select that sentence.",
+      targets: ["p8:1:2", "p8:2:1", "p8:2:2", "p8:2:3", "p8:3:1", "p8:3:2", "p8:3:3"],
+      answer: ["p8:2:3"],
+      clue: "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
+      hints: [
+        "A section stays on one idea. Find the idea of each paragraph, then look for a sentence that is about a different idea.",
+        "Say in a few words what each paragraph is about. Then ask of each sentence: does it belong with its paragraph?",
+        "A paper book never needing to be charged is about paper books, and it sits in the paper-books paragraph. Check the other sentences against their own paragraphs."
+      ],
+      how: [
+        "Paragraph 2 begins with paper books, and paragraph 3 is about tablets.",
+        "A book never needing a charge and flipping back to a page are about paper books.",
+        "Sentence 5 says a tablet can hold hundreds of books. That is about tablets, so it is in the wrong paragraph.",
+        "The answer is \"A tablet can hold hundreds of books at one time.\""
+      ],
+      why: "The answer is \"A tablet can hold hundreds of books at one time.\" The second paragraph is about paper books, but this sentence is about tablets, so it belongs in the third paragraph."
+    },
+    {
+      id: "SK-SS1b-S12",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.1.b"],
+      passages: ["p8"],
+      like: ["SK-SS1b-C12"],
+      prompt: "Why is a compare plan a good fit for Omar's piece?",
+      choices: [
+        { text: "His readers want to see how paper books and tablets are alike and different.", correct: true },
+        { text: "His readers need the steps for turning on a tablet, in order." },
+        { text: "His readers need to learn what caused books to be invented." },
+        { text: "His readers need a picture to go with every sentence in the draft." }
+      ],
+      clue: "A plan should fit what the reader needs from the piece. Ask what Omar wants his reader to understand.",
+      hints: [
+        "A plan should fit what the reader needs from the piece. Ask what Omar wants his reader to understand.",
+        "Read the whole draft and notice what each paragraph does for the reader.",
+        "The draft is not a list of steps, so a plan for steps in order would not fit. Test the other choices against what Omar's paragraphs do."
+      ],
+      how: [
+        "Look at what each paragraph does: one gives two ways to read, one tells about books and one tells about tablets.",
+        "A compare plan gives each thing its own section.",
+        "The answer is \"His readers want to see how paper books and tablets are alike and different.\"",
+        "The draft has no steps, never tells how books were invented, and does not need a picture for every sentence."
+      ],
+      why: "The answer is \"His readers want to see how paper books and tablets are alike and different.\" Omar gives each way of reading its own paragraph. The draft has no steps, does not tell how books began, and does not need a picture for every sentence."
+    },
+    {
+      id: "SK-SS1b-S13",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-C13"],
+      prompt: "Match each reader to the feature that would help that reader most. Use each feature once.",
+      cols: ["a large title that names the event", "a photo with a caption", "headings above short sections"],
+      rows: [
+        { text: "a driver who passes a sign for the school play and reads it for only a second", answer: 0 },
+        { text: "a reader who has never seen a tapir", answer: 1 },
+        { text: "a reader who wants only the facts about food on a long page about owls", answer: 2 }
+      ],
+      clue: "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
+      hints: [
+        "Think about what each reader needs and how much time or knowledge they have. Then ask which feature gives that help.",
+        "Start with the row you are most sure about, then use each feature only once.",
+        "A reader who has never seen a tapir needs to see one. Match the other two rows after that."
+      ],
+      how: [
+        "The driver reads for only a second, so the biggest words must say what the sign is about.",
+        "A reader who has never seen a tapir needs to see one, and a caption tells what the photo shows.",
+        "A reader who wants only one part of a long page can use headings to find that part.",
+        "The matches are: driver with the large title, tapir reader with the photo and caption, food-facts reader with the headings."
+      ],
+      why: "The driver needs a large title that names the event. The reader who has never seen a tapir needs a photo with a caption. The reader who wants only the food facts needs headings above short sections to find that part."
+    },
+    {
+      id: "SK-SS1b-S14",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-C14"],
+      prompt: "Which plan fits Luis's job and his readers best?",
+      stem: [
+        "Luis wants to write a page for his class that helps them decide whether to visit the zoo or the science museum on a class trip."
+      ],
+      choices: [
+        {
+          text: "Compare the two places, with one section for the zoo and one section for the museum.",
+          correct: true
+        },
+        { text: "List the steps for packing a lunch for the trip, in the order a person does them." },
+        { text: "Explain what caused the zoo and the museum to be built, with a heading for each cause." },
+        { text: "Tell one story about a trip Luis took, and leave out headings and sections." }
+      ],
+      clue: "First name the writer's job. Is he teaching how to do something, comparing, or explaining why something happens?",
+      hints: [
+        "First name the writer's job. Is he teaching how to do something, comparing, or explaining why something happens?",
+        "Read the four plans slowly. For each one, ask what question the finished page would answer for Luis's classmates.",
+        "A page of packing steps would teach how to pack a lunch, but that is not Luis's job. Test the other three plans."
+      ],
+      how: [
+        "Luis's classmates must choose between two places, so they need to see how the places are alike and different.",
+        "A section for each place lets them look at one place at a time.",
+        "The answer is \"Compare the two places, with one section for the zoo and one section for the museum.\"",
+        "Packing steps, the causes of building and one story do not help classmates choose."
+      ],
+      why: "The answer is \"Compare the two places, with one section for the zoo and one section for the museum.\" Classmates choosing between two places need to see how they are alike and different. Packing steps, why the places were built and one story do not help them choose."
+    },
+    {
+      id: "SK-SS1b-S15",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.T.SS.1.b"],
+      passages: [],
+      like: ["SK-SS1b-C15"],
+      prompt: "Kai wants to add a closing after sentence 4. Which sentence is best?",
+      stem: [
+        "(1) Dribbling is how you move with a basketball.",
+        "(2) First, spread your fingers wide.",
+        "(3) Next, push the ball down with your fingertips, not your palm.",
+        "(4) Then let the ball bounce back up to your hand."
+      ],
+      choices: [
+        { text: "Practice a little each day, and soon you can dribble without looking at the ball.", correct: true },
+        { text: "Next, pick up a second ball and try to bounce both at the same time." },
+        { text: "Basketballs are usually orange and have small bumps all over them." },
+        { text: "Some players dribble with their left hand to try something new." }
+      ],
+      clue: "A closing wraps up the whole piece.",
+      hints: [
+        "A closing wraps up the whole piece.",
+        "Ask what a reader should feel or be ready to do after finishing these steps.",
+        "Bouncing two balls at once would add one more step, but the steps are already finished by sentence 4. Test the other three against what a closing does."
+      ],
+      how: [
+        "A closing wraps up a how-to after the steps are done.",
+        "By sentence 4 the reader has done every step, so the piece is ready to end.",
+        "The answer is \"Practice a little each day, and soon you can dribble without looking at the ball.\"",
+        "The other sentences add another step or new facts, so they do not wrap up."
+      ],
+      why: "The answer is \"Practice a little each day, and soon you can dribble without looking at the ball.\" It wraps up the how-to and encourages the reader. The sentence about two balls adds a step, and the sentences about the ball and the left hand add new facts."
+    }
+  ],
+  addons: {
+    "SK-SS1b-P1": {
+      hints: [
+        "How-to steps must go in the order the reader does them. Picture yourself doing each step with a real pinecone.",
+        "Look at the sentences that tell what to put on the pinecone. Ask which one has to be done before the other.",
+        "Sentence 7 tells what happens after the feeder is hung, so it already belongs near the end. Check the other three changes."
+      ],
+      how: [
+        "Picture doing the steps. After the string is tied, you must put something sticky on the pinecone.",
+        "Birdseed will not stick to a bare pinecone, so the peanut butter has to go on before the pinecone is rolled in seed.",
+        "The answer is \"Switch sentences 4 and 5 so the peanut butter goes on first.\"",
+        "The first step (tie the string) and the last step (hang the feeder) are already in the right places."
+      ],
+      misconception: "A common mix-up is moving a sentence that is already in the right place. Check what each step needs before it."
+    },
+    "SK-SS1b-P2": {
+      hints: [
+        "A heading names what a whole section is about, so it must fit every sentence in that section.",
+        "Read only sentences 3 through 6. Ask what those four sentences have in common.",
+        "Sentences 3 to 6 do not list supplies, so a heading about supplies does not fit them. Check the other three against what the four sentences share."
+      ],
+      how: [
+        "Sentences 3, 4, 5 and 6 each tell the reader to do something to the feeder.",
+        "A heading for them should name making the feeder, in steps.",
+        "The answer is \"Making the Feeder Step by Step.\"",
+        "The list of supplies is in sentence 2, and the other headings are about birds, not the steps."
+      ],
+      misconception: "A common mix-up is choosing a heading about the topic of the whole piece instead of the part under the heading."
+    },
+    "SK-SS1b-P3": {
+      hints: [
+        "Choose a feature by the problem the reader has. Ask what job each feature does.",
+        "Say what each choice does for a reader: shows order, names a part, names the whole piece, or shows what something looks like.",
+        "A bold title names the whole piece. It tells the reader what the piece is called, not what the feeder looks like. Check the other three."
+      ],
+      how: [
+        "The reader's problem is that they have never seen a pinecone feeder.",
+        "A photo lets them see one, and a caption tells what it shows.",
+        "The answer is \"a photo of a finished feeder with a caption.\"",
+        "A numbered list shows order, and a heading or title names a part, so none of those shows the feeder."
+      ],
+      misconception: "A common mix-up is choosing a feature that helps with the steps when the reader's problem is seeing the finished feeder."
+    },
+    "SK-SS1b-P4": {
+      hints: [
+        "A closing wraps up the whole piece. Ask what idea the whole piece is about.",
+        "Read the opening sentence and the last two sentences. Ask what the reader should remember at the end.",
+        "A sentence that starts with Next adds one more step. Check the other three against what a closing does."
+      ],
+      how: [
+        "A closing wraps up the whole piece and goes back to the main idea.",
+        "Sentence 1 says a pinecone feeder is an easy way to help birds when it is cold.",
+        "The answer is \"A pinecone feeder is a simple way to help hungry birds all winter.\"",
+        "The others add a new step or a new detail about cardinals or other feeders, so they do not close the piece."
+      ],
+      misconception: "A common mix-up is choosing a sentence with a new fact. A closing wraps up; it does not add."
+    },
+    "SK-SS1b-P5": {
+      hints: [
+        "For each job, ask what the writer is doing for the reader: teaching steps, showing alike and different, or telling why.",
+        "Start with the row you are most sure about. Use each plan once.",
+        "Telling why a pond dried up asks for a reason, not for steps or a side-by-side. Match the other two rows after that."
+      ],
+      how: [
+        "Folding a paper boat teaches how to do something, so the plan is steps in order.",
+        "Frogs and toads are two things side by side, so the plan is compare.",
+        "Why a pond dried up asks for a reason, so the plan is cause and effect."
+      ]
+    }
+  },
+/* B4b:core:end */
   test: [
     { id: "SK-SS1b-T7", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Priya wants to add a paragraph to help readers choose between the Pine Hill Library and their school library. Which plan fits that job best?",
