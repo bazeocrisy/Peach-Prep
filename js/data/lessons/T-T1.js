@@ -2276,6 +2276,48 @@ PP.addLesson({
         ["Then the bus lurched, and the woman grabbed a pole to keep from falling.", "An orange tumbled out of her bag and rolled down the aisle."],
         ["Malik stood up and waved her toward his seat.", "\"Please, take it,\" he said."],
         ["The woman sank into the seat with a sigh.", "\"Thank you, young man,\" she said.", "Malik held on to the pole for the rest of the ride, and somehow his legs did not feel so tired anymore."]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p10 to p14 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p10", title: "The Borrowed Boots", genre: "Literary text",
+      paragraphs: [
+        ["Tobias's cousin Cedric let him borrow his brand-new soccer boots for the big game.", "The boots were shiny black with bright orange stripes.", "\"Take good care of them,\" Cedric said.", "Tobias could hardly wait to lace them up."],
+        ["In the first half, Tobias slid across the grass to stop a goal.", "When he stood up, he saw a long, ugly scuff on the toe.", "His stomach dropped.", "He barely kicked the ball for the rest of the game."],
+        ["After the game, Tobias held out the boots with both hands.", "His voice came out small.", "\"I scuffed them,\" he said.", "\"I'm sorry.\""],
+        ["Cedric looked at the toe and laughed.", "\"Boots are made for playing in,\" he said.", "\"That scuff means you saved a goal.\""],
+        ["Tobias felt the knot in his chest let go.", "He grinned all the way home."]
+      ] },
+    { id: "p11", title: "Teaching Grandpa", genre: "Literary text",
+      paragraphs: [
+        ["Grandpa Lou wanted to call his sister, who lived far away in Jamaica.", "Rafa set the tablet on the kitchen table and showed him the green call button."],
+        ["Grandpa tapped the red button by mistake.", "The screen went black.", "He tapped it again, and then a third time."],
+        ["Rafa's jaw tightened.", "\"Not that one, Grandpa!\" he said.", "He reached for the tablet to do it himself."],
+        ["Then Rafa remembered the summer Grandpa taught him to ride a bike, letting go of the seat again and again.", "\"If he can wait for me, I can wait for him,\" Rafa thought.", "The kitchen clock ticked loudly."],
+        ["Rafa pulled his hand back and folded it in his lap.", "\"Try the green one,\" he said.", "Grandpa pressed it slowly, and his sister's smiling face popped onto the screen."],
+        ["\"I did it myself!\" Grandpa cheered."]
+      ] },
+    { id: "p12", title: "The Marble Run", genre: "Literary text",
+      paragraphs: [
+        ["For the class science fair, Dalia and Kiran built a marble run out of cardboard tubes and tape.", "Kiran bent the tubes into loops and curves.", "Dalia figured out how steep each ramp should be."],
+        ["On the day of the fair, the judge, Mr. Hill, watched a marble roll through every loop and drop into the cup at the end.", "\"Wonderful!\" he said.", "\"Which of you built it?\""],
+        ["Dalia opened her mouth to say, \"I did the hard part.\"", "Then she thought of Kiran bending each tube while she watched.", "She closed her mouth and then smiled."],
+        ["\"We both did,\" she said.", "\"Kiran made the loops, and I tested the ramps.\"", "Kiran looked up in surprise."],
+        ["Mr. Hill pinned a blue ribbon to the front of their marble run.", "\"Great teams share the work,\" he said.", "Kiran and Dalia held the ribbon between them for a photo."]
+      ] },
+    { id: "p13", title: "The Little Library", genre: "Literary text",
+      paragraphs: [
+        ["Amira loved to read, but the nearest library was a long bus ride away.", "Her street had lots of kids and almost no books."],
+        ["\"Nobody will care about a box of books,\" Amira thought.", "Still, on Saturday she nailed a wooden box to her fence.", "She filled it with ten of her old books and painted FREE BOOKS on the lid."],
+        ["Mr. Alder walked his dog past the fence every day, and he stopped to look.", "The next morning, the box held a new book from him, with a note that said, \"Thank you.\"", "Soon the Brown twins added three more, and Mrs. Cole left a stack of picture books."],
+        ["By summer, the box was too full to close.", "A neighbor built a second box so there was room for every book."],
+        ["Amira smiled when she saw a line of kids at the fence.", "She had only started with one little box."]
+      ] },
+    { id: "p14", title: "The Card Trick", genre: "Literary text",
+      paragraphs: [
+        ["Beni had practiced his card trick for two weeks.", "Now he stood behind the curtain at the Friday assembly, and his knees felt like jelly."],
+        ["\"And now, Beni!\" the teacher called.", "Beni walked out and held up a card.", "The first trick worked perfectly, and the crowd gasped."],
+        ["For the last trick, he fanned the whole deck.", "Whoosh! The cards slipped out of his hands and scattered across the stage.", "His face turned hot and red."],
+        ["Somebody giggled.", "Then Beni giggled too, and soon the whole room was laughing along with him."],
+        ["He scooped up the cards and took a big bow.", "In the front row, his mom jumped up and cheered.", "Beni stood tall, with the biggest smile on his face."]
       ] }
   ],
   practice: [
@@ -2706,7 +2748,281 @@ PP.addLesson({
         "Eating on the porch is an event, not a lesson. The rain did not ruin the picnic, and nobody in the story checks the weather."
       ],
       misconception: "A common mix-up is choosing what a character says (\"Now it's ruined\") instead of what the whole story shows.",
-      why: "The answer is \"When a plan goes wrong, a new idea can still save the day.\" Rain spoils the outdoor plan, but Kiana thinks of the covered porch, and the picnic goes on. Eating on the porch is an event, the rain does not ruin the day, and the story never says to check the weather." }
+      why: "The answer is \"When a plan goes wrong, a new idea can still save the day.\" Rain spoils the outdoor plan, but Kiana thinks of the covered porch, and the picnic goes on. Eating on the porch is an event, the rain does not ruin the day, and the story never says to check the weather." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT1c-S04", type: "order", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: ["p10"],
+      like: ["SK-TT1c-P5"],
+      prompt: "Put Tobias's feelings in the order they happen in the story.",
+      steps: [
+        "Tobias is excited to wear the boots.",
+        "Tobias is upset about the scuff.",
+        "Tobias feels relieved that Cedric is not angry."
+      ],
+      clue: "A character's feelings change as events happen. Ask what happens right before each feeling.",
+      hints: [
+        "A character's feelings change as events happen. Ask what happens right before each feeling.",
+        "Find the clues to each feeling: what Tobias does, what happens to him, and what Cedric says.",
+        "The knot in Tobias's chest lets go only after Cedric speaks, so that feeling comes last. Place the other two."
+      ],
+      how: [
+        "At the start, Tobias \"could hardly wait\" to lace up the borrowed boots, so he is excited.",
+        "After he sees the scuff, his stomach drops and he barely kicks the ball. He is upset.",
+        "When Cedric laughs and says the scuff shows he saved a goal, the knot in Tobias's chest lets go. He is relieved.",
+        "So the order is excited, upset, relieved."
+      ],
+      misconception: "A common mix-up is putting the happy feelings together at the start. Tobias's mood drops in the middle and lifts at the end.",
+      why: "The order is: excited to wear the boots; upset about the scuff; relieved that Cedric is not angry. Each feeling comes right after the event that causes it." },
+    { id: "SK-TT1c-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: ["p11"],
+      like: ["SK-TT1c-C03"],
+      prompt: "Which sentence shows something Rafa does, not something he says or thinks, that proves he has decided to be patient? Choose the sentence in the passage.",
+      targets: ["p11:1:2", "p11:3:1", "p11:3:3", "p11:4:2", "p11:5:1", "p11:5:2"],
+      answer: ["p11:5:1"], pick: 1,
+      clue: "An action is something a character does. It can prove a decision. Ask which sentences are actions, and then which action shows the decision.",
+      hints: [
+        "An action is something a character does. It can prove a decision. Ask which sentences are actions, and then which action shows the decision.",
+        "Sort the sentences: which are said out loud, which are thought, and which are things Rafa does?",
+        "Reaching for the tablet is an action, but it happens before Rafa changes his mind. Check each action that is left."
+      ],
+      how: [
+        "Rafa's words (\"Try the green one\") and thoughts (\"If he can wait for me\") are not actions.",
+        "Setting up the tablet, a tight jaw and reaching for the tablet are actions, but they come before Rafa decides to wait, or they show his frustration.",
+        "After he remembers the bike rides, Rafa pulls his hand back and folds it in his lap. Keeping his hands still shows he has decided to let Grandpa try.",
+        "The answer is \"Rafa pulled his hand back and folded it in his lap.\""
+      ],
+      misconception: "A common mix-up is choosing a thought. A thought tells what Rafa decides inside; an action proves it.",
+      why: "The answer is \"Rafa pulled his hand back and folded it in his lap.\" Keeping his hands still shows he has decided to be patient. Setting up the tablet, the tight jaw and reaching for the tablet come before the decision, and the other sentences are words or thoughts." },
+    { id: "SK-TT1c-S06", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p10"],
+      like: ["SK-TT1c-C04"],
+      prompt: "Cedric says, \"That scuff means you saved a goal.\" Why does the author include these words?",
+      choices: [
+        { text: "to show that Cedric is not angry and sees the scuff in a good way", correct: true },
+        { text: "to show that Cedric wants his boots back right away" },
+        { text: "to show that Cedric is upset that Tobias slid on the grass" },
+        { text: "to show that Tobias plans to buy Cedric a new pair of boots" }
+      ],
+      clue: "Authors put a character's words in a story for a reason. Ask what the words show about the character and how they change what Tobias feels.",
+      hints: [
+        "Authors put a character's words in a story for a reason. Ask what the words show about the character and how they change what Tobias feels.",
+        "Reread what Cedric says. Then notice what Tobias feels afterward.",
+        "Tobias never says he will buy new boots, so that choice has no support. Test each choice that is left against how Cedric acts."
+      ],
+      how: [
+        "Tobias comes to Cedric worried and says he is sorry for scuffing the boots.",
+        "Cedric laughs and says boots are made for playing in. He turns the scuff into a sign that Tobias saved a goal.",
+        "The answer is \"to show that Cedric is not angry and sees the scuff in a good way.\"",
+        "Cedric laughs instead of asking for the boots, he does not blame Tobias for sliding, and no one talks about buying new boots."
+      ],
+      misconception: "A common mix-up is thinking a character who owns something must be upset when it gets damaged. Look at what he actually says.",
+      why: "The answer is \"to show that Cedric is not angry and sees the scuff in a good way.\" He laughs, says boots are made for playing in, and links the scuff to a saved goal. He does not ask for the boots back, he does not blame Tobias for sliding, and nobody plans to buy new boots." },
+    { id: "SK-TT1c-S07", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.c"], passages: [],
+      like: ["SK-TT1c-C06"],
+      stem: ["Every night, Yara packs her backpack. She puts her shoes by the door and sets her alarm. In the morning, she is ready ten minutes early. Her brother is still looking for his socks."],
+      prompt: "Read the story. What does Yara's habit of getting ready each night show about her?",
+      choices: [
+        { text: "She plans ahead so she is ready for the next day.", correct: true },
+        { text: "She is afraid that her brother will leave without her." },
+        { text: "She wants to be the first person to arrive at school." },
+        { text: "She does not like to talk to anyone in the morning." }
+      ],
+      clue: "An action that a character repeats shows what the character is like. Ask what Yara's habit says about her.",
+      hints: [
+        "An action that a character repeats shows what the character is like. Ask what Yara's habit says about her.",
+        "List the things Yara does every night. What do they have in common?",
+        "Nothing in the story says Yara is afraid of anything. Test each choice that is left against what she does."
+      ],
+      how: [
+        "Each night, Yara packs, lays out her shoes and sets her alarm. All three get things ready ahead of time.",
+        "The next morning she is ready early, so the plan works.",
+        "The answer is \"She plans ahead so she is ready for the next day.\"",
+        "The story never says she is afraid, wants to be first at school, or avoids talking."
+      ],
+      misconception: "A common mix-up is choosing a reason the story never gives. Stay with what the repeated actions show.",
+      why: "The answer is \"She plans ahead so she is ready for the next day.\" Packing, laying out shoes and setting an alarm all get her ready ahead of time. The story never says she is afraid, wants to arrive first or avoids talking." },
+    { id: "SK-TT1c-S08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p14"],
+      like: ["SK-TT1c-C08"],
+      prompt: "How does Beni feel at each moment? Match each moment to the feeling it shows. Use each feeling once.",
+      cols: ["nervous", "embarrassed", "relieved", "proud"],
+      rows: [
+        { text: "when he waits behind the curtain", answer: 0 },
+        { text: "when the cards scatter across the stage", answer: 1 },
+        { text: "when the whole room laughs along with him", answer: 2 },
+        { text: "when his mom cheers during his bow", answer: 3 }
+      ],
+      clue: "A character's feeling shows in what happens and in what the character does. Ask how you would feel at each moment.",
+      hints: [
+        "A character's feeling shows in what happens and in what the character does. Ask how you would feel at each moment.",
+        "For each moment, find the clue in the story: a body feeling, something that happens, or what other people do.",
+        "Knees that feel like jelly are a sign of nervousness. Match the other three moments the same way."
+      ],
+      how: [
+        "Behind the curtain, Beni's knees feel like jelly, so he is nervous.",
+        "When the cards scatter, his face turns hot and red. That shows embarrassment.",
+        "The crowd laughs along with him, not at him, so his worry melts away. He is relieved.",
+        "When his mom jumps up and cheers, he stands tall with a big smile. He is proud."
+      ],
+      misconception: "A common mix-up is calling the laughing moment embarrassing. Beni laughs too, which shows relief.",
+      why: "Waiting behind the curtain shows nervous. The scattered cards and red face show embarrassed. The room laughing along with him shows relieved. His mom cheering while he stands tall shows proud." },
+    { id: "SK-TT1c-S09", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p11"], pick: 2,
+      like: ["SK-TT1c-C09"],
+      prompt: "Which TWO sentences show what is going on in Rafa's mind before he pulls his hand back? Choose two sentences in the passage.",
+      targets: ["p11:3:1", "p11:3:3", "p11:4:1", "p11:4:2", "p11:4:3", "p11:5:1"],
+      answer: ["p11:4:1", "p11:4:2"],
+      clue: "A character's mind holds thoughts and memories. Look for sentences that tell what Rafa thinks or remembers.",
+      hints: [
+        "A character's mind holds thoughts and memories. Look for sentences that tell what Rafa thinks or remembers.",
+        "Read the sentences between the moment Rafa gets upset and the moment he pulls his hand back.",
+        "A tight jaw shows how Rafa looks on the outside, but it does not tell what he thinks or remembers. Check each sentence that is left."
+      ],
+      how: [
+        "Rafa first gets upset: his jaw tightens and he reaches for the tablet. Those are things he does.",
+        "Then the story says he remembered the summer Grandpa taught him to ride a bike. A memory is inside his mind.",
+        "Next he thinks, \"If he can wait for me, I can wait for him.\" That is a thought.",
+        "The ticking clock is the setting, and pulling his hand back is an action that comes after."
+      ],
+      misconception: "A common mix-up is choosing an action. Actions show what a character does; thoughts and memories show what is in his mind.",
+      why: "The answers are the sentence about Rafa remembering the summer Grandpa taught him to ride a bike, and the sentence where Rafa thinks, \"If he can wait for me, I can wait for him.\" A memory and a thought are inside his mind. His tight jaw and reaching are actions, the clock is the setting, and pulling his hand back comes after." },
+    { id: "SK-TT1c-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p12"],
+      like: ["SK-TT1c-C10"],
+      prompt: "Which lesson do Dalia's choices teach the reader?",
+      choices: [
+        { text: "Sharing credit shows respect for the people who help you.", correct: true },
+        { text: "Dalia and Kiran win a blue ribbon at the science fair." },
+        { text: "It is better to work alone than to work with a partner." },
+        { text: "Marble runs work best when the ramps are very steep." }
+      ],
+      clue: "A lesson is a big idea about how to act. Look at what the character chooses, not only at what happens.",
+      hints: [
+        "A lesson is a big idea about how to act. Look at what the character chooses, not only at what happens.",
+        "Look at what Dalia almost says, and what she says instead.",
+        "A fact about who wins tells what happens but not how to act. Check each choice that is left against Dalia's choice."
+      ],
+      how: [
+        "Dalia almost says, \"I did the hard part,\" but she thinks of Kiran bending the tubes.",
+        "Instead she says they both built it and names what Kiran did. She gives him credit.",
+        "The answer is \"Sharing credit shows respect for the people who help you.\"",
+        "Winning the ribbon is an event, Dalia works with Kiran instead of alone, and the ramps are only a detail."
+      ],
+      misconception: "A common mix-up is choosing what happens in the story. A lesson tells how people should act.",
+      why: "The answer is \"Sharing credit shows respect for the people who help you.\" Dalia could have taken the credit, but she names what Kiran did. Winning a ribbon is an event, the partners work together, and the steep ramps are only a detail." },
+    { id: "SK-TT1c-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: ["p13"], pick: 2,
+      like: ["SK-TT1c-C11"],
+      prompt: "Which TWO events happen because Amira puts up the box of books?",
+      choices: [
+        { text: "Mr. Alder leaves a new book with a thank-you note.", correct: true },
+        { text: "A neighbor builds a second box for the extra books.", correct: true },
+        { text: "Amira loves to read." },
+        { text: "The nearest library is a long bus ride away." },
+        { text: "Her street has lots of kids and almost no books." }
+      ],
+      clue: "An effect happens because of a cause. Look for events that come after Amira puts up the box, not before.",
+      hints: [
+        "An effect happens because of a cause. Look for events that come after Amira puts up the box, not before.",
+        "Find the moment Amira nails up the box. Things that were already true cannot happen because of it.",
+        "Amira's love of reading is true before the box goes up, so it cannot be an effect. Check each other choice the same way."
+      ],
+      how: [
+        "Amira nails up the box on Saturday. Everything that happens because of it must come after.",
+        "Mr. Alder leaves a book with a note, and later a neighbor builds a second box because the first one is too full.",
+        "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\"",
+        "Loving to read, the far library and the street with few books were all true before she put up the box."
+      ],
+      misconception: "A common mix-up is choosing a fact from the start of the story. Those are reasons for the box, not results of it.",
+      why: "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\" Both happen after the box goes up. Amira's love of reading, the faraway library and the street with few books were true before." },
+    { id: "SK-TT1c-S12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: [],
+      like: ["SK-TT1c-C12"],
+      stem: ["Odessa's neighbor, Mr. Pike, broke his arm. Every afternoon, Odessa took his trash can to the curb. She brought it back after the truck came. She never asked for anything. She did not tell her friends."],
+      prompt: "Read the story. Then complete the sentences. Choose the best answer for each blank.",
+      text: "Odessa's actions show that she is {0}. She helps Mr. Pike because she wants {1}.",
+      slots: [
+        { options: ["thoughtful", "selfish", "shy"], answer: 0 },
+        { options: ["to make his hard days a little easier", "to get paid for the work", "to show her friends how helpful she is"], answer: 0 }
+      ],
+      clue: "What a character does again and again shows what the character is like. Ask why she keeps doing it and what she gets from it.",
+      hints: [
+        "What a character does again and again shows what the character is like. Ask why she keeps doing it and what she gets from it.",
+        "Look at the last sentence of the story. What does Odessa not do?",
+        "A selfish person does not give up a part of every afternoon for a neighbor. For the second blank, ask what Odessa gets in return."
+      ],
+      how: [
+        "Odessa carries Mr. Pike's trash can out and back every afternoon while his arm is broken. She thinks about what he needs.",
+        "She never asks for anything, so she is not doing it for pay, and she does not tell her friends, so she is not showing off.",
+        "The answers are thoughtful and to make his hard days a little easier.",
+        "Selfish does not fit, and nothing says she is shy."
+      ],
+      misconception: "A common mix-up is thinking a helper must want something back. Odessa gets nothing and tells no one.",
+      why: "The answers are thoughtful and to make his hard days a little easier. Odessa helps every afternoon, asks for nothing and tells no one. That is not selfish, nothing says she is shy, and she is not helping for pay or to show off." },
+    { id: "SK-TT1c-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p13"],
+      like: ["SK-TT1c-C13"],
+      stem: ["Amira's school playground has no benches, and kids sit on the hot ground at recess. Her classmates say it is too big a job for kids to fix."],
+      prompt: "Based on what Amira is like in \"The Little Library,\" what would she most likely do?",
+      choices: [
+        { text: "bring a crate from home for kids to sit on", correct: true },
+        { text: "agree that kids cannot fix a playground" },
+        { text: "wait for the principal to choose a helper" },
+        { text: "tell her classmates to complain to the bus driver" }
+      ],
+      clue: "What a character does in one story can help you tell what she would do in a new one. Ask what Amira does when a job looks too big.",
+      hints: [
+        "What a character does in one story can help you tell what she would do in a new one. Ask what Amira does when a job looks too big.",
+        "Reread what Amira thinks and then what she does when she puts up the box.",
+        "Amira does not wait for someone else to act, so waiting for the principal does not fit her. Test each choice that is left."
+      ],
+      how: [
+        "In the story, Amira thinks nobody will care about a box of books. She builds it anyway and starts small.",
+        "So when a job looks too big, she begins with one small step.",
+        "In the new situation, the same Amira would bring one crate and set it out. The answer is \"bring a crate from home for kids to sit on.\"",
+        "Agreeing it cannot be fixed, waiting for a helper to be chosen, and complaining to the bus driver are not what she does."
+      ],
+      misconception: "A common mix-up is choosing what her classmates say. Choose what Amira's own actions in the story show.",
+      why: "The answer is \"bring a crate from home for kids to sit on.\" In the story, Amira starts small even though she doubts it will matter. The other choices give up, wait for someone else, or blame someone else." },
+    { id: "SK-TT1c-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.c"], passages: ["p10", "p13"], pick: 2,
+      like: ["SK-TT1c-C14"],
+      prompt: "Think about Tobias in \"The Borrowed Boots\" and Amira in \"The Little Library.\" Which TWO sentences are true about both characters?",
+      choices: [
+        { text: "Each one worries about something before the story ends well.", correct: true },
+        { text: "Each one feels better because of how other people act." , correct: true },
+        { text: "Each one says sorry for something that went wrong." },
+        { text: "Each one gets help from a cousin." },
+        { text: "Each one does everything alone from start to finish." }
+      ],
+      clue: "To compare two characters, ask the same question about each one. A sentence must be true for both.",
+      hints: [
+        "To compare two characters, ask the same question about each one. A sentence must be true for both.",
+        "Take one sentence at a time. Check it against Tobias, then against Amira. Choose two.",
+        "Only Tobias says sorry in his story. Check each sentence that is left against both characters."
+      ],
+      how: [
+        "Tobias worries about the scuff, and Amira thinks that nobody will care about a box of books. Each one has a worry before the good ending.",
+        "Tobias feels better when Cedric laughs, and Amira smiles when neighbors fill the box and kids come. Each feels better because of what others do.",
+        "The answers are \"Each one worries about something before the story ends well.\" and \"Each one feels better because of how other people act.\"",
+        "Only Tobias says sorry or has a cousin, and Amira's neighbors help her."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is true for only one of the two characters.",
+      why: "The answers are \"Each one worries about something before the story ends well.\" and \"Each one feels better because of how other people act.\" Both are true for Tobias and Amira. Only Tobias says sorry or has a cousin, and Amira gets help from neighbors." },
+    { id: "SK-TT1c-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.c"], passages: ["p12"],
+      like: ["SK-TT1c-C15"],
+      prompt: "Which situation teaches the same lesson as \"The Marble Run\"?",
+      choices: [
+        { text: "Mina wins a poster prize and tells the principal that Jo drew the flowers on it.", correct: true },
+        { text: "Pablo practices juggling every day until he can toss three balls without dropping one." },
+        { text: "Gus finds a lost glove in the hall and takes it to the front office." },
+        { text: "Tia saves her allowance for months so she can buy a new bike." }
+      ],
+      clue: "First say the lesson of the story in your own words. Then look for a new situation where someone makes a choice that teaches the same lesson.",
+      hints: [
+        "First say the lesson of the story in your own words. Then look for a new situation where someone makes a choice that teaches the same lesson.",
+        "Ask what Dalia does when the judge asks who built the marble run. Which new situation has a character facing a choice like that?",
+        "Saving money for something is a choice about patience, not about the lesson of this story. Test each choice that is left."
+      ],
+      how: [
+        "Dalia could take all the credit, but she names what Kiran did. The lesson is that sharing credit shows respect.",
+        "Look for a new situation where a character shares credit for something good.",
+        "The answer is \"Mina wins a poster prize and tells the principal that Jo drew the flowers on it.\"",
+        "Practicing, returning a glove and saving money teach other lessons: hard work, honesty and patience."
+      ],
+      misconception: "A common mix-up is choosing a situation that is also about doing something good. The lesson has to be the same.",
+      why: "The answer is \"Mina wins a poster prize and tells the principal that Jo drew the flowers on it.\" Like Dalia, she shares credit with the person who helped. Practicing juggling shows hard work, returning a glove shows honesty, and saving money shows patience." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4-P6 (core set 1) and Together P1-P3. */
   addons: {

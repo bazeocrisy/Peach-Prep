@@ -574,7 +574,298 @@ PP.addLesson({
         "Putting it after sentence 2 would put 1960 after 1968, and moving sentence 3 would put 2001 before 1968."
       ],
       misconception: "A common mix-up is skipping a sentence that has no year. Words like ten years after also tell when.",
-      why: "The answer is \"Move sentence 4 so it comes right after sentence 1.\" Ten years after 1950 is 1960, which comes before the 1968 gym. After sentence 2 would put 1960 after 1968, and the other moves put later events before earlier ones." }
+      why: "The answer is \"Move sentence 4 so it comes right after sentence 1.\" Ten years after 1950 is 1960, which comes before the 1968 gym. After sentence 2 would put 1960 after 1968, and the other moves put later events before earlier ones." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TSSEQ-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C02"],
+      stem: ["Make a Paper Pinwheel", "Paragraph 1: You can make a pinwheel. It spins in the wind. You need a square of paper, a pencil, a push pin and scissors.", "Paragraph 2: First, cut from each corner of the paper almost to the middle. Next, bend every other point into the middle. Then push the pin through all the points and into the side of the pencil."],
+      prompt: "Why does the author begin with Paragraph 1?",
+      choices: [
+        { text: "It lists what you need, so you can gather everything before the first step.", correct: true },
+        { text: "It tells the first step, so you know how to start cutting the paper." },
+        { text: "It tells what can go wrong, so you know how to fix a pinwheel that will not spin." },
+        { text: "It asks a question, so you know the text will explain why wind makes a pinwheel spin." }
+      ],
+      clue: "Each part of a how-to text has a job. Ask what the first paragraph gives the reader.",
+      hints: [
+        "Each part of a how-to text has a job. Ask what the first paragraph gives the reader.",
+        "Reread Paragraph 1. Then compare it with the first sentence of Paragraph 2.",
+        "Nothing goes wrong in Paragraph 1, so it is not telling a problem. Test each choice that is left against what Paragraph 1 says."
+      ],
+      how: [
+        "Paragraph 1 says what you can make and lists a square of paper, a pencil, a push pin and scissors.",
+        "No step begins until Paragraph 2, which starts with the clue word First.",
+        "The answer is \"It lists what you need, so you can gather everything before the first step.\"",
+        "Paragraph 1 gives no step, tells no problem and asks no question."
+      ],
+      misconception: "A common mix-up is thinking every paragraph in a how-to text is a step. The opening paragraph often gets the reader ready.",
+      why: "The answer is \"It lists what you need, so you can gather everything before the first step.\" Paragraph 1 names the paper, the pencil, the pin and the scissors. The steps begin in Paragraph 2 with First, and Paragraph 1 asks no question." },
+    { id: "SK-TSSEQ-S05", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C04"],
+      stem: ["How to Make a S'more", "First, hold a marshmallow on a long stick over the fire. Keep it there until it turns golden brown. Next, set a square of chocolate on a cracker. Then slide the hot marshmallow onto the chocolate. After that, press a second cracker on top. Now eat it while it is warm!", "Sentence from the directions: After that, press a second cracker on top."],
+      prompt: "A student changes \"After that\" in the last sentence to \"First.\" Why would this change confuse a reader?",
+      choices: [
+        { text: "First would mean this is the starting step, but there is no sandwich to press until the marshmallow is on the chocolate.", correct: true },
+        { text: "First would mean this is the starting step, but the chocolate is not set on the cracker until after the cracker is pressed." },
+        { text: "First is not a time clue word, so a reader could not tell when to press the cracker." },
+        { text: "First would mean this step happens at the same time as roasting the marshmallow." }
+      ],
+      clue: "Time clue words tell where a step belongs in the order. Changing a clue word changes what a reader thinks happens when.",
+      hints: [
+        "Time clue words tell where a step belongs in the order. Changing a clue word changes what a reader thinks happens when.",
+        "Ask what the word First would tell a reader about this step. Then compare that with the order of the steps above it.",
+        "First is a time clue word, just like After that, so rule out the choice that says it is not. Check each reason that is left against the order of the steps."
+      ],
+      how: [
+        "After that tells the reader that pressing the cracker comes after the earlier steps.",
+        "The top cracker presses down on the hot marshmallow and the chocolate, so they must be in place first.",
+        "If the step began with First, a reader would try to press a cracker before there is anything to press. The answer is \"First would mean this is the starting step, but there is no sandwich to press until the marshmallow is on the chocolate.\"",
+        "The chocolate is set on the cracker before the pressing, and First never means at the same time."
+      ],
+      misconception: "A common mix-up is thinking any time clue word can start any step. Each one tells where the step belongs in the order.",
+      why: "The answer is \"First would mean this is the starting step, but there is no sandwich to press until the marshmallow is on the chocolate.\" The pressing needs the marshmallow and chocolate in place. The chocolate goes on the cracker before the pressing, and First is a time word that never means at the same time." },
+    { id: "SK-TSSEQ-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSSEQ-C05"],
+      stem: ["Paragraph A: Making play dough is easy. First, mix two cups of flour and one cup of salt in a bowl. Next, stir in one cup of warm water. Then add a few drops of food coloring. Last, squeeze and fold the dough until it is smooth.", "Paragraph B: Our music room is a loud and happy place. Drums of every size line one wall. A shelf holds shiny triangles, such as small ones and big ones. In addition, a piano stands in the corner."],
+      prompt: "Read the two paragraphs. How are they organized differently?",
+      choices: [
+        { text: "Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.", correct: true },
+        { text: "Paragraph A gives details about one place, and Paragraph B tells steps in the order they happen." },
+        { text: "Both paragraphs tell steps in the order they happen, and both use time words." },
+        { text: "Paragraph A tells a problem and its fix, and Paragraph B compares two rooms." }
+      ],
+      clue: "To find how a paragraph is organized, look at its clue words and ask what job they do.",
+      hints: [
+        "To find how a paragraph is organized, look at its clue words and ask what job they do.",
+        "Find the clue words in Paragraph A. Then find the clue words in Paragraph B.",
+        "The music room paragraph does not tell about a problem, so rule out the choice about a problem and a fix. Then match each paragraph to the job of its clue words."
+      ],
+      how: [
+        "Paragraph A uses First, Next, Then and Last. It tells the steps for making play dough, in order.",
+        "Paragraph B uses such as and in addition. It gives details about one place, the music room.",
+        "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\"",
+        "One choice has the paragraphs backward, Paragraph B has no time words, and neither paragraph tells a problem."
+      ],
+      misconception: "A common mix-up is calling any paragraph with a list a sequence. A sequence needs steps in order, shown with time words.",
+      why: "The answer is \"Paragraph A tells steps in the order they happen, and Paragraph B gives details about one place.\" Paragraph A uses First, Next, Then and Last. Paragraph B uses such as and in addition to add details about the music room." },
+    { id: "SK-TSSEQ-S07", type: "order", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C06"],
+      stem: ["How Sea Salt Is Made", "Sea salt starts in the ocean. First, workers let seawater flow into shallow pools by the shore. Next, the sun warms the pools, and the water slowly dries up into the air. After many days, a crust of white salt is left on the bottom. Then workers rake the salt into piles. Finally, the salt is washed, dried and packed into bags."],
+      prompt: "Put the steps in the order they happen as sea salt is made.",
+      steps: [
+        "Seawater flows into shallow pools.",
+        "The sun warms the water, and it dries up.",
+        "A crust of salt is left on the bottom.",
+        "Workers rake the salt into piles.",
+        "The salt is washed, dried and packed."
+      ],
+      clue: "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
+      hints: [
+        "In a science text, a process happens in order, and each step leads to the next. Use the time clue words to follow it.",
+        "Find each step in the text and the clue word near it.",
+        "The water has to flow into the pools before the sun can dry it, so that step goes first. Place the other steps by asking what each one needs before it can happen."
+      ],
+      how: [
+        "First, seawater flows into shallow pools. Next, the sun warms the pools and the water dries up.",
+        "After many days, a crust of salt is left on the bottom.",
+        "Then workers rake the salt into piles, and finally it is washed, dried and packed.",
+        "So the order is: water flows in, the sun dries it, salt is left, workers rake it, the salt is washed and packed."
+      ],
+      misconception: "A common mix-up is putting the raking before the salt is left. Workers can only rake salt that is already there.",
+      why: "The order is: seawater flows into shallow pools, the sun warms the water and it dries up, a crust of salt is left on the bottom, workers rake the salt into piles, and the salt is washed, dried and packed. The clue words First, Next, After many days, Then and Finally show this order." },
+    { id: "SK-TSSEQ-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C07"],
+      stem: ["How to Make a Papier-Mache Bowl", "First, tear newspaper into long strips. Next, stir flour and water into a runny paste. Then dip each strip into the paste until it is soaked. Lay the soaked strips over an upside-down bowl, one on top of the other, until there are four layers. Last, let the bowl dry for two days. The paste dries hard and holds the strips together, so the new bowl keeps its shape."],
+      prompt: "Why must each strip be dipped in the paste BEFORE it is laid on the upside-down bowl?",
+      choices: [
+        { text: "The paste on each strip dries hard and joins the layers into one bowl.", correct: true },
+        { text: "The paste makes the strips so heavy that they stay in place by themselves." },
+        { text: "The paste turns the newspaper a color that matches the bowl underneath." },
+        { text: "The paste keeps the newspaper from sticking to the upside-down bowl underneath." }
+      ],
+      clue: "In a sequence, an early step often makes a later step possible. Ask what the early step changes.",
+      hints: [
+        "In a sequence, an early step often makes a later step possible. Ask what the early step changes.",
+        "Read the last sentence of the text. Then think about what the strips would be like without the paste.",
+        "The text never says anything about color, so rule out that choice. Test the other reasons against what the text says the paste does."
+      ],
+      how: [
+        "Dipping soaks the strips in paste before they are laid down.",
+        "The last sentences say the paste dries hard and holds the strips together.",
+        "The answer is \"The paste on each strip dries hard and joins the layers into one bowl.\"",
+        "The text never says the paste makes the strips heavy, changes their color, or keeps them from sticking."
+      ],
+      misconception: "A common mix-up is choosing a reason that only sounds possible. Use what the text says the step does.",
+      why: "The answer is \"The paste on each strip dries hard and joins the layers into one bowl.\" The text says the paste dries hard and holds the strips together. It never says the paste makes the strips heavy, changes their color or stops them from sticking." },
+    { id: "SK-TSSEQ-S09", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], pick: 2,
+      like: ["SK-TSSEQ-C08"],
+      stem: ["How to Tie-Dye a Shirt", "First, twist the wet shirt and wrap rubber bands around it. Next, squirt dye on each part of the shirt. Then put the shirt in a bag, and put the bag in a safe spot. The dye needs six hours to soak in. After that, rinse the shirt until the water runs clear. This takes about ten minutes. Finally, let the shirt dry."],
+      prompt: "Which TWO phrases tell how much time passes, not only the order of the steps?",
+      choices: [
+        { text: "six hours", correct: true },
+        { text: "about ten minutes", correct: true },
+        { text: "First" },
+        { text: "Next" },
+        { text: "Finally" }
+      ],
+      clue: "Some time words tell order, like then and after that. Others tell how much time passes. Look for the second kind.",
+      hints: [
+        "Some time words tell order, like then and after that. Others tell how much time passes. Look for the second kind.",
+        "Read every choice and ask: does it say how long, or does it only say which step comes when? Choose two.",
+        "Finally tells which step is last. It does not tell how long the step takes. Check the other phrases the same way."
+      ],
+      how: [
+        "First, Next and Finally tell the order of the steps. They do not say how long anything takes.",
+        "\"Six hours\" tells how long the dye needs to soak. \"About ten minutes\" tells how long the rinsing takes.",
+        "The answers are \"six hours\" and \"about ten minutes.\""
+      ],
+      misconception: "A common mix-up is choosing Finally because it comes late. Finally tells which step is last, not how long it took.",
+      why: "The answers are \"six hours\" and \"about ten minutes.\" Both tell how much time passes. First, Next and Finally tell only the order." },
+    { id: "SK-TSSEQ-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSSEQ-C09"],
+      stem: ["Paragraph 1: What happens to your leftover apple cores and carrot peels? In a worm bin, they turn into rich soil. Worms do the work.", "Paragraph 2: First, you put the scraps on top of damp paper in a box. Next, the worms crawl up and nibble the soft scraps.", "Paragraph 3: Then the worms leave tiny brown crumbs behind. After a few months, the box holds dark, rich soil that is ready for a garden."],
+      prompt: "Choose the words that best complete the sentences about how the text is put together.",
+      text: "Paragraph 1 {0}. Paragraphs 2 and 3 {1}.",
+      slots: [
+        { options: ["asks a question that the text answers", "tells the last step of the job", "compares two kinds of bins"], answer: 0 },
+        { options: ["tell the steps that turn scraps into soil", "describe what the worms look like", "tell about a problem and how it was solved"], answer: 0 }
+      ],
+      clue: "Each part of a text has a job. Ask what each part adds to the whole.",
+      hints: [
+        "Each part of a text has a job. Ask what each part adds to the whole.",
+        "Say in a few words what Paragraph 1 does for a reader before any step begins. Then do the same for Paragraphs 2 and 3 together.",
+        "Paragraphs 2 and 3 never tell about anything going wrong, so they do not tell a problem and how it was solved. Read each sentence with the choices that are left."
+      ],
+      how: [
+        "Paragraph 1 asks, \"What happens to your leftover apple cores and carrot peels?\" The rest of the text answers it.",
+        "Paragraphs 2 and 3 use First, Next, Then and After a few months to tell the steps from scraps to soil.",
+        "So the answers are: asks a question that the text answers; tell the steps that turn scraps into soil.",
+        "Paragraph 1 gives no last step and compares no bins, and Paragraphs 2 and 3 do not describe the worms or tell a problem."
+      ],
+      misconception: "A common mix-up is thinking every paragraph in a sequence text tells a step. An opening paragraph can set up a question that the steps answer.",
+      why: "Paragraph 1 asks a question that the text answers. Paragraphs 2 and 3 tell the steps that turn scraps into soil. The text never compares two bins, describes the worms or tells a problem." },
+    { id: "SK-TSSEQ-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C11"],
+      stem: ["Long ago, a farm family dug a pond to give water to their cows. People called it Dell Pond. In 1950, the town bought the land and built a picnic area next to the pond. The town gave the place a new name, Dell Park. Families came to picnic and fish. In 1975, the town added a boat dock and a walking path. Then the town changed the name again, to Lake Dell Park. Today, kids learn to paddle a kayak there."],
+      prompt: "What was the place called when each event happened? Match each event to its name at that time.",
+      cols: ["Dell Pond", "Dell Park", "Lake Dell Park"],
+      rows: [
+        { text: "The cows drank the water.", answer: 0 },
+        { text: "A picnic area was built.", answer: 0 },
+        { text: "Families came to picnic and fish.", answer: 1 },
+        { text: "Kids learn to paddle a kayak.", answer: 2 }
+      ],
+      clue: "In a history text, events go in time order. Keep track of what the place was called at each point.",
+      hints: [
+        "In a history text, events go in time order. Keep track of what the place was called at each point.",
+        "Find the two sentences that tell when the place got a new name. Each event happened either before or after them.",
+        "The cows drank the water long before 1950, so it goes with Dell Pond. Sort the other events the same way."
+      ],
+      how: [
+        "The place was called Dell Pond until 1950. In 1950, it became Dell Park. After 1975, it was Lake Dell Park.",
+        "The cows drank from the pond before the town bought the land, so that goes with Dell Pond.",
+        "The picnic area was built in 1950, just before the new name, while it was still Dell Pond. Families came to picnic and fish after the name changed, so that goes with Dell Park.",
+        "Kids paddling kayaks today fits Lake Dell Park."
+      ],
+      misconception: "A common mix-up is matching an event to the newest name it is told next to. Check when the name changed.",
+      why: "The cows drank the water and the picnic area was built while it was still Dell Pond. Families came to picnic and fish after it became Dell Park. Kids paddling kayaks today fits Lake Dell Park." },
+    { id: "SK-TSSEQ-S12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C12"],
+      stem: ["In 1880, a man built a mill beside Alder Creek to grind corn into meal. Farmers soon drove their wagons to the mill. Some of them stayed to work there. Then a blacksmith shop and a store opened across the road. In 1895, the people built a school. By 1900, the little place was a town with forty families. In 1962, the mill closed, but the town kept its name."],
+      prompt: "Why did a town grow up at Alder Creek?",
+      choices: [
+        { text: "Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.", correct: true },
+        { text: "The people built a school, and families moved there so their children could learn." },
+        { text: "The mill closed, and the workers began to build homes nearby." },
+        { text: "The creek flooded the farms, so the farmers moved to higher ground." }
+      ],
+      clue: "In a history text, one event can lead to the next. Ask what happened before the town grew.",
+      hints: [
+        "In a history text, one event can lead to the next. Ask what happened before the town grew.",
+        "Read the events in order, from 1880 to 1900. Notice which one happened first.",
+        "The mill closed in 1962, long after the town had grown, so a later event cannot be the reason. Test the other choices against the order of events."
+      ],
+      how: [
+        "In 1880, the mill was built. Soon farmers came to it, and some stayed to work there.",
+        "Then a blacksmith shop and a store opened across the road. By 1900, the place was a town.",
+        "The answer is \"Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.\"",
+        "The school came in 1895, after the town had begun to grow, the mill closed much later, and the text never mentions a flood."
+      ],
+      misconception: "A common mix-up is choosing a later event as the reason for an earlier one. A cause comes before what it causes.",
+      why: "The answer is \"Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.\" The mill came first, then the workers, the shop and the store. The school came after the town began to grow, the mill closed in 1962, and no flood is mentioned." },
+    { id: "SK-TSSEQ-S13", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C13"],
+      stem: ["(1) In 1890, workers built a tall brick tower beside Town Hall.", "(2) In 1925, the town added a big clock to the front of the tower.", "(3) In 1988, workers fixed the cracks in the old bricks.", "(4) Today, the clock still tells the time to the whole street.", "New sentence: In 1950, a storm blew the clock's hands off, and a new pair was made."],
+      prompt: "A student wants to add the new sentence. Which sentence should it come right after?",
+      choices: [
+        { text: "Sentence 2", correct: true },
+        { text: "Sentence 1" },
+        { text: "Sentence 3" },
+        { text: "Sentence 4" }
+      ],
+      clue: "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
+      hints: [
+        "A history text tells events in time order. To add a new event, find the events that happened just before and just after it.",
+        "Find every date in the numbered sentences. The new sentence has a date, too.",
+        "Sentence 4 begins with Today, so it tells about now and has to stay last. Check the other dates and time words."
+      ],
+      how: [
+        "The dates in order are 1890, 1925 and 1988. Then sentence 4 tells about today.",
+        "1950 comes after 1925 and before 1988.",
+        "So the new sentence goes right after Sentence 2.",
+        "It cannot go after Sentence 1, because 1950 is later than 1925, or after Sentences 3 and 4, because those come later."
+      ],
+      misconception: "A common mix-up is putting a new event at the end. Use the dates to find the right spot.",
+      why: "The answer is Sentence 2. The new event happened in 1950, which comes after 1925 and before 1988. Sentence 1 is too early, and Sentences 3 and 4 are later." },
+    { id: "SK-TSSEQ-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
+      like: ["SK-TSSEQ-C14"],
+      stem: ["How to Make a Grilled Cheese Sandwich", "(1) First, spread butter on the outside of two slices of bread.", "(2) Next, put one slice in a warm pan, with the buttered side down.", "(3) Then add a slice of cheese. Set the other slice on top, with its buttered side up.", "(4) After that, cook it until the bottom is golden. Then turn it over.", "(5) Finally, cook the other side until the cheese melts."],
+      prompt: "Why do the directions say to butter the bread BEFORE the sandwich goes in the pan?",
+      choices: [
+        { text: "The butter on the outside cooks into the bread, so both sides turn golden and crisp.", correct: true },
+        { text: "The butter keeps the cheese from melting too fast inside the sandwich." },
+        { text: "The butter on the pan is needed so the sandwich can slide around." },
+        { text: "The butter makes the bread thick enough to hold the hot cheese." }
+      ],
+      clue: "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
+      hints: [
+        "In directions, one step often gets things ready for the next. Ask what the earlier step makes possible.",
+        "Find where the butter goes in step 1. Then read the steps that say what happens to the outside of the bread.",
+        "The directions do not say to butter the pan, so rule out that choice. For each choice that is left, ask: do the directions say it, or does it only sound possible?"
+      ],
+      how: [
+        "Step 1 puts butter on the outside of both slices.",
+        "Steps 2, 4 and 5 cook the bread in a warm pan, one side at a time, until each side is golden.",
+        "The butter cooks into the bread, so each side turns golden and crisp. The answer is \"The butter on the outside cooks into the bread, so both sides turn golden and crisp.\"",
+        "The directions never say the butter slows the cheese, goes on the pan, or thickens the bread."
+      ],
+      misconception: "A common mix-up is choosing a reason that only sounds possible. Use what the directions say happens in the later steps.",
+      why: "The answer is \"The butter on the outside cooks into the bread, so both sides turn golden and crisp.\" The buttered sides go against the warm pan, and the steps cook each side until it is golden. The directions never say the butter slows the cheese, goes on the pan or thickens the bread." },
+    { id: "SK-TSSEQ-S15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+      like: ["SK-TSSEQ-C15"],
+      stem: ["Mr. Cruz and his class made fresh salsa for a school picnic. He wrote the directions on the board so that every student could follow them. Here is part of what he wrote."],
+      prompt: "Choose the time words that best complete the directions.",
+      text: "First, wash and chop three ripe tomatoes. {0} the tomatoes are chopped, stir in a spoonful of chopped onion. {1}, squeeze in the juice of one lime and serve.",
+      slots: [
+        { options: ["Once", "Before", "Because"], answer: 0 },
+        { options: ["Last", "Meanwhile", "First"], answer: 0 }
+      ],
+      clue: "Time words tell when each step happens. Pick words that keep the steps in order.",
+      hints: [
+        "Time words tell when each step happens. Pick words that keep the steps in order.",
+        "Read the whole set of directions once. Ask which step happens after chopping and which step ends the job.",
+        "First is already used at the start, so it cannot also begin the step that ends the job. Read each sentence with the words that are left."
+      ],
+      how: [
+        "Chopping the tomatoes comes first. The onion goes in after the tomatoes are chopped.",
+        "Once means as soon as something has happened, so \"Once the tomatoes are chopped\" puts the onion after the chopping.",
+        "Squeezing in the lime and serving ends the job, so that step starts with Last.",
+        "The answers are Once and Last. Before would put the onion ahead of the chopping, and Meanwhile would mean squeezing the lime at the same time as stirring."
+      ],
+      misconception: "A common mix-up is choosing a word that sounds like time but gives the wrong order, like Before or Meanwhile.",
+      why: "The answers are Once and Last. Once the tomatoes are chopped, you stir in the onion, and last you squeeze in the lime. Before and Meanwhile would put the steps in the wrong order, and Because does not tell when." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1, P2,
      P3 and P6. */
