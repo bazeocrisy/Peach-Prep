@@ -21,143 +21,188 @@ The scratch script `scratchpad/sim1/greedy.js` replays the engine rule (the firs
 
 In-order assignment: TT1a-P4 -> TT1a-S01; TT1a-P5 -> TT1a-S04; TT1a-C03 -> TT1a-S05; TT1a-C04 -> TT1a-S06; TT1a-C05 -> TT1a-S03; TT1a-C06 -> TT1a-S07; TT1a-C07 -> TT1a-S08; TT1a-C08 -> TT1a-S02; TT1a-C09 -> TT1a-S09; TT1a-C10 -> TT1a-S10; TT1a-C11 -> TT1a-S11; TT1a-C12 -> TT1a-S12; TT1a-C13 -> TT1a-S13; TT1a-C14 -> TT1a-S14; TT1a-C15 -> TT1a-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TT1a-S04 | TT1a-P5 | hottext, 1, 2 | p6 "The Fire Tower" | 4 / 4 / 3 sentences |
-| SK-TT1a-S05 | TT1a-C03 | mc, 1, 2 | stem: Ms. Haley's classroom had a long shelf of plants by the window. Every pot wore a paper name tag with a funn... | 4 / 4 / 3 |
-| SK-TT1a-S06 | TT1a-C04 | mc, 1, 2 | stem: (1) At dawn, Joaquin and his uncle opened their tortilla shop. (2) Uncle Beto turned on the lights and the ... | 4 / 4 / 3 |
-| SK-TT1a-S07 | TT1a-C06 | hottext, 1, 2 | stem: Here are five sentences from a story about Mr. Diaz, the school custodian, at the end of the day. | 5 / 5 / 5 lines |
-| SK-TT1a-S08 | TT1a-C07 | ebsr, 2, 2 | p6 "The Fire Tower" | 4 + 4 / 4 + 4 / 3 + 4 |
-| SK-TT1a-S09 | TT1a-C09 | match, 2, 2 | stem: Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. "I had them when I... | 4 / 4 / 4 rows |
-| SK-TT1a-S10 | TT1a-C10 | mc, 1, 3 | p6 "The Fire Tower" | 4 / 4 / 3 |
-| SK-TT1a-S11 | TT1a-C11 | dropdown, 2, 2 | stem: At the town pool, the kids' swim race was about to begin. Little Dani stood frozen at the edge. "I can't do... | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TT1a-S12 | TT1a-C12 | ebsr, 2, 3 | p7 "The Night Walk" | 4 + 4 / 4 + 4 / 3 + 4 |
-| SK-TT1a-S13 | TT1a-C13 | mc, 1, 3 | p7 "The Night Walk" | 4 / 4 / 3 |
-| SK-TT1a-S14 | TT1a-C14 | ms, 2, 3 | stem: Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a le... | 5 / 5 / 4 |
-| SK-TT1a-S15 | TT1a-C15 | ms, 2, 2 | stem: A writer is working on a story about Esme. Esme is about to read her poem out loud at the library. She is n... | 5 / 5 / 4 |
+| SK-TT1a-S04 | TT1a-P5 | hottext, 1, 2 | p6 "The Fire Tower" | 4 / 3 sentences |
+| SK-TT1a-S05 | TT1a-C03 | mc, 1, 2 | stem: Ms. Haley's classroom had a long shelf of plants by the window. Every pot wore a paper name tag with a funn... | 4 / 3 |
+| SK-TT1a-S06 | TT1a-C04 | mc, 1, 2 | stem: (1) At dawn, Joaquin and his uncle opened their tortilla shop. (2) Uncle Beto turned on the lights and the ... | 4 / 3 |
+| SK-TT1a-S07 | TT1a-C06 | hottext, 1, 2 | stem: Here are five sentences from a story about Mr. Diaz, the school custodian, at the end of the day. | 5 / 5 lines |
+| SK-TT1a-S08 | TT1a-C07 | ebsr, 2, 2 | p6 "The Fire Tower" | 4 + 4 / 3 + 4 |
+| SK-TT1a-S09 | TT1a-C09 | match, 2, 2 | stem: Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. "I had them when I... | 4 / 4 rows |
+| SK-TT1a-S10 | TT1a-C10 | mc, 1, 3 | p6 "The Fire Tower" | 4 / 3 |
+| SK-TT1a-S11 | TT1a-C11 | dropdown, 2, 2 | stem: At the town pool, the kids' swim race was about to begin. Little Dani stood frozen at the edge. "I can't do... | 3 + 3 / 2 + 3 |
+| SK-TT1a-S12 | TT1a-C12 | ebsr, 2, 3 | p7 "The Night Walk" | 4 + 4 / 3 + 4 |
+| SK-TT1a-S13 | TT1a-C13 | mc, 1, 3 | p7 "The Night Walk" | 4 / 3 |
+| SK-TT1a-S14 | TT1a-C14 | ms, 2, 3 | stem: Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a le... | 5 / 4 |
+| SK-TT1a-S15 | TT1a-C15 | ms, 2, 2 | stem: A writer is working on a story about Jonah at a train station on a busy morning. The writer wants the reade... | 5 / 4 |
 
 ### 3.T.T.1.b (problem and solution) (code 3.T.T.1.b)
 
 In-order assignment: TT1b-P7 -> TT1b-S04; TT1b-P4 -> TT1b-S05; TT1b-C03 -> TT1b-S06; TT1b-C04 -> TT1b-S01; TT1b-C05 -> TT1b-S07; TT1b-C06 -> TT1b-S08; TT1b-C07 -> TT1b-S02; TT1b-C08 -> TT1b-S09; TT1b-C09 -> TT1b-S10; TT1b-C10 -> TT1b-S11; TT1b-C11 -> TT1b-S03; TT1b-C12 -> TT1b-S12; TT1b-C13 -> TT1b-S13; TT1b-C14 -> TT1b-S14; TT1b-C15 -> TT1b-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TT1b-S04 | TT1b-P7 | mc, 1, 2 | stem: Tavi's family lives in a cabin at the end of a long dirt road, many miles from town. One morning, the famil... | 4 / 4 / 3 |
-| SK-TT1b-S05 | TT1b-P4 | order, 2, 2 | p5 "The Midnight Cricket" | 4 / 4 / 4 steps |
-| SK-TT1b-S06 | TT1b-C03 | dropdown, 2, 3 | p5 "The Midnight Cricket" | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TT1b-S07 | TT1b-C05 | mc, 1, 3 | p5 "The Midnight Cricket" | 4 / 4 / 3 |
-| SK-TT1b-S08 | TT1b-C06 | mc, 1, 2 | stem: On Friday, Ms. Vega's class played a bean bag game. Each team stood ten steps from a bucket and tried to to... | 4 / 4 / 3 |
-| SK-TT1b-S09 | TT1b-C08 | hottext, 1, 2 | p6 "The Stuck Zipper" | 5 / 5 / 5 sentences |
-| SK-TT1b-S10 | TT1b-C09 | ms, 2, 2 | p6 "The Stuck Zipper" | 5 / 5 / 4 |
-| SK-TT1b-S11 | TT1b-C10 | order, 2, 2 | p6 "The Stuck Zipper" | 5 / 5 / 4 steps |
-| SK-TT1b-S12 | TT1b-C12 | ebsr, 2, 3 | p5 "The Midnight Cricket" | 4 + 4 / 4 + 4 / 3 + 4 |
-| SK-TT1b-S13 | TT1b-C13 | match, 2, 2 | stem:  | 3 / 3 / 3 rows |
-| SK-TT1b-S14 | TT1b-C14 | mc, 1, 3 | p5 "The Midnight Cricket", p6 "The Stuck Zipper" | 4 / 4 / 4 |
-| SK-TT1b-S15 | TT1b-C15 | mc, 1, 3 | p5 "The Midnight Cricket" | 4 / 4 / 3 |
+| SK-TT1b-S04 | TT1b-P7 | mc, 1, 2 | stem: Tavi's family lives in a cabin at the end of a long dirt road, many miles from town. One morning, the famil... | 4 / 3 |
+| SK-TT1b-S05 | TT1b-P4 | order, 2, 2 | p5 "The Midnight Cricket" | 4 / 4 steps |
+| SK-TT1b-S06 | TT1b-C03 | dropdown, 2, 3 | p5 "The Midnight Cricket" | 3 + 3 / 2 + 3 |
+| SK-TT1b-S07 | TT1b-C05 | mc, 1, 3 | p5 "The Midnight Cricket" | 4 / 3 |
+| SK-TT1b-S08 | TT1b-C06 | mc, 1, 2 | stem: On Friday, Ms. Vega's class played a bean bag game. Each team stood ten steps from a bucket and tried to to... | 4 / 3 |
+| SK-TT1b-S09 | TT1b-C08 | hottext, 1, 2 | p6 "The Stuck Zipper" | 5 / 5 sentences |
+| SK-TT1b-S10 | TT1b-C09 | ms, 2, 2 | p6 "The Stuck Zipper" | 5 / 4 |
+| SK-TT1b-S11 | TT1b-C10 | order, 2, 2 | p6 "The Stuck Zipper" | 5 / 4 steps |
+| SK-TT1b-S12 | TT1b-C12 | ebsr, 2, 3 | p5 "The Midnight Cricket" | 4 + 4 / 3 + 4 |
+| SK-TT1b-S13 | TT1b-C13 | match, 2, 2 | stem:  | 3 / 3 rows |
+| SK-TT1b-S14 | TT1b-C14 | mc, 1, 3 | p5 "The Midnight Cricket", p6 "The Stuck Zipper" | 4 / 3 |
+| SK-TT1b-S15 | TT1b-C15 | mc, 1, 3 | p5 "The Midnight Cricket" | 4 / 3 |
 
 ### 3.T.T.1.c (cause, effect, lesson) (code 3.T.T.1.c)
 
 In-order assignment: TT1c-P4 -> TT1c-S01; TT1c-P5 -> TT1c-S04; TT1c-C03 -> TT1c-S05; TT1c-C04 -> TT1c-S06; TT1c-P6 -> TT1c-S03; TT1c-C06 -> TT1c-S07; TT1c-C07 -> TT1c-S02; TT1c-C08 -> TT1c-S08; TT1c-C09 -> TT1c-S09; TT1c-C10 -> TT1c-S10; TT1c-C11 -> TT1c-S11; TT1c-C12 -> TT1c-S12; TT1c-C13 -> TT1c-S13; TT1c-C14 -> TT1c-S14; TT1c-C15 -> TT1c-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TT1c-S04 | TT1c-P5 | order, 1, 2 | p10 "The Borrowed Boots" | 3 / 3 / 3 steps |
-| SK-TT1c-S05 | TT1c-C03 | hottext, 1, 2 | p11 "Teaching Grandpa" | 6 / 6 / 6 sentences |
-| SK-TT1c-S06 | TT1c-C04 | mc, 1, 3 | p10 "The Borrowed Boots" | 4 / 4 / 3 |
-| SK-TT1c-S07 | TT1c-C06 | mc, 1, 2 | stem: Every night, Yara packs her backpack. She puts her shoes by the door and sets her alarm. In the morning, sh... | 4 / 4 / 3 |
-| SK-TT1c-S08 | TT1c-C08 | match, 2, 2 | p14 "The Card Trick" | 4 / 4 / 4 rows |
-| SK-TT1c-S09 | TT1c-C09 | hottext, 2, 2 | p11 "Teaching Grandpa" | 6 / 6 / 5 sentences |
-| SK-TT1c-S10 | TT1c-C10 | mc, 1, 3 | p12 "The Marble Run" | 4 / 4 / 3 |
-| SK-TT1c-S11 | TT1c-C11 | ms, 2, 2 | p13 "The Little Library" | 5 / 5 / 4 |
-| SK-TT1c-S12 | TT1c-C12 | dropdown, 2, 2 | stem: Odessa's neighbor, Mr. Pike, broke his arm. Every afternoon, Odessa took his trash can to the curb. She bro... | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TT1c-S13 | TT1c-C13 | mc, 1, 3 | p13 "The Little Library" | 4 / 4 / 3 |
-| SK-TT1c-S14 | TT1c-C14 | ms, 2, 3 | p10 "The Borrowed Boots", p13 "The Little Library" | 5 / 5 / 5 |
-| SK-TT1c-S15 | TT1c-C15 | mc, 1, 3 | p12 "The Marble Run" | 4 / 4 / 3 |
+| SK-TT1c-S04 | TT1c-P5 | order, 1, 2 | p10 "The Borrowed Boots" | 3 / 3 steps |
+| SK-TT1c-S05 | TT1c-C03 | hottext, 1, 2 | p11 "Teaching Grandpa" | 6 / 6 sentences |
+| SK-TT1c-S06 | TT1c-C04 | mc, 1, 3 | p10 "The Borrowed Boots" | 4 / 3 |
+| SK-TT1c-S07 | TT1c-C06 | mc, 1, 2 | stem: Every night, Yara packs her backpack. She puts her shoes by the door and sets her alarm. In the morning, sh... | 4 / 3 |
+| SK-TT1c-S08 | TT1c-C08 | match, 2, 2 | p14 "The Card Trick" | 4 / 4 rows |
+| SK-TT1c-S09 | TT1c-C09 | hottext, 2, 2 | p11 "Teaching Grandpa" | 6 / 5 sentences |
+| SK-TT1c-S10 | TT1c-C10 | mc, 1, 3 | p12 "The Marble Run" | 4 / 3 |
+| SK-TT1c-S11 | TT1c-C11 | ms, 2, 2 | p13 "The Little Library" | 5 / 4 |
+| SK-TT1c-S12 | TT1c-C12 | dropdown, 2, 2 | stem: Odessa's neighbor, Mr. Pike, broke his arm. Every afternoon, Odessa took his trash can to the curb. She bro... | 3 + 3 / 2 + 3 |
+| SK-TT1c-S13 | TT1c-C13 | mc, 1, 3 | p13 "The Little Library" | 4 / 3 |
+| SK-TT1c-S14 | TT1c-C14 | ms, 2, 3 | p10 "The Borrowed Boots", p13 "The Little Library" | 5 / 5 |
+| SK-TT1c-S15 | TT1c-C15 | mc, 1, 3 | p12 "The Marble Run" | 4 / 3 |
 
 ### 3.T.T.1.d (compare and contrast stories) (code 3.T.T.1.d)
 
 In-order assignment: TT1d-P4 -> TT1d-S03; TT1d-P5 -> TT1d-S04; TT1d-C03 -> TT1d-S01; TT1d-C04 -> TT1d-S05; TT1d-C05 -> TT1d-S06; TT1d-C06 -> TT1d-S02; TT1d-C07 -> TT1d-S07; TT1d-C08 -> TT1d-S08; TT1d-C09 -> TT1d-S09; TT1d-C10 -> TT1d-S10; TT1d-C11 -> TT1d-S11; TT1d-C12 -> TT1d-S12; TT1d-C13 -> TT1d-S13; TT1d-C14 -> TT1d-S14; TT1d-C15 -> TT1d-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TT1d-S04 | TT1d-P5 | mc, 1, 3 | stem: Story 1: Otis left the cap off his marker. The next day, the marker was dry, and he could not color his map... | 4 / 4 / 3 |
-| SK-TT1d-S05 | TT1d-C04 | ebsr, 2, 3 | p9 "Twenty-One Days", p10 "The Birthday Card Dash" | 4 + 5 / 4 + 5 / 3 + 5 |
-| SK-TT1d-S06 | TT1d-C05 | mc, 1, 2 | stem: Story 1: Alma got a new box of colored pencils. When her friend Jo asked to borrow one, Alma said no. "They... | 4 / 4 / 3 |
-| SK-TT1d-S07 | TT1d-C07 | ebsr, 2, 3 | p11 "The Lantern Walk", p12 "Eight Candles" | 4 + 5 / 4 + 5 / 3 + 5 |
-| SK-TT1d-S08 | TT1d-C08 | match, 2, 2 | stem: Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the s... | 4 / 4 / 4 rows |
-| SK-TT1d-S09 | TT1d-C09 | mc, 1, 3 | stem: Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, ... | 4 / 4 / 4 |
-| SK-TT1d-S10 | TT1d-C10 | mc, 1, 3 | p11 "The Lantern Walk", p12 "Eight Candles" | 4 / 4 / 4 |
-| SK-TT1d-S11 | TT1d-C11 | dropdown, 2, 2 | stem: Story 1: On a snowy hill in Switzerland, Greta pulled her sled to the top. The air was freezing, and her br... | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TT1d-S12 | TT1d-C12 | hottext, 2, 2 | stem: Here are sentences from two stories about children who mend things. Hoang is on a fishing boat in Vietnam. ... | 8 / 8 / 7 lines |
-| SK-TT1d-S13 | TT1d-C13 | ms, 2, 3 | stem: Story 1: In Peru, Rosa helps her aunt sell potatoes at a market. She weighs each bag and calls out the pric... | 5 / 5 / 5 |
-| SK-TT1d-S14 | TT1d-C14 | mc, 1, 3 | stem: Story 1: In a town in Egypt, Salma's neighbor fixed her bike chain. The next day, she baked him a small cak... | 4 / 4 / 3 |
-| SK-TT1d-S15 | TT1d-C15 | ebsr, 2, 3 | p13 "House on the Lake", p14 "Behind the Dike" | 4 + 4 / 4 + 4 / 3 + 4 |
+| SK-TT1d-S04 | TT1d-P5 | mc, 1, 3 | stem: Story 1: Otis left the cap off his marker. The next day, the marker was dry, and he could not color his map... | 4 / 3 |
+| SK-TT1d-S05 | TT1d-C04 | ebsr, 2, 3 | p9 "Twenty-One Days", p10 "The Birthday Card Dash" | 4 + 5 / 3 + 5 |
+| SK-TT1d-S06 | TT1d-C05 | mc, 1, 2 | stem: Story 1: Alma got a new box of colored pencils. When her friend Jo asked to borrow one, Alma said no. "They... | 4 / 3 |
+| SK-TT1d-S07 | TT1d-C07 | ebsr, 2, 3 | p11 "The Lantern Walk", p12 "Eight Candles" | 4 + 5 / 3 + 5 |
+| SK-TT1d-S08 | TT1d-C08 | match, 2, 2 | stem: Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the s... | 4 / 4 rows |
+| SK-TT1d-S09 | TT1d-C09 | mc, 1, 3 | stem: Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, ... | 4 / 3 |
+| SK-TT1d-S10 | TT1d-C10 | mc, 1, 3 | p11 "The Lantern Walk", p12 "Eight Candles" | 4 / 3 |
+| SK-TT1d-S11 | TT1d-C11 | dropdown, 2, 2 | stem: Story 1: Greta pulled her sled up the long hill. The ground was white, and her mittens were stiff with fros... | 3 + 3 / 2 + 3 |
+| SK-TT1d-S12 | TT1d-C12 | hottext, 2, 2 | stem: Here are sentences from two stories about children who mend things. Hoang is on a fishing boat in Vietnam. ... | 8 / 7 lines |
+| SK-TT1d-S13 | TT1d-C13 | ms, 2, 3 | stem: Story 1: In Peru, Rosa helps her aunt sell potatoes at a market. She weighs each bag and calls out the pric... | 5 / 5 |
+| SK-TT1d-S14 | TT1d-C14 | mc, 1, 3 | stem: Story 1: In a town in Egypt, Salma's neighbor fixed her bike chain. The next day, she baked him a small cak... | 4 / 3 |
+| SK-TT1d-S15 | TT1d-C15 | ebsr, 2, 3 | p13 "House on the Lake", p14 "Behind the Dike" | 4 + 4 / 3 + 4 |
 
 ### 3.T.SS.1.a (problem and solution in text) (code TS-PS)
 
 In-order assignment: TSPS-P5 -> TSPS-S01; TSPS-C02 -> TSPS-S04; TSPS-C03 -> TSPS-S05; TSPS-C04 -> TSPS-S02; TSPS-C05 -> TSPS-S06; TSPS-C06 -> TSPS-S07; TSPS-C07 -> TSPS-S08; TSPS-C08 -> TSPS-S09; TSPS-C09 -> TSPS-S10; TSPS-C10 -> TSPS-S11; TSPS-C11 -> TSPS-S12; TSPS-C12 -> TSPS-S13; TSPS-C13 -> TSPS-S14; TSPS-C14 -> TSPS-S03; TSPS-C15 -> TSPS-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TSPS-S04 | TSPS-C02 | mc, 1, 2 | stem: Every morning, the front steps at Isaac's house were covered in ice. First, Isaac shoveled them, but a thin... | 4 / 4 / 3 |
-| SK-TSPS-S05 | TSPS-C03 | dropdown, 2, 2 | stem: Whenever the wind blew, the door of Room 5 slammed shut with a bang. Everyone jumped. Maya set a heavy book... | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TSPS-S06 | TSPS-C05 | mc, 1, 2 | stem: Three of the clocks in the hall showed noon, but the fourth showed ten. | 4 / 4 / 3 |
-| SK-TSPS-S07 | TSPS-C06 | dropdown, 2, 2 | stem: Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ... | 3 + 3 / 3 + 3 / 2 + 3 |
-| SK-TSPS-S08 | TSPS-C07 | match, 2, 2 | stem: Every morning, the sticky notes on Tyree's bulletin board fell off. First, he pressed each note down harder... | 4 / 4 / 4 rows |
-| SK-TSPS-S09 | TSPS-C08 | mc, 1, 2 | stem: The freezer in the school kitchen broke. The school picnic was in two days. All of the ice-cream cups for t... | 4 / 4 / 3 |
-| SK-TSPS-S10 | TSPS-C09 | mc, 1, 3 | stem: Wren's cardboard fort fell down every time the wind blew from the left. First, she taped the corners tighte... | 4 / 4 / 3 |
-| SK-TSPS-S11 | TSPS-C10 | ebsr, 2, 3 | p8 "The Slow Sink" | 4 + 4 / 4 + 4 / 3 + 4 |
-| SK-TSPS-S12 | TSPS-C11 | ms, 2, 2 | p9 "Lights Out for Sea Turtles" | 5 / 5 / 4 |
-| SK-TSPS-S13 | TSPS-C12 | order, 2, 2 | p9 "Lights Out for Sea Turtles" | 5 / 5 / 5 steps |
-| SK-TSPS-S14 | TSPS-C13 | match, 2, 3 | p8 "The Slow Sink", p9 "Lights Out for Sea Turtles" | 4 / 4 / 4 rows |
-| SK-TSPS-S15 | TSPS-C15 | mc, 1, 3 | stem: (1) The wheels on the cafeteria cart squealed so loudly that students covered their ears. (2) First, the co... | 4 / 4 / 3 |
+| SK-TSPS-S04 | TSPS-C02 | mc, 1, 2 | stem: Every morning, the front steps at Isaac's house were covered in ice. First, Isaac shoveled them, but a thin... | 4 / 3 |
+| SK-TSPS-S05 | TSPS-C03 | dropdown, 2, 2 | stem: Whenever the wind blew, the door of Room 5 slammed shut with a bang. Everyone jumped. Maya set a heavy book... | 3 + 3 / 2 + 3 |
+| SK-TSPS-S06 | TSPS-C05 | mc, 1, 2 | stem: Nell wiped the muddy paw prints from the floor, but her dog ran in and left more. | 4 / 3 |
+| SK-TSPS-S07 | TSPS-C06 | dropdown, 2, 2 | stem: Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ... | 3 + 3 / 2 + 3 |
+| SK-TSPS-S08 | TSPS-C07 | match, 2, 2 | stem: Every morning, the sticky notes on Tyree's bulletin board fell off. First, he pressed each note down harder... | 4 / 4 rows |
+| SK-TSPS-S09 | TSPS-C08 | mc, 1, 2 | stem: The freezer in the school kitchen broke. The school picnic was in two days. All of the ice-cream cups for t... | 4 / 3 |
+| SK-TSPS-S10 | TSPS-C09 | mc, 1, 3 | stem: Wren's cardboard fort fell down every time the wind blew from the left. First, she taped the corners tighte... | 4 / 3 |
+| SK-TSPS-S11 | TSPS-C10 | ebsr, 2, 3 | p8 "The Slow Sink" | 4 + 4 / 3 + 4 |
+| SK-TSPS-S12 | TSPS-C11 | ms, 2, 2 | p9 "Lights Out for Sea Turtles" | 5 / 4 |
+| SK-TSPS-S13 | TSPS-C12 | order, 2, 2 | p9 "Lights Out for Sea Turtles" | 5 / 5 steps |
+| SK-TSPS-S14 | TSPS-C13 | match, 2, 3 | p8 "The Slow Sink", p9 "Lights Out for Sea Turtles" | 4 / 3 rows |
+| SK-TSPS-S15 | TSPS-C15 | mc, 1, 3 | stem: (1) The sunflower seeds in the school garden never sprouted. (2) First, the class watered the seeds twice a... | 4 / 3 |
 
 ### 3.T.C.2.a (point of view) (code 3.T.C.2.a)
 
 In-order assignment: TC2a-C01 -> TC2a-S04; TC2a-P5 -> TC2a-S05; TC2a-C03 -> TC2a-S02; TC2a-C04 -> TC2a-S01; TC2a-C05 -> TC2a-S06; TC2a-C06 -> TC2a-S07; TC2a-C07 -> TC2a-S03; TC2a-C08 -> TC2a-S08; TC2a-C09 -> TC2a-S09; TC2a-C10 -> TC2a-S10; TC2a-C11 -> TC2a-S11; TC2a-C12 -> TC2a-S12; TC2a-C13 -> TC2a-S13; TC2a-C14 -> TC2a-S14; TC2a-C15 -> TC2a-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TC2a-S04 | TC2a-C01 | ms, 2, 2 | p6 "The Orange Sweater" | 5 / 5 / 4 |
-| SK-TC2a-S05 | TC2a-P5 | mc, 1, 3 | p6 "The Orange Sweater" | 4 / 4 / 3 |
-| SK-TC2a-S06 | TC2a-C05 | ebsr, 2, 2 | p7 "The Substitute" | 4 + 4 / 4 + 4 / 4 + 4 |
-| SK-TC2a-S07 | TC2a-C06 | ms, 2, 2 | p8 "The Dentist's Chair" | 5 / 5 / 4 |
-| SK-TC2a-S08 | TC2a-C08 | mc, 1, 2 | p7 "The Substitute" | 4 / 4 / 3 |
-| SK-TC2a-S09 | TC2a-C09 | hottext, 1, 2 | p8 "The Dentist's Chair" | 6 / 6 / 5 sentences |
-| SK-TC2a-S10 | TC2a-C10 | mc, 1, 3 | p8 "The Dentist's Chair" | 4 / 4 / 4 |
-| SK-TC2a-S11 | TC2a-C11 | ms, 2, 3 | p9 "Puddle Day" | 5 / 5 / 4 |
-| SK-TC2a-S12 | TC2a-C12 | cr, no points, 3 | p9 "Puddle Day" | n/a (written answer, no choices) |
-| SK-TC2a-S13 | TC2a-C13 | match, 2, 2 | stem:  | 4 / 4 / 4 rows |
-| SK-TC2a-S14 | TC2a-C14 | mc, 1, 3 | stem: I am the best block builder in the class. Today my tower fell over, but only because the table shook. Mia s... | 4 / 4 / 3 |
-| SK-TC2a-S15 | TC2a-C15 | ms, 2, 3 | stem: Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't ... | 5 / 5 / 4 |
+| SK-TC2a-S04 | TC2a-C01 | ms, 2, 2 | p6 "The Orange Sweater" | 5 / 4 |
+| SK-TC2a-S05 | TC2a-P5 | mc, 1, 3 | p6 "The Orange Sweater" | 4 / 3 |
+| SK-TC2a-S06 | TC2a-C05 | ebsr, 2, 3 | p7 "The Substitute" | 4 + 4 / 3 + 4 |
+| SK-TC2a-S07 | TC2a-C06 | ms, 2, 2 | p8 "The Tall Wall" | 5 / 4 |
+| SK-TC2a-S08 | TC2a-C08 | mc, 1, 2 | p7 "The Substitute" | 4 / 3 |
+| SK-TC2a-S09 | TC2a-C09 | hottext, 1, 2 | p8 "The Tall Wall" | 6 / 5 sentences |
+| SK-TC2a-S10 | TC2a-C10 | mc, 1, 3 | p8 "The Tall Wall" | 4 / 3 |
+| SK-TC2a-S11 | TC2a-C11 | ms, 2, 3 | p9 "Puddle Day" | 5 / 4 |
+| SK-TC2a-S12 | TC2a-C12 | cr, undefined, 3 | p9 "Puddle Day" | n/a (written answer, no choices) |
+| SK-TC2a-S13 | TC2a-C13 | match, 2, 2 | stem: Ollie's kite fell into the pond. "This is the worst day ever!" Ollie shouted. His dad smiled. "It will dry ... | 3 / 2 rows |
+| SK-TC2a-S14 | TC2a-C14 | mc, 1, 3 | stem: The new girl, Pilar, sat alone at lunch. I waved, but she only looked at her tray. "She thinks she is too g... | 4 / 3 |
+| SK-TC2a-S15 | TC2a-C15 | ms, 2, 3 | stem: Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't ... | 5 / 4 |
 
 ### 3.T.SS.2.a (figurative language) (code 3.T.SS.2.a)
 
 In-order assignment: SS2a-P5 -> SS2a-S01; SS2a-C02 -> SS2a-S03; SS2a-C03 -> SS2a-S04; SS2a-C04 -> SS2a-S05; SS2a-C05 -> SS2a-S02; SS2a-C06 -> SS2a-S06; SS2a-C07 -> SS2a-S07; SS2a-C08 -> SS2a-S08; SS2a-C09 -> SS2a-S09; SS2a-C10 -> SS2a-S10; SS2a-C11 -> SS2a-S11; SS2a-C12 -> SS2a-S12; SS2a-C13 -> SS2a-S13; SS2a-C14 -> SS2a-S14; SS2a-C15 -> SS2a-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
+| SK-SS2a-S04 | SS2a-C03 | mc, 1, 3 | stem: Ned walked into his new school on the first day. The hallway was as long as a football field. His classroom... | 4 / 3 |
+| SK-SS2a-S05 | SS2a-C04 | ms, 2, 2 | stem: Dana wrote these in her book after the play. | 5 / 4 |
+| SK-SS2a-S06 | SS2a-C06 | mc, 1, 2 | stem: At sunrise, no wind moved across the lake. The lake was a mirror, and every pine tree on the shore showed u... | 4 / 3 |
+| SK-SS2a-S07 | SS2a-C07 | ebsr, 2, 3 | p6 "Raking Leaves" | 4 + 4 / 3 + 4 |
+| SK-SS2a-S08 | SS2a-C08 | ms, 2, 2 | stem: Mom blew soap bubbles on the porch. The bubbles were tiny dancers over the steps. | 5 / 4 |
+| SK-SS2a-S09 | SS2a-C09 | mc, 1, 2 | stem:  | 4 / 3 |
+| SK-SS2a-S10 | SS2a-C10 | hottext, 1, 2 | stem: Cleo's team won the school spelling bee. Her teacher, Mr. Lund, wrote a note home. Here are five sentences ... | 5 / 4 lines |
+| SK-SS2a-S11 | SS2a-C11 | dropdown, 2, 2 | stem: Rhys watched the storm from the window. The dark clouds rolled across the sky like a herd of gray elephants. | 3 + 3 / 2 + 3 |
+| SK-SS2a-S12 | SS2a-C12 | ebsr, 2, 3 | p7 "Swings for the School Yard" | 4 + 4 / 3 + 4 |
+| SK-SS2a-S13 | SS2a-C13 | mc, 1, 3 | stem: Wes got his first library card today. When he walked in, he saw rows and rows of books. The library was a t... | 4 / 3 |
+| SK-SS2a-S14 | SS2a-C14 | ms, 2, 3 | stem: Sentence A: Jules let the cat out of the bag about the surprise party. Sentence B: Jules told the secret ab... | 5 / 4 |
+| SK-SS2a-S15 | SS2a-C15 | match, 2, 2 | stem: Room 4 wrote about the day the fans broke at their school. "On Monday, our classroom was a furnace. We were... | 3 / 2 rows |
 
 ### 3.T.T.4.a (poem structure) (code 3.T.T.4.a)
 
 In-order assignment: TT4a-C01 -> TT4a-S01; TT4a-C02 -> TT4a-S02; TT4a-C03 -> TT4a-S04; TT4a-C04 -> TT4a-S05; TT4a-C05 -> TT4a-S06; TT4a-C06 -> TT4a-S07; TT4a-C07 -> TT4a-S08; TT4a-C08 -> TT4a-S09; TT4a-C09 -> TT4a-S10; TT4a-C10 -> TT4a-S11; TT4a-C11 -> TT4a-S12; TT4a-C12 -> TT4a-S03; TT4a-C13 -> TT4a-S13; TT4a-C14 -> TT4a-S14; TT4a-C15 -> TT4a-S15.
 
-| Id | like | Type, pts, DOK | Context | Live choices after hint 1 / 2 / 3 (see note) |
+| Id | like | Type, pts, DOK | Context | Live choices: start / after hint 3 alone (see note) |
 |---|---|---|---|---|
-| SK-TT4a-S04 | TT4a-C03 | ms, 2, 1 | stem: Stanza 1: The hammock hangs between two trees. It sways me in the summer breeze. Stanza 2: A bee goes buzzi... | 5 / 5 / 4 |
-| SK-TT4a-S05 | TT4a-C04 | hottext, 1, 2 | stem: Read this poem about tying shoes. I cross the laces, loop them through, And pull them snug, the way you do.... | 5 / 5 / 5 lines |
-| SK-TT4a-S06 | TT4a-C05 | hottext, 1, 2 | stem: A class wrote a poem about a garage sale. Here is one stanza. Our garage sale is open wide, With books and ... | 4 / 4 / 3 lines |
-| SK-TT4a-S07 | TT4a-C06 | mc, 1, 3 | stem: Here is stanza 1 of a poem called "Yo-Yo." My yo-yo drops down to the floor. It zips right back, then down ... | 4 / 4 / 3 |
-| SK-TT4a-S08 | TT4a-C07 | hottext, 2, 2 | stem: Here are five lines from a poem about a long car ride. | 5 / 5 / 4 lines |
-| SK-TT4a-S09 | TT4a-C08 | ebsr, 2, 3 | p9 "The Ice Cream Truck" | 4 + 4 / 4 + 4 / 3 + 4 |
-| SK-TT4a-S10 | TT4a-C09 | mc, 1, 3 | stem: Here is stanza 1 of a poem called "Popcorn." The oil is warm. The kernels wait. I shake the pot. I count to... | 4 / 4 / 3 |
-| SK-TT4a-S11 | TT4a-C10 | ms, 2, 3 | stem: Poem A: The Cat Purr, purr, purr by the fire, Purr, purr, purr in the sun. The cat stretches out on the rug... | 5 / 5 / 4 |
-| SK-TT4a-S12 | TT4a-C11 | ms, 2, 2 | stem: Stanza 1: Out by the fence, the dirt is deep. The puppy sniffs and starts to scratch. His paws fly fast, hi... | 5 / 5 / 4 |
-| SK-TT4a-S13 | TT4a-C13 | mc, 1, 3 | stem: Here is a stanza from a poem. The sun comes up behind the hill. The roosters crow and call. I jump out of m... | 4 / 4 / 4 |
-| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In March, the pear tree's branches bare. The buds are small and tight. A robin hops from twig to ... | 3 + 3 / 3 + 3 / 3 + 3 |
-| SK-TT4a-S15 | TT4a-C15 | mc, 1, 3 | stem: Stanza 1: At dawn, the harbor's calm. The docks are bare and gray. A fisher ties a net to a post To start t... | 4 / 4 / 3 |
+| SK-TT4a-S04 | TT4a-C03 | ms, 2, 1 | stem: Stanza 1: Night comes down the hill. The lamps blink on, one by one. The town grows still. Stanza 2: The ba... | 5 / 4 |
+| SK-TT4a-S05 | TT4a-C04 | hottext, 1, 2 | stem: Read this poem about tying shoes. I cross the laces, loop them through, And pull them snug, the way you do.... | 5 / 5 lines |
+| SK-TT4a-S06 | TT4a-C05 | hottext, 1, 2 | stem: Here is one stanza from a poem about a rainy evening. The kettle sings. The kitchen's warm. I pour my tea i... | 5 / 4 lines |
+| SK-TT4a-S07 | TT4a-C06 | mc, 1, 3 | stem: Here is stanza 1 of a poem called "Yo-Yo." My yo-yo drops down to the floor. It zips right back, then down ... | 4 / 3 |
+| SK-TT4a-S08 | TT4a-C07 | hottext, 2, 2 | stem: Here are five lines from a poem about a long car ride. | 5 / 4 lines |
+| SK-TT4a-S09 | TT4a-C08 | ebsr, 2, 3 | p9 "The Ice Cream Truck" | 4 + 4 / 3 + 4 |
+| SK-TT4a-S10 | TT4a-C09 | mc, 1, 3 | stem: Here is stanza 1 of a poem called "Popcorn." The oil is warm. The kernels wait. I shake the pot. I count to... | 4 / 3 |
+| SK-TT4a-S11 | TT4a-C10 | mc, 1, 3 | stem: Poem A: The Cat Purr, purr, purr by the fire, Purr, purr, purr in the sun. The cat stretches out on the rug... | 4 / 3 |
+| SK-TT4a-S12 | TT4a-C11 | ms, 2, 2 | stem: Stanza 1: Out by the fence, the dirt is deep. The puppy sniffs and starts to scratch. His paws fly fast, hi... | 5 / 4 |
+| SK-TT4a-S13 | TT4a-C13 | mc, 1, 3 | stem: Here is a stanza from a poem. The sun comes up behind the hill. The roosters crow and call. I jump out of m... | 4 / 4 |
+| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In March, the pear tree's branches bare. The buds are small and tight. A robin hops from twig to ... | 3 + 3 / 3 + 3 |
+| SK-TT4a-S15 | TT4a-C15 | mc, 1, 3 | stem: Stanza 1: The candle flame is tall and bright. It lights the whole dark room. I watch the dancing shadows t... | 4 / 3 |
 
-**Note on the live-choice column:** hint 1 (the clue) and hint 2 rule out nothing in any new item. Hint 3 rules out at most one choice (or one blank option, or one step, or one Part A choice with a pointer to match Part B); where the first sentence of hint 3 rules a choice out, the column shows N-1. For two-part or two-blank items the first number is the first part or blank. Items shown as N / N / N have a hint 3 that only says how to test the remaining choices. The count was read from the hint text, so reviewers should check it.
+**Note on the live-choice column (corrected after review):** the earlier version of this log said hints 1 and 2 rule out nothing. That was wrong: in about two dozen items they steer a child away from a choice or toward a region of the passage. The column now shows only what I can state firmly: the number of choices at the start, and the number left after hint 3 alone. I re-read every hint 3 by hand after the review. A hint 3 now settles at most one choice (one option, one blank option, one row, one step, or one Part A choice with a pointer to match Part B). Hints that settled two (TT1a-S04, TT4a-S11) were rewritten in this pass. For hints 1 and 2, the reviewer's method (section 6 of SIM-1-review.md) is the better count; I did not keep a per-item ladder figure because I could not make it reliable. Treat a ladder count as a reviewer job.
+
+## 2b. Fixes after review
+
+Every MUST and the main SHOULDs in `SIM-1-review.md` were addressed. Nothing outside the eight named blocks was touched.
+
+**MUST 1, wrong key.** TSPS-S07 slot 1 answer index is now 0 ("find out where the water gets in"). I then wrote `scratchpad/sim1/audit.js` and `audit2.js`, which print each item's keyed choice next to its why/how/hints, and read the output for all 96+ new items. Every key agrees. Three match rows (TT1a-S09, TSPS-S14, TC2a-S13) looked wrong only because the column label was paraphrased in the text; I read them and they are correct.
+
+**MUST 2, hints that give the answer or leave only the key.** Rewritten: TT1a-S08, TT1b-S14, TT1d-S07, S09, S12, TSPS-S04, S10, TC2a-S06, S07, S13, TT4a-S12, S13. Each hint 2 now points to a region without naming the key's paragraph or sentence, and each hint 3 settles one choice.
+
+**MUST 3, TT4a-S08.** The false hint ("The" twice) is gone. The options were reworded, and hint and how now match the lines.
+
+**MUST 4, TC2a-S09.** Rebuilt as a hottext on the new p8 that asks for one specific thing (the sentence that shows Lio wants to be like his sister). Key `p8:7:4`.
+
+**MUST 5, near-copies reworked into fresh applications.** TT4a-S04, S06, S07, S11, S12, S15; TSPS-S06, S14, S15; TC2a-S06, S07, S09, S10, S13, S14; SS2a-S09, S14. TC2a p8 (a reskin of the haircut story p4) is replaced by "The Tall Wall" (Ines and Lio, two parts). After the rewrites I re-ran the reviewer's `sim.js` and `opt.js`. Text similarity to the `like` core item is at or below 0.21 for all of these. Three items still sit just above 0.21 and were not reworked: TC2a-S15 0.26, TT4a-S10 0.25, SS2a-S05 0.24; I judged them acceptable but a reviewer may disagree. No new item shares more than one option with its core item (the last two offenders, TT4a-S04 and TT1b-S06, were reworded).
+
+**MUST 6, facts.** 3.T.T.1.d p9: eggs are now turned three times a day. 3.T.T.1.d p11: the unsupported reason for round lanterns was removed (Grandfather now says the lanterns are for the moon and the family carries small lights beside it). SS2a-S14: the "fog forms when warm air meets cool air" sentence is gone with the rebuild (the new item is about the idiom "let the cat out of the bag"). 3.T.C.2.a p9: the robins line now reads "I tilt my head. I look and hear." so the poem does not claim a fact about how robins find worms.
+
+**SHOULDs done.** Hint 3 re-read and tightened (TT1a-S04, TT4a-S11); TT1a-S13 rebuilt on p7 paragraph 1 and TT1a-S15 on a new context (Jonah at a train station); TT1b-S07 hint 1 aligned with the key; TT1b-S13 and S15 prompts trimmed; TT1c-S09, S11, S12, S14 hints and one distractor tightened; TT1d-S05, S10, S11, S13, S15 reworked or reworded; TSPS-S05, S09, S11 hint 3; TC2a-S04, S11; SS2a-S08, S11, S12; TT4a-S08, S13 hint 3; S04 and TT1b-S06 options reworded to share no more than one option with their core item.
+
+**SHOULDs not done.** TT1b-S10 distractor, TT1c-S05 readability margin, TT1c-S15, the TT1d-S06 vs C05 overlap note, TT1a-S05/S09/S14/S15 notes, TT4a-S10 and S14 closeness to the core, and the S05 "turn" teach note. They are small and none blocks the gates. SS2a-S05 wording was shortened but is still at 0.24.
+
+**Gates after the fixes.** check-content PASS (0 failures, 9 warnings, none in a new item); check-writing 0 failures, 0 warnings; check-instructional-copy 28 assertions passed; readability: no passage in the eight lessons above FK 4.5 (the new p8 and the edited p11 included); `greedy.js` missing(0) for all lessons with 15 similar items; the browser smoke test (`smoke.py`) passed for all eight lessons: 15 of 15 core items offered their own similar item, no duplicates, no page errors. Server stopped.
+
+## 2c. Needs blind re-solve
+
+A fresh solver who has not read this log should solve these without seeing keys. All were rebuilt or had their keys or hints changed after the review.
+
+- **Rebuilt contexts or keys:** TT1a-S13, S15; TT1b-S06; TT1d-S10, S11; TSPS-S06, S14, S15; TC2a-S06, S07, S09, S10, S13, S14 and the new passage p8; SS2a-S09, S14; TT4a-S04, S06, S07, S11, S12, S15.
+- **Key fixed or reworded:** TSPS-S07 (slot 1), TT1c-S14, TT4a-S08, SS2a-S08.
+- **Hints changed (check the ladder and that no hint gives the answer):** TT1a-S04, S07, S08; TT1b-S07, S08, S14; TT1c-S09, S11, S12; TT1d-S05, S07, S09, S12, S13, S15; TSPS-S04, S05, S09, S10, S11; TC2a-S04, S11; SS2a-S12; TT4a-S13.
+- **Passages changed (check facts and readability):** 3.T.T.1.d p9 (eggs) and p11 (Grandfather); 3.T.C.2.a p8 (new) and p9 (robin line); 3.T.T.4.a p9 ("I'll save my coins from every day"; TT4a-S09 Part B key updated to match).
+
+Names added in this pass (grep found no earlier use except where noted): Jonah, Ollie, Pilar, Lio, Ines, Jules, Nell (two earlier hits, accepted), Mr. Hallam.
 
 ## 3. Topic and name search
 
