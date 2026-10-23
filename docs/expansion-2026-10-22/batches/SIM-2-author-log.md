@@ -83,7 +83,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSSEQ-S07 | SK-TSSEQ-C06 | order/2/2 | put the steps of a science process in order | how sea salt is made | all orders / all orders / seawater into pools first is settled; the other four open | sea salt |
 | SK-TSSEQ-S08 | SK-TSSEQ-C07 | mc/1/3 | why an early step makes a later step possible | papier-mache bowl | all 4 / all 4 / key / glue is not needed / wet paper is lighter (the 'color' one ruled out) | papier-mache, paper mache |
 | SK-TSSEQ-S09 | SK-TSSEQ-C08 | ms/2/2 | time words that tell how much time passes, not only the order | tie-dyeing a shirt | all 6 / all 6 / key1 / key2 / the 'First' and 'Next' ... (Finally ruled out) | tie-dye |
-| SK-TSSEQ-S10 | SK-TSSEQ-C09 | dropdown/2/2 | how a text is put together: a question paragraph and a steps paragraph | what the first and last paragraphs do (grape juice pop); dropdown again, like C09 | slot 1: 3 / 3 / 3; slot 2: 3 / 3 / 2 (hint 3 rules out ice cream) | juice pop |
+| SK-TSSEQ-S10 | SK-TSSEQ-C09 | dropdown/2/2 | how a text is put together: a question paragraph and a steps paragraph | what the first and last paragraphs do (grape juice pop; stick is pushed into slush) | slot 1: 3 / 3 / 3; slot 2: 3 / 3 / 2 (hint 3 rules out ice cream) | juice pop |
 | SK-TSSEQ-S11 | SK-TSSEQ-C11 | match/2/2 | match events to the name something had at that time | place names at each time (Dell Pond); row 2 now "The town bought the land" | all rows open / all rows open / cows row settled (Dell Pond) | dell pond |
 | SK-TSSEQ-S12 | SK-TSSEQ-C12 | mc/1/3 | find the cause of a town's growth in a history text | Alder Creek railroad depot (town grows after a depot opens) | all 4 / all 4 / key / school / the mill closed / river (the school one comes later and is ruled out) | depot |
 | SK-TSSEQ-S13 | SK-TSSEQ-C13 | mc/1/2 | find where a new dated event belongs in a history text | the Town Hall clock tower | all 5 / all 5 / key / after sentence 2 area / after sentence 4 (the today sentence ruled out) | clock tower |
@@ -114,7 +114,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSCE-S04 | SK-TSCE-P5 | mc/1/2 | find an effect stated in a paragraph | why a pond freezes from the top | all 4 / all 4 / key / freezes solid to bottom / fish swim up (the 'ice sinks' one ruled out) | pond ice |
 | SK-TSCE-S05 | SK-TSCE-C03 | mc/1/3 | why an author includes a section: another effect of the same cause | another effect of the same cause (hot sidewalk and puddle) | 4 / 4 / 3 (hint 3 rules out the dark-color choice) | sidewalk, puddle |
 | SK-TSCE-S06 | SK-TSCE-C05 | ms/2/3 | find the steps whose mistakes would hide the result | mistakes that would stop the lava lamp blobs rising (no tablet, no water) | 5 / 5 / 4 (hint 3 rules out the color choice) | lava lamp |
-| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so, with and and until | 3 / 3 / 2 (hint 3 rules out until; and and so stay live) | sunflower |
+| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so, with and and until | 3 / 3 / 3 (hint 3 no longer names a choice) | sunflower |
 | SK-TSCE-S08 | SK-TSCE-C08 | mc/1/3 | find the first cause in a chain of events | ice on Oak Road | all 4 / all 4 / key / bus drove slowly / school started later (the late bus is ruled out as an effect) | ice on the road, school start |
 | SK-TSCE-S09 | SK-TSCE-C09 | mc/1/3 | how the author organizes a paragraph: events that lead to one another | how a paragraph is organized (foggy school bus) | 4 / 4 / 3 (hint 3 rules out the how-to choice) | fog, school bus |
 | SK-TSCE-S10 | SK-TSCE-C10 | mc/1/2 | find the sentence that tells an effect of a change | a speed bump near a school | all 4 / all 4 / key / bumps were added (cause) / drivers could see kids (not caused by bump) / the school (setting) | speed bump |
@@ -135,7 +135,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSCC-S08 | SK-TSCC-C07 | mc/1/2 | pick the sentence that best shows two things are alike | a ukulele and a banjo | all 4 / all 4 / key / banjo round body / ukulele soft sound (the Hawaii one) ... | ukulele, banjo |
 | SK-TSCC-S09 | SK-TSCC-C08 | mc/1/3 | how the differences are organized: one topic at a time | a subway train and a trolley | all 4 / all 4 / key / all of one then all of other / most to least important (oldest to newest ruled out) | subway, trolley |
 | SK-TSCC-S10 | SK-TSCC-C10 | mc/1/2 | find how two different things are alike | how paper and a screen are alike (typewriter and laptop): a letter shows up for each key | 4 / 4 / 3 (hint 3 rules out quick fixing) | typewriter, laptop |
-| SK-TSCC-S11 | SK-TSCC-C09 | match/2/2 | find the sentence that starts with the wrong clue word | match clue words to likeness or difference (trampoline, swing set); now a match item | all 4 rows open / all 4 rows open / However row settled (difference), 3 rows open | trampoline, swing set |
+| SK-TSCC-S11 | SK-TSCC-C09 | match/2/2 | find the sentence that starts with the wrong clue word | match clue words Like, while, Unlike, Both to likeness or difference (trampoline, swing set) | all 4 rows open / all 4 rows open / all 4 rows open (hint 3 only points to the two parts of sentence 5) | trampoline, swing set |
 | SK-TSCC-S12 | SK-TSCC-C11 | dropdown/2/3 | find the fact in the wrong part of a chart | a rowboat and a sailboat | slot 1: all 3; slot 2: all 3 / slot 1: all 3; slot 2: all 3 / slot 1: mast / oars (floats ruled out); slot 2: all 3 | rowboat, sailboat |
 | SK-TSCC-S13 | SK-TSCC-C13 | mc/1/3 | tell how two texts are organized in the same way | tangerines and oranges; paper books and e-books | all 4 / all 4 / key / differences first then likenesses / steps (the problem and fix one ruled out) | tangerine, e-book |
 | SK-TSCC-S14 | SK-TSCC-C14 | ms/2/2 | two sentences that compare and contrast correctly | an island and a peninsula | all 5 / all 5 / key / key / unlike misuse / both by boat (false) ... (swap ruled out? the 'people walk' one) | island, peninsula |
@@ -236,5 +236,17 @@ All edits are inside my own similar items and the passages p7, p11, p12 of 3.T.T
 - **3.T.T.2.c S05 (SHOULD):** Text 1 now says "People in the far north built igloos as shelters when they went hunting" (igloos were mostly short-stay hunting shelters).
 
 **Needs blind re-solve (this round):** TS-SEQ S06, S10; TS-CC S11; 3.T.T.2.b S13 (frame only); TS-CE S07; 3.T.T.2.c S05 (text only).
+
+**Gates after this round:** check-content PASS with 0 failures; check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk on port 8832 (server stopped) 15 of 15 in all nine lessons, no page errors.
+
+
+## Fixes after the last blind re-solve
+
+- **TS-CC S11 (MUST):** the clue words are now Like, while, Unlike and Both, all taught in the lesson (Unlike, while and Both appear in the teaching text; Like is the P5 option). Not Also or However. The paragraph order is likeness, likeness, difference, difference (rows: Like 0, while 1, Unlike 1, Both 0), so the answers do not alternate. Hint 3 now only points to the two parts of sentence 5 and names no row's answer. Shared options with C09: none. Word Jaccard with C09 over stem, prompt, text and options, measured with my own script: 0.18 (the reviewer's metric may differ). Live: 4 rows open at every step (3 / 3 / 3 per row is not reduced by any hint).
+- **TS-CE S07 (SHOULD):** hint 3 no longer names a choice ("Decide which part of the sentence is the cause. Then ask which clue word tells the reader that the first part led to the second."), so and, so and until all stay live (3 / 3 / 3).
+- **TS-SEQ S10 (NOTE):** the stick is no longer stood in unfrozen juice. Paragraph 2 now freezes the juice for an hour until it is slushy, and Paragraph 3 pushes the stick into the slush. The ladder and live counts are unchanged.
+- **3.T.T.2.c S05 (NOTE):** Text 1 now says people "sometimes built igloos as shelters when they went hunting".
+
+**Needs blind re-solve (this round):** TS-CC S11 (new words, new order); TS-CE S07 (hint 3 only); TS-SEQ S10 (stem wording); 3.T.T.2.c S05 (text only).
 
 **Gates after this round:** check-content PASS with 0 failures; check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk on port 8832 (server stopped) 15 of 15 in all nine lessons, no page errors.

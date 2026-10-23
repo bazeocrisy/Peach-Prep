@@ -725,7 +725,7 @@ PP.addLesson({
       why: "The answers are \"six hours\" and \"about ten minutes.\" Both tell how much time passes. First, Next and Finally tell only the order." },
     { id: "SK-TSSEQ-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C09"],
-      stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you stand a wooden stick in the middle of the juice.", "Paragraph 3: Then you set the cup in the freezer. After a few hours, the juice is solid, and you can peel off the paper and eat your juice pop."],
+      stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you freeze it for one hour, until it is slushy.", "Paragraph 3: Then you push a wooden stick into the slush. After a few more hours, the juice is solid, and you can peel off the paper and eat your juice pop."],
       prompt: "Choose the words that tell what the first and last paragraphs do.",
       text: "The first paragraph {0}. The last paragraph {1}.",
       slots: [
@@ -1674,7 +1674,7 @@ PP.addLesson({
       hints: [
         "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
         "Reread the stem to find out which of the two things happened first and made the other happen.",
-        "Until tells when something stops, so it does not fit. Decide which part is the cause, then ask which clue word shows that the second part is the result."
+        "Decide which part of the sentence is the cause. Then ask which clue word tells the reader that the first part led to the second."
       ],
       how: [
         "Dan watered the plant every day, and that helped it grow tall.",
@@ -3855,27 +3855,27 @@ PP.addLesson({
       why: "The answer is \"Each key the writer presses makes a letter show up on both of them.\" Paper and a screen both show a letter for each key that is pressed. Quick fixing and printing belong to the laptop, and typing a page again belongs to the typewriter." },
     { id: "SK-TSCC-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C09"],
-      stem: ["(1) A trampoline and a swing set are both fun in a backyard.", "(2) Also, both need a grown-up to check that they are safe.", "(3) However, a trampoline is round and flat, but a swing set is tall with chains.", "(4) Likewise, both help kids burn off extra energy.", "(5) In contrast, a trampoline lets you bounce, while a swing set lets you swing."],
+      stem: ["(1) A trampoline and a swing set are fun to have in a backyard.", "(2) Both need a grown-up to check that they are safe.", "(3) Like a swing set, a trampoline helps kids burn off extra energy.", "(4) Unlike a swing set, a trampoline is round and flat.", "(5) A trampoline lets you bounce, while a swing set lets you swing."],
       prompt: "Match each clue word from the paragraph to what it shows.",
       cols: ["a likeness", "a difference"],
       rows: [
-        { text: "Also,", answer: 0 },
-        { text: "However,", answer: 1 },
-        { text: "Likewise,", answer: 0 },
-        { text: "In contrast,", answer: 1 }
+        { text: "Like", answer: 0 },
+        { text: "while", answer: 1 },
+        { text: "Unlike", answer: 1 },
+        { text: "Both", answer: 0 }
       ],
-      clue: "A clue word tells how its sentence connects to the ones before it. Reread each sentence that a clue word begins.",
+      clue: "A clue word tells how its sentence connects to the other things in the paragraph. Reread each sentence that has a clue word in it.",
       hints: [
-        "A clue word tells how its sentence connects to the ones before it. Reread each sentence that a clue word begins.",
+        "A clue word tells how its sentence connects to the other things in the paragraph. Reread each sentence that has a clue word in it.",
         "For each clue word, ask what its sentence says about the trampoline and the swing set: the same, or not the same?",
-        "Sentence 3 says one is round and flat and the other is tall, so those two are not the same. Sort the other clue words the same way."
+        "Look at the two parts of Sentence 5, on each side of the comma. Ask whether bouncing and swinging are the same thing, then sort the other clue words the same way."
       ],
       how: [
-        "Sentences 2 and 4 tell things that are true of both: both need a safety check, and both help kids burn off energy. So Also and Likewise show a likeness.",
-        "Sentences 3 and 5 tell things that are not the same: round and flat against tall, and bouncing against swinging. So However and In contrast show a difference."
+        "Sentences 2 and 3 tell things that are true of both: both need a safety check, and both help kids burn off energy. So Both and Like show a likeness.",
+        "Sentences 4 and 5 tell things that are not the same: round and flat, and bouncing against swinging. So Unlike and while show a difference."
       ],
       misconception: "A common mix-up is sorting a clue word by how it sounds. Check what its sentence says about the two things.",
-      why: "Also and Likewise show a likeness, because their sentences tell what is true of both. However and In contrast show a difference, because their sentences tell how the two things are not the same." },
+      why: "Both and Like show a likeness, because their sentences tell what is true of both. Unlike and while show a difference, because their sentences tell how the two things are not the same." },
     { id: "SK-TSCC-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C11"],
       stem: ["A rowboat is a small boat. A person sits in it and pulls two oars to move forward. A sailboat is also a boat, but it has a tall pole called a mast. A big cloth sail is raised on the mast, and the wind pushes the sail. Both kinds of boats float on water and can carry people.", "A student made this chart about the text.", "Rowboat only: moved with oars", "Both: floats on water; has a tall mast", "Sailboat only: moved by the wind; has a cloth sail"],

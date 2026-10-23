@@ -2897,7 +2897,7 @@ PP.addLesson({
       why: "The answer is \"Alpacas hum to each other.\" Only Text 2 tells it. The colors and the mountains are told only in Text 1, and both texts say that farmers cut the wool off." },
     { id: "SK-TT2c-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
       like: ["SK-TT2c-C05"],
-      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos as shelters when they went hunting. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 2 tells that snow holds in heat. Both texts tell how the blocks are set to make the dome."],
+      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north sometimes built igloos as shelters when they went hunting. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 2 tells that snow holds in heat. Both texts tell how the blocks are set to make the dome."],
       prompt: "Ben's note has two mistakes. Choose the words that fix it.",
       text: "The fact about how the blocks make a dome is in {0}. The fact that snow holds in heat is in {1}.",
       slots: [
@@ -3796,53 +3796,53 @@ PP.addLesson({
       why: "The question that says \"Read on\" opens the topic, so it is the introduction. The sentences about the glass bulbs and about the sand taking the same time are facts for the middle. \"Now you know how an hourglass uses falling sand to measure time\" wraps up, so it is the conclusion." },
     { id: "SK-TT2d-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C02"],
       stem: [
-        "(1) A sundial tells time with a shadow.",
-        "(2) It has a flat plate and a flat piece that stands up from the plate.",
-        "(3) When the sun shines, the standing piece makes a shadow on the plate."
+        "(1) A yo-yo goes up and down on a string.",
+        "(2) The string is wrapped around a small axle between two round halves.",
+        "(3) When you let go, the yo-yo spins down the string."
       ],
       prompt: "Which sentence could be added after sentence 3 to support sentence 1?",
       choices: [
-        { text: "As the sun moves across the sky, the shadow moves across the plate.", correct: true },
-        { text: "Some sundials are made of stone, and some are made of metal." },
-        { text: "Clocks and watches also tell people what time it is." },
-        { text: "Many gardens have a sundial in the middle of the flower beds." }
+        { text: "A quick tug on the string makes it spin back up to your hand.", correct: true },
+        { text: "Some yo-yos are made of plastic, and some are made of wood." },
+        { text: "Many toys come in boxes with bright pictures on the front." },
+        { text: "Marbles and jacks are other toys that children like to play with." }
       ],
       clue: "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 1 states.",
       hints: [
         "A sentence that supports an idea gives more information about that same idea. Ask what idea sentence 1 states.",
-        "Reread sentences 1 to 3 and picture a sundial in the sun. Then ask which choice tells more about how the shadow tells time.",
-        "A sentence about what sundials are made of tells about the material, not about how a sundial tells time. Look at the choices that are left."
+        "Reread sentences 1 to 3 and picture a yo-yo moving. Then ask which choice tells more about how it goes up and down.",
+        "A sentence about what yo-yos are made of tells about the material, not about how a yo-yo moves. Look at the choices that are left."
       ],
       how: [
-        "Sentence 1 says a sundial tells time with a shadow, so a supporting sentence must tell more about the shadow and the time.",
-        "The sun moves across the sky during the day, so the shadow moves across the plate. That movement is how the shadow shows the time.",
-        "The answer is: As the sun moves across the sky, the shadow moves across the plate.",
-        "Stone and metal, clocks and watches, and gardens may be true, but they do not explain how the shadow tells time."
+        "Sentence 1 says a yo-yo goes up and down on a string, so a supporting sentence must tell more about that movement.",
+        "Sentence 3 tells how it goes down. The sentence about the tug tells how it comes back up.",
+        "The answer is: A quick tug on the string makes it spin back up to your hand.",
+        "Plastic and wood, toy boxes, and marbles and jacks may be true, but they do not explain how a yo-yo goes up and down."
       ],
       misconception: "A common mix-up is picking any true fact about the topic. A supporting sentence must tell more about the exact idea it supports.",
-      why: "The answer is: As the sun moves across the sky, the shadow moves across the plate. It tells more about how a shadow tells time. The other sentences are about materials, clocks or gardens." },
+      why: "The answer is: A quick tug on the string makes it spin back up to your hand. It tells more about how a yo-yo goes up and down. The other sentences are about materials, toy boxes or other toys." },
     { id: "SK-TT2d-S03", type: "order", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C03"],
-      prompt: "A student wrote four sentences about growing a bean plant in a cup. Put them in the order that makes the most sense.",
+      prompt: "A student wrote four sentences about making a jelly sandwich. Put them in the order that makes the most sense.",
       steps: [
-        "First, fill a clear cup with soil.",
-        "Next, push a bean seed into the soil with your finger.",
-        "Then pour a little water on the soil.",
-        "Last, set the cup in a sunny window and watch for a sprout."
+        "First, lay two slices of bread on a plate.",
+        "Next, spread jelly on one slice with a knife.",
+        "Then press the two slices together.",
+        "Last, cut the sandwich in half and enjoy it."
       ],
       clue: "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
       hints: [
         "Put the steps in the order they would really happen. Ask what must be finished before each next step can start.",
         "Look for clue words such as first, next, then and last in the sentences. Then check that each step makes sense after the one before it.",
-        "A seed has to be in the soil before you pour water on it, so the watering comes after the seed is pushed in. Use that to place two of the sentences, then decide where the others go."
+        "The slices cannot be pressed together until jelly is on one of them, so the pressing comes after the spreading. Use that to place two of the sentences, then decide where the others go."
       ],
       how: [
-        "The cup has to be filled before anything can go into it, so filling the cup comes first.",
-        "Then the seed is pushed into the soil, and then the soil is watered.",
-        "Last, the cup goes in a sunny window to wait for a sprout.",
-        "The order is: fill the cup with soil, push in the seed, pour water, set the cup in a sunny window."
+        "The bread has to be on the plate before anything can be spread on it, so laying the slices comes first.",
+        "Then the jelly is spread, and then the slices are pressed together.",
+        "Last, the sandwich is cut and eaten.",
+        "The order is: lay two slices of bread on a plate, spread jelly, press the slices together, cut the sandwich in half."
       ],
       misconception: "A common mix-up is ignoring clue words. Words like first and last show where a step belongs.",
-      why: "The order is: First, fill a clear cup with soil; next, push a bean seed into the soil; then pour a little water on the soil; last, set the cup in a sunny window. Each step needs the one before it." },
+      why: "The order is: First, lay two slices of bread on a plate; next, spread jelly on one slice with a knife; then press the two slices together; last, cut the sandwich in half and enjoy it. Each step needs the one before it." },
     { id: "SK-TT2d-S04", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C04"],
       stem: [
         "A student wrote this sentence about pencils: \"The ferrule holds the eraser on the end of the pencil.\""
@@ -3868,45 +3868,45 @@ PP.addLesson({
       why: "The answer is: A ferrule is a metal band that holds the eraser in place. The sentence says the ferrule holds the eraser on the end of the pencil. The tip that makes marks is the lead, and a sharpener is a separate tool." },
     { id: "SK-TT2d-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-P4"],
       stem: [
-        "(1) Sloths are slow animals that live in rain forest trees.",
-        "(2) A sloth hangs upside down from a branch and moves very slowly.",
-        "(3) It eats leaves, and it may sleep for many hours a day.",
+        "(1) An abacus is a counting tool with beads on rods.",
+        "(2) A person slides the beads to show numbers.",
+        "(3) People have used abaci to add and subtract for thousands of years.",
         "(4) That is all."
       ],
       prompt: "Which sentence would be the best conclusion to replace sentence 4?",
       choices: [
-        { text: "A slow, quiet life in the trees is just right for a sloth.", correct: true },
-        { text: "Next, I will tell you about monkeys that jump from tree to tree." },
-        { text: "Rain forest trees need a lot of rain to grow tall." },
-        { text: "I think that monkeys are more fun to watch than sloths." }
+        { text: "With beads that slide on rods, an abacus helps people count and add.", correct: true },
+        { text: "Next, I will tell you how a calculator works." },
+        { text: "Some abaci have ten rods, and some have more than ten." },
+        { text: "I think that counting on my fingers is much easier." }
       ],
-      clue: "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or is about a different animal.",
+      clue: "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or gives an opinion about something else.",
       hints: [
-        "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or is about a different animal.",
+        "A conclusion wraps up the whole topic. Cross out any choice that starts something new, adds a new fact, or gives an opinion about something else.",
         "Reread sentences 1 to 3 and think about the big idea they share. Then compare each choice with it.",
         "A sentence that begins with \"Next, I will tell you about\" starts a new topic. Look at the choices that are left."
       ],
       how: [
         "A conclusion reminds the reader of the main idea without starting anything new.",
-        "Sentences 1 to 3 all tell about the slow life of a sloth in the trees.",
-        "The answer is: A slow, quiet life in the trees is just right for a sloth.",
-        "The monkey sentences are about another animal, and the sentence about trees needing rain adds a new fact instead of wrapping up."
+        "Sentences 1 to 3 all tell about how an abacus uses beads on rods to help people count.",
+        "The answer is: With beads that slide on rods, an abacus helps people count and add.",
+        "The calculator sentence starts a new topic, the sentence about ten rods adds a new fact, and the finger sentence is an opinion about something else."
       ],
-      misconception: "A common mix-up is choosing a sentence about the same place. A conclusion must wrap up the topic, which is the sloth.",
-      why: "The answer is: A slow, quiet life in the trees is just right for a sloth. It wraps up the main idea of the draft. The monkey sentences are about another animal, and the sentence about rain adds a new fact." },
+      misconception: "A common mix-up is choosing a true sentence about abaci. A conclusion must wrap up the topic instead of adding a fact.",
+      why: "The answer is: With beads that slide on rods, an abacus helps people count and add. It wraps up the main idea of the draft. The calculator sentence starts a new topic, the ten rods sentence adds a new fact, and the finger sentence is an opinion." },
     { id: "SK-TT2d-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C06"],
       stem: [
-        "(1) I like looking at things.",
-        "(2) A telescope has curved pieces of glass called lenses inside a long tube.",
-        "(3) The lenses make faraway things look closer.",
-        "(4) People use telescopes to look at the moon and the stars."
+        "(1) I like gadgets.",
+        "(2) A kitchen timer is set for a number of minutes.",
+        "(3) It counts down until it reaches zero.",
+        "(4) Then it rings so the cook knows the time is up."
       ],
       prompt: "Which sentence should replace sentence 1 as a better introduction?",
       choices: [
-        { text: "A telescope is a tool that helps people see faraway things.", correct: true },
-        { text: "Binoculars and cameras can also make faraway things look closer." },
-        { text: "My grandfather gave me a telescope for my birthday last year." },
-        { text: "In the end, telescopes help people learn about the sky." }
+        { text: "A kitchen timer is a tool that helps a cook keep track of time.", correct: true },
+        { text: "Clocks, watches and calendars are tools that people use every day." },
+        { text: "My aunt gave me a red kitchen timer shaped like a tomato." },
+        { text: "In the end, a timer makes cooking easier for everyone." }
       ],
       clue: "An introduction names the topic of the whole draft. It should fit everything that comes after it, not just one small part.",
       hints: [
@@ -3916,70 +3916,70 @@ PP.addLesson({
       ],
       how: [
         "An introduction tells the topic of the whole draft.",
-        "Sentences 2 to 4 tell what is inside a telescope, how it works and what people look at with it. All of them are about telescopes.",
-        "The answer is: A telescope is a tool that helps people see faraway things.",
-        "The sentence about binoculars and cameras is about other tools, the grandfather sentence is about the writer, and \"In the end\" sounds like an ending."
+        "Sentences 2 to 4 tell how a timer is set, how it counts down and how it rings. All of them are about kitchen timers.",
+        "The answer is: A kitchen timer is a tool that helps a cook keep track of time.",
+        "The sentence about clocks and calendars is about other tools, the tomato sentence is about the writer's aunt, and \"In the end\" sounds like an ending."
       ],
-      misconception: "A common mix-up is choosing the choice that names a similar tool. The introduction must name the topic of this draft.",
-      why: "The answer is: A telescope is a tool that helps people see faraway things. It names the topic and fits the facts that follow. The binoculars sentence is about other tools, the birthday sentence is about the writer, and \"In the end\" sounds like a conclusion." },
+      misconception: "A common mix-up is choosing a sentence that names similar tools. The introduction must name the topic of this draft.",
+      why: "The answer is: A kitchen timer is a tool that helps a cook keep track of time. It names the topic and fits the facts that follow. The clock sentence is about other tools, the tomato sentence is about the writer's aunt, and \"In the end\" sounds like a conclusion." },
     { id: "SK-TT2d-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C07"],
       stem: [
-        "A student wrote this sentence about ice: \"A glacier slowly slides downhill over many years.\""
+        "A student wrote this sentence about the sea: \"An iceberg floats in the ocean, and most of it is hidden under the water.\""
       ],
-      prompt: "She wants to add a sentence that tells what a glacier is. Choose the best answer for the blank.",
-      text: "A glacier is {0}.",
+      prompt: "She wants to add a sentence that tells what an iceberg is. Choose the best answer for the blank.",
+      text: "An iceberg is {0}.",
       slots: [
         { options: [
-            "a huge mass of ice that moves very slowly over land",
-            "a small pond that freezes on a cold night",
-            "a heavy rain that falls on top of a mountain",
-            "a thin sheet of frost on a window"
+            "a huge piece of ice that floats in the sea",
+            "a small ice cube that melts in a glass",
+            "a thin layer of frost on a window",
+            "a cold wind that blows over the water"
           ],
           answer: 0 }
       ],
       clue: "A definition tells what a word means. Look for what the thing is and what it does.",
       hints: [
         "A definition tells what a word means. Look for what the thing is and what it does.",
-        "Read the student's sentence again. Ask what the thing is doing and how fast it moves.",
-        "A pond that freezes on a cold night is small and does not slide downhill. Look at the choices that are left."
+        "Read the student's sentence again. Ask where an iceberg is and what it is made of.",
+        "A small ice cube melting in a glass cannot float in the ocean with most of it hidden. Look at the choices that are left."
       ],
       how: [
-        "The sentence says a glacier slowly slides downhill over many years, so it is something large that moves slowly.",
-        "A huge mass of ice that moves very slowly over land fits both parts.",
-        "The answer is: A glacier is a huge mass of ice that moves very slowly over land.",
-        "A pond, a rain and frost on a window do not slide downhill over many years."
+        "The sentence says an iceberg floats in the ocean and most of it is under the water, so it is something big that floats.",
+        "A huge piece of ice that floats in the sea fits both parts.",
+        "The answer is: An iceberg is a huge piece of ice that floats in the sea.",
+        "An ice cube in a glass, frost on a window and a cold wind do not float in the ocean with most of them under the water."
       ],
-      misconception: "A common mix-up is choosing any choice about cold weather. A definition must match what the sentence says the thing does.",
-      why: "The answer is: A glacier is a huge mass of ice that moves very slowly over land. The sentence says a glacier slides downhill over many years. A frozen pond, a heavy rain and frost on a window do not." },
+      misconception: "A common mix-up is choosing any choice about cold things. A definition must match what the sentence says the thing does.",
+      why: "The answer is: An iceberg is a huge piece of ice that floats in the sea. The sentence says an iceberg floats in the ocean with most of it under the water. An ice cube, frost and a cold wind do not." },
     { id: "SK-TT2d-S08", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C08"],
       stem: [
-        "(1) A coral reef is a rocky structure under the sea.",
-        "(2) It is built by tiny animals called polyps.",
-        "(3) Many fish hide among the coral.",
+        "(1) An anthill is a mound of soil built by ants.",
+        "(2) Ants dig tunnels inside it.",
+        "(3) Some tunnels lead to rooms where the queen lays eggs.",
         "(4) My brother is learning to play the trumpet.",
-        "(5) Sea turtles and crabs also visit the reef."
+        "(5) Worker ants carry food into the anthill."
       ],
       prompt: "Which sentence does not belong in this informational draft?",
       choices: [
         { text: "(4) My brother is learning to play the trumpet.", correct: true },
-        { text: "(2) It is built by tiny animals called polyps." },
-        { text: "(3) Many fish hide among the coral." },
-        { text: "(5) Sea turtles and crabs also visit the reef." }
+        { text: "(2) Ants dig tunnels inside it." },
+        { text: "(3) Some tunnels lead to rooms where the queen lays eggs." },
+        { text: "(5) Worker ants carry food into the anthill." }
       ],
-      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about coral reefs?",
+      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about anthills?",
       hints: [
-        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about coral reefs?",
+        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about anthills?",
         "Read each sentence with the one before it and the one after it. A sentence that belongs connects to its neighbors.",
-        "Sentence 5 tells which animals visit the reef, so it gives a fact about the topic. Check the sentences that are left."
+        "Sentence 5 tells what the worker ants do, so it gives a fact about the topic. Check the sentences that are left."
       ],
       how: [
-        "The topic is coral reefs, so each sentence should teach about them.",
-        "Sentence 2 tells who builds a reef, sentence 3 tells about fish that hide in it, and sentence 5 tells about other visitors. All of them are about the reef.",
+        "The topic is anthills, so each sentence should teach about them.",
+        "Sentence 2 tells about tunnels, sentence 3 tells about the queen's rooms, and sentence 5 tells about worker ants. All of them are about the anthill.",
         "The answer is sentence 4: \"My brother is learning to play the trumpet.\"",
-        "It is about the writer's brother and music, not about coral reefs."
+        "It is about the writer's brother and music, not about anthills."
       ],
       misconception: "A common mix-up is keeping a sentence because it is a true statement. A sentence belongs only if it teaches about the topic.",
-      why: "The answer is: (4) My brother is learning to play the trumpet. It is about the writer's brother, not about coral reefs. Sentences 2, 3 and 5 each give a fact about the reef." },
+      why: "The answer is: (4) My brother is learning to play the trumpet. It is about the writer's brother, not about anthills. Sentences 2, 3 and 5 each give a fact about the anthill." },
     { id: "SK-TT2d-S09", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C09"],
       stem: [
         "(1) Windmills use the wind to do work.",
@@ -4008,61 +4008,61 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a fact because it mentions windmills or wind. A supporting fact must tell more about the same idea.",
       why: "The answers are \"Some windmills use the turning blades to pump water out of the ground\" and \"Other windmills use the turning blades to grind grain into flour.\" Both tell what work windmills do. The other sentences tell about blades, height or wind." },
     { id: "SK-TT2d-S10", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C10"],
-      stem: ["A student drew Figure 1 for a report about hot-air balloons."],
-      figure: { src: "assets/figures/tt2d-balloon-parts.svg",
+      stem: ["A student drew Figure 1 for a report about windsocks."],
+      figure: { src: "assets/figures/tt2d-windsock.svg",
         label: "Figure 1",
-        caption: "A hot-air balloon",
-        alt: "Drawing of a hot-air balloon with a large round balloon on top, a small flame called a burner under it, and a basket hanging below. Labels point to the balloon, the burner and the basket." },
+        caption: "A windsock",
+        alt: "Drawing of a windsock on a tall pole. The cloth cone points to the right. Labels point to the pole, the wide end of the cone and the narrow end of the cone." },
       prompt: "Which caption should the student write under Figure 1?",
       choices: [
-        { text: "The main parts of a hot-air balloon", correct: true },
-        { text: "A family riding in a hot-air balloon at sunrise" },
-        { text: "How hot air makes a balloon rise" },
-        { text: "Where hot-air balloons are made" }
+        { text: "The main parts of a windsock", correct: true },
+        { text: "A windsock at an airport during a big storm" },
+        { text: "How wind makes a kite fly high" },
+        { text: "Where windsocks are made and sold" }
       ],
       clue: "A caption tells what a picture shows. It should match what you can see.",
       hints: [
         "A caption tells what a picture shows. It should match what you can see.",
         "Study Figure 1 and read its labels. Then compare what the labels name with what each caption says.",
-        "Figure 1 has no people in it. Look at the choices that are left."
+        "Figure 1 has no clouds, lightning or airport in it. Look at the choices that are left."
       ],
       how: [
-        "Read the labels first. Figure 1 labels a balloon, a burner and a basket.",
+        "Read the labels first. Figure 1 labels a pole, a wide end and a narrow end.",
         "Labels that name parts show a picture of the parts of one thing.",
-        "The answer is: The main parts of a hot-air balloon.",
-        "There is no family in the picture, the picture does not show how hot air makes the balloon rise, and it does not show where balloons are made."
+        "The answer is: The main parts of a windsock.",
+        "The picture shows no storm or airport, it is not about a kite, and it does not show where windsocks are made."
       ],
       misconception: "A common mix-up is choosing a caption that fits the topic. A caption must describe what this picture shows.",
-      why: "The answer is: The main parts of a hot-air balloon. Figure 1 labels the balloon, the burner and the basket. The picture has no family, does not show how the balloon rises and does not show where balloons are made." },
+      why: "The answer is: The main parts of a windsock. Figure 1 labels the pole, the wide end and the narrow end. The picture shows no storm or airport, no kite, and no factory." },
     { id: "SK-TT2d-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.d"], passages: [], pick: 2, like: ["SK-TT2d-C11"],
       stem: [
-        "(1) A weather vane shows which way the wind is blowing.",
-        "(2) It sits on a tall pole high above the roof.",
+        "(1) A parachute helps a person float down slowly.",
+        "(2) It is a large piece of cloth that catches the air.",
         "(3) My shoes are wet from the puddle.",
-        "(4) The arrow part of the vane turns until it points into the wind.",
+        "(4) The air pushes up against the cloth and slows the fall.",
         "(5) Yesterday we ate noodles for dinner."
       ],
       prompt: "Which TWO sentences do not belong in this informational draft?",
       choices: [
         { text: "(3) My shoes are wet from the puddle.", correct: true },
         { text: "(5) Yesterday we ate noodles for dinner.", correct: true },
-        { text: "(2) It sits on a tall pole high above the roof." },
-        { text: "(4) The arrow part of the vane turns until it points into the wind." }
+        { text: "(2) It is a large piece of cloth that catches the air." },
+        { text: "(4) The air pushes up against the cloth and slows the fall." }
       ],
-      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about weather vanes?",
+      clue: "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about parachutes?",
       hints: [
-        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about weather vanes?",
+        "Every sentence in an informational draft should teach about the topic. Ask of each sentence: is this about parachutes?",
         "Read the sentences one at a time. Choose two.",
-        "Sentence 4 tells how the arrow turns, so it is about the weather vane. Look at the choices that are left."
+        "Sentence 4 tells how the cloth slows the fall, so it is about the parachute. Look at the choices that are left."
       ],
       how: [
-        "The topic is weather vanes, so each sentence should teach about them.",
-        "Sentence 2 tells where a weather vane sits, and sentence 4 tells how it turns.",
-        "The answers are sentence 3, \"My shoes are wet from the puddle,\" and sentence 5, \"Yesterday we ate noodles for dinner.\"",
-        "One is about wet shoes and one is about dinner, so neither teaches about weather vanes."
+        "The topic is parachutes, so each sentence should teach about them.",
+        "Sentence 2 tells what a parachute is made of, and sentence 4 tells how it slows the fall.",
+        "The answers are \"(3) My shoes are wet from the puddle.\" and \"(5) Yesterday we ate noodles for dinner.\"",
+        "One is about wet shoes and one is about dinner, so neither teaches about parachutes."
       ],
       misconception: "A common mix-up is stopping after finding one sentence. More than one sentence can be off the topic.",
-      why: "The answers are \"(3) My shoes are wet from the puddle.\" and \"(5) Yesterday we ate noodles for dinner.\" Neither is about weather vanes. Sentences 2 and 4 tell facts about a weather vane." },
+      why: "The answers are \"(3) My shoes are wet from the puddle.\" and \"(5) Yesterday we ate noodles for dinner.\" Neither is about parachutes. Sentences 2 and 4 tell facts about a parachute." },
     { id: "SK-TT2d-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C12"],
       stem: [
         "(2) Maple syrup comes from the sap of maple trees.",
@@ -4134,35 +4134,35 @@ PP.addLesson({
       why: "The answers are \"(2) A cork and an apple float on top of the water.\" and \"(3) A rock and a coin sink to the bottom.\" Figure 1 shows exactly those four objects. The swimming and boat sentences are not shown." },
     { id: "SK-TT2d-S14", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C14"],
       stem: [
-        "(1) The top of a rain forest is called the canopy.",
-        "(2) Many birds and monkeys spend their lives there."
+        "(1) A harbor is a safe place for boats near the shore.",
+        "(2) Many fishing boats and ferries stop at the harbor each day."
       ],
-      prompt: "A student wants to add a sentence after sentence 1 that tells what the canopy is. Which sentence fits best?",
+      prompt: "A student wants to add a sentence after sentence 1 that tells what a harbor is. Which sentence fits best?",
       choices: [
-        { text: "The canopy is the layer of leaves and branches high above the forest floor.", correct: true },
-        { text: "A canopy is also a cloth cover that is stretched over a bed." },
-        { text: "Rain forests are warm places where it rains a lot." },
-        { text: "The forest floor is covered with dead leaves and soft soil." }
+        { text: "A harbor is a part of the sea that is protected from strong waves.", correct: true },
+        { text: "A harbor is also a word that means to keep a secret feeling inside." },
+        { text: "Boats come in many sizes, from tiny rowboats to huge ships." },
+        { text: "Fishing boats leave early in the morning and come back at night." }
       ],
       clue: "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
       hints: [
         "A sentence that tells what a word means should tell what the thing is, in a way that fits this topic.",
-        "Reread sentences 1 and 2 to see how the word canopy is used in this draft. Then check each choice.",
-        "A cloth cover over a bed is a different meaning of the word from the one in this draft. Look at the choices that are left."
+        "Reread sentences 1 and 2 to see how the word harbor is used in this draft. Then check each choice.",
+        "A word that means keeping a feeling inside is a different meaning from the one in this draft. Look at the choices that are left."
       ],
       how: [
-        "Sentence 1 says the canopy is the top of a rain forest, and sentence 2 says birds and monkeys live there.",
-        "So the canopy is the high layer of leaves and branches.",
-        "The answer is: The canopy is the layer of leaves and branches high above the forest floor.",
-        "The bed cover is a different meaning, the sentence about warm rain is about the whole forest, and the forest floor is the bottom layer, not the top."
+        "Sentence 1 says a harbor is a safe place for boats near the shore, and sentence 2 says boats stop there.",
+        "So a harbor is a part of the sea where boats are protected from strong waves.",
+        "The answer is: A harbor is a part of the sea that is protected from strong waves.",
+        "The secret feeling sentence is a different meaning, the sentence about sizes is about boats, and the sentence about fishing is about when boats leave."
       ],
       misconception: "A common mix-up is picking a sentence that uses the word. A definition has to give the meaning that fits the draft.",
-      why: "The answer is: The canopy is the layer of leaves and branches high above the forest floor. It tells what the canopy is in a rain forest. A bed cover is a different meaning, the warm rain sentence is about the whole forest, and the forest floor is the bottom layer." },
+      why: "The answer is: A harbor is a part of the sea that is protected from strong waves. It tells what a harbor is. The secret feeling sentence is a different meaning, and the other sentences are about boats." },
     { id: "SK-TT2d-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.d"], passages: [], like: ["SK-TT2d-C15"],
       stem: [
-        "Two students wrote about smoke alarms.",
-        "Draft A: (1) A smoke alarm is a small device that warns people about smoke. (2) It makes a loud sound when it senses smoke. (3) My cat likes to nap on the couch. (4) A smoke alarm helps keep a family safe.",
-        "Draft B: (1) Let me tell you something. (2) It makes a loud sound when it senses smoke. (3) Families should test their alarms once a month. (4) A smoke alarm helps keep a family safe."
+        "Two students wrote about washing hands.",
+        "Draft A: (1) Washing your hands with soap and water helps remove germs. (2) You should rub your hands together for about twenty seconds. (3) My cat likes to nap on the couch. (4) Clean hands help keep you healthy.",
+        "Draft B: (1) Let me tell you something. (2) You should rub your hands together for about twenty seconds. (3) Soap and water help remove germs. (4) Clean hands help keep you healthy."
       ],
       prompt: "Which statement tells what each draft needs?",
       choices: [
@@ -4174,13 +4174,13 @@ PP.addLesson({
       clue: "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
       hints: [
         "Check each draft for an introduction, facts that stay on topic, and a conclusion.",
-        "Read the first sentence and the last sentence of each draft. Then read the sentences in between and ask whether each one is about smoke alarms.",
+        "Read the first sentence and the last sentence of each draft. Then read the sentences in between and ask whether each one is about washing hands.",
         "Both drafts end with the same sentence, which wraps up the topic. Look at the choices that are left."
       ],
       how: [
         "Check the parts one at a time for each draft.",
-        "Draft A's first sentence names smoke alarms, but \"My cat likes to nap on the couch\" is not about smoke alarms.",
-        "Draft B's other sentences are all about smoke alarms, but \"Let me tell you something\" does not name the topic, so it needs a better introduction.",
+        "Draft A's first sentence names the topic, but \"My cat likes to nap on the couch\" is not about washing hands.",
+        "Draft B's other sentences are all about washing hands, but \"Let me tell you something\" does not name the topic, so it needs a better introduction.",
         "The answer is: Draft A has a sentence that should be taken out, and Draft B needs a better introduction."
       ],
       misconception: "A common mix-up is looking for the same problem in both drafts. Each draft can have a different part that needs work.",

@@ -1048,19 +1048,19 @@ PP.addLesson({
         ["(6) A sign would make younger students feel safe.", "(7) They would know that drivers have been told to watch for them.", "(8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down."],
         ["(9) A sign is a good idea."]
       ] },
-    { id: "p4", draft: true, title: "Family Game Night", byline: "Marcus's first draft", genre: "Student draft (opinion)",
+    { id: "p4", draft: true, title: "Board Games on Fridays", byline: "Marcus's first draft", genre: "Student draft (opinion)",
       paragraphs: [
         ["(1) My family has a shelf full of board games, but we hardly ever play them.", "(2) I think my family should have game night every Friday."],
         ["(3) Game night would bring us closer together.", "(4) Everyone would put away their phones and sit at the same table.", "(5) Last month, we played one game on a rainy day, and Grandpa told funny stories the whole time."],
         ["(6) Game night would also help us practice math.", "(7) That would be a great way to spend a Friday night."],
         ["(8) So let's start game night this Friday, because it brings us together and helps us practice math."]
       ] },
-    { id: "p5", draft: true, title: "A Bird Feeder at Our Window", byline: "Eli's first draft", genre: "Student draft (opinion)",
+    { id: "p5", draft: true, title: "Moon Watch Night", byline: "Eli's first draft", genre: "Student draft (opinion)",
       paragraphs: [
-        ["(1) Our classroom has a big window that faces the school yard.", "(2) Many kinds of birds fly past it every day.", "(3) I think our class should hang a bird feeder outside that window."],
-        ["(4) Watching birds would help us learn about nature.", "(5) We could draw each bird we see and look up its name in a book.", "(6) The window is low, so even the shortest student could see out."],
-        ["(7) A feeder would also help the birds.", "(8) Seeds are hard for birds to find when snow covers the ground."],
-        ["(9) A feeder is a good idea."]
+        ["(1) Our school has a big field behind the gym.", "(2) The moon looks bright there on a clear night.", "(3) I think our school should hold a moon watch night on the field."],
+        ["(4) Looking at the moon would help us learn about the sky.", "(5) We could draw its shape and see how it changes from week to week.", "(6) The field is wide, so many families could sit on blankets."],
+        ["(7) A moon watch night would also be free for families.", "(8) It costs nothing, because the moon is already in the sky."],
+        ["(9) A moon watch night is a good idea."]
       ] }
     /* B4-b4a passages end */
   ],
@@ -1131,7 +1131,7 @@ PP.addLesson({
   /* ---------- B4 (expansion 2026-10-22, author b4a; docs/expansion-2026-10-22/01-architecture.md 2.2-2.3) ----------
      Selected-response core (the Milestones assesses this standard through revise/edit items). The write task stays
      OUTSIDE the fifteen: it is adult-scored and never awards a pass. Set 1 uses two new items on Ava's draft (p1) and
-     reuses P6, P5 and P4 by { ref }; set 2 uses p3 (community); set 3 uses p4 (family) and p5 (nature).
+     reuses P6, P5 and P4 by { ref }; set 2 uses p3 (community); set 3 uses p4 (family) and p5 (night sky).
      Practice Together is P1, P2 and P3. Hints and Show me how for P1-P6 are in addons.
      Author log: docs/expansion-2026-10-22/batches/B4-b4a-author-log.md. NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
@@ -1373,17 +1373,17 @@ PP.addLesson({
         prompt: "Eli's draft ends with a weak conclusion. This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Which sentence should replace sentence 9 as a better conclusion?",
           choices: [
-            { text: "Because a feeder would help us learn and help the birds, our class should hang one.", correct: true },
-            { text: "First, watching birds would help us learn about nature, and we could draw each bird." },
-            { text: "Many people hang feeders in their backyards and in parks all over the country." },
-            { text: "I hope our principal says yes, because I love to watch birds." }
+            { text: "Because it would help us learn and cost nothing, our school should hold a moon watch night.", correct: true },
+            { text: "First, looking at the moon would help us learn about the sky, and we could draw its shape." },
+            { text: "Many people around the world have looked at the moon for thousands of years." },
+            { text: "I hope the sky is clear, because I love to look at the moon." }
           ] },
         partB: { prompt: "Which sentence from the draft gives evidence for the first reason in the conclusion you chose?",
           choices: [
-            { text: "\"We could draw each bird we see and look up its name in a book.\"", correct: true },
-            { text: "\"Many kinds of birds fly past it every day.\"" },
-            { text: "\"The window is low, so even the shortest student could see out.\"" },
-            { text: "\"Seeds are hard for birds to find when snow covers the ground.\"" }
+            { text: "\"We could draw its shape and see how it changes from week to week.\"", correct: true },
+            { text: "\"The moon looks bright there on a clear night.\"" },
+            { text: "\"The field is wide, so many families could sit on blankets.\"" },
+            { text: "\"It costs nothing, because the moon is already in the sky.\"" }
           ] },
         clue: "A conclusion says the opinion again and sums up the reasons. For Part B, evidence is a fact or an example that explains one reason.",
         hints: [
@@ -1392,35 +1392,35 @@ PP.addLesson({
           "A sentence that begins with \"First,\" starts the reasons over instead of wrapping them up. Look at the choices that are left in Part A, and make your Part B choice match."
         ],
         how: [
-          "Eli's opinion is that the class should hang a bird feeder. His reasons are that watching birds would help the class learn and that a feeder would help the birds.",
+          "Eli's opinion is that the school should hold a moon watch night. His reasons are that it would help students learn and that it would be free.",
           "A conclusion repeats the opinion and sums up both reasons.",
-          "Part A: Because a feeder would help us learn and help the birds, our class should hang one. Part B: \"We could draw each bird we see and look up its name in a book.\"",
-          "The First sentence starts over, the sentence about backyards adds a new fact, and the principal sentence is a wish. In Part B, drawing birds and looking up names is how the class would learn."
+          "Part A: Because it would help us learn and cost nothing, our school should hold a moon watch night. Part B: \"We could draw its shape and see how it changes from week to week.\"",
+          "The First sentence starts over, the sentence about thousands of years adds a new fact, and the last sentence is a wish. In Part B, drawing the moon's shape is how students would learn."
         ],
         misconception: "A common mix-up is choosing evidence for a different reason. Part B must support the first reason in your Part A answer.",
-        why: "Part A: Because a feeder would help us learn and help the birds, our class should hang one. Part B: \"We could draw each bird we see and look up its name in a book.\" The conclusion repeats the opinion and sums up both reasons, and drawing and naming birds is evidence for learning about nature. The other sentences start over, add a new fact or are not evidence for that reason." },
+        why: "Part A: Because it would help us learn and cost nothing, our school should hold a moon watch night. Part B: \"We could draw its shape and see how it changes from week to week.\" The conclusion repeats the opinion and sums up both reasons, and drawing the moon's shape is evidence for learning about the sky. The other sentences start over, add a new fact or are not evidence for that reason." },
       { id: "SK-TT3c-C15", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: ["p5"],
         prompt: "Eli wants to add one more sentence after sentence 8 to explain his second reason. Which sentence fits best?",
         choices: [
-          { text: "Feeding birds in winter would help them stay strong until spring.", correct: true },
-          { text: "Many people hang feeders in their backyards and in parks." },
-          { text: "I would love to see a bright red bird at our feeder." },
-          { text: "Some birds fly very high and very fast across the sky." }
+          { text: "That means every family could come, even if they cannot spend money.", correct: true },
+          { text: "Many people like to look at the moon through a telescope." },
+          { text: "I would love to see a big, bright full moon." },
+          { text: "The moon is much smaller than the sun." }
         ],
         clue: "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
         hints: [
           "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
           "Reread sentences 7 and 8 to see what Eli's second reason is. Then ask which choice tells why it matters.",
-          "A wish about seeing one bird tells how Eli feels, not why the reason matters. Look at the choices that are left."
+          "A wish about seeing a full moon tells how Eli feels, not why the reason matters. Look at the choices that are left."
         ],
         how: [
-          "The second reason is that a feeder would help the birds, and sentence 8 says seeds are hard to find when snow covers the ground.",
-          "The new sentence should tell why that matters: food keeps the birds strong through the cold months.",
-          "The answer is: Feeding birds in winter would help them stay strong until spring.",
-          "The sentence about backyards is a fact about people, the red bird sentence is a wish, and the sentence about flying is off the reason."
+          "The second reason is that a moon watch night would be free, and sentence 8 says it costs nothing.",
+          "The new sentence should tell why that matters: families who cannot spend money could still come.",
+          "The answer is: That means every family could come, even if they cannot spend money.",
+          "The telescope sentence is a fact about other people, the full moon sentence is a wish, and the sentence about the sun is off the reason."
         ],
-        misconception: "A common mix-up is choosing any sentence about birds. A sentence that explains a reason must tell more about that reason.",
-        why: "The answer is: Feeding birds in winter would help them stay strong until spring. It explains why the second reason matters. The backyards sentence is about people, the red bird sentence is a wish, and the flying sentence is off the reason." }
+        misconception: "A common mix-up is choosing any sentence about the moon. A sentence that explains a reason must tell more about that reason.",
+        why: "The answer is: That means every family could come, even if they cannot spend money. It explains why being free matters. The telescope sentence is about other people, the full moon sentence is a wish, and the sun sentence is off the reason." }
     ] }
   ] },
   similar: [
@@ -1453,11 +1453,11 @@ PP.addLesson({
       why: "The answer is: Lunch is the time when students sit down to eat and talk with friends. It tells the reader the topic of the whole draft. The dessert sentence is a different opinion, the carrot sentence is a detail, and the long line sentence is about a different problem." },
     { id: "SK-TT3c-S02", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C02"],
       stem: [
-        "(1) Our class should hold a talent show.",
-        "(2) A talent show would help shy students feel brave."
+        "(1) Our class should write a class newspaper.",
+        "(2) A newspaper would give every student a chance to share news."
       ],
       prompt: "Choose the best word or words for each blank.",
-      text: "(3) {0}, a student who is afraid to talk in class could stand up and sing a short song. (4) {1}, the whole class would see how brave she is.",
+      text: "(3) {0}, a student who loves sports could report on the big game. (4) {1}, the whole class would learn what is happening in each other's lives.",
       slots: [
         { options: ["For example", "However", "Before that"], answer: 0 },
         { options: ["As a result", "Instead", "In conclusion"], answer: 0 }
@@ -1466,74 +1466,72 @@ PP.addLesson({
       hints: [
         "Linking words show how ideas connect. Ask how the next sentence connects to the one before it: does it show one case of the idea, show a different idea, or tell what happened because of it?",
         "Read sentences 2 to 4 in order. For each blank, decide how the sentence with the blank connects to the sentence before it.",
-        "\"Before that\" sends the reader back in time, but sentence 3 is an example of feeling brave. Check the other words for that blank, and work out the second blank yourself."
+        "\"Before that\" sends the reader back in time, but sentence 3 is a case of sharing news. Check the other words for that blank, and work out the second blank yourself."
       ],
       how: [
-        "Sentence 2 says a talent show helps shy students feel brave. Sentence 3 shows one way it could happen, so it is an example.",
+        "Sentence 2 says a newspaper gives every student a chance to share news. Sentence 3 shows one student sharing news, so it is an example.",
         "Blank 1: \"For example\" connects an example to the idea before it. \"However\" shows a different idea, and \"Before that\" goes back in time.",
-        "Blank 2: the class would see how brave she is because she sang, so \"As a result\" shows that one thing leads to the other.",
-        "\"Instead\" would mean the class sees something else, and \"In conclusion\" belongs at the end of the whole draft."
+        "Blank 2: the class would learn about each other because students share news, so \"As a result\" shows that one thing leads to the other.",
+        "\"Instead\" would mean the class learns something else, and \"In conclusion\" belongs at the end of the whole draft."
       ],
       misconception: "A common mix-up is choosing a linking word that sounds like an essay word. The word must match how the two sentences connect.",
-      why: "Blank 1 needs \"For example\" because sentence 3 is an example of a shy student feeling brave. Blank 2 needs \"As a result\" because the class sees her bravery after she sings. \"However,\" \"Before that,\" \"Instead\" and \"In conclusion\" do not fit." },
+      why: "Blank 1 needs \"For example\" because sentence 3 is an example of sharing news. Blank 2 needs \"As a result\" because the class learns about each other after students share. \"However,\" \"Before that,\" \"Instead\" and \"In conclusion\" do not fit." },
     { id: "SK-TT3c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P6"],
-      stem: [
-        "Opinion: Our school should have a lost-and-found shelf near the front door."
-      ],
+      stem: ["Opinion: Our school should put a shade tent next to the ball field."],
       prompt: "Read Dev's opinion in the box. Dev needs to think of a reason on his own. Which sentence is the best reason to support his opinion?",
       choices: [
-        { text: "Students who lose a jacket could find it again without asking around.", correct: true },
-        { text: "Our school has a front door with a long red handle." },
-        { text: "I truly believe a lost-and-found shelf would be a great idea." },
-        { text: "Some students wear their jackets to recess on cold mornings." }
+        { text: "Players and fans could rest out of the hot sun between games.", correct: true },
+        { text: "Our school has a field with a long white fence around it." },
+        { text: "I truly believe a shade tent would be a great idea." },
+        { text: "Some players wear blue shirts, and some wear red shirts." }
       ],
       clue: "A reason tells WHY the opinion is a good idea. Ask of each sentence: does it answer the question, why should the school do this?",
       hints: [
         "A reason tells WHY the opinion is a good idea. Ask of each sentence: does it answer the question, why should the school do this?",
-        "Read the opinion in the box and picture a shelf by the door. Then ask what each choice says about why it would help.",
+        "Read the opinion in the box and picture a tent by the field. Then ask what each choice says about why it would help.",
         "A sentence that only says the opinion again does not give a reason. Look at the choices that are left."
       ],
       how: [
-        "A reason must answer why the school should have a lost-and-found shelf.",
-        "If lost jackets are kept on a shelf, students can find them without asking around, so the shelf solves a problem.",
-        "The answer is: Students who lose a jacket could find it again without asking around.",
-        "The sentence about the door is a fact, the \"I truly believe\" sentence repeats the opinion, and the sentence about jackets at recess is only a detail."
+        "A reason must answer why the school should put a shade tent by the field.",
+        "A tent gives shade, so players and fans can rest out of the hot sun, and that is why it helps.",
+        "The answer is: Players and fans could rest out of the hot sun between games.",
+        "The sentence about the fence is a fact, the \"I truly believe\" sentence repeats the opinion, and the sentence about shirts is only a detail."
       ],
       misconception: "A common mix-up is choosing a sentence that repeats the opinion with strong words. A reason says why.",
-      why: "The answer is: Students who lose a jacket could find it again without asking around. It tells why a lost-and-found shelf is a good idea. The door sentence is a fact, \"I truly believe\" repeats the opinion, and the sentence about jackets is only a detail." },
+      why: "The answer is: Players and fans could rest out of the hot sun between games. It tells why a shade tent is a good idea. The fence sentence is a fact, \"I truly believe\" repeats the opinion, and the shirts sentence is only a detail." },
     { id: "SK-TT3c-S04", type: "order", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P5"],
       prompt: "Kayla is writing an opinion paragraph. Put her sentences in the best order.",
       steps: [
-        "The long wall by our gym is plain white.",
-        "I think our class should paint a mural on it.",
-        "First, a mural would make the school look bright and friendly.",
-        "Also, we would learn to work as a team to finish it.",
-        "For these reasons, a mural would be a great way to improve our school."
+        "Our class has finished many books this year.",
+        "I think our class should start a book swap.",
+        "First, a swap would let us try new stories without spending money.",
+        "Also, it would help us make friends who like the same books.",
+        "For these reasons, a book swap would be great for our class."
       ],
       clue: "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
       hints: [
         "An opinion piece goes: introduce the topic, state the opinion, give the reasons, then wrap up. Look at the linking words to see where each sentence fits.",
-        "Find the sentence that tells about the wall without saying what Kayla wants. Then look for the sentence that says what she wants.",
+        "Find the sentence that tells about the books without saying what Kayla wants. Then look for the sentence that says what she wants.",
         "The linking words First and Also come before the reasons, and the sentence with For these reasons comes after them. Use that to place three of the sentences, then decide the first two."
       ],
       how: [
-        "The first sentence introduces the topic: the plain white wall.",
+        "The first sentence introduces the topic: the books the class has finished.",
         "The second sentence states the opinion with I think and should.",
         "First and Also begin the reasons in that order, and For these reasons wraps up at the end.",
-        "The order is: the white wall, I think we should paint a mural, First, Also, For these reasons."
+        "The order is: finished many books, I think we should start a book swap, First, Also, For these reasons."
       ],
       misconception: "A common mix-up is putting the opinion last. The opinion comes near the beginning, and the conclusion says it again at the end.",
-      why: "The order is: the plain white wall (introduces the topic), I think our class should paint a mural on it (the opinion), First (reason 1), Also (reason 2), and For these reasons (the conclusion)." },
+      why: "The order is: our class has finished many books (introduces the topic), I think our class should start a book swap (the opinion), First (reason 1), Also (reason 2), and For these reasons (the conclusion)." },
     { id: "SK-TT3c-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P4"],
       stem: [
-        "(1) Our school should start a chess club. (2) Chess helps students learn to think ahead before they move. (3) A club would also give students a quiet way to meet new friends. (4) Chess is a game."
+        "(1) Our school should start a drama club. (2) Acting helps students learn to speak clearly in front of others. (3) A club would also give shy students a safe place to try new things. (4) Acting is fun."
       ],
       prompt: "Sentence 4 is a weak conclusion. Which sentence should replace sentence 4?",
       choices: [
-        { text: "A chess club would help us think ahead and make friends, so our school should start one.", correct: true },
-        { text: "First, chess helps students learn to think ahead before they move." },
-        { text: "Some chess games last for hours, and others last for only a few minutes." },
-        { text: "My favorite chess piece is the knight, and I move it in an L shape." }
+        { text: "A drama club would help us speak clearly and feel brave, so our school should start one.", correct: true },
+        { text: "First, acting helps students learn to speak clearly in front of others." },
+        { text: "Some plays have only two actors, and others have a very large cast." },
+        { text: "My favorite costume is the purple cape with gold stars on it." }
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
       hints: [
@@ -1543,23 +1541,23 @@ PP.addLesson({
       ],
       how: [
         "A conclusion repeats the opinion and sums up the reasons.",
-        "The opinion is that the school should start a chess club, and the reasons are thinking ahead and making friends.",
-        "The answer is: A chess club would help us think ahead and make friends, so our school should start one.",
-        "The First sentence starts a reason over, the sentence about game length is a new fact, and the knight sentence is about the writer's favorite piece."
+        "The opinion is that the school should start a drama club, and the reasons are speaking clearly and feeling brave.",
+        "The answer is: A drama club would help us speak clearly and feel brave, so our school should start one.",
+        "The First sentence starts a reason over, the sentence about the cast is a new fact, and the costume sentence is about the writer's favorite."
       ],
-      misconception: "A common mix-up is choosing a true sentence about chess. A conclusion must say the opinion again and sum up the reasons.",
-      why: "The answer is: A chess club would help us think ahead and make friends, so our school should start one. It repeats the opinion and sums up both reasons. The First sentence starts over, the game length sentence adds a fact, and the knight sentence is about the writer's favorite piece." },
+      misconception: "A common mix-up is choosing a true sentence about plays. A conclusion must say the opinion again and sum up the reasons.",
+      why: "The answer is: A drama club would help us speak clearly and feel brave, so our school should start one. It repeats the opinion and sums up both reasons. The First sentence starts over, the cast sentence adds a fact, and the costume sentence is about the writer's favorite." },
     { id: "SK-TT3c-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C06"],
       stem: [
-        "(1) Many families in our town have dogs that need room to run.",
-        "(2) The only open field near the library has a sign that says no dogs."
+        "(1) Many students wait at the bus stop on Mill Road every morning.",
+        "(2) When it rains, there is no roof to keep them dry."
       ],
       prompt: "The writer's introduction does not tell the reader her opinion. Which sentence should be added after sentence 2 to state her opinion?",
       choices: [
-        { text: "I think our town should build a fenced dog park near the library.", correct: true },
-        { text: "Dogs of every size like to chase balls and sticks." },
-        { text: "Have you ever watched a dog run across a big, open field?" },
-        { text: "The library has a red door and a reading garden in the back." }
+        { text: "I think our town should build a bus shelter at the stop on Mill Road.", correct: true },
+        { text: "Buses are big, and they stop at many corners in our town." },
+        { text: "Have you ever waited outside on a cold or windy morning?" },
+        { text: "The stop on Mill Road is next to a gas station and a mailbox." }
       ],
       clue: "An opinion statement tells what the writer thinks should happen. It is not a fact, a question or a detail about the place.",
       hints: [
@@ -1568,39 +1566,37 @@ PP.addLesson({
         "A question can start a draft, but it does not tell the reader what the writer thinks. Look at the choices that are left."
       ],
       how: [
-        "Sentences 1 and 2 describe a problem: dogs need room to run, but the field near the library does not allow them.",
+        "Sentences 1 and 2 describe a problem: students wait at a stop with no roof.",
         "The opinion has to say what the writer thinks should be done. The words I think and should show that.",
-        "The answer is: I think our town should build a fenced dog park near the library.",
-        "The dogs and balls sentence is a fact, the question does not say what the writer wants, and the library door sentence is a detail."
+        "The answer is: I think our town should build a bus shelter at the stop on Mill Road.",
+        "The sentence about buses is a fact, the question does not say what the writer wants, and the gas station sentence is a detail."
       ],
       misconception: "A common mix-up is choosing a sentence that sounds like part of the story. An opinion statement says what the writer wants.",
-      why: "The answer is: I think our town should build a fenced dog park near the library. The words I think and should tell what the writer wants. The dogs and balls sentence is a fact, the question does not tell her opinion, and the door sentence is a detail." },
+      why: "The answer is: I think our town should build a bus shelter at the stop on Mill Road. The words I think and should tell what the writer wants. The buses sentence is a fact, the question does not tell her opinion, and the gas station sentence is a detail." },
     { id: "SK-TT3c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C07"],
-      stem: [
-        "Opinion: Our town should hold a farmers market in the park on Saturdays."
-      ],
-      prompt: "Which TWO sentences give a reason why a Saturday farmers market is a good idea?",
+      stem: ["Opinion: Our town should open the community pool on Sundays."],
+      prompt: "Which TWO sentences give a reason why opening the pool on Sundays is a good idea?",
       choices: [
-        { text: "Families could buy fresh fruit and vegetables from the people who grew them.", correct: true },
-        { text: "Neighbors would have a friendly place to meet and talk on the weekend.", correct: true },
-        { text: "The park has a big lawn, a small pond and a playground in the corner." },
-        { text: "Would you like to shop for apples and peaches in the park?" },
-        { text: "I think Saturdays are the best day of the whole week." }
+        { text: "Families who work on Saturdays could swim together on their day off.", correct: true },
+        { text: "Kids would have a cool place to play during the hot summer afternoons.", correct: true },
+        { text: "The pool has a blue slide, a deep end and a small shallow end." },
+        { text: "Would you like to splash around in cool water on a hot day?" },
+        { text: "I think Sundays are the best day of the whole week." }
       ],
       clue: "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
       hints: [
         "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
-        "Test each choice by asking: does this answer the question, why should the town hold a market? Choose two.",
+        "Test each choice by asking: does this answer the question, why should the town open the pool? Choose two.",
         "A question does not give a reason. It only asks the reader something. Look at the choices that are left."
       ],
       how: [
-        "A reason has to explain why a Saturday market is a good idea for the town.",
-        "Buying fresh food from the people who grew it is a reason, and a friendly place for neighbors to meet is a reason.",
-        "The answers are: Families could buy fresh fruit and vegetables from the people who grew them. And: Neighbors would have a friendly place to meet and talk on the weekend.",
-        "The park sentence is only a fact, the question only asks something, and \"Saturdays are the best day\" is an opinion that does not say why a market is good."
+        "A reason has to explain why opening the pool on Sundays is a good idea for the town.",
+        "Families who work on Saturdays could swim together on Sunday, and kids would have a cool place to play on hot afternoons. Both tell why.",
+        "The answers are: Families who work on Saturdays could swim together on their day off. And: Kids would have a cool place to play during the hot summer afternoons.",
+        "The sentence about the slide is only a fact, the question only asks something, and \"Sundays are the best day\" is an opinion that does not say why the pool should open."
       ],
       misconception: "A common mix-up is picking a sentence that sounds strong. A reason must say why the opinion is a good idea.",
-      why: "The answers are \"Families could buy fresh fruit and vegetables from the people who grew them\" and \"Neighbors would have a friendly place to meet and talk on the weekend.\" Each tells why a market is a good idea. The park sentence is a fact, the question asks something, and the Saturday sentence does not say why a market helps." },
+      why: "The answers are \"Families who work on Saturdays could swim together on their day off\" and \"Kids would have a cool place to play during the hot summer afternoons.\" Each tells why opening the pool is a good idea. The slide sentence is a fact, the question asks something, and the Sunday sentence does not say why." },
     { id: "SK-TT3c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C08"],
       stem: ["(1) Our school should open a school store."],
       prompt: "Choose the best word or words for each blank.",
@@ -1675,7 +1671,7 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a sentence that is about walks. A conclusion must say the opinion again and sum up the reasons.",
       why: "The answer is: A walk would give us exercise and talk time, so my family should take one each night. It repeats the opinion and sums up both reasons. The First sentence starts over, the neighbor sentence is a new detail, and the sneakers sentence is about the writer's shoes." },
     { id: "SK-TT3c-S11", type: "match", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C11"],
-      prompt: "What job does each sentence do in this draft about a class aquarium? Match each sentence to its job. Use each job once.",
+      prompt: "What job does each sentence do in this draft about a morning stretch break? Match each sentence to its job. Use each job once.",
       cols: [
         "introduces the topic",
         "states the opinion",
@@ -1683,10 +1679,10 @@ PP.addLesson({
         "wraps up the opinion and reasons"
       ],
       rows: [
-        { text: "(1) Our classroom has an empty shelf under the windows.", answer: 0 },
-        { text: "(2) I think our class should put a fish tank on it.", answer: 1 },
-        { text: "(3) Watching fish swim would help us feel calm after a busy day.", answer: 2 },
-        { text: "(6) So a fish tank would help us feel calm and help us learn, and our class should get one.", answer: 3 }
+        { text: "(1) Our class sits at desks for most of the morning.", answer: 0 },
+        { text: "(2) I think our class should take a stretch break every day.", answer: 1 },
+        { text: "(3) A stretch break would help us feel more awake.", answer: 2 },
+        { text: "(6) So a stretch break would help us stay awake and focus, and our class should have one.", answer: 3 }
       ],
       clue: "An opinion piece has an introduction, an opinion, reasons and a conclusion. Ask what job each sentence does.",
       hints: [
@@ -1695,9 +1691,9 @@ PP.addLesson({
         "Sentence 2 uses I think and should, so it tells what the writer wants. Match that row first, then work out the other three."
       ],
       how: [
-        "Sentence 1 tells about the empty shelf, so it introduces the topic.",
+        "Sentence 1 tells about sitting at desks, so it introduces the topic.",
         "Sentence 2 says what the writer wants, with I think and should, so it states the opinion.",
-        "Sentence 3 tells why a fish tank is a good idea, so it gives a reason.",
+        "Sentence 3 tells why a stretch break is a good idea, so it gives a reason.",
         "Sentence 6 repeats the opinion and sums up the reasons, so it wraps up the draft."
       ],
       misconception: "A common mix-up is calling the first sentence the opinion. The introduction tells the topic, and the opinion says what the writer wants.",
@@ -1755,14 +1751,14 @@ PP.addLesson({
       why: "The answers are \"We should have pizza night because everyone in my family loves pizza\" and \"Pizza night would be fun. In addition, it would save us time on a busy day.\" Because explains why, and in addition adds a reason. But, or and for example do not fit." },
     { id: "SK-TT3c-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C14"],
       stem: [
-        "(1) Our class should start a pen pal program with a class in another state. (2) Writing letters would help us practice our writing. (3) Last month, our teacher said that students who write for a real reader try harder to spell well. (4) A pen pal would also teach us about a new place. (5) We could ask what the weather is like and what children there like to do after school. (6) Pen pals are a good idea."
+        "(1) Our school should add a sandbox for the little kids. (2) Digging and building in sand helps young children use their hands and plan. (3) Last week, a kindergartner at our school built a tunnel and then fixed it when it fell. (4) A sandbox would also give the little kids a calm place to play together. (5) Two children could share one bucket and take turns. (6) Sandboxes are nice."
       ],
       prompt: "Sentence 6 is a weak conclusion. Which sentence should replace sentence 6?",
       choices: [
-        { text: "Pen pals would help us write better and learn about a new place, so our class should start a program.", correct: true },
-        { text: "First, writing letters would help us practice our writing, and our teacher agrees." },
-        { text: "Children in other states may like different sports, foods and games than we do." },
-        { text: "I hope my pen pal has a dog, because I like to write about my dog." }
+        { text: "A sandbox would help little kids learn and play together, so our school should add one.", correct: true },
+        { text: "First, digging and building in sand helps young children use their hands and plan." },
+        { text: "Sand can be wet or dry, and some sand is white while some is brown." },
+        { text: "I hope my little sister gets a red bucket and a yellow shovel." }
       ],
       clue: "A conclusion says the opinion again and sums up the reasons. It does not start the reasons over or add a new idea.",
       hints: [
@@ -1772,37 +1768,37 @@ PP.addLesson({
       ],
       how: [
         "A conclusion repeats the opinion and sums up the reasons.",
-        "The opinion is to start a pen pal program, and the reasons are better writing and learning about a new place.",
-        "The answer is: Pen pals would help us write better and learn about a new place, so our class should start a program.",
-        "The First sentence starts over with one reason, the sentence about sports and foods adds a new fact, and the dog sentence is a personal wish."
+        "The opinion is to add a sandbox, and the reasons are learning with hands and playing together.",
+        "The answer is: A sandbox would help little kids learn and play together, so our school should add one.",
+        "The First sentence starts over with one reason, the sentence about wet and dry sand adds a new fact, and the bucket sentence is a personal wish."
       ],
-      misconception: "A common mix-up is choosing a sentence that mentions pen pals. A conclusion must say the opinion again and sum up both reasons.",
-      why: "The answer is: Pen pals would help us write better and learn about a new place, so our class should start a program. It repeats the opinion and sums up both reasons. The First sentence starts over, the sports sentence adds a new fact, and the dog sentence is a personal wish." },
+      misconception: "A common mix-up is choosing a sentence that mentions sand. A conclusion must say the opinion again and sum up both reasons.",
+      why: "The answer is: A sandbox would help little kids learn and play together, so our school should add one. It repeats the opinion and sums up both reasons. The First sentence starts over, the sand sentence adds a new fact, and the bucket sentence is a personal wish." },
     { id: "SK-TT3c-S15", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C15"],
       stem: [
-        "(1) Our school should put a rain barrel by the garden shed. (2) A rain barrel collects water that runs off the roof. (3) We could use that water to help the plants grow."
+        "(1) Our school should build a nature trail behind the gym. (2) A trail would give classes a place to look at plants and insects. (3) Students could draw what they find and write about it."
       ],
       prompt: "The writer wants to add one more sentence after sentence 3 to explain her reason. Which sentence fits best?",
       choices: [
-        { text: "Then we would not need to use as much water from the school's pipes.", correct: true },
-        { text: "Many families keep a rain barrel beside their houses." },
-        { text: "I would love to splash around in the puddles." },
-        { text: "Some barrels are painted with bright colors and flowers." }
+        { text: "Seeing real plants up close would help us remember what we learn.", correct: true },
+        { text: "Many families like to walk on trails on the weekend." },
+        { text: "I would love to find a big, shiny beetle." },
+        { text: "Some trails are covered with wood chips or gravel." }
       ],
       clue: "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
       hints: [
         "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
         "Reread sentences 2 and 3 to see what the reason is. Then ask which choice tells why it matters.",
-        "A wish about splashing in puddles tells how the writer feels, not why the reason matters. Look at the choices that are left."
+        "A wish about finding a beetle tells how the writer feels, not why the reason matters. Look at the choices that are left."
       ],
       how: [
-        "The reason is that the barrel collects rainwater that can help plants grow.",
-        "The new sentence should tell why that matters: using rainwater means using less water from the pipes.",
-        "The answer is: Then we would not need to use as much water from the school's pipes.",
-        "The sentence about families is a fact about other people, the puddle sentence is a wish, and the painted barrels sentence is a detail about looks."
+        "The reason is that a trail gives classes a place to study plants and insects and to draw and write about them.",
+        "The new sentence should tell why that matters: seeing real things up close helps students remember.",
+        "The answer is: Seeing real plants up close would help us remember what we learn.",
+        "The sentence about families is about other people, the beetle sentence is a wish, and the wood chips sentence is a detail about the path."
       ],
-      misconception: "A common mix-up is choosing any sentence about rain barrels. A sentence that explains a reason must tell more about that reason.",
-      why: "The answer is: Then we would not need to use as much water from the school's pipes. It explains why using the rainwater matters. The families sentence is about other people, the puddle sentence is a wish, and the painted barrels sentence is about looks." }
+      misconception: "A common mix-up is choosing any sentence about trails. A sentence that explains a reason must tell more about that reason.",
+      why: "The answer is: Seeing real plants up close would help us remember what we learn. It explains why a trail helps students learn. The families sentence is about other people, the beetle sentence is a wish, and the wood chips sentence is about the path." }
   ],
   addons: {
     "SK-TT3c-P1": {
