@@ -1279,12 +1279,12 @@ PP.addLesson({
       prompt: "Match each writing job to the plan that fits it best.",
       cols: ["Steps in order", "Compare", "Cause and effect"],
       rows: [
-        { text: "a page that helps a friend fold a paper boat", answer: 0 },
-        { text: "a page that sets frogs next to toads", answer: 1 },
+        { text: "a page that helps a friend make a kazoo", answer: 0 },
+        { text: "a page that sets a bike next to a scooter", answer: 1 },
         { text: "a page about what made a pond dry up last summer", answer: 2 }
       ],
       clue: "For each page, ask: Is the writer teaching steps, setting two things side by side, or telling what made something happen?",
-      why: "Helping a friend fold a boat is a how-to, so it needs steps in order. Frogs next to toads are two things side by side, so that is compare. What made a pond dry up asks for a reason, so that is cause and effect." }
+      why: "Helping a friend make a kazoo is a how-to, so it needs steps in order. A bike next to a scooter is two things side by side, so that is compare. What made a pond dry up asks for a reason, so that is cause and effect." }
   ],
   /* B4b:core:start */
   /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
@@ -1462,7 +1462,7 @@ PP.addLesson({
         prompt: "Isaiah wants to add a closing sentence after sentence 9. Which sentence is best?",
         choices: [
           { text: "Whether you bring a pet or not, we hope to see you there for a fun day.", correct: true },
-          { text: "Next, the judges will pick the winners and hand out all of the ribbons and prizes." },
+          { text: "The judges will pick the winners and hand out all of the ribbons and prizes." },
           { text: "Some pets learn new tricks very quickly, and others need a lot of patience and time." },
           { text: "Lots of neighbors have a dog or a cat, and some have fish or birds too." }
         ],
@@ -1724,7 +1724,7 @@ PP.addLesson({
         ],
         choices: [
           { text: "Stay with it, and soon the ring will whirl around you for a long time.", correct: true },
-          { text: "Next, pick up a second hoop and try to spin both of them at once." },
+          { text: "Pick up a second hoop and try to spin both of them at once." },
           { text: "Hula hoops are usually made of plastic and come in many bright colors." },
           { text: "Some people spin a hoop around an arm or a leg just for fun." }
         ],
@@ -1732,7 +1732,7 @@ PP.addLesson({
         hints: [
           "A closing wraps up the whole piece.",
           "Ask what a reader should feel or be ready to do after finishing these steps.",
-          "The steps are already finished by sentence 5, so a sentence that starts with Next would add one more step. Test the other three against what a closing does."
+          "The steps are already finished by sentence 5, so a sentence that gives one more thing to do would add a step. Test the other three against what a closing does."
         ],
         how: [
           "A closing wraps up a how-to after the steps are done.",
@@ -1758,21 +1758,21 @@ PP.addLesson({
       cols: ["Numbered steps", "Side-by-side sections", "Reasons and results"],
       rows: [
         { text: "an article that sets a rowboat beside a canoe", answer: 1 },
-        { text: "an article on what makes puddles vanish on a sunny day", answer: 2 },
+        { text: "an article on why a balloon pops when it gets too big", answer: 2 },
         { text: "an article that guides a new camper through building a pillow fort", answer: 0 }
       ],
       clue: "Read each article and say what the reader should be able to do or understand at the end.",
       hints: [
         "Read each article and say what the reader should be able to do or understand at the end.",
         "Begin with the article you are surest about. Each plan goes with one article only.",
-        "Vanishing puddles need an explanation, and an explanation is not a list of steps. Pair the other two articles after that."
+        "A popping balloon needs an explanation, and an explanation is not a list of steps. Pair the other two articles after that."
       ],
       how: [
         "A rowboat beside a canoe is two things shown together, so it needs side-by-side sections.",
-        "What makes puddles vanish asks for a cause and its result, so the plan is reasons and results.",
+        "Why a balloon pops asks for a cause and its result, so the plan is reasons and results.",
         "Guiding a camper through a fort is a how-to, so it needs numbered steps."
       ],
-      why: "The rowboat and canoe article puts two things side by side. The puddle article explains reasons and results. The fort article teaches a job, so it needs numbered steps."
+      why: "The rowboat and canoe article puts two things side by side. The balloon article explains reasons and results. The fort article teaches a job, so it needs numbered steps."
     },
     {
       id: "SK-SS1b-S02",
@@ -1937,7 +1937,7 @@ PP.addLesson({
       prompt: "Which sentence would end Nora's flyer best?",
       choices: [
         { text: "Bring your family, and we will see you in the water!", correct: true },
-        { text: "Next, the lifeguard will blow a whistle to start the big races." },
+        { text: "The lifeguard will blow a whistle to start the big races." },
         { text: "Foam noodles are long, soft tubes that float well on the water." },
         { text: "Many kids in our town learn to swim before they finish school." }
       ],
@@ -1945,7 +1945,7 @@ PP.addLesson({
       hints: [
         "A last sentence should leave the reader with the point of the flyer.",
         "Ask what Nora wants people to do after reading about the event.",
-        "A sentence that starts with Next brings in a new event instead of ending. Check the other three the same way."
+        "A sentence about what the lifeguard will do brings in a new event instead of ending. Check the other three the same way."
       ],
       how: [
         "The flyer invites families to an event, so the last sentence should wrap that up.",
@@ -1999,9 +1999,9 @@ PP.addLesson({
       choices: [
         { text: "Zane's page finishes with cleanup, while Nora's has no steps in it.", correct: true },
         { text: "Zane's readers will cook while they read, while Nora's will plan a family outing.", correct: true },
-        { text: "Both pages have a heading over each part." },
-        { text: "Both pages were written for kids who are about to cook." },
-        { text: "Nora's page puts a number in front of every sentence." }
+        { text: "Both pages have a clear heading placed over each part." },
+        { text: "Both pages were written for kids who are about to start cooking." },
+        { text: "Nora's page tells readers what to do first, next and last." }
       ],
       clue: "Each statement is about both pages. Check it against Zane's page, and then against Nora's.",
       hints: [
@@ -2013,9 +2013,9 @@ PP.addLesson({
         "Zane's last sentence says to wash the pot, the bowl and the spoon. Nora's page tells about the event and has no steps.",
         "Zane's readers cook as they read. Nora's readers read about a day out they might plan.",
         "The answers are \"Zane's page finishes with cleanup, while Nora's has no steps in it\" and \"Zane's readers will cook while they read, while Nora's will plan a family outing.\"",
-        "Neither page has headings, no numbers are in front of Nora's sentences, and only Zane's is for cooks."
+        "Neither page has headings, Nora's page does not tell readers what to do first, next and last, and only Zane's is for cooks."
       ],
-      why: "The answers are \"Zane's page finishes with cleanup, while Nora's has no steps in it\" and \"Zane's readers will cook while they read, while Nora's will plan a family outing.\" Neither page has headings, no numbers are in front of Nora's sentences, and only Zane's page is for cooks."
+      why: "The answers are \"Zane's page finishes with cleanup, while Nora's has no steps in it\" and \"Zane's readers will cook while they read, while Nora's will plan a family outing.\" Neither page has headings, Nora's page does not tell readers what to do first, next and last, and only Zane's page is for cooks."
     },
     {
       id: "SK-SS1b-S10",
@@ -2193,7 +2193,7 @@ PP.addLesson({
         "(4) Last, tie the two ends with a tight knot."
       ],
       choices: [
-        { text: "Now you have a bracelet that is ready to wear or to give to a friend.", correct: true },
+        { text: "Make one in every color, and trade bracelets with a friend.", correct: true },
         { text: "Add a few more beads if the string still looks bare." },
         { text: "Some beads are made of glass, and some are made of wood or clay." },
         { text: "A watch goes around your wrist and tells you the time." }
@@ -2206,17 +2206,17 @@ PP.addLesson({
       ],
       how: [
         "By sentence 4 the bracelet is finished, so the closing should wrap that up.",
-        "The answer is \"Now you have a bracelet that is ready to wear or to give to a friend.\" It tells the reader what they made and ends the piece.",
+        "The answer is \"Make one in every color, and trade bracelets with a friend.\" It looks past the finished bracelet and ends the piece.",
         "The sentence about adding beads brings back a step, and the sentences about beads and a watch add new facts."
       ],
-      why: "The answer is \"Now you have a bracelet that is ready to wear or to give to a friend.\" It wraps up the how-to. The sentence about adding beads brings back a step, and the sentences about beads and a watch add new facts instead of ending the piece."
+      why: "The answer is \"Make one in every color, and trade bracelets with a friend.\" It wraps up the how-to. The sentence about adding beads brings back a step, and the sentences about beads and a watch add new facts instead of ending the piece."
     }
   ],
   addons: {
     "SK-SS1b-P1": {
       hints: [
         "How-to steps must go in the order the reader does them. Picture yourself doing each step with a real pinecone.",
-        "Look at the sentences that tell what to put on the pinecone. Ask which one has to be done before the other.",
+        "Take each change one at a time. Picture a real pinecone and ask whether the new order works.",
         "Sentence 7 tells what happens after the feeder is hung, so it already belongs near the end. Check the other three changes."
       ],
       how: [
@@ -2244,7 +2244,7 @@ PP.addLesson({
     "SK-SS1b-P3": {
       hints: [
         "Choose a feature by the problem the reader has. Ask what job each feature does.",
-        "Say what each choice does for a reader: shows order, names a part, names the whole piece, or shows what something looks like.",
+        "Say the reader's problem in a few words. Then ask what each choice does for that problem.",
         "A bold title names the whole piece. It tells the reader what the piece is called, not what the feeder looks like. Check the other three."
       ],
       how: [
@@ -2276,8 +2276,8 @@ PP.addLesson({
         "A page about what made a pond dry up asks for a reason, not for steps or a side-by-side. Match the other two rows after that."
       ],
       how: [
-        "Helping a friend fold a paper boat teaches how to do something, so the plan is steps in order.",
-        "Frogs next to toads are two things side by side, so the plan is compare.",
+        "Helping a friend make a kazoo teaches how to do something, so the plan is steps in order.",
+        "A bike next to a scooter is two things side by side, so the plan is compare.",
         "What made a pond dry up asks for a reason, so the plan is cause and effect."
       ]
     }
@@ -2485,7 +2485,7 @@ PP.addLesson({
         ["(5) Practice is hard work, and some days it is very hot.", "(6) However, everyone still has fun."],
         [
           "(7) We play small games, and we cheer for each other.",
-          "(8) Coach lets us pick a fun game at the end of practice.",
+          "(8) Coach hands out cold water after every drill.",
           "(9) I cannot wait for the next practice."
         ]
       ]
@@ -2538,16 +2538,16 @@ PP.addLesson({
       why: "The sun coming out is the reason the ice melted, so the first sentence needs because. Also adds one more thing the class has. Although shows a surprise: it was late, but Dad still let us stay up. For example introduces strawberries and cherries as examples of red fruits." },
     { id: "SK-SS1c-P6", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words could fill the blank so the sentence makes sense?",
-      stem: "We wore our warm coats ____ it was cold outside.",
+      stem: "Dev ate two bowls of soup ____ he was very hungry.",
       choices: [
         { text: "because", correct: true },
         { text: "since", correct: true },
         { text: "although" },
         { text: "also" },
-        { text: "for example" }
+        { text: "instead" }
       ],
-      clue: "Is the cold weather the reason for the coats, a surprise, or an example? Find every word that does that job.",
-      why: "The answers are because and since. The cold is the reason for wearing coats, and both words tell a reason. Although would mean the coats were a surprise, which does not make sense." }
+      clue: "Is being hungry the reason for the soup, a surprise, or an addition? Find every word that does that job.",
+      why: "The answers are because and since. Being hungry is the reason Dev ate so much, and both words tell a reason. Although, also and instead do other jobs." }
   ],
   /* B4b:core:start */
   /* ---------- Expansion 2026-10-22, batch B4 (author b4b) ----------
@@ -2900,7 +2900,7 @@ PP.addLesson({
         std: ["3.T.SS.1.c"],
         passages: ["p4"],
         prompt: "Dev wants to improve sentences 8 and 9. Choose the best linking word for each blank.",
-        text: "We play small games, and we cheer for each other. {0}, Coach lets us pick a fun game at the end of practice. {1} practice is so much fun, I cannot wait for the next one.",
+        text: "We play small games, and we cheer for each other. {0}, Coach hands out cold water after every drill. {1} practice is so much fun, I cannot wait for the next one.",
         slots: [
           { options: ["In addition", "However", "For example"], answer: 0 },
           { options: ["Because", "Although", "In addition"], answer: 0 }
@@ -2908,17 +2908,17 @@ PP.addLesson({
         clue: "Linking words show how ideas connect. Decide how each new idea is connected to the idea before it.",
         hints: [
           "Linking words show how ideas connect. Decide how each new idea is connected to the idea before it.",
-          "For the first blank, ask whether Coach's choice adds to the fun, goes against it or is one example of it. For the second, ask why Dev cannot wait.",
-          "Start with the second blank. Ask whether the fun of practice explains why Dev cannot wait, and test each word."
+          "For the first blank, ask whether Coach's cold water adds to the fun, goes against it or is one example of it. For the second, ask why Dev cannot wait.",
+          "Start with the second blank. Read the sentence with each word and ask which one makes sense."
         ],
         how: [
-          "Sentence 7 tells about fun games and cheering. Coach letting the team pick a game is one more good thing, so the word adds an idea: In addition.",
+          "Sentence 7 tells about fun games and cheering. Coach handing out cold water is one more good thing, so the word adds an idea: In addition.",
           "For the second blank, the fun of practice is the reason Dev cannot wait for the next one.",
           "A word that gives a reason at the start of a sentence is Because. The answers are In addition and Because.",
           "However and Although would show a surprise, and For example would give an example, but none of those is the connection here."
         ],
         misconception: "A common mix-up is using Although because it sounds like a joining word. Check that the second idea really goes against the first.",
-        why: "The answers are In addition and Because. Coach letting the team pick a game is one more good thing, so In addition fits. The fun of practice is the reason Dev cannot wait, so Because fits. However and Although show a surprise, and For example gives an example."
+        why: "The answers are In addition and Because. Coach handing out cold water is one more good thing, so In addition fits. The fun of practice is the reason Dev cannot wait, so Because fits. However and Although show a surprise, and For example gives an example."
       },
       {
         id: "SK-SS1c-C15",
@@ -2928,7 +2928,7 @@ PP.addLesson({
         std: ["3.T.SS.1.c"],
         passages: [],
         prompt: "Complete the paragraph. Choose the best linking word for each blank.",
-        text: "Dandelion seeds are very light. {0}, the wind can carry them far away. {1} some seeds land on hard sidewalks and cannot grow, many land in soft soil and become new plants.",
+        text: "Soap bubbles are very light. {0}, a breeze can carry them across the yard. {1} some bubbles pop on rough bricks and vanish, many float up over the roof.",
         slots: [
           { options: ["As a result", "However", "For example"], answer: 0 },
           { options: ["Although", "Because", "In addition"], answer: 0 }
@@ -2936,17 +2936,17 @@ PP.addLesson({
         clue: "Linking words show how ideas connect. Decide how each sentence is connected to the one before it.",
         hints: [
           "Linking words show how ideas connect. Decide how each sentence is connected to the one before it.",
-          "For the first blank, ask what the seeds being light causes. For the second, ask whether the two ideas about where seeds land go together or go against each other.",
-          "Start with the second blank. Ask whether some seeds not growing agrees with many seeds growing, and test each word."
+          "For the first blank, ask what the bubbles being light causes. For the second, ask whether the two ideas about what happens to the bubbles go together or go against each other.",
+          "Start with the second blank. Ask whether some bubbles popping agrees with many bubbles floating, and test each word."
         ],
         how: [
-          "Dandelion seeds are very light, so the wind can carry them. The second idea happens because of the first, so the word shows a result: As a result.",
-          "In the last sentence, some seeds cannot grow, but many do. Those ideas go against each other, so the sentence starts with Although.",
+          "Soap bubbles are very light, so a breeze can carry them. The second idea happens because of the first, so the word shows a result: As a result.",
+          "In the last sentence, some bubbles pop, but many float on. Those ideas go against each other, so the sentence starts with Although.",
           "The answers are As a result and Although.",
-          "However would not fit the first blank, because the wind carrying light seeds is not a surprise, and Because or In addition do not fit the last blank."
+          "However would not fit the first blank, because a breeze carrying light bubbles is not a surprise, and Because or In addition do not fit the last blank."
         ],
         misconception: "A common mix-up is choosing a word that sounds scientific. Ask how each idea really connects to the one before.",
-        why: "The answers are As a result and Although. Being light is why the wind can carry the seeds, so the first blank is a result. Some seeds not growing goes against many seeds growing, so the second blank shows a surprise. However, For example, Because and In addition do not fit."
+        why: "The answers are As a result and Although. Being light is why a breeze can carry the bubbles, so the first blank is a result. Some bubbles popping goes against many bubbles floating, so the second blank shows a surprise. However, For example, Because and In addition do not fit."
       }
     ] }
   ] },
@@ -2998,7 +2998,7 @@ PP.addLesson({
       clue: "Ask what the second sentence does with the first one: gives a reason, tells a result or shows one case.",
       hints: [
         "Ask what the second sentence does with the first one: gives a reason, tells a result or shows one case.",
-        "A walk every day is one kind of care. Say what that makes the second sentence.",
+        "Say how the second sentence connects to the first. Then test each word.",
         "Therefore would mean the daily care caused the dog's walk. Decide between the other two words."
       ],
       how: [
@@ -3166,27 +3166,28 @@ PP.addLesson({
       passages: [],
       pick: 2,
       like: ["SK-SS1c-C08"],
-      prompt: "Pick the TWO words that make the sentence say why the class cheered.",
-      stem: "The class cheered ____ the team won.",
+      prompt: "Pick the TWO words that add one more thing about Ben.",
+      stem: "Ben plays the drums. ____ he sings in the school choir.",
       choices: [
-        { text: "because", correct: true },
-        { text: "since", correct: true },
-        { text: "although" },
-        { text: "also" },
-        { text: "instead" }
+        { text: "Also", correct: true },
+        { text: "In addition", correct: true },
+        { text: "Although" },
+        { text: "Therefore" },
+        { text: "Instead" }
       ],
-      clue: "The sentence needs a word that tells why. Ask what made the class cheer.",
+      clue: "Read both sentences. Does the second one add to the first, go against it, or tell a result?",
       hints: [
-        "The sentence needs a word that tells why. Ask what made the class cheer.",
-        "Choose two. Say the whole sentence with each word in the blank.",
-        "Although would make winning a surprise cheer-stopper, which does not fit. Check the other four."
+        "Read both sentences. Does the second one add to the first, go against it, or tell a result?",
+        "Choose two. Say the second sentence with each word at the start.",
+        "Singing in the choir is not caused by playing the drums, so Therefore does not fit. Check the other four."
       ],
       how: [
-        "The team winning is what made the class cheer.",
-        "Because and since both tell why something happened.",
-        "Although shows a surprise, also adds an idea, and instead takes the place of an idea."
+        "The first sentence tells one thing Ben does: he plays the drums.",
+        "The second sentence tells one more thing he does, so it adds to the first.",
+        "The answers are Also and In addition. Both words add another idea.",
+        "Although goes against an idea, Therefore tells a result, and Instead takes the place of an idea."
       ],
-      why: "The answers are because and since. The team winning is the reason the class cheered, and both words give a reason. Although, also and instead do other jobs."
+      why: "The answers are Also and In addition. The choir is one more thing Ben does, and both words add another idea. Although, Therefore and Instead do other jobs."
     },
     {
       id: "SK-SS1c-S09",
@@ -3329,7 +3330,7 @@ PP.addLesson({
       clue: "A linking word tells how the second sentence connects to the first. Say what each sentence tells.",
       hints: [
         "A linking word tells how the second sentence connects to the first. Say what each sentence tells.",
-        "Ask what is the cause and what is the effect in these two sentences.",
+        "Read each choice and ask whether it matches what sentence 2 tells about sentence 1.",
         "Brown leaves are not another thing the class forgot, so one choice does not fit. Test the other three."
       ],
       how: [
@@ -3358,7 +3359,7 @@ PP.addLesson({
       hints: [
         "Decide how each part connects to the part before it.",
         "For each blank, read the sentence with each choice and ask which one makes sense.",
-        "Work on the second blank first. Ask whether finishing early explains why the writer read a book."
+        "Work on the second blank first. Read the sentence with each word and ask which one makes sense."
       ],
       how: [
         "A quiet library makes it easy to work, so the homework got done early because of that. The first word tells a result: Therefore.",
@@ -3462,14 +3463,14 @@ PP.addLesson({
     },
     "SK-SS1c-P6": {
       hints: [
-        "Ask how the cold weather connects to wearing coats. Is it a reason, a surprise or an example?",
+        "Is being hungry a reason, a surprise or an addition?",
         "Choose two words. Try each word in the blank and read the whole sentence.",
-        "Although would mean the cold was a surprise. Check the other four words."
+        "Although would show a surprise. Check the other four words."
       ],
       how: [
-        "The cold weather is why they wore warm coats, so the blank needs a word that gives a reason.",
+        "Being very hungry is why Dev ate two bowls, so the blank needs a word that gives a reason.",
         "Because and since both give a reason.",
-        "Although would show a surprise, also would add an idea, and for example would give an example."
+        "Although would show a surprise, also would add an idea, and instead would take the place of an idea."
       ]
     }
   },

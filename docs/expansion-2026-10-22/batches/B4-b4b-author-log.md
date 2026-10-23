@@ -300,3 +300,27 @@ Counts are the choices still standing after hint 1, hint 2 and hint 3 (clue = hi
 9. 1.d P1 to P3 and C01 (carousel rewrite): P1 key sentence 6 (toy top), P2 topic sentence (the animals), P3 detail (motor stops, floor and animals stop), C01 closing.
 10. 2.b C12 (scrapbook against the trunk and the drawer of forgotten photos): is the key the only one that shows what the quilt means to Zoe?
 11. 2.b C13 (wind giggled and skipped) and C05 (garden of flowers), S06 (batter crept, between sentences 1 and 2), S13 (refrigerator hummed a sleepy tune).
+
+
+## 9. Fixes after second review of 1.b and 1.c (B4-review-SS1bc.md, "Second review")
+
+**MUSTs**
+- **R2-M1 (1.b S09).** Option C is now "Nora's page tells readers what to do first, next and last." (false for Nora, and does not depend on the sentence labels). `how` and `why` updated. Two distractors were lengthened ("a clear heading placed over each part", "about to start cooking") to shrink the key-length gap.
+- **R2-M2 (1.c core P6).** P6 is now "Dev ate two bowls of soup ____ he was very hungry." Key still because and since, but the frame, the reason (hunger, not weather) and the options (because, since, although, also, instead) are new, so it no longer paraphrases Watch Me 1 ("Mia stayed inside ____ it was raining hard"; because, although, for example). Clue, why and the P6 addon hints and how were rewritten (hint 1 shortened to pass the hint-length warning).
+- **R2-M3 (1.c S08).** S08 is now a different job: pick the TWO words that add one more thing ("Ben plays the drums. ____ he sings in the school choir."; key Also and In addition; distractors Although, Therefore, Instead). It resembles C08, so `like` stays C08. The key pair is shared with C08 (2 exact shared options, the key words themselves; the other three options differ and the stem, prompt and content differ; Jaccard 0.16). This is the only pair above one shared option and is accepted because the taught adder pair is only Also and In addition. S08 no longer shares a key pair or an option set with P6. The "cheer-stopper" wording (R2-S13) is gone with the old item.
+
+**SHOULDs done**
+- R2-S2: the "Next," step-adding distractor was removed from C07, C15 and S07 (kept in P4 and Watch Me 3); the matching hint 3s now say what the sentence does ("gives one more thing to do", "about what the lifeguard will do").
+- R2-S3: S15 key is now "Make one in every color, and trade bracelets with a friend." (no "Now you have a ..." frame; also no longer the longest option).
+- R2-S4: P1 hint 2 no longer points at sentences 4 and 5; P3 hint 2 no longer lists the four jobs.
+- R2-S5/S7: P5 and S01 topics changed. P5 rows are now "make a kazoo", "a bike next to a scooter" and the pond row; S01's cause row is now "why a balloon pops when it gets too big". Greps over `js/data` (kazoo: no hits; frogs-and-toads and paper boat removed; bike and scooter appear elsewhere only as incidental words).
+- R2-S8: C15 now uses soap bubbles carried by a breeze (no dandelion or seed text left); bubbles appear elsewhere only as incidental words.
+- R2-S9: C14 and the p4 passage sentence 8 is now "Coach hands out cold water after every drill." so only In addition fits as a new, separate good thing.
+- R2-S10: hint 2 of S02 and S13 and hint 3 of C14 and S14 no longer state the relation; they tell the child to test each word.
+- R2-S1 (partly): key length gaps reduced in S09 and S15, C07 and C15 distractors are of similar length; P1 to P3 and C14 were not lengthened.
+
+**SHOULDs not done:** R2-S6 (question-frame variation in S02, S03, S09, S15), R2-S11 (S01 key pair equals C07's), R2-S12 (C08 distractor). Reason: they are SHOULDs with the ceiling still met on word sets (every pair <= 0.21), and each would risk new blockers; they remain open for the coordinator.
+
+**Gates after these edits:** check-content PASS (0 failures, 9 warnings, none in 1.b or 1.c), check-writing 0 failures, check-instructional-copy 28 assertions, readability: 1.b passages 100 to 118 words FK 2.0 to 4.4, 1.c 102 to 114 words FK 2.5 to 3.8, T-SS.js parses. Jaccard (mj.js, word sets): every similar pair <= 0.21 with and without passages; S08 vs C08 is 0.16 with 2 shared key options.
+
+**Changed items for the third blind re-solve:** 1.b S09, S15, S01, P5, C07, C15, S07, P1 and P3 (hints only); 1.c core P6, S08, C15, C14 (and passage p4 sentence 8), S02, S13, S14 (hints).
