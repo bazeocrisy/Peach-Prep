@@ -97,6 +97,7 @@ def answer_all(q, partial_first=False):
     n = q.evaluate("PP_PLAYER.state().total")
     did_partial = False
     for i in range(n):
+        if q.is_visible("#tab-question"): q.click("#tab-question")
         two = q.evaluate("(it=>it.points===2&&['ebsr','ms','match'].indexOf(it.type)>=0||(it.type==='dropdown'&&it.slots.length===2&&it.points===2))(PP_PLAYER.ctx().item)")
         if partial_first and two and not did_partial:
             q.evaluate(PARTIAL); did_partial = True

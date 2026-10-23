@@ -436,7 +436,7 @@
     window.addEventListener("beforeunload", e => {
       if (current === "player" && window.PP_PLAYER.inProgress()) { e.preventDefault(); e.returnValue = ""; }
     });
-    loadSets().then(() => { buildHome(); el("choose-path").disabled = false; el("choose-browse").disabled = false; route(); booted = true; lastHash = location.hash; });
+    loadSets().then(() => { window.PP_REVIEW.build(); /* review sets exist before routing, so #play/RV-... addresses open (writes nothing) */ buildHome(); el("choose-path").disabled = false; el("choose-browse").disabled = false; route(); booted = true; lastHash = location.hash; });
   }
 
   /* The activity's Back button returns to wherever it was opened from:

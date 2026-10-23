@@ -785,8 +785,80 @@ PP.addLesson({
         "Facts about dents can be interesting, but a sign that never asks will not get carts returned."
       ],
       misconception: "A common mix-up is thinking that more facts always persuade. To persuade, a text has to ask the reader to act.",
-      why: "The answer is \"Sign B, because it asks shoppers to bring carts back and says where.\" Mr. Abel wants carts returned. Sign A only informs, and neither sign tells a story about one cart." }
-
+      why: "The answer is \"Sign B, because it asks shoppers to bring carts back and says where.\" Mr. Abel wants carts returned. Sign A only informs, and neither sign tells a story about one cart." },
+    /* Coordinator follow-up (author b3a): S13-S15 are second similar items for C06, C07 and C13, whose first
+       similar item (S02, S01, S03) is used up earlier in the same sitting by P5, C04 and C03. */
+    { id: "SK-TC1a-S13", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C06"],
+      stem: ["The black dot in the middle of your eye is called the pupil.", "It is really a small opening that lets light in.", "In bright sun, your pupils get smaller.", "In a dark room, they get bigger to let in more light.", "Try it: look in a mirror right after you turn on a light!"],
+      prompt: "Read the text in the box. What is the author's main purpose?",
+      choices: [
+        { text: "to teach readers how the pupils in their eyes work", correct: true },
+        { text: "to get readers to buy a mirror for their room" },
+        { text: "to tell a story about a child who looks in a mirror" },
+        { text: "to show readers how to keep their eyes healthy" }
+      ],
+      clue: "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+      hints: [
+        "Check what the whole text mostly does. One line may ask you to do something, but look at what most of the lines do.",
+        "Read the first four sentences, then the last one.",
+        "No one in the text has a name or a problem, so it is not a story. Check the other choices."
+      ],
+      how: [
+        "The first four sentences give facts: what the pupil is and how it changes in bright and dark light.",
+        "The last line asks you to try something, but it is one line, and it helps you see the facts for yourself.",
+        "The answer is \"to teach readers how the pupils in their eyes work.\"",
+        "Nothing tries to sell a mirror, no character has a problem, and the text does not give tips for healthy eyes."
+      ],
+      misconception: "A common mix-up is naming the purpose of the last line instead of the whole text.",
+      why: "The answer is \"to teach readers how the pupils in their eyes work.\" Most sentences give facts about the pupil. The mirror line is one line, there is no story, and nothing sells a mirror or gives eye-health tips." },
+    { id: "SK-TC1a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C07"],
+      stem: ["Have you ever wiggled a loose tooth with your tongue?", "Baby teeth fall out to make room for grown-up teeth.", "Most kids lose their first tooth when they are about six years old.", "Adults have 32 teeth in all."],
+      prompt: "Read the text in the box. Which sentence best shows that it is written mostly for children?",
+      choices: [
+        { text: "\"Have you ever wiggled a loose tooth with your tongue?\"", correct: true },
+        { text: "\"Baby teeth fall out to make room for grown-up teeth.\"" },
+        { text: "\"Most kids lose their first tooth when they are about six years old.\"" },
+        { text: "\"Adults have 32 teeth in all.\"" }
+      ],
+      clue: "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
+      hints: [
+        "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
+        "Read each sentence. Ask whether it talks to you or only gives a fact.",
+        "\"Adults have 32 teeth\" is a fact about grown-ups, so it does not show who the reader is. Check the other choices."
+      ],
+      how: [
+        "Three sentences give facts about teeth. A fact about kids is still just a fact, and anyone could read it.",
+        "The first sentence talks to the reader and asks about wiggling a loose tooth, which is something a child does.",
+        "The answer is \"Have you ever wiggled a loose tooth with your tongue?\""
+      ],
+      misconception: "A common mix-up is choosing a fact about children instead of a sentence that talks to a child.",
+      why: "The answer is \"Have you ever wiggled a loose tooth with your tongue?\" It speaks to a reader who has a loose tooth, which is a child. The other sentences are facts, even the one about kids." },
+    { id: "SK-TC1a-S15", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C13"],
+      stem: ["A sign in the art museum says:", "Please do not touch the paintings, because the oils on your skin can harm them."],
+      prompt: "The museum wants to make the same sign for kindergarten classes on a field trip. Which sentence is the best way to rewrite it for them?",
+      choices: [
+        { text: "Look with your eyes, and keep your hands behind your back!", correct: true },
+        { text: "Paintings in this room are more than one hundred years old." },
+        { text: "Everyone should visit museums, because art is the best!" },
+        { text: "Please refrain from touching the paintings, since skin oils damage them." }
+      ],
+      clue: "Purpose and audience shape a writer's words. Ask who the new reader is and what the sign should still help them do.",
+      hints: [
+        "Purpose and audience shape a writer's words. Ask who the new reader is and what the sign should still help them do.",
+        "Reread the sign. What job does it give the reader?",
+        "\"Art is the best\" tries to change the reader's mind, but the sign's job is to tell visitors what to do. Check the other choices."
+      ],
+      how: [
+        "The sign tells visitors not to touch the paintings.",
+        "Kindergartners need the same job in simple words, with a way to remember it.",
+        "The answer is \"Look with your eyes, and keep your hands behind your back!\"",
+        "The fact about old paintings is not a step, \"refrain\" and \"damage\" are hard words, and the art line persuades."
+      ],
+      misconception: "A common mix-up is keeping the same hard words for a new reader. The job stays the same, but the words change.",
+      why: "The answer is \"Look with your eyes, and keep your hands behind your back!\" It gives kindergartners the same job in words they know. The age of the paintings is a fact, the formal sentence keeps hard words, and the art line persuades." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {
@@ -3327,8 +3399,107 @@ PP.addLesson({
         "Explain the link: every word cost money, so James left out little words like a, was and on.",
         "One good answer follows. Other answers can also be right."
       ],
-      why: "Many answers can be right. A good answer tells the time from the box, gives a detail from the telegram, and explains how paying for every word made the message short." }
-
+      why: "Many answers can be right. A good answer tells the time from the box, gives a detail from the telegram, and explains how paying for every word made the message short." },
+    /* Coordinator follow-up (author b3a): S12-S15 are second similar items for C11, C12, C13 and C15, whose
+       first similar item (S01, S03, S02, S03) is used up earlier in the same sitting by P8, P9 and P4. */
+    { id: "SK-TC2c-S12", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C11"],
+      stem: ["Box: Tova grew up in Alaska, where winters are long and very cold. This year, her family moved to Florida.", "Tova's journal: It is January, and I am wearing shorts! My new friends say it feels chilly today. I keep laughing."],
+      prompt: "Read the text in the box. Why does Tova think the January day is warm, when her friends think it is chilly?",
+      choices: [
+        { text: "She grew up in Alaska, where winters are far colder.", correct: true },
+        { text: "She was wearing a heavy coat that morning." },
+        { text: "It was the hottest January day ever in Florida." },
+        { text: "Her friends had been playing in the snow." }
+      ],
+      clue: "Individual context is who the writer is: her background and her experiences. Ask how the two people's experiences are different.",
+      hints: [
+        "Individual context is who the writer is: her background and her experiences. Ask how the two people's experiences are different.",
+        "Read the text box and the whole journal entry.",
+        "Florida in January has no snow to play in, and nothing in the journal says there was, so that choice has no support. Check the other choices."
+      ],
+      how: [
+        "The box says Tova grew up in Alaska, where winters are long and very cold.",
+        "Her friends grew up in Florida, so a cool day feels chilly to them. To Tova, it feels warm.",
+        "The answer is \"She grew up in Alaska, where winters are far colder.\"",
+        "She is wearing shorts, not a coat, and her friends call it chilly, so it was not the hottest day ever."
+      ],
+      misconception: "A common mix-up is looking only at the weather that day. Who the writer is, and where she comes from, can explain her view.",
+      why: "The answer is \"She grew up in Alaska, where winters are far colder.\" Her background makes a Florida January feel warm. She wears shorts, her friends find it chilly, and there is no snow." },
+    { id: "SK-TC2c-S13", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C12"],
+      stem: ["Box: Mrs. Bell wrote this note to families on a Monday in October. That week, workers were putting a new roof over the school's front entrance. The work would last until Friday.", "Dear Families, Please use the back gate for drop-off and pickup until Friday. Thank you!"],
+      prompt: "Read the text in the box. Which detail from the box best explains why Mrs. Bell says \"until Friday\"?",
+      choices: [
+        { text: "The roof work would last until Friday.", correct: true },
+        { text: "She wrote the note on a Monday." },
+        { text: "Workers were putting on a new roof." },
+        { text: "The note was written in October." }
+      ],
+      clue: "Situational context is what was happening when a text was written. Use it to explain words that the text alone does not explain.",
+      hints: [
+        "Situational context is what was happening when a text was written. Use it to explain words that the text alone does not explain.",
+        "Read the text box one sentence at a time, then the note.",
+        "The month does not tell when the back gate will stop being used, so that choice does not fit. Check the other choices."
+      ],
+      how: [
+        "The note asks families to use the back gate until Friday.",
+        "The box says the roof work would last until Friday, so the front entrance will be open again after that.",
+        "The answer is \"The roof work would last until Friday.\"",
+        "The new roof explains why the front entrance is closed, but not until when, and Monday is only when she wrote."
+      ],
+      misconception: "A common mix-up is choosing the detail that explains why something changed instead of the detail that explains how long.",
+      why: "The answer is \"The roof work would last until Friday.\" That is why the back gate is used until then. The new roof explains why the front is closed, not for how long, and Monday and October tell only when she wrote." },
+    { id: "SK-TC2c-S14", type: "hottext", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C13"],
+      stem: ["Box: This letter is historical fiction. Imagine that a boy wrote it in 1950, while he rode a train to visit his uncle."],
+      prompt: "Read the box. Which sentence could the boy NOT have written in his letter in 1950?",
+      options: [
+        "The train has a dining car with white tablecloths.",
+        "I watched the cotton fields go by from my window.",
+        "The conductor punched a hole in my ticket.",
+        "I will mail this letter at the next station.",
+        "I checked when we would arrive on my phone."
+      ],
+      answer: [4], pick: 1,
+      clue: "Time-period clues help you check what people could do back then. Ask whether each thing was around in 1950.",
+      hints: [
+        "Time-period clues help you check what people could do back then. Ask whether each thing was around in 1950.",
+        "Read each sentence, and picture what it names: a dining car, a window, a ticket, a station and a phone.",
+        "People were looking out of train windows long before 1950, so the boy could have written that sentence. Check the other sentences."
+      ],
+      how: [
+        "Dining cars, ticket punches and mailing letters at stations were all part of train trips in 1950.",
+        "Phones you can carry did not exist until many years later. In 1950, phones were attached to walls by a cord.",
+        "The answer is \"I checked when we would arrive on my phone.\"",
+        "A punched ticket may seem odd today, but it was normal on trains back then."
+      ],
+      misconception: "A common mix-up is thinking that anything unusual today could not have happened long ago. Check what was new and what was old.",
+      why: "The answer is \"I checked when we would arrive on my phone.\" No one carried a phone in 1950. Dining cars, punched tickets and mailing a letter at the station were all part of train trips then." },
+    { id: "SK-TC2c-S15", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C15"],
+      stem: ["Dear Mr. Sims,", "Please do not ring the doorbell this week. Knock softly instead.", "Thank you!", "The Mensah Family"],
+      prompt: "Read the note in the box. Which piece of context would best help a reader understand why the Mensah family wrote it?",
+      choices: [
+        { text: "Their new baby sleeps most of the day and wakes easily.", correct: true },
+        { text: "They have lived next door to Mr. Sims for five years." },
+        { text: "They wrote the note on a rainy Tuesday morning." },
+        { text: "Their doorbell was painted a bright new color." }
+      ],
+      clue: "Context helps most when it explains what a text says. Ask which fact would make the note make sense.",
+      hints: [
+        "Context helps most when it explains what a text says. Ask which fact would make the note make sense.",
+        "Reread the note. What does the family ask Mr. Sims to do instead?",
+        "How long they have lived next door does not explain this one week, so that choice does not fit. Check the other choices."
+      ],
+      how: [
+        "The note asks for a soft knock instead of the doorbell, only this week.",
+        "A loud bell could wake someone who is sleeping.",
+        "A new baby who wakes easily explains it. The answer is \"Their new baby sleeps most of the day and wakes easily.\"",
+        "A painted doorbell still rings, and a rainy morning does not explain a whole week of soft knocks."
+      ],
+      misconception: "A common mix-up is choosing a true-sounding fact that does not explain the text. The best context makes the words make sense.",
+      why: "The answer is \"Their new baby sleeps most of the day and wakes easily.\" A doorbell could wake the baby, so the family asks for a soft knock. How long they have lived there, the weather and the paint do not explain the note." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4, P8 and P9 (core set 1) and Together P1, P2, P7 and P6. */
   addons: {
