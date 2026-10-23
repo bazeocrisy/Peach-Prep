@@ -3159,35 +3159,33 @@ PP.addLesson({
     },
     {
       id: "SK-SS1c-S08",
-      type: "ms",
-      points: 2,
+      type: "mc",
+      points: 1,
       dok: 2,
       std: ["3.T.SS.1.c"],
       passages: [],
-      pick: 2,
       like: ["SK-SS1c-C08"],
-      prompt: "Pick the TWO words that add one more thing about Ben.",
-      stem: "Ben plays the drums. ____ he sings in the school choir.",
+      prompt: "Which word fits the blank so the text tells one more thing Ben does?",
+      stem: ["Ben plays the drums. ____ he sings in the school choir."],
       choices: [
         { text: "Also", correct: true },
-        { text: "In addition", correct: true },
-        { text: "Although" },
         { text: "Therefore" },
+        { text: "Although" },
         { text: "Instead" }
       ],
       clue: "Read both sentences. Does the second one add to the first, go against it, or tell a result?",
       hints: [
         "Read both sentences. Does the second one add to the first, go against it, or tell a result?",
-        "Choose two. Say the second sentence with each word at the start.",
-        "Singing in the choir is not caused by playing the drums, so Therefore does not fit. Check the other four."
+        "Say the second sentence with each word at the start.",
+        "Singing in the choir is not caused by playing the drums, so Therefore does not fit. Check the other two."
       ],
       how: [
         "The first sentence tells one thing Ben does: he plays the drums.",
         "The second sentence tells one more thing he does, so it adds to the first.",
-        "The answers are Also and In addition. Both words add another idea.",
+        "The answer is Also, which adds another idea.",
         "Although goes against an idea, Therefore tells a result, and Instead takes the place of an idea."
       ],
-      why: "The answers are Also and In addition. The choir is one more thing Ben does, and both words add another idea. Although, Therefore and Instead do other jobs."
+      why: "The answer is Also. The choir is one more thing Ben does, and Also adds another idea. Although, Therefore and Instead do other jobs."
     },
     {
       id: "SK-SS1c-S09",
