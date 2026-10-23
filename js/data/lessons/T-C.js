@@ -3723,7 +3723,7 @@ PP.addLesson({
       hints: [
         "A narrator can show a wish by what he does. Look for something Lio does near the end that shows how he sees his sister.",
         "Read the sentences from when Ines comes back down to the end of the story.",
-        "Making it to the top is something Lio does, but it does not show that he wants to be like her. Check each sentence that is left."
+        "What Ines says is her own advice, not something Lio does. Check each sentence that is left."
       ],
       how: [
         "In Part 2, Lio explains that he copies his sister because she is brave.",
@@ -3805,7 +3805,7 @@ PP.addLesson({
       why: "Many answers can be right. A good answer tells the speaker's view with a detail (a perfect day, \"Woo-hoo!\"), gives the writer's own view, and backs it up with a detail from the poem." },
     { id: "SK-TC2a-S13", type: "match", points: 2, dok: 2, std: ["3.T.C.2.a"], passages: [],
       like: ["SK-TC2a-C13"],
-      stem: ["Ollie's kite fell into the pond.", "\"This is the worst day ever!\" Ollie shouted.", "His dad smiled. \"It will dry by lunch,\" he said.", "The kite floated on the water like a bright paper boat."],
+      stem: ["Ollie's kite fell into the pond.", "\"This is the worst day ever!\"", "His dad smiled and put an arm around him. \"It will dry by lunch.\"", "The kite floated on the water like a bright paper boat."],
       prompt: "Match each sentence from the story to the one whose view it shows.",
       cols: ["the narrator", "Ollie", "a neighbor", "Ollie's dad"],
       rows: [
@@ -3816,12 +3816,12 @@ PP.addLesson({
       clue: "A point of view belongs to whoever says or thinks it. Ask who is speaking in each sentence.",
       hints: [
         "A point of view belongs to whoever says or thinks it. Ask who is speaking in each sentence.",
-        "Look for quotation marks and for the words that tell who is speaking.",
+        "Look for quotation marks. Then read the sentence just before each one to see who it is about.",
         "No neighbor is in this story, so that choice is not used. Match the other three the same way."
       ],
       how: [
-        "Quotation marks show that a character is speaking. The words after them tell who it is.",
-        "Ollie shouts, \"This is the worst day ever!\" and his dad says, \"It will dry by lunch.\"",
+        "Quotation marks show that a character is speaking. The sentences around them tell who it is.",
+        "After the kite falls, the first quote is Ollie's upset reaction. Then his dad smiles and puts an arm around him, so the next quote is his dad's.",
         "The sentence about the kite has no quotation marks, so it is the narrator describing the scene.",
         "A neighbor never speaks, so that choice is not used."
       ],
@@ -3830,7 +3830,7 @@ PP.addLesson({
     { id: "SK-TC2a-S14", type: "mc", points: 1, dok: 3, std: ["3.T.C.2.a"], passages: [],
       like: ["SK-TC2a-C14"],
       stem: ["The new girl, Pilar, sat alone at lunch.", "I waved, but she only looked at her tray.", "\"She thinks she is too good for us,\" I told my friends.", "Pilar held her lunch bag tight, and her ears turned pink."],
-      prompt: "Read the part of a story in the box. What might a reader think about Pilar that the narrator does not?",
+      prompt: "Look at the story part in the box. Which idea about Pilar could a reader have even though the narrator does not?",
       choices: [
         { text: "Pilar may be too shy to talk to anyone yet.", correct: true },
         { text: "Pilar may be better than everyone else at school." },

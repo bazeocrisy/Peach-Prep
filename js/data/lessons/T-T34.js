@@ -2642,7 +2642,7 @@ PP.addLesson({
       stem: ["Here are five lines from a poem about a long car ride."],
       prompt: "Which TWO lines use repeated words to show that something goes on and on? Choose two lines.",
       options: [
-        "We pack our bags and shut the door.",
+        "Honk! Honk! A truck zooms past.",
         "The road goes on, and on, and on.",
         "Gray clouds hang low above the hills.",
         "We sing, sing, sing from dusk to dawn.",
@@ -2653,15 +2653,15 @@ PP.addLesson({
       hints: [
         "Repeated words can make a long, steady feeling, as if something never ends. Look for a word that is said again and again.",
         "Read each line and look for a word that is said again and again on purpose.",
-        "\"We pack our bags and shut the door\" has no repeated word, so you can drop it. Check the others the same way."
+        "\"Honk! Honk! A truck zooms past.\" repeats a word, but the honks are over in a moment. Check the others the same way."
       ],
       how: [
         "A repeated word makes the reader feel that something keeps happening.",
         "In \"The road goes on, and on, and on,\" the words on and on are repeated, so the road seems endless.",
         "In \"We sing, sing, sing from dusk to dawn,\" the word sing is repeated, so the singing goes on for hours.",
-        "The other three lines have no repeated words."
+        "The honks repeat a word too, but they come and go in a moment, so they do not show something that goes on. The other two lines have no repeated words."
       ],
-      why: "The answers are \"The road goes on, and on, and on.\" and \"We sing, sing, sing from dusk to dawn.\" Each line repeats a word to show that something goes on for a long time. The other lines have no repeated words." },
+      why: "The answers are \"The road goes on, and on, and on.\" and \"We sing, sing, sing from dusk to dawn.\" Each line repeats a word to show that something goes on for a long time. The honks repeat a word too, but they are over in a moment, and the other two lines have no repeated words." },
     { id: "SK-TT4a-S09", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p9"],
       like: ["SK-TT4a-C08"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -2676,7 +2676,7 @@ PP.addLesson({
         choices: [
           { text: "\"I'll save my coins from every day\"", correct: true },
           { text: "\"I count my coins. I count them twice.\"" },
-          { text: "\"I choose a cone with sprinkles on.\"" },
+          { text: "\"I sit and sigh by the garden wall.\"" },
           { text: "\"I run to find a frosty treat.\"" }
         ] },
       clue: "To see how a poem changes, compare what happens in the last stanza with what happened before.",
@@ -2792,26 +2792,27 @@ PP.addLesson({
       why: "The answer is \"We bake a cake for Dad's birthday. / The frosting's bright and blue. / We sprinkle on a hundred dots / And sing a song for you.\" In the stanza above, only lines 2 and 4 rhyme (call and hall). In the cake stanza, blue and you rhyme in lines 2 and 4, and lines 1 and 3 do not. The other stanzas rhyme in different lines." },
     { id: "SK-TT4a-S14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C14"],
-      stem: ["Stanza 1:", "In March, the pear tree's branches bare.", "The buds are small and tight.", "A robin hops from twig to twig", "And sings in the cool light.", "Stanza 2:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 3:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around."],
-      prompt: "Complete the sentence about the jobs of the stanzas in \"The Pear Tree.\" Choose the best answer for each blank.",
+      stem: ["Stanza 1:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 2:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around.", "Stanza 3:", "In March, the pear tree's branches bare.", "The buds are small and tight.", "A robin hops from twig to twig", "And sings in the cool light."],
+      prompt: "Complete the sentence about what the stanzas of \"The Pear Tree\" show. Choose the best answer for each blank.",
       text: "Stanza 1 {0}, and stanza 3 {1}.",
       slots: [
-        { options: ["shows the tree when it is full of fruit", "shows the tree before it has many leaves", "shows the tree after the leaves have fallen"], answer: 1 },
-        { options: ["shows the tree before it has many leaves", "shows the tree after the leaves have fallen", "shows the tree when it is full of fruit"], answer: 1 }
+        { options: ["shows the tree when it is full of fruit", "shows the tree after the leaves have fallen", "shows the tree when only small buds have grown"], answer: 0 },
+        { options: ["shows the tree when it is full of fruit", "shows the tree after the leaves have fallen", "shows the tree when only small buds have grown"], answer: 2 }
       ],
       clue: "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
       hints: [
         "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
         "Read the first words of each stanza. They tell you when each part happens.",
-        "In stanza 2, the tree is full of leaves and fruit. Stanza 3 does not show that, so one choice for the second blank can go."
+        "In stanza 3, no leaves lie on the ground, so one choice for the second blank can go. Check the other choices against the buds and the branches."
       ],
       how: [
-        "Stanza 1 is set in March. The branches are bare, and the buds are small and tight.",
-        "Stanza 2 is set in July, when the tree is thick with leaves and has fruit.",
-        "Stanza 3 is set in November, when the leaves have fallen.",
-        "The answers are \"shows the tree before it has many leaves\" and \"shows the tree after the leaves have fallen.\""
+        "Stanza 1 is set in July. The leaves are thick, and the fruit hangs soft and sweet.",
+        "Stanza 2 is set in November, when the leaves have fallen and cover the ground.",
+        "Stanza 3 is set in March. The branches are bare, but the buds are small and tight.",
+        "The answers are \"shows the tree when it is full of fruit\" and \"shows the tree when only small buds have grown.\""
       ],
-      why: "The answers are shows the tree before it has many leaves and shows the tree after the leaves have fallen. Stanza 1 shows bare branches and tiny buds. Stanza 2 shows the full tree, and stanza 3 shows the leaves on the ground." },
+      misconception: "A common mix-up is thinking the stanzas go in the order of the year. This poem starts in the middle of the cycle, so read the months.",
+      why: "The answers are shows the tree when it is full of fruit and shows the tree when only small buds have grown. Stanza 1 is July, with thick leaves and sweet fruit. Stanza 2 is November, with leaves on the ground. Stanza 3 is March, with bare branches and tiny buds." },
     { id: "SK-TT4a-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C15"],
       stem: ["Stanza 1:", "The candle flame is tall and bright.", "It lights the whole dark room.", "I watch the dancing shadows tonight", "And push away the gloom.", "Stanza 2:", "The wax is low. The flame is small.", "The shadows creep in near.", "I watch them crawl along the wall.", "Stanza 3:", "One tiny spark, a final glow.", "Then still.", "Stanza 4:", "Dark."],

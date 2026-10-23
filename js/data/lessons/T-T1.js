@@ -3973,14 +3973,14 @@ PP.addLesson({
     { id: "SK-TT1d-S07", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p11", "p12"],
       like: ["SK-TT1d-C07"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "How are Linh and Noa alike?",
+      partA: { prompt: "What do Linh and Noa have in common?",
         choices: [
-          { text: "Each one plans to do more with the custom next year.", correct: true },
-          { text: "Each one learns about the custom from her grandfather." },
-          { text: "Each one shares a special food with her family." },
-          { text: "Each one carries a light through the street." }
+          { text: "Both girls hope to take a bigger part in the holiday next year.", correct: true },
+          { text: "Both girls learn about the holiday from their grandfathers." },
+          { text: "Both girls share a special food with their families." },
+          { text: "Both girls carry a light through the street." }
         ] },
-      partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
+      partB: { prompt: "Choose the TWO sentences, one from each story, that show the answer to Part A.", pick: 2,
         choices: [
           { text: "\"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\"", correct: true },
           { text: "\"Next year,\" Noa said, \"I will light the first candle by myself.\"", correct: true },
@@ -3992,16 +3992,16 @@ PP.addLesson({
       hints: [
         "To find how two characters are alike, look for something that both of them do or feel. Then use the answer to find the sentences.",
         "Read the last three sentences of each story. What do the two girls have in common?",
-        "Only Linh learns about the custom from her grandfather. For Part B, choose one sentence from each story that matches your Part A answer."
+        "Only Linh learns about the holiday from her grandfather. For Part B, choose one sentence from each story that matches your Part A answer."
       ],
       how: [
         "Linh's story ends with her saying what she will do next year: tell her little cousin why people carry lanterns.",
         "Noa's story ends with her saying she will light the first candle by herself next year.",
-        "Part A: Each one plans to do more with the custom next year. Part B: Linh's \"Next year\" sentence and Noa's \"Next year\" sentence.",
+        "Part A: Both girls hope to take a bigger part in the holiday next year. Part B: Linh's \"Next year\" sentence and Noa's \"Next year\" sentence.",
         "The mooncakes, the neighbors and the glowing candles are things that happen, not plans for next year."
       ],
       misconception: "A common mix-up is choosing a detail true for one story, like carrying a light. The answer must be true for both girls.",
-      why: "Part A: Each one plans to do more with the custom next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Only Linh learns about the custom from her grandfather, only Linh shares a special food, and only Linh carries a light through the street." },
+      why: "Part A: Both girls hope to take a bigger part in the holiday next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Only Linh learns about the holiday from her grandfather, only Linh shares a special food, and only Linh carries a light through the street." },
     { id: "SK-TT1d-S08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C08"],
       stem: ["Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the stems. They set the flowers by a photo of Dani's great-grandma.", "Story 2: In Sweden, Elsa and her grandma made straw stars. Elsa twisted the straw. Her grandma tied on red ribbon. They hung the stars on the tree."],

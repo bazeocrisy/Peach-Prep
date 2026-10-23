@@ -5524,29 +5524,29 @@ PP.addLesson({
       why: "The answer is \"to show that the hallway seemed very long to Ned.\" A football field is very long, and Ned's feet feel heavy. The hallway is inside the school, nobody plays football there, and Ned is not walking fast." },
     { id: "SK-SS2a-S05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.2.a"], passages: [], pick: 2,
       like: ["SK-SS2a-C04"],
-      stem: ["Dana wrote these in her book after the play."],
-      prompt: "Which TWO sentences from Dana's notebook use a simile?",
+      stem: ["Dana wrote these sentences in her notebook after the play."],
+      prompt: "Which TWO sentences from Dana's notebook use a metaphor?",
       choices: [
-        { text: "My costume felt as stiff as cardboard.", correct: true },
-        { text: "The crowd cheered like a roaring wave.", correct: true },
+        { text: "The stage was a hot oven under the lights.", correct: true },
+        { text: "My stomach was a jumping bean before my turn.", correct: true },
+        { text: "The crowd cheered like a roaring wave." },
         { text: "The play began at seven o'clock." },
-        { text: "Our show was longer than last year's." },
         { text: "My cousin sat in the front row." }
       ],
-      clue: "A simile compares two different things using like or as. Check each sentence for one of those words and a comparison.",
+      clue: "A metaphor says that one thing is another thing, without using like or as. Check each sentence for a comparison.",
       hints: [
-        "A simile compares two different things using like or as. Check each sentence for one of those words and a comparison.",
-        "Look for the words like and as. Then ask whether the sentence compares two different kinds of things.",
-        "\"Longer than last year's\" compares two shows of the same kind, so it is not a simile. Check the rest the same way."
+        "A metaphor says that one thing is another thing, without using like or as. Check each sentence for a comparison.",
+        "Read each sentence and ask which ones compare two things. Then ask whether the comparison uses like or as.",
+        "\"The crowd cheered like a roaring wave\" uses the word like, so it is a simile, not a metaphor. Check the rest the same way."
       ],
       how: [
-        "A simile uses like or as to compare two different things.",
-        "The costume is compared to cardboard, and the cheering crowd is compared to a roaring wave.",
-        "The answers are \"My costume felt as stiff as cardboard.\" and \"The crowd cheered like a roaring wave.\"",
-        "The other sentences tell a time, a seat, or a comparison of two shows that are alike."
+        "A metaphor says one thing is another thing. It does not use like or as.",
+        "The stage is not really an oven, but it felt that hot. Dana's stomach is not a jumping bean, but it jumped with nerves.",
+        "The answers are \"The stage was a hot oven under the lights.\" and \"My stomach was a jumping bean before my turn.\"",
+        "The crowd sentence uses like, so it is a simile. The other two sentences tell a time and a seat."
       ],
-      misconception: "A common mix-up is choosing any sentence that compares. A simile compares two different things with like or as.",
-      why: "The answers are \"My costume felt as stiff as cardboard.\" and \"The crowd cheered like a roaring wave.\" Each one uses like or as to compare two different things. The other sentences tell a time and a seat, or compare one show with another show." },
+      misconception: "A common mix-up is choosing every comparison. A comparison that uses like or as is a simile, not a metaphor.",
+      why: "The answers are \"The stage was a hot oven under the lights.\" and \"My stomach was a jumping bean before my turn.\" Each one says that one thing is another thing, with no like or as. The crowd sentence uses like, so it is a simile, and the other two sentences only tell a time and a seat." },
     { id: "SK-SS2a-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.2.a"], passages: [],
       like: ["SK-SS2a-C06"],
       stem: ["At sunrise, no wind moved across the lake. The lake was a mirror, and every pine tree on the shore showed upside down in the water."],
@@ -5584,7 +5584,7 @@ PP.addLesson({
       partB: { prompt: "Which sentence from the story best helps the reader understand what Dad means?",
         choices: [
           { text: "\"We can finish tomorrow.\"", correct: true },
-          { text: "\"Ozzie made one big pile, and then another.\"" },
+          { text: "\"The sun sank low behind the houses.\"" },
           { text: "\"Red and yellow leaves covered the grass from the porch to the street.\"" },
           { text: "\"Ozzie jumped into the biggest pile with a shout.\"" }
         ] },
@@ -5713,7 +5713,7 @@ PP.addLesson({
         choices: [
           { text: "\"A new set would cost four hundred dollars.\"", correct: true },
           { text: "\"The old ones had rusted.\"" },
-          { text: "\"She ran to show Ms. Doyle, the school secretary.\"" },
+          { text: "\"Tess sold painted rocks at lunch and earned five dollars.\"" },
           { text: "\"Families came to a pancake breakfast, and every class held a sale.\"" }
         ] },
       clue: "An idiom is a saying that does not mean its words. Reread what the school wants to buy and what Tess has earned.",
