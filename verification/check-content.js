@@ -655,6 +655,23 @@ tasks.forEach(t => {
   });
   Object.keys(want).forEach(p => { if (!seen.has(p)) F(C, "parent " + p + " has leaf codes but no group"); });
 })();
+/* expansion 2026-10-22 (ENG-09): js/data/accepted.js must list exactly the ACCEPTED lessons in batches/STATUS.md,
+   because reviews draw questions only from those lessons */
+(function () {
+  const C = "accepted";
+  const f = path.join(ROOT, "js/data/accepted.js"), st = path.join(ROOT, "docs/expansion-2026-10-22/batches/STATUS.md");
+  if (!fs.existsSync(f)) { F(C, "js/data/accepted.js not found"); return; }
+  run("js/data/accepted.js");
+  const A = ctx.window.PP_ACCEPTED;
+  if (!Array.isArray(A)) { F(C, "PP_ACCEPTED is not a list"); return; }
+  const keys = new Set(lessons.map(L => L.key || L.code));
+  A.forEach(k => { if (!keys.has(k)) F(C, k + " is not a lesson"); else if (!lessons.find(L => (L.key || L.code) === k).core) F(C, k + " is accepted but has no core"); });
+  if (!fs.existsSync(st)) { W(C, "batches/STATUS.md not found, so the list cannot be compared"); return; }
+  const want = fs.readFileSync(st, "utf8").split("\n").filter(l => /^\|/.test(l)).map(l => l.split("|").map(x => x.trim())).filter(r => r[3] === "ACCEPTED").map(r => r[2]);
+  const a = new Set(A), w = new Set(want);
+  want.forEach(k => { if (!a.has(k)) F(C, k + " is ACCEPTED in STATUS.md but missing from js/data/accepted.js"); });
+  A.forEach(k => { if (!w.has(k)) F(C, k + " is in js/data/accepted.js but not ACCEPTED in STATUS.md"); });
+})();
 /* expansion 2026-10-22: practice-exceptions.json (performance lessons with a documented other sequence) */
 if (EXC) (EXC.exceptions || []).forEach(x => {
   const L = lessons.find(l => (l.key || l.code) === x.lesson);

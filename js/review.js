@@ -207,7 +207,7 @@
   }
   function setLine(set) {
     const pts = set.items.reduce((a, it) => a + it.points, 0);
-    return set.items.length + " questions, " + pts + " points.";
+    return cap(words(set.items.length)) + " questions, " + pts + " points.";
   }
   function startButton(set, label) {
     const b = make("button", "btn btn-primary rv-start", label || (last(set.id) ? "Take it again" : "Start"));
@@ -244,13 +244,13 @@
     if (info.measures.length) {
       sec.appendChild(make("p", "std-h3", "What it measures"));
       const ul = make("ul", "std-list");
-      info.measures.forEach(c => { const li = make("li"); li.appendChild(PP.stdLink(c, S().codeLabel(byCode[c]))); li.appendChild(document.createTextNode(": " + words(info.items[c]) + " question" + (info.items[c] === 1 ? "" : "s") + ". " + byCode[c].plain)); ul.appendChild(li); });
+      info.measures.forEach(c => { const li = make("li"); li.appendChild(PP.stdLink(c, window.PP_STD.label(c))); li.appendChild(document.createTextNode(": " + words(info.items[c]) + " question" + (info.items[c] === 1 ? "" : "s") + ". " + byCode[c].plain)); ul.appendChild(li); });
       sec.appendChild(ul);
     }
     if (info.notMeasured.length) {
       sec.appendChild(make("p", "std-h3", "Not measured by this review"));
       const ul = make("ul", "std-list");
-      info.notMeasured.forEach(x => { const li = make("li"); li.appendChild(PP.stdLink(x.code, S().codeLabel(byCode[x.code]))); li.appendChild(document.createTextNode(": " + x.why)); ul.appendChild(li); });
+      info.notMeasured.forEach(x => { const li = make("li"); li.appendChild(PP.stdLink(x.code, window.PP_STD.label(x.code))); li.appendChild(document.createTextNode(": " + x.why)); ul.appendChild(li); });
       sec.appendChild(ul);
     }
     if (info.evidence.length) {
@@ -356,7 +356,7 @@
     return ls.main.map(k => {
       const L = PP.lessons[k];
       const pts = l => l.reduce((a, it) => a + it.points, 0);
-      if ((L.test || []).length) return L.title + ": form A " + L.test.length + " questions, " + pts(L.test) + " points" + ((L.testB || []).length ? "; form B " + L.testB.length + " questions, " + pts(L.testB) + " points" : "") + ".";
+      if ((L.test || []).length) return L.title + ": form A has " + words(L.test.length) + " questions, " + pts(L.test) + " points" + ((L.testB || []).length ? "; form B has " + words(L.testB.length) + " questions, " + pts(L.testB) + " points" : "") + ".";
       return L.title + ": no scored check" + (L.check ? "; a grown-up Check instead." : ".");
     }).join(" ");
   }

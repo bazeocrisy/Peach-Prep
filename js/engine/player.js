@@ -689,7 +689,7 @@
 
   function finish() {
     if (run.mode === "practice") return practiceDone();
-    const noun = run.set.kind === "skill" ? "skill check" : "test";
+    const noun = run.set.kind === "skill" ? "skill check" : run.set.kind === "review" ? "review" : "test";
     const all = run.set.items.map((it, i) => ({ i, c: ctxFor(i), st: run.state[i] }));
     const blankList = all.filter(x => !T[x.c.item.type].answered(x.c.item, x.c.resp));
     const flagged = all.filter(x => x.st && x.st.flag);
@@ -818,7 +818,7 @@
     /* expansion 2026-10-22: a row is reported on its own only when the sample supports it, at least
        two questions and three points. Smaller parts are grouped, never reported as a skill result.
        Skill checks group by Georgia code (item.comp or std); other sets by area, as before. */
-    const skillSet = run.set.kind === "skill";
+    const skillSet = run.set.kind === "skill" || run.set.kind === "review";   /* reviews report by Georgia code (item.comp) too */
     const by = {}, order = [];
     let multi = false;
     rows.forEach(r => {
@@ -858,22 +858,28 @@
     pp.hidden = !partialPts;
     const pct = max ? got / max : 0;
     el("res-guidance").textContent = run.set.kind === "skill" ? window.PP_SKILLS.afterTest(run.set, got, max)
+      : run.set.kind === "review" ? reviewGuidance(pct)
       : pct >= 0.85 ? "Excellent work. You are ready for harder sets."
       : pct >= 0.6 ? "Good work. Practice the questions you missed, then try again."
       : "Keep going. Try this set in Practice mode, where Help me walks you through each question.";
     /* a skill check shows rows only when at least two parts can be reported (a one-code check has its total) */
-    el("res-skills").hidden = skillSet && big.length < 2;
+    el("res-skills").hidden = run.set.kind === "skill" && big.length < 2;
     buildReview(rows);
     buildRevisit(rows, got, max);
-    el("res-practice").hidden = run.set.kind === "form" || (run.set.kind === "skill" && !run.set.practiceId);
+    el("res-practice").hidden = run.set.kind === "form" || run.set.kind === "review" || (run.set.kind === "skill" && !run.set.practiceId);
     /* PP-003 RD-10: a skill's button opens Practice Together, so it says so; the lesson check is a "skill check" */
     el("res-practice").textContent = run.set.kind === "skill" ? "Practice Together" : "Practice this set";
-    el("res-again").textContent = run.set.kind === "skill" ? "Take the skill check again" : "Take the test again";
+    el("res-again").textContent = run.set.kind === "skill" ? "Take the skill check again" : run.set.kind === "review" ? "Take the review again" : "Take the test again";
     /* say whether the retry is a fresh form or the same questions (worked out after this attempt was recorded) */
     el("res-again-note").textContent = isCheck(run.set)
       ? (window.PP_SKILLS.hasFormB(run.set.code) ? "The next skill check uses form " + window.PP_SKILLS.nextForm(run.set.code) + ", with different questions." : "The next skill check uses the same questions as this one. This skill has one form.")
       : "Taking it again uses the same questions.";
-    el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : "Back to the list";
+    /* ENG-09: a review result is saved in pp.review.v1 only (never pp.progress.v1, so never a lesson pass) */
+    if (run.set.kind === "review" && window.PP_REVIEW) {
+      const msg = window.PP_REVIEW.onSubmit(run.set, rows);
+      el("res-again-note").textContent += msg ? " " + msg : " This result is saved on this device. It does not change any lesson's pass.";
+    }
+    el("res-back").textContent = run.set.kind === "skill" ? "Back to the skill" : run.set.kind === "review" ? "Back to the review page" : "Back to the list";
     /* PP-003 D17: after a passed skill check, lead with Back to the skill, not more practice */
     const passed = run.set.kind === "skill" && got >= Math.ceil(max * 0.8);
     const acts = el("res-back").parentNode;
@@ -931,6 +937,10 @@
     });
   }
 
+  function reviewGuidance(pct) {
+    return (pct >= 0.85 ? "Most of this review was right." : pct >= 0.6 ? "A good start. Some parts need more practice." : "Several parts need more practice.") +
+      " Look at the parts below and at What to work on next. This is a short sample on this site, not a Milestones score, and it does not change any lesson's pass.";
+  }
   /* What to work on next, from the missed questions. Small samples are named as small. */
   function buildRevisit(rows, got, max) {
     const host = el("res-revisit"); clear(host);
@@ -939,7 +949,7 @@
     if (!missed.length) host.appendChild(make("p", "", "Every question was right. Come back in about a week and try again to see if it stuck."));
     const S = window.PP_SKILLS, keys = [];
     if (run.set.kind === "skill") { if (missed.length) keys.push(run.set.code); }
-    else missed.forEach(r => (r.item.std || []).forEach(c => { const k = S.lessonFor(c); if (k && keys.indexOf(k) < 0) keys.push(k); }));
+    else missed.forEach(r => (r.item.src ? [r.item.src] : (r.item.std || []).map(c => S.lessonFor(c))).forEach(k => { if (k && PP.lessons[k] && keys.indexOf(k) < 0) keys.push(k); }));
     if (keys.length) {
       host.appendChild(make("p", "", run.set.kind === "skill" ? "Go back over the lesson, then try again." : "These lessons teach the skills in the questions that were missed:"));
       const ul = make("ul", "rv-list");
@@ -967,6 +977,7 @@
      are never a test (PP-003 RD-4: #play/SK:<k>:p/test ran practice items as a scored
      check and stored a pass), so a "test" address runs them as practice or try. */
   function skillMode(set, mode) {
+    if (set.kind === "review") return "test";   /* standard and cumulative reviews are always scored, never hinted (ENG-09) */
     if (set.kind !== "skill") return mode;
     if (set.part === "t" || set.part === "tB") return "test";   /* PP-004: form B is a check too */
     if (set.own) return "try";   /* Practice on my own sets run only as practice (expansion 2026-10-22) */

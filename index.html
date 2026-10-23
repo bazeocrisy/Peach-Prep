@@ -217,6 +217,35 @@
       <h1 class="page-title" id="mixed-title" tabindex="-1">Put it all together</h1>
       <p class="page-sub">The real test mixes skills: one passage, many kinds of questions. Use these after the skill lessons. Points come from GaDOE's August 2025 blueprint.</p>
       <ul class="section-grid" id="section-grid"></ul>
+      <!-- expansion 2026-10-22 (ENG-09): reviews beside the four section cards, so the card count is unchanged -->
+      <nav class="rv-links" aria-label="Reviews and coverage">
+        <a class="btn btn-soft rv-link-btn" id="mixed-review" href="#review">Cumulative ELA review</a>
+        <a class="btn btn-soft rv-link-btn" id="mixed-coverage" href="#coverage">Assessment coverage map</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===================== CUMULATIVE REVIEW (#review) and COVERAGE MAP (#coverage), expansion 2026-10-22 ===================== -->
+  <section class="screen" id="screen-review" aria-labelledby="review-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="review-back"><span aria-hidden="true">&larr;</span> Back</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap std-wrap">
+      <h1 class="page-title" id="review-title" tabindex="-1">Cumulative ELA review</h1>
+      <div id="review-body" class="std-body"></div>
+    </div>
+  </section>
+  <section class="screen" id="screen-coverage" aria-labelledby="coverage-title" hidden>
+    <header class="bar">
+      <button type="button" class="nav-btn" id="coverage-back"><span aria-hidden="true">&larr;</span> Back</button>
+      <p class="bar-brand">Peach Prep</p>
+      <button type="button" class="nav-btn" data-go="parents">Parents</button>
+    </header>
+    <div class="wrap cov-wrap">
+      <h1 class="page-title" id="coverage-title" tabindex="-1">Assessment coverage map</h1>
+      <div id="coverage-body" class="std-body"></div>
     </div>
   </section>
 
@@ -401,6 +430,8 @@
   <script src="js/path.js"></script>
   <script src="js/data/std-groups.js"></script>
   <script src="js/std.js"></script>
+  <script src="js/data/accepted.js"></script>
+  <script src="js/review.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

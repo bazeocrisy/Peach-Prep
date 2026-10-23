@@ -548,7 +548,290 @@ PP.addLesson({
         "The best question is on that topic and needs a fact answer.",
         "The answer is \"What makes a submarine sink down and then rise back up?\" Scarier is an opinion, and whether submarines go under water is a yes-or-no question she already knows."
       ],
-      why: "The answer is \"What makes a submarine sink down and then rise back up?\" It fits her topic and asks for facts. Scarier is an opinion, the yes-or-no question teaches her nothing new, and whales are a different topic." }
+      why: "The answer is \"What makes a submarine sink down and then rise back up?\" It fits her topic and asks for facts. Scarier is an opinion, the yes-or-no question teaches her nothing new, and whales are a different topic." },
+    /* ENG-07 (author b3b): S04-S10 give every core item a similar item that really practises it. */
+    { id: "SK-RA1a-S04", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [], pick: 2,
+      like: ["SK-RA1a-P5"],
+      stem: ["A pufferfish can puff up into a round, spiky ball. It does this by gulping lots of water very fast. A puffed-up pufferfish is too big and prickly for most bigger fish to swallow. Many kinds of pufferfish are also poisonous."],
+      prompt: "Which TWO questions does this text answer?",
+      choices: [
+        { text: "How does a pufferfish puff itself up?", correct: true },
+        { text: "Why does puffing up help a pufferfish stay safe?", correct: true },
+        { text: "How long can a pufferfish stay puffed up?" },
+        { text: "Where in the ocean do most pufferfish live?" },
+        { text: "How many eggs does a pufferfish lay?" }
+      ],
+      clue: "A text answers a question only if you can point to a sentence that gives the answer.",
+      hints: [
+        "A text answers a question only if you can point to a sentence that gives the answer.",
+        "Take one question at a time, and look for a sentence that answers it. Choose two.",
+        "The text never tells how many eggs a pufferfish lays. Check each question that is left."
+      ],
+      how: [
+        "The second sentence says it puffs up by gulping lots of water very fast.",
+        "The third sentence says a puffed-up pufferfish is too big and prickly for most bigger fish to swallow. That is how puffing up keeps it safe.",
+        "The answers are \"How does a pufferfish puff itself up?\" and \"Why does puffing up help a pufferfish stay safe?\"",
+        "The text never tells how long it stays puffed up, where most pufferfish live or how many eggs it lays."
+      ],
+      why: "The answers are \"How does a pufferfish puff itself up?\" and \"Why does puffing up help a pufferfish stay safe?\" Gulping water and being too prickly to swallow answer them. The text says nothing about how long, where or how many eggs." },
+    { id: "SK-RA1a-S05", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C06"],
+      stem: ["Ty's research question is \"What job does the guard meerkat do?\"", "Here is a short text he found."],
+      prompt: "Which TWO sentences answer Ty's question? Choose two sentences.",
+      options: [
+        "Meerkats live in groups called mobs.",
+        "While the group digs for food, one meerkat stands on a high spot as a guard.",
+        "If the guard sees a hawk, it gives a loud bark.",
+        "Then the others run into their burrows.",
+        "Young meerkats learn to hunt from older ones."
+      ],
+      answer: [1, 2], pick: 2,
+      clue: "To check whether a text answers your question, find the exact sentences that give the answer.",
+      hints: [
+        "To check whether a text answers your question, find the exact sentences that give the answer.",
+        "Look for each sentence that tells about the guard. Choose two.",
+        "Meerkats living in groups called mobs tells about the whole group, not about the guard. Check the other sentences."
+      ],
+      how: [
+        "Ty wants to know what the guard does.",
+        "One sentence says the guard stands on a high spot while the others dig. The next says the guard barks when it sees a hawk.",
+        "The answers are \"While the group digs for food, one meerkat stands on a high spot as a guard.\" and \"If the guard sees a hawk, it gives a loud bark.\"",
+        "Running into the burrows is what the others do, not the guard, and learning to hunt is about young meerkats."
+      ],
+      why: "The answers are \"While the group digs for food, one meerkat stands on a high spot as a guard.\" and \"If the guard sees a hawk, it gives a loud bark.\" Both tell the guard's job. The other sentences are about the group, the others or the young." },
+    { id: "SK-RA1a-S06", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C02"],
+      stem: ["Leo wants to research how snakes use their tongues."],
+      prompt: "Build a research question for Leo. Choose the best answer for each blank.",
+      text: "{0} snakes {1}?",
+      slots: [
+        { options: ["Why do", "Do", "Is it true that"], answer: 0 },
+        { options: ["flick their tongues in and out", "have scales on their skin", "look the scariest of all animals"], answer: 0 }
+      ],
+      clue: "A research question asks about your topic and leads to an answer you can look up.",
+      hints: [
+        "A research question asks about your topic and leads to an answer you can look up.",
+        "Say Leo's topic in your own words. Then try each choice in each blank and read the whole question out loud.",
+        "\"Have scales on their skin\" is a fact about snakes, but it is not about their tongues. Check the other choices in each blank."
+      ],
+      how: [
+        "Leo's topic is how snakes use their tongues.",
+        "\"Do\" and \"Is it true that\" start yes-or-no questions. \"Why do\" leads to a bigger answer with facts.",
+        "Looking the scariest is an opinion, and scales are a different topic.",
+        "The answers are Why do and flick their tongues in and out: \"Why do snakes flick their tongues in and out?\""
+      ],
+      why: "The answers are Why do and flick their tongues in and out. The question is on Leo's topic and needs a fact answer. Do and Is it true that lead to yes or no, scales are a different topic, and scariest is an opinion." },
+    { id: "SK-RA1a-S07", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C05"],
+      stem: ["Nadia chose her own topic: how bread dough rises.", "She wrote five questions."],
+      prompt: "Which TWO questions fit Nadia's topic? Choose two questions.",
+      options: [
+        "What makes bread dough get bigger before it bakes?",
+        "Why do bakers leave dough in a warm place to rise?",
+        "When did the first bakery open in Georgia?",
+        "How do pizza ovens get so hot?",
+        "How much does a loaf of bread cost at the store?"
+      ],
+      answer: [0, 1], pick: 2,
+      clue: "A question fits your topic when its answer would help you learn about that exact topic.",
+      hints: [
+        "A question fits your topic when its answer would help you learn about that exact topic.",
+        "Say Nadia's topic in your own words. Then read each question. Choose two.",
+        "The pizza oven question is about how an oven gets hot, not about dough rising. Check each question that is left."
+      ],
+      how: [
+        "Nadia's topic is not just bread. It is how bread dough rises.",
+        "Dough getting bigger and leaving dough somewhere warm to rise are both about rising.",
+        "The answers are \"What makes bread dough get bigger before it bakes?\" and \"Why do bakers leave dough in a warm place to rise?\"",
+        "The first bakery and the price of bread are about bread, but not about rising."
+      ],
+      why: "The answers are \"What makes bread dough get bigger before it bakes?\" and \"Why do bakers leave dough in a warm place to rise?\" Both are about rising. The bakery and the price are about bread but not that topic, and pizza ovens are about heat." },
+    { id: "SK-RA1a-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C12"],
+      stem: ["Ella read this: \"Koalas live in Australia. They eat the leaves of eucalyptus trees, and they sleep up to 18 hours a day.\"", "Her question is \"How big is a baby koala when it is born?\""],
+      prompt: "Complete the sentence about Ella's research. Choose the best answer for each blank.",
+      text: "Ella will need {0}, because the text {1}.",
+      slots: [
+        { options: ["another source", "to read the text again", "to ask a friend what they think"], answer: 0 },
+        { options: ["never tells about baby koalas", "tells it in the second sentence", "is too short to trust"], answer: 0 }
+      ],
+      clue: "Before you research, check whether the text you have already answers your question.",
+      hints: [
+        "Before you research, check whether the text you have already answers your question.",
+        "Read each sentence, and look for anything about baby koalas.",
+        "Asking a friend what they think gives an opinion, not a fact. Check the other choices in each blank."
+      ],
+      how: [
+        "The text tells where koalas live, what they eat and how long they sleep.",
+        "It says nothing about baby koalas, so it cannot answer Ella's question.",
+        "The answers are another source and never tells about baby koalas.",
+        "The second sentence is about food and sleep, and a short text can still be true. It just does not cover her question."
+      ],
+      why: "The answers are another source and never tells about baby koalas. The text covers home, food and sleep only. Reading it again will not help, a friend's opinion is not a fact, and being short does not make a text untrue." },
+    { id: "SK-RA1a-S09", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C13"],
+      stem: ["Pia read this sign at an old mill:", "\"This grist mill was built in 1880. Its water wheel turned a huge stone that ground corn into meal.\""],
+      prompt: "Pia wrote four questions. Is each one a clarifying question or a dig-deeper question? Match each question.",
+      cols: ["clears up something I did not understand", "digs deeper to learn more"],
+      rows: [
+        { text: "What is a grist mill?", answer: 0 },
+        { text: "What does the word meal mean on this sign?", answer: 0 },
+        { text: "How many families brought their corn to this mill?", answer: 1 },
+        { text: "Why did people stop using water mills like this one?", answer: 1 }
+      ],
+      clue: "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+      hints: [
+        "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+        "Reread the sign, and find any words that a reader might not understand.",
+        "The question about what a grist mill is asks about words on the sign that the sign never explains. Decide the other three the same way."
+      ],
+      how: [
+        "Grist mill and meal are words on the sign that a reader may not know. Questions about them clear them up.",
+        "How many families came and why people stopped using water mills are not on the sign at all. Those questions ask something new.",
+        "Clarifying: \"What is a grist mill?\" and \"What does the word meal mean on this sign?\" Dig deeper: the families question and the water mills question."
+      ],
+      why: "The grist mill and meal questions clear up words on the sign. The questions about families and about why people stopped using water mills dig deeper, because the sign does not talk about those things." },
+    { id: "SK-RA1a-S10", type: "cr", dok: 3, std: ["3.T.RA.1.a"], passages: [], rows: 5,
+      like: ["SK-RA1a-C14"],
+      stem: ["Think of something you saw this week that made you wonder, like a bug, a machine or a game."],
+      prompt: "Write it as your topic. Write one research question about it. Then write a clarifying question about a word you might meet when you read about it.",
+      sample: "My topic: how zippers work. My research question: How do the teeth of a zipper lock together? My clarifying question: I read that a zipper has a slider. What is the slider?",
+      criteria: [
+        "I wrote a topic that I chose myself.",
+        "My research question asks about facts I could look up.",
+        "My research question needs more than a yes or no answer.",
+        "My last question asks about a word or idea I might not understand."
+      ],
+      clue: "Think back over your week. What did you see that made you ask how or why?",
+      hints: [
+        "Think back over your week. What did you see that made you ask how or why?",
+        "Turn your wondering into a question that starts with how, why or what. Check that a book or an expert could answer it.",
+        "For the clarifying question, think of a word a book about your topic might use that you do not know yet. You can start like this: What is ___?"
+      ],
+      how: [
+        "Choose something you wondered about this week. It is your choice, so there is no wrong topic.",
+        "Write a question about it that a book, a video or an expert could answer with facts.",
+        "Think of a word you might meet when you read about it, and ask what it means.",
+        "Check your work with the list. One good answer follows, and other answers can also be right."
+      ],
+      why: "Many answers can be right. A good answer names a topic the writer chose, asks a fact question that needs more than yes or no, and adds a clarifying question about a word or idea. A grown-up can look at it with you; it is never scored." },
+    { id: "SK-RA1a-S11", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [], pick: 2,
+      like: ["SK-RA1a-C07"],
+      stem: ["Bo read this: \"A geyser is a hot spring that sometimes shoots water high into the air. Deep underground, hot rock heats the water until some of it turns to steam. The steam pushes the water up through a narrow opening.\""],
+      prompt: "Which TWO questions are clarifying questions about something in this text?",
+      choices: [
+        { text: "What is a hot spring?", correct: true },
+        { text: "What does the text mean by a narrow opening?", correct: true },
+        { text: "How often does the most famous geyser shoot water?" },
+        { text: "Are there any geysers in Georgia?" },
+        { text: "Is a geyser more exciting than a waterfall?" }
+      ],
+      clue: "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+      hints: [
+        "A clarifying question clears up a word or idea you read but did not understand. A dig-deeper question asks something new to learn more.",
+        "For each question, find the part of the text it is about, if there is one. Choose two.",
+        "The question about being more exciting than a waterfall asks for an opinion, so it is not a clarifying question. Check each question that is left."
+      ],
+      how: [
+        "The text uses the words hot spring but never says what one is. A question about it clears that up.",
+        "It also says the steam pushes water through a narrow opening, which may be hard to picture. Asking what that means clears it up.",
+        "The answers are \"What is a hot spring?\" and \"What does the text mean by a narrow opening?\"",
+        "The questions about the most famous geyser and about geysers in Georgia ask something new that the text does not cover, so they dig deeper."
+      ],
+      why: "The answers are \"What is a hot spring?\" and \"What does the text mean by a narrow opening?\" Both are about parts of the text that may not be clear. The famous geyser and Georgia questions dig deeper, and more exciting is an opinion." },
+    { id: "SK-RA1a-S12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C08"],
+      stem: ["Ari read: \"Some frogs can freeze solid in winter. In spring, they thaw out and hop away.\"", "Then he wrote this dig-deeper question: \"Can some frogs freeze in the winter?\" But the text already answers it."],
+      prompt: "Which question would be a better dig-deeper question for Ari?",
+      choices: [
+        { text: "How does a frog's body stay alive while it is frozen?", correct: true },
+        { text: "Do some frogs freeze solid when it gets cold?" },
+        { text: "How do bears find food before their long winter sleep?" },
+        { text: "Are frogs much cuter than toads are?" }
+      ],
+      clue: "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+      hints: [
+        "A dig-deeper question stays on the idea you just learned and asks something the text does not tell you yet.",
+        "Say what Ari just learned in your own words.",
+        "The text already says that some frogs freeze solid, so asking that again would not teach Ari anything new. Check each choice that is left."
+      ],
+      how: [
+        "Ari learned that some frogs freeze in winter and thaw out in spring. The text does not say how they survive.",
+        "A good dig-deeper question stays on that idea and asks what the text leaves out.",
+        "The answer is \"How does a frog's body stay alive while it is frozen?\"",
+        "Bears are a new question, but they leave the idea Ari just learned. Cuter is an opinion."
+      ],
+      why: "The answer is \"How does a frog's body stay alive while it is frozen?\" It stays on what Ari learned and asks what the text does not explain. The freezing question is already answered, bears are a different idea, and cuter is an opinion." },
+    { id: "SK-RA1a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C10"],
+      stem: ["June and Max are researching how school buses are kept safe.", "June asked: \"How do mechanics check that a school bus is safe to drive?\"", "Max asked: \"Is our school bus painted yellow?\""],
+      prompt: "Whose question would help them more with their research, and why?",
+      choices: [
+        { text: "June's, because its answer would be full of facts that they do not know yet.", correct: true },
+        { text: "Max's, because a yes-or-no answer is quick and easy to find." },
+        { text: "Max's, because it is about their own bus, so it fits the topic better." },
+        { text: "June's, because it is the longer question, so it must ask for a fact." }
+      ],
+      clue: "A good research question leads to an answer that teaches you something new.",
+      hints: [
+        "A good research question leads to an answer that teaches you something new.",
+        "Read both questions again. Then read the reason in each choice, not only the name.",
+        "Being longer does not make a question better. Check each choice that is left."
+      ],
+      how: [
+        "Max's question can be answered with one word, and they can already see the answer.",
+        "June's question needs a long answer about what mechanics check. That teaches them something new.",
+        "The answer is \"June's, because its answer would be full of facts that they do not know yet.\"",
+        "Max's question is not more on the topic, and a quick answer is not the goal of research."
+      ],
+      why: "The answer is \"June's, because its answer would be full of facts that they do not know yet.\" Max's yes-or-no question would teach them nothing new. Being about their own bus does not make it fit better, and length does not make a question better." },
+    { id: "SK-RA1a-S14", type: "order", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: [],
+      like: ["SK-RA1a-C11"],
+      stem: ["Rina read this: \"Arctic terns are small seabirds. They nest in the far north in summer. Their chicks hatch after about three weeks. Later, the whole family flies all the way to the far south.\""],
+      prompt: "Rina asked four questions. Each new question grew out of the answer to the one before it. Put her questions in order, from first to last.",
+      steps: [
+        "Where do arctic terns build their nests?",
+        "How long do tern eggs take to hatch?",
+        "What do the tern families do after the chicks hatch?",
+        "How do young terns know the way to the far south?"
+      ],
+      clue: "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
+      hints: [
+        "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
+        "Find the question that could start the chain. Then use the text to find its answer, and look for the question that grows out of that answer.",
+        "The question about how young terns know the way could only come after Rina learned that the family flies south. Use the text to order the other three."
+      ],
+      how: [
+        "First, Rina asks where terns nest. The text answers: in the far north in summer.",
+        "Nests lead to eggs: how long do they take to hatch? About three weeks.",
+        "Hatching leads to what the families do next: they fly to the far south. Then she wonders how the young birds know the way, which the text does not tell.",
+        "The order is: where they nest, how long the eggs take, what the families do next, how young terns know the way."
+      ],
+      why: "The order is: where terns nest, how long the eggs take to hatch, what the families do after the chicks hatch, and how young terns know the way south. Each answer in the text leads to the next question, and the last one goes past the text." },
+    { id: "SK-RA1a-S15", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [], pick: 2,
+      like: ["SK-RA1a-C15"],
+      stem: ["Marco's grandpa showed him a doll made from dried corn husks.", "Marco chose his own topic: how children long ago made their own toys."],
+      prompt: "Which TWO questions would be good research questions for Marco's topic?",
+      choices: [
+        { text: "How did children long ago turn corn husks into dolls?", correct: true },
+        { text: "What other things did children long ago use to make toys?", correct: true },
+        { text: "Did children long ago play with toys?" },
+        { text: "Is a wooden toy more fun than a plastic toy?" },
+        { text: "Who made the best toys in all of Georgia?" }
+      ],
+      clue: "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
+      hints: [
+        "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
+        "Say Marco's topic in your own words. Then read each question. Choose two.",
+        "\"Did children long ago play with toys?\" can be answered with yes, and Marco already knows that from the corn husk doll. Check each question that is left."
+      ],
+      how: [
+        "Marco's topic is how children long ago made their own toys.",
+        "Turning corn husks into dolls and finding other things to make toys from are both about making toys, and a book or an expert could answer them with facts.",
+        "The answers are \"How did children long ago turn corn husks into dolls?\" and \"What other things did children long ago use to make toys?\"",
+        "More fun and best tell what people think, so people would give different answers. Those are opinion questions, even the one that starts with who."
+      ],
+      why: "The answers are \"How did children long ago turn corn husks into dolls?\" and \"What other things did children long ago use to make toys?\" Both ask for facts about making toys long ago. Playing with toys is a yes-or-no question he knows, and more fun and best are opinions." }
   ],
   /* Hints and Show me how for the Practice Together items P1-P3 and the core refs P4 and P5. */
   addons: {
@@ -1313,7 +1596,194 @@ PP.addLesson({
         "Pulling open a clam shell and pushing out its stomach to eat the clam are both about food. They go on \"How a sea star eats.\"",
         "Creeping on tube feet and climbing a rock are both about going from place to place. They go on \"How a sea star moves.\""
       ],
-      why: "Opening a clam and pushing out its stomach are about eating, so they go on \"How a sea star eats.\" Creeping on tube feet and climbing a rock are about moving, so they go on \"How a sea star moves.\"" }
+      why: "Opening a clam and pushing out its stomach are about eating, so they go on \"How a sea star eats.\" Creeping on tube feet and climbing a rock are about moving, so they go on \"How a sea star moves.\"" },
+    { id: "SK-RA1b-S04", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C01"],
+      prompt: "Leah is finding out how violins are made. Match each source to the kind of source it is.",
+      cols: ["Print (on paper)", "Digital (on a screen)", "Personal communication (from a person)"],
+      rows: [
+        { text: "a music magazine from the school library", answer: 0 },
+        { text: "a video of a violin maker on a music school's website", answer: 1 },
+        { text: "what a violin maker told Leah when she visited his shop", answer: 2 },
+        { text: "a library book about instruments from around the world", answer: 0 }
+      ],
+      clue: "Ask how the facts reach Leah. Are they printed on paper, shown on a screen, or told to her by a person?",
+      hints: [
+        "Ask how the facts reach Leah. Are they printed on paper, shown on a screen, or told to her by a person?",
+        "Two sources have a violin maker in them. For those two, look at how Leah gets the facts, not at who gives them.",
+        "A magazine is printed on paper, even though it is not a book. Sort the other three the same way."
+      ],
+      how: [
+        "Paper: the music magazine and the library book are print.",
+        "Screen: the video on the music school's website is digital, even though a violin maker is in it.",
+        "A person: what the violin maker told Leah in his shop is personal communication."
+      ],
+      why: "The magazine and the library book are print. The video on a website is digital. What the violin maker told Leah in person is personal communication." },
+    { id: "SK-RA1b-S05", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C04"],
+      stem: ["**Source 1, a library book:** Puffins dive underwater to catch small fish. A puffin can hold many fish in its beak at once.",
+        "**Source 2, notes from a talk with a bird scientist:** Puffins dig burrows in the ground to lay their eggs. A puffin chick is called a puffling.",
+        "**Kim's notes table**",
+        "**Row 1.** Puffins dive to catch small fish. (Source 1)",
+        "**Row 2.** Puffins lay their eggs in burrows. (Source 1)",
+        "**Row 3.** A puffin chick is called a puffling. (Source 2)"],
+      prompt: "Which row of Kim's notes table names the wrong source?",
+      choices: [
+        { text: "Row 2, because the burrows are in Source 2", correct: true },
+        { text: "Row 1, because the fish are in Source 2" },
+        { text: "Row 3, because the puffling is in Source 1" },
+        { text: "None of the rows, because all three are right" }
+      ],
+      clue: "Check each fact against the source its row names. Find the exact sentence before you decide.",
+      hints: [
+        "Check each fact against the source its row names. Find the exact sentence before you decide.",
+        "Read Source 1 and Source 2 again. For each row, put your finger on the sentence it came from.",
+        "The fish facts are in Source 1, so row 1 is right. Check rows 2 and 3 the same way."
+      ],
+      how: [
+        "Row 1: diving to catch fish is in Source 1. It is right.",
+        "Row 2: digging burrows to lay eggs is in Source 2, the talk with the bird scientist, not Source 1.",
+        "Row 3: the puffling is in Source 2. It is right.",
+        "The answer is \"Row 2, because the burrows are in Source 2\"."
+      ],
+      why: "The answer is \"Row 2, because the burrows are in Source 2\". The bird scientist told about the burrows, so the row should name Source 2. Rows 1 and 3 name the right sources." },
+    { id: "SK-RA1b-S06", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C08", "SK-RA1b-P7"],
+      stem: ["**The source says:** \"A walrus hooks its long tusks onto the ice and uses them to pull its heavy body out of the water.\"",
+        "**Sam's question:** How does a walrus get out of the water?"],
+      prompt: "Which note BEST tells the answer in a few of Sam's own words?",
+      choices: [
+        { text: "It pulls itself out by hooking its tusks on the ice.", correct: true },
+        { text: "It swims up onto the ice by kicking its back flippers." },
+        { text: "It uses its long tusks to dig for clams on the sea floor." },
+        { text: "A walrus has two long tusks and a heavy body." }
+      ],
+      clue: "A good note says the same thing as the source, in fewer words, and it answers the question.",
+      hints: [
+        "A good note says the same thing as the source, in fewer words, and it answers the question.",
+        "Read the source sentence again. Then check whether each note says what the source says.",
+        "\"A walrus has two long tusks and a heavy body\" is true, but it does not tell how the walrus gets out of the water. Check the other three notes against the source."
+      ],
+      how: [
+        "The source says the walrus hooks its tusks onto the ice and pulls its body out.",
+        "The note \"It pulls itself out by hooking its tusks on the ice.\" says the same thing in Sam's own words.",
+        "The source never talks about flippers or clams, and the tusk-and-body note does not answer the question.",
+        "The answer is \"It pulls itself out by hooking its tusks on the ice.\""
+      ],
+      why: "The answer is \"It pulls itself out by hooking its tusks on the ice.\" It says what the source says in fewer words. Flippers and clams are not in the source, and the last note does not answer the question." },
+    { id: "SK-RA1b-S07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [], pick: 2,
+      like: ["SK-RA1b-C11"],
+      stem: ["**Source 1, a science book:** Jellyfish have no bones and no brain. Many jellyfish sting with their long tentacles.",
+        "**Source 2, notes from an aquarium talk:** The guide said that jellyfish have no brain. She said that their tentacles can sting small fish."],
+      prompt: "Which TWO facts are in BOTH sources? Choose two answers.",
+      choices: [
+        { text: "Jellyfish have no brain.", correct: true },
+        { text: "Jellyfish tentacles can sting.", correct: true },
+        { text: "Jellyfish have no bones." },
+        { text: "The guide works at an aquarium." },
+        { text: "Jellyfish are a kind of fish." }
+      ],
+      clue: "A fact belongs to both sources only if you can find it in each one.",
+      hints: [
+        "A fact belongs to both sources only if you can find it in each one.",
+        "Check each fact in Source 1, and then check it again in Source 2. Choose two.",
+        "The guide working at an aquarium is only in Source 2. Check the other four facts in both sources."
+      ],
+      how: [
+        "Both sources say jellyfish have no brain.",
+        "Both sources say jellyfish tentacles sting.",
+        "Having no bones is only in Source 1, the guide is only in Source 2, and neither source says jellyfish are fish.",
+        "The answers are \"Jellyfish have no brain.\" and \"Jellyfish tentacles can sting.\""
+      ],
+      why: "The answers are \"Jellyfish have no brain.\" and \"Jellyfish tentacles can sting.\" Each one is in both sources. No bones is only in Source 1, the guide is only in Source 2, and neither source says jellyfish are fish." },
+    { id: "SK-RA1b-S08", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-P5"],
+      stem: ["**Source 1, a library book page:** It tells how a chameleon changes the color of its skin.",
+        "**Source 2, notes from a visit to a reptile zoo:** The keeper told the class what the zoo's chameleons eat each day."],
+      prompt: "Gia wants to know what chameleons eat. Which source would help her MORE, and why?",
+      choices: [
+        { text: "Source 2, because the keeper tells what the chameleons eat.", correct: true },
+        { text: "Source 1, because it tells how chameleons change color." },
+        { text: "Source 1, because a library book has every fact there is." },
+        { text: "Source 2, because a zoo is a fun place to visit." }
+      ],
+      clue: "Think about Gia's question first. Then check that the reason in your choice really answers it.",
+      hints: [
+        "Think about Gia's question first. Then check that the reason in your choice really answers it.",
+        "Read what each source is about. Then read the reason in each answer.",
+        "No book has every fact there is, so that reason is not true. Compare the other reasons with Gia's question."
+      ],
+      how: [
+        "Gia's question is about what chameleons eat.",
+        "Source 2 tells what the zoo's chameleons eat each day.",
+        "Changing color is a different topic, no book has every fact, and a fun visit is not a reason.",
+        "The answer is \"Source 2, because the keeper tells what the chameleons eat.\""
+      ],
+      why: "The answer is \"Source 2, because the keeper tells what the chameleons eat.\" Source 1 is about changing color, not food. No book has every fact, and a fun visit does not answer the question." },
+    { id: "SK-RA1b-S09", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C10"],
+      prompt: "Dev's two sources tell what hockey pucks are made of. Neither one tells why pucks are frozen before a game. What should Dev do next?",
+      choices: [
+        { text: "Look for another credible source, such as a book by a hockey coach.", correct: true },
+        { text: "Write his own best guess in the notes, so the table is complete." },
+        { text: "Use the fact that pucks are made of rubber, since it is about pucks." },
+        { text: "Ask his little brother, because a person can be a source." }
+      ],
+      clue: "When your sources do not answer a question, you need more facts, not a guess.",
+      hints: [
+        "When your sources do not answer a question, you need more facts, not a guess.",
+        "For each answer, ask two things: would it tell Dev why pucks are frozen, and could he trust it?",
+        "Pucks being made of rubber is true, but it does not tell why they are frozen. Use the trust question on the other three."
+      ],
+      how: [
+        "Dev's sources leave his question unanswered, so he needs another source.",
+        "A guess is not a checked fact, and his little brother is a person but not one who knows about hockey pucks.",
+        "The rubber fact does not answer the question.",
+        "The answer is \"Look for another credible source, such as a book by a hockey coach.\""
+      ],
+      why: "The answer is \"Look for another credible source, such as a book by a hockey coach.\" A guess is not a fact, the rubber fact does not answer the question, and his little brother is not someone who knows about pucks." },
+    { id: "SK-RA1b-S10", type: "order", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C06"],
+      stem: ["**Source 1, a science book:** A newborn kangaroo is tiny, about the size of a jelly bean. Right after it is born, it crawls into its mother's pouch.",
+        "**Source 2, notes from a zoo talk:** The keeper said the baby, called a joey, stays in the pouch drinking milk for about six months. After that, it starts to hop out to eat grass."],
+      prompt: "Ben used both sources to make a note card called \"A joey grows up.\" Put his notes in order.",
+      steps: [
+        "A tiny joey is born.",
+        "It crawls into its mother's pouch.",
+        "It drinks milk in the pouch for about six months.",
+        "It starts to hop out to eat grass."
+      ],
+      clue: "Follow the joey from the very beginning. Time words like right after, for about six months and after that help.",
+      hints: [
+        "Follow the joey from the very beginning. Time words like right after, for about six months and after that help.",
+        "Source 1 tells about the joey's first moments. Source 2 tells about the months that follow.",
+        "The joey must be born before it can do anything else, so that note comes first. Use the time words to place the rest."
+      ],
+      how: [
+        "Source 1: the joey is born tiny, and right after that it crawls into the pouch.",
+        "Source 2: it drinks milk in the pouch for about six months, and after that it hops out to eat grass.",
+        "So the order is: born, crawls into the pouch, drinks milk for six months, hops out to eat grass."
+      ],
+      why: "The order is: the joey is born, crawls into the pouch, drinks milk there for about six months, then hops out to eat grass. The first two notes come from Source 1 and the last two from Source 2." },
+    { id: "SK-RA1b-S11", type: "cr", dok: 3, std: ["3.T.RA.1.b"], passages: [], rows: 5,
+      like: ["SK-RA1b-C15"],
+      stem: ["Think of another topic you wonder about. It can be very different from your first one."],
+      prompt: "Write one research question about it. Name one source you could read and one person you could ask, and tell why you could trust each one.",
+      sample: "My question: How do chameleons change color? I could read a book by a scientist who studies lizards, because she knows the facts. I could ask a keeper at the reptile zoo, because he takes care of chameleons every day.",
+      criteria: ["I wrote a research question about a topic I chose.", "I named one source to read and one person to ask.", "I told why I can trust each one."],
+      clue: "Start with something you wonder about. Turn it into a question that starts with how, why or what.",
+      hints: [
+        "Start with something you wonder about. Turn it into a question that starts with how, why or what.",
+        "Think of a book or web page about your topic, and a person whose job is about your topic.",
+        "To tell why you can trust each one, say who made it or who the person is, and how they know the facts."
+      ],
+      how: [
+        "Write one question about a topic you wonder about.",
+        "Name one source to read and one person to ask.",
+        "For each, write who made it or who the person is, and how they know the facts.",
+        "Compare with the sample and the checklist. Your topic can be very different."
+      ],
+      why: "Many plans can be right. A strong plan has one question, one source to read, one person to ask and a reason to trust each one." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4, P7, P5 (core set 1) and Together P1, P8, P3, P6. */
   addons: {
@@ -2211,7 +2681,120 @@ PP.addLesson({
         "The opening day and who paid for it are true, but they do not make the trail better for families. The library is not about the trail.",
         "The answers are \"The trail is wide enough for a parent and a child to ride side by side.\" and \"There are benches and water fountains along the trail every mile.\""
       ],
-      why: "The answers are \"The trail is wide enough for a parent and a child to ride side by side.\" and \"There are benches and water fountains along the trail every mile.\" Both show the trail is good for families. The opening day and who paid for it do not, and the library is about the town." }
+      why: "The answers are \"The trail is wide enough for a parent and a child to ride side by side.\" and \"There are benches and water fountains along the trail every mile.\" Both show the trail is good for families. The opening day and who paid for it do not, and the library is about the town." },
+    { id: "SK-RA2a-S04", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+      like: ["SK-RA2a-C03", "SK-RA2a-C14"],
+      stem: ["**Idea:** Parrots are good at copying sounds.", "(1) Some parrots can copy words that people say.", "(2) Parrots have strong, curved beaks.", "(3) A parrot at a zoo copied the sound of a ringing phone.", "(4) Many parrots have bright green, red or blue feathers.", "(5) Some parrots can even copy a dog's bark."],
+      prompt: "Which TWO sentences are true but do NOT support the idea? Choose two answers.",
+      choices: [
+        { text: "Parrots have strong, curved beaks.", correct: true },
+        { text: "Many parrots have bright green, red or blue feathers.", correct: true },
+        { text: "Some parrots can copy words that people say." },
+        { text: "A parrot at a zoo copied the sound of a ringing phone." },
+        { text: "Some parrots can even copy a dog's bark." }
+      ],
+      clue: "A sentence supports an idea only if it shows the idea. Ask of each sentence: does it show a parrot copying a sound?",
+      hints: [
+        "A sentence supports an idea only if it shows the idea. Ask of each sentence: does it show a parrot copying a sound?",
+        "Read each sentence and say in your own words what it is about. Choose two.",
+        "The parrot that copied a ringing phone is copying a sound, so that sentence does support the idea. Check the other four."
+      ],
+      how: [
+        "The idea is that parrots are good at copying sounds.",
+        "Copying words, a ringing phone and a dog's bark all show parrots copying sounds.",
+        "Beaks and feathers are true, but they tell how parrots look, not what they can copy.",
+        "The answers are \"Parrots have strong, curved beaks.\" and \"Many parrots have bright green, red or blue feathers.\""
+      ],
+      why: "The answers are \"Parrots have strong, curved beaks.\" and \"Many parrots have bright green, red or blue feathers.\" They tell how parrots look, not that they copy sounds. The other three sentences show parrots copying words, a phone and a bark." },
+    { id: "SK-RA2a-S05", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C07"],
+      stem: ["(1) Lions live on the grassy plains of Africa.", "(2) They hunt large animals in groups.", "(3) Hunting uses up a lot of energy.", "(4) So lions rest for up to 20 hours a day.", "(5) A male lion has a thick mane.",
+        "**Ari's answer:** Lions rest most of the day. The text says, \"Lions live on the grassy plains of Africa.\""],
+      prompt: "Ari's quote is true, but it does not prove his answer. Which sentence should he quote instead?",
+      choices: [
+        { text: "\"So lions rest for up to 20 hours a day.\"", correct: true },
+        { text: "\"Hunting uses up a lot of energy.\"" },
+        { text: "\"They hunt large animals in groups.\"" },
+        { text: "\"A male lion has a thick mane.\"" }
+      ],
+      clue: "A quote proves an answer only if it shows the answer. Ari's answer is that lions rest most of the day.",
+      hints: [
+        "A quote proves an answer only if it shows the answer. Ari's answer is that lions rest most of the day.",
+        "Find each choice in the text, and read the sentences next to it.",
+        "A thick mane tells how a male lion looks, not how much lions rest. Decide among the other three."
+      ],
+      how: [
+        "Ari's answer is that lions rest most of the day.",
+        "Sentence 4 says lions rest for up to 20 hours a day. That is most of a day.",
+        "Using up energy explains why they rest, but it does not show how much they rest. Hunting in groups and the mane do not show it either.",
+        "The answer is \"So lions rest for up to 20 hours a day.\""
+      ],
+      why: "The answer is \"So lions rest for up to 20 hours a day.\" Twenty hours is most of a day. The energy sentence gives a reason, but it does not show the resting, and hunting in groups and the mane are about other things." },
+    { id: "SK-RA2a-S06", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C10", "SK-RA2a-C12"],
+      stem: ["(1) Lila's puppet show was on Friday.", "(2) Every day after school, she practiced her lines in front of a mirror.", "(3) Her puppet had purple yarn hair.", "(4) On Friday, she said every line without a mistake."],
+      prompt: "Complete the answer. Choose the best answer for each blank.",
+      text: "Lila does well on Friday because she {0}. The best proof is sentence {1}.",
+      slots: [
+        { options: ["practiced every day", "had a puppet with purple hair", "did the show for the first time"], answer: 0 },
+        { options: ["2", "3", "4"], answer: 0 }
+      ],
+      clue: "First decide why Lila does well. Then find the sentence that shows that reason, not just any true sentence.",
+      hints: [
+        "First decide why Lila does well. Then find the sentence that shows that reason, not just any true sentence.",
+        "Read all four sentences, and say what each one tells about Lila or her show.",
+        "Sentence 4 tells how well she did, not why, so it is not the proof. Decide the reason, then choose between the other two sentences."
+      ],
+      how: [
+        "Lila does well because she got ready: she practiced every day.",
+        "Sentence 2 says she practiced her lines every day after school.",
+        "Purple hair is about the puppet, and sentence 4 tells what happened, not why.",
+        "The answers: she practiced every day, and sentence 2 proves it."
+      ],
+      why: "The answers are \"practiced every day\" and sentence 2. Sentence 2 shows her practicing every day after school. The puppet's hair does not explain why she did well, and sentence 4 only tells that she did well." },
+    { id: "SK-RA2a-S07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+      like: ["SK-RA2a-P3"],
+      stem: ["**Idea:** Elephant seals can stay underwater for a long time.", "(1) Elephant seals live along cold ocean coasts.", "(2) They can hold their breath for more than an hour.", "(3) The males have big noses that look like a short trunk.", "(4) They dive deep to find fish and squid, sometimes for two hours at a time.", "(5) On land, they move by scooting on their bellies."],
+      prompt: "Which TWO sentences support the idea? Choose two answers.",
+      choices: [
+        { text: "They can hold their breath for more than an hour.", correct: true },
+        { text: "They dive deep to find fish and squid, sometimes for two hours at a time.", correct: true },
+        { text: "Elephant seals live along cold ocean coasts." },
+        { text: "The males have big noses that look like a short trunk." },
+        { text: "On land, they move by scooting on their bellies." }
+      ],
+      clue: "Look for sentences that show how long the seals can stay under the water, not just facts about seals.",
+      hints: [
+        "Look for sentences that show how long the seals can stay under the water, not just facts about seals.",
+        "Read each sentence and say in your own words what it tells about the seals. Choose two.",
+        "The big noses tell how the males look, not about staying underwater. Check the other four."
+      ],
+      how: [
+        "The idea is that elephant seals can stay underwater a long time.",
+        "Holding their breath for more than an hour shows it.",
+        "Diving for up to two hours at a time shows it, too.",
+        "Where they live, their noses and how they move on land do not tell about time underwater."
+      ],
+      why: "The answers are \"They can hold their breath for more than an hour.\" and \"They dive deep to find fish and squid, sometimes for two hours at a time.\" Both tell how long the seals stay under. The other sentences are about where they live, how they look and how they move on land." },
+    { id: "SK-RA2a-S08", type: "cr", dok: 3, std: ["3.T.RA.2.a"], passages: [], rows: 4,
+      like: ["SK-RA2a-C15"],
+      stem: ["(1) Tasha fell down four times during her first ice skating lesson.", "(2) Each time, she got back up and laughed.", "(3) By the end of the hour, she could skate all the way around the rink.", "(4) \"Can we come back next week?\" she asked her mom."],
+      prompt: "Is Tasha a good learner? Write your opinion. Then copy one sentence that supports it, and tell how it supports it.",
+      sample: "I think Tasha is a good learner. The text says, \"Each time, she got back up and laughed.\" That shows she does not give up when something is hard.",
+      criteria: ["I wrote my opinion.", "I copied one sentence, using its exact words inside quotation marks.", "I told how the sentence supports my opinion."],
+      clue: "Decide yes or no first. Then look for a sentence that shows why you think so.",
+      hints: [
+        "Decide yes or no first. Then look for a sentence that shows why you think so.",
+        "Look at what Tasha does after she falls, and what she can do at the end.",
+        "Copy the sentence exactly, inside quotation marks. Then add a sentence that starts \"That shows\" and connects it to your opinion."
+      ],
+      how: [
+        "Write your opinion in one sentence.",
+        "Copy a sentence that backs it up, with its exact words inside quotation marks.",
+        "Tell how that sentence supports your opinion.",
+        "Compare with the sample and the checklist. Other sentences can also support a good answer."
+      ],
+      why: "There is more than one good answer. A strong answer gives an opinion, quotes one sentence exactly and explains how it supports the opinion." }
   ],
   /* Hints and Show me how for items kept in practice: refs P3, P4 (core set 1) and Together P1, P2. */
   addons: {
@@ -2899,7 +3482,141 @@ PP.addLesson({
         "The ad promises something impossible to sell food, \"BunnyLove\" does not say who they are, and the cartoon is made up.",
         "The answers are \"a guide written by an animal doctor who treats rabbits\" and \"a book by a shelter worker who has cared for rabbits for ten years.\""
       ],
-      why: "The answers are \"a guide written by an animal doctor who treats rabbits\" and \"a book by a shelter worker who has cared for rabbits for ten years.\" Both are made by people who know how to care for rabbits. The ad is selling, the post hides who wrote it, and the cartoon is made up." }
+      why: "The answers are \"a guide written by an animal doctor who treats rabbits\" and \"a book by a shelter worker who has cared for rabbits for ten years.\" Both are made by people who know how to care for rabbits. The ad is selling, the post hides who wrote it, and the cartoon is made up." },
+    { id: "SK-RA2b-S04", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C04"],
+      stem: ["Neither excerpt gives the writer's name.",
+        "**Excerpt A:** \"Some wild mushrooms are safe to eat, but others can make people very sick. Only an expert should decide which wild mushrooms are safe.\"",
+        "**Excerpt B:** \"Every mushroom in the woods is safe to eat, and all of them taste just like candy!\""],
+      prompt: "Which excerpt is more believable, and why?",
+      choices: [
+        { text: "Excerpt A, because it is careful and makes sense.", correct: true },
+        { text: "Excerpt B, because it says every mushroom, so it covers more." },
+        { text: "Excerpt B, because it sounds happy and very sure." },
+        { text: "Excerpt A, because it uses more words than Excerpt B." }
+      ],
+      clue: "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
+      hints: [
+        "When you cannot tell who wrote something, read its words. Could the facts happen in real life? Do they promise too much?",
+        "Read Excerpt B again. Picture every mushroom in every woods.",
+        "More words do not make an excerpt more believable. Compare the reasons that are left."
+      ],
+      how: [
+        "Neither excerpt tells who wrote it, so judge the words.",
+        "Excerpt B says every mushroom is safe and tastes like candy. That promises too much and could not be true.",
+        "Excerpt A is careful: it says some are safe, some are not, and an expert should decide.",
+        "The answer is \"Excerpt A, because it is careful and makes sense.\""
+      ],
+      why: "The answer is \"Excerpt A, because it is careful and makes sense.\" Excerpt B promises that every mushroom is safe, which cannot be true. Sounding sure, covering more and using more words do not make a source believable." },
+    { id: "SK-RA2b-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C05"],
+      stem: ["A post says: \"Bamboo grows all the way to the moon in one week! I know because I saw some once.\" The post is signed \"PlantGuy.\""],
+      prompt: "Complete the reason this post is not a good source.",
+      text: "I should not use this post because the writer {0}, and the post makes {1}.",
+      slots: [
+        { options: ["gives no real name and only saw bamboo once", "is a scientist who studies plants", "works at a big garden center"], answer: 0 },
+        { options: ["a claim that cannot be true", "a claim that scientists measured", "a claim from a science museum"], answer: 0 }
+      ],
+      clue: "A reason not to trust a source can be about who made it or about its words. Check both.",
+      hints: [
+        "A reason not to trust a source can be about who made it or about its words. Check both.",
+        "Look at how the post is signed and how the writer says they know. Then read the claim again.",
+        "The post never says the writer is a scientist or works at a garden center, so neither can go in the first blank. Now judge the claim."
+      ],
+      how: [
+        "The post is signed only \"PlantGuy,\" and the writer only saw bamboo once.",
+        "Growing to the moon in a week cannot be true.",
+        "The answers: the writer gives no real name and only saw bamboo once, and the post makes a claim that cannot be true."
+      ],
+      why: "The answers are \"gives no real name and only saw bamboo once\" and \"a claim that cannot be true.\" Seeing bamboo once does not make someone an expert, and no plant grows to the moon." },
+    { id: "SK-RA2b-S06", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C07"],
+      stem: ["\"Some people think a porcupine can shoot its quills at an enemy. Scientists who study porcupines watched them closely. They found that the quills come loose only when something touches them.\""],
+      prompt: "Why does the writer begin with \"Some people think a porcupine can shoot its quills at an enemy\"?",
+      choices: [
+        { text: "to name an idea that the scientists then checked", correct: true },
+        { text: "to show that the writer thinks porcupines shoot quills" },
+        { text: "to tell how many people keep porcupines as pets" },
+        { text: "to show that porcupine quills are soft and safe" }
+      ],
+      clue: "Ask what the rest of the excerpt does with its first sentence. Does the writer agree with it?",
+      hints: [
+        "Ask what the rest of the excerpt does with its first sentence. Does the writer agree with it?",
+        "Read the second and third sentences.",
+        "Nothing in the excerpt counts how many people keep porcupines, so that answer does not fit. Check the other three."
+      ],
+      how: [
+        "The first sentence tells what some people believe.",
+        "Next, scientists watched porcupines and found the quills come loose only when touched, so they do not shoot.",
+        "So the writer names the idea in order to show what the scientists found.",
+        "The answer is \"to name an idea that the scientists then checked\"."
+      ],
+      why: "The answer is \"to name an idea that the scientists then checked\". The scientists found the quills come loose only when touched, so the writer does not agree with the first sentence. Pets and soft quills are not in the excerpt." },
+    { id: "SK-RA2b-S07", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C12", "SK-RA2b-C08"],
+      stem: ["(1) Many people think that llamas spit at people all the time.", "(2) Scientists who study llamas watched a herd on a farm for six months.", "(3) The llamas spat at each other when they fought over food.", "(4) They almost never spat at people."],
+      prompt: "A sign says, \"Llamas spit at every person they meet!\" Which sentence gives the BEST reason to doubt the sign?",
+      choices: [
+        { text: "They almost never spat at people.", correct: true },
+        { text: "The llamas spat at each other when they fought over food." },
+        { text: "Scientists who study llamas watched a herd on a farm for six months." },
+        { text: "Many people think that llamas spit at people all the time." }
+      ],
+      clue: "To doubt a claim, look for what the scientists saw that shows the claim may not be true.",
+      hints: [
+        "To doubt a claim, look for what the scientists saw that shows the claim may not be true.",
+        "Read sentences 3 and 4, which tell what the scientists saw.",
+        "Sentence 1 tells what many people think, and it agrees with the sign. Look closely at sentences 3 and 4."
+      ],
+      how: [
+        "The sign says llamas spit at every person.",
+        "Sentence 4 says the llamas almost never spat at people. That is what the scientists saw, and it shows the sign is wrong.",
+        "Sentence 3 shows llamas spitting, but at each other. Sentence 2 tells how the scientists studied them, not what they saw.",
+        "The answer is \"They almost never spat at people.\""
+      ],
+      why: "The answer is \"They almost never spat at people.\" If llamas spat at every person, the scientists would have seen it. Spitting at each other is not spitting at people, and watching for six months tells how they studied, not what they found." },
+    { id: "SK-RA2b-S08", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C14"],
+      stem: ["Omar's question: \"What do manatees eat?\"",
+        "**Excerpt X,** from a sea scientist's article: \"A manatee can rest underwater for about 20 minutes before it comes up for air.\"",
+        "**Excerpt Y,** from a post signed \"SeaCowFan\": \"Manatees eat a million pounds of sea grass every single hour!\""],
+      prompt: "Complete Omar's notes about the two excerpts.",
+      text: "Excerpt X is {0}. Excerpt Y is {1}.",
+      slots: [
+        { options: ["credible and relevant", "credible but not relevant", "relevant but not credible"], answer: 1 },
+        { options: ["credible and relevant", "credible but not relevant", "relevant but not credible"], answer: 2 }
+      ],
+      clue: "Check each excerpt two ways. Credible: can you trust who wrote it and its words? Relevant: does it help answer Omar's question?",
+      hints: [
+        "Check each excerpt two ways. Credible: can you trust who wrote it and its words? Relevant: does it help answer Omar's question?",
+        "For Excerpt X, ask what it is about. For Excerpt Y, look at who wrote it and at its number.",
+        "A sea scientist knows about manatees, so Excerpt X can be trusted. Decide whether it fits Omar's question, then judge Excerpt Y."
+      ],
+      how: [
+        "Excerpt X comes from a sea scientist, so it is credible, but it is about resting underwater, not food.",
+        "Excerpt Y is about food, so it is relevant, but it gives no real name and a number that cannot be true.",
+        "The answers: X is credible but not relevant, and Y is relevant but not credible."
+      ],
+      why: "The answers are \"credible but not relevant\" and \"relevant but not credible.\" The scientist's fact is about resting, not eating. The post is about food, but its writer gives no name and its number is impossible." },
+    { id: "SK-RA2b-S09", type: "cr", dok: 3, std: ["3.T.RA.2.b"], passages: [], rows: 4,
+      like: ["SK-RA2b-C15"],
+      stem: ["Pick a different topic from the one you used before."],
+      prompt: "Name ONE source you think would NOT be credible or NOT be relevant for that topic. Tell which problem it has and how you can tell.",
+      sample: "My topic is how gymnasts learn flips. A post signed \"FlipQueen\" that says \"Anyone can learn a back flip in one minute!\" would not be credible. It gives no real name, and one minute is too fast to be true.",
+      criteria: ["I named a topic and one source.", "I said whether the source is not credible or not relevant.", "I told what in the source shows the problem."],
+      clue: "Think of a source you should not use, such as an ad, a post with no name or a book about a different topic.",
+      hints: [
+        "Think of a source you should not use, such as an ad, a post with no name or a book about a different topic.",
+        "Decide which problem it has. Is it about who made it and its words, or about the topic?",
+        "Tell exactly what shows the problem, such as no real name, a number that cannot be true or a topic that does not match."
+      ],
+      how: [
+        "Pick a topic and name one source you should not use.",
+        "Say whether it is not credible or not relevant.",
+        "Tell what shows the problem.",
+        "Compare with the sample and the checklist. Other answers can also be right."
+      ],
+      why: "Many answers can be right. A strong answer names a source, says which problem it has and tells what shows the problem." }
   ],
   /* Hints and Show me how for items kept in practice: ref P4 (core set 1) and Together P1, P2, P3, P5. */
   addons: {

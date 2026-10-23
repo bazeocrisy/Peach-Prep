@@ -517,7 +517,304 @@ PP.addLesson({
         "Sentence 2 tells why: more practice would help them pass better. It is a reason.",
         "Sentence 3 is an example that shows extra practice helped: evidence. The answers are 1, the opinion; 2, a reason; 3, evidence."
       ],
-      why: "Sentence 1 is the opinion (should). Sentence 2 is a reason: it tells why more practice would help. Sentence 3 is evidence: the 10 passes in a row after an extra practice show that the reason is true." }
+      why: "Sentence 1 is the opinion (should). Sentence 2 is a reason: it tells why more practice would help. Sentence 3 is evidence: the 10 passes in a row after an extra practice show that the reason is true." },
+    /* ENG-07 (author b3b): S04-S11 give every core item a similar item that really practises it. */
+    { id: "SK-TT3a-S04", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-P4", "SK-TT3a-C08"],
+      stem: ["Rae wrote this paragraph.", "I think our town should open the school gym on Saturdays. First, kids need a safe, dry place to play when it rains. Last winter, the gym was open on one rainy Saturday, and 60 kids came to shoot hoops and jump rope. Also, families could exercise together. My dad says he would walk laps with me if he had a place to go."],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Which reason does the story about last winter support?",
+        choices: [
+          { text: "Kids need a safe, dry place to play when it rains.", correct: true },
+          { text: "Families could exercise together at the gym." },
+          { text: "The town should open the school gym on Saturdays." },
+          { text: "Kids like basketball more than jumping rope." }
+        ] },
+      partB: { prompt: "Which detail best supports the answer to Part A?",
+        choices: [
+          { text: "60 kids came to play on one rainy Saturday.", correct: true },
+          { text: "Rae's dad would walk laps with her." },
+          { text: "Kids need a safe, dry place to play." },
+          { text: "Families could exercise together." }
+        ] },
+      clue: "Evidence is a fact or example that proves a reason is true. Ask what the story about last winter proves.",
+      hints: [
+        "Evidence is a fact or example that proves a reason is true. Ask what the story about last winter proves.",
+        "Read Rae's paragraph one sentence at a time, and name the job of each sentence.",
+        "Opening the gym on Saturdays is Rae's opinion, not one of her reasons. For Part B, the detail you choose must match your Part A answer."
+      ],
+      how: [
+        "Rae gives two reasons: kids need a safe, dry place to play when it rains, and families could exercise together.",
+        "The story about last winter is about a rainy Saturday when 60 kids came to play. That proves kids want a dry place to play.",
+        "Part A: Kids need a safe, dry place to play when it rains. Part B: 60 kids came to play on one rainy Saturday.",
+        "Her dad's laps back up the other reason. A reason is not its own evidence, and nothing compares basketball with jumping rope."
+      ],
+      why: "Part A: Kids need a safe, dry place to play when it rains. Part B: 60 kids came to play on one rainy Saturday. The rainy-day crowd proves the first reason. The dad's laps support the reason about families, and the opinion is not a reason." },
+    { id: "SK-TT3a-S05", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C03"],
+      stem: ["Ana and Ben each wrote a short opinion piece.", "Ana: I think our school should have a pajama day. It would be fun for everyone. It would also help kids feel cozy and calm.", "Ben: I think our school should have a pajama day. It could raise money for the animal shelter. Last year, Hill School raised $300 when each student paid one dollar to wear pajamas."],
+      prompt: "How is Ana's piece different from Ben's piece?",
+      choices: [
+        { text: "Ana gives reasons, but she does not back them up with facts or examples.", correct: true },
+        { text: "Ana uses facts to make her point, but Ben uses only his opinions." },
+        { text: "Ana states her opinion, but she does not give any reasons for it." },
+        { text: "Ana answers people who disagree with her, but Ben does not." }
+      ],
+      clue: "An opinion piece has an opinion, reasons and evidence. To compare two pieces, check each part in both of them.",
+      hints: [
+        "An opinion piece has an opinion, reasons and evidence. To compare two pieces, check each part in both of them.",
+        "Find each writer's opinion and reasons. Then look at what else each writer tells.",
+        "Neither piece has a part that starts with Some people say, so neither writer answers people who disagree. Check each choice that is left."
+      ],
+      how: [
+        "Ana's reasons are that pajama day would be fun and would help kids feel cozy and calm.",
+        "Ben's reason is raising money, and he backs it up with a fact: Hill School raised $300.",
+        "The answer is \"Ana gives reasons, but she does not back them up with facts or examples.\"",
+        "Ana does give two reasons, fun and feeling cozy. They are what she thinks, not facts, and neither writer answers people who disagree."
+      ],
+      why: "The answer is \"Ana gives reasons, but she does not back them up with facts or examples.\" Ben backs up his reason with what happened at Hill School. Ana does give reasons, they are not facts, and nobody answers people who disagree." },
+    { id: "SK-TT3a-S06", type: "ms", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: [], pick: 2,
+      like: ["SK-TT3a-P6", "SK-TT3a-C13"],
+      stem: ["Here are the last two paragraphs of Ivy's opinion piece, \"A Block Party for Pine Street.\"", "Paragraph 4: Some people say a block party would be too noisy. But the party would end by eight o'clock, before little kids go to bed.", "Paragraph 5: A block party would help neighbors get to know each other. Please sign our letter to the town so we can plan one this summer!"],
+      prompt: "Which TWO things does Ivy do in these two paragraphs?",
+      choices: [
+        { text: "She answers people who think a block party would be too noisy.", correct: true },
+        { text: "She says her opinion again and asks readers to sign a letter.", correct: true },
+        { text: "She agrees that the party would be too noisy and changes her plan." },
+        { text: "She tells the steps that neighbors follow to plan a block party." },
+        { text: "She tells a story about a block party that happened last year." }
+      ],
+      clue: "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+      hints: [
+        "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+        "Read paragraph 4, then paragraph 5. Choose two.",
+        "Ivy still wants the party, so she has not changed her plan. Check each choice that is left."
+      ],
+      how: [
+        "Paragraph 4 tells what some people say, that the party would be too noisy, and then replies that it would end by eight o'clock.",
+        "Paragraph 5 tells why a block party is a good idea again and ends with \"Please sign our letter.\"",
+        "The answers are \"She answers people who think a block party would be too noisy\" and \"She says her opinion again and asks readers to sign a letter.\"",
+        "Ivy asks for help planning, but she gives no planning steps, and she tells no story about last year."
+      ],
+      why: "The answers are \"She answers people who think a block party would be too noisy\" and \"She says her opinion again and asks readers to sign a letter.\" Paragraph 4 answers the worry, and paragraph 5 asks readers to act. She keeps her plan, lists no steps and tells no story." },
+    { id: "SK-TT3a-S07", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C06"],
+      stem: ["Mornings at our school are very quiet. Singing is the most fun thing to do. I think our school should start each day with a song. A song wakes up sleepy brains, and it helps everyone feel like one big team. Some people say singing is too loud for the morning."],
+      prompt: "The writer gives more than one opinion. Which sentence states the main opinion that the whole paragraph is about?",
+      choices: [
+        { text: "I think our school should start each day with a song.", correct: true },
+        { text: "Singing is the most fun thing to do." },
+        { text: "Some people say singing is too loud for the morning." },
+        { text: "A song wakes up sleepy brains, and it helps everyone feel like one big team." }
+      ],
+      clue: "The main opinion is the idea that all of the writer's reasons support.",
+      hints: [
+        "The main opinion is the idea that all of the writer's reasons support.",
+        "Find the sentence that gives the writer's reasons, and say them in your own words.",
+        "\"Some people say singing is too loud\" tells what other people think, not the writer's own opinion. Check each choice that is left."
+      ],
+      how: [
+        "The reasons are that a song wakes up sleepy brains and makes everyone feel like one team.",
+        "Those reasons explain why the school should start each day with a song.",
+        "The answer is \"I think our school should start each day with a song.\"",
+        "\"Singing is the most fun thing to do\" is a smaller opinion that the reasons do not support, and the sentence about brains and teams gives the reasons themselves."
+      ],
+      why: "The answer is \"I think our school should start each day with a song.\" Both reasons support it. The most-fun sentence is a smaller opinion, the brains-and-team sentence gives the reasons, and the too-loud sentence is what other people say." },
+    { id: "SK-TT3a-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C11"],
+      stem: ["Here is the first paragraph of Omari's opinion piece.", "After lunch, our class goes straight to math. Many of us are still full of energy from recess. I think our class should have ten minutes of quiet reading after lunch."],
+      prompt: "Complete the sentence about how Omari begins his piece. Choose the best answer for each blank.",
+      text: "The paragraph first {0}, and then it {1}.",
+      slots: [
+        { options: ["tells what happens after lunch now", "gives evidence for a reason", "answers people who disagree"], answer: 0 },
+        { options: ["states what Omari thinks his class should do", "gives a second reason", "asks readers to do something"], answer: 0 }
+      ],
+      clue: "Each part of a piece like this has a job. Read the paragraph and ask what each sentence does.",
+      hints: [
+        "Each part of a piece like this has a job. Read the paragraph and ask what each sentence does.",
+        "Read the first two sentences together. Then read the last sentence on its own.",
+        "Nobody disagrees with Omari in this paragraph, so the first blank is not about answering people. Check the other choices in each blank."
+      ],
+      how: [
+        "The first two sentences tell what happens now: math right after lunch, with kids still full of energy. That brings in the topic.",
+        "The last sentence uses I think and should to tell what Omari wants his class to do.",
+        "The answers are tells what happens after lunch now and states what Omari thinks his class should do.",
+        "No reason or evidence has been given yet, and he does not ask the reader to do anything."
+      ],
+      why: "The answers are tells what happens after lunch now and states what Omari thinks his class should do. The paragraph opens with the topic and then gives Omari's opinion. There are no reasons or evidence yet, nobody disagrees, and he asks nothing of readers." },
+    { id: "SK-TT3a-S09", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [], pick: 2,
+      like: ["SK-TT3a-C07"],
+      stem: ["Lena wrote an opinion piece about adding a climbing wall to her town's rec center. Here are five of her sentences."],
+      prompt: "Which TWO of Lena's sentences are facts that could be checked?",
+      choices: [
+        { text: "The rec center in our town has an empty room next to the pool.", correct: true },
+        { text: "The rec center in the next town got a climbing wall last spring.", correct: true },
+        { text: "Climbing is the coolest sport there is." },
+        { text: "Everyone agrees that a climbing wall would make our rec center better." },
+        { text: "Kids should be allowed to climb as high as they want." }
+      ],
+      clue: "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+      hints: [
+        "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+        "For each sentence, ask: How could someone check this? Choose two.",
+        "\"Climbing is the coolest sport there is\" tells a feeling, and other kids could disagree, so it is an opinion. Check each sentence that is left."
+      ],
+      how: [
+        "You could visit the rec center and see the empty room.",
+        "You could call or visit the next town's rec center to check on its climbing wall.",
+        "The answers are \"The rec center in our town has an empty room next to the pool\" and \"The rec center in the next town got a climbing wall last spring.\"",
+        "\"Everyone agrees\" sounds sure, but better is a feeling, so it is an opinion. Should tells what someone thinks ought to happen."
+      ],
+      why: "The answers are \"The rec center in our town has an empty room next to the pool\" and \"The rec center in the next town got a climbing wall last spring.\" Both can be checked. Coolest, better and should tell what someone thinks." },
+    { id: "SK-TT3a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C15"],
+      stem: ["Opinion: Our school should serve breakfast in every classroom.", "Reason: Kids learn better when they are not hungry."],
+      prompt: "Which sentence would be the strongest evidence for this reason?",
+      choices: [
+        { text: "At Pine Grove School, kids paid better attention once breakfast was served in class.", correct: true },
+        { text: "Everyone knows that breakfast is the most important meal of the whole day." },
+        { text: "Our school cafeteria has 12 long tables and one very big kitchen." },
+        { text: "I think pancakes with syrup are the very best breakfast food of all." }
+      ],
+      clue: "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
+      hints: [
+        "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
+        "Read the reason again, and say it in your own words.",
+        "The sentence about the cafeteria tables can be checked, but it is not about kids learning. Check each choice that is left."
+      ],
+      how: [
+        "The reason is that kids learn better when they are not hungry.",
+        "What happened at another school once breakfast was served in class is an example someone could check, and it is about learning.",
+        "The answer is \"At Pine Grove School, kids paid better attention once breakfast was served in class.\"",
+        "\"Everyone knows\" and \"I think\" tell what someone thinks, so they are not proof. The tables are a fact about the cafeteria, not about learning."
+      ],
+      why: "The answer is \"At Pine Grove School, kids paid better attention once breakfast was served in class.\" It is a checkable example about learning. The other three are an opinion that sounds sure, an unrelated fact and a food opinion." },
+    { id: "SK-TT3a-S11", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C10"],
+      stem: ["Opinion: Every third grader should learn to read a map."],
+      prompt: "Which sentence would work best as a new reason for this opinion?",
+      choices: [
+        { text: "Another reason is that kids who can read a map are less likely to get lost on a trip.", correct: true },
+        { text: "Another reason is that some maps are printed in very bright colors." },
+        { text: "One time, my family used a paper map to find a hidden waterfall." },
+        { text: "Another fact is that people drew maps more than a thousand years ago." }
+      ],
+      clue: "A reason tells why the opinion is right. It answers the question: Why should this happen?",
+      hints: [
+        "A reason tells why the opinion is right. It answers the question: Why should this happen?",
+        "Say the opinion in your own words. Then read each choice and ask what job it does.",
+        "The sentence about bright colors starts like a reason, but colors do not tell why kids should learn to read a map. Check each choice that is left."
+      ],
+      how: [
+        "The opinion is that every third grader should learn to read a map.",
+        "Not getting lost on a trip tells why that would help kids, so it is a reason.",
+        "The answer is \"Another reason is that kids who can read a map are less likely to get lost on a trip.\"",
+        "The waterfall trip is one example, the old maps are a fact, and bright colors do not tell why."
+      ],
+      why: "The answer is \"Another reason is that kids who can read a map are less likely to get lost on a trip.\" It tells why. The waterfall is an example, the old maps are a fact that does not explain why, and the colors sentence only sounds like a reason." },
+    { id: "SK-TT3a-S12", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C08"],
+      stem: ["Kofi wrote this paragraph.", "I think our school should build a walking track around the field. First, walking helps kids get stronger. In Ms. Lee's class, kids who walked at recess every day could walk twice as far after one month. Also, a track would keep shoes out of the mud. Last spring, the field was so muddy that the kickball game had to stop."],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Which reason does the story about Ms. Lee's class support?",
+        choices: [
+          { text: "Walking helps kids get stronger.", correct: true },
+          { text: "A track would keep shoes out of the mud." },
+          { text: "The school should build a walking track around the field." },
+          { text: "Kids like walking more than playing kickball." }
+        ] },
+      partB: { prompt: "Which detail best supports the answer to Part A?",
+        choices: [
+          { text: "After one month, the kids could walk twice as far.", correct: true },
+          { text: "Last spring, the kickball game had to stop." },
+          { text: "The kids in Ms. Lee's class walked at recess." },
+          { text: "The field gets very muddy in the spring." }
+        ] },
+      clue: "Evidence is a fact or example that proves a reason is true. Ask what the story about Ms. Lee's class proves.",
+      hints: [
+        "Evidence is a fact or example that proves a reason is true. Ask what the story about Ms. Lee's class proves.",
+        "Read Kofi's paragraph one sentence at a time, and name the job of each sentence.",
+        "Building a walking track is Kofi's opinion, not one of his reasons. For Part B, the detail you choose must match your Part A answer."
+      ],
+      how: [
+        "Kofi gives two reasons: walking helps kids get stronger, and a track would keep shoes out of the mud.",
+        "In Ms. Lee's class, kids who walked every day could walk twice as far after a month. That proves they got stronger.",
+        "Part A: Walking helps kids get stronger. Part B: After one month, the kids could walk twice as far.",
+        "The kickball game and the mud back up the other reason. Walking at recess only tells what the kids did, not that they got stronger."
+      ],
+      why: "Part A: Walking helps kids get stronger. Part B: After one month, the kids could walk twice as far. Walking twice as far proves they got stronger. The mud and the kickball game support the other reason, and the track is the opinion." },
+    { id: "SK-TT3a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C09"],
+      stem: ["Nora wrote: \"Our town should paint bike lanes on Elm Street. Some people say bike lanes would make the road too narrow for cars. But Elm Street is 40 feet wide, and the two bike lanes would use only 8 feet of it.\""],
+      prompt: "How does Nora answer the people who disagree with her?",
+      choices: [
+        { text: "She tells their worry, and then she gives facts that show the road is wide enough.", correct: true },
+        { text: "She agrees with them and decides that bike lanes would be a bad idea after all." },
+        { text: "She gives facts about the road, but she never says what the other side thinks." },
+        { text: "She says that cars should not be allowed to drive on Elm Street at all." }
+      ],
+      clue: "When an author answers people who disagree, first find what the other side says. Then find the author's reply.",
+      hints: [
+        "When an author answers people who disagree, first find what the other side says. Then find the author's reply.",
+        "Read Nora's sentences one at a time.",
+        "Nora still wants the bike lanes, so she has not changed her mind. Check each choice that is left."
+      ],
+      how: [
+        "The worry comes after Some people say: the road would be too narrow for cars.",
+        "Nora's reply after But gives numbers: the street is 40 feet wide, and the lanes use only 8 feet.",
+        "The answer is \"She tells their worry, and then she gives facts that show the road is wide enough.\"",
+        "She keeps her opinion, she does say what the other side thinks, and she never says cars should be kept off the street."
+      ],
+      why: "The answer is \"She tells their worry, and then she gives facts that show the road is wide enough.\" The 40 feet and 8 feet answer the worry about the road being too narrow. She keeps her opinion and never says to keep cars off the street." },
+    { id: "SK-TT3a-S14", type: "hottext", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C12"],
+      stem: ["Opinion: Our class should have a jobs chart.", "Here are five sentences from the writer's piece."],
+      prompt: "Which TWO sentences are evidence for the reason that classroom jobs teach kids to be responsible? Choose two sentences.",
+      options: [
+        "First, classroom jobs teach kids to be responsible.",
+        "Jobs are the best part of the whole school day.",
+        "In Room 3, kids remembered to do their jobs every day for a whole month.",
+        "Their teacher said she never once had to remind anyone.",
+        "Next, jobs would help keep our room neat."
+      ],
+      answer: [2, 3], pick: 2,
+      clue: "Evidence is a fact or example that shows a reason is true.",
+      hints: [
+        "Evidence is a fact or example that shows a reason is true.",
+        "Say the reason in your own words. Then read each sentence and ask what job it does. Choose two.",
+        "\"Jobs are the best part of the whole school day\" tells how the writer feels. It is not a fact or example that shows anything. Check the other sentences."
+      ],
+      how: [
+        "The reason is that classroom jobs teach kids to be responsible.",
+        "Kids in Room 3 remembered their jobs every day for a month, and their teacher never had to remind them. That shows kids being responsible.",
+        "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Their teacher said she never once had to remind anyone.\"",
+        "The sentence that starts with First is the reason itself, and the sentence that starts with Next gives a new reason."
+      ],
+      why: "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Their teacher said she never once had to remind anyone.\" They show kids being responsible. The First sentence is the reason, Next gives another reason, and best part is a feeling." },
+    { id: "SK-TT3a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: [], pick: 2,
+      like: ["SK-TT3a-C13"],
+      stem: ["Here are the last two paragraphs of Maya's opinion piece, \"A Reading Tent for Room 6.\"", "Paragraph 4: Some people say a reading tent would take up too much room. But it folds flat and fits behind the bookshelf when we are not using it.", "Paragraph 5: A reading tent would make reading time cozy and calm. Let's ask Mr. Park to buy one for our class!"],
+      prompt: "Which TWO things does Maya do in these two paragraphs?",
+      choices: [
+        { text: "She answers people who think a reading tent would take up too much room.", correct: true },
+        { text: "She asks readers to help get a reading tent for the class.", correct: true },
+        { text: "She agrees that the tent would take up too much room and gives up the idea." },
+        { text: "She tells the steps for setting up a reading tent in the classroom." },
+        { text: "She tells how much a reading tent costs at the store." }
+      ],
+      clue: "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+      hints: [
+        "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+        "Read paragraph 4, then paragraph 5. Choose two.",
+        "Maya still wants the tent, so she has not given up the idea. Check each choice that is left."
+      ],
+      how: [
+        "Paragraph 4 tells the worry, that the tent would take up too much room, and replies that it folds flat behind the bookshelf.",
+        "Paragraph 5 ends with \"Let's ask Mr. Park to buy one for our class!\"",
+        "The answers are \"She answers people who think a reading tent would take up too much room\" and \"She asks readers to help get a reading tent for the class.\"",
+        "Folding flat is not a list of setup steps, and no price is given."
+      ],
+      why: "The answers are \"She answers people who think a reading tent would take up too much room\" and \"She asks readers to help get a reading tent for the class.\" Paragraph 4 answers the worry, and paragraph 5 asks readers to act. She keeps her idea, gives no steps and gives no price." }
   ],
   /* Hints and Show me how for the Practice Together items P1-P3 and the core refs P4-P6. */
   addons: {

@@ -3,7 +3,7 @@
   "use strict";
   const { make, clear, el } = PP;
   const S = window.PP_SITE;
-  const SCREENS = ["choose", "path", "home", "skill", "std", "mixed", "clues", "habits", "section", "player", "parents", "write"];
+  const SCREENS = ["choose", "path", "home", "skill", "std", "review", "coverage", "mixed", "clues", "habits", "section", "player", "parents", "write"];
   let current = "home";
   let sectionKey = "reading";
 
@@ -306,7 +306,7 @@
   }
 
   const TITLE = { choose: "choose-title", path: "path-title", home: "home-title", mixed: "mixed-title", clues: "clues-title", habits: "habits-title", section: "section-title",
-                  parents: "parents-title", skill: "sk-title", std: "std-title", player: "player-title", write: "write-title" };
+                  parents: "parents-title", skill: "sk-title", std: "std-title", review: "review-title", coverage: "coverage-title", player: "player-title", write: "write-title" };
   function route() {
     routing = true;
     const ret = pendingReturn; pendingReturn = null;
@@ -343,6 +343,9 @@
         if (code && window.PP_SKILLS.open(code, st)) return;
       }
       if (h === "mixed") { show("mixed"); return; }
+      /* expansion 2026-10-22 (ENG-09): the cumulative review hub and the assessment coverage map */
+      if (h === "review") { window.PP_REVIEW.openHub({ replace: true }); return; }
+      if (h === "coverage") { window.PP_REVIEW.openMap({ replace: true }); return; }
       if (S.sections.some(s => s.key === h) && (PP.sets.some(x => x.section === h) || (h === "writing" && PP.tasks.length))) { openSection(h); return; }
       landHome(!!(ret && ret.row), !!ret, !!h);
       /* PP-003 D16: an address that is not a page shows Home, says so, and drops the bad address */
@@ -390,6 +393,11 @@
     window.PP_SKILLS.init();
     window.PP_PATH.init();
     window.PP_STD.init();
+    window.PP_REVIEW.init();
+    ["mixed-review", "mixed-coverage"].forEach(id => el(id).addEventListener("click", e => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault(); if (id === "mixed-review") window.PP_REVIEW.openHub(); else window.PP_REVIEW.openMap();
+    }));
     /* expansion 2026-10-22: every a.std-link opens its standard page in place (one delegated handler).
        The href still works for a new tab, a copied link and a reload. */
     document.addEventListener("click", e => {
@@ -443,6 +451,7 @@
                current === "skill" ? { kind: "skill", code: window.PP_SKILLS.current(), step: window.PP_SKILLS.step(), hash } :
                current === "section" ? { kind: "section", key: sectionKey, hash } :
                current === "std" ? { kind: "std", code: window.PP_STD.current(), hash } :
+               current === "review" || current === "coverage" ? { kind: current, hash } :
                current === "home" || current === "clues" || current === "habits" || current === "path" ? { kind: current, hash } : returnTo;
   }
   function back() {
@@ -465,10 +474,18 @@
     if (r && r.kind === "habits") { window.PP_SKILLS.buildHabits(); setHash("#habits"); show("habits"); el("habits-title").focus(); return; }
     if (r && r.kind === "skill") { window.PP_SKILLS.open(r.code, skillStep); return; }
     if (r && r.kind === "std") { window.PP_STD.open(r.code); return; }
+    if (r && r.kind === "review") { window.PP_REVIEW.openHub(); return; }
+    if (r && r.kind === "coverage") { window.PP_REVIEW.openMap(); return; }
     if (current === "player" && ps.section === "skill") {
       /* opened straight from an address (no page to return to): the skill's matching step */
       const set = PP.byId[ps.setId];
       window.PP_SKILLS.open(set.code, ({ p: "practice", y: "try", y2: "try", y3: "try", t: "test", tB: "test" })[set.part]); return;
+    }
+    if (current === "player" && ps.section === "review") {
+      /* a standard review opens its standard page; a cumulative part opens the hub */
+      const set = PP.byId[ps.setId];
+      if (set && set.group && window.PP_STD.open(set.group)) return;
+      window.PP_REVIEW.openHub(); return;
     }
     const key = (r && r.kind === "section") ? r.key :
       (current === "write" ? "writing" : (window.PP_PLAYER.state().section || sectionKey));

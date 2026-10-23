@@ -565,7 +565,228 @@ PP.addLesson({
         "The coat fact does not ask anything, and \"outerwear daily\" uses words for grown-ups."
       ],
       misconception: "A common mix-up is keeping the words for the old audience. The job stays the same, but the words change.",
-      why: "The answer is \"Bring your coat every day, because we play outside at recess!\" It asks students to bring a coat in words they use. The other sentences still talk to families, give only a fact, or use words for grown-ups." }
+      why: "The answer is \"Bring your coat every day, because we play outside at recess!\" It asks students to bring a coat in words they use. The other sentences still talk to families, give only a fact, or use words for grown-ups." },
+    /* ENG-07 (author b3a): S04-S12 give every core item at least one similar item. Each `like` names only
+       core items that practise the same component with the same task. */
+    { id: "SK-TC1a-S04", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-P4"],
+      stem: ["Dear Ms. Harmon,", "Please add a late bus on Tuesdays.", "Many kids stay after school for Homework Club.", "Some of our parents work until five, so they cannot pick us up.", "Without a late bus, those kids have to miss Homework Club.", "A late bus would let every kid who needs help get it.", "Thank you,", "Rina Cole"],
+      prompt: "Read the letter in the box. How does Rina try to get Ms. Harmon to agree?",
+      choices: [
+        { text: "She explains a problem and how a late bus would solve it.", correct: true },
+        { text: "She tells a story about a funny bus ride she once took." },
+        { text: "She lists facts about how school buses are built." },
+        { text: "She warns that Homework Club will close forever." }
+      ],
+      clue: "Think about what a persuasive writer does to change a reader's mind. Then check which choice Rina really does.",
+      hints: [
+        "Think about what a persuasive writer does to change a reader's mind. Then check which choice Rina really does.",
+        "Read the letter one sentence at a time.",
+        "Rina never tells about a bus ride she took, so the story choice has no support. Check the other choices."
+      ],
+      how: [
+        "Rina says some kids cannot stay after school, because their parents work until five.",
+        "Then she says a late bus would let every kid who needs help get it. That is a problem and a way to fix it.",
+        "The answer is \"She explains a problem and how a late bus would solve it.\"",
+        "She says kids would miss the club, not that it would close, and she tells no story and no facts about how buses are built."
+      ],
+      misconception: "A common mix-up is choosing a choice that sounds strong, like a warning. Check what the writer really says.",
+      why: "The answer is \"She explains a problem and how a late bus would solve it.\" Some kids miss Homework Club because no one can pick them up, and a late bus would fix that. She tells no story, gives no facts about buses, and never says the club will close." },
+    { id: "SK-TC1a-S05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C12"],
+      stem: ["Poster: Come to the Kids' Fishing Derby at Mill Lake on Saturday! Every child gets a free fishing pole.", "School news, the next week: On Saturday, 52 kids fished at Mill Lake. The biggest fish was a bass as long as a ruler. One boy even pulled up an old boot!"],
+      prompt: "Read the two texts in the box. The poster asks kids to come. What does the school news piece mostly do?",
+      choices: [
+        { text: "It tells readers how the fishing derby turned out.", correct: true },
+        { text: "It asks readers to come to next year's derby." },
+        { text: "It teaches readers how to catch a big bass." },
+        { text: "It tells readers a funny story about an old boot." }
+      ],
+      clue: "Two texts about the same event can have different purposes. Ask what the news piece mostly tells.",
+      hints: [
+        "Two texts about the same event can have different purposes. Ask what the news piece mostly tells.",
+        "Read the news piece one sentence at a time.",
+        "The news piece never asks anyone to come next year, so that choice has no support. Check the other choices."
+      ],
+      how: [
+        "The news piece tells how many kids fished, the biggest catch and one funny moment.",
+        "Most of it reports what happened at the derby.",
+        "The answer is \"It tells readers how the fishing derby turned out.\"",
+        "The boot is one funny moment, nothing teaches how to fish, and nothing asks readers to come again."
+      ],
+      misconception: "A common mix-up is naming the purpose of one funny sentence instead of the whole text.",
+      why: "The answer is \"It tells readers how the fishing derby turned out.\" It reports how many kids fished and what they caught. The boot is one funny moment, nothing teaches how to fish, and nothing asks readers to come again." },
+    { id: "SK-TC1a-S06", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C05"],
+      stem: ["How to Fold a Paper Hat", "1. Fold a sheet of newspaper in half from top to bottom.", "2. Fold the two top corners down to the middle.", "3. Fold up the bottom strips on both sides.", "4. Open the bottom and put the hat on.", "Please ask before you use a newspaper, because someone may still want to read it."],
+      prompt: "Read the directions in the box. Then choose the best answer for each blank.",
+      text: "Most of the text {0}. The last sentence is there to {1}.",
+      slots: [
+        { options: ["teaches readers how to make something", "tries to get readers to read the news", "tells a funny story about a hat", "explains how newspapers are printed"], answer: 0 },
+        { options: ["remind readers to ask before they take something", "get readers to buy a newspaper", "make readers laugh at the end", "tell readers how big the hat will be"], answer: 0 }
+      ],
+      clue: "Check what most of the text does: teach, persuade or entertain. Then think about what the last sentence adds.",
+      hints: [
+        "Check what most of the text does: teach, persuade or entertain. Then think about what the last sentence adds.",
+        "Read the numbered steps first. Then read the last sentence.",
+        "Nothing in the steps is made up or silly, so the funny-story choice does not fit the first blank. Test the other choices for each blank."
+      ],
+      how: [
+        "The four numbered steps tell how to fold a paper hat, so most of the text teaches. It informs.",
+        "The last sentence asks readers to check first, because someone may still want to read the paper.",
+        "So the first blank is \"teaches readers how to make something\" and the second blank is \"remind readers to ask before they take something.\"",
+        "A please inside directions does not make the whole text persuasive, and the text does not sell papers or explain printing."
+      ],
+      misconception: "A common mix-up is calling directions persuasive because one sentence says please. Check what most of the text does.",
+      why: "The answers are \"teaches readers how to make something\" and \"remind readers to ask before they take something.\" The steps teach how to fold a hat, and the last sentence reminds readers to ask first. Nothing tries to sell papers or make readers laugh." },
+    { id: "SK-TC1a-S07", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C10"],
+      stem: ["Dario is writing a report about flamingos for the class science board. Its purpose is to inform.", "(1) Flamingos are tall pink birds. (2) They often stand on one leg, even when they sleep. (3) Their pink color comes from the tiny shrimp and plants they eat. (4) Flamingos are the prettiest birds, and you should paint your room pink! (5) A flamingo eats with its head upside down."],
+      prompt: "Which sentence should Dario take out because it does not fit the report's purpose?",
+      options: [
+        "(1) Flamingos are tall pink birds.",
+        "(2) They often stand on one leg, even when they sleep.",
+        "(3) Their pink color comes from the tiny shrimp and plants they eat.",
+        "(4) Flamingos are the prettiest birds, and you should paint your room pink!",
+        "(5) A flamingo eats with its head upside down."
+      ],
+      answer: [3], pick: 1,
+      clue: "A report that informs gives true facts about its topic. Check each sentence against that purpose.",
+      hints: [
+        "A report that informs gives true facts about its topic. Check each sentence against that purpose.",
+        "Read all five sentences. Then reread the first line in the box.",
+        "Sentence 1 tells what kind of animal a flamingo is, so it gives a fact and fits the report. Check the other sentences."
+      ],
+      how: [
+        "The report's purpose is to inform, so each sentence should give a true fact about flamingos.",
+        "Sentence 4 gives the writer's opinion and tells the reader to paint a room. That is persuading, so it does not fit.",
+        "The answer is sentence 4: \"Flamingos are the prettiest birds, and you should paint your room pink!\"",
+        "Sleeping on one leg and eating upside down sound strange, but they are true facts."
+      ],
+      misconception: "A common mix-up is taking out a strange but true fact. A surprising fact still informs.",
+      why: "The answer is sentence 4, \"Flamingos are the prettiest birds, and you should paint your room pink!\" It gives an opinion and tells the reader to act, so it persuades. Standing on one leg and eating upside down are surprising, but they are true facts." },
+    { id: "SK-TC1a-S08", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C08"],
+      stem: ["Some ants can carry a crumb that weighs many times more than they do.", "That would be like a kid lifting a car over her head!"],
+      prompt: "Read the text in the box. Why does the author compare an ant carrying a crumb to a kid lifting a car?",
+      choices: [
+        { text: "so readers can picture how strong an ant is for its size", correct: true },
+        { text: "so readers will know that kids are stronger than ants" },
+        { text: "so readers can enjoy a story about a kid and a car" },
+        { text: "so readers will know that ants are as big as cars" }
+      ],
+      clue: "Authors often compare something new to something readers already know. Ask what the comparison helps the reader understand.",
+      hints: [
+        "Authors often compare something new to something readers already know. Ask what the comparison helps the reader understand.",
+        "Read both sentences in the box. What does the first one tell about the ant?",
+        "No kid really lifts a car, and there is no story with a problem, so the story choice does not fit. Check the other choices."
+      ],
+      how: [
+        "The first sentence says an ant can carry a crumb much heavier than itself.",
+        "Readers know a car is far too heavy for a kid. Picturing that shows how much an ant can lift for its size.",
+        "The answer is \"so readers can picture how strong an ant is for its size.\"",
+        "The comparison does not say kids are stronger or that ants are big, and it is not a story."
+      ],
+      misconception: "A common mix-up is reading a comparison as if it were true. It helps readers picture a new idea.",
+      why: "The answer is \"so readers can picture how strong an ant is for its size.\" A kid lifting a car is something readers can imagine, and it shows how much an ant carries for its size. It does not say kids are stronger or that ants are big, and it is not a story." },
+    { id: "SK-TC1a-S09", type: "match", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C09"],
+      stem: ["Article: A shooting star is not really a star. It is a tiny bit of space rock that burns up as it zooms into the air around Earth. As it burns, it makes a bright streak. Most are no bigger than a grain of sand.", "Poem: Shooting star, so quick and bright, / streaking past me in the night, / slow down, star, and let me see / where you're rushing off to be!"],
+      prompt: "Read the article and the poem in the box. Match each sentence to the text it tells about: the article, the poem, or both.",
+      cols: ["the article", "the poem", "both"],
+      rows: [
+        { text: "It explains what a shooting star really is.", answer: 0 },
+        { text: "It uses rhyming lines that are fun to read aloud.", answer: 1 },
+        { text: "It tells about a bright streak in the sky.", answer: 2 },
+        { text: "It talks to the shooting star as if it could listen.", answer: 1 },
+        { text: "It tells how big most shooting stars are.", answer: 0 }
+      ],
+      clue: "Check each sentence against the article and against the poem. A sentence can fit one text or both.",
+      hints: [
+        "Check each sentence against the article and against the poem. A sentence can fit one text or both.",
+        "Read the article sentence by sentence. Then read the poem line by line.",
+        "The article says a shooting star makes a bright streak, and the poem says it is streaking past and bright, so the streak sentence fits both. Sort the other sentences the same way."
+      ],
+      how: [
+        "Only the article teaches facts: what a shooting star really is, and that most are as small as a grain of sand.",
+        "Only the poem rhymes (bright and night, see and be) and talks to the star: \"slow down, star.\"",
+        "Both tell about a bright streak in the sky.",
+        "So the article's main purpose is to inform, and the poem's main purpose is to entertain."
+      ],
+      misconception: "A common mix-up is thinking two texts on the same topic have the same purpose. Ask what each text mostly does.",
+      why: "The article explains what a shooting star is and how small most are. The poem rhymes and talks to the star. Both tell about a bright streak. The article informs, and the poem entertains." },
+    { id: "SK-TC1a-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C11"],
+      stem: ["Text 1, a sign on the classroom door: Kindergarten buddies, come on in! Find your reading partner and sit on the blue rug.", "Text 2, in the class newsletter: Every Friday, our third graders read picture books to their kindergarten buddies. Ask your child which book they shared this week!"],
+      prompt: "Read both texts in the box. Then choose the best answer for each blank.",
+      text: "Text 1 is mostly for {0}. Text 2 is mostly for {1}.",
+      slots: [
+        { options: ["kindergarten buddies", "families who read the newsletter", "third-grade readers", "the school principal"], answer: 0 },
+        { options: ["families who read the newsletter", "kindergarten buddies", "third-grade readers", "the school principal"], answer: 0 }
+      ],
+      clue: "The same topic can be written for different readers. For each text, ask who it talks to.",
+      hints: [
+        "The same topic can be written for different readers. For each text, ask who it talks to.",
+        "Read Text 1, then Text 2.",
+        "Neither text talks to the principal, so that choice fits neither blank. Test the other choices in each blank."
+      ],
+      how: [
+        "Text 1 says \"Kindergarten buddies, come on in!\" and tells them where to sit. It talks to the little buddies.",
+        "Text 2 is in the newsletter and says \"Ask your child.\" It talks to families.",
+        "So the first blank is \"kindergarten buddies\" and the second blank is \"families who read the newsletter.\"",
+        "The third graders are in both texts, but neither text is mostly for them."
+      ],
+      misconception: "A common mix-up is thinking the people a text tells about are its audience. Ask who the text talks to.",
+      why: "The answers are \"kindergarten buddies\" and \"families who read the newsletter.\" Text 1 invites the buddies in, and Text 2 tells families to ask their child. The third graders appear in both, but neither text is mostly for them." },
+    { id: "SK-TC1a-S11", type: "cr", dok: 3, std: ["3.T.C.1.a"], passages: [], rows: 4,
+      like: ["SK-TC1a-C14"],
+      stem: ["Riddle Corner", "Why did the cookie go to the doctor? It was feeling crumby!", "What do you call a sleeping dinosaur? A dino-snore!", "Send us your best riddle, and we may print it next week!"],
+      prompt: "Read the riddle page from a kids' magazine. What is its main purpose, and who is it written for? Write two or three sentences. Use one detail for each answer.",
+      sample: "The main purpose is to entertain, because the riddles have silly answers like \"dino-snore.\" It is written for kids who read the magazine, because it asks readers to send in their own riddles.",
+      criteria: [
+        "I named the main purpose: to inform, to persuade or to entertain.",
+        "I gave a detail that shows the purpose.",
+        "I told who the page is written for.",
+        "I gave a detail that shows who it is for."
+      ],
+      clue: "Ask why the page was written: to teach, to persuade or to give readers something to enjoy. Then ask who would read it.",
+      hints: [
+        "Ask why the page was written: to teach, to persuade or to give readers something to enjoy. Then ask who would read it.",
+        "Find a joke answer, and find the line that talks to the readers.",
+        "You can start like this: The main purpose is to ___ because ___. It is written for ___ because ___."
+      ],
+      how: [
+        "Find what most of the page does. Two silly riddles with joke answers are there to make readers laugh.",
+        "So the main purpose is to entertain. The last line asks for riddles, but it is one line.",
+        "Find the audience. It is a kids' magazine page that asks readers to send riddles, so it is for kids.",
+        "Put it together, with one detail for each answer. One good answer follows. Other answers can also be right."
+      ],
+      why: "Many answers can be right. A good answer says the page entertains, with a detail like a joke answer, and says it is for kids who read the magazine, with a detail like the request for riddles." },
+    { id: "SK-TC1a-S12", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
+      like: ["SK-TC1a-C15"],
+      stem: ["Mr. Abel wants shoppers to bring their carts back to the cart rack in the parking lot. He made two signs.", "Sign A: Carts left in the parking lot can roll into cars. A loose cart can dent a car door.", "Sign B: Please bring your cart back here! It takes ten seconds, and it keeps everyone's car safe."],
+      prompt: "Read the two signs in the box. Which sign will work better for Mr. Abel's purpose, and why?",
+      choices: [
+        { text: "Sign B, because it asks shoppers to bring carts back and says where", correct: true },
+        { text: "Sign A, because it gives more facts about what loose carts can do" },
+        { text: "Sign A, because it tells shoppers that carts can dent car doors" },
+        { text: "Sign B, because it tells a story about a cart that rolled away" }
+      ],
+      clue: "First decide the purpose: what does Mr. Abel want shoppers to do? Then ask which sign does that job.",
+      hints: [
+        "First decide the purpose: what does Mr. Abel want shoppers to do? Then ask which sign does that job.",
+        "Read Sign A, then Sign B, one sentence at a time.",
+        "Neither sign tells a story about one cart, so that choice does not fit. Check the other choices against Mr. Abel's purpose."
+      ],
+      how: [
+        "Mr. Abel's purpose is to persuade shoppers to bring their carts back.",
+        "Sign A gives true facts, but it never asks shoppers to do anything.",
+        "Sign B asks them to bring the cart back here and gives a reason. The answer is \"Sign B, because it asks shoppers to bring carts back and says where.\"",
+        "Facts about dents can be interesting, but a sign that never asks will not get carts returned."
+      ],
+      misconception: "A common mix-up is thinking that more facts always persuade. To persuade, a text has to ask the reader to act.",
+      why: "The answer is \"Sign B, because it asks shoppers to bring carts back and says where.\" Mr. Abel wants carts returned. Sign A only informs, and neither sign tells a story about one cart." }
+
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {
@@ -2913,7 +3134,201 @@ PP.addLesson({
         "\"Until lunch\" tells when the steps can be used again, not that lunch is served there, and nothing compares the two doors."
       ],
       misconception: "A common mix-up is guessing a reason from one word in the note, like lunch, instead of reading the box.",
-      why: "The answer is \"A skunk was sleeping under the front steps until workers could move it.\" The box tells the situation that the note leaves out. Nothing says the steps were painted, lunch tells when the steps open again, and nothing compares the doors." }
+      why: "The answer is \"A skunk was sleeping under the front steps until workers could move it.\" The box tells the situation that the note leaves out. Nothing says the steps were painted, lunch tells when the steps open again, and nothing compares the doors." },
+    /* ENG-07 (author b3a): S04-S11 give every core item at least one similar item. Each `like` names only
+       core items that practise the same component with the same task. */
+    { id: "SK-TC2c-S04", type: "match", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C02"],
+      prompt: "Each clue tells something about a text's context. Match each clue to the kind of context it gives.",
+      cols: ["time period", "individual", "situational"],
+      rows: [
+        { text: "The diary is dated March 2, 1875.", answer: 0 },
+        { text: "The writer has worked as a nurse for twenty years.", answer: 1 },
+        { text: "The note was written the morning the school bus broke down.", answer: 2 },
+        { text: "The writer grew up speaking two languages at home.", answer: 1 },
+        { text: "The story is set long ago, when children studied by candlelight.", answer: 0 }
+      ],
+      clue: "Ask what each clue tells: when the text was written, who the writer is, or what was happening at the time.",
+      hints: [
+        "Ask what each clue tells: when the text was written, who the writer is, or what was happening at the time.",
+        "In each clue, find the most important words: a date, a fact about the writer's own life, or an event.",
+        "Working as a nurse for twenty years is the writer's own job, so that clue is individual context. Sort the other clues the same way."
+      ],
+      how: [
+        "A date in history, like 1875, or a time long ago, like studying by candlelight, tells the time period.",
+        "A writer's job and how she grew up, like nursing or speaking two languages, tell individual context.",
+        "An event happening at the time, like a bus breaking down, tells situational context."
+      ],
+      misconception: "A common mix-up is calling a person's background situational. Situational context is an event happening at the time.",
+      why: "The 1875 date and studying by candlelight tell the time period. Nursing for twenty years and growing up with two languages tell about the writer. The bus breaking down is an event at the time, so it is situational." },
+    { id: "SK-TC2c-S05", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C07"],
+      stem: ["Box: Ms. Kemp wrote this note to her class on a Monday. The night before, the custodian had put a fresh, shiny coat of wax on the hall floors.", "Class, please walk slowly in the hall today. It is like a skating rink out there!"],
+      prompt: "Read the text in the box. Why does Ms. Kemp say the hall is like a skating rink?",
+      choices: [
+        { text: "The new wax had made the hall floor very slippery.", correct: true },
+        { text: "The school had turned the hall into a place to skate." },
+        { text: "The hall was very cold because the heat was off." },
+        { text: "The class was going ice skating after lunch." }
+      ],
+      clue: "Situational context is what was happening at the time. It can explain why someone says something.",
+      hints: [
+        "Situational context is what was happening at the time. It can explain why someone says something.",
+        "Read the text box, then the note.",
+        "Nothing in the box or the note is about a skating trip, so that choice has no support. Check the other choices."
+      ],
+      how: [
+        "The box says the hall floors had just been waxed.",
+        "A fresh coat of wax makes a floor shiny and slippery, like ice.",
+        "The answer is \"The new wax had made the hall floor very slippery.\"",
+        "The hall is not really a rink, and nothing says it was cold."
+      ],
+      misconception: "A common mix-up is reading a comparison as if it really happened. Find the situation that explains it.",
+      why: "The answer is \"The new wax had made the hall floor very slippery.\" The box tells the situation, and a waxed floor can be as slippery as ice. The hall is not really a rink, nothing says it was cold, and there is no skating trip." },
+    { id: "SK-TC2c-S06", type: "mc", points: 1, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C04"],
+      stem: ["Box: Mr. Lin studies birds. He wrote these notes in his bird notebook.", "Oct. 3. Feeder 2.", "Counted 30 goldfinches at once.", "Seed tray empty by noon."],
+      prompt: "Read the notes in the box. How does the goldfinch count help explain Mr. Lin's last note?",
+      choices: [
+        { text: "With so many birds eating, the seed ran out quickly.", correct: true },
+        { text: "The goldfinches knocked the tray off the feeder." },
+        { text: "Mr. Lin forgot to fill the seed tray that morning." },
+        { text: "Mr. Lin studies birds, so he writes short notes." }
+      ],
+      clue: "Situational context is what was happening when the writer wrote. One note can help explain another.",
+      hints: [
+        "Situational context is what was happening when the writer wrote. One note can help explain another.",
+        "Read the notes after the box in order: the date and place, the count and the seed tray.",
+        "Nothing says the tray fell off the feeder, so that choice has no support. Check the other choices."
+      ],
+      how: [
+        "Mr. Lin counted 30 goldfinches at the feeder at once.",
+        "That many birds eat a lot of seed, so the tray was empty by noon.",
+        "The answer is \"With so many birds eating, the seed ran out quickly.\"",
+        "His job explains why his notes are short, not why the seed ran out, and nothing says he forgot to fill it."
+      ],
+      misconception: "A common mix-up is choosing a true fact about the writer that does not explain the detail in the question.",
+      why: "The answer is \"With so many birds eating, the seed ran out quickly.\" Thirty goldfinches eat a lot. His job explains his short notes, and nothing says the tray fell or that he forgot to fill it." },
+    { id: "SK-TC2c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [], pick: 2,
+      like: ["SK-TC2c-C06"],
+      stem: ["Box: This story is historical fiction. It is set in 1922, in a city in Georgia. Back then, most homes had no refrigerator.", "Every other day, the iceman carried a big block of ice into our kitchen and set it in the icebox. Mama cooked supper on a wood stove. I set the table with our blue plates, and we all ate together. After supper, Papa read the newspaper out loud."],
+      prompt: "Read the story in the box. Which TWO things in the story are different from how most families live today?",
+      choices: [
+        { text: "A block of ice keeps the food cold in an icebox.", correct: true },
+        { text: "Supper is cooked on a wood stove.", correct: true },
+        { text: "A child helps set the table for supper." },
+        { text: "The family eats supper together." },
+        { text: "A parent reads the news out loud." }
+      ],
+      clue: "A time-period clue shows how people did something back then. Ask: do most families still do it this way today?",
+      hints: [
+        "A time-period clue shows how people did something back then. Ask: do most families still do it this way today?",
+        "Read the box, then each sentence of the story. Choose two.",
+        "Many families today still eat supper together, so that detail is not a difference. Check the other choices."
+      ],
+      how: [
+        "Today, most families keep food cold in a refrigerator and cook on a gas or electric stove.",
+        "In 1922, ice was carried in for the icebox, and supper was cooked on a wood stove. Those are different.",
+        "The answers are \"A block of ice keeps the food cold in an icebox.\" and \"Supper is cooked on a wood stove.\"",
+        "Children still set the table, families still eat together, and some parents still read the news aloud."
+      ],
+      misconception: "A common mix-up is choosing something that sounds old but is still done today. Check each detail against today.",
+      why: "The answers are \"A block of ice keeps the food cold in an icebox.\" and \"Supper is cooked on a wood stove.\" Today most homes have refrigerators and gas or electric stoves. Setting the table, eating together and reading the news still happen." },
+    { id: "SK-TC2c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C08"],
+      stem: ["Box: This diary is historical fiction. Imagine that a boy named Otis wrote it in 1895, at his family's mill by the river.", "Today Papa let me pour the corn into the big stone wheel. The river turned the wheel, and the corn came out as fine yellow meal."],
+      prompt: "Read the box and the diary. Then choose the best answer for each blank.",
+      text: "The diary was written {0}. It tells about {1}.",
+      slots: [
+        { options: ["by an author today, who imagined Otis", "by a real boy named Otis in 1895", "by Otis's papa, who ran the mill", "by a newspaper writer in 1895"], answer: 0 },
+        { options: ["life at a river mill in 1895", "how mills are built today", "how corn is grown on a farm", "a trip down the river by boat"], answer: 0 }
+      ],
+      clue: "Read the box before the text. It tells what kind of text this is and when it is set.",
+      hints: [
+        "Read the box before the text. It tells what kind of text this is and when it is set.",
+        "In the box, find the words historical fiction and imagine. What do they tell you about who wrote the diary?",
+        "Nothing says a newspaper writer wrote it, so that choice does not fit the first blank. Test the other choices for each blank."
+      ],
+      how: [
+        "The box says the diary is historical fiction and asks you to imagine that Otis wrote it in 1895.",
+        "Historical fiction is written by an author today but set in the past. So an author today imagined Otis.",
+        "The first blank is \"by an author today, who imagined Otis\" and the second blank is \"life at a river mill in 1895.\"",
+        "Otis is made up, and the diary is about grinding corn at the mill, not building mills, farming or a boat trip."
+      ],
+      misconception: "A common mix-up is thinking historical fiction is a real old paper. The box tells you it was made up and set long ago.",
+      why: "The answers are \"by an author today, who imagined Otis\" and \"life at a river mill in 1895.\" The box says it is historical fiction, so an author imagined Otis. The diary shows the mill grinding corn, not farming, building or a boat trip." },
+    { id: "SK-TC2c-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
+      like: ["SK-TC2c-C14"],
+      stem: ["Box: Ms. Rowe sells umbrellas and raincoats at her shop downtown.", "Ms. Rowe's notebook: Rain again today! The shop was full all morning.", "Box: Theo is eight. His first baseball game was planned for today.", "Theo's diary: Rain again. No game. I stared out the window all day."],
+      prompt: "Read the two texts in the box. Ms. Rowe and Theo write about the same rainy day. Choose the best answer for each blank.",
+      text: "Ms. Rowe is glad about the rain because {0}. Theo is sad because {1}.",
+      slots: [
+        { options: ["more shoppers come in to buy umbrellas", "she likes to walk in puddles", "her plants need water", "she does not have to work"], answer: 0 },
+        { options: ["his baseball game cannot be played", "he is afraid of thunder", "he lost his umbrella", "he wanted to wash the car"], answer: 0 }
+      ],
+      clue: "Individual context is who each writer is. The same weather can mean different things to different people.",
+      hints: [
+        "Individual context is who each writer is. The same weather can mean different things to different people.",
+        "Read each text box, then each writer's own words.",
+        "Nothing says Ms. Rowe has plants, so that choice does not fit the first blank. Test the other choices for each blank."
+      ],
+      how: [
+        "Ms. Rowe sells umbrellas and raincoats, and her shop was full all morning. Rain brings her customers.",
+        "Theo's first baseball game was planned for today, and the rain means no game.",
+        "The first blank is \"more shoppers come in to buy umbrellas\" and the second blank is \"his baseball game cannot be played.\"",
+        "Ms. Rowe works all morning, and nothing says Theo fears thunder, lost an umbrella or wanted to wash a car."
+      ],
+      misconception: "A common mix-up is thinking two people must feel the same about the same weather. Each writer's life explains the view.",
+      why: "The answers are \"more shoppers come in to buy umbrellas\" and \"his baseball game cannot be played.\" Rain fills Ms. Rowe's shop and cancels Theo's game. Nothing says she has plants or a day off, or that he fears thunder." },
+    { id: "SK-TC2c-S10", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.c"], passages: [], pick: 2,
+      like: ["SK-TC2c-C09"],
+      stem: ["Nia's diary: Today we moved to our new house. Dad drove the big rental truck. He had to back it up our narrow driveway three times. Then he and Uncle Jay carried the heavy couch up the stairs. My job was to pack my books and tape the boxes shut."],
+      prompt: "Read Nia's diary in the box. Suppose Dad wrote about moving day instead. Which TWO details would he most likely write about?",
+      choices: [
+        { text: "backing the big truck up the narrow driveway", correct: true },
+        { text: "carrying the heavy couch up the stairs", correct: true },
+        { text: "packing the books into boxes" },
+        { text: "taping the boxes shut" },
+        { text: "moving into a new house" }
+      ],
+      clue: "Individual context is who the writer is. People write most about the jobs they do and what they go through themselves.",
+      hints: [
+        "Individual context is who the writer is. People write most about the jobs they do and what they go through themselves.",
+        "Reread the diary one sentence at a time. Choose two.",
+        "Everyone in the family moved into the new house, so that detail does not depend on who the writer is. Check the other choices."
+      ],
+      how: [
+        "Dad's jobs were driving the truck, backing it up the driveway three times and carrying the couch.",
+        "Nia's jobs were packing her books and taping the boxes.",
+        "A writer tells most about his own work. The answers are \"backing the big truck up the narrow driveway\" and \"carrying the heavy couch up the stairs.\"",
+        "Packing and taping are Nia's jobs, and anyone in the family could write about the new house."
+      ],
+      misconception: "A common mix-up is mixing up who does each job. A writer's own work shapes what he writes.",
+      why: "The answers are \"backing the big truck up the narrow driveway\" and \"carrying the heavy couch up the stairs.\" Those are Dad's jobs. Packing and taping are Nia's jobs, and anyone could write about the new house." },
+    { id: "SK-TC2c-S11", type: "cr", dok: 3, std: ["3.T.C.2.c"], passages: [], rows: 4,
+      like: ["SK-TC2c-C10"],
+      stem: ["Box: This telegram is historical fiction. Imagine that it was sent in 1910. Back then, few homes had a telephone. For fast news, people sent a telegram, a short message sent over wires. They paid for every word.", "ARRIVED SAFE. BABY GIRL BORN TUESDAY. NAMED ROSE. LOVE, JAMES"],
+      prompt: "How does knowing when the telegram was sent help you understand why it is so short? Write two or three sentences. Use one detail from the box and one detail from the telegram.",
+      sample: "The box says it was sent in 1910, when people paid for every word of a telegram. That helps me understand why James wrote \"BABY GIRL BORN TUESDAY\" instead of a long sentence. He left out the little words to save money.",
+      criteria: [
+        "I told when the telegram was sent, using the box.",
+        "I gave a detail from the telegram.",
+        "I explained how the time period helps the detail make sense."
+      ],
+      clue: "Context can explain a detail. First find when the telegram was sent. Then ask what was true about telegrams back then.",
+      hints: [
+        "Context can explain a detail. First find when the telegram was sent. Then ask what was true about telegrams back then.",
+        "Use the box for the time. Then look at how James wrote his news.",
+        "You can start like this: The box says ___. That helps me understand ___ because ___."
+      ],
+      how: [
+        "Read the box: the telegram is set in 1910, and people paid for every word.",
+        "Pick a detail from the telegram, such as \"BABY GIRL BORN TUESDAY.\"",
+        "Explain the link: every word cost money, so James left out little words like a, was and on.",
+        "One good answer follows. Other answers can also be right."
+      ],
+      why: "Many answers can be right. A good answer tells the time from the box, gives a detail from the telegram, and explains how paying for every word made the message short." }
+
   ],
   /* Hints and Show me how for items kept in practice: refs P4, P8 and P9 (core set 1) and Together P1, P2, P7 and P6. */
   addons: {

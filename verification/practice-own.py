@@ -31,6 +31,18 @@ VIEWPORTS = [(320, 568), (390, 844), (844, 390), (768, 1024), (1024, 768), (1366
 results = []
 
 
+def _crash_hook(t, v, tb):
+    """ENG-05 note: a crash still prints every result so far, then the traceback."""
+    import traceback
+    traceback.print_exception(t, v, tb)
+    check("Z.crash the suite ran to the end", False, "%s: %s" % (t.__name__, v))
+    fails = [r for r in results if not r["pass"]]
+    print("%d passed, %d failed" % (len(results) - len(fails), len(fails)), flush=True)
+
+
+sys.excepthook = _crash_hook
+
+
 def check(name, good, detail=""):
     results.append({"name": name, "pass": bool(good), "detail": "" if good else str(detail)[:400]})
     print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + str(detail)[:400] + "]"), flush=True)
@@ -335,8 +347,7 @@ with sync_playwright() as p:
           and cr1["score"] == {"points": 0, "max": 0} and "right" not in cr1["fb"].lower().replace("can also be right", "")
           and crr["cr"]["done"] is True and crr["cr"]["text"] == "Being honest is always the right choice." and crr["cr"]["checks"] == [True, False] and "ok" in crr and crr["ok"] is False, (cr0, cr1, crr))
     q.reload(); q.wait_for_timeout(600)
-    q.evaluate("""(()=>{const mc=(id,n)=>({id,type:'mc',points:1,dok:2,prompt:'Fixture question '+n+'?',choices:[{text:'right one',correct:true},{text:'wrong a'},{text:'wrong b'},{text:'wrong c'}],clue:'A clue.',why:'w'});
-      PP.addLesson({key:'FX-CR',code:'3.T.T.1.c',title:'Fixture lesson',practice:[mc('SK-FXCR-P1',1),mc('SK-FXCR-P2',2)],core:{rev:'1',sets:[{items:[{id:'SK-FXCR-C01',type:'cr',prompt:'Write.',sample:'S',criteria:['a','b'],clue:'c',why:'w'},mc('SK-FXCR-C02',7),mc('SK-FXCR-C03',8),mc('SK-FXCR-C04',9),mc('SK-FXCR-C05',10)]},{items:[]},{items:[]}]}});})()""")
+    q.evaluate(FXCR)   # the same questions again (a changed question would start fresh: see M.1)
     q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try',{pos:0})"); q.wait_for_timeout(100)
     cr2 = q.evaluate("({text:document.querySelector('#q-body textarea').value, checks:[...document.querySelectorAll('#q-cr input')].map(x=>x.checked)})")
     check("D.2 cr resume: the written answer and the ticked criteria come back after a reload", cr2 == {"text": "Being honest is always the right choice.", "checks": [True, False]}, cr2)
@@ -650,6 +661,55 @@ with sync_playwright() as p:
         close_page(q)
     check("J.1 at 320x568, 390x844, 844x390, 768x1024, 1024x768, 1366x768 and 1920x1080: the set picker, the practice controls (with hints and steps open), a standard page and the check navigator fit, with no sideways scroll, no clipped control and 44px targets",
           not over, over)
+
+    # ---------------- M. review fixes: ENG-06 changed questions, ENG-10 targets, ENG-11 names ----------------
+    q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    seedm = {"v": 1, "l": {K: {"rev": "0", "at": {"set": 1, "pos": 2}, "i": {
+        "SK-TT1c-C03": {"sig": "deadbeef", "w": 1, "h": 2, "x": False, "ok": True, "r": {"v": ["p9:5:1"]}},
+        "SK-TT1c-C04": {"w": 0, "h": 1, "x": False, "ok": True, "r": {"v": 0}}}, "s": {}}}}
+    q.evaluate("s=>localStorage.setItem('pp.practice.v1',s)", json.dumps(seedm)); q.reload(); q.wait_for_timeout(700)
+    q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(60)
+    m1 = q.evaluate("""(k=>({note:(document.querySelector('#sk-panel .own-rev')||{}).textContent||'', c03:PP_PRACTICE.status(k,'SK-TT1c-C03'), c04:PP_PRACTICE.status(k,'SK-TT1c-C04'),
+        raw:localStorage.getItem('pp.practice.v1')}))(%s)""" % json.dumps(K))
+    start_set(q, "y", 2); q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(40)
+    r03 = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-C03"]
+    check("M.1 ENG-06: a saved answer to a question that has changed (its signature differs) is not reused: it starts fresh, the notice says one question changed, the other answer is kept",
+          "One question changed, so it starts fresh" in m1["note"] and m1["c03"] == "none" and m1["c04"] == "hints" and m1["raw"] == json.dumps(seedm)
+          and r03.get("prev", {}).get("h") == 2 and r03.get("sig") not in (None, "deadbeef") and r03["w"] == 1 and r03["h"] == 0, (m1["note"], m1["c03"], m1["c04"], r03))
+    q.evaluate("localStorage.clear()")
+    q.evaluate("s=>localStorage.setItem('pp.practice.v1',s)", json.dumps({"v": 1, "l": {K: {"rev": "0", "i": {"SK-TT1c-C04": {"w": 0, "h": 1, "ok": True}}, "s": {}}}}))
+    q.reload(); q.wait_for_timeout(700); q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(60)
+    m1b = q.evaluate("(document.querySelector('#sk-panel .own-rev')||{}).textContent||''")
+    check("M.2 ENG-06: when only core.rev changed and no question did, the notice promises only that earlier answers are kept",
+          m1b == "This practice was updated. Your earlier answers are kept.", m1b)
+    close_page(q)
+    tq = page(b, 390, 844, errors=errors); ready(tq, "#browse"); tq.evaluate("localStorage.clear()"); ready(tq, "#browse")
+    SMALL = """(sel=>[...document.querySelectorAll(sel)].filter(a=>a.offsetParent).map(a=>[a.dataset.std,Math.round(a.getBoundingClientRect().height)]).filter(x=>x[1]<44))"""
+    small = {}
+    for name, how, sel in (("catalog", "PP_APP.landBrowse()", "#skill-list a.std-link"),
+                           ("skill", "PP_SKILLS.open('3.T.T.1.c');document.getElementById('sk-official').open=true", "#screen-skill a.std-link"),
+                           ("std leaf", "PP_STD.open('3.T.T.1.c')", "#screen-std a.std-link"),
+                           ("std parent", "PP_STD.open('3.T.T.1')", "#screen-std a.std-link"),
+                           ("std GUM level", "PP_STD.open('3.L.GC.1:M')", "#screen-std a.std-link"),
+                           ("parents", "PP_PARENTS.open('standards');document.querySelectorAll('#std-list details').forEach(d=>d.open=true)", "#ptab-standards a.std-link"),
+                           ("claims", "PP_PARENTS.open('test')", "#ptab-test a.std-link"),
+                           ("habits", "PP_APP.openHabits()", "#habit-list a.std-link"),
+                           ("path", "PP_PATH.open();document.querySelectorAll('#path-content details').forEach(d=>d.open=true)", "#path-content a.std-link"),
+                           ("coverage", "PP_REVIEW.openMap();document.querySelectorAll('#coverage-body details').forEach(d=>d.open=true)", "#coverage-body a.std-link")):
+        tq.evaluate("(()=>{%s})()" % how); tq.wait_for_timeout(120)
+        r = tq.evaluate(SMALL, sel)
+        n = tq.evaluate("(s=>[...document.querySelectorAll(s)].filter(a=>a.offsetParent).length)", sel)
+        if r or not n: small[name] = (n, r[:3])
+    check("M.3 ENG-10: every visible code link is at least 44px tall at 390px (catalog, skill chip and wording, standard pages, parent guide, claims table, habits, Learning Path, coverage map)", not small, small)
+    names = {}
+    for how in ("PP_STD.open('3.L.GC.1:M')", "PP_STD.open('3.L.GC.1')", "PP_APP.landBrowse()"):
+        tq.evaluate("(()=>{%s})()" % how); tq.wait_for_timeout(100)
+        dup = tq.evaluate("""(()=>{const m={};[...document.querySelectorAll('.screen:not([hidden]) a.std-link')].filter(a=>/:.+:/.test(a.dataset.std)).forEach(a=>{const n=(a.getAttribute('aria-label')||a.textContent).trim();(m[n]=m[n]||new Set()).add(a.dataset.std);});
+            return Object.keys(m).filter(n=>m[n].size>1).slice(0,3);})()""")
+        lab = tq.evaluate("(()=>{const a=[...document.querySelectorAll('.screen:not([hidden]) a.std-link')].find(a=>/:.+:/.test(a.dataset.std));return a?[a.textContent,a.getAttribute('aria-label')||'']:null})()")
+        if dup or not lab or not lab[1].startswith(lab[0]): names[how] = (dup, lab)
+    check("M.4 ENG-11: grammar-chart code links have a different accessible name for each row, starting with the visible words", not names, names)
+    close_page(tq)
 
     check("K.0 no page errors in the browser runs", not errors, errors[:3])
 

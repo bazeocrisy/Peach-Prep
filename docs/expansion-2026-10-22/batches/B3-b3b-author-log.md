@@ -257,3 +257,106 @@ None of my texts uses a form A check passage (TT3a p2, RA1a p2), and no core ite
   - arctic fox coat colors
 - I did not run the guard, the path*.py scripts or skills-recovery.py. They were not asked for in this assignment, and I changed no js/ code.
 - I did not run git, and did not review my own work.
+
+## Addendum: similar coverage (rule ENG-07, coordinator request, 2026-10-23)
+
+This addendum replaces the earlier "Similar coverage is partial" note.
+
+**What changed.** I **added** similar items only:
+- 3.T.T.3.a: SK-TT3a-S04 to S15 (12 new; the bank is now 15, the maximum)
+- 3.T.RA.1.a: SK-RA1a-S04 to S15 (12 new; the bank is now 15)
+
+No existing core, Together, similar or check item was edited, because a reviewer is blind-solving them. The only text I revised was in three of the new items, before anyone saw them:
+- TT3a S05: a clue word was shared only with the key, so I changed one distractor and hint 3.
+- TT3a S10: the key was much longer than the other choices, so I shortened it.
+- RA1a S10: the prompt was long, so I moved its first sentence into the stem.
+
+**Why 12 per lesson, not 7 to 10.** The engine shows "Try a similar question" for the first similar item that lists this core item and has not yet been attempted. In my first pass the shared items were used up by earlier core items in the same run. For example, S04 covered both P4 and C08, so once a child used it on P4, C08 had none left. In a full sequential run that hid the button on 4 TT3a items (C08, C09, C12, C13) and 5 RA1a items (C07, C08, C10, C11, C15). So each of those items now also has a similar item of its own: TT3a S12 to S15 and RA1a S11 to S15. Every `like` list names only the core items whose component, task and format the item really practises.
+
+**Gates after the change:**
+- **check-content --all:** PASS, 0 failures, and neither lesson has any warning. The similar-coverage warning is gone.
+- **readability.py:** nothing flagged; these items have no passages.
+- **check-writing:** 0 failures.
+- **check-instructional-copy:** 28 passed.
+
+**Smoke test** (port 8812, Playwright Chromium, 390 and 1366 wide; scratchpad b3b/smoke2.py and smoke.py):
+- I went through all 30 core items in order in one sitting. For each one I solved it, pressed **Try a similar question**, and checked that a similar item opened.
+- The button showed on all 30, each time opening a different similar item.
+- Each similar item was headed "Extra question", listed that core item in its `like`, and was marked correct when given its key. The `cr` S10 showed its sample instead.
+- I re-ran the core smoke test: there were 0 problems and no page errors.
+- The server has been stopped.
+
+### Coverage map (core item → first similar item served in a full run)
+TT3a:
+- P4 → S04, P5 → S01, C03 → S05, P6 → S06, C05 → S02
+- C06 → S07, C07 → S09, C08 → S12, C09 → S13, C10 → S11
+- C11 → S08, C12 → S14, C13 → S15, C14 → S03, C15 → S10
+
+RA1a:
+- P5 → S04, C02 → S06, P4 → S02, C04 → S01, C05 → S07
+- C06 → S05, C07 → S11, C08 → S12, C09 → S03, C10 → S13
+- C11 → S14, C12 → S08, C13 → S09, C14 → S10, C15 → S15
+
+### New similar items: table and choices still live after each hint
+
+3.T.T.3.a:
+
+| Id | like | Format, DOK | Text and domain | Live after H1 / H2 / H3 |
+|---|---|---|---|---|
+| S04 | P4, C08 | ebsr, 2 | Rae: open the school gym on Saturdays (community) | A: all 4 / all 4 / key, "families exercise", "basketball vs jump rope" (H3 removes the opinion). B: 4 / 4 / key, dad's laps, "safe dry place" (the reason itself) |
+| S05 | C03 | mc, 3 | Ana vs Ben: pajama day (school) | 4 / 4 / key, "Ana uses facts", "Ana gives no reasons" (H3 removes "answers people who disagree") |
+| S06 | P6, C13 | ms ×2, 3 | Ivy: block party, last two paragraphs (community) | 5 / 5 / 2 keys, "steps to plan", "story about last year" (H3 removes "agrees and changes plan") |
+| S07 | C06 | mc, 2 | morning song paragraph (school) | 4 / 4 / key, "most fun", the reasons sentence (H3 removes the other people's opinion) |
+| S08 | C11 | dropdown, 2 | Omari: quiet reading after lunch (school) | slot 0: 3 / 3 / 2 (H3 removes "answers people"). Slot 1: 3 / 3 / 3. At most one blank narrowed. |
+| S09 | C07 | ms ×2, 2 | Lena: rec center climbing wall (community) | 5 / 5 / 2 keys, "Everyone agrees", "should climb" (H3 removes "coolest") |
+| S10 | C15 | mc, 3 | breakfast in classrooms (school) | key, "Everyone knows" (H1 makes "I think" checkable) / same / key, "Everyone knows" (H3 removes the tables) |
+| S11 | C10 | mc, 2 | learn to read a map (everyday) | 4 / 4 / key, waterfall example, old-maps fact (H3 removes bright colors) |
+| S12 | C08 | ebsr, 2 | Kofi: walking track (school) | A: 4 / 4 / key, mud reason, "walking vs kickball" (H3 removes the opinion). B: 4 / 4 / key, kickball stopped, "walked at recess", muddy field |
+| S13 | C09 | mc, 3 | Nora: bike lanes on Elm Street (community) | key, "keep cars off" (H1 makes "never says the other side" checkable) / same / key, "keep cars off" (H3 removes "agrees") |
+| S14 | C12 | hottext ×2, 2 | jobs chart (school) | 5 / 5 / 2 keys, the First reason sentence, the Next reason sentence (H3 removes "best part") |
+| S15 | C13 | ms ×2, 3 | Maya: reading tent, last two paragraphs (school) | 5 / 5 / 2 keys, "setup steps", "price" (H3 removes "gives up") |
+
+3.T.RA.1.a:
+
+| Id | like | Format, DOK | Text and domain | Live after H1 / H2 / H3 |
+|---|---|---|---|---|
+| S04 | P5 | ms ×2, 2 | pufferfish text (nature) | 5 / 5 / 2 keys, "how long puffed up", "where they live" (H3 removes eggs) |
+| S05 | C06 | hottext ×2, 2 | meerkat guard text (nature) | 5 / 5 / 2 keys, "others run into burrows", "young learn to hunt" (H3 removes "mobs") |
+| S06 | C02 | dropdown, 2 | Leo: snakes' tongues (nature) | slot 0: 3 / 3 / 3. Slot 1: 3 / 3 / key, "scariest" (H3 removes scales). One blank narrowed. |
+| S07 | C05 | hottext ×2, 2 | Nadia: how dough rises (family/kitchen) | 5 / 5 / 2 keys, "first bakery", "price of bread" (H3 removes pizza ovens) |
+| S08 | C12 | dropdown, 2 | koala text (nature) | slot 0: 3 / 3 / "another source", "read again" (H3 removes "ask a friend"). Slot 1: 3 / 3 / 3 |
+| S09 | C13 | match, 2 | grist mill sign (community) | all rows open / open / row 1 settled; 3 rows open |
+| S10 | C14 | cr (never scored), 3 | the child's own topic from the week (everyday) | no choices. H3 gives a starter for the clarifying question only. |
+| S11 | C07 | ms ×2, 2 | geyser text (science) | 5 / 5 / 2 keys, "most famous geyser", "geysers in Georgia" (H3 removes the opinion) |
+| S12 | C08 | mc, 3 | frogs that freeze (nature) | 4 / 4 / key, bears, "cuter" (H3 removes the already-answered question) |
+| S13 | C10 | mc, 3 | June vs Max: bus safety (school) | 4 / 4 / key, "quick yes/no", "own bus fits better" (H3 removes "longer question") |
+| S14 | C11 | order (4 steps, 2 pts), 3 | arctic tern text (nature) | all orders / all / step 4 fixed last; steps 1-3 still to order |
+| S15 | C15 | ms ×2, 2 | Marco: corn husk dolls, toys long ago (family) | 5 / 5 / 2 keys, "wooden more fun", "best toy maker" (H3 removes yes/no) |
+
+**Hint 3 and similar items that share a frame.** Each similar item mirrors its core item's frame, which is intended because it practises the same task, but uses a new text and topic. Hint 3 rules out one distractor and ends with a neutral "Check each choice that is left". On dropdowns, at most one blank is narrowed. No similar item shares a stem with a core item (check-content rule 9).
+
+**Leaks.** A similar item is shown only after its core item is solved or its answer is shown. None reuses a core, Together, check or other-lesson passage, or a core key fact.
+
+**Topic search for the new items.** The output is in scratchpad b3b/topic-grep-similar.txt. I grepped all lessons, sets, tasks and habits (including the RA blocks other authors are editing) before choosing. Topics I rejected because they were already used:
+- 3.T.T.3.c "read outside" Watch Me
+- murals in T-C and T-T1
+- flytrap in T-TS
+- geese in a T-T34 Watch Me
+- wolves howling (a T-RA key fact)
+- pandas, chameleons, glaciers and candles in other T-RA blocks
+- woodpeckers (T-RA)
+- cutting ice before refrigerators (a T-T2 Watch Me)
+- cotton in T-C
+- field day in T-C
+
+Remaining incidental hits:
+- "zipper" (backpacks and coats in T-TS). Unrelated to the zipper topic in RA S10's sample.
+- "bread dough" in T-T2, a yeast cause-effect item. RA S07 only lists questions about rising, and its hints, `how` and `why` never state the yeast fact.
+
+**Not done.** Facts for reviewers to check (not web-checked):
+- wood frogs freezing solid
+- arctic tern nesting, and hatching in about three weeks
+- koala sleep "up to 18 hours"
+- meerkat sentinels
+- how pufferfish inflate, and that many are poisonous
+- how geysers work

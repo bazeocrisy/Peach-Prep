@@ -1114,3 +1114,20 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 .skill-row.is-other .skill-name{font-style:italic;}
 .how-crit-h{margin:6px 0 2px;font-weight:700;}
 .how-crit{margin:0 0 6px;padding-left:1.3em;}
+/* expansion 2026-10-22 (ENG-09): standard reviews, the cumulative review and the coverage map */
+.rv-links{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;}
+.rv-link-btn{text-decoration:none;white-space:normal;}
+.rv-part{border:1px solid var(--line-soft);border-radius:12px;padding:12px;background:var(--page);margin:0 0 10px;}
+.rv-part-h{margin:0 0 6px;font-size:1.05rem;}
+.rv-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 8px;}
+.rv-row p{margin:0;flex:1 1 14em;}
+.rv-start,.rv-task{white-space:normal;}
+.rv-task{margin:0 8px 8px 0;}
+.rv-observed .linkish{min-height:44px;display:inline-flex;align-items:center;}
+.rv-link{display:inline-block;padding:12px 0;margin:-12px 0;color:var(--sky);font-weight:700;}
+.cov-wrap{max-width:72rem;}
+.cov-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 12px;margin:0 0 10px;}
+.cov-group>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-family:var(--head);font-weight:700;color:var(--navy);}
+.cov-table td{font-size:.92rem;}
+.cov-plain{color:var(--muted);}
+.std-review-line{margin:0;}

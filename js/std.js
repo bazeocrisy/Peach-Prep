@@ -213,6 +213,7 @@
       a.appendChild(ul);
       a.appendChild(make("p", "note", "A practice test samples skills. A few questions on one code are not a test of the whole standard."));
     }
+    if (window.PP_REVIEW) { const rl = window.PP_REVIEW.leafLine(x.code); if (rl) { const rs = sec(host, "Reviews"); rs.appendChild(rl); } }
     const g = groupBy[parentOf(x)];
     const need = adultNeeds(ls.main, x.tested === "classroom" && g ? g.observe : null);
     if (need.length) { const a = sec(host, "What a grown-up needs to watch"); const ul = make("ul", "std-list"); need.forEach(t => ul.appendChild(make("li", "", t))); a.appendChild(ul); }
@@ -274,6 +275,8 @@
       if (lv) lv.forEach(l => s.appendChild(PP.stdLink("3.L.GC.1:" + l, "Only the " + LEVEL[l] + " rows", "std-level-link")));
       const ol = make("ol", "std-comps"); list.forEach(c => ol.appendChild(componentRow(c))); s.appendChild(ol);
     });
+    /* expansion 2026-10-22 (ENG-09): the standard review, what it measures and what needs other evidence */
+    if (!(opts && opts.level) && window.PP_REVIEW) host.appendChild(window.PP_REVIEW.groupSection(g.code));
     const keys = [].concat(...lessonCodes.map(c => S().lessonsFor(c).main)).filter((k, i, a) => a.indexOf(k) === i);
     const need = adultNeeds(keys, g.observe);
     if (need.length) { const a = sec(host, "What needs a grown-up's evidence"); const ul = make("ul", "std-list"); need.forEach(t => ul.appendChild(make("li", "", t))); a.appendChild(ul); }
