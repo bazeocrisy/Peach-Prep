@@ -2902,27 +2902,27 @@ PP.addLesson({
       why: "There is more than one good answer. A strong answer gives an opinion, quotes one sentence exactly and explains how it supports the opinion." },
     { id: "SK-RA2a-S09", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C06"],
-      stem: ["(1) A narwhal is a whale that lives in icy Arctic water.", "(2) Its long tusk is really a tooth that grows out through its lip.", "(3) Scientists think the tusk can feel changes in the water around it.", "(4) Most male narwhals have a tusk, but most females do not."],
-      prompt: "Which sentence BEST supports the idea that a narwhal's tusk helps it sense the water around it?",
+      stem: ["(1) A narwhal is a whale that lives in icy Arctic water.", "(2) Its long tusk is really a tooth that grows out through its lip.", "(3) Scientists think the tusk can pick up changes in the water.", "(4) Most male narwhals have a tusk, but most females do not."],
+      prompt: "Which sentence BEST supports the idea that a narwhal's tusk helps it find out what is happening around it?",
       choices: [
-        { text: "Scientists think the tusk can feel changes in the water around it.", correct: true },
+        { text: "Scientists think the tusk can pick up changes in the water.", correct: true },
         { text: "Its long tusk is really a tooth that grows out through its lip." },
         { text: "A narwhal is a whale that lives in icy Arctic water." },
         { text: "Most male narwhals have a tusk, but most females do not." }
       ],
-      clue: "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk sensing.",
+      clue: "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk doing a job.",
       hints: [
-        "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk sensing.",
+        "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk doing a job.",
         "Three sentences are about the tusk. Read those three closely.",
-        "Which narwhals have tusks tells who has one, not what it does. For each of the other two sentences about the tusk, ask: does it tell what the tusk is, or what the tusk can do?"
+        "Which narwhals have tusks tells who has one, not what it does. For each of the other two sentences about the tusk, ask: does it tell what the tusk is, or what job it does for the narwhal?"
       ],
       how: [
-        "The idea is that the tusk helps the narwhal sense the water.",
-        "Sentence 3 says scientists think the tusk can feel changes in the water. Feeling changes is sensing.",
+        "The idea is that the tusk helps the narwhal find out what is happening around it.",
+        "Sentence 3 says scientists think the tusk can pick up changes in the water. Picking up changes is a way to find out what is happening.",
         "Sentence 2 tells what the tusk is, sentence 4 tells which narwhals have one, and sentence 1 tells where they live.",
-        "The answer is \"Scientists think the tusk can feel changes in the water around it.\""
+        "The answer is \"Scientists think the tusk can pick up changes in the water.\""
       ],
-      why: "The answer is \"Scientists think the tusk can feel changes in the water around it.\" Feeling changes in the water is sensing. The other sentences tell what the tusk is, who has one and where narwhals live." },
+      why: "The answer is \"Scientists think the tusk can pick up changes in the water.\" Picking up changes in the water is a way to find out what is happening around it. The other sentences tell what the tusk is, who has one and where narwhals live." },
     { id: "SK-RA2a-S10", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C08"],
       stem: ["(1) Coral reefs grow in warm, shallow, clear ocean water near land.", "(2) When a big fish swims near, small fish dart into cracks in the reef.", "(3) Corals are tiny animals, even though they look like plants.", "(4) Some coral reefs have been growing for thousands of years."],
@@ -3020,27 +3020,27 @@ PP.addLesson({
       why: "The answer is \"Sam's, because sentence 2 shows Ana asking for help with serving.\" The oranges are a team snack and do not show what Ana wants, and the order of the sentences does not make one better proof." },
     { id: "SK-RA2a-S14", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
       like: ["SK-RA2a-C13"],
-      stem: ["(1) Rosa's brother Cam showed her how to ride a bike without training wheels.", "(2) On her first try, Rosa wobbled and fell.", "(3) She got back on and pushed off again until she rode all the way down the block.", "(4) Cam clapped and cheered."],
-      prompt: "Opinion: \"Rosa does not give up.\" Which sentence BEST supports this opinion?",
+      stem: ["(1) Rosa's brother Cam showed her how to ride a bike without training wheels.", "(2) On her first try, Rosa wobbled and fell.", "(3) \"It's okay, we'll go slower,\" Cam said, and he walked beside her, holding the seat.", "(4) Cam had learned to ride when he was five."],
+      prompt: "Opinion: \"Cam is patient with his sister.\" Which sentence BEST supports this opinion?",
       choices: [
-        { text: "She got back on and pushed off again until she rode all the way down the block.", correct: true },
+        { text: "\"It's okay, we'll go slower,\" Cam said, and he walked beside her, holding the seat.", correct: true },
+        { text: "Rosa's brother Cam showed her how to ride a bike without training wheels." },
         { text: "On her first try, Rosa wobbled and fell." },
-        { text: "Cam clapped and cheered." },
-        { text: "Rosa's brother Cam showed her how to ride a bike without training wheels." }
+        { text: "Cam had learned to ride when he was five." }
       ],
-      clue: "The opinion is about Rosa, so the proof must show something Rosa does that fits the opinion.",
+      clue: "The opinion is about Cam, so the proof must show something Cam says or does that fits the opinion.",
       hints: [
-        "The opinion is about Rosa, so the proof must show something Rosa does that fits the opinion.",
+        "The opinion is about Cam, so the proof must show something Cam says or does that fits the opinion.",
         "Read all four sentences and ask who each one is about.",
-        "Cam clapping is about Cam, not Rosa. For the other three, ask what each one shows Rosa doing."
+        "Sentence 2 is about Rosa, not Cam. For the other three, ask what each one shows Cam doing when Rosa has trouble."
       ],
       how: [
-        "The opinion is that Rosa does not give up.",
-        "Sentence 2 shows something hard happening to her, but it does not show what she does about it.",
-        "Sentence 3 shows her getting back on and trying again until she makes it. That is not giving up.",
-        "Sentences 1 and 4 are about Cam. The answer is \"She got back on and pushed off again until she rode all the way down the block.\""
+        "The opinion is that Cam is patient.",
+        "Sentence 3 shows Cam staying calm after Rosa falls: he slows down and walks beside her. That is patient.",
+        "Sentence 1 shows Cam teaching, but not how he acts when it is hard. Sentence 2 is about Rosa, and sentence 4 is about Cam's own past.",
+        "The answer is: \"It's okay, we'll go slower,\" Cam said, and he walked beside her, holding the seat."
       ],
-      why: "The answer is \"She got back on and pushed off again until she rode all the way down the block.\" It shows what Rosa does after she falls. Falling shows the bike was hard, not that she kept going, and the other two sentences are about Cam." },
+      why: "The answer is: \"It's okay, we'll go slower,\" Cam said, and he walked beside her, holding the seat. It shows him staying calm when Rosa has trouble. Teaching, falling and learning at age five do not show patience." },
     { id: "SK-RA2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: [], pick: 2,
       like: ["SK-RA2a-C14"],
       stem: ["**Idea:** Solar panels help our school save money.", "(1) Last year, our school put solar panels on its roof.", "(2) The panels have cut the school's electric bill in half.", "(3) The panels are dark blue and shaped like rectangles.", "(4) The money the school saves now pays for new library books.", "(5) The principal says the school will save even more next year."],
@@ -3454,7 +3454,7 @@ PP.addLesson({
         hints: [
           "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
           "Look at how the post is signed and at what it claims.",
-          "For the first blank, read the signature again. It is only \"PeachFan.\" Does it tell you who the writer is or how they know? The second blank is still yours to decide."
+          "For the first blank, read the signature again. It is only \"PeachFan.\" Is it a name you could look up, or only a screen name? The second blank is still yours to decide."
         ],
         how: [
           "The post is signed only \"PeachFan,\" and the writer says, \"Trust me, I just know trees.\" That does not tell who they are or how they know.",
@@ -3604,7 +3604,7 @@ PP.addLesson({
         hints: [
           "To doubt a claim, look for a sentence that shows a reason it may not be true.",
           "Read paragraph 1, and then read about the test in paragraph 3.",
-          "A sentence gives a reason to doubt a claim only if it tells what happened when someone checked the claim. Ask this of each answer, and remember that a belief that agrees with the website is not a check."
+          "A sentence gives a reason to doubt a claim only if it tells what happened when someone checked the claim. Ask this of each answer."
         ],
         how: [
           "A reason to doubt a claim shows that the claim may not be true.",
@@ -3989,9 +3989,9 @@ PP.addLesson({
         { text: "He never cracked the knuckles on his right hand." },
         { text: "Many people say that cracking your knuckles will hurt your hands when you grow up." }
       ],
-      clue: "To doubt a claim, look for what happened when someone checked it.",
+      clue: "A good reason to doubt a claim comes from someone testing it, not from what people say about it.",
       hints: [
-        "To doubt a claim, look for what happened when someone checked it.",
+        "A good reason to doubt a claim comes from someone testing it, not from what people say about it.",
         "Read sentences 2, 3 and 4, about the doctor.",
         "Sentence 1 tells what many people say, and it agrees with the post. For each of the doctor's sentences, ask: does it tell how he checked the idea, or what he found?"
       ],

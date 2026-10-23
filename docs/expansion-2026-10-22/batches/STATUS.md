@@ -20,7 +20,13 @@
 | B2 | 3.T.SS.1.a | ACCEPTED | B2-rereview-SC-2.md |
 | B2 | 3.T.C.1.b | ACCEPTED | B2-rereview-SC-2.md |
 | B2 | Two new component lessons (text features; digital, audio and spoken features) | NOT STARTED | Deferred until after the engine review; see CONTINUATION-NOTES.md |
-| B3 | 3.T.C.1.a, 3.T.C.2.c, 3.T.T.3.a, 3.T.RA.1.a, 3.T.RA.1.b, 3.T.RA.2.a, 3.T.RA.2.b | AUTHORING | — |
+| B3 | 3.T.T.3.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
+| B3 | 3.T.RA.1.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
+| B3 | 3.T.C.1.a | ACCEPTED (post-acceptance polish of C07 not yet re-solved) | B3-b3a-rereview.md |
+| B3 | 3.T.C.2.c | ACCEPTED (post-acceptance polish of P8, C07, S08 not yet re-solved) | B3-b3a-rereview.md |
+| B3 | 3.T.RA.1.b | ACCEPTED (SHOULD fixes being applied) | B3-b3c-rereview.md |
+| B3 | 3.T.RA.2.a | ACCEPTED (SHOULD fixes being applied) | B3-b3c-rereview.md |
+| B3 | 3.T.RA.2.b | ACCEPTED (SHOULD fixes being applied) | B3-b3c-rereview.md |
 | B4–B9 | see 04-content-plan.md | NOT STARTED | — |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.

@@ -496,3 +496,23 @@ RA1b C10; RA2a C13, S09, S11, S12, S14; RA2b C04, C05, C09, C12, S14, and S08 (m
 - `check-content.js --all`: PASS (0 failures). The only warnings in these lessons: RA2b p3 short.
 - `check-writing.js`: 0 failures, 0 warnings. `check-instructional-copy.js`: 28 assertions passed.
 - `readability.py`: all RA passages are at or under FK 4.5 (RA2a p5 4.2 is the highest; RA2b p2 4.3).
+
+## 9. Fixes after B3 re-review (SHOULDs)
+
+Correction first: in section 8.1, the RA2b C12 row said hint 3 no longer named the belief sentence, but the file still ended hint 3 with a clause naming it. The clause is now actually deleted, and the counts below are for the file as it stands.
+
+| Item | Change | Live after H1 / H2 / H3 |
+|---|---|---|
+| RA2b C12 | Hint 3 now reads "A sentence gives a reason to doubt a claim only if it tells what happened when someone checked the claim. Ask this of each answer." The belief clause is gone. Hint 2 still points to paragraphs 1 and 3. | 4 / 3 / 3 (key, set-up sentence, the belief sentence) |
+| RA2b C05 | Hint 3 for blank 1 now asks "Is it a name you could look up, or only a screen name?" It no longer echoes the key option. | Blank 1: 3 / 3 / 2. Blank 2: 3 / 3 / 3. |
+| RA2a S09 | Idea reworded to "helps it find out what is happening around it". Key reworded to "Scientists think the tusk can pick up changes in the water." The stem and key now share no phrase. Clue, hints, how and why updated ("job" instead of "sensing"). | 4 / 3 / 2 (key, "what the tusk is") |
+| RA2b S14 | Hint 1 and the clue are now "A good reason to doubt a claim comes from someone testing it, not from what people say about it." Hint 3 is unchanged and adds the how-he-checked versus what-he-found step. | 4 / 3 / 3 |
+| RA2a S14 | New scenario, so it no longer repeats Tasha (S08). Opinion: "Cam is patient with his sister." Key: Cam says "It's okay, we'll go slower" and holds the seat. Other choices: Cam showing her how to ride, Rosa falling, Cam learning at age five. Same `like` (C13); no word matches between opinion and key. | 4 / 4 / 3 (key, "showed her how", "learned at five") |
+
+Not changed: N1 (lemur "striped" tail, left as a grade-3 wording), N2, N3 (S12 stays at two live choices), N4, N5, N6 (noted only).
+
+### Needs blind re-solve
+RA2b C12, C05, S14; RA2a S09, S14.
+
+### Gates
+`check-content.js --all`, `check-writing.js`, `check-instructional-copy.js` and `readability.py` were rerun after these edits; results are in the report.

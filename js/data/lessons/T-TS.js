@@ -773,28 +773,28 @@ PP.addLesson({
       why: "The cows drank the water and the picnic area was built while it was still Dell Pond. Families came to picnic and fish after it became Dell Park. Kids paddling kayaks today fits Lake Dell Park." },
     { id: "SK-TSSEQ-S12", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C12"],
-      stem: ["In 1880, a man built a mill beside Alder Creek to grind corn into meal. Farmers soon drove their wagons to the mill. Some of them stayed to work there. Then a blacksmith shop and a store opened across the road. In 1895, the people built a school. By 1900, the little place was a town with forty families. In 1962, the mill closed, but the town kept its name."],
+      stem: ["In 1884, a railroad company built a depot beside Alder Creek so farmers could ship their crops. Farmers soon drove their wagons to the depot. Some of them stayed to work there. Then a blacksmith shop and a store opened across the road. In 1895, the people built a school. By 1900, the little place was a town with forty families. In 1962, the depot closed, but the town kept its name."],
       prompt: "Why did a town grow up at Alder Creek?",
       choices: [
-        { text: "Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.", correct: true },
+        { text: "Farmers came to the depot, and some stayed to work, so shops and homes were built nearby.", correct: true },
         { text: "The people built a school, and families moved there so their children could learn." },
-        { text: "The mill closed, and the workers began to build homes nearby." },
+        { text: "The depot closed, and the workers began to build homes nearby." },
         { text: "The creek flooded the farms, so the farmers moved to higher ground." }
       ],
       clue: "In a history text, one event can lead to the next. Ask what happened before the town grew.",
       hints: [
         "In a history text, one event can lead to the next. Ask what happened before the town grew.",
-        "Read the events in order, from 1880 to 1900. Notice which one happened first.",
-        "The mill closed in 1962, long after the town had grown, so a later event cannot be the reason. Test the other choices against the order of events."
+        "Read the events in order, from 1884 to 1900. Notice which one happened first.",
+        "The depot closed in 1962, long after the town had grown, so a later event cannot be the reason. Test the other choices against the order of events."
       ],
       how: [
-        "In 1880, the mill was built. Soon farmers came to it, and some stayed to work there.",
+        "In 1884, the depot was built. Soon farmers came to it, and some stayed to work there.",
         "Then a blacksmith shop and a store opened across the road. By 1900, the place was a town.",
-        "The answer is \"Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.\"",
-        "The school came in 1895, after the town had begun to grow, the mill closed much later, and the text never mentions a flood."
+        "The answer is \"Farmers came to the depot, and some stayed to work, so shops and homes were built nearby.\"",
+        "The school came in 1895, after the town had begun to grow, the depot closed much later, and the text never mentions a flood."
       ],
       misconception: "A common mix-up is choosing a later event as the reason for an earlier one. A cause comes before what it causes.",
-      why: "The answer is \"Farmers came to the mill, and some stayed to work, so shops and homes were built nearby.\" The mill came first, then the workers, the shop and the store. The school came after the town began to grow, the mill closed in 1962, and no flood is mentioned." },
+      why: "The answer is \"Farmers came to the depot, and some stayed to work, so shops and homes were built nearby.\" The depot came first, then the workers, the shop and the store. The school came after the town began to grow, the depot closed in 1962, and no flood is mentioned." },
     { id: "SK-TSSEQ-S13", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C13"],
       stem: ["(1) In 1890, workers built a tall brick tower beside Town Hall.", "(2) In 1925, the town added a big clock to the front of the tower.", "(3) In 1988, workers fixed the cracks in the old bricks.", "(4) Today, the clock still tells the time to the whole street.", "New sentence: In 1950, a storm blew the clock's hands off, and a new pair was made."],
