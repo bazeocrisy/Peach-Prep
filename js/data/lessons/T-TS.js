@@ -640,7 +640,7 @@ PP.addLesson({
       hints: [
         "To find how a paragraph is organized, look at the words that connect its sentences and ask what job they do.",
         "List the connecting words in Paragraph A. Then list the connecting words in Paragraph B.",
-        "Paragraph A is about one afternoon and makes nothing, so it does not give steps for making something. Then match each paragraph to the job of its connecting words."
+        "Paragraph A is about one morning and makes nothing, so it does not give steps for making something. Then match each paragraph to the job of its connecting words."
       ],
       how: [
         "Paragraph A uses At ten o'clock, Soon after, Then and By eleven. It tells what happened at the school, from one time to the next.",
@@ -723,29 +723,30 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is choosing Finally because it comes late. Finally tells which step is last, not how long it took.",
       why: "The answers are \"six hours\" and \"about ten minutes.\" Both tell how much time passes. First, Next and Finally tell only the order." },
-    { id: "SK-TSSEQ-S10", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
+    { id: "SK-TSSEQ-S10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSSEQ-C09"],
       stem: ["Paragraph 1: What happens to a cup of leftover grape juice in a very cold freezer? It turns into a sweet juice pop. The cold does the work.", "Paragraph 2: First, you pour the juice into a small paper cup. Next, you stand a wooden stick in the middle of the juice.", "Paragraph 3: Then you set the cup in the freezer. After a few hours, the juice is solid, and you can peel off the paper and eat it."],
-      prompt: "Choose the words that best complete the sentences about how the text is put together.",
-      text: "Paragraph 1 {0}. Paragraphs 2 and 3 {1}.",
-      slots: [
-        { options: ["asks a question that the text answers", "tells the last step of the job", "compares two kinds of juice"], answer: 0 },
-        { options: ["tell the steps that turn juice into a pop", "describe what the freezer looks like", "tell about a problem and how it was solved"], answer: 0 }
+      prompt: "Which words from Paragraphs 2 and 3 show the order of the steps?",
+      choices: [
+        { text: "First, Next, Then and After a few hours", correct: true },
+        { text: "juice, cup, stick and freezer" },
+        { text: "pour, stand, set and peel" },
+        { text: "small, wooden, solid and sweet" }
       ],
-      clue: "Each part of a text has a job. Ask what each part adds to the whole.",
+      clue: "Some words tell what is happening, and other words tell when it happens. Look for the words that tell when.",
       hints: [
-        "Each part of a text has a job. Ask what each part adds to the whole.",
-        "Say in a few words what Paragraph 1 does for a reader before any step begins. Then do the same for Paragraphs 2 and 3 together.",
-        "Paragraphs 2 and 3 never tell about anything going wrong, so they do not tell a problem and how it was solved. Read each sentence with the choices that are left."
+        "Some words tell what is happening, and other words tell when it happens. Look for the words that tell when.",
+        "Read Paragraphs 2 and 3 and look at the words that begin the sentences.",
+        "The words juice, cup, stick and freezer name things in the steps. They do not tell when anything happens. Test the other choices the same way."
       ],
       how: [
-        "Paragraph 1 asks, \"What happens to a cup of leftover grape juice in a very cold freezer?\" The rest of the text answers it.",
-        "Paragraphs 2 and 3 use First, Next, Then and After a few hours to tell the steps from juice to a pop.",
-        "So the answers are: asks a question that the text answers; tell the steps that turn juice into a pop.",
-        "Paragraph 1 gives no last step and compares no kinds of juice, and Paragraphs 2 and 3 do not describe the freezer or tell a problem."
+        "Paragraph 2 begins with First and Next. Paragraph 3 begins with Then and After a few hours.",
+        "Those words tell when each step happens, so they show the order.",
+        "The answer is \"First, Next, Then and After a few hours.\"",
+        "The other choices name things, tell what the steps do, or describe things. None of them tells when."
       ],
-      misconception: "A common mix-up is thinking every paragraph in a sequence text tells a step. An opening paragraph can set up a question that the steps answer.",
-      why: "Paragraph 1 asks a question that the text answers. Paragraphs 2 and 3 tell the steps that turn juice into a pop. The text never compares kinds of juice, describes the freezer or tells a problem." },
+      misconception: "A common mix-up is choosing the action words, like pour and set. They tell what to do, not when to do it.",
+      why: "The answer is \"First, Next, Then and After a few hours.\" Those words tell when each step happens. Juice, cup, stick and freezer name things, pour, stand, set and peel tell what to do, and small, wooden, solid and sweet describe things." },
     { id: "SK-TSSEQ-S11", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C11"],
       stem: ["Long ago, a farm family dug a pond to give water to their cows. People called it Dell Pond. In 1950, the town bought the land. Then the town gave the place a new name, Dell Park. Families came to picnic and fish. In 1975, the town added a boat dock and a walking path. Then the town changed the name again, to Lake Dell Park. Today, kids learn to paddle a kayak there."],
@@ -1665,25 +1666,25 @@ PP.addLesson({
     { id: "SK-TSCE-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C07"],
       stem: ["Dan planted a sunflower seed in a sunny spot by the fence. He watered it every day. In a few weeks, the sunflower grew taller than the fence. Dan wrote: \"Dan watered the sunflower every day because it grew taller than the fence.\""],
-      prompt: "The clue word in Dan's sentence makes the cause and effect backward. Choose the clue word that fixes it.",
+      prompt: "Dan's sentence has the cause and effect backward. Choose the clue word that fixes it.",
       text: "Dan watered the sunflower every day {0} it grew taller than the fence.",
       slots: [
-        { options: ["although", "because", "so"], answer: 2 }
+        { options: ["but", "so", "until"], answer: 1 }
       ],
-      clue: "Because comes just before a cause. So comes just before an effect.",
+      clue: "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
       hints: [
-        "Because comes just before a cause. So comes just before an effect.",
+        "Some clue words come just before a cause, and some come just before an effect. Decide which part of the sentence is which.",
         "Reread the stem to find out which of the two things happened first and made the other happen.",
-        "Although shows a difference, not a cause, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
+        "Until tells when something stops, not why, so it does not fit. Decide which part is the cause, then check which side of the clue word it is on."
       ],
       how: [
         "Dan watered the plant every day, and that helped it grow tall.",
         "So watering is the cause, and growing taller is the effect.",
-        "In Dan's sentence, the effect comes after the clue word. So comes just before an effect, so the answer is so.",
-        "Because would put the cause after the clue word, which is what Dan wrote. Although does not tell a cause at all."
+        "In Dan's sentence, the effect comes after the clue word, so the answer is so. But shows a difference, and until tells when something stops.",
+        "Because, the word Dan used, put the cause after the clue word, which made his sentence backward."
       ],
-      misconception: "A common mix-up is choosing the clue word the student used. Check which part of the sentence is the cause.",
-      why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. Because would make growing tall the cause, and although shows a difference." },
+      misconception: "A common mix-up is leaving the effect after a word that points to a cause. Check which part of the sentence is the cause.",
+      why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. But shows a difference, and until tells when something stops." },
     { id: "SK-TSCE-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C08"],
       stem: ["One cold night in January, the puddles on Oak Road froze. In the morning, the road was slick and shiny in the early sun. Cars crept along it. The bus driver drove very slowly, so the bus came to school late. Many kids were late. Because of that, the principal moved the start of school to a later time for the week."],
@@ -3855,7 +3856,7 @@ PP.addLesson({
       why: "The answer is \"Each key the writer presses makes a letter show up on both of them.\" Paper and a screen both show a letter for each key that is pressed. Quick fixing and printing belong to the laptop, and typing a page again belongs to the typewriter." },
     { id: "SK-TSCC-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C09"],
-      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) However, a trampoline is round and flat, but a swing set is tall with chains.", "(5) Likewise, a trampoline lets you bounce, and a swing set lets you swing."],
+      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) However, a trampoline is round and flat, but a swing set is tall with chains.", "(5) Likewise, a trampoline lets you bounce, but a swing set lets you swing back and forth."],
       prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
       text: "Sentence {0} should begin with {1}",
       slots: [

@@ -1764,11 +1764,11 @@ PP.addLesson({
       stem: ["Stanza 1:", "Night comes down the hill.", "The lamps blink on, one by one.", "The town grows still.", "Stanza 2:", "The baker locks his door.", "A cat slips through the gate.", "The street is empty once more.", "Stanza 3:", "The owls begin to call.", "Stars climb over the wall.", "Frost sparkles over all.", "Stanza 4:", "The windows go dark, one by one.", "A last small light fades out.", "Night comes down the hill."],
       prompt: "Read the poem. Which TWO sentences about how it is built are true?",
       choices: [
-        { text: "The poem has four stanzas.", correct: true },
+        { text: "There are four stanzas in the poem.", correct: true },
         { text: "The last line repeats the first line.", correct: true },
         { text: "Each stanza has exactly two lines." },
         { text: "Each stanza ends with the same line." },
-        { text: "The poem has seven stanzas in all." }
+        { text: "There are seven stanzas in all." }
       ],
       clue: "A stanza is a group of lines. Count the groups, and then look at where lines are repeated.",
       hints: [
@@ -1779,11 +1779,11 @@ PP.addLesson({
       how: [
         "A stanza is a group of lines. This poem has four groups.",
         "Each stanza has three lines. The first line of the poem and the last line of the poem are both \"Night comes down the hill.\"",
-        "The answers are \"The poem has four stanzas.\" and \"The last line repeats the first line.\"",
+        "The answers are \"There are four stanzas in the poem.\" and \"The last line repeats the first line.\"",
         "The stanzas have three lines, not two, they do not all end the same way, and there are four stanzas, not seven."
       ],
       misconception: "A common mix-up is thinking a repeated line must come at the end of every stanza. Here it appears only at the start and at the very end.",
-      why: "The answers are \"The poem has four stanzas.\" and \"The last line repeats the first line.\" There are four groups of three lines, and the poem begins and ends with \"Night comes down the hill.\" The stanzas do not have two lines each, and they do not all end with the same line." },
+      why: "The answers are \"There are four stanzas in the poem.\" and \"The last line repeats the first line.\" There are four groups of three lines, and the poem begins and ends with \"Night comes down the hill.\" The stanzas do not have two lines each, and they do not all end with the same line." },
     { id: "SK-TT4a-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C04"],
       stem: ["Read this poem about tying shoes.", "I cross the laces, loop them through,", "And pull them snug, the way you do.", "My shoes are tied. I'm set to race,", "I'm first one standing at the place.", "I start to run across the yard.", "My legs are quick. I'm trying hard.", "But what is this? My lace comes loose!", "I trip! I tumble! What's the use?", "I sit down on the grass and grin.", "I tie them up and try again."],
@@ -1953,7 +1953,7 @@ PP.addLesson({
       hints: [
         "To compare how two poets use repeats, find where the repeated words sit in each poem.",
         "List the repeated words in Poem A and note which lines they are in. Then do the same for Poem B.",
-        "Neither poem repeats a whole line, so one choice has no support. Test the rest against your lists."
+        "Poem A does not repeat any whole line, so one choice has no support. Test the rest against your lists."
       ],
       how: [
         "Poem A begins its first two lines with Purr, purr, purr, so a sound word starts two lines.",

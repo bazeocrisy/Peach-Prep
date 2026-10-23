@@ -52,7 +52,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TT2b-S10 | SK-TT2b-C09 | mc/1/3 | explain why the author tells about doubt in a series of events | the Erie Canal and 'Clinton's Ditch' | all 4 / all 4 / key / people liked muddy roads better / workers did not want to dig | erie canal, clinton |
 | SK-TT2b-S11 | SK-TT2b-C10 | hottext/1/2 | find the sentence that shows the cause of an effect the author names | paying for the Statue of Liberty's base (p8) | all 6 / all 6 (paragraphs 3 and 4 hold four targets) / key / ran out of money / Pulitzer wanted to help / children sent coins / statue packed in crates | statue of liberty, pulitzer |
 | SK-TT2b-S12 | SK-TT2b-C11 | order/2/2 | put the steps of a procedure in order | making a paper plate sundial | all orders / all orders / taping before the 9:00 line settled; the rest still to place | sundial |
-| SK-TT2b-S13 | SK-TT2b-C12 | dropdown/1/2 | find the missing step in a procedure | missing step in a jar garden | 3 / 3 / 2 (hint 3 rules out closing the lid, leaves soil or water) | jar garden |
+| SK-TT2b-S13 | SK-TT2b-C12 | dropdown/1/2 | find the missing step in a procedure | missing step in a jar garden (Rosa lists only steps 1 to 3) | 3 / 3 / 2 (hint 3 rules out closing the lid; water and soil stay live) | jar garden |
 | SK-TT2b-S14 | SK-TT2b-C13 | mc/1/2 | predict what would happen if a step is skipped | sprouting an avocado pit | all 4 / all 4 / key / grows too fast and tips the glass / stem grows down | avocado |
 | SK-TT2b-S15 | SK-TT2b-C15 | mc/1/3 | tell how a procedure and a history are told differently | Text 1 writing your name in Braille dots; Text 2 Louis Braille's life | all 4 / all 4 / key / backward choice / both tell what Louis did | braille |
 
@@ -61,9 +61,9 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | id | like | type/pts/DOK | skill | context | live after hint 1 / 2 / 3 | topic searched |
 |---|---|---|---|---|---|---|
 | SK-TT2c-S04 | SK-TT2c-C03 | mc/1/2 | a detail told in only one of two texts | alpacas | all 4 / all 4 / key / lives in mountains / farmers cut wool (colors ruled out) | alpaca |
-| SK-TT2c-S05 | SK-TT2c-C05 | dropdown/2/2 | decide whether a fact is in one text or both | which text tells which fact (igloo): dome fact then heat fact | slot 1: 3, slot 2: 3 / 3, 3 / 3, 3 (hint 3 states a fact about Text 2 that a child can use on slot 1; nothing is ruled out for them) | igloo |
+| SK-TT2c-S05 | SK-TT2c-C05 | dropdown/2/2 | decide whether a fact is in one text or both | which text tells which fact (igloo): dome fact then heat fact | slot 1: 3, slot 2: 3 / 3, 3 / 3, 3 (hint 3 only asks which text says how the blocks are set) | igloo |
 | SK-TT2c-S06 | SK-TT2c-C06 | dropdown/2/3 | find what two texts are each mostly about and join them | wind turbines and the town of Pine Bluff | slot 1: all 3; slot 2: all 3 / slot 1: all 3; slot 2: all 3 / slot 1: key / fan (height ruled out); slot 2: all 3 | wind turbine |
-| SK-TT2c-S07 | SK-TT2c-C07 | match/2/2 | match information to Text 1, Text 2 or both | which text tells each fact (rattlesnake) | all rows open / all rows open / night row is not Text 1 (Text 2 or Both left) | rattlesnake |
+| SK-TT2c-S07 | SK-TT2c-C07 | match/2/2 | match information to Text 1, Text 2 or both | which text tells each fact (rattlesnake) | all rows open / all rows open / all rows open (hint 3 only sends the child back to the texts) | rattlesnake |
 | SK-TT2c-S08 | SK-TT2c-C08 | ms/2/2 | two facts told in both of two texts | green iguanas | all 5 / all 5 / key1 / key2 / lie in sun / chin flap (leaves and flowers ruled out) | iguana |
 | SK-TT2c-S09 | SK-TT2c-C09 | order/2/3 | order the steps of one journey told across two texts | yogurt from farm to store | all orders / all orders / truck before heating settled; other steps open | yogurt |
 | SK-TT2c-S10 | SK-TT2c-C10 | ebsr/2/3 | say how a second passage adds to the first | giant anteater passages (p11, p12) | Part A: all 4; Part B: all 4 / Part A: all 4; Part B: all 4 / Part A: key / teeth / snout (claws ruled out); Part B: all 4 | anteater |
@@ -83,7 +83,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSSEQ-S07 | SK-TSSEQ-C06 | order/2/2 | put the steps of a science process in order | how sea salt is made | all orders / all orders / seawater into pools first is settled; the other four open | sea salt |
 | SK-TSSEQ-S08 | SK-TSSEQ-C07 | mc/1/3 | why an early step makes a later step possible | papier-mache bowl | all 4 / all 4 / key / glue is not needed / wet paper is lighter (the 'color' one ruled out) | papier-mache, paper mache |
 | SK-TSSEQ-S09 | SK-TSSEQ-C08 | ms/2/2 | time words that tell how much time passes, not only the order | tie-dyeing a shirt | all 6 / all 6 / key1 / key2 / the 'First' and 'Next' ... (Finally ruled out) | tie-dye |
-| SK-TSSEQ-S10 | SK-TSSEQ-C09 | dropdown/2/2 | how a text is put together: a question paragraph and a steps paragraph | how a text is put together (grape juice pop) | slot 1: 3 / 3 / 3; slot 2: 3 / 3 / 2 (hint 3 rules out the problem-solution choice) | juice pop |
+| SK-TSSEQ-S10 | SK-TSSEQ-C09 | mc/1/2 | how a text is put together: a question paragraph and a steps paragraph | which words show the order of the steps (grape juice pop); now a multiple-choice item | 4 / 4 / 3 (hint 3 rules out the things-named choice) | juice pop |
 | SK-TSSEQ-S11 | SK-TSSEQ-C11 | match/2/2 | match events to the name something had at that time | place names at each time (Dell Pond); row 2 now "The town bought the land" | all rows open / all rows open / cows row settled (Dell Pond) | dell pond |
 | SK-TSSEQ-S12 | SK-TSSEQ-C12 | mc/1/3 | find the cause of a town's growth in a history text | Alder Creek railroad depot (town grows after a depot opens) | all 4 / all 4 / key / school / the mill closed / river (the school one comes later and is ruled out) | depot |
 | SK-TSSEQ-S13 | SK-TSSEQ-C13 | mc/1/2 | find where a new dated event belongs in a history text | the Town Hall clock tower | all 5 / all 5 / key / after sentence 2 area / after sentence 4 (the today sentence ruled out) | clock tower |
@@ -114,7 +114,7 @@ For each item: the choices still possible after the clue/hint 1, hint 2 and hint
 | SK-TSCE-S04 | SK-TSCE-P5 | mc/1/2 | find an effect stated in a paragraph | why a pond freezes from the top | all 4 / all 4 / key / freezes solid to bottom / fish swim up (the 'ice sinks' one ruled out) | pond ice |
 | SK-TSCE-S05 | SK-TSCE-C03 | mc/1/3 | why an author includes a section: another effect of the same cause | another effect of the same cause (hot sidewalk and puddle) | 4 / 4 / 3 (hint 3 rules out the dark-color choice) | sidewalk, puddle |
 | SK-TSCE-S06 | SK-TSCE-C05 | ms/2/3 | find the steps whose mistakes would hide the result | mistakes that would stop the lava lamp blobs rising (no tablet, no water) | 5 / 5 / 4 (hint 3 rules out the color choice) | lava lamp |
-| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so | 3 / 3 / 2 (hint 3 rules out although) | sunflower |
+| SK-TSCE-S07 | SK-TSCE-C07 | dropdown/1/2 | choose the clue word that fixes a backward cause and effect | fix a backward clue word (Dan and the sunflower): so, with but and until | 3 / 3 / 2 (hint 3 rules out until; but and so stay live) | sunflower |
 | SK-TSCE-S08 | SK-TSCE-C08 | mc/1/3 | find the first cause in a chain of events | ice on Oak Road | all 4 / all 4 / key / bus drove slowly / school started later (the late bus is ruled out as an effect) | ice on the road, school start |
 | SK-TSCE-S09 | SK-TSCE-C09 | mc/1/3 | how the author organizes a paragraph: events that lead to one another | how a paragraph is organized (foggy school bus) | 4 / 4 / 3 (hint 3 rules out the how-to choice) | fog, school bus |
 | SK-TSCE-S10 | SK-TSCE-C10 | mc/1/2 | find the sentence that tells an effect of a change | a speed bump near a school | all 4 / all 4 / key / bumps were added (cause) / drivers could see kids (not caused by bump) / the school (setting) | speed bump |
@@ -208,3 +208,19 @@ All edits are inside my own similar items and the passages p7, p11, p12 of 3.T.T
 **Needs blind re-solve (changed items):** 3.T.T.2.a S09, S13; 3.T.T.2.b S04, S09, S13; 3.T.T.2.c S05, S07, S10; TS-SEQ S04, S06, S10, S11, S14, S15; TS-DESC S04, S05, S11, S13; TS-CE S05, S06, S07, S09; TS-CC S04, S05, S06, S10, S11, S15; 3.T.C.1.b S12, S13, S15.
 
 **Gates after fixes:** check-content: 0 failures in my nine lessons (the only failures in the whole run are six in 3.T.SS.1.c, another author's lesson, in progress); check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability: no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk (port 8832, stopped): 15 of 15 core items show the button and open an item that names them, in all nine lessons, no page errors.
+
+
+## Fixes after re-review (SIM-2-rereview.md)
+
+- **3.T.T.2.b S13 (MUST):** Rosa's card now lists only steps 1 to 3 ("Rosa wrote the first three steps from memory"), so "sprinkle water" and "close the lid" are real later steps from the directions, not steps already on her card. Live choices 3 / 3 / 2.
+- **TS-SEQ S10 (MUST):** rebuilt as a different frame. It is now a multiple-choice item (1 point): "Which words from Paragraphs 2 and 3 show the order of the steps?" The four choices are new (order words; things named; action words; describing words), none is shared with core C09, and the key wording is new. Live 4 / 4 / 3.
+- **TS-CE S07 (MUST):** the choices no longer include the student's own word. The options are but / so / until, the prompt says only that the sentence has cause and effect backward, clue and hint 1 give a neutral rule, and hint 3 rules out until only. So both but and so are still live after hints 1 to 3 (3 / 3 / 2).
+- **3.T.T.2.c S05 hint 3 (SHOULD):** the first fix did not remove the settling, and my earlier log line was wrong. It now asks "Which text says how the blocks are set?" and settles nothing; live 3,3 / 3,3 / 3,3.
+- **3.T.T.2.c S07 hint 3 (SHOULD):** now only sends the child back to the texts for when rattlesnakes hunt; no row is settled.
+- **TS-SEQ S06 hint 3 (SHOULD):** "one afternoon" is now "one morning".
+- **TS-CC S11 (SHOULD):** sentence 5 now reads "Likewise, a trampoline lets you bounce, but a swing set lets you swing back and forth", so the difference is explicit.
+- Not changed from the re-review SHOULDs: T2a S13 distractor set, T2a S09 method hint, TS-DESC S05 stem and hint wording, TS-CE S05 explanation wording and silly distractor, TS-CE S06 hint 2, TS-SEQ S11 date wording, TS-SEQ S15 shared options, SS1a carried items.
+
+**Needs blind re-solve (this round):** 3.T.T.2.b S13; 3.T.T.2.c S05, S07; TS-SEQ S06, S10; TS-CE S07; TS-CC S11. (The earlier list in "Fixes after review" still applies to items the re-review did not cover.)
+
+**Gates after this round:** check-content 0 failures in my nine lessons (whole-run failures, if any, are in other authors' lessons); check-writing 0 failures and 0 warnings; check-instructional-copy 28 assertions passed; readability: no passage above FK 4.5; greedy walk 0 missing in all nine lessons; browser walk on port 8832 (server stopped): 15 of 15 in all nine lessons, no page errors.

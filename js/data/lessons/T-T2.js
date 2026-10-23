@@ -1951,7 +1951,7 @@ PP.addLesson({
       why: "The order is: poke a pencil through the middle of a paper plate, tape the plate down in a sunny spot, draw a line on the pencil's shadow at 9:00, come back each hour and draw a new line, and use the lines to tell the time." },
     { id: "SK-TT2b-S13", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
       like: ["SK-TT2b-C12"],
-      stem: ["How to Make a Jar Garden: First, put a layer of small rocks in the bottom of a clean jar. The rocks let extra water drain away from the roots. Next, spread a thick layer of soil over the rocks. Then dig small holes and plant tiny plants, like moss and ferns. Finally, sprinkle a little water on the plants and close the lid.", "Rosa wrote the steps from memory:", "1. Put small rocks in the jar.", "2. ________", "3. Plant the tiny plants.", "4. Sprinkle water and close the lid."],
+      stem: ["How to Make a Jar Garden: First, put a layer of small rocks in the bottom of a clean jar. The rocks let extra water drain away from the roots. Next, spread a thick layer of soil over the rocks. Then dig small holes and plant tiny plants, like moss and ferns. Finally, sprinkle a little water on the plants and close the lid.", "Rosa wrote the first three steps from memory:", "1. Put small rocks in the jar.", "2. ________", "3. Plant the tiny plants."],
       prompt: "Rosa left out a step. Choose the step that belongs in the blank.",
       text: "Step 2: {0}",
       slots: [
@@ -2908,7 +2908,7 @@ PP.addLesson({
       hints: [
         "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
         "For each fact, search Text 1 first. Then search Text 2.",
-        "Text 2 never says how the blocks are set. Decide what that means for the dome fact, and check the heat fact yourself."
+        "Which text says how the blocks are set? Use that to check the dome fact, and check the heat fact yourself."
       ],
       how: [
         "Search Text 1 for how the blocks are set. It says they are set in a circle that curves up to make a dome. Search Text 2. It never says. So the dome fact is in only Text 1.",
@@ -2956,7 +2956,7 @@ PP.addLesson({
       hints: [
         "For each row, search one text and then the other. A row goes under Both only when each text tells it.",
         "Look in each text for the key words of the row, like rings, night, warning, pits or buzzing.",
-        "Text 1 never says when rattlesnakes hunt, so the night row does not go under Text 1. Sort the other rows yourself."
+        "Look in each text for when rattlesnakes hunt. Then sort the other rows yourself."
       ],
       how: [
         "Text 1 tells about the rings and the buzzing sound. Text 2 does not mention them.",

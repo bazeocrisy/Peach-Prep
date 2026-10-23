@@ -597,7 +597,7 @@ PP.addLesson({
       hints: [
         "Dialogue is the words a character says. First check who is speaking in each line, then ask how that person feels.",
         "Read each line in quotation marks. For each one, ask who says it and when in the climb it comes.",
-        "\"The ranger said there are six signs\" is Naomi talking, so it tells about Naomi, not Amos. Check each line that is left."
+        "\"How much farther is it?\" comes before Amos has seen the top, so it cannot show that he enjoyed the climb. Check each line that is left."
       ],
       how: [
         "The two lines about the signs are spoken by Naomi, so they cannot show how Amos feels.",
@@ -1737,14 +1737,14 @@ PP.addLesson({
       prompt: "Read paragraphs 1 and 2 again. Then complete the sentences. Choose the best answer for each blank.",
       text: "In this story, the chirping cricket is {0}. The author says Emre must wake up at six, so the reader can tell that the cricket {1}.",
       slots: [
-        { options: ["the cause of the problem", "the main character", "a helper who comes in near the end"], answer: 0 },
+        { options: ["the cause of the problem", "the person the story follows", "someone who rescues Emre at the end"], answer: 0 },
         { options: ["stops Emre from getting enough sleep", "helps Emre get ready faster", "wakes Emre up right on time"], answer: 0 }
       ],
       clue: "Think about who or what makes the trouble in the story. A detail near the start can show what a person needs.",
       hints: [
         "Think about who or what makes the trouble in the story. A detail near the start can show what a person needs.",
         "Reread paragraph 1. What does Emre need to do the next morning?",
-        "The cricket is there from the first chirp, so it is not a helper who comes in near the end. For the second blank, think about what a person who must wake up at six needs."
+        "The cricket is there from the first chirp, so it is not someone who rescues Emre at the end. For the second blank, think about what a person who must wake up at six needs."
       ],
       how: [
         "The trouble starts with the first chirp, and the cricket makes it. The story follows Emre, not the cricket.",
