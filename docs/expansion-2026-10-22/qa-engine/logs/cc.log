@@ -1,0 +1,45 @@
+  info  lesson 3.T.C.1.b: Practice Together = SK-TC1b-P1, SK-TC1b-P8, SK-TC1b-P9, SK-TC1b-P10, SK-TC1b-P6 (practice minus the core refs)
+  info  lesson 3.T.C.2.a: Practice Together = SK-TC2a-P1, SK-TC2a-P2, SK-TC2a-P3, SK-TC2a-P4 (practice minus the core refs)
+  info  lesson 3.T.SS.1.a: Practice Together = SK-SS1a-P1, SK-SS1a-P2, SK-SS1a-P3, SK-SS1a-P4 (practice minus the core refs)
+  info  lesson 3.T.SS.2.a: Practice Together = SK-SS2a-P1, SK-SS2a-P2, SK-SS2a-P3, SK-SS2a-P4 (practice minus the core refs)
+  info  lesson 3.T.T.1.a: Practice Together = SK-TT1a-P1, SK-TT1a-P2, SK-TT1a-P3 (practice minus the core refs)
+  info  lesson 3.T.T.1.b: Practice Together = SK-TT1b-P1, SK-TT1b-P2, SK-TT1b-P6, SK-TT1b-P3, SK-TT1b-P5 (practice minus the core refs)
+  info  lesson 3.T.T.1.c: Practice Together = SK-TT1c-P1, SK-TT1c-P2, SK-TT1c-P3 (practice minus the core refs)
+  info  lesson 3.T.T.1.d: Practice Together = SK-TT1d-P1, SK-TT1d-P2, SK-TT1d-P3 (practice minus the core refs)
+  info  lesson TS-SEQ: Practice Together = SK-TSSEQ-P1, SK-TSSEQ-P2, SK-TSSEQ-P3, SK-TSSEQ-P6 (practice minus the core refs)
+  info  lesson TS-CE: Practice Together = SK-TSCE-P1, SK-TSCE-P2, SK-TSCE-P3, SK-TSCE-P6 (practice minus the core refs)
+  info  lesson TS-PS: Practice Together = SK-TSPS-P1, SK-TSPS-P2, SK-TSPS-P3, SK-TSPS-P4, SK-TSPS-P6 (practice minus the core refs)
+  info  lesson TS-CC: Practice Together = SK-TSCC-P1, SK-TSCC-P2, SK-TSCC-P3, SK-TSCC-P4 (practice minus the core refs)
+  info  lesson TS-DESC: Practice Together = SK-TSDESC-P1, SK-TSDESC-P2, SK-TSDESC-P3, SK-TSDESC-P4 (practice minus the core refs)
+  info  lesson 3.T.T.2.a: Practice Together = SK-TT2a-P1, SK-TT2a-P2, SK-TT2a-P6 (practice minus the core refs)
+  info  lesson 3.T.T.2.b: Practice Together = SK-TT2b-P1, SK-TT2b-P2, SK-TT2b-P3, SK-TT2b-P5, SK-TT2b-P6 (practice minus the core refs)
+  info  lesson 3.T.T.2.c: Practice Together = SK-TT2c-P1, SK-TT2c-P2, SK-TT2c-P3, SK-TT2c-P4, SK-TT2c-P5 (practice minus the core refs)
+  info  lesson 3.T.T.4.a: Practice Together = SK-TT4a-P1, SK-TT4a-P2, SK-TT4a-P3, SK-TT4a-P4, SK-TT4a-P5 (practice minus the core refs)
+Checked 15 sets (147 items), 2 tasks and 99 lessons (1076 items) [manifest]; core: 17 lessons, 255 core items, 51 similar items
+  warn  PT-1 PT-1-14: Part A: clue shares “bright” only with the key
+  warn  lesson 3.T.C.1.b similar: 11 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TC1b-P5, SK-TC1b-P4, SK-TC1b-C04, SK-TC1b-C06, SK-TC1b-C07, SK-TC1b-C08, SK-TC1b-C10, SK-TC1b-C11, SK-TC1b-C12, SK-TC1b-C13, SK-TC1b-C15
+  warn  lesson 3.T.C.2.a similar: 9 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TC2a-C01, SK-TC2a-P5, SK-TC2a-C05, SK-TC2a-C06, SK-TC2a-C08, SK-TC2a-C09, SK-TC2a-C10, SK-TC2a-C12, SK-TC2a-C13
+  warn  lesson 3.T.SS.1.a similar: 11 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-SS1a-P5, SK-SS1a-P7, SK-SS1a-C04, SK-SS1a-C07, SK-SS1a-C08, SK-SS1a-C09, SK-SS1a-C10, SK-SS1a-C11, SK-SS1a-C12, SK-SS1a-C13, SK-SS1a-C15
+  warn  lesson 3.T.SS.2.a similar: 8 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-SS2a-C03, SK-SS2a-C04, SK-SS2a-C08, SK-SS2a-C09, SK-SS2a-C10, SK-SS2a-C13, SK-SS2a-C14, SK-SS2a-C15
+  warn  lesson 3.T.T.1.a test SK-TT1a-T5: choices: clue shares “priya” only with the key
+  warn  lesson 3.T.T.1.a similar: 8 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT1a-P5, SK-TT1a-C03, SK-TT1a-C04, SK-TT1a-C07, SK-TT1a-C10, SK-TT1a-C13, SK-TT1a-C14, SK-TT1a-C15
+  warn  lesson 3.T.T.1.b similar: 10 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT1b-P7, SK-TT1b-P4, SK-TT1b-C03, SK-TT1b-C05, SK-TT1b-C06, SK-TT1b-C08, SK-TT1b-C09, SK-TT1b-C10, SK-TT1b-C14, SK-TT1b-C15
+  warn  lesson 3.T.T.1.c practice SK-TT1c-P3 (addons): hint 1 shares “cares” only with the key
+  warn  lesson 3.T.T.1.c similar: 9 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT1c-P5, SK-TT1c-C03, SK-TT1c-C04, SK-TT1c-C08, SK-TT1c-C09, SK-TT1c-C11, SK-TT1c-C13, SK-TT1c-C14, SK-TT1c-C15
+  warn  lesson 3.T.T.1.d practice SK-TT1d-P1: choices: clue shares “something” only with the key
+  warn  lesson 3.T.T.1.d similar: 8 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT1d-P5, SK-TT1d-C07, SK-TT1d-C08, SK-TT1d-C10, SK-TT1d-C12, SK-TT1d-C13, SK-TT1d-C14, SK-TT1d-C15
+  warn  lesson 3.T.T.1.e test SK-TT1e-T5: choices: clue shares “back” only with the key
+  warn  lesson TS-SEQ similar: 9 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TSSEQ-C02, SK-TSSEQ-C04, SK-TSSEQ-C05, SK-TSSEQ-C07, SK-TSSEQ-C08, SK-TSSEQ-C09, SK-TSSEQ-C11, SK-TSSEQ-C12, SK-TSSEQ-C15
+  warn  lesson TS-CE similar: 10 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TSCE-P5, SK-TSCE-C03, SK-TSCE-C05, SK-TSCE-C07, SK-TSCE-C08, SK-TSCE-C09, SK-TSCE-C10, SK-TSCE-C11, SK-TSCE-C13, SK-TSCE-C14
+  warn  lesson TS-PS similar: 10 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TSPS-C02, SK-TSPS-C03, SK-TSPS-C05, SK-TSPS-C06, SK-TSPS-C07, SK-TSPS-C08, SK-TSPS-C09, SK-TSPS-C12, SK-TSPS-C13, SK-TSPS-C15
+  warn  lesson TS-CC similar: 9 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TSCC-P5, SK-TSCC-P6, SK-TSCC-C04, SK-TSCC-C08, SK-TSCC-C09, SK-TSCC-C10, SK-TSCC-C13, SK-TSCC-C14, SK-TSCC-C15
+  warn  lesson TS-DESC similar: 9 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TSDESC-P5, SK-TSDESC-C05, SK-TSDESC-C06, SK-TSDESC-C09, SK-TSDESC-C10, SK-TSDESC-C11, SK-TSDESC-C13, SK-TSDESC-C14, SK-TSDESC-C15
+  warn  lesson 3.T.T.2.a similar: 11 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT2a-P7, SK-TT2a-C03, SK-TT2a-C05, SK-TT2a-C06, SK-TT2a-C08, SK-TT2a-C09, SK-TT2a-C10, SK-TT2a-C11, SK-TT2a-C12, SK-TT2a-C14, SK-TT2a-P5
+  warn  lesson 3.T.T.2.b similar: 10 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT2b-P4, SK-TT2b-C02, SK-TT2b-C03, SK-TT2b-C06, SK-TT2b-C08, SK-TT2b-C09, SK-TT2b-C10, SK-TT2b-C11, SK-TT2b-C13, SK-TT2b-C15
+  warn  lesson 3.T.T.2.c similar: 6 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT2c-C06, SK-TT2c-C09, SK-TT2c-C10, SK-TT2c-C13, SK-TT2c-C14, SK-TT2c-C15
+  warn  lesson 3.T.T.4.a similar: 11 of 15 core items have no similar item, so Try a similar question is hidden on them: SK-TT4a-C04, SK-TT4a-C05, SK-TT4a-C06, SK-TT4a-C07, SK-TT4a-C08, SK-TT4a-C09, SK-TT4a-C10, SK-TT4a-C11, SK-TT4a-C13, SK-TT4a-C14, SK-TT4a-C15
+  warn  lesson 3.L.V.3.b test SK-V3b-T1: slot 0: clue shares “blew” only with the key
+  warn  lesson 3.L.V.3.b test SK-V3b-T1: slot 1: clue shares “blue” only with the key
+  warn  core (migration): 76 lessons with a skill check have no core yet and are not listed as exceptions (a failure only after migration)
+PASS (0 failures, 25 warnings)
+exit 0

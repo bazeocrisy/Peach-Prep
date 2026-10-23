@@ -1,0 +1,53 @@
+PASS  A.1 Together on a core lesson is practice minus the core refs: exactly P1-P3 (lead decision)
+PASS  A.2 P4-P6 appear only in core (set 1), never in Together; fifteen core items in three sets of five
+PASS  A.3 sets are SK:<k>:y, :y2, :y3 (own, set 1-3); Together -> picker, set 1 -> set 2 -> set 3 -> the check
+PASS  A.4 addons are merged at registration (hints on the ref P4 and on Together P1); the similar bank is not a set
+PASS  A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons) and leads to the Try step's set picker
+PASS  B.0 the Try step is a set picker: heading, three set cards, Start set 1, the stop-and-come-back line
+PASS  B.1 own mode: Check my answer, Give me a hint, Show me how (shows the answer) and Next are present before any wrong answer; no Help me; targets at least 44px
+PASS  B.2 blank: Check my answer is disabled; Try a similar question is not offered yet
+FAIL  B.3 a wrong check says Not quite with no explanation and allows a retry; after two wrong checks Check waits for a hint or Show me how   [({'fb': 'Not quiteTry again. The answers are honest and thoughtful. She gives back money that was not hers, which is honest. She thinks about how Mr. Okafor would come up short, which is thoughtful. She wants to keep the money for a moment, but she does not
+PASS  B.4 three graduated hints in order, each the authored text, labelled Hint n of 3; no outline, nothing ruled out; a hint re-enables one check
+PASS  B.5 Show me how: numbered steps from how, the answer, the mix-up line, the key outlined; the item is Answer shown and focus moves to the steps
+PASS  B.6 a right answer after Show me how is accepted but stays Answer shown; w, h and x are never lowered; the full history is kept
+PASS  B.7 no pass from practice: pp.progress.v1 is untouched by own-mode actions; only pp.practice.v1 is new
+PASS  B.8 Try a similar question opens a separate extra question (S01), labelled not one of the fifteen, with the same controls and no further similar button
+PASS  B.9 the similar question is saved under s with for = the core item; the core record is unchanged; it is not counted in the fifteen
+PASS  B.10 Back to question 1 returns to the core item; its only similar question is used, so the button is gone
+PASS  B.11 right on the first try: status Right on the first try; a core item with no mapped similar item hides Try a similar question
+PASS  B.12 five statuses in words at the end of the set (shown, first try, retry, hints, not finished); a skipped item stays Not finished
+PASS  B.13 the stored facts derive the same five statuses
+PASS  B.14 a reload on a finished set shows the already-finished stage: Look back at this set, Go on to set 2, Back to the lesson
+PASS  B.15 Look back reopens set 1 at question 1 with the saved answer locked and its Answer shown status and steps
+PASS  B.16 the set picker shows each set's status in words (dots carry a word, not only colour) and Continue set 1; extra questions are counted apart
+PASS  C.1 resume: after a reload the picker says Started: question 4 of 5, and Continue opens set 2 at question 4 with its unchecked answer
+PASS  C.2 resume restores the earlier question's answer, its choice order and its hint log (two hints shown again)
+PASS  C.3 #play/SK:<k>:y3/test runs as Practice on my own (never a test) and finishing it stores no pass, try or best
+PASS  C.4 no pass from practice: after all fifteen, pp.progress.v1[k] gains only tried:true; the list says Started, not passed; the Try step is ticked
+PASS  D.1 cr: Not scored, Compare with the sample shows one good answer (other answers can also be right) and the criteria; status Written and checked; never right
+PASS  D.2 cr resume: the written answer and the ticked criteria come back after a reload
+PASS  D.3 Show me how on a written item: the sample and the criteria, compare wording (no 'choose'), refreshed after Compare; the checklist is below the steps and the feedback's 'shown above' is true
+PASS  D.4 3.T.C.2.a C12 (cr): Show me how shows its sample and every criterion, with no 'choose' wording, and marks it Answer shown
+PASS  E.1 blocked storage: the honest notice on the picker and in the player; no stop-and-come-back promise; practice works for the visit; no page errors
+PASS  E.1 full storage: the honest notice on the picker and in the player; no stop-and-come-back promise; practice works for the visit; no page errors; the notice clears after a later save succeeds
+PASS  E.2 malformed pp.practice.v1 (bad JSON): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts
+PASS  E.2 malformed pp.practice.v1 (an array): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts
+PASS  E.2 malformed pp.practice.v1 (mixed): the page renders with an honest notice, valid records are kept and cleaned, the raw value is untouched until a child acts
+PASS  F.1 seeded pp.progress.v1 (2.1, PP-003, PP-004 records), pp.path.v1, pp.task.* and pp.skwrite.* stay byte-identical after every changed screen and own-mode actions
+PASS  F.2 a legacy tried:true (the old short Try) still shows Practicing, but does not tick the fifteen-question Try step
+PASS  F.3 a lesson without core is unchanged: ceil(n/2) Together/Try split, Try It Yourself card, Help me hidden until one wrong try, no hint/how buttons, nothing in pp.practice.v1
+PASS  G.1 every leaf, parent, 3-5. band form, grammar-chart level and Practices code opens #std/<code> with a focused h1, the official wording and page, no nested links and no sideways scroll at 320px (211 addresses)
+PASS  G.2 rendering every standard page writes nothing: every localStorage key is byte-identical
+PASS  G.3 a code with several lessons lists all of them in the recommended order (3.T.SS.1.a: six lessons)
+PASS  G.4 a parent page lists its components in the recommended order with a suggested start; GUM is grouped by level; a Practices code says a grown-up observes it
+PASS  G.5 a narrow code page: one lesson button, practice (fifteen in three sets), the check with its two forms, progress labelled as this device only
+PASS  G.6 every displayed code is a real link (catalog rows, skill chips and official wording, parent standards, claims table, path, habits) and none is nested in a link, button or summary
+PASS  G.7 code search shows a standard card for 3.T.T.1, 3-5.T.T.1, K-12.P.EICC.1, a GUM level and a GUM row (3-5.RA.2, GaDOE's print, resolves too); a word search does not; 3-5. finds the lessons
+PASS  H.1 catalog code -> standard page (focus on h1) -> lesson -> '← Standard 3.T.T.1.c' returns to the standard; Back to the catalog; Forward; reload; parent link; the page's Back
+PASS  H.2 direct addresses: #std/3-5.T.T.1 settles on #std/3.T.T.1; a bad code shows the not-found home; #play/SK:<k>:y2/try opens set 2, whose Back opens the Try step
+PASS  I.1 the check has a question navigator (one button per question, aria-current, state in words) and Mark to review; no hint, Show me how, similar, Check or feedback
+PASS  I.2 before submitting, the unanswered and marked questions are listed by number; each returns to its question
+PASS  I.3 results: the partial-credit line, a partial line in the review, a one-code check reports its total (no thin component rows), the retry names form B, and lessons to revisit
+PASS  I.4 a one-form lesson's retry says it uses the same questions; a legacy lesson's revisit offers Practice Together
+PASS  I.5 a practice test reports an area on its own only when it has enough questions; smaller areas are grouped as Other parts
+exit 143

@@ -1,0 +1,274 @@
+{
+  "checks": [
+    {
+      "name": "True: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "True: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "True: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "True: category retained",
+      "pass": true
+    },
+    {
+      "name": "True: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "True: no errors",
+      "pass": true
+    },
+    {
+      "name": "False: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "False: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "False: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "False: category retained",
+      "pass": true
+    },
+    {
+      "name": "False: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "False: no errors",
+      "pass": true
+    },
+    {
+      "name": "'bad': opening never passes",
+      "pass": true
+    },
+    {
+      "name": "'bad': Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "'bad': neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "'bad': category retained",
+      "pass": true
+    },
+    {
+      "name": "'bad': no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "'bad': no errors",
+      "pass": true
+    },
+    {
+      "name": "42: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "42: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "42: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "42: category retained",
+      "pass": true
+    },
+    {
+      "name": "42: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "42: no errors",
+      "pass": true
+    },
+    {
+      "name": "None: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "None: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "None: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "None: category retained",
+      "pass": true
+    },
+    {
+      "name": "None: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "None: no errors",
+      "pass": true
+    },
+    {
+      "name": "[]: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "[]: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "[]: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "[]: category retained",
+      "pass": true
+    },
+    {
+      "name": "[]: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "[]: no errors",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: opening never passes",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: Watch Me opens",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: neighbor untouched",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: category retained",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: no invented pass or Retained",
+      "pass": true
+    },
+    {
+      "name": "[1, 2]: no errors",
+      "pass": true
+    },
+    {
+      "name": "blocked: no unload warning before changes",
+      "pass": true
+    },
+    {
+      "name": "blocked: accurate notice",
+      "pass": true
+    },
+    {
+      "name": "blocked: unload protects unsaved writing",
+      "pass": true
+    },
+    {
+      "name": "blocked: other lesson isolated",
+      "pass": true
+    },
+    {
+      "name": "blocked: text retained through mode/lesson change",
+      "pass": true
+    },
+    {
+      "name": "blocked: checklist retained",
+      "pass": true
+    },
+    {
+      "name": "quota: no unload warning before changes",
+      "pass": true
+    },
+    {
+      "name": "quota: accurate notice",
+      "pass": true
+    },
+    {
+      "name": "quota: unload protects unsaved writing",
+      "pass": true
+    },
+    {
+      "name": "quota: other lesson isolated",
+      "pass": true
+    },
+    {
+      "name": "quota: text retained through mode/lesson change",
+      "pass": true
+    },
+    {
+      "name": "quota: checklist retained",
+      "pass": true
+    },
+    {
+      "name": "quota: notice recovers after successful save",
+      "pass": true
+    },
+    {
+      "name": "normal: no unload warning before changes",
+      "pass": true
+    },
+    {
+      "name": "normal: no false unavailable warning",
+      "pass": true
+    },
+    {
+      "name": "normal: other lesson isolated",
+      "pass": true
+    },
+    {
+      "name": "normal: text retained through mode/lesson change",
+      "pass": true
+    },
+    {
+      "name": "normal: checklist retained",
+      "pass": true
+    },
+    {
+      "name": "normal: reload preserved text",
+      "pass": true
+    },
+    {
+      "name": "normal: externally cleared saved writing stays cleared",
+      "pass": true
+    },
+    {
+      "name": "malformed-writing: no unload warning before changes",
+      "pass": true
+    },
+    {
+      "name": "malformed-writing: no false unavailable warning",
+      "pass": true
+    },
+    {
+      "name": "malformed-writing: other lesson isolated",
+      "pass": true
+    },
+    {
+      "name": "malformed-writing: text retained through mode/lesson change",
+      "pass": true
+    },
+    {
+      "name": "malformed-writing: checklist retained",
+      "pass": true
+    }
+  ],
+  "passed": 67,
+  "failed": 0
+}

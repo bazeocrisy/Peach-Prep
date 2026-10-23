@@ -1,0 +1,28 @@
+PASS  STD.1 every standard, parent, band form and GUM level address opens a std page with h1 focus and official wording (200 addresses)
+PASS  STD.2 no std-link nested in a link/button/summary on any std page
+PASS  STD.3 opening all std pages by address writes nothing to storage
+PASS  STD.4 Practices codes resolve (64)
+PASS  STD.5 hostile/bad std addresses raise no page error
+INFO  STD.5b where bad std addresses land  [('', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('zzz', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.9', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.1.z', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('%E0%A4%A', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.L.GC.1:X', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('__proto__', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('constructor', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('toString', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.1.c/extra', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, s
+PASS  STD.6 an unknown code says it was not found (honest recovery, not a silent landing)
+PASS  STD.7 no nested std-link on home, parents standards (all open), parents test, skill page, path, search, habits
+INFO  STD.7b std-link counts per screen  [('PP_APP.goHome()', 107), ("PP_PARENTS.open('standards');document.qu", 174), ("PP_PARENTS.open('test')", 174), ("PP_SKILLS.open('3.T.T.2.a')", 2), ("location.hash='#path'", 103), ('PP_APP.goHome();(()=>{const i=document.g', 103), ('PP_APP.openHabits()', 53)]
+PASS  STD.8 every displayed std-link (home + parents) resolves (690 links)
+PASS  STD.9 std -> lesson -> skill-back returns to the std page; Forward/Back move between them
+INFO  STD.9b focus after returning to std page  ['std', '#std/3.T.T.1', 'std-title']
+INFO  STD.10 std-link inside the player during a check  False
+INFO  TEST.0 lesson used  3.T.T.2.a
+PASS  TEST.1 navigator: one button per question, states in words, current marked
+PASS  TEST.2 no hint / Show me how / similar / check controls in a check
+PASS  TEST.3 answering shows no feedback and updates the navigator label
+PASS  TEST.4 the confirm screen names each unanswered and marked question, each a button back
+PASS  TEST.5 a confirm-list button returns to that question with focus on the prompt
+INFO  TEST.6 results  {'score': '1\nof 8 points', 'partial': 'This includes one point of partial credit, from two-point questions that were partly right.', 'skills': None, 'revisit': 'What to work on next\n\nGo back over the lesson, then try again.\n\nF2 · Main idea and key details\nWatch Me again\nPractice on my own\n\nThis was six questions, a small sample. It shows what to practice next; it is not a diagnosis or a Milestones score.', 'again': 'The next skill check uses form B, with different questions.', 'foc': 'res-title'}
+PASS  TEST.6a partial credit line appears when a two-point item was half right
+PASS  TEST.6b revisit names lessons and calls the sample small
+PASS  TEST.6c the retry note matches the next form actually served (A->B alternation unchanged)
+PASS  TEST.7 review shows partial-credit lines after submission
+PASS  TEST.8 Take the skill check again serves the form the note promised
+INFO  TEST.9 practice-test area rows  ['Vocabulary 1 of 4', 'Stories: characters, plot and message 2 of 7', 'Using evidence and sources 4 of 9', 'Structure, text features and figurative language 2 of 4', 'Informational texts: main idea and details 6 of 10', 'Grammar and conventions 2 of 5', 'Other parts (too few questions to report on their own) 2 of 2']
+PASS  TEST.10 no page errors
+20 passed, 0 failed, 7 info

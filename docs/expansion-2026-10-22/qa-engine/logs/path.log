@@ -1,0 +1,149 @@
+PASS 320: fresh visitor gets focused two-choice screen
+PASS 320: choice layout and control targets
+PASS 320: introduction before start
+PASS 320: preview expands and focuses first phase
+PASS 320: start saves preference and focuses next lesson
+PASS 320: all 101 activities unique
+PASS 320: catalog and routine counts
+PASS 320: every matrix lesson key resolves
+PASS 320: all 53 official practice codes mapped
+PASS 320: required story-elements starting point
+PASS 320: parallel activities visible from start
+PASS 320: path layout
+PASS 320: lesson opens and step bookmark saved
+PASS 320: lesson Back returns to path
+PASS 320: reload resumes lesson step
+PASS 320: finished activity selects next without changing scores
+PASS 320: unfinished can be revisited
+PASS 320: habit recorded separately
+PASS 320: browse selection opens existing catalog
+PASS 320: switching preserves scores and path records
+PASS 320: browse preference survives reload
+PASS 320: return to path remembers introduction
+PASS 320: keyboard expands parallel lane
+PASS 320: expanded foundations layout
+PASS 320: Grade 3 introduction label honest
+PASS 320: writing returns to path
+PASS 320: browser Back to path
+PASS 320: browser Forward reopens lesson
+PASS 320: canceled navigation keeps active test
+PASS 320: accepted navigation leaves test safely
+PASS 320: no page errors
+PASS 390: fresh visitor gets focused two-choice screen
+PASS 390: choice layout and control targets
+PASS 390: introduction before start
+PASS 390: preview expands and focuses first phase
+PASS 390: start saves preference and focuses next lesson
+PASS 390: all 101 activities unique
+PASS 390: catalog and routine counts
+PASS 390: every matrix lesson key resolves
+PASS 390: all 53 official practice codes mapped
+PASS 390: required story-elements starting point
+PASS 390: parallel activities visible from start
+PASS 390: path layout
+PASS 390: lesson opens and step bookmark saved
+PASS 390: lesson Back returns to path
+PASS 390: reload resumes lesson step
+PASS 390: finished activity selects next without changing scores
+PASS 390: unfinished can be revisited
+PASS 390: habit recorded separately
+PASS 390: browse selection opens existing catalog
+PASS 390: switching preserves scores and path records
+PASS 390: browse preference survives reload
+PASS 390: return to path remembers introduction
+PASS 390: keyboard expands parallel lane
+PASS 390: expanded foundations layout
+PASS 390: Grade 3 introduction label honest
+PASS 390: writing returns to path
+PASS 390: browser Back to path
+PASS 390: browser Forward reopens lesson
+PASS 390: canceled navigation keeps active test
+PASS 390: accepted navigation leaves test safely
+PASS 390: no page errors
+PASS 768: fresh visitor gets focused two-choice screen
+PASS 768: choice layout and control targets
+PASS 768: introduction before start
+PASS 768: preview expands and focuses first phase
+PASS 768: start saves preference and focuses next lesson
+PASS 768: all 101 activities unique
+PASS 768: catalog and routine counts
+PASS 768: every matrix lesson key resolves
+PASS 768: all 53 official practice codes mapped
+PASS 768: required story-elements starting point
+PASS 768: parallel activities visible from start
+PASS 768: path layout
+PASS 768: lesson opens and step bookmark saved
+PASS 768: lesson Back returns to path
+PASS 768: reload resumes lesson step
+PASS 768: finished activity selects next without changing scores
+PASS 768: unfinished can be revisited
+PASS 768: habit recorded separately
+PASS 768: browse selection opens existing catalog
+PASS 768: switching preserves scores and path records
+PASS 768: browse preference survives reload
+PASS 768: return to path remembers introduction
+PASS 768: keyboard expands parallel lane
+PASS 768: expanded foundations layout
+PASS 768: Grade 3 introduction label honest
+PASS 768: writing returns to path
+PASS 768: browser Back to path
+PASS 768: browser Forward reopens lesson
+PASS 768: canceled navigation keeps active test
+PASS 768: accepted navigation leaves test safely
+PASS 768: no page errors
+PASS 1366: fresh visitor gets focused two-choice screen
+PASS 1366: choice layout and control targets
+PASS 1366: introduction before start
+PASS 1366: preview expands and focuses first phase
+PASS 1366: start saves preference and focuses next lesson
+PASS 1366: all 101 activities unique
+PASS 1366: catalog and routine counts
+PASS 1366: every matrix lesson key resolves
+PASS 1366: all 53 official practice codes mapped
+PASS 1366: required story-elements starting point
+PASS 1366: parallel activities visible from start
+PASS 1366: path layout
+PASS 1366: lesson opens and step bookmark saved
+PASS 1366: lesson Back returns to path
+PASS 1366: reload resumes lesson step
+PASS 1366: finished activity selects next without changing scores
+PASS 1366: unfinished can be revisited
+PASS 1366: habit recorded separately
+PASS 1366: browse selection opens existing catalog
+PASS 1366: switching preserves scores and path records
+PASS 1366: browse preference survives reload
+PASS 1366: return to path remembers introduction
+PASS 1366: keyboard expands parallel lane
+PASS 1366: expanded foundations layout
+PASS 1366: Grade 3 introduction label honest
+PASS 1366: writing returns to path
+PASS 1366: browser Back to path
+PASS 1366: browser Forward reopens lesson
+PASS 1366: canceled navigation keeps active test
+PASS 1366: accepted navigation leaves test safely
+PASS 1366: no page errors
+PASS malformed: startup usable
+PASS malformed: path usable
+PASS malformed: no page errors
+PASS wrong-types: startup usable
+PASS wrong-types: path usable
+PASS wrong-types: no page errors
+PASS blocked: startup usable
+PASS blocked: path usable
+PASS blocked: persistence limitation visible
+PASS blocked: no page errors
+PASS quota: startup usable
+PASS quota: path usable
+PASS quota: persistence limitation visible
+PASS quota: no page errors
+PASS legacy: startup usable
+PASS legacy: path usable
+PASS legacy: passed score not erased or converted to route completion
+PASS legacy: essay draft preserved
+PASS legacy: no page errors
+PASS completed: root remembers path mode
+PASS completed: honest finish message and no next lesson
+PASS completed: unchecking restores a next lesson
+PASS invalid bookmark: falls back to unfinished lesson
+PASS invalid address: visible recovery note
+148 passed, 0 failed

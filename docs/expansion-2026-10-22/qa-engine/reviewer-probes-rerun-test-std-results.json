@@ -1,0 +1,137 @@
+[
+ {
+  "name": "STD.1 every standard, parent, band form and GUM level address opens a std page with h1 focus and official wording (200 addresses)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.2 no std-link nested in a link/button/summary on any std page",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.3 opening all std pages by address writes nothing to storage",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.4 Practices codes resolve (64)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.5 hostile/bad std addresses raise no page error",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.5b where bad std addresses land",
+  "pass": null,
+  "detail": "[('', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('zzz', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('3.T.T.9', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('3.T.T.1.z', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('%E0%A4%A', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('3.L.GC.1:X', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('__proto__', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('constructor', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('toString', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, so here is the home page.\"}), ('3.T.T.1.c/extra', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': \"That page wasn't found, s"
+ },
+ {
+  "name": "STD.6 an unknown code says it was not found (honest recovery, not a silent landing)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.7 no nested std-link on home, parents standards (all open), parents test, skill page, path, search, habits",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.7b std-link counts per screen",
+  "pass": null,
+  "detail": "[('PP_APP.goHome()', 107), (\"PP_PARENTS.open('standards');document.qu\", 174), (\"PP_PARENTS.open('test')\", 174), (\"PP_SKILLS.open('3.T.T.2.a')\", 2), (\"location.hash='#path'\", 103), ('PP_APP.goHome();(()=>{const i=document.g', 103), ('PP_APP.openHabits()', 53)]"
+ },
+ {
+  "name": "STD.8 every displayed std-link (home + parents) resolves (690 links)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.9 std -> lesson -> skill-back returns to the std page; Forward/Back move between them",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "STD.9b focus after returning to std page",
+  "pass": null,
+  "detail": "['std', '#std/3.T.T.1', 'std-title']"
+ },
+ {
+  "name": "STD.10 std-link inside the player during a check",
+  "pass": null,
+  "detail": "False"
+ },
+ {
+  "name": "TEST.0 lesson used",
+  "pass": null,
+  "detail": "3.T.T.2.a"
+ },
+ {
+  "name": "TEST.1 navigator: one button per question, states in words, current marked",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.2 no hint / Show me how / similar / check controls in a check",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.3 answering shows no feedback and updates the navigator label",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.4 the confirm screen names each unanswered and marked question, each a button back",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.5 a confirm-list button returns to that question with focus on the prompt",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.6 results",
+  "pass": null,
+  "detail": "{'score': '1\\nof 8 points', 'partial': 'This includes one point of partial credit, from two-point questions that were partly right.', 'skills': None, 'revisit': 'What to work on next\\n\\nGo back over the lesson, then try again.\\n\\nF2 \u00b7 Main idea and key details\\nWatch Me again\\nPractice on my own\\n\\nThis was six questions, a small sample. It shows what to practice next; it is not a diagnosis or a Milestones score.', 'again': 'The next skill check uses form B, with different questions.', 'foc': 'res-title'}"
+ },
+ {
+  "name": "TEST.6a partial credit line appears when a two-point item was half right",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.6b revisit names lessons and calls the sample small",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.6c the retry note matches the next form actually served (A->B alternation unchanged)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.7 review shows partial-credit lines after submission",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.8 Take the skill check again serves the form the note promised",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "TEST.9 practice-test area rows",
+  "pass": null,
+  "detail": "['Vocabulary 1 of 4', 'Stories: characters, plot and message 2 of 7', 'Using evidence and sources 4 of 9', 'Structure, text features and figurative language 2 of 4', 'Informational texts: main idea and details 6 of 10', 'Grammar and conventions 2 of 5', 'Other parts (too few questions to report on their own) 2 of 2']"
+ },
+ {
+  "name": "TEST.10 no page errors",
+  "pass": true,
+  "detail": ""
+ }
+]

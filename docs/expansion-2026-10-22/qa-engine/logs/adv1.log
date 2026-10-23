@@ -1,0 +1,104 @@
+PASS  STD.1 every standard, parent, band form and GUM level address opens a std page with h1 focus and official wording (200 addresses)
+PASS  STD.2 no std-link nested in a link/button/summary on any std page
+PASS  STD.3 opening all std pages by address writes nothing to storage
+PASS  STD.4 Practices codes resolve (64)
+PASS  STD.5 hostile/bad std addresses raise no page error
+INFO  STD.5b where bad std addresses land  [('', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('zzz', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.9', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.1.z', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('%E0%A4%A', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.L.GC.1:X', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('__proto__', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('constructor', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('toString', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, so here is the home page."}), ('3.T.T.1.c/extra', {'cur': 'home', 'hash': '', 'title': 'Grade 3 ELA lessons', 'note': "That page wasn't found, s
+FAIL  STD.6 an unknown code says it was not found (honest recovery, not a silent landing)   [Peach Prep
+Grade 3 ELA
+
+For parents
+Grade 3 ELA lessons
+
+Georgia's grade 3 ELA skills, grouped by category. Most lessons have five steps: Learn It, Watch Me, Practice Together, Try It Yourself and Test Your Knowledge. Hands-on lessons have four.
+
+That page wasn't found, so here is the home page.
+
+Up]
+PASS  STD.7 no nested std-link on home, parents standards (all open), parents test, skill page, path, search, habits
+INFO  STD.7b std-link counts per screen  [('PP_APP.goHome()', 107), ("PP_PARENTS.open('standards');document.qu", 174), ("PP_PARENTS.open('test')", 174), ("PP_SKILLS.open('3.T.T.2.a')", 2), ("location.hash='#path'", 103), ('PP_APP.goHome();(()=>{const i=document.g', 103), ('PP_APP.openHabits()', 53)]
+PASS  STD.8 every displayed std-link (home + parents) resolves (690 links)
+PASS  STD.9 std -> lesson -> skill-back returns to the std page; Forward/Back move between them
+INFO  STD.9b focus after returning to std page  ['std', '#std/3.T.T.1', 'std-title']
+INFO  STD.10 std-link inside the player during a check  False
+PASS  ST.corrupt-json no page error; other keys byte-identical
+INFO  ST.corrupt-json picker notice / stored after one action  ('Saved practice could not be read, so it starts fresh. Nothing else was changed.', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[3,2,0,1]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"rev":"1","at":{"set":1,"pos":0}}}}')
+PASS  ST.corrupt-json raw value untouched until the child acts
+INFO  ST.corrupt-json the damaged raw value after one child action (overwritten?)  True
+PASS  ST.array no page error; other keys byte-identical
+INFO  ST.array picker notice / stored after one action  ('Saved practice could not be read, so it starts fresh. Nothing else was changed.', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[3,0,1,2]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"rev":"1","at":{"set":1,"pos":0}}}}')
+PASS  ST.string no page error; other keys byte-identical
+INFO  ST.string picker notice / stored after one action  ('Saved practice could not be read, so it starts fresh. Nothing else was changed.', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[0,2,3,1]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"rev":"1","at":{"set":1,"pos":0}}}}')
+PASS  ST.null-l no page error; other keys byte-identical
+INFO  ST.null-l picker notice / stored after one action  ('Saved practice could not be read, so it starts fresh. Nothing else was changed.', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[1,0,2,3]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"rev":"1","at":{"set":1,"pos":0}}}}')
+PASS  ST.proto no page error; other keys byte-identical
+INFO  ST.proto picker notice / stored after one action  ('', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[2,3,0,1]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"rev":"1","at":{"set":1,"pos":0}}}}')
+PASS  ST.future-v no page error; other keys byte-identical
+INFO  ST.future-v picker notice / stored after one action  ('', '{"v":1,"l":{"3.T.T.2.a":{"rev":"1","i":{"SK-TT2a-P4":{"w":1,"h":0,"x":false,"ok":false,"howAfter":false,"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[2,1,0,3]},"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]}},"s":{},"at":{"set":1,"pos":0}}},"extra":{"keep":1}}')
+INFO  ST.future-v version after a save (a v:9 record is rewritten as v:1?)  (1, True)
+PASS  ST.bad-resp no page error; other keys byte-identical
+INFO  ST.bad-resp picker notice / stored after one action  ('', '{"v":1,"l":{"3.T.T.2.a":{"rev":"1","at":{"set":1,"pos":0},"i":{"SK-TT2a-P4":{"r":{"v":[1,1,0,1]},"ord":{"rowOrder":[0,1,2,3]},"w":4,"h":3,"x":false,"ok":false,"howAfter":false,"set":1,"pos":0,"d":"2026-10-23","log":[{"d":"2026-10-23","t":"check","pts":0,"max":2}]},"SK-TT2a-P7":{"r":"garbage","ord":"')
+INFO  ST.bad-resp record 0 after load+action (x:'true' string, ok:1, h:99)  {'r': {'v': [1, 1, 0, 1]}, 'ord': {'rowOrder': [0, 1, 2, 3]}, 'w': 4, 'h': 3, 'x': False, 'ok': False, 'howAfter': False, 'set': 1, 'pos': 0, 'd': '2026-10-23', 'log': [{'d': '2026-10-23', 't': 'check', 'pts': 0, 'max': 2}]}
+PASS  ST.huge-w no page error; other keys byte-identical
+INFO  ST.huge-w picker notice / stored after one action  ('', '{"v":1,"l":{"3.T.T.2.a":{"i":{"SK-TT2a-P4":{"w":1e+308,"h":3,"log":[{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"check"},{"t":"ch')
+PASS  ST.blocked no page error; practice still works for the visit (record in memory)
+PASS  ST.blocked honest notice in the player, and no 'come back' promise on the picker
+PASS  ST.full no page error; practice still works for the visit (record in memory)
+PASS  ST.full honest notice in the player, and no 'come back' promise on the picker
+PASS  PASS.1 fifteen reveals + correct answers: no mastered/best/attempts written; status not mastered; all fifteen 'Answer shown'
+PASS  PASS.1b and the Try step says tried only
+PASS  PASS.2 #play/SK:3.T.T.2.a:y/test runs as practice, not as a test
+PASS  PASS.2 #play/SK:3.T.T.2.a:y3/test runs as practice, not as a test
+PASS  PASS.2 #play/SK:3.T.T.2.a:y2/practice runs as practice, not as a test
+PASS  PASS.3 PP_PLAYER.start(own set,'test') is forced to practice
+PASS  PASS.4 cr: all criteria ticked -> status 'cr' (Written and checked), ok false, 'Not scored', no progress pass
+PASS  PASS.5 no page errors
+PASS  STAT.0 reload resumes at the question with the hint already shown
+PASS  STAT.1 first / retry / hints / shown / none stay distinct
+PASS  STAT.2 assistance never erased: w, h, x kept after the right answer; log has every event
+PASS  STAT.3 Show me how after a right answer keeps 'first' and records howAfter
+PASS  STAT.4 similar saved apart (s, for), core item unchanged, counts unchanged
+PASS  STAT.5 picker summary names each status in words with counts
+PASS  STAT.6 no page errors
+INFO  REV.1 rev mismatch notice text  This practice was updated. Earlier answers are kept, but questions that changed start fresh.
+FAIL  REV.2 after a rev change the notice's promise ('questions that changed start fresh') is backed by code (unchanged id => restored; is any change detected?)   [notice promises per-question freshness, but the record for SK-TT2a-P4 was restored as-is: {'h': 1, 'r': '{"v":[1,1,0,1]}'}]
+INFO  TEST.0 lesson used  3.T.SS.2.a
+PASS  TEST.1 navigator: one button per question, states in words, current marked
+PASS  TEST.2 no hint / Show me how / similar / check controls in a check
+PASS  TEST.3 answering shows no feedback and updates the navigator label
+PASS  TEST.4 the confirm screen names each unanswered and marked question, each a button back
+PASS  TEST.5 a confirm-list button returns to that question with focus on the prompt
+INFO  TEST.6 results  {'score': '1\nof 6 points', 'partial': 'This includes one point of partial credit, from two-point questions that were partly right.', 'skills': None, 'revisit': 'What to work on next\n\nGo back over the lesson, then try again.\n\nH1 · Similes, metaphors and idioms\nWatch Me again\nPractice on my own\n\nThis was five questions, a small sample. It shows what to practice next; it is not a diagnosis or a Milestones score.', 'again': 'The next skill check uses form B, with different questions.', 'foc': 'res-title'}
+PASS  TEST.6a partial credit line appears when a two-point item was half right
+PASS  TEST.6b revisit names lessons and calls the sample small
+PASS  TEST.6c the retry note matches the next form actually served (A->B alternation unchanged)
+FAIL  TEST.7 review shows partial-credit lines and answers after submission   [1
+In paragraph 2, Dad asks, "Why the long face?" What does he mean?
+0 of 1
+
+You answered: Why are you so tired?
+
+Show me how
+
+2
+Select the sentence that uses a simile to describe how Jamal and Noor move.
+0 of 1
+
+You answered: No answer
+
+Show me how
+
+3
+This question has two parts. Answer Part A, then]
+PASS  TEST.8 Take the skill check again serves the form the note promised
+INFO  TEST.9 practice-test area rows  ['Vocabulary 1 of 4', 'Stories: characters, plot and message 2 of 7', 'Using evidence and sources 4 of 9', 'Structure, text features and figurative language 2 of 4', 'Informational texts: main idea and details 6 of 10', 'Grammar and conventions 2 of 5', 'Other parts (too few questions to report on their own) 2 of 2']
+PASS  TEST.10 no page errors
+INFO  KB.1 Tab order on #std/3.T.T.1 (first 40)  ['BUTTON#.btn Start the lesson', 'A#.std-link 3.T.T.1.b', 'BUTTON#.btn D1 · Story elements: character', 'A#.std-link 3.T.T.1.c', "BUTTON#.btn E2 · Characters and the story'", 'A#.std-link 3.T.T.1.a', 'BUTTON#.btn E1 · Story clues: dialogue, de', 'A#.std-link 3.T.T.1.d', 'BUTTON#.btn E4 · Compare two stories', 'A#.std-link 3.T.T.1.e', 'BUTTON#.btn L1 · Write a story: beginnings', 'SUMMARY#. What Proficient work looks lik', 'BODY#. Skip to content\n  \n\n  \n  \n    ', 'A#.skip Skip to content', 'BUTTON#std-back.nav-btn ← Back', 'BUTTON#.nav-btn Parents', 'BUTTON#.btn Start the lesson', 'A#.std-link 3.T.T.1.b', 'BUTTON#.btn D1 · Story elements: character', 'A#.std-link 3.T.T.1.c', "BUTTON#.btn E2 · Characters and the story'", 'A#.std-link 3.T.T.1.a', 'BUTTON#.btn E1 · Story clues: dialogue, de', 'A#.std-link 3.T.T.1.d', 'BUTTON#.btn E4 · Compare two stories', 'A#.std-link 3.T.T.1.e', 'BUTTON#.btn L1 · Write a story: beginnings', 'SUMMARY#. What Proficient work looks lik', 'BODY#. Skip to content\n  \n\n  \n  \n    ', 'A#.skip Skip to content', 'BUTTON#std-back.nav-btn ← Back', 'BUTTON#.nav-btn Parents', 'BUTTON#.btn Start the lesson', 'A#.std-link 3.T.T.1.b', 'BUTTON#.btn D1 · Story elements: character', 'A#.std-link 3.T.T.1.c', "BUTTON#.btn E2 · Characters and the story'", 'A#.std-link 3.T.T.1.a', 'BUTTON#.btn E1 · Story clues: dialogue, de', 'A#.std-link 3.T.T.1.d']
+PASS  KB.2 std-link has a visible focus indicator
+PASS  KB.3 Enter on a std lesson button opens the lesson with focus on its title
+FAIL  KB.4 Enter on a set button starts that set with focus on the question prompt   [['SK:3.T.T.2.a:y2', 'player-title']]
+INFO  KB.5 Tab order in a practice item  ['clue-toggle', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'q-hint', 'q-how', 'q-next', '', 'skip', 'player-back', 'nav-btn', 'clue-toggle', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'hot-option', 'q-hint', 'q-how', 'q-next', 'skip']
+PASS  KB.6 Show me how by keyboard moves focus to the steps heading
+PASS  KB.7 navigator button by keyboard moves to that question; focus goes to the prompt
+PASS  KB.8 no page errors
+51 passed, 4 failed, 21 info

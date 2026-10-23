@@ -78,7 +78,7 @@ PP.addLesson({
        Never used by test. NEEDS INDEPENDENT REVIEW. */
     { id: "p3", title: "Let Everyone Play", byline: "by Darnell, a third grader", genre: "Opinion text",
       paragraphs: [
-        ["On some soccer teams, a few kids sit on the bench for most of the game.", "Sitting on the bench for a whole game is no fun.", "I think every player in the Maple Creek Kids League should get the same time on the field."],
+        ["On some soccer teams, a few kids sit on the bench for most of the game.", "Sitting on the bench for a whole game is no fun.", "I think every player in the Brookside Kids League should get the same time on the field."],
         ["First, kids get better by playing in real games.", "Last fall, our coach gave us all the same time to play.", "My friend Sam had never played before he joined our team.", "In our last game, Sam scored his first goal."],
         ["Also, kids who get to play want to keep playing.", "Everyone knows that playing is more fun than watching.", "This spring, all 12 players from my team signed up again.", "On a team where many kids sat on the bench, only five players came back."],
         ["Some people say the best players should play the most so the team can win.", "But kids join the league to learn and have fun.", "And our team still won more games than it lost."],
@@ -231,11 +231,11 @@ PP.addLesson({
         how: [
           "Paragraphs 2 and 3 each start with a reason, after the words First and Also.",
           "Both reasons explain why every player should get the same time to play, and the last paragraph asks for the same thing.",
-          "The answer is \"I think every player in the Maple Creek Kids League should get the same time on the field.\"",
+          "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\"",
           "\"Sitting on the bench for a whole game is no fun\" and \"Everyone knows that playing is more fun than watching\" are opinions too, but they are smaller ideas, not what the whole piece is about."
         ],
         misconception: "A common mix-up is choosing the first opinion you see. The main opinion is the one every reason supports.",
-        why: "The answer is \"I think every player in the Maple Creek Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and \"Everyone knows\" are smaller opinions, the First sentence is a reason, and the best players playing most is what other people say." },
+        why: "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and \"Everyone knows\" are smaller opinions, the First sentence is a reason, and the best players playing most is what other people say." },
       { id: "SK-TT3a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"], pick: 2,
         prompt: "Which TWO of these ideas from the passage are facts that could be checked?",
         choices: [

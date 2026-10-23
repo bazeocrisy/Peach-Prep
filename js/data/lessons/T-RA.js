@@ -688,7 +688,8 @@ PP.addLesson({
       { term: "research question", means: "the question you want your research to answer" },
       { term: "relevant", means: "helps answer your research question" },
       { term: "notes", means: "short facts you write down to remember" },
-      { term: "heading", means: "a title that tells what a group of facts is about" }
+      { term: "heading", means: "a title that tells what a group of facts is about" },
+      { term: "personal communication", means: "facts you get by talking with, or writing to, a person who knows about the topic" }
     ],
     examples: [
       {
@@ -836,6 +837,44 @@ PP.addLesson({
         ["The moon is about 239,000 miles from Earth.", "A car driving day and night at highway speed, about 60 miles per hour, would need more than five months to get there."],
         ["Box: Museum news: Sign up for Summer Camp today!", "Build robots and make new friends."],
         ["Box: More on this site: Make Your Own Star Chart"]
+      ] },
+    /* B3 (expansion 2026-10-22, author b3c): passages p7-p10 are used only by core set 2 (p7, p8) and
+       core set 3 (p9, p10). Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p7", title: "Right Whales of the Georgia Coast", byline: "Source 1: a page from a library book", genre: "Informational text",
+      paragraphs: [
+        ["The North Atlantic right whale is Georgia's state marine mammal.", "A grown right whale can be about 50 feet long.", "That is longer than a school bus."],
+        ["Each fall, many mother right whales swim south from cold northern waters.", "They come to the warm, calm water near the coasts of Georgia and Florida.", "There, in the winter, each mother gives birth to one calf."],
+        ["A right whale has no teeth.", "Instead, long plates called baleen hang down from its top jaw.", "The whale swims with its mouth open.", "The baleen catches tiny animals and lets the water flow back out."],
+        ["Right whales are in danger.", "Fewer than 400 of them are left in the world.", "Ships and fishing ropes are their biggest dangers.", "People are working on fishing ropes that break more easily, so a whale caught in one can pull free."]
+      ] },
+    { id: "p8", title: "A Call with a Whale Scientist", byline: "Source 2: a student's notes from a phone call", genre: "Informational text",
+      paragraphs: [
+        ["Our class talked on the phone with Dr. Nadia Watts.", "She is a scientist who has studied right whales for twenty years."],
+        ["Dr. Watts said that mothers and calves often rest near the top of the water.", "That makes them hard for ships to see.", "Each winter, pilots fly small planes over the ocean to look for them.", "When the pilots spot a mother and calf, they warn ships nearby to slow down."],
+        ["She told us how scientists tell one right whale from another.", "Each whale has rough, white patches of skin on its head.", "The pattern of patches is different on every whale, like a fingerprint."],
+        ["A new calf is about 14 feet long.", "It drinks its mother's milk and stays close beside her.", "In the spring, the mother and calf swim north together."],
+        ["Dr. Watts said the best part of her job is seeing a brand-new calf.", "She hopes to see many more calves next winter."]
+      ] },
+    { id: "p9", title: "How a Puppy Becomes a Guide Dog", byline: "Source 1: a web page from the Red Clay Guide Dog School, where trainers teach dogs to help people who are blind", genre: "Informational text (web page)",
+      paragraphs: [
+        ["## Puppy Days"],
+        ["A guide dog's training starts when it is a puppy.", "At about eight weeks old, the puppy moves in with a family of helpers called puppy raisers.", "For about a year, the family takes the puppy to stores, buses and parks.", "The puppy learns to stay calm around crowds and loud noises."],
+        ["## Back to School"],
+        ["Next, the dog comes back to the school for several months of training.", "A trainer teaches it to stop at every curb and step.", "The dog also learns to lead a person around things in the way, such as a low branch."],
+        ["## A Smart \"No\""],
+        ["Sometimes a guide dog must not do what it is told.", "If its person says \"Forward\" but a car is coming, the dog stays still.", "Trainers call this a smart \"no.\""],
+        ["## Did You Know?"],
+        ["Many guide dogs are Labrador retrievers or golden retrievers.", "A guide dog wears a harness with a stiff handle that its person holds."],
+        ["Box: News: Our spring fun walk is on April 12. Bring your family!"],
+        ["Box: More on this site: How to Bake Dog Treats at Home"]
+      ] },
+    { id: "p10", title: "A Visit from a Guide Dog Trainer", byline: "Source 2: a student's notes from a class visit", genre: "Informational text",
+      paragraphs: [
+        ["Mr. Osei trains guide dogs for his job.", "He came to our class with a guide dog named Juno."],
+        ["Mr. Osei said that guide dogs work very hard.", "When Juno wears her harness, she is working.", "He asked us not to pet her or call her name, because that could pull her mind away from her job."],
+        ["Mr. Osei showed us how Juno stops at the edge of a step.", "He said that a guide dog cannot read traffic lights.", "Its person listens to the traffic and decides when to cross."],
+        ["Not every dog finishes training.", "Mr. Osei said that some dogs are too shy, or too excited around other animals.", "Those dogs may get a different job, or they go to live with a loving family."],
+        ["At the end of the visit, Mr. Osei took off Juno's harness, and she chased a ball.", "Then we were allowed to pet her."]
       ] }
   ],
   practice: [
@@ -917,6 +956,451 @@ PP.addLesson({
       clue: "Ask two things about each note. Does it say the same thing as the web page? Does it help answer Nia's question?",
       why: "The answer is \"The vines need lots of space so they do not crowd.\" The Room to Grow section says to leave lots of space so the vines do not crowd each other, and space is something the plants need. The note about planting close together says the opposite of the web page. The fruit fact is true, but it does not tell what a plant needs. The bird feeder link is about something else." }
   ],
+  /* ---------- B3 (expansion 2026-10-22, author b3c; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P4, P7 and P5 by id
+     (they stay in practice; Practice Together shows P1, P8, P3 and P6). New ids are numbered by their place
+     in the fifteen. Hints and Show me how for refs and Together items are in addons below.
+     The self-selected topic (official wording, p. 37) is shown only by the unscored cr item C15 and the
+     adult-checked write task; it is never auto-scored.
+     Author log: docs/expansion-2026-10-22/batches/B3-b3c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { id: "SK-RA1b-C01", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+        prompt: "Nia found facts in different ways. Match each source to the kind of source it is.",
+        cols: ["Print (on paper)", "Digital (on a screen)", "Personal communication (from a person)"],
+        rows: [
+          { text: "what Ms. Ruiz told Nia's class during the farm visit", answer: 2 },
+          { text: "the Room to Grow part of the extension office web page", answer: 1 },
+          { text: "a newspaper story about a pumpkin contest at the county fair", answer: 0 },
+          { text: "a plant scientist's answer when Nia calls the extension office on the phone", answer: 2 },
+          { text: "a video about bees on a science museum's website", answer: 1 }
+        ],
+        clue: "Ask how the facts reach Nia. Are they printed on paper, shown on a screen, or told to her by a person?",
+        hints: [
+          "Ask how the facts reach Nia. Are they printed on paper, shown on a screen, or told to her by a person?",
+          "Two of the sources come from the same extension office. For those two, look at how Nia gets the facts, not at who made them.",
+          "A newspaper is printed on paper, even though it is not a book. Now sort the other four by asking the same question: paper, screen or a person?"
+        ],
+        how: [
+          "For each source, ask how the facts reach Nia.",
+          "Paper: the newspaper story is print.",
+          "Screen: the Room to Grow web page and the museum's video are digital.",
+          "A person: what Ms. Ruiz told the class and the plant scientist's answer on the phone are personal communication. The extension office made the web page, but a phone call with one of its scientists is a person telling Nia the facts."
+        ],
+        misconception: "A common mix-up is sorting by who made the source. The same office can give you a digital source (its web page) and personal communication (a phone call).",
+        why: "The newspaper story is print. The Room to Grow web page and the museum's video are digital. What Ms. Ruiz told the class and the plant scientist's phone answer are personal communication, because a person tells Nia the facts." },
+      { ref: "SK-RA1b-P4" },
+      { ref: "SK-RA1b-P7" },
+      { id: "SK-RA1b-C04", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p1", "p2", "p5"],
+        stem: ["**Nia's notes table**", "**Question:** What helps a pumpkin plant grow?",
+          "**Row 1.** Fact: Big leaves shade the soil and keep it damp. Where I found it: \"A Visit with Farmer Ruiz\"",
+          "**Row 2.** Fact: Without bees, there would be very few pumpkins. Where I found it: \"A Visit with Farmer Ruiz\"",
+          "**Row 3.** Fact: Water the soil around the roots, not the leaves. Where I found it: the extension office web page",
+          "**Row 4.** Fact: Only flowers that get pollen grow into pumpkins. Where I found it: \"How Pumpkins Grow\""],
+        prompt: "One row in Nia's notes table names the wrong source. Find that row, and choose where its fact really comes from.",
+        text: "Row {0} names the wrong source. That fact really comes from {1}.",
+        slots: [
+          { options: ["1", "2", "3", "4"], answer: 0 },
+          { options: ["\"How Pumpkins Grow\"", "\"A Visit with Farmer Ruiz\"", "the extension office web page"], answer: 0 }
+        ],
+        clue: "A notes table is only useful if each fact really comes from the source it names. Check each fact against the source in its row.",
+        hints: [
+          "A notes table is only useful if each fact really comes from the source it names. Check each fact against the source in its row.",
+          "Two rows name \"A Visit with Farmer Ruiz.\" Read that source closely and look for each of those two facts in it.",
+          "Row 3's tip about watering the soil, not the leaves, is in the Water and Rich Soil part of the web page, so row 3 is right. Check the other rows the same way, then fill in the second blank."
+        ],
+        how: [
+          "Check row 1. The sentence about big leaves shading the soil is in paragraph 2 of \"How Pumpkins Grow.\" Ms. Ruiz never talks about the leaves.",
+          "Check the others. Ms. Ruiz says that without bees she would get very few pumpkins (row 2). The web page says to water the soil, not the leaves (row 3). \"How Pumpkins Grow\" says only flowers that get pollen can grow into pumpkins (row 4).",
+          "The answers: row 1 names the wrong source, and that fact really comes from \"How Pumpkins Grow.\""
+        ],
+        misconception: "A common mix-up is trusting a row because the fact sounds like something a farmer would say. Find the exact sentence in the source.",
+        why: "The answers are 1 and \"How Pumpkins Grow.\" The fact about big leaves shading the soil is in paragraph 2 of \"How Pumpkins Grow,\" not in Ms. Ruiz's notes. Rows 2, 3 and 4 each match the source they name." },
+      { ref: "SK-RA1b-P5" }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-RA1b-C06", type: "order", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p7", "p8"],
+        prompt: "Kai used both sources to make a note card called \"A mother and calf's year.\" Put his notes in order.",
+        steps: [
+          "Mother whales swim south from cold northern waters.",
+          "A mother gives birth to her calf in warm water near Georgia.",
+          "The calf drinks milk and stays close beside its mother.",
+          "The mother and calf swim north together."
+        ],
+        clue: "Follow the whales through one year. Time words like fall, winter and spring tell you what comes first and what comes later.",
+        hints: [
+          "Follow the whales through one year. Time words like fall, winter and spring tell you what comes first and what comes later.",
+          "The notes about the mothers' trip and the birth are in Source 1, paragraph 2. The notes about the calf growing up are in Source 2, paragraph 4.",
+          "The trip south happens each fall, before the mothers reach the warm water. Use the time words to place the other three notes."
+        ],
+        how: [
+          "Source 1, paragraph 2: each fall, mother whales swim south. In the winter, in the warm water near Georgia, each mother gives birth.",
+          "Source 2, paragraph 4: the new calf drinks milk and stays close to its mother. In the spring, they swim north together.",
+          "So the order is: swim south, the calf is born, the calf drinks milk and stays close, then they swim north together."
+        ],
+        misconception: "A common mix-up is putting the notes from one source first without checking the time words.",
+        why: "The order is: mother whales swim south, a mother gives birth near Georgia, the calf drinks milk and stays close, and the mother and calf swim north. The trip south is in the fall, the birth is in the winter, and the trip north is in the spring. The first two notes come from Source 1, and the last two come from Source 2." },
+      { id: "SK-RA1b-C07", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p7", "p8"],
+        prompt: "Kai's research question is \"How do people help keep right whales safe?\" Which TWO sentences help answer his question? Choose two sentences.",
+        targets: ["p7:2:2", "p7:4:2", "p7:4:3", "p7:4:4", "p8:1:2", "p8:2:1", "p8:2:4", "p8:4:2"],
+        answer: ["p7:4:4", "p8:2:4"], pick: 2,
+        clue: "A sentence helps only if it answers the research question. A sentence can be true, and even be about danger, and still not tell how anyone helps.",
+        hints: [
+          "A sentence helps only if it answers the research question. A sentence can be true, and even be about danger, and still not tell how anyone helps.",
+          "Each source has one sentence that answers the question. In Source 1, reread the paragraph about dangers. In Source 2, reread the paragraph about ships.",
+          "The sentence that says fewer than 400 right whales are left only counts the whales. Counting them does not keep them safe. Decide about the other sentences in those two paragraphs."
+        ],
+        how: [
+          "Kai's question asks what people do to keep the whales safe.",
+          "Source 1, paragraph 4: people are working on fishing ropes that break more easily, so a caught whale can pull free.",
+          "Source 2, paragraph 2: when pilots spot a mother and calf, they warn ships nearby to slow down.",
+          "The other sentences are true, but they tell how many whales are left, what the dangers are, where the whales rest and swim, or who Dr. Watts is. None tells what people do to help."
+        ],
+        misconception: "A common mix-up is choosing the sentence about the dangers. Knowing the danger is not the same as knowing how people help.",
+        why: "The answers are \"People are working on fishing ropes that break more easily, so a whale caught in one can pull free.\" and \"When the pilots spot a mother and calf, they warn ships nearby to slow down.\" Each tells something people do to keep whales safe. The other sentences tell about the dangers, the number of whales left, where whales swim and rest, or who Dr. Watts is." },
+      { id: "SK-RA1b-C08", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p7", "p8"],
+        stem: ["**Kai's notes table**", "**Question:** How can scientists tell one right whale from another?"],
+        prompt: "Kai wants a note that tells the answer in a few of his own words. Complete his notes table.",
+        text: "Fact: {0} Where I found it: {1}",
+        slots: [
+          { options: ["Each whale has its own pattern of white patches on its head.", "Each whale has its own pattern of teeth in its top jaw.", "Each whale has baleen that catches tiny animals."], answer: 0 },
+          { options: ["Source 1, the library book", "Source 2, the call with Dr. Watts", "both sources"], answer: 1 }
+        ],
+        clue: "A good note says the same thing as the source in a few of your own words, and it answers the question. Then it tells where you found the fact.",
+        hints: [
+          "A good note says the same thing as the source in a few of your own words, and it answers the question. Then it tells where you found the fact.",
+          "First find the part of the sources that tells how scientists tell whales apart. Then check which source that part is in.",
+          "A right whale has no teeth at all, so the note about teeth does not match the sources. Decide between the other two notes, and then fill in the source."
+        ],
+        how: [
+          "Source 2, paragraph 3, says each whale has rough, white patches on its head, and the pattern is different on every whale.",
+          "So the note is \"Each whale has its own pattern of white patches on its head.\"",
+          "That fact is only in Source 2, the call with Dr. Watts. Source 1 never tells about the patches.",
+          "Right whales have no teeth. Every right whale has baleen, so baleen cannot tell one whale from another."
+        ],
+        misconception: "A common mix-up is choosing a note that is true about whales, like the baleen note, but does not answer the question.",
+        why: "The answers are \"Each whale has its own pattern of white patches on its head.\" and \"Source 2, the call with Dr. Watts.\" Dr. Watts told the class that the pattern of patches is different on every whale, like a fingerprint. Source 1 does not tell about the patches. Right whales have no teeth, and every right whale has baleen, so baleen cannot tell them apart." },
+      { id: "SK-RA1b-C09", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.b"], passages: ["p8"],
+        prompt: "Kai's friend says, \"Notes from a phone call are not a real source, because they are not in a book.\" Which answer BEST explains why Kai can use Dr. Watts's facts?",
+        choices: [
+          { text: "Dr. Watts studies right whales for her job, so she knows the facts.", correct: true },
+          { text: "Kai wrote the notes himself, so everything in them must be true." },
+          { text: "A phone call is newer than a book, so its facts are always better." },
+          { text: "Dr. Watts loves seeing new calves, so she must be right about whales." }
+        ],
+        clue: "A source can be a book, a web page or a person. Ask who gave the facts and whether that person is an expert on the topic.",
+        hints: [
+          "A source can be a book, a web page or a person. Ask who gave the facts and whether that person is an expert on the topic.",
+          "Reread the first and the last paragraphs of Source 2. What do they tell you about Dr. Watts?",
+          "Kai writing the notes does not make them true, because a person can write down a mistake. Think about what makes the facts in the notes worth trusting, and test the other three answers."
+        ],
+        how: [
+          "Personal communication, like a phone call, can be a credible source when the person knows the topic.",
+          "Source 2 says Dr. Watts is a scientist who has studied right whales for twenty years.",
+          "The answer is \"Dr. Watts studies right whales for her job, so she knows the facts.\"",
+          "Writing notes does not make them true, newer is not always better, and loving calves does not show that she knows the facts."
+        ],
+        misconception: "A common mix-up is thinking only books and web pages count as sources. A person who knows the topic well is a source, too.",
+        why: "The answer is \"Dr. Watts studies right whales for her job, so she knows the facts.\" Source 2 says she is a scientist who has studied right whales for twenty years, so her facts are credible even though she shared them on the phone. Writing the notes yourself does not make them true, newer is not always better, and enjoying her job does not prove her facts." },
+      { id: "SK-RA1b-C10", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.b"], passages: ["p7", "p8"],
+        prompt: "Kai also wants to know how long right whales live. Neither source tells him. What should Kai do next?",
+        choices: [
+          { text: "Look for another credible source, such as a whale research center's web page.", correct: true },
+          { text: "Write his own best guess in the notes table, so that the table is not empty." },
+          { text: "Use the length of a new calf, because it is a number about right whales." },
+          { text: "Ask a classmate to guess, because a person can be a source of facts." }
+        ],
+        clue: "When your sources do not answer a question, you need more facts, not a guess. Ask where Kai could find facts he can trust.",
+        hints: [
+          "When your sources do not answer a question, you need more facts, not a guess. Ask where Kai could find facts he can trust.",
+          "Reread Kai's question. For each answer, ask two things: would it really tell him how long right whales live, and could he trust it?",
+          "The length of a new calf is a true number from Source 2, but it tells how long a calf is, not how long a whale lives. Use the trust question on the other three answers."
+        ],
+        how: [
+          "Kai's two sources do not tell how long right whales live, so he needs another source.",
+          "A guess, his own or a classmate's, is not a checked fact. A classmate is a person, but not a person who knows about whales.",
+          "The length of a calf is a fact, but it does not answer his question.",
+          "The answer is \"Look for another credible source, such as a whale research center's web page.\""
+        ],
+        misconception: "A common mix-up is filling a gap with a guess or with a fact that does not fit. Good researchers look for another source they can trust.",
+        why: "The answer is \"Look for another credible source, such as a whale research center's web page.\" When sources leave a question unanswered, a researcher finds another source made by people who know the facts. A guess is not a checked fact, and the calf's length does not tell how long whales live." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-RA1b-C11", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p9", "p10"], pick: 2,
+        prompt: "Ayo read both sources about guide dogs. Which TWO facts can he find in BOTH sources? Choose two answers.",
+        choices: [
+          { text: "A guide dog learns to stop at steps.", correct: true },
+          { text: "A guide dog wears a harness.", correct: true },
+          { text: "A guide dog stays still if a car is coming." },
+          { text: "Puppy raisers take the puppy to stores, buses and parks." },
+          { text: "Some dogs do not finish training and get a different job." }
+        ],
+        clue: "A fact belongs to both sources only if you can find it in each one. Check every fact in Source 1 and in Source 2.",
+        hints: [
+          "A fact belongs to both sources only if you can find it in each one. Check every fact in Source 1 and in Source 2.",
+          "A fact that is in only one source does not count, even if the other source talks about something close to it. Choose two.",
+          "Puppy raisers are only in Source 1. Source 2 never tells about a guide dog's puppy year. Check each of the other facts in both sources."
+        ],
+        how: [
+          "Look for each fact in both sources.",
+          "Stopping at steps: Source 1 says a trainer teaches the dog to stop at every curb and step, and in Source 2, Mr. Osei shows how Juno stops at the edge of a step.",
+          "A harness: Source 1 says a guide dog wears a harness that its person holds, and Source 2 tells about Juno's harness.",
+          "Staying still for a car and the puppy raisers are only in Source 1. Dogs that do not finish training are only in Source 2."
+        ],
+        misconception: "A common mix-up is choosing a fact because the other source talks about something close to it, like traffic. Find the same fact in both.",
+        why: "The answers are \"A guide dog learns to stop at steps.\" and \"A guide dog wears a harness.\" Both sources tell each of these facts. Staying still when a car is coming and the puppy raisers are only in Source 1. Source 2 talks about traffic, but it says the person decides when to cross; it never says the dog stays still. Dogs that do not finish training are only in Source 2." },
+      { id: "SK-RA1b-C12", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [], pick: 2,
+        prompt: "Ayo wants to add more sources to his research. Which TWO sources can he trust for facts about guide dogs? Choose two answers.",
+        choices: [
+          { text: "a library book by a woman who has trained guide dogs for many years", correct: true },
+          { text: "an email answer from a trainer at a guide dog school", correct: true },
+          { text: "a post by \"DogFan22,\" who writes, \"My cousin told me any dog can be a guide dog\"" },
+          { text: "an ad that says, \"Our harness turns any dog into a guide dog!\"" },
+          { text: "a funny story about a guide dog who saves a whole town" }
+        ],
+        clue: "Ask who made each source. Does the person know about guide dogs, or are they guessing, selling something or telling a made-up story?",
+        hints: [
+          "Ask who made each source. Does the person know about guide dogs, or are they guessing, selling something or telling a made-up story?",
+          "In each answer, find the words that tell who made the source and what that person does. Choose two.",
+          "The ad wants to sell a harness, so it may stretch the truth. Check each of the other sources: does the person who made it really know about guide dogs?"
+        ],
+        how: [
+          "A woman who has trained guide dogs for many years knows the facts, so her library book is credible.",
+          "A trainer at a guide dog school knows the facts, too. An email is personal communication, and it counts when the person who writes it knows the topic.",
+          "\"DogFan22\" gives no real name and only repeats what a cousin said. The ad is selling a harness, and the funny story is made up.",
+          "The answers are \"a library book by a woman who has trained guide dogs for many years\" and \"an email answer from a trainer at a guide dog school.\""
+        ],
+        misconception: "A common mix-up is thinking an email cannot be a source. What matters is whether the person who wrote it knows the topic.",
+        why: "The answers are \"a library book by a woman who has trained guide dogs for many years\" and \"an email answer from a trainer at a guide dog school.\" Both come from people who train guide dogs. The post repeats what someone's cousin said, the ad is selling something, and the funny story is made up." },
+      { id: "SK-RA1b-C13", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: ["p9", "p10"],
+        prompt: "Ayo has three note cards. Match each fact to the note card where it belongs.",
+        cols: ["Growing up with puppy raisers", "Learning at the guide dog school", "Meeting a guide dog at work"],
+        rows: [
+          { text: "learns to stay calm around crowds and loud noises", answer: 0 },
+          { text: "learns to lead a person around a low branch", answer: 1 },
+          { text: "should not be petted or called by name", answer: 2 },
+          { text: "comes back for several months of training", answer: 1 },
+          { text: "lives with a family of helpers for about a year", answer: 0 }
+        ],
+        clue: "Read each note card heading. For each fact, ask when it happens in a guide dog's life, or who needs to know it.",
+        hints: [
+          "Read each note card heading. For each fact, ask when it happens in a guide dog's life, or who needs to know it.",
+          "Find each fact in the sources first. The heading or paragraph it comes from tells you a lot about when it happens.",
+          "Learning to lead a person around a low branch is taught by a trainer, so it belongs on the card about the guide dog school. Sort the other four facts."
+        ],
+        how: [
+          "Under Puppy Days, Source 1 says the puppy lives with puppy raisers for about a year and learns to stay calm around crowds and loud noises.",
+          "Under Back to School, the dog comes back for several months of training and learns to lead a person around a low branch.",
+          "In Source 2, Mr. Osei asks the class not to pet a working guide dog or call its name. That is for people meeting a guide dog at work."
+        ],
+        misconception: "A common mix-up is sorting by one word in a fact instead of by when it happens in the dog's life.",
+        why: "Staying calm around crowds and living with a family of helpers for a year go on \"Growing up with puppy raisers.\" Leading a person around a low branch and the months of training go on \"Learning at the guide dog school.\" Not petting a working dog or calling its name goes on \"Meeting a guide dog at work.\"" },
+      { id: "SK-RA1b-C14", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.b"], passages: [],
+        stem: ["**Marcus's notes table**", "**Question:** How do lifeguards keep swimmers safe?",
+          "**Note 1.** They sit in tall chairs so they can see the whole pool. (Where I found it: the city pool's web page)",
+          "**Note 2.** They blow a whistle when someone breaks a pool rule. (Where I found it: Coach Ames, my swim coach)",
+          "**Note 3.** Our lifeguard, Ms. Abara, has a dog named Rex. (Where I found it: Ms. Abara)",
+          "**Note 4.** They take a class to learn how to pull a swimmer out of deep water. (Where I found it: Ms. Abara)"],
+        prompt: "Marcus wants to take one note out of his table. Which note should he remove, and why?",
+        choices: [
+          { text: "Note 3, because it is true but does not tell how lifeguards keep swimmers safe.", correct: true },
+          { text: "Note 2, because it came from a person and not from a book." },
+          { text: "Note 1, because facts from a web page can never be trusted." },
+          { text: "Note 4, because Ms. Abara is a lifeguard and not a scientist." }
+        ],
+        clue: "Check each note two ways. Does it help answer the question? Can Marcus trust where it came from?",
+        hints: [
+          "Check each note two ways. Does it help answer the question? Can Marcus trust where it came from?",
+          "Two notes come from Ms. Abara. Read those two notes and ask what each one is about.",
+          "A city pool's web page is made by the people who run the pool, so note 1 can be trusted. Test the reasons in the other answers."
+        ],
+        how: [
+          "Marcus's question asks how lifeguards keep swimmers safe.",
+          "Notes 1, 2 and 4 each tell something lifeguards do to keep swimmers safe. Each comes from someone who knows: the pool's web page, a swim coach and a lifeguard.",
+          "Note 3 is true, but a lifeguard's dog does not keep swimmers safe.",
+          "The answer is \"Note 3, because it is true but does not tell how lifeguards keep swimmers safe.\""
+        ],
+        misconception: "A common mix-up is removing a note because of where it came from. A person you talk to can be a good source. Remove a note when it does not help answer the question.",
+        why: "The answer is \"Note 3, because it is true but does not tell how lifeguards keep swimmers safe.\" Ms. Abara's dog has nothing to do with the question. A person can be a credible source, a city pool's web page can be trusted, and Ms. Abara knows about her own job even though she is not a scientist." },
+      /* Constructed response: never scored. It is the only core place for the self-selected topic. */
+      { id: "SK-RA1b-C15", type: "cr", dok: 3, std: ["3.T.RA.1.b"], passages: [], rows: 5,
+        stem: ["Plan your own research. Pick a topic you wonder about, and write one research question about it."],
+        prompt: "Then name two different kinds of sources you could use, such as a book, a web page or a person. Tell why you could trust each one.",
+        sample: "My question: How do pandas spend their day? Source 1: a library book by a scientist who studies pandas. I can trust it because the scientist knows the facts. Source 2: I could ask a zookeeper who takes care of the pandas at a zoo. I can trust her because she works with pandas every day.",
+        criteria: ["I wrote a research question about a topic I chose.", "I named two different kinds of sources, such as print, a web page or a person.", "I told why I can trust each source."],
+        clue: "Start with something you wonder about, like an animal, a sport or a place. Turn it into a question that starts with how, why or what.",
+        hints: [
+          "Start with something you wonder about, like an animal, a sport or a place. Turn it into a question that starts with how, why or what.",
+          "For your sources, think of one thing you could read and one person you could ask. A grown-up can help you find a web page you can trust.",
+          "To tell why you can trust a source, say who made it and how that person knows the facts, for example because it is their job."
+        ],
+        how: [
+          "Pick a topic you really wonder about, and write one question about it.",
+          "Name two kinds of sources, for example a library book and a person who knows the topic.",
+          "For each source, write who made it and how that person knows the facts.",
+          "Compare your plan with the sample and the checklist. Your topic can be very different from the sample."
+        ],
+        why: "Many plans can be right. A strong plan has one research question about a topic you chose, two different kinds of sources and a reason to trust each one." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short text in the stem. Each `like` lists only
+     the core items it really practises. */
+  similar: [
+    { id: "SK-RA1b-S01", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [], pick: 2,
+      like: ["SK-RA1b-C07", "SK-RA1b-C14"],
+      stem: ["Lucia's research question: \"How do sea horses move through the water?\""],
+      prompt: "Lucia found these facts in a science book. Which TWO facts help answer her question? Choose two answers.",
+      choices: [
+        { text: "A sea horse swims by fanning a small fin on its back.", correct: true },
+        { text: "It steers with two tiny fins on the sides of its head.", correct: true },
+        { text: "It can wrap its curly tail around sea grass to stay still." },
+        { text: "A sea horse dad carries the eggs in a pouch until they hatch." },
+        { text: "Sea horses eat tiny shrimp that float by." }
+      ],
+      clue: "A fact can be true and still not help. For each fact, ask: does this tell how a sea horse moves through the water?",
+      hints: [
+        "A fact can be true and still not help. For each fact, ask: does this tell how a sea horse moves through the water?",
+        "Read each fact and say in your own words what the sea horse is doing in it.",
+        "The sea horse dad's pouch is a famous fact, but it is about babies, not about moving. Check the other facts against Lucia's question."
+      ],
+      how: [
+        "Lucia's question asks how a sea horse moves through the water.",
+        "Fanning a fin on its back is how it swims, and the fins on its head help it steer. Both tell how it moves.",
+        "Wrapping its tail around sea grass is how it stays still, not how it moves. The pouch and the shrimp are about babies and food.",
+        "The answers are \"A sea horse swims by fanning a small fin on its back.\" and \"It steers with two tiny fins on the sides of its head.\""
+      ],
+      why: "The answers are \"A sea horse swims by fanning a small fin on its back.\" and \"It steers with two tiny fins on the sides of its head.\" Both tell how it moves. Holding on with its tail keeps it still, and the pouch and the shrimp are about babies and food." },
+    { id: "SK-RA1b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C09", "SK-RA1b-C12"],
+      prompt: "Owen's research question is \"How do vets help a horse with a sore leg?\" He wants to ask a person. Which person would be the most credible to ask?",
+      choices: [
+        { text: "a vet who takes care of the horses at a horse farm", correct: true },
+        { text: "a girl from his class who rode a pony at the fair once" },
+        { text: "a store worker who is selling toy horses for the holidays" },
+        { text: "someone online who signs every post \"PonyLuvr\"" }
+      ],
+      clue: "A person can be a source. Ask who knows the most about the question, and how they know it.",
+      hints: [
+        "A person can be a source. Ask who knows the most about the question, and how they know it.",
+        "For each person, find the words that tell what they do or how they know about horses.",
+        "Riding a pony once is fun, but it does not teach you how to help a hurt horse. Check the other three people."
+      ],
+      how: [
+        "Owen's question is about how vets help horses.",
+        "A vet who takes care of horses at a farm does this as a job, so she knows the facts.",
+        "Riding a pony once, selling toy horses and an online name do not show that someone knows how to help a hurt horse.",
+        "The answer is \"a vet who takes care of the horses at a horse farm.\""
+      ],
+      why: "The answer is \"a vet who takes care of the horses at a horse farm.\" A vet helps sick and hurt horses as a job. A girl who rode a pony once, a store worker selling toys and an online name do not show that the person knows how to help a hurt horse." },
+    { id: "SK-RA1b-S03", type: "match", points: 2, dok: 2, std: ["3.T.RA.1.b"], passages: [],
+      like: ["SK-RA1b-C13", "SK-RA1b-P4"],
+      stem: ["Dion is writing about sea stars. He has two note cards: \"How a sea star eats\" and \"How a sea star moves.\""],
+      prompt: "Match each fact to the note card where it belongs.",
+      cols: ["How a sea star eats", "How a sea star moves"],
+      rows: [
+        { text: "It pulls open a clam shell with its arms.", answer: 0 },
+        { text: "It creeps along on hundreds of tiny tube feet.", answer: 1 },
+        { text: "It pushes its stomach out of its body to eat the clam.", answer: 0 },
+        { text: "It can slowly climb up the side of a rock.", answer: 1 }
+      ],
+      clue: "Read the two headings. For each fact, ask: is this about getting food, or about going from place to place?",
+      hints: [
+        "Read the two headings. For each fact, ask: is this about getting food, or about going from place to place?",
+        "Picture what the sea star is doing in each fact before you choose a card.",
+        "Creeping along on tube feet is going from place to place, so it goes on the card about moving. Sort the other three."
+      ],
+      how: [
+        "Pulling open a clam shell and pushing out its stomach to eat the clam are both about food. They go on \"How a sea star eats.\"",
+        "Creeping on tube feet and climbing a rock are both about going from place to place. They go on \"How a sea star moves.\""
+      ],
+      why: "Opening a clam and pushing out its stomach are about eating, so they go on \"How a sea star eats.\" Creeping on tube feet and climbing a rock are about moving, so they go on \"How a sea star moves.\"" }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P4, P7, P5 (core set 1) and Together P1, P8, P3, P6. */
+  addons: {
+    "SK-RA1b-P1": {
+      hints: [
+        "Check each fact in both sources before you choose. A fact belongs to both only if you can find it in each one.",
+        "Read paragraph 3 of Source 1 and paragraph 2 of Source 2. Then read the last paragraph of each source.",
+        "Flat, white seeds are only in \"How Pumpkins Grow\"; the farm visit never talks about seeds. Check the other four facts in both sources."
+      ],
+      how: [
+        "Seeds that are flat and white are only in \"How Pumpkins Grow.\"",
+        "The boxes of bees and the short piece of stem are only in \"A Visit with Farmer Ruiz.\"",
+        "Both sources say bees carry pollen from flower to flower, and both say pumpkins are picked in the fall."
+      ],
+      misconception: "A common mix-up is choosing the first source where you found a fact. Check the other source too before you decide." },
+    "SK-RA1b-P8": {
+      hints: [
+        "For each source, ask: Who made it? Do they know the facts, or are they selling something, hiding their name or telling a made-up story?",
+        "In each answer, find the words that tell who made the source.",
+        "The cartoon is a made-up story, so it is not a fact source. Check who made each of the other three."
+      ],
+      how: [
+        "Plant scientists study how plants grow and help farmers, so their garden guide is credible.",
+        "The game website post gives no name, the ad wants to sell seeds, and the cartoon is made up.",
+        "The answer is \"a garden guide written by plant scientists who help farmers.\""
+      ] },
+    "SK-RA1b-P3": {
+      hints: [
+        "Follow the pumpkin from the very beginning to the very end. Use facts from both sources.",
+        "Source 1 tells the pumpkin's life in order, paragraph by paragraph. Source 2 tells what Ms. Ruiz does in the fall.",
+        "The seed is planted first, because nothing can grow before that. Place the other four steps after it."
+      ],
+      how: [
+        "Source 1 tells the order: the seed is planted, the sprout grows into a vine, bees carry pollen to the flowers, and a tiny green pumpkin grows and turns orange.",
+        "Source 2, paragraph 4, tells the last step: in the fall, the farmer cuts the stem and picks the pumpkin.",
+        "So the order is: seed, vine, bees at the flowers, a green pumpkin that turns orange, then picking."
+      ] },
+    "SK-RA1b-P6": {
+      hints: [
+        "Read Nia's question again. A detail can be true and still not help. For each detail, ask: does this tell something a pumpkin plant needs?",
+        "Each section of the web page has a heading. Use the headings to find which sections are about what the plants need and which are about something else.",
+        "The Fall Festival box is news about an event, not about plants. Check each of the other details against Nia's question."
+      ],
+      how: [
+        "Nia's question asks what pumpkin plants need to grow well.",
+        "The Plenty of Sun section says they grow best with at least six hours of sun each day. The Water and Rich Soil section says to give them about one inch of water each week if it does not rain.",
+        "How long people have grown pumpkins and how heavy contest pumpkins get are fun facts, and the Fall Festival box is news. None of them tells what a plant needs.",
+        "The answers are \"They grow best with at least six hours of sun each day.\" and \"If it does not rain, give them about one inch of water each week.\""
+      ] },
+    "SK-RA1b-P4": {
+      hints: [
+        "Read each note card heading. Then, for each fact, ask which heading it tells more about.",
+        "Find each fact in the sources, and read the sentences around it to see which part of the pumpkin's story it comes from.",
+        "The sprout growing into a vine is something the plant does by itself, so it goes under the heading about how a pumpkin grows. Sort Ms. Ruiz's three jobs next."
+      ],
+      how: [
+        "The vine growing is something the plant does, so it goes under \"How a pumpkin grows.\"",
+        "Watering the vines and pulling weeds are ways Ms. Ruiz helps the plants while they grow, so they go under \"Caring for the plants.\"",
+        "Picking the hard, orange pumpkins goes under \"Picking the pumpkins.\""
+      ],
+      misconception: "A common mix-up is putting every fact about Ms. Ruiz on one card. Sort by what the fact is about, not by who is in it." },
+    "SK-RA1b-P7": {
+      hints: [
+        "A good note says the same thing as the source, in a few of your own words, and it helps answer the question.",
+        "Nia's question is about what the plants need. Reread the Room to Grow section and the Fun Pumpkin Facts section of the web page.",
+        "The note about making a bird feeder comes from a link to another page, so it is not about pumpkin plants at all. Check whether each other note matches what the web page really says."
+      ],
+      how: [
+        "Nia's question asks what pumpkin plants need to grow well.",
+        "The Room to Grow section says to leave lots of space between the plants so the vines do not crowd each other. The note \"The vines need lots of space so they do not crowd.\" says the same thing in fewer words.",
+        "Planting close together is the opposite of what the page says. The fruit fact is true, but it does not tell what a plant needs. The bird feeder link is about a different page."
+      ],
+      misconception: "A common mix-up is choosing a note that uses words from the page but changes what they mean, like close together instead of lots of space." },
+    "SK-RA1b-P5": {
+      hints: [
+        "First say Nia's question in your own words. Then check two things in each answer: is the source right, and does the reason really answer her question?",
+        "Nia wants to know what a farmer does to get pumpkins ready to sell. Reread the last paragraph of each source.",
+        "The vine spreading across the ground is about how the plant grows, not about getting pumpkins ready to sell. Compare the reasons in the other three answers."
+      ],
+      how: [
+        "Nia's question is how a farmer gets pumpkins ready to sell.",
+        "Paragraph 4 of Source 2 tells how Ms. Ruiz picks hard, orange pumpkins, cuts the stems and sells them at her farm stand.",
+        "Source 1 only says when pumpkins are ready to pick, and the bees are about growing pumpkins, not getting them ready to sell.",
+        "The answer is \"Source 2, because Ms. Ruiz tells how she picks and sells pumpkins.\""
+      ],
+      misconception: "A common mix-up is choosing a true reason that does not answer the question, like the bees. Check the reason against the question." }
+  },
   test: [
     { id: "SK-RA1b-T1", type: "match", points: 2, dok: 2, passages: ["p3", "p4"],
       prompt: "Where can you find each fact? Match each fact to the source it comes from.",
@@ -1274,6 +1758,31 @@ PP.addLesson({
         ["Jada picked up her tray and walked over.", "\"Do you want to sit with us?\" she asked.", "Rosa looked up in surprise.", "Then she gave a small nod and followed Jada."],
         ["At Jada's table, the girls talked about their favorite things.", "Rosa said that she loved to draw animals.", "Jada grinned, because she loved to draw animals, too.", "She tore a page out of her notebook and passed Rosa a pencil."],
         ["By the end of lunch, Rosa was giggling at Jada's drawing of a cat in a hat.", "When the bell rang, Rosa asked, \"Can I sit here again tomorrow?\"", "Jada smiled and said, \"There's always room for one more.\""]
+      ] },
+    /* B3 (expansion 2026-10-22, author b3c): passages p4-p6 are used only by core set 1 (p4), set 2 (p5)
+       and set 3 (p6). Never used by test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p4", title: "Two Loops", genre: "Literary text",
+      paragraphs: [
+        ["Nyla's little cousin Jojo was staying with her family for a week.", "On Monday, his class was going on a trip to the zoo.", "His teacher said that every child had to tie their own shoes."],
+        ["On Sunday night, Jojo sat on the floor with his new sneakers.", "He pulled the laces into a big, tight knot.", "Then he threw one sneaker under the couch.", "\"I can't do it!\" he cried."],
+        ["Nyla sat down next to him.", "\"When I was five, I couldn't tie my shoes either,\" she said.", "She showed him a trick: make two loops, like bunny ears, and cross them."],
+        ["Jojo tried, but the loops flopped apart.", "\"Let's go slower this time,\" Nyla said, and she did each step with him.", "They tried six more times.", "Each time, Nyla waited quietly while Jojo worked."],
+        ["On the seventh try, the bow held.", "Jojo jumped up and stomped around the living room.", "\"Look, Nyla! I did it all by myself!\" he shouted.", "Nyla laughed and gave him a high five."]
+      ] },
+    { id: "p5", title: "Sea Otters", genre: "Informational text",
+      paragraphs: [
+        ["Sea otters live in cold ocean water along the Pacific coast.", "Most sea animals that live in cold water have a thick layer of fat.", "Sea otters do not."],
+        ["Instead, a sea otter stays warm with its fur.", "Its fur is thicker than the fur of any other animal.", "A sea otter spends hours each day cleaning and fluffing its fur.", "This traps a layer of air that keeps the cold water away from its skin."],
+        ["Sea otters eat clams, crabs and sea urchins.", "A sea otter eats about one-fourth of its own weight in food each day.", "To open a hard shell, an otter floats on its back and sets a flat rock on its chest.", "Then it bangs the shell against the rock until the shell cracks.", "Some otters keep a favorite rock in a pocket of loose skin under one arm."],
+        ["Sea otters even sleep in the water.", "Before a nap, an otter may wrap itself in long strands of seaweed called kelp.", "The kelp works like an anchor, so the otter does not drift away.", "Sometimes a group of otters floats together, holding paws."]
+      ] },
+    { id: "p6", title: "The New Goalie", genre: "Literary text",
+      paragraphs: [
+        ["Simone had never played goalie before.", "But on Saturday, the Falcons' goalie was sick, so Coach Hale handed Simone the big gloves."],
+        ["In the first five minutes, a ball zipped past her into the net.", "Simone's face felt hot.", "She stared at the grass and wished she could hide."],
+        ["Her teammate Dani jogged over.", "\"Everybody gets scored on,\" Dani said.", "\"Watch the ball, not the kicker's feet.\""],
+        ["Simone nodded and bent her knees.", "After that, every time the ball came near, she kept her eyes on it.", "Near the end of the game, a girl kicked the ball hard toward the corner of the net.", "Simone dove and pushed it away with her fingertips."],
+        ["The Falcons lost the game, 2 to 1.", "Still, after the game, Simone ran over to Dani.", "\"Thanks for your tip,\" she said.", "\"Can you help me practice goalie next week?\""]
       ] }
   ],
   practice: [
@@ -1318,6 +1827,445 @@ PP.addLesson({
       clue: "Protect means keep safe. Find the sentence that tells how the glow could keep a young firefly safe.",
       why: "The answer is \"Their glow may warn other animals that they taste bad.\" A warning helps keep the larvae from being eaten. The sentence that says larvae can glow is true, but it does not tell how the glow keeps them safe." }
   ],
+  /* ---------- B3 (expansion 2026-10-22, author b3c; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try items P3 and P4 by id
+     (they stay in practice; Practice Together shows P1 and P2). New ids are numbered by their place in the
+     fifteen. Writing a quote of your own to support an opinion is shown only by the unscored cr item C15.
+     Author log: docs/expansion-2026-10-22/batches/B3-b3c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-RA2a-P3" },
+      { ref: "SK-RA2a-P4" },
+      { id: "SK-RA2a-C03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p1"],
+        prompt: "Dev says, \"Fireflies use their light to send messages.\" Which sentence from the passage is true but does NOT support Dev's idea?",
+        choices: [
+          { text: "\"This kind of light is sometimes called cold light.\"", correct: true },
+          { text: "\"Each kind of firefly has its own blinking pattern.\"" },
+          { text: "\"A male flashes his pattern as he flies.\"" },
+          { text: "\"Their glow may warn other animals that they taste bad.\"" }
+        ],
+        clue: "Every sentence in the passage is true. A sentence supports an idea only if it shows the idea. Ask of each one: does this show the light telling someone something?",
+        hints: [
+          "Every sentence in the passage is true. A sentence supports an idea only if it shows the idea. Ask of each one: does this show the light telling someone something?",
+          "Find each choice in the passage. Read the sentences around it to see what that part of the passage is about.",
+          "A warning tells other animals something, so the sentence about the larvae's glow does show a message. Check the other three choices."
+        ],
+        how: [
+          "Dev's idea is that the light sends messages.",
+          "Blinking patterns and flashing are how fireflies talk to each other, and a warning tells other animals to stay away. Those sentences support Dev's idea.",
+          "\"This kind of light is sometimes called cold light.\" is true, but it only gives the light a name. It does not show a message.",
+          "The answer is \"This kind of light is sometimes called cold light.\""
+        ],
+        misconception: "A common mix-up is thinking every true sentence about the light supports the idea. A sentence supports an idea only if it shows the idea.",
+        why: "The answer is \"This kind of light is sometimes called cold light.\" It names the kind of light, but it does not show the light sending a message. Blinking patterns and flashing show fireflies talking, and the warning sends a message to other animals." },
+      { id: "SK-RA2a-C04", type: "ebsr", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: ["p4"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "How does Jojo change from the beginning of the story to the end?",
+          choices: [
+            { text: "He goes from giving up to feeling proud that he can do it himself.", correct: true },
+            { text: "He goes from feeling excited about the zoo to feeling scared of it." },
+            { text: "He goes from being angry at Nyla to being angry at his teacher." },
+            { text: "He goes from tying his shoes by himself to needing Nyla's help." }
+          ] },
+        partB: { prompt: "Which TWO sentences from the story BEST support the answer to Part A?", pick: 2,
+          choices: [
+            { text: "\"I can't do it!\" he cried.", correct: true },
+            { text: "\"Look, Nyla! I did it all by myself!\" he shouted.", correct: true },
+            { text: "He pulled the laces into a big, tight knot." },
+            { text: "Jojo tried, but the loops flopped apart." },
+            { text: "Nyla laughed and gave him a high five." }
+          ] },
+        clue: "A change has a before and an after. Find how Jojo acts at the start and how he acts at the end. For Part B, you need proof of both.",
+        hints: [
+          "A change has a before and an after. Find how Jojo acts at the start and how he acts at the end. For Part B, you need proof of both.",
+          "Reread paragraph 2 for the start and paragraph 5 for the end.",
+          "Jojo never says he is upset with Nyla or with his teacher, so the answer about being angry does not fit. For Part B, choose one sentence for the start and one for the end."
+        ],
+        how: [
+          "At the start, in paragraph 2, Jojo knots his laces, throws a sneaker and cries, \"I can't do it!\" He is giving up.",
+          "At the end, in paragraph 5, he shouts, \"Look, Nyla! I did it all by myself!\" He is proud.",
+          "Part A: He goes from giving up to feeling proud that he can do it himself. Part B: the sentence where he cries, \"I can't do it!\" and the sentence where he shouts, \"Look, Nyla! I did it all by myself!\"",
+          "The knot and the floppy loops show trouble, not how he feels, and the high five is what Nyla does."
+        ],
+        misconception: "A common mix-up is choosing proof for only one end of a change. A change needs proof of the before and the after.",
+        why: "Part A: He goes from giving up to feeling proud that he can do it himself. Part B: \"I can't do it!\" he cried. and \"Look, Nyla! I did it all by myself!\" he shouted. The first shows him giving up, and the second shows him proud. The story never says he is scared of the zoo or angry, and by the end he ties his shoes himself." },
+      { id: "SK-RA2a-C05", type: "hottext", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: ["p4"],
+        prompt: "Grandma says, \"Nyla knows how to make a hard job easier.\" Which TWO sentences BEST support Grandma's opinion? Choose two sentences.",
+        targets: ["p4:3:1", "p4:3:2", "p4:3:3", "p4:4:2", "p4:4:4", "p4:5:4"],
+        answer: ["p4:3:3", "p4:4:2"], pick: 2,
+        clue: "To support an opinion, a sentence must show it. Nyla does many kind things. Ask of each sentence: does this make tying shoes easier for Jojo, or is it kind in some other way?",
+        hints: [
+          "To support an opinion, a sentence must show it. Nyla does many kind things. Ask of each sentence: does this make tying shoes easier for Jojo, or is it kind in some other way?",
+          "Look at what Nyla says and does in paragraphs 3 and 4.",
+          "Waiting quietly shows that Nyla is patient. That is a good thing, but waiting does not change how hard the job is. Decide about the other sentences in paragraphs 3 and 4."
+        ],
+        how: [
+          "Grandma's opinion is that Nyla makes a hard job easier.",
+          "In paragraph 3, Nyla shows Jojo a trick: two loops, like bunny ears. A trick makes the job easier.",
+          "In paragraph 4, she says, \"Let's go slower this time,\" and does each step with him. Going slower and doing it together makes the job easier, too.",
+          "Sitting next to him, telling him she once had trouble too, waiting quietly and the high five are kind, but they do not make the job easier."
+        ],
+        misconception: "A common mix-up is choosing any sentence that shows Nyla is nice. The proof has to fit this exact opinion.",
+        why: "The answers are the sentence about the trick with two loops, like bunny ears, and the sentence where Nyla says, \"Let's go slower this time,\" and does each step with him. A trick, going slower and doing it together make tying shoes easier. Sitting with him, sharing that she once had trouble, waiting quietly and the high five are kind, but they do not make the job easier." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-RA2a-C06", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p5"],
+        prompt: "Which sentence BEST supports the idea that a sea otter takes good care of its fur? Choose the sentence in the passage.",
+        targets: ["p5:1:1", "p5:1:2", "p5:2:1", "p5:2:2", "p5:2:3", "p5:2:4"],
+        answer: ["p5:2:3"], pick: 1,
+        clue: "An idea about what an animal does needs proof of the animal doing it. A sentence that only describes the fur is not enough.",
+        hints: [
+          "An idea about what an animal does needs proof of the animal doing it. A sentence that only describes the fur is not enough.",
+          "Reread paragraph 2, about the sea otter's fur.",
+          "\"Its fur is thicker than the fur of any other animal\" describes the fur, but it does not show the otter doing anything for it. Decide about the other sentences in paragraph 2."
+        ],
+        how: [
+          "To take care of something, you do things to keep it in good shape.",
+          "Paragraph 2 says a sea otter spends hours each day cleaning and fluffing its fur. That is the otter caring for its fur.",
+          "The other sentences tell where otters live, how other animals stay warm, or what the fur is like.",
+          "The answer is \"A sea otter spends hours each day cleaning and fluffing its fur.\""
+        ],
+        misconception: "A common mix-up is choosing a sentence about the fur that does not show the idea. Being about the right topic is not enough.",
+        why: "The answer is \"A sea otter spends hours each day cleaning and fluffing its fur.\" Cleaning and fluffing are things the otter does to care for its fur. The other sentences tell where otters live, how other sea animals stay warm, or what the fur is like." },
+      { id: "SK-RA2a-C07", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p5"],
+        stem: ["**Ruby's answer:** Sea otters have a special way to stay warm. The passage says, \"Sea otters live in cold ocean water along the Pacific coast.\""],
+        prompt: "Ruby's quote is true, but it does not prove her answer. Which sentence should she quote instead?",
+        choices: [
+          { text: "\"This traps a layer of air that keeps the cold water away from its skin.\"", correct: true },
+          { text: "\"Most sea animals that live in cold water have a thick layer of fat.\"" },
+          { text: "\"Before a nap, an otter may wrap itself in long strands of seaweed called kelp.\"" },
+          { text: "\"Sea otters eat clams, crabs and sea urchins.\"" }
+        ],
+        clue: "A quote proves an answer only if it shows the answer. Ruby's answer is about HOW a sea otter stays warm.",
+        hints: [
+          "A quote proves an answer only if it shows the answer. Ruby's answer is about HOW a sea otter stays warm.",
+          "Find each choice in the passage, and read the sentences around it.",
+          "\"Sea otters eat clams, crabs and sea urchins\" is about food, not about staying warm. Decide among the other three."
+        ],
+        how: [
+          "Ruby's answer is that sea otters have a special way to stay warm.",
+          "Paragraph 2 says the otter cleans and fluffs its fur, and this traps a layer of air that keeps the cold water away from its skin. That is the special way.",
+          "The sentence about fat tells how other sea animals stay warm, not otters. Wrapping in kelp is something otters do before a nap, and clams are food.",
+          "The answer is \"This traps a layer of air that keeps the cold water away from its skin.\""
+        ],
+        misconception: "A common mix-up is choosing a quote that uses the right words, like cold water, but tells about something else.",
+        why: "The answer is \"This traps a layer of air that keeps the cold water away from its skin.\" It shows how the otter's fur keeps it warm. The fat sentence is about other sea animals, the kelp is something otters do before a nap, and clams are food." },
+      { id: "SK-RA2a-C08", type: "ebsr", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: ["p5"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Based on the passage, what problem could a sea otter have if it slept in open water with no kelp?",
+          choices: [
+            { text: "It could drift far away while it sleeps.", correct: true },
+            { text: "It could get too cold while it sleeps." },
+            { text: "It could lose the rock that it keeps." },
+            { text: "It could wake up too hungry to swim." }
+          ] },
+        partB: { prompt: "Which sentence from the passage BEST supports the answer to Part A?",
+          choices: [
+            { text: "\"The kelp works like an anchor, so the otter does not drift away.\"", correct: true },
+            { text: "\"Sometimes a group of otters floats together, holding paws.\"" },
+            { text: "\"Sea otters even sleep in the water.\"" },
+            { text: "\"This traps a layer of air that keeps the cold water away from its skin.\"" }
+          ] },
+        clue: "Answer Part A first. Then, for Part B, choose the sentence that proves your Part A answer, not just any true sentence about otters.",
+        hints: [
+          "Answer Part A first. Then, for Part B, choose the sentence that proves your Part A answer, not just any true sentence about otters.",
+          "Reread paragraph 4, about how sea otters sleep.",
+          "Sea otters stay warm with their fur, so the cold is not the problem the kelp solves. For Part B, make sure the sentence you pick matches your Part A answer."
+        ],
+        how: [
+          "Paragraph 4 says an otter may wrap itself in kelp before a nap.",
+          "The kelp works like an anchor, so the otter does not drift away. Without it, a sleeping otter could drift far away.",
+          "Part A: It could drift far away while it sleeps. Part B: \"The kelp works like an anchor, so the otter does not drift away.\"",
+          "Fur keeps the otter warm, so the cold is not the problem. Holding paws and sleeping in the water are true, but they do not tell what the kelp does."
+        ],
+        misconception: "A common mix-up is choosing a sentence that is about sleeping but does not prove the answer.",
+        why: "Part A: It could drift far away while it sleeps. Part B: \"The kelp works like an anchor, so the otter does not drift away.\" An anchor keeps something from floating off, so without kelp a sleeping otter could drift away. Its fur keeps it warm, and the passage does not connect sleeping without kelp to the rock or to being hungry." },
+      { id: "SK-RA2a-C09", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: ["p5"], pick: 2,
+        prompt: "Jamal says, \"Sea otters are clever eaters.\" Which TWO details from the passage BEST support his opinion? Choose two answers.",
+        choices: [
+          { text: "An otter cracks hard shells open by banging them on a rock.", correct: true },
+          { text: "Some otters keep a favorite rock in a pocket of skin under one arm.", correct: true },
+          { text: "Sea otters eat clams, crabs and sea urchins." },
+          { text: "A sea otter eats about one-fourth of its own weight in food each day." },
+          { text: "A sea otter spends hours each day cleaning and fluffing its fur." }
+        ],
+        clue: "Clever means smart about how to do something. Look for details that show a smart way of getting food, not just facts about food.",
+        hints: [
+          "Clever means smart about how to do something. Look for details that show a smart way of getting food, not just facts about food.",
+          "Reread paragraph 3, about what sea otters eat and how they eat it.",
+          "\"Sea otters eat clams, crabs and sea urchins\" tells what they eat, but not how they get it, so it does not show anything clever. Decide about the other details from paragraph 3."
+        ],
+        how: [
+          "Clever means smart about how to do something.",
+          "Paragraph 3 says an otter floats on its back, sets a rock on its chest and bangs a shell on it until the shell cracks. Using a rock as a tool is clever.",
+          "Some otters even keep a favorite rock in a pocket of skin. Saving a tool for later is clever, too.",
+          "What otters eat and how much they eat are true, but they do not show a smart way of eating. Cleaning fur is not about eating."
+        ],
+        misconception: "A common mix-up is choosing a detail that is about food but does not show the opinion.",
+        why: "The answers are \"An otter cracks hard shells open by banging them on a rock.\" and \"Some otters keep a favorite rock in a pocket of skin under one arm.\" Using a rock as a tool and saving it for later are smart ways to eat. What otters eat and how much they eat do not show anything clever, and cleaning fur is not about eating." },
+      { id: "SK-RA2a-C10", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+        stem: ["**Room 9's Rain Barrel**", "(1) In March, Room 9 put a rain barrel under a gutter on the school roof.", "(2) When it rains, water runs off the roof and into the barrel.", "(3) The class uses that water for the school garden.", "(4) The students painted the barrel blue with yellow fish."],
+        prompt: "Complete Rafi's answer to the question \"Why did Room 9 put out a rain barrel?\" Choose the best answer and the sentence that proves it.",
+        text: "Room 9 put out a rain barrel {0}. The sentence that proves it is sentence {1}.",
+        slots: [
+          { options: ["to save rainwater for the garden", "to make the school look more colorful", "to keep the roof from getting wet"], answer: 0 },
+          { options: ["1", "3", "4"], answer: 1 }
+        ],
+        clue: "First decide the answer. Then find the sentence that shows that answer, not just any sentence about the barrel.",
+        hints: [
+          "First decide the answer. Then find the sentence that shows that answer, not just any sentence about the barrel.",
+          "The question asks WHY. Look for the sentence that tells a reason, not just what happened or when.",
+          "Sentence 1 tells when Room 9 put out the barrel, not why, so it is not the proof. Decide what the barrel is for, then choose between the other two sentences."
+        ],
+        how: [
+          "The question asks why Room 9 put out the barrel.",
+          "Sentence 3 says the class uses the water for the school garden. So the barrel saves rainwater for the garden.",
+          "Sentence 1 tells when, sentence 2 tells how the water gets in, and sentence 4 tells how the barrel looks.",
+          "The answers: Room 9 put out a rain barrel to save rainwater for the garden, and sentence 3 proves it."
+        ],
+        misconception: "A common mix-up is choosing a true sentence about the barrel, like its colors, as proof of why it is there.",
+        why: "The answers are \"to save rainwater for the garden\" and sentence 3. Sentence 3 says the class uses the water for the school garden. Sentence 1 tells when the barrel was put out, and sentence 4 tells how it looks, not why it is there." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-RA2a-C11", type: "ebsr", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: ["p6"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "What helps Simone make the big save near the end of the game?",
+          choices: [
+            { text: "She uses Dani's tip and keeps her eyes on the ball.", correct: true },
+            { text: "Coach Hale gives her a bigger pair of gloves." },
+            { text: "The other team kicks the ball softly to her." },
+            { text: "Her team cheers until she feels brave again." }
+          ] },
+        partB: { prompt: "Which sentence from the story BEST supports the answer to Part A?",
+          choices: [
+            { text: "\"After that, every time the ball came near, she kept her eyes on it.\"", correct: true },
+            { text: "\"Simone nodded and bent her knees.\"" },
+            { text: "\"Near the end of the game, a girl kicked the ball hard toward the corner of the net.\"" },
+            { text: "\"But on Saturday, the Falcons' goalie was sick, so Coach Hale handed Simone the big gloves.\"" }
+          ] },
+        clue: "Look for what changes between the first goal and the big save. For Part B, choose the sentence that shows Simone doing what your Part A answer says.",
+        hints: [
+          "Look for what changes between the first goal and the big save. For Part B, choose the sentence that shows Simone doing what your Part A answer says.",
+          "Reread paragraph 4, where Simone gets ready and makes the save. Then look back at what Dani told her.",
+          "The girl kicks the ball hard toward the corner, so the answer about a soft kick does not fit. Check the other Part A answers against the story."
+        ],
+        how: [
+          "In paragraph 3, Dani tells Simone, \"Watch the ball, not the kicker's feet.\"",
+          "In paragraph 4, every time the ball comes near, Simone keeps her eyes on it. Then she dives and makes the save.",
+          "Part A: She uses Dani's tip and keeps her eyes on the ball. Part B: \"After that, every time the ball came near, she kept her eyes on it.\"",
+          "The coach gives her the gloves at the start, not for the save. The kick is hard, not soft, and the story never says the team cheers."
+        ],
+        misconception: "A common mix-up is choosing the sentence about the kick or the save itself. The question asks what helps her make the save.",
+        why: "Part A: She uses Dani's tip and keeps her eyes on the ball. Part B: \"After that, every time the ball came near, she kept her eyes on it.\" Dani told her to watch the ball, and this sentence shows her doing it before the save. The gloves come at the start, the kick is hard, and the story does not tell about cheering." },
+      { id: "SK-RA2a-C12", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: ["p6"],
+        prompt: "Complete the sentences about the end of the story. Choose the best answer for each blank.",
+        text: "After the game, Simone shows that she {0}. The best proof is the sentence {1}",
+        slots: [
+          { options: ["wants to get better at playing goalie", "never wants to play goalie again", "is angry that her team lost"], answer: 0 },
+          { options: ["\"Can you help me practice goalie next week?\"", "\"The Falcons lost the game, 2 to 1.\"", "\"Simone dove and pushed it away with her fingertips.\""], answer: 0 }
+        ],
+        clue: "First decide what Simone wants after the game. Then pick the sentence that shows it, not just a true sentence from near the end.",
+        hints: [
+          "First decide what Simone wants after the game. Then pick the sentence that shows it, not just a true sentence from near the end.",
+          "Reread paragraph 5, after the game.",
+          "The Falcons losing is true, but it tells what happened to the team, not what Simone wants. Decide what she wants, then choose the proof."
+        ],
+        how: [
+          "After the game, Simone runs over to Dani and asks for help practicing goalie next week.",
+          "Asking for more practice shows she wants to get better at playing goalie.",
+          "The score tells what happened to the team, and the dive is about the save during the game.",
+          "The answers: she wants to get better at playing goalie, and the proof is \"Can you help me practice goalie next week?\""
+        ],
+        misconception: "A common mix-up is choosing a true sentence from the end of the story, like the score, that does not show what Simone wants.",
+        why: "The answers are \"wants to get better at playing goalie\" and \"Can you help me practice goalie next week?\" Asking for more practice shows she wants to improve. She does not quit, the story never says she is angry, the score is about the team, and the dive happens during the game." },
+      { id: "SK-RA2a-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: ["p6"],
+        prompt: "Simone's dad says, \"Simone is a thankful teammate.\" Which sentence BEST supports his opinion? Choose the sentence in the passage.",
+        targets: ["p6:3:1", "p6:4:1", "p6:4:4", "p6:5:2", "p6:5:3"],
+        answer: ["p6:5:3"], pick: 1,
+        clue: "Thankful means showing that you are glad someone helped you. The opinion is about Simone, so the proof must show something Simone does or says.",
+        hints: [
+          "Thankful means showing that you are glad someone helped you. The opinion is about Simone, so the proof must show something Simone does or says.",
+          "Reread paragraph 5, after the game.",
+          "Dani jogging over shows that Dani is kind, but it does not show anything about Simone. Look closely at what Simone does and says after the game."
+        ],
+        how: [
+          "Thankful means showing you are glad someone helped you.",
+          "After the game, Simone runs over to Dani. Running over by itself does not show thanks.",
+          "Then Simone tells Dani that she is thankful for the tip. That is the proof.",
+          "Dani jogging over shows Dani's kindness, nodding shows Simone listening, and the dive shows her skill."
+        ],
+        misconception: "A common mix-up is choosing a sentence about Dani's kindness. The opinion is about Simone, so the proof must show Simone.",
+        why: "The answer is the sentence where Simone says, \"Thanks for your tip.\" Thanking Dani shows she is glad Dani helped her. Running over to Dani, nodding and diving do not show thanks, and Dani jogging over is about Dani." },
+      { id: "SK-RA2a-C14", type: "ms", points: 2, dok: 3, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+        stem: ["**The Reading Dog**", "(1) Every Tuesday, a calm dog named Waffles visits the Oak Street Library.", "(2) Kids who used to be too shy to read out loud now read to Waffles in loud, clear voices.", "(3) Waffles has been a library dog for four years.", "(4) One boy said, \"Waffles never laughs when I mix up a word, so I'm not scared to try.\"", "(5) Teachers say that some of these kids now raise their hands to read in class, too."],
+        prompt: "The librarian says, \"Reading to Waffles helps shy kids feel brave.\" Which TWO sentences are true but do NOT support her idea? Choose two answers.",
+        choices: [
+          { text: "Every Tuesday, a calm dog named Waffles visits the Oak Street Library.", correct: true },
+          { text: "Waffles has been a library dog for four years.", correct: true },
+          { text: "Kids who used to be too shy to read out loud now read to Waffles in loud, clear voices." },
+          { text: "One boy said, \"Waffles never laughs when I mix up a word, so I'm not scared to try.\"" },
+          { text: "Teachers say that some of these kids now raise their hands to read in class, too." }
+        ],
+        clue: "A sentence supports an idea only if it shows the idea. Here, ask of each sentence: does it show a shy kid becoming brave?",
+        hints: [
+          "A sentence supports an idea only if it shows the idea. Here, ask of each sentence: does it show a shy kid becoming brave?",
+          "Read each sentence and say in your own words what it is about. Choose two.",
+          "The boy's words show he is not scared to try anymore, so his sentence does support the idea. Check the other four."
+        ],
+        how: [
+          "The librarian's idea is that reading to Waffles helps shy kids feel brave.",
+          "Sentences 2, 4 and 5 show kids who were shy now reading out loud, trying without fear and raising their hands in class.",
+          "Sentence 1 tells when Waffles visits, and sentence 3 tells how long he has been a library dog. They are true, but they do not show anyone becoming brave.",
+          "The answers are \"Every Tuesday, a calm dog named Waffles visits the Oak Street Library.\" and \"Waffles has been a library dog for four years.\""
+        ],
+        misconception: "A common mix-up is thinking a sentence about the dog must support the idea because the idea is about the dog. It has to show the kids becoming brave.",
+        why: "The answers are \"Every Tuesday, a calm dog named Waffles visits the Oak Street Library.\" and \"Waffles has been a library dog for four years.\" They are true, but they tell when he visits and how long he has worked, not that shy kids become brave. The other three sentences show kids reading loudly, trying without fear and raising their hands in class." },
+      /* Constructed response: never scored. */
+      { id: "SK-RA2a-C15", type: "cr", dok: 3, std: ["3.T.RA.2.a"], passages: ["p6"], rows: 4,
+        prompt: "Do you think Simone should keep playing goalie? Write your opinion. Then copy one sentence from \"The New Goalie\" that supports it, and tell how it supports it.",
+        sample: "I think Simone should keep playing goalie. The story says, \"Simone dove and pushed it away with her fingertips.\" That shows she can make a hard save, even in her very first game.",
+        criteria: ["I wrote my opinion.", "I copied one sentence from the story, using its exact words inside quotation marks.", "I told how the sentence supports my opinion."],
+        clue: "Decide yes or no first. Then look for a sentence that shows why you think so.",
+        hints: [
+          "Decide yes or no first. Then look for a sentence that shows why you think so.",
+          "Look at what Simone does in paragraph 4 and what she asks for in paragraph 5.",
+          "Copy the sentence exactly, inside quotation marks. Then add a sentence that starts \"That shows\" and connects it to your opinion."
+        ],
+        how: [
+          "Write your opinion in one sentence, such as \"I think Simone should keep playing goalie.\"",
+          "Find a sentence in the story that backs it up, and copy its exact words inside quotation marks.",
+          "Tell how that sentence supports your opinion.",
+          "Compare with the sample and the checklist. A different opinion can also be right if your sentence supports it."
+        ],
+        why: "There is more than one good answer. A strong answer gives an opinion, quotes one sentence exactly and explains how the sentence supports the opinion." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short text in the stem. */
+  similar: [
+    { id: "SK-RA2a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C06", "SK-RA2a-P4"],
+      stem: ["(1) A fennec fox lives in the hot Sahara Desert.", "(2) It has huge ears for its small size.", "(3) Its big ears let extra heat leave its body.", "(4) During the hottest part of the day, it sleeps in a den under the sand.", "(5) It eats insects, mice and plants."],
+      prompt: "Which sentence BEST supports the idea that a fennec fox's BODY helps it stay cool?",
+      choices: [
+        { text: "Its big ears let extra heat leave its body.", correct: true },
+        { text: "During the hottest part of the day, it sleeps in a den under the sand." },
+        { text: "A fennec fox lives in the hot Sahara Desert." },
+        { text: "It eats insects, mice and plants." }
+      ],
+      clue: "Read the idea word by word. It is about the fox's body, not only about staying cool.",
+      hints: [
+        "Read the idea word by word. It is about the fox's body, not only about staying cool.",
+        "Find the sentences that tell about heat or the desert.",
+        "Where the fox lives is true, but it does not show how its body keeps it cool. Compare the other choices with the idea."
+      ],
+      how: [
+        "The idea is that the fox's body helps it stay cool.",
+        "Sentence 3 says its big ears let extra heat leave its body. Ears are part of its body.",
+        "Sleeping in a den also keeps it cool, but a den is a place, not a part of its body. Where it lives and what it eats do not show the idea.",
+        "The answer is \"Its big ears let extra heat leave its body.\""
+      ],
+      why: "The answer is \"Its big ears let extra heat leave its body.\" Ears are part of the fox's body, and they help it lose heat. The den is a place it sleeps, not part of its body, and where it lives and what it eats do not show the idea." },
+    { id: "SK-RA2a-S02", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.a"], passages: [],
+      like: ["SK-RA2a-C11", "SK-RA2a-C08", "SK-RA2a-C04"],
+      stem: ["(1) Rafi wrote his name in big letters on the wing of his paper airplane.", "(2) The class airplane contest in the gym would start in five minutes.", "(3) \"What if it nose-dives on the very first throw?\" he whispered to his friend Bo.", "(4) Bo handed him a sharp pencil and gave him a friendly smile."],
+      prompt: "Answer: Rafi is worried about the contest. Which sentence BEST supports this answer?",
+      choices: [
+        { text: "\"What if it nose-dives on the very first throw?\" he whispered to his friend Bo.", correct: true },
+        { text: "Rafi wrote his name in big letters on the wing of his paper airplane." },
+        { text: "The class airplane contest in the gym would start in five minutes." },
+        { text: "Bo handed him a sharp pencil and gave him a friendly smile." }
+      ],
+      clue: "Proof of a feeling often comes from what a character says or does. Ask which sentence shows Rafi worrying.",
+      hints: [
+        "Proof of a feeling often comes from what a character says or does. Ask which sentence shows Rafi worrying.",
+        "Two sentences tell what Rafi does or says. Read them closely.",
+        "Bo's smile tells about Bo, not about Rafi. Check the other three sentences."
+      ],
+      how: [
+        "The answer to prove is that Rafi is worried.",
+        "In sentence 3, he whispers, \"What if it nose-dives on the very first throw?\" A what-if question about something going wrong shows worry.",
+        "Writing his name and the start time do not show a feeling, and the smile is Bo's.",
+        "The answer is: \"What if it nose-dives on the very first throw?\" he whispered to his friend Bo."
+      ],
+      why: "The answer is: \"What if it nose-dives on the very first throw?\" he whispered to his friend Bo. Asking what will happen if something goes wrong shows he is worried. Writing his name and the start time do not show a feeling, and the smile is Bo's." },
+    { id: "SK-RA2a-S03", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.a"], passages: [], pick: 2,
+      like: ["SK-RA2a-C05", "SK-RA2a-C09", "SK-RA2a-C13"],
+      stem: ["Mr. Park's opinion: \"The new dog park is a great place for dogs.\""],
+      prompt: "Which TWO facts BEST support Mr. Park's opinion? Choose two answers.",
+      choices: [
+        { text: "It has a big fenced field where dogs can run without a leash.", correct: true },
+        { text: "It has a water fountain made just for dogs.", correct: true },
+        { text: "It opened on a sunny Saturday in June." },
+        { text: "Its parking lot has spaces for twelve cars." },
+        { text: "The town also built a new library last year." }
+      ],
+      clue: "An opinion is supported by facts that show it. Ask of each fact: does this make the park better for dogs?",
+      hints: [
+        "An opinion is supported by facts that show it. Ask of each fact: does this make the park better for dogs?",
+        "Read each fact and picture a dog at the park. Choose two.",
+        "The new library is about the town, not the dog park. Check the other four facts."
+      ],
+      how: [
+        "Mr. Park's opinion is that the park is great for dogs.",
+        "A big fenced field lets dogs run off the leash, and a fountain made for dogs gives them water. Both make the park good for dogs.",
+        "The opening day and the parking lot are true, but they do not make the park better for dogs. The library is not about the park.",
+        "The answers are \"It has a big fenced field where dogs can run without a leash.\" and \"It has a water fountain made just for dogs.\""
+      ],
+      why: "The answers are \"It has a big fenced field where dogs can run without a leash.\" and \"It has a water fountain made just for dogs.\" Both show the park is good for dogs. The opening day and the parking lot do not, and the library is about the town." }
+  ],
+  /* Hints and Show me how for items kept in practice: refs P3, P4 (core set 1) and Together P1, P2. */
+  addons: {
+    "SK-RA2a-P1": {
+      hints: [
+        "The question asks how the light would feel, not where it comes from or what it is used for.",
+        "Reread paragraph 2, about how a firefly makes light.",
+        "\"The light shines from the end of its belly\" tells where the light is, not how it would feel. Decide about the other sentences in paragraph 2."
+      ],
+      how: [
+        "The question asks how the light would feel.",
+        "Paragraph 2 says that even though the light is bright, it gives off almost no heat. Almost no heat means the light is not hot.",
+        "The other sentences tell where the light comes from or what it is used for.",
+        "The answer is \"Even though the light is bright, it gives off almost no heat.\""
+      ] },
+    "SK-RA2a-P2": {
+      hints: [
+        "Think about what fireflies do when they glow. For Part B, choose the sentence that shows your Part A answer actually happening.",
+        "Answer Part A first. Then read each Part B sentence and ask: does it show fireflies finding each other, or does it tell something else about them?",
+        "The glow gives off almost no heat, so following a warm glow cannot be how they find each other. For Part B, make sure the sentence you choose matches your Part A answer."
+      ],
+      how: [
+        "Paragraph 3 says fireflies use their light to talk. A male flashes his pattern, and a female flashes back to answer him.",
+        "Part A: They flash light patterns back and forth.",
+        "Part B: \"A female on the ground flashes back to answer him.\" It shows one firefly answering another with light.",
+        "The glow is not warm, the passage says nothing about buzzing, and the soil and leaves are where young fireflies live."
+      ] },
+    "SK-RA2a-P3": {
+      hints: [
+        "The name firefly has the word fly in it. Look for sentences that tell what kind of bug a firefly really is.",
+        "Reread paragraph 1. Which sentences tell about the name, and which tell about the lights?",
+        "\"These lights come from fireflies\" tells where the lights come from, not what kind of bug a firefly is. Decide about the other sentences in paragraph 1."
+      ],
+      how: [
+        "Tyrone's idea is that a firefly is not the kind of bug its name says.",
+        "\"Fireflies are not really flies at all.\" shows the name is wrong.",
+        "\"They are a kind of beetle.\" tells what kind of bug a firefly really is.",
+        "The other sentences tell about the lights, not what kind of bug fireflies are."
+      ],
+      misconception: "A common mix-up is choosing a sentence that uses the word fireflies but does not prove the idea." },
+    "SK-RA2a-P4": {
+      hints: [
+        "Protect means keep safe. Look for a sentence that tells how something could keep a young firefly safe.",
+        "Each choice comes from a different part of the passage. Find each one and read what that paragraph is about.",
+        "\"Each kind of firefly has its own blinking pattern\" is about how grown fireflies talk to each other, not about keeping young ones safe. Check the other three choices."
+      ],
+      how: [
+        "Protect means keep safe, so look for how the glow could keep young fireflies safe.",
+        "Paragraph 4 says their glow may warn other animals that they taste bad. An animal that is warned will leave them alone.",
+        "\"Young fireflies, called larvae, can glow too\" is true, but it does not tell how the glow helps.",
+        "The answer is \"Their glow may warn other animals that they taste bad.\""
+      ],
+      misconception: "A common mix-up is choosing a sentence that is about the right topic, the larvae, but does not show the idea." }
+  },
   test: [
     { id: "SK-RA2a-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "Which sentence shows that Ana feels nervous at the beginning of the story? Choose the sentence in the passage.",

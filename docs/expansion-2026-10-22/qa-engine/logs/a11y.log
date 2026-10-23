@@ -1,0 +1,37 @@
+320 choice: 0 violations
+320 choice axe color-contrast: 0 violations, 0 incomplete
+320 intro: 0 violations
+320 intro axe color-contrast: 0 violations, 0 incomplete
+320 path: 0 violations
+320 path axe color-contrast: 0 violations, 0 incomplete
+320 home/first-browse: 0 violations, contrast failures 0, lowest 4.64, state ok True
+320 home/returning-progress: 0 violations, contrast failures 0, lowest 4.64, state ok True
+320 home/all-passed: 0 violations, contrast failures 0, lowest 4.64, state ok True
+390 choice: 0 violations
+390 choice axe color-contrast: 0 violations, 0 incomplete
+390 intro: 0 violations
+390 intro axe color-contrast: 0 violations, 0 incomplete
+390 path: 0 violations
+390 path axe color-contrast: 0 violations, 0 incomplete
+390 home/first-browse: 0 violations, contrast failures 0, lowest 4.64, state ok True
+390 home/returning-progress: 0 violations, contrast failures 0, lowest 4.64, state ok True
+390 home/all-passed: 0 violations, contrast failures 0, lowest 4.64, state ok True
+768 choice: 0 violations
+768 choice axe color-contrast: 0 violations, 0 incomplete
+768 intro: 0 violations
+768 intro axe color-contrast: 0 violations, 0 incomplete
+768 path: 0 violations
+768 path axe color-contrast: 0 violations, 0 incomplete
+768 home/first-browse: 0 violations, contrast failures 0, lowest 4.64, state ok True
+768 home/returning-progress: 0 violations, contrast failures 0, lowest 4.64, state ok True
+768 home/all-passed: 0 violations, contrast failures 0, lowest 4.64, state ok True
+1366 choice: 0 violations
+1366 choice axe color-contrast: 0 violations, 0 incomplete
+1366 intro: 0 violations
+1366 intro axe color-contrast: 0 violations, 0 incomplete
+1366 path: 0 violations
+1366 path axe color-contrast: 0 violations, 0 incomplete
+1366 home/first-browse: 0 violations, contrast failures 0, lowest 4.64, state ok True
+1366 home/returning-progress: 0 violations, contrast failures 0, lowest 4.64, state ok True
+1366 home/all-passed: 0 violations, contrast failures 0, lowest 4.64, state ok True
+main runs: 12, axe color-contrast runs: 12, browse-home runs: 12, browse-home runs with a problem: 0

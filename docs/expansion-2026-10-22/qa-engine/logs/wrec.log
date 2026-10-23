@@ -1,0 +1,456 @@
+PASS normal: successful-save notice
+PASS normal: second task starts independently
+PASS normal: all fields survive mode/task return
+PASS normal: current essay never reverts to disk
+PASS normal: all fields survive reload
+PASS normal: clean cache sees valid disk update
+PASS normal: clean cache sees explicit disk clear
+PASS normal: read failure preserves clean cached work
+PASS normal: canceled reset preserves all fields
+PASS normal: confirmed reset clears cached task
+PASS normal: resetting one task preserves other task
+PASS normal: no page errors
+PASS blocked-getter: read failure disclosed
+PASS blocked-getter: honest unsaved notice
+PASS blocked-getter: unsaved work has unload protection
+PASS blocked-getter: second task starts independently
+PASS blocked-getter: all fields survive mode/task return
+PASS blocked-getter: current essay never reverts to disk
+PASS blocked-getter: saving recovery clears failure notice
+PASS blocked-getter: recovered storage gets latest fields
+PASS blocked-getter: other unsaved task still protected
+PASS blocked-getter: saving all tasks removes unload warning
+PASS blocked-getter: canceled reset preserves all fields
+PASS blocked-getter: confirmed reset clears cached task
+PASS blocked-getter: resetting one task preserves other task
+PASS blocked-getter: no page errors
+PASS quota: honest unsaved notice
+PASS quota: unsaved work has unload protection
+PASS quota: second task starts independently
+PASS quota: all fields survive mode/task return
+PASS quota: current essay never reverts to disk
+PASS quota: saving recovery clears failure notice
+PASS quota: recovered storage gets latest fields
+PASS quota: other unsaved task still protected
+PASS quota: saving all tasks removes unload warning
+PASS quota: canceled reset preserves all fields
+PASS quota: confirmed reset clears cached task
+PASS quota: resetting one task preserves other task
+PASS quota: no page errors
+PASS stale-disk: honest unsaved notice
+PASS stale-disk: unsaved work has unload protection
+PASS stale-disk: second task starts independently
+PASS stale-disk: all fields survive mode/task return
+PASS stale-disk: current essay never reverts to disk
+PASS stale-disk: saving recovery clears failure notice
+PASS stale-disk: recovered storage gets latest fields
+PASS stale-disk: other unsaved task still protected
+PASS stale-disk: saving all tasks removes unload warning
+PASS stale-disk: canceled reset preserves all fields
+PASS stale-disk: confirmed reset clears cached task
+PASS stale-disk: resetting one task preserves other task
+PASS stale-disk: no page errors
+PASS read-error: read failure disclosed
+PASS read-error: honest unsaved notice
+PASS read-error: unsaved work has unload protection
+PASS read-error: second task starts independently
+PASS read-error: all fields survive mode/task return
+PASS read-error: current essay never reverts to disk
+PASS read-error: saving recovery clears failure notice
+PASS read-error: recovered storage gets latest fields
+PASS read-error: other unsaved task still protected
+PASS read-error: saving all tasks removes unload warning
+PASS read-error: canceled reset preserves all fields
+PASS read-error: confirmed reset clears cached task
+PASS read-error: resetting one task preserves other task
+PASS read-error: no page errors
+PASS damaged-json: distinguish damaged JSON
+PASS damaged-json: successful-save notice
+PASS damaged-json: second task starts independently
+PASS damaged-json: all fields survive mode/task return
+PASS damaged-json: current essay never reverts to disk
+PASS damaged-json: canceled reset preserves all fields
+PASS damaged-json: confirmed reset clears cached task
+PASS damaged-json: resetting one task preserves other task
+PASS damaged-json: no page errors
+{
+  "passed": 75,
+  "failed": 0,
+  "results": [
+    {
+      "name": "normal: successful-save notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: all fields survive reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: clean cache sees valid disk update",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: clean cache sees explicit disk clear",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: read failure preserves clean cached work",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "normal: no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "blocked-getter: read failure disclosed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: honest unsaved notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: unsaved work has unload protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: saving recovery clears failure notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: recovered storage gets latest fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: other unsaved task still protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: saving all tasks removes unload warning",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "blocked-getter: no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "quota: honest unsaved notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: unsaved work has unload protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: saving recovery clears failure notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: recovered storage gets latest fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: other unsaved task still protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: saving all tasks removes unload warning",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "quota: no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "stale-disk: honest unsaved notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: unsaved work has unload protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: saving recovery clears failure notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: recovered storage gets latest fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: other unsaved task still protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: saving all tasks removes unload warning",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stale-disk: no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "read-error: read failure disclosed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: honest unsaved notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: unsaved work has unload protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: saving recovery clears failure notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: recovered storage gets latest fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: other unsaved task still protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: saving all tasks removes unload warning",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "read-error: no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "damaged-json: distinguish damaged JSON",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: successful-save notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: second task starts independently",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: all fields survive mode/task return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: current essay never reverts to disk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: canceled reset preserves all fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: confirmed reset clears cached task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: resetting one task preserves other task",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "damaged-json: no page errors",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}

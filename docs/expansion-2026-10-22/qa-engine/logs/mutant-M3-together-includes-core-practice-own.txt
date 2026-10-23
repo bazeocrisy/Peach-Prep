@@ -1,0 +1,6 @@
+FAIL  A.1 Together on a core lesson is practice minus the core refs: exactly P1-P3 (lead decision)   [['SK-TT1c-P1', 'SK-TT1c-P2', 'SK-TT1c-P3', 'SK-TT1c-P4', 'SK-TT1c-P5', 'SK-TT1c-P6']]
+FAIL  A.2 P4-P6 appear only in core (set 1), never in Together; fifteen core items in three sets of five   [[['SK-TT1c-P4', 'SK-TT1c-P5', 'SK-TT1c-C03', 'SK-TT1c-C04', 'SK-TT1c-P6'], ['SK-TT1c-C06', 'SK-TT1c-C07', 'SK-TT1c-C08', 'SK-TT1c-C09', 'SK-TT1c-C10'], ['SK-TT1c-C11', 'SK-TT1c-C12', 'SK-TT1c-C13', 'SK-TT1c-C14', 'SK-TT1c-C15']]]
+PASS  A.3 sets are SK:<k>:y, :y2, :y3 (own, set 1-3); Together -> picker, set 1 -> set 2 -> set 3 -> the check
+PASS  A.4 addons are merged at registration (hints on the ref P4 and on Together P1); the similar bank is not a set
+playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+exit 1

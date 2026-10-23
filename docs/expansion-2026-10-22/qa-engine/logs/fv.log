@@ -1,0 +1,126 @@
+NOTE 4.6 back-button label on #parents with no saved mode: ['← All skills']
+PASS  1.1 fresh visit shows the choice screen with the title focused
+PASS  1.2 Choose a lesson lands on the browse home with search and the lesson list visible
+PASS  1.3 it saves pp.path.v1 mode 'browse' with introduced still false
+FAIL  1.4 pp.path.v1 is the only key the choice writes   [['set:pp.practice.storage-check', 'remove:pp.practice.storage-check', 'set:pp.path.v1']]
+PASS  1.5 the address is #browse
+PASS  1.6 reload of #browse lands on the browse home
+PASS  1.7 the plain address after the choice lands on the browse home (the saved mode, not the hash)
+PASS  1.8 the saved choice is unchanged by reloads
+FAIL  2.1 a fresh load writes nothing to storage   [('[]', ['set:pp.practice.storage-check', 'remove:pp.practice.storage-check'])]
+FAIL  2.2 a reload before choosing writes nothing   [('[]', ['set:pp.practice.storage-check', 'remove:pp.practice.storage-check'])]
+PASS  2.3 a reload before choosing shows the choice screen again
+PASS  2.4 pp.path.v1 is absent before a choice
+PASS  3.1 while lessons load both choices are disabled and read 'Loading lessons…'
+PASS  3.2 the choice screen is already showing while lessons load
+PASS  3.3 a click on a disabled choice does nothing and saves nothing
+PASS  3.4 once lessons load both choices are enabled with their real labels
+PASS  4.1 #skill/<code> opens that lesson at Learn It
+PASS  4.2 #skill/<code> writes no learning mode
+PASS  4.3 Back from a deep-linked lesson with no mode shows the choice screen
+PASS  4.4 #skill/<code>/<step> opens that step
+PASS  4.5 #parents opens the parent guide with its title focused and writes nothing
+PASS  4.6 the parent guide's back button with no mode returns to the choice screen (label recorded as a finding)
+PASS  4.7 #mixed opens mixed practice and writes nothing
+PASS  4.8 #path opens the path introduction, not started
+FAIL  4.9 #path alone writes no learning mode   [['set:pp.practice.storage-check', 'remove:pp.practice.storage-check']]
+PASS  4.10 #choose shows the choice screen with the title focused and writes nothing
+PASS  4.11 #no-such-page with fresh storage: browse home with the not-found note focused, address dropped, nothing saved (current behaviour)
+PASS  4.12 reload after an unknown address with fresh storage shows the choice screen
+PASS  4.11 #skill/no-such-lesson with fresh storage: browse home with the not-found note focused, address dropped, nothing saved (current behaviour)
+PASS  4.13 #browse with fresh storage opens the lesson list and saves no mode
+PASS  4.14 the plain address after #browse (no choice made) shows the choice screen
+PASS  5.1 320x568 choice screen: no horizontal scroll
+PASS  5.2 320x568 choice screen: every control is at least 44px by 44px
+PASS  5.3 320x568 hero and both cards are visible and inside the page width
+PASS  5.4 320x568 the hero title starts in the first screen
+PASS  5.1 390x844 choice screen: no horizontal scroll
+PASS  5.2 390x844 choice screen: every control is at least 44px by 44px
+PASS  5.3 390x844 hero and both cards are visible and inside the page width
+PASS  5.4 390x844 the hero title starts in the first screen
+PASS  5.1 844x390 choice screen: no horizontal scroll
+PASS  5.2 844x390 choice screen: every control is at least 44px by 44px
+PASS  5.3 844x390 hero and both cards are visible and inside the page width
+PASS  5.4 844x390 the hero title starts in the first screen
+PASS  5.1 768x1024 choice screen: no horizontal scroll
+PASS  5.2 768x1024 choice screen: every control is at least 44px by 44px
+PASS  5.3 768x1024 hero and both cards are visible and inside the page width
+PASS  5.4 768x1024 the hero title starts in the first screen
+PASS  5.1 1024x768 choice screen: no horizontal scroll
+PASS  5.2 1024x768 choice screen: every control is at least 44px by 44px
+PASS  5.3 1024x768 hero and both cards are visible and inside the page width
+PASS  5.4 1024x768 the hero title starts in the first screen
+PASS  5.1 1366x768 choice screen: no horizontal scroll
+PASS  5.2 1366x768 choice screen: every control is at least 44px by 44px
+PASS  5.3 1366x768 hero and both cards are visible and inside the page width
+PASS  5.4 1366x768 the hero title starts in the first screen
+PASS  5.1 1920x1080 choice screen: no horizontal scroll
+PASS  5.2 1920x1080 choice screen: every control is at least 44px by 44px
+PASS  5.3 1920x1080 hero and both cards are visible and inside the page width
+PASS  5.4 1920x1080 the hero title starts in the first screen
+PASS  6.1 with working storage the choice-screen notice is empty and 'Your progress stays' shows
+PASS  6.2 blocked storage: the choice screen says saving is unavailable
+PASS  6.3 blocked storage: 'Your progress stays' is hidden
+PASS  6.4 blocked storage: the welcome-back panel stays hidden
+PASS  6.5 blocked storage: Choose a lesson still opens the lesson list
+PASS  6.2 quota storage: the choice screen says saving is unavailable
+PASS  6.3 quota storage: 'Your progress stays' is hidden
+PASS  6.4 quota storage: the welcome-back panel stays hidden
+PASS  6.5 quota storage: Choose a lesson still opens the lesson list
+PASS  7.1 Tab from the focused title goes to Start the Learning Path, then Choose a lesson
+PASS  7.2 focus after the choices moves on to the shared help, not back up the page
+PASS  7.3 Enter on Start the Learning Path opens the path introduction
+PASS  7.4 Enter on Choose a lesson opens the lesson list and saves browse mode
+PASS  7.3 Space on Start the Learning Path opens the path introduction
+PASS  7.4 Space on Choose a lesson opens the lesson list and saves browse mode
+PASS  8.1 the welcome-back panel is hidden for a fresh visitor
+PASS  8.2 the legacy fixture shows the panel: 'one lesson and one essay'
+FAIL  8.7a the only write on load is the additive PP-003 progress migration, which keeps every saved field   [(['set:pp.practice.storage-check', 'remove:pp.practice.storage-check', 'set:pp.progress.v1'], {'3.F.P.4.a': {'taught': True, 'learned': True}, '3.F.F.1.a': {'taught': True}, '3.T.T.1.b': {'taught': True, 'learned': True, 'practiced': True, 'tried': True, 'mastered': True, 'best': 8, 'max': 8, 'tries]
+PASS  8.3 four lessons and one essay: count wording uses number words
+PASS  8.4 at most three links, in order: in progress (catalog order), then saved short writing
+PASS  8.5 then 'and two more in the lesson list.'
+PASS  8.6 an in-progress link's aria-label names the lesson and its first open step
+PASS  8.7 rendering the panel writes nothing to storage
+PASS  8.8 an in-progress lesson opens at its first open step (Practice Together)
+PASS  8.9 opening a lesson from the panel saves no learning mode
+PASS  8.10 two lessons and one essay: wording
+PASS  8.11 order is in progress, then essay, then passed; no 'more' line with three items
+PASS  8.12 the essay link's aria-label says the saved draft opens with it
+PASS  8.13 a passed lesson's aria-label says it opens at Learn It
+PASS  8.14 a passed lesson opens at Learn It, never at the check
+PASS  8.15 an essay link opens the saved draft
+PASS  8.16 the saved draft is unchanged in storage
+PASS  8.17 wording 'one lesson'
+PASS  8.17 wording 'two essays'
+PASS  8.18 fourteen lessons: '14 lessons', three links, 'and 11 more'
+PASS  8.19 four lessons: 'and one more in the lesson list.'
+PASS  8.20 malformed progress (unparseable): the panel stays hidden and the choices work
+PASS  8.21 malformed progress (unparseable): no page errors, and rendering the panel leaves the stored value untouched
+PASS  8.20 malformed progress (array): the panel stays hidden and the choices work
+PASS  8.21 malformed progress (array): no page errors, and rendering the panel leaves the stored value untouched
+PASS  8.21a malformed progress (bad record): the good record survives load
+PASS  8.20 malformed progress (bad record): the panel shows the good record only
+PASS  8.21 malformed progress (bad record): no page errors, and rendering the panel leaves the stored value untouched
+PASS  9.1 button labels: 'Start the Learning Path' and 'Choose a lesson'
+PASS  9.2 the first path lesson reads 'D1 · Story elements'
+PASS  9.3 the category line reads 'Lessons are grouped in five categories:' with five chips in catalog order
+PASS  9.4 the chips are a static list, not controls
+PASS  9.5 the shared routine block is present and explains how a lesson works
+PASS  9.6 the shared routine block's step names match a five-step lesson
+PASS  9.7 the Recommended tag is on the Learning Path card only
+PASS  10.1 Start the Learning Path from the choice screen opens the introduction
+PASS  10.2 before Start the next-step card is hidden
+PASS  10.3 before Start the 'See the whole path / Switch learning mode' row is hidden
+PASS  10.4 before Start the intro's start button is the only visible start action
+PASS  10.5 before Start nothing is saved
+PASS  10.6 the start button names the first lesson
+PASS  10.7 after Start the next-step card and the row show, and path mode is saved as introduced
+PASS  9.8 once introduced the choice reads 'Back to the Learning Path'
+PASS  9.9 opening the choice screen again changes no saved state
+PASS  11.1 Browse lessons from the path opens the lesson list at #browse
+PASS  11.2 Browse lessons keeps path mode saved
+PASS  11.3 the plain address after Browse lessons still opens the path
+PASS  11.4 in browse mode, 'Try the Learning Path' shows the introduction without changing the mode
+PASS  11.5 Browse lessons from there returns to the list and keeps browse mode
+PASS  12.1 no page errors in any scenario
+119 passed, 5 failed

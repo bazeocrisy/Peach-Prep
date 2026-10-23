@@ -1,0 +1,13 @@
+PASS  A.1 Together on a core lesson is practice minus the core refs: exactly P1-P3 (lead decision)
+PASS  A.2 P4-P6 appear only in core (set 1), never in Together; fifteen core items in three sets of five
+PASS  A.3 sets are SK:<k>:y, :y2, :y3 (own, set 1-3); Together -> picker, set 1 -> set 2 -> set 3 -> the check
+PASS  A.4 addons are merged at registration (hints on the ref P4 and on Together P1); the similar bank is not a set
+PASS  A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons) and leads to the Try step's set picker
+PASS  B.0 the Try step is a set picker: heading, three set cards, Start set 1, the stop-and-come-back line
+PASS  B.1 own mode: Check my answer, Give me a hint, Show me how (shows the answer) and Next are present before any wrong answer; no Help me; targets at least 44px
+PASS  B.2 blank: Check my answer is disabled; Try a similar question is not offered yet
+PASS  B.3 a wrong check says Not quite with no explanation and allows a retry; after two wrong checks Check waits for a hint or Show me how
+PASS  B.4 three graduated hints in order, each the authored text, labelled Hint n of 3; no outline, nothing ruled out; a hint re-enables one check
+FAIL  B.5 Show me how: numbered steps from how, the answer, the mix-up line, the key outlined; the item is Answer shown and focus moves to the steps   [({'box': 'SHOW ME HOW\n\nYou already had this one right. Here are the steps.\n\nIn paragraph 5, Marisol thinks about Mr. Okafor working in the hot sun and coming up short. Caring how someone else will be affected shows she is thoughtful.\nBy the en
+playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+exit 1
