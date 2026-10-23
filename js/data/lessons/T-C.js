@@ -1760,53 +1760,52 @@ PP.addLesson({
       why: "The answer is Sentence 3. It names the roots, and no label points to the roots. The other sentences tell about the bark, the rings and the center, which the labels name." },
     { id: "SK-TC1b-S12", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [],
       like: ["SK-TC1b-C12"],
-      stem: ["An article explains how a toaster makes bread brown. The author could have used a photo of a toaster on a kitchen counter. Instead, the author drew a diagram of the inside. Labels point to the red wires, the spring and the lever that pushes the bread down. A photo would show only the shiny outside of the toaster."],
+      stem: ["An article explains how a toaster makes bread brown. The author could have used a photo of a toaster on a kitchen counter. Instead, the author drew a diagram of the inside of a toaster. Labels point to the red wires, the spring and the lever that pushes the bread down. The article has a short title and three sections."],
       prompt: "Why is the diagram a better choice for this article than the photo?",
       choices: [
         { text: "Its labels name the hidden parts inside.", correct: true },
-        { text: "It shows the exact color of a real toaster." },
-        { text: "It makes the toaster look larger on the page." },
-        { text: "It shows what a kitchen counter looks like." }
+        { text: "It shows how shiny the toaster looks." },
+        { text: "It shows a person making toast." },
+        { text: "It takes up less room on the page." }
       ],
       clue: "Match the picture to the job of the article. Ask what a reader needs to see to learn about a toaster.",
       hints: [
         "Match the picture to the job of the article. Ask what a reader needs to see to learn about a toaster.",
         "Read what the photo would show and what the diagram shows. Which one shows what is inside?",
-        "The stem says the photo shows a shiny outside, so a color is the photo's strength, not the diagram's. Test the other choices."
+        "The article is about how a toaster works, not how it looks on the outside, so a choice about shine does not fit. Test the other choices."
       ],
       how: [
         "The article is about how a toaster works, so a reader needs to see what is inside.",
-        "A photo would show only the outside. The diagram shows the wires, spring and lever, with labels.",
+        "A photo of a toaster on a counter shows the outside. The diagram shows the wires, spring and lever, with labels.",
         "The answer is \"Its labels name the hidden parts inside.\"",
-        "The diagram is not about color, size or the kitchen."
+        "The diagram is not about shine, a person or room on the page."
       ],
       misconception: "A common mix-up is thinking a photo is always better because it looks real. The better picture is the one that shows what the article teaches.",
-      why: "The answer is \"Its labels name the hidden parts inside.\" The article is about how a toaster works, and the photo would show only the outside. The diagram is not about color, size or the kitchen." },
+      why: "The answer is \"Its labels name the hidden parts inside.\" The article is about how a toaster works, and a photo would show only the outside. The diagram is not about shine, a person or room on the page." },
     { id: "SK-TC1b-S13", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
       like: ["SK-TC1b-C13"],
-      stem: ["The Greenway Park Newsletter comes two ways. One way is a printed paper that people pick up at the park gate. The other way is a web page. Both have headlines, photos with captions and a calendar box of upcoming days. The web page can also do some things that paper cannot do. A reader can use it on a phone or on a computer."],
+      stem: ["The Greenway Park Newsletter comes two ways. One way is a printed paper that people pick up at the park gate. The other way is a web page. Both tell about the park and its events. A reader can see the web page on a phone or on a computer."],
       prompt: "Which TWO features could be on the web page but NOT in the printed paper?",
       choices: [
-        { text: "a play button for a video of the new playground opening", correct: true },
+        { text: "a slideshow that shows the next photo when you tap an arrow", correct: true },
         { text: "a Sign Up button that opens a form for the soccer league", correct: true },
         { text: "a headline above each story" },
         { text: "a photo with a caption underneath" },
         { text: "a calendar box that lists the upcoming days" }
       ],
-      clue: "Ask which features need a screen to work. A feature that can move or open something needs one.",
+      clue: "Ask which features need a screen to work. A feature that can change or open something needs one.",
       hints: [
-        "Ask which features need a screen to work. A feature that can move or open something needs one.",
-        "The stem says both ways already have some features. Cross those out first, then choose two.",
-        "A calendar box is named in the stem as being in both ways, so it is not web-only. Check the other choices the same way."
+        "Ask which features need a screen to work. A feature that can change or open something needs one.",
+        "Picture each feature on the printed paper. If it can be printed and still do its job, it is not web-only. Choose two.",
+        "A headline can be printed above a story on paper, so it is in both. Test each of the other features."
       ],
       how: [
-        "The stem says both ways have headlines, photos with captions and a calendar box.",
-        "A video with a play button and a Sign Up button that opens a form need a screen to work.",
-        "The answers are \"a play button for a video of the new playground opening\" and \"a Sign Up button that opens a form for the soccer league.\"",
-        "Headlines, captions and calendar boxes can be printed on paper."
+        "A slideshow needs a screen to change the photo when you tap an arrow, and a Sign Up button needs a screen to open a form.",
+        "Headlines, photos with captions and calendar boxes can all be printed on paper.",
+        "The answers are \"a slideshow that shows the next photo when you tap an arrow\" and \"a Sign Up button that opens a form for the soccer league.\""
       ],
-      misconception: "A common mix-up is choosing a feature the text says is in both. Cross out the shared features first.",
-      why: "The answers are \"a play button for a video of the new playground opening\" and \"a Sign Up button that opens a form for the soccer league.\" Both need a screen to work. Headlines, captions and calendar boxes are in both the paper and the web page." },
+      misconception: "A common mix-up is thinking a photo or a box is only for web pages. Many features work on paper and on a screen.",
+      why: "The answers are \"a slideshow that shows the next photo when you tap an arrow\" and \"a Sign Up button that opens a form for the soccer league.\" Both need a screen to work. Headlines, captions and calendar boxes can be printed on paper." },
     { id: "SK-TC1b-S14", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
       like: ["SK-TC1b-C14"],
       stem: ["Theo is giving a talk to his class about keeping a garden healthy. He has three tips. He wants his listeners to keep track of which tip he is on. They will only hear his voice, and nothing will be written on the board. Theo has practiced his talk at home, and he plans to speak in a clear, calm voice."],
@@ -1839,23 +1838,23 @@ PP.addLesson({
       choices: [
         { text: "to tell listeners the story begins in the morning", correct: true },
         { text: "to tell listeners that the story is over" },
-        { text: "to show that the host is angry" },
+        { text: "to show that Nia is late for school" },
         { text: "to tell listeners to stop listening" }
       ],
       clue: "A sound in a podcast is added for a reason. Ask what the sound helps listeners know or feel.",
       hints: [
         "A sound in a podcast is added for a reason. Ask what the sound helps listeners know or feel.",
         "Read the lines right after the sound. What time of day do they tell about?",
-        "The host says good morning in a happy voice, so a choice about anger does not fit. Test the other choices against the lines after the sound."
+        "Nia says she jumps out of bed when she hears the ringing, so she is not late. Test the other choices against the lines after the sound."
       ],
       how: [
         "The alarm clock rings at the very start of the script.",
         "The next lines say good morning and tell how Nia gets ready for school.",
         "The answer is \"to tell listeners the story begins in the morning.\"",
-        "The sound comes at the start, so it does not mean the story is over or tell listeners to stop."
+        "The sound comes at the start, so it does not mean the story is over or tell listeners to stop, and Nia is not late."
       ],
       misconception: "A common mix-up is thinking a sound is only noise. A sound can tell listeners where, when or how to feel.",
-      why: "The answer is \"to tell listeners the story begins in the morning.\" The alarm clock rings at the start, and the host then says good morning. The sound comes at the start, so it does not mean the story is over, show anger or tell listeners to stop." }
+      why: "The answer is \"to tell listeners the story begins in the morning.\" The alarm clock rings at the start, and the host then says good morning. The sound comes at the start, so it does not mean the story is over or tell listeners to stop, and Nia is not late." }
   ],
   /* Hints and Show me how for items kept in practice: refs P5, P4 (core set 1) and Together P1, P8, P9, P10, P6. */
   addons: {
@@ -2027,8 +2026,8 @@ PP.addLesson({
   teach: {
     big: "When you make a poster or a slide, choose words, pictures and sounds that work together to help your reader.",
     points: [
-      "First decide your purpose and your audience. Who will look at it, and what should they learn or do?",
-      "Pick a picture that matches your words. A picture that is about something else will confuse the reader.",
+      "First decide your purpose and your audience. Who will look at it, and what should they learn or do? Change your words and pictures when your readers change. Young children need big pictures and a few easy words.",
+      "Pick a picture that matches your words. A picture that is about something else will confuse the reader. Take out any line that is not about your purpose, too.",
       "Write a caption that tells what the picture shows. Keep it short and clear.",
       "Add labels to point out the parts a reader should notice.",
       "A sound can help, like an animal call on a slide about that animal. Use it only if it fits the topic."
@@ -2070,6 +2069,16 @@ PP.addLesson({
         "Keep it short so the reader can read it fast."
       ],
       answer: "A good caption is \"Pepper takes a nap on the clean towels.\""
+    },
+    {
+      show: ["Sam made a poster for parents about Family Movie Night. It says: Movie Night is in the gym on Friday. Doors open at six o'clock, and the movie starts at seven.", "Now Sam wants a copy for kindergartners, who cannot read long sentences yet."],
+      ask: "What should Sam change on the copy for the kindergartners?",
+      steps: [
+        "Find the new audience. Kindergartners read slowly, and they learn a lot from pictures.",
+        "Use one big picture that shows the idea, like children sitting on blankets in front of a screen.",
+        "Use only a few easy words in big letters, like \"Come to Movie Night! Friday at six.\""
+      ],
+      answer: "Sam should use one big picture and a few easy words in big letters, because the readers are young."
     }
   ],
   write: {
@@ -2107,6 +2116,19 @@ PP.addLesson({
         ["## Hear Them Sing"],
         ["In late winter and early spring, peepers sing at night near ponds.", "Each male puffs up a bubble of skin under his chin to make a loud peep.", "When many peepers sing together, it sounds like sleigh bells."],
         ["Box: Quiet, please!", "Peepers stop singing when they hear someone coming."]
+      ] },
+    { id: "p3", draft: true, title: "Be Pool Smart!", byline: "Imani's first draft for the gate of the town pool. It is for kids who are six to nine years old.", genre: "Student draft (poster)",
+      paragraphs: [
+        ["(1) Be Pool Smart!"],
+        ["(2) Swim only where a lifeguard is on duty and can see you.", "(3) Wear a life jacket if you are still learning to swim.", "(4) New swimmers should stay close to a grown-up who can reach them in one step."],
+        ["(5) Our snack stand sells the best frozen fruit pops in town.", "(6) Never swim alone.", "(7) Listen when the lifeguard blows the whistle."],
+        ["(8) Get out and rest if you feel tired or cold.", "(9) Tell a lifeguard right away if someone needs help.", "(10) Have fun in the water, and be a safe swimmer all summer long!"]
+      ] },
+    { id: "p4", draft: true, title: "Wolves Talk", byline: "Mateo's slide show draft for his third-grade class", genre: "Student draft (slide show)",
+      paragraphs: [
+        ["(1) Wolves live and hunt in family groups called packs.", "(2) A pack is made up of a mother, a father and their young."],
+        ["(3) Wolves talk to each other with long, wavering calls.", "(4) A call can carry for miles across hills and valleys.", "(5) Wolves use these calls to talk with other wolves and to warn of danger."],
+        ["(6) Wolves also have a very strong sense of smell.", "(7) A wolf can smell other animals from far away, even when it cannot see them.", "(8) Pack members hunt together, and each one has a part to play in the hunt."]
       ] }
   ],
   practice: [
@@ -2160,6 +2182,754 @@ PP.addLesson({
       clue: "A sound should match what the slide is about. What is happening on Slide 3?",
       why: "The answer is the rumble of a farm machine digging. Slide 3 tells how machines dig up and pick the peanuts, so that sound matches the words." }
   ],
+  /* ---------- B4 core (expansion 2026-10-22, author b4c; 01-architecture.md §2.2-2.3) ----------
+     Fifteen items in three sets of five, all selected response. { ref } reuses the Try items P4 and P5 by id,
+     so Practice Together is P1-P3 (the engine shows practice minus refs there). Hints and Show me how for
+     P1-P5 are in addons below. The make-a-poster write task stays outside the fifteen (adult-scored).
+     Author log: docs/expansion-2026-10-22/batches/B4-b4c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TC1c-P4" },
+      { ref: "SK-TC1c-P5" },
+      { id: "SK-TC1c-C03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: ["p1"],
+        stem: ["Slide 1 of Kenji's show has a photo of long rows of green peanut plants growing on a farm in south Georgia. His first caption says:", "Plants."],
+        prompt: "Which caption should Kenji use instead?",
+        choices: [
+          { text: "Long rows of peanut plants grow on a farm in south Georgia.", correct: true },
+          { text: "Georgia grows more peanuts than any other state." },
+          { text: "A machine digs up the plants when it is time to harvest." },
+          { text: "A peanut grows at the end of a peg under the soil." }
+        ],
+        clue: "A caption tells what the picture shows. Think about what a reader sees when they look at this photo.",
+        hints: [
+          "A caption tells what the picture shows. Think about what a reader sees when they look at this photo.",
+          "Read the description of the photo in the box again, one detail at a time. Then read each choice slowly.",
+          "The Georgia sentence is already the first line on Slide 1, so a caption that repeats it adds nothing new about the photo. Check the other three choices."
+        ],
+        how: [
+          "The box says the photo shows long rows of green peanut plants growing on a farm in south Georgia.",
+          "A caption should tell what the photo shows in a short sentence. \"Long rows of peanut plants grow on a farm in south Georgia\" does that.",
+          "The answer is \"Long rows of peanut plants grow on a farm in south Georgia.\"",
+          "The Georgia sentence repeats the slide, and the machine and the peg are facts about other parts of the show, not about this photo."
+        ],
+        misconception: "A common mix-up is choosing a true fact about peanuts. A caption has to tell what this picture shows.",
+        why: "The answer is \"Long rows of peanut plants grow on a farm in south Georgia.\" It tells what the photo shows. The Georgia sentence repeats the slide, and the machine and the peg are facts about other parts of the show." },
+      { id: "SK-TC1c-C04", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: ["p1"],
+        stem: ["Kenji adds a map of Georgia to Slide 1. He shades the southern part of the state and draws one arrow that points to it. He wants a label for the arrow."],
+        prompt: "Which label should Kenji put on the arrow?",
+        options: [
+          "Peanut farms",
+          "More than any state",
+          "Peanut harvest",
+          "Many peanut farms are in this part of the state."
+        ],
+        answer: [0], pick: 1,
+        clue: "A label is a word or two that names the part an arrow points to. Ask what the shaded part of the map is.",
+        hints: [
+          "A label is a word or two that names the part an arrow points to. Ask what the shaded part of the map is.",
+          "Read the two sentences on Slide 1. Ask which words tell about the part of the map that the arrow points to.",
+          "\"More than any state\" is short, but it tells about all of Georgia, not the shaded part. Check the other three choices."
+        ],
+        how: [
+          "A label is a word or two that names the part an arrow points to.",
+          "The arrow points to the shaded southern part. Slide 1 says many peanut farms are in the southern part of the state.",
+          "The answer is \"Peanut farms.\"",
+          "\"More than any state\" tells about the whole state, \"Peanut harvest\" belongs with Slide 3, and the long sentence is a caption, not a label."
+        ],
+        misconception: "A common mix-up is writing a whole sentence for a label. A label is a word or two.",
+        why: "The answer is \"Peanut farms.\" Slide 1 says many peanut farms are in the southern part of the state, and a label names that part in a word or two. \"More than any state\" is about all of Georgia, \"Peanut harvest\" belongs with Slide 3, and the long sentence is too long for a label." },
+      { id: "SK-TC1c-C05", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: ["p1"], pick: 2,
+        stem: ["Kenji's purpose is to teach his third-grade classmates how peanuts grow and how they are harvested. He has room for one more slide, Slide 5, and he is thinking about ideas."],
+        prompt: "Which TWO ideas for Slide 5 fit Kenji's purpose and his audience? Choose two answers.",
+        choices: [
+          { text: "a short quiz question about where a peanut grows, with the answer on the next click", correct: true },
+          { text: "a last slide that sums up how a peanut goes from flower to harvest in three short sentences", correct: true },
+          { text: "a photo of a peanut butter jar with the words \"Buy some today!\"" },
+          { text: "a chart of the money Georgia farmers make from peanuts, printed in tiny numbers" },
+          { text: "a recording of a silly song about a squirrel" }
+        ],
+        clue: "Purpose is why Kenji made the slides. Audience is who will watch them. A new slide should fit both.",
+        hints: [
+          "Purpose is why Kenji made the slides. Audience is who will watch them. A new slide should fit both.",
+          "Check each idea two ways. Does it help Kenji teach about peanuts? Could third graders use it?",
+          "A silly song about a squirrel has nothing to do with peanut plants. Check the other four ideas the same two ways."
+        ],
+        how: [
+          "Kenji's purpose is to teach, and his readers are third graders.",
+          "A quiz question and a short sum-up both help classmates remember what they learned, in words third graders can read.",
+          "The answers are \"a short quiz question about where a peanut grows, with the answer on the next click\" and \"a last slide that sums up how a peanut goes from flower to harvest in three short sentences.\"",
+          "The jar photo tries to sell something, the tiny-number chart is too hard to read, and the squirrel song has nothing to do with peanuts."
+        ],
+        misconception: "A common mix-up is choosing an idea that is about peanuts but does a different job, such as selling.",
+        why: "The answers are \"a short quiz question about where a peanut grows, with the answer on the next click\" and \"a last slide that sums up how a peanut goes from flower to harvest in three short sentences.\" Both help third graders learn. The jar photo tries to sell, the chart is too hard to read, and the squirrel song has nothing to do with peanuts." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TC1c-C06", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: ["p3"],
+        prompt: "Imani wants one big picture in the middle of her poster. Which picture fits her words and her readers best?",
+        choices: [
+          { text: "children in life jackets splashing near the pool's edge while a lifeguard watches", correct: true },
+          { text: "children racing down a tall water slide with their hands in the air" },
+          { text: "a girl holding up a first-place swimming ribbon" },
+          { text: "an empty pool at sunrise with very still water" }
+        ],
+        clue: "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
+        hints: [
+          "A picture should match the words on the poster and the reason it was made. Ask what Imani wants her readers to do.",
+          "Read the title and the numbered lines of the poster. Picture the scene those words describe.",
+          "The ribbon picture is about winning a race, and the poster says nothing about winning. Check the other three pictures against the poster's words."
+        ],
+        how: [
+          "The title is \"Be Pool Smart!\" and the lines tell kids how to stay safe: swim with a lifeguard, wear a life jacket, stay close to a grown-up and never swim alone.",
+          "A good picture shows the same message: children being safe at the pool.",
+          "The answer is \"children in life jackets splashing near the pool's edge while a lifeguard watches.\"",
+          "The water slide shows fast fun, the ribbon shows winning, and the empty pool shows no one being safe."
+        ],
+        misconception: "A common mix-up is choosing a picture of the same place that does not match the poster's message.",
+        why: "The answer is \"children in life jackets splashing near the pool's edge while a lifeguard watches.\" It shows the safety that the poster asks for. The slide and the ribbon show fun and winning, and the empty pool shows no one at all." },
+      { id: "SK-TC1c-C07", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: ["p3"],
+        prompt: "Imani's cousin wants a copy of the poster for children ages three to five, who cannot read yet. Choose the best answer for each blank.",
+        text: "For these children, the poster should have {0}. A grown-up can help by {1}.",
+        slots: [
+          { options: ["one big picture for each rule and only a few words", "all the words in smaller letters", "a long paragraph that explains every rule"], answer: 0 },
+          { options: ["reading the words aloud while the child looks at the pictures", "asking the child to read the rules alone", "taking the pictures down so the words stand out"], answer: 0 }
+        ],
+        clue: "Think about who will use the poster. Ask what a child who cannot read yet can understand.",
+        hints: [
+          "Think about who will use the poster. Ask what a child who cannot read yet can understand.",
+          "For each blank, ask what the children can do on their own and what they need a grown-up for.",
+          "A long paragraph is hard even for good readers, so it does not fit the first blank. Test the other choices in both blanks."
+        ],
+        how: [
+          "Children who cannot read yet learn from pictures, not from words.",
+          "So the poster needs one big picture for each rule and only a few words.",
+          "They cannot read the rules alone, so a grown-up can help by reading the words aloud while the child looks at the pictures.",
+          "Smaller letters and long paragraphs make a poster harder, and taking the pictures down removes what the children can use."
+        ],
+        misconception: "A common mix-up is thinking that more words make a poster clearer. For young children, the pictures do the teaching.",
+        why: "The answers are \"one big picture for each rule and only a few words\" and \"reading the words aloud while the child looks at the pictures.\" Children who cannot read yet learn from pictures, and a grown-up can read the words to them." },
+      { id: "SK-TC1c-C08", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: ["p3"],
+        stem: ["Imani adds a second photo to her poster. It shows a mother kneeling at the edge of the pool. She holds her small son's hands while he kicks his feet in the water."],
+        prompt: "Which caption should go under this photo?",
+        choices: [
+          { text: "A mother holds her son's hands while he practices kicking.", correct: true },
+          { text: "New swimmers should stay close to a grown-up." },
+          { text: "Kicking is the fastest way to swim across a pool." },
+          { text: "Moms are the best swimming teachers in town." }
+        ],
+        clue: "Remember what a caption does. It tells what the picture shows. Say what is happening in this photo in your own words.",
+        hints: [
+          "Remember what a caption does. It tells what the picture shows. Say what is happening in this photo in your own words.",
+          "Picture the photo from the box. Read each choice and ask whether it matches what you would see.",
+          "Saying that moms are the best teachers is an opinion, and a caption tells what a picture shows. Check the other three choices."
+        ],
+        how: [
+          "The box says a mother is holding her small son's hands while he kicks his feet in the water.",
+          "A caption tells what is happening in the picture. \"A mother holds her son's hands while he practices kicking\" does that.",
+          "The poster already has a rule about staying close to a grown-up, so the caption should show what is happening, not repeat the rule.",
+          "Kicking being the fastest way is a fact the photo does not show, and \"best teachers\" is an opinion."
+        ],
+        misconception: "A common mix-up is picking a rule from the poster. The caption tells what is happening in the picture.",
+        why: "The answer is \"A mother holds her son's hands while he practices kicking.\" It tells what the photo shows. The rule about staying close is already on the poster, kicking being fastest is not shown, and \"best teachers\" is an opinion." },
+      { id: "SK-TC1c-C09", type: "match", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [],
+        stem: ["Imani draws the whole pool for her poster. One arrow points to the shallow end, where the water comes up only to a child's waist. She tries out four labels for that arrow."],
+        prompt: "Read each label. Tell whether it is a good label for this arrow.",
+        cols: ["a good label", "too long for a label", "names a different part"],
+        rows: [
+          { text: "Shallow end", answer: 0 },
+          { text: "This is the part of the pool where the water is low and children can stand up with their heads above the water.", answer: 1 },
+          { text: "Deep end", answer: 2 },
+          { text: "Lifeguard chair", answer: 2 }
+        ],
+        clue: "A label is a word or two that names the exact part an arrow points to. Check each label two ways: how long it is and what part it names.",
+        hints: [
+          "A label is a word or two that names the exact part an arrow points to. Check each label two ways: how long it is and what part it names.",
+          "Reread the box to find what the arrow points to. Then say each label's meaning in your own words.",
+          "A lifeguard chair is a place beside the pool, not a part of the water. Sort the other three labels."
+        ],
+        how: [
+          "The arrow points to the shallow end. A good label names that part in a word or two.",
+          "\"Shallow end\" names the part the arrow points to, in two words, so it is a good label.",
+          "The long sentence tells about the shallow end, but it is much too long for a label.",
+          "\"Deep end\" and \"Lifeguard chair\" are short, but they name different parts than the one the arrow points to."
+        ],
+        misconception: "A common mix-up is thinking a longer label is a better one. A label is a word or two.",
+        why: "\"Shallow end\" is a good label because it names the part in two words. The long sentence is too long for a label. \"Deep end\" and \"Lifeguard chair\" name different parts." },
+      { id: "SK-TC1c-C10", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: ["p3"],
+        targets: ["p3:1:1", "p3:2:1", "p3:2:2", "p3:2:3", "p3:3:1", "p3:3:2", "p3:3:3", "p3:4:1", "p3:4:2", "p3:4:3"],
+        answer: ["p3:3:1"], pick: 1,
+        prompt: "One numbered line does not fit the purpose of Imani's poster. Which line should she take out?",
+        clue: "Every word on a poster should help its purpose. Ask what this poster is for before you decide.",
+        hints: [
+          "Every word on a poster should help its purpose. Ask what this poster is for before you decide.",
+          "Read each numbered line in order. For each one, ask what it adds to the poster.",
+          "Line 6 tells readers never to swim alone, so it fits. Check the other lines the same way."
+        ],
+        how: [
+          "The title, \"Be Pool Smart!\", and most of the lines tell kids how to stay safe at the pool.",
+          "Line 5 tells about the snack stand. It does not help a swimmer stay safe.",
+          "The answer is line 5: \"Our snack stand sells the best frozen fruit pops in town.\"",
+          "Line 10, \"Have fun in the water, and be a safe swimmer all summer long!\", is not a rule, but it still fits the poster's message."
+        ],
+        misconception: "A common mix-up is taking out a line that is not a rule. Ask whether the line fits the poster's purpose.",
+        why: "The answer is line 5, \"Our snack stand sells the best frozen fruit pops in town.\" The poster is about staying safe, and the snack stand does not help a swimmer stay safe. The other lines are safety rules or fit the safety message." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TC1c-C11", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: ["p4"],
+        prompt: "Mateo's slide show is about wolves. He wants to play a short sound on the slide with lines 3 to 5. Which sound fits that slide best?",
+        choices: [
+          { text: "a recording of wolves howling across a valley", correct: true },
+          { text: "a recording of a wolf growling over its food" },
+          { text: "a recording of wolf pups playing in the grass" },
+          { text: "a recording of wind blowing through tall pine trees" }
+        ],
+        clue: "A sound should match what the slide is about, not only the animal. Ask what the slide says wolves do.",
+        hints: [
+          "A sound should match what the slide is about, not only the animal. Ask what the slide says wolves do.",
+          "Read lines 3 to 5 again. Say in your own words what they tell about how wolves talk.",
+          "The sound of wind in the trees might set a mood, but it does not match what these lines teach. Check the other choices."
+        ],
+        how: [
+          "Lines 3 to 5 tell that wolves talk to each other with long, wavering calls that carry for miles.",
+          "The sound that matches that idea is wolves howling across a valley.",
+          "The answer is \"a recording of wolves howling across a valley.\"",
+          "A growl over food is a different message, pups playing is a different scene, and wind in the trees has no wolf in it."
+        ],
+        misconception: "A common mix-up is choosing any sound that goes with the animal. The sound must match what the slide says.",
+        why: "The answer is \"a recording of wolves howling across a valley.\" Lines 3 to 5 are about the long calls wolves use to talk across hills and valleys. A growl, pups at play and wind in the trees do not match what the slide teaches." },
+      { id: "SK-TC1c-C12", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
+        stem: ["The Willow Lane Rec Club is making a flyer to get six- and seven-year-olds to join its kickball team.", "Words on the flyer: Kick, run and make new friends! Sign up on Saturday at the park."],
+        prompt: "Which TWO pictures fit the flyer's words and its readers best? Choose two answers.",
+        choices: [
+          { text: "children close to the readers' age kicking a red ball and laughing", correct: true },
+          { text: "a group of smiling children in matching shirts standing with their arms around each other", correct: true },
+          { text: "a frowning adult checking a long list on a clipboard" },
+          { text: "a close-up of one worn-out ball on a high shelf" },
+          { text: "a crowded stadium at night with a giant scoreboard" }
+        ],
+        clue: "Pictures should match the flyer's words and the people who will read it. Ask what the words promise and who will see the flyer.",
+        hints: [
+          "Pictures should match the flyer's words and the people who will read it. Ask what the words promise and who will see the flyer.",
+          "Say each part of the flyer's words as something you could see in a picture. Choose two pictures that fit.",
+          "A frowning adult with a long list does not match the happy words on the flyer. Check the other four pictures against the words and the readers' ages."
+        ],
+        how: [
+          "The words promise action (kick and run) and friendship (new friends). The readers are six and seven years old.",
+          "A picture of children their age kicking a ball and laughing shows the action.",
+          "A group of smiling children in matching shirts with their arms around each other shows the new friends. The answers are \"children close to the readers' age kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\"",
+          "The clipboard, the lonely ball and the giant stadium show no fun with other children."
+        ],
+        misconception: "A common mix-up is choosing a picture about the sport but not about the readers. The picture should show people like them having fun.",
+        why: "The answers are \"children close to the readers' age kicking a red ball and laughing\" and \"a group of smiling children in matching shirts standing with their arms around each other.\" They show the action and the friendship that the flyer promises. The clipboard, the worn-out ball and the stadium do not." },
+      { id: "SK-TC1c-C13", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+        stem: ["Mr. Hale's class is selling small herb plants to pay for a field trip bus. He made two signs.", "Sign A: a picture of a table covered with little plants in paper cups. Words: Plant sale! Saturday at nine o'clock in the school courtyard. Come buy a plant!", "Sign B: a picture of smiling students standing next to a yellow bus. Words: Thank you! Our class raised $140 for the bus."],
+        prompt: "It is Wednesday, and the sale is on Saturday. Which sign should Mr. Hale hang by the road, and why?",
+        choices: [
+          { text: "Sign A, because its picture and words invite neighbors to come and buy a plant", correct: true },
+          { text: "Sign B, because its picture shows happy students" },
+          { text: "Sign B, because its words tell how much money the class raised" },
+          { text: "Either sign, because both tell neighbors about the class's project" }
+        ],
+        clue: "Purpose is what the writer wants a sign to do. Decide what Mr. Hale wants neighbors to do this week.",
+        hints: [
+          "Purpose is what the writer wants a sign to do. Decide what Mr. Hale wants neighbors to do this week.",
+          "Compare what each sign's picture and words ask readers to do.",
+          "A picture of happy students can be nice, but ask whether it tells neighbors to come on Saturday. Check the other choices."
+        ],
+        how: [
+          "Mr. Hale wants neighbors to come to the sale on Saturday and buy plants.",
+          "Sign A shows the plants, tells the day, time and place, and asks readers to come buy. The answer is \"Sign A, because its picture and words invite neighbors to come and buy a plant.\"",
+          "Sign B thanks people after the sale has happened. It reports news instead of asking anyone to come.",
+          "Both signs are about the class's project, but only one of them does the job the class needs this week."
+        ],
+        misconception: "A common mix-up is thinking any sign about the project will do. A sign has to match what the writer wants readers to do now.",
+        why: "The answer is \"Sign A, because its picture and words invite neighbors to come and buy a plant.\" The sale is on Saturday, and Sign A tells the day, time and place. Sign B thanks people after a sale is over, so it would not bring anyone to the sale." },
+      { id: "SK-TC1c-C14", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+        stem: ["Jada's family is making a slide show for her grandmother's birthday party. Slide 6 shows an old photo of her grandmother at age eight. She is standing next to a small yellow bicycle in front of the house where she grew up. The relatives at the party have never seen this photo."],
+        prompt: "Which caption will help the relatives understand the photo best?",
+        options: [
+          "Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.",
+          "This photograph is very old, and its colors have faded a little over the years.",
+          "Grandma has always loved riding bicycles, and her favorite color was yellow.",
+          "Bicycles are a fun way to travel, and they are a good way to get exercise."
+        ],
+        answer: [0], pick: 1,
+        clue: "A caption tells what the picture shows. It can also give details that readers who were not there need.",
+        hints: [
+          "A caption tells what the picture shows. It can also give details that readers who were not there need.",
+          "Reread the description of Slide 6. Ask what the relatives could learn from each caption.",
+          "A caption about how old or faded the photo looks tells about the paper, not about the person and place in it. Check the other three captions."
+        ],
+        how: [
+          "The relatives have never seen this photo, so the caption should tell them who is in it, how old she is and where she is.",
+          "The answer is \"Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.\"",
+          "The caption about faded colors tells about the photograph, not the picture. The caption about always loving bicycles claims something the photo does not show.",
+          "The caption about bicycles and exercise is about bicycles in general, so it says nothing about this photo."
+        ],
+        misconception: "A common mix-up is choosing a caption that is true about the topic. A caption has to tell what is in this picture.",
+        why: "The answer is \"Grandma at age eight, standing beside her small yellow bicycle at the house where she grew up.\" It tells the relatives who, how old and where. The other captions talk about the paper, a claim the photo does not show, or bicycles in general." },
+      { id: "SK-TC1c-C15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
+        stem: ["Zuri is making a slide about leaves. Her drawing shows five parts: the veins, the wide blade, the stalk, the edge and the tip. Her slide says: Veins carry water through the leaf. The blade catches sunlight."],
+        prompt: "Zuri has room for only two labels. Which TWO labels fit the words on her slide best? Choose two answers.",
+        choices: [
+          { text: "veins", correct: true },
+          { text: "blade", correct: true },
+          { text: "stalk" },
+          { text: "edge" },
+          { text: "tip" }
+        ],
+        clue: "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
+        hints: [
+          "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
+          "Read the two sentences on the slide. Then match each sentence to a part of the drawing.",
+          "A leaf does have a stalk, but ask whether the slide's words say anything about it. Check the other parts the same way."
+        ],
+        how: [
+          "A label should point out a part that the slide's words talk about.",
+          "The first sentence is about veins carrying water, and the second is about the blade catching sunlight.",
+          "The answers are \"veins\" and \"blade.\"",
+          "The stalk, the edge and the tip are real parts of the leaf, but the slide says nothing about them, so labeling them would only add clutter."
+        ],
+        misconception: "A common mix-up is labeling every part of the drawing. Label the parts the words are about.",
+        why: "The answers are \"veins\" and \"blade.\" The slide's two sentences are about those two parts. The stalk, the edge and the tip are real parts of a leaf, but the slide does not talk about them." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short text. One extra question for each core
+     item, so "Try a similar question" is still unused when the child reaches that item. `like` lists only
+     the core item each one really practises. */
+  similar: [
+    { id: "SK-TC1c-S01", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-P4"],
+      stem: ["Lena's slide is called \"Blueberries Change Color.\" It says: A blueberry starts out small and green. As it ripens, it turns pink, and then it turns blue."],
+      prompt: "Which picture would fit Lena's slide best?",
+      choices: [
+        { text: "three berries on one branch: one green, one pink and one blue", correct: true },
+        { text: "a bowl of blue berries on a table next to a glass of milk" },
+        { text: "a bush covered with small white flowers in spring" },
+        { text: "a farmer pouring ripe berries into a wooden crate" }
+      ],
+      clue: "A picture should match the words on its slide. Ask what the reader needs to see.",
+      hints: [
+        "A picture should match the words on its slide. Ask what the reader needs to see.",
+        "Read the slide's title and both sentences. Notice what changes on the slide.",
+        "A bowl of ripe berries shows how the berries look at the end. Check the other three pictures against the slide's words."
+      ],
+      how: [
+        "The title is \"Blueberries Change Color,\" and the sentences name three colors in order: green, pink and blue.",
+        "A good picture lets the reader see that change.",
+        "The answer is \"three berries on one branch: one green, one pink and one blue.\"",
+        "The bowl, the flowers and the crate are about berries, but none of them shows the color change."
+      ],
+      misconception: "A common mix-up is picking a picture about the same fruit that does not show what the slide says.",
+      why: "The answer is \"three berries on one branch: one green, one pink and one blue.\" It shows the color change that the slide tells about. The bowl, the flowers and the crate do not." },
+    { id: "SK-TC1c-S02", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-P5"],
+      stem: ["Jaden's slide is called \"Drums Keep the Band Together.\" It says: A marching band's drummers play a steady beat. The beat helps every player step at the same time."],
+      prompt: "Which sound should Jaden play with this slide?",
+      choices: [
+        { text: "a steady drumbeat from a marching band", correct: true },
+        { text: "a flute playing a slow song" },
+        { text: "a crowd clapping at the end of a show" },
+        { text: "a referee blowing a whistle" }
+      ],
+      clue: "A sound should match what the slide is about. Ask what the slide is telling the reader.",
+      hints: [
+        "A sound should match what the slide is about. Ask what the slide is telling the reader.",
+        "Read both sentences on the slide. Notice who plays and what they do.",
+        "Clapping at the end of a show is a sound from a different moment. Check the other choices against the slide."
+      ],
+      how: [
+        "The slide says the drummers play a steady beat that helps every player step together.",
+        "The sound that matches is a steady drumbeat.",
+        "The answer is \"a steady drumbeat from a marching band.\"",
+        "A flute, clapping and a whistle can go with a band or a game, but none of them is the beat the slide tells about."
+      ],
+      misconception: "A common mix-up is choosing a sound from the same setting. The sound has to match what the slide says.",
+      why: "The answer is \"a steady drumbeat from a marching band.\" The slide is about the beat that keeps the band together. A flute, clapping and a whistle are different sounds." },
+    { id: "SK-TC1c-S03", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C03"],
+      stem: ["Naomi's slide show about a rainy week has a photo of a girl in a yellow raincoat jumping over a puddle on her way to school. Her first caption says:", "Rain."],
+      prompt: "Which caption should Naomi use instead?",
+      choices: [
+        { text: "A girl in a yellow raincoat jumps over a puddle on her way to school.", correct: true },
+        { text: "Rain helps trees and flowers grow all through the spring." },
+        { text: "Raincoats can be made in many colors." },
+        { text: "It rained all week at Naomi's school." }
+      ],
+      clue: "A caption tells what the picture shows. Think about what a reader sees in this photo.",
+      hints: [
+        "A caption tells what the picture shows. Think about what a reader sees in this photo.",
+        "Read the description of the photo in the box. Then read each choice slowly.",
+        "Saying that rain helps trees and flowers grow is a fact about rain, not about this photo. Check the other three choices."
+      ],
+      how: [
+        "The box says the photo shows a girl in a yellow raincoat jumping over a puddle on her way to school.",
+        "A caption should tell that in a short sentence.",
+        "The answer is \"A girl in a yellow raincoat jumps over a puddle on her way to school.\"",
+        "The other choices are true or sensible, but they do not tell what the photo shows."
+      ],
+      misconception: "A common mix-up is choosing a true fact about the topic. A caption has to tell what this picture shows.",
+      why: "The answer is \"A girl in a yellow raincoat jumps over a puddle on her way to school.\" It tells what the photo shows. The other choices are about rain, raincoats or the whole week." },
+    { id: "SK-TC1c-S04", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C04"],
+      stem: ["Marcus draws a map of his school playground. He draws one arrow that points to the place where children swing. He needs a label for the arrow."],
+      prompt: "Which label should Marcus put on the arrow?",
+      choices: [
+        { text: "Swings", correct: true },
+        { text: "Playground" },
+        { text: "Recess" },
+        { text: "Children take turns here when the line is short." }
+      ],
+      clue: "A label is a word or two that names the part an arrow points to. Ask what the arrow points to.",
+      hints: [
+        "A label is a word or two that names the part an arrow points to. Ask what the arrow points to.",
+        "Reread the box. The arrow points to one place on the map, not to the whole map.",
+        "\"Recess\" names a time of day, not a place on the map. Check the other three choices."
+      ],
+      how: [
+        "A label names the exact part an arrow points to, in a word or two.",
+        "The arrow points to the place where children swing, so the label is \"Swings.\"",
+        "\"Playground\" names the whole map, \"Recess\" names a time, and the long sentence is too long for a label."
+      ],
+      misconception: "A common mix-up is naming the whole picture. A label names the one part the arrow points to.",
+      why: "The answer is \"Swings.\" It names the place the arrow points to in one word. \"Playground\" names the whole map, \"Recess\" is a time, and the sentence is too long for a label." },
+    { id: "SK-TC1c-S05", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
+      like: ["SK-TC1c-C05"],
+      stem: ["Ana's class is making a poster to invite neighbors to a Fall Fair at the school on Saturday. The neighbors are people of all ages who walk by the school gate."],
+      prompt: "Which TWO ideas for the poster fit its purpose and its readers? Choose two answers.",
+      choices: [
+        { text: "big words that tell the day, the time and the place", correct: true },
+        { text: "a picture of families laughing at a game booth", correct: true },
+        { text: "a long paragraph about how fairs began", },
+        { text: "a drawing of a movie star who has nothing to do with the fair" },
+        { text: "a tiny map that cannot be read from the sidewalk" }
+      ],
+      clue: "Purpose is why the poster is made. Audience is who will read it. Each idea should fit both.",
+      hints: [
+        "Purpose is why the poster is made. Audience is who will read it. Each idea should fit both.",
+        "Check each idea two ways. Does it invite people to come? Can a walker read or see it quickly?",
+        "A movie star has nothing to do with a school fair. Check the other four ideas the same two ways."
+      ],
+      how: [
+        "The purpose is to get neighbors to come to the fair, and they will pass the poster as they walk.",
+        "Big words with the day, time and place tell them what to do, and a picture of families having fun shows why to come.",
+        "The answers are \"big words that tell the day, the time and the place\" and \"a picture of families laughing at a game booth.\"",
+        "A long paragraph and a tiny map are too hard to read while walking, and the movie star does not fit the fair."
+      ],
+      misconception: "A common mix-up is adding more information. A poster for walkers needs a few big words and a picture.",
+      why: "The answers are \"big words that tell the day, the time and the place\" and \"a picture of families laughing at a game booth.\" They invite neighbors and can be read quickly. A long paragraph, a movie star and a tiny map do not fit." },
+    { id: "SK-TC1c-S06", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C06"],
+      stem: ["Rosa is making a poster to get third graders to sign up for the school choir. It says: Sing with us! Practice is on Tuesdays after lunch."],
+      prompt: "Which picture fits Rosa's poster best?",
+      choices: [
+        { text: "children singing together in rows on a stage", correct: true },
+        { text: "a stack of math books on a desk" },
+        { text: "an empty chair in a quiet hallway" },
+        { text: "a lunch tray with a sandwich and milk" }
+      ],
+      clue: "A picture should match the words on the poster and the reason it was made. Ask what Rosa wants third graders to do.",
+      hints: [
+        "A picture should match the words on the poster and the reason it was made. Ask what Rosa wants third graders to do.",
+        "Read the poster's words again. Picture what a reader would see if those words came to life.",
+        "The lunch tray goes with the word lunch, but the poster is not about eating. Check the other three pictures."
+      ],
+      how: [
+        "The poster asks third graders to sing with the choir.",
+        "A good picture shows children singing together.",
+        "The answer is \"children singing together in rows on a stage.\"",
+        "The math books, the empty chair and the lunch tray do not show singing."
+      ],
+      misconception: "A common mix-up is matching one word on the poster, like lunch, instead of its message.",
+      why: "The answer is \"children singing together in rows on a stage.\" The poster asks children to sing. The math books, the empty chair and the lunch tray do not show singing." },
+    { id: "SK-TC1c-S07", type: "dropdown", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C07"],
+      stem: ["The school is hanging a banner over the road to tell drivers about the Fall Fair. Drivers pass the banner quickly."],
+      prompt: "Choose the best answer for each blank.",
+      text: "The banner should use {0}. The picture should be {1}.",
+      slots: [
+        { options: ["a few big words", "many small words", "a long list of games"], answer: 0 },
+        { options: ["large and simple", "small and full of tiny details", "hidden behind the words"], answer: 0 }
+      ],
+      clue: "Think about who will read the banner and how long they will have to look at it.",
+      hints: [
+        "Think about who will read the banner and how long they will have to look at it.",
+        "For each blank, ask what a driver can take in at one quick look.",
+        "A long list takes a long time to read, so it does not fit the first blank. Test the other choices in both blanks."
+      ],
+      how: [
+        "Drivers pass the banner quickly, so they have only a moment to look.",
+        "A few big words can be read at a glance, so the first answer is \"a few big words.\"",
+        "A large, simple picture can be understood at a glance, so the second answer is \"large and simple.\"",
+        "Many small words, tiny details or a long list would be missed."
+      ],
+      misconception: "A common mix-up is thinking more information is always better. A reader who passes quickly needs a little, easy to see.",
+      why: "The answers are \"a few big words\" and \"large and simple.\" Drivers have only a moment, so the words and picture must be easy to take in at once." },
+    { id: "SK-TC1c-S08", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C08"],
+      stem: ["Tariq adds a photo to his family slide show. It shows a boy reading a picture book to his baby sister while they sit on a blanket."],
+      prompt: "Which caption should go under this photo?",
+      choices: [
+        { text: "A boy reads a picture book to his baby sister on a blanket.", correct: true },
+        { text: "Reading to young children helps them learn new words." },
+        { text: "Picture books have more pictures than words." },
+        { text: "Big brothers are the best readers." }
+      ],
+      clue: "Remember what a caption does. It tells what the picture shows. Say what is happening in this photo.",
+      hints: [
+        "Remember what a caption does. It tells what the picture shows. Say what is happening in this photo.",
+        "Picture the photo from the box. Read each choice and ask whether it matches what you would see.",
+        "\"Big brothers are the best readers\" is an opinion. Check the other three choices."
+      ],
+      how: [
+        "The box says a boy is reading a picture book to his baby sister on a blanket.",
+        "A caption should tell what is happening in the picture. The answer is \"A boy reads a picture book to his baby sister on a blanket.\"",
+        "The other choices are a fact about reading, a fact about picture books and an opinion, so none of them tells what the photo shows."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is about the topic of the photo instead of the photo itself.",
+      why: "The answer is \"A boy reads a picture book to his baby sister on a blanket.\" It tells what the photo shows. The other choices are facts or an opinion about reading and books." },
+    { id: "SK-TC1c-S09", type: "match", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C09"],
+      stem: ["Noel draws a backpack for a slide about packing for school. One arrow points to the front pocket, where he keeps his folder. He tries out four labels for that arrow."],
+      prompt: "Read each label. Tell whether it is a good label for this arrow.",
+      cols: ["a good label", "too long for a label", "names a different part"],
+      rows: [
+        { text: "Front pocket", answer: 0 },
+        { text: "This is the pocket on the front of the backpack, and it is the place where I keep my folder every day.", answer: 1 },
+        { text: "Shoulder strap", answer: 2 },
+        { text: "Zipper", answer: 2 }
+      ],
+      clue: "A label is a word or two that names the exact part an arrow points to. Check how long each label is and what part it names.",
+      hints: [
+        "A label is a word or two that names the exact part an arrow points to. Check how long each label is and what part it names.",
+        "Reread the box to find what the arrow points to. Then say each label's meaning in your own words.",
+        "The zipper is a part of the pocket's closing, not the pocket itself. Sort the other three labels."
+      ],
+      how: [
+        "The arrow points to the front pocket. A good label names that part in a word or two.",
+        "\"Front pocket\" does that.",
+        "The long sentence is too long for a label.",
+        "\"Shoulder strap\" and \"Zipper\" are short, but they name different parts."
+      ],
+      misconception: "A common mix-up is thinking a longer label is a better one. A label is a word or two.",
+      why: "\"Front pocket\" is a good label because it names the part in two words. The long sentence is too long. \"Shoulder strap\" and \"Zipper\" name different parts." },
+    { id: "SK-TC1c-S10", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C10"],
+      stem: ["Ben's class is making a poster for the school Open House. Here is the text.", "(1) Visit Our Open House! (2) Families can see every classroom on Tuesday after school. (3) You can look at our science projects and our reading corner. (4) My dog likes to chew on crayons. (5) Come say hello to your teacher!"],
+      prompt: "Which numbered line does not fit the purpose of the poster?",
+      options: [
+        "(1) Visit Our Open House!",
+        "(2) Families can see every classroom on Tuesday after school.",
+        "(3) You can look at our science projects and our reading corner.",
+        "(4) My dog likes to chew on crayons.",
+        "(5) Come say hello to your teacher!"
+      ],
+      answer: [3], pick: 1,
+      clue: "Every word on a poster should help its purpose. Ask what this poster is for before you decide.",
+      hints: [
+        "Every word on a poster should help its purpose. Ask what this poster is for before you decide.",
+        "Read each numbered line in order. For each one, ask what it adds to the poster.",
+        "Line 2 tells families when to come, so it fits. Check the other lines the same way."
+      ],
+      how: [
+        "The poster is meant to get families to visit the Open House.",
+        "Lines 1, 2, 3 and 5 invite families, say when to come or tell what they will see.",
+        "Line 4 is about a dog chewing crayons. It does not help families decide to come.",
+        "The answer is line 4: \"My dog likes to chew on crayons.\""
+      ],
+      misconception: "A common mix-up is leaving in a funny line. Every line should help the poster's purpose.",
+      why: "The answer is line 4, \"My dog likes to chew on crayons.\" The poster is meant to invite families to the Open House, and this line has nothing to do with that. The other lines invite families or tell what they will see." },
+    { id: "SK-TC1c-S11", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C11"],
+      stem: ["Dara's slide is called \"The Bell Tells Us.\" It says: A school bell rings to tell students when a class begins. It rings again to tell them when the day is over."],
+      prompt: "Which sound should Dara play with this slide?",
+      choices: [
+        { text: "a school bell ringing in a hallway", correct: true },
+        { text: "a basketball bouncing in a gym" },
+        { text: "a teacher reading a story aloud" },
+        { text: "lockers closing in a busy hall" }
+      ],
+      clue: "A sound should match what the slide is about, not only the place. Ask what the slide says happens.",
+      hints: [
+        "A sound should match what the slide is about, not only the place. Ask what the slide says happens.",
+        "Read both sentences on the slide. Say the one thing they tell about.",
+        "A basketball bouncing is a sound from a school, but the slide does not mention games. Check the other choices."
+      ],
+      how: [
+        "Both sentences are about the bell and what it tells students.",
+        "The sound that matches is a school bell ringing.",
+        "The answer is \"a school bell ringing in a hallway.\"",
+        "A basketball, a story and lockers are all school sounds, but the slide is about the bell."
+      ],
+      misconception: "A common mix-up is choosing any sound from the same place. The sound has to match what the slide says.",
+      why: "The answer is \"a school bell ringing in a hallway.\" The slide is about the bell. A basketball, a story and lockers are also school sounds, but they are not what the slide tells about." },
+    { id: "SK-TC1c-S12", type: "ms", points: 2, dok: 3, std: ["3.T.C.1.c"], passages: [], pick: 2,
+      like: ["SK-TC1c-C12"],
+      stem: ["The library is making a flyer to get seven- and eight-year-olds to join a Saturday art class.", "Words on the flyer: Paint, mix and make something new!"],
+      prompt: "Which TWO pictures fit the flyer's words and its readers best? Choose two answers.",
+      choices: [
+        { text: "a child about eight years old painting at an easel and smiling", correct: true },
+        { text: "a table covered with jars of bright paint and brushes", correct: true },
+        { text: "a gray sky over an empty parking lot" },
+        { text: "an adult frowning at a stack of papers" },
+        { text: "a stop sign at a busy corner" }
+      ],
+      clue: "Pictures should match the flyer's words and the people who will read it. Ask what the words promise.",
+      hints: [
+        "Pictures should match the flyer's words and the people who will read it. Ask what the words promise.",
+        "Say each part of the flyer's words as something you could see in a picture. Choose two pictures that fit.",
+        "A stop sign has nothing to do with painting. Check the other four pictures against the words and the readers' ages."
+      ],
+      how: [
+        "The words promise painting and mixing colors to make something new. The readers are seven and eight years old.",
+        "A child their age painting and smiling shows the activity.",
+        "A table of bright paints and brushes shows the colors and tools. The answers are \"a child about eight years old painting at an easel and smiling\" and \"a table covered with jars of bright paint and brushes.\"",
+        "The gray sky, the frowning adult and the stop sign do not show the fun of making art."
+      ],
+      misconception: "A common mix-up is choosing a gloomy or unrelated picture. The picture should show what the words promise.",
+      why: "The answers are \"a child about eight years old painting at an easel and smiling\" and \"a table covered with jars of bright paint and brushes.\" They show the painting and mixing the flyer promises. The other pictures do not." },
+    { id: "SK-TC1c-S13", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C13"],
+      stem: ["Ms. Park's class is putting on a play on Friday at six o'clock. She made two notices.", "Notice A: a picture of actors in costumes. Words: Class play! Friday at six o'clock in the gym. Come see us act!", "Notice B: a picture of actors taking a bow. Words: Thank you for coming to our play! We loved seeing you in the audience."],
+      prompt: "It is Monday. Which notice should Ms. Park hang on the school door, and why?",
+      choices: [
+        { text: "Notice A, because its picture and words invite families to come to the play", correct: true },
+        { text: "Notice B, because its picture shows the actors happy" },
+        { text: "Notice B, because its words are polite and thank the families" },
+        { text: "Either notice, because both are about the play" }
+      ],
+      clue: "Purpose is what the writer wants a notice to do. Decide what Ms. Park wants people to do this week.",
+      hints: [
+        "Purpose is what the writer wants a notice to do. Decide what Ms. Park wants people to do this week.",
+        "Compare what each notice's picture and words ask readers to do.",
+        "Being polite is nice, but ask whether it makes anyone come on Friday. Check the other choices."
+      ],
+      how: [
+        "Ms. Park wants families to come to the play on Friday.",
+        "Notice A shows the actors, tells the day, time and place, and says \"Come see us act!\" The answer is \"Notice A, because its picture and words invite families to come to the play.\"",
+        "Notice B thanks people after the play is over, so it is for later.",
+        "Both notices are about the play, but only Notice A does the job needed on Monday."
+      ],
+      misconception: "A common mix-up is thinking any notice about the topic will do. A notice has to match what the writer wants readers to do now.",
+      why: "The answer is \"Notice A, because its picture and words invite families to come to the play.\" The play has not happened yet, and Notice A tells when and where. Notice B thanks people after the play." },
+    { id: "SK-TC1c-S14", type: "hottext", points: 1, dok: 3, std: ["3.T.C.1.c"], passages: [],
+      like: ["SK-TC1c-C14"],
+      stem: ["Omar's family is making a slide show for his father's fiftieth birthday. Slide 4 shows an old photo of his father and his two sisters as children. They are sitting side by side on the hood of an old blue truck. The guests at the party have never seen this photo."],
+      prompt: "Which caption will help the guests understand the photo best?",
+      options: [
+        "Dad and his two sisters sit side by side on the hood of Grandpa's old blue truck.",
+        "This photograph is very old, and the paper has turned a little yellow.",
+        "Dad has always loved trucks, and his favorite color was blue.",
+        "Trucks are strong machines that can carry heavy loads across town."
+      ],
+      answer: [0], pick: 1,
+      clue: "A caption tells what the picture shows. It can also give details that readers who were not there need.",
+      hints: [
+        "A caption tells what the picture shows. It can also give details that readers who were not there need.",
+        "Reread the description of Slide 4. Ask what the guests could learn from each caption.",
+        "A caption about the yellow paper tells about the photograph, not about the people in it. Check the other three captions."
+      ],
+      how: [
+        "The guests have never seen this photo, so the caption should tell who is in it and what they are doing.",
+        "The answer is \"Dad and his two sisters sit side by side on the hood of Grandpa's old blue truck.\"",
+        "The caption about yellow paper tells about the photograph, and the caption about always loving trucks claims something the photo does not show.",
+        "The caption about strong machines is about trucks in general."
+      ],
+      misconception: "A common mix-up is choosing a caption that is true about the topic. A caption has to tell what is in this picture.",
+      why: "The answer is \"Dad and his two sisters sit side by side on the hood of Grandpa's old blue truck.\" It tells who is in the photo and what they are doing. The other captions talk about the paper, a claim the photo does not show, or trucks in general." },
+    { id: "SK-TC1c-S15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
+      like: ["SK-TC1c-C15"],
+      stem: ["Theo is making a slide about umbrellas. His drawing shows five parts: the canopy, the handle, the ribs, the tip and the button. His slide says: The canopy keeps the rain off you. The handle is the part you hold."],
+      prompt: "Theo has room for only two labels. Which TWO labels fit the words on his slide best? Choose two answers.",
+      choices: [
+        { text: "canopy", correct: true },
+        { text: "handle", correct: true },
+        { text: "ribs" },
+        { text: "tip" },
+        { text: "button" }
+      ],
+      clue: "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
+      hints: [
+        "Labels point out the parts a reader should notice. Ask which parts the words on the slide are about.",
+        "Read the two sentences on the slide. Then match each sentence to a part of the drawing.",
+        "An umbrella does have a button, but ask whether the slide's words say anything about it. Check the other parts the same way."
+      ],
+      how: [
+        "A label should point out a part that the slide's words talk about.",
+        "The first sentence is about the canopy, and the second is about the handle.",
+        "The answers are \"canopy\" and \"handle.\"",
+        "The ribs, the tip and the button are real parts of an umbrella, but the slide does not talk about them."
+      ],
+      misconception: "A common mix-up is labeling every part of the drawing. Label the parts the words are about.",
+      why: "The answers are \"canopy\" and \"handle.\" The slide's two sentences are about those two parts. The ribs, the tip and the button are real parts, but the slide does not talk about them." }
+  ],
+  /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
+  addons: {
+    "SK-TC1c-P1": {
+      hints: [
+        "Think about what Kenji's audience does not know yet. Ask what would help a reader understand a brand-new word.",
+        "Read Slide 2 and find the word the classmates have never heard.",
+        "The peanut butter photo is about peanuts, but it does not show anything from Slide 2. Check the other choices."
+      ],
+      how: [
+        "Slide 2 uses the word peg, and Kenji's classmates do not know it.",
+        "A drawing of the stalk going into the soil, with a label, lets them see what a peg is.",
+        "The answer is \"a drawing of the stalk going into the soil, with a label on it.\"",
+        "The peanut butter photo and the chart do not explain the word, and the sentence about peas belongs on Slide 4."
+      ],
+      misconception: "A common mix-up is choosing something about peanuts in general. Help the reader with the new word on this slide." },
+    "SK-TC1c-P2": {
+      hints: [
+        "A caption tells what the picture shows. Ask why plants would be lying upside down.",
+        "Read Slide 3 and find what happens to the plants once they are dug up.",
+        "The caption about yellow flowers is true for peanut plants, but the photo shows plants lying upside down. Check the other choices."
+      ],
+      how: [
+        "Slide 3 says the plants are turned upside down so the peanuts can dry in the sun.",
+        "A caption should tell what the photo shows. The photo shows plants lying upside down in a field.",
+        "The answer is \"Peanut plants dry in the sun after they are dug up.\"",
+        "The flowers, the state fact and the plant family belong with other slides."
+      ],
+      misconception: "A common mix-up is choosing a true fact from another slide. The caption has to fit this photo." },
+    "SK-TC1c-P3": {
+      hints: [
+        "Labels name parts of the thing in the diagram. Ask which parts of a growing peanut plant Slide 2 tells about.",
+        "Read Slide 2 and list the parts of the plant that it names. Choose two.",
+        "A digging machine is not a part of the plant, so it cannot be a label on this diagram. Check the other four choices."
+      ],
+      how: [
+        "A label names a part that the slide tells about.",
+        "Slide 2 tells about the small yellow flowers and about the peanut growing under the ground at the end of the peg.",
+        "The answers are \"yellow flower\" and \"peanut under the soil.\"",
+        "A bean pod, a digging machine and a cotton boll are not parts of this plant."
+      ],
+      misconception: "A common mix-up is choosing a label for something from another slide. Label the parts of this diagram." },
+    "SK-TC1c-P4": {
+      hints: [
+        "A picture should match the words on its slide. Read the slide's title and sentences, then ask what the reader needs to see.",
+        "Slide 4 is the last slide. Read its title and both of its sentences, and notice what the sentences compare.",
+        "The field at harvest time belongs with Slide 3. Check the other choices against the words on Slide 4."
+      ],
+      how: [
+        "Slide 4 is called \"Not Really a Nut.\" It says peanuts are in the same plant family as beans and peas.",
+        "A picture should help the reader see that. A peanut, a bean pod and a pea pod side by side show how alike they are.",
+        "The answer is \"a peanut, a bean pod and a pea pod side by side.\"",
+        "The harvest field, the map and the flower belong with other slides."
+      ],
+      misconception: "A common mix-up is picking a picture about peanuts in general. The picture has to match the words on this slide." },
+    "SK-TC1c-P5": {
+      hints: [
+        "A sound should match what the slide is about. Ask what is happening on the slide.",
+        "Read the title of Slide 3 and its three sentences. Notice what the farmers use and when.",
+        "Bees buzz around flowers, which are on Slide 2, not Slide 3. Check the other two sounds against the words on Slide 3."
+      ],
+      how: [
+        "Slide 3 is about the fall harvest. Farmers use a machine to dig up the plants, and another machine picks the peanuts.",
+        "A sound should match that. The rumble of a farm machine digging fits.",
+        "The answer is \"the rumble of a farm machine digging.\"",
+        "Bees belong with the flowers on Slide 2, and rain is not part of the harvest on Slide 3."
+      ],
+      misconception: "A common mix-up is choosing a sound from the same farm but a different slide." }
+  },
   test: [
     { id: "SK-TC1c-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Amara wants one big picture in the middle of her poster. Which picture would fit best?",

@@ -4341,8 +4341,8 @@ PP.addLesson({
   teach: {
     big: "A good story has characters, a problem, events told in order, details that help the reader picture it, and an ending that wraps it up.",
     points: [
-      "Start strong. Tell who the story is about and where it happens, and make the reader want to keep reading.",
-      "Tell the events in order. Time words like first, then, after that and finally help the reader follow along.",
+      "Start strong. Tell who the story is about and where it happens, show what the problem is, and make the reader want to keep reading.",
+      "Tell the events in order. Time words like first, then, after that and finally help the reader follow along. Every sentence should belong to the story, so take out a sentence that wanders off to another topic.",
       "Use dialogue to show what characters feel and want. Put the exact words a character says inside quotation marks.",
       "Add details about what characters see, hear and feel. Show what is happening instead of just telling it.",
       "End by showing how the problem gets solved and how the character feels or what they learned."
@@ -4351,7 +4351,17 @@ PP.addLesson({
       { term: "narrative", means: "a story, real or made up" },
       { term: "dialogue", means: "the words characters say out loud" },
       { term: "time words", means: "words like first, next and finally that show the order of events" },
-      { term: "ending", means: "the part that wraps up the story's problem" }
+      { term: "ending", means: "the part that wraps up the story's problem" },
+      { term: "setting", means: "when and where the story happens" },
+      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
+      { term: "setting", means: "when and where the story happens" },
+      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
+      { term: "setting", means: "when and where the story happens" },
+      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
+      { term: "setting", means: "when and where the story happens" },
+      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" },
+      { term: "setting", means: "when and where the story happens" },
+      { term: "problem", means: "what goes wrong in a story, or what a character needs to fix" }
     ],
     example: {
       label: "Telling vs. showing",
@@ -4361,7 +4371,7 @@ PP.addLesson({
       ],
       note: "The showing version uses actions and sounds, so the reader can feel how scared Nia is without being told."
     },
-    tip: "On the Milestones, you may read a student's story draft and choose the best sentence to add: a better beginning, a line of dialogue, a detail or an ending. Pick the one that fits the characters and the events already in the draft."
+    tip: "On the Milestones, you may read a student's story draft and choose the best sentence to add: a better beginning, a line of dialogue, a detail or an ending. You may also put sentences in order or take out a sentence that does not belong. Pick the one that fits the characters and the events already in the draft."
   },
   learn: [
     {
@@ -4430,7 +4440,27 @@ PP.addLesson({
         ["(3) I watched my red bobber float on the water, but for a whole hour, nothing bit my hook.", "(4) I was bored.", "(5) My cousin Luis plays soccer every Saturday at the park near his house."],
         ["(6) My bobber went under, and my fishing pole bent almost in half.", "(7) Aunt Rosa grabbed the net and yelled, \"Hold on tight, Sofia!\""],
         ["(8) I reeled and reeled until my arms burned and my hands felt sore.", "(9) At last, a fish as long as my arm splashed out of the water, its silver scales shining in the sun.", "(10) Aunt Rosa scooped it into the net, and we both cheered."]
+      ] },
+    /* B4-b4a passages begin */
+    { id: "p3", draft: true, title: "The Recorder Concert", byline: "Imani's first draft", genre: "Student draft (story)",
+      paragraphs: [
+        ["(1) On Thursday night, our whole third-grade class played recorders at the school concert in the gym.", "(2) I had practiced my song every afternoon for two weeks, even on the weekend.", "(3) I was nervous."],
+        ["(4) Ms. Ellis raised her hands, and all twenty of us began to play together.", "(5) Halfway through, my fingers slipped, and a loud squeak filled the gym.", "(6) My brother plays the drums in the school band.", "(7) A few kids in the front row giggled and covered their mouths."],
+        ["(8) I took a deep breath and kept playing.", "(9) I finished the song with no more squeaks.", "(10) The end."]
+      ] },
+    { id: "p4", draft: true, title: "Scavenger Hunt at the Park", byline: "Darius's first draft", genre: "Student draft (story)",
+      paragraphs: [
+        ["(1) This story is about a scavenger hunt at the park."],
+        ["(2) My team's list had four things to find: a pinecone, a red leaf, a smooth rock, and a feather.", "(3) We found the pinecone under a pine tree.", "(4) Red leaves drifted down from the maples like confetti, so the leaf was easy.", "(5) The rock felt cool and smooth, like a river stone."],
+        ["(6) Soon only the feather was left on our list.", "(7) We searched the playground, the pond, and the picnic tables.", "(8) \"Where could a feather be?\" Maya groaned.", "(9) Then I saw a blue jay feather stuck on a branch, just out of reach."],
+        ["(10) We checked off the last thing on our list and ran back to the starting line."]
+      ] },
+    { id: "p5", draft: true, title: "The Broken Shoelace", byline: "Leo's first draft", genre: "Student draft (story)",
+      paragraphs: [
+        ["(1) Leo tied his shoes tight before the relay race on Field Day.", "(2) His team had practiced passing the baton every afternoon for two whole weeks.", "(3) Just before the whistle, his left shoelace snapped in two."],
+        ["(4) Leo frowned and looked down at his shoe.", "(5) The other runners were already stepping up to the starting line.", "(6) His coach, Ms. Bell, knelt down beside him.", "(7) \"Tie the pieces together in a tight knot,\" she said.", "(8) Leo tied the knot, pulled it snug, and hurried to the line.", "(9) The starter raised her flag, and Leo crouched with the baton in his hand."]
       ] }
+    /* B4-b4a passages end */
   ],
   practice: [
     { id: "SK-TT1e-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -4492,6 +4522,741 @@ PP.addLesson({
       clue: "A good ending wraps up the problem. Think about how the problem started back in sentence 3.",
       why: "The answer is \"I hugged Peanut gently and promised to always close his door.\" It shows Andre is relieved, and it connects back to sentence 3, where he forgot to close the door. The phone ringing starts something new, the hamster fact is off topic, and \"That is the story of what happened\" still just says the story is over." }
   ],
+  /* ---------- B4-b4a begin ---------- */
+  /* ---------- B4 (expansion 2026-10-22, author b4a; docs/expansion-2026-10-22/01-architecture.md 2.2-2.3) ----------
+     Selected-response core (the Milestones assesses this standard through revise/edit items). The write task stays
+     OUTSIDE the fifteen: it is adult-scored and never awards a pass. Set 1 reuses P4, P5 and P6 by { ref } on Andre's
+     draft (p1) plus two new items; set 2 uses p3 (school); set 3 uses p4 (community) plus a family stem and p5 (sports).
+     Practice Together is P1-P3. Hints and Show me how for P1-P6 are in addons below.
+     Author log: docs/expansion-2026-10-22/batches/B4-b4a-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT1e-P5" },
+      { ref: "SK-TT1e-P4" },
+      { id: "SK-TT1e-C03", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: ["p1"],
+        prompt: "Andre wants sentence 5 to show his exact words. Which version of sentence 5 does that best?",
+        choices: [
+          { text: "My heart pounded, and I yelled, \"Bree, come quick! Peanut is gone!\"", correct: true },
+          { text: "My heart pounded, and I yelled for Bree to come quick because Peanut was gone." },
+          { text: "My heart pounded, and I yelled, Bree, come quick! Peanut is gone!" },
+          { text: "My heart pounded, and I yelled, \"I like my big sister a lot!\"" }
+        ],
+        clue: "Dialogue is the exact words a character says, set inside quotation marks. The words also have to fit what is happening.",
+        hints: [
+          "Dialogue is the exact words a character says, set inside quotation marks. The words also have to fit what is happening.",
+          "Look at what has just happened in sentences 3 and 4, and think about who Andre is calling. Then check how each choice shows the words he says.",
+          "Writing that only tells what someone said, without the exact words, is not dialogue. Look at the choices that are left."
+        ],
+        how: [
+          "Sentence 5 is where Andre calls for help, so his exact words belong right there.",
+          "Exact words go inside quotation marks, and they fit the moment: he has just found the empty cage and he needs his sister.",
+          "The answer is: My heart pounded, and I yelled, \"Bree, come quick! Peanut is gone!\"",
+          "Telling that he yelled for Bree does not show his exact words. The version with no quotation marks does not show where his words start and stop. \"I like my big sister a lot!\" does not fit the moment."
+        ],
+        misconception: "A common mix-up is thinking dialogue only needs the right words. The quotation marks show the reader exactly what was said.",
+        why: "The answer is: My heart pounded, and I yelled, \"Bree, come quick! Peanut is gone!\" It shows Andre's exact words inside quotation marks, and they fit the moment. One version only tells what he said, one has no quotation marks, and one has words that do not fit the moment." },
+      { id: "SK-TT1e-C04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [],
+        stem: [
+          "Zora is writing a story about the first time she rode the school bus alone. Her first sentence is: \"This story is about the first time I rode the school bus.\""
+        ],
+        prompt: "Which sentence should replace Zora's first sentence to make a better beginning?",
+        choices: [
+          { text: "The bus door squeaked open, and I climbed the steps alone for the very first time.", correct: true },
+          { text: "A school bus is a big yellow vehicle that takes children to school each day." },
+          { text: "Riding the bus was a lot of fun, and I liked it very much." },
+          { text: "The ride from my house to school takes about twenty minutes in the morning." }
+        ],
+        clue: "A strong beginning tells who the story is about and where it happens, and it makes the reader want to keep reading.",
+        hints: [
+          "A strong beginning tells who the story is about and where it happens, and it makes the reader want to keep reading.",
+          "Imagine you are a reader who has just opened this story. Which choice would make you ask a question or want to read on?",
+          "A sentence that only tells what a school bus is could begin any story or report about buses. Look at the choices that are left."
+        ],
+        how: [
+          "A good beginning puts a character in a place and starts the action.",
+          "\"The bus door squeaked open, and I climbed the steps alone for the very first time\" has a character, a place, a sound and a first-time moment that makes the reader curious.",
+          "The answer is: The bus door squeaked open, and I climbed the steps alone for the very first time.",
+          "The sentence about what a bus is gives a fact, \"Riding the bus was a lot of fun\" gives away how it turns out, and the twenty-minute ride is a fact that does not start the story."
+        ],
+        misconception: "A common mix-up is choosing a sentence that explains the topic. In a story, the beginning starts the action.",
+        why: "The answer is: The bus door squeaked open, and I climbed the steps alone for the very first time. It shows a character in a place at the start of the action. The other sentences give facts or tell how the story turns out, so they do not start the story." },
+      { ref: "SK-TT1e-P6" }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT1e-C06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: ["p3"],
+        prompt: "Sentence 3 only tells how Imani feels. Which sentence should replace it to show that she is nervous?",
+        choices: [
+          { text: "My hands felt cold, and my knees shook as I walked to my chair.", correct: true },
+          { text: "I walked to my chair with a big smile and waved to my mom." },
+          { text: "I was extremely, totally, completely nervous about the concert." },
+          { text: "The gym had bright lights and rows of folding chairs." }
+        ],
+        clue: "Showing a feeling means writing what the character does, feels in her body or notices, so the reader can figure out the feeling.",
+        hints: [
+          "Showing a feeling means writing what the character does, feels in her body or notices, so the reader can figure out the feeling.",
+          "Reread sentences 1 to 3, and think about what Imani is about to do. Then ask what each choice shows about her.",
+          "Adding stronger words, like extremely, still just tells the feeling. Look at the choices that are left."
+        ],
+        how: [
+          "Telling names the feeling, like nervous. Showing uses an action or a body clue.",
+          "Cold hands and shaking knees are body clues that someone is nervous, and the sentence fits the moment before the concert.",
+          "The answer is: My hands felt cold, and my knees shook as I walked to my chair.",
+          "A big smile and a wave show a happy feeling, \"extremely, totally, completely nervous\" still tells, and the lights and chairs describe the gym, not Imani."
+        ],
+        misconception: "A common mix-up is choosing the sentence with stronger feeling words. Stronger words still tell; actions and body clues show.",
+        why: "The answer is: My hands felt cold, and my knees shook as I walked to my chair. Cold hands and shaking knees show that Imani is nervous without naming the feeling. A smile shows a different feeling, \"extremely, totally, completely nervous\" still tells, and the gym description is not about Imani." },
+      { id: "SK-TT1e-C07", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: ["p3"], pick: 1,
+        prompt: "One sentence in Imani's draft does not belong in the story. Which sentence should she take out? Choose the sentence in the draft.",
+        targets: ["p3:1:2", "p3:2:1", "p3:2:3", "p3:2:4", "p3:3:1"],
+        answer: ["p3:2:3"],
+        clue: "Every sentence in a story should help tell what happens. Ask of each one: is this part of Imani's story about the concert?",
+        hints: [
+          "Every sentence in a story should help tell what happens. Ask of each one: is this part of Imani's story about the concert?",
+          "Read each sentence with the ones right before and after it. A sentence that belongs connects to its neighbors.",
+          "Sentence 2 tells what Imani did before the concert, so it gives background for the story. Check the sentences that are left."
+        ],
+        how: [
+          "Each sentence should connect to Imani, her song or what happens at the concert.",
+          "Sentence 5 is the squeak, and sentence 7 tells how the kids reacted to it. Sentence 6 is about Imani's brother and the school band, and it connects to neither.",
+          "The answer is sentence 6: \"My brother plays the drums in the school band.\"",
+          "Sentences 2, 4 and 8 each tell something that happens in or leads up to the concert, so they belong."
+        ],
+        misconception: "A common mix-up is keeping a sentence because it is about music. A sentence belongs only if it helps tell this story's events.",
+        why: "The answer is sentence 6, \"My brother plays the drums in the school band.\" It is not about Imani's concert or the squeak, so it pulls the reader away from the story. Sentences 2, 4 and 8 tell what led up to the concert or what happened during it." },
+      { id: "SK-TT1e-C08", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: ["p3"],
+        prompt: "Imani wants to add a line of dialogue after sentence 7 that moves the story forward. Which sentence fits best?",
+        choices: [
+          { text: "Terrell leaned over and whispered, \"Keep going. You can do it!\"", correct: true },
+          { text: "Ms. Ellis called out, \"Please put your recorders away now.\"" },
+          { text: "Terrell whispered, \"What are we having for dinner?\"" },
+          { text: "\"The concert is over,\" said Ms. Ellis. \"You may all go home.\"" }
+        ],
+        clue: "Dialogue has to sound like something that character would really say at that exact moment, and it should help the story along.",
+        hints: [
+          "Dialogue has to sound like something that character would really say at that exact moment, and it should help the story along.",
+          "Reread sentences 5 to 8. Think about what has just happened and what Imani does next.",
+          "A whisper about dinner does not help the story along. Look at the choices that are left."
+        ],
+        how: [
+          "After the squeak and the giggles, Imani takes a deep breath and keeps playing. The new line should lead to that.",
+          "A friend whispering encouragement fits the moment and helps explain why she keeps playing.",
+          "The answer is: Terrell leaned over and whispered, \"Keep going. You can do it!\"",
+          "Ms. Ellis ending the concert does not fit, because Imani keeps playing and finishes the song. A whisper about dinner does not move the story."
+        ],
+        misconception: "A common mix-up is picking dialogue that sounds real but does not fit this moment in the story.",
+        why: "The answer is: Terrell leaned over and whispered, \"Keep going. You can do it!\" It fits the moment after the squeak and leads to Imani taking a deep breath and playing on. Ms. Ellis ending the concert contradicts sentences 8 and 9, and the dinner question does not move the story." },
+      { id: "SK-TT1e-C09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: ["p3"],
+        prompt: "What job does each sentence do in Imani's story? Match each sentence to its job. Use each job once.",
+        cols: ["sets the scene", "shows the problem", "shows how the problem gets solved"],
+        rows: [
+          { text: "(1) On Thursday night, our whole third-grade class played recorders at the school concert in the gym.", answer: 0 },
+          { text: "(5) Halfway through, my fingers slipped, and a loud squeak filled the gym.", answer: 1 },
+          { text: "(8) I took a deep breath and kept playing.", answer: 2 }
+        ],
+        clue: "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does for the story.",
+        hints: [
+          "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does for the story.",
+          "For each sentence, ask: is the story just starting, going wrong, or getting better?",
+          "The sentence that names the day and the place tells when and where the story happens. Match that one first, then work out the other two."
+        ],
+        how: [
+          "Setting means when and where. Sentence 1 names the night and the school concert.",
+          "A problem is something that goes wrong. Sentence 5 is where the squeak happens.",
+          "A solution is what the character does about it. In sentence 8, Imani takes a deep breath and keeps playing.",
+          "So the matches are: sentence 1 sets the scene, sentence 5 shows the problem, and sentence 8 shows how the problem gets solved."
+        ],
+        misconception: "A common mix-up is calling the first sentence the problem because it starts the story. The problem is the moment something goes wrong.",
+        why: "Sentence 1 sets the scene by telling when and where. Sentence 5 shows the problem, the squeak. Sentence 8 shows how the problem gets solved, because Imani takes a deep breath and keeps playing." },
+      { id: "SK-TT1e-C10", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: ["p3"],
+        prompt: "Imani wants a better ending for her story. Choose the best answer for each blank.",
+        text: "(9) {0}, I finished the song with no more squeaks. (10) {1}",
+        slots: [
+          { options: ["After that", "Before that", "At first"], answer: 0 },
+          { options: [
+              "When the last note ended, everyone clapped, and I smiled because I had not given up.",
+              "Then Terrell dropped his recorder, and it rolled off the stage.",
+              "That is the whole story about my recorder concert."
+            ],
+            answer: 0 }
+        ],
+        clue: "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+        hints: [
+          "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+          "Reread sentences 5 to 8 to remember the problem and what Imani did about it. Then check how each blank connects to the sentence before it.",
+          "A new problem, like something dropping, starts a different story instead of wrapping up this one. Work out the first blank on your own."
+        ],
+        how: [
+          "Blank 1: sentence 8 says Imani kept playing, so finishing the song happens next. \"After that\" shows that order.",
+          "Blank 2 should wrap up the problem and show her feelings: everyone claps, and she smiles because she did not give up.",
+          "The answers are After that and When the last note ended, everyone clapped, and I smiled because I had not given up.",
+          "\"Before that\" and \"At first\" send the reader back in time. Terrell's recorder starts a new problem, and \"That is the whole story\" only announces the end."
+        ],
+        misconception: "A common mix-up is picking an ending that only says the story is over. A good ending shows how things turned out and how the character feels.",
+        why: "Blank 1 needs \"After that\" because finishing the song comes after Imani keeps playing. Blank 2 needs the sentence about everyone clapping and Imani smiling, because it wraps up the problem and shows her feelings. Terrell's recorder starts a new problem, and \"That is the whole story\" only announces the end." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT1e-C11", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.e"], passages: ["p4"],
+        prompt: "Darius wants a better first sentence. Which choice is the best new sentence 1, and why?",
+        choices: [
+          { text: "\"The whistle blew, and my team dashed into Maple Park.\" It puts the reader in the first moment and makes them curious.", correct: true },
+          { text: "\"A scavenger hunt is a game where players look for things on a list.\" It teaches the reader what the game is." },
+          { text: "\"I like scavenger hunts better than any other game.\" It tells the reader what the writer thinks." },
+          { text: "\"Maple Park is the biggest park in our town.\" It tells the reader where the story happens." }
+        ],
+        clue: "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+        hints: [
+          "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+          "Read the whole draft to see what kind of story it is. Then ask which choice would start the story best.",
+          "An opinion about scavenger hunts could begin an essay, but a story needs a character in a moment. Look at the choices that are left."
+        ],
+        how: [
+          "Ask what the beginning should do: put a character in a place and start the action.",
+          "\"The whistle blew, and my team dashed into Maple Park\" starts the action, names the team and the place, and makes the reader curious about the hunt.",
+          "The answer is \"The whistle blew, and my team dashed into Maple Park.\" It puts the reader in the first moment and makes them curious.",
+          "The other choices explain the game, give an opinion or name the place, but none of them starts the story."
+        ],
+        misconception: "A common mix-up is picking a sentence with a good reason that fits a report better than a story. Ask what job a story's first sentence has.",
+        why: "The answer is: \"The whistle blew, and my team dashed into Maple Park.\" It puts the reader in the first moment and makes them curious. It starts the action with a team in a place. The others explain the game, give an opinion or only name the park, so they do not start the story." },
+      { id: "SK-TT1e-C12", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: ["p4"],
+        prompt: "Darius wants to add these four sentences between sentence 9 and sentence 10. Put them in the order that makes the most sense.",
+        steps: [
+          "Maya found a long, thin stick under the bench.",
+          "She lifted it as high as she could and nudged the feather.",
+          "The feather wobbled, slipped off the branch and floated down.",
+          "I held out my hands and caught it."
+        ],
+        clue: "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
+        hints: [
+          "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
+          "Ask what each sentence needs to already be true. Which one needs nothing before it, and which one cannot happen until the very end?",
+          "The feather cannot slip off the branch until something has touched it. Use that to place two of the sentences, then decide where the others go."
+        ],
+        how: [
+          "Maya needs a tool before she can use it, so she finds the stick first.",
+          "Next she lifts the stick and nudges the feather. The feather can slip off only after it is nudged.",
+          "Last, the feather floats down, and Darius catches it. He can catch it only once it has fallen.",
+          "The order is: found the stick, lifted it and nudged, feather floated down, caught it."
+        ],
+        misconception: "A common mix-up is putting the catch early because it is the exciting moment. Check what has to happen first.",
+        why: "The order is: Maya found a long, thin stick; she lifted it and nudged the feather; the feather slipped off and floated down; I caught it. Each step needs the one before it." },
+      { id: "SK-TT1e-C13", type: "hottext", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: ["p4"], pick: 2,
+        prompt: "Which TWO sentences use details about what Darius sees or feels to help the reader picture the park? Choose two sentences in the draft.",
+        targets: ["p4:2:1", "p4:2:2", "p4:2:3", "p4:2:4", "p4:3:2"],
+        answer: ["p4:2:3", "p4:2:4"],
+        clue: "Details help the reader see, hear or feel what is happening. Ask whether a sentence only says what happened or helps you picture it.",
+        hints: [
+          "Details help the reader see, hear or feel what is happening. Ask whether a sentence only says what happened or helps you picture it.",
+          "Read sentences 2 to 7 one at a time, and picture each one in your mind. Choose two.",
+          "Sentence 2 is a list of things to find, so it names them but does not show how anything looks or feels. Check the sentences that are left."
+        ],
+        how: [
+          "Look for words that make a picture: how something looks, moves or feels.",
+          "Sentence 4 says red leaves drifted down like confetti, so you can see them falling. Sentence 5 says the rock felt cool and smooth, so you can feel it.",
+          "The answers are sentences 4 and 5.",
+          "Sentence 2 is a list, sentence 3 tells where the pinecone was, and sentence 7 lists where they searched. They say what happened but do not make a picture."
+        ],
+        misconception: "A common mix-up is choosing a sentence only because it names a place or an object. A detail has to help the reader see, hear or feel something.",
+        why: "The answers are sentences 4 and 5. \"Red leaves drifted down from the maples like confetti\" and \"The rock felt cool and smooth, like a river stone\" help the reader see and feel the park. Sentences 2, 3 and 7 only say what the team found or where they looked." },
+      { id: "SK-TT1e-C14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: [], pick: 2,
+        stem: [
+          "(1) I spent all morning making a birthday card for Grandpa.",
+          "(2) I squeezed the glitter glue bottle too hard, and a big blob plopped onto the card."
+        ],
+        prompt: "Which TWO sentences could be added after sentence 2 to show how the writer feels, using words she says or things she does?",
+        choices: [
+          { text: "\"Oh no, Grandpa's card is ruined!\" I wailed.", correct: true },
+          { text: "My shoulders dropped, and I stared at the sticky blob.", correct: true },
+          { text: "I felt very upset about it." },
+          { text: "Grandpa would probably laugh when he saw it." },
+          { text: "I could make a new card tomorrow." }
+        ],
+        clue: "Words a character says and things she does can show a feeling without naming it.",
+        hints: [
+          "Words a character says and things she does can show a feeling without naming it.",
+          "Read sentences 1 and 2 to find the problem. Then ask what each choice shows about the writer's reaction to it. Choose two.",
+          "A sentence that names the feeling, like \"I felt very upset,\" tells instead of shows. Look at the choices that are left."
+        ],
+        how: [
+          "The problem is that the glue blob lands on the card the writer worked on all morning.",
+          "Words said out loud show a feeling: \"Oh no, Grandpa's card is ruined!\" An action shows a feeling too: shoulders dropping and staring at the blob.",
+          "The answers are \"Oh no, Grandpa's card is ruined!\" I wailed, and My shoulders dropped, and I stared at the sticky blob.",
+          "\"I felt very upset\" tells the feeling. Grandpa laughing is a guess about someone else, and making a new card is a plan, not a reaction we can see or hear."
+        ],
+        misconception: "A common mix-up is choosing a sentence that names the feeling. Naming it tells; words and actions show.",
+        why: "The answers are \"Oh no, Grandpa's card is ruined!\" I wailed, and My shoulders dropped, and I stared at the sticky blob. One uses words she says and one uses something she does, so both show her feeling. \"I felt very upset\" tells the feeling, Grandpa's laugh is a guess about someone else, and a new card is a plan." },
+      { id: "SK-TT1e-C15", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: ["p5"],
+        prompt: "The draft stops after sentence 9. This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Which sentence would be the best ending for Leo's story?",
+          choices: [
+            { text: "Leo's team crossed the finish line, and he grinned because the knot had held all the way.", correct: true },
+            { text: "Leo ran fast, but his team did not win the relay race." },
+            { text: "Then the whistle blew again, and Ms. Bell called the next team to the line." },
+            { text: "That is how I remember Field Day at my school." }
+          ] },
+        partB: { prompt: "Which sentence from the draft tells the problem that the best ending wraps up?",
+          choices: [
+            { text: "\"Just before the whistle, his left shoelace snapped in two.\"", correct: true },
+            { text: "\"Leo tied his shoes tight before the relay race on Field Day.\"" },
+            { text: "\"Leo frowned and looked down at his shoe.\"" },
+            { text: "\"His coach, Ms. Bell, knelt down beside him.\"" }
+          ] },
+        clue: "A good ending wraps up the problem and shows how the character feels. Ask what went wrong and how it was fixed.",
+        hints: [
+          "A good ending wraps up the problem and shows how the character feels. Ask what went wrong and how it was fixed.",
+          "For Part B, reread the start of the draft to find what went wrong. Your Part A ending should connect to it.",
+          "Changing from \"he\" to \"I\" changes who is telling the story. Look at the choices that are left in Part A, and make your Part B choice match."
+        ],
+        how: [
+          "The problem is in the first paragraph: the lace snaps. The fix comes in paragraph 2, when Ms. Bell tells Leo to tie a knot.",
+          "A good ending shows the result of the fix and how Leo feels: the team finishes, and he grins because the knot held.",
+          "Part A: Leo's team crossed the finish line, and he grinned because the knot had held all the way. Part B: \"Just before the whistle, his left shoelace snapped in two.\"",
+          "Running fast but losing does not mention the lace, the next team moves on without wrapping up, and \"I remember\" changes the narrator."
+        ],
+        misconception: "A common mix-up is choosing an ending that sounds finished but ignores the problem. The ending should answer what went wrong.",
+        why: "Part A: Leo's team crossed the finish line, and he grinned because the knot had held all the way. Part B: \"Just before the whistle, his left shoelace snapped in two.\" The ending shows the knot solving the lace problem and how Leo feels. The other endings ignore the lace, move on to a new team, or change the narrator." }
+    ] }
+  ] },
+  similar: [
+    { id: "SK-TT1e-S01", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P5"],
+      prompt: "Choose the best time word for each blank to show the order of events.",
+      text: "(1) Eli closed his eyes and counted to twenty. (2) {0} he looked behind the couch. (3) Then he looked under the table. (4) {1} he lifted the lid of the laundry basket and found his cousin Nia curled up inside.",
+      slots: [
+        { options: ["Next,", "Finally,", "Before that,"], answer: 0 },
+        { options: ["Finally,", "First,", "At first,"], answer: 0 }
+      ],
+      clue: "Time words show where an event fits in the order of the story. Ask what has already happened before each blank.",
+      hints: [
+        "Time words show where an event fits in the order of the story. Ask what has already happened before each blank.",
+        "Read sentences 1 to 4 in order. Decide which blank is an early step and which one is near the end of the search.",
+        "\"Before that\" sends the reader back in time, but the story is moving forward. Check the other words for that blank, and work out the second blank yourself."
+      ],
+      how: [
+        "Sentence 1 is the start: Eli counts. So the first search in sentence 2 comes after that, and it needs a word for a next step.",
+        "Blank 1 is \"Next,\". Finally would put the end of the search too early.",
+        "Sentence 4 is where Eli finds Nia, so it is the end of the search, and it needs \"Finally,\".",
+        "First and At first are start words, and Before that goes backward."
+      ],
+      why: "Blank 1 needs \"Next,\" because the search comes after Eli counts. Blank 2 needs \"Finally,\" because he finds Nia at the end of the search. First and At first belong at the start, and Before that goes backward." },
+    { id: "SK-TT1e-S02", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P4"],
+      prompt: "A student wants to add these four sentences to a story about a picnic. Put them in the order that makes the most sense.",
+      steps: [
+        "Dad set the big watermelon on the picnic table.",
+        "He sliced it into thick, juicy wedges.",
+        "We each grabbed a wedge and took a big bite.",
+        "Juice ran down my chin and dripped onto my shirt."
+      ],
+      clue: "Put the events in the order they would really happen. Ask what has to happen before the next thing can happen.",
+      hints: [
+        "Put the events in the order they would really happen. Ask what has to happen before the next thing can happen.",
+        "Picture each moment. Which sentence needs nothing before it, and which one is the result of an earlier action?",
+        "You cannot grab a wedge until the watermelon has been cut. Use that to place two of the sentences, then decide where the others go."
+      ],
+      how: [
+        "First the watermelon has to be on the table, because everything else is done with it.",
+        "Then Dad slices it into wedges, because nobody can grab a wedge before it is cut.",
+        "Then everyone grabs a wedge and bites, and the juice runs down only after the bite.",
+        "The order is: set the watermelon on the table, slice it, grab and bite, juice runs down."
+      ],
+      why: "The order is: Dad set the watermelon on the table; he sliced it into wedges; we each grabbed a wedge and took a bite; juice ran down my chin. Each step needs the one before it." },
+    { id: "SK-TT1e-S03", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C03"],
+      stem: [
+        "(1) Nia reached the top of the treehouse ladder.",
+        "(2) She looked down and shouted for her dad to come see."
+      ],
+      prompt: "Which version of sentence 2 shows Nia's exact words?",
+      choices: [
+        { text: "She looked down and shouted, \"Dad, come see how high I am!\"", correct: true },
+        { text: "She looked down and shouted that her dad should come see how high she was." },
+        { text: "She looked down and shouted, Dad, come see how high I am!" },
+        { text: "She looked down and shouted, \"A ladder has rungs and two long sides.\"" }
+      ],
+      clue: "Dialogue is the exact words a character says, set inside quotation marks. The words also have to fit the moment.",
+      hints: [
+        "Dialogue is the exact words a character says, set inside quotation marks. The words also have to fit the moment.",
+        "Think about where Nia is and who she is calling. Then check how each choice shows what she says.",
+        "A sentence that tells what Nia shouted, without her exact words, is not dialogue. Look at the choices that are left."
+      ],
+      how: [
+        "Nia is at the top of the ladder and wants her dad to see how high she is.",
+        "Her exact words go inside quotation marks, and they match the moment: \"Dad, come see how high I am!\"",
+        "The answer is: She looked down and shouted, \"Dad, come see how high I am!\"",
+        "Telling what she shouted has no exact words, the version with no quotation marks does not show where her words start and stop, and the ladder fact does not fit what she wants."
+      ],
+      why: "The answer is: She looked down and shouted, \"Dad, come see how high I am!\" It uses her exact words inside quotation marks, and they fit the moment. One version only tells what she said, one has no quotation marks, and one has words that do not fit." },
+    { id: "SK-TT1e-S04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C04"],
+      stem: [
+        "Marcus is writing a story about the day he got lost at the state fair. His first sentence is: \"This story is about the day I got lost.\""
+      ],
+      prompt: "Which sentence should replace Marcus's first sentence to make a better beginning?",
+      choices: [
+        { text: "A band started up by the cotton candy stand, and my family was gone.", correct: true },
+        { text: "The state fair has rides, games and lots of good food to eat." },
+        { text: "Getting lost was scary, but everything turned out fine in the end." },
+        { text: "I have been to the fair many times with my family and my cousins." }
+      ],
+      clue: "A strong beginning tells who the story is about and where it happens, and it makes the reader want to keep reading.",
+      hints: [
+        "A strong beginning tells who the story is about and where it happens, and it makes the reader want to keep reading.",
+        "Imagine you are a reader who has just opened this story. Which choice makes you want to find out what happens next?",
+        "A sentence that tells how the story ends takes away the reason to keep reading. Look at the choices that are left."
+      ],
+      how: [
+        "The story is about getting lost, so a good beginning puts Marcus in the place and starts the problem.",
+        "\"A band started up by the cotton candy stand, and my family was gone\" has a sound, a place and the start of the problem.",
+        "The answer is: A band started up by the cotton candy stand, and my family was gone.",
+        "The sentence about rides is a fact, \"everything turned out fine\" gives away the ending, and the sentence about many visits is background that does not start the story."
+      ],
+      why: "The answer is: A band started up by the cotton candy stand, and my family was gone. It puts Marcus in a place and starts the problem. The others give facts or background, or give away how the story ends." },
+    { id: "SK-TT1e-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-P6"],
+      stem: [
+        "(1) Leo and his sister Kai tried their new walkie-talkies in the backyard.",
+        "(2) Kai pressed the button, but no sound came out.",
+        "(3) Leo opened the back and saw that the battery was loose.",
+        "(4) He pushed it in until it clicked."
+      ],
+      prompt: "The draft stops after sentence 4. Which sentence would be the best ending?",
+      choices: [
+        { text: "Kai's voice crackled, \"Can you hear me now?\" and they both laughed.", correct: true },
+        { text: "Walkie-talkies send voices through the air from one radio to another." },
+        { text: "The next day, Leo built a treehouse in the big oak tree." },
+        { text: "That is the end of my story about the walkie-talkie." }
+      ],
+      clue: "A good ending wraps up the problem and shows how the characters feel. Think about what went wrong at the start.",
+      hints: [
+        "A good ending wraps up the problem and shows how the characters feel. Think about what went wrong at the start.",
+        "Reread sentences 2 to 4 to find the problem and how it was fixed. What would the characters find out next?",
+        "A new project, like building something the next day, starts a different story. Look at the choices that are left."
+      ],
+      how: [
+        "The problem is that the walkie-talkie makes no sound. Leo fixes the loose battery.",
+        "A good ending shows the result: it works, and the characters are happy.",
+        "The answer is: Kai's voice crackled, \"Can you hear me now?\" and they both laughed.",
+        "The radio fact is not part of the story's ending, building a treehouse starts something new, and \"That is the end\" only says the story is over."
+      ],
+      why: "The answer is: Kai's voice crackled, \"Can you hear me now?\" and they both laughed. It shows the problem is solved and how they feel. A radio fact, a new project and \"That is the end\" do not wrap up the problem." },
+    { id: "SK-TT1e-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C06"],
+      stem: [
+        "(1) Jamal waited backstage before the school play.",
+        "(2) He was scared.",
+        "(3) Then the music began."
+      ],
+      prompt: "Which sentence should replace sentence 2 to show that Jamal is scared?",
+      choices: [
+        { text: "His hands trembled, and he kept peeking at the crowd through the curtain.", correct: true },
+        { text: "He smiled and waved at his grandmother in the front row." },
+        { text: "Jamal was very, very scared about the play." },
+        { text: "The curtain was thick and red, with gold stars sewn on it." }
+      ],
+      clue: "Showing a feeling means writing what the character does, feels in his body or notices, so the reader can figure out the feeling.",
+      hints: [
+        "Showing a feeling means writing what the character does, feels in his body or notices, so the reader can figure out the feeling.",
+        "Reread sentences 1 to 3, and think about the moment right before the play starts. Then ask what each choice shows about Jamal.",
+        "Adding more feeling words, like very, very, still just tells the feeling. Look at the choices that are left."
+      ],
+      how: [
+        "Telling names the feeling, like scared. Showing uses a body clue or an action.",
+        "Trembling hands and peeking at the crowd are clues that someone is scared before a play.",
+        "The answer is: His hands trembled, and he kept peeking at the crowd through the curtain.",
+        "Smiling and waving show a happy feeling, \"very, very scared\" still tells, and the curtain description is about the stage, not Jamal."
+      ],
+      why: "The answer is: His hands trembled, and he kept peeking at the crowd through the curtain. Trembling and peeking show that Jamal is scared without naming it. A smile shows a different feeling, \"very, very scared\" still tells, and the curtain is not about Jamal." },
+    { id: "SK-TT1e-S07", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C07"],
+      stem: [
+        "(1) Tasha pushed her wagon of old toys to the corner for the yard sale.",
+        "(2) She wrote the prices on a big sign with a purple marker.",
+        "(3) My teacher drives a blue truck.",
+        "(4) A neighbor stopped and bought a stuffed bear.",
+        "(5) Tasha put the coins in a jar with a grin."
+      ],
+      prompt: "Which sentence does not belong in this story?",
+      choices: [
+        { text: "(3) My teacher drives a blue truck.", correct: true },
+        { text: "(2) She wrote the prices on a big sign with a purple marker." },
+        { text: "(4) A neighbor stopped and bought a stuffed bear." },
+        { text: "(5) Tasha put the coins in a jar with a grin." }
+      ],
+      clue: "Every sentence in a story should help tell what happens. Ask of each one: is this part of Tasha's yard sale?",
+      hints: [
+        "Every sentence in a story should help tell what happens. Ask of each one: is this part of Tasha's yard sale?",
+        "Read each sentence with the ones right before and after it. A sentence that belongs connects to its neighbors.",
+        "The price sign is something Tasha does to get ready for the sale, so it belongs. Check the sentences that are left."
+      ],
+      how: [
+        "The story is about Tasha's yard sale, so every sentence should be about getting ready, selling or counting coins.",
+        "Sentence 2 is the price sign, sentence 4 is a sale and sentence 5 is the coins. Sentence 3 is about a teacher's truck, which has nothing to do with the sale.",
+        "The answer is (3) My teacher drives a blue truck."
+      ],
+      why: "The answer is (3) My teacher drives a blue truck. It is not about Tasha's yard sale. Sentences 2, 4 and 5 tell about the sign, a sale and the coins." },
+    { id: "SK-TT1e-S08", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C08"],
+      stem: [
+        "(1) Kayla stood in line for the bumper cars at the carnival.",
+        "(2) The ride stopped, and the gate swung open.",
+        "(3) She raced to the red car first."
+      ],
+      prompt: "Which line of dialogue should be added after sentence 3 to fit the moment and move the story forward?",
+      choices: [
+        { text: "\"Hurry, Mia! Our car is the red one!\" Kayla called.", correct: true },
+        { text: "\"The carnival closes at nine o'clock,\" said the ticket seller." },
+        { text: "\"I love spaghetti,\" Mia said." },
+        { text: "\"Please sit down. The ride is over,\" said a worker." }
+      ],
+      clue: "Dialogue has to sound like something that character would really say at that exact moment, and it should help the story along.",
+      hints: [
+        "Dialogue has to sound like something that character would really say at that exact moment, and it should help the story along.",
+        "Reread sentences 1 to 3. What has just happened, and what is Kayla about to do?",
+        "A comment about spaghetti has nothing to do with the ride. Look at the choices that are left."
+      ],
+      how: [
+        "The gate just opened and Kayla ran to the red car. She would call to a friend to hurry.",
+        "The answer is: \"Hurry, Mia! Our car is the red one!\" Kayla called.",
+        "The closing time is something a ticket seller might say, but it does not fit this moment. The ride is just starting, so \"The ride is over\" is wrong, and the spaghetti line does not move the story."
+      ],
+      why: "The answer is: \"Hurry, Mia! Our car is the red one!\" Kayla called. It fits the moment, because the gate just opened, and it moves the story forward. The closing time and the spaghetti line do not fit, and the ride has not ended." },
+    { id: "SK-TT1e-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C09"],
+      prompt: "What job does each sentence do in a story about Maya's magic show? Match each sentence to its job. Use each job once.",
+      cols: ["sets the scene", "shows the problem", "shows how the problem gets solved"],
+      rows: [
+        { text: "On Saturday, Maya set up a table for her magic show in the living room.", answer: 0 },
+        { text: "Halfway through the show, the card she needed slipped off the table.", answer: 1 },
+        { text: "Maya picked up the card with a smile and kept the trick going.", answer: 2 }
+      ],
+      clue: "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does.",
+      hints: [
+        "A story needs a setting (when and where), a problem (something goes wrong) and a way the problem gets solved. Ask what each sentence does.",
+        "For each sentence, ask: is the story just starting, going wrong, or getting better?",
+        "The sentence that tells what the character does to fix things is the one that solves the problem. Match that one first, then work out the other two."
+      ],
+      how: [
+        "Setting means when and where: Saturday, in the living room.",
+        "A problem is something that goes wrong: the card slips off the table.",
+        "A solution is what the character does about it: Maya picks up the card and keeps going.",
+        "So the matches are: setting up the table is the setting, the card slipping is the problem, and picking it up is the solution."
+      ],
+      why: "Setting up the table on Saturday in the living room sets the scene. The card slipping off the table is the problem. Picking up the card and keeping the trick going is how the problem gets solved." },
+    { id: "SK-TT1e-S10", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C10"],
+      prompt: "Choose the best answer for each blank to finish Nia's story.",
+      text: "(1) Nia was nervous about her first sleepover. (2) At bedtime, she heard a creak and hugged her pillow. (3) Her friend Amber switched on a night light, and the room felt cozy. (4) {0}, Nia fell asleep. (5) {1}",
+      slots: [
+        { options: ["A little later", "Earlier that day", "At the beginning"], answer: 0 },
+        { options: [
+            "By morning, Nia was giggling with her friends and could not wait for the next sleepover.",
+            "The next day, Nia's mom took her to buy new shoes at the store.",
+            "Sleepovers are when friends stay overnight at someone's house."
+          ],
+          answer: 0 }
+      ],
+      clue: "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+      hints: [
+        "An ending should wrap up the problem and show how the character feels. Time words show when events happen.",
+        "Think about Nia's problem in sentences 1 and 2, and how the night light changed things. Then check how each blank connects to the sentence before it.",
+        "A sentence that gives a fact about sleepovers does not show how Nia feels. Work out the first blank on your own."
+      ],
+      how: [
+        "Blank 1: Nia falls asleep after the night light is on, so it needs a word that moves the story forward in time: \"A little later\".",
+        "Blank 2 should wrap up her worry and show how she feels: by morning she is giggling and wants another sleepover.",
+        "\"Earlier that day\" and \"At the beginning\" go backward. A shopping trip starts something new, and the fact does not show Nia's feelings."
+      ],
+      why: "Blank 1 needs \"A little later\" because falling asleep comes after the night light. Blank 2 needs the sentence about Nia giggling, because it wraps up her worry and shows her feelings. The shoe trip starts something new, and the sleepover fact does not show her feelings." },
+    { id: "SK-TT1e-S11", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C11"],
+      stem: [
+        "Kofi is writing about his first time on the climbing wall at the gym. His first sentence is: \"This is a story about climbing.\""
+      ],
+      prompt: "Which choice is the best new first sentence, and why?",
+      choices: [
+        { text: "\"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious.", correct: true },
+        { text: "\"A climbing wall has holds that climbers grab and step on.\" It teaches the reader about climbing walls." },
+        { text: "\"Climbing is the best sport in the whole world.\" It tells the reader what the writer thinks." },
+        { text: "\"The gym is on Main Street, next to the library.\" It tells the reader where the story happens." }
+      ],
+      clue: "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+      hints: [
+        "A strong beginning introduces the character and the place, and it makes the reader want to read on. Compare what each choice does for a story.",
+        "Think about what kind of story this is. Then ask which choice would start the action best.",
+        "An opinion about a sport could begin an essay, but a story needs a character in a moment. Look at the choices that are left."
+      ],
+      how: [
+        "A story's beginning should put a character in a place and start the action.",
+        "\"I gripped the first purple hold and looked up at the very top\" shows Kofi at the start of his climb and makes the reader wonder what will happen.",
+        "The answer is \"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious.",
+        "The others explain climbing walls, give an opinion or only name where the gym is. None of them starts the story."
+      ],
+      why: "The answer is: \"I gripped the first purple hold and looked up at the very top.\" It puts the reader in the first moment and makes them curious. It puts Kofi at the start of his climb. The others explain, give an opinion or name a location, so they do not start the story." },
+    { id: "SK-TT1e-S12", type: "order", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C12"],
+      prompt: "A student wants to add these four sentences to a story about a paper boat. Put them in the order that makes the most sense.",
+      steps: [
+        "Kai folded a sheet of paper into a boat.",
+        "He carried it to the creek and set it on the water.",
+        "A gentle breeze pushed the boat across the ripples.",
+        "It bumped into the far bank, and Kai cheered."
+      ],
+      clue: "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
+      hints: [
+        "Put the events in the order they would really happen. Ask what has to happen before each next step can happen.",
+        "Ask what each sentence needs to already be true. Which one needs nothing before it, and which one cannot happen until the very end?",
+        "The boat cannot be pushed by a breeze until it is on the water. Use that to place two of the sentences, then decide where the others go."
+      ],
+      how: [
+        "Kai has to make the boat before anything else can happen to it.",
+        "Then he carries it to the creek and sets it on the water, because the breeze can push it only when it floats.",
+        "Then the breeze pushes it, and last it bumps the far bank, because it has to cross the creek first.",
+        "The order is: folded the boat, set it on the water, breeze pushed it, it bumped the far bank."
+      ],
+      why: "The order is: Kai folded the paper boat; he set it on the water; a breeze pushed it across the ripples; it bumped the far bank and Kai cheered. Each step needs the one before it." },
+    { id: "SK-TT1e-S13", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.e"], passages: [], pick: 2, like: ["SK-TT1e-C13"],
+      stem: ["Rosa is writing about a birthday party at the bowling alley."],
+      prompt: "Which TWO sentences use details about what Rosa sees or hears to help the reader picture the bowling alley?",
+      choices: [
+        { text: "Pins crashed with a loud crack, and the whole alley smelled like popcorn.", correct: true },
+        { text: "The shiny floor was so slick that my shoes squeaked with every step.", correct: true },
+        { text: "We bowled on Saturday afternoon." },
+        { text: "My team had six players on it." },
+        { text: "Bowling is a game played with ten pins." }
+      ],
+      clue: "Details help the reader see, hear or feel what is happening. Ask whether a sentence only says what happened or helps you picture it.",
+      hints: [
+        "Details help the reader see, hear or feel what is happening. Ask whether a sentence only says what happened or helps you picture it.",
+        "Read each sentence and picture it in your mind. Choose two.",
+        "A sentence that explains how the game is played gives a fact, but it does not help the reader picture this alley. Look at the choices that are left."
+      ],
+      how: [
+        "Look for words that make a picture or a sound: how things look, sound, smell or feel.",
+        "\"Pins crashed with a loud crack\" and \"the whole alley smelled like popcorn\" use hearing and smell. \"The shiny floor was so slick that my shoes squeaked\" uses sight and sound.",
+        "The answers are the pins-and-popcorn sentence and the slick-floor sentence.",
+        "Saturday afternoon, six players and ten pins are plain facts. They do not help the reader picture the alley."
+      ],
+      why: "The answers are \"Pins crashed with a loud crack, and the whole alley smelled like popcorn\" and \"The shiny floor was so slick that my shoes squeaked with every step.\" They use sounds, smells and sights. The other sentences only give plain facts." },
+    { id: "SK-TT1e-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.e"], passages: [], pick: 2, like: ["SK-TT1e-C14"],
+      stem: [
+        "(1) Malik spent all week building a model rocket.",
+        "(2) At launch time, the rocket tipped over and fell in the grass."
+      ],
+      prompt: "Which TWO sentences could be added after sentence 2 to show how Malik feels, using words he says or things he does?",
+      choices: [
+        { text: "\"Not again!\" Malik groaned.", correct: true },
+        { text: "He knelt in the grass and slowly picked up the broken pieces.", correct: true },
+        { text: "Malik felt really sad about it." },
+        { text: "His friends would probably help him fix it." },
+        { text: "He could build a better rocket next week." }
+      ],
+      clue: "Words a character says and things he does can show a feeling without naming it.",
+      hints: [
+        "Words a character says and things he does can show a feeling without naming it.",
+        "Read sentences 1 and 2 to find the problem. Then ask what each choice shows about Malik's reaction to it. Choose two.",
+        "A sentence that names the feeling, like \"felt really sad,\" tells instead of shows. Look at the choices that are left."
+      ],
+      how: [
+        "The problem is that the rocket Malik worked on all week falls over.",
+        "Words he says show a feeling: \"Not again!\" Malik groaned. An action shows a feeling too: kneeling and slowly picking up the broken pieces.",
+        "The answers are \"Not again!\" Malik groaned, and He knelt in the grass and slowly picked up the broken pieces.",
+        "\"Malik felt really sad\" tells the feeling. His friends helping is a guess about others, and building a better rocket is a plan, not a reaction we can see or hear."
+      ],
+      why: "The answers are \"Not again!\" Malik groaned, and He knelt in the grass and slowly picked up the broken pieces. One uses words he says and one uses something he does. \"Malik felt really sad\" tells the feeling, and the other two are guesses or plans." },
+    { id: "SK-TT1e-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.e"], passages: [], like: ["SK-TT1e-C15"],
+      stem: [
+        "(1) Tariq built a robot costume from boxes for the fall festival.",
+        "(2) Just before the parade, the paper arm fell off.",
+        "(3) A neighbor handed him a roll of tape.",
+        "(4) Tariq taped the arm back on tight."
+      ],
+      prompt: "The draft stops after sentence 4. Which choice is the best ending, and why?",
+      choices: [
+        { text: "\"Tariq marched in the parade, and his arm stayed on the whole way.\" It wraps up the arm problem.", correct: true },
+        { text: "\"Tariq likes robots more than any other costume.\" It tells what Tariq thinks." },
+        { text: "\"The festival has games and food and a hay ride.\" It tells more about the festival." },
+        { text: "\"Then a gust of wind knocked over the whole costume.\" It adds an exciting new problem." }
+      ],
+      clue: "A good ending settles the problem and shows how the character feels. Ask what went wrong and how it was fixed.",
+      hints: [
+        "A good ending settles the problem and shows how the character feels. Ask what went wrong and how it was fixed.",
+        "Reread sentences 2 to 4 to find the problem and the fix. Then compare what each choice does for the story.",
+        "A new problem starts a different story instead of finishing this one. Look at the choices that are left."
+      ],
+      how: [
+        "The problem is the arm that falls off, and the fix is the tape.",
+        "A good ending shows the result of the fix: Tariq marches and the arm stays on.",
+        "The answer is \"Tariq marched in the parade, and his arm stayed on the whole way.\" It wraps up the arm problem.",
+        "An opinion about robots and facts about the festival do not finish the arm problem, and a gust of wind starts a new problem."
+      ],
+      why: "The answer is: \"Tariq marched in the parade, and his arm stayed on the whole way.\" It wraps up the arm problem. It shows the problem is solved. The opinion and the festival facts do not finish the problem, and the gust of wind starts a new one." }
+  ],
+  addons: {
+    "SK-TT1e-P1": {
+      hints: [
+        "A strong beginning fits the story and makes the reader curious. It does not just announce the story.",
+        "Read the rest of the draft to see what the story is about. Then ask which choice would make a reader want to find out more.",
+        "A fact about hamsters might be true, but it could begin any report about hamsters. Check the other choices against Andre's story."
+      ],
+      how: [
+        "The draft is about Peanut getting loose. A good beginning hints at that without telling everything.",
+        "\"I never knew one tiny hamster could cause so much trouble\" fits the story and makes the reader wonder what Peanut did.",
+        "The hamster fact is not part of this story, \"This story is about my hamster\" only announces it, and Bree's books are off topic."
+      ],
+      misconception: "A common mix-up is choosing a true fact. A beginning should start the story, not teach a fact." },
+    "SK-TT1e-P2": {
+      hints: [
+        "Dialogue has to sound like something that character would really say at that exact moment.",
+        "Look at sentences 5 to 8. What do Andre and Bree know right after sentence 6, and what are they about to do?",
+        "Peanut is not found until sentence 9, so a line that already knows where he is would be out of order. Check the other choices."
+      ],
+      how: [
+        "After sentence 6, Bree has come to help and they have not yet found Peanut.",
+        "\"Don't worry, Andre. We'll find him\" fits that moment and leads to the search in sentence 7.",
+        "Saying Peanut is in the pantry gives away what they have not yet found. A snack or playing outside does not fit the problem."
+      ],
+      misconception: "A common mix-up is picking a line that sounds real but does not fit this moment in the story." },
+    "SK-TT1e-P3": {
+      hints: [
+        "A good detail lets the reader see what is happening. Ask what the character looks like or does in this moment.",
+        "Reread sentences 9 and 10 together. Which choice would help you picture Peanut in the bag of seeds?",
+        "A fact about all hamsters is not about Peanut in this moment. Check the other choices to see which ones show Peanut."
+      ],
+      how: [
+        "Sentence 10 only says Peanut looked nice, which does not help the reader see him.",
+        "\"His cheeks were stuffed so full they looked like two balloons\" shows what Peanut looks like after eating the seeds.",
+        "\"Very nice\" and \"the same as always\" show nothing, and the cheek-pouch fact is about all hamsters, not Peanut."
+      ],
+      misconception: "A common mix-up is choosing a true fact. A detail has to help the reader picture this moment." },
+    "SK-TT1e-P4": {
+      hints: [
+        "Put the events in the order they would really happen. Ask what has to happen before each next thing can happen.",
+        "Picture each moment. Which sentence needs nothing before it, and which one could happen only after the others?",
+        "The door cannot be pulled open all the way until someone has seen that it is open a crack. Use that to place two of the sentences."
+      ],
+      how: [
+        "The children have to get to the kitchen before anything else in this part can happen.",
+        "Then Bree points at the door that is open a crack.",
+        "Last, Andre pulls the door open all the way, because he can do that only after they notice it.",
+        "The order is: tiptoed into the kitchen, Bree pointed at the door, pulled the door open."
+      ],
+      misconception: "A common mix-up is putting the biggest action first. The big action comes last, after the setup." },
+    "SK-TT1e-P5": {
+      hints: [
+        "Time words tell where an event fits in the order of the story. Ask what has already happened by each blank.",
+        "Read sentences 6 to 9 in order. For each blank, decide whether that moment is the start of the search or the end of it.",
+        "\"Before that\" sends the reader back in time, but the story is moving forward. Check the other words for that blank, and work out the first blank yourself."
+      ],
+      how: [
+        "Sentence 6 says Bree came to help. In sentence 7 they begin to search, so the first place they look needs a word for the start of the search.",
+        "That word is \"First,\". Finally and In the end would put the end of the search at the start.",
+        "In sentence 9 they find Peanut after searching in many places. \"At last,\" shows that the long search is over.",
+        "The answers are First, and At last,. \"Before that,\" goes backward in time."
+      ],
+      misconception: "A common mix-up is picking a word that sounds like a story word. Pick the one that matches where the event falls in the order." },
+    "SK-TT1e-P6": {
+      hints: [
+        "An ending wraps up the problem. Ask what problem started the story and what the ending should show about it.",
+        "Look back at the first few sentences of Andre's draft to see how the problem began. Then think about how Andre feels at the end.",
+        "Starting something new, like another phone call, does not wrap up the problem. Test the choices that are left against the way the story began."
+      ],
+      how: [
+        "The problem began when Andre forgot to close the cage door and Peanut got out.",
+        "A good ending shows the problem is over and how Andre feels. He found Peanut, so he can hug him and promise to fix what went wrong.",
+        "The answer is: I hugged Peanut gently and promised to always close his door.",
+        "The phone ringing again starts something new, the hamster fact is not part of the ending, and \"That is the story of what happened\" only says the story is over."
+      ],
+      misconception: "A common mix-up is choosing a sentence that only says the story is finished. An ending should show how things turned out." }
+  },
+  /* B4-b4a end ---------- */
   test: [
     { id: "SK-TT1e-T1", type: "hottext", points: 1, dok: 2, passages: ["p2"],
       prompt: "One sentence in Sofia's draft does not belong in the story. Which sentence should she take out? Choose the sentence in the draft.",

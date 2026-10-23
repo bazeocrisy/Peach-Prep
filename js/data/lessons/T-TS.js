@@ -1615,35 +1615,35 @@ PP.addLesson({
       why: "The answer is \"The water under the ice stays a little warmer and does not freeze.\" The paragraph says as a result of the ice blanket, the water below stays warmer. The pond does not freeze solid, the ice floats instead of sinking, and the fish live in the water under the ice." },
     { id: "SK-TSCE-S05", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C03"],
-      stem: ["Why Does a Dog Pant?", "Paragraph 1: A dog cannot sweat through most of its skin the way you can. When a dog gets hot, it opens its mouth and pants. Air moves over its wet tongue. The air takes some heat away, so the dog cools off.", "Paragraph 2: Heat can also make a dog sweat a little through the pads of its paws. You may see wet paw prints on a hot floor. A dog's paws give off only a small amount of sweat, so they cool the dog only a little."],
-      prompt: "The article is mostly about panting. Why does the author include Paragraph 2 about wet paw prints?",
+      stem: ["What Makes a Sidewalk Hot?", "Paragraph 1: A dark sidewalk gets very hot on a sunny day. The dark color soaks up the sunlight. The sunlight turns into heat, so the sidewalk feels hot under your shoes.", "Paragraph 2: A hot sidewalk can also make a puddle disappear fast. The heat turns the water into a gas that floats into the air. A puddle in the shade lasts much longer."],
+      prompt: "The article is mostly about why a sidewalk gets hot. Why does the author include Paragraph 2 about the puddle?",
       choices: [
-        { text: "to tell about another effect that heat has on a dog's body", correct: true },
-        { text: "to explain that sweaty paws are what make a dog pant" },
-        { text: "to show that dogs need to pant less than people sweat" },
-        { text: "to explain why a dog's tongue gets wet when it pants" }
+        { text: "to tell about another thing that a hot sidewalk makes happen", correct: true },
+        { text: "to explain that puddles are what make a sidewalk hot" },
+        { text: "to show that shade is hotter than a sunny sidewalk" },
+        { text: "to explain why a dark color soaks up sunlight" }
       ],
       clue: "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
       hints: [
         "Authors put each section in an article for a reason. Ask how the section connects to the big topic.",
         "Say in a few words what Paragraph 1 is about, then what Paragraph 2 is about. How does Paragraph 2 fit with Paragraph 1?",
-        "Paragraph 1, not Paragraph 2, tells about the wet tongue, so that choice is not why Paragraph 2 is there. Test each choice that is left against what Paragraph 2 says."
+        "Paragraph 1, not Paragraph 2, tells about the dark color and the sunlight, so that choice is not why Paragraph 2 is there. Test each choice that is left against what Paragraph 2 says."
       ],
       how: [
-        "The article tells what heat does to a dog. Paragraph 1 tells how panting cools a dog.",
-        "Paragraph 2 starts, \"Heat can also make a dog sweat a little.\" The word also shows that sweating is one more effect of the same cause, heat.",
-        "The answer is \"to tell about another effect that heat has on a dog's body.\"",
-        "The article never says sweaty paws cause panting, and the wet tongue is explained in Paragraph 1."
+        "Paragraph 1 tells why a dark sidewalk gets hot: it soaks up sunlight and turns it into heat.",
+        "Paragraph 2 starts, \"A hot sidewalk can also make a puddle disappear fast.\" The word also shows that the puddle is one more result of the heat.",
+        "The answer is \"to tell about another thing that a hot sidewalk makes happen.\"",
+        "The article never says puddles make a sidewalk hot, a puddle in the shade lasts longer, and the dark color is explained in Paragraph 1."
       ],
-      misconception: "A common mix-up is thinking two effects of the same cause must cause each other. Panting and sweating both come from heat.",
-      why: "The answer is \"to tell about another effect that heat has on a dog's body.\" Paragraph 2 begins, \"Heat can also make a dog sweat a little,\" so it adds a second effect of heat. It never says sweaty paws make a dog pant, and the wet tongue is in Paragraph 1." },
+      misconception: "A common mix-up is thinking a second section must explain the first. It can add one more result of the same cause.",
+      why: "The answer is \"to tell about another thing that a hot sidewalk makes happen.\" Paragraph 2 begins, \"A hot sidewalk can also make a puddle disappear fast,\" so it adds one more result of the heat. It never says puddles make a sidewalk hot, a puddle in the shade lasts longer, and the dark color is in Paragraph 1." },
     { id: "SK-TSCE-S06", type: "ms", points: 2, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [], pick: 2,
       like: ["SK-TSCE-C05"],
       stem: ["How to Make a Lava Lamp", "1. Fill a clear bottle one-quarter full of water. Add a few drops of food coloring.", "2. Pour in cooking oil until the bottle is almost full.", "3. Wait until the oil and water have separated.", "4. Drop in half of a fizzy tablet.", "Oil is lighter than water, so it floats on top and does not mix. The tablet makes gas bubbles. The bubbles carry blobs of colored water up through the oil. When the bubbles pop at the top, the blobs sink back down. That is how the lamp seems to move."],
       prompt: "Read the directions. Which TWO mistakes would most likely stop the colored blobs from rising?",
       choices: [
         { text: "dropping in no fizzy tablet at all", correct: true },
-        { text: "stirring the oil and water together so they are all mixed up", correct: true },
+        { text: "leaving the water out of the bottle", correct: true },
         { text: "using three drops of coloring instead of two" },
         { text: "using a tall bottle instead of a short one" },
         { text: "using blue coloring instead of red" }
@@ -1651,39 +1651,39 @@ PP.addLesson({
       clue: "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
       hints: [
         "In how-to steps, each step causes something. Ask what each step makes happen, and what would happen without it.",
-        "Read the part after the steps. What lifts the colored water, and what keeps the oil and water apart? Choose two.",
+        "Read the part after the steps. What lifts the colored water, and what are the blobs made of? Choose two.",
         "The color of the coloring does not change how the blobs move, so that mistake would not stop them. Test each mistake that is left against the sentences after the steps."
       ],
       how: [
         "The tablet makes gas bubbles, and the bubbles carry blobs of colored water up. With no tablet, nothing lifts the blobs.",
-        "The oil floats and does not mix with water. If the two are stirred together, there are no separate layers, and the blobs have nothing to rise through.",
-        "The answers are \"dropping in no fizzy tablet at all\" and \"stirring the oil and water together so they are all mixed up.\"",
+        "The blobs are colored water. If the water is left out, there are no blobs to rise through the oil.",
+        "The answers are \"dropping in no fizzy tablet at all\" and \"leaving the water out of the bottle.\"",
         "Extra coloring, a taller bottle or a different color do not change what lifts the blobs."
       ],
       misconception: "A common mix-up is choosing any change to the steps. Only a change that affects the cause of the rising changes the result.",
-      why: "The answers are \"dropping in no fizzy tablet at all\" and \"stirring the oil and water together so they are all mixed up.\" The tablet makes the bubbles that lift the blobs, and the oil must stay in a separate layer. The amount of coloring, the bottle height and the color do not change that." },
+      why: "The answers are \"dropping in no fizzy tablet at all\" and \"leaving the water out of the bottle.\" The tablet makes the bubbles that lift the blobs, and the blobs are made of colored water. The amount of coloring, the bottle height and the color do not change that." },
     { id: "SK-TSCE-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C07"],
-      stem: ["Plants need light to make their food. Ana keeps a small plant on a windowsill in her room. The plant leans toward the window. Its stem bends that way, and its leaves turn to catch the light. When Ana turns the pot around, the plant slowly bends back toward the window. Ana wrote: \"The plant on the windowsill leans toward the window, so it needs light.\""],
-      prompt: "The clue word in the Ana's sentence makes the cause and effect backward. Choose the clue word that fixes it.",
-      text: "The plant on the windowsill leans toward the window {0} it needs light.",
+      stem: ["Dan planted a sunflower seed in a sunny spot by the fence. He watered it every day. In a few weeks, the sunflower grew taller than the fence. Dan wrote: \"Dan watered the sunflower every day because it grew taller than the fence.\""],
+      prompt: "The clue word in Dan's sentence makes the cause and effect backward. Choose the clue word that fixes it.",
+      text: "Dan watered the sunflower every day {0} it grew taller than the fence.",
       slots: [
-        { options: ["so", "because", "when"], answer: 1 }
+        { options: ["although", "because", "so"], answer: 2 }
       ],
       clue: "Because comes just before a cause. So comes just before an effect.",
       hints: [
         "Because comes just before a cause. So comes just before an effect.",
-        "Reread the first lines of the stem to find out which of the two things happens first and makes the other happen.",
-        "When tells the time something happens, not why, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
+        "Reread the stem to find out which of the two things happened first and made the other happen.",
+        "Although shows a difference, not a cause, so it does not fit. Decide which part of the sentence is the cause, then check which side of the clue word it is on."
       ],
       how: [
-        "The plant needs light, and that makes it lean toward the window to catch light.",
-        "So needing light is the cause, and leaning is the effect.",
-        "In the Ana's sentence, the cause comes after the clue word. Because comes just before a cause, so the answer is because.",
-        "So would put the effect after the clue word, and when does not tell a cause at all."
+        "Dan watered the plant every day, and that helped it grow tall.",
+        "So watering is the cause, and growing taller is the effect.",
+        "In Dan's sentence, the effect comes after the clue word. So comes just before an effect, so the answer is so.",
+        "Because would put the cause after the clue word, which is what Dan wrote. Although does not tell a cause at all."
       ],
       misconception: "A common mix-up is choosing the clue word the student used. Check which part of the sentence is the cause.",
-      why: "The answer is because. The plant needs light first, and that is why it leans toward the window, so the cause is \"it needs light.\" Because comes just before a cause. So would make needing light the effect, and when tells time." },
+      why: "The answer is so. Dan watered the plant first, and that led to the sunflower growing tall, so the effect is \"it grew taller than the fence.\" So comes just before an effect. Because would make growing tall the cause, and although shows a difference." },
     { id: "SK-TSCE-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C08"],
       stem: ["One cold night in January, the puddles on Oak Road froze. In the morning, the road was slick and shiny in the early sun. Cars crept along it. The bus driver drove very slowly, so the bus came to school late. Many kids were late. Because of that, the principal moved the start of school to a later time for the week."],
@@ -1710,28 +1710,28 @@ PP.addLesson({
       why: "The answer is \"The puddles on Oak Road froze.\" The frozen puddles made the road slick, the driver slowed down, the bus was late and the principal moved the start time. Each of the other choices came after it." },
     { id: "SK-TSCE-S09", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C09"],
-      stem: ["The Reyes family has a small farm outside town. One summer, no rain fell on the farm for six weeks. Because the soil was so dry, the corn plants grew small and thin. As a result, the Reyes family had much less corn to sell at the market. So they planted a different crop the next year, one that needs less water."],
-      prompt: "Which sentence best tells how the author organizes this paragraph?",
+      stem: ["Heavy fog covered the road early on Monday morning. Because drivers could not see far, the school bus rolled along very slowly. As a result, the bus reached school twenty minutes late. So the teacher moved the spelling test to the afternoon."],
+      prompt: "How does the author organize this paragraph?",
       choices: [
-        { text: "It tells events in order and shows how one led to another.", correct: true },
-        { text: "It tells events in order, but they do not affect each other." },
-        { text: "It gives the steps a reader would follow to grow corn." },
-        { text: "It compares a dry summer with a rainy summer on the farm." }
+        { text: "Each happening causes the next one, like links in a chain.", correct: true },
+        { text: "The happenings are listed by date, and none of them is connected." },
+        { text: "The author tells how foggy mornings differ from clear mornings." },
+        { text: "The author tells the steps a driver follows in the fog." }
       ],
       clue: "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
       hints: [
         "Texts can be organized in different ways: time order, how-to steps, compare and contrast, or cause and effect.",
-        "Notice the clue words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
-        "The paragraph does not give steps for a reader to follow, so it is not a how-to. Check each choice that is left against the paragraph."
+        "Notice the words that join the sentences, such as because, as a result and so. What do they tell you about how the happenings connect?",
+        "The paragraph never tells a driver what to do, so it is not a how-to. Check each choice that is left against the paragraph."
       ],
       how: [
-        "The paragraph goes in time order, from one summer to the next year.",
-        "Clue words such as because, as a result and so join each happening to the one before it.",
-        "The answer is \"It tells events in order and shows how one led to another.\"",
-        "The events do affect each other, the paragraph is not a how-to, and it never describes a rainy summer."
+        "The paragraph goes from Monday morning to the afternoon, one happening after another.",
+        "Because, as a result and so join each happening to the one before it: fog, slow driving, a late bus and a moved test.",
+        "The answer is \"Each happening causes the next one, like links in a chain.\"",
+        "The paragraph has no dates, never compares foggy and clear mornings, and gives no steps for a driver."
       ],
-      misconception: "A common mix-up is calling a text time order only. Check the clue words to see whether one event causes the next.",
-      why: "The answer is \"It tells events in order and shows how one led to another.\" Because, as a result and so show that each event caused the next. The paragraph is not a how-to, and it never describes a rainy summer." },
+      misconception: "A common mix-up is calling a text time order only. Check the joining words to see whether one happening causes the next.",
+      why: "The answer is \"Each happening causes the next one, like links in a chain.\" Because, as a result and so show that the fog led to the slow bus, the late bus and the moved test. The paragraph has no dates, no comparison and no steps for a driver." },
     { id: "SK-TSCE-S10", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSCE-C10"],
       stem: ["Cars used to speed down Hill Street, right past the school. Kids did not feel safe crossing the street. Parents wrote to the town to ask for help. So the town added two speed bumps to the road. A car must slow down to go over a speed bump. Now drivers go slowly near the school, and kids cross safely."],
@@ -3693,30 +3693,30 @@ PP.addLesson({
       like: ["SK-TSCC-P5"],
       stem: ["Centipedes and millipedes are small creatures with many legs. Both live in damp places under logs and rocks. A centipede has one pair of legs on each part of its body. It runs fast and hunts bugs. A millipede has two pairs of legs on each part of its body. It moves slowly and eats dead leaves."],
       prompt: "Choose the clue word that best completes the sentence.",
-      text: "{0} a centipede, a millipede moves slowly and eats dead leaves.",
+      text: "{0} a centipede, a millipede lives in damp places under logs and rocks.",
       slots: [
-        { options: ["Unlike", "Because", "Like"], answer: 0 }
+        { options: ["Unlike", "Instead of", "Like"], answer: 2 }
       ],
-      clue: "Clue words show how ideas relate. Ask what the two parts of the sentence tell about the two animals.",
+      clue: "Clue words show how ideas relate. Ask whether the two parts of the sentence tell a likeness or a difference.",
       hints: [
-        "Clue words show how ideas relate. Ask what the two parts of the sentence tell about the two animals.",
-        "Reread what each animal does. Does the sentence tell how they are the same or how they are different?",
-        "A centipede runs fast, so the sentence is not saying the two animals are the same. Read the sentence with each word that is left."
+        "Clue words show how ideas relate. Ask whether the two parts of the sentence tell a likeness or a difference.",
+        "Reread what the text says about where each animal lives.",
+        "The two animals do not take turns, so a word that means in place of does not fit. Read the sentence with each word that is left."
       ],
       how: [
-        "A centipede runs fast and hunts bugs. A millipede moves slowly and eats dead leaves.",
-        "So the sentence tells a difference between the two animals.",
-        "The answer is Unlike. Like would say they are the same, and because would give a reason."
+        "The text says both animals live in damp places under logs and rocks.",
+        "So the sentence tells a likeness between the two animals.",
+        "The answer is Like. Unlike would say they are different, and instead of would say one takes the place of the other."
       ],
-      misconception: "A common mix-up is choosing a word that sounds smooth. First decide whether the sentence tells a likeness or a difference.",
-      why: "The answer is Unlike. Unlike a centipede, a millipede moves slowly and eats dead leaves. The centipede runs fast and hunts bugs, so the two animals are different. Like would say they are the same, and because would give a reason." },
+      misconception: "A common mix-up is choosing the clue word you used last time. First decide whether the sentence tells a likeness or a difference.",
+      why: "The answer is Like. Like a centipede, a millipede lives in damp places under logs and rocks. The text says both animals live there, so the sentence tells a likeness. Unlike would say they are different, and instead of would say one takes the place of the other." },
     { id: "SK-TSCC-S05", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2,
       like: ["SK-TSCC-P6"],
       stem: ["Ice skates and roller skates both help people glide. Ice skates have thin metal blades, and they are used on a frozen rink. Roller skates have wheels, and they are used on smooth floors or sidewalks. Both kinds of skates are worn on the feet and fastened with laces or straps. A skater leans and pushes to move along. Kids often learn to skate with a friend."],
       prompt: "Which TWO sentences tell how ice skates and roller skates are ALIKE?",
       choices: [
         { text: "Both are worn on the feet and fastened with laces or straps.", correct: true },
-        { text: "Both help people glide along a smooth surface.", correct: true },
+        { text: "Both help people glide.", correct: true },
         { text: "Ice skates have thin metal blades." },
         { text: "Roller skates have wheels." },
         { text: "Ice skates are used on a frozen rink." }
@@ -3730,35 +3730,35 @@ PP.addLesson({
       how: [
         "A likeness is a fact true of both kinds of skates.",
         "The text says both kinds are worn on the feet and fastened with laces or straps, and both help people glide.",
-        "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide along a smooth surface.\"",
+        "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide.\"",
         "The blades, the wheels and the frozen rink each belong to only one kind of skate."
       ],
       misconception: "A common mix-up is choosing a true fact about one kind of skate. A likeness must be true of both.",
-      why: "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide along a smooth surface.\" Each is true of both kinds of skates. The blades, the wheels and the frozen rink are true of only one kind." },
+      why: "The answers are \"Both are worn on the feet and fastened with laces or straps.\" and \"Both help people glide.\" Each is true of both kinds of skates. The blades, the wheels and the frozen rink are true of only one kind." },
     { id: "SK-TSCC-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C04"],
       stem: ["Seals and sea lions look a lot alike. Both have smooth bodies, and both swim in the sea. But you can tell them apart. A sea lion has small flaps for ears, and its long front flippers work like legs on land. A seal has no ear flaps, only tiny holes, and its flippers are short, so it wiggles across the ground on its belly. A sea lion also barks loudly, but a seal makes quiet grunts."],
-      prompt: "Why does the author compare seals and sea lions?",
+      prompt: "After reading the text, what can a reader do?",
       choices: [
-        { text: "to help readers tell apart two animals that look alike", correct: true },
-        { text: "to show that sea lions are better swimmers than seals" },
-        { text: "to teach readers how to take care of a pet seal" },
-        { text: "to prove that seals are louder than sea lions" }
+        { text: "look at an animal's ears and flippers to tell which one it is", correct: true },
+        { text: "pick which of the two animals would make a better pet" },
+        { text: "decide which of the two animals swims faster in the sea" },
+        { text: "find out where each animal sleeps at night" }
       ],
-      clue: "Authors compare things for a reason. Ask what the reader learns by seeing two things side by side.",
+      clue: "Authors compare things for a reason. Ask what a reader can do with the facts about each animal.",
       hints: [
-        "Authors compare things for a reason. Ask what the reader learns by seeing two things side by side.",
-        "Read the first three sentences. What does the author say about how they look, and what does the author say next?",
-        "Nothing in the text says either animal swims better, so that reason does not fit. Check the other choices against the whole text."
+        "Authors compare things for a reason. Ask what a reader can do with the facts about each animal.",
+        "Look at the differences the text lists. What parts of the animals does it name?",
+        "Nothing in the text says either animal swims faster, so that choice does not fit. Check the other choices against the facts."
       ],
       how: [
-        "The text begins by saying the two animals look a lot alike.",
-        "Then it says, \"But you can tell them apart,\" and lists differences in ears, flippers and sounds.",
-        "The answer is \"to help readers tell apart two animals that look alike.\"",
-        "The text does not rank their swimming, it is not about pets, and it says sea lions bark loudly while seals grunt quietly."
+        "The text lists differences in ears, flippers and sounds.",
+        "A reader can use the ears and flippers to tell which animal is which.",
+        "The answer is \"look at an animal's ears and flippers to tell which one it is.\"",
+        "The text does not talk about pets, does not rank swimming, and does not say where the animals sleep."
       ],
-      misconception: "A common mix-up is choosing a reason the text never gives. Use what the author says right after the likeness.",
-      why: "The answer is \"to help readers tell apart two animals that look alike.\" The text says they look alike and then lists differences. It does not compare their swimming or tell about pets, and it says sea lions are the louder ones." },
+      misconception: "A common mix-up is choosing a use the text never gives. Use the differences the author lists.",
+      why: "The answer is \"look at an animal's ears and flippers to tell which one it is.\" The text lists differences in ears and flippers, and a reader can use them to tell the animals apart. It does not tell about pets, swimming speed or where the animals sleep." },
     { id: "SK-TSCC-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C06"],
       stem: ["A frisbee is a flat, round disk. A boomerang is a bent piece of wood. A player flicks a frisbee, and it spins and sails through the air. A thrown boomerang spins and flies, too. A frisbee flies straight and lands far away. A well-thrown boomerang curves in the air and comes back to the thrower."],
@@ -3834,10 +3834,10 @@ PP.addLesson({
       stem: ["In 1950, a writer typed on a typewriter. Each key hit an inked ribbon and printed a letter on a sheet of paper. If the writer made a mistake, the page had to be typed again. Today, a writer can use a laptop. Each key makes a letter appear on a screen. The writer can fix a mistake in a moment. Then the writer can print the page or save it."],
       prompt: "A typewriter's paper and a laptop's screen are different. In what way are they ALIKE?",
       choices: [
-        { text: "The writer reads the typed words on both of them.", correct: true },
+        { text: "Each key the writer presses makes a letter show up on both of them.", correct: true },
         { text: "The writer can fix a mistake on both of them in a moment." },
         { text: "The writer must type the whole page again to fix a mistake on both." },
-        { text: "The writer can save the words for later on both of them." }
+        { text: "The writer can print the page from both of them." }
       ],
       clue: "Two different things can still be alike. Ask what job each one does for the writer.",
       hints: [
@@ -3847,35 +3847,35 @@ PP.addLesson({
       ],
       how: [
         "The letters the writer types are printed on paper, or they appear on a screen.",
-        "In both cases, the writer can read the words that were typed.",
-        "The answer is \"The writer reads the typed words on both of them.\"",
-        "Quick fixing and saving are told only about the laptop, and typing a page again is told only about the typewriter."
+        "In both cases, each key the writer presses makes a letter show up.",
+        "The answer is \"Each key the writer presses makes a letter show up on both of them.\"",
+        "Quick fixing and printing are told only about the laptop, and typing a page again is told only about the typewriter."
       ],
       misconception: "A common mix-up is choosing a fact about only one of the two things. A likeness must be true of both.",
-      why: "The answer is \"The writer reads the typed words on both of them.\" Paper and a screen both show the words that were typed. Quick fixing and saving belong to the laptop, and typing a page again belongs to the typewriter." },
+      why: "The answer is \"Each key the writer presses makes a letter show up on both of them.\" Paper and a screen both show a letter for each key that is pressed. Quick fixing and printing belong to the laptop, and typing a page again belongs to the typewriter." },
     { id: "SK-TSCC-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C09"],
-      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) Likewise, a trampoline is round and flat, but a swing set is tall with chains.", "(5) A trampoline lets you bounce, and a swing set lets you swing."],
+      stem: ["(1) A trampoline and a swing set are alike in some ways.", "(2) Both are fun to play on in a backyard.", "(3) Also, both need a grown-up to check that they are safe.", "(4) However, a trampoline is round and flat, but a swing set is tall with chains.", "(5) Likewise, a trampoline lets you bounce, and a swing set lets you swing."],
       prompt: "A student wrote this paragraph. One sentence begins with the wrong clue word. Choose the sentence and the clue word that should begin it.",
       text: "Sentence {0} should begin with {1}",
       slots: [
-        { options: ["2", "3", "4"], answer: 2 },
+        { options: ["3", "4", "5"], answer: 2 },
         { options: ["Likewise,", "On the other hand,", "As a result,"], answer: 1 }
       ],
-      clue: "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Watch for the switch.",
+      clue: "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Check each one against its sentence.",
       hints: [
-        "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Watch for the switch.",
+        "Clue words tell the reader if a sentence adds a likeness or turns to a difference. Check each one against its sentence.",
         "For each sentence, ask: does it tell how they are alike, or how they are different? Then check its clue word.",
         "As a result tells an effect, not a difference, so it does not fit the second blank. Find the sentence first, then try each word that is left at its start."
       ],
       how: [
         "Sentences 2 and 3 tell likenesses: both are fun, and both need a safety check. Sentences 4 and 5 tell differences: round and flat versus tall with chains, and bouncing versus swinging.",
-        "Sentence 4 starts the differences, but it begins with Likewise, a word that adds one more likeness.",
-        "Sentence 4 should begin with On the other hand, a clue word that switches from alike to different.",
+        "Sentence 4 begins with However, which fits a difference. Sentence 5 also tells a difference, but it begins with Likewise, a word that adds one more likeness.",
+        "Sentence 5 should begin with On the other hand, a clue word that shows a difference.",
         "As a result would tell an effect, not a difference."
       ],
-      misconception: "A common mix-up is keeping a clue word that adds a likeness, like likewise or also, when the writer turns to a difference.",
-      why: "The answers are 4 and On the other hand. Sentences 2 and 3 tell likenesses. Sentence 4 turns to a difference, but Likewise adds a likeness. As a result would tell an effect, so On the other hand shows the switch." },
+      misconception: "A common mix-up is keeping a clue word that adds a likeness, like likewise or also, when the writer is still telling differences.",
+      why: "The answers are 5 and On the other hand. Sentence 5 tells a difference between bouncing and swinging, but Likewise adds a likeness. As a result would tell an effect, so On the other hand shows the difference." },
     { id: "SK-TSCC-S12", type: "dropdown", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSCC-C11"],
       stem: ["A rowboat is a small boat. A person sits in it and pulls two oars to move forward. A sailboat is also a boat, but it has a tall pole called a mast. A big cloth sail is raised on the mast, and the wind pushes the sail. Both kinds of boats float on water and can carry people.", "A student made this chart about the text.", "Rowboat only: moved with oars", "Both: floats on water; has a tall mast", "Sailboat only: moved by the wind; has a cloth sail"],
@@ -3961,7 +3961,7 @@ PP.addLesson({
       hints: [
         "A compare sentence tells something true of both. A contrast sentence tells something true of only one.",
         "Look for what the stove and the microwave share. Then pick one fact where they are not the same.",
-        "For the second sentence, you could use however, but or while. Put one way on each side of the clue word."
+        "For the second sentence, use a clue word that switches from one way to the other. Put one way on each side of it."
       ],
       how: [
         "Find a likeness: both make the soup hot enough to eat, and both need a grown-up to help.",
@@ -4683,49 +4683,49 @@ PP.addLesson({
        Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
     { id: "SK-TSDESC-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
       like: ["SK-TSDESC-C02"],
-      stem: ["A platypus's bill is a tool for finding food. The bill looks like a duck's, but it is soft and rubbery. Under water, a platypus closes its eyes and its ears. Then it sweeps its bill from side to side. The bill can feel the tiny shakes in the water that shrimp and worms make. This lets the platypus find a meal in the dark mud of a creek."],
-      prompt: "The paragraph begins, \"A platypus's bill is a tool for finding food.\" What job does this sentence do in the paragraph?",
+      stem: ["The first sentence of this paragraph about a flying squirrel is missing.", "(1) ________", "(2) Loose skin stretches between its front legs and its back legs, like a thin sail.", "(3) When it jumps from a high branch, it spreads its legs wide and glides through the air.", "(4) Its flat tail works like a rudder to help it turn.", "(5) A flying squirrel does not really fly, but it can glide from one tree to the next."],
+      prompt: "Which sentence would be the best first sentence for the paragraph?",
       choices: [
-        { text: "It names what the whole paragraph is about.", correct: true },
-        { text: "It gives the last step in finding food." },
-        { text: "It tells a fun fact that does not fit the paragraph." },
-        { text: "It compares the bill with a duck's bill." }
+        { text: "A flying squirrel has a body that is made for gliding.", correct: true },
+        { text: "A flying squirrel has a flat tail." },
+        { text: "Flying squirrels live in many places." },
+        { text: "Some people see a flying squirrel at night." }
       ],
-      clue: "A first sentence often has a special job. Ask how it connects to the sentences that follow it.",
+      clue: "A first sentence that names the topic should fit every sentence that follows, not just one.",
       hints: [
-        "A first sentence often has a special job. Ask how it connects to the sentences that follow it.",
-        "Read the rest of the paragraph. What do all the other sentences tell about?",
-        "The first sentence tells no step, so it is not the last step in finding food. Test the other choices against all of the sentences."
+        "A first sentence that names the topic should fit every sentence that follows, not just one.",
+        "List what each of the other sentences tells about. Then see which choice covers all of them.",
+        "Nothing in the paragraph tells where flying squirrels live, so that choice does not fit. Test the others against every sentence."
       ],
       how: [
-        "The first sentence says the bill is a tool for finding food.",
-        "Every other sentence tells more about the bill: how it looks, how the platypus sweeps it and what it can feel.",
-        "The answer is \"It names what the whole paragraph is about.\"",
-        "It is not a step, it fits the paragraph, and the comparison with a duck is in the second sentence."
+        "Sentence 2 tells about the loose skin, Sentence 3 tells about the jump, Sentence 4 tells about the tail, and Sentence 5 tells how far it can go.",
+        "All of them tell how the squirrel's body helps it glide.",
+        "The answer is \"A flying squirrel has a body that is made for gliding.\"",
+        "The flat tail is only one detail, and the paragraph says nothing about where flying squirrels live or when people see them."
       ],
-      misconception: "A common mix-up is thinking the first sentence is only a fun fact. Often it names the idea that the other sentences explain.",
-      why: "The answer is \"It names what the whole paragraph is about.\" The first sentence names the bill, and the other sentences tell more about how it is used. It is not a step or an extra fact, and the duck comparison is in the second sentence." },
+      misconception: "A common mix-up is choosing a sentence about one detail. A first sentence that names the topic must cover all the others.",
+      why: "The answer is \"A flying squirrel has a body that is made for gliding.\" The skin, the jump, the tail and the glide all show how its body helps it glide. The flat tail is only one detail, and the paragraph says nothing about where squirrels live or when people see them." },
     { id: "SK-TSDESC-S05", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       like: ["SK-TSDESC-P5"],
-      stem: ["Here is a paragraph about wombats. One sentence is shown below the paragraph. Wombats live in Australia. A wombat is about as big as a small dog. A wombat has strong claws for digging a long burrow. By day, a wombat rests in its burrow. At night, it comes out to eat grass."],
-      prompt: "Choose the clue word that best completes the sentence.",
-      text: "It {0} has thick fur that keeps it warm.",
+      stem: ["Here is a paragraph about wombats. One sentence is shown below the paragraph. Wombats live in Australia. A wombat is about as big as a large dog. It has strong claws for digging a long burrow. By day, a wombat rests in its burrow. At night, it comes out to eat grass. It has a round body and short legs."],
+      prompt: "Choose the clue word that best completes the sentences.",
+      text: "A wombat looks slow and clumsy. {0}, it can run as fast as a person for a short trip.",
       slots: [
-        { options: ["also", "never", "only"], answer: 0 }
+        { options: ["However", "Next", "Because"], answer: 0 }
       ],
       clue: "Clue words show how sentences connect. Ask what the second sentence does with the first.",
       hints: [
         "Clue words show how sentences connect. Ask what the second sentence does with the first.",
-        "Read both sentences. Does the second one add another detail about the wombat, or does it change the subject?",
-        "The second sentence says the fur keeps the wombat warm, so a word that means not ever does not fit. Try each word that is left in the sentence."
+        "Read both sentences. Does the second one add to the first, or does it turn to something that seems different?",
+        "The sentences are not steps in a set, so one of the words does not fit. Try each word that is left in the sentence."
       ],
       how: [
-        "Both sentences tell about the wombat's body. The first tells about its claws, and the second tells about its fur.",
-        "The second sentence adds one more detail, so it needs a clue word that adds.",
-        "The answer is also. Never says the wombat does not have fur, and only would mean the fur is the one thing it has."
+        "The first sentence says a wombat looks slow and clumsy. The second says it can run as fast as a person.",
+        "Those ideas seem opposite, so the clue word must show a switch. The answer is However.",
+        "Next tells what comes later, and Because would say that looking slow is the reason it can run fast."
       ],
       misconception: "A common mix-up is choosing a word that sounds fine but changes the meaning. Read the whole sentence with each word.",
-      why: "The answer is also. The second sentence adds one more detail about the wombat's body. Never would say the wombat has no fur, and only would leave out the claws." },
+      why: "The answer is However. The second sentence turns to something that seems different from the first: a wombat looks slow but can run fast. Next would tell about order, and Because would make looking slow the reason it can run." },
     { id: "SK-TSDESC-S06", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
       like: ["SK-TSDESC-C05"],
       stem: ["A covered bridge is a bridge with a roof and walls. The floor is made of thick wooden boards. Long beams under the floor hold it up. The roof keeps rain and snow off the boards, so the wood lasts longer. Some covered bridges have a window in the side, so travelers can look at the creek below. Many of these old bridges are still standing today."],
@@ -4849,7 +4849,7 @@ PP.addLesson({
       why: "The answer is \"The author is telling about the different parts of one shop, and no part has to come before another.\" Each section describes one part of the shop. The text has no worker steps, no problem and no comparison of long ago and today." },
     { id: "SK-TSDESC-S11", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [], pick: 2,
       like: ["SK-TSDESC-C11"],
-      stem: ["(1) A tarantula is a big, hairy spider. It lives in warm places.", "(2) Its body is built for hunting at night.", "(3) Tiny hairs on its legs feel the shakes that a bug makes.", "(4) Strong fangs hold the bug while the tarantula eats.", "(5) From its hairy legs to its fangs, a tarantula is made to catch food in the dark.", "(6) Some tarantulas live for twenty years, which is longer than most pets."],
+      stem: ["(1) A tarantula is a big, hairy spider. It lives in warm places.", "(2) Its body is built for hunting at night.", "(3) Tiny hairs on its legs feel the shakes that a bug makes.", "(4) Strong fangs hold the bug while the tarantula eats.", "(5) From its hairy legs to its fangs, a tarantula is made to catch food in the dark.", "(6) Some tarantulas live for twenty years, which is longer than a pet hamster lives."],
       prompt: "Which TWO sentences tell the main idea of the whole passage?",
       choices: [
         { text: "Sentence 2", correct: true },
@@ -4900,28 +4900,28 @@ PP.addLesson({
       why: "The answers are \"It has webbed toes that help it paddle.\" and \"Its eyes, ears and nose sit high on its head, so it can swim with them above the water.\" Both show how its body fits life near water. Family groups, weight and food do not." },
     { id: "SK-TSDESC-S13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
       like: ["SK-TSDESC-C13"],
-      stem: ["Paragraph 3: A pangolin's body is covered with hard scales. If a lion comes close, the pangolin rolls into a tight ball. Then the scales on the outside protect its soft belly. A lion may sniff and paw at the ball, but it cannot bite through the scales.", "Text box: Did You Know? The word pangolin comes from a word that means \"something that rolls up.\""],
+      stem: ["Paragraph 3: A pangolin's body is covered with hard scales. If a lion comes close, the pangolin rolls into a tight ball. Then the scales on the outside protect its soft belly. A lion may sniff and paw at the ball, but it may not be able to bite through the scales.", "Text box: Did You Know? A baby pangolin rides on its mother's tail."],
       prompt: "A student wants to move the fact in the text box into Paragraph 3. Would that be a good change?",
       choices: [
-        { text: "No. The fact is about the animal's name, not how the scales protect it.", correct: true },
-        { text: "Yes. The fact shows how the scales protect a pangolin's soft belly." },
-        { text: "Yes. Every fact in a passage belongs inside a paragraph, not in a box." },
-        { text: "No. A text box must always hold the main idea of the whole passage." }
+        { text: "No. It is about how a baby travels, not about the scales.", correct: true },
+        { text: "Yes. The fact shows how the scales keep a lion away from the baby." },
+        { text: "Yes. A baby that rides on its mother needs scales to stay on." },
+        { text: "No. A text box can only hold a fact that the passage tells twice." }
       ],
-      clue: "A text box sets some facts apart. Ask whether the fact in the box tells more about the paragraph's idea, or is just interesting.",
+      clue: "A text box sets an extra fact apart. Ask whether the fact tells more about the paragraph's idea, or is just interesting.",
       hints: [
-        "A text box sets some facts apart. Ask whether the fact in the box tells more about the paragraph's idea, or is just interesting.",
+        "A text box sets an extra fact apart. Ask whether the fact tells more about the paragraph's idea, or is just interesting.",
         "Say in a few words what Paragraph 3 is about. Then read the fact in the box again.",
-        "A text box does not have to hold the main idea, so the choice that says it must does not fit. Test the others against Paragraph 3."
+        "The box never mentions a lion, so it does not show how the scales keep one away. For each choice that is left, ask whether its reason is true for this passage."
       ],
       how: [
         "Paragraph 3 is about how the scales protect the pangolin.",
-        "The box fact tells where the word pangolin comes from. It does not tell how the scales protect it.",
-        "The answer is \"No. The fact is about the animal's name, not how the scales protect it.\"",
-        "Facts can sit in a box, and a box does not have to hold the main idea."
+        "The box fact tells how a baby pangolin travels. It does not tell how the scales protect it.",
+        "The answer is \"No. It is about how a baby travels, not about the scales.\"",
+        "The box never mentions a lion or the scales helping a baby ride, and a box does not have to hold a fact told twice."
       ],
       misconception: "A common mix-up is deciding by the box alone. A box can hold an extra fact, so check the fact against the paragraph.",
-      why: "The answer is \"No. The fact is about the animal's name, not how the scales protect it.\" Paragraph 3 is about the scales. A box can hold an extra fact, and it does not have to hold the main idea." },
+      why: "The answer is \"No. It is about how a baby travels, not about the scales.\" Paragraph 3 is about the scales. The box says nothing about a lion, and a box can hold an extra fact." },
     { id: "SK-TSDESC-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
       like: ["SK-TSDESC-C14"],
       stem: ["(1) ______", "(2) When a hungry fish bites it, it squirts out sticky threads. The threads tangle the fish.", "(3) It can push out part of its body to confuse an enemy. The part grows back later.", "(4) Its rough, bumpy skin can turn soft or hard in a moment.", "(5) In addition, some kinds squirt out a bad-tasting liquid. A sea cucumber moves slowly, so it needs these tricks."],
