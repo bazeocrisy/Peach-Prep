@@ -276,3 +276,156 @@ Each cell is: live after hint 1, hint 2, hint 3 (with the clue as hint 1). Autho
 8. The rest of S7 to S10 and the notes as time allows.
 
 No lesson file was edited by me.
+
+
+---
+
+# Second review (fix round)
+
+**Role:** independent reviewer, second pass. Read-only: I changed no lesson or code file and ran no git. Scratch work is in `scratchpad/b4r4/`. I read the first review only after my answers were saved.
+**Scope:** 3.T.T.1.e in `T-T1.js` and 3.T.T.2.d in `T-T2.js`. That is the core 15, S01 to S15, the Together items P1 to P6 with their addons, and the passages. Focus: the items new in the fix round (1.e S01, S11, S14, C02, C09, C10, C12; 2.d C02, C03, C04, C05, C10, C13, S05, S15). "C02" and "C05" are positions in the core (1.e C02 = P4, 1.e C01 = P5, 1.e C05 = P6; 2.d C01 = P5, 2.d C05 = P4).
+
+## Verdicts
+
+| Lesson | Verdict | Reason |
+|---|---|---|
+| 3.T.T.1.e | **CHANGES REQUIRED** | One MUST: S01 slot 1 has a second defensible answer. |
+| 3.T.T.2.d | **CHANGES REQUIRED** | Two MUSTs: C02 has no on-topic distractor, and C04's stem contains the key. |
+
+All five MUSTs from the first review (M1 to M5) are fixed or accepted. The remaining MUSTs are new items from the fix round.
+
+## 1. Blind solve
+
+- **Method.** `b4r4/ld.js` loads `T-T1.js` and `T-T2.js` in a vm sandbox with a mock `PP.addLesson`. `b4r4/dump.js` resolves every `{ref}` and prints passages (every sentence tagged `[p:para:sent]`), Together P1 to P6, the core and S01 to S15, plus figure label, caption and alt text. It uses a seeded shuffle on choices, order steps, dropdown options and match rows. It strips `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like` and `std`.
+  - I grepped the stripped JSON for those key fields: none present. The words why, how, hint, answer and correct appear 29 times as ordinary prose, and I checked each.
+  - I did not open the lesson source, the teach text, the author log or any review file before solving. My only look at the data before solving was a key-names-only skeleton (types, no values).
+  - Answers were saved to `b4r4/myans.json` (md5 bbc208dc...) before I printed any key (`keyview.js`).
+- **Result: 66 of 67 agree (98.5%).** 1.e: 33 of 33 (6 Together, 12 own core, 15 similar). 2.d: 33 of 34. This pass is fully blind.
+  - The one miss is **2.d S15**, and it is my slip, not a wrong key. The key (first draft needs a better conclusion, second needs a better introduction) is right. I read the two near-mirror options the wrong way round. Note that options C and D are exact mirrors of each other, so a child who skims will do the same. That is the point of the item and I count it as fair.
+  - **1.e S01 slot 1**: I got the key ("A moment later,") but flagged "To begin with," as defensible. See M1 below.
+- **Keys beside why, how and hints: all read for all 67 items.** `why` and `how` match each key, and the sentence numbers match the passages. No key disagrees.
+- **Browser sitting, 390 x 844, Playwright** (`node verification/serve.js . 8871`, killed by pid). All 15 core items per lesson.
+  - Check My Answer with the key: "Right on the first try" on 30 of 30.
+  - Wrong check, three hints (all three shown, button disables), Show Me How (complete), Try a Similar Question (correct similar item, `like` points back to the core id), then a correct check: 30 of 30.
+  - No horizontal scroll and no page errors. The only console error is the blocked Google Fonts request (sandbox limit).
+  - Screenshots are in `b4r4/` (`b-3.T.T.*.png`, taken at the similar item). The windsock screenshot shows the figure caption line under the picture (see S2).
+
+## 2. Findings
+
+### MUST
+
+**M1. 1.e S01 slot 1: "To begin with," is also defensible.**
+- Text: "(1) Rosa covered her eyes and counted to twenty. (2) {0} she checked behind the curtain. (3) Then she peeked inside the closet. (4) {1} she spotted ... under the bed."
+- "To begin with, she checked behind the curtain. Then she peeked inside the closet. In the end, she spotted..." is the classic first/then/last triad and reads naturally. Sentence 3 already starts with "Then", which invites exactly that reading. Counting is a set-up, not a step in the search. The key "A moment later," is no better than "To begin with," for slot 1.
+- The `how` says "To begin with would make the search the start, but counting came first". That is a judgement call, not a fact, and a grade 3 child can fairly disagree.
+- Fix: give sentence 1 a time word, for example "First, Rosa covered her eyes and counted to twenty.", so the start word is taken. Or replace the distractor with a clearly backward word ("Before that,"). Slot 2 and the shared option ("In the end,", one shared, within the ceiling) can stay.
+
+**M2. 2.d C02 (oil): the key is the only choice that names peanuts.**
+- Stem: a paragraph "begins, 'Peanuts are also used to make other foods and products.'" Key: "Peanuts can be pressed to make cooking oil." The three wrong choices are farm machines, a class trip and where Georgia is. None mentions peanuts or products.
+- Overlap with the stem: key 2 words (peanuts, make), distractors 0. The ladder confirms it: hint 3 talks about "what peanuts are used for", and my check found "peanuts" in the hints and only in the key. A child can match the one choice about peanuts and be right without judging support.
+- This is the pattern the lesson asks the child to test ("supports the same idea"), but with no on-topic non-supporting choice there is nothing to test.
+- Fix: make at least one distractor about peanuts but not about uses, for example "Peanut plants grow small yellow flowers above the ground." (avoid p1's exact wording) or "Peanuts grow best in warm weather." Keep one off-topic choice.
+
+**M3. 2.d C04 (protein): the stem contains the key.**
+- The stem gives the sentence: "Peanuts have a lot of protein, **which helps kids grow strong**." The key is "a part of food that helps the body grow and stay strong". It is a paraphrase of the stem clause. The how says so ("Rosa's sentence says ... helps kids grow strong. That shows protein is something in food that helps the body").
+- The distractors are "a mineral that is found in salty water" and "a kind of sticky oil that coats a food". Both are absurd for a child who knows what food is. Key is also the longest (55 against 43 and 38).
+- Result: matching the stem solves it, and no knowledge of how a definition works is tested. Live choices after hint 3: two, but one is chosen by copying.
+- Fix: take the clause out of the stem ("Peanuts have a lot of protein.") and make the child choose the meaning, with distractors a child could mistake (for example "a part of food that gives the body quick energy" or "a part of food that makes it taste sweet"). Or keep the clause and change the task, for example "Which sentence best defines protein for the reader?" with choices that all mention growing. Do not leave the answer in the stem.
+
+### SHOULD
+
+**S1. 1.e S11: the prompt tells the child to read the job text.** "Read the job each choice says it does." The key's job ("It starts the action with Kofi at the wall") is the only action job, and the other three are labelled explains, tells how it ends and opinion. It is the longest option (108 against 92, 79 and 78), and the key repeats three words from the stem (first, Kofi, wall). C11's hint 1 ("makes the reader want to read on") and hint 3 ("a story needs a character in a moment") echo the key reasoning ("makes them curious", "puts the reader in the first moment") in C11. Fix: drop the sentence "Read the job each choice says it does." and word the C11 hints without "moment" and "makes ... read on".
+
+**S2. 2.d C10 and S10: the figure caption is already printed under the picture.** The sitting shows "Figure 1. A windsock" under the picture and the question asks "Which caption should ... write under Figure 1?". In C10 the printed caption is "A school bus that has stopped", and the key begins "A stopped bus has ...". The key is word-matched to a caption the child can already see, and a caption the student is asked to write is already there. The stem no longer names a sentence (S1 of the first review is fixed), but this leak replaces it. Fix: give the figure only the label "Figure 1" (no `caption`) for these two items, or use a neutral caption.
+
+**S3. 1.e S13 and 2.d S13 are at or just over the Jaccard ceiling by one measure each.** The overlap is the prompt frame ("Which TWO sentences ... Figure 1/details ... explain/help") and, in 2.d, the sentence numerals and the words "four objects". No shared option in either.
+- 1.e S13 vs C13: word-set (words of 3+ letters) **0.226**; content words 0.15; all tokens 0.203.
+- 2.d S13 vs C13: content words **0.23** (6 of the shared tokens are the numerals 1 to 5 and "four objects"); word-set 0.151; all tokens 0.209.
+- Fix: change the prompt frame ("Pick the two lines that Figure 1 helps explain" with fresh wording) and the stem numbering. This is small.
+
+**S4. Keys are the longest option by a clear margin in a few items.** 1.e S06 (73 against 58, 43, 56), S13 (the two keys are 73 and 68 against 39, 32 and 30), C11 (118 against 109), C04 (82 against 76); 2.d S05 (68 against 54, 51, 45), P6 (124 against 107). Not alone a giveaway, but S13 (1.e) and S05 and S06 are 20% or more. In 2.d S05 the key also repeats five words of the draft (beads, rods, abacus, people, add) where the distractors repeat two. Fix: shorten the key or lengthen a distractor.
+
+**S5. 2.d S03 gives the order away in its own words.** The four sentences begin First, Next, Then and Last, and hint 2 says "Look for clue words such as first, next, then and last". C03 (its `like`) has no such words and needs reasoning. The child can solve S03 without understanding the steps. Fix: remove two of the sequence words from S03.
+
+**S6. 1.e C04 key echoes the stem.** The stem says "the first time she rode the school bus alone". The key says "I climbed the steps alone for the very first time." Overlap: key 4 words (bus, alone, first, time), distractors 2. Fix: keep the details but drop "alone" and "first time" from the key, or add the same words to a distractor.
+
+### NOTE
+
+- **N1. Order items.** No single hint settles more than one step: 1.e P4 h3 and C12 h3 fix the last sentence only; 2.d C03 h3 fixes the last only. The clue plus h3 together still leave one order in P4 (the clue asks where they must be before the door and what comes before opening it). This was S4 in the first review. It is now within the rule (h3 settles at most one step). Every order item has one valid order: P4, C12, C03 (2.d), S02, S12 (1.e), S03 (2.d) checked by hand.
+- **N2. Match items** (1.e C09, S09; 2.d P5, S01): hint 3 gives one row and the rest is a one-in-two guess. Fine.
+- **N3. 1.e S14.** The key action "picked up the broken pieces" sits beside a stem that says only that the rocket "tipped over and fell". Nothing says it broke. Harmless. The prompt for S14 and C14 both state the criterion ("says or does"), which is the skill, so it is acceptable.
+- **N4. 2.d S05 hint 3** says a sentence beginning "Next, I will tell you about" but the option reads "Next, I will tell you how a calculator works." Same idea; a child will still match it.
+- **N5. Terrell** first appears in 1.e C08 (key and a distractor) and again in C10 (a distractor). A child may treat the name as a cue. Not wrong.
+- **N6. Teach.** The duplicated setting and problem entries are fixed (six words, one each in 1.e). The 2.d words list is four terms.
+- **N7. Distractor strength in 2.d C04** (see M3) and C07 are the weakest in 2.d. C07 is fine: the stop arm is a sign that swings out, and the "flashing light" distractor is separated by sentence 4 of the passage.
+
+## 3. Checks requested
+
+### First-review findings: status
+| Finding | Status |
+|---|---|
+| M1 1.e S01 near-copy | Fixed: 1 shared option ("In the end,"); whole-text 0.19. A new ambiguity appeared (new M1). |
+| M2 1.e S11 reason frame | Fixed: reason wording differs; whole-text 0.16. Prompt hint added (S1). |
+| M3 2.d S15 near-copy | Fixed: 0 shared options; whole-text 0.18, content words 0.13. Key and mirror D remain a fair test. |
+| M4 2.d P4 and S05 clue | Fixed: the clue states the test and no longer names the three wrong types. Live after h3: three. |
+| M5 peanut duplicate | Accepted: p1, P2 and P6 are pre-existing. New C02, C03 and C04 restate no key fact from `T-C.js`, `L-V3.js`, `T-RA.js` or `T-SS.js` (see topic check). |
+| S1 2.d C10 stem | Stem fixed; caption leak found (S2 above). |
+| S2 2.d C13 hint 3 | Fixed ("magnets pulling or not pulling four objects"). |
+| S3 1.e Learn It duplicates | Fixed. |
+| S4 order hints | Mostly fixed (N1). |
+| S5 C03 before C04 | Resolved: C03 is now peanut butter, and no longer models "harvest". |
+| S6 2.d C09 weak key | Fixed: the key is now "Even in dim light at dawn or dusk, this yellow is easy to spot." and "The bright color stands out from far away, so drivers notice a bus." Both are on target. |
+| S9 1.e C10 | Within the rule (blank 1: 2 to 3; blank 2: 2). |
+
+### Jaccard (similar against its `like` core item), all 30 measured
+Measures: word-set of 3+ letter words / word-set of all tokens / content words (stop words out) / bag of all tokens. Ceiling 0.21 with at most one shared option.
+- **1.e, word-set (3+) / content:** S01 0.164/0.11, S02 0.067/0.02, S03 0.125/0.05, S04 0.130/0.09, S05 0.096/0.05, S06 0.194/0.11, S07 0.135/0.14, S08 0.182/0.13, S09 0.158/0.11, S10 0.178/0.10, S11 0.115/0.10, S12 0.060/0.04, **S13 0.226**/0.15, S14 0.151/0.09, S15 0.188/0.11. Shared options: S01 one ("In the end,"), all others none.
+- **2.d, word-set (3+) / content:** S01 0.126/0.09, S02 0.092/0.03, S03 0.157/0.11, S04 0.091/0.05, S05 0.195/0.08, S06 0.145/0.10, S07 0.066/0.05, S08 0.093/0.20, S09 0.191/0.10, S10 0.138/0.10, S11 0.089/0.13, S12 0.144/0.09, S13 0.151/**0.23**, S14 0.120/0.03, S15 0.193/0.13. Shared options: none.
+- The all-token set measure is 0.209 or less everywhere. The all-token bag measure, which counts repeated function words, reaches 0.21 to 0.225 on 1.e S01, S04, S09, S11 and 2.d S04, S15; those overlaps are the prompt frames and carry no shared content, so I did not raise them. Only the two S13 items are listed (S3 above).
+
+### Topic duplicates across all of `js/data`
+- Peanut: the p1 passage and the practice stay. C02 (cooking oil), C03 (steps of peanut butter) and C04 (protein) restate no fact from `T-C.js` (Georgia leads, peg, dig and dry, legumes, a peanut butter photo as a wrong choice), `L-V3.js`, `T-RA.js` or `T-SS.js` (peanut butter only as a pinecone feeder spread). No peanut key fact in any new core, similar, hint or how text. **Clear.**
+- Other fix-round topics (tape measure, abacus, hourglass, kitchen timer, windsock, anthill, cork, ferrule, watermelon, walkie-talkie, treehouse, bumper cars, state fair, magic show, sleepover, scavenger hunt, shoelace, cotton candy): nowhere else.
+- Same word, different content: windmill (a simile in `T-SS.js`), yo-yo (a poem in `T-T34.js`), parachute (`F-FH.js`), harbor (a root word in `L-V12.js`), maple syrup (a capital-letters item in `L-GUM5.js`), helmet (a roly-poly comparison and a bike advice sentence in `T-C.js`, `T-RA.js`), climbing wall (an opinion piece in `T-T34.js`), recorder and glitter (`T-SS.js`), paper boat, yard sale (`T-C.js`). None repeats a key fact. Notes only.
+
+### Hand recount of live choices after the clue and hints 1 to 3 (core 15)
+Each figure is what is left after all three hints and the clue, applied honestly.
+
+| 1.e | Live | 2.d | Live |
+|---|---|---|---|
+| C01 (P5) | blank 1: 2; blank 2: 1 to 2 | C01 (P5) | one row given; rest 1 in 2 |
+| C02 (P4) | 1 order (clue plus h3; N1) | C02 | 3 on paper, 1 in practice (M2) |
+| C03 | 2 | C03 | 1 order (h3 sets the last only) |
+| C04 | 3 | C04 | 2, one by copying (M3) |
+| C05 (P6) | 2 to 3 | C05 (P4) | 3 |
+| C06 | 3 | C06 | 3 |
+| C07 | 4 of 5 | C07 | 3 |
+| C08 | 2 to 3 | C08 | 4 of 5 |
+| C09 | one row given | C09 | 4 of 5, pick 2 |
+| C10 | blank 1: 2 to 3; blank 2: 2 | C10 | 3 |
+| C11 | 3 | C11 | 4 of 5, pick 2 |
+| C12 | 1 order (h3 sets the last only) | C12 | blank 1: 3; blank 2: 2 |
+| C13 | 4 of 5, pick 2 | C13 | 4 of 5, pick 2 |
+| C14 | 4 of 5, pick 2 | C14 | 3 |
+| C15 | Part A: 3; Part B: 2 | C15 | 3 |
+
+- No hint 3 reveals or echoes a key. The ladder-versus-key word check found these words in a hint that appear only in the key: 1.e C11 ("moment", "makes"; S1 above), S08 ("Kayla", a name), S13 ("alley"); 2.d C02 ("peanuts"; M2), C09 ("drivers", a topic word).
+- Hot-text and hot-spot maps agree with the `how` text: 1.e C07 p3:2:3 (sentence 6), C13 p4:2:3 and p4:2:4 (sentences 4 and 5); 2.d C08 p3:3:1 (sentence 7), C11 p4:2:4 and p4:3:4 (sentences 5 and 9), C13 p4:2:2 and p4:2:3 (sentences 3 and 4).
+- Points and DOK: choose-two and two-blank items are 2 points, single are 1. 1.e core is 23 points and 2.d is 21. Unchanged.
+- Grade 3: nothing kindergarten-like, nothing above grade 4 (legume, ferrule, protein and iceberg are defined in context or in the choices).
+
+### Facts (sources)
+- **School bus colors and the stop arm.** Amber (yellow) flashing lights are a pre-warning that the bus is about to stop. Red flashing lights and the extended STOP arm are the stopping signals. Matches 2.d p3 sentences 4 to 6 and C07, C10. https://pctribune.com/opinions/ask-a-trooper-school-bus-lights/
+- **School bus yellow** was chosen at the 1939 conference because it is easy to see and stands out, including in low light. Matches C09 ("dim light at dawn or dusk", "stands out from far away"). https://en.wikipedia.org/wiki/School_bus_yellow
+- **Peanut butter steps.** Roast, cool, remove skins (blanch), grind to a paste, fill and seal jars. This is the C03 order (roast, cool and skins off, grind, jar). https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/3/37046/files/2015/12/Peanut-butter-technical-description-pdf.pdf
+- **Peanut oil** is pressed from peanuts and sold as a cooking oil (C02). Search results only (retail pages); common knowledge, no conflict found. https://goodness.com.au/peanut-oil-cold-pressed-20l/
+- **Protein** helps the body grow and repair (C04, key correct); **magnets** pull iron and steel (paper clip and nail), not plastic, wood or glass, and each has a north and a south pole; unlike poles pull and like poles push (C11, C13, C14, S01 of the magnet set). Common knowledge; the first review's checks stand. No factual error found.
+
+## 4. Fix list, in order
+1. 1.e S01: give sentence 1 a time word or change the distractor (M1).
+2. 2.d C02: add an on-topic distractor about peanuts (M2).
+3. 2.d C04: take the definition out of the stem and strengthen the distractors (M3).
+4. 2.d C10 and S10: remove the visible figure caption (S2).
+5. 1.e S11 prompt and C11 hints; both S13 prompts; S05, S06 and S13 key lengths; 2.d S03 sequence words; 1.e C04 key wording (S1, S3 to S6).
+
+No lesson file was edited by me. The server on port 8871 was stopped by pid.

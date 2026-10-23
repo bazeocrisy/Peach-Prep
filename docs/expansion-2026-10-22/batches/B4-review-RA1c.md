@@ -532,3 +532,127 @@ I read the key beside `why`, `how`, hints and clue for every item. All match. Ev
 1. New topic for p1 and p2 (M1).
 2. Reword S12 and S11 frames (S1); fix the C07, P3 and C01 ladders (S2, S5).
 3. S07, S04 key fit (S3, S4); lengthen decoys (S6); Learn It lines (S7).
+
+
+---
+
+# Fourth review (3.T.RA.1.c)
+
+**Reviewer:** independent, did not author. No lesson edits, no git. Scratch files are in `scratchpad/c4/` (the same scripts as the C.1.c fourth review). I read the earlier reviews only after my answers were saved.
+
+## Verdict: CHANGES REQUIRED
+
+Keys, facts, scoring and browser behaviour are sound, and the similarity numbers are clean. One pre-answer inside set 1 blocks acceptance.
+
+| Id | Severity | One line |
+|---|---|---|
+| M1 | MUST | C02's distractor and `how` ("the sentence about frogs and toads adds a new fact") pre-answer C05, whose key is "Frogs and toads are also amphibians" |
+| S1 | SHOULD | The right ending always opens "Both sources show that ..." (C02, S02, P5); no distractor uses that frame |
+| S2 | SHOULD | C07: choice A is a real competitor for D, and the stem asks "why", not "how" |
+| S3 | SHOULD | Several keys are the longest option and the top word-match (S11 clearly; C11, C03, C13, S13) |
+| S4 | SHOULD | Sets 1 and 2 are each a single topic (axolotl x5, dragonfly x5) |
+| S5 | SHOULD | C07's option A is the exact sentence that is C08's key, and C10 option (6) repeats it |
+
+6 NOTEs follow.
+
+## 1. Blind solve
+
+**Method.** `load.js` loads T-RA.js in a Node `vm` with a mock `PP.addLesson`. `blind4.js` resolves refs and prints the ten passages, core C01-C15, similar S01-S15 and Together P1-P5, with seeded shuffles of choices, options, slots, rows and order steps. It removes `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `sample`, `criteria` and `comp`. I grepped `stripped.json` for those words as keys (none) and as prose (only "answer(s)", "why" and "how" in prompts and titles, for example "Why Athletes Warm Up"). I saved 35 answers to `my-answers.json` before extracting any key.
+
+**Result: 35 of 35 agree.** The two order items (C09, S09) matched on displayed step numbers.
+
+**How blind it was.** I had seen item ids and types in a grep, but no key, `why`, hint or `how`, and I did not open the lesson source, the author log or any review file before saving. It was a fully blind solve of the shuffled stripped print. Items where I paused: C07 (A against D), C14 slot 2 ("When" or "Before"), C08 (which of (1)-(5) is word for word).
+
+## 2. Keyed text beside why, how and hints (all 35)
+
+I printed the key beside clue, h1-h3, `how`, `why` and the misconception for core, similar and Together. All keys match `why` and `how`. Every `how` ends at the answer. P1-P5 and the addons follow the same pattern, and the monarch/milkweed content is only in p1, p2, P1-P5 and their addons (and in the lesson's `write` card, see N5).
+
+## 3. Hand recount of live choices (core, after clue/h1/h2/h3)
+
+| Item | Start | After h1-h2 | After h3 | Note |
+|---|---|---|---|---|
+| C01 | 4 | 4 | 3 | "Last winter" |
+| C02 | 4 | 4 | 3 | "all the facts I had time to write" |
+| C03 | 4 | 4 | 3 | "never gets it back" |
+| C04 | 5 (pick 2) | 5 | 4 | dog trainer |
+| C05 | 6 | 6 | 5 | sentence (5) |
+| C06 | 5 (pick 2) | 5 | 4 | "stay near ponds" |
+| C07 | 5 (pick 2) | 5 | 4 | resting wings |
+| C08 | 5 | 5 | 4 | sentence (2) |
+| C09 | 24 orders | 24 | 6 | h3 gives sentence 1 |
+| C10 | 6 | 6 | 5 | sentence (5) |
+| C11 | 4 | 4 | 3 | "every player" |
+| C12 | 5 | 5 | 4 | sentence (5) |
+| C13 | 4 | 4 | 3 | cartoon |
+| C14 | 4 + 4 | 4 + 4 | 3 + 4 | h3 removes "Last year" only |
+| C15 | 6 (pick 2) | 6 | 5 | sentence (6) |
+
+h1 is a strategy, h2 says where to look and h3 removes one option, on every item. No h3 narrows to the key and none quotes a key. The nearest to an echo is C01 h3 ("what axolotls do every day", key "During the day").
+
+## 4. Similarity (own `jac4.js`; stem + prompt + text + options against the `like[0]` core item)
+
+Measures: **A** word-set, words of 3 or more letters, stop words kept; **B** word-set, all words; **C** multiset of all words.
+
+| Pair | A | B | C | Shared opts | | Pair | A | B | C | Shared opts |
+|---|---|---|---|---|---|---|---|---|---|---|
+| S01~C01 | 0.161 | 0.172 | 0.147 | 0 | | S09~C09 | 0.127 | 0.187 | 0.164 | 0 |
+| S02~C02 | 0.141 | 0.172 | 0.171 | 0 | | S10~C10 | 0.122 | 0.190 | 0.160 | 0 |
+| S03~C03 | 0.118 | 0.132 | 0.130 | 0 | | S11~C11 | 0.118 | 0.133 | 0.132 | 0 |
+| S04~C04 | 0.173 | 0.173 | 0.157 | 0 | | S12~C12 | 0.108 | 0.144 | 0.113 | 0 |
+| S05~C05 | 0.159 | **0.217** | 0.180 | 0 | | S13~C13 | 0.104 | 0.127 | 0.161 | 0 |
+| S06~C06 | 0.133 | 0.149 | 0.151 | 0 | | S14~C14 | 0.165 | 0.192 | 0.163 | **1** |
+| S07~C07 | 0.114 | 0.134 | 0.114 | 0 | | S15~C15 | 0.116 | 0.179 | 0.154 | 0 |
+| S08~C08 | 0.111 | 0.190 | 0.131 | 0 | | | | | | |
+
+- Measure A maximum 0.173 (S04); every pair is under 0.21. Content words only (stop words removed): maximum 0.208 (S14; shared tokens are the "Source 1/2", "newsletter", "principal's page" labels and "Instead"), all others 0.149 or lower.
+- Only S05 is over 0.21, on measure B (0.217), and that comes from the identical prompt frame ("Source ... sentence ... summary ... which may use only"). S14 shares one option ("Instead") with C14; the limit is one.
+- No near-copy. Surface topics are all new for the similar items (termites, platypus, comet, satellites, tree rings, recess balls).
+
+## 5. Findings
+
+**M1. C02 pre-answers C05 (set 1).** C02's distractor A is "Salamanders belong to the same group of animals as frogs and toads." C02's `how` step 3 says "the sentence about frogs and toads adds a new fact" and `why` says "add a new fact". Three items later C05 asks which sentence to take out, and its key is "(4) Frogs and toads are also amphibians." A child who reads Show me how on C02, or just notices the frogs-and-toads sentence, has C05's answer. This is a pre-answer inside core, in the same set. *Fix:* change C02's distractor A to a fact about something else that is not in the sources (for example "Many people keep salamanders in tanks at home") and reword `how` and `why` to match, and keep "frogs and toads" only in C05.
+
+**S1. Formula key.** The best ending is the only choice that begins "Both sources show that ..." in C02, S02 and P5. A child can pick it without reading the others (the other options are a detail, an outside fact and "that is all I have to say"). That is the skill, but it makes the item answerable by pattern. *Fix:* give one distractor in each item the same opening with a wrong claim (for example "Both sources show that axolotls are the best pets"), and vary the key's opening in one of the three.
+
+**S2. C07, choice A against D.** Stem: "Dev's summary will explain why adult dragonflies are such good fliers." Keys: "It has four wings, and it can move each wing by itself" and "It can fly forward, hover and even fly backward." Choice A, "It catches mosquitoes, flies and other small insects in the air," also shows flying skill (the source says it is quick enough to grab insects as they zoom past), and D is a result rather than a cause. The pair is defensible, but a careful child can argue for A. *Fix:* change the stem to "explain how an adult dragonfly moves through the air", and replace A with a hunting fact that is clearly not about flying, such as "Its two large eyes help it spot a tiny insect from far away."
+
+**S3. Keys that are longest and top word-match** (`lex.js`). S11: key 70 characters against 57, 43 and 36, and 6 shared content words against 3/2/2. C11 94 against 84-86; C03 82 against 74-77; C13 84 (tied) and top lexical match 3/1/2/1; S13 93 against 78-88; S02 81 against 70-79; S08 and S10 by 2 to 4 characters. *Fix:* lengthen one distractor to equal the key in S11, C11 and C13; the others are fine.
+
+**S4. One topic per set.** C01-C05 are all axolotl (Kai); C06-C10 are all dragonfly (Dev); C11, C12, C15 are warm-ups; C13 (water) and C14 (chalk) are one-offs. The similar items give good variety, but a child who finds the axolotl passages hard has five items in a row on them. *Fix:* move one axolotl item (C04 or C05) and one dragonfly item (C09) to a new topic.
+
+**S5. Repeated sentence across set 2.** C07's option A is "It catches mosquitoes, flies and other small insects in the air", word for word from Source 2. That same sentence is the key of C08 ("which sentence is copied word for word") and appears again as C10's option (6). A child who met it in C07 as a Source 2 fact sees it match in C08. *Fix:* in C07, paraphrase option A (see S2), so the verbatim sentence appears only in C08 and in the passage.
+
+**NOTE N1. Other items checked and kept.**
+- C08 key (4) matches p6 paragraph 2 sentence 1 exactly. Options (1), (2), (3) and (5) are paraphrases with some shared words (for example "young dragonfly, called a nymph"), and h3 handles the nymph one.
+- C14 slot 2: "Before students draw near the wall, the walkway stays clear" is a grammatical sentence a child could defend. "When" is the best fit and the `how` says the others change the meaning. It is not wrong, so a NOTE. DOK 3 for a two-blank linking-word item is generous (DOK 2).
+- C05 and C08 show the draft in the stem and again as the options (six sentences twice), which makes the phone screen long. It is how hottext options work, but a shorter stem such as "Kai's draft is in the options" would save a screen.
+- C09's h3 tells the first sentence; the remaining order is held by "Later / Then / At last". Fine for DOK 2.
+- "Instead" is the distractor in C01, C14 and S14 (S14 shares it with C14, one shared option).
+**NOTE N2. Pre-answer and topic scan across all of js/data (`topics.js`).** Axolotl, sidewalk chalk and recess balls occur only in this lesson. Dragonfly also appears in 3.T.SS.2.b S15 (a simile option, "quick as a dragonfly") and in a 3.T.T.4.b poem; neither duplicates an item. Warm-up appears in TS-SEQ C15 (track warm-up directions, a time-word item) and as a phrase in T-T2 passages. TS-SEQ C15 is the same topic but a different skill; a NOTE. Monarch and milkweed: in this lesson only p1, p2, P1-P5, their addons and the `write` card; they also appear in 3.T.C.1.b, 3.T.T.2.b and 3.L.V.3.d, which are other lessons.
+**NOTE N3. Browser (390 x 844).** `node verification/serve.js . 8741`, Playwright with touch and mobile emulation. I ran all 15 core items through sets 1-3 (`browse4.py`, screenshots in `scratchpad/c4/shots/`). Every item rendered, passage items show "Read the passage / Question" tabs, no horizontal scroll before or after three hints, no control under 44 px. Three hints appeared on all 15 and the correct response gave "That's right!" on all 15. No page errors. The "Show me how (shows the answer)" button wraps awkwardly; that is the player. I set answers through the player context rather than tapping each choice. The server was killed by pid.
+**NOTE N4. Alignment.** Official wording: "Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic." Source choice (C04, C13, S04, S13), own words (C03, C08, S03, S08), relevance (C07, C12, S07, S12), accuracy (C05, C10, C15, S05, S10, S15) and joining ideas (C01, C14, C09, S01, S09, S14) match it. Points: choose-two, order, two-blank dropdown are 2; the rest 1. Passages are grade 3 length. The topic is self-selected in the standard, and the `write` card offers it.
+**NOTE N5. The `write` card names the monarch sources.** That is fine (they are the Together passages).
+**NOTE N6. Brand-new items looked at (C01-C05, C07, S01, S02, S04, S07).** C01 and S01 test a contrast and a time word, and both are sound. C04 and S04 are clear and each has a plausible "expert but off-topic" decoy. S04's 1958 magazine is before weather satellites (the first was TIROS-1 in 1960). S07's rudder fact is correct. C03 and S03 each have a verbatim copy decoy, which the prompt already forbids, so the decoy is easy. C07: see S2.
+
+## 6. Facts
+
+| Claim | Result | URL |
+|---|---|---|
+| Axolotl: feathery external gills, also lungs and gulps air, lives its whole life in water, suction feeding, heals without scars, regrows limbs, heart and parts of the brain | Supported | https://en.wikipedia.org/wiki/Axolotl |
+| Axolotl: wild numbers about 50 to 1,000 adults, only the Xochimilco area near Mexico City | Supported ("fewer than one thousand may be left" is safe; the 2014 estimate was 700 to 1,200 in https://www.scientificamerican.com/blog/extinction-countdown/the-population-of-a-unique-mexican-amphibian-drops-90-percent-in-four-years) | |
+| Axolotl hunts at night | Not stated on the page I read; widely repeated and consistent with the nocturnal feeding in other sources | |
+| Dragonfly nymph lives months to years and preys on tadpoles and small fish; hovers and flies backward; holds wings out flat at rest | Supported | https://en.wikipedia.org/wiki/Dragonfly |
+| "Cannot sting people" | Correct (they do not sting; large ones can nip, but the passage does not say they cannot bite) | same |
+| Platypus: short webbed front feet paddle, hind feet act as rudders; egg-laying mammal; male spur; streams in eastern Australia | Supported | https://australian.museum/learn/animals/mammals/platypus/ |
+| Weather satellites began in 1960 (TIROS-1), so a 1958 magazine predates them | Supported by the earlier review | https://nesdis.noaa.gov/content/60-years-ago-today-first-successful-weather-satellite-was-launched |
+| Monarch life cycle, migration to Mexico, milkweed | Checked by the earlier reviews | see the first review |
+| Termite king and queen, comet tail points away from the Sun, tree-ring widths and weather, warm-up and cool-down lengths | Standard; not fetched in this pass | |
+
+I found no factual error in the core, similar or Together items.
+
+## 7. What to change
+1. C02: replace distractor A and its `how`/`why` so "frogs and toads" appears only in C05 (M1).
+2. C02, S02, P5: give one distractor the "Both sources show that" opening (S1).
+3. C07: stem "how" and a clearly off-topic A (S2, S5).
+4. S11, C11, C13: lengthen one distractor (S3).
+5. Move one axolotl and one dragonfly item to new topics (S4).

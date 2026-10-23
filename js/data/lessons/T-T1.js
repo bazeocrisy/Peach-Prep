@@ -759,29 +759,31 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is thinking a describing detail is there only to show what a place looks like. Here it helps move the story along.",
       why: "The answer is \"They help Amos tell how close he is to the top.\" Naomi says number 6 means the top, and Amos reads each number out loud as he climbs. Nothing says the tower is falling apart, Naomi keeps climbing, and the ranger is never at the top." },
-    { id: "SK-TT1a-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
+    { id: "SK-TT1a-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [], pick: 2,
       like: ["SK-TT1a-C11"],
-      stem: ["At the town pool, the kids' swim race was about to begin. Little Dani stood frozen at the edge. \"I can't do it,\" she whispered.", "Her big sister, Rue, slid into the water at the far end of the lane. \"You don't have to win,\" Rue said gently. \"Just swim to me.\"", "Dani took a deep breath, jumped in and paddled all the way to Rue's arms."],
-      prompt: "Read the story. Then complete the sentences. Choose the best answer for each blank.",
-      text: "Rue's words show that she is {0}. Her words move the plot forward because {1}.",
-      slots: [
-        { options: ["caring", "bossy", "bored"], answer: 0 },
-        { options: ["Dani finds the courage to swim", "the race is called off for the day", "Rue decides to swim the race herself"], answer: 0 }
+      stem: ["Milo had worked on the library's giant puzzle for an hour, and one corner was still empty. \"This is too hard,\" he said, and he pushed a piece away.", "Mr. Orr, the librarian, sat down beside him. \"Take a break from that corner,\" he said. \"Look at the whole picture, and the piece you need will show up.\"", "Milo studied the picture on the box. Soon he found the missing piece and pressed it into place."],
+      prompt: "Which TWO statements about Mr. Orr's words are true?",
+      choices: [
+        { text: "They make Milo give up and leave the table." },
+        { text: "They show that Mr. Orr wants to help Milo, not hurry him.", correct: true },
+        { text: "They show that Mr. Orr thinks the puzzle is easy." },
+        { text: "They lead Milo to look at the box and find the missing piece.", correct: true },
+        { text: "They tell Milo to take the puzzle apart and start over." }
       ],
-      clue: "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
+      clue: "Words can show what the speaker is like and can cause what happens next. Check each statement.",
       hints: [
-        "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
-        "Compare what Dani does before Rue speaks with what she does after.",
-        "Rue speaks gently and tells Dani she does not have to win, so she is not giving orders. For the second blank, ask what Dani does next."
+        "Words can show what the speaker is like and can cause what happens next. Check each statement.",
+        "Find what Mr. Orr says and how he says it. Then find what Milo does after he hears it.",
+        "Milo stays at the table, so one choice can go. Check the rest the same way."
       ],
       how: [
-        "Dani is frozen at the edge and says she can't do it.",
-        "Rue gets in the water, speaks gently, and tells Dani to just swim to her. That shows she is caring.",
-        "After Rue speaks, Dani jumps in and swims all the way to her. Rue's words help Dani find her courage.",
-        "The answers are caring and Dani finds the courage to swim. Nothing says the race is called off, and Rue waits at the end instead of racing."
+        "Milo is stuck, says the puzzle is too hard, and pushes a piece away.",
+        "Mr. Orr sits beside him and suggests a break from the corner and a look at the whole picture. That shows he wants to help Milo, not hurry him.",
+        "Then Milo studies the picture on the box and finds the missing piece. His words led to that.",
+        "The answers are \"They show that Mr. Orr wants to help Milo, not hurry him.\" and \"They lead Milo to look at the box and find the missing piece.\" Milo does not leave, Mr. Orr never says the puzzle is easy, and nobody takes the puzzle apart."
       ],
-      misconception: "A common mix-up is calling a character bossy because she tells someone what to do. Listen to how she says it and why.",
-      why: "The answers are caring and Dani finds the courage to swim. Rue speaks gently and waits at the end of the lane, and after her words, frozen Dani jumps in and swims to her." },
+      misconception: "A common mix-up is choosing a statement that sounds like the story but does not match what the character really says. Check the exact words.",
+      why: "The answers are \"They show that Mr. Orr wants to help Milo, not hurry him.\" and \"They lead Milo to look at the box and find the missing piece.\" He sits beside Milo and gives calm advice, and after it Milo studies the box and finds the piece. Milo does not leave, Mr. Orr never says the puzzle is easy, and nobody takes the puzzle apart." },
     { id: "SK-TT1a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p6"],
       like: ["SK-TT1a-C12"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
@@ -4004,7 +4006,7 @@ PP.addLesson({
       why: "Part A: Both girls hope to take a bigger part in the holiday next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Only Linh learns about the holiday from her grandfather, only Linh shares a special food, and only Linh carries a light through the street." },
     { id: "SK-TT1d-S08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C08"],
-      stem: ["Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the stems. They set the flowers by a photo of Dani's great-grandma.", "Story 2: In Sweden, Elsa and her grandma made straw stars. Elsa twisted the straw. Her grandma tied on red ribbon. They hung the stars on the tree."],
+      stem: ["Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the stems. They set the flowers by a photo of Dani's great-grandma on a shelf in the living room.", "Story 2: In Sweden, Elsa and her grandma made straw stars. Elsa twisted the straw. Her grandma tied on red ribbon. They hung the stars on the tree in their living room."],
       prompt: "Match each detail to the story it is true for. Some details are true for both stories.",
       cols: ["Story 1", "Story 2", "Both stories"],
       rows: [
@@ -4023,10 +4025,10 @@ PP.addLesson({
         "A child and a grandparent make decorations in both stories, so that is true for both.",
         "Only Elsa and her grandmother braid straw, so that detail belongs to Story 2.",
         "Only Dani's story mentions a photo, so that belongs to Story 1.",
-        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family keeps the finished decorations in the home, so that is both."
+        "Dani sets the flowers on a shelf in the living room, and Elsa hangs the stars on the tree in the living room. Both sets of decorations end up in the home, so that is both."
       ],
       misconception: "A common mix-up is picking one story when the detail fits both. Check each detail against both stories.",
-      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family keeps the finished decorations in the home, so that is true for both." },
+      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Both sets of decorations end up in the living room, so that is true for both." },
     { id: "SK-TT1d-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C09"],
       stem: ["Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, small orange fruit hung from the branches.", "Story 2: In a town in Italy, Luca set bread dough by the warm stove. He wanted to bake it right away, but he waited for it to rise. The loaf came out light and tall."],

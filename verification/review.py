@@ -8,8 +8,10 @@ submit, no lesson pass, no writes on open, corrupt / blocked / full storage, Bac
 axe (WCAG 2 A/AA) and keyboard use.
 
 Serve the repository first.  Run: python3 verification/review.py [BASE_URL] [OUT_DIR]
-CHROMIUM_PATH optionally names a browser; AXE_PATH names a local axe.min.js (the axe checks are
-reported as not run, and fail, without it). Exit code 1 on any failure.
+CHROMIUM_PATH optionally names a browser. AXE_PATH names a local axe.min.js; if it is not set the
+script looks for axe-core in ./node_modules, the global node_modules and under /tmp, and if none is
+found it stops with a clear message and exit code 2 (an axe check that cannot run is not a pass).
+Exit code 1 on any failed check.
 """
 import json, os, re, sys
 from pathlib import Path
@@ -21,6 +23,29 @@ if OUT: OUT.mkdir(parents=True, exist_ok=True)
 ARGS = ["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"]
 VIEWPORTS = [(320, 568), (390, 844), (844, 390), (768, 1024), (1024, 768), (1366, 768), (1920, 1080)]
 results = []
+
+
+def find_axe():
+    import glob, subprocess
+    c = [os.environ.get("AXE_PATH") or ""]
+    root = Path(__file__).resolve().parent.parent
+    c.append(str(root / "node_modules/axe-core/axe.min.js"))
+    try:
+        g = subprocess.run(["npm", "root", "-g"], capture_output=True, text=True, timeout=20).stdout.strip()
+        if g: c.append(g + "/axe-core/axe.min.js")
+    except Exception:
+        pass
+    c += glob.glob("/tmp/**/axe-core/axe.min.js", recursive=True)[:3] + glob.glob("/tmp/**/package/axe.min.js", recursive=True)[:3]
+    for x in c:
+        if x and os.path.exists(x): return x
+    return None
+
+
+AXE = find_axe()
+if not AXE:
+    print("review.py cannot run its axe checks: AXE_PATH is not set and no axe-core was found. "
+          "Set AXE_PATH=/path/to/axe.min.js (axe-core 4.x) and run again.", file=sys.stderr)
+    sys.exit(2)
 
 
 def check(name, good, detail=""):
@@ -146,6 +171,16 @@ with sync_playwright() as p:
     q.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true)")
     check("R.4 opening the hub, the coverage map, #mixed and every parent standard page writes nothing (all keys byte-identical)", q.evaluate(KEYS) == before, "")
 
+    # RR-08: the baseline above is taken after a first load, so a write during first load is invisible to it.
+    # Start from a truly empty store and log every setItem call.
+    LOG = "(()=>{window.__w=[];const s=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){window.__w.push(k);return s.call(this,k,v);};})()"
+    wlog = []
+    for h in ["#review", "#coverage", "#std/3.T.T.1", "#std/3.T.T.1.c", "#std/3.L.GC.1:M"]:
+        q0 = page(b, 390, 844, init=LOG, browse=False); q0.goto(BASE + h); q0.wait_for_function("document.getElementById('build-badge').textContent.length>0"); q0.wait_for_timeout(700)
+        wlog += [(h, k) for k in q0.evaluate("window.__w") if k != "pp.path.storage-check"]
+        q0.close()
+    check("R.4b from a completely empty store, opening the hub, the coverage map and standard pages writes no key (the only allowed write is path.js's own storage probe)", not wlog, wlog)
+
     # ---------------- R.5 the hub, the map, the #mixed links ----------------
     ready(q, "#mixed")
     mx = q.evaluate("({cards:document.querySelectorAll('#section-grid .section-card').length, links:[...document.querySelectorAll('#screen-mixed .rv-links a')].map(a=>a.getAttribute('href'))})")
@@ -269,8 +304,8 @@ with sync_playwright() as p:
     check("R.15 at the seven viewports the hub, the coverage map (every group open), a parent standard page with its review and the review results fit with no sideways scroll; links and buttons are at least 44px", not over, over)
 
     # ---------------- R.16 axe and keyboard ----------------
-    axe = os.environ.get("AXE_PATH")
-    if axe and os.path.exists(axe):
+    axe = AXE
+    if axe:
         viol = []
         for w in (390, 1366):
             q = page(b, w, 900); ready(q, "#browse")
@@ -303,6 +338,68 @@ with sync_playwright() as p:
     check("R.17 keyboard: Enter on a review's Start opens it with focus on the player title; Tab reaches the hub's Start buttons; Enter starts a part",
           k1[0] == "player" and k1[1] == "RV-3.T.T.1" and k1[2] == "player-title" and k2 and k3 == ["player", "player-title"], (k1, seq, k3))
     q.close()
+
+    # ---------------- R.18 RR-01: answers shown in a review count as seen ----------------
+    q = page(b, 1366, 900); ready(q, "#std/3.T.T.1"); q.reload(); q.wait_for_timeout(700)
+    pre = q.evaluate(KEYS).get("pp.progress.v1")
+    q.click("#std-review .rv-start"); q.wait_for_timeout(200); answer_all(q); q.click("#confirm-submit"); q.wait_for_timeout(250)
+    after_submit = q.evaluate(KEYS).get("pp.progress.v1")
+    q.click("#res-review-btn"); q.wait_for_timeout(100)
+    prog = json.loads(q.evaluate(KEYS).get("pp.progress.v1") or "{}")
+    rec = prog.get("3.T.T.1.c") or {}
+    srcs = q.evaluate("[...new Set(PP.byId['RV-3.T.T.1'].items.map(i=>i.src))]")
+    seen_ok = all(isinstance(prog.get(k, {}).get("reviewSeenBy"), dict) for k in srcs)
+    clean = all(not (prog[k].get("mastered") or prog[k].get("tries") or prog[k].get("attempts") or prog[k].get("passedAt")) for k in srcs)
+    status = q.evaluate("(k=>PP_SKILLS.status(k))('3.T.T.1.c')")
+    check("R.18a submitting a review leaves pp.progress.v1 untouched; opening See my answers only adds reviewSeenBy to the source lessons: no try, no pass, no status change",
+          pre == after_submit and seen_ok and clean and status == "new", (pre, after_submit, srcs, rec, status))
+    ready(q, "#play/SK:3.T.T.1.c:t"); q.reload(); q.wait_for_timeout(700)
+    q.wait_for_function("PP_PLAYER.state().setId==='SK:3.T.T.1.c:t'")
+    answer_all(q); q.click("#confirm-submit"); q.wait_for_timeout(300)
+    rec = json.loads(q.evaluate(KEYS)["pp.progress.v1"])["3.T.T.1.c"]
+    att = (rec.get("attempts") or [{}])[0]
+    check("R.18b a first-try pass on the lesson check after the review is recorded as after seeing the answers (afterAnswers true, seenIn review); it is still the honest pass, not hidden",
+          att.get("n") == 1 and att.get("ok") is True and att.get("afterAnswers") is True and att.get("seenIn") == "review", rec)
+    ready(q, "#skill/3.T.T.1.c"); q.wait_for_timeout(400)
+    txt = q.evaluate("document.body.innerText")
+    check("R.18c the skill page tells a grown-up the pass came after seeing these questions' answers in a review", "answers in a review" in txt, txt[:200])
+    q.close()
+    # a review with no stored progress for a lesson does not create a pass for it, and a corrupt reviewSeenBy is ignored
+    q = seeded(b, extra={"pp.progress.v1": json.dumps({"3.T.T.1.c": {"taught": True, "reviewSeenBy": "zzz"}})})
+    ready(q, "#play/SK:3.T.T.1.c:t"); q.reload(); q.wait_for_timeout(700)
+    answer_all(q); q.click("#confirm-submit"); q.wait_for_timeout(300)
+    rec2 = json.loads(q.evaluate(KEYS)["pp.progress.v1"])["3.T.T.1.c"]
+    a2 = (rec2.get("attempts") or [{}])[0]
+    check("R.18d a corrupt reviewSeenBy value is ignored (no crash, first-try pass is not marked as seen)", a2.get("afterAnswers") is False and a2.get("ok") is True, rec2)
+    q.close()
+
+    # ---------------- R.19 RR-04: the question navigator shows every button at the seven viewports ----------------
+    nav_bad = []
+    for (w, h) in VIEWPORTS:
+        q = page(b, w, h); ready(q, "#play/CR-lit/test"); q.reload(); q.wait_for_timeout(700)
+        try:
+            q.wait_for_function("PP_PLAYER.state().total>0", timeout=5000)
+        except Exception:
+            ready(q, "#std/3.T.T.1"); q.click("#std-review .rv-start"); q.wait_for_timeout(300)
+        m = q.evaluate("""(()=>{const n=document.getElementById('q-nav');if(!n||n.hidden)return null;const b=[...n.querySelectorAll('.qn-btn')],r=n.getBoundingClientRect();
+           return {count:b.length,scrolls:n.scrollWidth>n.clientWidth+1,wraps:getComputedStyle(n).flexWrap==='wrap',
+             clipped:b.filter(x=>{const c=x.getBoundingClientRect();return c.right>r.right+1||c.left<r.left-1}).length,page:document.documentElement.scrollWidth-innerWidth}})()""")
+        # clipped buttons are allowed only on a narrow screen, where the navigator scrolls inside its own box (the page never does)
+        if m is None or m["page"] > 0 or (w >= 600 and (m["clipped"] or m["scrolls"])): nav_bad.append((w, h, m))
+        q.close()
+    check("R.19 the check navigator shows every question button (wraps, no hidden buttons) from 600px wide up, and never scrolls the page, at the seven viewports", not nav_bad, nav_bad)
+
+    # ---------------- R.20 RR-03: axe target-size (WCAG 2.2 AA) on the parents' tables and the code links ----------------
+    ts_bad = []
+    for (w, h) in VIEWPORTS:
+        q = page(b, w, h); ready(q, "#parents"); q.add_script_tag(path=AXE)
+        r = q.evaluate("""async()=>{const out=[];
+            for(const t of [...document.querySelectorAll('[data-ptab]')]){t.click();await new Promise(r=>setTimeout(r,80));
+              const r=await axe.run(document.body,{runOnly:{type:'rule',values:['target-size']}});r.violations.forEach(v=>out.push([t.textContent.trim(),v.nodes.length]));}
+            return out}""")
+        if r: ts_bad.append((w, h, r))
+        q.close()
+    check("R.20 axe target-size (WCAG 2.2 AA) finds no overlapping or small targets on any Parents tab at the seven viewports", not ts_bad, ts_bad)
 
     check("R.0 no page errors", not errors, errors[:3])
     b.close()

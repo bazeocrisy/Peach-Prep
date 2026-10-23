@@ -36,7 +36,7 @@
 | `first-visit.py` | **124 passed, 0 failed** |
 | `practice-own.py` | **73 passed, 0 failed** |
 | `review.py` | **21 passed, 0 failed** with `AXE_PATH` set. Without it, R.16 fails by design (see RR-09): 20 passed, 1 failed |
-| `guard.py` (plain, no fixture launcher) | GUARD_PLAIN |
+| `guard.py` (plain, no fixture launcher) | **Not obtained as one uninterrupted run.** Two full plain runs each reached **119 passed, 0 failed** and then lost the harness server (RR-13) just before §8. I then ran §8 alone (a copy of `guard.py` with only the prelude and §8, against a server that survives bad URLs): **8.1 passed**. Together that is 120 passed, 0 failed, the same count the builder reported, but it is stitched from two runs. A third full run with the tolerant server was interrupted before it finished, so I do not claim a single clean 120/120 run |
 
 These match the builder's table (§8.4) apart from check-content's warning count, which fell from 25 to 20 as content landed.
 
@@ -181,7 +181,7 @@ STATUS.md defines ACCEPTED as blind-solved core and similar items. A B0 review f
 Not built: the review ledger and hash rule, `testRev` and `attempts[].rev`, and the `--release` switch (69 lessons with a check and no core are still only a warning). The guard's legacy journey will now fail by design once every lesson has core, which is intended.
 
 ### RR-13 · NOTE · Harness
-The harness server `verification/serve.js` calls `decodeURIComponent` on the request path with no `try`. A single malformed percent-encoded request kills it silently (I reproduced it with `curl /%E0%A4%A`). My first two plain-guard runs lost the server just before §8, after 119 passes. SERVE_NOTE
+The harness server `verification/serve.js` calls `decodeURIComponent` on the request path with no `try`. A single malformed percent-encoded request kills it silently (I reproduced it with `curl /%E0%A4%A`). My first two plain-guard runs lost the server just before §8, after 119 passes. I did not find which request triggers it (a bad path is not obvious in `guard.py`, which uses hash addresses). That makes this a harness weakness, not a product defect I can show, but it makes the plain guard unreliable on `serve.js`. Add a `try/catch` that answers 400.
 
 ---
 

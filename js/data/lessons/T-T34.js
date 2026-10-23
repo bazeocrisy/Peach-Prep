@@ -2051,7 +2051,7 @@ PP.addLesson({
       lines: [
         ["The afternoon is hot and slow.", "I hear a tune. I jump up. Go!", "The ice cream truck is down our street.", "I run to find a frosty treat."],
         ["I count my coins. I count them twice.", "The driver says, \"That's the price.\"", "I choose a cone with sprinkles on.", "I lick it fast, and then it's gone."],
-        ["The truck rolls on. The song grows small.", "I sit and sigh by the garden wall.", "I'll save my coins from every day", "And wait right here for the truck to play."]
+        ["The truck rolls on. The song grows small.", "I sit and sigh by the garden wall.", "I'll save my coins for another day", "And wait right here for the truck to play."]
       ] }
   ],
   practice: [
@@ -2638,7 +2638,7 @@ PP.addLesson({
     { id: "SK-TT4a-S08", type: "hottext", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C07"],
       stem: ["Here are five lines from a poem about a long car ride."],
-      prompt: "Which TWO lines use repeated words to show that something goes on and on? Choose two lines.",
+      prompt: "Which TWO lines use repeated words to show that something lasts a long time? Choose two lines.",
       options: [
         "Honk! Honk! A truck zooms past.",
         "The road goes on, and on, and on.",
@@ -2651,7 +2651,7 @@ PP.addLesson({
       hints: [
         "Repeated words can make a long, steady feeling, as if something never ends. Look for a word that is said again and again.",
         "Read each line and look for a word that is said again and again on purpose.",
-        "\"Honk! Honk! A truck zooms past.\" repeats a word, but the honks are over in a moment. Check the others the same way."
+        "Repeating a word only fits if the thing being described keeps going. Ask that about each line that repeats."
       ],
       how: [
         "A repeated word makes the reader feel that something keeps happening.",
@@ -2663,38 +2663,39 @@ PP.addLesson({
     { id: "SK-TT4a-S09", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.4.a"], passages: ["p9"],
       like: ["SK-TT4a-C08"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "What does the speaker do in stanza 3 that is different from stanza 2?",
+      partA: { prompt: "What does stanza 2 show that stanza 1 and stanza 3 do not?",
         choices: [
-          { text: "The speaker decides to save the coins.", correct: true },
-          { text: "The speaker stops to talk with the driver." },
-          { text: "The speaker runs after the truck." },
-          { text: "The speaker counts the coins twice." }
+          { text: "The speaker hearing the truck coming." },
+          { text: "The speaker sitting alone by the wall." },
+          { text: "The speaker getting the treat and eating it fast.", correct: true },
+          { text: "The speaker planning to save money." }
         ] },
-      partB: { prompt: "Which line from the poem shows what you chose in Part A?",
+      partB: { prompt: "Which line from the poem shows your answer to Part A?",
         choices: [
-          { text: "\"I'll save my coins from every day\"", correct: true },
           { text: "\"I count my coins. I count them twice.\"" },
-          { text: "\"I sit and sigh by the garden wall.\"" },
-          { text: "\"I run to find a frosty treat.\"" }
+          { text: "\"I lick it fast, and then it's gone.\"", correct: true },
+          { text: "\"I run to find a frosty treat.\"" },
+          { text: "\"I sit and sigh by the garden wall.\"" }
         ] },
-      clue: "To see how a poem changes, compare what happens in the last stanza with what happened before.",
+      clue: "To tell what one stanza adds, compare it with the stanzas before it and after it.",
       hints: [
-        "To see how a poem changes, compare what happens in the last stanza with what happened before.",
-        "Read what the speaker does in stanza 2. Then read what the speaker does in stanza 3.",
-        "The speaker does not talk with the driver in stanza 3, so one choice for Part A can go. For Part B, the line you choose must match your Part A answer."
+        "To tell what one stanza adds, compare it with the stanzas before it and after it.",
+        "List what happens in each of the three stanzas. Then see which event belongs only in the middle one.",
+        "The speaker plans to save money only at the very end of the poem, so that choice does not fit stanza 2. For Part B, the line you choose must match your Part A answer."
       ],
       how: [
+        "In stanza 1, the speaker hears the truck and runs to it.",
         "In stanza 2, the speaker counts coins, buys a cone and eats it fast.",
-        "In stanza 3, the truck rolls away, and the speaker sighs. The speaker decides to save coins every day and wait for the truck.",
-        "Part A: The speaker decides to save the coins. Part B: \"I'll save my coins from every day\"",
-        "The speaker does not talk with the driver or run after the truck, and counting the coins happens in stanza 2, not stanza 3."
+        "In stanza 3, the truck rolls away, and the speaker sits by the wall and plans to save coins.",
+        "Part A: The speaker getting the treat and eating it fast. Part B: \"I lick it fast, and then it's gone.\"",
+        "Hearing the truck belongs to stanza 1. Sitting alone and saving money belong to stanza 3."
       ],
-      misconception: "A common mix-up is choosing a line about the coins from stanza 2. Those lines come before the change.",
-      why: "Part A: The speaker decides to save the coins. Part B: \"I'll save my coins from every day\" In stanza 3, the truck drives away and the speaker plans to save money and wait for it. The speaker does not talk with the driver or run after the truck, and counting the coins happens in stanza 2." },
+      misconception: "A common mix-up is choosing an event from the first or last stanza. Ask which event happens only in the middle one.",
+      why: "Part A: The speaker getting the treat and eating it fast. Part B: \"I lick it fast, and then it's gone.\" Stanza 2 is the only stanza where the speaker gets the cone and eats it. Hearing the truck belongs to stanza 1, and sitting alone and saving money belong to stanza 3." },
     { id: "SK-TT4a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C09"],
       stem: ["Here is stanza 2 of a poem called \"The Scooter Ride.\"", "I grip the bars and push off slow.", "The scooter picks up speed on the hill.", "Faster, faster, down I go,", "Past the fence and past the mill.", "Stop."],
-      prompt: "The last line of this stanza is only one word long. Why might the poet make the last line so short?",
+      prompt: "What does the one-word last line do for this stanza?",
       choices: [
         { text: "A short line makes the reader pause, just as the scooter does.", correct: true },
         { text: "It shows that the poet ran out of words to use." },
@@ -2705,7 +2706,7 @@ PP.addLesson({
       hints: [
         "A poet can use the length of a line to match what is happening. Ask what happens in the last line.",
         "Read the stanza out loud. Notice how the last line sounds different from the lines before it.",
-        "The scooter stops in the last line, so the ride does not go on all day. Test each choice that is left."
+        "Read the stanza out loud and listen to how the last line sounds next to the lines before it. The poem does not say the ride lasts all day, so one choice can go."
       ],
       how: [
         "The first four lines tell about a fast ride. The scooter picks up speed, and the speaker goes faster and faster.",
@@ -2714,7 +2715,7 @@ PP.addLesson({
         "The poet did not run out of words, \"Stop\" does not rhyme with \"slow,\" and the ride ends instead of going on all day."
       ],
       misconception: "A common mix-up is thinking a short line means the poet ran out of things to say. A poet can choose a short line to match the action.",
-      why: "The answer is \"A short line makes the reader pause, just as the scooter does.\" The long, quick lines match the fast ride, and the one-word last line makes the reader stop, just as the scooter stops. The poet did not run out of words, \"Stop\" does not rhyme with \"slow,\" and the ride does not go on all day." },
+      why: "The answer is \"A short line makes the reader pause, just as the scooter does.\" The lines before it match the fast ride, and the one-word last line makes the reader stop, just as the scooter stops. The poet did not run out of words, \"Stop\" does not rhyme with \"slow,\" and the ride does not go on all day." },
     { id: "SK-TT4a-S11", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C10"],
       stem: ["Poem A: The Cat", "Purr, purr, purr by the fire,", "Purr, purr, purr in the sun.", "The cat stretches out on the rug", "And naps till the day is done.", "Poem B: Sprinkler Day", "Splash, splash, splash goes the sprinkler spray,", "I jump, jump, jump through the cold.", "The grass is wet, the sun is hot,", "And I feel brave and bold."],
@@ -2790,12 +2791,12 @@ PP.addLesson({
       why: "The answer is \"We bake a cake for Dad's birthday. / The frosting's bright and blue. / We sprinkle on a hundred dots / And sing a song for you.\" In the stanza above, only lines 2 and 4 rhyme (call and hall). In the cake stanza, blue and you rhyme in lines 2 and 4, and lines 1 and 3 do not. The other stanzas rhyme in different lines." },
     { id: "SK-TT4a-S14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C14"],
-      stem: ["Stanza 1:", "In July, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 2:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around.", "Stanza 3:", "In March, the pear tree's twigs are brown.", "The buds are small and tight.", "A robin hops from branch to branch", "And sings in the cool light."],
+      stem: ["Stanza 1:", "In August, the pear tree's leaves are thick.", "The fruit hangs soft and sweet.", "A squirrel naps along a limb", "And dreams of food to eat.", "Stanza 2:", "In November, the leaves have fallen.", "They cover all the ground.", "The branches stand up bare again", "While north winds whirl around.", "Stanza 3:", "In March, the pear tree's twigs are brown.", "The buds are small and tight.", "A robin hops from branch to branch", "And sings in the cool light."],
       prompt: "Complete the sentence about what the stanzas of \"The Pear Tree\" show. Choose the best answer for each blank.",
-      text: "Stanza 1 {0}, and stanza 3 {1}.",
+      text: "Stanza 2 {0}, and stanza 3 {1}.",
       slots: [
-        { options: ["shows the tree covered in snow", "shows the tree when it is full of fruit", "shows the tree when only small buds have grown"], answer: 1 },
-        { options: ["shows the tree when only small buds have grown", "shows the tree when it is full of fruit", "shows the tree covered in snow"], answer: 0 }
+        { options: ["shows the leaves turning bright colors", "shows the leaves lying on the ground", "shows the tree full of fruit"], answer: 1 },
+        { options: ["shows the first small buds", "shows the leaves turning bright colors", "shows the tree full of fruit"], answer: 0 }
       ],
       clue: "Each stanza has its own job. Read one stanza at a time and ask what is happening to the tree.",
       hints: [
@@ -2804,13 +2805,13 @@ PP.addLesson({
         "Stanza 3 gives the month and tells what is on the twigs. Match that to each choice."
       ],
       how: [
-        "Stanza 1 is set in July. The leaves are thick, and the fruit hangs soft and sweet.",
+        "Stanza 1 is set in August. The leaves are thick, and the fruit hangs soft and sweet.",
         "Stanza 2 is set in November, when the leaves have fallen and cover the ground.",
         "Stanza 3 is set in March. The twigs are brown, and the buds are small and tight.",
-        "The answers are \"shows the tree when it is full of fruit\" and \"shows the tree when only small buds have grown.\" Snow is not in the poem."
+        "The answers are \"shows the leaves lying on the ground\" and \"shows the first small buds.\" The leaves are not turning colors in any stanza, and the fruit belongs to stanza 1."
       ],
-      misconception: "A common mix-up is choosing the stanza that sounds most like winter. Match each stanza to its month and the details it gives.",
-      why: "The answers are shows the tree when it is full of fruit and shows the tree when only small buds have grown. Stanza 1 is July, with thick leaves and sweet fruit. Stanza 3 is March, with brown twigs and small, tight buds. The poem never mentions snow." },
+      misconception: "A common mix-up is picking the stanza whose season sounds familiar. Match each stanza to its month and the details it gives.",
+      why: "The answers are shows the leaves lying on the ground and shows the first small buds. Stanza 2 is November, with leaves on the ground. Stanza 3 is March, with brown twigs and small, tight buds. No stanza shows leaves turning colors, and the fruit is in stanza 1." },
     { id: "SK-TT4a-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.a"], passages: [],
       like: ["SK-TT4a-C15"],
       stem: ["Stanza 1:", "The candle flame is tall and bright.", "It lights the whole dark room.", "I watch the dancing shadows tonight", "And push away the gloom.", "Stanza 2:", "The wax is low. The flame is small.", "The shadows creep in near.", "I watch them crawl along the wall.", "Stanza 3:", "One tiny spark, a final glow.", "Then still.", "Stanza 4:", "Dark."],

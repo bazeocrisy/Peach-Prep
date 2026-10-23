@@ -30,7 +30,7 @@ In-order assignment: TT1a-P4 -> TT1a-S01; TT1a-P5 -> TT1a-S04; TT1a-C03 -> TT1a-
 | SK-TT1a-S08 | TT1a-C07 | ebsr, 2, 2 | p6 "The Fire Tower" | 4 + 4 / 3 + 4 |
 | SK-TT1a-S09 | TT1a-C09 | match, 2, 2 | stem: Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. "I had them when I... | 4 / 4 rows |
 | SK-TT1a-S10 | TT1a-C10 | mc, 1, 3 | p6 "The Fire Tower" | 4 / 3 |
-| SK-TT1a-S11 | TT1a-C11 | dropdown, 2, 2 | stem: At the town pool, the kids' swim race was about to begin. Little Dani stood frozen at the edge. "I can't do... | 3 + 3 / 2 + 3 |
+| SK-TT1a-S11 | TT1a-C11 | ms, 2, 2 | stem: Milo had worked on the library's giant puzzle for an hour, and one corner was still empty. "This is too har... | 5 / 4 |
 | SK-TT1a-S12 | TT1a-C12 | ebsr, 2, 3 | p6 "The Fire Tower" | 4 + 4 / 3 + 4 |
 | SK-TT1a-S13 | TT1a-C13 | mc, 1, 3 | p7 "The Night Walk" | 4 / 3 |
 | SK-TT1a-S14 | TT1a-C14 | ms, 2, 3 | stem: Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a le... | 5 / 4 |
@@ -129,7 +129,7 @@ In-order assignment: TC2a-C01 -> TC2a-S04; TC2a-P5 -> TC2a-S05; TC2a-C03 -> TC2a
 | SK-TC2a-S12 | TC2a-C12 | cr, undefined, 3 | p9 "Puddle Day" | n/a (written answer, no choices) |
 | SK-TC2a-S13 | TC2a-C13 | match, 2, 2 | stem: Ollie's kite fell into the pond. "This is the worst day ever!" His dad smiled and put an arm around him. "I... | 3 / 2 rows |
 | SK-TC2a-S14 | TC2a-C14 | mc, 1, 3 | stem: The new girl, Pilar, sat alone at lunch. I waved, but she only looked at her tray. "She thinks she is too g... | 4 / 3 |
-| SK-TC2a-S15 | TC2a-C15 | ms, 2, 3 | stem: Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the sp... | 5 / 4 |
+| SK-TC2a-S15 | TC2a-C15 | ms, 2, 3 | stem: Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt from standi... | 5 / 4 |
 
 ### 3.T.SS.2.a (figurative language) (code 3.T.SS.2.a)
 
@@ -162,11 +162,11 @@ In-order assignment: TT4a-C01 -> TT4a-S01; TT4a-C02 -> TT4a-S02; TT4a-C03 -> TT4
 | SK-TT4a-S07 | TT4a-C06 | mc, 1, 3 | stem: Here is stanza 1 of a poem called "Yo-Yo." My yo-yo drops down to the floor. It zips right back, then down ... | 4 / 3 |
 | SK-TT4a-S08 | TT4a-C07 | hottext, 2, 2 | stem: Here are five lines from a poem about a long car ride. | 5 / 5 lines |
 | SK-TT4a-S09 | TT4a-C08 | ebsr, 2, 3 | p9 "The Ice Cream Truck" | 4 + 4 / 3 + 4 |
-| SK-TT4a-S10 | TT4a-C09 | mc, 1, 3 | stem: Here is stanza 2 of a poem called "The Scooter Ride." I grip the bars and push off slow. The scooter picks ... | 4 / 3 |
+| SK-TT4a-S10 | TT4a-C09 | mc, 1, 3 | stem: Here is stanza 2 of a poem called "The Scooter Ride." I grip the bars and push off slow. The scooter picks ... | 4 / 4 |
 | SK-TT4a-S11 | TT4a-C10 | mc, 1, 3 | stem: Poem A: The Cat Purr, purr, purr by the fire, Purr, purr, purr in the sun. The cat stretches out on the rug... | 4 / 3 |
 | SK-TT4a-S12 | TT4a-C11 | ms, 2, 2 | stem: Stanza 1: Out by the fence, the dirt is deep. The puppy sniffs and starts to scratch. His paws fly fast, hi... | 5 / 4 |
 | SK-TT4a-S13 | TT4a-C13 | mc, 1, 3 | stem: Here is a stanza from a poem. The sun comes up behind the hill. The roosters crow and call. I jump out of m... | 4 / 4 |
-| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In July, the pear tree's leaves are thick. The fruit hangs soft and sweet. A squirrel naps along ... | 3 + 3 / 3 + 3 |
+| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In August, the pear tree's leaves are thick. The fruit hangs soft and sweet. A squirrel naps alon... | 3 + 3 / 3 + 3 |
 | SK-TT4a-S15 | TT4a-C15 | mc, 1, 3 | stem: Stanza 1: The candle flame is tall and bright. It lights the whole dark room. I watch the dancing shadows t... | 4 / 3 |
 
 **Note on the live-choice column (corrected after review):** the earlier version of this log said hints 1 and 2 rule out nothing. That was wrong: in about two dozen items they steer a child away from a choice or toward a region of the passage. The column now shows only what I can state firmly: the number of choices at the start, and the number left after hint 3 alone. I re-read every hint 3 by hand after the review. A hint 3 now settles at most one choice (one option, one blank option, one row, one step, or one Part A choice with a pointer to match Part B). Hints that settled two (TT1a-S04, TT4a-S11) were rewritten in this pass. For hints 1 and 2, the reviewer's method (section 6 of SIM-1-review.md) is the better count; I did not keep a per-item ladder figure because I could not make it reliable. Treat a ladder count as a reviewer job.
@@ -262,9 +262,34 @@ Source: the "Final blind re-solve" section of `SIM-1-rereview.md` (24 of 24 agre
 
 **Needs blind re-solve (final pass).** TT4a-S14 (rebuilt); TT4a-S09 (new Part A, key, hint 3); TSPS-S07 (slot 1 key); TSPS-S14 (row 2); TT1a-S15 (stem and prompt); TT1d-S08 (rows 1 and 4); TC2a-S15 (both notes); 3.T.T.1.d p11 and p14 (wording only).
 
+## 2f. Fixes after the sweep re-solve
+
+Source: the "Sweep: last edits" section of `SIM-1-rereview.md` (12 of 12 keys agreed; two MUSTs). This section supersedes 2e for the items named here.
+
+**MUST 1, TT1d-S08.** Row 4 ("The finished decorations end up in the family's home") was keyed Both but neither story said where the decorations were. Both stories now name the place: Story 1 "... on a shelf in the living room", Story 2 "... on the tree in their living room". The how and why quote those places. Similarity to C08 is 0.14.
+
+**MUST 2, TT1a-S11.** Rebuilt with a different frame: a choose-two item ("Which TWO statements about Mr. Orr's words are true?") about a librarian and a boy stuck on a puzzle. The text is no longer C11's template, the prompt is new, the keys sit at positions 2 and 4, and the distractors are plain false statements. Similarity to C11 is 0.10 (was 0.225); no shared option. Hand count: start 5, explicit 4 (hint 3 removes the choice about Milo leaving the table), ladder 3.
+
+**SHOULDs done.**
+
+- TT4a-S10: new prompt ("What does the one-word last line do for this stanza?"); hint 3 now reads "Read the stanza out loud and listen to how the last line sounds next to the lines before it. The poem does not say the ride lasts all day, so one choice can go."; the why no longer says "long, quick lines".
+- TT4a-S08: the prompt says "lasts a long time", so the key line ("The road goes on, and on, and on.") no longer echoes it. Hint 3 asks whether the thing described keeps going and does not name the Honk line.
+- TT4a-S09: rebuilt around stanza 2: "What does stanza 2 show that stanza 1 and stanza 3 do not?" Key: the speaker getting the treat and eating it fast. Part B key: "I lick it fast, and then it's gone." Every Part A distractor comes from another stanza. Hint 1 is a strategy, not a location. The forced poem line is now "I'll save my coins for another day".
+- TT4a-S14: now asks about stanzas 2 and 3 with different option lists in the two blanks (key positions differ from C14), and the "snow" distractor is replaced by "leaves turning bright colors". The tree's fruit stanza is set in August (pears ripen in late summer), not July.
+- TSPS-S14: the "clump" row is replaced by a structural one: "Someone has to take something apart to find the cause" (only The Slow Sink: Mr. Okon unscrews the pipe). Hint 3, how and why changed.
+- TSPS-S07: Thea now says "We should fix that gap" in the story, so her plan is stated; the two silly distractors are replaced by "wait for the rain to stop".
+- TC2a-S15: Mia's note says her feet hurt "from standing", and the why now says both found the wait hard (Mia says the line was long and her feet hurt; Theo says he got tired waiting) and no longer says Mia said "tired".
+- Sources: I could not confirm a source for the pear-harvest month or for an "ofrenda" tradition, so I softened both. The pear item no longer names a harvest month beyond the stanza's own details, and Story 1 of TT1d-S08 does not name a holiday or tradition (paper flowers by a photo on a shelf in the living room).
+
+**Not done.** TC2a-S15 keeps DOK 3 (a reviewer note suggests DOK 2); TSPS-S14 row 4 "more than one try" is unchanged; TT4a-S14's `misconception` is generic by design.
+
+**Gates.** `check-content` PASS (0 failures, 9 warnings, none in a new item); check-writing 0 failures; check-instructional-copy 28 assertions passed; no passage in my lessons above FK 4.5; `greedy.js` missing(0) for all lessons; browser smoke test ALL OK (15 of 15 core items offered their own similar item in all eight lessons); the test server was stopped by its process id.
+
+**Needs blind re-solve (sweep pass).** TT1a-S11 (rebuilt); TT4a-S09 (rebuilt); TT4a-S14 (new slots); TT4a-S08 and TT4a-S10 (prompt and hint 3); TSPS-S14 (row 1); TSPS-S07 (stem and distractors); TT1d-S08 (both stories and row 4); TC2a-S15 (Mia's note and the why); the p9 poem line in 3.T.T.4.a.
+
 ### Similarity, measured for every new item
 
-I ran the reviewer's word-set Jaccard script (`simrev/sim.js`) on all 96 new items against the core item named in `like`, on the final data. Result: **every new item is at or below 0.21 except one**, TC2a-S12 (0.28). That one is the constructed-response item, which shares its instruction with C12 by design; the re-review accepted it. One item sits at 0.21: TT1a-S11 (0.207 by the re-reviewer's count). TT1a-S15 and TT4a-S09, which were at 0.21 here, are rebuilt in the final pass (section 2e). No other item is above 0.20. The earlier log said that all near-copy rewrites were at or below 0.21 except three items. That was wrong, and the figures here replace it. Shared options with the core item (`opt.js`): at most one in every new item; items that share exactly one: TT1d-S05, TT1d-S11, SS2a-S14.
+I ran the reviewer's word-set Jaccard script (`simrev/sim.js`) on all 96 new items against the core item named in `like`, on the final data. Result: **every new item is at or below 0.21 except one**, TC2a-S12 (0.28). That one is the constructed-response item, which shares its instruction with C12 by design; the re-review accepted it. After the last pass (section 2f) the highest figures are 0.20 for TT1c-S13, TSPS-S04, TSPS-S13, SS2a-S10 and TT4a-S15; no other new item is above 0.20 apart from TC2a-S12. The earlier log said that all near-copy rewrites were at or below 0.21 except three items. That was wrong, and the figures here replace it. Shared options with the core item (`opt.js`): at most one in every new item; items that share exactly one: TT1d-S05, TT1d-S11, SS2a-S14.
 
 ### Hand-counted live choices for the items changed in this pass
 
@@ -272,8 +297,8 @@ Columns: start / explicit (after what hint 3 states) / ladder (after hints 1 and
 
 | Item | Start | Explicit | Ladder | Note |
 |---|---|---|---|---|
-| TSPS-S14 | 3 per row x 4 | 3, 3, 3 + one row settled | 3 per row | Hints 1 and 2 do not narrow; hint 3 settles the clump row |
-| TSPS-S07 | 3 + 3 | 1 + 3 | 1 + 2 | Hint 3 completes slot 0 (Zane's buckets) and asks about slot 1 |
+| TSPS-S14 | 3 per row x 4 | one row completed + 3 per row | 3 per row | Hint 3 completes the take-something-apart row |
+| TSPS-S07 | 3 + 3 | 1 + 3 | 1 + 1 | Slot 0 is completed by hint 3; Thea now says "We should fix that gap" |
 | TT1a-S12 | 4 + 4 | 3 + 4 | 3 + 3 | Hint 3 removes the turn-back choice in Part A only |
 | TT1a-S09 | 3 per row x 4 | 3 per row | 2 per row | Hint 2 asks what Kemi knows or does next |
 | TT1a-S06 | 4 | 3 | 2 | Hint 1 asks which sentence paints the shop |
@@ -287,10 +312,10 @@ Columns: start / explicit (after what hint 3 states) / ladder (after hints 1 and
 | TC2a-S13 | 4 columns x 3 rows | 3 columns | 3 | Speaker tags are gone; the sentences around each quote decide it |
 | TC2a-S14 | 4 | 3 | 3 | Hint 2 points to what Pilar's body does |
 | TC2a-S15 | 5 | 4 | 3 | Hint 2 asks for opinions found in both notes |
-| TT4a-S08 | 5 | 4 | 3 | Hint 1 limits it to lines with a repeated word |
-| TT4a-S09 | 4 + 4 | 3 + 4 | 3 + 2 | Hint 2 sends the child to stanza 2 and stanza 3; two stanza-3 lines are live in Part B |
-| TT4a-S10 | 4 | 3 | 3 | Hints 1 and 2 do not remove a choice |
-| TT4a-S14 | 3 + 3 | 3 + 3 | 2 + 2 | Hint 3 removes nothing; the month in hint 2 and the details in the stanza decide it |
+| TT4a-S08 | 5 | 5 | 2 | Hint 3 asks which repeats fit something that keeps going; the Honk line is the live rival |
+| TT4a-S09 | 4 + 4 | 3 + 4 | 1 + 2 | Hint 2 asks which event belongs only in the middle stanza |
+| TT4a-S10 | 4 | 3 | 2 | Hint 2 asks the child to listen to the last line |
+| TT4a-S14 | 3 + 3 | 3 + 3 | 3 + 1 | Hint 3 removes nothing; slot 2 narrows once the twigs are read |
 | SS2a-S05 | 5 | 4 | 3 | Hint 2 asks which sentences compare, so the three comparisons stay live |
 | SS2a-S07 | 4 + 4 | 3 + 4 | 3 + 3 | Two Part B lines now tempt the wait-for-the-day choice |
 | SS2a-S12 | 4 + 4 | 3 + 4 | 3 + 2 | Two Part B lines now contain an amount |

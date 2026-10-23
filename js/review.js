@@ -95,7 +95,7 @@
     const items = picks.map(([k, it, comp]) => {
       const L = PP.lessons[k], p = pre(k);
       const c = JSON.parse(JSON.stringify(it));
-      c.std = it.std ? it.std.slice() : [L.code]; c.comp = comp; c.src = k;
+      c.std = it.std ? it.std.slice() : [L.code]; c.comp = comp; c.src = k; c.form = (L.testB || []).indexOf(it) >= 0 ? "B" : "A";
       c.passages = (it.passages || []).map(pid => p + pid);
       (it.passages || []).forEach(pid => {
         if (passages.some(x => x.id === p + pid)) return;

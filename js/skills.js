@@ -260,8 +260,12 @@
     const n = r.tries;
     /* the answers to these same questions were shown on an earlier try. With two forms,
        "these same questions" means this form (PP-004); a one-form lesson is unchanged. */
-    const after = hasFormB(k) ? !!(n > 1 && seenForm(r, form)) : !!(r.answersSeenAt && n > 1);
+    const seenEarlier = hasFormB(k) ? !!(n > 1 && seenForm(r, form)) : !!(r.answersSeenAt && n > 1);
+    /* RR-01: answers shown in a review (reviewSeenBy, new and additive) count as seen, even on the first try */
+    const seenInReview = !!(r.reviewSeenBy && typeof r.reviewSeenBy === "object" && r.reviewSeenBy[form === "B" ? "B" : "A"]);
+    const after = seenEarlier || seenInReview;
     const att = { d: today(), got, max, ok: pass, n, afterAnswers: after, form };   /* form: new in PP-004 */
+    if (!seenEarlier && seenInReview) att.seenIn = "review";
     r.attempts = (r.attempts || []).concat(att).slice(-20);
     if (pass) {
       if (!r.passedAt && !r.legacyUndated) { r.passedAt = today(); r.passTry = n; r.passBy = "test"; r.passForm = form; }
@@ -273,9 +277,16 @@
   }
   /* The child opened See my answers after a skill check. With two forms the form is
      noted too (answersSeenBy, PP-004); a lone older answersSeenAt was form A's. */
-  function answersSeen(k, form) {
+  function answersSeen(k, form, viaReview) {
     if (!lessons[k]) return;
     const r = rec(k);
+    if (viaReview) {
+      /* a review showed this form's check answers: noted in its own field; nothing else about the record changes */
+      if (!r.reviewSeenBy || typeof r.reviewSeenBy !== "object" || Array.isArray(r.reviewSeenBy)) r.reviewSeenBy = {};
+      r.reviewSeenBy[form === "B" ? "B" : "A"] = new Date().toISOString();
+      save();
+      return;
+    }
     if (hasFormB(k)) {
       if (!r.answersSeenBy || typeof r.answersSeenBy !== "object") r.answersSeenBy = r.answersSeenAt ? { A: r.answersSeenAt } : {};
       r.answersSeenBy[form === "B" ? "B" : "A"] = new Date().toISOString();
@@ -1245,7 +1256,7 @@
         const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
         if (r.passTry) card.appendChild(make("p", "go-note pass-try", "For grown-ups: passed on try " + r.passTry + (two && pa ? ", on form " + attForm(pa) : "") + "." +
           (r.passTry > 1 ? (two ? " Each form uses the same questions every time it comes up." : " The check uses the same questions each time.") : "")));
-        if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", "For grown-ups: passed after seeing the answers on an earlier try."));
+        if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", pa.seenIn === "review" ? "For grown-ups: passed after seeing these questions' answers in a review." : "For grown-ups: passed after seeing the answers on an earlier try."));
         /* PP-004 Retained: shown only with PP_FLAGS.retained on */
         if (retainedShown(cur)) card.appendChild(make("p", "go-note retained-line", "Retained: passed again on form " + r.retainedForm + " on " + niceDate(r.retainedAt) +
           ", at least " + RETAIN_DAYS + " days after the first pass and on different questions, without seeing that form's answers first."));

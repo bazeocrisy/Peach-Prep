@@ -2758,12 +2758,12 @@ PP.addLesson({
       why: "The answer is \"The wiping did not solve the problem.\" Nell cleans the floor, but the dog leaves more prints right after. The sentence does not compare two things, it does not tell about an earlier time, and the floor does not stay clean." },
     { id: "SK-TSPS-S07", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C06"],
-      stem: ["Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ladder with Mr. Fox and looked at the ceiling. She saw a gap where the roof met the wall."],
+      stem: ["Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ladder with Mr. Fox and looked at the ceiling. She saw a gap where the roof met the wall. \"We should fix that gap,\" Thea said."],
       prompt: "Zane and Thea each have a plan for the leak. Choose the best answer for each blank.",
       text: "When the water drips, Zane wants to {0}. Thea thinks the class should {1}.",
       slots: [
-        { options: ["set out more buckets", "paint the ceiling a new color", "move the art room to the gym"], answer: 0 },
-        { options: ["fix the gap where the roof meets the wall", "set out more buckets", "close the art room for the year"], answer: 0 }
+        { options: ["set out more buckets", "paint the ceiling a new color", "wait for the rain to stop"], answer: 0 },
+        { options: ["fix the gap where the roof meets the wall", "set out more buckets", "wait for the rain to stop"], answer: 0 }
       ],
       clue: "Two characters can handle one problem in different ways. Find what each one does.",
       hints: [
@@ -2775,10 +2775,10 @@ PP.addLesson({
         "Zane sets out more buckets to catch the drips.",
         "Thea climbs a ladder to look at the ceiling. She sees the gap where the roof meets the wall and wants to fix it.",
         "The answers are \"set out more buckets\" and \"fix the gap where the roof meets the wall.\"",
-        "Nobody paints, moves the room or closes it for the year."
+        "Nobody paints the ceiling, and nobody just waits for the rain to stop."
       ],
       misconception: "A common mix-up is giving both characters the same plan. Check who does what.",
-      why: "The answers are \"set out more buckets\" and \"fix the gap where the roof meets the wall.\" Zane puts out buckets, and Thea looks at the ceiling for the gap. Nobody paints the ceiling, moves the room or closes it." },
+      why: "The answers are \"set out more buckets\" and \"fix the gap where the roof meets the wall.\" Zane puts out buckets, and Thea looks at the ceiling for the gap. Nobody paints the ceiling, and nobody just waits for the rain to stop." },
     { id: "SK-TSPS-S08", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C07"],
       stem: ["Every morning, the sticky notes on Tyree's bulletin board fell off. First, he pressed each note down harder, but they fell again. Then he wiped the dusty board with a damp cloth and pressed each note on. The notes stayed up all week."],
@@ -2936,7 +2936,7 @@ PP.addLesson({
       prompt: "Think about \"The Slow Sink\" and \"Lights Out for Sea Turtles.\" Is each sentence true for only one text or for both? Match each sentence.",
       cols: ["only The Slow Sink", "only Lights Out for Sea Turtles", "both texts"],
       rows: [
-        { text: "A part is added after the fix to catch any new clump.", answer: 0 },
+        { text: "Someone has to take something apart to find the cause.", answer: 0 },
         { text: "The fix removes or changes the cause of the problem.", answer: 2 },
         { text: "Many separate sources add up to one big problem.", answer: 1 },
         { text: "More than one try is made before the problem is solved.", answer: 2 }
@@ -2945,16 +2945,16 @@ PP.addLesson({
       hints: [
         "To compare two texts, check each sentence against one text, then the other. It is true for both only if it fits both.",
         "In each text, reread the tries, the part that tells the cause, and the ending.",
-        "Nothing in the turtle article is a clump, so one sentence does not fit it. Sort the other sentences the same way."
+        "Nothing in the turtle article gets taken apart, so one sentence does not fit it. Sort the other sentences the same way."
       ],
       how: [
-        "Only in \"The Slow Sink\" is a part added after the fix: a small screen over the drain catches any more bristles.",
+        "Only in \"The Slow Sink\" does someone take something apart to find the cause: Mr. Okon unscrews the pipe and tips out the clump.",
         "Only in the turtle article do many lights, from hotels and street lamps, add up to one big glow that confuses the hatchlings.",
         "Both texts end with a fix aimed at the cause: Mr. Okon clears the clump out of the pipe, and the town changes the lights that confuse the hatchlings.",
         "Both texts also try more than one thing: hot water and a plunger, and one hotel and then the whole beach."
       ],
       misconception: "A common mix-up is choosing one text when the sentence fits both. Check each sentence against both texts.",
-      why: "The screen added after the fix is only in \"The Slow Sink,\" and the many sources of light are only in the turtle article. In both texts the final fix removes or changes the cause (the clump, the lights), and both make more than one try before the solution." },
+      why: "Taking something apart to find the cause happens only in \"The Slow Sink,\" and the many sources of light are only in the turtle article. In both texts the final fix removes or changes the cause (the clump, the lights), and both make more than one try before the solution." },
     { id: "SK-TSPS-S15", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.1.b"], passages: [],
       like: ["SK-TSPS-C15"],
       stem: ["(1) The sunflower seeds in the school garden never sprouted.", "(2) First, the class watered the seeds twice a day.", "(3) But the soil stayed bare.", "(4) Then Mr. Hallam dug a small hole and found the seeds buried far too deep.", "(5) ______", "(6) Soon, green shoots pushed up through the soil."],

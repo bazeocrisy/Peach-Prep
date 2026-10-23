@@ -462,3 +462,140 @@ Only S06 and S12 are over 0.21, and only on the all-words measure (S2). S03 is a
 2. S06, S12: lower the overlap; vary the S12 decoys (S2).
 3. p1: new topic (M2).
 4. Caption stems and S13 decoys (S4); C13 h3 (S5); C08 shape (S6); Learn It lines (S7).
+
+
+---
+
+# Fourth review (3.T.C.1.c)
+
+**Reviewer:** independent, did not author. No lesson edits, no git. Scratch files are in `scratchpad/c4/` (`load.js`, `blind4.js`, `show.js`, `keyed.js`, `jac4.js`, `lex.js`, `topics.js`, `browse4.py`). Read the earlier reviews only after my answers were saved.
+
+## Verdict: CHANGES REQUIRED
+
+Keys, factual claims, scoring and browser behaviour are sound. Two defects block acceptance: one `how`/h3 that describes choices the child cannot see, and one h3 that restates the key.
+
+| Id | Severity | One line |
+|---|---|---|
+| M1 | MUST | S13: h3, `how` and `why` talk about a "Congratulations" notice and a "gold star" notice; no choice says either, so Show me how contradicts the screen |
+| M2 | MUST | S05: h3 ("a photo with no words cannot tell neighbors the day, time or place") restates one key ("big words that tell the day, the time and the place") |
+| S1 | SHOULD | C14 and S14: the key is clearly the longest option and also the top word-match |
+| S2 | SHOULD | C01: the key repeats the slide's own phrases; a word-matcher gets it. DOK of C01 (3) differs from C02 (2) for the same task |
+| S3 | SHOULD | S10 reuses C10's prompt frame; it is over 0.21 on the all-words and content-word measures |
+| S4 | SHOULD | S12: all three wrong photos are absurd, so it is solvable by elimination; C12's decoys are subtler |
+| S5 | SHOULD | Set 1 is four slides about one kaleidoscope, set 2 is five items on one pinwheel poster, and C04 and C09 test the same label rule |
+| S6 | SHOULD | C06's h3 and `how` (a boxed pinwheel on a store shelf shows no children) come before C10, whose key is "Pinwheels are sold in many toy stores" |
+
+7 NOTEs follow.
+
+## 1. Blind solve
+
+**Method.** `load.js` loads T-C.js in a Node `vm` with a mock `PP.addLesson`. `blind4.js` resolves every `{ref}` and prints the passages, core C01-C15, similar S01-S15 and Together P1-P5. Choices, options, slots, match rows and order steps get a seeded shuffle. It removes `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `sample`, `criteria` and `comp`, recursively. I grepped `stripped.json` for those words as JSON keys and as prose: no key survived. The prose hits were "answer(s)", "why" and "how" inside prompts and titles ("Choose the best answer", "Which sign ... and why?"). I saved my 35 answers to `my-answers.json` (made read-only) **before** I extracted any key. Keys were in a separate sealed file.
+
+**Result: 35 of 35 agree (core 15, similar 15, Together 5).**
+
+**How blind it was.** My first `show.js` print of the core set came out before I fixed the hottext option handling, so I saw C01-C15 in two different shuffles. I had not seen any key or `why`. Before solving I saw item ids and types in a grep (`SK-TC1c-C01 mc ...`) and the first 1,500 characters of T-C.js (a different lesson). I did not open the lesson source, the author log or any review file until the answers were saved. So the solve was blind to keys and explanations.
+
+Items where I paused: C01 (A, the girl with the tube, is close), C12 (B, C and D), S12 (the answer is only A and B by elimination), C08 (A and E against the very similar B and D).
+
+## 2. Keyed text beside why, how and hints (all 35)
+
+I printed the keyed text next to clue, h1-h3, `how`, `why` and the misconception for core, similar and Together (`keyed.js`). Every key matches its `why` and `how`, except S13 (M1). `how` steps end at the answer on every item.
+
+## 3. Hand recount of live choices (core, after clue/h1/h2/h3)
+
+The engine never narrows (`hint()` in player.js "never outlines or narrows"), so a choice is dead only if the hint text names it.
+
+| Item | Start | After h1-h2 | After h3 | Note |
+|---|---|---|---|---|
+| C01 | 4 | 4 | 3 | jar out; h3 also states "must show the mirrors" |
+| C02 | 4 | 4 | 3 | clapping |
+| C03 | 4 | 4 | 3 | pattern fact |
+| C04 | 5 | 5 | 4 | "Tube" |
+| C05 | 5 (pick 2) | 5 | 4 | the "Buy yours today" sign |
+| C06 | 4 | 4 | 3 | box on a shelf |
+| C07 | 3 + 3 | 3 + 3 | 2 + 3 | long paragraph |
+| C08 | 5 (pick 2) | 5 | 4 | "prettiest toys" |
+| C09 | 4 rows | 4 | 4 | process only, nothing removed (good) |
+| C10 | 10 | 10 | 9 | line (2) |
+| C11 | 4 | 4 | 3 | wind |
+| C12 | 5 (pick 2) | 5 | 4 | frowning adult |
+| C13 | 4 | 4 | 3 | h3 dismisses a mood picture, so A is soft-out |
+| C14 | 4 | 4 | 3 | faded photo |
+| C15 | 5 (pick 2) | 5 | 4 | stalk |
+
+No ladder drops below three live choices (four on pick-two, nine on C10). h1 is a strategy, h2 says where to look and h3 removes one option, on all 15. No h3 narrows to the key. The one exception is the S05 echo (M2).
+
+## 4. Similarity (own `jac4.js`; stem + prompt + text + options; `like[0]` core item; no passage added)
+
+Three measures: **A** word-set of words with 3 or more letters (the earlier reviews' measure, stop words kept); **B** word-set of all words; **C** multiset (bag) of all words. Shared options are exact normalised matches.
+
+| Pair | A | B | C | Shared opts |
+|---|---|---|---|---|
+| S01~C01 | 0.100 | 0.158 | 0.179 | 0 |
+| S02~C02 | 0.173 | 0.193 | **0.248** | 0 |
+| S03~C03 | 0.146 | 0.185 | 0.199 | 0 |
+| S04~C04 | 0.109 | 0.127 | 0.175 | 0 |
+| S05~C05 | 0.132 | 0.175 | 0.203 | 0 |
+| S06~C06 | 0.111 | 0.169 | 0.196 | 0 |
+| S07~C07 | 0.167 | **0.216** | **0.248** | 0 |
+| S08~C08 | 0.100 | 0.157 | 0.185 | 0 |
+| S09~C09 | 0.127 | 0.190 | 0.153 | 0 |
+| S10~C10 | 0.180 | **0.226** | 0.129 | 0 |
+| S11~C11 | 0.106 | 0.141 | 0.183 | 0 |
+| S12~C12 | 0.165 | 0.203 | **0.249** | 0 |
+| S13~C13 | 0.117 | 0.179 | **0.216** | 0 |
+| S14~C14 | 0.126 | 0.174 | 0.160 | 0 |
+| S15~C15 | 0.170 | 0.189 | 0.166 | 0 |
+
+- Measure A (the project's measure): maximum 0.180, all under 0.21. Shared options: zero everywhere.
+- Content words only (stop words removed): everything is 0.166 or lower except **S10, 0.237** (shared: poster, numbered, line, fit, purpose, the digits 1-4).
+- The B and C excesses come from function words and the prompt frame ("Which TWO ... Choose two answers", "blank", "picture", "slide"). Except S10 they are not content overlap. I treat S10 as S3, not a MUST, because it passes A. The previous near-copies (S09, S14, S15) are now 0.127, 0.126 and 0.170.
+
+## 5. Findings
+
+**M1. S13, `how`/h3/`why` describe notices that are not on the screen.** The choices are: gym doors + "Chairs will be set up on Thursday before the concert begins!"; singers on a stage + "Thank you, helpers, for setting up the chairs for last year's concert!"; a program + "The concert lasts one hour..."; stacks of chairs + "Helpers needed Thursday at two o'clock. Sign up here!" h3 says "Congratulations is for people who already performed". `how` says "the notice that congratulates singers ... the gold star notice invites people to look back at last year", and "The first notice shows the chairs". No choice has "Congratulations" or a gold star, and the key is not "the first notice" after the shuffle. `why` repeats "congratulate, look back". A child who presses Show me how reads an explanation about options that do not exist. *Fix:* rewrite h3, `how` and `why` against the real four choices (the gym-doors notice only announces; the thank-you notice is about last year; the program informs), and drop "first".
+
+**M2. S05, h3 echoes the key.** Key: "big words that tell the day, the time and the place" and "a picture of families laughing at a game booth". h3: "A photo with no words cannot tell neighbors the day, time or place." That is nearly the key's own wording, and the child can then choose it as the first of two. The core C05 h3 does not do this. *Fix:* h3 should rule out a wrong option without naming the property the key has, for example "A tiny map cannot be read from the sidewalk. Check the other four ideas the same two ways."
+
+**S1. C14, S14: key is the longest and the top word-match.** C14: key 83 characters against 53-69; it shares 6 content words with the stem, the others 0-1. S14: key 95 against 50-57, shares 11 words, the others 0-4. Other keys that are longest by a small margin: C02 (+1), C03 (+1), C06 (tie), C13 (+4), S01 (+4), S03 (+6). "The caption that tells the most" is partly a length idea, but a child can pick the longest. *Fix:* give C14 and S14 one long wrong caption (for example one that adds an unsupported detail), so length alone does not work. Make one other option in C13 as long as the key.
+
+**S2. C01, key echoes the slide.** The slide says "A few bits of glass can look like a big pattern" and "mirrors reflect the glass pieces again and again". The key is "a few glass bits beside two mirrors, shown again and again as a pattern". My overlap solver picks it on 6 shared content words against 2/1/1. C04's stem also tells the contents of the kaleidoscope (tube, mirrors, colored glass), which helps C01 and C05. DOK: C01 is marked 3 and C02 is marked 2 for the same picture-to-slide matching task. *Fix:* put a decoy that reuses slide words (for example "a jar of glass pieces that look the same from every side"), or reword the key so it does not repeat the slide; set both DOKs to 2.
+
+**S3. S10 reuses C10's prompt frame.** "Which numbered line does not fit the purpose of the poster?" against "Which numbered line ... fit the purpose of Imani's poster?" Both ask which line to remove from a poster and both decoy lines are a true, related fact about the place. Measure A 0.180, B 0.226, content words 0.237. *Fix:* reword the prompt ("Ben should cut one line. Which?") and make the off-purpose line a different kind of off-purpose (for example a joke or an apology).
+
+**S4. S12, all the wrong photos are absurd.** Wrong choices: a quiet room with a closed door; teenagers in uniform marching; an adult frowning at papers. A child can solve by elimination without thinking about readers aged eight or nine. C12 has subtler decoys (older children, an empty field). Teenagers is the only age cue. *Fix:* replace the closed door with a near-miss, such as "children about five years old pressing paper into a box", and replace the frowning adult with a photo of the right age doing a different activity.
+
+**S5. Variety and a repeated rule.** Set 1: kaleidoscope in C01, C03, C04 and C05 (four of five), accordion C02. Set 2: C06-C10 are all Imani's poster (C06-C10 plus p3). C04 (label, hottext) and C09 (label, match) test the same rule, "a label is a word or two that names the part", with the same decoy, a sentence-length label. A child who misreads the kaleidoscope slides loses most of set 1. *Fix:* move one kaleidoscope item to a different context, and make C09 test "which part the arrow points to" only (drop the long-sentence row, which C04 already has).
+
+**S6. Cross-item hint in set 2.** C06's h3 says a box on a store shelf fails because the poster invites children to make something. C06's `how` repeats it. C10, in the same set, asks which line to remove, and its key is "Pinwheels are sold in many toy stores." A child who used C06's hint has the idea for C10. It is not a full giveaway (C10 has ten lines). *Fix:* change the C06 decoy to a different off-purpose picture (for example children at a store checkout counter), or keep the store theme out of C10.
+
+**NOTE N1. Pre-answer and topic checks (done with `topics.js` across all of js/data).** Peanut occurs in this lesson only in p1, practice P1-P5 and the P addons: no core, similar, hint, `how`, Watch Me, teach or test mention. Kaleidoscope, accordion, teapot, orchid, pinwheel, walk-a-thon and origami occur only in T-C.js 3.T.C.1.c (core, similar and `how`/`why` of the same items). Origami and paper crane also appear once in three other lessons as a word in an example; no item duplicate. Other lessons (3.T.SS.1.a, 3.T.T.2.d, 3.T.T.1.e) reuse the peanut topic; that is outside this lesson's core.
+**NOTE N2. Hints.** S04 h2 and h3 both rule out "Orchid" (same elimination twice). S09 h3 gives away the whole "Wing" row. C01 h3 says why the jar fails ("shows the glass but not the mirrors"), which also states the rule the key meets. None narrows below three.
+**NOTE N3. Browser (390 x 844).** `node verification/serve.js . 8741`, Playwright with touch and mobile emulation. I ran all 15 core items through sets 1-3 (`browse4.py`, screenshots in `scratchpad/c4/shots/`). Every item rendered with no horizontal scroll, before or after three hints, and no control under 44 px. Three hints appeared on all 15. The correct response gave "That's right!" on all 15. No page errors. I set the answers through the player context, not by tapping every choice. The server was killed by pid.
+**NOTE N4. Alignment.** Official wording: "Create multimodal texts, using features of pre-selected modes for a specific purpose and audience." Picture, caption, label, sound, sign and audience items fit. Points: choose-two, two-blank dropdown and match are 2; the rest are 1. All formats are choose-from-options, with writing in `write`.
+**NOTE N5. Grade level.** Nothing is kindergarten-like. The longest stems (C13, C15) are a lot of reading for a one-point item.
+**NOTE N6. S15 (teapot).** The key (spout, handle) is clear and the stem defines every part. The nouns "opening" and "loop" in the slide text are not the stem's definition words ("narrow piece that sticks out", "curved piece"), so this is not a word-match.
+**NOTE N7. Distinctness.** No two items differ only by names or numbers. P4 and C01 ask the same question ("Which picture would fit Slide 4 best?") for different topics; fine.
+
+## 6. Facts (checked with WebFetch where it worked)
+
+| Claim | Result | URL |
+|---|---|---|
+| Accordion: moving air from the bellows passes over metal reeds, which sound | Supported | https://kids.britannica.com/students/article/accordion/315777 |
+| Kaleidoscope: tube, mirrors, loose colored glass, reflections make patterns | Supported | https://science.howstuffworks.com/kaleidoscope.htm |
+| Peanut: yellow flower, peg grows down, peanut forms underground; harvest digs the plants and lays them to dry; combine picks the pods | Supported | https://nationalpeanutboard.org/news/how-peanuts-grow/ |
+| Peanut is a legume (beans and peas family); Georgia is the top state | Supported by the earlier review | https://www.georgiaencyclopedia.org/articles/business-economy/peanuts/ |
+| Wolves: packs, howls carry for miles | Earlier review | https://kids.nationalgeographic.com/animals/mammals/facts/gray-wolf |
+| Spring peepers (X on back, males' throat sac, sleigh-bell sound), orchid petals, crane beak, blueberry colours, teapot parts, leaf veins and blade | Standard; not fetched in this pass | |
+
+I found no factual error in the core, similar or Together items.
+
+## 7. What to change
+1. S13: rewrite h3, `how` and `why` for the four real choices (M1).
+2. S05: replace h3 (M2).
+3. C14 and S14: add a long wrong caption; C13 a long distractor (S1).
+4. C01: a decoy that reuses slide words; fix the DOKs (S2).
+5. S10: new prompt and a different off-purpose line (S3).
+6. S12: two near-miss decoys (S4).
+7. Move one kaleidoscope item; make C09 differ from C04 (S5).
+8. C06 decoy and C10 line should not share the store idea (S6).

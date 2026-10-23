@@ -561,3 +561,76 @@ Paper cup, juice, freeze about one hour until slushy, push the stick into the sl
 | 3.T.T.2.c | S05 | none | none | **ACCEPT** (igloo facts verified, teach covers the task) |
 
 Sources: https://en.wikipedia.org/wiki/Igloo (fetched 2026-10-23). Juice-pop method rests on common knowledge.
+
+
+## Sweep: last edits (independent blind re-solve, 2026-10-23)
+
+**Role.** Independent reviewer; I did not write or review these items before. Read-only: no lesson or code file changed, no git. Scripts and output are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/sweep/` (`load.js`, `blind.js`, `stripped.json`, `myans.json`, `key.js`, `jac.js`, `cc.js`). Items in this file's scope: **TS-CE S07** and **TS-CC S11**. The other ten items of the sweep (3.T.T.4.a, TS-PS, 3.T.T.1.a, 3.T.T.1.d, 3.T.C.2.a) are in the same-named section of `SIM-1-rereview.md`, where the full method, the blindness disclosure and the other findings are written.
+
+### Blind solve
+
+- `load.js` runs `T-T1.js`, `T-TS.js`, `T-C.js`, `T-SS.js`, `T-T34.js` in a `vm` sandbox with a mock `PP.addLesson` (indexed by `key` or `code`). `blind.js` printed stem, prompt, text, passages and seeded-shuffled options, slot options, columns and rows only. Stripped: `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like`. The grep of `stripped.json` for those words found only prompt prose.
+- Answers saved to `myans.json` (read-only) before any key was printed. Mine: **S07 "so"**; **S11 Both = alike, same = alike, while = different, Unlike = different.**
+- **Agreement: 2 of 2 items (S07 1 of 1 blank; S11 4 of 4 rows). Fully blind for both.** The only pre-solve prints were field names and, for the lesson's first item, a choice list that is not in this file's scope.
+
+### Keyed text beside `why`, `how`, hints, misconception
+
+- **S07.** Key "so". `why`, `how` and `misconception` agree with it.
+  - **`how` consistency check (the effect follows "because"): passes.** Line 1 says watering helped the plant grow. Line 2 says watering is the cause and growing is the effect. Line 3 says "the effect comes after the clue word, so the answer is so", and says "and" only joins and "until" tells when something stops. Line 4 says "Because ... points to a cause, but the part after it is the effect. That made his sentence backward." In Dan's sentence the words after "because" are "it grew taller than the fence", which is the effect, so line 4 is true and matches line 3 and the lesson's rule that "because" comes just before a cause. The MUST of section 12.9 (`how` line 4 stating the opposite) is closed.
+  - NOTE: line 2 begins "So watering is the cause", and "So" is also the answer word; a child can misread it as a hint. Start it with "Watering".
+- **S11.** `why`, `how`, hints and `misconception` agree with the key. `how` line 1 names sentences 2 and 4 (Both, same: alike); line 2 names sentences 3 and 5 (while, Unlike: different). Sentence numbers match the stem.
+
+### Hint ladder and live choices (hand recount)
+
+| Item | Start | Clue / h1 | h2 | h3 | Live |
+|---|---|---|---|---|---|
+| S07 | 3 | none (clue = h1) | none: "which of the two things happened first" | none: "try each clue word... says what Dan really did and what happened after" | 3 on paper. The h3 test does not remove "until" or "and", because both give a smooth sentence with Dan's action and the growth. The word "clue word" in the prompt is what removes them. |
+| S11 | 4 rows x 2 = 16 combinations | none (clue = h1) | none: "same, or not the same?" | **names no row**: "Pick one clue word and reread only its sentence..." | 16 |
+
+- **S11 hint 3 names no row. Confirmed.** The section 12 fault (hint 3 gave the "while" row) is gone. Hint 3 now repeats hint 2's question for each word; it adds little scaffold (NOTE), but it cannot give anything away.
+- **S07 hint 3 is a strategy only.** It no longer describes the function of "so". The section 12 SHOULD is closed.
+- NOTE: S07 hint 2 still says "Reread the stem". "Stem" is test-maker jargon; say "the story".
+
+### Clue words against what the lesson teaches (TS-CC S11)
+
+`clues.words` of TS-CC is `both, alike, same, but, however, unlike, different, while`. Teach point 2: "Clue words like both, alike and same tell you the things are alike." Point 3: "Clue words like but, however, unlike, different and while tell you the things are different."
+
+- **Both**: taught (alike). **same**: taught (alike). **while**: taught (different). **Unlike**: taught (different).
+- The column labels "alike" and "different" are the lesson's own words. The earlier fault ("Like" untaught; "likeness") is gone.
+- All four rows are the only occurrence of the word in the paragraph: sentence 2 "Both", sentence 3 "while", sentence 4 "same", sentence 5 "Unlike". The paragraph has no other taught clue word that could compete.
+
+### Distinctness from the paired core item
+
+Metric: word-set Jaccard over lowercase letters-and-apostrophes tokens of stem, prompt, text, options, rows, columns and passage text (numbers not counted), and all-words (multiset, min over max). Ceiling 0.21 and at most 1 shared option.
+
+| Item vs core | Word-set | All words | Without passages (set) | Shared options | Call |
+|---|---|---|---|---|---|
+| TS-CC S11 vs C09 | **0.181** | 0.158 | 0.181 | 0 | pass |
+| TS-CE S07 vs C07 | **0.138** | 0.120 | 0.346 | 1 ("until") | pass; 1 shared option is at the limit |
+
+- If digits are counted, S11 vs C09 is 0.222, because both items number their sentences (1) to (5) and C09's slots offer "2, 3, 4". The earlier re-reviews did not count digits, and the numbers are labels, not words, so I report 0.181. I note it so a reader running a digit-inclusive script is not surprised.
+- S07 without C07's passage reads 0.346, because C07's stem is one short sentence and the prompt frame is shared ("...cause and effect ... backward. Choose the clue word that fixes it."). With the passage the child sees, it is 0.138. The keys run opposite ways: C07 fixes "so" with "because", and S07 fixes "because" with "so". A child cannot copy the key. The correct option sits second in the options in both items (`answer` index 1); a shuffle of the option order would remove that. NOTE.
+- `like` mapping: S07 to C07 is honest (same task). S11 to C09 is looser (C09 finds the wrongly placed clue word; S11 sorts clue words by what they show). Same skill, different task. NOTE, as before.
+
+### Findings
+
+**MUST**: none.
+
+**SHOULD**
+
+- **TS-CE S07: the wrong options are not clue words, so the item can be solved by vocabulary.** The lesson's clue list is `because, so, since, as a result, that is why, this caused`. "so" is the only option on that list. A child who has read Teach can answer without deciding the direction of cause and effect. "until" is also a gap-filler that yields a believable sentence ("watered every day until it grew taller than the fence"), which is why the h3 test does not remove it. **Fix:** make at least one distractor a taught clue word that points the wrong way, for example options "so", "since", "until". Then the child must decide which part is the cause, which is the skill the item claims to test. (The other half of the old SHOULD, that hint 3 narrows to "so", is closed.)
+
+**NOTE**
+
+- S07: hint 2 "stem" jargon; `how` line 2 begins "So"; the correct option is in the middle position in both C07 and S07.
+- S11: hint 3 repeats hint 2 and is not a scaffold; `like` is looser than a same-task pair; the item has 16 combinations, so a blind guess succeeds 1 time in 16, fine for DOK 2.
+- Points and DOK are consistent with the core: S07 1 point (one blank), DOK 2; S11 2 points (four rows), DOK 2. Grade-3 suitability is right for both (trampoline and swing set; a sunflower). Fact check: nothing outside common knowledge. A trampoline "is round and flat" is true of many, not all, trampolines (some are rectangular); the sentence compares it with a swing set, so the claim is acceptable. NOTE.
+
+### Verdict per lesson (swept items)
+
+| Lesson | Item | Verdict | Reason |
+|---|---|---|---|
+| TS-CE | S07 | **ACCEPT** | the section 12 MUST (`how` line 4) is closed and the `how` lines are consistent; hint 3 no longer narrows; one SHOULD: distractors are not taught clue words |
+| TS-CC | S11 | **ACCEPT** | all four clue words are taught; hint 3 names no row; 0.181 and 0 shared options; no MUST or SHOULD open |
+
+Sources: https://webshop.skansen.se/en/seasons-holidays/christmas/christmas-ornaments-tree-decorations/straw-star-ornament and https://www.nfwf.org/node/3407/new-lighting-gives-sea-turtle-hatchlings-new-lease-life (both fetched 2026-10-23; used in `SIM-1-rereview.md`). The S07 and S11 items need no outside fact.

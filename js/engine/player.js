@@ -1113,6 +1113,11 @@
       el("res-review-btn").textContent = r.hidden ? "See my answers" : "Hide my answers";
       /* the review shows these check questions' answers: note it, so a later pass can say so (PP-003) */
       if (!r.hidden && run.set && run.set.kind === "skill" && run.mode === "test") window.PP_SKILLS.answersSeen(run.set.code, run.set.part === "tB" ? "B" : "A");
+      /* RR-01: a review shows lesson-check answers, so those lessons' forms count as seen (own field; awards nothing) */
+      if (!r.hidden && run.set && run.set.kind === "review") {
+        const seen = {};
+        run.set.items.forEach(it => { if (it.src && !seen[it.src + it.form]) { seen[it.src + it.form] = 1; window.PP_SKILLS.answersSeen(it.src, it.form === "B" ? "B" : "A", true); } });
+      }
     });
     el("res-again").addEventListener("click", () => start(isCheck(run.set) ? checkFor(run.set) : run.set.id, "test"));
     /* a skill's practice and test are two different question sets */

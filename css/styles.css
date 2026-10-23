@@ -1007,6 +1007,8 @@ mark.clue-w{background:none;color:inherit;}
 /* ENG-10: every code link is a 44px touch target. Inline links grow their hit area with padding and the
    same negative margin, so the text and the lines around it do not move. Flex rows set their own. */
 .std-link:not(.btn):not(.sk-chip):not(.sl-code):not(.std-level-link){display:inline-block;padding:12px 0;margin:-12px 0;}
+/* RR-03: inside a table cell the target boxes must not overlap: own line box, a gap, no negative margin */
+td .std-link:not(.btn):not(.sk-chip):not(.sl-code):not(.std-level-link):not(.zz){display:inline-flex;align-items:center;min-height:44px;padding:0 4px;margin:0 8px 4px 0;}
 /* catalog and habit rows: the row button, then its code links underneath, lined up with the title */
 .sl-row{display:flex;flex-direction:column;}
 .sl-codes{display:flex;flex-wrap:wrap;gap:0 12px;padding:0 6px 6px calc(1.6em + 16px);margin-top:0;}
@@ -1092,6 +1094,8 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 /* test mode: the question navigator scrolls inside its own box on a phone, never the page */
 .q-nav{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;margin:0 0 6px;max-width:100%;}
 .q-nav.is-many{flex-wrap:wrap;overflow-x:visible;}
+/* RR-04: on wider screens the navigator wraps, so no button is hidden behind a scroll */
+@media(min-width:600px){.q-nav{flex-wrap:wrap;overflow-x:visible;}}
 .qn-btn{flex:0 0 auto;min-width:44px;min-height:44px;border-radius:10px;border:2px dashed var(--edge-control,#8A7B6B);background:#fff;color:var(--navy);font-family:var(--head);font-weight:800;cursor:pointer;position:relative;}
 .qn-btn.is-answered{border-style:solid;border-color:var(--navy);background:var(--sel-tint,#E4ECF8);}
 .qn-btn.is-flagged::after{content:"";position:absolute;top:3px;right:3px;width:0;height:0;border-left:9px solid transparent;border-top:9px solid var(--try);}

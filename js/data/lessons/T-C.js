@@ -3900,7 +3900,7 @@ PP.addLesson({
       why: "The answer is \"Pilar may be too shy to talk to anyone yet.\" The narrator says she thinks she is too good, but her tight grip and pink ears are signs of shyness. Pilar did not wave, and nothing says she is better than others or does not want lunch." },
     { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
       like: ["SK-TC2a-C15"],
-      stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the space room was the best part of the whole day. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was my favorite thing. Next time I will bring a snack."],
+      stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt from standing, but the space room was the best part of the whole day. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was my favorite thing. Next time I will bring a snack."],
       prompt: "Mia and Theo each wrote a note about the same trip. Choose the TWO sentences that show something they both think.",
       choices: [
         { text: "Both of them found the long line hard to wait in.", correct: true },
@@ -3922,7 +3922,7 @@ PP.addLesson({
         "Only Theo plans to bring a snack, Mia does not say she liked the line, and the sore feet belong to Mia, not Theo."
       ],
       misconception: "A common mix-up is choosing a detail that only one writer gives. A shared view has to be in both notes.",
-      why: "The answers are \"Both of them found the long line hard to wait in.\" and \"Both of them liked the space room best.\" Mia and Theo both say the wait was tiring, and both call the space room the highlight. The snack plan is only Theo's, the sore feet are only Mia's, and Mia never says she liked the line." }
+      why: "The answers are \"Both of them found the long line hard to wait in.\" and \"Both of them liked the space room best.\" Mia says the line was long and her feet hurt, and Theo says he got tired waiting, so both found the wait hard, and both call the space room the highlight. The snack plan is only Theo's, the sore feet are only Mia's, and Mia never says she liked the line." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1-P4. */
   addons: {

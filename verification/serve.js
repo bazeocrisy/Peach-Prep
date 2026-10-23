@@ -23,10 +23,12 @@ const TYPES = {
 };
 
 http.createServer((req, res) => {
-  let p = decodeURIComponent(req.url.split("?")[0]);
+  let p;
+  try { p = decodeURIComponent(req.url.split("?")[0]); }
+  catch (e) { res.writeHead(400); res.end("bad request"); return; }
   if (p === "/") p = "/index.html";
   const file = path.join(ROOT, p);
-  if (!file.startsWith(ROOT)) { res.writeHead(403); res.end(); return; }
+  if (p.indexOf("\0") >= 0 || !file.startsWith(ROOT)) { res.writeHead(403); res.end(); return; }
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404); res.end("not found"); return; }
     res.writeHead(200, { "Content-Type": TYPES[path.extname(file)] || "application/octet-stream" });
