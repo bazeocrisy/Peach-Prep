@@ -1782,7 +1782,7 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p6"],
       like: ["SK-SS1b-C02"],
-      prompt: "Zane's draft begins with a list of supplies. Which sentence could he put before it to tell readers what they will learn?",
+      prompt: "Before Zane's supply list, what one sentence would tell readers what the page will teach?",
       choices: [
         { text: "Hot oatmeal is a breakfast you can cook yourself with a grown-up's help.", correct: true },
         { text: "Oats are small, flat grains that people have eaten for many years." },
@@ -1811,7 +1811,7 @@ PP.addLesson({
       std: ["3.T.SS.1.b"],
       passages: ["p6"],
       like: ["SK-SS1b-C03"],
-      prompt: "Zane wonders if he can put sentence 5 before sentence 4. Why can he not?",
+      prompt: "Could sentence 5 swap places with sentence 4? Pick the reason it could not.",
       choices: [
         { text: "The oatmeal has to finish cooking in the pot before it can be poured into a bowl.", correct: true },
         { text: "The grown-up helps with sentence 5, so it has to come right after sentence 2." },

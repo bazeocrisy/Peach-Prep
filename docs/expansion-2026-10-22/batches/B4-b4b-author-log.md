@@ -1,5 +1,7 @@
 # B4 author log (b4b): 3.T.SS.1.b, 3.T.SS.1.c, 3.T.SS.1.d and 3.T.SS.2.b
 
+> After review, sections 1 to 7 describe the first build. Section 8 records what changed (topics, similar banks, counts) and supersedes them where they differ.
+
 **Role:** content author b4b, batch B4. **This is not a review.** Nothing here certifies the items. Reviewers should blind-solve before they read this log.
 
 **File changed:** `js/data/lessons/T-SS.js`, in the four lesson blocks only. 3.T.SS.1.a and 3.T.SS.2.a were not touched. No id that existed before was changed, and `test`, `testB` and `clues` are unchanged. Practice text changed only where this log says so (section 5).
@@ -45,7 +47,7 @@ Performance (write) tasks stay outside the fifteen in all four lessons. No `cr` 
 | C03 | 1 | place a new step | choose where a knot step goes | 3 | p3 | Needs the physical order of the cans and string, not the plan | 4/4/3 |
 | C04 | 1 | features for readers | pick TWO features for readers holding cans | 2 | none | Reader need, not draft position | 5/5/4 |
 | C05 | 1 | order of steps | order a paper chain | 2 | none | Order item, 5 steps, worth 2 points | 5 steps, step 1 settled by hint 3: 5/5/4 free |
-| C06 | 2 | headings | choose a heading for each of two sections | 2 | p4 | Two blanks, headings must cover all sentences | 3+3 / 3+3 / 2+3 |
+| C06 | 2 | headings | choose a heading for each of two sections | 2 | p4 | Two blanks, headings must cover all sentences | 3+3 / 3+3 / 2+2 (recounted by hand after review) |
 | C07 | 2 | closing for an event page | choose the closing sentence | 2 | p4 | Event page, where C15 is a how-to | 4/4/3 |
 | C08 | 2 | caption | choose a caption for a photo | 2 | none | Own sentences, free-standing options | 4/4/3 |
 | C09 | 2 | compare two drafts | pick TWO statements on how two drafts differ | 3 | p3, p4 | Two drafts at once; needs both plans | 5/5/4 |
@@ -179,10 +181,10 @@ S01 (P4), S02 (C02), S03 (C03), S04 (C04), S05 (C05), S06 (P5), S07 (C07), S08 (
 
 ## 6. Findings not addressed
 
-1. **Topic collision with 3.T.T.2.b-area text in `T-T2.js` (line about 1389): "How to Make a Cup Phone."** It is a numbered how-to for a string cup phone ("Poke a small hole in the bottom of two paper cups… Push one end of a long string through each hole"). My 3.T.SS.1.b p3 "Make a Can Telephone" and core items C02, C03, C04 and C09 (and their similar items) use the same kind of project and the same steps. The T-T2 stem appeared after I finished 1.b. The cheaper fix is to change the one T-T2 stem. If the other author does not, 1.b p3 and five or six items have to move to a different craft.
-2. **Topic collision between the existing 3.T.SS.1.d hummingbird draft (p1, items P1 to P3, and my C01) and the paired hummingbird passages in `T-T2.js` 3.T.T.2.b** ("Tiny Flyers" and "The Long Trip South"). Both say the wings beat so fast, both mention feeders filled with sugar water, and the T-T2 sentence "The fast wings make a humming sound" matches 1.d P3's key. The 1.d hummingbird draft was there first. I did not change it (P1 to P3 are not mine to rewrite). Either T-T2 or 1.d P1 to P3 and C01 should move.
+1. **RESOLVED (section 8, M1).** Topic collision with 3.T.T.2.b-area text in `T-T2.js` (line about 1389): "How to Make a Cup Phone." It is a numbered how-to for a string cup phone ("Poke a small hole in the bottom of two paper cups… Push one end of a long string through each hole"). My 3.T.SS.1.b p3 "Make a Can Telephone" and core items C02, C03, C04 and C09 (and their similar items) use the same kind of project and the same steps. The T-T2 stem appeared after I finished 1.b. The cheaper fix is to change the one T-T2 stem. If the other author does not, 1.b p3 and five or six items have to move to a different craft.
+2. **RESOLVED (section 8, 1.d M4).** Topic collision between the existing 3.T.SS.1.d hummingbird draft (p1, items P1 to P3, and my C01) and the paired hummingbird passages in `T-T2.js` 3.T.T.2.b** ("Tiny Flyers" and "The Long Trip South"). Both say the wings beat so fast, both mention feeders filled with sugar water, and the T-T2 sentence "The fast wings make a humming sound" matches 1.d P3's key. The 1.d hummingbird draft was there first. I did not change it (P1 to P3 are not mine to rewrite). Either T-T2 or 1.d P1 to P3 and C01 should move.
 3. **Topic collision I avoided, for the record.** `T-T34.js` 3.T.T.3.c has "More Time for Recess" (recess is good for our bodies; helps us make friends; take turns). My first 1.d p5 was a recess-benefits draft and was rewritten as "Why Music Class Matters".
-4. **Hint 3 settles one blank in 1.c C14, C15 and 2.b C08, C14.** This is allowed (at most one blank), but the settled blank is answered by the hint's own statement of the relation. A reviewer may want a weaker hint 3 there.
+4. **PARTLY RESOLVED (section 8).** Hint 3 settles one blank in 2.b C08, C14 (kept, within rule); 1.c C14, C15, S07, S15 no longer settle a blank. Original note: hint 3 settles one blank in 1.c C14, C15 and 2.b C08, C14. This is allowed (at most one blank), but the settled blank is answered by the hint's own statement of the relation. A reviewer may want a weaker hint 3 there.
 5. **Core items on one draft are distinguished by component and verb, not by different text.** For example 1.d C06, C07 and C08 all use p4, and 2.b C02 to C05 all use p3.
 6. **Domain labels** for 1.d C06 to C08 (recycling at school) are tagged "environment", not "school". If a reviewer counts them as school, the 1.d school domain has seven items and one of them needs a different topic.
 7. **1.c P4 is DOK 1** (the existing dropdown). It is kept as a ref. It is the only DOK 1 item in the lesson, so the limit of two is met.
@@ -200,3 +202,101 @@ S01 (P4), S02 (C02), S03 (C03), S04 (C04), S05 (C05), S06 (P5), S07 (C07), S08 (
 6. 3.T.SS.1.d P4 and P5 (revised): is "Farmers get up very early to pick their fruit and vegetables" clearly not a detail about how busy the market is?
 7. 3.T.SS.1.b C03 (knot placement, DOK 3): could "after sentence 3" or a later sentence also be defended?
 8. 3.T.SS.1.c C12 and C13 (DOK 3): which two linking words do the same job, and why However is used in sentence 6.
+
+
+## 8. Fixes after review (round 2)
+
+Reviews: `B4-review-SS1bc.md` (1.b, 1.c) and `B4-review-SS1d2b.md` (1.d, 2.b). No keys were wrong. All four lessons were rebuilt with `build.js` and parse with `vm.Script`.
+
+### 8.1 Gates after the fixes
+
+| Gate | Result |
+|---|---|
+| `node verification/check-content.js --all` | 0 failures and 0 warnings for 3.T.SS.1.b, 1.c, 1.d and 2.b. (One failure remains in another author's lesson, 3.T.T.4.b, unrelated to B4b.) |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `node verification/check-instructional-copy.js` | 28 assertions passed |
+| `python3 verification/readability.py` | All passages at or below FK 4.5 (1.d p1 and 1.b p3 re-measured: 1.d p1 about 4, 1.b p3 3.1) |
+
+### 8.2 3.T.SS.1.b
+
+- **M1 topic.** p3 "Make a Can Telephone" became "Make a Rain Stick" (Dara). New C02 key, C03 step ("Press the foil coil against the inside of the tube"; key is after sentence 4), C04 features, C09 statements. Grep of `js/data` for "rain stick", "foil coil" and "uncooked rice" found nothing. The T-T2 cup phone was not touched.
+- **M2 caption.** C08 key is now "A leaping pup in a bright scarf grabs its toy in midair." It shares no content word with the photo sentence. Two distractors repeat photo nouns (free ball and bandana; learn to catch a ball). S08 the same way ("A pair of laughing swimmers zoom down to the water below.").
+- **SHOULDs.** C07 and C15 keys no longer repeat passage nouns (C15 says "ring" for hoop). C02, C12, S07, S14 word-match reduced (wm.js shows no unique-max key except C03, a positional key, and C15 at 2 words). P5 rows now avoid the cue words "how", "alike and different" and "why" in two of three rows ("a page that helps a friend fold a paper boat", "a page that sets frogs next to toads", "a page about what made a pond dry up"). Learn 3 (numbered list) is replaced by a closing-sentence Watch Me (fruit salad); teach point 5 now mentions an opening. C09 statements are about 15 words. C06 live choices recounted: 2+2, not 2+3.
+- **M3 similar bank.** All 15 rebuilt (see 8.6). New frames: S03 "why can sentence 5 not swap with 4" (key is a reason, not a position), S04 whales (headings and a table), S09 a different pair of statements, S12 "how does the draft help a reader choose", S14 a choose-between-two-places guide, S15 bead bracelet (keys differ from the twin). S11 now uses p8 with the odd sentence in a different place (paragraph 3, sentence 2).
+
+### 8.3 3.T.SS.1.c
+
+- **M3 similar bank.** All 15 rebuilt with a different key from the twin (see the table in 8.6). S01 result words, S02 For example, S03 In addition, S04 However, S05 In addition meaning, S06 Although, S07 Although and Also, S08 reason pair, S09 As a result pair, S10 In addition, S11 For example, S12 surprise pair, S13 As a result, S14 Therefore and Since, S15 For example and Also. Option sets share at most one option with the twin.
+- **M4.** Together P3 prompt no longer says "gives an example". Three of four choices now begin "For example,"; only the key is an example of stronger legs. Addon P3 hints, how and the practice clue and why were changed to match.
+- **M5.** S04 is now a weather forecast (rain predicted, sun came out; key However). It no longer resembles "Malik studied his spelling words".
+- **SHOULDs.** C14, C15, S07 and S15 hint 3 no longer states the relation outright or settles a blank. Learn 1 gains a Therefore sentence (a Therefore or As a result step). The echoes dandelion/cactus/frogs/toads/sandcastle: cactus, sandcastle and the old S-bank scenes are gone; dandelion (C15) was kept as a single use.
+
+### 8.4 3.T.SS.1.d
+
+- **M1.** S05 is now a forced order (cloth, then plates on the cloth, then forks beside the plates): "Setting the table was a big job for the twins." The connectives are First, After that, Last.
+- **M2.** S06 hint 2 no longer says "One is about a different place". The intruder is now "Our gym was painted blue last summer." (about the gym, not about action).
+- **M3.** S02, S05, S07, S08, S10, S11, S14 and S15 rebuilt; S14 now asks why a paragraph break would be a poor choice at sentence 3; S15 uses different change templates ("Cut the sentence about the town pool", "Split the draft before the sentence about the next morning"). S13 hint 3 no longer gives a match. C10 and S10 hint 3 now say the repeated detail is from the start.
+- **M4 topic.** The hummingbird draft (p1, P1, P2, P3, C01 and their addons) is now "How Hot Air Balloons Fly". Greps for "hot air balloon", "wicker", "weather vane" and "toy boat" found no other use. P1 key is sentence 6 (toy boat in a tub), P2 key is "The riders and the pilot travel in a basket.", P3 key is "As the air in the bag gets hotter, the balloon lifts off the ground.", C01 key is "Hot air balloons look gentle, but a simple trick lifts them high."
+- **SHOULDs.** P4 intruder is "Our school bus stops at the corner near the market." (plainly not about how busy the market is), and the second detail is "Farmers call out prices to long lines of shoppers." C11 and S11 (pick two) are now 2 points. Watch Me coverage is not widened: the lesson is at the cap of three, and the closing sentence is in the teach example and core C01, C10, S01, S10.
+
+### 8.5 3.T.SS.2.b
+
+- **M1.** The teach example is now "The hallway was as still as a photograph." C14 still uses "as quiet as a sleeping cat", so the example no longer pre-answers it.
+- **M2.** C12 prompt says "what the quilt means to her". The memory-flavoured distractors are "a heavy locked trunk that nobody could open" and "a drawer of old photos, kept closed and forgotten". The snowy field stays as a decoy. Hint 2 no longer describes the key.
+- **M3.** All 15 similar items rebuilt (8.6).
+- **M4.** The P4 idiom row "It was raining cats and dogs." is now "My brother was just pulling my leg." (grep: "pulling my leg" appears nowhere else). S01 no longer uses "in the same boat". Idiom check across `js/data`: every 2.b idiom occurs only in 2.b.
+- **SHOULDs.** C13 option B is now "The wind giggled and skipped around the yard." (a person's action that fails on mood, not on setting). C05 prompt no longer repeats "all at once"; the weak distractors (candle, snowfall) were replaced with a single lamp and a one-stream fountain. S05 key no longer repeats "kids" or "toward the doors". C15 and S15 (pick two) are 2 points. S03 no longer uses "out of the blue" (S10's key). Facts: guinea pigs first lived in South America (checked against Wikipedia's guinea pig article); hot air balloons usually fly in the early morning when the wind is light, rise because the air inside is heated, and use wicker baskets (checked by search). Idiom meanings are standard dictionary senses; the authoritative sites were blocked.
+
+### 8.6 Similar-item overlap (own script, whole item text)
+
+Script: `scratchpad/ss1bc/mj.js`. It is a raw-token Jaccard (`/[a-z']+/g`, lower case) over the prompt, stem, text and all choices, options, slot options, steps, rows and columns. The "with passage" column adds the text of every passage the item names. Ceiling 0.21 for both columns, and at most one exact or near (0.6) shared option. Highest values: 1.b S02 0.21 with passage, S15 0.20; 2.b S01 0.20; 1.c S06 0.19. Every pair is at or below 0.21 and every pair shares at most one option.
+
+| Lesson | Pair: item / with passage / shared options |
+|---|---|
+| 1.b | S01-P5 .14/.14/0; S02-C02 .12/.21/0; S03-C03 .17/.20/0; S04-C04 .16/.16/0; S05-C05 .14/.14/0; S06-C06 .16/.14/0; S07-C07 .16/.17/0; S08-C08 .13/.13/0; S09-C09 .14/.20/0; S10-C10 .15/.15/0; S11-C11 .16/.19/0; S12-C12 .12/.16/0; S13-C13 .16/.16/0; S14-C14 .15/.15/0; S15-C15 .20/.20/0 |
+| 1.c | S01-P6 .09/.09/0; S02-P4 .07/.06/1; S03-C03 .16/.11/1; S04-C04 .15/.11/0; S05-C05 .13/.11/0; S06-C06 .19/.19/0; S07-C07 .15/.15/0; S08-C08 .12/.12/1; S09-C09 .13/.13/0; S10-C10 .17/.17/0; S11-C11 .16/.09/1; S12-C12 .17/.17/0; S13-C13 .16/.10/0; S14-C14 .19/.13/1; S15-C15 .18/.18/1 |
+| 1.d | S01-C01 .13/.12/0; S02-C02 .19/.18/0; S03-C03 .13/.13/0; S04-C04 .19/.19/0; S05-C05 .16/.16/0; S06-C06 .08/.14/0; S07-C07 .12/.10/0; S08-C08 .14/.12/0; S09-C09 .14/.14/0; S10-C10 .16/.16/0; S11-C11 .10/.11/0; S12-C12 .12/.10/0; S13-C13 .17/.17/0; S14-C14 .19/.19/0; S15-C15 .18/.18/0 |
+| 2.b | S01-P4 .20/.20/0; S02-C02 .13/.09/0; S03-C03 .09/.09/0; S04-C04 .10/.10/0; S05-C05 .15/.12/0; S06-P5 .10/.10/0; S07-C07 .14/.08/0; S08-C08 .15/.10/0; S09-C09 .17/.17/0; S10-C10 .13/.13/0; S11-C11 .15/.12/0; S12-C12 .19/.17/0; S13-C13 .12/.10/0; S14-C14 .11/.11/0; S15-C15 .15/.15/0 |
+
+None is over. No similar item has the same key as its twin (checked by hand; for the hottext and dropdown items the correct text differs).
+
+### 8.7 Hand-recounted live choices after hint 3 (changed items only)
+
+Counts are the choices still standing after hint 1, hint 2 and hint 3 (clue = hint 1).
+
+| Item | Live after H3 | Note |
+|---|---|---|
+| 1.b C02 | 3 of 4 | H3 removes the "where rain comes from" choice |
+| 1.b C03 | 3 of 4 | H3 removes "after sentence 3" |
+| 1.b C06 | blank 1: 2 of 3; blank 2: 2 of 3 | corrected from 2+3; H3 removes "Pets That Do Tricks" in both blanks |
+| 1.b C08 | 3 of 4 | H3 removes the date sentence |
+| 1.b S01 | 2 rows to place | H3 settles one row |
+| 1.b S03 | 3 of 4 | H3 removes the "bowl is not on the list" reason |
+| 1.b S09 | 4 of 5 | H3 removes the headings statement |
+| 1.c C14, C15 | blank 1: 3 of 3; blank 2: 3 of 3 | H3 no longer settles a blank |
+| 1.c P3 | 3 of 4 | H3 removes the "sunny day" choice |
+| 1.c S01 | 4 of 5 | H3 removes However |
+| 1.c S07, S15 | blank 1: 3 of 3; blank 2: 3 of 3 | H3 gives no choice away |
+| 1.d S05 | one position settled (the plates need the cloth first) | order is now forced |
+| 1.d S06 | 3 of 4 | H3 removes the whistle sentence |
+| 1.d S08, S14 | 3 of 4 | |
+| 1.d C11, S11 | 4 of 5 (pick 2) | |
+| 2.b C05 | 3 of 4 | H3 removes the "very big finale" choice |
+| 2.b C12 | 3 of 4 | H3 removes the snowy field |
+| 2.b C13 | 3 of 4 | H3 removes the "as cold as" simile |
+| 2.b S06 | 3 of 4 | |
+| 2.b C08, C14, S08 | blank 1 narrowed in H3, blank 2: 3 of 3 | kept within the rule |
+
+### 8.8 Items that most need a skeptical blind re-solve (updated)
+
+1. 1.b C03 (rain stick, DOK 3): "after sentence 4" versus "after sentence 3". Could pressing the coil before the tube is closed (after sentence 3) be defended, or after sentence 5?
+2. 1.b S03 (why sentence 5 cannot swap with sentence 4): the key and the "grown-up helps" distractor.
+3. 1.b C08 and S08 (captions with no shared words): is the key still clearly the only caption that describes the photo?
+4. 1.c S04 (forecast, However) and S06 (Although): could "Also" or "Therefore" be defended?
+5. 1.c S05 (In addition meaning) and S11 (For example in "Skiing and skating are two of them").
+6. 1.c P3 (three choices begin "For example,"): the key is the only one that is a case of "stronger legs".
+7. 1.d S05 (forced order: cloth, plates, forks): is there exactly one valid order?
+8. 1.d S06 (gym painted blue), S08 (cows food news), S14 (why not a break at sentence 3), S15 (cut the town pool, split before the next morning).
+9. 1.d P1 to P3 (balloon rewrite): P1 key sentence 6, P2 topic sentence (the basket), P3 detail (hotter air lifts the balloon).
+10. 2.b C12 (scrapbook against the trunk and the drawer of forgotten photos): is the key the only one that shows what the quilt means to Zoe?
+11. 2.b C13 (wind giggled and skipped) and C05 (garden of flowers), S06 (batter crept, between sentences 1 and 2), S13 (refrigerator hummed a sleepy tune).
