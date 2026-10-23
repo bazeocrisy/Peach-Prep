@@ -1042,11 +1042,11 @@ PP.addLesson({
         ["(10) I like water."]
       ] },
     /* B4-b4a passages begin */
-    { id: "p3", draft: true, title: "A Crossing Sign on Elm Street", byline: "Nia's first draft", genre: "Student draft (opinion)",
+    { id: "p3", draft: true, title: "A Crossing Sign on Cedar Road", byline: "Nia's first draft", genre: "Student draft (opinion)",
       paragraphs: [
-        ["(1) Many students at Hillcrest Elementary walk to school on Elm Street.", "(2) At the corner by the park, there is no sign to tell drivers that children are crossing."],
+        ["(1) Many students at Hillcrest Elementary walk to school on Cedar Road.", "(2) At the corner by the park, there is no sign to tell drivers that children are crossing."],
         ["(3) A sign would help drivers see us.", "(4) Cars often drive past quickly when children are waiting at the corner.", "(5) Last Monday, two cars drove past without slowing down while we waited at the corner."],
-        ["(6) A sign would make younger students feel safe.", "(7) They would know that drivers have been told to watch for them.", "(8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down."],
+        ["(6) A sign would make younger students feel safe.", "(7) They would know that drivers have been told to watch for them.", "(8) Our crossing guard, Mr. Greene, says the smallest children often freeze at the curb because they are not sure drivers see them."],
         ["(9) A sign is a good idea."]
       ] },
     { id: "p4", draft: true, title: "Board Games on Fridays", byline: "Marcus's first draft", genre: "Student draft (opinion)",
@@ -1189,7 +1189,7 @@ PP.addLesson({
         prompt: "Nia's introduction does not tell the reader her opinion. Which sentence should be added after sentence 2 to state her opinion?",
         choices: [
           { text: "I think our town should put a crossing sign at the corner by the park.", correct: true },
-          { text: "Elm Street has two lanes for cars and a sidewalk on each side." },
+          { text: "Cedar Road has two lanes for cars and a sidewalk on each side." },
           { text: "Do you feel nervous when you cross a busy street on your own?" },
           { text: "The corner by the park has a green bench and a tall maple tree." }
         ],
@@ -1200,7 +1200,7 @@ PP.addLesson({
           "A question can start a draft, but it does not tell the reader what the writer thinks. Look at the choices that are left."
         ],
         how: [
-          "Sentences 1 and 2 describe a problem: students walk on Elm Street, and there is no sign for drivers.",
+          "Sentences 1 and 2 describe a problem: students walk on Cedar Road, and there is no sign for drivers.",
           "The opinion has to say what Nia thinks should be done. The words I think and should show that.",
           "The answer is: I think our town should put a crossing sign at the corner by the park.",
           "The sentence about lanes is a fact, the question does not say what Nia wants, and the bench and maple tree are a detail about the corner."
@@ -1212,14 +1212,14 @@ PP.addLesson({
         choices: [
           { text: "A sign would give our crossing guard some help when the corner gets busy.", correct: true },
           { text: "A sign would help parents feel good about letting younger kids walk to school.", correct: true },
-          { text: "Elm Street has two lanes for cars and a sidewalk on each side." },
+          { text: "Cedar Road has two lanes for cars and a sidewalk on each side." },
           { text: "Do you want the children on your street to be safe when they walk?" },
-          { text: "I think Elm Street is the busiest street in our whole town." }
+          { text: "I think Cedar Road is the busiest street in our whole town." }
         ],
         clue: "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
         hints: [
           "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
-          "Test each choice by asking: does this answer the question, why should the town put a sign on Elm Street? Choose two.",
+          "Test each choice by asking: does this answer the question, why should the town put a sign on Cedar Road? Choose two.",
           "A question does not give a reason. It only asks the reader something. Look at the choices that are left."
         ],
         how: [
@@ -1232,7 +1232,7 @@ PP.addLesson({
         why: "The answers are \"A sign would give our crossing guard some help when the corner gets busy\" and \"A sign would help parents feel good about letting younger kids walk to school.\" Each tells why a sign is a good idea. The lanes sentence is a fact, the question asks something, and \"the busiest street\" does not say why a sign helps." },
       { id: "SK-TT3c-C08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: ["p3"],
         prompt: "Nia wants to link her ideas in paragraphs 2 to 4. Choose the best word or words for each blank.",
-        text: "(5) Last Monday, two cars drove past without slowing down while we waited at the corner. (6) {0}, a sign would make younger students feel safe. (8) Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down. {1}, a crossing sign is a good idea for Elm Street.",
+        text: "(5) Last Monday, two cars drove past without slowing down while we waited at the corner. (6) {0}, a sign would make younger students feel safe. (8) Our crossing guard, Mr. Greene, says the smallest children often freeze at the curb because they are not sure drivers see them. {1}, a crossing sign is a good idea for Cedar Road.",
         slots: [
           { options: ["In addition", "For example", "However"], answer: 0 },
           { options: ["Therefore", "Before that", "Instead"], answer: 0 }
@@ -1263,12 +1263,12 @@ PP.addLesson({
         ],
         how: [
           "The reason is that a sign would make younger students feel safe, so the evidence must explain why.",
-          "Sentence 7 says they would know drivers have been told to watch for them, and sentence 8 says the crossing guard thinks a bright sign would remind drivers to slow down.",
+          "Sentence 7 says they would know drivers have been told to watch for them, and sentence 8 says the crossing guard has seen the smallest children freeze at the curb because they are not sure drivers see them.",
           "The answers are sentence 7 and sentence 8.",
           "Sentence 6 is the reason itself, sentences 4 and 5 are evidence for the first reason about drivers seeing students, and sentence 9 sums up the whole draft."
         ],
         misconception: "A common mix-up is choosing evidence for the wrong reason. Match each piece of evidence to the reason it explains.",
-        why: "The answers are sentence 7, \"They would know that drivers have been told to watch for them,\" and sentence 8, \"Our crossing guard, Mr. Greene, says a bright sign would remind drivers to slow down.\" Both explain why younger students would feel safe. Sentences 4 and 5 support the first reason, and sentence 9 is the ending." },
+        why: "The answers are sentence 7, \"They would know that drivers have been told to watch for them,\" and sentence 8, \"Our crossing guard, Mr. Greene, says the smallest children often freeze at the curb because they are not sure drivers see them.\" Both explain why younger students would feel safe. Sentences 4 and 5 support the first reason, and sentence 9 is the ending." },
       { id: "SK-TT3c-C10", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: ["p3"],
         prompt: "Sentence 9 is a weak conclusion. Which sentence should replace sentence 9?",
         choices: [
@@ -1427,16 +1427,16 @@ PP.addLesson({
   similar: [
     { id: "SK-TT3c-S01", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C01"],
       stem: [
-        "(1) A salad bar would let students pick the foods they like.",
+        "(1) A salad bar would let kids pick foods they like.",
         "(2) We could add carrots, cucumbers, beans and apples.",
         "(3) Our school should add one next to the lunch line."
       ],
       prompt: "Pick the opening line that names the subject of this whole draft.",
       choices: [
-        { text: "Lunch is the time when students sit down to eat and talk with friends.", correct: true },
-        { text: "I think students should be allowed to eat dessert every single day." },
+        { text: "Lunch is when kids sit down to eat and chat with friends.", correct: true },
+        { text: "Dessert should be served in the cafeteria every single day." },
         { text: "Carrots have a bright orange color and a crunchy bite." },
-        { text: "Last Friday, the line for hot lunch was very long." }
+        { text: "The line for hot food was very long on Friday." }
       ],
       clue: "An introduction tells the reader what the topic is. It should name the topic of the whole draft before the writer says what she thinks.",
       hints: [
@@ -1447,11 +1447,11 @@ PP.addLesson({
       how: [
         "The first sentence should tell the reader what the whole draft is about.",
         "All three sentences are about what students eat at lunch and how a salad bar could change it.",
-        "The answer is: Lunch is the time when students sit down to eat and talk with friends.",
+        "The answer is: Lunch is when kids sit down to eat and chat with friends.",
         "The dessert sentence is a different opinion, the carrot sentence is a detail for the middle, and the long line sentence is about a different problem."
       ],
       misconception: "A common mix-up is choosing a sentence about food. An introduction must name the topic of this draft.",
-      why: "The answer is: Lunch is the time when students sit down to eat and talk with friends. It tells the reader the topic of the whole draft. The dessert sentence is a different opinion, the carrot sentence is a detail, and the long line sentence is about a different problem." },
+      why: "The answer is: Lunch is when kids sit down to eat and chat with friends. It tells the reader the topic of the whole draft. The dessert sentence is a different opinion, the carrot sentence is a detail, and the long line sentence is about a different problem." },
     { id: "SK-TT3c-S02", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C02"],
       stem: [
         "(1) Our class should write its own newspaper.",
@@ -1504,7 +1504,7 @@ PP.addLesson({
       prompt: "Tomas's paragraph is out of order. Rearrange it so it reads from opening to ending.",
       steps: [
         "Our playground has only one basketball hoop.",
-        "I think our school should add a second hoop.",
+        "I think our school should add another one.",
         "One reason is that long lines keep students waiting for a turn.",
         "Another reason is that two games could go on at once.",
         "So a second hoop would help everyone play more."
@@ -1519,10 +1519,10 @@ PP.addLesson({
         "The first sentence introduces the topic: the playground has one hoop.",
         "The second sentence states the opinion with I think and should.",
         "One reason and Another reason give the two reasons in that order, and So wraps up at the end.",
-        "The order is: one hoop, I think we should add a second, one reason, another reason, so."
+        "The order is: one hoop, I think we should add another one, one reason, another reason, so."
       ],
       misconception: "A common mix-up is putting the opinion last. The opinion comes near the beginning, and the conclusion says it again at the end.",
-      why: "The order is: our playground has only one basketball hoop (introduces the topic), I think our school should add a second hoop (the opinion), one reason is that long lines keep students waiting (reason 1), another reason is that two games could go on at once (reason 2), and so a second hoop would help everyone play more (the conclusion)." },
+      why: "The order is: our playground has only one basketball hoop (introduces the topic), I think our school should add another one (the opinion), one reason is that long lines keep students waiting (reason 1), another reason is that two games could go on at once (reason 2), and so a second hoop would help everyone play more (the conclusion)." },
     { id: "SK-TT3c-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-P4"],
       stem: [
         "(1) Our school should start a drama club. (2) Acting helps students learn to speak clearly in front of others. (3) A club would also give shy students a safe place to try new things. (4) Acting is fun."
@@ -1550,15 +1550,15 @@ PP.addLesson({
       why: "The answer is: A drama club would help us speak clearly and feel brave, so our school should start one. It repeats the opinion and sums up both reasons. The First sentence starts over, the cast sentence adds a fact, and the costume sentence is about the writer's favorite." },
     { id: "SK-TT3c-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C06"],
       stem: [
-        "(1) Many students wait at the bus stop on Mill Road every morning.",
+        "(1) Many students wait at the bus stop on Mill Lane every morning.",
         "(2) When it rains, there is no roof to keep them dry."
       ],
-      prompt: "Which sentence belongs after sentence 2 to tell readers what the writer thinks should be done?",
+      prompt: "Choose the next sentence. It should state the writer's opinion about the stop.",
       choices: [
-        { text: "I think our town should build a bus shelter at the stop on Mill Road.", correct: true },
+        { text: "I think a roofed shelter should be built at the stop on Mill Lane.", correct: true },
         { text: "Buses are big, and they stop at many corners in our town." },
         { text: "Have you ever waited outside on a cold or windy morning?" },
-        { text: "The stop on Mill Road sits beside a gas station, a mailbox and a faded yellow fence." }
+        { text: "The stop on Mill Lane sits beside a gas station, a mailbox and a faded yellow fence." }
       ],
       clue: "An opinion statement tells what the writer thinks should happen. It is not a fact, a question or a detail about the place.",
       hints: [
@@ -1569,37 +1569,37 @@ PP.addLesson({
       how: [
         "Sentences 1 and 2 describe a problem: students wait at a stop with no roof.",
         "The opinion has to say what the writer thinks should be done. The words I think and should show that.",
-        "The answer is: I think our town should build a bus shelter at the stop on Mill Road.",
+        "The answer is: I think a roofed shelter should be built at the stop on Mill Lane.",
         "The sentence about buses is a fact, the question does not say what the writer wants, and the gas station sentence is a detail."
       ],
       misconception: "A common mix-up is choosing a sentence that sounds like part of the story. An opinion statement says what the writer wants.",
-      why: "The answer is: I think our town should build a bus shelter at the stop on Mill Road. The words I think and should tell what the writer wants. The buses sentence is a fact, the question does not tell her opinion, and the gas station sentence is a detail." },
+      why: "The answer is: I think a roofed shelter should be built at the stop on Mill Lane. The words I think and should tell what the writer wants. The buses sentence is a fact, the question does not tell her opinion, and the gas station sentence is a detail." },
     { id: "SK-TT3c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], pick: 2, like: ["SK-TT3c-C07"],
       stem: [
-        "Opinion: Our town should open the community swimming pool on Sundays, not only on weekdays and Saturdays."
+        "Opinion: Our school should hold a book swap once a month, so students can trade books they have finished."
       ],
       prompt: "Select two reasons that support the opinion in the box.",
       choices: [
-        { text: "Families who work on Saturdays could swim together on their day off.", correct: true },
-        { text: "Kids would have a cool place to play during the hot summer afternoons.", correct: true },
-        { text: "The pool has a blue slide, a diving board, a deep end and a tiny wading corner." },
-        { text: "Would you like to splash around in cool water on a hot day?" },
-        { text: "I think Sundays are the finest day of the whole calendar." }
+        { text: "Kids could get new books to read without spending any money.", correct: true },
+        { text: "Students would meet classmates who like the same kinds of stories.", correct: true },
+        { text: "Books can be about animals, space, sports or magic, and some have maps inside." },
+        { text: "Have you ever read a book that made you laugh out loud?" },
+        { text: "I think reading is the finest thing to do all year long." }
       ],
       clue: "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
       hints: [
         "A reason tells WHY the opinion is a good idea. A fact, a question or a plain opinion does not tell why.",
-        "Test each choice by asking: does this answer the question, why should the town open the pool? Choose two.",
+        "Test each choice by asking: does this answer the question, why should the school hold a book swap? Choose two.",
         "A question does not give a reason. It only asks the reader something. Look at the choices that are left."
       ],
       how: [
-        "A reason has to explain why opening the pool on Sundays is a good idea for the town.",
-        "Families who work on Saturdays could swim together on Sunday, and kids would have a cool place to play on hot afternoons. Both tell why.",
-        "The answers are: Families who work on Saturdays could swim together on their day off. And: Kids would have a cool place to play during the hot summer afternoons.",
-        "The sentence about the slide is only a fact, the question only asks something, and \"Sundays are the best day\" is an opinion that does not say why the pool should open."
+        "A reason has to explain why a monthly book swap is a good idea for the school.",
+        "Kids could trade for new books at no cost, and students would meet classmates who like the same stories. Both tell why.",
+        "The answers are: Kids could get new books to read without spending any money. And: Students would meet classmates who like the same kinds of stories.",
+        "The sentence about book topics is only a fact, the question only asks something, and \"reading is the finest thing\" is an opinion that does not say why the school should hold a swap."
       ],
       misconception: "A common mix-up is picking a sentence that sounds strong. A reason must say why the opinion is a good idea.",
-      why: "The answers are \"Families who work on Saturdays could swim together on their day off\" and \"Kids would have a cool place to play during the hot summer afternoons.\" Each tells why opening the pool is a good idea. The slide sentence is a fact, the question asks something, and the Sunday sentence does not say why." },
+      why: "The answers are \"Kids could get new books to read without spending any money\" and \"Students would meet classmates who like the same kinds of stories.\" Each tells why a book swap is a good idea. The book topics sentence is a fact, the question asks something, and the reading sentence does not say why." },
     { id: "SK-TT3c-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C08"],
       stem: ["(1) Our school should open a school store."],
       prompt: "Which word best links the sentences at each blank?",
@@ -1631,8 +1631,8 @@ PP.addLesson({
         { text: "(3) Last week, my cousin stepped on a piece of broken glass near the swings.", correct: true },
         { text: "(4) Volunteers could pick up glass and trash before anyone gets hurt.", correct: true },
         { text: "(1) Our neighborhood should have a park clean-up day." },
-        { text: "(5) Picnics, kites and frisbees make parks popular places." },
-        { text: "(6) I hope many neighbors bring gloves and garbage bags." }
+        { text: "(5) Everyone likes parks." },
+        { text: "(6) I hope our neighbors will join me." }
       ],
       clue: "Evidence is a fact, an example or an expert's words that helps prove a reason. Ask which sentences explain why a clean park is safer.",
       hints: [
@@ -1650,9 +1650,9 @@ PP.addLesson({
       why: "The answers are \"(3) Last week, my cousin stepped on a piece of broken glass near the swings.\" and \"(4) Volunteers could pick up glass and trash before anyone gets hurt.\" Both support the reason that a clean park is safer. Sentence 1 is the opinion, sentence 5 is a general statement, and sentence 6 is a wish." },
     { id: "SK-TT3c-S10", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C10"],
       stem: [
-        "(1) My family should take a walk after dinner. (2) A walk would help us get exercise. (3) Without screens, we could chat about our days. (4) Walks are nice."
+        "(1) My family should take a walk after dinner. (2) Walking is good exercise for everyone. (3) Without screens, we could chat about our days. (4) Walks are nice."
       ],
-      prompt: "Pick the last line that would work best in place of \"Walks are nice.\"",
+      prompt: "Choose the sentence that should end this draft instead of \"Walks are nice.\"",
       choices: [
         { text: "A walk would give us exercise and talk time, so my family should take one each night.", correct: true },
         { text: "Also, a walk would give us time to talk without screens." },
@@ -1753,7 +1753,7 @@ PP.addLesson({
       ],
       prompt: "Which closing line should take the place of sentence 5?",
       choices: [
-        { text: "A sandbox would help little kids learn and play together, so our school should add one.", correct: true },
+        { text: "Sandboxes teach little kids to build and share, so we should add one at school.", correct: true },
         { text: "Another reason is that digging in sand helps young children use their hands and plan." },
         { text: "Beach sand can be damp or powdery, and some grains look white while others look tan." },
         { text: "I hope my little sister gets a red bucket and a yellow shovel." }
@@ -1767,16 +1767,16 @@ PP.addLesson({
       how: [
         "A conclusion repeats the opinion and sums up the reasons.",
         "The opinion is to add a sandbox, and the reasons are learning with hands and playing together.",
-        "The answer is: A sandbox would help little kids learn and play together, so our school should add one.",
+        "The answer is: Sandboxes teach little kids to build and share, so we should add one at school.",
         "The \"Another reason\" sentence starts over with one reason, the sentence about wet and dry sand adds a new fact, and the bucket sentence is a personal wish."
       ],
       misconception: "A common mix-up is choosing a sentence that mentions sand. A conclusion must say the opinion again and sum up both reasons.",
-      why: "The answer is: A sandbox would help little kids learn and play together, so our school should add one. It repeats the opinion and sums up both reasons. The \"Another reason\" sentence starts over, the sand sentence adds a new fact, and the bucket sentence is a personal wish." },
+      why: "The answer is: Sandboxes teach little kids to build and share, so we should add one at school. It repeats the opinion and sums up both reasons. The \"Another reason\" sentence starts over, the sand sentence adds a new fact, and the bucket sentence is a personal wish." },
     { id: "SK-TT3c-S15", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.c"], passages: [], like: ["SK-TT3c-C15"],
       stem: [
-        "(1) Our school should build a nature trail behind the gym. (2) A trail would give classes a place to look at plants and insects. (3) Students could draw what they find and write about it."
+        "(1) Our school should build a nature trail behind the gym. (2) Classes could visit the trail to look at plants and insects. (3) Students could draw what they find and write about it."
       ],
-      prompt: "Which sentence would best explain the writer's reason if it came after sentence 3?",
+      prompt: "Choose the sentence that explains the writer's reason best. It would follow sentence 3.",
       choices: [
         { text: "Seeing real plants up close would help us remember what we learn.", correct: true },
         { text: "Many families like to walk on trails on the weekend." },

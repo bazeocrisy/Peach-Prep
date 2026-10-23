@@ -429,3 +429,145 @@ Each figure is what is left after all three hints and the clue, applied honestly
 5. 1.e S11 prompt and C11 hints; both S13 prompts; S05, S06 and S13 key lengths; 2.d S03 sequence words; 1.e C04 key wording (S1, S3 to S6).
 
 No lesson file was edited by me. The server on port 8871 was stopped by pid.
+
+
+---
+
+# Third review (second fix round)
+
+**Role:** independent reviewer, third pass. Read-only: I changed no lesson or code file and ran no git. Scratch is in `scratchpad/b4r5/`. No server was started, so there was nothing to kill.
+**Scope:** `T-T1.js` (3.T.T.1.e) and `T-T2.js` (3.T.T.2.d): core 15, S01 to S15, Together P1 to P6, passages and figures, with extra attention to the second-round fixes (1.e S01, S06, S11, S13, C04; 2.d C02, C04, C10, S03, S05, S10, S13).
+
+## Verdicts
+
+| Lesson | Verdict | Reason |
+|---|---|---|
+| 3.T.T.1.e | **ACCEPT** | No MUST. All five fixes hold. One SHOULD (S11 and C11 hint 3 still narrows to the key). |
+| 3.T.T.2.d | **ACCEPT** | No MUST. All seven fixes hold. C04 is fair enough but knowledge-dependent (SHOULD). |
+
+Every MUST from reviews one and two is closed (1.e S01 ambiguity, 2.d C02 no on-topic distractor, 2.d C04 key in the stem).
+
+## 1. Blind solve
+
+- **Method.** `b4r5/blind.js` loads both lesson files in a Node `vm` sandbox with a mock `PP.addLesson`. It prints passages (every sentence tagged `p:para:sent`), the six Together items, the core (each `{ref}` resolved) and S01 to S15, with figure label, caption and alt text. Choices, order steps, dropdown options and match rows are shuffled with a seeded generator (new seed, not the one used in review two). Only whitelisted fields are printed: id, type, points, dok, passages, stem, prompt, choices/options/steps/rows text, `text`, `targets`, `pick`, figure label/caption/alt. `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like` and `std` are never printed. A regex over the output for correct, why and hint found nothing.
+- **Order of work.** I solved all 67 items from `blind.txt`, saved `myans.json` (copied to `myans.saved.json`) and only then ran `cmp.js`, which extracts keys from the data. I did not open the lesson source, the author log or any review file before the answers were saved. I read the author log and the earlier reviews afterwards.
+- **Result: 67 of 67 agree (100%).** 1.e: 33 of 33. 2.d: 34 of 34. The first compare printed three "differences" (1.e C09, 1.e S09, 2.d S01), which are only the order of keys in the match object; the content is identical. This sitting was fully blind except that it is the third time the same reviewer role has looked at this content, so I knew the items exist; I held no remembered key and decided each item from the text alone.
+- **Items I hesitated on (all resolved to the key).** 1.e S01 slot 1 ("A moment later," against "To begin with,"): the second is now clumsy because sentence 1 begins "First,", so a reader sees two first events. 2.d C04 (see section 3). 2.d S15 (mirror options C and D): solved correctly this time.
+- **Key beside why, how and hints: read for all 67.** For every mc, ms, dropdown, order and match item the key text, or the sentence numbers for hot text, appears in `why` and in `how`, and the two agree with the key. No item has a `why` that argues for a different option. No disagreement.
+
+## 2. Findings
+
+### MUST
+None.
+
+### SHOULD
+
+**S1. 1.e S11 and C11, hint 3 still narrows to the key.**
+- S11 hint 3: "An opinion about a sport could begin an essay, but **a story needs a character doing something**. Look at the choices that are left." C11 hint 3 is the same sentence with "scavenger hunts". The round-two fix removed "moment" and "read on" but left a general rule that fits only one choice.
+- Applied honestly: the opinion option is named and goes. The wall-explanation option has no character and no action. "Kofi was proud when he finally reached the top" has a character but no doing. Only "I gripped the first purple hold and looked up." is left. For C11 the same: the facts about the park and about what a scavenger hunt is have no character; only "The whistle blew, and my team dashed into Maple Park." is a character doing something. So hint 3 leaves one choice, and its wording matches the key's "starts the action".
+- Hint 1 already gives the principle ("introduces the character and the place"), so hint 3 can name a distractor without a second rule.
+- Fix: "An opinion about a sport could begin an essay, but this is a story. Look at the choices that are left." (C11: "...about scavenger hunts could begin an essay, but this is a story...").
+
+**S2. 2.d C04 (protein): fair and defensible, but a child with no idea what protein is ends on a 50/50 guess.**
+- Judged for the question asked. Stem: "Peanuts have a lot of protein, and so do eggs, beans and fish." Options: helps muscles and bones grow (key) / gives the body quick energy / makes it taste sweet.
+  - **Key defensible: yes.** Protein builds, repairs and maintains muscle and tissue and is needed for growth. https://extension.unr.edu/publication.aspx?PubID=4145 lists bones among the tissues; https://kidshealth.org/en/kids/protein-def.html says "Protein builds, maintains, and replaces the tissues in your body" and that muscles are made mostly of protein. "Quick energy" is the carbohydrate job (the UNR page calls carbohydrates the body's "main source of energy or fuel"), so the energy distractor is wrong without being silly. The how line "quick energy comes mostly from sugar" is a fair simplification.
+  - **Plausible distractors: yes.** "Quick energy" is what a child expects from food, and it is the one a child with partial knowledge will weigh. It is also not the longest option now (key 48, wrong 47 and 40).
+  - **No prior idea of protein: the examples remove "sweet" only.** Eggs, beans, fish and peanuts are not sweet, so a child can cross that out (hint 3 does it for them). The examples do not separate "helps muscles and bones grow" from "quick energy", and hint 2 ("what do eggs, beans, fish and peanuts have in common as foods") has no answer that decides it. So the last step depends on knowing what protein is, taught in grade 3 health and the MyPlate protein group but not in this draft. This is a definition item, and the standard names definitions, so the topic is right; what is untested is the "use the context" skill the clue promises ("Use the examples around the word").
+  - **Stem leak: gone.** The key idea is not in the stem, and nothing in the stem or the choices reproduces it.
+- Verdict on fairness: acceptable at one point, DOK 2, for children who have met the food groups; not a context-clue item in the strict sense. I would not block.
+- Optional fix (pick one): (a) change the clue to "A definition tells what a word means. Think about what you already know about these foods and what they do for the body" so the item is honest about needing knowledge; or (b) give the draft a neighbor sentence that carries a clue without saying the key, for example "Coaches tell players to eat foods with protein after practice." (hints at bodies and training but not at bones or growth). Do not put "grow" in the stem again.
+
+**S3. 2.d S03 (jelly sandwich) reads below grade 3.** "Lay two slices of bread on a plate; spread jelly; press together; cut in half and enjoy it" is a staple first-grade sequencing task. The fix this round (no First/Next/Then/Last, hint asking what each step needs) is correct and the order is unique, but the content is still easy for a two-point item, and `like` C03 (how peanut butter is made) asks for real reasoning. Fix: use a grade-3 process, for example a plant sprouting from a seed, how an ice cube melts into a puddle in sun, or how a letter reaches a mailbox (any topic not already in `js/data`). Not a blocker, since the item is fair and tests the skill.
+
+**S4. Watch Me does not model the beginning, definition, caption or figure items (carried from the first review, S8, not in the second review's status table).** 1.e Watch Me: ending, order, dialogue. 2.d Watch Me: off-topic and introduction, conclusion, supporting fact. 2.d asks for definitions in C04, C07, C14, S04, S07, S14 and for figure or caption work in C10, C13, S10, S13, none of which Watch Me shows (the teach text has one definition example and a caption line). 1.e asks for beginnings in C04, C11, S04, S11 and showing a feeling in C06, C14, S06, S14. Fix: one more Watch Me worked example in each lesson (a beginning for 1.e, a definition or a caption for 2.d).
+
+### NOTE
+
+- **N1. 2.d C02 hint 2** ("which choice gives an example of something made from peanuts, not just a fact about them") is close to the key's content, "made from". It does not name the key and the shells distractor ("Peanut shells are rough and tan...") is a fact about peanuts, so after hint 2 the child must still judge. Acceptable. Hint 3 removes the machines choice by name.
+- **N2. 2.d C02 distractor mix.** Machines in the field and "Rosa's class visited a farm" are still weak, but the shells choice is on topic and fails the test as intended. Key is the shortest option (43 against 51, 67, 40).
+- **N3. Peanut-product facts appear four times in 2.d Set 1:** P2 distractor (peanut butter), P5 middle row (roasted, boiled or made into peanut butter), C03 (steps of peanut butter), C02 (cooking oil). None gives the key of another; a child sees the same domain repeatedly. Not wrong.
+- **N4. 1.e S01 and P5.** In P5, "First," is the key for the early blank and "In the end," is a wrong choice for it; in S01, "First," is already in the text, the first blank takes a middle word and "In the end," is the key for the last blank. One shared option (inside the ceiling), and the same time-word skill, but S01 asks for a middle word where P5 asks for a start word. Honest `like`, not a copy.
+- **N5. Type changes between a similar item and its core item.** 1.e S07 (mc) and 2.d S08 (mc) for hot text; 1.e S13 and 2.d S11, S13 (ms) for hot text; 1.e S15 (mc, 1 point) for an ebsr (2 points). Points match except S15 (1 against 2). Each similar item tests the same move with the same criterion. S15's reduction is reasonable.
+- **N6. Off-topic sentences are always a "my X" aside** (2.d P3 apples, C08 pickup truck, C11 puppy and lunch, S08 trumpet, S11 shoes and noodles; 1.e C07 drums, S07 teacher's truck). A child can learn "find the personal aside" without checking the topic. Consider making one of the removal items an on-topic-looking but off-topic sentence (about a different animal or object). Not a blocker.
+- **N7. 2.d S13 stem** repeats the four lines that are also the choices. Redundant on screen, harmless. The printed figure caption stays on S13 and C13 and the question there is about sentences, so it does not leak.
+- **N8. Figure drawings** (`tt2d-bus-stopped.svg`, `tt2d-windsock.svg`, `tt2d-sink-float.svg`) are grayscale line drawings with text labels. In C10 "red lights" is a label, not a color the child sees. The alt text and labels match each other and the keys. With the caption removed, `player.js` renders only the strong "Figure 1" label (the caption is added only when `f.caption` exists), so the key is no longer word-matched to visible text.
+
+## 3. Checks requested
+
+### Second-round fixes: status
+| Item | Check | Status |
+|---|---|---|
+| 1.e S01 | "To begin with," a second answer? | **Closed.** Sentence 1 now begins "First,"; "To begin with" would repeat it and the how says so. Blind solve chose the key without a second candidate. After hint 3 one more word remains for blank 1 (key plus "To begin with,"), and the wording clash resolves it. |
+| 1.e S06 | key shortened | **Closed.** Key 60, wrong 56, 43, 58: no longest-option cue. |
+| 1.e S11 | prompt, key, hints | Prompt and key closed (key 80, wrong 92, 78, 79). **Hint 3 still narrows** (S1 above). |
+| 1.e S13 | prompt, keys, Jaccard | **Closed.** Keys 67 and 53 against 69, 52, 55. Jaccard to C13 0.100 / 0.113 / 0.094. |
+| 1.e C04 | key echo | **Closed.** Key no longer repeats "alone" and "first time" (key 75, wrong 76, 58, 75). |
+| 2.d C02 | on-topic distractor | **Closed.** One distractor is about peanut shells; key shortest. |
+| 2.d C04 | stem no longer holds the key | **Closed** (S2 for fairness). |
+| 2.d C10, S10 | caption removed | **Closed** (N8). |
+| 2.d S03 | sequence words | **Closed**, order unique (S3 for level). |
+| 2.d S05 | key shortened | **Closed.** Key 51, wrong 45, 54, 51. |
+| 2.d S13 | prompt, numerals | **Closed.** Jaccard to C13 0.122 / 0.155 / 0.113. |
+
+### Jaccard: similar against its own `like` core item, all 30
+Measures: word set of words of three letters or more / all-token set / content words (stop words removed), on prompt, stem, choices, options, steps, rows, columns and figure text (passage excluded). Ceiling 0.21, at most one shared option.
+- **1.e:** S01 0.164/0.190/0.156 (one shared option, "In the end,"), S02 0.067/0.097/0.019, S03 0.125/0.164/0.043, S04 0.140/0.190/0.097, S05 0.096/0.142/0.048, **S06 0.197/0.210/0.125** (at the line, not over), S07 0.135/0.127/0.068, S08 0.182/0.191/0.145, S09 0.158/0.178/0.121, S10 0.178/0.183/0.119, S11 0.122/0.168/0.096, S12 0.060/0.087/0.034, S13 0.100/0.113/0.094, S14 0.151/0.191/0.120, S15 0.188/0.196/0.124.
+- **2.d:** S01 0.126/0.160/0.089, S02 0.100/0.133/0.036, S03 0.167/0.176/0.138, S04 0.092/0.132/0.073, **S05 0.208/0.207/0.103** (just under), S06 0.145/0.188/0.092, S07 0.066/0.114/0.045, S08 0.093/0.070/0.083, S09 0.191/0.181/0.132, S10 0.155/0.204/0.139, S11 0.089/0.082/0.051, S12 0.144/0.184/0.108, S13 0.122/0.155/0.113, S14 0.120/0.159/0.045, S15 0.193/0.184/0.147. No shared options.
+- Result: **no pair over 0.21 on any measure.** S06 (1.e) and S05 (2.d) sit at the line, from the prompt frame ("Which sentence should replace sentence 2 to show..."; "Sentence 4 is a weak ending..."), not from shared content.
+- Pairwise over all items inside a lesson (words of three letters or more, different passages): only the 2.d hot text prompts P3, C08 and C11 exceed 0.3 (0.33 to 0.47), because the hot text printout has only the prompt ("Which sentence does not belong ... Choose the sentence"). Same task frame, different drafts and different answers. Fine.
+
+### Topic and duplicate search over `js/data` (with variants)
+Searched (case-insensitive, all files other than T-T1.js and T-T2.js): protein; bowling; climbing; hide-and-seek and hide and seek; abacus, abaci; windsock; sink with float; jelly; sandwich; stop arm; school bus; cooking oil, peanut oil; backstage; trembl-; peeking, peeked; curtain; glitter; purple hold; popcorn; squeak; and the names Zora, Jamal, Kofi, Rosa, Amina.
+- **No hits at all:** protein, abacus, windsock, hide-and-seek, stop arm, backstage, purple hold, Zora, Amina.
+- **Same word, different content (read in context):**
+  - cooking oil: `T-TS.js` lava lamp recipe (steps with cooking oil). No peanut or product fact.
+  - sink and float: `L-V3.js` balloon, `T-TS.js` ice floats on a pond. Not the cork, apple, rock, coin set.
+  - jelly: `T-RA.js` jellyfish and a jelly bean, `T-SS.js` canoe wobbling like jelly (a simile). No sandwich.
+  - bowling: `F-FH.js` thunder "like a giant bowling ball". No alley.
+  - trembl-: `R-INF-02.js` "The Land of Trembling Earth". Different use.
+  - climbing: `T-T34.js` Lena's climbing wall opinion piece (opinion versus fact). Different task and text type; Kofi's story beginning is not repeated.
+  - school bus: `T-RA.js` June and Max research-question item (one line, "painted yellow?"), `T-SS.js` a sentence about the yellow bus, `T-T34.js` a poem stanza. None states the 2.d facts (flashing lights, stop arm, yellow as easy to see).
+  - peeking and peeked: `T-T34.js` a rain poem, `L-V3.js` Grace peeked inside.
+- Names Jamal, Kofi and Rosa recur across many lessons (a shared cast); not a duplicate of content.
+- **Peanuts:** unchanged from review two (no key fact of the new C02, C03 or C04 appears in another lesson).
+- **Test forms (`l.test`):** neither lesson's `test` forms mention peanuts, protein, oil, abacus, windsock, bowling, Jamal, Kofi's wall, Zora, the bus or sandwiches, so no key is given away into form A or form B by the changed items.
+- **Verdict:** clear.
+
+### Hand recount of live choices after the clue and hints 1 to 3 (changed items)
+| Item | After clue | After hint 2 | After hint 3 |
+|---|---|---|---|
+| 1.e S01 | blank 1: 3; blank 2: 3 | 3; 3 | blank 1: 2 (one is clumsy beside "First,"); blank 2: 3 |
+| 1.e S06 | 4 | 4 | 3 |
+| 1.e S11 | 4 | 4 | 3 on paper, **1 applied honestly (S1)** |
+| 1.e C11 | 4 | 4 | 3 on paper, **1 applied honestly (S1)** |
+| 1.e S13 | 10 pairs | 10 | 6 |
+| 1.e C04 | 4 | 4 | 3 |
+| 2.d C02 | 4 | 4 | 3 |
+| 2.d C04 | 3 | 3 | 2 (a guess unless the child knows protein, S2) |
+| 2.d C10 | 4 | 4 | 3 |
+| 2.d S03 | 24 orders | 24 | 6 |
+| 2.d S05 | 4 | 4 | 3 |
+| 2.d S10 | 4 | 4 | 3 |
+| 2.d S13 | 6 pairs | 6 | 3 (hint 3 removes only the boats line) |
+- None of the hint 3 sentences reveals a key. The hint 3 for S11 and C11 is the only one whose generalization narrows to one choice. The ladders check by script found no key-only word in any hint except harmless ones ("could", "like", "when").
+- h1 equals the clue on all 60 core and similar items, as designed. Hint 2 points where to look and hint 3 removes at most one named distractor, except as in S1.
+
+### Points, DOK, alignment
+- Choose-two (ms and hot text with `pick` 2), two-blank dropdowns, order, match and ebsr are 2 points; single choices 1 point. A script found no mismatch within a lesson. 1.e core is 23 points (11 at DOK 2, 4 at DOK 3 in the 15 items); 2.d core is 21 points (13 at DOK 2, 2 at DOK 3). Unchanged from review two.
+- Official wording (from `js/data/standards.js`): 1.e "Apply narrative techniques (e.g., character, setting, problem, resolution, dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a sense of closure." Items cover dialogue, setting and problem, descriptive details, event order and closure. 2.d "Apply expository techniques to introduce a topic, develop the topic with facts and other information (e.g., definitions, details, illustrations), and provide a concluding statement or section." Items cover introduction, facts, definitions (C04, C07, C14), illustrations (C10, C13) and conclusion. Both `tested` as writing; both fit.
+- Grade 3: nothing kindergarten-like except 2.d S03 (S3 above). Vocabulary of protein, ferrule, iceberg, legume and pole is defined in the item or choices.
+
+### Facts (sources)
+- **Protein builds and maintains body tissue (C04 key):** https://kidshealth.org/en/kids/protein-def.html ("Protein builds, maintains, and replaces the tissues in your body"; muscles are made mostly of protein). https://extension.unr.edu/publication.aspx?PubID=4145 (protein builds, repairs and maintains muscles and tissues, needed for growth and development; carbohydrates are the main energy source). Bones are among the tissues protein supports; neither page says "bones" in a short quote, so the key is true but the child-friendly pages stress muscles. Key stands.
+- **School bus colors, stop arm, school-bus yellow** (C07, C09, C10): unchanged from review two (https://pctribune.com/opinions/ask-a-trooper-school-bus-lights/ and https://en.wikipedia.org/wiki/School_bus_yellow). Fix-round changes did not touch these claims.
+- **Peanut oil, peanut butter steps, magnets and poles:** unchanged from review two (see its sources).
+- **New claims in the fix round:** hamster cheek pouches (1.e P3, a distractor), windmills pumping water and grinding grain (2.d S09), ferrule holding the eraser (S04), iceberg as a large floating piece of ice (S07), harbor as a protected part of the sea (S14): all common knowledge with no conflict found; none was changed this round.
+
+## 4. Fix list, in order (all SHOULD; none blocks acceptance)
+1. 1.e S11 and C11 hint 3: replace "a story needs a character doing something" with "this is a story" (S1).
+2. 2.d C04: make the clue honest about needing knowledge, or add a neutral context sentence (S2).
+3. 2.d S03: swap in a grade-3 process (S3).
+4. Both lessons: one more Watch Me example (S4).
+5. NOTE-level: N6 (vary the removal distractor type) if time allows.
+
+No lesson file was edited by me. No server was started.
