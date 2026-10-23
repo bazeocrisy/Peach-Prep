@@ -2363,13 +2363,15 @@ PP.addLesson({
       "A trustworthy source comes from people who know the topic well, such as scientists, museums, libraries or park rangers.",
       "Be careful with ads. An ad wants you to buy something, so it may only tell the good parts or make things sound bigger than they are.",
       "A guess, an opinion or a made-up story is not the same as a fact that has been checked.",
-      "Read the words, too. Words like everyone knows, or numbers that sound impossible, are warning signs. A good source gives facts that make sense and may tell how people found them out.",
+      "Read the words, too. Words like everyone knows, or numbers that sound impossible, are warning signs. A good source gives facts that make sense and may tell how people found them out, for example by testing an idea that many people believe.",
       "A source must also be on your topic. A great book about frogs will not help a report about snakes."
     ],
     words: [
       { term: "trustworthy", means: "made by people who know the facts, so you can believe it" },
       { term: "on topic", means: "about the same thing you are learning about" },
-      { term: "ad", means: "words or pictures made to get people to buy something" }
+      { term: "ad", means: "words or pictures made to get people to buy something" },
+      { term: "credible", means: "trustworthy: made by people who know the facts, with words that make sense" },
+      { term: "relevant", means: "on topic: it helps answer your question" }
     ],
     example: {
       label: "Example: the topic is how bats find food at night",
@@ -2428,6 +2430,28 @@ PP.addLesson({
         ["They have long trunks.", "An elephant's trunk has no bones in it.", "Elephants flap their big ears to cool off on hot days."],
         ["An elephant can eat a million pounds of peanuts in one day.", "Elephants live together in family groups.", "A baby elephant is called a calf, and it stays close to its mother."],
         ["Some elephants have long tusks.", "Their gray skin is thick and wrinkly.", "Some elephants live to be 60 years old or even older.", "They can remember places where they found water long ago."]
+      ] },
+    /* B3 (expansion 2026-10-22, author b3c): excerpt pair p3-p4 is used only by core set 2, and p5 only by
+       core set 3. Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "Goldfish Facts!", byline: "Source 1: a page on a fun-facts website. No writer's name is given.", genre: "Informational text (web page)",
+      paragraphs: [
+        ["Goldfish are a kind of carp.", "They can be orange, white, black or even spotted.", "Some goldfish have long tails that flow like ribbons."],
+        ["Everyone knows that a goldfish can remember things for only three seconds!", "Goldfish swim with fins on their sides, back and tail."],
+        ["A goldfish can live for 100 years if you feed it Sparkle Flakes, the fish food we sell.", "Goldfish like to eat small bits of food more than once a day."]
+      ] },
+    { id: "p4", title: "What Can a Goldfish Remember?", byline: "Source 2: an article in a science magazine for kids, written by a scientist who studies fish", genre: "Informational text",
+      paragraphs: [
+        ["Many people say that goldfish forget things in a few seconds.", "Scientists wanted to find out if that is true, so they tested it."],
+        ["In one test, scientists played a sound each time they fed a group of goldfish.", "After a while, the fish swam to the feeding spot as soon as they heard the sound.", "Months later, the fish still swam to the spot when the sound played."],
+        ["So goldfish can remember things for months, not seconds.", "Pet goldfish often learn to swim to the front of the tank when the person who feeds them walks in."],
+        ["Goldfish can live for ten years or more when their water is kept clean."]
+      ] },
+    { id: "p5", title: "Bulls and the Color Red", byline: "A page from a book about farm animals, written by Dr. Ray Holt, a scientist who studies cattle", genre: "Informational text",
+      paragraphs: [
+        ["In some old cartoons, a bull gets angry when it sees a red cape.", "Many people believe that the color red makes bulls charge."],
+        ["But bulls cannot see red the way people do.", "Scientists have found that cattle can see blue and yellow, but red does not stand out to them the way it does to people."],
+        ["To test the idea, one team of scientists showed bulls a red cape, a blue cape and a white cape.", "When a cape stayed still, the bulls did not charge at it, even if it was red.", "When a cape waved back and forth, the bulls charged, no matter what color it was."],
+        ["So it is the movement, not the color, that gets a bull's attention.", "Bulls are also very strong.", "A grown bull can weigh as much as a small car."]
       ] }
   ],
   practice: [
@@ -2478,13 +2502,467 @@ PP.addLesson({
       prompt: "Ella's report is about insects. She found a toy ad that says, \"Our bug kit has every bug in the world!\" Why is this NOT a good source?",
       choices: [
         { text: "The ad is trying to sell something, so it may stretch the truth.", correct: true },
-        { text: "The ad is about bugs, and bugs are not part of her topic." },
-        { text: "The ad is too new to have any true facts in it at all." },
-        { text: "The ad was not written by a kid who is her own age." }
+        { text: "The ad is about bug kits, so it does not fit a report on insects." },
+        { text: "The ad is short, so it cannot tell any facts at all." },
+        { text: "The ad is for kids, so its words are too easy to be true." }
       ],
+      /* B3 (b3c): weak item (implausible distractors) revised in place; the key, clue and id are unchanged. */
       clue: "Think about why an ad is made. What does the company want readers to do?",
-      why: "The answer is \"The ad is trying to sell something, so it may stretch the truth.\" No kit could hold every bug in the world. The ad is on her topic, being new does not make something false, and kids her age are not experts." }
+      why: "The answer is \"The ad is trying to sell something, so it may stretch the truth.\" No kit could hold every bug in the world. The ad is about bugs, which are insects, so it is on her topic. A short source can still have facts, and easy words do not make something false." }
   ],
+  /* ---------- B3 (expansion 2026-10-22, author b3c; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen independent items in three sets of five. { ref } reuses the Try item P4 by id (it stays in
+     practice; Practice Together shows P1, P2, P3 and P5). New ids are numbered by their place in the fifteen.
+     Credibility from the wording of an excerpt (the coverage gap) is practised in every set: C02, C04, C05,
+     C06, C07, C08, C12 and C14. The unscored cr item C15 asks the child to name and justify a source.
+     Author log: docs/expansion-2026-10-22/batches/B3-b3c-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-RA2b-P4" },
+      { id: "SK-RA2b-C02", type: "match", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+        prompt: "Jamal copied these sentences from different sources about peach trees. Does each one sound like a checked fact, or is it a warning sign? Match each one.",
+        cols: ["Sounds like a checked fact", "Warning sign"],
+        rows: [
+          { text: "Peach trees bloom in early spring, before their leaves come out.", answer: 0 },
+          { text: "Our peach jam is the best in the whole world, so buy some today!", answer: 1 },
+          { text: "Farm scientists counted the peaches on 50 trees for three summers.", answer: 0 },
+          { text: "Peach trees never get sick, no matter what.", answer: 1 },
+          { text: "My uncle says one peach tree can grow a million peaches.", answer: 1 }
+        ],
+        clue: "Read the words closely. Warning signs include selling words, words like never or always, and numbers that sound impossible. A checked fact makes sense or tells how people found it out.",
+        hints: [
+          "Read the words closely. Warning signs include selling words, words like never or always, and numbers that sound impossible. A checked fact makes sense or tells how people found it out.",
+          "For each sentence, ask two questions. Could this really be true? Does it tell who found it out, or is it trying to sell something?",
+          "\"Never get sick, no matter what\" promises too much, because every living thing can get sick. That one is a warning sign. Sort the other four sentences."
+        ],
+        how: [
+          "Blooming in early spring makes sense and can be checked, so it sounds like a checked fact.",
+          "Counting the peaches on 50 trees for three summers tells how scientists found out, so it sounds like a checked fact.",
+          "\"The best in the whole world, so buy some today!\" uses selling words. \"Never get sick, no matter what\" promises too much. A million peaches on one tree is an impossible number, and an uncle saying so is not a check. These are warning signs."
+        ],
+        misconception: "A common mix-up is trusting a sentence because it has a big, exact number. Ask whether the number could really be true.",
+        why: "Blooming in early spring and counting peaches on 50 trees for three summers sound like checked facts: they make sense, and one tells how scientists found out. The jam sentence uses selling words, \"never get sick, no matter what\" promises too much, and a million peaches on one tree is an impossible number, so those three are warning signs." },
+      { id: "SK-RA2b-C03", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+        prompt: "Jamal's new question is \"How do farmers protect peach trees from a late frost?\" All four excerpts come from a Georgia college's farm guide. Which excerpt is relevant to his question?",
+        choices: [
+          { text: "\"Before a frost, some farmers turn on giant fans to mix warmer air around the trees.\"", correct: true },
+          { text: "\"Peach trees grow best in sandy soil that lets extra water drain away.\"" },
+          { text: "\"A frost happens when the air gets so cold that ice forms on the plants.\"" },
+          { text: "\"Georgia farmers ship their peaches to many other states each summer.\"" }
+        ],
+        clue: "All four excerpts come from a source Jamal can trust, so check the topic. Read his question word by word: it asks HOW farmers protect the trees.",
+        hints: [
+          "All four excerpts come from a source Jamal can trust, so check the topic. Read his question word by word: it asks HOW farmers protect the trees.",
+          "Two excerpts talk about frost or cold air. Read those two closely.",
+          "Sandy soil is about where peach trees grow best, not about frost. Compare the excerpts that are left with Jamal's question."
+        ],
+        how: [
+          "Jamal's question asks how farmers protect peach trees from a late frost.",
+          "The fan excerpt tells what some farmers do before a frost: they mix warmer air around the trees. That answers his question.",
+          "The other frost excerpt only tells what a frost is. The soil and shipping excerpts are about other topics.",
+          "The answer is \"Before a frost, some farmers turn on giant fans to mix warmer air around the trees.\""
+        ],
+        misconception: "A common mix-up is choosing an excerpt that uses the same word, like frost, but does not answer the question.",
+        why: "The answer is \"Before a frost, some farmers turn on giant fans to mix warmer air around the trees.\" It tells what farmers do to protect the trees. The other frost excerpt only tells what a frost is, and the soil and shipping excerpts are about other topics." },
+      { id: "SK-RA2b-C04", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+        stem: ["Both excerpts come from posts that do not give the writer's name.",
+          "**Excerpt A:** \"Peaches are picked when the skin under the red blush turns from green to yellow. Workers twist each peach gently, so the skin does not bruise.\"",
+          "**Excerpt B:** \"Every peach in Georgia is picked at exactly 3:00 in the morning, all on the very same day!\""],
+        prompt: "Jamal can judge these excerpts only by their words. Which excerpt is more believable, and why?",
+        choices: [
+          { text: "Excerpt A, because its details are careful and could really be true.", correct: true },
+          { text: "Excerpt B, because it gives an exact time, so it must be right." },
+          { text: "Excerpt B, because it says every peach, so it tells more facts." },
+          { text: "Excerpt A, because it does not use any numbers at all." }
+        ],
+        clue: "When you cannot tell who wrote something, read its words. Could the facts really be true? Do they promise too much?",
+        hints: [
+          "When you cannot tell who wrote something, read its words. Could the facts really be true? Do they promise too much?",
+          "Read Excerpt B again, slowly. Picture what it says really happening on every farm across a whole state.",
+          "Having no numbers does not make an excerpt better or worse. A number can be fine if it makes sense. Compare the reasons that are left."
+        ],
+        how: [
+          "Neither excerpt tells who wrote it, so Jamal has to judge the words.",
+          "Excerpt B says every peach in Georgia is picked at 3:00 in the morning on the same day. That could not really happen. It promises too much.",
+          "Excerpt A gives careful details that make sense: how a ripe peach looks and how workers pick it.",
+          "The answer is \"Excerpt A, because its details are careful and could really be true.\" An exact time does not make a fact true."
+        ],
+        misconception: "A common mix-up is trusting a sentence because it sounds exact, like 3:00 in the morning. Ask whether it could really be true.",
+        why: "The answer is \"Excerpt A, because its details are careful and could really be true.\" Excerpt A tells how a ripe peach looks and how workers pick it, which makes sense. Excerpt B says every peach in a whole state is picked at the same hour on the same day, which could not happen. An exact time or the word every does not make a fact true, and numbers are fine when they make sense." },
+      { id: "SK-RA2b-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+        stem: ["A post on a fruit fans' web page says: \"Peach trees grow ten feet taller every year! Trust me, I just know trees.\" The post is signed \"PeachFan.\""],
+        prompt: "Jamal decides not to use this post. Complete his reason.",
+        text: "I should not use this post because the writer {0}, and the post gives {1}.",
+        slots: [
+          { options: ["does not tell who they are or how they know", "is a scientist who studies fruit trees", "has grown peaches in Georgia for years"], answer: 0 },
+          { options: ["a number that cannot be true", "facts that scientists measured", "a link to a college farm guide"], answer: 0 }
+        ],
+        clue: "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
+        hints: [
+          "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
+          "Look at how the post is signed and at the words \"Trust me, I just know trees.\" Then look at the number in the post.",
+          "The post never says the writer is a scientist or a farmer, so neither of those can go in the first blank. Now check the number to fill in the second blank."
+        ],
+        how: [
+          "The post is signed only \"PeachFan,\" and the writer says, \"Trust me, I just know trees.\" That does not tell who they are or how they know.",
+          "Ten feet taller every year is a number that cannot be true. A tree that grew that fast would be taller than a house in a few years.",
+          "The answers: the writer does not tell who they are or how they know, and the post gives a number that cannot be true."
+        ],
+        misconception: "A common mix-up is trusting a writer who sounds sure. \"Trust me\" is not the same as telling how you know.",
+        why: "The answers are \"does not tell who they are or how they know\" and \"a number that cannot be true.\" The post is signed only \"PeachFan,\" and \"Trust me\" does not say how the writer knows. A peach tree cannot grow ten feet taller every year." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-RA2b-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: ["p3"],
+        prompt: "Ama is reading Source 1. Which TWO sentences are the clearest warning signs that Source 1 may not be credible? Choose two sentences.",
+        targets: ["p3:1:1", "p3:1:2", "p3:1:3", "p3:2:1", "p3:2:2", "p3:3:1", "p3:3:2"],
+        answer: ["p3:2:1", "p3:3:1"], pick: 2,
+        clue: "Read each sentence and ask: Does it make sense? Does it tell how anyone found it out? Is it trying to sell something?",
+        hints: [
+          "Read each sentence and ask: Does it make sense? Does it tell how anyone found it out? Is it trying to sell something?",
+          "Reread paragraphs 2 and 3.",
+          "\"Goldfish swim with fins on their sides, back and tail\" is a plain fact that makes sense. Look closely at the other sentences in paragraphs 2 and 3."
+        ],
+        how: [
+          "\"Everyone knows\" does not tell who checked the fact, so that sentence is a warning sign.",
+          "A goldfish living 100 years, and only if you buy the food the page sells, is an impossible number and a sales pitch. That is a warning sign, too.",
+          "The sentences about colors, tails, fins and eating small bits of food are plain facts that make sense.",
+          "The answers are \"Everyone knows that a goldfish can remember things for only three seconds!\" and \"A goldfish can live for 100 years if you feed it Sparkle Flakes, the fish food we sell.\""
+        ],
+        misconception: "A common mix-up is thinking every sentence on a weak page sounds wrong. A page with warning signs can still have some plain facts, but you cannot tell which ones to trust.",
+        why: "The answers are \"Everyone knows that a goldfish can remember things for only three seconds!\" and \"A goldfish can live for 100 years if you feed it Sparkle Flakes, the fish food we sell.\" \"Everyone knows\" does not tell who checked, and 100 years is impossible and is tied to selling fish food. The other sentences are plain facts that make sense." },
+      { id: "SK-RA2b-C07", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: ["p4"],
+        prompt: "Source 2 begins, \"Many people say that goldfish forget things in a few seconds.\" Why does the writer begin this way?",
+        choices: [
+          { text: "to name the idea that the scientists set out to test", correct: true },
+          { text: "to show that the writer agrees that goldfish forget fast" },
+          { text: "to prove that many people keep goldfish as pets" },
+          { text: "to show that Source 1 was written by a scientist" }
+        ],
+        clue: "Ask what the rest of Source 2 does with its first sentence. Does the writer agree with it, or do something else with it?",
+        hints: [
+          "Ask what the rest of Source 2 does with its first sentence. Does the writer agree with it, or do something else with it?",
+          "Read the rest of paragraph 1, and then read paragraph 3.",
+          "Source 2 never tells how many people keep goldfish as pets, so that answer does not fit. Check the other answers against paragraphs 1 and 3."
+        ],
+        how: [
+          "The first sentence tells something many people believe about goldfish.",
+          "The next sentence says scientists wanted to find out if that is true, so they tested it.",
+          "Paragraph 3 tells what they found: goldfish remember for months, not seconds. So the writer does not agree with the first sentence.",
+          "The answer is \"to name the idea that the scientists set out to test.\""
+        ],
+        misconception: "A common mix-up is thinking a writer believes every idea in the article. Writers sometimes name an idea so they can show whether it is true.",
+        why: "The answer is \"to name the idea that the scientists set out to test.\" The next sentence says scientists tested whether it is true, and paragraph 3 says goldfish remember for months, not seconds. The writer does not agree with the first sentence, never counts goldfish owners and never talks about Source 1." },
+      { id: "SK-RA2b-C08", type: "hottext", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: ["p4"],
+        prompt: "A credible source often tells how people found out its facts. Which sentence tells what the scientists SAW that shows goldfish can remember for months? Choose the sentence in the passage.",
+        targets: ["p4:1:2", "p4:2:1", "p4:2:2", "p4:2:3", "p4:3:1", "p4:3:2"],
+        answer: ["p4:2:3"], pick: 1,
+        clue: "What scientists saw is what happened in the test. Proof that a memory lasts for months must show time passing.",
+        hints: [
+          "What scientists saw is what happened in the test. Proof that a memory lasts for months must show time passing.",
+          "Reread paragraph 2, where the test is told step by step.",
+          "\"In one test, scientists played a sound each time they fed a group of goldfish\" tells how the test started, not what happened later. Decide about the other sentences in paragraph 2."
+        ],
+        how: [
+          "The test is in paragraph 2. First, the scientists played a sound at feeding time.",
+          "After a while, the fish swam to the spot when they heard the sound. That shows they learned.",
+          "Months later, they still did it. That is what the scientists saw that shows the fish remembered for months.",
+          "The answer is \"Months later, the fish still swam to the spot when the sound played.\" Paragraph 3 says what the writer decides from the test, not what the scientists saw."
+        ],
+        misconception: "A common mix-up is choosing the writer's conclusion, \"So goldfish can remember things for months.\" The question asks for what the scientists saw.",
+        why: "The answer is \"Months later, the fish still swam to the spot when the sound played.\" It is what the scientists saw after months had passed. The other sentences in paragraph 2 tell how the test started and what the fish learned first, and paragraph 3 tells what the writer decides from the test." },
+      { id: "SK-RA2b-C09", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: ["p4"],
+        prompt: "Ama's sister has a different question: \"How can I keep my pet goldfish healthy?\" Which sentence from Source 2 is MOST relevant to her question?",
+        choices: [
+          { text: "\"Goldfish can live for ten years or more when their water is kept clean.\"", correct: true },
+          { text: "\"In one test, scientists played a sound each time they fed a group of goldfish.\"" },
+          { text: "\"Pet goldfish often learn to swim to the front of the tank when the person who feeds them walks in.\"" },
+          { text: "\"Many people say that goldfish forget things in a few seconds.\"" }
+        ],
+        clue: "A source can be credible and still not fit every question. Read the sister's question word by word, then find the sentence that helps answer it.",
+        hints: [
+          "A source can be credible and still not fit every question. Read the sister's question word by word, then find the sentence that helps answer it.",
+          "Find each sentence in Source 2. Decide whether it is about the memory test or about something else.",
+          "The sentence about the scientists' sound test tells how they studied memory, not how to keep a fish healthy. Check the other three."
+        ],
+        how: [
+          "The sister's question is about keeping a pet goldfish healthy.",
+          "Paragraph 4 says goldfish can live ten years or more when their water is kept clean. Clean water is something she can do to keep her fish healthy.",
+          "The other sentences are about memory: the test, what people say, and fish swimming to the front of the tank.",
+          "The answer is \"Goldfish can live for ten years or more when their water is kept clean.\""
+        ],
+        misconception: "A common mix-up is choosing a sentence because it has the word pet in it. A sentence is relevant only if it helps answer the question.",
+        why: "The answer is \"Goldfish can live for ten years or more when their water is kept clean.\" Clean water helps a goldfish stay healthy and live a long time. The other sentences are about memory: the sound test, what people say, and pet fish learning when they will be fed." },
+      { id: "SK-RA2b-C10", type: "match", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+        prompt: "Ama finds more sources about goldfish. Match each source to the best description of it.",
+        cols: ["Can trust: people who know fish made it", "Do not trust: it is trying to sell something", "Do not trust: it does not say who wrote it or how they know"],
+        rows: [
+          { text: "a book by a scientist who studies how fish learn", answer: 0 },
+          { text: "a pet store sign: \"Our goldfish are the smartest in town! Two for $5!\"", answer: 1 },
+          { text: "a post signed \"FishFan9\" that says goldfish forget everything", answer: 2 },
+          { text: "an aquarium web page by the workers who care for its fish", answer: 0 },
+          { text: "a fish-food box that says, \"Our flakes make fish twice as smart!\"", answer: 1 }
+        ],
+        clue: "For each source, ask who made it and why. Do they know about fish, are they selling something, or can you not tell who they are?",
+        hints: [
+          "For each source, ask who made it and why. Do they know about fish, are they selling something, or can you not tell who they are?",
+          "In each row, find the words that tell who made the source. Then look for words that sell, like prices or big promises.",
+          "A post signed only \"FishFan9\" does not tell who the writer is or how they know, so it goes in the last group. Sort the other four."
+        ],
+        how: [
+          "The scientist's book and the aquarium web page come from people who know fish, so you can trust them.",
+          "The pet store sign has a price, and the fish-food box makes a big promise. Both are trying to sell something.",
+          "\"FishFan9\" does not say who wrote the post or how they know."
+        ],
+        misconception: "A common mix-up is trusting a source because it sounds sure. A store sign or a box with big promises is trying to sell, not to teach.",
+        why: "The scientist's book and the aquarium web page can be trusted, because people who know fish made them. The pet store sign and the fish-food box are trying to sell something. The \"FishFan9\" post does not say who wrote it or how they know." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-RA2b-C11", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: ["p5"], pick: 2,
+        prompt: "Kofi has five research questions. Which TWO could he answer using \"Bulls and the Color Red\"? Choose two answers.",
+        choices: [
+          { text: "What colors can cattle see?", correct: true },
+          { text: "How heavy can a grown bull get?", correct: true },
+          { text: "What do bulls eat each day?" },
+          { text: "How long do cattle live?" },
+          { text: "Why do farmers keep bulls behind strong fences?" }
+        ],
+        clue: "A source is relevant to a question only if it gives facts that answer it. Check each question against the page.",
+        hints: [
+          "A source is relevant to a question only if it gives facts that answer it. Check each question against the page.",
+          "For each question, try to put your finger on a sentence in the page that answers it. If you cannot find one, the page does not answer that question.",
+          "The page never tells what bulls eat, so it cannot answer that question. Check the other four questions."
+        ],
+        how: [
+          "Paragraph 2 says cattle can see blue and yellow. That answers \"What colors can cattle see?\"",
+          "Paragraph 4 says a grown bull can weigh as much as a small car. That answers \"How heavy can a grown bull get?\"",
+          "The page never tells what bulls eat, how long cattle live or why farmers use fences. Saying bulls are strong is not the same as telling about fences."
+        ],
+        misconception: "A common mix-up is choosing a question because one of its words, like strong, is on the page. The page must answer the whole question.",
+        why: "The answers are \"What colors can cattle see?\" and \"How heavy can a grown bull get?\" Paragraph 2 tells which colors cattle can see, and paragraph 4 tells how much a grown bull can weigh. The page never tells what bulls eat, how long cattle live or why farmers keep bulls behind fences." },
+      { id: "SK-RA2b-C12", type: "mc", points: 1, dok: 3, std: ["3.T.RA.2.b"], passages: ["p5"],
+        prompt: "A game website says, \"Bulls go wild when they see red!\" Which sentence from \"Bulls and the Color Red\" gives the BEST reason to doubt it?",
+        choices: [
+          { text: "\"When a cape stayed still, the bulls did not charge at it, even if it was red.\"", correct: true },
+          { text: "\"To test the idea, one team of scientists showed bulls a red cape, a blue cape and a white cape.\"" },
+          { text: "\"Many people believe that the color red makes bulls charge.\"" },
+          { text: "\"A grown bull can weigh as much as a small car.\"" }
+        ],
+        clue: "To doubt a claim, look for a sentence that shows a reason it may not be true.",
+        hints: [
+          "To doubt a claim, look for a sentence that shows a reason it may not be true.",
+          "Read paragraph 1, and then read about the test in paragraph 3.",
+          "\"Many people believe that the color red makes bulls charge\" agrees with the website, so it gives no reason to doubt it. Look closely at the two sentences from paragraph 3."
+        ],
+        how: [
+          "A reason to doubt a claim shows that the claim may not be true.",
+          "In paragraph 3, a cape that stayed still did not make the bulls charge, even when it was red. If red made bulls go wild, they would have charged at the still red cape.",
+          "Showing the three capes only tells how the test was set up, not what happened. The belief in paragraph 1 agrees with the website, and a bull's weight is about something else.",
+          "The answer is \"When a cape stayed still, the bulls did not charge at it, even if it was red.\""
+        ],
+        misconception: "A common mix-up is choosing the sentence that tells how a test was set up. What happened in the test is what gives a reason to doubt.",
+        why: "The answer is \"When a cape stayed still, the bulls did not charge at it, even if it was red.\" If red made bulls go wild, they would have charged at the still red cape, but they did not. The sentence about the three capes only tells how the test was set up, the belief agrees with the website, and a bull's weight is off topic." },
+      { id: "SK-RA2b-C13", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
+        stem: ["**Keeping Ladybugs in Your Garden**", "A web page from the Cedar Hill Nature Center",
+          "Written by Ms. Rena Vance, who has studied garden insects for twelve years",
+          "\"We counted the tiny bugs called aphids on our rose bushes every week for two summers. Bushes with ladybugs on them had far fewer aphids.\"",
+          "At the top of the page is a bright cartoon of a ladybug wearing sunglasses."],
+        prompt: "Which TWO details make this web page credible? Choose two answers.",
+        choices: [
+          { text: "It was written by someone who has studied garden insects for twelve years.", correct: true },
+          { text: "It tells how the facts were found: by counting aphids every week for two summers.", correct: true },
+          { text: "It has a bright cartoon of a ladybug wearing sunglasses." },
+          { text: "It is about ladybugs, which are fun to learn about." },
+          { text: "It is a web page, so it is newer than a book." }
+        ],
+        clue: "Credible means you can trust it. Ask what would make you believe a page, and what only makes it nice to look at.",
+        hints: [
+          "Credible means you can trust it. Ask what would make you believe a page, and what only makes it nice to look at.",
+          "Read every line of the source, from the title down to the picture. Choose two.",
+          "A bright cartoon can make a page fun, but it does not make the facts true. Check the other four details."
+        ],
+        how: [
+          "Ms. Vance has studied garden insects for twelve years, so she knows about them.",
+          "The page tells how the facts were found: the aphids were counted every week for two summers.",
+          "A fun cartoon, a fun topic and being a web page do not make a source credible.",
+          "The answers are \"It was written by someone who has studied garden insects for twelve years.\" and \"It tells how the facts were found: by counting aphids every week for two summers.\""
+        ],
+        misconception: "A common mix-up is trusting a page because it looks nice or because its topic is fun.",
+        why: "The answers are \"It was written by someone who has studied garden insects for twelve years.\" and \"It tells how the facts were found: by counting aphids every week for two summers.\" Who wrote it and how the facts were found make the page credible. A cartoon, a fun topic and being a web page do not." },
+      { id: "SK-RA2b-C14", type: "dropdown", points: 2, dok: 3, std: ["3.T.RA.2.b"], passages: [],
+        stem: ["Bree's question: \"Why do tennis balls have fuzz?\"",
+          "**Excerpt X,** from a tennis coach's guide: \"Stretch your arms and legs for five minutes before every match.\"",
+          "**Excerpt Y,** from a post signed \"AceKid\": \"The fuzz makes a tennis ball fly 1,000 miles an hour, every single time!\""],
+        prompt: "Complete Bree's notes about the two excerpts.",
+        text: "Excerpt X is {0}. Excerpt Y is {1}.",
+        slots: [
+          { options: ["credible and relevant", "credible but not relevant", "relevant but not credible"], answer: 1 },
+          { options: ["credible and relevant", "credible but not relevant", "relevant but not credible"], answer: 2 }
+        ],
+        clue: "Check each excerpt two ways. Credible: can you trust who wrote it and its words? Relevant: does it help answer Bree's question?",
+        hints: [
+          "Check each excerpt two ways. Credible: can you trust who wrote it and its words? Relevant: does it help answer Bree's question?",
+          "For Excerpt X, read Bree's question again and ask what the excerpt is about. For Excerpt Y, look at who wrote it and at the words \"1,000 miles an hour\" and \"every single time.\"",
+          "A tennis coach knows about the sport, so Excerpt X can be trusted. Now decide whether it fits Bree's question, and then judge Excerpt Y."
+        ],
+        how: [
+          "Excerpt X comes from a tennis coach, so it is credible. But it is about stretching, not fuzz, so it is not relevant.",
+          "Excerpt Y is about fuzz, so it is relevant. But the writer gives no real name, and \"1,000 miles an hour, every single time\" is impossible, so it is not credible.",
+          "The answers: X is credible but not relevant, and Y is relevant but not credible."
+        ],
+        misconception: "A common mix-up is checking only one thing. A good source must be credible AND relevant.",
+        why: "The answers are \"credible but not relevant\" and \"relevant but not credible.\" A coach's stretching tip can be trusted, but it does not tell why tennis balls have fuzz. The post is about fuzz, but its writer gives no name and its number is impossible." },
+      /* Constructed response: never scored. */
+      { id: "SK-RA2b-C15", type: "cr", dok: 3, std: ["3.T.RA.2.b"], passages: [], rows: 4,
+        stem: ["Pick a topic you would like to learn more about."],
+        prompt: "Name ONE source you think would be credible and relevant for your topic. Then give TWO reasons: one that shows it is credible and one that shows it is relevant.",
+        sample: "My topic is how glaciers move. I would use a book from a science museum, written by scientists who study ice. It is credible because the writers study glaciers for their job. It is relevant because it has a chapter about how glaciers slide downhill.",
+        criteria: ["I named a topic and one source.", "I gave a reason the source is credible, such as who made it or how they found out.", "I gave a reason the source is relevant to my topic."],
+        clue: "Start with a topic you wonder about. Then think of a place where people who know that topic share facts.",
+        hints: [
+          "Start with a topic you wonder about. Then think of a place where people who know that topic share facts.",
+          "For the credible reason, tell who made the source and how they know. For the relevant reason, tell what part of the source is about your topic.",
+          "Check your two reasons: one should be about who made the source, and the other should be about what the source covers."
+        ],
+        how: [
+          "Pick a topic and name one source, such as a book, a web page or a person.",
+          "Write one reason it is credible: who made it and how they know.",
+          "Write one reason it is relevant: what part of it is about your topic.",
+          "Compare with the sample and the checklist. Other topics and sources can also be right."
+        ],
+        why: "Many answers can be right. A strong answer names one source and gives one reason it is credible and one reason it is relevant." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own short text. */
+  similar: [
+    { id: "SK-RA2b-S01", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C02", "SK-RA2b-C06"],
+      prompt: "Keisha found these sentences about tomato plants. Which sentence is a warning sign that its source may not be credible?",
+      choices: [
+        { text: "\"This plant food makes any tomato grow as big as a beach ball overnight!\"", correct: true },
+        { text: "\"Tomato plants need plenty of water when the weather is hot.\"" },
+        { text: "\"Our garden club measured our tomato plants every Friday in June.\"" },
+        { text: "\"Tomatoes can be red, yellow, orange or even purple.\"" }
+      ],
+      clue: "Warning signs are words that sell, words that promise too much and numbers or sizes that sound impossible.",
+      hints: [
+        "Warning signs are words that sell, words that promise too much and numbers or sizes that sound impossible.",
+        "For each sentence, picture it really happening. Could it be true?",
+        "Measuring plants every Friday tells how the club found out, so that is a good sign, not a warning sign. Check the other three."
+      ],
+      how: [
+        "A warning sign makes you doubt a source.",
+        "No plant food can make a tomato as big as a beach ball overnight. It promises too much, and it is selling plant food.",
+        "Needing water and coming in many colors make sense, and measuring every Friday tells how facts were found.",
+        "The answer is \"This plant food makes any tomato grow as big as a beach ball overnight!\""
+      ],
+      why: "The answer is \"This plant food makes any tomato grow as big as a beach ball overnight!\" It promises something impossible to sell plant food. The other sentences make sense, and one tells how the facts were found." },
+    { id: "SK-RA2b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.RA.2.b"], passages: [],
+      like: ["SK-RA2b-C03", "SK-RA2b-C09", "SK-RA2b-C11"],
+      prompt: "Theo's question is \"Why do cats purr?\" All four excerpts come from a book by an animal doctor. Which excerpt is relevant to his question?",
+      choices: [
+        { text: "\"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\"", correct: true },
+        { text: "\"A cat's whiskers help it feel its way through dark, narrow places.\"" },
+        { text: "\"Lions can roar loudly, but most house cats cannot roar at all.\"" },
+        { text: "\"Most house cats sleep for twelve hours or more every single day.\"" }
+      ],
+      clue: "The book can be trusted, so check the topic. Theo's question asks WHY cats purr.",
+      hints: [
+        "The book can be trusted, so check the topic. Theo's question asks WHY cats purr.",
+        "Two excerpts are about sounds that cats make. Read those two closely.",
+        "Sleep and whiskers are not about sounds at all. Compare the two sound excerpts with Theo's question, word by word."
+      ],
+      how: [
+        "Theo's question asks why cats purr.",
+        "The excerpt about feeling calm and safe gives reasons cats purr.",
+        "Roaring is a different sound, and whiskers and sleep are other topics.",
+        "The answer is \"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\""
+      ],
+      why: "The answer is \"Cats often purr when they feel calm and safe, and some purr to calm themselves when they hurt.\" It gives reasons cats purr. Roaring is a different sound, and whiskers and sleep are other topics." },
+    { id: "SK-RA2b-S03", type: "ms", points: 2, dok: 2, std: ["3.T.RA.2.b"], passages: [], pick: 2,
+      like: ["SK-RA2b-C13", "SK-RA2b-C10", "SK-RA2b-P4"],
+      prompt: "Lena is writing a report on how to care for a pet rabbit. Which TWO sources would be credible? Choose two answers.",
+      choices: [
+        { text: "a guide written by an animal doctor who treats rabbits", correct: true },
+        { text: "a book by a shelter worker who has cared for rabbits for ten years", correct: true },
+        { text: "an ad that says its rabbit food makes rabbits live forever" },
+        { text: "a post signed \"BunnyLove\" that gives no other name" },
+        { text: "a cartoon about a rabbit who flies to the moon" }
+      ],
+      clue: "Ask who made each source. Do they know about caring for rabbits, or are they selling, hiding who they are, or telling a made-up story?",
+      hints: [
+        "Ask who made each source. Do they know about caring for rabbits, or are they selling, hiding who they are, or telling a made-up story?",
+        "In each answer, find the words that tell who made the source. Choose two.",
+        "The cartoon is a made-up story, so it is not a fact source. Check who made each of the other four."
+      ],
+      how: [
+        "An animal doctor who treats rabbits and a shelter worker who has cared for rabbits for ten years both know the facts.",
+        "The ad promises something impossible to sell food, \"BunnyLove\" does not say who they are, and the cartoon is made up.",
+        "The answers are \"a guide written by an animal doctor who treats rabbits\" and \"a book by a shelter worker who has cared for rabbits for ten years.\""
+      ],
+      why: "The answers are \"a guide written by an animal doctor who treats rabbits\" and \"a book by a shelter worker who has cared for rabbits for ten years.\" Both are made by people who know how to care for rabbits. The ad is selling, the post hides who wrote it, and the cartoon is made up." }
+  ],
+  /* Hints and Show me how for items kept in practice: ref P4 (core set 1) and Together P1, P2, P3, P5. */
+  addons: {
+    "SK-RA2b-P1": {
+      hints: [
+        "Ask who made each source. Do they know about real alligators, or are they selling something, telling a made-up story or guessing?",
+        "In each answer, find the words that tell who made the source and why.",
+        "The stuffed alligator ad is trying to sell a toy, so it is not a fact source. Check who made each of the other three."
+      ],
+      how: [
+        "People at a wildlife center study real animals, so their web page about alligator nests is trustworthy.",
+        "The ad wants to sell a toy, the comic book is made up, and the friend's idea is only a guess.",
+        "The answer is \"a wildlife center web page about alligator nests.\""
+      ] },
+    "SK-RA2b-P2": {
+      hints: [
+        "All of these may be trustworthy. Read Priya's topic again, word by word, and find the source that matches all of it.",
+        "Say Priya's topic in your own words. Then read each source slowly and say what it is about.",
+        "Snowflakes are a different kind of weather, so that article is off topic. Check the other three against every word of her topic."
+      ],
+      how: [
+        "Priya's topic is how hurricanes form.",
+        "The weather scientist's article about how hurricanes form matches all of it: hurricanes, and how they form.",
+        "Snowflakes and volcanoes are different topics, and the news story tells what happened after a hurricane, not how it formed.",
+        "The answer is \"a weather scientist's article about how hurricanes form.\""
+      ] },
+    "SK-RA2b-P3": {
+      hints: [
+        "For each source, ask: Does an expert stand behind it? Or is it trying to sell, or only a guess?",
+        "In each row, find the words that tell who made the source.",
+        "A classmate's guess is not a checked fact, so it is not trustworthy. Sort the other three."
+      ],
+      how: [
+        "The scientist's library book and the museum web page come from experts, so they are trustworthy.",
+        "The ad is trying to sell a bat house and makes a big promise: \"a hundred bats overnight!\"",
+        "The classmate's idea is only a guess. The ad and the guess are not trustworthy."
+      ] },
+    "SK-RA2b-P5": {
+      hints: [
+        "Think about why an ad is made. What does the company want readers to do?",
+        "Read the ad's words again: \"every bug in the world.\" Could that really be true?",
+        "Bugs are insects, so the ad is on Ella's topic. That is not the problem. Check the other reasons."
+      ],
+      how: [
+        "An ad is made to get people to buy something.",
+        "\"Every bug in the world\" cannot be true, so the ad stretches the truth to sell the kit.",
+        "The ad is on her topic, a short source can still have facts, and easy words do not make something false.",
+        "The answer is \"The ad is trying to sell something, so it may stretch the truth.\""
+      ] },
+    "SK-RA2b-P4": {
+      hints: [
+        "Check two things for every source. First, can you trust who made it? Second, is it about growing peach trees?",
+        "Look closely at the two library books by a Georgia fruit farmer. Read what each one is about.",
+        "The smoothie ad is trying to sell a drink, so it is not a source Jamal can trust for facts. Check the other sources for both things."
+      ],
+      how: [
+        "The Georgia college's farming guide is made by people who study farming, and it is about growing peach trees.",
+        "The fruit farmer's book about caring for peach trees is trustworthy and on topic, too.",
+        "The farmer's apple tree book is trustworthy, but it is about a different tree. The smoothie ad is selling something, and the poem is not a fact source.",
+        "The answers are \"a Georgia college's farming guide about growing peach trees\" and \"a library book by a Georgia fruit farmer about caring for peach trees.\""
+      ],
+      misconception: "A common mix-up is choosing a source that is trustworthy but off topic, like the apple tree book." }
+  },
   test: [
     { id: "SK-RA2b-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Owen is writing about what sea turtles eat. Which source would be the MOST trustworthy?",

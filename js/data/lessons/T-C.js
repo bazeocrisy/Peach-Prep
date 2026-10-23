@@ -54,15 +54,15 @@ PP.addLesson({
     /* B3 (expansion 2026-10-22, author b3a): models one topic written for two audiences, and how the
        words change for each reader (core C03, C11, C13 and C15 ask for this). */
     {
-      show: ["Note 1: Dear families, Art Night is on Thursday from 6:00 to 7:00 in the cafeteria. Come and see the paintings your children made this fall.", "Note 2: Hey, artists! Thursday is Art Night. Stand by your painting and tell your family how you made it."],
-      ask: "Both notes are about Art Night. Who is each note for, and how can you tell?",
+      show: ["Note 1: Dear families, Poetry Night is on Thursday from 6:00 to 7:00 in the cafeteria. Come and hear the poems your children wrote this fall.", "Note 2: Hey, poets! Thursday is Poetry Night. Stand up tall and read your poem loud and clear for your family."],
+      ask: "Both notes are about Poetry Night. Who is each note for, and how can you tell?",
       steps: [
-        "Look at who each note talks to. Note 1 says \"Dear families.\" Note 2 says \"Hey, artists!\"",
-        "Look at what each note asks the reader to do. Families are asked to come and look. The artists are asked to stand by their paintings and explain them.",
+        "Look at who each note talks to. Note 1 says \"Dear families.\" Note 2 says \"Hey, poets!\"",
+        "Look at what each note asks the reader to do. Families are asked to come and listen. The poets are asked to stand up and read their poems.",
         "Look at the words. Note 1 gives the time and the place in a calm way. Note 2 is short and cheerful.",
         "The topic is the same, but the writer chose different words for each audience."
       ],
-      answer: "Note 1 is for the families who will come to look, and Note 2 is for the students who made the art. The greeting and what each note asks the reader to do show who each one is for."
+      answer: "Note 1 is for the families who will come to listen, and Note 2 is for the students who wrote the poems. The greeting and what each note asks the reader to do show who each one is for."
     }
   ],
   parent: "When you see a sign, a flyer, a letter or the back of a food box, ask your child: Why did someone write this? Who is it for? Have your child point to the words that show it.",
@@ -222,12 +222,12 @@ PP.addLesson({
         misconception: "A common mix-up is choosing a rule that fits every reader. The best audience clues fit only one kind of reader.",
         why: "The answers are \"It calls its readers young zookeepers.\" and \"It tells readers to ask a grown-up to lift them up.\" A playful name and needing to be lifted fit small children. Petting gently, washing hands and the hours are rules for every visitor." },
       { id: "SK-TC1a-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.a"], passages: [],
-        stem: ["How to Make a Rain Gauge", "1. Cut the top off a clear plastic bottle.", "2. Turn the top upside down and set it in the bottle, like a funnel.", "3. Tape a ruler to the side of the bottle.", "4. Set the bottle outside, away from trees.", "5. After it rains, read how many inches of water fell.", "Please be careful, because the cut edge of the bottle can be sharp."],
+        stem: ["How to Make a Paper Plate Mask", "1. Hold a paper plate up to your face, and have a helper mark where your eyes are.", "2. Cut out two eye holes.", "3. Color a face on the plate.", "4. Glue on yarn for hair.", "5. Tape a craft stick to the bottom so you can hold the mask up.", "Please be careful, because the points of the scissors are sharp."],
         prompt: "Read the directions in the box. Then choose the best answer for each blank.",
         text: "The whole text mostly {0}. The last line is there to {1}.",
         slots: [
-          { options: ["teaches readers how to make something", "tries to get readers to like rainy days", "tells a funny story about a rainstorm", "explains why it rains more in summer"], answer: 0 },
-          { options: ["help readers stay safe while they work", "change readers' minds about rain gauges", "make readers laugh at the end", "tell readers how much rain fell"], answer: 0 }
+          { options: ["teaches readers how to make something", "tries to get readers to wear masks", "tells a funny story about a mask", "explains where masks first came from"], answer: 0 },
+          { options: ["help readers stay safe while they work", "change readers' minds about scissors", "make readers laugh at the end", "tell readers which colors to use"], answer: 0 }
         ],
         clue: "Check what the whole text mostly does: teach, persuade or entertain. Then think about what one line adds.",
         hints: [
@@ -236,13 +236,13 @@ PP.addLesson({
           "Nothing in the directions is made up or silly, so the choice about a funny story does not fit the first blank. Test the other choices for each blank."
         ],
         how: [
-          "The five numbered steps tell how to make a rain gauge, so the whole text teaches. It informs.",
-          "The last line says the cut edge can be sharp. It warns readers so they do not get hurt.",
+          "The five numbered steps tell how to make a paper plate mask, so the whole text teaches. It informs.",
+          "The last line says the points of the scissors are sharp. It warns readers so they do not get hurt.",
           "So the first blank is \"teaches readers how to make something\" and the second blank is \"help readers stay safe while they work.\"",
-          "A please inside directions does not make the whole text persuasive. Nothing is funny, and the text does not explain rain."
+          "A please inside directions does not make the whole text persuasive. Nothing is funny, and the text does not tell where masks came from or which colors to use."
         ],
         misconception: "A common mix-up is calling directions persuasive because one line says please. Check what the whole text mostly does.",
-        why: "The answers are \"teaches readers how to make something\" and \"help readers stay safe while they work.\" The steps teach how to make a rain gauge, and the last line warns that the cut edge can be sharp. A please inside directions does not make the text persuasive." }
+        why: "The answers are \"teaches readers how to make something\" and \"help readers stay safe while they work.\" The steps teach how to make a paper plate mask, and the last line warns that the scissors are sharp. A please inside directions does not make the text persuasive." }
     ] },
     { title: "Set 2", items: [
       { id: "SK-TC1a-C06", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.a"], passages: ["p3"],
@@ -469,28 +469,28 @@ PP.addLesson({
         ],
         why: "Many answers can be right. A good answer says the poem entertains, with a detail like Max landing splat on the mat, and says it is for the team's fans, with a detail like \"our team's mascot.\"" },
       { id: "SK-TC1a-C15", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: [],
-        stem: ["Ms. Lowe wants neighbors to come and help plant trees at Rock Creek Park. She wrote two flyers.", "Flyer A: Trees give shade on hot days. Their roots hold soil in place when it rains. One big tree can be a home for many birds.", "Flyer B: Come plant a tree with us! Saturday at 9:00 at Rock Creek Park. We will bring the shovels. Your new tree will shade the park for years."],
+        stem: ["Ms. Lowe wants neighbors to come and help with the winter bird count at Hollis Pond. She wrote two flyers.", "Flyer A: Every winter, scientists ask people to count the birds they see. The counts show which birds are doing well. Some birds fly hundreds of miles to spend the winter here.", "Flyer B: Come count birds with us! Saturday at 8:00 at Hollis Pond. We will bring the binoculars. Every bird you count helps scientists learn!"],
         prompt: "Read the two flyers in the box. Which flyer will work better for Ms. Lowe's purpose, and why?",
         choices: [
           { text: "Flyer B, because it asks neighbors to come and tells them when and where", correct: true },
-          { text: "Flyer A, because it gives more facts about why trees are important" },
-          { text: "Flyer A, because it tells neighbors that trees are a home for birds" },
-          { text: "Flyer B, because it tells a story about a tree that grew in the park" }
+          { text: "Flyer A, because it gives more facts about why bird counts matter" },
+          { text: "Flyer A, because it tells neighbors that some birds fly very far" },
+          { text: "Flyer B, because it tells a story about one bird that lives at the pond" }
         ],
         clue: "First decide the purpose: what does Ms. Lowe want her neighbors to do? Then ask which flyer does that job.",
         hints: [
           "First decide the purpose: what does Ms. Lowe want her neighbors to do? Then ask which flyer does that job.",
           "Read Flyer A, then Flyer B, one sentence at a time.",
-          "Neither flyer tells a story about one tree, so that choice does not fit. Check the other choices against Ms. Lowe's purpose."
+          "Neither flyer tells a story about one bird, so that choice does not fit. Check the other choices against Ms. Lowe's purpose."
         ],
         how: [
-          "Ms. Lowe's purpose is to persuade neighbors to come and plant trees.",
+          "Ms. Lowe's purpose is to persuade neighbors to come and count birds.",
           "Flyer A gives true facts, but it never asks anyone to come, and it does not say when or where.",
           "Flyer B asks neighbors to come, tells the day, time and place, and gives a reason. The answer is \"Flyer B, because it asks neighbors to come and tells them when and where.\"",
-          "Facts and birds can be interesting, but a flyer that never asks will not get people to come."
+          "Facts about bird counts and long trips can be interesting, but a flyer that never asks will not get people to come."
         ],
         misconception: "A common mix-up is thinking that more facts always persuade. To persuade, a text has to ask the reader to act.",
-        why: "The answer is \"Flyer B, because it asks neighbors to come and tells them when and where.\" Ms. Lowe wants helpers. Flyer A only informs and never asks anyone to come, and neither flyer tells a story about one tree." }
+        why: "The answer is \"Flyer B, because it asks neighbors to come and tells them when and where.\" Ms. Lowe wants helpers. Flyer A only informs and never asks anyone to come, and neither flyer tells a story about one bird." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own new short text. `like` lists only the core

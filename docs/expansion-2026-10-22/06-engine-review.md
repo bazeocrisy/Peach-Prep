@@ -125,7 +125,7 @@ The owner asked to "Preserve behavioral assertions when updating selectors". The
 - The 9.5 change (`&& !PP.lessons[c].core`) keeps the legacy assertion for lessons without core. That is fine today, because 76 such lessons exist.
 - But the block is `if qcode:` with no `else`. When the content migration finishes and every check lesson has core, the guard records **no** result for 9.5a, 9.5b, 9.5, 9.6, 9.7, 9.7b, 9.8, 9.9 or 9.10, and still exits 0.
 - The ok() **name** set is unchanged (105 names, identical to 07d978f), because names are counted from source, not from a run.
-- Mutation M6 (legacy "Help me unlocks after one wrong try" broken): the guard run stopped before §9 and gave no result for 9.5b, so **this mutation is untested**. The legacy assertion code is unchanged.
+- Mutation M6 (legacy "Help me unlocks after one wrong try" broken): guard **9.5b FAILS** (`logs/mutant-M6-legacy-try-help-unlock-guard.txt`), so the assertion still works today.
 
 **Fix**
 - Add `else: ok("9.5 a quiz lesson without core exists for the legacy journey", False)`.
@@ -153,6 +153,7 @@ Each mutant is a scratch copy of the candidate with one edit (`qa-engine/tools/m
 | M3 | Practice Together includes the core refs again | practice-own **A.1, A.2 FAIL**, then crash |
 | M4 | `#std/` route removed | practice-own **crash** at the std navigation step, exit 1 (no named FAIL line) |
 | M5 | finishing the fifteen also marks `mastered` | practice-own **C.4 FAIL** |
+| M6 | legacy Try It Yourself: Help me needs two wrong tries | guard **9.5b FAIL** |
 | M7 | legacy Help me step 1 shows `why` | guard **3.3 FAIL** |
 | M8 | own-mode wrong feedback shows `why` | practice-own **B.3 FAIL**; guard §3 **passes** (ENG-03) |
 
