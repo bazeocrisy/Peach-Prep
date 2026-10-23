@@ -35,15 +35,17 @@ PP.addLesson({
       ],
       answer: "The opinion is that every kid should learn to swim. One reason is that swimming can keep you safe near water."
     },
+    /* B3 review fix (SHOULD-5, author b3b): this example replaces the fact-or-opinion example, which is still
+       taught in teach point 4 and practised in Practice Together P3. It models the "design" part: answering people who disagree. */
     {
-      show: ["Sentence 1: Fall is the best season of the year.", "Sentence 2: In the fall, the leaves on many trees change color."],
-      ask: "Which sentence is a fact, and which is an opinion?",
+      show: ["Our class should have a pencil sharpener at every table. Some people say the sharpeners would be too noisy. But the new ones hardly make a sound, and we would use them only before class starts."],
+      ask: "How does the writer answer people who disagree?",
       steps: [
-        "Ask about each sentence: Can I check it and prove it is true?",
-        "You can go outside and see leaves change color in the fall. Sentence 2 can be proven, so it is a fact.",
-        "The word best shows a feeling. Some people like spring or summer more, so people can disagree. Sentence 1 is an opinion."
+        "Find the words Some people say. They tell what the other side thinks: the sharpeners would be too noisy.",
+        "Find the reply. It starts with But.",
+        "Check that the reply answers that exact worry. Quiet sharpeners that are used only before class answer the worry about noise. Just saying the opinion again would not answer it."
       ],
-      answer: "Sentence 1 is an opinion, and Sentence 2 is a fact."
+      answer: "The writer tells the worry, that the sharpeners would be too noisy, and then answers it: they are quiet, and they would be used only before class."
     },
     {
       show: ["Our class should have a reading buddy day each week. Reading buddies help younger kids get better at reading. Last month, the first graders who read with us learned many new words. Their teacher also said they read more smoothly."],
@@ -87,10 +89,10 @@ PP.addLesson({
     { id: "p4", title: "A Weather Station for Our School", byline: "by Keisha, a third grader", genre: "Opinion text",
       paragraphs: [
         ["Every morning, our class talks about the weather.", "But we have no way to measure the weather ourselves.", "Our school should put a weather station in the field behind the gym."],
-        ["First, a weather station would help us learn science.", "Science is my favorite subject.", "In March, Room 14 made a rain gauge out of a plastic bottle.", "Each day, the students measured the rain and added it to a chart."],
+        ["First, we could keep our own weather records instead of guessing.", "Science is my favorite subject.", "In March, Room 14 made a rain gauge out of a plastic bottle.", "Each day, the students measured the rain and added it to a chart."],
         ["Next, a weather station would tell us the weather right at our school.", "Last May, our kickball game against Room 7 was called off because the TV news said storms were coming.", "Not one drop of rain fell at our school that day."],
-        ["Some people say a weather station would be too hard to take care of.", "But the science club at the high school has kept its station working for five years.", "The club members said they would show us how."],
-        ["A weather station would turn every day into a science lesson.", "Let's ask the principal to put one up this spring!"]
+        ["Some people say a weather station would get broken at recess.", "But the field behind the gym has a tall fence, and no one plays there.", "The station would be safe from balls and from climbing kids."],
+        ["With a weather station, every morning would start with real numbers instead of guesses.", "Please tell your teacher that you want one, too!"]
       ] }
   ],
   practice: [
@@ -146,10 +148,10 @@ PP.addLesson({
         { text: "Every computer was in use on Saturdays.", correct: true },
         { text: "The author's mom works until six o'clock." },
         { text: "The author has three little brothers." },
-        { text: "The library is closed on Saturdays now." }
+        { text: "Mr. Grant works at the library." }
       ],
       clue: "Evidence for this reason must show that people really did come when the library was open on Saturdays. Check each detail against that.",
-      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and the library being closed now is not evidence for any reason." },
+      why: "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\" Both show that many people came when the library tried Saturday hours. The mom's work hours support the reason about busy families, the brothers support the reason about homework, and Mr. Grant working at the library tells who reported the crowds, not that people came." },
     { id: "SK-TT3a-P6", type: "mc", points: 1, dok: 2, passages: ["p1"],
       prompt: "Why does the author end with the last paragraph, \"Please ask the town to open the doors on Saturdays!\"?",
       choices: [
@@ -226,16 +228,16 @@ PP.addLesson({
         hints: [
           "The main opinion is the idea that all of the author's reasons support.",
           "Find the reasons in paragraphs 2 and 3, and say them in your own words.",
-          "\"Some people say the best players should play the most\" is an opinion, but it belongs to other people, and Darnell argues against it. Check each sentence that is left."
+          "\"Some people say the best players should play the most\" tells what other people say, and Darnell argues against it. Check each sentence that is left."
         ],
         how: [
           "Paragraphs 2 and 3 each start with a reason, after the words First and Also.",
           "Both reasons explain why every player should get the same time to play, and the last paragraph asks for the same thing.",
           "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\"",
-          "\"Sitting on the bench for a whole game is no fun\" and \"Everyone knows that playing is more fun than watching\" are opinions too, but they are smaller ideas, not what the whole piece is about."
+          "The sentence about sitting on the bench and the sentence that starts with Everyone knows are smaller ideas inside the piece. Neither one is what both reasons support."
         ],
-        misconception: "A common mix-up is choosing the first opinion you see. The main opinion is the one every reason supports.",
-        why: "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and \"Everyone knows\" are smaller opinions, the First sentence is a reason, and the best players playing most is what other people say." },
+        misconception: "A common mix-up is choosing the first sentence that tells what someone thinks. The main opinion is the one every reason supports.",
+        why: "The answer is \"I think every player in the Brookside Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and the Everyone knows sentence are smaller ideas, the First sentence is a reason, and the best players playing most is what other people say." },
       { id: "SK-TT3a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"], pick: 2,
         prompt: "Which TWO of these ideas from the passage are facts that could be checked?",
         choices: [
@@ -271,7 +273,7 @@ PP.addLesson({
         partB: { prompt: "Which sentence from the passage best supports the answer to Part A?",
           choices: [
             { text: "\"In our last game, Sam scored his first goal.\"", correct: true },
-            { text: "\"My friend Sam had never played before he joined our team.\"" },
+            { text: "\"Last fall, our coach gave us all the same time to play.\"" },
             { text: "\"This spring, all 12 players from my team signed up again.\"" },
             { text: "\"Also, kids who get to play want to keep playing.\"" }
           ] },
@@ -285,7 +287,7 @@ PP.addLesson({
           "Sam's story is in paragraph 2, right after the reason that starts with First.",
           "Sam had never played before, and by the last game he scored a goal. That shows a new player getting better by playing.",
           "Part A: Kids get better by playing in real games. Part B: \"In our last game, Sam scored his first goal.\"",
-          "Sam never having played only tells how he started, so it does not show him getting better. The 12 players signing up again backs up the other reason."
+          "The coach giving everyone the same time tells what happened, not that anyone got better. The 12 players signing up again backs up the other reason."
         ],
         misconception: "A common mix-up is choosing the reason that sits nearest in the passage, or a reason that only feels true. Match the evidence to what it proves.",
         why: "Part A: Kids get better by playing in real games. Part B: \"In our last game, Sam scored his first goal.\" Sam went from never playing to scoring a goal, which proves that playing helps kids get better. The 12 players signing up backs up the other reason, and the best players playing most is the other side." },
@@ -323,7 +325,7 @@ PP.addLesson({
         hints: [
           "A reason tells why the author's opinion is right. It answers the question: Why should this happen?",
           "Reread Darnell's opinion in paragraph 1 and the reasons that begin paragraphs 2 and 3. A new reason should do the same job.",
-          "The sentence about nine o'clock starts like a reason, but the time of the games does not tell why every player should get the same time. Check each choice that is left."
+          "The sentence about 16 teams gives a fact about the league, but it does not tell why every player should get the same time. Check each choice that is left."
         ],
         how: [
           "Darnell's opinion is that every player should get the same time on the field.",
@@ -357,7 +359,7 @@ PP.addLesson({
         misconception: "A common mix-up is thinking any sentence with should asks readers to do something. Here should tells what Keisha thinks the school ought to do.",
         why: "The answers are tells what the class does each morning and states Keisha's opinion. Paragraph 1 opens with the class talking about the weather and then gives Keisha's opinion. Her reasons come later, and nobody disagrees yet." },
       { id: "SK-TT3a-C12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p4"],
-        prompt: "Which TWO sentences are evidence for the reason that a weather station would help students learn science? Choose two sentences in the passage.",
+        prompt: "Which TWO sentences are evidence for the reason that the class could keep its own weather records? Choose two sentences in the passage.",
         targets: ["p4:2:1", "p4:2:2", "p4:2:3", "p4:2:4", "p4:3:2", "p4:3:3"],
         answer: ["p4:2:3", "p4:2:4"], pick: 2,
         clue: "Evidence is a fact or example that shows a reason is true.",
@@ -367,36 +369,36 @@ PP.addLesson({
           "\"Science is my favorite subject\" tells how Keisha feels. It is not a fact or example that shows anything. Check the other sentences."
         ],
         how: [
-          "Paragraph 2 starts with the reason: a weather station would help us learn science.",
-          "Room 14 made a rain gauge, and the students measured the rain each day and kept a chart. That is an example of students learning science by measuring the weather.",
+          "Paragraph 2 starts with the reason: we could keep our own weather records instead of guessing.",
+          "Room 14 made a rain gauge, and the students measured the rain each day and kept a chart. That is an example of a class keeping its own weather records.",
           "The answers are \"In March, Room 14 made a rain gauge out of a plastic bottle.\" and \"Each day, the students measured the rain and added it to a chart.\"",
           "The sentence that starts with First is the reason itself, not evidence for it, and the kickball game backs up a different reason."
         ],
         misconception: "A common mix-up is choosing the reason sentence as its own evidence. Evidence is the facts and examples that come after the reason.",
-        why: "The answers are \"In March, Room 14 made a rain gauge out of a plastic bottle.\" and \"Each day, the students measured the rain and added it to a chart.\" They show students learning science by measuring rain. The First sentence is the reason, the favorite-subject sentence is a feeling, and the kickball game supports the next reason." },
+        why: "The answers are \"In March, Room 14 made a rain gauge out of a plastic bottle.\" and \"Each day, the students measured the rain and added it to a chart.\" They show a class keeping its own weather records. The First sentence is the reason, the favorite-subject sentence is a feeling, and the kickball game supports the next reason." },
       { id: "SK-TT3a-C13", type: "ms", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: ["p4"], pick: 2,
         prompt: "Which TWO things does Keisha do in paragraphs 4 and 5 to make her piece stronger?",
         choices: [
-          { text: "She answers people who think a weather station would be too hard to care for.", correct: true },
-          { text: "She asks readers to help get a weather station for the school.", correct: true },
-          { text: "She agrees that a weather station would be too hard for the school to care for." },
-          { text: "She gives a new reason: the high school club wants its own weather station." },
-          { text: "She tells the steps that the club will follow to build a weather station." }
+          { text: "She answers people who think a weather station would get broken at recess.", correct: true },
+          { text: "She asks readers to tell their teachers that they want a weather station.", correct: true },
+          { text: "She agrees that a weather station would probably get broken at recess." },
+          { text: "She gives a new reason: the field behind the gym needs a tall fence." },
+          { text: "She tells the steps for building a fence around the field behind the gym." }
         ],
         clue: "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
         hints: [
           "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
           "Reread paragraphs 4 and 5, one at a time. Choose two.",
-          "Nothing in paragraph 4 says that Keisha agrees with the people who think it is too hard. Check each choice that is left."
+          "Nothing in paragraph 4 says that Keisha agrees with the people who worry about recess. Check each choice that is left."
         ],
         how: [
-          "Paragraph 4 starts with what some people say: a station would be too hard to take care of. Then Keisha replies that the high school club has kept its station working and will show them how.",
-          "Paragraph 5 says the opinion again and ends with \"Let's ask the principal to put one up this spring!\"",
-          "The answers are \"She answers people who think a weather station would be too hard to care for\" and \"She asks readers to help get a weather station for the school.\"",
-          "The high school club already has a station, so it is evidence for her reply, not a new reason. The club offers to show them how, but no steps are given."
+          "Paragraph 4 starts with what some people say: a station would get broken at recess. Then Keisha replies that the field already has a tall fence and no one plays there.",
+          "Paragraph 5 says the opinion again and ends with \"Please tell your teacher that you want one, too!\"",
+          "The answers are \"She answers people who think a weather station would get broken at recess\" and \"She asks readers to tell their teachers that they want a weather station.\"",
+          "The fence is already there, so it is part of her reply, not a new reason or a building plan."
         ],
         misconception: "A common mix-up is reading the reply to the other side as a new reason. A reply answers a worry that someone else has.",
-        why: "The answers are \"She answers people who think a weather station would be too hard to care for\" and \"She asks readers to help get a weather station for the school.\" Paragraph 4 answers the worry with the high school club, and paragraph 5 asks readers to act. She does not agree with the worry, the club is evidence, not a new reason, and no building steps are given." },
+        why: "The answers are \"She answers people who think a weather station would get broken at recess\" and \"She asks readers to tell their teachers that they want a weather station.\" Paragraph 4 answers the worry with the fence that is already there, and paragraph 5 asks readers to act. She does not agree with the worry, and the fence is part of her reply, not a new reason or a building plan." },
       { id: "SK-TT3a-C14", type: "match", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
         stem: ["Jada wrote this note to her family."],
         prompt: "What job does each sentence do in Jada's note? Match each sentence to its job.",
@@ -434,7 +436,7 @@ PP.addLesson({
         hints: [
           "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
           "Read Malik's reason again, and say it in your own words.",
-          "The sentence about three parks and a pool can be checked, but it is not about dogs needing a safe place. Check each choice that is left."
+          "\"I think the dog owners in our town would be very happy\" tells what someone thinks, so it is not proof. Check each choice that is left."
         ],
         how: [
           "Malik's reason is that dogs need a safe place to run without a leash.",
@@ -680,7 +682,7 @@ PP.addLesson({
       hints: [
         "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
         "Read the reason again, and say it in your own words.",
-        "The sentence about the cafeteria tables can be checked, but it is not about kids learning. Check each choice that is left."
+        "The sentence about pancakes tells what someone likes, so it is not proof. Check each choice that is left."
       ],
       how: [
         "The reason is that kids learn better when they are not hungry.",
@@ -703,7 +705,7 @@ PP.addLesson({
       hints: [
         "A reason tells why the opinion is right. It answers the question: Why should this happen?",
         "Say the opinion in your own words. Then read each choice and ask what job it does.",
-        "The sentence about bright colors starts like a reason, but colors do not tell why kids should learn to read a map. Check each choice that is left."
+        "The sentence about maps from long ago gives a fact, but it does not tell why kids should learn to read a map. Check each choice that is left."
       ],
       how: [
         "The opinion is that every third grader should learn to read a map.",
@@ -774,7 +776,7 @@ PP.addLesson({
         "First, classroom jobs teach kids to be responsible.",
         "Jobs are the best part of the whole school day.",
         "In Room 3, kids remembered to do their jobs every day for a whole month.",
-        "Their teacher said she never once had to remind anyone.",
+        "Room 3's teacher said she never once had to remind anyone to do a job.",
         "Next, jobs would help keep our room neat."
       ],
       answer: [2, 3], pick: 2,
@@ -787,10 +789,10 @@ PP.addLesson({
       how: [
         "The reason is that classroom jobs teach kids to be responsible.",
         "Kids in Room 3 remembered their jobs every day for a month, and their teacher never had to remind them. That shows kids being responsible.",
-        "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Their teacher said she never once had to remind anyone.\"",
+        "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Room 3's teacher said she never once had to remind anyone to do a job.\"",
         "The sentence that starts with First is the reason itself, and the sentence that starts with Next gives a new reason."
       ],
-      why: "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Their teacher said she never once had to remind anyone.\" They show kids being responsible. The First sentence is the reason, Next gives another reason, and best part is a feeling." },
+      why: "The answers are \"In Room 3, kids remembered to do their jobs every day for a whole month.\" and \"Room 3's teacher said she never once had to remind anyone to do a job.\" They show kids being responsible. The First sentence is the reason, Next gives another reason, and best part is a feeling." },
     { id: "SK-TT3a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: [], pick: 2,
       like: ["SK-TT3a-C13"],
       stem: ["Here are the last two paragraphs of Maya's opinion piece, \"A Reading Tent for Room 6.\"", "Paragraph 4: Some people say a reading tent would take up too much room. But it folds flat and fits behind the bookshelf when we are not using it.", "Paragraph 5: A reading tent would make reading time cozy and calm. Let's ask Mr. Park to buy one for our class!"],
@@ -865,15 +867,15 @@ PP.addLesson({
       ] },
     "SK-TT3a-P5": {
       hints: [
-        "Evidence for a reason must show that the reason is true. Here it must show that people really came.",
-        "For each detail, find it in the passage and see which reason it sits with. Choose two.",
-        "The library being closed on Saturdays now is a fact, but it does not show that people would come. Check each choice that is left."
+        "Evidence for a reason is a fact or example that shows the reason is true.",
+        "For each detail, ask: does it show that people really came when the library was open on Saturdays? Choose two.",
+        "The mom's work hours belong with the reason about busy families, not with this one. Check each choice that is left."
       ],
       how: [
         "Paragraph 3 says the library tried Saturday hours for one month last summer.",
         "Mr. Grant said the story time room was full every Saturday, and every computer was in use. Both show that many people came.",
         "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\"",
-        "The mom's work hours back up the reason about busy families, and the brothers back up the reason about homework."
+        "The mom's work hours back up the reason about busy families, and the brothers back up the reason about homework. Mr. Grant working at the library tells who saw the crowds, but it does not show that anyone came."
       ] },
     "SK-TT3a-P6": {
       hints: [

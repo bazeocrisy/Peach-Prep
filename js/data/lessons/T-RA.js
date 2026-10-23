@@ -109,7 +109,7 @@ PP.addLesson({
         ["On spring nights, horseshoe crabs crawl out of the ocean onto sandy beaches.", "They have lived on Earth for more than 400 million years.", "They were here long before the first dinosaurs."],
         ["A horseshoe crab is not really a crab.", "It is more closely related to spiders and scorpions.", "Its hard shell is shaped like a horseshoe, and that is how it got its name."],
         ["Each spring, a female digs nests in the wet sand.", "She lays thousands of tiny green eggs.", "Shorebirds called red knots stop at the beaches to eat the eggs.", "The birds need this food to finish their long trip north."],
-        ["Horseshoe crabs help people, too.", "Their blood is blue!", "Doctors use something in it to check that medicines and shots are free of harmful germs."]
+        ["Horseshoe crabs help people, too.", "Their blood is blue!", "People who make medicines use something in it to check that medicines and shots are safe from germs."]
       ] }
   ],
   practice: [
@@ -187,7 +187,7 @@ PP.addLesson({
         text: "{0} worker bees {1}?",
         slots: [
           { options: ["How do", "Do", "Is it true that"], answer: 0 },
-          { options: ["choose which flowers to visit", "build their wax cells", "look the cutest of all bugs"], answer: 0 }
+          { options: ["choose which flowers to visit", "build their wax cells", "make the sweetest honey of all"], answer: 0 }
         ],
         clue: "A research question asks about your topic and leads to an answer you can look up.",
         hints: [
@@ -198,34 +198,34 @@ PP.addLesson({
         how: [
           "Maya's topic is how worker bees find their food.",
           "\"Do\" and \"Is it true that\" start questions that can be answered with yes or no. \"How do\" leads to a bigger answer with facts.",
-          "Choosing which flowers to visit is part of finding food. Looking cute is an opinion, and building wax cells is a different topic.",
+          "Choosing which flowers to visit is part of finding food. Making the sweetest honey of all asks for an opinion about whose honey is best, and building wax cells is a different topic.",
           "The answers are How do and choose which flowers to visit: \"How do worker bees choose which flowers to visit?\""
         ],
         misconception: "A common mix-up is choosing a yes-or-no start. \"Do worker bees ...\" can be answered with one word, so Maya would learn very little.",
-        why: "The answers are How do and choose which flowers to visit. \"How do worker bees choose which flowers to visit?\" is on Maya's topic and needs a fact answer. Do and Is it true that lead to yes or no, wax cells are a different topic, and looking the cutest is an opinion." },
+        why: "The answers are How do and choose which flowers to visit. \"How do worker bees choose which flowers to visit?\" is on Maya's topic and needs a fact answer. Do and Is it true that lead to yes or no, wax cells are a different topic, and the sweetest honey of all is an opinion." },
       { ref: "SK-RA1a-P4" },
       { id: "SK-RA1a-C04", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: ["p1"],
-        stem: ["Ana read this sentence in \"Busy Honeybees\": \"As they move from flower to flower, they carry pollen.\"", "She did not know what pollen is. But the question she wrote down was \"Why do bees like flowers?\""],
+        stem: ["Ana read this sentence in \"Busy Honeybees\": \"As they move from flower to flower, they carry pollen.\"", "She did not understand the one science word in that sentence. But the question she wrote down was \"Why do bees like flowers?\""],
         prompt: "Which question should Ana ask instead, to clear up what she did not understand?",
         choices: [
           { text: "What is pollen, and what does it look like?", correct: true },
           { text: "How do bees carry pollen on their bodies from flower to flower?" },
           { text: "Why do plants need pollen to make fruit and seeds?" },
-          { text: "Do bees carry pollen to every flower in a garden?" }
+          { text: "What does it mean that bees move from flower to flower?" }
         ],
         clue: "A clarifying question clears up a word or idea you read but did not understand.",
         hints: [
           "A clarifying question clears up a word or idea you read but did not understand.",
-          "Reread the sentence Ana read, and find the word she did not know.",
+          "Reread the sentence Ana read, and find the science word in it.",
           "The question about plants making fruit asks something new to learn more, so it digs deeper instead of clearing up the word. Check each choice that is left."
         ],
         how: [
-          "Ana did not know what pollen is. A clarifying question asks about exactly that.",
+          "The one science word in the sentence is pollen, so that is the word Ana did not understand. A clarifying question asks about exactly that.",
           "The answer is \"What is pollen, and what does it look like?\"",
-          "How bees carry pollen and whether they carry it to every flower both skip over the part she did not understand. Why plants need pollen digs deeper, which is better once she knows the word."
+          "Moving from flower to flower is a clarifying question too, but about everyday words she already understood. How bees carry pollen skips over the word she did not know. Why plants need pollen digs deeper, which is better once she knows the word."
         ],
         misconception: "A common mix-up is asking a dig-deeper question before clearing up the confusing word. First make sure you understand what you read.",
-        why: "The answer is \"What is pollen, and what does it look like?\" It asks about the word Ana did not know. The other questions use the word pollen as if she already understood it: how bees carry it, whether they carry it everywhere, and why plants need it." },
+        why: "The answer is \"What is pollen, and what does it look like?\" It asks about the word Ana did not know. The question about moving from flower to flower clears up everyday words, not the science word. The other two use the word pollen as if she already understood it." },
       { id: "SK-RA1a-C05", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
         stem: ["Dion chose his own topic for a library project: how trains stay on their tracks.", "He wrote five questions."],
         prompt: "Which TWO questions fit Dion's topic? Choose two questions.",
@@ -253,24 +253,29 @@ PP.addLesson({
         why: "The answers are \"How do train wheels stay on the rails?\" and \"What keeps a train from tipping over on a sharp curve?\" Both are about how trains stay on their tracks. The first train in Georgia and ticket prices are about trains but not that topic, and airplanes are a different topic." }
     ] },
     { title: "Set 2", items: [
-      { id: "SK-RA1a-C06", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p3"],
-        prompt: "Jamal's research question is \"Which living things can get the hiccups?\" Which TWO sentences in the article answer his question? Choose two sentences.",
-        targets: ["p3:1:1", "p3:1:2", "p3:1:3", "p3:2:1", "p3:5:1", "p3:5:2"],
-        answer: ["p3:1:2", "p3:1:3"], pick: 2,
-        clue: "To check whether a text answers your question, find the exact sentences that give the answer.",
+      { id: "SK-RA1a-C06", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: ["p3"], pick: 2,
+        prompt: "Jamal read the whole article. Now he wants questions to research next. Which TWO questions would still be worth researching after reading this article?",
+        choices: [
+          { text: "What ideas do scientists have about why we hiccup?", correct: true },
+          { text: "How well does holding your breath work to stop hiccups?", correct: true },
+          { text: "What muscle under your lungs starts a hiccup?" },
+          { text: "What makes the hic sound when you hiccup?" },
+          { text: "Why do people sneeze when they smell pepper?" }
+        ],
+        clue: "A question is worth researching next when it fits your topic and the text you read has not answered it yet.",
         hints: [
-          "To check whether a text answers your question, find the exact sentences that give the answer.",
-          "Look through the article for each sentence that tells who or what gets hiccups. Choose two.",
-          "The first sentence asks the reader a question. It does not tell who gets hiccups. Check the other sentences."
+          "A question is worth researching next when it fits your topic and the text you read has not answered it yet.",
+          "Check each question against the article. Choose two.",
+          "The sneezing question is not answered in the article, but it is about sneezing, not hiccups. Check each question that is left."
         ],
         how: [
-          "Jamal wants to know which living things get hiccups, so the answer must name them.",
-          "One sentence names babies, kids and grown-ups. The next one names animals like dogs and cats.",
-          "The answers are \"Babies get them, kids get them, and grown-ups get them, too.\" and \"Even some animals, like dogs and cats, can hiccup.\"",
-          "The sentence about people holding their breath tells what people do to stop hiccups, not who gets them."
+          "The article already tells which muscle starts a hiccup and what makes the hic sound, so those questions would not teach Jamal anything new.",
+          "The article says scientists are still not sure why we hiccup. It also says some people hold their breath to try to stop hiccups, but not whether that works. Those questions are still open.",
+          "The answers are \"What ideas do scientists have about why we hiccup?\" and \"How well does holding your breath work to stop hiccups?\"",
+          "The sneezing question is open too, but it leaves Jamal's topic."
         ],
-        misconception: "A common mix-up is choosing a sentence that only uses a word from the question. Check that it really gives the answer.",
-        why: "The answers are \"Babies get them, kids get them, and grown-ups get them, too.\" and \"Even some animals, like dogs and cats, can hiccup.\" Together they name the living things that get hiccups. The other sentences tell what a hiccup is, how long it lasts and what people try, not who gets them." },
+        misconception: "A common mix-up is choosing a question just because it is about the topic. Check whether the text already answers it.",
+        why: "The answers are \"What ideas do scientists have about why we hiccup?\" and \"How well does holding your breath work to stop hiccups?\" The article leaves both open. It already answers the muscle and sound questions, and sneezing is a different topic." },
       { id: "SK-RA1a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: ["p3"], pick: 2,
         prompt: "Kim read the whole article. Which TWO questions are clarifying questions about something in it?",
         choices: [
@@ -434,7 +439,7 @@ PP.addLesson({
         why: "\"What does CCC stand for?\" and the question about which hill clear up parts of the sign that are not clear. The questions about other bridges and moving the stones dig deeper, because the sign does not talk about those things at all." },
       { id: "SK-RA1a-C14", type: "cr", dok: 3, std: ["3.T.RA.1.a"], passages: [], rows: 5,
         prompt: "Choose a topic YOU want to learn about. Write your topic. Then write one research question about it. Last, write one more question that clears up something or digs deeper into your first question.",
-        sample: "My topic: why cats purr. My research question: How does a cat make its purring sound? My next question: Do big cats, like lions, purr too?",
+        sample: "My topic: why cats purr. My research question: How does a cat make its purring sound? My next question: What part of a cat's throat moves when it purrs?",
         criteria: [
           "I wrote a topic that I chose myself.",
           "My research question asks about facts I could look up, not about what people like best.",
@@ -468,7 +473,7 @@ PP.addLesson({
         hints: [
           "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
           "Say Zuri's topic in your own words. Then read each question. Choose two.",
-          "\"Did people long ago sleep under quilts on cold nights?\" can be answered with yes, and Zuri already knows that from her great-grandma's quilt. Check each question that is left."
+          "\"Is a quilt nicer to sleep under than a plain blanket?\" asks what people like, so people would give different answers. Check each question that is left."
         ],
         how: [
           "Zuri's topic is how people made quilts long ago.",
@@ -485,7 +490,7 @@ PP.addLesson({
   similar: [
     { id: "SK-RA1a-S01", type: "mc", points: 1, dok: 2, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C04", "SK-RA1a-C07"],
-      stem: ["Mila read this at a museum: \"This fossil shows a fish that lived in a sea that once covered part of Georgia.\"", "She stopped. She did not know what kind of thing a fossil is."],
+      stem: ["Mila read this at a museum: \"This fossil shows a fish that lived in a sea that once covered part of Georgia.\"", "She stopped at the one science word that she did not understand."],
       prompt: "Which question would clear up what Mila did not understand?",
       choices: [
         { text: "What exactly is a fossil, and how does one form?", correct: true },
@@ -496,17 +501,17 @@ PP.addLesson({
       clue: "A clarifying question clears up a word or idea you read but did not understand.",
       hints: [
         "A clarifying question clears up a word or idea you read but did not understand.",
-        "Find the word Mila did not know. Then read each choice.",
+        "Find the science word in what Mila read. Then read each choice.",
         "Which museum is the most fun asks for an opinion, so it cannot clear anything up. Check each choice that is left."
       ],
       how: [
-        "Mila did not know what a fossil is.",
+        "The one science word in what Mila read is fossil, so that is the word she did not understand.",
         "A clarifying question asks about exactly that part.",
         "The answer is \"What exactly is a fossil, and how does one form?\" The age of the fossil and fish in the sea today are questions that dig deeper or go to a new idea."
       ],
       why: "The answer is \"What exactly is a fossil, and how does one form?\" It asks about the word she did not know. The age of the fossil and fish living today are new questions, and the most fun museum is an opinion." },
     { id: "SK-RA1a-S02", type: "mc", points: 1, dok: 3, std: ["3.T.RA.1.a"], passages: [],
-      like: ["SK-RA1a-P4", "SK-RA1a-C08", "SK-RA1a-C11"],
+      like: ["SK-RA1a-P4", "SK-RA1a-C08"],
       stem: ["Kai read that a baseball has 108 stitches.", "The stitches help a pitcher grip the ball."],
       prompt: "Which question would help Kai dig deeper into what he just learned?",
       choices: [
@@ -574,31 +579,30 @@ PP.addLesson({
         "The text never tells how long it stays puffed up, where most pufferfish live or how many eggs it lays."
       ],
       why: "The answers are \"How does a pufferfish puff itself up?\" and \"Why does puffing up help a pufferfish stay safe?\" Gulping water and being too prickly to swallow answer them. The text says nothing about how long, where or how many eggs." },
-    { id: "SK-RA1a-S05", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
+    { id: "SK-RA1a-S05", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: [], pick: 2,
       like: ["SK-RA1a-C06"],
-      stem: ["Ty's research question is \"What job does the guard meerkat do?\"", "Here is a short text he found."],
-      prompt: "Which TWO sentences answer Ty's question? Choose two sentences.",
-      options: [
-        "Meerkats live in groups called mobs.",
-        "While the group digs for food, one meerkat stands on a high spot as a guard.",
-        "If the guard sees a hawk, it gives a loud bark.",
-        "Then the others run into their burrows.",
-        "Young meerkats learn to hunt from older ones."
+      stem: ["Ty read this short text:", "Meerkats live in groups called mobs. While the group digs for food, one meerkat stands on a high spot as a guard. If the guard sees a hawk, it gives a loud bark. Then the others run into their burrows."],
+      prompt: "Ty wants questions to research next. Which TWO questions would still be worth researching after reading this text?",
+      choices: [
+        { text: "How do meerkats decide which one will be the guard?", correct: true },
+        { text: "How do the other meerkats know what each kind of bark means?", correct: true },
+        { text: "What does the guard do when it sees a hawk?" },
+        { text: "Where do the other meerkats go when the guard barks?" },
+        { text: "How do prairie dogs dig their long tunnels?" }
       ],
-      answer: [1, 2], pick: 2,
-      clue: "To check whether a text answers your question, find the exact sentences that give the answer.",
+      clue: "A question is worth researching next when it fits your topic and the text you read has not answered it yet.",
       hints: [
-        "To check whether a text answers your question, find the exact sentences that give the answer.",
-        "Look for each sentence that tells about the guard. Choose two.",
-        "Meerkats living in groups called mobs tells about the whole group, not about the guard. Check the other sentences."
+        "A question is worth researching next when it fits your topic and the text you read has not answered it yet.",
+        "Check each question against the text. Choose two.",
+        "The prairie dog question is not answered in the text, but it is about prairie dogs, not meerkats. Check each question that is left."
       ],
       how: [
-        "Ty wants to know what the guard does.",
-        "One sentence says the guard stands on a high spot while the others dig. The next says the guard barks when it sees a hawk.",
-        "The answers are \"While the group digs for food, one meerkat stands on a high spot as a guard.\" and \"If the guard sees a hawk, it gives a loud bark.\"",
-        "Running into the burrows is what the others do, not the guard, and learning to hunt is about young meerkats."
+        "The text already tells what the guard does when it sees a hawk and where the others go.",
+        "It does not tell how the guard is chosen or how the others understand the barks. Those questions are still open.",
+        "The answers are \"How do meerkats decide which one will be the guard?\" and \"How do the other meerkats know what each kind of bark means?\"",
+        "The prairie dog question is open too, but it leaves Ty's topic."
       ],
-      why: "The answers are \"While the group digs for food, one meerkat stands on a high spot as a guard.\" and \"If the guard sees a hawk, it gives a loud bark.\" Both tell the guard's job. The other sentences are about the group, the others or the young." },
+      why: "The answers are \"How do meerkats decide which one will be the guard?\" and \"How do the other meerkats know what each kind of bark means?\" The text leaves both open. It already answers the hawk and burrow questions, and prairie dogs are a different topic." },
     { id: "SK-RA1a-S06", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C02"],
       stem: ["Leo wants to research how snakes use their tongues."],
@@ -606,7 +610,7 @@ PP.addLesson({
       text: "{0} snakes {1}?",
       slots: [
         { options: ["Why do", "Do", "Is it true that"], answer: 0 },
-        { options: ["flick their tongues in and out", "have scales on their skin", "look the scariest of all animals"], answer: 0 }
+        { options: ["flick their tongues in and out", "have scales on their skin", "shed their old skin"], answer: 0 }
       ],
       clue: "A research question asks about your topic and leads to an answer you can look up.",
       hints: [
@@ -617,38 +621,38 @@ PP.addLesson({
       how: [
         "Leo's topic is how snakes use their tongues.",
         "\"Do\" and \"Is it true that\" start yes-or-no questions. \"Why do\" leads to a bigger answer with facts.",
-        "Looking the scariest is an opinion, and scales are a different topic.",
+        "Scales and shedding old skin are good things to research, but they are not about tongues.",
         "The answers are Why do and flick their tongues in and out: \"Why do snakes flick their tongues in and out?\""
       ],
-      why: "The answers are Why do and flick their tongues in and out. The question is on Leo's topic and needs a fact answer. Do and Is it true that lead to yes or no, scales are a different topic, and scariest is an opinion." },
+      why: "The answers are Why do and flick their tongues in and out. The question is on Leo's topic and needs a fact answer. Do and Is it true that lead to yes or no, and scales and shedding skin are different topics." },
     { id: "SK-RA1a-S07", type: "hottext", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C05"],
-      stem: ["Nadia chose her own topic: how bread dough rises.", "She wrote five questions."],
+      stem: ["Nadia chose her own topic: how a thermos keeps soup hot.", "She wrote five questions."],
       prompt: "Which TWO questions fit Nadia's topic? Choose two questions.",
       options: [
-        "What makes bread dough get bigger before it bakes?",
-        "Why do bakers leave dough in a warm place to rise?",
-        "When did the first bakery open in Georgia?",
-        "How do pizza ovens get so hot?",
-        "How much does a loaf of bread cost at the store?"
+        "What inside a thermos keeps the heat from getting out?",
+        "Why does soup in a thermos stay hot for hours?",
+        "When was the first thermos made?",
+        "How do ovens get so hot?",
+        "How much does a thermos cost at the store?"
       ],
       answer: [0, 1], pick: 2,
       clue: "A question fits your topic when its answer would help you learn about that exact topic.",
       hints: [
         "A question fits your topic when its answer would help you learn about that exact topic.",
         "Say Nadia's topic in your own words. Then read each question. Choose two.",
-        "The pizza oven question is about how an oven gets hot, not about dough rising. Check each question that is left."
+        "The oven question is about how an oven gets hot, not about keeping soup hot. Check each question that is left."
       ],
       how: [
-        "Nadia's topic is not just bread. It is how bread dough rises.",
-        "Dough getting bigger and leaving dough somewhere warm to rise are both about rising.",
-        "The answers are \"What makes bread dough get bigger before it bakes?\" and \"Why do bakers leave dough in a warm place to rise?\"",
-        "The first bakery and the price of bread are about bread, but not about rising."
+        "Nadia's topic is not just a thermos. It is how a thermos keeps soup hot.",
+        "What keeps the heat in and why the soup stays hot for hours are both about keeping soup hot.",
+        "The answers are \"What inside a thermos keeps the heat from getting out?\" and \"Why does soup in a thermos stay hot for hours?\"",
+        "The first thermos and the price are about a thermos, but not about keeping soup hot."
       ],
-      why: "The answers are \"What makes bread dough get bigger before it bakes?\" and \"Why do bakers leave dough in a warm place to rise?\" Both are about rising. The bakery and the price are about bread but not that topic, and pizza ovens are about heat." },
+      why: "The answers are \"What inside a thermos keeps the heat from getting out?\" and \"Why does soup in a thermos stay hot for hours?\" Both are about keeping soup hot. The first thermos and the price are about a thermos but not that topic, and ovens are a different topic." },
     { id: "SK-RA1a-S08", type: "dropdown", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C12"],
-      stem: ["Ella read this: \"Koalas live in Australia. They eat the leaves of eucalyptus trees, and they sleep up to 18 hours a day.\"", "Her question is \"How big is a baby koala when it is born?\""],
+      stem: ["Ella read this: \"Koalas live in Australia. They eat the leaves of eucalyptus trees, and they sleep 18 to 22 hours a day.\"", "Her question is \"How big is a baby koala when it is born?\""],
       prompt: "Complete the sentence about Ella's research. Choose the best answer for each blank.",
       text: "Ella will need {0}, because the text {1}.",
       slots: [
@@ -787,27 +791,27 @@ PP.addLesson({
       why: "The answer is \"June's, because its answer would be full of facts that they do not know yet.\" Max's yes-or-no question would teach them nothing new. Being about their own bus does not make it fit better, and length does not make a question better." },
     { id: "SK-RA1a-S14", type: "order", points: 2, dok: 3, std: ["3.T.RA.1.a"], passages: [],
       like: ["SK-RA1a-C11"],
-      stem: ["Rina read this: \"Arctic terns are small seabirds. They nest in the far north in summer. Their chicks hatch after about three weeks. Later, the whole family flies all the way to the far south.\""],
+      stem: ["Rina read this: \"Arctic terns are small seabirds. They nest in the far north in summer. Their chicks hatch after about three weeks. Later, the terns fly all the way to the far south.\""],
       prompt: "Rina asked four questions. Each new question grew out of the answer to the one before it. Put her questions in order, from first to last.",
       steps: [
         "Where do arctic terns build their nests?",
         "How long do tern eggs take to hatch?",
-        "What do the tern families do after the chicks hatch?",
+        "What do the terns do after the chicks hatch?",
         "How do young terns know the way to the far south?"
       ],
       clue: "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
       hints: [
         "In a chain of dig-deeper questions, each new question grows out of the answer to the one before it.",
         "Find the question that could start the chain. Then use the text to find its answer, and look for the question that grows out of that answer.",
-        "The question about how young terns know the way could only come after Rina learned that the family flies south. Use the text to order the other three."
+        "The question about how young terns know the way could only come after Rina learned that the terns fly south. Use the text to order the other three."
       ],
       how: [
         "First, Rina asks where terns nest. The text answers: in the far north in summer.",
         "Nests lead to eggs: how long do they take to hatch? About three weeks.",
-        "Hatching leads to what the families do next: they fly to the far south. Then she wonders how the young birds know the way, which the text does not tell.",
-        "The order is: where they nest, how long the eggs take, what the families do next, how young terns know the way."
+        "Hatching leads to what the terns do next: they fly to the far south. Then she wonders how the young birds know the way, which the text does not tell.",
+        "The order is: where they nest, how long the eggs take, what the terns do next, how young terns know the way."
       ],
-      why: "The order is: where terns nest, how long the eggs take to hatch, what the families do after the chicks hatch, and how young terns know the way south. Each answer in the text leads to the next question, and the last one goes past the text." },
+      why: "The order is: where terns nest, how long the eggs take to hatch, what the terns do after the chicks hatch, and how young terns know the way south. Each answer in the text leads to the next question, and the last one goes past the text." },
     { id: "SK-RA1a-S15", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.a"], passages: [], pick: 2,
       like: ["SK-RA1a-C15"],
       stem: ["Marco's grandpa showed him a doll made from dried corn husks.", "Marco chose his own topic: how children long ago made their own toys."],
@@ -823,7 +827,7 @@ PP.addLesson({
       hints: [
         "A good research question asks about facts you can look up, and its answer teaches you something new about your topic.",
         "Say Marco's topic in your own words. Then read each question. Choose two.",
-        "\"Did children long ago play with toys?\" can be answered with yes, and Marco already knows that from the corn husk doll. Check each question that is left."
+        "\"Is a wooden toy more fun than a plastic toy?\" asks what people like, so people would give different answers. Check each question that is left."
       ],
       how: [
         "Marco's topic is how children long ago made their own toys.",

@@ -150,6 +150,70 @@ PP.addLesson({
         ["Box: Kudzu has purple flowers that smell like grape candy.", "Some people use the flowers to make jelly."],
         ["## Keeping Kudzu Back"],
         ["Today, people work hard to stop kudzu from spreading.", "They cut the vines and dig up the roots.", "Kudzu was planted to help the land, but now people must work to protect the land from it."]
+      ] },
+    /* SIM-2 (expansion 2026-10-23): p6-p11 are used only by the similar bank (S07, S09, S11, S12, S13, S15).
+       Never used by core, Together, test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p6", title: "Big Eyes in the Dark", genre: "Informational text",
+      paragraphs: [
+        ["A tarsier is a tiny animal that lives in the forests of Asia.", "It is small enough to sit in your hand.", "Its body is made for hunting bugs at night."],
+        ["## Eyes for the Dark"],
+        ["A tarsier has huge, round eyes.", "Each eye is about as big as its whole brain.", "Big eyes let in lots of light, so it can see well when the forest is dark."],
+        ["## A Head That Turns"],
+        ["A tarsier cannot move its eyes.", "Instead, it can turn its head almost all the way around.", "That way, it can look behind itself for a moth or a cricket."],
+        ["## Legs for Leaping"],
+        ["Its back legs are long and strong.", "A tarsier can leap from tree to tree and grab a bug in the air."],
+        ["From its big eyes to its strong legs, a tarsier is built to catch food at night.", "Tarsiers sleep in the day, often holding on to a tree trunk."]
+      ] },
+    { id: "p7", title: "Up, Up and Away", genre: "Informational text",
+      paragraphs: [
+        ["A hot air balloon has no engine and no wings.", "Still, it can float high over fields and towns.", "The secret is hot air."],
+        ["## Hot Air Rises"],
+        ["Under the big cloth balloon hangs a basket for the riders.", "Above the basket, a burner shoots out a flame.", "The flame heats the air inside the balloon.", "Hot air is lighter than cool air, so it rises and lifts the balloon."],
+        ["## Going Up and Coming Down"],
+        ["To go higher, the pilot turns up the flame.", "To come down, the pilot lets the air inside cool off.", "The pilot cannot steer like a driver, so the balloon goes where the wind blows."],
+        ["## Did You Know?"],
+        ["Box: The first riders in a hot air balloon were a sheep, a duck and a rooster.", "They flew in France in 1783."],
+        ["With only a flame and the wind, a hot air balloon can take people on a quiet ride in the sky."]
+      ] },
+    { id: "p8", title: "A Hippo's Hot Day", genre: "Informational text",
+      paragraphs: [
+        ["A hippo lives in Africa, where the sun is very hot.", "Its skin is thin and dries out fast.", "So a hippo plans its whole day around staying cool and finding food."],
+        ["## Cooling Off in the River"],
+        ["All day long, hippos rest in rivers and lakes.", "Only the tops of their heads poke out.", "Their skin also makes a red, oily goo that works like sunscreen."],
+        ["## Eating at Night"],
+        ["When the sun goes down, the air cools off.", "Then hippos climb out of the water and walk to grassy fields.", "A hippo can eat a huge pile of grass in one night."],
+        ["## Did You Know?"],
+        ["Box: A hippo cannot really swim.", "It walks or bounces along the bottom of the river."],
+        ["Resting in the water by day and eating by night keeps a hippo safe from the hot sun."]
+      ] },
+    { id: "p9", title: "Nature's Cleanup Crew", genre: "Informational text",
+      paragraphs: [
+        ["A turkey vulture is a big, dark bird with a bare red head.", "You may see one circling high over a field or a road."],
+        ["## Finding Food"],
+        ["Vultures eat animals that have already died.", "A turkey vulture can smell a dead animal from far away.", "It glides on the wind for hours, sniffing the air as it goes."],
+        ["## Built for the Job"],
+        ["A vulture's head has no feathers.", "That helps it stay clean when it eats.", "Its stomach is very strong, so germs that would make other animals sick do not hurt it."],
+        ["## Did You Know?"],
+        ["Box: A group of vultures resting in a tree is called a committee."],
+        ["Vultures may not be pretty.", "Still, they do an important job.", "By eating dead animals, vultures help keep fields and roads clean and stop germs from spreading."]
+      ] },
+    { id: "p10", title: "Life on the Sea Floor", genre: "Informational text",
+      paragraphs: [
+        ["A lobster lives on the rocky floor of the ocean.", "It hides in cracks during the day and comes out at night.", "Its body is well built for finding food in the dark."],
+        ["## Claws for Every Job"],
+        ["A lobster has two big claws, and they are not the same.", "One claw is thick and strong for crushing clam shells.", "The other is thin and sharp for tearing up soft food."],
+        ["## Smelling the Way"],
+        ["A lobster cannot see well.", "Instead, it uses tiny hairs on its legs and feelers to smell the water.", "It can find a fish or a crab even in the dark."],
+        ["## Did You Know?"],
+        ["Box: Most lobsters are greenish brown.", "But about one lobster in two million is bright blue!"],
+        ["With two kinds of claws and a strong sense of smell, a lobster is ready to find food on the sea floor."]
+      ] },
+    { id: "p11", title: "The Bird That Sniffs", genre: "Informational text",
+      paragraphs: [
+        ["A kiwi is a bird that lives only in New Zealand.", "It is about the size of a chicken, and it cannot fly.", "Its feathers are soft and brown and look a little like hair."],
+        ["A kiwi finds its food by smell.", "It has nostrils at the very tip of its long beak.", "At night, it pokes its beak into the dirt and sniffs for worms and bugs.", "When it smells one, it pulls it out of the ground.", "A kiwi lays a very big egg for its size."],
+        ["In the daytime, a kiwi rests in a hole or a hollow log.", "It comes out after dark, when it is safer to hunt."],
+        ["Today, people in New Zealand help kiwis.", "They keep cats and rats away from the places where kiwis live."]
       ] }
   ],
   practice: [
@@ -548,7 +612,285 @@ PP.addLesson({
         "Paragraph B: the full beds, the baskets and the picnic all happen later, when the garden gives food.",
         "The answer is \"Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.\""
       ],
-      why: "The answer is \"Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.\" Every sentence in Paragraph A is about getting ready, and every sentence in Paragraph B is about what grows. The fence and the picnic are single details, one choice is backward, and Paragraph B is not about getting ready." }
+      why: "The answer is \"Paragraph A tells how the garden gets ready, and Paragraph B tells what the garden gives later.\" Every sentence in Paragraph A is about getting ready, and every sentence in Paragraph B is about what grows. The fence and the picnic are single details, one choice is backward, and Paragraph B is not about getting ready." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting,
+       so "Try a similar question" shows on every core item. Each like names one core item only, because
+       the engine uses an extra question once. Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md.
+       NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT2a-S04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-P7"],
+      stem: ["Mia is making a poster about hermit crabs. A hermit crab does not grow a shell of its own. It moves into an empty snail shell, and it finds a bigger one as it grows.", "Mia's drawing shows one hermit crab peeking out of an empty snail shell. Four lines point from words to the crab's two claws, its eyes on stalks, its walking legs and the borrowed shell. She still needs words to go under the drawing."],
+      prompt: "Choose the words that best complete the sentences about Mia's drawing.",
+      text: "The best caption for Mia's drawing is {0}. The labels on the drawing {1}.",
+      slots: [
+        { options: ["\"The parts of a hermit crab\"", "\"A hermit crab's two claws\"", "\"Mia feeding her pet crab\""], answer: 0 },
+        { options: ["name the parts that the lines point to", "tell where hermit crabs live", "give the title of the poster"], answer: 0 }
+      ],
+      clue: "Captions and labels are both words on a picture, but they do different jobs. Think about where each kind of words goes.",
+      hints: [
+        "Captions and labels are both words on a picture, but they do different jobs. Think about where each kind of words goes.",
+        "Picture the drawing: one crab in a shell, with four lines that each end at a word. Ask what the whole drawing is about.",
+        "No one is feeding the crab in the drawing, so that caption does not fit. Check the two captions that are left against every line in the drawing."
+      ],
+      how: [
+        "A caption goes under a picture and tells what the whole picture shows. The drawing shows a hermit crab and four of its parts.",
+        "So the caption is \"The parts of a hermit crab.\" The claws are only one of the four parts, and no one is feeding the crab.",
+        "Each label sits at the end of a line and names the part the line points to. The answers are \"The parts of a hermit crab\" and \"name the parts that the lines point to.\""
+      ],
+      misconception: "A common mix-up is choosing a caption that names one labeled part. A caption tells about the whole picture.",
+      why: "The answers are \"The parts of a hermit crab\" and \"name the parts that the lines point to.\" The drawing shows a crab and four of its parts, so the caption must cover all of them, not just the claws. Labels name the parts at the ends of the lines. They do not tell where crabs live or give the poster's title." },
+    { id: "SK-TT2a-S05", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C03"],
+      stem: ["It is six in the morning. The doors of the Maple Street ice rink are still locked. Inside, one worker drives a big machine across the ice. It makes the ice smooth and shiny. Another worker sharpens the blades on the skates that people rent. A third worker sets out orange cones for the first skating lesson. Near the front door, a man turns on the lights and the heaters in the snack room."],
+      prompt: "No sentence in this paragraph states the main idea. Choose the answer that best tells what the paragraph is mostly about.",
+      text: "The paragraph is mostly about {0}.",
+      slots: [
+        { options: ["workers getting the ice rink ready before it opens", "a machine that makes the ice smooth and shiny", "a skating lesson for kids early in the morning", "people renting skates at the ice rink"], answer: 0 }
+      ],
+      clue: "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
+      hints: [
+        "When no sentence states the main idea, list what each sentence tells about. Then find what all of them have in common.",
+        "Read the paragraph one sentence at a time. Who is in each sentence, and what are they doing?",
+        "The machine is in only one sentence, so it is a detail, not the main idea. Test each choice that is left against every sentence."
+      ],
+      how: [
+        "The sentences tell about a worker smoothing the ice, a worker sharpening skates, a worker setting out cones and a man turning on lights and heaters.",
+        "The doors are still locked, so the rink is not open yet. Every sentence shows someone getting it ready.",
+        "The answer is \"workers getting the ice rink ready before it opens.\" The machine and the lesson are single details, and no one rents skates yet."
+      ],
+      misconception: "A common mix-up is choosing one detail, like the machine, as the main idea. The main idea covers every sentence.",
+      why: "The answer is \"workers getting the ice rink ready before it opens.\" The doors are locked, and every sentence shows a worker doing a job to get ready. The machine and the cones for the lesson are single details, and the skates are being sharpened, not rented." },
+    { id: "SK-TT2a-S06", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C05"],
+      stem: ["Coach Ana's Free-Throw Tips", "Stand with your toes just behind the line. Bend your knees a little before you shoot. Keep your eyes on the front of the rim, not on the ball. Push the ball up with your fingertips, and let your hand follow through like you are reaching into a cookie jar. Coach Ana played basketball on her college team."],
+      prompt: "Coach Ana's main idea is how to shoot a good free throw. Why is \"Coach Ana played basketball on her college team\" NOT a key detail?",
+      choices: [
+        { text: "It does not tell a player anything to do when shooting.", correct: true },
+        { text: "It is not a fact, so it cannot be a key detail." },
+        { text: "It is the last sentence, and key details never come last." },
+        { text: "It tells about shooting, but only for very tall players." }
+      ],
+      clue: "To decide whether a detail is a key detail, test it against the main idea: does it help prove or explain it?",
+      hints: [
+        "To decide whether a detail is a key detail, test it against the main idea: does it help prove or explain it?",
+        "Read each sentence one at a time. Ask what each one tells a shooter to do.",
+        "Key details can come anywhere, even at the end, so where the sentence sits is not the reason. Test the other reasons against Coach Ana's main idea."
+      ],
+      how: [
+        "The main idea is how to shoot a good free throw.",
+        "The other sentences each tell a player what to do: where to stand, bending the knees, where to look and how to push the ball.",
+        "The college sentence tells about Coach Ana, not about shooting. The answer is \"It does not tell a player anything to do when shooting.\"",
+        "It is a fact, key details can come last, and it says nothing about tall players."
+      ],
+      misconception: "A common mix-up is thinking a detail is false when it is only off the main idea. A true fact can still not be a key detail.",
+      why: "The answer is \"It does not tell a player anything to do when shooting.\" Every other sentence gives a step for a free throw. The college sentence is a true fact about the coach, and it is not about tall players. Key details can come at the end, too." },
+    { id: "SK-TT2a-S07", type: "hottext", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: ["p6"],
+      like: ["SK-TT2a-C06"],
+      prompt: "Two sentences in this article tell what the whole article is mostly about. Choose those TWO sentences.",
+      targets: ["p6:1:1", "p6:1:3", "p6:3:3", "p6:5:3", "p6:8:1", "p6:8:2"],
+      answer: ["p6:1:3", "p6:8:1"], pick: 2,
+      clue: "The main idea is what the whole article is about. A sentence that states it should fit every section, not just one.",
+      hints: [
+        "The main idea is what the whole article is about. A sentence that states it should fit every section, not just one.",
+        "Read the headings first so you know what each section tells. Then look at the start and the end for sentences big enough to cover all of them.",
+        "\"A tarsier is a tiny animal that lives in the forests of Asia\" names the topic, but it says nothing about eyes, a head or legs. Test each other sentence: does it cover all three sections?"
+      ],
+      how: [
+        "The sections tell about the eyes, the head that turns and the legs for leaping.",
+        "Two sentences cover all three: \"Its body is made for hunting bugs at night\" in the first paragraph, and \"From its big eyes to its strong legs, a tarsier is built to catch food at night\" in the last paragraph.",
+        "The other sentences tell about one section only, name the topic, or tell when tarsiers sleep."
+      ],
+      misconception: "A common mix-up is choosing the very first sentence because it comes first. A sentence that only names the topic is not the main idea.",
+      why: "The answers are \"Its body is made for hunting bugs at night.\" and \"From its big eyes to its strong legs, a tarsier is built to catch food at night.\" Both fit every section. The first sentence only names the topic, the sentences about seeing and looking behind fit one section each, and sleeping in the day is an extra fact." },
+    { id: "SK-TT2a-S08", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.a"], passages: [], pick: 2,
+      like: ["SK-TT2a-P3"],
+      stem: ["Gorillas live in groups in the forests of Africa. A baby gorilla needs its mother for a long time. At first, she carries it on her chest wherever she goes. When it is older, it rides on her back. Each night, she bends branches and leaves into a soft nest for the two of them. Gorillas eat mostly leaves, stems and fruit. The biggest males are called silverbacks because of the gray hair on their backs."],
+      prompt: "Which TWO details best support the idea that a mother gorilla does many jobs to care for her baby? Choose two answers.",
+      choices: [
+        { text: "She builds a soft nest of leaves for the two of them each night.", correct: true },
+        { text: "She carries the baby on her chest and later on her back.", correct: true },
+        { text: "The biggest males have gray hair on their backs." },
+        { text: "Gorillas eat mostly leaves, stems and fruit." },
+        { text: "Gorillas live in groups in the forests of Africa." }
+      ],
+      clue: "The idea is about the jobs a mother does for her baby. Keep only the details that show one of those jobs.",
+      hints: [
+        "The idea is about the jobs a mother does for her baby. Keep only the details that show one of those jobs.",
+        "Read each sentence in the box and ask: who is doing something here, and is it for the baby? Choose two.",
+        "Leaves, stems and fruit are what all gorillas eat, so that detail is not a job a mother does for her baby. Test the other details the same way."
+      ],
+      how: [
+        "The idea is that a mother gorilla does many jobs to care for her baby.",
+        "Two details show her doing a job for the baby: carrying it, and building a nest each night.",
+        "The answers are \"She builds a soft nest of leaves for the two of them each night.\" and \"She carries the baby on her chest and later on her back.\"",
+        "Silverbacks, food and where gorillas live are true, but none of them is a job the mother does for her baby."
+      ],
+      misconception: "A common mix-up is choosing any true fact from the text. A supporting detail must help prove the idea.",
+      why: "The answers are \"She builds a soft nest of leaves for the two of them each night.\" and \"She carries the baby on her chest and later on her back.\" Both are jobs the mother does for her baby. The silverbacks, the food and the forests are true facts, but they are not about caring for a baby." },
+    { id: "SK-TT2a-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p7"],
+      like: ["SK-TT2a-C08"],
+      prompt: "Why does the author put the fact about the first balloon riders in a text box instead of in one of the sections?",
+      choices: [
+        { text: "It is a fun fact, but the article's point does not need it.", correct: true },
+        { text: "It is the most important fact in the whole article." },
+        { text: "It tells how a pilot makes the balloon go higher." },
+        { text: "It explains how the pilot steers the balloon to a field." }
+      ],
+      clue: "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
+      hints: [
+        "A text box sets a fact apart from the rest of the page. Ask whether the article would still work without that fact.",
+        "Read the text box. Then read the headings and the last paragraph, and notice what the article keeps talking about.",
+        "The text box never mentions a flame or a burner, so it does not tell how a balloon goes higher. Decide which of the other reasons fits what you noticed."
+      ],
+      how: [
+        "The text box tells that a sheep, a duck and a rooster were the first riders, in 1783.",
+        "The sections and the last paragraph tell how hot air lifts the balloon and how it goes up and down. They never need the animals.",
+        "The answer is \"It is a fun fact, but the article's point does not need it.\"",
+        "The animal fact is not the most important one, it does not tell about the flame, and the article says the pilot cannot steer like a driver."
+      ],
+      misconception: "A common mix-up is thinking a fact in a box must be the most important one. A text box often holds an extra fact.",
+      why: "The answer is \"It is a fun fact, but the article's point does not need it.\" The article explains how hot air lifts a balloon without using the animal riders. The box fact is not the most important one, it says nothing about the flame, and the pilot cannot steer like a driver." },
+    { id: "SK-TT2a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C09"],
+      stem: ["Nia and her grandpa built a tree house in the big tree behind their home. Nia likes to eat lunch up there, but it is hard to climb a ladder while holding a full plate.", "Figure 1 shows the tree house from the side. A ladder leans on the trunk and goes up to a trap door in the floor. On the other side of the tree house is a window. A rope runs from a small wheel above the window down to a bucket. The bucket hangs just over a little picnic table on the ground."],
+      prompt: "Look at Figure 1. Why does the bucket hang right above the picnic table?",
+      choices: [
+        { text: "so food can go from the table up to the window without the ladder", correct: true },
+        { text: "so Nia can sit in the bucket and ride up to the window" },
+        { text: "so the ladder can lean against the bucket and stay still" },
+        { text: "so the bucket stays far away from the tree house window" }
+      ],
+      clue: "A diagram shows where things are. Use it together with the words.",
+      hints: [
+        "A diagram shows where things are. Use it together with the words.",
+        "Follow the rope in Figure 1 from the top to the bottom. Then reread the trouble Nia has at lunch.",
+        "The ladder is on the other side of the tree house, so it cannot lean on the bucket. Check the other choices against the drawing and the words."
+      ],
+      how: [
+        "The words say it is hard to climb the ladder with a full plate.",
+        "In Figure 1, the rope goes from above the window down to a bucket that hangs over the picnic table.",
+        "A plate set in the bucket at the table can be pulled straight up to the window. The answer is \"so food can go from the table up to the window without the ladder.\"",
+        "A small bucket is not a seat, the ladder is on the other side, and the rope joins the bucket to the window."
+      ],
+      misconception: "A common mix-up is using only the picture or only the words. Use them together.",
+      why: "The answer is \"so food can go from the table up to the window without the ladder.\" The words tell the trouble, and the drawing shows the bucket hanging from above the window to the table. The bucket is not a seat, the ladder is on the far side, and the rope ties the bucket to the window." },
+    { id: "SK-TT2a-S11", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.a"], passages: ["p8"],
+      like: ["SK-TT2a-C10"],
+      stem: ["New sentence: A hippo's eyes and nose sit high on its head, so it can see and breathe while it rests in the water."],
+      prompt: "The author wants to add the new sentence to the article. Choose the best answer for each blank.",
+      text: "The new sentence belongs in the section {0}. It is {1}.",
+      slots: [
+        { options: ["\"Cooling Off in the River\"", "\"Eating at Night\"", "\"Did You Know?\""], answer: 0 },
+        { options: ["a key detail, because it shows how a hippo can stay in the water all day", "not a key detail, because it is only a fun fact", "not a key detail, because the article already says hippos rest in rivers"], answer: 0 }
+      ],
+      clue: "A heading names what its section is about. A key detail helps prove the main idea, and a text box holds extra facts.",
+      hints: [
+        "A heading names what its section is about. A key detail helps prove the main idea, and a text box holds extra facts.",
+        "Read each heading. Then reread the new sentence and ask when the hippo is doing what it tells about.",
+        "The new sentence says nothing about grass or the night, so it does not belong in \"Eating at Night.\" For the second blank, think about what eyes and a nose up high let a hippo do."
+      ],
+      how: [
+        "The new sentence is about a hippo resting in the water. That is what \"Cooling Off in the River\" tells about.",
+        "With its eyes and nose up high, a hippo can stay almost all the way under the water and still see and breathe.",
+        "That helps it stay cool all day, which is the article's point, so it is a key detail, not an extra fact for the box.",
+        "The answers are \"Cooling Off in the River\" and \"a key detail, because it shows how a hippo can stay in the water all day.\""
+      ],
+      misconception: "A common mix-up is putting every new fact in the text box. A fact that helps prove the main idea belongs in a section.",
+      why: "The answers are \"Cooling Off in the River\" and \"a key detail, because it shows how a hippo can stay in the water all day.\" The sentence tells how a hippo rests in the water, and that helps it stay cool, which is the article's point. The article says hippos rest in rivers, but not how they see and breathe there." },
+    { id: "SK-TT2a-S12", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: ["p9"],
+      like: ["SK-TT2a-C11"],
+      prompt: "Which sentence tells what the whole article is mostly about? Choose the sentence in the passage.",
+      targets: ["p9:1:1", "p9:3:2", "p9:5:1", "p9:7:1", "p9:8:2", "p9:8:3"],
+      answer: ["p9:8:3"], pick: 1,
+      clue: "The main idea fits the whole article, not just one section. Authors often state it near the beginning or at the end.",
+      hints: [
+        "The main idea fits the whole article, not just one section. Authors often state it near the beginning or at the end.",
+        "Read the headings to see what each section is about. The sentence you choose must fit every section.",
+        "\"A turkey vulture is a big, dark bird with a bare red head\" tells what a vulture looks like, not what the article is mostly about. Test the other sentences the same way: does each one fit every heading?"
+      ],
+      how: [
+        "The sections tell how vultures find dead animals to eat and how their bodies are built for that job.",
+        "The last sentence of the article covers both: \"By eating dead animals, vultures help keep fields and roads clean and stop germs from spreading.\"",
+        "The answer is that sentence. \"Still, they do an important job\" points to it but does not say what the job is, and the other sentences each fit one section or the box."
+      ],
+      misconception: "A common mix-up is choosing a sentence that only says something is important. The main idea says what the important point is.",
+      why: "The answer is \"By eating dead animals, vultures help keep fields and roads clean and stop germs from spreading.\" It covers finding food and the body built for the job. The other sentences describe the bird, fit one section, sit in the box, or say the job is important without saying what it is." },
+    { id: "SK-TT2a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.a"], passages: ["p10"],
+      like: ["SK-TT2a-C12"],
+      prompt: "A student says the main idea of \"Life on the Sea Floor\" is \"Some lobsters are bright blue.\" Why is the student wrong?",
+      choices: [
+        { text: "The blue lobster fact is only in the text box, and no section is about it.", correct: true },
+        { text: "The article never tells what color lobsters are." },
+        { text: "Lobsters cannot be blue, so the fact in the box must be wrong." },
+        { text: "The box is the very last part of the article, so it is only an ending." }
+      ],
+      clue: "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
+      hints: [
+        "The main idea is what the whole article is about. A fact that shows up in only one spot is a detail.",
+        "Find every place in the article that tells about a lobster's color. Then read the headings.",
+        "The article does tell what color lobsters are, so the student is not wrong about that. Decide which of the other reasons matches what you found."
+      ],
+      how: [
+        "The color of lobsters is told only in the text box under \"Did You Know?\"",
+        "The sections tell about the two kinds of claws and how a lobster smells its food. None of them is about color.",
+        "The answer is \"The blue lobster fact is only in the text box, and no section is about it.\"",
+        "The article does tell the colors, it says blue lobsters are real, and a paragraph comes after the box, so the box is not the end."
+      ],
+      misconception: "A common mix-up is taking a surprising fact as the main idea. Ask whether the whole article is about it.",
+      why: "The answer is \"The blue lobster fact is only in the text box, and no section is about it.\" The sections are about claws and smell. The article does tell lobster colors, it says blue ones are real, and the last paragraph comes after the box." },
+    { id: "SK-TT2a-S14", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.a"], passages: [],
+      like: ["SK-TT2a-C14"],
+      stem: ["Lena is writing a report about how a drum set works. She drew a drum set. Nobody is sitting at it. Five lines point to words. The words name a big bass drum, a foot pedal that hits it, a snare drum, a shiny cymbal and two drumsticks. Lena will put the picture next to her first page. But she forgot to write a caption under it."],
+      prompt: "Choose the best caption for Lena to write under her picture.",
+      text: "Caption: {0}",
+      slots: [
+        { options: ["The parts of a drum set", "A cymbal and a snare drum", "Lena playing drums in the band"], answer: 0 }
+      ],
+      clue: "A caption should match what the picture shows and what the report is about. Picture the drawing before you choose.",
+      hints: [
+        "A caption should match what the picture shows and what the report is about. Picture the drawing before you choose.",
+        "Count the labels in Lena's picture, and notice who is in it.",
+        "Nobody is sitting at the drums, so a caption about Lena playing does not fit. Check the two captions that are left against every label."
+      ],
+      how: [
+        "The picture shows a whole drum set with nobody at it. Its five labels name the bass drum, the pedal, the snare drum, the cymbal and the sticks.",
+        "A caption tells what the whole picture shows, and the report is about how a drum set works.",
+        "The answer is \"The parts of a drum set.\" A cymbal and a snare drum are only two of the five parts, and Lena is not in the picture."
+      ],
+      misconception: "A common mix-up is choosing a caption that names only some of the labeled parts.",
+      why: "The answer is \"The parts of a drum set.\" The picture labels five parts of one drum set. A caption about a cymbal and a snare drum names only two of them, and nobody is playing in the picture." },
+    { id: "SK-TT2a-S15", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.2.a"], passages: ["p11"],
+      like: ["SK-TT2a-P5"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What is the main idea of paragraph 2?",
+        choices: [
+          { text: "A kiwi uses its sense of smell to find worms and bugs in the dirt.", correct: true },
+          { text: "A kiwi lays a very big egg for a bird of its size." },
+          { text: "A kiwi rests in a hole or a hollow log in the daytime." },
+          { text: "People in New Zealand keep cats and rats away from kiwis." }
+        ] },
+      partB: { prompt: "Which two sentences from the article best support the answer to Part A?", pick: 2,
+        choices: [
+          { text: "\"It has nostrils at the very tip of its long beak.\"", correct: true },
+          { text: "\"At night, it pokes its beak into the dirt and sniffs for worms and bugs.\"", correct: true },
+          { text: "\"A kiwi lays a very big egg for its size.\"" },
+          { text: "\"It is about the size of a chicken, and it cannot fly.\"" },
+          { text: "\"It comes out after dark, when it is safer to hunt.\"" }
+        ] },
+      clue: "The main idea of a paragraph is what most of its sentences are about. Key details prove it.",
+      hints: [
+        "The main idea of a paragraph is what most of its sentences are about. Key details prove it.",
+        "Reread paragraph 2 one sentence at a time. Say in a few words what each sentence tells.",
+        "Resting in a hole and the help from people are told in other paragraphs, not paragraph 2. For Part B, choose sentences that prove your Part A answer."
+      ],
+      how: [
+        "Paragraph 2 begins, \"A kiwi finds its food by smell.\" Most of its sentences tell how: nostrils at the tip of the beak, sniffing in the dirt and pulling out what it smells.",
+        "Part A: A kiwi uses its sense of smell to find worms and bugs in the dirt.",
+        "Part B: \"It has nostrils at the very tip of its long beak.\" and \"At night, it pokes its beak into the dirt and sniffs for worms and bugs.\"",
+        "The big egg is in paragraph 2, but it is one fact that is not about finding food. The other sentences are from other paragraphs."
+      ],
+      misconception: "A common mix-up is choosing a surprising fact from the paragraph, like the big egg, as its main idea.",
+      why: "Part A: A kiwi uses its sense of smell to find worms and bugs in the dirt. Part B: \"It has nostrils at the very tip of its long beak.\" and \"At night, it pokes its beak into the dirt and sniffs for worms and bugs.\" The big egg is in paragraph 2 but is not about finding food. The other choices come from other paragraphs." }
   ],
   /* Hints and Show me how for the refs (P3, P4, P5, P7) and for Practice Together (P1, P2, P6). */
   addons: {
@@ -898,6 +1240,33 @@ PP.addLesson({
         ["Now find the hole.", "Pump a little air into the tube, hold it near your ear and listen for a hiss.", "If you cannot hear one, dip the tube into a bowl of water, and bubbles will rise where the air escapes."],
         ["When you find the hole, dry the tube.", "Rub the spot with sandpaper so the glue can grip.", "Spread thin glue over the hole and wait until it looks dull.", "Then press the patch on hard and hold it for a minute."],
         ["Finally, tuck the tube back in, push the tire onto the rim and pump it up.", "Put the wheel back on, and you are ready to ride."]
+      ] },
+    /* SIM-2 (expansion 2026-10-23): p6-p8 are used only by the similar bank (S05, S08, S11).
+       Never used by core, Together, test or testB. NEEDS INDEPENDENT REVIEW. */
+    { id: "p6", title: "From Bean to Chocolate Bar", genre: "Informational text",
+      paragraphs: [
+        ["Chocolate starts on a tree.", "Cacao trees grow in hot, rainy places near the middle of the Earth.", "Big pods grow right on the trunk."],
+        ["When the pods are ripe, farmers cut them down.", "They crack each pod open and scoop out the seeds, called beans.", "The beans are covered in sticky white pulp."],
+        ["Next, the farmers pile the beans under big leaves.", "For about a week, the beans warm up and turn brown.", "Their bitter taste starts to change."],
+        ["Then the beans are spread out in the sun to dry.", "Workers rake them every day so they dry evenly.", "Dry beans are packed in sacks and shipped to a factory."],
+        ["At the factory, the beans are roasted in big ovens.", "Their shells are cracked off.", "Machines grind what is left into a thick, brown paste."],
+        ["Last, sugar and milk are mixed into the paste.", "The chocolate is poured into molds and cooled into bars."]
+      ] },
+    { id: "p7", title: "A Car for Everyone", genre: "Informational text",
+      paragraphs: [
+        ["In the early 1900s, cars were a new invention.", "They cost so much that only rich families could buy one."],
+        ["Henry Ford wanted to change that.", "He wanted to build a car that most families could pay for.", "In 1908, his company began selling a strong, simple car called the Model T."],
+        ["At first, each car was built by a team of workers who moved around it.", "Building one car took more than twelve hours."],
+        ["In 1913, Ford tried a new idea called a moving assembly line.", "The cars rolled slowly past the workers.", "Each worker did just one job, again and again.", "Now a car could be built in about an hour and a half."],
+        ["Because the cars were faster to build, they cost less to make.", "So Ford lowered the price again and again.", "By 1927, more than 15 million Model T cars had been sold."]
+      ] },
+    { id: "p8", title: "A Gift That Needed a Base", genre: "Informational text",
+      paragraphs: [
+        ["In 1876, the people of France planned a gift for the United States.", "It was a giant copper statue of a woman holding a torch.", "The French would build the statue, and the Americans would build the base it would stand on."],
+        ["Building the statue in France took years.", "Then workers took it apart and packed it into more than 200 crates.", "A ship carried the crates across the ocean."],
+        ["In America, the base was not done.", "The builders had run out of money.", "Without a base, the statue could not stand."],
+        ["A newspaper owner named Joseph Pulitzer wanted to help.", "His newspaper promised to print the name of every person who gave money, even if the gift was only a penny.", "Children sent coins from their piggy banks.", "In five months, more than 120,000 people gave money."],
+        ["The base was finished in 1886.", "That fall, the Statue of Liberty was put together and stood tall in New York Harbor."]
       ] }
   ],
   practice: [
@@ -1361,7 +1730,295 @@ PP.addLesson({
         "It travels up the metal to the handle.",
         "The answer is \"Heat moves from the soup into the metal and travels up to the handle.\""
       ],
-      why: "The answer is \"Heat moves from the soup into the metal and travels up to the handle.\" The heat starts in the soup and moves up the metal. The handle does not heat the soup, the wooden spoon is a different spoon, and the text does not say the soup cools because of the spoon." }
+      why: "The answer is \"Heat moves from the soup into the metal and travels up to the handle.\" The heat starts in the soup and moves up the metal. The handle does not heat the soup, the wooden spoon is a different spoon, and the text does not say the soup cools because of the spoon." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT2b-S04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-P4"],
+      stem: ["When you heat water in a kettle, it gets hotter and hotter. At last it boils, and some of it turns into steam. Steam takes up much more room than water. The steam needs a way out, so it rushes up the spout. On top of the spout is a whistle with a tiny hole. As the steam squeezes through the hole, the air shakes very fast. That shaking makes a high, loud sound. Now you know the water is ready."],
+      prompt: "Use the text. Choose the signal word that best completes each sentence.",
+      text: "Steam rushes up the spout {0} it needs a way out. The air in the whistle shakes very fast, {1} you hear a loud sound.",
+      slots: [
+        { options: ["so", "because", "but"], answer: 1 },
+        { options: ["so", "because", "but"], answer: 0 }
+      ],
+      clue: "Signal words show how ideas connect. Because comes just before a cause. So comes just before an effect.",
+      hints: [
+        "Signal words show how ideas connect. Because comes just before a cause. So comes just before an effect.",
+        "For each sentence, find the same idea in the text. Ask which part happens first and makes the other part happen.",
+        "In the first sentence, needing a way out is what makes the steam rush up the spout, so that part is the cause. Choose the word that comes just before a cause."
+      ],
+      how: [
+        "The steam needs a way out, and that makes it rush up the spout. Needing a way out is the cause, and it comes after the blank, so the word is because.",
+        "The air shaking makes the loud sound. The shaking is the cause, and the sound is the effect after the blank, so the word is so.",
+        "The answers are because and so. But shows a difference, not a cause."
+      ],
+      misconception: "A common mix-up is using the same signal word the text used. Check where the cause sits in the new sentence.",
+      why: "The answers are because and so. In the first sentence, the cause (the steam needs a way out) comes after the blank, so because fits. In the second, the effect (you hear a loud sound) comes after the blank, so so fits. But shows a difference." },
+    { id: "SK-TT2b-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p6"],
+      like: ["SK-TT2b-C02"],
+      prompt: "Which sentence tells what happens to the beans just before they are roasted? Choose the sentence in the passage.",
+      targets: ["p6:2:2", "p6:3:2", "p6:4:1", "p6:4:3", "p6:5:2", "p6:5:3"],
+      answer: ["p6:4:3"], pick: 1,
+      clue: "Many processes happen in stages. Find the stage the question names, then look at what comes right before it.",
+      hints: [
+        "Many processes happen in stages. Find the stage the question names, then look at what comes right before it.",
+        "Find the sentence that tells about roasting. The sentences around it tell the stages just before and just after.",
+        "\"Their shells are cracked off\" happens at the factory after the roasting, so it is too late. Check which of the other sentences comes right before."
+      ],
+      how: [
+        "Paragraph 5 says, \"At the factory, the beans are roasted in big ovens.\"",
+        "The sentence right before it tells what happens to the beans just before they get to the factory.",
+        "The answer is \"Dry beans are packed in sacks and shipped to a factory.\"",
+        "Scooping, warming under the leaves and drying in the sun all happen earlier. Cracking the shells and grinding happen after the roasting."
+      ],
+      misconception: "A common mix-up is choosing a stage that comes right after, not right before.",
+      why: "The answer is \"Dry beans are packed in sacks and shipped to a factory.\" It comes just before \"At the factory, the beans are roasted in big ovens.\" Scooping, warming and drying come earlier, and the shells and grinding come after the roasting." },
+    { id: "SK-TT2b-S06", type: "ms", points: 2, dok: 1, std: ["3.T.T.2.b"], passages: [], pick: 3,
+      stem: ["A cicada begins its life as a tiny egg in a tree branch. After about six weeks, a small young cicada hatches. It drops to the ground and digs down into the dirt. For many years, it lives underground and sips juice from tree roots. At last, it crawls out of the dirt and climbs up a tree trunk. Its old shell cracks open, and an adult with clear wings climbs out."],
+      like: ["SK-TT2b-C03"],
+      prompt: "Which THREE words or phrases from the paragraph help show the order in which things happen?",
+      choices: [
+        { text: "After about six weeks", correct: true },
+        { text: "For many years", correct: true },
+        { text: "At last", correct: true },
+        { text: "digs down" },
+        { text: "clear wings" },
+        { text: "from tree roots" }
+      ],
+      clue: "Time-order words tell when something happens. They are not the actions, and they do not tell what something looks like.",
+      hints: [
+        "Time-order words tell when something happens. They are not the actions, and they do not tell what something looks like.",
+        "Read the paragraph one sentence at a time. For each choice, ask: does it tell when, or does it tell what happens? Choose three.",
+        "\"Clear wings\" tells what the adult looks like, not when something happens. Check each other choice the same way."
+      ],
+      how: [
+        "Time-order words tell when. Action words tell what happens.",
+        "\"After about six weeks\" tells when the young cicada hatches. \"For many years\" tells how long it lives underground. \"At last\" tells that it finally comes out.",
+        "The answers are \"After about six weeks,\" \"For many years\" and \"At last.\"",
+        "\"Digs down\" is an action, \"clear wings\" describes the adult, and \"from tree roots\" tells where the juice comes from."
+      ],
+      misconception: "A common mix-up is choosing an action word. Time-order words tell when, not what happens.",
+      why: "The answers are \"After about six weeks,\" \"For many years\" and \"At last.\" Each one tells when something happens. \"Digs down\" is an action, \"clear wings\" describes the adult, and \"from tree roots\" tells where." },
+    { id: "SK-TT2b-S07", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C06"],
+      stem: ["Long ago, there was no bridge across the Golden Gate, the strip of water between San Francisco and the land to the north. People crossed by ferry boat. In 1933, workers began to build a bridge. First, they built two tall towers, one near each shore. Next, they spun two huge cables from the top of one tower to the other. Each cable was made of thousands of thin wires. Then they hung the road from the cables. In May 1937, the Golden Gate Bridge opened. On the first day, about 200,000 people walked across it."],
+      prompt: "Put these events in the order they happened, from first to last.",
+      steps: [
+        "People cross the water only by ferry boat.",
+        "Workers begin building the bridge.",
+        "Workers build two tall towers.",
+        "Workers spin cables between the towers.",
+        "Crowds walk across the new bridge."
+      ],
+      clue: "In a series of historical events, look for dates and time words like long ago, first, next and then.",
+      hints: [
+        "In a series of historical events, look for dates and time words like long ago, first, next and then.",
+        "Find each event in the text and the date or time word near it.",
+        "The cables run from the top of one tower to the other, so the towers had to be built before the cables. Put the other events in order the same way."
+      ],
+      how: [
+        "Long ago, people crossed only by ferry. In 1933, workers began the bridge.",
+        "First they built the towers. Next they spun the cables between them.",
+        "In May 1937, the bridge opened, and crowds walked across.",
+        "So the order is: ferry, building begins, towers, cables, crowds walk across."
+      ],
+      misconception: "A common mix-up is guessing the order from what seems likely. Use the dates and the time words.",
+      why: "The order is: people cross the water only by ferry boat, workers begin building the bridge, workers build two tall towers, workers spin cables between the towers, and crowds walk across the new bridge. The text gives long ago, 1933, first, next and May 1937." },
+    { id: "SK-TT2b-S08", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: ["p7"],
+      like: ["SK-TT2b-C07"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "Why was Ford able to lower the price of the Model T?",
+        choices: [
+          { text: "His factory could build each car faster, so it cost less to make.", correct: true },
+          { text: "Rich families stopped wanting to buy any cars at all, so prices fell." },
+          { text: "His company made the cars much bigger and fancier than before." },
+          { text: "Each worker learned to do many different jobs on every car." }
+        ] },
+      partB: { prompt: "Which sentence from the article best supports the answer to Part A?",
+        choices: [
+          { text: "\"Because the cars were faster to build, they cost less to make.\"", correct: true },
+          { text: "\"In 1908, his company began selling a strong, simple car called the Model T.\"" },
+          { text: "\"Building one car took more than twelve hours.\"" },
+          { text: "\"By 1927, more than 15 million Model T cars had been sold.\"" }
+        ] },
+      clue: "A cause is why something happens. Ask what changed in how the cars were made before the price went down.",
+      hints: [
+        "A cause is why something happens. Ask what changed in how the cars were made before the price went down.",
+        "Reread paragraphs 3 to 5. Follow how the building of a car changed. For Part B, choose one sentence.",
+        "The article says the Model T was strong and simple, never bigger and fancier, so that reason does not fit. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "Paragraph 4 says the assembly line let a car be built in about an hour and a half instead of more than twelve hours.",
+        "Paragraph 5 says that because the cars were faster to build, they cost less to make, so Ford lowered the price.",
+        "Part A: His factory could build each car faster, so it cost less to make. Part B: \"Because the cars were faster to build, they cost less to make.\"",
+        "The article never says rich families stopped buying cars, and on the assembly line each worker did just one job."
+      ],
+      misconception: "A common mix-up is choosing a sentence that tells when something happened or how many were sold, instead of why.",
+      why: "Part A: His factory could build each car faster, so it cost less to make. Part B: \"Because the cars were faster to build, they cost less to make.\" The next sentence begins with So and tells that Ford lowered the price. The car was simple, each worker did one job, and the sales came after the price went down." },
+    { id: "SK-TT2b-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C08"],
+      stem: ["Wilbur and Orville Wright ran a bike shop in Dayton, Ohio. They read about people trying to fly, and they wanted to try, too. First, they built gliders, planes with no engine. They tested the gliders on the windy sand hills of Kitty Hawk, North Carolina. Many tests did not go well, so they built a wind tunnel to test wing shapes. Then they built a plane with an engine. On December 17, 1903, Orville flew it for 12 seconds. A plane with an engine had carried a person through the air! Soon, people around the world read about the flight. Later, the brothers built better planes that could stay up for half an hour."],
+      prompt: "Did each event happen before or after the first flight with an engine? Match each event to the right time.",
+      cols: ["Before the first engine flight", "After the first engine flight"],
+      rows: [
+        { text: "The brothers test gliders at Kitty Hawk.", answer: 0 },
+        { text: "The brothers build a wind tunnel.", answer: 0 },
+        { text: "People around the world read about the flight.", answer: 1 },
+        { text: "The brothers build planes that stay up for half an hour.", answer: 1 }
+      ],
+      clue: "Dates and time words like first, then, soon and later show when events happen. Find the first engine flight, then sort each event.",
+      hints: [
+        "Dates and time words like first, then, soon and later show when events happen. Find the first engine flight, then sort each event.",
+        "Find the sentence with the date of the first engine flight. Then decide whether each event is told before it or after it, and check its time word.",
+        "Testing the gliders happens before the brothers even build a plane with an engine, so it goes before. Sort the other three the same way."
+      ],
+      how: [
+        "The first engine flight is on December 17, 1903.",
+        "Before that, the brothers test gliders at Kitty Hawk, and when tests go badly they build a wind tunnel. Then they build the plane.",
+        "After the flight, soon people read about it, and later the brothers build planes that stay up for half an hour."
+      ],
+      misconception: "A common mix-up is sorting by what seems most important instead of by when it happened.",
+      why: "Before the first engine flight, the brothers tested gliders at Kitty Hawk and built a wind tunnel. After the flight on December 17, 1903, people around the world read about it, and later the brothers built planes that could stay up for half an hour." },
+    { id: "SK-TT2b-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C09"],
+      stem: ["In the early 1800s, it was slow and hard to move goods from the Great Lakes to New York City. Wagons bumped along muddy roads for weeks. Governor DeWitt Clinton had a plan: dig a long canal, a river made by people, across New York State. Many people laughed at the idea. They called it \"Clinton's Ditch\" and said it was a waste of money. Clinton kept pushing for his plan. Workers dug for eight years, mostly with shovels and horses. In 1825, the Erie Canal opened. Boats pulled by mules could now carry goods much faster and for much less money."],
+      prompt: "Why does the author tell that many people laughed at Clinton's plan?",
+      choices: [
+        { text: "to show that Clinton kept going when others laughed", correct: true },
+        { text: "to show that the canal was never finished after all" },
+        { text: "to show that most people liked the muddy roads better" },
+        { text: "to show that the workers did not want to dig the canal" }
+      ],
+      clue: "In a series of events, one event can set up the next. Ask what happens right after people laugh at the plan.",
+      hints: [
+        "In a series of events, one event can set up the next. Ask what happens right after people laugh at the plan.",
+        "Keep reading after people laugh, and follow what happens to the plan.",
+        "The canal opened in 1825, so it was finished. Test the other choices against what comes next."
+      ],
+      how: [
+        "People laugh, call the plan \"Clinton's Ditch\" and say it is a waste of money.",
+        "The next sentence says Clinton kept pushing for his plan. Workers dig, and the canal opens in 1825.",
+        "The answer is \"to show that Clinton kept going when others laughed.\"",
+        "The canal was finished, the roads were slow and muddy, and the text never says the workers did not want to dig."
+      ],
+      misconception: "A common mix-up is reading one event by itself. Ask how it connects to the event that comes next.",
+      why: "The answer is \"to show that Clinton kept going when others laughed.\" Right after people laugh, Clinton keeps pushing, and the canal opens. The canal was finished, the roads were the problem, and nothing says the workers did not want to dig." },
+    { id: "SK-TT2b-S11", type: "hottext", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: ["p8"],
+      like: ["SK-TT2b-C10"],
+      prompt: "The author says that many people gave money for the base. Which sentence tells what made so many people want to give? Choose the sentence in the passage.",
+      targets: ["p8:2:2", "p8:3:2", "p8:4:1", "p8:4:2", "p8:4:3", "p8:4:4"],
+      answer: ["p8:4:2"], pick: 1,
+      clue: "An effect needs a cause. Ask what someone did that would make people want to give money.",
+      hints: [
+        "An effect needs a cause. Ask what someone did that would make people want to give money.",
+        "Reread paragraphs 3 and 4. Which sentences tell about the people who gave, and which tell about something done before they gave?",
+        "\"In five months, more than 120,000 people gave money\" tells how many people gave, not what made them want to. Check the sentences that are left."
+      ],
+      how: [
+        "The builders had run out of money, so the base needed gifts.",
+        "Pulitzer's newspaper promised to print the name of every person who gave, even for a penny. That made giving something anyone could do and be proud of.",
+        "The answer is \"His newspaper promised to print the name of every person who gave money, even if the gift was only a penny.\"",
+        "Pulitzer wanting to help is not yet something he did, the coins and the 120,000 people are the effect, and the crates and the lack of money do not make anyone give."
+      ],
+      misconception: "A common mix-up is choosing the effect itself, like the number of people who gave, instead of what caused it.",
+      why: "The answer is \"His newspaper promised to print the name of every person who gave money, even if the gift was only a penny.\" That promise is what got so many people to give. The coins and the 120,000 people are the effect, and wanting to help, the lack of money and the crates are not the cause." },
+    { id: "SK-TT2b-S12", type: "order", points: 2, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C11"],
+      stem: ["How to Make a Paper Plate Sundial", "You can tell time with the sun! First, poke a pencil through the middle of a paper plate. Next, take the plate outside to a sunny spot early in the morning. Tape it down flat so the wind cannot move it, and make sure the pencil stands straight up. When the clock says 9:00, look for the pencil's shadow and draw a line on it. Then come back every hour and draw a new line. At the end of the day, use your lines to tell the time."],
+      prompt: "Put the steps for making a sundial in order, from first to last.",
+      steps: [
+        "Poke a pencil through the middle of a paper plate.",
+        "Tape the plate down in a sunny spot.",
+        "Draw a line on the pencil's shadow at 9:00.",
+        "Come back each hour and draw a new line.",
+        "Use the lines to tell the time."
+      ],
+      clue: "Steps in a procedure use time words like first, next, then and at the end. Each step gets things ready for the next one.",
+      hints: [
+        "Steps in a procedure use time words like first, next, then and at the end. Each step gets things ready for the next one.",
+        "Find the time word or the clock time that goes with each step.",
+        "The plate has to be taped down outside before you can draw on any shadow, so taping comes before the 9:00 line. Put the other steps in order the same way."
+      ],
+      how: [
+        "First, poke the pencil through the plate. Next, tape the plate down in a sunny spot.",
+        "At 9:00, draw a line on the shadow. Then come back every hour and draw a new line.",
+        "At the end of the day, use the lines to tell the time.",
+        "So the order is: poke the pencil, tape the plate, draw the 9:00 line, draw a new line each hour, use the lines."
+      ],
+      misconception: "A common mix-up is putting a step before the step that gets it ready, like drawing a line before the plate is outside.",
+      why: "The order is: poke a pencil through the middle of a paper plate, tape the plate down in a sunny spot, draw a line on the pencil's shadow at 9:00, come back each hour and draw a new line, and use the lines to tell the time." },
+    { id: "SK-TT2b-S13", type: "dropdown", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C12"],
+      stem: ["How to Make a Jar Garden: First, put a layer of small rocks in the bottom of a clean jar. The rocks let extra water drain away from the roots. Next, spread a thick layer of soil over the rocks. Then dig small holes and plant tiny plants, like moss and ferns. Finally, sprinkle a little water on the plants and close the lid.", "Rosa wrote the steps from memory:", "1. Put small rocks in the jar.", "2. ________", "3. Plant the tiny plants.", "4. Sprinkle water and close the lid."],
+      prompt: "Rosa left out a step. Choose the step that belongs in the blank.",
+      text: "Step 2: {0}",
+      slots: [
+        { options: ["Spread a layer of soil over the rocks.", "Sprinkle a little water on the plants.", "Close the lid on the jar."], answer: 0 }
+      ],
+      clue: "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
+      hints: [
+        "In a procedure, each step gets things ready for the next one. Ask what must happen before you can do the next step.",
+        "Read Rosa's steps 1 and 3. Then reread the directions in order and find what she skipped.",
+        "Closing the lid is the very last thing you do, so it cannot be step 2. Check the two choices that are left: which one must happen before you can plant?"
+      ],
+      how: [
+        "After the rocks go in, the plants need something to grow in, but rocks alone cannot hold them.",
+        "The directions say to spread a thick layer of soil over the rocks next. Then you plant.",
+        "The answer is \"Spread a layer of soil over the rocks.\"",
+        "Watering and closing the lid both come at the end, after planting."
+      ],
+      misconception: "A common mix-up is choosing a real step from the wrong place in the procedure.",
+      why: "The answer is \"Spread a layer of soil over the rocks.\" The plants need soil to grow in, so the soil must go in before planting. Watering and closing the lid come at the end." },
+    { id: "SK-TT2b-S14", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C13"],
+      stem: ["How to Sprout an Avocado Pit", "Wash the pit so it is clean. Poke three toothpicks into its sides. Rest the toothpicks on the rim of a glass of water, so the bottom half of the pit sits in the water. Put the glass in a warm, sunny window. Add water every few days, because the bottom of the pit must stay wet. In a few weeks, roots will grow down and a stem will grow up."],
+      prompt: "What would most likely happen if someone skipped adding water every few days?",
+      choices: [
+        { text: "The water would get low, the pit would dry out, and roots might not grow.", correct: true },
+        { text: "The toothpicks would slide out of the pit and fall in the glass." },
+        { text: "The pit would grow so fast that it would tip the glass over." },
+        { text: "The stem would grow down into the glass instead of up." }
+      ],
+      clue: "In a procedure, many steps have a reason. Words like so and because often tell why a step matters.",
+      hints: [
+        "In a procedure, many steps have a reason. Words like so and because often tell why a step matters.",
+        "Read each step and any reason that goes with it. Ask what each step does for the pit.",
+        "Adding water has nothing to do with the toothpicks, so they would not slide out. Test the other results: which one could really happen?"
+      ],
+      how: [
+        "The directions say to add water because the bottom of the pit must stay wet.",
+        "Without new water, the glass would slowly empty, and the pit would dry out. A dry pit may not grow roots.",
+        "The answer is \"The water would get low, the pit would dry out, and roots might not grow.\"",
+        "The toothpicks hold the pit no matter how much water there is, less water would not make it grow faster, and nothing makes the stem grow down."
+      ],
+      misconception: "A common mix-up is picking a result that has nothing to do with the skipped step. Use the reason the text gives.",
+      why: "The answer is \"The water would get low, the pit would dry out, and roots might not grow.\" The directions say the bottom of the pit must stay wet. Skipping the water would not move the toothpicks, speed up growing, or turn the stem around." },
+    { id: "SK-TT2b-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.b"], passages: [],
+      like: ["SK-TT2b-C15"],
+      stem: ["Text 1: How to Make a Braille Name Card. First, look at a Braille chart to find the dots for each letter of your name. Next, draw those dots on a card with a pencil. Then put a drop of white glue on each dot, and let the glue dry hard. Last, close your eyes and feel your name.", "Text 2: Louis Braille. Louis Braille lost his sight when he was three years old. At ten, he went to a school for blind children in Paris. The books there had big raised letters, and they were slow to read. When he was fifteen, Louis made a new code of raised dots. Later, his code was used around the world."],
+      prompt: "How is the way Text 1 tells its ideas different from the way Text 2 tells its ideas?",
+      choices: [
+        { text: "Text 1 tells the reader what to do, and Text 2 tells what one person did long ago.", correct: true },
+        { text: "Text 1 tells what one person did long ago, and Text 2 tells the reader what to do." },
+        { text: "Both texts tell what Louis Braille did, in the order he did it." },
+        { text: "Text 1 uses time words, but Text 2 does not use any time words." }
+      ],
+      clue: "Some texts tell steps you can do yourself. Others tell events from the past. Both kinds can use time words.",
+      hints: [
+        "Some texts tell steps you can do yourself. Others tell events from the past. Both kinds can use time words.",
+        "Look at the verbs in each text. Are they telling you what to do, or telling what someone did?",
+        "Text 2 uses words like at ten, when he was fifteen and later, so it does use time words. Check the other choices against both texts."
+      ],
+      how: [
+        "Text 1 tells the reader what to do: look at a chart, draw the dots, put on glue, feel your name.",
+        "Text 2 tells what Louis Braille did long ago, from the age of three to fifteen and later.",
+        "The answer is \"Text 1 tells the reader what to do, and Text 2 tells what one person did long ago.\"",
+        "One choice has the texts backward, Text 1 never tells what Louis did, and Text 2 uses time words too."
+      ],
+      misconception: "A common mix-up is thinking any text with time words is a set of steps. A life story also goes in time order.",
+      why: "The answer is \"Text 1 tells the reader what to do, and Text 2 tells what one person did long ago.\" Text 1 gives steps for you, and Text 2 tells Louis Braille's life in time order. Both use time words, and only Text 2 is about Louis." }
   ],
   /* Hints and Show me how for the ref (P4) and for Practice Together (P1, P2, P3, P5, P6). */
   addons: {

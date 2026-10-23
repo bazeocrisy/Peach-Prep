@@ -278,6 +278,8 @@ The three core sets are registered as **`SK:<key>:y`** (set 1), **`SK:<key>:y2`*
 
 Each core set carries `own: true`, `part: "y" | "y2" | "y3"` and `setNo: 1 to 3`.
 
+**Practice Together keeps its guided ladder (lead decision, 2026-10-23, ENG-08).** Together is adult-guided, so it keeps the existing three-step Help me ladder (clue, narrowing, walk-through), which guard 3.3 asserts. The four §8 controls (Check my answer, Give me a hint, Show me how, Try a similar question) belong to the fifteen independent questions. The authored Together `addons` (hints, how) are kept in the lesson files and merged into the items; they are not shown in Together today.
+
 **Practice Together** on a lesson with `core` becomes `L.practice` **minus every item that `core` references with `{ref}`**, with no halving (lead decision, 2026-10-22; this replaces the earlier "all of `L.practice`"). On 3.T.T.1.c that is exactly P1 to P3; P4 to P6 appear only in core set 1. check-content enforces it (rule 10b) and `verification/practice-own.py` checks it in the browser. Lesson-level `addons` (keyed by item id, `{hints, how, mix?}` where `mix` or `misconception` is the mix-up line) are merged into practice, core and similar items at registration. A core item with no mapped similar item hides "Try a similar question"; check-content reports that as a warning, not a failure (rule 9). `core.rev` versions the core set. Its `next` points to the Try step's set picker. That is `PP_SKILLS.open(k, "try")`, not set 1 directly, so the child sees where they are. A lesson without `core` keeps today's split exactly, so lessons can move over one batch at a time.
 
 #### The Try step panel: a set picker
@@ -305,7 +307,11 @@ The player gets `run.own = !!set.own`. It runs in practice mode, so it is never 
 | **Try a similar question** | `#q-similar` | Shown after Show me how, and also after any finished item when a similar item is available. It opens a **separate** item from `L.similar` in the same player, headed "Extra question (not one of the fifteen)", with the same four controls (Similar is hidden on it). On Next it returns to the core sequence at the following item. It is recorded under the similar map, never over the core item |
 | **Next** | `#q-next` | After the item is solved or its answer shown. The child can also skip; the item stays "Not finished". **Previous** (`#q-prev`) is shown in this mode, so the child can move within a set |
 
-**Choosing a similar item.** The choice is deterministic. Take the first item in `L.similar` whose `like` includes this core id and that has not been attempted. If there is none, the button is hidden (lead decision: there is no fallback to another core item's similar question, because an extra question must practise the same component and task).
+**Choosing a similar item (lead decision, 2026-10-23; replaces the earlier "never offer a used one").** The choice is deterministic and uses only the similar items whose `like` names this core item:
+1. the first of them, in bank order, that has not been used yet;
+2. if every one has been used (earlier in this sitting, in an earlier sitting, or on a second pass through a finished set), the one used **least recently**, by the record's new `t` field (milliseconds; `d` for older records).
+
+A core item with no similar item in its own list hides the button; there is no fallback to another core item's list. Used state lives in `pp.practice.v1` (`s[<similarId>]`) and persists across sittings, which is why a "never offer a used one" rule left a returning child with no button. A similar question offered again is a **new attempt**: on its first save, the earlier attempt moves into the record's `past` list (newest last, at most ten). The record's own fields keep their meaning (the latest attempt), and no help history is erased. Tests: practice-own N.1 (one sitting, all fifteen in order) and N.2 (a second sitting after finishing the set).
 
 **At the end of a set**, `practiceDone` (player.js:403-418) has an own-mode branch:
 - It shows the set summary by category.
@@ -375,7 +381,7 @@ Three changes elsewhere read the new store:
 - The Try step's done tick (skills.js:341, 743) on a lesson with `core` uses `PP_PRACTICE.complete(k)`. A `tried` left by the old two-or-three-item Try still counts for "Practicing", but does not tick the new fifteen-item step.
 - The Learning Path note (path.js:198) and the "How a lesson works" line (app.js:140) are worded per lesson kind until every lesson has moved over.
 
-**Revision.** `core.rev` is a string the authors bump when core items change materially. A changed item **must get a new id** (enforced by the ledger hash, 2.6). Records for retired ids stay in storage, unused and harmless. When `rev` differs, the set picker says: "This practice was updated. Earlier answers are kept, but questions that changed start fresh."
+**Revision.** `core.rev` is a string the authors bump when core items change materially. **Implemented (ENG-06):** every core and similar item has a content signature (FNV-1a of its type, words, choices, key, points and passage text; hints, Show me how and explanations are left out) computed at registration. Each saved record stores `sig`. A record whose `sig` differs from the current item's is read as not started, and its facts move to the record's `prev` on the next save. Records saved before signatures existed have no `sig` and are kept as they are. The picker says "This practice was updated. One question changed, so it starts fresh. Your earlier answers to the other questions are kept." when any record is stale, and only "This practice was updated. Your earlier answers are kept." when `rev` changed but no question did.
 
 **Size.** A worst case of 95 lessons × 20 records × about 120 bytes is about 230 KB. A full store (`QuotaExceededError`) is handled like a blocked one.
 
@@ -455,6 +461,8 @@ All of the following apply to test mode in `js/engine/player.js` unless stated. 
 ### 2.5 Assessment at three levels
 
 **Level 1: lesson checks.** These exist already (form A, and form B on 13 lessons). Unchanged except for 2.4.
+
+**As built (lead decision, 2026-10-23, ENG-09).** The lead chose to draw review and cumulative questions only from **ACCEPTED** lessons' scored checks (`test`/`testB`, never written `cr` items), not new items. `js/data/accepted.js` lists the accepted lessons; check-content fails when it disagrees with `batches/STATUS.md`. `js/review.js` builds, at load and with no storage writes: one review per parent standard (`RV-<parent>`, split into parts of at most five components); cumulative curriculum parts for four ELA areas (`CR-lit`, `CR-info`, `CR-write`, `CR-lang`; a part exists only when its area has an accepted lesson, otherwise the hub says it is not available yet; one question per accepted lesson, preferring questions not used by a standard review); the hub `#review` (curriculum review, state-test practice linking PT-1, writing tasks, observed by a grown-up); and the coverage map `#coverage`. Review sets are addressable in `PP.byId` but are not added to `PP.sets`. Because the questions come from the lessons' checks, the review page says so ("your child may have seen some of them"). Results are saved as `pp.review.v1 = { v:1, r: { <setId>: { a: [ { d, got, max, n, comps } ] } } }`. The rest of this subsection is the original recommendation, kept for the record.
 
 **Level 2: standard or skill-group reviews. Recommendation: new, reviewed items, not samples.**
 

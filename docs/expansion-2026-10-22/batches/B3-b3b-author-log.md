@@ -360,3 +360,106 @@ Remaining incidental hits:
 - meerkat sentinels
 - how pufferfish inflate, and that many are poisonous
 - how geysers work
+
+## Fixes after B3 review
+
+Source: docs/expansion-2026-10-22/batches/B3-review-b3b.md. Every MUST and SHOULD was addressed, plus notes N8 and N10. No git was run.
+
+### What changed
+
+**3.T.T.3.a (T-T34.js)**
+- MUST-1, C06: hint 3, `how`, `why` and misconception no longer call C07's wrong choices opinions. They speak only about the main-opinion sentence.
+- MUST-2, P5 (addon): distractor "The library is closed on Saturdays now." replaced by "Mr. Grant works at the library." (a paragraph-3 sentence that is not evidence). Hint 2 now asks whether a sentence shows people really came when the library was open on Saturdays. Hint 3 puts the work-hours sentence with the busy-families reason.
+- Lead decision, p4: reshaped so it no longer follows mixed set R-OPN-01. New first reason (keep our own weather records, Room 14 rain gauge), new worry (a station might be broken at recess) answered by the tall fence behind the gym, new ending (real numbers instead of guesses; please tell your teacher). C11, C12 and C13 prompts, choices, `how` and `why` were updated to match.
+- SHOULD C10, S11, C15, S10: hint 3 now rules out one specific choice, so no hint leaves only the key. S10's key was reworded.
+- SHOULD C08 Part B: close second answer replaced by "Last fall, our coach gave us all the same time to play."
+- SHOULD Watch Me: Watch Me 2 replaced by a "pencil sharpener ... Some people say ... But" example that shows answering people who disagree. The count stays at three.
+- SHOULD S14: option text made self-contained ("Room 3's teacher said she never once had to remind anyone to do a job.") so shuffling cannot break it.
+
+**3.T.RA.1.a (T-RA.js)**
+- MUST-3, S08: koalas sleep 18 to 22 hours a day.
+- SHOULD C02 and S06: absurd options replaced ("make the sweetest honey of all", "shed their old skin"), with `how` and `why` edited.
+- SHOULD C04 and S01: stems no longer echo the key.
+- SHOULD C06: rewritten as an ms, DOK 3, that tests asking questions (which TWO questions are still worth researching after reading p3).
+- SHOULD C14: sample second question is now "What part of a cat's throat moves when it purrs?" (not yes/no).
+- SHOULD C15 and S15: hint 3 rules out one choice ("Is a quilt nicer..." / "Is a wooden toy more fun...").
+- SHOULD S05: rewritten as an ms with the meerkat text in `stem`, so shuffling cannot break it.
+- SHOULD S07: topic changed from dough to a thermos keeping soup hot.
+- SHOULD "doctors": p4 blood sentence now says "People who make medicines use something in it to check that medicines and shots are safe from germs."
+- SHOULD S14: "Later, the terns fly all the way to the far south." with `how`, `why` and question wording changed to "the terns" (N10).
+- N8: S02 `like` is now ["SK-RA1a-P4","SK-RA1a-C08"].
+
+### Live choices after each hint (changed items)
+
+"Live" follows the brief: a child who has read the hints so far still has a real reason to choose it. Counts are of the choices still live.
+
+**3.T.T.3.a**
+
+| Item | After H1 | After H2 | After H3 |
+|---|---|---|---|
+| C06 hottext main opinion | 5 sentences, all plausible | opinion-signal sentences only (the opinion sentence and the "I think" style reason sentence) | opinion sentence vs. the reason sentence that restates it |
+| P5 ms evidence | 5 | 3 (work hours sentence ruled out as not showing people came) | 2 keys, and the work-hours sentence still arguable until H3 puts it with the busy-families reason |
+| C08 ebsr Part B | 4 | 3 | 2 (coach sentence and the key, differing in what they show) |
+| C10 mc | 4 | 3 | 2 ("16 teams" fact ruled out) |
+| S11 mc | 4 | 3 | 2 ("maps from long ago" fact ruled out) |
+| C12 hottext (p4) | 5 | 3 | 2 |
+| C13 ms (p4) | 5 | 4 | 3 (two keys plus one near miss) |
+| C15 mc | 4 | 3 | 2 ("I think the dog owners..." ruled out) |
+| S10 mc | 4 | 3 | 2 (pancakes opinion ruled out) |
+| S14 hottext | 5 | 4 | 3 |
+| Watch Me 2 | not an item | | |
+
+**3.T.RA.1.a**
+
+| Item | After H1 | After H2 | After H3 |
+|---|---|---|---|
+| C02 dropdown | slot 1: 3, slot 2: 3 | 3 / 2 | 2 / 2 (at most one blank narrowed) |
+| C04 mc | 4 | 3 | 2 |
+| C06 ms (rewritten) | 5 | 4 | 3 (two keys plus the near miss) |
+| C14 cr | not scored | | |
+| C15 ms | 5 | 4 | 3 ("Is a quilt nicer..." ruled out) |
+| S01 mc | 4 | 3 | 2 |
+| S05 ms (rewritten) | 5 | 4 | 3 (prairie dogs ruled out) |
+| S06 dropdown | 3 / 3 | 3 / 2 | 2 / 2 |
+| S07 ms (rewritten) | 5 | 4 | 3 |
+| S08 mc | 4 | 3 | 2 |
+| S14 order | all orders | all | step 4 fixed last, steps 1-3 still to order |
+| S15 ms | 5 | 4 | 3 ("Is a wooden toy more fun..." ruled out) |
+
+These counts are my own estimate. A blind re-solve is needed, because I am not allowed to review my own work.
+
+### Corrections to errors the reviewer found in this log
+
+- C06 to C07: I missed that C06's hint 3 let a child eliminate C07's distractors. Fixed in the item (MUST-1).
+- P5 "After H2: all 5" was wrong. Under the new hint 2 it is 3.
+- C02 slot 1 "cutest" was never a live choice. It is gone, with the absurd slot 2 options.
+- "No teaching change needed" for 3.T.T.3.a was wrong, because no Watch Me modelled answering people who disagree. Watch Me 2 now does.
+- Bread dough was not "incidental" for RA S07. It was a real topic clash with T-T2, and S07 now uses a thermos.
+- RA1a mc tally is 5 mc, not 6.
+- TT3a p3 is 179 words, FK 2.8. p4 is 176 words, FK 3.8. RA1a p3 is 129 words, FK 3.1. RA1a p4 is 132 words, FK 3.4.
+- Older log descriptions of C06 (RA), S05, S07, p4 (TT3a) and the S02 `like` are stale. This section supersedes them.
+
+### Topic search for the new topics
+
+Grepped across all lessons for thermos, sharpener, tall fence, get broken, weather records, prairie dogs, sneezing and pepper. All hits are in my own blocks, except incidental "prairie" (L-GUM3) and "pepper" as a dog's name (T-TS). Neither is the same topic or key fact.
+
+### Id and revision note for the lead
+
+Changed items kept their ids and `core.rev` stays "1". The architecture says material changes need new ids or a rev bump, but no review-ledger.json exists in the repo yet. Nobody has learner data on these items. Lead: please decide whether to bump.
+
+### Needs blind re-solve
+
+- 3.T.T.3.a: C06, P5 (addon), C08, C10, C12, C13, C15, S10, S11, S14, and Watch Me 2 (read, not solved)
+- 3.T.RA.1.a: C02, C04, C06, C14, C15, S01, S05, S06, S07, S08, S14, S15
+
+### Gates after the fixes
+
+- `node verification/check-content.js --all`: PASS, 0 failures, 24 warnings, none about my lessons' similar coverage.
+- `python3 verification/readability.py`: nothing flagged; all new passages at 3.8 or lower.
+- One-sitting browser check (port 8812, 390 px and 1366 px): "Try a similar question" shows on all 30 core items; key marks correct; three hints show; no page errors; no horizontal scroll. Server stopped.
+
+### Not done
+
+- The RA1a write-task checklist is unchanged (indexes are stored).
+- Facts for the reviewer to check: koala sleep range, arctic tern migration claim, thermos, meerkat barks.
+- The guard and path scripts were not run.

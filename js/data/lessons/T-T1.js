@@ -111,6 +111,27 @@ PP.addLesson({
         ["Lily reached for the shells.", "\"Wait,\" Dad said gently.", "\"Those shells are the crab's house. How would you feel if a giant lifted off your roof?\""],
         ["Lily pulled her hand back.", "She lay on her stomach and watched instead.", "After a while, the crab crept out and waved one claw, as if it were saying hello."],
         ["Far out, the waves began to roll back in.", "\"Time to go,\" Dad said.", "\"The ocean wants its pool back.\"", "Lily waved goodbye to the crab and raced the water up the beach, laughing."]
+      ] },
+    /* Expansion 2026-10-22, batch SIM-1: p6 and p7 are used only by similar items (never core, test or testB).
+       NEEDS INDEPENDENT REVIEW. */
+    { id: "p6", title: "The Fire Tower", genre: "Literary text",
+      paragraphs: [
+        ["The old fire tower stood at the top of the mountain, high above the trees.", "Its wooden stairs zigzagged up and up, and the wind whistled through the rails."],
+        ["Amos stopped on the fourth step and grabbed the rail with both hands.", "\"How much farther is it?\" he asked in a small, shaky voice."],
+        ["At every turn of the stairs, a little wooden sign was nailed to a post.", "Each sign had a number painted on it in bright yellow."],
+        ["\"The ranger said there are six signs,\" his sister Naomi said.", "\"When we find number 6, we will be at the top.\""],
+        ["They climbed.", "Two.", "Three.", "Four.", "Amos read each number out loud, and his voice got a little louder every time."],
+        ["At sign number 6, a door opened into a small glass room.", "Sunlight poured in, and green mountains rolled away in every direction like waves."],
+        ["Amos let go of the rail and pressed his nose to the glass.", "Then he turned to Naomi with a big grin.", "\"Can we climb it again tomorrow?\" he asked."]
+      ] },
+    { id: "p7", title: "The Night Walk", genre: "Literary text",
+      paragraphs: [
+        ["The path behind Grandma Rose's cabin was dark and still.", "Only the crickets chirped, and the trees stood like tall black shadows."],
+        ["Selah held her flashlight tight.", "She swept its beam back and forth across the path."],
+        ["\"Turn it off for a minute,\" Grandma Rose said softly.", "\"Give your eyes time to get used to the dark.\""],
+        ["Selah clicked the flashlight off.", "At first, she could see nothing at all.", "Then, little by little, the sky filled with more stars than she had ever seen."],
+        ["They spread a blanket on the grass and lay on their backs.", "Grandma Rose pointed out the brightest star, and Selah made a wish on it."],
+        ["Far away, a church bell rang nine times.", "Grandma Rose sat up and began to fold the blanket.", "Selah took one last long look at the sky and turned her flashlight back on."]
       ] }
   ],
   practice: [
@@ -563,7 +584,308 @@ PP.addLesson({
         "The paint ran out before he spoke, he wants to help, and his words say nothing about where the playground is."
       ],
       misconception: "A common mix-up is choosing the event that starts a problem when the words come later and help fix it.",
-      why: "The answer is \"They give the class a way to get more paint and keep going.\" After Marco speaks, his aunt brings two cans of paint. The paint ran out before he spoke, he wants to help, and he says nothing about the playground." }
+      why: "The answer is \"They give the class a way to get more paint and keep going.\" After Marco speaks, his aunt brings two cans of paint. The paint ran out before he spoke, he wants to help, and he says nothing about the playground." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each `like` names the one core item it practises, so the in-order pick never runs out.
+       Passages p6 and p7, and every stem, are new. Author log: batches/SIM-1-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT1a-S04", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: ["p6"],
+      like: ["SK-TT1a-P5"],
+      prompt: "Which line of dialogue shows that Amos enjoyed the climb? Choose the sentence in the passage.",
+      targets: ["p6:2:2", "p6:4:1", "p6:4:2", "p6:7:3"],
+      answer: ["p6:7:3"], pick: 1,
+      clue: "Dialogue is the words a character says. First check who is speaking in each line, then ask how that person feels.",
+      hints: [
+        "Dialogue is the words a character says. First check who is speaking in each line, then ask how that person feels.",
+        "Read each line in quotation marks. For each one, ask who says it and when in the climb it comes.",
+        "\"The ranger said there are six signs\" is Naomi talking, so it tells about Naomi, not Amos. Check each line that is left."
+      ],
+      how: [
+        "The two lines about the signs are spoken by Naomi, so they cannot show how Amos feels.",
+        "\"How much farther is it?\" comes at the start, before Amos has seen the top.",
+        "At the top, Amos grins and asks, \"Can we climb it again tomorrow?\" Wanting to do it again shows he enjoyed it.",
+        "The answer is that last line."
+      ],
+      misconception: "A common mix-up is choosing a line that someone else says. Check who is speaking first.",
+      why: "The answer is the line where Amos asks, \"Can we climb it again tomorrow?\" Wanting to climb again shows he enjoyed it. The lines about the signs are Naomi's words, and Amos's first question comes before he reaches the top." },
+    { id: "SK-TT1a-S05", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C03"],
+      stem: ["Ms. Haley's classroom had a long shelf of plants by the window. Every pot wore a paper name tag with a funny name, like Sir Spike and Big Leafy. Next to each pot, a small card showed the day it was last watered, written in Ms. Haley's neat handwriting."],
+      prompt: "Read the story. What do these details tell the reader about Ms. Haley?",
+      choices: [
+        { text: "She takes careful care of her plants and has fun doing it.", correct: true },
+        { text: "She wishes she could stop teaching and work in a garden." },
+        { text: "She forgets to water the plants unless a student reminds her." },
+        { text: "She does not let any students go near the plants on the shelf." }
+      ],
+      clue: "A describing detail can tell you about a character, not only about a place. Ask what kind of person would set up a shelf like this.",
+      hints: [
+        "A describing detail can tell you about a character, not only about a place. Ask what kind of person would set up a shelf like this.",
+        "Look at the two things that go with every pot. What does each one show?",
+        "The cards show the day each pot was watered, so she does not forget. Test each choice that is left against the details."
+      ],
+      how: [
+        "Every pot has a funny name tag, like Sir Spike. Giving plants silly names shows she has fun with them.",
+        "A card by each pot shows when it was last watered, in neat handwriting. That shows she is careful.",
+        "The answer is \"She takes careful care of her plants and has fun doing it.\"",
+        "Nothing says she wants to stop teaching, the cards show she remembers to water, and nothing says students must stay away."
+      ],
+      misconception: "A common mix-up is reading a detail about plants as a wish to be somewhere else. Ask what the detail shows about the character right now.",
+      why: "The answer is \"She takes careful care of her plants and has fun doing it.\" The funny name tags show she has fun, and the neat watering cards show she is careful. Nothing says she wants to stop teaching, she does not forget to water, and nothing keeps students away." },
+    { id: "SK-TT1a-S06", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C04"],
+      stem: ["(1) At dawn, Joaquin and his uncle opened their tortilla shop. (2) Uncle Beto turned on the lights and the big grill. (3) ______ (4) Joaquin put on his apron. (5) He stacked paper bags by the door."],
+      prompt: "Read the story. The author wants to add a sentence at (3) that helps the reader picture the shop. Which sentence fits best?",
+      choices: [
+        { text: "Warm, toasty smells filled the shop, and the grill began to hiss.", correct: true },
+        { text: "\"Did the bags of corn flour come yet?\" Joaquin asked with a yawn." },
+        { text: "Uncle Beto had owned the shop since before Joaquin was born." },
+        { text: "Joaquin rubbed his sleepy eyes and leaned against the wall." }
+      ],
+      clue: "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the shop.",
+      hints: [
+        "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the shop.",
+        "Read sentences 2 and 4, on each side of the blank. The new sentence has to fit between them.",
+        "The line in quotation marks is dialogue, so it does not describe the shop. Check each sentence that is left: does it help you picture the shop, or does it tell about a person?"
+      ],
+      how: [
+        "The job is to describe the shop, so the new sentence must tell how the shop looks, sounds, smells or feels.",
+        "In sentence 2, Uncle Beto turns on the grill. A sentence about the warm smells and the hissing grill fits right after it.",
+        "The answer is \"Warm, toasty smells filled the shop, and the grill began to hiss.\"",
+        "Check the others: the question is dialogue, owning the shop is a fact about Uncle Beto, and rubbing his eyes is an action."
+      ],
+      misconception: "A common mix-up is choosing a sentence about a character when the job is to describe the place.",
+      why: "The answer is \"Warm, toasty smells filled the shop, and the grill began to hiss.\" It helps the reader smell and hear the shop. The question is dialogue, owning the shop is a fact about Uncle Beto, and rubbing his eyes is an action." },
+    { id: "SK-TT1a-S07", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C06"],
+      stem: ["Here are five sentences from a story about Mr. Diaz, the school custodian, at the end of the day."],
+      prompt: "Which sentence uses description to help the reader picture how quiet the school is? Choose the sentence.",
+      options: [
+        "The last school bus pulled away at four o'clock.",
+        "Mr. Diaz locked the front doors and picked up his mop.",
+        "His footsteps echoed down the long hall, and nothing else made a sound.",
+        "Mr. Diaz had cleaned these floors for twelve years.",
+        "\"Good night, Room 4,\" he whispered."
+      ],
+      answer: [2], pick: 1,
+      clue: "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
+      hints: [
+        "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
+        "For each sentence, ask: is it about the school itself, about what Mr. Diaz does or says, or about something that happened?",
+        "Whispering is something Mr. Diaz does, so it is not a description of the school. Check each sentence that is left."
+      ],
+      how: [
+        "Locking the doors and whispering are things Mr. Diaz does. The bus leaving is an event, and his twelve years is a fact about him.",
+        "One sentence tells what you would hear in the hall: footsteps that echo, and nothing else.",
+        "The answer is \"His footsteps echoed down the long hall, and nothing else made a sound.\" If footsteps echo and nothing else makes a sound, the school is very quiet."
+      ],
+      misconception: "A common mix-up is choosing a quiet action, like whispering. Description tells about the place itself.",
+      why: "The answer is \"His footsteps echoed down the long hall, and nothing else made a sound.\" Echoing footsteps and no other sound show how quiet the empty school is. Whispering and locking doors are actions, the bus leaving is an event, and his twelve years is a fact." },
+    { id: "SK-TT1a-S08", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: ["p6"],
+      like: ["SK-TT1a-C07"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How does Amos feel when he starts up the stairs?",
+        choices: [
+          { text: "He feels scared.", correct: true },
+          { text: "He feels excited." },
+          { text: "He feels bored." },
+          { text: "He feels angry." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"Amos stopped on the fourth step and grabbed the rail with both hands.\"", correct: true },
+          { text: "\"Amos read each number out loud, and his voice got a little louder every time.\"" },
+          { text: "\"Amos let go of the rail and pressed his nose to the glass.\"" },
+          { text: "\"Its wooden stairs zigzagged up and up, and the wind whistled through the rails.\"" }
+        ] },
+      clue: "The writer does not name Amos's feeling. Look for what his body does, and notice when in the climb it happens.",
+      hints: [
+        "The writer does not name Amos's feeling. Look for what his body does, and notice when in the climb it happens.",
+        "Read the start of the climb and the end of it. How is what Amos does with the rail different?",
+        "The sentence about the zigzag stairs describes the tower, not Amos. For Part B, the sentence you choose must come from the start of the climb and match your Part A answer."
+      ],
+      how: [
+        "Near the bottom, Amos stops and grabs the rail with both hands. Holding on that tight shows he is scared.",
+        "Later, his voice gets louder, and at the top he lets go of the rail. Those show he is getting braver.",
+        "Part A: He feels scared. Part B: \"Amos stopped on the fourth step and grabbed the rail with both hands.\"",
+        "The sentence about the stairs describes the tower, not how Amos feels."
+      ],
+      misconception: "A common mix-up is choosing a sentence from later in the story, when the question asks how he feels at the start.",
+      why: "Part A: He feels scared. Part B: \"Amos stopped on the fourth step and grabbed the rail with both hands.\" Grabbing the rail shows fear at the start. His louder voice and letting go come later, and the zigzag stairs describe the tower." },
+    { id: "SK-TT1a-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C09"],
+      stem: ["Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. \"I had them when I watered the tomatoes,\" he said. Kemi ran out to the garden with a flashlight. A shiny glint was poking out from under the tomato leaves. Kemi held up the glasses. \"Found them!\" she said, and Grandpa opened the book."],
+      prompt: "Read the story. How does each detail move the plot? Match each detail to what it does in the story.",
+      cols: ["Starts the problem", "Helps Kemi know where to look", "Solves the problem"],
+      rows: [
+        { text: "Grandpa cannot find his reading glasses.", answer: 0 },
+        { text: "\"I had them when I watered the tomatoes.\"", answer: 1 },
+        { text: "A shiny glint pokes out from under the tomato leaves.", answer: 1 },
+        { text: "Kemi holds up the glasses and says, \"Found them!\"", answer: 2 }
+      ],
+      clue: "Events and words can move a plot. Ask: does this start the problem, keep the search going, or end it?",
+      hints: [
+        "Events and words can move a plot. Ask: does this start the problem, keep the search going, or end it?",
+        "For each detail, ask what Kemi knows, or what she does, right after it.",
+        "The glasses go missing before anyone starts to search, so that detail starts the problem. Work out the other three the same way."
+      ],
+      how: [
+        "Grandpa cannot find his glasses, so he cannot read the story. That starts the problem.",
+        "Grandpa's words send Kemi to the garden, and the glint shows her where under the leaves to look. Both help her know where to look.",
+        "Kemi holding up the glasses ends the search, so it solves the problem.",
+        "So: starts the problem, helps her know where to look, helps her know where to look, solves the problem."
+      ],
+      misconception: "A common mix-up is thinking a clue solves the problem. A clue points the way; the problem is solved when the glasses are found.",
+      why: "The missing glasses start the problem. Grandpa's words and the shiny glint each help Kemi know where to look. Holding up the glasses solves the problem." },
+    { id: "SK-TT1a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p6"],
+      like: ["SK-TT1a-C10"],
+      prompt: "Why does the author describe the numbered signs on the stairs?",
+      choices: [
+        { text: "They help Amos tell how close he is to the top.", correct: true },
+        { text: "They show that the fire tower is old and falling apart." },
+        { text: "They show that Naomi does not want to climb any higher." },
+        { text: "They show that the ranger is waiting for them at the top." }
+      ],
+      clue: "Authors put a describing detail in a story for a reason. Ask what the detail does for the characters and for what happens next.",
+      hints: [
+        "Authors put a describing detail in a story for a reason. Ask what the detail does for the characters and for what happens next.",
+        "Find the signs, and read what Naomi says about them. Then follow the numbers as the children climb.",
+        "Nothing in the story says the tower is falling apart, so that choice has no support. Test each choice that is left against the story."
+      ],
+      how: [
+        "Naomi says the ranger told them there are six signs, and number 6 means the top.",
+        "As they climb, Amos reads each number out loud, so he always knows how many signs are left.",
+        "The answer is \"They help Amos tell how close he is to the top.\" The signs are a clue that keeps the climb going.",
+        "Nothing says the tower is falling apart, Naomi keeps climbing, and the story never says the ranger is at the top."
+      ],
+      misconception: "A common mix-up is thinking a describing detail is there only to show what a place looks like. Here it helps move the story along.",
+      why: "The answer is \"They help Amos tell how close he is to the top.\" Naomi says number 6 means the top, and Amos reads each number out loud as he climbs. Nothing says the tower is falling apart, Naomi keeps climbing, and the ranger is never at the top." },
+    { id: "SK-TT1a-S11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
+      like: ["SK-TT1a-C11"],
+      stem: ["At the town pool, the kids' swim race was about to begin. Little Dani stood frozen at the edge. \"I can't do it,\" she whispered.", "Her big sister, Rue, slid into the water at the far end of the lane. \"You don't have to win,\" Rue said gently. \"Just swim to me.\"", "Dani took a deep breath, jumped in and paddled all the way to Rue's arms."],
+      prompt: "Read the story. Then complete the sentences. Choose the best answer for each blank.",
+      text: "Rue's words show that she is {0}. Her words move the plot forward because {1}.",
+      slots: [
+        { options: ["caring", "bossy", "bored"], answer: 0 },
+        { options: ["Dani finds the courage to swim", "the race is called off for the day", "Rue decides to swim the race herself"], answer: 0 }
+      ],
+      clue: "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
+      hints: [
+        "Dialogue can show what a character is like, and it can change what happens next. Ask what these words show about her, and what changes after she says them.",
+        "Compare what Dani does before Rue speaks with what she does after.",
+        "Rue speaks gently and tells Dani she does not have to win, so she is not giving orders. For the second blank, ask what Dani does next."
+      ],
+      how: [
+        "Dani is frozen at the edge and says she can't do it.",
+        "Rue gets in the water, speaks gently, and tells Dani to just swim to her. That shows she is caring.",
+        "After Rue speaks, Dani jumps in and swims all the way to her. Rue's words help Dani find her courage.",
+        "The answers are caring and Dani finds the courage to swim. Nothing says the race is called off, and Rue waits at the end instead of racing."
+      ],
+      misconception: "A common mix-up is calling a character bossy because she tells someone what to do. Listen to how she says it and why.",
+      why: "The answers are caring and Dani finds the courage to swim. Rue speaks gently and waits at the end of the lane, and after her words, frozen Dani jumps in and swims to her." },
+    { id: "SK-TT1a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p7"],
+      like: ["SK-TT1a-C12"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How do Grandma Rose's words in paragraph 3 change what happens next?",
+        choices: [
+          { text: "Selah turns off her light, so she gets to see the stars.", correct: true },
+          { text: "Selah gets scared of the dark and runs back to the cabin." },
+          { text: "Selah shines her light up at the trees to look for owls." },
+          { text: "Selah asks Grandma Rose to hold the flashlight for her." }
+        ] },
+      partB: { prompt: "Which sentence from the story best shows the result of Grandma Rose's words?",
+        choices: [
+          { text: "\"Then, little by little, the sky filled with more stars than she had ever seen.\"", correct: true },
+          { text: "\"She swept its beam back and forth across the path.\"" },
+          { text: "\"Only the crickets chirped, and the trees stood like tall black shadows.\"" },
+          { text: "\"Far away, a church bell rang nine times.\"" }
+        ] },
+      clue: "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
+      hints: [
+        "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
+        "Read what Grandma Rose asks Selah to do. Then read on to see what Selah does and what she finds.",
+        "Selah never runs back to the cabin, so that choice does not fit Part A. In Part B, a sentence that comes before Grandma Rose speaks cannot be a result of her words."
+      ],
+      how: [
+        "In paragraph 3, Grandma Rose tells Selah to turn off the flashlight so her eyes can get used to the dark.",
+        "Selah clicks it off. At first she sees nothing, and then the sky fills with stars.",
+        "Part A: Selah turns off her light, so she gets to see the stars. Part B: \"Then, little by little, the sky filled with more stars than she had ever seen.\"",
+        "She never runs back, looks for owls or hands over the light. The beam and the crickets come before Grandma Rose speaks, and the bell comes much later."
+      ],
+      misconception: "A common mix-up is choosing a sentence that comes before the words. A result has to come after them.",
+      why: "Part A: Selah turns off her light, so she gets to see the stars. Part B: \"Then, little by little, the sky filled with more stars than she had ever seen.\" Grandma Rose's words make Selah turn the light off, and in the dark she sees the stars. The beam and crickets come before, and the bell comes later." },
+    { id: "SK-TT1a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p7"],
+      like: ["SK-TT1a-C13"],
+      prompt: "Read this sentence from paragraph 6: \"Far away, a church bell rang nine times.\" How does this description help the story?",
+      choices: [
+        { text: "It shows it is getting late, so the night walk is ending.", correct: true },
+        { text: "It warns that a big storm is about to come over the hill." },
+        { text: "It shows that Selah is afraid of the loud church bell." },
+        { text: "It shows that the stars are just about to come out." }
+      ],
+      clue: "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
+      hints: [
+        "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
+        "Read what Grandma Rose and Selah do right after the bell rings.",
+        "Nothing in the story tells about a storm, so that choice has no support. What does a bell ringing nine times tell you about the time?"
+      ],
+      how: [
+        "A bell that rings nine times tells the hour: nine o'clock at night.",
+        "Right after it rings, Grandma Rose folds the blanket, and Selah takes one last look and turns her light back on.",
+        "The answer is \"It shows it is getting late, so the night walk is ending.\"",
+        "There is no storm, Selah is calm, and the stars came out earlier, in paragraph 4."
+      ],
+      misconception: "A common mix-up is thinking description only tells what a place is like. Here it signals that the story is about to end.",
+      why: "The answer is \"It shows it is getting late, so the night walk is ending.\" The bell tells the time, and right after it Grandma Rose folds the blanket. There is no storm, Selah is not afraid, and the stars came out earlier." },
+    { id: "SK-TT1a-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: [], pick: 2,
+      like: ["SK-TT1a-C14"],
+      stem: ["Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a leaf chart for science, and he had found only brown leaves. Then he looked up. A small tree by the fence was bright red. Corbin added three red leaves to the chart. \"Now our chart has every color,\" he said.", "Story 2: Ding! The bell over the door rang as Wren carried her torn backpack into Mr. Bello's sewing shop. Mr. Bello showed her how to sew a strong stitch along the rip. Wren sewed the last few stitches herself. \"My backpack is as good as new,\" she said."],
+      prompt: "Read the two stories. Think about how they are written. Which TWO sentences are true about BOTH stories?",
+      choices: [
+        { text: "Each story begins with a word that copies a sound.", correct: true },
+        { text: "Each story ends with the main character's own words.", correct: true },
+        { text: "In each story, a grown-up shows the child how to fix something." },
+        { text: "Each story begins with a character asking a question." },
+        { text: "Each story takes place at the child's school." }
+      ],
+      clue: "To compare how two stories are written, look at the same part in each one. A sentence must be true for both.",
+      hints: [
+        "To compare how two stories are written, look at the same part in each one. A sentence must be true for both.",
+        "Look at the first words, the middle and the last lines of each story. Choose two.",
+        "Only Wren's story has a grown-up who shows how to fix something, so that sentence does not fit. Check each sentence that is left against both stories."
+      ],
+      how: [
+        "Beginnings: Story 1 starts with \"Crunch! Crunch!\" and Story 2 starts with \"Ding!\" Each one begins with a word that copies a sound.",
+        "Endings: Corbin says the chart has every color, and Wren says her backpack is as good as new. Each story ends with the main character's own words.",
+        "The answers are \"Each story begins with a word that copies a sound.\" and \"Each story ends with the main character's own words.\"",
+        "Only Mr. Bello shows a child how to fix something, neither story begins with a question, and only Corbin's story happens at school."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is true for only one of the two stories.",
+      why: "The answers are \"Each story begins with a word that copies a sound.\" and \"Each story ends with the main character's own words.\" Both open with a sound word, and both end with the child speaking. Only Wren gets help fixing something, neither begins with a question, and only Corbin is at school." },
+    { id: "SK-TT1a-S15", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [], pick: 2,
+      like: ["SK-TT1a-C15"],
+      stem: ["A writer is working on a story about Esme. Esme is about to read her poem out loud at the library. She is nervous. The writer wants to show how Esme feels, not just tell it."],
+      prompt: "Which TWO sentences would best show that Esme is nervous?",
+      choices: [
+        { text: "Esme folded and unfolded her poem until the paper went soft.", correct: true },
+        { text: "Esme's voice wobbled when she read the very first line.", correct: true },
+        { text: "Esme felt very nervous about reading her poem out loud." },
+        { text: "The library's reading room had rows of blue folding chairs." },
+        { text: "Esme had written her poem about her grandma's garden." }
+      ],
+      clue: "Writers show a feeling through what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
+      hints: [
+        "Writers show a feeling through what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
+        "Picture each sentence. Can you see or hear what Esme does, or are you only told about her? Choose two.",
+        "The blue chairs help you picture the room, but they do not show anything about Esme. Check each other sentence the same way."
+      ],
+      how: [
+        "Showing means the reader sees or hears what a character does and can tell the feeling without being told.",
+        "Folding and unfolding the paper again and again, and a wobbly voice, are things Esme does that show she is nervous.",
+        "The answers are \"Esme folded and unfolded her poem until the paper went soft.\" and \"Esme's voice wobbled when she read the very first line.\"",
+        "\"Esme felt very nervous\" names the feeling instead of showing it. The chairs describe the room, and what the poem is about does not show a feeling."
+      ],
+      misconception: "A common mix-up is choosing the sentence that names the feeling. Naming a feeling tells it; an action shows it.",
+      why: "The answers are \"Esme folded and unfolded her poem until the paper went soft.\" and \"Esme's voice wobbled when she read the very first line.\" Both show nervousness through what she does. \"Esme felt very nervous\" only tells the feeling, the chairs describe the room, and the poem's topic shows no feeling." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {
