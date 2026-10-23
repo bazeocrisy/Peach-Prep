@@ -462,3 +462,127 @@ Metric: word-set Jaccard over lowercase letters-and-apostrophes tokens of stem, 
 | 3.T.T.4.a | S14, S09, S08, S10 | **ACCEPT** | the earlier MUST is closed (one defensible answer per blank: July is fruit, March is buds, snow fits neither); SHOULDs on S10 hint 3, S08 prompt echo, S09 skeleton, S14 frame |
 
 Two MUSTs in the 10 swept items (1.d S08, 1.a S11).
+
+## Final sweep 2 (independent reviewer, 2026-10-23)
+
+Scope: the "Needs blind re-solve" list in section 2f of `SIM-1-author-log.md`: TT1d-S08, TT1a-S11, TT4a-S08, S09, S10, S14, TSPS-S07, S14, TC2a-S15. That is nine items. Scripts and outputs: `scratchpad/fs2/` (`lib.js`, `blind.js`, `blind.txt`, `maps.json`, `mine.json`, `cmp.js`, `jac.js`, `lad.js`).
+
+### Blind solve: agreement and honesty
+
+- Method: lessons loaded in a Node `vm` sandbox, choices shuffled with a seeded generator, and `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception` and `like` stripped. I grepped the stripped output for those field names before reading it (the only hits were ordinary prompt words such as "Answer Part A" and passage words). No item has a figure. My answers were saved to `mine.json` before any key was extracted.
+- **Agreement: 9 of 9 items (every slot, row and pick), after un-shuffling.**
+- **The solve was NOT fully blind, and the 9/9 should be weighted accordingly.** Before solving, I opened `SIM-1-author-log.md` to find the list. The grep context I printed included section 2c to 2f, which describe several keys in prose (TT4a-S09 keys, TT4a-S08 key line, TSPS-S07 key, TT1a-S11 key positions, TC2a-S15 key idea, TT1d-S08 row 4, TSPS-S14 row 1). I also printed the raw source of TT1d-S08 (with its row answers) while testing my loader. So the items I solved with prior knowledge of the key are all nine to some degree; TT1d-S08 is fully contaminated. What I can honestly say: each stripped item has one defensible answer from the text, and I found no second defensible answer for any of them. A clean cold solve by a reviewer who has not read the log has not been done on these nine.
+
+### Findings
+
+No MUST. SHOULDs and NOTEs by item:
+
+**TT1d-S08 (match, 4 rows).**
+- SHOULD: row 1 "A child and a grandparent make decorations together" (Both) reuses the key idea of C08 row 3 "A grandparent is part of the celebration" (Both), in a lesson where C08's stories also have a grandfather in the living room (`T-T1.js` line 3356). A child who remembers C08 gets row 1 by pattern. Fix: replace row 1 with a different attribute that is true of both stories and does not turn on a grandparent being present (for example "The decorations are put out for the family to see"; check it against both stories first).
+- SHOULD: `how` step 2 says Elsa and her grandmother "braid straw"; the story says "twisted the straw" and "tied on red ribbon". Fix: "make straw stars".
+- SHOULD: Story 1 says "a shelf in the living room" (no owner); Story 2 says "their living room". Row 4 ("end up in the family's home") is fine by inference, but "their living room" in Story 1 would remove the question.
+- NOTE: hint 3 settles row 2 (allowed by §4.5). Rows 1, 3, 4 stay at 3 live each. Cultural claims: the stories assert no holiday or tradition. A straw star for the tree is a real Swedish ornament (https://webshop.skansen.se/en/seasons-holidays/christmas/christmas-ornaments-tree-decorations/straw-star-ornament). Paper flowers need no source. Living-room claims need no source.
+
+**TT1a-S11 (ms, pick 2, 2 pts).**
+- NOTE: keys are "wants to help Milo, not hurry him" and "lead Milo to look at the box and find the piece"; the passage supports both (sits beside him, "Take a break", Milo studies the box picture). Distractor E ("take the puzzle apart and start over") and D (leave the table) are easy to rule out; B is the only distractor that takes thought. SHOULD, small: make E closer to the text (for example "They tell Milo to stop working on the puzzle for the day").
+- NOTE: hint 3 says "Milo stays at the table"; the passage never says that outright but "pressed it into place" implies it.
+- Similarity 0.153 against C11, no shared option; frame differs (ms about two statements vs dropdown). Pass.
+
+**TT4a-S08 (hottext, pick 2).**
+- SHOULD: the prompt "Which TWO lines use repeated words to show that ... ? Choose two lines" is C07's sentence with the object changed, and the distractor design is the same (a repeated word that is about something else: "slap, slap, slap" there, "Honk! Honk!" here). Word-set 0.192, so not a copy, but a child sees the same task. Fix: change the task (for example "Which TWO lines use a repeated word to copy a sound?" would flip it, or ask which line repeats a word to show something that is getting bigger).
+- NOTE: one defensible pair (lines 3 and 4). Lines 2 and 5 have no repeated words (checked). Hint 3 leaves 3 live (Honk, road, sing).
+
+**TT4a-S09 (ebsr).**
+- NOTE: Part A key "getting the treat and eating it fast" and Part B "I lick it fast, and then it's gone" share the word "fast", which lets a child match Part B by word. This is normal for EBSR and Part B has a distractor from stanza 2 ("I count my coins"). No change required.
+- NOTE: the item is about what a stanza contains, not a technique; `official` for 3.T.T.4.a says "techniques used to present and design poetry, including rhyme scheme". Stanza structure counts as design, so it is acceptable, but the lesson has few items on rhyme in this pass.
+- Facts and the quoted lines match the poem (including 3.3 "I'll save my coins for another day"). Hint 3 removes the "save money" choice by reason, which is allowed.
+
+**TT4a-S10 (mc).**
+- SHOULD: the key is the only choice that states a poetic technique; A ("goes on all day") contradicts the one-word line "Stop." and B ("ran out of words") is a stock distractor. A child can pick C without reading the stanza. Fix: make A and B read like real effects, for example "It makes the reader feel the scooter is speeding up" and "It repeats the idea from the first line".
+- SHOULD (small): `how` step 1 and the `why` say the first four lines "tell about a fast ride"; line 1 is "push off slow". Say "a ride that speeds up".
+- NOTE: hint 3 rules out the "all day" choice by statement (allowed); 3 left.
+- Similarity 0.192 to C09. Both items use a "rhyme" distractor, which is a reused design (C09 had "only line with a rhyming partner").
+
+**TT4a-S14 (dropdown, 2 slots).**
+- NOTE: slot 1 key "leaves lying on the ground" (stanza 2, November, leaves fallen), slot 2 key "first small buds" (March). Distractors "fruit" (stanza 1) and "bright colors" (none) work. Hint 3 ("tells what is on the twigs") points at the buds sentence; it restates a region and does not name the key, so I do not rate it a MUST.
+- NOTE: the frame ("Stanza X {0}, and stanza Y {1}") and the option phrase "shows the ..." come from C14; the option lists and the stanzas are different, and similarity is 0.198 to C14.
+- NOTE, facts: August fruit is supported (early pears ripen July to August, https://naturehills.com/blogs/garden-blog/pear-fruit-trees-when-are-pears-in-season). "Buds small and tight in March" in Georgia could not be confirmed from the UGA pear publication (https://fieldreport.caes.uga.edu/publications/C742/home-garden-pears/ gives no months; it says pears bloom "one to several weeks before apples"). In a poem this is acceptable; I could not fully verify it.
+
+**TSPS-S07 (dropdown, 2 slots).**
+- SHOULD (high): same scenario and key idea as `SK-TSPS-S03` in this lesson's bank (`T-TS.js` line 2663): rain leaking through a school ceiling, "buckets" as the weak plan, "fix the crack/gap" as the real fix. A child who has seen S03 (similar item for C14) has been taught S07's answer pattern. I considered a MUST but kept it SHOULD because S07's keys are written in the stem ("Zane set out more buckets", "We should fix that gap"), so S03 does not decide the item. Fix: change the scenario (a stuck window, a squeaky door, a garden that will not grow) so the lesson does not carry two leaking-ceiling items.
+- SHOULD: both keys are verbatim from the stem; the item is a lookup, lower in demand than C06, where the plans must be found. Also the same sentence frame as C06 ("X wants to ... Y thinks the class should ..."). Similarity 0.145, so not a copy.
+- NOTE: hint 3 settles slot 1 and its second sentence tells the child to check slot 2 against what Thea looks at. That is allowed (§4.5, "complete one of two slots"), but two sentences of scaffolding sit close to completing both. Keep only the first sentence if the stem is not changed.
+- Weak distractor: "paint the ceiling a new color".
+
+**TSPS-S14 (match, 4 rows, two passages).**
+- SHOULD: row 4 "More than one try is made before the problem is solved" (Both) restates C13 row 3 "The first try does not fix the real cause" (Both), and the prompt sentence and column labels are C13's. Word-set 0.209 with passages (limit 0.21), all-words 0.252, 0.304 without passages. It passes the written ceiling by 0.001. Fix: replace row 4 with a different structural fact (for example "The problem is first noticed by the children" or "A tool is used to help fix the problem").
+- NOTE: rows are all supported: row 1 only Slow Sink (Mr. Okon unscrews the pipe), row 2 both (clump cleared, lights changed), row 3 only turtles (many lights add up), row 4 both (hot water, plunger, pipe; one hotel, then the whole beach). Hint 3 completes row 1 (allowed). Row 3 is also answered by S12's key and row 4 by S13's order item, which is expected because they share the passage.
+- Facts: hatchlings are drawn to bright lights, and the recommended fixes are shielded, downward, low and amber/long-wavelength light (https://www.myfwc.com/wildlifehabitats/managed/sea-turtles/lighting; https://www.nfwf.org/node/3407/new-lighting-gives-sea-turtle-hatchlings-new-lease-life). "Georgia" as the setting is plausible (the log's WABE source); the passage makes no number claim.
+
+**TC2a-S15 (ms, pick 2).**
+- SHOULD: DOK 3 is high for two clear statements found in two short notes; DOK 2 fits better (a reviewer already suggested this; the author kept 3).
+- NOTE: key "Both found the long line hard to wait in" rests on Mia's "feet hurt from standing" and Theo's "tired waiting"; it is an inference for Mia, but it is the only reading and the `how` says so. The other key (space room best part vs favorite thing) is direct.
+- NOTE: `official` for 3.T.C.2.a is "Describe different perspectives of the narrator or speakers and distinguish them from their own." The item asks what the two share, which is the opposite of C15 (how views differ), so it does not drill the standard directly, but it is a useful contrast. Accept.
+- Hint 3 removes the snack option by reason (allowed). Similarity 0.189 to C15; no shared option.
+
+### Key beside explanation (key text against `why`, `how`, hints)
+
+Every `why` and `how` states the key exactly as keyed; no explanation contradicts a key. The only text errors are the two `how` wordings above (TT1d-S08 "braid", TT4a-S10 "fast ride"). Hint 1 equals the `clue` in all nine. No hint quotes a key option. Content words from keys that also appear in hints: "straw" (TT1d-S08 h3, a row completion), "cause" (TSPS-S14 h2), "apart" (TSPS-S14 h3, row completion), "first" (TT4a-S14 h2), all acceptable.
+
+### Hand count of live choices (after clue and hints 1 to 3)
+
+| Item | Start | After h1 | After h2 | After h3 | Note |
+|---|---|---|---|---|---|
+| TT1d-S08 | 4 rows x 3 | 12 | 12 | row 2 settled, 3 rows x 3 | no narrowing in h1 or h2 |
+| TT1a-S11 | 5, pick 2 | 5 | 5 | 4 | h3 removes "leave the table" |
+| TT4a-S08 | 5, pick 2 | 5 | 3 (the repeating lines) | 3 | Honk line stays live |
+| TT4a-S09 | 4 + 4 | 4 + 4 | 4 + 4 | 3 + 4 | h3 removes "save money" from A |
+| TT4a-S10 | 4 | 4 | 4 | 3 | h3 removes "all day" |
+| TT4a-S14 | 3 + 3 | 3 + 3 | 3 + 3 | 3 + 3 | slot 2 reads once the twigs are read |
+| TSPS-S07 | 3 + 3 | 3 + 3 | 3 + 3 | 1 + 3 | h3 settles slot 1 |
+| TSPS-S14 | 4 rows x 3 | 12 | 12 | row 1 settled, 3 rows x 3 | |
+| TC2a-S15 | 5, pick 2 | 5 | 5 | 4 | h3 removes the snack option |
+
+No item has hint 3 alone leaving the key as the only option. The closest are TSPS-S07 (slot 1 completed, allowed) and TT4a-S14 slot 2.
+
+### Similarity against the paired core item (own script, `jac.js`)
+
+Word-set Jaccard over stem, prompt, text, options, rows, columns and the passages shown (numbers not counted); ceiling 0.21.
+
+| Item vs core | Word-set (with passages) | All words | Without passages | Shared options |
+|---|---|---|---|---|
+| TT1d-S08 vs C08 | 0.166 | 0.175 | 0.253 | 1 ("Both stories", a column label) |
+| TT1a-S11 vs C11 | 0.153 | 0.169 | 0.153 | 0 |
+| TT4a-S08 vs C07 | 0.192 | 0.117 | 0.193 | 0 |
+| TT4a-S09 vs C08 | 0.185 | 0.241 | 0.245 | 0 |
+| TT4a-S10 vs C09 | 0.192 | 0.215 | 0.218 | 0 |
+| TT4a-S14 vs C14 | 0.198 | 0.238 | 0.195 | 0 |
+| TSPS-S07 vs C06 | 0.145 | 0.142 | 0.189 | 0 |
+| TSPS-S14 vs C13 | 0.209 | 0.252 | 0.304 | 1 ("both texts", a column label) |
+| TC2a-S15 vs C15 | 0.189 | 0.184 | 0.189 | 0 |
+
+All nine are at or under 0.21. Skeleton overlaps (not caught by the metric) are in the SHOULDs for TT1d-S08 row 1, TT4a-S08, TSPS-S07 and TSPS-S14.
+
+### Topic and key-fact duplicate search (all `js/data`, with variants)
+
+Searched: puzzle/jigsaw, Milo/Mr. Orr, scooter, pear/pear tree, ice cream (truck), hatchling/sea turtle, leak/bucket/drip/ceiling/roof, art room, science museum/space room, feet hurt/tired waiting, straw/paper flowers/Sweden/Mexico, great-grandma, photo/living room, sink/plunger/drain, honk/dusk to dawn, uncle's gate.
+- Real hits: TSPS-S03 (leaking ceiling; see TSPS-S07), TT1d C08 (grandparent in the living room; see TT1d-S08 row 1), TT4a C07 (prompt skeleton; see TT4a-S08).
+- No other item uses Milo/Mr. Orr (only S11 itself), the pear tree stanzas, the ice cream truck poem outside C/S items on p9, the scooter poem, "Zane/Thea/art room", or the Mia/Theo museum notes. Other "pear" hits are the homophone lesson and rhyme poems, and "scooter" appears elsewhere only as an object in different skills (T-SS, T-TS compare/contrast). Other "turtle" and "sink" hits are different texts.
+
+### Verdict per item
+
+| Item | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 3.T.T.1.d S08 | ACCEPT | none | row 1 reuses C08 row 3 idea; `how` "braid" vs "twisted"; "their living room" in Story 1 |
+| 3.T.T.1.a S11 | ACCEPT | none | weak distractor E |
+| 3.T.T.4.a S08 | ACCEPT | none | prompt and distractor skeleton of C07 |
+| 3.T.T.4.a S09 | ACCEPT | none | (NOTEs only) |
+| 3.T.T.4.a S10 | ACCEPT | none | weak distractors A and B; `how` "fast ride" |
+| 3.T.T.4.a S14 | ACCEPT | none | (NOTEs only; March buds unverified) |
+| TS-PS S07 | ACCEPT | none | same scenario and key idea as S03; verbatim keys; hint 3 second sentence |
+| TS-PS S14 | ACCEPT | none | row 4 restates C13 row 3; at the 0.21 ceiling with C13's prompt and columns |
+| 3.T.C.2.a S15 | ACCEPT | none | DOK 3 should be 2 |
+
+**Lesson verdicts:** 3.T.T.1.d, 3.T.T.1.a, 3.T.T.4.a, TS-PS and 3.T.C.2.a: **ACCEPT** for these nine items. MUSTs: 0. SHOULDs: 11 (listed above). The agreement figure is 9/9, but see the caveat that the solve was not fully blind.
+
+Pid note: I started no server and ran no git; no lesson file was edited.
