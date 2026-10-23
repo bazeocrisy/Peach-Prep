@@ -1203,6 +1203,25 @@ PP.addLesson({
         ["Malia climbed down from the stage and sat in the last row.", "From there, the actors' voices were lost under the roar of the fans.", "\"It's not our voices,\" she said. \"It's the fans.\""],
         ["Mr. Oduya, the custodian, could not turn the fans off, because the gym would get too hot.", "Instead, he helped the class carry every row of chairs to the front half of the gym, far from the fans."],
         ["That night, the gym was packed.", "Even the families in the very back row laughed at every joke."]
+      ] },
+    /* Expansion 2026-10-22 (batch SIM-1): p5 and p6 are used only by similar items. NEEDS INDEPENDENT REVIEW. */
+    { id: "p5", title: "The Midnight Cricket", genre: "Literary text",
+      paragraphs: [
+        ["Tomorrow was the class trip to the aquarium, and Emre had to wake up at six.", "He climbed into bed early and turned off the lamp."],
+        ["Chirp! Chirp! Chirp!", "The sound filled the dark room.", "Emre pulled his pillow over his head, but the chirping went right through it."],
+        ["Emre tiptoed down the hall.", "\"Grandpa, something is singing in my room, and I cannot sleep,\" he whispered."],
+        ["Grandpa came in and listened.", "\"It's a cricket,\" he said.", "\"It goes quiet when we move close, so we must wait for it to sing again.\"", "They waited, and soon the chirping started up under the dresser."],
+        ["Emre held a cup upside down over the spot while Grandpa slid a card underneath.", "Together they carried the cricket to the porch and set it free."],
+        ["The room was quiet at last.", "Emre was asleep in minutes."]
+      ] },
+    { id: "p6", title: "The Stuck Zipper", genre: "Literary text",
+      paragraphs: [
+        ["It was a freezing morning, and the school bus would leave in five minutes.", "Idris pulled on his puffy blue jacket and tugged the zipper.", "It stuck halfway up."],
+        ["First, Idris yanked the zipper harder.", "The little tab bent, but the zipper did not move."],
+        ["Next, he wiggled it up and down.", "A piece of cloth stayed caught in its teeth."],
+        ["\"Let me see,\" said his big sister, Dara.", "She looked closely at the teeth.", "\"Rub a pencil along them first,\" she said.", "\"The pencil makes them slippery.\""],
+        ["Idris rubbed a pencil along the teeth and pulled the cloth free.", "The zipper glided all the way up to his chin."],
+        ["Idris grinned and grabbed his backpack.", "He raced out to the bus, and his neck stayed warm all the way to school."]
       ] }
   ],
   practice: [
@@ -1663,7 +1682,292 @@ PP.addLesson({
         "Missing old friends could happen after any move, but these setting details do not cause it. Nothing is said about water, and there is no forest."
       ],
       misconception: "A common mix-up is choosing a problem that could happen anywhere instead of one caused by the setting's details.",
-      why: "The answer is \"She may have trouble finding a safe place to play outside.\" The building has no yard, and the park is across a busy highway. Missing friends could happen after any move, but the setting does not cause it, and nothing is said about water or a forest." }
+      why: "The answer is \"She may have trouble finding a safe place to play outside.\" The building has no yard, and the park is across a busy highway. Missing friends could happen after any move, but the setting does not cause it, and nothing is said about water or a forest." },
+    /* Batch SIM-1 (ENG-07): one extra question for each core item that had none left when a child works the
+       fifteen in order. Each new `like` names the one core item it practises. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT1b-S04", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-P7"],
+      stem: ["Tavi's family lives in a cabin at the end of a long dirt road, many miles from town. One morning, the family ran out of bread. The only store was far away down the road. Tavi's mom stirred flour, water and salt in a bowl and cooked flat bread on a hot pan."],
+      prompt: "Read the story. The cabin is many miles from the store. How does that part of the setting affect what Tavi's family does?",
+      choices: [
+        { text: "No store is close by, so they make bread from what is in the cabin.", correct: true },
+        { text: "The store is far away, so Tavi walks to town to buy a loaf." },
+        { text: "The cabin is quiet, so Tavi's family does not need any bread." },
+        { text: "The road is long, so Tavi's friends bring them bread." }
+      ],
+      clue: "A setting can change what characters do. Ask how the place makes the problem harder and what plan fits.",
+      hints: [
+        "A setting can change what characters do. Ask how the place makes the problem harder and what plan fits.",
+        "Reread the sentences about the store and the road. Then read what Tavi's mom does.",
+        "Nothing in the story says anyone leaves the cabin. Test each choice that is left against what Tavi's mom does."
+      ],
+      how: [
+        "The family is out of bread, and the only store is many miles away.",
+        "Tavi's mom does not go to the store. She mixes flour, water and salt and cooks flat bread at home.",
+        "The answer is \"No store is close by, so they make bread from what is in the cabin.\"",
+        "Nobody walks to town, the family does need bread, and no friends come."
+      ],
+      misconception: "A common mix-up is choosing a plan that would be easy in a town but does not fit a faraway place.",
+      why: "The answer is \"No store is close by, so they make bread from what is in the cabin.\" The store is far away, so Tavi's mom cooks flat bread at home. Nobody walks to town, the family is out of bread, and no friends bring any." },
+    { id: "SK-TT1b-S05", type: "order", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p5"],
+      like: ["SK-TT1b-P4"],
+      prompt: "Put the events of the story in order.",
+      steps: [
+        "Emre hears chirping that keeps him awake.",
+        "Emre puts his pillow over his head, but he still hears the chirping.",
+        "Emre and Grandpa wait for the chirping to start again.",
+        "Emre and Grandpa carry the cricket out to the porch."
+      ],
+      clue: "Look for time words and think about what has to happen before each event.",
+      hints: [
+        "Look for time words and think about what has to happen before each event.",
+        "Follow the paragraphs from the start to the end. Each event leads to the next one.",
+        "Emre tries the pillow before he goes to find Grandpa. Place the other events one at a time."
+      ],
+      how: [
+        "The story starts when the chirping begins in Emre's dark room, so that comes first.",
+        "Next, Emre covers his head with a pillow. It does not help, so he goes to find Grandpa.",
+        "Grandpa tells him to wait for the cricket to sing again, and they wait.",
+        "Last, once they find the cricket, they carry it out to the porch."
+      ],
+      misconception: "A common mix-up is putting the ending first because it solves the problem. The solution comes last.",
+      why: "The order is: Emre hears chirping that keeps him awake; he puts his pillow over his head but still hears it; he and Grandpa wait for the chirping to start again; they carry the cricket out to the porch." },
+    { id: "SK-TT1b-S06", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
+      like: ["SK-TT1b-C03"],
+      prompt: "Read paragraph 1 again. Then complete the sentences. Choose the best answer for each blank.",
+      text: "In this story, Emre is {0}. The author says Emre has to wake up at six for a class trip, so the reader can tell that {1}.",
+      slots: [
+        { options: ["the main character", "a helper who comes in near the end", "the one who causes the problem"], answer: 0 },
+        { options: ["a good night of sleep matters to him, so the noise is a real problem", "he always wakes up early, so noise never bothers him", "the class trip has been called off, so he can sleep late"], answer: 0 }
+      ],
+      clue: "Think about whose trouble the story follows. A detail near the start can show what a person in the story needs.",
+      hints: [
+        "Think about whose trouble the story follows. A detail near the start can show what a person in the story needs.",
+        "Reread paragraph 1. What does Emre need to do the next morning?",
+        "The chirping comes from the cricket, so Emre does not cause the problem. For the second blank, think about what a person who must wake up at six needs."
+      ],
+      how: [
+        "The story follows Emre from the first paragraph to the last, and it is his sleep that is ruined, so he is the main character.",
+        "Paragraph 1 says he has a class trip and must wake up at six. He needs sleep.",
+        "So the noisy cricket is a real problem for him.",
+        "The answers are the main character and a good night of sleep matters to him. The trip is still on, and the noise keeps him awake."
+      ],
+      misconception: "A common mix-up is thinking a detail at the start is just filler. Here it shows why the problem matters.",
+      why: "The answers are the main character and a good night of sleep matters to him, so the noise is a real problem. Emre must wake up at six for the trip. The cricket, not Emre, causes the noise, the trip is still on, and the noise keeps him awake." },
+    { id: "SK-TT1b-S07", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
+      like: ["SK-TT1b-C05"],
+      prompt: "At the end of the story, the author writes, \"The room was quiet at last.\" Why does the author include this sentence?",
+      choices: [
+        { text: "It proves that moving the cricket fixed the problem.", correct: true },
+        { text: "It shows that the cricket will come back to the room." },
+        { text: "It shows that Emre is afraid of the quiet." },
+        { text: "It shows that Grandpa was angry about the noise." }
+      ],
+      clue: "Authors often end with a detail that shows whether the fix worked. Ask what changed since the trouble started.",
+      hints: [
+        "Authors often end with a detail that shows whether the fix worked. Ask what changed since the trouble started.",
+        "Compare the room in paragraph 2 with the room in the last paragraph.",
+        "Nothing says Grandpa was angry, so that choice has no support. Test each choice that is left against how the story ends."
+      ],
+      how: [
+        "At the start, the room is filled with loud chirping that keeps Emre awake.",
+        "At the end, the cricket is out on the porch, the room is quiet, and Emre falls asleep in minutes.",
+        "The answer is \"It proves that moving the cricket fixed the problem.\"",
+        "The cricket is set free outside, Emre falls asleep, and Grandpa is calm and helpful."
+      ],
+      misconception: "A common mix-up is reading a quiet ending as something scary. Compare it with how the problem began.",
+      why: "The answer is \"It proves that moving the cricket fixed the problem.\" The room was loud with chirping, and now it is quiet and Emre sleeps. The cricket was set free outside, Emre is not afraid, and Grandpa helps calmly." },
+    { id: "SK-TT1b-S08", type: "mc", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-C06"],
+      stem: ["On Friday, Ms. Vega's class played a bean bag game. Each team stood ten steps from a bucket and tried to toss as many bean bags into it as they could. Ms. Vega set up the game on the hilltop behind the school, where a strong wind blew all afternoon."],
+      prompt: "Read the story. How does the setting make the game harder for the teams?",
+      choices: [
+        { text: "The strong wind keeps pushing the bean bags away from the bucket.", correct: true },
+        { text: "The hilltop is so far away that the teams cannot walk there." },
+        { text: "The teams get so few bean bags that they cannot practice." },
+        { text: "The bucket is so small that no bean bag can fit inside." }
+      ],
+      clue: "A setting can make a challenge harder. Picture the place, and ask what in it gets in the way.",
+      hints: [
+        "A setting can make a challenge harder. Picture the place, and ask what in it gets in the way.",
+        "Reread the last sentence of the story. What is true about the hilltop?",
+        "The story does not say how many bean bags each team gets or how big the bucket is. Test each choice that is left against the details in the story."
+      ],
+      how: [
+        "The game is to toss bean bags into a bucket from ten steps away.",
+        "Ms. Vega sets it up on the hilltop, where a strong wind blows all afternoon.",
+        "A strong wind would push a light bean bag off its path, so the answer is \"The strong wind keeps pushing the bean bags away from the bucket.\"",
+        "The story never says the hill is too far, that bean bags are few, or that the bucket is tiny."
+      ],
+      misconception: "A common mix-up is choosing a problem the story never mentions. The setting details have to cause it.",
+      why: "The answer is \"The strong wind keeps pushing the bean bags away from the bucket.\" The game is on a hilltop where a strong wind blows all afternoon. The story never says the hill is too far to walk to, that bean bags are few, or that the bucket is tiny." },
+    { id: "SK-TT1b-S09", type: "hottext", points: 1, dok: 2, std: ["3.T.T.1.b"], passages: ["p6"],
+      like: ["SK-TT1b-C08"],
+      prompt: "Which sentence tells the idea that will solve the problem? Choose the sentence in the passage.",
+      targets: ["p6:2:1", "p6:3:1", "p6:4:2", "p6:4:3", "p6:5:2"],
+      answer: ["p6:4:3"], pick: 1,
+      clue: "In a problem-and-solution story, the idea that solves the problem is different from the tries that fail. Look for the new idea.",
+      hints: [
+        "In a problem-and-solution story, the idea that solves the problem is different from the tries that fail. Look for the new idea.",
+        "Read paragraphs 2 to 4. In each one, ask what Idris or Dara does or says.",
+        "An idea that solves the problem has to work, and the story shows it working. Check which sentence is followed by the trouble going away."
+      ],
+      how: [
+        "Pulling harder and wiggling the zipper are tries that did not fix it.",
+        "Dara looking closely is how she studies the problem, but it is not yet an idea.",
+        "Then Dara says to rub a pencil along the teeth, and after that the zipper glides up. The answer is \"Rub a pencil along them first,\" she said.",
+        "The zipper gliding up is the result of the idea, not the idea itself."
+      ],
+      misconception: "A common mix-up is choosing the sentence that shows the problem solved. The idea comes before the result.",
+      why: "The answer is the sentence where Dara says, \"Rub a pencil along them first.\" That new idea is what lets the zipper move. Yanking and wiggling were tries that failed, looking closely is only studying the problem, and the zipper gliding up is the result." },
+    { id: "SK-TT1b-S10", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p6"], pick: 2,
+      like: ["SK-TT1b-C09"],
+      prompt: "Which TWO details show that the problem has been solved?",
+      choices: [
+        { text: "The zipper glides all the way up to Idris's chin.", correct: true },
+        { text: "Idris's neck stays warm all the way to school.", correct: true },
+        { text: "Idris yanks the zipper, and the little tab bends." },
+        { text: "A piece of cloth stays caught in the teeth of the zipper." },
+        { text: "Dara tells Idris to rub a pencil along the teeth." }
+      ],
+      clue: "A problem is solved when the trouble is gone. Look for details that show the result, not the tries or the plan.",
+      hints: [
+        "A problem is solved when the trouble is gone. Look for details that show the result, not the tries or the plan.",
+        "Read the last two paragraphs. Ask what Idris can do now that he could not do before.",
+        "The cloth stuck in the teeth is part of the problem, not a sign it is gone. Check each other detail: does it happen before or after the zipper is fixed?"
+      ],
+      how: [
+        "The problem is that the zipper is stuck and Idris cannot close his jacket on a freezing morning.",
+        "After the pencil, the zipper glides all the way up to his chin, and his neck stays warm all the way to school.",
+        "The answers are \"The zipper glides all the way up to Idris's chin.\" and \"Idris's neck stays warm all the way to school.\"",
+        "The bent tab, the stuck cloth and Dara's idea all come before the zipper works."
+      ],
+      misconception: "A common mix-up is choosing the plan or a try. Those come before the problem is solved.",
+      why: "The answers are \"The zipper glides all the way up to Idris's chin.\" and \"Idris's neck stays warm all the way to school.\" Both show the jacket working. The bent tab, the stuck cloth and Dara's idea all come before the fix." },
+    { id: "SK-TT1b-S11", type: "order", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: ["p6"],
+      like: ["SK-TT1b-C10"],
+      prompt: "Put these events in the order they happen in the story.",
+      steps: [
+        "Idris tugs the zipper, and it sticks halfway up.",
+        "Idris yanks the zipper harder, and the tab bends.",
+        "Idris wiggles the zipper up and down.",
+        "Dara tells Idris to rub a pencil along the teeth.",
+        "The zipper glides up to Idris's chin."
+      ],
+      clue: "Look for time words like first, next and then. Think about what must happen before each event.",
+      hints: [
+        "Look for time words like first, next and then. Think about what must happen before each event.",
+        "Follow the paragraphs from the beginning to the end. Each try comes right after the one before it.",
+        "The zipper cannot glide up until after Dara's idea is used. Place the other events one at a time."
+      ],
+      how: [
+        "The story starts when the zipper sticks halfway up.",
+        "Then come the tries: first Idris yanks it harder (\"First\"), and next he wiggles it (\"Next\").",
+        "Dara steps in with her idea to rub a pencil along the teeth.",
+        "Only after that does the zipper glide up to his chin."
+      ],
+      misconception: "A common mix-up is putting Dara's idea before the tries. She speaks only after Idris's tries fail.",
+      why: "The order is: the zipper sticks halfway; Idris yanks it harder; he wiggles it up and down; Dara tells him to rub a pencil along the teeth; the zipper glides up to his chin." },
+    { id: "SK-TT1b-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
+      like: ["SK-TT1b-C12"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "What is Grandpa's job in the plot?",
+        choices: [
+          { text: "He is a helper who works with Emre to free the cricket.", correct: true },
+          { text: "He is the main character, because the story is about his night." },
+          { text: "He causes the problem by letting the cricket into the room." },
+          { text: "He has the problem, because the chirping keeps him awake." }
+        ] },
+      partB: { prompt: "Which sentence from the story best supports the answer to Part A?",
+        choices: [
+          { text: "\"Emre held a cup upside down over the spot while Grandpa slid a card underneath.\"", correct: true },
+          { text: "\"Emre pulled his pillow over his head, but the chirping went right through it.\"" },
+          { text: "\"Tomorrow was the class trip to the aquarium, and Emre had to wake up at six.\"" },
+          { text: "\"The room was quiet at last.\"" }
+        ] },
+      clue: "A character's job in the plot is what the character does to move the story toward a solution. Ask whether this character has the problem, causes it or helps fix it.",
+      hints: [
+        "A character's job in the plot is what the character does to move the story toward a solution. Ask whether this character has the problem, causes it or helps fix it.",
+        "Find Grandpa in the story. List what he says and does after he is asked for help.",
+        "Emre, not Grandpa, is the one who cannot sleep, so Grandpa does not have the problem. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "Emre is the one whose sleep is ruined and whom the story follows, so Emre is the main character.",
+        "Grandpa listens, explains how crickets act, waits with Emre, and helps trap the cricket with a cup and a card.",
+        "Part A: He is a helper who works with Emre to free the cricket. Part B: \"Emre held a cup upside down over the spot while Grandpa slid a card underneath.\"",
+        "Nothing says Grandpa lets the cricket in, and he is not the one kept awake."
+      ],
+      misconception: "A common mix-up is calling the helper the main character because he does something important. The main character is the one with the problem.",
+      why: "Part A: He is a helper who works with Emre to free the cricket. Part B: \"Emre held a cup upside down over the spot while Grandpa slid a card underneath.\" Grandpa helps with the fix. Emre has the problem, and nothing says Grandpa let the cricket in." },
+    { id: "SK-TT1b-S13", type: "match", points: 2, dok: 2, std: ["3.T.T.1.b"], passages: [],
+      like: ["SK-TT1b-C13"],
+      prompt: "Each sentence is the start of a new story. Match each setting to the problem it would most likely cause. Use each problem once.",
+      cols: ["Staying warm", "Sending a message", "Finding the way"],
+      rows: [
+        { text: "Dina's family is camping on a snowy mountain, and the night will be far below freezing.", answer: 0 },
+        { text: "Jonas lives in a cabin deep in the woods where no phone works, and tomorrow is his cousin's birthday in another state.", answer: 1 },
+        { text: "Lia must walk home across a wide, empty field at dusk, and there are no street lights.", answer: 2 }
+      ],
+      clue: "A setting can make a problem likely. Ask what the place or time makes hard.",
+      hints: [
+        "A setting can make a problem likely. Ask what the place or time makes hard.",
+        "For each sentence, find the words about weather, distance or light. Ask what a person there would need.",
+        "Snow and a freezing night would make a person cold. Match the other two the same way."
+      ],
+      how: [
+        "Snow and a night far below freezing make it hard to stay warm.",
+        "A cabin where no phone works, with a cousin far away, makes it hard to send a birthday message.",
+        "An empty field at dusk with no street lights makes it hard to find the way home.",
+        "So: staying warm, sending a message, finding the way."
+      ],
+      misconception: "A common mix-up is matching on one word, like \"home\" or \"night\". Look at what the whole setting makes hard.",
+      why: "The snowy, freezing night causes the problem of staying warm. The cabin with no working phone causes the problem of sending a message. The dark, empty field causes the problem of finding the way." },
+    { id: "SK-TT1b-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p5", "p6"],
+      like: ["SK-TT1b-C14"],
+      prompt: "How are the solutions in \"The Midnight Cricket\" and \"The Stuck Zipper\" alike?",
+      choices: [
+        { text: "In both, a first try fails, and a family member's idea fixes it.", correct: true },
+        { text: "In both, the child fixes the problem alone, without any help." },
+        { text: "In both, the problem goes away by itself while the child waits." },
+        { text: "In both, the child gives up and asks a teacher to fix it." }
+      ],
+      clue: "To compare two solutions, ask for each story what the child tried and who gave the plan that worked.",
+      hints: [
+        "To compare two solutions, ask for each story what the child tried and who gave the plan that worked.",
+        "In each story, find the try that does not work. Then find the person who speaks next.",
+        "In both stories, someone besides the child speaks up with a plan. Test each choice that is left against both stories."
+      ],
+      how: [
+        "In \"The Midnight Cricket,\" Emre covers his head with a pillow, and it does not work. Then Grandpa explains how to find the cricket.",
+        "In \"The Stuck Zipper,\" Idris yanks and wiggles the zipper, and neither works. Then Dara tells him to use a pencil.",
+        "The answer is \"In both, a first try fails, and a family member's idea fixes it.\"",
+        "Neither child fixes it alone, the problems do not go away by themselves, and no teacher is asked."
+      ],
+      misconception: "A common mix-up is choosing a sentence that is true for only one of the two stories.",
+      why: "The answer is \"In both, a first try fails, and a family member's idea fixes it.\" Emre's pillow fails and Grandpa's idea works, and Idris's tries fail and Dara's idea works. Neither child fixes it alone, neither problem goes away by itself, and no teacher is asked." },
+    { id: "SK-TT1b-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.b"], passages: ["p5"],
+      like: ["SK-TT1b-C15"],
+      prompt: "Which new story has a solution that works for the same reason Grandpa's idea works in \"The Midnight Cricket\"?",
+      choices: [
+        { text: "Remy's bike clicks, so he finds the loose spoke by listening, then tightens it.", correct: true },
+        { text: "Remy's bike clicks, so he turns up his music until he cannot hear the clicking." },
+        { text: "Remy's bike clicks, so he buys a new bell for the handlebars." },
+        { text: "Remy's bike clicks, so he rides on the grass where the sound is softer." }
+      ],
+      clue: "First say why the solution works in the story. Then look for a new story that works for that reason.",
+      hints: [
+        "First say why the solution works in the story. Then look for a new story that works for that reason.",
+        "Look at what Grandpa and Emre do from paragraph 4 to the end. Ask which step came first and why it mattered.",
+        "Turning up music covers a sound but does not change what is making it. Test each choice that is left against why the cricket plan worked."
+      ],
+      how: [
+        "Grandpa and Emre listen and wait until they know exactly where the chirping comes from. Then they fix it at its source.",
+        "So the plan works because they find the real cause first and then deal with it.",
+        "In the new stories, Remy listens until he finds the loose spoke that is causing the click, then tightens it. The answer is \"Remy's bike clicks, so he finds the loose spoke by listening, then tightens it.\"",
+        "Covering the sound, adding a bell, or riding on the grass leaves the cause alone."
+      ],
+      misconception: "A common mix-up is picking a solution that only hides the problem. A good fix deals with its cause.",
+      why: "The answer is \"Remy's bike clicks, so he finds the loose spoke by listening, then tightens it.\" Like Grandpa and Emre, he finds the real cause and then fixes it. Turning up music, adding a bell and riding on grass leave the cause alone." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P7, P4 and P5 (core set 1) and Together P1, P2, P6, P3. */
   addons: {

@@ -117,7 +117,7 @@ Each keeps its behavioural intent; only the population or the selector changes w
 | Check | Change | Why |
 |---|---|---|
 | 2.x | skip `type:"cr"` items | a constructed response is never scored by design; practice-own D.1 asserts 0 of 0 |
-| 3.x | skip `s.own` sets | own sets have no Help me ladder by design (§2.2.1); practice-own B asserts their controls (hints never outline, nothing reveals without a request) |
+| 3.x | **phase 2: no longer skipped.** Superseded by the phase-2 row below | (see ENG-03) |
 | 8.1 | on own sets, press `#q-hint` three times and `#q-how` instead of `#q-help`; on a written (`cr`) core item, type a short answer before Check | the same "open all help, then answer, then check for sideways scroll" on the new controls; the guard's CORRECT helper has no `cr` case, and a `cr` item is never scored (T-C.js now has one) |
 | 9.5a/9.5b/9.5 | the journey picks a lesson **without** core | it asserts the legacy Try It Yourself ("Help me unlocks after one wrong try"). On a core lesson this intentionally changes (9.5b in the architecture): hints and Show me how are available from the start; practice-own B.1-B.5 assert the new intent, help is opt-in and never automatic |
 
@@ -129,10 +129,53 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 
 ## 7. Gaps and honest limits
 
-- **Practice Together still uses the engine ladder** (clue, narrowing, walk-through). The authored hints in `addons` for P1-P3 are merged into the items but not shown in Together, because guard 3.3 asserts that ladder. Switching Together to authored hints is a separate decision.
-- **Not built:** architecture phase 4 (reviews, cumulative review, `pp.review.v1`, the coverage-map generator); `testRev` and `attempts[].rev`; the review-ledger and assessment-version hash rules; a `--release` switch that turns the migration warning into a failure; "Start this set again" (history is never erased, so nothing needs restoring).
-- **Similar coverage:** on 3.T.T.1.c, 9 of 15 core items have no similar item, so the button is hidden on them (warning, per the lead).
-- **Content:** in the tested snapshot, 17 lessons have `core` (255 core items, 51 similar items), most authored in parallel by the content team; check-content still reports lessons with a check and no core as one migration warning. practice-own.py tests 3.T.T.1.c in depth and 3.T.C.2.a C12 for the written type; the other core lessons pass check-content and are exercised by guard sections 2, 8 and 9.4 only.
+- **Practice Together keeps its three-step ladder (ENG-08, decided).** It is adult-guided and guard 3.3 asserts it. The four controls belong to the fifteen independent questions. The authored Together addons stay in the data, merged but unused there. Recorded in 01-architecture.md.
+- **Not built:** `testRev` and `attempts[].rev` check versioning; review-ledger and assessment-version hash rules; a `--release` switch that turns the migration warning into a failure.
+- **Similar coverage (ENG-07)** is mostly content: many core items still have no similar item, so the button is hidden on them (check-content warning).
+- **Reviews reuse questions** a child may already have seen in lesson checks; they say so. CR-write and CR-lang have no accepted lessons yet, and the pages say that.
+- **Content:** the tested snapshot has core on the lessons listed in `js/data/accepted.js` and others; check-content reports lessons with a check and no core as one migration warning. Content edits after the snapshot are not covered by these runs.
 - **Guard fragility (pre-existing):** sections 11, 13 and 16 pick lessons by `Object.keys(PP.lessons)` order or by fixed key (3.T.C.1.b). As lessons move to core or gain form B, those picks can land on a different kind of lesson. practice-own.py now finds its "lesson without core" dynamically for this reason; the guard's own picks were left as they are.
 - **Testing:** Chromium only, simulated viewports. No physical devices, Safari, native zoom, screen readers or family use.
 - The `3-5.RA.2` wording discrepancy in GaDOE's own PDF (§2) should be noted to reviewers.
+
+## 8. Phase 2 (after the independent engine review)
+
+### 8.1 Review fixes
+| ID | Fix |
+|---|---|
+| ENG-02 | `js/practice.js` no longer probes storage on load. `writable()` reuses `PP_PATH.storageOK()` until the first own save; the first save tests lazily. first-visit.py 124/124. |
+| ENG-03 | Guard §3 now loops every set, own sets included, with the same 3.1, 3.2 and 3.4 assertions plus 3.3b (own-mode equivalent of the ladder check: a wrong answer never shows the explanation, the right answer is marked correct). All existing check names and assertions kept. **Mutant evidence:** the reviewer's M8 (own-mode wrong answer leaks the explanation), served from `scratchpad/eng/mut/M8-own-wrong-leaks-why`, makes the plain guard fail: `FAIL 3.2 a wrong Check never shows the walk-through` on SK-TC1a-P4, P5, C03, C04, C05 (119 passed, 1 failed, exit 1). The unmutated candidate: 120 passed, 0 failed. |
+| ENG-04 | Guard 9.5-9.10 run as a journey function with a legacy variant and a core variant (names suffixed "-core"). The legacy names FAIL, not skip, if no non-core lesson remains; the core variant tests the same Help me timing on a core lesson. |
+| ENG-06 | Changed-question detection: each question gets a signature (`sig`); a changed one is moved to `prev` and shown as new; the notice says whether one question changed or only the set version. practice-own M.1-M.4. |
+| ENG-10 | Code links are at least 44 px tall. |
+| ENG-11 | Each grammar-chart link has an accessible name that includes its row's skill (M.4). |
+
+### 8.2 Similar-item reuse
+`used` persists in `pp.practice.v1` across sittings. New rule: prefer an unused similar item whose `like` includes the current core item; otherwise offer the one in that list used least recently (`t`, else `d`). A reused item starts blank; the earlier attempt moves to `past` (at most ten). New fields only (`sig`, `prev`, `t`, `past`, `for`); no existing key changes meaning and no help history is erased. Tests N.1 (one sitting, all fifteen in order) and N.2 (second sitting after finishing). Decision recorded in 01-architecture.md.
+
+### 8.3 ENG-09: the two missing assessment levels
+- **Standard or skill-group reviews** (`RV-<parent>`), one per `#std/<code>` parent page, up to five components per part. Items come only from accepted lessons (`js/data/accepted.js`, checked against `batches/STATUS.md` by check-content). The page says where coverage is missing and what a review does and does not measure.
+- **Cumulative ELA review** (`CR-lit`, `CR-info`, `CR-write`, `CR-lang`), labelled sections, manageable across sessions, links the existing practice tests rather than duplicating them, and separates curriculum review, state-test-shaped practice, writing tasks and adult-observed performance.
+- **Coverage map** (`#coverage`): per standard, what the lesson check, group review, cumulative review and adult/writing evidence cover, and plainly what is not covered. No short form is called a test of every Georgia expectation.
+- Results use the section 12 categories plus partial credit and revisit suggestions, no mastery claim from a small sample. They are stored in the new `pp.review.v1` (last 20 attempts per review). A review never awards a lesson pass and never writes `pp.progress.v1`.
+- Files: `js/review.js`, `js/data/accepted.js`, `js/std.js`, `js/app.js`, `js/engine/player.js`, `index.html`, `css/styles.css`. Tests: `verification/review.py` (21 checks: corrupt, blocked and full storage, no pass awarded, no writes on open, seven viewports, axe, keyboard).
+
+### 8.4 Final gates (frozen copy `scratchpad/eng/snap3`, snapshot 2026-10-23T10:00:31Z, 76 files, checksum list in `snap3-md5.txt`)
+| Suite | Result |
+|---|---|
+| check-content `--all` | PASS, 0 failures, 25 to 26 warnings |
+| check-content (manifest) | PASS |
+| check-writing | 0 failures, 0 warnings |
+| readability | exit 0 |
+| copy (check-instructional-copy) | 28 assertions pass |
+| path.py | 148 passed, 0 failed |
+| path-headers.py | 48 passed, 0 failed |
+| path-a11y.py (axe) | 0 violations, 0 contrast failures, 12 of 12 runs clean |
+| skills-recovery.py | 67 passed, 0 failed |
+| writing-recovery.py | 75 passed, 0 failed |
+| guard.py (plain) | 120 passed, 0 failed, snapshot unchanged during run |
+| first-visit.py | 124 passed, 0 failed |
+| practice-own.py | 73 passed, 0 failed |
+| review.py | 21 passed, 0 failed |
+
+After the runs, the engine, data (accepted.js), index.html, CSS and test files in the worktree were byte-identical to snap3. Lesson files edited by content authors after the snapshot are not covered. Chromium only (one browser per page, because single-process Chromium closes with its page); the path-a11y run uses the packaged Chromium without single-process.

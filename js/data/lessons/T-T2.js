@@ -2369,6 +2369,19 @@ PP.addLesson({
         ["The first baskets were closed at the bottom.", "Later, people tried metal hoops with a net hanging below.", "At first, the nets were closed too, and someone pulled a cord to let the ball out.", "Finally, the nets were left open at the bottom, so the ball dropped right through after every basket."],
         ["Players also learned to dribble, or bounce the ball while they moved.", "Dribbling let a player carry the ball down the court without breaking the rule about running."],
         ["A flat board called a backboard was added behind each hoop.", "It kept fans in the balcony from reaching out and knocking the ball away.", "One thing has stayed the same, though.", "The hoop is still 10 feet off the ground."]
+      ] },
+    /* SIM-2 (expansion 2026-10-23): p11 and p12 are used only by similar item S10. Never used by core, Together or the check. NEEDS INDEPENDENT REVIEW. */
+    { id: "p11", title: "The Giant Anteater", genre: "Informational text",
+      paragraphs: [
+        ["A giant anteater is a large animal that lives in the grasslands and forests of South America.", "It has a long, thin snout, and it has no teeth at all.", "Its coat is gray, with a wide black stripe across its shoulders."],
+        ["An anteater finds its food by smell.", "When it smells an ant nest, it uses the strong claws on its front feet to tear the nest open.", "Then it pokes its snout inside.", "It licks up the ants with a tongue that is longer than a grown-up's arm."],
+        ["A mother anteater carries her baby on her back.", "The baby rides there for almost a year."]
+      ] },
+    { id: "p12", title: "Quick Tongue, Many Ants", genre: "Informational text",
+      paragraphs: [
+        ["An anteater does not stay long at one nest.", "It eats for only a minute or two, and then it walks on.", "That leaves enough ants behind to rebuild the nest, so the anteater can come back another day."],
+        ["The tongue does most of the work.", "An anteater can flick its tongue in and out about 150 times in one minute.", "The tongue is sticky, so the ants cling to it."],
+        ["In one day, a giant anteater can eat thousands of ants and termites.", "Because it eats so many, it must spend much of the day looking for food.", "It also sleeps up to fifteen hours each day."]
       ] }
   ],
   practice: [
@@ -2854,7 +2867,301 @@ PP.addLesson({
         "Text 2 also tells that they breathe, and it adds how they rest.",
         "The answer is \"A dolphin may rest one half of its brain at a time.\""
       ],
-      why: "The answer is \"A dolphin may rest one half of its brain at a time.\" Only Text 2 tells how a dolphin rests. Breathing air is in both texts, and the blowhole and being mammals are only in Text 1." }
+      why: "The answer is \"A dolphin may rest one half of its brain at a time.\" Only Text 2 tells how a dolphin rests. Breathing air is in both texts, and the blowhole and being mammals are only in Text 1." },
+    /* SIM-2 (expansion 2026-10-23): one extra question per core item that had none in a full sitting.
+       Each like names one core item only, because the engine uses an extra question once.
+       Log: docs/expansion-2026-10-22/batches/SIM-2-author-log.md. NEEDS INDEPENDENT REVIEW. */
+    { id: "SK-TT2c-S04", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C03"],
+      stem: ["Text 1: Alpacas are woolly animals. They live in the mountains of South America. Their wool is soft and warm. It comes in many colors, like white, brown and black. Farmers cut the wool off once a year.", "Text 2: Alpaca wool is spun into yarn. The yarn is made into sweaters. Alpacas hum to each other. A baby alpaca is called a cria. Farmers cut the wool off in spring, so the alpacas stay cool in summer."],
+      prompt: "Which detail is told ONLY in Text 2?",
+      choices: [
+        { text: "Alpacas hum to each other.", correct: true },
+        { text: "Alpaca wool comes in many colors." },
+        { text: "Alpacas live in the mountains." },
+        { text: "Farmers cut the wool off the alpacas." }
+      ],
+      clue: "A detail told in only one text is new information in that text. Check each detail in both texts.",
+      hints: [
+        "A detail told in only one text is new information in that text. Check each detail in both texts.",
+        "Look for each detail in Text 2 first. Then ask whether Text 1 also tells it.",
+        "The colors of the wool are told in Text 1, so they are not told only in Text 2. Check the other details in both texts."
+      ],
+      how: [
+        "Text 1 tells where alpacas live, what the wool is like and the colors, and that farmers cut the wool off once a year.",
+        "Text 2 tells about yarn and sweaters, that alpacas hum, the word cria and that farmers cut the wool in spring.",
+        "The answer is \"Alpacas hum to each other.\" Only Text 2 says it.",
+        "The colors and the mountains are only in Text 1, and both texts say farmers cut the wool."
+      ],
+      misconception: "A common mix-up is choosing a detail because it is true. The question asks which text tells it.",
+      why: "The answer is \"Alpacas hum to each other.\" Only Text 2 tells it. The colors and the mountains are told only in Text 1, and both texts say that farmers cut the wool off." },
+    { id: "SK-TT2c-S05", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C05"],
+      stem: ["Text 1: An igloo is a house made of blocks of hard snow. People in the far north built igloos to stay warm on long trips. Snow holds in heat, so the inside is warmer than the air outside. The blocks are set in a circle that curves up to make a dome.", "Text 2: Inside an igloo, a small lamp and the heat from people's bodies can make it warm. The snow is full of tiny pockets of air, so it holds in heat. People sleep on a raised bench of snow that is covered with furs.", "Ben's note: Only Text 1 tells that snow holds in heat. Only Text 1 tells where the people sleep."],
+      prompt: "Ben's note has two mistakes. Choose the words that fix it.",
+      text: "The fact that snow holds in heat is in {0}. The fact about where people sleep is in {1}.",
+      slots: [
+        { options: ["both texts", "only Text 1", "only Text 2"], answer: 0 },
+        { options: ["both texts", "only Text 1", "only Text 2"], answer: 2 }
+      ],
+      clue: "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
+      hints: [
+        "Before you say which text tells a fact, check each text. A fact can be in one text or in both.",
+        "For each fact, search Text 1 first. Then search Text 2.",
+        "Text 1 never says anything about beds or benches. Use that to fix the second blank, and check the first blank yourself."
+      ],
+      how: [
+        "Search Text 1 for snow holding in heat. It says so. Search Text 2. It says the snow holds in heat, too. So the fact is in both texts.",
+        "Search Text 1 for where people sleep. It never says. Text 2 says people sleep on a raised bench covered with furs.",
+        "The answers are \"both texts\" and \"only Text 2.\""
+      ],
+      misconception: "A common mix-up is trusting a note without checking. Search each text for the fact yourself.",
+      why: "The answers are both texts and only Text 2. Text 1 says snow holds in heat, and Text 2 says the same thing with the pockets of air. Only Text 2 tells that people sleep on a raised bench of snow." },
+    { id: "SK-TT2c-S06", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C06"],
+      stem: ["Text 1: A wind turbine looks like a giant fan on a tall pole. When the wind blows, it spins the long blades. The spinning turns a machine inside that makes electricity. Some turbines are taller than a 30-story building.", "Text 2: The town of Pine Bluff put up six wind turbines on a hill outside town. Now the town makes much of its own electricity. It pays less to buy electricity from far away, so it had money left to fix up its park."],
+      prompt: "Think about what each text is mostly about. Choose the words that best complete the sentence.",
+      text: "Together, the texts show how {0} and how {1}.",
+      slots: [
+        { options: ["wind turns a turbine to make electricity", "a turbine can be taller than a tall building", "a turbine looks like a giant fan"], answer: 0 },
+        { options: ["a town saves money by making its own electricity", "six turbines stand on a hill outside town", "a town fixed up its park"], answer: 0 }
+      ],
+      clue: "An important point is what a whole text is mostly about. A detail tells about only one part.",
+      hints: [
+        "An important point is what a whole text is mostly about. A detail tells about only one part.",
+        "Say in a few words what each text is mostly about, from its first sentence to its last.",
+        "How tall a turbine can be is only one sentence in Text 1, so it is a detail, not the important point. Choose the second blank yourself."
+      ],
+      how: [
+        "Text 1 is mostly about how a turbine works: the wind spins the blades, and the spinning makes electricity.",
+        "Text 2 is mostly about what a town gains: it makes its own electricity, so it spends less.",
+        "The answers are \"wind turns a turbine to make electricity\" and \"a town saves money by making its own electricity.\"",
+        "The height, the fan shape, the hill and the park are each only a small detail."
+      ],
+      misconception: "A common mix-up is choosing a detail because it is easy to spot. An important point covers the whole text.",
+      why: "The answers are \"wind turns a turbine to make electricity\" and \"a town saves money by making its own electricity.\" Each one is what a whole text is mostly about. The height, the fan shape, the hill and the park are details." },
+    { id: "SK-TT2c-S07", type: "match", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C07"],
+      stem: ["Text 1: A rattlesnake has a rattle at the end of its tail. The rattle is made of hard, hollow rings. When the snake shakes its tail, the rings click. They make a buzzing sound. The sound warns other animals to stay away.", "Text 2: Rattlesnakes hunt mice and other small animals. They hunt mostly at night. A rattlesnake has two tiny pits on its face. The pits can feel the heat of a warm animal in the dark. A snake that is afraid may shake its rattle as a warning."],
+      prompt: "Which text tells each piece of information? Match each one to Text 1, Text 2 or Both.",
+      cols: ["Text 1", "Text 2", "Both"],
+      rows: [
+        { text: "the rattle is made of hard, hollow rings", answer: 0 },
+        { text: "rattlesnakes hunt mostly at night", answer: 1 },
+        { text: "a shaken rattle is a warning", answer: 2 },
+        { text: "pits on the face feel heat", answer: 1 },
+        { text: "the rattle makes a buzzing sound", answer: 0 }
+      ],
+      clue: "For each row, search one text and then the other. A row goes under Both only when each text tells it.",
+      hints: [
+        "For each row, search one text and then the other. A row goes under Both only when each text tells it.",
+        "Look in each text for the key words of the row, like rings, night, warning, pits or buzzing.",
+        "Text 1 never says when rattlesnakes hunt, so the night row is not under Text 1 or Both. Sort the other rows yourself."
+      ],
+      how: [
+        "Text 1 tells about the rings and the buzzing sound. Text 2 does not mention them.",
+        "Text 2 tells about hunting at night and the pits that feel heat. Text 1 does not.",
+        "Both texts tell that a shaken rattle is a warning: Text 1 says the sound warns other animals, and Text 2 says an afraid snake may shake its rattle as a warning."
+      ],
+      misconception: "A common mix-up is putting a row under Both because both texts are about the same snake. Each fact needs to be in each text.",
+      why: "The rings and the buzzing sound are only in Text 1. Hunting at night and the heat pits are only in Text 2. The warning is told in both texts." },
+    { id: "SK-TT2c-S08", type: "ms", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [], pick: 2,
+      like: ["SK-TT2c-C08"],
+      stem: ["Text 1: A green iguana is a big lizard. It lives in warm forests. It spends most of its day high in the trees. It eats leaves and flowers. If an iguana senses danger, it can drop from a branch into a river and swim away.", "Text 2: Iguanas need heat, so they lie in the sun to warm up. A male iguana has a flap of skin under its chin. Iguanas spend much of their time in trees. If a hungry animal comes near, an iguana may jump into the water below. Then it swims away."],
+      prompt: "Which TWO facts are told in BOTH texts?",
+      choices: [
+        { text: "An iguana escapes danger by going into the water.", correct: true },
+        { text: "Iguanas spend much of their time in trees.", correct: true },
+        { text: "Iguanas eat leaves and flowers." },
+        { text: "Iguanas lie in the sun to warm up." },
+        { text: "A male iguana has a flap of skin under its chin." }
+      ],
+      clue: "A fact is in both texts only if each one tells it, even in different words.",
+      hints: [
+        "A fact is in both texts only if each one tells it, even in different words.",
+        "Check each fact in Text 1 first. If it is there, look for it in Text 2 too. Choose two.",
+        "Eating leaves and flowers is told in only one of the texts. Check the other facts in both texts."
+      ],
+      how: [
+        "Text 1 says the iguana lives in the trees and drops into a river if it senses danger. Text 2 says iguanas spend much of their time in trees and jump into the water below.",
+        "The answers are \"An iguana escapes danger by going into the water.\" and \"Iguanas spend much of their time in trees.\"",
+        "Eating leaves and flowers is only in Text 1. Lying in the sun and the flap of skin are only in Text 2."
+      ],
+      misconception: "A common mix-up is choosing a fact that is true of iguanas but told in only one text.",
+      why: "The answers are \"An iguana escapes danger by going into the water.\" and \"Iguanas spend much of their time in trees.\" Both texts tell them. The leaves and flowers are only in Text 1, and the sun and the chin flap are only in Text 2." },
+    { id: "SK-TT2c-S09", type: "order", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C09"],
+      stem: ["Text 1: On a dairy farm, cows are milked early each morning. The fresh milk flows through pipes into a big, cold tank. Every other day, a milk truck pulls up to the tank and carries the milk to a plant.", "Text 2: At the plant, the milk is first heated to kill germs. Next, it is cooled down, and good bacteria are stirred in. Then the milk is poured into cups and kept in a warm room for hours. During that time, it thickens into yogurt. Last, the cups are chilled and sent to stores."],
+      prompt: "Use both texts. Put the steps in order to show what happens to the milk that becomes yogurt.",
+      steps: [
+        "A cow is milked on the farm.",
+        "A truck carries the milk to a plant.",
+        "The milk is heated to kill germs.",
+        "Good bacteria are stirred into the cooled milk.",
+        "The milk sits in a warm room and thickens."
+      ],
+      clue: "To follow something through two texts, start with the text where the journey begins, then keep going in the other text.",
+      hints: [
+        "To follow something through two texts, start with the text where the journey begins, then keep going in the other text.",
+        "Start with the farm text. Then use the time words in the plant text, like first, next and then.",
+        "The milk has to leave the farm before the plant can do anything to it, so the truck's trip comes before the heating. Place the other steps the same way."
+      ],
+      how: [
+        "Text 1 comes first: the cow is milked, the milk goes into a tank, and a truck carries it to a plant.",
+        "Text 2 continues at the plant: the milk is first heated, next it is cooled and bacteria are stirred in, and then it sits in a warm room until it thickens.",
+        "So the order is: milked, truck, heated, bacteria, warm room."
+      ],
+      misconception: "A common mix-up is mixing up the order of steps in the second text. Follow first, next and then.",
+      why: "The order is: a cow is milked on the farm, a truck carries the milk to a plant, the milk is heated to kill germs, good bacteria are stirred into the cooled milk, and the milk sits in a warm room and thickens. Text 1 tells the first two steps, and Text 2 tells the rest." },
+    { id: "SK-TT2c-S10", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.2.c"], passages: ["p11", "p12"],
+      like: ["SK-TT2c-C10"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: { prompt: "How does \"Quick Tongue, Many Ants\" add to what \"The Giant Anteater\" tells about how an anteater eats?",
+        choices: [
+          { text: "It shows how fast an anteater's tongue can move.", correct: true },
+          { text: "It explains that the claws tear open an ant nest." },
+          { text: "It tells that an anteater has no teeth at all." },
+          { text: "It explains that the snout is long and thin." }
+        ] },
+      partB: { prompt: "Which sentence from \"Quick Tongue, Many Ants\" best supports the answer to Part A?",
+        choices: [
+          { text: "\"An anteater can flick its tongue in and out about 150 times in one minute.\"", correct: true },
+          { text: "\"The tongue is sticky, so the ants cling to it.\"" },
+          { text: "\"It eats for only a minute or two, and then it walks on.\"" },
+          { text: "\"It also sleeps up to fifteen hours each day.\"" }
+        ] },
+      clue: "When a second text adds to a first, it gives new information that the first text does not have.",
+      hints: [
+        "When a second text adds to a first, it gives new information that the first text does not have.",
+        "For each Part A choice, ask whether the first passage already tells it. For Part B, choose one sentence.",
+        "The claws are told in the first passage, so they are not something the second passage adds. For Part B, the sentence must match your Part A answer."
+      ],
+      how: [
+        "The first passage tells about the long snout, the missing teeth, the claws that tear open the nest and a long tongue.",
+        "The second passage adds how quickly the tongue moves.",
+        "Part A: It shows how fast an anteater's tongue can move. Part B: \"An anteater can flick its tongue in and out about 150 times in one minute.\"",
+        "The claws, the missing teeth and the snout are all told in the first passage, so they are not new."
+      ],
+      misconception: "A common mix-up is choosing information from the first text. The question asks what the second text adds.",
+      why: "Part A: It shows how fast an anteater's tongue can move. Part B: \"An anteater can flick its tongue in and out about 150 times in one minute.\" The first passage never says how fast the tongue moves. The claws, the missing teeth and the snout are told in the first passage." },
+    { id: "SK-TT2c-S11", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C11"],
+      stem: ["Text 1: In deep snow, a person's boots sink down to the knees. Each step is hard work, and the walker gets tired fast. Long ago, people who lived in snowy lands had to travel far to find food.", "Text 2: A snowshoe is a wide frame with strips of leather woven across it. It is tied over a boot. Its wide shape spreads the person's weight over more snow."],
+      prompt: "Use both texts. Why can a person in snowshoes walk on top of snow that a plain boot sinks into?",
+      choices: [
+        { text: "The wide frame spreads out the weight, so the person sinks less.", correct: true },
+        { text: "Snowshoes are much lighter than boots, so they weigh nothing." },
+        { text: "The leather strips stick to the snow and hold the walker up." },
+        { text: "Snowshoes melt the snow under each step so it is easy to walk." }
+      ],
+      clue: "When you use two texts, one may tell a trouble and the other may tell what helps with it.",
+      hints: [
+        "When you use two texts, one may tell a trouble and the other may tell what helps with it.",
+        "Say what trouble Text 1 tells about. Then read all of Text 2 and ask which choice would fix that trouble.",
+        "Nothing in either text says snowshoes melt snow, so that choice does not fit. Test the other choices against both texts."
+      ],
+      how: [
+        "Text 1 tells the trouble: boots sink deep into snow.",
+        "Text 2 tells that a snowshoe is wide and spreads the person's weight over more snow.",
+        "The answer is \"The wide frame spreads out the weight, so the person sinks less.\"",
+        "Neither text says snowshoes are weightless, that the strips stick to snow, or that they melt snow."
+      ],
+      misconception: "A common mix-up is choosing a reason that sounds right but is in neither text. Use what the texts say.",
+      why: "The answer is \"The wide frame spreads out the weight, so the person sinks less.\" Text 1 tells that boots sink, and Text 2 tells that the wide shape spreads weight over more snow. Neither text says snowshoes are weightless, sticky or able to melt snow." },
+    { id: "SK-TT2c-S12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C12"],
+      stem: ["Text 1: An earthquake starts when big pieces of rock under the ground slip and bump. The ground shakes, sometimes for just a few seconds. Most earthquakes are too small for people to feel. A big one can knock things off shelves.", "Text 2: When the ground starts to shake, drop to the floor, get under a strong table and hold on. Stay there until the shaking stops. An earthquake lasts only seconds or a minute, but things may fall while it lasts."],
+      prompt: "Both texts tell two of the same facts. Choose the words that complete the sentence.",
+      text: "Both texts tell that an earthquake {0}, and that an earthquake {1}.",
+      slots: [
+        { options: ["shakes the ground for a short time", "starts when rock slips under the ground", "is a time to get under a strong table"], answer: 0 },
+        { options: ["can make things fall", "is too small to feel most of the time", "is over when the shaking stops"], answer: 0 }
+      ],
+      clue: "A fact is in both texts only if each text tells it, even in different words.",
+      hints: [
+        "A fact is in both texts only if each text tells it, even in different words.",
+        "For each choice, check Text 1 first, then Text 2.",
+        "Only Text 2 tells what a person should do, so the choice about a strong table is not in both. Check the choices for the first blank yourself."
+      ],
+      how: [
+        "Text 1 says the ground shakes for a few seconds. Text 2 says an earthquake lasts only seconds or a minute. That is the first fact.",
+        "Text 1 says a big one can knock things off shelves. Text 2 says things may fall. That is the second fact.",
+        "Slipping rock and small earthquakes are only in Text 1, and the table and waiting are only in Text 2."
+      ],
+      misconception: "A common mix-up is choosing a fact told in only one text. Check each fact in both texts.",
+      why: "The answers are \"shakes the ground for a short time\" and \"can make things fall.\" Both texts tell them. Rock that slips and earthquakes too small to feel are only in Text 1, and the table and waiting are only in Text 2." },
+    { id: "SK-TT2c-S13", type: "mc", points: 1, dok: 2, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C13"],
+      stem: ["Text 1: A tugboat is small. But it can move a ship that is many times bigger. A big ship is too long to turn around in a narrow harbor by itself. So a tugboat pushes on the ship's side until the ship turns.", "Text 2: A tugboat has a very strong engine for its size. The engine turns big propellers. They push hard against the water. A tugboat also has a short, wide body. So it can turn fast in tight spaces."],
+      prompt: "How does Text 2 help explain how a small tugboat can push a ship that is much bigger?",
+      choices: [
+        { text: "It tells that the tugboat has a strong engine and big propellers that push hard.", correct: true },
+        { text: "It tells that the ship has its own engine that does most of the work." },
+        { text: "It tells that a tugboat is really much bigger than the ship it pushes." },
+        { text: "It tells that the harbor is wide enough for ships to turn around alone." }
+      ],
+      clue: "When a second text adds to a first, look for a place where it explains something the first text said.",
+      hints: [
+        "When a second text adds to a first, look for a place where it explains something the first text said.",
+        "Find the fact in Text 1 about a small tugboat and a bigger ship. Then ask what Text 2 tells about the tugboat that could explain it.",
+        "Text 1 says the harbor is narrow, so a choice that calls it wide goes against the text. Test the other choices against what Text 2 says."
+      ],
+      how: [
+        "Text 1 says a small tugboat can move a much bigger ship by pushing against its side.",
+        "Text 2 explains how: the tugboat has a strong engine and big propellers that push hard against the water.",
+        "The answer is \"It tells that the tugboat has a strong engine and big propellers that push hard.\"",
+        "Text 2 never mentions the ship's engine, it says the tugboat is small, and Text 1 says the harbor is narrow."
+      ],
+      misconception: "A common mix-up is choosing a change that is in the second text but has nothing to do with the first text's fact.",
+      why: "The answer is \"It tells that the tugboat has a strong engine and big propellers that push hard.\" Text 1 says a small tugboat can move a big ship, and Text 2 tells what gives it the strength. Text 2 never mentions the ship's engine, the tugboat is small, and the harbor is narrow." },
+    { id: "SK-TT2c-S14", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C14"],
+      stem: ["Text 1: The Great Pyramid in Egypt was built about 4,500 years ago as a tomb for a king named Khufu. It took about twenty years to build. It is made of more than two million blocks of stone.", "Text 2: Workers cut blocks of stone from a quarry. They pulled the blocks on sleds over wet sand, which helped the sleds slide. As the pyramid grew taller, ramps of stone and dirt helped the workers lift the blocks higher."],
+      prompt: "What do the two texts show when you read them together?",
+      choices: [
+        { text: "what the Great Pyramid was for, and how workers built it", correct: true },
+        { text: "how a king named Khufu ruled Egypt for twenty years" },
+        { text: "how many blocks of stone the Great Pyramid is made of" },
+        { text: "how ramps were made from wet sand in a quarry" }
+      ],
+      clue: "The important point of a text is what it is mostly about. When you read two texts together, use what each one is mostly about.",
+      hints: [
+        "The important point of a text is what it is mostly about. When you read two texts together, use what each one is mostly about.",
+        "Say in a few words what each text is mostly about.",
+        "The number of blocks is one detail in Text 1, not what it is mostly about. Check the choices that are left."
+      ],
+      how: [
+        "Text 1 is mostly about what the Great Pyramid is: a tomb for a king, built long ago.",
+        "Text 2 is mostly about how workers moved the stone and lifted it higher.",
+        "The answer is \"what the Great Pyramid was for, and how workers built it.\"",
+        "Neither text tells how Khufu ruled, the number of blocks is only a detail, and the sand was for sleds, not for making ramps."
+      ],
+      misconception: "A common mix-up is choosing a detail from one text. Read together, the answer must fit both texts.",
+      why: "The answer is \"what the Great Pyramid was for, and how workers built it.\" Text 1 is mostly about the pyramid as a tomb, and Text 2 is mostly about how it was built. Neither text tells how Khufu ruled, the number of blocks is a detail, and the wet sand was for sleds." },
+    { id: "SK-TT2c-S15", type: "mc", points: 1, dok: 3, std: ["3.T.T.2.c"], passages: [],
+      like: ["SK-TT2c-C15"],
+      stem: ["Note 1, from Mr. Ellis: Picture day is on Thursday. Please wear your green class shirt. Our class will go to the gym at 10:00. Please be on time, and please do not run in the hall.", "Note 2, from the photographer: Please bring the order form in an envelope. Write your name on the envelope. Pictures are taken in front of a blue screen, so please do not wear anything blue."],
+      prompt: "Tia reads both notes. Which plan uses information from BOTH notes?",
+      choices: [
+        { text: "Wear the green class shirt, and bring the order form in an envelope.", correct: true },
+        { text: "Wear the green class shirt, and be in the gym at 10:00." },
+        { text: "Wear a blue shirt, and bring the order form in an envelope." },
+        { text: "Wear a plain white shirt, and bring the order form in an envelope." }
+      ],
+      clue: "To use two texts together, take one useful fact from each and check that nothing in either text goes against your plan.",
+      hints: [
+        "To use two texts together, take one useful fact from each and check that nothing in either text goes against your plan.",
+        "List what Note 1 asks students to do. Then list what Note 2 adds.",
+        "Note 2 says not to wear blue, so a blue shirt will not work. Test the other plans against both notes."
+      ],
+      how: [
+        "Note 1 says to wear the green class shirt and that the class goes to the gym at 10:00.",
+        "Note 2 adds that the order form goes in an envelope, and that no one should wear blue.",
+        "The answer is \"Wear the green class shirt, and bring the order form in an envelope.\" The shirt comes from Note 1 and the form from Note 2.",
+        "The gym plan uses only Note 1, a blue shirt goes against Note 2, and a white shirt goes against Note 1."
+      ],
+      misconception: "A common mix-up is choosing a plan that is correct but uses only one note.",
+      why: "The answer is \"Wear the green class shirt, and bring the order form in an envelope.\" The shirt comes from Note 1 and the envelope from Note 2. The gym plan uses only Note 1, a blue shirt goes against Note 2, and a white shirt goes against Note 1." }
   ],
   /* Hints and Show me how for Practice Together (P1-P5); core has no refs. */
   addons: {
