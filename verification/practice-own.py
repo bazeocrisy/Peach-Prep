@@ -248,7 +248,7 @@ with sync_playwright() as p:
     q.click("#q-next"); q.wait_for_timeout(60)
     # P5 (order) first-try right. The button shows exactly when a similar item maps to P5 (it hides otherwise; lead decision).
     # To keep the "hidden when none maps" rule under test whatever the content team maps, P5 is unmapped in memory (the page's copy, not the file).
-    q.evaluate("(L=>{(L.similar||[]).forEach(s=>{s.like=(s.like||[]).filter(x=>x!=='SK-TT1c-P5');});})(PP.lessons[%s])" % json.dumps(K))
+    q.evaluate("(k=>{(PP.similarFor[k]||[]).forEach(s=>{s.like=(s.like||[]).filter(x=>x!=='SK-TT1c-P5');});})(%s)" % json.dumps(K))
     has_sim_p5 = False
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     p5 = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:!document.getElementById('q-similar').hidden, st:document.getElementById('q-status').textContent, focus:document.activeElement.id})")
