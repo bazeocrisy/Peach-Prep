@@ -670,7 +670,7 @@ PP.addLesson({
       clue: "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
       hints: [
         "Description uses words about what you can see, hear or feel in a place. Ask what each sentence helps you picture.",
-        "For each sentence, ask: is it about the school itself, about what Mr. Diaz does or says, or about something that happened?",
+        "Picture each sentence. Does it help you see or hear the school, or does it tell about something else?",
         "Whispering is something Mr. Diaz does, so it is not a description of the school. Check each sentence that is left."
       ],
       how: [
@@ -700,14 +700,14 @@ PP.addLesson({
       clue: "The writer does not name Amos's feeling. Look for what his body does, and notice when in the climb it happens.",
       hints: [
         "The writer does not name Amos's feeling. Look for what his body does, and notice when in the climb it happens.",
-        "Read the start of the climb and the end of it. How is what Amos does with the rail different?",
-        "The sentence about the zigzag stairs describes the tower, not Amos. For Part B, the sentence you choose must come from the start of the climb and match your Part A answer."
+        "Read the start of the climb and the end of it. What does Amos's body do at the start, and what does it do at the end?",
+        "Amos's louder voice does not happen at the start of the climb, so it cannot show how he feels there. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [
         "Near the bottom, Amos stops and grabs the rail with both hands. Holding on that tight shows he is scared.",
         "Later, his voice gets louder, and at the top he lets go of the rail. Those show he is getting braver.",
         "Part A: He feels scared. Part B: \"Amos stopped on the fourth step and grabbed the rail with both hands.\"",
-        "The sentence about the stairs describes the tower, not how Amos feels."
+        "The sentence about the stairs describes the tower, and the louder voice comes later, after he has begun to feel braver."
       ],
       misconception: "A common mix-up is choosing a sentence from later in the story, when the question asks how he feels at the start.",
       why: "Part A: He feels scared. Part B: \"Amos stopped on the fourth step and grabbed the rail with both hands.\" Grabbing the rail shows fear at the start. His louder voice and letting go come later, and the zigzag stairs describe the tower." },
@@ -815,27 +815,27 @@ PP.addLesson({
       why: "Part A: Selah turns off her light, so she gets to see the stars. Part B: \"Then, little by little, the sky filled with more stars than she had ever seen.\" Grandma Rose's words make Selah turn the light off, and in the dark she sees the stars. The beam and crickets come before, and the bell comes later." },
     { id: "SK-TT1a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p7"],
       like: ["SK-TT1a-C13"],
-      prompt: "Read this sentence from paragraph 6: \"Far away, a church bell rang nine times.\" How does this description help the story?",
+      prompt: "Read this sentence from paragraph 1: \"Only the crickets chirped, and the trees stood like tall black shadows.\" How does this description help the story?",
       choices: [
-        { text: "It shows it is getting late, so the night walk is ending.", correct: true },
-        { text: "It warns that a big storm is about to come over the hill." },
-        { text: "It shows that Selah is afraid of the loud church bell." },
-        { text: "It shows that the stars are just about to come out." }
+        { text: "It shows how dark the path is before the stars appear.", correct: true },
+        { text: "It shows that Selah is lost and cannot find the cabin." },
+        { text: "It warns that wild animals are coming down the path." },
+        { text: "It shows that Grandma Rose is angry about the dark." }
       ],
-      clue: "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
+      clue: "Description can do more than help you picture a place. It can also set up something that comes next in the story.",
       hints: [
-        "Description can do more than help you picture a place. It can also show that something in the plot is about to change.",
-        "Read what Grandma Rose and Selah do right after the bell rings.",
-        "Nothing in the story tells about a storm, so that choice has no support. What does a bell ringing nine times tell you about the time?"
+        "Description can do more than help you picture a place. It can also set up something that comes next in the story.",
+        "Compare the path at the start of the story with the sky once the flashlight is off.",
+        "Nothing in the story says Selah is lost, so that choice has no support. Test each choice that is left against what happens after the flashlight goes off."
       ],
       how: [
-        "A bell that rings nine times tells the hour: nine o'clock at night.",
-        "Right after it rings, Grandma Rose folds the blanket, and Selah takes one last look and turns her light back on.",
-        "The answer is \"It shows it is getting late, so the night walk is ending.\"",
-        "There is no storm, Selah is calm, and the stars came out earlier, in paragraph 4."
+        "The first paragraph shows a path that is dark and still, with only crickets making a sound.",
+        "Later, Selah turns off her flashlight, and the sky fills with more stars than she has ever seen.",
+        "The answer is \"It shows how dark the path is before the stars appear.\"",
+        "Selah is not lost, no animals come, and Grandma Rose speaks softly and is not angry."
       ],
-      misconception: "A common mix-up is thinking description only tells what a place is like. Here it signals that the story is about to end.",
-      why: "The answer is \"It shows it is getting late, so the night walk is ending.\" The bell tells the time, and right after it Grandma Rose folds the blanket. There is no storm, Selah is not afraid, and the stars came out earlier." },
+      misconception: "A common mix-up is thinking a dark scene must mean danger. Here the darkness sets up the bright stars.",
+      why: "The answer is \"It shows how dark the path is before the stars appear.\" The dark, quiet path comes first, and the stars shine against it after Selah turns off her flashlight. Selah is not lost, no animals come, and Grandma Rose is calm." },
     { id: "SK-TT1a-S14", type: "ms", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: [], pick: 2,
       like: ["SK-TT1a-C14"],
       stem: ["Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a leaf chart for science, and he had found only brown leaves. Then he looked up. A small tree by the fence was bright red. Corbin added three red leaves to the chart. \"Now our chart has every color,\" he said.", "Story 2: Ding! The bell over the door rang as Wren carried her torn backpack into Mr. Bello's sewing shop. Mr. Bello showed her how to sew a strong stitch along the rip. Wren sewed the last few stitches herself. \"My backpack is as good as new,\" she said."],
@@ -863,29 +863,29 @@ PP.addLesson({
       why: "The answers are \"Each story begins with a word that copies a sound.\" and \"Each story ends with the main character's own words.\" Both open with a sound word, and both end with the child speaking. Only Wren gets help fixing something, neither begins with a question, and only Corbin is at school." },
     { id: "SK-TT1a-S15", type: "ms", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [], pick: 2,
       like: ["SK-TT1a-C15"],
-      stem: ["A writer is working on a story about Esme. Esme is about to read her poem out loud at the library. She is nervous. The writer wants to show how Esme feels, not just tell it."],
-      prompt: "Which TWO sentences would best show that Esme is nervous?",
+      stem: ["A writer is working on a story about Jonah at a train station on a busy morning. The writer wants the reader to see how crowded the station is, not just be told."],
+      prompt: "Which TWO sentences would best show that the station is crowded?",
       choices: [
-        { text: "Esme folded and unfolded her poem until the paper went soft.", correct: true },
-        { text: "Esme's voice wobbled when she read the very first line.", correct: true },
-        { text: "Esme felt very nervous about reading her poem out loud." },
-        { text: "The library's reading room had rows of blue folding chairs." },
-        { text: "Esme had written her poem about her grandma's garden." }
+        { text: "People pressed together on the platform, and Jonah had to turn sideways to squeeze past.", correct: true },
+        { text: "A line of travelers reached from the ticket window all the way to the front doors.", correct: true },
+        { text: "The station was very crowded that morning." },
+        { text: "The big clock on the wall showed ten past eight." },
+        { text: "Jonah's grandmother was waiting by the ticket window." }
       ],
-      clue: "Writers show a feeling through what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
+      clue: "Writers show what a place is like with details you can picture, instead of naming it. Look for sentences where you can see the crowd without being told.",
       hints: [
-        "Writers show a feeling through what a character does, instead of naming the feeling. Look for sentences where you can see the feeling without being told.",
-        "Picture each sentence. Can you see or hear what Esme does, or are you only told about her? Choose two.",
-        "The blue chairs help you picture the room, but they do not show anything about Esme. Check each other sentence the same way."
+        "Writers show what a place is like with details you can picture, instead of naming it. Look for sentences where you can see the crowd without being told.",
+        "Picture each sentence. Can you see what is happening in the station, or are you only told how it is? Choose two.",
+        "The clock tells the time, but it shows nothing about the crowd. Check each other sentence the same way."
       ],
       how: [
-        "Showing means the reader sees or hears what a character does and can tell the feeling without being told.",
-        "Folding and unfolding the paper again and again, and a wobbly voice, are things Esme does that show she is nervous.",
-        "The answers are \"Esme folded and unfolded her poem until the paper went soft.\" and \"Esme's voice wobbled when she read the very first line.\"",
-        "\"Esme felt very nervous\" names the feeling instead of showing it. The chairs describe the room, and what the poem is about does not show a feeling."
+        "Showing means the reader sees what is happening and can tell what the place is like without being told.",
+        "People pressed together, Jonah squeezing past, and a long line of travelers are details that show a crowd.",
+        "The answers are \"People pressed together on the platform, and Jonah had to turn sideways to squeeze past.\" and \"A line of travelers reached from the ticket window all the way to the front doors.\"",
+        "\"The station was very crowded\" names the idea instead of showing it. The clock and his grandmother's spot do not show a crowd."
       ],
-      misconception: "A common mix-up is choosing the sentence that names the feeling. Naming a feeling tells it; an action shows it.",
-      why: "The answers are \"Esme folded and unfolded her poem until the paper went soft.\" and \"Esme's voice wobbled when she read the very first line.\" Both show nervousness through what she does. \"Esme felt very nervous\" only tells the feeling, the chairs describe the room, and the poem's topic shows no feeling." }
+      misconception: "A common mix-up is choosing the sentence that names the idea. Naming it tells; a picture of what happens shows it.",
+      why: "The answers are \"People pressed together on the platform, and Jonah had to turn sideways to squeeze past.\" and \"A line of travelers reached from the ticket window all the way to the front doors.\" Both let the reader see the crowd. \"The station was very crowded\" only tells it, and the clock and the grandmother's spot show nothing about a crowd." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {

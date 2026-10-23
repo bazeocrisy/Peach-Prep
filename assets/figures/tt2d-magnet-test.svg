@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="t">
+  <title id="t">Four small test pictures. A magnet pulls a paper clip, and the label says pulled. A magnet pulls a steel nail, and the label says pulled. A magnet does not pull a plastic cup, and the label says not pulled. A magnet does not pull a wood block, and the label says not pulled.</title>
+  <rect width="320" height="300" fill="#fff"/>
+  <g stroke="#333" stroke-width="3" fill="none">
+    <rect x="6" y="6" width="148" height="132" rx="8"/><rect x="166" y="6" width="148" height="132" rx="8"/>
+    <rect x="6" y="156" width="148" height="132" rx="8"/><rect x="166" y="156" width="148" height="132" rx="8"/>
+  </g>
+  <defs>
+    <g id="m"><path d="M0 0 L0 22 A14 14 0 0 0 28 22 L28 0 L18 0 L18 22 A4 4 0 0 1 10 22 L10 0 Z" fill="#c9c9c9" stroke="#333" stroke-width="3" stroke-linejoin="round"/></g>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#111"/></marker>
+  </defs>
+  <!-- paper clip -->
+  <use href="#m" x="22" y="30"/>
+  <path d="M104 40 h22 a8 8 0 0 1 0 16 h-16 a4 4 0 0 1 0 -8 h12" fill="none" stroke="#333" stroke-width="3" transform="translate(-12 4)"/>
+  <path d="M92 50 L60 50" stroke="#111" stroke-width="3" marker-end="url(#a)"/>
+  <!-- steel nail -->
+  <use href="#m" x="182" y="30"/>
+  <rect x="254" y="46" width="44" height="7" fill="#9a9a9a" stroke="#333" stroke-width="2"/><rect x="298" y="42" width="4" height="15" fill="#9a9a9a" stroke="#333" stroke-width="2" transform="translate(-6 0)"/>
+  <path d="M250 50 L218 50" stroke="#111" stroke-width="3" marker-end="url(#a)"/>
+  <!-- plastic cup -->
+  <use href="#m" x="22" y="180"/>
+  <path d="M100 186 L136 186 L130 224 L106 224 Z" fill="#eee" stroke="#333" stroke-width="3"/>
+  <path d="M94 204 L62 204" stroke="#777" stroke-width="3" stroke-dasharray="5 5"/>
+  <path d="M74 194 L82 214 M82 194 L74 214" stroke="#111" stroke-width="3"/>
+  <!-- wood block -->
+  <use href="#m" x="182" y="180"/>
+  <rect x="254" y="190" width="40" height="30" fill="#e9dcc0" stroke="#333" stroke-width="3"/><path d="M258 198 h32 M258 205 h32 M258 212 h32" stroke="#777" stroke-width="1.5"/>
+  <path d="M248 204 L222 204" stroke="#777" stroke-width="3" stroke-dasharray="5 5"/>
+  <path d="M232 194 L240 214 M240 194 L232 214" stroke="#111" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111" text-anchor="middle">
+    <text x="80" y="98">paper clip</text><text x="80" y="124">pulled</text>
+    <text x="240" y="98">steel nail</text><text x="240" y="124">pulled</text>
+    <text x="80" y="248">plastic cup</text><text x="80" y="274">not pulled</text>
+    <text x="240" y="248">wood block</text><text x="240" y="274">not pulled</text>
+  </g>
+</svg>
