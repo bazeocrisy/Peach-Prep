@@ -29,6 +29,9 @@
 | B3 | 3.T.RA.2.b | ACCEPTED | B3-b3c-rereview.md (incl. blind re-solve post-polish) |
 | B4 | 3.T.C.1.c | ACCEPTED | B4-review-C1c.md (fifth review) |
 | B4 | 3.T.RA.1.c | ACCEPTED | B4-review-RA1c.md (fifth review) |
+| B4 | 3.T.T.1.e | ACCEPTED | B4-review-T1e-T2d.md (third review) |
+| B4 | 3.T.T.3.c | ACCEPTED | B4-review-T3c-T4b.md (third review) |
+| B4 | 3.T.T.4.b | ACCEPTED | B4-review-T3c-T4b.md (third review) |
 | B4–B9 | see 04-content-plan.md | NOT STARTED | — |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
@@ -36,4 +39,4 @@
 ## Similar-question banks (added after the core items were accepted)
 - SIM-2 (S04-S15 on the nine B2 lessons): independently re-solved blind. Accepted: 3.T.T.2.a, 3.T.T.2.b, 3.T.T.2.c, TS-SEQ, TS-DESC, TS-CE, 3.T.SS.1.a, 3.T.C.1.b. TS-SEQ/TS-DESC/TS-CE/TS-CC similar banks: last edits (TS-CE S07 how line and hint 3; TS-CC S11 rebuilt again after §12) are NOT yet blind re-solved; include in the final sweep.
 - SIM-1 (S04-S15 on the eight B0/B1 lessons): final blind re-solve (SIM-1-rereview.md) accepted 3.T.T.1.a, 1.b, 1.c, 1.d, TS-PS, 3.T.C.2.a, 3.T.SS.2.a; 3.T.T.4.a S14 ambiguity fixed. Final sweep 2 (SIM-1-rereview.md) re-solved the nine items changed after the sweep: all ACCEPT, no MUSTs, 11 SHOULDs. That solve was informed (reviewer had read the author log), so a cold solve is still outstanding for 3.T.T.1.d S08.
-- B4 lessons: 3.T.C.1.c and 3.T.RA.1.c ACCEPTED (fifth review). 3.T.T.1.e and 2.d passed a third review with ACCEPT and SHOULDs; two hint-ladder fixes pending a light blind check before listing as accepted. 3.T.T.3.c/4.b and 3.T.SS.1.b/1.c/1.d/2.b still in fix/review loops.
+- B4 lessons: 3.T.C.1.c, 3.T.RA.1.c, 3.T.T.1.e, 3.T.T.3.c, 3.T.T.4.b ACCEPTED. 3.T.T.2.d passed with one pending fix (C04 "quick energy" distractor too defensible; swap, then light re-check). 3.T.SS.1.b/1.c/1.d/2.b second-round reviews not yet run.

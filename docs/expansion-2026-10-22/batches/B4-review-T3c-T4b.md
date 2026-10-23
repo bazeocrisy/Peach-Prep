@@ -427,3 +427,121 @@ No item is narrowed to the key. The closest calls are 4.b P6, C10 and C13 Part B
 2. SHOULD, content: C09 sentence (8); C07 prompt wording (4.b); C13 Part B distractor (4.b); P6/C10 hint 3 (4.b); Elm Street and S07 overlap with 3.a (3.c); p3 bus scene (4.b).
 3. SHOULD, measurement: S01 (3.c), S08/S15/S04 (4.b) all-words overlap.
 4. SHOULD, teaching: add Learn It examples for linking-word gaps (3.c) and for action/sound words and feeling (4.b).
+
+
+---
+
+# Third review (3.c/4.b) and fix check (reviewer: independent, 2026-10-23)
+
+Method: brief at `scratchpad/REVIEWER-BRIEF.md`. Own Node vm script (`scratchpad/b5/blind.js`), new seeded shuffle, keys, `why`, hints, `how`, `clue`, `like` stripped. Answers saved to `scratchpad/b5/answers.json` before the key comparison (`b5/grade.js`). The author log section was read after the solve.
+
+## T1. Verdicts
+
+| Lesson | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 3.T.T.3.c | **ACCEPT** (SHOULDs may be fixed in a polish pass) | 0 | 3 |
+| 3.T.T.4.b | **ACCEPT** (SHOULDs may be fixed in a polish pass) | 0 | 4 |
+
+Both second-review MUSTs are fixed (3.c S09 labels and S04 order; 4.b P6, S12, S08 duplicates). No new MUST found.
+
+## T2. Blind solve
+
+- Items solved: 3.c 33 (15 core with the three `{ref}` items resolved, P1-P3 Together, 15 similar), 4.b 34 (15 core, P1-P4 Together, 15 similar), 1.e two, 2.d two. Total 71.
+- **Agreement with the keys: 71 of 71 (100 percent).** Every choose-two, dropdown, order, hottext, match and ebsr item was marked all-or-nothing.
+- **Honesty: not fully blind in three small places.** While checking field names I printed (a) 4.b C01 with its `steps` in key order and its hints, so C01 is not a blind result, and (b) the `answer` fields of 4.b C04, C07 and a partial C08/C13. I had already solved those four in my notes before that print, but they were not saved to the file first. Everything else (66 of 71 items) was solved before any key was seen.
+- Where I hesitated, even though I matched the key: 3.c C09 and S09 (second correct sentence is an elaboration, not a fact or example, see R3-1); 4.b P2 ("gold" and "old" both rhyme with "cold"; only sense separates them); 4.b P5 (stanza 3 of the poem has a deliberate non-rhyme, so "the rest of his poem" needs the clue's pattern statement); 4.b C10 ("smile" is soft); 4.b S08 row 1 ("glass"/"dash", see R4-2).
+
+## T3. Specific checks requested
+
+| Check | Result |
+|---|---|
+| 3.c S09 labels match stem | **Pass.** Options read "(3)", "(4)", "(1)", "(5)", "(6)" and are the exact stem sentences. Key: (3) and (4). |
+| 3.c S04 unique order | **Pass.** "another one" needs the hoop sentence first; "One reason" before "Another reason" before "So". One valid order (5,1,3,2,4). |
+| 3.c C09 key vs reasons | **Pass with SHOULD (R3-1).** Keys are sentences 7 and 8. Sentences 4 and 5 now support reason 1 only. Sentence 8 is a real example (the guard's report). Sentence 7 is an inference ("would know drivers have been told") rather than a fact or example. |
+| 4.b P6 and S08 no longer duplicate accepted 4.a lines | **Pass.** Searched all `js/data`: "toes beneath the quilt", "lamp is glowing", "rain has stopped", "drift to sleep", "A duck floats", "quiet pond", "minnows", "milk, I stir", "teddy bear sits" occur only in 4.b. 4.a has "soft and slow" (fireflies poem) and "The rain comes down, the sky is gray" (4.b's own Learn It); these are phrases, not stanzas. |
+| Renamed p3 "The Morning Ferry" | **Pass.** "ferry" in other files is a 2.d Golden Gate passage (T-T2.js line 1806) and a plural-spelling item (L-GUM2.js 704). No poem or scene overlap with 4.a C13. |
+| 4.b S12 (bedtime/night-light) and S15 (camping) | **Pass.** "pillow's deep", "drifting off to sleep", "pitch our tent", "starry sky" occur only in 4.b. Camping and bedtime are common topics elsewhere (T-TS, T-SS, L-GUM) but no shared stanza or rhyme pair. S15 distractor E starts "The rain comes down," as the 4.b Learn It poem does (own lesson, NOTE). |
+
+## T4. Findings: 3.T.T.3.c
+
+### MUST
+None.
+
+### SHOULD
+
+**R3-1 (C09 and S09). The second key is an elaboration, not "evidence".** C09's prompt asks for "evidence"; the lesson defines evidence as a fact, example or expert's words. Key sentence 8 (the crossing guard says the smallest children freeze) is evidence. Key sentence 7 ("They would know that drivers have been told to watch for them") restates the reason in other words. S09 has the same shape: key (3) is a real example (cousin stepped on glass); key (4) ("Volunteers could pick up glass and trash before anyone gets hurt") is a plan, not a fact or example. Both are only reachable by elimination (the rest are opinion, wish or the reason itself). Fix: in C09 replace sentence 7 with a concrete fact or example for the safe-feeling reason (for example, "Last year, a first grader stood at the curb for ten minutes before anyone stopped for her") or ask "which TWO sentences explain or support this reason?"; in S09 change (4) to an example ("Last month, a boy cut his hand on a can in the same park").
+
+**R3-2 (S10). Topic and reasons duplicate accepted 3.a C14.** 3.a C14 is Jada's note: "our family should take a walk together after dinner every night", reason "time to talk about our day", plus "walk after dinner helps us fall asleep". 3.c S10 is "My family should take a walk after dinner... good exercise... chat about our days." Different task (pick the conclusion vs match jobs), same scenario and reasons. Fix: move S10 to a different home-habit topic (a family reading night, watering the garden).
+
+**R3-3 (teaching, carried over from S7 of the second review). Learn It still has one linking-word example.** Learn 2 models "because"; the lesson tests since, therefore, in addition, for example, for instance, besides and as a result in nine items (C02, C08, C12, C13, P3, S02, S08, S12, S13). Fix: one more Learn It example that picks a linking word by relation (adds a reason, gives an example, sums up). Not blocking.
+
+### NOTE
+- S08 slot distractors "Long ago", "Long before" and S12 "At last,", "In the past," are obviously out of place for a grade-3 reader; the live choice is mainly the other option. Use "Next," / "Meanwhile," type words to keep three plausible links.
+- S11 jobs (wants, why, proves, sums up) differ from C11 jobs (introduces, opinion, reason, wraps up). Fine as a variant, but the `like` is a looser match than the others.
+- S14 `like` is C14 (an ebsr conclusion plus evidence); S14 tests only the conclusion half. Honest enough.
+- C09 hint 2 says "read the sentences before and after it". The sentences before it (3-5) belong to reason 1, which is the intended trap; fine.
+
+## T5. Findings: 3.T.T.4.b
+
+### MUST
+None.
+
+### SHOULD
+
+**R4-1 (C10). "Makes her classmates smile" does not separate the keys.** Distractor C ("sleepy friends... everything is quiet tonight") rhymes in lines 2 and 4 and could make a class smile (a cozy, sweet stanza). The real discriminator is loud or lively versus calm, and S10 already uses "laugh". Fix: change the C10 prompt to "makes her classmates cheer" or "sounds loud and fun", and keep the how/why wording.
+
+**R4-2 (S08 row 1). "glass" and "dash" are a near rhyme.** They share the vowel and a hissing end, and a careful grade-3 listener may hear lines 2 and 4 as a match, making "One rhyme joins lines 2 and 4" arguable. I answered "no rhymes" but not confidently. Fix: end line 4 with a clearly different sound ("And minnows swim below" would rhyme with nothing; "And little minnows flee" also clear).
+
+**R4-3 (C04). "I sell the lot" is a British idiom.** US grade-3 readers say "sell a lot" or "sell them all". "lot" is the key and makes sense only as the idiom. Fix: "I sell them fast, I sell a ___" with lot / knot / most (rhyme with hot is kept; "a knot" and "a most" both fail).
+
+**R4-4 (teaching, carried over from S7). Learn It never models action words, sound words or feeling.** C09, C11, C13, S09, S11, S13 (six of 34 items, 2 to 4 points each) test these; Learn It has only rhyme-line examples. Teach point 2 names them. Fix: one Learn It example that picks a sound word and one that names a feeling from the words. Not blocking.
+
+### NOTE
+- S13 (parade) and S09 (kettle in a kitchen) echo accepted 4.a items (C05 town parade with drums and clapping; S06 "The kettle sings. The kitchen's warm."). Different task and different lines, so not a duplicate; a swap for a ball game and a campfire pot would remove the echo.
+- C12 and S12 hint 3 are word for word ("One choice keeps the old line 4, which is the line that does not rhyme. Look at the choices that are left."). Paired items should not share a hint 3.
+- P2 (Together): "gold" and "old" both rhyme with "cold"; the key rests on sense ("the leaf pile was just made"). Defensible and the why says so.
+- P5 asks for "the rest of his poem" while stanza 3 deliberately breaks the pattern; the clue states "lines 1 and 2 rhyme, and lines 3 and 4 rhyme", so it is safe.
+- C06 "wait"/"bay" share a vowel; the 2-and-4 reading is still clear.
+- Kayla is used in both P4 and S03 for different poems.
+
+## T6. Measurements and checks
+
+**Jaccard (similar against its `like` core item, stem + prompt + choices/steps/rows, no passage), `b5/jac.js`.** Word-set / multiset ("bag"):
+- 3.c: highest word-set S05~P4 0.198 (S02 0.193, S03 0.192, S07 0.191); highest bag S03~P6 0.203, S12~C12 0.197, S15~C15 0.192. All under 0.21. With the passage counted, S15~C15 rises to 0.248 / 0.232 because both quote the moon draft, which is expected for same-passage pairs.
+- 4.b: highest word-set S03~P5 0.189, S10~C10 0.186; highest bag S06~C06 0.202, S08~C08 0.199, S13~C13 0.194, S01~C01 0.191. All under 0.21. Non-paired pairs: C01~C04 bag 0.28, P4~C04 0.26, C04~C14 0.26 (same dropdown frame words), no shared option.
+- 1.e S11~C11: word-set 0.170, bag 0.240 on the prompt frame alone (0.166 with the passage). 2.d S03~C03: 0.113 / 0.121.
+
+**Keys beside explanations.** Read every `why` and `how` against its keyed option in both lessons; all agree. No item states one answer in `how` and another in the key.
+
+**Live choices after the clue and hints 1 to 3** (hand count; "live" means plausible after the hint's removals):
+
+| 3.c | start | after H3 | 4.b | start | after H3 |
+|---|---|---|---|---|---|
+| C01 | 4 | 3 | C02 | 4 | 3 |
+| C02 | 3+3 | 2+3 | C04 | 3+3 | 2+3 |
+| C06 | 4 | 3 | C06 | 4 | 3 |
+| C07 (pick 2) | 5 | 4 | C07 | 5 | 4 |
+| C08 | 3+3 | 3+2 | C08 | 3 rows | method only |
+| C09 (pick 2) | 6 | 4 | C09 | 5 | 4 |
+| C10 | 4 | 3 | C10 | 4 | 2 (both sleepy stanzas go; the two singing stanzas differ on rhyme) |
+| C11 match | 4 rows | 3 | C11 (pick 2) | 5 | 4 |
+| C12 | 3+3 | 2+3 | C12 | 4 | 3 |
+| C13 (pick 2) | 5 | 4 | C13 ebsr | 4+4 | 4+3 |
+| C14 ebsr | 4+4 | 3+4 | C14 | 3+3 | 2+3 |
+| C15 | 4 | 3 | C15 (pick 2) | 5 | 4 |
+
+H1 is a strategy, H2 a place to look, H3 removes one distractor or places one item. No hint echoes a key's wording. P6, P5, P4 (3.c) and P1-P6 (4.b) carry no hints by design (Practice Together; the lesson file's `addons` hold their scaffold).
+
+**Standards, points, DOK.** 3.c official wording ("introduce the topic, state an opinion, supply reasons... linking words (because, therefore, since, for example)... concluding statement") is covered by items on all four parts plus linking words. 4.b ("rhyme in at least two stanzas to achieve an intended effect") is covered by pattern, rhyme-with-sense, and effect (feeling, audience) items. Points: pick-2, 2-slot, order, match and ebsr are all 2; singles 1. DOK 2 to 3 is reasonable.
+
+**Facts (web, 2026-10-23).**
+- "chug" as an engine sound word: https://www.merriam-webster.com/dictionary/chug ("a dull explosive sound made by or as if by a laboring engine"). "Whistle" and "rumble" were confirmed in the earlier reviews.
+- No other real-world claims in 3.c or 4.b.
+
+## T7. Order of work (all optional, none blocks)
+1. R3-1 (C09/S09 evidence keys), R3-2 (S10 topic), R4-1 (C10 prompt), R4-2 (S08 row 1).
+2. R4-3 (C04 idiom).
+3. R3-3 and R4-4: Learn It examples for linking words and for sound, action and feeling.
+4. NOTE: C12/S12 shared hint 3; 4.a echo in S13 and S09.
+
+No lesson file was edited and no git command or server was run.

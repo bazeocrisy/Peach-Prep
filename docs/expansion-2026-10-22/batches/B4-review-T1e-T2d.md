@@ -571,3 +571,51 @@ Searched (case-insensitive, all files other than T-T1.js and T-T2.js): protein; 
 5. NOTE-level: N6 (vary the removal distractor type) if time allows.
 
 No lesson file was edited by me. No server was started.
+
+
+---
+
+# Third review (3.c/4.b) and fix check (1.e/2.d) (reviewer: independent, 2026-10-23)
+
+Scope: the four items changed in the third-review SHOULD pass: 1.e C11 and S11, 2.d C04 and S03. Same blind run as the 3.c/4.b review (own Node vm script `scratchpad/b5/blind.js`, new seed, keys, `why`, hints, `how`, `clue`, `like` stripped; answers saved to `b5/answers.json` before comparison). Read-only; no git; no server started.
+
+## F1. Verdicts
+
+| Lesson | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 3.T.T.1.e (C11, S11) | **ACCEPT** | 0 | 0 |
+| 3.T.T.2.d (C04, S03) | **ACCEPT**, with one SHOULD on C04 that I would fix | 0 | 1 |
+
+## F2. Blind solve
+
+All four agree with the key (4 of 4): 1.e C11 and S11, 2.d C04 and S03. Fully blind for these four; nothing from them was displayed before the answers file was saved. I hesitated only on 2.d C04 (see F4).
+
+## F3. 1.e C11 and S11: hint 3 now leaves a live choice
+
+- **C11.** H3: "An opinion about scavenger hunts could begin an essay, but this is a story. Look at the choices that are left." It removes choice 2 only ("I like scavenger hunts better..."). Three remain: the whistle sentence (key), the game-definition sentence, and the Maple Park sentence. The two distractors that stay are both defensible-looking beginnings (the definition teaches, the park sentence sets the scene), so there is a live choice. The key is still distinguished by the clue ("introduces the character and the place") and by what H2 asks (what kind of story). The key does not echo H3.
+- **S11.** Same shape. H3 removes the "best sport in the whole world" opinion; the how-it-is-built sentence, the "proud at the top" ending sentence and the key stay. Live choice kept.
+- **Key beside explanation.** `why` and `how` for both name the keyed sentence and agree with the key flag.
+- **Distinctness.** S11 against C11: word-set 0.170, multiset 0.240 on stem, prompt and choices (the frame "Which choice would make the best new first sentence"); with the C11 passage counted 0.133 / 0.166. Different scenarios, different options. Above 0.21 only on the multiset without the passage, which is the shared prompt frame. NOTE, not a finding.
+- **Official wording** ("Apply narrative techniques (e.g., character, setting, problem, resolution, dialogue)... a sense of closure"): a first sentence that starts the action with a character in a place fits "character" and "setting". DOK 3 on a single mc is generous (NOTE); keep, the "and why" choice text does ask for a reason.
+- **Facts.** None beyond plain story craft. A topic search found "climbing wall" in 3.a (a rec-center opinion item) and a 3.T.SS item; different contexts, no overlap.
+
+## F4. 2.d C04 with the new coach sentence
+
+Stem now: "Coaches tell players to eat foods with protein after practice. Peanuts have a lot of protein, and so do eggs, beans and fish." Blank: "Protein is a part of food that helps muscles and bones grow." Distractors: "gives the body quick energy", "makes it taste sweet".
+
+- **Key defensible?** Yes. Protein's defining job is to build and repair body tissue. KidsHealth: "Protein helps with the growth, upkeep, and renewal of the body's tissues... Your muscles, your organs, and your immune system are made up mostly of protein" (https://kidshealth.org/HumanaOhio/en/kids/protein-def.html). NMSU Extension: protein "builds, repairs, and maintains all body tissues, including bones, muscles, cartilage, skin, and blood" (https://pubs.nmsu.edu/_e/E143/). "Bones" is therefore supported, although the KidsHealth page does not name bones.
+- **Is "quick energy" now overly tempting?** Yes, more than before. The same NMSU page calls protein "a good source of energy" and groups it with carbohydrates and fat as the three nutrients that give calories. The new sentence says players eat it "after practice", which a grade-3 reader can easily read as refuelling. The distractor is only wrong because of the word "quick"; `how` and `why` say "quick energy comes mostly from sugar", a claim a third grader cannot check from the text. H2 ("why would a coach want players to eat these foods after practice") points to recovery, but a child answering "to get energy back" is not wrong in everyday terms.
+- **Fair at grade 3?** The item rests on outside knowledge. The text gives a category cue (foods that coaches recommend) but no cue for muscles. That is acceptable for a vocabulary-in-context item only if the wrong choices are clearly wrong; one of the two is only technically wrong.
+- **H3 live choice.** H3 removes "sweet" (eggs, beans and fish are not sweet). Two stay: muscles or quick energy. That is a live choice, but it is the contested one.
+- **SHOULD (R-2d-1).** Replace the distractor "a part of food that gives the body quick energy" with one that is plainly not what protein is (for example "a part of food that keeps it from spoiling" or "a part of food that makes it crunchy"), or keep "energy" and make the context rule it out ("Coaches tell players to eat foods with protein so their muscles can recover after practice", which then also removes the need for the recall of nutrition facts). Update `how`, `why` and H3 to match. If the author keeps the item as is, the key is still right; the risk is that an eight-year-old reads "energy after practice" in everyday terms.
+
+## F5. 2.d S03 (bean seed) against C03
+
+- **Order is unique and correct.** Stem-less four-step order: seed pushed into damp soil, water soaks in and the seed swells, a tiny root grows down, a green shoot pushes up. Germination takes up water first, the root (radicle) emerges first, then the shoot: https://blog-nwcrops.extension.umn.edu/2023/05/its-magic-neat-process-of-soybean.html (water imbibition, "first plant part to break through the seed coat is the radicle", then the shoot). "Swells" is not in that source but is standard for imbibition. Root before shoot is the unique sensible order; no other pair can swap.
+- **H3 live choice.** "A seed cannot soak up water from the soil until it is in the soil" places the first step only; three steps remain to order (root, swell, shoot), so a real task is left. It does mirror C03's H3 (jar before paste), which is acceptable because it is a placement hint, but it gives away the same kind of cue.
+- **Similarity to C03.** Word-set 0.113, multiset 0.121. Both are four-step "what happens first" orders, which the `like` field says honestly. Content is a different process (a plant, not a food product), so the jelly-sandwich concern is closed. The bean-seed topic also appears in 3.a's Learn It (a bean plant watered in Room 4); different skill, no sentence overlap.
+- **Points and DOK.** 2 points, DOK 2, fits the order type.
+
+## F6. Result
+
+No MUST in any of the four items. Fix R-2d-1 if time allows. Everything else in the third-review SHOULD pass for 1.e and 2.d holds.
