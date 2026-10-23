@@ -34,7 +34,7 @@ In-order assignment: TT1a-P4 -> TT1a-S01; TT1a-P5 -> TT1a-S04; TT1a-C03 -> TT1a-
 | SK-TT1a-S12 | TT1a-C12 | ebsr, 2, 3 | p6 "The Fire Tower" | 4 + 4 / 3 + 4 |
 | SK-TT1a-S13 | TT1a-C13 | mc, 1, 3 | p7 "The Night Walk" | 4 / 3 |
 | SK-TT1a-S14 | TT1a-C14 | ms, 2, 3 | stem: Story 1: Crunch! Crunch! Corbin's sneakers crushed dry leaves on the school path. His class was making a le... | 5 / 4 |
-| SK-TT1a-S15 | TT1a-C15 | ms, 2, 2 | stem: A writer is working on a story about Jonah at a train station on a busy morning. The writer wants the reade... | 5 / 4 |
+| SK-TT1a-S15 | TT1a-C15 | ms, 2, 2 | stem: Jonah wrote a story about a train station on a busy morning. His teacher says, "I cannot picture the crowd ... | 5 / 4 |
 
 ### 3.T.T.1.b (problem and solution) (code 3.T.T.1.b)
 
@@ -102,7 +102,7 @@ In-order assignment: TSPS-P5 -> TSPS-S01; TSPS-C02 -> TSPS-S04; TSPS-C03 -> TSPS
 | SK-TSPS-S04 | TSPS-C02 | mc, 1, 2 | stem: Every morning, the front steps at Isaac's house were covered in ice. First, Isaac shoveled them, but a thin... | 4 / 3 |
 | SK-TSPS-S05 | TSPS-C03 | dropdown, 2, 2 | stem: Whenever the wind blew, the door of Room 5 slammed shut with a bang. Everyone jumped. Maya set a heavy book... | 3 + 3 / 2 + 3 |
 | SK-TSPS-S06 | TSPS-C05 | mc, 1, 2 | stem: Nell wiped the muddy paw prints from the floor, but her dog ran in and left more. | 4 / 3 |
-| SK-TSPS-S07 | TSPS-C06 | dropdown, 2, 2 | stem: Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ... | 3 + 3 / 2 + 3 |
+| SK-TSPS-S07 | TSPS-C06 | dropdown, 2, 2 | stem: Every time it rained, drops of water fell on the art room floor. Zane set out more buckets. Thea climbed a ... | 3 + 3 / 3 + 3 |
 | SK-TSPS-S08 | TSPS-C07 | match, 2, 2 | stem: Every morning, the sticky notes on Tyree's bulletin board fell off. First, he pressed each note down harder... | 4 / 4 rows |
 | SK-TSPS-S09 | TSPS-C08 | mc, 1, 2 | stem: The freezer in the school kitchen broke. The school picnic was in two days. All of the ice-cream cups for t... | 4 / 3 |
 | SK-TSPS-S10 | TSPS-C09 | mc, 1, 3 | stem: Wren's cardboard fort fell down every time the wind blew from the left. First, she taped the corners tighte... | 4 / 3 |
@@ -166,7 +166,7 @@ In-order assignment: TT4a-C01 -> TT4a-S01; TT4a-C02 -> TT4a-S02; TT4a-C03 -> TT4
 | SK-TT4a-S11 | TT4a-C10 | mc, 1, 3 | stem: Poem A: The Cat Purr, purr, purr by the fire, Purr, purr, purr in the sun. The cat stretches out on the rug... | 4 / 3 |
 | SK-TT4a-S12 | TT4a-C11 | ms, 2, 2 | stem: Stanza 1: Out by the fence, the dirt is deep. The puppy sniffs and starts to scratch. His paws fly fast, hi... | 5 / 4 |
 | SK-TT4a-S13 | TT4a-C13 | mc, 1, 3 | stem: Here is a stanza from a poem. The sun comes up behind the hill. The roosters crow and call. I jump out of m... | 4 / 4 |
-| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In July, the pear tree's leaves are thick. The fruit hangs soft and sweet. A squirrel naps along ... | 3 + 3 / 2 + 3 |
+| SK-TT4a-S14 | TT4a-C14 | dropdown, 2, 2 | stem: Stanza 1: In July, the pear tree's leaves are thick. The fruit hangs soft and sweet. A squirrel naps along ... | 3 + 3 / 3 + 3 |
 | SK-TT4a-S15 | TT4a-C15 | mc, 1, 3 | stem: Stanza 1: The candle flame is tall and bright. It lights the whole dark room. I watch the dancing shadows t... | 4 / 3 |
 
 **Note on the live-choice column (corrected after review):** the earlier version of this log said hints 1 and 2 rule out nothing. That was wrong: in about two dozen items they steer a child away from a choice or toward a region of the passage. The column now shows only what I can state firmly: the number of choices at the start, and the number left after hint 3 alone. I re-read every hint 3 by hand after the review. A hint 3 now settles at most one choice (one option, one blank option, one row, one step, or one Part A choice with a pointer to match Part B). Hints that settled two (TT1a-S04, TT4a-S11) were rewritten in this pass. For hints 1 and 2, the reviewer's method (section 6 of SIM-1-review.md) is the better count; I did not keep a per-item ladder figure because I could not make it reliable. Treat a ladder count as a reviewer job.
@@ -240,9 +240,31 @@ Source: `SIM-1-rereview.md`. All four MUSTs and the SHOULDs listed by the coordi
 
 **Gate note.** One `check-content` run in this pass showed a failure in `3.T.RA.1.c` ("learn 1 needs 2-4 steps"). That lesson belongs to another agent; it passed again by the next run. The final run printed PASS (0 failures, 9 warnings, none in a new item).
 
+## 2e. Fixes after the final blind re-solve
+
+Source: the "Final blind re-solve" section of `SIM-1-rereview.md` (24 of 24 agreed; one MUST).
+
+**MUST, TT4a-S14.** Rebuilt so that exactly one answer is defensible. Stanza 3 now reads "In March, the pear tree's twigs are brown. / The buds are small and tight. / A robin hops from branch to branch / And sings in the cool light." (no "branches bare" fragment). The options are now "full of fruit", "covered in snow" and "only small buds have grown"; "after the leaves have fallen" is gone from the slots because stanza 3 could be read as that stage. Snow is not in the poem. The keys sit in different positions from C14 (slot 1 is the second option, slot 2 is the first). Hint 2 now says "the month", hint 3 says "Stanza 3 gives the month and tells what is on the twigs. Match that to each choice" and removes nothing. The misconception no longer says the stanzas skip around the year; it warns against picking the stanza that sounds most like winter. The how and why were rewritten to match.
+
+**SHOULDs done.**
+
+- TSPS-S14: row 2 no longer repeats C13's row concepts. It is now "The fix removes or changes the cause of the problem" (both texts: the clump is cleared, the lights are changed). The how and why were rewritten.
+- TSPS-S07: the key is now "fix the gap where the roof meets the wall", because Thea has already seen the gap. Hint 3 completes slot 0 ("Zane's plan is the one he carries out on the floor") and asks about slot 1. The prompt is reworded ("each have a plan for the leak"). How and why match.
+- TT4a-S09: a different Part A question ("What does the speaker do in stanza 3 that is different from stanza 2?") with four new options; the key is "The speaker decides to save the coins." The Part B line is unchanged, the Part B prompt is reworded, hint 3 is new, and how no longer says "tomorrow" (the poem says every day).
+- TT1a-S15: the "writer wants to show, not tell" frame is gone; Jonah's teacher says she cannot picture the crowd. Prompt, hint 1 and hint 2 reworded.
+- TT1d-S08: row 1 now says "part of the activity" (neither story names a holiday), and row 4 is "The finished decorations end up in the family's home."
+- TC2a-S15: Mia's note now says the space room was "the best part of the whole day" and Theo's says it was "my favorite thing", so the key "both liked the space room best" is supported.
+- Notes softened: 3.T.T.1.d p11 now says "a paper lantern shaped like a star" (no colour), and p14 says Pieter's father "often" checked the dike (not "every week").
+
+**Not done.** TSPS-S10 and S12 weak distractors; TT1c-S11 still has no distractor that follows the box and is not caused by it other than the dog-walking event; SS2a-S05 still sorts to the two keys by hint 3; TT4a-S08's prompt still follows C07's frame; TT4a-S10 hint 3 states the scooter stops; TC2a-S04/S05/S08 "he" for an unnamed narrator.
+
+**Gates.** `check-content` prints three failures, all in 3.T.T.4.b (learn 1 step count; two Part B quotes in core C13). That lesson is another agent's work in the same file, T-T34.js, and none of the failures is in my blocks. Before the other agent's change the run printed PASS (0 failures, 9 warnings). check-writing 0 failures, 0 warnings; check-instructional-copy 28 assertions passed; no passage in my lessons above FK 4.5; `greedy.js` missing(0) for all lessons; browser smoke test ALL OK for all eight lessons (15 of 15 core items each offered its own similar item, no repeats, no errors); the test server is stopped. Similarity measured again for all 96 items: only TC2a-S12 (0.28, the written-response item) is above 0.21; TT1a-S11 is 0.21; no new item shares more than one option with its core item.
+
+**Needs blind re-solve (final pass).** TT4a-S14 (rebuilt); TT4a-S09 (new Part A, key, hint 3); TSPS-S07 (slot 1 key); TSPS-S14 (row 2); TT1a-S15 (stem and prompt); TT1d-S08 (rows 1 and 4); TC2a-S15 (both notes); 3.T.T.1.d p11 and p14 (wording only).
+
 ### Similarity, measured for every new item
 
-I ran the reviewer's word-set Jaccard script (`simrev/sim.js`) on all 96 new items against the core item named in `like`, on the final data. Result: **every new item is at or below 0.21 except one**, TC2a-S12 (0.28). That one is the constructed-response item, which shares its instruction with C12 by design; the re-review accepted it. Three items sit exactly at 0.21: TT1a-S11, TT1a-S15 and TT4a-S09. No other item is above 0.20. The earlier log said that all near-copy rewrites were at or below 0.21 except three items. That was wrong, and the figures here replace it. Shared options with the core item (`opt.js`): at most one in every new item; items that share exactly one: TT1d-S05, TT1d-S11, SS2a-S14.
+I ran the reviewer's word-set Jaccard script (`simrev/sim.js`) on all 96 new items against the core item named in `like`, on the final data. Result: **every new item is at or below 0.21 except one**, TC2a-S12 (0.28). That one is the constructed-response item, which shares its instruction with C12 by design; the re-review accepted it. One item sits at 0.21: TT1a-S11 (0.207 by the re-reviewer's count). TT1a-S15 and TT4a-S09, which were at 0.21 here, are rebuilt in the final pass (section 2e). No other item is above 0.20. The earlier log said that all near-copy rewrites were at or below 0.21 except three items. That was wrong, and the figures here replace it. Shared options with the core item (`opt.js`): at most one in every new item; items that share exactly one: TT1d-S05, TT1d-S11, SS2a-S14.
 
 ### Hand-counted live choices for the items changed in this pass
 
@@ -251,7 +273,7 @@ Columns: start / explicit (after what hint 3 states) / ladder (after hints 1 and
 | Item | Start | Explicit | Ladder | Note |
 |---|---|---|---|---|
 | TSPS-S14 | 3 per row x 4 | 3, 3, 3 + one row settled | 3 per row | Hints 1 and 2 do not narrow; hint 3 settles the clump row |
-| TSPS-S07 | 3 + 3 | 3 + 3 | 1 + 2 | Hint 2 names Zane's and Thea's actions |
+| TSPS-S07 | 3 + 3 | 1 + 3 | 1 + 2 | Hint 3 completes slot 0 (Zane's buckets) and asks about slot 1 |
 | TT1a-S12 | 4 + 4 | 3 + 4 | 3 + 3 | Hint 3 removes the turn-back choice in Part A only |
 | TT1a-S09 | 3 per row x 4 | 3 per row | 2 per row | Hint 2 asks what Kemi knows or does next |
 | TT1a-S06 | 4 | 3 | 2 | Hint 1 asks which sentence paints the shop |
@@ -266,9 +288,9 @@ Columns: start / explicit (after what hint 3 states) / ladder (after hints 1 and
 | TC2a-S14 | 4 | 3 | 3 | Hint 2 points to what Pilar's body does |
 | TC2a-S15 | 5 | 4 | 3 | Hint 2 asks for opinions found in both notes |
 | TT4a-S08 | 5 | 4 | 3 | Hint 1 limits it to lines with a repeated word |
-| TT4a-S09 | 4 + 4 | 3 + 4 | 3 + 2 | Hint 2 points to stanza 3, which has two candidate lines |
+| TT4a-S09 | 4 + 4 | 3 + 4 | 3 + 2 | Hint 2 sends the child to stanza 2 and stanza 3; two stanza-3 lines are live in Part B |
 | TT4a-S10 | 4 | 3 | 3 | Hints 1 and 2 do not remove a choice |
-| TT4a-S14 | 3 + 3 | 3 + 2 | 3 + 3 | The months in hint 2 do not remove an option by themselves |
+| TT4a-S14 | 3 + 3 | 3 + 3 | 2 + 2 | Hint 3 removes nothing; the month in hint 2 and the details in the stanza decide it |
 | SS2a-S05 | 5 | 4 | 3 | Hint 2 asks which sentences compare, so the three comparisons stay live |
 | SS2a-S07 | 4 + 4 | 3 + 4 | 3 + 3 | Two Part B lines now tempt the wait-for-the-day choice |
 | SS2a-S12 | 4 + 4 | 3 + 4 | 3 + 2 | Two Part B lines now contain an amount |
