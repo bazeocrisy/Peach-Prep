@@ -220,3 +220,212 @@ I served the repo with `node verification/serve.js . 8731`. For each lesson I op
 - **Consistency with accepted 2.a:** the glossary now agrees. Simile and metaphor each compare two different kinds of things. The edge case "same kind" (C09, C07 "big trucks") matches 2.a's "as big as yours". Personification is new in 2.b, defined in the teach box and used in C04, C13 and S04, S13, and C09's distractor.
 - **Teach and Learn accuracy:** no factual errors. "A piece of cake" and the sun-as-coin examples are fine.
 - **No figures in these lessons**, so no alt text to check. First names only; Lena appears in 1.d C14 and in 2.b (author's own note).
+
+---
+
+# Second review (after the author's "Fixes after review (round 2)")
+
+Reviewer: independent second reviewer (did not author, did not write the first review). Source: `js/data/lessons/T-SS.js`, lessons 3.T.SS.1.d and 3.T.SS.2.b. Read-only; no lesson edits, no git. Scripts and outputs are in the scratchpad `b4r7/`: `blind.js`, `blind.txt`, `maps.json`, `myans.js`, `cmp.js`, `dumpfull.js`, `full.txt`, `audit.js`, `cue.js`, `jac2.js`, `jac4.js`, `topics.js`, `topics2.js`, `ui.py`, `ui_tog2.py`.
+
+## S2.0 Verdicts
+
+| Lesson | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 3.T.SS.1.d Paragraphs that stay on one idea | **CHANGES REQUIRED** | 2 | 8 |
+| 3.T.SS.2.b Use figurative language in your writing | **ACCEPT** (with SHOULDs) | 0 | 7 |
+
+All eight first-review MUSTs are fixed (S2.4). The two remaining MUSTs are both in 1.d, both in text the author wrote in round 2:
+1. The carousel swap removed the hummingbird collision, but 1.d p4 "Recycling at Our School" (C06, C07, C08) collides with the accepted pair in 3.T.T.2.c (cans melted into new cans, the school bin program). The first review did not catch it.
+2. The new carousel Together items P1, P2, P3 and the unchanged P5 fail the hint-3 audit (they describe or narrow to the key). The engine does not show Together hints today, so the fault is latent, but it breaks plan §4.5 item 5.
+
+## S2.1 Method and blind-solve result
+
+- **Fully blind, with one disclosure.** I wrote `blind.js` (new). It loads `T-SS.js` in a Node `vm` sandbox with a mock `PP.addLesson`, resolves every `{ref}`, and prints only the passages, stems, prompts, and seeded-shuffled choices, options, order steps, match rows and slot options. Seed is a hash of the item id. Hottext targets are printed as the sentence text. The printer reads a whitelist of fields, so `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like` and `std` cannot reach the output. I grepped the output for `correct|answer|why|hint|how:|clue|misconception|like:`. The only hits were natural prompt words ("Why is that a good choice?", "Why Music Class Matters", "Fill both gaps..."). There are no figures in either lesson, so there is no alt text.
+- **Disclosure.** The scratch folder `b4r7/` already held four files from another session (`answers.json`, `full.js`, `jac.js`, `keys.js`). I never opened them, and I overwrote only `ld.js`. Before solving, I opened older reviewers' generic harness scripts for other lessons (`b4r6/blind.js` and `load.js`) as a template. They hold no data for these lessons. I did not open the first review, the author log or any raw lesson source for these items until after `myans.js` was saved.
+- **Items solved:** 68 distinct items: 1.d 5 Together, 15 core (all new), 15 similar. 2.b: Together P1 to P5 (P4 and P5 are the refs used in core), 13 own core items, 15 similar.
+- **Agreement with the keys: 68 of 68 (100%).** The 1.d C09 mismatch my script first reported was my answer-format slip (I typed a letter for a dropdown); the option I chose is the key.
+- **Doubtful answers that still matched:** 1.d C02 (sentence 2 or 6 could start a paragraph; 6 is far stronger), 1.d S02 (sentence 5, but 8 returns home), 2.b S06 (between sentences 1 and 2, but 2 and 3 can be argued), 2.b C13 (two personification choices; mood decides).
+
+## S2.2 Per-item checks (all 68 items)
+
+- **Key beside explanation (every item).** `audit.js` checked that every keyed choice, option, sentence and slot text appears verbatim in `why` and, for choice/hottext/dropdown items, in the last `how` step. There are no misses. The match items name the topic sentence and column by paraphrase; I read those by hand and they agree. I also read all 150 ladders by eye. The hottext target indexes agree with the `why` text (1.d C02 p3:1:6, C06 p4:2:4, C11 p5:2:3 and p5:2:5, S02 p6:1:5; 2.b C04 p3:2:3).
+  - One `how` slip: **1.d S14 HOW step 1** says sentences 1 to 3 are about "choosing the spot, digging holes and covering the bulbs". The draft has no choosing of a spot (sentence 1 says the class planted tulips by the door). SHOULD: reword.
+- **One defensible answer.** All pass. 1.d S05 is now forced (cloth, then plates on the cloth, then forks beside the plates). 1.d C15 is the only fixing pair. 2.b C15 and S15 keys are single pairs. 2.b C12's key is the only positive comparison.
+- **Points and DOK.** Every pick-two and two-slot item is 2 points, match and order are 2 points, and C11/S11 and 2.b C15/S15 are now 2 points. DOK 3 core: 1.d C08, C14, C15 (three); 2.b C12, C15 (two). No DOK 1. `mc` is six in each lesson (at the cap). Formats: 1.d has six formats, 2.b has five.
+- **Official wording** (`standards.js`): 1.d "Craft related sentences into clear and cohesive paragraphs" is covered. 2.b "Use figurative language, such as similes, metaphors, and idioms, to show relationships between ideas and information" is covered, except that no passage is informational (NOTE as before) and personification is a grade 4 term (SHOULD 2.b-3).
+- **Form A/B leakage.** I compared every sentence of five or more words in the core, similar and Together items and passages with the five check items in each lesson. There are no shared facts or keys. Only the stem frames repeat (1.d T1 "Read the paragraph that begins with sentence 2. Select the sentence that does not belong..." matches C06/C11). There is no form B.
+- **Grade-3 suitability.** Nothing is kindergarten-like. 1.d S03, S06 and S07 are easy but fine.
+
+## S2.3 Live choices after hints 1 to 3 (hand count; items changed in round 2 re-counted)
+
+I use the authored ladder (hints[0..2]) and the cumulative effect of H1 to H3. Hint 1 never narrows or locates anything in any core or similar item. Hint 2 never quotes a key. One correction to the author's table: **1.d C11 has six options, so after H3 five are live (not four of five).**
+
+**1.d core**
+
+| Item | Live after H3 | Item | Live after H3 |
+|---|---|---|---|
+| C01 | 3 of 4 | C09 | 2 of 3 |
+| C02 | 5 of 8 | C10 | 3 of 4 |
+| C03 | 3 of 4 | C11 | 5 of 6 (pick 2) |
+| C04 | 4 of 5 (pick 2) | C12 | 3 of 4 |
+| C05 | topic sentence placed first; four to order | C13 | leftover topic removed; 3 rows, 3 topic sentences |
+| C06 | 4 of 5 | C14 | 3 of 4 |
+| C07 | 3 of 4 | C15 | 4 of 5 (pick 2) |
+| C08 | 3 of 4 | | |
+
+1.d similar: S01 3 of 4, S02 5 of 8 (H3 asks for the first sentence that is not a chore, so sentences 2 to 4 are out), S03 3 of 4, S04 4 of 5 (pick 2), S05 cloth placed second, S06 3 of 4, S07 3 of 4, S08 3 of 4, S09 2 of 3, S10 3 of 4, S11 4 of 5 (pick 2), S12 3 of 4, S13 3 rows, 3 topic sentences, S14 3 of 4, S15 4 of 5 (pick 2). No item leaves one option.
+
+**1.d Together (stored ladder, see MUST 1.d-M2):** P1 H3 describes the key; **P2 H3 describes all three wrong choices (1 of 4 left); P3 H3 describes all three wrong choices (1 of 4 left); P5 H3 names three of the five sentences as garden work (the two keys are the only ones left)**; P4 H3 gives the "Does not belong" row (allowed: one slot).
+
+**2.b core**
+
+| Item | Live after H3 | Item | Live after H3 |
+|---|---|---|---|
+| C01 = P4 | metaphor row given; 3 rows, 2 columns | C09 | 4 of 5 |
+| C02 | 3 of 4 | C10 | secret situation given; 2 situations, 3 idioms |
+| C03 | 2 of 3 | C11 | 3 of 4 |
+| C04 | 3 of 4 | C12 | 3 of 4 |
+| C05 | 3 of 4 | C13 | 3 of 4 |
+| C06 = P5 | 3 of 4 | C14 | blank 1: 1 of 3 (one slot completed); blank 2: 3 of 3 |
+| C07 | 4 of 5 (pick 2) | C15 | 4 of 5 (pick 2) |
+| C08 | blank 1: 1 of 3 (one slot completed); blank 2: 3 of 3 | | |
+
+2.b similar: S06 H3 says the pancake is flipped by sentence 4, which rules out two of the four spots (B and C), so **2 of 4 are live** (the author counted 3 of 4). Everything else matches the author: S08 and S14 complete blank 1, S09 3 of 5, S11 4 of 5, S13 3 of 4, S15 4 of 5. Completing one of two blanks is explicitly allowed by §4.5 item 3. No item has one option left on a single answer.
+
+## S2.4 Verification of the round-2 fixes
+
+**1.d**
+
+| First-review MUST | Result |
+|---|---|
+| M1 S05 two valid orders | **Fixed.** Cloth, then plates on the cloth, then forks beside each plate. A fork "beside each plate" cannot come before the plates. Blind order matched. |
+| M2 S06 H2 described the key | **Fixed.** H2 no longer says "a different place". The key is now "Our gym was painted blue last summer." H2 reads "ask of each sentence whether it shows what it describes", which is vague for a nine-year-old (SHOULD 1.d-8). |
+| M3 near-copy similar items | **Fixed on the author's measure** (see S2.5). S14 is now a "why is a break at sentence 3 poor" item, S15 uses new change templates, and nothing shares an option. |
+| M4 hummingbird collision | **Hummingbirds are gone and "carousel" is unique** (zero hits for carousel, merry-go-round, calliope, toy top, gallop outside 1.d). But the same kind of collision exists for p4 recycling (see MUST 1.d-M1). |
+| SHOULDs | C13/S13 H3 no longer gives a match (fixed). C10/S10 H3 now says "from the start" (fixed). P4 intruder is now the bus sentence (fixed). C11 and S11 are 2 points (fixed). Watch Me coverage is still three examples (still open). |
+
+**2.b**
+
+| First-review MUST | Result |
+|---|---|
+| M1 C14 pre-answer | **Fixed as asked** (the example is now "as still as a photograph"). Two echoes remain, see SHOULD 2.b-1. |
+| M2 C12 word-match key and H2 | **Fixed.** The prompt says "what the quilt means to her", the distractors now include a memory-flavoured pair (a locked trunk, a drawer of old photos kept closed and forgotten), and H2 says only "test each comparison against what the quilt means to Zoe". |
+| M3 near-copy similar items | **Fixed on the author's measure** (S2.5). |
+| M4 "raining cats and dogs" and "same boat" | **Fixed.** P4/C01 now uses "pulling my leg"; S01 uses "burn the midnight oil". I grepped all of `js/data` for every 2.b idiom (cloud nine, under the weather, went wild, hit the road, cut corners, all ears, tongue-tied, stuck in a rut, blue moon, spill the beans, bite off, head over heels, arm and a leg, out of the blue, thin ice, head in the clouds, midnight oil, pulling my leg): zero hits outside 2.b. |
+| SHOULDs | C13 B is now "giggled and skipped" (fails on mood, fixed). C05 prompt no longer echoes "all at once" (fixed). C15 and S15 are 2 points (fixed). S03 no longer teaches "out of the blue" (fixed). Watch Me coverage still open (SHOULD 2.b-6). |
+
+## S2.5 Similar vs core overlap (own scripts `jac2.js`, `jac4.js`)
+
+Each similar item is compared with its `like` item and with every other core and Together item. Text is the prompt, stem, text, all choices, options, slot options, steps, rows, columns and hottext target sentences, with and without the passage. Tokens are `[a-z']+` (the author's tokenizer; my first run counted digits and sentence numbers, which inflated passage items by 0.03 to 0.05, so I discarded it). A shared option means an exact match or a token-Jaccard of 0.6 or more.
+
+- **Shared options with the twin: zero in all 30 pairs.** Across all core and Together items the maximum is one (1.d S07 and C11).
+- **Word-set Jaccard against the twin (the ceiling is 0.21): all 30 pairs pass.** Highest: 2.b S01 0.20; 1.d S04 0.19, S02 0.19, S14 0.19, S13 0.17.
+- **Multiset Jaccard against the twin: five pairs are above 0.21.**
+
+| Pair | Multiset (with/without passage) | Word-set |
+|---|---|---|
+| 2.b S01 vs P4 | 0.26 / 0.26 | 0.20 |
+| 2.b S08 vs C08 | 0.11 / 0.23 | 0.10 / 0.15 |
+| 2.b S15 vs C15 | 0.23 / 0.23 | 0.15 |
+| 1.d S02 vs C02 | 0.22 / 0.19 | 0.18 / 0.19 |
+| 1.d S14 vs C14 | 0.22 / 0.22 | 0.19 |
+
+  The overlap is almost all function words and skill vocabulary ("sentence", "paragraph", "simile", "metaphor", "idiom"). With stop words removed, every pair is 0.16 or lower. I rate this SHOULD (2.b-2, 1.d-5): reword the question frame of 2.b S01 and the prompt lines of the other four.
+- **Same key as the twin:** none. `like` mappings are honest in all 30 (2.b S01 and S06 map to the core refs P4 and P5).
+
+## S2.6 Topic duplicates over all of `js/data` (variants included)
+
+Method: `topics.js` and `topics2.js` search all 17 lesson files, 15 set files and the other data files with case-insensitive regexes (hyphen, space and plural variants), skipping only the two lessons' own line ranges in `T-SS.js`.
+
+- **carousel / merry-go-round / calliope / toy top / gallop:** no hits. **hot-air balloon / balloon / wicker:** the only hits are `L-V3.js` p3 "How a Hot-Air Balloon Flies" (the old collision) and "red balloon" in GUM3; none remains in 1.d. **hummingbird:** none in 1.d.
+- **Idioms and comparison vehicles:** unique, with these overlaps with the accepted 2.a (SHOULD 2.b-4): "lake was a mirror" (2.a key) and 2.b P4 "puddles were shiny mirrors" (the key row of a core ref); "The classroom was a zoo ... loud and wild" (2.a teach) and 2.b S14 "a zoo at feeding time"; "worked like ants" (2.a key) and 2.b C07 key "ants crawling along a line"; "zoomed ... like rockets" (2.a passage) and 2.b S02 and S07 keys "a rocket".
+- **Names:** "Biscuit" (a pet) appears in five other places (T-T1 p6, GUM2, GUM5, T-C); "Pepper" in T-C and GUM4. NOTE.
+- **Setting echoes, no shared key fact (NOTE):** farmers market in L-GC2 and F-FH (1.d P4); a storm night in the `F-FH.js` fluency passage with the lights going out (2.b p1); fireworks "red and gold" in T-T1 (2.b p3); "Grandma's quilt keeps me warm" in GUM3 (2.b p5); dog bath in T-C p5 "Bath Day", a poem (1.d C05 sequence of scrub and shake; SHOULD 1.d-6).
+- **Collision (MUST 1.d-M1): school recycling with bins.** Evidence below.
+
+## S2.7 Findings
+
+### MUST
+
+**1.d-M1. p4 "Recycling at Our School" and C06, C07, C08 (and their addons, `why` and `how`) share the topic and key facts with 3.T.T.2.c.** (plan §4.3 rule 4: never share the key fact of another lesson's practice or check passage).
+- `T-T2.js` p7 "From Old Can to New Can" (line 2345) says the cans are "shredded into tiny pieces and melted" and "made into new cans". 1.d p4 sentence 5 says "Metal cans can be melted and made into new cans." It is a paraphrase of the same fact.
+- `T-T2.js` p8 "Three Bins at Oak Hill School" (line 2352) is a school with a "blue Recycle bin ... for cans and plastic bottles" and a recycling truck that picks up the cans and bottles every week. 1.d p4 is a school with "a blue bin for paper ... bins for cans and bottles", students sorting, and "two helpers carry the full bins to the big truck each Friday".
+- 3.T.T.2.c uses this pair in practice and in its comparison items, so a child who has done 3.T.T.2.c already knows the facts and the setting. This is the same fault the author removed twice (hummingbirds, balloons). The author's grep covered carousel and balloon variants but not "recycling".
+- Fix: move p4 and C06, C07, C08 to a topic that appears nowhere else (grep first with `recycl|compost|bins|blue bin|custodian`; avoid anything about cans or bottles becoming new ones). Keep the structure: the intruder shares a word with the details (cans), the topic sentence covers three jobs, and the "add facts about home" item is a new-idea paragraph.
+
+**1.d-M2. Hint 3 of the Together items P1, P2, P3 and P5 describes or narrows to the key** (plan §4.5 item 3 and item 5: hint 3 must not describe the key in other words or leave only one option).
+- **P2:** "Two choices are about other things in the draft, and one is only a fact about fairs." This characterizes all three wrong choices, so only the key is left.
+- **P3:** "Three of the choices are true about carousels but are not about moving." This also describes all three wrong choices; only the key is left.
+- **P5:** "Planting, watering and picking are things the class does in the garden. Look for the two sentences that are about something else." This names three of the five sentences as correct garden work, so the two keys are the only sentences left.
+- **P1:** "Three of the four sentences tell about how a carousel moves. Ask which one is about something that is not a carousel." This is the definition of the key.
+- All four were rewritten or carried over in round 2. The engine does not show Together addons today (architecture §ENG-08; Practice Together shows the old clue, narrow and walk-through ladder, which I confirmed in the browser). That is why this is a latent fault, but the hints are stored for the day Together uses them and they fail the audit as written.
+- Fix: P2 H3 "Sentence 7 is about the kinds of animals. Ask whether the sentence about the motor fits what sentences 7 to 9 share" (rules out one choice). P3 H3 "The tickets are a fact about fairs, not about moving. Check the other three." P5 H3 "The sentence about leaves is about a different season. Check the other four." P1 H3 "Sentence 3 is the topic sentence, so it is not the answer. Test the other three."
+
+### SHOULD
+
+**1.d-1. Longest-key cue.** In 12 of the 23 single-key items (core plus Together) the key is the strictly longest option, 9 of them by six characters or more: C10 (60 against 41/40/40), C01 (70 against 59/44/39), C12, S01, S03, S14 (78 against 65/62/60), P3 (57 against 48/46/39). Chance would be about 6 of 23. The similar bank is 5 of 10. Shorten the keys or lengthen two distractors per item (plan §6.5: the key must not be the only long option).
+
+**1.d-2. P4 H2 and the Together clue.** H2 says the intruder is "about a different place or time". The bus sentence says the bus stops near the market, which is the same place. Reword H2 to "which one is about something other than the market's busyness". Also, in Together the `clue` is shown as Hint 1 and **P2's clue points to a location** ("Read sentences 7, 8 and 9") and P1's clue names the topic sentence. Use the same text as hints[0] in all Together items.
+
+**1.d-3. S14 distractors and `how`.** Options A ("The word dirt means the writer has finished the whole draft") and B ("Sentence 3 is about the weather") are absurd, not plausible misreadings (§6.5), so S14 is easier than C14. Replace with "A new paragraph must start every third sentence" or "Sentence 3 is longer than sentence 2". Also fix HOW step 1 ("choosing the spot").
+
+**1.d-4. Watch Me / Learn It still model three of the lesson's tasks.** Learn It covers the intruder, the topic sentence and the new paragraph. The core also asks for closing sentences (C01, C10, S01, S10), paragraph order (C05, S05), choosing details (C04, C09, C12), matching groups to topic sentences (C13) and fixing a draft (C08, C15). The author says it is at the cap of three. Fold the closing sentence into the topic-sentence example, for instance by adding a closing line to Learn 2's paragraph.
+
+**1.d-5. Multiset overlap of S02 (0.22) and S14 (0.22) with their twins, and S02's frame.** C02 and S02 are both a nine-sentence one-block day draft with a time-shift key (evening and after lunch) and an eight-option hot text. Change S02 to a different shape, for example a short list of events in a different domain with a two-paragraph question.
+
+**1.d-6. Distinctness inside the fifteen.** C06 and C11 share the frame ("Read the paragraph that begins with sentence N. Select the sentence(s) that do(es) not belong") and the key logic; they differ only in the passage and the count. C04, C09 and C12 are three "which detail fits the topic sentence" items. C05 shares its scene (dog bath: scrub, shake, soap) with the poem "Bath Day" in `T-C.js` p5. Vary the verb in C11 (for example "Which sentence could Nia take out?" with a reason), and consider a different scene for C05.
+
+**1.d-7. S06 H2 wording.** "Ask of each sentence whether it shows what it describes" does not say anything a child can act on. Use "Ask of each sentence whether it tells about the action in the gym."
+
+**1.d-8. Author log: C11 live count.** C11 has six options, so the count after H3 is 5 of 6, not 4 of 5 (NOTE for the log).
+
+### 2.b SHOULD
+
+**2.b-1. Two Learn It echoes remain for C14 and S14.** Teach point 2 still reads "as quiet as a mouse"; C14 blank 2 is "as {quiet} as a sleeping cat" with options quiet/loud/busy. The new teach example "as still as a photograph" matches S14 blank 2 "as {still} as a stone in a field" with options sticky/still/noisy. Both slots are also solved by the clue sentence before them, so these are the easiest slots in the lesson. Change the teach point to a quality that no item uses (for example "as bright as a lamp") and give S14 a less guessable second blank ("as {motionless} as" with "wobbly" and "sparkly" as distractors).
+
+**2.b-2. Multiset overlap of S01 (0.26 against P4), S08 (0.23 without passage) and S15 (0.23).** S01 and P4 both use the same three columns (simile, metaphor, idiom) with four sentences in the same order of types. Reorder the types in S01 (idiom, metaphor, simile, simile) and reword the prompt.
+
+**2.b-3. Personification is a grade 4 term.** `standards-3-5.txt` puts "personification" in 4.T.SS.2.a (grade 4). The grade 3 expectation 3.T.SS.2.b lists "such as similes, metaphors, and idioms". The word "such as" allows other kinds, and the lesson defines the term before the items use it, so it is not a hard violation. Still, C04, C13, S04, S13, P5's `why`, teach point 5 and Learn 3 spend about a fifth of the lesson on it. Keep it as an extension only if the lead agrees; if not, swap C04 and C13 for simile, metaphor or idiom items.
+
+**2.b-4. Comparison vehicles reused from the accepted 2.a:** "mirror" (P4 key row), "zoo" (S14 key), "ants" (C07 key), "rocket" (S02 and S07 keys). Each is a stock comparison, but P4 is a core ref and the key row. Replace "shiny mirrors" in P4 with a vehicle that 2.a does not use.
+
+**2.b-5. Word-match and longest-key cues.** S13's key is the only option with the prompt's "sleepy" (and "quiet kitchen" from the stem). S05's key repeats the stem's "bus door" and "out". C15 and S15 are inverse word-match items: the options that fit repeat the stem words ("tiny", "sleepy"), so the two keys are the two that do not. The key is the longest option in 6 of 12 core single-key items and 3 of 9 similar ones, mostly by 1 to 7 characters (C13 +7, C12 +6, S13 +4). Reword S13 so it does not repeat "sleepy" and give C15's wrong options (the fit ones) stem-free wording.
+
+**2.b-6. Watch Me / Learn It coverage.** The three examples model metaphor, idiom and personification. The core also asks "does this simile fit what the writer means" (C02, C14, C15), placement (P5), and a comparison that shows what something means (C12, S12). Add the "fit" question to the metaphor example.
+
+**2.b-7. C12 distractors are too clearly negative.** The trunk and the drawer are described with "locked", "nobody could open", "kept closed and forgotten", so the key is the only positive comparison. A child can pick it by tone. Give the drawer a warmer description (for example "a drawer of old photos, taken out and looked at often") and rely on the prompt's "what the quilt means to her" plus the quilt's own details (patches of old clothes) to separate the key.
+
+### NOTE
+
+1. **Hint 3 and one-slot completion.** 2.b C08, C14, S08 and S14 settle blank 1 in H3 (the other two options are ruled out). §4.5 item 3 permits "complete one of two slots". This is a design choice and is unchanged.
+2. **2.b P4 / C01:** H2 gives the two similes, H3 gives the metaphor row. Together they solve the item, but H3 alone leaves three rows and two columns, so the audit passes.
+3. **2.b S06** key is between sentences 1 and 2. Between sentences 2 and 3 can be argued by a careful child (the batter has spread but is still liquid), but "before the edges turn golden" makes 1 and 2 the stronger spot.
+4. **Hint 1 never narrows or points in any core or similar item**, and hint 2 never quotes a key. I could not write a key from H1 and H2 alone for any core item.
+5. **Browser (390 by 844, touch, mobile Chromium, `node verification/serve.js . 8741`, killed by pid).** In both lessons all 15 core items of the three Try sets worked end to end: wrong Check, three hints, Show me how, Try a similar question, correct answer to the similar item and Check. Fifteen similar items were visited in each lesson. No horizontal scroll at any step. No page errors. The only console message was the aborted font request from my route rule. The Together sets also render (1.d P1 to P5, 2.b P1 to P3) with no horizontal scroll. In Together, the Help me ladder shows the old three steps (the clue, an engine hint such as "Look in sentences 3 to 6", then the walk-through). The authored hints are not shown there (by design, ENG-08).
+6. **Gate run (read only):** `node verification/check-content.js --all` gives PASS (0 failures). Warnings are in other lessons; none for 3.T.SS.1.d or 3.T.SS.2.b.
+7. **Readability and word choices** are fine for grade 3 ("lumbering", "finale", "pellets" are in context).
+
+## S2.8 Facts checked on the web
+
+The first review could not reach the idiom sources. These worked.
+
+| Claim | Source |
+|---|---|
+| under the weather = feel sick; in hot water = be in trouble; all ears = give full attention; bite off more than you can chew = do not try to do more than you can handle; head over heels = deeply in love; out of the blue = without warning; cost an arm and a leg = very expensive | https://downloads.allaboutlearningpress.com/downloads/Quick_Guides/60-Common-Idioms.pdf |
+| spill the beans = let out a secret; pull someone's leg = trick someone with something untrue | https://eslgold.com/idioms/ |
+| burn the midnight oil = work late into the night; hit the road = leave; once in a blue moon = very rarely | https://en.wikipedia.org/wiki/English-language_idioms |
+| on cloud nine = extreme happiness | https://grammarist.com/usage/on-cloud-nine/ and https://www.k5learning.com/blogimages/common-idioms.pdf ("very happy") |
+| cut corners = do something the easy or cheap way; pull someone's leg = tease | https://www.k5learning.com/blogimages/common-idioms.pdf and https://www.educatorstechnology.com/2023/03/50-popular-idioms-for-kids-with-examples.html |
+| head in the clouds = absent-minded, lost in daydreams | https://en.wiktionary.org/wiki/head_in_the_clouds |
+| went wild = become very noisy and excited | https://www.wiktionary.com/wiki/go_wild |
+| stuck in a rut = monotonous, unchanging routine | https://ingilizcepedia.com/vocabulary-a-z/stuck-in-a-rut/ |
+| tongue-tied = trouble speaking, from shyness or embarrassment (the `why` says "unable to speak"; fine for a distractor) | https://writingexplained.org/idiom-dictionary/tongue-tied |
+| once in a blue moon = rarely | https://grammarist.com/idiom/once-in-a-blue-moon/ |
+| carousel: a motor (electric) turns a rotating platform; animals are fixed on posts with up-and-down motion from gearing | https://en.wikipedia.org/wiki/Carousel |
+| menagerie carousel animals include lion, tiger, giraffe, rabbits and horses | https://en.wikipedia.org/wiki/Menagerie_Carousel |
+| guinea pigs were first domesticated in the Andes of South America; pet diet is hay plus pellets | https://en.wikipedia.org/wiki/Guinea_pig |
+| paper, aluminum cans and glass can be recycled into new paper, cans, bottles and jars | https://recyclingpartnership.org/communitiesforrecycling/16-fun-recycling-facts-for-kids/ |
+| grade 4 puts personification in 4.T.SS.2.a | `docs` copy of the official standards text, `gadoe/standards-3-5.txt` lines 860 to 868 (page 29) |
+
+- **Not confirmed on a fetchable page:** "on thin ice = in a risky situation" (2.b S10 `why`). The only page that reached the allow-list listed it as an answer option without a key. It is the standard sense and I found no conflict.
+- **Not checkable and not needed:** ears popping in a glass elevator, tulip bulbs, bread dough ingredients. They are common knowledge and agree with the text.
