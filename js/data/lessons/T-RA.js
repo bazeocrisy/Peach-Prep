@@ -2054,7 +2054,7 @@ PP.addLesson({
       "Choose sources you can trust, like a library book, a museum or a science website. Check who wrote it and whether it names its sources.",
       "Use your own words. Do not copy whole sentences.",
       "A summary tells only what the sources say. Leave out your opinions and facts that are not in your sources.",
-      "Use linking words like also and in addition, or time words like first, next, later and at last, to join ideas from both sources."
+      "Use linking words like also, in addition, when and if, or time words like first, next, later and at last, to join ideas from both sources."
     ],
     words: [
       { term: "summary", means: "a short telling of the most important ideas" },
@@ -2084,7 +2084,7 @@ PP.addLesson({
         "Find the big idea of Source 1: penguins live in a very cold place, and their bodies help keep them warm.",
         "Find the big idea of Source 2: penguins huddle together to stay warm.",
         "Look for what the two ideas share. Both are about staying warm in the cold.",
-        "Write the ideas in your own words, not copied word for word. Leave out tiny details, such as how tall a penguin is. Then join the ideas with a linking word like also, or a time word like first or later."
+        "Write the ideas in your own words, not copied word for word. Leave out tiny details, such as how tall a penguin is. Then join the ideas with a linking word like also, or a time word like first or later. Start with a sentence that covers both sources, and end with one that wraps them up."
       ],
       answer: "Emperor penguins live in a very cold place where thick feathers and fat keep them warm. They also huddle together in winter to stay warm."
     },
@@ -2111,7 +2111,7 @@ PP.addLesson({
       steps: [
         "Ask who made each source. The keeper works with red pandas every day.",
         "Ask what each one wants to do. The zoo page shares facts, and the video repeats something the stranger heard.",
-        "Choose the source whose writer knows the topic."
+        "Choose the source whose writer knows the topic. Also check the date, and make sure the page answers your question."
       ],
       answer: "Noah should use the zoo page. The keeper knows red pandas and shares facts, so it is a source he can trust."
     }
@@ -3001,8 +3001,8 @@ PP.addLesson({
       misconception: "A common mix-up is adding a fact from the wrong source or one Leah already has." },
     "SK-RA1c-P3": {
       hints: [
-        "A summary tells only what the sources say. Look for a sentence that tells about the writer instead.",
-        "Check each sentence. Does it tell a fact from Source 1 or Source 2, or does it tell about Leah?",
+        "A summary tells only what the sources say.",
+        "Check each sentence against Source 1 and Source 2, one at a time.",
         "The sentence about the fall tells a fact from Source 2. Check the other three the same way."
       ],
       how: [
