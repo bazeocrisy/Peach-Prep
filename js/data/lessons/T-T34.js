@@ -1407,9 +1407,9 @@ PP.addLesson({
           { text: "I would love to see a big, bright full moon." },
           { text: "The moon is much smaller than the sun." }
         ],
-        clue: "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
+        clue: "To explain a reason, tell why it matters. The new sentence should tell more about the same reason, not start a new idea.",
         hints: [
-          "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
+          "To explain a reason, tell why it matters. The new sentence should tell more about the same reason, not start a new idea.",
           "Reread sentences 7 and 8 to see what Eli's second reason is. Then ask which choice tells why it matters.",
           "A wish about seeing a full moon tells how Eli feels, not why the reason matters. Look at the choices that are left."
         ],
@@ -1785,9 +1785,9 @@ PP.addLesson({
         { text: "I would love to find a big, shiny beetle." },
         { text: "Some trails are covered with wood chips or gravel." }
       ],
-      clue: "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
+      clue: "To explain a reason, tell why it matters. The new sentence should tell more about the same reason, not start a new idea.",
       hints: [
-        "Explaining a reason means telling why it matters. The new sentence should tell more about the same reason, not start a new idea.",
+        "To explain a reason, tell why it matters. The new sentence should tell more about the same reason, not start a new idea.",
         "Reread sentences 2 and 3 to see what the reason is. Then ask which choice tells why it matters.",
         "A wish about finding a beetle tells how the writer feels, not why the reason matters. Look at the choices that are left."
       ],
@@ -3018,6 +3018,7 @@ PP.addLesson({
       { term: "rhyme pattern", means: "which lines rhyme with each other" },
       { term: "rhyme", means: "words that end with the same sound, like bee and tree" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
+      { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" },
       { term: "sound word", means: "a word that sounds like the noise it names, like buzz or splash" }
     ],
     examples: [
@@ -3174,7 +3175,7 @@ PP.addLesson({
   /* ---------- B4 (expansion 2026-10-22, author b4a; docs/expansion-2026-10-22/01-architecture.md 2.2-2.3) ----------
      Selected-response core (the Milestones assesses this standard through revise/edit items). The write task stays
      OUTSIDE the fifteen: it is adult-scored and never awards a pass. Set 1 uses new items on a soup stanza, Jaylen's
-     draft (p1) and a bubbles stanza, plus P5 and P6 by { ref }; set 2 uses p3 (school bus) and a pattern match;
+     draft (p1) and a lemonade stand stanza, plus P5 and P6 by { ref }; set 2 uses p3 (school bus) and a pattern match;
      set 3 uses p4 (swim day) plus a farm-visit stanza. Practice Together is P1-P4 (P4 revised so the rhyme-only and
      sense-only words are both tempting). Hints and Show me how for P1-P6 are in addons.
      Author log: docs/expansion-2026-10-22/batches/B4-b4a-author-log.md. NEEDS INDEPENDENT REVIEW. */
@@ -3226,26 +3227,26 @@ PP.addLesson({
         why: "The answer is: Whoosh! The leaves explode into the air! Air rhymes with hair, and whoosh and explode make the line loud and exciting. \"Float down without a care\" is calm, \"brown and they are there\" is plain, and \"explode up high\" does not rhyme with hair." },
       { ref: "SK-TT4b-P5" },
       { id: "SK-TT4b-C04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [],
-        prompt: "A poem about bubbles rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the poem rhymes and makes sense.",
-        text: "I dip my wand and blow with care, And bubbles drift into the {0}. They shimmer, wobble, spin around, Then pop without a single {1}.",
+        prompt: "A poem about a lemonade stand rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the poem rhymes and makes sense.",
+        text: "I set my lemonade stand up, I pour the juice into each {0}. The line is long, the sun is hot, I sell them all, I sold the {1}.",
         slots: [
-          { options: ["air", "bear", "sky"], answer: 0 },
-          { options: ["sound", "ground", "noise"], answer: 0 }
+          { options: ["cup", "pup", "glass"], answer: 0 },
+          { options: ["lot", "knot", "most"], answer: 0 }
         ],
         clue: "Each blank has to rhyme with the end of its pair AND make sense. A word can rhyme and still be wrong.",
         hints: [
           "Each blank has to rhyme with the end of its pair AND make sense. A word can rhyme and still be wrong.",
           "Read each pair of lines out loud. For each blank, say the word that comes before it in the rhyming line, then try each choice.",
-          "Bubbles do not drift into a bear, so cross that word out. Then decide between the other choices for each blank."
+          "Nobody pours juice into a pup, so cross that word out. Then decide between the other choices for each blank."
         ],
         how: [
-          "Blank 1 must rhyme with care. Blank 2 must rhyme with around.",
-          "Blank 1: air rhymes with care, and bubbles can drift into the air. Bear rhymes with care but makes no sense, and sky makes sense but does not rhyme.",
-          "Blank 2: sound rhymes with around, and a bubble can pop without a sound. Ground rhymes but does not fit \"pop without a single,\" and noise fits the meaning but does not rhyme.",
-          "So the answers are air and sound."
+          "Blank 1 must rhyme with up. Blank 2 must rhyme with hot.",
+          "Blank 1: cup rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass makes sense but does not rhyme.",
+          "Blank 2: lot rhymes with hot, and \"I sold the lot\" means she sold all of them. Knot rhymes but does not fit, and most fits the meaning but does not rhyme.",
+          "So the answers are cup and lot."
         ],
         misconception: "A common mix-up is choosing the word that makes sense without checking the rhyme, or the reverse. Each blank needs both.",
-        why: "Blank 1 needs \"air\": it rhymes with care, and bubbles drift into the air. Bear rhymes but makes no sense, and sky does not rhyme. Blank 2 needs \"sound\": it rhymes with around, and a bubble can pop without a sound. Ground rhymes but does not fit, and noise does not rhyme." },
+        why: "Blank 1 needs \"cup\": it rhymes with up, and you pour juice into a cup. Pup rhymes but makes no sense, and glass does not rhyme. Blank 2 needs \"lot\": it rhymes with hot, and \"I sold the lot\" means all of them. Knot rhymes but does not fit, and most does not rhyme." },
       { ref: "SK-TT4b-P6" }
     ] },
     { title: "Set 2", items: [
@@ -3510,17 +3511,17 @@ PP.addLesson({
       why: "The order is: I hang my coat up on the hook; Then grab a snack and find a book; I curl up in my favorite chair; And read until I'm sleepy there. Hook and book rhyme, chair and there rhyme, and the story goes from coat to book to chair." },
     { id: "SK-TT4b-S02", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C02"],
       stem: [
-        "I climb up on the trampoline,",
-        "The biggest one I've ever seen.",
-        "I jump a little, up and down,",
-        "And grin so wide I cannot frown."
+        "I climb the ladder to the slide,",
+        "I sit on top and look outside.",
+        "I slide a little, soft and slow,",
+        "And wave to all my friends below."
       ],
-      prompt: "Jada wants line 3 to sound louder and more exciting. Which line should replace \"I jump a little, up and down\" and still rhyme with line 4?",
+      prompt: "Jada wants line 3 to sound louder and more exciting. Which line should replace \"I slide a little, soft and slow\" and still rhyme with line 4?",
       choices: [
-        { text: "Boing! I bounce up, then back down!", correct: true },
-        { text: "I rest and sit and lie back down." },
-        { text: "I wear my shirt, a plain light brown." },
-        { text: "Boing! I bounce up, then I fall." }
+        { text: "Whee! I zoom down fast, hello!", correct: true },
+        { text: "I sit and watch the clouds go slow." },
+        { text: "My shirt is blue, my shoes are low." },
+        { text: "Whee! I zoom down fast and then stop." }
       ],
       clue: "A good replacement has to rhyme in the right place AND give the reader the feeling the poet wants. Sound words and action words help.",
       hints: [
@@ -3529,27 +3530,27 @@ PP.addLesson({
         "A line that only tells the color of a shirt does not make the reader feel excited. Look at the choices that are left."
       ],
       how: [
-        "Line 4 ends with frown, so the new line 3 has to end with a word that rhymes with frown.",
+        "Line 4 ends with below, so the new line 3 has to end with a word that rhymes with below.",
         "The new line should also feel loud and exciting, so look for a sound word and a strong action word.",
-        "The answer is: Boing! I bounce up, then back down! Down rhymes with frown, boing is a sound word and bounce is an action word.",
-        "\"Rest and sit and lie back down\" rhymes but feels calm, \"plain light brown\" rhymes but is plain, and \"then I fall\" is exciting but does not rhyme with frown."
+        "The answer is: Whee! I zoom down fast, hello! Hello rhymes with below, whee is a sound word and zoom is an action word.",
+        "\"Watch the clouds go slow\" rhymes but feels calm, \"my shirt is blue\" rhymes but is plain, and \"then stop\" is exciting but does not rhyme with below."
       ],
       misconception: "A common mix-up is choosing the exciting line without checking the rhyme. The line must rhyme AND give the feeling.",
-      why: "The answer is: Boing! I bounce up, then back down! Down rhymes with frown, and boing and bounce make the line loud and exciting. \"Rest and sit and lie back down\" is calm, \"plain light brown\" is plain, and \"then I fall\" does not rhyme with frown." },
+      why: "The answer is: Whee! I zoom down fast, hello! Hello rhymes with below, and whee and zoom make the line loud and exciting. \"Watch the clouds go slow\" is calm, \"my shirt is blue\" is plain, and \"then stop\" does not rhyme with below." },
     { id: "SK-TT4b-S03", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-P5"],
       stem: [
-        "My goldfish swims in circles round,",
-        "He never makes a single sound.",
-        "I drop some flakes upon the top,",
-        "He gulps them down without a stop."
+        "I pick a book and climb in bed,",
+        "My mom sits down beside my head.",
+        "She reads a tale of dragons bold,",
+        "Of castles tall and treasures gold."
       ],
       prompt: "Kayla wants to add a second stanza to her poem. Which stanza keeps the same rhyme pattern as her first stanza?",
       choices: [
-        { text: "He hides behind a tiny shell, / And rests there, sleeping very well. / Then morning comes, he wakes up bright, / And swims to greet the sunlight.",
+        { text: "The dragon roars, the hero cheers, / He chases off all of our fears. / The castle gates swing open wide, / And everyone dances inside.",
           correct: true },
-        { text: "He hides behind a tiny shell, / And rests there, sleeping very well. / Then morning comes, he wakes up fast, / And swims around the bowl." },
-        { text: "He hides behind a tiny rock, / And naps there for a while. / Then morning comes, he wakes and swims, / And waves a fin with style." },
-        { text: "He hides behind a tiny shell, / And naps there very slow. / Then morning comes, he wakes up fast, / And swims around the bowl." }
+        { text: "The dragon roars, the hero cheers, / He chases off all of our fears. / The castle gates swing open wide, / And everyone dances and sings." },
+        { text: "The dragon roars, he is so loud, / The hero cheers for me. / The castle gates swing open wide, / And everyone sets free." },
+        { text: "The dragon roars, the hero cheers, / He chases off the night. / The castle gates swing open wide, / And everyone dances." }
       ],
       clue: "Kayla's pattern is: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Check both pairs in each choice. Only one stanza gets both pairs right.",
       hints: [
@@ -3558,13 +3559,13 @@ PP.addLesson({
         "A stanza that rhymes only in lines 2 and 4 uses a different pattern. Look at the choices that are left."
       ],
       how: [
-        "Kayla's first stanza rhymes in pairs: round and sound, top and stop.",
+        "Kayla's first stanza rhymes in pairs: bed and head, bold and gold.",
         "The new stanza must have lines 1 and 2 rhyme and lines 3 and 4 rhyme.",
-        "The answer is the stanza about the shell and the morning that ends \"And swims to greet the sunlight.\" Shell and well rhyme, and bright and sunlight rhyme.",
+        "The answer is: The dragon roars, the hero cheers, / He chases off all of our fears. / The castle gates swing open wide, / And everyone dances inside. Cheers and fears rhyme, and wide and inside rhyme.",
         "In the other stanzas, either the second pair does not rhyme, only lines 2 and 4 rhyme, or nothing rhymes."
       ],
       misconception: "A common mix-up is choosing a stanza that has some rhymes. Both pairs must rhyme in the same places as the first stanza.",
-      why: "The answer is: He hides behind a tiny shell, / And rests there, sleeping very well. / Then morning comes, he wakes up bright, / And swims to greet the sunlight. Shell and well rhyme, and bright and sunlight rhyme, so it matches Kayla's pattern. In the other stanzas, only the first pair rhymes, only lines 2 and 4 rhyme, or nothing rhymes." },
+      why: "The answer is: The dragon roars, the hero cheers, / He chases off all of our fears. / The castle gates swing open wide, / And everyone dances inside. Cheers and fears rhyme, and wide and inside rhyme, so it matches Kayla's pattern. In the other stanzas, only the first pair rhymes, only lines 2 and 4 rhyme, or nothing rhymes." },
     { id: "SK-TT4b-S04", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C04"],
       prompt: "A poem about baking bread rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the poem rhymes and makes sense.",
       text: "The oven hums, the dough will rise, The smell of bread is a sweet {0}. I wait and wait, I tap my feet, Then taste the loaf, so warm and {1}.",
@@ -3698,61 +3699,60 @@ PP.addLesson({
       why: "The snail stanza has no rhymes (wall, bit, brown, behind). The milk stanza rhymes in pairs (cup and up, lap and nap). The teddy bear stanza rhymes in lines 2 and 4 (song and along)." },
     { id: "SK-TT4b-S09", type: "mc", points: 1, dok: 2, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C09"],
       stem: [
-        "I stand beside the workshop door,",
-        "The hammer bangs upon the floor.",
-        "The sawdust drifts down, soft and fine,",
-        "The wood is smooth and straight in line."
+        "The sun peeks in; it's early day,",
+        "The kettle whistles far away.",
+        "Dad slices bread, so soft and brown,",
+        "And sets the butter dish down."
       ],
-      prompt: "The poet wants readers to hear the workshop. Which line has a word that sounds like the noise it names?",
+      prompt: "The poet wants readers to hear the kitchen. Which line has a word that sounds like the noise it names?",
       choices: [
-        { text: "The hammer bangs upon the floor.", correct: true },
-        { text: "I stand beside the workshop door," },
-        { text: "The sawdust drifts down, soft and fine," },
-        { text: "The wood is smooth and straight in line." }
+        { text: "The kettle whistles far away.", correct: true },
+        { text: "The sun peeks in; it's early day," },
+        { text: "Dad slices bread, so soft and brown," },
+        { text: "And sets the butter dish down." }
       ],
       clue: "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
       hints: [
         "A sound word sounds like the noise it names, like buzz or splash. Say each word out loud and listen for the noise.",
-        "Read the four lines out loud. Listen for a word that makes the noise of something hitting something else.",
-        "\"Soft and fine\" tells how something feels, not a noise. Look at the lines that are left."
+        "Read the four lines out loud. Listen for a word that makes a high, steady noise.",
+        "\"Soft and brown\" tells how something looks and feels, not a noise. Look at the lines that are left."
       ],
       how: [
         "A sound word makes the sound of the thing it names.",
-        "\"Bangs\" sounds like the loud noise a hammer makes when it hits.",
-        "The answer is: The hammer bangs upon the floor.",
-        "\"Stand beside the door\" is an action, \"drifts down, soft and fine\" tells how sawdust looks and feels, and \"smooth and straight\" tells how wood looks."
+        "\"Whistles\" sounds like the high noise a kettle makes when the water boils.",
+        "The answer is: The kettle whistles far away.",
+        "\"Peeks in\" is an action, \"soft and brown\" tells how bread looks, and \"sets the dish down\" is an action."
       ],
-      misconception: "A common mix-up is choosing any line about the tools. A sound word sounds like the noise it names.",
-      why: "The answer is: The hammer bangs upon the floor. Bangs sounds like the noise of a hammer. The other lines tell about standing, how sawdust drifts or how the wood looks." },
+      misconception: "A common mix-up is choosing any line about the kitchen. A sound word sounds like the noise it names.",
+      why: "The answer is: The kettle whistles far away. Whistles sounds like the noise of a kettle. The other lines tell about actions or how the bread looks." },
     { id: "SK-TT4b-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C10"],
       stem: [
-        "The hens are up at break of day,",
-        "They scratch and peck and cluck.",
-        "I scatter seeds across the yard",
-        "And wish them all good luck."
+        "My sock went missing yesterday,",
+        "I looked in every place.",
+        "I checked beneath the couch and bed,",
+        "And found it on my face!"
       ],
       prompt: "Sam plans to read his poem to his class. He wants to add a last stanza that keeps the same rhyme pattern and makes his classmates laugh. Which stanza should he add?",
       choices: [
-        { text: "A hen jumps up and flaps her wings, / She squawks and runs in fright. / I laugh so hard, I roll right over, / And land in feathers white.",
-          correct: true },
-        { text: "The hens are tired, the sun is low, / They settle down to rest. / I close the gate, the yard is still, / And all is calm and blessed." },
-        { text: "A hen jumps up and flaps her wings, / She squawks and runs in fright. / I laugh so hard, I roll right over, / And land in the grass." },
-        { text: "The hens are tired, the sun is low, / They settle down to rest. / I close the gate, the yard is still, / And all is calm and quiet." }
+        { text: "My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found.", correct: true },
+        { text: "My sock is old and wearing thin, / The hole is big and wide. / I put it in the drawer to rest, / And leave it there to hide." },
+        { text: "My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / He waves it through the town." },
+        { text: "My sock is old and wearing thin, / The hole is big and wide. / I put it in the drawer to rest, / And never wear it again." }
       ],
       clue: "When you write for an audience, you choose words that give the listeners the feeling you want. The stanza must also keep the same rhyme pattern.",
       hints: [
         "When you write for an audience, you choose words that give the listeners the feeling you want. The stanza must also keep the same rhyme pattern.",
         "Check lines 2 and 4 of each choice for the rhyme, and read the words to decide what feeling each one gives.",
-        "A stanza about hens settling down to rest in a still yard has a quiet, calm feeling. Look at the choices that are left."
+        "A stanza about an old sock with a big hole put away in a drawer has a dull, quiet feeling. Look at the choices that are left."
       ],
       how: [
         "The poem's pattern is that lines 2 and 4 rhyme, and the new stanza should make classmates laugh.",
-        "The flapping stanza that ends \"And land in feathers white\" has lines 2 and 4 that rhyme (fright and white), and its flapping, squawking and rolling words feel funny.",
-        "The answer is the stanza about the hen that flaps her wings and ends \"And land in feathers white.\"",
-        "The resting stanzas feel calm, not funny. The other flapping stanza feels funny, but grass does not rhyme with fright."
+        "The dog stanza has lines 2 and 4 that rhyme (around and found), and a dog parading with a sock like a flag is funny.",
+        "The answer is: My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found.",
+        "The old sock stanzas feel dull, not funny. The other dog stanza is funny, but town does not rhyme with around."
       ],
       misconception: "A common mix-up is choosing the stanza with the right feeling without checking the rhyme. It needs both.",
-      why: "The answer is: A hen jumps up and flaps her wings, / She squawks and runs in fright. / I laugh so hard, I roll right over, / And land in feathers white. Fright and white rhyme in lines 2 and 4, and the flapping, squawking and rolling feel funny. The resting stanzas feel calm, and the other flapping stanza ends with grass, which does not rhyme with fright." },
+      why: "The answer is: My dog now wears it on his tail, / He prances all around. / He thinks it is a flag, I guess, / The best that he has found. Around and found rhyme in lines 2 and 4, and the dog parading with a sock is funny. The old sock stanzas feel dull, and the other dog stanza ends with town, which does not rhyme with around." },
     { id: "SK-TT4b-S11", type: "ms", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [], pick: 2, like: ["SK-TT4b-C11"],
       stem: [
         "The dog jumps up and dashes out,",
@@ -3784,32 +3784,32 @@ PP.addLesson({
       why: "The answers are \"The dog jumps up and dashes out,\" and \"He races past the tree.\" Jumps, dashes and races are action words that show the dog running. The other lines tell about the weather, the day or how the dog looks." },
     { id: "SK-TT4b-S12", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C12"],
       stem: [
-        "The campfire crackles, warm and bright,",
-        "It glows against the dark.",
-        "We toast our marshmallows until",
-        "They're burnt up black as night."
+        "The night-light glows beside my bed,",
+        "A soft gold glow above my head.",
+        "I pull my quilt up to my chin,",
+        "And listen to the clock go tick."
       ],
-      prompt: "In this stanza, lines 3 and 4 should rhyme. Which pair of lines should replace them so the stanza rhymes in pairs and still feels cozy?",
+      prompt: "In this stanza, lines 3 and 4 should rhyme. Which pair of lines should replace them so the stanza rhymes in pairs and still feels calm and sleepy?",
       choices: [
-        { text: "We toast our marshmallows with care, / And share a warm and sticky square.", correct: true },
-        { text: "We toast our marshmallows with care, / They're burnt up black as night." },
-        { text: "We toast our marshmallows with care, / And stomp the fire out in a flare." },
-        { text: "We toast our marshmallows with care, / And jump and shout and tumble down." }
+        { text: "I pull my quilt up to my chin, / And let the sleepy dreams begin.", correct: true },
+        { text: "I pull my quilt up to my chin, / And listen to the clock go tick." },
+        { text: "I pull my quilt up to my chin, / And jump around and start to grin." },
+        { text: "I pull my quilt up to my chin, / And toss it on the floor." }
       ],
       clue: "A good revision has to rhyme in the right place AND keep the feeling the poem needs. Check both for each choice.",
       hints: [
         "A good revision has to rhyme in the right place AND keep the feeling the poem needs. Check both for each choice.",
-        "Say the last words of the two new lines in each choice out loud, then decide how each pair would feel in a poem about a campfire.",
+        "Say the last words of the two new lines in each choice out loud, then decide how each pair would feel in a poem about bedtime.",
         "One choice keeps the old line 4, which is the line that does not rhyme. Look at the choices that are left."
       ],
       how: [
-        "The pattern is that lines 3 and 4 rhyme, and the stanza has a warm, cozy feeling around a campfire.",
-        "\"With care\" and \"sticky square\" rhyme, and sharing a warm treat fits a cozy fire.",
-        "The answer is: We toast our marshmallows with care, / And share a warm and sticky square.",
-        "The pair that ends \"black as night\" keeps the old line that does not rhyme, \"in a flare\" rhymes but puts the fire out, and \"tumble down\" does not rhyme with care."
+        "The pattern is that lines 3 and 4 rhyme, and the stanza has a calm, sleepy feeling at bedtime.",
+        "\"Chin\" and \"begin\" rhyme, and letting sleepy dreams begin fits bedtime.",
+        "The answer is: I pull my quilt up to my chin, / And let the sleepy dreams begin.",
+        "The pair that ends \"clock go tick\" keeps the old line that does not rhyme, \"start to grin\" rhymes but is not sleepy, and \"on the floor\" does not rhyme with chin."
       ],
-      misconception: "A common mix-up is picking a pair that rhymes without checking the feeling. The pair must rhyme AND fit the cozy campfire.",
-      why: "The answer is: We toast our marshmallows with care, / And share a warm and sticky square. Care and square rhyme, and sharing a warm treat is cozy. One choice keeps the line that does not rhyme, one rhymes but puts the fire out, and one does not rhyme." },
+      misconception: "A common mix-up is picking a pair that rhymes without checking the feeling. The pair must rhyme AND fit bedtime.",
+      why: "The answer is: I pull my quilt up to my chin, / And let the sleepy dreams begin. Chin and begin rhyme, and sleepy dreams are calm. One choice keeps the line that does not rhyme, one rhymes but is not sleepy, and one does not rhyme." },
     { id: "SK-TT4b-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C13"],
       stem: [
         "The drums begin, the crowd stands tall,",
@@ -3839,26 +3839,26 @@ PP.addLesson({
       misconception: "A common mix-up is picking a line that sets the scene instead of one that shows the feeling. The line must show what the people feel.",
       why: "The answer is: excited and joyful; \"We clap and stomp and sing along,\" Clapping, stomping and singing show the lively feeling. The drums line only sets the scene, and calm and sleepy does not match the poem." },
     { id: "SK-TT4b-S14", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.4.b"], passages: [], like: ["SK-TT4b-C14"],
-      prompt: "A poem about a picnic needs two more words. Lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the lines rhyme and make sense.",
-      text: "We spread the blanket on the grass, And watch the clouds go slowly {0}. The sandwiches are good to eat, The pickles are a salty {1}.",
+      prompt: "A poem about painting rhymes in pairs: lines 1 and 2 rhyme, and lines 3 and 4 rhyme. Choose the best word for each blank so the lines rhyme and make sense.",
+      text: "I dip my brush in paint of blue, And paint the sky for me and {0}. I add some clouds, so soft and white, I finish with the sun's warm {1}.",
       slots: [
-        { options: ["pass", "glass", "by"], answer: 0 },
-        { options: ["treat", "seat", "snack"], answer: 0 }
+        { options: ["you", "shoe", "everyone"], answer: 0 },
+        { options: ["light", "night", "glow"], answer: 0 }
       ],
       clue: "Each blank has to rhyme with the end of its pair AND make sense. A word can rhyme and still be wrong.",
       hints: [
         "Each blank has to rhyme with the end of its pair AND make sense. A word can rhyme and still be wrong.",
         "Read each pair of lines out loud. For each blank, say the word that comes before it in the rhyming line, then try each choice.",
-        "Clouds cannot go slowly glass, so cross that word out. Then decide between the other choices for each blank."
+        "Nobody paints the sky for me and shoe, so cross that word out. Then decide between the other choices for each blank."
       ],
       how: [
-        "Blank 1 must rhyme with grass. Blank 2 must rhyme with eat.",
-        "Blank 1: pass rhymes with grass, and clouds can pass slowly. Glass rhymes but makes no sense, and by makes sense but does not rhyme.",
-        "Blank 2: treat rhymes with eat, and a pickle can be a salty treat. Seat rhymes but does not fit, and snack fits the meaning but does not rhyme.",
-        "So the answers are pass and treat."
+        "Blank 1 must rhyme with blue. Blank 2 must rhyme with white.",
+        "Blank 1: you rhymes with blue, and the painter paints the sky for me and you. Shoe rhymes but makes no sense, and everyone makes sense but does not rhyme.",
+        "Blank 2: light rhymes with white, and the sun gives warm light. Night rhymes but does not fit the sun, and glow fits the meaning but does not rhyme.",
+        "So the answers are you and light."
       ],
       misconception: "A common mix-up is choosing the word that makes sense without checking the rhyme, or the reverse. Each blank needs both.",
-      why: "Blank 1 needs \"pass\": it rhymes with grass, and clouds can pass slowly. Glass rhymes but makes no sense, and by does not rhyme. Blank 2 needs \"treat\": it rhymes with eat, and a pickle can be a salty treat. Seat rhymes but does not fit, and snack does not rhyme." },
+      why: "Blank 1 needs \"you\": it rhymes with blue, and the painter paints the sky for me and you. Shoe rhymes but makes no sense, and everyone does not rhyme. Blank 2 needs \"light\": it rhymes with white, and the sun gives warm light. Night rhymes but does not fit, and glow does not rhyme." },
     { id: "SK-TT4b-S15", type: "ms", points: 2, dok: 3, std: ["3.T.T.4.b"], passages: [], pick: 2, like: ["SK-TT4b-C15"],
       stem: [
         "We ride out to my uncle's farm,",
