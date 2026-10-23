@@ -73,6 +73,24 @@ PP.addLesson({
         ["Trees would also bring wildlife to our school.", "Birds build nests in tree branches, and squirrels gather nuts under them.", "Our class could watch these animals and write about them in our science journals."],
         ["Some people say trees cost too much money.", "But our parent club raised money for new books last year, and it could do the same for trees."],
         ["Trees would make recess cooler and more fun.", "Let's plant some this fall!"]
+      ] },
+    /* B3 (expansion 2026-10-22, author b3b): p3 is used only by core set 2, p4 only by core set 3.
+       Never used by test. NEEDS INDEPENDENT REVIEW. */
+    { id: "p3", title: "Let Everyone Play", byline: "by Darnell, a third grader", genre: "Opinion text",
+      paragraphs: [
+        ["On some soccer teams, a few kids sit on the bench for most of the game.", "Sitting on the bench for a whole game is no fun.", "I think every player in the Maple Creek Kids League should get the same time on the field."],
+        ["First, kids get better by playing in real games.", "Last fall, our coach gave us all the same time to play.", "My friend Sam had never played before he joined our team.", "In our last game, Sam scored his first goal."],
+        ["Also, kids who get to play want to keep playing.", "Everyone knows that playing is more fun than watching.", "This spring, all 12 players from my team signed up again.", "On a team where many kids sat on the bench, only five players came back."],
+        ["Some people say the best players should play the most so the team can win.", "But kids join the league to learn and have fun.", "And our team still won more games than it lost."],
+        ["Please tell the league to give every player the same time on the field!"]
+      ] },
+    { id: "p4", title: "A Weather Station for Our School", byline: "by Keisha, a third grader", genre: "Opinion text",
+      paragraphs: [
+        ["Every morning, our class talks about the weather.", "But we have no way to measure the weather ourselves.", "Our school should put a weather station in the field behind the gym."],
+        ["First, a weather station would help us learn science.", "Science is my favorite subject.", "In March, Room 14 made a rain gauge out of a plastic bottle.", "Each day, the students measured the rain and added it to a chart."],
+        ["Next, a weather station would tell us the weather right at our school.", "Last May, our kickball game against Room 7 was called off because the TV news said storms were coming.", "Not one drop of rain fell at our school that day."],
+        ["Some people say a weather station would be too hard to take care of.", "But the science club at the high school has kept its station working for five years.", "The club members said they would show us how."],
+        ["A weather station would turn every day into a science lesson.", "Let's ask the principal to put one up this spring!"]
       ] }
   ],
   practice: [
