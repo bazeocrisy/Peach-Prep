@@ -597,7 +597,7 @@ PP.addLesson({
       hints: [
         "Cause and effect tells what happened and why. Find the cause first, then look for what happens because of it.",
         "All three sentences in the section are choices. Which one tells what the roots do?",
-        "The sentence about roots tells the cause, not what happens later. Read the first sentence again: does it tell what happens later, or only what the plants are like?"
+        "Read the first sentence again. Does it tell what happens later, or only what the plants are like?"
       ],
       how: [
         "The roots work with tiny living things to add plant food to the soil. That is the cause.",

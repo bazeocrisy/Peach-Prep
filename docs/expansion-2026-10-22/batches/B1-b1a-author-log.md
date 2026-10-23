@@ -753,7 +753,7 @@ No other choice, target, row, step or option changed.
 - h1: the trouble comes first and the outcome comes last.
 - h2: what has to happen before each event.
 - h3: the trouble comes before the explanation.
-- **Left to decide: the order of the two middle steps** (Grandma's explanation and the wire). This is a disclosure: h1 together with h3 fixes three of the four positions.
+- **Superseded by 11.7.** That version of the ladder fixed three of the four positions (h1 fixed the first and last, and h3 fixed the trouble before the explanation).
 
 **1.d C03.**
 - *Blank 1*, after h3 rules out the market: **live: the key and "letting one friend pick from his tree".**
@@ -802,7 +802,6 @@ No other choice, target, row, step or option changed.
 |---|---|
 | Similar-bank coverage (warning level) | The core items with no similar item are 1.a: 8, 1.b: 10, 1.d: 9. 1.d rose from 8 to 9, because S02's `like` honestly dropped C04. This is the lead's call, as in B0 |
 | Third re-review NOTEs: 1.a Together P3, C06, C13 and S02; 1.b C07 Part A, C08, Together P1 and P2, S02; 1.d Together P1 and C04 | These are NOTE level. Each item leaves two or more live choices, or it is a guided warm-up, so no change was asked for |
-| 1.b P4: h1 together with h3 still fixes three of the four positions | The SHOULD's prescribed fix (h2) was made. The middle pair still needs reasoning. Weakening h1 further would also weaken the lesson's own strategy line |
 | 1.b C05 and P4 are rehearsed by Together and by P7's `why` | Accepted as a NOTE in all three re-reviews |
 
 ### 11.6 Gates
@@ -811,3 +810,33 @@ No other choice, target, row, step or option changed.
 - No passage text changed, so readability is unchanged from §10.
 - Scratch audit (`scratchpad/b1a/audit.js`): 0 problems.
 - No git was run. I have not reviewed my own work.
+
+### 11.7 1.b P4 ladder reworked (lead follow-up)
+
+The lead ruled that P4's old ladder broke the "settle at most one step" rule. It is no longer in the 11.5 unaddressed list.
+
+**What changed.** Hint text only. The steps, the order and the points are unchanged.
+
+| Field | Before | After |
+|---|---|---|
+| `clue` (practice field) and h1 | "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out." | "Think about how the story's events are linked. One thing leads to the next." |
+| h2 | "For each event, ask what has to happen before it can happen." | unchanged |
+| h3 | "Jada finds the tomatoes gone before anyone tells her why. Use the same kind of thinking to place the other events." | "The last event is the one that shows how everything turned out. Use the question in hint 2 to place the other three." |
+
+**Positions settled after each hint.** The steps are:
+- (A) Jada finds half the tomatoes gone;
+- (B) Grandma Bea says rabbits come under the gate;
+- (C) Jada puts wire along the gate;
+- (D) every tomato is still on its vine.
+
+| After | Positions settled | Still open |
+|---|---|---|
+| `clue` = h1 | none. It is a strategy, with no first or last | all four (24 orders) |
+| h2 | none. It is a question to ask of each event | all four |
+| h3 | **one:** position 4 is D, the event that shows how things turned out | positions 1–3: A, B and C in any order (6 orders). The child has to reason that the trouble is found (A) before anyone explains it (B), and that the explanation comes before the fix (C) |
+
+**Check against Together and earlier items.**
+- P7's `why` (core 1.1) mentions blocking the gate. Together's `how` steps narrate the sequence. Neither gives the order. This was a NOTE in all three re-reviews.
+- The P4 `how` itself is unchanged: it ends at "every tomato is still on its vine (paragraph 5)" and does not name the story parts.
+
+**Gate:** `node verification/check-content.js --all` PASS, 0 failures, with the same warnings as in 11.6. No git was run.
