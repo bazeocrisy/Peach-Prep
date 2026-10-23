@@ -280,23 +280,23 @@ PP.addLesson({
           choices: [
             { text: "\"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"", correct: true },
             { text: "\"It has seven pairs of legs, so it has fourteen legs in all.\"" },
-            { text: "\"Crabs and shrimp live in water.\"" },
-            { text: "\"This helps turn them back into rich soil.\"" }
+            { text: "\"That is why you find roly-polies in dark, wet places, like under logs and piles of leaves.\"" },
+            { text: "\"If you find a roly-poly, hold it gently in your open hand.\"" }
           ] },
-        clue: "To find the audience, look at how the author talks to the reader. What does the author think the reader does?",
+        clue: "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
         hints: [
-          "To find the audience, look at how the author talks to the reader. What does the author think the reader does?",
-          "Reread paragraphs 1 to 3. Ask who would do the things the author talks about.",
+          "To find the audience, look at how the author talks to the reader, and ask what kind of reader that is.",
+          "Reread the whole article, and notice each place where the author speaks to you.",
           "Teachers are never mentioned in the article, so that Part A choice has no support. For Part B, choose the sentence that shows your Part A answer."
         ],
         how: [
           "The article begins by asking whether you have ever played in your yard and found a roly-poly. That question speaks to a child.",
-          "The facts about crabs, legs and soil are true, but the author never talks to scientists or gardeners.",
+          "Other sentences also say you, like where you find roly-polies and how to hold one, but any reader could do those things. Playing in your yard is what a child does.",
           "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\"",
-          "Teachers are not mentioned at all."
+          "The facts about crabs, legs and soil are true, but the author never talks to scientists, gardeners or teachers."
         ],
         misconception: "A common mix-up is thinking a text full of science facts must be for scientists. Look at how the author talks to the reader.",
-        why: "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\" The author talks to a reader who plays outside and finds bugs. The facts about crabs, legs and soil do not speak to scientists or gardeners, and teachers are never mentioned." },
+        why: "Part A: children who like to explore outside. Part B: \"Have you ever played in your yard and found a tiny gray bug that curls up into a ball?\" The author talks to a reader who plays in the yard and finds bugs. Finding roly-polies and holding one could be done by any reader, and the author never talks to scientists, gardeners or teachers." },
       { id: "SK-TC1a-C08", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.a"], passages: ["p3"],
         prompt: "In paragraph 4, the author writes that a roly-poly's hard back \"works like a bike helmet.\" Why does the author compare it to a bike helmet?",
         choices: [
@@ -378,9 +378,9 @@ PP.addLesson({
           { options: ["drivers passing by the school", "members of the Science Club", "families who read the school news", "workers at the planetarium"], answer: 0 },
           { options: ["families who read the school news", "drivers passing by the school", "members of the Science Club", "workers at the planetarium"], answer: 0 }
         ],
-        clue: "The same topic can be written for different readers. For each text, ask who it talks to and where that reader would see it.",
+        clue: "The same topic can be written for different readers. For each text, ask who it talks to.",
         hints: [
-          "The same topic can be written for different readers. For each text, ask who it talks to and where that reader would see it.",
+          "The same topic can be written for different readers. For each text, ask who it talks to.",
           "Reread the sign from top to bottom. Then reread every paragraph of the school news report.",
           "Planetarium workers are only the place the club will visit, so that choice fits neither blank. Test the other choices in each blank."
         ],
@@ -506,9 +506,9 @@ PP.addLesson({
         { text: "It tells readers to feel how heavy a rock is." },
         { text: "It tells readers where the rocks were found." }
       ],
-      clue: "Audience clues tell who the reader is. Look at what the sign asks the reader to do, and who could do it.",
+      clue: "Audience clues tell who the reader is. Ask which line would fit only one kind of reader.",
       hints: [
-        "Audience clues tell who the reader is. Look at what the sign asks the reader to do, and who could do it.",
+        "Audience clues tell who the reader is. Ask which line would fit only one kind of reader.",
         "Read each line of the sign, from the title to the last line.",
         "Where the rocks were found is a fact for every visitor, so it does not show who the reader is. Check the other details."
       ],
@@ -2658,7 +2658,7 @@ PP.addLesson({
         clue: "Read the box before the text. It tells what kind of text this is and when it is set.",
         hints: [
           "Read the box before the text. It tells what kind of text this is and when it is set.",
-          "In the box, find the words historical fiction and imagine. Then find the year.",
+          "In the box, find the words historical fiction and imagine. What do they tell you about who wrote the report?",
           "Nothing in the box or the report says Mrs. Dow wrote it, so that choice does not fit the first blank. Test the other choices for each blank."
         ],
         how: [
@@ -2681,7 +2681,7 @@ PP.addLesson({
         clue: "Individual context is who the writer is. People write most about the jobs they do and what they go through themselves.",
         hints: [
           "Individual context is who the writer is. People write most about the jobs they do and what they go through themselves.",
-          "Reread paragraphs 2 and 3. Who does each job?",
+          "Reread paragraphs 2 to 5 of the report. Choose two.",
           "Anyone in the family could tell what Mrs. Dow said, so that detail does not depend on who the writer is. Check the other choices."
         ],
         how: [
@@ -2726,7 +2726,7 @@ PP.addLesson({
         clue: "Individual context is who the writer is: his background and his experiences. Ask how the two people's experiences are different.",
         hints: [
           "Individual context is who the writer is: his background and his experiences. Ask how the two people's experiences are different.",
-          "Read the text box, then the journal. What is different about Elijah's life and his uncle's life?",
+          "Read the text box and the whole journal entry.",
           "Uncle Booker says the sky looks like this every clear night, so this was not the first clear night. Check the other choices."
         ],
         how: [
@@ -2803,7 +2803,7 @@ PP.addLesson({
         clue: "Individual context is who each writer is. The same weather can mean different things to different people.",
         hints: [
           "Individual context is who each writer is. The same weather can mean different things to different people.",
-          "Read each text box first. What does each writer do or have that depends on the weather?",
+          "Read each text box, then each writer's own words.",
           "Zuri swims at the pool, so she does not mind getting wet; that choice does not fit the second blank. Test the other choices for each blank."
         ],
         how: [
@@ -2826,7 +2826,7 @@ PP.addLesson({
         clue: "Context helps most when it explains what a text says. Ask which fact would make the note make sense.",
         hints: [
           "Context helps most when it explains what a text says. Ask which fact would make the note make sense.",
-          "Reread the note. What exactly are the neighbors asked not to do, and when?",
+          "Reread the note. What does the family ask its neighbors for?",
           "How long the family has lived on the street does not explain this one Saturday, so that choice does not fit. Check the other choices."
         ],
         how: [
@@ -2855,7 +2855,7 @@ PP.addLesson({
       clue: "Individual context is who the writer is: his job, his background and what has happened to him.",
       hints: [
         "Individual context is who the writer is: his job, his background and what has happened to him.",
-        "Read the text box, then the last sentence of his note.",
+        "Read the text box, then his whole note.",
         "He writes for the newsletter; he did not learn about dogs from it. Check the other choices."
       ],
       how: [
@@ -2879,7 +2879,7 @@ PP.addLesson({
       clue: "Time-period context explains how people did things back then. Read the box before the story.",
       hints: [
         "Time-period context explains how people did things back then. Read the box before the story.",
-        "Read the box, then Ma's words. What does the store have that the family needs?",
+        "Read the box, then Ma's words.",
         "Nothing in the story says the doctor works at the store, so that choice has no support. Check the other choices."
       ],
       how: [
@@ -2989,7 +2989,7 @@ PP.addLesson({
     "SK-TC2c-P9": {
       hints: [
         "The sign does not say why. Read the note in the box.",
-        "Read the box, then the sign. What happened the night before, and what does the sign change?",
+        "Read the box, then the sign.",
         "Field day is still happening today, only in the gym, so it was not moved to next week. Check the other choices."
       ],
       how: [
