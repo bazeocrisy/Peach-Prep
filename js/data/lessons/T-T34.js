@@ -1999,7 +1999,7 @@ PP.addLesson({
       hints: [
         "To find a rhyme pattern, say the last word of each line and find which lines rhyme. Then look for a stanza where the same lines rhyme.",
         "First find which lines rhyme in the stanza above. Then do the same for each choice.",
-        "In the stanza above, line 1 does not rhyme with any other line. A choice where lines 1 and 3 rhyme does not match."
+        "In the stanza above, only two lines rhyme. A stanza where all four lines rhyme does not match."
       ],
       how: [
         "In the stanza above, call and hall rhyme: lines 2 and 4. Hill and joy do not rhyme with anything.",

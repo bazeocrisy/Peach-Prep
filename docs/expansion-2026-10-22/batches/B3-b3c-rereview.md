@@ -135,3 +135,75 @@ Fix: change the S14 opinion to something else a sentence can prove, for example 
 - Right whale count: https://repository.library.noaa.gov/view/noaa/72014 (fetched; median 384, range 375 to 394, start of 2024)
 - Manatee dive time: https://savethemanatee.org/manatees/manatee-facts/ (fetched)
 - Ring-tailed lemur huddling and grooming: https://www.pbs.org/wnet/nature/blog/ring-tailed-lemur-fact-sheet (fetched)
+
+
+## Final spot re-solve (post-polish)
+
+Scope: section 9 of `B3-b3c-author-log.md` ("Fixes after B3 re-review"): 3.T.RA.2.b C05, C12, S14; 3.T.RA.2.a S09, S14. Read-only; no lesson edited, no git.
+
+### Method and honesty about the solve
+- I loaded `T-RA.js` in Node (stub `PP.addLesson`) and printed each item with its passages, stripping `why`, `hints`, `how`, `clue`, `misconception`, `like`, `std`. **The solve was not fully blind.** My first diagnostic print kept `correct: true` and `answer`, so I saw the keys before reasoning. I did not run a seeded shuffle and report no agreement rate (it would be meaningless). I instead reasoned from the passage on each item, then audited the ladder against the live-choice definition. All five keys are correct and each has one defensible answer; read this as "keys verified", not a blind agreement score.
+- The author log was read after that.
+
+### Facts checked
+- Knuckle test (S14): Dr. Donald Unger cracked the knuckles of his left hand but not his right for sixty years and found no arthritis. https://www.livescience.com/9729-knuckle-cracking-ig-nobel-prize.html (fetched), also https://improbable.com/2009/11/05/interview-with-dr-knuckle-cracker/. The item's "both hands were just as healthy" is faithful.
+- Narwhal (S09): the tusk is a modified tooth that grows through the upper lip; it has many nerve endings and one study suggests it can detect changes in the water; only about 15 percent of females have an elongated tusk, so "most females do not" is right. https://ocean.si.edu/node/107233 (fetched). "Scientists think" is the right hedge.
+- Bulls and red (C12): MythBusters bull test was already verified in the first review (https://mythresults.com/episode85). "As much as a small car" for a grown bull is on the generous side but within range for large breeds; NOTE only.
+- Peach trees (C05): no peach tree grows ten feet a year; claim is plainly false.
+
+### Per-item findings (live choices after clue + h1 to h3)
+
+**3.T.RA.2.b C05 (dropdown, 2 pts, DOK 2).**
+- Keys: blank 1 "does not tell who they are or how they know"; blank 2 "a number that cannot be true". Correct against the post (signed only "PeachFan", "Trust me", ten feet a year).
+- The new h3 for blank 1 ("Is it a name you could look up, or only a screen name?") no longer echoes the key wording. It does steer to the signature, so blank 1 is close to solved by hint 3. Live: blank 1 nominally 3, effectively 2 after h3; blank 2: 3 (no hint touches it).
+- SHOULD-1 (distractor polarity): the stem frames a reason NOT to use the post, and the rivals are all reasons TO trust it ("is a scientist who studies fruit trees", "has grown peaches in Georgia for years", "facts that scientists measured", "a link to a college farm guide"). None of those is stated in the post, so a child can rule them out two ways: they are not in the post, and they would be reasons to trust. A child can get both blanks right from the grammar of "should not use ... because" alone. Fix: give blank-1 and blank-2 rivals the same polarity as the key and keep them out of the post, e.g. blank 1: "uses all capital letters" / "writes only one short post"; blank 2: "a picture that looks old" / "a joke that is not funny", or rivals that are real credibility cues that are weaker than the key. Not a MUST because the item still tests the idea (credible vs not) and the key is not word-matched, but it is the weakest item of the five.
+- Word match: none; "name"/"screen name" in h3 vs "who they are" in the key is a paraphrase.
+- Topic reuse: only here. 
+
+**3.T.RA.2.b C12 (mc, 1 pt, DOK 3).**
+- Key "The bulls charged all three flags, and they did not pick the red one." Correct.
+- h3: "A sentence gives a reason to doubt a claim only if it tells what happened when someone checked the claim. Ask this of each answer." The belief clause is gone (confirmed in the file). Live: 3 (key, the set-up sentence "a TV show put a red flag...", and the belief sentence). The weight sentence is off topic and weak; the set-up sentence is the real rival since it is about checking but does not give a result. Good.
+- Word match: key shares "red" and "flag" with the claim and the set-up rival; fine.
+- `how` and `why` agree with the choices.
+- No MUST or SHOULD.
+
+**3.T.RA.2.b S14 (mc, 1 pt, DOK 3).**
+- Key "When he was old, both of his hands were just as healthy." Correct. Clue/h1 are now "A good reason to doubt a claim comes from someone testing it, not from what people say about it."
+- Live: clue and h2 (sentences 2, 3, 4) already take out sentence 1. Remaining 3: sentences 2 and 3 (how he tested) and sentence 4 (what he found). h3's last step ("how he checked, or what he found?") separates 2 and 3 from 4. That is the same two-step logic as C12 and it names no choice, so it is fair, but the ladder is quite directive: by h3 the child is told the criterion that selects 4. Matches the author's "4 / 3 / 3".
+- Word match: none between claim ("ruins your hands") and key ("just as healthy"). Good.
+- Honest `like` to C12 (reason to doubt from a test result).
+- Topic reuse: "knuckles" appears in `T-C.js` only as body parts in other passages (Zadie at the dentist; Mama's washboard), not as the cracking myth. No duplicate.
+- NOTE: the stem's "(1)" to "(4)" numbering is consistent with the hints.
+
+**3.T.RA.2.a S09 (mc, 1 pt, DOK 2).**
+- Key "Scientists think the tusk can pick up changes in the water." Correct. The stem idea ("helps it find out what is happening around it") and the key share no phrase; "pick up changes" is a fair paraphrase of sensing.
+- Live: h1 ("a sentence that shows the tusk doing a job") already leaves sentence 3 as the only job sentence; h2 removes sentence 1 ("where narwhals live"); h3 removes sentence 4. Two live remain (key and "grows out through its lip"). Author's "4 / 3 / 2" is right. Two live is within the rule, but h1 plus the clue nearly decides it (the key is the only sentence with the tusk acting), so the ladder is steep. SHOULD-2 (optional): move the "job or what it is" test out of the clue/h1. Keep h1 as the strategy ("the idea is about what the tusk does") and let h3 carry the job-versus-what-it-is step. That leaves one more live choice at h1.
+- Word match: "tusk" is in three choices; only the key lacks it as a feature definition. No isolating word.
+- Facts: verified (above).
+- Topic reuse: narwhal appears only in `T-RA.js`.
+
+**3.T.RA.2.a S14 (mc, 1 pt, DOK 2).**
+- Key "\"It's okay, we'll go slower,\" Cam said, and he walked beside her, holding the seat." Correct. Opinion "Cam is patient with his sister"; no word match to the key (no "patient", "sister").
+- Live: h2 asks who each sentence is about and h3 removes sentence 2 (Rosa). Remaining 3: key, "showed her how to ride" (teaching, plausible for patience at a glance), "learned to ride when he was five" (weak). Author's "4 / 4 / 3" is right. The h3 criterion, "what each one shows Cam doing when Rosa has trouble", fits only sentence 3 and so is close to the key's content, but it does not quote it, so I treat it as a scaffold. SHOULD-3 (optional): change "doing when Rosa has trouble" to "doing" or "saying" so it does not carry the idea of trouble, which only the key contains.
+- The key is the only choice with Cam speaking and acting; it is also the longest. Minor given the opinion is about Cam's behavior toward Rosa.
+- The scenario is new (Rosa/Cam); not repeated elsewhere in `T-RA.js`. "Rosa" also appears in `L-GUM2.js` as a grammar fill-in ("Rosa {0} her bike"), a different skill and sentence. NOTE.
+- `like` C13: honest mapping (opinion plus supporting sentence).
+
+### Cross-checks
+- Points: dropdown (2 slots) = 2, mc = 1; DOK as labelled.
+- Official wording: 3.T.RA.2.a "Refer to specific passages from a text to support an idea, answer, or opinion" fits S09 and S14. 3.T.RA.2.b "Determine what makes a source text credible and relevant and identify examples" fits C05 well; C12 and S14 ask for evidence against a claim, which is a looser fit but acceptable under "credible" (testing a claim) and matches how the lesson models it.
+- Grade-3 suitability and passage agreement: fine.
+- Set-level giveaways: none found into form A or B from these five items; keys do not repeat.
+
+### Findings summary
+- MUST: none.
+- SHOULD-1: RA2b C05 rivals are all trust cues, so polarity gives both blanks away (fix above).
+- SHOULD-2 (optional): RA2a S09 clue/h1 "shows the tusk doing a job" nearly decides the item.
+- SHOULD-3 (optional): RA2a S14 h3 "when Rosa has trouble" carries the key's content.
+- NOTE: S14 (RA2b) ladder is directive; C12 bull weight phrase; name reuse of Rosa in L-GUM2.
+
+### Verdict
+- 3.T.RA.2.b: **ACCEPTED**, with SHOULD-1 recommended (C05 distractors).
+- 3.T.RA.2.a: **ACCEPTED**, with optional SHOULD-2 and SHOULD-3.
+
+Sources: https://www.livescience.com/9729-knuckle-cracking-ig-nobel-prize.html, https://ocean.si.edu/node/107233 (both fetched); https://mythresults.com/episode85 (first review).

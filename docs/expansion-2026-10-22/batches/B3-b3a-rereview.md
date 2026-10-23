@@ -124,3 +124,63 @@ None.
 ## 7. Verification of ladder details I relied on
 
 I printed the clue, hints 1 to 3, `how`, `why` and `misconception` for every item named in the task (1.a C03, C06, C07, S02, S07, S09, S10, S13, P2, C14; 2.c P8, C07, C11, C12, C13, S02, S07, S08, P2, P6, P7) with `show.js` and applied the live-choice definition to each. Nothing in an earlier item's `how` or `why` states a later item's key within these lessons. I did not run the browser (not asked). The content gate was not rerun.
+
+
+## Final spot re-solve (post-polish)
+
+Scope: the four post-acceptance edits in `B3-b3a-author-log.md` ("Polish after re-review"): 3.T.C.1.a C07 Part B; 3.T.C.2.c P8, C07, S08. Read-only review; no lesson edited, no git.
+
+### Method and honesty about the solve
+- I loaded `T-C.js` in Node (a stub `PP.addLesson`) and printed each item with its passages, stripping `why`, `hints`, `how`, `clue`, `misconception`, `like`, `std`. **The solve was not fully blind.** My first diagnostic print kept `correct: true` and `answer` on the choices, so I saw all keys for these items before reasoning. I therefore did not run a seeded shuffle and I report no agreement rate: it would be meaningless. What I did instead was reason through each item from the passage on its merits and then check the ladder (clue, h1 to h3, `how`, `why`) against the live-choice definition. Every key is correct and defensible from the text, but treat "keys agree" as "keys verified correct", not as a blind agreement score.
+- Author log read after that.
+
+### Per-item findings (live choices after clue + h1 to h3)
+
+**3.T.C.1.a C07 (ebsr, 2 pts, DOK 2).**
+- Keys: A "children who like to explore outside"; B "Have you ever played in your yard...". Both correct and match the passage (para 1 speaks to a child).
+- The new Part B choice "A roly-poly is not really a bug at all." is a plain fact with no respelling. It is a clean rival: a careful reader could ask whether a "not a bug" surprise suits a child. It does not show a reader, so the key still stands alone as the only sentence that talks to the reader.
+- Live: Part A 3 (children, scientists, gardeners; h3 removes teachers). Part B 4 of 4 (h3 only says "choose the sentence that shows your Part A answer", which narrows nothing). Author's table says the same.
+- Word match: "explore outside" vs "played in your yard" is a paraphrase, not a shared word. No word-match key. Hint 3 does not echo either key.
+- `how` accurate (the line about the crab and shrimp comparison now matches the passage). Facts: roly-poly is a land crustacean with 7 pairs of legs, eats decaying plant matter; correct.
+- Topic reuse: roly-poly appears only in T-C.js. 
+- No MUST, no SHOULD.
+
+**3.T.C.2.c P8 (mc, 1 pt, DOK 2; practice item reused as core ref).**
+- Key "She has driven a bus for years and has had to stop fast many times." Correct: the box gives 15 years, her note gives "stop fast many times".
+- New rivals: newsletter story (removed by h3), "once saw a news video ... and a rider fell", "has fallen herself while standing on a bus as a rider". Live after h3: 3 (key, video, fell as a rider). The video and fell-as-rider rivals are excluded only by careful reading (nothing in box or note says she saw a video or fell), which is the intended individual-context reasoning. Good.
+- Word match: the key repeats "stop fast many times" from the note, but so do all the rivals ("stopped fast"), so the match does not isolate the key. Fine.
+- `why` and `how` match the choices. `how` step 4 says "Nothing in the box says she has ever been a rider who fell", which is accurate and fair.
+- NOTE: clue says "find what she says she has seen"; she says she has "had to stop fast", not "seen". Harmless but loose.
+- NOTE: "Ms. Greene" the bus driver also appears in `T-T2.js` (SK-TT2a-S01, a heading item). Different skill, same name; pre-existing, already noted as N-4.
+
+**3.T.C.2.c C07 (mc, 1 pt, DOK 2).**
+- Key "Rain kept the wash from drying outside, and homes had no dryers, so it hung in the kitchen." Correct. Paragraph numbering as the child sees it (headings and boxes not counted): para 4 = "Last Monday it rained..." and hint 2 "paragraphs 3 to 5" covers it plus the wind (3) and irons (5) distractors. Consistent.
+- New clue/h1: "Situational context is what was happening at the time, and what people had back then. Both can explain why someone says something." It names the idea but not rain or dryers. It does shape the answer (the key has exactly a "what was happening" part and a "what people had" part), but it does not narrow the choices. The irons rival ("what people had") and the wind rival ("what was happening") both still fit the clue.
+- Live: 3 (key, irons, wind); h3 removes the plants. 
+- Passage-to-answer: the passage says "no washing machine" and "wet clothes hung all over our kitchen"; "no dryers" is inferred, not stated. It is a fair period inference for 1908 (the clue says "what people had back then") and the box's "no washing machine" supports it. NOTE only.
+- Word match: "Rain", "kitchen" overlap the passage, as do the rivals ("kitchen", "irons", "wind", "leaves"). No isolating match.
+
+**3.T.C.2.c S08 (dropdown, 2 pts, DOK 2).**
+- Keys: slot 1 "by an author today, who imagined Emmett"; slot 2 "a night with a lamp lighter in 1895". Both correct.
+- Retained detail: the text now says he "reached up and pulled a small chain". Verified: lamplighters used a pole with a hook to pull a chain (and some lamps had a lever or valve), and many lamps also had a pilot light. 1900s.org.uk/lamp-lighter.htm: "use the hook to pull open the lamp window", then "pulled a chain to open the gas supply"; lamps with a chain also had a pilot light. Wikipedia Lamplighter: https://en.wikipedia.org/wiki/Lamplighter. Gas street lighting was common in towns by the 1890s. The detail is acceptable. NOTE: where a lamp has a chain and a pilot light, the "tiny flame on the end of the pole" is less necessary, but lamplighter poles did carry a flame for lamps without pilots, so the combination is not wrong.
+- Live: slot 1: 3 (author today, real boy Emmett, the uncle); h3 removes the newspaper writer. Slot 2: nominally 4 (no hint removes any); the author counts about 2, and I agree that "how electric lights work" and "a boy who got lost in the dark" are weak. 
+- Word match: slot 1 key "imagined" echoes the box's "Imagine". Hint 2 points to the words "historical fiction" and "imagine", so the ladder gets the child to the right sentence; the child still has to know what historical fiction means, and the rival "a real boy named Emmett in 1895" also echoes the box (Emmett, 1895). I rate it SHOULD-level at most, see below. Slot 2's key is the only option that matches the diary's content and box ("1895", lamps); it is the easy slot (same pattern as the earlier N-3).
+- SHOULD-A (spelling): the key and `how`/`why` say "lamp lighter" (two words). The standard spelling is "lamplighter", and the box and diary never use either word. A grade-3 reader will meet the noun only in the key, so please use "lamplighter" in the slot-2 key, `how` and `why`. Cosmetic; no key change.
+- Topic reuse: no other lamplighter item. "street lamp(s)" appears in `T-TS.js` (sea-turtle article, SK-TSPS-S12) as a light source; unrelated.
+
+### Cross-checks
+- Points: ebsr 2, dropdown (2 slots) 2, mc 1; DOK as labelled. 
+- Official wording: 3.T.C.1.a "purpose and target audience"; 3.T.C.2.c "identify the context ... (time period, individual, situational)". P8 = individual, C07 = situational, S08 = time period/genre. Aligned.
+- Grade-3 suitability: fine.
+- No new set-level giveaways found: the polished C07 Part B choice is not reused in another item's key.
+
+### Findings summary
+- MUST: none.
+- SHOULD-A: S08 "lamp lighter" to "lamplighter" (key, how, why).
+- NOTE: S08 slot 1 key echoes "imagine"; S08 slot 2 easy; P8 clue "has seen" loose; C07 "no dryers" inferred.
+
+### Verdict
+- 3.T.C.1.a: **ACCEPTED** (C07 Part B polish is sound).
+- 3.T.C.2.c: **ACCEPTED**, with the optional spelling fix (SHOULD-A). P8, C07 and S08 are all sound; the pulled-chain detail is verifiable.
+
+Sources: https://1900s.org.uk/lamp-lighter.htm (fetched), https://en.wikipedia.org/wiki/Lamplighter (cited in the first review).
