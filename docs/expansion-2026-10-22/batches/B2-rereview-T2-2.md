@@ -284,3 +284,75 @@ Recommended:
 2. **2.b S02:** replace "farmers asked to keep dirt" with a tempting wrong cause the shops fact cannot remove (SHOULD-2).
 3. Correct the two §11.3 rows in the author log.
 4. NOTE-3 to NOTE-5 whenever those items are next touched.
+
+## Round 2 re-check (after §12 of the author log)
+
+**Scope:** 2.a C03, 2.b S02 and 2.b C06, as the coordinator asked.
+- I had seen both items before this round, so this re-check is **not blind**. I judged the new choices directly against the stems.
+- I also re-read §12 of the author log and re-ran both gates.
+
+### 2.a C03 (animal shelter)
+
+- **New option:** "animals waiting for new homes at the shelter".
+- **Key check.**
+  - "helpers caring for the animals at a busy shelter" is still the single defensible answer.
+  - Sentence 1 frames the paragraph around helpers ("full of helpers"). Every later sentence except the last shows a helper doing a job.
+  - Animals appear in every sentence, but only the last one is about a new home. So the new option fits one sentence's idea and leaves out the helpers. That is a real misreading, and it is clearly wrong.
+- **Ladder.** Live choices after each hint:
+  - h1: 4.
+  - h2: 4.
+  - h3: the key and "animals waiting".
+    - The one-sentence rule removes the girl and the family.
+    - It cannot remove "animals waiting", because animals are in every sentence.
+  - Two choices stay live, and hint 3 does not echo the key.
+- **Explanations.** The how and why explain the new choice accurately.
+- **Earlier items.** Nothing in P4, P7 or Together P1, P2 and P6 answers it.
+- **Result: SHOULD-1 cleared.**
+
+### 2.b S02 (brick street, similar)
+
+- **New option:** "Too many wagons crowded Main Street, so the town wanted a wider road."
+- **Key check.**
+  - "Wagons sank in the mud, so farmers could not get their crops to town" is still the single defensible answer.
+  - The text gives mud as the problem and So as the link to the paving.
+  - It never mentions crowding or widening, and paving does not widen a road. So the new choice is unsupported but tempting, because it reuses "wagons" and "Main Street".
+- **Ladder.** Live choices after each hint:
+  - h1: 4.
+  - h2: 4. The shops sentence is live.
+  - h3: the key and "wagons crowded".
+    - The shops-came-later fact removes the red-street choice and the leftover-bricks choice.
+    - It does not touch the crowding choice.
+  - Two choices stay live.
+- **Explanations.** The why covers the new choice.
+- **Result: SHOULD-2 cleared.**
+
+### 2.b C06 (Ferris order) and the p4 trim
+
+- **The trim.**
+  - p4 ¶4 now reads "They said yes." in place of "At last, they said yes."
+  - p4 is 179 words (my count and `readability.py`) at FK 3.0, so NOTE-5 is cleared.
+- **Hint 1 and the clue** now say "time words like a few years later and today". Both phrases are in the passage:
+  - "A few years later" opens ¶2;
+  - "Today" opens the last sentence of ¶6.
+- **Removed phrases.** No 2.b string now contains "At last" or "they said yes". The trim broke no quote.
+- **Ladder.** It is unchanged: h1 and h2 leave the order open, and h3 fixes only the first step.
+  - "A few years later" places the planners after Paris. Hint 3 already fixes the tower as first, so hint 1 settles no extra step.
+  - "Today" points to ¶6, which holds none of the five events. It is a fair general example, and it does not mislead.
+- **NOTE.** C08's how[2] (T-T2.js:1138) still says "and since then wheels like his have been built". This is the author's own narration, not a quote, and p4 never contained "since then", so nothing is broken. "Today" would match the passage more closely. This is optional.
+
+### Gates
+
+- `check-content.js --all`: PASS (0 failures, 25 warnings, unchanged).
+- `readability.py`: 2.b p4 is 179 words at FK 3.0.
+
+### Log accuracy (§12)
+
+§12.1 to §12.3 match the data. The corrected ladder rows agree with mine.
+
+### Round 2 verdict
+
+| Lesson | MUST | SHOULD | Verdict |
+|---|---|---|---|
+| 3.T.T.2.a | 0 | 0 | **ACCEPTED** |
+| 3.T.T.2.b | 0 | 0 | **ACCEPTED** |
+| 3.T.T.2.c | 0 | 0 | **ACCEPTED** (unchanged) |
