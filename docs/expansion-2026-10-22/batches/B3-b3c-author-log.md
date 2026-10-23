@@ -516,3 +516,13 @@ RA2b C12, C05, S14; RA2a S09, S14.
 
 ### Gates
 `check-content.js --all`, `check-writing.js`, `check-instructional-copy.js` and `readability.py` were rerun after these edits; results are in the report.
+
+## 10. Fixes after the final spot re-solve
+
+| Item | Change | Live after H1 / H2 / H3 |
+|---|---|---|
+| RA2b C05 | The rivals now point the same way as the key (reasons not to trust) and are not true of the post. Blank 1: "is trying to sell the reader a product", "is paid to say nice things about peaches". Blank 2: "a date that is out of date", "a picture that is blurry". The post has no sale, pay, date or picture, so the child must check the post. Keys unchanged. | Blank 1: 3 / 3 / 2. Blank 2: 3 / 3 / 3. |
+| RA2a S09 | Clue and hint 1 now say "A sentence supports an idea when it gives a fact that fits what the idea says. Read the idea, then test each sentence against it." The what-it-is versus what-job test stays in hint 3 only. | 4 / 3 / 2 (key, "what the tusk is"). Hint 1 now removes none. |
+| RA2a S14 | Hint 3 now says "ask what each one shows Cam doing or saying", with "when Rosa has trouble" removed. | 4 / 4 / 3 |
+
+Needs blind re-solve: RA2b C05 (new rivals), RA2a S09, RA2a S14.

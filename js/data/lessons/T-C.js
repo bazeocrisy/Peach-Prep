@@ -3918,7 +3918,7 @@ PP.addLesson({
       text: "The diary was written {0}. It tells about {1}.",
       slots: [
         { options: ["by an author today, who imagined Emmett", "by a real boy named Emmett in 1895", "by Emmett's uncle, who lit the lamps", "by a newspaper writer in 1895"], answer: 0 },
-        { options: ["a night with a lamp lighter in 1895", "how street lamps are made today", "how electric lights work", "a boy who got lost in the dark"], answer: 0 }
+        { options: ["a night with a lamplighter in 1895", "how street lamps are made today", "how electric lights work", "a boy who got lost in the dark"], answer: 0 }
       ],
       clue: "Read the box before the text. It tells what kind of text this is and when it is set.",
       hints: [
@@ -3929,11 +3929,11 @@ PP.addLesson({
       how: [
         "The box says the diary is historical fiction and asks you to imagine that Emmett wrote it in 1895.",
         "Historical fiction is written by an author today but set in the past. So an author today imagined Emmett.",
-        "The first blank is \"by an author today, who imagined Emmett\" and the second blank is \"a night with a lamp lighter in 1895.\"",
+        "The first blank is \"by an author today, who imagined Emmett\" and the second blank is \"a night with a lamplighter in 1895.\"",
         "Emmett is made up, and the diary is about lighting street lamps by hand, not making lamps, electric lights or a boy lost in the dark."
       ],
       misconception: "A common mix-up is thinking historical fiction is a real old paper. The box tells you it was made up and set long ago.",
-      why: "The answers are \"by an author today, who imagined Emmett\" and \"a night with a lamp lighter in 1895.\" The box says it is historical fiction, so an author imagined Emmett. The diary shows a man lighting street lamps by hand, not making lamps, electric lights or a boy lost in the dark." },
+      why: "The answers are \"by an author today, who imagined Emmett\" and \"a night with a lamplighter in 1895.\" The box says it is historical fiction, so an author imagined Emmett. The diary shows a man lighting street lamps by hand, not making lamps, electric lights or a boy lost in the dark." },
     { id: "SK-TC2c-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.2.c"], passages: [],
       like: ["SK-TC2c-C14"],
       stem: ["Box: Ms. Rowe sells umbrellas and raincoats at her shop downtown.", "Ms. Rowe's notebook: Rain again today! The shop was full all morning.", "Box: Theo is eight. His first baseball game was planned for today.", "Theo's diary: Rain again. No game. I stared out the window all day."],

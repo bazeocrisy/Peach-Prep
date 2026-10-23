@@ -2910,9 +2910,9 @@ PP.addLesson({
         { text: "A narwhal is a whale that lives in icy Arctic water." },
         { text: "Most male narwhals have a tusk, but most females do not." }
       ],
-      clue: "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk doing a job.",
+      clue: "A sentence supports an idea when it gives a fact that fits what the idea says. Read the idea, then test each sentence against it.",
       hints: [
-        "The idea is about what the tusk does, not only about what the tusk is. Look for a sentence that shows the tusk doing a job.",
+        "A sentence supports an idea when it gives a fact that fits what the idea says. Read the idea, then test each sentence against it.",
         "Three sentences are about the tusk. Read those three closely.",
         "Which narwhals have tusks tells who has one, not what it does. For each of the other two sentences about the tusk, ask: does it tell what the tusk is, or what job it does for the narwhal?"
       ],
@@ -3032,7 +3032,7 @@ PP.addLesson({
       hints: [
         "The opinion is about Cam, so the proof must show something Cam says or does that fits the opinion.",
         "Read all four sentences and ask who each one is about.",
-        "Sentence 2 is about Rosa, not Cam. For the other three, ask what each one shows Cam doing when Rosa has trouble."
+        "Sentence 2 is about Rosa, not Cam. For the other three, ask what each one shows Cam doing or saying."
       ],
       how: [
         "The opinion is that Cam is patient.",
@@ -3447,8 +3447,8 @@ PP.addLesson({
         prompt: "Jamal decides not to use this post. Complete his reason.",
         text: "I should not use this post because the writer {0}, and the post gives {1}.",
         slots: [
-          { options: ["does not tell who they are or how they know", "is a scientist who studies fruit trees", "has grown peaches in Georgia for years"], answer: 0 },
-          { options: ["a number that cannot be true", "facts that scientists measured", "a link to a college farm guide"], answer: 0 }
+          { options: ["does not tell who they are or how they know", "is trying to sell the reader a product", "is paid to say nice things about peaches"], answer: 0 },
+          { options: ["a number that cannot be true", "a date that is out of date", "a picture that is blurry"], answer: 0 }
         ],
         clue: "A reason not to trust a source can be about who made it or about its words. Check both parts of the post.",
         hints: [
