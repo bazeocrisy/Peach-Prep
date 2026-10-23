@@ -645,7 +645,7 @@ PP.addLesson({
       hints: [
         "Description helps the reader picture a place: how it looks, sounds or feels. Ask which sentence paints a picture of the shop.",
         "Read sentences 2 and 4, on each side of the blank. The new sentence has to fit between them.",
-        "The line in quotation marks is dialogue, so it does not describe the shop. Check each sentence that is left: does it help you picture the shop, or does it tell about a person?"
+        "The line in quotation marks is dialogue, so it does not describe the shop. Check each sentence that is left against the job in the question."
       ],
       how: [
         "The job is to describe the shop, so the new sentence must tell how the shop looks, sounds, smells or feels.",
@@ -713,13 +713,13 @@ PP.addLesson({
       why: "Part A: He feels scared. Part B: \"Amos stopped on the fourth step and grabbed the rail with both hands.\" Grabbing the rail shows fear at the start. His louder voice and letting go come later, and the zigzag stairs describe the tower." },
     { id: "SK-TT1a-S09", type: "match", points: 2, dok: 2, std: ["3.T.T.1.a"], passages: [],
       like: ["SK-TT1a-C09"],
-      stem: ["Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. \"I had them when I watered the tomatoes,\" he said. Kemi ran out to the garden with a flashlight. A shiny glint was poking out from under the tomato leaves. Kemi held up the glasses. \"Found them!\" she said, and Grandpa opened the book."],
+      stem: ["Grandpa could not find his reading glasses, so he could not read Kemi her bedtime story. \"I had them when I watered the tomatoes,\" he said. \"I may have knelt down by the plants.\" Kemi ran out to the garden with a flashlight. A shiny glint was poking out from under the tomato leaves. Kemi held up the glasses. \"Found them!\" she said, and Grandpa opened the book."],
       prompt: "Read the story. How does each detail move the plot? Match each detail to what it does in the story.",
       cols: ["Starts the problem", "Helps Kemi know where to look", "Solves the problem"],
       rows: [
         { text: "Grandpa cannot find his reading glasses.", answer: 0 },
         { text: "\"I had them when I watered the tomatoes.\"", answer: 1 },
-        { text: "A shiny glint pokes out from under the tomato leaves.", answer: 1 },
+        { text: "\"I may have knelt down by the plants.\"", answer: 1 },
         { text: "Kemi holds up the glasses and says, \"Found them!\"", answer: 2 }
       ],
       clue: "Events and words can move a plot. Ask: does this start the problem, keep the search going, or end it?",
@@ -730,12 +730,12 @@ PP.addLesson({
       ],
       how: [
         "Grandpa cannot find his glasses, so he cannot read the story. That starts the problem.",
-        "Grandpa's words send Kemi to the garden, and the glint shows her where under the leaves to look. Both help her know where to look.",
+        "Grandpa's two comments send Kemi to the garden and tell her to look low, near the plants. Both help her know where to look.",
         "Kemi holding up the glasses ends the search, so it solves the problem.",
         "So: starts the problem, helps her know where to look, helps her know where to look, solves the problem."
       ],
       misconception: "A common mix-up is thinking a clue solves the problem. A clue points the way; the problem is solved when the glasses are found.",
-      why: "The missing glasses start the problem. Grandpa's words and the shiny glint each help Kemi know where to look. Holding up the glasses solves the problem." },
+      why: "The missing glasses start the problem. Grandpa's two comments each help Kemi know where to look. Holding up the glasses solves the problem." },
     { id: "SK-TT1a-S10", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p6"],
       like: ["SK-TT1a-C10"],
       prompt: "Why does the author describe the numbered signs on the stairs?",
@@ -1883,12 +1883,12 @@ PP.addLesson({
           { text: "\"Emre held a cup upside down over the spot while Grandpa slid a card underneath.\"", correct: true },
           { text: "\"Emre pulled his pillow over his head, but the chirping went right through it.\"" },
           { text: "\"Tomorrow was the class trip to the aquarium, and Emre had to wake up at six.\"" },
-          { text: "\"The room was quiet at last.\"" }
+          { text: "\"Grandpa came in and listened.\"" }
         ] },
       clue: "A character's job in the plot is what the character does to move the story toward a solution. Ask whether this character has the problem, causes it or helps fix it.",
       hints: [
         "A character's job in the plot is what the character does to move the story toward a solution. Ask whether this character has the problem, causes it or helps fix it.",
-        "Find Grandpa in the story. List what he says and does after he is asked for help.",
+        "Find where Grandpa appears in the story. List what he says and does.",
         "Emre, not Grandpa, is the one who cannot sleep, so Grandpa does not have the problem. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [
@@ -2912,23 +2912,23 @@ PP.addLesson({
         { text: "Mr. Alder leaves a new book with a thank-you note.", correct: true },
         { text: "A neighbor builds a second box for the extra books.", correct: true },
         { text: "Amira loves to read." },
-        { text: "The nearest library is a long bus ride away." },
+        { text: "Mr. Alder walks his dog past the fence every day." },
         { text: "Amira nails the box to her fence." }
       ],
       clue: "An effect happens because of a cause. Find the cause, and then look for events that come after it.",
       hints: [
         "An effect happens because of a cause. Find the cause, and then look for events that come after it.",
-        "Find the moment Amira nails up the box. Nothing can be caused by itself, or by things that were already true.",
+        "Find the moment Amira nails up the box. Then ask which events would not have happened without the box.",
         "Amira's love of reading is true before the box goes up, so it cannot be an effect. Check each other choice the same way."
       ],
       how: [
         "Amira nails up the box on Saturday. Everything that happens because of it must come after.",
         "Mr. Alder leaves a book with a note, and later a neighbor builds a second box because the first one is too full.",
         "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\"",
-        "Loving to read and the far library were true before she put up the box, and nailing up the box is the cause, not a result."
+        "Loving to read was true before she put up the box, Mr. Alder walked his dog past the fence every day anyway, and nailing up the box is the cause, not a result."
       ],
       misconception: "A common mix-up is choosing a fact from the start of the story. Those are reasons for the box, not results of it.",
-      why: "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\" Both happen after the box goes up. Amira's love of reading and the faraway library were true before, and nailing up the box is the cause, not an effect." },
+      why: "The answers are \"Mr. Alder leaves a new book with a thank-you note.\" and \"A neighbor builds a second box for the extra books.\" Both happen after the box goes up. Amira's love of reading was true before, Mr. Alder walks his dog past the fence every day anyway, and nailing up the box is the cause, not an effect." },
     { id: "SK-TT1c-S12", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.1.c"], passages: [],
       like: ["SK-TT1c-C12"],
       stem: ["Odessa's neighbor, Mr. Pike, broke his arm. Every afternoon, Odessa took his trash can to the curb. She brought it back after the truck came. She never asked for anything. She did not tell her friends."],
@@ -3400,7 +3400,7 @@ PP.addLesson({
       ] },
     { id: "p11", title: "The Lantern Walk", genre: "Literary text",
       paragraphs: [
-        ["On the night of the Mid-Autumn Festival, Linh carried a round paper lantern down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
+        ["On the night of the Mid-Autumn Festival, Linh carried a red paper lantern shaped like a star down the street in Hanoi.", "Candles glowed inside lanterns all around her."],
         ["\"Why do we carry lanterns?\" Linh asked her grandfather."],
         ["\"The lanterns are for the moon,\" Grandfather said.", "\"Tonight the moon is at its brightest, so we carry our small lights to walk beside it.\""],
         ["Linh looked up.", "A huge, glowing moon hung over the rooftops.", "She lifted her lantern high so it would shine as bright as the sky."],
@@ -3976,8 +3976,8 @@ PP.addLesson({
       partA: { prompt: "How are Linh and Noa alike?",
         choices: [
           { text: "Each one plans to do more with the custom next year.", correct: true },
-          { text: "Each one is afraid of the dark." },
-          { text: "Each one is visiting a grandparent in another city." },
+          { text: "Each one learns about the custom from her grandfather." },
+          { text: "Each one shares a special food with her family." },
           { text: "Each one carries a light through the street." }
         ] },
       partB: { prompt: "Which TWO sentences, one from each story, best support the answer to Part A?", pick: 2,
@@ -3992,7 +3992,7 @@ PP.addLesson({
       hints: [
         "To find how two characters are alike, look for something that both of them do or feel. Then use the answer to find the sentences.",
         "Read the last three sentences of each story. What do the two girls have in common?",
-        "Neither girl is afraid of anything in her story. For Part B, choose one sentence from each story that matches your Part A answer."
+        "Only Linh learns about the custom from her grandfather. For Part B, choose one sentence from each story that matches your Part A answer."
       ],
       how: [
         "Linh's story ends with her saying what she will do next year: tell her little cousin why people carry lanterns.",
@@ -4001,7 +4001,7 @@ PP.addLesson({
         "The mooncakes, the neighbors and the glowing candles are things that happen, not plans for next year."
       ],
       misconception: "A common mix-up is choosing a detail true for one story, like carrying a light. The answer must be true for both girls.",
-      why: "Part A: Each one plans to do more with the custom next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Neither girl is afraid or visiting another city, and only Linh carries a light through the street." },
+      why: "Part A: Each one plans to do more with the custom next year. Part B: \"Next year,\" Linh said, \"I will tell my little cousin why we carry lanterns.\" and \"Next year,\" Noa said, \"I will light the first candle by myself.\" Only Linh learns about the custom from her grandfather, only Linh shares a special food, and only Linh carries a light through the street." },
     { id: "SK-TT1d-S08", type: "match", points: 2, dok: 2, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C08"],
       stem: ["Story 1: In Mexico, Dani and his grandpa made paper flowers. Dani cut the petals. His grandpa twisted the stems. They set the flowers by a photo of Dani's great-grandma.", "Story 2: In Sweden, Elsa and her grandma made straw stars. Elsa twisted the straw. Her grandma tied on red ribbon. They hung the stars on the tree."],
@@ -4011,7 +4011,7 @@ PP.addLesson({
         { text: "A child and a grandparent make decorations together.", answer: 2 },
         { text: "The decorations are made of straw.", answer: 1 },
         { text: "A photo of a family member is part of the holiday.", answer: 0 },
-        { text: "The family puts the finished decorations in a special place.", answer: 2 }
+        { text: "The finished decorations are put on display.", answer: 2 }
       ],
       clue: "To sort details, check each one against Story 1, then against Story 2. If it is true for both, choose both.",
       hints: [
@@ -4023,10 +4023,10 @@ PP.addLesson({
         "A child and a grandparent make decorations in both stories, so that is true for both.",
         "Only Elsa and her grandmother braid straw, so that detail belongs to Story 2.",
         "Only Dani's story mentions a photo, so that belongs to Story 1.",
-        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family puts the decorations in a special place, so that is both."
+        "Dani sets the flowers beside a photo, and Elsa hangs the ornaments on the tree. Each family puts the finished decorations on display, so that is both."
       ],
       misconception: "A common mix-up is picking one story when the detail fits both. Check each detail against both stories.",
-      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family puts the finished decorations in a special place, so that is true for both." },
+      why: "Making decorations with a grandparent is true for both stories. Straw ornaments belong to Story 2. The photo belongs to Story 1. Each family puts the finished decorations on display, so that is true for both." },
     { id: "SK-TT1d-S09", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.d"], passages: [],
       like: ["SK-TT1d-C09"],
       stem: ["Story 1: In a town in Japan, Sora planted a persimmon seed. For years, she watered it every week. At last, small orange fruit hung from the branches.", "Story 2: In a town in Italy, Luca set bread dough by the warm stove. He wanted to bake it right away, but he waited for it to rise. The loaf came out light and tall."],
@@ -4157,31 +4157,31 @@ PP.addLesson({
       prompt: "Which new story teaches the same lesson as BOTH stories above?",
       choices: [
         { text: "A teacher helps Maya with math, and Maya leaves her a thank-you note.", correct: true },
-        { text: "Jay's team wins the game, and the whole team goes out for pizza." },
-        { text: "Lena finds a coin on the sidewalk and drops it into a jar at home." },
+        { text: "A neighbor helps Jay carry his bike, but Jay walks away without a word." },
+        { text: "Lena thanks her friend for telling a funny joke at lunch." },
         { text: "Omar's dog learns a new trick and gets a treat for it." }
       ],
       clue: "To find a new story with the same lesson, first say the lesson of the two stories. Then look for a story where a character acts the same way.",
       hints: [
         "To find a new story with the same lesson, first say the lesson of the two stories. Then look for a story where a character acts the same way.",
-        "In each story, ask what the child does after a grown-up lends a hand. Then look for that same kind of action in the new stories.",
-        "Finding a coin does not have a child answering anyone's help. Test each choice that is left."
+        "In each story, ask what the child does the day after getting help. Then compare that action with the new stories.",
+        "A joke is not help, so thanking someone for it is not the same lesson. Test each choice that is left."
       ],
       how: [
         "In both stories, a grown-up helps a child, and the child thanks the helper the next day with a gift. The lesson is that thanking people who help you matters.",
         "In the new stories, only one has someone helping a child and the child thanking the helper.",
         "The answer is \"A teacher helps Maya with math, and Maya leaves her a thank-you note.\"",
-        "A pizza party, finding a coin and a dog's treat have no child thanking a helper."
+        "Jay does not thank his helper, Lena thanks a friend for a joke and not for help, and Omar's dog gets a treat but no child thanks a helper."
       ],
       misconception: "A common mix-up is choosing a story with a similar topic or a happy ending. The lesson has to match.",
-      why: "The answer is \"A teacher helps Maya with math, and Maya leaves her a thank-you note.\" Like Salma and Owen, Maya thanks someone who helped her. A pizza party, a found coin and a treat for a dog do not show a child thanking a helper." },
+      why: "The answer is \"A teacher helps Maya with math, and Maya leaves her a thank-you note.\" Like Salma and Owen, Maya thanks someone who helped her. Jay does not thank the neighbor who helped him, Lena thanks a friend for a joke and not for help, and a treat for a dog is not a child thanking a helper." },
     { id: "SK-TT1d-S15", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.d"], passages: ["p13", "p14"],
       like: ["SK-TT1d-C15"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "How is the way of life of Sophea's family different from the way of life of Pieter's family?",
+      partA: { prompt: "What is the biggest difference between how Sophea's family lives and how Pieter's family lives?",
         choices: [
           { text: "Sophea's family lives on a house that floats, but Pieter's family lives on firm land.", correct: true },
-          { text: "Sophea's family lives in a big city, but Pieter's family lives on a farm." },
+          { text: "Sophea's family lives beside a wall that keeps water out, but Pieter's family lives beside the open lake." },
           { text: "Sophea's family moves to a new lake each year, but Pieter's family stays put." },
           { text: "Sophea's family has no school nearby, but Pieter's family has one." }
         ] },
@@ -4196,16 +4196,16 @@ PP.addLesson({
       hints: [
         "To compare ways of life, ask where each family lives and how their home is different. Find the details in each story.",
         "Find the sentences in each story that tell about the family's home. Then pick a sentence for Part B that shows the difference.",
-        "Neither story is set in a big city. For Part B, your sentence must show the difference in your Part A answer."
+        "The wall belongs to Pieter's town, not to Sophea's lake, so one choice has the details swapped. For Part B, your sentence must show the difference in your Part A answer."
       ],
       how: [
         "In \"House on the Lake,\" Sophea's house floats on the water and rises and sinks with the lake.",
         "In \"Behind the Dike,\" Pieter's house stands on solid ground and never moves.",
         "Part A: Sophea's family lives on a house that floats, but Pieter's family lives on firm land. Part B: \"When the rains came, the lake rose, and her house rose with it.\"",
-        "Neither story is set in a big city, neither family moves each year, and both children get to school."
+        "The wall belongs to Pieter's town, not to Sophea's, neither family moves each year, and both children get to school."
       ],
       misconception: "A common mix-up is choosing a detail about daily life, like school, instead of how the homes are different.",
-      why: "Part A: Sophea's family lives on a house that floats, but Pieter's family lives on firm land. Part B: \"When the rains came, the lake rose, and her house rose with it.\" The floating house moves with the water, and Pieter's house never moves. Neither story is set in a big city, neither family moves each year, and both children get to school." }
+      why: "Part A: Sophea's family lives on a house that floats, but Pieter's family lives on firm land. Part B: \"When the rains came, the lake rose, and her house rose with it.\" The floating house moves with the water, and Pieter's house never moves. The wall belongs to Pieter's town, not to Sophea's, neither family moves each year, and both children get to school." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {

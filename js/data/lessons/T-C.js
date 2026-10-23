@@ -2837,28 +2837,28 @@ PP.addLesson({
     why: "The answer is \"On a Saturday in October, three third graders hand cups of water to walkers at the walk-a-thon.\" It tells who, what and when. The other captions say too little, give a general fact or could go under any photo." },
         { id: "SK-TC1c-S15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.c"], passages: [], pick: 2,
       like: ["SK-TC1c-C15"],
-      stem: ["Priya draws a toy boat for a slide about sailing. One arrow points to the big cloth that catches the wind. One arrow points to the small cloth that waves at the very top. She tries out five labels."],
+      stem: ["Priya draws a teapot for a slide about tea parties. One arrow points to the curved piece that a person holds to lift the pot. One arrow points to the narrow part that the tea pours out of. She tries out five labels."],
       prompt: "Which TWO labels are written the way good labels should be? Choose two answers.",
       choices: [
-        { text: "Sail", correct: true },
-        { text: "Flag", correct: true },
-        { text: "Race it fast!" },
-        { text: "Boat" },
-        { text: "This is the big cloth that catches the wind and pushes the boat across the water." }
+        { text: "Handle", correct: true },
+        { text: "Spout", correct: true },
+        { text: "Pour it slowly!" },
+        { text: "Teapot" },
+        { text: "This is the curved piece that you hold on to when you lift the pot to pour the tea." }
       ],
       clue: "A label is a word or two that names the part an arrow points to.",
       hints: [
         "A label is a word or two that names the part an arrow points to.",
         "Check each choice three ways: is it short, does it name a part, and does that part match what one of the arrows points to?",
-        "\"Race it fast!\" tells a sailor what to do, and a label names a part. Check the other four choices."
+        "\"Race it fast!\" tells a person what to do, and a label names a part. Check the other four choices."
       ],
       how: [
         "A good label is a word or two that names the exact part an arrow points to.",
-        "One arrow points to the big cloth that catches the wind, which is the sail. The other points to the small cloth at the top, which is the flag. The answers are \"Sail\" and \"Flag.\"",
-        "\"Race it fast!\" is a direction, \"Boat\" names the whole picture, and the long sentence is too long for a label."
+        "One arrow points to the curved piece that a person holds, which is the handle. The other points to the narrow part that the tea pours out of, which is the spout. The answers are \"Handle\" and \"Spout.\"",
+        "\"Pour it slowly!\" is a direction, \"Teapot\" names the whole picture, and the long sentence is too long for a label."
       ],
       misconception: "A common mix-up is choosing a label that sounds important. A label names one part in a word or two.",
-      why: "The answers are \"Sail\" and \"Flag.\" Each is a word that names the part an arrow points to. \"Race it fast!\" is a direction, \"Boat\" names the whole picture, and the long sentence is too long." }
+      why: "The answers are \"Handle\" and \"Spout.\" Each is a word that names the part an arrow points to. \"Pour it slowly!\" is a direction, \"Teapot\" names the whole picture, and the long sentence is too long." }
   ],
   /* Hints and Show me how for the items kept in practice: refs P4 and P5 (core set 1) and Together P1-P3. */
   addons: {

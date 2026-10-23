@@ -2682,7 +2682,7 @@ PP.addLesson({
     { id: "SK-RA1c-S06", type: "ms", points: 2, dok: 3, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C06"],
       stem: ["Source A: A tree adds a new ring to its trunk every year. The rings are circles inside the trunk. You can see them when a tree is cut down.", "Source B: The width of a ring can show what the weather was like that year. Wide rings often mean plenty of rain. Narrow rings often mean a dry year."],
-      prompt: "Sam is making a note card for each source. Which TWO sentences give the big idea of a whole source? Choose two answers.",
+      prompt: "Sam wants the big idea of each source on his cards. Choose the TWO sentences that give them.",
       choices: [
         { text: "Source A: A tree adds one new ring every year.", correct: true },
         { text: "Source B: The width of a ring can show what the weather was like.", correct: true },
@@ -2706,7 +2706,7 @@ PP.addLesson({
       why: "The answers are \"Source A: A tree adds one new ring every year.\" and \"Source B: The width of a ring can show what the weather was like.\" Each one sums up a whole source. The other sentences are details or examples." },
     { id: "SK-RA1c-S07", type: "ms", points: 2, dok: 2, std: ["3.T.RA.1.c"], passages: [], pick: 2,
       like: ["SK-RA1c-C07"],
-      stem: ["Source B: A platypus has webbed feet and thick fur that keeps water out. It hunts for food in streams in Australia. A male platypus has a sharp spur on each back foot.", "Anil's summary will explain why a platypus is such a good swimmer."],
+      stem: ["Source B: A platypus has webbed feet and thick fur that keeps water out. It hunts for food in streams in Australia. A male platypus has a sharp spur on each back foot.", "Anil is writing about what helps a platypus swim well."],
       prompt: "Pick the TWO facts that Anil needs. Choose two answers.",
       choices: [
         { text: "It has webbed feet.", correct: true },

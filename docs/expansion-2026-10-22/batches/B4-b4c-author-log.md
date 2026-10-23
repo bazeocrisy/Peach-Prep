@@ -118,3 +118,33 @@ Live choices after clue + hints 1-3 (hand recount): P4 4 then 3; P5 4 then 3; C0
 
 - 3.T.C.1.c: C15 (job-to-part mapping from the stem), S15 (label form), C04 (glass pieces vs mirrors), C09 (match rows), C06 and C08 (pinwheel picture and caption), C10 (new poster, line 5), S09, S13, S14.
 - 3.T.RA.1.c: C09 and S09 (hint ladders), C12 (new hot-text), C14 and S14 (dropdowns with new option sets), C11 and C13 (new keys), S04, S08, S13, S01.
+
+## Fixes after re-review (both lessons)
+
+Gates after these edits: check-content PASS (0 failures; no warnings for either lesson), check-writing 0 failures, check-instructional-copy 28 passed, readability: all new passages FK 4.0 or lower and over 100 words. Word-set Jaccard measured with my own script (stem + prompt + text + options, stop words kept, core passage not added) for every similar item.
+
+Similar items over 0.21 on that measure: none in 3.T.C.1.c (range 0.10 to 0.19). In 3.T.RA.1.c the highest is S12 at 0.21 (at the ceiling, not over); S06 and S07 were 0.23 and 0.22 and were reworded to 0.13 and 0.14. No similar item shares an option with its core item except none; S14 no longer shares "Because" with C14.
+
+3.T.C.1.c
+- M1/M2 S15: the scooter is gone (T-TS and T-T2 already use scooter and bike parts). S15 is now a teapot drawing (grep: no teapot in js/data). The stem describes the arrowed parts by job ("the curved piece that a person holds to lift the pot", "the narrow part that the tea pours out of"), so the keys Handle and Spout are not in the stem; hint 2 asks whether the part matches what an arrow points to.
+- C15: the stem now defines the parts by look and place, and the slide describes jobs in other words ("fine paths", "big green surface"); no phrase is repeated between definition and slide.
+- C06: two decoys now contain "pinwheel" (a broken pinwheel by an empty table, a boxed pinwheel on a shop shelf), plus the paper-hats decoy.
+- C09 hint 3 no longer states a row; it asks the child to check length first and then which part the arrow points to.
+- C10 and S10: the odd line is now near-topic ("Pinwheels are sold in many toy stores."; "Our school was built many years ago."). C10 hint 3 now names line 2, far from the key.
+- C12: the key reads "children about seven years old kicking a red ball and laughing"; decoys are older children in a serious game, a rolling ball and a frowning adult.
+- C04: now five options (Glass pieces, Mirrors, Colors, Tube, the long sentence). Hand recount: hint 1 ("a word or two") rules out the long sentence, hint 2 asks which part it is, hint 3 rules out Tube, so three stay live (Glass pieces, Mirrors, Colors).
+- S02 and S11: a decoy now uses the slide's noun (a wild drum solo; a ship's bell at sea). S11 is DOK 2.
+- S05 and S07 prompts reworded. C14 and S14 stems are now short sentences (C14 options shortened).
+- S09 wording: the earlier "narrow, pointed piece" description is unchanged; a possible "tip of the head" rewording was not applied.
+- Recount of live choices after clue and hints 1-3: C03 3; C04 3; C05 4; C06 3; C07 2 and 3; C08 3; C09 2 per row; C10 9; C11 3; C12 4; C13 3; C14 3; C15 4; P4 3; P5 2 (three options, no fourth added).
+
+3.T.RA.1.c
+- MUST-1 S03: hint 3 now refers to the sentence that says the tunnels never hurt a house.
+- MUST-2/3 S13 and S04: both rebuilt with a different frame and different distractor roles. S13 asks which source helps with one question and uses a dated tree-care sales page, a scientist's page on a different question (height) and an out-of-date 1890 encyclopedia. S04 uses a signed weather bureau explainer and a museum guide as keys, and a 1958 magazine, an off-topic travel blog and a classmate's guess as decoys.
+- C08 sentence 5 is now a real paraphrase ("Dragonflies usually live in places close to water."), so the explanations about new words are true.
+- S14 now uses "Next week" (from the principal's page) and "If"; no cause is asserted that a source does not state. S01 Source B now says "After many seasons", and the key phrase "Over the years," is no longer in the stem.
+- Trims for S02, S05, S08, S10, S15 (shorter stems, new prompts). S06 and S07 reworded.
+- Learn It / teach example now model leaving out a tiny detail, time words and order ("First, sloths live in trees. Later, algae grow in their fur.") within the existing step limits; a two-blank linking item is still modelled only by the Noah/linking-word step, not as its own example.
+- Hand recount after clue and hints 1-3: P4 3; P5 3; C03 3; C04 4; C05 5; C06 4; C07 4; C08 4; C09 6 orders; C10 5; C11 3; C12 4; C13 3; C14 3 and 4; C15 5.
+
+Needs blind re-solve: C1c S15, C15, C04, C06, C10, S10, C12; RA1c S03, S04, S13, S14, C08, S01.
