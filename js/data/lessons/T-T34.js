@@ -161,6 +161,436 @@ PP.addLesson({
       clue: "Think about how the whole piece is built. What job does the last paragraph of a piece like this usually do?",
       why: "The answer is to say her opinion again and ask readers to do something about it. The ending brings back Kendra's opinion that the library should open on Saturdays and asks readers to help. It gives no new reason, the hours are told in paragraph 1, and Kendra never writes about cost." }
   ],
+  /* ---------- B3 (expansion 2026-10-22, author b3b; docs/expansion-2026-10-22/01-architecture.md §2.2-2.3) ----------
+     core: fifteen items in three sets of five. Set 1 reuses the Try items P4, P5 and P6 by { ref } and adds
+     C03 and C05 on "Open the Library on Saturdays!". Set 2 uses p3 ("Let Everyone Play", sports). Set 3 uses
+     p4 ("A Weather Station for Our School", science) plus two short transfer stems (family, community).
+     Practice Together is P1-P3. Hints and Show me how for P1-P6 are in addons below.
+     Author log: docs/expansion-2026-10-22/batches/B3-b3b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: { rev: "1", sets: [
+    { title: "Set 1", items: [
+      { ref: "SK-TT3a-P4" },
+      { ref: "SK-TT3a-P5" },
+      { id: "SK-TT3a-C03", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: ["p1"],
+        stem: ["Marcus wrote a short opinion piece, too. Here it is.", "I think the library should stay closed on Saturdays. The library workers need a day to rest. Also, families can find other fun things to do on weekends. Saturday should be a day off for everyone."],
+        prompt: "How is Marcus's piece different from Kendra's piece, \"Open the Library on Saturdays!\"?",
+        choices: [
+          { text: "Marcus gives reasons, but he does not back them up with facts or examples.", correct: true },
+          { text: "Marcus uses facts to make his point, but Kendra uses only her opinions." },
+          { text: "Marcus states his opinion, but he does not give any reasons for it." },
+          { text: "Marcus answers people who disagree with him, but Kendra does not." }
+        ],
+        clue: "An opinion piece has an opinion, reasons and evidence. To compare two pieces, check each part in both of them.",
+        hints: [
+          "An opinion piece has an opinion, reasons and evidence. To compare two pieces, check each part in both of them.",
+          "Find Marcus's opinion and each of his reasons. Then do the same for Kendra's piece.",
+          "Neither piece has a part that starts with Some people say, so neither one answers people who disagree. Check each choice that is left against both pieces."
+        ],
+        how: [
+          "Marcus's opinion is that the library should stay closed on Saturdays. His reasons are that workers need rest and that families can find other fun things to do.",
+          "After each reason, Marcus goes right on to the next idea. He never tells a fact or an example that shows a reason is true.",
+          "Kendra backs up her reasons with facts and examples, like her mom's work hours and the full story time room. So the answer is \"Marcus gives reasons, but he does not back them up with facts or examples.\"",
+          "Marcus does state his opinion and does give two reasons. Neither piece answers people who disagree."
+        ],
+        misconception: "A common mix-up is calling a reason a fact because it sounds true. \"The library workers need a day to rest\" tells why Marcus thinks so, but it is not proof.",
+        why: "The answer is \"Marcus gives reasons, but he does not back them up with facts or examples.\" Marcus says workers need rest and families can do other things, but he gives no evidence. Kendra backs up her reasons with facts and examples. Marcus does state an opinion and give two reasons, he uses no facts, and neither writer answers people who disagree." },
+      { ref: "SK-TT3a-P6" },
+      { id: "SK-TT3a-C05", type: "dropdown", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: ["p1"],
+        prompt: "Kendra wants to add a paragraph that answers people who disagree with her. Complete her new paragraph. Choose the best answer for each blank.",
+        text: "Some people say {0}. But {1}.",
+        slots: [
+          { options: ["it is too hard to get to the library on Saturdays", "the library workers should get Saturdays off", "families are too busy on Saturdays, too"], answer: 0 },
+          { options: ["the town bus stops right in front of the library every Saturday", "Mr. Grant works at the library and runs story time", "Saturday is the best day of the week for a library trip"], answer: 0 }
+        ],
+        clue: "When an author answers people who disagree, she tells what they say. Then her reply answers that worry.",
+        hints: [
+          "When an author answers people who disagree, she tells what they say. Then her reply answers that worry.",
+          "Try each choice in each blank, and read the whole paragraph out loud.",
+          "Mr. Grant working at the library does not answer anyone's worry. Check the other choices in each blank."
+        ],
+        how: [
+          "The first blank tells what people who disagree say. The second blank must answer that exact worry.",
+          "A bus that stops right at the library every Saturday answers the worry that the library is too hard to get to.",
+          "The answers are it is too hard to get to the library on Saturdays and the town bus stops right in front of the library every Saturday.",
+          "No reply here tells why workers would still get a day off or why busy families would come. Saying Saturday is the best day is just an opinion again, so it answers nothing."
+        ],
+        misconception: "A common mix-up is choosing a reply that only says the opinion again. A good reply answers the other side's worry.",
+        why: "The answers are it is too hard to get to the library on Saturdays and the town bus stops right in front of the library every Saturday. The bus answers the worry about getting there. Mr. Grant's job and \"the best day\" do not answer any worry, so they cannot finish the paragraph." }
+    ] },
+    { title: "Set 2", items: [
+      { id: "SK-TT3a-C06", type: "hottext", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"],
+        prompt: "Darnell gives more than one opinion. Which sentence states the main opinion that his whole piece is about? Choose the sentence in the passage.",
+        targets: ["p3:1:1", "p3:1:2", "p3:1:3", "p3:2:1", "p3:3:2", "p3:4:1"],
+        answer: ["p3:1:3"], pick: 1,
+        clue: "The main opinion is the idea that all of the author's reasons support.",
+        hints: [
+          "The main opinion is the idea that all of the author's reasons support.",
+          "Find the reasons in paragraphs 2 and 3, and say them in your own words.",
+          "\"Some people say the best players should play the most\" is an opinion, but it belongs to other people, and Darnell argues against it. Check each sentence that is left."
+        ],
+        how: [
+          "Paragraphs 2 and 3 each start with a reason, after the words First and Also.",
+          "Both reasons explain why every player should get the same time to play, and the last paragraph asks for the same thing.",
+          "The answer is \"I think every player in the Maple Creek Kids League should get the same time on the field.\"",
+          "\"Sitting on the bench for a whole game is no fun\" and \"Everyone knows that playing is more fun than watching\" are opinions too, but they are smaller ideas, not what the whole piece is about."
+        ],
+        misconception: "A common mix-up is choosing the first opinion you see. The main opinion is the one every reason supports.",
+        why: "The answer is \"I think every player in the Maple Creek Kids League should get the same time on the field.\" Both reasons and the ending support it. The bench sentence and \"Everyone knows\" are smaller opinions, the First sentence is a reason, and the best players playing most is what other people say." },
+      { id: "SK-TT3a-C07", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"], pick: 2,
+        prompt: "Which TWO of these ideas from the passage are facts that could be checked?",
+        choices: [
+          { text: "Last fall, our coach gave us all the same time to play.", correct: true },
+          { text: "On a team where many kids sat on the bench, only five players came back.", correct: true },
+          { text: "Sitting on the bench for a whole game is no fun." },
+          { text: "Everyone knows that playing is more fun than watching." },
+          { text: "The best players should play the most so the team can win." }
+        ],
+        clue: "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+        hints: [
+          "A fact can be checked and proven true. An opinion tells what someone thinks or feels, and other people may disagree.",
+          "For each idea, ask: How could someone check this? Choose two.",
+          "\"Sitting on the bench for a whole game is no fun\" tells a feeling, and another kid might not mind, so it is an opinion. Check each idea that is left."
+        ],
+        how: [
+          "You could ask the coach or the players how much time each player got last fall.",
+          "You could count how many players from that other team came back this spring.",
+          "The answers are \"Last fall, our coach gave us all the same time to play\" and \"On a team where many kids sat on the bench, only five players came back.\"",
+          "\"Everyone knows\" sounds sure, but more fun is a feeling, so it is still an opinion. Should tells what someone thinks ought to happen, so the sentence about the best players is an opinion, too."
+        ],
+        misconception: "A common mix-up is calling a sentence a fact because it sounds sure, like \"Everyone knows ...\". Ask how you could check it.",
+        why: "The answers are \"Last fall, our coach gave us all the same time to play\" and \"On a team where many kids sat on the bench, only five players came back.\" Both could be checked. No fun, more fun and should all tell what someone thinks, so those sentences are opinions, even the one that starts with Everyone knows." },
+      { id: "SK-TT3a-C08", type: "ebsr", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"],
+        prompt: "This question has two parts. Answer Part A, then Part B.",
+        partA: { prompt: "Which reason does Darnell's story about Sam support?",
+          choices: [
+            { text: "Kids get better by playing in real games.", correct: true },
+            { text: "Kids who get to play want to keep playing." },
+            { text: "The best players should play the most so the team can win." },
+            { text: "Sitting on the bench for a whole game is no fun." }
+          ] },
+        partB: { prompt: "Which sentence from the passage best supports the answer to Part A?",
+          choices: [
+            { text: "\"In our last game, Sam scored his first goal.\"", correct: true },
+            { text: "\"My friend Sam had never played before he joined our team.\"" },
+            { text: "\"This spring, all 12 players from my team signed up again.\"" },
+            { text: "\"Also, kids who get to play want to keep playing.\"" }
+          ] },
+        clue: "Evidence is a fact or example that proves a reason is true. Ask what Sam's story proves.",
+        hints: [
+          "Evidence is a fact or example that proves a reason is true. Ask what Sam's story proves.",
+          "Reread paragraphs 2 and 3.",
+          "The best players playing the most is what other people say, and Darnell argues against it, so it is not one of his reasons. For Part B, the sentence you choose must match your Part A answer."
+        ],
+        how: [
+          "Sam's story is in paragraph 2, right after the reason that starts with First.",
+          "Sam had never played before, and by the last game he scored a goal. That shows a new player getting better by playing.",
+          "Part A: Kids get better by playing in real games. Part B: \"In our last game, Sam scored his first goal.\"",
+          "Sam never having played only tells how he started, so it does not show him getting better. The 12 players signing up again backs up the other reason."
+        ],
+        misconception: "A common mix-up is choosing the reason that sits nearest in the passage, or a reason that only feels true. Match the evidence to what it proves.",
+        why: "Part A: Kids get better by playing in real games. Part B: \"In our last game, Sam scored his first goal.\" Sam went from never playing to scoring a goal, which proves that playing helps kids get better. The 12 players signing up backs up the other reason, and the best players playing most is the other side." },
+      { id: "SK-TT3a-C09", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: ["p3"],
+        prompt: "In paragraph 4, Darnell answers people who disagree with him. How does he answer them?",
+        choices: [
+          { text: "He says what kids join the league for, and he gives a fact about his team's games.", correct: true },
+          { text: "He agrees with them and decides that the best players should play more." },
+          { text: "He gives a fact about his team, but he never says what the other side thinks." },
+          { text: "He says that kids join the league only to win, so winning matters most." }
+        ],
+        clue: "When an author answers people who disagree, first find what the other side says. Then find the author's reply.",
+        hints: [
+          "When an author answers people who disagree, first find what the other side says. Then find the author's reply.",
+          "Reread paragraph 4 one sentence at a time.",
+          "Darnell's last paragraph still asks for the same time for every player, so he has not changed his mind. Check each choice that is left."
+        ],
+        how: [
+          "The first sentence of paragraph 4 tells what the other side says: the best players should play the most so the team can win.",
+          "Darnell's reply has two parts. Kids join the league to learn and have fun, and his team still won more games than it lost.",
+          "The answer is \"He says what kids join the league for, and he gives a fact about his team's games.\"",
+          "He does not agree or change his mind, he does tell what the other side thinks, and he says kids join to learn and have fun, not only to win."
+        ],
+        misconception: "A common mix-up is reading the other side's words as the author's own opinion. The words Some people say show whose idea it is.",
+        why: "The answer is \"He says what kids join the league for, and he gives a fact about his team's games.\" Darnell says kids join to learn and have fun, and his team still won more games than it lost. He keeps his opinion, tells what the other side says first, and never says winning matters most." },
+      { id: "SK-TT3a-C10", type: "mc", points: 1, dok: 2, std: ["3.T.T.3.a"], passages: ["p3"],
+        prompt: "Darnell wants to add one more reason to his piece. Which sentence would work best as a new reason?",
+        choices: [
+          { text: "Another reason is that kids who sit on the bench stop feeling like part of the team.", correct: true },
+          { text: "Another reason is that our soccer games start at nine o'clock on Saturday mornings." },
+          { text: "Another time, my friend Ana scored two goals in one game against the Hawks." },
+          { text: "Another fact is that the league has 16 teams and more than 200 players." }
+        ],
+        clue: "A reason tells why the author's opinion is right. It answers the question: Why should this happen?",
+        hints: [
+          "A reason tells why the author's opinion is right. It answers the question: Why should this happen?",
+          "Reread Darnell's opinion in paragraph 1 and the reasons that begin paragraphs 2 and 3. A new reason should do the same job.",
+          "The sentence about nine o'clock starts like a reason, but the time of the games does not tell why every player should get the same time. Check each choice that is left."
+        ],
+        how: [
+          "Darnell's opinion is that every player should get the same time on the field.",
+          "Ask of each choice: Does it tell why? Kids on the bench feeling left out of the team is a why.",
+          "The answer is \"Another reason is that kids who sit on the bench stop feeling like part of the team.\"",
+          "Ana's two goals is one example from a game, not a reason, and the number of teams is a fact that does not tell why. The game time does not support the opinion at all."
+        ],
+        misconception: "A common mix-up is thinking a sentence is a reason because it starts with Another reason. Check that it really tells why.",
+        why: "The answer is \"Another reason is that kids who sit on the bench stop feeling like part of the team.\" It tells why every player should get the same time. The game time, Ana's goals and the number of teams do not explain why, even when a sentence starts with Another reason." }
+    ] },
+    { title: "Set 3", items: [
+      { id: "SK-TT3a-C11", type: "dropdown", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p4"],
+        prompt: "Complete the sentence about how Keisha begins her piece. Choose the best answer for each blank.",
+        text: "Paragraph 1 first {0}, and then it {1}.",
+        slots: [
+          { options: ["tells what the class does each morning", "gives Keisha's most important reason", "answers people who disagree"], answer: 0 },
+          { options: ["states Keisha's opinion", "gives evidence for a reason", "asks readers to do something"], answer: 0 }
+        ],
+        clue: "Each part of a piece like this has a job. Read paragraph 1 and ask what each sentence does.",
+        hints: [
+          "Each part of a piece like this has a job. Read paragraph 1 and ask what each sentence does.",
+          "Read the first two sentences of paragraph 1 together. Then read the last sentence on its own.",
+          "Nobody disagrees with Keisha yet in paragraph 1, so the first blank is not about answering people. Check the other choices in each blank."
+        ],
+        how: [
+          "The first two sentences tell what the class does every morning and what it cannot do yet. That brings in the topic.",
+          "The last sentence, \"Our school should put a weather station in the field behind the gym,\" tells what Keisha thinks the school should do.",
+          "The answers are tells what the class does each morning and states Keisha's opinion.",
+          "Her reasons start in paragraph 2. Paragraph 1 cannot answer anyone, because nobody has disagreed yet."
+        ],
+        misconception: "A common mix-up is thinking any sentence with should asks readers to do something. Here should tells what Keisha thinks the school ought to do.",
+        why: "The answers are tells what the class does each morning and states Keisha's opinion. Paragraph 1 opens with the class talking about the weather and then gives Keisha's opinion. Her reasons come later, and nobody disagrees yet." },
+      { id: "SK-TT3a-C12", type: "hottext", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: ["p4"],
+        prompt: "Which TWO sentences are evidence for the reason that a weather station would help students learn science? Choose two sentences in the passage.",
+        targets: ["p4:2:1", "p4:2:2", "p4:2:3", "p4:2:4", "p4:3:2", "p4:3:3"],
+        answer: ["p4:2:3", "p4:2:4"], pick: 2,
+        clue: "Evidence is a fact or example that shows a reason is true.",
+        hints: [
+          "Evidence is a fact or example that shows a reason is true.",
+          "Find the paragraph that gives this reason, and read every sentence in it. Choose two.",
+          "\"Science is my favorite subject\" tells how Keisha feels. It is not a fact or example that shows anything. Check the other sentences."
+        ],
+        how: [
+          "Paragraph 2 starts with the reason: a weather station would help us learn science.",
+          "Room 14 made a rain gauge, and the students measured the rain each day and kept a chart. That is an example of students learning science by measuring the weather.",
+          "The answers are \"In March, Room 14 made a rain gauge out of a plastic bottle.\" and \"Each day, the students measured the rain and added it to a chart.\"",
+          "The sentence that starts with First is the reason itself, not evidence for it, and the kickball game backs up a different reason."
+        ],
+        misconception: "A common mix-up is choosing the reason sentence as its own evidence. Evidence is the facts and examples that come after the reason.",
+        why: "The answers are \"In March, Room 14 made a rain gauge out of a plastic bottle.\" and \"Each day, the students measured the rain and added it to a chart.\" They show students learning science by measuring rain. The First sentence is the reason, the favorite-subject sentence is a feeling, and the kickball game supports the next reason." },
+      { id: "SK-TT3a-C13", type: "ms", points: 2, dok: 3, std: ["3.T.T.3.a"], passages: ["p4"], pick: 2,
+        prompt: "Which TWO things does Keisha do in paragraphs 4 and 5 to make her piece stronger?",
+        choices: [
+          { text: "She answers people who think a weather station would be too hard to care for.", correct: true },
+          { text: "She asks readers to help get a weather station for the school.", correct: true },
+          { text: "She agrees that a weather station would be too hard for the school to care for." },
+          { text: "She gives a new reason: the high school club wants its own weather station." },
+          { text: "She tells the steps that the club will follow to build a weather station." }
+        ],
+        clue: "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+        hints: [
+          "Each paragraph in an opinion piece has a job. Think about the jobs a paragraph can do near the end of a piece.",
+          "Reread paragraphs 4 and 5, one at a time. Choose two.",
+          "Nothing in paragraph 4 says that Keisha agrees with the people who think it is too hard. Check each choice that is left."
+        ],
+        how: [
+          "Paragraph 4 starts with what some people say: a station would be too hard to take care of. Then Keisha replies that the high school club has kept its station working and will show them how.",
+          "Paragraph 5 says the opinion again and ends with \"Let's ask the principal to put one up this spring!\"",
+          "The answers are \"She answers people who think a weather station would be too hard to care for\" and \"She asks readers to help get a weather station for the school.\"",
+          "The high school club already has a station, so it is evidence for her reply, not a new reason. The club offers to show them how, but no steps are given."
+        ],
+        misconception: "A common mix-up is reading the reply to the other side as a new reason. A reply answers a worry that someone else has.",
+        why: "The answers are \"She answers people who think a weather station would be too hard to care for\" and \"She asks readers to help get a weather station for the school.\" Paragraph 4 answers the worry with the high school club, and paragraph 5 asks readers to act. She does not agree with the worry, the club is evidence, not a new reason, and no building steps are given." },
+      { id: "SK-TT3a-C14", type: "match", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+        stem: ["Jada wrote this note to her family."],
+        prompt: "What job does each sentence do in Jada's note? Match each sentence to its job.",
+        cols: ["the opinion", "a reason", "evidence"],
+        rows: [
+          { text: "(1) I think our family should take a walk together after dinner every night.", answer: 0 },
+          { text: "(2) Walking together gives us time to talk about our day.", answer: 1 },
+          { text: "(3) Last night, we walked to the corner store, and Dad told us a funny story about his new job.", answer: 2 },
+          { text: "(4) Also, a walk after dinner helps us fall asleep faster at bedtime.", answer: 1 }
+        ],
+        clue: "The opinion tells what the writer wants. A reason tells why. Evidence is a fact or example that shows a reason is true.",
+        hints: [
+          "The opinion tells what the writer wants. A reason tells why. Evidence is a fact or example that shows a reason is true.",
+          "Read the note in order. Decide what each sentence does before you match it.",
+          "Sentence 3 tells about one walk that already happened. Ask whether it tells why, or shows that a reason is true."
+        ],
+        how: [
+          "Sentence 1 has I think and should. It tells what Jada wants, so it is the opinion.",
+          "Sentences 2 and 4 tell why the family should walk: time to talk, and falling asleep faster. Both are reasons. The word Also shows that sentence 4 adds one.",
+          "Sentence 3 is an example from last night. Dad told a story while they walked, which shows that walking gives them time to talk. It is evidence.",
+          "The answers are: 1, the opinion; 2, a reason; 3, evidence; 4, a reason."
+        ],
+        misconception: "A common mix-up is calling every sentence after the opinion evidence. Evidence is an example or fact. A reason tells why.",
+        why: "Sentence 1 is the opinion (I think, should). Sentences 2 and 4 are reasons: they tell why the family should walk. Sentence 3 is evidence: last night's walk and Dad's story show that walking gives them time to talk." },
+      { id: "SK-TT3a-C15", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: [],
+        stem: ["Malik is writing to the town council.", "Opinion: Our town should build a fenced dog park.", "Reason: Dogs need a safe place to run without a leash."],
+        prompt: "Which sentence would be the strongest evidence for Malik's reason?",
+        choices: [
+          { text: "Last month, two dogs that were running loose at the ball field ran into the street.", correct: true },
+          { text: "Everyone knows that dogs are the very best pets a family can ever have." },
+          { text: "Our town has three parks, one swimming pool and a big lake with a dock." },
+          { text: "I think the dog owners in our town would be very happy with a dog park." }
+        ],
+        clue: "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
+        hints: [
+          "Strong evidence is a fact or example that can be checked, and it shows that the reason is true.",
+          "Read Malik's reason again, and say it in your own words.",
+          "The sentence about three parks and a pool can be checked, but it is not about dogs needing a safe place. Check each choice that is left."
+        ],
+        how: [
+          "Malik's reason is that dogs need a safe place to run without a leash.",
+          "Two loose dogs running into the street is a real event that someone could check, and it shows that running loose is not safe now.",
+          "The answer is \"Last month, two dogs that were running loose at the ball field ran into the street.\"",
+          "\"Everyone knows\" and \"I think\" tell what someone thinks, so they are opinions, not proof. The parks and pool are facts, but they do not show anything about dogs."
+        ],
+        misconception: "A common mix-up is picking a sentence that sounds sure, like \"Everyone knows ...\". A sentence can sound sure and still be an opinion.",
+        why: "The answer is \"Last month, two dogs that were running loose at the ball field ran into the street.\" It is a fact that could be checked, and it shows why dogs need a safe place to run. The best pets and the happy owners are opinions, and the parks and pool do not tell about dogs." }
+    ] }
+  ] },
+  /* Extra questions (not one of the fifteen), each on its own new short text. Each `like` lists only
+     the core items it really practises (same component and task). */
+  similar: [
+    { id: "SK-TT3a-S01", type: "ms", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [], pick: 2,
+      like: ["SK-TT3a-P5", "SK-TT3a-C12"],
+      stem: ["Opinion: Our school should start a pen pal club.", "Reason: Writing to a pen pal helps kids become better writers."],
+      prompt: "Which TWO sentences are evidence for this reason?",
+      choices: [
+        { text: "Last year, Room 5 wrote to pen pals, and their letters got longer each month.", correct: true },
+        { text: "By June, their teacher said they made far fewer spelling mistakes.", correct: true },
+        { text: "Writing letters is the most fun thing to do in the whole school day." },
+        { text: "Pen pals can live in another state or even in another country." },
+        { text: "Another reason is that kids can make new friends who live far away." }
+      ],
+      clue: "Evidence is a fact or example that shows the reason is true.",
+      hints: [
+        "Evidence is a fact or example that shows the reason is true.",
+        "Say the reason in your own words. Then check each sentence against it. Choose two.",
+        "The sentence that starts with Another reason gives a new reason. It is not evidence for this one. Check each sentence that is left."
+      ],
+      how: [
+        "The reason is that writing to a pen pal helps kids become better writers.",
+        "Longer letters and fewer spelling mistakes both show kids writing better.",
+        "The answers are \"Last year, Room 5 wrote to pen pals, and their letters got longer each month\" and \"By June, their teacher said they made far fewer spelling mistakes.\"",
+        "Most fun is an opinion, and where pen pals live is a fact that does not show better writing."
+      ],
+      why: "The answers are \"Last year, Room 5 wrote to pen pals, and their letters got longer each month\" and \"By June, their teacher said they made far fewer spelling mistakes.\" Both show better writing. The fun sentence is an opinion, where pen pals live does not show better writing, and making friends is a new reason." },
+    { id: "SK-TT3a-S02", type: "mc", points: 1, dok: 3, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C05", "SK-TT3a-C09"],
+      stem: ["Ty wrote: \"I think our class should take a field trip to Cedar Bluff Park.\"", "Then he wrote: \"Some people say the bus ride would take too long.\""],
+      prompt: "Which sentence would best answer the people who disagree with Ty?",
+      choices: [
+        { text: "But the park is only 20 minutes from our school, so we would have lots of time there.", correct: true },
+        { text: "But the park is the most beautiful place in our whole state, with tall trees." },
+        { text: "Also, we could see deer, turtles and many kinds of birds along the trails." },
+        { text: "That is true, so maybe our class should just stay at school that day instead." }
+      ],
+      clue: "A good reply to people who disagree answers their worry and keeps the author's opinion.",
+      hints: [
+        "A good reply to people who disagree answers their worry and keeps the author's opinion.",
+        "Say the worry in your own words. What are those people afraid of?",
+        "The sentence that starts with That is true gives up Ty's opinion. Check each choice that is left."
+      ],
+      how: [
+        "The worry is that the bus ride would take too long.",
+        "A reply should show that the ride is not too long.",
+        "The answer is \"But the park is only 20 minutes from our school, so we would have lots of time there.\"",
+        "Most beautiful is an opinion that does not answer the worry, and the animals are a new reason, not a reply."
+      ],
+      why: "The answer is \"But the park is only 20 minutes from our school, so we would have lots of time there.\" It answers the worry about the bus ride with a fact. The beautiful park is an opinion, the animals are a new reason, and agreeing gives up the opinion." },
+    { id: "SK-TT3a-S03", type: "match", points: 2, dok: 2, std: ["3.T.T.3.a"], passages: [],
+      like: ["SK-TT3a-C14"],
+      stem: ["Leo wrote this to his soccer coach."],
+      prompt: "What job does each sentence do? Match each sentence to its job.",
+      cols: ["the opinion", "a reason", "evidence"],
+      rows: [
+        { text: "(1) Our team should practice on Saturday mornings, too.", answer: 0 },
+        { text: "(2) More practice would help us pass the ball better.", answer: 1 },
+        { text: "(3) Last week, after one extra practice, we made 10 passes in a row.", answer: 2 }
+      ],
+      clue: "The opinion tells what the writer wants. A reason tells why. Evidence is a fact or example that shows a reason is true.",
+      hints: [
+        "The opinion tells what the writer wants. A reason tells why. Evidence is a fact or example that shows a reason is true.",
+        "Read the sentences in order. Decide what each one does before you match it.",
+        "Sentence 3 tells about something that already happened last week. Ask whether it tells why, or shows that a reason is true."
+      ],
+      how: [
+        "Sentence 1 uses should and tells what Leo wants: the opinion.",
+        "Sentence 2 tells why: more practice would help them pass better. It is a reason.",
+        "Sentence 3 is an example that shows extra practice helped: evidence. The answers are 1, the opinion; 2, a reason; 3, evidence."
+      ],
+      why: "Sentence 1 is the opinion (should). Sentence 2 is a reason: it tells why more practice would help. Sentence 3 is evidence: the 10 passes in a row after an extra practice show that the reason is true." }
+  ],
+  /* Hints and Show me how for the Practice Together items P1-P3 and the core refs P4-P6. */
+  addons: {
+    "SK-TT3a-P1": {
+      hints: [
+        "An opinion tells what the author thinks or wants. Clue words like I think and should can help.",
+        "Read paragraph 1 one sentence at a time.",
+        "The first two sentences tell when the library is open and closed. You could check those, so they are facts. Look at the sentences that are left."
+      ],
+      how: [
+        "The first two sentences tell facts about the library's hours.",
+        "\"I think the library should be open on Saturdays, too\" has I think and should, so it tells what Kendra wants.",
+        "The answer is \"I think the library should be open on Saturdays, too.\" The sentences that start with First and Second are reasons."
+      ] },
+    "SK-TT3a-P2": {
+      hints: [
+        "A reason tells why the author thinks the opinion is right.",
+        "Find the sentences that give Kendra's reasons. Then compare each choice with them.",
+        "Mr. Grant works at the library, but Kendra never says he wants more work days. Check each choice that is left."
+      ],
+      how: [
+        "Paragraph 2 begins, \"First, many families are busy during the week.\"",
+        "That tells why the library should open on Saturdays, so it is a reason.",
+        "The answer is \"Many families are too busy to visit during the week.\" The passage never says the library needs more books or that the computers work better on weekends."
+      ] },
+    "SK-TT3a-P3": {
+      hints: [
+        "For each sentence, ask: Could I check this and prove it? Or is it what someone thinks, so other people could disagree?",
+        "Look for words that show a feeling or a wish, like best and should.",
+        "The library being closed on Saturdays is something you could check by looking at its hours, so it is a fact. Sort the other sentences the same way."
+      ],
+      how: [
+        "You could check the library's hours and what it tried last summer, so those two sentences are facts.",
+        "Best and should show what Kendra thinks, and other people could disagree.",
+        "Facts: the library is closed on Saturdays, and it tried Saturday hours last summer. Opinions: Saturday is the best day for a library trip, and the library should be open on Saturdays."
+      ] },
+    "SK-TT3a-P4": {
+      hints: [
+        "Evidence is a fact or example that backs up a reason. Look for the detail that is about Kendra's own family.",
+        "Find the paragraphs where Kendra tells about her own family.",
+        "Nothing in the passage says Kendra's family lives far from the library. For Part B, the sentence you choose must match your Part A answer."
+      ],
+      how: [
+        "Paragraph 2 gives the reason that families are busy during the week.",
+        "Right after it, Kendra says her mom works until six o'clock, but the library closes at five.",
+        "Part A: Her mom gets home from work after the library closes. Part B: \"My mom works until six o'clock, but the library closes at five.\"",
+        "Kendra never says her mom likes story time, and nothing says the family lives far away."
+      ] },
+    "SK-TT3a-P5": {
+      hints: [
+        "Evidence for a reason must show that the reason is true. Here it must show that people really came.",
+        "For each detail, find it in the passage and see which reason it sits with. Choose two.",
+        "The library being closed on Saturdays now is a fact, but it does not show that people would come. Check each choice that is left."
+      ],
+      how: [
+        "Paragraph 3 says the library tried Saturday hours for one month last summer.",
+        "Mr. Grant said the story time room was full every Saturday, and every computer was in use. Both show that many people came.",
+        "The answers are \"The story time room was full every Saturday\" and \"Every computer was in use on Saturdays.\"",
+        "The mom's work hours back up the reason about busy families, and the brothers back up the reason about homework."
+      ] },
+    "SK-TT3a-P6": {
+      hints: [
+        "Think about how the whole piece is built. Each paragraph has a job.",
+        "Reread the last paragraph. Then ask what job it does for the whole piece.",
+        "The last paragraph does not tell when the library is open now. That is in paragraph 1. Check each choice that is left."
+      ],
+      how: [
+        "\"Saturday is the best day of the week for a trip to the library\" brings back Kendra's opinion in new words.",
+        "\"Please ask the town to open the doors on Saturdays!\" asks readers to do something.",
+        "The answer is \"to say her opinion again and ask readers to do something about it.\"",
+        "The ending gives no new reason, and Kendra never writes about cost."
+      ] }
+  },
   test: [
     { id: "SK-TT3a-T1", type: "mc", points: 1, dok: 1, passages: ["p2"],
       prompt: "What is the author's opinion?",

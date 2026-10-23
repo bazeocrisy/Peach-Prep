@@ -196,7 +196,7 @@ PP.addLesson({
           { text: "It tells what you need, so you can gather everything before the first step.", correct: true },
           { text: "It tells the first step, so you know how to start shaking the cream." },
           { text: "It tells what can go wrong, so you know how to fix a leaky jar." },
-          { text: "It tells the last step, so you know when the butter is ready to eat." }
+          { text: "It asks a question, so you know the passage will explain why cream turns into butter." }
         ],
         clue: "Each part of a how-to text has a job. Ask what paragraph 1 gives the reader.",
         hints: [
@@ -208,7 +208,7 @@ PP.addLesson({
           "Paragraph 1 asks a question and then lists heavy cream, a clean jar with a tight lid and strong arms.",
           "No step starts until paragraph 2, which begins with the clue word First.",
           "The answer is \"It tells what you need, so you can gather everything before the first step.\"",
-          "Paragraph 1 gives no step and tells no problem, and the passage ends in paragraph 5, not paragraph 1."
+          "Paragraph 1 gives no step and tells no problem. It does ask a question, but the passage tells how to make butter, never why cream turns into butter."
         ],
         misconception: "A common mix-up is thinking every paragraph in a how-to text is a step. The opening paragraph often gets the reader ready instead.",
         why: "The answer is \"It tells what you need, so you can gather everything before the first step.\" Paragraph 1 lists the cream, the jar and strong arms. The steps begin in paragraph 2 with First, and nothing goes wrong in the passage." },
@@ -551,12 +551,14 @@ PP.addLesson({
       why: "The answer is \"The paint would go on wet wood and might not stick well.\" The damp cloth in step 2 leaves the wood wet, and step 3 lets it dry before painting. The other results are not connected to drying." },
     { id: "SK-TSSEQ-S03", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.b"], passages: [],
       like: ["SK-TSSEQ-C10", "SK-TSSEQ-C13"],
-      stem: ["(1) In 1950, Oak Street School opened with just two classrooms.", "(2) In 1968, a gym was added so students could play inside on rainy days.", "(3) Ten years after it opened, the school added six more classrooms.", "(4) In 2001, the old gym was turned into a library.", "(5) Today, more than 400 students go to Oak Street School."],
+      /* B2 final-check fix (SHOULD-3): the undated sentence moved to position 4, so the near-miss "after
+         sentence 2" makes the child compare 1960 with 1968. */
+      stem: ["(1) In 1950, Oak Street School opened with just two classrooms.", "(2) In 1968, a gym was added so students could play inside on rainy days.", "(3) In 2001, the old gym was turned into a library.", "(4) Ten years after it opened, the school added six more classrooms.", "(5) Today, more than 400 students go to Oak Street School."],
       prompt: "A student wrote this history of a school. One sentence is out of time order. Which change fixes the order?",
       choices: [
-        { text: "Move sentence 3 so it comes right after sentence 1.", correct: true },
-        { text: "Move sentence 3 so it comes right after sentence 4." },
-        { text: "Move sentence 4 so it comes right after sentence 1." },
+        { text: "Move sentence 4 so it comes right after sentence 1.", correct: true },
+        { text: "Move sentence 4 so it comes right after sentence 2." },
+        { text: "Move sentence 3 so it comes right after sentence 1." },
         { text: "Move sentence 5 so it comes right after sentence 1." }
       ],
       clue: "In a history text, events go in time order. Some sentences give a date, and some tell time by counting from another event.",
@@ -566,12 +568,13 @@ PP.addLesson({
         "Sentence 5 starts with Today, so it already belongs at the end. Check where the other events fit."
       ],
       how: [
-        "Sentence 3 says ten years after the school opened. It opened in 1950, so that is 1960.",
-        "The events in order are 1950, 1960, 1968, 2001 and today.",
-        "The answer is \"Move sentence 3 so it comes right after sentence 1.\""
+        "Sentence 4 says ten years after the school opened. It opened in 1950, so that is 1960.",
+        "The events in order are 1950, 1960, 1968, 2001 and today. So 1960 must come before the 1968 gym, not after it.",
+        "The answer is \"Move sentence 4 so it comes right after sentence 1.\"",
+        "Putting it after sentence 2 would put 1960 after 1968, and moving sentence 3 would put 2001 before 1968."
       ],
       misconception: "A common mix-up is skipping a sentence that has no year. Words like ten years after also tell when.",
-      why: "The answer is \"Move sentence 3 so it comes right after sentence 1.\" Ten years after 1950 is 1960, which comes before the 1968 gym. The other moves put later events before earlier ones." }
+      why: "The answer is \"Move sentence 4 so it comes right after sentence 1.\" Ten years after 1950 is 1960, which comes before the 1968 gym. After sentence 2 would put 1960 after 1968, and the other moves put later events before earlier ones." }
   ],
   /* Hints and Show me how for items kept in practice: refs P4 and P5 (core set 1) and Together P1, P2,
      P3 and P6. */
@@ -2617,11 +2620,11 @@ PP.addLesson({
           { text: "a canoe, because both boats are moved with paddles" },
           { text: "a kayak, because most kayaks are closed on top" }
         ],
-        clue: "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+        clue: "To choose between two things, use a difference that matters for the job.",
         hints: [
-          "To choose between two things, use a difference that matters for the job. A fact true of both cannot help you choose.",
+          "To choose between two things, use a difference that matters for the job.",
           "List what Ms. Grant needs to bring. Then reread the paragraphs that tell differences between the boats.",
-          "A paddle with two blades does not change how many people or bags a boat can hold, so that reason does not help her. Check each choice that is left against the article."
+          "Both boats are moved with paddles, so that fact cannot help her choose. Check each choice that is left against the article."
         ],
         how: [
           "Ms. Grant needs room for herself, two children and a tent.",
@@ -2853,7 +2856,7 @@ PP.addLesson({
       hints: [
         "To be alike, a fact must be true of both animals. Clue words like both help, but also check who a word like they means.",
         "For each sentence, find it in the passage and read the sentence just before it. Choose two.",
-        "\"Their legs are not the same, either\" is about both animals, but it tells a difference, so it does not show they are alike. Check each other sentence: is it about frogs, toads, or both?"
+        "\"A frog has smooth, wet skin\" is about only one animal, so it cannot show how they are alike. Check each sentence that is left."
       ],
       how: [
         "\"Both are amphibians\" uses the clue word both.",
@@ -3370,10 +3373,12 @@ PP.addLesson({
         why: "The answer is \"No. The fact is about baseball long ago, and it does not tell how padding helps a player.\" Paragraph 4 is about padding, and the box fact is not. The box never mentions padding, facts can sit in a box, and a box does not have to hold the main idea." },
       /* B2 re-review fix (MUST-1): the cactus shared its key fact with the 3.T.C.1.b Watch Me. */
       { id: "SK-TSDESC-C14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a", "3.T.T.2.a"], passages: [],
-        stem: ["(1) ______", "(2) Its curly tail wraps around seaweed, so the waves cannot carry it away.", "(3) Its skin can change color to match the plants around it.", "(4) Hard, bony plates under its skin make it a crunchy meal that many animals skip.", "(5) In addition, its long, thin snout sucks up tiny shrimp like a straw."],
+        /* B2 final-check fix (SHOULD-2): new big idea (life among sea plants) and no bony plates, so the key
+           no longer mirrors 3.T.T.2.a form A T1. */
+        stem: ["(1) ______", "(2) Its curly tail wraps around a blade of sea grass, so the waves cannot carry it away.", "(3) Its skin can change color to match the plants around it.", "(4) Its tall, thin shape looks like a plant stem, so it is hard to spot in a sea grass bed.", "(5) In addition, its long snout reaches between the leaves to suck up tiny shrimp."],
         prompt: "A student wrote this description of a seahorse. Which sentence would best fill the blank as the main idea sentence?",
         choices: [
-          { text: "A seahorse has a body that helps it stay safe and get food in the sea.", correct: true },
+          { text: "A seahorse's body is made for life among the plants of the sea.", correct: true },
           { text: "A seahorse has to hide from crabs and other hungry sea animals." },
           { text: "A seahorse's curly tail is the most useful part of its whole body." },
           { text: "First, a baby seahorse hatches and floats away on the waves." }
@@ -3385,13 +3390,13 @@ PP.addLesson({
           "The sentence about a baby seahorse hatching starts a sequence, so it does not fit a description. Test each choice that is left against all four sentences."
         ],
         how: [
-          "Sentence 2: the tail holds on. Sentence 3: the skin hides it. Sentence 4: the bony plates protect it. Sentence 5: the snout sucks up food.",
-          "Three sentences tell how the body keeps the seahorse safe, and one tells how it gets food.",
-          "The answer is \"A seahorse has a body that helps it stay safe and get food in the sea.\" It is the only choice that fits all four sentences.",
-          "Hiding fits only some of the sentences and leaves out the snout, the tail is only one detail, and the hatching sentence starts a sequence."
+          "Sentence 2: the tail holds on to sea grass. Sentence 3: the skin matches the plants. Sentence 4: the shape looks like a plant stem. Sentence 5: the snout reaches between the leaves for food.",
+          "Every sentence tells how a part of the seahorse's body fits life among sea plants.",
+          "The answer is \"A seahorse's body is made for life among the plants of the sea.\" It is the only choice that fits all four sentences.",
+          "Hiding fits the color and the shape but not the tail or the snout, the tail is only one detail, and the hatching sentence starts a sequence."
         ],
-        misconception: "A common mix-up is choosing a sentence that fits most of the details. A main idea sentence must fit every detail that follows it.",
-        why: "The answer is \"A seahorse has a body that helps it stay safe and get food in the sea.\" The tail, skin and plates keep it safe, and the snout gets food. Hiding leaves out the food, the tail is one detail, and the hatching sentence starts a sequence." },
+        misconception: "A common mix-up is choosing a sentence that fits some of the details. A main idea sentence must fit every detail that follows it.",
+        why: "The answer is \"A seahorse's body is made for life among the plants of the sea.\" The tail holds the sea grass, the skin and shape blend with the plants, and the snout reaches between the leaves. Hiding leaves out the tail and the snout, the tail is one detail, and the hatching sentence starts a sequence." },
       { id: "SK-TSDESC-C15", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         prompt: "A student is writing a description of the school playground. Choose the clue words that best complete the paragraph.",
         text: "Our playground has something for everyone. It has a tall slide and two swing sets for kids who like to move. {0}, there is a quiet bench under an oak tree for kids who want to read. Games are painted on the blacktop, {1} hopscotch and four square.",

@@ -397,3 +397,46 @@ Only the TS-CE and TS-CC blocks were edited. "Live" is used as the brief defines
 
 - `check-content.js --all`: PASS, 0 failures. The only warnings in my lessons are the accepted similar-coverage notices (TS-CE 10 core items without a similar item, TS-CC 9).
 - No passage text changed in this round, so the readability results in §9 still hold.
+
+## 11. Fixes after the final check (B2-rereview-TS-2.md)
+
+TS-CE was accepted. Only the TS-CC block was edited in this round, using the reviewer's fixes. "Live" is used as the brief defines it, and I applied each hint's logic as well as the choices it names.
+
+### Changes
+
+| Finding | Item | Change |
+|---|---|---|
+| MUST-1 | TS-CC C12 | The clue and hint 1 are now only "To choose between two things, use a difference that matters for the job." The "true of both" sentence was moved to hint 3. Hint 3 is now "Both boats are moved with paddles, so that fact cannot help her choose. Check each choice that is left against the article." The old hint 3 used the key's own test ("how many people or bags a boat can hold") and is gone. |
+| MUST-2 | TS-CC C03 (ref P6, addon) | Hint 3 now rules out a one-animal sentence: "'A frog has smooth, wet skin' is about only one animal, so it cannot show how they are alike. Check each sentence that is left." The how did not mention the order of the rule-outs, so it is unchanged. |
+
+### Live choices, hint by hint
+
+**TS-CC C12** (key: a canoe, because it has room for more people and gear)
+- After the clue and hint 1: all four. Hint 1 now only names the strategy.
+- After hint 2: all four. It lists Ms. Grant's needs and points to the paragraphs about differences, but rules nothing out.
+- After hint 3: three are left: the key, "a kayak, because its paddle has a blade at each end", and "a kayak, because most kayaks are closed on top". "Both boats are moved with paddles" is ruled out. The two kayak reasons are real differences from the article, so a child still has to judge which difference matters for three people and a tent.
+
+**TS-CC C03 (ref P6)** (keys: "Both are amphibians." and "They eat lots of insects…"; pick two)
+- After hint 1: three are left: the two keys and "Their legs are not the same, either." Hint 1's own logic (a fact must be true of both) removes the two one-animal sentences, "A frog has smooth, wet skin." and "Toads usually walk or take small hops."
+- After hint 2: three. It sends the child to read the sentence before each one, which is how "they" is resolved.
+- After hint 3: three. It names "A frog has smooth, wet skin", which hint 1's logic had already removed. "Their legs are not the same, either" stays live. It is about both animals but tells a difference, which is the item's named misconception.
+
+### Corrections to my earlier log
+
+- **§10, TS-CC C12 (overstated).** I wrote that the closed-top choice stayed live after the §10 hint 3. It did not: that hint 3's test (how many people or bags a boat can hold) also ruled it out, so only the key was left. MUST-1 fixes this. The live list above replaces the one in §10.
+- **§10, TS-CC C02 (overstated).** I counted "dry, bumpy skin" as live after hint 3. It is not. Hint 3's reason for ruling out smooth, wet skin (you can see or feel it on a frog sitting still, so it is not about moving) applies equally to dry, bumpy skin. Corrected list:
+  - After hint 1: all seven targets.
+  - After hint 2: five (p1:2:2, p1:2:3, p1:3:2, p1:3:3, p1:4:2).
+  - After hint 3: three for pick two: the two keys and "where they live" (p1:4:2).
+  - The item still passes, but the margin rests on that one choice.
+- **§10, TS-CC P5 (wrong).** I wrote that P5's clue is "shown in Together". It is not. P5 is a core ref, so it is not in Together (Together is P1 to P4). In own mode the child sees the addon hints, not the clue, so the clue never reaches the child. My live list for P5 in §10 still holds: Unlike and Like are live after hint 3.
+
+### Findings not addressed
+
+- **NOTE-4, CC Together P1's `why`.** "Each of the other choices is true of only one of the animals" covers "Both live far from ponds", which slightly weakens Like in P5. It states no key, and the reviewer listed it as a NOTE, so I left it. The lead may want P1's `why` to name only the skin and legs choices.
+- **NOTE-3, CC S03.** Hint 3 only repeats hint 1. The item passes, and the reviewer's suggestion is optional, so it is unchanged.
+
+### Gates
+
+- `check-content.js --all`: PASS, 0 failures. The only TS-CC warning is the accepted notice that nine core items have no similar item.
+- No passage text changed, so readability is unchanged.
