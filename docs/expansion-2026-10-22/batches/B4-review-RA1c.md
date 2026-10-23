@@ -259,3 +259,165 @@ Server: `node verification/serve.js . 8871`. Scripts: `ra1c/run.py` (wrong answe
 After MUST-1 to MUST-4, a re-solve of C09, S09, S14, S01 and the items you change under SHOULD-7 is enough. The other 28 items do not need another blind pass.
 
 **Verdict: CHANGES REQUIRED.**
+
+
+---
+
+# Re-review after fixes (3.T.RA.1.c)
+
+**Reviewer:** independent re-reviewer (did not author the lesson; did not write the first review). No lesson edited, no git run. Scratch files: `scratchpad/ra1c-final/`.
+
+## Verdict: CHANGES REQUIRED
+
+Keys, scoring and the browser sitting are sound. The first review's four MUSTs are fixed. Three new MUSTs remain, all small: one stale hint (S03) and two similar items still over the 0.21 ceiling on every measure (S04, S13). Five SHOULDs follow. The most important is a new defect created by the SHOULD-4 fix: C08 sentence (5).
+
+| ID | Item | One line |
+|---|---|---|
+| MUST-1 | S03 | hint 3 describes a choice that no longer exists ("making a house stronger") |
+| MUST-2 | S13 | Jaccard 0.25 against C13 on every measure; same frame and same distractor roles |
+| MUST-3 | S04 | Jaccard 0.25 against C04 on every measure; same distractor roles |
+| SHOULD-1 | C08 | sentence (5) differs from Source 2 by one word, yet the `why` says it is in "new words" |
+| SHOULD-2 | S05, S10 (also S02, S08, S15) | at or just over 0.21 when passages count; 0.26 to 0.29 on item text alone |
+| SHOULD-3 | Learn It / Watch Me | still do not model ordering, important-versus-tiny detail, or two-blank linking |
+| SHOULD-4 | S14 | "Since" asserts a cause that neither source states |
+| SHOULD-5 | S01 / P4 / S09 / C09 | key phrase can be matched straight from the stem; C09 and S09 hint 3 gives position 1 (accepted, see NOTE-2) |
+
+## 1. Blind solve
+
+- **Method.** `ra1c-final/load.js` loads `T-RA.js` in a Node `vm` sandbox with a mock `PP.addLesson`. `strip.js` resolves each `{ref}` and builds core C01-C15 (P4 and P5 are C01 and C02) and S01-S15. It deletes `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `steps` and `rev`, and it replaces choices, options and dropdown slots with seeded-shuffled (LCG seed 20261023) text only. I wrote the stripped JSON to `stripped.json` and grepped it for `correct|answer|why|hints|how|clue|misconception|key|like|hint`. **Zero hits.**
+- **Order items.** My first pass dropped `steps`, which holds the order items' sentences. I printed those separately, shuffled, with no key. The prompt did not hint at the order. Both orders came out as the keys.
+- **Passages.** p1 to p8 were printed in full. The lesson has no figures, so there is no alt text to check.
+- **Answers saved first.** `my-answers.json` was written at 12:30:28 on 2026-10-23, before any key was printed (sha256 `005ba645a3ed63c73f3c83e05baa1f4cf2eeb239f5d043ab1df568ff8a5c85d5`). I then compared in code.
+- **Result: 30 of 30 agree (100%)**: core 15 and similar 15. I also solved the three Together items that are not core (P1-P3) blind, and all three agree, which makes 33 of 33.
+- **How blind it was.** Not perfectly. Before the solve I printed the `teach`, `learn` and `write` text of this lesson (the Learn It penguin and red-panda examples), and I saw the first line of the head of `T-RA.js`. I had not seen any practice item, choice, hint, why or how. I did not read the author log or the first review until after the answers were saved. Before the solve I also read only the **names** of the keys in the lesson (schema probe).
+- No item caused real doubt. C09 needs one sentence of thought ("Later" before "Then"), and C14 blank 2 ("When" over "Although") needs the meaning, not the grammar.
+
+## 2. Findings
+
+### MUST
+
+**MUST-1. S03: hint 3 points at a choice that does not exist.**
+- H3 reads: "The sentence about making a house **stronger** changes what termites do to a house. Check the other choices the same way." The four choices are an opinion ("the worst bugs"), a softer wrong-meaning sentence ("sometimes eat wood, but their tunnels **never hurt** a house or its beams"), the key ("chew through wood, and the holes they make can make a house weaker"), and the copy. There is no "stronger" sentence.
+- The H3 text is left over from the earlier distractor. The child searches for a sentence that is not there, so the third hint eliminates nothing. `how` HOW3 and `why` are correct ("one says the tunnels never hurt").
+- **Fix.** "The sentence that says the tunnels never hurt a house changes what termites do to it. Check the other choices the same way."
+- All other hint 3 lines name a choice that exists. I checked every core, similar and addon hint 3 against its choices.
+
+**MUST-2. S13 is still over the ceiling on every measure.**
+- Word-set Jaccard against C13: **0.25** on item text alone and 0.25 with passages (C13 has none), with 0 shared options. The first review had 0.33.
+- Same 25 shared words include the whole frame: "class is writing about ... already has one source, a page from ... department. Which second source should ... use?" The distractor roles are also the same: a seller (company page), an uncheckable source (undated pamphlet, like the stranger) and an off-topic page (like the cartoon). The key is "a library book by a ... scientist, with a list of sources", which is C04's key shape.
+- **Fix.** Change the frame as well as the topic, for example a prompt of the form "Which source would help Sam check how old the tree is?" without the "already has one source" sentence, and swap one distractor role (for example, a page from a tree-care company that is dated and names an author but sells services).
+
+**MUST-3. S04 is still over the ceiling on every measure.**
+- Jaccard against C04: **0.25** (item only and with passages; the same, because C04 has no passage). 0 shared options. First review: 0.34.
+- Shared words are the frame ("facts about", "she has five sources", "Choose two answers") plus the key vocabulary "agency / scientist / page / written by". The traps changed (chef, company, blog) but their roles still map to C04's (off-topic, ad, uncheckable).
+- **Fix.** Reword the stem and prompt (for example, "Which two of these would be good places to learn how satellites track storms?"), and change the key phrases ("a page from a national weather agency", "an article by a space scientist") to different wording.
+- **Why MUST for S04 and S13.** The brief's accepted ceiling is 0.21. These two are over it by 0.04 on both measures I ran, and the fix is two sentences each. I rank them as the lowest-severity MUSTs.
+
+### SHOULD
+
+**SHOULD-1. C08 (5) is now a one-word copy, and the `why` calls it new words.**
+- Source 2: "Most dragonflies stay **near** ponds and streams." Draft (5): "Most dragonflies stay **close to** ponds and streams." The SHOULD-4 fix removed the unsourced "mates" clause and left a one-word swap.
+- The item's own misconception says "A common mix-up is thinking a sentence is in your own words because you changed one word. Check whether most of the words are the same." By that rule (5) is also a copy. Yet `why` says "The other four sentences tell the ideas in new words" and HOW2 says sentences 1, 2, 3 and 5 "change the words."
+- The key is still unique because the prompt asks for a sentence "copied word for word". The harm is the explanation, which teaches a one-word swap as own words.
+- **Fix.** Make (5) a real paraphrase: "Dragonflies usually live in places close to water." (Source 2 supports it.) Or keep (5) and rewrite the `why`, HOW2 and misconception to say (5) is "nearly copied" and the question asks for the exact one.
+
+**SHOULD-2. Near-copy measure: the rest of the table.** Word-set Jaccard against the `like` core item (all words / content words), by two conventions. "With passages" adds the core item's passage text (what the child reads for the core item). Shared options are 0 for all 15.
+
+| Similar | Item text only | With passages | Note |
+|---|---|---|---|
+| S01 | 0.15 | 0.10 | ok |
+| S02 | 0.26 | 0.17 | frame "Which sentence would be the best ending..." is word for word |
+| S03 | 0.13 | 0.12 | ok |
+| **S04** | **0.25** | **0.25** | MUST-3 |
+| S05 | 0.29 | 0.21 | at the ceiling |
+| S06 | 0.23 | 0.17 | |
+| S07 | 0.22 | 0.19 | |
+| S08 | 0.27 | 0.20 | |
+| S09 | 0.19 | 0.15 | ok (order steps included) |
+| S10 | 0.28 | 0.21 | at the ceiling |
+| S11 | 0.21 | 0.17 | |
+| S12 | 0.24 | 0.19 | |
+| **S13** | **0.25** | **0.25** | MUST-2 |
+| S14 | 0.20 | 0.20 | ok; 0 options shared |
+| S15 | 0.28 | 0.18 | |
+
+- Decision: only S04 and S13 are MUST, because they are over on both measures. S05 and S10 are exactly at 0.21 with passages and 0.28 to 0.29 on item text. The hot-text stems repeat sentences word for word ("Here is X's draft summary. Her teacher says it may use only facts from the two sources."). Trim one repeated sentence in each of S05, S10, S08, S15 (for example, drop "Here is Dina's draft summary." and fold the rule into the prompt), and the table drops to about 0.20.
+- The key-text overlap is low everywhere. `like` mappings are honest by component and format in all 15. S12 stays `mc` against C12's hot-text, which is acceptable (NOTE-4). S14 pairs a reason link and a time link with C14's addition link and a when link. It is the same skill (linking words), not the same words.
+
+**SHOULD-3. Learn It and Watch Me still do not model several things the fifteen ask for.**
+- Modelled: big idea of each source and a linking word (Learn 1); removing an opinion and a true outside fact (Learn 2, now fixed); trusting a source (Learn 3).
+- Not modelled: **ordering with time words** (C09, S09; the teach point lists the words, no example), **important versus tiny detail** (C06, C07, C12, S06, S07, S12), and a **two-blank linking item** where one blank is not "also" (C14, S14). Copy versus own words is in one step of Learn 1 only.
+- **Fix, smallest first.** Add one `steps` line to Learn 1 that sorts a tiny detail from an important fact ("The penguins' size is a tiny detail here, so leave it out"), and add one line to the teach example: "First, sloths live in trees. Later, algae grow in their fur." No new Learn It is needed.
+
+**SHOULD-4. S14: "Since" says the sources give a reason that they do not.**
+- Key blank 1 makes the summary read "Since balls left outside often roll away or go flat, Room 9 keeps its recess balls in a crate." Source 1 says Room 9 keeps balls in a crate. Source 2 says balls left outside roll away or go flat and that every class will get a crate. Neither source says that is why Room 9 uses a crate. The lesson's own rule is "A summary tells only what the sources say" (C05, C15, S05, S15).
+- The inference is natural, so I do not rate it MUST.
+- **Fix.** Make the cause the principal's: "{0} balls left outside often roll away or go flat, every class will get its own crate." with key "Since", and put the Room 9 crate as the example in blank 2 ("Room 9 already keeps its balls in a crate"). Or switch blank 1 to an addition word and keep "Next week" in blank 2.
+
+**SHOULD-5. Items whose key can be copied from the page.**
+- **S01** ("Over the years,") and **P4** ("In the fall," from "Each fall") put the key phrase in the source text, so a word match finds it. The DOK is 2 and the first review accepted P4 (NOTE-3). I keep this as a SHOULD only for S01, whose key is word for word in Source B and whose H2 does not help beyond that. If the author wants one change: make the source say "after many seasons" and keep "Over the years," as the key.
+- **C09 and S09 hint 3** settle sentence 1 (the one with no time word), leaving 6 of 24 orders. This is the fix the first review asked for, so I accept it (NOTE-2).
+
+### NOTE
+
+**NOTE-1. Hint ladders: hand recount of live choices (clue + hints 1-3) for all 15 core items.** "Live" means not named or ruled out by a hint. Hints do not echo the keys' wording. All 15 pass; the author's counts match mine.
+
+| Core | Type | Live after clue, H1, H2 | H3 removes | Live after H3 |
+|---|---|---|---|---|
+| C01 (P4) | dropdown | 4 (H2 points at the source's "fall") | "For example" | 3 |
+| C02 (P5) | mc | 4 | "That is all I have to say" | 3 |
+| C03 | mc | 4 | "A few monarchs" | 3 |
+| C04 | choose 2 of 5 | 5 | talking butterfly | 4 (6 pairs) |
+| C05 | hot-text 6 | 6 | sentence 5 | 5 |
+| C06 | choose 2 of 5 | 5 | "Most dragonflies stay near ponds" | 4 (6 pairs) |
+| C07 | choose 2 of 5 | 5 | resting wings | 4 (6 pairs) |
+| C08 | hot-text 5 | 5 | sentence 2 | 4 |
+| C09 | order | 24 orders (clue and H1 say only "no time word, usually first") | position 1 | 6 orders |
+| C10 | hot-text 6 | 6 | sentence 5 | 5 |
+| C11 | mc | 4 | "every player" | 3 |
+| C12 | hot-text 5 | 5 | sentence 5 | 4 |
+| C13 | mc | 4 | cartoon | 3 |
+| C14 | 2 dropdowns | 4 and 4 | "Last year" (blank 1) | 3 and 4 |
+| C15 | choose 2 of 6 | 6 (15 pairs) | sentence 6 | 5 (10 pairs) |
+
+On the similar items the same pattern holds (one named choice removed by hint 3), except S03 (MUST-1).
+
+**NOTE-2. C09 and S09.** Unique order in both. C09: nymph, "Later ... adult", "Then the adult takes to the air", "At last ... hunts". "Later" can only follow the nymph, "Then the adult" needs an adult, "At last" is the end. S09: seed, "Soon, ... sprouts", "After that, each year ... ring", "In the end, ... counted". S09's words no longer share a list with C09's. Hint 1 and the clue are generic. Hint 2 is a strategy. Hint 3 settles only the first sentence. This meets the first review's MUST-1 and MUST-2.
+
+**NOTE-3. The numbered-draft rule: five items, C05, C08, C10, C12, C15.** C12 now works and is answerable. The notes list is Source 1's own sentences, (4) "Some players like to listen to music while they warm up" is the only tiny detail, and (1), (2), (3), (5) each state the big idea or explain it. It is one defensible answer. I confirmed at 390x844 that the list renders as a readable paragraph and the five options match it (`item12.png`). Prompt frames differ across the five ("take out", "copied word for word", "opinion", "least important", "two to take out"), and they sit in different sets.
+
+**NOTE-4. Other checks.**
+- **New topics.** Sidewalk chalk (C14) and recess balls and crate (S14) occur in no other lesson in `js/data` (grep: chalk appears in `T-TS.js` only as "chalkboards called slates" in a different skill; recess and crate appear in `T-T1.js` and `T-T34.js` in unrelated passages). **Orchid, origami crane and walk-a-thon occur only in `T-C.js` (3.T.C.1.c), not in this lesson.** No collision between the two lessons or inside this one. The monarch passages (p1, p2) still repeat milkweed facts that also appear in `T-T2.js`, `T-C.js` and `L-V3.js`; that was already so before this batch.
+- **Source labels.** Most similar items say "Source A / Source B", but C14, S14 and the passages say "Source 1 / Source 2". Not changed; still a NOTE.
+- **S12 is `mc`, C12 is hot-text.** Same skill, different format. Acceptable, but converting S12 to a numbered hot-text would give the "Try a similar question" the same editing task.
+- **Points, DOK.** Choose-two = 2, C14 two-slot dropdown = 2, order = 2, others 1. DOK values are reasonable (C14 DOK 3 is generous).
+- **Official wording** ("Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic"). Credibility: C04, C13, S04, S13. Relevant: C06, C07, C12, S06, S07, S12. Accurate and sourced: C05, C10, C15, S05, S10, S15. Own words: C03, C08, S03, S08. Writing a whole summary and the self-selected topic live in the `write` card. C09 and C14 test the shape of a summary (order, linking), which fits as support skills.
+- **Grade 3 suitability.** Nothing too young. "Nymph", "chrysalis", "forecasters" and "agency" are glossed by the passages or by H2.
+- **Readability.** FK by `verification/readability.py`: p1 3.8, p2 3.9, p3 2.7, p4 2.7, p5 3.1, p6 3.4, p7 4.0, p8 2.2. All at or below 4.5, and all passages are 100 words or more. Item text alone is noisy (C04 10.1, S04 14.0) because choices have no full stops. It is not a passage measure. The `how` lines for C11 and S11 (7.7, 12.0) are long run-ons because of quoted choices; not a failure.
+- **Gates.** `check-content.js` prints PASS (0 failures, 9 warnings; the RA1c line is an info line that lists P1-P3 as Practice Together).
+
+**NOTE-5. Browser sitting at 390x844.** Server `node verification/serve.js . 8872`. `ra1c-final/run.py` worked all 15 core items in order: a wrong answer (all 15 returned "Not quite"), three hints (3 of 3 each), Show Me How (3 to 4 steps), and Try a Similar Question (S01-S15, each `like` maps to its core item, each correct answer checked right). "Go on to set 2 / set 3" worked, and the screen after item 15 read "Set 3 finished". `corr.py` answered all 15 correctly: "That's right!" with the right `why` on all 15. Screenshots of C09, C12 and C14 show no horizontal scroll (page width 390 = viewport). No page errors. The only console error is the Google Fonts request (offline sandbox). **0 bad rows.**
+
+## 3. Facts verified (web)
+
+| Claim | Verdict | URL |
+|---|---|---|
+| Mars has two small moons (S05, unchanged) | True: Phobos (radius about 6.9 miles) and Deimos (about 3.9 miles) | https://svs.gsfc.nasa.gov/11326 |
+| Monarch: caterpillars eat only milkweed; milkweed toxins make monarchs taste bad to predators; eastern monarchs go to Mexico in fall; use the sun to stay on course; caterpillar about two weeks, chrysalis a week or two | True | https://www.nationalgeographic.com/animals/invertebrates/facts/monarch-butterfly |
+| Dragonfly: four wings moved independently; hovers and flies backward; nymph stage lasts up to years; nymphs eat tadpoles and minnows; climbs out on a stem and sheds its skin | True | https://www.iowadnr.gov/news-release/2019-08-08/6-cool-things-you-should-know-about-dragonflies |
+| Dragonflies do not sting; adults eat mosquitoes and other small insects; wings held horizontally at rest; large eyes; nymph stage months to years | True (Wikipedia calls bite or sting a misconception) | https://en.wikipedia.org/wiki/Dragonfly |
+| Brown thrasher: Georgia state bird; more than 1,000 song types; repeats each phrase only twice | True | https://georgiawildlife.com/out-my-backdoor-brown-thrashers-special-songster |
+| Brown thrasher: twig nest lined with grass and leaves; bluish or greenish eggs with reddish-brown spots; both parents incubate and feed; strike intruders; two or sometimes three broods; sweeps bill side to side through leaf litter; yellow eyes | True. "Pale blue" is a fair simplification, and p4 says "two sets", which is the low end | https://en.wikipedia.org/wiki/Brown_thrasher |
+| Platypus lays eggs; webbed feet; dense waterproof fur; forages in rivers and streams in Australia; males have a venomous spur on the ankle | True ("flat bill" not stated on that page; "back foot" is a fair simplification; both are widely documented) | https://australian.museum/platypus |
+| Comet: ice turns to gas near the Sun and forms a tail pointing away from the Sun | True (the ion tail points directly away; the dust tail curves) | https://en.wikipedia.org/wiki/Comet |
+| "Some comets are named after the people who found them" (S12) | True for traditionally named comets (Halley, Hale-Bopp); modern designations are mostly codes, so "some" is accurate | https://en.wikipedia.org/wiki/Comet |
+
+The first review's sources for termites, tree rings, warm-up and cool-down timings and the Olympics stand and I did not re-fetch them. I found no factual error.
+
+## 4. What was fixed since the first review (checked, all good)
+
+C09 and S09 ladders (generic clue, strategy H2, H3 settles one sentence); S14 rebuilt (no shared options); S01 options (0 shared); P5, S02, C11, S11 clues now strategy only; C13 and C11 keys; S08 shows both sources; S04, S13, S03 traps changed; Learn It 2 asks for two removals; P2 note 1 changed; S02 distractor replaced; tree-ring items hedged; C12 converted; C14 moved to a new topic. The new faults above are the three MUSTs and the C08 one-word copy.
+
+After MUST-1 to MUST-3 and SHOULD-1, a re-solve of S03, S04, S13 and C08 is enough.
+
+**Verdict: CHANGES REQUIRED.**
