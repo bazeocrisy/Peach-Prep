@@ -782,37 +782,37 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is calling a character bossy because she tells someone what to do. Listen to how she says it and why.",
       why: "The answers are caring and Dani finds the courage to swim. Rue speaks gently and waits at the end of the lane, and after her words, frozen Dani jumps in and swims to her." },
-    { id: "SK-TT1a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p7"],
+    { id: "SK-TT1a-S12", type: "ebsr", points: 2, dok: 3, std: ["3.T.T.1.a"], passages: ["p6"],
       like: ["SK-TT1a-C12"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
-      partA: { prompt: "How do Grandma Rose's words in paragraph 3 change what happens next?",
+      partA: { prompt: "What does Amos do because of what Naomi says in paragraph 4?",
         choices: [
-          { text: "Selah turns off her light, so she gets to see the stars.", correct: true },
-          { text: "Selah gets scared of the dark and runs back to the cabin." },
-          { text: "Selah shines her light up at the trees to look for owls." },
-          { text: "Selah asks Grandma Rose to hold the flashlight for her." }
+          { text: "He counts the signs out loud as he climbs, so he keeps going.", correct: true },
+          { text: "He turns around and walks back down the stairs." },
+          { text: "He waits on the fourth step until Naomi comes back." },
+          { text: "He races ahead of Naomi and reaches the top first." }
         ] },
-      partB: { prompt: "Which sentence from the story best shows the result of Grandma Rose's words?",
+      partB: { prompt: "Which sentence from the story shows what Amos did because of her words?",
         choices: [
-          { text: "\"Then, little by little, the sky filled with more stars than she had ever seen.\"", correct: true },
-          { text: "\"She swept its beam back and forth across the path.\"" },
-          { text: "\"Only the crickets chirped, and the trees stood like tall black shadows.\"" },
-          { text: "\"Far away, a church bell rang nine times.\"" }
+          { text: "\"Amos read each number out loud, and his voice got a little louder every time.\"", correct: true },
+          { text: "\"Amos stopped on the fourth step and grabbed the rail with both hands.\"" },
+          { text: "\"Each sign had a number painted on it in bright yellow.\"" },
+          { text: "\"Sunlight poured in, and green mountains rolled away in every direction like waves.\"" }
         ] },
-      clue: "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
+      clue: "A character's words can give another character a reason to act. Find the words, then look for what happens after them.",
       hints: [
-        "Dialogue can change what a character does next. Find the words, then ask what the character does after hearing them.",
-        "Read what Grandma Rose asks Selah to do. Then read on to see what Selah does and what she finds.",
-        "Selah never runs back to the cabin, so that choice does not fit Part A. In Part B, a sentence that comes before Grandma Rose speaks cannot be a result of her words."
+        "A character's words can give another character a reason to act. Find the words, then look for what happens after them.",
+        "Find what Naomi tells Amos. Then look at what Amos does after he hears her.",
+        "Amos never turns back down the stairs, so that choice does not fit Part A. For Part B, the sentence you choose must match your Part A answer."
       ],
       how: [
-        "In paragraph 3, Grandma Rose tells Selah to turn off the flashlight so her eyes can get used to the dark.",
-        "Selah clicks it off. At first she sees nothing, and then the sky fills with stars.",
-        "Part A: Selah turns off her light, so she gets to see the stars. Part B: \"Then, little by little, the sky filled with more stars than she had ever seen.\"",
-        "She never runs back, looks for owls or hands over the light. The beam and the crickets come before Grandma Rose speaks, and the bell comes much later."
+        "In paragraph 4, Naomi says there are six signs and that number 6 means the top.",
+        "After that, Amos counts the signs out loud, and his voice gets louder. He keeps climbing.",
+        "Part A: He counts the signs out loud as he climbs, so he keeps going. Part B: \"Amos read each number out loud, and his voice got a little louder every time.\"",
+        "He never turns back, waits for Naomi or races ahead. Grabbing the rail and the painted signs come before Naomi speaks, and the sunlight comes at the top."
       ],
-      misconception: "A common mix-up is choosing a sentence that comes before the words. A result has to come after them.",
-      why: "Part A: Selah turns off her light, so she gets to see the stars. Part B: \"Then, little by little, the sky filled with more stars than she had ever seen.\" Grandma Rose's words make Selah turn the light off, and in the dark she sees the stars. The beam and crickets come before, and the bell comes later." },
+      misconception: "A common mix-up is choosing a sentence that comes before the words. What happens because of them has to come after.",
+      why: "Part A: He counts the signs out loud as he climbs, so he keeps going. Part B: \"Amos read each number out loud, and his voice got a little louder every time.\" Naomi tells Amos that sign 6 is the top, and he answers by counting each sign as he climbs. Grabbing the rail and the painted signs come before her words, and the sunlight comes later." },
     { id: "SK-TT1a-S13", type: "mc", points: 1, dok: 3, std: ["3.T.T.1.a"], passages: ["p7"],
       like: ["SK-TT1a-C13"],
       prompt: "Read this sentence from paragraph 1: \"Only the crickets chirped, and the trees stood like tall black shadows.\" How does this description help the story?",

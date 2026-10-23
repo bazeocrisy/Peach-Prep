@@ -3852,29 +3852,29 @@ PP.addLesson({
       why: "The answer is \"Pilar may be too shy to talk to anyone yet.\" The narrator says she thinks she is too good, but her tight grip and pink ears are signs of shyness. Pilar did not wave, and nothing says she is better than others or does not want lunch." },
     { id: "SK-TC2a-S15", type: "ms", points: 2, dok: 3, std: ["3.T.C.2.a"], passages: [], pick: 2,
       like: ["SK-TC2a-C15"],
-      stem: ["Ivy's postcard: We went to the farm today. The barn smelled terrible, and a goat chewed my sleeve. I can't wait to go home.", "Jorge's postcard: We went to the farm today! The barn smelled strong, but I loved feeding the goat. I wish we could stay all week."],
-      prompt: "Read the two postcards in the box. Ivy and Jorge write about the same trip. Which TWO sentences tell how their views are different?",
+      stem: ["Mia's note: The class trip to the science museum was today. The line was long, and my feet hurt, but the space room was amazing. I want to go back.", "Theo's note: We went to the science museum today! I got tired waiting in line, but the space room was the best part. Next time I will bring a snack."],
+      prompt: "Read the two notes in the box. Mia and Theo went on the same trip. Which TWO sentences tell what their views have in common?",
       choices: [
-        { text: "Ivy dislikes the barn and the goat, but Jorge enjoys the animals.", correct: true },
-        { text: "Ivy wants to go home, but Jorge wants to stay longer." , correct: true },
-        { text: "Both of them visited a farm with a goat." },
-        { text: "Jorge says a goat chewed his sleeve." },
-        { text: "Ivy says she loved feeding the goat." }
+        { text: "Both of them found the long line hard to wait in.", correct: true },
+        { text: "Both of them liked the space room best.", correct: true },
+        { text: "Both of them plan to bring a snack next time." },
+        { text: "Mia liked waiting in line, but Theo did not." },
+        { text: "Theo says that his feet hurt." }
       ],
-      clue: "Two people can see the same event in different ways. Look for sentences that tell what each one thinks, and are different.",
+      clue: "To find what two views share, look for something both writers think or feel, not only something that happened.",
       hints: [
-        "Two people can see the same event in different ways. Look for sentences that tell what each one thinks, and are different.",
-        "Read each postcard and find what the writer says about the barn, the goat and going home. Compare them.",
-        "A sentence that is true for both children tells what is the same, not what is different. Check each choice that is left."
+        "To find what two views share, look for something both writers think or feel, not only something that happened.",
+        "Read the two notes side by side. Which opinions show up in both of them?",
+        "A plan for next time belongs to one writer, so that choice does not tell what both think. Check each choice that is left against both notes."
       ],
       how: [
-        "Ivy says the barn smelled terrible, a goat chewed her sleeve, and she can't wait to go home.",
-        "Jorge says he loved feeding the goat and wishes they could stay all week.",
-        "The answers are \"Ivy dislikes the barn and the goat, but Jorge enjoys the animals.\" and \"Ivy wants to go home, but Jorge wants to stay longer.\"",
-        "Visiting a farm with a goat is the same for both, and the sleeve and feeding details are mixed up between the writers."
+        "Mia says the line was long and her feet hurt. Theo says he got tired waiting in line. Both found the wait hard.",
+        "Mia calls the space room amazing, and Theo calls it the best part. Both liked it best.",
+        "The answers are \"Both of them found the long line hard to wait in.\" and \"Both of them liked the space room best.\"",
+        "Only Theo plans to bring a snack, Mia does not say she liked the line, and the sore feet belong to Mia, not Theo."
       ],
-      misconception: "A common mix-up is choosing what is the same, or swapping the writers. Check who says what.",
-      why: "The answers are \"Ivy dislikes the barn and the goat, but Jorge enjoys the animals.\" and \"Ivy wants to go home, but Jorge wants to stay longer.\" Both sentences tell how their views differ. Visiting the farm is the same for both, and the sleeve and feeding details belong to different writers." }
+      misconception: "A common mix-up is choosing a detail that only one writer gives. A shared view has to be in both notes.",
+      why: "The answers are \"Both of them found the long line hard to wait in.\" and \"Both of them liked the space room best.\" Mia and Theo both say the wait was tiring, and both call the space room the highlight. The snack plan is only Theo's, the sore feet are only Mia's, and Mia never says she liked the line." }
   ],
   /* Hints and Show me how for items kept in practice: ref P5 (core set 1) and Together P1-P4. */
   addons: {

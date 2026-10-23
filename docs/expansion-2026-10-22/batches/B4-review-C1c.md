@@ -184,3 +184,156 @@ Not verified: "peepers stop singing when they hear someone coming" (the Wikipedi
 3. Move p3 to a topic with no match in `js/data`, or get a decision on the overlap with T-RA and T-SS (M3).
 4. Soften h2 and the clue in P4, P5 and S01 (S1).
 5. Add one Watch Me that models a label or a sound (S7).
+
+
+---
+
+# Re-review after fixes (3.T.C.1.c)
+
+**Reviewer:** independent, did not author or first-review this lesson. No lesson edits, no git. Scratch files: `scratchpad/load.js`, `blind.js`, `keys.js`, `ladder.js`, `sim*.js`, `wm.js`, `fk*.js`, `br*.py`.
+
+## Verdict: CHANGES REQUIRED
+
+Two MUST findings (S15, and scooter topic reuse) and 9 SHOULD. Keys, scoring, points, `like` mapping, passages, passage FK and the 390x844 run are sound. The first review's M1 is only partly fixed for C15, and S15 now has a worse form of the same fault.
+
+| Id | Sev | One line |
+|---|---|---|
+| M1 | MUST | S15: the stem names both keys ("a wheel", "the handlebar"); the item is a word match |
+| M2 | MUST | Scooter is not a new topic: T-TS has a scooter handlebar/wheels match item; T-T2 has a labelled bike figure |
+| S1 | SHOULD | C15: key phrases are echoed verbatim between the stem definitions and the slide |
+| S2 | SHOULD | C06: the key is the only picture containing "pinwheel" (the poster title) |
+| S3 | SHOULD | C09: hint 3 states one row's answer outright |
+| S4 | SHOULD | C10 and S10: blatant off-topic line (plan 4.8 lists this as a weak-item pattern); C10 h3 points into the key's paragraph |
+| S5 | SHOULD | C12: key option says "close to the readers' age"; two decoys are absurd |
+| S6 | SHOULD | C04: only 2 choices live after clue+h1-h3 (author counts 3); h2 names the two parts |
+| S7 | SHOULD | S02, S11: key is the slide's own noun; S11 is not DOK 3 |
+| S8 | SHOULD | S05 0.218 and S07 0.221 word-set Jaccard, a little over 0.21 |
+| S9 | SHOULD | C14 stem+options FK 5.8 to 6.5 |
+
+## 1. Blind solve
+
+- Method: Node `vm` sandbox with a mock `PP.addLesson` loading `js/data/lessons/T-C.js`. The script resolves the `{ref}` items (P4, P5), strips `correct`, `answer`, `clue`, `hints`, `how`, `why`, `misconception` and `like`, keeps passages, stems, prompts and hot-text targets, and shuffles choices, options and slot options with a seeded LCG. I printed the stripped JSON to a file and grepped it for those words. The only hits were ordinary prompt words ("Choose two answers", "how a kaleidoscope works").
+- I wrote my answers to `myanswers.json` before running the key extractor.
+- **Agreement: 35 of 35** (15 core, 15 similar, Together P1-P5; C09 and S09 compared per row, C10 by target id).
+- Honesty: before solving, I printed about 15 lines of source at the start of the 1.c block (title and the first two teach points) and a grep listing of the `SK-TC1c-C0x` declaration lines (ids, types, dok). No keys, choices or why text. I did not read B4-review-C1c.md or the author log until my answers were saved. 100% agreement shows only that the items are answerable.
+
+## 2. Keyed text beside why/how/hints
+
+I printed key, clue, h1-h3, how, misconception and why for all 15 core, 15 similar and the five addon sets, and read them. Key, `why` and `how` agree on every item. No wrong key. Official wording (`standards.js`): "Create multimodal texts, using features of pre-selected modes for a specific purpose and audience." All items address a mode, the purpose or the audience. Points are right (ms, two-slot dropdown and match = 2). `like` mappings are one to one; S15 is honest in form only (it tests label form, C15 tests which parts to label).
+
+## 3. Hand recount of live choices after clue + h1 + h2 + h3 (core)
+
+A choice is dead only if a hint names it or states a property that rules it out.
+
+| Item | Live | Author | Note |
+|---|---|---|---|
+| C01 (P4) | 3 | 3 | ok |
+| C02 (P5) | 2 | 2 | h2 "who does the work" points at "machine" (only 3 options) |
+| C03 | 3 | 3 | ok |
+| C04 | 2 | 3 | h1 "a word or two" kills the long sentence; h2 "the two parts inside the tube" leaves Mirrors and Glass pieces; h3 kills "Turn the tube" |
+| C05 | 4 | 4 | ok |
+| C06 | 3 | 3 | ok |
+| C07 | 2 / 3 | 2 / 3 | ok |
+| C08 | 3 | 3 | ok |
+| C09 | Paper blades row: 1; other rows 2 | 3 to 2 | h3 states the Paper blades row |
+| C10 | 9 | 9 | h3 names line 6, the neighbour of the key |
+| C11 | 3 | 3 | ok |
+| C12 | 4 | 4 | ok |
+| C13 | 3 | 3 | h3 "tells neighbors to come on Saturday" is the key's property |
+| C14 | 3 | 3 | ok |
+| C15 | 4 | 4 | ok |
+
+No whole item is left with one option, so there is no ladder MUST. h1 is a strategy and h2 a place to look on all 15 except the notes above.
+
+## 4. Similarity (own script `sim2.js`: word-set Jaccard on stem + prompt + text + options, stop words kept; the core passage is added where the core item shows one)
+
+| Pair | J | Pair | J | Pair | J |
+|---|---|---|---|---|---|
+| S01-P4 | .137 | S06-C06 | .205 | S11-C11 | .145 |
+| S02-P5 | .114 | **S07-C07** | **.221** | S12-C12 | .205 |
+| S03-C03 | .205 (.216 if apostrophes are dropped) | S08-C08 | .183 | S13-C13 | .164 |
+| S04-C04 | .125 | S09-C09 | .190 | S14-C14 | .162 |
+| **S05-C05** | **.218** | S10-C10 | .164 (.213 with p3 text) | S15-C15 | .186 |
+
+Shared options: 0 for every pair; no option pair with word Jaccard of 0.4 or more; no duplicate option anywhere in core + similar + Together. With stop words removed every pair is 0.15 or lower. The excess in S05 and S07 comes from the identical prompt frame ("Which TWO ideas ... fit its purpose and its readers? Choose two answers.").
+
+## 5. Findings
+
+### MUST
+
+**M1. S15: the stem hands over both keys.**
+- Stem: "One arrow points to a wheel, and one arrow points to the handlebar." Keys: "Wheel", "Handlebar". h2 says "does it match one of the two arrows?", which sends the child back to the stem words.
+- The three decoys fail on form alone ("Ride it fast!" is a command, "Scooter" is the whole thing, the sentence is long), so the item is solved with no thought about what an arrow points to. This is the first review's M1 in a new form.
+- Fix: describe the arrowed parts by job or look, as C09 does: "One arrow points to the round part that rolls on the ground. One arrow points to the bar a rider grips to steer." Do it together with M2.
+
+**M2. Scooter is not a new topic.**
+- grep over all of `js/data`, outside this lesson: `pinwheel` 0 hits, `kaleidoscope` 0, `craft table` 0, `town park` 0, `tarp` 0, `origami` 0, `orchid` 0, `walk-a-thon` 0, `kickball` only in T-T34 (an unrelated use).
+- `scooter`: `T-TS.js` 3346-3369 (`SK-TSCC-C05`, a match item on "a scooter has a tall handlebar ... two wheels"), `T-T2.js` 524-542 (a labelled bike figure with handlebars), `T-SS.js` 4403 and 4966 (scooter in two stories), `L-GUM5.js` 220.
+- The S15 keys "Wheel" and "Handlebar" are exactly the T-TS scooter facts. Under the batch rule a topic reused across lessons is a MUST (first review M3).
+- Fix: move S15 to a topic with no grep hit (re-run the grep), for example a windsock or a toy boat.
+
+### SHOULD
+
+**S1. C15: the key phrases are verbatim.**
+- The stem defines "veins (thin lines that look like tiny tubes)" and "the blade (the wide, flat part)". The slide says "Tiny tubes carry water" and "The wide, flat part catches sunlight". The child maps "tiny tubes" to "tiny tubes". The decoys' definitions share no word with the slide.
+- The part nouns are gone from the slide, so the first M1 is half fixed. The phrase echo stays. I rate it SHOULD because the child must still read the definitions and attach the term.
+- Fix: define the parts by look or place, and let the slide describe the job in other words ("Water moves along these lines"; "This part takes in sunlight").
+
+**S2. C06: only one picture contains "pinwheel".** Poster title "Make a Pinwheel!"; key "children holding bright paper pinwheels ...". The decoys (paper hats, tarp-covered table, kite) borrow craft table, town park and wind, but none says pinwheel. Fix: put pinwheel into two decoys that do not fit ("a pinwheel lying broken on the ground beside an empty table", "a box of pinwheels on a store shelf with no children").
+
+**S3. C09: hint 3 gives one row.** h3 "The paper blades are the part that spins, not the part a child holds. Sort the other three labels." settles the Paper blades row. Fix: a check, not an answer: "Check each label's length first. Then ask which part the arrow points to, and whether the label names it."
+
+**S4. C10 and S10: blatant off-topic line.** The odd lines are "My cousin just got a new puppy named Biscuit." and "My dog likes to chew on crayons." No reading of purpose is needed; plan 4.8 lists blatant off-topic sentences (SK-SS1d-P4/P5) as weak, and C10 is marked DOK 3. C10 h3 names line 6, next to the key. Fix: use a line that looks on topic but does not serve the purpose (for example "Pinwheels were invented a very long time ago."), and name a distant line in h3.
+
+**S5. C12: the key says what it is for.** "children close to the readers' age kicking a red ball and laughing" names the audience criterion in words nobody would write about a photo; the stem says "six- and seven-year-olds". Decoys: the clipboard adult and the stadium teenagers are absurd; only the rolling ball is plausible. Fix: "children about seven years old kicking a red ball and laughing", and one more plausible decoy (clearly older children kicking a ball).
+
+**S6. C04: 2 live after the hints (author says 3).** Decoys are "Mirrors" (content), "Turn the tube" (a direction) and a long sentence (form). h1 kills the sentence, h3 kills "Turn the tube", and h2 names the two parts. A child who knows "a label is a word or two" has a coin flip. Fix: a second part decoy ("Tube" or "Eyehole") in place of "Turn the tube".
+
+**S7. S02 and S11: slide noun = key noun.** S02 title "Drums Keep the Band Together" gives the key "a steady drumbeat from a marching band"; S11 title "The Bell Tells Us" gives "a school bell ringing in a hallway". The decoys share no slide word. S11 is marked DOK 3 but is a topic match (DOK 2). C11 is better: its key does not repeat the slide's noun. Fix: use the slide noun in one decoy ("a bell ringing at the end of a bike race") and set S11 to DOK 2.
+
+**S8. S05 and S07 are 0.218 and 0.221, over the 0.21 ceiling.** S03 is 0.216 with another tokenizer and S10 0.213 when the p3 text is counted. All have 0 shared options. Fix: change the shared prompt frame in S05 and S07.
+
+**S9. C14 reading level.** Stem + prompt 5.8 (pyphen) or 6.0 (repo heuristic); with options 6.2 and 6.5. S14 5.9 (heuristic). Long sentences ("Slide 6 shows an old photo of her grandmother at age eight.") drive it. Fix: two or three short stem sentences.
+
+### NOTE
+
+- **N1.** Caption items (C03, C08, S03, S08, C14, S14): the key repeats the photo description and the decoys do not. That follows from the task, so no change is needed. A decoy that reuses two stem nouns would harden C08 and S03.
+- **N2. Key length.** The key is the longest option in 5 of 8 core single-answer mc/hottext items and 8 of 10 similar ones, but by a clear margin only in C13 (78 vs 66), C14 (94 vs 79) and S14 (95 vs 57). S14 asks for "the most", so length is intended there.
+- **N3. C13.** The prompt says "the sale is on Saturday" and the key sign contains "Saturday". "Either sign" is the weakest decoy. Watch Me does not model timing.
+- **N4. C07 and S07.** The wrong options are easy to dismiss ("covering the pictures", "hidden behind the words"). DOK 3 is generous.
+- **N5. P5 (C02).** Three options and h2 "who does the work" leaves a 50/50 with a cue to "machine". A fourth option would help.
+- **N6. S09.** "The narrow, pointed piece in front" is the tip of the crane's head (the beak is a small pinched fold). No "head" option is offered, so the key is unique. Say "the tiny pointed tip at the front of the head".
+- **N7. Kaleidoscope.** "A tube with mirrors and small pieces of colored glass inside" simplifies (the pieces sit in a cell at the end). Fine for grade 3.
+- **N8. Together P1-P3.** Keys echo Slide 2 and 3 words. They are practice items, and they solved blind.
+- **N9. Learn It / Watch Me** model picture fit, off-purpose line removal, caption, one-word label and a change of audience, and the teach example shows a sound. They do not model choose-two, a "too general" label or a timed sign. Acceptable.
+- **N10. Pre-answers.** None across a set or into Together. C09's key "Stick" is in p3 line 6, but p3 is not shown with C09 (passages: []).
+- **N11. FK.** Passages (repo heuristic / pyphen): p1 3.2 / 2.4, p2 2.6 / 1.8, p3 3.2 / 2.6, p4 3.8 / 3.2; all at 4.5 or lower. Item text above 4.5 under one or both counters: C03 5.2, C04 4.9, C05 5.0 (heuristic), C14 6.0, S08 5.1, S14 5.9.
+- **N12.** The pool-safety fix is verified: p3 is "Make a Pinwheel!" with no pool text left. p2 (spring peepers) is not used by any core or similar item.
+
+## 6. Facts and sources
+
+| Claim | Result | URL |
+|---|---|---|
+| Kaleidoscope: mirrors in a tube, loose glass pieces tumble when turned, each turn gives a new pattern | Supported (pieces sit in a cell at the end; N7) | https://www.britannica.com/EBchecked/topic/310099 |
+| Pinwheel: wind pushes the blades; wheel pinned to a stick | Supported | https://en.wikipedia.org/wiki/Pinwheel_(toy) |
+| Paper crane has a head, beak (pinched fold), wings, tail | Supported | https://www.centerstone.org/wp-content/uploads/crane_instructions_download_final.pdf ; https://www.erin.jpf.go.jp/en/lesson/16/let-us-try/ |
+| Leaf: blade is the broad part that catches sunlight; petiole (stalk) joins it to the stem; veins are tube-like and carry water | Supported | https://kids.britannica.com/students/article/leaf/275410 |
+| Wolf pack is mom, dad and young; howl heard from about ten miles; howls warn of danger; smell 100 times a human's | Supported | https://kids.nationalgeographic.com/animals/mammals/facts/gray-wolf |
+| Peanut facts (p1) and spring peepers (p2) | Not re-checked; first review's sources stand | section 5 above |
+
+Orchid petals, blueberry colours and drum cadence were not searched; they are standard facts and nothing looked doubtful.
+
+## 7. Browser run (390 x 844)
+
+`node verification/serve.js . 8855`, Playwright (`scratchpad/br.py`, `br2.py`). I ran all 15 core items in order through the three sets.
+- Every item rendered (passage items show the "Read the passage / Question" tabs at phone width). No horizontal scroll on any item (scrollWidth 390 before and after answering).
+- Three hints appeared on every item, with text equal to the data; the hint button then read "No more hints". Show me how showed every `how` step and marked the item "answer shown".
+- Setting the correct answer and pressing Check gave "That's right!" on all 15.
+- C09 (match) and C10 (ten numbered lines) fit without overflow. Screenshots: `scratchpad/shots/SK-TC1c-C09.png`, `SK-TC1c-C10.png`.
+- The only console error was the blocked Google Fonts request.
+
+## 8. What to change
+
+1. S15: rewrite the stem so it does not name the keys, and change the topic (M1, M2).
+2. C15: do not repeat the stem's definition phrases in the slide (S1).
+3. C06 decoys with "pinwheel"; C09 h3; C10 and S10 off-topic line; C12 key wording; C04 decoy; S02 and S11 decoys and S11 DOK; S05 and S07 frames; C14 sentence length (S2-S9).
