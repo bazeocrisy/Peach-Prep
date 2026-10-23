@@ -668,3 +668,146 @@ That sentence ("The next morning, he filled a basket…") is also C04's Part B k
 - `python3 verification/readability.py`: no passage text changed in this round.
 - Scratch audit (`scratchpad/b1a/audit.js`): 0 problems. Core points are 1.a 22, 1.b 23 and 1.d 24, with no DOK 1 items.
 - No git was run. I have not reviewed my own work.
+
+## 11. Fixes after the third B1 re-review
+
+**Source:** B1-rereview-b1a-3.md and the lead's message. 3.T.T.1.d was already ACCEPTED, but its SHOULDs were fixed too.
+
+**Scope:**
+- No keys changed.
+- No passage text changed.
+- One choice changed (11.1).
+- Everything else is hint, `how` or `like` text.
+
+### 11.1 Choices changed (needs blind re-solve)
+
+| Lesson | Item | Change | Finding |
+|---|---|---|---|
+| 1.a | **C04** | The distractor "Abuela had learned to play the guitar a long time ago." became "Abuela's old guitar had a long scratch across the front." It is a description, but of the wrong thing. The `how` and `why` follow | SHOULD-A1 |
+
+No other choice, target, row, step or option changed.
+
+### 11.2 Hint, how and like changes
+
+| Lesson | Item | Change | Finding |
+|---|---|---|---|
+| 1.a | C03 | h2 is now only "Look closely at the words after 'used to sing' in that sentence." ("Then ask who is listening now" is dropped.) h3: "It is Mateo, not Abuela, who sings louder than the thunder, so that choice does not fit. Test each choice that is left against paragraph 4." | MUST-A1 |
+| 1.a | C04 | h2: "Reread paragraph 4. The new sentence has to fit right after its last sentence." | SHOULD-A1 |
+| 1.a | C05 | h3: "How hard Jamal kicks tells about Jamal, not about the plot. Test the choices that are left against what happens after the kick." It no longer rules out "wins the game" | SHOULD-A2 |
+| 1.a | C08 | h2: "Reread what Mr. Webb says in paragraph 6." The pointer to his grin is dropped | SHOULD-A3 |
+| 1.a | S03 | h2: "Find the problem first. Then ask what changes because of Marco's words." h3 now rules out "where the playground is", not "starts the problem" | SHOULD-A4 |
+| 1.b | C05 | `clue` and h1: "Ask what this sentence tells you, and compare it with what the footprints showed before." ("about the rabbits" is dropped.) h3 now rules out rain, not "new way in" | MUST-B1 |
+| 1.b | C09 | h3 ends "does it prove the plan worked?" ("for this team" is dropped) | MUST-B2 |
+| 1.b | P4 addon | h2: "For each event, ask what has to happen before it can happen." | SHOULD-B1 |
+| 1.d | P4 addon | `how2`: "At the end of Lucy's story, it is the best ride of the day." It no longer says "the three friends ride together", which was C03's blank 2 answer | SHOULD-D1 |
+| 1.d | C03 | h3 for blank 2: "check what happens to the sled after Lucy decides to share." It no longer sends the child to the last paragraph | SHOULD-D1 |
+| 1.d | C10 | h2: "Reread paragraph 3 of Haruto's story. Then reread all of Freja's story." This brings the fireworks back into range. h3 now rules out the clock, not the wobble | SHOULD-D2 |
+| 1.d | S02 | `like` is now C06 and C11. C04 is dropped, because S02 does not practise how long a story lasts | NOTE-3 |
+
+### 11.3 Live choices, hint by hint
+
+"Out" means the hint's logic disposes of the choice. A choice is live only if a child who has read the `clue` (which equals h1) and h1–h3 still has a real reason to pick it.
+
+**1.a C03.**
+- h1 (what the detail tells about Abuela): all four are about Abuela.
+- h2 (the words after "used to sing"): "as a girl in Puerto Rico" supports the key (childhood) and homesick (Puerto Rico). The TV show (¶3) and the thunder (¶5) do not come from this sentence, so they are weak.
+- h3: the thunder is out, and "test against paragraph 4" puts the TV show out.
+- **Live: the key and homesick.**
+
+**1.a C04.**
+- h1 (paints a picture of the room): the blanket line is an action, so it is out.
+- h2: no change.
+- h3: the dialogue is out.
+- **Live: the key and the guitar scratch.** Both are descriptions. The child has to judge which one pictures the room, since the scratch describes something in the room.
+
+**1.a C05.**
+- h1 (what is different after the kick): weather is out.
+- h2 (where the ball ends up): no choice is out.
+- h3: strongest kicker is out.
+- **Live: the key and "wins the game".** To rule out the second, the child has to read "sailed over the goal".
+
+**1.a C08.**
+- h1 (what kind of person would say this): all four.
+- h2 (reread his words): no change.
+- h3: "stop reading sharks" is out.
+- **Live: the key and "upset".** "Upset" is ruled out only by reading his grin and the word "lucky". "Forgot" is weak.
+
+**1.a S03.**
+- h1 (what changes after he speaks): no change.
+- h2 (the problem first, then what Marco's words change): "doesn't want to paint" is out.
+- h3: the playground is out.
+- **Live: the key and "starts the problem".** That is the order mix-up the item's misconception names.
+
+**1.b C05.**
+- h1 (compare with what the footprints showed before): all four.
+- h2 (the ¶2 footprints where the tomatoes were missing): no choice is out.
+- h3: rain is out.
+- **Live: the key, "new way in" (a misreading of "stopped") and "Jada's footprints".** h1 no longer says the footprints are the rabbits'.
+
+**1.b C09 (pick 2).**
+- h2 (from the wrapping to the end): the windowsill is out.
+- h3: the wrapping is out.
+- **Live: the two keys and "the other teams have only cups of water".** h3's "does it prove the plan worked?" leaves the contrast tempting.
+
+**1.b P4 (order).**
+- h1: the trouble comes first and the outcome comes last.
+- h2: what has to happen before each event.
+- h3: the trouble comes before the explanation.
+- **Left to decide: the order of the two middle steps** (Grandma's explanation and the wire). This is a disclosure: h1 together with h3 fixes three of the four positions.
+
+**1.d C03.**
+- *Blank 1*, after h3 rules out the market: **live: the key and "letting one friend pick from his tree".**
+- *Blank 2*: h3 sends the child to what happens to the sled after Lucy decides to share, so it effectively settles blank 2.
+- This is the one blank h3 may settle.
+
+**1.d C10.**
+- h1 (what the custom means): the wobble is out.
+- h2 (all of Freja's story): the fireworks are back in range.
+- h3: the clock is out.
+- **Live: the key and the fireworks.** The fireworks can look like a symbol, but they are not explained.
+
+### 11.4 Each changed item against Together and earlier items in its own set
+
+- **1.a C03 (core 1.3).**
+  - Earlier items: P4's rows and P5.
+  - Neither mentions where or when Abuela learned the song.
+  - Together P3's `how` ("soon she is playing her guitar") states no answer.
+- **1.a C04 (core 1.4).**
+  - P4's `how` labels the blanket line an action. That disposes of a distractor h1 already rules out, not the key.
+  - C03's `how` ("now she plays it for Mateo") is not about the room.
+- **1.a C05 (core 1.5).** It is on its own stem. No earlier item touches it.
+- **1.a C08 (core 2.3).**
+  - C06's `how` and `why` are about the quiet room.
+  - C07's are about Nadia's excitement.
+  - Neither mentions Mr. Webb's words.
+- **1.a S03 (similar).** It does not apply, because a similar item is not in a set.
+- **1.b C05 (core 1.5).** P7's `why` ("blocks the gate all night long") and Together P3's `why` ("The wire blocks the rabbits") state the conclusion. They do not say that this sentence is the proof. All three re-reviews accepted this, and I keep it as a NOTE. C03's and C04's `how` do not touch it.
+- **1.b C09 (core 2.4).**
+  - C08's `how` mentions "You were right about the sock" only as coming after the cube is unwrapped. It does not call it proof.
+  - C06's and C07's `how` do not touch the outcome.
+- **1.b P4 (core 1.2).**
+  - Together's `how` steps narrate the sequence (NOTE in all three re-reviews).
+  - P7's `why` mentions blocking the gate.
+  - Neither gives the order.
+- **1.d C03 (core 1.3).**
+  - P4's `how2` no longer states blank 2.
+  - P4's Part B shows "Lucy pulled the sled over to her friends", which is passage text and not the answer.
+  - P5's `how` ("Lucy rides alone again and again") is before the change.
+  - Together P3's "decides to share" row does not say how either character shares.
+- **1.d C10 (core 2.5).** C07's `how` quotes the two "why" questions. This is accepted as a chain in all three re-reviews, because no earlier `how` states Mom's explanation. C06's, C08's and C09's `how` do not explain the jump.
+
+### 11.5 Unaddressed findings
+
+| Finding | Why it is not addressed |
+|---|---|
+| Similar-bank coverage (warning level) | The core items with no similar item are 1.a: 8, 1.b: 10, 1.d: 9. 1.d rose from 8 to 9, because S02's `like` honestly dropped C04. This is the lead's call, as in B0 |
+| Third re-review NOTEs: 1.a Together P3, C06, C13 and S02; 1.b C07 Part A, C08, Together P1 and P2, S02; 1.d Together P1 and C04 | These are NOTE level. Each item leaves two or more live choices, or it is a guided warm-up, so no change was asked for |
+| 1.b P4: h1 together with h3 still fixes three of the four positions | The SHOULD's prescribed fix (h2) was made. The middle pair still needs reasoning. Weakening h1 further would also weaken the lesson's own strategy line |
+| 1.b C05 and P4 are rehearsed by Together and by P7's `why` | Accepted as a NOTE in all three re-reviews |
+
+### 11.6 Gates
+
+- `node verification/check-content.js --all`: PASS, 0 failures. In my lessons, the only warnings are similar coverage (1.a 8, 1.b 10, 1.d 9) and the two older ones (SK-TT1a-T5, SK-TT1d-P1).
+- No passage text changed, so readability is unchanged from §10.
+- Scratch audit (`scratchpad/b1a/audit.js`): 0 problems.
+- No git was run. I have not reviewed my own work.

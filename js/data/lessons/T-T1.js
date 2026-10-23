@@ -938,7 +938,7 @@ PP.addLesson({
         "Jada puts wire along the bottom of the gate.",
         "Every tomato is still on its vine."
       ],
-      clue: "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
+      clue: "Think about how the story's events are linked. One thing leads to the next.",
       why: "The order is: Jada finds half the tomatoes gone, Grandma Bea says rabbits come under the gate, Jada puts wire along the gate, and then every tomato is still on its vine." },
     { id: "SK-TT1b-P5", type: "match", points: 2, dok: 2, passages: ["p1"],
       prompt: "Match each detail from the story to the story part it shows.",
@@ -1410,9 +1410,9 @@ PP.addLesson({
       misconception: "A common mix-up is thinking the setting is only a place. The time, like night, can change what a character has to do." },
     "SK-TT1b-P4": {
       hints: [
-        "A story moves from the problem to the solution. Start with what goes wrong, and end with how things turn out.",
+        "Think about how the story's events are linked. One thing leads to the next.",
         "For each event, ask what has to happen before it can happen.",
-        "Jada finds the tomatoes gone before anyone tells her why. Use the same kind of thinking to place the other events."
+        "The last event is the one that shows how everything turned out. Use the question in hint 2 to place the other three."
       ],
       how: [
         "First, Jada finds half the tomatoes gone (paragraph 2).",

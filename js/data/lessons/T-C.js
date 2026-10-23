@@ -207,7 +207,7 @@ PP.addLesson({
       "A picture or photo shows what the words describe. The caption under it tells what the picture shows. A caption can also tell something the picture cannot show, like where or when.",
       "A diagram is a drawing with labels. Each label has a line that points to one part and names it. A figure number, like Figure 1, helps you match a picture to the words about it. Labels can point out parts that a photo might hide, and numbers or arrows on a diagram can show an order.",
       "Features are not only on paper. A web page has its own features. Menu tabs take you to other parts of the site. A search box finds pages when you type a word. A play button starts a video or a sound. A pop-up box tells what a word means without leaving the page. A link opens a new page with more facts.",
-      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. Words like first, next and last help listeners keep track of the parts. In a video or a podcast, sounds and music can signal a change, or make listeners feel excited or calm."
+      "Sound has features too. A caption line under a video shows in words what you would hear. Words in [brackets] name a sound, like [frog croaks]. A name and a colon, like NARRATOR:, shows who is talking. In a talk or a read-aloud, the speaker's voice does the job of bold print: a speaker may slow down, stop for a moment, or say \"Listen closely\" right before an important part. To start a new part, a speaker can say what the next part is about, the way a heading does. Words like first, next and last help listeners follow along. In a video or a podcast, sounds and music can signal a change, or make listeners feel excited or calm."
     ],
     words: [
       { term: "heading", means: "a small title that tells what a section is about" },
@@ -357,12 +357,12 @@ PP.addLesson({
         { text: "A beaver chews through a small tree with its strong front teeth.", correct: true },
         { text: "A beaver slaps its wide, flat tail on the water to warn others." },
         { text: "A beaver swims into its lodge through a door under the water." },
-        { text: "A beaver pushes sticks and mud into a stream to build a dam." }
+        { text: "A beaver floats on its back in the pond." }
       ],
       clue: "A caption tells what the picture shows. Look at the picture first: what is the beaver doing, and where is it? Cross out captions about things you cannot see.",
-      why: "The answer is \"A beaver chews through a small tree with its strong front teeth.\" The picture shows the beaver's teeth on a deep notch in a tree, with wood chips on the ground. There is no water in the picture, so the captions about the tail, the lodge and the dam do not fit it." },
+      why: "The answer is \"A beaver chews through a small tree with its strong front teeth.\" The picture shows the beaver's teeth on a deep notch in a tree, with wood chips on the ground. There is no water in the picture, so the captions about the tail, the lodge and floating in the pond do not fit it." },
     { id: "SK-TC1b-P9", type: "mc", points: 1, dok: 2, passages: [],
-      stem: ["A park ranger gives a talk about beavers at a Georgia state park. Here is part of what she says:", "\"Beavers have very strong front teeth. Now, listen closely. This next part is important. A beaver's front teeth are orange, because they have iron in them!\""],
+      stem: ["A park ranger gives a talk about beavers at a Georgia state park. Here is part of what she says:", "\"Beavers have very strong front teeth. Now, listen closely. This next part is important. A beaver's front teeth have iron in them, and that makes them extra strong!\""],
       prompt: "Why does the ranger say, \"Listen closely. This next part is important\"?",
       choices: [
         { text: "to tell listeners that the next fact matters a lot", correct: true },
@@ -375,12 +375,12 @@ PP.addLesson({
     { id: "SK-TC1b-P10", type: "dropdown", points: 2, dok: 2, passages: ["p1"],
       stem: ["This article is also on a website. The picture shows part of the web page for the section \"Busy Builders.\""],
       figure: { src: "assets/figures/tc1b-beaver-webpage.svg",
-        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a pile of sticks in the water. Under the video is a dark bar with two caption lines: [water rushing], then NARRATOR: The dam slows the rushing water. Below that is the sentence Beavers use sticks and mud. At the bottom are underlined words: Next page: Beaver lodges." },
+        alt: "A web page. At the top are three tabs: Home, Beavers and Otters. The Beavers tab has a thick border. Under them is the heading Busy Builders. Next is a video box with a round play button. It shows a pile of branches in the water. Under the video is a dark bar with two caption lines: [water rushing], then NARRATOR: Beavers carry branches in their mouths. Below that is the sentence Beavers cut and carry wood. At the bottom are underlined words: Next page: Beaver lodges." },
       prompt: "Choose the words that best complete the sentences.",
       text: "In the caption line, the words [water rushing] tell the reader {0}. The underlined words at the bottom will {1}.",
       slots: [
         { options: ["what sound plays in the video", "what words the narrator says", "what the beaver is building"], answer: 0 },
-        { options: ["open a page about beaver lodges", "play the video about the dam", "tell what the word dam means"], answer: 0 }
+        { options: ["open a page about beaver lodges", "play the video about branches", "tell what the word branch means"], answer: 0 }
       ],
       clue: "Look at how each line in the caption starts. Then read the underlined words and think about what tapping them would do.",
       why: "The answers are \"what sound plays in the video\" and \"open a page about beaver lodges.\" Words in [brackets] name a sound, so a reader with the sound off still knows the water is rushing. The narrator's words come after NARRATOR:, and [water rushing] does not name anything the beaver builds. The underlined words are a link. Its words say Next page: Beaver lodges, so it opens a new page. The play button starts the video, and no word on the page has a pop-up meaning." },
@@ -397,7 +397,7 @@ PP.addLesson({
       why: "The answer is \"It shows the word is important and is explained in the glossary.\" Bold print tells the reader the word matters, and the glossary tells what it means. Lodge sits inside a sentence, not in a box or on a heading line, and the whole article is about life in a beaver pond, not only the lodge." },
     { id: "SK-TC1b-P5", type: "hottext", points: 2, dok: 2, passages: ["p1"],
       prompt: "Look at Figure 1. Which two sentences in the article tell about the parts that its labels point to? Choose two sentences.",
-      targets: ["p1:3:1", "p1:3:2", "p1:5:3", "p1:5:4", "p1:9:2"],
+      targets: ["p1:3:1", "p1:3:3", "p1:5:3", "p1:5:4", "p1:9:2"],
       answer: ["p1:5:3", "p1:5:4"], pick: 2,
       clue: "Read the two labels in Figure 1 and follow their lines. Then find the sentences that tell about those same two parts of the lodge.",
       why: "The answers are \"Its doors are under the water.\" and \"The room inside stays dry above the water.\" The labels in Figure 1 point to a door under the water and a dry room. The diagram helps readers see where those two parts are inside the lodge." },
@@ -807,7 +807,7 @@ PP.addLesson({
         "The picture shows a beaver with its teeth on a deep notch in a small tree, and wood chips on the ground.",
         "There is no water in the picture.",
         "The answer is \"A beaver chews through a small tree with its strong front teeth.\"",
-        "The tail, the lodge and the dam captions all need water, which the picture does not show."
+        "The tail, the lodge and the floating captions all need water, which the picture does not show."
       ] },
     "SK-TC1b-P9": {
       hints: [
@@ -817,7 +817,7 @@ PP.addLesson({
       ],
       how: [
         "Listeners cannot see bold print, so a speaker uses words to point out an important part.",
-        "Right after \"Listen closely,\" the ranger tells a big fact: a beaver's front teeth are orange because they have iron in them.",
+        "Right after \"Listen closely,\" the ranger tells a big fact: a beaver's front teeth have iron in them, which makes them extra strong.",
         "The answer is \"to tell listeners that the next fact matters a lot.\"",
         "She keeps talking, she does not ask a question, and the words do not name a place."
       ] },
@@ -854,7 +854,7 @@ PP.addLesson({
         "Figure 1 has two labels: dry room and door under water.",
         "\"Its doors are under the water.\" tells about the door.",
         "\"The room inside stays dry above the water.\" tells about the dry room.",
-        "The other sentences tell about trees, bark and the tail, which Figure 1 does not label."
+        "The other sentences tell about trees, branches and the tail, which Figure 1 does not label."
       ] },
     "SK-TC1b-P6": {
       hints: [

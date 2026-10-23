@@ -143,7 +143,7 @@ PP.addLesson({
       paragraphs: [
         ["Many young baseball players swing metal bats.", "But big-league players must use wooden bats.", "Each one is made with care."],
         ["## Wood or Metal?"],
-        ["Both kinds of bats have a thin handle and a thick barrel.", "A metal bat is hollow inside, so it is light and easy to swing.", "A wooden bat is solid, so it feels heavier.", "Unlike a metal bat, a wooden bat can crack if the ball hits it in the wrong spot."],
+        ["Both kinds of bats have a thin handle and a thick barrel.", "A metal bat is hollow inside, so it is light and easy to swing.", "A wooden bat is solid, so it feels heavier.", "Unlike a metal bat, a wooden bat can crack if the ball hits it in the wrong spot.", "Some bats have a small cup cut into the end of the barrel."],
         ["## From Tree to Bat"],
         ["First, workers cut ash or maple logs into long, round pieces called billets.", "Next, the billets dry for many weeks until the wood is hard.", "Then a machine spins each billet while a sharp blade shapes it into a bat.", "Finally, the bat is sanded smooth and given a clear, shiny coat.", "Now it is ready to play ball!"],
         ["## Did You Know?"],
@@ -249,12 +249,12 @@ PP.addLesson({
         ],
         how: [
           "The last sentence of the first paragraph names two ideas, in this order: how a peanut plant grows, and why farmers like it.",
-          "\"From Flower to Peanut\" and \"Harvest Time\" are about the plant itself. \"Why Peanuts Help the Soil\" tells why farmers like peanuts.",
+          "\"From Flower to Peanut\" and \"Harvest Time\" follow the peanut from planting to harvest. \"Why Peanuts Help the Soil\" tells why farmers like peanuts.",
           "The answer is \"Sections about how the plant grows come first, and then one tells why farmers like it.\" The sections carry out the plan in the same order.",
           "Cotton and corn are named only in the last section, and no section is about a problem to fix."
         ],
         misconception: "A common mix-up is reading each section by itself. To describe how a whole text is arranged, look at all the headings together.",
-        why: "The answer is \"Sections about how the plant grows come first, and then one tells why farmers like it.\" The first paragraph promises how a peanut plant grows and why farmers like it, and the headings follow that plan in that order. Cotton and corn come up only in the last section, and no section tells a problem and a fix." },
+        why: "The answer is \"Sections about how the plant grows come first, and then one tells why farmers like it.\" The first paragraph promises how a peanut plant grows and why farmers like it. \"From Flower to Peanut\" and \"Harvest Time\" follow the peanut from planting to harvest, and then \"Why Peanuts Help the Soil\" tells why farmers like peanuts. Cotton and corn come up only in the last section, and no section tells a problem and a fix." },
       { id: "SK-SS1a-C05", type: "dropdown", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p1"],
         prompt: "Choose the words that best complete the sentences.",
         text: "The section \"Harvest Time\" comes right after \"From Flower to Peanut\" because the harvest happens {0}. So the author arranged these two sections in {1}.",
@@ -309,7 +309,7 @@ PP.addLesson({
         hints: [
           "A caption tells what a picture shows. A caption for a map tells what the whole map shows.",
           "Use the key to find what each mark on the map stands for. Then look at the whole map, not just one mark.",
-          "The square for the library building is on the map, but it is only one mark. Check the other choice the same way."
+          "A map has no picture of the inside of the bus, so that caption does not fit. Check the other choices against the whole map."
         ],
         how: [
           "The key names three marks: the library building, the bookmobile stops and the route.",
@@ -339,7 +339,7 @@ PP.addLesson({
         hints: [
           "A map shows where places are. Ask what the map lets you see that is hard to picture from the words alone.",
           "Use the key to find what each mark on the map stands for.",
-          "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. For Part B, ask which part of the map lets you measure how far apart two places are."
+          "Nothing on the map shows days of the week, so the map cannot tell when the bus visits. Check the other Part A choices against the map. For Part B, choose the part of the map that shows the idea in your Part A answer."
         ],
         how: [
           "The black square in Millbrook is the library building. The white circles near the corners of the county are the bookmobile stops, outside the town.",
@@ -381,22 +381,22 @@ PP.addLesson({
           { text: "The section \"A Long Way to Town\" is part of Chapter 4.", correct: true },
           { text: "The book Libraries Near and Far is one section of Chapter 4." },
           { text: "\"Did You Know?\" is the title of Chapter 4." },
-          { text: "Each section of Chapter 4 is a different book." }
+          { text: "\"Inside the Bookmobile\" is the title of Chapter 4." }
         ],
-        clue: "A book is split into chapters, and a chapter can be split into smaller sections. Each section often has its own heading.",
+        clue: "A book is split into chapters, and a chapter can be split into smaller sections.",
         hints: [
-          "A book is split into chapters, and a chapter can be split into smaller sections. Each section often has its own heading.",
-          "The stem tells which chapter the article is. The headings in the article name its parts. Choose two.",
-          "\"Did You Know?\" is the heading of a box inside the article, not the title of a whole chapter. For each other sentence, ask which part is bigger and which part is inside it."
+          "A book is split into chapters, and a chapter can be split into smaller sections.",
+          "Read the stem again. Then look at the headings in the article. Choose two.",
+          "\"Did You Know?\" is the heading of a box inside the article, not the title of a whole chapter. Test the other sentences against the stem."
         ],
         how: [
           "The book is the biggest part. Chapter 4 is one part of the book.",
           "The headings in the article name sections inside Chapter 4.",
           "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\"",
-          "A book is not a section of a chapter, the box is not a chapter, and the sections are not separate books."
+          "A book is not a section of a chapter, and the stem says the article itself is Chapter 4, so neither \"Did You Know?\" nor \"Inside the Bookmobile\" is the chapter's title."
         ],
         misconception: "A common mix-up is swapping the two words. A chapter is the bigger part, and sections are inside it.",
-        why: "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\" The book holds chapters, and Chapter 4 holds sections with headings. The book is not a section, \"Did You Know?\" is a box, and the sections are not books." }
+        why: "The answers are \"Chapter 4 has a section called \"Inside the Bookmobile.\"\" and \"The section \"A Long Way to Town\" is part of Chapter 4.\" The book holds chapters, and Chapter 4 holds sections with headings. The book is not a section, and the whole article is Chapter 4, so \"Did You Know?\" (a box) and \"Inside the Bookmobile\" (a section) are not its title." }
     ] },
     { title: "Set 3", items: [
       { id: "SK-SS1a-C11", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
@@ -410,7 +410,7 @@ PP.addLesson({
         hints: [
           "To decide where a picture belongs, find the section that tells about the same things the picture shows.",
           "Read each label on the drawing. Then look through every section for the same words or the same action.",
-          "The drawing shows wood, but the section that compares wood with metal is about how finished bats feel and break. Check the other choices the same way."
+          "The \"Did You Know?\" box tells how many bats a player uses, not how a bat is made. Check the other choices the same way."
         ],
         how: [
           "The drawing shows a billet spinning while a blade cuts it, with wood shavings falling.",
@@ -444,7 +444,7 @@ PP.addLesson({
         why: "The answer is \"Each step needs the one before it, like drying before shaping.\" Making a bat goes from logs, to drying, to shaping, to sanding, and each step needs the one before it. Cracking is told in \"Wood or Metal?\", big-league players are in the first paragraph, and the steps never name metal." },
       { id: "SK-SS1a-C13", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
         prompt: "Look at Figure 1. Which sentence from the article does the diagram help a reader picture? Choose the sentence in the passage.",
-        targets: ["p4:3:1", "p4:3:2", "p4:3:4", "p4:5:1", "p4:5:4"],
+        targets: ["p4:3:1", "p4:3:2", "p4:3:4", "p4:3:5", "p4:5:1", "p4:5:4"],
         answer: ["p4:3:1"], pick: 1,
         clue: "A diagram is a drawing with labels. Match the labels to the words in the article.",
         hints: [
@@ -456,9 +456,9 @@ PP.addLesson({
           "Figure 1 labels the knob, the handle and the barrel.",
           "One sentence names two of those parts, a thin handle and a thick barrel, so the diagram helps a reader see them.",
           "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\"",
-          "The hollow inside, the wrong spot, the billets and the shiny coat are not shown in Figure 1."
+          "The hollow inside, the wrong spot, the cup, the billets and the shiny coat are not shown in Figure 1. The cup sentence names the barrel, but the diagram shows no cup."
         ],
-        why: "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\" Figure 1 labels the handle and the barrel, so a reader can see how thin and thick they are. The diagram does not show the inside of a bat, where a bat cracks, billets or the clear coat." },
+        why: "The answer is \"Both kinds of bats have a thin handle and a thick barrel.\" Figure 1 labels the handle and the barrel, so a reader can see how thin and thick they are. The diagram does not show the inside of a bat, where a bat cracks, a cup in the barrel, billets or the clear coat." },
       { id: "SK-SS1a-C14", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Kids at Oak Ridge Elementary kept losing their jackets on the playground. At first, the teachers put up a sign that said, \"Check for your jacket before you go in.\" But the jackets kept piling up by the fence. Then a third-grade class built a lost-and-found box and painted each class's name on a shelf. After that, most jackets found their way home."],
         prompt: "Which pattern does the author mainly use in this paragraph?",
@@ -597,7 +597,7 @@ PP.addLesson({
       hints: [
         "Cause and effect tells what happened and why. Find the cause first, then look for what happens because of it.",
         "All three sentences in the section are choices. Which one tells what the roots do?",
-        "The sentence about roots tells the cause, not what happens later. Look for a clue word that links back to the cause."
+        "The sentence about roots tells the cause, not what happens later. Read the first sentence again: does it tell what happens later, or only what the plants are like?"
       ],
       how: [
         "The roots work with tiny living things to add plant food to the soil. That is the cause.",

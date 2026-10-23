@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 470" role="img" aria-labelledby="t">
-  <title id="t">A web page with tabs, the heading Busy Builders, a video with a play button that shows a pile of sticks in the water, a caption line under the video, and an underlined link.</title>
+  <title id="t">A web page with tabs, the heading Busy Builders, a video with a play button that shows a pile of branches in the water, a caption line under the video, and an underlined link.</title>
   <!-- screen frame -->
   <rect x="2" y="2" width="316" height="466" rx="12" fill="#FFFFFF" stroke="#444" stroke-width="3"/>
   <path d="M2 34 H318" stroke="#444" stroke-width="2"/>
@@ -26,10 +26,10 @@
     <!-- caption line under the video -->
     <rect x="12" y="276" width="296" height="92" fill="#1E1E1E" stroke="#444" stroke-width="2"/>
     <text x="22" y="302" fill="#FFFFFF">[water rushing]</text>
-    <text x="22" y="330" fill="#FFFFFF">NARRATOR: The dam slows</text>
-    <text x="22" y="356" fill="#FFFFFF">the rushing water.</text>
+    <text x="22" y="330" fill="#FFFFFF">NARRATOR: Beavers carry</text>
+    <text x="22" y="356" fill="#FFFFFF">branches in their mouths.</text>
     <!-- words and a link -->
-    <text x="12" y="402">Beavers use sticks and mud.</text>
+    <text x="12" y="402">Beavers cut and carry wood.</text>
     <text x="12" y="446" fill="#123E9C" text-decoration="underline">Next page: Beaver lodges</text>
   </g>
 </svg>
