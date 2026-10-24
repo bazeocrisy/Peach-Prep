@@ -713,23 +713,23 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p6"],
       like: ["SK-GC2a-P7"],
-      prompt: "Which sentence in Zuri's draft squeezes two whole thoughts together? Select it.",
+      prompt: "Select the numbered line that jams two complete thoughts together.",
       targets: ["p6:2:1", "p6:2:3", "p6:2:4", "p6:3:1", "p6:3:2"],
       answer: ["p6:3:1"],
       pick: 1,
-      clue: "A run-on is two whole thoughts with nothing to join them. Read each sentence and look for a spot where a second thought begins.",
+      clue: "A run-on is two whole thoughts with nothing to join them. Look for a spot where a second thought begins.",
       hints: [
-        "A run-on is two whole thoughts with nothing to join them. Read each sentence and look for a spot where a second thought begins.",
-        "Look at the sentences that have no comma. For each one, find where the first whole thought could end.",
-        "Sentence 6 is one whole thought. Look closely at the other sentences with no comma."
+        "A run-on is two whole thoughts with nothing to join them. Look for a spot where a second thought begins.",
+        "Look at the lines that have no comma. For each one, find where the first whole thought could end.",
+        "Line 6 is one whole thought. Look closely at the other lines with no comma."
       ],
       how: [
-        "Look for a sentence where one whole thought ends and another begins, with nothing between them.",
-        "In sentence 7, \"My arms got tired\" is a whole thought and \"the sun got hot\" is another. There is no end mark and no joining word.",
-        "So sentence 7 is the run-on. Sentence 5 is a fragment, not a run-on."
+        "Look for a line where one whole thought ends and another begins, with nothing between them.",
+        "In line 7, \"My arms got tired\" is a whole thought and \"the sun got hot\" is another. There is no end mark and no joining word.",
+        "So line 7 is the run-on. Line 5 is a fragment, not a run-on."
       ],
       misconception: "A common mix-up is choosing the fragment. It sounds wrong, but a run-on has too much, not too little.",
-      why: "The answer is sentence 7, \"My arms got tired the sun got hot.\" It has two whole thoughts with nothing between them. Sentence 5 is a fragment. The other sentences are written correctly."
+      why: "The answer is line 7, \"My arms got tired the sun got hot.\" It has two whole thoughts with nothing between them. Line 5 is a fragment. The other lines are written correctly."
     },
     {
       id: "SK-GC2a-S02",
@@ -737,16 +737,16 @@ PP.addLesson({
       points: 2,
       dok: 2,
       std: ["3.L.GC.2.a"],
-      passages: ["p6"],
+      passages: [],
       like: ["SK-GC2a-P9"],
-      prompt: "Pick the TWO complex sentences in Zuri's draft.",
+      prompt: "Which TWO of these are complex?",
       pick: 2,
       choices: [
-        { text: "(8) When I reached the dock, Ms. Reed clapped.", correct: true },
-        { text: "(10) I will wear sunscreen before we start.", correct: true },
-        { text: "(3) First, I sat down in the kayak, and she pushed me from the shore." },
-        { text: "(4) My paddle felt heavy." },
-        { text: "(5) Because the water was calm." }
+        { text: "When I reached the dock, Ms. Reed clapped.", correct: true },
+        { text: "I will wear sunscreen before we start.", correct: true },
+        { text: "First, I sat down in the kayak, and she pushed me from the shore." },
+        { text: "My paddle felt heavy." },
+        { text: "While the boat drifted." }
       ],
       clue: "A complex sentence has one whole thought plus a part that cannot stand alone. Count the whole thoughts in each choice.",
       hints: [
@@ -756,12 +756,12 @@ PP.addLesson({
       ],
       how: [
         "Find the words that start a part that cannot stand alone.",
-        "\"(8) When I reached the dock, Ms. Reed clapped.\" has When plus the whole thought \"Ms. Reed clapped.\"",
-        "\"(10) I will wear sunscreen before we start.\" has the whole thought \"I will wear sunscreen\" plus a before part.",
-        "Sentence 3 is compound, sentence 4 is simple, and sentence 5 is a fragment."
+        "\"When I reached the dock, Ms. Reed clapped.\" has When plus the whole thought \"Ms. Reed clapped.\"",
+        "\"I will wear sunscreen before we start.\" has the whole thought \"I will wear sunscreen\" plus a before part.",
+        "The kayak sentence is compound, the paddle sentence is simple, and \"While the boat drifted.\" is a fragment."
       ],
-      misconception: "A common mix-up is choosing the fragment because it starts with Because. It has no whole thought to go with it.",
-      why: "The answers are \"(8) When I reached the dock, Ms. Reed clapped.\" and \"(10) I will wear sunscreen before we start.\" Each has a whole thought plus a part that begins with when or before. Sentence 3 joins two whole thoughts with and. Sentence 4 has one thought. Sentence 5 is a fragment."
+      misconception: "A common mix-up is choosing the fragment because it starts with a waiting word. It has no whole thought to go with it.",
+      why: "The answers are \"When I reached the dock, Ms. Reed clapped.\" and \"I will wear sunscreen before we start.\" Each has a whole thought plus a part that begins with when or before. The kayak sentence joins two whole thoughts with and. The paddle sentence has one thought. \"While the boat drifted.\" is a fragment."
     },
     {
       id: "SK-GC2a-S03",
@@ -771,29 +771,29 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p6"],
       like: ["SK-GC2a-P8"],
-      prompt: "Zuri's fifth sentence is a fragment. Which choice fixes it by combining it with the sentence after it?",
+      prompt: "Line 5 leaves the reader waiting, and line 6 supplies the rest. Which rewrite attaches them correctly?",
       choices: [
         {
-          text: "Because the water was calm, I could paddle straight across the lake.",
+          text: "I could paddle straight across the lake because the water was calm.",
           correct: true
         },
-        { text: "Because the water was calm, and I could paddle straight across the lake." },
-        { text: "The water was calm, I could paddle straight across the lake." },
-        { text: "Because the water was calm all summer long." }
+        { text: "I could paddle straight across the lake. Because the water was calm." },
+        { text: "I could paddle straight across the lake, and because the water was calm." },
+        { text: "The water was calm because I could paddle straight across the lake." }
       ],
-      clue: "A fragment is missing a piece. Fix it by joining it to the sentence that gives it the piece it needs.",
+      clue: "A piece that leaves you waiting needs the whole thought that goes with it. Attach the waiting piece to that thought.",
       hints: [
-        "A fragment is missing a piece. Fix it by joining it to the sentence that gives it the piece it needs.",
-        "Read Zuri's sentences 5 and 6 together. Ask which one is a whole thought and which one is waiting.",
-        "A comma alone cannot hold two whole thoughts together. Check the other choices."
+        "A piece that leaves you waiting needs the whole thought that goes with it. Attach the waiting piece to that thought.",
+        "Read lines 5 and 6 together. Ask which one is a whole thought and which one leaves you waiting.",
+        "A choice that keeps an end mark before the waiting part has not fixed anything. Check the other choices."
       ],
       how: [
-        "Sentence 5, \"Because the water was calm,\" leaves you waiting. Sentence 6, \"I could paddle straight across the lake,\" is a whole thought.",
-        "Join them so the because part goes with the whole thought: \"Because the water was calm, I could paddle straight across the lake.\"",
-        "The and choice keeps the because part waiting. The comma-only choice is a run-on. The choice with all summer long is still a fragment."
+        "Line 5, \"Because the water was calm,\" leaves you waiting. Line 6, \"I could paddle straight across the lake,\" is a whole thought.",
+        "Attach the waiting part to the whole thought: \"I could paddle straight across the lake because the water was calm.\"",
+        "The end-mark choice leaves the fragment, the and choice keeps it waiting, and the choice that starts with The water was calm changes what causes what."
       ],
-      misconception: "A common mix-up is adding and after the comma. That keeps the because part waiting.",
-      why: "The answer is \"Because the water was calm, I could paddle straight across the lake.\" The because part now has a whole thought to go with it. The choice with and still leaves you waiting. The choice that starts with The water has two whole thoughts held by only a comma. \"Because the water was calm all summer long.\" is still a fragment."
+      misconception: "A common mix-up is leaving an end mark before the waiting part. That keeps the fragment.",
+      why: "The answer is \"I could paddle straight across the lake because the water was calm.\" The because part now sits with a whole thought and keeps its meaning. The other choices leave the fragment, add and, or change the meaning."
     },
     {
       id: "SK-GC2a-S04",
@@ -803,29 +803,29 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C04"],
-      prompt: "Choose the TWO endings that finish Ava's sentence as a compound sentence.",
-      stem: "Ava sorted the laundry, ____",
+      prompt: "Which TWO endings turn Dev's start into a compound sentence?",
+      stem: "Dev raked the leaves, ____",
       pick: 2,
       choices: [
-        { text: "and Dad folded the towels.", correct: true },
-        { text: "but the socks had no partners.", correct: true },
-        { text: "and put the shirts away." },
-        { text: "because the basket was full." },
-        { text: "when the dryer stopped." }
+        { text: "and his sister held the bag.", correct: true },
+        { text: "so the yard looked neat.", correct: true },
+        { text: "and jumped into the pile." },
+        { text: "because the wind had blown them down." },
+        { text: "after the sun went down." }
       ],
       clue: "A compound sentence has two whole thoughts joined by a comma and a joining word. The ending must add a second whole thought.",
       hints: [
         "A compound sentence has two whole thoughts joined by a comma and a joining word. The ending must add a second whole thought.",
         "Check the first word of each ending. Then ask whether the ending names its own who and its own does-what.",
-        "One ending starts with and but only tells another thing Ava did, with no new who. Check the other four."
+        "One ending starts with and but only tells another thing Dev did, with no new who. Check the other four."
       ],
       how: [
-        "The start, \"Ava sorted the laundry,\" is one whole thought. The ending must be a second whole thought.",
-        "\"because the basket was full\" and \"when the dryer stopped\" start parts that cannot stand alone. \"and put the shirts away\" has no new who.",
-        "The answers are \"and Dad folded the towels.\" (Dad is a new who) and \"but the socks had no partners.\" (the socks are a new who)."
+        "The start, \"Dev raked the leaves,\" is one whole thought. The ending must be a second whole thought.",
+        "\"because the wind had blown them down\" and \"after the sun went down\" start parts that cannot stand alone. \"and jumped into the pile\" has no new who.",
+        "The answers are \"and his sister held the bag.\" (his sister is a new who) and \"so the yard looked neat.\" (the yard is a new who)."
       ],
       misconception: "A common mix-up is choosing an ending with and that adds only another action by the same person.",
-      why: "The answers are \"and Dad folded the towels.\" and \"but the socks had no partners.\" Each starts with a joining word and has its own who and does-what. \"and put the shirts away.\" adds only another action by Ava. \"because the basket was full.\" and \"when the dryer stopped.\" start parts that cannot stand alone."
+      why: "The answers are \"and his sister held the bag.\" and \"so the yard looked neat.\" Each starts with a joining word and has its own who and does-what. \"and jumped into the pile.\" adds only another action by Dev. \"because the wind had blown them down.\" and \"after the sun went down.\" start parts that cannot stand alone."
     },
     {
       id: "SK-GC2a-S05",
@@ -864,12 +864,12 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p7"],
       like: ["SK-GC2a-C06"],
-      prompt: "Which sentence in Kofi's draft is only a piece of a sentence?",
+      prompt: "Which of these lines from Kofi's draft is only a piece of a sentence?",
       choices: [
-        { text: "(5) When the floor was done.", correct: true },
-        { text: "(7) Before we built the walls, we drew a plan on paper." },
-        { text: "(8) The walls went up fast the roof took all afternoon." },
-        { text: "(9) Now my tree house is my favorite place to read." }
+        { text: "When the floor was done.", correct: true },
+        { text: "Before we built the walls, we drew a plan on paper." },
+        { text: "The walls went up fast the roof took all afternoon." },
+        { text: "Now my tree house is my favorite place to read." }
       ],
       clue: "A fragment is only a piece of a sentence. Check each choice for a who, a does-what and a thought that does not leave you waiting.",
       hints: [
@@ -879,11 +879,11 @@ PP.addLesson({
       ],
       how: [
         "Read each choice by itself and ask whether it leaves you waiting.",
-        "\"(7) Before we built the walls, we drew a plan on paper.\" starts with a waiting part, but it ends with a whole thought. \"(9) Now my tree house is my favorite place to read.\" is whole. \"(8) The walls went up fast the roof took all afternoon.\" has too much.",
-        "\"(5) When the floor was done.\" has a who and a does-what, but When leaves you waiting. It is a fragment."
+        "\"Before we built the walls, we drew a plan on paper.\" starts with a waiting part, but it ends with a whole thought. \"Now my tree house is my favorite place to read.\" is whole. \"The walls went up fast the roof took all afternoon.\" has too much.",
+        "\"When the floor was done.\" has a who and a does-what, but When leaves you waiting. It is a fragment."
       ],
       misconception: "A common mix-up is choosing a sentence that starts with a waiting word but also has a whole thought.",
-      why: "The answer is \"(5) When the floor was done.\" It leaves you waiting to find out what happened. Sentence 7 starts the same way but has a whole thought after the comma. Sentence 8 is a run-on, and sentence 9 is a whole thought."
+      why: "The answer is \"When the floor was done.\" It leaves you waiting to find out what happened. The Before line starts the same way but has a whole thought after the comma. The walls line is a run-on, and the tree house line is a whole thought."
     },
     {
       id: "SK-GC2a-S07",
@@ -893,7 +893,7 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p7"],
       like: ["SK-GC2a-C07"],
-      prompt: "Kofi wants to turn sentence 8 into two sentences. Which choice does that correctly?",
+      prompt: "Which choice splits sentence 8 so that each thought has its own sentence?",
       choices: [
         { text: "The walls went up fast. The roof took all afternoon.", correct: true },
         { text: "The walls went up fast, the roof took all afternoon." },
@@ -922,26 +922,26 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p7"],
       like: ["SK-GC2a-C08"],
-      prompt: "Sentence 1 in Kofi's draft names two builders. Why is it still a simple sentence?",
+      prompt: "Line 1 of this draft has an and, yet it is not compound. What is the reason?",
       choices: [
-        { text: "Both builders did the same job, so there is one whole thought.", correct: true },
-        { text: "It has a part that cannot stand alone, so it counts as simple." },
-        { text: "Each builder did a different job, so each gets a whole thought." },
-        { text: "It tells about only one tree house, so it must be simple." }
+        { text: "Two builders share one action, so only one idea is told.", correct: true },
+        { text: "The word and always joins two sentences." },
+        { text: "Each builder had a separate job, which makes it complex." },
+        { text: "A line about one tree house cannot be compound." }
       ],
-      clue: "A simple sentence has one whole thought. Count the whole thoughts, not the builders.",
+      clue: "A compound sentence tells two separate things. Count the actions in line 1, not the people.",
       hints: [
-        "A simple sentence has one whole thought. Count the whole thoughts, not the builders.",
-        "Find the does-what in sentence 1. Ask how many different things were done, and who did them.",
-        "The number of things in a sentence does not decide its kind. Check the other choices against the sentence itself."
+        "A compound sentence tells two separate things. Count the actions in line 1, not the people.",
+        "Find the does-what in line 1. Ask how many different things were done, and who did them.",
+        "The number of builders does not decide the kind of sentence. Check the other choices against the line itself."
       ],
       how: [
-        "The who in sentence 1 is my uncle and I.",
+        "The who in line 1 is my uncle and I.",
         "The does-what is built a tree house in the old oak tree. There is only one, and both builders did it together.",
-        "One does-what means one whole thought, so the sentence is simple: \"Both builders did the same job, so there is one whole thought.\""
+        "One does-what means only one idea: \"Two builders share one action, so only one idea is told.\""
       ],
       misconception: "A common mix-up is thinking and always makes a compound sentence. It does so only when it joins two whole thoughts.",
-      why: "The answer is \"Both builders did the same job, so there is one whole thought.\" The word and joins two people, and both of them built the tree house. Nothing in the sentence cannot stand alone. The builders did not do different jobs. Being about one tree house does not decide the kind of sentence."
+      why: "The answer is \"Two builders share one action, so only one idea is told.\" The word and joins two people, and both of them built the tree house. And does not always join two sentences. The builders did not have separate jobs. The topic of a line does not decide its kind."
     },
     {
       id: "SK-GC2a-S09",
@@ -951,30 +951,30 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C09"],
-      prompt: "Which choice gives sentence 2 a who and keeps the meaning?",
+      prompt: "Which choice puts a person into line 2 so it is a whole sentence?",
       stem: [
-        "(1) Nina mixed the paint.",
-        "(2) Then poured it into small cups."
+        "(1) Lena found a loose button.",
+        "(2) Sewed it back onto her coat."
       ],
       choices: [
-        { text: "Then she poured it into small cups.", correct: true },
-        { text: "Then, poured it into small cups." },
-        { text: "Then the paint in small cups." },
-        { text: "Then poured it into small cups quickly." }
+        { text: "Next she sewed it back onto her coat.", correct: true },
+        { text: "Next, sewed it back onto her coat." },
+        { text: "Next the button back onto her coat." },
+        { text: "Sewed it back onto her coat carefully." }
       ],
-      clue: "Every complete sentence needs a who and a does-what. Find what sentence 2 is missing.",
+      clue: "Every complete sentence needs a who and a does-what. Find what line 2 is missing.",
       hints: [
-        "Every complete sentence needs a who and a does-what. Find what sentence 2 is missing.",
-        "Read both sentences. Ask who poured the paint, and where that who belongs in sentence 2.",
+        "Every complete sentence needs a who and a does-what. Find what line 2 is missing.",
+        "Read both lines. Ask who sewed the button, and where that who belongs in line 2.",
         "A comma does not add a who. Check the other choices to see which really name someone."
       ],
       how: [
-        "Sentence 2 has a does-what, poured, but no one doing it.",
-        "Sentence 1 says Nina mixed the paint, so Nina poured it too. A word that stands for Nina is she.",
-        "The answer is \"Then she poured it into small cups.\" The others still have no one pouring."
+        "Line 2 has a does-what, sewed, but no one doing it.",
+        "Line 1 says Lena found the button, so Lena sewed it too. A word that stands for Lena is she.",
+        "The answer is \"Next she sewed it back onto her coat.\" The others still have no one sewing."
       ],
       misconception: "A common mix-up is changing punctuation or adding words without adding a who.",
-      why: "The answer is \"Then she poured it into small cups.\" Now the sentence has a who (she) and a does-what (poured). The comma choice and the quickly choice still have no who. \"Then the paint in small cups.\" has no does-what."
+      why: "The answer is \"Next she sewed it back onto her coat.\" Now the line has a who (she) and a does-what (sewed). The comma choice and the carefully choice still have no who. \"Next the button back onto her coat.\" has no does-what."
     },
     {
       id: "SK-GC2a-S10",
@@ -984,33 +984,31 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: ["p7"],
       like: ["SK-GC2a-C10"],
-      prompt: "How does sentence 3 differ from sentence 7 in Kofi's draft?",
+      prompt: "Compare line 3 with line 7. Which statement is true?",
       choices: [
         {
-          text: "Sentence 3 has two parts that could each be a sentence. Sentence 7 has one part that could not.",
+          text: "Line 3: both halves can stand alone. Line 7: only the last half can.",
           correct: true
         },
+        { text: "Line 3: only the first half can stand alone. Line 7: both halves can." },
+        { text: "Lines 3 and 7: both halves can stand alone." },
         {
-          text: "Sentence 3 has two parts with a who and a does-what. Sentence 7 has only one part with both."
-        },
-        {
-          text: "Sentence 3 has a part that cannot stand alone. Sentence 7 has two parts that can."
-        },
-        { text: "Sentence 3 is a whole thought. Sentence 7 is only one part of a thought." }
+          text: "Line 3: the second half needs the first. Line 7: neither half can stand alone."
+        }
       ],
-      clue: "To compare two sentences, break each into its parts. Ask which parts could be a sentence by themselves.",
+      clue: "To compare two lines, break each into halves. Ask which halves could be a sentence by themselves.",
       hints: [
-        "To compare two sentences, break each into its parts. Ask which parts could be a sentence by themselves.",
-        "Find the joining word in each sentence. Then read the part that comes after it.",
-        "Both sentences have two whos and two does-whats, so that cannot be the difference. Check the other choices."
+        "To compare two lines, break each into halves. Ask which halves could be a sentence by themselves.",
+        "Find the joining word in each line. Then read the half that comes after it.",
+        "Both halves of line 3 have a who and a does-what. Check the other choices against that."
       ],
       how: [
-        "Sentence 3: \"Uncle Ray measured every board\" and \"I held the nails\" are two whole thoughts joined by a comma and and.",
-        "Sentence 7: \"we drew a plan on paper\" is whole, but \"Before we built the walls\" starts with Before and leaves you waiting.",
-        "The answer is \"Sentence 3 has two parts that could each be a sentence. Sentence 7 has one part that could not.\""
+        "Line 3: \"Uncle Ray measured every board\" and \"I held the nails\" are two whole thoughts joined by a comma and and.",
+        "Line 7: \"we drew a plan on paper\" is whole, but \"Before we built the walls\" starts with Before and leaves you waiting.",
+        "The answer is \"Line 3: both halves can stand alone. Line 7: only the last half can.\""
       ],
-      misconception: "A common mix-up is reversing the kinds. And joins whole thoughts. A word like before starts a part that waits.",
-      why: "The answer is \"Sentence 3 has two parts that could each be a sentence. Sentence 7 has one part that could not.\" Sentence 3 is compound and sentence 7 is complex. Both sentences have two whos and two does-whats. Sentence 7 is a whole sentence, not a fragment."
+      misconception: "A common mix-up is thinking a word like before starts a whole thought. It starts a part that waits.",
+      why: "The answer is \"Line 3: both halves can stand alone. Line 7: only the last half can.\" Line 3 is compound and line 7 is complex. The other choices swap the halves or call a waiting part a whole thought."
     },
     {
       id: "SK-GC2a-S11",
@@ -1051,30 +1049,30 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C12"],
-      prompt: "Which choice fixes the fragment in sentence 2 by attaching it to sentence 1?",
+      prompt: "Which rewrite joins line 2 to line 1 so that nothing is left hanging?",
       stem: [
-        "(1) Our team painted a banner.",
-        "(2) Across the whole gym wall."
+        "(1) Dad planted a maple tree.",
+        "(2) Beside the back fence."
       ],
       choices: [
-        { text: "Our team painted a banner across the whole gym wall.", correct: true },
-        { text: "Our team painted a banner, and across the whole gym wall." },
-        { text: "Our team painted a banner across the whole. Gym wall." },
-        { text: "Our team painted a banner because across the whole gym wall." }
+        { text: "Dad planted a maple tree beside the back fence.", correct: true },
+        { text: "Dad planted a maple tree, then beside the back fence." },
+        { text: "Dad planted a maple tree beside the. Back fence." },
+        { text: "Dad planted a maple tree. Beside, the back fence." }
       ],
-      clue: "A fragment is missing a piece. Find what sentence 2 is missing, then borrow it from the sentence beside it.",
+      clue: "A piece that hangs is missing something. Find what line 2 is missing, then borrow it from the line beside it.",
       hints: [
-        "A fragment is missing a piece. Find what sentence 2 is missing, then borrow it from the sentence beside it.",
-        "Read sentence 2 alone. Does it have a who? A does-what? Then see what sentence 1 has that sentence 2 needs.",
-        "Putting and in front of sentence 2 does not give it a who or a does-what. Check the other choices."
+        "A piece that hangs is missing something. Find what line 2 is missing, then borrow it from the line beside it.",
+        "Read line 2 alone. Does it have a who? A does-what? Then see what line 1 has that line 2 needs.",
+        "Putting a word like then in front of line 2 does not give it a who or a does-what. Check the other choices."
       ],
       how: [
-        "Sentence 2 only tells where. It has no who and no does-what.",
-        "Sentence 1 has them: \"Our team painted a banner.\" Sentence 2 tells where the banner was painted.",
-        "Attach the where to the end of sentence 1: \"Our team painted a banner across the whole gym wall.\""
+        "Line 2 only tells where. It has no who and no does-what.",
+        "Line 1 has them: \"Dad planted a maple tree.\" Line 2 tells where the tree was planted.",
+        "Attach the where to the end of line 1: \"Dad planted a maple tree beside the back fence.\""
       ],
-      misconception: "A common mix-up is adding a joining word such as and or because. A joining word does not add the missing piece.",
-      why: "The answer is \"Our team painted a banner across the whole gym wall.\" Sentence 2 only tells where, so it needs the who and does-what from sentence 1. A joining word leaves it a fragment. Splitting the phrase makes a new fragment, \"Gym wall.\""
+      misconception: "A common mix-up is adding a small word such as then. A small word does not add the missing piece.",
+      why: "The answer is \"Dad planted a maple tree beside the back fence.\" Line 2 only tells where, so it needs the who and does-what from line 1. Adding then leaves it hanging. Splitting the phrase makes a new fragment, \"Back fence.\""
     },
     {
       id: "SK-GC2a-S13",
@@ -1084,42 +1082,39 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C13"],
-      prompt: "A student wrote this note about a school rule. Choose the TWO changes that fix the writing.",
+      prompt: "Below is a note about a class pet. Which TWO rewrites fix it?",
       stem: [
-        "(1) The bike rack by the gym has a new rule.",
-        "(2) Because bikes were blocking the door.",
-        "(3) Two bikes fell over they bent a wheel.",
-        "(4) Now every rider locks up at the rack."
+        "(1) The hamster cage near the window needs a new lid.",
+        "(2) Since the old lid cracked.",
+        "(3) Mia lifted it the hamster escaped.",
+        "(4) Now we check the lid each morning."
       ],
       pick: 2,
       choices: [
         {
-          text: "Change sentences 1 and 2 to: The bike rack by the gym has a new rule because bikes were blocking the door.",
+          text: "Join lines 1 and 2: The hamster cage near the window needs a new lid since the old lid cracked.",
           correct: true
         },
+        { text: "Rewrite line 3 as: Mia lifted it, and the hamster escaped.", correct: true },
         {
-          text: "Change sentence 3 to: Two bikes fell over, and they bent a wheel.",
-          correct: true
+          text: "Join lines 1 and 2: The hamster cage near the window needs a new lid, and since the old lid cracked."
         },
-        {
-          text: "Change sentences 1 and 2 to: The bike rack by the gym has a new rule, and because bikes were blocking the door."
-        },
-        { text: "Change sentence 3 to: Two bikes fell over, they bent a wheel." },
-        { text: "Change sentence 4 to: Now every rider locks, up at the rack." }
+        { text: "Rewrite line 3 as: Mia lifted it, the hamster escaped." },
+        { text: "Rewrite line 4 as: Now we check, the lid each morning." }
       ],
-      clue: "Read the whole note and find the two places where the writing is not correct. A good fix turns each broken sentence into a correct one.",
+      clue: "Read the whole note and find the two places where the writing is not correct. A good fix turns each broken line into a correct one.",
       hints: [
-        "Read the whole note and find the two places where the writing is not correct. A good fix turns each broken sentence into a correct one.",
-        "Look for one sentence that leaves you waiting and one that runs two thoughts together. Pick one fix for each.",
+        "Read the whole note and find the two places where the writing is not correct. A good fix turns each broken line into a correct one.",
+        "Look for one line that leaves you waiting and one that runs two thoughts together. Pick one fix for each.",
         "A comma alone does not fix two thoughts that run together. Check each choice for a fix that leaves the problem in place."
       ],
       how: [
-        "Sentence 2 starts with Because and leaves you waiting, so it is a fragment. Sentence 3 has two whole thoughts with nothing between them, so it is a run-on.",
-        "Fix the fragment by joining it to sentence 1: \"Change sentences 1 and 2 to: The bike rack by the gym has a new rule because bikes were blocking the door.\"",
-        "Fix the run-on with a comma and a joining word: \"Change sentence 3 to: Two bikes fell over, and they bent a wheel.\""
+        "Line 2 starts with Since and leaves you waiting, so it is a fragment. Line 3 has two whole thoughts with nothing between them, so it is a run-on.",
+        "Fix the fragment by joining it to line 1: \"Join lines 1 and 2: The hamster cage near the window needs a new lid since the old lid cracked.\"",
+        "Fix the run-on with a comma and a joining word: \"Rewrite line 3 as: Mia lifted it, and the hamster escaped.\""
       ],
       misconception: "A common mix-up is choosing a fix that adds a comma but leaves the problem in place.",
-      why: "The answers are \"Change sentences 1 and 2 to: The bike rack by the gym has a new rule because bikes were blocking the door.\" and \"Change sentence 3 to: Two bikes fell over, and they bent a wheel.\" The first gives the because part a whole thought. The second joins two whole thoughts with a comma and and. Sentence 4 is already correct."
+      why: "The answers are \"Join lines 1 and 2: The hamster cage near the window needs a new lid since the old lid cracked.\" and \"Rewrite line 3 as: Mia lifted it, and the hamster escaped.\" The first gives the since part a whole thought. The second joins two whole thoughts with a comma and and. Line 4 is already correct."
     },
     {
       id: "SK-GC2a-S14",
@@ -1129,30 +1124,27 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C14"],
-      prompt: "Ben and Ana read the sentence in the box. Ben says it is compound because it joins two whole thoughts. Ana says it is simple because it is one sentence. Who is right?",
-      stem: "The class cheered, and the team ran onto the field.",
+      prompt: "Which answer gives the right kind and the right reason?",
+      stem: "The lights went out, but the band kept playing.",
       choices: [
-        {
-          text: "Ben is right, because each part could stand alone as a sentence.",
-          correct: true
-        },
-        { text: "Ana is right, because the whole sentence can stand alone as one sentence." },
-        { text: "Both are right, because a sentence can be simple and compound." },
-        { text: "Neither is right, because the sentence is complex." }
+        { text: "Compound: each side of but could be a sentence alone.", correct: true },
+        { text: "Complex: the side after but needs the rest." },
+        { text: "Simple: a short line has just one thought." },
+        { text: "Compound: a comma makes any line compound." }
       ],
-      clue: "To decide between two students, test each reason. Ask whether each part of the sentence could stand alone.",
+      clue: "To name a sentence, ask what each side of the joining word would be on its own.",
       hints: [
-        "To decide between two students, test each reason. Ask whether each part of the sentence could stand alone.",
-        "Find the comma and the joining word. Read the part before them, and then the part after.",
-        "Every sentence can stand alone, so that is not what decides its kind. Check the other choices for a reason about the parts inside."
+        "To name a sentence, ask what each side of the joining word would be on its own.",
+        "Find the comma and the joining word. Read the words before them, and then the words after.",
+        "A comma alone does not decide the kind. Check the other choices for a reason about the two sides."
       ],
       how: [
-        "\"The class cheered\" is a whole thought, and \"the team ran onto the field\" is another.",
-        "They are joined by a comma and and, which join two whole thoughts. That makes the sentence compound.",
-        "So Ben is right, because each part could stand alone as a sentence."
+        "\"The lights went out\" is a whole thought, and \"the band kept playing\" is another.",
+        "They are joined by a comma and but, which join two whole thoughts.",
+        "So the answer is \"Compound: each side of but could be a sentence alone.\""
       ],
-      misconception: "A common mix-up is thinking one end mark means one thought. The kind depends on the whole thoughts inside.",
-      why: "The answer is \"Ben is right, because each part could stand alone as a sentence.\" Two whole thoughts joined by a comma and and make a compound sentence. Every sentence can stand alone, but that does not make it simple. A sentence is not two kinds at once, and nothing in it starts with a waiting word, so it is not complex."
+      misconception: "A common mix-up is thinking every joining word starts a waiting part. But, and, or and so join whole thoughts.",
+      why: "The answer is \"Compound: each side of but could be a sentence alone.\" The side after but is a whole thought, so it is not complex. A short line can still hold two thoughts. A comma alone does not make a line compound."
     },
     {
       id: "SK-GC2a-S15",
@@ -1162,8 +1154,8 @@ PP.addLesson({
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C15"],
-      prompt: "Choose the words that make the first sentence compound and the second sentence complex.",
-      text: "Mia lost her key, {0} she knocked on the door. {1} Mia lost her key, she knocked on the door.",
+      prompt: "Fill each blank so one sentence is compound and the other is complex.",
+      text: "The bell rang, {0} the students lined up. {1} the bell rang, the students lined up.",
       slots: [
         {
           options: ["when", "so", "if"],
@@ -1181,12 +1173,12 @@ PP.addLesson({
         "In the first blank, when and if both start a part that cannot stand alone. Decide which word is left, and then do the second blank."
       ],
       how: [
-        "First sentence: it must be compound, so it needs a comma and a word that joins two whole thoughts. So fits: \"Mia lost her key, so she knocked on the door.\"",
+        "First sentence: it must be compound, so it needs a comma and a word that joins two whole thoughts. So fits: \"The bell rang, so the students lined up.\"",
         "When and if start a part that cannot stand alone, so they would make a complex sentence.",
-        "Second sentence: it must be complex, so it needs a word that starts a part that cannot stand alone. When fits: \"When Mia lost her key, she knocked on the door.\""
+        "Second sentence: it must be complex, so it needs a word that starts a part that cannot stand alone. When fits: \"When the bell rang, the students lined up.\""
       ],
       misconception: "A common mix-up is picking by meaning alone. Here each sentence must also be the right kind.",
-      why: "The answers are so and When. \"Mia lost her key, so she knocked on the door.\" joins two whole thoughts with a comma and so, so it is compound. \"When Mia lost her key, she knocked on the door.\" has a When part that cannot stand alone, so it is complex. And and Then do not start a part that cannot stand alone."
+      why: "The answers are so and When. \"The bell rang, so the students lined up.\" joins two whole thoughts with a comma and so, so it is compound. \"When the bell rang, the students lined up.\" has a When part that cannot stand alone, so it is complex. And and Then do not start a part that cannot stand alone."
     }
   ],
   addons: {

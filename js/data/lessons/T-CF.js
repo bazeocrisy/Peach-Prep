@@ -1012,7 +1012,7 @@ PP.addLesson({
       "A web page or an app has tools you tap or click. A back arrow takes you to the page you just left. A menu button, often three short lines, opens a list of pages. A search box, often shown with a magnifying glass, finds a word or a topic. A link, often underlined words, takes you to another page. A pop-up is a small box that opens on top of the page, often to explain a word with a dotted line under it. You do not leave the page.",
       "A video or audio player has controls. The play button starts or stops the recording. The progress bar shows how far along you are, and a marker on the bar can jump you to a part. A button such as 1x changes the speed, and a speaker button changes the volume. Captions, shown by the CC button, write out the words and the important sounds. A transcript is the whole recording written out, so you can read it.",
       "A script is the writing for a recording. A name with a colon, such as GUIDE: or HOST:, shows who is talking. Words in [brackets] name a sound or a pause to put in. A sound such as a bell can show that a new part is starting, and a [pause] leaves a quiet moment.",
-      "A speaker has a voice instead of headings. Listeners cannot look back, so a good speaker helps them. The speaker talks slowly and clearly, pauses before an important part, and says a key fact twice. The speaker also fits the voice to the message, so good news sounds happy and a warning sounds serious. Words such as first, next and last tell listeners where they are.",
+      "A speaker has a voice instead of headings. Listeners cannot look back, so a good speaker helps them. The speaker talks slowly and clearly, pauses before an important part, and says a key fact twice. The speaker also fits the voice to the message, so good news sounds happy and a warning sounds serious. Words such as first, next, also and last tell listeners that a new part is starting, the way a heading does on a page. A speaker can also ask a question and then wait, so that listeners start to think.",
       "Each way of sharing is best at something. A video shows how something moves. A recording lets you listen while your eyes or hands are busy. Printed words let you stop and read again. Pick the one that fits what you need."
     ],
     words: [
@@ -1056,14 +1056,14 @@ PP.addLesson({
       answer: "They name the sounds to play: footsteps on gravel, and then a creaking door."
     },
     {
-      show: ["Mr. Cole is giving a talk to the class. He says, \"Here are three tips for packing a school bag.\" He stops for a moment. Then he says, \"First, put the heaviest book at the bottom.\""],
-      ask: "How do Mr. Cole's words and pause help the listeners?",
+      show: ["Mr. Cole begins a talk about lunch boxes. He asks, \"Has anyone ever left a lunch box on the bus?\" Then he waits, and some hands go up."],
+      ask: "Why does Mr. Cole ask a question and then wait?",
       steps: [
-        "Listeners cannot see a list, so they cannot count the tips for themselves.",
-        "Mr. Cole says \"three tips,\" so listeners know how many to expect. The word \"First\" tells them where he is.",
-        "The pause gives listeners a moment to get ready for the first tip."
+        "A speaker cannot see inside a listener's mind. A question gets listeners to think about the topic.",
+        "Mr. Cole does not talk right away. The wait gives listeners time to think about their own answers.",
+        "So the question and the wait bring the listeners into the talk before the facts begin."
       ],
-      answer: "He tells how many tips there are and says First, so listeners know where they are. His pause gets them ready to listen."
+      answer: "The question gets listeners thinking about the topic, and the wait gives them time to answer."
     }
   ],
   parent: "Next time your child watches a video or listens to a recording, ask: Which button would you use to read the words, or to jump to the part you want? When someone speaks to a group, ask what the speaker did to help the listeners.",
@@ -1208,23 +1208,23 @@ PP.addLesson({
           { text: "Open the transcript link and read the narrator's words.", correct: true },
           { text: "Drag the progress bar back and hear that part again.", correct: true },
           { text: "Tap the 1x button, so the narrator talks faster." },
-          { text: "Tap the Crafts tab at the top of the page." },
-          { text: "Tap the link that says Make your own crayons." }
+          { text: "Turn the volume up and keep watching the video." },
+          { text: "Pause the video and wait for the narrator to say it again." }
         ],
-        clue: "Eli needs the exact number. Ask which features write down what was said, or let him listen once more.",
+        clue: "Eli needs the exact number. Ask what each tool on the page is for. Eli needs to check something that was already said.",
         hints: [
-          "Eli needs the exact number. Ask which features write down what was said, or let him listen once more.",
-          "Look under the video for the bar and the link that help a viewer review. Look at the tab and the other link too.",
+          "Eli needs the exact number. Ask what each tool on the page is for. Eli needs to check something that was already said.",
+          "Look at the bar, the buttons, the tab and the links. Ask what each one does to the video or to the page.",
           "Tapping the 1x button would make the video play faster, so Eli would hear the number even more quickly. Rule it out and choose two from the four that are left."
         ],
         how: [
           "Eli needs one exact number that the narrator said.",
           "The transcript writes out the narrator's words, so Eli can read the number. The progress bar can be dragged back, so Eli can hear the part again.",
           "The answers are \"Open the transcript link and read the narrator's words.\" and \"Drag the progress bar back and hear that part again.\"",
-          "The 1x button changes the speed. The Crafts tab and the Make your own crayons link open other pages."
+          "The 1x button changes the speed. A louder video still says the number only once, and pausing does not make the narrator say it again."
         ],
         misconception: "A common mix-up is choosing the 1x button because it seems to help with talking. It changes how fast the narrator speaks, but it does not give Eli the number.",
-        why: "The answers are \"Open the transcript link and read the narrator's words.\" and \"Drag the progress bar back and hear that part again.\" Both give Eli the exact words. The 1x button changes the speed, and the tab and the other link open other pages." },
+        why: "The answers are \"Open the transcript link and read the narrator's words.\" and \"Drag the progress bar back and hear that part again.\" Both give Eli the exact words. The 1x button changes the speed, a louder video still says the number only once, and pausing does not make the narrator say it again." },
       { id: "SK-TFD-C03", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Ms. Lopez wrote directions for the class website. Two of her sentences have a mistake.", "To go back to the page you just left, tap the menu button.", "To find a page about bridges, scroll through the Back arrow."],
         prompt: "Choose the words that fix Ms. Lopez's directions.",
@@ -1270,7 +1270,7 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is matching a link to every job, since it opens something. A link takes you to a new page, but a pop-up stays on the same page.",
         why: "The note without leaving the page is a pop-up. The list of chapters is a menu. The jump to the page about whales is a link. Finding every page with the word tide needs a search box." },
-      { id: "SK-TFD-C05", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [],
+      { id: "SK-TFD-C05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Kofi wants to learn how to fold a paper fan. He can choose a video of two hands folding the paper, a recording of a voice that tells the steps, or a page of words with no pictures."],
         prompt: "Which choice will help him most, and why?",
         choices: [
@@ -1279,9 +1279,9 @@ PP.addLesson({
           { text: "the page of words, because words show a fold better than hands do" },
           { text: "any of them, because all three give the same help in the same way" }
         ],
-        clue: "Kofi needs to see where each fold goes. Ask which way of sharing can show hands moving.",
+        clue: "Ask what Kofi has to do to learn this, and which way of sharing fits that job.",
         hints: [
-          "Kofi needs to see where each fold goes. Ask which way of sharing can show hands moving.",
+          "Ask what Kofi has to do to learn this, and which way of sharing fits that job.",
           "Read what each choice can do: show, tell in a voice, or tell in words. Then read each reason and ask whether it is true.",
           "The choice that says all three give the same help is not true, because a voice, words and a video do different things. Rule it out and check the reasons for the other three."
         ],
@@ -1369,27 +1369,27 @@ PP.addLesson({
         misconception: "A common mix-up is choosing a sentence that tells where to stand. Part B asks for the sentence that gives the reason for a quiet whisper.",
         why: "Part A: \"A soft whisper shows that the dishes can carry even a quiet sound.\" Part B: \"That is why even a soft whisper can be heard from far away.\" The guide asks for a low whisper to show how well the dishes carry sound. The script says nothing about harming the dishes." },
       { id: "SK-TFD-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
-        stem: ["Mr. Dunn is writing the script for Stop 5 of the audio tour, the Echo Tube. In this tour, a [soft bell] shows that a new part is starting, and a [pause] leaves a quiet moment.", "GUIDE: Put your ear to the end of the tube."],
+        stem: ["Mr. Dunn is writing the script for Stop 5 of the audio tour, the Echo Tube. In this tour, a [soft bell] shows that a new part is starting.", "GUIDE: Call your name into the tube, and listen."],
         prompt: "Choose the words that best complete the sentences.",
-        text: "After the line about the tube, Mr. Dunn should add {0}, so listeners have time to listen. At the end of Stop 5, he should add {1}, so listeners know the next stop is coming.",
+        text: "After the guide says to call into the tube, Mr. Dunn should add {0}, so listeners hear a voice bounce back. At the end of Stop 5, he should add {1}, so listeners know the next stop is coming.",
         slots: [
-          { options: ["[pause]", "[soft bell]", "[loud crash]"], answer: 0 },
-          { options: ["[soft bell]", "[pause]", "[loud crash]"], answer: 0 }
+          { options: ["[echo]", "[soft bell]", "[loud buzzer]"], answer: 0 },
+          { options: ["[soft bell]", "[echo]", "[loud buzzer]"], answer: 0 }
         ],
-        clue: "The stem tells what a bell and a pause do in this tour. Match each job to the sound.",
+        clue: "Ask what sound a listener would hear in each place. The stem tells what a bell does in this tour.",
         hints: [
-          "The stem tells what a bell and a pause do in this tour. Match each job to the sound.",
-          "Read the first sentence of the stem again. Then ask which job comes after the line about the tube, and which job comes at the end of the stop.",
-          "A loud crash is not described in the tour, so it is not the answer for either blank. Decide which of the other two words goes with each job."
+          "Ask what sound a listener would hear in each place. The stem tells what a bell does in this tour.",
+          "Read the stem again. Then ask what happens when a voice goes into a tube, and what shows that a new part is starting.",
+          "A loud buzzer is not described in the tour and fits neither place, so rule it out. Decide which of the other two words goes with each blank."
         ],
         how: [
-          "The stem says a [pause] leaves a quiet moment, and a [soft bell] shows that a new part is starting.",
-          "After the line about putting an ear to the tube, listeners need time to listen, so Mr. Dunn adds a [pause].",
+          "The stem says a [soft bell] shows that a new part is starting. A tube sends a voice back as an echo.",
+          "After the guide says to call into the tube, the listeners should hear the voice bounce back, so Mr. Dunn adds an [echo].",
           "At the end of the stop, a new part is starting soon, so he adds a [soft bell].",
-          "The answers are [pause] and [soft bell]. A loud crash does not do either job in this tour."
+          "The answers are [echo] and [soft bell]. A loud buzzer does not do either job in this tour."
         ],
-        misconception: "A common mix-up is swapping the two sounds. A bell shows a new part, and a pause gives listeners time.",
-        why: "The answers are [pause] and [soft bell]. A pause gives listeners time to listen after the line about the tube. A soft bell shows that a new part is starting, so it goes at the end of the stop." },
+        misconception: "A common mix-up is swapping the two sounds. A bell shows a new part, and an echo is the voice coming back from the tube.",
+        why: "The answers are [echo] and [soft bell]. An echo is what a voice does in a tube, so it goes after the guide says to call into the tube. A soft bell shows that a new part is starting, so it goes at the end of the stop." },
       { id: "SK-TFD-C10", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [],
         stem: ["Next to the whisper dishes is a sign. It says, \"Whisper into one dish. A friend at the other dish can hear you.\" The museum also offers an audio tour with a guide who speaks."],
         prompt: "How does the audio tour help a first-time visitor more than the sign does?",
@@ -1419,9 +1419,9 @@ PP.addLesson({
         prompt: "Jayden wants listeners to remember what time robotics club starts. Which sentence should he say a second time? Choose the sentence in the passage.",
         targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1", "p2:3:2", "p2:6:1"],
         answer: ["p2:2:2"], pick: 1,
-        clue: "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
+        clue: "Listeners cannot look back at the page. Ask which fact they would be sorry to miss.",
         hints: [
-          "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
+          "Listeners cannot look back at the page. Ask which fact they would be sorry to miss.",
           "Read the paragraph about robotics club. Ask which sentence tells the time.",
           "The sentence that begins \"Next, the lost and found box is full\" is about a different notice, so rule it out. Check the other sentences you can choose for the time."
         ],
@@ -1434,40 +1434,40 @@ PP.addLesson({
         misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need, and here that is the time.",
         why: "The answer is \"It starts at three o'clock.\" Listeners cannot look back, so the speaker says the time a second time. The other sentences tell where robotics club meets, who can come, or other notices." },
       { id: "SK-TFD-C12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p2"],
-        prompt: "Jayden stops for a moment after saying, \"Good morning, Panthers!\" Why might he stop?",
+        prompt: "Jayden begins one notice with \"Next\" and another with \"Also.\" Why does he use these words?",
         choices: [
-          { text: "so listeners can get quiet and ready to hear the first notice", correct: true },
-          { text: "so listeners can read the first notice on their desks" },
-          { text: "because all of the announcements are finished" },
-          { text: "so listeners can say the greeting back to him" }
+          { text: "to show listeners that a new notice is starting", correct: true },
+          { text: "to show listeners which notice is the most important" },
+          { text: "to show listeners that the notices are almost over" },
+          { text: "to show listeners which notices they should write down" }
         ],
-        clue: "A speaker pauses to help the listeners. Ask what listeners need before the first notice starts.",
+        clue: "Listeners cannot see where one notice ends. Ask what a spoken word can do that a heading does on a page.",
         hints: [
-          "A speaker pauses to help the listeners. Ask what listeners need before the first notice starts.",
-          "Look at where the greeting is in the script. Then see what comes right after it.",
-          "The notices come right after the greeting, so the announcements are not finished. Rule that choice out and decide among the other three."
+          "Listeners cannot see where one notice ends. Ask what a spoken word can do that a heading does on a page.",
+          "Look at the first words of each notice in the script. Then ask what changes right after those words.",
+          "The word Also begins two different notices, so these words do not rank the notices by importance. Rule that choice out and decide among the other three."
         ],
         how: [
-          "The greeting is the first line, so the notices have not started yet.",
-          "The listeners are in many rooms and may still be talking. A short stop gets them quiet.",
-          "The answer is \"so listeners can get quiet and ready to hear the first notice.\"",
-          "The notices are not printed for the listeners, and the announcements are not over."
+          "The script has several notices, and the listeners hear them all, one after another.",
+          "A heading would mark a new part on a page, but listeners hear only a voice. A word such as Next or Also does that job.",
+          "The answer is \"to show listeners that a new notice is starting.\"",
+          "Both words begin new notices, and neither word ranks a notice or tells listeners to write it down. Only Last would show that the notices are almost over."
         ],
-        misconception: "A common mix-up is thinking a pause means the speaker is done. A pause at the start gives listeners a moment to get ready.",
-        why: "The answer is \"so listeners can get quiet and ready to hear the first notice.\" The greeting comes before the notices, and listeners need a moment to settle. The notices are not printed on the desks, and the announcements are not finished." },
+        misconception: "A common mix-up is thinking a word such as Next ranks the notices. These words only show that a new notice is starting.",
+        why: "The answer is \"to show listeners that a new notice is starting.\" The greeting comes before the notices, and listeners need a moment to settle. The notices are not printed on the desks, and the announcements are not finished." },
       { id: "SK-TFD-C13", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Jayden's friend recorded him practicing. On the recording, his voice dropped to a mumble at the end of each sentence, and he said \"Room 12\" so fast that nobody could catch it. His teacher gave him two tips."],
         prompt: "Choose the words that best complete the tips.",
         text: "At the end of each sentence, Jayden should {0}. When he says \"Room 12,\" he should {1}.",
         slots: [
           { options: ["keep his voice strong", "let his voice fade", "speak in a whisper"], answer: 0 },
-          { options: ["say it slowly and clearly", "say it more quickly", "leave it out"], answer: 0 }
+          { options: ["say it slowly and clearly", "say it more quickly", "say it only once"], answer: 0 }
         ],
         clue: "Listeners must hear every word the first time. Ask what the mumble and the fast words did to the message.",
         hints: [
           "Listeners must hear every word the first time. Ask what the mumble and the fast words did to the message.",
           "Reread the two problems in the stem. Each tip should fix one of them.",
-          "Leaving out the room would take away the place where robotics club meets, so it is not the answer for the second blank. Decide the rest yourself."
+          "Saying the room only once would not fix the problem that it was too fast, so it is not the answer for the second blank. Decide the rest yourself."
         ],
         how: [
           "The first problem is that his voice drops at the end of each sentence, so listeners miss the last words.",
@@ -1481,10 +1481,10 @@ PP.addLesson({
         stem: ["At a soccer field, a speaker tells the parents that the game has moved from Field A to Field B. Many people are talking and cheering."],
         prompt: "How should the speaker share the news so that most people understand it?",
         choices: [
-          { text: "Say \"Field B\" slowly and clearly, and then say it again.", correct: true },
-          { text: "Say it once as fast as possible so the news is short." },
-          { text: "Say it in a whisper so people stop talking to listen." },
-          { text: "Say it once, and then wait for people to ask questions." }
+          { text: "Say \"Field B\" in a strong voice, and then say it again.", correct: true },
+          { text: "Say it once as fast as possible, so the news is short." },
+          { text: "Say it in a whisper, so people stop talking to listen." },
+          { text: "Say it one time, and then wait for people to ask questions." }
         ],
         clue: "It is noisy, and listeners cannot ask or read. Ask what a speaker can do so the important fact is not missed.",
         hints: [
@@ -1494,12 +1494,12 @@ PP.addLesson({
         ],
         how: [
           "The crowd is noisy, so some people will miss a fact that is said only once.",
-          "A speaker can speak slowly and clearly and say the key fact twice, so more people catch it.",
-          "The answer is \"Say \"Field B\" slowly and clearly, and then say it again.\"",
+          "A speaker can use a strong voice and say the key fact twice, so more people catch it.",
+          "The answer is \"Say \"Field B\" in a strong voice, and then say it again.\"",
           "A fast, quiet or single mention makes it easier to miss, and the crowd cannot ask questions over the speaker."
         ],
-        misconception: "A common mix-up is thinking a short, fast message is best. In a noisy place, a key fact needs a slow, clear voice and a repeat.",
-        why: "The answer is \"Say \"Field B\" slowly and clearly, and then say it again.\" The crowd is noisy and cannot reread, so a slow, clear, repeated message is easiest to catch. Fast, quiet or single mentions are easy to miss." },
+        misconception: "A common mix-up is thinking a short, fast message is best. In a noisy place, a key fact needs a strong voice and a repeat.",
+        why: "The answer is \"Say \"Field B\" in a strong voice, and then say it again.\" The crowd is noisy and cannot reread, so a strong, repeated message is easiest to catch. Fast, quiet or single mentions are easy to miss." },
       { id: "SK-TFD-C15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
         stem: ["Mei is giving a talk about her pet parakeet. She plans to read her notes with her head down and hold up nothing. The class will sit in rows, and some children will sit at the back."],
         prompt: "Which TWO changes would make Mei's talk easier for the class to follow? Choose TWO answers.",
@@ -1508,22 +1508,22 @@ PP.addLesson({
           { text: "Hold up a picture of the parakeet's cage when she tells about it.", correct: true },
           { text: "Read her notes faster so that the talk is short." },
           { text: "Tell the facts in a whisper so the class has to lean in." },
-          { text: "Stand behind a tall bookshelf so that she feels calm." }
+          { text: "Stand far from the class so that she feels calm." }
         ],
-        clue: "A speaker can use her eyes, her voice and things she shows. Ask what helps listeners hear, see and understand.",
+        clue: "Ask what Mei's plan makes hard for the children at the back, and what would fix each problem.",
         hints: [
-          "A speaker can use her eyes, her voice and things she shows. Ask what helps listeners hear, see and understand.",
+          "Ask what Mei's plan makes hard for the children at the back, and what would fix each problem.",
           "Think about the children at the back of the room. Which choices help them hear Mei and see what she is telling about?",
           "A whisper would not reach the back of the room, so rule it out. Choose two of the four that are left."
         ],
         how: [
           "Mei's plan has her head down and nothing to show, so listeners at the back may not hear or see much.",
-          "Facing the class helps her voice reach everyone. A picture of the tank shows what she is telling about.",
+          "Facing the class helps her voice reach everyone. A picture of the cage shows what she is telling about.",
           "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the parakeet's cage when she tells about it.\"",
-          "Faster reading, a whisper and a bookshelf make it harder to hear and see."
+          "Faster reading, a whisper and standing far away make it harder to hear and see."
         ],
         misconception: "A common mix-up is thinking a short, quiet or hidden talk is easier on the speaker, so it must be better. A talk is best when listeners can hear and see it.",
-        why: "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the parakeet's cage when she tells about it.\" Both help the class at the back hear and see. Fast reading, whispering and hiding behind a bookshelf make it harder." }
+        why: "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the parakeet's cage when she tells about it.\" Both help the class at the back hear and see. Fast reading, whispering and standing far away make it harder." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own new short text or stem. `like` lists the one core item
@@ -1553,31 +1553,31 @@ PP.addLesson({
       why: "The answer is \"the Dry dot on the line.\" Each dot jumps to the part named on its label, and drying is the final step. The Mash dot goes to the first part, the Back arrow leaves the page, and the speaker icon changes the sound." },
     { id: "SK-TFD-S02", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2, like: ["SK-TFD-C02"],
       stem: ["Zoe plays a recording of a mail carrier on a class page. Halfway through, the mail carrier says a phone number. A noisy hallway drowns it out. A small box under the recording is labeled Transcript. A slider on a bar shows the spot being played."],
-      prompt: "Select the two actions that would give Zoe the digits.",
+      prompt: "Which TWO things could Zoe do to get the digits? Choose TWO answers.",
       choices: [
         { text: "Read the Transcript box until she sees the digits.", correct: true },
         { text: "Move the slider left and replay that spot.", correct: true },
         { text: "Turn the volume way up and let the recording finish." },
-        { text: "Look at the picture of the mail truck." },
+        { text: "Pause the recording and wait for the carrier to say it again." },
         { text: "Click the Back arrow to leave the page." }
       ],
-      clue: "Zoe needs the digits. Ask which actions write them out, or let her hear that spot once more.",
+      clue: "Ask what each tool on the page is for. Zoe needs to check something that was already said.",
       hints: [
-        "Zoe needs the digits. Ask which actions write them out, or let her hear that spot once more.",
-        "Look at the box, the slider and the volume. Ask what each one does.",
+        "Ask what each tool on the page is for. Zoe needs to check something that was already said.",
+        "Look at every choice. Ask what each one does to the recording or to the page.",
         "Turning the volume up changes how loud the recording is, but she would still hear the digits only once, so rule it out. Choose two from the four that are left."
       ],
       how: [
         "Zoe needs one phone number that the mail carrier said.",
         "A transcript writes out the words, so she can read the digits. A slider can be moved back, so she can hear that spot again.",
         "The answers are \"Read the Transcript box until she sees the digits.\" and \"Move the slider left and replay that spot.\"",
-        "Volume only changes loudness. A picture does not say the number, and the Back arrow leaves the page."
+        "Volume only changes loudness. Pausing does not make the carrier say it again, and the Back arrow leaves the page."
       ],
       misconception: "A common mix-up is picking the volume, since the problem is about hearing. A louder sound still goes by once, but a transcript or the slider lets Zoe look or listen again.",
-      why: "The answers are \"Read the Transcript box until she sees the digits.\" and \"Move the slider left and replay that spot.\" Both let Zoe get the digits again. Volume only changes loudness, the picture does not say the number, and the Back arrow leaves the page." },
+      why: "The answers are \"Read the Transcript box until she sees the digits.\" and \"Move the slider left and replay that spot.\" Both let Zoe get the digits again. Volume only changes loudness, pausing does not make the carrier say it again, and the Back arrow leaves the page." },
     { id: "SK-TFD-S03", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C03"],
       stem: ["Mr. Reyes tried to explain the library site to first-graders, but he swapped the jobs of a pair of tools. He said the Home tab opens a list of every page. He also said the magnifying glass takes you to another page."],
-      prompt: "Repair his explanation.",
+      prompt: "Choose the words that fix Mr. Reyes' explanation.",
       text: "A list of every page opens from {0}. Underlined words are the way to {1}.",
       slots: [
         { options: ["the three-line button", "the Home tab", "the magnifying glass"], answer: 0 },
@@ -1619,18 +1619,18 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is matching the dotted-line word with a new page. A dotted-line word opens a note on the same page.",
       why: "Finding all pages that mention crater needs the magnifying glass. The page about the sun is a link, shown by underlined words. The note about lunar comes from the dotted-line word. The list of pages is the three-line button." },
-    { id: "SK-TFD-S05", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C05"],
+    { id: "SK-TFD-S05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C05"],
       stem: ["Ravi will sit in a car for an hour, and screens and books make him queasy. He is curious about the northern lights. A teacher gave him three versions of one talk: a video, a recording and a printed handout."],
-      prompt: "What should Ravi use, and what is the reason?",
+      prompt: "Which choice will help him most, and why?",
       choices: [
         { text: "Play the recording, since ears work when eyes cannot.", correct: true },
         { text: "Watch the video, since moving pictures teach best in every case." },
         { text: "Read the handout, since paper stays steady in a bumpy car." },
         { text: "Skip learning, since nobody can study while riding." }
       ],
-      clue: "Ravi must keep his gaze off screens and paper. Ask which choice needs no looking.",
+      clue: "Ask what Ravi can and cannot do in the car, and which way of sharing still works for him.",
       hints: [
-        "Ravi must keep his gaze off screens and paper. Ask which choice needs no looking.",
+        "Ask what Ravi can and cannot do in the car, and which way of sharing still works for him.",
         "Read what each choice needs: looking, or only listening. Then read each reason and ask whether it fits Ravi.",
         "The choice that says nobody can study while riding is not true, so rule it out. Check the reasons for the other three."
       ],
@@ -1689,7 +1689,7 @@ PP.addLesson({
       why: "The order is wash the grapes, cut up an apple, stir the fruit together, and chill the cup. The words To begin, Then, After that and Finally tell the order." },
     { id: "SK-TFD-S08", type: "ebsr", points: 2, dok: 3, std: ["3.T.C.1.b"], passages: ["p4"], like: ["SK-TFD-C08"],
       stem: ["A recorded tour for kids includes this stop."],
-      prompt: "Choose for A first. Choose for B next.",
+      prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "Why does the voice on the recording ask visitors to crank the handle as fast as they can?",
         choices: [
           { text: "A quick spin makes the stripes melt into one color.", correct: true },
@@ -1697,7 +1697,7 @@ PP.addLesson({
           { text: "The spinner is hard to turn at a slow speed." },
           { text: "Another visitor is waiting to use the spinner." }
         ] },
-      partB: { prompt: "Which line in the script backs up your choice for A?",
+      partB: { prompt: "Which sentence from the script best supports the answer to Part A?",
         choices: [
           { text: "\"They blur together into one color.\"", correct: true },
           { text: "\"First, set the disk on the spinner.\"" },
@@ -1707,39 +1707,39 @@ PP.addLesson({
       clue: "A guide often gives a direction for a reason. Ask what the visitor sees happen to the colored lines on the disk.",
       hints: [
         "A guide often gives a direction for a reason. Ask what the visitor sees happen to the colored lines on the disk.",
-        "For A, read the lines from the pause to the end of the script. For B, find the sentence that tells what happens to the colored lines.",
-        "The script never says that a slow spin could wear out the disk, so rule out that choice for A. Decide B yourself."
+        "For Part A, read the lines from the pause to the end of the script. For Part B, find the sentence that tells what happens to the colored lines.",
+        "The script never says that a slow spin could wear out the disk, so rule out that Part A choice. Decide Part B yourself."
       ],
       how: [
         "The guide tells the visitor to turn the handle as fast as possible.",
         "After the pause, the guide says that when the disk spins fast, your eyes cannot tell the stripes apart. They blur into one color.",
-        "For A: \"A quick spin makes the stripes melt into one color.\" For B: \"They blur together into one color.\"",
+        "Part A: \"A quick spin makes the stripes melt into one color.\" Part B: \"They blur together into one color.\"",
         "The other lines tell what to do or ask a question. They do not tell why a fast spin matters."
       ],
-      misconception: "A common mix-up is choosing a line that tells what to do. B asks for the line that gives the reason.",
-      why: "For A: \"A quick spin makes the stripes melt into one color.\" For B: \"They blur together into one color.\" The guide asks for a fast spin so the visitor sees the stripes blur. The script says nothing about wearing out the disk." },
+      misconception: "A common mix-up is choosing a line that tells what to do. Part B asks for the sentence that gives the reason.",
+      why: "Part A: \"A quick spin makes the stripes melt into one color.\" Part B: \"They blur together into one color.\" The guide asks for a fast spin so the visitor sees the stripes blur. The script says nothing about wearing out the disk." },
     { id: "SK-TFD-S09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C09"],
-      stem: ["Ms. Park records a story about a lost mitten. Her code for the sound crew: [bell ringing] means a chapter is over, and [long pause] means give listeners time to think.", "NARRATOR: Whose mitten was it?"],
-      prompt: "Pick the cue for each blank.",
-      text: "Right after that question she needs {0}. When the chapter ends she needs {1}.",
+      stem: ["Ms. Park records a story about a lost mitten. In her code for the sound crew, [bell ringing] means a chapter is over.", "NARRATOR: A cold wind howled around the cabin all night."],
+      prompt: "Choose the words that best complete the sentences.",
+      text: "To let listeners hear the weather in that line, she needs {0}. When the chapter ends she needs {1}.",
       slots: [
-        { options: ["[long pause]", "[bell ringing]", "[thunder clap]"], answer: 0 },
-        { options: ["[bell ringing]", "[long pause]", "[thunder clap]"], answer: 0 }
+        { options: ["[wind howling]", "[bell ringing]", "[door slamming]"], answer: 0 },
+        { options: ["[bell ringing]", "[wind howling]", "[door slamming]"], answer: 0 }
       ],
-      clue: "Her code tells what a bell and a long pause do. Match each job to the sound.",
+      clue: "Ask what sound a listener would hear in each place. Her code tells what a bell ringing does.",
       hints: [
-        "Her code tells what a bell and a long pause do. Match each job to the sound.",
-        "Read her code again. Then ask which job comes after the question, and which comes at the end of the chapter.",
-        "A thunder clap is not in her code, so it is not the answer for either blank. Decide which of the other two goes with each job."
+        "Ask what sound a listener would hear in each place. Her code tells what a bell ringing does.",
+        "Read her code and the line again. Then ask what the line is about, and what shows that a chapter has ended.",
+        "A door slamming is not in her line or her code, so it is not the answer for either blank. Decide which of the other two goes with each blank."
       ],
       how: [
-        "Her code says a [bell ringing] means a chapter is over, and a [long pause] gives listeners time to think.",
-        "After the question, listeners need time to think, so she adds a [long pause].",
+        "Her code says a [bell ringing] means a chapter is over. The line is about a cold wind howling.",
+        "The line tells about a howling wind, so listeners should hear it, and she adds [wind howling].",
         "When the chapter ends, she adds a [bell ringing].",
-        "The answers are [long pause] and [bell ringing]. A thunder clap does neither job."
+        "The answers are [wind howling] and [bell ringing]. A door slamming does neither job."
       ],
-      misconception: "A common mix-up is swapping the two sounds. A bell shows the end of a chapter, and a long pause gives listeners time to think.",
-      why: "The answers are [long pause] and [bell ringing]. A long pause gives listeners time to think about the question. A bell shows that the chapter is over." },
+      misconception: "A common mix-up is swapping the two sounds. A bell shows the end of a chapter, and a wind sound belongs with a line about wind.",
+      why: "The answers are [wind howling] and [bell ringing]. The line tells about a howling wind, so the weather sound belongs there. A bell shows that the chapter is over." },
     { id: "SK-TFD-S10", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C10"],
       stem: ["A poster by the front door lists rules for a fire drill. During a drill, a recorded voice also plays over speakers in every room."],
       prompt: "In a drill, what can the recorded voice do that the poster cannot?",
@@ -1782,28 +1782,28 @@ PP.addLesson({
       misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need.",
       why: "The answer is \"Meet at the stage door at four sharp.\" It tells where to meet, which listeners must remember. The other sentences tell about the rehearsal, what to carry, or other news." },
     { id: "SK-TFD-S12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C12"],
-      stem: ["Ms. Brown opens Family Night by saying, \"Welcome, families!\" Then she says nothing for a few seconds."],
-      prompt: "What is Ms. Brown likely trying to do with that silence?",
+      stem: ["At Family Night, Ms. Brown tells the guests about two parts of the evening. She says, \"Now, about the bake sale. Tables will be in the gym.\" Later she says, \"Now, about the book fair. It will be in the library.\""],
+      prompt: "Why does Ms. Brown begin each part with the words \"Now, about\"?",
       choices: [
-        { text: "give the guests a chance to settle and look her way", correct: true },
-        { text: "let everyone find the schedule in a bag" },
-        { text: "think of the next words because she forgot them" },
-        { text: "wait for the guests to answer her greeting" }
+        { text: "to show the guests which topic she is starting", correct: true },
+        { text: "to show the guests which topic is the most important" },
+        { text: "to show the guests that the evening is almost over" },
+        { text: "to show the guests that the topic will be a short one" }
       ],
-      clue: "A speaker stops to help the audience. Ask what a crowd of guests needs before a talk begins.",
+      clue: "Guests cannot see where one part ends. Ask what a spoken phrase can do that a heading does on a page.",
       hints: [
-        "A speaker stops to help the audience. Ask what a crowd of guests needs before a talk begins.",
-        "Think about the room at the start of an evening. Are all the guests quiet yet?",
-        "Nothing in the story says she lost her place, and she has a plan for the evening. Rule out the choice about forgetting and decide among the other three."
+        "Guests cannot see where one part ends. Ask what a spoken phrase can do that a heading does on a page.",
+        "Look at what Ms. Brown says right after \"Now, about.\" Then ask what the guests learn from those first words.",
+        "She uses the same words for the bake sale and the book fair, so the words do not rank the topics. Rule out the choice about the most important topic and decide among the other three."
       ],
       how: [
-        "Ms. Brown has just welcomed everyone, and the guests may still be chatting.",
-        "A short quiet moment lets them stop and look toward her.",
-        "The answer is \"give the guests a chance to settle and look her way.\"",
-        "Nothing says she forgot her words, and the guests do not need a schedule or an answer to the greeting."
+        "Ms. Brown talks about two topics, one after the other. The guests only hear her voice.",
+        "The words \"Now, about\" name the topic she is starting, the way a heading would on a page.",
+        "The answer is \"to show the guests which topic she is starting.\"",
+        "She uses the same words for both topics, so they do not rank the topics, and nothing says the evening is almost over or that a topic is short."
       ],
-      misconception: "A common mix-up is thinking a silent moment means a mistake. A pause can be a planned way to get a room ready.",
-      why: "The answer is \"give the guests a chance to settle and look her way.\" A short quiet moment lets busy guests calm down before the talk. Nothing suggests she forgot her words." },
+      misconception: "A common mix-up is thinking an opening phrase ranks a topic. Words such as Now, about only show which topic is starting.",
+      why: "The answer is \"to show the guests which topic she is starting.\" The words work like a heading for listeners. They do not rank the topics, and nothing says the evening is almost over." },
     { id: "SK-TFD-S13", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C13"],
       stem: ["Lena rehearsed a talk about the school play into a tablet. Playing it back, her aunt noticed that the back row would never hear her soft voice, and that the date of the play went by in a blur."],
       prompt: "Fill in the aunt's advice.",
@@ -1829,8 +1829,8 @@ PP.addLesson({
       stem: ["A class picnic in the park is loud. A parent has a loudspeaker and must tell everyone that lunch is at the big shelter, not the small one."],
       prompt: "Which plan gets the location across?",
       choices: [
-        { text: "Say \"big shelter\" in a clear voice, two times.", correct: true },
-        { text: "Mumble it once to save time." },
+        { text: "Say \"big shelter\" in a strong voice, two times.", correct: true },
+        { text: "Mumble it one time, to save time." },
         { text: "Use a low voice so children come closer." },
         { text: "Say it once, then hand the loudspeaker away." }
       ],
@@ -1842,15 +1842,15 @@ PP.addLesson({
       ],
       how: [
         "The park is loud, so some people will miss a fact that is said only once.",
-        "A speaker can use a clear voice and say the key fact two times.",
-        "The answer is \"Say \"big shelter\" in a clear voice, two times.\"",
+        "A speaker can use a strong voice and say the key fact two times.",
+        "The answer is \"Say \"big shelter\" in a strong voice, two times.\"",
         "Mumbling, a low voice or a single mention is easy to miss, and a parent who hands the loudspeaker away cannot repeat it."
       ],
-      misconception: "A common mix-up is thinking the shortest message is best. In a loud place, the key fact needs a clear voice and a repeat.",
-      why: "The answer is \"Say \"big shelter\" in a clear voice, two times.\" The park is loud, so a key fact needs to be clear and said again. Mumbling, a low voice or a single mention is easy to miss." },
+      misconception: "A common mix-up is thinking the shortest message is best. In a loud place, the key fact needs a strong voice and a repeat.",
+      why: "The answer is \"Say \"big shelter\" in a strong voice, two times.\" The park is loud, so a key fact needs to be strong and said again. Mumbling, a low voice or a single mention is easy to miss." },
     { id: "SK-TFD-S15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2, like: ["SK-TFD-C15"],
       stem: ["Rosa is preparing a speech on her visit to a train museum. Her draft plan: murmur, gaze downward, no visuals. Her audience will form a wide ring on the rug."],
-      prompt: "Select two fixes that help listeners keep up.",
+      prompt: "Which TWO changes would help the audience follow Rosa's talk? Choose TWO answers.",
       choices: [
         { text: "Speak up so the whole ring can hear.", correct: true },
         { text: "Show a map of the museum while telling the route.", correct: true },
@@ -1926,16 +1926,17 @@ PP.addLesson({
   },
   /* Skill check (form A). Uses p3 and two inline stems. Never uses a core, similar or practice text. */
   test: [
-    { id: "SK-TFD-T1", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
-      prompt: "What does the line [birds chirping] tell the person who makes the video?",
+    { id: "SK-TFD-T1", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+      stem: ["Mia is watching a video about farm animals. She turns the sound off and taps the CC button."],
+      prompt: "What will Mia see on the screen?",
       choices: [
-        { text: "to play the sound of birds at the start of the video", correct: true },
-        { text: "to have the narrator say the word birds out loud" },
-        { text: "to show a caption that reads birds across the screen" },
-        { text: "to stop the video before the narrator speaks" }
+        { text: "the narrator's words and important sounds, written out", correct: true },
+        { text: "a list of every page on the farm website" },
+        { text: "a bar with a dot for each part of the video" },
+        { text: "the same video playing at twice the speed" }
       ],
-      clue: "Words in brackets are not spoken. They are directions for the person who makes the video.",
-      why: "The answer is \"to play the sound of birds at the start of the video.\" Words in brackets name sounds, and they are not read aloud or shown as captions. The narrator speaks right after the sound." },
+      clue: "CC stands for captions. Ask what captions do for a viewer who cannot hear the sound.",
+      why: "The answer is \"the narrator's words and important sounds, written out.\" The CC button turns on captions, which write out what is said and the important sounds. A list of pages comes from a menu, a bar with dots is the progress bar, and the speed comes from a different button." },
     { id: "SK-TFD-T2", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
       stem: ["A video page about picking apples has a play button, a CC button and a volume button. A line under the video has three dots labeled Choosing, Picking and Storing."],
       prompt: "Choose the words that best complete the sentences.",
