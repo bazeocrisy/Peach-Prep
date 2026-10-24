@@ -1,0 +1,560 @@
+{
+  "v": 1,
+  "note": "Written by check-content.js --record-versions. rev is the lesson's testRev (default 1). hash covers every word of the form; mat covers ids, types, points and answer keys only. Reviews and the cumulative review are built at run time from the accepted lessons' forms, so their version is the hash of those inputs (rev here, and a short signature stored on each result).",
+  "forms": {
+    "3.F.F.1.a:A": {
+      "rev": "1",
+      "hash": "d6ef61c782a4d489128d48e9a977e76b6e9ca7028cc26cff074391da2d80b8a3",
+      "mat": "2e67f84238870c47fb9400b8b1b14fa87c88f069632e58db2c3259f72fabaf8b"
+    },
+    "3.F.F.1.d:A": {
+      "rev": "1",
+      "hash": "7e1a75200ef13289d127c8ccd9784d23aee86e5c07d49c915509d75ecd2702eb",
+      "mat": "c7e9cc790b5df6bf681e61bc27b374638609c6f9db7e50652610724530dd82a0"
+    },
+    "3.F.H.3.a:A": {
+      "rev": "1",
+      "hash": "eba5a2a3cb570da1e675f157b8c78029b15b3b0e53ab6bbc8cdccb948b11a414",
+      "mat": "48bca775169a00c90feb7494bd4cdd10c330f4469790db3121eedb524c1bee33"
+    },
+    "3.F.P.4.a:A": {
+      "rev": "1",
+      "hash": "9bd81344c3f031c7651786c9ba16e3656ee1576f5bda47b726c69158f3a23b31",
+      "mat": "6494ff43c581745faf46784a3ea4a3b76b375f1d2ef4714d08f968fd590d1eb2"
+    },
+    "3.F.P.4.b:A": {
+      "rev": "1",
+      "hash": "a9a48059e71771774bb1d850d6a7b56b097f2498b0fcef690f8d54aa7984f9e3",
+      "mat": "b86b6d7dbbfa1fab07931a5c4f4ef265ee5161f0a06889fa4a67b77af85334ee"
+    },
+    "3.F.P.4.c:A": {
+      "rev": "1",
+      "hash": "b8dc33646d5af8954201da60b9098205b86b1dc0082613dc822362952f730157",
+      "mat": "da9451a7280123bfdd4919ae744566e8541848b1f8ec785bf10846563d2eeec7"
+    },
+    "3.L.GC.1:C:ensure-pronoun-antecedent-agreement:A": {
+      "rev": "1",
+      "hash": "7e9c994f6f942c6647c15eb6bdf3b581bf3ed7304484e64d4c733974d6b7c3e8",
+      "mat": "bea63a4e31e8e3a0cc27162722535ecc032f7f3d6aec4c3a87f77a9043a0c203"
+    },
+    "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti:A": {
+      "rev": "1",
+      "hash": "43f9ff669a546310e04c248dfd51b148a7d7a2c942468bd7513ba428c26e94af",
+      "mat": "cf011d56f23e8da97cb71feaa068b906914ffb24acaccd8ef499a0e547353b64"
+    },
+    "3.L.GC.1:C:form-and-use-prepositional-phrases:A": {
+      "rev": "1",
+      "hash": "6cb529c8ab0a847a1c2118e165a8aff59afda5313959519a26104184a8a4f969",
+      "mat": "9f6bfb6f33545cf7eedd3d12ff2ed256c7f2ffe5aad1a1a5f4c543ecaffa5f1a"
+    },
+    "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-:A": {
+      "rev": "1",
+      "hash": "fa7e106e241f2eed96daba0cfc6f2670fd048e69b7280a9265d437b11cb72ca3",
+      "mat": "5b05fa589a3dd92ffdda5bc18386ef53f279f16ade9d6bd8223b1b156bfe52ce"
+    },
+    "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t:A": {
+      "rev": "1",
+      "hash": "7ffb4e35cd4809c6c2821c61855225db4b20b5a0a31193005505031d465d54b1",
+      "mat": "ca84f80550970e039bfb6d17f2077f643a291e878c7920e1ac411b80e026edb7"
+    },
+    "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns:A": {
+      "rev": "1",
+      "hash": "155871e1e0c6b1dc4323cbedbc9aa3dca84302913d25ff9fdce81ef3c4b60c11",
+      "mat": "5d74a1f4bb0b656a6fb91cc6cf020f46040571d54dab71381f0223e9df41ef81"
+    },
+    "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar:A": {
+      "rev": "1",
+      "hash": "8f2663114ec6029201b829cbcdffa7e6a20d415d256465eddbc308adbe840b78",
+      "mat": "ea8fce852565acdada44207eaa563b8408dca2d4f2fe6e761d289df81939b43b"
+    },
+    "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses:A": {
+      "rev": "1",
+      "hash": "e523e8775b163890ce32385ddc06cb74d0a06adbbab4183bec8a173ae87bb89c",
+      "mat": "e44b51de25a18b98b7c4d36e4e69ad560c23831cefb6d2ac48883495aa1d09a4"
+    },
+    "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes:A": {
+      "rev": "1",
+      "hash": "c8668bc550d6219ea2025214c1ec1e9a16c89e6c1c3971c6f3727b93536266b3",
+      "mat": "1fc95a2862b7dab795e4fd2ec7219013f1c2ac0095942ec783cf4fb83c6d6bf7"
+    },
+    "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations:A": {
+      "rev": "1",
+      "hash": "ce5f7283b7a5f784f57845d42ddca20c114170b3a900b20c4f3b697a7a26c7f0",
+      "mat": "68d7029801d89242adfa59dac0ecaf9ca42944ffad24d603e631708d6f2d5390"
+    },
+    "3.L.GC.1:I:use-helping-and-linking-verbs:A": {
+      "rev": "1",
+      "hash": "f7c463ad98400c9930a43b1ec3d91e78a3c2dc9f9028f923225db63d3b374936",
+      "mat": "b5945d750ed198b863167e7f516bee6530a7f71e4e758eaed7c486231bea2563"
+    },
+    "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement:A": {
+      "rev": "1",
+      "hash": "348b5c1815cb0ab446e4717b1954ea791ef31d064840d3dcb30db4e05edaeb14",
+      "mat": "c3e6fbf65e63b64537f1519e7302d625da85be4021b7b00ca7d1027ce7df350d"
+    },
+    "3.L.GC.1:I:use-interjections:A": {
+      "rev": "1",
+      "hash": "c2dbfc220a82a7e06151f3ca512546f0199ca9d3b835535f8d8fe11ba3da4d16",
+      "mat": "7472542b8ace6bfb5a121e6b486db1ffbef15be31c02e2581978ed9b8618e92c"
+    },
+    "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs:A": {
+      "rev": "1",
+      "hash": "af76eef2efe658c6fffbdf63246e720170b897991977b83e55886c1d87e75374",
+      "mat": "7d51e11a945d7bc627c085768e551103620378fb3e67b0da9ca6875323543a84"
+    },
+    "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses:A": {
+      "rev": "1",
+      "hash": "aa3d9d17d7c73d219caf9ec956d3202a166243cf90975d6af87ef3c820c94499",
+      "mat": "54d86347d2f0d6a95bf63668e4e3506f3ea25367d105c0adec1f7cfbe0e1b8b8"
+    },
+    "3.L.GC.1:M:form-and-use-irregular-plural-nouns:A": {
+      "rev": "1",
+      "hash": "b1fd48a36dfd33a54fb1ad1e6687c09e1c3e832e11192b3a00709a78f993f7d3",
+      "mat": "c6794f7b2b661a7a50c073c48d446b70554b7a374e59b642671178422c93da66"
+    },
+    "3.L.GC.1:M:form-and-use-irregular-plural-nouns:B": {
+      "rev": "1",
+      "hash": "2518105132742f1736acd41c6803c2a3a7e232904545875d483a680e98be104f",
+      "mat": "b7c43eda411fef75bbb339efd910da2acf25da18093e8ef471b1301b265362ae"
+    },
+    "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs:A": {
+      "rev": "1",
+      "hash": "fb9a9481ed3a8c94ff216e908a6d51dec6ea7fa887cd323eea179f9df2a6f442",
+      "mat": "c9b914768d078e88826777af3b1a5f6d6be371d9541ae29486757a03803e85aa"
+    },
+    "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs:B": {
+      "rev": "1",
+      "hash": "09b2f03e090f5525fbdabffadf278567382f6630e71fe3e946c36ee8082b96f2",
+      "mat": "17372805c58a0f9888d386a9b621944d5b9fd934a8aad8c0b1c038c399ba44d9"
+    },
+    "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos:A": {
+      "rev": "1",
+      "hash": "8d703910c497c8e2036d67cfceaca1aa28d38f67658cd6697e81269878fbc1cd",
+      "mat": "9c2320ae8939883e25ce4a884d26c076857399b28ce18fbc05e18dda5703f8b2"
+    },
+    "3.L.GC.1:M:use-collective-and-abstract-nouns:A": {
+      "rev": "1",
+      "hash": "b5935e5188b23df66d175bbc9838c28b36dddfdae61b19e39bba012a8333fc93",
+      "mat": "155b88b789b54d784f283c749144cb5a3d904f9b88b1064312cbcdcc60b18deb"
+    },
+    "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi:A": {
+      "rev": "1",
+      "hash": "efc293f8a7fcd6ad22ea453d850ff13c39cb8e40ff30176786e03d1570d9a1b8",
+      "mat": "e6e63480aa16e6a5ddd198076a5bbaa207b0880805c5e9ef292f7f0483e9f4ea"
+    },
+    "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra:A": {
+      "rev": "1",
+      "hash": "a7e40574570c2d1dbc3aca350aac7dcc8f831a34c58fcbfaf672bd7215f81fb2",
+      "mat": "9926d1a2a10d75cf11baf8c1d14374034206033e7690e300851ff837f3335659"
+    },
+    "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks:A": {
+      "rev": "1",
+      "hash": "4f93515d88c95876afe7a004c2aef6b3231a839dacd01b6757ea3db809348ac5",
+      "mat": "89bade998b48f13aab6677b9b3909ba04c0b849ecb0a9e88f084744dd51dcb80"
+    },
+    "3.L.GC.1:M:use-reflexive-pronouns:A": {
+      "rev": "1",
+      "hash": "6d692ba05f061b7756dab522e6c1d53dbcdd57a3ebf30790b520439f948d024a",
+      "mat": "06a2e57966e9fc7512cbed66683de7a02390b592f64908be96eaee6178238da2"
+    },
+    "3.L.GC.1:R:capitalize-proper-nouns:A": {
+      "rev": "1",
+      "hash": "5d7c6f3868d0260ce561bceea5ed03915e218345080bdf8c663c514924f4522e",
+      "mat": "63b69b4dceb31c2ce276c398ef5fc751177f19fdad83ec4e17b2945913e39a83"
+    },
+    "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-:A": {
+      "rev": "1",
+      "hash": "7185b8d04a15ec22d3d6f118882f7a76dd9c97ca88af0adfe3eca79d775fde4a",
+      "mat": "bcd7c6895bc3813197b22ddea448aeca368acc73dd5ede4e05d7807180bcf2d1"
+    },
+    "3.L.GC.1:R:form-and-use-simple-verb-tenses:A": {
+      "rev": "1",
+      "hash": "940cd4e12dd7014e1af69a6733379956754e22bf452b3e08dc4dcb2cc937c32e",
+      "mat": "4df36d6b62192304dca60d6f7d96981bf4e2715243f338ceff86fca26c804190"
+    },
+    "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech:A": {
+      "rev": "1",
+      "hash": "b5aa3e7f1785648ca6806a591a73f935c916db1320be6c14b723e5cc98a70f27",
+      "mat": "a644f24f6fba45a590696ccfddf4361649113787415ae2431ae36af7011b382a"
+    },
+    "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es:A": {
+      "rev": "1",
+      "hash": "4d1e74097655f2b3da0edeecd0158b04845cd82b7a7975aea3345a0292137ba3",
+      "mat": "ab1fa59ae20283ecff187c86052d7dc18b4f7853cc5a31c1a1ecbc91aff29dc3"
+    },
+    "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s:A": {
+      "rev": "1",
+      "hash": "f1f2aab8ba4dae1ac75348c28609409a28e5079cfc9fbfe716ea49c5034fb779",
+      "mat": "1f8b5edc4238eca773b15e2c0d98e7d792caecd8f8b7fb26e48279187277415b"
+    },
+    "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies:A": {
+      "rev": "1",
+      "hash": "aa1350f66d28a4404033b5f6985907f1f5f7d216ace16c62186e56658e47df27",
+      "mat": "8be88b84f69d51e78809dd3f44343a2f1e7153208479eb3fd95fe2d4f09e71df"
+    },
+    "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es:A": {
+      "rev": "1",
+      "hash": "3093f45d3b8ef7ef4dabf465190fe62196026d6e24f63773f643d4b91ec6fb1f",
+      "mat": "178dcd23e5272dd3b7b5e342e20c10956e76effe809924165418c924dbaa5704"
+    },
+    "3.L.GC.1:R:use-action-verbs:A": {
+      "rev": "1",
+      "hash": "a3d783453b17bf92823558bf64896ceb74fc208788b50e34d762a220cefbec31",
+      "mat": "5f4c165ab03808f65df8f9b0ff0c3696e467823d5ed99d449107b56e392bce91"
+    },
+    "3.L.GC.1:R:use-adjectives-and-adverbs:A": {
+      "rev": "1",
+      "hash": "de83f7c3b164d09e23d0791cb8469ee5479d8950dc570ce6c944b11387bde398",
+      "mat": "a8ec67b86f5cd13379b7e7b5910a9bbdb1d98035376a4953ed8465c31d020060"
+    },
+    "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa:A": {
+      "rev": "1",
+      "hash": "cd5f3ccb83310bcb7c1d6ccfc9e1241ff5d74ab08e335efa58385048b5ff6338",
+      "mat": "33c97e578e1afb020af19d3b54cb431fe1a3b6957a71fb2b0a1d8c53f58bca60"
+    },
+    "3.L.GC.1:R:use-common-and-proper-nouns:A": {
+      "rev": "1",
+      "hash": "8f57792109d7fc2c575e355ff8f906a72e937fc296808049e2e52b364119d67a",
+      "mat": "11072a4cb1fd339eb47478eeb4e862a4c36bc80a7fe93247a927745464415911"
+    },
+    "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr:A": {
+      "rev": "1",
+      "hash": "f91ac8c03f1affeaa662c0a19854eb2c3a8f47f866eb109abe6b86c3342ddda5",
+      "mat": "ad3ff45e71f776b82006c1876109af590ff320c7284a008149a7fbf712d8b607"
+    },
+    "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que:A": {
+      "rev": "1",
+      "hash": "cb3d76bcdb47b7fa295fe84b5e9d6efce4906b108039f5e972f86a221e12f09b",
+      "mat": "3a2bae2361bc32cc23e0e61efff7810f781d4a98366d03f53d944a070e841063"
+    },
+    "3.L.GC.1:R:use-frequently-occurring-prepositions:A": {
+      "rev": "1",
+      "hash": "d134a769e1c0d1b920887ced30d036d576f7da206cbde26c9fcc15f71440f2a1",
+      "mat": "a3eb0b877b74b940626d6622a2a07a95f152676aa711fc5dda75069834768deb"
+    },
+    "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech:A": {
+      "rev": "1",
+      "hash": "f39804965439fde43f7acd1e10b34cfce696eb3d0361565bb562229d577833a2",
+      "mat": "088b7227fa94d287c286ad95cebf4ec19b19a5fd73b98252edddef37fb4326cf"
+    },
+    "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in:A": {
+      "rev": "1",
+      "hash": "e166c32b5ea54580aef316a15221edde628be7f035c0b5df8306161e7a6c2536",
+      "mat": "0138f97ff20b5ecf66d78b1bb0a9e87ede185c2b1c148221f27de759e0d30526"
+    },
+    "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive:A": {
+      "rev": "1",
+      "hash": "f176cbbb80dd2b6ac0b993ed805941f3916e2a92c3828682e0157497a16835ad",
+      "mat": "8baa19585d817398233bd36c6810ddfa889eb7ecb7f65ad09aeac525a452e030"
+    },
+    "3.L.GC.2.a:A": {
+      "rev": "1",
+      "hash": "1600b3764baa7c1a9fae6efc1b5f397f009e671e87cfde93acf33ef43a8f8ff8",
+      "mat": "40529a0ef53791d9664c2e2e4b7e66e5b568d0b837bc64d8752d2a577cab4c9f"
+    },
+    "3.L.GC.2.b:A": {
+      "rev": "1",
+      "hash": "1113b4ed4dc85ccea3a719d4580f1b9e3399c930f884aec93152b1c6c8225f0e",
+      "mat": "494a493842c06b2b0d28fd73137c3a3463117228187d148cdb8390081fddd8aa"
+    },
+    "3.L.GC.2.b:B": {
+      "rev": "1",
+      "hash": "9d6cbaf3422f4bb63c0a2e6ab13e8d5fa2eac00777d7b51ce52c6ad9ffec1644",
+      "mat": "9a128ee7c117f6a23a8bbf5ea39e44879661e68ec3a1e19b9c18c6026c35ab7f"
+    },
+    "3.L.GC.2.c:A": {
+      "rev": "1",
+      "hash": "985d9ff9b5a901acc8ea9101a09ea779dab6c3aa448ed7f657acec0ec02bdd77",
+      "mat": "dd2e9472b3e40bab114d5bbdc5d2e8370c2c82363d208365c5b194f0ec58af54"
+    },
+    "3.L.GC.2.d:A": {
+      "rev": "1",
+      "hash": "f7ca7064eab5d7883dafdd257f5ae0621866c0a690f6fc4e2602f247d896933b",
+      "mat": "da44f02da0ca1730a5498db4f3e59c9fd55030e6487140c9d6b6aa4fe8457eaf"
+    },
+    "3.L.V.1.a:A": {
+      "rev": "1",
+      "hash": "30d34c3d8bc4fcdc0ec16d499a3dd8fabbf2a08a9f762c330b136ceb749e285d",
+      "mat": "3bb43d91a84d7efc07c787b7a7bcca8a35347e1645e2b6a8be59e96026290612"
+    },
+    "3.L.V.1.b:A": {
+      "rev": "1",
+      "hash": "00edf1d5f8e8b29cefe721891266139986a686246b5424c3e01f48b7b1c8749b",
+      "mat": "a317603c1ded412476f9611874d6ea443f96e47366979e9569514b390a221e8b"
+    },
+    "3.L.V.2.a:A": {
+      "rev": "1",
+      "hash": "4c2015236b160d960a84931d6d0c63cd9a80134197f5a80c7608305ee53216af",
+      "mat": "ddc36012dc816bc4a4e7b18bebb34960b7abff517f9dd7bf44801fcc8f23ff57"
+    },
+    "3.L.V.2.a:B": {
+      "rev": "1",
+      "hash": "7eaee1164279b4dcb5c9028a43bbc692b079383ec42ac5ddcbe2644311f62211",
+      "mat": "9c304008f1db9472a0c57ae004436c322c10d4b7d04b3263ea9bb60a637eb34f"
+    },
+    "3.L.V.2.b:A": {
+      "rev": "1",
+      "hash": "890a1aaaa0fbb5a69b6f099318cfb0ae36248a1f37a3d80e3d237ae13689483e",
+      "mat": "853011348f9dd1916d630da03823eef03d1be96e949feb5a8d6cbde902c6c1d4"
+    },
+    "3.L.V.2.c:A": {
+      "rev": "1",
+      "hash": "9d39f78999428a4a6d050dbb03a068ca39ce6ea1d692886374dd348275bdc3ce",
+      "mat": "00885918ffe8d6893d659ebf7c12d21675c49b56e3b283ecf2a1cbb69b966ec3"
+    },
+    "3.L.V.3.a:A": {
+      "rev": "1",
+      "hash": "e6ae4dd1823f79f8adc3af3ac157370a5c818dfd58793a6c096a1e6208717a6a",
+      "mat": "7297f89771d97adb82b840641a13b65710ab35082c842a6bfdfb7b68a91e2f15"
+    },
+    "3.L.V.3.a:B": {
+      "rev": "1",
+      "hash": "e0acfad1c8720942befb540d2bc665d0120d6be90547e8a9e72f5f2885bc2e9b",
+      "mat": "4c5cbc882ee630781c8e49c8bfe16c1463af71af38dc3c0db88e7b1f6db6af39"
+    },
+    "3.L.V.3.b:A": {
+      "rev": "1",
+      "hash": "183b808c778436cdd580dd172c9248a395093ea94c2abe48fa5c0f5b98db6c64",
+      "mat": "07a5d2fd30d2a09db2be63bd6a7d0ce4a25b5d9c49a062b8a67c805d75ba0f7b"
+    },
+    "3.L.V.3.c:A": {
+      "rev": "1",
+      "hash": "a45632933c22c12f627f30022e0c1f17689440a7726a99715b62d8f26bf489ec",
+      "mat": "e42e721c1a63ffddbc6e10f4f2f0a1c1c325b5c8ae9fa48b0b202f96de2aab91"
+    },
+    "3.L.V.3.d:A": {
+      "rev": "1",
+      "hash": "2978a9ddc23f8b70957c24ad1caf4a2d7032da742d292aacee82c57152940c96",
+      "mat": "a22d1727dda1335fc8c788e4d5af4a7e036d64329a1376e70a8d90ca67eb0139"
+    },
+    "3.L.V.3.e:A": {
+      "rev": "1",
+      "hash": "2d61bef3dc65b07c6901172b3f28380003f45ceb0f10dfd857ee9e508f2f4c55",
+      "mat": "9fd5374d2f05904fa2e22e20c68dcd9c932cd67987f6c1532f3bc45df865d9eb"
+    },
+    "3.T.C.1.a:A": {
+      "rev": "1",
+      "hash": "ce6611a0c19b951f4c5f4faf017205178aa731d8e099242397600bd41d671bd4",
+      "mat": "e10c761a7ef6e54da4e16c8fe68d5055dc1fc437765c115ca6778161068ef0fe"
+    },
+    "3.T.C.1.b:A": {
+      "rev": "1",
+      "hash": "7fe67c783f813dbbd99d5cb989b98ad8b4c6ffda2063a4bd851b81457b8d3115",
+      "mat": "d4bfdadf1cef5615242dfb945276e393acf1f1832be23828b0b80daa61209827"
+    },
+    "3.T.C.1.c:A": {
+      "rev": "1",
+      "hash": "c1986273f5be6b8459f6a6913294da74387046a503fcaae23e86c1e96a586c03",
+      "mat": "558da6a434baa90002d9231dfec662debde23ba3ccdcc1d90e8eae1fa7521081"
+    },
+    "3.T.C.2.a:A": {
+      "rev": "1",
+      "hash": "0484f547c4083e28b75a3a3dff843c791fce7e64941172b01a3747fd2cd827aa",
+      "mat": "9c7537fbed20181c25fb66ee0cd11c0073a74634ffc1ebcd15c41879d79e4992"
+    },
+    "3.T.C.2.c:A": {
+      "rev": "1",
+      "hash": "c8b6b03a0831ca1d6a8d76d42d9e7576b75a1da558a440530a4649525d5fb134",
+      "mat": "fdceb2da63c65bdc85554dd24d340eba7caaf77b63a4cde7494092f97802c319"
+    },
+    "3.T.RA.1.a:A": {
+      "rev": "1",
+      "hash": "85aee2e313e276824d652841d86f6eefeaca1a6e9555647636379c5b2006f784",
+      "mat": "cccc8b0fd35c588bc22edcc5bb3e6dee308c41855ef94f25271946be5ad58a75"
+    },
+    "3.T.RA.1.b:A": {
+      "rev": "1",
+      "hash": "59b8d9389b23fc5c6e5cc9d8df736024618824dfdc4e436da56e226f96d7a6f6",
+      "mat": "e06e3be5ace66650b3412bf8314b29dceeaebf519021271c28e9866799670a07"
+    },
+    "3.T.RA.1.c:A": {
+      "rev": "1",
+      "hash": "1a0c5f88131cb72e99ae86c175f0bbe5b52edaaf76435f4988d9b2d6d87f574b",
+      "mat": "291fd141f68bb846980d862079fc70855a75ca61751f24eafed5b20e3108a6da"
+    },
+    "3.T.RA.2.a:A": {
+      "rev": "1",
+      "hash": "4b122b52531c9d94c9053f3c9937a18244d13840e3823c0aaaaf718fce07e49d",
+      "mat": "1dcfcc9f5f0d2612b75a6850ecfa79d20d367e264b00910041349a20fcff9326"
+    },
+    "3.T.RA.2.a:B": {
+      "rev": "1",
+      "hash": "2e49b10db602c3b30fac12d24ce62b2dfa6275ed4bdca31cd1f721000d5b6751",
+      "mat": "076572d5e9d233ab7b341dd9734282082d2a9355a8192f5cd6eb7d978c606aa5"
+    },
+    "3.T.RA.2.b:A": {
+      "rev": "1",
+      "hash": "ffe9fc096ea5637322d1b3d7f46fa2580dcc0f09728dbc278ab1526c125cf93f",
+      "mat": "5b4c76b5daef092405c824cbb88008c6ffc092975657edaae019d885b7762964"
+    },
+    "3.T.SS.1.a:A": {
+      "rev": "1",
+      "hash": "fb819d41e3b372e8f8eee53037e3b001523c10cf883bb2c8a9d66e56cc1ecc72",
+      "mat": "2deb29b41436c7f1f5a91bb51a3954f2fbfd4c7cb46f1192e2e8bd354a7db44f"
+    },
+    "3.T.SS.1.b:A": {
+      "rev": "1",
+      "hash": "faae3aeb89ecc82631e471f2f92b089aa65c7fe77d860d9943552c49ae89c7f2",
+      "mat": "dd98fcfb65f4eea7357bf4206a982ba1ce9a7dae75caa35c1b06f731a3b5e80a"
+    },
+    "3.T.SS.1.c:A": {
+      "rev": "1",
+      "hash": "70183721715768e620004c9d49d7dced80b02d671d573041e91c7f6f9e53ac01",
+      "mat": "36d786d082ce3220e8330af1c59143c2eacb30f80200ee66bdbd1cfd6285807d"
+    },
+    "3.T.SS.1.d:A": {
+      "rev": "1",
+      "hash": "800124167a15e3c409c2847364a551384e4617beb27ef64f96f65a0c00999657",
+      "mat": "544dcc36246588ea56d7938f12c396a0d591cfa46f6293e74a62e92ae25d6fe0"
+    },
+    "3.T.SS.2.a:A": {
+      "rev": "1",
+      "hash": "eb92e5659ecda6f669b9f684223390334e21aba6005043947d5b8e76fa55a337",
+      "mat": "3bc6909a6c94016e1806f1a7183af8541cdbced80cab250467b6fcfbf5dfc989"
+    },
+    "3.T.SS.2.a:B": {
+      "rev": "1",
+      "hash": "ff418ee7519616725ecbad346253a1fe7bd1e960aaac0b393df2d6c384e0ea5c",
+      "mat": "585676f8a80c136ac2d972d4ca763e044c033d8ad2f435c2501c00adf2948a75"
+    },
+    "3.T.SS.2.b:A": {
+      "rev": "1",
+      "hash": "21d4ef406a21e7f263b0fca77e6afb84e0785b8dcca2351592a5da4083b8d37d",
+      "mat": "4e9a8c759fae322de0f382e68fc5ae9846355d1d40aea4ebd30c0a3841f3a6c9"
+    },
+    "3.T.T.1.a:A": {
+      "rev": "1",
+      "hash": "286a32671b975069236db5871e53d587b54262010f14e2a344b75e57f188a59a",
+      "mat": "5755b521f93be532ad3aca1e05affa91683db053b46e222f0cf8b837672fe793"
+    },
+    "3.T.T.1.a:B": {
+      "rev": "1",
+      "hash": "647a6c7bc0fbc207880839c013ce056f501ade6cd547f9e60c101ef1d72089e0",
+      "mat": "7b25cf74b76d96e7f7fdf484b3e31c8b58f0ab7eae418e2a200e8bedccb21d75"
+    },
+    "3.T.T.1.b:A": {
+      "rev": "1",
+      "hash": "ee1d5462bbc85683c4a91d9b344a95f12d552a708f717023592371d7504a8bf5",
+      "mat": "8b3f0e94ed4f3ff08631e93e83835181472e35f07ddc2c1698247bb7f853b5a3"
+    },
+    "3.T.T.1.c:A": {
+      "rev": "1",
+      "hash": "a621078dfc2995326082ed5dfdbb635cfdd0a27e5b849bce4c2e3a9924798f52",
+      "mat": "915cfcb383ba43f8b90511b6fe413e2dfb547b357c5c00c116bcc11794d0b3c7"
+    },
+    "3.T.T.1.c:B": {
+      "rev": "1",
+      "hash": "3cbbf887349db9fa5ce08abb1c11d0413b4785489baf7ab824db3c35481c5c88",
+      "mat": "746489faa278ecc41e2f51c840334f10e49de78920bd102f7a7516ef3b346591"
+    },
+    "3.T.T.1.d:A": {
+      "rev": "1",
+      "hash": "2ef947feae103094868bcf1637624783ab93ab3d2eeb31c7b1bc9313bc61a512",
+      "mat": "9620dd406042cc35ce7bf6f5636705dde1956b6d8646482eb175963462b93ba5"
+    },
+    "3.T.T.1.e:A": {
+      "rev": "1",
+      "hash": "5020eb2c393ea3ec3dff5eabdfc1c13e048816c3b26096d473a79723cf88a204",
+      "mat": "22f84634398880089af84cc426505dd929d16c9e7f451fc92242e56904f998ed"
+    },
+    "3.T.T.2.a:A": {
+      "rev": "1",
+      "hash": "9f4fa474771196c9fdc45944d3d3c923b8dcfe3a4a2be184d807b1c1b8901acf",
+      "mat": "c3d5bc37c329b9d97ccb8e428fd4f556f53973d0381774a6a800e7171e2d2693"
+    },
+    "3.T.T.2.a:B": {
+      "rev": "1",
+      "hash": "ad17d361bb07aecfa47367387e9d4e12a1ab83fb715f38ae59f191bff6b21f8e",
+      "mat": "e448d4f4079bd2ee2251c9bb3d3f54da8507bd16f3d082b00ed9e3a5923e328f"
+    },
+    "3.T.T.2.b:A": {
+      "rev": "1",
+      "hash": "5a039bbb2e98563a23ed4b5145805b595cbdf03f9b7196eabff7d4251ddc938e",
+      "mat": "e807762a48ecf81bf62c218a9bc012e6143bc6a55222c9003955c457178c71c2"
+    },
+    "3.T.T.2.b:B": {
+      "rev": "1",
+      "hash": "662d428e4d15cb0e3a1af11b1cce31de7e99b77d9ccf7e9db8ea24dabfc583b6",
+      "mat": "2f6da5daea0231a25536bbc2dfb08d56aed5dd7f2e48fdff0dce93c7b0216061"
+    },
+    "3.T.T.2.c:A": {
+      "rev": "1",
+      "hash": "394481cdd022f158907848b15ad38019c99974fd0ce9b732a96fdf4499cf3c5d",
+      "mat": "0b287f742931a869d75271508b33f48c5b3ed7f759fd021468247183f2c25421"
+    },
+    "3.T.T.2.d:A": {
+      "rev": "1",
+      "hash": "bf3c8a00eeb948c20f685ba17e74eec28d62b7cbc5fb2c6b6f731ca27de9edbf",
+      "mat": "23fc46fe08e087b82c20644b25a6613627c941534f09ff3f05d4d0491d773d23"
+    },
+    "3.T.T.3.a:A": {
+      "rev": "1",
+      "hash": "1b728827e9306437e429ae231cf8cd77cf6d47205f29a952f9aa65919d87dcf6",
+      "mat": "f1750e32901b227005e06431e38231f2b8b66ab2fe939cc4ff368c65afbdba1a"
+    },
+    "3.T.T.3.c:A": {
+      "rev": "1",
+      "hash": "59a1844e6e8f9d8d41fdbe3282e6540f6bc6b9c0ec3c4299e219b3b86cb5112f",
+      "mat": "8fa97616e6035b772401dd7f651b804bde30d151d466b25f02e1feb9da1ed4a3"
+    },
+    "3.T.T.4.a:A": {
+      "rev": "1",
+      "hash": "bb96279606be6e13af1f0dc316ec3a50000643aea2b493ffb7e220df08d454dc",
+      "mat": "6827cfead883409c548d691569084c754c2a0880fb1ca9a2c464d06592a3ec0e"
+    },
+    "3.T.T.4.a:B": {
+      "rev": "1",
+      "hash": "d1370a3e3347dc5f001884893acf7eefe46e3cfa16ab9382bc79181f9251f4b4",
+      "mat": "1b86b852a833a4c7a6ebc75b7b6449c8ae2e6a0ab2024583dde284c124ac071d"
+    },
+    "3.T.T.4.b:A": {
+      "rev": "1",
+      "hash": "5448f14b451fa68dcdba865c8b0a764241f9897a432152cf793dae987ddd1e6b",
+      "mat": "70759073c63d812b5d3d881ab2dd0f9198639f4ca147214902a24814f804368c"
+    },
+    "TF-DIG:A": {
+      "rev": "1",
+      "hash": "a7a9a7a45a800894c192145dd1af3cfe5ad3f30b7994c38bbaeb2a978d69f083",
+      "mat": "b19a648adc891d757d19427391f1e3423a58b58224a433e329c923c1f2396f47"
+    },
+    "TF-FEAT:A": {
+      "rev": "1",
+      "hash": "afd2354d211c2d1912b43f30f51024a499f4248928dda68aa2b2ba5aff027969",
+      "mat": "e23f460fba246b802db0fe34091b698b1d236c3934d043266d3719524451e095"
+    },
+    "TS-CC:A": {
+      "rev": "1",
+      "hash": "ade09c5b1e3e0ac0628418f965a40af563ecbab2800bee4b4404f3c0cf8d6135",
+      "mat": "93c703e4de0837fac9e44f7956095414c04c30593cbe25ec1e35d2fd740720e8"
+    },
+    "TS-CE:A": {
+      "rev": "1",
+      "hash": "baa85debf52268e575d089bc336f40e505fec629a270e3296bcac7d1ab755447",
+      "mat": "7ee89d20db5c4afae1f811c3f692ee5dea1fff120b582a5c597f281da7b83038"
+    },
+    "TS-CE:B": {
+      "rev": "1",
+      "hash": "62b94610aa197129939d764f42f478a98b2235469bc5d5b20e9e32b11137581b",
+      "mat": "42aaa9e89b1c1e5b487b52fdc5213e11b72e700295345f5215d555c05eda24f8"
+    },
+    "TS-DESC:A": {
+      "rev": "1",
+      "hash": "d646fd114c25e1b303e8fab6c7e6658d807b3d4b12b32705451921f2d61e7fe2",
+      "mat": "562e513f7cde2f88c862a337221bbf5c6b896ad41e4c17d6ff20780c6cb9a802"
+    },
+    "TS-PS:A": {
+      "rev": "1",
+      "hash": "8f64e4d01a6a5008514591e995682f030029a13ab2ecdaa0b4b1be05534a0d64",
+      "mat": "eed181f5255b730965c8e2a31dd13f16f7d799f9ee2f8c90d0640472da18759d"
+    },
+    "TS-SEQ:A": {
+      "rev": "1",
+      "hash": "83998e3f032f7650e050e1338ef5be14afe5aeceb3fe4c6c97a2b81fdb94c03f",
+      "mat": "051bfad0be2c8654e9b622db1e3c36afb4268806898dc359800005d9fb0eb6c4"
+    }
+  },
+  "inputs": {
+    "rev": "1",
+    "hash": "fb1b76b31b4648cf6f69213a9745d40e1a8862edb413ba8380aab740c256a1ab"
+  }
+}

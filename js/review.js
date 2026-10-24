@@ -31,6 +31,7 @@
     const got = Number(a.got), max = Number(a.max);
     if (!Number.isFinite(got) || !Number.isFinite(max) || max <= 0 || got < 0 || got > max) return null;
     const out = { d: a.d.slice(0, 10), got, max };
+    if (typeof a.rev === "string" && /^[a-z0-9]{1,12}$/.test(a.rev)) out.rev = a.rev;
     if (Number.isInteger(a.n)) out.n = a.n;
     if (isObj(a.comps)) { out.comps = {}; Object.keys(a.comps).forEach(c => { const v = a.comps[c]; if (!BAD(c) && Array.isArray(v) && v.length === 2 && v.every(Number.isFinite)) out.comps[c] = v.slice(); }); }
     return out;
@@ -60,9 +61,17 @@
   }
   const pad2 = n => String(n).padStart(2, "0");
   function today() { const d = new Date(); return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate()); }
+  /* The version of a review: a short signature of its questions (ids, types, points). It changes when the questions do,
+     and is stored on each result so an earlier result can be told apart (assessment-versions.json tracks the inputs). */
+  function setRev(set) {
+    let h = 2166136261;
+    const t = (set && set.items || []).map(i => i.id + ":" + i.type + ":" + i.points).join("|");
+    for (let i = 0; i < t.length; i++) h = Math.imul(h ^ t.charCodeAt(i), 16777619) >>> 0;
+    return h.toString(36);
+  }
   function record(setId, got, max, comps) {
     const r = data.r[setId] || (data.r[setId] = { a: [] });
-    const att = { d: today(), got, max, n: r.a.length + 1, comps };
+    const att = { d: today(), got, max, n: r.a.length + 1, comps, rev: setRev(PP.byId[setId]) };
     r.a = r.a.concat([att]).slice(-20);
     save();
     return att;
@@ -203,7 +212,7 @@
   /* ---------- shared pieces ---------- */
   function lastText(id) {
     const a = last(id);
-    return a ? "Last taken " + (S().niceDate(a.d) || a.d) + ": " + a.got + " of " + a.max + " points." : "Not taken yet on this device.";
+    return a ? "Last taken " + (S().niceDate(a.d) || a.d) + ": " + a.got + " of " + a.max + " points." + (a.rev && PP.byId[id] && a.rev !== setRev(PP.byId[id]) ? " The questions have changed since." : "") : "Not taken yet on this device.";
   }
   function setLine(set) {
     const pts = set.items.reduce((a, it) => a + it.points, 0);

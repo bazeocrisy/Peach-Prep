@@ -1,0 +1,5 @@
+{
+  "v": 1,
+  "note": "Independent-review ledger (01-architecture 2.6 rule 11). Entries are written only by check-content.js --record-review, by a named reviewer who is not an author, against the content as it is at that moment. Empty until a reviewer attests; see 05-engine-implementation.md section 10.",
+  "lessons": {}
+}

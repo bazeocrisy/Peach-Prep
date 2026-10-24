@@ -1,12 +1,22 @@
 #!/usr/bin/env node
 /* Peach Prep content checker -- the release gate for every set and task
    listed in js/data/manifest.js (and, with --all, every file on disk).
-   Usage: node verification/check-content.js [--all]
+   Usage: node verification/check-content.js [--all] [--release]
+          node verification/check-content.js --all --record-versions
+          node verification/check-content.js --all --record-review <key[,key]> [--part core|similar|test|all]
+                --by "<reviewer,reviewer>" --record <review file under docs/> [--authors "<name,name>"] [--date YYYY-MM-DD]
+   --release (expansion 2026-10-22, 01-architecture 2.6 rules 1, 11, 12): the migration warning, a missing or stale
+   independent-review record and a material change to a check without a new testRev become FAILURES. Without it they
+   stay warnings, so the day-to-day gate is unchanged. --record-versions writes verification/assessment-versions.json;
+   --record-review writes docs/expansion-2026-10-22/review-ledger.json (a reviewer attests the content as it is now).
    Exit code 1 on any failure. Rules: docs/SPEC.md §5, §5b, §5c, §6. */
 "use strict";
 const fs = require("fs"), path = require("path"), vm = require("vm");
 const ROOT = path.resolve(__dirname, "..");
 const all = process.argv.includes("--all");
+const RELEASE = process.argv.includes("--release");
+const ARGV = process.argv.slice(2);
+const argOf = n => { const i = ARGV.indexOf(n); return i >= 0 && ARGV[i + 1] && !/^--/.test(ARGV[i + 1]) ? ARGV[i + 1] : null; };
 
 const ctx = { window: {} };
 vm.createContext(ctx);
@@ -680,7 +690,168 @@ if (EXC) (EXC.exceptions || []).forEach(x => {
   else if (L.core) F("practice-exceptions", x.lesson + " has core, so it is not an exception");
 });
 else W("practice-exceptions", "docs/expansion-2026-10-22/practice-exceptions.json not found");
-if (coreStats.noCore.length) W("core (migration)", coreStats.noCore.length + " lessons with a skill check have no core yet and are not listed as exceptions (a failure only after migration)");
+if (coreStats.noCore.length) {
+  if (RELEASE) F("core (release)", coreStats.noCore.length + " lessons with a skill check have neither core nor a documented exception: " + coreStats.noCore.slice(0, 15).join(", ") + (coreStats.noCore.length > 15 ? ", and " + (coreStats.noCore.length - 15) + " more" : ""));
+  else W("core (migration)", coreStats.noCore.length + " lessons with a skill check have no core yet and are not listed as exceptions (a failure only after migration)");
+}
+
+/* ---------- expansion 2026-10-22 (01-architecture 2.4 item 5, 2.6 rules 11 and 12): check versions and the review ledger ----------
+   assessment-versions.json: per check form (<lesson>:A, <lesson>:B) a rev, a full content hash and a material hash
+   (ids, types, points and answer keys, not wording). A material change with the same testRev is the problem the rev exists for.
+   review-ledger.json: who independently reviewed which content, with the hash of what they reviewed.
+   Both are warnings by default and failures with --release. */
+const crypto = require("crypto");
+const canon = v => JSON.stringify(v, (k, x) => x && typeof x === "object" && !Array.isArray(x) ? Object.keys(x).sort().reduce((o, key) => (o[key] = x[key], o), {}) : x);
+const sha = v => crypto.createHash("sha256").update(canon(v)).digest("hex");
+const KEYFIELD = /^(correct|answer|answers|pick|points|type|id)$/;
+function keyFacts(v, pth, out) {
+  if (Array.isArray(v)) { out.push([pth + ".len", v.length]); v.forEach((x, i) => { if (x && typeof x === "object") keyFacts(x, pth + "[" + i + "]", out); else if (KEYFIELD.test(pth.split(".").pop())) out.push([pth + "[" + i + "]", x]); }); }
+  else if (v && typeof v === "object") Object.keys(v).sort().forEach(k => {
+    const x = v[k];
+    if (x && typeof x === "object") keyFacts(x, pth + "." + k, out);
+    else if (KEYFIELD.test(k)) out.push([pth + "." + k, x]);
+  });
+  return out;
+}
+const materialOf = items => sha((items || []).map(it => keyFacts(it, "", [])));
+const lessonKeyOf = L => L.key || L.code;
+function coreResolved(L) {
+  const prac = {}; (L.practice || []).forEach(it => { prac[it.id] = it; });
+  const ad = L.addons || {};
+  return { rev: L.core.rev, sets: L.core.sets.map(st => ({ title: st.title, items: (st.items || []).map(it => it && it.ref ? Object.assign({}, prac[it.ref] || { ref: it.ref }, ad[it.ref] || {}) : it) })) };
+}
+const VERS_FILE = path.join(ROOT, "verification/assessment-versions.json");
+const LEDGER_FILE = path.join(ROOT, "docs/expansion-2026-10-22/review-ledger.json");
+const readJson = f => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { return null; } };
+const today = () => { const d = new Date(), p = n => String(n).padStart(2, "0"); return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); };
+const revOf = (L, f) => { const t = L.testRev; const v = t && typeof t === "object" ? t[f] : null; return typeof v === "string" && v.trim() ? v : "1"; };
+function currentForms() {
+  const out = {};
+  lessons.forEach(L => {
+    const k = lessonKeyOf(L);
+    if ((L.test || []).length) out[k + ":A"] = { rev: revOf(L, "A"), hash: sha(L.test), mat: materialOf(L.test) };
+    if (Array.isArray(L.testB) && L.testB.length) out[k + ":B"] = { rev: revOf(L, "B"), hash: sha(L.testB), mat: materialOf(L.testB) };
+  });
+  return out;
+}
+function currentInputs() {
+  const acc = (ctx.window.PP_ACCEPTED || []).slice().sort(), forms = currentForms();
+  return { rev: "1", accepted: acc, groups: sha((ctx.window.PP_STD_GROUPS || []).map(g => [g.code, g.order, g.lessons])), forms: acc.map(k => [k, (forms[k + ":A"] || {}).mat || null, (forms[k + ":B"] || {}).mat || null]) };
+}
+function currentParts() {
+  const out = {};
+  lessons.forEach(L => {
+    const k = lessonKeyOf(L), o = {};
+    if (L.core) { o.core = { rev: L.core.rev, hash: sha(coreResolved(L)) }; o.similar = { rev: L.core.rev, hash: sha(L.similar || []) }; }
+    if ((L.test || []).length) o["test:A"] = { rev: revOf(L, "A"), hash: sha(L.test) };
+    if (Array.isArray(L.testB) && L.testB.length) o["test:B"] = { rev: revOf(L, "B"), hash: sha(L.testB) };
+    if (Object.keys(o).length) out[k] = o;
+  });
+  return out;
+}
+const slot = (e, part) => { if (!e) return null; if (part.indexOf("test:") === 0) return e.test && e.test[part.slice(5)] || null; return e[part] || null; };
+const partNames = parts => Object.keys(parts);
+
+if (ARGV.includes("--record-versions")) {
+  if (!all) { console.log("NOT RECORDED: run --record-versions together with --all, so every lesson file is read"); process.exit(1); }
+  const cur = currentForms(), old = (readJson(VERS_FILE) || {}).forms || {}, forms = {}, refused = [];
+  Object.keys(cur).sort().forEach(k => {
+    const o = old[k], c = cur[k];
+    if (o && o.mat !== c.mat && o.rev === c.rev) { refused.push(k + " (material change, testRev still \"" + c.rev + "\")"); forms[k] = o; }
+    else forms[k] = { rev: c.rev, hash: c.hash, mat: c.mat };
+  });
+  if (refused.length) { console.log("NOT RECORDED: a check changed materially (ids, points or answer keys) without a new testRev. Raise testRev in the lesson first: " + refused.join("; ")); process.exit(1); }
+  const inp = currentInputs(), oi = (readJson(VERS_FILE) || {}).inputs;
+  const inputs = { rev: oi && oi.rev || "1", hash: sha({ accepted: inp.accepted, groups: inp.groups, forms: inp.forms }) };
+  if (oi && oi.hash !== inputs.hash && oi.rev === inputs.rev) inputs.rev = String(Number(oi.rev) + 1);
+  fs.writeFileSync(VERS_FILE, JSON.stringify({ v: 1, note: "Written by check-content.js --record-versions. rev is the lesson's testRev (default 1). hash covers every word of the form; mat covers ids, types, points and answer keys only. Reviews and the cumulative review are built at run time from the accepted lessons' forms, so their version is the hash of those inputs (rev here, and a short signature stored on each result).", forms, inputs }, null, 2) + "\n");
+  console.log("recorded " + Object.keys(forms).length + " check forms and the review inputs (rev " + inputs.rev + ") in verification/assessment-versions.json");
+  process.exit(0);
+}
+if (ARGV.includes("--record-review")) {
+  if (!all) { console.log("NOT RECORDED: run --record-review together with --all, so every lesson file is read"); process.exit(1); }
+  const keys = (argOf("--record-review") || "").split(",").map(x => x.trim()).filter(Boolean), by = (argOf("--by") || "").split(",").map(x => x.trim()).filter(Boolean);
+  const au = (argOf("--authors") || "").split(",").map(x => x.trim()).filter(Boolean), rec = argOf("--record"), date = argOf("--date") || today(), part = argOf("--part") || "all";
+  const bad = [];
+  if (!keys.length) bad.push("name the lesson key(s) after --record-review");
+  if (!by.length) bad.push("--by needs at least one reviewer");
+  if (!rec || !fs.existsSync(path.join(ROOT, rec))) bad.push("--record must name an existing review file in the repository");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) bad.push("--date must be YYYY-MM-DD");
+  if (by.some(x => au.indexOf(x) >= 0)) bad.push("a reviewer is also listed as an author: " + by.filter(x => au.indexOf(x) >= 0).join(", "));
+  const cp = currentParts();
+  keys.forEach(k => { if (!cp[k]) bad.push(k + " is not a lesson with reviewable content"); });
+  if (bad.length) { console.log("NOT RECORDED: " + bad.join("; ")); process.exit(1); }
+  const led = readJson(LEDGER_FILE) || { v: 1, lessons: {} };
+  keys.forEach(k => {
+    const e = led.lessons[k] || (led.lessons[k] = {});
+    Object.keys(cp[k]).forEach(pn => {
+      if (part !== "all" && pn.split(":")[0] !== part) return;
+      const entry = { rev: cp[k][pn].rev, hash: cp[k][pn].hash, reviewers: by, authors: au, date, record: rec };
+      if (pn.indexOf("test:") === 0) { (e.test = e.test || {})[pn.slice(5)] = entry; } else e[pn] = entry;
+    });
+  });
+  fs.writeFileSync(LEDGER_FILE, JSON.stringify(led, null, 2) + "\n");
+  console.log("recorded " + keys.join(", ") + " (" + part + ") as reviewed by " + by.join(", ") + " in docs/expansion-2026-10-22/review-ledger.json");
+  process.exit(0);
+}
+
+(function () {
+  const C = "versions", R = "ledger", V = readJson(VERS_FILE), LG = readJson(LEDGER_FILE), lev = RELEASE ? F : W;
+  /* testRev shape (always a failure) */
+  lessons.forEach(L => {
+    if (L.testRev === undefined) return;
+    const k = lessonKeyOf(L);
+    if (!L.testRev || typeof L.testRev !== "object" || Array.isArray(L.testRev)) { F(C, "lesson " + k + ": testRev must be an object like { A: \"1\", B: \"1\" }"); return; }
+    Object.keys(L.testRev).forEach(f => {
+      if (f !== "A" && f !== "B") F(C, "lesson " + k + ": testRev has an unknown form " + f);
+      else if (typeof L.testRev[f] !== "string" || !L.testRev[f].trim() || L.testRev[f].length > 12) F(C, "lesson " + k + ": testRev." + f + " must be a short non-empty string");
+      else if (f === "A" && !(L.test || []).length) F(C, "lesson " + k + ": testRev.A but no test");
+      else if (f === "B" && !(Array.isArray(L.testB) && L.testB.length)) F(C, "lesson " + k + ": testRev.B but no testB");
+    });
+  });
+  /* versions */
+  if (!V || typeof V.forms !== "object") { lev(C, "verification/assessment-versions.json is missing or unreadable (run --record-versions)"); }
+  else {
+    const cur = currentForms(), mat = [], edit = [], stale = [], added = [], gone = [];
+    Object.keys(cur).forEach(k => {
+      const o = V.forms[k], c = cur[k];
+      if (!o) { added.push(k); return; }
+      if (o.rev !== c.rev) { stale.push(k + " (record rev " + o.rev + ", testRev " + c.rev + ")"); return; }
+      if (o.mat !== c.mat) mat.push(k);
+      else if (o.hash !== c.hash) edit.push(k);
+    });
+    if (all) Object.keys(V.forms).forEach(k => { if (!cur[k]) gone.push(k); });
+    const list = a => a.slice(0, 10).join(", ") + (a.length > 10 ? ", and " + (a.length - 10) + " more" : "");
+    if (mat.length) lev(C, mat.length + " check form" + (mat.length === 1 ? "" : "s") + " changed materially (ids, points or answer keys) with the same testRev, so old attempts would be read as the new check: " + list(mat) + ". Raise testRev in the lesson, then run --record-versions");
+    if (stale.length) lev(C, "testRev differs from the record for " + list(stale) + ". Run --record-versions");
+    if (added.length) lev(C, added.length + " check form" + (added.length === 1 ? " has" : "s have") + " no version record: " + list(added) + ". Run --record-versions");
+    if (gone.length) lev(C, "the version record lists forms that no longer exist: " + list(gone));
+    if (edit.length) W(C, edit.length + " check form" + (edit.length === 1 ? " was" : "s were") + " edited in wording only since the record (same ids, points and keys): " + list(edit) + ". testRev stays; run --record-versions to refresh the hash");
+    const inp = currentInputs(), ih = sha({ accepted: inp.accepted, groups: inp.groups, forms: inp.forms });
+    if (V.inputs && V.inputs.hash !== ih) lev(C, "the inputs of the reviews (accepted lessons, their checks' answer keys, the standard groups) changed since the record: run --record-versions, which raises the reviews' rev");
+  }
+  /* ledger */
+  if (!LG || typeof LG.lessons !== "object") { lev(R, "docs/expansion-2026-10-22/review-ledger.json is missing or unreadable"); return; }
+  const need = currentParts(), missing = [], differ = [], invalid = [], orphan = [];
+  Object.keys(need).sort().forEach(k => partNames(need[k]).forEach(pn => {
+    const e = slot(LG.lessons[k], pn), tag = k + " " + pn;
+    if (!e) { missing.push(tag); return; }
+    const probs = [];
+    if (!Array.isArray(e.reviewers) || !e.reviewers.length || e.reviewers.some(x => typeof x !== "string" || !x.trim())) probs.push("no reviewers");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) probs.push("no date");
+    if (typeof e.record !== "string" || !fs.existsSync(path.join(ROOT, e.record))) probs.push("review file not found");
+    if (Array.isArray(e.authors) && Array.isArray(e.reviewers) && e.reviewers.some(x => e.authors.indexOf(x) >= 0)) probs.push("a reviewer is also an author");
+    if (probs.length) { invalid.push(tag + " (" + probs.join(", ") + ")"); return; }
+    if (e.hash !== need[k][pn].hash || e.rev !== need[k][pn].rev) differ.push(tag);
+  }));
+  if (all) Object.keys(LG.lessons).forEach(k => { if (!need[k]) orphan.push(k); });
+  const list = a => a.slice(0, 12).join("; ") + (a.length > 12 ? "; and " + (a.length - 12) + " more" : "");
+  if (invalid.length) F(R, invalid.length + " review record" + (invalid.length === 1 ? " is" : "s are") + " not valid: " + list(invalid));
+  if (differ.length) lev(R, differ.length + " part" + (differ.length === 1 ? "" : "s") + " changed since the independent review recorded for it (the shipped content is not what was reviewed): " + list(differ));
+  if (missing.length) lev(R, missing.length + " part" + (missing.length === 1 ? " has" : "s have") + " no independent-review record: " + list(missing));
+  if (orphan.length) lev(R, "the ledger names lessons that are not in the checked set or have no reviewable content: " + list(orphan));
+})();
+
 Object.keys(coreStats.together || {}).forEach(k => console.log("  info  lesson " + k + ": Practice Together = " + coreStats.together[k].join(", ") + " (practice minus the core refs)"));
 
 const items = sets.reduce((a, s) => a + s.items.length, 0);

@@ -198,6 +198,26 @@
   const formOfPart = part => part === "tB" ? "B" : "A";
   const otherForm = f => f === "B" ? "A" : "B";
   const attForm = a => a && a.form === "B" ? "B" : "A";
+  /* Check versions (01-architecture 2.4 item 5). A lesson's testRev is { A, B }, default "1". Attempts record the rev they
+     were taken on; an attempt without one was taken on "1". Nothing here changes what a saved field means. */
+  const revText = v => typeof v === "string" && v.length > 0 && v.length <= 12 ? v : "1";
+  function testRev(k, form) {
+    const L = lessons[k], t = L && L.testRev;
+    return revText(t && typeof t === "object" ? t[form === "B" ? "B" : "A"] : null);
+  }
+  const attRev = a => revText(a && a.rev);
+  /* answers seen on an earlier version of a check do not count for a newer version (seenRev: additive, default "1") */
+  function seenRevOK(k, r, form) {
+    const f = form === "B" ? "B" : "A", sr = r.seenRev;
+    return revText(sr && typeof sr === "object" ? sr[f] : null) === testRev(k, f);
+  }
+  /* The version the best score was set on: the first logged attempt with the same score (older records: rev 1). */
+  function bestStale(k, r) {
+    const b = r.best;
+    if (!b) return false;
+    const a = (Array.isArray(r.attempts) ? r.attempts : []).find(x => x && x.got === b.got && x.max === b.max);
+    return !!a && attRev(a) !== testRev(k, attForm(a));
+  }
   function hasFormB(k) { return !!(PP.byId["SK:" + k + ":t"] && PP.byId["SK:" + k + ":tB"]); }
   function nextForm(k) {
     if (!hasFormB(k)) return "A";
@@ -260,11 +280,12 @@
     const n = r.tries;
     /* the answers to these same questions were shown on an earlier try. With two forms,
        "these same questions" means this form (PP-004); a one-form lesson is unchanged. */
-    const seenEarlier = hasFormB(k) ? !!(n > 1 && seenForm(r, form)) : !!(r.answersSeenAt && n > 1);
+    const rev = testRev(k, form), revOK = seenRevOK(k, r, form);
+    const seenEarlier = revOK && (hasFormB(k) ? !!(n > 1 && seenForm(r, form)) : !!(r.answersSeenAt && n > 1));
     /* RR-01: answers shown in a review (reviewSeenBy, new and additive) count as seen, even on the first try */
-    const seenInReview = !!(r.reviewSeenBy && typeof r.reviewSeenBy === "object" && r.reviewSeenBy[form === "B" ? "B" : "A"]);
+    const seenInReview = revOK && !!(r.reviewSeenBy && typeof r.reviewSeenBy === "object" && r.reviewSeenBy[form === "B" ? "B" : "A"]);
     const after = seenEarlier || seenInReview;
-    const att = { d: today(), got, max, ok: pass, n, afterAnswers: after, form };   /* form: new in PP-004 */
+    const att = { d: today(), got, max, ok: pass, n, afterAnswers: after, form, rev };   /* form: new in PP-004; rev: check version, new */
     if (!seenEarlier && seenInReview) att.seenIn = "review";
     r.attempts = (r.attempts || []).concat(att).slice(-20);
     if (pass) {
@@ -284,6 +305,8 @@
       /* a review showed this form's check answers: noted in its own field; nothing else about the record changes */
       if (!r.reviewSeenBy || typeof r.reviewSeenBy !== "object" || Array.isArray(r.reviewSeenBy)) r.reviewSeenBy = {};
       r.reviewSeenBy[form === "B" ? "B" : "A"] = new Date().toISOString();
+      if (!r.seenRev || typeof r.seenRev !== "object" || Array.isArray(r.seenRev)) r.seenRev = {};
+      r.seenRev[form === "B" ? "B" : "A"] = testRev(k, form);
       save();
       return;
     }
@@ -292,6 +315,8 @@
       r.answersSeenBy[form === "B" ? "B" : "A"] = new Date().toISOString();
     }
     r.answersSeenAt = new Date().toISOString();
+    if (!r.seenRev || typeof r.seenRev !== "object" || Array.isArray(r.seenRev)) r.seenRev = {};
+    r.seenRev[form === "B" ? "B" : "A"] = testRev(k, form);
     save();
   }
   /* Test items (either form) are never practice: the player runs them in test mode only.
@@ -1229,11 +1254,11 @@
      - bestMax is set but the check has changed since: "Best score: 6 of 7 (on an earlier version of this check)."
      - no bestMax (saved before PP-003) and best does not fit today's total: no score, just
        "(on an older version of this check)", so "6 of 7" never sits next to an 8-point check. */
-  function bestText(r, max, lead) {
+  function bestText(r, max, lead, k) {
     const b = r.best;
     if (!b || typeof b.got !== "number" || typeof b.max !== "number") return ".";
     const fits = b.max === max && b.got <= max;
-    if (typeof r.bestMax === "number" ? r.bestMax === max && fits : fits) return ". " + lead + b.got + " of " + b.max + ".";
+    if (typeof r.bestMax === "number" ? r.bestMax === max && fits : fits) return ". " + lead + b.got + " of " + b.max + (k && bestStale(k, r) ? " (on an earlier version of this check)." : ".");
     if (typeof r.bestMax === "number") return ". " + lead + b.got + " of " + b.max + " (on an earlier version of this check).";
     return " (on an older version of this check).";
   }
@@ -1250,12 +1275,13 @@
       card.appendChild(make("p", "", set.items.length + " questions, " + max + " points, no hints. Score " + passMark(max) + " or more to pass the skill check."));
       if (two) card.appendChild(make("p", "go-note check-form", "For grown-ups: this skill check has two forms with different questions, A and B. They take turns, starting with A. The next check is form " + nextForm(keyOf(L)) + "."));
       if (r.mastered) {
-        card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + bestText(r, max, "Best score: ")));
+        card.appendChild(make("p", "go-done", "✓ Passed the skill check" + (r.passedAt ? " on " + niceDate(r.passedAt) : "") + bestText(r, max, "Best score: ", cur)));
         /* for grown-ups: how the pass was earned (display only, from the dated attempt log) */
         const att = r.attempts || [];
         const pa = att.find(a => a.ok && a.n === r.passTry) || (r.passTry ? null : att.filter(a => a.ok).pop());
         if (r.passTry) card.appendChild(make("p", "go-note pass-try", "For grown-ups: passed on try " + r.passTry + (two && pa ? ", on form " + attForm(pa) : "") + "." +
           (r.passTry > 1 ? (two ? " Each form uses the same questions every time it comes up." : " The check uses the same questions each time.") : "")));
+        if (pa && attRev(pa) !== testRev(cur, attForm(pa))) card.appendChild(make("p", "go-note pass-rev", "For grown-ups: this pass was on an earlier version of the check" + (two ? " (form " + attForm(pa) + ")" : "") + ". The pass stands. The check has changed since."));
         if (pa && pa.afterAnswers) card.appendChild(make("p", "go-note pass-after", pa.seenIn === "review" ? "For grown-ups: passed after seeing these questions' answers in a review." : "For grown-ups: passed after seeing the answers on an earlier try."));
         /* PP-004 Retained: shown only with PP_FLAGS.retained on */
         if (retainedShown(cur)) card.appendChild(make("p", "go-note retained-line", "Retained: passed again on form " + r.retainedForm + " on " + niceDate(r.retainedAt) +
@@ -1270,7 +1296,7 @@
         }
       }
       else if (r.best) {
-        const bt = bestText(r, max, "Best score so far: ");
+        const bt = bestText(r, max, "Best score so far: ", cur);
         card.appendChild(make("p", "go-best", (bt.indexOf(". ") === 0 ? bt.slice(2) : "Your best score so far was on an older version of this check.") + " Need " + passMark(max) + " of " + max + " to pass."));
       }
       const b = make("button", "btn btn-primary", r.tries ? "Take the skill check again" : "Take the skill check");
@@ -1672,7 +1698,7 @@
     lessonsFor, info, codeLabel, shortCode, niceDate, coreIds, isCore: k => !!core[k], onTest: c => onTest(byCode[c]),
     testedText: s => (TESTED[s.tested] || ["", ""]), stepBack: () => fromStd(),
     init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
-    answersSeen, reviewDue, passKind, passLabel,
+    answersSeen, testRev, reviewDue, passKind, passLabel,
     nextForm, checkSetId, hasFormB, displayState,   /* PP-004 */
     current: () => cur, step: () => step, lastCode: () => lastCode,
     stepNames: k => (lessons[k] ? stepsFor(lessons[k]).map(x => x[1]) : []),
