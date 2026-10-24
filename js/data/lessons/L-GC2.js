@@ -2313,9 +2313,9 @@ PP.addLesson({
       like: ["SK-GC2b-C09"],
       prompt: "Lena's list does not stay in one time. Select the line that does not match the others.",
       options: [
-        "Every morning, I feed the fish in our tank.",
-        "I scoop a little food into the water.",
-        "The fish swim up to the top.",
+        "Every morning, I feed the hens in our coop.",
+        "I scatter a little corn on the ground.",
+        "The hens run up to the gate.",
         "Then my sister counted them.",
         "I count them every day to be sure."
       ],
@@ -2329,7 +2329,7 @@ PP.addLesson({
       ],
       how: [
         "Find the time clue: Every morning means the list tells what happens again and again, so it is in the present tense.",
-        "Check each verb: feed, scoop, swim, count. They are all present tense.",
+        "Check each verb: feed, scatter, run, count. They are all present tense.",
         "\"Then my sister counted them.\" has counted, which is past tense. It should say counts."
       ],
       misconception: "A common mix-up is skipping a short line because it sounds fine. Check every verb against the time clue.",
@@ -4160,29 +4160,29 @@ PP.addLesson({
     /* B5-b5a:passages:start */
     {
       id: "p1",
-      title: "Camping in the Backyard",
+      title: "Making a Snow Globe",
       byline: "Nia's draft",
       genre: "Student draft (narrative)",
       draft: true,
       paragraphs: [
         [
-          "(1) Last Saturday, my dad and I camped in our backyard.",
-          "(2) We set up a tent near the old oak tree."
+          "(1) Last Saturday, my dad and I made a snow globe at the kitchen table.",
+          "(2) We picked a jar with a tight lid."
         ],
         [
-          "(3) The tent was big.",
-          "(4) We cooked hot dogs over a small fire pit until the skins turned black.",
-          "(5) The hot dogs tasted good."
+          "(3) The jar was big.",
+          "(4) We shook it until the glitter swirled like flakes in a storm.",
+          "(5) The glitter looked good."
         ],
         [
-          "(6) After dinner, we lay on a blanket and looked at the stars.",
-          "(7) Dad pointed to the Big Dipper.",
-          "(8) He told me a story about a fox, and I laughed."
+          "(6) After dinner, we put the globe on a shelf and looked at it.",
+          "(7) Dad pointed to the tiny paper house.",
+          "(8) He said a fox could live there, and I laughed."
         ],
         [
           "(9) Soon I fell asleep.",
-          "(10) I hope we camp again next week.",
-          "(11) Camping with my dad is the best thing I do."
+          "(10) I hope we make another next week.",
+          "(11) Making things with my dad is the best thing I do."
         ]
       ]
     },
@@ -4218,17 +4218,17 @@ PP.addLesson({
     },
     {
       id: "p3",
-      title: "Painting the Mural",
+      title: "Painting a Birdhouse",
       byline: "Keisha's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) Our class painted a mural on the wall by the gym.",
+          "(1) Our class painted a birdhouse for the school garden.",
           "(2) Mr. Hall gave each of us a brush and a cup of paint."
         ],
         [
-          "(3) I mixed white into blue until the color was very light.",
+          "(3) I painted a sky on the back wall and mixed white into blue until the color was very light.",
           "(4) The sky looked good."
         ],
         [
@@ -4237,9 +4237,9 @@ PP.addLesson({
           "(7) Ruby added a river with wide, long strokes."
         ],
         [
-          "(8) At the end of the day, the mural was done.",
+          "(8) At the end of the day, the birdhouse was done.",
           "(9) Everyone stepped back and cheered.",
-          "(10) Our mural makes the whole wall look happy.",
+          "(10) Our birdhouse makes the whole garden look happy.",
           "(11) I want to paint another one."
         ]
       ]
@@ -4257,7 +4257,7 @@ PP.addLesson({
         ],
         [
           "(3) The barn was old.",
-          "(4) The farmer let us meet a calf, and its tongue felt like sandpaper.",
+          "(4) The farmer let us meet a goat, and its tongue felt like sandpaper.",
           "(5) The lick felt nice."
         ],
         [
@@ -4275,58 +4275,58 @@ PP.addLesson({
     },
     {
       id: "p5",
-      title: "Our Class Fish Tank",
+      title: "Our Garden Bird Bath",
       byline: "Imani's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) Our class has a fish tank near the window.",
-          "(2) Mrs. Lee lets us feed the fish each morning."
+          "(1) Our class has a bird bath near the window.",
+          "(2) Mrs. Lee lets us fill the bath each morning."
         ],
         [
-          "(3) The tank has a green plant and a castle.",
-          "(4) A tiny orange fish named Pepper hides in the castle when we come near.",
+          "(3) The yard has a green bush and a feeder.",
+          "(4) A tiny gray finch named Pepper hides in the bush when we come near.",
           "(5) Pepper stays still until the room gets quiet.",
           "(6) Then Pepper comes out."
         ],
         [
-          "(7) The tank has a loud filter.",
+          "(7) The bath has a small fountain.",
           "(8) The water makes a sound.",
-          "(9) We learn about the fish every week.",
-          "(10) Next month, we will add two more fish."
+          "(9) We learn about the birds every week.",
+          "(10) Next month, we will add two more feeders."
         ],
         [
-          "(11) I like watching them swim.",
-          "(12) Our fish tank is the best part of our room."
+          "(11) I like watching them splash.",
+          "(12) Our bird bath is the best part of our school yard."
         ]
       ]
     },
     {
       id: "p6",
-      title: "The Town Parade",
+      title: "Go-Kart Day",
       byline: "Kofi's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) Our town held a parade on Main Street.",
+          "(1) Our town held a go-kart day at the park.",
           "(2) My aunt gave me a flag to wave."
         ],
         [
-          "(3) I stood close to the curb to see the band march by in neat rows.",
-          "(4) The band looked good."
+          "(3) I stood close to the fence to see the karts line up in neat rows.",
+          "(4) The karts looked good."
         ],
         [
-          "(5) The drummer wore a tall hat, and he did not want to miss a beat.",
-          "(6) He played, one beat at a time.",
-          "(7) Behind him, a dancer spun a long ribbon."
+          "(5) The first driver wore a tall helmet, and he did not want to miss a turn.",
+          "(6) He drove, one turn at a time.",
+          "(7) Behind him, a girl waved a long flag."
         ],
         [
-          "(8) At the end of the parade, the street was quiet again.",
+          "(8) At the end of the day, the park was quiet again.",
           "(9) Everyone clapped and cheered.",
-          "(10) Our parade makes the whole town feel proud.",
-          "(11) I want to march next year."
+          "(10) Our race makes the whole town feel proud.",
+          "(11) I want to race next year."
         ]
       ]
     }
@@ -4419,24 +4419,24 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "Nia wants to elaborate on sentence 3 by adding details. Which revision does that best?",
             choices: [
-              { text: "The green tent was wide enough for two sleeping bags.", correct: true },
-              { text: "The big tent was very large and also quite big in size." },
-              { text: "The tent was nice and fun to be in on that night." },
-              { text: "The tent was good because it was a good tent to use." }
+              { text: "The round jar was wide enough for a paper house.", correct: true },
+              { text: "The big jar was very large and also quite big in size." },
+              { text: "The jar was nice and fun to look at that night." },
+              { text: "The jar was good because it was a good jar to use." }
             ],
-            clue: "To elaborate is to add details that tell more. Look for words that help the reader picture the tent.",
+            clue: "To elaborate is to add details that tell more. Look for words that help the reader picture the jar.",
             hints: [
-              "To elaborate is to add details that tell more. Look for words that help the reader picture the tent.",
-              "Read each revision and ask what new thing you learn about the tent.",
+              "To elaborate is to add details that tell more. Look for words that help the reader picture the jar.",
+              "Read each revision and ask what new thing you learn about the jar.",
               "One choice only says big again in other words. Check the other three for new details."
             ],
             how: [
-              "Ask what each revision tells the reader about the tent that sentence 3 did not.",
-              "\"The green tent was wide enough for two sleeping bags.\" adds its color and its size in a way you can picture.",
+              "Ask what each revision tells the reader about the jar that sentence 3 did not.",
+              "\"The round jar was wide enough for a paper house.\" adds its color and its size in a way you can picture.",
               "The others repeat big or use plain words like nice, fun and good that do not tell anything exact."
             ],
             misconception: "A common mix-up is thinking more describing words always means more detail. Plain words add nothing new.",
-            why: "The answer is \"The green tent was wide enough for two sleeping bags.\" Green and wide add new details you can picture. The others repeat big or use plain words like nice, fun and good."
+            why: "The answer is \"The round jar was wide enough for a paper house.\" Round and wide add new details you can picture. The others repeat big or use plain words like nice, fun and good."
           },
           {
             id: "SK-GC2d-C05",
@@ -4477,26 +4477,26 @@ PP.addLesson({
             std: ["3.L.GC.2.d"],
             passages: ["p1"],
             prompt: "Choose the word that best replaces good in sentence 5 of Nia's draft.",
-            text: "The hot dogs tasted {0}.",
+            text: "The glitter looked {0}.",
             slots: [
               {
-                options: ["icy", "smoky", "sugary"],
+                options: ["sunny", "wintry", "sandy"],
                 answer: 1
               }
             ],
-            clue: "A plain word like good can be swapped for an exact one. Look back at how the hot dogs were cooked.",
+            clue: "A plain word like good can be swapped for an exact one. Look back at how the glitter moved.",
             hints: [
-              "A plain word like good can be swapped for an exact one. Look back at how the hot dogs were cooked.",
-              "Read sentence 4. What would food taste like after its skins turned black over a fire?",
-              "Fire pits do not make food cold. Check the other two words against sentence 4."
+              "A plain word like good can be swapped for an exact one. Look back at how the glitter moved.",
+              "Read sentence 4. What kind of weather has swirling flakes in a storm?",
+              "Sunny and sandy are about warm places. Check the other two words against sentence 4."
             ],
             how: [
-              "Sentence 4 says the hot dogs cooked over a fire pit until the skins turned black.",
-              "Food cooked that way tastes like fire and smoke, so smoky fits.",
-              "Icy does not fit anything cooked over a fire, and sugary has no clue in the draft."
+              "Sentence 4 says the glitter swirled like flakes in a storm.",
+              "Swirling flakes in a storm look like snow, so wintry fits.",
+              "Sunny and sandy do not fit swirling flakes."
             ],
             misconception: "A common mix-up is choosing a word that sounds fun without checking it against the draft.",
-            why: "The answer is smoky. The hot dogs cooked over a fire until the skins turned black, so they would taste like smoke. Icy is the opposite of food cooked over a fire. Sugary has no clue in the draft."
+            why: "The answer is wintry. The glitter swirled like flakes in a storm, so it looked like winter weather. Sunny and sandy do not fit swirling flakes."
           }
         ]
       },
@@ -4959,7 +4959,7 @@ PP.addLesson({
       std: ["3.L.GC.2.d"],
       passages: ["p4"],
       like: ["SK-GC2d-C06"],
-      prompt: "Which word tells exactly how the calf's lick felt in sentence 5?",
+      prompt: "Which word tells exactly how the goat's lick felt in sentence 5?",
       choices: [
         { text: "scratchy", correct: true },
         { text: "velvety" },
@@ -4973,7 +4973,7 @@ PP.addLesson({
         "Sandpaper is not smooth. Check the other words against sentence 4."
       ],
       how: [
-        "Sentence 4 says the calf's tongue felt like sandpaper.",
+        "Sentence 4 says the goat's tongue felt like sandpaper.",
         "Sandpaper is rough, so a lick from it would feel scratchy.",
         "Velvety and fluffy mean soft, which is the opposite of sandpaper, and glossy is about how something looks."
       ],
@@ -4998,16 +4998,16 @@ PP.addLesson({
       clue: "An adverb should fit what the draft says. Reread sentences 4 and 5 to see how Pepper acts.",
       hints: [
         "An adverb should fit what the draft says. Reread sentences 4 and 5 to see how Pepper acts.",
-        "Pepper hides until the room gets quiet. How would a shy fish come out?",
-        "A fish that hides would not rush out. Check the other choices against sentences 4 and 5."
+        "Pepper hides until the room gets quiet. How would a shy bird come out?",
+        "A bird that hides would not rush out. Check the other choices against sentences 4 and 5."
       ],
       how: [
         "Sentences 4 and 5 say Pepper hides and stays still until the room is quiet.",
-        "A shy fish would come out slowly and carefully, so cautiously fits.",
-        "Confidently, wildly and noisily do not match a fish that hides."
+        "A shy bird would come out slowly and carefully, so cautiously fits.",
+        "Confidently, wildly and noisily do not match a bird that hides."
       ],
       misconception: "A common mix-up is choosing an adverb that sounds exciting without checking the draft.",
-      why: "The answer is cautiously. Pepper hides until the room is quiet, so it comes out with care. Confidently, wildly and noisily do not match a fish that hides."
+      why: "The answer is cautiously. Pepper hides until the room is quiet, so it comes out with care. Confidently, wildly and noisily do not match a bird that hides."
     },
     {
       id: "SK-GC2d-S08",
@@ -5020,11 +5020,11 @@ PP.addLesson({
       prompt: "Which TWO ways of describing the sound in sentence 8 are exact?",
       pick: 2,
       choices: [
-        { text: "The water makes a soft bubbling hum.", correct: true },
+        { text: "The water makes a soft bubbling trickle.", correct: true },
         { text: "The water makes a steady, gentle splash.", correct: true },
         { text: "The water makes a pleasant sound all day." },
-        { text: "The water makes an okay noise in the room." },
-        { text: "The water makes a lovely sound for the fish." }
+        { text: "The water makes an okay noise in the yard." },
+        { text: "The water makes a lovely sound for the birds." }
       ],
       clue: "An exact word lets the reader hear the water. A plain word could describe almost any sound.",
       hints: [
@@ -5034,12 +5034,12 @@ PP.addLesson({
       ],
       how: [
         "Look for describing words that help you hear the water.",
-        "\"The water makes a soft bubbling hum.\" Soft and bubbling are exact.",
+        "\"The water makes a soft bubbling trickle.\" Soft and bubbling are exact.",
         "\"The water makes a steady, gentle splash.\" Steady and gentle are exact.",
         "The other three use plain words like pleasant, okay and lovely."
       ],
       misconception: "A common mix-up is picking any choice with a describing word. Plain words do not help.",
-      why: "The answers are \"The water makes a soft bubbling hum.\" and \"The water makes a steady, gentle splash.\" They use exact words like soft, bubbling, steady and gentle. The other three use plain words like pleasant, okay and lovely."
+      why: "The answers are \"The water makes a soft bubbling trickle.\" and \"The water makes a steady, gentle splash.\" They use exact words like soft, bubbling, steady and gentle. The other three use plain words like pleasant, okay and lovely."
     },
     {
       id: "SK-GC2d-S09",
@@ -5120,12 +5120,12 @@ PP.addLesson({
       like: ["SK-GC2d-C11"],
       prompt: "Which version of sentence 7 gives exact details without crowding the sentence?",
       choices: [
-        { text: "The old gray filter makes a steady hum.", correct: true },
+        { text: "The old gray fountain makes a steady trickle.", correct: true },
         {
-          text: "The very old, dusty, gray, square filter makes a low, steady, constant hum."
+          text: "The very old, dusty, gray, square fountain makes a low, steady, constant trickle."
         },
-        { text: "The filter makes a lovely noise." },
-        { text: "The filter makes a noise that is pleasant." }
+        { text: "The fountain makes a lovely noise." },
+        { text: "The fountain makes a noise that is pleasant." }
       ],
       clue: "Exact words help the reader. Too many describing words in a row can get in the way.",
       hints: [
@@ -5135,11 +5135,11 @@ PP.addLesson({
       ],
       how: [
         "Look for a version with a few exact words that is easy to read.",
-        "\"The old gray filter makes a steady hum.\" has old, gray and steady, and each one helps.",
+        "\"The old gray fountain makes a steady trickle.\" has old, gray and steady, and each one helps.",
         "The long version piles on describing words. Lovely and pleasant are plain words that tell nothing exact."
       ],
       misconception: "A common mix-up is thinking the version with the most describing words is the best.",
-      why: "The answer is \"The old gray filter makes a steady hum.\" It uses a few exact words that each add a detail. The long version piles on too many describing words. The others use plain words like lovely and pleasant."
+      why: "The answer is \"The old gray fountain makes a steady trickle.\" It uses a few exact words that each add a detail. The long version piles on too many describing words. The others use plain words like lovely and pleasant."
     },
     {
       id: "SK-GC2d-S12",
@@ -5149,26 +5149,26 @@ PP.addLesson({
       std: ["3.L.GC.2.d"],
       passages: ["p6"],
       like: ["SK-GC2d-C12"],
-      prompt: "Which adverb best tells how the drummer played in sentence 6?",
+      prompt: "Which adverb best tells how the driver drove in sentence 6?",
       choices: [
         { text: "steadily", correct: true },
         { text: "lazily" },
         { text: "recklessly" },
         { text: "gloomily" }
       ],
-      clue: "The adverb should match what sentence 5 says the drummer wanted. Reread it.",
+      clue: "The adverb should match what sentence 5 says the driver wanted. Reread it.",
       hints: [
-        "The adverb should match what sentence 5 says the drummer wanted. Reread it.",
-        "The drummer did not want to miss a beat. How would a drummer play if he wanted that?",
-        "Someone who wants to hit every beat would not play carelessly. Check the other choices against sentence 5."
+        "The adverb should match what sentence 5 says the driver wanted. Reread it.",
+        "The driver did not want to miss a turn. How would a driver drive if he wanted that?",
+        "Someone who wants to make every turn would not drive carelessly. Check the other choices against sentence 5."
       ],
       how: [
-        "Sentence 5 says the drummer did not want to miss a beat.",
-        "A drummer who wants every beat plays in an even way, so steadily fits.",
-        "Lazily, recklessly and gloomily do not match someone trying not to miss a beat."
+        "Sentence 5 says the driver did not want to miss a turn.",
+        "A driver who wants every turn drives in an even way, so steadily fits.",
+        "Lazily, recklessly and gloomily do not match someone trying not to miss a turn."
       ],
       misconception: "A common mix-up is picking an adverb that sounds lively without checking what the draft says.",
-      why: "The answer is steadily. The drummer did not want to miss a beat, so he would play evenly. Lazily, recklessly and gloomily do not match."
+      why: "The answer is steadily. The driver did not want to miss a turn, so he would drive evenly. Lazily, recklessly and gloomily do not match."
     },
     {
       id: "SK-GC2d-S13",
@@ -5214,7 +5214,7 @@ PP.addLesson({
       like: ["SK-GC2d-C14"],
       prompt: "Answer both parts.",
       partA: {
-        prompt: "Which word tells exactly how the band looked in sentence 4?",
+        prompt: "Which word tells exactly how the karts looked in sentence 4?",
         choices: [
           { text: "tidy", correct: true },
           { text: "messy" },
@@ -5225,25 +5225,25 @@ PP.addLesson({
       partB: {
         prompt: "Which detail in the draft supports that word?",
         choices: [
-          { text: "The band marched by in neat rows.", correct: true },
-          { text: "The writer stood close to the curb." },
+          { text: "The karts lined up in neat rows.", correct: true },
+          { text: "The writer stood close to the fence." },
           { text: "The writer got a flag to wave." },
-          { text: "The drummer wore a tall hat." }
+          { text: "The first driver wore a tall helmet." }
         ]
       },
-      clue: "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the band marched.",
+      clue: "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the karts lined up.",
       hints: [
-        "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the band marched.",
-        "For Part A, ask what neat rows say about the band. For Part B, find the detail that shows it.",
-        "In Part A, a messy band would not march in neat rows. Check the other choices."
+        "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the karts lined up.",
+        "For Part A, ask what neat rows say about the karts. For Part B, find the detail that shows it.",
+        "In Part A, a messy line of karts would not sit in neat rows. Check the other choices."
       ],
       how: [
-        "Sentence 3 says the band marched by in neat rows.",
-        "A band in neat rows looks tidy, so Part A is \"tidy.\"",
-        "Part B: \"The band marched by in neat rows.\""
+        "Sentence 3 says the karts lined up in neat rows.",
+        "Karts in neat rows look tidy, so Part A is \"tidy.\"",
+        "Part B: \"The karts lined up in neat rows.\""
       ],
-      misconception: "A common mix-up is picking a detail that is in the draft but does not show how the band looked.",
-      why: "Part A: tidy. Part B: \"The band marched by in neat rows.\" Marching in neat rows shows the band looked tidy. Messy, sleepy and gloomy do not match that clue, and the other details do not tell how the band looked."
+      misconception: "A common mix-up is picking a detail that is in the draft but does not show how the karts looked.",
+      why: "Part A: tidy. Part B: \"The karts lined up in neat rows.\" Lining up in neat rows shows the karts looked tidy. Messy, sleepy and gloomy do not match that clue, and the other details do not tell how the karts looked."
     },
     {
       id: "SK-GC2d-S15",

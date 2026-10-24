@@ -21,6 +21,10 @@
 | B2 | 3.T.C.1.b | ACCEPTED | B2-rereview-SC-2.md |
 | B5 comp | TF-FEAT (text features: headings, maps, captions, text boxes, contents, chapters and sections) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
 | B5 comp | TF-DIG (digital, audio and spoken features) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
+| B5 b5a | 3.L.GC.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
+| B5 b5a | 3.L.GC.2.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
+| B5 b5a | 3.L.GC.2.c | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
+| B5 b5a | 3.L.GC.2.d | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
 | B3 | 3.T.T.3.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.RA.1.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.C.1.a | ACCEPTED | B3-b3a-rereview.md; blind re-solve (post-polish) in B3-b3c-rereview.md |
