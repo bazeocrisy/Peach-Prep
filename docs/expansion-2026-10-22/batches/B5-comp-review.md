@@ -593,3 +593,227 @@ Results:
 - **TF-FEAT: CHANGES REQUIRED.** One MUST (F-M1: C15/S15 explanations and hint 1). The SHOULDs are repair work: S05, C11 Part A, S11 Part B, S09 `how`, T2 overlap, and one Watch Me for section order.
 - **TF-DIG: CHANGES REQUIRED.** Three MUSTs (D-M1 C12 `why`; D-M2 T1 vs SK-TC1b-T9; D-M3 C12/S12 vs SK-TC1b-C05/S03). D-M3 may be downgraded to SHOULD if the lead accepts sibling-lesson overlap; D-M1 and D-M2 may not.
 - Once the MUSTs are repaired and the new items are re-checked against T-C.js by key fact, I would accept both lessons. The remaining SHOULDs are distractor and hint repairs that do not change keys or structure.
+
+
+## Third review
+
+**Reviewer:** independent content reviewer (third pass). I did not author these lessons and I did not write the first or second review. I edited no lesson and ran no git. I wrote only this section and scratch files under `scratchpad/b5r3/`. The one local server I started (pid 24793, port 8913) is killed and the port refuses connections.
+**Scope:** `js/data/lessons/T-CF.js`, TF-FEAT (3.T.SS.1.a, 3.T.C.1.b) and TF-DIG (3.T.C.1.b): Learn It, Watch Me, Together P1-P4, core C01-C15, similar S01-S15, tests T1-T5, five figures. I checked the second review's four MUSTs against section 11 of `B5-comp-author-log.md`, and searched every new key fact by concept over all of `js/data`.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| TF-FEAT | **CHANGES REQUIRED** (one MUST, and it depends on a lead ruling, see 3.3) | 1 | 6 | 9 |
+| TF-DIG | **CHANGES REQUIRED** | 2 | 8 | 8 |
+
+Keys, points, DOK, figures, readability and the 390 px layout are sound. All four second-review MUSTs were worked on. Three are closed (F-M1, D-M1, D-M3). **D-M2 is only half closed**: the new T1 is clean, but the same caption fact is still tested by DIG T2 (second blank) and by Together P2. The new findings come from the instruction to search key facts by concept, not by string, over the existing 3.T.C.1.b lesson and its check form. I applied one rule throughout, §4.3 rule 4 read literally: *an item must not share the key fact of a form A or form B check item, a Practice Test item, or another lesson's practice item.* Sibling-lesson **check items (`test` of T-C.js)** are MUST; sibling practice, core or similar items are SHOULD or NOTE.
+
+| Id | Sev | Lesson | One line |
+|---|---|---|---|
+| D3-M1 | MUST | DIG | Pop-up and link facts in C04 (rows 1 and 3), S03 (blank 2), S04 (rows 2 and 3) and P1 are the two key facts of SK-TC1b-T8, a form A check item |
+| D3-M2 | MUST | DIG | T2 blank 2 and P2 row 2 (CC shows the narrator's words) are the key fact of SK-TC1b-T9, a form A check item; D-M2 is only half closed |
+| F3-M1 | MUST (strict rule) | FEAT | C07, S07, T4 (and P3) ask "which caption adds what the photo cannot show", the question and key logic of SK-TC1b-T6, a form A check item of 3.T.C.1.b |
+
+### 1. Blind solve
+
+**Method.** I wrote my own scripts in `scratchpad/b5r3/`: `ld.js` (Node `vm` sandbox with a mock `PP.addLesson`) and `blind.js`. `blind.js` resolves each item (core items are inline here, Together is `practice`), prints every passage with sentence numbers, the figure label, caption and alt text, stems, prompts and TEXT lines, and prints core, Together, similar and test items. It shuffles choices, dropdown options, order steps, hottext targets, match columns and both ebsr parts with a seeded generator (**new seed 90417**). It never reads `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception` or `like`. I wrote my answers to `answers.json` and made it read-only **before** I ran `cmp.js`. I did not open the first or second review, section 11 of the author log, or any `why`/`hints` until after the comparison.
+
+**Result: 77 of 78 agree (98.7%).**
+- TF-DIG 39 of 39 (15 core, 4 Together, 15 similar, 5 test).
+- TF-FEAT 38 of 39. The one miss is **FEAT C11 Part B** ("Which sentence best shows how the section 'The Road Breaks' builds on the section before it?"). I chose "A road with a gap under it can hold for a while, but it gets weaker." That sentence is from the section **before**; the key is "At last, cars roll over the weak spot." This is my misreading: I read the prompt as "which sentence is the thing the last section builds on". The key is right, and the item is answerable, but the wording invites exactly this slip from a hasty child (SHOULD F3-S2).
+- My first comparison run showed five disagreements; four were a bug in my own grader (hottext answers are target refs such as `p1:7:1`, not indexes). After I fixed the grader the only disagreement was C11 Part B. I did not change any answer.
+
+**How blind it was, honestly.** Fully blind to keys, explanations and the author log. Before solving I printed (a) field names and `typeof` of key fields (`number`, `string`) to learn the schema, never values; (b) the first 1,500 characters of `T-CF.js`, which show the file header comment and the first two Learn It points of FEAT (chapter, section, heading). No item source and no key was in that output. I read the reviewer and content briefs and the plan's §4 and §6 before solving. I read Learn It and Watch Me after solving. I did reuse the second review's generic scripts (`cue.js`, `jac.js`, `tleak.js`, `ngram2.js`, `fk.js`, `ex.js`, `echo.js`, `stale.js`) after solving; I read their code before running them.
+
+### 2. Second-review MUSTs against section 11 of the author log
+
+| Id | Status | Evidence |
+|---|---|---|
+| **F-M1** FEAT C15, S15 | **Fixed** | C15 options are compass rose, key, heading, page number, caption. `why`, `how` and hint 3 now name exactly those: hint 3 "A page number is for a book, not for a map, so rule it out"; `how` and `why` mention "a heading, a page number and a caption about who drew the map". S15 options are arrow N, key box, paragraph about the school's name, index, big title; `why`, `how` and hint 3 (the index) match. Hint 1 is now a strategy ("Ask what a stranger would need in order to use a map that he has never seen"), hint 2 is a picture-the-walk prompt. A reader who sees hints 1 and 2 without the choices cannot write either key. No stale option names remain (I searched both explanations for "table of contents", "fun fact", "joke", "favorite class": none). |
+| **D-M1** DIG C12 `why` | **Fixed** | C12 was replaced. The new `why` ("A slow, quiet voice right before the ghost appears builds suspense. A whisper is not a silly voice, it does not mean the story is almost over, and it makes the words harder to hear from far away") matches the four current options. `how` and the three hints also match. |
+| **D-M2** DIG T1 progress-bar fact | **Half fixed** | T1 (drag the dot near the end, so the child hears the last part) is clean by concept: I searched all of `js/data` for "progress bar", "slider", "drag", "scrub", "jump to a part", "marker" and "dot on": the only hits are a zipper slider (T-RA) and "dragon" words. No existing item tests it, and the SK-TC1b-T8/T9 facts are not in T1. **Residual:** T2 blank 2 ("To read the narrator's words while the video plays, he taps the CC button") and Together P2 row 2 (CC "writes out the words and sounds") are still the key fact of SK-TC1b-T9 (D3-M2). T1 and T2 blank 1 (Picking dot) also repeat the marker fact of C01/S01 inside the lesson (SHOULD D3-S9). |
+| **D-M3** DIG C12/S12 voice-and-feeling fact | **Closed, with a NOTE** | The signpost fact (spoken words do a heading's job) is gone from C12 and S12 and from Learn It point 4. The new keys are "to make listeners wonder what will happen next" (slow whisper before the ghost) and "to make the finish sound exciting" (fast loud announcer). Concept search over all `js/data` (words and concepts: suspense, excitement, announcer, relay, campfire, spooky, ghost, storyteller, commentator, "slows down", "stops for a moment", "listen closely", "excited", "mood", "tone", "voice"): nothing tests voice-builds-a-feeling. **Neighbours the author's scan did not list:** SK-TC1b-P6 row 4 and its `why` ("slows down and stops for a moment right before an important fact"), SK-TC1b-P9 ("Listen closely. This next part is important"), the 3.T.C.1.b teach text ("a speaker may slow down, stop for a moment, or say 'Listen closely' right before an important part"), and SK-TC1b-C15/S15 (a drumroll or alarm sound makes listeners excited). C12 shares the delivery move (slowing right before a key moment) but not the key (suspense versus "an important fact is coming"); S12 shares the feeling (excitement) but not the means (a voice, not a sound effect). None of these is a check item. I judge it **not the same fact**; D-M3 is closed. NOTE D3-N1 records the proximity. |
+| **Together P4 vs C12/S12** | **Different fact** | P4 (tone fits the message: happy for the prize, serious for the cancellation) asks the speaker to match the voice to the mood of what is said. C12/S12 ask what a speaker's pace and volume do to the listener. Both come from one Learn It sentence each, they differ in key, text and context, and P4 is not one of the fifteen. NOTE only. |
+
+### 3. New MUST findings
+
+#### D3-M1 (DIG). Pop-up and link facts are the key facts of SK-TC1b-T8
+- **SK-TC1b-T8** (3.T.C.1.b, `test`, form A): "To learn what hatches means, a reader should {read the open box next to the word}. To find out which flowers people can plant for monarchs, a reader should {tap the underlined words at the bottom}." Two facts: a pop-up explains a word on the same page; a link (underlined words) opens another page. SK-TC1b-P10 (practice) also keys "underlined words open a page about beaver lodges", and the 3.T.C.1.b teach text and Watch Me 2 state both.
+- **DIG items that key the same two facts:**
+  - **C04** row 1 (note about the word reef without leaving the page = pop-up) and row 3 (jump to the page about whales = link). Hint 3 states row 1.
+  - **S04** row 2 (open a different page about the sun = underlined words) and row 3 (explain what lunar means in a short note = dotted-line word). Hint 3 states row 3.
+  - **S03** blank 2 ("Underlined words are the way to {hop to another page}").
+  - **P1** (Eli taps a dotted word and a box opens; key: a pop-up that explains a word without leaving the page).
+- **Why MUST.** §4.3 rule 4: never share the key fact of a check passage (form A or form B). The second review rated this SHOULD (D-S1) and said "if the lead applies rule 4 strictly to check items, it is a MUST". The lead has asked for the strict reading. The author declined to change it twice (section 11.3: "Learn It and Together need them").
+- **Fix.** Keep both facts in Learn It and Watch Me 1, which teach them. In C04, S04 and S03 use the controls the check does not test: Back arrow, menu button, search box (magnifying glass), progress marker, transcript, volume. For example C04 columns: a back arrow, a menu, a search box, a progress marker. Replace P1 with a different control (the Hear/speaker button, the Back arrow, or a tab). Re-check the new rows against SK-TC1b-P10, S02 and C13.
+
+#### D3-M2 (DIG). T2 blank 2 and P2 row 2 are the key fact of SK-TC1b-T9
+- **SK-TC1b-T9** (form A): sound off, the viewer reads the caption line under the video; key "A rain sound plays, and the narrator says the monarchs wait for it to stop". The fact: the caption line (CC) writes out what is said and the important sounds. Also SK-TC1b-C10/S10 and the teach text.
+- **DIG T2** (test) blank 2: "To read the narrator's words while the video plays, he taps the **CC button**." **P2** row 2: "the button marked CC → writes out the words and sounds." Same fact, same frame (a viewer who wants the words).
+- **Why MUST.** This is the second review's D-M2 (which may not be downgraded, per that review). The author replaced T1 and checked only T1; the fact survived in T2 and P2. The author log says the check was "no file in `js/data` has 'progress bar', 'drag' or 'slider'", which is right for T1 but does not look at T2 or P2.
+- **Fix.** T2 blank 2: ask what the volume button, the speaker icon or the transcript link does (for example "To read every word after the video ends, he opens the transcript link"; check that against C02/S02 and P3, which key the transcript). P2: replace the CC row with the volume row ("the speaker button → changes how loud the sound is"). Keep CC in Learn It and Watch Me only.
+
+#### F3-M1 (FEAT). The caption cluster repeats SK-TC1b-T6
+- **SK-TC1b-T6** (3.T.C.1.b, `test`, form A): "Look at Figure 2 and read its caption. What does the caption tell the reader that the picture alone does not show?" Key: where the monarch is and where it is going. The 3.T.C.1.b teach text says it too ("A caption can also tell something the picture cannot show, like where or when").
+- **FEAT items with the same key fact and nearly the same question:**
+  - **T4** (test): "Which caption adds something that the photo cannot show?" (key adds *when* and *why*).
+  - **C07** and **S07** (core, similar): "The writer wants a caption that tells readers something the photo cannot show." / "Pick the words that tell something new about the scene." (keys add *how long* and *why*).
+  - **P3** (Together): the same prompt as T4, word for word (T4~P3 word-set 0.25, the highest test-to-lesson value in the batch).
+- **Why MUST under the strict rule.** The question, the key logic and the 3.T.C.1.b code are the same, and T6 is a form A check item. FEAT carries `3.T.C.1.b` in `codes`, so the plan's rule 4 was written for exactly this case. The first two reviews compared FEAT's caption items with SK-SS1a-S07/T4 (captions that *fit* a picture) and missed T6, which asks the same thing as FEAT C07.
+- **Lead ruling needed.** If the lead rules that two lessons on the same standard code may share the caption fact (as the plan's §3 may allow for a component lesson), F3-M1 becomes a SHOULD and FEAT is ACCEPT. I have not assumed that.
+- **Fix.** Keep one item (Together P3 plus Watch Me 3) that teaches "a caption can add what the photo cannot show". Change C07, S07 and T4 to a different caption fact that no check item keys: for example choose which of two photos a caption belongs under, which caption names the whole picture rather than one part, or match a caption, a label and a heading to their jobs (C09 does this). Re-check the replacement against SK-TC1b-P8 (caption fits the picture), SK-TC1b-C07 (caption for a whole diagram) and SK-SS1a-C07/T4.
+
+### 4. SHOULD findings
+
+#### TF-FEAT
+- **F3-S1. S11 Part B decoys (the item the lead asked about).** Prompt: "Which line in 'A Pearl at Last' points back to something earlier?" Key: "After a few years, nacre has covered the grit completely." Decoys: "People open the oyster to find it." (a line of that section; **"it" points back to the pearl in the line before**, so it is defensible under the literal wording "something earlier"), and "Day after day, it adds another thin layer." and "Sometimes a tiny speck of grit slips inside an oyster's shell." (lines of *other* sections, so wrong by location and not by reading). The last section has only three sentences, and the one not offered, "The grit has become a pearl.", also looks back. Hint 2 ("points back to the middle section") rescues the item: with it, one answer is defensible. I solved it correctly cold and judge it **one defensible answer, but not a clean one**. Fix: change the prompt to "goes back to the section before it" (the wording C11 uses), and use as decoys two sentences that clearly do not look back. A last section of three sentences cannot supply them; add a fourth sentence to p6 ("Pearls are used in jewelry" would work but drifts, so use a plain detail such as "Some oysters take longer than others").
+- **F3-S2. C11 Part B wording invites the slip I made.** "Which sentence best shows how 'The Road Breaks' builds on the section before it?" A hasty reader picks the sentence it builds on (C, the last line of the middle section, which is Part B's second-best decoy). Say "Which sentence **in** 'The Road Breaks' …". Also F-N2 (D, "A piece of road snaps loose", also follows from the weak spot) still stands; hint 2 resolves it.
+- **F3-S3. T2 key is the only option that mentions flowers.** T2: which Try It! box fits the section Flowers in Spring. The key is the only option with "flower"; the three decoys use picking, packing and a truck, the words of the later headings. A child can match the word in the heading to the word in the option and skip the skill. Fix: make one decoy a flower box that is not a task (for example "Try It! Bees are very important to blueberry bushes.", a fact, not a job), or put "flower" in two options.
+- **F3-S4. C15/S15 share the key facts of SK-V1b-T5** (3.L.V.1.b check form A: "a map key" tells what each symbol means; "a compass rose shows directions"). It is a vocabulary-term item in a different lesson, so I rate it SHOULD, not MUST. The same facts are in SK-SS1a-S03 (practice, "a map with a key") and the lead may prefer to leave them: both are standard map vocabulary and FEAT teaches them. If the lead applies the strict rule across codes, one of the two keys in C15 and S15 needs another feature (for example a scale, a title that names the place, or labels).
+- **F3-S5. Carry-overs not changed since the second review.** (a) No Watch Me for headings (C03, C09, C13), section order (C05, C08, C11) or the index (C12) (F-S5). The reworded Learn It point 5 now states a question, but a child still has no worked order case. (b) C05 and S05 have the weakest ladders in the lesson: hint 2 picks the three first sentences, hint 3 removes one, so the key stands against one sentence that plainly does not look back (two live, allowed, F-S7). (c) C09/S09 row 4 (a text box adds an extra fact) shares its fact with SK-TC1b-T2 (form A) and SK-SS1a-P5/S04; one row of four, so SHOULD. (d) Absurd decoys remain in C11 Part A (B "ABC order" is fine, D is a stretch), T3 (B, C, D), S11 Part A (B, D).
+- **F3-S6. C13/S13 `how` text quotes headings that are not the options** (carried NOTE F-N10 and S14 `why`, "the day does help in finding a club", which is a non sequitur). Tidy while the file is open.
+
+#### TF-DIG
+- **D3-S1. C11/S11 prompts name the fact.** C11: "Jayden wants listeners to remember what time robotics club starts. Which sentence should he say a second time?" Hint 2: "Read the paragraph about robotics club. Ask which sentence tells the time." The prompt and hint 2 say the same thing, so the item is a lookup of one sentence in a three-sentence paragraph (the key is the only sentence with a time). Same in S11 (place). Both are unambiguous (checked: C11 [4] gives the room, not the time; S11 [2] gives no place, [3] does). The author's reason for keeping the prompt (naming nothing makes time and room both defensible) is sound. Fix without that cost: keep the prompt, and add as decoys sentences that **also contain a fact** (for example "New members are welcome, so bring a friend" and "Room 12" in the same sentence as the time), so that the child must choose the fact the prompt names, not the only fact. Third time raised (D-S3, first review S-D6).
+- **D3-S2. C12 and S12 decoys, and what the author asked about.** Is "to help listeners who sit far away hear the words better" an easy trap to eliminate? **Yes.** The stem says she drops her voice to a whisper, so D contradicts the stem; B ("laugh at how silly the story is") contradicts "spooky story" and "ghost". Hint 3 removes D, so after hint 3 the live set is A, B and C, with B absurd: two live, allowed, nominal. S12: B ("the race has not yet begun") contradicts "last runners near the finish"; D ("he is tired and wants to stop") is silly; C ("remember the names of the runners") is the only plausible decoy. Fix: give C12 a decoy a child could believe ("to tell listeners that a scary part is over", "to make the listeners feel safe") and S12 two ("to give the listeners time to catch up", "to tell the runners to go faster").
+- **D3-S3. T4 key is lesson wording.** T4 ("Listeners cannot look back, so a second time gives them another chance to catch it.") shares a five-gram with the lesson's own text (C11 `why` and Learn It point 4: "Listeners cannot look back"), and it is the longest option (15 words against 13). Its decoys ("A rule sounds more serious when it is said in a whisper", "lets Noah rest his voice") are not serious. Recall, not transfer.
+- **D3-S4. T5 is the third item with one key logic.** C06 ("[pause] leaves a quiet moment so listeners can try the whisper"), S06 (stay silent while visitors look) and T5 ("a moment to place the berry in the basket"). The test repeats the same reasoning on a new script. Also T3 repeats the C07/S07 frame ("put the steps in the order the narrator tells them"). Fix T5 by asking about a different bracket in the same script ([snap of a stem], [birds chirping]) or what the narrator's "Next" does.
+- **D3-S5. T1 and T2 blank 1 re-test C01/S01 (progress marker jumps to a part).** C02/S02 (drag back, move the slider) add two more. Five items on one control; the test items are recall of the practice. Keep T1 (it applies the fact to a new case, an audio recording) and change T2 blank 1 (the Picking dot) to a control that is not yet keyed (volume, speaker button, Back arrow).
+- **D3-S6. C13 hint 3 contains a typo that makes it unreadable.** "Saying **the room** only once would not fix the problem that it was too fast". It should read "Saying it only once …" or "Saying 'Room 12' only once …". A child who gets this hint cannot parse it.
+- **D3-S7. Hints that restate the key's function, carried from the second review (D-S6) and widened.** C01/S01 hint 1 ("Ask which part of the page lets a viewer skip ahead to one part of a video") is the key's job. C08 Part B hint 2 and S08 Part B hint 2 each describe the one option that does the job. **New:** C03 hint 1 gives the jobs of both keys ("One takes you to the page you just left, and one finds a page by a word you type") and S03 hint 1 gives all four jobs. The plan's own worked example (§4.6, the B0 fix) names this pattern as the thing to avoid: a hint that gives the definitions of the keys. In C03 the stem already states the two jobs, so the cost is small; I rate SHOULD, not MUST. No hint states a key option.
+- **D3-S8. Absurd decoys left after the second review (D-S2).** C02 ("Tap the Crafts tab at the top"), S05 ("Skip learning, since nobody can study while riding"), S13 ("hum the words"), C13 ("let his voice fade", "speak in a whisper"), S15 ("Hurry through the talk"). The keys are not the longest in any choose-two group now (section 5.4), so the fix is only to make two decoys believable per item.
+- **D3-S9. Learn It and Watch Me versus the fifteen.** Learn It point 4 now carries the keys of C07 (first, next, last), C11/C14 (say a key fact twice), P4 (good news happy, a warning serious), C12 and S12 (suspense, excitement), and point 2 carries C06's key ("a [pause] leaves a quiet moment" in point 3). That is teaching, and I did not rate it MUST, but a child who reads Learn It can answer these by recall. Watch Me models the web page controls (W1), brackets (W2) and a question followed by a wait (W3); no worked case covers signal words, repeating a fact, delivery or choosing a medium (carried NOTE D-N3).
+
+### 5. Audits
+
+#### 5.1 One defensible answer, plausible distractors, official wording, points and DOK
+All 78 items have one defensible key (my blind solve plus a read of each `why`). The one soft spot is FEAT S11 Part B (F3-S1). Points are right (ms, match, order, ebsr 2; two-blank dropdown 2; one-blank dropdown 1; mc and hottext 1). Core DOK strings FEAT `122222232232332`, DIG `122222232322232`: at most two DOK 1 (one each), DOK 3 at least two (four and three). Formats: FEAT six types, mc six; DIG seven types, mc six. At least three technology-enhanced formats and at least four formats in each. Every `like` is honest: same type, DOK, points, standard and blank or row count in all 30 pairs (my script `pair check`), except DIG S01/S02, whose figure is described in the stem. Official wording (`standards.js`, `official`): 3.T.SS.1.a "Describe how texts are arranged ... using text features (e.g., map, captions) ... referring to parts of texts using terms such as chapter or section" (p. 29); 3.T.C.1.b "Determine common text features of print, digital, auditory, spoken, and visual modes and describe how they contribute to the overall purpose and effect" (p. 26). All FEAT items sit inside the first or both; DIG C01-C05 (digital), C06-C10 (auditory) and C11-C15 (spoken) sit inside the second. Delivery items (C13, C15, S13, S15: volume, eye contact, a picture) are the effect of a spoken feature and stay inside the wording (NOTE D3-N6).
+
+#### 5.2 Key beside why, how, hints and misconception (every item)
+I printed every keyed option beside `why`, `how`, `misconception`, the clue and all three hints (`keyed-FEAT.txt`, `keyed-DIG.txt`; Together hints come from `addons`) and read all 78. `echo.js` compared each hint with each key by content words and 3-grams: the only hits are the allowed one-row fills of match items (FEAT C09/S09 hint 3; DIG C04, S04 hint 3; DIG P2 hint 3). `stale.js` listed words in explanations that are not in the item, the passage or Learn It: only ordinary words ("compare", "sentences", "against"), no option name that is absent from the item. No wrong key, and no explanation supports a different key. Defects: DIG C13 hint 3 typo (D3-S6); FEAT C13/S13 `how` paraphrases the headings; FEAT S14 `why` non sequitur. FEAT C03 `how` introduces "glossary", a word that Learn It does not teach (NOTE F3-N3).
+
+#### 5.3 Live choices after the clue and hints 1 to 3
+- mc: four, four, three (hint 3 removes one decoy with a reason). ms: five, five, four. Choose-two ms items keep two keys among four.
+- dropdown, two blanks: hint 3 removes one option in both blanks (FEAT C01; DIG C03, C09, S09) or in one blank (DIG C13, S13, S03): two to three live in every blank. One blank: three, three, two live (FEAT C07, S07, C12, S12, T5). In C12 and S12 hint 1 states the whole method ("look for a page that two topics share") but not the page.
+- match: hint 3 fills one row; three rows left. Order: hint 3 gives the first step (FEAT none; DIG C07, S07): 3! = 6 orders left.
+- hottext: six; FEAT C05 and S05 end at two live (hint 2 picks three, hint 3 removes one); DIG C11 and S11 end at two live in the named paragraph, but the prompt already names the fact (D3-S1).
+- ebsr: Part A four, three after hint 3. Part B stays at four after hint 3 (no hint 3 targets Part B), but hint 2 narrows to the last section in FEAT C11 and S11 (two live: C11 A and B; S11 A and B).
+- **Result:** every item has at least two live choices after hint 3. **No hint states or quotes a key.** No hint 3 leaves only the key. Hint 1 equals the clue throughout. The weakest ladders are FEAT C05/S05, DIG C12/S12 and the two lookups C11/S11.
+
+#### 5.4 Longest-key cue (`cue.js`)
+Of 38 FEAT groups the key is the unique longest by word count in 7 (18%), by characters in 8; of 40 DIG groups in 7 (18%) and 13 by characters (32%, mostly one-to-three-word dropdown options where the key is longer by a few letters). With four options chance is 25%, so there is no overall bias. No choose-two group has both keys longer than all the decoys (the second review's S03 and S15 are fixed). Largest word margins: DIG T4 (15 against 13), DIG C08 Part A (13 against 11), FEAT C11 Part A (17 against 15), all two words. SHOULD D3-S3 covers T4.
+
+#### 5.5 Similar versus core (`jac.js`: lowercase tokens, no stop-word removal, set and multiset Jaccard of stem, prompt, options, rows, columns and hottext sentences; ceiling 0.21; every pair mapped by `like`)
+| Lesson | Mode | Max word-set (like-mapped) | Max bag (like-mapped) | Pairs over 0.21 |
+|---|---|---|---|---|
+| TF-FEAT | all tokens, no passage / with passage | 0.198 (S14~C14) / 0.198 | 0.209 (S06~C06) / 0.209 | 0 |
+| TF-DIG | all tokens, no passage / with passage | 0.191 (S08~C08) / 0.206 (S08~C08) | 0.209 (S03~C03) / 0.209 | 0 |
+| both | stop words removed | 0.135 (FEAT S13) / 0.159 (DIG S08) | 0.117 / 0.139 | 0 |
+
+The author's maximum bag overlap of 0.209 is reproduced exactly. S06~C06 (FEAT) and S03~C03 (DIG) are within 0.001 of the ceiling, so any added word fails. Unmapped pairs above the ceiling: FEAT S15~C03 0.226 and DIG S13~C09 bag 0.213 (shared "Choose TWO answers" and "Choose the words that best complete" frames; NOTE). The shared-frame S04~P1 (DIG) is 0.204.
+
+#### 5.6 Test leakage (`tleak2.js`, `jac.js` tail)
+- Test passages FEAT p5 ("Blueberry Season") and DIG p3 ("At the Strawberry Patch") are used only by tests. 5-grams that tests share with lesson text, after removing standard codes and directions: FEAT T2 "the author wants to add" (P4 frame), FEAT T4 "which caption adds something that the photo cannot show" (P3, C07, S07: F3-M1), DIG T2 "choose the words that best complete the sentences", DIG T3 "put the steps in the order", **DIG T4 "listeners cannot look back so a second time"** (lesson text, D3-S3). No other hit.
+- Word-set overlap of each test with its closest lesson item: FEAT T1~P1 0.20, T2~C04 0.20, T3~C03 0.14, **T4~P3 0.25**, T5~C12 0.21; DIG T1~P2 0.17, T2~S03 0.19, T3~C07 0.18, T4~C13 0.17, T5~S12 0.17 (bag 0.23 with C06).
+- Key-fact leakage by concept: F3-M1 (T4), D3-M2 (T2), D3-S4 (T3, T5), D3-S5 (T1, T2).
+
+#### 5.7 Key-fact duplicate search by concept over all of `js/data`
+I listed every item of 3.T.C.1.a, 3.T.C.1.b (T-C.js: 15 practice-like Together, 15 core, 15 similar, 6 form A tests), every 3.T.SS.1.a item (T-SS.js and the five TS-* lessons in T-TS.js), every `test` and `testB` of every lesson, and every item of `js/data/sets/*.js` with std 3.T.C.1.b or 3.T.SS.1.a (PT-1-11, PT-1-12, R-INF-01-3, -4, -6, -7), then searched by keyword and by reading the keys.
+
+| New fact | Existing item with the same key fact | Class | Result |
+|---|---|---|---|
+| DIG: a pop-up explains a word without leaving the page; underlined words open another page | SK-TC1b-T8 (form A), SK-TC1b-P10 | check | **MUST D3-M1** |
+| DIG: CC / captions write out the words and sounds | SK-TC1b-T9 (form A), SK-TC1b-C10/S10 | check | **MUST D3-M2** (T2, P2) |
+| FEAT: a caption adds what the photo cannot show | SK-TC1b-T6 (form A) | check | **MUST F3-M1** |
+| FEAT: a text box adds an extra fact (C09, S09 row 4) | SK-TC1b-T2 (form A), SK-SS1a-P5/S04, R-INF-01-6 | check, practice, set | SHOULD (row level, F3-S5) |
+| FEAT: a map key explains symbols, a compass rose shows directions (C15, S15) | SK-V1b-T5 (3.L.V.1.b form A), SK-SS1a-S03 | check of another standard | SHOULD F3-S4 |
+| FEAT: a heading tells what its section is about (C03, S03, P1, T1) | PT-1-12, SK-TC1b-C04/S06/P1, SK-SS1a-P3 | Practice Test, practice | NOTE: this is the definition of a heading; C03/S03 add a second key (skim to find) that the others lack |
+| FEAT: sections follow the order of time or place (C05, C08, C11, S08, S11) | SK-SS1a-S01/C05/C12, R-INF-01-7, PT-1-11 | practice, set | NOTE: path order and "builds on" are new; S11 Part A (time order) matches R-INF-01-7 |
+| FEAT: chapter and section terms (C01, S01, P2) | SK-SS1a-C10/S10 | practice | NOTE: the standard's own terms |
+| FEAT: index page shared by two topics (C12, S12, T5) | none (no "index" item in `js/data`) | | clean |
+| FEAT: chapter length from a table of contents (C02, S02) | SK-SS1a-P7/S05/C15/S15 (find a chapter by topic) | practice | different operation, clean |
+| DIG: progress marker jumps to a part; drag the dot (C01, S01, T1) | none | | clean |
+| DIG: transcript writes out the whole recording (C02, S02, P3) | none ("transcript" appears nowhere else) | | clean |
+| DIG: back arrow, menu, search box (C03, S03) | 3.T.C.1.b teach and Watch Me only; SK-TC1b-S02 (search box is a decoy) | | clean |
+| DIG: [pause] is quiet for the listener (C06, S06, T5) | none ("[pause]" appears nowhere else) | | clean |
+| DIG: sounds in brackets name the sound to add (C09, S09) | SK-TC1b-C10/S10 (the reverse direction: caption shows a bracketed sound), SK-TC1b-C15/S15 | practice | different task, NOTE |
+| DIG: repeat the key fact (C11, C14, S11, S14, T4) | SK-TC1b-P9 ("Listen closely. This next part is important") | practice | different move, NOTE |
+| DIG: first, next, last tell the order (C07, S07, T3) | SK-TC1b-C14/S14 (say "first, next, last" before rules) | practice | same words, opposite direction (listener orders steps), NOTE |
+| DIG: voice builds suspense or excitement (C12, S12) | SK-TC1b-P6/P9, teach text, C15/S15 | practice | distinct (section 2) |
+| DIG: tone fits the message (P4) | none | | clean |
+| DIG: choose the medium for a need (C05, S05, C10, S10) | none (SK-TC1c items choose a picture or a sound for a poster) | | clean |
+| DIG: eye contact, a picture, speak so the back row hears (C15, S15, C13, S13) | none | | clean |
+
+#### 5.8 Learn It and Watch Me versus the fifteen
+- **FEAT.** Learn It covers every component. Watch Me models the table of contents (W1), a map (W2) and a caption plus Try It! box (W3). W3 models the caption fact and the Try It! job that C04, S04, C07, S07 and T2 key; that is what the brief asks of a Watch Me, and I did not rate it. Headings, section order, the index and grouping (C03, C05, C08, C09, C11, C12, C13, C14) have teach text only (F3-S5a). Learn It point 5 now reads as a question to ask. It still states the C14/S14 grouping logic ("if readers will look something up by its date, a book can group by date") and the P4 placement rule, so those items follow from one sentence.
+- **DIG.** See D3-S9.
+
+#### 5.9 Facts (WebSearch and WebFetch)
+| Claim | Result | URL |
+|---|---|---|
+| Jump rope length: stand on the rope, handles reach the armpits (FEAT p1, C01, C04 decoy) | Supported with a nuance: Nike gives "The end of the cable (not including the handles) should reach your sternum or armpits", standing with both feet; the passage says one foot and handles. Fine for grade 3 (NOTE F3-N6) | https://www.nike.com/a/jump-rope-size-length |
+| Pearl: a speck of grit irritates the oyster, the oyster adds layers of nacre, it takes years (FEAT p6) | Supported: Britannica "a grain of sand or a tiny parasite", layers of nacre, "several years" | https://britannica.com/science/How-Do-Oysters-Make-Pearls |
+| Blueberry flowers are white and bell-shaped; bees visit for nectar (FEAT p5, T2, T4) | Supported: NC State "Small bell shaped flowers bloom in clusters in the springtime"; Virginia Tech "Small, white, bell-shaped, in clusters". eXtension says "urn shaped" (same flower, NOTE). Pollinator Partnership: bees come for "pollen and nectar" | https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum-climax/common-name/highbush-blueberry/ ; https://dendro.cnre.vt.edu/DENDROLOGY/syllabus/factsheet.cfm?ID=583 ; https://blueberries.extension.org/blueberry-botany ; https://www.pollinator.org/blog/blueberry |
+| Georgia blueberries are picked by hand or by machine; harvest is early summer (FEAT p5) | Supported: UGA Extension "harvested by both hand and machine", late April to late June. The page does not describe the shaking mechanism (the passage's "gently shakes the bush" is the usual description) | https://fieldreport.caes.uga.edu/publications/C1269/blueberry-harvesting-and-postharvest-handling/ |
+| Whisper dishes: two curved dishes carry a whisper (DIG p1) | Supported: Gateway to Science "parabolic reflectors ... a curved surface that focuses sound waves in much the same way a mirror focuses light"; the effect works at the focal point (the passage does not say so; NOTE) | https://gatewaytoscience.org/new-whisper-dishes-hear-science-in-action/ |
+| Crayons: melt wax, add color, cool (DIG figure, C01) | Supported: Crayola: wax melted, pigment mixed in, poured into molds, cooled | https://www.crayola.co.uk/faq/quality-and-safety/how-are-crayola-crayons-manufactured-and-what-are-the-basic-ingredients/ |
+| Pothole: water in cracks, freezing, a gap, traffic breaks the weak spot, asphalt repair (FEAT p3, C11) | Supported (second review verified; I re-read the Maryland page) | https://roads.maryland.gov/mdotsha/pages/index.aspx?PageId=815 |
+| Escalator: a loop of steps flattens at the top, the handrail moves with the steps (FEAT S13) | Supported | https://wonderopolis.org/wonder/how-do-escalators-work |
+| Giraffe neck has seven bones (FEAT S09) | Supported: "the mammalian limit of seven cervical vertebrae" (the page does not state the human count; seven is standard) | https://en.wikipedia.org/wiki/Giraffe |
+| Some grasshoppers make sound by rubbing their legs on their wings (FEAT C09) | Supported: stridulation, "rubbing a row of pegs on the hind legs against the edges of the forewings" | https://en.wikipedia.org/wiki/Grasshopper |
+| A spinning color disk blurs to one color (DIG S08) | Supported: Newton disc "appearing as white (or off-white or grey) when it is spun rapidly" (red, yellow and blue stripes give a muddy single color; "one color" is correct) | https://en.wikipedia.org/wiki/Newton_disc |
+| Paper steps mash, press, dry (DIG S01); bike washing steps (FEAT S05); strawberry picking (DIG p3) | Recycled paper checked by the second review; bike and strawberry steps are ordinary how-to advice, no claim to verify | see the second review, section 8 |
+
+No factual error found.
+
+#### 5.10 Readability (FK of every passage, ≤4.5 gate)
+The repo's `verification/readability.py js/data/lessons/T-CF.js` and my own `fk.js` agree to within 0.6: FEAT p1 2.1, p2 3.1, p3 2.9, p4 3.6, p5 3.2, p6 4.0, p7 1.7 (repo) / 1.9, 2.5, 2.5, 3.3, 3.0, 3.6, 1.0 (mine); DIG p1 1.1, p2 2.8, p3 2.6, p4 2.1, p5 1.5 (repo). All under 4.5; all passages at least 100 words (DIG p4 and p3 are 100 and 102). Stems read below grade 4, with two clipped fragments (NOTE F3-N7: DIG S15 "Her draft plan: murmur, gaze downward, no visuals"; "gaze" and "murmur" are above a typical grade 3 reading vocabulary).
+
+#### 5.11 Browser (390 x 844 touch, Chromium, local server on port 8913; `ui3.py`)
+For each lesson I opened every core item (three sets of five) in Try mode and:
+1. answered it **correctly by clicking the real controls**: choice buttons by `data-i` for mc, ms and both ebsr parts; the `select.dd-select` element or the choice buttons under the sentence for dropdown (the page picks the control by option length); the sentence buttons by `data-ref` for hottext; the pool cards in order for order; the `.match-btn` in each row card for match. Then pressed Check and read the feedback;
+2. reloaded with fresh storage, answered wrongly the same way, pressed Check, asked for hints 1, 2 and 3, pressed Show me how, opened Try a similar question, answered the similar item correctly with the same real controls and pressed Check.
+
+Results: **FEAT 15 of 15 and DIG 15 of 15** correct answers accepted; 15 of 15 and 15 of 15 wrong answers refused; hint button available three times on every item; Show me how on every item; all 30 similar items opened and accepted a correct answer; no horizontal scroll on load, after hints, after Show me how or in any similar item. Every button, choice and select is at least 44 x 44 px; the only element under that is the question prompt heading (324 x 23, a focus target). Both figures load at 295 px wide (`tf-trail-map.svg` for FEAT C06, `tf-crayon-video.svg` for DIG C01 and C02). I viewed C06 and C01: the map matches its alt text (N arrow up; picnic-table square left of the pond and straight above the P circle; tower top right; bridge bottom right) and agrees with the brochure (north from the parking lot to the tables, the tower at the northeast corner, south along the east side, the footbridge back); the video page matches its alt text. The Crafts tab is shown selected, which the alt text does not say (carried NOTE D-N8). Console: only blocked Google Fonts requests.
+
+### 6. NOTE findings
+**FEAT**
+- F3-N1. C15 stem never says the map has symbols ("shows his street, the park, the school and the bus stop"), so the key box is needed only by general knowledge; S15 says "rooms are marked on it with small shapes". Add "marked with small symbols" to C15.
+- F3-N2. C13 option B ("Rotors and Blades / Hospitals and Supplies") is more specific than the key but not wrong for every reader; the key is the only pair that covers the whole paragraph, which is what hint 1 says.
+- F3-N3. C03 `how` introduces "a glossary"; Learn It does not teach the word (3.T.C.1.b does).
+- F3-N4. T1 and P1 are the same frame (find the heading for a need), T5 and C12 the same operation: expected for tests.
+- F3-N5. T3 has three weak decoys (B, C, D); only A is plausible.
+- F3-N6. Jump rope: the source measures the cable end, the passage the handles; one foot versus both feet.
+- F3-N7. FEAT p5 "Blueberry Season" says bell-shaped; eXtension says urn-shaped. Both are used.
+- F3-N8. C05 asks about "the last section of the chapter"; the Try It! box follows it (carried F-N4).
+- F3-N9. C07's stem and a T-TS sentence share "grew bean plants in paper cups" (carried F-N7).
+
+**DIG**
+- D3-N1. C12 and S12 sit next to SK-TC1b-P6/P9 and the 3.T.C.1.b teach text (slow down before an important part). Keep the keys on suspense and excitement and do not add "important" to any option.
+- D3-N2. C13 key "keep his voice strong" and C14 key "in a strong voice" share words (carried D-N2). C12's hint 3 ("a whisper does not help far-away listeners") gives the reasoning that makes the whisper decoys in C14 and C15 obvious; C12, C14 and C15 are one set.
+- D3-N3. C09 blank 2 and S09 blank 2 are the stem's own definition ("[soft bell] shows that a new part is starting"); answerable from the stem alone.
+- D3-N4. Names repeat: Eli in C02, P1, T2; Mr. Cole in W3 and P4; Kofi in C04 and C05 (carried D-N7).
+- D3-N5. Passages p1 and p5 read below grade 3 by FK, natural for an audio script (carried).
+- D3-N6. C13, C15, S13 and S15 are delivery items (carried D-N4).
+- D3-N7. S08 Part A key and Part B key share "into one color" (carried D-N6).
+- D3-N8. The crayon page shows the Crafts tab selected; the alt text does not say so (carried).
+
+### 7. Items the lead asked about
+- **FEAT S11 Part B decoys:** one answer defensible, not clean (F3-S1). **C11 Part B:** my one miss (F3-S2).
+- **DIG C11/S11 prompts:** unambiguous, but the prompt states the fact and hint 2 repeats it (D3-S1).
+- **DIG T5 vs C06/S06:** the same key logic a third time (D3-S4).
+- **DIG C04/S04/P1 vs SK-TC1b-T8, strict rule:** MUST (D3-M1). Also S03 blank 2.
+- **DIG Together P4 vs C12/S12:** not the same fact (section 2).
+- **FEAT C15/S15:** fixed. **DIG C12:** `why` fixed.
+- **Second-review authors' own risks:** C12 trap is easy to eliminate (D3-S2); S12 other choices are too silly (D3-S2); T1 "the last part of the recording" is the only reading; S05 has exactly one better sentence (the key; "Wipe every part with a dry towel" does not look back); T2 key is the only option that mentions flowers (F3-S3).
+
+### 8. Answers and files
+- Answers: `scratchpad/b5r3/answers.json` (read-only, saved before the comparison), `.maps.json` (shuffle maps), `blind-TF-FEAT.txt`, `blind-TF-DIG.txt`, `cmp.js` (grader).
+- Scripts: `ld.js`, `probe.js`, `probe2.js`, `blind.js`, `cmp.js`, `dump.js` (keyed dump, used after solving), `keyed-FEAT.txt`, `keyed-DIG.txt`, `cue.js`, `jac.js`, `tleak.js`/`tleak2.js`, `ngram2.js`, `echo.js`, `stale.js`, `fk.js`, `ex.js`, `allld.js`, `chk.js` (all test and testB items by keyword), `sets2.js` (set items by standard), `ex-c1b.txt`, `ex-c1a.txt`, `ex-ss1a.txt`, `teach.txt`, `ui3.py` (real-control browser run), `shots/`.
+- Server: pid 24793 on port 8913, killed; the port refuses connections.
+
+### 9. Verdicts
+- **TF-FEAT: CHANGES REQUIRED.** One MUST (F3-M1, the caption cluster against SK-TC1b-T6). It is a MUST under the strict key-fact rule only; if the lead rules that a lesson with code 3.T.C.1.b may repeat the caption fact, FEAT is **ACCEPT** with the SHOULDs (F3-S1 to F3-S6) as repair work. F-M1 is fixed and no key is wrong.
+- **TF-DIG: CHANGES REQUIRED.** D3-M2 (T2 blank 2 and P2 row 2 against SK-TC1b-T9) is the unfinished part of the second review's D-M2, which that review said may not be downgraded. D3-M1 (pop-up and link against SK-TC1b-T8) is a MUST under the strict rule the lead asked me to apply; the second review said the same. Both fixes are local: change one row or blank in C04, S03, S04, P1, P2 and T2 and re-check against T8 and T9 by fact. D-M1 and D-M3 are closed.
+- After those row-level edits and the lead's ruling on F3-M1, I would accept both lessons. The SHOULDs are decoy, hint-wording and one-sentence repairs that do not change a key or the structure.
