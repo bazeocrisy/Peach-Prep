@@ -501,8 +501,8 @@ with sync_playwright() as p:
         PP_STD.open('K-12.P.EICC.1.a');const hb=document.getElementById('std-body').textContent;
         PP_STD.open('3.L.GC.1');const lv=[...document.querySelectorAll('#std-body .std-h2')].map(h=>h.textContent);
         return {a,comps,sug,one,t,hb,lv};})()""")
-    check("G.3 a code with several lessons lists all of them in the recommended order (3.T.SS.1.a: six lessons)",
-          ss["a"] == ["TS-SEQ", "TS-CE", "TS-PS", "TS-CC", "TS-DESC", "3.T.SS.1.a"], ss["a"])
+    check("G.3 a code with several lessons lists all of them in the recommended order (3.T.SS.1.a: seven lessons)",
+          ss["a"] == ["TF-FEAT", "TS-SEQ", "TS-CE", "TS-PS", "TS-CC", "TS-DESC", "3.T.SS.1.a"], ss["a"])
     check("G.4 a parent page lists its components in the recommended order with a suggested start; GUM is grouped by level; a Practices code says a grown-up observes it",
           ss["comps"] == ["3.T.T.1.b", "3.T.T.1.c", "3.T.T.1.a", "3.T.T.1.d", "3.T.T.1.e"] and ss["sug"].startswith("Suggested start:") and "not a placement" in ss["sug"]
           and ss["lv"][0].startswith("Master and Reinforce") and ss["lv"][1].startswith("Introduce and Continue")

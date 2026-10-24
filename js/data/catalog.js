@@ -17,7 +17,7 @@ window.PP_CATALOG = [
     groups: [
       { name: "Text structure and clue words", skills: ["3.T.T.1.b", "TS-SEQ", "TS-CE", "TS-PS", "TS-CC", "TS-DESC", "3.T.SS.1.a"] },
       { name: "Stories", skills: ["3.T.T.1.a", "3.T.T.1.c", "3.T.C.2.a", "3.T.T.1.d"] },
-      { name: "Information", skills: ["3.T.C.1.b", "3.T.T.2.a", "3.T.T.2.b", "3.T.T.2.c"] },
+      { name: "Information", skills: ["3.T.C.1.b", "TF-FEAT", "TF-DIG", "3.T.T.2.a", "3.T.T.2.b", "3.T.T.2.c"] },
       { name: "Author's purpose and opinion", skills: ["3.T.C.1.a", "3.T.T.3.a", "3.T.C.2.c"] },
       { name: "Figurative language and poems", skills: ["3.T.SS.2.a", "3.T.T.4.a"] },
       { name: "Evidence and research", skills: ["3.T.RA.2.a", "3.T.RA.2.b", "3.T.RA.1.a", "3.T.RA.1.b"] }
