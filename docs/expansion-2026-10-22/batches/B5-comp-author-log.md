@@ -2,7 +2,9 @@
 
 **Role:** content author, batch B5 (component lessons). **This is not a review.** Nothing here certifies the items. Reviewers should blind-solve before they read this log.
 
-**Status:** AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW. Both lessons are NOT ACCEPTED. Neither is in `js/data/accepted.js`.
+**Status:** AUTHORED (B5 comp), REVISED AFTER FIRST REVIEW (section 10), NEEDS A SECOND INDEPENDENT BLIND REVIEW. Both lessons are NOT ACCEPTED. Neither is in `js/data/accepted.js`.
+
+**Read section 10 first.** The first review (B5-comp-review.md) asked for changes. Sections 1 to 9 below were written before that review. Where section 10 changes a fact, the section 10 version is the current one (for example the sinkhole passage is now a pothole passage, and the similar-bank numbers changed).
 
 ## 1. What was built
 
@@ -169,3 +171,85 @@ Checked on the web this session (URLs fetched or returned by search):
 - Blueberry bushes can live and produce for up to fifty years (many years is safe): https://www.epicgardening.com/blueberries/. This is a gardening site, not an extension service; a reviewer who wants a stronger source can check a university extension page.
 
 Not verified beyond common knowledge: contents and index conventions (chapter, section, table of contents, index, compass rose, key), which are text-feature definitions taken from the standard's own terms. No wording was copied from GaDOE materials, and no real child data was used.
+
+## 10. Response to the first review (B5-comp-review.md, "First review")
+
+The review found no wrong key and no item with two defensible answers. It listed three MUSTs and a set of SHOULDs. This section lists only what I actually changed, then what I did not change. Item ids are the current ones. All edits are in `js/data/lessons/T-CF.js` (source parts concatenated), plus nothing else.
+
+### 10.1 MUSTs
+
+- **M1, hint 1 stated the key (DIG C02, S02, C05, S05).** Rewrote the clue (which is also hint 1) of each as a strategy.
+  - C02: "Ask what each tool on the page is for. Eli needs to check something that was already said." Hint 2 now says "Look at the bar, the buttons, the tab and the links. Ask what each one does to the video or to the page."
+  - S02: same idea, and hint 2 now covers every choice.
+  - C05 and S05: "Ask what Kofi has to do to learn this, and which way of sharing fits that job" (S05: what Ravi is able to do during the ride).
+  - C05 and S05 were also relabelled DOK 2 (the reviewer's N-D1: the stem shows the video). DIG now has DOK3 on C08, C10, C14 only; this still meets the "at least two DOK 3" rule.
+- **M2, key facts repeated from Watch Me W2/W3 and SK-TC1b.**
+  - T1 was replaced. The new T1 asks what the CC button shows (inline stem, no passage). I checked `T-C.js` for "CC": no hit.
+  - W3 was replaced. It now models a speaker who asks a question and waits (the old W3 was "three tips, First, a pause to get ready").
+  - C12 and S12 were replaced. C12 asks why Jayden begins notices with "Next" and "Also" (the key: to show listeners that a new notice is starting, a spoken heading). S12 asks why Ms. Brown says "Now, about" before each topic. Neither is about a pause. The teach text (point 4) was extended with the signpost idea and one sentence on asking a question and waiting.
+  - I did not re-check every item of SK-TC1b against these two new items. The reviewer should.
+- **M3, FEAT S05 re-used the paper-plate-mask steps.** Replaced with a different task (washing a bike, three sections). I checked "bike" and the sentences against `js/data` by search only for the words; I did not run a full 6-gram scan on the new text.
+
+### 10.2 SHOULDs done
+
+FEAT:
+- **C02 and Watch Me W1 (S-F1).** C02 now asks "How many pages are in Chapter 2?" (a different operation) with new page numbers (1, 6, 7, 10, 12, 16, 17). S02 asks the same operation about a soccer book.
+- **Sinkhole passage versus T-TS "How Water Carves a Cave" (S-F2).** p3 is now "How a Pothole Forms" (water in cracks, ice, traffic). C11 was rewritten for it. **While doing this I found and fixed a bug of my own:** C11 Part B still named the old section "The Roof Falls" for part of the edit; it now says "The Road Breaks". Please blind-solve C11 again.
+- **Pearl simplification (S-F11).** p6 and S11 now say "a tiny speck of grit" instead of "a bit of sand", and the p6 sentence is shorter ("After a few years, nacre has covered the grit completely.").
+- **T3 versus C08 (S-F3).** T3 now asks what would change if the last section came first (a new task, new distractors). The "easiest to hardest" distractor family is gone from the test.
+- **S11 wording and stem (S-F6).** The stem that restated the passage and Part A's key was deleted; the standard ebsr directions are back; Part B was reworded; the nonsense Part A decoys were replaced.
+- **S09 (S-F7).** Columns are now the taught terms (heading, caption, label, text box). Directions are standard.
+- **S03/S15/S02/S14 directions.** "Choose TWO answers" is back in S03 and S15 prompts.
+- **S-F8 (skill not taught).** Teach point 5 now also says that authors group things the way readers will look them up (by date, by person). I did not add a new Watch Me for index or heading choice.
+- **S-F9.** C03 and S03 clue/hint 1 is now "Ask what a heading is for."
+- **Word-match key (C05).** The prompt no longer names the two sections ("the last section of the chapter ... the section before it").
+- **T4 (S-F10).** T4 now asks which caption adds something the photo cannot show (all four captions mention bees; one adds when and why).
+- **Absurd distractors (S-F5).** C14, C15 and S15 distractors were made plausible misreadings; C02's "Crossing Your Arms" is gone with the new item.
+
+DIG:
+- **C09 gave C06's key (S-D2).** C09 now uses the cues [echo] and [soft bell]; the stem defines only the bell. S09 was rewritten the same way ([wind howling] and [bell ringing]).
+- **C13/C14 and C11/C14 giveaways (S-D3).** C11's clue no longer says "a second time". C14's key is now "Say 'Field B' in a strong voice, and then say it again", so it does not repeat C13's "slowly and clearly". S14 was changed to use a gesture plus a repeat.
+- **Absurd distractors (S-D4).** Replaced in C02, S02 (partly), C12, S12, C13 ("leave it out" became "say it only once"), C15 (the bookshelf), S14, S15.
+- **S-D7, S-D9, S-D10, S-D11.** C10, S10 and S15 clues no longer give the key. S08 and S09 use the standard directions. C15's `how` says "cage". C12's invented `how` line about "many rooms" is gone with the new item.
+- **S-D1 overlap with SK-TC1b.** I only reduced it where the reviewer found a key-fact collision (T1, C12, S12, W3). The bracket-sound items (C06, S06, C09, S09) and first/next/last (C07, S07, T3) remain; I changed the cues and tasks, but a bracket still names a sound in this lesson as it does in 3.T.C.1.b.
+- **Longest-key cue (S-D5).** I measured it myself (word count, `cue2.js`): the key was the unique longest option in 15 of 55 groups before the edits and is in 11 of 55 now, all with a margin of one to three words. I lengthened or shortened the groups with big margins (FEAT C11 Part A, C13, S13, S11 Part A; DIG C01, C08 Part B, S06, S14). The remaining ones: FEAT C04, C11A, C14, S04, S08, S11A, C13; DIG C08A, C10, S14, T5.
+- **Passage length.** FEAT p4 was 97 words; one sentence added, now 100.
+
+### 10.3 Similarity, re-measured after all edits
+
+My checks changed once more because the review asked for standard directions and the lesson's own terms in the similar bank. That pushed 12 pairs over 0.21, and I fixed each by changing content and wording, not by a thesaurus pass (for example S02 and S08, the restyled S12 and S14, new frames in S05 and S09). Final numbers, every pair mapped by `like`:
+
+| Mode | Highest set Jaccard | Highest bag overlap | Pairs over 0.21 | Exact shared options |
+|---|---|---|---|---|
+| all tokens, no passage | 0.200 | 0.209 | 0 | 0 |
+| all tokens, with passage | 0.206 | 0.209 | 0 | 0 |
+| tokens over two letters, no passage | 0.193 | 0.200 | 0 | 0 |
+| tokens over two letters, with passage | 0.193 | 0.185 | 0 | 0 |
+
+(From `cf/simcf.js`; the maxima are over both lessons. The bag maximum 0.209 is close to the ceiling and a different tokeniser could put one or two pairs over it.) Two lessons I learned: standard directions add 10 to 15 shared words to every ebsr pair, and adding words to a similar item usually raises the multiset overlap, so shortening and changing content words worked better.
+
+### 10.4 Gates after the changes
+
+- `check-content.js --all`: PASS (0 failures, 10 warnings; none on a TF- lesson).
+- `check-writing.js`: 0 failures. `check-instructional-copy.js`: 28 assertions passed.
+- Passage FK by my script: FEAT 2.0 to 4.3, DIG 1.5 to 2.6.
+- `verification/practice-own.py`: 73 passed, 0 failed (includes G.3).
+- Smoke test (Playwright): 30 of 30 core items offer "Try a similar question" and open the item named by `like`; no image failed to load; only blocked Google Fonts errors.
+
+### 10.5 Not changed (and why)
+
+- **S-F4 (order-of-sections appears often):** I replaced S05's topic and rebuilt T3, but C05, C08, C11, S08 and S11 still use the section-order skill.
+- **C07 and one-slot dropdown 50/50:** hint 3 still leaves two of three options for the caption; I did not redesign it.
+- **S-D6, N-D2, N-D8:** C11/S11, C13/S13 and C09/S09 are still on the easy side of DOK 2.
+- **S-D8:** Learn It point 5 still states "a video shows how something moves, a recording works when your eyes or hands are busy, printed words can be read again", which is close to the keys of C05, S05, C10 and S10. I changed the C05/S05 clues but not the teaching text.
+- **S-D12:** DIG T5 (why a [pause] before "Last, wash the berries") still has the same key logic as C06/S06. T4 still uses the lesson's own wording.
+- **N-D5 (page subtitle), N-D7 (crayon page highlights Crafts), N-F6 (map alt text names the position):** not touched.
+- **Facts (new passage):** a pothole forms when water gets into cracks, freezes and pushes the road, and traffic breaks the weak spot; crews fill holes with asphalt. Source: https://roads.maryland.gov/mdotsha/pages/index.aspx?PageId=815. Note the source says melting leaves "a pool of water" under the road and my passage says "a gap"; I treated that as a harmless simplification.
+
+### 10.6 Items changed since the first review, for the second blind review
+
+Please blind-solve these cold (new or rewritten), then spot-check the rest.
+
+- TF-FEAT: p3 and C11 (changed text), p6 and S11, C02, S02, C03, S03, C05, S05 (new topic), S09, S14, S15, T3, T4, p4 (one sentence), Learn It point 5, and the key-length edits to C13, S13 (and the C14 and C15 distractors).
+- TF-DIG: Watch Me W3, Learn It point 4, T1, C02, S02, C05, S05, C09, S09, C10, S10, C11 (clue only), C12, S12, C13, C14, S14, C15, S15, S08 (all options), C01 (distractor lengths), C08 Part B (three decoys changed), S03 (stem and prompt).
+- Biggest risks, in my own view: DIG C12/S12 (does "to show listeners that a new notice is starting" have a clearly better answer than the other three?), DIG C09/S09 (is "[echo]" or "[wind howling]" obvious from the line alone?), DIG C08 Part B (decoys now include a direction and a description of the room), FEAT C02/S02 (is "ten pages" unambiguous, one off-by-one distractor?), and FEAT C11 (new passage, re-solved by me only partly).

@@ -43,8 +43,12 @@ def find_axe():
 
 AXE = find_axe()
 if not AXE:
-    print("review.py cannot run its axe checks: AXE_PATH is not set and no axe-core was found. "
-          "Set AXE_PATH=/path/to/axe.min.js (axe-core 4.x) and run again.", file=sys.stderr)
+    if os.environ.get("AXE_PATH"):
+        print("review.py cannot run its axe checks: AXE_PATH is set to %r, which does not exist, and no axe-core was found elsewhere. "
+              "Point AXE_PATH at an existing axe.min.js (axe-core 4.x) or unset it." % os.environ["AXE_PATH"], file=sys.stderr)
+    else:
+        print("review.py cannot run its axe checks: AXE_PATH is not set and no axe-core was found. "
+              "Set AXE_PATH=/path/to/axe.min.js (axe-core 4.x) and run again.", file=sys.stderr)
     sys.exit(2)
 
 
@@ -349,14 +353,14 @@ with sync_playwright() as p:
     rec = prog.get("3.T.T.1.c") or {}
     srcs = q.evaluate("[...new Set(PP.byId['RV-3.T.T.1'].items.map(i=>i.src))]")
     seen_ok = all(isinstance(prog.get(k, {}).get("reviewSeenBy"), dict) for k in srcs)
-    clean = all(not (prog[k].get("mastered") or prog[k].get("tries") or prog[k].get("attempts") or prog[k].get("passedAt")) for k in srcs)
+    clean = all(k in prog and not (prog[k].get("mastered") or prog[k].get("tries") or prog[k].get("attempts") or prog[k].get("passedAt")) for k in srcs)
     status = q.evaluate("(k=>PP_SKILLS.status(k))('3.T.T.1.c')")
     check("R.18a submitting a review leaves pp.progress.v1 untouched; opening See my answers only adds reviewSeenBy to the source lessons: no try, no pass, no status change",
           pre == after_submit and seen_ok and clean and status == "new", (pre, after_submit, srcs, rec, status))
     ready(q, "#play/SK:3.T.T.1.c:t"); q.reload(); q.wait_for_timeout(700)
     q.wait_for_function("PP_PLAYER.state().setId==='SK:3.T.T.1.c:t'")
     answer_all(q); q.click("#confirm-submit"); q.wait_for_timeout(300)
-    rec = json.loads(q.evaluate(KEYS)["pp.progress.v1"])["3.T.T.1.c"]
+    rec = json.loads(q.evaluate(KEYS).get("pp.progress.v1") or "{}").get("3.T.T.1.c") or {}
     att = (rec.get("attempts") or [{}])[0]
     check("R.18b a first-try pass on the lesson check after the review is recorded as after seeing the answers (afterAnswers true, seenIn review); it is still the honest pass, not hidden",
           att.get("n") == 1 and att.get("ok") is True and att.get("afterAnswers") is True and att.get("seenIn") == "review", rec)
@@ -368,7 +372,7 @@ with sync_playwright() as p:
     q = seeded(b, extra={"pp.progress.v1": json.dumps({"3.T.T.1.c": {"taught": True, "reviewSeenBy": "zzz"}})})
     ready(q, "#play/SK:3.T.T.1.c:t"); q.reload(); q.wait_for_timeout(700)
     answer_all(q); q.click("#confirm-submit"); q.wait_for_timeout(300)
-    rec2 = json.loads(q.evaluate(KEYS)["pp.progress.v1"])["3.T.T.1.c"]
+    rec2 = json.loads(q.evaluate(KEYS).get("pp.progress.v1") or "{}").get("3.T.T.1.c") or {}
     a2 = (rec2.get("attempts") or [{}])[0]
     check("R.18d a corrupt reviewSeenBy value is ignored (no crash, first-try pass is not marked as seen)", a2.get("afterAnswers") is False and a2.get("ok") is True, rec2)
     q.close()
