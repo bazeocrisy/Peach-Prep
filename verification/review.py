@@ -201,11 +201,11 @@ with sync_playwright() as p:
     q.evaluate("document.querySelectorAll('#coverage-body details').forEach(d=>d.open=true)")
     cov = q.evaluate("""({rows:document.querySelectorAll('#coverage-body tr[data-code]').length, n:PP_STANDARDS.length, t:document.getElementById('coverage-body').innerText,
         heads:[...document.querySelectorAll('#coverage-body thead')[0].querySelectorAll('th')].map(t=>t.textContent),
-        tt1c:(document.querySelector('#coverage-body tr[data-code="3.T.T.1.c"]')||{}).innerText||'', tt1e:(document.querySelector('#coverage-body tr[data-code="3.T.T.1.e"]')||{}).innerText||'',
+        tt1c:(document.querySelector('#coverage-body tr[data-code="3.T.T.1.c"]')||{}).innerText||'', tt1e:(([...document.querySelectorAll('#coverage-body tr[data-code]')].find(t=>/^3\.F\./.test(t.dataset.code)&&/not in a standard review yet/i.test(t.innerText)))||{}).innerText||'',
         hab:(document.querySelector('#coverage-body tr[data-code="K-12.P.EICC.1.a"]')||{}).innerText||''})""")
     check("R.6 the coverage map lists every standard with its lesson check, standard review, cumulative review, grown-up or writing evidence, and what is not covered yet",
           cov["rows"] == cov["n"] and cov["heads"] == ["Standard", "Lesson check", "Standard review", "Cumulative review", "Grown-up or writing evidence", "Not covered yet"]
-          and "3.T.T.1 review" in cov["tt1c"] and "Not yet" in cov["tt1e"] and "not in a standard review yet" in cov["tt1e"].lower()
+          and "3.T.T.1 review" in cov["tt1c"] and "Not yet" in cov["tt1e"] and "not in a standard review yet" in cov["tt1e"].lower()  # a lesson check that no review has reached yet (chosen from the page; which one changes as lessons are accepted)
           and "observed only" in cov["hab"].lower(), (cov["rows"], cov["heads"], cov["tt1c"][:200], cov["tt1e"][:200], cov["hab"][:120]))
     check("R.7 the map says plainly that no short form tests every Georgia expectation, and never claims full coverage",
           "No short form on this site is a test of every Georgia expectation" in cov["t"]

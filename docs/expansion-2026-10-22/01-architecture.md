@@ -457,6 +457,7 @@ All of the following apply to test mode in `js/engine/player.js` unless stated. 
    - `bestText` (skills.js:1034-1041) already handles a change in points. When `rev` changes but the total does not, it also says "(on an earlier version of this check)".
    - A material change to a check means new item ids **and** a bumped `testRev`. check-content enforces this with a hash ledger (2.6).
    - `nextForm` is unchanged. `afterAnswers` stays per form. Seeing a version 1 answer does not mark version 2.
+   - **As built (phase 4 of the engine work, 2026-10-23).** `testRev` is read with `PP_SKILLS.testRev(key, form)` (default "1"). A new attempt stores `rev`; an attempt without one means "1". A pass or best score from an earlier version is labelled "on an earlier version of this check" and **stands** (no field changes meaning). Answers seen are tracked with an additive `seenRev: {A, B}`: answers seen on version 1 do not make a version 2 pass "after seeing the answers". Review results (`pp.review.v1`) store `rev`, a short signature of the review's questions (ids, types, points); a result with a different signature says "The questions have changed since."; a result with no `rev` (saved earlier) says nothing.
 
 ### 2.5 Assessment at three levels
 
@@ -535,10 +536,12 @@ These are added to `verification/check-content.js` after the lesson block (:224-
     - The checker computes a SHA-256 hash of each lesson's core and similar items (ids and content) with Node `crypto`.
     - A **mismatch, or a missing entry, fails with `--release`** and warns otherwise.
     - This proves the reviewed content is the shipped content, and that authors did not review their own work (the reviewer names are listed, and the lead checks them against the author list).
+    - **As built.** The ledger also holds the lesson checks: `lessons[key] = { core, similar, test: { A, B } }`, each part `{ rev, hash, reviewers, authors, date, record }` (`record` is a review file that must exist in the repository; a reviewer who is also listed as an author is invalid, in every mode). Entries are written only by `check-content.js --all --record-review <key> --by "<reviewers>" --record <file> [--authors ...]`, by the reviewer, against the content as it is at that moment. The file starts empty: nothing in the repository records the hash of what a past reviewer saw, so no entry was back-filled (05 section 10).
 12. **Assessment versions.**
     - `verification/assessment-versions.json` holds a hash per form (`<key>:A`, `<key>:B`, review sets and CR sets) together with its `rev`.
     - A changed hash with an unchanged rev **fails**.
     - The file is created once from today's content, with every rev at "1".
+    - **As built.** The file has two hashes per form: `hash` (every word) and `mat` (ids, types, points and answer keys only). A `mat` change with the same rev is "a material change without a new testRev"; a `hash`-only change is an editorial edit and only warns. Review and cumulative sets are built at run time from the accepted lessons' checks, so the file holds one `inputs` entry (accepted list, the standard groups and the accepted checks' `mat`) with its own rev, and each stored review result carries a run-time signature. `--record-versions` refuses to record a material change that has no new testRev. In default mode these are **warnings**; with `--release` they are **failures** (a departure from "fails" above, made so the day-to-day gate stays unchanged while authors work; see 05 section 10).
 13. **Standard groups** (2.1). Official parent wording matches the transcription, and `order` and `lessons` are complete and resolve.
 14. **Reviews.** Each component in `measures` has at least two items and three points. Every `notMeasured` entry has `why`. Item `comp` is one of `measures`.
 15. **Summary line** (:443-445). Add the counts of core, similar and review items.

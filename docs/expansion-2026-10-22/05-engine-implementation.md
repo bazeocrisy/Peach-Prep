@@ -131,7 +131,7 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 
 - **Practice Together keeps its three-step ladder (ENG-08, decided).** It is adult-guided and guard 3.3 asserts it. The four controls belong to the fifteen independent questions. The authored Together addons stay in the data, merged but unused there. Recorded in 01-architecture.md.
 - **Not built:** `testRev` and `attempts[].rev` check versioning; review-ledger and assessment-version hash rules; a `--release` switch that turns the migration warning into a failure.
-- **Similar coverage (ENG-07)** is mostly content: many core items still have no similar item, so the button is hidden on them (check-content warning).
+- **Similar coverage (ENG-07):** as of phase 3 every core item in every core lesson has a mapped similar item (0 of 510 uncovered, section 9.2). When this section was first written (phase 1) 9 of 15 items on the reference lesson had none. Whether each similar item really tests the same skill is a content judgement.
 - **Reviews reuse questions** a child may already have seen in lesson checks; they say so. CR-write and CR-lang have no accepted lessons yet, and the pages say that.
 - **Content:** the tested snapshot has core on the lessons listed in `js/data/accepted.js` and others; check-content reports lessons with a check and no core as one migration warning. Content edits after the snapshot are not covered by these runs.
 - **Guard fragility (pre-existing):** sections 11, 13 and 16 pick lessons by `Object.keys(PP.lessons)` order or by fixed key (3.T.C.1.b). As lessons move to core or gain form B, those picks can land on a different kind of lesson. practice-own.py now finds its "lesson without core" dynamically for this reason; the guard's own picks were left as they are.
@@ -158,7 +158,7 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 - **Cumulative ELA review** (`CR-lit`, `CR-info`, `CR-write`, `CR-lang`), labelled sections, manageable across sessions, links the existing practice tests rather than duplicating them, and separates curriculum review, state-test-shaped practice, writing tasks and adult-observed performance.
 - **Coverage map** (`#coverage`): per standard, what the lesson check, group review, cumulative review and adult/writing evidence cover, and plainly what is not covered. No short form is called a test of every Georgia expectation.
 - Results use the section 12 categories plus partial credit and revisit suggestions, no mastery claim from a small sample. They are stored in the new `pp.review.v1` (last 20 attempts per review). A review never awards a lesson pass and never writes `pp.progress.v1`.
-- Files: `js/review.js`, `js/data/accepted.js`, `js/std.js`, `js/app.js`, `js/engine/player.js`, `index.html`, `css/styles.css`. Tests: `verification/review.py` (21 checks: corrupt, blocked and full storage, no pass awarded, no writes on open, seven viewports, axe, keyboard).
+- Files: `js/review.js`, `js/data/accepted.js`, `js/std.js`, `js/app.js`, `js/engine/player.js`, `index.html`, `css/styles.css`. Tests: `verification/review.py` (28 checks at the end of phase 3; 21 when first written: corrupt, blocked and full storage, no pass awarded, no writes on open, seven viewports, axe, keyboard).
 
 ### 8.4 Gates after phase 2 (historical, superseded by 9.4; frozen copy `scratchpad/eng/snap3`, snapshot 2026-10-23T10:00:31Z, 76 files, checksum list in `snap3-md5.txt`)
 | Suite | Result |
@@ -192,7 +192,7 @@ After the runs, the engine, data (accepted.js), index.html, CSS and test files i
 | RR-06 | Not changed (a note). | - |
 | RR-08 | review.py **R.4b** starts from a completely empty store and logs every `setItem`; only path.js's own probe is allowed. | R.4b |
 | RR-09 | review.py finds axe itself (`AXE_PATH`, then `./node_modules`, the global node_modules, then `/tmp`) and otherwise stops with a clear message and exit code 2, not a late failure. | - |
-| RR-13 | `verification/serve.js` answers 400 to a malformed percent-encoded path (and to a NUL byte) instead of throwing. `curl /%E0%A4%A` returns 400, and the next request returns 200. | The plain guard ran as one pass (below). |
+| RR-13 | `verification/serve.js` answers 400 to a malformed percent-encoded path instead of throwing. `curl /%E0%A4%A` returns 400, and the next request returns 200. A NUL byte in the path returns 403 (the traversal check), which is also safe. | The plain guard ran as one pass (below). |
 
 RR-10 (data points) and RR-07 (overlapping boxes on home, taps hit the link) are unchanged notes.
 

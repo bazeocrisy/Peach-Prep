@@ -6,9 +6,9 @@ PP.addLesson({
     big: "When I meet a new school word, I keep reading, because the words around it often tell me what it means.",
     points: [
       "Some new words are school words you use in every subject, like describe, compare and explain.",
-      "Other new words belong to one subject, like habitat in science or citizen in social studies.",
+      "Other new words belong to one subject, like habitat in science or citizen in social studies. Some new ideas are phrases, a small group of words that have one meaning together, like food chain.",
       "Authors often explain a new word right away. Look for helper words such as is called, means, is a, or a meaning set off by commas.",
-      "If the author does not explain the word, read the next sentence. It may tell what the thing does or give examples of it.",
+      "If the author does not explain the word, read the next sentence. It may tell what the thing does or give examples of it. The clue can also come in the sentences just before the word.",
       "Try your meaning in the sentence. If it makes sense, you figured out the word."
     ],
     words: [
@@ -16,12 +16,19 @@ PP.addLesson({
       { term: "content word", means: "a word that belongs to one subject, like habitat in science (also called a specialized word)" },
       { term: "definition", means: "the meaning of a word" }
     ],
-    example: {
-      label: "Example",
-      lines: ["Bees carry pollen, a fine powder made by flowers, from one flower to the next."],
-      note: "Pollen is a science word. The words between the commas, a fine powder made by flowers, tell you what it means right away."
-    },
-    tip: "On the test, a question may ask what a science or social studies word means in a passage. The help is usually in the same sentence or the one right after it, so read around the word."
+    examples: [
+      {
+        label: "Example: a word",
+        lines: ["Bees carry pollen, a fine powder made by flowers, from one flower to the next."],
+        note: "Pollen is a science word. The words between the commas, a fine powder made by flowers, tell you what it means right away."
+      },
+      {
+        label: "Example: a phrase",
+        lines: ["Grass is eaten by a rabbit. The rabbit is eaten by a fox. This path of who eats what is called a food chain."],
+        note: "Food chain is a phrase, so read the two words as one idea. The sentences just before it show the path, and the helper words is called give the name."
+      }
+    ],
+    tip: "On the test, a question may ask what a science or social studies word or phrase means in a passage. The help is usually in the same sentence or the ones right next to it, so read around the word."
   },
   learn: [
     {
@@ -73,7 +80,90 @@ PP.addLesson({
         ["When the drops in a cloud join and get too heavy, they fall to the ground.", "Water that falls from clouds is called precipitation.", "Rain, snow, sleet and hail are all kinds of precipitation."],
         ["Some of the water soaks into the ground.", "Much of it flows into rivers, lakes and oceans.", "Then the cycle begins again."],
         ["Weather scientists study clouds and wind every day.", "This helps them predict rain.", "They can tell us a day or two ahead that a storm is coming, so we know to bring an umbrella."]
-      ] }
+      ] },
+    /* B5-b5b:passages:start */
+    {
+      id: "p3",
+      title: "The Trading Post",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "Long ago in Georgia, people did not always use money.",
+          "Instead, many went to a trading post.",
+          "A trading post was a store where people traded goods, or things that are made, grown or caught."
+        ],
+        [
+          "A hunter might bring deerskins to the post.",
+          "The trader gave him cloth and a metal pot in return.",
+          "This kind of trading is called barter.",
+          "Nobody pays with coins when they barter."
+        ],
+        [
+          "Many posts stood beside rivers, because boats could carry heavy loads easily.",
+          "Even so, a trip to the post could take many days.",
+          "Travelers had to be patient.",
+          "They stayed calm and waited for the weather to clear."
+        ],
+        [
+          "Deerskins were very valuable.",
+          "One skin could buy a warm blanket."
+        ],
+        [
+          "Today, you can still barter.",
+          "Two friends might swap a baseball card for a book, with no money at all."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Life on a Fallen Log",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "A fallen log may look dead, but it is full of life.",
+          "Beetles chew tunnels in its soft wood.",
+          "Spiders and ants hide in the cracks of its bark."
+        ],
+        [
+          "Some small animals on the log are decomposers.",
+          "They break down dead plants and animals into tiny bits.",
+          "These bits go back into the soil and help new plants grow."
+        ],
+        [
+          "Moss grows best where the air is damp.",
+          "The cool, shady side of the log stays a little wet all day.",
+          "Green moss covers that side like a soft rug."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Gold in the Georgia Hills",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "In 1828, a man found gold near Dahlonega, a town in the hills of north Georgia.",
+          "News spread fast.",
+          "Soon thousands of people hurried there to hunt for gold."
+        ],
+        [
+          "A person who searches for gold is called a prospector.",
+          "Many prospectors scooped gravel and water into a metal pan.",
+          "They swirled the pan.",
+          "The heavy gold sank to the bottom, and the light gravel washed away.",
+          "This was called panning for gold."
+        ],
+        [
+          "The prospectors were eager to find gold, so they worked from sunrise to sunset.",
+          "Large nuggets, or lumps of gold, were rare.",
+          "Most prospectors found only a few tiny bits, and many went home with little."
+        ],
+        [
+          "Today, visitors can pan for gold in Dahlonega too."
+        ]
+      ]
+    }
+    /* B5-b5b:passages:end */
   ],
   practice: [
     { id: "SK-V1a-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -131,6 +221,1445 @@ PP.addLesson({
       clue: "Read the sentence right after the one with compare. What do the scientists look for?",
       why: "The answer is \"to look at how things are alike and different.\" The next sentence says the scientists look for what stays the same and what is different. The scientists do go to the marsh in two seasons, but compare means looking for what is alike and different, not just visiting. Compare is a school word you will use in every subject, not only in science." }
   ],
+  /* B5-b5b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B5 (author b5b) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Author log: docs/expansion-2026-10-22/batches/B5-b5b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-V1a-P4"
+          },
+          {
+            ref: "SK-V1a-P5"
+          },
+          {
+            id: "SK-V1a-C03",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p1"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does predators mean as it is used in paragraph 3?",
+              choices: [
+                {
+                  text: "animals that catch other animals to eat",
+                  correct: true
+                },
+                {
+                  text: "animals that hide in the mud when the tide rises"
+                },
+                {
+                  text: "animals that eat only the grass in the marsh"
+                },
+                {
+                  text: "animals that live in salty water all year long"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the passage BEST supports the answer to Part A?",
+              choices: [
+                {
+                  text: "\"They hunt other animals for food.\"",
+                  correct: true
+                },
+                {
+                  text: "\"The water is so low that it barely covers the bird's feet.\""
+                },
+                {
+                  text: "\"Fiddler crabs dig small holes in the mud.\""
+                },
+                {
+                  text: "\"The grass is green and tall in summer, but it turns brown in winter.\""
+                }
+              ]
+            },
+            clue: "Read around a new word. The author may tell you what it means in the same sentence or in the next one.",
+            hints: [
+              "Read around a new word. The author may tell you what it means in the same sentence or in the next one.",
+              "Find predators in paragraph 3 and read the whole paragraph. Ask what those animals do.",
+              "The sentence about the low water tells where a heron stands, not what a predator is. Check the other choices."
+            ],
+            how: [
+              "Find the word: \"Some animals in the marsh are predators.\" This sentence does not say what the word means.",
+              "Read the next sentence: \"They hunt other animals for food.\" The word They stands for the predators, so predators are animals that hunt other animals to eat.",
+              "Part A: animals that catch other animals to eat. Part B: \"They hunt other animals for food.\"",
+              "The low water and the crab holes are about other things in the marsh."
+            ],
+            misconception: "A common mix-up is choosing a detail about the heron or the water. The meaning is in the sentence right after the word.",
+            why: "Part A: animals that catch other animals to eat. Part B: \"They hunt other animals for food.\" The sentence after the word tells what predators do. The sentence about the low water tells where the heron stands, and the crab sentence is about burrows."
+          },
+          {
+            id: "SK-V1a-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "Read the paragraph. What does the phrase gives off mean?",
+            stem: [
+              "On a cold night, a campfire gives off heat and light. Even from a few steps away, you can feel the warmth on your face and see the glow on the trees."
+            ],
+            choices: [
+              {
+                text: "sends out into the air",
+                correct: true
+              },
+              {
+                text: "soaks up from the air"
+              },
+              {
+                text: "hands over to a friend"
+              },
+              {
+                text: "puts out and stops"
+              }
+            ],
+            clue: "A group of words can have its own meaning, like a single word. Think about what the whole group tells you is happening.",
+            hints: [
+              "A group of words can have its own meaning, like a single word. Think about what the whole group tells you is happening.",
+              "Read the sentence with the phrase, and then the next sentence. Where do the warmth and the glow reach?",
+              "Think about which way the heat and light move: toward the fire or away from it."
+            ],
+            how: [
+              "The first sentence says a campfire gives off heat and light.",
+              "The next sentence says you can feel the warmth and see the glow from a few steps away. The heat and light travel out from the fire to you.",
+              "So gives off means sends out into the air.",
+              "The fire is not soaking anything up, handing it to a friend or stopping."
+            ],
+            misconception: "A common mix-up is reading give and off as two separate words. Together they mean something different.",
+            why: "The answer is \"sends out into the air.\" The heat and light reach people a few steps away, so they travel out from the fire. The fire does not soak them up, hand them to a friend or put them out."
+          },
+          {
+            id: "SK-V1a-C05",
+            type: "hottext",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p1"
+            ],
+            prompt: "Jonah says the word shallow in paragraph 3 means full of fish. Choose the sentence that shows Jonah is wrong.",
+            targets: [
+              "p1:3:2",
+              "p1:3:3",
+              "p1:3:4",
+              "p1:3:5"
+            ],
+            answer: [
+              "p1:3:4"
+            ],
+            pick: 1,
+            clue: "To check what someone says a word means, look for a sentence that gives a clue about the word. Does the clue fit what he says?",
+            hints: [
+              "To check what someone says a word means, look for a sentence that gives a clue about the word. Does the clue fit what he says?",
+              "Find the sentence that uses shallow. Read it and the sentence after it. What does the author tell you about the water?",
+              "The sentence about the fish tells what the heron does. It does not tell how deep the water is. Look at the other sentences."
+            ],
+            how: [
+              "Find shallow: \"A tall heron stands very still in the shallow water.\" This sentence does not say what shallow means.",
+              "Read the sentence after it: \"The water is so low that it barely covers the bird's feet.\" Water that barely covers feet is not deep.",
+              "That sentence shows shallow means not deep, so it shows Jonah is wrong. The sentence about the fish names fish but says nothing about how deep the water is."
+            ],
+            misconception: "A common mix-up is choosing the sentence that has the word fish in it. A clue must tell what the word means, not just match Jonah's words.",
+            why: "The answer is \"The water is so low that it barely covers the bird's feet.\" Water that barely covers a bird's feet is not deep, so shallow means not deep. The sentence about the fish only tells what the heron does."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-V1a-C06",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "What does the word barter mean in paragraph 2?",
+            choices: [
+              {
+                text: "to trade things without using money",
+                correct: true
+              },
+              {
+                text: "to sell goods for a higher price"
+              },
+              {
+                text: "to pay with coins at a store"
+              },
+              {
+                text: "to give something away as a gift"
+              }
+            ],
+            clue: "The words around a new word can tell what it means. Look at what the sentences before and after it say.",
+            hints: [
+              "The words around a new word can tell what it means. Look at what the sentences before and after it say.",
+              "Read the sentence with barter and the sentence after it. What do they say about money?",
+              "A gift is given for nothing, but the hunter gets cloth and a pot back for his deerskins. Check the other choices."
+            ],
+            how: [
+              "Find barter: \"This kind of trading is called barter.\" Before it, a hunter brings deerskins and the trader gives him cloth and a pot.",
+              "Read the sentence after it: \"Nobody pays with coins when they barter.\" So barter is trading with no money.",
+              "The answer is \"to trade things without using money.\"",
+              "The hunter does not pay coins, and he does not get something for nothing."
+            ],
+            misconception: "A common mix-up is choosing a meaning about buying or selling. In barter, nobody pays coins.",
+            why: "The answer is \"to trade things without using money.\" The hunter gives deerskins and gets cloth and a pot, and the next sentence says nobody pays with coins. Selling and paying with coins both use money. A gift is given for nothing in return."
+          },
+          {
+            id: "SK-V1a-C07",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "Choose the meaning of each phrase from the passage.",
+            text: "In paragraph 1, a trading post is {0}. In paragraph 2, in return means {1}.",
+            slots: [
+              {
+                options: [
+                  "a stop where travelers rest for the night",
+                  "a store where people trade goods",
+                  "a boat that carries heavy loads"
+                ],
+                answer: 1
+              },
+              {
+                options: [
+                  "on the trip back home",
+                  "at the very same time",
+                  "in exchange for it"
+                ],
+                answer: 2
+              }
+            ],
+            clue: "Some words work together as a group. Read the whole group of words as one idea, then check it in the sentence.",
+            hints: [
+              "Some words work together as a group. Read the whole group of words as one idea, then check it in the sentence.",
+              "For each blank, find the group of words in the passage. Read the words right before and right after it.",
+              "For the second blank, think about who gave something first and who gave something after. Does anyone go back anywhere?"
+            ],
+            how: [
+              "Blank one: paragraph 1 says \"A trading post was a store where people traded goods.\" The words right after the phrase tell what it is.",
+              "Blank two: the hunter brings deerskins, and the trader gave him cloth and a pot in return. The cloth and pot are what he gets for the deerskins.",
+              "So in return means in exchange for it. The hunter is not going back home, and the trades do not happen at the same time."
+            ],
+            misconception: "A common mix-up is reading in return as going back, because return can mean go back. Here it means one thing is given for another.",
+            why: "The answers are \"a store where people trade goods\" and \"in exchange for it.\" Paragraph 1 says a trading post was a store where people traded goods. In paragraph 2 the trader gives cloth and a pot for the deerskins. A resting stop and a boat are not what the passage says, and nobody goes back home."
+          },
+          {
+            id: "SK-V1a-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "Which TWO groups of words from paragraph 3 help you know what patient means?",
+            pick: 2,
+            choices: [
+              {
+                text: "stayed calm",
+                correct: true
+              },
+              {
+                text: "waited for the weather to clear",
+                correct: true
+              },
+              {
+                text: "Travelers had to be"
+              },
+              {
+                text: "stood beside rivers"
+              },
+              {
+                text: "carry heavy loads easily"
+              }
+            ],
+            clue: "Words that tell what people do or feel can show a word's meaning. Look for words that describe how the people acted.",
+            hints: [
+              "Words that tell what people do or feel can show a word's meaning. Look for words that describe how the people acted.",
+              "Read all of paragraph 3. Which parts tell what the travelers did, and which parts only tell about the posts or the boats?",
+              "Words about where the posts stood are about a place. They do not tell what the travelers were like. Look at what is left."
+            ],
+            how: [
+              "Read paragraph 3 and find who must be patient: the travelers.",
+              "Look for what the travelers did. They \"stayed calm\" and \"waited for the weather to clear.\"",
+              "Those two groups of words show patient means staying calm while you wait.",
+              "\"Travelers had to be\" holds the word but gives no meaning. The words about the posts and the boats do not tell about the travelers."
+            ],
+            misconception: "A common mix-up is choosing the group of words that holds the new word. That group names the word but does not explain it.",
+            why: "The answers are \"stayed calm\" and \"waited for the weather to clear.\" They tell what the travelers did, so they show patient means able to wait calmly. \"Travelers had to be\" does not explain the word. \"Stood beside rivers\" and \"carry heavy loads easily\" are about the posts and the boats."
+          },
+          {
+            id: "SK-V1a-C09",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "How does the author help you understand the word goods in paragraph 1?",
+            choices: [
+              {
+                text: "It explains the word right after it, using the word or.",
+                correct: true
+              },
+              {
+                text: "It lists deerskins and cloth as examples of goods."
+              },
+              {
+                text: "It uses a word that means the opposite of goods."
+              },
+              {
+                text: "It tells a story about a trader who sold goods."
+              }
+            ],
+            clue: "Authors can help readers with a new word in different ways. Ask what this author does.",
+            hints: [
+              "Authors can help readers with a new word in different ways. Ask what this author does.",
+              "Find the sentence with goods in paragraph 1. Look at the words that come with the word.",
+              "The deerskins and the cloth appear in paragraph 2, not in this sentence. Check the other choices against the sentence."
+            ],
+            how: [
+              "Find goods in paragraph 1: \"A trading post was a store where people traded goods, or things that are made, grown or caught.\"",
+              "After goods comes a comma and the word or. The words after or say what goods are: things that are made, grown or caught.",
+              "So the author gives the meaning right after the word.",
+              "There is no list of examples in that sentence, no opposite word and no story."
+            ],
+            misconception: "A common mix-up is choosing examples, because deerskins and cloth appear later. The sentence with goods gives a meaning, not examples.",
+            why: "The answer is \"It explains the word right after it, using the word or.\" The words after or tell what goods are. Deerskins and cloth come later, in paragraph 2. The sentence has no word with the opposite meaning and no story about a trader."
+          },
+          {
+            id: "SK-V1a-C10",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does the word valuable mean in paragraph 4?",
+              choices: [
+                {
+                  text: "worth a lot",
+                  correct: true
+                },
+                {
+                  text: "soft and warm"
+                },
+                {
+                  text: "easy to find"
+                },
+                {
+                  text: "very old"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the passage BEST helps you know what valuable means?",
+              choices: [
+                {
+                  text: "\"One skin could buy a warm blanket.\"",
+                  correct: true
+                },
+                {
+                  text: "\"Deerskins were very valuable.\""
+                },
+                {
+                  text: "\"A hunter might bring deerskins to the post.\""
+                },
+                {
+                  text: "\"Even so, a trip to the post could take many days.\""
+                }
+              ]
+            },
+            clue: "Sometimes a word is explained by what happens next. Ask what the author tells you about the thing right after the new word.",
+            hints: [
+              "Sometimes a word is explained by what happens next. Ask what the author tells you about the thing right after the new word.",
+              "Find valuable in paragraph 4 and read the whole paragraph. What could one skin do?",
+              "The sentence that holds the word valuable only repeats it, so it cannot explain it. Check the other three."
+            ],
+            how: [
+              "Find the word: \"Deerskins were very valuable.\" This sentence does not say what valuable means.",
+              "Read the next sentence: \"One skin could buy a warm blanket.\" One skin could buy something people needed.",
+              "Something that can buy a lot is worth a lot. Part A: worth a lot. Part B: the sentence about the blanket.",
+              "The sentence that holds the word only repeats it."
+            ],
+            misconception: "A common mix-up is choosing the sentence that has the word valuable in it. A clue must tell what the word means.",
+            why: "Part A: worth a lot. Part B: \"One skin could buy a warm blanket.\" One skin could buy something people needed, so skins were worth a lot. The sentence with valuable only repeats the word. The other sentences are about the hunter and the trip."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-V1a-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "What does rotate mean in the coach's sentence, and what clue shows it?",
+            stem: [
+              "Coach Ellis told the soccer team, \"We will rotate positions after each game.\" After the first game, Dana moved from goalie to defender. After the second game, she moved from defender to forward."
+            ],
+            choices: [
+              {
+                text: "to take turns in new spots, because Dana changed spots after each game",
+                correct: true
+              },
+              {
+                text: "to spin in a circle, because players run around the field in a game"
+              },
+              {
+                text: "to join a new team, because Dana did not stay with the same players"
+              },
+              {
+                text: "to rest on the bench, because Dana did not play in the last game"
+              }
+            ],
+            clue: "Use what the story shows to test each meaning. Ask what happens to the players, and which meaning fits those events.",
+            hints: [
+              "Use what the story shows to test each meaning. Ask what happens to the players, and which meaning fits those events.",
+              "Look at what happened to Dana after the first game and after the second game. What stayed the same, and what is different?",
+              "Dana is on the same team the whole time. Check each choice to see whether it matches what really happened to her."
+            ],
+            how: [
+              "Read the coach's sentence: players will rotate positions after each game.",
+              "Look at the example. Dana was a goalie, then a defender, then a forward. She changed her spot after every game.",
+              "So rotate means to take turns in new spots.",
+              "Dana stays on the same team and keeps playing, so the choices about a new team or sitting out do not fit. Nothing in the story shows players spinning."
+            ],
+            misconception: "A common mix-up is choosing the meaning you already know, spin around. Here the example shows a different meaning.",
+            why: "The answer is \"to take turns in new spots, because Dana changed spots after each game.\" She went from goalie to defender to forward. She stayed on the team, so she did not join a new one. She kept playing, so she did not rest on the bench. Nothing in the story shows players spinning."
+          },
+          {
+            id: "SK-V1a-C12",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "Choose the meaning of each word or phrase in the recipe.",
+            stem: [
+              "Dad's recipe said, \"Dissolve the sugar in the warm water.\" We stirred until we could not see any sugar. Then Dad told us to add a pinch of salt. \"A pinch is the small bit you can hold between two fingers,\" he said."
+            ],
+            text: "In the recipe, dissolve means {0}. A pinch is {1}.",
+            slots: [
+              {
+                options: [
+                  "pour out and throw away",
+                  "mix in until it seems to disappear",
+                  "heat until it turns brown"
+                ],
+                answer: 1
+              },
+              {
+                options: [
+                  "a quick, sharp squeeze",
+                  "a big spoonful",
+                  "a very small amount"
+                ],
+                answer: 2
+              }
+            ],
+            clue: "Use what the family does and says in the story. The actions and the words after a new word can show its meaning.",
+            hints: [
+              "Use what the family does and says in the story. The actions and the words after a new word can show its meaning.",
+              "For the first blank, read what the family did after they were told to dissolve. For the second blank, read what Dad said right after.",
+              "For the first blank, the family stirred until the sugar was gone from sight. Think about whether the sugar was thrown away or heated."
+            ],
+            how: [
+              "Blank one: the family stirred until they could not see any sugar. The sugar did not leave the bowl. It mixed into the water and seemed to disappear.",
+              "Blank two: Dad says a pinch is the small bit you can hold between two fingers. That is a very small amount.",
+              "A pinch can also mean a sharp squeeze, but that meaning does not fit a recipe with salt."
+            ],
+            misconception: "A common mix-up is choosing the meaning of pinch you already know, a squeeze. Check which meaning fits the recipe.",
+            why: "The answers are \"mix in until it seems to disappear\" and \"a very small amount.\" The family stirred until the sugar could not be seen, so it mixed into the water. Dad says a pinch is the small bit you can hold between two fingers. A sharp squeeze is another meaning of pinch, but it does not fit salt in a recipe."
+          },
+          {
+            id: "SK-V1a-C13",
+            type: "hottext",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "Amir is writing about erosion. Which sentence should come next so a reader can figure out what the word means?",
+            stem: [
+              "Erosion changes the land in many places."
+            ],
+            options: [
+              "Many scientists study erosion at beaches, in canyons and on farms.",
+              "Wind and rain slowly carry soil and rock from one place to another.",
+              "Erosion is a topic that students learn about in science class.",
+              "Erosion is easy to see after a very big rainstorm."
+            ],
+            answer: [
+              1
+            ],
+            pick: 1,
+            clue: "A helpful sentence gives a reader a clue that tells what the new word means. Ask what each sentence lets a reader find out.",
+            hints: [
+              "A helpful sentence gives a reader a clue that tells what the new word means. Ask what each sentence lets a reader find out.",
+              "Read each choice as if you had never heard the word erosion. Which one lets you picture what is happening to the land?",
+              "A sentence that says where scientists study something tells where to find it, but not what it is. Check the other choices."
+            ],
+            how: [
+              "The reader does not know erosion, so the next sentence must tell what it is or what it does.",
+              "Check each choice. One says where scientists study it. One says students learn it in class. One says when it is easy to see. Each leaves the reader asking, \"But what is erosion?\"",
+              "\"Wind and rain slowly carry soil and rock from one place to another\" tells what happens, so it gives the meaning."
+            ],
+            misconception: "A common mix-up is choosing a sentence that repeats the word. A good clue explains it.",
+            why: "The answer is \"Wind and rain slowly carry soil and rock from one place to another.\" It tells what erosion does, so a reader can figure out the word. The other sentences use the word but never say what it is."
+          },
+          {
+            id: "SK-V1a-C14",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "Match each word from the field trip to its meaning.",
+            stem: [
+              "Our class visited an observatory, a building with big tools for studying the sky. The guide let us look through the lens, the clear curved glass that makes far things look closer. She said the moon is a satellite, an object that circles a larger one."
+            ],
+            cols: [
+              "a building for studying the sky",
+              "an object that circles a larger one",
+              "a machine that makes electricity",
+              "clear curved glass that makes far things look closer"
+            ],
+            rows: [
+              {
+                text: "observatory",
+                answer: 0
+              },
+              {
+                text: "satellite",
+                answer: 1
+              },
+              {
+                text: "lens",
+                answer: 3
+              }
+            ],
+            clue: "In this paragraph, each new word is followed by words that explain it. Look for the comma after the word.",
+            hints: [
+              "In this paragraph, each new word is followed by words that explain it. Look for the comma after the word.",
+              "Find each word in the paragraph. Read the words that come right after it, up to the next period.",
+              "One meaning in the list is not explained anywhere in the paragraph. Decide which row each of the others goes with."
+            ],
+            how: [
+              "Find observatory. After the comma: \"a building with big tools for studying the sky.\"",
+              "Find lens. After the comma: \"the clear curved glass that makes far things look closer.\"",
+              "Find satellite. After the comma: \"an object that circles a larger one.\" The moon circles Earth, and Earth is larger.",
+              "No part of the paragraph talks about a machine that makes electricity."
+            ],
+            misconception: "A common mix-up is guessing from a word you already know. Use the words the author puts right after each new word.",
+            why: "Observatory means a building for studying the sky. Satellite means an object that circles a larger one. Lens means clear curved glass that makes far things look closer. The paragraph never mentions a machine that makes electricity."
+          },
+          {
+            id: "SK-V1a-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.1.a"
+            ],
+            passages: [],
+            prompt: "Use the meaning of perimeter to solve the problem.",
+            stem: [
+              "Mr. Hill's garden is a rectangle. The perimeter of a shape is the distance all the way around its edges. The garden is 6 feet long and 4 feet wide. Marcus wants to put a fence around the whole garden."
+            ],
+            text: "The perimeter is the distance {0}. The fence must be {1} feet long.",
+            slots: [
+              {
+                options: [
+                  "across the middle of a shape",
+                  "inside the corners of a shape",
+                  "all the way around a shape"
+                ],
+                answer: 2
+              },
+              {
+                options: [
+                  "10",
+                  "20",
+                  "24"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Use the definition in the problem. Say in your own words what the new word measures.",
+            hints: [
+              "Use the definition in the problem. Say in your own words what the new word measures.",
+              "Draw the garden. Mark each side and its length, then ask which sides the fence has to go along.",
+              "A rectangle has four sides, and the two long sides match, and so do the two short sides. Find the length of one long side and one short side before adding."
+            ],
+            how: [
+              "The problem says the perimeter is the distance all the way around the edges of a shape.",
+              "The fence goes around the whole garden, so it must cover all four sides: 6 feet, 4 feet, 6 feet and 4 feet.",
+              "Add: 6 + 4 + 6 + 4 = 20. The fence must be 20 feet long.",
+              "Ten feet adds only two sides, and 24 is a different measure (6 times 4)."
+            ],
+            misconception: "A common mix-up is adding only the length and the width. A fence around the garden covers all four sides.",
+            why: "The answers are \"all the way around a shape\" and 20. The fence goes around all four sides: 6 + 4 + 6 + 4 = 20 feet. Ten feet counts only two sides. Twenty-four comes from multiplying 6 by 4, which does not measure the distance around."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-V1a-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-P4"
+      ],
+      prompt: "Read the paragraph. What does the word conserve mean?",
+      stem: [
+        "Our town asked families to conserve water this summer. Dad turned off the tap while he brushed his teeth. Mom watered the garden from a bucket instead of letting the hose run."
+      ],
+      choices: [
+        {
+          text: "to use only what you need",
+          correct: true
+        },
+        {
+          text: "to pour out on the ground"
+        },
+        {
+          text: "to clean with soap"
+        },
+        {
+          text: "to carry to another place"
+        }
+      ],
+      clue: "Read the sentences after the new word. They may show what people do.",
+      hints: [
+        "Read the sentences after the new word. They may show what people do.",
+        "Look at what Dad and Mom each did. What did they stop doing, and why would that matter for water?",
+        "Nobody in the paragraph carries water anywhere or washes anything with it. Check the other choices against what Dad and Mom did."
+      ],
+      how: [
+        "Find conserve: the town asked families to conserve water.",
+        "Read what the family did. Dad turned off the tap while brushing, and Mom used a bucket instead of a running hose.",
+        "Both of them used less water. Conserve means to use only what you need.",
+        "Pouring water out would waste it, and nobody washed or moved water in the paragraph."
+      ],
+      misconception: "A common mix-up is guessing from the word water. Use what the family does.",
+      why: "The answer is \"to use only what you need.\" Dad turned off the tap and Mom used a bucket, so they used less water. Pouring water on the ground would waste it. Nobody cleans or carries water in the paragraph."
+    },
+    {
+      id: "SK-V1a-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-P5"
+      ],
+      prompt: "Read the paragraph. What does the word classify mean?",
+      stem: [
+        "Our teacher asked us to classify the rocks in the tray. We put the smooth ones in one pile and the rough ones in another. Then we sorted each pile by color."
+      ],
+      choices: [
+        {
+          text: "to sort into groups",
+          correct: true
+        },
+        {
+          text: "to break into pieces"
+        },
+        {
+          text: "to wash with water"
+        },
+        {
+          text: "to count one by one"
+        }
+      ],
+      clue: "Read the sentences after the new word. They may show what the class did.",
+      hints: [
+        "Read the sentences after the new word. They may show what the class did.",
+        "Look at what the students did with the rocks. What did they make?",
+        "The students did not break or wash any rock. Check the other choices against what they did."
+      ],
+      how: [
+        "Find classify: the teacher asked the class to classify the rocks.",
+        "Read what the students did: smooth rocks in one pile, rough rocks in another, then each pile sorted by color.",
+        "They put the rocks into groups. Classify means to sort into groups.",
+        "Nobody broke, washed or counted the rocks."
+      ],
+      misconception: "A common mix-up is picking a meaning about touching the rocks. Use the piles the students made.",
+      why: "The answer is \"to sort into groups.\" The students made piles for smooth and rough rocks and then sorted each pile by color. Nobody broke, washed or counted the rocks."
+    },
+    {
+      id: "SK-V1a-S03",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p4"
+      ],
+      like: [
+        "SK-V1a-C03"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "According to paragraph 2, what are decomposers?",
+        choices: [
+          {
+            text: "living things which turn what has died into bits",
+            correct: true
+          },
+          {
+            text: "beetles which chew tunnels in soft wood"
+          },
+          {
+            text: "mosses which grow best in damp places"
+          },
+          {
+            text: "young plants which grow on top of a log"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which line from the article offers the strongest support for Part A?",
+        choices: [
+          {
+            text: "\"They break down dead plants and animals into tiny bits.\"",
+            correct: true
+          },
+          {
+            text: "\"Beetles chew tunnels in its soft wood.\""
+          },
+          {
+            text: "\"Moss grows best where the air is damp.\""
+          },
+          {
+            text: "\"These bits go back into the soil and help new plants grow.\""
+          }
+        ]
+      },
+      clue: "When a writer uses a word you do not know, the lines near it often say what it means.",
+      hints: [
+        "When a writer uses a word you do not know, the lines near it often say what it means.",
+        "Find decomposers in paragraph 2 and read the whole paragraph. Ask what those living things do.",
+        "The beetles chewing tunnels are in a different paragraph, and the article never calls them decomposers. Check the other choices."
+      ],
+      how: [
+        "Find the word: \"Some small animals on the log are decomposers.\"",
+        "Read the next line: \"They break down dead plants and animals into tiny bits.\" They means the decomposers.",
+        "Part A: living things which turn what has died into bits. Part B: that line.",
+        "The lines about beetles and moss are about other living things on the log."
+      ],
+      misconception: "A common mix-up is choosing a line about another animal on the log. The meaning is in the line right after the word.",
+      why: "Part A: living things which turn what has died into bits. Part B: \"They break down dead plants and animals into tiny bits.\" The line after the word tells what decomposers do. The beetle and moss lines describe other things on the log."
+    },
+    {
+      id: "SK-V1a-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C04"
+      ],
+      prompt: "Read the paragraph. What does the phrase took shelter mean?",
+      stem: [
+        "When the storm began, the hikers took shelter under a rock ledge. They sat there with dry clothes and warm drinks until the rain stopped."
+      ],
+      choices: [
+        {
+          text: "went to a safe place out of the weather",
+          correct: true
+        },
+        {
+          text: "hurried to the top of the hill"
+        },
+        {
+          text: "packed up their camp to leave"
+        },
+        {
+          text: "took pictures of the dark clouds"
+        }
+      ],
+      clue: "A group of words can have its own meaning, like one word. Think about what the whole group tells you the hikers did.",
+      hints: [
+        "A group of words can have its own meaning, like one word. Think about what the whole group tells you the hikers did.",
+        "Read the sentence with the phrase, and then the next sentence. Where were the hikers, and how did they feel?",
+        "The hikers sat under the ledge until the rain stopped. Check each choice to see if it fits staying put."
+      ],
+      how: [
+        "Find the phrase: the hikers took shelter under a rock ledge when the storm began.",
+        "Read the next sentence. They sat there with dry clothes until the rain stopped. The ledge kept the rain off them.",
+        "Took shelter means went to a safe place out of the weather.",
+        "They did not climb, leave or take pictures."
+      ],
+      misconception: "A common mix-up is reading the phrase one word at a time. Took shelter is a group of words with one meaning.",
+      why: "The answer is \"went to a safe place out of the weather.\" The hikers sat under a ledge and stayed dry until the rain stopped. Nothing in the paragraph says they climbed, packed up or took pictures."
+    },
+    {
+      id: "SK-V1a-S05",
+      type: "hottext",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p4"
+      ],
+      like: [
+        "SK-V1a-C05"
+      ],
+      prompt: "Eli claims that damp means very dry. Pick the sentence in paragraph 3 that proves him wrong.",
+      targets: [
+        "p4:3:1",
+        "p4:3:2",
+        "p4:3:3",
+        "p4:2:3"
+      ],
+      answer: [
+        "p4:3:2"
+      ],
+      pick: 1,
+      clue: "To test what a person claims about a word, look for a sentence that gives a clue about the word. Does the clue fit the claim?",
+      hints: [
+        "To test what a person claims about a word, look for a sentence that gives a clue about the word. Does the clue fit the claim?",
+        "Find the sentence that uses damp. Read it and the sentence after it. What does the writer say about the shady side of the log?",
+        "The sentence about the soft rug tells how the moss looks. It does not tell if the log is wet or dry. Look at the other sentences."
+      ],
+      how: [
+        "Find damp: \"Moss grows best where the air is damp.\" This sentence does not say what damp means.",
+        "Read the sentence after it: \"The cool, shady side of the log stays a little wet all day.\" A place that stays a little wet is not dry.",
+        "So damp means a little wet, and Eli is wrong.",
+        "The sentence about the rug only describes how the moss looks."
+      ],
+      misconception: "A common mix-up is choosing the sentence that contains the word damp. A clue must tell what the word means.",
+      why: "The answer is \"The cool, shady side of the log stays a little wet all day.\" It shows the moss grows where things stay a little wet, so damp does not mean dry. The sentence with the word itself only repeats it, and the rug sentence is about how the moss looks."
+    },
+    {
+      id: "SK-V1a-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p5"
+      ],
+      like: [
+        "SK-V1a-C06"
+      ],
+      prompt: "In paragraph 2, who is a prospector?",
+      choices: [
+        {
+          text: "someone who looks for gold",
+          correct: true
+        },
+        {
+          text: "someone who sells gold to a banker"
+        },
+        {
+          text: "someone who digs deep tunnels under a hill"
+        },
+        {
+          text: "someone who builds a town by a stream"
+        }
+      ],
+      clue: "A new word can be explained by the words right around it. Look for words that tell who or what it is.",
+      hints: [
+        "A new word can be explained by the words right around it. Look for words that tell who or what it is.",
+        "Read the sentence with prospector and then the sentences about the pan. What do the people in those sentences do?",
+        "The people in the paragraph work in a stream with a pan. Think about whether anyone sells or builds in those sentences."
+      ],
+      how: [
+        "Find prospector: \"A person who searches for gold is called a prospector.\"",
+        "The words before called tell who the word names: a person who searches for gold.",
+        "The next sentences show prospectors scooping gravel and water into a pan, not selling gold, digging tunnels or building a town.",
+        "So a prospector is someone who looks for gold."
+      ],
+      misconception: "A common mix-up is choosing a miner who digs tunnels. The paragraph shows prospectors using a pan in a stream.",
+      why: "The answer is \"someone who looks for gold.\" The sentence says so before the word called. The prospectors use a pan, so they do not sell to a banker, dig deep tunnels or build a town."
+    },
+    {
+      id: "SK-V1a-S07",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p5"
+      ],
+      like: [
+        "SK-V1a-C07"
+      ],
+      prompt: "Finish each sentence with the best meaning.",
+      text: "Panning for gold means {0}. When a prospector went home with little, {1}.",
+      slots: [
+        {
+          options: [
+            "painting gold onto a pan",
+            "washing away gravel to find gold",
+            "melting gold in a hot pan"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "there was not much gold to show",
+            "the trip home was very short",
+            "the family had lots of nuggets"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "A group of words can mean one thing. Read each phrase with the sentences around it.",
+      hints: [
+        "A group of words can mean one thing. Read each phrase with the sentences around it.",
+        "For the first blank, read the steps just before the words panning for gold. For the second blank, read the whole last sentence of paragraph 3.",
+        "For the second blank, the sentence says most prospectors found only a few tiny bits. Think about what that means for how much they took home."
+      ],
+      how: [
+        "Blank one: the prospectors scooped gravel and water, swirled the pan, and the light gravel washed away. Then the passage says, \"This was called panning for gold.\"",
+        "Blank two: most prospectors found only a few tiny bits, and many went home with little. They had little gold to show.",
+        "So the answers are washing away gravel to find gold and there was not much gold to show."
+      ],
+      misconception: "A common mix-up is guessing from the words pan and gold. Use the steps the author describes.",
+      why: "The answers are \"washing away gravel to find gold\" and \"there was not much gold to show.\" The steps describe washing light gravel out of the pan so the heavy gold stays. Most prospectors found only tiny bits, so they came home with little gold."
+    },
+    {
+      id: "SK-V1a-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p5"
+      ],
+      like: [
+        "SK-V1a-C08"
+      ],
+      prompt: "Choose TWO details from the passage that show what eager means.",
+      pick: 2,
+      choices: [
+        {
+          text: "hurried there to hunt for gold",
+          correct: true
+        },
+        {
+          text: "worked from sunrise to sunset",
+          correct: true
+        },
+        {
+          text: "found gold near Dahlonega"
+        },
+        {
+          text: "swirled the pan"
+        },
+        {
+          text: "found only a few tiny bits"
+        }
+      ],
+      clue: "Words that tell how people act can show how they feel. Look for actions that show strong wanting.",
+      hints: [
+        "Words that tell how people act can show how they feel. Look for actions that show strong wanting.",
+        "Look across the passage for what the prospectors did when they heard the news and what they did during the day.",
+        "Swirling the pan was a step in the work. It tells how to find gold, not how much the people wanted it. Look at what is left."
+      ],
+      how: [
+        "The passage says the prospectors were eager to find gold. Ask what they did.",
+        "When the news spread, thousands of people hurried to hunt for gold. Later they worked from sunrise to sunset.",
+        "Hurrying and working all day show they wanted gold very much. That is what eager means.",
+        "Swirling the pan, where the gold was found and how little most people found do not show wanting."
+      ],
+      misconception: "A common mix-up is choosing facts about the gold. Choose actions that show how the people felt.",
+      why: "The answers are \"hurried there to hunt for gold\" and \"worked from sunrise to sunset.\" Both show people who wanted gold very much. Where the gold was found, how the pan was swirled and how little most people found do not show how they felt."
+    },
+    {
+      id: "SK-V1a-S09",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p5"
+      ],
+      like: [
+        "SK-V1a-C09"
+      ],
+      prompt: "Where does the author explain what panning for gold means?",
+      choices: [
+        {
+          text: "In the steps just before the words.",
+          correct: true
+        },
+        {
+          text: "In the title at the top of the passage."
+        },
+        {
+          text: "In the last paragraph about visitors today."
+        },
+        {
+          text: "In the first sentence about the town."
+        }
+      ],
+      clue: "Meaning can come before a word as well as after it. Ask where the author shows the idea.",
+      hints: [
+        "Meaning can come before a word as well as after it. Ask where the author shows the idea.",
+        "Find the words panning for gold. Then read the sentences just before them. What do they describe?",
+        "The last paragraph says visitors can pan for gold today, but it does not show how it is done. Check the other choices."
+      ],
+      how: [
+        "Find the words: \"This was called panning for gold.\" The word This points back to something.",
+        "Read the sentences just before it. They show the steps: scoop gravel and water into a pan, swirl it, and let the light gravel wash away.",
+        "So the author explains the phrase in the steps before it.",
+        "The title, the first sentence and the last paragraph do not show the steps."
+      ],
+      misconception: "A common mix-up is looking only after the new word. The clue can come in the sentences before it.",
+      why: "The answer is \"In the steps just before the words.\" The sentence uses This to point back to the steps. The title, the first sentence and the last paragraph do not show how the work was done."
+    },
+    {
+      id: "SK-V1a-S10",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [
+        "p5"
+      ],
+      like: [
+        "SK-V1a-C10"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Paragraph 3 calls large nuggets rare. What is the reader being told about those lumps of gold from the streams?",
+        choices: [
+          {
+            text: "They were not often found.",
+            correct: true
+          },
+          {
+            text: "They were bright and shiny."
+          },
+          {
+            text: "They were heavy to lift."
+          },
+          {
+            text: "They fit in a pocket."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Choose the line that gives the strongest support for Part A.",
+        choices: [
+          {
+            text: "\"Most prospectors found only a few tiny bits, and many went home with little.\"",
+            correct: true
+          },
+          {
+            text: "\"The prospectors were eager to find gold, so they worked from sunrise to sunset.\""
+          },
+          {
+            text: "\"Soon thousands of people hurried there to hunt for gold.\""
+          },
+          {
+            text: "\"Many prospectors scooped gravel and water into a metal pan.\""
+          }
+        ]
+      },
+      clue: "A word can be explained by what happens next. Ask what the writer tells you right after the new word.",
+      hints: [
+        "A word can be explained by what happens next. Ask what the writer tells you right after the new word.",
+        "Find rare in paragraph 3 and read the whole paragraph. How much gold did most people find?",
+        "The line about people hurrying is about the news of gold. It does not say how often nuggets were found. Check the other choices."
+      ],
+      how: [
+        "Find the word: \"Large nuggets, or lumps of gold, were rare.\" It does not say what rare means.",
+        "Read the next line: most prospectors found only a few tiny bits. Few people found big nuggets.",
+        "Something few people find is not often found. Part A: they were not often found. Part B: the line about the tiny bits.",
+        "The lines about sunrise and the hurrying crowd do not tell how often nuggets were found."
+      ],
+      misconception: "A common mix-up is choosing a line about gold being shiny or heavy. The clue tells how often it was found.",
+      why: "Part A: they were not often found. Part B: \"Most prospectors found only a few tiny bits, and many went home with little.\" It shows large nuggets were hard to find. The sunrise line and the hurrying line do not tell how often nuggets were found."
+    },
+    {
+      id: "SK-V1a-S11",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C11"
+      ],
+      prompt: "What does alternate mean in Mr. Cole's sentence, and what clue shows it?",
+      stem: [
+        "Mr. Cole said, \"Our class will alternate between the library and the gym.\" In week one, the class went to the library. In week two, it went to the gym. In week three, it went back to the library."
+      ],
+      choices: [
+        {
+          text: "switch back and forth, since the class went from library to gym and back",
+          correct: true
+        },
+        {
+          text: "stay in one room, since the class sat in the same seats every week"
+        },
+        {
+          text: "visit both at once, since the class split up between two rooms"
+        },
+        {
+          text: "go somewhere new each week, since the class never repeated a place"
+        }
+      ],
+      clue: "Use what the class does to test each meaning. Ask which meaning fits the three weeks.",
+      hints: [
+        "Use what the class does to test each meaning. Ask which meaning fits the three weeks.",
+        "List where the class went in weeks one, two and three. What pattern do you see?",
+        "In week three the class goes to a place it already visited. Check each choice against that."
+      ],
+      how: [
+        "Read the sentence: the class will alternate between the library and the gym.",
+        "Look at the weeks: library, gym, library. The class goes to one place, then the other, then back to the first.",
+        "That pattern is switching back and forth, so alternate means to switch back and forth.",
+        "The class does not stay in one room, split up or visit a new place each week."
+      ],
+      misconception: "A common mix-up is choosing a meaning that ignores week three, when the class goes back to a place it already visited.",
+      why: "The answer is \"switch back and forth, since the class went from library to gym and back.\" The pattern goes back to the first place in week three. The class did not stay in one room, split up or go somewhere new every week."
+    },
+    {
+      id: "SK-V1a-S12",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C12"
+      ],
+      prompt: "Finish each sentence with the best meaning.",
+      stem: [
+        "The label on the plant food said to dilute it with water. Aunt Tia poured one capful into a full bucket and stirred. \"A capful is as much as the bottle cap holds,\" she said. The bucket water turned a pale green."
+      ],
+      text: "To dilute plant food is {0}. One capful is {1}.",
+      slots: [
+        {
+          options: [
+            "to make weaker by adding water",
+            "to make hotter by stirring",
+            "to pour out all the water"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "the amount of a whole bottle",
+            "as much as a bottle cap holds",
+            "a long, thin spoonful"
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Use what happens in the story and what the speaker says right after a new word.",
+      hints: [
+        "Use what happens in the story and what the speaker says right after a new word.",
+        "For the first blank, read what Aunt Tia did with the plant food and the water. For the second blank, read what she said next.",
+        "For the second blank, Aunt Tia says exactly how much a capful is. Check which choice matches her words."
+      ],
+      how: [
+        "Blank one: Aunt Tia put a small amount of plant food into a full bucket of water and stirred. The water turned only a pale green. The plant food became weaker.",
+        "Blank two: Aunt Tia says a capful is as much as the bottle cap holds.",
+        "She did not heat anything or pour the water out."
+      ],
+      misconception: "A common mix-up is choosing a meaning that is about stirring. Look at what the plant food and the water did.",
+      why: "The answers are \"to make weaker by adding water\" and \"as much as a bottle cap holds.\" A small amount of plant food went into a full bucket, so the water turned only pale green. Aunt Tia says what a capful is. Nothing was heated or poured out."
+    },
+    {
+      id: "SK-V1a-S13",
+      type: "hottext",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C13"
+      ],
+      prompt: "Nia's report begins with the sentence below. Which sentence could follow it to explain camouflage to a reader?",
+      stem: [
+        "Animals use camouflage to stay safe."
+      ],
+      options: [
+        "Their colors and patterns help them blend in with the places they live.",
+        "The word camouflage comes from a language spoken in another country.",
+        "A museum in town has a room where visitors can learn about camouflage.",
+        "Art teachers sometimes ask students to draw animals that use camouflage."
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "A helpful sentence gives a clue that tells a reader what the new word means. Ask what each sentence lets a reader find out.",
+      hints: [
+        "A helpful sentence gives a clue that tells a reader what the new word means. Ask what each sentence lets a reader find out.",
+        "Imagine you have never heard camouflage. Which choice would let you picture what the animals are doing?",
+        "A sentence that says where you can learn about something tells where to look, but not what it is. Check the other choices."
+      ],
+      how: [
+        "The reader does not know camouflage, so the next sentence must tell what it is or what it does.",
+        "Check each choice. One is about where a word comes from, one is about a museum, and one is about art class. None of them tells what camouflage does.",
+        "\"Their colors and patterns help them blend in with the places they live\" tells what animals do, so it explains the word."
+      ],
+      misconception: "A common mix-up is choosing a sentence that repeats the word. A good clue explains it.",
+      why: "The answer is \"Their colors and patterns help them blend in with the places they live.\" It tells what camouflage does. The other sentences use the word but never say what it is."
+    },
+    {
+      id: "SK-V1a-S14",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C14"
+      ],
+      prompt: "Match each word from the visit to its meaning.",
+      stem: [
+        "At the animal clinic, we met a veterinarian, a doctor who takes care of animals. She wore a stethoscope, a tool that lets a doctor hear a heartbeat. A puppy waited in the kennel, a small pen where a pet stays."
+      ],
+      cols: [
+        "a doctor who takes care of animals",
+        "a small pen where a pet stays",
+        "a tool that lets a doctor hear a heartbeat",
+        "a bowl that holds a pet's water"
+      ],
+      rows: [
+        {
+          text: "kennel",
+          answer: 1
+        },
+        {
+          text: "stethoscope",
+          answer: 2
+        },
+        {
+          text: "veterinarian",
+          answer: 0
+        }
+      ],
+      clue: "In this paragraph, each new word is followed by words that explain it. Look for the comma after each word.",
+      hints: [
+        "In this paragraph, each new word is followed by words that explain it. Look for the comma after each word.",
+        "Find each word in the paragraph. Read the words that come right after it, up to the next period.",
+        "One meaning in the list is not explained anywhere in the paragraph. Decide which row each of the others goes with."
+      ],
+      how: [
+        "Find veterinarian. After the comma: \"a doctor who takes care of animals.\"",
+        "Find stethoscope. After the comma: \"a tool that lets a doctor hear a heartbeat.\"",
+        "Find kennel. After the comma: \"a small pen where a pet stays.\"",
+        "A bowl for a pet's water is never mentioned."
+      ],
+      misconception: "A common mix-up is guessing from a word you already know. Use the words the author puts right after each new word.",
+      why: "A veterinarian is a doctor who takes care of animals. A stethoscope is a tool that lets a doctor hear a heartbeat. A kennel is a small pen where a pet stays. The paragraph never mentions a water bowl."
+    },
+    {
+      id: "SK-V1a-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.1.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V1a-C15"
+      ],
+      prompt: "Read the problem. Then finish each sentence.",
+      stem: [
+        "A circle's diameter is its width, measured straight across through its center. Jada's round pizza pan has a diameter of 12 inches. Her round pie plate has a diameter of 9 inches. Jada wants to know how much wider her pan is. She bakes pies with her aunt on Saturdays."
+      ],
+      text: "Diameter means {0}. Her pan is wider than her plate by {1} inches.",
+      slots: [
+        {
+          options: [
+            "the distance around the outside",
+            "the distance straight across, through the center",
+            "the distance from the center to the edge"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "21",
+            "3",
+            "9"
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Use the definition in the problem. Say in your own words what the new word measures.",
+      hints: [
+        "Use the definition in the problem. Say in your own words what the new word measures.",
+        "Find the diameter of the pan and the diameter of the plate. Then ask what the question wants you to do with them.",
+        "Wider means the pan reaches farther across than the plate. Think about whether you should join the two numbers or find the difference."
+      ],
+      how: [
+        "The problem says the diameter is the distance straight across a circle, through its center.",
+        "The pan's diameter is 12 inches and the plate's is 9 inches.",
+        "To find how much wider the pan is, find the difference: 12 - 9 = 3 inches.",
+        "Adding gives 21, which is not a difference. Nine is the plate's diameter."
+      ],
+      misconception: "A common mix-up is adding the two numbers. The question asks how much wider, which means how much more.",
+      why: "The answers are \"the distance straight across, through the center\" and 3. The pan is 12 inches across and the plate is 9 inches across, and 12 - 9 = 3. Twenty-one adds the numbers. Nine is only the plate's diameter."
+    }
+  ],
+  addons: {
+    "SK-V1a-P4": {
+      hints: [
+        "A word's meaning may be clear from what the author says next. Think about what the grass needs in order to live where it grows.",
+        "Read paragraph 4. What does the grass do about the salt, and why would that help it?",
+        "The tiny white bits are salt on the grass. They are not the grass changing color. Check the other choices."
+      ],
+      how: [
+        "Find survive: \"Marsh grass has a special way to survive in salty water.\"",
+        "The next sentences tell the special way: the grass gets rid of extra salt through its leaves. Too much salt would hurt a plant.",
+        "A plant that gets rid of the salt can keep living in salty water. Survive means to stay alive.",
+        "The white bits are salt on the grass. The grass is not turning white, growing tall or moving."
+      ],
+      misconception: "A common mix-up is choosing turn white, because the paragraph mentions white bits. They are salt, not the grass."
+    },
+    "SK-V1a-P5": {
+      hints: [
+        "Look at what the people in the paragraph do. Ask what they are trying to find out.",
+        "Read paragraph 5. Look at what the scientists do about summer and winter, and what they look for.",
+        "Visiting a place is not the same as studying it. Check each choice against what the scientists look for."
+      ],
+      how: [
+        "Find compare: \"Scientists compare the marsh in summer and in winter.\"",
+        "Read the next sentence: they look for what stays the same and what is different.",
+        "Looking at how things are alike and different is what compare means.",
+        "The scientists do not draw, count or only visit. They look for what is alike and different."
+      ],
+      misconception: "A common mix-up is choosing the choice about visiting a place many times. The paragraph says what the scientists look for."
+    },
+    "SK-V1a-P1": {
+      hints: [
+        "A new word can be explained by the sentences around it. Look at what the sentences near the word say.",
+        "Find burrows in paragraph 2. Read the sentence just before it. What do the crabs do in the mud?",
+        "The crabs are not hunting, and the passage does not say the mud is deep. Check the other choices against the crabs."
+      ],
+      how: [
+        "Find burrows: \"They hide in their burrows when the water rises.\"",
+        "Read the sentence before it: \"Fiddler crabs dig small holes in the mud.\" The crabs hide in the holes they dug.",
+        "So burrows are holes that animals dig to live in.",
+        "The other choices are about grass, hunters and ocean pools, and none of them is where the crabs hide."
+      ],
+      misconception: "A common mix-up is choosing a choice about water because the sentence mentions rising water. The crabs hide in holes."
+    },
+    "SK-V1a-P2": {
+      hints: [
+        "An author may explain a new word with helper words such as is a or is the. Look for a sentence that tells what the thing is.",
+        "Read paragraph 2. Find the sentences that use the word habitat, and ask which one tells what a habitat is.",
+        "The first sentence in paragraph 2 says the marsh is a habitat, but it does not say what a habitat is. Check the other sentences."
+      ],
+      how: [
+        "Find the sentences that use the word habitat in paragraph 2.",
+        "\"The salt marsh is a habitat for many animals.\" This says the marsh is a habitat but does not explain it.",
+        "\"A habitat is the place where an animal finds the food, water and shelter it needs.\" The helper words is the place start the meaning."
+      ],
+      misconception: "A common mix-up is choosing the first sentence because it names the marsh. Naming is not explaining."
+    },
+    "SK-V1a-P3": {
+      hints: [
+        "Find the sentences that use the word tide. Think about what the tide does, and how often.",
+        "Look at paragraph 1. Which sentences use the word tide, and which ones are about something else?",
+        "The sentence about the salt marsh explains a different word. Check the other choices."
+      ],
+      how: [
+        "Find tide: \"Twice a day, the tide comes in and covers the marsh with salty water.\" Then \"the tide goes out again.\"",
+        "Water that comes in and goes out is ocean water moving in and out each day.",
+        "Part B is the sentence that says the tide comes in twice a day. The sentence about the salt marsh explains marsh."
+      ],
+      misconception: "A common mix-up is choosing wind or a storm. Nothing in the paragraph says the tide is weather."
+    }
+  },
+  /* B5-b5b:core:end */
   test: [
     { id: "SK-V1a-T1", type: "mc", points: 1, dok: 2, passages: ["p2"],
       prompt: "Read paragraph 2. What does the word evaporation mean?",
