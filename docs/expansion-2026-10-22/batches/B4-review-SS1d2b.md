@@ -429,3 +429,164 @@ The first review could not reach the idiom sources. These worked.
 
 - **Not confirmed on a fetchable page:** "on thin ice = in a risky situation" (2.b S10 `why`). The only page that reached the allow-list listed it as an answer option without a key. It is the standard sense and I found no conflict.
 - **Not checkable and not needed:** ears popping in a glass elevator, tulip bulbs, bread dough ingredients. They are common knowledge and agree with the text.
+
+
+---
+
+# Third review (3.T.SS.1.d only, after the author's section 10 "Fixes after second review of 1.d")
+
+Reviewer: independent third reviewer (did not author; did not write the first or second review). Source: `js/data/lessons/T-SS.js`, lesson 3.T.SS.1.d. Read-only: no lesson edits, no git. Scripts, answers and screenshots are in the scratchpad folder `b4r8/` (`load.js`, `blind.js`, `blind.txt`, `map.json`, `my-answers.json`, `cmp.js`, `full.js`, `full.txt`, `audit.js`, `wm.js`, `jac.js`, `ui.py`, `tog.py`, `shots.py`, `sh_*.png`).
+
+## T3.0 Verdict
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 3.T.SS.1.d Paragraphs that stay on one idea | **ACCEPT** (with SHOULDs) | 0 | 6 | 6 |
+
+Both second-review MUSTs are fixed:
+1. **1.d-M1 (p4 collision with 3.T.T.2.c).** "Our School Read-a-Thon" has no topic or key-fact overlap anywhere in `js/data` (T3.4).
+2. **1.d-M2 (Together hint 3).** The hint 3 of P1, P2, P3 and P5 now rules out at most one choice (or one of two keys) and leaves a live choice (T3.3).
+
+I found no new MUST. The most worthwhile SHOULD to do before shipping is the longest-key cue (SHOULD T3-1), which two reviews have now raised and the author has not done.
+
+## T3.1 Method and blind-solve result
+
+- **Fully blind.** I wrote `load.js` and `blind.js` new. `load.js` loads `T-SS.js` in a Node `vm` sandbox with a mock `PP.addLesson`. `blind.js` prints only the passages (all six are numbered drafts), stems, prompts, and the seeded-shuffled choices, options, order steps, match rows and columns, dropdown options and hottext sentences (resolved from `pN:para:sent` to sentence text). It never reads `correct`, `answer`, `why`, `hints`, `how`, `clue`, `misconception`, `like`, `std` or `addons`. I used a new seed (987654321). Before this, I ran two schema probes that printed only field names, array lengths and `typeof` values. There are no figures in this lesson, so there is no alt text.
+- **Disclosure.** Before writing my script I opened the generic `blind.js` and `load.js` in the scratchpad root (they are for the 3.T.T lessons and hold no data for this lesson) as a template. After solving I copied the older `b4r7/ui.py` and `ui_tog2.py` browser harness. I did not open the author log, the first or second review, or any raw lesson source for the items until `my-answers.json` was saved and `cmp.js` had printed the agreement.
+- **Items solved: 35** (15 core C01 to C15, five Together P1 to P5, 15 similar S01 to S15). The core items here are all inline items; there are no `{ref}` items in 1.d.
+- **Agreement with the keys: 35 of 35 (100%).** That is every item, including the changed ones (C06, C07, C08, S06, S14, P1 to P5).
+- **Doubtful answers that still matched:** C02 (sentence 2 or 6 could start a paragraph; 6 is much stronger), S02 (sentence 5; sentence 8 returns to home, but "after lunch ... library" is the clear shift), C08 (see SHOULD T3-3, option C can be argued by a careful child).
+
+## T3.2 Key beside explanation, longest-key cue, word-match keys
+
+- **Key beside explanation.** `audit.js` checked that every keyed choice, option, hottext sentence and dropdown slot appears verbatim in `why`, and in at least one `how` step, for all core and similar items and (from `addons`) the Together items. **No misses.** It also checked that no hint (H1 to H3) quotes a key verbatim: none does. The hottext target indexes agree with the `why` text (C02 p3:1:6, C06 p4:2:4, C11 p5:2:3 and p5:2:5, S02 p6:1:5, P1 p1:2:4). Match items name the topic sentence and column by paraphrase, and I read them by hand.
+- **Word-match keys (`wm.js`: content-word overlap of each option with the stem, prompt and passage).** No item has a key that wins on shared words alone. In C04, S04, S03, S07 and S12 the keys share **fewer** words with the stem than the distractors. In P5 and C15 the distractors share more. Mild echoes only, and these are NOTE T3-5 (C07 "Everyone" and "helps" echo sentences 9 and 10).
+- **Longest-key cue (plan §6.5: "the key is not the only long or detailed option").** Still unchanged from the second review.
+  - mc single-key items (core, Together and similar, 14 items): the key is the strictly longest in **8 of 14**. Gaps: C01 +11, C12 +8, P3 +9, S01 +11, S03 +10, S07 +5, S14 +5, C14 +1.
+  - Dropdown and hottext-option items: C09 (59 against 40/49), S09 (47 against 36/40) and **C10 (60 against 41/40/40)** are longest, and S10 and S06 are not.
+  - Overall about **11 of 21** single-key items, where chance is about 5. C10 is the worst case: the key is almost 50% longer than every distractor. This is **SHOULD T3-1.**
+- **Keys that are not the longest (good):** C03, C07, C08 (shortest-but-one), P2, S08, S12, S10, S06, C04/C15/P5/S04/S15 (pick-two items).
+
+## T3.3 Verification of the second-review MUSTs and SHOULDs against the author's section 10
+
+| Second-review item | Author's claim | My check | Result |
+|---|---|---|---|
+| **1.d-M1** p4 collision | p4 is now "Our School Read-a-Thon"; C06, C07, C08 and their addons rewritten; no recycl/bin/can fact left | See T3.4. Text of p4, C06, C07, C08, `why`, `how` and hints has no "recycl", "bin", "can" or "custodian". | **Fixed** |
+| **1.d-M2 P1** hint 3 | "Sentence 3 is the topic sentence, so it is not the answer. Test the other three." | Rules out one sentence (the topic sentence). 3 of 4 live after H3. | **Fixed** |
+| **1.d-M2 P2** hint 3 | "One choice is about the motor, which belongs in the paragraph about moving. Check the other three." | Rules out the motor choice only. 3 of 4 live. It does not describe the key. | **Fixed** |
+| **1.d-M2 P3** hint 3 | "The tickets are a fact about fairs, not about moving. Check the other three." | Rules out the tickets choice only. 3 of 4 live. H2 gives the paragraph's idea ("moving"), which is restating evidence and allowed. | **Fixed** |
+| **1.d-M2 P5** hint 3 | "The sentence about leaves is about a different season. Check the other four." | Completes one of the two keys (leaves). The child still picks one more from four live sentences (the other key and three garden-work sentences). This matches plan §4.5 item 3 ("complete one of two slots") and is the wording the second review itself proposed. | **Fixed** (NOTE T3-6) |
+| P4 hint 3 | Gives the bus sentence ("Does not belong") | One of four rows is given; the other three rows each still have two columns live. Allowed. | Pass |
+| **S14 distractors** | New B "exactly two sentences", C "more words than sentence 2", D "brings in dirt, a new idea". Prompt reworded. | All three are plausible misreadings (a counting rule, a length rule, "new thing equals new idea"). Not absurd. Key logic is single: the idea has not changed until sentence 4. C is a false statement (sentences 2 and 3 are both nine words), which is fine for a distractor. | **Fixed** (NOTE T3-4 on H3, SHOULD T3-1 on length) |
+| **S06 hint 2** | "Ask of each sentence whether it tells about the action in the gym." | Gives the criterion in the topic sentence's own words ("full of action"), names no key, and a reader without the choices cannot write the key. H3 rules out one distractor (the whistle). 3 of 4 live. | **Fixed** |
+| 1.d-2 P4 H2 | "something other than the market's busyness" | Bus sentence is no longer described as "a different place". | **Fixed** |
+| 1.d-3 S14 how step 1 | "choosing the spot" removed | HOW step 1 now says sentences 1 to 3 are digging holes, dropping in bulbs and covering them. Matches the draft. | **Fixed** |
+| 1.d-8 C11 live count | 5 of 6 | Agrees. | Fixed |
+
+**Live choices after hints 1 to 3 (hand count; changed items and any item whose hint I re-read).** Hint 1 never narrows or locates in any core or similar item. Hint 2 never quotes a key. I could not write a key from H1 and H2 alone for any item.
+
+| Item | Live after H3 | Item | Live after H3 |
+|---|---|---|---|
+| C01 | 3 of 4 | C09 | 2 of 3 |
+| C02 | 5 of 8 | C10 | 3 of 4 |
+| C03 | 3 of 4 | C11 | 5 of 6 (pick 2) |
+| C04 | 4 of 5 (pick 2) | C12 | 3 of 4 |
+| C05 | topic first; four to order | C13 | leftover removed; 3 rows, 3 topic sentences |
+| **C06** | 4 of 5 | C14 | 3 of 4 |
+| **C07** | 3 of 4 | C15 | **3 of 5 (pick 2)**: H3 says sentence 3 "should stay", which removes both choices about sentence 3. Three pairs remain (A, B, E). NOTE T3-6 |
+| **C08** | 3 of 4 | | |
+| **P1** | 3 of 4 | **S06** | 3 of 4 |
+| **P2** | 3 of 4 | **S14** | 3 of 4 |
+| **P3** | 3 of 4 | S01 to S05, S07 to S13, S15 | unchanged from the second review (3 of 4, 4 of 5, or three rows) |
+| **P4** | one row given, three rows live | | |
+| **P5** | 4 of 5 (one key given) | | |
+
+No item leaves one option. The Together hints are stored in `addons` and are **not shown by the engine** (confirmed in the browser: Together "Help me" shows the old clue, then "Two choices are crossed out", then the walk-through), so the Together hint audit is for the day the engine uses them.
+
+## T3.4 Topic and key-fact duplicates over all of `js/data` (variants included)
+
+Method: case-insensitive `grep -rniE` over every file under `js/data` (lessons, sets, habits, standards), excluding `T-SS.js` only when reading the hits.
+
+| Pattern | Hits outside 1.d | Verdict |
+|---|---|---|
+| `read[- ]?a[- ]?thon`, `readathon`, `read-athon`, `reading marathon`, `pledge`, `book cart` | **0** | clear |
+| `reading log` | 0 (all seven hits are in `T-SS.js`) | clear |
+| `squeaky` | `T-T1.js` 67, 159, 166, 914 to 916 (Mateo's "high and squeaky" voice); `T-T34.js` 3996 (a rocking chair that "creaks a squeaky tune") | incidental word, unrelated key fact |
+| `librarian` | `T-T1.js` 101 (Mr. Webb with a shark tie), 764 (Mr. Orr and a puzzle); `T-RA.js` 3519 to 3534 (a librarian and Waffles the reading dog); `L-GRM-01.js` 148 (bookmarks) | incidental; no cart, no log, no school event |
+| `recycl`, `\bbins?\b` | `T-T2.js`, `T-C.js` 2054 to 2062 (Lena's recycling-club poster), `T-TS.js` 2086 and the author's own comment at 4634 | **none in 1.d** (p4 no longer mentions bins, cans or recycling) |
+| `book fair`, `bookmark`, `book club` | `T-C.js` 974 to 983 (book fair poster, persuade), `T-T1.js` 103, `L-GRM-01.js` 148 | setting echo only |
+| `color the chart`, `chart climb`, `star next to` | `habits.js` 132 ("circle the 3 strongest"; the match is only the phrase "star next to" in an unrelated parent tip) | clear |
+
+Other topics in 1.d, checked the same way (second review covered carousel): `guinea pig`, `post office`, `popsicle`, `good listener`, `music class`: **0 hits**. `tulip` only in `F-PF.js` 344 to 348 (a syllable-splitting word). `parade`, `farmers market`, `class garden`, `loaf`, `dog bath`, `set the table`, `pet store`, `whistle`, `thunder`: setting echoes only, with no shared key fact. The nearest is `L-GC2.js` p1 "Our Class Garden" (planting beans, watering every morning, picking beans) against 1.d Together P5 (class garden, beans, watering, picking). They teach different skills (run-on sentences against paragraph unity) and P5 is a Together item, so NOTE T3-5.
+
+## T3.5 Similar versus core (`jac.js`, tokens `[a-z']+`, text = prompt, stem, text, all options, rows, columns and hottext sentences; with and without the passage)
+
+- **Word-set Jaccard against the `like` twin: every pair is 0.20 or lower** (S14 0.20; S04 0.19; S02 0.18; S13 0.17; the others 0.16 or lower). The ceiling of 0.21 holds. Highest against any core or Together item: S14 against C15 at 0.21 (at the ceiling, passes).
+- **Shared options (exact match or token-Jaccard of 0.6 or more): zero for all 15 twin pairs.** Across all core and Together items the maximum is **one** (S07 and C11), which meets the "at most one shared option" limit.
+- **Multiset Jaccard against the twin:** S14 **0.23** (above 0.21), S02 0.21 (at the limit), S03 0.20, S04 0.19, S13 0.18 and all others lower. S14 against C14 is the only pair over. The excess is function words and the skill frame ("sentence", "new paragraph", "idea"). **SHOULD T3-2.**
+- **Within the fifteen:** the closest pairs are C06 with C07 (0.29) and C06 with C11 (0.26). Both are same-passage pairs and share only the frame; shared options are zero.
+- **`like` mappings are honest** in all 15 (same skill, different context, same ask, no shared key).
+
+## T3.6 Per-item checks (all 35 items)
+
+- **One defensible answer, plausible distractors.** All pass. C06's intruder shares the word "books" with the topic sentence, so it is a fair test. C07's key covers all three details of the paragraph; the helper sentence covers one, the log sentence belongs to paragraph 2, and "what counts as reading" is off-topic. C15 and S15 are the only fixing pairs. One careful-reader risk is in C08 option C (SHOULD T3-3).
+- **Official wording.** 3.T.SS.1.d "Craft related sentences into clear and cohesive paragraphs" (`standards.js`) is covered by the topic-sentence, detail, intruder, closing, order, new-paragraph and fix-the-draft items.
+- **Points and DOK.** pick-two (C04, C11, C15, P5, S04, S11, S15), match (C13, P4, S13) and order (C05, S05) are all 2 points; all other items are 1 point. DOK 3: C08, C14, C15, S08, S14, S15; the rest DOK 2. `mc` is at six core items.
+- **Grade-3 suitability.** Nothing is kindergarten-like. p4 is 118 words (author: FK 3.5) with numbered sentences. S03, S06 and S07 are easy but fine.
+- **Distinctness.** No two items differ only by names or numbers. The three "detail that fits" items (C04, C09, C12) use three different formats (pick two, dropdown, mc). C06 and C11 share a frame and logic but differ in passage and count (carried SHOULD, now T3-6 below).
+- **No giveaways into form A or form B.** I compared the five check items (T1 to T5) in `test` with the core, similar and Together text. T1 shares only the stem frame. No shared fact or key.
+- **Learn It and Watch Me.** They model the intruder, the topic sentence and the new paragraph. The core also asks for closing sentences, paragraph order, choosing details, matching and fixing a draft (carried SHOULD T3-6).
+- **`how` accuracy.** One loose wording in C07 (SHOULD T3-3). The other changed `how` steps (C06, C08, S14) agree with their drafts. I counted S14: sentences 2 and 3 are both nine words, so distractor C is false as written, as intended.
+- **Facts** (T3.8).
+
+## T3.7 Browser (Playwright, mobile Chromium 390 by 844, touch; `node verification/serve.js . 8775`, killed by pid 28845, confirmed gone)
+
+- All 15 core items of the three Try sets: wrong Check, three hints, Show me how, Try a similar question, correct answer to the similar item and Check. **15 of 15 similar items visited, no horizontal scroll at any step.** The only console message was the aborted font request from my route rule; no page errors.
+- Changed items viewed in screenshots (`sh_SK-SS1d-C06.png`, `_C07`, `_C08`, `_S14`, `_S06`, and the "Read the passage" tab for C06 to C08): the p4 passage, the five hottext sentences, and the S14 draft box and choices render fully, with no clipping and no horizontal scroll.
+- Together (P1 to P5) renders with no horizontal scroll. Its help ladder is the old three steps (clue, engine hint, walk-through); the authored `addons` hints are not displayed (by design, ENG-08).
+
+## T3.8 Facts checked on the web
+
+| Claim in the lesson | Source and result |
+|---|---|
+| C04 and S04 area: guinea pigs eat hay and pellets daily, have a water bottle, and come from South America ("first lived in South America", a distractor) | https://www.amcny.org/pet_health_library/how-to-care-for-a-guinea-pig/ : hay and pellets are part of the daily diet; a water bottle or bowl in the cage; guinea pigs are native to the Andes of South America. **Supported**, with one wording point (SHOULD T3-3 on "a small scoop of hay"). |
+| p1 / P2 / P3: a motor turns the platform, and animals on poles rise and fall ("the poles slide up and down, so the animals seem to gallop"); the toy-top sentence is not about carousels | https://en.wikipedia.org/wiki/Carousel : a power source (most now use electric motors) turns the platform around a central pole; gears and offset cranks make each mount rise and fall as it travels. **Supported.** |
+
+No other factual or cultural claim in the lesson needs a source (the items are about paragraph structure, with everyday scenes).
+
+## T3.9 Findings
+
+### MUST
+
+None.
+
+### SHOULD
+
+**T3-1. Longest-key cue is still present (open since the second review, SHOULD 1.d-1).** In about 11 of 21 single-key items the key is the longest option, which is about twice chance. Plan §6.5 line 318 says the key must not be "the only long or detailed option". Worst cases: **C10 (60 against 41/40/40)**, C01 (70 against 59/44/39), S01 (50 against 39/33/37), S03 (50 against 40/36/39), P3 (57 against 48/46/39), C12 (57 against 49/48/47), C09 (59 against 40/49), S09 (47 against 36/40). Fix: add a clause to two distractors in each item, for example C10 option "Many people can whistle with their lips" becomes "Many people can whistle with their lips, and some can do it with their fingers". If the lead reads §6.5 line 318 strictly, C10, C01, S01 and S03 are MUST-level. I rated it SHOULD to stay consistent with the first two reviews and because every other check on these items passes.
+
+**T3-2. S14 against C14 multiset Jaccard 0.23 (above 0.21), S02 against C02 0.21.** The word-set measure passes (0.20 and 0.18). Reword the S14 prompt and one distractor so the shared frame words fall ("new paragraph", "sentence 3", "idea").
+
+**T3-3. Three small accuracy and defensibility points in the new p4 and C04 text.**
+- **C07 `how` and `why`** call "Everyone cheers when the chart climbs higher" a "job" ("Reading, adding up pages and cheering are all jobs people do"). Cheering is not a job, and the distractor reasoning ("not about jobs") then rests on the loose word. Say "ways people take part" instead of "jobs", in `how`, `why`, C08's "paragraph about the jobs" and C08 H3.
+- **C08 option C** ("Add the facts after sentence 2, since the first paragraph is about the read-a-thon") can be argued by a careful child, because home reading could be part of the read-a-thon. Strengthen the prompt to "several facts about how families read together at home" (several facts need their own paragraph) or change option C to name a different, clearly unrelated reason.
+- **C04 key** "He eats a small scoop of hay and pellets each day." Hay should be offered freely, so "a small scoop of hay" is inexact (source in T3.8). Use "He eats fresh hay and a few pellets each day." Keep the text identical in `why` and `how` when you change it.
+
+**T3-4. S14 hint 3 repeats the key's principle.** H3 reads "A paragraph starts when the idea changes, not when a sentence has more words. Test the other three." It rules out distractor C, but the first clause is also the rule that the key applies. It does not make the key the only option left (3 of 4 live), so it passes the audit. To be safe, drop the first clause and write "A sentence having more words does not decide where a paragraph starts. Test the other three."
+
+**T3-5. Together clue is shown as hint 1 and points to a location (carried from SHOULD 1.d-2).** The Together `clue` is what the child sees first, and the `addons` hint 1 is not shown. P1's clue starts "Sentence 3 is the topic sentence", P2's says "Read sentences 7, 8 and 9", and P5's says "The first sentence is the topic sentence" (hint 1 must not point to a location, §4.5 item 1). Use the `addons` hint 1 text as the `clue` in P1, P2, P3 and P5.
+
+**T3-6. Still open from the second review (not done by the author, judged SHOULD and unchanged): Watch Me and Learn It cover three of the lesson's tasks; C06 and C11 share the frame and logic; C05 shares its scene with the poem "Bath Day" in `T-C.js` p5; S02 mirrors C02's one-block-day shape.** None creates a wrong or ambiguous key.
+
+### NOTE
+
+1. **C15 hint 3** ("Sentence 3 is a summer detail that fits the topic sentence, so it should stay") removes both options about sentence 3. Three options (A, B, E) remain for a pick-two, so there are three possible pairs and the choice is still live.
+2. **P5 hint 3** completes one of the two keys ("the sentence about leaves"). It is allowed by §4.5 item 3 ("complete one of two slots") and is the fix the second review proposed.
+3. **S14 hint 2** ("Ask whether the topic shifts anywhere in them") leads toward the key without stating it. A reader without the choices still cannot write the key, because the answer to the question is not given.
+4. **Setting echoes with no shared key fact:** 1.d P5 and `L-GC2.js` p1 (class garden, beans); 1.d P4 and `T-T1.js`, `F-FH.js`, `L-GC2.js` (farmers market); p4 and `T-C.js` 974 (a school book fair poster); C05 and the poem "Bath Day"; librarian in `T-T1.js`, `T-RA.js` (different scenes).
+5. **C07 key words:** "Everyone" echoes sentence 10 ("Everyone cheers") and "helps" echoes sentence 9 ("helpers"). Distractors echo too (the log, the helpers), so it is not a giveaway.
+6. **Engine:** Together does not yet use authored hints; the latent hint-3 fixes above are future-proofing only.
+
+## T3.10 Summary for the lead
+
+- **Accept 3.T.SS.1.d.** Blind agreement is 35 of 35. The p4 read-a-thon draft is unique across `js/data`. The Together hint 3 audit passes for P1 to P5, S14 and S06 pass, and no hint quotes a key. Twin similarity is within 0.21 on word sets (multiset S14 0.23, SHOULD). Browser at 390 by 844 is clean.
+- **Do before shipping (cheap, text only):** T3-1 (lengthen two distractors in C10, C01, S01, S03), T3-3 (C07 "jobs" wording, C08 option C, C04 "small scoop of hay"), T3-2 and T3-4 (S14 wording).

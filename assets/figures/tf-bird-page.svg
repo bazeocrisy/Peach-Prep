@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-labelledby="t">
+  <title id="t">A web page about the cardinal with a back arrow, a menu button, a search box, a sound button and an underlined link</title>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#111">
+    <!-- top bar -->
+    <rect x="8" y="8" width="304" height="46" fill="#E8EEF9" stroke="#444" stroke-width="2"/>
+    <polygon points="22,31 40,18 40,44" fill="#111"/><text x="48" y="40">Back</text>
+    <path d="M262 22 H298 M262 31 H298 M262 40 H298" stroke="#111" stroke-width="5"/>
+    <!-- search box -->
+    <rect x="8" y="68" width="304" height="44" fill="#FFFFFF" stroke="#111" stroke-width="3"/>
+    <circle cx="32" cy="88" r="9" fill="none" stroke="#111" stroke-width="3"/><path d="M39 95 L48 104" stroke="#111" stroke-width="4"/>
+    <text x="62" y="98" fill="#555">Search birds</text>
+    <!-- heading and sound button -->
+    <text x="8" y="154" font-weight="bold" font-size="26">Cardinal</text>
+    <rect x="200" y="126" width="112" height="40" fill="#FFFFFF" stroke="#111" stroke-width="3"/>
+    <polygon points="212,150 212,142 222,142 234,134 234,158 222,150" fill="#111"/><text x="244" y="153">Hear</text>
+    <!-- text with a link -->
+    <text x="8" y="204">A cardinal eats</text>
+    <text x="8" y="236" fill="#123E9C">seeds</text><path d="M8 242 H66" stroke="#123E9C" stroke-width="2"/>
+    <text x="74" y="236">and berries.</text>
+    <text x="8" y="276">Males are bright red.</text>
+    <text x="8" y="316">The tuft on its head is a</text>
+    <text x="8" y="346" fill="#123E9C">crest</text><path d="M8 352 H64" stroke="#123E9C" stroke-width="2" stroke-dasharray="4 3"/>
+  </g>
+</svg>
