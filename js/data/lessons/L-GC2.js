@@ -2790,21 +2790,21 @@ PP.addLesson({
     /* B5-b5a:passages:start */
     {
       id: "p1",
-      title: "Evenings on Grandma's Porch",
+      title: "Evenings in the Backyard",
       byline: "Zuri's draft",
       genre: "Student draft (narrative)",
       draft: true,
       paragraphs: [
         [
-          "(1) Every evening, my cousins and I sit on Grandma's porch.",
-          "(2) The porch has a wide swing and two rocking chairs."
+          "(1) Every evening, my cousins and I rest in Grandma's backyard.",
+          "(2) The yard has a wide hammock and two lawn chairs."
         ],
         [
           "(3) Grandma brings out a pitcher of cold tea.",
-          "(4) The swing and the chairs is old but strong."
+          "(4) The hammock and the chairs is old but strong."
         ],
         [
-          "(5) The crickets in the yard sing loudly.",
+          "(5) The frogs by the pond sing loudly.",
           "(6) My cousin Ben hums along with them.",
           "(7) Grandpa tells us a funny story.",
           "(8) When the story ends, we clap and laugh."
@@ -2821,23 +2821,23 @@ PP.addLesson({
     },
     {
       id: "p2",
-      title: "Relay Practice",
+      title: "Obstacle Course Practice",
       byline: "Jordan's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) On Tuesdays and Thursdays, the four runners practice after school.",
+          "(1) On Tuesdays and Thursdays, the four racers practice after school.",
           "(2) Coach Dee watches from the bench."
         ],
         [
-          "(3) The sign beside the cones tells us where to stand.",
-          "(4) Maya and I pass the baton to each other.",
+          "(3) The sign beside the cones tells us where to start.",
+          "(4) Maya and I climb over the low wall together.",
           "(5) The shoes beside the bench is covered in dust."
         ],
         [
-          "(6) When the baton reaches Maya, she sprints down the track.",
-          "(7) The other runners cheer from the grass.",
+          "(6) When the whistle blows, Maya sprints down the track.",
+          "(7) The other racers cheer from the grass.",
           "(8) After we finish, Coach Dee gives us water."
         ],
         [
@@ -2877,59 +2877,59 @@ PP.addLesson({
     },
     {
       id: "p4",
-      title: "Soup Day with Grandpa",
+      title: "Snow Cone Day with Grandpa",
       byline: "Isaiah's draft",
       genre: "Student draft (narrative)",
       draft: true,
       paragraphs: [
         [
-          "(1) On Sundays, my grandpa and I cook soup together.",
-          "(2) The kitchen smells like garlic and onions."
+          "(1) On Sundays, my grandpa and I run a snow cone stand.",
+          "(2) The stand smells like cherry and lime."
         ],
         [
-          "(3) I stir the big pot with a long spoon.",
-          "(4) The carrots and the potatoes is soft now."
+          "(3) I scoop the ice into paper cups.",
+          "(4) The cups and the spoons is sticky now."
         ],
         [
-          "(5) Grandpa tastes the broth and adds a little salt.",
-          "(6) The bowls on the table look warm and bright.",
-          "(7) When the soup cools, we eat it with bread."
+          "(5) Grandpa pours the syrup and adds a straw.",
+          "(6) The cones on the table look cold and bright.",
+          "(7) When the ice melts, we serve it quickly."
         ],
         [
           "(8) My little sister asks for more.",
           "(9) Grandpa smiles at her.",
-          "(10) We save the leftovers for Monday.",
-          "(11) I like soup day better than any other day.",
-          "(12) Next week, I will bring the bread."
+          "(10) We save the leftover ice for Monday.",
+          "(11) I like snow cone day better than any other day.",
+          "(12) Next week, I will bring the napkins."
         ]
       ]
     },
     {
       id: "p5",
-      title: "Band Practice",
+      title: "Tug-of-War Practice",
       byline: "Eli's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) Twice a week, the five drummers meet in the music room.",
-          "(2) Ms. Park listens from her chair."
+          "(1) Twice a week, the five pullers meet on the field.",
+          "(2) Ms. Park watches from her chair."
         ],
         [
-          "(3) The cymbal beside the drums rings with a bright sound.",
-          "(4) Tia and I tap the same beat.",
-          "(5) The sticks in my bag is made of wood."
+          "(3) The flag beside the ropes waves in the bright sun.",
+          "(4) Tia and I grip the same rope.",
+          "(5) The gloves in my bag is made of leather."
         ],
         [
-          "(6) When the music gets fast, my hands move quickly.",
-          "(7) The other drummers watch me closely.",
+          "(6) When the whistle blows, my hands pull hard.",
+          "(7) The other pullers watch me closely.",
           "(8) After we stop, Ms. Park gives us a smile."
         ],
         [
           "(9) My arms feel sore but happy.",
-          "(10) We are ready for the show on Friday.",
-          "(11) I love making music with my friends.",
-          "(12) We clap at the end of every practice."
+          "(10) We are ready for the contest on Friday.",
+          "(11) I love pulling with my friends.",
+          "(12) We cheer at the end of every practice."
         ]
       ]
     },
@@ -3056,10 +3056,10 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "Sentence 4 in Zuri's draft has a verb that does not agree with its subject. Which revision fixes it?",
             choices: [
-              { text: "The swing and the chairs are old but strong.", correct: true },
-              { text: "The swing and the chairs was old but strong." },
-              { text: "The swing and the chair is old but strong." },
-              { text: "The swing and the chairs have old but strong." }
+              { text: "The hammock and the chairs are old but strong.", correct: true },
+              { text: "The hammock and the chairs was old but strong." },
+              { text: "The hammock and the chair is old but strong." },
+              { text: "The hammock and the chairs have old but strong." }
             ],
             clue: "Find the subject of the sentence, count how many things it names, and make the verb match.",
             hints: [
@@ -3068,13 +3068,13 @@ PP.addLesson({
               "Changing a verb to the past tense does not change how many things the subject names. Check the other choices."
             ],
             how: [
-              "Find the subject: the swing and the chairs. It names two things joined by and.",
+              "Find the subject: the hammock and the chairs. It names two things joined by and.",
               "Two things joined by and count as more than one, so the verb must go with more than one.",
-              "The verb that goes with more than one is are: \"The swing and the chairs are old but strong.\"",
+              "The verb that goes with more than one is are: \"The hammock and the chairs are old but strong.\"",
               "Was is a past-tense verb for one thing. Changing chairs to chair still leaves two things. Have is not the verb that fits old but strong."
             ],
             misconception: "A common mix-up is matching the verb to just one of the two nouns, instead of counting both.",
-            why: "The answer is \"The swing and the chairs are old but strong.\" The subject names two things joined by and, so it counts as more than one and needs are. Was goes with one thing. \"The swing and the chair is old but strong.\" still names two things. Have does not fit with old but strong."
+            why: "The answer is \"The hammock and the chairs are old but strong.\" The subject names two things joined by and, so it counts as more than one and needs are. Was goes with one thing. \"The hammock and the chair is old but strong.\" still names two things. Have does not fit with old but strong."
           },
           {
             id: "SK-GC2c-C05",
@@ -3151,7 +3151,7 @@ PP.addLesson({
                 correct: true
               },
               { text: "The word next to the verb is cones, so the verb must match cones." },
-              { text: "A sentence that tells where to stand always takes a verb that ends in s." },
+              { text: "A sentence that tells where to start always takes a verb that ends in s." },
               { text: "Sign and cones are two subjects joined together, so the verb is plural." }
             ],
             clue: "To explain a verb, find the word the sentence is about and say whether it is one or more than one.",
@@ -3567,11 +3567,11 @@ PP.addLesson({
       clue: "Find the subject of sentence 4, count how many things it names, and pick the verb that matches.",
       hints: [
         "Find the subject of sentence 4, count how many things it names, and pick the verb that matches.",
-        "Read sentence 4 and ask what is soft. How many things does the subject name?",
+        "Read sentence 4 and ask what is sticky. How many things does the subject name?",
         "One of the choices is a past-tense verb. The sentence tells about now. Check the other choices."
       ],
       how: [
-        "Find the subject: the carrots and the potatoes. It names two things joined by and.",
+        "Find the subject: the cups and the spoons. It names two things joined by and.",
         "Two things joined by and count as more than one, so the verb must go with more than one.",
         "The verb that goes with more than one, and tells about now, is are. Am is only for I, be does not fit, and was tells about the past."
       ],
@@ -3620,24 +3620,24 @@ PP.addLesson({
       like: ["SK-GC2c-C06"],
       prompt: "Eli rereads his draft. Which line needs a different verb?",
       choices: [
-        { text: "The sticks in my bag is made of wood.", correct: true },
-        { text: "The cymbal beside the drums rings with a bright sound." },
-        { text: "Tia and I tap the same beat." },
-        { text: "The other drummers watch me closely." }
+        { text: "The gloves in my bag is made of leather.", correct: true },
+        { text: "The flag beside the ropes waves in the bright sun." },
+        { text: "Tia and I grip the same rope." },
+        { text: "The other pullers watch me closely." }
       ],
       clue: "Find the subject in each line. Ask: one or more than one? Then check the verb.",
       hints: [
         "Find the subject in each line. Ask: one or more than one? Then check the verb.",
         "Skip the words that only tell where. Read the subject and the verb together.",
-        "Tia and I names two people. Check whether tap goes with two people, then look at the other three."
+        "Tia and I names two people. Check whether grip goes with two people, then look at the other three."
       ],
       how: [
         "Find the subject of each line and decide whether it is one or more than one.",
-        "In \"The sticks in my bag is made of wood,\" the subject is sticks. In my bag only tells where the sticks are.",
-        "Sticks is more than one, but is goes with one. It should say are."
+        "In \"The gloves in my bag is made of leather,\" the subject is gloves. In my bag only tells where the gloves are.",
+        "Gloves is more than one, but is goes with one. It should say are."
       ],
-      misconception: "A common mix-up is matching the verb to the word beside it. Here bag is one, but the subject is sticks.",
-      why: "The answer is \"The sticks in my bag is made of wood.\" The subject is sticks, which is more than one, so the verb should be are. \"In my bag\" only tells where the sticks are. The other lines agree."
+      misconception: "A common mix-up is matching the verb to the word beside it. Here bag is one, but the subject is gloves.",
+      why: "The answer is \"The gloves in my bag is made of leather.\" The subject is gloves, which is more than one, so the verb should be are. \"In my bag\" only tells where the gloves are. The other lines agree."
     },
     {
       id: "SK-GC2c-S07",
@@ -3649,24 +3649,24 @@ PP.addLesson({
       like: ["SK-GC2c-C07"],
       prompt: "In sentence 3 of Eli's draft, which pair of words must agree?",
       choices: [
-        { text: "cymbal and rings", correct: true },
-        { text: "drums and rings" },
-        { text: "bright and sound" },
-        { text: "beside and drums" }
+        { text: "flag and waves", correct: true },
+        { text: "ropes and waves" },
+        { text: "bright and sun" },
+        { text: "beside and ropes" }
       ],
       clue: "The verb has to agree with the word the sentence is about. Find that word first.",
       hints: [
         "The verb has to agree with the word the sentence is about. Find that word first.",
-        "Read sentence 3. Ask what rings, and decide whether it is one or more than one.",
+        "Read sentence 3. Ask what waves, and decide whether it is one or more than one.",
         "The word closest to the verb is not always the subject. Check the other pairs against the words the sentence is really about."
       ],
       how: [
-        "Ask what rings in sentence 3. It is the cymbal.",
-        "\"Beside the drums\" only tells where the cymbal is. Drums is not the subject.",
-        "The subject is cymbal, which is one, and the verb is rings: \"cymbal and rings.\""
+        "Ask what waves in sentence 3. It is the flag.",
+        "\"Beside the ropes\" only tells where the flag is. Ropes is not the subject.",
+        "The subject is flag, which is one, and the verb is waves: \"flag and waves.\""
       ],
       misconception: "A common mix-up is pairing the verb with the closest noun. Skip the words that only tell where.",
-      why: "The answer is \"cymbal and rings.\" The sentence is about the cymbal, so the cymbal is the subject and rings is its verb. Drums only tells where the cymbal is. Bright and sound go together as a describing word and a noun. Beside is not a subject or a verb."
+      why: "The answer is \"flag and waves.\" The sentence is about the flag, so the flag is the subject and waves is its verb. Ropes only tells where the flag is. Bright and sun go together as a describing word and a noun. Beside is not a subject or a verb."
     },
     {
       id: "SK-GC2c-S08",
@@ -3802,17 +3802,17 @@ PP.addLesson({
       like: ["SK-GC2c-C12"],
       prompt: "Edit this paragraph. Which TWO fixes are correct?",
       stem: [
-        "(1) The library near our school has a reading nook.",
-        "(2) Two librarians helps students find books.",
-        "(3) The shelves are full of new titles.",
-        "(4) A fan in the ceiling make the room cool."
+        "(1) The pool near our school has a long slide.",
+        "(2) Two lifeguards helps the little swimmers.",
+        "(3) The lanes are full of splashing kids.",
+        "(4) A buoy in the middle make the deep end clear."
       ],
       pick: 2,
       choices: [
         { text: "In line 2, change helps to help.", correct: true },
         { text: "In line 4, change make to makes.", correct: true },
         { text: "In line 1, change has to have." },
-        { text: "In line 3, change shelves to shelf." },
+        { text: "In line 3, change lanes to lane." },
         { text: "In line 2, change Two to Too." }
       ],
       clue: "Find the subject of each line. Ask one or more than one, then check the verb.",
@@ -3822,12 +3822,12 @@ PP.addLesson({
         "Line 1 already agrees. Its subject is one thing, even though school is near the verb. Check the other choices."
       ],
       how: [
-        "Line 2 has two librarians, which is more than one, so the verb has no s: \"In line 2, change helps to help.\"",
-        "Line 4 is about one fan, so it needs makes: \"In line 4, change make to makes.\"",
+        "Line 2 has two lifeguards, which is more than one, so the verb has no s: \"In line 2, change helps to help.\"",
+        "Line 4 is about one buoy, so it needs makes: \"In line 4, change make to makes.\"",
         "Lines 1 and 3 already agree, and changing Two to Too is not a verb fix."
       ],
       misconception: "A common mix-up is changing a line that is already right because a nearby word looks different.",
-      why: "The answers are \"In line 2, change helps to help.\" and \"In line 4, change make to makes.\" Two librarians takes help, and one fan takes makes. Line 1 agrees: the subject is library. Line 3 agrees: shelves takes are. Changing Two to Too is not a verb fix."
+      why: "The answers are \"In line 2, change helps to help.\" and \"In line 4, change make to makes.\" Two lifeguards takes help, and one buoy takes makes. Line 1 agrees: the subject is pool. Line 3 agrees: lanes takes are. Changing Two to Too is not a verb fix."
     },
     {
       id: "SK-GC2c-S13",
