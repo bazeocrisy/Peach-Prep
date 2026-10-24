@@ -1,0 +1,171 @@
+# B5 comp author log: TF-FEAT and TF-DIG (the two new component lessons)
+
+**Role:** content author, batch B5 (component lessons). **This is not a review.** Nothing here certifies the items. Reviewers should blind-solve before they read this log.
+
+**Status:** AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW. Both lessons are NOT ACCEPTED. Neither is in `js/data/accepted.js`.
+
+## 1. What was built
+
+`js/data/lessons/T-CF.js` holds two lessons, registered in `js/data/manifest.js` right after `T-TS` (the way `T-SS` is registered). Every block is marked `B5-comp`.
+
+| Lesson | Key | Codes | Title | Contents |
+|---|---|---|---|---|
+| Text features | `TF-FEAT` | `3.T.SS.1.a`, `3.T.C.1.b` | Where information goes: chapters, headings, maps and captions | teach, learn, parent; passages p1-p6; Together P1-P4; core C01-C15 (3 sets of 5); similar S01-S15; addons; test T1-T5 |
+| Digital, audio and spoken features | `TF-DIG` | `3.T.C.1.b` | Screens, sounds and speaking: features you click, hear and listen for | teach (three Watch Me models W1-W3), learn, parent; passages p1-p5; Together P1-P4; core C01-C15; similar S01-S15; addons; test T1-T5 |
+
+Item ids: `SK-TFF-*` (FEAT) and `SK-TFD-*` (DIG).
+
+New figures in `assets/figures/` (all original, drawn by me; Black children by default where people appear): `tf-camp-map.svg`, `tf-trail-map.svg`, `tf-yard-map.svg`, `tf-crayon-video.svg`, `tf-bird-page.svg`.
+
+### Edits outside T-CF.js (flag these)
+
+- `js/data/manifest.js`: `"T-CF"` added to `lessons`.
+- `js/data/std-groups.js`: `"TF-FEAT"` added to the `lessons` list of group 3.T.SS.1.a (the rule says it must list every lesson whose main code matches).
+- `js/data/catalog.js`: `"TF-FEAT","TF-DIG"` added to the Information group, after `"3.T.C.1.b"`.
+- **`verification/practice-own.py`, test G.3:** it hard-coded the lesson list for 3.T.SS.1.a. It now expects seven lessons including `TF-FEAT`. This is an edit to a verification script, not to content. **The lead should confirm it is acceptable.**
+- `docs/expansion-2026-10-22/02-coverage-matrix.csv`: rows 3.T.SS.1.a and 3.T.C.1.b now say "Expansion: AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW" (they said NOT STARTED).
+- `docs/expansion-2026-10-22/batches/STATUS.md`: the "Two new component lessons" NOT STARTED row is replaced with two rows, TF-FEAT and TF-DIG, "NOT ACCEPTED: awaiting independent review".
+- I did not touch `accepted.js` or any accepted lesson's items. `git status` also shows `js/data/lessons/L-GC2.js` as modified; that is not mine.
+
+## 2. Gate results (last run, after the final edit)
+
+| Gate | Result |
+|---|---|
+| `node verification/check-content.js --all` | `PASS (0 failures, 9 warnings)`. None of the 9 warnings is on a TF- lesson (they are on PT-1, 3.L.V.3.b, 3.T.RA.2.b, 3.T.T.1.a/c/d/e and the migration note, all outside my files). |
+| `node verification/check-writing.js` | 0 failures, 0 warnings |
+| `node verification/check-instructional-copy.js` | 28 assertions passed |
+| Passage readability | My own FK script: every passage in both lessons is FK 4.5 or lower (FEAT p6 was 4.7 and was edited to 4.1). `verification/readability.py` keys by code, so it lists my passages under 3.T.SS.1.a / 3.T.C.1.b mixed with T-SS and T-C passages; it printed no failure. See 7.1 for inline stems. |
+| Browser smoke test (Playwright, local `http.server`) | For both lessons, all three sets opened from `#skill/TF-FEAT/try` and `#skill/TF-DIG/try`. For each of the 30 core items: answered, pressed Check, "Try a similar question" appeared, and it opened the item named by `like` (C01 to S01 ... C15 to S15), then back. No visible image failed to load. The only console errors were Google Fonts requests blocked by the sandbox network. Script: scratchpad `cf/smoke.py`. |
+
+## 3. Similar-bank similarity (measured by me)
+
+Method: raw-token Jaccard and multiset (bag) overlap over stem + prompt + text + all options, slot options, steps, rows, cols and the ebsr part prompts. Four modes were run: all tokens, and tokens longer than two letters, each with and without the core item's passage text. Scripts: scratchpad `cf/simcf.js`, `pair.js`, `pairp.js`, `dup.js`.
+
+| Mode | Highest set Jaccard | Highest bag overlap | Pairs over 0.21 | Exact shared options |
+|---|---|---|---|---|
+| all tokens, no passage | 0.195 | 0.209 | 0 | 0 |
+| all tokens, with passage | 0.195 | 0.209 | 0 | 0 |
+| tokens over two letters, no passage | 0.193 | 0.192 | 0 | 0 |
+| tokens over two letters, with passage | 0.193 | 0.187 | 0 | 0 |
+
+Be aware: the highest bag value (0.209) is close to the ceiling. Reviewers who measure differently (for example, counting stem sentences twice) could land above 0.21 on one or two pairs. The worst pairs are in the S13/S14/S15 area of FEAT and in the DIG ms items.
+
+**History, stated plainly:** my first drafts of the similar bank were almost all over the ceiling (FEAT 14 of 15, DIG 15 of 15). I rewrote the bank with different frames and vocabulary until every pair passed all four modes. The backups of the first drafts are not in the repo.
+
+Within-lesson duplicates found by `dup.js` and not removed (low risk): the option strings "did you know" (FEAT P1, T1), "a chapter" and "a section" (FEAT P2 and S01), and "the bird tower" (FEAT C06 and C10). One same-skill pair has Jaccard 0.33: FEAT C08 and T3. They use different passages but the same question shape. A reviewer may want T3 reworded.
+
+## 4. Item attribute tables
+
+Verbs: ID identify, EX explain, UE use evidence, ED edit, CO construct, CP compare, TR transfer.
+
+### TF-FEAT core
+
+| Id | Set | Format | DOK | Text | Component | Verb | Differs from neighbours by |
+|---|---|---|---|---|---|---|---|
+| C01 | 1 | dropdown | 1 | p1 jump rope chapter | chapter vs section terms | ID | term slots on a chapter title |
+| C02 | 1 | mc | 2 | inline table of contents (Fun with Jump Rope) | table of contents | UE | reads page numbers off a list |
+| C03 | 1 | ms | 2 | p1 | headings | EX | why headings help a reader |
+| C04 | 1 | mc | 2 | p1 | Try It! text box | ED | rewrite a box, same job |
+| C05 | 1 | hottext | 2 | p1 | order of sections | UE | pick the sentence that shows why one section follows another |
+| C06 | 2 | mc | 2 | trail map figure | map with compass rose | ID | directions on a map |
+| C07 | 2 | dropdown | 2 | inline photo description | caption | ED | build a caption that adds what the photo cannot show |
+| C08 | 2 | mc | 3 | p2 Fern Hollow brochure | order of sections | EX | why the author ordered the sections |
+| C09 | 2 | match | 2 | inline grasshopper page | job of each feature | CP | match four features to jobs |
+| C10 | 2 | ms | 2 | p2 | headings as a finding tool | TR | pick two sections for a purpose |
+| C11 | 3 | ebsr | 3 | p3 sinkholes | sections and cause and effect | EX, UE | Part A idea, Part B evidence |
+| C12 | 3 | dropdown | 2 | inline index (Rockets and Space Travel) | index | CP | index versus table of contents |
+| C13 | 3 | mc | 3 | inline report on helicopters | headings | CO | choose headings that split two ideas |
+| C14 | 3 | mc | 3 | inline Plan A and Plan B | how a book is arranged into chapters and sections | CP | compare two plans |
+| C15 | 3 | ms | 2 | yard/neighborhood map reasoning (inline) | map parts | TR | what to add so a stranger can use the map |
+
+Tallies for the fifteen: mc 6 (C02, C04, C06, C08, C13, C14); ms 3; dropdown 3; hottext 1; match 1; ebsr 1. That is six formats, five of them technology-enhanced. DOK1 once (C01). DOK3: C08, C11, C13, C14. Verb counts: identify 2, explain 3 (C03, C08, C11), use evidence 3 (C02, C05, C11), edit 2 (C04, C07), construct 1 (C13), compare 3 (C09, C12, C14), transfer 2 (C10, C15). Contexts (approximate, my own labels): sports 5, outdoors 3, science 2, and one each for the others. Texts: p1 (4 items), p2 (2), p3 (1), figure or inline stems for the rest; no text holds more than seven.
+
+### TF-DIG core
+
+| Id | Set | Format | DOK | Text | Component | Verb | Differs from neighbours by |
+|---|---|---|---|---|---|---|---|
+| C01 | 1 | mc | 1 | crayon video page figure | part of a video page | ID | name a control |
+| C02 | 1 | ms | 2 | same figure | transcript and rewind | UE | pick two ways to get an exact number |
+| C03 | 1 | dropdown | 2 | inline directions | back arrow and search box | ED | fix two wrong directions |
+| C04 | 1 | match | 2 | inline ocean digital book | link, pop-up, search, menu | CP | jobs to features |
+| C05 | 1 | mc | 3 | inline paper-fan choice | video, audio or words | TR | choose a mode for a purpose |
+| C06 | 2 | mc | 2 | p1 audio tour script | [pause] direction | ID | stage direction meaning |
+| C07 | 2 | order | 2 | p1 | steps in a guide | CO | sequence from a script |
+| C08 | 2 | ebsr | 3 | p1 | why a whisper works | EX, UE | Part A idea, Part B evidence |
+| C09 | 2 | dropdown | 2 | inline Echo Tube script | cues | ED | complete a script with cues |
+| C10 | 2 | mc | 3 | inline sign versus audio tour | audio versus print | CP | how one mode helps more |
+| C11 | 3 | hottext | 2 | p2 Friday Announcements | repeating an important fact | UE | pick the sentence to repeat |
+| C12 | 3 | mc | 2 | p2 | pause | EX | why stop after a greeting |
+| C13 | 3 | dropdown | 2 | inline tips | volume and clarity | ED | complete speaking tips |
+| C14 | 3 | mc | 3 | inline soccer field | speaking in a noisy place | TR | choose the delivery |
+| C15 | 3 | ms | 2 | inline parakeet talk | eye contact and visuals | ED | pick two changes |
+
+Tallies: mc 6 (C01, C05, C06, C10, C12, C14); ms 2; dropdown 3; match 1; order 1; ebsr 1; hottext 1. That is seven formats, five of them technology-enhanced. DOK1 once (C01). DOK3: C05, C08, C10, C14. Verbs: identify 2, explain 2 (C08, C12), use evidence 3 (C02, C08, C11), edit 4 (C03, C09, C13, C15), construct 1 (C07), compare 2 (C04, C10), transfer 2 (C05, C14). Contexts: museum 5, announcements 3, others fewer. Texts: p1 (3), p2 (2), a figure (2), inline stems for the rest; no text holds more than seven.
+
+All of this is by my own reading of the items, not a script. A reviewer should recount, especially the "every pair differs in at least two of text, component, verb, context" rule, which I checked by eye.
+
+## 5. Live choices after hints (hand-counted)
+
+Hints 1 (strategy) and 2 (where to look) remove nothing. Hint 3 settles at most one blank or row, and I counted what is left:
+
+- mc: four choices, three live after hint 3.
+- ms: five choices, four live (choose two).
+- dropdown: hint 3 removes one option from one slot, so that slot has two live options out of three. A one-slot dropdown therefore leaves two of three live. This is the weakest point (see 7.2).
+- match: one row settled, three rows live.
+- order: first step placed, three steps left.
+- hottext: six sentences, five live.
+- ebsr: Part A four to three, Part B four unchanged. (My first FEAT C11 and S11 hint 3 ruled out two Part A choices; I reduced it to one.)
+
+No hint 3 leaves only the key. Hint 2 never points at a place that holds only the key.
+
+## 6. Fixes actually made during authoring
+
+- A hint said "the last choice says..." in DIG C05 and S05. check-content calls position references a FAIL. Reworded to "the choice that says...".
+- Many "clue shares a word only with the key" warnings (FEAT C11, C14, S03, S11, S13, S14, S15; DIG C02, C08, C10, C15, S05, S06, S08, S12, S15; tests T1, T4, T5). Reworded the clues, hints and some keys. Three keys that were far longer than the other choices (FEAT S13, DIG T4, DIG S06) were shortened.
+- Short passages (DIG p2 to p5) lengthened to 100-124 words. FEAT p6 reduced from FK 4.7 to 4.1.
+- The first similar bank was over the Jaccard ceiling (see 3) and was rewritten.
+- Topic collisions with other lessons were resolved by changing my topic: a glacier passage (replaced by sinkholes in FEAT p3), elevators (now escalators in S13), chess club, gecko and planets.
+- Near-duplicates inside the lessons were reworded: FEAT T5 versus C12 and S12 (index frames); FEAT Together P2 versus C02, and DIG Together P2 versus C01 (shared option strings).
+- A stray "X," left by a bad multi-edit in DIG B1 was removed.
+
+## 7. What I did NOT fix, and what is doubtful
+
+1. **Reading level of inline stems.** Only passages are gated at FK 4.5. By my heuristic FK, some short inline stems read above 4.5 because of domain words (helicopters, announcements, transcript) and unpunctuated contents or index lines (the heuristic over-penalises those). Examples: FEAT C13 about 5.7, S03 about 6.7, S13 about 6.0, T5; DIG T2 about 6.1, T5 about 5.6, S05 about 4.6, C11 about 4.7, C14 about 4.6. These words are the skill terms the lesson teaches. A reviewer should decide whether any stem needs simplifying.
+2. **Hint 3 on a one-slot dropdown** leaves two of three options live (see 5). That is within the rule but gives the weakest scaffold.
+3. **Together items** use inline stems without figures. Only Watch Me W1 (DIG) uses the bird page figure.
+4. **Facts for audio items** describe a recording, screen or speaker as text. Nothing needs sound to solve.
+5. The within-lesson repeats and the FEAT C08/T3 pair in section 3.
+6. The simcf bag value of 0.209 is near the limit.
+
+## 8. Items most wanted for skeptical re-solving
+
+Please solve these cold, without the key, and report any second defensible answer:
+
+- **FEAT C04** (which rewrite does the same job as the Try It! box): does more than one rewrite plausibly "do the same job"?
+- **FEAT C05** (hottext: why one section follows another): is exactly one sentence defensible?
+- **FEAT C08** (why the brochure is ordered as it is): DOK3 reasoning, check the distractors.
+- **FEAT C09** (match feature to job): rows overlap in purpose (title vs caption vs box).
+- **FEAT C11 / S11** (ebsr): are Part A and Part B independent enough, and is the one removed Part A choice by hint 3 fair?
+- **FEAT C14 / S14** (Plan A versus Plan B): a reader could argue either plan; the stem was changed once to add a sentence about who went on which trip. Check that exactly one plan answers the prompt.
+- **DIG C05 / S05** (best mode for learning to fold a paper fan): preference-like; check whether "video" is clearly best and the wording does not give it away.
+- **DIG C08 / S08** (ebsr on the whisper dishes): check the science wording against the real mechanism (see 9).
+- **DIG C10 / S10** (audio tour versus sign): "helps more" is relative; check distractors.
+- **DIG C14 / S14** and **C15 / S15** (delivery in noise; two changes for a talk): check that "choose TWO" has exactly two defensible changes.
+- **DIG S10** (fire-drill poster): confirm it does not duplicate C10's reasoning.
+- Also confirm the 15 hint-3 texts do not settle too much, using the live-choice counts in 5.
+
+## 9. Web verification of facts
+
+Checked on the web this session (URLs fetched or returned by search):
+
+- Whisper dishes, curved dishes that focus sound from one dish to the other: https://gatewaytoscience.org/new-whisper-dishes-hear-science-in-action/ and https://en.wikipedia.org/wiki/Whispering_gallery
+- How crayons are made (melt paraffin wax, add pigment, pour into molds, cool): https://www.crayola.co.uk/faq/quality-and-safety/how-are-crayola-crayons-manufactured-and-what-are-the-basic-ingredients/
+- Cardinals (males bright red with a crest; seeds and fruit): https://tpwd.texas.gov/huntwild/wild/species/northerncardinal. Note: that page says fruit, not berries specifically; my wording says fruit.
+- Spinning color disk: searched; sources include https://www.eiscolabs.com/products/ph1232mt and https://projekte.chemiedidaktik.uni-bremen.de/salis_zusatz/salis_pdf/fromcoloredtowhite_35.pdf. A real disk blends toward white or gray, so the script says only that the colors "blur together into one color".
+- Sinkholes (groundwater dissolves limestone and other soluble rock; the land above a cavity can collapse; ponds can form inside): https://www.usgs.gov/water-science-school/science/sinkholes. Note: USGS says water alone does not create ponds in sinkholes; a pond forms when debris blocks the outflow. My passage does not say that water makes the pond, but a reviewer should re-read p3 for that.
+- Pearls (an irritant such as a parasite, grain of sand or small fish sits between shell and mantle; the mollusk coats it with layers of nacre): https://kids.britannica.com/students/article/pearl/276326. Note: "a speck of sand" is the common simplification; Britannica names sand among several irritants. The p6 text says "after a few years", which is a loose figure that I did not check against a source.
+- Grasshoppers (males make sound by rubbing a row of pegs on the back legs against the front wings): https://qrius.si.edu/browse/object/11038205. The box says "some grasshoppers", which is accurate.
+- Giraffes have seven neck vertebrae like humans: https://www.snopes.com/fact-check/giraffes-neck-bones-humans/
+- Blueberry bushes can live and produce for up to fifty years (many years is safe): https://www.epicgardening.com/blueberries/. This is a gardening site, not an extension service; a reviewer who wants a stronger source can check a university extension page.
+
+Not verified beyond common knowledge: contents and index conventions (chapter, section, table of contents, index, compass rose, key), which are text-feature definitions taken from the standard's own terms. No wording was copied from GaDOE materials, and no real child data was used.

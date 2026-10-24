@@ -96,17 +96,17 @@ PP.addLesson({
         ["From the tower, the trail heads south along the east side of the pond.", "It crosses a footbridge and then leads back to the parking lot."],
         ["Box: Trail Tip: Wear shoes that can get muddy.", "The path near the footbridge can be wet."]
       ] },
-    /* p3: core set 3 and a similar item. */
-    { id: "p3", title: "Rivers of Ice", genre: "Informational text",
+    /* p3: core set 3. */
+    { id: "p3", title: "When the Ground Falls In", genre: "Informational text",
       paragraphs: [
-        ["A glacier is a huge, slow-moving mass of ice.", "Glaciers form in cold places where more snow falls each year than melts."],
-        ["## How a Glacier Is Made"],
-        ["Each winter, new snow piles up on top of the old snow.", "The weight of the top layers squeezes the snow underneath.", "After many years, the squeezed snow turns into hard ice."],
-        ["## A River of Ice"],
-        ["A glacier gets so heavy that it begins to slide downhill.", "It moves so slowly that you cannot see it move.", "Over the years, though, it travels a long way."],
-        ["## Carving the Land"],
-        ["As a glacier slides, it scrapes the rock beneath it.", "Over thousands of years, it can carve a deep valley.", "Some wide valleys in the mountains were carved this way."],
-        ["Box: Did You Know? Glacier ice can look blue."]
+        ["A sinkhole is a hole that suddenly opens in the ground.", "Some are small, and some are big enough to swallow a truck."],
+        ["## Water Under the Ground"],
+        ["Rain soaks into the soil and trickles down into the rock below.", "In some places, that rock is a soft stone called limestone.", "Slowly, the water wears away the limestone."],
+        ["## An Empty Space"],
+        ["Over many years, the water carves out an empty space underground.", "The ground above still holds, like a roof over a cave.", "A roof can stand for a long time, but it gets thinner."],
+        ["## The Roof Falls"],
+        ["At last, the thin roof cannot hold up the ground above it.", "The ground drops, and a sinkhole opens."],
+        ["Box: Did You Know? Some sinkholes fill with water and become ponds."]
       ] },
     /* p4: Practice Together only. */
     { id: "p4", title: "Saving Water at Home", genre: "Informational text",
@@ -156,7 +156,7 @@ PP.addLesson({
       clue: "A heading tells what a section is about. Ask which place in a home each section is for.",
       why: "The answer is \"In the Kitchen.\" That section has the tip about washing fruits and vegetables in a bowl. The bathroom section is about showers and teeth, and the yard section is about rain." },
     { id: "SK-TFF-P2", type: "match", points: 2, dok: 1, std: ["3.T.SS.1.a"], passages: [],
-      stem: ["Here is part of the table of contents from a book called Saving Water.", "Chapter 1: Why Water Matters, page 1", "Chapter 2: Saving at Home, page 6", "• In the Bathroom, page 7", "• In the Kitchen, page 9", "Chapter 3: Saving at School, page 12"],
+      stem: ["The contents page of a book called Saving Water lists these parts.", "Chapter 1: Why Water Matters, page 1", "Chapter 2: Saving at Home, page 6", "• In the Bathroom, page 7", "• In the Kitchen, page 9", "Chapter 3: Saving at School, page 12"],
       prompt: "Match each title to what it names in the book.",
       cols: ["a chapter", "a section"],
       rows: [
@@ -424,32 +424,32 @@ PP.addLesson({
         prompt: "This question has two parts. Answer Part A, then Part B.",
         partA: { prompt: "Why are the sections of this article in this order?",
           choices: [
-            { text: "Each section builds on the one before it, from how a glacier forms to what it does.", correct: true },
-            { text: "Each section tells about a different glacier in a different part of the world." },
-            { text: "The sections go from the smallest glacier to the biggest glacier." },
+            { text: "Each section builds on the one before it, from what water does underground to how the ground falls.", correct: true },
+            { text: "Each section tells about a different sinkhole in a different part of the world." },
+            { text: "The sections go from the smallest sinkhole to the biggest sinkhole." },
             { text: "The sections start with the most surprising fact and end with the least surprising." }
           ] },
-        partB: { prompt: "Which sentence best shows how the section \"Carving the Land\" builds on the section before it?",
+        partB: { prompt: "Which sentence best shows how the section \"The Roof Falls\" builds on the section before it?",
           choices: [
-            { text: "\"As a glacier slides, it scrapes the rock beneath it.\"", correct: true },
-            { text: "\"Over thousands of years, it can carve a deep valley.\"" },
-            { text: "\"A glacier gets so heavy that it begins to slide downhill.\"" },
-            { text: "\"After many years, the squeezed snow turns into hard ice.\"" }
+            { text: "\"At last, the thin roof cannot hold up the ground above it.\"", correct: true },
+            { text: "\"The ground drops, and a sinkhole opens.\"" },
+            { text: "\"A roof can stand for a long time, but it gets thinner.\"" },
+            { text: "\"Slowly, the water wears away the limestone.\"" }
           ] },
         clue: "Authors often choose an order that helps the reader follow along. Ask what you need to know first to understand each section.",
         hints: [
           "Authors often choose an order that helps the reader follow along. Ask what you need to know first to understand each section.",
           "For Part A, read the three headings in order and think about what each section is about. For Part B, reread the last section and ask which sentence points back to the middle section.",
-          "The article does not compare different glaciers by place or by size, so rule out the Part A choices about a different glacier and about the smallest and biggest. Decide Part B yourself."
+          "The article tells about one kind of sinkhole and never about different sinkholes in different places, so rule out that Part A choice. Decide the rest yourself."
         ],
         how: [
-          "Look at the headings in order: How a Glacier Is Made, A River of Ice, Carving the Land.",
-          "First the ice forms. Then the heavy ice slides. Then the sliding ice scrapes and carves the rock. Each part needs the part before it.",
-          "Part A: \"Each section builds on the one before it, from how a glacier forms to what it does.\" Part B: \"As a glacier slides, it scrapes the rock beneath it.\" The word slides goes back to the movement in the middle section.",
-          "The sentence about heavy ice sliding downhill is in the middle section. The last section builds on it, so it is not the sentence that shows the building."
+          "Look at the headings in order: Water Under the Ground, An Empty Space, The Roof Falls.",
+          "First the water wears away the stone. Then an empty space forms. Then the roof over the space falls. Each part needs the part before it.",
+          "Part A: \"Each section builds on the one before it, from what water does underground to how the ground falls.\" Part B: \"At last, the thin roof cannot hold up the ground above it.\" The words thin roof go back to the empty space in the middle section.",
+          "The sentence about a roof getting thinner is in the middle section. The last section builds on it, so it is not the sentence that shows the building."
         ],
         misconception: "A common mix-up is choosing a sentence from the earlier section. Part B asks for the sentence in the later section that points back.",
-        why: "Part A: \"Each section builds on the one before it, from how a glacier forms to what it does.\" Part B: \"As a glacier slides, it scrapes the rock beneath it.\" The word slides goes back to the movement described in the section before. The article never compares different glaciers by place or size." },
+        why: "Part A: \"Each section builds on the one before it, from what water does underground to how the ground falls.\" Part B: \"At last, the thin roof cannot hold up the ground above it.\" The words thin roof go back to the empty space described in the section before. The article never tells about different sinkholes in different places." },
       { id: "SK-TFF-C12", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Here is part of the index from a book called Rockets and Space Travel. An index lists topics in ABC order, with the pages where each one is found.", "astronauts, 12, 15", "engines, 6, 7", "fuel, 6, 9", "launch pad, 4, 5", "satellites, 18, 19"],
         prompt: "Mia wants to read about engines and fuel together. Choose the words that best complete the sentence.",
@@ -685,7 +685,7 @@ PP.addLesson({
       misconception: "A common mix-up is choosing any place in the top half of the map. Straight north means directly above the bench.",
       why: "The answer is \"the flagpole.\" North is at the top, so straight north of the bench is directly above it. The garden and the swings are higher than the bench but off to the side, and the sandbox is straight east." },
     { id: "SK-TFF-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [], like: ["SK-TFF-C07"],
-      stem: ["On the Arbor Day page of a school bulletin, an editor is choosing words for a photo of a boy wearing a red cap beside a young oak. He grips a shovel, and the tree stands in a hole in the grass."],
+      stem: ["An editor is choosing words for a photo on the Arbor Day page of a school bulletin. A boy in a red cap stands beside a young oak. He grips a shovel, and the tree stands in a hole in the grass."],
       prompt: "Pick the words that tell something new about the scene.",
       text: "Words under it: {0}",
       slots: [
@@ -777,7 +777,7 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a section that sounds fun. Pick the sections that answer the parent's questions.",
       why: "The answers are What to Bring and In Case of Rain. The first tells what to carry, and the second tells that Science Night moves into the gym if it rains. Fun Stations, Snack Time and the box answer other questions." },
     { id: "SK-TFF-S11", type: "ebsr", points: 2, dok: 3, std: ["3.T.SS.1.a"], passages: ["p6"], like: ["SK-TFF-C11"],
-      stem: ["Picture this article on pearls and oysters. Its story starts with a speck of sand, moves through shiny layers, and ends with a gem that people can wear. Three bold headings break the story into small steps for young readers."],
+      stem: ["Imagine a short reading about pearls and oysters. Its story starts with a speck of sand, moves through shiny layers, and ends with a gem that people can wear. Three bold headings break the story into small steps for young readers."],
       prompt: "Two answers are needed: A and B.",
       partA: { prompt: "How did the author decide what to put first, next and last?",
         choices: [
@@ -797,7 +797,7 @@ PP.addLesson({
       hints: [
         "Sections can be arranged so that each one needs the one that came earlier. Ask what you must know first to understand each section.",
         "For Part A, read the three headings in order and think about what each section tells. For Part B, reread the last section and ask which sentence points back to the middle section.",
-        "The article never talks about more than one oyster or sea, and it does not compare the sizes of pearls, so rule out those two Part A choices. Decide Part B yourself."
+        "The article never talks about more than one oyster or shore, so rule out that Part A choice. Decide the rest yourself."
       ],
       how: [
         "The headings go A Tiny Visitor, Layer by Layer and A Pearl at Last.",
@@ -806,7 +806,7 @@ PP.addLesson({
         "The sentence about adding a layer each day is in the middle section, so it is what the last section builds on."
       ],
       misconception: "A common mix-up is choosing a sentence from the earlier section. Part B asks which sentence in the later section looks back.",
-      why: "Part A: \"Each part happens because of the one before it.\" Part B: \"After a few years, the layers of nacre have covered the sand completely.\" It goes back to the layers in the section before. The article tells about one oyster, and it does not compare pearl sizes." },
+      why: "Part A: \"Each part happens because of the one before it.\" Part B: \"After a few years, the layers of nacre have covered the sand completely.\" It goes back to the layers in the section before. The article tells about one oyster." },
     { id: "SK-TFF-S12", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C12"],
       stem: ["The back of Castles Long Ago has an index, which lists topics from A to Z with their pages.", "drawbridge: 10, 11", "knights: 20, 21", "moat: 10, 16", "towers: 3, 22"],
       prompt: "Leo needs a page that covers both the moat and the drawbridge. Which page should he open?",
@@ -826,28 +826,28 @@ PP.addLesson({
       misconception: "A common mix-up is picking the biggest page number. Leo needs a page that is beside both topics.",
       why: "The answer is 10. The index lists page 10 beside both the moat and the drawbridge. Page 11 is listed only for the drawbridge, and page 16 is listed only for the moat." },
     { id: "SK-TFF-S13", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C13"],
-      stem: ["Maya's report about elevators has two paragraphs under one shared heading, Elevators.", "First paragraph: An elevator moves inside a tall shaft. A strong cable pulls the car up and lets it down.", "Second paragraph: Elevators have safety rules. Do not jump inside, and never hold the doors open."],
+      stem: ["Maya's report about escalators has two paragraphs under one shared heading, Escalators.", "First paragraph: An escalator is a staircase that moves. A loop of steps rolls up from the floor and flattens out at the top.", "Second paragraph: Escalators have safety rules. Hold the rail, and keep your shoes away from the sides."],
       prompt: "Now each paragraph needs its own heading. Which pair will best guide readers?",
       choices: [
-        { text: "First: How Elevators Work. Second: Elevator Safety.", correct: true },
-        { text: "First: Cables. Second: Doors." },
-        { text: "First: Elevators. Second: More About Elevators." },
+        { text: "First: How Escalators Work. Second: Escalator Safety.", correct: true },
+        { text: "First: Steps. Second: Rails." },
+        { text: "First: Escalators. Second: More About Escalators." },
         { text: "First: Tall Buildings. Second: Short Buildings." }
       ],
       clue: "A good heading covers a whole section. It is not only one detail, and it is not so general that it could fit anything.",
       hints: [
         "A good heading covers a whole section. It is not only one detail, and it is not so general that it could fit anything.",
         "Read the first paragraph and then the second one on their own. Ask what all of the sentences in each one are mostly about.",
-        "Doors is only one of the things mentioned in the second paragraph, so a heading that names only that is too narrow. Check each pair for headings that cover a whole paragraph."
+        "Rails is only one of the things mentioned in the second paragraph, so a heading that names only that is too narrow. Check each pair for headings that cover a whole paragraph."
       ],
       how: [
-        "The first paragraph tells how a cable pulls the car up and lets it down, so it is about how an elevator moves.",
-        "The second paragraph tells what not to do inside an elevator, so it is about riding safely.",
-        "The answer is \"First: How Elevators Work. Second: Elevator Safety.\" Each heading covers the whole paragraph.",
-        "Cables and Doors name one detail each. Elevators and More About Elevators are too general. Tall Buildings and Short Buildings do not match the paragraphs."
+        "The first paragraph tells how a loop of steps rolls up and flattens out, so it is about how an escalator works.",
+        "The second paragraph tells how to hold on and where to keep your shoes, so it is about riding safely.",
+        "The answer is \"First: How Escalators Work. Second: Escalator Safety.\" Each heading covers the whole paragraph.",
+        "Steps and Rails name one detail each. Escalators and More About Escalators are too general. Tall Buildings and Short Buildings do not match the paragraphs."
       ],
       misconception: "A common mix-up is choosing a heading that names one detail. A heading should cover the whole section.",
-      why: "The answer is \"First: How Elevators Work. Second: Elevator Safety.\" Each heading covers its whole paragraph. Cables and Doors are single details, and the other pairs are too general or off topic." },
+      why: "The answer is \"First: How Escalators Work. Second: Escalator Safety.\" Each heading covers its whole paragraph. Steps and Rails are single details, and the other pairs are too general or off topic." },
     { id: "SK-TFF-S14", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C14"],
       stem: ["The Maple Hill center is printing a booklet about its summer programs. June, July and August each have a story hour and a craft day.", "Booklet 1: One chapter for each month, with that month's programs as sections.", "Booklet 2: One chapter for each kind of program, with the months as sections."],
       prompt: "Ms. Lopez knows only that the program she wants was on July 12. Which booklet lets her find it fastest, and what is the reason?",
@@ -971,14 +971,14 @@ PP.addLesson({
       clue: "A text box sits apart from the sections. Read it, and ask what kind of information it gives.",
       why: "The answer is \"an extra fact about blueberry bushes.\" The box tells that a bush can give fruit for many years. The steps are in the sections, and the box is not a heading or a caption." },
     { id: "SK-TFF-T3", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p5"],
-      prompt: "Why did the author put the three sections in this order?",
+      prompt: "What is the reason the three sections follow this sequence?",
       choices: [
         { text: "They follow the berries from flowers to the store, in the order things happen.", correct: true },
         { text: "They go from the smallest part of the bush to the biggest part." },
         { text: "They tell about the easiest job on the farm first and the hardest last." },
         { text: "They go from the sweetest berries to the sourest berries." }
       ],
-      clue: "Authors choose an order that helps the reader. Look at what each section tells and when it happens.",
+      clue: "Authors pick a sequence that helps the reader. Look at what each section tells and when it happens.",
       why: "The answer is \"They follow the berries from flowers to the store, in the order things happen.\" The sections go from spring flowers, to summer berries, to packing and trucks. The article does not compare parts of the bush, jobs or sweetness." },
     { id: "SK-TFF-T4", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [],
       stem: ["A photo for the section Flowers in Spring shows two bees on the white, bell-shaped flowers of a blueberry bush."],
@@ -992,9 +992,9 @@ PP.addLesson({
       clue: "A caption tells what the picture shows. Look at what is in the photo, and cross out captions about things that are not there.",
       why: "The answer is \"Bees drink nectar from the white flowers on a blueberry bush.\" The photo shows bees on flowers. The other captions are about picking, trucks and ripe berries, and none of those are in the photo." },
     { id: "SK-TFF-T5", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
-      stem: ["Here is part of the index from a book called Fruit From the Farm. An index lists topics in ABC order, with the pages where each one is found.", "apples, 3, 4", "blueberries, 9, 12", "harvest, 4, 12, 18", "peaches, 17, 18"],
-      prompt: "Eli wants to read about blueberries and the harvest together. Choose the words that best complete the sentence.",
-      text: "Eli should turn to page {0}.",
+      stem: ["Index of Fruit From the Farm", "apples: 3, 4", "blueberries: 9, 12", "harvest: 4, 12, 18", "peaches: 17, 18"],
+      prompt: "Eli is looking for a single page that talks about blueberries and also the harvest. Which page works?",
+      text: "Page {0} works.",
       slots: [{ options: ["4", "12", "18"], answer: 1 }],
       clue: "An index lists the pages where each topic is found. Look for a page that both topics share.",
       why: "The answer is 12. The index lists page 12 beside both blueberries and harvest. Page 4 is listed for harvest but not blueberries, and page 18 is listed for harvest but not blueberries." }
@@ -1085,30 +1085,31 @@ PP.addLesson({
     { id: "p2", title: "Friday Announcements", genre: "Script for a speaker",
       paragraphs: [
         ["Good morning, Panthers! This is Jayden with the Friday announcements.", "Please listen carefully."],
-        ["First, chess club meets today in Room 12.", "It starts at three o'clock.", "New players are welcome, so bring a friend."],
+        ["First, robotics club meets today in Room 12.", "It starts at three o'clock.", "New members are welcome, so bring a friend."],
         ["Next, the lost and found box is full.", "If you lost a coat or a water bottle, look in the box by the office door."],
         ["Also, today is Hat Day.", "Wear your favorite hat to school."],
         ["Also, library books are due next Friday.", "Please put them on the cart by the door."],
         ["Last, thank you to everyone who picked up trash on the playground.", "Have a great weekend!"]
       ] },
     /* p4: used only by similar item SK-TFD-S08. */
-    { id: "p4", title: "Audio Tour, Stop 6: The Spinning Stripes", genre: "Script for a recording",
+    { id: "p4", title: "Audio Tour, Station 6: The Color Corner", genre: "Script for a recording",
       paragraphs: [
-        ["[soft bell]"],
-        ["GUIDE: Welcome to Stop 6, the Color Corner.", "On the table you will find a round paper disk with red, yellow and blue stripes.", "A spinner stands right next to it.", "Be careful not to bend the disk."],
-        ["GUIDE: First, set the disk on the spinner.", "Next, turn the handle as fast as you can.", "Hold the base with your other hand."],
+        ["[chime]"],
+        ["HOST: Hello, and welcome to the Color Corner.", "On the table sits a round paper disk with red, yellow and blue stripes.", "A spinner is fixed next to it."],
+        ["HOST: First, set the disk on the spinner.", "Next, turn the handle as fast as you can.", "Hold the base with your other hand.", "Watch your fingers near the edge."],
         ["[pause]"],
-        ["GUIDE: What do you see?", "When the disk spins fast, your eyes cannot tell the stripes apart.", "They blur together into one color."],
-        ["GUIDE: Last, slow the spinner down, and watch the stripes come back.", "Thank you for visiting Stop 6."]
+        ["HOST: What do you see?", "When the disk spins fast, your eyes cannot tell the stripes apart.", "They blur together into one color."],
+        ["HOST: Last, slow the spinner down, and watch the stripes come back.", "Thank you for visiting."]
       ] },
     /* p5: used only by similar item SK-TFD-S11. */
     { id: "p5", title: "Monday Announcements", genre: "Script for a speaker",
       paragraphs: [
-        ["Good afternoon, everyone! This is Marcus with the news from the stage.", "It is a busy week."],
-        ["First, drama club will rehearse after school today.", "Please meet at the stage door at three o'clock sharp.", "You do not need to bring anything.", "Bring a friend if you like."],
-        ["Next, the music room has a new rule.", "Walk in, and do not touch the drums until your teacher says you may.", "Put the sticks back in the box when you finish."],
-        ["Also, the school store is open at lunch today.", "It sells pencils and erasers."],
-        ["That is all for today.", "Thank you for listening, and have a good week."]
+        ["Hello, students! Marcus here, live from the stage.", "It is a busy week."],
+        ["Drama club will rehearse after classes end.", "Meet at the stage door at four sharp.", "You do not need to carry anything.", "Invite a pal if you like."],
+        ["The music hall has a fresh rule.", "Walk in, and do not touch the drums until your teacher says you may.", "Return the sticks to the bin when you finish."],
+        ["The costume closet is packed with capes, crowns and silly wigs.", "Ask Ms. Ortiz if you want to borrow a cape for the play."],
+        ["The school store sells pencils and erasers at lunch.", "Stop by with a few coins."],
+        ["That is all from the stage.", "Enjoy the rest of your week."]
       ] },
     /* p3: skill check only (test). Never used by core, similar or Together. */
     { id: "p3", title: "Video Script: At the Strawberry Patch", genre: "Script for a recording",
@@ -1140,8 +1141,8 @@ PP.addLesson({
       cols: ["starts or stops the video", "writes out the words and sounds", "changes how fast the video plays", "shows how far along the video is"],
       rows: [
         { text: "the play button", answer: 0 },
-        { text: "the CC button", answer: 1 },
-        { text: "the 1x button", answer: 2 },
+        { text: "the button marked CC", answer: 1 },
+        { text: "the button marked 1x", answer: 2 },
         { text: "the progress bar", answer: 3 }
       ],
       clue: "Think about what each part is named. A name often tells the job.",
@@ -1415,23 +1416,23 @@ PP.addLesson({
     ] },
     { title: "Set 3", items: [
       { id: "SK-TFD-C11", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p2"],
-        prompt: "Jayden wants listeners to remember what time chess club starts. Which sentence should he say a second time? Choose the sentence in the passage.",
+        prompt: "Jayden wants listeners to remember what time robotics club starts. Which sentence should he say a second time? Choose the sentence in the passage.",
         targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1", "p2:3:2", "p2:6:1"],
         answer: ["p2:2:2"], pick: 1,
         clue: "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
         hints: [
           "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
-          "Read the paragraph about chess club. Ask which sentence tells the time.",
+          "Read the paragraph about robotics club. Ask which sentence tells the time.",
           "The sentence that begins \"Next, the lost and found box is full\" is about a different notice, so rule it out. Check the other sentences you can choose for the time."
         ],
         how: [
           "Jayden wants listeners to remember the time, and listeners cannot look back at the page.",
-          "The chess club paragraph has three sentences. Only one tells the time.",
+          "The robotics club paragraph has three sentences. Only one tells the time.",
           "The answer is \"It starts at three o'clock.\" Saying it twice helps listeners remember when to come.",
-          "The other sentences tell where chess club meets, who can come, or other notices. They do not tell the time."
+          "The other sentences tell where robotics club meets, who can come, or other notices. They do not tell the time."
         ],
         misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need, and here that is the time.",
-        why: "The answer is \"It starts at three o'clock.\" Listeners cannot look back, so the speaker says the time a second time. The other sentences tell where chess club meets, who can come, or other notices." },
+        why: "The answer is \"It starts at three o'clock.\" Listeners cannot look back, so the speaker says the time a second time. The other sentences tell where robotics club meets, who can come, or other notices." },
       { id: "SK-TFD-C12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p2"],
         prompt: "Jayden stops for a moment after saying, \"Good morning, Panthers!\" Why might he stop?",
         choices: [
@@ -1466,7 +1467,7 @@ PP.addLesson({
         hints: [
           "Listeners must hear every word the first time. Ask what the mumble and the fast words did to the message.",
           "Reread the two problems in the stem. Each tip should fix one of them.",
-          "Leaving out the room would take away the place where chess club meets, so it is not the answer for the second blank. Decide the rest yourself."
+          "Leaving out the room would take away the place where robotics club meets, so it is not the answer for the second blank. Decide the rest yourself."
         ],
         how: [
           "The first problem is that his voice drops at the end of each sentence, so listeners miss the last words.",
@@ -1500,11 +1501,11 @@ PP.addLesson({
         misconception: "A common mix-up is thinking a short, fast message is best. In a noisy place, a key fact needs a slow, clear voice and a repeat.",
         why: "The answer is \"Say \"Field B\" slowly and clearly, and then say it again.\" The crowd is noisy and cannot reread, so a slow, clear, repeated message is easiest to catch. Fast, quiet or single mentions are easy to miss." },
       { id: "SK-TFD-C15", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2,
-        stem: ["Mei is giving a talk about her pet gecko. She plans to read her notes with her head down and hold up nothing. The class will sit in rows, and some children will sit at the back."],
+        stem: ["Mei is giving a talk about her pet parakeet. She plans to read her notes with her head down and hold up nothing. The class will sit in rows, and some children will sit at the back."],
         prompt: "Which TWO changes would make Mei's talk easier for the class to follow? Choose TWO answers.",
         choices: [
           { text: "Look up and face the class as she talks.", correct: true },
-          { text: "Hold up a picture of the gecko's tank when she tells about it.", correct: true },
+          { text: "Hold up a picture of the parakeet's cage when she tells about it.", correct: true },
           { text: "Read her notes faster so that the talk is short." },
           { text: "Tell the facts in a whisper so the class has to lean in." },
           { text: "Stand behind a tall bookshelf so that she feels calm." }
@@ -1518,11 +1519,11 @@ PP.addLesson({
         how: [
           "Mei's plan has her head down and nothing to show, so listeners at the back may not hear or see much.",
           "Facing the class helps her voice reach everyone. A picture of the tank shows what she is telling about.",
-          "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the gecko's tank when she tells about it.\"",
+          "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the parakeet's cage when she tells about it.\"",
           "Faster reading, a whisper and a bookshelf make it harder to hear and see."
         ],
         misconception: "A common mix-up is thinking a short, quiet or hidden talk is easier on the speaker, so it must be better. A talk is best when listeners can hear and see it.",
-        why: "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the gecko's tank when she tells about it.\" Both help the class at the back hear and see. Fast reading, whispering and hiding behind a bookshelf make it harder." }
+        why: "The answers are \"Look up and face the class as she talks.\" and \"Hold up a picture of the parakeet's cage when she tells about it.\" Both help the class at the back hear and see. Fast reading, whispering and hiding behind a bookshelf make it harder." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own new short text or stem. `like` lists the one core item
@@ -1551,7 +1552,7 @@ PP.addLesson({
       misconception: "A common mix-up is picking the first dot, since it starts the video. Each dot jumps to its own part, so the label tells which one to use.",
       why: "The answer is \"the Dry dot on the line.\" Each dot jumps to the part named on its label, and drying is the final step. The Mash dot goes to the first part, the Back arrow leaves the page, and the speaker icon changes the sound." },
     { id: "SK-TFD-S02", type: "ms", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], pick: 2, like: ["SK-TFD-C02"],
-      stem: ["Zoe plays a recording of a mail carrier on a class page. Halfway through, a phone number is spoken, and a noisy hallway drowns it out. A small box under the recording is labeled Transcript, and a slider on a bar shows the spot being played."],
+      stem: ["Zoe plays a recording of a mail carrier on a class page. Halfway through, the mail carrier says a phone number. A noisy hallway drowns it out. A small box under the recording is labeled Transcript. A slider on a bar shows the spot being played."],
       prompt: "Select the two actions that would give Zoe the digits.",
       choices: [
         { text: "Read the Transcript box until she sees the digits.", correct: true },
@@ -1619,7 +1620,7 @@ PP.addLesson({
       misconception: "A common mix-up is matching the dotted-line word with a new page. A dotted-line word opens a note on the same page.",
       why: "Finding all pages that mention crater needs the magnifying glass. The page about the sun is a link, shown by underlined words. The note about lunar comes from the dotted-line word. The list of pages is the three-line button." },
     { id: "SK-TFD-S05", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C05"],
-      stem: ["Ravi will sit in a car for an hour, and screens and books make him queasy. He is curious about planets. A teacher gave him three versions of one talk: a video, a recording and a printed handout."],
+      stem: ["Ravi will sit in a car for an hour, and screens and books make him queasy. He is curious about the northern lights. A teacher gave him three versions of one talk: a video, a recording and a printed handout."],
       prompt: "What should Ravi use, and what is the reason?",
       choices: [
         { text: "Play the recording, since ears work when eyes cannot.", correct: true },
@@ -1627,10 +1628,10 @@ PP.addLesson({
         { text: "Read the handout, since paper stays steady in a bumpy car." },
         { text: "Skip learning, since nobody can study while riding." }
       ],
-      clue: "Ravi cannot use his eyes. Ask which way of sharing works with only his ears.",
+      clue: "Ravi must keep his gaze off screens and paper. Ask which choice needs no looking.",
       hints: [
-        "Ravi cannot use his eyes. Ask which way of sharing works with only his ears.",
-        "Read what each choice needs: eyes, or only ears. Then read each reason and ask whether it fits Ravi.",
+        "Ravi must keep his gaze off screens and paper. Ask which choice needs no looking.",
+        "Read what each choice needs: looking, or only listening. Then read each reason and ask whether it fits Ravi.",
         "The choice that says nobody can study while riding is not true, so rule it out. Check the reasons for the other three."
       ],
       how: [
@@ -1645,10 +1646,10 @@ PP.addLesson({
       stem: ["Part of a recorded garden walk reads like this. Words in [brackets] are notes for the crew.", "NARRATOR: Stop 2 is the pond. Count the ripples you see.", "[pause]", "NARRATOR: Did you count more than five?"],
       prompt: "A crew member is putting the walk together. What should he do at [pause]?",
       choices: [
-        { text: "go silent for several seconds while visitors look at the water", correct: true },
-        { text: "have the narrator whisper the next question" },
-        { text: "stop the walk and end the file" },
-        { text: "add the sound of splashing water" }
+        { text: "stay silent a few seconds while visitors look at the water", correct: true },
+        { text: "make the narrator whisper the next question again" },
+        { text: "stop the walk and end the file here" },
+        { text: "add the sound of splashing water now" }
       ],
       clue: "Words in brackets are not spoken. Ask what the crew must do with a note like this one.",
       hints: [
@@ -1659,10 +1660,10 @@ PP.addLesson({
       how: [
         "A note in brackets tells the crew what to put in. [pause] means the recording goes quiet.",
         "The narrator has just asked visitors to count the ripples. They need a few seconds to look.",
-        "The answer is \"go silent for several seconds while visitors look at the water.\" The narrator talks again after the pause, so the walk goes on, and the note does not call for a whisper or a splash."
+        "The answer is \"stay silent a few seconds while visitors look at the water.\" The narrator talks again after the pause, so the walk goes on, and the note does not call for a whisper or a splash."
       ],
       misconception: "A common mix-up is thinking a bracket names a sound to add. A pause is a stretch of quiet.",
-      why: "The answer is \"go silent for several seconds while visitors look at the water.\" The narrator asked visitors to count ripples, and they need time to look. The narrator talks again right after, so the walk does not stop." },
+      why: "The answer is \"stay silent a few seconds while visitors look at the water.\" The narrator asked visitors to count ripples, and they need time to look. The narrator talks again right after, so the walk does not stop." },
     { id: "SK-TFD-S07", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C07"],
       stem: ["Listen to this cook's recording about making a fruit cup.", "COOK: To begin, wash the grapes in a bowl.", "COOK: Then cut an apple into small pieces.", "COOK: After that, stir the grapes and apple together.", "COOK: Finally, put the cup in the fridge."],
       prompt: "Arrange the jobs in the sequence the cook speaks them.",
@@ -1740,7 +1741,7 @@ PP.addLesson({
       misconception: "A common mix-up is swapping the two sounds. A bell shows the end of a chapter, and a long pause gives listeners time to think.",
       why: "The answers are [long pause] and [bell ringing]. A long pause gives listeners time to think about the question. A bell shows that the chapter is over." },
     { id: "SK-TFD-S10", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C10"],
-      stem: ["A school hangs a poster by the front door that lists rules for a fire drill. During a drill, a recorded voice also plays over speakers in every room."],
+      stem: ["A poster by the front door lists rules for a fire drill. During a drill, a recorded voice also plays over speakers in every room."],
       prompt: "In a drill, what can the recorded voice do that the poster cannot?",
       choices: [
         { text: "It reaches everyone at once, even children who are not near the door.", correct: true },
@@ -1763,46 +1764,46 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a feature that belongs to the poster. Studying at any time is what printed words do best.",
       why: "The answer is \"It reaches everyone at once, even children who are not near the door.\" The speakers are in every room, but the poster hangs in one place. Studying at leisure is something the poster allows, and a voice shows no map." },
     { id: "SK-TFD-S11", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p5"], like: ["SK-TFD-C11"],
-      prompt: "Marcus hopes everyone remembers the meeting spot for drama club. Pick the sentence he should repeat.",
-      targets: ["p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1", "p5:3:2", "p5:5:1"],
+      prompt: "Marcus hopes everyone knows where rehearsal meets. Which line ought he to say twice?",
+      targets: ["p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1", "p5:3:2", "p5:6:1"],
       answer: ["p5:2:2"], pick: 1,
       clue: "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
       hints: [
         "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
         "Read the paragraph about drama club. Ask which sentence tells where to go.",
-        "The sentence \"You do not need to bring anything\" tells what to bring, not where to meet, so rule it out. Check the other sentences you can choose for the place."
+        "The sentence \"You do not need to carry anything\" tells what to carry, not where to meet, so rule it out. Check the other sentences you can choose for the place."
       ],
       how: [
         "Marcus wants listeners to remember the place, and listeners cannot look back at the page.",
         "The drama club paragraph has four sentences. Only one tells where to meet.",
-        "The answer is \"Please meet at the stage door at three o'clock sharp.\" Saying it twice helps listeners remember the place.",
-        "The other sentences tell that drama club will rehearse, what to bring, or other news."
+        "The answer is \"Meet at the stage door at four sharp.\" Saying it twice helps listeners remember the place.",
+        "The other sentences tell that drama club will rehearse, what to carry, or other news."
       ],
       misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need.",
-      why: "The answer is \"Please meet at the stage door at three o'clock sharp.\" It tells where to meet, which listeners must remember. The other sentences tell about the rehearsal, what to bring, or other news." },
+      why: "The answer is \"Meet at the stage door at four sharp.\" It tells where to meet, which listeners must remember. The other sentences tell about the rehearsal, what to carry, or other news." },
     { id: "SK-TFD-S12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C12"],
       stem: ["Ms. Brown opens Family Night by saying, \"Welcome, families!\" Then she says nothing for a few seconds."],
       prompt: "What is Ms. Brown likely trying to do with that silence?",
       choices: [
-        { text: "give the room a chance to settle and look her way", correct: true },
+        { text: "give the guests a chance to settle and look her way", correct: true },
         { text: "let everyone find the schedule in a bag" },
         { text: "think of the next words because she forgot them" },
         { text: "wait for the guests to answer her greeting" }
       ],
-      clue: "A speaker stops to help the audience. Ask what a room full of guests needs before a talk begins.",
+      clue: "A speaker stops to help the audience. Ask what a crowd of guests needs before a talk begins.",
       hints: [
-        "A speaker stops to help the audience. Ask what a room full of guests needs before a talk begins.",
+        "A speaker stops to help the audience. Ask what a crowd of guests needs before a talk begins.",
         "Think about the room at the start of an evening. Are all the guests quiet yet?",
         "Nothing in the story says she lost her place, and she has a plan for the evening. Rule out the choice about forgetting and decide among the other three."
       ],
       how: [
         "Ms. Brown has just welcomed everyone, and the guests may still be chatting.",
         "A short quiet moment lets them stop and look toward her.",
-        "The answer is \"give the room a chance to settle and look her way.\"",
+        "The answer is \"give the guests a chance to settle and look her way.\"",
         "Nothing says she forgot her words, and the guests do not need a schedule or an answer to the greeting."
       ],
       misconception: "A common mix-up is thinking a silent moment means a mistake. A pause can be a planned way to get a room ready.",
-      why: "The answer is \"give the room a chance to settle and look her way.\" A short quiet moment lets a busy room calm down before the talk. Nothing suggests she forgot her words." },
+      why: "The answer is \"give the guests a chance to settle and look her way.\" A short quiet moment lets busy guests calm down before the talk. Nothing suggests she forgot her words." },
     { id: "SK-TFD-S13", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C13"],
       stem: ["Lena rehearsed a talk about the school play into a tablet. Playing it back, her aunt noticed that the back row would never hear her soft voice, and that the date of the play went by in a blur."],
       prompt: "Fill in the aunt's advice.",

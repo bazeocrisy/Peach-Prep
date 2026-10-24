@@ -19,7 +19,8 @@
 | B2 | TS-CC | ACCEPTED | B2-rereview-TS-2.md |
 | B2 | 3.T.SS.1.a | ACCEPTED | B2-rereview-SC-2.md |
 | B2 | 3.T.C.1.b | ACCEPTED | B2-rereview-SC-2.md |
-| B2 | Two new component lessons (text features; digital, audio and spoken features) | NOT STARTED | Deferred until after the engine review; see CONTINUATION-NOTES.md |
+| B5 comp | TF-FEAT (text features: headings, maps, captions, text boxes, contents, chapters and sections) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
+| B5 comp | TF-DIG (digital, audio and spoken features) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
 | B3 | 3.T.T.3.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.RA.1.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.C.1.a | ACCEPTED | B3-b3a-rereview.md; blind re-solve (post-polish) in B3-b3c-rereview.md |
