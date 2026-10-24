@@ -2,7 +2,7 @@
 
 **Role:** UX and implementation engineer. **Worktree:** `/home/claude/pp-content`, branch `content/standards-practice` (on top of the homepage redesign candidate 1aa61c5). **Server used:** `node verification/serve.js . 8720`. No git commands were run.
 
-This implements phases 1 to 5 of the lead's brief against `01-architecture.md`, with the lead's decisions applied. Phase 4 of the architecture (standard/skill-group reviews and the cumulative review, `pp.review.v1`) was **not** in this brief and is not built.
+This implements phases 1 to 5 of the lead's brief against `01-architecture.md`, with the lead's decisions applied. Phase 4 of the architecture (standard/skill-group reviews, the cumulative review, the coverage map and `pp.review.v1`) was added in phase 2 and is **built**; see section 8. Sections 1 to 7 describe phase 1 and carry the counts of that time (marked); the current counts and the current gate results are in sections 8.4 and 9.
 
 ## 1. Lead decisions as implemented
 
@@ -70,7 +70,7 @@ The review-ledger and assessment-version hashes (architecture rules 11-12) and a
 
 ## 4. Tests
 
-### New suite: `verification/practice-own.py` — 67 checks, all passing
+### New suite: `verification/practice-own.py` (phase 1: 67 checks; now 73, see 9.4)
 `CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome python3 verification/practice-own.py http://127.0.0.1:8720/ <out>` (screenshots and `practice-own-results.json` in `<out>`; this run used the scratchpad, `…/scratchpad/eng/out-own/`).
 
 | Group | What it proves |
@@ -87,7 +87,7 @@ The review-ledger and assessment-version hashes (architecture rules 11-12) and a
 | J (1) | the seven viewports for the picker, the practice controls (hints and steps open), a std page and the check navigator: no sideways scroll, no clipped control, 44px targets |
 | K, L (13) | no page errors; check-content passes on the candidate and **fails** ten mutated copies (set of four, hint with the answer, missing how, core passage in the check, bad ref, duplicate id, bad `like`, two hints, `cr` in a check, missing `rev`) and two mutated std-groups (wording, order) |
 
-### Existing gates (final candidate)
+### Existing gates (phase 1 candidate; historical, superseded by 9.4)
 
 Content agents were editing lesson files throughout, so the final candidate was **frozen**: the worktree was copied at 18:02:46 to `…/scratchpad/eng/snap/`, its checksums written to `…/scratchpad/eng/snap-md5.txt`, served on 8720, and every suite below ran against that copy. The guard run ended with the snapshot unchanged. After the runs, every engine, data and test file this work owns (`js/*.js`, `js/engine/*`, `js/data/std-groups.js`, `index.html`, `css/styles.css`, `verification/guard.py`, `check-content.js`, `practice-own.py`) was compared byte for byte with the worktree and is identical. Lesson files edited by the content team after 18:02:46 are **not** covered by these results.
 
@@ -160,7 +160,7 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 - Results use the section 12 categories plus partial credit and revisit suggestions, no mastery claim from a small sample. They are stored in the new `pp.review.v1` (last 20 attempts per review). A review never awards a lesson pass and never writes `pp.progress.v1`.
 - Files: `js/review.js`, `js/data/accepted.js`, `js/std.js`, `js/app.js`, `js/engine/player.js`, `index.html`, `css/styles.css`. Tests: `verification/review.py` (21 checks: corrupt, blocked and full storage, no pass awarded, no writes on open, seven viewports, axe, keyboard).
 
-### 8.4 Final gates (frozen copy `scratchpad/eng/snap3`, snapshot 2026-10-23T10:00:31Z, 76 files, checksum list in `snap3-md5.txt`)
+### 8.4 Gates after phase 2 (historical, superseded by 9.4; frozen copy `scratchpad/eng/snap3`, snapshot 2026-10-23T10:00:31Z, 76 files, checksum list in `snap3-md5.txt`)
 | Suite | Result |
 |---|---|
 | check-content `--all` | PASS, 0 failures, 25 to 26 warnings |
@@ -179,3 +179,52 @@ practice-own F.1 seeds `pp.progress.v1` with a 2.1 undated pass, a PP-003/PP-004
 | review.py | 21 passed, 0 failed |
 
 After the runs, the engine, data (accepted.js), index.html, CSS and test files in the worktree were byte-identical to snap3. Lesson files edited by content authors after the snapshot are not covered. Chromium only (one browser per page, because single-process Chromium closes with its page); the path-a11y run uses the packaged Chromium without single-process.
+
+## 9. Phase 3: fixes from the independent re-review (06b, ACCEPT WITH CONDITIONS)
+
+### 9.1 Fixes
+| ID | Fix | Test |
+|---|---|---|
+| RR-01 | A review shows lesson-check answers, so opening **See my answers** on a review now notes those source lesson forms as seen. It uses a new additive field `reviewSeenBy: {A, B}` on the source lesson's record in `pp.progress.v1`; `answersSeenAt/By`, `tries`, `mastered`, `attempts`, and status are untouched, and nothing is awarded (a lesson with no record gets a record holding only `reviewSeenBy`, which still reads "new"). `recordTest` then marks a later pass `afterAnswers: true` even on the first try, adding `seenIn: "review"`; the skill page says "passed after seeing these questions' answers in a review". The pass itself is unchanged and is not hidden. A corrupt `reviewSeenBy` is ignored. | review.py R.18a-d. Mutant: dropping the `seenInReview` term fails R.18b and R.18c. |
+| RR-03 | In table cells a code link is its own 44 px box with a gap and no negative margin (`td .std-link`), so the boxes no longer overlap. | review.py R.20: axe `target-size` on every Parents tab at the seven viewports. Mutant (rule removed) fails at all seven (3, 1, 11, 12, 6 and more nodes), the same counts the reviewer measured. |
+| RR-04 | From 600 px wide the check navigator wraps, so no button is hidden behind a scroll. Below 600 px it still scrolls inside its own box. | review.py R.19: the largest review of 12 or fewer questions, seven viewports, no clipped button from 600 px up, no page scroll. Mutant (rule removed) fails at 1024, 1366 and 1920. |
+| RR-05 | This file: the opening paragraph and the counts. | - |
+| RR-06 | Not changed (a note). | - |
+| RR-08 | review.py **R.4b** starts from a completely empty store and logs every `setItem`; only path.js's own probe is allowed. | R.4b |
+| RR-09 | review.py finds axe itself (`AXE_PATH`, then `./node_modules`, the global node_modules, then `/tmp`) and otherwise stops with a clear message and exit code 2, not a late failure. | - |
+| RR-13 | `verification/serve.js` answers 400 to a malformed percent-encoded path (and to a NUL byte) instead of throwing. `curl /%E0%A4%A` returns 400, and the next request returns 200. | The plain guard ran as one pass (below). |
+
+RR-10 (data points) and RR-07 (overlapping boxes on home, taps hit the link) are unchanged notes.
+
+### 9.2 RR-02, re-measured (similar coverage)
+The reviewer's 107 of 255 was measured before the SIM-1 and SIM-2 backfills. On the current content, `check-content.js --all` reports 34 core lessons, 510 core items, 510 similar items. A walk over every core lesson in the page (`PP.lessons[k].similar`, a core item counts as covered when some similar item lists it in `like`) finds **0 core items without a similar item, in all 34 core lessons (0 of 510) and in the 24 accepted lessons (0 of 360)**. The lessons that used to warn no longer do; the warning list is now 9 entries, none about similar coverage. Coverage of the right kind (a similar item that truly tests the same skill) is a content judgement this walk cannot make. Two practice-own checks depended on 3.T.T.1.c still having unmapped items; they now read the lesson (A.4) or unmap P5 in the page's memory (B.11), so the hidden-button rule stays under test.
+
+### 9.3 Decision recorded
+Answers seen in a review count as seen for the lesson check (field `reviewSeenBy`). It is recorded in 01-architecture.md section 2.5.
+
+### 9.4 Final gates, frozen copy (`scratchpad/eng/snap4`, 2026-10-23, 121 files; checksums in `snap4-md5.txt`)
+Run by `scratchpad/eng/run4.sh` in one sequence, against `node verification/serve.js . 8740`. The plain guard is one uninterrupted pass.
+
+| Suite | Result |
+|---|---|
+| check-content `--all` | PASS, 0 failures, 9 warnings (34 core lessons, 510 core items, 510 similar) |
+| check-content (manifest) | PASS, 0 failures, 9 warnings |
+| check-writing | 0 failures, 0 warnings |
+| readability | exit 0 (report only) |
+| copy | 28 assertions passed |
+| path.py | 148 passed, 0 failed |
+| path-headers.py | 48 passed, 0 failed |
+| path-a11y.py (axe) | 12 + 12 + 12 runs, 0 violations, 0 contrast failures |
+| skills-recovery.py | 67 passed, 0 failed |
+| writing-recovery.py | 75 passed, 0 failed |
+| **guard.py, plain, one pass** | **120 passed, 0 failed, exit 0** |
+| first-visit.py | 124 passed, 0 failed |
+| practice-own.py | 73 passed, 0 failed (see note) |
+| review.py (with axe) | 28 passed, 0 failed |
+
+Note on practice-own: the first sequence run failed three checks (A.4, B.11, L.0) because the content team had changed 3.T.T.1.c during the run (more similar items, a changed core order, no "no similar item" warning left). Those were test assumptions, not engine behaviour. I corrected the three checks, copied only `verification/practice-own.py` into the frozen copy and re-ran it there: 73 passed, 0 failed. Every other suite ran on the frozen copy as it was.
+
+Run commands: `CHROMIUM_PATH=<chrome> AXE_PATH=<axe.min.js> PP_WRITING_TEST_PORT=8741`, `node verification/serve.js . <port>`, then `python3 verification/<suite>.py http://127.0.0.1:<port>/ <out dir>`; check-content, check-writing and the copy check run with `node`; skills-recovery and writing-recovery start their own servers. `review.py` and `path-a11y.py` need axe (review.py now finds it or says so). Chromium 1194 only, simulated viewports, no real devices.
+
+### 9.5 Gaps
+Unchanged from 8: check versioning (`testRev`, `attempts[].rev`), the review ledger hash rules, and `--release` are not built (59 lessons with a check and no core remain a warning). Reviews draw on check items that were not blind-solved in this phase (RR-11); a blind solve of the review items would be needed to call them independently verified. A grown-up looking at a pass sees the review note only on the skill page.
