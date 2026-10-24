@@ -15,7 +15,7 @@ PP.addLesson({
       "A heading is a small title over a section. It tells what that section is about, so you can skim the headings to find the part you need. The table of contents is a list at the front of a book. It shows each chapter, and sometimes its sections, with the page where each one starts. A part keeps going until the next part starts. An index is at the back. It lists topics in ABC order, with every page where each topic is found.",
       "A map shows where places are. The compass rose shows directions: north is usually at the top of the map, so east is on the right. The key tells what each symbol on the map means. Labels name places.",
       "A caption sits by a picture and tells what it shows. A good caption can also add something the picture cannot show, like when, where or why. A label names one part inside a picture. A text box sits apart from the main text. It can hold an extra fact, a tip, or something for you to try.",
-      "Authors also choose the order of the parts. Steps go in the order you do them. Places go in the order you walk to them. Ideas can build, one on top of another. To decide where a new sentence or picture belongs, find the section that tells about the same thing. Authors also choose how to group things. If readers will look something up by its date, a book can group by date. If they will look it up by a person, a book can group by person."
+      "Authors choose the order of the parts for a reason. To find the reason, ask what a reader needs to know first, and what the reader will be doing while reading. To decide where a new sentence or picture belongs, find the section that tells about the same thing. Authors also choose how to group things. If readers will look something up by its date, a book can group by date. If they will look it up by a person, a book can group by person."
     ],
     words: [
       { term: "chapter", means: "one of the big parts of a book; a chapter can have sections inside it" },
@@ -142,6 +142,17 @@ PP.addLesson({
         ["To protect itself, the oyster covers the grit with a smooth coating.", "Day after day, it adds another thin layer.", "This shiny coating is called nacre."],
         ["## A Pearl at Last"],
         ["After a few years, nacre has covered the grit completely.", "The grit has become a pearl.", "People open the oyster to find it."]
+      ] },
+    /* p7: used only by similar item SK-TFF-S05. */
+    { id: "p7", title: "Washing a Bike", genre: "Informational text",
+      paragraphs: [
+        ["Washing a bike is a good job for a sunny day.", "It takes only three parts, and you do them in order."],
+        ["## Rinse the Bike"],
+        ["Put the bike on a flat spot outside.", "Spray it with a hose to wash off the mud.", "Spray the wheels and the pedals too."],
+        ["## Scrub the Frame"],
+        ["When the rinse water runs clear, rub the frame with a soft sponge.", "Use a toothbrush for the tight spots near the pedals.", "Add a little soap to the sponge if the frame is greasy."],
+        ["## Dry and Oil"],
+        ["Wipe every part with a dry towel.", "Put one drop of oil on the chain.", "Ask a grown-up before you use oil."]
       ] }
   ],
   practice: [
@@ -192,7 +203,7 @@ PP.addLesson({
   ],
   /* ---------- B5-comp core (expansion 2026-10-22). Fifteen new items in three sets of five; no { ref } items.
      Set 1 text: p1 (jump rope book chapter) plus an inline table of contents. Set 2: p2 (trail brochure), its map, a photo-caption
-     stem and a book-page stem. Set 3: p3 (glaciers) plus inline transfer stems. Practice Together = all four practice items.
+     stem and a book-page stem. Set 3: p3 (potholes) plus inline transfer stems. Practice Together = all four practice items.
      NEEDS INDEPENDENT REVIEW. */
   core: { rev: "1", sets: [
     { title: "Set 1", items: [
@@ -425,8 +436,8 @@ PP.addLesson({
         partA: { prompt: "Why are the sections of this article in this order?",
           choices: [
             { text: "Each section builds on the one before it, from water in the road to a broken road.", correct: true },
-            { text: "Each section tells about a different road in a different part of the world." },
-            { text: "The sections go from the smallest pothole in town to the biggest pothole in town." },
+            { text: "Each section is in ABC order, so a reader can find it quickly and easily." },
+            { text: "Each section goes from the cause of a pothole to the cost of fixing it." },
             { text: "The sections start with the most surprising fact and end with the least surprising." }
           ] },
         partB: { prompt: "Which sentence best shows how the section \"The Road Breaks\" builds on the section before it?",
@@ -440,7 +451,7 @@ PP.addLesson({
         hints: [
           "Authors often choose an order that helps the reader follow along. Ask what you need to know first to understand each section.",
           "For Part A, read the three headings in order and think about what each section is about. For Part B, reread the last section and ask which sentence points back to the middle section.",
-          "The article tells about one kind of pothole and never about different roads in different places, so rule out that Part A choice. Decide the rest yourself."
+          "The headings are not in ABC order, so rule out that Part A choice. Decide the rest yourself."
         ],
         how: [
           "Look at the headings in order: Water in the Road, Ice Takes Up Room, The Road Breaks.",
@@ -449,7 +460,7 @@ PP.addLesson({
           "The sentence about a road getting weaker is in the middle section. The last section builds on it, so it is not the sentence that shows the building."
         ],
         misconception: "A common mix-up is choosing a sentence from the earlier section. Part B asks for the sentence in the later section that points back.",
-        why: "Part A: \"Each section builds on the one before it, from water in the road to a broken road.\" Part B: \"At last, cars roll over the weak spot.\" The words weak spot go back to the road that gets weaker in the section before. The article never tells about different roads in different places." },
+        why: "Part A: \"Each section builds on the one before it, from water in the road to a broken road.\" Part B: \"At last, cars roll over the weak spot.\" The words weak spot go back to the road that gets weaker in the section before. The headings are not in ABC order, and the article does not tell about the cost of fixing a pothole." },
       { id: "SK-TFF-C12", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
         stem: ["Here is part of the index from a book called Rockets and Space Travel. An index lists topics in ABC order, with the pages where each one is found.", "astronauts, 12, 15", "engines, 6, 7", "fuel, 6, 9", "launch pad, 4, 5", "satellites, 18, 19"],
         prompt: "Mia wants to read about engines and fuel together. Choose the words that best complete the sentence.",
@@ -524,20 +535,20 @@ PP.addLesson({
           { text: "A page number in the corner of the map" },
           { text: "A caption under the map that says who drew it" }
         ],
-        clue: "A map only helps a reader who can tell directions and read the symbols. Ask what a stranger would need in order to use it.",
+        clue: "Ask what a stranger would need in order to use a map that he has never seen.",
         hints: [
-          "A map only helps a reader who can tell directions and read the symbols. Ask what a stranger would need in order to use it.",
+          "Ask what a stranger would need in order to use a map that he has never seen.",
           "Picture the new neighbor holding the map and trying to walk from the school to the park. What would the neighbor not be able to work out?",
-          "A table of contents is for a book with chapters, and a map has no chapters, so rule it out. Check the others by asking whether the neighbor needs them in order to find the way."
+          "A page number is for a book, not for a map, so rule it out. Check the others by asking whether the neighbor needs them in order to find the way."
         ],
         how: [
           "A map helps someone find places. Ben's neighbor needs to know which way to turn and what each symbol stands for.",
           "A compass rose shows which way is north, so the neighbor can tell directions.",
           "A key tells what each symbol stands for, such as the shape for the park.",
-          "The answers are \"A compass rose that shows which way is north\" and \"A key that tells what each symbol means.\" A fun fact and a caption about who drew the map do not help the neighbor find the way, and a map has no table of contents."
+          "The answers are \"A compass rose that shows which way is north\" and \"A key that tells what each symbol means.\" A heading, a page number and a caption about who drew the map do not help the neighbor find the way."
         ],
         misconception: "A common mix-up is choosing features that are on many pages but do nothing for a map. Pick the ones a stranger needs to find the way.",
-        why: "The answers are \"A compass rose that shows which way is north\" and \"A key that tells what each symbol means.\" A compass rose gives directions, and a key explains the symbols. The fun fact, the table of contents and the caption about the artist do not help someone find the way." }
+        why: "The answers are \"A compass rose that shows which way is north\" and \"A key that tells what each symbol means.\" A compass rose gives directions, and a key explains the symbols. The heading, the page number and the caption about who drew the map do not help someone find the way." }
     ] }
   ] },
   /* Extra questions (not one of the fifteen), each on its own new short text or stem. `like` lists the one core item
@@ -590,11 +601,11 @@ PP.addLesson({
       stem: ["A kids' article called Healthy Teeth has three headings: Brushing Well, Foods for Strong Teeth and Visiting the Dentist."],
       prompt: "Which TWO statements about these headings are true? Choose TWO answers.",
       choices: [
-        { text: "A quick look at them shows the topic of every section.", correct: true },
-        { text: "Someone after dentist facts can head straight to one.", correct: true },
-        { text: "Numbers beside them tell where the parts start." },
-        { text: "Habits are listed from best to worst." },
-        { text: "Hard terms are explained beneath them." }
+        { text: "A quick look at them shows what the article covers, one topic at a time.", correct: true },
+        { text: "A person after dentist facts can head straight to one.", correct: true },
+        { text: "Headings give the page on which a part begins." },
+        { text: "Habits are listed under them from the best habit to the worst one." },
+        { text: "A list of difficult words follows every heading." }
       ],
       clue: "Headings sit over sections. Ask what a heading is for.",
       hints: [
@@ -605,11 +616,11 @@ PP.addLesson({
       how: [
         "Each heading names what its part is about, such as Brushing Well.",
         "Someone who wants dentist facts can look at the headings and go straight to Visiting the Dentist.",
-        "The answers are \"A quick look at them shows the topic of every section.\" and \"Someone after dentist facts can head straight to one.\"",
+        "The answers are \"A quick look at them shows what the article covers, one topic at a time.\" and \"A person after dentist facts can head straight to one.\"",
         "Headings do not list pages, rank habits or define words."
       ],
       misconception: "A common mix-up is giving a heading another feature's job. A heading names a section; it does not list pages or define words.",
-      why: "The answers are \"A quick look at them shows the topic of every section.\" and \"Someone after dentist facts can head straight to one.\" Headings name the parts. They do not list pages, rank habits or define words." },
+      why: "The answers are \"A quick look at them shows what the article covers, one topic at a time.\" and \"A person after dentist facts can head straight to one.\" Headings name the parts. They do not list pages, rank habits or define words." },
     { id: "SK-TFF-S04", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [], like: ["SK-TFF-C04"],
       stem: ["Drawing Faces shows how to draw eyes, a nose and a mouth with simple shapes. A box at the end says: \"Try It! Draw a face on a paper plate, using only circles and lines.\""],
       prompt: "Pick a new ending box that gives readers a small job and matches the lesson.",
@@ -633,32 +644,24 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is thinking a Try It! box can hold any sentence. It gives the reader something to do.",
       why: "The answer is \"Try It! Draw a happy face and a sad face. Change only the mouth.\" The box in the chapter gives the reader a job, and this one does too. The other choices give an opinion, point to another chapter or tell a fact." },
-    { id: "SK-TFF-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C05"],
-      stem: ["Washing a Bike has three parts: Rinse the Bike, Scrub the Frame and Dry and Oil. They go in the order a rider works."],
-      prompt: "Pick the sentence that explains why Scrub the Frame comes right after Rinse the Bike.",
-      options: [
-        "Put the bike on a flat spot outside.",
-        "Spray the bike with a hose to wash off the mud.",
-        "After the mud is rinsed off, scrub the frame with a soft sponge.",
-        "Use a toothbrush for the tight spots near the pedals.",
-        "Wipe every part with a dry towel.",
-        "Put one drop of oil on the chain."
-      ],
-      answer: [2],
+    { id: "SK-TFF-S05", type: "hottext", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p7"], like: ["SK-TFF-C05"],
+      prompt: "Pick the line that gives the reason for the order of the first two parts.",
+      targets: ["p7:3:1", "p7:3:2", "p7:5:1", "p7:5:2", "p7:7:1", "p7:7:2"],
+      answer: ["p7:5:1"], pick: 1,
       clue: "Sections are arranged in an order for a reason. Look for words that connect one section to the section before it.",
       hints: [
         "Sections are arranged in an order for a reason. Look for words that connect one section to the section before it.",
-        "Think about the first sentence of each of the three sections. Ask which one points back to something the rider already did.",
-        "\"Put the bike on a flat spot outside\" begins the first section and looks back at nothing, so rule it out. Check the other choices for words that look back."
+        "Read the first sentence under each of the three headings. Ask which one points back to something the rider already did.",
+        "\"Put the bike on a flat spot outside\" is the first sentence under the first heading, so it cannot point back to an earlier section. Rule it out and check the other sentences for words that look back."
       ],
       how: [
-        "The three sections go in the order Rinse the Bike, Scrub the Frame, Dry and Oil.",
-        "The first sentence of Scrub the Frame begins with After and names the mud from the section before.",
-        "The answer is \"After the mud is rinsed off, scrub the frame with a soft sponge.\" It says to scrub once the rinsing is done.",
+        "The headings go Rinse the Bike, Scrub the Frame, Dry and Oil, so the author chose an order.",
+        "The first sentence under Scrub the Frame begins with When and names the rinse water from the section before.",
+        "The answer is \"When the rinse water runs clear, rub the frame with a soft sponge.\" It says to scrub after the rinsing is done.",
         "The other sentences tell what to do inside one section. None of them looks back at an earlier section."
       ],
       misconception: "A common mix-up is choosing a step that is in the right section but does not mention the section before it.",
-      why: "The answer is \"After the mud is rinsed off, scrub the frame with a soft sponge.\" It names the mud from the section before, so the rider rinses first and scrubs second. The other sentences only tell what to do inside one section." },
+      why: "The answer is \"When the rinse water runs clear, rub the frame with a soft sponge.\" It names the rinse water from the section before, so the rider rinses first and scrubs second. The other sentences only tell what to do inside one section." },
     { id: "SK-TFF-S06", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C06"],
       stem: ["Here is a map of a school yard."],
       figure: { src: "assets/figures/tf-yard-map.svg", label: "Figure 1", caption: "Map of the Maple Street School yard",
@@ -745,13 +748,13 @@ PP.addLesson({
         "The word with the line is joined to one piece inside the drawing, so it is the label. Decide the other three rows yourself."
       ],
       how: [
-        "The title over the paragraphs is a heading. It announces the topic of that section.",
-        "The line under the photo is a caption. It describes the entire image.",
-        "The word neck has a line to one part of the drawing, so it is a label that points out a single piece.",
-        "The shaded square that says Fun Fact holds a bonus fact set apart from the sections."
+        "The title over the paragraphs is a heading. It tells what that section is about.",
+        "The line under the photo is a caption. It tells what the whole picture shows.",
+        "The word neck has a line to one part of the drawing, so it is a label that names one part of the picture.",
+        "The shaded square is a text box. It holds an extra fact set apart from the sections."
       ],
-      misconception: "A common mix-up is thinking a label and a caption do the same job. A label points out a single piece, and a caption describes the entire image.",
-      why: "The heading announces a section's topic. The caption describes the entire image. The word neck is a label that points out a single piece. The Fun Fact square supplies a bonus fact." },
+      misconception: "A common mix-up is thinking a label and a caption do the same job. A label names one part of a picture, and a caption tells what the whole picture shows.",
+      why: "The heading tells what its section is about. The caption tells what the whole picture shows. The word neck is a label that names one part of the picture. The shaded square is a text box that adds an extra fact." },
     { id: "SK-TFF-S10", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2, like: ["SK-TFF-C10"],
       stem: ["A flyer for Science Night at Maple Elementary has these sections.", "What to Bring: Bring a flashlight and a pencil. Dress for the weather.", "Fun Stations: Try a bubble lab and a paper plane race. Each station takes ten minutes.", "Snack Time: Free apple slices and water will be near the gym doors at seven o'clock.", "In Case of Rain: If it rains, Science Night will move into the gym.", "Box: Questions? Call the school office."],
       prompt: "A parent wants to know what the family should carry and what happens if it rains. Which TWO sections should the parent read? Choose TWO answers.",
@@ -880,9 +883,9 @@ PP.addLesson({
         { text: "An index of every room in ABC order, with page numbers" },
         { text: "A title in big letters across the top" }
       ],
-      clue: "A map helps only if a reader can find which way to go and read the symbols. Ask what a newcomer would need.",
+      clue: "Ask what a newcomer would need in order to use a plan that the child has never seen.",
       hints: [
-        "A map helps only if a reader can find which way to go and read the symbols. Ask what a newcomer would need.",
+        "Ask what a newcomer would need in order to use a plan that the child has never seen.",
         "Picture the first-grader holding the map and trying to walk from the front door to the gym. What could the child not work out?",
         "An index is for a book with many pages, and a map is one page, so rule it out. Check the others by asking whether the child needs them to find the way."
       ],
@@ -890,10 +893,10 @@ PP.addLesson({
         "A map helps someone find places. The first-grader needs to know which way is which and what each symbol means.",
         "An arrow marked N shows where north is, so the child can tell which way to walk.",
         "A box listing what each shape stands for is a key. It tells what each symbol means.",
-        "The answers are \"An arrow marked N showing where north is\" and \"A box listing what each shape stands for.\" A joke, an index and a heading about a favorite class do not help the child find the way."
+        "The answers are \"An arrow marked N showing where north is\" and \"A box listing what each shape stands for.\" A paragraph about the school's name, an index and a big title do not help the child find the way."
       ],
       misconception: "A common mix-up is choosing features that are fun but do nothing for the map's job. Pick the ones a newcomer needs to find the way.",
-      why: "The answers are \"An arrow marked N showing where north is\" and \"A box listing what each shape stands for.\" The arrow gives directions, and the box is a key that explains the symbols. A joke, an index and a heading do not help someone find the way." }
+      why: "The answers are \"An arrow marked N showing where north is\" and \"A box listing what each shape stands for.\" The arrow gives directions, and the box is a key that explains the symbols. A paragraph about the school's name, an index and a big title do not help someone find the way." }
   ],
   /* Hints and Show me how for the four Practice Together items. */
   addons: {
@@ -960,15 +963,15 @@ PP.addLesson({
       clue: "A heading tells what a section is about. Read the sentences under each heading to see which one tells about picking.",
       why: "The answer is \"Berries in Summer.\" That section says workers pick the berries by hand or with a machine that shakes the bush. The spring section is about flowers, and the last section is about packing and trucks." },
     { id: "SK-TFF-T2", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: ["p5"],
-      prompt: "What does the Did You Know? box add to the article?",
+      prompt: "The author wants to add a Try It! box to the section Flowers in Spring. Which box fits best?",
       choices: [
-        { text: "an extra fact about blueberry bushes", correct: true },
-        { text: "the steps for picking berries" },
-        { text: "a heading for the next section" },
-        { text: "a caption for a picture of berries" }
+        { text: "Try It! Look closely at a blueberry flower. What shape does it have?", correct: true },
+        { text: "Try It! Pick ten ripe berries and put them in a basket." },
+        { text: "Try It! Sort a bowl of berries and pack them in small boxes." },
+        { text: "Try It! Draw a truck that carries berries to the store." }
       ],
-      clue: "A text box sits apart from the sections. Read it, and ask what kind of information it gives.",
-      why: "The answer is \"an extra fact about blueberry bushes.\" The box tells that a bush can give fruit for many years. The steps are in the sections, and the box is not a heading or a caption." },
+      clue: "A Try It! box asks the reader to do something. Ask what the section is about, and what the reader could do that goes with it.",
+      why: "The answer is \"Try It! Look closely at a blueberry flower. What shape does it have?\" The section Flowers in Spring tells about the flowers on a bush, so a box that asks the reader to look at a flower fits it. Picking, packing and trucks are in the later sections." },
     { id: "SK-TFF-T3", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p5"],
       prompt: "Suppose the section From Bush to Basket came first. How would that change the article?",
       choices: [
@@ -1011,8 +1014,8 @@ PP.addLesson({
       "A web page or an app has tools you tap or click. A back arrow takes you to the page you just left. A menu button, often three short lines, opens a list of pages. A search box, often shown with a magnifying glass, finds a word or a topic. A link, often underlined words, takes you to another page. A pop-up is a small box that opens on top of the page, often to explain a word with a dotted line under it. You do not leave the page.",
       "A video or audio player has controls. The play button starts or stops the recording. The progress bar shows how far along you are, and a marker on the bar can jump you to a part. A button such as 1x changes the speed, and a speaker button changes the volume. Captions, shown by the CC button, write out the words and the important sounds. A transcript is the whole recording written out, so you can read it.",
       "A script is the writing for a recording. A name with a colon, such as GUIDE: or HOST:, shows who is talking. Words in [brackets] name a sound or a pause to put in. A sound such as a bell can show that a new part is starting, and a [pause] leaves a quiet moment.",
-      "A speaker has a voice instead of headings. Listeners cannot look back, so a good speaker helps them. The speaker talks slowly and clearly, pauses before an important part, and says a key fact twice. The speaker also fits the voice to the message, so good news sounds happy and a warning sounds serious. Words such as first, next, also and last tell listeners that a new part is starting, the way a heading does on a page. A speaker can also ask a question and then wait, so that listeners start to think.",
-      "Each way of sharing is best at something. A video shows how something moves. A recording lets you listen while your eyes or hands are busy. Printed words let you stop and read again. Pick the one that fits what you need."
+      "A speaker has a voice instead of headings. Listeners cannot look back, so a good speaker helps them. The speaker talks slowly and clearly, pauses before an important part, and says a key fact twice. The speaker also fits the voice to the message, so good news sounds happy and a warning sounds serious. Words such as first, next and last tell listeners where they are. A speaker can also ask a question and then wait, so that listeners start to think. The voice can build a feeling too: a slow, quiet voice can build suspense, and a fast, loud voice can build excitement.",
+      "Each way of sharing is best at something, so pick the one that fits what you need. Ask what you need to do, and what your eyes, ears and hands can do while you do it."
     ],
     words: [
       { term: "link", means: "words or a picture that you tap to open another page" },
@@ -1370,22 +1373,22 @@ PP.addLesson({
       { id: "SK-TFD-C09", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Mr. Dunn is writing the script for Stop 5 of the audio tour, the Echo Tube. In this tour, a [soft bell] shows that a new part is starting.", "GUIDE: Call your name into the tube, and listen."],
         prompt: "Choose the words that best complete the sentences.",
-        text: "After the guide says to call into the tube, Mr. Dunn should add {0}, so listeners hear a voice bounce back. At the end of Stop 5, he should add {1}, so listeners know the next stop is coming.",
+        text: "After the guide says to call into the tube, Mr. Dunn should add {0}, so listeners hear what happens to a voice in the tube. At the end of Stop 5, he should add {1}, so listeners know the next stop is coming.",
         slots: [
-          { options: ["[echo]", "[soft bell]", "[loud buzzer]"], answer: 0 },
-          { options: ["[soft bell]", "[echo]", "[loud buzzer]"], answer: 0 }
+          { options: ["[echo]", "[soft bell]", "[door creaking]"], answer: 0 },
+          { options: ["[soft bell]", "[echo]", "[door creaking]"], answer: 0 }
         ],
         clue: "Ask what sound a listener would hear in each place. The stem tells what a bell does in this tour.",
         hints: [
           "Ask what sound a listener would hear in each place. The stem tells what a bell does in this tour.",
           "Read the stem again. Then ask what happens when a voice goes into a tube, and what shows that a new part is starting.",
-          "A loud buzzer is not described in the tour and fits neither place, so rule it out. Decide which of the other two words goes with each blank."
+          "A creaking door does not fit a tube or the end of a stop, so rule it out. Decide which of the other two words goes with each blank."
         ],
         how: [
           "The stem says a [soft bell] shows that a new part is starting. A tube sends a voice back as an echo.",
-          "After the guide says to call into the tube, the listeners should hear the voice bounce back, so Mr. Dunn adds an [echo].",
+          "After the guide says to call into the tube, listeners should hear what the tube does to a voice, so Mr. Dunn adds an [echo].",
           "At the end of the stop, a new part is starting soon, so he adds a [soft bell].",
-          "The answers are [echo] and [soft bell]. A loud buzzer does not do either job in this tour."
+          "The answers are [echo] and [soft bell]. A creaking door does not do either job in this tour."
         ],
         misconception: "A common mix-up is swapping the two sounds. A bell shows a new part, and an echo is the voice coming back from the tube.",
         why: "The answers are [echo] and [soft bell]. An echo is what a voice does in a tube, so it goes after the guide says to call into the tube. A soft bell shows that a new part is starting, so it goes at the end of the stop." },
@@ -1432,28 +1435,29 @@ PP.addLesson({
         ],
         misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need, and here that is the time.",
         why: "The answer is \"It starts at three o'clock.\" Listeners cannot look back, so the speaker says the time a second time. The other sentences tell where robotics club meets, who can come, or other notices." },
-      { id: "SK-TFD-C12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p2"],
-        prompt: "Jayden begins one notice with \"Next\" and another with \"Also.\" Why does he use these words?",
+      { id: "SK-TFD-C12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
+        stem: ["Ms. Reed reads a spooky story aloud at a campfire. Right before the ghost appears, she slows down and drops her voice to a whisper: \"And then... the door... began... to open.\""],
+        prompt: "Why does Ms. Reed slow down and whisper at this part?",
         choices: [
-          { text: "to show listeners that a new notice is starting", correct: true },
-          { text: "to show listeners which notice is the most important" },
-          { text: "to show listeners that the notices are almost over" },
-          { text: "to show listeners which notices they should write down" }
+          { text: "to make listeners wonder what will happen next", correct: true },
+          { text: "to make listeners laugh at how silly the story is" },
+          { text: "to tell listeners that the story is almost over" },
+          { text: "to help listeners who sit far away hear the words better" }
         ],
-        clue: "Listeners cannot see where one notice ends. Ask what a spoken word can do that a heading does on a page.",
+        clue: "Ask what Ms. Reed wants listeners to feel at this moment, and how her voice helps.",
         hints: [
-          "Listeners cannot see where one notice ends. Ask what a spoken word can do that a heading does on a page.",
-          "Look at the first words of each notice in the script. Then ask what changes right after those words.",
-          "The word Also begins two different notices, so these words do not rank the notices by importance. Rule that choice out and decide among the other three."
+          "Ask what Ms. Reed wants listeners to feel at this moment, and how her voice helps.",
+          "Reread the words she says and how she says them. Think about how listeners would feel if she suddenly spoke fast and loud instead.",
+          "A whisper is quieter, so it does not help children far away hear better. Rule out that choice and decide among the other three."
         ],
         how: [
-          "The script has several notices, and the listeners hear them all, one after another.",
-          "A heading would mark a new part on a page, but listeners hear only a voice. A word such as Next or Also does that job.",
-          "The answer is \"to show listeners that a new notice is starting.\"",
-          "Both words begin new notices, and neither word ranks a notice or tells listeners to write it down. Only Last would show that the notices are almost over."
+          "Ms. Reed is at a scary moment, just before the ghost appears.",
+          "A slow, quiet voice makes listeners go still and wait for what comes next.",
+          "The answer is \"to make listeners wonder what will happen next.\"",
+          "A whisper is not a silly voice, it does not mean the story is nearly over, and it is harder, not easier, to hear from far away."
         ],
-        misconception: "A common mix-up is thinking a word such as Next ranks the notices. These words only show that a new notice is starting.",
-        why: "The answer is \"to show listeners that a new notice is starting.\" The greeting comes before the notices, and listeners need a moment to settle. The notices are not printed on the desks, and the announcements are not finished." },
+        misconception: "A common mix-up is thinking a quiet voice is a mistake or a sign of an ending. A speaker can use a slow, quiet voice on purpose to build suspense.",
+        why: "The answer is \"to make listeners wonder what will happen next.\" A slow, quiet voice right before the ghost appears builds suspense. A whisper is not a silly voice, it does not mean the story is almost over, and it makes the words harder to hear from far away." },
       { id: "SK-TFD-C13", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Jayden's friend recorded him practicing. On the recording, his voice dropped to a mumble at the end of each sentence, and he said \"Room 12\" so fast that nobody could catch it. His teacher gave him two tips."],
         prompt: "Choose the words that best complete the tips.",
@@ -1721,20 +1725,20 @@ PP.addLesson({
       prompt: "Choose the words that best complete the sentences.",
       text: "To let listeners hear the weather in that line, she needs {0}. When the chapter ends she needs {1}.",
       slots: [
-        { options: ["[wind howling]", "[bell ringing]", "[door slamming]"], answer: 0 },
-        { options: ["[bell ringing]", "[wind howling]", "[door slamming]"], answer: 0 }
+        { options: ["[wind howling]", "[bell ringing]", "[thunder rumbling]"], answer: 0 },
+        { options: ["[bell ringing]", "[wind howling]", "[thunder rumbling]"], answer: 0 }
       ],
       clue: "Ask what sound a listener would hear in each place. Her code tells what a bell ringing does.",
       hints: [
         "Ask what sound a listener would hear in each place. Her code tells what a bell ringing does.",
         "Read her code and the line again. Then ask what the line is about, and what shows that a chapter has ended.",
-        "A door slamming is not in her line or her code, so it is not the answer for either blank. Decide which of the other two goes with each blank."
+        "Thunder is not in her line or her code, so it is not the answer for either blank. Decide which of the other two goes with each blank."
       ],
       how: [
         "Her code says a [bell ringing] means a chapter is over. The line is about a cold wind howling.",
         "The line tells about a howling wind, so listeners should hear it, and she adds [wind howling].",
         "When the chapter ends, she adds a [bell ringing].",
-        "The answers are [wind howling] and [bell ringing]. A door slamming does neither job."
+        "The answers are [wind howling] and [bell ringing]. Thunder does neither job."
       ],
       misconception: "A common mix-up is swapping the two sounds. A bell shows the end of a chapter, and a wind sound belongs with a line about wind.",
       why: "The answers are [wind howling] and [bell ringing]. The line tells about a howling wind, so the weather sound belongs there. A bell shows that the chapter is over." },
@@ -1780,28 +1784,28 @@ PP.addLesson({
       misconception: "A common mix-up is repeating the first sentence of the notice. The speaker repeats the fact that listeners most need.",
       why: "The answer is \"Meet at the stage door at four sharp.\" It tells where to meet, which listeners must remember. The other sentences tell about the rehearsal, what to carry, or other news." },
     { id: "SK-TFD-S12", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C12"],
-      stem: ["At Family Night, Ms. Brown tells the guests about two parts of the evening. She says, \"Now, about the bake sale. Tables will be in the gym.\" Later she says, \"Now, about the book fair. It will be in the library.\""],
-      prompt: "Why does Ms. Brown begin each part with the words \"Now, about\"?",
+      stem: ["Mr. Park is the announcer at a school relay race. As the last runners near the finish line, he talks faster and louder: \"Here she comes! She is passing him! Now it is a tie!\""],
+      prompt: "Why does Mr. Park speak faster and louder at this part?",
       choices: [
-        { text: "to show the guests which topic she is starting", correct: true },
-        { text: "to ask the guests to repeat the words after her" },
-        { text: "to tell the guests where to sit down" },
-        { text: "to warn the guests that the next topic is a hard one" }
+        { text: "to make the finish sound exciting for the crowd", correct: true },
+        { text: "to tell the crowd that the race has not yet begun" },
+        { text: "to help the crowd remember the names of the runners" },
+        { text: "to let the crowd know that he is tired and wants to stop" }
       ],
-      clue: "Guests cannot see where one part ends. Ask what a spoken phrase can do that a heading does on a page.",
+      clue: "Ask what feeling Mr. Park wants the crowd to have at this moment, and how his voice helps.",
       hints: [
-        "Guests cannot see where one part ends. Ask what a spoken phrase can do that a heading does on a page.",
-        "Look at what Ms. Brown says right after \"Now, about.\" Then ask what the guests learn from those first words.",
-        "Nothing in her words asks the guests to repeat anything, so rule out that choice and decide among the other three."
+        "Ask what feeling Mr. Park wants the crowd to have at this moment, and how his voice helps.",
+        "Reread what he says and how he says it. Think about how the crowd would feel if he spoke slowly and softly instead.",
+        "The runners are about to cross the finish line, so the race has already begun. Rule out that choice and decide among the other three."
       ],
       how: [
-        "Ms. Brown talks about two topics, one after the other. The guests only hear her voice.",
-        "The words \"Now, about\" name the topic she is starting, the way a heading would on a page.",
-        "The answer is \"to show the guests which topic she is starting.\"",
-        "Her words do not ask the guests to repeat anything, tell them where to sit, or warn them about a hard topic."
+        "The last runners are almost at the finish line, and the race is close.",
+        "A fast, loud voice makes a close finish feel thrilling.",
+        "The answer is \"to make the finish sound exciting for the crowd.\"",
+        "The race has already begun, speaking fast does not help anyone remember names, and nothing says he is tired."
       ],
-      misconception: "A common mix-up is thinking an opening phrase gives an order to the guests. Words such as Now, about only show which topic is starting.",
-      why: "The answer is \"to show the guests which topic she is starting.\" The words work like a heading for listeners. They do not ask the guests to do anything." },
+      misconception: "A common mix-up is thinking a fast voice is only a way to save time. A speaker can use a fast, loud voice on purpose to build excitement.",
+      why: "The answer is \"to make the finish sound exciting for the crowd.\" A fast, loud voice at a close finish builds excitement. The race has already begun, fast talking does not help listeners remember names, and nothing says he is tired." },
     { id: "SK-TFD-S13", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C13"],
       stem: ["Lena rehearsed a talk about the school play into a tablet. Playing it back, her aunt noticed that the back row would never hear her soft voice, and that the date of the play went by in a blur."],
       prompt: "Fill in the aunt's advice.",
@@ -1852,24 +1856,24 @@ PP.addLesson({
       choices: [
         { text: "Speak up so the whole ring can hear.", correct: true },
         { text: "Show a map of the museum while telling the route.", correct: true },
-        { text: "Rush through the talk." },
-        { text: "Turn her back toward the wall." },
-        { text: "Mumble the names of the trains." }
+        { text: "Keep her eyes on her papers the whole time." },
+        { text: "Speak in a low voice because the room is quiet." },
+        { text: "Hurry through the talk and sit down soon." }
       ],
       clue: "Ask what Rosa's plan makes hard for the children across the ring, and what would fix each problem.",
       hints: [
         "Ask what Rosa's plan makes hard for the children across the ring, and what would fix each problem.",
         "Think about the children across the ring. Which choices help them catch Rosa's words and follow her trip?",
-        "Turning her back would send her voice away from the audience, so rule it out. Choose two of the four that are left."
+        "A low voice would not carry across the ring, so rule it out. Choose two of the four that are left."
       ],
       how: [
         "Rosa's draft plan has her murmuring and showing nothing, so some children may not hear or understand.",
         "A louder voice reaches the whole ring. A map shows the route she is telling about.",
         "The answers are \"Speak up so the whole ring can hear.\" and \"Show a map of the museum while telling the route.\"",
-        "Rushing, turning away and mumbling make her talk harder to follow."
+        "Staring at papers, a low voice and hurrying make her talk harder to follow."
       ],
       misconception: "A common mix-up is thinking a short, quiet talk is best. A talk works when listeners can hear it and see what the speaker means.",
-      why: "The answers are \"Speak up so the whole ring can hear.\" and \"Show a map of the museum while telling the route.\" Both help the class hear and understand. Rushing, turning away and mumbling make the talk harder." }
+      why: "The answers are \"Speak up so the whole ring can hear.\" and \"Show a map of the museum while telling the route.\" Both help the class hear and understand. Staring at papers, a low voice and hurrying make the talk harder." }
   ],
   /* Hints and Show me how for the four Practice Together items. */
   addons: {
@@ -1925,16 +1929,16 @@ PP.addLesson({
   /* Skill check (form A). Uses p3 and two inline stems. Never uses a core, similar or practice text. */
   test: [
     { id: "SK-TFD-T1", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      stem: ["Mia is watching a video about farm animals. She turns the sound off and taps the CC button."],
-      prompt: "What will Mia see on the screen?",
+      stem: ["Noah is listening to a ten-minute recording about whales. A progress bar runs under the player, with a dot on it. He drags the dot from the start of the bar to a spot near the end."],
+      prompt: "What will Noah hear next?",
       choices: [
-        { text: "the narrator's words and important sounds, written out", correct: true },
-        { text: "a list of every page on the farm website" },
-        { text: "a bar with a dot for each part of the video" },
-        { text: "the same video playing at twice the speed" }
+        { text: "the last part of the recording", correct: true },
+        { text: "the whole recording again from the start" },
+        { text: "the first part of the recording more slowly" },
+        { text: "the recording with its words written out" }
       ],
-      clue: "CC stands for captions. Ask what captions do for a viewer who cannot hear the sound.",
-      why: "The answer is \"the narrator's words and important sounds, written out.\" The CC button turns on captions, which write out what is said and the important sounds. A list of pages comes from a menu, a bar with dots is the progress bar, and the speed comes from a different button." },
+      clue: "The progress bar shows where you are in a recording. Ask what moving the dot along the bar does.",
+      why: "The answer is \"the last part of the recording.\" The dot on a progress bar shows the spot being played, and dragging it near the end jumps to the last part. It does not start over, change the speed or write out the words." },
     { id: "SK-TFD-T2", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
       stem: ["A video page about picking apples has a play button, a CC button and a volume button. A line under the video has three dots labeled Choosing, Picking and Storing."],
       prompt: "Choose the words that best complete the sentences.",
@@ -1959,13 +1963,13 @@ PP.addLesson({
       stem: ["Noah tells his class a safety rule: \"Walk, do not run, in the hall.\" Then he says the rule a second time, slowly."],
       prompt: "Why is it a good idea for Noah to say the rule twice?",
       choices: [
-        { text: "Listeners cannot reread, so hearing it twice helps them remember.", correct: true },
-        { text: "Saying a rule two times always makes a talk better than saying it once." },
-        { text: "Listeners learn more when a speaker talks very quickly and quietly." },
-        { text: "Noah is showing that he forgot the rest of his talk." }
+        { text: "Listeners cannot look back, so a second time gives them another chance to catch it.", correct: true },
+        { text: "A second time lets Noah rest his voice before the next rule." },
+        { text: "Listeners need a second time to decide whether they agree with the rule." },
+        { text: "A rule sounds more serious when it is said in a whisper." }
       ],
       clue: "A listener hears a talk only once. Ask what a speaker can do so that an important fact stays with the listener.",
-      why: "The answer is \"Listeners cannot reread, so hearing it twice helps them remember.\" A speaker says an important fact a second time because listeners cannot look back. Saying anything twice is not always better, and Noah says it slowly, not quickly." },
+      why: "The answer is \"Listeners cannot look back, so a second time gives them another chance to catch it.\" A speaker repeats an important fact because listeners cannot go back over it. Resting the voice and deciding whether to agree are not reasons to repeat a safety rule, and Noah says it slowly, not in a whisper." },
     { id: "SK-TFD-T5", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
       prompt: "Why does the script put a [pause] before the narrator says, \"Last, wash the berries at home\"?",
       choices: [

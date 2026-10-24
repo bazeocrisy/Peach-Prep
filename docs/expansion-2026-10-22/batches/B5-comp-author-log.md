@@ -2,9 +2,9 @@
 
 **Role:** content author, batch B5 (component lessons). **This is not a review.** Nothing here certifies the items. Reviewers should blind-solve before they read this log.
 
-**Status:** AUTHORED (B5 comp), REVISED AFTER FIRST REVIEW (section 10), NEEDS A SECOND INDEPENDENT BLIND REVIEW. Both lessons are NOT ACCEPTED. Neither is in `js/data/accepted.js`.
+**Status:** AUTHORED (B5 comp), REVISED AFTER THE FIRST AND SECOND REVIEWS (sections 10 and 11), NEEDS A THIRD INDEPENDENT BLIND REVIEW. Both lessons are NOT ACCEPTED. Neither is in `js/data/accepted.js`.
 
-**Read section 10 first.** The first review (B5-comp-review.md) asked for changes. Sections 1 to 9 below were written before that review. Where section 10 changes a fact, the section 10 version is the current one (for example the sinkhole passage is now a pothole passage, and the similar-bank numbers changed).
+**Read sections 10 and 11 first (11 is the latest).** The first review (B5-comp-review.md) asked for changes. Sections 1 to 9 below were written before that review. Where section 10 changes a fact, the section 10 version is the current one (for example the sinkhole passage is now a pothole passage, and the similar-bank numbers changed).
 
 ## 1. What was built
 
@@ -253,3 +253,65 @@ Please blind-solve these cold (new or rewritten), then spot-check the rest.
 - TF-FEAT: p3 and C11 (changed text), p6 and S11, C02, S02, C03, S03, C05, S05 (new topic), S09, S14, S15, T3, T4, p4 (one sentence), Learn It point 5, and the key-length edits to C13, S13 (and the C14 and C15 distractors).
 - TF-DIG: Watch Me W3, Learn It point 4, T1, C02, S02, C05, S05, C09, S09, C10, S10, C11 (clue only), C12, S12, C13, C14, S14, C15, S15, S08 (all options), C01 (distractor lengths), C08 Part B (three decoys changed), S03 (stem and prompt).
 - Biggest risks, in my own view: DIG C12/S12 (does "to show listeners that a new notice is starting" have a clearly better answer than the other three?), DIG C09/S09 (is "[echo]" or "[wind howling]" obvious from the line alone?), DIG C08 Part B (decoys now include a direction and a description of the room), FEAT C02/S02 (is "ten pages" unambiguous, one off-by-one distractor?), and FEAT C11 (new passage, re-solved by me only partly).
+
+## 11. Response to the second review (B5-comp-review.md, "Second review")
+
+Where this section disagrees with section 10, this section is current. In particular DIG C12/S12 and T1 described in 10.1 were replaced again.
+
+### 11.1 MUSTs
+
+- **F-M1, FEAT C15 and S15.** Rewrote `why`, `how` and hint 3 against the choices that are really there (heading, page number, caption; paragraph about the school's name, index, big title). Hint 3 now reads "A page number is for a book, not for a map, so rule it out" (C15). Hint 1 (the clue) is now a strategy that names no key: "Ask what a stranger would need in order to use a map that he has never seen" (S15: a plan that the child has never seen).
+- **D-M1, DIG C12.** The item was replaced (below), so the stale `why` is gone. I read the new `why`, `how` and hints against the four current choices.
+- **D-M2, DIG T1.** Replaced. The new T1 is about dragging the dot on a progress bar near the end of a recording (key: "the last part of the recording"). I checked by concept, not only by string: no file in `js/data` has a "progress bar", "drag" or "slider" item (the only hits are unrelated words such as "dragon"). The caption-line fact of SK-TC1b-T9 is no longer tested in T1. DIG C01/S01 (marker) and C02/S02 (transcript, slider) are not in SK-TC1b-T8/T9.
+- **D-M3, DIG C12/S12.** Replaced with a fact the existing 3.T.C.1.b lesson does not test: a speaker can use pace and volume to build a feeling.
+  - C12: a storyteller slows down and whispers right before the ghost appears (key: "to make listeners wonder what will happen next").
+  - S12: a race announcer talks faster and louder near the finish (key: "to make the finish sound exciting for the crowd").
+  - Learn It point 4 now teaches the idea in one sentence ("a slow, quiet voice can build suspense, and a fast, loud voice can build excitement") and no longer carries the signpost sentence.
+  - **Concept scan over all of `js/data`:** I listed every 3.T.C.1.b item of `T-C.js` by prompt and key (signpost words, "I have three rules", a drumroll or alarm that sets the mood, "Listen closely") and searched the rest of `js/data` for suspense, announcer, relay, campfire, spooky, ghost, storyteller and commentator. Nothing tests this fact. Near neighbours: SK-TC1b-C15/S15 (a sound effect added to a recording makes listeners excited or sets the time of day) is about a sound, not the speaker's voice; SK-TC1b-S14 has a wrong answer "Whisper each tip so listeners lean in", about counting tips. I avoided the words "lean in" in my keys.
+  - DIG Together P4 (tone fits the message) is in the same area. I think matching a message and building a feeling are different facts, but a reviewer may disagree.
+
+### 11.2 SHOULDs done
+
+- **F-S1** (S09 explanations quoted "Fun Fact" and used synonyms of the taught terms): rewritten with the taught words.
+- **F-S2** (S05 bike): the sentences now sit under three headings in a short passage (p7, 104 words, FK 1.7), and the key no longer repeats the prompt's words. Hint 3 states that the first sentence under the first heading cannot point back.
+- **F-S3** (C11 Part A had nonsense decoys): decoys are now structures the lesson names ("ABC order", "cause of a pothole to the cost of fixing it"). T3's decoys and a Part B hint 3 are unchanged.
+- **F-S5** (Learn It point 5 stated the three answers): reworded to the question to ask. There is still no worked section-order Watch Me.
+- **F-S6** (T2 duplicated SK-SS1a-P5): T2 now asks which Try It! box fits the section Flowers in Spring. The other overlaps with T-SS remain as the standing overlap of a second component lesson on the same code.
+- **S03 (FEAT) and S15 (DIG), keys were the two longest options.** Distractors lengthened and made plausible (S15: stare at papers, low voice, hurry). My cue script shows 12 of 55 groups with the key as the unique longest option, by one to three words.
+- **D-S4:** [loud buzzer] became [door creaking] (C09); [door slamming] became [thunder rumbling] (S09); "bounce back" was dropped from C09's text. The blanks are still answerable from the item's wording.
+- **D-S5:** DIG Learn It point 5 now states a strategy, not the three answers.
+- **D-S7:** T4 has a different key sentence and plausible decoys. T5 is unchanged.
+- **Stale glacier comment** in the core block header now says potholes. FEAT p4 is 109 words.
+
+### 11.3 Not changed
+
+- **D-S1** (C04/S04/P1 share the pop-up and link facts with SK-TC1b-T8): not changed, because Learn It and Together need them. If the lead applies the rule to check items strictly, C04 rows 1 and 3 and S04 rows 2 and 3 need new rows.
+- **D-S3** (C11/S11 name the fact in the prompt): not changed. The suggested wording makes both the time and the room defensible.
+- **D-S6** (hints describe the key's function), **F-S4** (S11 Part B decoys come from other sections; the last section has only three sentences and "The grit has become a pearl" also looks back), **F-S7**, **DIG T5**: not changed.
+- **Check-form record.** `check-content.js` now warns that the wording of both check forms changed since the recorded hash ("run --record-versions to refresh the hash"). I did not run `--record-versions` because it rewrites a verification record. The lead decides.
+
+### 11.4 Re-measured after all edits (every pair mapped by `like`)
+
+| Mode | Highest set Jaccard | Highest bag overlap | Pairs over 0.21 | Exact shared options |
+|---|---|---|---|---|
+| all tokens, no passage | 0.206 | 0.209 | 0 | 0 |
+| all tokens, with passage | 0.206 | 0.209 | 0 | 0 |
+| tokens over two letters, no passage | 0.193 | 0.196 | 0 | 0 |
+| tokens over two letters, with passage | 0.193 | 0.185 | 0 | 0 |
+
+FEAT S03 sits at the edge after several rewordings. For hottext items the "no passage" mode compares prompts only, so S05 got a prompt that shares little with C05's.
+
+### 11.5 Gates and checks
+
+- `check-content.js --all`: PASS (0 failures, 17 warnings; the only TF- warning is the check-form record one; the rest are other authors' files).
+- `check-writing.js`: 0 failures. `check-instructional-copy.js`: 28 assertions passed.
+- Passages: FK 1.5 to 4.3 by my script; all at least 100 words.
+- Smoke test: 30 of 30 core items open their similar item (including the new S05 on p7 and the new C12/S12); no broken images. I did not re-run `practice-own.py` this round (73 of 73 last round; only item text changed).
+
+### 11.6 Changed since the second review, for the third blind review
+
+Please blind-solve cold:
+- TF-FEAT: C15 and S15 (explanations and hints; same options), C11 Part A, S03 (all options), S05 (new passage p7, prompt, key), S09 (explanations), T2 (new item).
+- TF-DIG: C12, S12 (new items), T1 (new item), T4 (new key and decoys), S15 (three new decoys), C09 and S09 (one decoy each), Learn It points 4 and 5.
+
+My own biggest risks: DIG C12 (is "to help listeners who sit far away hear the words better" an easy trap to eliminate?), DIG S12 (other choices too silly?), DIG T1 (is "the last part of the recording" the only reading?), FEAT S05 (is exactly one sentence a better answer?), FEAT T2 (the key is the only choice that mentions flowers).
