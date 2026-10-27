@@ -8057,10 +8057,176 @@ PP.addLesson({
         "Only one side is complete, so no comma is needed."
       ],
       answer: "No comma is needed. The sentence is correct as it is."
+    },
+    {
+      show: ["The dog barked, the mail carrier left."],
+      ask: "A comma alone is joining these two sentences. How do you fix it?",
+      steps: [
+        "Cover the comma and read each side. \"The dog barked\" and \"the mail carrier left\" are both complete sentences.",
+        "A comma alone cannot join two sentences. Add a joining word that shows how they connect.",
+        "The barking made the carrier leave, so use so, and keep the comma right before it."
+      ],
+      answer: "The dog barked, so the mail carrier left."
     }
   ],
   parent: "Write two short sentences about your day on a sticky note, like \"We went to the store. We bought apples.\" Ask your child to join them with and, but or so and add the comma in the right spot.",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Mini Golf with Dad",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Sunday, Dad took me to play mini golf.",
+          "(2) The course had a windmill and a tiny castle.",
+          "(3) I wanted to hit a hole in one, but my ball rolled into the water."
+        ],
+        [
+          "(4) Dad laughed and gave me a new ball.",
+          "(5) I tried again, I missed the windmill by an inch.",
+          "(6) The next hole was easy so I finished in two strokes."
+        ],
+        [
+          "(7) Dad can pick the next course, or I can pick it.",
+          "(8) We shook hands and, we went for ice cream."
+        ],
+        [
+          "(9) It was the best Sunday of the summer.",
+          "(10) I hope we can go back again soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Our Clubhouse",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) My friends and I built a clubhouse behind the garage.",
+          "(2) We used old boards and a blue tarp.",
+          "(3) Mia hammered the nails, and Jo held the boards."
+        ],
+        [
+          "(4) The roof leaked at first so we added another tarp.",
+          "(5) Jo wanted a door, but we had no hinges.",
+          "(6) Mia cut the tarp and taped it to the roof."
+        ],
+        [
+          "(7) We could paint the walls, or we could hang a sign.",
+          "(8) Everyone voted, the sign won.",
+          "(9) Mia grabbed the broom and Jo grabbed the dustpan so we cleaned up quickly."
+        ],
+        [
+          "(10) Now we have a place to hide on rainy days."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "The Climbing Wall",
+      byline: "A third grader's draft",
+      genre: "Student draft (report)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school gym has a new climbing wall.",
+          "(2) The wall is tall, but it has soft mats at the bottom.",
+          "(3) Mr. Cole checks every harness, and he makes sure the ropes are tight."
+        ],
+        [
+          "(4) Nia climbed to the top, and rang the bell.",
+          "(5) I wanted to climb too, so I put on a helmet.",
+          "(6) My hands shook but, I held on tight."
+        ],
+        [
+          "(7) Now everyone wants a turn.",
+          "(8) The line is long, but nobody minds waiting.",
+          "(9) Mr. Cole says we can all try next week.",
+          "(10) I cannot wait to reach the top."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Zipline Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Friday, our camp had zipline day.",
+          "(2) The zipline ran over a pond and through tall pine trees.",
+          "(3) I felt nervous, but my counselor showed me the safety rules."
+        ],
+        [
+          "(4) She clipped my harness and checked it twice.",
+          "(5) I took a deep breath, I stepped off the platform.",
+          "(6) The ride was fast so I laughed the whole way down."
+        ],
+        [
+          "(7) Next time, I can ride in the morning, or I can ride after lunch.",
+          "(8) I waved goodbye and, I ran to tell my friends."
+        ],
+        ["(9) It was the best day of camp.", "(10) I want to go again next summer."]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Hayride Night",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, our town held a hayride night at the Miller farm.",
+          "(2) We rode in a wagon pulled by two horses.",
+          "(3) Dad held the blanket, and I held the cocoa."
+        ],
+        [
+          "(4) The wagon bumped over the hill so we held on tight.",
+          "(5) Mia wanted to sing, but the horses were too loud.",
+          "(6) We passed a barn and waved to the farmer."
+        ],
+        [
+          "(7) We could stop at the pond, or we could ride to the barn.",
+          "(8) Dad paid the driver, we hopped off the wagon.",
+          "(9) Dad hummed a song and I sang along so the ride felt short."
+        ],
+        ["(10) I hope we can go again next fall."]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Corn Maze Visit",
+      byline: "A third grader's draft",
+      genre: "Student draft (report)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class visited a corn maze on a cool October morning.",
+          "(2) The corn was tall, but the paths were wide.",
+          "(3) The guide hands out maps, and he tells us where the exits are."
+        ],
+        [
+          "(4) Kofi grabbed a map, and led our group.",
+          "(5) I wanted to turn left, so I pointed at the sign.",
+          "(6) We walked in circles but, we finally found the exit."
+        ],
+        [
+          "(7) Everyone cheered when we got out.",
+          "(8) We were tired, but we were proud.",
+          "(9) The guide said we can all come back next year.",
+          "(10) I hope the corn will be shorter by then."
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-7-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence uses a comma correctly?",
@@ -8117,6 +8283,1013 @@ PP.addLesson({
       clue: "You need a joining word and a comma. Look closely at where the comma sits.",
       why: "The answer is \"Grandma planted tomatoes, and Grandpa planted beans.\" Both parts are complete sentences, so they are joined with and, and the comma goes right before and. A comma alone cannot join two sentences." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-7-P2" },
+          { ref: "SK-GUM3-7-P4" },
+          {
+            id: "SK-GUM3-7-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 6 of the draft is missing a comma. Choose the words that fix it.",
+            text: "The next hole was easy{0} I finished in two strokes.",
+            slots: [
+              {
+                options: [", so", " so,", " so"],
+                answer: 0
+              }
+            ],
+            clue: "Find the joining word. Then decide whether both sides could stand alone as sentences.",
+            hints: [
+              "Find the joining word. Then decide whether both sides could stand alone as sentences.",
+              "Read sentence 6 and cover the joining word. Say each side by itself.",
+              "A comma right after the joining word is never correct here. Decide between the other two."
+            ],
+            how: [
+              "The joining word is so. Cover it.",
+              "\"The next hole was easy\" and \"I finished in two strokes\" are both complete sentences.",
+              "Two complete sentences joined by so need a comma right before so. The answer is a comma, then so."
+            ],
+            misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+            why: "The answer is a comma and then so. Both sides are complete sentences, so the comma goes right before the joining word. A comma after so is in the wrong place, and no comma at all leaves the sentences joined with nothing to mark the break."
+          },
+          {
+            id: "SK-GUM3-7-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft joins two sentences with only a comma. Which revision fixes it?",
+            choices: [
+              { text: "I tried again but, I missed the windmill by an inch." },
+              { text: "I tried again, but I missed the windmill by an inch.", correct: true },
+              { text: "I tried again, I missed the windmill by an inch." },
+              { text: "I tried again I missed, the windmill by an inch." }
+            ],
+            clue: "Two complete sentences need more than a comma to join them. Look for what is missing.",
+            hints: [
+              "Two complete sentences need more than a comma to join them. Look for what is missing.",
+              "Read sentence 5 and check whether the two parts are joined by a joining word.",
+              "The choice that keeps only a comma is the mistake in the draft. Check the other three."
+            ],
+            how: [
+              "Both parts of sentence 5 are complete sentences, and a comma alone cannot join them.",
+              "A joining word is needed, and the comma goes right before it.",
+              "The answer is \"I tried again, but I missed the windmill by an inch.\" The comma comes before but, not after it."
+            ],
+            misconception: "A common mix-up is thinking a comma is enough to join two sentences. A comma needs a joining word with it.",
+            why: "The answer is \"I tried again, but I missed the windmill by an inch.\" Both sides are complete sentences, so they need a joining word and a comma right before it. The other choices keep only a comma, put the comma after but, or put it in the middle of a part."
+          },
+          {
+            id: "SK-GUM3-7-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 8 of the draft has a comma in the wrong place. Which revision fixes it?",
+              choices: [
+                { text: "We shook hands and, we went for ice cream." },
+                { text: "We shook, hands and we went for ice cream." },
+                { text: "We shook hands, and we went for ice cream.", correct: true },
+                { text: "We shook hands and we went for ice cream." }
+              ]
+            },
+            partB: {
+              prompt: "Which reason explains why the comma belongs where it does in Part A?",
+              choices: [
+                { text: "Both sides could stand alone as sentences, so the comma goes before and.", correct: true },
+                { text: "A comma always goes after the word and." },
+                { text: "The sentence is a question, so it needs a comma in the middle." },
+                { text: "Only the first side could stand alone, so the comma goes after and." }
+              ]
+            },
+            clue: "Find the joining word. Then check both sides of it.",
+            hints: [
+              "Find the joining word. Then check both sides of it.",
+              "For Part A, read sentence 8 and cover the joining word. For Part B, think about what the two sides have to be before a comma is used.",
+              "In Part A, a comma in the middle of a part splits the words that belong together. Check the other choices."
+            ],
+            how: [
+              "Part A: the joining word in sentence 8 is and. Cover it.",
+              "\"We shook hands\" and \"we went for ice cream\" are both complete sentences.",
+              "Part A answer: \"We shook hands, and we went for ice cream.\" The comma goes right before and.",
+              "Part B answer: \"Both sides could stand alone as sentences, so the comma goes before and.\""
+            ],
+            misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+            why: "Part A: \"We shook hands, and we went for ice cream.\" Part B: \"Both sides could stand alone as sentences, so the comma goes before and.\" A comma after and is in the wrong place, and no comma leaves the break unmarked. The sentence is not a question, and both sides, not only the first, are complete."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-7-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have a comma problem.",
+            targets: ["p2:1:3", "p2:2:1", "p2:2:2", "p2:2:3", "p2:3:2"],
+            answer: ["p2:2:1", "p2:3:2"],
+            pick: 2,
+            clue: "Cover the joining word in each sentence. Check whether both sides are complete sentences, then check the comma.",
+            hints: [
+              "Cover the joining word in each sentence. Check whether both sides are complete sentences, then check the comma.",
+              "Read each sentence and look at what comes before the joining word. Ask whether a comma is there when it should be.",
+              "Sentence 3 has a comma in the right place. Check the other four sentences."
+            ],
+            how: [
+              "Check each sentence: cover the joining word and see whether both sides are complete sentences.",
+              "Sentence 3 and sentence 5 have the comma before the joining word, and sentence 6 joins two actions, so it needs no comma.",
+              "Sentence 4 joins two complete sentences with so but has no comma. Sentence 8 joins two complete sentences with only a comma."
+            ],
+            misconception: "A common mix-up is thinking a comma alone is enough. A comma needs a joining word with it, and some sentences need no comma at all.",
+            why: "The problems are in \"The roof leaked at first so we added another tarp.\" and \"Everyone voted, the sign won.\" The first needs a comma before so, and the second needs a joining word after the comma. Sentences 3, 5 and 6 are punctuated correctly."
+          },
+          {
+            id: "SK-GUM3-7-C07",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Which sentence is punctuated correctly?",
+            choices: [
+              { text: "Dev picked up the pencil and handed it to Ms. Kane.", correct: true },
+              { text: "Dev picked up the pencil, and handed it to Ms. Kane." },
+              { text: "Dev picked up the pencil and, handed it to Ms. Kane." },
+              { text: "Dev picked up, the pencil and handed it to Ms. Kane." }
+            ],
+            clue: "Cover the joining word. Check whether the part after it could stand alone as a sentence.",
+            hints: [
+              "Cover the joining word. Check whether the part after it could stand alone as a sentence.",
+              "Look at the words after and. Ask whether they have their own naming part.",
+              "A comma after and is never correct here. Check the other three."
+            ],
+            how: [
+              "Cover and. The part after it, handed it to Ms. Kane, has no naming part, so it is not a complete sentence.",
+              "Only one side is complete, so no comma belongs before and.",
+              "The answer is \"Dev picked up the pencil and handed it to Ms. Kane.\" The other choices add a comma where none belongs."
+            ],
+            misconception: "A common mix-up is putting a comma before every and. A comma is only needed when both sides could stand alone.",
+            why: "The answer is \"Dev picked up the pencil and handed it to Ms. Kane.\" Handed it to Ms. Kane cannot stand alone, so the sentence needs no comma. The other choices put a comma where none belongs."
+          },
+          {
+            id: "SK-GUM3-7-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Match each sentence to the way to fix its comma problem.",
+            cols: [
+              "Add a comma before the joining word",
+              "Take out the extra comma",
+              "Move the comma before the joining word",
+              "Add a joining word after the comma"
+            ],
+            rows: [
+              { text: "Lena fed the cat, and washed the bowl.", answer: 1 },
+              { text: "We missed the bus, we walked to school.", answer: 3 },
+              { text: "Amir lost his hat and Lena found it.", answer: 0 },
+              { text: "The lake was cold but, we swam anyway.", answer: 2 }
+            ],
+            clue: "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
+            hints: [
+              "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
+              "Start with the sentence you are surest about. Decide the rest one at a time.",
+              "The sentence about the bus has a comma but no joining word. Decide the other rows."
+            ],
+            how: [
+              "Check each sentence for a comma, a joining word, and two complete sentences.",
+              "\"Amir lost his hat and Lena found it\" has two complete sentences and no comma, so add one before and. \"The lake was cold but, we swam anyway\" has the comma after but, so move it.",
+              "\"Lena fed the cat, and washed the bowl\" has a comma before an action that cannot stand alone, so take it out. \"We missed the bus, we walked to school\" needs a joining word."
+            ],
+            misconception: "A common mix-up is adding a comma to every sentence. Some sentences need the comma taken out.",
+            why: "The bus sentence needs a joining word after the comma. Lena fed the cat, and washed the bowl needs the extra comma taken out. Amir lost his hat and Lena found it needs a comma before and. The lake sentence needs the comma moved before but."
+          },
+          {
+            id: "SK-GUM3-7-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Two students fixed the sentence. Which statement is true?",
+            stem: [
+              "The oven beeped, the cookies were done.",
+              "Jo changed it to: The oven beeped, and the cookies were done.",
+              "Max changed it to: The oven beeped and, the cookies were done."
+            ],
+            choices: [
+              { text: "Only Max's sentence is correct." },
+              { text: "Both sentences are correct." },
+              { text: "Neither sentence is correct." },
+              { text: "Only Jo's sentence is correct.", correct: true }
+            ],
+            clue: "Check each fix on its own. Look at the joining word and where the comma sits.",
+            hints: [
+              "Check each fix on its own. Look at the joining word and where the comma sits.",
+              "Cover the joining word in each new sentence and check both sides. Then see where the comma is.",
+              "Look at Max's sentence. The comma sits after the word and."
+            ],
+            how: [
+              "The original sentence joins two complete sentences with only a comma, so it needs a joining word.",
+              "Jo added and and put the comma right before it, which is correct. Max put the comma after and, which is not correct.",
+              "The answer is \"Only Jo's sentence is correct.\""
+            ],
+            misconception: "A common mix-up is thinking any fix that adds a joining word is right. The comma must be before the joining word.",
+            why: "The answer is \"Only Jo's sentence is correct.\" Jo added and with the comma right before it. Max put the comma after and, so his sentence is still wrong."
+          },
+          {
+            id: "SK-GUM3-7-C10",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 9 of the draft is missing two commas. Choose the words that fix it.",
+            text: "Mia grabbed the broom{0} Jo grabbed the dustpan{1} we cleaned up quickly.",
+            slots: [
+              {
+                options: [", and", " and,", " and"],
+                answer: 0
+              },
+              {
+                options: [", so", " so,", " so"],
+                answer: 0
+              }
+            ],
+            clue: "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
+            hints: [
+              "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
+              "Read sentence 9 in three parts. Say each part by itself and decide which parts could stand alone.",
+              "A comma right after a joining word is never correct here. Decide the rest."
+            ],
+            how: [
+              "The joining words are and and so. There are three parts, and each part has its own naming part and doing part.",
+              "Each joining word connects two complete sentences, so each needs a comma right before it.",
+              "The answers are a comma then and, and a comma then so."
+            ],
+            misconception: "A common mix-up is fixing only one of the two joining words. Check each one.",
+            why: "The answers are a comma then and, and a comma then so. Mia grabbed the broom, Jo grabbed the dustpan, and we cleaned up quickly are all complete sentences, so each joining word needs a comma right before it."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-7-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences in which the comma should not be where it is.",
+            targets: ["p3:1:2", "p3:1:3", "p3:2:1", "p3:2:2", "p3:2:3"],
+            answer: ["p3:2:1", "p3:2:3"],
+            pick: 2,
+            clue: "Cover the joining word in each sentence. Check both sides, and check where each comma sits.",
+            hints: [
+              "Cover the joining word in each sentence. Check both sides, and check where each comma sits.",
+              "Read each sentence and find its comma. Ask whether the comma should be there, and whether it is right before the joining word.",
+              "Sentence 5 has its comma right before so, and both sides are complete sentences. Check the other four sentences."
+            ],
+            how: [
+              "Check each sentence: find the comma, then cover the joining word.",
+              "Sentences 2, 3 and 5 have the comma right before the joining word, with two complete sentences.",
+              "Sentence 4: rang the bell cannot stand alone, so the comma should come out. Sentence 6: the comma comes after but, so it is in the wrong place."
+            ],
+            misconception: "A common mix-up is thinking every comma near a joining word is right. The comma must come before the joining word, and only when both sides can stand alone.",
+            why: "The problems are in \"Nia climbed to the top, and rang the bell.\" and \"My hands shook but, I held on tight.\" The first has a comma before something that cannot stand alone. The second has the comma after but instead of before it. Sentences 2, 3 and 5 are punctuated correctly."
+          },
+          {
+            id: "SK-GUM3-7-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Where does a comma belong in this sentence?",
+            stem: "We looked everywhere for the key but we could not find it.",
+            choices: [
+              { text: "after the word looked" },
+              { text: "after the word key", correct: true },
+              { text: "after the word but" },
+              { text: "after the word everywhere" }
+            ],
+            clue: "Find the joining word. A comma goes right before it when both sides can stand alone.",
+            hints: [
+              "Find the joining word. A comma goes right before it when both sides can stand alone.",
+              "Read the sentence and cover the joining word. Say each side by itself.",
+              "A comma goes before the joining word, not after it. Check the other three."
+            ],
+            how: [
+              "The joining word is but. Cover it.",
+              "\"We looked everywhere for the key\" and \"we could not find it\" are both complete sentences.",
+              "The comma goes right before but, which is after the word key."
+            ],
+            misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+            why: "The answer is after the word key. Both sides are complete sentences, so the comma goes right before but, after the word key. A comma after but is in the wrong place, and the other spots split words that belong together."
+          },
+          {
+            id: "SK-GUM3-7-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Pia says, \"Always put a comma before the word and.\" Which TWO sentences show that Pia is wrong?",
+            pick: 2,
+            choices: [
+              { text: "The sun set, and the stars came out." },
+              { text: "Mom washed the pots and dried them.", correct: true },
+              { text: "We can sing, and we can dance." },
+              { text: "Salt and pepper are on the table.", correct: true },
+              { text: "Tia drew a bird, and Sam drew a fish." }
+            ],
+            clue: "To test a rule, look for examples that break it. Find sentences with and that are correct without a comma.",
+            hints: [
+              "To test a rule, look for examples that break it. Find sentences with and that are correct without a comma.",
+              "Read each sentence and cover the word and. Ask whether both sides could stand alone as sentences.",
+              "In The sun set, and the stars came out, both sides are complete sentences. Decide about the other four."
+            ],
+            how: [
+              "Cover and in each sentence and check both sides.",
+              "In the three sentences with a comma, both sides are complete sentences, so the comma belongs.",
+              "In \"Mom washed the pots and dried them\" and \"Salt and pepper are on the table,\" and joins words or actions, so no comma belongs. They show the rule is wrong."
+            ],
+            misconception: "A common mix-up is thinking and always needs a comma. Use the comma only when and joins two complete sentences.",
+            why: "The answers are \"Mom washed the pots and dried them.\" and \"Salt and pepper are on the table.\" In each, and joins words or actions, not two complete sentences, so no comma is needed. The other three join complete sentences, so the commas belong."
+          },
+          {
+            id: "SK-GUM3-7-C14",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "The sentence joins two complete sentences with only a comma. Choose the words that fix it.",
+            text: "The baby fell asleep{0} we tiptoed out of the room.",
+            slots: [
+              {
+                options: [", so", ",", " so,"],
+                answer: 0
+              }
+            ],
+            clue: "Two complete sentences need a joining word as well as a comma. Look for the choice that has both in the right order.",
+            hints: [
+              "Two complete sentences need a joining word as well as a comma. Look for the choice that has both in the right order.",
+              "Say each choice in the blank. Ask which one has a joining word with the comma right before it.",
+              "A comma alone is the mistake in the sentence. Decide between the other two."
+            ],
+            how: [
+              "Both parts are complete sentences, and a comma alone cannot join them.",
+              "The sentence needs a joining word, with the comma right before it.",
+              "The answer is a comma, then so. A comma after so is in the wrong place."
+            ],
+            misconception: "A common mix-up is thinking a comma alone can join sentences. It needs a joining word with it.",
+            why: "The answer is a comma and then so. The baby fell asleep, so we tiptoed out. A comma alone cannot join two sentences, and a comma after so is in the wrong place."
+          },
+          {
+            id: "SK-GUM3-7-C15",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+            ],
+            passages: [],
+            prompt: "Which sentence is punctuated correctly?",
+            choices: [
+              { text: "We can ride the train or, we can take the bus." },
+              { text: "We can ride the train or we can take the bus." },
+              { text: "We can ride the train, or we can take the bus.", correct: true },
+              { text: "We can ride, the train or we can take the bus." }
+            ],
+            clue: "Find the joining word. Check both sides, and check where the comma sits.",
+            hints: [
+              "Find the joining word. Check both sides, and check where the comma sits.",
+              "Cover the joining word. Say each side by itself, then look for the comma.",
+              "A comma after the joining word is never correct here. Check the other three."
+            ],
+            how: [
+              "The joining word is or. Both sides are complete sentences, so they need a comma.",
+              "The comma must go right before or.",
+              "The answer is \"We can ride the train, or we can take the bus.\" The others have no comma, a comma after or, or a comma in the middle of a part."
+            ],
+            misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+            why: "The answer is \"We can ride the train, or we can take the bus.\" Both sides are complete sentences, so the comma goes right before or. The other choices have no comma, a comma after or, or a comma in the middle of a part."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-7-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Select the sentence that needs a comma.",
+      options: [
+        "Mara baked bread and made soup.",
+        "It started to snow so we built a snowman.",
+        "Salt and pepper sat on the shelf.",
+        "We played tag, and Dad watched."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+      hints: [
+        "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+        "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
+        "In sentence 4, the comma is already in place. Check the other three sentences."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check both sides.",
+        "Mara baked bread and made soup joins two actions, and Salt and pepper joins two things, so neither needs a comma. The tag sentence already has its comma.",
+        "\"It started to snow\" and \"we built a snowman\" are both complete sentences, so the sentence needs a comma before so."
+      ],
+      misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone.",
+      why: "The answer is \"It started to snow so we built a snowman.\" Both sides are complete sentences, so it needs a comma before so. The other sentences join words or actions, or already have the comma.",
+      like: ["SK-GUM3-7-P2"]
+    },
+    {
+      id: "SK-GUM3-7-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Which TWO sentences are punctuated correctly?",
+      pick: 2,
+      choices: [
+        { text: "Pablo can swim and dive.", correct: true },
+        { text: "I like tea but, my sister likes juice." },
+        { text: "The movie ended, and everyone clapped.", correct: true },
+        { text: "Our team lost the game so we went for pizza." },
+        { text: "Lena ran home, and told her mom." }
+      ],
+      clue: "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
+      hints: [
+        "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
+        "Look at the part after the joining word in each sentence. Ask whether it could stand alone as a sentence.",
+        "Lena ran home, and told her mom has a comma before something that cannot stand alone. Decide about the other four."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check both sides.",
+        "\"The movie ended, and everyone clapped\" has two complete sentences and a comma before and. \"Pablo can swim and dive\" joins two actions, so it needs no comma.",
+        "The others are wrong: Lena's comma should come out, the tea sentence has the comma after but, and the team sentence needs a comma before so."
+      ],
+      misconception: "A common mix-up is adding a comma before every joining word. Some sentences need no comma, and some need it somewhere else.",
+      why: "The answers are \"The movie ended, and everyone clapped.\" and \"Pablo can swim and dive.\" The first joins two complete sentences with a comma before and, and the second joins two actions, so it needs no comma. The others have a comma where none belongs, after the joining word, or missing.",
+      like: ["SK-GUM3-7-P4"]
+    },
+    {
+      id: "SK-GUM3-7-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 6 of the draft is missing a comma. Which words belong in the blank?",
+      text: "The ride was fast{0} I laughed the whole way down.",
+      slots: [
+        {
+          options: [" so,", ", so", " so"],
+          answer: 1
+        }
+      ],
+      clue: "Find the joining word. Then decide whether both sides could stand alone as sentences.",
+      hints: [
+        "Find the joining word. Then decide whether both sides could stand alone as sentences.",
+        "Read sentence 6 and cover the joining word. Say each side by itself.",
+        "A comma right after the joining word is never correct here. Decide between the other two."
+      ],
+      how: [
+        "The joining word is so. Cover it.",
+        "\"The ride was fast\" and \"I laughed the whole way down\" are both complete sentences.",
+        "Two complete sentences joined by so need a comma right before so. The answer is a comma, then so."
+      ],
+      misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+      why: "The answer is a comma and then so. Both sides are complete sentences, so the comma goes right before the joining word. A comma after so is in the wrong place, and no comma at all leaves the break unmarked.",
+      like: ["SK-GUM3-7-C03"]
+    },
+    {
+      id: "SK-GUM3-7-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p4"],
+      prompt: "Which revision fixes the comma problem in the fifth sentence of the draft?",
+      choices: [
+        { text: "I took a deep breath and, I stepped off the platform." },
+        { text: "I took a deep breath, I stepped off the platform." },
+        { text: "I took a deep, breath and I stepped off the platform." },
+        { text: "I took a deep breath, and I stepped off the platform.", correct: true }
+      ],
+      clue: "Two complete sentences need more than a comma to join them. Look for what is missing.",
+      hints: [
+        "Two complete sentences need more than a comma to join them. Look for what is missing.",
+        "Find the fifth sentence and check whether the two parts are joined by a joining word.",
+        "The choice that keeps only a comma is the mistake in the draft. Check the other three."
+      ],
+      how: [
+        "Both parts of the sentence are complete sentences, and a comma alone cannot join them.",
+        "A joining word is needed, and the comma goes right before it.",
+        "The answer is \"I took a deep breath, and I stepped off the platform.\" The comma comes before and, not after it."
+      ],
+      misconception: "A common mix-up is thinking a comma is enough to join two sentences. A comma needs a joining word with it.",
+      why: "The answer is \"I took a deep breath, and I stepped off the platform.\" Both sides are complete sentences, so they need a joining word and a comma right before it. The other choices keep only a comma, put the comma after and, or put it in the middle of a part.",
+      like: ["SK-GUM3-7-C04"]
+    },
+    {
+      id: "SK-GUM3-7-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Look at the last sentence of the third paragraph in the draft. Which revision puts the comma in the right place?",
+        choices: [
+          { text: "I waved goodbye and, I ran to tell my friends." },
+          { text: "I waved goodbye, and I ran to tell my friends.", correct: true },
+          { text: "I waved, goodbye and I ran to tell my friends." },
+          { text: "I waved goodbye and I ran to tell my friends." }
+        ]
+      },
+      partB: {
+        prompt: "What is the reason for the comma in the answer to Part A?",
+        choices: [
+          { text: "Just the second side is complete, so the comma goes after and." },
+          { text: "Both sides have their own naming part and doing part, so the comma goes before and." },
+          { text: "Every and needs a comma right after it, no matter what.", correct: true },
+          { text: "The sentence is long, so a comma is needed in the middle." }
+        ]
+      },
+      clue: "Find the joining word. Then check both sides of it.",
+      hints: [
+        "Find the joining word. Then check both sides of it.",
+        "For Part A, find the sentence and cover the joining word. For Part B, think about what each side has to be before a comma is used.",
+        "In Part A, a comma in the middle of a part splits words that belong together. Check the other choices."
+      ],
+      how: [
+        "Part A: the joining word is and. Cover it.",
+        "\"I waved goodbye\" and \"I ran to tell my friends\" are both complete sentences.",
+        "Part A answer: \"I waved goodbye, and I ran to tell my friends.\" The comma goes right before and.",
+        "Part B answer: \"Both sides have their own naming part and doing part, so the comma goes before and.\""
+      ],
+      misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+      why: "Part A: \"I waved goodbye, and I ran to tell my friends.\" Part B: \"Both sides have their own naming part and doing part, so the comma goes before and.\" A comma after and is in the wrong place, and no comma leaves the break unmarked. The length of a sentence does not decide where the comma goes, and both sides are complete.",
+      like: ["SK-GUM3-7-C05"]
+    },
+    {
+      id: "SK-GUM3-7-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p5"],
+      prompt: "Two sentences in the draft have a comma problem. Select them.",
+      targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:2"],
+      answer: ["p5:2:1", "p5:3:2"],
+      pick: 2,
+      clue: "Cover the joining word in each sentence. Check whether both sides are complete sentences, then check the comma.",
+      hints: [
+        "Cover the joining word in each sentence. Check whether both sides are complete sentences, then check the comma.",
+        "Read each sentence and look at what comes before the joining word. Ask whether a comma is there when it should be.",
+        "Sentence 3 has a comma in the right place. Check the other four sentences."
+      ],
+      how: [
+        "Check each sentence: cover the joining word and see whether both sides are complete sentences.",
+        "Sentence 3 and sentence 5 have the comma before the joining word, and sentence 6 joins two actions, so it needs no comma.",
+        "Sentence 4 joins two complete sentences with so but has no comma. Sentence 8 joins two complete sentences with only a comma."
+      ],
+      misconception: "A common mix-up is thinking a comma alone is enough. A comma needs a joining word with it, and some sentences need no comma at all.",
+      why: "The problems are in \"The wagon bumped over the hill so we held on tight.\" and \"Dad paid the driver, we hopped off the wagon.\" The first needs a comma before so, and the second needs a joining word after the comma. Sentences 3, 5 and 6 are punctuated correctly.",
+      like: ["SK-GUM3-7-C06"]
+    },
+    {
+      id: "SK-GUM3-7-S07",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Which of these sentences needs no comma?",
+      choices: [
+        { text: "Rosa opened the window and the breeze came in." },
+        { text: "Rosa opened the window but the room stayed warm." },
+        { text: "Rosa opened the window and let in the breeze.", correct: true },
+        { text: "Rosa opened the window so the room cooled off." }
+      ],
+      clue: "Cover the joining word. Check whether the part after it could stand alone as a sentence.",
+      hints: [
+        "Cover the joining word. Check whether the part after it could stand alone as a sentence.",
+        "Look at the words after the joining word in each sentence. Ask whether they have their own naming part.",
+        "In the choice with so, both sides could stand alone as sentences. Check the other three."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check the part after it.",
+        "The breeze came in, the room stayed warm, and the room cooled off all have their own naming parts, so each of those sentences needs a comma.",
+        "Let in the breeze has no naming part, so it cannot stand alone. The answer is \"Rosa opened the window and let in the breeze.\""
+      ],
+      misconception: "A common mix-up is putting a comma before every joining word. A comma is only needed when both sides could stand alone.",
+      why: "The answer is \"Rosa opened the window and let in the breeze.\" Let in the breeze cannot stand alone, so the sentence needs no comma. The other sentences join two complete sentences, so each one needs a comma before the joining word.",
+      like: ["SK-GUM3-7-C07"]
+    },
+    {
+      id: "SK-GUM3-7-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "What should be done to fix each sentence?",
+      cols: ["Put in a comma", "Delete the comma", "Move the comma", "Add a joining word"],
+      rows: [
+        { text: "It rained all day, we stayed inside.", answer: 3 },
+        { text: "Kai likes soccer and Jun likes tennis.", answer: 0 },
+        { text: "Dara swept the floor, and mopped it.", answer: 1 },
+        { text: "I wanted pizza but, we had pasta.", answer: 2 }
+      ],
+      clue: "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
+      hints: [
+        "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
+        "Start with the sentence you are surest about. Decide the rest one at a time.",
+        "The rain sentence has a comma but no joining word. Decide the other rows."
+      ],
+      how: [
+        "Check each sentence for a comma, a joining word, and two complete sentences.",
+        "\"Kai likes soccer and Jun likes tennis\" has two complete sentences and no comma, so put one in before and. \"I wanted pizza but, we had pasta\" has the comma after but, so move it.",
+        "\"Dara swept the floor, and mopped it\" has a comma before an action that cannot stand alone, so delete it. \"It rained all day, we stayed inside\" needs a joining word."
+      ],
+      misconception: "A common mix-up is adding a comma to every sentence. Some sentences need the comma deleted.",
+      why: "The rain sentence needs a joining word after the comma. Dara swept the floor, and mopped it needs the extra comma deleted. Kai likes soccer and Jun likes tennis needs a comma put in before and. The pizza sentence needs the comma moved before but.",
+      like: ["SK-GUM3-7-C08"]
+    },
+    {
+      id: "SK-GUM3-7-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Which statement about the two fixes is true?",
+      stem: [
+        "The kettle whistled, the water was hot.",
+        "Eli changed it to: The kettle whistled, so the water was hot.",
+        "Una changed it to: The kettle whistled so the water, was hot."
+      ],
+      choices: [
+        { text: "Eli's fix is the only correct one.", correct: true },
+        { text: "Una's fix is the only correct one." },
+        { text: "Both fixes are correct." },
+        { text: "Neither fix is correct." }
+      ],
+      clue: "Check each fix on its own. Look at the joining word and where the comma sits.",
+      hints: [
+        "Check each fix on its own. Look at the joining word and where the comma sits.",
+        "Cover the joining word in each new sentence and check both sides. Then see where the comma is.",
+        "Look at Una's sentence. The comma sits after the word water."
+      ],
+      how: [
+        "The original sentence joins two complete sentences with only a comma, so it needs a joining word.",
+        "Eli added so and put the comma right before it, which is correct. Una's comma sits in the middle of the second part, which is not correct.",
+        "The answer is \"Eli's fix is the only correct one.\""
+      ],
+      misconception: "A common mix-up is thinking any fix that adds a joining word is right. The comma must be before the joining word.",
+      why: "The answer is \"Eli's fix is the only correct one.\" Eli added so with the comma right before it. Una put the comma in the middle of the second part, so her sentence is still wrong.",
+      like: ["SK-GUM3-7-C09"]
+    },
+    {
+      id: "SK-GUM3-7-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 9 of the draft is missing two commas. Which words fix it?",
+      text: "Dad hummed a song{0} I sang along{1} the ride felt short.",
+      slots: [
+        {
+          options: [", and", " and,", " and"],
+          answer: 0
+        },
+        {
+          options: ["so,", ", so", " so"],
+          answer: 1
+        }
+      ],
+      clue: "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
+      hints: [
+        "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
+        "Read sentence 9 in three parts. Say each part by itself and decide which parts could stand alone.",
+        "A comma right after a joining word is never correct here. Decide the rest."
+      ],
+      how: [
+        "The joining words are and and so. There are three parts, and each part has its own naming part and doing part.",
+        "Each joining word connects two complete sentences, so each needs a comma right before it.",
+        "The answers are a comma then and, and a comma then so."
+      ],
+      misconception: "A common mix-up is fixing only one of the two joining words. Check each one.",
+      why: "The answers are a comma then and, and a comma then so. Dad hummed a song, I sang along, and the ride felt short are all complete sentences, so each joining word needs a comma right before it.",
+      like: ["SK-GUM3-7-C10"]
+    },
+    {
+      id: "SK-GUM3-7-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences in which a comma is not where it belongs.",
+      targets: ["p6:1:2", "p6:1:3", "p6:2:1", "p6:2:2", "p6:2:3"],
+      answer: ["p6:2:1", "p6:2:3"],
+      pick: 2,
+      clue: "Cover the joining word in each sentence. Check both sides, and check where each comma sits.",
+      hints: [
+        "Cover the joining word in each sentence. Check both sides, and check where each comma sits.",
+        "Read each sentence and find its comma. Ask whether the comma should be there, and whether it is right before the joining word.",
+        "Sentence 5 has its comma right before so, and both sides are complete sentences. Check the other four sentences."
+      ],
+      how: [
+        "Check each sentence: find the comma, then cover the joining word.",
+        "Sentences 2, 3 and 5 have the comma right before the joining word, with two complete sentences.",
+        "Sentence 4: led our group cannot stand alone, so the comma should come out. Sentence 6: the comma comes after but, so it is in the wrong place."
+      ],
+      misconception: "A common mix-up is thinking every comma near a joining word is right. The comma must come before the joining word, and only when both sides can stand alone.",
+      why: "The problems are in \"Kofi grabbed a map, and led our group.\" and \"We walked in circles but, we finally found the exit.\" The first has a comma before something that cannot stand alone. The second has the comma after but instead of before it. Sentences 2, 3 and 5 are punctuated correctly.",
+      like: ["SK-GUM3-7-C11"]
+    },
+    {
+      id: "SK-GUM3-7-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Where should the comma go in this sentence?",
+      stem: "The coach blew the whistle and the players ran onto the field.",
+      choices: [
+        { text: "after the word coach" },
+        { text: "after the word and" },
+        { text: "after the word players" },
+        { text: "after the word whistle", correct: true }
+      ],
+      clue: "Find the joining word. A comma goes right before it when both sides can stand alone.",
+      hints: [
+        "Find the joining word. A comma goes right before it when both sides can stand alone.",
+        "Read the sentence and cover the joining word. Say each side by itself.",
+        "A comma goes before the joining word, not after it. Check the other three."
+      ],
+      how: [
+        "The joining word is and. Cover it.",
+        "\"The coach blew the whistle\" and \"the players ran onto the field\" are both complete sentences.",
+        "The comma goes right before and, which is after the word whistle."
+      ],
+      misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+      why: "The answer is after the word whistle. Both sides are complete sentences, so the comma goes right before and, after the word whistle. A comma after and is in the wrong place, and the other spots split words that belong together.",
+      like: ["SK-GUM3-7-C12"]
+    },
+    {
+      id: "SK-GUM3-7-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Leo says, \"Always put a comma before the word but.\" Which TWO sentences show that Leo is wrong?",
+      pick: 2,
+      choices: [
+        { text: "I wanted a puppy, but we have a cat." },
+        { text: "It was late, but we kept playing." },
+        { text: "Mina wanted tea but not milk.", correct: true },
+        { text: "She tried hard, but she lost." },
+        { text: "The pie looked small but tasty.", correct: true }
+      ],
+      clue: "To test a rule, look for examples that break it. Find sentences with but that are correct without a comma.",
+      hints: [
+        "To test a rule, look for examples that break it. Find sentences with but that are correct without a comma.",
+        "Read each sentence and cover the word but. Ask whether both sides could stand alone as sentences.",
+        "In She tried hard, but she lost, both sides are complete sentences. Decide about the other four."
+      ],
+      how: [
+        "Cover but in each sentence and check both sides.",
+        "In the three sentences with a comma, both sides are complete sentences, so the comma belongs.",
+        "In \"Mina wanted tea but not milk\" and \"The pie looked small but tasty,\" but joins words or groups of words, so no comma belongs. They show the rule is wrong."
+      ],
+      misconception: "A common mix-up is thinking but always needs a comma. Use the comma only when but joins two complete sentences.",
+      why: "The answers are \"Mina wanted tea but not milk.\" and \"The pie looked small but tasty.\" In each, but joins words or groups of words, not two complete sentences, so no comma is needed. The other three join complete sentences, so the commas belong.",
+      like: ["SK-GUM3-7-C13"]
+    },
+    {
+      id: "SK-GUM3-7-S14",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Two complete sentences are joined with only a comma. Which words fix it?",
+      text: "The lights flickered{0} we grabbed a flashlight.",
+      slots: [
+        {
+          options: [", so", " so,", ","],
+          answer: 0
+        }
+      ],
+      clue: "Two complete sentences need a joining word as well as a comma. Look for the choice that has both in the right order.",
+      hints: [
+        "Two complete sentences need a joining word as well as a comma. Look for the choice that has both in the right order.",
+        "Say each choice in the blank. Ask which one has a joining word with the comma right before it.",
+        "A comma alone is the mistake in the sentence. Decide between the other two."
+      ],
+      how: [
+        "Both parts are complete sentences, and a comma alone cannot join them.",
+        "The sentence needs a joining word, with the comma right before it.",
+        "The answer is a comma, then so. A comma after so is in the wrong place."
+      ],
+      misconception: "A common mix-up is thinking a comma alone can join sentences. It needs a joining word with it.",
+      why: "The answer is a comma and then so. The lights flickered, so we grabbed a flashlight. A comma alone cannot join two sentences, and a comma after so is in the wrong place.",
+      like: ["SK-GUM3-7-C14"]
+    },
+    {
+      id: "SK-GUM3-7-S15",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
+      ],
+      passages: [],
+      prompt: "Choose the sentence with the correct punctuation.",
+      choices: [
+        { text: "I wanted to help, but my hands were full.", correct: true },
+        { text: "I wanted to help but, my hands were full." },
+        { text: "I wanted to help but my hands were full." },
+        { text: "I wanted, to help but my hands were full." }
+      ],
+      clue: "Find the joining word. Check both sides, and check where the comma sits.",
+      hints: [
+        "Find the joining word. Check both sides, and check where the comma sits.",
+        "Cover the joining word. Say each side by itself, then look for the comma.",
+        "A comma after the joining word is never correct here. Check the other three."
+      ],
+      how: [
+        "The joining word is but. Both sides are complete sentences, so they need a comma.",
+        "The comma must go right before but.",
+        "The answer is \"I wanted to help, but my hands were full.\" The others have no comma, a comma after but, or a comma in the middle of a part."
+      ],
+      misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
+      why: "The answer is \"I wanted to help, but my hands were full.\" Both sides are complete sentences, so the comma goes right before but. The other choices have no comma, a comma after but, or a comma in the middle of a part.",
+      like: ["SK-GUM3-7-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-7-P1": {
+      hints: [
+        "Find the joining word. Where does the comma belong when it joins two complete sentences?",
+        "Look at each choice and find its comma. Ask whether it sits right before the joining word.",
+        "A comma after the joining word is never correct here. Decide among the other choices."
+      ],
+      how: [
+        "The joining word is but, and both sides are complete sentences.",
+        "The comma goes right before but.",
+        "The answer is \"Jada wanted to bake cookies, but we had no eggs.\" The others put the comma after but or in the middle of a part."
+      ],
+      misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it."
+    },
+    "SK-GUM3-7-P2": {
+      hints: [
+        "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+        "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
+        "In sentence 4, the comma is already in place. Check the other three sentences."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check both sides.",
+        "Grandpa grilled corn and baked a pie joins two actions, and Rosa likes cats and dogs joins two things, so neither needs a comma.",
+        "\"The bus was late\" and \"we missed the first bell\" are both complete sentences, so the sentence needs a comma before so."
+      ],
+      misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone."
+    },
+    "SK-GUM3-7-P3": {
+      hints: [
+        "Cover the joining word. Is the part after it a whole sentence with its own naming part?",
+        "Start with the sentence you are surest about. Then decide the rest one at a time.",
+        "Not salad cannot stand alone as a sentence. Decide the other rows."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check the part after it.",
+        "She gave it to her mom and nobody came to the door each have their own naming part, so they need a comma.",
+        "Gave it to her mom and not salad cannot stand alone, so they need no comma."
+      ],
+      misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone."
+    },
+    "SK-GUM3-7-P4": {
+      hints: [
+        "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
+        "Look at the part after the joining word in each sentence. Ask whether it could stand alone as a sentence.",
+        "Kim drew a map, and labeled every road has a comma before something that cannot stand alone. Decide about the other four."
+      ],
+      how: [
+        "Cover the joining word in each sentence and check both sides.",
+        "\"The sun came out, so we hung the wet towels outside\" has two complete sentences and a comma before so. \"Yusuf can sing and play the guitar\" joins two actions, so it needs no comma.",
+        "The others are wrong: Kim's comma should come out, the math sentence has the comma after but, and the Lucas sentence needs a comma before so."
+      ],
+      misconception: "A common mix-up is adding a comma before every joining word. Some sentences need no comma, and some need it somewhere else."
+    },
+    "SK-GUM3-7-P5": {
+      hints: [
+        "You need a joining word and a comma. Look closely at where the comma sits.",
+        "Check each choice for a joining word and a comma. Ask whether the comma is right before the joining word.",
+        "A comma alone cannot join two sentences. Check the other choices."
+      ],
+      how: [
+        "Both parts are complete sentences, so they need a joining word and a comma.",
+        "The comma goes right before the joining word.",
+        "The answer is \"Grandma planted tomatoes, and Grandpa planted beans.\" The others put the comma after and, leave out the joining word, or put the comma in the middle of a part."
+      ],
+      misconception: "A common mix-up is thinking a comma alone can join sentences. It needs a joining word with it."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-7-T1", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that uses a comma correctly.",
