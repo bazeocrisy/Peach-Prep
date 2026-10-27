@@ -2422,7 +2422,7 @@ PP.addLesson({
       like: [
         "SK-FP4b-C07"
       ],
-      prompt: "Starfish has two halves. Which kind of syllable starts it, and which kind ends it?",
+      prompt: "Starfish has two halves. Which kind of syllable begins it, and which kind ends it?",
       text: "Front half: {0}. Back half: {1}.",
       slots: [
         {

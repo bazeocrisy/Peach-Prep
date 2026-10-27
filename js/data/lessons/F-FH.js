@@ -1210,10 +1210,10 @@
             text: "Tara mended the worn jacket."
           },
           {
-            text: "Sara mended the torn jacket."
+            text: "Mara mended the torn jacket."
           },
           {
-            text: "Sara minded the worn jacket."
+            text: "Mara minded the worn jacket."
           }
         ],
         clue: "Read the cursive sentence one word at a time.",
