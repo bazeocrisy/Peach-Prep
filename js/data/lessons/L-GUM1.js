@@ -7706,7 +7706,7 @@ PP.addLesson({
           "(1) I am writing to tell you about my grandpa's farm.",
           "(2) Yesterday, Grandpa wait by the gate with a big smile.",
           "(3) Every morning, my cousin Lena opens the barn door.",
-          "(4) Two days ago, she pulled a heavy wagon across the yard."
+          "(4) Two days ago, she pull a heavy wagon across the yard."
         ],
         [
           "(5) Now the baby goats follow her everywhere.",
@@ -7716,7 +7716,7 @@ PP.addLesson({
         [
           "(8) Every night, Grandpa count the eggs in the kitchen.",
           "(9) Lena loves feeding the chickens.",
-          "(10) Yesterday, I helped her carry hay to the barn.",
+          "(10) Yesterday, I help her carry hay to the barn.",
           "(11) We started talk about the best part of the day."
         ],
         [
@@ -7745,7 +7745,7 @@ PP.addLesson({
         ],
         [
           "(8) Now people wait in a long line outside.",
-          "(9) Right now, our principal tastes a cupcake and smiles.",
+          "(9) Right now, our principal taste a cupcake and smiles.",
           "(10) Right now, a fifth grader start pouring more lemonade."
         ],
         [
@@ -7765,7 +7765,7 @@ PP.addLesson({
         [
           "(1) Last Tuesday our class visited the zoo.",
           "(2) That day, a guide named Mr. Kim walk beside us down a winding path.",
-          "(3) Every day, the otters slide down a muddy hill.",
+          "(3) Every day, the river otters slide down a muddy hill.",
           "(4) That afternoon, a baby otter climbs out of the water."
         ],
         [
@@ -7774,8 +7774,8 @@ PP.addLesson({
           "(7) Last week, we watched a video about otters at school."
         ],
         [
-          "(8) Every day, an otter pup learn to swim from its mother.",
-          "(9) That afternoon, Mr. Kim explain that otters hold hands while they sleep.",
+          "(8) Every day, a river otter pup learn to swim from its mother.",
+          "(9) That afternoon, Mr. Kim explain that river otters can hold their breath for several minutes.",
           "(10) We kept watching until closing time.",
           "(11) Now everyone loves talking about the tiny pups.",
           "(12) I hope to visit the zoo again soon."
@@ -7802,7 +7802,7 @@ PP.addLesson({
           "(8) Now the coach wants us to pull together as a team."
         ],
         [
-          "(9) Yesterday, our team waited for the bus after practice.",
+          "(9) Yesterday, our team wait for the bus after practice.",
           "(10) Every game, a few parents cheers from the doorway.",
           "(11) Next week, we start our first real game.",
           "(12) I hope we win."
@@ -7829,7 +7829,7 @@ PP.addLesson({
         ],
         [
           "(8) Right now, Joy reads a story about a dragon to the kids.",
-          "(9) Every month, the library holds a puzzle night.",
+          "(9) Every month, the librarians holds a puzzle night.",
           "(10) I love sorting the colorful covers.",
           "(11) Yesterday, Ms. Bell thanked us with stickers.",
           "(12) I keep visit the library after school."
@@ -7937,35 +7937,35 @@ PP.addLesson({
               "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
             ],
             passages: ["p1"],
-            prompt: "Sentence 2 has a verb that does not fit its time clue. Which revision fixes it?",
+            prompt: "Sentence 11 has a verb that does not fit. Which revision fixes it?",
             choices: [
               {
-                text: "Yesterday, Grandpa waited by the gate with a big smile.",
+                text: "We started talking about the best part of the day.",
                 correct: true
               },
               {
-                text: "Yesterday, Grandpa waits by the gate with a big smile."
+                text: "We started talks about the best part of the day."
               },
               {
-                text: "Yesterday, Grandpa waiting by the gate with a big smile."
+                text: "We started talked about the best part of the day."
               },
               {
-                text: "Yesterday, Grandpa wait by the gate with a big smile."
+                text: "We started talk about the best part of the day."
               }
             ],
-            clue: "Find the time clue at the start of sentence 2. Ask whether the action has already happened.",
+            clue: "Look at the word right before the verb in sentence 11. Ask what ending can follow it.",
             hints: [
-              "Find the time clue at the start of sentence 2. Ask whether the action has already happened.",
-              "Say each choice out loud with the time clue in front. Listen for the one that sounds finished.",
-              "An -ing verb needs a helper word like started or kept, and sentence 2 has none, so one choice can be ruled out."
+              "Look at the word right before the verb in sentence 11. Ask what ending can follow it.",
+              "Say each choice out loud. Listen for the one that sounds right after the word started.",
+              "Started already tells about the past, so the verb after it does not add -ed. Think about the other choices."
             ],
             how: [
-              "Find the time clue in sentence 2: yesterday. Yesterday already happened.",
-              "An action that already happened gets -ed on the verb.",
-              "The answer is \"Yesterday, Grandpa waited by the gate with a big smile.\" Waits tells about now, waiting needs a helper word, and wait leaves out the ending."
+              "Look at the word before the verb in sentence 11: started. After a word like started, kept or loves, a verb takes -ing.",
+              "Started already tells about the past, so the next verb does not need -ed. It does not need -s or the plain form either.",
+              "The answer is \"We started talking about the best part of the day.\" Talks, talked and talk do not fit after started."
             ],
-            misconception: "A common mix-up is keeping the plain verb because the sentence looks fine. Check the time clue first.",
-            why: "The answer is \"Yesterday, Grandpa waited by the gate with a big smile.\" Yesterday already happened, so wait needs -ed. Waits tells about now, and waiting has no helper word."
+            misconception: "A common mix-up is leaving the plain verb after started. A verb after a word like started, kept or loves takes -ing.",
+            why: "The answer is \"We started talking about the best part of the day.\" After started, the verb takes -ing, so talk becomes talking. Talked repeats the past ending, talks tells about one person now, and talk has no ending."
           },
           {
             id: "SK-GUM1-6-C04",
@@ -7988,15 +7988,15 @@ PP.addLesson({
             hints: [
               "Find the time clue at the start of the sentence. Ask when the action happened.",
               "Read the sentence with each choice. Listen for the one that tells about a finished action.",
-              "An -ing verb needs a helper word like started or kept, and this sentence has none, so one choice can be ruled out."
+              "An -ing verb follows a word like started, kept or loves, and this sentence has none, so one choice can be ruled out."
             ],
             how: [
               "Find the time clue: last week. Last week already happened.",
               "A verb for an action that already happened gets -ed.",
-              "The answer is knocked. Knocks tells about now, and knocking needs a helper word."
+              "The answer is knocked. Knocks tells about now, and knocking needs a word like started or kept before it."
             ],
             misconception: "A common mix-up is choosing the verb with -s because one goat is the doer. The time clue matters more here.",
-            why: "The answer is knocked. Last week already happened, so the verb needs -ed. Knocks tells about now, and knocking has no helper word."
+            why: "The answer is knocked. Last week already happened, so the verb needs -ed. Knocks tells about now, and knocking has no word like started or kept before it."
           },
           {
             id: "SK-GUM1-6-C05",
@@ -8026,7 +8026,7 @@ PP.addLesson({
             clue: "Find the person or thing doing the action in each sentence. Count how many there are.",
             hints: [
               "Find the person or thing doing the action in each sentence. Count how many there are.",
-              "Look at who opens and who follows. One is a single person, and the other is a group.",
+              "Look at who opens and who follows. Compare who does each action.",
               "The length of a verb does not decide its ending, so one reason can be ruled out."
             ],
             how: [
@@ -8052,22 +8052,22 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Select the TWO shown sentences whose verb should end in -ed.",
-            targets: ["p1:1:2","p1:1:3","p1:1:4","p1:2:1","p1:2:2"],
-            answer: ["p1:1:2","p1:2:2"],
+            targets: ["p1:1:4","p1:2:3","p1:3:2","p1:3:3","p1:4:1"],
+            answer: ["p1:1:4","p1:3:3"],
             pick: 2,
             clue: "Look for a time clue that tells you the action already happened. Then check the ending on the verb.",
             hints: [
               "Look for a time clue that tells you the action already happened. Then check the ending on the verb.",
               "Read each shown sentence and ask whether the verb matches its clue.",
-              "Sentence 4 already has a verb with -ed on it, so it can be ruled out."
+              "Sentence 9 has a verb with -ing after loves, which already fits, so it can be ruled out."
             ],
             how: [
               "Find the time clue in each shown sentence.",
-              "Yesterday in sentence 2 and last week in sentence 6 already happened, but wait and knock have no ending.",
-              "Sentence 3 has every morning, sentence 4 has pulled, and sentence 5 has now, so their verbs already fit."
+              "Two days ago in sentence 4 and yesterday in sentence 10 already happened, but pull and help have no ending.",
+              "Sentence 7 has kept counting, sentence 9 has loves feeding, and sentence 12 has wants, so their verbs already fit."
             ],
             misconception: "A common mix-up is choosing every sentence with a time clue. Only the verbs that do not match their clue need a change.",
-            why: "The answers are sentences 2 and 6: \"Yesterday, Grandpa wait by the gate with a big smile.\" and \"Last week, a goat knock over a full bucket.\". Yesterday and last week already happened, so wait and knock need -ed. The other shown verbs already fit their clues."
+            why: "The answers are sentences 4 and 10: \"Two days ago, she pull a heavy wagon across the yard.\" and \"Yesterday, I help her carry hay to the barn.\". Two days ago and yesterday already happened, so pull and help need -ed. The other shown verbs already fit their clues."
           },
           {
             id: "SK-GUM1-6-C07",
@@ -8090,7 +8090,7 @@ PP.addLesson({
                   text: "It needs -ed, because the action already happened last night."
                 },
                 {
-                  text: "It needs -ing, because a helper word comes before the verb."
+                  text: "It needs -ing, because a word like started comes before the verb."
                 },
                 {
                   text: "It needs no ending, because Grandpa means more than one person."
@@ -8119,12 +8119,12 @@ PP.addLesson({
             hints: [
               "Find the time clue and the person doing the action in sentence 8.",
               "For Part A, decide whether the action is finished or happens again and again, and count the doers. For Part B, read each revision out loud.",
-              "A helper word like started or kept is needed before an -ing verb, and sentence 8 has none, so one choice can be ruled out."
+              "An -ing verb follows a word like started, kept or loves, and sentence 8 has none, so one choice can be ruled out."
             ],
             how: [
               "Part A: every night means again and again, and Grandpa is one person. The answer is \"It needs -s, because one grandpa does the action every night.\"",
               "Part B: add -s to count. The answer is \"Every night, Grandpa counts the eggs in the kitchen.\"",
-              "The other revisions use -ed for the past, use -ing with no helper word, or leave the verb plain."
+              "The other revisions use -ed for the past, use -ing with no word like started or kept before it, or leave the verb plain."
             ],
             misconception: "A common mix-up is leaving the verb plain because the sentence is about now. One person doing the action needs -s.",
             why: "Part A: \"It needs -s, because one grandpa does the action every night.\" Part B: \"Every night, Grandpa counts the eggs in the kitchen.\" Every night means the action happens again and again, and Grandpa is one person. So count needs -s."
@@ -8202,15 +8202,15 @@ PP.addLesson({
             hints: [
               "Think about which ending tells that an action is finished.",
               "Say each verb in a sentence with the word yesterday. Listen for the one that fits.",
-              "Listening needs a helper word like started or kept to make a sentence."
+              "Listening needs a word like started or kept right before it to make a sentence."
             ],
             how: [
               "Think about the ending for an action that already happened.",
               "An action that already happened gets -ed.",
-              "The answer is listened. Listens tells about now, listening needs a helper word, and listen is the plain verb."
+              "The answer is listened. Listens tells about now, listening needs a word like started or kept before it, and listen is the plain verb."
             ],
             misconception: "A common mix-up is picking the longest verb. Look for the ending that means finished.",
-            why: "The answer is \"listened\" The ending -ed tells that an action already happened. The other forms tell about now or need a helper word."
+            why: "The answer is \"listened\" The ending -ed tells that an action already happened. The other forms tell about now or need a word like started before them."
           },
           {
             id: "SK-GUM1-6-C10",
@@ -8240,7 +8240,7 @@ PP.addLesson({
             clue: "Find who is doing the action in sentence 5. Count how many there are.",
             hints: [
               "Find who is doing the action in sentence 5. Count how many there are.",
-              "Think about when the -s ending is used. It goes with a single doer, not with a group.",
+              "Find who is doing the action, then think about the ending that fits that doer.",
               "Every afternoon does not tell about the past. Look at the other reasons."
             ],
             how: [
@@ -8266,8 +8266,8 @@ PP.addLesson({
             ],
             passages: ["p2"],
             prompt: "Select the TWO shown sentences where the -s on the verb is wrong or missing.",
-            targets: ["p2:1:2","p2:2:1","p2:2:2","p2:3:3","p2:4:1"],
-            answer: ["p2:2:1","p2:3:3"],
+            targets: ["p2:1:2","p2:2:2","p2:3:2","p2:3:3","p2:4:1"],
+            answer: ["p2:3:2","p2:3:3"],
             pick: 2,
             clue: "Find who or what does the action in each shown sentence. Count how many there are.",
             hints: [
@@ -8277,12 +8277,12 @@ PP.addLesson({
             ],
             how: [
               "Find the doer in each shown sentence and check the verb.",
-              "Sentence 5 says the boys sells. The boys is a group, so it should be sell.",
+              "Sentence 9 says our principal taste. Our principal is one person, so it should be tastes.",
               "Sentence 10 says a fifth grader start. A fifth grader is one person, so it should be starts.",
               "Sentences 2, 6 and 11 already match their doers and clues."
             ],
             misconception: "A common mix-up is thinking -s always goes on verbs about now. It depends on whether one or more than one does the action.",
-            why: "The answers are sentences 5 and 10: \"Every afternoon, the boys sells lemonade by the door.\" and \"Right now, a fifth grader start pouring more lemonade.\". The boys is a group, so sells should be sell. A fifth grader is one person, so start should be starts. The other shown verbs already fit."
+            why: "The answers are sentences 9 and 10: \"Right now, our principal taste a cupcake and smiles.\" and \"Right now, a fifth grader start pouring more lemonade.\". Our principal is one person, so taste should be tastes. A fifth grader is one person, so start should be starts. The other shown verbs already fit."
           },
           {
             id: "SK-GUM1-6-C12",
@@ -8305,15 +8305,15 @@ PP.addLesson({
             hints: [
               "Find the time clue at the start of the sentence.",
               "Read the sentence with each choice and listen for the one that tells about a finished action.",
-              "An -ing verb needs a helper word like started or kept, and this sentence has none, so one choice can be ruled out."
+              "An -ing verb follows a word like started, kept or loves, and this sentence has none, so one choice can be ruled out."
             ],
             how: [
               "Find the time clue: that afternoon. That afternoon already happened.",
               "A verb for an action that already happened gets -ed.",
-              "The answer is climbed. Climbs tells about now, and climbing needs a helper word."
+              "The answer is climbed. Climbs tells about now, and climbing needs a word like started or kept before it."
             ],
             misconception: "A common mix-up is choosing -s because one otter is the doer. The time clue says the action is over.",
-            why: "The answer is climbed. That afternoon already happened, so climb needs -ed. Climbs tells about now, and climbing has no helper word."
+            why: "The answer is climbed. That afternoon already happened, so climb needs -ed. Climbs tells about now, and climbing has no word like started or kept before it."
           },
           {
             id: "SK-GUM1-6-C13",
@@ -8339,7 +8339,7 @@ PP.addLesson({
             clue: "Each blank has its own clue. Find the clue for the first blank, then the clue for the second.",
             hints: [
               "Each blank has its own clue. Find the clue for the first blank, then the clue for the second.",
-              "Last winter already happened. Now she and every day tell about something that happens again and again.",
+              "Find the clue words near each blank. Think about what each clue tells you about time.",
               "One choice for the second blank has -ed on it, and it does not fit now."
             ],
             how: [
@@ -8399,27 +8399,27 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "Dad calls Aunt Rose every night."
+                text: "Right now, Dad feels tired and worried."
               },
               {
                 text: "Dad keeps calling Aunt Rose."
               },
               {
-                text: "Dad and I call Aunt Rose each night."
+                text: "Dad calls Aunt Rose every night."
               }
             ],
-            clue: "To show that a rule is wrong, find an example that breaks it. Look for a verb with -ed.",
+            clue: "To show that a rule is wrong, find an example that breaks it. Think about what the rule says.",
             hints: [
-              "To show that a rule is wrong, find an example that breaks it. Look for a verb with -ed.",
-              "Check each sentence for the ending -ed, then ask when the action happens.",
-              "Three choices have no -ed verb at all, so they cannot show anything about -ed."
+              "To show that a rule is wrong, find an example that breaks it. Think about what the rule says.",
+              "Read each sentence and ask when its action happens.",
+              "Tired and worried tell how Dad feels right now, so that sentence does not break the rule."
             ],
             how: [
-              "Mia says -ed means right now. Look for a sentence with -ed where the action is over.",
-              "Only one sentence has -ed on its verb: called.",
+              "Mia says -ed means right now. Look for a sentence with an -ed verb where the action is over.",
+              "Dad feels tired and worried is about right now, so it fits Mia's idea. Keeps calling and calls have no -ed verb.",
               "The answer is \"Last night, Dad called Aunt Rose.\" Last night already happened, so -ed tells about the past."
             ],
-            misconception: "A common mix-up is picking a sentence about now. Mia's rule is about -ed, so look for -ed.",
+            misconception: "A common mix-up is picking a sentence that has an -ed word but is about now. Mia's rule is about an -ed verb for an action, so look for one that is over.",
             why: "The answer is \"Last night, Dad called Aunt Rose.\" Called ends in -ed, and last night already happened. That shows -ed tells about the past, not right now."
           }
         ]
@@ -8511,35 +8511,35 @@ PP.addLesson({
       ],
       passages: ["p4"],
       stem: "During a school assembly, a student reads the basketball draft out loud.",
-      prompt: "Number 2 has a verb that does not match its clue. Pick the best revision.",
+      prompt: "Number 7 has a verb that does not match the word before it. Pick the best revision.",
       choices: [
         {
-          text: "Last Friday, Coach Perez shouted at us to run faster.",
+          text: "We kept following the ball down the court.",
           correct: true
         },
         {
-          text: "Last Friday, Coach Perez shouts at us to run faster."
+          text: "We kept follows the ball down the court."
         },
         {
-          text: "Last Friday, Coach Perez shouting at us to run faster."
+          text: "We kept followed the ball down the court."
         },
         {
-          text: "Last Friday, Coach Perez shout at us to run faster."
+          text: "We kept follow the ball down the court."
         }
       ],
-      clue: "Find the clue word in number 2 and ask whether the action is over.",
+      clue: "Look at the word right before the verb in number 7 and ask what ending can follow it.",
       hints: [
-        "Find the clue word in number 2 and ask whether the action is over.",
-        "Say each choice aloud with the clue word in front, and listen for the one that sounds finished.",
-        "Shouting has no helper word in front of it, so one choice can be set aside."
+        "Look at the word right before the verb in number 7 and ask what ending can follow it.",
+        "Say each choice aloud and listen for the one that sounds right after the word kept.",
+        "Kept already tells about the past, so the verb after it does not add -ed. Think about the other choices."
       ],
       how: [
-        "The clue word in number 2 is last Friday, so the action is over.",
-        "A finished action gets -ed on the verb.",
-        "The answer is \"Last Friday, Coach Perez shouted at us to run faster.\" Shouts tells about now, shouting has no helper word, and shout has no ending."
+        "The word before the verb in number 7 is kept. After a word like kept, started or loves, a verb takes -ing.",
+        "Kept already tells about the past, so the next verb does not need -ed. It does not need -s or the plain form either.",
+        "The answer is \"We kept following the ball down the court.\" Follows, followed and follow do not fit after kept."
       ],
-      misconception: "A common mix-up is leaving the plain verb because it feels natural. The clue word shows the action is over.",
-      why: "The answer is \"Last Friday, Coach Perez shouted at us to run faster.\" Last Friday is over, so shout needs -ed. Shouts tells about now, and shouting has no helper word.",
+      misconception: "A common mix-up is leaving the plain verb after kept. A verb after a word like kept, started or loves takes -ing.",
+      why: "The answer is \"We kept following the ball down the court.\" After kept, the verb takes -ing, so follow becomes following. Followed repeats the past ending, follows tells about one person now, and follow has no ending.",
       like: ["SK-GUM1-6-C03"]
     },
     {
@@ -8564,15 +8564,15 @@ PP.addLesson({
       hints: [
         "Find the clue word at the start of the sentence.",
         "Read the sentence with each choice and listen for the one that tells about a finished action.",
-        "Thanking has no helper word in front of it, so one choice can be ruled out."
+        "Thanking has no word like started in front of it, so one choice can be ruled out."
       ],
       how: [
         "The clue is last Tuesday, which already happened.",
         "A finished action gets -ed on the verb.",
-        "The answer is thanked. Thanks tells about now, and thanking has no helper word."
+        "The answer is thanked. Thanks tells about now, and thanking has no word like started before it."
       ],
       misconception: "A common mix-up is choosing -s because one coach is the doer. The clue says the action is over.",
-      why: "The answer is thanked. Last Tuesday is over, so thank needs -ed. Thanks tells about now, and thanking has no helper word.",
+      why: "The answer is thanked. Last Tuesday is over, so thank needs -ed. Thanks tells about now, and thanking has no word like started before it.",
       like: ["SK-GUM1-6-C04"]
     },
     {
@@ -8604,7 +8604,7 @@ PP.addLesson({
       clue: "Find who does the action in each line.",
       hints: [
         "Find who does the action in each line.",
-        "Compare the two doers. One is the writer, and the other has a job title.",
+        "Find who does each action and compare the two.",
         "How hard a verb is does not decide its ending, so one reason can be ruled out."
       ],
       how: [
@@ -8626,8 +8626,8 @@ PP.addLesson({
       ],
       passages: ["p4"],
       prompt: "Tap the TWO shown lines whose verb needs -ed added.",
-      targets: ["p4:1:2","p4:1:3","p4:1:4","p4:2:1","p4:2:2"],
-      answer: ["p4:1:2","p4:2:2"],
+      targets: ["p4:1:2","p4:1:3","p4:1:4","p4:3:1","p4:3:3"],
+      answer: ["p4:1:2","p4:3:1"],
       pick: 2,
       clue: "Look for a clue word that shows the action is finished. Then check the verb ending.",
       hints: [
@@ -8637,11 +8637,11 @@ PP.addLesson({
       ],
       how: [
         "Find the clue word in each shown line.",
-        "Last Friday in line 2 and last Tuesday in line 6 are over, but shout and thank have no ending.",
-        "Lines 3, 4 and 5 already fit: lift goes with the players, knocked is finished, and listen goes with I."
+        "Last Friday in line 2 and yesterday in line 9 are over, but shout and wait have no ending.",
+        "Lines 3, 4 and 11 already fit: lift goes with the players, knocked is finished, and start goes with we."
       ],
       misconception: "A common mix-up is changing every verb in a line with a clue word. Change only the ones that do not match.",
-      why: "The answers are sentences 2 and 6: \"Last Friday, Coach Perez shout at us to run faster.\" and \"Last Tuesday, Coach Perez thank us for working hard.\". Last Friday and last Tuesday are over, so shout and thank need -ed. The other shown verbs already fit.",
+      why: "The answers are sentences 2 and 9: \"Last Friday, Coach Perez shout at us to run faster.\" and \"Yesterday, our team wait for the bus after practice.\". Last Friday and yesterday are over, so shout and wait need -ed. The other shown verbs already fit.",
       like: ["SK-GUM1-6-C06"]
     },
     {
@@ -8665,7 +8665,7 @@ PP.addLesson({
             text: "The action is over, so the verb must finish with -ed."
           },
           {
-            text: "A helper word is missing, so the verb must finish with -ing."
+            text: "A word like started is missing, so the verb must finish with -ing."
           },
           {
             text: "The verb is spelled with -s, so it already matches the plain form."
@@ -8699,7 +8699,7 @@ PP.addLesson({
       how: [
         "First half: the doers are Joy and I, which is two people. A verb with two doers does not take -s. The answer is \"A pair of people act, so the verb must stay in its plain form.\"",
         "Second half: take -s off stacks. The answer is \"Each week, my friend Joy and I stack books on the cart.\"",
-        "The other revisions use -ed for the past, use -ing with no helper word, or keep the -s."
+        "The other revisions use -ed for the past, use -ing with no word like started or kept before it, or keep the -s."
       ],
       misconception: "A common mix-up is putting -s on a verb because the action happens now. Count the people who do it first.",
       why: "Part A: \"A pair of people act, so the verb must stay in its plain form.\" Part B: \"Each week, my friend Joy and I stack books on the cart.\" Joy and I is two people, so the verb stays stack. Each week tells about again and again, not the past.",
@@ -8786,7 +8786,7 @@ PP.addLesson({
       how: [
         "Look at the clue: every evening. The action happens again and again.",
         "Grandma is one person, so the verb gets -s.",
-        "The answer is mends. Mended is finished, mending needs a helper word, and mend is the plain verb."
+        "The answer is mends. Mended is finished, mending needs a word like started before it, and mend is the plain verb."
       ],
       misconception: "A common mix-up is choosing -ed because the sentence tells about a habit. A habit that goes on uses the -s form for one person.",
       why: "The answer is \"mends\" Every evening tells about again and again for one person, so the verb gets -s. The other forms do not fit.",
@@ -8801,36 +8801,35 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
       ],
       passages: ["p5"],
-      stem: "An editor wants to put a margin note beside dump in sentence 6 of the library draft.",
-      prompt: "Which note is correct?",
+      prompt: "A volunteer wants to keep holds in sentence 9, because something that happens every month ends in -s. What note should the editor write?",
       choices: [
         {
-          text: "Last week is over, so write dumped.",
+          text: "The librarians are a group, so the plain verb hold is the one to use.",
           correct: true
         },
         {
-          text: "One boy is the doer, so the plain verb dump is fine."
+          text: "A monthly event always keeps the -s, so holds should stay as typed."
         },
         {
-          text: "One boy is the doer, so write dumps."
+          text: "Every month tells about the past, so held is the right form."
         },
         {
-          text: "Last week needs a helper word, so write dumping."
+          text: "Any sentence with a clue word needs -s on its verb, so nothing changes."
         }
       ],
-      clue: "Find the clue word in sentence 6 and ask whether the action is finished.",
+      clue: "Find who does the action in sentence 9 and count them.",
       hints: [
-        "Find the clue word in sentence 6 and ask whether the action is finished.",
-        "Think about which ending tells that an action is finished.",
-        "One note says dumps is right. Think about whether that fits a clue that is over."
+        "Find who does the action in sentence 9 and count them.",
+        "Compare the doer with the ending on the verb.",
+        "Every month does not tell about the past. Look at the other notes."
       ],
       how: [
-        "Find the clue word: last week. That is over.",
-        "A finished action gets -ed, no matter how many people do it.",
-        "The answer is \"Last week is over, so write dumped.\""
+        "Find the doer in sentence 9: the librarians. That is more than one person.",
+        "The -s ending goes with one person or thing, so a group of librarians takes the plain verb.",
+        "The answer is \"The librarians are a group, so the plain verb hold is the one to use.\""
       ],
-      misconception: "A common mix-up is thinking only the doer decides the ending. The time clue also matters.",
-      why: "The answer is \"Last week is over, so write dumped.\" Last week is over, so dump needs -ed. The doer being one boy does not change that.",
+      misconception: "A common mix-up is thinking something that happens again and again must end in -s. Count the doers first.",
+      why: "The answer is \"The librarians are a group, so the plain verb hold is the one to use.\" The librarians are a group, so the plain verb hold is the one to use. Every month tells about again and again, not the past.",
       like: ["SK-GUM1-6-C10"]
     },
     {
@@ -8884,15 +8883,15 @@ PP.addLesson({
       hints: [
         "Find the clue word at the start of the sentence.",
         "Say the sentence with each choice and listen for the one that sounds finished.",
-        "Pulling has no helper word in front of it, so one choice can be ruled out."
+        "Pulling has no word like started in front of it, so one choice can be ruled out."
       ],
       how: [
         "The clue is yesterday, which is over.",
         "A finished action gets -ed on the verb.",
-        "The answer is pulled. Pulls tells about now, and pulling has no helper word."
+        "The answer is pulled. Pulls tells about now, and pulling has no word like started before it."
       ],
       misconception: "A common mix-up is choosing -s because one truck is the doer. The clue says the action is over.",
-      why: "The answer is pulled. Yesterday is over, so pull needs -ed. Pulls tells about now, and pulling has no helper word.",
+      why: "The answer is pulled. Yesterday is over, so pull needs -ed. Pulls tells about now, and pulling has no word like started before it.",
       like: ["SK-GUM1-6-C12"]
     },
     {
@@ -8920,7 +8919,7 @@ PP.addLesson({
       clue: "Each gap has its own clue. Find the clue for the first gap, then the clue for the second.",
       hints: [
         "Each gap has its own clue. Find the clue for the first gap, then the clue for the second.",
-        "Two years ago is over. Now she tells about something that happens with one person.",
+        "Find the clue words near each gap. Think about what each clue tells you about time.",
         "One choice for the second gap has -ed on it, and it does not fit now."
       ],
       how: [
@@ -8986,25 +8985,25 @@ PP.addLesson({
           text: "Yesterday, Dad watered the plants on the back porch."
         },
         {
-          text: "Dad keeps watering the plants on the front porch."
+          text: "Dad kept watering the plants on the front porch."
         },
         {
           text: "Dad and I water the plants on the sunny porch."
         }
       ],
-      clue: "To show that a claim is wrong, find an example that breaks it. Look for a verb with -s.",
+      clue: "To show that a claim is wrong, find an example that breaks it. Think about what the poster says.",
       hints: [
-        "To show that a claim is wrong, find an example that breaks it. Look for a verb with -s.",
-        "Check each sentence for a verb that ends in -s, then ask when the action happens.",
-        "Three choices have no verb ending in -s, so they cannot show anything about -s."
+        "To show that a claim is wrong, find an example that breaks it. Think about what the poster says.",
+        "Look at the verbs, not the nouns. Ask which verb ends in -s and when its action happens.",
+        "Yesterday tells about the past, and its verb has no -s, so that sentence cannot break the claim."
       ],
       how: [
         "The poster says -s means the action is over. Look for a verb with -s where the action is not over.",
-        "Only one sentence has -s on its verb: waters.",
+        "Only one sentence has an -s verb: waters. The word plants ends in -s too, but it is a noun.",
         "The answer is \"Every evening, Dad waters the plants on the porch.\" Every evening tells about again and again, not about the past."
       ],
-      misconception: "A common mix-up is picking a sentence about the past. The claim is about -s, so look for -s.",
-      why: "The answer is \"Every evening, Dad waters the plants on the porch.\" Waters ends in -s, and every evening tells about again and again. That shows -s does not mean the past.",
+      misconception: "A common mix-up is picking a sentence about the past. The claim is about an -s verb, so look for one.",
+      why: "The answer is \"Every evening, Dad waters the plants on the porch.\" Waters ends in -s, and every evening tells about again and again. That shows an -s verb does not mean the past.",
       like: ["SK-GUM1-6-C15"]
     }
   ],
@@ -9013,7 +9012,7 @@ PP.addLesson({
       hints: [
         "Look at the first word of the sentence. Ask whether the action has already happened.",
         "Read the sentence with each choice and listen for the one that sounds finished.",
-        "An -ing verb needs a helper word, and this sentence has none."
+        "An -ing verb follows a word like started, and this sentence has none."
       ],
       how: [
         "Find the clue word: yesterday. Yesterday already happened.",
@@ -9061,7 +9060,7 @@ PP.addLesson({
       hints: [
         "What does the clue at the start tell you?",
         "Say each choice out loud with the clue and listen for the one that sounds finished.",
-        "Jumping has no helper word in front of it."
+        "Jumping has no word like started in front of it."
       ],
       how: [
         "The clue is last week, which already happened.",
