@@ -5642,13 +5642,13 @@ PP.addLesson({
         ],
         [
           "(4) Each morning, we count the birds that visit the field.",
-          "(5) The flock stay together when they eat.",
+          "(5) The flock stay close together when they eat.",
           "(6) Their beauty is amazing."
         ],
         [
-          "(7) Every member feels delight about spotting a new bird.",
-          "(8) Our club keeps a log of every bird we see.",
-          "(9) We hope the flock return tomorrow."
+          "(7) Each member smiles when we spot a rare bird.",
+          "(8) Our club shares its binoculars with new members.",
+          "(9) Everyone hopes the flock return tomorrow."
         ],
         [
           "(10) Next month, we will draw pictures of our favorite birds.",
@@ -5813,9 +5813,9 @@ PP.addLesson({
                 { text: "You can see him climb, but you cannot touch courage itself.", correct: true }
               ]
             },
-            clue: "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+            clue: "An abstract noun names an idea, a feeling or a quality. Think about what kind of word each choice is.",
             hints: [
-              "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+              "An abstract noun names an idea, a feeling or a quality. Think about what kind of word each choice is.",
               "For Part A, find the nouns in sentence 8. For Part B, think about what makes an abstract noun different from the others.",
               "In Part A, a brother can be seen and a net can be touched. Check the other choices."
             ],
@@ -5869,7 +5869,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-collective-and-abstract-nouns"
             ],
             passages: [],
-            prompt: "Each group acts together as one. Choose the TWO sentences where the verb goes with the group noun.",
+            prompt: "Treat each group as one unit. Choose the TWO sentences where the verb goes with the group noun.",
             pick: 2,
             choices: [
               { text: "The crew paint the fence together." },
@@ -6091,7 +6091,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-collective-and-abstract-nouns"
             ],
             passages: [],
-            prompt: "Choose the word that correctly completes the sentence. The troop acts together as one.",
+            prompt: "Which verb correctly completes the sentence? Think of the troop as a single group.",
             text: "Every Friday, the troop {0} a hike together.",
             slots: [
               {
@@ -6157,11 +6157,11 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Choose the TWO sentences that use a collective noun.",
+      prompt: "Which TWO sentences name a group with one word?",
       pick: 2,
       choices: [
         { text: "The jury listened to the story.", correct: true },
-        { text: "Mateo felt calm at the lake." },
+        { text: "Mateo sat calmly beside the lake." },
         { text: "A troop of scouts hiked up the trail.", correct: true },
         { text: "The hungry goats ate the hay." },
         { text: "Five mice ran across the floor." }
@@ -6175,10 +6175,10 @@ PP.addLesson({
       how: [
         "Find the nouns in each sentence and ask which one names a whole group.",
         "Troop names a group of scouts, and jury names a group of people who listen and decide.",
-        "Mice and goats are plurals, and calm names a feeling, so those sentences have no collective noun."
+        "Mice and goats are plurals, and Mateo and the lake are one person and one place, so those sentences have no collective noun."
       ],
       misconception: "A common mix-up is picking a plural noun. Mice and goats mean more than one, but each is not a name for a group.",
-      why: "The answers are \"A troop of scouts hiked up the trail.\" and \"The jury listened to the story.\" Troop and jury each name a group as one thing. Mice and goats are plurals, and calm is a feeling.",
+      why: "The answers are \"A troop of scouts hiked up the trail.\" and \"The jury listened to the story.\" Troop and jury each name a group as one thing. Mice and goats are plurals, and Mateo and the lake are not groups.",
       like: ["SK-GUM3-5-P4"]
     },
     {
@@ -6190,10 +6190,10 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Select the sentence that has an abstract noun.",
+      prompt: "Find the sentence with a noun that names a quality, an idea or a feeling.",
       options: [
-        "The baker put the bread in the oven.",
-        "A strong wind shook the old fence.",
+        "The baker slid warm bread into the oven.",
+        "A strong wind shook the old gate.",
         "Her honesty made everyone trust her.",
         "Three ducks sat on the wooden dock."
       ],
@@ -6203,11 +6203,11 @@ PP.addLesson({
       hints: [
         "Check each noun. Can you see it, hear it or touch it? Find the one you cannot.",
         "Read the nouns in each sentence and ask whether they name things that can be seen or touched.",
-        "Bread, oven, wind and fence can all be seen or felt. Check the other sentences."
+        "Bread, oven, wind and gate can all be seen or felt. Check the other sentences."
       ],
       how: [
         "Check the nouns in each sentence.",
-        "Baker, bread, oven, fence, ducks and dock can be seen or touched.",
+        "Baker, bread, oven, gate, ducks and dock can be seen or touched.",
         "Honesty is a quality that you cannot touch, so it is an abstract noun."
       ],
       misconception: "A common mix-up is picking a noun for something you can feel, like wind. An abstract noun names an idea, a feeling or a quality.",
@@ -6223,7 +6223,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p4"],
-      prompt: "Look at the second sentence of the draft. Which word names a group as one thing?",
+      prompt: "Line 2 holds one name for an entire group. Choose it.",
       choices: [
         { text: "swims" },
         { text: "dolphins" },
@@ -6254,7 +6254,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p4"],
-      prompt: "In sentence 4, the crowd acts as one. Which verb belongs in the blank?",
+      prompt: "Fill the blank in line 4 with the verb that fits a single group.",
       text: "Together, the crowd {0} when a dolphin jumps.",
       slots: [
         {
@@ -6286,9 +6286,9 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Complete both items below.",
       partA: {
-        prompt: "Which word in sentence 8 of the draft names a quality instead of a thing?",
+        prompt: "Look at line 8. Which noun names a quality, not a thing?",
         choices: [
           { text: "cousin" },
           { text: "generosity", correct: true },
@@ -6297,17 +6297,17 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "What makes the word in Part A an abstract noun?",
+        prompt: "Which statement explains your first answer?",
         choices: [
-          { text: "You can see sandwiches being shared, but not generosity itself.", correct: true },
-          { text: "It names a group of birds that fly together over the water." },
-          { text: "It names a person who likes to give things to other people." },
-          { text: "It tells how the sandwiches tasted when everyone ate them." }
+          { text: "A sandwich has a shape, but generosity has none.", correct: true },
+          { text: "It is the word for a gathering of birds above the water." },
+          { text: "It is the name of one relative at the picnic." },
+          { text: "It describes how the sandwiches tasted when everyone ate them." }
         ]
       },
-      clue: "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+      clue: "An abstract noun names an idea, a feeling or a quality. Think about what kind of word each choice is.",
       hints: [
-        "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+        "An abstract noun names an idea, a feeling or a quality. Think about what kind of word each choice is.",
         "For Part A, find the nouns in the sentence. For Part B, think about what makes an abstract noun different from the others.",
         "In Part A, a cousin can be seen and sandwiches can be touched. Check the other choices."
       ],
@@ -6315,10 +6315,10 @@ PP.addLesson({
         "Part A: find the nouns in sentence 8: cousin, generosity, sandwiches and seagull.",
         "You can see a cousin, sandwiches and a seagull. Generosity is a quality that you cannot touch.",
         "Part A answer: generosity.",
-        "Part B answer: \"You can see sandwiches being shared, but not generosity itself.\""
+        "Part B answer: \"A sandwich has a shape, but generosity has none.\""
       ],
       misconception: "A common mix-up is thinking an abstract noun names a person. Generosity names a quality, not the person.",
-      why: "Part A: generosity. Part B: \"You can see sandwiches being shared, but not generosity itself.\" Generosity names a quality, so it is abstract. A group noun names a group, a person noun names a person, and a describing word tells how something tasted.",
+      why: "Part A: generosity. Part B: \"A sandwich has a shape, but generosity has none.\" Generosity names a quality, so it is abstract. A group noun names a group, a person noun names a person, and a describing word tells how something tasted.",
       like: ["SK-GUM3-5-C05"]
     },
     {
@@ -6358,13 +6358,13 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Each group acts together as one. Which TWO sentences have a verb that goes with the group noun?",
+      prompt: "In which TWO of these do the group and its verb agree?",
       pick: 2,
       choices: [
         { text: "The staff clean the room after lunch." },
         { text: "The band plays at every home game.", correct: true },
         { text: "The choir sing in the gym today." },
-        { text: "My class visit the zoo in May." },
+        { text: "The cast arrive before every show." },
         { text: "Our team wins when we help each other.", correct: true }
       ],
       clue: "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
@@ -6374,12 +6374,12 @@ PP.addLesson({
         "Sing does not end in -s, so it is the verb for many. Decide about the other four."
       ],
       how: [
-        "Find the group noun in each sentence: band, team, choir, staff and class.",
+        "Find the group noun in each sentence: band, team, choir, staff and cast.",
         "Each group acts as one, so the verb should be the one for a single thing. In the present tense it ends in -s.",
-        "Plays and wins are correct. Sing, clean and visit are the verbs for many, so they do not match."
+        "Plays and wins are correct. Sing, clean and arrive are the verbs for many, so they do not match."
       ],
       misconception: "A common mix-up is choosing the plural verb because a group has many members. When the group acts as one, the verb is for one.",
-      why: "The answers are \"The band plays at every home game.\" and \"Our team wins when we help each other.\" Band and team are group nouns that act as one, so they take the verbs plays and wins. The others use sing, clean and visit, which are the verbs for many.",
+      why: "The answers are \"The band plays at every home game.\" and \"Our team wins when we help each other.\" Band and team are group nouns that act as one, so they take the verbs plays and wins. The others use sing, clean and arrive, which are the verbs for many.",
       like: ["SK-GUM3-5-C07"]
     },
     {
@@ -6391,7 +6391,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Which collective noun names each group of living things?",
+      prompt: "Pick the group word that fits each set of living things.",
       cols: ["litter", "pod", "colony", "troop"],
       rows: [
         { text: "scouts", answer: 3 },
@@ -6423,9 +6423,9 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Which sentence has BOTH a collective noun and an abstract noun?",
+      prompt: "Only one sentence uses a group word and an idea word together. Which one?",
       choices: [
-        { text: "The crew showed bravery during the storm.", correct: true },
+        { text: "The crew showed bravery during the long voyage.", correct: true },
         { text: "The crew painted the old ship bright blue." },
         { text: "Bravery helped her climb the steep hill alone." },
         { text: "The sailors tied the heavy ropes to the dock." }
@@ -6438,11 +6438,11 @@ PP.addLesson({
       ],
       how: [
         "Check each sentence for a collective noun and an abstract noun.",
-        "\"The crew showed bravery during the storm.\" has crew, a group, and bravery, a quality.",
+        "\"The crew showed bravery during the long voyage.\" has crew, a group, and bravery, a quality.",
         "The other choices have only one kind of noun: crew alone, bravery alone, or neither."
       ],
       misconception: "A common mix-up is picking a sentence that has only one of the two kinds. The sentence needs both.",
-      why: "The answer is \"The crew showed bravery during the storm.\" Crew is a collective noun, and bravery is an abstract noun. One choice has only crew, one has only bravery, and one has neither.",
+      why: "The answer is \"The crew showed bravery during the long voyage.\" Crew is a collective noun, and bravery is an abstract noun. One choice has only crew, one has only bravery, and one has neither.",
       like: ["SK-GUM3-5-C09"]
     },
     {
@@ -6454,7 +6454,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p5"],
-      prompt: "Each group in sentence 3 of the draft acts together as one. Which helper words make the verbs match?",
+      prompt: "Pick the helper verbs that fit the panel and the group.",
       text: "The panel {0} chosen a winner, and the group {1} cheered.",
       slots: [
         {
@@ -6490,7 +6490,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences where the verb does not go with the collective noun.",
+      prompt: "Which TWO sentences have a verb that clashes with the group word?",
       targets: ["p6:1:2", "p6:2:2", "p6:3:1", "p6:3:2", "p6:3:3"],
       answer: ["p6:2:2", "p6:3:3"],
       pick: 2,
@@ -6498,15 +6498,15 @@ PP.addLesson({
       hints: [
         "Find the group word in a sentence, then check its verb. A group that acts as one needs the verb for one.",
         "Read each sentence and say its verb. Ask whether the verb matches one group or many.",
-        "Sentence 8 uses keeps, and it matches the group club. Check the other four sentences."
+        "Sentence 8 uses shares, and it matches the group club. Check the other four sentences."
       ],
       how: [
         "Find the collective noun in each sentence and check its verb.",
-        "Sentence 2 uses landed, sentence 7 has no group noun, and sentence 8 uses keeps with club. Those are correct.",
+        "Sentence 2 uses landed, sentence 7 has no group noun, and sentence 8 uses shares with club. Those are correct.",
         "Sentence 5 says the flock stay, and sentence 9 says the flock return. A flock acts as one, so the verbs should be stays and returns."
       ],
       misconception: "A common mix-up is thinking a verb is right because it follows the word birds. The subject is flock, which is one group.",
-      why: "The errors are in \"The flock stay together when they eat.\" and \"We hope the flock return tomorrow.\" Flock is one group, so the verbs should be stays and returns. Sentences 2, 7 and 8 are correct.",
+      why: "The errors are in \"The flock stay close together when they eat.\" and \"Everyone hopes the flock return tomorrow.\" Flock is one group, so the verbs should be stays and returns. Sentences 2, 7 and 8 are correct.",
       like: ["SK-GUM3-5-C11"]
     },
     {
@@ -6518,26 +6518,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Which word does NOT name a group as one thing?",
+      prompt: "One of these words is not a name for a whole group. Which one?",
       choices: [
-        { text: "herd" },
+        { text: "jury" },
         { text: "fleet" },
-        { text: "aunts", correct: true },
+        { text: "cousins", correct: true },
         { text: "family" }
       ],
       clue: "Look for the word that means more than one person but is not one word for the whole group.",
       hints: [
         "Look for the word that means more than one person but is not one word for the whole group.",
         "Say a ___ of for each word. Ask which one makes the phrase sound odd.",
-        "A herd names a group of animals. Decide among the other three."
+        "A jury names a group of people. Decide among the other three."
       ],
       how: [
         "Ask whether each word is one word for a whole group.",
-        "A herd, a fleet and a family each name a group as one thing.",
-        "Aunts is the plural of aunt. It means more than one, but it is not a name for a group."
+        "A jury, a fleet and a family each name a group as one thing.",
+        "Cousins is the plural of cousin. It means more than one, but it is not a name for a group."
       ],
       misconception: "A common mix-up is thinking every word that means many is a collective noun. A plural is not a collective noun.",
-      why: "The answer is aunts. Aunts is the plural of aunt, so it just means more than one. Herd, fleet and family are each one word that names a whole group.",
+      why: "The answer is cousins. Cousins is the plural of cousin, so it just means more than one. Jury, fleet and family are each one word that names a whole group.",
       like: ["SK-GUM3-5-C12"]
     },
     {
@@ -6549,28 +6549,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Jay says, \"Every abstract noun names a feeling.\" Which TWO sentences show that Jay is wrong?",
+      prompt: "A student claims that all abstract nouns are feelings. Which TWO sentences prove the claim false?",
       pick: 2,
       choices: [
-        { text: "Sadness filled the quiet room." },
-        { text: "Joy lit up her face." },
+        { text: "Sadness settled over the quiet street." },
+        { text: "Joy shone in her smile." },
         { text: "Wisdom helps people make good choices.", correct: true },
-        { text: "His worry grew all night." },
+        { text: "His worry kept him awake." },
         { text: "Her beauty was in the way she sang.", correct: true }
       ],
-      clue: "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+      clue: "To test a claim, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
       hints: [
-        "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+        "To test a claim, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
         "Read each sentence and name the idea or feeling word. Ask whether a person could feel it inside.",
-        "Worry is a feeling, so that sentence does not break Jay's rule. Decide about the other four."
+        "Worry is a feeling, so that sentence does not break the claim. Decide about the other four."
       ],
       how: [
         "Find the abstract noun in each sentence.",
-        "Sadness, worry and joy are feelings, so they follow Jay's rule.",
-        "Wisdom and beauty are not feelings. Wisdom is a quality of thinking, and beauty is a quality of how something looks or sounds, so those two sentences show the rule is wrong."
+        "Sadness, worry and joy are feelings, so they follow the claim.",
+        "Wisdom and beauty are not feelings. Wisdom is a quality of thinking, and beauty is a quality of how something looks or sounds, so those two sentences show the claim is wrong."
       ],
       misconception: "A common mix-up is thinking every abstract noun is a feeling. Some name qualities or ideas.",
-      why: "The answers are \"Wisdom helps people make good choices.\" and \"Her beauty was in the way she sang.\" Wisdom and beauty are abstract nouns that are not feelings. Sadness, worry and joy are feelings, so they match Jay's rule.",
+      why: "The answers are \"Wisdom helps people make good choices.\" and \"Her beauty was in the way she sang.\" Wisdom and beauty are abstract nouns that are not feelings. Sadness, worry and joy are feelings, so they match the claim.",
       like: ["SK-GUM3-5-C13"]
     },
     {
@@ -6582,27 +6582,27 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Which verb goes with the group? The herd moves as one.",
-      text: "Each morning, the herd {0} to the river together.",
+      prompt: "Which verb goes with the group? Picture the cast as one team.",
+      text: "Each spring, the cast {0} on the stage together.",
       slots: [
         {
-          options: ["walk", "walks", "walking"],
+          options: ["rehearse", "rehearses", "rehearsing"],
           answer: 1
         }
       ],
-      clue: "Is the herd one group or many separate animals? Think about which verb goes with that.",
+      clue: "Is the cast one group or many separate actors? Think about which verb goes with that.",
       hints: [
-        "Is the herd one group or many separate animals? Think about which verb goes with that.",
+        "Is the cast one group or many separate actors? Think about which verb goes with that.",
         "Say each choice in the blank. Listen for the one that goes with one group.",
-        "Walking needs a helper word like is, and the sentence has none. Decide between the other two."
+        "Rehearsing needs a helper word like is, and the sentence has none. Decide between the other two."
       ],
       how: [
-        "The word together tells you the herd acts as one group.",
+        "The word together tells you the cast acts as one group.",
         "A group that acts as one takes the verb for one thing, which ends in -s in the present tense.",
-        "The answer is walks. Walk is the verb for many, and walking needs a helper word."
+        "The answer is rehearses. Rehearse is the verb for many, and rehearsing needs a helper word."
       ],
-      misconception: "A common mix-up is choosing walk because a herd has many animals. A group that acts as one takes the verb for one.",
-      why: "The answer is walks. Herd is a collective noun that acts as one, so it takes the verb for one: walks. Walk is the verb for many, and walking needs a helper word.",
+      misconception: "A common mix-up is choosing rehearse because a cast has many actors. A group that acts as one takes the verb for one.",
+      why: "The answer is rehearses. Cast is a collective noun that acts as one, so it takes the verb for one: rehearses. Rehearse is the verb for many, and rehearsing needs a helper word.",
       like: ["SK-GUM3-5-C14"]
     },
     {
@@ -6614,10 +6614,10 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "Which sentence has a collective noun that names a group of animals?",
+      prompt: "Find the sentence in which one word names a group of animals.",
       choices: [
         { text: "The staff planned the field trip for May." },
-        { text: "A gaggle of geese crossed the road.", correct: true },
+        { text: "A gaggle of geese waddled across the road.", correct: true },
         { text: "The council met in the town hall on Tuesday." },
         { text: "The class lined up outside the cafeteria for lunch." }
       ],
@@ -6630,10 +6630,10 @@ PP.addLesson({
       how: [
         "Find the collective noun in each sentence: staff, gaggle, council and class.",
         "A staff, a council and a class are groups of people.",
-        "The answer is \"A gaggle of geese crossed the road.\" A gaggle is a group of geese."
+        "The answer is \"A gaggle of geese waddled across the road.\" A gaggle is a group of geese."
       ],
       misconception: "A common mix-up is picking the first group word you see. Check whether the group is made of animals.",
-      why: "The answer is \"A gaggle of geese crossed the road.\" A gaggle is a group of geese. The other sentences name groups of people.",
+      why: "The answer is \"A gaggle of geese waddled across the road.\" A gaggle is a group of geese. The other sentences name groups of people.",
       like: ["SK-GUM3-5-C15"]
     }
   ],
@@ -6828,8 +6828,8 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Last summer, my cousin Luis and I built a treehouse.",
-          "(2) Luis and myself carried the boards to the backyard.",
-          "(3) Dad showed us how to use the saw safely."
+          "(2) Luis and I carried the boards to the backyard.",
+          "(3) Dad showed Luis and myself how to use the saw safely."
         ],
         [
           "(4) We measured every board with a long tape.",
@@ -6937,15 +6937,15 @@ PP.addLesson({
         [
           "(1) On Tuesday, our class held a sewing club after school.",
           "(2) My partner Gus made a pillow, and I made a bookmark.",
-          "(3) Gus stitched a blue star on the pillow by himself."
+          "(3) Gus sewed a blue star onto the pillow all by himself."
         ],
         [
           "(4) The needle slipped, and I pricked myself.",
-          "(5) The members of the club gave theirselves a loud cheer.",
-          "(6) I told myself to stay calm and keep going."
+          "(5) The sewing members cheered theirselves after the last stitch.",
+          "(6) I reminded myself to breathe and keep going."
         ],
         [
-          "(7) The big quilt caught on a chair and ripped themselves.",
+          "(7) The loose thread caught on a nail and pulled themselves tight.",
           "(8) The teacher asked for a second club next week.",
           "(9) Everyone promised to practice more at home.",
           "(10) The room was quiet and full of busy hands."
@@ -6966,12 +6966,12 @@ PP.addLesson({
         ],
         [
           "(4) At first, I dropped my bowl and surprised myself.",
-          "(5) Mr. Singh laughed at himself when his own bowl cracked.",
-          "(6) After a week, my friends and I taught ourselves a new glaze."
+          "(5) Mr. Singh smiled at himself when his own bowl cracked.",
+          "(6) By spring, my classmates and I had treated ourselves to a gallery trip."
         ],
         [
-          "(7) Grandma and myself picked up my first bowl on Friday.",
-          "(8) Mr. Singh said I should be proud of myself.",
+          "(7) My aunt and myself glazed a small vase together.",
+          "(8) Mr. Singh told me to be kind to myself.",
           "(9) My friend Tessa admired himself in the shiny glaze."
         ],
         ["(10) Now I can shape a bowl by myself."]
@@ -7048,27 +7048,27 @@ PP.addLesson({
             dok: 2,
             std: ["3.L.GC.1:M:use-reflexive-pronouns"],
             passages: ["p1"],
-            prompt: "Sentence 2 of the draft uses the wrong pronoun. Choose the word that fixes it.",
-            text: "Luis and {0} carried the boards to the backyard.",
+            prompt: "Sentence 3 of the draft uses the wrong pronoun. Choose the word that fixes it.",
+            text: "Dad showed Luis and {0} how to use the saw safely.",
             slots: [
               {
                 options: ["myself", "I", "me", "mine"],
-                answer: 1
+                answer: 2
               }
             ],
-            clue: "Look at who did the carrying. A -self word points back to someone, so ask whether it is needed here.",
+            clue: "Look at who was shown how to use the saw. A -self word points back to someone, so ask whether it is needed here.",
             hints: [
-              "Look at who did the carrying. A -self word points back to someone, so ask whether it is needed here.",
-              "Read sentence 2 and leave out the words Luis and. Then say the sentence with each choice.",
+              "Look at who was shown how to use the saw. A -self word points back to someone, so ask whether it is needed here.",
+              "Read sentence 3 and leave out the words Luis and. Then say the sentence with each choice.",
               "Mine shows that something belongs to me, and nothing here is owned. Decide among the other three."
             ],
             how: [
-              "Luis and the writer did the carrying together, so the blank is part of the subject.",
-              "Leave out Luis and: \"___ carried the boards.\" You would say I, not me and not myself.",
-              "The answer is I. Myself needs an I earlier in the sentence to point back to, and mine shows belonging."
+              "Dad did the showing, and Luis and the writer were the people he showed. The blank names one of them.",
+              "Leave out Luis and: \"Dad showed ___ how to use the saw.\" You would say me, not I and not myself.",
+              "The answer is me. Myself needs an I earlier in the sentence to point back to, I is used for the one who acts, and mine shows belonging."
             ],
-            misconception: "A common mix-up is thinking myself sounds more polite than I. Use myself only when I already did the action to myself.",
-            why: "The answer is I. The writer and Luis did the carrying, so the subject needs I. Myself points back to an I that is already in the sentence, me is not used as the one who acts, and mine shows belonging."
+            misconception: "A common mix-up is thinking myself sounds more polite than me. Use myself only when I already did the action to myself.",
+            why: "The answer is me. Dad did the showing, and the writer was one of the people he showed, so the blank needs me. Myself points back to an I that is already in the sentence, I is used for the one who acts, and mine shows belonging."
           },
           {
             id: "SK-GUM3-6-C04",
@@ -7181,7 +7181,7 @@ PP.addLesson({
             choices: [
               { text: "My uncle bought herself a new hat." },
               { text: "Priya gave herself extra time to finish.", correct: true },
-              { text: "We made ourself a big salad." },
+              { text: "My friends and I cleaned the room by ourself." },
               { text: "Pablo built the shelf by himself.", correct: true },
               { text: "The kids taught theirselves to swim." }
             ],
@@ -7264,30 +7264,30 @@ PP.addLesson({
             std: ["3.L.GC.1:M:use-reflexive-pronouns"],
             passages: [],
             prompt: "Choose the words that correctly complete the sentence.",
-            text: "The twins taught {0} to juggle, and their little brother taught {1} to whistle.",
+            text: "Ella taught {0} to knit, and the kitten washed {1} in the sun.",
             slots: [
               {
-                options: ["themselves", "theirselves", "himself"],
+                options: ["herself", "himself", "itself"],
                 answer: 0
               },
               {
-                options: ["himself", "hisself", "itself"],
+                options: ["itself", "herself", "themselves"],
                 answer: 0
               }
             ],
-            clue: "Find who did the teaching in each part. Then pick the word that points back to that same person or group.",
+            clue: "Find who did the teaching and who did the washing. Then pick the word that points back to that same person or thing.",
             hints: [
-              "Find who did the teaching in each part. Then pick the word that points back to that same person or group.",
-              "Count how many people are in each part. Then check that each word you pick is a real word.",
-              "Theirselves is not a correct word. Decide the rest."
+              "Find who did the teaching and who did the washing. Then pick the word that points back to that same person or thing.",
+              "Decide whether each blank points to a boy, a girl, a thing, or more than one.",
+              "Himself is for a boy, and Ella is a girl. Decide the rest."
             ],
             how: [
-              "The first blank points back to the twins, who are more than one person.",
-              "The second blank points back to the little brother, who is one boy.",
-              "The answers are themselves and himself. Theirselves and hisself are not correct words, and itself is for a thing."
+              "The first blank points back to Ella, who is one girl.",
+              "The second blank points back to the kitten, which is one animal.",
+              "The answers are herself and itself. Himself is for a boy, and themselves is for more than one."
             ],
-            misconception: "A common mix-up is using theirselves or hisself. Both sound right, but neither one is a correct word.",
-            why: "The answers are themselves and himself. The twins are more than one person, so themselves fits. The little brother is one boy, so himself fits. Theirselves and hisself are not correct words."
+            misconception: "A common mix-up is picking the same word for both blanks. Match each blank to its own subject.",
+            why: "The answers are herself and itself. Ella is one girl, so herself fits. The kitten is one animal, so itself fits. Himself is for a boy, and themselves is for more than one."
           }
         ]
       },
@@ -7446,12 +7446,12 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Select the sentence that has an error.",
+      prompt: "Which one of these sentences contains a mistake?",
       options: [
-        "Kenji taught himself to juggle.",
-        "The kitten washed itself in the sun.",
-        "We gave ourself a short rest.",
-        "The twins gave themselves a high five."
+        "Maria drew herself a tiny map.",
+        "The robot shut itself down.",
+        "The two of us hid ourself behind the door.",
+        "The twins made themselves a tent."
       ],
       answer: [2],
       pick: 1,
@@ -7459,15 +7459,15 @@ PP.addLesson({
       hints: [
         "Look at each -self or -selves word. Is it a real word, and does it match who it points back to?",
         "Find who each -self word points back to. Then count how many that is and check the ending.",
-        "Himself is the right word for Kenji. Check the other three sentences."
+        "Herself is the right word for Maria. Check the other three sentences."
       ],
       how: [
         "Find each -self or -selves word and who it points back to.",
-        "Himself points back to Kenji, itself points back to the kitten, and themselves points back to the twins.",
-        "We means more than one, so ourself has the wrong ending. It should be ourselves."
+        "Herself points back to Maria, itself points back to the robot, and themselves points back to the twins.",
+        "The two of us means more than one, so ourself has the wrong ending. It should be ourselves."
       ],
-      misconception: "A common mix-up is using ourself because it sounds like myself. We means more than one, so the word ends in -selves.",
-      why: "The error is in \"We gave ourself a short rest.\" We is more than one person, so the word should be ourselves. The other sentences use himself, itself and themselves correctly.",
+      misconception: "A common mix-up is using ourself because it sounds like myself. More than one person means the word ends in -selves.",
+      why: "The error is in \"The two of us hid ourself behind the door.\" The two of us is more than one person, so the word should be ourselves. The other sentences use herself, itself and themselves correctly.",
       like: ["SK-GUM3-6-P4"]
     },
     {
@@ -7477,31 +7477,31 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which words make the sentence correct?",
-      text: "Kara bought {0} a new notebook, and her parents treated {1} to lunch.",
+      prompt: "Pick the pair that fits.",
+      text: "Mr. Cruz baked {0} a lemon cake, and his helpers gave {1} a day off.",
       slots: [
         {
-          options: ["herself", "yourself", "itself"],
+          options: ["himself", "myself", "yourself"],
           answer: 0
         },
         {
-          options: ["themselves", "theirself", "ourselves"],
+          options: ["themselves", "yourselves", "myself"],
           answer: 0
         }
       ],
-      clue: "The first blank points back to Kara. The second blank points back to her parents. Count how many people each one is.",
+      clue: "The first blank points back to Mr. Cruz. The second blank points back to his helpers. Count how many people each one is.",
       hints: [
-        "The first blank points back to Kara. The second blank points back to her parents. Count how many people each one is.",
+        "The first blank points back to Mr. Cruz. The second blank points back to his helpers. Count how many people each one is.",
         "Find who did the action in each part. Then pick the word that points back to that same person or group.",
-        "Theirself has the wrong ending. Decide the rest."
+        "Myself points back to I, and nobody is saying I here. Decide the rest."
       ],
       how: [
-        "Kara is one girl, so the first blank needs the word for one girl.",
-        "Her parents are more than one person, so the second blank needs a word that ends in -selves.",
-        "The answers are herself and themselves. Yourself points back to you, itself is for a thing, theirself has the wrong ending, and ourselves points back to we."
+        "Mr. Cruz is one man, so the first blank needs the word for one man.",
+        "His helpers are more than one person, so the second blank needs a word that ends in -selves.",
+        "The answers are himself and themselves. Myself points back to I, yourself points back to one person being talked to, and yourselves points back to more than one person being talked to."
       ],
-      misconception: "A common mix-up is picking theirself because it sounds like herself. More than one person needs the ending -selves.",
-      why: "The answers are herself and themselves. Kara is one girl, so herself fits. Her parents are more than one person, so themselves fits. Theirself has the wrong ending.",
+      misconception: "A common mix-up is picking ourselves for any group. The word must point back to the same group that acted.",
+      why: "The answers are himself and themselves. Mr. Cruz is one man, so himself fits. His helpers are more than one person, so themselves fits. Myself, yourself and yourselves point back to other people.",
       like: ["SK-GUM3-6-P5"]
     },
     {
@@ -7511,11 +7511,11 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: ["p4"],
-      prompt: "The second sentence of the draft uses the wrong pronoun. Which word belongs in the blank?",
+      prompt: "Which choice belongs in the blank of line 2?",
       text: "Theo and {0} dug a deep moat around it.",
       slots: [
         {
-          options: ["myself", "I", "me"],
+          options: ["myself", "I", "us"],
           answer: 1
         }
       ],
@@ -7523,15 +7523,15 @@ PP.addLesson({
       hints: [
         "Look at who did the digging. A -self word points back to someone, so ask whether it is needed here.",
         "Read the sentence and leave out the words Theo and. Then say the sentence with each choice.",
-        "Me is used for the person something happens to, not for the person who acts. Decide between the other two."
+        "Us is for the people something happens to, not the people who act. Decide between the other two."
       ],
       how: [
         "Theo and the writer did the digging together, so the blank is part of the subject.",
-        "Leave out Theo and: \"___ dug a deep moat.\" You would say I, not me and not myself.",
-        "The answer is I. Myself needs an I earlier in the sentence to point back to, and me does not name who acts."
+        "Leave out Theo and: \"___ dug a deep moat.\" You would say I, not us and not myself.",
+        "The answer is I. Myself needs an I earlier in the sentence to point back to, and us is not used as the one who acts."
       ],
       misconception: "A common mix-up is thinking myself sounds more polite than I. Use myself only when I already did the action to myself.",
-      why: "The answer is I. The writer and Theo did the digging, so the subject needs I. Myself points back to an I that is already in the sentence, and me is not used as the one who acts.",
+      why: "The answer is I. The writer and Theo did the digging, so the subject needs I. Myself points back to an I that is already in the sentence, and us is not used as the one who acts.",
       like: ["SK-GUM3-6-C03"]
     },
     {
@@ -7541,26 +7541,26 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: ["p4"],
-      prompt: "Which revision fixes the incorrect word in the fifth sentence of the draft?",
+      prompt: "Pick the best wording for line 5.",
       choices: [
         { text: "Theo splashed hisself with cold water, so we laughed." },
         { text: "Theo splashed herself with cold water, so we laughed." },
-        { text: "Theo splashed itself with cold water, so we laughed." },
+        { text: "Theo splashed myself with cold water, so we laughed." },
         { text: "Theo splashed himself with cold water, so we laughed.", correct: true }
       ],
       clue: "Find who got splashed. Then find the -self word that points back to that person.",
       hints: [
         "Find who got splashed. Then find the -self word that points back to that person.",
         "Check each -self word. Ask whether it is a real word and whether it matches Theo.",
-        "Itself is for a thing, and Theo is a boy. Check the other three."
+        "Myself points back to I, and the sentence is about Theo. Check the other three."
       ],
       how: [
         "Theo is one boy, so the word must be the -self word for one boy.",
         "The word hisself is not a correct word. The correct word for one boy is himself.",
-        "The answer is \"Theo splashed himself with cold water, so we laughed.\" Herself is for a girl, and itself is for a thing."
+        "The answer is \"Theo splashed himself with cold water, so we laughed.\" Herself is for a girl, and myself points back to I."
       ],
       misconception: "A common mix-up is saying hisself, because it sounds like his. The correct word is himself.",
-      why: "The answer is \"Theo splashed himself with cold water, so we laughed.\" Theo is one boy, so the pronoun is himself. Hisself is not a correct word, herself is for a girl, and itself is for a thing.",
+      why: "The answer is \"Theo splashed himself with cold water, so we laughed.\" Theo is one boy, so the pronoun is himself. Hisself is not a correct word, herself is for a girl, and myself points back to I.",
       like: ["SK-GUM3-6-C04"]
     },
     {
@@ -7570,9 +7570,9 @@ PP.addLesson({
       dok: 3,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Complete both items below.",
       partA: {
-        prompt: "Look at the seventh sentence of the draft. Which choice writes its -self word correctly?",
+        prompt: "Which choice repairs line 7?",
         choices: [
           { text: "The older kids next to us built a castle by themselves.", correct: true },
           { text: "The older kids next to us built a castle by theirselves." },
@@ -7581,28 +7581,28 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "Which reason explains the answer to Part A?",
+        prompt: "Which reason supports your first answer best?",
         choices: [
-          { text: "Only one kid built the castle, so the word has to be himself." },
-          { text: "Every sentence with the word by needs the word myself after it." },
-          { text: "Theirselves is not a real word, so a group of kids needs themselves.", correct: true },
-          { text: "The sentence tells about Theo, so the word has to be himself." }
+          { text: "Only one kid is mentioned, so a word for one boy fits." },
+          { text: "The word by is a clue that the pronoun is singular." },
+          { text: "Kids means several, and theirselves is not a real word.", correct: true },
+          { text: "Theo is in the story, so himself is needed." }
         ]
       },
       clue: "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
       hints: [
         "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
-        "For Part A, read sentence 7 and check who built the castle. For Part B, think about what the word kids tells you.",
+        "For Part A, read line 7 and check who built the castle. For Part B, think about what the word kids tells you.",
         "In Part A, himself would point back to only one boy. Check the other choices."
       ],
       how: [
-        "Part A: sentence 7 is about the older kids, so the pronoun must point back to them.",
+        "Part A: line 7 is about the older kids, so the pronoun must point back to them.",
         "Kids is more than one, so the word must end in -selves. The word theirselves is not a correct word.",
         "Part A answer: \"The older kids next to us built a castle by themselves.\" Themself has the wrong ending, and himself is for one boy.",
-        "Part B answer: \"Theirselves is not a real word, so a group of kids needs themselves.\""
+        "Part B answer: \"Kids means several, and theirselves is not a real word.\""
       ],
       misconception: "A common mix-up is using theirselves because it sounds like their. The correct word is themselves.",
-      why: "Part A: \"The older kids next to us built a castle by themselves.\" Part B: \"Theirselves is not a real word, so a group of kids needs themselves.\" Themself has the wrong ending, and himself is for one boy. The sentence is about the older kids, not Theo.",
+      why: "Part A: \"The older kids next to us built a castle by themselves.\" Part B: \"Kids means several, and theirselves is not a real word.\" Themself has the wrong ending, and himself is for one boy. The line is about the older kids, not Theo.",
       like: ["SK-GUM3-6-C05"]
     },
     {
@@ -7612,7 +7612,7 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: ["p5"],
-      prompt: "Two sentences in the draft have a mistake with a -self or -selves word. Select them.",
+      prompt: "Two lines break the rules for reflexive pronouns. Select them.",
       targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1"],
       answer: ["p5:2:2", "p5:3:1"],
       pick: 2,
@@ -7625,10 +7625,10 @@ PP.addLesson({
       how: [
         "Find each -self or -selves word and who it points back to.",
         "Sentence 3: himself points back to Gus, so it is correct. Sentences 4 and 6: myself points back to I, so both are correct.",
-        "Sentence 5: theirselves is not a correct word. Sentence 7: the quilt is one thing, so it should be itself."
+        "Sentence 5: theirselves is not a correct word. Sentence 7: the thread is one thing, so it should be itself."
       ],
       misconception: "A common mix-up is thinking every -selves word is wrong when it follows an object. Check whether the word matches one thing or more than one.",
-      why: "The errors are in \"The members of the club gave theirselves a loud cheer.\" and \"The big quilt caught on a chair and ripped themselves.\" Theirselves is not a correct word, and the quilt is one thing, so it needs itself. Himself and myself are used correctly in the other sentences.",
+      why: "The errors are in \"The sewing members cheered theirselves after the last stitch.\" and \"The loose thread caught on a nail and pulled themselves tight.\" Theirselves is not a correct word, and the thread is one thing, so it needs itself. Himself and myself are used correctly in the other sentences.",
       like: ["SK-GUM3-6-C06"]
     },
     {
@@ -7638,14 +7638,14 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which TWO sentences use -self or -selves words correctly?",
+      prompt: "Two lines below are written correctly. Which are they?",
       pick: 2,
       choices: [
-        { text: "My aunt fixed the car by himself." },
-        { text: "Jon bought hisself a new hat." },
-        { text: "Tess surprised herself with a high score.", correct: true },
+        { text: "My sister repaired the bike by yourself." },
+        { text: "Jon cut hisself a slice of pie." },
+        { text: "Nora rewarded herself with a long walk.", correct: true },
         { text: "The puppies shook itself dry." },
-        { text: "The twins did the dishes by themselves.", correct: true }
+        { text: "The geese cleaned themselves in the pond.", correct: true }
       ],
       clue: "Find the -self or -selves word in each sentence. Ask whether it is a real word and whether it matches who it points back to.",
       hints: [
@@ -7655,11 +7655,11 @@ PP.addLesson({
       ],
       how: [
         "Find the -self or -selves word in each sentence and who it points back to.",
-        "Tess is one girl, so herself is right. The twins are more than one, so themselves is right.",
+        "Nora is one girl, so herself is right. The geese are more than one, so themselves is right.",
         "The others are wrong: it should be herself, themselves and himself."
       ],
       misconception: "A common mix-up is picking a word that sounds right but does not match, like himself for an aunt.",
-      why: "The answers are \"Tess surprised herself with a high score.\" and \"The twins did the dishes by themselves.\" Tess is one girl and the twins are more than one, so herself and themselves fit. The others should say herself, themselves and himself.",
+      why: "The answers are \"Nora rewarded herself with a long walk.\" and \"The geese cleaned themselves in the pond.\" Nora is one girl and the geese are more than one, so herself and themselves fit. The others should say herself, themselves and himself.",
       like: ["SK-GUM3-6-C07"]
     },
     {
@@ -7669,27 +7669,27 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which word completes each sentence?",
-      cols: ["myself", "yourself", "itself", "themselves"],
+      prompt: "Pick the word that fills each blank.",
+      cols: ["herself", "himself", "yourselves", "themselves"],
       rows: [
-        { text: "The players stretched ___ before the game.", answer: 3 },
-        { text: "Dana, please give ___ more time.", answer: 1 },
-        { text: "I told ___ to be brave.", answer: 0 },
-        { text: "The calculator turned ___ off.", answer: 2 }
+        { text: "The boys cleaned ___ up after the game.", answer: 3 },
+        { text: "Kids, please enjoy ___ at the party.", answer: 2 },
+        { text: "Aunt Lee fixed the lamp by ___.", answer: 0 },
+        { text: "Grandpa watched ___ on the video.", answer: 1 }
       ],
-      clue: "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+      clue: "Find who did the action in each sentence. Then pick the word that points back to that same person or group.",
       hints: [
-        "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+        "Find who did the action in each sentence. Then pick the word that points back to that same person or group.",
         "Start with the sentence you are surest about. Think about who is talking and who is being talked to.",
-        "A calculator is one thing, so its sentence goes with itself. Decide the other rows."
+        "Aunt Lee is one woman, so her sentence goes with herself. Decide the other rows."
       ],
       how: [
         "Find who did the action in each sentence and who the pronoun points back to.",
-        "I told ___ points back to I, so it is myself. Dana, please give ___ points to Dana, who is being talked to, so it is yourself.",
-        "The players are more than one, so it is themselves. The calculator is one thing, so it is itself."
+        "Aunt Lee is one woman, so it is herself. Grandpa is one man, so it is himself.",
+        "The boys are more than one, so it is themselves. Kids are being talked to, so it is yourselves."
       ],
-      misconception: "A common mix-up is using yourself when the talker is the one who acted. Use myself when I did the action to I.",
-      why: "The calculator is one thing, so itself. I told ___ points back to I, so myself. Please give ___ more time, Dana is talking to Dana, so yourself. The players are more than one, so themselves.",
+      misconception: "A common mix-up is using themselves when the group is being talked to. When you talk to more than one person, use yourselves.",
+      why: "Aunt Lee is one woman, so herself. Grandpa is one man, so himself. The boys are more than one, so themselves. The kids are being talked to, so yourselves.",
       like: ["SK-GUM3-6-C08"]
     },
     {
@@ -7699,10 +7699,10 @@ PP.addLesson({
       dok: 3,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which sentence means that Omar saw his own face in the pond?",
+      prompt: "Choose the one where Omar saw his face in the pond.",
       choices: [
         { text: "Omar saw him in the pond." },
-        { text: "Omar saw his friend in the pond." },
+        { text: "Omar saw his sister in the pond." },
         { text: "Omar saw himself in the pond.", correct: true },
         { text: "Omar saw he in the pond." }
       ],
@@ -7714,11 +7714,11 @@ PP.addLesson({
       ],
       how: [
         "The sentence must tell that Omar saw Omar, so the pronoun must point back to him.",
-        "Him would mean some other boy. His friend is another person, and he is the wrong form for this spot.",
+        "Him would mean some other boy. His sister is another person, and he is the wrong form for this spot.",
         "The answer is \"Omar saw himself in the pond.\" Himself points back to Omar."
       ],
       misconception: "A common mix-up is thinking him can point back to the subject. Him means a different boy, so use himself.",
-      why: "The answer is \"Omar saw himself in the pond.\" Himself points back to Omar, so Omar saw his own face. Him would mean some other boy, his friend is another person, and he is not used after saw.",
+      why: "The answer is \"Omar saw himself in the pond.\" Himself points back to Omar, so Omar saw his own face. Him would mean some other boy, his sister is another person, and he is not used after saw.",
       like: ["SK-GUM3-6-C09"]
     },
     {
@@ -7728,31 +7728,31 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which words make the sentence correct?",
-      text: "The skaters cheered {0} on, and the puppy rolled {1} in the grass.",
+      prompt: "Fill both blanks.",
+      text: "The skaters cheered {0} on, and the puppy rolled {1} across the lawn.",
       slots: [
         {
-          options: ["themselves", "theirselves", "herself"],
+          options: ["themselves", "ourselves", "myself"],
           answer: 0
         },
         {
-          options: ["itself", "hisself", "themselves"],
+          options: ["itself", "yourself", "ourselves"],
           answer: 0
         }
       ],
       clue: "Find who did the action in each part. Then pick the word that points back to the same person or group.",
       hints: [
         "Find who did the action in each part. Then pick the word that points back to the same person or group.",
-        "Count how many are in each part. Then check that each word you pick is a real word.",
-        "Theirselves is not a correct word. Decide the rest."
+        "Count how many are in each part. Then decide which word matches.",
+        "Myself points back to I, and nobody is saying I here. Decide the rest."
       ],
       how: [
         "The first blank points back to the skaters, who are more than one person.",
         "The second blank points back to the puppy, which is one animal.",
-        "The answers are themselves and itself. Theirselves and hisself are not correct words, and herself is for one girl."
+        "The answers are themselves and itself. Ourselves, myself and yourself point back to other people."
       ],
-      misconception: "A common mix-up is using theirselves or hisself. Both sound right, but neither one is a correct word.",
-      why: "The answers are themselves and itself. The skaters are more than one, so themselves fits. The puppy is one animal, so itself fits. Theirselves and hisself are not correct words.",
+      misconception: "A common mix-up is choosing a -selves word for the puppy because it sits next to the skaters. Match each blank to its own subject.",
+      why: "The answers are themselves and itself. The skaters are more than one, so themselves fits. The puppy is one animal, so itself fits. Myself, ourselves and yourself point back to other people.",
       like: ["SK-GUM3-6-C10"]
     },
     {
@@ -7762,7 +7762,7 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: ["p6"],
-      prompt: "Select the TWO sentences in which myself or himself does not fit.",
+      prompt: "Choose the two lines in which myself or himself is used wrongly.",
       targets: ["p6:2:2", "p6:2:3", "p6:3:1", "p6:3:2", "p6:3:3"],
       answer: ["p6:3:1", "p6:3:3"],
       pick: 2,
@@ -7778,7 +7778,7 @@ PP.addLesson({
         "Sentence 7 uses myself in a place where I belongs. Sentence 9 uses himself for Tessa, but she is a girl, so it should be herself."
       ],
       misconception: "A common mix-up is using myself when I am doing the action with someone else. Say the sentence without the other person to check.",
-      why: "The errors are in \"Grandma and myself picked up my first bowl on Friday.\" and \"My friend Tessa admired himself in the shiny glaze.\" The first should say Grandma and I, and the second should say herself because Tessa is a girl. The -self words in sentences 5, 6 and 8 are correct.",
+      why: "The errors are in \"My aunt and myself glazed a small vase together.\" and \"My friend Tessa admired himself in the shiny glaze.\" The first should say My aunt and I, and the second should say herself because Tessa is a girl. The -self words in sentences 5, 6 and 8 are correct.",
       like: ["SK-GUM3-6-C11"]
     },
     {
@@ -7788,26 +7788,26 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which sentence shows that Lila made dinner without any help?",
+      prompt: "Pick the one that shows Lila knit the scarf with no help at all.",
       choices: [
-        { text: "Lila made dinner for the family with her aunt." },
-        { text: "Lila made dinner for the family by herself.", correct: true },
-        { text: "Lila made dinner for the family with help from her dad." },
-        { text: "Lila and her cousin made dinner for the family." }
+        { text: "Her aunt joined in and knit half of the scarf." },
+        { text: "Lila knit the scarf all by herself.", correct: true },
+        { text: "A neighbor showed Lila each stitch, step by step." },
+        { text: "Lila and a classmate took turns knitting the scarf." }
       ],
       clue: "Alone means with no one else helping. Look for the choice that shows that.",
       hints: [
         "Alone means with no one else helping. Look for the choice that shows that.",
         "Read each choice and ask who did the work. Only one choice has just Lila doing it.",
-        "Lila and her cousin means two people worked. Check the other three."
+        "Lila and a classmate means two people worked. Check the other three."
       ],
       how: [
         "Alone means nobody else helped.",
-        "By herself tells that Lila did the whole job by only herself.",
-        "The answer is \"Lila made dinner for the family by herself.\" The other choices name an aunt, a dad or a cousin."
+        "By herself tells that Lila did the whole job with only herself.",
+        "The answer is \"Lila knit the scarf all by herself.\" The other choices name an aunt, a neighbor or a classmate who helped."
       ],
       misconception: "A common mix-up is thinking by herself means near herself. By herself means alone.",
-      why: "The answer is \"Lila made dinner for the family by herself.\" By herself means alone, with no help. The other choices tell about her aunt, her dad, or her cousin.",
+      why: "The answer is \"Lila knit the scarf all by herself.\" By herself means alone, with no help. The other choices tell about her aunt, a neighbor, or a classmate.",
       like: ["SK-GUM3-6-C12"]
     },
     {
@@ -7817,20 +7817,20 @@ PP.addLesson({
       dok: 3,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Kim says, \"The word myself is just a fancy way to say me.\" Choose the TWO sentences where myself takes the place of I or me.",
+      prompt: "Kim thinks myself fits for any person. Which two lines prove Kim wrong?",
       pick: 2,
       choices: [
-        { text: "The coach told Ana and myself to line up.", correct: true },
-        { text: "I surprised myself at the race." },
-        { text: "Aunt Rosa gave Tom and myself a ride.", correct: true },
-        { text: "I did all of it by myself." },
-        { text: "I made myself some toast." }
+        { text: "Coach Lin picked Ana and myself for a soccer team this fall.", correct: true },
+        { text: "I treated myself to a ripe pear from our market." },
+        { text: "Aunt Rosa drove Tom and myself to a new school across town.", correct: true },
+        { text: "I was proud of myself after a long hike." },
+        { text: "I taught myself to swim during one cold summer week." }
       ],
       clue: "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
       hints: [
         "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
         "Read each sentence. Ask whether myself points back to an I that is already in the sentence.",
-        "In I made myself some toast, myself points back to I. Decide about the other four."
+        "In I taught myself to swim during one cold summer week, myself points back to I. Decide about the other four."
       ],
       how: [
         "Look at where myself appears in each sentence.",
@@ -7838,7 +7838,7 @@ PP.addLesson({
         "In the other two sentences, there is no I for myself to point back to. They should say Tom and me, and Ana and me."
       ],
       misconception: "A common mix-up is thinking myself is the fancy word for me. It only points back to an I that is already in the sentence.",
-      why: "The answers are \"Aunt Rosa gave Tom and myself a ride.\" and \"The coach told Ana and myself to line up.\" Neither sentence has an I for myself to point back to. They should say Tom and me, and Ana and me. In the other three sentences, myself points back to I.",
+      why: "The answers are \"Aunt Rosa drove Tom and myself to a new school across town.\" and \"Coach Lin picked Ana and myself for a soccer team this fall.\" Neither sentence has an I for myself to point back to. They should say Tom and me, and Ana and me. In the other three sentences, myself points back to I.",
       like: ["SK-GUM3-6-C13"]
     },
     {
@@ -7848,8 +7848,8 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Which word completes the sentence?",
-      text: "Slow down, you two. You might trip {0} on the loose rug.",
+      prompt: "Pick the word that fits.",
+      text: "Have fun, everyone! Please enjoy {0} at the picnic.",
       slots: [
         {
           options: ["yourself", "yourselves", "ourselves"],
@@ -7859,16 +7859,16 @@ PP.addLesson({
       clue: "Find who is being talked to. Count how many people that is.",
       hints: [
         "Find who is being talked to. Count how many people that is.",
-        "Read the sentence and look at the words you two. Then pick the word that points back to that same pair.",
-        "Ourselves includes the speaker, and the speaker is not on the rug. Decide between the other two."
+        "Read the sentence and look at the word everyone. Then pick the word that points back to that same group.",
+        "Ourselves includes the speaker, and the speaker is not the one being told. Decide between the other two."
       ],
       how: [
-        "The speaker is talking to you two, which is more than one person.",
+        "The speaker is talking to everyone, which is more than one person.",
         "The word that points back to you for more than one person is yourselves.",
         "The answer is yourselves. Yourself is for one person, and ourselves includes the speaker."
       ],
-      misconception: "A common mix-up is choosing yourself when talking to two people. For more than one person, use yourselves.",
-      why: "The answer is yourselves. The speaker is talking to you two, which is more than one person, so the word ends in -selves. Yourself is for one person, and ourselves includes the speaker.",
+      misconception: "A common mix-up is choosing yourself when talking to a whole group. For more than one person, use yourselves.",
+      why: "The answer is yourselves. The speaker is talking to everyone, which is more than one person, so the word ends in -selves. Yourself is for one person, and ourselves includes the speaker.",
       like: ["SK-GUM3-6-C14"]
     },
     {
@@ -7878,26 +7878,26 @@ PP.addLesson({
       dok: 2,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Choose the sentence that has the right -self word.",
+      prompt: "Pick the right one.",
       choices: [
-        { text: "Ben and I made ourself a snack." },
-        { text: "Ben and I made myself a snack." },
-        { text: "Ben and I made themselves a snack." },
-        { text: "Ben and I made ourselves a snack.", correct: true }
+        { text: "Zoe and I taught ourself to knit." },
+        { text: "Zoe and I taught themselves to knit." },
+        { text: "Zoe and I taught us to knit." },
+        { text: "Zoe and I taught ourselves to knit.", correct: true }
       ],
       clue: "Find who did the action. Then find the -self word that points back to all of them.",
       hints: [
         "Find who did the action. Then find the -self word that points back to all of them.",
-        "Ben and I is more than one person. Check the ending of each -self word.",
+        "Zoe and I is more than one person. Check the ending of each -self word.",
         "Themselves points back to other people, and the sentence is not about other people. Check the other three."
       ],
       how: [
-        "Ben and I did the making, so the pronoun must point back to both of them.",
+        "Zoe and I did the teaching, so the pronoun must point back to both of them.",
         "That is more than one person, including the writer, so the word is ourselves.",
-        "The answer is \"Ben and I made ourselves a snack.\" Ourself has the wrong ending, myself is for one person, and themselves points back to other people."
+        "The answer is \"Zoe and I taught ourselves to knit.\" Ourself has the wrong ending, themselves points back to other people, and us is not a -self word."
       ],
-      misconception: "A common mix-up is picking myself because I is in the sentence. When someone else is with me, use ourselves.",
-      why: "The answer is \"Ben and I made ourselves a snack.\" Ben and I are more than one person, so ourselves fits. Ourself has the wrong ending, myself is for one person, and themselves points back to other people.",
+      misconception: "A common mix-up is picking a word that ends in -self because I is in the sentence. When someone else is with me, use ourselves.",
+      why: "The answer is \"Zoe and I taught ourselves to knit.\" Zoe and I are more than one person, so ourselves fits. Ourself has the wrong ending, themselves points back to other people, and us is not a -self word.",
       like: ["SK-GUM3-6-C15"]
     }
   ],
