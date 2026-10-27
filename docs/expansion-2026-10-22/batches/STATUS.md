@@ -58,7 +58,7 @@
 | B6 | 3.L.GC.1:M:form-and-use-irregular-plural-nouns | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
-| B6 | 3.L.GC.1:M:use-collective-and-abstract-nouns | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
+| B6 | 3.L.GC.1:M:use-collective-and-abstract-nouns | ACCEPTED | Fifth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:use-reflexive-pronouns | ACCEPTED | Fourth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
