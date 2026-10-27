@@ -63,7 +63,7 @@
 | B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | ACCEPTED | Seventh independent review ACCEPT; open SHOULDs S1 (S01/C07 Teach rule), S2 (T4 columns: record versions after final edit) in B6-review.md |
 | B7a | 3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
-| B7a | 3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech | ACCEPTED | Fourth independent review ACCEPT; NOTEs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the- | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 | B7a | 3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |

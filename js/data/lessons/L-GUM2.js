@@ -71,7 +71,7 @@ PP.addLesson({
           "(3) Yesterday, Jada will count the cans and bottles in the gym."
         ],
         [
-          "(4) Right now, two helpers sort the paper into tall stacks.",
+          "(4) Today, two helpers sort the paper into tall stacks.",
           "(5) Last Monday, we weighed the stacks on a big scale.",
           "(6) Next week, the class collects the cardboard from every room."
         ],
@@ -94,7 +94,7 @@ PP.addLesson({
           "(1) Every spring, our neighbors gather at Maple Park for the big Fix-It Day.",
           "(2) Last Saturday, Mr. Reyes paints the old picnic tables green.",
           "(3) Tomorrow, the Scouts planted flowers near the gate.",
-          "(4) Right now, Ana's mom hands out gloves to the helpers.",
+          "(4) Today, Ana's mom hands out gloves to the helpers.",
           "(5) Two weeks ago, we repaired the squeaky swings.",
           "(6) Next month, a crew will build a new bench by the pond."
         ],
@@ -117,7 +117,7 @@ PP.addLesson({
         [
           "(1) Last spring, my dad placed a rain barrel behind our house.",
           "(2) Every time it rains, water runs down the roof into the barrel.",
-          "(3) Right now, the barrel holds enough water for the whole garden.",
+          "(3) Today, the barrel holds enough water for the whole garden.",
           "(4) Yesterday, we watered the tomato plants with a small can."
         ],
         [
@@ -145,7 +145,7 @@ PP.addLesson({
           "(3) Yesterday, two students returned a blue scarf to its owner."
         ],
         [
-          "(4) Right now, Kiana lists the lost items on a chart.",
+          "(4) Today, Kiana lists the lost items on a chart.",
           "(5) Last Tuesday, she tapes the chart by the office door.",
           "(6) Tomorrow, the helpers sorted the extra mittens by size."
         ],
@@ -168,7 +168,7 @@ PP.addLesson({
           "(1) Every November, our street holds a soup supper at the community hall.",
           "(2) Last year, neighbors carried twelve pots of soup to the tables.",
           "(3) Yesterday, Mrs. Hall stirs a huge pot of bean soup.",
-          "(4) At the moment, the twins fold the paper napkins by the door.",
+          "(4) This week, the twins fold the paper napkins by the door.",
           "(5) Tomorrow, volunteers lined the long benches with cloths.",
           "(6) Three days ago, Mrs. Ortiz baked twenty loaves of warm bread for the supper."
         ],
@@ -189,7 +189,7 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) Three days ago, my cousin and I tested three kinds of lemonade in the backyard.",
-          "(2) At the moment, the cups sit on the porch rail in the cool shade.",
+          "(2) This week, the cups sit on the porch rail in the cool shade.",
           "(3) Two hours ago, we measured the sugar with a tiny spoon and a paper cup.",
           "(4) Later today, our neighbors will taste each cup and vote."
         ],
@@ -442,7 +442,7 @@ PP.addLesson({
             "how": [
               "Check each sentence from 2 through 6 for a clue and a verb that agree.",
               "Sentence 2 begins with Last Saturday, which is past, but paints is present tense. Sentence 3 begins with Tomorrow, which is future, but planted is past tense.",
-              "Sentences 4, 5 and 6 match: Right now with hands, Two weeks ago with repaired, and Next month with will build."
+              "Sentences 4, 5 and 6 match: Today with hands, Two weeks ago with repaired, and Next month with will build."
             ],
             "misconception": "A common mix-up is picking a sentence just because its verb has an -ed ending. Compare the verb with its own clue.",
             "why": "The answers are sentences 2 and 3: \"Last Saturday, Mr. Reyes paints the old picnic tables green.\" and \"Tomorrow, the Scouts planted flowers near the gate.\" Last Saturday needs a past verb, and Tomorrow needs will plus a plain verb. Sentences 4, 5 and 6 match.",
@@ -721,7 +721,7 @@ PP.addLesson({
             "clue": "Find the time clue and decide what time it shows. Then choose the verb form that tells the same time.",
             "hints": [
               "Find the time clue and decide what time it shows. Then choose the verb form that tells the same time.",
-              "Last Sunday is already over. Say the sentence with each choice and listen for the one that tells about a finished job.",
+              "Last Sunday is already over. Say the sentence with each choice.",
               "Will paint tells about a job that has not been done. Think about the other two choices."
             ],
             "how": [
@@ -948,7 +948,7 @@ PP.addLesson({
       "hints": [
         "Look at each verb. Is there an -ed ending, the helping word will, or neither?",
         "Sort the sentences that use a helping word first. Then decide the rest by looking at the ending.",
-        "Hooted and fixed end in -ed. Think about which column fits that ending."
+        "A verb that ends in -ed shows the past. Use that to sort a few of the rows first."
       ],
       "how": [
         "Find the verb in each sentence.",
@@ -991,7 +991,7 @@ PP.addLesson({
       "clue": "Find the opening words and decide which time they show. Then compare that time with the verb.",
       "hints": [
         "Find the opening words and decide which time they show. Then compare that time with the verb.",
-        "The opening words name a day that is over. Say each choice and listen for the one that tells about a finished action.",
+        "The opening words name a day that is over. Say each choice.",
         "Will taped has a helping word and an -ed ending. Think about whether that makes sense."
       ],
       "how": [
@@ -1122,7 +1122,7 @@ PP.addLesson({
       "how": [
         "Check sentences 2 through 6 one at a time.",
         "Yesterday is past, but stirs is present. Tomorrow is future, but lined is past.",
-        "Sentences 2, 4 and 6 match: Last year with carried, At the moment with fold, and Three days ago with baked."
+        "Sentences 2, 4 and 6 match: Last year with carried, This week with fold, and Three days ago with baked."
       ],
       "misconception": "A common mix-up is picking the sentence that sounds odd rather than checking the clue and verb. Compare them one by one.",
       "why": "The answers are \"Yesterday, Mrs. Hall stirs a huge pot of bean soup.\" and \"Tomorrow, volunteers lined the long benches with cloths.\" Yesterday needs a past verb, and Tomorrow needs will plus a plain verb. The other sentences match.",
@@ -1222,19 +1222,19 @@ PP.addLesson({
           "text": "Later this winter, the pond will freeze near the old bridge."
         },
         {
-          "text": "At the moment, the water drips from the car roof."
+          "text": "This week, the water drips from the car roof."
         }
       ],
       "clue": "Look for clue words that mean a habit, and check that the verb is in the present.",
       "hints": [
         "Look for clue words that mean a habit, and check that the verb is in the present.",
         "Read the clue at the start of each sentence. Ask whether it tells about one time or about every time.",
-        "At the moment tells about one short time. Decide among the rest."
+        "This week tells about one stretch of time. Decide among the rest."
       ],
       "how": [
         "Find the clue in each sentence.",
         "On Saturdays and Each winter mean again and again, and washes and freezes are present tense verbs.",
-        "Two Saturdays ago and Later this winter tell about one time, and At the moment tells about this moment."
+        "Two Saturdays ago and Later this winter tell about one time, and This week tells about the present."
       ],
       "misconception": "A common mix-up is picking sentences about the same people and things. The clue shows whether it repeats.",
       "why": "The answers are \"On Saturdays, my dad washes the car in the driveway.\" and \"Each winter, the pond freezes near the old bridge.\" Both have clues that mean again and again and present tense verbs. The other sentences tell about one time.",
@@ -1396,7 +1396,7 @@ PP.addLesson({
       "clue": "Find the clue and decide what time it shows. Then pick the verb form that fits.",
       "hints": [
         "Find the clue and decide what time it shows. Then pick the verb form that fits.",
-        "Last night is over. Say the sentence with each choice and listen for the one that tells about a finished action.",
+        "Last night is over. Say the sentence with each choice.",
         "Mix is the plain verb with no ending. Think about the other two choices."
       ],
       "how": [
@@ -1580,7 +1580,7 @@ PP.addLesson({
       "hints": [
         "Look at each verb. Check for -ed, for the helping word will, or for neither.",
         "Sort the sentences that have will first. Then decide about the rest by looking at the ending.",
-        "Locked and croaked end in -ed. Think about which column fits that ending."
+        "A verb that ends in -ed shows the past. Use that to sort some of the sentences first."
       ],
       "how": [
         "Find the verb in each sentence.",

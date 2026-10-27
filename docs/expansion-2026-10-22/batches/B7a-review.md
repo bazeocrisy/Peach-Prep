@@ -655,3 +655,122 @@ MUST fix: bump L7 `testRev: { A: "2" }` and re-record (new id per 2.4), or rever
 
 True: twin overlap table (exact); passage word counts and FK; no new uniquely longest keys (note the L4 C08 tie); gate PASS with 10 L9 warnings and none on L1-8; legacy items unchanged except T4; MUST fixes (L2 P4, L4 P3/P5/P4, L8 Teach/C10/S10/S05); the "SHOULDs not done" list is honest.
 False or overstated: "cann non-word" (a Collins Scrabble word per unscramble.me; unconfirmed in M-W); the log omits that the T4 change is a material version change needing a testRev bump; the L2 S11 H3 false clue-word claim was never caught by the author's scripts. "Hint 3 names at most one wrong choice in every touched item" is true for touched items, but L2 S10 and P5 H3 remove two (previously allowed).
+
+
+## Fourth review (L2, L4)
+
+Reviewer: independent, fresh eyes (did not author, did not do reviews 1 to 3). Frozen copy at /home/claude/pp-content. Scope: lessons 2 and 4 of `L-GUM1.js` after the phase 4 fixes, plus the L7 `testRev { A: "2" }` gate question. The other seven B7a lessons were not re-reviewed.
+
+### Verdicts
+
+| Lesson | Verdict | Reason |
+|---|---|---|
+| L2 singular and plural nouns | ACCEPT | No MUST. The third-review MUST (S11 hint 3) and SHOULD (`cann`) are fixed in the file. NOTEs only. |
+| L4 capital letters | CHANGES REQUIRED | Two MUSTs, both one-line wording fixes in the redesigned set 2 twins: C10 and S10 key text teaches a false rule ("stays small unless it is I", "just the opener and the pronoun I begin big"). S10 also uses `the Moon`, which NASA style capitalizes. Four SHOULDs. |
+| L7 `testRev` | OK in the file; one coordinator step open | `testRev: { A: "2" }` clears the material-change gate; the version record still has rev 1 (see below). |
+
+### Method and blindness
+
+- Blind solve: my own Node script loaded the lessons in a vm sandbox, resolved every `{ref}`, and printed every practice, core and similar item and every test item (L2 39 unique items, L4 40) with seeded shuffled choices, passages included, and no key, why, hints, how, clue, `like` or misconception. Answers were saved to `ans2.txt` and `ans4.txt` before any key was extracted. Agreement with the keys: **79/79 (100%)**, every sub-answer (dropdown slots, ebsr parts, match rows, hot-text targets).
+- Honest limit: the assignment named the redesigned items, so I knew C09/C10/S09/S10 had changed and what the C10 and S10 claims say before I solved them. The solve itself was done from the printed text with no key. I read the author log and reviews 1 to 3 only after the answers were saved.
+- While solving I caught two traps the hard way and both are correct as keyed: L4 C13 slot 2 (lowercase `my brother and I` after `so`) and L4 C09 (3, not 4: the stem has no `I`).
+- Browser: Playwright Chromium, one process per lesson, 390x844 touch, real taps, passage tab checked, all three hints pressed on every item, then the correct answer and Check. L2: 30/30 OK (15 core + the 15 "try a similar question" twins). L4: 30/30 OK. No horizontal scroll, no touch target under 40px, no page errors, no passage mismatch. The live choice count in the DOM did not change after hint 1, 2 or 3 on any of the 60 items (hints never remove a choice in the engine). Server on port 8864, killed by pid.
+- Semantic hint recount (what each hint 3 tells a child, read item by item): hint 3 names or removes at most one wrong choice on every item except the previously allowed ones (L2 C08, S08, S10, P5 remove the apostrophe options in a slot or two distractors). Items left with exactly two plausible options after hint 3: L2 C04, C12, S04, S12, C08, S08, S10; L4 C12, S04, S12, C13 slot 2, S13 slot 2. No hint 1 to 3 on any item contains the key text (script, plus by hand). No item narrows to the key.
+- Mechanical (scripts in the scratchpad `b7a4/`): points equal the type rule on every item; `pick` equals the number of keys; every `like` resolves to a distinct core item of the same type, points and DOK (15 distinct per lesson); core mix is 4 hot-text, 5 mc, 3 dropdown, 1 match, 1 ebsr, 1 ms in both lessons (DOK 2/3: L2 9/6, L4 11/4; points 21 and 22).
+- Keyed text vs why/how/hints (script): every mc, ms, ebsr, dropdown and hot-text key appears in why; every sentence number a hot-text why names is the keyed sentence; every `The answer is ...` line in how matches the key; every sentence number in a prompt, hint, how or why points at the right sentence of the passage (about 90 references printed by `sentref.js` and read by hand). Only the match items C01/S01 do not name every row in why (they name the clue words instead; fine).
+- Twin overlap (author's tokenization, `jac2`: stem, prompt, text, choices, options, rows, columns, ebsr parts, targeted sentences), every twin against all 15 core items: L2 max 0.203 set / 0.209 multiset, L4 max 0.192 / 0.209. At or under 0.21 and identical to the author's table. NOTE on prompt wording: if the hot-text target sentences are left out, L4 S11 against C11 is 0.73 set (the two prompts are the same sentence with "Select ... contain" swapped for "Pick ... have"); with targets it is far below 0.21, so it passes the plan's definition.
+- Duplicates over all of `js/data`: none, except the trivial `May I have some water?` choice (L4 P5) that is also a choice in L-GUM4.
+- Passages: all six per lesson are 100 words or more by my counter (L2 103 to 113, L4 102 to 106); Flesch-Kincaid L2 max 3.87, L4 max 2.28, all at or under 4.5.
+- Longest key (core, twin, practice, test): L2 S13 (key 46 vs longest wrong 43, one of two keys), T2/T3 legacy (33 vs 30); L4 C08 (32 vs 29, one of two keys). Key positions are not skewed beyond normal. NOTE only.
+- Gates in a scratch copy (my own copy of the repo, not the frozen tree): `check-content.js --all` PASS, 0 failures, 83 warnings, none on SK-GUM1-2 or SK-GUM1-4; `check-writing.js` 0 failures, 0 warnings; `check-instructional-copy.js` 28 assertions passed.
+- Duplicate-distractor patterns: none that make a key stand out. The six extra-letter non-words in L2 (`tabless`, `bookmarkes`, `canss`, `ribbonss`, `gamess`, `guestes`) are a repeated pattern, and hint 3 on four of them says so (NOTE).
+
+### Facts checked (URLs)
+
+- First word of a sentence, the pronoun I and proper nouns are the capitalization rules; nothing is said about commas: https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html . This is why "the word after a comma stays small unless it is I" is incomplete (a name after a comma is capitalized: "After lunch, Maya played tag.").
+- `moon` vs `Moon`: AP and Merriam-Webster lowercase it, NASA style capitalizes "Moon" for Earth's Moon: https://www.space.com/moon-name-controversy-capital-letter.html and https://proofed.com/writing-tips/earth-sun-moon-capitalize-celestial-objects/ . S10's `the Moon` is therefore a style-dependent word in an item whose key says it "belongs in small letters".
+- `canss`: not a word in any list I could reach. The Merriam-Webster fetch was refused by the allowlist, and the Scrabble-list pages that search returned list `cans` and `cants` but not `canss` (https://wordsohard.com/word/cans). I could not fetch a page that says "no such word", so this is "no dictionary lists it", not a quoted denial. It is a clear misspelling pattern in context (extra s, like `tabless`), so it is safe for the item.
+- `Wow, the`, `I'm` mid-sentence, `Mom said I could`: verified in the first review; unchanged.
+
+### Confirmation of earlier MUST/SHOULD (checked in the files)
+
+| Earlier finding | Status | Evidence |
+|---|---|---|
+| Review 3 L2 MUST S11 hint 3 | FIXED | H3 now "Number 4 has the clue words a and a." Sentence 4 is "Mr. Singh gave us a magnifying lens and a small scale to share." True. H1 shortened. HOW4 still correct (numbers 2 and 4 match). |
+| Review 3 L2 SHOULD C12 `cann` | FIXED | Distractor now `canss`; H3 "One choice has an extra letter and is not a real spelling. Decide between the other two choices." (no longer prints the distractor); why "canss is a misspelling". Hint ladder checked: H1 and H2 neutral, H3 leaves `can` and `cans`. |
+| Review 3 L4 SHOULD S08 hint 3 describes a keyed line | FIXED | H3 now names the Dan line, a correct line and a distractor. |
+| Review 3 L4 SHOULD set 2 (C07/C09/C10 settle each other) | FIXED, with new findings below | C09 is a plain count with no `I` or short form; C10 is a comma claim; C07 unchanged. No item in set 2 now settles another. New findings concern the wording of C10/S10 and the C09 hint 2. |
+| Review 3 L4 SHOULD "short form" not taught | FIXED | Teach point 3: "A short form joins I to another word, as in I'm or I'll. The first letter keeps its capital." |
+| Review 3 L7 MUST T4 material change | FIXED in the file | `testRev: { A: "2" }` present in L7. Record not re-recorded (coordinator step, disclosed by the author). See the gate test below. |
+| Review 2 L4 SHOULD C02 vs C08 (same format) | STILL OPEN (author-logged "not done") | Both are "pick the two correct sentences from five standalone sentences" testing first word plus I; item-text overlap 0.26. SHOULD carried below. |
+| Review 2 L2 SHOULD C04/C12 frame repeated | STILL OPEN (author-logged "not done") | NOTE below. |
+
+### Set-2 re-solve and no-settling check (L4 C06 to C10, and across sets)
+
+- C06 (targets 2 and 8 of p1), C07 (p2 sentence 3 `i'm`), C08 (five standalone lines), C09 (stem, count 3), C10 (stem, comma claim): each has exactly one defensible answer under the lesson's rules. None of the five stems, prompts or options states or counts what another asks. C09 does not mention a comma or `I`; C10 does not count; C07's `i'm` is not in C09 or C10. Good redesign.
+- Cross-set: C10's key text ("the word after a comma stays small") states the rule that C12 (`Wow, the` vs `Wow, The`) and C13 slot 1 and slot 2 test; and C05's key ("I keeps a capital in every spot") states the premise C15 (Lena) refutes. Both are NOTE: Teach already covers the underlying rules, and C12/C13/C15 are in set 3, not set 2.
+- Optional twins: S05's H3 ("A comma does not start a new sentence") and two of its wrong options state the misconception C10 tests, and S05 is reachable after C05 (set 1) before C10 (set 2). NOTE.
+
+### Findings: L4
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | 4-C10 key and distractor A (also WHY, HOW2, HOW3, MIS) | The key reads "The word after a comma stays small unless it is I". That is false as a general rule: a name after a comma is capitalized ("After lunch, Maya played tag."). The Purdue OWL page lists proper nouns beside the first word and I (URL above). It also contradicts the lesson's own hints, which say "only when it is I or a name" (C03 H3, C12 H3, C13 H3, S04 H3). Distractor A repeats the false rule ("only the word I needs a capital in the middle"). The answer is still the only defensible choice, but the keyed sentence teaches a wrong rule to a child who has not met names as a rule yet. | Key: "No. The word after a comma stays small unless it is I or a name, so We should be we." Same wording in A, HOW2, HOW3, WHY and in S10 (next row). Add to Teach: "Other words in the middle of a sentence stay small, even after a comma, unless the word is I or a name." |
+| MUST | 4-S10 key, distractor C, HOW, WHY, MIS; plus the word `Moon` | Same false generalization: "Just the opener and the pronoun I begin big" and "only the pronoun I begins big". Also the sentence is "The puppy barked at the Moon." NASA style capitalizes Moon for Earth's Moon (AP and Merriam-Webster do not), so "Moon belongs in small letters" is style-dependent and a child who has seen Moon capitalized can argue for it. The claim as framed (Ned thinks the final word deserves a capital) is correctly rejected, but the example word is the wrong one to reject it with. | Replace Moon with an unambiguous common noun at the end of the sentence (for example "The puppy barked at the mailman."), and change the key to "...only the opener, the pronoun I and names begin big, so mailman belongs in small letters." Update how, why, MIS. |
+| SHOULD | 4-C09 H2 and S09 H2 | C09 H2: "The note has three sentences." S09 H2: "The text has four sentences." In both items every sentence opens with a small letter, so the sentence count equals the key (3 and 4). A child can answer from the hint without checking any opener. This is the "hint 2 states the key" fault found on C07 in review 1. | "Read the note one sentence at a time and check how each one begins." (no count). |
+| SHOULD | 4-S13 slot 2 (and H2) | The twin of C13 changes the tested skill. C13 slot 2 tests a lowercase word in the middle (`so my brother and I`). S13 slot 2 tests a name capital (`ben and I` vs `Ben and I`). The official wording is "the first word of a sentence and the pronoun I" (standards.js, page 15); names are lesson 9. Teach never states a name rule and H2 ("check the name and the word I") tells the child there is a name to capitalize. A child who applies only Teach's rules cannot tell `ben` is wrong. | Make slot 2 a mid-sentence common-noun phrase like C13's (for example `so my sister and I`, `My sister and I`, `my sister and i`), or add the name rule to Teach and keep the item. |
+| SHOULD | 4-P2 H3 and 4-S11 H3 | P2 H3: "The sentence about the baby has no word that stands for the writer." The sentence is "The baby smiled at me." and `me` stands for the writer. S11 H3: "Sentence 14 has no word that stands for the writer." Sentence 14 is "all my friends want to help." and `my` is the writer's word. Both mean "no small i", but as written they are not true for a child who thinks of me and my. Same class as the earlier false-fact hints, though softer. | P2: "One sentence has no word I at all." S11: "Sentence 14 has no small i in it." |
+| SHOULD (carried) | 4-C02 vs C08 | Both are pick-two-correct-sentences from five standalone lines testing first word and I (item overlap 0.26; same distractor kinds: lowercase opener, small i). Plan rule 6 (pairs differ in two of text, component, verb, context) is thin. The author log says "not done". | Turn C08 into an error-finding item in a draft, or test a different component. |
+| NOTE | 4-S10 `like` | S10 tests the "last word" claim, C10 the "after a comma" claim. Both reject "capitals beyond the opener, I and names", same component and DOK 3. Honest enough; not a true twin. | none |
+| NOTE | 4-S03, S05, S06 stems | "A coach reads this draft aloud" and "Coach Davis reads ... aloud" describe a test of capital letters that cannot be heard. Harmless. | none |
+| NOTE | 4-S07 Part A options | "End it with an exclamation mark at the back" and "Move the word walk to the front of it" read oddly (length padding). | none |
+| NOTE | 4-C05/C10/S05/S10 why | The why repeats the key sentence twice ("The answer is X. X ...") and C09 why has `"3" My, we...` with no period. Cosmetic. | none |
+| NOTE | 4-C06 passage p1 sentence 8 | `after that, we skipped...` shows a correct small `we` after a comma in the visible draft while C10 (same set) asks about `After lunch, We`. Not stated, only modelled. | none |
+| NOTE | 4-C05 H3, P5, P3, T-level legacy | Legacy Together items P3 and P5 are kindergarten-level (`the bus came late today.`); not in the fifteen. Unchanged. | none |
+| NOTE | Learn It / Watch Me | Both Watch Mes model first word plus I plus "no change". They do not model a short form (needed for C01 row 5, C07, C15, S15), a word after a comma, or a name. Teach point 3 covers short forms in words. With the C10/S10 fix above, add the comma/name sentence to Teach and one Watch Me with a comma (for example "After lunch, Leo and I played catch."). | add |
+
+### Findings: L2
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| NOTE | 2-C12 `canss` | Not a word (see facts). The extra-s non-word pattern now appears six times (C03 `tabless`, C04 `bookmarkes`, S03 `ribbonss`, S04 `gamess`, S12 `guestes`, C12 `canss`) and hint 3 says "extra letter" on four of them, so an extra-letter option is always wrong. It is a real misspelling, so it is a fair distractor. | none |
+| NOTE | 2-C04/C12 and S04/S12 frame | Four dropdowns with the same logic (number or clue word, -s form, misspelled form). Carried from review 2; author-logged. Clue words differ (`three`, `a few`, `five`, `several`). | none |
+| NOTE | 2-C08 and S08 H3 | "A mark after the last letter would show ownership" describes `neighbors'` and `artists'`, not `house's` or `student's` (mark before the last letter). Reads fine to a child but is imprecise. | "A mark inside or at the end of the word would show ownership." |
+| NOTE | 2-P5 H3 | "Five and four both promise more than one" keeps the word `promise`, which review 1 asked to replace with "clue word" in the twins (P5 is Together, not a twin). | none |
+| NOTE | 2-S13 | Key `Each reader chose one book from the shelf.` is the longest option (46 vs 43 characters, one of two keys). | none |
+| NOTE | 2-S15 | `glass names a single cup` is loose (a glass is a drinking vessel) but fine for grade 3; Teach models `bus`. | none |
+| NOTE | 2-C05/C10, C11/C13 | Core x core overlap 0.23 and 0.21 on shared frames; keys and contexts differ. | none |
+| NOTE | Teach / Learn It | Teach covers clue words, the -s sound, the apostrophe and the `bus` exception; both Watch Mes are dropdown-style. The fifteen add match, ebsr, rule-is-wrong claims (C15/S15) and apostrophe reasoning (C10/S10); each rests on a sentence in Teach. | none |
+
+Strengths (L2): all 39 keys agreed blind; every hint 3 is true of the item (checked sentence by sentence, including S11 and C13); the passages stay within grade 3; the DOK 3 claim items (C09, C10, C15, S09, S10, S15) are sound and the apostrophe distractors are now backed by Teach.
+
+### L7 `testRev { A: "2" }` gate test (scratch copy)
+
+I copied the whole repo to `b7a4/scratch/` (the frozen tree was not touched) and ran `check-content.js --all` and `--release` in five states. The shipped `verification/assessment-versions.json` is the old v1 record ("previous hashing", no key text), so the first state is the real tree and the others reproduce the T4 history in the scratch copy.
+
+| State | `--all` | `--release` |
+|---|---|---|
+| Real tree as shipped (v1 record, rev "2" in the lesson) | PASS, 0 failures, 83 warnings, only the generic "version record uses the previous hashing" warning. The v1 record cannot see T4 text at all. | FAIL on the generic items only: lessons with no core, "version record uses the previous hashing", 250 ledger parts. 3 failures, none on L7. |
+| Scratch: T4 reverted to `guessed`, no testRev, `--record-versions --init` (v2 record, rev "1") | baseline | baseline |
+| A: current file (`imagined`, testRev "2") against that record | PASS; warning "testRev differs from the record for ...use-action-verbs:A (record rev 1, testRev 2). Run --record-versions" | FAIL on that line (5 failures with the generic ones) |
+| B: `imagined`, testRev removed | warning "1 check form changed materially ... with the same testRev ... Raise testRev" | same line as FAIL |
+| D: `imagined`, testRev "1" | the same material-change warning | the same FAIL |
+| E: A, then `--record-versions` | PASS, 82 warnings; record shows rev "2", history ["1","2"] | no L7 or versions failure; 2 failures left, both generic (no-core lessons, ledger) |
+
+So the gate now treats T4 properly: with testRev "2" the material-change failure is gone, and the only open item is the normal coordinator step of re-recording after the content settles (record rev "1" vs testRev "2" is a FAIL under `--release` until then; a rev is never reused and the history is kept). NOTE for the coordinator: because the shipped record is v1, the first `--record-versions` writes the v2 record with rev "2" and no history of the old text; if the old T4 attempts matter, record at the pre-edit commit first. This is the author's disclosed "coordinator step", no MUST.
+
+### Author-log accuracy (phase 4)
+
+True (reproduced): S11 hint 3 and hint 1; `canss` with hint 3 no longer printing the distractor; C09 and C10 redesign (stem-only, no passage), S09 and S10 as described; S08 hint 3 now names the Dan line; Teach point 3 teaches "short form"; twin overlap 0.203/0.209 (L2) and 0.192/0.209 (L4); `testRev: { A: "2" }` present and the record not re-recorded; `check-writing` 0/0 and `check-instructional-copy` 28 assertions; `canss` "unconfirmed in M-W" is stated honestly.
+
+False or overstated:
+1. "Set 2 redesigned so no item settles another": true for stems, prompts and options, but C09 hint 2 and S09 hint 2 state the sentence count, which equals the key (SHOULD above).
+2. "`check-content.js --all` ... currently reports one FAIL in a different batch, `SK-GUM5-1-S09`": in the frozen copy `--all` passes with 0 failures and no SK-GUM5 warning, so that line is stale (or already fixed upstream).
+3. "no uniquely longest key in new items": L4 C08 (32 vs 29) and L2 S13 (46 vs 43) each have the longest option as one of two keys. Not a giveaway, but the sentence is not exact.
+4. The log presents C10 and S10 as correct rules ("the word after a comma stays small unless it is I", "just the opener and the pronoun I begin big"). Both are incomplete (names); see the MUSTs.
+
+### What to do next
+
+1. Fix L4 C10 and S10 (MUST), and the four SHOULDs; re-run `check-content.js --all`, the twin overlap, and the browser run for L4 only.
+2. L2 is ready. L4 should be re-reviewed only for the C10/S10 text, C09/S09 hint 2, S13 slot 2 and the Teach sentence.
+3. Coordinator: re-record the version record (`--all --record-versions`) once the content settles, so the L7 T4 rev "2" is on the record.
