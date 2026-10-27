@@ -301,14 +301,14 @@ PP.addLesson({
             ],
             choices: [
               {
-                text: "follow",
+                text: "down",
                 correct: true
               },
               {
-                text: "slow"
+                text: "follow"
               },
               {
-                text: "down"
+                text: "slow"
               },
               {
                 text: "road"
@@ -429,11 +429,11 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "cabin",
+                text: "spice",
                 correct: true
               },
               {
-                text: "spice"
+                text: "cabin"
               },
               {
                 text: "coat"
@@ -774,11 +774,11 @@ PP.addLesson({
       like: [
         "SK-FP4a-C03"
       ],
-      prompt: "Use rhymes to decide how ow is said in each word.",
+      prompt: "Decide how ow is said in each word.",
       stem: [
         "A crowd saw a snowman by the brown window."
       ],
-      text: "Crowd rhymes with {0}. The end of window rhymes with {1}.",
+      text: "Crowd sounds like {0}. Window ends like {1}.",
       slots: [
         {
           options: [
@@ -829,11 +829,11 @@ PP.addLesson({
       ],
       choices: [
         {
-          text: "grows",
+          text: "flower",
           correct: true
         },
         {
-          text: "flower"
+          text: "grows"
         },
         {
           text: "narrow"
@@ -1008,17 +1008,17 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "camp",
+          text: "mice",
           correct: true
+        },
+        {
+          text: "camp"
         },
         {
           text: "bucket"
         },
         {
           text: "coin"
-        },
-        {
-          text: "mice"
         },
         {
           text: "crab"
@@ -1644,6 +1644,1265 @@ PP.addLesson({
       clue: "Clap the word and spell it one syllable at a time. Check each syllable against the syllable types you know.",
       why: "The answer is candle. It is can / dle: a closed syllable and then a consonant-le syllable, spelled d-l-e." }
   ],
+  /* B9:core:start */
+  /* Expansion 2026-10-22, batch B9 (Foundations). core: fifteen items in three sets of five; { ref } reuses a practice item. NEEDS INDEPENDENT REVIEW. Author log: docs/expansion-2026-10-22/batches/B9-author-log.md */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-FP4b-C01",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "How many syllables are in the word butterfly?",
+            choices: [
+              {
+                text: "three",
+                correct: true
+              },
+              {
+                text: "one"
+              },
+              {
+                text: "two"
+              },
+              {
+                text: "four"
+              }
+            ],
+            clue: "Say the word slowly and clap once for each beat.",
+            hints: [
+              "Say the word slowly and clap once for each beat.",
+              "Find each vowel sound in the word. Each vowel sound is one syllable.",
+              "Say but, then ter, then fly, and count how many parts you said."
+            ],
+            how: [
+              "Clap the word: but-ter-fly.",
+              "Each clap is one syllable.",
+              "There are three claps, so butterfly has three syllables."
+            ],
+            misconception: "A common mix-up is counting letters or only the first parts. Count the vowel sounds you hear.",
+            why: "The answer is \"three.\" Butterfly has three beats: but-ter-fly. Each beat has one vowel sound."
+          },
+          {
+            id: "SK-FP4b-C02",
+            type: "order",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Put the steps in order for splitting a word that has two consonants between the vowels.",
+            steps: [
+              "Find the vowels in the word.",
+              "Look at the consonants between two vowels.",
+              "Split the word between the two consonants.",
+              "Read each syllable, then blend them."
+            ],
+            clue: "Think about what you look for first in a long word.",
+            hints: [
+              "Think about what you look for first in a long word.",
+              "Think about what you must find before you can decide where to split.",
+              "The last step puts the parts back together."
+            ],
+            how: [
+              "First, find the vowels in the word.",
+              "Second, look at the consonants between two vowels.",
+              "Third, split between the two consonants.",
+              "Fourth, read each syllable, then blend them."
+            ],
+            misconception: "A common mix-up is splitting before finding the vowels. Find the vowels first.",
+            why: "The order is: find the vowels in the word; look at the consonants between two vowels; split the word between the two consonants; read each syllable, then blend them."
+          },
+          {
+            id: "SK-FP4b-C03",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Choose the word that has three syllables.",
+            stem: [
+              "The tiny puppy ate a banana in the kitchen."
+            ],
+            options: [
+              "puppy",
+              "banana",
+              "kitchen",
+              "ate"
+            ],
+            answer: [
+              1
+            ],
+            pick: 1,
+            clue: "Say each word slowly and clap the beats.",
+            hints: [
+              "Say each word slowly and clap the beats.",
+              "Count the vowel sounds you hear in each word.",
+              "Clap puppy and kitchen. Ask how many beats each word has."
+            ],
+            how: [
+              "Clap each word.",
+              "Puppy has two claps and kitchen has two claps. Ate has one.",
+              "Banana has three claps: ba-na-na."
+            ],
+            misconception: "A common mix-up is choosing the longest-looking word. Count the beats instead of the letters.",
+            why: "The answer is \"banana.\" It has three beats: ba-na-na. Puppy and kitchen have two syllables, and ate has one."
+          },
+          {
+            id: "SK-FP4b-C04",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Choose how each word splits into syllables.",
+            text: "Pocket splits as {0}. Basin splits as {1}.",
+            slots: [
+              {
+                options: [
+                  "pock / et",
+                  "po / cket",
+                  "pocke / t"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "bas / in",
+                  "ba / sin",
+                  "basi / n"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Find the vowels, then look at the consonants between them.",
+            hints: [
+              "Find the vowels, then look at the consonants between them.",
+              "Try to split so that each part makes a real syllable you can say.",
+              "For basin, try splitting before the s first. Say it and ask if it is a real word."
+            ],
+            how: [
+              "Pocket has two consonants, c and k, between the vowels, so split between them: pock / et.",
+              "Basin has one consonant between the vowels. Splitting before it gives ba / sin, a word you know.",
+              "The other splits leave parts that cannot be said."
+            ],
+            misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
+            why: "Pocket splits as pock / et, with the split between the two consonants. Basin splits as ba / sin, with the split before the one consonant. The other choices make parts that are not syllables."
+          },
+          {
+            ref: "SK-FP4b-P5"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-FP4b-C05",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Which word has an r-controlled syllable?",
+            choices: [
+              {
+                text: "morning",
+                correct: true
+              },
+              {
+                text: "window"
+              },
+              {
+                text: "tablet"
+              },
+              {
+                text: "going"
+              }
+            ],
+            clue: "An r-controlled syllable has a vowel followed by r.",
+            hints: [
+              "An r-controlled syllable has a vowel followed by r.",
+              "Split each word into syllables. Look for a vowel and an r together.",
+              "Split window and tablet into syllables and look at each part."
+            ],
+            how: [
+              "Split each word: morn / ing, win / dow, tab / let, go / ing.",
+              "Look for a vowel followed by r. Morn has or.",
+              "The other words have no vowel followed by r."
+            ],
+            misconception: "A common mix-up is looking for the letter r anywhere. The r has to follow the vowel in a syllable.",
+            why: "The answer is \"morning.\" The first syllable, morn, has a vowel followed by r, which makes it r-controlled. Window, tablet and going have no vowel followed by r."
+          },
+          {
+            id: "SK-FP4b-C06",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Which TWO words have a vowel team syllable?",
+            pick: 2,
+            choices: [
+              {
+                text: "rainbow",
+                correct: true
+              },
+              {
+                text: "teacher",
+                correct: true
+              },
+              {
+                text: "chipmunk"
+              },
+              {
+                text: "kitten"
+              },
+              {
+                text: "robot"
+              }
+            ],
+            clue: "A vowel team is two letters that make one vowel sound.",
+            hints: [
+              "A vowel team is two letters that make one vowel sound.",
+              "Split each word into syllables. Look for two vowel letters that work together.",
+              "Look at kitten. Does any syllable have two vowels that make one sound?"
+            ],
+            how: [
+              "Split each word: rain / bow, teach / er, chip / munk, kit / ten, ro / bot.",
+              "Rain has ai and teach has ea, so each is a vowel team.",
+              "Chipmunk, kitten and robot have only single vowels in their syllables."
+            ],
+            misconception: "A common mix-up is choosing words with two vowels anywhere. A vowel team sits in one syllable.",
+            why: "The answers are \"rainbow\" and \"teacher.\" Rain has the team ai, and teach has the team ea. Chipmunk, kitten and robot have no vowel team."
+          },
+          {
+            id: "SK-FP4b-C07",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Choose the kind of syllable for each part of sunshine.",
+            text: "In sunshine, sun is a {0} syllable, and shine is a {1} syllable.",
+            slots: [
+              {
+                options: [
+                  "closed",
+                  "open",
+                  "vowel-consonant-e"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "closed",
+                  "vowel-consonant-e",
+                  "open"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Split the word into two syllables. Then look at how each one ends.",
+            hints: [
+              "Split the word into two syllables. Then look at how each one ends.",
+              "Look at each syllable. Ask whether it ends with a consonant, a vowel, or a silent e.",
+              "Start with shine. Look for a silent e at the end."
+            ],
+            how: [
+              "Split the word: sun / shine.",
+              "Sun ends with a consonant, so it is closed.",
+              "Shine has a vowel, a consonant and a silent e, so it is vowel-consonant-e."
+            ],
+            misconception: "A common mix-up is giving both syllables the same kind. Look at each syllable on its own.",
+            why: "Sun is a closed syllable, because it ends with a consonant. Shine is a vowel-consonant-e syllable, because it has i, n and a silent e. Open does not fit either one."
+          },
+          {
+            id: "SK-FP4b-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Choose the word whose first syllable is closed, so its vowel is short.",
+            stem: [
+              "Mia put a pocket, a tiny frog and a paper cup in a bag."
+            ],
+            options: [
+              "pocket",
+              "tiny",
+              "paper",
+              "sky"
+            ],
+            answer: [
+              0
+            ],
+            pick: 1,
+            clue: "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
+            hints: [
+              "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
+              "Split each word into syllables. Look at the end of the first one.",
+              "Split tiny and paper and look at the end of each first syllable."
+            ],
+            how: [
+              "Split each word: pock / et, ti / ny, pa / per, sky.",
+              "Pock ends with a consonant, so it is closed and the o is short.",
+              "Ti, pa and sky end with vowels, so they are open."
+            ],
+            misconception: "A common mix-up is choosing the word with a short-looking vowel. Check how the first syllable ends.",
+            why: "The answer is \"pocket.\" The first syllable, pock, ends with a consonant, so it is closed. Tiny, paper and sky have open first syllables."
+          },
+          {
+            ref: "SK-FP4b-P6"
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-FP4b-C09",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Which word has two consonants between its vowels, so it splits between them?",
+            choices: [
+              {
+                text: "pencil",
+                correct: true
+              },
+              {
+                text: "paper"
+              },
+              {
+                text: "tiger"
+              },
+              {
+                text: "lemon"
+              }
+            ],
+            clue: "Find the vowels in each word. Then look at what stands between them.",
+            hints: [
+              "Find the vowels in each word. Then look at what stands between them.",
+              "Count the consonants between the first two vowels in each word.",
+              "Look at the letters between the first two vowels in paper and tiger."
+            ],
+            how: [
+              "Find the first two vowels in each word.",
+              "In pencil, n and c stand between e and i, so it splits pen / cil.",
+              "Paper, tiger and lemon have one consonant between the vowels."
+            ],
+            misconception: "A common mix-up is counting all the consonants. Count only those between the vowels.",
+            why: "The answer is \"pencil.\" Two consonants, n and c, stand between e and i, so it splits pen / cil. Paper, tiger and lemon have one consonant between the vowels."
+          },
+          {
+            id: "SK-FP4b-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Zed split river as ri / ver and read it RYE-ver. What should Zed try next?",
+            choices: [
+              {
+                text: "Split after the v, as riv / er, so the i is short.",
+                correct: true
+              },
+              {
+                text: "Keep ri / ver, because the first syllable should always be open."
+              },
+              {
+                text: "Split before the r, as r / iver, so the word starts with a consonant."
+              },
+              {
+                text: "Skip the last syllable, because it is the hardest part of the word."
+              }
+            ],
+            clue: "Think about what Zed does when the first try does not make a real word.",
+            hints: [
+              "Think about what Zed does when the first try does not make a real word.",
+              "Say RYE-ver and then think of a word you know. Compare them.",
+              "Each choice changes the split or the word. Check which choice gives parts you can say."
+            ],
+            how: [
+              "RYE-ver is not the word for a stream of water.",
+              "When splitting before the consonant does not make a real word, try splitting after it.",
+              "Riv / er has a closed first syllable, so the i is short, and it is a real word."
+            ],
+            misconception: "A common mix-up is keeping the first split. If it is not a real word, try the other split.",
+            why: "The answer is \"Split after the v, as riv / er, so the i is short.\" RYE-ver is not the word, so Zed should try the other split. Keeping ri / ver, splitting before the r, or skipping a syllable does not give river."
+          },
+          {
+            id: "SK-FP4b-C11",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Match each word to the kind of syllable that ends it.",
+            cols: [
+              "consonant-le",
+              "vowel-consonant-e",
+              "vowel team"
+            ],
+            rows: [
+              {
+                text: "handle",
+                answer: 0
+              },
+              {
+                text: "mistake",
+                answer: 1
+              },
+              {
+                text: "seaweed",
+                answer: 2
+              },
+              {
+                text: "giggle",
+                answer: 0
+              }
+            ],
+            clue: "Look at how each word ends. Split off the last syllable.",
+            hints: [
+              "Look at how each word ends. Split off the last syllable.",
+              "Ask whether the last syllable ends in a consonant plus le, a silent e, or two vowels that work together.",
+              "Start with seaweed. Look at the last syllable."
+            ],
+            how: [
+              "Split off the last syllable of each word.",
+              "Handle ends in dle and giggle ends in gle, both consonant-le.",
+              "Mistake ends with a, k, e, and seaweed ends with the team ee."
+            ],
+            misconception: "A common mix-up is matching words that end with e to the same kind. Look at the whole last syllable.",
+            why: "Handle and giggle end with consonant-le syllables. Mistake ends with a vowel-consonant-e syllable. Seaweed ends with the vowel team ee."
+          },
+          {
+            id: "SK-FP4b-C12",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.b"
+            ],
+            passages: [],
+            prompt: "Choose the correct spelling for each blank.",
+            text: "A monkey ate a {0} in the {1}.",
+            slots: [
+              {
+                options: [
+                  "pumpkin",
+                  "pumkin",
+                  "pumpkn"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "jungel",
+                  "jungle",
+                  "jungul"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Say each word one syllable at a time. Write what you hear.",
+            hints: [
+              "Say each word one syllable at a time. Write what you hear.",
+              "Check that each syllable has a vowel. Check how the last syllable is spelled.",
+              "Start with the second blank. Think of the letters that spell the end of table and candle."
+            ],
+            how: [
+              "Pumpkin has two syllables: pump / kin. Each syllable has a vowel.",
+              "Jungle ends with a consonant plus le, like table.",
+              "The other spellings leave out a letter or end the word the wrong way."
+            ],
+            misconception: "A common mix-up is spelling the word as it sounds. Check each syllable and the ending.",
+            why: "The answers are \"pumpkin\" and \"jungle.\" Pumpkin is spelled pump and kin. Jungle ends with the consonant-le syllable gle. Pumkin, pumpkn, jungel and jungul are not how the words are spelled."
+          },
+          {
+            ref: "SK-FP4b-P7"
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-FP4b-S01",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C01"
+      ],
+      prompt: "Which animal name has four syllables?",
+      choices: [
+        {
+          text: "alligator",
+          correct: true
+        },
+        {
+          text: "kangaroo"
+        },
+        {
+          text: "chimpanzee"
+        },
+        {
+          text: "giraffe"
+        }
+      ],
+      clue: "Say each word slowly and clap once for each beat.",
+      hints: [
+        "Say each word slowly and clap once for each beat.",
+        "Find each vowel sound in the word. Each vowel sound is one syllable.",
+        "Clap kangaroo and giraffe. Compare how many beats each has."
+      ],
+      how: [
+        "Clap each word.",
+        "Giraffe has two claps. Kangaroo and chimpanzee have three claps each.",
+        "Alligator has four claps: al-li-ga-tor."
+      ],
+      misconception: "A common mix-up is choosing the longest word. Count the beats.",
+      why: "The answer is \"alligator.\" It has four beats: al-li-ga-tor. Kangaroo and chimpanzee have three syllables, and giraffe has two."
+    },
+    {
+      id: "SK-FP4b-S02",
+      type: "order",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C02"
+      ],
+      prompt: "Arrange what you do to read a long word one part at a time.",
+      steps: [
+        "Cover everything except the first syllable.",
+        "Read that syllable out loud.",
+        "Slide your finger to uncover the next syllable.",
+        "Blend all the syllables into one word."
+      ],
+      clue: "Think about what you cover or show before you read.",
+      hints: [
+        "Think about what you cover or show before you read.",
+        "Think about what you do after reading a part and before the next part.",
+        "The last step joins all the parts."
+      ],
+      how: [
+        "First, cover everything except the first syllable.",
+        "Second, read that syllable.",
+        "Third, slide your finger to the next syllable.",
+        "Fourth, blend all the syllables."
+      ],
+      misconception: "A common mix-up is trying to read the whole word at once. Go one part at a time.",
+      why: "The order is: cover everything except the first syllable; read that syllable out loud; slide your finger to uncover the next syllable; blend all the syllables into one word."
+    },
+    {
+      id: "SK-FP4b-S03",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C03"
+      ],
+      prompt: "Tap the word with three syllables.",
+      stem: [
+        "The farmer sold a melon and a tomato at the stand."
+      ],
+      options: [
+        "farmer",
+        "melon",
+        "tomato",
+        "stand"
+      ],
+      answer: [
+        2
+      ],
+      pick: 1,
+      clue: "Say each word slowly and clap the beats.",
+      hints: [
+        "Say each word slowly and clap the beats.",
+        "Count the vowel sounds you hear in each word.",
+        "Clap farmer and melon. Ask how many beats each word has."
+      ],
+      how: [
+        "Clap each word.",
+        "Farmer and melon have two claps. Stand has one.",
+        "Tomato has three claps: to-ma-to."
+      ],
+      misconception: "A common mix-up is trusting how long a word looks. Count the beats.",
+      why: "The answer is \"tomato.\" It has three beats: to-ma-to. Farmer and melon have two syllables, and stand has one."
+    },
+    {
+      id: "SK-FP4b-S04",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C04"
+      ],
+      prompt: "Pick the split that makes real syllables.",
+      text: "Magnet splits as {0}. Cover splits as {1}.",
+      slots: [
+        {
+          options: [
+            "ma / gnet",
+            "mag / net",
+            "magn / et"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "co / ver",
+            "cov / er",
+            "c / over"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Find the vowels, then look at the consonants between them.",
+      hints: [
+        "Find the vowels, then look at the consonants between them.",
+        "Try a split and say each part. Check whether the parts are real syllables.",
+        "For cover, try splitting before the v first. Say it and ask if it is a real word."
+      ],
+      how: [
+        "Magnet has two consonants, g and n, between the vowels, so split between them: mag / net.",
+        "Cover has one consonant between the vowels. Splitting before it gives co / ver, a word you know.",
+        "The other splits leave parts that cannot be said."
+      ],
+      misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
+      why: "Magnet splits as mag / net, between the two consonants. Cover splits as co / ver, before the one consonant. The other choices make parts that are not syllables."
+    },
+    {
+      id: "SK-FP4b-S05",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C05"
+      ],
+      prompt: "Pick the word with a syllable that has a vowel followed by r.",
+      choices: [
+        {
+          text: "carpet",
+          correct: true
+        },
+        {
+          text: "puppy"
+        },
+        {
+          text: "table"
+        },
+        {
+          text: "float"
+        }
+      ],
+      clue: "Think about which letters sit together in a syllable.",
+      hints: [
+        "Think about which letters sit together in a syllable.",
+        "Split each word into syllables. Look for a vowel and an r together.",
+        "Split puppy and table into syllables and look at each part."
+      ],
+      how: [
+        "Split each word: car / pet, pup / py, ta / ble, float.",
+        "Look for a vowel followed by r. Car has ar.",
+        "The other words have no vowel followed by r."
+      ],
+      misconception: "A common mix-up is looking for r anywhere in the word. The r has to follow the vowel in a syllable.",
+      why: "The answer is \"carpet.\" The first syllable, car, has a vowel followed by r, so it is r-controlled. Puppy, table and float have no vowel followed by r."
+    },
+    {
+      id: "SK-FP4b-S06",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C06"
+      ],
+      prompt: "Find the pair where two vowel letters work as one sound inside a part.",
+      pick: 2,
+      choices: [
+        {
+          text: "mailbox",
+          correct: true
+        },
+        {
+          text: "seaside",
+          correct: true
+        },
+        {
+          text: "sandwich"
+        },
+        {
+          text: "cactus"
+        },
+        {
+          text: "pencil"
+        }
+      ],
+      clue: "Two letters that work together make one vowel sound.",
+      hints: [
+        "Two letters that work together make one vowel sound.",
+        "Split each word into syllables. Look for two vowel letters side by side.",
+        "Look at sandwich. Does any syllable have two vowels working together?"
+      ],
+      how: [
+        "Split each word: mail / box, sea / side, sand / wich, cac / tus, pen / cil.",
+        "Mail has ai and sea has ea, so each has a vowel team.",
+        "Sandwich, cactus and pencil have only single vowels in their syllables."
+      ],
+      misconception: "A common mix-up is choosing words with two vowels anywhere. A vowel team sits in one syllable.",
+      why: "The answers are \"mailbox\" and \"seaside.\" Mail has the team ai, and sea has the team ea. Sandwich, cactus and pencil have no vowel team."
+    },
+    {
+      id: "SK-FP4b-S07",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C07"
+      ],
+      prompt: "Tell how the two parts of pancake are built.",
+      text: "Pan {0}, and cake {1}.",
+      slots: [
+        {
+          options: [
+            "ends with a vowel",
+            "stops on a plain letter",
+            "has two vowels in a row"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "stops on a plain letter",
+            "has two vowels in a row",
+            "finishes with a silent e"
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Split the word into two parts. Then look at how each part ends.",
+      hints: [
+        "Split the word into two parts. Then look at how each part ends.",
+        "Look at the last letters of each part. Ask whether they are a consonant, a vowel team, or a silent e.",
+        "Start with cake. Look at its last letter."
+      ],
+      how: [
+        "Split the word: pan / cake.",
+        "Pan stops on a plain consonant letter, so it is closed.",
+        "Cake has a vowel, a consonant and a silent e, so it finishes with a silent e."
+      ],
+      misconception: "A common mix-up is giving both parts the same build. Look at each part on its own.",
+      why: "Pan stops on a plain letter, a consonant, so it is a closed syllable. Cake finishes with a silent e, so it is a vowel-consonant-e syllable. Neither part has two vowels in a row."
+    },
+    {
+      id: "SK-FP4b-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C08"
+      ],
+      prompt: "Tap the word that starts with a closed syllable.",
+      stem: [
+        "Lee drew a winter scarf, a baby, a silent clown and a hotel."
+      ],
+      options: [
+        "winter",
+        "baby",
+        "silent",
+        "hotel"
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
+      hints: [
+        "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
+        "Split each word into syllables. Look at the end of the first one.",
+        "Split baby and silent and look at the end of each first syllable."
+      ],
+      how: [
+        "Split each word: win / ter, ba / by, si / lent, ho / tel.",
+        "Win ends with a consonant, so it is closed.",
+        "Ba, si and ho end with vowels, so they are open."
+      ],
+      misconception: "A common mix-up is choosing the first word. Check how the first syllable ends.",
+      why: "The answer is \"winter.\" The first syllable, win, ends with a consonant, so it is closed. Baby, silent and hotel start with open syllables."
+    },
+    {
+      id: "SK-FP4b-S09",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C09"
+      ],
+      prompt: "Pick the word with a pair of consonants in its middle, where it gets cut.",
+      choices: [
+        {
+          text: "mitten",
+          correct: true
+        },
+        {
+          text: "motel"
+        },
+        {
+          text: "cobra"
+        },
+        {
+          text: "silent"
+        }
+      ],
+      clue: "Find the vowels in each word. Then look at what stands between them.",
+      hints: [
+        "Find the vowels in each word. Then look at what stands between them.",
+        "Look at the letters between the first two vowels in each word.",
+        "Look at the letters between the first two vowels in cobra and silent."
+      ],
+      how: [
+        "Find the first two vowels in each word.",
+        "In mitten, t and t stand between i and e, so it splits mit / ten.",
+        "Motel, cobra and silent have one consonant between the first two vowels."
+      ],
+      misconception: "A common mix-up is counting every consonant. Count only those between the vowels.",
+      why: "The answer is \"mitten.\" Two consonants, t and t, stand between i and e, so it splits mit / ten. Motel, cobra and silent have one consonant between the first two vowels."
+    },
+    {
+      id: "SK-FP4b-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C10"
+      ],
+      prompt: "LYE-mit is not a real word. How can Ana fix her reading of li / mit?",
+      choices: [
+        {
+          text: "Say lim / it with a short i.",
+          correct: true
+        },
+        {
+          text: "Say li / mit again, but louder."
+        },
+        {
+          text: "Cut off one letter and try again."
+        },
+        {
+          text: "Guess the last part and move on."
+        }
+      ],
+      clue: "Think about what Ana does when the first try is not a real word.",
+      hints: [
+        "Think about what Ana does when the first try is not a real word.",
+        "Say LYE-mit out loud. Ask whether it is a word you know.",
+        "Each choice changes the split or the word. Check which one gives parts you can say."
+      ],
+      how: [
+        "LYE-mit is not the word for a top amount.",
+        "When splitting before the consonant does not make a real word, try splitting after it.",
+        "Lim / it has a closed first syllable, so the i is short, and it is a real word."
+      ],
+      misconception: "A common mix-up is keeping the first split. If it is not a real word, try the other split.",
+      why: "The answer is \"Say lim / it with a short i.\" LYE-mit is not a word, so Ana should try the other split. The other choices do not give limit."
+    },
+    {
+      id: "SK-FP4b-S11",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C11"
+      ],
+      prompt: "Sort each word by how its last syllable is built.",
+      cols: [
+        "-le ending",
+        "silent e ending",
+        "two-vowel ending"
+      ],
+      rows: [
+        {
+          text: "bottle",
+          answer: 0
+        },
+        {
+          text: "complete",
+          answer: 1
+        },
+        {
+          text: "raincoat",
+          answer: 2
+        },
+        {
+          text: "middle",
+          answer: 0
+        }
+      ],
+      clue: "Look at how each word ends. Split off the last syllable.",
+      hints: [
+        "Look at how each word ends. Split off the last syllable.",
+        "Ask whether the last syllable has a consonant plus le, a silent e, or two vowels side by side.",
+        "Start with raincoat. Look at the last syllable."
+      ],
+      how: [
+        "Split off the last syllable of each word.",
+        "Bottle ends in tle and middle ends in dle, both consonant-le.",
+        "Complete ends with a silent e, and raincoat ends with the team oa."
+      ],
+      misconception: "A common mix-up is matching words that end with e to the same kind. Look at the whole last syllable.",
+      why: "Bottle and middle end with consonant-le syllables. Complete ends with a vowel-consonant-e syllable. Raincoat ends with the vowel team oa."
+    },
+    {
+      id: "SK-FP4b-S12",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-C12"
+      ],
+      prompt: "Which spellings finish the sentence?",
+      text: "A {0} sat in the {1}.",
+      slots: [
+        {
+          options: [
+            "kitten",
+            "kiten",
+            "kittn"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "padle",
+            "paddel",
+            "paddle"
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Say each word one syllable at a time. Write what you hear.",
+      hints: [
+        "Say each word one syllable at a time. Write what you hear.",
+        "Check that each syllable has a vowel. Check how the last syllable is spelled.",
+        "Start with the second blank. Think of the letters that end words like table."
+      ],
+      how: [
+        "Kitten has two syllables: kit / ten. Each has a vowel.",
+        "Paddle ends with a consonant plus le.",
+        "The other spellings leave out a letter or end the word the wrong way."
+      ],
+      misconception: "A common mix-up is spelling the word as it sounds. Check each syllable and the ending.",
+      why: "The answers are \"kitten\" and \"paddle.\" Kitten is spelled kit and ten. Paddle ends with the consonant-le syllable dle. Kiten, kittn, padle and paddel are not how the words are spelled."
+    },
+    {
+      id: "SK-FP4b-S13",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-P5"
+      ],
+      prompt: "Where does each word get cut? Match.",
+      cols: [
+        "ahead of the middle letter",
+        "behind the middle letter"
+      ],
+      rows: [
+        {
+          text: "pupil",
+          answer: 0
+        },
+        {
+          text: "melon",
+          answer: 1
+        },
+        {
+          text: "frozen",
+          answer: 0
+        },
+        {
+          text: "visit",
+          answer: 1
+        }
+      ],
+      clue: "Each word has one consonant between two vowels. Try splitting before it first.",
+      hints: [
+        "Each word has one consonant between two vowels. Try splitting before it first.",
+        "Say each word both ways. Ask which split gives a real word.",
+        "Start with visit. Say vi / sit, then say vis / it."
+      ],
+      how: [
+        "Try splitting before the consonant first.",
+        "Pu / pil and fro / zen are real words, so they split before the consonant.",
+        "Vi / sit is not the word, so visit splits vis / it. Melon splits mel / on."
+      ],
+      misconception: "A common mix-up is always splitting the same way. Test both splits and keep the real word.",
+      why: "Pupil and frozen split before the consonant: pu / pil and fro / zen. Melon and visit split after it: mel / on and vis / it."
+    },
+    {
+      id: "SK-FP4b-S14",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-P6"
+      ],
+      prompt: "Choose two words whose last syllable is built like table.",
+      pick: 2,
+      choices: [
+        {
+          text: "kettle",
+          correct: true
+        },
+        {
+          text: "cattle",
+          correct: true
+        },
+        {
+          text: "kennel"
+        },
+        {
+          text: "panel"
+        },
+        {
+          text: "hotel"
+        }
+      ],
+      clue: "Look at how each word ends. Look at the last three letters.",
+      hints: [
+        "Look at how each word ends. Look at the last three letters.",
+        "Say each word. Ask whether the end is a consonant plus le.",
+        "Check hotel and panel. Do they end in a consonant plus le?"
+      ],
+      how: [
+        "Look at the last three letters of each word.",
+        "Kettle ends in tle, and cattle ends in tle. Both are consonant-le.",
+        "Kennel, panel and hotel end in el, not a consonant plus le."
+      ],
+      misconception: "A common mix-up is choosing words that end with l. The ending has to be a consonant plus le.",
+      why: "The answers are \"kettle\" and \"cattle.\" Both end with the consonant-le syllable tle. Kennel, panel and hotel end in el."
+    },
+    {
+      id: "SK-FP4b-S15",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.b"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4b-P7"
+      ],
+      prompt: "Which spelling goes in the blank?",
+      text: "Mom threaded the {0} and sewed on a button.",
+      slots: [
+        {
+          options: [
+            "needel",
+            "needle",
+            "neadle"
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Say the word that fits the sentence. Then picture how it looks.",
+      hints: [
+        "Say the word that fits the sentence. Then picture how it looks.",
+        "Check how the last syllable is spelled.",
+        "Think about the letters that end words like table and little."
+      ],
+      how: [
+        "Read the sentence and think of a tool that holds thread.",
+        "That word ends with a consonant plus le.",
+        "It is spelled n-e-e-d-l-e."
+      ],
+      misconception: "A common mix-up is spelling the end as it sounds. Consonant-le is spelled with le.",
+      why: "The answer is needle. The tool ends with the consonant-le syllable dle, and the first syllable uses the team ee. Needel and neadle are not how the word is spelled."
+    }
+  ],
+  addons: {
+    "SK-FP4b-P1": {
+      hints: [
+        "Find the vowels in the word. Each vowel sound is one syllable.",
+        "Try each split and say the parts. Check that each part can be said.",
+        "Look at the letters between the vowels. Decide where one syllable should end."
+      ],
+      how: [
+        "Find the vowels in fantastic.",
+        "Split between the two consonants where you can: fan / tas / tic.",
+        "The other splits leave parts that cannot be said."
+      ],
+      misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable."
+    },
+    "SK-FP4b-P2": {
+      hints: [
+        "Look at each word. Ask how its vowel sound is spelled.",
+        "Ask whether the word has an open vowel, a silent e, two vowels together, or a vowel plus r.",
+        "Start with fork. Look at the letters after the vowel."
+      ],
+      how: [
+        "Look at the vowel sound in each word.",
+        "She ends with a vowel, so it is open. Bike has a silent e.",
+        "Coat has the team oa, and fork has the r after o."
+      ],
+      misconception: "A common mix-up is matching on the first letter. Look at how the vowel sound is spelled."
+    },
+    "SK-FP4b-P3": {
+      hints: [
+        "An open syllable ends with a vowel, so the vowel says its name.",
+        "Split each word. Look at the end of the first syllable.",
+        "Split rabbit and picnic and look at how each first syllable ends."
+      ],
+      how: [
+        "Split each word: spi / der, rab / bit, pic / nic, can / dle.",
+        "Spi ends with a vowel, so it is open.",
+        "The first syllables of the other words end with consonants."
+      ],
+      misconception: "A common mix-up is choosing a word with a long vowel anywhere. Check the first syllable."
+    },
+    "SK-FP4b-P4": {
+      hints: [
+        "Say the whole word slowly. Listen for each part.",
+        "Say the first part, then the next part. Put them together as you say them.",
+        "Say the word again at the end to check it."
+      ],
+      how: [
+        "Say remember slowly: re-mem-ber.",
+        "Put re first, then mem, then ber.",
+        "Say the whole word to check."
+      ],
+      misconception: "A common mix-up is putting the parts in the wrong order. Say the whole word to check."
+    },
+    "SK-FP4b-P5": {
+      hints: [
+        "Each word has one consonant between two vowels. Try splitting before it first.",
+        "Say each word both ways. Ask which split gives a real word.",
+        "Start with planet. Say pla / net, then say plan / et."
+      ],
+      how: [
+        "Try splitting before the consonant first.",
+        "Mu / sic and tu / lip are real words, so they split before the consonant.",
+        "Wa / gon is not the word, so wagon splits wag / on. Planet splits plan / et."
+      ],
+      misconception: "A common mix-up is always splitting the same way. Test both splits and keep the real word."
+    },
+    "SK-FP4b-P6": {
+      hints: [
+        "Look at how each word ends. Look at the last three letters.",
+        "Say each word. Ask whether the end is a consonant plus le.",
+        "Check tunnel and sunset. Do they end in a consonant plus le?"
+      ],
+      how: [
+        "Look at the last three letters of each word.",
+        "Bubble ends in ble, and turtle ends in tle. Both are consonant-le.",
+        "Tunnel, travel and sunset do not end in a consonant plus le."
+      ],
+      misconception: "A common mix-up is choosing words that end with l. The ending has to be a consonant plus le."
+    },
+    "SK-FP4b-P7": {
+      hints: [
+        "Say the word that fits the sentence. Then picture how it looks.",
+        "Check how the last syllable is spelled.",
+        "Think about the letters that end words like table and little."
+      ],
+      how: [
+        "Read the sentence and think of what you blow out on a cake.",
+        "That word ends with a consonant plus le.",
+        "It is spelled c-a-n-d-l-e."
+      ],
+      misconception: "A common mix-up is spelling the end as it sounds. Consonant-le is spelled with le."
+    }
+  },
+  /* B9:core:end */
   test: [
     { id: "SK-FP4b-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "How do you split the word September into syllables?",
@@ -1859,6 +3118,1284 @@ PP.addLesson({
       clue: "Cover the extra part of each word and read the base word. Then think about what the part you covered adds to it. A column can be used more than once.",
       why: "Disobey means not obey, and unfair means not fair, so dis- and un- mean not. Joyful means full of joy, so -ful means full of. Fearless means without fear, so -less means without." }
   ],
+  /* B9:core:start */
+  /* Expansion 2026-10-22, batch B9 (Foundations). core: fifteen items in three sets of five; { ref } reuses a practice item. NEEDS INDEPENDENT REVIEW. Author log: docs/expansion-2026-10-22/batches/B9-author-log.md */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-FP4c-C01",
+            type: "dropdown",
+            points: 2,
+            dok: 1,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Finish each meaning.",
+            text: "Mislabel means to label {0}. Relabel means to label {1}.",
+            slots: [
+              {
+                options: [
+                  "wrongly",
+                  "again",
+                  "before"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "wrongly",
+                  "before",
+                  "again"
+                ],
+                answer: 2
+              }
+            ],
+            clue: "Cover the front part of each word. Think about what the front part adds.",
+            hints: [
+              "Cover the front part of each word. Think about what the front part adds.",
+              "Say the base word. Then think about the meaning of each front part.",
+              "Start with relabel. Think about what re- means."
+            ],
+            how: [
+              "Cover the front part of each word. Label is left in both.",
+              "Mis- means wrongly, so mislabel means to label wrongly.",
+              "Re- means again, so relabel means to label again."
+            ],
+            misconception: "A common mix-up is giving both words the same meaning. Mis- and re- are different prefixes.",
+            why: "Mislabel means to label wrongly, because mis- means wrongly. Relabel means to label again, because re- means again. Before is the meaning of pre-."
+          },
+          {
+            id: "SK-FP4c-C02",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Which meaning fits prepaid?",
+            stem: [
+              "We prepaid for our tickets, so we did not pay at the door."
+            ],
+            choices: [
+              {
+                text: "paid before",
+                correct: true
+              },
+              {
+                text: "paid again"
+              },
+              {
+                text: "paid the wrong amount"
+              },
+              {
+                text: "did not pay"
+              }
+            ],
+            clue: "Cover the front part of the word and find the base word. Then use the sentence.",
+            hints: [
+              "Cover the front part of the word and find the base word. Then use the sentence.",
+              "Read the whole sentence. Ask when the paying happened compared with the door.",
+              "Think about what each front part means. Then check each meaning in the sentence."
+            ],
+            how: [
+              "Cover pre-. Paid is left, so the base word is paid.",
+              "Pre- means before.",
+              "The family paid before they got to the door, so prepaid means paid before."
+            ],
+            misconception: "A common mix-up is choosing a meaning that does not fit the sentence. Check the meaning in the sentence.",
+            why: "The answer is \"paid before.\" Pre- means before, and the sentence says they did not pay at the door. Paid again and the wrong amount do not fit, and the family did pay."
+          },
+          {
+            id: "SK-FP4c-C03",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Choose the word that has a prefix meaning not.",
+            stem: [
+              "The uncle was unable to open the door."
+            ],
+            options: [
+              "uncle",
+              "unable",
+              "open",
+              "door"
+            ],
+            answer: [
+              1
+            ],
+            pick: 1,
+            clue: "A prefix is a word part at the front.",
+            hints: [
+              "A prefix is a word part at the front.",
+              "Cover the un in each word. Ask whether a real word is left and whether un means not.",
+              "Cover un in uncle. Is a word left?"
+            ],
+            how: [
+              "Cover un in unable. Able is left, so un- is a prefix meaning not.",
+              "Cover un in uncle. Cle is left, which is not a word, so the un is not a prefix.",
+              "Open and door do not start with un."
+            ],
+            misconception: "A common mix-up is choosing every word that starts with un. A real prefix leaves a real word.",
+            why: "The answer is \"unable.\" Cover un and able is left, so un- means not. In uncle, the un is part of the word, because cle is not a word."
+          },
+          {
+            id: "SK-FP4c-C04",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Match each word to the meaning of its prefix.",
+            cols: [
+              "again",
+              "before",
+              "wrongly"
+            ],
+            rows: [
+              {
+                text: "rewind",
+                answer: 0
+              },
+              {
+                text: "pretest",
+                answer: 1
+              },
+              {
+                text: "misjudge",
+                answer: 2
+              },
+              {
+                text: "regroup",
+                answer: 0
+              }
+            ],
+            clue: "Cover the front part of each word. Then think about what that part means.",
+            hints: [
+              "Cover the front part of each word. Then think about what that part means.",
+              "Ask whether the front part means again, before or wrongly.",
+              "Start with pretest. Cover the front part and say what is left."
+            ],
+            how: [
+              "Cover the prefix on each word.",
+              "Rewind and regroup have re-, which means again.",
+              "Pretest has pre-, meaning before, and misjudge has mis-, meaning wrongly."
+            ],
+            misconception: "A common mix-up is guessing from the base word. Look at the prefix.",
+            why: "Rewind and regroup have re-, which means again. Pretest has pre-, which means before. Misjudge has mis-, which means wrongly."
+          },
+          {
+            ref: "SK-FP4c-P5"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-FP4c-C05",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Which word means without sleep?",
+            choices: [
+              {
+                text: "sleepless",
+                correct: true
+              },
+              {
+                text: "asleep"
+              },
+              {
+                text: "sleepy"
+              },
+              {
+                text: "sleeper"
+              }
+            ],
+            clue: "Think about the base word and the ending that means without.",
+            hints: [
+              "Think about the base word and the ending that means without.",
+              "Cover the ending in each choice. Think about what it adds.",
+              "Cover the ending in sleepy and sleeper and decide what each one means."
+            ],
+            how: [
+              "Without sleep is the base word sleep plus an ending.",
+              "The ending -less means without.",
+              "So sleepless means without sleep."
+            ],
+            misconception: "A common mix-up is picking any word with sleep in it. The ending has to mean without.",
+            why: "The answer is \"sleepless.\" The ending -less means without, so sleepless means without sleep. Asleep, sleepy and sleeper do not end in -less."
+          },
+          {
+            id: "SK-FP4c-C06",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Choose the word that is spelled correctly for each blank.",
+            text: "Jo is {0} at the joke, and the lamb {1} down the hill.",
+            slots: [
+              {
+                options: [
+                  "smileing",
+                  "smiling",
+                  "smilling"
+                ],
+                answer: 1
+              },
+              {
+                options: [
+                  "skipped",
+                  "skiped",
+                  "skippt"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Think about the base word and the ending that was added.",
+            hints: [
+              "Think about the base word and the ending that was added.",
+              "Look at the end of each base word. Ask which spelling rule it needs.",
+              "Start with the second blank. Look at whether skip ends in one vowel and one consonant."
+            ],
+            how: [
+              "Smile ends in a silent e, and -ing starts with a vowel, so drop the e: smiling.",
+              "Skip ends in one short vowel and one consonant, so double the p: skipped.",
+              "The other spellings do not follow the rules."
+            ],
+            misconception: "A common mix-up is adding the ending without changing the base word. Check the last letters first.",
+            why: "The answers are \"smiling\" and \"skipped.\" Smile drops its silent e before -ing. Skip doubles the p before -ed. Smileing, smilling, skiped and skippt do not follow those rules."
+          },
+          {
+            id: "SK-FP4c-C07",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Choose the word that is not spelled correctly.",
+            stem: [
+              "Rob was riding his bike and grabed his hat."
+            ],
+            options: [
+              "riding",
+              "bike",
+              "grabed",
+              "hat"
+            ],
+            answer: [
+              2
+            ],
+            pick: 1,
+            clue: "Say each word and picture how it should look.",
+            hints: [
+              "Say each word and picture how it should look.",
+              "Look at the words that have an ending. Ask what happened to the base word.",
+              "Check bike and hat. Do they have an ending added?"
+            ],
+            how: [
+              "Riding is ride with the e dropped before -ing, so it is right.",
+              "Grabbed needs a double b, because grab ends with one short vowel and one consonant.",
+              "Grabed has only one b, so it is the mistake."
+            ],
+            misconception: "A common mix-up is trusting a spelling because it looks close. Check the doubling rule.",
+            why: "The answer is \"grabed.\" Grab ends with one short vowel and one consonant, so the b is doubled before -ed: grabbed. Riding, bike and hat are spelled correctly."
+          },
+          {
+            id: "SK-FP4c-C08",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Pick the piece for each place in unbreakable.",
+            text: "Unbreakable begins with {0} and is built on the main word {1}.",
+            slots: [
+              {
+                options: [
+                  "break",
+                  "un-",
+                  "-able"
+                ],
+                answer: 1
+              },
+              {
+                options: [
+                  "-able",
+                  "un-",
+                  "break"
+                ],
+                answer: 2
+              }
+            ],
+            clue: "Think about where each piece sits in the word.",
+            hints: [
+              "Think about where each piece sits in the word.",
+              "Cover the front part and the end part. See what is left in the middle.",
+              "Start with the front piece. Look at the very first letters of the word."
+            ],
+            how: [
+              "The prefix is the part at the front: un-.",
+              "The suffix is the part at the end: -able.",
+              "Cover both, and break is left. Break is the base word."
+            ],
+            misconception: "A common mix-up is mixing up the three parts. The prefix goes first, the suffix goes last, and the base word is in the middle.",
+            why: "The prefix is un-, the base word is break, and the suffix is -able. Un- is at the front, -able is at the end, and break is left in the middle."
+          },
+          {
+            ref: "SK-FP4c-P6"
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-FP4c-C09",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Which TWO words dropped a silent e before the ending was added?",
+            pick: 2,
+            choices: [
+              {
+                text: "riding",
+                correct: true
+              },
+              {
+                text: "closing",
+                correct: true
+              },
+              {
+                text: "hopeful"
+              },
+              {
+                text: "lovely"
+              },
+              {
+                text: "sadly"
+              }
+            ],
+            clue: "Think about the base word. Ask what happened to its last letter.",
+            hints: [
+              "Think about the base word. Ask what happened to its last letter.",
+              "Find the base word in each choice. Check whether it ended in a silent e.",
+              "Look at the ending in each choice. Ask whether it starts with a vowel."
+            ],
+            how: [
+              "Find the base word in each choice.",
+              "Riding comes from ride, and closing comes from close. The e was dropped before -ing.",
+              "Hopeful and lovely keep the e, and sadly has no e."
+            ],
+            misconception: "A common mix-up is choosing any word that once had an e. The e is dropped only before an ending that starts with a vowel.",
+            why: "The answers are \"riding\" and \"closing.\" Ride and close lose the silent e before -ing. Hopeful and lovely keep the e before a consonant ending, and sad has no e to drop."
+          },
+          {
+            id: "SK-FP4c-C10",
+            type: "order",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Put the steps in order for reading a long word with a prefix and a suffix.",
+            steps: [
+              "Cover the prefix and the suffix.",
+              "Read the base word.",
+              "Add the prefix back and read it.",
+              "Add the suffix back and read the whole word."
+            ],
+            clue: "Think about what you cover before you read anything.",
+            hints: [
+              "Think about what you cover before you read anything.",
+              "Think about which part is easiest to read first.",
+              "The last step puts every part back together."
+            ],
+            how: [
+              "First, cover the prefix and the suffix.",
+              "Second, read the base word.",
+              "Third, add the prefix back and read it.",
+              "Fourth, add the suffix back and read the whole word."
+            ],
+            misconception: "A common mix-up is reading the whole long word at once. Start with the base word.",
+            why: "The order is: cover the prefix and the suffix; read the base word; add the prefix back and read it; add the suffix back and read the whole word."
+          },
+          {
+            id: "SK-FP4c-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Ben wrote luckyly. What should he change?",
+            choices: [
+              {
+                text: "Change the y to i before -ly, so it is luckily.",
+                correct: true
+              },
+              {
+                text: "Add another l, so it is luckylly."
+              },
+              {
+                text: "Drop the y, so it is luckly."
+              },
+              {
+                text: "Leave it, because -ly never changes a word."
+              }
+            ],
+            clue: "Look at how the base word ends. Think about which rule fits.",
+            hints: [
+              "Look at how the base word ends. Think about which rule fits.",
+              "Say the word you want. Then think about what happens to a y at the end of a word.",
+              "Compare each choice with the rule for a word that ends in a consonant and y."
+            ],
+            how: [
+              "The base word is lucky, which ends with a consonant and y.",
+              "Before -ly, change the y to i.",
+              "So lucky + ly is luckily."
+            ],
+            misconception: "A common mix-up is adding the ending without checking the end of the word. A consonant and y changes to i.",
+            why: "The answer is \"Change the y to i before -ly, so it is luckily.\" Lucky ends with a consonant and y, so the y becomes i. The other choices add a letter, drop the y, or change nothing."
+          },
+          {
+            id: "SK-FP4c-C12",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.c"
+            ],
+            passages: [],
+            prompt: "Pick the right spelling for each blank.",
+            text: "Mom is {0} the table, and Dad {1} to my question.",
+            slots: [
+              {
+                options: [
+                  "setting",
+                  "seting",
+                  "settting"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "replyed",
+                  "replied",
+                  "repleid"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Think about the base word and the ending. Ask what happens to the last letters.",
+            hints: [
+              "Think about the base word and the ending. Ask what happens to the last letters.",
+              "Look at the end of each base word. Ask which spelling rule it needs.",
+              "Start with the second blank. Look at whether the base word ends in a consonant and y."
+            ],
+            how: [
+              "Set ends in one short vowel and one consonant, so double the t: setting.",
+              "Reply ends in a consonant and y, so change the y to i: replied.",
+              "The other spellings do not follow the rules."
+            ],
+            misconception: "A common mix-up is adding the ending as it is. Check the last letters of the base word first.",
+            why: "The answers are \"setting\" and \"replied.\" Set doubles its t before -ing. Reply changes its y to i before -ed. Seting, settting, replyed and repleid do not follow those rules."
+          },
+          {
+            ref: "SK-FP4c-P7"
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-FP4c-S01",
+      type: "dropdown",
+      points: 2,
+      dok: 1,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C01"
+      ],
+      prompt: "Pick the word that fits each clue.",
+      text: "The word for using it the wrong way is {0}. The word for using it one more time is {1}.",
+      slots: [
+        {
+          options: [
+            "reuse",
+            "misuse",
+            "disuse"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "misuse",
+            "disuse",
+            "reuse"
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Cover the front part of each word. Think about what the front part adds.",
+      hints: [
+        "Cover the front part of each word. Think about what the front part adds.",
+        "Say the base word. Then think about the meaning of each front part.",
+        "Start with reuse. Think about what re- means."
+      ],
+      how: [
+        "Cover the front part of each word. Use is left in both.",
+        "Mis- means wrongly, so misuse means to use wrongly.",
+        "Re- means again, so reuse means to use again."
+      ],
+      misconception: "A common mix-up is giving both words the same meaning. Mis- and re- are different prefixes.",
+      why: "Misuse means to use wrongly, because mis- means wrongly. Reuse means to use again, because re- means again. Before is the meaning of pre-."
+    },
+    {
+      id: "SK-FP4c-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C02"
+      ],
+      prompt: "Read the sentence. Choose the meaning of prebooked.",
+      stem: [
+        "Grandma prebooked our seats, so they were ready when we arrived."
+      ],
+      choices: [
+        {
+          text: "booked ahead of time",
+          correct: true
+        },
+        {
+          text: "booked a second time"
+        },
+        {
+          text: "booked by mistake"
+        },
+        {
+          text: "never booked"
+        }
+      ],
+      clue: "Cover the front part of the word and find the base word. Then use the sentence.",
+      hints: [
+        "Cover the front part of the word and find the base word. Then use the sentence.",
+        "Read the whole sentence. Ask when the booking happened compared with arriving.",
+        "Think about what each front part means. Then check each meaning in the sentence."
+      ],
+      how: [
+        "Cover pre-. Booked is left, so the base word is booked.",
+        "Pre- means before.",
+        "The seats were booked before the family arrived, so prebooked means booked ahead of time."
+      ],
+      misconception: "A common mix-up is choosing a meaning that does not fit the sentence. Check it in the sentence.",
+      why: "The answer is \"booked ahead of time.\" Pre- means before, and the seats were ready when the family arrived. A second booking, a mistake and never booking do not fit."
+    },
+    {
+      id: "SK-FP4c-S03",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C03"
+      ],
+      prompt: "Tap the word whose first two letters are a true prefix.",
+      stem: [
+        "The map was unclear, so the unit turned back."
+      ],
+      options: [
+        "map",
+        "unclear",
+        "unit",
+        "turned"
+      ],
+      answer: [
+        1
+      ],
+      pick: 1,
+      clue: "A prefix is a word part at the front.",
+      hints: [
+        "A prefix is a word part at the front.",
+        "Cover the un in each word. Ask whether a real word is left.",
+        "Cover un in unit. Is a word left?"
+      ],
+      how: [
+        "Cover un in unclear. Clear is left, so un- means not.",
+        "Cover un in unit. Nit is left, which does not fit, so the un is not a prefix.",
+        "Map and turned do not start with un."
+      ],
+      misconception: "A common mix-up is choosing every word that starts with un. A real prefix leaves a real word.",
+      why: "The answer is \"unclear.\" Cover un and clear is left, so un- means not. In unit, the un is part of the word. Map and turned do not start with un."
+    },
+    {
+      id: "SK-FP4c-S04",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C04"
+      ],
+      prompt: "Which prefix idea fits each word? Match.",
+      cols: [
+        "a second time",
+        "ahead of time",
+        "the wrong way"
+      ],
+      rows: [
+        {
+          text: "reheat",
+          answer: 0
+        },
+        {
+          text: "prewash",
+          answer: 1
+        },
+        {
+          text: "misuse",
+          answer: 2
+        },
+        {
+          text: "rerun",
+          answer: 0
+        }
+      ],
+      clue: "Cover the front part of each word. Think about what it adds.",
+      hints: [
+        "Cover the front part of each word. Think about what it adds.",
+        "Ask whether the front part means a second time, ahead of time, or the wrong way.",
+        "Start with prewash. Cover the front part and say what is left."
+      ],
+      how: [
+        "Cover the prefix on each word.",
+        "Reheat and rerun have re-, which means a second time.",
+        "Prewash has pre-, ahead of time, and misuse has mis-, the wrong way."
+      ],
+      misconception: "A common mix-up is guessing from the base word. Look at the prefix.",
+      why: "Reheat and rerun have re-, a second time. Prewash has pre-, ahead of time. Misuse has mis-, the wrong way."
+    },
+    {
+      id: "SK-FP4c-S05",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-P5"
+      ],
+      prompt: "Pick the pair where the front part flips the meaning.",
+      pick: 2,
+      choices: [
+        {
+          text: "unsure",
+          correct: true
+        },
+        {
+          text: "dishonest",
+          correct: true
+        },
+        {
+          text: "unit"
+        },
+        {
+          text: "umbrella"
+        },
+        {
+          text: "rebuild"
+        }
+      ],
+      clue: "A prefix at the front can change a word into its opposite.",
+      hints: [
+        "A prefix at the front can change a word into its opposite.",
+        "Cover the front of each word. Ask whether a real word is left and whether the meaning flipped.",
+        "Cover the first two letters of umbrella and unit. Is a real word left?"
+      ],
+      how: [
+        "Cover the front of each word.",
+        "Sure is left in unsure, and honest is left in dishonest. The front parts mean not.",
+        "Unit and umbrella leave no base word, and rebuild means build again."
+      ],
+      misconception: "A common mix-up is choosing words that only start with un. The front part has to be a prefix that flips the meaning.",
+      why: "The answers are \"unsure\" and \"dishonest.\" Un- and dis- both mean not, and real words are left. Unit and umbrella do not have prefixes, and re- in rebuild means again."
+    },
+    {
+      id: "SK-FP4c-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C05"
+      ],
+      prompt: "Pick the word that tells about having no sound at all.",
+      choices: [
+        {
+          text: "soundless",
+          correct: true
+        },
+        {
+          text: "resound"
+        },
+        {
+          text: "sounder"
+        },
+        {
+          text: "soundful"
+        }
+      ],
+      clue: "Think about the base word and the ending that means without.",
+      hints: [
+        "Think about the base word and the ending that means without.",
+        "Cover the ending in each choice. Think about what it adds.",
+        "Cover the front or ending in resound and sounder and decide what each one means."
+      ],
+      how: [
+        "Without a sound is the base word sound plus an ending.",
+        "The ending -less means without.",
+        "So soundless means without a sound."
+      ],
+      misconception: "A common mix-up is picking any word with sound in it. The ending has to mean without.",
+      why: "The answer is \"soundless.\" The ending -less means without, so soundless means without a sound. Resound, sounder and soundful do not end in -less."
+    },
+    {
+      id: "SK-FP4c-S07",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C06"
+      ],
+      prompt: "Pick the spelling that fits each blank.",
+      text: "The twins {0} in the park while Dad was {1} a nap.",
+      slots: [
+        {
+          options: [
+            "joged",
+            "jogged",
+            "jogt"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "takeing",
+            "taking",
+            "takking"
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Think about the base word and the ending that was added.",
+      hints: [
+        "Think about the base word and the ending that was added.",
+        "Look at the end of each base word. Ask which spelling rule it needs.",
+        "Start with the first blank. Look at whether jog ends in one vowel and one consonant."
+      ],
+      how: [
+        "Jog ends in one short vowel and one consonant, so double the g: jogged.",
+        "Take ends in a silent e, and -ing starts with a vowel, so drop the e: taking.",
+        "The other spellings do not follow the rules."
+      ],
+      misconception: "A common mix-up is adding the ending without changing the base word. Check the last letters first.",
+      why: "The answers are \"jogged\" and \"taking.\" Jog doubles its g before -ed. Take drops its silent e before -ing. Joged, jogt, takeing and takking do not follow those rules."
+    },
+    {
+      id: "SK-FP4c-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C07"
+      ],
+      prompt: "Tap the word that has a spelling mistake.",
+      stem: [
+        "Mom was packing the bag and then slamed the trunk."
+      ],
+      options: [
+        "packing",
+        "bag",
+        "slamed",
+        "trunk"
+      ],
+      answer: [
+        2
+      ],
+      pick: 1,
+      clue: "Say each word and picture how it should look.",
+      hints: [
+        "Say each word and picture how it should look.",
+        "Look at the words that have an ending. Ask what happened to the base word.",
+        "Check bag and trunk. Do they have an ending added?"
+      ],
+      how: [
+        "Packing is pack plus -ing, with nothing to change, so it is right.",
+        "Slammed needs a double m, because slam ends with one short vowel and one consonant.",
+        "Slamed has only one m, so it is the mistake."
+      ],
+      misconception: "A common mix-up is trusting a spelling because it looks close. Check the doubling rule.",
+      why: "The answer is \"slamed.\" Slam ends with one short vowel and one consonant, so the m is doubled before -ed: slammed. Packing, bag and trunk are spelled correctly."
+    },
+    {
+      id: "SK-FP4c-S09",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C08"
+      ],
+      prompt: "Sort the pieces of unfriendly.",
+      text: "Un- is the {0}, and friend is the {1}.",
+      slots: [
+        {
+          options: [
+            "suffix",
+            "base word",
+            "prefix"
+          ],
+          answer: 2
+        },
+        {
+          options: [
+            "prefix",
+            "suffix",
+            "base word"
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Think about where each piece sits in the word.",
+      hints: [
+        "Think about where each piece sits in the word.",
+        "Cover the front part and the end part. See what is left in the middle.",
+        "Start with friend. Ask whether it is a part you add or the main word."
+      ],
+      how: [
+        "Un- is at the front, so it is the prefix.",
+        "Cover un- and -ly, and friend is left, so it is the base word.",
+        "The suffix -ly is at the end, so it does not name either blank."
+      ],
+      misconception: "A common mix-up is mixing up the three parts. The prefix goes first, the suffix goes last, and the base word is in the middle.",
+      why: "Un- is the prefix, and friend is the base word. Un- is at the front, and friend is left when un- and -ly are covered. A suffix goes at the end, so it does not fit either blank."
+    },
+    {
+      id: "SK-FP4c-S10",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-P6"
+      ],
+      prompt: "Strip the front and the end off misjudged. What is left?",
+      choices: [
+        {
+          text: "judge",
+          correct: true
+        },
+        {
+          text: "misjudge"
+        },
+        {
+          text: "judged"
+        },
+        {
+          text: "ged"
+        }
+      ],
+      clue: "The base word is the main word, before anything is added.",
+      hints: [
+        "The base word is the main word, before anything is added.",
+        "Cover the prefix and the ending. Think about what happened to the base word.",
+        "The ending -ed was added to a word that ends in e. Check what happened to that e."
+      ],
+      how: [
+        "Cover the prefix mis-. Judged is left.",
+        "Cover the ending -ed. Judg is left, so the silent e was dropped.",
+        "Put the e back: judge is the base word."
+      ],
+      misconception: "A common mix-up is stopping when letters are left over. The base word has to be a real word.",
+      why: "The answer is \"judge.\" Cover mis- and -ed and judg is left, so the base word is judge with its silent e. Misjudge and judged still have an affix, and ged is not a word."
+    },
+    {
+      id: "SK-FP4c-S11",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C09"
+      ],
+      prompt: "Pick two words where the e at the end of the base word went away.",
+      pick: 2,
+      choices: [
+        {
+          text: "driving",
+          correct: true
+        },
+        {
+          text: "using",
+          correct: true
+        },
+        {
+          text: "homeless"
+        },
+        {
+          text: "safely"
+        },
+        {
+          text: "lonely"
+        }
+      ],
+      clue: "Think about the base word. Ask what happened to its last letter.",
+      hints: [
+        "Think about the base word. Ask what happened to its last letter.",
+        "Find the base word in each choice. Check whether it ended in a silent e.",
+        "Look at the ending in each choice. Ask whether it starts with a vowel."
+      ],
+      how: [
+        "Find the base word in each choice.",
+        "Driving comes from drive, and using comes from use. The e was dropped before -ing.",
+        "Homeless, safely and lonely keep the e before a consonant ending."
+      ],
+      misconception: "A common mix-up is choosing any word that once had an e. The e is dropped only before a vowel ending.",
+      why: "The answers are \"driving\" and \"using.\" Drive and use lose the silent e before -ing. Homeless, safely and lonely keep the e before a consonant ending."
+    },
+    {
+      id: "SK-FP4c-S12",
+      type: "order",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C10"
+      ],
+      prompt: "Order the moves for adding an ending to a main word.",
+      steps: [
+        "Choose the main word.",
+        "Look at its last letters.",
+        "Fix them first if a rule asks.",
+        "Attach the ending and say it."
+      ],
+      clue: "Think about what you choose before anything else.",
+      hints: [
+        "Think about what you choose before anything else.",
+        "Think about what you must look at before you change a letter.",
+        "The last step is a way to check the new word."
+      ],
+      how: [
+        "First, choose the main word.",
+        "Second, look at its last letters.",
+        "Third, fix them first if a rule asks.",
+        "Fourth, attach the ending and say it."
+      ],
+      misconception: "A common mix-up is adding the ending before checking the base word. Look first.",
+      why: "The order is: choose the main word; look at its last letters; fix them first if a rule asks; attach the ending and say it."
+    },
+    {
+      id: "SK-FP4c-S13",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C11"
+      ],
+      prompt: "Mia spelled it busyly. Which fix makes it right?",
+      choices: [
+        {
+          text: "Turn the y into an i first: busily.",
+          correct: true
+        },
+        {
+          text: "Put a second y in: busyyly."
+        },
+        {
+          text: "Take out the y: busly."
+        },
+        {
+          text: "Keep it as it is, since endings never alter a word."
+        }
+      ],
+      clue: "Look at how the base word ends. Think about which rule fits.",
+      hints: [
+        "Look at how the base word ends. Think about which rule fits.",
+        "Say the word you want. Then think about what happens to a y at the end of a word.",
+        "Compare each choice with the rule for a word that ends in a consonant and y."
+      ],
+      how: [
+        "The base word is busy, which ends with a consonant and y.",
+        "Before -ly, change the y to i.",
+        "So busy + ly is busily."
+      ],
+      misconception: "A common mix-up is adding the ending without checking the end of the word. A consonant and y changes to i.",
+      why: "The answer is \"Turn the y into an i first: busily.\" Busy ends with a consonant and y, so the y becomes i. The other choices add a y, drop the y, or change nothing."
+    },
+    {
+      id: "SK-FP4c-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-C12"
+      ],
+      prompt: "Which spelling fits each gap?",
+      text: "Mia is {0} her coat. Dad {1} the room.",
+      slots: [
+        {
+          options: [
+            "zipping",
+            "ziping",
+            "zippping"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "tidyed",
+            "tideed",
+            "tidied"
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Think about the base word and the ending. Ask what happens to the last letters.",
+      hints: [
+        "Think about the base word and the ending. Ask what happens to the last letters.",
+        "Look at the end of each base word. Ask which spelling rule it needs.",
+        "Start with the second blank. Look at whether tidy ends in a consonant and y."
+      ],
+      how: [
+        "Zip ends in one short vowel and one consonant, so double the p: zipping.",
+        "Tidy ends in a consonant and y, so change the y to i: tidied.",
+        "The other spellings do not follow the rules."
+      ],
+      misconception: "A common mix-up is adding the ending as it is. Check the last letters of the base word first.",
+      why: "The answers are \"zipping\" and \"tidied.\" Zip doubles its p before -ing. Tidy changes its y to i before -ed. Ziping, zippping, tidyed and tideed do not follow those rules."
+    },
+    {
+      id: "SK-FP4c-S15",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.c"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4c-P7"
+      ],
+      prompt: "Which meaning does each ending or front part give? Match.",
+      cols: [
+        "the opposite of",
+        "having lots of",
+        "lacking"
+      ],
+      rows: [
+        {
+          text: "unwise",
+          answer: 0
+        },
+        {
+          text: "powerful",
+          answer: 1
+        },
+        {
+          text: "harmless",
+          answer: 2
+        },
+        {
+          text: "disloyal",
+          answer: 0
+        }
+      ],
+      clue: "Cover the front part or the ending. Think about what it adds.",
+      hints: [
+        "Cover the front part or the ending. Think about what it adds.",
+        "Ask whether the part means the opposite of, having lots of, or lacking.",
+        "Start with harmless. Look at the ending."
+      ],
+      how: [
+        "Find the prefix or suffix in each word.",
+        "Un- and dis- mean the opposite of, so unwise and disloyal go together.",
+        "-Ful means having lots of, and -less means lacking."
+      ],
+      misconception: "A common mix-up is guessing from the base word. Look at the prefix or suffix.",
+      why: "Unwise and disloyal have prefixes that mean the opposite of. Powerful has -ful, having lots of. Harmless has -less, lacking."
+    }
+  ],
+  addons: {
+    "SK-FP4c-P1": {
+      hints: [
+        "Cover the front part of the word. Think about what the front part adds.",
+        "Say the base word. Then think about the meaning of re-.",
+        "Think about what each front part means: re-, un-, dis-, mis- and pre-."
+      ],
+      how: [
+        "Cover re-. Read is left, so read is the base word.",
+        "Re- means again.",
+        "So reread means to read again."
+      ],
+      misconception: "A common mix-up is mixing up re- with pre-. Re- means again, and pre- means before."
+    },
+    "SK-FP4c-P2": {
+      hints: [
+        "Think about the base word and the ending that was added.",
+        "Look at the end of the base word. Ask which spelling rule it needs.",
+        "Check whether the base word ends in a silent e and the ending starts with a vowel."
+      ],
+      how: [
+        "Make ends in a silent e, and -ing starts with a vowel.",
+        "Drop the e: mak + ing.",
+        "So the spelling is making."
+      ],
+      misconception: "A common mix-up is adding the ending without changing the base word. Check the last letters first."
+    },
+    "SK-FP4c-P3": {
+      hints: [
+        "Look at how the base word ends. Think about which rule fits.",
+        "Check whether the word ends in one short vowel and one consonant.",
+        "Compare each choice with the doubling rule."
+      ],
+      how: [
+        "Stop ends in one short vowel and one consonant.",
+        "Double the p before -ed.",
+        "So stop + ed is stopped."
+      ],
+      misconception: "A common mix-up is adding -ed without doubling. A short vowel and one consonant doubles the consonant."
+    },
+    "SK-FP4c-P4": {
+      hints: [
+        "Look at the last letters of each base word before the ending.",
+        "Ask whether the base word ends in a silent e, one vowel and one consonant, a consonant and y, or something else.",
+        "Start with run + ing. Look at the vowel and the consonant at the end of run."
+      ],
+      how: [
+        "Bake ends in a silent e, so drop the e.",
+        "Run ends in one short vowel and one consonant, so double the last letter.",
+        "Carry ends in a consonant and y, so change the y to i. Jump needs no change."
+      ],
+      misconception: "A common mix-up is using one rule for every word. Each base word needs its own check."
+    },
+    "SK-FP4c-P5": {
+      hints: [
+        "A prefix at the front can change a word into its opposite.",
+        "Cover the front of each word. Ask whether a real word is left and whether the meaning flipped.",
+        "Cover the first two letters of uncle and under. Is a real word left?"
+      ],
+      how: [
+        "Cover the front of each word.",
+        "Kind is left in unkind, and tie is left in untie. Both fronts mean not or the opposite of.",
+        "Under and uncle leave no base word, and repaint means paint again."
+      ],
+      misconception: "A common mix-up is choosing words that only start with un. The front part has to be a prefix."
+    },
+    "SK-FP4c-P6": {
+      hints: [
+        "The base word is the main word, before anything is added.",
+        "Cover the prefix and the suffix. See what is left.",
+        "Cover re- first, and then cover -ed."
+      ],
+      how: [
+        "Cover the prefix re-. Planted is left.",
+        "Cover the suffix -ed. Plant is left.",
+        "Plant is a word on its own, so it is the base word."
+      ],
+      misconception: "A common mix-up is covering only one part. Cover the prefix and the suffix."
+    },
+    "SK-FP4c-P7": {
+      hints: [
+        "Cover the front or the end.",
+        "Ask whether the part means not, full of, or without.",
+        "Start with joyful. Look at the ending."
+      ],
+      how: [
+        "Find the prefix or suffix in each word.",
+        "Dis- and un- mean not or the opposite of.",
+        "-Ful means full of, and -less means without."
+      ],
+      misconception: "A common mix-up is guessing from the base word. Look at the prefix or suffix."
+    }
+  },
+  /* B9:core:end */
   test: [
     { id: "SK-FP4c-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "What does the word unsafe mean?",
@@ -2074,6 +4611,42 @@ PP.addLesson({
       clue: "Read every letter of the short words. Then ask if each sentence makes sense.",
       why: "The answer is \"The letter came form Grandma.\" It should say from. A form is a paper you fill out, so form does not make sense here." }
   ],
+  /* B9:exception:start */
+  /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+  coreException: {
+    kind: "performance",
+    rationale: "Reading words in a snap is a timing behavior. Selected-response items cannot show it, so three adult-run quick-read rounds take the place of fifteen items. The seven practice items stay as supporting checks.",
+    tasks: [
+      {
+        title: "Round 1: Words by themselves",
+        how: "A grown-up writes or prints twenty words the reader has learned, such as words from this week's lessons. Cover all but one word at a time. The reader says each word as fast as they can without sounding it out. Mark each word as quick, slow, or missed. Do the round again in a few days with the missed words mixed in.",
+        checklist: [
+          "The reader said at least 16 of the 20 words right away.",
+          "The reader did not sound out the words they knew.",
+          "Missed and slow words were saved for the next round."
+        ]
+      },
+      {
+        title: "Round 2: Phrases",
+        how: "Use ten short phrases of three or four words, such as \"in the red car\". Show one phrase at a time for a count of three, then cover it. The reader says the whole phrase. Mark each phrase as quick, slow, or missed.",
+        checklist: [
+          "The reader read each phrase as one group, not word by word.",
+          "At least 8 of the 10 phrases were quick and right.",
+          "The grown-up wrote down any word that caused a stop."
+        ]
+      },
+      {
+        title: "Round 3: Sentences",
+        how: "Use five short sentences the reader has not seen. The reader reads each one aloud once at a comfortable pace. The grown-up counts the words that were stopped on, skipped or changed. Look for smooth reading, not for the fastest reading.",
+        checklist: [
+          "The reader stopped on no more than one word in each sentence.",
+          "The reader's voice sounded like talking.",
+          "The reader reread when a word did not sound right."
+        ]
+      }
+    ]
+  },
+  /* B9:exception:end */
   test: [
     { id: "SK-FF1a-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Read the word four. Which word rhymes with it?",
@@ -2269,6 +4842,42 @@ PP.addLesson({
       clue: "You cannot fix a mistake until you notice it. What do you do last to check your fix?",
       why: "First notice the sentence does not make sense. Then find the word that does not fit, look at all its letters, and reread the sentence with the right word." }
   ],
+  /* B9:exception:start */
+  /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+  coreException: {
+    kind: "observation",
+    rationale: "A child's own self-correction happens only while reading aloud, so an adult has to watch for it. Three adult-observed rounds plus the fix-up log take the place of fifteen items. The five practice items stay as supporting checks.",
+    tasks: [
+      {
+        title: "Round 1: Listen for the stop",
+        how: "Give the reader a passage that is a little hard. The grown-up listens and does not help. Each time the reader stops, rereads or changes a word, write it in the fix-up log: the word, what the reader said first, and what they fixed it to.",
+        checklist: [
+          "The grown-up did not give the word.",
+          "Each fix was written in the log.",
+          "The reader checked that the word made sense."
+        ]
+      },
+      {
+        title: "Round 2: Name the fix-up",
+        how: "After reading, look at the log together. Ask the reader which fix-up they used: reread, sound it out in parts, find a base word, or think about what makes sense. Write the name next to each entry.",
+        checklist: [
+          "Each log entry has a named fix-up.",
+          "The reader explained why the first try did not work.",
+          "The reader chose a fix-up that matched the problem."
+        ]
+      },
+      {
+        title: "Round 3: On their own",
+        how: "Use a new passage. The grown-up listens again and writes in the log. Compare the logs: are there more self-fixes and fewer words the grown-up had to give?",
+        checklist: [
+          "The reader fixed more mistakes without help.",
+          "The reader reread when something sounded wrong.",
+          "The log from all three rounds was compared."
+        ]
+      }
+    ]
+  },
+  /* B9:exception:end */
   test: [
     { id: "SK-FF1d-T1", type: "hottext", points: 2, dok: 2, passages: ["p2"],
       prompt: "Ava read this story aloud. The passage shows the words she said. Which TWO sentences do not make sense? Choose two sentences in the passage.",

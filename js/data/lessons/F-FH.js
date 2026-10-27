@@ -81,6 +81,42 @@
       everyday: "Once or twice a week, have your child read aloud a page they have never seen from a different kind of text each time: a story, a science or history book, a poem, a recipe or directions. Watch for fewer and fewer stops on new pages over a few weeks. That is increasing accuracy."
     },
     activity: FLUENCY,
+    /* B9:exception:start */
+    /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+    coreException: {
+      kind: "performance",
+      rationale: "Accuracy on text a reader has never seen is measured by listening, not by choosing answers. Three dated readings of new passages of different kinds take the place of fifteen items.",
+      tasks: [
+        {
+          title: "Reading 1: A story",
+          how: "Pick a short story passage the reader has not read. Write today's date. The reader reads it aloud once. The grown-up follows along and puts a tick above each word that is skipped, added or changed. Count the ticks. About 95 right out of every 100 words means a good fit.",
+          checklist: [
+            "The date and passage name are written down.",
+            "Mistakes were counted but the reader was not stopped.",
+            "The reader said what the story was about when finished."
+          ]
+        },
+        {
+          title: "Reading 2: An information passage",
+          how: "Use a new passage about real things, such as animals or places. Write the date. The reader reads aloud while the grown-up marks mistakes. Then talk about hard words. Ask the reader how they worked out any new word.",
+          checklist: [
+            "The reader read at least 95 of every 100 words correctly.",
+            "The reader used word parts or the sentence to work out a new word.",
+            "The date and the number of mistakes were written down."
+          ]
+        },
+        {
+          title: "Reading 3: A poem",
+          how: "Use a short poem the reader has not seen. Write the date. The reader reads it aloud once. The grown-up marks any word that was skipped, added or changed. Compare the three dates: did the number of mistakes stay the same or get smaller?",
+          checklist: [
+            "The reader read each line the way it is written.",
+            "The reader went back to fix a word that did not sound right.",
+            "The grown-up compared all three dated readings."
+          ]
+        }
+      ]
+    },
+    /* B9:exception:end */
     check: {
       intro: "Grown-up: over a week or two, listen to your child read new passages out loud with the timer, then check each line that is true.",
       items: [
@@ -144,6 +180,42 @@
       everyday: "Use many kinds of text: read a poem like a performer, a page of a fact book like a news reporter, and a story with talking by giving each character a voice. Reading to a younger child, a pet or a relative on a call gives a real reason to practice."
     },
     activity: FLUENCY_PRACTICED,
+    /* B9:exception:start */
+    /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+    coreException: {
+      kind: "performance",
+      rationale: "Phrasing and expression are heard, not selected. Three rehearse-and-perform rounds with an adult checklist take the place of fifteen items.",
+      tasks: [
+        {
+          title: "Round 1: Pause at the marks",
+          how: "Choose a short passage with commas and periods. Read it aloud to the child first, pausing at each mark. The reader practices it two times, then reads it once to the grown-up. The reader should stop briefly at commas and a little longer at periods.",
+          checklist: [
+            "The reader paused at commas.",
+            "The reader paused longer at periods.",
+            "The reader's voice went down at the end of statements."
+          ]
+        },
+        {
+          title: "Round 2: Questions and surprises",
+          how: "Choose a passage with a question and an exclamation. Talk about how those sentences should sound. The reader practices, then performs it. The grown-up listens for a rising voice on questions and a strong voice on exclamations.",
+          checklist: [
+            "The reader's voice went up on questions.",
+            "The reader showed excitement on exclamations.",
+            "The reader read in phrases, not word by word."
+          ]
+        },
+        {
+          title: "Round 3: Characters",
+          how: "Choose a passage where characters talk. The reader practices a different voice for each speaker, then performs it for the grown-up. Ask the reader how each character feels and how the voice shows it.",
+          checklist: [
+            "The reader changed voice for each speaker.",
+            "The reader's voice matched how the character feels.",
+            "The reading sounded like talking."
+          ]
+        }
+      ]
+    },
+    /* B9:exception:end */
     check: {
       intro: "Grown-up: listen to your child read a passage they have practiced (passage 5 or 6, which have characters talking), then check each line that is true.",
       items: [
@@ -256,6 +328,1350 @@
         clue: "The capital letter is one of the tricky ones. Look at the letters after it too.",
         why: "The answer is Zoe. It starts with a cursive capital Z, followed by o and e. Zack starts with Z too, but it has four letters and ends in ck." }
     ],
+    /* B9:core:start */
+    /* Expansion 2026-10-22, batch B9 (Foundations). core: fifteen items in three sets of five; { ref } reuses a practice item. NEEDS INDEPENDENT REVIEW. Author log: docs/expansion-2026-10-22/batches/B9-author-log.md */
+    core: {
+      rev: "1",
+      sets: [
+        {
+          title: "Set 1",
+          items: [
+            {
+              id: "SK-FH3a-C01",
+              type: "mc",
+              points: 1,
+              dok: 1,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Look at the cursive word. What does it say?",
+              stem: [
+                "Cursive: window"
+              ],
+              choices: [
+                {
+                  text: "window",
+                  correct: true
+                },
+                {
+                  text: "widow"
+                },
+                {
+                  text: "winter"
+                },
+                {
+                  text: "wonder"
+                }
+              ],
+              clue: "Count the letters first. Then look at the letters you know best.",
+              hints: [
+                "Count the letters first. Then look at the letters you know best.",
+                "Compare the first letters and the last letters of the word with each choice.",
+                "Check how many letters the word has. Then look at the letters in the middle."
+              ],
+              how: [
+                "Count the letters in the cursive word: there are six.",
+                "Read the first letters: w, i, n.",
+                "The last letters are d, o, w. The word is window."
+              ],
+              misconception: "A common mix-up is choosing a word that starts the same way. Read all the letters, not only the first few.",
+              why: "The answer is \"window.\" It has six letters: w-i-n-d-o-w. Widow has five letters, winter ends in ter, and wonder has a different middle."
+            },
+            {
+              id: "SK-FH3a-C02",
+              type: "dropdown",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive sentence. Choose the word that fits each blank.",
+              stem: [
+                "Cursive: Quinn rode a red scooter."
+              ],
+              text: "{0} rode a {1} scooter.",
+              slots: [
+                {
+                  options: [
+                    "Quinn",
+                    "Gwen",
+                    "Owen"
+                  ],
+                  answer: 0
+                },
+                {
+                  options: [
+                    "rod",
+                    "rid",
+                    "red"
+                  ],
+                  answer: 2
+                }
+              ],
+              clue: "Read the cursive sentence one word at a time.",
+              hints: [
+                "Read the cursive sentence one word at a time.",
+                "The first word starts with a capital letter. Look at it closely, then read the rest of the word.",
+                "For the second blank, look at the word before scooter and read each letter."
+              ],
+              how: [
+                "Read the first word. It starts with a capital letter and has five letters: Quinn.",
+                "Read the word before scooter. It has three letters: r-e-d.",
+                "Check the sentence: Quinn rode a red scooter."
+              ],
+              misconception: "A common mix-up is guessing a word from its first letter. Read every letter.",
+              why: "The answers are \"Quinn\" and \"red.\" The sentence starts with the name Quinn and says Quinn rode a red scooter. Gwen, Owen, rod and rid do not match the letters."
+            },
+            {
+              id: "SK-FH3a-C03",
+              type: "hottext",
+              points: 1,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive sentence. Choose the word that has the letter z.",
+              stem: [
+                "Cursive: The baby dozed in a soft chair."
+              ],
+              options: [
+                "baby",
+                "dozed",
+                "soft",
+                "chair"
+              ],
+              answer: [
+                1
+              ],
+              pick: 1,
+              clue: "Read the cursive sentence one word at a time.",
+              hints: [
+                "Read the cursive sentence one word at a time.",
+                "Look for a letter that looks very different from print.",
+                "Check the letters in the middle of each word."
+              ],
+              how: [
+                "Read each word in the sentence: The baby dozed in a soft chair.",
+                "Look at the letters in each word.",
+                "Dozed has a z in the middle, and the other words do not."
+              ],
+              misconception: "A common mix-up is choosing the longest word. Read each word and look for the z.",
+              why: "The answer is \"dozed.\" It is spelled d-o-z-e-d, so it has a z. Baby, soft and chair have no z."
+            },
+            {
+              id: "SK-FH3a-C04",
+              type: "match",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive sentence. Match each place in the sentence to its word.",
+              stem: [
+                "Cursive: Nia ran home fast."
+              ],
+              cols: [
+                "Nia",
+                "ran",
+                "home",
+                "fast"
+              ],
+              rows: [
+                {
+                  text: "last word",
+                  answer: 3
+                },
+                {
+                  text: "first word",
+                  answer: 0
+                },
+                {
+                  text: "third word",
+                  answer: 2
+                },
+                {
+                  text: "second word",
+                  answer: 1
+                }
+              ],
+              clue: "Use the spaces to find where each word begins and ends.",
+              hints: [
+                "Use the spaces to find where each word begins and ends.",
+                "Read each word one at a time and count its place in the sentence.",
+                "Start with the first word. It has a capital letter."
+              ],
+              how: [
+                "Find the four words using the spaces.",
+                "Read them in order: Nia, ran, home, fast.",
+                "Match each place to the word that sits there."
+              ],
+              misconception: "A common mix-up is counting from the wrong end. Start at the capital letter.",
+              why: "The first word is Nia, the second is ran, the third is home, and the last is fast."
+            },
+            {
+              ref: "SK-FH3a-P4"
+            }
+          ]
+        },
+        {
+          title: "Set 2",
+          items: [
+            {
+              id: "SK-FH3a-C05",
+              type: "mc",
+              points: 1,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive sentence. Which sentence matches it?",
+              stem: [
+                "Cursive: Zara fixed the broken zipper."
+              ],
+              choices: [
+                {
+                  text: "Zara fixed the broken zipper.",
+                  correct: true
+                },
+                {
+                  text: "Zara fixed the broken zebra."
+                },
+                {
+                  text: "Sara fixed the broken zipper."
+                },
+                {
+                  text: "Zara mixed the broken zipper."
+                }
+              ],
+              clue: "Read the cursive sentence one word at a time.",
+              hints: [
+                "Read the cursive sentence one word at a time.",
+                "Compare each word in the cursive sentence with the same word in each choice.",
+                "Check the first word and the second word. Then check the last word."
+              ],
+              how: [
+                "Read each word: Zara, fixed, the, broken, zipper.",
+                "The first word starts with the tricky capital Z.",
+                "Match every word to a choice. Only one choice matches all five."
+              ],
+              misconception: "A common mix-up is stopping after the first few words. Check every word.",
+              why: "The answer is \"Zara fixed the broken zipper.\" Every word matches the cursive. The other choices change the name, the action word, or the last word."
+            },
+            {
+              id: "SK-FH3a-C06",
+              type: "hottext",
+              points: 1,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive sentence. Choose the word that names an animal.",
+              stem: [
+                "Cursive: A brown rabbit hid in the tall grass."
+              ],
+              options: [
+                "brown",
+                "rabbit",
+                "hid",
+                "grass"
+              ],
+              answer: [
+                1
+              ],
+              pick: 1,
+              clue: "Read the cursive sentence one word at a time.",
+              hints: [
+                "Read the cursive sentence one word at a time.",
+                "Think about what each word names or tells.",
+                "Look at the word that starts with the cursive r."
+              ],
+              how: [
+                "Read each word: A brown rabbit hid in the tall grass.",
+                "Ask which word is a living thing.",
+                "Rabbit is an animal."
+              ],
+              misconception: "A common mix-up is choosing a color word. Think about what each word names.",
+              why: "The answer is \"rabbit.\" A rabbit is an animal. Brown is a color, hid tells what the rabbit did, and grass is a plant."
+            },
+            {
+              id: "SK-FH3a-C07",
+              type: "order",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Put the steps in order for reading a cursive sentence.",
+              steps: [
+                "Use the spaces to find each word.",
+                "Read the letters you know best first.",
+                "Use those letters to work out the rest of the word.",
+                "Read the whole sentence to check that it makes sense."
+              ],
+              clue: "Think about what you look for before you read any letters.",
+              hints: [
+                "Think about what you look for before you read any letters.",
+                "Think about which letters are easiest to read.",
+                "The last step makes sure the sentence sounds right."
+              ],
+              how: [
+                "First, use the spaces to find each word.",
+                "Second, read the letters you know best.",
+                "Third, use those letters to work out the rest.",
+                "Fourth, read the whole sentence to check it."
+              ],
+              misconception: "A common mix-up is trying to read the whole sentence at once. Take it one word at a time.",
+              why: "The order is: use the spaces to find each word; read the letters you know best first; use those letters to work out the rest of the word; read the whole sentence to check that it makes sense."
+            },
+            {
+              id: "SK-FH3a-C08",
+              type: "mc",
+              points: 1,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive note. What does it ask you to do?",
+              stem: [
+                "Cursive: Please water the plants and shut the gate."
+              ],
+              choices: [
+                {
+                  text: "Water the plants and shut the gate.",
+                  correct: true
+                },
+                {
+                  text: "Water the plants and open the gate."
+                },
+                {
+                  text: "Plant the seeds and shut the gate."
+                },
+                {
+                  text: "Water the lawn and shut the garage."
+                }
+              ],
+              clue: "Read the cursive note one word at a time.",
+              hints: [
+                "Read the cursive note one word at a time.",
+                "Find the two action words in the note.",
+                "Compare each action word and its object with each choice."
+              ],
+              how: [
+                "Read the note word by word.",
+                "The first action is water, and the object is the plants.",
+                "The second action is shut, and the object is the gate."
+              ],
+              misconception: "A common mix-up is picking a choice with one right part. Both parts have to match.",
+              why: "The answer is \"Water the plants and shut the gate.\" The note says to water the plants and shut the gate. The other choices change an action or an object."
+            },
+            {
+              id: "SK-FH3a-C09",
+              type: "dropdown",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive note. Choose the words that finish the sentence.",
+              stem: [
+                "Cursive: Leave the keys on the shelf."
+              ],
+              text: "The note says to leave the {0} on the {1}.",
+              slots: [
+                {
+                  options: [
+                    "keys",
+                    "kites",
+                    "books"
+                  ],
+                  answer: 0
+                },
+                {
+                  options: [
+                    "desk",
+                    "shelf",
+                    "step"
+                  ],
+                  answer: 1
+                }
+              ],
+              clue: "Read the cursive note one word at a time.",
+              hints: [
+                "Read the cursive note one word at a time.",
+                "Find the word after the first the, then the word after the second the.",
+                "Check the last word of the note. Look at its first letter and its last letter."
+              ],
+              how: [
+                "Read the note: Leave the keys on the shelf.",
+                "The word after the first the is keys.",
+                "The word after the second the is shelf."
+              ],
+              misconception: "A common mix-up is guessing a word that makes sense but does not match the letters. Read every letter.",
+              why: "The answers are \"keys\" and \"shelf.\" The note says Leave the keys on the shelf. Kites, books, desk and step do not match the letters."
+            }
+          ]
+        },
+        {
+          title: "Set 3",
+          items: [
+            {
+              id: "SK-FH3a-C10",
+              type: "mc",
+              points: 1,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive note. What should Dad bring to the pond?",
+              stem: [
+                "Cursive: Please bring a large blanket, two cups and a jug of juice."
+              ],
+              choices: [
+                {
+                  text: "A blanket, two cups and a jug of juice",
+                  correct: true
+                },
+                {
+                  text: "A blanket, one cup and a jug of juice"
+                },
+                {
+                  text: "A basket, two cups and a jug of juice"
+                },
+                {
+                  text: "A blanket, two cups and a jar of juice"
+                }
+              ],
+              clue: "Read the cursive note one word at a time.",
+              hints: [
+                "Read the cursive note one word at a time.",
+                "There are three things on the list. Find each one and how many there are.",
+                "Check the word before cups, then the word after the second a."
+              ],
+              how: [
+                "Read the note: a large blanket, two cups and a jug of juice.",
+                "Check each part of each choice against the note.",
+                "Only one choice has the blanket, two cups and the jug."
+              ],
+              misconception: "A common mix-up is choosing the first choice that sounds right. Check every item.",
+              why: "The answer is \"A blanket, two cups and a jug of juice.\" The note asks for a large blanket, two cups and a jug of juice. The other choices change the blanket, the number of cups, or the jug."
+            },
+            {
+              id: "SK-FH3a-C11",
+              type: "match",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive schedule. Match each day to its activity.",
+              stem: [
+                "Cursive: Monday: swim class",
+                "Cursive: Tuesday: art club",
+                "Cursive: Wednesday: soccer",
+                "Cursive: Thursday: piano"
+              ],
+              cols: [
+                "piano",
+                "swim class",
+                "soccer",
+                "art club"
+              ],
+              rows: [
+                {
+                  text: "Wednesday",
+                  answer: 2
+                },
+                {
+                  text: "Monday",
+                  answer: 1
+                },
+                {
+                  text: "Thursday",
+                  answer: 0
+                },
+                {
+                  text: "Tuesday",
+                  answer: 3
+                }
+              ],
+              clue: "Read each line of the cursive schedule.",
+              hints: [
+                "Read each line of the cursive schedule.",
+                "Each line has a day, then a colon, then an activity.",
+                "Start with the day you know best. Find its line and read the words after the colon."
+              ],
+              how: [
+                "Read each line of the schedule.",
+                "Find the line for each day.",
+                "Match each day to the activity after its colon."
+              ],
+              misconception: "A common mix-up is matching by position. Read each line to find the day and its activity.",
+              why: "Monday is swim class, Tuesday is art club, Wednesday is soccer, and Thursday is piano."
+            },
+            {
+              id: "SK-FH3a-C12",
+              type: "mc",
+              points: 1,
+              dok: 3,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Leo cannot read the third word in a cursive note. He knows the first letter and the last letter. What should he do next?",
+              choices: [
+                {
+                  text: "Use the letters he knows and think about what fits the sentence.",
+                  correct: true
+                },
+                {
+                  text: "Skip the note and read only the capital letters."
+                },
+                {
+                  text: "Guess any long word that starts with the same letter."
+                },
+                {
+                  text: "Print the word and read it out loud two times."
+                }
+              ],
+              clue: "Think about how a reader works out a word they cannot read yet.",
+              hints: [
+                "Think about how a reader works out a word they cannot read yet.",
+                "Think about what the rest of the sentence can tell Leo.",
+                "Compare each choice with what Leo knows: some letters and the sentence around the word."
+              ],
+              how: [
+                "Leo knows some letters of the word.",
+                "He also has the rest of the sentence.",
+                "So he should use the letters he knows and think about what fits the sentence."
+              ],
+              misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
+              why: "The answer is \"Use the letters he knows and think about what fits the sentence.\" The letters and the other words together help him work out the word. The other choices skip the note, guess, or change the word to print."
+            },
+            {
+              id: "SK-FH3a-C13",
+              type: "dropdown",
+              points: 2,
+              dok: 2,
+              std: [
+                "3.F.H.3.a"
+              ],
+              passages: [],
+              prompt: "Read the cursive invitation. Choose the day and the time.",
+              stem: [
+                "Cursive: Dear Pam, the party is on Saturday at four o'clock. Love, Gran"
+              ],
+              text: "The party is on {0} at {1} o'clock.",
+              slots: [
+                {
+                  options: [
+                    "Sunday",
+                    "Saturday",
+                    "Thursday"
+                  ],
+                  answer: 1
+                },
+                {
+                  options: [
+                    "four",
+                    "five",
+                    "nine"
+                  ],
+                  answer: 0
+                }
+              ],
+              clue: "Read the cursive invitation one word at a time.",
+              hints: [
+                "Read the cursive invitation one word at a time.",
+                "Find the word after on and the word after at.",
+                "Check the first letter and the last letter of each answer word."
+              ],
+              how: [
+                "Read the invitation: the party is on Saturday at four o'clock.",
+                "The word after on is the day: Saturday.",
+                "The word after at is the time: four."
+              ],
+              misconception: "A common mix-up is picking a day that looks close. Read every letter.",
+              why: "The answers are \"Saturday\" and \"four.\" The invitation says the party is on Saturday at four o'clock. Sunday, Thursday, five and nine do not match."
+            },
+            {
+              ref: "SK-FH3a-P5"
+            }
+          ]
+        }
+      ]
+    },
+    similar: [
+      {
+        id: "SK-FH3a-S01",
+        type: "mc",
+        points: 1,
+        dok: 1,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C01"
+        ],
+        prompt: "Which word is written here?",
+        stem: [
+          "Cursive: garden"
+        ],
+        choices: [
+          {
+            text: "garden",
+            correct: true
+          },
+          {
+            text: "gander"
+          },
+          {
+            text: "guard"
+          },
+          {
+            text: "grand"
+          }
+        ],
+        clue: "Count the letters first. Then look at the letters you know best.",
+        hints: [
+          "Count the letters first. Then look at the letters you know best.",
+          "Compare the first letters and the last letters of the word with each choice.",
+          "Check how many letters the word has. Then look at the letters in the middle."
+        ],
+        how: [
+          "Count the letters in the cursive word: there are six.",
+          "Read the first letters: g, a, r.",
+          "The last letters are d, e, n. The word is garden."
+        ],
+        misconception: "A common mix-up is choosing a word that starts the same way. Read all the letters.",
+        why: "The answer is \"garden.\" It has six letters: g-a-r-d-e-n. Gander has a different middle, guard has five letters, and grand has five letters."
+      },
+      {
+        id: "SK-FH3a-S02",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C02"
+        ],
+        prompt: "Choose the missing words.",
+        stem: [
+          "Cursive: Tess carried a heavy basket."
+        ],
+        text: "{0} carried a {1} basket.",
+        slots: [
+          {
+            options: [
+              "Jess",
+              "Tess",
+              "Tim"
+            ],
+            answer: 1
+          },
+          {
+            options: [
+              "heavy",
+              "happy",
+              "hairy"
+            ],
+            answer: 0
+          }
+        ],
+        clue: "Read the cursive sentence one word at a time.",
+        hints: [
+          "Read the cursive sentence one word at a time.",
+          "The first word starts with a capital letter. Look at it closely, then read the rest of the word.",
+          "For the second blank, look at the word before basket and read each letter."
+        ],
+        how: [
+          "Read the first word. It starts with a capital letter and has four letters: Tess.",
+          "Read the word before basket. It has five letters: h-e-a-v-y.",
+          "Check the sentence: Tess carried a heavy basket."
+        ],
+        misconception: "A common mix-up is guessing a word from its first letter. Read every letter.",
+        why: "The answers are \"Tess\" and \"heavy.\" The sentence says Tess carried a heavy basket. Jess, Tim, happy and hairy do not match the letters."
+      },
+      {
+        id: "SK-FH3a-S03",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C03"
+        ],
+        prompt: "Tap the one spelled with a q.",
+        stem: [
+          "Cursive: A quiet duck swam by our dock."
+        ],
+        options: [
+          "quiet",
+          "duck",
+          "swam",
+          "dock"
+        ],
+        answer: [
+          0
+        ],
+        pick: 1,
+        clue: "Go through the cursive line one piece at a time.",
+        hints: [
+          "Go through the cursive line one piece at a time.",
+          "Look for a letter with a long tail that is easy to spot.",
+          "Check how each piece begins."
+        ],
+        how: [
+          "Read each piece of the line.",
+          "Look at the first letters.",
+          "Quiet begins with q, and the others do not have one."
+        ],
+        misconception: "A common mix-up is choosing a word that looks tall. Look for the q itself.",
+        why: "The answer is \"quiet.\" It is spelled q-u-i-e-t. Duck, swam and dock have no q."
+      },
+      {
+        id: "SK-FH3a-S04",
+        type: "match",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C04"
+        ],
+        prompt: "Count the letters in each word. Match.",
+        stem: [
+          "Cursive: Sam took eight plates."
+        ],
+        cols: [
+          "three letters",
+          "four letters",
+          "five letters",
+          "six letters"
+        ],
+        rows: [
+          {
+            text: "plates",
+            answer: 3
+          },
+          {
+            text: "Sam",
+            answer: 0
+          },
+          {
+            text: "eight",
+            answer: 2
+          },
+          {
+            text: "took",
+            answer: 1
+          }
+        ],
+        clue: "Use the spaces to see where each word stops.",
+        hints: [
+          "Use the spaces to see where each word stops.",
+          "Count the letters in one word at a time.",
+          "Start with the shortest word."
+        ],
+        how: [
+          "Find the four words using the spaces.",
+          "Count the letters in each: Sam has 3, took has 4, eight has 5, plates has 6.",
+          "Match each word to its count."
+        ],
+        misconception: "A common mix-up is counting the spaces. Count only the letters.",
+        why: "Sam has three letters, took has four, eight has five, and plates has six."
+      },
+      {
+        id: "SK-FH3a-S05",
+        type: "ms",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-P4"
+        ],
+        prompt: "Two foods are named above. Choose them.",
+        stem: [
+          "Cursive: pears",
+          "Cursive: honey",
+          "Cursive: rolls"
+        ],
+        pick: 2,
+        choices: [
+          {
+            text: "pears",
+            correct: true
+          },
+          {
+            text: "rolls",
+            correct: true
+          },
+          {
+            text: "peas"
+          },
+          {
+            text: "hams"
+          },
+          {
+            text: "jelly"
+          }
+        ],
+        clue: "Read each line of the cursive list one at a time.",
+        hints: [
+          "Read each line of the cursive list one at a time.",
+          "Then check each choice against the list.",
+          "Look at the first letter and the last letter of each line."
+        ],
+        how: [
+          "Read each line: pears, honey and rolls.",
+          "Check each choice against the list.",
+          "Pears and rolls are on the list. Peas, hams and jelly are not."
+        ],
+        misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
+        why: "The answers are \"pears\" and \"rolls.\" The list says pears, honey and rolls. Peas, hams and jelly are not on it."
+      },
+      {
+        id: "SK-FH3a-S06",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C05"
+        ],
+        prompt: "Look at the cursive sentence. Which sentence is the same?",
+        stem: [
+          "Cursive: Tara mended the torn jacket."
+        ],
+        choices: [
+          {
+            text: "Tara mended the torn jacket.",
+            correct: true
+          },
+          {
+            text: "Tara mended the worn jacket."
+          },
+          {
+            text: "Sara mended the torn jacket."
+          },
+          {
+            text: "Tara minded the torn jacket."
+          }
+        ],
+        clue: "Read the cursive sentence one word at a time.",
+        hints: [
+          "Read the cursive sentence one word at a time.",
+          "Compare each word in the cursive sentence with the same word in each choice.",
+          "Check the first word and the second word. Then check the last word."
+        ],
+        how: [
+          "Read each word: Tara, mended, the, torn, jacket.",
+          "The first word starts with the tricky capital T.",
+          "Match every word to a choice. Only one choice matches all five."
+        ],
+        misconception: "A common mix-up is stopping after the first few words. Check every word.",
+        why: "The answer is \"Tara mended the torn jacket.\" Every word matches the cursive. The other choices change the name, the action word, or the describing word."
+      },
+      {
+        id: "SK-FH3a-S07",
+        type: "hottext",
+        points: 1,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C06"
+        ],
+        prompt: "Tap the one that tells a color.",
+        stem: [
+          "Cursive: My aunt knits a purple scarf every winter."
+        ],
+        options: [
+          "aunt",
+          "knits",
+          "purple",
+          "winter"
+        ],
+        answer: [
+          2
+        ],
+        pick: 1,
+        clue: "Go through the cursive line one piece at a time.",
+        hints: [
+          "Go through the cursive line one piece at a time.",
+          "Think about what each piece names or tells.",
+          "Look at the piece that has a cursive p near the start."
+        ],
+        how: [
+          "Read each piece of the line.",
+          "Ask which one describes how something looks.",
+          "Purple is a color."
+        ],
+        misconception: "A common mix-up is choosing a thing instead of a color. Think about what each piece tells.",
+        why: "The answer is \"purple.\" Purple is a color. Aunt names a person, knits tells an action, and winter names a season."
+      },
+      {
+        id: "SK-FH3a-S08",
+        type: "order",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C07"
+        ],
+        prompt: "Put these in order for a stuck reader.",
+        steps: [
+          "Start at the capital letter.",
+          "Say each word quietly.",
+          "Skip ahead if you get stuck.",
+          "Come back with clues from nearby words."
+        ],
+        clue: "Think about where a reader begins.",
+        hints: [
+          "Think about where a reader begins.",
+          "Think about what to do when one word stops you.",
+          "The last step uses clues to fix the problem."
+        ],
+        how: [
+          "First, start at the capital letter.",
+          "Second, say each word quietly.",
+          "Third, skip ahead if you get stuck.",
+          "Fourth, come back with clues from nearby words."
+        ],
+        misconception: "A common mix-up is staying stuck on the hard word. Move on and come back.",
+        why: "The order is: start at the capital letter; say each word quietly; skip ahead if you get stuck; come back with clues from nearby words."
+      },
+      {
+        id: "SK-FH3a-S09",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C08"
+        ],
+        prompt: "Which chores are listed here?",
+        stem: [
+          "Cursive: Kindly wipe the table, then feed Rex."
+        ],
+        choices: [
+          {
+            text: "Wipe the table and feed Rex.",
+            correct: true
+          },
+          {
+            text: "Wipe the table and walk Rex."
+          },
+          {
+            text: "Wipe the chairs and feed Rex."
+          },
+          {
+            text: "Sweep the table and feed Rex."
+          }
+        ],
+        clue: "Read the cursive line one word at a time.",
+        hints: [
+          "Read the cursive line one word at a time.",
+          "Find the two action words.",
+          "Compare each action word and its object with each choice."
+        ],
+        how: [
+          "Read the line word by word.",
+          "The first action is wipe, and the object is the table.",
+          "The second action is feed, and the object is Rex."
+        ],
+        misconception: "A common mix-up is picking a choice with one right part. Both parts have to match.",
+        why: "The answer is \"Wipe the table and feed Rex.\" The line says to wipe the table and feed Rex. The other choices change an action or an object."
+      },
+      {
+        id: "SK-FH3a-S10",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C09"
+        ],
+        prompt: "Choose what completes each line.",
+        stem: [
+          "Cursive: Wash the pans and stack the cups."
+        ],
+        text: "First {0} the pans. Then stack the {1}.",
+        slots: [
+          {
+            options: [
+              "wash",
+              "wish",
+              "watch"
+            ],
+            answer: 0
+          },
+          {
+            options: [
+              "cups",
+              "caps",
+              "cubs"
+            ],
+            answer: 0
+          }
+        ],
+        clue: "Read the cursive line one word at a time.",
+        hints: [
+          "Read the cursive line one word at a time.",
+          "Find the first action word, then the last word.",
+          "Check the first letter and the last letter of each answer word."
+        ],
+        how: [
+          "Read the line: Wash the pans and stack the cups.",
+          "The first action word is wash.",
+          "The last word is cups."
+        ],
+        misconception: "A common mix-up is guessing a word that makes sense but does not match the letters. Read every letter.",
+        why: "The answers are \"wash\" and \"cups.\" The line says Wash the pans and stack the cups. Wish, watch, caps and cubs do not match the letters."
+      },
+      {
+        id: "SK-FH3a-S11",
+        type: "mc",
+        points: 1,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C10"
+        ],
+        prompt: "What goes on the shopping list?",
+        stem: [
+          "Cursive: Buy brown eggs, ten plums and one loaf at the market."
+        ],
+        choices: [
+          {
+            text: "Brown eggs, ten plums, one loaf",
+            correct: true
+          },
+          {
+            text: "Brown eggs, ten plums, one cake"
+          },
+          {
+            text: "White eggs, ten plums, one loaf"
+          },
+          {
+            text: "Brown eggs, ten pears, one loaf"
+          }
+        ],
+        clue: "Read the cursive line one word at a time.",
+        hints: [
+          "Read the cursive line one word at a time.",
+          "There are three things on the list. Find each one and how many there are.",
+          "Check the word before eggs, then the word after ten."
+        ],
+        how: [
+          "Read the line: brown eggs, ten plums and one loaf.",
+          "Check each part of each choice against the line.",
+          "Only one choice has all three parts right."
+        ],
+        misconception: "A common mix-up is choosing the first choice that sounds right. Check every item.",
+        why: "The answer is \"Brown eggs, ten plums, one loaf.\" The line asks for all three. The other choices change the eggs, the fruit, or the bread."
+      },
+      {
+        id: "SK-FH3a-S12",
+        type: "match",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C11"
+        ],
+        prompt: "Match each season to its plan.",
+        stem: [
+          "Cursive: Spring: plant seeds",
+          "Cursive: Summer: go camping",
+          "Cursive: Autumn: rake leaves",
+          "Cursive: Winter: build snowmen"
+        ],
+        cols: [
+          "go camping",
+          "build snowmen",
+          "rake leaves",
+          "plant seeds"
+        ],
+        rows: [
+          {
+            text: "Autumn",
+            answer: 2
+          },
+          {
+            text: "Spring",
+            answer: 3
+          },
+          {
+            text: "Winter",
+            answer: 1
+          },
+          {
+            text: "Summer",
+            answer: 0
+          }
+        ],
+        clue: "Read each line of the cursive chart.",
+        hints: [
+          "Read each line of the cursive chart.",
+          "Each line has a season, then a colon, then a plan.",
+          "Start with the season you know best. Find its line and read the words after the colon."
+        ],
+        how: [
+          "Read each line of the chart.",
+          "Find the line for each season.",
+          "Match each season to the plan after its colon."
+        ],
+        misconception: "A common mix-up is matching by position. Read each line to find the season and its plan.",
+        why: "Spring is plant seeds, Summer is go camping, Autumn is rake leaves, and Winter is build snowmen."
+      },
+      {
+        id: "SK-FH3a-S13",
+        type: "mc",
+        points: 1,
+        dok: 3,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C12"
+        ],
+        prompt: "A pupil is stuck on one scribbled word but can read its ending. What is the best plan?",
+        choices: [
+          {
+            text: "Test words with that ending and see which one fits the story around it.",
+            correct: true
+          },
+          {
+            text: "Tear out the page and begin a new one."
+          },
+          {
+            text: "Choose whichever word looks the longest on the page."
+          },
+          {
+            text: "Rewrite it in print and stop thinking about it."
+          }
+        ],
+        clue: "Think about how a reader works out a word they cannot read yet.",
+        hints: [
+          "Think about how a reader works out a word they cannot read yet.",
+          "Think about what the rest of the sentence can tell the pupil.",
+          "Compare each choice with what the pupil has: some letters and the sentence around the word."
+        ],
+        how: [
+          "The pupil can read the ending.",
+          "The pupil also has the rest of the sentence.",
+          "So the best plan is to test words with that ending and see which one fits."
+        ],
+        misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
+        why: "The answer is \"Test words with that ending and see which one fits the story around it.\" The letters and the story together help work out the word. The other choices give up, guess, or only change the word to print."
+      },
+      {
+        id: "SK-FH3a-S14",
+        type: "dropdown",
+        points: 2,
+        dok: 2,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-C13"
+        ],
+        prompt: "Where and when? Complete the message.",
+        stem: [
+          "Cursive: Meet me by the fountain on Friday. Jo"
+        ],
+        text: "Meet by the {0} on {1}.",
+        slots: [
+          {
+            options: [
+              "fountain",
+              "mountain",
+              "fortune"
+            ],
+            answer: 0
+          },
+          {
+            options: [
+              "Friday",
+              "Tuesday",
+              "Wednesday"
+            ],
+            answer: 0
+          }
+        ],
+        clue: "Read the cursive message one word at a time.",
+        hints: [
+          "Read the cursive message one word at a time.",
+          "Find the word after by the and the word after on.",
+          "Check the first letter and the last letter of each answer word."
+        ],
+        how: [
+          "Read the message: Meet me by the fountain on Friday.",
+          "The word after by the is fountain.",
+          "The word after on is Friday."
+        ],
+        misconception: "A common mix-up is picking a word that looks close. Read every letter.",
+        why: "The answers are \"fountain\" and \"Friday.\" The message says to meet by the fountain on Friday. Mountain, fortune, Tuesday and Wednesday do not match."
+      },
+      {
+        id: "SK-FH3a-S15",
+        type: "mc",
+        points: 1,
+        dok: 1,
+        std: [
+          "3.F.H.3.a"
+        ],
+        passages: [],
+        like: [
+          "SK-FH3a-P5"
+        ],
+        prompt: "Whose name is this?",
+        stem: [
+          "Cursive: Tessa"
+        ],
+        choices: [
+          {
+            text: "Tessa",
+            correct: true
+          },
+          {
+            text: "Tess"
+          },
+          {
+            text: "Teresa"
+          },
+          {
+            text: "Tasha"
+          }
+        ],
+        clue: "The capital letter is one of the tricky ones. Look at the letters after it too.",
+        hints: [
+          "The capital letter is one of the tricky ones. Look at the letters after it too.",
+          "Count the letters in the name.",
+          "Compare the middle and the end of the name with each choice."
+        ],
+        how: [
+          "Read the capital letter: T.",
+          "Read the rest: e-s-s-a.",
+          "The name has five letters, so it is Tessa."
+        ],
+        misconception: "A common mix-up is choosing a name that starts the same way. Read all the letters.",
+        why: "The answer is \"Tessa.\" It starts with a cursive capital T followed by e-s-s-a. Tess has four letters, and Teresa and Tasha have different letters."
+      }
+    ],
+    addons: {
+      "SK-FH3a-P1": {
+        hints: [
+          "Read the cursive sentence one word at a time.",
+          "Look closely at every letter of the second word and at the last word.",
+          "Compare the second word and the last word with each choice."
+        ],
+        how: [
+          "Read each word: My, cat, is, gray.",
+          "The second word ends in t, not r.",
+          "The last word is gray: g-r-a-y."
+        ],
+        misconception: "A common mix-up is stopping after the first word. Check every word."
+      },
+      "SK-FH3a-P2": {
+        hints: [
+          "Count the letters first.",
+          "Look closely at the second letter and the last letter.",
+          "Compare the number of letters with each choice."
+        ],
+        how: [
+          "Count the letters: there are four.",
+          "The second letter is the cursive r, and the last letter has a loop below the line.",
+          "That word is frog."
+        ],
+        misconception: "A common mix-up is choosing a word that starts the same way. Read every letter."
+      },
+      "SK-FH3a-P3": {
+        hints: [
+          "Read the cursive note one word at a time.",
+          "Find the action word after Please, then the last word.",
+          "Check the first letter of the action word and the last word."
+        ],
+        how: [
+          "Read each word: Please, feed, the, fish.",
+          "The action word is feed.",
+          "The last word is fish, so the note asks you to feed the fish."
+        ],
+        misconception: "A common mix-up is choosing a choice with one right word. Check every word."
+      },
+      "SK-FH3a-P4": {
+        hints: [
+          "Read each line of the cursive list one at a time.",
+          "Then check each choice against the list.",
+          "Look at the first letter and the last letter of each line."
+        ],
+        how: [
+          "Read each line: milk, bread and apples.",
+          "Check each choice against the list.",
+          "Milk and apples are on the list. Butter, beans and peaches are not."
+        ],
+        misconception: "A common mix-up is choosing a word that looks close. Read every letter."
+      },
+      "SK-FH3a-P5": {
+        hints: [
+          "The capital letter is one of the tricky ones. Look at it closely.",
+          "Count the letters in the name.",
+          "Compare the end of the name with each choice."
+        ],
+        how: [
+          "Read the capital letter: Z.",
+          "Read the rest: o-e.",
+          "The name has three letters, so it is Zoe."
+        ],
+        misconception: "A common mix-up is choosing a name that starts the same way. Read all the letters."
+      }
+    },
+    /* B9:core:end */
     test: [
       { id: "SK-FH3a-T1", type: "mc", points: 1, dok: 1, passages: [],
         prompt: "Read the cursive sentence. Which sentence matches it?",
@@ -377,6 +1793,42 @@
       how: ["Trace each gray row with a pencil. Then write it yourself on the empty lines below it. Print the sheet, or trace on paper laid over a tablet screen turned up bright."],
       rows: ["a c d g o q", "i t u w", "e l h k b f", "m n v x y z", "r s p j", "cat dog quit", "help bike fun", "my zoo jumps", "A B C D E F G", "H I J K L M N", "O P Q R S T U", "V W X Y Z"]
     },
+    /* B9:exception:start */
+    /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+    coreException: {
+      kind: "performance",
+      rationale: "Cursive letter formation is a motor skill that has to be seen. Trace-then-write sessions with an adult checklist take the place of fifteen items.",
+      tasks: [
+        {
+          title: "Session 1: Stroke families",
+          how: "Trace one letter family at a time, such as a, c, d, g, o and q. Then write each letter three times with no tracing. The grown-up checks the start of each stroke and that the letter sits on the line.",
+          checklist: [
+            "Each letter starts with the right stroke.",
+            "Letters sit on the bottom line.",
+            "Round letters are closed and tall letters touch the top line."
+          ]
+        },
+        {
+          title: "Session 2: Joins",
+          how: "Trace three joined words, such as \"mom\", \"run\" and \"hill\". Then write each one with no tracing. The pencil stays down inside each word and lifts only at the end.",
+          checklist: [
+            "Letters in each word were joined without lifting.",
+            "Joins started from the right height.",
+            "Dots and crosses were added after the word."
+          ]
+        },
+        {
+          title: "Session 3: Capitals",
+          how: "Trace capital letters in the child's own name and one place name. Then write them with no tracing. Check that capitals that do not join are followed by a small space.",
+          checklist: [
+            "Capitals were the right shape and height.",
+            "Capitals that do not join were left unjoined.",
+            "The name was written without tracing."
+          ]
+        }
+      ]
+    },
+    /* B9:exception:end */
     check: {
       intro: "Grown-up: look at your child's cursive writing, then check each line that is true.",
       items: [
@@ -436,6 +1888,42 @@
       how: ["Trace each gray sentence. Notice the even spaces. Then write the sentence on the empty lines, lifting your pencil after each word."],
       rows: ["I can run fast.", "The sun is hot.", "We read a book.", "My dog likes to play."]
     },
+    /* B9:exception:start */
+    /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
+    coreException: {
+      kind: "performance",
+      rationale: "Spacing in cursive writing is a motor skill that has to be seen on the page. Three dictated-sentence sessions with an adult checklist take the place of fifteen items.",
+      tasks: [
+        {
+          title: "Session 1: Short sentence",
+          how: "Say a short sentence of four or five words, such as \"The cat sat down.\" The child writes it in cursive. The grown-up uses a finger or a pencil width to check the space between words.",
+          checklist: [
+            "Spaces between words were about the width of one small letter.",
+            "Spaces were the same all the way across.",
+            "Each sentence started with a capital and ended with a mark."
+          ]
+        },
+        {
+          title: "Session 2: Longer sentence",
+          how: "Say a sentence of eight words. The child writes it in cursive on lined paper. Check that all the words fit on the line without squeezing at the end.",
+          checklist: [
+            "The child planned the space for the whole sentence.",
+            "Words were not crowded together at the end.",
+            "No letters ran into the next word."
+          ]
+        },
+        {
+          title: "Session 3: Two sentences",
+          how: "Say two sentences. The child writes both in cursive and then checks their own spacing with a finger. The grown-up compares this page with the first session.",
+          checklist: [
+            "Spacing was even in both sentences.",
+            "The child fixed a space they found.",
+            "The spacing looked better than in Session 1."
+          ]
+        }
+      ]
+    },
+    /* B9:exception:end */
     check: {
       intro: "Grown-up: have your child write two sentences in cursive, then check each line that is true.",
       items: [
