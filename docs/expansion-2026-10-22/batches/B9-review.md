@@ -717,3 +717,171 @@ No sequence replaces fifteen items with something thinner than the rationale say
 
 - A fully blind 134 of 134 solve still hides wrong keys and leaky items. The dictionary pass and the render pass found what the solve could not.
 - Cursive items stored as plain text need a separate "does the child have to read it" test.
+
+
+# Fourth review (independent, fresh eyes)
+
+Reviewer: fourth reviewer. I did not write or earlier-review this content. Scope: 3.F.P.4.b and 3.F.H.3.a after the third fix pass (F-PF.js, F-FH.js, frozen copy at /home/claude/pp-content), plus a check that the wording-only edits to the ACCEPTED lessons 3.F.P.4.a and 3.F.P.4.c changed no keys. Read-only apart from this section. A local server (port 8795) was used for rendering at 390 x 844 and was stopped by pid. Scratch files are in the session scratchpad under b9rev4.
+
+## F1. Verdicts at a glance
+
+| Lesson | Verdict | Blocking finding |
+|---|---|---|
+| 3.F.P.4.b | ACCEPT (SHOULDs F-B1 to F-B5 recommended before STATUS) | none |
+| 3.F.H.3.a | CHANGES REQUIRED (one MUST, M4-H1) | C08 can be answered without reading the cursive; the log says it was fixed |
+| 3.F.P.4.a (wording edit S15 hint 3) | ACCEPT stands | keys unchanged; one NOTE (N-A1) |
+| 3.F.P.4.c (wording edits C04, T4) | ACCEPT stands | keys unchanged; no testRev needed (F6) |
+
+All three third-review MUSTs for 4.b (M3-B1, M3-B2, M3-B3) are genuinely fixed in the files. M3-H1 for H.3.a is fixed for C03, C04, S04, S07 and S12 (apart from the SHOULDs below) and is NOT fixed for C08.
+
+## F2. Blind solve (integrity statement)
+
+- Method: lessons loaded in Node through a vm stub. For every core item (refs resolved), similar, Together and test item I printed the prompt, stem or passage and the choices only, with choices, options, match columns and order steps shuffled by a seeded generator. Keys, why, hints, how, clue, misconception and `like` were stripped before printing. I wrote my answers to a file (ans-4b.txt, ans-3a.txt, copies saved as .SAVED.txt) and only then extracted keys and compared. I did not open the author log or any earlier review until after the answers were saved.
+- Result: 78 of 78 scored items agree with the keys (4.b 40 of 40, H.3.a 38 of 38). A first compare run showed four hot-text mismatches that were my own comparison bug (hot-text keys are stored as indexes); after fixing the compare it is 78 of 78.
+- Caveat for H.3.a: the Node dump prints the cursive as plain text, so this solve proves only that the keys are self-consistent. Whether the child must read cursive is tested separately in F5.
+- A perfect agreement does not show the keys are right. F3 (dictionary) and F4 to F6 are the real checks.
+
+## F3. Dictionary check (Merriam-Webster, pages fetched with WebFetch; WebSearch with allowed_domains returned the pages that WebFetch could not open directly)
+
+Every 4.b syllable division was checked at https://www.merriam-webster.com/dictionary/<word>. All agree with the lesson. Pages reached:
+- rib·bon, ba·sin, wag·on, plan·et, mu·sic, tu·lip, pen·cil, pock·et, mag·net, ba·con, lim·it, lem·on, mel·on, pu·pil, ro·bot, rob·in, sev·en, si·lent, riv·er, mo·tel, ti·ny, pa·per, ba·by, spi·der, rab·bit, mit·ten, win·ter, car·pet, cac·tus, kan·ga·roo, chim·pan·zee, to·ma·to, ba·na·na, but·ter·fly, kitch·en, farm·er, Sep·tem·ber, um·brel·la, re·mem·ber, fan·tas·tic, al·li·ga·tor, nap·kin, po·ny, pret·zel, ken·nel, tun·nel, ket·tle, cat·tle, chip·munk, pic·nic, pump·kin, sand·wich, morn·ing, mis·take, sea·weed, can·dle, pad·dle, star·fish, sun·shine, jun·gle, nee·dle.
+- "going" (go·ing) was not on the allowlist; it is a plain inflected form and nothing depends on it. The earlier logs said morning was only on a counting site; MW has morn·ing, so that gap is closed.
+- Previously unreached words (the 14 the third review asked for), all now checked, all consistent with how 4.a uses them:
+  - health /ˈhelth/ short e (https://www.merriam-webster.com/dictionary/health)
+  - head /ˈhed/ short e (https://www.merriam-webster.com/dictionary/head)
+  - orange: MW gives ˈär(-ə)nj, chiefly Northern and Midland ˈȯr(-ə)nj; the g says j, which is all 4.a C08 claims (https://www.merriam-webster.com/dictionary/orange)
+  - stage /ˈstāj/ and page /ˈpāj/, both soft g (MW also lists a separate kitchen-internship "stage" with ˈstäzh; not the sense used) (https://www.merriam-webster.com/dictionary/stage, https://www.merriam-webster.com/dictionary/page)
+  - dream, reach, cheap, speak, mean, seat, clean, beach and bean(s) all have long e (ēm, ēch, ēp, ēk, ēn, ēt, ēn, ēch, ēn); MW lists mean (verb) and mean (unkind) both as ˈmēn. URLs: https://www.merriam-webster.com/dictionary/dream, /reach, /cheap, /speak, /mean, /seat, /clean, /beach, /bean.
+  - 4.a keys that use them (P1, P5, T3, T4, S02, S05, C01, C02, C06, C08) are all correct.
+
+## F4. Hint ladder, live choices, longest key, keyed text (every item)
+
+Method: for each item I listed which printed options the three hints name or point at, then counted what is still live. A hint that names a choice to check counts as pointing away from it. No item uses `hintNarrow`, so the engine never crosses anything out on a hint.
+
+Live choices after hint 3 (4.b, choice items): C01 4, C03 2 (banana, ate), C05 2 (morning, going), C06 4 of 5 (pick two), C08 2 (pocket, sky), C09 2 (pencil, lemon), C10 4, S01 2 (alligator, chimpanzee), S03 2 (tomato, stand), S05 2 (carpet, float), S06 4 of 5, S08 2 (winter, pupil), S09 2 (mitten, motel), S10 4, S14 3 of 5 (pick two), P3 2 (spider, candle), P6 3 of 5 (bubble, turtle, travel). Dropdowns: C04, C07, C12, S04, S07 leave all three live in each slot; S12 and S15 leave two live (the "ends like table" steer removes paddel and needel, the two that do not end in le). Match and order items: hints name at most one row or one step.
+H.3.a: all mc items keep 4 live except C12 and S13 (2 live, see F-H4); dropdowns 3 and 3; matches name one row (Gwen, Jon).
+
+- No hint 1 or hint 2 names or quotes a key. No hint 3 names a key. No item reduces to one explicitly. M3-B1 is fixed: 4.b C04 and S04 hint 3 are now the same neutral line and all three choices stay live.
+- Ordering items pin positions cumulatively: 4.b C02 (hint 1 and 2 give step 1, hint 3 step 4), 4.b S02, H.3.a C07 and S08 (hints give steps 1, 2 and 4, leaving step 3 by elimination). No single hint does it, so this passes the ladder rule; NOTE N-B2.
+- Longest key (mc, ms and every dropdown slot, core, similar, Together and test; choose-two ties counted):
+  - 4.b: strictly longest key in 5 of 27 single-key groups (C01 three, C07 slot 2 vowel-consonant-e, C12 slot 1 pumpkin, S05 carpet, S12 slot 1 kitten). Two are number or label words and two are spelling items where the misspellings drop a letter, so the key must be longer. Choose-two: 0 of 5 where both keys are at least as long as the longest distractor. C10 key is the shortest of its four.
+  - H.3.a: strictly longest in 3 of 39 (C02 Quinn, C09 shelf, S14 Wednesday), each by one letter. Choose-two: 0 of 3. Many ties on the four whole-sentence items, which is fine.
+  - The author's counts (5 of 27, 0 of 5; 3 of 39, 0 of 3) reproduce exactly.
+- Keyed text against why, how and hints: all 4.b keys match their why and how. H.3.a statements that are not true or do not discriminate: F-H3 below.
+
+## F5. 3.F.H.3.a: can the item be answered without reading the cursive? (390 x 844, real route #skill/3.F.H.3.a/try)
+
+Rendering: all 15 core items rendered; scrollWidth is 390 on every one (no horizontal scroll); the cursive block wraps at word boundaries inside the 16 px gutters; the two-column match cards and dropdown frames fit. PP Cursive (Playwrite US Trad) with word-spacing .3em is used for every stem, which matches Teach and Learn It. I captured every core cursive block at device scale 2 and read them: joins and the s-gap are readable (swim, Saturday, Sunday, scooter, keys, Tess all read cleanly); no word is split by a gap in this set. The capital Z looks like a tailed 3 and the capital T is close to J in this face. Both are named as tricky in Teach, so this is correct teaching, not a defect. The grown-up note now says one font is used, the school model may differ, and s can leave a small gap. That closes S-H5 and S-H6.
+
+Test: I answered each item a second time using only what is printed outside the cursive block (prompt, frame, options), by meaning and by comparing options with each other.
+
+Cannot be answered without reading (good): C01, C02, C03, C04, P4, C06, C09, C11, C13, P5, and in similar S01 to S05, S07, S10, S12 (apart from F-H5), S14. Name-to-thing matches C04, S04, S12 and the C11 schedule live only in the cursive.
+
+Can be answered without reading:
+- C08 (core, set 2): "Always knock before you open the door." Options: Knock before opening the door; Knock after opening the door; Look before opening the door; Knock before closing the door. Only the first is a sign anyone has seen, and it is also the option every other option differs from by one word. I picked it correctly with no cursive. See M4-H1.
+- The hub effect (SHOULD F-H1): wherever the options are one-word edits of the key, the key is the only option within one edit of all the others. A script (centroid.js: word-level edit distance for sentences, letter-level for single words) finds the key as the unique hub in 14 of the 18 H.3.a mc items: core C01, C05, C08, C10; Together P1, P2; similar S06, S09, S11, S15; test T1, T2, T3, T5. That means four of the five items in check form A (T1, T2, T3, T5) can be answered by picking the hub. I did this by hand on the printed options for T1, T3 and T5 and it works every time.
+- Strategy items C07, C12 (and S08, S13) have no cursive in them by design. They are answerable from common sense. Acceptable as two of fifteen.
+- Within-set and cross-set leaks (F-H2). C02 (set 1) shares Quinn and red with C04 (set 1), and C04's rows print "Quinn" beside the cursive "Quinn: red cap". C11 (set 3) prints "Saturday" beside the cursive "Saturday: piano" and C13 (set 3) key is Saturday. Zoe is printed beside the cursive "Zoe: blue kite" in C04 (set 1) and is P5's key in set 3.
+- S12 (similar): "Pop: corn soup" is a popcorn pun, so one of the four pairs is guessable from the names (F-H5).
+
+## F6. Wording-only edits to the ACCEPTED lessons
+
+I rebuilt the third-review dump script output for 4.a and 4.c from the current files and diffed every item field against the dumps taken at the third review (b9rev3/d4a.txt, d4c.txt).
+
+- 4.a: exactly one field changed, S15 hints[2]. Old: "...which letters can spell the vowel in bed." New: "Think about what you do with jam on toast. Then say each spelling in the sentence." Slots (spread, spred, spreed, answer 0), points, dok, how and why are identical. Key unchanged. Hint 3 now names nothing and leaves all three live. P6's hint 2 ("Say each word and listen to the sound that c makes.") has no diff against the third-review dump, so that edit was made in the second pass as the log says; keys unchanged (slices).
+- 4.c: C04 and T4 only. C04: columns are now re-, pre-, mis-; rows are again (0), before (1), wrongly (2), once more (0). The old mapping was rewind and regroup to re- (0), pretest to pre- (1), misjudge to mis- (2); the answer pattern 0, 1, 2, 0 and the three meanings are the same. T4: prompt reworded and row labels now "adding -ing to shine" and so on; columns unchanged; answers 0, 0, 1, 2, 2 unchanged. why is consistent. Keys and correctness are unchanged for both.
+- Compatibility with assessment-versions: `node verification/check-content.js --all` exits PASS (0 failures, 87 warnings). The warning that matters is "11 check forms were edited in wording only since the record (same ids, points and keys): 3.F.H.3.a:A, 3.F.P.4.b:A, 3.F.P.4.c:A ... testRev stays; run --record-versions to refresh the hash". So T4 produces a warning, not a failure, and not a "material change without a new testRev" warning (the `mat` hash of ids, types, points and answer keys is unchanged). Opinion: T4 does not need a testRev bump. The question and construct are the same, the answer pattern is the same, difficulty if anything falls slightly because the row now states the operation; the saved attempts stay comparable, and the engine stores only ids, types and points in a review signature, so no "The questions have changed" message would appear. The coordinator should run --record-versions after the last edit to refresh the hash only. Bump testRev only if a key, point value or id changes. (Because 4.a and 4.c are in accepted.js, their check forms feed Review and the cumulative sets, so run --record-versions once, after the final edit, not before.)
+- N-A1 (NOTE, accepted 4.a): S15 hint 2 says "Some of these are real words that mean something else." None of spred or spreed is a word, so the sentence is untrue for this item. Harmless to the key; change it to "Say each spelling in the sentence." when next touched.
+- N-C1 (NOTE, accepted 4.c): C04 hint 3 ("a front part that means before") nearly restates the row label "before"; it still leaves all three columns live. No change required.
+
+## F7. Third-review MUSTs checked against the files (not the log)
+
+| Third-review finding | Status in the files |
+|---|---|
+| M3-B1 4.b C04 and S04 hint 3 hands over the split | FIXED. Both now read "Say each choice out loud. Ask which one gives parts you can say as real syllables." All three choices stay live. how still says "ba / sin" but how is the reveal. |
+| M3-B2 4.b C05 and S05 r-spotting | FIXED. C05 choices morning, window, pretzel, going (pretzel has r before its vowel); S05 carpet, puppy, robot, float. how and why say the r comes before the vowel. Two of four choices now contain an r in each item. |
+| M3-B3 4.b P6 addon names tunnel | FIXED. Hint 3 names channel and sunset; how names channel, travel and sunset; all three are among P6's choices. |
+| M3-H1 H.3.a answers without reading | PARTLY FIXED. C03, C04, S04, S07, S12 rebuilt so the printed options all fit and the pairing is only in the cursive. C08 is not fixed (M4-H1). The hub effect (F-H1) was not addressed. |
+| S-H5 single-model note; S-H6 s-gap | FIXED in the grown-up note. |
+| S-A1, S-C1, S-T1, S-T2 | S-T1 and S-T2 addressed by the C04 and T4 rewording (4.c). Others were SHOULDs on accepted lessons and are not re-opened. |
+
+## F8. Findings
+
+### MUST
+
+- M4-H1 (3.F.H.3.a, C08, set 2, core). The third review listed C08 under M3-H1 ("the sensible meaning identifies the key"). The author replaced "Lock the door before knocking" with "Look before opening the door" and logged "a knock/look/lock-and-open/close sign with every choice sensible". That is not true of the file: "Knock after opening the door." and "Knock before closing the door." are not signs a child has seen, and "Knock before opening the door." is also the hub option. I answered it correctly with the cursive hidden. This is a check-style item in a reading-cursive lesson, so a child can score it without reading.
+  - Fix: use a sign where all four options are sensible, and let the cursive decide, for example sign "Please wipe your feet before you come in." with options "Please wipe your feet before you come in." / "Please wash your hands before you come in." / "Please take off your shoes before you come in." / "Please wipe your shoes before you come in." Then change the hint 2 and 3 wording ("the small word that tells when", "the last action") to match, and re-run centroid.js on the new options.
+  - Also correct the author-log line (F9).
+
+### SHOULD
+
+- F-H1 (3.F.H.3.a, hub effect). The key is the unique option within one edit of every distractor in C01, C05, C08, C10, P1, P2, S06, S09, S11, S15, T1, T2, T3, T5. Four of five items in check form A are hubs. Fix: make one distractor a two-edit variant and let two distractors share an edit with each other, so the key is not central. Example for C05: keep "Zara fixed the broken ladder." and add "Sara fixed the broken zipper." but replace "Zara mixed the broken zipper." with "Sara mixed the broken ladder." (two edits, closer to the other distractors than to the key). Re-run centroid.js and re-solve blind.
+- F-H2 (3.F.H.3.a, leaks inside and across sets). C02 and C04 (both set 1) both show Quinn and red; C11 and C13 (set 3) both show Saturday; C04 (set 1) shows the pair "Zoe" and P5's key (set 3) is Zoe. Fix: C13 use Thursday (S14 uses Wednesday), P5 a name not in C04 (for example Zuri), and change C02's name or colour so it does not repeat C04.
+- F-H3 (3.F.H.3.a, statements that are false or do not discriminate). C01 hint 3 and why say wonder has "a different middle" or ask the child to compare the middle, but window and wonder both have nd in the middle (w-i-n-d-o-w, w-o-n-d-e-r); what differs is the second letter and the ending. P5 hint 3 ("Compare the end of the name") does not help because Zoe, Joe and Moe all end in oe, and its how says "The name has three letters, so it is Zoe", which is not a reason (Joe and Moe also have three). S15 how says "five letters, so it is Tessa", but Tasha also has five. Fix each line to name the real difference (the capital letter for P5, the second letter and ending for C01, the middle ess for S15).
+- F-H4 (3.F.H.3.a, C12 and S13 hint 3). Each rules out two of the three distractors by name, leaving the key and a plainly bad guess ("Guess any long word...", "Choose whichever word looks the longest"). The plan allows ruling out one tempting distractor. Fix: keep one ruled-out option and leave two reasonable ones live.
+- F-H5 (3.F.H.3.a, S12). Pop beside corn soup is a popcorn pun, so one pair can be guessed. Change to a dish with no link to the name (Pop: lentil soup).
+- F-B1 (3.F.P.4.b, C08). The sentence is "Mia put a pocket, a tiny frog and a music box in a bag." but the free-standing choices are pocket, tiny, music and sky. "Sky" is not in the sentence, and frog, box, bag and put are in the sentence and also have closed syllables. A child who looks for the answer in the sentence is confused. Fix: put "sky" in the sentence (for example "...and a kite in the sky") or drop the sentence and print only the four words.
+- F-B2 (3.F.P.4.b, S04 duplicates another lesson's item). S04 "Magnet splits as ma / gnet, mag / net, magn / et" has the same word and the same three options as SK-GUM3-8-C15 in js/data/lessons/L-GUM3.js (hyphenating at line breaks). Both keys are mag / net. Fix: change S04's first word to another double-consonant word that no other lesson uses (for example pillow, pil / low; check it in Merriam-Webster first), and re-run the option-set scan.
+- F-B3 (3.F.P.4.b, T3 leaks into the check). T3 row 1 "nap in napkin" is closed; Teach's glossary says exactly "like cat or the nap in napkin". T3 row 4 "ba in bacon" is open; S04's key is bacon split ba / con with the why "before the one consonant". Two of four rows are given elsewhere. Fix: use different words in rows 1 and 4 of T3 that are not in Teach, core, similar or Together (for example fun in funnel for closed, mo in moment for open; check each in Merriam-Webster first). The edit changes wording only; ids, types, points and keys stay.
+- F-B4 (3.F.P.4.b, hint 3 on C03, S03, C05, S05). Each names two of the three distractors, so the live pair is the key plus a one-syllable function word (ate, stand) or a word with no r (going, float). It meets the letter of the rule but is effectively one option. Fix: name one distractor only.
+- F-B5 (3.F.P.4.b, S07). After the third fix the options say "silent-e", but the lesson's term everywhere else (Teach, C07, C11, T2) is vowel-consonant-e; the second review had asked for Teach terms with no drift. The prompt "Name their builds" is also off-term. Fix: use "vowel-consonant-e" in both slots and "kind of syllable" in the prompt; adjust the why.
+
+### NOTE
+
+- N-B1. Learn It and Watch Me for 4.b model only splitting (basket, pilot, camel). Classifying a syllable by type (C07, C11, S07) and spelling consonant-le (C12, P7, S12, S15, T6) rely on the glossary and the Write section. Acceptable; consider a fourth Learn It on spelling pebble or paddle.
+- N-B2. Order items: the three hints together fix positions 1, 2 or 3 and 4 (4.b C02, S02; H.3.a C07, S08). No single hint does. Leave as is.
+- N-B3. 4.b S04 and C04 now share all three hints word for word; the twin gives the child no new hint after a reveal (carried N-1).
+- N-B4. 4.b S09 "where it gets cut" and S07 "builds" read oddly for grade 3; they came from the twin-overlap pass. Plain wording is better where the 0.21 ceiling allows.
+- N-B5. 4.b C02 hints 1 and 2 both point to finding the vowels.
+- N-B6. Twin Jaccard (set and multiset, with whole hyphenated words and with hyphen-split tokens, letters only): 4.b max 0.2000 (S03), H.3.a max 0.2083 (S06) and 0.2069 on the multiset. All ten values are at or under 0.21. S06 and S13 (0.206) are at the edge, so any wording change to them needs a re-run. Same-prompt hits found by the duplicate scan across all lessons, sets and tasks (3,000 plus items) are generic stems only ("put the steps in order for", "match each word to the way", "tap the word that starts with"). All 52 cursive stems in H.3.a are unique; no cursive sentence appears anywhere else. The only content duplicate is F-B2.
+- N-H1. H.3.a core is narrow in task: 13 of 15 items are "decode a cursive line and pick the matching words", five of them dropdowns; only C07 and C12 differ. For a reading-cursive skill that is fair, but the plan's task-verb table cannot be met.
+- N-H2. In the dropdown items the sentence frame is printed, so the cursive demand is one or two words per item (C02, C03, C06, C09, C13). The sentence-match items demand the whole line.
+- N-H3. Watch Me models the letter s and capital S only; Teach shows G, Q, S, T, Z but the items also use D, M, P, L, B, A. Matches the author's open note.
+- N-H4. S08's steps ("skip ahead if you get stuck, come back with clues") are not in Teach; the item is defensible but the model is not taught.
+- N-X. The ledger warning "214 parts have no independent-review record" lists 4.b and H.3.a core, similar and test, and 4.a and 4.c core, similar and test. The coordinator records them after this review and after the H.3.a fix, so the recorded hash is the final one.
+
+## F9. Author-log claims checked against the files
+
+1. "C08 is a knock/look/lock-and-open/close sign with every choice sensible." FALSE. See M4-H1. The "lock" option is gone and two of the four options are not sensible signs.
+2. "C02, C03, C06, S02, S03, S07, S10, S14 now offer choices that all fit the sentence." TRUE for every slot listed (checked by reading each frame with each option).
+3. "C04 and S04 ... the pairing is only in the cursive. S12 uses the same design." TRUE except that "Pop: corn soup" has a name cue (F-H5).
+4. "Parent note: added that the cursive uses one font ... s can leave a small gap." TRUE (present in `parent`).
+5. "Worst twin 4.b 0.200, H.3.a 0.208." TRUE; all three tokenizers I tried (whole hyphenated words, hyphen-split, both) give 0.2000 and 0.2083, so the author's statement that the reviewer's hyphen-split 0.250 for 4.b S07 could not be reproduced is right for the current file (S07 is now far below).
+6. "Longest key: 4.b 5 of 27 and 0 of 5; H.3.a 3 of 39 and 0 of 3." TRUE.
+7. "C05 tablet became pretzel, S05 table became robot; how and why say the r comes before the vowel." TRUE (and pretzel is pret·zel in MW).
+8. "P6 addon hint 3 and how now name channel, not tunnel." TRUE.
+9. "Hints no longer narrow" (passes 1 and 2) was false and the log says so; the third pass says it did not re-audit every hint. My recount (F4) finds no hint that leaves one option explicitly, and the near-narrowing cases are F-B4 and F-H4.
+10. "14 common words ... still unverified." True when written; verified in F3.
+11. "Keys unchanged for 4.a S15 and 4.c C04, T4." TRUE (F6). "P6 hint 2 was already changed in the second pass." Consistent with the files (no diff after the third-review dump).
+12. The log does not mention that C01 why and P5 how contain non-discriminating statements (F-H3), the sentence/option mismatch in 4.b C08 (F-B1), or the T3 leaks (F-B3).
+
+## F10. Per-item verdicts
+
+3.F.P.4.b (40 items: 15 core, 15 similar, 4 Together, 6 test)
+- ACCEPT: C01, C02, C03, C04, P5, C05, C06, C07, P6, C09, C10, C11, C12, P7, S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, P1, P2, P3, P4, T1, T2, T4, T5, T6 (SHOULDs F-B4 on C03, S03, C05, S05 and F-B5 on S07 recommended; F-B2 on S04).
+- ACCEPT with SHOULD: C08 (F-B1), T3 (F-B3).
+- CHANGES REQUIRED: none.
+- Lesson: ACCEPT (SHOULDs F-B1 to F-B5). Coverage rows may be marked once the lead has taken or declined the SHOULDs.
+
+3.F.H.3.a (38 items: 15 core, 15 similar, 3 Together, 5 test)
+- CHANGES REQUIRED: C08 (M4-H1).
+- ACCEPT with SHOULD: C01 (F-H3, F-H1), C02 and C04 (F-H2), C05, C10 (F-H1), C11 (none), C12 (F-H4), C13 (F-H2), P5 (F-H2, F-H3, F-H1), S06, S09, S11 (F-H1), S12 (F-H5), S13 (F-H4), S15 (F-H3), P1, T1, T2, T3, T5 (F-H1: hub, recommended before this check form is relied on).
+- ACCEPT: C03, P4, C06, C07, C09, S01, S02, S03, S04, S05, S07, S08, S10, S14, P2, P3, T4.
+- Lesson: CHANGES REQUIRED (M4-H1). After the fix, re-solve the changed items blind, re-run the twin Jaccard on any changed twin pair, and re-run the hub script (centroid.js) on every changed mc item. Note that a hub fix on the check form A (T1, T2, T3, T5) changes wording only; ids, types, points and keys stay, so no testRev bump.
+
+3.F.P.4.a edit (S15 hint 3): ACCEPT. 3.F.P.4.c edits (C04, T4): ACCEPT, no testRev bump.
+
+## F11. Fix list for the lead
+
+1. H.3.a C08: rebuild with four sensible options (M4-H1).
+2. H.3.a hub effect on C05, C10, S06, S09, S11, T1, T3, T5 and the single-word items C01, P2, T2, S15 (F-H1); re-run the hub script.
+3. H.3.a F-H2 (Saturday, Zoe, Quinn and red), F-H3 (C01, P5, S15 statements), F-H4 (C12, S13), F-H5 (S12).
+4. 4.b F-B1 (C08 sky), F-B2 (S04 duplicate), F-B3 (T3 words), F-B4, F-B5.
+5. Then --record-versions once (hash only; no testRev) and record the ledger for all four lessons.
+
+## F12. Notes for memory
+
+- A cursive item stored as plain text needs two tests: the Node solve (self-consistency) and a no-cursive answer test (meaning, frame, and the hub option).
+- A set of distractors that are each one edit away from the key makes the key the hub; check with an edit-distance sum before accepting any "which sentence matches" item.
+- MW pages that WebFetch refuses (URL_NOT_ON_ALLOWLIST) can often be reached by running WebSearch with allowed_domains merriam-webster.com first, then fetching the returned link.
+- Match items that print the names or things also print the cursive's words; a name reused across items in a set gives the child a decoded model of its cursive shape.
