@@ -7690,6 +7690,16 @@ PP.addLesson({
         "Read it back: My little brother started laughing at the clown."
       ],
       answer: "Laughing is correct."
+    },
+    {
+      show: ["Every morning, Maya (feed / feeds / feeding) the fish."],
+      ask: "Which verb form fits the sentence?",
+      steps: [
+        "Count the doers. Maya is one person.",
+        "Every morning tells about something that happens again and again, so one person doing it now takes -s.",
+        "Read it back: Every morning, Maya feeds the fish."
+      ],
+      answer: "Feeds is correct."
     }
   ],
   parent: "At dinner, take turns telling one thing you did today (\"I walked the dog\") and one thing you do every day (\"Dad cooks dinner\"). Listen together for the -ed and -s endings.",
@@ -7947,7 +7957,7 @@ PP.addLesson({
                 text: "We started talks about the best part of the day."
               },
               {
-                text: "We started talked about the best part of the day."
+                text: "We started talked about the very best part of the day."
               },
               {
                 text: "We started talk about the best part of the day."
@@ -8510,8 +8520,8 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
       ],
       passages: ["p4"],
-      stem: "During a school assembly, a student reads the basketball draft out loud.",
-      prompt: "Number 7 has a verb that does not match the word before it. Pick the best revision.",
+      stem: "A student reads the basketball draft aloud at an assembly.",
+      prompt: "Number 7 has a verb that clashes with kept. Pick the best revision.",
       choices: [
         {
           text: "We kept following the ball down the court.",
@@ -8521,25 +8531,25 @@ PP.addLesson({
           text: "We kept follows the ball down the court."
         },
         {
-          text: "We kept followed the ball down the court."
+          text: "We kept followed the ball down the long court."
         },
         {
           text: "We kept follow the ball down the court."
         }
       ],
-      clue: "Look at the word right before the verb in number 7 and ask what ending can follow it.",
+      clue: "Notice what comes just ahead of the verb in number 7. Words like that call for a certain ending.",
       hints: [
-        "Look at the word right before the verb in number 7 and ask what ending can follow it.",
-        "Say each choice aloud and listen for the one that sounds right after the word kept.",
-        "Kept already tells about the past, so the verb after it does not add -ed. Think about the other choices."
+        "Notice what comes just ahead of the verb in number 7. Words like that call for a certain ending.",
+        "Try each option in your mind and pick the one that flows smoothly.",
+        "Kept already points backward in time, so adding -ed again would double it. Weigh the rest."
       ],
       how: [
-        "The word before the verb in number 7 is kept. After a word like kept, started or loves, a verb takes -ing.",
-        "Kept already tells about the past, so the next verb does not need -ed. It does not need -s or the plain form either.",
-        "The answer is \"We kept following the ball down the court.\" Follows, followed and follow do not fit after kept."
+        "Just ahead of the verb sits kept. Words such as kept, began and loves are followed by an -ing verb.",
+        "Kept already points backward in time, so a second -ed is extra. Neither -s nor a bare verb flows after it.",
+        "The answer is \"We kept following the ball down the court.\" Follows, followed and follow clash with kept."
       ],
-      misconception: "A common mix-up is leaving the plain verb after kept. A verb after a word like kept, started or loves takes -ing.",
-      why: "The answer is \"We kept following the ball down the court.\" After kept, the verb takes -ing, so follow becomes following. Followed repeats the past ending, follows tells about one person now, and follow has no ending.",
+      misconception: "A common mix-up is leaving a bare verb after kept. Use -ing after kept, began or loves.",
+      why: "The answer is \"We kept following the ball down the court.\" Kept calls for -ing, so follow turns into following. Followed doubles the past ending, follows suits one player now, and follow has no ending.",
       like: ["SK-GUM1-6-C03"]
     },
     {
@@ -8625,22 +8635,22 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
       ],
       passages: ["p4"],
-      prompt: "Tap the TWO shown lines whose verb needs -ed added.",
+      prompt: "Tap the TWO shown sentences where a finished action is missing its ending.",
       targets: ["p4:1:2","p4:1:3","p4:1:4","p4:3:1","p4:3:3"],
       answer: ["p4:1:2","p4:3:1"],
       pick: 2,
       clue: "Look for a clue word that shows the action is finished. Then check the verb ending.",
       hints: [
         "Look for a clue word that shows the action is finished. Then check the verb ending.",
-        "Check each shown line. Ask whether the verb matches its clue.",
-        "Line 4 already has a verb with -ed on it, so it can be ruled out."
+        "Check each shown sentence. Ask whether the verb matches its clue.",
+        "Sentence 4 already has a verb with -ed on it, so it can be ruled out."
       ],
       how: [
-        "Find the clue word in each shown line.",
-        "Last Friday in line 2 and yesterday in line 9 are over, but shout and wait have no ending.",
-        "Lines 3, 4 and 11 already fit: lift goes with the players, knocked is finished, and start goes with we."
+        "Find the clue word in each shown sentence.",
+        "Last Friday in sentence 2 and yesterday in sentence 9 point backward, but shout and wait stay bare.",
+        "Sentences 3, 4 and 11 already fit: lift goes with the players, knocked is finished, and start goes with we."
       ],
-      misconception: "A common mix-up is changing every verb in a line with a clue word. Change only the ones that do not match.",
+      misconception: "A common mix-up is changing every verb in a sentence with a clue word. Change only the ones that do not match.",
       why: "The answers are sentences 2 and 9: \"Last Friday, Coach Perez shout at us to run faster.\" and \"Yesterday, our team wait for the bus after practice.\". Last Friday and yesterday are over, so shout and wait need -ed. The other shown verbs already fit.",
       like: ["SK-GUM1-6-C06"]
     },
@@ -8662,10 +8672,10 @@ PP.addLesson({
             correct: true
           },
           {
-            text: "The action is over, so the verb must finish with -ed."
+            text: "The work is finished, so the verb must carry a past ending."
           },
           {
-            text: "A word like started is missing, so the verb must finish with -ing."
+            text: "The sentence has a word such as kept before the verb, so it must end in -ing."
           },
           {
             text: "The verb is spelled with -s, so it already matches the plain form."
@@ -8714,8 +8724,8 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
       ],
       passages: [],
-      stem: "A grandparent copies five lines from a child's diary into a card.",
-      prompt: "Pick the TWO lines where the verb does not fit.",
+      stem: "A grandparent copies five sentences from a child's diary into a card.",
+      prompt: "Pick the TWO sentences where the verb does not fit.",
       pick: 2,
       choices: [
         {
@@ -8739,16 +8749,16 @@ PP.addLesson({
       clue: "Check each verb against its clue word or the word right before it.",
       hints: [
         "Check each verb against its clue word or the word right before it.",
-        "Cross out any line where the verb fits. Keep the ones that do not match.",
-        "One line has a plural doer with a verb ending in -s."
+        "Cross out any sentence where the verb fits. Keep the ones that do not match.",
+        "One sentence has a plural doer with a verb ending in -s."
       ],
       how: [
         "Check each verb against its clue.",
         "Yesterday is over, so open should be opened. The neighbors is a group, so waves should be wave. The answers are \"Yesterday, Pia open the window for fresh air.\" and \"The neighbors waves from their porch every morning.\"",
         "Listened, asking and works all fit."
       ],
-      misconception: "A common mix-up is picking lines that look odd for another reason. Check the clue word and the doer.",
-      why: "The answers are \"Yesterday, Pia open the window for fresh air.\" and \"The neighbors waves from their porch every morning.\". Open needs -ed after yesterday, and waves should be wave after the neighbors. The other three lines fit.",
+      misconception: "A common mix-up is picking sentences that look odd for another reason. Check the clue word and the doer.",
+      why: "The answers are \"Yesterday, Pia open the window for fresh air.\" and \"The neighbors waves from their porch every morning.\". Open needs -ed after yesterday, and waves should be wave after the neighbors. The other three sentences fit.",
       like: ["SK-GUM1-6-C08"]
     },
     {
@@ -8801,35 +8811,35 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s"
       ],
       passages: ["p5"],
-      prompt: "A volunteer wants to keep holds in sentence 9, because something that happens every month ends in -s. What note should the editor write?",
+      prompt: "A volunteer wants holds kept in number 9, since a monthly event seems to call for -s. Which note should the editor write?",
       choices: [
         {
-          text: "The librarians are a group, so the plain verb hold is the one to use.",
+          text: "Several librarians host it, so hold is the form to use.",
           correct: true
         },
         {
-          text: "A monthly event always keeps the -s, so holds should stay as typed."
+          text: "Anything monthly always keeps the -s, so holds should stay as typed."
         },
         {
-          text: "Every month tells about the past, so held is the right form."
+          text: "Monthly points to an event already finished, so held would be best."
         },
         {
-          text: "Any sentence with a clue word needs -s on its verb, so nothing changes."
+          text: "Whenever a date word appears, the verb after it must end in -s."
         }
       ],
-      clue: "Find who does the action in sentence 9 and count them.",
+      clue: "Find who does the action in number 9 and count them.",
       hints: [
-        "Find who does the action in sentence 9 and count them.",
-        "Compare the doer with the ending on the verb.",
-        "Every month does not tell about the past. Look at the other notes."
+        "Find who does the action in number 9 and count them.",
+        "Match the doer to the ending on the verb.",
+        "Monthly does not point to a finished event. Weigh the other notes."
       ],
       how: [
-        "Find the doer in sentence 9: the librarians. That is more than one person.",
-        "The -s ending goes with one person or thing, so a group of librarians takes the plain verb.",
-        "The answer is \"The librarians are a group, so the plain verb hold is the one to use.\""
+        "Find who hosts the event in number 9: the librarians. That is several workers.",
+        "An -s ending suits one person or thing. Several workers use the bare verb.",
+        "The answer is \"Several librarians host it, so hold is the form to use.\""
       ],
-      misconception: "A common mix-up is thinking something that happens again and again must end in -s. Count the doers first.",
-      why: "The answer is \"The librarians are a group, so the plain verb hold is the one to use.\" The librarians are a group, so the plain verb hold is the one to use. Every month tells about again and again, not the past.",
+      misconception: "A common mix-up is thinking a repeated event must end in -s. Count the hosts first.",
+      why: "The answer is \"Several librarians host it, so hold is the form to use.\" Several librarians host it, so hold is the form to use. Every month means again and again, not finished.",
       like: ["SK-GUM1-6-C10"]
     },
     {
@@ -9126,9 +9136,9 @@ PP.addLesson({
     big: "An action verb tells what someone or something does.",
     points: [
       "An action verb names something a person, animal or thing does, like run, swim or bake.",
-      "Some actions happen in your mind, like think, remember and wonder. Those are action verbs too.",
+      "Some actions happen in your mind, like think and remember. Those are action verbs too.",
       "To find the action verb, ask: what does the who or what in the sentence do?",
-      "A strong action verb paints a picture. Raced tells more than went."
+      "A strong action verb paints a picture. Strolled tells more than walked."
     ],
     words: [
       { term: "action verb", means: "a word that tells what someone or something does" }
@@ -9160,6 +9170,16 @@ PP.addLesson({
         "You cannot see thinking, but it is still something Ben does, so it is an action verb."
       ],
       answer: "The action verb is thought."
+    },
+    {
+      show: ["Maya walked to the store and bought some milk."],
+      ask: "How many action verbs are there? Which one is weak?",
+      steps: [
+        "Find who the sentence is about: Maya. Ask what Maya did.",
+        "She walked, and she bought. That is two things, so there are two action verbs.",
+        "Walked tells little about how she moved. A stronger verb like skipped or tiptoed would paint a picture."
+      ],
+      answer: "There are two action verbs: walked and bought. Walked is the weaker one."
     }
   ],
   parent: "Play action charades: one person acts out a verb (hop, whisper, stir) and the other guesses it. Then have your child say a sentence with that verb.",
@@ -9239,7 +9259,7 @@ PP.addLesson({
           "(5) One morning, I counted three blue eggs in the nest.",
           "(6) Soon the eggs cracked, and tiny chicks tumbled out.",
           "(7) The chicks chirped loudly for food.",
-          "(8) The father bird swooped down with a juicy worm."
+          "(8) The father bird swooped down from the maple with a juicy worm."
         ],
         [
           "(9) He dropped it into a wide yellow beak.",
@@ -9293,7 +9313,7 @@ PP.addLesson({
         ],
         [
           "(5) I brushed bright yellow paint on the walls.",
-          "(6) A bee buzzed around my head.",
+          "(6) A fuzzy bee buzzed around my head.",
           "(7) I swatted it away and kept painting.",
           "(8) Dad noticed the drips and wiped them up."
         ],
@@ -9455,23 +9475,23 @@ PP.addLesson({
             text: "Dev {0} to the shelf for more cards.",
             slots: [
               {
-                options: ["hurried","got","shelves"],
+                options: ["dashed","walked","went"],
                 answer: 0
               }
             ],
-            clue: "Think about how Dev might move if he needs more cards soon. Pick the verb that shows it.",
+            clue: "Think about how Dev moves when he needs cards soon.",
             hints: [
-              "Think about how Dev might move if he needs more cards soon. Pick the verb that shows it.",
+              "Think about how Dev moves when he needs cards soon.",
               "Read the sentence with each verb and picture what Dev is doing.",
-              "Shelves names things, so it cannot show how Dev moved."
+              "Walked tells very little about how Dev moved, so it can be ruled out."
             ],
             how: [
-              "Compare the three words. Shelves names things, and got tells very little about how Dev moved.",
-              "A strong action verb paints a picture. Hurried shows Dev moving fast.",
-              "The answer is hurried. Got tells little, and shelves is not an action."
+              "Compare the three words. Walked and went both tell very little about how Dev moved.",
+              "A strong action verb paints a picture. Dashed shows Dev moving fast.",
+              "The answer is dashed. Walked and went are weak verbs."
             ],
             misconception: "A common mix-up is thinking any verb is fine. A strong action verb helps readers picture what happened.",
-            why: "The answer is hurried. Hurried paints a clearer picture of how Dev moved. Got tells very little, and shelves is not an action."
+            why: "The answer is dashed. Dashed paints a clearer picture of how Dev moved. Walked and went tell very little."
           },
           {
             id: "SK-GUM1-7-C05",
@@ -9501,7 +9521,7 @@ PP.addLesson({
             clue: "Compare what whispered and said each tell the reader.",
             hints: [
               "Compare what whispered and said each tell the reader.",
-              "Think about the picture each verb puts in your mind.",
+              "Imagine hearing Jaylen speak each way. What does each verb add?",
               "The length of a word does not make it stronger, so one reason can be ruled out."
             ],
             how: [
@@ -9552,23 +9572,23 @@ PP.addLesson({
             std: [
               "3.L.GC.1:R:use-action-verbs"
             ],
-            passages: ["p1"],
+            passages: ["p6"],
             prompt: "This question has two parts. Answer Part A, then Part B.",
             partA: {
-              prompt: "Which word is the action verb in sentence 3?",
+              prompt: "Which word is the action verb in the first half of sentence 8?",
               choices: [
                 {
                   text: "went",
                   correct: true
                 },
                 {
-                  text: "Dev"
+                  text: "Then"
                 },
                 {
-                  text: "shelf"
+                  text: "board"
                 },
                 {
-                  text: "cards"
+                  text: "results"
                 }
               ]
             },
@@ -9576,7 +9596,7 @@ PP.addLesson({
               prompt: "Which verb could replace it to paint a clearer picture?",
               choices: [
                 {
-                  text: "dashed",
+                  text: "hurried",
                   correct: true
                 },
                 {
@@ -9586,23 +9606,23 @@ PP.addLesson({
                   text: "quickly"
                 },
                 {
-                  text: "shelf"
+                  text: "board"
                 }
               ]
             },
-            clue: "For Part A, ask what Dev does. For Part B, think about a verb that shows how he moves.",
+            clue: "For Part A, ask what the writer does first. For Part B, think about a verb that shows how the writer moves.",
             hints: [
-              "For Part A, ask what Dev does. For Part B, think about a verb that shows how he moves.",
-              "Say sentence 3 with each Part B choice and picture what Dev does.",
+              "For Part A, ask what the writer does first. For Part B, think about a verb that shows how the writer moves.",
+              "Say the first half of sentence 8 with each Part B choice and picture the move.",
               "One Part B choice is a thing and cannot be an action, so it can be ruled out."
             ],
             how: [
-              "Part A: ask what Dev did. He went to the shelf, so went is the action verb.",
-              "Part B: a strong verb paints a picture. Dashed shows Dev moving fast.",
-              "The answer is dashed. Got is weak, quickly tells how but is not a verb, and shelf is a thing."
+              "Part A: ask what the writer did first. The writer went to the board, so went is the action verb.",
+              "Part B: a strong verb paints a picture. Hurried shows the writer moving fast.",
+              "The answer is hurried. Got is weak, quickly tells how but is not a verb, and board is a thing."
             ],
             misconception: "A common mix-up is choosing a word that tells how, like quickly. A strong action verb has to be the action itself.",
-            why: "Part A: \"went\" Part B: \"dashed\" Went is what Dev did, and dashed paints a clearer picture of it. Quickly tells how, and shelf is a thing."
+            why: "Part A: \"went\" Part B: \"hurried\" Went is what the writer did first, and hurried paints a clearer picture of it. Quickly tells how, and board is a thing."
           },
           {
             id: "SK-GUM1-7-C08",
@@ -9661,7 +9681,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-action-verbs"
             ],
             passages: [],
-            stem: "Mia painted a poster for the fair.",
+            stem: "Mia painted a colorful poster for the school fair.",
             prompt: "Which word is the action verb?",
             choices: [
               {
@@ -9675,22 +9695,22 @@ PP.addLesson({
                 text: "poster"
               },
               {
-                text: "the fair"
+                text: "the school fair"
               }
             ],
             clue: "Find who the sentence is about. Then ask what she did.",
             hints: [
               "Find who the sentence is about. Then ask what she did.",
               "Say each word and ask whether it is something Mia does.",
-              "Poster and fair are things, so they cannot be what Mia does."
+              "A poster is a thing, so it cannot be what Mia does."
             ],
             how: [
               "Find who the sentence is about: Mia.",
               "Ask: what did Mia do? She painted a poster.",
-              "The answer is painted. Mia is a person, and poster and fair are things."
+              "The answer is painted. Mia is a person, and the poster and the school fair are things."
             ],
             misconception: "A common mix-up is choosing the doer or a thing. The verb tells what the doer does.",
-            why: "The answer is \"painted\" Painted tells what Mia did. Mia, poster and fair are nouns."
+            why: "The answer is \"painted\" Painted tells what Mia did. Mia, poster and the school fair are nouns."
           },
           {
             id: "SK-GUM1-7-C10",
@@ -9773,7 +9793,7 @@ PP.addLesson({
             ],
             passages: ["p3"],
             prompt: "Choose the action verb that completes sentence 8.",
-            text: "The father bird {0} down with a juicy worm.",
+            text: "The father bird {0} down from the maple with a juicy worm.",
             slots: [
               {
                 options: ["swooped","yellow","quickly"],
@@ -9807,11 +9827,11 @@ PP.addLesson({
             text: "The tired hikers {0} up the steep trail and {1} on a flat rock.",
             slots: [
               {
-                options: ["trudged","went","climbing"],
+                options: ["trudged","traveled","moved"],
                 answer: 0
               },
               {
-                options: ["collapsed","went","exhausted"],
+                options: ["flopped","stopped","rested"],
                 answer: 0
               }
             ],
@@ -9819,15 +9839,15 @@ PP.addLesson({
             hints: [
               "Think about how tired hikers would move. Pick the verb that shows it.",
               "Read each half of the sentence with the verbs and picture what the hikers do.",
-              "Went tells almost nothing about how tired hikers moved, so it can be ruled out."
+              "Traveled tells almost nothing about how tired hikers moved, so it can be ruled out."
             ],
             how: [
-              "Compare the choices. Went tells very little, and the other wrong choices do not fit the sentence.",
-              "Trudged shows slow, heavy steps. Collapsed shows the hikers dropping down tired.",
-              "The answers are trudged and collapsed."
+              "Compare the choices. Traveled, moved, stopped and rested tell very little about tired hikers.",
+              "Trudged shows slow, heavy steps. Flopped shows the hikers dropping down tired.",
+              "The answers are trudged and flopped."
             ],
             misconception: "A common mix-up is choosing a verb that works but tells little. A strong verb paints a picture.",
-            why: "The answers are trudged and collapsed. Trudged and collapsed show how tired hikers move. Went tells very little, and the others do not fit."
+            why: "The answers are trudged and flopped. Trudged and flopped show how tired hikers move. Traveled, moved, stopped and rested tell very little."
           },
           {
             id: "SK-GUM1-7-C14",
@@ -9887,11 +9907,11 @@ PP.addLesson({
                 text: "Ava waved goodbye from the porch."
               }
             ],
-            clue: "To show that a claim is wrong, find an example that breaks it. Look for an action you cannot see.",
+            clue: "Find an example that breaks the claim. Look for an action you cannot see.",
             hints: [
-              "To show that a claim is wrong, find an example that breaks it. Look for an action you cannot see.",
+              "Find an example that breaks the claim. Look for an action you cannot see.",
               "Ask for each sentence: can you watch Ava do it?",
-              "Hugging, carrying and waving can all be watched."
+              "Waving can be watched, so that sentence cannot break the claim."
             ],
             how: [
               "Eli says every action verb shows something you can see. Look for an action that happens in the mind.",
@@ -9915,7 +9935,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: [],
-      stem: "The clown juggled three balls and bowed.",
+      stem: "The clown juggled three colorful balls and bowed to the cheering crowd.",
       prompt: "Tap both words that show what the clown does.",
       options: ["clown","juggled","balls","bowed","three"],
       answer: [1,3],
@@ -9944,11 +9964,11 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: [],
-      stem: "Nico realized his silly mistake.",
+      stem: "Nico imagined a silly costume for the parade.",
       prompt: "Pick the word that tells what Nico did.",
       choices: [
         {
-          text: "realized",
+          text: "imagined",
           correct: true
         },
         {
@@ -9958,22 +9978,22 @@ PP.addLesson({
           text: "silly"
         },
         {
-          text: "his mistake"
+          text: "the costume"
         }
       ],
       clue: "Some actions happen in the mind. Ask what Nico did.",
       hints: [
         "Some actions happen in the mind. Ask what Nico did.",
         "Say each word and test whether it fits what Nico does.",
-        "Silly describes the mistake, so it cannot be what Nico does."
+        "Silly describes the costume, so it cannot be what Nico does."
       ],
       how: [
         "Find who the sentence is about: Nico.",
-        "Ask: what did Nico do? He realized his mistake in his mind.",
-        "The answer is realized. Nico and mistake are nouns, and silly describes the mistake."
+        "Ask: what did Nico do? He imagined a costume in his mind.",
+        "The answer is imagined. Nico and costume are nouns, and silly describes the costume."
       ],
-      misconception: "A common mix-up is thinking an action must be visible. Realizing is something Nico does in his mind.",
-      why: "The answer is \"realized\" Realized is something Nico does in his mind. Nico and mistake are nouns, and silly describes.",
+      misconception: "A common mix-up is thinking an action must be visible. Imagining is something Nico does in his mind.",
+      why: "The answer is \"imagined\" Imagined is something Nico does in his mind. Nico and costume are nouns, and silly describes.",
       like: ["SK-GUM1-7-P5"]
     },
     {
@@ -10025,27 +10045,27 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p4"],
-      prompt: "Sentence 5 says the writer went across the water. Pick the word that lets readers see the move.",
+      prompt: "Sentence 5 is vague about the kayak's motion. Pick the word that lets readers see it.",
       text: "Then I {0} across the water.",
       slots: [
         {
-          options: ["glided","went","drifting"],
+          options: ["glided","traveled","got"],
           answer: 0
         }
       ],
-      clue: "Think about how a kayak moves over calm water. Pick the verb that shows it.",
+      clue: "Think about how a kayak travels over calm water.",
       hints: [
-        "Think about how a kayak moves over calm water. Pick the verb that shows it.",
+        "Think about how a kayak travels over calm water.",
         "Say the sentence with each verb and picture the kayak.",
-        "Look at the word before the gap. One choice ends in -ing and does not fit after I."
+        "Got tells almost nothing about how a kayak travels, so it can be ruled out."
       ],
       how: [
-        "Compare the three words. Drifting does not fit after I, and went tells very little about how the kayak moved.",
+        "Compare the three words. Traveled and got both tell very little about how the kayak moved.",
         "Glided shows a smooth, easy movement.",
-        "The answer is glided. Went is the weak verb from the draft, and drifting does not fit."
+        "The answer is glided. Traveled and got are too vague."
       ],
-      misconception: "A common mix-up is leaving the weak verb in place. A strong verb helps readers picture the action.",
-      why: "The answer is glided. Glided paints a clearer picture of how the kayak moved. Went tells very little, and drifting does not fit.",
+      misconception: "A common mix-up is leaving a weak verb in place. A strong verb helps readers picture the action.",
+      why: "The answer is glided. Glided paints a clearer picture of how the kayak moved. Traveled and got tell very little.",
       like: ["SK-GUM1-7-C04"]
     },
     {
@@ -10057,7 +10077,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p4"],
-      prompt: "A writer swaps moved for rippled in the wind-and-water sentence. What does the swap add?",
+      prompt: "Sentence 9 says the wind rippled the water. What does rippled show that moved would not?",
       choices: [
         {
           text: "A clear picture of small waves spreading over the water.",
@@ -10076,7 +10096,7 @@ PP.addLesson({
       clue: "Compare what rippled and moved each tell the reader.",
       hints: [
         "Compare what rippled and moved each tell the reader.",
-        "Think about the picture each verb puts in your mind.",
+        "Think about what each verb shows you in your mind.",
         "The number of letters does not make a verb stronger, so one reason can be ruled out."
       ],
       how: [
@@ -10097,19 +10117,19 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p4"],
-      prompt: "Tap both lines that show a thought rather than a movement.",
+      prompt: "Tap both shown sentences that show a thought rather than a movement.",
       targets: ["p4:1:2","p4:1:4","p4:2:4","p4:3:4","p4:3:5"],
       answer: ["p4:2:4","p4:3:4"],
       pick: 2,
-      clue: "Some actions happen inside a person's head. Look for verbs about choosing or picturing something.",
+      clue: "Some actions happen in the mind. Look for verbs about choosing or picturing.",
       hints: [
-        "Some actions happen inside a person's head. Look for verbs about choosing or picturing something.",
-        "For each shown line, ask: can you watch the doer do it, or is it in the mind?",
-        "Line 13 tells what the writer ate, so it can be ruled out."
+        "Some actions happen in the mind. Look for verbs about choosing or picturing.",
+        "For each shown sentence, ask: can you watch the doer do it, or is it in the mind?",
+        "Sentence 13 tells what the writer ate, so it can be ruled out."
       ],
       how: [
         "Look for verbs that happen in the mind.",
-        "Decided in line 8 and imagined in line 12 happen in the mind.",
+        "Decided in sentence 8 and imagined in sentence 12 happen in the mind.",
         "Showed, wobbled and ate are things you can see."
       ],
       misconception: "A common mix-up is thinking an action verb must show something you can see. Actions in the mind count too.",
@@ -10232,7 +10252,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: [],
-      stem: "Leo mowed the lawn before lunch.",
+      stem: "Leo mowed the thick grass in the backyard before lunch.",
       prompt: "Which word shows what Leo did?",
       choices: [
         {
@@ -10243,7 +10263,7 @@ PP.addLesson({
           text: "Leo"
         },
         {
-          text: "lawn"
+          text: "grass"
         },
         {
           text: "lunch"
@@ -10253,15 +10273,15 @@ PP.addLesson({
       hints: [
         "Find the doer. Then ask what that person did.",
         "Say each word and test whether Leo does it.",
-        "Lawn and lunch are things, so they cannot be what Leo does."
+        "Grass is a thing, so it cannot be what Leo does."
       ],
       how: [
         "Find who the sentence is about: Leo.",
-        "Ask: what did Leo do? He mowed the lawn.",
-        "The answer is mowed. Leo is a person, and lawn and lunch are things."
+        "Ask: what did Leo do? He mowed the grass.",
+        "The answer is mowed. Leo is a person, and grass and lunch are things."
       ],
       misconception: "A common mix-up is choosing a thing near the verb. The verb is the action.",
-      why: "The answer is \"mowed\" Mowed tells what Leo did. Leo, lawn and lunch are nouns.",
+      why: "The answer is \"mowed\" Mowed tells what Leo did. Leo, grass and lunch are nouns.",
       like: ["SK-GUM1-7-C09"]
     },
     {
@@ -10289,9 +10309,9 @@ PP.addLesson({
           text: "Brushed names the walls, so that word is really a noun."
         }
       ],
-      clue: "Think about what each verb lets the reader picture.",
+      clue: "Think about how much each verb shows the reader.",
       hints: [
-        "Think about what each verb lets the reader picture.",
+        "Think about how much each verb shows the reader.",
         "Say each verb in its sentence. Which one shows more about the action?",
         "One choice calls an action word a noun. Ask what the writer did to the walls."
       ],
@@ -10313,23 +10333,23 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p5"],
-      prompt: "Tap the TWO shown lines with exactly two action verbs.",
+      prompt: "Tap the TWO shown sentences where the doer does a pair of things.",
       targets: ["p5:2:1","p5:2:2","p5:2:4","p5:3:2","p5:3:3"],
       answer: ["p5:2:4","p5:3:3"],
       pick: 2,
-      clue: "Count how many things the doer does in each shown line.",
+      clue: "Count how many things the doer does in each shown sentence.",
       hints: [
-        "Count how many things the doer does in each shown line.",
-        "Find each action verb and count them one line at a time.",
-        "Line 6 tells only one thing the bee did, so it can be ruled out."
+        "Count how many things the doer does in each shown sentence.",
+        "Find each action verb and count them one sentence at a time.",
+        "Sentence 6 tells only one thing the bee did, so it can be ruled out."
       ],
       how: [
-        "Count the action verbs in each shown line.",
-        "Line 8 has noticed and wiped. Line 11 has gobbled and slurped.",
-        "Lines 5, 6 and 10 each have only one: brushed, buzzed and handed."
+        "Count the action verbs in each shown sentence.",
+        "Sentence 8 has noticed and wiped. Sentence 11 has gobbled and slurped.",
+        "Sentences 5, 6 and 10 each have only one: brushed, buzzed and handed."
       ],
       misconception: "A common mix-up is counting only the first verb. Look for a second action after the word and.",
-      why: "The answers are sentences 8 and 11: \"Dad noticed the drips and wiped them up.\" and \"We gobbled the snacks and slurped the juice.\". Lines 8 and 11 each tell two things someone did. The other shown lines tell only one.",
+      why: "The answers are sentences 8 and 11: \"Dad noticed the drips and wiped them up.\" and \"We gobbled the snacks and slurped the juice.\". Sentences 8 and 11 each tell two things someone did. The other shown sentences tell only one.",
       like: ["SK-GUM1-7-C11"]
     },
     {
@@ -10342,10 +10362,10 @@ PP.addLesson({
       ],
       passages: ["p5"],
       prompt: "Fill the gap with the word that shows the bee's move.",
-      text: "A bee {0} around my head.",
+      text: "A fuzzy bee {0} around my head.",
       slots: [
         {
-          options: ["buzzed","fuzzy","loudly"],
+          options: ["buzzed","tiny","loudly"],
           answer: 0
         }
       ],
@@ -10353,15 +10373,15 @@ PP.addLesson({
       hints: [
         "Ask what the bee did. The missing word should be the action.",
         "Try each word in the gap. Which one is something a bee does?",
-        "Fuzzy describes the bee, so it cannot be what the bee does."
+        "Tiny describes the bee, so it cannot be what the bee does."
       ],
       how: [
         "Find who the sentence is about: the bee.",
         "Ask: what did the bee do? The missing word should be an action.",
-        "The answer is buzzed. Fuzzy describes, and loudly tells how."
+        "The answer is buzzed. Tiny describes, and loudly tells how."
       ],
       misconception: "A common mix-up is choosing a word that tells how, like loudly. The verb is the action itself.",
-      why: "The answer is buzzed. Buzzed is what the bee did. Fuzzy describes, and loudly tells how.",
+      why: "The answer is buzzed. Buzzed is what the bee did. Tiny describes, and loudly tells how.",
       like: ["SK-GUM1-7-C12"]
     },
     {
@@ -10377,11 +10397,11 @@ PP.addLesson({
       text: "The soaked puppy {0} onto the bank and {1} water from its fur.",
       slots: [
         {
-          options: ["scrambled","went","struggling"],
+          options: ["crawled","traveled","moved"],
           answer: 0
         },
         {
-          options: ["shook","went","shivering"],
+          options: ["shook","moved","took"],
           answer: 0
         }
       ],
@@ -10389,15 +10409,15 @@ PP.addLesson({
       hints: [
         "Think about how a wet puppy moves and what it does to dry off. Pick verbs that show it.",
         "Read each half with the verbs and picture the puppy.",
-        "Went tells almost nothing about what the puppy did, so it can be ruled out."
+        "Traveled tells almost nothing about what the puppy did, so it can be ruled out."
       ],
       how: [
-        "Compare the choices. Went tells very little, and the other wrong choices do not fit the sentence.",
-        "Scrambled shows a quick, clumsy climb. Shook shows the puppy flinging water off.",
-        "The answers are scrambled and shook."
+        "Compare the choices. Traveled, moved and took tell very little about the puppy.",
+        "Crawled shows a slow, tired climb. Shook shows the puppy flinging water off.",
+        "The answers are crawled and shook."
       ],
       misconception: "A common mix-up is choosing a verb that works but tells little. A strong verb paints a picture.",
-      why: "The answers are scrambled and shook. Scrambled and shook show what the puppy did. Went tells very little, and the others do not fit.",
+      why: "The answers are crawled and shook. Crawled and shook show what the puppy did. Traveled, moved and took tell very little.",
       like: ["SK-GUM1-7-C13"]
     },
     {
@@ -10443,35 +10463,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: [],
-      prompt: "Zoe claims that only people can act. Which sentence proves her wrong?",
+      prompt: "Zoe claims you must move your body to do an action. Which sentence proves her wrong?",
       choices: [
         {
-          text: "The wind rattled the old windows.",
+          text: "Theo remembered the answer to the riddle.",
           correct: true
         },
         {
-          text: "My uncle painted the old garden fence."
+          text: "Theo kicked the ball over the fence."
         },
         {
-          text: "Ms. Park graded the spelling tests today."
+          text: "Theo climbed the rope to the very top of the gym."
         },
         {
-          text: "Jin sprayed the muddy truck with a hose."
+          text: "Theo tossed his cap into the air."
         }
       ],
-      clue: "To show that a claim is wrong, find an example that breaks it. Look at who or what does each action.",
+      clue: "Find an example that breaks the claim. Think about actions that happen in the mind.",
       hints: [
-        "To show that a claim is wrong, find an example that breaks it. Look at who or what does each action.",
-        "Ask for each sentence: is the doer a person?",
-        "Painted, graded and sprayed are all done by people."
+        "Find an example that breaks the claim. Think about actions that happen in the mind.",
+        "Ask for each sentence: does Theo use his body to do it?",
+        "Kicking uses the body, so that sentence cannot break the claim."
       ],
       how: [
-        "Zoe says only people do the action. Look for a sentence where a thing does the action.",
-        "My uncle, Ms. Park and Jin are all people. The wind is not a person.",
-        "The answer is \"The wind rattled the old windows.\" Rattled is still an action verb."
+        "Zoe says every action needs the body to move. Look for an action that happens in the mind.",
+        "Kicked, climbed and tossed all move the body. Remembered happens in Theo's mind.",
+        "The answer is \"Theo remembered the answer to the riddle.\" It is still an action verb."
       ],
-      misconception: "A common mix-up is thinking only people can act. Animals and things can do actions too.",
-      why: "The answer is \"The wind rattled the old windows.\" The wind is not a person, but rattled is still an action verb. The other doers are all people.",
+      misconception: "A common mix-up is thinking an action must move the body. Actions in the mind count too.",
+      why: "The answer is \"Theo remembered the answer to the riddle.\" Remembered happens in the mind, but it is still an action verb. The other verbs move the body.",
       like: ["SK-GUM1-7-C15"]
     }
   ],
@@ -10492,7 +10512,7 @@ PP.addLesson({
       hints: [
         "Owen does two things in this sentence. Find both of them.",
         "Ask what Owen did, then test each word.",
-        "Glove and field are things, so they cannot be what Owen does."
+        "A glove is a thing, so it cannot be what Owen does."
       ],
       how: [
         "Find who the sentence is about: Owen.",
@@ -10599,7 +10619,9 @@ PP.addLesson({
     points: [
       "An adjective tells more about a noun. It can tell what kind or how many: a fluffy kitten, three kittens.",
       "An adverb tells more about a verb. It can tell how, when or where an action happens.",
-      "Many adverbs that tell how end in -ly, like quickly and softly.",
+      "Many adverbs that tell how end in -ly, like quickly and softly. Some adverbs, like early and outside, do not.",
+      "An adjective can also come after a word like is, was or tasted: The soup tasted sweet. It still describes the noun.",
+      "A word like kindness names a feeling. It is a noun, so it does not describe anything.",
       "To tell them apart, find the word being described. If it is a noun, use an adjective. If it is a verb, use an adverb."
     ],
     words: [
@@ -10625,14 +10647,24 @@ PP.addLesson({
       answer: "The proud runner waved to the crowd."
     },
     {
-      show: ["The runner waved (proud / proudly) to the crowd."],
+      show: ["The nurse spoke (calm / calmly / calmness) to the child."],
       ask: "Which word belongs in the sentence?",
       steps: [
-        "Find the word being described. The blank tells about how the runner waved.",
-        "Waved is a verb, an action.",
-        "A word that tells how an action happens is an adverb, and this one ends in -ly."
+        "Find the word being described. The blank tells about how the nurse spoke.",
+        "Spoke is a verb, so the blank needs an adverb. Calm describes a noun, and calmness is a noun that names a feeling.",
+        "Read it back: The nurse spoke calmly to the child."
       ],
-      answer: "The runner waved proudly to the crowd."
+      answer: "Calmly is correct."
+    },
+    {
+      show: ["My brother woke up early and played outside."],
+      ask: "Which words are adverbs?",
+      steps: [
+        "Find the actions: woke up and played.",
+        "Ask when he woke up: early. Ask where he played: outside.",
+        "Neither word ends in -ly, but each one tells more about an action, so both are adverbs."
+      ],
+      answer: "Early and outside are adverbs. Early tells when, and outside tells where."
     }
   ],
   parent: "On a walk, take turns describing things you see with an adjective (\"a tall tree\") and actions with an adverb (\"the dog ran quickly\"). Ask your child which word describes a thing and which describes an action.",
@@ -10652,7 +10684,7 @@ PP.addLesson({
           "(4) Priya gently placed a seed in each hole."
         ],
         [
-          "(5) Then we covered the seeds with dirt.",
+          "(5) Then we carefully covered the seeds with dirt.",
           "(6) Marco carried two heavy buckets of water.",
           "(7) He walked patiently so he would not spill.",
           "(8) A cheerful breeze blew across the yard."
@@ -10698,36 +10730,6 @@ PP.addLesson({
       ]
     },
     {
-      id: "p3",
-      title: "Frogs by the Pond",
-      byline: "A third grader's draft",
-      genre: "Student draft (narrative)",
-      draft: true,
-      paragraphs: [
-        [
-          "(1) Last night, a loud chorus woke me up.",
-          "(2) I tiptoed to the window.",
-          "(3) Many frogs sat beside the muddy pond.",
-          "(4) They croaked together in the cool air."
-        ],
-        [
-          "(5) One frog leaped into the air.",
-          "(6) It landed softly on a flat rock.",
-          "(7) Another frog snapped at a buzzing fly.",
-          "(8) The green frogs hopped everywhere."
-        ],
-        [
-          "(9) I grabbed my notebook and counted twelve frogs.",
-          "(10) Then I drew a quick sketch of the rock.",
-          "(11) Mom said frogs sing most when it rains.",
-          "(12) My little brother wanted to see them too.",
-          "(13) I fell asleep before the song ended.",
-          "(14) In the morning, the pond was calm again.",
-          "(15) I will listen closely tonight."
-        ]
-      ]
-    },
-    {
       id: "p4",
       title: "Soccer Practice",
       byline: "A third grader's draft",
@@ -10744,14 +10746,14 @@ PP.addLesson({
           "(5) The ball bounced off a wooden post.",
           "(6) Ana shouted excitedly from the goal.",
           "(7) I passed the ball smoothly to Ben.",
-          "(8) He dribbled around two tired defenders."
+          "(8) He dribbled around two sleepy defenders."
         ],
         [
           "(9) Finally, Ben scored a thrilling goal.",
           "(10) Everyone cheered, and Coach Lee grinned widely.",
           "(11) Coach Lee clapped her hands and called us over.",
           "(12) She said we played as a team.",
-          "(13) We drank water in the shade.",
+          "(13) We drank water thirstily in the shade.",
           "(14) The sweaty players stretched on the grass.",
           "(15) I felt tired but happy.",
           "(16) Our next game starts tomorrow."
@@ -10786,36 +10788,6 @@ PP.addLesson({
           "(14) Grandma said it was the best bread ever.",
           "(15) She smiled and hugged me tightly.",
           "(16) I always visit Grandma on Sundays."
-        ]
-      ]
-    },
-    {
-      id: "p6",
-      title: "Growing Salt Crystals",
-      byline: "A third grader's draft",
-      genre: "Student draft (informational)",
-      draft: true,
-      paragraphs: [
-        [
-          "(1) Our class grew salt crystals last week.",
-          "(2) Ms. Kim gave each pair a clear jar.",
-          "(3) We poured hot water into the jar.",
-          "(4) I stirred in salt until it disappeared."
-        ],
-        [
-          "(5) Then we tied a string to a pencil.",
-          "(6) On Monday, tiny crystals appeared on the string.",
-          "(7) They sparkled brightly under the lamp.",
-          "(8) We checked the jars every morning.",
-          "(9) By Friday, large crystals covered it."
-        ],
-        [
-          "(10) Lena measured them accurately with a ruler.",
-          "(11) Some crystals were square, and others were pointy.",
-          "(12) We wrote our observations in a notebook.",
-          "(13) Ms. Kim praised our patient work.",
-          "(14) Everyone wanted to hold the biggest one.",
-          "(15) I want to try sugar crystals next."
         ]
       ]
     }
@@ -11018,8 +10990,8 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Select the TWO shown sentences with an adverb that tells how an action happens.",
-            targets: ["p1:1:3","p1:1:4","p1:2:4","p1:3:2","p1:3:3"],
-            answer: ["p1:1:4","p1:3:3"],
+            targets: ["p1:1:3","p1:2:1","p1:2:3","p1:2:4","p1:3:2"],
+            answer: ["p1:2:1","p1:2:3"],
             pick: 2,
             clue: "An adverb that tells how answers the question: how did it happen? Look for the action and a word that tells more about it.",
             hints: [
@@ -11029,11 +11001,11 @@ PP.addLesson({
             ],
             how: [
               "Look for a word that tells how an action happens.",
-              "Gently in sentence 4 tells how Priya placed the seed. Loudly in sentence 11 tells how the class cheered.",
+              "Carefully in sentence 5 tells how the class covered the seeds. Patiently in sentence 7 tells how Marco walked.",
               "Sentences 3 and 8 use adjectives, and soon in sentence 10 tells when."
             ],
             misconception: "A common mix-up is choosing every sentence with a describing word. Only an adverb that tells how fits this question.",
-            why: "The answers are sentences 4 and 11: \"Priya gently placed a seed in each hole.\" and \"The whole class cheered loudly.\". Gently and loudly tell how an action happened. The other shown sentences use adjectives or an adverb that tells when."
+            why: "The answers are sentences 5 and 7: \"Then we carefully covered the seeds with dirt.\" and \"He walked patiently so he would not spill.\". Carefully and patiently tell how an action happened. The other shown sentences use adjectives or an adverb that tells when."
           },
           {
             id: "SK-GUM1-8-C07",
@@ -11081,11 +11053,11 @@ PP.addLesson({
                 }
               ]
             },
-            clue: "In Part A, look for a word that tells what size or kind. In Part B, ask which noun that word tells about.",
+            clue: "For Part A, find the word that tells what kind. For Part B, find the noun it tells about.",
             hints: [
-              "In Part A, look for a word that tells what size or kind. In Part B, ask which noun that word tells about.",
-              "Ask what kind of thing Mr. Reyes handed out. The word that answers is the adjective.",
-              "Gave is a verb, so it cannot describe a noun in Part A."
+              "For Part A, find the word that tells what kind. For Part B, find the noun it tells about.",
+              "Say each Part A choice and ask whether it describes a person or a thing.",
+              "Gave is a verb that names an action, so it cannot describe a noun in Part A."
             ],
             how: [
               "Part A: ask what kind of shovel it was. Small tells the size, so it is an adjective.",
@@ -11262,28 +11234,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:R:use-adjectives-and-adverbs"
             ],
-            passages: ["p2"],
-            prompt: "Choose the word that completes sentence 5.",
-            text: "Two neighbors painted the {0} fence.",
+            passages: [],
+            prompt: "Choose the word that completes the sentence.",
+            text: "After the long hike, the soup tasted {0}.",
             slots: [
               {
-                options: ["rusty","rustily","rustiness"],
+                options: ["sweet","sweetly","sweetness"],
                 answer: 0
               }
             ],
-            clue: "Find the word the blank will describe. Then decide whether it is a thing or an action.",
+            clue: "Find the word the blank will tell about. Ask whether it is a thing or an action.",
             hints: [
-              "Find the word the blank will describe. Then decide whether it is a thing or an action.",
-              "The blank comes right before fence. A fence is a thing.",
-              "Rustiness names a thing, so it cannot describe a fence."
+              "Find the word the blank will tell about. Ask whether it is a thing or an action.",
+              "The blank comes after tasted and tells about the soup.",
+              "A word that names a quality is a noun, so it cannot describe the soup."
             ],
             how: [
-              "Find the word the blank describes: fence, a noun.",
-              "A word that describes a noun is an adjective.",
-              "The answer is rusty. Rustily tells about an action, and rustiness is a noun."
+              "Find the word the blank describes: soup, a noun.",
+              "A word that describes a noun is an adjective, even when it comes after a word like tasted.",
+              "The answer is sweet. Sweetly would tell about an action, and sweetness is a noun."
             ],
-            misconception: "A common mix-up is thinking every describing word ends in -ly. An adjective has to fit a noun.",
-            why: "The answer is rusty. Rusty is an adjective that tells what kind of fence it was. Rustily is an adverb, and rustiness is a noun."
+            misconception: "A common mix-up is thinking a word after the verb must be an adverb. Check whether it describes the soup or an action.",
+            why: "The answer is sweet. Sweet is an adjective that tells what the soup tasted like. Sweetly is an adverb, and sweetness is a noun."
           },
           {
             id: "SK-GUM1-8-C13",
@@ -11378,9 +11350,9 @@ PP.addLesson({
                 text: "The band played the song merrily."
               }
             ],
-            clue: "To show a claim is wrong, find an example that breaks it. Look for an -ly word that is not an adverb.",
+            clue: "Find an example that breaks the claim. Look for an -ly word that is not an adverb.",
             hints: [
-              "To show a claim is wrong, find an example that breaks it. Look for an -ly word that is not an adverb.",
+              "Find an example that breaks the claim. Look for an -ly word that is not an adverb.",
               "For each sentence, find the -ly word and ask what it tells about: a noun or an action.",
               "Swiftly tells about the packing, an action, so that sentence follows Lily's rule."
             ],
@@ -11406,7 +11378,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-adjectives-and-adverbs"
       ],
       passages: [],
-      stem: "Tomorrow, the sleepy farmer will gently carry three baskets.",
+      stem: "Tomorrow, the strong farmer will gently carry three baskets.",
       prompt: "Sort each word by the job it does in the sentence.",
       cols: [
         "Describes a person or thing",
@@ -11418,7 +11390,7 @@ PP.addLesson({
           answer: 1
         },
         {
-          text: "sleepy",
+          text: "strong",
           answer: 0
         },
         {
@@ -11438,11 +11410,11 @@ PP.addLesson({
       ],
       how: [
         "Find the word each row tells about.",
-        "Sleepy describes the farmer and three counts the baskets, so both describe a person or thing.",
+        "Strong describes the farmer and three counts the baskets, so both describe a person or thing.",
         "Tomorrow tells when and gently tells how the farmer will carry, so both describe something someone does."
       ],
       misconception: "A common mix-up is sorting by word length or ending. Sort by what the word tells about.",
-      why: "Sleepy and three describe nouns. Tomorrow and gently tell about the action carry.",
+      why: "Strong and three describe nouns. Tomorrow and gently tell about the action carry.",
       like: ["SK-GUM1-8-P3"]
     },
     {
@@ -11531,7 +11503,7 @@ PP.addLesson({
       text: "He dribbled around two {0} defenders.",
       slots: [
         {
-          options: ["tired","tiredly","tiredness"],
+          options: ["sleepy","sleepily","sleepiness"],
           answer: 0
         }
       ],
@@ -11544,10 +11516,10 @@ PP.addLesson({
       how: [
         "Find the word the blank describes: defenders, a noun.",
         "A word that describes a noun is an adjective.",
-        "The answer is tired. Tiredly would tell about an action, and tiredness is a noun."
+        "The answer is sleepy. Sleepily would tell about an action, and sleepiness is a noun."
       ],
       misconception: "A common mix-up is choosing the noun form because it names the feeling. A describing word is needed before defenders.",
-      why: "The answer is tired. Tired is an adjective that tells what kind of defenders. Tiredly is an adverb, and tiredness is a noun.",
+      why: "The answer is sleepy. Sleepy is an adjective that tells what kind of defenders. Sleepily is an adverb, and sleepiness is a noun.",
       like: ["SK-GUM1-8-C04"]
     },
     {
@@ -11600,22 +11572,22 @@ PP.addLesson({
       ],
       passages: ["p4"],
       prompt: "Tap both shown sentences where a word tells how someone did something.",
-      targets: ["p4:1:2","p4:1:4","p4:2:2","p4:2:4","p4:3:1"],
-      answer: ["p4:1:4","p4:2:2"],
+      targets: ["p4:1:2","p4:2:2","p4:3:1","p4:3:5","p4:3:6"],
+      answer: ["p4:2:2","p4:3:5"],
       pick: 2,
       clue: "Look for the action in each shown sentence and a word that tells how it happened.",
       hints: [
         "Look for the action in each shown sentence and a word that tells how it happened.",
         "Check each shown sentence: does one word answer how?",
-        "Sentence 8 tells how many defenders there were, so it can be ruled out."
+        "Sentence 14 describes the players with a word that tells what kind, so it can be ruled out."
       ],
       how: [
         "Look for a word that tells how an action happened.",
-        "Powerfully in sentence 4 tells how Sam kicked. Excitedly in sentence 6 tells how Ana shouted.",
-        "Sentences 2 and 8 use adjectives, and finally in sentence 9 tells when."
+        "Excitedly in sentence 6 tells how Ana shouted. Thirstily in sentence 13 tells how the team drank.",
+        "Sentences 2 and 14 use adjectives, and finally in sentence 9 tells when."
       ],
       misconception: "A common mix-up is choosing every sentence with a describing word. Only a word that tells how fits.",
-      why: "The answers are sentences 4 and 6: \"Sam kicked the ball powerfully.\" and \"Ana shouted excitedly from the goal.\". Powerfully and excitedly tell how an action happened. The other shown sentences use adjectives or a word that tells when.",
+      why: "The answers are sentences 6 and 13: \"Ana shouted excitedly from the goal.\" and \"We drank water thirstily in the shade.\". Excitedly and thirstily tell how an action happened. The other shown sentences use adjectives or a word that tells when.",
       like: ["SK-GUM1-8-C06"]
     },
     {
@@ -11629,7 +11601,7 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Answer the first half, then the second half.",
       partA: {
-        prompt: "In sentence 4, which choice shows the manner of the kicking?",
+        prompt: "In sentence 4, which choice tells how Sam kicked the ball?",
         choices: [
           {
             text: "powerfully",
@@ -11668,7 +11640,7 @@ PP.addLesson({
       hints: [
         "In the first half, look for the choice that tells how. In the second half, ask which action it goes with.",
         "Ask how the player did the action. The choice that answers is the adverb.",
-        "Sam is a person, so Sam cannot tell how an action happened."
+        "Sam is a person who does the kicking, so Sam cannot tell how an action happened."
       ],
       how: [
         "First half: ask how Sam kicked the ball. Powerfully tells how.",
@@ -11964,34 +11936,34 @@ PP.addLesson({
           text: "The pilot landed the plane safely."
         },
         {
-          text: "Mia whispered the secret nervously."
+          text: "Mia whispered the secret to her sister."
         },
         {
           text: "The nurse bandaged the arm tenderly."
         }
       ],
-      clue: "To show a claim is wrong, find an example that breaks it. Look for an adverb that does not end in -ly.",
+      clue: "Find an example that breaks the claim. Look for an adverb without -ly.",
       hints: [
-        "To show a claim is wrong, find an example that breaks it. Look for an adverb that does not end in -ly.",
+        "Find an example that breaks the claim. Look for an adverb without -ly.",
         "Find the adverb in each sentence and check how it ends.",
-        "Nervously ends in -ly, so that sentence follows Ben's rule."
+        "Safely ends in -ly, so that sentence follows Ben's rule."
       ],
       how: [
         "Ben's rule says every adverb ends in -ly. Look for an adverb that does not.",
-        "Safely, nervously and tenderly all end in -ly.",
+        "Safely and tenderly end in -ly, and the whisper sentence has no adverb at all.",
         "The answer is \"Mom will call you tomorrow.\" Tomorrow tells when but does not end in -ly."
       ],
       misconception: "A common mix-up is thinking the ending decides the word type. Check what the word tells about.",
-      why: "The answer is \"Mom will call you tomorrow.\" Tomorrow is an adverb that tells when, and it does not end in -ly. The other adverbs all end in -ly.",
+      why: "The answer is \"Mom will call you tomorrow.\" Tomorrow is an adverb that tells when, and it does not end in -ly. The other adverbs end in -ly, and one sentence has none.",
       like: ["SK-GUM1-8-C15"]
     }
   ],
   addons: {
     "SK-GUM1-8-P1": {
       hints: [
-        "An adjective describes a noun. Find the nouns, then look for a word that tells more about one of them.",
+        "An adjective describes a noun. Find the nouns, then look for a word that tells more about one.",
         "Say each word and ask whether it tells what kind of kitten or sun it is.",
-        "Napped is an action, so it cannot describe a noun."
+        "Napped is an action word, not a thing, so it cannot describe a noun."
       ],
       how: [
         "Find the nouns: kitten and sun.",
@@ -12013,7 +11985,7 @@ PP.addLesson({
     },
     "SK-GUM1-8-P3": {
       hints: [
-        "For each word, find the word it tells about. A noun goes with one column and an action goes with the other.",
+        "Find the word each one tells about. Nouns go in one column, actions in the other.",
         "Sort the words you feel surest about first. Then handle the rest.",
         "One word tells when the bird sang. Find it before you move on."
       ],
@@ -12109,7 +12081,8 @@ PP.addLesson({
       "A common noun is a general word, like girl, city or dog. It starts with a small letter unless it begins a sentence.",
       "A proper noun is the name of one special person, place or thing, like Maya, Atlanta or Rover.",
       "A proper noun always starts with a capital letter, even in the middle of a sentence.",
-      "Days of the week, months and holidays are proper nouns too, like Monday, May and Thanksgiving."
+      "Days of the week, months and holidays are proper nouns too, like Monday, May and Thanksgiving.",
+      "A title before a name gets a capital letter too: Mrs. Tran, Dr. Hall, Uncle Joe."
     ],
     words: [
       { term: "common noun", means: "a general name for a person, place or thing" },
@@ -12149,14 +12122,14 @@ PP.addLesson({
     /* B7a:passages:start */
     {
       id: "p1",
-      title: "Spirit Week at Pine Ridge",
+      title: "Dress-Up Days at Pine Ridge",
       byline: "A third grader's draft",
       genre: "Student draft (narrative)",
       draft: true,
       paragraphs: [
         [
           "(1) Our school is called Pine Ridge Elementary.",
-          "(2) Last week was spirit week.",
+          "(2) Last week, we had dress-up days.",
           "(3) On Monday, Mrs. Greene wore a silly hat to class.",
           "(4) Mateo wore a jersey from his favorite team."
         ],
@@ -12171,7 +12144,7 @@ PP.addLesson({
           "(10) Ms. Lopez gave us a shiny trophy.",
           "(11) We put it on a shelf in the hallway.",
           "(12) Everyone smiled when they walked past it.",
-          "(13) Next year, I will help plan spirit week."
+          "(13) Next year, I will help plan dress-up days."
         ]
       ]
     },
@@ -12200,34 +12173,6 @@ PP.addLesson({
           "(11) I borrowed three books and a map.",
           "(12) Then we walked home together and made lunch.",
           "(13) I wanted to stay all day."
-        ]
-      ]
-    },
-    {
-      id: "p3",
-      title: "Camping in the Mountains",
-      byline: "A third grader's draft",
-      genre: "Student draft (narrative)",
-      draft: true,
-      paragraphs: [
-        [
-          "(1) In August, my family went camping in the Great Smoky Mountains.",
-          "(2) We set up our tent beside a creek.",
-          "(3) My sister Hannah found a salamander under a rock.",
-          "(4) A ranger named Ms. Torres gave us a map."
-        ],
-        [
-          "(5) She said the trail leads to a waterfall.",
-          "(6) We hiked for two hours through tall trees.",
-          "(7) At the top, we saw a deer and a fox.",
-          "(8) The creek sparkled far below us."
-        ],
-        [
-          "(9) We ate sandwiches on a flat rock.",
-          "(10) That night, we told stories by the fire.",
-          "(11) I heard an owl hoot in the dark.",
-          "(12) The next morning, we packed up and drove home.",
-          "(13) I hope to visit the mountains again someday."
         ]
       ]
     },
@@ -12285,36 +12230,6 @@ PP.addLesson({
           "(11) A wave washed it away, and Zara laughed.",
           "(12) On Sunday, we flew back to Boston.",
           "(13) I miss the warm sand already."
-        ]
-      ]
-    },
-    {
-      id: "p6",
-      title: "Our Planet Report",
-      byline: "A third grader's draft",
-      genre: "Student draft (informational)",
-      draft: true,
-      paragraphs: [
-        [
-          "(1) Our class studied space in science.",
-          "(2) Ms. Whitaker showed us a picture of Mars.",
-          "(3) Mars is a red planet.",
-          "(4) It has a tall volcano called Olympus Mons."
-        ],
-        [
-          "(5) Jupiter is the biggest planet.",
-          "(6) It has a giant storm with swirling clouds.",
-          "(7) A scientist named Dr. Okoro explained how telescopes work.",
-          "(8) She visited our school in March."
-        ],
-        [
-          "(9) We drew pictures of the planets.",
-          "(10) My partner Wen colored Jupiter orange.",
-          "(11) Our teacher hung the posters in the hall.",
-          "(12) Visitors came to the science fair on Thursday.",
-          "(13) They asked many questions about space.",
-          "(14) I want to be an astronaut someday.",
-          "(15) Ms. Whitaker said that is a great goal."
         ]
       ]
     }
@@ -12767,7 +12682,7 @@ PP.addLesson({
             clue: "You need the special name of one river. Check each choice.",
             hints: [
               "You need the special name of one river. Check each choice.",
-              "A special name starts with capital letters. Check the first letters.",
+              "Ask which choice names one particular river, and which could be about any river.",
               "One choice is a general word for any river, so it cannot be a special name."
             ],
             how: [
@@ -12802,7 +12717,7 @@ PP.addLesson({
             clue: "Each blank needs the special name of one day or one person. Check the first letters too.",
             hints: [
               "Each blank needs the special name of one day or one person. Check the first letters too.",
-              "A special name starts with a capital letter, even in the middle of a sentence.",
+              "Think about which choice names exactly one day and which names exactly one person.",
               "Weekend is a general word, so it is not the name of one day."
             ],
             how: [
@@ -12874,7 +12789,7 @@ PP.addLesson({
             clue: "To show a claim is wrong, find an example that breaks it. Look for a capital letter on a general word.",
             hints: [
               "To show a claim is wrong, find an example that breaks it. Look for a capital letter on a general word.",
-              "Check the first word of each sentence and each capital letter inside it.",
+              "Find the noun each sentence is about and ask whether it is a special name or a general word.",
               "Nora is the special name of one person, so that sentence agrees with Kofi's claim."
             ],
             how: [
@@ -13267,20 +13182,20 @@ PP.addLesson({
         "3.L.GC.1:R:use-common-and-proper-nouns"
       ],
       passages: ["p5"],
-      prompt: "Why does Sunny Side Diner get capitals in sentence 4 while beach in sentence 2 does not?",
+      prompt: "Why do the words Sunny Side Diner start with capitals in sentence 4 when beach in sentence 2 does not?",
       choices: [
         {
-          text: "Only one diner has that title, but many shores are beaches.",
+          text: "Only one diner has that name, but many shores are beaches.",
           correct: true
         },
         {
-          text: "Longer titles always need more capitals than short words do."
+          text: "Diner words always need extra capitals compared with shop words."
         },
         {
           text: "Sentences later in a draft always need more capital letters."
         },
         {
-          text: "Beach names an action, but Sunny Side Diner names a thing."
+          text: "Beach is a verb in that line, and the diner is a noun."
         }
       ],
       clue: "Ask which of the two belongs to just one place and which is a general word.",
@@ -13292,10 +13207,10 @@ PP.addLesson({
       how: [
         "Beach could be about any beach, so it is a common noun.",
         "Sunny Side Diner is the special name of one diner, so it is a proper noun.",
-        "The answer is \"Only one diner has that title, but many shores are beaches.\""
+        "The answer is \"Only one diner has that name, but many shores are beaches.\""
       ],
       misconception: "A common mix-up is thinking two place words are the same kind of noun. One is general and one is special.",
-      why: "The answer is \"Only one diner has that title, but many shores are beaches.\" Sunny Side Diner is a proper noun for one place, and beach is a common noun that could be any beach.",
+      why: "The answer is \"Only one diner has that name, but many shores are beaches.\" Sunny Side Diner is a proper noun for one place, and beach is a common noun that could be any beach.",
       like: ["SK-GUM1-9-C10"]
     },
     {
@@ -13346,7 +13261,7 @@ PP.addLesson({
       clue: "You need the special name of one city. Check each choice.",
       hints: [
         "You need the special name of one city. Check each choice.",
-        "A special name starts with a capital letter. Check the first letters.",
+        "Ask which choice names one particular city, and which could be about any city.",
         "One choice is a general word for a place, so it cannot be a special name."
       ],
       how: [
@@ -13382,7 +13297,7 @@ PP.addLesson({
       clue: "Each blank needs the special name of one month or one person. Check the first letters too.",
       hints: [
         "Each blank needs the special name of one month or one person. Check the first letters too.",
-        "A special name starts with a capital letter, even in the middle of a sentence.",
+        "Think about which choice names exactly one month and which names exactly one person.",
         "Boy is a general word, so it is not the name of one person."
       ],
       how: [

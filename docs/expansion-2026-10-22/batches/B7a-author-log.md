@@ -23,47 +23,47 @@ Each of the nine lessons has: `core` (3 sets of 5; two items are `{ref}` to orig
 | 9 | use-common-and-proper-nouns | P2, P4 |
 
 ## Gate results (last run, on the final `L-GUM1.js`)
-- `node verification/check-content.js --all`: **PASS, 0 failures, 100 warnings** (last run; the repo-wide count moves as other agents edit) (68 lessons with core, 1020 core items, 1020 similar items). The warnings are the repo-wide set (version record, ledger). For `SK-GUM1-*` items there are 29: 21 are "hint 1 is much longer than hint 3", 3 are "hint 1 shares a word only with the key", 3 "clue shares a word only with the key", 2 "hint 2 shares a word only with the key". They were read and left as warnings (single shared everyday words such as "thing", "picture", "lets", "special, name"); a reviewer may want to shorten some hint 1 lines.
+- `node verification/check-content.js --all` (run after the last edit of phase 2): **PASS, 0 failures** (repo-wide warning count moves as other agents edit; it was 80 to 87 during the last runs). For `SK-GUM1-*` there are 11 warnings, all "hint 1 is much longer than hint 3" on lesson 9 items (lesson 9 was ACCEPT-with-SHOULDs; the reviewer called these hint-length warnings optional trims, and they were left). Lessons 1 to 8 have 0 `SK-GUM1-*` warnings.
 - `node verification/check-writing.js`: 0 failures, 0 warnings. `node verification/check-instructional-copy.js`: 28 assertions passed.
-- `python3 verification/readability.py js/data/lessons/L-GUM1.js`: no passage above FK 3.9 in lessons 1 to 9 (highest: lesson 6 p1 and lesson 2 p5, 3.9; that script counts the "(n)" markers as words, so its word counts run about 15 higher than the counts below).
-- Author-side checker (`verify.js` in the session scratchpad, run on the final file; no output of `PROBLEM`): the keyed text appears in why for every mc, ms, ebsr, dropdown and hot-text item; how names the key words; no hint contains the key text; after hint 3 at least two choices stay live for every item (pick + 1 for two-key items); no twin pair is above 0.21.
+- `python3 verification/readability.py js/data/lessons/L-GUM1.js`: highest passage in lessons 1 to 9 is lesson 6 p3 at FK 4.1 (4.07 by the author script), then lesson 6 p1 and lesson 2 p5 at 3.9; all are at or below the 4.5 limit. (An earlier version of this log said "no passage above 3.9"; that was true before phase 2 added the river-otter passage text. That script counts the "(n)" markers as words, so its word counts run about 15 higher than the counts below.)
+- Author-side checker (`verify.js` in the session scratchpad, run on the final file; no output of `PROBLEM`): the keyed text appears in why for every mc, ms, ebsr, dropdown and hot-text item; how names the key words; no hint contains the key text; no twin pair is above 0.21. The old claim here that "after hint 3 at least two choices stay live for every item" was a mention-based script result and is superseded by the "Live-choice recount" section below.
 
 ## Passage length and readability, measured on the final file
 Words are counted without the "(n)" markers (script `fkp.js`/`verify.js`; FK is Flesch-Kincaid grade).
 
-| Lesson | Shortest passage (words) | Highest FK |
-|---|---|---|
-| 1 | 103 | 3.44 |
-| 2 | 103 | 3.87 |
-| 3 | 101 | 3.54 |
-| 4 | 102 | 2.28 |
-| 5 | 103 | 2.66 |
-| 6 | 104 | 3.87 |
-| 7 | 102 | 2.97 |
-| 8 | 102 | 3.11 |
-| 9 | 102 | 3.67 |
+| Lesson | Passages | Shortest passage (words) | Highest FK |
+|---|---|---|---|
+| 1 | 6 | 103 | 3.44 |
+| 2 | 6 | 103 | 3.87 |
+| 3 | 6 | 101 | 3.54 |
+| 4 | 6 | 102 | 2.28 |
+| 5 | 5 | 103 | 2.66 |
+| 6 | 6 | 104 | 4.07 |
+| 7 | 6 | 102 | 2.97 |
+| 8 | 4 | 102 | 3.07 |
+| 9 | 4 | 102 | 3.67 |
 
-All 54 passages are 101 words or more and FK 3.9 or lower.
+All passages are 101 words or more and FK 4.07 or lower. Phase 2 removed the unused passages 8-p3, 8-p6, 9-p3 and 9-p6 (lessons 8 and 9 now have four texts each); every remaining passage is used by at least one core item or twin.
 
 ## Twin vs core overlap, measured on the final file
 Tokens are lowercase `[a-z']+` words over stem, prompt, text, choices, slot options, rows, columns, ebsr parts, and hot-text target sentences. Every twin was compared with every core item and with the two ref practice items (all pairs), by set Jaccard and by multiset Jaccard. The limit is 0.21.
 
-| Lesson | Max, matched `like` pair (set / multiset) | Max, all pairs (set / multiset) |
+| Lesson | Max, matched `like` pair (set / multiset) | Max, all twin x core pairs (set / multiset) |
 |---|---|---|
-| 1 | 0.20 / 0.20 | 0.20 / 0.20 |
-| 2 | 0.21 / 0.21 | 0.21 / 0.21 |
-| 3 | 0.20 / 0.20 | 0.21 / 0.21 |
-| 4 | 0.19 / 0.21 | 0.20 / 0.21 |
-| 5 | 0.19 / 0.21 | 0.19 / 0.21 |
-| 6 | 0.21 / 0.20 | 0.21 / 0.21 |
-| 7 | 0.19 / 0.20 | 0.21 / 0.20 |
-| 8 | 0.18 / 0.20 | 0.19 / 0.20 |
-| 9 | 0.20 / 0.19 | 0.20 / 0.19 |
+| 1 | 0.194 / 0.200 | 0.194 / 0.200 |
+| 2 | 0.203 / 0.209 | 0.203 / 0.209 |
+| 3 | 0.203 / 0.208 | 0.203 / 0.209 |
+| 4 | 0.192 / 0.209 | 0.192 / 0.209 |
+| 5 | 0.196 / 0.209 | 0.196 / 0.209 |
+| 6 | 0.196 / 0.206 | 0.196 / 0.209 |
+| 7 | 0.189 / 0.180 | 0.200 / 0.196 |
+| 8 | 0.190 / 0.195 | 0.194 / 0.195 |
+| 9 | 0.203 / 0.191 | 0.203 / 0.195 |
 
-Digits are not tokens, so numeral-only choices do not count toward the overlap. Several pairs sit exactly at 0.21; they were not rounded down by hand.
+Digits are not tokens, so numeral-only choices do not count toward the overlap. These are the numbers from the final files (run after the last edit); no pair is above 0.21 and none was rounded by hand.
 
 ## Key length, format mix, difficulty
-- **Key uniquely longest, new core and twin items:** 0 in all nine lessons (mc, ms, ebsr parts, dropdown slots, hot-text options).
+- **Key uniquely longest, new core and twin items:** 0 in all nine lessons by the final `verify.js` run (mc, ms, ebsr parts, dropdown slots, hot-text options). In lesson 7 the strong-verb dropdowns were re-paired so that a weak distractor is as long as or longer than the key (for example dashed / walked / went; crawled / traveled / moved).
 - **Legacy items that I did not change and that do have a uniquely longest key** (from the original practice and test sets): lesson 1 P5 (34 vs 29 characters); lesson 2 T2; lesson 3 T2 and T4 slot 1; lesson 5 P1 slot 1, P5 slot 2, T1 slot 1, T5; lesson 6 T2 slot 1; lesson 7 P5 (10 vs 6) and T4; lesson 8 P4 slot 2; lesson 9 P3, P5, T1, T5, and P4 (the two keys are the two longest options). These are the originals and are recorded here rather than silently changed. The coordinator's note about P5 in lesson 1 is this item.
 - **Core mix per lesson** (new items): 5 or 6 mc (never more than 6), 3 dropdown, 3 or 4 hot-text, 1 ebsr, 1 ms, and the matching ref; every lesson has at least 4 formats and at least 3 technology-enhanced items. DOK: each lesson has at least one DOK 3 item (4 to 6), DOK 1 items 0 to 2. Domains: at most 6 items in any domain; no passage carries more than 7 items.
 
@@ -87,7 +87,7 @@ Parts of speech and word classes
 - "There" and "everywhere" are adverbs of place: https://www.monkeyenglish.net/tips-for-parents/education/adverbs-of-place and https://www.oxfordlearnersdictionaries.com/definition/english/everywhere
 - Adverbs answer how, where and when, and many adverbs do not end in -ly: https://www.noslangues-ourlanguages.gc.ca/writing-tips-plus/adverbs
 - "Tiredly" is an adverb: https://prod-ccroc-direct.merriam-webster.com/thesaurus/tiredly; "stickily" is an adverb: https://www.oxfordlearnersdictionaries.com/definition/english/stickily; "rustily" is an adverb ("In a rusty manner"): https://kaikki.org/dictionary/English/meaning/r/ru/rustily.html
-- Action verbs include mental actions (think, imagine): https://www.thesaurus.com/e/grammar/action-verbs/ ; decide, dream, imagine, notice, realize are verbs of knowing and thinking: https://www.proofreadingservices.com/pages/verbs-of-knowing-and-thinking (the word "doubt" was in an earlier draft of lesson 7 S02 and was removed because no fetched page confirmed it; "realized" replaced it).
+- Action verbs include mental actions (think, imagine): https://www.thesaurus.com/e/grammar/action-verbs/ ; decide, dream, imagine, notice, realize are verbs of knowing and thinking: https://www.proofreadingservices.com/pages/verbs-of-knowing-and-thinking (the word "doubt" was in an earlier draft of lesson 7 S02 and was removed because no fetched page confirmed it; "realized" replaced it, and in phase 2 "realized" was in turn replaced by "imagined" because the reviewer disputed it as an action verb).
 
 Sentences, questions, plurals, verbs
 - A complete sentence has a subject and a predicate; in a command the subject is understood to be "you": https://nos-langues.canada.ca/en/hypergrammar-2/subject-and-predicate
@@ -115,6 +115,39 @@ Not verified on a live page (stated plainly for the reviewers)
 - Lesson 1 to 6 sentence-level content such as "tabless is not a word" or "Racketes has extra letters" are spelling judgments, not looked up.
 
 ## Known limits
-- Hint ladders were written to the rules (hint 1 strategy, hint 2 focus, hint 3 removes at most one choice and leaves at least two live), but the check is mechanical; independent blind solving has not been done.
+- CORRECTION to the first version of this log: it said hint 3 removes at most one choice and that no hint narrows the choices. That was not true for every item. The independent review found hint 3 lines that named several wrong choices (lesson 5, lesson 6 C15/S15, lesson 7 C15/S15) and hints 1 and 2 that stated or narrowed to the key (lessons 1, 2, 4, 6, 7, 8, 9). Phase 2 fixed every one that was reported, and the live-choice recount below found three more in lesson 7 (C09, S09, addon P2). Independent blind solving has still not been done by anyone but the author.
 - A reviewer should look hard at: lesson 8 C14/S14 (an adjective used where an adverb is needed: "moved graceful", "answered polite" are standard-English errors, but informal speech accepts some adjectives as adverbs, so the chosen words were picked to avoid that: polite has no adverb sense per the dictionary above, and graceful is not used adverbially); lesson 9 S05 (team names); lesson 9 C14/S14 (capitalization edits); lesson 7 C15/S15 (counterexample items).
 - `STATUS.md` has nine new rows (`B7a`, NOT ACCEPTED: awaiting independent review) and `02-coverage-matrix.csv` has `review_status` updated to "Expansion: AUTHORED (B7a), NEEDS INDEPENDENT REVIEW. NOT ACCEPTED" for the nine `3.L.GC.1:R:` rows. Other columns of the matrix were not recalculated.
+
+
+## Phase 2: fixes after the independent review (B7a-review.md)
+Every lesson was edited in place in `L-GUM1.js`. Status is unchanged: **NOT ACCEPTED: awaiting independent review.** Nothing was marked ACCEPTED, `accepted.js` was not touched, no git command that changes anything was run.
+
+Lessons 1 to 5 (fixes for the reviewer's MUSTs and SHOULDs, described in the earlier hand-off): hint-3 removals reduced to one named wrong choice (lesson 5), stale why text and missing key words in how (lessons 1, 2, 4), giveaways between stems/hints and hot-text keys removed, Teach/Learn wording that equalled keys reworded, the lesson 3 how line, and the legacy grade 1 and 2 refs replaced by new core items in lessons 1, 2 (P3 only) and 4. Lessons 3 and 5 keep their legacy refs because the reviewer did not require them. Lesson 5 S15 was redesigned around the path/h claim.
+
+Lesson 6
+- C03 now tests -ing after "started" on p1 sentence 11 (the core set has an -ing key, and the Learn It has a third Watch Me with an -s verb: "Every morning, Maya (feed / feeds / feeding) the fish.").
+- The false rule "an -ing verb needs a helper word" was removed everywhere (the sweep covered Teach, Learn It, how, hints and addons); the rule now reads "a word like started, kept or loves comes before an -ing verb".
+- C06 and C11 hot-text keys moved to new error sentences (p1 sentences 4 and 10; p2 sentences 9 and 10) so no C03/C04 stem names the C06 key sentences; S06 moved to p4 sentences 2 and 9. C15/S15 were rebuilt with neutral hints and no hint that lists the three wrong choices. C05/S05, C10, C13/S13 hint 2 no longer describe the key or state the rule. S10 became a plural-doer critique of p5 sentence 9. The river otter passage now says river otters slide down muddy hills and can hold their breath for several minutes (hand-holding is a sea otter behavior; see URLs below). S06 and S11 now say "sentences" like the hot-text stems.
+
+Lesson 7
+- C07 moved to p6 sentence 8 (so C04 and C07 no longer test the same sentence, and p6 is used). C15 and S15 hint 3 name one wrong choice only; S15 is now a mental-action claim like C15 so the twin tests the same sub-skill. S02 uses "imagined" (not "realized"). Teach now says "Strolled tells more than walked" (the old "Raced tells more than went" gave away keys), and Learn It has a third Watch Me that counts two verbs and marks the weak one. The strong-verb dropdowns (C04, C13, S04, S13) have a second weak but grammatical distractor. C09, S09, S01, S12 sentences were raised to grade 3 level, C12 and S12 passage sentences lengthened. S05 stem now matches p4 sentence 9. C05/S05 hint 2 and S10 hint 1 no longer share a word only with the key. S04 no longer echoes "went" in the stem.
+
+Lesson 8
+- C06 retargeted to p1 sentences 5 and 7 (new "carefully" in sentence 5) so C03 (sentence 4) and C05 (sentence 11) no longer give away the key. S06 retargeted to p4 sentences 6 and 13 (new "thirstily" in sentence 13) so S07, which prints sentence 4, does not give away S06. C12 is now a predicate adjective ("the soup tasted ___"), so the three-form dropdown no longer repeats nine times in the same shape. Learn It now has three Watch Mes: adjective before a noun, adverb vs adjective vs -ness noun, and non-ly adverbs of time and place. Teach gained a predicate-adjective point and a -ness noun point. C07 Part A hint 2 no longer answers Part A. S07 says "how", not "manner". S15 has a non-ly non-adverb distractor. "Tiredly" was replaced by sleepy/sleepily/sleepiness. Unused passages p3 and p6 were dropped.
+
+Lesson 9
+- Teach now says a title before a name gets a capital letter (Mrs. Tran, Dr. Hall, Uncle Joe). C12/C13/S12/S13 hint 2 no longer names the capital letter (it says "names one ..."). C15 hint 2 no longer points at capitals. The p1 title "Spirit Week" and the "spirit week" body text were replaced by "dress-up days". S10 says "name", not "title". Unused passages p3 and p6 were dropped. The capitalization-error items stay at three in core (C12, C13, C14).
+
+### Live-choice recount (script plus hand review)
+`recount.js` (session scratchpad) lists, for every item, the choices a hint mentions by text, then counts how many choices are still live after hints 1, 2 and 3. It is a mention-based heuristic: it also flags a hint that merely names the doer or repeats a word from a choice. Result on the final file: 35 flags across the core items, twins and practice addons of lessons 1 to 9. Each was read by hand. Real problems found and fixed: lesson 7 C09, S09 and addon P2 (hint 3 named two things; now one). The remaining flags are mention matches, such as a hint 2 that says "ask whether it is something Mia does" or a hint 3 that repeats a verb from the item; in each flag I read, the hint removes at most one choice. This is still a hand-and-script check, not a blind solve.
+
+### New web verification in phase 2
+- River otters slide down muddy hills, hold their breath for about eight minutes, mothers teach pups to swim: https://www.nationalgeographic.com/animals/mammals/facts/north-american-river-otter
+- Sea otters, not river otters, hold hands while they sleep: https://a-z-animals.com/animals/otter/why-do-otters-hold-hands/
+- Helping verbs are forms of be, have, do and modals (so "started" and "kept" are not helping verbs; the old "helper word" wording was removed): https://www.gallaudet.edu/tutorial-and-instructional-programs/english-center/grammar-and-vocabulary/verbs/helping-verbs-and-modals
+- Titles and family names are capitalized before a name: https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html and https://www.grammarly.com/blog/punctuation-capitalization/capitalization-family-title/
+- Mental action verbs (think, imagine, dream, remember): https://www.thesaurus.com/e/grammar/action-verbs/
+- Taste, smell, look, feel sometimes act as linking verbs, and an adjective after one describes the subject ("tasted sweet"): https://digfir-published.macmillanusa.com/writershelp2e/writershelp2e_ch14_121.html
+- Sleepily (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/sleepily ; sleepiness (noun): https://www.oxfordlearnersdictionaries.com/definition/english/sleepiness ; thirstily (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/thirstily ; sweetly (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/sweetly ; sweetness (noun): https://merriam-webster.com/dictionary/sweet ness
+- Not verified on a live page in phase 2: "calm / calmly / calmness", "carefully", "patiently", "flopped" and "crawled" as strong verbs (ordinary dictionary words, no page fetched).

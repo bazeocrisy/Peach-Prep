@@ -6681,10 +6681,173 @@ PP.addLesson({
         "Just add -s: donkeys."
       ],
       answer: "Donkeys. We fed carrots to the donkeys at the farm."
+    },
+    {
+      show: ["Both hotel ___ were full of people. (lobby)"],
+      ask: "How do you spell the plural of lobby?",
+      steps: [
+        "Find the letter right before the y. In lobby, it is b.",
+        "B is a consonant, so the y must change.",
+        "Change y to i and add -es: lobbies."
+      ],
+      answer: "Lobbies. Both hotel lobbies were full of people."
     }
   ],
   parent: "Make a list of things around the house that end in y (penny, key, battery, toy). Have your child say whether each one changes to -ies or just adds -s, and then write the plural.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "A Day at the Berry Farm",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last June, our class visited a berry farm outside of town.",
+          "(2) The farm grew raspberrys and blackberries in long green rows.",
+          "(3) Farmer Hill gave each of us a basket and a pair of gloves."
+        ],
+        [
+          "(4) Two ponies pulled a wagon full of children down the lane.",
+          "(5) We saw three busy bees and a green lizard in the clover.",
+          "(6) Both boies in my group filled their baskets to the top."
+        ],
+        [
+          "(7) My basket was heavy, and my hands were stained red.",
+          "(8) Before we left, we ate a sweet snack under a tree.",
+          "(9) The farmer's wife gave us two jars of jam to take home.",
+          "(10) I will tell my family all about the trip tonight."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Pony Club",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every Saturday morning, the pony club meets at the big red barn on Elm Road.",
+          "(2) Mia brushes the ponys before the lesson begins.",
+          "(3) The riders wear helmets and sturdy boots to stay safe."
+        ],
+        [
+          "(4) Two shiny trophies sit on the shelf in the office.",
+          "(5) Jake hangs the keys on a hook near the door.",
+          "(6) Our coach has many hobbys, such as painting and baking."
+        ],
+        [
+          "(7) After the lesson, we give each pony a handful of carrots.",
+          "(8) Then we line up our saddles on the wall.",
+          "(9) Last week, two flies buzzed around the hay.",
+          "(10) We left the barn tired, dusty and very happy after the long day."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Garden Club",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our garden club plants flowers behind the gym every spring.",
+          "(2) Ms. Gray planted rows of tulips and lilies by the fence.",
+          "(3) The soil felt soft after two days of rain."
+        ],
+        [
+          "(4) We spotted ladybugs and two dragonflys near the pond.",
+          "(5) Jo found two old toys in the dirt behind the shed.",
+          "(6) Birds fed their babys in a nest above us.",
+          "(7) We sold bunches of poppys at the spring fair."
+        ],
+        [
+          "(8) By noon, our arms were sore and our shoes were very muddy.",
+          "(9) Ms. Gray said the garden had never looked better than it did today.",
+          "(10) We cannot wait to plant again next year."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "The Craft Fair",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last weekend, my aunt took me to a craft fair in the park.",
+          "(2) One table sold jars of homemade cranberrys and honey.",
+          "(3) A man carved wooden whistles and painted birds at his stand."
+        ],
+        [
+          "(4) Two girls sold paper fairies at a small blue booth.",
+          "(5) A boy handed out free maps of the fair to every visitor.",
+          "(6) Many shoppers rode the subwaies to get to the park."
+        ],
+        [
+          "(7) By noon, the lines grew long, and the sun grew hot.",
+          "(8) My aunt bought me a bracelet made of blue glass beads.",
+          "(9) We ate fresh bread and drank cold lemonade in the shade.",
+          "(10) I told her it was the best Saturday of my whole summer."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Art Class",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Tuesday, our art class painted a giant mural about the sea.",
+          "(2) Ms. Park gave every group extra supplys and a jar of water.",
+          "(3) Dev painted three big whales on the left wall."
+        ],
+        [
+          "(4) Mia made copys of the sketches for each group.",
+          "(5) A few delays slowed us down, but we kept painting.",
+          "(6) We hung the finished mural in the hallway outside the gym."
+        ],
+        [
+          "(7) Lena added two sailboats and a bright white lighthouse.",
+          "(8) Visitors admired the colorful pastries painted in the corner.",
+          "(9) Our teacher took a picture of every group beside the wall.",
+          "(10) I hope we get to paint another mural before summer."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Music Night",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our school held a music night in the gym last Thursday.",
+          "(2) The band played cheerful melodies for the crowd.",
+          "(3) The chorus rode home in two vans with their buddys."
+        ],
+        [
+          "(4) Two big displays showed pictures from past concerts.",
+          "(5) Ms. Lee thanked every helper for the happy memorys.",
+          "(6) Our bake table sold candys and cookies to raise money."
+        ],
+        [
+          "(7) My little brother sat in the front row and clapped for every song.",
+          "(8) The drummer dropped a stick, but she laughed and kept going.",
+          "(9) At the end, everyone stood up and cheered for a long time.",
+          "(10) We walked home under a sky full of bright stars."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-5-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -6734,6 +6897,1350 @@ PP.addLesson({
       clue: "Find each plural that comes from a word ending in y. Check the letter before the y in the word for one.",
       why: "The answer is \"Both of my grandmas tell funny storys.\" Story has an r, a consonant, before the y, so the plural is stories." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-5-P4"
+          },
+          {
+            "ref": "SK-GUM2-5-P5"
+          },
+          {
+            "id": "SK-GUM2-5-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 2 has a plural that is spelled wrong. Which spelling should replace it?",
+            "choices": [
+              {
+                "text": "raspberries",
+                "correct": true
+              },
+              {
+                "text": "raspberrys"
+              },
+              {
+                "text": "raspberryes"
+              },
+              {
+                "text": "raspberryies"
+              }
+            ],
+            "clue": "Think of the word for one. Then look at the letter just before the y.",
+            "hints": [
+              "Think of the word for one. Then look at the letter just before the y.",
+              "Ask whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+              "Adding only -s after a consonant and a y is not how this kind of word works. Think about the other choices."
+            ],
+            "how": [
+              "The word for one is raspberry. The letter just before the y is r.",
+              "R is a consonant, so the y changes to i and -es is added.",
+              "The answer is raspberries."
+            ],
+            "misconception": "A common mix-up is adding only -s to every word that ends in y. After a consonant, the y changes to i first.",
+            "why": "The answer is raspberries. Raspberry has an r, a consonant, before the y, so the y changes to i and -es is added. Raspberrys leaves the y, and the other choices add extra letters.",
+            "like": [
+              "SK-GUM2-5-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 6 has a misspelled plural. Pick the correct spelling.",
+            "text": "Both {0} in my group filled their baskets to the top.",
+            "slots": [
+              {
+                "options": [
+                  "boys",
+                  "boies",
+                  "boyes"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Think of the word for one. Then look at the letter just before the y.",
+            "hints": [
+              "Think of the word for one. Then look at the letter just before the y.",
+              "Ask whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+              "The y changes to i only when a consonant comes before it. Think about the other choices."
+            ],
+            "how": [
+              "The word for one is boy. The letter just before the y is o.",
+              "O is a vowel, so the y stays and only -s is added.",
+              "The answer is boys. The draft changed the y to i, and boyes adds extra letters."
+            ],
+            "misconception": "A common mix-up is changing the y to i in every word. When a vowel comes before the y, the y stays.",
+            "why": "The answer is boys. Boy has an o, a vowel, before the y, so the y stays and -s is added. Boies changes the y when it should not, and boyes adds -es.",
+            "like": [
+              "SK-GUM2-5-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 4 spells ponies with -ies, but sentence 6 should spell boys with -ys. Why do the two words follow different rules?",
+            "choices": [
+              {
+                "text": "A consonant stands next to the y in pony, but a vowel does in boy.",
+                "correct": true
+              },
+              {
+                "text": "Pony names an animal and boy names a person, and words for people only add -s."
+              },
+              {
+                "text": "Pony is a longer word than boy, and longer words change the y to i."
+              },
+              {
+                "text": "Pony comes first in the draft, and the first word of each pair changes."
+              }
+            ],
+            "clue": "Think of the word for one in each plural. Then look closely at the letter right in front of the y in each word.",
+            "hints": [
+              "Think of the word for one in each plural. Then look closely at the letter right in front of the y in each word.",
+              "Compare the two letters. Ask what kind of letter each one is.",
+              "The kind of thing a word names does not decide how its plural is spelled. Think about the other choices."
+            ],
+            "how": [
+              "Ponies comes from pony, and boys comes from boy.",
+              "In pony, the letter before the y is n, a consonant. In boy, the letter before the y is o, a vowel.",
+              "The answer is \"A consonant stands next to the y in pony, but a vowel does in boy.\""
+            ],
+            "misconception": "A common mix-up is thinking the meaning of a word decides its plural. Only the letter before the y matters.",
+            "why": "The answer is \"A consonant stands next to the y in pony, but a vowel does in boy.\" A consonant before the y means the y changes to i and -es is added. A vowel before the y means just -s is added.",
+            "like": [
+              "SK-GUM2-5-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-5-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "In sentences 2 through 6, find the TWO with a misspelled plural.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:2:3"
+            ],
+            "pick": 2,
+            "clue": "Find each plural in sentences 2 through 6. For the ones that come from a word ending in y, think of the word for one.",
+            "hints": [
+              "Find each plural in sentences 2 through 6. For the ones that come from a word ending in y, think of the word for one.",
+              "Check the letter right in front of the y in each of those words. Then see whether the plural follows the rule for that letter.",
+              "The sentence about the shelf has a plural from a word that ends in a consonant and y, and it is spelled with -ies. Think about the rest."
+            ],
+            "how": [
+              "Go through the sentences one at a time and find each plural.",
+              "Sentence 2 has ponys, but pony has a consonant before the y. Sentence 6 has hobbys, but hobby has a consonant before the y.",
+              "Trophies and keys in sentences 4 and 5 are spelled right, and helmets and boots in sentence 3 have no y at all."
+            ],
+            "misconception": "A common mix-up is checking only plurals that look unusual. Check every plural in the range.",
+            "why": "The answers are \"Mia brushes the ponys before the lesson begins.\" and \"Our coach has many hobbys, such as painting and baking.\" Pony and hobby have consonants before the y, so they become ponies and hobbies. Trophies and keys are correct.",
+            "like": [
+              "SK-GUM2-5-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "What is the mistake in sentence 2?",
+              "choices": [
+                {
+                  "text": "A consonant stands next to the y in pony, so the plural should be ponies.",
+                  "correct": true
+                },
+                {
+                  "text": "A vowel stands next to the y in pony, so the plural should be poneys."
+                },
+                {
+                  "text": "Pony is a name, so its plural needs a capital P."
+                },
+                {
+                  "text": "A consonant stands next to the y in pony, so the plural should be ponyes."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which phrase in the draft has a plural formed the same way as ponies?",
+              "choices": [
+                {
+                  "text": "two shiny trophies",
+                  "correct": true
+                },
+                {
+                  "text": "keys on a hook"
+                },
+                {
+                  "text": "helmets and boots"
+                },
+                {
+                  "text": "handful of carrots"
+                }
+              ]
+            },
+            "clue": "Think of the word for one: pony. Look at the letter just before the y.",
+            "hints": [
+              "Think of the word for one: pony. Look at the letter just before the y.",
+              "In Part B, find plurals in the draft that also come from words ending in y. Check the letter before the y in each one.",
+              "Keys comes from key, which has a vowel before the y. Think about whether that matches pony."
+            ],
+            "how": [
+              "Part A: the letter before the y in pony is n, a consonant, so the y changes to i.",
+              "Part B: look for another plural from a word with a consonant before the y.",
+              "The answers are \"A consonant stands next to the y in pony, so the plural should be ponies.\" and \"two shiny trophies\"."
+            ],
+            "misconception": "A common mix-up is thinking any plural that ends in y plus s follows the same rule. Check the letter before the y.",
+            "why": "Part A: \"A consonant stands next to the y in pony, so the plural should be ponies.\" Part B: \"two shiny trophies\". Trophy has a consonant before the y, just like pony. Keys has a vowel before the y.",
+            "like": [
+              "SK-GUM2-5-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [],
+            "prompt": "Pick the TWO plurals that are spelled correctly.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "lilies",
+                "correct": true
+              },
+              {
+                "text": "driveways",
+                "correct": true
+              },
+              {
+                "text": "fairys"
+              },
+              {
+                "text": "trolleies"
+              },
+              {
+                "text": "enemyes"
+              }
+            ],
+            "clue": "Think of the word for one for each choice. Then look at the letter just before the y.",
+            "hints": [
+              "Think of the word for one for each choice. Then look at the letter just before the y.",
+              "Check every choice, including the ones that look right at first glance. A vowel before the y and a consonant before the y follow different rules.",
+              "One choice keeps the y and one changes it. Think about whether each one matches its rule."
+            ],
+            "how": [
+              "Find the letter before the y in lily, driveway, fairy, trolley and enemy.",
+              "Lily has a consonant before the y, so it becomes lilies. Driveway has a vowel before the y, so it becomes driveways.",
+              "Fairy needs -ies, trolley needs just -s, and enemy needs -ies."
+            ],
+            "misconception": "A common mix-up is changing the y to i in every word. A word like trolley has a vowel before the y and just adds -s.",
+            "why": "The answers are lilies and driveways. Lily has a consonant before the y, so it becomes lilies. Driveway has a vowel before the y, so it just adds -s. Fairys, trolleies and enemyes break the rules.",
+            "like": [
+              "SK-GUM2-5-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [],
+            "prompt": "Which word is the plural of pantry?",
+            "choices": [
+              {
+                "text": "pantries",
+                "correct": true
+              },
+              {
+                "text": "pantrys"
+              },
+              {
+                "text": "pantryes"
+              },
+              {
+                "text": "pantryies"
+              }
+            ],
+            "clue": "Look at the letter just before the y in pantry.",
+            "hints": [
+              "Look at the letter just before the y in pantry.",
+              "Ask whether that letter is a vowel or a consonant. Then think about what happens to the y.",
+              "Adding only -s after a consonant and a y is not the rule here. Think about the other choices."
+            ],
+            "how": [
+              "The letter before the y in pantry is r.",
+              "R is a consonant, so the y changes to i and -es is added.",
+              "The answer is pantries."
+            ],
+            "misconception": "A common mix-up is adding only -s. A consonant before the y means the y must change.",
+            "why": "The answer is pantries. Pantry has an r, a consonant, before the y, so the y changes to i and -es is added.",
+            "like": [
+              "SK-GUM2-5-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Ben says sentence 5 should say keies, because plurals change the y to i. Which reply explains what is wrong with his rule?",
+            "choices": [
+              {
+                "text": "In key, a vowel stands next to the y, so only s is added.",
+                "correct": true
+              },
+              {
+                "text": "Keys are small objects, so tiny objects ignore every spelling rule."
+              },
+              {
+                "text": "Key ends in a consonant, so the plural needs -es with the y untouched."
+              },
+              {
+                "text": "Ben reads the draft aloud, so the sound of the word picks its ending."
+              }
+            ],
+            "clue": "Think of the word for one in sentence 5. Look at the letter right in front of the y.",
+            "hints": [
+              "Think of the word for one in sentence 5. Look at the letter right in front of the y.",
+              "Ask what kind of letter it is, and then think about what Ben's rule does to it.",
+              "Ben is right about some words, such as trophies in sentence 4. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 5 has keys, which comes from key. The letter before the y in key is e.",
+              "E is a vowel, so the y stays and -s is added.",
+              "The answer is \"In key, a vowel stands next to the y, so only s is added.\""
+            ],
+            "misconception": "A common mix-up is changing every y to i. The change happens only after a consonant.",
+            "why": "The answer is \"In key, a vowel stands next to the y, so only s is added.\" Ben's rule works for trophies, which has a consonant before the y, but not for keys.",
+            "like": [
+              "SK-GUM2-5-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-5-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Only two of sentences 3 to 7 spell their plurals correctly. Select them.",
+            "targets": [
+              "p3:1:3",
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:2:2"
+            ],
+            "pick": 2,
+            "clue": "Find the plural in each sentence. For the ones that come from a word ending in y, think of the word for one.",
+            "hints": [
+              "Find the plural in each sentence. For the ones that come from a word ending in y, think of the word for one.",
+              "Check the letter just before the y in each word. Then see whether the plural follows the rule for that letter.",
+              "The sentence about the pond has a plural from a word that ends in a consonant and y. Look at how it ends."
+            ],
+            "how": [
+              "Go through the sentences one at a time.",
+              "Sentence 3 has days, and day has a vowel before the y. Sentence 5 has toys, and toy has a vowel before the y.",
+              "Sentence 4 needs dragonflies, sentence 6 needs babies, and sentence 7 needs poppies."
+            ],
+            "misconception": "A common mix-up is picking a sentence because it has an -ies word. Check that the word needs -ies.",
+            "why": "The answers are \"The soil felt soft after two days of rain.\" and \"Jo found two old toys in the dirt behind the shed.\" Day and toy have vowels before the y, so they just add -s. Dragonflys, babys and poppys need -ies.",
+            "like": [
+              "SK-GUM2-5-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 6 has a misspelled plural. Pick the correct spelling.",
+            "text": "Birds fed their {0} in a nest above us.",
+            "slots": [
+              {
+                "options": [
+                  "babies",
+                  "babys",
+                  "babyes"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Think of the word for one. Then look at the letter just before the y.",
+            "hints": [
+              "Think of the word for one. Then look at the letter just before the y.",
+              "Ask whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+              "Adding only -s after a consonant and a y is not how this kind of word works. Think about the other choices."
+            ],
+            "how": [
+              "The word for one is baby. The letter just before the y is b.",
+              "B is a consonant, so the y changes to i and -es is added.",
+              "The answer is babies."
+            ],
+            "misconception": "A common mix-up is adding only -s because baby is short. A consonant before the y means the y changes.",
+            "why": "The answer is babies. Baby has a b, a consonant, before the y, so the y changes to i and -es is added.",
+            "like": [
+              "SK-GUM2-5-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [],
+            "prompt": "Choose the correct plural for each blank.",
+            "text": "On the table were jars of {0} and a ring of {1}.",
+            "slots": [
+              {
+                "options": [
+                  "jellies",
+                  "jellys",
+                  "jellyes"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "keys",
+                  "keies",
+                  "keyes"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "The two blanks need different spelling rules. Think of the word for one for each blank.",
+            "hints": [
+              "The two blanks need different spelling rules. Think of the word for one for each blank.",
+              "For each blank, look at the letter just before the y and decide whether it is a vowel or a consonant.",
+              "One word changes its y and the other keeps it. Look at the choices for each blank."
+            ],
+            "how": [
+              "The first blank comes from jelly, and the letter before the y is l. The second blank comes from key, and the letter before the y is e.",
+              "L is a consonant, so jelly changes to jellies. E is a vowel, so key just adds -s.",
+              "The answers are jellies and keys."
+            ],
+            "misconception": "A common mix-up is using the same rule for both words. Look at the letter before each y.",
+            "why": "The answers are jellies and keys. Jelly has a consonant before the y, so it changes to jellies. Key has a vowel before the y, so it becomes keys.",
+            "like": [
+              "SK-GUM2-5-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [],
+            "prompt": "Select the sentence where a y was changed to i by mistake.",
+            "options": [
+              "Both babies wore tiny hats to the park today.",
+              "The cowboys rode across the dusty plain at sunset.",
+              "Smoke rose from the old factories near the river.",
+              "We walked down two narrow alleies to the market.",
+              "The shelves were full of jellies and pickles."
+            ],
+            "answer": [
+              3
+            ],
+            "pick": 1,
+            "clue": "Look at each plural that comes from a word ending in y. Think of the word for one.",
+            "hints": [
+              "Look at each plural that comes from a word ending in y. Think of the word for one.",
+              "Check the letter just before the y in each of those words. A vowel there means the y stays.",
+              "The sentence about the cowboys has a plural that keeps its y after a vowel. Think about the rest."
+            ],
+            "how": [
+              "Find the plural words and think of the word for one for each.",
+              "Babies, factories and jellies have consonants before the y, so the change to -ies is right. Cowboys has a vowel before the y.",
+              "The answer is \"We walked down two narrow alleies to the market.\" Alley has a vowel before the y, so it should be alleys."
+            ],
+            "misconception": "A common mix-up is changing the y in every plural. After a vowel, the y stays.",
+            "why": "The answer is \"We walked down two narrow alleies to the market.\" Alley has an l, but the letter just before the y is e, a vowel, so it should be alleys. The other sentences spell their plurals correctly.",
+            "like": [
+              "SK-GUM2-5-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-5-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+            ],
+            "passages": [],
+            "prompt": "Dee says, \"Every plural of a word that ends in y is made by swapping the y for i and adding es.\" Which pair shows that Dee is wrong?",
+            "choices": [
+              {
+                "text": "one birthday, two birthdays",
+                "correct": true
+              },
+              {
+                "text": "one mystery, two mysteries"
+              },
+              {
+                "text": "one pantry, two pantries"
+              },
+              {
+                "text": "one dictionary, two dictionaries"
+              }
+            ],
+            "clue": "To show a rule is wrong, find an example that breaks it. Think of the letter just before the y in each word.",
+            "hints": [
+              "To show a rule is wrong, find an example that breaks it. Think of the letter just before the y in each word.",
+              "All four words end in y. Look at the letter just before the y in each one.",
+              "Three of the pairs follow Dee's rule and the rule works for them. Think about which one does not."
+            ],
+            "how": [
+              "Dee's rule changes every y to i. Look for a word where that would make a mistake.",
+              "Mystery, pantry and dictionary all have consonants before the y, so the change works for them.",
+              "The answer is \"one birthday, two birthdays\". Birthday has a vowel before the y, so it keeps the y."
+            ],
+            "misconception": "A common mix-up is thinking one rule works for every word that ends in y. The letter before the y decides.",
+            "why": "The answer is \"one birthday, two birthdays\". Birthday has an a, a vowel, before the y, so it just adds -s. That proves Dee wrong. The other pairs have consonants before the y, so they follow Dee's rule.",
+            "like": [
+              "SK-GUM2-5-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-5-S01",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "How does each word become plural? Place it in the right column.",
+      "cols": [
+        "Becomes -ies",
+        "Becomes -ys"
+      ],
+      "rows": [
+        {
+          "text": "fairy",
+          "answer": 0
+        },
+        {
+          "text": "trolley",
+          "answer": 1
+        },
+        {
+          "text": "copy",
+          "answer": 0
+        },
+        {
+          "text": "essay",
+          "answer": 1
+        },
+        {
+          "text": "supply",
+          "answer": 0
+        },
+        {
+          "text": "jockey",
+          "answer": 1
+        }
+      ],
+      "clue": "Think of what comes just before the y in each word. A vowel and a consonant lead to different endings.",
+      "hints": [
+        "Think of what comes just before the y in each word. A vowel and a consonant lead to different endings.",
+        "Say the letter before the y for each word. Decide whether it is a vowel or a consonant.",
+        "Words with a vowel before the y keep the y, so their plurals end in -ys. Use that to sort some of them first."
+      ],
+      "how": [
+        "Find the letter before the y in each word.",
+        "Fairy, copy and supply have consonants before the y. Trolley, essay and jockey have vowels before the y.",
+        "Place each word in the column that matches its rule."
+      ],
+      "misconception": "A common mix-up is putting a word like jockey with the -ies words because it looks long. Check the letter before the y.",
+      "why": "Fairy, copy and supply have consonants before the y, so they become fairies, copies and supplies. Trolley, essay and jockey have vowels before the y, so they become trolleys, essays and jockeys.",
+      "like": [
+        "SK-GUM2-5-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S02",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "Tap the line that spells a plural wrongly.",
+      "options": [
+        "Mom packed jellies and crackers for the trip.",
+        "The cowhands rode into the valley at dawn.",
+        "Our teacher gave us two diarys to write in.",
+        "We rode the subways across the big town.",
+        "The factories closed at five o'clock."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Find each plural that comes from a word ending in y. Think of the word for one.",
+      "hints": [
+        "Find each plural that comes from a word ending in y. Think of the word for one.",
+        "Check the letter just before the y in each of those words. Decide whether the plural fits its rule.",
+        "The line about the jellies uses an -ies plural from a word with a consonant before the y. Think about the rest."
+      ],
+      "how": [
+        "Find the plural words and think of the word for one for each.",
+        "Jellies, subways and factories are spelled correctly. Diary has an r, a consonant, before the y.",
+        "The answer is \"Our teacher gave us two diarys to write in.\" It should be diaries."
+      ],
+      "misconception": "A common mix-up is trusting a word because it looks neat. Check the letter before the y.",
+      "why": "The answer is \"Our teacher gave us two diarys to write in.\" Diary has a consonant before the y, so the plural is diaries. The other lines spell their plurals correctly.",
+      "like": [
+        "SK-GUM2-5-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Fix the plural in sentence 2 by picking its correct form.",
+      "choices": [
+        {
+          "text": "cranberries",
+          "correct": true
+        },
+        {
+          "text": "cranberrys"
+        },
+        {
+          "text": "cranberryes"
+        },
+        {
+          "text": "cranberryies"
+        }
+      ],
+      "clue": "Think of the word for one. Then look at the letter right in front of the y.",
+      "hints": [
+        "Think of the word for one. Then look at the letter right in front of the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Just adding -s after a consonant and a y does not follow the rule. Think about the other choices."
+      ],
+      "how": [
+        "The word for one is cranberry. The letter in front of the y is r.",
+        "R is a consonant, so the y becomes i and -es is added.",
+        "The answer is cranberries."
+      ],
+      "misconception": "A common mix-up is adding only -s to words that end in y. A consonant before the y means the y changes.",
+      "why": "The answer is cranberries. Cranberry has an r, a consonant, before the y, so the y changes to i and -es is added.",
+      "like": [
+        "SK-GUM2-5-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Pick the form of the plural that belongs in sentence 6.",
+      "text": "Many shoppers rode the {0} to get to the park.",
+      "slots": [
+        {
+          "options": [
+            "subways",
+            "subwaies",
+            "subwayes"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Think of the word for one. Then look at the letter right in front of the y.",
+      "hints": [
+        "Think of the word for one. Then look at the letter right in front of the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "The y changes to i only after a consonant. Think about the other choices."
+      ],
+      "how": [
+        "The word for one is subway. The letter in front of the y is a.",
+        "A is a vowel, so the y stays and -s is added.",
+        "The answer is subways."
+      ],
+      "misconception": "A common mix-up is changing the y to i in every plural. After a vowel, the y stays.",
+      "why": "The answer is subways. Subway has an a, a vowel, before the y, so the y stays and -s is added.",
+      "like": [
+        "SK-GUM2-5-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Why does fairies lose its y in sentence 4 while subways keeps its y in sentence 6?",
+      "choices": [
+        {
+          "text": "In fairy the y follows an r, but in subway the y follows an a.",
+          "correct": true
+        },
+        {
+          "text": "Fairy is a magical creature, and magical creatures always swap the y for i."
+        },
+        {
+          "text": "Subway ends in more letters, and extra letters make a y stay put."
+        },
+        {
+          "text": "Sentence 4 sits near the top of the page, so its ending gets an i."
+        }
+      ],
+      "clue": "Write the word for one of each plural. Then study the letter that sits next to each y.",
+      "hints": [
+        "Write the word for one of each plural. Then study the letter that sits next to each y.",
+        "Name the kind of letter next to each y.",
+        "What a word names, and where it sits in the draft, does not choose its ending. Think about the other choices."
+      ],
+      "how": [
+        "Fairies comes from fairy, and subways comes from subway.",
+        "In fairy, the letter next to the y is r, a consonant. In subway, the letter next to the y is a, a vowel.",
+        "The answer is \"In fairy the y follows an r, but in subway the y follows an a.\""
+      ],
+      "misconception": "A common mix-up is thinking meaning or length decides the ending. Only the letter before the y matters.",
+      "why": "The answer is \"In fairy the y follows an r, but in subway the y follows an a.\" A consonant means the y changes to i. A vowel means the y stays.",
+      "like": [
+        "SK-GUM2-5-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "In sentences 2 to 6, two plurals are misspelled. Tap those sentences.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3"
+      ],
+      "answer": [
+        "p5:1:2",
+        "p5:2:1"
+      ],
+      "pick": 2,
+      "clue": "Find the plurals in sentences 2 to 6. Think of the word for one when a plural comes from a word ending in y.",
+      "hints": [
+        "Find the plurals in sentences 2 to 6. Think of the word for one when a plural comes from a word ending in y.",
+        "Check the letter just before the y in each of those words. Then see whether the plural fits the rule.",
+        "The sentence about the delays has a plural from a word with a vowel before the y. Think about the rest."
+      ],
+      "how": [
+        "Go through the sentences one at a time and find each plural.",
+        "Sentence 2 has supplys, and sentence 4 has copys. Supply and copy both have consonants before the y.",
+        "Whales in sentence 3 has no y. Delays in sentence 5 is right, and sentence 6 has no plural from a word ending in y."
+      ],
+      "misconception": "A common mix-up is stopping once you find one mistake. Check every sentence in the range.",
+      "why": "The answers are \"Ms. Park gave every group extra supplys and a jar of water.\" and \"Mia made copys of the sketches for each group.\" Supply and copy have consonants before the y, so they become supplies and copies.",
+      "like": [
+        "SK-GUM2-5-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Do the first half first. Its answer will guide the second half.",
+      "partA": {
+        "prompt": "What goes wrong with the plural in sentence 4?",
+        "choices": [
+          {
+            "text": "A p sits right beside the y, so i replaces it and es follows.",
+            "correct": true
+          },
+          {
+            "text": "Nothing is wrong, since y can stay put when s joins on."
+          },
+          {
+            "text": "A capital C is needed, since the word opens a line."
+          },
+          {
+            "text": "A p sits right beside the y, so i and an extra e both join it."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Pick the plural from the draft built just like copies.",
+        "choices": [
+          {
+            "text": "pastries",
+            "correct": true
+          },
+          {
+            "text": "delays"
+          },
+          {
+            "text": "sailboats"
+          },
+          {
+            "text": "whales"
+          }
+        ]
+      },
+      "clue": "Think of the word for one: copy. Look at the letter beside the y.",
+      "hints": [
+        "Think of the word for one: copy. Look at the letter beside the y.",
+        "In the second half, hunt for other plurals in the draft that come from words ending in y. Check the letter beside the y in each.",
+        "Delays comes from delay, which has a vowel beside the y. Think about whether that matches copy."
+      ],
+      "how": [
+        "Part A: the letter beside the y in copy is p, a consonant, so the y changes to i.",
+        "Part B: look for another plural made from a word with a consonant beside the y.",
+        "The answers are \"A p sits right beside the y, so i replaces it and es follows.\" and \"pastries\"."
+      ],
+      "misconception": "A common mix-up is picking a plural just because it ends in -s. Check the letter beside the y.",
+      "why": "Part A: \"A p sits right beside the y, so i replaces it and es follows.\" Part B: \"pastries\". Pastry has a consonant before the y, just like copy. Delays has a vowel before the y.",
+      "like": [
+        "SK-GUM2-5-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "Two of these plurals are spelled right. Tap them.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "melodies",
+          "correct": true
+        },
+        {
+          "text": "runways",
+          "correct": true
+        },
+        {
+          "text": "bullys"
+        },
+        {
+          "text": "displaies"
+        },
+        {
+          "text": "cavityes"
+        }
+      ],
+      "clue": "Think of the word for one for each choice. Look at the letter next to its y.",
+      "hints": [
+        "Think of the word for one for each choice. Look at the letter next to its y.",
+        "Check all five choices, including the ones that look right. A vowel and a consonant next to the y lead to different endings.",
+        "Two choices keep the y and two change it in a way that does not fit. Think about which ones fit."
+      ],
+      "how": [
+        "Find the letter next to the y in melody, runway, bully, display and cavity.",
+        "Melody has a consonant next to the y, so it becomes melodies. Runway has a vowel next to the y, so it becomes runways.",
+        "Bully needs -ies, display needs just -s, and cavity needs -ies."
+      ],
+      "misconception": "A common mix-up is changing every y to i, as in displaies. A vowel next to the y keeps the y.",
+      "why": "The answers are melodies and runways. Melody has a consonant before the y, and runway has a vowel before the y. Bullys, displaies and cavityes break the rules.",
+      "like": [
+        "SK-GUM2-5-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "Pick the plural form of colony.",
+      "choices": [
+        {
+          "text": "colonies",
+          "correct": true
+        },
+        {
+          "text": "colonys"
+        },
+        {
+          "text": "colonyes"
+        },
+        {
+          "text": "colonyies"
+        }
+      ],
+      "clue": "Look at the letter right next to the y in colony.",
+      "hints": [
+        "Look at the letter right next to the y in colony.",
+        "Decide whether that letter is a vowel or a consonant. Then think about what happens to the y.",
+        "Adding only -s after a consonant and a y does not follow the rule. Think about the other choices."
+      ],
+      "how": [
+        "The letter next to the y in colony is n.",
+        "N is a consonant, so the y changes to i and -es is added.",
+        "The answer is colonies."
+      ],
+      "misconception": "A common mix-up is adding only -s. A consonant before the y means the y must change.",
+      "why": "The answer is colonies. Colony has an n, a consonant, before the y, so the y changes to i and -es is added.",
+      "like": [
+        "SK-GUM2-5-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Pia thinks delays should read delaies, since pastries lost its y. What is wrong with her thinking?",
+      "choices": [
+        {
+          "text": "Delay keeps its y because an a sits next to it, so s alone is added.",
+          "correct": true
+        },
+        {
+          "text": "Delay should lose its y just as pastries did, since each ending gets an i."
+        },
+        {
+          "text": "Delay is longer than pastry, so its y is never able to change anywhere."
+        },
+        {
+          "text": "Words that name events never follow the same endings as objects do."
+        }
+      ],
+      "clue": "Think of the word for one in sentence 5. Look at the letter beside the y.",
+      "hints": [
+        "Think of the word for one in sentence 5. Look at the letter beside the y.",
+        "Decide what kind of letter it is, and then think about what Pia's idea does to it.",
+        "Pia is right about some words, such as pastries in sentence 8. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 5 has delays, which comes from delay. The letter next to the y in delay is a.",
+        "A is a vowel, so the y stays and -s is added.",
+        "The answer is \"Delay keeps its y because an a sits next to it, so s alone is added.\""
+      ],
+      "misconception": "A common mix-up is changing the y to i whenever you see a plural. The change happens only after a consonant.",
+      "why": "The answer is \"Delay keeps its y because an a sits next to it, so s alone is added.\" Pia's idea works for pastries, which has a consonant before the y, but not for delays.",
+      "like": [
+        "SK-GUM2-5-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which two sentences among 2 to 6 have plurals that are spelled correctly? Tap them.",
+      "targets": [
+        "p6:1:2",
+        "p6:1:3",
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3"
+      ],
+      "answer": [
+        "p6:1:2",
+        "p6:2:1"
+      ],
+      "pick": 2,
+      "clue": "Find the plural in each sentence. For the ones that come from a word ending in y, think of the word for one.",
+      "hints": [
+        "Find the plural in each sentence. For the ones that come from a word ending in y, think of the word for one.",
+        "Check the letter right before the y in each of those words. Then see whether the plural follows the rule for that letter.",
+        "The sentence about the bake table has a plural from a word with a consonant before the y. Look at how it ends."
+      ],
+      "how": [
+        "Go through the sentences one at a time.",
+        "Sentence 2 has melodies, and melody has a consonant before the y. Sentence 4 has displays, and display has a vowel before the y.",
+        "Sentence 3 needs buddies, sentence 5 needs memories, and sentence 6 needs candies."
+      ],
+      "misconception": "A common mix-up is picking a sentence because it has an -ys word. Check that the word needs -ys.",
+      "why": "The answers are \"The band played cheerful melodies for the crowd.\" and \"Two big displays showed pictures from past concerts.\" Melody has a consonant before the y, and display has a vowel before the y. Buddys, memorys and candys need -ies.",
+      "like": [
+        "SK-GUM2-5-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Choose the spelling that fixes sentence 5.",
+      "text": "Ms. Lee thanked every helper for the happy {0}.",
+      "slots": [
+        {
+          "options": [
+            "memories",
+            "memorys",
+            "memoryes"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Think of the word for one. Then look at the letter right before the y.",
+      "hints": [
+        "Think of the word for one. Then look at the letter right before the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Adding only -s after a consonant and a y does not follow the rule. Think about the other choices."
+      ],
+      "how": [
+        "The word for one is memory. The letter right before the y is r.",
+        "R is a consonant, so the y changes to i and -es is added.",
+        "The answer is memories."
+      ],
+      "misconception": "A common mix-up is adding only -s to a word that ends in y. A consonant before the y means the y changes.",
+      "why": "The answer is memories. Memory has an r, a consonant, before the y, so the y changes to i and -es is added.",
+      "like": [
+        "SK-GUM2-5-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "Fill each gap with the right form.",
+      "text": "The old {0} and the two {1} were kept in a box.",
+      "slots": [
+        {
+          "options": [
+            "diaries",
+            "diarys",
+            "diaryes"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "essays",
+            "essaies",
+            "essayes"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "The two gaps follow different spelling rules. Think of the word for one for each gap.",
+      "hints": [
+        "The two gaps follow different spelling rules. Think of the word for one for each gap.",
+        "For each gap, look at the letter next to the y and decide whether it is a vowel or a consonant.",
+        "One word changes its y and the other keeps it. Look at the choices for each gap."
+      ],
+      "how": [
+        "The first gap comes from diary, and the letter next to the y is r. The second gap comes from essay, and the letter next to the y is a.",
+        "R is a consonant, so diary changes to diaries. A is a vowel, so essay just adds -s.",
+        "The answers are diaries and essays."
+      ],
+      "misconception": "A common mix-up is using the same rule for both words. Look at the letter next to each y.",
+      "why": "The answers are diaries and essays. Diary has a consonant before the y, so it changes to diaries. Essay has a vowel before the y, so it becomes essays.",
+      "like": [
+        "SK-GUM2-5-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "One line has an -ies plural that should end in -ys. Tap it.",
+      "options": [
+        "The deputies handed out badges to the children.",
+        "The planes rolled down two long runwaies.",
+        "Three armies met on the wide plain.",
+        "The pastries were still warm from the oven.",
+        "Our enemies hid behind the hill."
+      ],
+      "answer": [
+        1
+      ],
+      "pick": 1,
+      "clue": "Look at each plural that comes from a word ending in y. Think of the word for one.",
+      "hints": [
+        "Look at each plural that comes from a word ending in y. Think of the word for one.",
+        "Check the letter next to the y in each of those words. A vowel there means the y stays.",
+        "The line about the pastries has a plural from a word with a consonant next to the y. Think about the rest."
+      ],
+      "how": [
+        "Find the plural words and think of the word for one for each.",
+        "Deputies, armies, pastries and enemies have consonants next to the y, so the change to -ies is right.",
+        "The answer is \"The planes rolled down two long runwaies.\" Runway has a vowel next to the y, so it should be runways."
+      ],
+      "misconception": "A common mix-up is changing the y in every plural. After a vowel, the y stays.",
+      "why": "The answer is \"The planes rolled down two long runwaies.\" Runway has an a, a vowel, before the y, so it should be runways. The other lines spell their plurals correctly.",
+      "like": [
+        "SK-GUM2-5-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-5-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies"
+      ],
+      "passages": [],
+      "prompt": "Ravi claims no plural ever finishes with -ys. Which choice proves him mistaken?",
+      "choices": [
+        {
+          "text": "one jockey, two jockeys",
+          "correct": true
+        },
+        {
+          "text": "one sky, two skies"
+        },
+        {
+          "text": "one fly, two flies"
+        },
+        {
+          "text": "one colony, two colonies"
+        }
+      ],
+      "clue": "A claim fails if one example breaks it. Look at how each plural ends.",
+      "hints": [
+        "A claim fails if one example breaks it. Look at how each plural ends.",
+        "Three of the plurals end in -ies. Think about whether those can show Ravi is mistaken.",
+        "Look for a word where a vowel comes next to the y. Think about which choice has one."
+      ],
+      "how": [
+        "Ravi's claim says no plural ends in -ys. Look for one that does.",
+        "Sky, fly and colony have consonants next to the y, so their plurals end in -ies.",
+        "The answer is \"one jockey, two jockeys\". Jockey has a vowel next to the y, so its plural ends in -ys."
+      ],
+      "misconception": "A common mix-up is thinking every y changes. A vowel before the y keeps it, and the plural ends in -ys.",
+      "why": "The answer is \"one jockey, two jockeys\". Jockey has an e, a vowel, before the y, so its plural ends in -ys. That proves Ravi mistaken. The other plurals come from words with consonants before the y.",
+      "like": [
+        "SK-GUM2-5-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-5-P1": {
+      "hints": [
+        "Think of the word for one: blueberry. Look at the letter right before the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Adding only -s after a consonant and a y does not follow the rule. Think about the other choices."
+      ],
+      "how": [
+        "The letter right before the y in blueberry is r.",
+        "R is a consonant, so the y changes to i and -es is added.",
+        "The answer is blueberries."
+      ],
+      "misconception": "A common mix-up is adding only -s because the word is long. A consonant before the y means the y changes."
+    },
+    "SK-GUM2-5-P2": {
+      "hints": [
+        "Think of the word for one: library. Find the letter right before the y.",
+        "That letter tells you which rule to use. Decide whether it is a vowel or a consonant.",
+        "Adding -es without changing the y is not the rule for this kind of word. Think about the other choices."
+      ],
+      "how": [
+        "The letter right before the y in library is r.",
+        "R is a consonant, so the y changes to i and -es is added.",
+        "The answer is libraries."
+      ],
+      "misconception": "A common mix-up is keeping the y and adding -es. After a consonant, the y must change to i."
+    },
+    "SK-GUM2-5-P3": {
+      "hints": [
+        "For each word, think of the word for one. Then check the letter before its y.",
+        "Decide for each choice whether a vowel or a consonant comes before the y.",
+        "One of the choices adds an extra e to a word that has a vowel before the y. Think about the other choices."
+      ],
+      "how": [
+        "Think of the word for one for each choice.",
+        "Family has an l before the y, so it becomes families. Key and day have vowels before the y, so they are keys and days. Story has an r before the y, so it is stories.",
+        "The answer is families. The other choices break the rule."
+      ],
+      "misconception": "A common mix-up is changing the y to i in every word. A vowel before the y keeps the y."
+    },
+    "SK-GUM2-5-P4": {
+      "hints": [
+        "Cover the y and look at the letter just before it.",
+        "Decide whether that letter is a vowel or a consonant for each word.",
+        "A vowel before the y means the y stays. Use that to sort some of the words first."
+      ],
+      "how": [
+        "Look at the letter before the y in each word.",
+        "Lady, penny and butterfly have consonants before the y, so they change the y to i and add -es.",
+        "Boy, holiday and chimney have vowels before the y, so they just add -s."
+      ],
+      "misconception": "A common mix-up is sorting by how long a word is. Only the letter before the y matters."
+    },
+    "SK-GUM2-5-P5": {
+      "hints": [
+        "Find each plural that comes from a word ending in y. Think of the word for one.",
+        "Check the letter right before the y in each of those words. Then see whether the plural fits the rule.",
+        "The sentence about the kittens has a plural that fits its rule. Think about the rest."
+      ],
+      "how": [
+        "Find the plurals that come from words ending in y.",
+        "Flies, toys, bands, cherries and strawberries are spelled correctly. Story has an r before the y.",
+        "The answer is \"Both of my grandmas tell funny storys.\" It should be stories."
+      ],
+      "misconception": "A common mix-up is trusting a plural that ends in -s. Check the letter before the y."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -6827,10 +8334,173 @@ PP.addLesson({
         "Their is the owning word for more than one person."
       ],
       answer: "Their. The twins left their jackets on the bus."
+    },
+    {
+      show: ["___ and Dana ran to the bus stop. (She or Her)"],
+      ask: "Which pronoun fits the sentence?",
+      steps: [
+        "Cover up and Dana. The sentence becomes ___ ran to the bus stop.",
+        "She ran to the bus stop sounds right. Her ran to the bus stop does not.",
+        "The pronoun does the running, so it is a subject pronoun: she."
+      ],
+      answer: "She. She and Dana ran to the bus stop."
     }
   ],
   parent: "When your child says something like \"Me and Sam played,\" ask them to say it with just themselves (\"I played\") and then try again. Praise it when they say \"Sam and I played.\"",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "The Lemonade Stand",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Saturday, Jada and I set up a lemonade stand on our corner.",
+          "(2) Jada and me made a big sign with red markers.",
+          "(3) Dad gave Jada and me a pitcher of ice and a bag of lemons."
+        ],
+        [
+          "(4) Our neighbors smelled the sweet drink, so them bought six cups.",
+          "(5) Mrs. Reed handed Jada a dollar, and she smiled back.",
+          "(6) We counted the coins, and they made a loud jingle in the jar."
+        ],
+        [
+          "(7) By noon, the sun was hot, and the ice was gone.",
+          "(8) Dad brought us fresh ice, and we thanked him.",
+          "(9) At the end, Jada gave me half of the money, and I gave her a hug.",
+          "(10) We plan to run the stand again next weekend."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Rainy Day Games",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Sunday, it rained all day, so my brother and I stayed inside.",
+          "(2) Mom gave Ben and I a deck of cards.",
+          "(3) We played a game while she cooked supper in the kitchen."
+        ],
+        [
+          "(4) Him won the first round with a lucky card.",
+          "(5) I asked him to deal again, and he laughed.",
+          "(6) Our cards were old and bent, but they still worked."
+        ],
+        [
+          "(7) After supper, Dad joined us at the table.",
+          "(8) He had never played this game before, so we taught him the rules.",
+          "(9) By bedtime, the rain had stopped, and the grass was shiny.",
+          "(10) I hope it rains again next Sunday."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "The Library Visit",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last week, my class visited the school library.",
+          "(2) Ms. Gold showed us where the new books were shelved.",
+          "(3) Zoe grabbed a book about whales, and she opened it right away."
+        ],
+        [
+          "(4) Him and Caleb found a shelf of comic books.",
+          "(5) The librarian told they to whisper.",
+          "(6) Pia asked for help, and Ms. Gold gave her a stool.",
+          "(7) Me and Pia searched the top shelf together."
+        ],
+        [
+          "(8) At the end, each of us checked out two books to take home.",
+          "(9) Ms. Gold stamped the cards and wished us a happy weekend.",
+          "(10) I read my whale book twice before bedtime."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Recess Kickball",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) At recess on Monday, my friends picked teams for kickball.",
+          "(2) Noah and me were chosen as the captains.",
+          "(3) Mr. Hart handed Noah and me the big red ball."
+        ],
+        [
+          "(4) The other kids cheered, and them ran to their bases.",
+          "(5) Maya kicked the ball far, and she raced to second base.",
+          "(6) I caught the ball once, and I threw it to Noah."
+        ],
+        [
+          "(7) The bell rang before we could finish the last inning.",
+          "(8) Everyone groaned, but Mr. Hart promised we could play again soon.",
+          "(9) We lined up at the door, tired and dusty.",
+          "(10) I cannot wait for recess tomorrow."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Grandpa's Workshop",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every summer, my cousins and I visit Grandpa's workshop.",
+          "(2) Grandpa let Ravi and I sand the old stool.",
+          "(3) He showed us how to hold the sandpaper."
+        ],
+        [
+          "(4) Us hammered the nails while Grandpa watched.",
+          "(5) The shiny red toolbox is hers.",
+          "(6) I asked him why his saw was so old."
+        ],
+        [
+          "(7) Grandpa said his father gave him that saw long ago.",
+          "(8) When we finished, the stool stood straight and strong.",
+          "(9) Grandpa painted it blue and let it dry in the sun.",
+          "(10) We all agreed it was the best stool in the world."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "A Birthday Surprise",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Friday, my sister and I planned a surprise for Mom's birthday.",
+          "(2) We hid the cake in the garage until the party began.",
+          "(3) Dad helped my sister and me hang the banner."
+        ],
+        [
+          "(4) Her and I blew up forty balloons.",
+          "(5) Our neighbors brought their own snacks to share.",
+          "(6) Mom walked in, and us shouted surprise.",
+          "(7) Dad hugged she and gave her a gift."
+        ],
+        [
+          "(8) Everyone sang loudly, and the dog barked along with the song.",
+          "(9) Mom blew out the candles on the first try.",
+          "(10) It was the best party we ever planned together."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-6-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -6880,6 +8550,1351 @@ PP.addLesson({
       clue: "Try each word in a sentence: ___ ran. The dog chased ___. ___ dog barked. Which spot does each word fit?",
       why: "We and he are subject pronouns, so they do the action. Them and me are object pronouns, so they get the action. Our and their tell who owns something." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-6-P4"
+          },
+          {
+            "ref": "SK-GUM2-6-P5"
+          },
+          {
+            "id": "SK-GUM2-6-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 2 has a pronoun mistake. What is the mistake?",
+            "choices": [
+              {
+                "text": "Me should be I, because Jada and the writer are doing the action.",
+                "correct": true
+              },
+              {
+                "text": "Me should be my, because the sign belongs to both Jada and the writer."
+              },
+              {
+                "text": "Me should be us, because two people made the sign with red markers."
+              },
+              {
+                "text": "Me should be mine, because the sign is owned by the writer alone."
+              }
+            ],
+            "clue": "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
+            "hints": [
+              "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
+              "Cover up Jada and, and read the sentence with just the pronoun.",
+              "Mine stands alone and does not come before a noun like sign. Think about the other choices."
+            ],
+            "how": [
+              "Cover up Jada and. The sentence becomes Me made a big sign, which sounds wrong.",
+              "The people who made the sign are doing the action, so the sentence needs a subject pronoun.",
+              "The answer is \"Me should be I, because Jada and the writer are doing the action.\""
+            ],
+            "misconception": "A common mix-up is thinking me is correct because it is how people talk. The writer does the action, so the sentence needs I.",
+            "why": "The answer is \"Me should be I, because Jada and the writer are doing the action.\" I made a big sign sounds right, and Me made does not. My and mine tell who owns something, and us would change the meaning.",
+            "like": [
+              "SK-GUM2-6-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 4 has the wrong pronoun. Choose the pronoun that fixes it.",
+            "text": "Our neighbors smelled the sweet drink, so {0} bought six cups.",
+            "slots": [
+              {
+                "options": [
+                  "they",
+                  "them",
+                  "their"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+            "hints": [
+              "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+              "Find the verb that comes right after the blank.",
+              "Their tells who owns something, and it needs a noun after it. Look at what follows the blank."
+            ],
+            "how": [
+              "The blank takes the place of Our neighbors, and it does the buying.",
+              "A pronoun that does the action is a subject pronoun.",
+              "The answer is they. Them gets an action, and their tells who owns something."
+            ],
+            "misconception": "A common mix-up is using them because it sounds like a word for more than one person. Them is for the person who gets the action.",
+            "why": "The answer is they. Our neighbors do the buying, so the blank needs a subject pronoun. Them gets an action, and their must be followed by a noun.",
+            "like": [
+              "SK-GUM2-6-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentences 2 and 3 both say Jada and me, yet only sentence 2 has a mistake. Why?",
+            "choices": [
+              {
+                "text": "In sentence 2 the two girls do the action, but in sentence 3 they receive it.",
+                "correct": true
+              },
+              {
+                "text": "Sentence 3 is longer than sentence 2, so it may use a word that sentence 2 cannot."
+              },
+              {
+                "text": "Sentence 2 comes first, so it must use I, and a later sentence may use me."
+              },
+              {
+                "text": "The word Dad changes the name Jada, so the pronoun after it may change too."
+              }
+            ],
+            "clue": "Compare the two sentences. In each one, ask who does the action and who receives it.",
+            "hints": [
+              "Compare the two sentences. In each one, ask who does the action and who receives it.",
+              "Cover up Jada and in each sentence and say the sentence with just the pronoun.",
+              "Where a sentence sits in a draft does not decide the pronoun. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 2: Jada and the writer made the sign. Sentence 3: Dad gave something to them.",
+              "A pronoun that receives the action is an object pronoun, so me is right in sentence 3. A pronoun that does the action needs I.",
+              "The answer is \"In sentence 2 the two girls do the action, but in sentence 3 they receive it.\""
+            ],
+            "misconception": "A common mix-up is thinking the words Jada and me are always wrong. The job in the sentence decides.",
+            "why": "The answer is \"In sentence 2 the two girls do the action, but in sentence 3 they receive it.\" Dad gave me a pitcher sounds right, so me is correct there. Me made a sign does not, so sentence 2 needs I.",
+            "like": [
+              "SK-GUM2-6-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-6-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "In sentences 2 through 6, find the TWO with a pronoun mistake.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:2:1"
+            ],
+            "pick": 2,
+            "clue": "Find each pronoun in sentences 2 through 6. Ask what job each one does.",
+            "hints": [
+              "Find each pronoun in sentences 2 through 6. Ask what job each one does.",
+              "For a pronoun with another name, cover up the name and say the sentence with just the pronoun.",
+              "The sentence about the old bent cards uses a pronoun that does the action, and it fits. Think about the rest."
+            ],
+            "how": [
+              "Go through the sentences one at a time and check each pronoun.",
+              "Sentence 2 gives the cards to Ben and the writer, so the writer gets the action. Sentence 4 uses a word that gets an action to do the winning.",
+              "In sentences 3, 5 and 6, the pronouns fit their jobs."
+            ],
+            "misconception": "A common mix-up is trusting a pronoun because it sounds natural in speech. Check its job.",
+            "why": "The answers are \"Mom gave Ben and I a deck of cards.\" and \"Him won the first round with a lucky card.\" Mom gave me sounds right, so sentence 2 needs me. Him cannot do the winning, so sentence 4 needs he. Sentences 3, 5 and 6 are correct.",
+            "like": [
+              "SK-GUM2-6-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "What is the mistake in sentence 2?",
+              "choices": [
+                {
+                  "text": "I does the action, but here the pronoun gets the cards, so it should be me.",
+                  "correct": true
+                },
+                {
+                  "text": "I gets the action, but here the pronoun owns the cards, so it should be my."
+                },
+                {
+                  "text": "I does the action, but here the pronoun is plural, so it should be us."
+                },
+                {
+                  "text": "I gets the cards, so it is correct, but the word Ben should be He."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which rewrite of sentence 2 is correct?",
+              "choices": [
+                {
+                  "text": "Mom gave Ben and me a deck of cards.",
+                  "correct": true
+                },
+                {
+                  "text": "Mom gave Ben and I a deck of cards."
+                },
+                {
+                  "text": "Mom gave Ben and we a deck of cards."
+                },
+                {
+                  "text": "Mom gave Ben and mine a deck of cards."
+                }
+              ]
+            },
+            "clue": "Cover up Ben and, and read the sentence with just the pronoun. Ask whether the pronoun does the action or gets it.",
+            "hints": [
+              "Cover up Ben and, and read the sentence with just the pronoun. Ask whether the pronoun does the action or gets it.",
+              "In Part B, cover up Ben and in each rewrite and test the sentence with just the pronoun.",
+              "Mine stands alone and does not fit after the word and here. Think about the other rewrites."
+            ],
+            "how": [
+              "Part A: Mom gave I a deck of cards sounds wrong. The pronoun gets the cards.",
+              "Part B: a pronoun that gets the action must be an object pronoun, so me fits.",
+              "The answers are \"I does the action, but here the pronoun gets the cards, so it should be me.\" and \"Mom gave Ben and me a deck of cards.\""
+            ],
+            "misconception": "A common mix-up is thinking Ben and I always sounds more polite. The job of the pronoun decides.",
+            "why": "Part A: \"I does the action, but here the pronoun gets the cards, so it should be me.\" Part B: \"Mom gave Ben and me a deck of cards.\" Mom gave me sounds right. Mom gave I and Mom gave we do not.",
+            "like": [
+              "SK-GUM2-6-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences that use pronouns correctly.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "Kyle and I built a snow fort in the yard.",
+                "correct": true
+              },
+              {
+                "text": "Coach Dunn asked them to carry the equipment bags.",
+                "correct": true
+              },
+              {
+                "text": "Us painted the fence behind the barn."
+              },
+              {
+                "text": "The prize is for Maya and I because we won."
+              },
+              {
+                "text": "Her and Sofia raced down the long hill."
+              }
+            ],
+            "clue": "Find the pronoun in each sentence. Ask whether it does the action or gets the action.",
+            "hints": [
+              "Find the pronoun in each sentence. Ask whether it does the action or gets the action.",
+              "Check all five choices, including the ones that look right at first glance. Cover up the other name when a name is joined to a pronoun.",
+              "One choice joins a name and a pronoun after the word for. Think about whether that pronoun gets the action."
+            ],
+            "how": [
+              "Test each pronoun by saying the sentence with just that pronoun.",
+              "Kyle and I built: I built sounds right. Asked them to carry: them gets the asking, so it fits.",
+              "Us painted, for Maya and I and Her and Sofia raced use the wrong kind of pronoun."
+            ],
+            "misconception": "A common mix-up is picking I every time two names are joined. After words like for, the pronoun gets the action and needs me.",
+            "why": "The answers are \"Kyle and I built a snow fort in the yard.\" and \"Coach Dunn asked them to carry the equipment bags.\" I built sounds right, and asked them sounds right. Us painted, for Maya and I, and Her and Sofia raced are incorrect.",
+            "like": [
+              "SK-GUM2-6-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [],
+            "prompt": "Which word correctly completes the sentence? ___ ate lunch under the oak tree.",
+            "choices": [
+              {
+                "text": "We",
+                "correct": true
+              },
+              {
+                "text": "Us"
+              },
+              {
+                "text": "Our"
+              },
+              {
+                "text": "Ours"
+              }
+            ],
+            "clue": "The blank is at the start of the sentence. Ask who is doing the eating.",
+            "hints": [
+              "The blank is at the start of the sentence. Ask who is doing the eating.",
+              "A word that does the action is a subject pronoun. Think about which choices do that job.",
+              "Ours stands alone and does not begin a sentence like this. Think about the other choices."
+            ],
+            "how": [
+              "Someone is eating, so the blank does the action.",
+              "We is a subject pronoun, so it can do the action.",
+              "The answer is We."
+            ],
+            "misconception": "A common mix-up is choosing us because it sounds like more than one person. Us gets an action and does not do it.",
+            "why": "The answer is We. The blank does the eating, so it needs a subject pronoun. Us gets an action, our must come before a noun, and ours stands alone.",
+            "like": [
+              "SK-GUM2-6-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Kai says sentence 2 is correct because Ben and I sounds more polite than Ben and me. Which reply is best?",
+            "choices": [
+              {
+                "text": "Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.",
+                "correct": true
+              },
+              {
+                "text": "Ben and I always sounds right, so Kai is correct and the sentence needs no change."
+              },
+              {
+                "text": "Polite people say I, so the sentence is fine and only the word gave needs fixing."
+              },
+              {
+                "text": "Ben comes first in the sentence, so the word after Ben has to be I."
+              }
+            ],
+            "clue": "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
+            "hints": [
+              "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
+              "Cover up Ben and in sentence 2 and read the sentence with just the pronoun.",
+              "Sounding polite does not decide which pronoun is right. Think about the other choices."
+            ],
+            "how": [
+              "Take Ben out of the sentence and see which pronoun is left.",
+              "Mom gave I a deck of cards does not sound right, but Mom gave me a deck of cards does.",
+              "The answer is \"Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.\""
+            ],
+            "misconception": "A common mix-up is thinking I is always more polite than me. The job of the pronoun decides.",
+            "why": "The answer is \"Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.\" The pronoun gets the cards, so it must be an object pronoun. Sounding polite does not change that.",
+            "like": [
+              "SK-GUM2-6-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-6-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Only two of sentences 3 to 7 use their pronouns correctly. Select them.",
+            "targets": [
+              "p3:1:3",
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:2:3"
+            ],
+            "pick": 2,
+            "clue": "Find each pronoun in sentences 3 to 7. Ask what job each one does.",
+            "hints": [
+              "Find each pronoun in sentences 3 to 7. Ask what job each one does.",
+              "For a pronoun with another name, cover up the name and say the sentence with just the pronoun.",
+              "The sentence about the librarian has a pronoun that does not fit its job. Think about the rest."
+            ],
+            "how": [
+              "Go through the sentences one at a time and test each pronoun.",
+              "Sentence 3 has she doing the opening, and sentence 6 has her receiving the stool. Both fit.",
+              "Sentences 4, 5 and 7 use him, they and me in jobs where they do not fit."
+            ],
+            "misconception": "A common mix-up is choosing a sentence because the pronoun sounds familiar. Check what the pronoun does.",
+            "why": "The answers are \"Zoe grabbed a book about whales, and she opened it right away.\" and \"Pia asked for help, and Ms. Gold gave her a stool.\" She does the opening, and her receives the stool. Sentence 4 needs He, sentence 5 needs them, and sentence 7 needs I.",
+            "like": [
+              "SK-GUM2-6-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 5 has the wrong pronoun. Choose the pronoun that fixes it.",
+            "text": "The librarian told {0} to whisper.",
+            "slots": [
+              {
+                "options": [
+                  "they",
+                  "them",
+                  "their"
+                ],
+                "answer": 1
+              }
+            ],
+            "clue": "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+            "hints": [
+              "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+              "Find the verb that comes right before the blank, and ask who gets the telling.",
+              "Their tells who owns something, and it needs a noun after it. Look at what follows the blank."
+            ],
+            "how": [
+              "The librarian does the telling, and the blank gets it.",
+              "A pronoun that gets the action is an object pronoun.",
+              "The answer is them. They does the action, and their tells who owns something."
+            ],
+            "misconception": "A common mix-up is using they because it sounds like a word for more than one person. They does the action and does not get it.",
+            "why": "The answer is them. The librarian does the telling, so the blank gets the action and needs an object pronoun. They does the action, and their must be followed by a noun.",
+            "like": [
+              "SK-GUM2-6-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [],
+            "prompt": "Choose the correct pronoun for each blank.",
+            "text": "The twins carried {0} lunches outside, and Dad walked with {1}.",
+            "slots": [
+              {
+                "options": [
+                  "their",
+                  "them",
+                  "they"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "they",
+                  "them",
+                  "their"
+                ],
+                "answer": 1
+              }
+            ],
+            "clue": "The two blanks need different kinds of pronouns. Decide what job each one does.",
+            "hints": [
+              "The two blanks need different kinds of pronouns. Decide what job each one does.",
+              "The first blank comes right before a noun. The second blank comes after the word with.",
+              "They does the action and cannot come after with. Look at the choices for the second blank."
+            ],
+            "how": [
+              "The first blank tells whose lunches they are. The second blank gets the action of walking with.",
+              "An owning word goes before a noun, and an object pronoun comes after with.",
+              "The answers are their and them."
+            ],
+            "misconception": "A common mix-up is using the same pronoun twice. The two blanks do different jobs.",
+            "why": "The answers are their and them. Their tells who owns the lunches and comes before the noun. Them follows with and gets the action.",
+            "like": [
+              "SK-GUM2-6-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [],
+            "prompt": "Select the sentence that uses a standalone owning word before a noun.",
+            "options": [
+              "That bike with the blue seat is mine.",
+              "Our team practiced after school.",
+              "Hers backpack is hanging by the door.",
+              "The last cookie is yours if you want it.",
+              "The puppy chewed its leash."
+            ],
+            "answer": [
+              2
+            ],
+            "pick": 1,
+            "clue": "Some owning words go before a noun, and some stand alone. Look at each owning word and what follows it.",
+            "hints": [
+              "Some owning words go before a noun, and some stand alone. Look at each owning word and what follows it.",
+              "Find the owning words in the five sentences. Ask whether a noun follows each one.",
+              "The sentence about the cookie has an owning word that stands alone at the end of a thought. Think about the rest."
+            ],
+            "how": [
+              "Find the owning words and look at what comes after each.",
+              "Mine and yours stand alone, and our, her and its come before nouns.",
+              "The answer is \"Hers backpack is hanging by the door.\" It should be Her backpack."
+            ],
+            "misconception": "A common mix-up is thinking hers and her are the same. Hers stands alone, and her comes before a noun.",
+            "why": "The answer is \"Hers backpack is hanging by the door.\" Hers cannot come before a noun like backpack, so it should be her. The other sentences use their owning words correctly.",
+            "like": [
+              "SK-GUM2-6-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-6-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+            ],
+            "passages": [],
+            "prompt": "Tia says, \"Always use I when you name yourself and another person.\" Which sentence shows that Tia is wrong?",
+            "choices": [
+              {
+                "text": "The coach called Ravi and me to the front.",
+                "correct": true
+              },
+              {
+                "text": "Ravi and I walked to the front of the line."
+              },
+              {
+                "text": "Ravi and I carried the equipment to the car."
+              },
+              {
+                "text": "Mrs. Lee said that Ravi and I could go first."
+              }
+            ],
+            "clue": "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
+            "hints": [
+              "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
+              "In each sentence, cover up Ravi and and say the sentence with just the pronoun.",
+              "Three of the sentences follow Tia's rule and sound right. Think about which one does not follow it."
+            ],
+            "how": [
+              "Tia's rule says I is always right. Look for a sentence where I would be wrong.",
+              "In three sentences, I does the action. In the other, the pronoun gets the action.",
+              "The answer is \"The coach called Ravi and me to the front.\""
+            ],
+            "misconception": "A common mix-up is thinking one pronoun works whenever two people are named. The job in the sentence decides.",
+            "why": "The answer is \"The coach called Ravi and me to the front.\" The coach called me sounds right, because the pronoun gets the action. That proves Tia wrong. In the other sentences, I does the action.",
+            "like": [
+              "SK-GUM2-6-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-6-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Tap the line with a pronoun mistake.",
+      "options": [
+        "The kitten licked its paw after dinner.",
+        "Please hand the map to Dev and me.",
+        "The note was left for Dana and I.",
+        "That red seat is yours.",
+        "They found their coats on the bench."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Find the pronoun in each line. Ask what job it does.",
+      "hints": [
+        "Find the pronoun in each line. Ask what job it does.",
+        "When a name is joined to a pronoun, cover up the name and say the line with just the pronoun.",
+        "The line about the kitten uses an owning word before a noun, and it fits. Think about the rest."
+      ],
+      "how": [
+        "Test each pronoun by itself.",
+        "The kitten licked its paw, the map to me, that seat is yours, and they found their coats all fit.",
+        "The answer is \"The note was left for Dana and I.\" A note left for me sounds right, so it should be Dana and me."
+      ],
+      "misconception": "A common mix-up is picking I after the word for. The pronoun gets the action there, so it needs me.",
+      "why": "The answer is \"The note was left for Dana and I.\" The pronoun comes after for, so it gets the action and should be me. The other lines use their pronouns correctly.",
+      "like": [
+        "SK-GUM2-6-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Place each pronoun in the group where it belongs.",
+      "cols": [
+        "Subject pronoun",
+        "Object pronoun",
+        "Owning word"
+      ],
+      "rows": [
+        {
+          "text": "she",
+          "answer": 0
+        },
+        {
+          "text": "him",
+          "answer": 1
+        },
+        {
+          "text": "my",
+          "answer": 2
+        },
+        {
+          "text": "they",
+          "answer": 0
+        },
+        {
+          "text": "us",
+          "answer": 1
+        },
+        {
+          "text": "your",
+          "answer": 2
+        }
+      ],
+      "clue": "Try each word in a sentence, such as ___ ran, the dog saw ___, or ___ hat. See which blank it fits.",
+      "hints": [
+        "Try each word in a sentence, such as ___ ran, the dog saw ___, or ___ hat. See which blank it fits.",
+        "A subject pronoun can start a sentence and do an action. An object pronoun comes after the action or after a word like to.",
+        "Owning words come before a noun. Use that to sort some of the words first."
+      ],
+      "how": [
+        "Say each word in a short sentence.",
+        "She and they do the action. Him and us get the action. My and your come before a noun.",
+        "Place each word in the group that matches its job."
+      ],
+      "misconception": "A common mix-up is putting us with the subject pronouns because it sounds like we. Us gets the action.",
+      "why": "She and they are subject pronouns, so they do the action. Him and us are object pronouns, so they get the action. My and your are owning words, so they tell who owns something.",
+      "like": [
+        "SK-GUM2-6-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which choice explains the mistake in sentence 2?",
+      "choices": [
+        {
+          "text": "Me needs to become I, since Noah and the speaker are the captains doing the action.",
+          "correct": true
+        },
+        {
+          "text": "Me needs to become my, since the captains own the kickball game together."
+        },
+        {
+          "text": "Me needs to become us, since two people can only be named with plural words."
+        },
+        {
+          "text": "Me needs to become mine, since the captain job belongs to the speaker alone."
+        }
+      ],
+      "clue": "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
+      "hints": [
+        "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
+        "Cover up Noah and, and read the sentence with just the pronoun.",
+        "Mine stands alone and does not come before a noun. Think about the other choices."
+      ],
+      "how": [
+        "Cover up Noah and. The sentence becomes Me were chosen, which sounds wrong.",
+        "The people who were chosen are the subject of the sentence, so it needs a subject pronoun.",
+        "The answer is \"Me needs to become I, since Noah and the speaker are the captains doing the action.\""
+      ],
+      "misconception": "A common mix-up is thinking me is fine because it is common in speech. The sentence needs a subject pronoun.",
+      "why": "The answer is \"Me needs to become I, since Noah and the speaker are the captains doing the action.\" I was chosen sounds right. My and mine tell who owns something, and us would change who is meant.",
+      "like": [
+        "SK-GUM2-6-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Pick the pronoun that belongs in sentence 4.",
+      "text": "The other kids cheered, and {0} ran to their bases.",
+      "slots": [
+        {
+          "options": [
+            "they",
+            "them",
+            "their"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+      "hints": [
+        "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+        "Look at the verb that comes right after the blank.",
+        "Their tells who owns something, and it needs a noun after it. Look at what follows the blank."
+      ],
+      "how": [
+        "The blank takes the place of the other kids, and it does the running.",
+        "A pronoun that does the action is a subject pronoun.",
+        "The answer is they. Them gets an action, and their tells who owns something."
+      ],
+      "misconception": "A common mix-up is using them because it sounds like a word for several kids. Them gets an action.",
+      "why": "The answer is they. The kids do the running, so the blank needs a subject pronoun. Them gets an action, and their must be followed by a noun.",
+      "like": [
+        "SK-GUM2-6-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Both sentence 2 and sentence 3 say Noah and me, yet one is wrong. What sets them apart?",
+      "choices": [
+        {
+          "text": "Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.",
+          "correct": true
+        },
+        {
+          "text": "Sentence 3 has more words than sentence 2, so extra words can change what pronoun is allowed."
+        },
+        {
+          "text": "The first time a pronoun shows up in a draft, it must be I, and later it can be me."
+        },
+        {
+          "text": "Mr. Hart changes the name Noah, so any pronoun after his name may change as well."
+        }
+      ],
+      "clue": "Look at the two sentences side by side. Ask who is doing something and who is getting something.",
+      "hints": [
+        "Look at the two sentences side by side. Ask who is doing something and who is getting something.",
+        "Cover up Noah and in each one and read the sentence with just the pronoun.",
+        "How long a sentence is, or where it sits in a draft, does not choose the pronoun. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 2: Noah and the speaker were chosen. Sentence 3: Mr. Hart handed something to them.",
+        "A pronoun that is handed something is an object pronoun, so me works in sentence 3. In sentence 2 the pronoun is part of the subject.",
+        "The answer is \"Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.\""
+      ],
+      "misconception": "A common mix-up is thinking the words Noah and me are always wrong. The job in the sentence decides.",
+      "why": "The answer is \"Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.\" Mr. Hart handed me the ball sounds right. Me were chosen does not, so sentence 2 needs I.",
+      "like": [
+        "SK-GUM2-6-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Two of sentences 2 to 6 have a pronoun that does not fit. Tap them.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3"
+      ],
+      "answer": [
+        "p5:1:2",
+        "p5:2:1"
+      ],
+      "pick": 2,
+      "clue": "Find each pronoun in sentences 2 to 6. Ask what job each one does.",
+      "hints": [
+        "Find each pronoun in sentences 2 to 6. Ask what job each one does.",
+        "When a name is joined to a pronoun, cover up the name and say the sentence with just the pronoun.",
+        "The sentence about the red toolbox uses an owning word that stands alone, and it fits. Think about the rest."
+      ],
+      "how": [
+        "Check each pronoun in order.",
+        "Sentence 2 gives the stool job to Ravi and the writer, so they get the action. Sentence 4 has a word that gets an action doing the hammering.",
+        "Sentences 3, 5 and 6 use he, hers and I with jobs that fit."
+      ],
+      "misconception": "A common mix-up is stopping at the first mistake. Check every sentence in the range.",
+      "why": "The answers are \"Grandpa let Ravi and I sand the old stool.\" and \"Us hammered the nails while Grandpa watched.\" Grandpa let me sound right, so sentence 2 needs me. Us cannot do the hammering, so sentence 4 needs we. Sentences 3, 5 and 6 are correct.",
+      "like": [
+        "SK-GUM2-6-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Do the first half first. Its answer will guide the second half.",
+      "partA": {
+        "prompt": "What is wrong with sentence 4?",
+        "choices": [
+          {
+            "text": "Us gets an action, but here the pronoun does the hammering, so it should be we.",
+            "correct": true
+          },
+          {
+            "text": "Us does an action, but here the pronoun owns the nails, so it should be our."
+          },
+          {
+            "text": "Us gets an action, but here the pronoun is singular, so it should be me."
+          },
+          {
+            "text": "Us does the hammering, so it is correct, but Grandpa should be he."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Which version of sentence 4 is correct?",
+        "choices": [
+          {
+            "text": "We hammered the nails while Grandpa watched.",
+            "correct": true
+          },
+          {
+            "text": "Us hammered the nails while Grandpa watched."
+          },
+          {
+            "text": "Our hammered the nails while Grandpa watched."
+          },
+          {
+            "text": "Ours hammered the nails while Grandpa watched."
+          }
+        ]
+      },
+      "clue": "Say sentence 4 aloud. Ask whether the pronoun does the action or gets it.",
+      "hints": [
+        "Say sentence 4 aloud. Ask whether the pronoun does the action or gets it.",
+        "In the second half, test each version by saying the first word with the rest of the sentence.",
+        "Ours stands alone and does not start a sentence like this. Think about the other versions."
+      ],
+      "how": [
+        "Part A: the pronoun in sentence 4 is the one doing the hammering.",
+        "Part B: a pronoun that does the action is a subject pronoun, so we fits.",
+        "The answers are \"Us gets an action, but here the pronoun does the hammering, so it should be we.\" and \"We hammered the nails while Grandpa watched.\""
+      ],
+      "misconception": "A common mix-up is using us whenever a sentence is about a group. Us gets an action and does not do it.",
+      "why": "Part A: \"Us gets an action, but here the pronoun does the hammering, so it should be we.\" Part B: \"We hammered the nails while Grandpa watched.\" We hammered sounds right. Us hammered does not.",
+      "like": [
+        "SK-GUM2-6-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Tap both sentences that use pronouns the right way.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "Lena and I picked apples at the farm.",
+          "correct": true
+        },
+        {
+          "text": "The teacher thanked us for the cards.",
+          "correct": true
+        },
+        {
+          "text": "Them waved at the passing train."
+        },
+        {
+          "text": "The map is for Sam and I to share."
+        },
+        {
+          "text": "Him and Rita fed the goats."
+        }
+      ],
+      "clue": "Find the pronoun in each sentence. Ask whether it does an action or gets one.",
+      "hints": [
+        "Find the pronoun in each sentence. Ask whether it does an action or gets one.",
+        "Check every sentence, including the ones that look right. Cover up the other name when a name is joined to a pronoun.",
+        "One choice joins a name and a pronoun after the word for. Think about whether that pronoun gets the action."
+      ],
+      "how": [
+        "Test each pronoun by saying the sentence with just that pronoun.",
+        "Lena and I picked: I picked sounds right. Thanked us: us gets the thanking, so it fits.",
+        "Them waved, for Sam and I, and Him and Rita fed use the wrong kind of pronoun."
+      ],
+      "misconception": "A common mix-up is choosing I whenever a name comes before the pronoun. After for, the pronoun gets the action and needs me.",
+      "why": "The answers are \"Lena and I picked apples at the farm.\" and \"The teacher thanked us for the cards.\" I picked sounds right, and thanked us sounds right. Them waved, for Sam and I, and Him and Rita fed are incorrect.",
+      "like": [
+        "SK-GUM2-6-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Pick the word that fits the blank. ___ waved to the bus driver.",
+      "choices": [
+        {
+          "text": "They",
+          "correct": true
+        },
+        {
+          "text": "Them"
+        },
+        {
+          "text": "Their"
+        },
+        {
+          "text": "Theirs"
+        }
+      ],
+      "clue": "The blank is at the start of the sentence. Ask who is doing the waving.",
+      "hints": [
+        "The blank is at the start of the sentence. Ask who is doing the waving.",
+        "A word that does the action is a subject pronoun. Think about which choices do that job.",
+        "Theirs stands alone and does not begin a sentence like this. Think about the other choices."
+      ],
+      "how": [
+        "Someone is waving, so the blank does the action.",
+        "They is a subject pronoun, so it can do the action.",
+        "The answer is They."
+      ],
+      "misconception": "A common mix-up is choosing them because it sounds like a group. Them gets an action and does not do it.",
+      "why": "The answer is They. The blank does the waving, so it needs a subject pronoun. Them gets an action, their must come before a noun, and theirs stands alone.",
+      "like": [
+        "SK-GUM2-6-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Tess says sentence 5 should say her toolbox is the red one, so hers is wrong. What would you tell her?",
+      "choices": [
+        {
+          "text": "Hers can stand alone at the end of a thought, so sentence 5 already works.",
+          "correct": true
+        },
+        {
+          "text": "Her is the only owning word, so hers should always be replaced."
+        },
+        {
+          "text": "Hers goes before a noun, so the toolbox needs a different word in front of it."
+        },
+        {
+          "text": "Sentences about tools need her, because tools are owned by one girl."
+        }
+      ],
+      "clue": "Think about which owning words come before a noun and which can stand alone.",
+      "hints": [
+        "Think about which owning words come before a noun and which can stand alone.",
+        "Look at what follows hers in sentence 5. Is a noun waiting after it?",
+        "What a sentence is about does not choose the owning word. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 5 ends with hers, and no noun follows it.",
+        "An owning word that stands alone, such as hers, is right when no noun comes after it.",
+        "The answer is \"Hers can stand alone at the end of a thought, so sentence 5 already works.\""
+      ],
+      "misconception": "A common mix-up is thinking her and hers are the same word. Her comes before a noun, and hers stands alone.",
+      "why": "The answer is \"Hers can stand alone at the end of a thought, so sentence 5 already works.\" Her would need a noun after it, as in her toolbox. Here the sentence ends with hers.",
+      "like": [
+        "SK-GUM2-6-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Among sentences 3 to 7, tap the two with pronouns used the right way.",
+      "targets": [
+        "p6:1:3",
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3",
+        "p6:2:4"
+      ],
+      "answer": [
+        "p6:1:3",
+        "p6:2:2"
+      ],
+      "pick": 2,
+      "clue": "Find each pronoun in sentences 3 to 7. Ask what job each one does.",
+      "hints": [
+        "Find each pronoun in sentences 3 to 7. Ask what job each one does.",
+        "When a name is joined to a pronoun, cover up the name and say the sentence with just the pronoun.",
+        "The sentence about the neighbors uses an owning word before a noun, and it fits. Think about the rest."
+      ],
+      "how": [
+        "Test each pronoun one sentence at a time.",
+        "Sentence 3 has me getting help with the banner. Sentence 5 has their before the noun snacks.",
+        "Sentences 4, 6 and 7 use her, us and she in jobs where they do not fit."
+      ],
+      "misconception": "A common mix-up is choosing a sentence because the pronoun sounds familiar. Check what the pronoun does.",
+      "why": "The answers are \"Dad helped my sister and me hang the banner.\" and \"Our neighbors brought their own snacks to share.\" Me gets the help, and their comes before snacks. Sentence 4 needs She, sentence 6 needs we, and sentence 7 needs her.",
+      "like": [
+        "SK-GUM2-6-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Pick the pronoun that belongs in sentence 6.",
+      "text": "Mom walked in, and {0} shouted surprise.",
+      "slots": [
+        {
+          "options": [
+            "we",
+            "us",
+            "our"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+      "hints": [
+        "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+        "Look at the verb that comes right after the blank.",
+        "Our tells who owns something, and it needs a noun after it. Look at what follows the blank."
+      ],
+      "how": [
+        "The blank takes the place of the writer and the family, and it does the shouting.",
+        "A pronoun that does the action is a subject pronoun.",
+        "The answer is we. Us gets an action, and our tells who owns something."
+      ],
+      "misconception": "A common mix-up is using us because the shouting is done by a group. Us gets an action.",
+      "why": "The answer is we. The group does the shouting, so the blank needs a subject pronoun. Us gets an action, and our must be followed by a noun.",
+      "like": [
+        "SK-GUM2-6-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Fill each gap with the right pronoun.",
+      "text": "Pedro washed {0} bike, and Mom helped {1} dry it.",
+      "slots": [
+        {
+          "options": [
+            "his",
+            "him",
+            "he"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "him",
+            "he",
+            "his"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "The two gaps need different kinds of pronouns. Decide what job each one does.",
+      "hints": [
+        "The two gaps need different kinds of pronouns. Decide what job each one does.",
+        "The first gap comes right before a noun. The second gap comes right after the word helped.",
+        "He does the action and cannot come after helped. Look at the choices for the second gap."
+      ],
+      "how": [
+        "The first gap tells whose bike it is. The second gap gets the helping.",
+        "An owning word goes before a noun, and an object pronoun gets the action.",
+        "The answers are his and him."
+      ],
+      "misconception": "A common mix-up is using the same pronoun twice. The two gaps do different jobs.",
+      "why": "The answers are his and him. His tells whose bike it is and comes before the noun. Him gets the helping.",
+      "like": [
+        "SK-GUM2-6-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Tap the line that puts a standalone owning word in front of a noun.",
+      "options": [
+        "The blue coat on the hook is hers.",
+        "Is this lunch box ours or yours?",
+        "Theirs dog barked at the mail truck.",
+        "Our class planted a tree.",
+        "The gray cat washed its face."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Some owning words go before a noun, and some stand alone. Look at each owning word and what follows it.",
+      "hints": [
+        "Some owning words go before a noun, and some stand alone. Look at each owning word and what follows it.",
+        "Find the owning words in the five lines. Ask whether a noun follows each one.",
+        "The line about the lunch box has two owning words that stand alone. Think about the rest."
+      ],
+      "how": [
+        "Find the owning words and look at what comes after each.",
+        "Hers, ours and yours stand alone, and our and its come before nouns.",
+        "The answer is \"Theirs dog barked at the mail truck.\" It should be Their dog."
+      ],
+      "misconception": "A common mix-up is thinking theirs and their are the same. Theirs stands alone, and their comes before a noun.",
+      "why": "The answer is \"Theirs dog barked at the mail truck.\" Theirs cannot come before a noun like dog, so it should be their. The other lines use their owning words correctly.",
+      "like": [
+        "SK-GUM2-6-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-6-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
+      ],
+      "passages": [],
+      "prompt": "Ruben says, \"Always use me when you name another person and yourself.\" Which sentence shows that Ruben is wrong?",
+      "choices": [
+        {
+          "text": "Dev and I won the three-legged race.",
+          "correct": true
+        },
+        {
+          "text": "The coach drove Dev and me home after the race."
+        },
+        {
+          "text": "Mom gave Dev and me a snack after the race."
+        },
+        {
+          "text": "Several kids waved at Dev and me from the bus."
+        }
+      ],
+      "clue": "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
+      "hints": [
+        "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
+        "In each sentence, cover up Dev and and say the sentence with just the pronoun.",
+        "Three of the sentences follow Ruben's rule and sound right. Think about which one does not follow it."
+      ],
+      "how": [
+        "Ruben's rule says me is always right. Look for a sentence where me would be wrong.",
+        "In three sentences, the pronoun gets the action. In the other, the pronoun does it.",
+        "The answer is \"Dev and I won the three-legged race.\""
+      ],
+      "misconception": "A common mix-up is thinking one pronoun works whenever two people are named. The job in the sentence decides.",
+      "why": "The answer is \"Dev and I won the three-legged race.\" I won sounds right, because the pronoun does the action. That proves Ruben wrong. In the other sentences, me gets the action.",
+      "like": [
+        "SK-GUM2-6-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-6-P1": {
+      "hints": [
+        "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
+        "Cover up Marco and, and read the sentence with just the blank.",
+        "Us would take the place of a group that includes the speaker. Think about the other choices."
+      ],
+      "how": [
+        "Cover up Marco and. The sentence becomes ___ built a fort out of couch cushions.",
+        "The blank does the building, so it needs a subject pronoun.",
+        "The answer is I. I built a fort sounds right, and me built does not."
+      ],
+      "misconception": "A common mix-up is choosing me because it is how people often talk. The blank does the building, so it needs I."
+    },
+    "SK-GUM2-6-P2": {
+      "hints": [
+        "Ms. Lopez does the asking. Decide whether the blank does an action or gets one.",
+        "Say the sentence with each choice. Listen for the one that sounds right after asked.",
+        "Our tells who owns something, and it needs a noun after it. Look at what follows the blank."
+      ],
+      "how": [
+        "Ms. Lopez does the asking, and the blank gets the asking.",
+        "A pronoun that gets the action is an object pronoun.",
+        "The answer is us. We does the action, and our tells who owns something."
+      ],
+      "misconception": "A common mix-up is choosing we because the plants belong to the class. We does the action, and here the blank gets it."
+    },
+    "SK-GUM2-6-P3": {
+      "hints": [
+        "Cover up the friend in each choice, and then say the sentence with just the pronoun.",
+        "Also check the word that comes before friend, which tells whose friend.",
+        "Mine stands alone and does not come before a noun like friend. Think about the other choices."
+      ],
+      "how": [
+        "Cover up the friend in each sentence.",
+        "Dad drove me sounds right, so me is correct. My is the owning word that goes before friend.",
+        "The answer is \"Dad drove my friend and me to the museum.\" Dad drove I does not sound right."
+      ],
+      "misconception": "A common mix-up is choosing I because it comes after a friend's name. Dad does the driving, so the pronoun gets it."
+    },
+    "SK-GUM2-6-P4": {
+      "hints": [
+        "Find the pronoun in each sentence. Ask what job it does.",
+        "When a pronoun joins another word in a pair, say the sentence with just the pronoun.",
+        "The sentence about the bird uses an owning word before a noun, and it fits. Think about the rest."
+      ],
+      "how": [
+        "Test each pronoun by itself.",
+        "The bird built its nest, share with us, the lunchbox is mine and they invited her all fit.",
+        "The answer is \"Him and his sister walk to school together.\" Him walk does not sound right, so it should be He."
+      ],
+      "misconception": "A common mix-up is trusting a pronoun because it is joined to a name. Check what job it does."
+    },
+    "SK-GUM2-6-P5": {
+      "hints": [
+        "Try each word in a sentence, such as ___ ran, the dog chased ___, or ___ dog barked.",
+        "See which blank each word fits. Words that do the action fit differently from words that get it.",
+        "Owning words come before a noun. Use that to sort some of the words first."
+      ],
+      "how": [
+        "Try each word in a short sentence.",
+        "We and he do the action. Them and me get the action. Our and their come before a noun.",
+        "Place each word in the group that matches its job."
+      ],
+      "misconception": "A common mix-up is putting them with the owning words because it looks like their. Them gets the action."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-6-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",

@@ -200,8 +200,8 @@ with sync_playwright() as p:
     # R.5b the 'Not available yet' branch, forced: a page where no lesson is accepted
     q5 = page(b, init="Object.defineProperty(window,'PP_ACCEPTED',{get:()=>[],set(){},configurable:true});")
     q5.goto(BASE + "#review"); q5.wait_for_timeout(600)
-    h5 = q5.evaluate("""({t:document.getElementById('review-body').innerText, starts:document.querySelectorAll('.rv-start').length, na:PP_REVIEW.areas().every(a=>!a.covered.length)})""")
-    check("R.5b with no accepted lesson (fixture) every area says 'Not available yet', offers no Start button, and the page still renders its four kinds", h5["na"] and "Not available yet" in h5["t"] and h5["starts"] == 0 and "There is no combined score" in h5["t"], (h5["starts"], h5["t"][:200]))
+    h5 = q5.evaluate("""({t:document.getElementById('review-body').innerText, starts:document.querySelectorAll('#rv-curriculum .rv-start').length, na:PP_REVIEW.areas().every(a=>!a.covered.length)})""")
+    check("R.5b with no accepted lesson (fixture) every area says 'Not available yet', offers no curriculum Start button (the state-test practice link is independent of acceptance), and the page still renders its four kinds", h5["na"] and "Not available yet" in h5["t"] and h5["starts"] == 0 and "There is no combined score" in h5["t"], (h5["starts"], h5["t"][:200]))
     q5.close()
     ready(q, "#coverage")
     q.evaluate("document.querySelectorAll('#coverage-body details').forEach(d=>d.open=true)")
