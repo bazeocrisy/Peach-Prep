@@ -1387,6 +1387,16 @@ PP.addLesson({
         "Read it back to check: We saw two deer. It sounds right."
       ],
       answer: "We saw two deer at the edge of the woods."
+    },
+    {
+      show: ["The baker set six warm (loafs / loaves) on the shelf."],
+      ask: "Which word is correct?",
+      steps: [
+        "Six means more than one, so you need a plural.",
+        "Loaf ends in f. For some nouns like this, the f changes to v: one loaf, two loaves.",
+        "Loafs only adds -s, so cross it out."
+      ],
+      answer: "The baker set six warm loaves on the shelf."
     }
   ],
   parent: "Play \"one, two\" in the car: you say \"one mouse,\" and your child says \"two mice.\" Mix in easy ones (cat, cats) and special ones (foot, child, goose, sheep).",
@@ -2105,8 +2115,8 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p4"],
-      prompt: "Sentence 3 of the draft has a plural noun that is spelled the wrong way. Choose the word that fixes it.",
-      text: "Next to them, a keeper was cutting apples into {0} for the monkeys.",
+      prompt: "The third sentence of the draft has a plural noun that is spelled the wrong way. Which word belongs in the blank?",
+      text: "A keeper sliced each apple into {0} and tossed them to the monkeys.",
       slots: [
         {
           options: ["halfs", "halves", "halfes"],
@@ -2167,37 +2177,37 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: {
-        prompt: "Sentence 7 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+        prompt: "Look at the last sentence in the forest exhibit part of the draft. Which choice writes its plural noun correctly?",
         choices: [
           { text: "In the forest exhibit, two wolfes slept in the shade." },
           { text: "In the forest exhibit, two wolve slept in the shade." },
-          { text: "In the forest exhibit, two wolf's slept in the shade." },
-          { text: "In the forest exhibit, two wolves slept in the shade.", correct: true }
+          { text: "In the forest exhibit, two wolves slept in the shade." },
+          { text: "In the forest exhibit, two wolfs slept in the shade.", correct: true }
         ]
       },
       partB: {
-        prompt: "Which rule best explains the revision in Part A?",
+        prompt: "Why is the answer to Part A correct?",
         choices: [
-          { text: "The f in wolf changes to v, the same way elf changes to elves.", correct: true },
-          { text: "The word wolf stays the same when it means more than one, the same way deer does." },
-          { text: "The vowel in wolf changes, the same way goose changes to geese." },
-          { text: "The word wolf adds -en, the same way ox changes to oxen." }
+          { text: "Wolf swaps the vowels inside the word, so the plural is spelled with a new vowel." },
+          { text: "Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves." },
+          { text: "Wolf is a noun that never changes, so the plural looks just like the singular.", correct: true },
+          { text: "Wolf adds the letters -en at the end, so the plural is spelled with those letters." }
         ]
       },
       clue: "Say the noun for one, then decide how it changes when it means more than one.",
       hints: [
         "Say the noun for one, then decide how it changes when it means more than one.",
         "For Part A, read sentence 7 and picture the forest exhibit. For Part B, think about which other nouns end in f and what happens to them.",
-        "In Part A, a word with an apostrophe shows belonging, not more than one. Check the other choices."
+        "In Part A, wolve leaves off the ending. Check the other choices."
       ],
       how: [
         "Part A: two tells you the noun must mean more than one. The noun for one is wolf.",
         "Wolf ends in f. The f changes to v and the ending is added: wolf, wolves.",
-        "Part A answer: \"In the forest exhibit, two wolves slept in the shade.\" Wolfes and wolve are not spelled that way, and wolf's would show belonging.",
-        "Part B answer: \"The f in wolf changes to v, the same way elf changes to elves.\""
+        "Part A answer: \"In the forest exhibit, two wolves slept in the shade.\" Wolfs only adds -s, and wolfes and wolve are not spelled that way.",
+        "Part B answer: \"Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.\""
       ],
       misconception: "A common mix-up is adding only -s to a noun that ends in f. For many of these nouns, the f changes to v.",
-      why: "Part A: \"In the forest exhibit, two wolves slept in the shade.\" Part B: \"The f in wolf changes to v, the same way elf changes to elves.\" Wolf's would show belonging, and wolfes and wolve are not words. Deer stays the same, goose changes its vowels, and ox adds -en.",
+      why: "Part A: \"In the forest exhibit, two wolves slept in the shade.\" Part B: \"Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.\" Wolfs only adds -s, and wolfes and wolve are not words. Wolf does not stay the same, swap vowels, or add -en.",
       like: ["SK-GUM3-2-C05"]
     },
     {
@@ -2209,12 +2219,12 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p5"],
-      prompt: "Sentence 3 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+      prompt: "Which choice fixes the plural noun that is spelled the wrong way in the third sentence of the draft?",
       choices: [
-        { text: "We heard mices scratching in the walls." },
-        { text: "We heard mouse scratching in the walls." },
-        { text: "We heard mice scratching in the walls.", correct: true },
-        { text: "We heard mouses' scratching in the walls." }
+        { text: "Late at night, we heard mices scratching inside the walls." },
+        { text: "Late at night, we heard mouse scratching inside the walls." },
+        { text: "Late at night, we heard mice scratching inside the walls.", correct: true },
+        { text: "Late at night, we heard mouses' scratching inside the walls." }
       ],
       clue: "Some nouns change their spelling when they mean more than one. Say the noun for one, then for many.",
       hints: [
@@ -2225,10 +2235,10 @@ PP.addLesson({
       how: [
         "Find the noun: mouse. The sentence tells about more than one.",
         "Mouse changes the letters inside it: mouse, mice. It does not add -s.",
-        "The answer is \"We heard mice scratching in the walls.\" Mices adds -s to a word that already changed, mouse is for one, and mouses' is not spelled that way."
+        "The answer is \"Late at night, we heard mice scratching inside the walls.\" Mices adds -s to a word that already changed, mouse is for one, and mouses' is not spelled that way."
       ],
       misconception: "A common mix-up is changing the word and then adding -s too, as in mices.",
-      why: "The answer is \"We heard mice scratching in the walls.\" Mouse changes its spelling for more than one: mouse, mice. Mices adds an extra ending, mouse means only one, and mouses' is not spelled that way.",
+      why: "The answer is \"Late at night, we heard mice scratching inside the walls.\" Mouse changes its spelling for more than one: mouse, mice. Mices adds an extra ending, mouse means only one, and mouses' is not spelled that way.",
       like: ["SK-GUM3-2-C06"]
     },
     {
@@ -2269,12 +2279,12 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Goose changes to geese. Which noun changes in the same way?",
+      prompt: "Look at how goose becomes geese. Which noun follows the same pattern?",
       choices: [
-        { text: "knife, which becomes knives" },
-        { text: "foot, which becomes feet", correct: true },
-        { text: "ox, which becomes oxen" },
-        { text: "sheep, which stays the same" }
+        { text: "knife (knives)" },
+        { text: "foot (feet)", correct: true },
+        { text: "ox (oxen)" },
+        { text: "sheep (sheep)" }
       ],
       clue: "Look for a noun that changes in the same way, not just any noun that changes.",
       hints: [
@@ -2284,11 +2294,11 @@ PP.addLesson({
       ],
       how: [
         "Say goose and geese. The oo in the middle changes to ee.",
-        "Now check each pair. Foot becomes feet, with the oo changing to ee in the middle. That is the same change.",
+        "Now check each pair. Foot becomes feet, with the oo in the middle changing to ee. That is the same pattern.",
         "Knife changes its f to v, ox adds -en, and sheep does not change."
       ],
       misconception: "A common mix-up is picking any noun that changes. Look at which part changes.",
-      why: "The answer is \"foot, which becomes feet.\" Goose changes the oo in the middle to ee, and foot does the same thing. Knife changes its f to v, ox adds letters at the end, and sheep stays the same.",
+      why: "The answer is \"foot (feet).\" Goose changes the oo in the middle to ee, and foot does the same thing. Knife changes its f to v, ox adds letters at the end, and sheep stays the same.",
       like: ["SK-GUM3-2-C08"]
     },
     {
@@ -2491,26 +2501,26 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Which sentence stays correct when you change the word A to Three and leave the noun exactly the same?",
+      prompt: "Mia swaps A for Six in each sentence and does not touch the noun. Which sentence is still correct?",
       choices: [
-        { text: "A bison stood by the gate.", correct: true },
-        { text: "A goose stood by the gate." },
-        { text: "A wolf stood by the gate." },
-        { text: "A child stood by the gate." }
+        { text: "A bison crossed the muddy road.", correct: true },
+        { text: "A goose crossed the muddy road." },
+        { text: "A wolf crossed the muddy road." },
+        { text: "A child crossed the muddy road." }
       ],
       clue: "Look for a noun that does not change at all when it means more than one.",
       hints: [
         "Look for a noun that does not change at all when it means more than one.",
-        "Try changing A to Three in each sentence. Ask whether the noun would have to change too.",
+        "Try Six in place of A in each sentence. Ask whether the noun would have to change too.",
         "Goose and child both change when they mean more than one. Decide about the other two."
       ],
       how: [
-        "For each sentence, try Three in place of A and check the noun.",
-        "Three goose, three wolf and three child are wrong. They need geese, wolves and children.",
-        "Bison stays the same for one or many, so \"Three bison stood by the gate.\" is correct with the noun unchanged."
+        "For each sentence, try Six in place of A and check the noun.",
+        "Six goose, six wolf and six child are wrong. They need geese, wolves and children.",
+        "Bison stays the same for one or many, so \"Six bison crossed the muddy road.\" is correct with the noun unchanged."
       ],
       misconception: "A common mix-up is thinking every plural noun must look different from the noun for one.",
-      why: "The answer is \"A bison stood by the gate.\" Bison stays the same for one or many, so only the number word changes. Goose, wolf and child all change: geese, wolves and children.",
+      why: "The answer is \"A bison crossed the muddy road.\" Bison stays the same for one or many, so only the number word changes. Goose, wolf and child all change: geese, wolves and children.",
       like: ["SK-GUM3-2-C15"]
     }
   ],
@@ -2740,7 +2750,172 @@ PP.addLesson({
     }
   ],
   parent: "At dinner, ask \"What did you do today?\" and listen for special past-tense verbs. If your child says \"I eated,\" just repeat it back the right way: \"Oh, you ate pizza!\"",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "The Treasure Hunt",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday, our class had a treasure hunt on the playground.",
+          "(2) Ms. Ortiz put a small chest under the big slide.",
+          "(3) She gave each team a map and a pencil."
+        ],
+        [
+          "(4) My team runned across the grass to the first clue.",
+          "(5) We keeped the clue safe in my backpack.",
+          "(6) It said to look near the tallest tree."
+        ],
+        [
+          "(7) Dev thinked the chest was by the swings.",
+          "(8) I knew he was wrong, so I led the team to the oak tree.",
+          "(9) Everyone cheered when we opened the chest."
+        ],
+        [
+          "(10) Inside, there were stickers for every player.",
+          "(11) It was the best recess ever, and I hope we play again soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Birthday at the Trampoline Park",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month, I went to my cousin's birthday party at a trampoline park.",
+          "(2) We wore special socks with grips on the bottom.",
+          "(3) A tall worker speaked to us about the safety rules before we began."
+        ],
+        [
+          "(4) First, I jumped into a pit of soft foam blocks.",
+          "(5) My cousin Ava bounced so high that she almost hitted the ceiling.",
+          "(6) After that, we ate pizza at a long table."
+        ],
+        [
+          "(7) When the cake came out, ten candles glowed on top.",
+          "(8) Everyone sang to Ava, and she made a wish.",
+          "(9) Then Ava cutted the first slice, and her fork sinked into the soft frosting."
+        ],
+        [
+          "(10) At the end, our parents picked us up.",
+          "(11) I was tired and happy."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Room 12 News",
+      byline: "A third grader's draft",
+      genre: "Student draft (class newsletter)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Welcome to Room 12 News!",
+          "(2) Here is what happened in our class this week."
+        ],
+        [
+          "(3) On Monday, we meeted a real beekeeper named Mr. Cho.",
+          "(4) He wore a white suit and a hat with a net.",
+          "(5) Bees sticked to his gloves, but he was not afraid.",
+          "(6) We tasted fresh honey on crackers."
+        ],
+        [
+          "(7) On Wednesday, we sold painted rocks at the school gate.",
+          "(8) We spended the money on new books for the library.",
+          "(9) Everyone was proud of the work."
+        ],
+        [
+          "(10) On Friday, the weather turned cold, so we stayed inside.",
+          "(11) Thank you for reading, and see you next week!"
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Hike to the Waterfall",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Sunday, my family hiked to a waterfall in the mountains.",
+          "(2) Dad carried the water bottles in his backpack.",
+          "(3) After an hour, we comed to a bridge over a stream."
+        ],
+        [
+          "(4) My sister and I leaned over the rail to look at the fish.",
+          "(5) Then we lefted the bridge and climbed a rocky hill.",
+          "(6) The path was steep, and my legs felt tired."
+        ],
+        [
+          "(7) Mom sayed that the falls were close.",
+          "(8) Soon we heard a loud roar.",
+          "(9) The water splashed over the rocks and sprayed our faces."
+        ],
+        ["(10) We ate sandwiches on a flat rock.", "(11) It was a perfect day."]
+      ]
+    },
+    {
+      id: "p5",
+      title: "My Hamster Biscuit",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last year, I begged my parents for a pet.",
+          "(2) Finally, Dad took me to the pet store on Elm Street.",
+          "(3) He payed for a small hamster and a wheel."
+        ],
+        [
+          "(4) I named the hamster Biscuit.",
+          "(5) That night, I feeded him seeds and a slice of apple.",
+          "(6) Biscuit stuffed the food into his cheeks."
+        ],
+        [
+          "(7) My mom agreed he could sleep in my room.",
+          "(8) At midnight, Biscuit creeped out of his cage, and I catched him before he reached the door.",
+          "(9) I was too tired to be upset."
+        ],
+        ["(10) Now Biscuit has a lid on his cage."]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Camp Lakeside News",
+      byline: "A third grader's draft",
+      genre: "Student draft (camp newsletter)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Welcome to Camp Lakeside News!",
+          "(2) Here is what the campers did this week."
+        ],
+        [
+          "(3) On Tuesday, the older kids builded a raft from wood and rope.",
+          "(4) They carried it to the edge of the lake.",
+          "(5) Later, the raft floated near the dock, and everyone clapped.",
+          "(6) Our counselor, Mr. Diaz, grinned at us."
+        ],
+        [
+          "(7) On Thursday, a camper named Priya forgived her brother for losing her sock.",
+          "(8) I knowed it was hard to do.",
+          "(9) We ended the night with songs by the fire."
+        ],
+        [
+          "(10) On Saturday, we packed our bags and rode home.",
+          "(11) See you next summer!"
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-3-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -2790,6 +2965,1007 @@ PP.addLesson({
       clue: "Last Saturday already happened, so both verbs must tell about the past. Neither verb adds -ed.",
       why: "The answers are rode and saw. Ride becomes rode, and see becomes saw. Seen needs a helper word like has, so it does not fit here." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-3-P4" },
+          { ref: "SK-GUM3-3-P5" },
+          {
+            id: "SK-GUM3-3-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 of the draft has a verb mistake. Choose the word that fixes it.",
+            text: "My team {0} across the grass to the first clue.",
+            slots: [
+              {
+                options: ["runned", "ran", "runs"],
+                answer: 1
+              }
+            ],
+            clue: "Find the time clue in the draft. The verb must tell about the past.",
+            hints: [
+              "Find the time clue in the draft. The verb must tell about the past.",
+              "Read sentence 4. Say each choice in the sentence and ask which one is a real past-tense word.",
+              "Runs tells about now. Decide between the other two."
+            ],
+            how: [
+              "The draft tells about last Saturday, so the verb must tell about the past.",
+              "Run is an irregular verb. It changes into a new word instead of adding -ed.",
+              "The answer is ran. Runned is not a word, and runs tells about now."
+            ],
+            misconception: "A common mix-up is adding -ed to a special verb. Say the word out loud: runned does not sound right.",
+            why: "The answer is ran. Run is an irregular verb, so its past tense is ran. Runned is not a word, and runs tells about now."
+          },
+          {
+            id: "SK-GUM3-3-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft has a verb mistake. Which revision fixes it?",
+            choices: [
+              { text: "We keep the clue safe in my backpack." },
+              { text: "We keeped the clue safe in my backpack." },
+              { text: "We kept the clue safe in my backpack.", correct: true },
+              { text: "We kepted the clue safe in my backpack." }
+            ],
+            clue: "Say the verb, then ask whether it is a real past-tense word.",
+            hints: [
+              "Say the verb, then ask whether it is a real past-tense word.",
+              "Read sentence 5 and say the verb. Then try each choice in the sentence.",
+              "Keep tells about now, but the draft tells about last Saturday. Check the other three."
+            ],
+            how: [
+              "Find the verb in sentence 5: keeped. The draft tells about the past.",
+              "Keep is an irregular verb. It changes into kept and does not add -ed.",
+              "The answer is \"We kept the clue safe in my backpack.\" Keep tells about now, and keeped and kepted are not real words."
+            ],
+            misconception: "A common mix-up is adding -ed to the new word, as in kepted.",
+            why: "The answer is \"We kept the clue safe in my backpack.\" Keep is irregular, so its past tense is kept. Keep tells about now, and keeped and kepted are not words."
+          },
+          {
+            id: "SK-GUM3-3-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 7 of the draft has a verb mistake. Which revision fixes it?",
+              choices: [
+                { text: "Dev thinks the chest was by the swings." },
+                { text: "Dev thinked the chest was by the swings." },
+                { text: "Dev thoughted the chest was by the swings." },
+                { text: "Dev thought the chest was by the swings.", correct: true }
+              ]
+            },
+            partB: {
+              prompt: "Why is the revision in Part A correct?",
+              choices: [
+                { text: "Think already tells about the past, so the sentence needs no change." },
+                { text: "Think is irregular, so its past tense is a new word that does not end in -ed.", correct: true },
+                { text: "Think needs a helper word like has before it to show the past." },
+                { text: "Think adds -s because Dev is only one person." }
+              ]
+            },
+            clue: "Say the verb, then decide whether it is a real past-tense word.",
+            hints: [
+              "Say the verb, then decide whether it is a real past-tense word.",
+              "For Part A, read sentence 7 and say each choice in it. For Part B, think about what kind of verb think is.",
+              "In Part A, thinks tells about now. Check the other choices."
+            ],
+            how: [
+              "Part A: find the verb in sentence 7. The draft tells about the past.",
+              "Think is irregular. Its past tense is thought, and it does not add -ed.",
+              "Part A answer: \"Dev thought the chest was by the swings.\" Thinks tells about now, and thinked and thoughted add -ed to a verb that changes.",
+              "Part B answer: \"Think is irregular, so its past tense is a new word that does not end in -ed.\""
+            ],
+            misconception: "A common mix-up is adding -ed to every verb in the past. Special verbs change into a new word.",
+            why: "Part A: \"Dev thought the chest was by the swings.\" Part B: \"Think is irregular, so its past tense is a new word that does not end in -ed.\" Thinks tells about now, and thinked and thoughted are not words. Think does not use has here, and it does not add -s to tell about the past."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-3-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have a verb mistake.",
+            targets: ["p2:1:3", "p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1"],
+            answer: ["p2:1:3", "p2:2:2"],
+            pick: 2,
+            clue: "Check every verb. Two of them are not real past-tense words.",
+            hints: [
+              "Check every verb. Two of them are not real past-tense words.",
+              "Say the verb in each of the five sentences. Ask whether it is a real word that tells about the past.",
+              "Jumped is a real past-tense word, and it is spelled correctly. Check the other four sentences."
+            ],
+            how: [
+              "Find the verb in each sentence and ask whether it is a real past-tense word.",
+              "Jumped, ate and came are correct. Jump adds -ed, and eat and come change into new words.",
+              "Sentence 3: speaked is wrong. Speak becomes spoke.",
+              "Sentence 5: hitted is wrong. Hit stays hit in the past."
+            ],
+            misconception: "A common mix-up is thinking a verb that does not end in -ed must be wrong. Hit stays the same, so hitted is the mistake.",
+            why: "The errors are in \"A tall worker speaked to us about the safety rules before we began.\" and \"My cousin Ava bounced so high that she almost hitted the ceiling.\" Speak becomes spoke, and hit stays hit. Jumped, ate and came are correct."
+          },
+          {
+            id: "SK-GUM3-3-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use past-tense verbs correctly.",
+            pick: 2,
+            choices: [
+              { text: "Tomas sweeped the porch before dinner." },
+              { text: "Mina slid down the muddy hill after the rain.", correct: true },
+              { text: "The puppy bited the rope toy." },
+              { text: "Dad sold his old truck last year.", correct: true },
+              { text: "A bee stinged my arm at the picnic." }
+            ],
+            clue: "Find the verb in each sentence. Ask whether it is a real past-tense word or a special verb with -ed added.",
+            hints: [
+              "Find the verb in each sentence. Ask whether it is a real past-tense word or a special verb with -ed added.",
+              "Say each verb with the word yesterday in front of it. Listen for the ones that sound made up.",
+              "Sweeped is not a real word. Decide about the other four."
+            ],
+            how: [
+              "Find the verb in each sentence and ask whether it is a real past-tense word.",
+              "Slide becomes slid, and sell becomes sold. Both change into new words.",
+              "The others are wrong: it should be stung, swept and bit."
+            ],
+            misconception: "A common mix-up is thinking that every past-tense verb ends in -ed. Slid and sold do not, and they are correct.",
+            why: "The answers are \"Mina slid down the muddy hill after the rain.\" and \"Dad sold his old truck last year.\" Slide becomes slid, and sell becomes sold. The others should say stung, swept and bit."
+          },
+          {
+            id: "SK-GUM3-3-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Match each past-tense verb to the verb that tells about now.",
+            cols: ["spring", "shoot", "bend", "swing"],
+            rows: [
+              { text: "bent", answer: 2 },
+              { text: "sprang", answer: 0 },
+              { text: "swung", answer: 3 },
+              { text: "shot", answer: 1 }
+            ],
+            clue: "Say each word after yesterday, then think of the verb you would use for today.",
+            hints: [
+              "Say each word after yesterday, then think of the verb you would use for today.",
+              "Start with the row you are surest about. Think about the middle sound of each word.",
+              "Shot goes with the verb that starts with sh. Decide the other rows one at a time."
+            ],
+            how: [
+              "Think of the verb for now that turns into each past-tense word.",
+              "Sprang goes with spring, and swung goes with swing. Both have a vowel that changed.",
+              "Bent goes with bend, and shot goes with shoot."
+            ],
+            misconception: "A common mix-up is matching words that only look alike. Say Today I ___, Yesterday I ___ to check each pair.",
+            why: "Sprang goes with spring, shot goes with shoot, bent goes with bend, and swung goes with swing."
+          },
+          {
+            id: "SK-GUM3-3-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Which list has only verbs that change into a new word in the past tense?",
+            choices: [
+              { text: "lend, jump, lead" },
+              { text: "feed, wash, lead" },
+              { text: "paint, play, walk" },
+              { text: "lend, feed, lead", correct: true }
+            ],
+            clue: "Say each verb in a sentence with yesterday. Ask whether it adds -ed or changes into a new word.",
+            hints: [
+              "Say each verb in a sentence with yesterday. Ask whether it adds -ed or changes into a new word.",
+              "Test the words one at a time. Which words in each list add -ed in the past?",
+              "Jump adds -ed in the past, so the list that has it has a regular verb. Check the other three."
+            ],
+            how: [
+              "Say Yesterday I ___ for each verb in the lists.",
+              "Lend becomes lent, feed becomes fed, and lead becomes led. All three change into new words.",
+              "Jump, wash, paint, play and walk all add -ed, so each of the other lists has at least one regular verb."
+            ],
+            misconception: "A common mix-up is picking a list that has one special verb. Every verb in the list must change.",
+            why: "The answer is \"lend, feed, lead.\" Lend becomes lent, feed becomes fed, and lead becomes led. Each other list has a verb that adds -ed, like jump, wash, paint, play or walk."
+          },
+          {
+            id: "SK-GUM3-3-C10",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 9 of the draft has two verb mistakes. Choose the words that fix them.",
+            text: "Then Ava {0} the first slice, and her fork {1} into the soft frosting.",
+            slots: [
+              {
+                options: ["cuts", "cut", "cutted"],
+                answer: 1
+              },
+              {
+                options: ["sinked", "sank", "sinks"],
+                answer: 1
+              }
+            ],
+            clue: "Both verbs must tell about the past. Ask whether each choice is a real past-tense word.",
+            hints: [
+              "Both verbs must tell about the past. Ask whether each choice is a real past-tense word.",
+              "Read sentence 9. Say each choice in its blank, and listen for the one that tells about last month.",
+              "Sinks tells about now. Decide the rest."
+            ],
+            how: [
+              "Both verbs must tell about the past, because the draft tells about last month.",
+              "Cut stays the same in the past tense. Cutted is not a word, and cuts tells about now.",
+              "Sink changes to sank. Sinked is not a word, and sinks tells about now."
+            ],
+            misconception: "A common mix-up is adding -ed to a verb that stays the same or changes. Cutted and sinked are both made up.",
+            why: "The answers are cut and sank. Cut stays the same in the past, and sink becomes sank. Cutted and sinked are not words, and cuts and sinks tell about now."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-3-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p3"],
+            prompt: "In the newsletter, two verbs added -ed when they should have changed into a new word. Select the TWO sentences that have them.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:3:1"],
+            answer: ["p3:2:1", "p3:2:3"],
+            pick: 2,
+            clue: "Look for verbs that sound made up when you say them about the past.",
+            hints: [
+              "Look for verbs that sound made up when you say them about the past.",
+              "Read the five sentences aloud, one at a time. Stop at any verb that you have never heard anyone say.",
+              "Wore is a special verb, and it is spelled correctly. Check the other four sentences."
+            ],
+            how: [
+              "Find the verb in each sentence and ask whether it is a real past-tense word.",
+              "Wore, tasted and sold are correct. Wear becomes wore, taste adds -ed, and sell becomes sold.",
+              "Sentence 3: meeted is wrong. Meet becomes met.",
+              "Sentence 5: sticked is wrong. Stick becomes stuck."
+            ],
+            misconception: "A common mix-up is thinking every past-tense verb adds -ed. Meet and stick change into new words.",
+            why: "The errors are in \"On Monday, we meeted a real beekeeper named Mr. Cho.\" and \"Bees sticked to his gloves, but he was not afraid.\" Meet becomes met, and stick becomes stuck. Wore, tasted and sold are correct."
+          },
+          {
+            id: "SK-GUM3-3-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 8 of the draft has a verb mistake. Which revision fixes it?",
+            choices: [
+              { text: "We spent the money on new books for the library.", correct: true },
+              { text: "We spend the money on new books for the library." },
+              { text: "We spended the money on new books for the library." },
+              { text: "We spented the money on new books for the library." }
+            ],
+            clue: "Say the verb, then ask whether it is a real past-tense word.",
+            hints: [
+              "Say the verb, then ask whether it is a real past-tense word.",
+              "Read sentence 8 and say the verb. Then try each choice in the sentence.",
+              "Spend tells about now, but the newsletter tells about this week. Check the other three."
+            ],
+            how: [
+              "Find the verb in sentence 8: spended. The newsletter tells about things that already happened.",
+              "Spend is irregular. It changes to spent and does not add -ed.",
+              "The answer is \"We spent the money on new books for the library.\" Spend tells about now, and spended and spented are not real words."
+            ],
+            misconception: "A common mix-up is adding -ed to a verb that already changed. Spent has a t where spended has -ed.",
+            why: "The answer is \"We spent the money on new books for the library.\" Spend is irregular, so its past tense is spent. Spend tells about now, and spended and spented are not words."
+          },
+          {
+            id: "SK-GUM3-3-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Mina says, \"Every verb that tells about the past ends in -ed.\" Which TWO examples show that she is wrong?",
+            pick: 2,
+            choices: [
+              { text: "Today my knee hurts. Last week my knee hurt.", correct: true },
+              { text: "Today I paint a sign. Yesterday I painted a sign." },
+              { text: "Today I wake up early. Yesterday I woke up early.", correct: true },
+              { text: "Today I play outside. Yesterday I played outside." },
+              { text: "Today I walk to school. Yesterday I walked to school." }
+            ],
+            clue: "To test a rule, look for examples that break it. Check how each past-tense verb ends.",
+            hints: [
+              "To test a rule, look for examples that break it. Check how each past-tense verb ends.",
+              "Read each pair. Look at the end of the verb in the second sentence of each pair.",
+              "Walked and painted both end in -ed. Decide about the other three."
+            ],
+            how: [
+              "Look at the verb that tells about the past in each pair.",
+              "Walked, painted and played all end in -ed, so they follow Mina's rule.",
+              "Woke ends in e, and hurt ends in t. Neither one ends in -ed, so those two examples show that the rule is wrong."
+            ],
+            misconception: "A common mix-up is picking only special verbs that change a lot. Hurt looks the same in the past, and it still breaks the rule.",
+            why: "The answers are \"Today I wake up early. Yesterday I woke up early.\" and \"Today my knee hurts. Last week my knee hurt.\" Woke and hurt do not end in -ed, so they break Mina's rule. Walked, painted and played all end in -ed."
+          },
+          {
+            id: "SK-GUM3-3-C14",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Which verb belongs in the blank?",
+            text: "Our puppy {0} a hole in the pillow last night.",
+            slots: [
+              {
+                options: ["teared", "tore", "torn", "tears"],
+                answer: 1
+              }
+            ],
+            clue: "Last night tells you the verb must tell about the past. Tear is a special verb.",
+            hints: [
+              "Last night tells you the verb must tell about the past. Tear is a special verb.",
+              "Say each choice in the sentence. Ask which one is a real word that works with no helper word.",
+              "Tears tells about now. Decide among the other three."
+            ],
+            how: [
+              "Last night tells you the action already happened.",
+              "Tear is irregular, so it changes to tore in the past.",
+              "The answer is tore. Teared is not a word, torn needs a helper word like has, and tears tells about now."
+            ],
+            misconception: "A common mix-up is picking torn. Torn needs a helper word like has or had.",
+            why: "The answer is tore. Tear is irregular, so its past tense is tore. Teared is not a word, torn needs a helper word like has, and tears tells about now."
+          },
+          {
+            id: "SK-GUM3-3-C15",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+            ],
+            passages: [],
+            prompt: "Which sentence keeps both verbs in the past tense?",
+            choices: [
+              { text: "Yesterday, Omar rose early and sits on the porch." },
+              { text: "Yesterday, Omar rose early and sat on the porch.", correct: true },
+              { text: "Yesterday, Omar rises early and sat on the porch." },
+              { text: "Yesterday, Omar rised early and sat on the porch." }
+            ],
+            clue: "Yesterday tells you both verbs must tell about the past. Check each verb in each sentence.",
+            hints: [
+              "Yesterday tells you both verbs must tell about the past. Check each verb in each sentence.",
+              "Find the two verbs in each choice. Say each one with the word yesterday in front of it.",
+              "Sits tells about now, so any choice with it has a verb that does not fit. Check the others."
+            ],
+            how: [
+              "Yesterday tells you both actions already happened.",
+              "Rise changes to rose, and sit changes to sat. Both are past-tense words.",
+              "The answer is \"Yesterday, Omar rose early and sat on the porch.\" The others have a verb that tells about now, or rised, which is not a word."
+            ],
+            misconception: "A common mix-up is fixing only one verb in a sentence. Check both.",
+            why: "The answer is \"Yesterday, Omar rose early and sat on the porch.\" Rose and sat are both past-tense words. Sits and rises tell about now, and rised is not a word."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-3-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Select the sentence that has an error.",
+      options: [
+        "Our team won the big game on Saturday.",
+        "Tara lended Jo her red crayon.",
+        "Dad drove us to the lake last summer.",
+        "I wrote my name on the card."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Find the verb in each sentence. Did any special verb get -ed added by mistake?",
+      hints: [
+        "Find the verb in each sentence. Did any special verb get -ed added by mistake?",
+        "Say each verb with the word yesterday in front of it. Listen for the one that sounds made up.",
+        "Drove is a real past-tense word. Check the other three sentences."
+      ],
+      how: [
+        "Find the verb in each sentence.",
+        "Won, drove and wrote are special verbs that changed the right way.",
+        "Lended is wrong. Lend becomes lent."
+      ],
+      misconception: "A common mix-up is adding -ed to a special verb. Lend changes into lent.",
+      why: "The error is in \"Tara lended Jo her red crayon.\" Lend is an irregular verb. Its past tense is lent. Won, drove and wrote are correct.",
+      like: ["SK-GUM3-3-P4"]
+    },
+    {
+      id: "SK-GUM3-3-S02",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Choose the words that correctly complete the sentence.",
+      text: "Last night, Kai {0} a strange noise and {1} to the window.",
+      slots: [
+        {
+          options: ["heared", "heard", "hears"],
+          answer: 1
+        },
+        {
+          options: ["went", "goed", "goes"],
+          answer: 0
+        }
+      ],
+      clue: "Last night already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+      hints: [
+        "Last night already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+        "Say each choice in its blank. Ask which one is a real word that tells about the past.",
+        "Goes tells about now. Decide the rest."
+      ],
+      how: [
+        "Last night tells you both actions already happened.",
+        "Hear changes to heard, and go changes to went. Neither one adds -ed.",
+        "Heared and goed are not words, and hears and goes tell about now."
+      ],
+      misconception: "A common mix-up is adding -ed to a special verb, as in heared or goed.",
+      why: "The answers are heard and went. Hear becomes heard, and go becomes went. Heared and goed are not words, and hears and goes tell about now.",
+      like: ["SK-GUM3-3-P5"]
+    },
+    {
+      id: "SK-GUM3-3-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "The third sentence of the draft has a verb mistake. Which word belongs in the blank?",
+      text: "An hour later, we {0} to a bridge over a stream.",
+      slots: [
+        {
+          options: ["comed", "came", "comes"],
+          answer: 1
+        }
+      ],
+      clue: "Find the time clue in the draft. The verb must tell about the past.",
+      hints: [
+        "Find the time clue in the draft. The verb must tell about the past.",
+        "Read the sentence and say each choice in the blank. Ask which one is a real past-tense word.",
+        "Comes tells about now. Decide between the other two."
+      ],
+      how: [
+        "The draft tells about last Sunday, so the verb must tell about the past.",
+        "Come is an irregular verb. It changes to came instead of adding -ed.",
+        "The answer is came. Comed is not a word, and comes tells about now."
+      ],
+      misconception: "A common mix-up is adding -ed to a special verb. Comed does not sound right.",
+      why: "The answer is came. Come is an irregular verb, so its past tense is came. Comed is not a word, and comes tells about now.",
+      like: ["SK-GUM3-3-C03"]
+    },
+    {
+      id: "SK-GUM3-3-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Which revision fixes the verb mistake in the fifth sentence of the draft?",
+      choices: [
+        { text: "Then we left the bridge and climbed a rocky hill.", correct: true },
+        { text: "Then we leave the bridge and climbed a rocky hill." },
+        { text: "Then we lefted the bridge and climbed a rocky hill." },
+        { text: "Then we leaved the bridge and climbed a rocky hill." }
+      ],
+      clue: "Say the verb, then ask whether it is a real past-tense word.",
+      hints: [
+        "Say the verb, then ask whether it is a real past-tense word.",
+        "Find the fifth sentence in the draft. Say its verb, then try each choice in the sentence.",
+        "Leave tells about now, but the hike already happened. Check the other three."
+      ],
+      how: [
+        "Find the verb in the fifth sentence: lefted. The hike happened last Sunday.",
+        "Leave is irregular. It changes to left and does not add -ed.",
+        "The answer is \"Then we left the bridge and climbed a rocky hill.\" Leave tells about now, and lefted and leaved are not real words."
+      ],
+      misconception: "A common mix-up is adding -ed to the new word. Left is already the past-tense word.",
+      why: "The answer is \"Then we left the bridge and climbed a rocky hill.\" Leave is irregular, so its past tense is left. Leave tells about now, and lefted and leaved are not words.",
+      like: ["SK-GUM3-3-C04"]
+    },
+    {
+      id: "SK-GUM3-3-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Look at the seventh sentence of the draft. Which choice writes its verb correctly?",
+        choices: [
+          { text: "Mom says that the falls were close." },
+          { text: "Mom sayed that the falls were close." },
+          { text: "Mom said that the falls were close.", correct: true },
+          { text: "Mom saided that the falls were close." }
+        ]
+      },
+      partB: {
+        prompt: "What makes the answer to Part A correct?",
+        choices: [
+          { text: "The verb say becomes a different word in the past, so -ed is left off.", correct: true },
+          { text: "The verb say is already in the past, so the sentence stays as it is." },
+          { text: "The verb say must follow a helper word like had to show the past." },
+          { text: "The verb say takes an -s in the past because Mom is one person." }
+        ]
+      },
+      clue: "Say the verb, then decide whether it is a real past-tense word.",
+      hints: [
+        "Say the verb, then decide whether it is a real past-tense word.",
+        "For Part A, read the sentence and say each choice in it. For Part B, think about what the verb say does in the past.",
+        "In Part A, says tells about now. Check the other choices."
+      ],
+      how: [
+        "Part A: find the verb in sentence 7. The hike already happened.",
+        "Say is irregular. Its past tense is said, and it does not add -ed.",
+        "Part A answer: \"Mom said that the falls were close.\" Says tells about now, and sayed and saided add -ed to a verb that changes.",
+        "Part B answer: \"The verb say becomes a different word in the past, so -ed is left off.\""
+      ],
+      misconception: "A common mix-up is adding -ed to every verb in the past. Special verbs change into a new word.",
+      why: "Part A: \"Mom said that the falls were close.\" Part B: \"The verb say becomes a different word in the past, so -ed is left off.\" Says tells about now, and sayed and saided are not words. Say does not need had here, and it does not add -s to tell about the past.",
+      like: ["SK-GUM3-3-C05"]
+    },
+    {
+      id: "SK-GUM3-3-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Select the TWO sentences that have a verb mistake.",
+      targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1"],
+      answer: ["p5:1:3", "p5:2:2"],
+      pick: 2,
+      clue: "Check every verb. Two of them are not real past-tense words.",
+      hints: [
+        "Check every verb. Two of them are not real past-tense words.",
+        "Say the verb in each of the five sentences. Ask whether it is a real word that tells about the past.",
+        "Named is a real past-tense word, and it is spelled correctly. Check the other four sentences."
+      ],
+      how: [
+        "Find the verb in each sentence and ask whether it is a real past-tense word.",
+        "Named, stuffed and agreed are correct, because each one adds -ed the right way.",
+        "Sentence 3: payed is wrong. Pay becomes paid.",
+        "Sentence 5: feeded is wrong. Feed becomes fed."
+      ],
+      misconception: "A common mix-up is adding -ed to every verb. Pay and feed change into new words.",
+      why: "The errors are in \"He payed for a small hamster and a wheel.\" and \"That night, I feeded him seeds and a slice of apple.\" Pay becomes paid, and feed becomes fed. Named, stuffed and agreed are correct.",
+      like: ["SK-GUM3-3-C06"]
+    },
+    {
+      id: "SK-GUM3-3-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences that use past-tense verbs correctly.",
+      pick: 2,
+      choices: [
+        { text: "The scratch bleeded a little." },
+        { text: "The old clock struck noon.", correct: true },
+        { text: "Our team leaded the whole game." },
+        { text: "The class swimmed in the pond." },
+        { text: "Ben heard a loud whistle from the field.", correct: true }
+      ],
+      clue: "Find the verb in each sentence. Ask whether it is a real past-tense word or a special verb with -ed added.",
+      hints: [
+        "Find the verb in each sentence. Ask whether it is a real past-tense word or a special verb with -ed added.",
+        "Say each verb with the word yesterday in front of it. Listen for the ones that sound made up.",
+        "Swimmed is not a real word. Decide about the other four."
+      ],
+      how: [
+        "Find the verb in each sentence and ask whether it is a real past-tense word.",
+        "Strike becomes struck, and hear becomes heard. Both change into new words.",
+        "The others are wrong: it should be bled, led and swam."
+      ],
+      misconception: "A common mix-up is thinking every past-tense verb ends in -ed. Struck and heard do not, and they are correct.",
+      why: "The answers are \"The old clock struck noon.\" and \"Ben heard a loud whistle from the field.\" Strike becomes struck, and hear becomes heard. The others should say bled, led and swam.",
+      like: ["SK-GUM3-3-C07"]
+    },
+    {
+      id: "SK-GUM3-3-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Match each past-tense word to the verb it comes from.",
+      cols: ["weep", "steal", "bleed", "mean"],
+      rows: [
+        { text: "wept", answer: 0 },
+        { text: "meant", answer: 3 },
+        { text: "bled", answer: 2 },
+        { text: "stole", answer: 1 }
+      ],
+      clue: "Say each word after yesterday, then think of the verb you would use for today.",
+      hints: [
+        "Say each word after yesterday, then think of the verb you would use for today.",
+        "Start with the row you are surest about. Think about the first letters and the vowel of each word.",
+        "Meant goes with the verb that starts with m. Decide the other rows one at a time."
+      ],
+      how: [
+        "Think of the verb for now that turns into each past-tense word.",
+        "Wept goes with weep, and stole goes with steal. The vowel changed in each one.",
+        "Bled goes with bleed, and meant goes with mean."
+      ],
+      misconception: "A common mix-up is matching words that only look alike. Say Today I ___, Yesterday I ___ to check each pair.",
+      why: "Wept goes with weep, meant goes with mean, bled goes with bleed, and stole goes with steal.",
+      like: ["SK-GUM3-3-C08"]
+    },
+    {
+      id: "SK-GUM3-3-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Which group of verbs never adds -ed to tell about the past?",
+      choices: [
+        { text: "pay, wait, hear" },
+        { text: "say, call, hear" },
+        { text: "pay, say, hear", correct: true },
+        { text: "wait, call, walk" }
+      ],
+      clue: "Say each verb in a sentence with yesterday. Ask whether it adds -ed or becomes a new word.",
+      hints: [
+        "Say each verb in a sentence with yesterday. Ask whether it adds -ed or becomes a new word.",
+        "Test the words one at a time. Which words in each list add -ed in the past?",
+        "Wait adds -ed in the past, so any list that has it has a regular verb. Check the other lists."
+      ],
+      how: [
+        "Say Yesterday I ___ for each verb in the lists.",
+        "Pay becomes paid, say becomes said, and hear becomes heard. All three become new words.",
+        "Wait, call and walk all add -ed, so each of the other lists has at least one regular verb."
+      ],
+      misconception: "A common mix-up is picking a list that has one special verb. Every verb in the list must change.",
+      why: "The answer is \"pay, say, hear.\" Pay becomes paid, say becomes said, and hear becomes heard. Each other list has a verb that adds -ed, like wait, call or walk.",
+      like: ["SK-GUM3-3-C09"]
+    },
+    {
+      id: "SK-GUM3-3-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 8 of the draft has two verb mistakes. Choose the words that fix them.",
+      text: "At midnight, Biscuit {0} out of his cage, and I {1} him before he reached the door.",
+      slots: [
+        {
+          options: ["crept", "creeped", "creeps"],
+          answer: 0
+        },
+        {
+          options: ["catches", "caught", "catched"],
+          answer: 1
+        }
+      ],
+      clue: "Both verbs must tell about the past. Ask whether each choice is a real past-tense word.",
+      hints: [
+        "Both verbs must tell about the past. Ask whether each choice is a real past-tense word.",
+        "Read sentence 8. Say each choice in its blank, and listen for the one that tells about last year.",
+        "Catches tells about now. Decide the rest."
+      ],
+      how: [
+        "Both verbs must tell about the past, because the draft tells about last year.",
+        "Creep changes to crept. Creeped is not a word, and creeps tells about now.",
+        "Catch changes to caught. Catched is not a word, and catches tells about now."
+      ],
+      misconception: "A common mix-up is adding -ed to a verb that changes. Creeped and catched are both made up.",
+      why: "The answers are crept and caught. Creep becomes crept, and catch becomes caught. Creeped and catched are not words, and creeps and catches tell about now.",
+      like: ["SK-GUM3-3-C10"]
+    },
+    {
+      id: "SK-GUM3-3-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences that have a verb mistake.",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1", "p6:3:3"],
+      answer: ["p6:2:1", "p6:3:1"],
+      pick: 2,
+      clue: "Check every verb. Two of them added -ed when they should have changed into a new word.",
+      hints: [
+        "Check every verb. Two of them added -ed when they should have changed into a new word.",
+        "Say the verb in each of the five sentences. Ask whether it is a real word that tells about the past.",
+        "Carried is a real past-tense word, and it is spelled correctly. Check the other four sentences."
+      ],
+      how: [
+        "Find the verb in each sentence and ask whether it is a real past-tense word.",
+        "Carried, floated and ended are correct, because each one adds -ed the right way.",
+        "Sentence 3: builded is wrong. Build becomes built.",
+        "Sentence 7: forgived is wrong. Forgive becomes forgave."
+      ],
+      misconception: "A common mix-up is thinking every past-tense verb adds -ed. Build and forgive change into new words.",
+      why: "The errors are in \"On Tuesday, the older kids builded a raft from wood and rope.\" and \"On Thursday, a camper named Priya forgived her brother for losing her sock.\" Build becomes built, and forgive becomes forgave. Carried, floated and ended are correct.",
+      like: ["SK-GUM3-3-C11"]
+    },
+    {
+      id: "SK-GUM3-3-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: ["p6"],
+      prompt: "Which revision fixes the verb mistake in sentence 8 of the draft?",
+      choices: [
+        { text: "I knowed it was hard to do." },
+        { text: "I know it was hard to do." },
+        { text: "I knewed it was hard to do." },
+        { text: "I knew it was hard to do.", correct: true }
+      ],
+      clue: "Say the verb, then ask whether it is a real past-tense word.",
+      hints: [
+        "Say the verb, then ask whether it is a real past-tense word.",
+        "Find sentence 8 and say its verb. Then try each choice in the sentence.",
+        "Know tells about now, but the newsletter tells about this week. Check the other three."
+      ],
+      how: [
+        "Find the verb in sentence 8: knowed. The newsletter tells about things that already happened.",
+        "Know is irregular. It changes to knew and does not add -ed.",
+        "The answer is \"I knew it was hard to do.\" Know tells about now, and knowed and knewed are not real words."
+      ],
+      misconception: "A common mix-up is adding -ed to a verb that already changed. Knew is already the past-tense word.",
+      why: "The answer is \"I knew it was hard to do.\" Know is irregular, so its past tense is knew. Know tells about now, and knowed and knewed are not words.",
+      like: ["SK-GUM3-3-C12"]
+    },
+    {
+      id: "SK-GUM3-3-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Ravi says, \"To tell about the past, just add -ed to the verb.\" Which TWO examples show that he is wrong?",
+      pick: 2,
+      choices: [
+        { text: "Today I clap along. Yesterday I clapped along." },
+        { text: "Today I say hello. Yesterday I said hello.", correct: true },
+        { text: "Today I wash the cup. Yesterday I washed the cup." },
+        { text: "Today I begin to read. Yesterday I began to read.", correct: true },
+        { text: "Today I kick the ball. Yesterday I kicked the ball." }
+      ],
+      clue: "To test a rule, look for examples that break it. Ask whether the past is made by adding -ed.",
+      hints: [
+        "To test a rule, look for examples that break it. Ask whether the past is made by adding -ed.",
+        "Read each pair. Ask whether the verb that tells about yesterday is the other verb with -ed added.",
+        "Kicked and clapped both add -ed. Decide about the other three."
+      ],
+      how: [
+        "Check each pair against Ravi's rule: add -ed to the verb.",
+        "Kicked, clapped and washed all add -ed, so the rule works for them.",
+        "Began and said are new words, not the verb with -ed on the end. Those two examples show that the rule is wrong."
+      ],
+      misconception: "A common mix-up is thinking every verb follows the same rule. Some verbs become new words.",
+      why: "The answers are \"Today I begin to read. Yesterday I began to read.\" and \"Today I say hello. Yesterday I said hello.\" Began and said are new words, not the verb with -ed added. Kicked, clapped and washed follow Ravi's rule.",
+      like: ["SK-GUM3-3-C13"]
+    },
+    {
+      id: "SK-GUM3-3-S14",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Which verb belongs in the blank?",
+      text: "Dad {0} the garage door before bed last night.",
+      slots: [
+        {
+          options: ["shutted", "shut", "shuts", "shutting"],
+          answer: 1
+        }
+      ],
+      clue: "Last night tells you the verb must tell about the past. Look for a verb that is a real word.",
+      hints: [
+        "Last night tells you the verb must tell about the past. Look for a verb that is a real word.",
+        "Say each choice in the sentence. Ask which one is a real word that tells about the past.",
+        "Shuts tells about now. Decide among the other three."
+      ],
+      how: [
+        "Last night tells you the action already happened.",
+        "Shut stays the same in the past tense, so shut is correct.",
+        "Shutted is not a word, shuts tells about now, and shutting needs a helper word like was."
+      ],
+      misconception: "A common mix-up is thinking a verb must change to show the past. Shut looks the same in both.",
+      why: "The answer is shut. Shut stays the same in the past tense. Shutted is not a word, shuts tells about now, and shutting needs a helper word like was.",
+      like: ["SK-GUM3-3-C14"]
+    },
+    {
+      id: "SK-GUM3-3-S15",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
+      ],
+      passages: [],
+      prompt: "Which sentence keeps both verbs in the past tense?",
+      choices: [
+        { text: "Last Friday, Lena hears a noise and hid under her blanket." },
+        { text: "Last Friday, Lena heard a noise and hides under her blanket." },
+        { text: "Last Friday, Lena heard a noise and hid under her blanket.", correct: true },
+        { text: "Last Friday, Lena heared a noise and hid under her blanket." }
+      ],
+      clue: "Last Friday tells you both verbs must tell about the past. Check each verb in each sentence.",
+      hints: [
+        "Last Friday tells you both verbs must tell about the past. Check each verb in each sentence.",
+        "Find the two verbs in each choice. Say each one with the words last Friday in front of it.",
+        "Hides tells about now, so any choice with it has a verb that does not fit. Check the others."
+      ],
+      how: [
+        "Last Friday tells you both actions already happened.",
+        "Hear changes to heard, and hide changes to hid. Both are past-tense words.",
+        "The answer is \"Last Friday, Lena heard a noise and hid under her blanket.\" The others have a verb that tells about now, or heared, which is not a word."
+      ],
+      misconception: "A common mix-up is fixing only one verb in a sentence. Check both.",
+      why: "The answer is \"Last Friday, Lena heard a noise and hid under her blanket.\" Heard and hid are both past-tense words. Hears and hides tell about now, and heared is not a word.",
+      like: ["SK-GUM3-3-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-3-P1": {
+      hints: [
+        "Find the time clue in the sentence. Last summer tells you the verb must tell about the past.",
+        "Say each choice in the sentence. Ask which one is a real past-tense word.",
+        "Drive tells about now. Decide among the other three."
+      ],
+      how: [
+        "Last summer tells you the action already happened.",
+        "Drive is irregular. It changes to drove and does not add -ed.",
+        "The answer is drove. Drived and droved are not words, and drive tells about now."
+      ],
+      misconception: "A common mix-up is adding -ed to a special verb. Drived does not sound right."
+    },
+    "SK-GUM3-3-P2": {
+      hints: [
+        "Each sentence tells about the past. Find the verb in each one and ask whether it is a real word.",
+        "Say each verb with the word yesterday in front of it. Listen for the ones that sound made up.",
+        "Eated is not a real word. Check the other three sentences."
+      ],
+      how: [
+        "Find the verb in each sentence.",
+        "Write changes to wrote, so \"Kenji wrote a letter to his grandma last week.\" is correct.",
+        "The others are wrong: it should be ate, flew and slept."
+      ],
+      misconception: "A common mix-up is adding -ed to every verb in the past."
+    },
+    "SK-GUM3-3-P3": {
+      hints: [
+        "Put each verb after the word yesterday: \"Yesterday I ___.\" Which past-tense word sounds right?",
+        "Start with the row you are surest about. Then decide the rest one at a time.",
+        "Sat goes with the verb that starts with s. Decide the other rows."
+      ],
+      how: [
+        "Say Today I ___, Yesterday I ___ for each verb.",
+        "Sit becomes sat, and find becomes found.",
+        "Grow becomes grew, and buy becomes bought."
+      ],
+      misconception: "A common mix-up is matching words that only look alike. Say the pair out loud to check."
+    },
+    "SK-GUM3-3-P4": {
+      hints: [
+        "Find the verb in each sentence. Did any special verb get -ed added by mistake?",
+        "Say each verb with the word yesterday in front of it. Listen for the one that sounds made up.",
+        "Drew is a real past-tense word. Check the other three sentences."
+      ],
+      how: [
+        "Find the verb in each sentence.",
+        "Drew, sang and found are special verbs that changed the right way.",
+        "Freezed is wrong. Freeze becomes froze."
+      ],
+      misconception: "A common mix-up is adding -ed to a special verb. Freeze changes into froze."
+    },
+    "SK-GUM3-3-P5": {
+      hints: [
+        "Last Saturday already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+        "Say each choice in its blank. Ask which one is a real past-tense word.",
+        "Rides tells about now. Decide the rest."
+      ],
+      how: [
+        "Last Saturday tells you both actions already happened.",
+        "Ride changes to rode, and see changes to saw.",
+        "Rided and seed are not words, rides tells about now, and seen needs a helper word like has."
+      ],
+      misconception: "A common mix-up is picking seen. Seen needs a helper word like has or had."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-3-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word correctly completes the sentence?",
@@ -2911,7 +4087,8 @@ PP.addLesson({
       "Coordinating conjunctions are joining words. You can remember all seven with the word FANBOYS: for, and, nor, but, or, yet, so.",
       "In third grade, you will use four of them the most: and, but, or, so.",
       "And adds one more thing. But shows something different or surprising. Or gives a choice. So tells what happened because of something.",
-      "They can join two words (apples and pears), two groups of words (in the yard or at the park), or two whole sentences."
+      "They can join two words (apples and pears), two groups of words (in the yard or at the park), or two whole sentences.",
+      "Three more have jobs too. Yet works like but. For gives a reason, like because. Nor goes with a no: I did not call, nor did I write."
     ],
     words: [
       { term: "conjunction", means: "a word that joins words or ideas" },
@@ -2944,10 +4121,175 @@ PP.addLesson({
         "So tells a result. Because so joins two complete sentences, put a comma before it."
       ],
       answer: "Malik studied his spelling words every night, so he got every word right on the test."
+    },
+    {
+      show: ["The hill was steep, (yet / so) we climbed all the way to the top."],
+      ask: "Which joining word fits in the parentheses?",
+      steps: [
+        "Read both parts. A steep hill is hard to climb, but the people climbed it.",
+        "The second part is a surprise. It goes against what you would expect.",
+        "Yet works like but and shows a surprise. So would tell a result, and that does not fit."
+      ],
+      answer: "The hill was steep, yet we climbed all the way to the top."
     }
   ],
   parent: "Say the first half of a sentence and a joining word, like \"I was hungry, so...\" or \"I was hungry, but...\" and let your child finish it. Talk about how the ending changes with each joining word.",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Yoga for Kids",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class tried yoga for the first time on Monday.",
+          "(2) Mr. Lee gave each of us a blue mat for the gym floor.",
+          "(3) At first I felt silly, but then I started to like it."
+        ],
+        [
+          "(4) We stretched our arms up high, or we reached for our toes.",
+          "(5) Balancing on one foot looked easy, so it was really hard.",
+          "(6) We breathed slowly, and the room grew quiet."
+        ],
+        [
+          "(7) Next week we can do yoga inside, so we can do it outside under the trees.",
+          "(8) Mr. Lee will pick only one place on Friday.",
+          "(9) I hope we choose the trees, for the shade feels nice.",
+          "(10) Mr. Lee said we could not bring snacks, nor could we bring toys."
+        ],
+        [
+          "(11) Yoga is fun, and I want to do it again."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Chalk Art Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Friday, our class drew chalk art on the sidewalk by the gym.",
+          "(2) Ms. Rao gave each of us a bucket of colorful chalk.",
+          "(3) I wanted to draw a huge whale, and the sidewalk square was too small, or I drew a small one."
+        ],
+        [
+          "(4) My friend Omar drew a bright sun with a big smile.",
+          "(5) Then the sky grew gray.",
+          "(6) The rain clouds looked dark.",
+          "(7) We kept drawing."
+        ],
+        [
+          "(8) Soon the first drops fell, and we ran inside.",
+          "(9) Our art washed away, but we had fun.",
+          "(10) Next time, we will check the weather first."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Swim Lesson Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, I had my first swim lesson at the town pool.",
+          "(2) I was nervous, but my coach smiled and waved."
+        ],
+        [
+          "(3) She told us to kick our legs, yet to keep our faces down.",
+          "(4) The water was cold, so I wanted to get out.",
+          "(5) I could stay in the shallow end, so I could swim to the rope.",
+          "(6) My coach said I could not swim past the rope, nor could I go under it."
+        ],
+        [
+          "(7) I kicked hard, for I wanted to reach the wall.",
+          "(8) My coach clapped when I touched it."
+        ],
+        ["(9) I cannot wait for next Saturday."]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Jump Rope Club",
+      byline: "A third grader's draft",
+      genre: "Student draft (announcement)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Welcome to the Jump Rope Club!",
+          "(2) We meet every Thursday for an hour after school in the gym.",
+          "(3) Beginners can start with short ropes."
+        ],
+        [
+          "(4) Our coach, Ms. Yang, shows us a new trick each week, or she helps us practice the old ones.",
+          "(5) Double jumps look easy, so they take lots of practice.",
+          "(6) The club has two rules for every member."
+        ],
+        [
+          "(7) You can bring your own rope, so you can borrow one from the closet.",
+          "(8) You only need one rope, so choose the one you like.",
+          "(9) Please be on time, for we start right at three o'clock."
+        ],
+        ["(10) We hope to see you there!"]
+      ]
+    },
+    {
+      id: "p5",
+      title: "The Scarecrow Contest",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last October, our town held a scarecrow contest in the park.",
+          "(2) Each family got a pile of old clothes and a bag of straw.",
+          "(3) My dad wanted to make a pirate, and we did not have a hat, or we used a paper bag."
+        ],
+        [
+          "(4) My sister gave our scarecrow a big red nose.",
+          "(5) Then the wind began to blow.",
+          "(6) The scarecrows shook on their poles.",
+          "(7) Nobody left the park.",
+          "(8) Soon the judges walked past our scarecrow."
+        ],
+        [
+          "(9) Our scarecrow did not win, but we got a ribbon for trying.",
+          "(10) Next year, we will make two."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Snow Cone Stand",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last spring, our class ran a snow cone stand at the school fair.",
+          "(2) We had cherry syrup and lime syrup, but grape was the favorite."
+        ],
+        [
+          "(3) The sun was hot, or the line grew long.",
+          "(4) Some kids wanted cherry, so some kids wanted lime.",
+          "(5) We worked quickly, for the line kept growing.",
+          "(6) I spilled syrup on my shirt, but I did not mind."
+        ],
+        [
+          "(7) By four o'clock, the ice was gone.",
+          "(8) We counted the money and cleaned the stand.",
+          "(9) Our class raised enough to buy two new soccer balls.",
+          "(10) Everyone agreed that it was our best day of the year."
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-4-P1", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the joining word that makes the most sense.",
@@ -2995,6 +4337,1033 @@ PP.addLesson({
       clue: "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
       why: "The answers are \"I was hungry, so I ate a banana.\" and \"Hana can play the piano and the drums.\" Being hungry is why I ate, so so fits, and and adds the drums. Leaving a coat at home when it is cold needs but. A choice between drawing and painting needs or. Laughing because the movie was funny needs so." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-4-P5" },
+          {
+            id: "SK-GUM3-4-C02",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 of the draft uses the wrong joining word. Choose the word that fixes it.",
+            text: "We stretched our arms up high, {0} we reached for our toes.",
+            slots: [
+              {
+                options: ["or", "and", "but", "so"],
+                answer: 1
+              }
+            ],
+            clue: "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+            hints: [
+              "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+              "Read sentence 4 and picture the class doing both actions. Then try each joining word in the blank.",
+              "But shows that the second part is different from the first. Decide among the other three."
+            ],
+            how: [
+              "Read both parts: the class stretched up high, and the class reached for their toes.",
+              "The students did both actions. They are not a choice, a difference, or a result.",
+              "The answer is and, because and adds one more thing. Or gives a choice, but shows something different, and so tells a result."
+            ],
+            misconception: "A common mix-up is picking or because two actions are named. Or is for a choice, and the class did both.",
+            why: "The answer is and. The class did both things, so the second part adds one more thing. Or gives a choice, but shows something different, and so tells a result."
+          },
+          {
+            id: "SK-GUM3-4-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft uses the wrong joining word. Which revision fixes it?",
+            choices: [
+              { text: "Balancing on one foot looked easy, so it was really hard." },
+              { text: "Balancing on one foot looked easy, but it was really hard.", correct: true },
+              { text: "Balancing on one foot looked easy, or it was really hard." },
+              { text: "Balancing on one foot looked easy, for it was really hard." }
+            ],
+            clue: "Read both parts. Ask whether the second part is a result, a choice, or something different.",
+            hints: [
+              "Read both parts. Ask whether the second part is a result, a choice, or something different.",
+              "Read sentence 5. Ask what you would expect after the word easy, and what the writer says instead.",
+              "Or gives a choice, and the writer is not choosing between two things. Check the other three."
+            ],
+            how: [
+              "Read both parts: the balance looked easy, but it was really hard.",
+              "The second part is different from what you would expect. That is a surprise.",
+              "The answer is \"Balancing on one foot looked easy, but it was really hard.\" So tells a result, or gives a choice, and for gives a reason."
+            ],
+            misconception: "A common mix-up is using so for any two ideas. So only tells a result, and being easy does not cause being hard.",
+            why: "The answer is \"Balancing on one foot looked easy, but it was really hard.\" But joins two ideas that are different. The other joining words do not fit: so tells a result, or gives a choice, and for gives a reason."
+          },
+          {
+            id: "SK-GUM3-4-C04",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 7 of the draft uses the wrong joining word. Which revision fixes it?",
+              choices: [
+                { text: "Next week we can do yoga inside, but we can do it outside under the trees." },
+                { text: "Next week we can do yoga inside, nor we can do it outside under the trees." },
+                { text: "Next week we can do yoga inside, or we can do it outside under the trees.", correct: true },
+                { text: "Next week we can do yoga inside, so we can do it outside under the trees." }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the draft best supports the revision in Part A?",
+              choices: [
+                { text: "We breathed slowly, and the room grew quiet." },
+                { text: "Mr. Lee will pick only one place on Friday.", correct: true },
+                { text: "At first I felt silly, but then I started to like it." },
+                { text: "Yoga is fun, and I want to do it again." }
+              ]
+            },
+            clue: "Find the two ideas the joining word connects, and ask how they are related.",
+            hints: [
+              "Find the two ideas the joining word connects, and ask how they are related.",
+              "For Part A, say each choice and ask what job the joining word does. For Part B, look for a sentence about how the place will be decided.",
+              "In Part A, nor goes with a sentence that says no, and sentence 7 does not say no. Check the other choices."
+            ],
+            how: [
+              "Part A: sentence 7 names two places, inside and outside. The class cannot be in both places at the same time.",
+              "Two places to pick from make a choice, and or is the joining word for a choice.",
+              "Part A answer: \"Next week we can do yoga inside, or we can do it outside under the trees.\" But, nor and so do not fit the meaning.",
+              "Part B answer: \"Mr. Lee will pick only one place on Friday.\" It shows that only one of the two places will be chosen."
+            ],
+            misconception: "A common mix-up is picking so because the sentence is about next week. So tells a result, and the second part is not a result of the first.",
+            why: "Part A: \"Next week we can do yoga inside, or we can do it outside under the trees.\" Part B: \"Mr. Lee will pick only one place on Friday.\" Only one place will be chosen, so the two parts are a choice and need or. The other sentences do not talk about choosing between two places."
+          },
+          {
+            id: "SK-GUM3-4-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p1"],
+            prompt: "Select the sentence in which the word for works as a joining word that gives a reason.",
+            targets: ["p1:1:1", "p1:1:2", "p1:1:3", "p1:3:3", "p1:3:4"],
+            answer: ["p1:3:3"],
+            pick: 1,
+            clue: "Some words have more than one job. Ask whether for joins two parts of a sentence or only starts a short phrase.",
+            hints: [
+              "Some words have more than one job. Ask whether for joins two parts of a sentence or only starts a short phrase.",
+              "Look for the word for in the sentences. Then ask what comes right after it, a whole new idea or just a few words.",
+              "In sentence 1, for starts the phrase for the first time. Check the other sentences."
+            ],
+            how: [
+              "Find the word for in each sentence. A joining word has a whole idea on each side of it.",
+              "In sentences 1 and 2, for begins a short phrase: for the first time, and for the gym floor. Those are not joining words.",
+              "Sentence 9 says I hope we choose the trees, for the shade feels nice. For joins two ideas and gives a reason, like because."
+            ],
+            misconception: "A common mix-up is picking any sentence that has the word for. A joining word must connect two ideas.",
+            why: "The answer is sentence 9, \"I hope we choose the trees, for the shade feels nice.\" For joins two ideas and gives the reason for choosing the trees. In sentences 1 and 2, for only starts a short phrase, and the other sentences do not use for."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-4-C06",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Which sentence joins the two short sentences best?",
+            stem: "Luis wanted a new book. He did not have enough money.",
+            choices: [
+              { text: "Luis wanted a new book, so he did not have enough money." },
+              { text: "Luis wanted a new book, or he did not have enough money." },
+              { text: "Luis wanted a new book, but he did not have enough money.", correct: true },
+              { text: "Luis wanted a new book, for he did not have enough money." }
+            ],
+            clue: "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+            hints: [
+              "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+              "Say each sentence aloud. Ask whether the two parts make sense together.",
+              "Or gives a choice, and Luis is not choosing between the two parts. Check the other three."
+            ],
+            how: [
+              "Wanting a book and not having enough money work against each other.",
+              "The second part is different from what Luis wanted. That calls for but.",
+              "The answer is \"Luis wanted a new book, but he did not have enough money.\" So and for make the second part a result or reason, and or makes it a choice."
+            ],
+            misconception: "A common mix-up is picking so because both parts are about the same story. So must tell a result.",
+            why: "The answer is \"Luis wanted a new book, but he did not have enough money.\" But joins two ideas that are different. So tells a result, or gives a choice, and for gives a reason, and none of those fit."
+          },
+          {
+            id: "SK-GUM3-4-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use nor correctly.",
+            pick: 2,
+            choices: [
+              { text: "We can have soup, nor we can have salad." },
+              { text: "Kofi did not pack a coat, nor did he pack gloves.", correct: true },
+              { text: "I wanted to swim, nor the pool was closed." },
+              { text: "The cat would not eat, nor would it drink.", correct: true },
+              { text: "Mina likes apples, nor she likes grapes." }
+            ],
+            clue: "Nor goes with a sentence that says no. Look at what the first part says.",
+            hints: [
+              "Nor goes with a sentence that says no. Look at what the first part says.",
+              "Read each sentence. Ask whether the first part says something did not happen.",
+              "Mina likes apples says yes, not no. Decide about the other four."
+            ],
+            how: [
+              "Nor is used after a part that says something did not happen.",
+              "Kofi did not pack a coat, and the cat would not eat. Both start with a no, so nor can follow.",
+              "Mina likes apples, we can have soup, and I wanted to swim all say yes, so nor does not fit."
+            ],
+            misconception: "A common mix-up is using nor like or in a sentence that has no no. Nor needs a no in the first part.",
+            why: "The answers are \"Kofi did not pack a coat, nor did he pack gloves.\" and \"The cat would not eat, nor would it drink.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit."
+          },
+          {
+            id: "SK-GUM3-4-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Match each joining word to the sentence it completes.",
+            cols: ["for", "yet", "nor", "so"],
+            rows: [
+              { text: "The hill was steep, ___ we climbed it.", answer: 1 },
+              { text: "Ana did not call, ___ did she write.", answer: 2 },
+              { text: "Luis was sick, ___ he stayed home.", answer: 3 },
+              { text: "Bring a hat, ___ the sun is strong.", answer: 0 }
+            ],
+            clue: "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
+            hints: [
+              "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
+              "Start with the sentence you are surest about. Think about which sentence begins with a no.",
+              "Ana did not call begins with a no. Decide the other rows one at a time."
+            ],
+            how: [
+              "Ask how the second part connects to the first in each sentence.",
+              "Ana did not call, nor did she write. Nor goes with a no.",
+              "Sick is the reason Luis stayed home, so so fits. The sun is the reason for the hat, so for fits. Climbing a steep hill is a surprise, so yet fits."
+            ],
+            misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
+            why: "Yet goes with the hill sentence, because climbing a steep hill is a surprise. Nor goes with Ana did not call. So goes with Luis was sick, because sick is why he stayed home. For goes with the hat sentence, because the sun is the reason."
+          },
+          {
+            id: "SK-GUM3-4-C09",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 3 of the draft uses the wrong joining word two times. Choose the words that fix it.",
+            text: "I wanted to draw a huge whale, {0} the sidewalk square was too small, {1} I drew a small one.",
+            slots: [
+              {
+                options: ["or", "but", "so"],
+                answer: 1
+              },
+              {
+                options: ["but", "so", "for"],
+                answer: 1
+              }
+            ],
+            clue: "Read the whole sentence. Ask how each part connects to the part before it.",
+            hints: [
+              "Read the whole sentence. Ask how each part connects to the part before it.",
+              "Say each choice in its blank. Think about what the writer wanted, what went wrong, and what the writer did.",
+              "Or gives a choice, and the writer is not choosing between two things in the first blank. Decide the rest."
+            ],
+            how: [
+              "The writer wanted a huge whale, and the square was too small. That is a problem, so the first blank shows something different.",
+              "The square was too small, and the writer drew a small whale. The small whale is the result.",
+              "The answers are but and so."
+            ],
+            misconception: "A common mix-up is choosing the same kind of joining word for both blanks. Each blank connects its parts in a different way.",
+            why: "The answers are but and so. The wish for a huge whale goes against the small square, so but fits first. The small square is why the writer drew a small whale, so so fits second."
+          },
+          {
+            id: "SK-GUM3-4-C10",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p2"],
+            prompt: "Sentences 6 and 7 of the draft are short. Which choice joins them best?",
+            choices: [
+              { text: "The rain clouds looked dark, yet we kept drawing.", correct: true },
+              { text: "The rain clouds looked dark, so we kept drawing." },
+              { text: "The rain clouds looked dark, or we kept drawing." },
+              { text: "The rain clouds looked dark, nor we kept drawing." }
+            ],
+            clue: "Ask how the second idea connects to the first. Would the clouds make you stop or keep going?",
+            hints: [
+              "Ask how the second idea connects to the first. Would the clouds make you stop or keep going?",
+              "Read sentences 6 and 7 together. Then try each joining word between them.",
+              "Nor goes with a sentence that says no, and sentence 6 does not say no. Check the other three."
+            ],
+            how: [
+              "Dark rain clouds are a reason to stop drawing, but the class kept going.",
+              "The second part is a surprise. Yet works like but and shows that surprise.",
+              "The answer is \"The rain clouds looked dark, yet we kept drawing.\" So would tell a result, and or gives a choice."
+            ],
+            misconception: "A common mix-up is thinking yet is a time word, as in not yet. Here yet works like but.",
+            why: "The answer is \"The rain clouds looked dark, yet we kept drawing.\" Yet works like but, and it shows that the second idea is a surprise. So tells a result, or gives a choice, and nor needs a no."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-4-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences that use the wrong joining word.",
+            targets: ["p3:1:2", "p3:2:1", "p3:2:2", "p3:2:3", "p3:3:1"],
+            answer: ["p3:2:1", "p3:2:3"],
+            pick: 2,
+            clue: "Read each sentence and ask how its two parts connect. Two of the joining words do not fit.",
+            hints: [
+              "Read each sentence and ask how its two parts connect. Two of the joining words do not fit.",
+              "Say each sentence aloud. Stop when a joining word makes the sentence sound odd.",
+              "In sentence 2, but fits, because nervous and smiled are different. Check the other four sentences."
+            ],
+            how: [
+              "Read each sentence and ask what job the joining word does.",
+              "Sentence 2 uses but, sentence 4 uses so, and sentence 7 uses for. Each one fits its sentence.",
+              "Sentence 3 uses yet, but the coach tells the class to do two things together, so and fits better. Sentence 5 uses so, but staying in the shallow end and swimming to the rope are two choices, so or fits better."
+            ],
+            misconception: "A common mix-up is thinking a joining word is wrong because it is a rare one. The word has to fit the meaning.",
+            why: "The wrong joining words are in \"She told us to kick our legs, yet to keep our faces down.\" and \"I could stay in the shallow end, so I could swim to the rope.\" The first should use and, and the second should use or. The joining words in sentences 2, 4 and 7 all fit."
+          },
+          {
+            id: "SK-GUM3-4-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "In which sentence does the joining word join two whole sentences?",
+            choices: [
+              { text: "The kitten was small yet brave." },
+              { text: "We packed apples and pears for the trip." },
+              { text: "Please sit on the rug or in your chair." },
+              { text: "Nina likes tea, but her brother likes juice.", correct: true }
+            ],
+            clue: "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
+            hints: [
+              "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
+              "Cover the joining word in each choice. Ask whether each side could stand alone as a sentence.",
+              "Apples and pears are two words, not two sentences. Check the other three."
+            ],
+            how: [
+              "Look at what the joining word connects in each choice.",
+              "In \"Nina likes tea, but her brother likes juice.\" both sides could stand alone: Nina likes tea. Her brother likes juice.",
+              "Small yet brave joins two words, and on the rug or in your chair joins two groups of words."
+            ],
+            misconception: "A common mix-up is picking a sentence with a comma. Check whether each side could stand alone.",
+            why: "The answer is \"Nina likes tea, but her brother likes juice.\" Each side could stand alone as a sentence. In the other choices, the joining word links two words or two groups of words."
+          },
+          {
+            id: "SK-GUM3-4-C13",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Which sentence means the same as the sentence below?",
+            stem: "Carlos was cold, so he put on a coat.",
+            choices: [
+              { text: "Carlos put on a coat, so he was cold." },
+              { text: "Carlos put on a coat, for he was cold.", correct: true },
+              { text: "Carlos put on a coat, but he was cold." },
+              { text: "Carlos put on a coat, or he was cold." }
+            ],
+            clue: "Find the cause and the result in the first sentence. Then find them in each choice.",
+            hints: [
+              "Find the cause and the result in the first sentence. Then find them in each choice.",
+              "In the first sentence, being cold comes first. In the choices, the coat comes first. Ask what the joining word must show.",
+              "Or gives a choice, and Carlos is not choosing. Check the other three."
+            ],
+            how: [
+              "In the first sentence, being cold is the reason, and putting on a coat is the result.",
+              "The new sentence names the coat first, so the joining word must lead to the reason. For gives a reason, like because.",
+              "The answer is \"Carlos put on a coat, for he was cold.\" The choice with so says the coat made him cold, but shows a surprise, and or shows a choice."
+            ],
+            misconception: "A common mix-up is keeping the same joining word when the parts switch places. When the parts switch, so changes to for.",
+            why: "The answer is \"Carlos put on a coat, for he was cold.\" Being cold is still the reason, and for gives the reason. So would say the coat made him cold, but shows a surprise, and or shows a choice."
+          },
+          {
+            id: "SK-GUM3-4-C14",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Which joining word belongs in the blank?",
+            text: "Mom said I could have a cookie {0} a granola bar, but not both.",
+            slots: [
+              {
+                options: ["and", "or", "so"],
+                answer: 1
+              }
+            ],
+            clue: "Read the whole sentence, including the end. Ask what Mom is letting you do.",
+            hints: [
+              "Read the whole sentence, including the end. Ask what Mom is letting you do.",
+              "The last part says but not both. Ask what that tells you about the two snacks.",
+              "So tells a result, and nothing in the sentence is a result. Decide between the other two."
+            ],
+            how: [
+              "The end of the sentence says but not both, so the snacks are two choices.",
+              "Or is the joining word that gives a choice.",
+              "The answer is or. And would mean you get both, and so tells a result."
+            ],
+            misconception: "A common mix-up is picking and because two snacks are named. The end of the sentence says not both.",
+            why: "The answer is or. Mom lets you pick one snack but not both, so the joining word must give a choice. And would add both snacks, and so would tell a result."
+          },
+          {
+            id: "SK-GUM3-4-C15",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+            ],
+            passages: [],
+            prompt: "Which TWO joining words make sense in the blank?",
+            stem: "The sand was very hot, ____ we still ran across it.",
+            pick: 2,
+            choices: [
+              { text: "nor" },
+              { text: "but", correct: true },
+              { text: "for" },
+              { text: "yet", correct: true },
+              { text: "or" }
+            ],
+            clue: "Read the whole sentence, including the word still. Ask how the second part connects to the first.",
+            hints: [
+              "Read the whole sentence, including the word still. Ask how the second part connects to the first.",
+              "Try each word in the blank. Ask whether the sentence makes sense and sounds right.",
+              "Nor goes with a sentence that says no, and the first part does not. Decide about the other four."
+            ],
+            how: [
+              "Hot sand is a reason not to run, but the children ran anyway. The second part is a surprise.",
+              "But and yet both show a surprise.",
+              "Or gives a choice, nor goes with a no, and for gives a reason, so those three do not fit."
+            ],
+            misconception: "A common mix-up is picking only but. Yet works like but, so both fit.",
+            why: "The answers are but and yet. Running across hot sand is a surprise, and both words show something different. Or gives a choice, nor goes with a no, and for gives a reason."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-4-S01",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Which TWO sentences have a joining word that fits the meaning?",
+      pick: 2,
+      choices: [
+        { text: "Mara can sing and dance.", correct: true },
+        { text: "Do you want a pear but a plum?" },
+        { text: "Tom was sleepy, so he went to bed early.", correct: true },
+        { text: "The game was fun, or we cheered a lot." },
+        { text: "It was snowing, so we wore shorts." }
+      ],
+      clue: "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
+      hints: [
+        "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
+        "Say each sentence aloud. Ask whether the two parts fit together the way the joining word says.",
+        "Snow is not a reason to wear shorts. Decide about the other four."
+      ],
+      how: [
+        "Read each sentence and think about what the joining word does.",
+        "Being sleepy is the reason Tom went to bed, so so fits. Singing and dancing are two things Mara can do, so and fits.",
+        "The others do not fit: snow would not lead to shorts, a choice needs or and not but, and cheering a lot is not a choice."
+      ],
+      misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does.",
+      why: "The answers are \"Tom was sleepy, so he went to bed early.\" and \"Mara can sing and dance.\" Being sleepy is why Tom went to bed, and and adds one more thing Mara can do. In the other sentences, the joining word does not match the meaning.",
+      like: ["SK-GUM3-4-P5"]
+    },
+    {
+      id: "SK-GUM3-4-S02",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p4"],
+      prompt: "The fourth sentence of the draft uses a joining word that does not fit. Which word belongs in the blank?",
+      text: "Our coach, Ms. Yang, shows us a new trick each week, {0} she helps us practice the old ones.",
+      slots: [
+        {
+          options: ["or", "and", "so"],
+          answer: 1
+        }
+      ],
+      clue: "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+      hints: [
+        "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+        "Read the sentence and picture what the coach does. Then try each joining word in the blank.",
+        "So tells a result, and teaching a trick does not cause practice. Decide between the other two."
+      ],
+      how: [
+        "Read both parts: the coach shows a new trick, and the coach helps the club practice old tricks.",
+        "She does both things. They are not a choice, a difference, or a result.",
+        "The answer is and, because and adds one more thing. Or gives a choice, and so tells a result."
+      ],
+      misconception: "A common mix-up is picking or because two actions are named. Or is for a choice, and the coach does both.",
+      why: "The answer is and. The coach does both things, so the second part adds one more thing. Or gives a choice, and so tells a result.",
+      like: ["SK-GUM3-4-C02"]
+    },
+    {
+      id: "SK-GUM3-4-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p4"],
+      prompt: "The fifth sentence of the draft has a joining word that does not fit. What is the best way to write it?",
+      choices: [
+        { text: "Double jumps look easy, so they take lots of practice." },
+        { text: "Double jumps look easy, or they take lots of practice." },
+        { text: "Double jumps look easy, for they take lots of practice." },
+        { text: "Double jumps look easy, but they take lots of practice.", correct: true }
+      ],
+      clue: "Read both parts. Ask whether the second part is a result, a choice, or something different.",
+      hints: [
+        "Read both parts. Ask whether the second part is a result, a choice, or something different.",
+        "Find the fifth sentence. Ask what you would expect after the word easy, and what the writer says instead.",
+        "Or gives a choice, and the writer is not choosing between two things. Check the other three."
+      ],
+      how: [
+        "Read both parts: double jumps look easy, but they take lots of practice.",
+        "The second part is different from what you would expect. That is a surprise.",
+        "The answer is \"Double jumps look easy, but they take lots of practice.\" So tells a result, or gives a choice, and for gives a reason."
+      ],
+      misconception: "A common mix-up is using so for any two ideas. So only tells a result, and looking easy does not cause practice.",
+      why: "The answer is \"Double jumps look easy, but they take lots of practice.\" But joins two ideas that are different. The other joining words do not fit: so tells a result, or gives a choice, and for gives a reason.",
+      like: ["SK-GUM3-4-C03"]
+    },
+    {
+      id: "SK-GUM3-4-S04",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Look at the first sentence of the third paragraph in the draft. Which choice uses the right joining word?",
+        choices: [
+          { text: "You can bring your own rope, or you can borrow one from the closet.", correct: true },
+          { text: "You can bring your own rope, but you can borrow one from the closet." },
+          { text: "You can bring your own rope, nor you can borrow one from the closet." },
+          { text: "You can bring your own rope, so you can borrow one from the closet." }
+        ]
+      },
+      partB: {
+        prompt: "Which sentence from the draft best supports the answer to Part A?",
+        choices: [
+          { text: "Our coach, Ms. Yang, shows us a new trick each week." },
+          { text: "Beginners can start with short ropes." },
+          { text: "You only need one rope, so choose the one you like.", correct: true },
+          { text: "We meet every Thursday for an hour after school in the gym." }
+        ]
+      },
+      clue: "Find the two ideas the joining word connects, and ask how they are related.",
+      hints: [
+        "Find the two ideas the joining word connects, and ask how they are related.",
+        "For Part A, say each choice and ask what job the joining word does. For Part B, look for a sentence about how many ropes a member needs.",
+        "In Part A, nor goes with a sentence that says no, and this sentence does not say no. Check the other choices."
+      ],
+      how: [
+        "Part A: the sentence names two ways to get a rope, your own or one from the closet. A member would not use both.",
+        "Two ways to pick from make a choice, and or is the joining word for a choice.",
+        "Part A answer: \"You can bring your own rope, or you can borrow one from the closet.\" But, nor and so do not fit the meaning.",
+        "Part B answer: \"You only need one rope, so choose the one you like.\" It shows that a member picks only one rope."
+      ],
+      misconception: "A common mix-up is picking so because the sentence tells what you can do. So tells a result, and the second part is not a result of the first.",
+      why: "Part A: \"You can bring your own rope, or you can borrow one from the closet.\" Part B: \"You only need one rope, so choose the one you like.\" A member needs only one rope, so the two parts are a choice and need or. The other sentences do not talk about choosing a rope.",
+      like: ["SK-GUM3-4-C04"]
+    },
+    {
+      id: "SK-GUM3-4-S05",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p4"],
+      prompt: "Select the sentence in which the word for works as a joining word that gives a reason.",
+      targets: ["p4:1:2", "p4:1:3", "p4:2:3", "p4:3:2", "p4:3:3"],
+      answer: ["p4:3:3"],
+      pick: 1,
+      clue: "Some words have more than one job. Ask whether for joins two parts of a sentence or only starts a short phrase.",
+      hints: [
+        "Some words have more than one job. Ask whether for joins two parts of a sentence or only starts a short phrase.",
+        "Look for the word for in the sentences. Then ask what comes right after it, a whole new idea or just a few words.",
+        "In sentence 2, for starts the phrase for an hour. Check the other sentences."
+      ],
+      how: [
+        "Find the word for in each sentence. A joining word has a whole idea on each side of it.",
+        "In sentences 2 and 6, for begins a short phrase: for an hour, and for every member. Those are not joining words.",
+        "Sentence 9 says Please be on time, for we start right at three o'clock. For joins two ideas and gives a reason, like because."
+      ],
+      misconception: "A common mix-up is picking any sentence that has the word for. A joining word must connect two ideas.",
+      why: "The answer is sentence 9, \"Please be on time, for we start right at three o'clock.\" For joins two ideas and gives the reason to be on time. In sentences 2 and 6, for only starts a short phrase, and the other sentences do not use for.",
+      like: ["SK-GUM3-4-C05"]
+    },
+    {
+      id: "SK-GUM3-4-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Which sentence puts the two short sentences together best?",
+      stem: "Dana wanted to play outside. It started to rain.",
+      choices: [
+        { text: "Dana wanted to play outside, so it started to rain." },
+        { text: "Dana wanted to play outside, but it started to rain.", correct: true },
+        { text: "Dana wanted to play outside, or it started to rain." },
+        { text: "Dana wanted to play outside, for it started to rain." }
+      ],
+      clue: "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+      hints: [
+        "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+        "Say each sentence aloud. Ask whether the two parts make sense together.",
+        "Or gives a choice, and Dana is not choosing between the two parts. Check the other three."
+      ],
+      how: [
+        "Wanting to play outside and rain starting work against each other.",
+        "The second part gets in the way of what Dana wanted. That calls for but.",
+        "The answer is \"Dana wanted to play outside, but it started to rain.\" So and for make the rain a result or a reason, and or makes it a choice."
+      ],
+      misconception: "A common mix-up is picking so because the sentences are about the same day. So must tell a result.",
+      why: "The answer is \"Dana wanted to play outside, but it started to rain.\" But joins two ideas that are different. So tells a result, or gives a choice, and for gives a reason, and none of those fit.",
+      like: ["SK-GUM3-4-C06"]
+    },
+    {
+      id: "SK-GUM3-4-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences where nor is used correctly.",
+      pick: 2,
+      choices: [
+        { text: "Ana likes cats, nor she likes dogs." },
+        { text: "I washed the car, nor the sun came out." },
+        { text: "Ben did not bring lunch, nor did he bring a snack.", correct: true },
+        { text: "We can walk, nor we can drive." },
+        { text: "The bus was not late, nor was it early.", correct: true }
+      ],
+      clue: "Nor goes with a sentence that says no. Look at what the first part says.",
+      hints: [
+        "Nor goes with a sentence that says no. Look at what the first part says.",
+        "Read each sentence. Ask whether the first part says something did not happen.",
+        "Ana likes cats says yes, not no. Decide about the other four."
+      ],
+      how: [
+        "Nor is used after a part that says something did not happen.",
+        "Ben did not bring lunch, and the bus was not late. Both start with a no, so nor can follow.",
+        "Ana likes cats, we can walk, and I washed the car all say yes, so nor does not fit."
+      ],
+      misconception: "A common mix-up is using nor like or in a sentence that has no no. Nor needs a no in the first part.",
+      why: "The answers are \"Ben did not bring lunch, nor did he bring a snack.\" and \"The bus was not late, nor was it early.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit.",
+      like: ["SK-GUM3-4-C07"]
+    },
+    {
+      id: "SK-GUM3-4-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Which joining word goes in the blank of each sentence?",
+      cols: ["for", "yet", "nor", "so"],
+      rows: [
+        { text: "It was dark, ___ I was not afraid.", answer: 1 },
+        { text: "Take a snack, ___ the trip is long.", answer: 0 },
+        { text: "Pam was late, ___ she missed the bus.", answer: 3 },
+        { text: "Rob did not laugh, ___ did he smile.", answer: 2 }
+      ],
+      clue: "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
+      hints: [
+        "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
+        "Start with the sentence you are surest about. Think about which sentence begins with a no.",
+        "Rob did not laugh begins with a no. Decide the other rows one at a time."
+      ],
+      how: [
+        "Ask how the second part connects to the first in each sentence.",
+        "Rob did not laugh, nor did he smile. Nor goes with a no.",
+        "Missing the bus is the result of being late, so so fits. The long trip is the reason for a snack, so for fits. Not being afraid in the dark is a surprise, so yet fits."
+      ],
+      misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
+      why: "Yet goes with the dark sentence, because not being afraid is a surprise. Nor goes with Rob did not laugh. So goes with Pam was late, because being late is why she missed the bus. For goes with the snack sentence, because the long trip is the reason.",
+      like: ["SK-GUM3-4-C08"]
+    },
+    {
+      id: "SK-GUM3-4-S09",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 3 of the draft has two joining words that do not fit. Choose the words that fix them.",
+      text: "My dad wanted to make a pirate, {0} we did not have a hat, {1} we used a paper bag.",
+      slots: [
+        {
+          options: ["so", "but", "nor"],
+          answer: 1
+        },
+        {
+          options: ["or", "so", "yet"],
+          answer: 1
+        }
+      ],
+      clue: "Read the whole sentence. Ask how each part connects to the part before it.",
+      hints: [
+        "Read the whole sentence. Ask how each part connects to the part before it.",
+        "Say each choice in its blank. Think about what Dad wanted, what was missing, and what they did.",
+        "Or gives a choice, and Dad is not choosing between two things in the first blank. Decide the rest."
+      ],
+      how: [
+        "Dad wanted a pirate, and they had no hat. That is a problem, so the first blank shows something different.",
+        "They had no hat, and they used a paper bag. The paper bag is the result.",
+        "The answers are but and so."
+      ],
+      misconception: "A common mix-up is choosing the same kind of joining word for both blanks. Each blank connects its parts in a different way.",
+      why: "The answers are but and so. The wish to make a pirate goes against having no hat, so but fits first. Having no hat is why they used a paper bag, so so fits second.",
+      like: ["SK-GUM3-4-C09"]
+    },
+    {
+      id: "SK-GUM3-4-S10",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p5"],
+      prompt: "Which choice puts sentences 6 and 7 of the draft together best?",
+      choices: [
+        { text: "The scarecrows shook on their poles, so nobody left the park." },
+        { text: "The scarecrows shook on their poles, or nobody left the park." },
+        { text: "The scarecrows shook on their poles, yet nobody left the park.", correct: true },
+        { text: "The scarecrows shook on their poles, for nobody left the park." }
+      ],
+      clue: "Ask how the second idea connects to the first. Would shaking scarecrows make people stay or leave?",
+      hints: [
+        "Ask how the second idea connects to the first. Would shaking scarecrows make people stay or leave?",
+        "Read sentences 6 and 7 together. Then try each joining word between them.",
+        "For gives a reason, and the park was not emptied because the scarecrows shook. Check the other three."
+      ],
+      how: [
+        "Shaking scarecrows in the wind are a reason to go home, but nobody left.",
+        "The second part is a surprise. Yet works like but and shows that surprise.",
+        "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" So would tell a result, or would give a choice, and for would give a reason."
+      ],
+      misconception: "A common mix-up is thinking yet is a time word, as in not yet. Here yet works like but.",
+      why: "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" Yet works like but, and it shows that the second idea is a surprise. So tells a result, or gives a choice, and for gives a reason.",
+      like: ["SK-GUM3-4-C10"]
+    },
+    {
+      id: "SK-GUM3-4-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences that use the wrong joining word.",
+      targets: ["p6:1:2", "p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4"],
+      answer: ["p6:2:1", "p6:2:2"],
+      pick: 2,
+      clue: "Read each sentence and ask how its two parts connect. Two of the joining words do not fit.",
+      hints: [
+        "Read each sentence and ask how its two parts connect. Two of the joining words do not fit.",
+        "Say each sentence aloud. Stop when a joining word makes the sentence sound odd.",
+        "In sentence 6, but fits, because spilling syrup and not minding are different. Check the other four sentences."
+      ],
+      how: [
+        "Read each sentence and ask what job the joining word does.",
+        "Sentence 2 uses but, sentence 5 uses for, and sentence 6 uses but. Each one fits its sentence.",
+        "Sentence 3 uses or, but the hot sun made the line grow, so so fits better. Sentence 4 uses so, but some kids wanted cherry and some wanted lime, so and fits better."
+      ],
+      misconception: "A common mix-up is thinking a joining word is wrong because it is a rare one. The word has to fit the meaning.",
+      why: "The wrong joining words are in \"The sun was hot, or the line grew long.\" and \"Some kids wanted cherry, so some kids wanted lime.\" The first should use so, and the second should use and. The joining words in sentences 2, 5 and 6 all fit.",
+      like: ["SK-GUM3-4-C11"]
+    },
+    {
+      id: "SK-GUM3-4-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "In which sentence does the joining word connect two whole sentences?",
+      choices: [
+        { text: "Pedro hurt his knee, so he sat on the bench.", correct: true },
+        { text: "Grandpa grows tomatoes and peppers." },
+        { text: "The path was narrow yet safe." },
+        { text: "Do you want to sit by the door or near the stage?" }
+      ],
+      clue: "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
+      hints: [
+        "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
+        "Cover the joining word in each choice. Ask whether each side could stand alone as a sentence.",
+        "Tomatoes and peppers are two words, not two sentences. Check the other three."
+      ],
+      how: [
+        "Look at what the joining word connects in each choice.",
+        "In \"Pedro hurt his knee, so he sat on the bench.\" both sides could stand alone: Pedro hurt his knee. He sat on the bench.",
+        "Narrow yet safe joins two words, and by the door or near the stage joins two groups of words."
+      ],
+      misconception: "A common mix-up is picking a sentence with a comma. Check whether each side could stand alone.",
+      why: "The answer is \"Pedro hurt his knee, so he sat on the bench.\" Each side could stand alone as a sentence. In the other choices, the joining word links two words or two groups of words.",
+      like: ["SK-GUM3-4-C12"]
+    },
+    {
+      id: "SK-GUM3-4-S13",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Which sentence has the same meaning as the sentence below?",
+      stem: "Ravi drank a glass of water, for he was thirsty.",
+      choices: [
+        { text: "Ravi was thirsty, but he drank a glass of water." },
+        { text: "Ravi was thirsty, or he drank a glass of water." },
+        { text: "Ravi was thirsty, so he drank a glass of water.", correct: true },
+        { text: "Ravi was thirsty, for he drank a glass of water." }
+      ],
+      clue: "Find the reason and the result in the first sentence. Then find them in each choice.",
+      hints: [
+        "Find the reason and the result in the first sentence. Then find them in each choice.",
+        "In the first sentence, the water comes first. In the choices, being thirsty comes first. Ask what the joining word must show.",
+        "Or gives a choice, and Ravi is not choosing. Check the other three."
+      ],
+      how: [
+        "In the first sentence, being thirsty is the reason, and drinking water is the result.",
+        "The new sentence names the thirst first, so the joining word must lead to the result. So tells what happened because of something.",
+        "The answer is \"Ravi was thirsty, so he drank a glass of water.\" The choice with for says the water was the reason for the thirst, but shows a surprise, and or shows a choice."
+      ],
+      misconception: "A common mix-up is keeping the same joining word when the parts switch places. When the parts switch, for changes to so.",
+      why: "The answer is \"Ravi was thirsty, so he drank a glass of water.\" Being thirsty is still the reason, and so tells the result. For would say the water was the reason for the thirst, but shows a surprise, and or shows a choice.",
+      like: ["SK-GUM3-4-C13"]
+    },
+    {
+      id: "SK-GUM3-4-S14",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Choose the joining word that completes the sentence.",
+      text: "You may take a pencil {0} a marker from the box, but only one.",
+      slots: [
+        {
+          options: ["yet", "and", "or"],
+          answer: 2
+        }
+      ],
+      clue: "Read the whole sentence, including the end. Ask what the box lets you take.",
+      hints: [
+        "Read the whole sentence, including the end. Ask what the box lets you take.",
+        "The last part says but only one. Ask what that tells you about the pencil and the marker.",
+        "Yet shows something different, and nothing in the sentence is a surprise. Decide between the other two."
+      ],
+      how: [
+        "The end of the sentence says but only one, so the pencil and the marker are two choices.",
+        "Or is the joining word that gives a choice.",
+        "The answer is or. And would mean you take both, and yet shows something different."
+      ],
+      misconception: "A common mix-up is picking and because two things are named. The end of the sentence says only one.",
+      why: "The answer is or. You may take only one thing, so the joining word must give a choice. And would add both things, and yet would show something different.",
+      like: ["SK-GUM3-4-C14"]
+    },
+    {
+      id: "SK-GUM3-4-S15",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
+      ],
+      passages: [],
+      prompt: "Choose the TWO joining words that fit the blank.",
+      stem: "The lake was freezing, ____ we jumped in anyway.",
+      pick: 2,
+      choices: [
+        { text: "but", correct: true },
+        { text: "or" },
+        { text: "yet", correct: true },
+        { text: "nor" },
+        { text: "so" }
+      ],
+      clue: "Read the whole sentence, including the word anyway. Ask how the second part connects to the first.",
+      hints: [
+        "Read the whole sentence, including the word anyway. Ask how the second part connects to the first.",
+        "Try each word in the blank. Ask whether the sentence makes sense and sounds right.",
+        "Nor goes with a sentence that says no, and the first part does not. Decide about the other four."
+      ],
+      how: [
+        "A freezing lake is a reason not to jump in, but the children jumped anyway. The second part is a surprise.",
+        "But and yet both show a surprise.",
+        "So tells a result, nor goes with a no, and or gives a choice, so those three do not fit."
+      ],
+      misconception: "A common mix-up is picking only but. Yet works like but, so both fit.",
+      why: "The answers are yet and but. Jumping into a freezing lake is a surprise, and both words show something different. So tells a result, nor goes with a no, and or gives a choice.",
+      like: ["SK-GUM3-4-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-4-P1": {
+      hints: [
+        "Ask why the family brought umbrellas. Read both parts and think about how they connect.",
+        "Say each joining word in the blank. Ask which one tells what happened because of the clouds.",
+        "But shows something different, and nothing in the sentence is different. Decide between the other two."
+      ],
+      how: [
+        "Dark clouds are the reason the family brought umbrellas.",
+        "So tells what happened because of something.",
+        "The answer is so. But shows something different, and or gives a choice."
+      ],
+      misconception: "A common mix-up is picking and for any two ideas. Check whether the second idea happened because of the first."
+    },
+    "SK-GUM3-4-P2": {
+      hints: [
+        "Do the two parts agree, or does the second part show something different?",
+        "Say each joining word in the blank. Think about what Talia likes and what her brother does.",
+        "So tells a result, and nothing in the sentence is a result. Decide between the other two."
+      ],
+      how: [
+        "Talia likes peaches, and her brother does not like them.",
+        "The two parts are different, so the joining word must show something different.",
+        "The answer is but. So tells a result, and or gives a choice."
+      ],
+      misconception: "A common mix-up is picking so because both parts are about the same fruit. So tells a result."
+    },
+    "SK-GUM3-4-P3": {
+      hints: [
+        "Find the word that links the two things you could do. Cover it and see if the two parts are still connected.",
+        "Read the sentence with one word covered at a time. Ask which word connects two ideas.",
+        "To is a small word that points to a place. Decide among the other three."
+      ],
+      how: [
+        "Look for the word that connects the two actions: ride bikes and walk.",
+        "Or gives a choice between the two actions.",
+        "The answer is or. Can, to and walk are not joining words."
+      ],
+      misconception: "A common mix-up is picking the first small word you see. A joining word must connect two ideas."
+    },
+    "SK-GUM3-4-P4": {
+      hints: [
+        "Try each joining word in a sentence like \"I like cats ___ dogs.\" or \"It rained, ___ we stayed in.\" Which job does it do?",
+        "Start with the job you are surest about. Then decide the rest one at a time.",
+        "Gives a choice goes with or. Decide the other rows."
+      ],
+      how: [
+        "Say a short sentence with each joining word.",
+        "And adds one more thing, and but shows something different.",
+        "Or gives a choice, and so tells a result."
+      ],
+      misconception: "A common mix-up is mixing up and and so. And adds a thing, and so tells a result."
+    },
+    "SK-GUM3-4-P5": {
+      hints: [
+        "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
+        "Say each sentence aloud. Ask whether the two parts fit together the way the joining word says.",
+        "A coat is not a reason to leave it at home when it is cold. Decide about the other four."
+      ],
+      how: [
+        "Read each sentence and think about what the joining word does.",
+        "Being hungry is why I ate, so so fits. The piano and the drums are two things Hana can play, so and fits.",
+        "The others do not fit: it was cold, so the coat should come along; a choice needs or; and a funny movie is not a choice."
+      ],
+      misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-4-T1", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the joining word that makes the most sense.",

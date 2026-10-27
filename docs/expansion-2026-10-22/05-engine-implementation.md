@@ -270,3 +270,27 @@ Fields added: `rev` (attempts and review results), `seenRev` (progress record). 
 06c found that a distractor of SK-TC1c-T2 (lesson 3.T.C.1.c) changed after the phase-1 snapshot, with the same id, points and key: from "Peepers stop singing when you come near." to "Peepers are so small that they are hard to see." Nothing recorded it. The B4 review of that lesson (`batches/B4-review-C1c.md`, line 169) says the first claim was not verifiable from the source, so this is probably a review fix, but I cannot prove the link. `STATUS.md` now lists 3.T.C.1.c as ACCEPTED (fifth review). With the new tooling this edit is "wording only": same `mat`, so no `testRev` change is required, and the version record would show it as an editorial edit until refreshed. No pass was affected, because the key did not move. Because the lesson is accepted, a reviewer should confirm the final wording and record it in the ledger (10.2, question 1).
 
 ### 10.6 Final gates, frozen copy `scratchpad/eng/snap5` (2026-10-24T01:30:31Z, 129 files; `snap5-md5.txt`)
+Run by `scratchpad/eng/run5.sh` (one sequence on `node verification/serve.js . 8770`), then the guard again alone (`g5.sh`), because the first sequence's guard run was killed by a session restart.
+
+| Suite | Result |
+|---|---|
+| check-content `--all` and manifest | PASS, 0 failures, 10 warnings (101 lessons; 40 core lessons, 600 core items, 600 similar) |
+| check-writing | 0 failures, 0 warnings |
+| readability | exit 0 |
+| copy | 28 assertions passed |
+| path-headers | 48 passed, 0 failed |
+| path-a11y (axe) | 12 + 12 + 12 runs, 0 violations, 0 contrast failures |
+| skills-recovery | 67 passed, 0 failed |
+| writing-recovery | 75 passed, 0 failed |
+| first-visit | 124 passed, 0 failed |
+| practice-own | 73 passed, 0 failed |
+| review | 28 passed, 0 failed |
+| versioning (new) | 37 passed, 0 failed |
+| **path.py** | **139 passed, 9 failed: fails only on in-progress content** |
+| **guard.py, plain, `snap5` as it stands** | **117 passed, 2 failed (14.0, 14.3), then a timeout that ended the run: fails only on in-progress content** |
+| guard.py, plain, `snap5b` (snap5 with only `L-GC2.js` put back to its `snap4` text), one pass | 120 passed, 0 failed, exit 0 |
+
+**Why the two failures are content, not engine.** The content team is authoring TF-FEAT, TF-DIG (new file `T-CF.js`) and L-GC2 while these ran. (1) path.py hard-codes "101 activities" and "101 of 101"; the lesson count is now 101 plus the new lessons, so its 8 count checks and its finish-message check fail (the same suite gave 148/0 on `snap4`). (2) guard section 14 uses lesson 3.L.GC.2.b as its form-B fixture and expects the old Practice, Try, Test chain; L-GC2 has since given that lesson `core`, so `SK:3.L.GC.2.b:y` is now an own set whose next set is `:y2`. With the older `L-GC2.js` alone swapped back, the whole guard passes 120/0. Neither test was changed (they are not mine to loosen while the lessons are moving); they need new numbers or a different fixture lesson once the content settles. The engine files in this phase are identical in all runs.
+
+### 10.7 Files changed in phase 4
+`js/skills.js`, `js/review.js`, `verification/check-content.js`, `verification/versioning.py` (new), `verification/assessment-versions.json` (new), `docs/expansion-2026-10-22/review-ledger.json` (new, empty), `verification/review.py`, `verification/serve.js` (phase 3), `docs/expansion-2026-10-22/01-architecture.md`, `docs/expansion-2026-10-22/05-engine-implementation.md`. The question-first worktree `/home/claude/pp-qf` was not touched. For merging there: every change is additive (new optional lesson field `testRev`; new fields `rev` on attempts and review results and `seenRev` on progress records; new files; new check-content flags). The one place it can conflict is `recordTest` and `bestText` in `js/skills.js`.
