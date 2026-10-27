@@ -10465,7 +10465,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Which break of feathers is the best one? Use the bar (|) as the line end.",
+      prompt: "Pick the right way to split feathers when the line runs out. A bar (|) is the split.",
       choices: [
         { text: "feath- | ers", correct: true },
         { text: "feat- | hers" },
