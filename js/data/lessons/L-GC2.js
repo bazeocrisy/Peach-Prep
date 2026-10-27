@@ -380,31 +380,28 @@ PP.addLesson({
         items: [
           {
             id: "SK-GC2a-C06",
-            type: "mc",
+            type: "hottext",
             points: 1,
             dok: 2,
             std: ["3.L.GC.2.a"],
             passages: ["p3"],
-            prompt: "Which sentence in Amari's draft is a fragment?",
-            choices: [
-              { text: "(5) When my box was almost full.", correct: true },
-              { text: "(7) We taped the lid shut before we went to bed." },
-              { text: "(8) Mom wrote a note we signed it." },
-              { text: "(9) Next year, I will add even more photos." }
-            ],
-            clue: "A fragment is only a piece of a sentence. Check each choice for a who, a does-what and a thought that does not leave you waiting.",
+            prompt: "One sentence in Amari's draft is a fragment. Select that sentence.",
+            clue: "A fragment is only a piece of a sentence. Check each sentence for a who, a does-what and a thought that does not leave you waiting.",
             hints: [
-              "A fragment is only a piece of a sentence. Check each choice for a who, a does-what and a thought that does not leave you waiting.",
-              "Read each choice by itself, out loud, as if it were the only sentence on the page. Listen for the one that makes you wait.",
-              "One choice has two whole thoughts, so its problem is not a missing piece. Look at the other three."
+              "A fragment is only a piece of a sentence. Check each sentence for a who, a does-what and a thought that does not leave you waiting.",
+              "Read each sentence by itself, out loud, as if it were the only sentence on the page. Listen for the one that makes you wait.",
+              "One sentence has two whole thoughts, so its problem is not a missing piece. Look at the other sentences."
             ],
             how: [
-              "Read each choice by itself and ask: Does it leave me waiting?",
+              "Read each sentence by itself and ask: Does it leave me waiting?",
               "\"(7) We taped the lid shut before we went to bed.\" and \"(9) Next year, I will add even more photos.\" each have a whole thought. \"(8) Mom wrote a note we signed it.\" has too much: two whole thoughts with nothing between them.",
               "\"(5) When my box was almost full.\" has a who and a does-what, but When leaves you waiting for what happens. It is a fragment."
             ],
             misconception: "A common mix-up is choosing the run-on because it sounds wrong. A fragment is missing a piece. A run-on has too much.",
-            why: "The answer is sentence 5, \"(5) When my box was almost full.\" The word When leaves you waiting to find out what happened, so it is not a whole thought. Sentence 8 is a run-on, not a fragment. Sentences 7 and 9 each have a whole thought."
+            why: "The answer is sentence 5, \"(5) When my box was almost full.\" The word When leaves you waiting to find out what happened, so it is not a whole thought. Sentence 8 is a run-on, not a fragment. Sentences 7 and 9 each have a whole thought.",
+            targets: ["p3:2:2", "p3:2:3", "p3:3:1", "p3:3:2", "p3:3:3"],
+            answer: ["p3:2:3"],
+            pick: 1
           },
           {
             id: "SK-GC2a-C07",
@@ -468,31 +465,32 @@ PP.addLesson({
           },
           {
             id: "SK-GC2a-C09",
-            type: "mc",
+            type: "dropdown",
             points: 1,
             dok: 2,
             std: ["3.L.GC.2.a"],
             passages: ["p4"],
-            prompt: "Sentence 7 in Malik's draft has no who. Which choice fixes it best?",
-            choices: [
-              { text: "Then he covered it with a cloth.", correct: true },
-              { text: "Then, covered it with a cloth." },
-              { text: "Then the cloth over the jar." },
-              { text: "Then covered it with a cloth quickly." }
-            ],
+            prompt: "Sentence 7 in Malik's draft has no who. Choose the word that fixes it best.",
             clue: "Every complete sentence needs a who and a does-what. Find the piece the broken sentence is missing, then add it.",
             hints: [
               "Every complete sentence needs a who and a does-what. Find the piece the broken sentence is missing, then add it.",
               "Read sentences 6 and 7 together. Ask who covered the jar, and where that who belongs in sentence 7.",
-              "Adding a comma does not add a who. Check the other choices to see which ones really name someone."
+              "A describing word does not add a who. Check the other words to see which ones really name someone."
             ],
             how: [
               "Sentence 7 has a does-what, covered, but no one doing it.",
               "Sentence 6 says Dad poured the ants into the jar, so the one who covered it is Dad. A word that stands for Dad is he.",
-              "The answer is \"Then he covered it with a cloth.\" The other choices still have no one doing the action."
+              "The answer is he: \"Then he covered it with a cloth.\" The other words still leave no one doing the action."
             ],
-            misconception: "A common mix-up is changing the punctuation or adding more words without adding a who.",
-            why: "The answer is \"Then he covered it with a cloth.\" Now the sentence has a who (he) and a does-what (covered). \"Then, covered it with a cloth.\" only adds a comma. \"Then the cloth over the jar.\" has no does-what. \"Then covered it with a cloth quickly.\" still has no who."
+            misconception: "A common mix-up is adding a describing word or a place word without adding a who.",
+            why: "The answer is he. Now the sentence has a who (he) and a does-what (covered). Quickly only tells how, so it does not add a who. Over only tells where, so it does not add a who either.",
+            text: "Then {0} covered it with a cloth.",
+            slots: [
+              {
+                options: ["he", "quickly", "over"],
+                answer: 0
+              }
+            ]
           },
           {
             id: "SK-GC2a-C10",
@@ -564,31 +562,33 @@ PP.addLesson({
           },
           {
             id: "SK-GC2a-C12",
-            type: "mc",
-            points: 1,
+            type: "ms",
+            points: 2,
             dok: 2,
             std: ["3.L.GC.2.a"],
             passages: ["p5"],
-            prompt: "Sentence 4 in Imani's draft is a fragment. Which choice fixes it by joining it to sentence 3?",
+            prompt: "Sentence 4 in Imani's draft is a fragment. Choose the TWO choices that fix it.",
             choices: [
               { text: "My group built a tiny kitchen with a stove made of clay.", correct: true },
+              { text: "My group built a tiny kitchen. It had a stove made of clay.", correct: true },
               { text: "My group built a tiny kitchen, and with a stove made of clay." },
-              { text: "My group built a tiny kitchen with a stove. Made of clay." },
+              { text: "My group built a tiny kitchen. With a stove made of clay." },
               { text: "My group built a tiny kitchen because with a stove made of clay." }
             ],
-            clue: "A fragment is missing a piece. Find what sentence 4 is missing, then borrow it from the sentence next to it.",
+            clue: "A fragment is missing a piece. Find what sentence 4 is missing, then either borrow it from the sentence next to it or add it.",
             hints: [
-              "A fragment is missing a piece. Find what sentence 4 is missing, then borrow it from the sentence next to it.",
+              "A fragment is missing a piece. Find what sentence 4 is missing, then either borrow it from the sentence next to it or add it.",
               "Read sentence 4 by itself. Does it have a who? Does it have a does-what? Then see what sentence 3 has that sentence 4 needs.",
-              "Putting and in front of sentence 4 does not give it a who or a does-what. Check the other choices."
+              "Putting and in front of sentence 4 does not give it a who or a does-what. Check the other four choices."
             ],
             how: [
               "Sentence 4, \"With a stove made of clay,\" has no who and no does-what. It only tells what the kitchen had.",
               "Sentence 3 has the who and the does-what: \"My group built a tiny kitchen.\" Sentence 4 tells what the kitchen had.",
-              "Attach the extra detail to the end of sentence 3: \"My group built a tiny kitchen with a stove made of clay.\""
+              "Two fixes work. Join the detail to sentence 3: \"My group built a tiny kitchen with a stove made of clay.\" Or give it its own who and does-what: \"My group built a tiny kitchen. It had a stove made of clay.\""
             ],
             misconception: "A common mix-up is adding a joining word such as and or because. A joining word does not give a fragment the piece it is missing.",
-            why: "The answer is \"My group built a tiny kitchen with a stove made of clay.\" Sentence 4 only tells what the kitchen had. Joined to sentence 3, it finishes a whole thought. Adding and or because leaves a fragment. Splitting the phrase makes a new fragment, \"Made of clay.\""
+            why: "The answers are \"My group built a tiny kitchen with a stove made of clay.\" and \"My group built a tiny kitchen. It had a stove made of clay.\" The first joins the detail to sentence 3 so it finishes a whole thought. The second gives the detail its own who (it) and does-what (had). Adding and or because leaves a fragment, and \"With a stove made of clay.\" is still only a piece.",
+            pick: 2
           },
           {
             id: "SK-GC2a-C13",
@@ -652,7 +652,9 @@ PP.addLesson({
                 correct: true
               },
               { text: "Kofi is right, because \"The soup cooled\" can stand alone as a sentence." },
-              { text: "Both are right, because one sentence can be compound and complex at once." },
+              {
+                text: "Both are right, because the sentence tells two things and has a joining word."
+              },
               { text: "Neither is right, because the sentence is only a simple sentence." }
             ],
             clue: "To decide between two students, test each reason. Ask whether the part after the joining word can stand alone.",
@@ -667,12 +669,12 @@ PP.addLesson({
               "One whole thought plus a part that cannot stand alone makes a complex sentence, so Zuri is right."
             ],
             misconception: "A common mix-up is counting the things that happen. A sentence is compound only when it joins two parts that could each be a whole sentence.",
-            why: "The answer is \"Zuri is right, because the part that starts with after cannot stand alone.\" The sentence is complex: one whole thought plus a part that starts with after. Kofi is wrong. \"The soup cooled\" can stand alone, but the other part cannot, so the sentence does not have two whole thoughts joined by and, but, or, so. A sentence is not both kinds, and it is not simple, because it has a part that cannot stand alone."
+            why: "The answer is \"Zuri is right, because the part that starts with after cannot stand alone.\" The sentence is complex: one whole thought plus a part that starts with after. Kofi is wrong. \"The soup cooled\" can stand alone, but the other part cannot, so the sentence does not have two whole thoughts joined by and, but, or, so. Telling two things does not make a sentence compound, and it is not simple, because it has a part that cannot stand alone."
           },
           {
             id: "SK-GC2a-C15",
             type: "dropdown",
-            points: 1,
+            points: 2,
             dok: 3,
             std: ["3.L.GC.2.a"],
             passages: [],
@@ -862,32 +864,29 @@ PP.addLesson({
     },
     {
       id: "SK-GC2a-S06",
-      type: "mc",
+      type: "hottext",
       points: 1,
       dok: 2,
       std: ["3.L.GC.2.a"],
       passages: ["p7"],
       like: ["SK-GC2a-C06"],
-      prompt: "Which of these lines from Kofi's draft is only a piece of a sentence?",
-      choices: [
-        { text: "When the tracks were done.", correct: true },
-        { text: "Before we built the tunnel, we drew a plan on paper." },
-        { text: "The tunnel went up fast the bridge took all afternoon." },
-        { text: "Now my train town is my favorite place to play." }
-      ],
-      clue: "A fragment is only a piece of a sentence. Check each choice for a who, a does-what and a thought that does not leave you waiting.",
+      prompt: "Which numbered line in Kofi's train-town draft leaves the reader waiting?",
+      clue: "A fragment is only a piece of a sentence. Check each line for a who, a does-what and a thought that does not leave you waiting.",
       hints: [
-        "A fragment is only a piece of a sentence. Check each choice for a who, a does-what and a thought that does not leave you waiting.",
-        "Read each choice alone and out loud. Listen for the one that makes you wait.",
-        "One choice has two whole thoughts, so its problem is not a missing piece. Look at the other three."
+        "A fragment is only a piece of a sentence. Check each line for a who, a does-what and a thought that does not leave you waiting.",
+        "Read each line alone and out loud. Listen for the one that makes you wait.",
+        "One line has two whole thoughts, so its problem is not a missing piece. Look at the other lines."
       ],
       how: [
-        "Read each choice by itself and ask whether it leaves you waiting.",
+        "Read each line by itself and ask whether it leaves you waiting.",
         "\"Before we built the tunnel, we drew a plan on paper.\" starts with a waiting part, but it ends with a whole thought. \"Now my train town is my favorite place to play.\" is whole. \"The tunnel went up fast the bridge took all afternoon.\" has too much.",
         "\"When the tracks were done.\" has a who and a does-what, but When leaves you waiting. It is a fragment."
       ],
       misconception: "A common mix-up is choosing a sentence that starts with a waiting word but also has a whole thought.",
-      why: "The answer is \"When the tracks were done.\" It leaves you waiting to find out what happened. The Before line starts the same way but has a whole thought after the comma. The tunnel line is a run-on, and the train town line is a whole thought."
+      why: "The answer is \"When the tracks were done.\" It leaves you waiting to find out what happened. The Before line starts the same way but has a whole thought after the comma. The tunnel line is a run-on, and the train town line is a whole thought.",
+      targets: ["p7:2:3", "p7:2:4", "p7:3:1", "p7:3:2", "p7:3:3"],
+      answer: ["p7:2:3"],
+      pick: 1
     },
     {
       id: "SK-GC2a-S07",
@@ -949,36 +948,33 @@ PP.addLesson({
     },
     {
       id: "SK-GC2a-S09",
-      type: "mc",
+      type: "dropdown",
       points: 1,
       dok: 2,
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C09"],
-      prompt: "Which choice puts a person into line 2 so it is a whole sentence?",
-      stem: [
-        "(1) Lena found a loose button.",
-        "(2) Sewed it back onto her coat."
-      ],
-      choices: [
-        { text: "Next she sewed it back onto her coat.", correct: true },
-        { text: "Next, sewed it back onto her coat." },
-        { text: "Next the button back onto her coat." },
-        { text: "Sewed it back onto her coat carefully." }
-      ],
+      prompt: "Pick the word that makes the second sentence complete.",
       clue: "Every complete sentence needs a who and a does-what. Find what line 2 is missing.",
       hints: [
         "Every complete sentence needs a who and a does-what. Find what line 2 is missing.",
-        "Read both lines. Ask who sewed the button, and where that who belongs in line 2.",
-        "A comma does not add a who. Check the other choices to see which really name someone."
+        "Read both sentences. Ask who sewed the button, and where that who belongs.",
+        "A describing word does not add a who. Check the other words to see which ones really name someone."
       ],
       how: [
-        "Line 2 has a does-what, sewed, but no one doing it.",
+        "The second sentence has a does-what, sewed, but no one doing it.",
         "Line 1 says Lena found the button, so Lena sewed it too. A word that stands for Lena is she.",
-        "The answer is \"Next she sewed it back onto her coat.\" The others still have no one sewing."
+        "The answer is she: \"Next she sewed it back onto her coat.\" The other words still leave no one sewing."
       ],
-      misconception: "A common mix-up is changing punctuation or adding words without adding a who.",
-      why: "The answer is \"Next she sewed it back onto her coat.\" Now the line has a who (she) and a does-what (sewed). The comma choice and the carefully choice still have no who. \"Next the button back onto her coat.\" has no does-what."
+      misconception: "A common mix-up is adding a describing word or a place word without adding a who.",
+      why: "The answer is she. Now the sentence has a who (she) and a does-what (sewed). Carefully only tells how, and onto only tells where, so neither adds a who.",
+      text: "Lena found a loose button. Next {0} sewed it back onto her coat.",
+      slots: [
+        {
+          options: ["she", "carefully", "onto"],
+          answer: 0
+        }
+      ]
     },
     {
       id: "SK-GC2a-S10",
@@ -1047,36 +1043,38 @@ PP.addLesson({
     },
     {
       id: "SK-GC2a-S12",
-      type: "mc",
-      points: 1,
+      type: "ms",
+      points: 2,
       dok: 2,
       std: ["3.L.GC.2.a"],
       passages: [],
       like: ["SK-GC2a-C12"],
-      prompt: "Which rewrite joins line 2 to line 1 so that nothing is left hanging?",
+      prompt: "Choose the TWO rewrites that fix line 2.",
       stem: [
         "(1) Dad planted a maple tree.",
         "(2) Beside the back fence."
       ],
       choices: [
         { text: "Dad planted a maple tree beside the back fence.", correct: true },
+        { text: "Dad planted a maple tree. It stood beside the back fence.", correct: true },
         { text: "Dad planted a maple tree, then beside the back fence." },
         { text: "Dad planted a maple tree beside the. Back fence." },
         { text: "Dad planted a maple tree. Beside, the back fence." }
       ],
-      clue: "A piece that hangs is missing something. Find what line 2 is missing, then borrow it from the line beside it.",
+      clue: "A piece that hangs is missing something. Find what line 2 is missing, then either borrow it from the line beside it or add it.",
       hints: [
-        "A piece that hangs is missing something. Find what line 2 is missing, then borrow it from the line beside it.",
+        "A piece that hangs is missing something. Find what line 2 is missing, then either borrow it from the line beside it or add it.",
         "Read line 2 alone. Does it have a who? A does-what? Then see what line 1 has that line 2 needs.",
-        "Putting a word like then in front of line 2 does not give it a who or a does-what. Check the other choices."
+        "Putting a word like then in front of line 2 does not give it a who or a does-what. Check the other four choices."
       ],
       how: [
         "Line 2 only tells where. It has no who and no does-what.",
         "Line 1 has them: \"Dad planted a maple tree.\" Line 2 tells where the tree was planted.",
-        "Attach the where to the end of line 1: \"Dad planted a maple tree beside the back fence.\""
+        "Two fixes work. Attach the where to line 1: \"Dad planted a maple tree beside the back fence.\" Or give it its own who and does-what: \"Dad planted a maple tree. It stood beside the back fence.\""
       ],
       misconception: "A common mix-up is adding a small word such as then. A small word does not add the missing piece.",
-      why: "The answer is \"Dad planted a maple tree beside the back fence.\" Line 2 only tells where, so it needs the who and does-what from line 1. Adding then leaves it hanging. Splitting the phrase makes a new fragment, \"Back fence.\""
+      why: "The answers are \"Dad planted a maple tree beside the back fence.\" and \"Dad planted a maple tree. It stood beside the back fence.\" The first attaches the where to line 1. The second gives the where its own who (it) and does-what (stood). Adding then leaves it hanging, and splitting the phrase makes a new fragment.",
+      pick: 2
     },
     {
       id: "SK-GC2a-S13",
@@ -1134,7 +1132,7 @@ PP.addLesson({
       prompt: "Which answer gives the right kind and the right reason?",
       stem: "The lights went out, but the band kept playing.",
       choices: [
-        { text: "Compound: each side of but could be a sentence alone.", correct: true },
+        { text: "Compound: each side of but could stand alone.", correct: true },
         { text: "Complex: the side after but needs the rest." },
         { text: "Simple: a short line has just one thought." },
         { text: "Compound: a comma makes any line compound." }
@@ -1148,15 +1146,15 @@ PP.addLesson({
       how: [
         "\"The lights went out\" is a whole thought, and \"the band kept playing\" is another.",
         "They are joined by a comma and but, which join two whole thoughts.",
-        "So the answer is \"Compound: each side of but could be a sentence alone.\""
+        "So the answer is \"Compound: each side of but could stand alone.\""
       ],
       misconception: "A common mix-up is thinking every joining word starts a waiting part. But, and, or and so join whole thoughts.",
-      why: "The answer is \"Compound: each side of but could be a sentence alone.\" The side after but is a whole thought, so it is not complex. A short line can still hold two thoughts. A comma alone does not make a line compound."
+      why: "The answer is \"Compound: each side of but could stand alone.\" The side after but is a whole thought, so it is not complex. A short line can still hold two thoughts. A comma alone does not make a line compound."
     },
     {
       id: "SK-GC2a-S15",
       type: "dropdown",
-      points: 1,
+      points: 2,
       dok: 3,
       std: ["3.L.GC.2.a"],
       passages: [],
@@ -1654,7 +1652,7 @@ PP.addLesson({
             clue: "Ask how the two ideas go together. Are they two choices, a result, a surprise or a reason?",
             hints: [
               "Ask how the two ideas go together. Are they two choices, a result, a surprise or a reason?",
-              "Say what each sentence offers. Does the second idea go along with the first, or does it offer something else to pick?",
+              "Say what each sentence tells. Then ask how the second idea goes with the first.",
               "The first idea does not cause the second, so so does not fit. Think about the other three."
             ],
             how: [
@@ -1691,7 +1689,7 @@ PP.addLesson({
               prompt: "Which detail from the draft best supports the answer to Part A?",
               choices: [
                 {
-                  text: "Last weekend in sentence 1 tells you the story is about something that already happened.",
+                  text: "Last weekend in sentence 1 tells you the whole story is in the past.",
                   correct: true
                 },
                 {
@@ -1713,10 +1711,10 @@ PP.addLesson({
               "Find the time clue. Sentence 1 says Last weekend, so the story tells about the past.",
               "Check the verbs in the part about the egg carton and the cups: gave, helped, put. They are past tense.",
               "Part A: \"(9) Grandpa shows me how to write the labels.\" has shows, which is present tense. It should say showed.",
-              "Part B: \"Last weekend in sentence 1 tells you the story is about something that already happened.\""
+              "Part B: \"Last weekend in sentence 1 tells you the whole story is in the past.\""
             ],
             misconception: "A common mix-up is choosing a sentence that has a present-tense verb because of a time word that makes it correct.",
-            why: "Part A: \"(9) Grandpa shows me how to write the labels.\" Part B: \"Last weekend in sentence 1 tells you the story is about something that already happened.\" The sentences before and after the egg carton use gave, helped and put, so shows does not fit; it should be showed. The other Part B choices use time words but misread what they mean."
+            why: "Part A: \"(9) Grandpa shows me how to write the labels.\" Part B: \"Last weekend in sentence 1 tells you the whole story is in the past.\" The sentences before and after the egg carton use gave, helped and put, so shows does not fit; it should be showed. The other Part B choices use time words but misread what they mean."
           },
           {
             id: "SK-GC2b-C07",
@@ -1876,8 +1874,8 @@ PP.addLesson({
             clue: "To judge a fix, find the time clue first. The verbs have to match the time the clue gives.",
             hints: [
               "To judge a fix, find the time clue first. The verbs have to match the time the clue gives.",
-              "Look at the first words of the sentence. Ask what they say about when this happened, then check both students.",
-              "Ella made the two verbs match each other, but matching is not enough. Check what the time clue says."
+              "Look at the first words of the sentence. Ask what they tell you about when this happened.",
+              "Check each reason against the time clue in the sentence."
             ],
             how: [
               "Find the time clue: Last year means the sentence tells about something that already happened.",
@@ -2016,9 +2014,9 @@ PP.addLesson({
                 { text: "The two sentences happen at different times." }
               ]
             },
-            clue: "Ask how the two ideas go together. Decide which idea is the reason and which is the result.",
+            clue: "Ask how the two ideas go together.",
             hints: [
-              "Ask how the two ideas go together. Decide which idea is the reason and which is the result.",
+              "Ask how the two ideas go together.",
               "Say what the wet grass has to do with playing soccer. Then check each choice for a joining word that shows it, with the right punctuation.",
               "One choice has two whole thoughts and no joining word. Check the other three for the meaning they show."
             ],
@@ -2170,27 +2168,33 @@ PP.addLesson({
       std: ["3.L.GC.2.b"],
       passages: [],
       like: ["SK-GC2b-C05"],
-      prompt: "Which sentence joins the two ideas so they are two choices?",
-      stem: ["Kia could set the table.", "Kia could wash the dishes."],
+      prompt: "Pick the sentence that links Kia's ideas best.",
+      stem: [
+        "Kia could sweep the porch today.",
+        "Kia could water the garden today."
+      ],
       choices: [
-        { text: "Kia could set the table, or she could wash the dishes.", correct: true },
-        { text: "Kia could set the table, so she could wash the dishes." },
-        { text: "Kia could set the table, but she could wash the dishes." },
-        { text: "Kia could set the table because she could wash the dishes." }
+        {
+          text: "Kia could sweep the porch today, or she could water the garden today.",
+          correct: true
+        },
+        { text: "Kia could sweep the porch today, so she could water the garden today." },
+        { text: "Kia could sweep the porch today, but she could water the garden today." },
+        { text: "Kia could sweep the porch today because she could water the garden today." }
       ],
       clue: "Ask how the two ideas go together: adding, a choice, a result or a surprise?",
       hints: [
         "Ask how the two ideas go together: adding, a choice, a result or a surprise?",
-        "Say what each sentence offers. Is Kia doing both jobs, or picking one of them?",
+        "Say what each sentence tells. Is Kia doing both jobs, or picking one of them?",
         "The first job does not cause the second one. Think about the other three."
       ],
       how: [
         "Read the two sentences. Each one names a job Kia could do.",
         "Kia would pick one job. Neither idea is the reason for the other, and neither is a surprise.",
-        "The joining word for two choices is or: \"Kia could set the table, or she could wash the dishes.\""
+        "The joining word for two choices is or: \"Kia could sweep the porch today, or she could water the garden today.\""
       ],
-      misconception: "A common mix-up is choosing so. So shows a result, and here the second idea is a surprise.",
-      why: "The answer is \"Kia could set the table, or she could wash the dishes.\" The two sentences give two choices, and or joins choices. So would make setting the table cause washing the dishes. But would make the second idea a surprise. Because would make one job the reason for the other."
+      misconception: "A common mix-up is choosing so. So would mean sweeping the porch causes watering the garden, but Kia could do either job.",
+      why: "The answer is \"Kia could sweep the porch today, or she could water the garden today.\" The two sentences give two choices, and or joins choices. So would make sweeping cause watering. But would make the second idea a surprise. Because would make one job the reason for the other."
     },
     {
       id: "SK-GC2b-S06",
@@ -2432,13 +2436,13 @@ PP.addLesson({
       std: ["3.L.GC.2.b"],
       passages: [],
       like: ["SK-GC2b-C13"],
-      prompt: "Pick the word that fills each blank best.",
+      prompt: "Pick the word that fills each blank best. Use each word one time.",
       cols: ["and", "before", "if", "but"],
       rows: [
         { text: "We washed the car, ____ we also vacuumed it.", answer: 0 },
         { text: "The bell always rings ____ class starts.", answer: 1 },
         { text: "The ice cream will melt ____ we leave it in the sun.", answer: 2 },
-        { text: "Ana is small, ____ she is the fastest runner on our team.", answer: 3 }
+        { text: "Ana is small, ____ she is still the fastest runner on our team.", answer: 3 }
       ],
       clue: "Read each sentence with each word. Ask how the two ideas go together: adding, order, a condition or a surprise.",
       hints: [
@@ -2450,10 +2454,10 @@ PP.addLesson({
         "\"We washed the car, and we also vacuumed it.\" The second idea adds to the first, so the word is and.",
         "\"The bell always rings before class starts.\" The ringing comes first, so the word is before.",
         "\"The ice cream will melt if we leave it in the sun.\" The melting depends on leaving it out, so the word is if.",
-        "\"Ana is small, but she is the fastest runner on our team.\" The second idea goes against what you expect, so the word is but."
+        "\"Ana is small, but she is still the fastest runner on our team.\" The second idea goes against what you expect, so the word is but."
       ],
       misconception: "A common mix-up is choosing a word because it sounds right alone. Check how the two ideas go together.",
-      why: "We washed the car, and we also vacuumed it (adding). The bell always rings before class starts (order). The ice cream will melt if we leave it in the sun (a condition). Ana is small, but she is the fastest runner on our team (a surprise). Each other word would change the meaning."
+      why: "We washed the car, and we also vacuumed it (adding). The bell always rings before class starts (order). The ice cream will melt if we leave it in the sun (a condition). Ana is small, but she is still the fastest runner on our team (a surprise). Each word is used one time, and each other word would change the meaning."
     },
     {
       id: "SK-GC2b-S14",
@@ -2527,9 +2531,9 @@ PP.addLesson({
           { text: "The thunder came long after the concert ended." }
         ]
       },
-      clue: "Ask how the two ideas go together. Which idea explains the other?",
+      clue: "Ask how the two ideas go together.",
       hints: [
-        "Ask how the two ideas go together. Which idea explains the other?",
+        "Ask how the two ideas go together.",
         "Say what the thunder has to do with the concert ending. Then check each choice for a joining word that shows it, with the right punctuation.",
         "One choice has two whole thoughts and no joining word. Check the other three for the meaning they show."
       ],
@@ -3156,7 +3160,7 @@ PP.addLesson({
             how: [
               "Find the subject of each sentence and decide whether it is one or more than one.",
               "In sentence 5, the subject is shoes. Beside the bench only tells where the shoes are.",
-              "Shoes is more than one, but the verb is goes with one. It should say are."
+              "The word shoes names more than one, but the verb is goes with one. It should say are."
             ],
             misconception: "A common mix-up is matching the verb to the word beside it. Here bench is one, but the subject is shoes.",
             why: "The answer is sentence 5, \"The shoes beside the bench is covered in dust.\" The subject is shoes, which is more than one, so the verb should be are. \"Beside the bench\" only tells where the shoes are."
@@ -3301,12 +3305,9 @@ PP.addLesson({
               "Ben says the sentence needs was, because pocket is next to the blank."
             ],
             choices: [
-              {
-                text: "Ana, because tickets is the subject, and tickets is more than one.",
-                correct: true
-              },
+              { text: "Ana, because the tickets are what the sentence is about.", correct: true },
               { text: "Ben, because the word next to the verb decides which verb to use." },
-              { text: "Ben, because pocket is the subject, and pocket is one thing." },
+              { text: "Ben, because pocket is what the sentence is about." },
               { text: "Neither, because the sentence needs the word is." }
             ],
             clue: "Find the subject by asking who or what the sentence is about, not by looking at the word beside the blank.",
@@ -3316,12 +3317,12 @@ PP.addLesson({
               "Look at the reason each choice gives. Which reason uses the word that the sentence is about?"
             ],
             how: [
-              "Ask what is wet. The tickets are wet, so tickets is the subject.",
+              "Ask what is wet. The tickets are wet, so the tickets are what the sentence is about.",
               "\"In my pocket\" only tells where the tickets are. Pocket is not the subject.",
-              "Tickets is more than one, so the verb is were. The answer is \"Ana, because tickets is the subject, and tickets is more than one.\""
+              "There is more than one ticket, so the verb is were. The answer is \"Ana, because the tickets are what the sentence is about.\""
             ],
             misconception: "A common mix-up is letting the word next to the verb decide the verb.",
-            why: "The answer is \"Ana, because tickets is the subject, and tickets is more than one.\" The sentence is about the tickets, so the verb is were. The word next to the verb, pocket, only tells where the tickets are, so it does not decide the verb. Is goes with one thing."
+            why: "The answer is \"Ana, because the tickets are what the sentence is about.\" There is more than one ticket, so the verb is were. The word next to the verb, pocket, only tells where the tickets are, so it does not decide the verb. Is goes with one thing."
           },
           {
             id: "SK-GC2c-C12",
@@ -3415,26 +3416,26 @@ PP.addLesson({
             partB: {
               prompt: "Which reason explains the error?",
               choices: [
-                { text: "My brother and I names two people, so the verb must be look.", correct: true },
+                { text: "The subject has two people in it, so the verb must be look.", correct: true },
                 { text: "The sentence is about one brother, so the verb should be looks." },
                 { text: "The word I always needs a verb that ends in s, like looks." },
-                { text: "Comics is more than one, so the verb after it must end in s." }
+                { text: "The word comics names many things, so the verb after it must end in s." }
               ]
             },
             clue: "Find the subject of each sentence. Ask one or more than one, then check whether the verb matches.",
             hints: [
               "Find the subject of each sentence. Ask one or more than one, then check whether the verb matches.",
-              "For Part A, start with sentences that have extra words before the verb or two subjects. For Part B, ask how many people the subject names.",
+              "For Part A, start with sentences that have extra words before the verb or two subjects. For Part B, ask how many people the subject has.",
               "In Part A, the subject of sentence 3 is prices, which is more than one. Check the other three."
             ],
             how: [
               "Find the subject and verb in each choice for Part A. Sentences 2, 3 and 7 each agree.",
               "Sentence 4 has the subject my brother and I, which names two people, but the verb looks is for one.",
               "Part A: \"(4) My brother and I looks for comics first.\"",
-              "Part B: \"My brother and I names two people, so the verb must be look.\""
+              "Part B: \"The subject has two people in it, so the verb must be look.\""
             ],
             misconception: "A common mix-up is matching the verb to brother alone and forgetting the second person.",
-            why: "Part A: \"(4) My brother and I looks for comics first.\" Part B: \"My brother and I names two people, so the verb must be look.\" Two people joined by and count as more than one. The other sentences agree: tables fill, prices are, and money buys."
+            why: "Part A: \"(4) My brother and I looks for comics first.\" Part B: \"The subject has two people in it, so the verb must be look.\" Two people joined by and count as more than one. The other sentences agree: tables fill, prices are, and money buys."
           },
           {
             id: "SK-GC2c-C15",
@@ -3671,9 +3672,9 @@ PP.addLesson({
       prompt: "Look at the flag sentence in Eli's draft. Which word decides whether waves needs an s?",
       choices: [
         { text: "flag, because only one flag is waving", correct: true },
-        { text: "ropes, because it sits right next to waves" },
-        { text: "sun, because it is the last noun" },
-        { text: "beside, because it starts the words about place" }
+        { text: "ropes, because it is the word right before waves" },
+        { text: "sun, because every noun in the sentence counts" },
+        { text: "flag and ropes, because both sit near the verb" }
       ],
       clue: "The verb goes with the word the sentence is about. Find that word first.",
       hints: [
@@ -3687,7 +3688,7 @@ PP.addLesson({
         "Only one flag is waving, so the verb takes an s: \"flag, because only one flag is waving.\""
       ],
       misconception: "A common mix-up is pairing the verb with the closest noun. Skip the words that only tell where.",
-      why: "The answer is \"flag, because only one flag is waving.\" The sentence is about the flag, so the flag decides the verb. Ropes sits next to the verb but only tells where the flag is. The sun is not what waves, and beside is not a subject."
+      why: "The answer is \"flag, because only one flag is waving.\" The sentence is about the flag, so the flag decides the verb. Ropes sits next to the verb but only tells where the flag is. Not every noun counts, and nothing joins flag and ropes with and."
     },
     {
       id: "SK-GC2c-S08",
@@ -3750,7 +3751,7 @@ PP.addLesson({
         "\"Leo and his dad\" is two people joined by and, so it goes with were.",
         "In \"The box of crayons,\" the main word is box, so was. In \"The cats near the door,\" the main word is cats, so were."
       ],
-      misconception: "A common mix-up is matching the verb to the last word, such as apples or bag.",
+      misconception: "A common mix-up is matching the verb to the last word, such as couch or crayons.",
       why: "The pillows on the couch, Leo and his dad, and The cats near the door are each more than one, so they go with were. A kite and The box of crayons are each one, so they go with was. The words on the couch, of crayons and near the door only tell more about the subject."
     },
     {
@@ -3791,27 +3792,27 @@ PP.addLesson({
       std: ["3.L.GC.2.c"],
       passages: [],
       like: ["SK-GC2c-C11"],
-      prompt: "Which verb belongs in the blank, and why?",
+      prompt: "Pick the verb that fits, and the reason.",
       stem: "The keys on the table ____ missing.",
       choices: [
-        { text: "are, since the sentence is about keys", correct: true },
+        { text: "are, since keys are what is missing", correct: true },
         { text: "is, since table is the nearest word" },
-        { text: "is, since missing is a single word" },
+        { text: "is, since the sentence tells where the keys are" },
         { text: "are, since table names many things" }
       ],
       clue: "Find the subject by asking what the sentence is about, not by looking at the word beside the blank.",
       hints: [
         "Find the subject by asking what the sentence is about, not by looking at the word beside the blank.",
         "Ask what is missing. Is that one thing or more than one?",
-        "Look at the reason each choice gives. Which reason uses the word that the sentence is about?"
+        "Compare each reason with what is missing."
       ],
       how: [
         "Ask what is missing. The keys are missing, so keys is the subject.",
         "\"On the table\" only tells where the keys are. Table is not the subject.",
-        "Keys is more than one, so the verb is are: \"are, since the sentence is about keys.\""
+        "There is more than one key, so the verb is are: \"are, since keys are what is missing.\""
       ],
       misconception: "A common mix-up is letting the word next to the blank decide the verb.",
-      why: "The answer is \"are, since the sentence is about keys.\" The keys are more than one. The word table only tells where they are, so it does not decide the verb. Missing does not decide the verb either. Table names one thing, not many."
+      why: "The answer is \"are, since keys are what is missing.\" There is more than one key. The word table only tells where they are, so it does not decide the verb. Table names one thing, not many."
     },
     {
       id: "SK-GC2c-S12",
@@ -4219,9 +4220,9 @@ PP.addLesson({
           "(2) It waited in the garage with a bow on the seat."
         ],
         [
-          "(3) It was a nice bike, and I had never ridden one without help.",
-          "(4) I rode down the street.",
           "(3) It was a nice bike, and I had never ridden one without help, so my knees shook.",
+          "(4) I rode down the street.",
+          "(5) The wind blew against my face.",
           "(6) A dog barked at my wheels, and I pedaled away."
         ],
         [
@@ -4253,7 +4254,7 @@ PP.addLesson({
           "(4) The frosting looked good."
         ],
         [
-          "(5) Tyrell piped the grass with a tiny tip, and he did not want to smear one blade.",
+          "(5) Tyrell squeezed frosting grass through a tiny tip, and he did not want to smear one blade.",
           "(6) He worked, one blade at a time.",
           "(7) Ruby spread a river of blue frosting with wide, long strokes."
         ],
@@ -4508,7 +4509,7 @@ PP.addLesson({
             clue: "A plain word like good can be swapped for an exact one. Look back at how the glitter moved.",
             hints: [
               "A plain word like good can be swapped for an exact one. Look back at how the glitter moved.",
-              "Read sentence 4. What kind of weather has swirling flakes in a storm?",
+              "Reread sentence 4. What do the swirling flakes look like?",
               "Sandy is about a beach, and a beach does not have swirling flakes. Check the other two words against sentence 4."
             ],
             how: [
@@ -4762,15 +4763,17 @@ PP.addLesson({
               prompt: "Why is that revision better?",
               choices: [
                 { text: "The exact words fit the very pale yellow that Keisha mixed.", correct: true },
-                { text: "It is the longest revision, so it must tell the most." },
+                {
+                  text: "It has more describing words than the other revisions, and more is always better."
+                },
                 { text: "It uses a word that is also in the next sentence." },
                 { text: "It names the people who helped Keisha with the cake." }
               ]
             },
-            clue: "To elaborate, add details that fit the draft. Sentence 3 says what color the frosting was.",
+            clue: "To elaborate, add details that fit the draft. Check each revision against the draft.",
             hints: [
-              "To elaborate, add details that fit the draft. Sentence 3 says what color the frosting was.",
-              "For Part A, check each revision against sentence 3. For Part B, ask what the exact words match.",
+              "To elaborate, add details that fit the draft. Check each revision against the draft.",
+              "For Part A, check each revision against sentence 3, which tells the color. For Part B, ask what the exact words match.",
               "In Part A, dark and lumpy frosting does not match a very pale color. Check the other three choices."
             ],
             how: [
@@ -5252,10 +5255,10 @@ PP.addLesson({
           { text: "The first driver wore a tall helmet." }
         ]
       },
-      clue: "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the karts were set up.",
+      clue: "To swap a plain word for an exact one, look for a clue in the draft.",
       hints: [
-        "To swap a plain word for an exact one, look for a clue in the draft. Sentence 3 tells how the karts were set up.",
-        "For Part A, ask what sentence 3 says about the karts. For Part B, find the detail that shows it.",
+        "To swap a plain word for an exact one, look for a clue in the draft.",
+        "For Part A, check sentence 3 and ask what it says about the karts. For Part B, find the detail that shows it.",
         "In Part A, a word for a mess would not fit the karts in sentence 3. Check the other choices."
       ],
       how: [

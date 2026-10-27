@@ -61,3 +61,27 @@ Not taken: a10 (Watch Me line), c13 (dropdown frames), and NOTE items.
 
 ### Items most worth a skeptical re-solve
 2.b S13 (match: confirm each row has exactly one best word among and/before/if/but), 2.b S05 and S15 (new relations), 2.c S07 (new reason format), 2.d C07 (new sentence 3), 2.d C14 and C12 (new cake passage), 2.d S02 (QUICKLY row), 2.a C14 (new stem).
+
+## Second-review fixes (response to "Second review" in B5-b5a-review.md, 2026-10-27)
+Gates after the fixes: check-content --all PASS (0 failures; no warnings in GC2 lessons beyond the form B version-hash note), check-writing 0 failures, check-instructional-copy 28 passed. Passage FK unchanged (0.7 to 3.8). Similarity (word-set and multiset; match cols, ebsr parts and hot-text target sentences included): worst similar-vs-core pair 0.209 (2.a, digits counted), 0.197 (2.b), 0.194 (2.c), 0.200 (2.d); with the B4b letters-only tokenizer the worst is 0.188 / 0.204 / 0.184 / 0.190. No shared exact option beyond one.
+
+### Passage-numbering check (all passages, all four lessons)
+Script: for every passage the leading "(n)" must run 1, 2, 3 in order. Result: 0 bad passages in 2.a, 2.b, 2.c and 2.d (25 of 25 pass). The 2.d p2 fault was my own indexing slip in the first-review fix (wrong array index); paragraph 2 now reads (3) with "so my knees shook", (4) I rode down the street, (5) The wind blew against my face, (6) A dog barked... C07 and C08 (the only items citing p2 sentence 3) were rechecked: C07 has one defensible key (shakily), C08 revisions still replace "nice" in sentence 3. No B5b or other lessons were edited by this author.
+
+### MUSTs fixed
+- 2.a format cap: core mc went from nine to six (P8 ref, C05, C07, C08, C10, C14). C06 is now hot text on Amari's draft (target sentences 4, 5, 7, 8, 9), C09 a dropdown (he / quickly / over), C12 an ms with two fixes (join, or add its own who and does-what). Similar bank mirrored: S06 hot text on Kofi's draft, S09 dropdown (she / carefully / onto), S12 ms. Similar bank is now 6 mc, 4 ms, 2 hot text, 2 dropdown, 1 match, same as core.
+- 2.b S05: misconception rewritten (sweeping the porch does not cause watering the garden, either job); item moved to a new stem (porch / garden) and prompt "Pick the sentence that links Kia's ideas best." (no longer says "two choices"; C05's prompt is not copied).
+- 2.b S13: prompt now "Use each word one time", row 4 is "Ana is small, ____ she is still the fastest runner on our team." so and / before / if / but each fit one row and elimination settles the rest.
+- 2.c S09 misconception now names couch and crayons.
+- 2.d p2 numbering repaired (above).
+
+### SHOULDs taken
+2.a: C15 and S15 now 2 points; C14 distractor C reworded to "the sentence tells two things and has a joining word" and its why no longer says a sentence cannot be both kinds; S14 key shortened. 2.b: C11 H2/H3 no longer say Ella's fix is wrong; C05, C15, S15 H1/H2 neutral; C06 Part B key shortened. 2.c: C11, C14, C06 and S11 no longer show a plural noun with "is" as if it were a verb choice (key text now "the tickets are what the sentence is about", "The subject has two people in it", "The word shoes names more than one", "There is more than one key"); C11 key is no longer the longest; S11 H3 compares reasons with what is missing and distractor C is now plausible; S07 distractors replaced ("the word right before waves", "every noun counts", "flag and ropes"). 2.d: C06 H2 asks what the flakes look like; p3 sentence 5 now "squeezed frosting grass through a tiny tip" (no "piped"); C14 H1 is strategy only and Part B has a plausible rival ("more describing words... more is always better"); S14 H1 no longer points to sentence 3.
+Not taken: 2.d S02 LATE (kept, adverb per Merriam-Webster), 2.d C12 weak distractors, 2.b Learn It "or" gloss, Watch Me fragment-join line, DOK notes, 2.d C14 Part A passage-word distractor (a yellow/white rival would make the key arguable).
+
+### Changed items for the third blind review
+2.a: C06, S06, C09, S09, C12, S12 (all converted), C14, S14, C15, S15 (points).
+2.b: C05, C06 (Part B key), C11, C15, S05, S13, S15.
+2.c: C06 (how text), C11, C14 (Part B and H2), S07, S09, S11.
+2.d: p2 (repaired), p3 (sentence 5), C06, C14, S14.
+Most worth a skeptical re-solve: 2.a C12/S12 (new ms, two keys: join vs add its own who), 2.a C09/S09 (dropdowns), 2.a C06/S06 (hot text keys), 2.b S13 (all four rows), 2.b S05, 2.c C11 and S11 (new reason wording), 2.d C07 with the repaired p2.
