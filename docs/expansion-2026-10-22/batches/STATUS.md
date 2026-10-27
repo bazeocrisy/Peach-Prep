@@ -19,8 +19,8 @@
 | B2 | TS-CC | ACCEPTED | B2-rereview-TS-2.md |
 | B2 | 3.T.SS.1.a | ACCEPTED | B2-rereview-SC-2.md |
 | B2 | 3.T.C.1.b | ACCEPTED | B2-rereview-SC-2.md |
-| B5 comp | TF-FEAT (text features: headings, maps, captions, text boxes, contents, chapters and sections) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
-| B5 comp | TF-DIG (digital, audio and spoken features) | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 comp), NEEDS INDEPENDENT REVIEW; B5-comp-author-log.md; js/data/lessons/T-CF.js |
+| B5 comp | TF-FEAT | ACCEPTED | text features (headings, maps, captions, text boxes, contents, chapters and sections); B5-comp-review.md (fifth review, light); open SHOULDs: S09~C09 all-token similarity 0.238/0.290, S09 row 4 sight-match, S07 'word antenna' |
+| B5 comp | TF-DIG | ACCEPTED | digital, audio and spoken features; B5-comp-review.md (fifth review, light); open SHOULDs: T2 blank 1 repeats C03, T5 word-match key |
 | B5 b5a | 3.L.GC.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
 | B5 b5a | 3.L.GC.2.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
 | B5 b5a | 3.L.GC.2.c | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
