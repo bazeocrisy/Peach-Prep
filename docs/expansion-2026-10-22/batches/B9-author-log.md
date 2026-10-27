@@ -102,3 +102,28 @@ Corrections to earlier log statements:
 - 4.c S15 stays a twin of P7 (same rule: opposite, with lots of, free of). C03 (dis-) and C01 (unlock/relock) were already changed in the second pass.
 
 Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; 14 common words listed by review 3 as not dictionary-checked (health, orange, stage, page, dream, beans, reach, cheap, speak, mean, seat, clean, head, beach) are still unverified by me; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.
+
+## Fourth fix pass after review 4 (B9-review.md, "Fourth review")
+Measured on the final files: `check-content --all` PASS (0 failures, 100 warnings), `check-writing` 0 failures, `check-instructional-copy` 28 passed. Twin similarity (word-set, multiset, whole hyphenated words, and both): 4.b worst 0.200, H.3.a worst 0.206 (S06~C05). I did not touch 4.a or 4.c this pass. Longest key (ties counted for choose-two): 4.b 5 of 27 single keys, 0 of 5 choose-two; H.3.a 3 of 39 and 0 of 3. Hub check (`centroid.js`: key is the only option with the smallest total edit distance to the others): H.3.a 0 of 19 mc items (it was 15 of 19). 4.b is 4 of 12 mc items (C10, P1, T1, T2); I did not change those because 4.b is accepted and the review did not ask for it.
+
+Corrections to earlier log statements:
+- The third-pass line "C08 ... with every choice sensible" was false. Two of the four choices were not sensible signs, so meaning alone gave the answer. Redone below.
+- The third-pass H.3.a line "all fit the sentence" for C02, C03, C06 and the others holds for those items only; C08 is the one that failed.
+
+3.F.H.3.a (M4-H1, F-H1 to F-H5):
+- C08 rebuilt. Sign: "Please wipe your feet before you come in." Choices: that sentence, "Please wash your hands...", "Please take off your shoes...", "Please wipe your shoes..." Each would make a sensible sign, so only the cursive letters decide. Hints 2 and 3 and the how and why were rewritten to match. S09 (its twin) keeps its own wording.
+- Hub effect: distractors changed so the key is not the unique hub in C01, C05, C08, C10, S06, S09, S11, S15 (core and similar) and in P1, P2, P5, T1, T2, T3, T5. Where a tie was the best I could do with real words (river, window, Zoe, Tessa), the key is tied, not unique.
+- F-H2: C04 names are now Fay, Wes, Pia, Ray and the cap is "gold cap" (no Quinn, Zoe or red in C04). C13 now asks for Thursday (options Thursday, Wednesday, Sunday), so Saturday is only in C11.
+- F-H3: C01 choices are window, widow, willow, wilder; the why now names the real differences (five letters, double l, ending er). P5 hint 3 and how compare the second letter and the capital Z against J. S15 choices are Tessa, Tasha, Tilly, Tori; hint 3 and how compare the middle letters (e-s-s, a-s-h, i-l-l).
+- F-H4: C12 and S13 hint 3 each rule out one choice only.
+- F-H5: S12 is now "Pop: lentil soup".
+- Test items changed (wording or distractors only; same ids, points, types and keys): T1 (choices 2 to 4), T2 (choices 2 to 4, clue, why), T3 (choices 3 and 4), T5 (choice 3). Practice items changed: P1, P2 (and its addon hint 1, 3 and how), P5 (and its addon hint 3 and how).
+
+3.F.P.4.b (accepted; wording-only, no key changes):
+- F-B1 C08 sentence: "Mia saw a pocket, a tiny frog, a music box and the sky." (sky is now in the sentence). Hint 3 now names tiny only.
+- F-B2 S04: "Pillow splits as {0}." with options "pi / llow", "pil / low", "pill / ow" (key pil / low; Merriam-Webster pil·low, checked this pass). The how and why now say pil / low. No other lesson uses that option set.
+- F-B3 test T3 rows: "fun in funnel" (closed) and "mo in moment" (open) replace "nap in napkin" and "ba in bacon". Merriam-Webster: fun·nel, mo·ment. The why now says Fun, Po and mo.
+- F-B4 hint 3 now names one word: C03 "Clap puppy.", S03 "Clap farmer.", C05 "Split window...", S05 "Split puppy...". I made the same one-word change to C08 and S08 hint 3 for consistency.
+- F-B5 S07: prompt is "Starfish has two halves. Which kind of syllable begins it, and which kind ends it?" Options are r-controlled, vowel team, consonant-le and vowel team, closed, consonant-le. I dropped silent-e rather than switch to vowel-consonant-e, because vowel-consonant-e raised the twin overlap with C07 to 0.31 (it is 0.200 now). mis and why say "kind" and name vowel team and consonant-le.
+
+Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.
