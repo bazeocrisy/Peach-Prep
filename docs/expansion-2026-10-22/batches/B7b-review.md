@@ -131,3 +131,142 @@ Strengths: every wrong form is a clear error (`brushs`, `inviteed`, `dancd`, `em
 - **Pre-existing Together and Test overlap** (not new content): L6 P1/T2 0.43/0.45, L6 P1/T1 0.33/0.32; L7 P2/T2 0.40/0.28, P3/T1 0.35/0.32, P1/P3 0.32/0.32; L8 P2/T2 0.40/0.26, P3/T3 0.34/0.35; L9 P1/T1 0.30/0.33, P1/P2 0.30/0.31. SPEC section 8 says the test must use different material from Practice.
 - **Grade 3 level and DOK.** No kindergarten-level item; the plainest are the DOK 1 items C09 / S09 (one per fifteen, within the limit of two). Four DOK 3 items per fifteen (plan needs at least one for a language lesson).
 - **What I could not verify.** Whether the player allows going back inside a set (relevant to the set 2 note); I did not test that. I did not test keyboard or screen-reader use.
+
+---
+
+## First review (B7b lessons 1-5)
+
+Reviewer: independent (did not author; second reviewer file section, written after the lessons 6-9 section above). Lessons: 1 verb tenses (`form-and-use-simple-verb-tenses`), 2 determiners (`use-determiners-articles-possessive-and-demonstr`), 3 capital letters for proper nouns (`capitalize-proper-nouns`), 4 end marks (`use-end-punctuation-period-exclamation-point-que`), 5 plurals that change y to ies (`form-plural-nouns-by-changing-y-to-ies`). These are the first five lessons of `js/data/lessons/L-GUM2.js` in file order (starting at lines 4, 1659, 3306, 4987, 6642).
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 1 Verb tenses | ACCEPT (with SHOULDs) | 0 | 3 | 3 |
+| 2 Determiners | CHANGES REQUIRED | 3 | 3 | 4 |
+| 3 Capital letters | CHANGES REQUIRED | 3 | 3 | 4 |
+| 4 End marks | CHANGES REQUIRED | 3 | 5 | 4 |
+| 5 Plurals y to ies | CHANGES REQUIRED | 3 | 4 | 4 |
+
+The keys are sound: a fully blind solve agrees with the data on 190 of 190 answer units, the 30 drafts are all 100 words or more with FK at most 4.47, twins are at or under 0.21 Jaccard, and all 75 core items take the key with real taps at 390 x 844. The MUSTs are small edits of three kinds: (a) stems or hints that print an answer from the same set (L3 C07/C10 and S07/S10 give away both keys of C06/S06; L4 C05 and L5 C05/S05 print a dropdown key; L3 S11 and L2 S08 hint 3 name the keys); (b) two hint ladders that leave one live choice (L4 C07 B/S07 B hint 2; L5 C07 B/S07 B hint 3); (c) two form problems in lesson 2 (C06 `these crab`, which M-W lists as a plural of crab, and S13 slot 0 `that`, which is also correct). Lesson 1 has no MUST.
+
+### Method and blindness
+
+- **Blind solve.** `scratchpad/b7rb/blind.js` loads `L-GUM2.js` in a Node `vm` sandbox with a mock `PP.addLesson`. For lessons 1-5 it prints the drafts (with "(n)" markers and sentence numbers), every core item (refs resolved), S01-S15, the Together items and the Test items, with choices, dropdown options, hot-text options, ebsr parts and match rows shuffled by a seeded LCG (`3000 + 91 * lessonIndex`; permutations in `hidden-perm.json`). Hot-text targets are printed as passage references and resolved by hand. No key, `why`, hints, `how`, `clue`, `misconception`, `like` or addons were printed. Field names and counts were printed first.
+- **Answers: 190 answer units** (all core, all similar, Together, Test). Saved to `my1.txt` to `my5.txt` before any key was extracted. **Agreement 190 of 190 (100%).** The solve was **fully blind**: I did not open the lesson source, `B7b-author-log.md`, B6 or B7a reviews, or the other reviewer's section until after the answers were saved and graded. (Same-set giveaways below did not help me because I solved item by item in shuffled order within a lesson; they would help a child who reads the whole set.)
+- **Mechanical checks** (scripts `grade.js`, `dump.js`, `longest.js`, `longest2.js`, `jac.js`, `fbjac.js`, `keyin.js`, `stale.js`, `xdup.js`, `tl.js`, `tl2.js`, `pass.js`):
+  - Points, picks and types: every ms and hot-text pick-two is 2 points with key count equal to the pick; L3 P4 is a choose-three ms worth 2 points (fine). ebsr, match and two-slot dropdowns are 2 points. `like` targets resolve and mirror type, points and DOK.
+  - Core mix per lesson: mc 5, dropdown 3, hottext 4, ms 1, ebsr 1, match 1 (L3: hottext 3, ms 2). DOK is 1 / 10 / 4 in every lesson. Core points are 21, 21, 22, 21, 21. Eight core items in each lesson sit on a numbered draft.
+  - Passages: 30 drafts, all 100 words or more with "(n)" excluded; `readability.py` FK at most 4.47 (L1 p3, limit 4.5). Page check: the passage pane shows the right draft for every passage item.
+  - Longest key: single-key slots 163, unique longest in 3 (1.8%), none in core or twins. The three are legacy practice items outside core and similar: L2 P2 (`These`), L4 P5 (`Please wipe your feet before you come inside.`, 45 against 34, and the only choice that ends in a period), L5 P3 (`families`, 8 against 6). No choose-two list has both keys as the two longest. Dropdown strong-verb cue: none.
+  - Twin whole-text Jaccard (stem, prompt, text, choices, slots, rows, columns, ebsr parts, target sentences): S-vs-core max set / multiset: L1 0.20 / 0.21, L2 0.20 / 0.21, L3 0.21 / 0.20, L4 0.19 / 0.18, L5 0.21 / 0.20 (rounded; the highest single pairs are L5 S10/C05 0.21 set and L2 S07/C10 0.21 multiset). No pair reaches 0.30. Twin hints copy core hints on the match items (L3 S02 hint 3 is word for word the P5 hint 3; hint-set Jaccard 0.5-0.8 for L3 and L4 match pairs): NOTE.
+  - Learn It, Watch Me and Teach against items: no example sentence equals a key or an item string.
+  - Cross-file duplicates over every file in `js/data` (6-word runs and exact): only the frame prompts ("Choose the word that correctly completes the sentence.", "Select the sentence that has a spelling error.", "Which sentence is correct?").
+  - Together vs Test overlap (legacy, same template with new words; same pattern the other section reports): L1 P1/T1 0.29; L2 P1/T1 0.39, P1/T5 0.30, P1/P2 0.32; L3 P5/T5 0.64, P4/T4 0.35, P3/T3 0.32; L4 P1/T1 0.30, P1/T4 0.30; L5 P4/T4 0.39. Not new content; L3 P5/T5 is the same match item with six other words.
+- **Hint ladders.** Live choices after hints 1-3 were recounted by hand for every core and similar item and every dropdown slot (about 150 ladders), then every hint was scanned for count words. Exactly two live choices (allowed): L1 C04, C12, S04, S12, C13 slot 1, S13 slot 1; L2 C12, S12, C13 slot 1, S13 slot 1, S03; L5 C13/S13 slots; L3 C07 B, S07 B. One live choice (defect): L4 C07 B, S07 B (after hint 2), L5 C07 B, S07 B (after hint 3). A hint that names a keyed option: L2 S08 h3, L3 S11 h3 (MUST), L4 C08 h3, S08 h3 (SHOULD).
+- **Browser, 390 x 844, touch, one Chromium process per lesson** (`run390b.py`, Playwright). All 75 core items accepted the key by real taps (choices, hot-text, dropdown selects, match, both ebsr parts), no horizontal overflow, no page errors in any of the five runs. The local server was started and killed by pid.
+
+### Web sources
+
+- **Simple present with now words.** https://test-english.com/explanation/a2/present-simple-vs-present-continuous/ : "We use the present continuous to talk about things that are happening now or 'around now'" and the continuous "often appears next to expressions such as now, these days, this week/month, or at the moment." Used for the L1 SHOULD on `Right now` / `At the moment` with a simple verb.
+- **a / an by sound.** https://www.merriam-webster.com/grammar/is-it-a-or-an : the choice depends on the sound that begins the next word, not the spelling; `one`, `useless`, `unicorn` take a; `an honest man`. Confirms the L2 keys (hour, hourglass, honor, uniform, unicycle, one-day).
+- **crab plural.** https://merriam-webster.com/dictionary/crab : `plural crabs also crab`. So `these crab` (L2 C06 sentence 3) is a listed form. See L2 MUST.
+- **trolley plural.** https://www.merriam-webster.com/dictionary/Trolleys : `plural trolleys also trollies`. `trolleys` is first; `trolleies` (L5 C08 distractor) is not listed. See L5 SHOULD on S01.
+- **Capitals.** https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html : capitalize a title before a name, not after; family words only when they act as names (`Aunt Abigail` but `my other aunts`); seasons lowercase in general use; days, months and holidays capitalized; `Atlantic Ocean` capitalized. Confirms L3 keys.
+- **End marks.** https://courses.lumenlearning.com/englishcomp1/chapter/text-end-punctuation/ : "Indirect questions do not have question marks at their ends"; the exclamation point goes after an interjection or exclamation showing strong feeling. Confirms the L4 indirect-question keys (`I asked who made the cookies.`, `My mom wonders where the keys went.`).
+- **y to ies.** The author's source (k12reader plural spelling) agrees with the rule used; M-W pages above checked the two disputed words.
+- **between / among.** https://www.merriam-webster.com/grammar/between-among : the "between is for two only" rule is a weak generalization; between has been used of more than two since its earliest use and is the only word that relates one thing to many things individually; among suggests a collective, vaguer relation. See the cross-lesson note.
+
+### Lesson 1: Verb tenses (ACCEPT with SHOULDs)
+
+Blind 38 of 38 answer units agree. Teach and Learn It model `will` plus the plain verb, -ed, and the habit present; the fifteen need nothing else.
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| SHOULD | P4, S02 match, hint 3 | P4 h3: "Locked and croaked end in -ed. Think about which column fits that ending." This states the answer for two of six rows. S02 h3 does the same with `Hooted and fixed`. | Teach the rule without naming the rows: "A verb that ends in -ed shows the past. Use that to sort some of the sentences first." |
+| SHOULD | C06 s4, C11 s3, S06 s4, S08 choice 4, S11 s2 | Simple present with `Right now` / `At the moment` / `At this moment`: `Right now, Ana's mom hands out gloves`, `At the moment, the twins fold the paper napkins`, `At the moment, the water drips`. English uses the present continuous after these words (test-english, above). The items work logically (clue and verb both mean now), but a model sentence that sounds wrong teaches the wrong habit. | Use `Today` or `This week` with the simple present (`Today, Ana's mom hands out gloves`), or `is handing out`. S01 (`At this moment, Ellie packed`) is fine as the error. |
+| SHOULD | C12, S03, S12 hint 2 | C12 h2: "listen for the one that tells about a finished job." S12 h2: "...a finished action." With hint 3 removing `will paint` / `Mix`, the child is left choosing between two forms while hint 2 has already said which meaning is needed. Live count is two, but hint 2 describes the key. | Drop the "finished job" clause: "Last Sunday is already over. Say the sentence with each choice." |
+| NOTE | C10, S10 stems | C10 prints sentence 5 `Two weeks ago, we repair...` as Ben's version, which shows sentence 5 in C06 (distractor) is fine. | None needed; one distractor is pre-eliminated of five. |
+| NOTE | C15, S15 | Key is the only choice with no opening clue word, so it stands out visually. This is the point of the item (the verb shows the time). | Optional: give one distractor a mid-sentence clue (`The goalie blocks the shot every game.`). |
+| NOTE | C13, S13 hint 3 | "One blank..." wording fine; slot 0 has no hint 3 narrowing, slot 1 has two live. | None. |
+
+### Lesson 2: Determiners (CHANGES REQUIRED)
+
+Blind 38 of 38 answer units agree. Keys for a/an by sound verified (M-W above).
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | C06 sentence 3 | `Close to my feet, these crab scurried under a flat rock.` is keyed as an error ("Crab is one thing, so these does not fit"). M-W lists `plural crabs also crab`, so `these crab` is a listed form, and the keyed rationale is not a fact a child can be held to. | Use a noun with no variant: `Close to my feet, these shell lay in the wet sand` or `this shells`; update C06 how/why and the C07 context. |
+| MUST | S13 slot 0 | `Dana asked for {0} extra minute`; options `a`, `an`, `that`. `that extra minute` is grammatical, and why says "That cannot go with one extra minute", which is false. Two defensible answers. | Replace `that` with `those` (plural, cannot go with one minute) and fix why. |
+| MUST | S08 hint 3 | "Two of the five begin with a vowel letter but not a vowel sound, or the reverse. Think about which ones." The two keys, `an honest answer` (h silent) and `a useful tool` (u as y), are exactly those two mismatch words; the other three match letter and sound. The hint names the key pair. | "Go by the first sound you hear, not the first letter. Check all five phrases." |
+| SHOULD | S02 match hint 3 | "There are only three articles, and only one of them is in this list. Think about which word it is." Gives the `a` row away. | "An article marks a noun without pointing or owning. Think about which word only marks." |
+| SHOULD | Learn It and Teach | They teach a/an by sound with `apple` / `banana` only. The fifteen need silent h (hour, hourglass, honor, honest), u said as y (uniform, unicycle, useful) and o said as w (one-day), plus `theirs` / `yours` / `hers` standing alone (C12, C13, S12). None of these is modeled before the items; the hints carry the teaching. | Add one Learn It step: "Listen, don't look: an hour, a uniform." Add one line on `yours` and `hers` standing alone. |
+| SHOULD | C13 and C08 | `an hour left` (C13 key) and `a hour` (C08 distractor, how says hour needs an) are in the same section and set 2 teaches the same fact set 3 asks. | Use a different word in C13 (`an owl` is taken by Teach; `an honest friend`). |
+| NOTE | C10, S10 | C10 stem prints sentence 5 `those two sea stars` as correct, one distractor pre-eliminated in C06 (keys are 3, 4). S10 prints C06's twin sentence 5 `these brushes` the same way. | None needed. |
+| NOTE | C15, S15 | C15 key `a uniform` is the only phrase with `a` where the other three take `an`; S15 key `a one-day trip` is the only vowel-letter start. Visible odd-one-out. | Optional: make one distractor `a ... ` too (`a big yellow bus`) as S15 does. |
+| NOTE | C03 hint 3 | "The word the can go before almost any noun, but a replacement still has to match the sound" is hard to follow and mentions `the`, which is not a choice. | "Think about the other choices: does each match the sound that follows?" |
+| NOTE | S13 how | How 3 is only "The answers are an and his." | Add the reason as in C13. |
+
+### Lesson 3: Capital letters for proper nouns (CHANGES REQUIRED)
+
+Blind 38 of 38 agree. Capitalization facts verified (Purdue above).
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | C06 vs C07 and C10 (same draft p2, set 2) | C06 keys are sentences 4 (`the atlantic ocean`) and 5 (`a Park`). C07 Part A stem: "What mistake does sentence 4 have with capital letters?" and its Part B key prints the corrected sentence 4. C10 stem: "Ravi says Park in sentence 5 is correct because every place needs a capital letter." Both keys of the two-point hot-text are given away by two other items in the same set. Same defect B7a rated MUST for 6-C03/C04 to C06. L1 and L2 avoid it (their C07 and C10 point outside the C06 range). | Retarget C07 and C10 to sentences outside 2-6 of p2, or retarget C06 to two other sentences. |
+| MUST | S06 vs S07 and S10 (same draft p5, twin set 2) | Same pattern. S06 keys are sentence 4 (`in tampa`) and 5 (`the Table`). S07 Part A: "Which statement describes the mistake in sentence 4?" with Part B printing `Tampa`. S10: "In sentence 5, Ana capitalized Table..." Both keys leaked. | As above for the twins. |
+| MUST | S11 hint 3 | "In the line about the boxes, nothing needs a capital except the first word. Think about the rest." Line 6 is one of the two keys (the question asks which lines are correct). The hint states a key and tells the child to look elsewhere for it. | "Lines can be right or wrong. Check each one." or name a distractor (`tia`, `Stairs`, `sunday` are the wrong ones) without naming a key. |
+| SHOULD | P5 and S02 match hint 3 | P5 h3: "Names of weekdays, countries and holidays begin with capitals, while words for a whole group of things do not." That sorts all six rows by category (saturday, mexico, thanksgiving against holiday, country, teacher). S02 h3 is word for word the same and maps to tuesday, canada, easter. | Hint 3 should scaffold, not sort: "Think of one real day, one real country and one real holiday." |
+| SHOULD | C10 key wording | `A capital goes only on a place's own name` is stated as a general rule but people's names get capitals too; the stem is about places so it works, but "only" over-reaches. S10 key says `special title`, while the lesson uses title for Mr., Dr. | `A capital goes on the name of one particular place; this park has no name.` S10: `its own name`. |
+| SHOULD | S05 hint 3 | S05 h3 "One and the same relative word can start with a big letter in one place and a little letter in another" states the key's principle. | "Look at what comes right after the word each time." |
+| NOTE | C15, S15 | Key is the only sentence without a name (C15) or with no capitalized place (S15). Visible. | Optional. |
+| NOTE | S08 how 3 | "give a small letter to a coach's title name" is unclear. | `Mr. rios` is a title and name with a small r. |
+| NOTE | Twin hints | S02 hint 3 equals P5 hint 3; S04, S12 hints largely copy C04, C12. | Reword. |
+| NOTE | C14 | `My Cousin lives in Tennessee.` Some writers capitalize a relative used alone; the Purdue rule (only when it acts as a name) supports the key. | None. |
+
+### Lesson 4: End marks (CHANGES REQUIRED)
+
+Blind 38 of 38 agree. Indirect-question keys verified (Lumen above).
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | C05 stem vs C04 (set 1) | C04 asks which mark ends sentence 6 (`My sister asked if we could keep her{0}`, key `.`). C05's stem: "Sentence 6 uses the word asked, yet it should end with a period, not a question mark. Why?" prints C04's key. | Rephrase like C10: "A classmate says sentence 6 needs a question mark because of the word asked. Which reply shows the problem?" |
+| MUST | C07 Part B hint 2 | Choices: `Can you swim`, `across the whole pool`, `the whole pool`, `swim across`. H2: "look at how the sentence begins. A group of words at the start can show the kind of sentence." Only `Can you swim` begins the sentence, so one live choice after hint 2. | H2: "Which of these words tell you what kind of sentence it is?" and add a second start-of-sentence distractor (`you swim across`). |
+| MUST | S07 Part B hint 2 | Choices `Mr. Lee showed us`, `how deep each hole`, `each hole should be`, `deep each hole should`. H2: "look for the words that say who did what." Only the key names a doer and an action: one live choice. | Same fix. |
+| SHOULD | C06 with C07 and S06 with S07 | C07 Part A asks what kind of sentence sentence 5 is (options `An asking sentence, which calls for a question mark` and `A telling sentence, so the period is already correct`) and C06 keys include sentence 5. S07 Part A asks how sentence 3 should end, and S06 keys include sentence 3. One of two keys is exposed in each pair (partial, so SHOULD). L1 and L2 avoid this. | Move C07 and S07 to a sentence outside the hot-text range. |
+| SHOULD | C08, S08 hint 3 | C08 h3: "One choice has the word asked in it. Think about whether it asks the reader something." S08 h3: "One sentence has the word wonders in it..." Each singles out one of the two keys. | "The word asked or wonders does not decide the mark. Check each sentence." |
+| SHOULD | P4, S02 match hints | P4 h1 says "A sentence that only tells about a question is a telling sentence" (the `I wonder` row); h3 says "Sentences that begin with Hooray or Oh no show feeling" (two more rows). Three of six rows named. S02 h3 names `Whoa` and `Oh my`. | Keep the rule, drop the word lists in h3. |
+| SHOULD | C14, S14 hint 2 | "Look at the first word of each sentence. Some words are shouted when people are surprised." Only the key opens with an interjection; one live choice after hint 2. | "Say each one with feeling and decide which sounds like shouting." |
+| SHOULD | C15, S15 | The key is the only choice ending in a period; the other three end in `?`. A child can answer from the marks alone. | Give one distractor a period (`Ms. Cole asked who wanted to line up.`) so two end in a period. |
+| NOTE | C12 stem vs C11 | C12 says sentence 4 has the wrong end mark; sentence 4 is a distractor in C11. | None needed. |
+| NOTE | S05 stem | "defends the (?) in sentence 6" shows the draft mark in S04's sentence. | Optional. |
+| NOTE | C04, C12, C13, S04, S12, S13 hint 3 | Same wow / oops sentence in six hint 3s; it removes `!` only, two live remain. | Vary. |
+| NOTE | S03 | Distractor `(..), because the line is long and needs extra dots` is a joke option. | Replace with `(.)` and a wrong reason (`because the line tells about a rabbit`). |
+
+### Lesson 5: Plurals that change y to ies (CHANGES REQUIRED)
+
+Blind 38 of 38 agree. Rule verified; two disputed words checked (M-W above).
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | C05 stem vs C04 (set 1) | C04 asks for the correct spelling in sentence 6 (key `boys`). C05 stem: "Sentence 4 spells ponies with -ies, but sentence 6 should spell boys with -ys." Key printed. | "Mia spells ponies with -ies and Lee spells boys with -ys. Why do the two follow different rules?" (drop sentence numbers). |
+| MUST | S05 stem vs S04 | S04 key `subways` (sentence 6). S05 stem: "Why does fairies lose its y in sentence 4 while subways keeps its y in sentence 6?" Key printed. | As above. |
+| MUST | C07 Part B and S07 Part B, hint 3 | C07 B choices: `two shiny trophies`, `keys on a hook`, `helmets and boots`, `handful of carrots`. H2: "find plurals in the draft that also come from words ending in y" leaves trophies and keys; H3: "Keys comes from key, which has a vowel before the y" removes keys, leaving one live choice. S07 B: choices `pastries`, `delays`, `sailboats`, `whales`; h2 leaves pastries and delays; h3 names delays: one live. | Add a third y-plural distractor (`days` or `toys`) and change hint 3 to the rule: "A vowel before the y keeps the y." |
+| SHOULD | C07 Part A stem vs C06, S07 Part A vs S06 | C06 keys sentences 2 (`ponys`) and 6 (`hobbys`); C07 A asks "What is the mistake in sentence 2?". S06 keys 2 and 4; S07 A asks about sentence 4. One of two keys is exposed in each (partial, so SHOULD, as in lesson 4; the other section calls this stacking the architecture's design). | Retarget C07 and S07 to a sentence outside the hot-text range. |
+| SHOULD | C08 hint 3 | "One choice keeps the y and one changes it." Of the five choices, three keep the y (`driveways`, `fairys`, `enemyes`) and two change it (`lilies`, `trolleies`), so as a count of choices it is false (as a description of the keys it is true). S08 h3 "Look for the two choices whose endings match the letter next to the y" restates the question. | "A vowel before the y keeps it; a consonant before the y changes it. Check each choice against its own word." |
+| SHOULD | S01 match row `trolley` | Keyed to `Becomes -ys`; M-W lists `trolleys also trollies`, so a child who puts it under -ies has a listed form. | Swap `trolley` for `monkey`. |
+| SHOULD | C10, S10 hint 3 | "Ben is right about some words, such as trophies in sentence 4." Confirms sentence 4 of C06 (a distractor) is correct. Pre-eliminates one choice. | "Ben's rule fits some words but not all. Think about the other choices." |
+| NOTE | C11 and C12 | C12 stem says sentence 6 `babys` is misspelled; sentence 6 is a distractor in C11. | None needed. |
+| NOTE | C15, S15 | Key is the only pair whose plural ends in -ys. Visible. | Optional. |
+| NOTE | C13, S13 hint 3 | "One word changes its y and the other keeps it" states the pattern of the key (true, no narrowing). | None. |
+| NOTE | Legacy P3 | `families` is uniquely longest (outside core/similar). | None. |
+
+### Cross-lesson note: the author's between / among wording and the legacy line at ~9972
+
+- The new items (lessons 7 and later) say `Between usually goes with two things`. That agrees with M-W: the "two only" rule is a weak generalization, between also relates one thing to many individually, and among suggests a collective relation. "Usually" is acceptable for grade 3 and no key depends on a case where between is used with more than two.
+- The untouched legacy Learn It step at line 9972 of `L-GUM2.js` (lesson 7, outside my five lessons) says "During tells when, not where. **Between needs two things**, and there is only one pond." "Needs" is the absolute form M-W calls a weak rule, and it contradicts the new hedged wording a few lines away. The answer `across` stays right. **SHOULD (for the lessons 6-9 reviewer): change to "Between usually goes with two things, and there is only one pond."** Not counted in my table.
+
+### What I could not verify
+
+- Whether the player lets a child go back inside a set (relevant to the same-set giveaways); I did not test it. I did not test keyboard or screen-reader use.
+- No lesson, log or other file was edited; no git command was run.

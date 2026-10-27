@@ -71,7 +71,7 @@
 | B7a | 3.L.GC.1:R:use-action-verbs | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-adjectives-and-adverbs | ACCEPTED | Third independent review ACCEPT; open SHOULD (dropdowns C04/S04/S12 solvable by lookup) in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-common-and-proper-nouns | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
-| B7b | 3.L.GC.1:R:form-and-use-simple-verb-tenses | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:form-and-use-simple-verb-tenses | ACCEPTED | First independent review ACCEPT; open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:capitalize-proper-nouns | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
