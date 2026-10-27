@@ -261,8 +261,7 @@ lose protection and should get a small addition.
 
 I could not get a result. Run 1 (in the sequence, port 8831) and run 3 (alone, port 8832) were each stopped by my own `timeout` (1500 s and 3000 s, exit 124)
 with an empty log, because guard.py prints nothing until it ends; run 2 crashed on its first page load because my server process had died when the
-session environment changed (restarted afterwards). A fourth run with a 7100 s limit was started; its log is
-`/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/rv3/guard4.log`. 05 section 10.9 records 120 passed, 0 failed for this suite, and the
+session environment changed (restarted afterwards). A fourth run was stopped by me after about 25 minutes with 56 s of CPU used and an empty log (it looked stalled, not busy), so guard.py is UNCONFIRMED here. 05 section 10.9 records 120 passed, 0 failed for this suite, and the
 only guard.py change since the last reviewed state is section 14, which I read line by line (section 4 above); I have no evidence of a failure but
 the number is the author's, not mine. Suggest guard.py print a line per section so a long run can be watched.
 
